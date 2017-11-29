@@ -1,47 +1,53 @@
 ---
-title: "如何：将几何图形用作参数的命中测试 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "几何图形对象, 可视化对象上的命中测试"
-  - "命中测试, 在使用几何图形对象的可视化对象上"
-  - "可视化对象, 命中测试"
+title: "如何：将几何图形用作参数的命中测试"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], on visual objects using Geometry objects [WPF]
+- visual objects [WPF], hit tests on
+- Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 32feb70a3b7a44a5a48f57fc2ecee912de4d39ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：将几何图形用作参数的命中测试
-本主题中的示例演示在将 <xref:System.Windows.Media.Geometry> 用作命中测试参数的情况下，如何针对可视对象执行[命中测试](GTMT)。  
+# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a><span data-ttu-id="ddad1-102">如何：将几何图形用作参数的命中测试</span><span class="sxs-lookup"><span data-stu-id="ddad1-102">How to: Hit Test Using Geometry as a Parameter</span></span>
+<span data-ttu-id="ddad1-103">此示例演示如何在视觉对象使用上执行命中的测试<xref:System.Windows.Media.Geometry>作为命中测试参数。</span><span class="sxs-lookup"><span data-stu-id="ddad1-103">This example shows how to perform a hit test on a visual object using a <xref:System.Windows.Media.Geometry> as a hit test parameter.</span></span>  
   
-## 示例  
- 下面的示例演示如何使用 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 方法的 <xref:System.Windows.Media.GeometryHitTestParameters> 来设置命中测试。  传递给 `OnMouseDown` 方法的 <xref:System.Windows.Point> 值用于创建一个 <xref:System.Windows.Media.Geometry> 对象以扩展命中测试的范围。  
+## <a name="example"></a><span data-ttu-id="ddad1-104">示例</span><span class="sxs-lookup"><span data-stu-id="ddad1-104">Example</span></span>  
+ <span data-ttu-id="ddad1-105">下面的示例演示如何设置命中的测试使用<xref:System.Windows.Media.GeometryHitTestParameters>为<xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="ddad1-105">The following example shows how to set up a hit test using <xref:System.Windows.Media.GeometryHitTestParameters> for the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method.</span></span> <span data-ttu-id="ddad1-106"><xref:System.Windows.Point>值传递给`OnMouseDown`方法用于创建<xref:System.Windows.Media.Geometry>以展开的命中测试的范围的对象。</span><span class="sxs-lookup"><span data-stu-id="ddad1-106">The <xref:System.Windows.Point> value that is passed to the `OnMouseDown` method is used to create a <xref:System.Windows.Media.Geometry> object in order to expand the range of the hit test.</span></span>  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
   
- <xref:System.Windows.Media.GeometryHitTestResult> 的 <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> 属性提供有关命中测试结果的信息，而 <xref:System.Windows.Media.Geometry> 作为命中测试的参数使用。  下面的插图演示了命中测试几何图形（蓝色圆圈）与目标可视对象（红色正方形）的呈现内容之间的关系。  
+ <span data-ttu-id="ddad1-107"><xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>属性<xref:System.Windows.Media.GeometryHitTestResult>提供有关使用命中测试的结果信息<xref:System.Windows.Media.Geometry>作为命中测试参数。</span><span class="sxs-lookup"><span data-stu-id="ddad1-107">The <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> property of <xref:System.Windows.Media.GeometryHitTestResult> provides information about the results of a hit test that uses a <xref:System.Windows.Media.Geometry> as a hit test parameter.</span></span> <span data-ttu-id="ddad1-108">下图演示了命中测试几何图形（蓝色圆圈）与目标视觉对象（红色正方形）的呈现内容之间的关系。</span><span class="sxs-lookup"><span data-stu-id="ddad1-108">The following illustration shows the relationship between the hit test geometry (the blue circle) and the rendered content of the target visual object (the red square).</span></span>  
   
- ![命中测试中使用的 IntersectionDetail 的示意图](../../../../docs/framework/wpf/graphics-multimedia/media/intersectiondetail01.png "IntersectionDetail01")  
-命中测试几何图形与目标可视对象之间的交集  
+ <span data-ttu-id="ddad1-109">![命中测试中使用的 IntersectionDetail 的示意图](../../../../docs/framework/wpf/graphics-multimedia/media/intersectiondetail01.png "IntersectionDetail01")</span><span class="sxs-lookup"><span data-stu-id="ddad1-109">![Diagram of IntersectionDetail used in hit testing](../../../../docs/framework/wpf/graphics-multimedia/media/intersectiondetail01.png "IntersectionDetail01")</span></span>  
+<span data-ttu-id="ddad1-110">命中测试几何图形与目标视觉对象之间的交集</span><span class="sxs-lookup"><span data-stu-id="ddad1-110">Intersection between hit test geometry and target visual object</span></span>  
   
- 下面的示例演示在将 <xref:System.Windows.Media.Geometry> 用作命中测试参数时，如何实现命中测试回调。  `result` 参数将强制转换为 <xref:System.Windows.Media.GeometryHitTestResult>，以便检索 <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> 属性的值。  使用属性值，可以确定 <xref:System.Windows.Media.Geometry> 命中测试参数是完全还是部分包含在命中测试目标的呈现内容中。  本例中的代码示例仅将命中测试结果添加到完全包含在目标边界中的可视对象的列表中。  
+ <span data-ttu-id="ddad1-111">下面的示例演示如何实现命中的测试回调时<xref:System.Windows.Media.Geometry>用作命中的测试参数。</span><span class="sxs-lookup"><span data-stu-id="ddad1-111">The following example shows how to implement a hit test callback when a <xref:System.Windows.Media.Geometry> is used as a hit test parameter.</span></span> <span data-ttu-id="ddad1-112">`result`参数被强制转换为<xref:System.Windows.Media.GeometryHitTestResult>以便检索的值<xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="ddad1-112">The `result` parameter is cast to a <xref:System.Windows.Media.GeometryHitTestResult> in order to retrieve the value of the <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> property.</span></span> <span data-ttu-id="ddad1-113">属性值，您可以确定如果<xref:System.Windows.Media.Geometry>命中的测试参数完全或部分包含在所呈现内容的命中的测试目标。</span><span class="sxs-lookup"><span data-stu-id="ddad1-113">The property value allows you to determine if the <xref:System.Windows.Media.Geometry> hit test parameter is fully or partially contained within the rendered content of the hit test target.</span></span> <span data-ttu-id="ddad1-114">在本示例中，示例代码仅将命中测试结果添加到完全包含在目标边界中的视觉对象的列表中。</span><span class="sxs-lookup"><span data-stu-id="ddad1-114">In this case, the sample code is only adding hit test results to the list for visuals that are fully contained within the target boundary.</span></span>  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  当交集详细信息为 <xref:System.Windows.Media.IntersectionDetail> 时，不应当调用 <xref:System.Windows.Media.HitTestResult> 回调。  
+>  <span data-ttu-id="ddad1-115"><xref:System.Windows.Media.HitTestResult>交集详细信息时，不应该调用回调<xref:System.Windows.Media.IntersectionDetail.Empty>。</span><span class="sxs-lookup"><span data-stu-id="ddad1-115">The <xref:System.Windows.Media.HitTestResult> callback should not be called when the intersection detail is <xref:System.Windows.Media.IntersectionDetail.Empty>.</span></span>  
   
-## 请参阅  
- [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [对 Visual 中的几何图形进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+## <a name="see-also"></a><span data-ttu-id="ddad1-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ddad1-116">See Also</span></span>  
+ [<span data-ttu-id="ddad1-117">可视化层中的命中测试</span><span class="sxs-lookup"><span data-stu-id="ddad1-117">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="ddad1-118">对视觉对象中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="ddad1-118">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)

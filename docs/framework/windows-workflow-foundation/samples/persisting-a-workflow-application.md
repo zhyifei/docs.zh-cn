@@ -1,65 +1,69 @@
 ---
-title: "持久保存工作流应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "持久保存工作流应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 16251bcf5ceb9660fc4854c8e46bc376de9f01ef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 持久保存工作流应用程序
-此示例演示如何运行 <xref:System.Activities.WorkflowApplication>，在其空闲时进行卸载，然后在需要继续执行时重新加载它。  
+# <a name="persisting-a-workflow-application"></a><span data-ttu-id="8a0c3-102">持久保存工作流应用程序</span><span class="sxs-lookup"><span data-stu-id="8a0c3-102">Persisting a Workflow Application</span></span>
+<span data-ttu-id="8a0c3-103">此示例演示如何运行 <xref:System.Activities.WorkflowApplication>，在其空闲时进行卸载，然后在需要继续执行时重新加载它。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-103">This sample demonstrates how to run a <xref:System.Activities.WorkflowApplication>, unload it when it goes idle, and then reload it to continue its execution.</span></span>  
   
-## 示例详细信息  
- <xref:System.Activities.WorkflowApplication> 用于承载单个工作流实例，该实例提供一个简单接口并支持若干更加通用的承载方案。其中一种方案是由持久性帮助实现的长时间运行工作流。可通过以下方式来执行持久性承载控件：对 <xref:System.Activities.WorkflowApplication> 调用一个持久性操作；或者，处理一个 <xref:System.Activities.WorkflowApplication> 事件并指示  <xref:System.Activities.WorkflowApplication> 应持久。  
+## <a name="sample-details"></a><span data-ttu-id="8a0c3-104">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="8a0c3-104">Sample Details</span></span>  
+ <span data-ttu-id="8a0c3-105"><xref:System.Activities.WorkflowApplication> 用于承载单个工作流实例，该实例提供一个简单接口并支持若干更加通用的承载方案。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-105"><xref:System.Activities.WorkflowApplication> is a host for a single workflow instance that provides a simple interface and enables several of the more common hosting scenarios.</span></span> <span data-ttu-id="8a0c3-106">其中一种方案是由持久性帮助实现的长时间运行工作流。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-106">One such scenario is long running workflows facilitated by persistence.</span></span> <span data-ttu-id="8a0c3-107">可通过以下方式来执行持久性承载控件：对 <xref:System.Activities.WorkflowApplication> 调用一个持久性操作；或者，处理一个 <xref:System.Activities.WorkflowApplication> 事件并指示  <xref:System.Activities.WorkflowApplication> 应持久。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-107">Host control of persistence is performed either by calling a persistence operation on the <xref:System.Activities.WorkflowApplication>, or by handling a <xref:System.Activities.WorkflowApplication> event and indicating that the <xref:System.Activities.WorkflowApplication> should persist.</span></span>  
   
- 实例工作流具有一个用于提示用户输入其名称的 <xref:System.Activities.Statements.WriteLine> 活动，一个用于通过恢复 <xref:System.Activities.Bookmark> 接收用户名作为输入的 `ReadLine` 活动，以及另一个用于向用户回显问候语的 <xref:System.Activities.Statements.WriteLine>。当工作流等待输入时，这将为持久性提供一个天然点。这通常称为 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> 点。每当工作流程序可以持久化，等待书签恢复以及无需执行其他工作时，<xref:System.Activities.WorkflowApplication> 将引发 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> 事件。在此示例的工作流中，上面所提及的点在 `ReadLine` 活动开始执行后立即出现。  
+ <span data-ttu-id="8a0c3-108">实例工作流具有一个用于提示用户输入其名称的 <xref:System.Activities.Statements.WriteLine> 活动，一个用于通过恢复 `ReadLine` 接收用户名作为输入的 <xref:System.Activities.Bookmark> 活动，以及另一个用于向用户回显问候语的 <xref:System.Activities.Statements.WriteLine>。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-108">The sample workflow is a <xref:System.Activities.Statements.WriteLine> activity prompting the user for their name, a `ReadLine` activity for receiving the name as input through the resumption of a <xref:System.Activities.Bookmark>, and another <xref:System.Activities.Statements.WriteLine> for echoing a greeting back to the user.</span></span> <span data-ttu-id="8a0c3-109">当工作流等待输入时，这将为持久性提供一个天然点。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-109">When a workflow is waiting for input, this provides a natural point for persistence.</span></span> <span data-ttu-id="8a0c3-110">这通常称为 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> 点。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-110">This is often referred to as an <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> point.</span></span> <span data-ttu-id="8a0c3-111">每当工作流程序可以持久化、等待书签恢复以及无需执行其他工作时，<xref:System.Activities.WorkflowApplication> 将引发 <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> 事件。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-111"><xref:System.Activities.WorkflowApplication> raises the <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> event whenever the workflow program can be persisted, is waiting on a bookmark resumption, and no other work is being performed.</span></span> <span data-ttu-id="8a0c3-112">在此示例的工作流中，上面所提及的点在 `ReadLine` 活动开始执行后立即出现。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-112">In this sample’s workflow, that point comes immediately after the `ReadLine` activity begins executing.</span></span>  
   
- 设置 <xref:System.Activities.WorkflowApplication> 以使用<xref:System.Runtime.Persistence.InstanceStore> 执行持久化。此示例使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>。在 <xref:System.Activities.WorkflowApplication> 运行之前，必须将 <xref:System.Runtime.Persistence.InstanceStore> 分配给 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 属性。  
+ <span data-ttu-id="8a0c3-113">A<xref:System.Activities.WorkflowApplication>设置以执行与持久性<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-113">A <xref:System.Activities.WorkflowApplication> is set up to perform persistence with an <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`.</span></span> <span data-ttu-id="8a0c3-114">其中使用到了 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-114">This sample uses the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>.</span></span> <span data-ttu-id="8a0c3-115"><!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`必须分配给<xref:System.Activities.WorkflowApplication.InstanceStore%2A>属性之前<xref:System.Activities.WorkflowApplication>运行。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-115">The <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` must be assigned to the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property before the <xref:System.Activities.WorkflowApplication> is run.</span></span>  
   
- 此示例为 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 事件添加一个处理程序。此事件的处理程序指示 <xref:System.Activities.WorkflowApplication> 应通过返回 <xref:System.Activities.PersistableIdleAction> 来执行的工作。当 <xref:System.Activities.PersistableIdleAction> 返回时，将卸载 <xref:System.Activities.WorkflowApplication>。  
+ <span data-ttu-id="8a0c3-116">此示例为 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 事件添加一个处理程序。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-116">The sample adds a handler to the <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> event.</span></span> <span data-ttu-id="8a0c3-117">此事件的处理程序指示 <xref:System.Activities.WorkflowApplication> 应通过返回 <xref:System.Activities.PersistableIdleAction> 来执行的工作。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-117">The handler for this event indicates what the <xref:System.Activities.WorkflowApplication> should do by returning a <xref:System.Activities.PersistableIdleAction>.</span></span> <span data-ttu-id="8a0c3-118">当 <xref:System.Activities.PersistableIdleAction.Unload> 返回时，将卸载 <xref:System.Activities.WorkflowApplication>。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-118">When <xref:System.Activities.PersistableIdleAction.Unload> is returned, the <xref:System.Activities.WorkflowApplication> is unloaded.</span></span>  
   
- 此示例然后接受用户的输入，并将持久化工作流加载到新的 <xref:System.Activities.WorkflowApplication> 中。这可通过以下步骤来完成：先创建一个新 <xref:System.Activities.WorkflowApplication>，重新创建 <xref:System.Runtime.Persistence.InstanceStore>，将已完成和已卸载的事件与该实例相关联，然后使用目标工作流实例的标识符调用 <xref:System.Activities.WorkflowApplication.Load%2A>。在获取该实例之后，将恢复 `ReadLine` 活动中的书签。工作流从 `ReadLine` 活动内继续执行，并运行直至完成。当工作流完成并卸载时，将最后一次调试 <xref:System.Runtime.Persistence.InstanceStore> 来删除工作流。  
+ <span data-ttu-id="8a0c3-119">此示例然后接受用户的输入，并将持久化工作流加载到新的 <xref:System.Activities.WorkflowApplication> 中。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-119">The sample then accepts input from the user and loads the persisted workflow into a new <xref:System.Activities.WorkflowApplication>.</span></span> <span data-ttu-id="8a0c3-120">它会通过创建新<xref:System.Activities.WorkflowApplication>，重新创建<!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`，并将关联到的实例的已完成和卸载事件，然后再调用<xref:System.Activities.WorkflowApplication.Load%2A>替换目标工作流实例的标识符。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-120">It does so by creating a new <xref:System.Activities.WorkflowApplication>, recreating the <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`, and associating the completed and unloaded events to the instance, and then calling <xref:System.Activities.WorkflowApplication.Load%2A> with the identifier of the target workflow instance.</span></span> <span data-ttu-id="8a0c3-121">在获取该实例之后，将恢复 `ReadLine` 活动中的书签。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-121">Once the instance is acquired, the `ReadLine` activity’s bookmark is resumed.</span></span> <span data-ttu-id="8a0c3-122">工作流从 `ReadLine` 活动内继续执行，并运行直至完成。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-122">The workflow carries on execution from within the `ReadLine` activity and runs to completion.</span></span> <span data-ttu-id="8a0c3-123">当工作流完成并卸载<!--zz <xref:System.Runtime.Persistence.InstanceStore> -->`System.Runtime.Persistence.InstanceStore`调用最后一次来删除工作流。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-123">When the workflow completes and unloads, the <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` is called one last time to delete the workflow.</span></span>  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="8a0c3-124">使用此示例</span><span class="sxs-lookup"><span data-stu-id="8a0c3-124">To use this sample</span></span>  
   
-1.  打开 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符。  
+1.  <span data-ttu-id="8a0c3-125">打开一个 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-125">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
-     此示例要求随 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 一起默认安装的 SQL Server Express。  
+     <span data-ttu-id="8a0c3-126">此示例要求随 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 一起默认安装的 SQL Server Express。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-126">This sample requires SQL Server Express, which is installed by default with [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  导航到示例目录 \(\\WF\\Basic\\Persistence\\InstancePersistence\\CS\) 然后运行 CreateInstanceStore.cmd.  
-  
-    > [!CAUTION]
-    >  CreateInstanceStore.cmd 脚本尝试在 SQL Server 2008 Express 的默认实例上创建数据库。如果要在不同的实例上安装数据库，请修改脚本。  
-  
-3.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]，打开 Persistence.sln 解决方案文件，并按 CTRL\+SHIFT\+B 生成它。  
+2.  <span data-ttu-id="8a0c3-127">导航到示例目录 (\WF\Basic\Persistence\InstancePersistence\CS) 然后运行 CreateInstanceStore.cmd.</span><span class="sxs-lookup"><span data-stu-id="8a0c3-127">Navigate to the sample directory (\WF\Basic\Persistence\InstancePersistence\CS) and run CreateInstanceStore.cmd.</span></span>  
   
     > [!CAUTION]
-    >  如果在 SQL Server 的非默认实例上安装了数据库，请在生成解决方案之前更新代码中的连接字符串。  
+    >  <span data-ttu-id="8a0c3-128">CreateInstanceStore.cmd 脚本尝试在 SQL Server 2008 Express 的默认实例上创建数据库。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-128">The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express.</span></span> <span data-ttu-id="8a0c3-129">如果要在不同的实例上安装数据库，请修改脚本。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-129">If you want to install the database on a different instance, modify the script to do so.</span></span>  
   
-4.  通过在[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]中导航到项目的 bin 目录 \(\\WF\\Basic\\Persistence\\InstancePersistence\\bin\\Debug\)，然后右击 Workflow.exe 并选择**“以管理员身份运行”**，从而使用管理员权限运行此示例。  
+3.  <span data-ttu-id="8a0c3-130">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 Persistence.sln 解决方案文件，并按 CTRL+SHIFT+B 生成它。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the Persistence.sln solution file and press CTRL+SHIFT+B to build it.</span></span>  
   
-#### 删除实例存储区数据库  
+    > [!CAUTION]
+    >  <span data-ttu-id="8a0c3-131">如果在 SQL Server 的非默认实例上安装了数据库，请在生成解决方案之前更新代码中的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-131">If you installed the database on a non-default instance of SQL Server, update the connection string in the code prior to building the solution.</span></span>  
   
-1.  打开 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符。  
+4.  <span data-ttu-id="8a0c3-132">通过导航到项目的 bin 目录 (\WF\Basic\Persistence\InstancePersistence\bin\Debug) 中使用管理员特权运行该示例[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，右击 Workflow.exe 并选择**以管理员身份运行**.</span><span class="sxs-lookup"><span data-stu-id="8a0c3-132">Run the sample with administrator privileges by navigating to the project’s bin directory (\WF\Basic\Persistence\InstancePersistence\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], right-clicking Workflow.exe and selecting **Run as Administrator**.</span></span>  
   
-2.  导航到此示例目录并运行 RemoveInstanceStore.cmd。  
+#### <a name="to-remove-the-instance-store-database"></a><span data-ttu-id="8a0c3-133">删除实例存储区数据库</span><span class="sxs-lookup"><span data-stu-id="8a0c3-133">To remove the instance store database</span></span>  
+  
+1.  <span data-ttu-id="8a0c3-134">打开一个 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-134">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
+  
+2.  <span data-ttu-id="8a0c3-135">导航到此示例目录并运行 RemoveInstanceStore.cmd。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-135">Navigate to the sample directory and run RemoveInstanceStore.cmd.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录。  
+>  <span data-ttu-id="8a0c3-136">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-136">The samples may already be installed on your computer.</span></span> <span data-ttu-id="8a0c3-137">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="8a0c3-137">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="8a0c3-138">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="8a0c3-138">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8a0c3-139">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="8a0c3-139">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
-## 请参阅  
- [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="8a0c3-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8a0c3-140">See Also</span></span>  
+ [<span data-ttu-id="8a0c3-141">AppFabric 承载和持久性示例</span><span class="sxs-lookup"><span data-stu-id="8a0c3-141">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

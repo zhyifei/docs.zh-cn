@@ -1,51 +1,54 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-`CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。  可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。  然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。  
+# <a name="customchannelstester"></a><span data-ttu-id="74f05-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="74f05-102">CustomChannelsTester</span></span>
+<span data-ttu-id="74f05-103">`CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。</span><span class="sxs-lookup"><span data-stu-id="74f05-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="74f05-104">可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。</span><span class="sxs-lookup"><span data-stu-id="74f05-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="74f05-105">然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。</span><span class="sxs-lookup"><span data-stu-id="74f05-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
   
-### 生成工具  
+### <a name="to-build-the-tool"></a><span data-ttu-id="74f05-106">生成工具</span><span class="sxs-lookup"><span data-stu-id="74f05-106">To build the tool</span></span>  
   
-1.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1.  <span data-ttu-id="74f05-107">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="74f05-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。  SampleRun.cmd 文件有一个示例命令行，可以演示如何使用此工具来测试[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。  
+2.  <span data-ttu-id="74f05-108">生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。</span><span class="sxs-lookup"><span data-stu-id="74f05-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="74f05-109">文件 SampleRun.cmd 具有命令行示例，演示如何使用此工具测试[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。</span><span class="sxs-lookup"><span data-stu-id="74f05-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-### 运行此工具  
+### <a name="to-run-the-tool"></a><span data-ttu-id="74f05-110">运行此工具</span><span class="sxs-lookup"><span data-stu-id="74f05-110">To run the tool</span></span>  
   
--   在命令提示符处，键入下列命令：  
+-   <span data-ttu-id="74f05-111">在命令提示符处，键入下列命令：</span><span class="sxs-lookup"><span data-stu-id="74f05-111">At the command prompt type the following command:</span></span>  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     需要使用 `/binding` 选项。  
+     <span data-ttu-id="74f05-112">需要使用 `/binding` 选项。</span><span class="sxs-lookup"><span data-stu-id="74f05-112">Using the `/binding` option is required.</span></span>  
   
-     如果“绑定”不是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的系统提供绑定，则需要使用 `/dll`。  
+     <span data-ttu-id="74f05-113">如果“绑定”不是由 `/dll` 提供的系统提供绑定，则需要使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="74f05-113">`/dll` is required if "binding" is not a system-provided binding provided by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-     `/testspec` 是可选的。  
+     <span data-ttu-id="74f05-114">`/testspec` 是可选的。</span><span class="sxs-lookup"><span data-stu-id="74f05-114">`/testspec` is optional.</span></span>  
   
-     这将根据测试规范和绑定创建服务器和客户端。  
+     <span data-ttu-id="74f05-115">这将根据测试规范和绑定创建服务器和客户端。</span><span class="sxs-lookup"><span data-stu-id="74f05-115">This creates server and clients based on the test specifications and the binding.</span></span>  
   
-     执行该客户端和服务器并返回结果。  
+     <span data-ttu-id="74f05-116">执行该客户端和服务器并返回结果。</span><span class="sxs-lookup"><span data-stu-id="74f05-116">Executes the client and server and returns the results.</span></span>  
   
-     下面是用于描述测试规范的示例 XML \(testspec.xml\)：  
+     <span data-ttu-id="74f05-117">下面是用于描述测试规范的示例 XML (testspec.xml)：</span><span class="sxs-lookup"><span data-stu-id="74f05-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ caps.handback.revision: 12
     </TestSpec>  
     ```  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="74f05-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="74f05-118">See Also</span></span>

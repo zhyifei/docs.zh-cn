@@ -1,43 +1,46 @@
 ---
-title: "Visual Studio 2015 中的 WPF 简介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "版式 [WPF]"
-  - "媒体 [WPF]"
-  - "代码隐藏 [WPF]"
-  - "Windows Presentation Foundation，关于 Windows Presentation Foundation"
-  - "二维形状 [WPF]"
-  - "动画 [WPF]"
-  - "独立应用程序 [WPF]"
-  - "标记 [WPF]"
-  - "二维效果 [WPF]"
-  - "浏览器承载的应用程序 [WPF]"
-  - "WPF，关于 Windows Presentation Foundation"
-  - "三维呈现 [WPF]"
+title: "Visual Studio 2015 中的 WPF 简介"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF]
+- media [WPF]
+- code-behind [WPF]
+- Windows Presentation Foundation [WPF], about Windows Presentation Foundation
+- 2-D shapes [WPF]
+- animation [WPF]
+- standalone applications [WPF]
+- markup [WPF]
+- 2-D effects [WPF]
+- browser-hosted applications [WPF]
+- WPF [WPF], about Windows Presentation Foundation
+- 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-caps.latest.revision: 54
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 54
+caps.latest.revision: "54"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e04dc0cd878f4583fb4e0bd0ba5816ddfe0b358
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Visual Studio 2015 中的 WPF 简介
-Visual Studio 2015 中的 Windows Presentation Foundation \(WPF\) 向开发人员提供了一个统一的编程模型，用于在 Windows 上构建现代业务线桌面应用程序。  
+# <a name="introduction-to-wpf-in-visual-studio-2015"></a><span data-ttu-id="66035-102">Visual Studio 2015 中的 WPF 简介</span><span class="sxs-lookup"><span data-stu-id="66035-102">Introduction to WPF in Visual Studio 2015</span></span>
+<span data-ttu-id="66035-103">Visual Studio 2015 中的 Windows Presentation Foundation (WPF) 向开发人员提供了一个统一的编程模型，用于在 Windows 上构建现代业务线桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="66035-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
- [使用 Windows Presentation Foundation 创建现代桌面应用程序](../Topic/Create%20Modern%20Desktop%20Applications%20with%20Windows%20Presentation%20Foundation.md)  
+ [<span data-ttu-id="66035-104">使用 Windows Presentation Foundation 创建新式桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="66035-104">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
- [Designing XAML in Visual Studio and Blend for Visual Studio](../Topic/Designing%20XAML%20in%20Visual%20Studio.md)  
+ [<span data-ttu-id="66035-105">在 Visual Studio 和 Blend for Visual Studio 中设计 XAML</span><span class="sxs-lookup"><span data-stu-id="66035-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [WPF 介绍](../Topic/Introduction%20to%20WPF.md)  
+ [<span data-ttu-id="66035-106">WPF 介绍</span><span class="sxs-lookup"><span data-stu-id="66035-106">Introduction to WPF</span></span>](/visualstudio/designers/introduction-to-wpf)  
   
- [.NET Framework 中的 WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)  
+ <span data-ttu-id="66035-107">[.NET Framework 中的 WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span><span class="sxs-lookup"><span data-stu-id="66035-107">[WPF in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span></span>  
   
- [获取 Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="66035-108">获取 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="66035-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

@@ -1,72 +1,75 @@
 ---
-title: "如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91b611af6c8de5c2bc0119838eb12950d3207177
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
-本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的过程。  它演示了如何为 ASP.NET AJAX 服务创建在功能上等效的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本。  随后可以并行使用这两项服务，也可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务替换 ASP.NET AJAX 服务。  
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a><span data-ttu-id="e5982-102">如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="e5982-102">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>
+<span data-ttu-id="e5982-103">本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的过程。</span><span class="sxs-lookup"><span data-stu-id="e5982-103">This topic outlines procedures to migrate a basic ASP.NET AJAX service to an equivalent AJAX-enabled [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="e5982-104">它演示了如何为 ASP.NET AJAX 服务创建在功能上等效的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="e5982-104">It shows how to create a functionally equivalent [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] version of an ASP.NET AJAX service.</span></span> <span data-ttu-id="e5982-105">随后可以并行使用这两项服务，也可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务替换 ASP.NET AJAX 服务。</span><span class="sxs-lookup"><span data-stu-id="e5982-105">The two services can then be used side by side, or the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can be used to replace the ASP.NET AJAX service.</span></span>  
   
- 将现有的 ASP.NET AJAX 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务具有下列优点：  
+ <span data-ttu-id="e5982-106">将现有的 ASP.NET AJAX 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务具有下列优点：</span><span class="sxs-lookup"><span data-stu-id="e5982-106">Migrating an existing ASP.NET AJAX service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX service gives you the following benefits:</span></span>  
   
--   只需最少的额外配置，即可将 AJAX 服务公开为 SOAP 服务。  
+-   <span data-ttu-id="e5982-107">只需最少的额外配置，即可将 AJAX 服务公开为 SOAP 服务。</span><span class="sxs-lookup"><span data-stu-id="e5982-107">You can expose your AJAX service as a SOAP service with minimal extra configuration.</span></span>  
   
--   可以获得 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能（例如跟踪等）所带来的好处。  
+-   <span data-ttu-id="e5982-108">可以获得 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能（例如跟踪等）所带来的好处。</span><span class="sxs-lookup"><span data-stu-id="e5982-108">You can benefit from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features such as tracing, and so on.</span></span>  
   
- 下面的过程假定您正在使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
+ <span data-ttu-id="e5982-109">下面的过程假定您正在使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e5982-109">The following procedures assume that you are using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
- 从本主题概述的过程中得到的代码将在过程后面的示例中提供。  
+ <span data-ttu-id="e5982-110">从本主题概述的过程中得到的代码将在过程后面的示例中提供。</span><span class="sxs-lookup"><span data-stu-id="e5982-110">The code that results from the procedures outlined in this topic is provided in the example following the procedures.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何通过启用 AJAX 的终结点公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的更多信息，请参见[如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="e5982-111">公开[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务通过支持 AJAX 的终结点，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。</span><span class="sxs-lookup"><span data-stu-id="e5982-111"> exposing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service through an AJAX-enabled endpoint, see the [How to: Use Configuration to Add an ASP.NET AJAX Endpoint](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) topic.</span></span>  
   
-### 创建并测试 ASP.NET Web 服务应用程序  
+### <a name="to-create-and-test-the-aspnet-web-service-application"></a><span data-ttu-id="e5982-112">创建并测试 ASP.NET Web 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="e5982-112">To create and test the ASP.NET Web service application</span></span>  
   
-1.  打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
+1.  <span data-ttu-id="e5982-113">打开 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e5982-113">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  从**“文件”**菜单中选择**“新建”**，然后依次选择**“项目”**、**“Web”**和**“ASP.NET Web 服务应用程序”**。  
+2.  <span data-ttu-id="e5982-114">从**文件**菜单上，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 服务应用程序**.</span><span class="sxs-lookup"><span data-stu-id="e5982-114">From the **File** menu, select **New**, then **Project**, then **Web**, and then select **ASP.NET Web Service Application**.</span></span>  
   
-3.  将项目命名为 `ASPHello`，然后单击**“确定”**。  
+3.  <span data-ttu-id="e5982-115">将项目`ASPHello`单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="e5982-115">Name the project `ASPHello` and click **OK**.</span></span>  
   
-4.  在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。  
+4.  <span data-ttu-id="e5982-116">在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。</span><span class="sxs-lookup"><span data-stu-id="e5982-116">Uncomment the line in the Service1.asmx.cs file that contains `System.Web.Script.Services.ScriptService]` to enable AJAX for this service.</span></span>  
   
-5.  从**“生成”**菜单中选择**“生成解决方案”**。  
+5.  <span data-ttu-id="e5982-117">从**生成**菜单上，选择**生成解决方案**。</span><span class="sxs-lookup"><span data-stu-id="e5982-117">From the **Build** menu, select **Build Solution**.</span></span>  
   
-6.  从**“调试”**菜单中选择**“开始执行\(不调试\)”**。  
+6.  <span data-ttu-id="e5982-118">从**调试**菜单上，选择**启动但不调试**。</span><span class="sxs-lookup"><span data-stu-id="e5982-118">From the **Debug** menu, select **Start Without Debugging**.</span></span>  
   
-7.  在生成的网页上，选择 `HelloWorld` 操作。  
+7.  <span data-ttu-id="e5982-119">在生成的网页上，选择 `HelloWorld` 操作。</span><span class="sxs-lookup"><span data-stu-id="e5982-119">On the Web page generated, select the `HelloWorld` operation.</span></span>  
   
-8.  在 测试页上单击`HelloWorld`**“调用”**按钮。  您应收到以下 XML 响应。  
+8.  <span data-ttu-id="e5982-120">单击**Invoke**按钮上`HelloWorld`测试页。</span><span class="sxs-lookup"><span data-stu-id="e5982-120">Click the **Invoke** button on the `HelloWorld` test page.</span></span> <span data-ttu-id="e5982-121">您应收到以下 XML 响应。</span><span class="sxs-lookup"><span data-stu-id="e5982-121">You should receive the following XML response.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <string xmlns="http://tempuri.org/">Hello World</string>  
     ```  
   
-9. 此响应可确认您现在已拥有一项能正常运行的 ASP.NET AJAX 服务。具体而言，该服务现在已在 Service1.asmx\/HelloWorld 处公开了一个响应 HTTP POST 请求并返回 XML 的终结点。  
+9. <span data-ttu-id="e5982-122">此响应可确认您现在已拥有一项能正常运行的 ASP.NET AJAX 服务。具体而言，该服务现在已在 Service1.asmx/HelloWorld 处公开了一个响应 HTTP POST 请求并返回 XML 的终结点。</span><span class="sxs-lookup"><span data-stu-id="e5982-122">This response confirms that you now have a functioning ASP.NET AJAX service and, in particular, that the service has now exposed an endpoint at Service1.asmx/HelloWorld that responds to HTTP POST requests and returns XML.</span></span>  
   
-     现在可以转换此服务以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务了。  
+     <span data-ttu-id="e5982-123">现在可以转换此服务以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服务了。</span><span class="sxs-lookup"><span data-stu-id="e5982-123">Now you are ready to convert this service to use a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX service.</span></span>  
   
-### 创建等效的 WCF AJAX 服务应用程序  
+### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a><span data-ttu-id="e5982-124">创建等效的 WCF AJAX 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="e5982-124">To create an equivalent WCF AJAX service application</span></span>  
   
-1.  右键单击**“ASPHello”**项目，然后依次选择**“添加”**、**“新建项”**和**“启用了 AJAX 的 WCF 服务”**。  
+1.  <span data-ttu-id="e5982-125">右键单击**ASPHello**项目，然后选择**添加**，然后**新项**，，然后**启用了 AJAX 的 WCF 服务**。</span><span class="sxs-lookup"><span data-stu-id="e5982-125">Right-click the **ASPHello** project and select **Add**, then **New Item**, and then **AJAX-enabled WCF Service**.</span></span>  
   
-2.  将服务命名为 `WCFHello`，然后单击**“添加”**。  
+2.  <span data-ttu-id="e5982-126">将服务`WCFHello`单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="e5982-126">Name the service `WCFHello` and click **Add**.</span></span>  
   
-3.  打开 WCFHello.svc.cs 文件。  
+3.  <span data-ttu-id="e5982-127">打开 WCFHello.svc.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="e5982-127">Open the WCFHello.svc.cs file.</span></span>  
   
-4.  在 Service1.asmx.cs 中，复制 `HelloWorld` 操作的以下实现。  
+4.  <span data-ttu-id="e5982-128">在 Service1.asmx.cs 中，将复制的以下实现`HelloWorld`操作。</span><span class="sxs-lookup"><span data-stu-id="e5982-128">From Service1.asmx.cs, copy the following implementation of the `HelloWorld` operation.</span></span>  
   
     ```  
     public string HelloWorld()  
@@ -75,7 +78,7 @@ caps.handback.revision: 17
     }  
     ```  
   
-5.  将复制的 `HelloWorld` 操作的实现粘贴到 WCFHello.svc.cs 文件中，并替换下面的代码。  
+5.  <span data-ttu-id="e5982-129">复制的实现粘贴`HelloWorld`到 WCFHello.svc.cs 文件中替换下面的代码的操作。</span><span class="sxs-lookup"><span data-stu-id="e5982-129">Paste to copied implementation of the `HelloWorld` operation into the WCFHello.svc.cs file in place of the following code.</span></span>  
   
     ```  
     public void DoWork()  
@@ -85,7 +88,7 @@ caps.handback.revision: 17
     }  
     ```  
   
-6.  将 `Namespace` 的 <xref:System.ServiceModel.ServiceContractAttribute> 属性指定为 `WCFHello`。  
+6.  <span data-ttu-id="e5982-130">指定`Namespace`属性，则为<xref:System.ServiceModel.ServiceContractAttribute>作为`WCFHello`。</span><span class="sxs-lookup"><span data-stu-id="e5982-130">Specify the `Namespace` attribute for <xref:System.ServiceModel.ServiceContractAttribute> as `WCFHello`.</span></span>  
   
     ```  
     [ServiceContract(Namespace="WCFHello")]  
@@ -94,7 +97,7 @@ caps.handback.revision: 17
     { … }  
     ```  
   
-7.  将 <xref:System.ServiceModel.Web.WebInvokeAttribute> 添加到 `HelloWorld` 操作，并将 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 属性设置为返回 <xref:System.ServiceModel.Web.WebMessageFormat>。  请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat>。  
+7.  <span data-ttu-id="e5982-131">添加<xref:System.ServiceModel.Web.WebInvokeAttribute>到`HelloWorld`操作和组<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>属性以返回<xref:System.ServiceModel.Web.WebMessageFormat.Xml>。</span><span class="sxs-lookup"><span data-stu-id="e5982-131">Add the <xref:System.ServiceModel.Web.WebInvokeAttribute> to the `HelloWorld` operation and set the <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> property to return <xref:System.ServiceModel.Web.WebMessageFormat.Xml>.</span></span> <span data-ttu-id="e5982-132">请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。</span><span class="sxs-lookup"><span data-stu-id="e5982-132">Note that, if not set, the default return type is <xref:System.ServiceModel.Web.WebMessageFormat.Json>.</span></span>  
   
     ```  
     [OperationContract]  
@@ -105,20 +108,20 @@ caps.handback.revision: 17
     }  
     ```  
   
-8.  从**“生成”**菜单中选择**“生成解决方案”**。  
+8.  <span data-ttu-id="e5982-133">从**生成**菜单上，选择**生成解决方案**。</span><span class="sxs-lookup"><span data-stu-id="e5982-133">From the **Build** menu, select **Build Solution**.</span></span>  
   
-9. 打开 WCFHello.svc 文件，然后从**“调试”**菜单中选择**“开始执行\(不调试\)”**。  
+9. <span data-ttu-id="e5982-134">打开 WCFHello.svc 文件和从**调试**菜单上，选择**启动但不调试**。</span><span class="sxs-lookup"><span data-stu-id="e5982-134">Open the WCFHello.svc file and from the **Debug** menu, select **Start Without Debugging**.</span></span>  
   
-10. 现在，该服务会在 `WCFHello.svc/HelloWorld` 处公开一个响应 HTTP POST 请求的终结点。  HTTP POST 请求不能从浏览器进行测试，但终结点会返回以下 XML。  
+10. <span data-ttu-id="e5982-135">服务现在公开一个终结点位于`WCFHello.svc/HelloWorld`，该响应 HTTP POST 请求。</span><span class="sxs-lookup"><span data-stu-id="e5982-135">The service now exposes an endpoint at `WCFHello.svc/HelloWorld`, which responds to HTTP POST requests.</span></span> <span data-ttu-id="e5982-136">HTTP POST 请求不能从浏览器进行测试，但终结点会返回以下 XML。</span><span class="sxs-lookup"><span data-stu-id="e5982-136">HTTP POST requests cannot be tested from the browser, but the endpoint returns XML following XML.</span></span>  
   
-    ```  
+    ```xml  
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>  
     ```  
   
-11. 现在，`WCFHello.svc/HelloWorld` 和 `Service1.aspx/HelloWorld` 终结点在功能上等效。  
+11. <span data-ttu-id="e5982-137">`WCFHello.svc/HelloWorld`和`Service1.aspx/HelloWorld`终结点现在在功能上等效。</span><span class="sxs-lookup"><span data-stu-id="e5982-137">The `WCFHello.svc/HelloWorld` and the `Service1.aspx/HelloWorld` endpoints are now functionally equivalent.</span></span>  
   
-## 示例  
- 从本主题概述的过程中得到的代码将在下面的示例中提供。  
+## <a name="example"></a><span data-ttu-id="e5982-138">示例</span><span class="sxs-lookup"><span data-stu-id="e5982-138">Example</span></span>  
+ <span data-ttu-id="e5982-139">从本主题概述的过程中得到的代码将在下面的示例中提供。</span><span class="sxs-lookup"><span data-stu-id="e5982-139">The code that results from the procedures outlined in this topic is provided in the following example.</span></span>  
   
 ```  
 //This is the ASP.NET code in the Service1.asmx.cs file.  
@@ -182,42 +185,42 @@ namespace ASPHello
 }  
 ```  
   
- <xref:System.Xml.XmlDocument> 不支持 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 类型，因为此类型不能被 <xref:System.Xml.Serialization.XmlSerializer> 序列化。  可以改用 <xref:System.Xml.Linq.XDocument> 类型或序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。  
+ <span data-ttu-id="e5982-140"><xref:System.Xml.XmlDocument> 不支持 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 类型，因为此类型不能被 <xref:System.Xml.Serialization.XmlSerializer> 序列化。</span><span class="sxs-lookup"><span data-stu-id="e5982-140">The <xref:System.Xml.XmlDocument> type is not supported by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> because it is not serializable by the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="e5982-141">可以改用 <xref:System.Xml.Linq.XDocument> 类型或序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。</span><span class="sxs-lookup"><span data-stu-id="e5982-141">You can use either an <xref:System.Xml.Linq.XDocument> type, or serialize the <xref:System.Xml.XmlDocument.DocumentElement%2A> instead.</span></span>  
   
- 如果要升级 ASMX Web 服务并将其并行迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，请避免将两种类型映射到客户端上的同一名称。  如果 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用了同一类型，则这将导致序列化程序中出现异常：  
+ <span data-ttu-id="e5982-142">如果要升级 ASMX Web 服务并将其并行迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，请避免将两种类型映射到客户端上的同一名称。</span><span class="sxs-lookup"><span data-stu-id="e5982-142">If ASMX Web services are being upgraded and migrated side-by-side to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, avoid mapping two types to the same name on the client.</span></span> <span data-ttu-id="e5982-143">如果 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用了同一类型，则这将导致序列化程序中出现异常：</span><span class="sxs-lookup"><span data-stu-id="e5982-143">This causes an exception in serializers if the same type is used in a <xref:System.Web.Services.WebMethodAttribute> and a <xref:System.ServiceModel.ServiceContractAttribute>:</span></span>  
   
--   如果首先添加 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，则对 ASMX Web 服务调用方法将导致 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> 中出现异常，因为代理中顺序的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 样式定义优先。  
+-   <span data-ttu-id="e5982-144">如果首先添加 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，则对 ASMX Web 服务调用方法将导致 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> 中出现异常，因为代理中顺序的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 样式定义优先。</span><span class="sxs-lookup"><span data-stu-id="e5982-144">If [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service is added first, invoking the method on ASMX Web Service causes exception in <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] style definition of the order in the proxy takes precedence.</span></span>  
   
--   如果首先添加 ASMX Web 服务，则对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务调用方法将导致 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 中出现异常，因为代理中顺序的 Web 服务样式定义优先。  
+-   <span data-ttu-id="e5982-145">如果首先添加 ASMX Web 服务，则对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务调用方法将导致 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 中出现异常，因为代理中顺序的 Web 服务样式定义优先。</span><span class="sxs-lookup"><span data-stu-id="e5982-145">If ASMX Web Service is added first, invoking method on [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service causes exception in <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> because the Web Service style definition of the order in the proxy takes precedence.</span></span>  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavascriptSerializer> 在行为上存在很大差异。  例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将字典表示为键\/值对的数组，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavascriptSerializer> 则将字典表示为实际的 JSON 对象。  因此，下面是用 ASP.NET AJAX 表示的字典。  
+ <span data-ttu-id="e5982-146"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 在行为上存在很大差异。</span><span class="sxs-lookup"><span data-stu-id="e5982-146">There are significant differences in behavior between the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> and the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>.</span></span> <span data-ttu-id="e5982-147">例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将字典表示为键/值对的数组，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则将字典表示为实际的 JSON 对象。</span><span class="sxs-lookup"><span data-stu-id="e5982-147">For example, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> represents a dictionary as an array of key/value pairs, whereas the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> represents a dictionary as actual JSON objects.</span></span> <span data-ttu-id="e5982-148">因此，下面是用 ASP.NET AJAX 表示的字典。</span><span class="sxs-lookup"><span data-stu-id="e5982-148">So the following is the dictionary represented in ASP.NET AJAX.</span></span>  
   
 ```  
 Dictionary<string, int> d = new Dictionary<string, int>();  
-d.Add(“one”, 1);  
-d.Add(“two”, 2);  
+d.Add("one", 1);  
+d.Add("two", 2);  
 ```  
   
- 在下面的列表中：此字典用 JSON 对象表示：  
+ <span data-ttu-id="e5982-149">在下面的列表中：此字典用 JSON 对象表示：</span><span class="sxs-lookup"><span data-stu-id="e5982-149">This dictionary is represented in JSON objects as shown in the following list:</span></span>  
   
--   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将其表示为 \[{"Key":"one","Value":1},{"Key":"two","Value":2}\]  
+-   <span data-ttu-id="e5982-150"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将其表示为 [{"Key":"one","Value":1},{"Key":"two","Value":2}]</span><span class="sxs-lookup"><span data-stu-id="e5982-150">[{"Key":"one","Value":1},{"Key":"two","Value":2}] by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer></span></span>  
   
--   ASP.NET AJAX <xref:System.Web.Script.Serialization.JavascriptSerializer> 将其表示为 {“one”:1,”two”:2}  
+-   <span data-ttu-id="e5982-151">{"one": 1，"two": 2} ASP.NET ajax<xref:System.Web.Script.Serialization.JavaScriptSerializer></span><span class="sxs-lookup"><span data-stu-id="e5982-151">{"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer></span></span>  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可以处理其中的键类型不是字符串的词典，而 <xref:System.Web.Script.Serialization.JavascriptSerializer> 则无法处理，在这一方面前者的功能更为强大。  但后者与 JSON 的兼容性更好。  
+ <span data-ttu-id="e5982-152"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可以处理其中的键类型不是字符串的词典，而 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则无法处理，在这一方面前者的功能更为强大。</span><span class="sxs-lookup"><span data-stu-id="e5982-152">The <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> is more powerful in the sense that it can handle dictionaries where the key type is not string, while the <xref:System.Web.Script.Serialization.JavaScriptSerializer> cannot.</span></span> <span data-ttu-id="e5982-153">但后者与 JSON 的兼容性更好。</span><span class="sxs-lookup"><span data-stu-id="e5982-153">But the latter is more JSON-friendly.</span></span>  
   
- 下表汇总了这些序列化程序之间的重大差异。  
+ <span data-ttu-id="e5982-154">下表汇总了这些序列化程序之间的重大差异。</span><span class="sxs-lookup"><span data-stu-id="e5982-154">The significant differences between these serializers are summarized in the following table.</span></span>  
   
-|差异类别|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
-|----------|--------------------------------|---------------------------------------|  
-|将空缓冲区（新 byte\[0\]）反序列化为 <xref:System.Object>（或 <xref:System.Uri>，或某些其他类）。|SerializationException|null|  
-|<xref:System.DBNull.Value> 的序列化|{}（或 {"\_\_type":"\#System"}）|null|  
-|\[Serializable\] 类型的私有成员的序列化。|已序列化|未序列化|  
-|<xref:System.Runtime.Serialization.ISerializable> 类型的公共属性的序列化。|未序列化|已序列化|  
-|JSON 的“扩展”|遵循 JSON 规范，该规范要求为对象成员名称加上引号 \({"a":"hello"}\)。|支持不带引号的对象成员名称 \({a:"hello"}\)。|  
-|<xref:System.DateTime> 协调世界时 \(UTC\)|不支持格式“\\\/Date\(123456789U\)\\\/”或“\\\/Date\\\(\\d\+\(U&#124;\(\\\+\\\-\[\\d{4}\]\)\)?  \\\)\\\\\/\)".|支持格式“\\\/Date\(123456789U\)\\\/”和“\\\/Date\\\(\\d\+\(U&#124;\(\\\+\\\-\[\\d{4}\]\)\)?  \\\)\\\\\/\)”作为 DateTime 值。|  
-|词典的表示形式|KeyValuePair\<K,V\> 的数组，处理不是字符串的键类型。|作为实际的 JSON 对象 \- 但仅处理是字符串的键类型。|  
-|转义符|始终应带有转义正斜杠 \(\/\)；切勿使用非转义的无效 JSON 字符，例如“\\n”。|对于 DateTime 值，带有转义正斜杠 \(\/\)。|  
+|<span data-ttu-id="e5982-155">差异类别</span><span class="sxs-lookup"><span data-stu-id="e5982-155">Category of Differences</span></span>|<span data-ttu-id="e5982-156">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="e5982-156">DataContractJsonSerializer</span></span>|<span data-ttu-id="e5982-157">ASP.NET AJAX JavaScriptSerializer</span><span class="sxs-lookup"><span data-stu-id="e5982-157">ASP.NET AJAX JavaScriptSerializer</span></span>|  
+|-----------------------------|--------------------------------|---------------------------------------|  
+|<span data-ttu-id="e5982-158">将空缓冲区（新 byte[0]）反序列化为 <xref:System.Object>（或 <xref:System.Uri>，或某些其他类）。</span><span class="sxs-lookup"><span data-stu-id="e5982-158">Deserializing the empty buffer (new byte[0]) into <xref:System.Object> (or <xref:System.Uri>, or some other classes).</span></span>|<span data-ttu-id="e5982-159">SerializationException</span><span class="sxs-lookup"><span data-stu-id="e5982-159">SerializationException</span></span>|<span data-ttu-id="e5982-160">null</span><span class="sxs-lookup"><span data-stu-id="e5982-160">null</span></span>|  
+|<span data-ttu-id="e5982-161"><xref:System.DBNull.Value> 的序列化</span><span class="sxs-lookup"><span data-stu-id="e5982-161">Serialization of <xref:System.DBNull.Value></span></span>|<span data-ttu-id="e5982-162">{}（或 {"__type":"#System"}）</span><span class="sxs-lookup"><span data-stu-id="e5982-162">{} (or {"__type":"#System"})</span></span>|<span data-ttu-id="e5982-163">null</span><span class="sxs-lookup"><span data-stu-id="e5982-163">Null</span></span>|  
+|<span data-ttu-id="e5982-164">[Serializable] 类型的私有成员的序列化。</span><span class="sxs-lookup"><span data-stu-id="e5982-164">Serialization of the private members of [Serializable] types.</span></span>|<span data-ttu-id="e5982-165">已序列化</span><span class="sxs-lookup"><span data-stu-id="e5982-165">serialized</span></span>|<span data-ttu-id="e5982-166">未序列化</span><span class="sxs-lookup"><span data-stu-id="e5982-166">not serialized</span></span>|  
+|<span data-ttu-id="e5982-167"><xref:System.Runtime.Serialization.ISerializable> 类型的公共属性的序列化。</span><span class="sxs-lookup"><span data-stu-id="e5982-167">Serialization of the public properties of <xref:System.Runtime.Serialization.ISerializable> types.</span></span>|<span data-ttu-id="e5982-168">未序列化</span><span class="sxs-lookup"><span data-stu-id="e5982-168">not serialized</span></span>|<span data-ttu-id="e5982-169">已序列化</span><span class="sxs-lookup"><span data-stu-id="e5982-169">serialized</span></span>|  
+|<span data-ttu-id="e5982-170">JSON 的“扩展”</span><span class="sxs-lookup"><span data-stu-id="e5982-170">"Extensions" of JSON</span></span>|<span data-ttu-id="e5982-171">遵循 JSON 规范，该规范要求为对象成员名称加上引号 ({"a":"hello"})。</span><span class="sxs-lookup"><span data-stu-id="e5982-171">Adheres to the JSON specification, which requires quotes on object member names ({"a":"hello"}).</span></span>|<span data-ttu-id="e5982-172">支持不带引号的对象成员名称 ({a:"hello"})。</span><span class="sxs-lookup"><span data-stu-id="e5982-172">Supports the names of object members without quotes ({a:"hello"}).</span></span>|  
+|<span data-ttu-id="e5982-173"><xref:System.DateTime> 协调世界时 (UTC)</span><span class="sxs-lookup"><span data-stu-id="e5982-173"><xref:System.DateTime> Coordinated Universal Time (UTC)</span></span>|<span data-ttu-id="e5982-174">不支持格式"\\/Date(123456789U)\\/"或"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\\\/)".</span><span class="sxs-lookup"><span data-stu-id="e5982-174">Does not support format "\\/Date(123456789U)\\/" or "\\/Date\\(\d+(U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)".</span></span>|<span data-ttu-id="e5982-175">支持格式"\\/Date(123456789U)\\/"和"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\ \\/)"作为 DateTime 值。</span><span class="sxs-lookup"><span data-stu-id="e5982-175">Supports format "\\/Date(123456789U)\\/" and "\\/Date\\(\d+(U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)" as DateTime values.</span></span>|  
+|<span data-ttu-id="e5982-176">词典的表示形式</span><span class="sxs-lookup"><span data-stu-id="e5982-176">Representation of dictionaries</span></span>|<span data-ttu-id="e5982-177">数组 KeyValuePair\<K，V >，处理不是字符串的密钥类型。</span><span class="sxs-lookup"><span data-stu-id="e5982-177">An array of KeyValuePair\<K,V>, handles key types that are not strings.</span></span>|<span data-ttu-id="e5982-178">作为实际的 JSON 对象 - 但仅处理是字符串的键类型。</span><span class="sxs-lookup"><span data-stu-id="e5982-178">As actual JSON objects - but only handles key types that are strings.</span></span>|  
+|<span data-ttu-id="e5982-179">转义符</span><span class="sxs-lookup"><span data-stu-id="e5982-179">Escaped characters</span></span>|<span data-ttu-id="e5982-180">始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。</span><span class="sxs-lookup"><span data-stu-id="e5982-180">Always with an escape forward slash (/); never allows un-escaped invalid JSON characters, such as "\n".</span></span>|<span data-ttu-id="e5982-181">对于 DateTime 值，带有转义正斜杠 (/)。</span><span class="sxs-lookup"><span data-stu-id="e5982-181">With an escape forward slash (/) for DateTime values.</span></span>|  
   
-## 请参阅  
- [如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a><span data-ttu-id="e5982-182">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5982-182">See Also</span></span>  
+ [<span data-ttu-id="e5982-183">如何： 使用配置来添加 ASP.NET AJAX 终结点</span><span class="sxs-lookup"><span data-stu-id="e5982-183">How to: Use Configuration to Add an ASP.NET AJAX Endpoint</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -1,46 +1,49 @@
 ---
-title: "与 COM+ 应用程序集成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF]"
-  - "COM+ [WCF], Windows Communication Foundation 集成"
-  - "WCF, COM+ 集成"
-  - "WCF, 重用代码"
-  - "Windows Communication Foundation, COM+ 集成"
-  - "Windows Communication Foundation, 重用代码"
+title: "与 COM+ 应用程序集成"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, reusing code
+- Windows Communication Foundation, reusing code
+- Windows Communication Foundation, COM+ integration
+- COM+ [WCF], Windows Communication Foundation integration
+- COM+ [WCF]
+- WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8901530061837556bcb26f7b55539f5a2a791391
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 与 COM+ 应用程序集成
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。如果您对 COM\+ 中承载的基于组件的应用程序逻辑有大量的投入，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有的逻辑，而不必重新编写逻辑。本节中的主题描述如何将 COM\+ 与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一起使用。  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="9d6cc-102">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="9d6cc-102">Integrating with COM+ Applications</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="9d6cc-103"> 提供了用于创建分布式应用程序的丰富环境。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-103"> provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="9d6cc-104">如果您对 COM+ 中承载的基于组件的应用程序逻辑有大量的投入，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有的逻辑，而不必重新编写逻辑。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="9d6cc-105">本节中的主题描述如何将 COM+ 与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一起使用。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-105">The topics within this section describe how to use COM+ with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## 本节内容  
- [与 COM\+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- 概述何时以及如何集成 COM\+ 组件。  
+## <a name="in-this-section"></a><span data-ttu-id="9d6cc-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="9d6cc-106">In This Section</span></span>  
+ [<span data-ttu-id="9d6cc-107">将与 COM + 应用程序概述集成</span><span class="sxs-lookup"><span data-stu-id="9d6cc-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ <span data-ttu-id="9d6cc-108">概述何时以及如何集成 COM+ 组件。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
   
- [如何：使用 COM\+ 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- 介绍如何使用 COM\+ 服务模块配置命令行工具 \(ComSvcConfig.exe\) 来配置需要公开为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的应用程序接口。  
+ [<span data-ttu-id="9d6cc-109">如何： 使用 COM + 服务模型配置工具</span><span class="sxs-lookup"><span data-stu-id="9d6cc-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ <span data-ttu-id="9d6cc-110">介绍如何使用 COM+ 服务模块配置命令行工具 (ComSvcConfig.exe) 来配置需要公开为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的应用程序接口。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [如何：配置 COM\+ 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- 介绍如何将 COM\+ 对象配置为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ [<span data-ttu-id="9d6cc-111">如何： 配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="9d6cc-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ <span data-ttu-id="9d6cc-112">介绍如何将 COM+ 对象配置为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-112">Explains how to configure a COM+ object as a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [如何：部署 COM\+ 集成应用程序](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- 介绍如何移动 COM\+ 集成应用程序。  
+ [<span data-ttu-id="9d6cc-113">如何： 部署 COM + 集成应用程序</span><span class="sxs-lookup"><span data-stu-id="9d6cc-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ <span data-ttu-id="9d6cc-114">介绍如何移动 COM+ 集成应用程序。</span><span class="sxs-lookup"><span data-stu-id="9d6cc-114">Explains how to move a COM+ integration application.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="9d6cc-115">参考</span><span class="sxs-lookup"><span data-stu-id="9d6cc-115">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## 请参阅  
- [与 COM 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a><span data-ttu-id="9d6cc-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9d6cc-116">See Also</span></span>  
+ [<span data-ttu-id="9d6cc-117">与 COM 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="9d6cc-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

@@ -1,95 +1,96 @@
 ---
-title: "DataGridView 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据 [Windows 窗体], 以表格形式显示"
-  - "数据网格"
-  - "数据表示"
-  - "DataGridView 控件 [Windows 窗体]"
-  - "数据集 [Windows 窗体], 在 DataGridView 控件中显示"
-  - "数据集 [Windows 窗体], 用户界面"
-  - "网格控件 [Windows 窗体]"
-  - "表 [Windows 窗体]"
-  - "表格数据, 在 Windows 窗体上显示"
-  - "Windows 窗体, 显示数据"
+title: "DataGridView 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Windows Forms]
+- data grids [Windows Forms
+- data [Windows Forms], displaying in tabular format
+- grid controls [Windows Forms]
+- datasets [Windows Forms], user interface
+- Windows Forms, displaying data
+- data presentation
+- tabular data [Windows Forms], displaying on Windows Forms
+- datasets [Windows Forms], displaying in DataGridView control
+- DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08a0cc15cff39bb936a78db95c73568aa643d0b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# DataGridView 控件（Windows 窗体）
-`DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。  可以使用 `DataGridView` 控件来显示少量数据的只读视图，或者可以缩放该控件以显示大型数据集的可编辑视图。  
+# <a name="datagridview-control-windows-forms"></a><span data-ttu-id="77924-102">DataGridView 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="77924-102">DataGridView Control (Windows Forms)</span></span>
+<span data-ttu-id="77924-103">`DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。</span><span class="sxs-lookup"><span data-stu-id="77924-103">The `DataGridView` control provides a powerful and flexible way to display data in a tabular format.</span></span> <span data-ttu-id="77924-104">可以使用 `DataGridView` 控件来显示少量数据的只读视图，或者可以缩放该控件以显示大型数据集的可编辑视图。</span><span class="sxs-lookup"><span data-stu-id="77924-104">You can use the `DataGridView` control to show read-only views of a small amount of data, or you can scale it to show editable views of very large sets of data.</span></span>  
   
- 可以使用多种方法扩展 `DataGridView` 控件，以便将自定义行为置入你的应用程序中。  例如，可以以编程方式指定自己的排序算法，并且可以创建自己的单元格类型。  可以通过在多个属性之间进行选择来轻松地自定义 `DataGridView` 控件的外观。  许多数据存储类型均可用作数据源，或者，`DataGridView` 控件可以在不绑定任何数据源的情况下进行操作。  
+ <span data-ttu-id="77924-105">可以使用多种方法扩展 `DataGridView` 控件，以便将自定义行为置入你的应用程序中。</span><span class="sxs-lookup"><span data-stu-id="77924-105">You can extend the `DataGridView` control in a number of ways to build custom behaviors into your applications.</span></span> <span data-ttu-id="77924-106">例如，可以以编程方式指定自己的排序算法，并且可以创建自己的单元格类型。</span><span class="sxs-lookup"><span data-stu-id="77924-106">For example, you can programmatically specify your own sorting algorithms, and you can create your own types of cells.</span></span> <span data-ttu-id="77924-107">可以通过在多个属性之间进行选择来轻松地自定义 `DataGridView` 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="77924-107">You can easily customize the appearance of the `DataGridView` control by choosing among several properties.</span></span> <span data-ttu-id="77924-108">许多数据存储类型均可用作数据源，或者，`DataGridView` 控件可以在不绑定任何数据源的情况下进行操作。</span><span class="sxs-lookup"><span data-stu-id="77924-108">Many types of data stores can be used as a data source, or the `DataGridView` control can operate with no data source bound to it.</span></span>  
   
- 本节中的主题介绍可用于将 `DataGridView` 功能构建到应用程序中的概念和技术。  
+ <span data-ttu-id="77924-109">本节中的主题介绍可用于将 `DataGridView` 功能构建到应用程序中的概念和技术。</span><span class="sxs-lookup"><span data-stu-id="77924-109">The topics in this section describe the concepts and techniques that you can use to build `DataGridView` features into your applications.</span></span>  
   
-## 本节内容  
- [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- 提供一些主题，介绍 Windows 窗体 `DataGridView` 控件的体系结构和核心概念。  
+## <a name="in-this-section"></a><span data-ttu-id="77924-110">本节内容</span><span class="sxs-lookup"><span data-stu-id="77924-110">In This Section</span></span>  
+ [<span data-ttu-id="77924-111">DataGridView 控件概述</span><span class="sxs-lookup"><span data-stu-id="77924-111">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ <span data-ttu-id="77924-112">提供一些主题，介绍 Windows 窗体 `DataGridView` 控件的体系结构和核心概念。</span><span class="sxs-lookup"><span data-stu-id="77924-112">Provides topics that describe the architecture and core concepts of the Windows Forms `DataGridView` control.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的默认功能](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
- 描述 Windows 窗体 `DataGridView` 控件在绑定到数据源时的默认外观和行为。  
+ [<span data-ttu-id="77924-113">Windows 窗体 DataGridView 控件中的默认功能</span><span class="sxs-lookup"><span data-stu-id="77924-113">Default Functionality in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-114">描述 Windows 窗体 `DataGridView` 控件在绑定到数据源时的默认外观和行为。</span><span class="sxs-lookup"><span data-stu-id="77924-114">Describes the default appearance and behavior of the Windows Forms `DataGridView` control when it is bound to a data source.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- 描述 Windows 窗体 `DataGridView` 控件中用于显示数据和允许用户修改或添加数据的列类型。  
+ [<span data-ttu-id="77924-115">Windows 窗体 DataGridView 控件中的列类型</span><span class="sxs-lookup"><span data-stu-id="77924-115">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-116">描述 Windows 窗体 `DataGridView` 控件中用于显示数据和允许用户修改或添加数据的列类型。</span><span class="sxs-lookup"><span data-stu-id="77924-116">Describes the column types in the Windows Forms `DataGridView` control used to display data and allow users to modify or add data.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的基本列、行和单元格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- 提供一些主题，描述常用的单元格、行和列属性。  
+ [<span data-ttu-id="77924-117">Windows 窗体 DataGridView 控件中的列、行和单元格基本功能</span><span class="sxs-lookup"><span data-stu-id="77924-117">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ <span data-ttu-id="77924-118">提供一些主题，描述常用的单元格、行和列属性。</span><span class="sxs-lookup"><span data-stu-id="77924-118">Provides topics that describe commonly-used cell, row, and column properties.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的基本格式设置和样式设置](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述如何修改该控件的基本外观和单元数据的显示格式。  
+ [<span data-ttu-id="77924-119">Windows 窗体 DataGridView 控件中的基本格式和样式设置</span><span class="sxs-lookup"><span data-stu-id="77924-119">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-120">提供一些主题，描述如何修改该控件的基本外观和单元数据的显示格式。</span><span class="sxs-lookup"><span data-stu-id="77924-120">Provides topics that describe how to modify the basic appearance of the control and the display formatting of cell data.</span></span>  
   
- [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述如何手动或从外部数据源向控件填充数据。  
+ [<span data-ttu-id="77924-121">在 Windows 窗体 DataGridView 控件中显示数据</span><span class="sxs-lookup"><span data-stu-id="77924-121">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-122">提供一些主题，描述如何手动或从外部数据源向控件填充数据。</span><span class="sxs-lookup"><span data-stu-id="77924-122">Provides topics that describe how to populate the control with data either manually, or from an external data source.</span></span>  
   
- [调整 Windows 窗体 DataGridView 控件中列和行的大小](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，描述可如何自动调整行和列的大小，以便适应单元格内容，或适应该控件的可用宽度。  
+ [<span data-ttu-id="77924-123">调整 Windows 窗体 DataGridView 控件中列和行的大小</span><span class="sxs-lookup"><span data-stu-id="77924-123">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-124">提供一些主题，描述可如何自动调整行和列的大小，以便适应单元格内容，或适应该控件的可用宽度。</span><span class="sxs-lookup"><span data-stu-id="77924-124">Provides topics that describe how the size of rows and columns can be adjusted automatically to fit cell content or to fit the available width of the control.</span></span>  
   
- [对 Windows 窗体 DataGridView 控件中的数据排序](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
- 提供介绍控件中的排序功能的主题。  
+ [<span data-ttu-id="77924-125">在 Windows 窗体 DataGridView 控件中进行数据排序</span><span class="sxs-lookup"><span data-stu-id="77924-125">Sorting Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-126">提供介绍控件中的排序功能的主题。</span><span class="sxs-lookup"><span data-stu-id="77924-126">Provides topics that describe the sorting features in the control.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍如何改变用户添加和修改控件中数据的方式。  
+ [<span data-ttu-id="77924-127">Windows 窗体 DataGridView 控件中的数据输入</span><span class="sxs-lookup"><span data-stu-id="77924-127">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-128">提供一些主题，介绍如何改变用户添加和修改控件中数据的方式。</span><span class="sxs-lookup"><span data-stu-id="77924-128">Provides topics that describe how to change the way users add and modify data in the control.</span></span>  
   
- [Windows 窗体 DataGridView 控件的选项和剪贴板使用](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍控件中的单元格、行和列选择功能。  
+ [<span data-ttu-id="77924-129">将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用</span><span class="sxs-lookup"><span data-stu-id="77924-129">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-130">提供一些主题，介绍控件中的单元格、行和列选择功能。</span><span class="sxs-lookup"><span data-stu-id="77924-130">Provides topics that describe the cell, row, and column selection features in the control.</span></span>  
   
- [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- 提供一些主题，介绍如何使用单元格、行和列对象进行编程。  
+ [<span data-ttu-id="77924-131">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="77924-131">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ <span data-ttu-id="77924-132">提供一些主题，介绍如何使用单元格、行和列对象进行编程。</span><span class="sxs-lookup"><span data-stu-id="77924-132">Provides topics that describe how to program with cell, row, and column objects.</span></span>  
   
- [自定义 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍自定义绘制 `DataGridView` 单元格和行，以及创建派生的单元、列和行类型。  
+ [<span data-ttu-id="77924-133">自定义 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="77924-133">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-134">提供一些主题，介绍自定义绘制 `DataGridView` 单元格和行，以及创建派生的单元、列和行类型。</span><span class="sxs-lookup"><span data-stu-id="77924-134">Provides topics that describe custom painting `DataGridView` cells and rows, and creating derived cell, column, and row types.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的性能优化](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍如何在使用大量数据时，有效地使用控件以避免性能问题。  
+ [<span data-ttu-id="77924-135">Windows 窗体 DataGridView 控件中的性能调整</span><span class="sxs-lookup"><span data-stu-id="77924-135">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-136">提供一些主题，介绍如何在使用大量数据时，有效地使用控件以避免性能问题。</span><span class="sxs-lookup"><span data-stu-id="77924-136">Provides topics that describe how to use the control efficiently to avoid performance problems when working with large amounts of data.</span></span>  
   
- [Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
- 介绍用户可如何通过键盘和鼠标与 `DataGridView` 控件进行交互。  
+ [<span data-ttu-id="77924-137">Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理</span><span class="sxs-lookup"><span data-stu-id="77924-137">Default Keyboard and Mouse Handling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="77924-138">介绍用户可如何通过键盘和鼠标与 `DataGridView` 控件进行交互。</span><span class="sxs-lookup"><span data-stu-id="77924-138">Describes how users can interact with the `DataGridView` control through a keyboard and a mouse.</span></span>  
   
- [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
- 描述 `DataGridView` 控件如何改进和替换 <xref:System.Windows.Forms.DataGrid> 控件。  
+ [<span data-ttu-id="77924-139">Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别</span><span class="sxs-lookup"><span data-stu-id="77924-139">Differences Between the Windows Forms DataGridView and DataGrid Controls</span></span>](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
+ <span data-ttu-id="77924-140">描述 `DataGridView` 控件如何改进和替换 <xref:System.Windows.Forms.DataGrid> 控件。</span><span class="sxs-lookup"><span data-stu-id="77924-140">Describes how the `DataGridView` control improves upon and replaces the <xref:System.Windows.Forms.DataGrid> control.</span></span>  
   
- 另请参阅[将设计器与 Windows 窗体 DataGridView 控件结合使用](http://msdn.microsoft.com/library/171593w110ac%20\(v=vs.110\))。  
+ <span data-ttu-id="77924-141">另请参阅[与 Windows 窗体 DataGridView 控件一起使用设计器](http://msdn.microsoft.com/library/ms171593\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="77924-141">Also see [Using the Designer with the Windows Forms DataGridView Control](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="77924-142">参考</span><span class="sxs-lookup"><span data-stu-id="77924-142">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- 提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
+ <span data-ttu-id="77924-143">提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="77924-143">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- 提供关于 <xref:System.Windows.Forms.BindingSource> 组件的参考文档。  <xref:System.Windows.Forms.DataGridView> 控件和 <xref:System.Windows.Forms.BindingSource> 组件设计为需紧密协作。  
+ <span data-ttu-id="77924-144">提供关于 <xref:System.Windows.Forms.BindingSource> 组件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="77924-144">Provides reference documentation for the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="77924-145"><xref:System.Windows.Forms.DataGridView> 控件和 <xref:System.Windows.Forms.BindingSource> 组件设计为需紧密协作。</span><span class="sxs-lookup"><span data-stu-id="77924-145">The <xref:System.Windows.Forms.DataGridView> control and the <xref:System.Windows.Forms.BindingSource> component are designed to work closely together.</span></span>  
   
-## 请参阅  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="77924-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="77924-146">See Also</span></span>  
+ [<span data-ttu-id="77924-147">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="77924-147">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

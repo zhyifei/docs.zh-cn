@@ -1,45 +1,44 @@
 ---
-title: "数学规范函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "数学规范函数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 数学规范函数
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了数学规范函数。  
+# <a name="math-canonical-functions"></a><span data-ttu-id="551c0-102">数学规范函数</span><span class="sxs-lookup"><span data-stu-id="551c0-102">Math Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="551c0-103"> 提供了数学规范函数。</span><span class="sxs-lookup"><span data-stu-id="551c0-103"> includes math canonical functions.</span></span>  
   
- 下表显示 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。  
+ <span data-ttu-id="551c0-104">下表显示 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。</span><span class="sxs-lookup"><span data-stu-id="551c0-104">The following table shows the math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|函数|描述|  
-|--------|--------|  
-|`Abs(` `value` `)`|返回 `value` 的绝对值。<br /><br /> **参数**<br /><br /> `Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double` 和 `Decimal`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> `Abs(-2)`|  
-|`Ceiling(` `value` `)`|返回不小于 `value` 的最小整数。<br /><br /> **参数**<br /><br /> `Single`、`Double` 和 `Decimal`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+|<span data-ttu-id="551c0-105">函数</span><span class="sxs-lookup"><span data-stu-id="551c0-105">Function</span></span>|<span data-ttu-id="551c0-106">描述</span><span class="sxs-lookup"><span data-stu-id="551c0-106">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="551c0-107">`Abs(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="551c0-107">`Abs(` `value` `)`</span></span>|<span data-ttu-id="551c0-108">返回 `value` 的绝对值。</span><span class="sxs-lookup"><span data-stu-id="551c0-108">Returns the absolute value of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-109">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-109">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-110">`Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-110">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-111">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-111">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-112">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-112">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-113">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-113">**Example**</span></span><br /><br /> `Abs(-2)`|  
+|<span data-ttu-id="551c0-114">`Ceiling(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="551c0-114">`Ceiling(` `value` `)`</span></span>|<span data-ttu-id="551c0-115">返回不小于 `value` 的最小整数。</span><span class="sxs-lookup"><span data-stu-id="551c0-115">Returns the smallest integer that is not less than `value`.</span></span><br /><br /> <span data-ttu-id="551c0-116">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-116">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-117">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-117">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-118">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-118">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-119">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-119">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-120">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-120">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
  [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(` `value` `)`|返回不大于 `value` 的最大整数。<br /><br /> **参数**<br /><br /> `Single`、`Double` 和 `Decimal`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+|<span data-ttu-id="551c0-121">`Floor(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="551c0-121">`Floor(` `value` `)`</span></span>|<span data-ttu-id="551c0-122">返回不大于 `value` 的最大整数。</span><span class="sxs-lookup"><span data-stu-id="551c0-122">Returns the largest integer that is not greater than `value`.</span></span><br /><br /> <span data-ttu-id="551c0-123">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-123">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-124">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-124">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-125">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-125">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-126">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-126">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-127">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-127">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
  [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(` `value`, `exponent``)`|返回对指定的 `value` 求指定的 `exponent` 幂次所得的结果。<br /><br /> **参数**<br /><br /> `value`： `Int32, Int64, Double` 或 `Decimal`。<br /><br /> `exponent`：`Int64``、Double` 或 `Decimal`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> `Power(748.58,2)`|  
-|`Round(` `value` `)`|返回 `value` 的整数部分，舍入到最近的整数。<br /><br /> **参数**<br /><br /> `Single`、`Double` 和 `Decimal`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> `Round(748.58)`|  
-|`Round(` `value`, `digits``)`|返回 `value`，舍入到最近的指定 `digits`。<br /><br /> **参数**<br /><br /> `value`：`Double` 或 `Decimal`。<br /><br /> `digits`：`Int16` 或 `Int32`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(` `value`, `digits``)`|返回 `value`，截断至最近的指定 `digits`。<br /><br /> **参数**<br /><br /> `value`：`Double` 或 `Decimal`。<br /><br /> `digits`：`Int16` 或 `Int32`。<br /><br /> **返回值**<br /><br /> `value` 的类型。<br /><br /> **示例**<br /><br /> `Truncate(748.58,1)`|  
+|<span data-ttu-id="551c0-128">`Power(` `value`, `exponent``)`</span><span class="sxs-lookup"><span data-stu-id="551c0-128">`Power(` `value`, `exponent``)`</span></span>|<span data-ttu-id="551c0-129">返回对指定的 `value` 求指定的 `exponent` 幂次所得的结果。</span><span class="sxs-lookup"><span data-stu-id="551c0-129">Returns the result of the specified `value` to the specified `exponent`.</span></span><br /><br /> <span data-ttu-id="551c0-130">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-130">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-131">`value`： 一个`Int32, Int64, Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-131">`value`: An `Int32, Int64, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-132">`exponent`： 一个`Int64``, Double`，或`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-132">`exponent`: An `Int64``, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-133">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-134">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-134">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-135">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-135">**Example**</span></span><br /><br /> `Power(748.58,2)`|  
+|<span data-ttu-id="551c0-136">`Round(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="551c0-136">`Round(` `value` `)`</span></span>|<span data-ttu-id="551c0-137">返回 `value` 的整数部分，舍入到最近的整数。</span><span class="sxs-lookup"><span data-stu-id="551c0-137">Returns the integer portion of `value`, rounded to the nearest integer.</span></span><br /><br /> <span data-ttu-id="551c0-138">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-139">A `Single`， `Double`，和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-139">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-140">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-141">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-141">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-142">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-142">**Example**</span></span><br /><br /> `Round(748.58)`|  
+|<span data-ttu-id="551c0-143">`Round(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="551c0-143">`Round(` `value`, `digits``)`</span></span>|<span data-ttu-id="551c0-144">返回 `value`，舍入到最近的指定 `digits`。</span><span class="sxs-lookup"><span data-stu-id="551c0-144">Returns the `value`, rounded to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="551c0-145">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-146">`value`：`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-146">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-147">`digits`：`Int16` 或 `Int32`。</span><span class="sxs-lookup"><span data-stu-id="551c0-147">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="551c0-148">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-148">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-149">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-149">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-150">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-150">**Example**</span></span><br /><br /> `Round(748.58,1)`|  
+|<span data-ttu-id="551c0-151">`Truncate(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="551c0-151">`Truncate(` `value`, `digits``)`</span></span>|<span data-ttu-id="551c0-152">返回 `value`，截断至最近的指定 `digits`。</span><span class="sxs-lookup"><span data-stu-id="551c0-152">Returns the `value`, truncated to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="551c0-153">**参数**</span><span class="sxs-lookup"><span data-stu-id="551c0-153">**Arguments**</span></span><br /><br /> <span data-ttu-id="551c0-154">`value`：`Double` 或 `Decimal`。</span><span class="sxs-lookup"><span data-stu-id="551c0-154">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="551c0-155">`digits`：`Int16` 或 `Int32`。</span><span class="sxs-lookup"><span data-stu-id="551c0-155">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="551c0-156">**返回值**</span><span class="sxs-lookup"><span data-stu-id="551c0-156">**Return Value**</span></span><br /><br /> <span data-ttu-id="551c0-157">`value` 的类型。</span><span class="sxs-lookup"><span data-stu-id="551c0-157">The type of `value`.</span></span><br /><br /> <span data-ttu-id="551c0-158">**示例**</span><span class="sxs-lookup"><span data-stu-id="551c0-158">**Example**</span></span><br /><br /> `Truncate(748.58,1)`|  
   
- 如果提供 `null` 输入，则这些函数返回 `null`。  
+ <span data-ttu-id="551c0-159">如果提供 `null` 输入，则这些函数返回 `null`。</span><span class="sxs-lookup"><span data-stu-id="551c0-159">These functions will return `null` if given `null` input.</span></span>  
   
- Microsoft SQL 客户端托管提供程序中提供了等效功能。  有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
+ <span data-ttu-id="551c0-160">Microsoft SQL 客户端托管提供程序中提供了等效功能。</span><span class="sxs-lookup"><span data-stu-id="551c0-160">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="551c0-161">有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="551c0-161">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
-## 请参阅  
- [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="551c0-162">另请参阅</span><span class="sxs-lookup"><span data-stu-id="551c0-162">See Also</span></span>  
+ [<span data-ttu-id="551c0-163">规范函数</span><span class="sxs-lookup"><span data-stu-id="551c0-163">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

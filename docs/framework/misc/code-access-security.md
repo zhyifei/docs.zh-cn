@@ -1,89 +1,82 @@
 ---
-title: "代码访问安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "调用堆栈"
-  - "代码访问安全性"
-  - "授予权限, 代码访问安全性"
-  - "恶意代码"
-  - "移动代码安全"
-  - "命名的权限集, 代码访问安全性"
-  - "权限 [.NET Framework], 代码访问安全性"
-  - "安全性 [.NET Framework], 代码访问安全性"
-  - "堆栈步"
-  - "受信任的代码"
-  - "非托管代码, 代码访问安全性"
-  - "用户身份验证, 代码访问安全性"
+title: "代码访问安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named permission sets, code access security
+- call stacks
+- malicious code
+- stack walk
+- security [.NET Framework], code access security
+- permissions [.NET Framework], code access security
+- trusted code
+- mobile code security
+- unmanaged code, code access security
+- granting permissions, code access security
+- user authentication, code access security
+- code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "25"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3582516dece69589d98acb66f1dde2249d9d8832
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 代码访问安全性
-当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。  代码可附加到电子邮件、包含在文档中或通过 Internet 下载。  不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或破坏数据、花费时间和资金。  
+# <a name="code-access-security"></a><span data-ttu-id="ee3f6-102">代码访问安全性</span><span class="sxs-lookup"><span data-stu-id="ee3f6-102">Code Access Security</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 最常见的安全机制是根据用户的登录凭据（通常为密码）授予用户权限，以及限制允许用户访问的资源（通常为目录和文件）。  然而，这种方法无法解决以下几个问题：用户从许多来源获取代码，其中一些来源可能不可靠；代码包含 bug 或漏洞，被恶意代码所利用；代码有时会执行一些用户不知道的操作。  因此，当谨慎且值得信赖的用户运行恶意或有错的软件时，计算机系统可能会受到损坏并泄露私有数据。  大多数操作系统安全机制要求每一段代码必须完全可信方能运行（Web 页面上的脚本除外）。  因此，仍需要一个广泛适用的安全机制来允许源自一个计算机系统的代码在另一个系统中受保护运行，即使这两个系统之间没有信任关系。  
+ <span data-ttu-id="ee3f6-103">当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-103">Today's highly connected computer systems are frequently exposed to code originating from various, possibly unknown sources.</span></span> <span data-ttu-id="ee3f6-104">代码可附加到电子邮件、包含在文档中或通过 Internet 下载。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-104">Code can be attached to e-mail, contained in documents, or downloaded over the Internet.</span></span> <span data-ttu-id="ee3f6-105">不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或破坏数据、花费时间和资金。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-105">Unfortunately, many computer users have experienced firsthand the effects of malicious mobile code, including viruses and worms, which can damage or destroy data and cost time and money.</span></span>  
   
- .NET Framework 提供了一种安全机制，称为代码访问安全性。该机制可帮助保护计算机系统免受恶意移动代码的侵害，允许来自未知源的代码在实施保护的情况下运行，并帮助防止受信任的代码免受有意或无意安全性折损影响。  代码访问安全性使代码可以根据它所来自的位置以及代码标识的其他方面，获得不同等级的受信度。  代码访问安全性还对代码强制实施不同的信任级别，从而最大程度地减少必须完全可信方能运行的代码数量。  使用代码访问安全性可以降低恶意或有错代码滥用代码的可能性。  它可以减少责任，因为你可以指定允许代码执行的操作。  代码访问安全性还可以最大程度地减少代码安全漏洞所产生的损害。  
+ <span data-ttu-id="ee3f6-106">最常见的安全机制是根据用户的登录凭据（通常为密码）授予用户权限，以及限制允许用户访问的资源（通常为目录和文件）。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-106">Most common security mechanisms give rights to users based on their logon credentials (usually a password) and restrict resources (often directories and files) that the user is allowed to access.</span></span> <span data-ttu-id="ee3f6-107">然而，这种方法无法解决以下几个问题：用户从许多来源获取代码，其中一些来源可能不可靠；代码包含 bug 或漏洞，被恶意代码所利用；代码有时会执行一些用户不知道的操作。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-107">However, this approach fails to address several issues: users obtain code from many sources, some of which might be unreliable; code can contain bugs or vulnerabilities that enable it to be exploited by malicious code; and code sometimes does things that the user does not know it will do.</span></span> <span data-ttu-id="ee3f6-108">因此，当谨慎且值得信赖的用户运行恶意或有错的软件时，计算机系统可能会受到损坏并泄露私有数据。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-108">As a result, computer systems can be damaged and private data can be leaked when cautious and trustworthy users run malicious or error-filled software.</span></span> <span data-ttu-id="ee3f6-109">大多数操作系统安全机制要求每一段代码必须完全可信方能运行（Web 页面上的脚本除外）。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-109">Most operating system security mechanisms require that every piece of code must be completely trusted in order to run, except perhaps for scripts on a Web page.</span></span> <span data-ttu-id="ee3f6-110">因此，仍需要一个广泛适用的安全机制来允许源自一个计算机系统的代码在另一个系统中受保护运行，即使这两个系统之间没有信任关系。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-110">Therefore, there is still a need for a widely applicable security mechanism that allows code originating from one computer system to execute with protection on another system, even when there is no trust relationship between the systems.</span></span>  
+  
+ <span data-ttu-id="ee3f6-111">.NET Framework 提供了一种安全机制，称为代码访问安全性。该机制可帮助保护计算机系统免受恶意移动代码的侵害，允许来自未知源的代码在实施保护的情况下运行，并帮助防止受信任的代码免受有意或无意安全性折损影响。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-111">The .NET Framework provides a security mechanism called code access security to help protect computer systems from malicious mobile code, to allow code from unknown origins to run with protection, and to help prevent trusted code from intentionally or accidentally compromising security.</span></span> <span data-ttu-id="ee3f6-112">代码访问安全性使代码可以根据它所来自的位置以及代码标识的其他方面，获得不同等级的受信度。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-112">Code access security enables code to be trusted to varying degrees depending on where the code originates and on other aspects of the code's identity.</span></span> <span data-ttu-id="ee3f6-113">代码访问安全性还对代码强制实施不同的信任级别，从而最大程度地减少必须完全可信方能运行的代码数量。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-113">Code access security also enforces the varying levels of trust on code, which minimizes the amount of code that must be fully trusted in order to run.</span></span> <span data-ttu-id="ee3f6-114">使用代码访问安全性可以降低恶意或有错代码滥用代码的可能性。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-114">Using code access security can reduce the likelihood that your code will be misused by malicious or error-filled code.</span></span> <span data-ttu-id="ee3f6-115">它可以减少责任，因为你可以指定允许代码执行的操作。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-115">It can reduce your liability, because you can specify the set of operations your code should be allowed to perform.</span></span> <span data-ttu-id="ee3f6-116">代码访问安全性还可以最大程度地减少代码安全漏洞所产生的损害。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-116">Code access security can also help minimize the damage that can result from security vulnerabilities in your code.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的代码访问安全性已经进行了重大更改。  最值得注意的更改是[安全透明度](../../../docs/framework/misc/security-transparent-code.md)，但也有其他影响代码访问安全性的重大更改。  有关这些更改的信息，请参阅 [安全更改](../../../docs/framework/security/security-changes.md)。  
+>  <span data-ttu-id="ee3f6-117">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的代码访问安全性已经进行了重大更改。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-117">Major changes have been made to code access security in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="ee3f6-118">最值得注意的更改已被[安全透明度](../../../docs/framework/misc/security-transparent-code.md)，但也有其他影响代码访问安全性的重大更改。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-118">The most notable change has been [security transparency](../../../docs/framework/misc/security-transparent-code.md), but there are also other significant changes that affect code access security.</span></span> <span data-ttu-id="ee3f6-119">有关这些更改的信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-119">For information about these changes, see [Security Changes](../../../docs/framework/security/security-changes.md).</span></span>  
   
- 代码访问安全性主要影响库代码和部分受信任的应用程序。  库开发人员必须防止部分受信任的应用程序在未经授权的情况下访问其代码。  部分受信任的应用程序是从外部源（如 Internet）中加载的应用程序。  台式机或本地局域网中安装的应用程序完全受信任并可运行。  完全受信任的应用程序不会受到代码访问安全性的影响（除非其标记为[安全性透明](../../../docs/framework/misc/security-transparent-code.md)），因为这些应用程序完全受信任。  完全受信任应用程序的唯一限制是，标记有 <xref:System.Security.SecurityTransparentAttribute> 特性的应用程序无法调用标记有 <xref:System.Security.SecurityCriticalAttribute> 特性的代码。  部分受信任的应用程序必须在沙盒（如 Internet Explorer）中运行，以确保应用代码访问安全性。  如果从 Internet 下载一个应用程序并尝试在台式机中运行该应用程序，那么将收到 <xref:System.NotSupportedException> 并且系统将显示消息：“尝试从网络地址加载程序集，这可能会导致程序集在旧版 .NET Framework 中进行沙盒处理。  此版本的 .NET Framework 默认不启用 CAS 策略，因此加载可能存在危险。” 如果您确信可以信任该应用程序，则可以通过使用 [\<loadFromRemoteSources\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)将其作为完全信任的应用程序运行。  有关在沙盒中运行应用程序的信息，请参阅[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
+ <span data-ttu-id="ee3f6-120">代码访问安全性主要影响库代码和部分受信任的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-120">Code access security primarily affects library code and partially trusted applications.</span></span> <span data-ttu-id="ee3f6-121">库开发人员必须防止部分受信任的应用程序在未经授权的情况下访问其代码。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-121">Library developers must protect their code from unauthorized access from partially trusted applications.</span></span> <span data-ttu-id="ee3f6-122">部分受信任的应用程序是从外部源（如 Internet）中加载的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-122">Partially trusted applications are applications that are loaded from external sources such as the Internet.</span></span> <span data-ttu-id="ee3f6-123">台式机或本地局域网中安装的应用程序完全受信任并可运行。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-123">Applications that are installed on your desktop or on the local intranet run in full trust.</span></span> <span data-ttu-id="ee3f6-124">完全信任应用程序不影响代码访问安全，除非标记为[安全透明](../../../docs/framework/misc/security-transparent-code.md)，因为它们是完全受信任。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-124">Full-trust applications are not affected by code access security unless they are marked as [security-transparent](../../../docs/framework/misc/security-transparent-code.md), because they are fully trusted.</span></span> <span data-ttu-id="ee3f6-125">完全受信任应用程序的唯一限制是，标记有 <xref:System.Security.SecurityTransparentAttribute> 特性的应用程序无法调用标记有 <xref:System.Security.SecurityCriticalAttribute> 特性的代码。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-125">The only limitation for full-trust applications is that applications that are marked with the <xref:System.Security.SecurityTransparentAttribute> attribute cannot call code that is marked with the <xref:System.Security.SecurityCriticalAttribute> attribute.</span></span> <span data-ttu-id="ee3f6-126">部分受信任的应用程序必须在沙盒（如 Internet Explorer）中运行，以确保应用代码访问安全性。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-126">Partially trusted applications must be run in a sandbox (for example, in Internet Explorer) so that code access security can be applied.</span></span> <span data-ttu-id="ee3f6-127">如果从 Internet 下载一个应用程序并尝试在台式机中运行该应用程序，那么将收到 <xref:System.NotSupportedException> 并且系统将显示消息：“尝试从网络地址加载程序集，这可能会导致程序集在旧版 .NET Framework 中进行沙盒处理。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-127">If you download an application from the Internet and try to run it from your desktop, you will get a <xref:System.NotSupportedException> with the message: "An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework.</span></span> <span data-ttu-id="ee3f6-128">此版本的 .NET Framework 默认不启用 CAS 策略，因此加载可能存在危险。”</span><span class="sxs-lookup"><span data-stu-id="ee3f6-128">This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous."</span></span> <span data-ttu-id="ee3f6-129">如果您确信可以信任应用程序，你可以使其能够通过使用以完全信任权限来运行[ \<loadFromRemoteSources > 元素](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-129">If you are sure that the application can be trusted, you can enable it to be run as full trust by using the [\<loadFromRemoteSources> element](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md).</span></span> <span data-ttu-id="ee3f6-130">有关在沙盒中运行应用程序的信息，请参阅[如何： 运行部分受信任的代码在沙盒中](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-130">For information about running an application in a sandbox, see [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).</span></span>  
   
- 面向公共语言运行时的所有托管代码都受益于代码访问安全性，即使该代码不调用单个代码访问安全性。  有关详细信息，请参阅[代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)。  
-  
-> [!CAUTION]
->  代码访问安全性和部分受信任的代码  
->   
->  .NET Framework 提供一种机制，对在相同应用程序中运行的不同代码强制实施不同的信任级别，该机制称为代码访问安全性 \(CAS\)。  .NET Framework 中的代码访问安全性不应用作部分受信任的代码（特别是未知来源的代码）的安全边界。  建议在未实施其他安全措施的情况下，不要加载和执行未知来源的代码。  
->   
->  此策略适用于 .NET Framework 的所有版本，但不适用于 Silverlight 中所含的 .NET Framework。  
+ <span data-ttu-id="ee3f6-131">面向公共语言运行时的所有托管代码都受益于代码访问安全性，即使该代码不调用单个代码访问安全性。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-131">All managed code that targets the common language runtime receives the benefits of code access security, even if that code does not make a single code access security call.</span></span> <span data-ttu-id="ee3f6-132">有关详细信息，请参阅[代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-132">For more information, see [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
 <a name="key_functions"></a>   
-## 代码访问安全性的主要功能  
- 代码访问安全性帮助限制代码对受保护资源和操作的访问权限。  在 .NET Framework 中，代码访问安全性具有以下功能：  
+## <a name="key-functions-of-code-access-security"></a><span data-ttu-id="ee3f6-133">代码访问安全性的主要功能</span><span class="sxs-lookup"><span data-stu-id="ee3f6-133">Key Functions of Code Access Security</span></span>  
+ <span data-ttu-id="ee3f6-134">代码访问安全性帮助限制代码对受保护资源和操作的访问权限。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-134">Code access security helps limit the access that code has to protected resources and operations.</span></span> <span data-ttu-id="ee3f6-135">在 .NET Framework 中，代码访问安全性具有以下功能：</span><span class="sxs-lookup"><span data-stu-id="ee3f6-135">In the .NET Framework, code access security performs the following functions:</span></span>  
   
--   定义权限和权限集，它们表示访问各种系统资源的权限。  
+-   <span data-ttu-id="ee3f6-136">定义权限和权限集，它们表示访问各种系统资源的权限。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-136">Defines permissions and permission sets that represent the right to access various system resources.</span></span>  
   
--   使代码能够要求其调用方拥有特定的权限。  
+-   <span data-ttu-id="ee3f6-137">使代码能够要求其调用方拥有特定的权限。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-137">Enables code to demand that its callers have specific permissions.</span></span>  
   
--   使代码能够要求其调用方拥有数字签名，从而只允许特定组织或特定站点的调用方来调用受保护的代码。  
+-   <span data-ttu-id="ee3f6-138">使代码能够要求其调用方拥有数字签名，从而只允许特定组织或特定站点的调用方来调用受保护的代码。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-138">Enables code to demand that its callers possess a digital signature, thus allowing only callers from a particular organization or site to call the protected code.</span></span>  
   
--   通过将调用堆栈上为每个调用方授予的权限与调用方必须拥有的权限相比较，加强在运行时对代码的限制。  
+-   <span data-ttu-id="ee3f6-139">通过将调用堆栈上为每个调用方授予的权限与调用方必须拥有的权限相比较，加强在运行时对代码的限制。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-139">Enforces restrictions on code at run time by comparing the granted permissions of every caller on the call stack to the permissions that callers must have.</span></span>  
   
 <a name="walking_the_call_stack"></a>   
-## 审核调用堆栈  
- 为了确定代码是否有权访问某一资源或执行某一操作，运行时的安全系统将审核调用堆栈，以将每个调用方获得的权限与要求的权限进行比较。  如果调用堆栈中的任何调用方不具备要求的权限，则会引发安全性异常并拒绝访问。  堆栈审核旨在帮助防止引诱攻击，引诱攻击是指不太受信任的代码调用高度受信任的代码，并利用高度受信任的代码来执行未经授权的操作。  在运行时要求所有调用方的权限会影响性能，但是为了帮助防止代码免受不太受信任的代码的引诱攻击，这是很有必要的。  为了优化性能，可以使代码执行少量堆栈审核，但是必须确保每次进行此操作时不会暴露安全性漏洞。  
+## <a name="walking-the-call-stack"></a><span data-ttu-id="ee3f6-140">审核调用堆栈</span><span class="sxs-lookup"><span data-stu-id="ee3f6-140">Walking the Call Stack</span></span>  
+ <span data-ttu-id="ee3f6-141">为了确定代码是否有权访问某一资源或执行某一操作，运行时的安全系统将审核调用堆栈，以将每个调用方获得的权限与要求的权限进行比较。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-141">To determine whether code is authorized to access a resource or perform an operation, the runtime's security system walks the call stack, comparing the granted permissions of each caller to the permission being demanded.</span></span> <span data-ttu-id="ee3f6-142">如果调用堆栈中的任何调用方不具备要求的权限，则会引发安全性异常并拒绝访问。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-142">If any caller in the call stack does not have the demanded permission, a security exception is thrown and access is refused.</span></span> <span data-ttu-id="ee3f6-143">堆栈审核旨在帮助防止引诱攻击，引诱攻击是指不太受信任的代码调用高度受信任的代码，并利用高度受信任的代码来执行未经授权的操作。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-143">The stack walk is designed to help prevent luring attacks, in which less-trusted code calls highly trusted code and uses it to perform unauthorized actions.</span></span> <span data-ttu-id="ee3f6-144">在运行时要求所有调用方的权限会影响性能，但是为了帮助防止代码免受不太受信任的代码的引诱攻击，这是很有必要的。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-144">Demanding permissions of all callers at run time affects performance, but it is essential to help protect code from luring attacks by less-trusted code.</span></span> <span data-ttu-id="ee3f6-145">为了优化性能，可以使代码执行少量堆栈审核，但是必须确保每次进行此操作时不会暴露安全性漏洞。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-145">To optimize performance, you can have your code perform fewer stack walks; however, you must be sure that you do not expose a security weakness whenever you do this.</span></span>  
   
- 下图显示当程序集 A4 中的方法要求其调用方具备 P 权限时堆栈审核产生的结果。  
+ <span data-ttu-id="ee3f6-146">下图显示当程序集 A4 中的方法要求其调用方具备 P 权限时堆栈审核产生的结果。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-146">The following illustration shows the stack walk that results when a method in Assembly A4 demands that its callers have permission P.</span></span>  
   
- ![代码访问安全性](../../../docs/framework/misc/media/slide-10a.gif "slide\_10a")  
-安全性堆栈审核  
+ <span data-ttu-id="ee3f6-147">![代码访问安全](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")</span><span class="sxs-lookup"><span data-stu-id="ee3f6-147">![Code access security](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")</span></span>  
+<span data-ttu-id="ee3f6-148">安全性堆栈审核</span><span class="sxs-lookup"><span data-stu-id="ee3f6-148">Security stack walk</span></span>  
   
 <a name="related_topics"></a>   
-## 相关主题  
+## <a name="related-topics"></a><span data-ttu-id="ee3f6-149">相关主题</span><span class="sxs-lookup"><span data-stu-id="ee3f6-149">Related Topics</span></span>  
   
-|标题|描述|  
-|--------|--------|  
-|[代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)|描述代码访问安全性及其最常见的用途。|  
-|[安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|描述 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的安全性透明模型。|  
-|[通过部分受信任的代码使用库](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|描述如何借助非托管代码启用库以及如何从非托管代码中使用库。|  
-|[安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)|概述 .NET Framework 安全性系统中使用的许多关键术语和概念。|  
-|[基于角色的安全性](../../../docs/standard/security/role-based-security.md)|描述如何合并基于角色的安全性。|  
-|[加密服务](../../../docs/standard/security/cryptographic-services.md)|描述如何将加密合并到应用程序。|
+|<span data-ttu-id="ee3f6-150">标题</span><span class="sxs-lookup"><span data-stu-id="ee3f6-150">Title</span></span>|<span data-ttu-id="ee3f6-151">描述</span><span class="sxs-lookup"><span data-stu-id="ee3f6-151">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="ee3f6-152">代码访问安全性基础知识</span><span class="sxs-lookup"><span data-stu-id="ee3f6-152">Code Access Security Basics</span></span>](../../../docs/framework/misc/code-access-security-basics.md)|<span data-ttu-id="ee3f6-153">描述代码访问安全性及其最常见的用途。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-153">Describes code access security and its most common uses.</span></span>|  
+|[<span data-ttu-id="ee3f6-154">安全透明的代码，级别 2</span><span class="sxs-lookup"><span data-stu-id="ee3f6-154">Security-Transparent Code, Level 2</span></span>](../../../docs/framework/misc/security-transparent-code-level-2.md)|<span data-ttu-id="ee3f6-155">描述 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的安全性透明模型。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-155">Describes the security transparency model in the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].</span></span>|  
+|[<span data-ttu-id="ee3f6-156">通过部分受信任的代码使用库</span><span class="sxs-lookup"><span data-stu-id="ee3f6-156">Using Libraries from Partially Trusted Code</span></span>](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|<span data-ttu-id="ee3f6-157">描述如何借助非托管代码启用库以及如何从非托管代码中使用库。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-157">Describes how to enable libraries for use with unmanaged code and how to use libraries from unmanaged code.</span></span>|  
+|[<span data-ttu-id="ee3f6-158">安全性的基础概念</span><span class="sxs-lookup"><span data-stu-id="ee3f6-158">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)|<span data-ttu-id="ee3f6-159">概述 .NET Framework 安全性系统中使用的许多关键术语和概念。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-159">Provides an overview of many of the key terms and concepts used in the .NET Framework security system.</span></span>|  
+|[<span data-ttu-id="ee3f6-160">基于角色的安全性</span><span class="sxs-lookup"><span data-stu-id="ee3f6-160">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)|<span data-ttu-id="ee3f6-161">描述如何合并基于角色的安全性。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-161">Describes how to incorporate security based on roles.</span></span>|  
+|[<span data-ttu-id="ee3f6-162">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="ee3f6-162">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)|<span data-ttu-id="ee3f6-163">描述如何将加密合并到应用程序。</span><span class="sxs-lookup"><span data-stu-id="ee3f6-163">Describes how to incorporate cryptography into your applications.</span></span>|

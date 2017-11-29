@@ -1,39 +1,45 @@
 ---
-title: "建立连接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立连接"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3d391796d42a4303db16ee01ceba57bac2e3fc84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 建立连接
-要连接到 Microsoft SQL Server，请使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 对象。  要连接到 OLE DB 数据源，请使用 OLE DB .NET Framework 数据提供程序的 <xref:System.Data.OleDb.OleDbConnection> 对象。  要连接到 ODBC 数据源，请使用 ODBC .NET Framework 数据提供程序的 <xref:System.Data.Odbc.OdbcConnection> 对象。  要连接到 Oracle 数据源，请使用 Oracle .NET Framework 数据提供程序的 <xref:System.Data.OracleClient.OracleConnection> 对象。  要安全地存储和检索连接字符串，请参见[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+# <a name="establishing-the-connection"></a><span data-ttu-id="d76da-102">建立连接</span><span class="sxs-lookup"><span data-stu-id="d76da-102">Establishing the Connection</span></span>
+<span data-ttu-id="d76da-103">要连接到 Microsoft SQL Server，请使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-103">To connect to Microsoft SQL Server, use the <xref:System.Data.SqlClient.SqlConnection> object of the .NET Framework Data Provider for SQL Server.</span></span> <span data-ttu-id="d76da-104">要连接到 OLE DB 数据源，请使用 OLE DB .NET Framework 数据提供程序的 <xref:System.Data.OleDb.OleDbConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-104">To connect to an OLE DB data source, use the <xref:System.Data.OleDb.OleDbConnection> object of the .NET Framework Data Provider for OLE DB.</span></span> <span data-ttu-id="d76da-105">要连接到 ODBC 数据源，请使用 ODBC .NET Framework 数据提供程序的 <xref:System.Data.Odbc.OdbcConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-105">To connect to an ODBC data source, use the <xref:System.Data.Odbc.OdbcConnection> object of the .NET Framework Data Provider for ODBC.</span></span> <span data-ttu-id="d76da-106">要连接到 Oracle 数据源，请使用 Oracle .NET Framework 数据提供程序的 <xref:System.Data.OracleClient.OracleConnection> 对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-106">To connect to an Oracle data source, use the <xref:System.Data.OracleClient.OracleConnection> object of the .NET Framework Data Provider for Oracle.</span></span> <span data-ttu-id="d76da-107">安全地存储和检索连接字符串，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="d76da-107">For securely storing and retrieving connection strings, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
-## 关闭连接  
- 我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。  如果 Visual Basic 或 C\# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。  有关更多信息，请参见[using 语句](../Topic/using%20Statement%20\(C%23%20Reference\).md)和[Using 语句](../Topic/Using%20Statement%20\(Visual%20Basic\).md)。  
+## <a name="closing-connections"></a><span data-ttu-id="d76da-108">关闭连接</span><span class="sxs-lookup"><span data-stu-id="d76da-108">Closing Connections</span></span>  
+ <span data-ttu-id="d76da-109">我们建议您在使用完连接时一定要关闭连接，以便连接可以返回池。</span><span class="sxs-lookup"><span data-stu-id="d76da-109">We recommend that you always close the connection when you are finished using it, so that the connection can be returned to the pool.</span></span> <span data-ttu-id="d76da-110">如果 Visual Basic 或 C# 的代码中存在 `Using` 块，将自动断开连接，即使发生无法处理的异常。</span><span class="sxs-lookup"><span data-stu-id="d76da-110">The `Using` block in Visual Basic or C# automatically disposes of the connection when the code exits the block, even in the case of an unhandled exception.</span></span> <span data-ttu-id="d76da-111">请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)和[Using 语句](~/docs/visual-basic/language-reference/statements/using-statement.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="d76da-111">See [using Statement](~/docs/csharp/language-reference/keywords/using-statement.md) and [Using Statement](~/docs/visual-basic/language-reference/statements/using-statement.md) for more information.</span></span>  
   
- 也可以使用适合所使用的提供程序的连接对象的 `Close` 或 `Dispose` 方法。  不是显式关闭的连接可能不会添加或返回到池中。  例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。  有关详细信息，请参阅[OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)。  
-  
-> [!NOTE]
->  不要在类的 `Finalize` 方法中对 **Connection**、**DataReader** 或任何其他托管对象调用 `Close` 或 `Dispose`。  在终结器中，仅释放类直接拥有的非托管资源。  如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。  有关详细信息，请参阅[Garbage Collection](../../../../docs/standard/garbage-collection/index.md)。  
+ <span data-ttu-id="d76da-112">也可以使用适合所使用的提供程序的连接对象的 `Close` 或 `Dispose` 方法。</span><span class="sxs-lookup"><span data-stu-id="d76da-112">You can also use the `Close` or `Dispose` methods of the connection object for the provider that you are using.</span></span> <span data-ttu-id="d76da-113">不是显式关闭的连接可能不会添加或返回到池中。</span><span class="sxs-lookup"><span data-stu-id="d76da-113">Connections that are not explicitly closed might not be added or returned to the pool.</span></span> <span data-ttu-id="d76da-114">例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。</span><span class="sxs-lookup"><span data-stu-id="d76da-114">For example, a connection that has gone out of scope but that has not been explicitly closed will only be returned to the connection pool if the maximum pool size has been reached and the connection is still valid.</span></span> <span data-ttu-id="d76da-115">有关详细信息，请参阅[OLE DB、 ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="d76da-115">For more information, see [OLE DB, ODBC, and Oracle Connection Pooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).</span></span>  
   
 > [!NOTE]
->  从连接池中获取连接或将连接返回到连接池时，服务器上不会引发登录和注销事件，这是因为在将连接返回到连接池时实际上并没有将其关闭。  有关详细信息，请参阅[SQL Server 连接池 \(ADO.NET\)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+>  <span data-ttu-id="d76da-116">不要调用`Close`或`Dispose`上**连接**、 **DataReader**，或在任何其他托管的对象`Finalize`你类的方法。</span><span class="sxs-lookup"><span data-stu-id="d76da-116">Do not call `Close` or `Dispose` on a **Connection**, a **DataReader**, or any other managed object in the `Finalize` method of your class.</span></span> <span data-ttu-id="d76da-117">在终结器中，仅释放类直接拥有的非托管资源。</span><span class="sxs-lookup"><span data-stu-id="d76da-117">In a finalizer, only release unmanaged resources that your class owns directly.</span></span> <span data-ttu-id="d76da-118">如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。</span><span class="sxs-lookup"><span data-stu-id="d76da-118">If your class does not own any unmanaged resources, do not include a `Finalize` method in your class definition.</span></span> <span data-ttu-id="d76da-119">有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。</span><span class="sxs-lookup"><span data-stu-id="d76da-119">For more information, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
   
-## 连接到 SQL Server  
- SQL Server .NET Framework 数据提供程序支持类似于 OLE DB \(ADO\) 连接字符串格式的连接字符串格式。  有关有效的字符串格式名称和值，请参见 <xref:System.Data.SqlClient.SqlConnection> 对象的 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性。  您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类在运行时创建具有有效语法的连接字符串。  有关详细信息，请参阅[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+> [!NOTE]
+>  <span data-ttu-id="d76da-120">从连接池中提取连接或将连接返回到连接池时，服务器上不会引发登录和注销事件，这是因为在将连接返回到连接池时实际上并没有将其关闭。</span><span class="sxs-lookup"><span data-stu-id="d76da-120">Login and logout events will not be raised on the server when a connection is fetched from or returned to the connection pool, because the connection is not actually closed when it is returned to the connection pool.</span></span> <span data-ttu-id="d76da-121">有关详细信息，请参阅[SQL Server 连接池 (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。</span><span class="sxs-lookup"><span data-stu-id="d76da-121">For more information, see [SQL Server Connection Pooling (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).</span></span>  
   
- 以下代码示例演示如何创建并打开与 SQL Server 数据库的连接。  
+## <a name="connecting-to-sql-server"></a><span data-ttu-id="d76da-122">连接到 SQL Server</span><span class="sxs-lookup"><span data-stu-id="d76da-122">Connecting to SQL Server</span></span>  
+ <span data-ttu-id="d76da-123">SQL Server .NET Framework 数据提供程序支持类似于 OLE DB (ADO) 连接字符串格式的连接字符串格式。</span><span class="sxs-lookup"><span data-stu-id="d76da-123">The .NET Framework Data Provider for SQL Server supports a connection string format that is similar to the OLE DB (ADO) connection string format.</span></span> <span data-ttu-id="d76da-124">有关有效的字符串格式名称和值，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性。</span><span class="sxs-lookup"><span data-stu-id="d76da-124">For valid string format names and values, see the <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> property of the <xref:System.Data.SqlClient.SqlConnection> object.</span></span> <span data-ttu-id="d76da-125">您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 类在运行时创建具有有效语法的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="d76da-125">You can also use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> class to create syntactically valid connection strings at run time.</span></span> <span data-ttu-id="d76da-126">有关详细信息，请参阅[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)。</span><span class="sxs-lookup"><span data-stu-id="d76da-126">For more information, see [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
+  
+ <span data-ttu-id="d76da-127">以下代码示例演示如何创建并打开与 SQL Server 数据库的连接。</span><span class="sxs-lookup"><span data-stu-id="d76da-127">The following code example demonstrates how to create and open a connection to a SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -52,26 +58,26 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 }  
 ```  
   
-### 集成安全性和 ASP.NET  
- SQL Server 集成安全性（也称为受信任连接）有助于在连接到 SQL Server 时提供保护，因为它不会在连接字符串中公开用户 ID 和密码，是对连接进行身份验证的建议方法。  集成安全性使用正在执行的进程的当前安全标识或标记。  对于桌面应用程序，安全标识或标记通常是当前登录的用户的标识。  
+### <a name="integrated-security-and-aspnet"></a><span data-ttu-id="d76da-128">集成安全性和 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d76da-128">Integrated Security and ASP.NET</span></span>  
+ <span data-ttu-id="d76da-129">SQL Server 集成安全性（也称为受信任连接）有助于在连接到 SQL Server 时提供保护，因为它不会在连接字符串中公开用户 ID 和密码，是对连接进行身份验证的建议方法。</span><span class="sxs-lookup"><span data-stu-id="d76da-129">SQL Server integrated security (also known as trusted connections) helps to provide protection when connecting to SQL Server as it does not expose a user ID and password in the connection string and is the recommended method for authenticating a connection.</span></span> <span data-ttu-id="d76da-130">集成安全性使用正在执行的进程的当前安全标识或标记。</span><span class="sxs-lookup"><span data-stu-id="d76da-130">Integrated security uses the current security identity, or token, of the executing process.</span></span> <span data-ttu-id="d76da-131">对于桌面应用程序，安全标识或标记通常是当前登录的用户的标识。</span><span class="sxs-lookup"><span data-stu-id="d76da-131">For desktop applications, this is typically the identity of the currently logged-on user.</span></span>  
   
- ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。  若要更好地了解 ASP.NET 应用程序在连接到 SQL Server 时使用的安全标识，请参见 [ASP.NET Impersonation](../Topic/ASP.NET%20Impersonation.md)、[ASP.NET Authentication](../Topic/ASP.NET%20Authentication.md)和[How to: Access SQL Server Using Windows Integrated Security](../Topic/How%20to:%20Access%20SQL%20Server%20Using%20Windows%20Integrated%20Security.md)。  
+ <span data-ttu-id="d76da-132">ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。</span><span class="sxs-lookup"><span data-stu-id="d76da-132">The security identity for ASP.NET applications can be set to one of several different options.</span></span> <span data-ttu-id="d76da-133">若要更好地了解连接到 SQL Server 时，将使用 ASP.NET 应用程序的安全标识，请参阅[ASP.NET 模拟](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)， [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)，和[如何： 访问 SQL服务器使用 Windows 集成安全性](http://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5)。</span><span class="sxs-lookup"><span data-stu-id="d76da-133">To better understand the security identity that an ASP.NET application uses when connecting to SQL Server, see [ASP.NET Impersonation](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [ASP.NET Authentication](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), and [How to: Access SQL Server Using Windows Integrated Security](http://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).</span></span>  
   
-## 连接到 OLE DB 数据源  
- 用于 OLE DB 的 .NET Framework 数据提供程序通过 **OleDbConnection** 对象提供与使用 OLE DB（通过 SQLOLEDB，即 SQL Server 的 OLE DB 提供程序）公开的数据源的连接。  
+## <a name="connecting-to-an-ole-db-data-source"></a><span data-ttu-id="d76da-134">连接到 OLE DB 数据源</span><span class="sxs-lookup"><span data-stu-id="d76da-134">Connecting to an OLE DB Data Source</span></span>  
+ <span data-ttu-id="d76da-135">用于 OLE DB.NET Framework 数据提供程序提供连接到使用 OLE DB （通过 SQLOLEDB，OLE DB Provider for SQL Server)，公开的数据源使用**OleDbConnection**对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-135">The .NET Framework Data Provider for OLE DB provides connectivity to data sources exposed using OLE DB (through SQLOLEDB, the OLE DB Provider for SQL Server), using the **OleDbConnection** object.</span></span>  
   
- 对于 OLE DB .NET Framework 数据提供程序，连接字符串格式与 ADO 中使用的连接字符串格式基本相同，但存在以下例外：  
+ <span data-ttu-id="d76da-136">对于 OLE DB .NET Framework 数据提供程序，连接字符串格式与 ADO 中使用的连接字符串格式基本相同，但存在以下例外：</span><span class="sxs-lookup"><span data-stu-id="d76da-136">For the .NET Framework Data Provider for OLE DB, the connection string format is identical to the connection string format used in ADO, with the following exceptions:</span></span>  
   
--   **Provider** 关键字是必需关键字。  
+-   <span data-ttu-id="d76da-137">**提供程序**关键字是必需的。</span><span class="sxs-lookup"><span data-stu-id="d76da-137">The **Provider** keyword is required.</span></span>  
   
--   不支持 **URL**、**Remote Provider** 和 **Remote Server** 关键字。  
+-   <span data-ttu-id="d76da-138">**URL**，**远程提供程序**，和**远程服务器**关键字不受支持。</span><span class="sxs-lookup"><span data-stu-id="d76da-138">The **URL**, **Remote Provider**, and **Remote Server** keywords are not supported.</span></span>  
   
- 有关 OLE DB 连接字符串的更多信息，请参见 <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 主题。  您也可以使用 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 在运行时创建连接字符串。  
+ <span data-ttu-id="d76da-139">有关 OLE DB 连接字符串的更多信息，请参见 <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 主题。</span><span class="sxs-lookup"><span data-stu-id="d76da-139">For more information about OLE DB connection strings, see the <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> topic.</span></span> <span data-ttu-id="d76da-140">您也可以使用 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 在运行时创建连接字符串。</span><span class="sxs-lookup"><span data-stu-id="d76da-140">You can also use the <xref:System.Data.OleDb.OleDbConnectionStringBuilder> to create connection strings at run time.</span></span>  
   
 > [!NOTE]
->  **OleDbConnection** 对象不支持设置或检索 OLE DB 提供程序特定的动态属性。  只支持可在 OLE DB 提供程序连接字符串中传递的属性。  
+>  <span data-ttu-id="d76da-141">**OleDbConnection**对象不支持设置或检索特定于 OLE DB 提供程序的动态属性。</span><span class="sxs-lookup"><span data-stu-id="d76da-141">The **OleDbConnection** object does not support setting or retrieving dynamic properties specific to an OLE DB provider.</span></span> <span data-ttu-id="d76da-142">只支持可在 OLE DB 提供程序连接字符串中传递的属性。</span><span class="sxs-lookup"><span data-stu-id="d76da-142">Only properties that can be passed in the connection string for the OLE DB provider are supported.</span></span>  
   
- 以下代码示例演示如何创建和打开与 OLE DB 数据源的连接。  
+ <span data-ttu-id="d76da-143">以下代码示例演示如何创建和打开与 OLE DB 数据源的连接。</span><span class="sxs-lookup"><span data-stu-id="d76da-143">The following code example demonstrates how to create and open a connection to an OLE DB data source.</span></span>  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -79,7 +85,6 @@ Using connection As New OleDbConnection(connectionString)
     connection.Open()  
     ' Do work here.  
 End Using  
-  
 ```  
   
 ```csharp  
@@ -92,15 +97,15 @@ using (OleDbConnection connection =
 }  
 ```  
   
-## 不要使用通用数据链接文件  
- 可以在通用数据链接 \(UDL\) 文件中提供 **OleDbConnection** 的连接信息；但是，应避免这样做。  UDL 文件未加密，会以明文形式公开连接字符串信息。  因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。  
+## <a name="do-not-use-universal-data-link-files"></a><span data-ttu-id="d76da-144">不要使用通用数据链接文件</span><span class="sxs-lookup"><span data-stu-id="d76da-144">Do Not Use Universal Data Link Files</span></span>  
+ <span data-ttu-id="d76da-145">可以提供的连接信息**OleDbConnection**在通用数据链接 (UDL) 文件; 但是，应避免这样做。</span><span class="sxs-lookup"><span data-stu-id="d76da-145">It is possible to supply connection information for an **OleDbConnection** in a Universal Data Link (UDL) file; however you should avoid doing so.</span></span> <span data-ttu-id="d76da-146">UDL 文件未加密，会以明文形式公开连接字符串信息。</span><span class="sxs-lookup"><span data-stu-id="d76da-146">UDL files are not encrypted, and expose connection string information in clear text.</span></span> <span data-ttu-id="d76da-147">因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。</span><span class="sxs-lookup"><span data-stu-id="d76da-147">Because a UDL file is an external file-based resource to your application, it cannot be secured using the .NET Framework.</span></span>  
   
-## 连接到 ODBC 数据源  
- ODBC .NET Framework 数据提供程序通过 **OdbcConnection** 对象提供与使用 ODBC 公开的数据源的连接。  
+## <a name="connecting-to-an-odbc-data-source"></a><span data-ttu-id="d76da-148">连接到 ODBC 数据源</span><span class="sxs-lookup"><span data-stu-id="d76da-148">Connecting to an ODBC Data Source</span></span>  
+ <span data-ttu-id="d76da-149">适用于 ODBC 的.NET Framework 数据提供程序提供连接到数据源使用 ODBC 使用公开**OdbcConnection**对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-149">The .NET Framework Data Provider for ODBC provides connectivity to data sources exposed using ODBC using the **OdbcConnection** object.</span></span>  
   
- 对于 ODBC .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与 ODBC 连接字符串的格式相匹配。  您还可以提供一个 ODBC 数据源名称 \(DSN\)。  有关 **OdbcConnection** 的详细信息，请参见 [OdbcConnection 类](frlrfSystemDataOdbcOdbcConnectionClassTopic)。  
+ <span data-ttu-id="d76da-150">对于 ODBC .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与 ODBC 连接字符串的格式相匹配。</span><span class="sxs-lookup"><span data-stu-id="d76da-150">For the .NET Framework Data Provider for ODBC, the connection string format is designed to match the ODBC connection string format as closely as possible.</span></span> <span data-ttu-id="d76da-151">您还可以提供一个 ODBC 数据源名称 (DSN)。</span><span class="sxs-lookup"><span data-stu-id="d76da-151">You may also supply an ODBC data source name (DSN).</span></span> <span data-ttu-id="d76da-152">有关详细信息**OdbcConnection** ，请参阅<xref:System.Data.Odbc.OdbcConnection>。</span><span class="sxs-lookup"><span data-stu-id="d76da-152">For more detail on the **OdbcConnection** , see the <xref:System.Data.Odbc.OdbcConnection>.</span></span>  
   
- 以下代码示例演示如何创建和打开与 ODBC 数据源的连接。  
+ <span data-ttu-id="d76da-153">以下代码示例演示如何创建和打开与 ODBC 数据源的连接。</span><span class="sxs-lookup"><span data-stu-id="d76da-153">The following code example demonstrates how to create and open a connection to an ODBC data source.</span></span>  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -108,7 +113,6 @@ Using connection As New OdbcConnection(connectionString)
     connection.Open()  
     ' Do work here.  
 End Using  
-  
 ```  
   
 ```csharp  
@@ -121,12 +125,12 @@ using (OdbcConnection connection =
 }  
 ```  
   
-## 连接到 Oracle 数据源  
- Oracle .NET Framework 数据提供程序使用 **OracleConnection** 对象提供与 Oracle 数据源的连接。  
+## <a name="connecting-to-an-oracle-data-source"></a><span data-ttu-id="d76da-154">连接到 Oracle 数据源</span><span class="sxs-lookup"><span data-stu-id="d76da-154">Connecting to an Oracle Data Source</span></span>  
+ <span data-ttu-id="d76da-155">适用于 Oracle 的.NET Framework 数据提供程序提供连接到 Oracle 数据源使用**OracleConnection**对象。</span><span class="sxs-lookup"><span data-stu-id="d76da-155">The .NET Framework Data Provider for Oracle provides connectivity to Oracle data sources using the **OracleConnection** object.</span></span>  
   
- 对于 Oracle .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与用于 Oracle 的 OLE DB 提供程序 \(MSDAORA\) 连接字符串格式相匹配。  有关 **OracleConnection** 的详细信息，请参见 [OracleConnection 类](frlrfSystemDataOracleClientOracleConnectionClassTopic)。  
+ <span data-ttu-id="d76da-156">对于 Oracle .NET Framework 数据提供程序，连接字符串的格式设计为尽可能与用于 Oracle 的 OLE DB 提供程序 (MSDAORA) 连接字符串格式相匹配。</span><span class="sxs-lookup"><span data-stu-id="d76da-156">For the .NET Framework Data Provider for Oracle, the connection string format is designed to match the OLE DB Provider for Oracle (MSDAORA) connection string format as closely as possible.</span></span> <span data-ttu-id="d76da-157">有关详细信息**OracleConnection**，请参阅<xref:System.Data.OracleClient.OracleConnection>。</span><span class="sxs-lookup"><span data-stu-id="d76da-157">For more detail on the **OracleConnection**, see the <xref:System.Data.OracleClient.OracleConnection>.</span></span>  
   
- 以下代码示例演示如何创建和打开与 Oracle 数据源的连接。  
+ <span data-ttu-id="d76da-158">以下代码示例演示如何创建和打开与 Oracle 数据源的连接。</span><span class="sxs-lookup"><span data-stu-id="d76da-158">The following code example demonstrates how to create and open a connection to an Oracle data source.</span></span>  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -134,7 +138,6 @@ Using connection As New OracleConnection(connectionString)
     connection.Open()  
     ' Do work here.  
 End Using  
-  
 ```  
   
 ```csharp  
@@ -149,8 +152,8 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## 请参阅  
- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)   
- [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d76da-159">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d76da-159">See Also</span></span>  
+ [<span data-ttu-id="d76da-160">连接到数据源</span><span class="sxs-lookup"><span data-stu-id="d76da-160">Connecting to a Data Source</span></span>](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [<span data-ttu-id="d76da-161">连接字符串</span><span class="sxs-lookup"><span data-stu-id="d76da-161">Connection Strings</span></span>](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [<span data-ttu-id="d76da-162">OLE DB、 ODBC 和 Oracle 连接池</span><span class="sxs-lookup"><span data-stu-id="d76da-162">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [<span data-ttu-id="d76da-163">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="d76da-163">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

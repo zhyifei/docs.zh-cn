@@ -1,83 +1,81 @@
 ---
-title: "连接字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "连接字符串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 连接字符串
-连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。  其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。  实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。  它们还包含有关所需的模型和映射文件的信息。  
+# <a name="connection-strings"></a><span data-ttu-id="5da9c-102">连接字符串</span><span class="sxs-lookup"><span data-stu-id="5da9c-102">Connection Strings</span></span>
+<span data-ttu-id="5da9c-103">连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。</span><span class="sxs-lookup"><span data-stu-id="5da9c-103">A connection string contains initialization information that is passed as a parameter from a data provider to a data source.</span></span> <span data-ttu-id="5da9c-104">其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。</span><span class="sxs-lookup"><span data-stu-id="5da9c-104">The syntax depends on the data provider, and the connection string is parsed during the attempt to open a connection.</span></span> <span data-ttu-id="5da9c-105">实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。</span><span class="sxs-lookup"><span data-stu-id="5da9c-105">Connection strings used by the Entity Framework contain information used to connect to the underlying ADO.NET data provider that supports the Entity Framework.</span></span> <span data-ttu-id="5da9c-106">它们还包含有关所需的模型和映射文件的信息。</span><span class="sxs-lookup"><span data-stu-id="5da9c-106">They also contain information about the required model and mapping files.</span></span>  
   
- 在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。  连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection> 的 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 属性访问或设置。  <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。  有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
+ <span data-ttu-id="5da9c-107">在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。</span><span class="sxs-lookup"><span data-stu-id="5da9c-107">The connection string is used by the EntityClient provider when accessing model and mapping metadata and connecting to the data source.</span></span> <span data-ttu-id="5da9c-108">连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问或设置。</span><span class="sxs-lookup"><span data-stu-id="5da9c-108">The connection string can be accessed or set through the <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> property of <xref:System.Data.EntityClient.EntityConnection>.</span></span> <span data-ttu-id="5da9c-109"><xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。</span><span class="sxs-lookup"><span data-stu-id="5da9c-109">The <xref:System.Data.EntityClient.EntityConnectionStringBuilder> class can be used to programmatically construct or access parameters in the connection string.</span></span> <span data-ttu-id="5da9c-110">有关详细信息，请参阅[如何： 生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。</span><span class="sxs-lookup"><span data-stu-id="5da9c-110">For more information, see [How to: Build an EntityConnection Connection String](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).</span></span>  
   
- [实体数据模型工具](http://msdn.microsoft.com/zh-cn/91076853-0881-421b-837a-f582f36be527)可生成一个连接字符串，该字符串存储在应用程序的配置文件中。  在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。  可通过 <xref:System.Data.Objects.ObjectContext.Connection%2A> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.EntityClient.EntityConnection>。  有关详细信息，请参阅[Managing Connections and Transactions](http://msdn.microsoft.com/zh-cn/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ <span data-ttu-id="5da9c-111">[Entity Data Model 工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)生成应用程序的配置文件中存储的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="5da9c-111">The [Entity Data Model tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) generate a connection string that is stored in the application's configuration file.</span></span> <span data-ttu-id="5da9c-112">在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。</span><span class="sxs-lookup"><span data-stu-id="5da9c-112"><xref:System.Data.Objects.ObjectContext> retrieves this connection information automatically when creating object queries.</span></span> <span data-ttu-id="5da9c-113">可通过 <xref:System.Data.EntityClient.EntityConnection> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。</span><span class="sxs-lookup"><span data-stu-id="5da9c-113">The <xref:System.Data.EntityClient.EntityConnection> used by an <xref:System.Data.Objects.ObjectContext> instance can be accessed from the <xref:System.Data.Objects.ObjectContext.Connection%2A> property.</span></span> <span data-ttu-id="5da9c-114">有关详细信息，请参阅[管理连接和事务](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。</span><span class="sxs-lookup"><span data-stu-id="5da9c-114">For more information, see [Managing Connections and Transactions](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).</span></span>  
   
-## 连接字符串参数  
- 连接字符串的格式是使用分号分隔的键\/值参数对列表：  
+## <a name="connection-string-parameters"></a><span data-ttu-id="5da9c-115">连接字符串参数</span><span class="sxs-lookup"><span data-stu-id="5da9c-115">Connection String Parameters</span></span>  
+ <span data-ttu-id="5da9c-116">连接字符串的格式是使用分号分隔的键/值参数对列表：</span><span class="sxs-lookup"><span data-stu-id="5da9c-116">The format of a connection string is a semicolon-delimited list of key/value parameter pairs:</span></span>  
   
  `keyword1=value; keyword2=value;`  
   
- 每个关键字和它的值之间用等号 \(\=\) 连接。  关键字不区分大小写，并将忽略键\/值对之间的空格。  不过，根据数据源的不同，值可能是区分大小写的。  任何包含分号、单引号或双引号的值必须用双引号引起来。  下表列出了 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 中的关键字值的有效名称。  
+ <span data-ttu-id="5da9c-117">每个关键字和它的值之间用等号 (=) 连接。</span><span class="sxs-lookup"><span data-stu-id="5da9c-117">The equal sign (=) connects each keyword and its value.</span></span> <span data-ttu-id="5da9c-118">关键字不区分大小写，并将忽略键/值对之间的空格。</span><span class="sxs-lookup"><span data-stu-id="5da9c-118">Keywords are not case sensitive, and spaces between key/value pairs are ignored.</span></span> <span data-ttu-id="5da9c-119">不过，根据数据源的不同，值可能是区分大小写的。</span><span class="sxs-lookup"><span data-stu-id="5da9c-119">However, values  can be case sensitive, depending on the data source.</span></span> <span data-ttu-id="5da9c-120">任何包含分号、单引号或双引号的值必须用双引号引起来。</span><span class="sxs-lookup"><span data-stu-id="5da9c-120">Any values that contain a semicolon, single quotation marks, or double quotation marks must be enclosed in double quotation marks.</span></span> <span data-ttu-id="5da9c-121">下表列出了 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 中的关键字值的有效名称。</span><span class="sxs-lookup"><span data-stu-id="5da9c-121">The following table lists the valid names for keyword values in the <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.</span></span>  
   
-|关键字|描述|  
-|---------|--------|  
-|`Provider`|此关键字在未指定 `Name` 关键字时是必需的。  提供程序名称，用于检索基础提供程序的 <xref:System.Data.Common.DbProviderFactory> 对象。  该值为常量。<br /><br /> 如果实体连接字符串中未包含 `Name` 关键字，则需要一个非空 `Provider` 关键字值。  此关键字与 `Name` 关键字互斥。|  
-|`Provider Connection String`|可选。  指定要传递给基础数据源的提供程序特定的连接字符串。  此连接字符串用数据提供程序的有效关键字\/值对表示。  如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。<br /><br /> 此关键字与 `Name` 关键字互斥。<br /><br /> `Provider Connection String` 的值必须用引号引起来。  下面是一个示例：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> 以下示例将无效：<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
-|`Metadata`|此关键字在未指定 `Name` 关键字时是必需的。  一个由竖线分隔的目录、文件和资源位置的列表，供查找元数据和映射信息使用。  下面是一个示例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 竖线分隔符两侧的空格将被忽略。<br /><br /> 此关键字与 `Name` 关键字互斥。|  
-|`Name`|应用程序可以选择在应用程序配置文件中指定连接名称，以用于提供所需的关键字\/值连接字符串值。  在此情况下，无法在连接字符串中直接提供这些值。  配置文件中不允许出现 `Name` 关键字。<br /><br /> 如果连接字符串中未包含 `Name` 关键字，则需要一个非空的 Provider 关键字值。<br /><br /> 此关键字与所有其他连接字符串关键字互斥。|  
+|<span data-ttu-id="5da9c-122">关键字</span><span class="sxs-lookup"><span data-stu-id="5da9c-122">Keyword</span></span>|<span data-ttu-id="5da9c-123">描述</span><span class="sxs-lookup"><span data-stu-id="5da9c-123">Description</span></span>|  
+|-------------|-----------------|  
+|`Provider`|<span data-ttu-id="5da9c-124">此关键字在未指定 `Name` 关键字时是必需的。</span><span class="sxs-lookup"><span data-stu-id="5da9c-124">Required if the `Name` keyword is not specified.</span></span> <span data-ttu-id="5da9c-125">提供程序名称，用于检索基础提供程序的 <xref:System.Data.Common.DbProviderFactory> 对象。</span><span class="sxs-lookup"><span data-stu-id="5da9c-125">The provider name, which is used to retrieve the <xref:System.Data.Common.DbProviderFactory> object for the underlying provider.</span></span> <span data-ttu-id="5da9c-126">该值为常量。</span><span class="sxs-lookup"><span data-stu-id="5da9c-126">This value is constant.</span></span><br /><br /> <span data-ttu-id="5da9c-127">如果实体连接字符串中未包含 `Name` 关键字，则需要一个非空 `Provider` 关键字值。</span><span class="sxs-lookup"><span data-stu-id="5da9c-127">When the `Name` keyword is not included in an entity connection string, a non-empty value for the `Provider` keyword is required.</span></span> <span data-ttu-id="5da9c-128">此关键字与 `Name` 关键字互斥。</span><span class="sxs-lookup"><span data-stu-id="5da9c-128">This keyword is mutually exclusive with the `Name` keyword.</span></span>|  
+|`Provider Connection String`|<span data-ttu-id="5da9c-129">可选。</span><span class="sxs-lookup"><span data-stu-id="5da9c-129">Optional.</span></span> <span data-ttu-id="5da9c-130">指定要传递给基础数据源的提供程序特定的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="5da9c-130">Specifies the provider-specific connection string that is passed to the underlying data source.</span></span> <span data-ttu-id="5da9c-131">此连接字符串用数据提供程序的有效关键字/值对表示。</span><span class="sxs-lookup"><span data-stu-id="5da9c-131">This connection string is expressed by using valid keyword/value pairs for the data provider.</span></span> <span data-ttu-id="5da9c-132">如果 `Provider Connection String` 无效，则当数据源计算此字符串时，将导致运行时错误。</span><span class="sxs-lookup"><span data-stu-id="5da9c-132">An invalid `Provider Connection String` will cause a run-time error when it is evaluated by the data source.</span></span><br /><br /> <span data-ttu-id="5da9c-133">此关键字与 `Name` 关键字互斥。</span><span class="sxs-lookup"><span data-stu-id="5da9c-133">This keyword is mutually exclusive with the `Name` keyword.</span></span><br /><br /> <span data-ttu-id="5da9c-134">`Provider Connection String` 的值必须用引号引起来。</span><span class="sxs-lookup"><span data-stu-id="5da9c-134">The value of the `Provider Connection String` must be surrounded by quotes.</span></span> <span data-ttu-id="5da9c-135">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="5da9c-135">The following is an example:</span></span><br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> <span data-ttu-id="5da9c-136">以下示例将无效：</span><span class="sxs-lookup"><span data-stu-id="5da9c-136">The following example is not going to work:</span></span><br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Metadata`|<span data-ttu-id="5da9c-137">此关键字在未指定 `Name` 关键字时是必需的。</span><span class="sxs-lookup"><span data-stu-id="5da9c-137">Required if the `Name` keyword is not specified.</span></span> <span data-ttu-id="5da9c-138">一个由竖线分隔的目录、文件和资源位置的列表，供查找元数据和映射信息使用。</span><span class="sxs-lookup"><span data-stu-id="5da9c-138">A pipe-delimited list of directories, files, and resource locations in which to look for metadata and mapping information.</span></span> <span data-ttu-id="5da9c-139">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="5da9c-139">The following is an example:</span></span><br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> <span data-ttu-id="5da9c-140">竖线分隔符两侧的空格将被忽略。</span><span class="sxs-lookup"><span data-stu-id="5da9c-140">Blank spaces on each side of the pipe separator are ignored.</span></span><br /><br /> <span data-ttu-id="5da9c-141">此关键字与 `Name` 关键字互斥。</span><span class="sxs-lookup"><span data-stu-id="5da9c-141">This keyword is mutually exclusive with the `Name` keyword.</span></span>|  
+|`Name`|<span data-ttu-id="5da9c-142">应用程序可以选择在应用程序配置文件中指定连接名称，以用于提供所需的关键字/值连接字符串值。</span><span class="sxs-lookup"><span data-stu-id="5da9c-142">The application can optionally specify the connection name in an application configuration file that provides the required keyword/value connection string values.</span></span> <span data-ttu-id="5da9c-143">在此情况下，无法在连接字符串中直接提供这些值。</span><span class="sxs-lookup"><span data-stu-id="5da9c-143">In this case, you cannot supply them directly in the connection string.</span></span> <span data-ttu-id="5da9c-144">配置文件中不允许出现 `Name` 关键字。</span><span class="sxs-lookup"><span data-stu-id="5da9c-144">The `Name` keyword is not allowed in a configuration file.</span></span><br /><br /> <span data-ttu-id="5da9c-145">如果连接字符串中未包含 `Name` 关键字，则需要一个非空的 Provider 关键字值。</span><span class="sxs-lookup"><span data-stu-id="5da9c-145">When the `Name` keyword is not included in the connection string, a non-empty values for Provider keyword is required.</span></span><br /><br /> <span data-ttu-id="5da9c-146">此关键字与所有其他连接字符串关键字互斥。</span><span class="sxs-lookup"><span data-stu-id="5da9c-146">This keyword is mutually exclusive with all the other connection string keywords.</span></span>|  
   
- 下面是 [AdventureWorks 销售模型](http://msdn.microsoft.com/zh-cn/f16cd988-673f-4376-b034-129ca93c7832)的一个示例连接字符串，该字符串存储在应用程序配置文件中：  
+ <span data-ttu-id="5da9c-147">以下是针对的连接字符串的示例[AdventureWorks 销售模型](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)存储在应用程序配置文件：</span><span class="sxs-lookup"><span data-stu-id="5da9c-147">The following is an example of a connection string for the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) stored in the application configuration file:</span></span>  
   
   
   
-## 模型和映射文件位置  
- `Metadata` 参数包含一个位置列表，`EntityClient` 提供程序可使用该列表来搜索模型和映射文件。  模型和映射文件通常与应用程序可执行文件部署在同一目录中。  这些文件也可以部署在特定位置或作为嵌入资源包含于应用程序中。  
+## <a name="model-and-mapping-file-locations"></a><span data-ttu-id="5da9c-148">模型和映射文件位置</span><span class="sxs-lookup"><span data-stu-id="5da9c-148">Model and Mapping File Locations</span></span>  
+ <span data-ttu-id="5da9c-149">`Metadata` 参数包含一个位置列表，`EntityClient` 提供程序可使用该列表来搜索模型和映射文件。</span><span class="sxs-lookup"><span data-stu-id="5da9c-149">The `Metadata` parameter contains a list of locations for the `EntityClient` provider to search for model and mapping files.</span></span> <span data-ttu-id="5da9c-150">模型和映射文件通常与应用程序可执行文件部署在同一目录中。</span><span class="sxs-lookup"><span data-stu-id="5da9c-150">Model and mapping files are often deployed in the same directory as the application executable file.</span></span> <span data-ttu-id="5da9c-151">这些文件也可以部署在特定位置或作为嵌入资源包含于应用程序中。</span><span class="sxs-lookup"><span data-stu-id="5da9c-151">These files can also be deployed in a specific location or included as an embedded resource in the application.</span></span>  
   
- 嵌入资源按如下方式指定：  
+ <span data-ttu-id="5da9c-152">嵌入资源按如下方式指定：</span><span class="sxs-lookup"><span data-stu-id="5da9c-152">Embedded resources are specified as follows:</span></span>  
   
 ```  
 Metadata=res://<assemblyFullName>/<resourceName>.   
 ```  
   
- 下列选项用于定义嵌入资源的位置：  
+ <span data-ttu-id="5da9c-153">下列选项用于定义嵌入资源的位置：</span><span class="sxs-lookup"><span data-stu-id="5da9c-153">The following options are available for defining the location of an embedded resource:</span></span>  
   
-|||  
+|<span data-ttu-id="5da9c-154">选项</span><span class="sxs-lookup"><span data-stu-id="5da9c-154">Option</span></span>|<span data-ttu-id="5da9c-155">描述</span><span class="sxs-lookup"><span data-stu-id="5da9c-155">Description</span></span>|  
 |-|-|  
-|选项|描述|  
-|`assemblyFullName`|包含嵌入资源的程序集的完整名称。  该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果为 `assemblyFullName` 指定通配符 \(\*\)，则实体框架运行库将按如下顺序在以下位置搜索资源：<br /><br /> 1.  调用程序集。<br />2.  引用的程序集。<br />3.  应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **Note:**  如果使用通配符 \(\*\)，则实体框架将在所有程序集中查找具有正确名称的资源。  若要提高性能，请指定程序集名称而不使用通配符。|  
-|`resourceName`|包含的资源的名称，如 AdvendtureWorksModel.csdl。  元数据服务仅查找具有以下任一扩展名的文件或资源：.csdl、.ssdl、或 .msl。  如果未指定 `resourceName`，则将加载所有元数据资源。  资源应在程序集中具有唯一的名称。  如果在程序集中的不同目录中为多个文件定义了相同的名称，则 `resourceName` 必须在资源名称前面包含文件夹结构，例如 FolderName.FileName.csdl。<br /><br /> 如果为 `assemblyFullName` 指定通配符 \(\*\)，则无需指定 `resourceName`。|  
+|`assemblyFullName`|<span data-ttu-id="5da9c-156">包含嵌入资源的程序集的完整名称。</span><span class="sxs-lookup"><span data-stu-id="5da9c-156">The full name of an assembly with the embedded resource.</span></span> <span data-ttu-id="5da9c-157">该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：</span><span class="sxs-lookup"><span data-stu-id="5da9c-157">The name includes the simple name, version name, supported culture, and public key, as follows:</span></span><br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> <span data-ttu-id="5da9c-158">资源可嵌入到应用程序能够访问的任何程序集中。</span><span class="sxs-lookup"><span data-stu-id="5da9c-158">Resources can be embedded in any assembly that is accessible by the application.</span></span><br /><br /> <span data-ttu-id="5da9c-159">如果指定通配符 (\*) 为`assemblyFullName`，实体框架运行库将在搜索资源的以下位置，请按以下顺序：</span><span class="sxs-lookup"><span data-stu-id="5da9c-159">If you specify a wildcard (\*) for `assemblyFullName`, the Entity Framework runtime will search for resources in the following locations, in this order:</span></span><br /><br /> <span data-ttu-id="5da9c-160">1.调用程序集。</span><span class="sxs-lookup"><span data-stu-id="5da9c-160">1.  The calling assembly.</span></span><br /><span data-ttu-id="5da9c-161">2.引用的程序集。</span><span class="sxs-lookup"><span data-stu-id="5da9c-161">2.  The referenced assemblies.</span></span><br /><span data-ttu-id="5da9c-162">3.应用程序的 bin 目录中的程序集。</span><span class="sxs-lookup"><span data-stu-id="5da9c-162">3.  The assemblies in the bin directory of an application.</span></span><br /><br /> <span data-ttu-id="5da9c-163">如果文件不在这些位置，则引发异常。</span><span class="sxs-lookup"><span data-stu-id="5da9c-163">If the files are not in one of these locations, an exception will be thrown.</span></span> <span data-ttu-id="5da9c-164">**注意：**时使用通配符 （*），实体框架已在具有正确名称的资源的所有程序集中查找。</span><span class="sxs-lookup"><span data-stu-id="5da9c-164">**Note:**  When you use wildcard (*), the Entity Framework has to look through all the assemblies for resources with the correct name.</span></span> <span data-ttu-id="5da9c-165">若要提高性能，请指定程序集名称而不使用通配符。</span><span class="sxs-lookup"><span data-stu-id="5da9c-165">To improve performance, specify the assembly name instead of the wildcard.</span></span>|  
+|`resourceName`|<span data-ttu-id="5da9c-166">包含的资源的名称，如 AdvendtureWorksModel.csdl。</span><span class="sxs-lookup"><span data-stu-id="5da9c-166">The name of the included resource, such as AdvendtureWorksModel.csdl.</span></span> <span data-ttu-id="5da9c-167">元数据服务仅查找具有以下任一扩展名的文件或资源：.csdl、.ssdl、或 .msl。</span><span class="sxs-lookup"><span data-stu-id="5da9c-167">The metadata services will only look for files or resources with one of the following extensions: .csdl, .ssdl, or .msl.</span></span> <span data-ttu-id="5da9c-168">如果未指定 `resourceName`，则将加载所有元数据资源。</span><span class="sxs-lookup"><span data-stu-id="5da9c-168">If `resourceName` is not specified, all metadata resources will be loaded.</span></span> <span data-ttu-id="5da9c-169">资源应在程序集中具有唯一的名称。</span><span class="sxs-lookup"><span data-stu-id="5da9c-169">The resources should have unique names within an assembly.</span></span> <span data-ttu-id="5da9c-170">如果在程序集中的不同目录中为多个文件定义了相同的名称，则 `resourceName` 必须在资源名称前面包含文件夹结构，例如 FolderName.FileName.csdl。</span><span class="sxs-lookup"><span data-stu-id="5da9c-170">If multiple files with the same name are defined in different directories in the assembly, the `resourceName` must include the folder structure before the name of the resource, for example FolderName.FileName.csdl.</span></span><br /><br /> <span data-ttu-id="5da9c-171">如果为 `resourceName` 指定通配符 (*)，则无需指定 `assemblyFullName`。</span><span class="sxs-lookup"><span data-stu-id="5da9c-171">`resourceName` is not required when you specify a wildcard (*) for `assemblyFullName`.</span></span>|  
   
 > [!NOTE]
->  若要提高性能，请在调用程序集中嵌入资源，调用程序集中未引用基础映射和元数据文件的非 Web 方案除外。  
+>  <span data-ttu-id="5da9c-172">若要提高性能，请在调用程序集中嵌入资源，调用程序集中未引用基础映射和元数据文件的非 Web 方案除外。</span><span class="sxs-lookup"><span data-stu-id="5da9c-172">To improve performance, embed resources in the calling assembly, except in non-Web scenarios where there is no reference to underlying mapping and metadata files in the calling assembly.</span></span>  
   
- 下面的示例加载应用程序 bin 目录中的调用程序集、引用程序集、以及其他程序集中的所有模型和映射文件。  
+ <span data-ttu-id="5da9c-173">下面的示例加载应用程序 bin 目录中的调用程序集、引用程序集、以及其他程序集中的所有模型和映射文件。</span><span class="sxs-lookup"><span data-stu-id="5da9c-173">The following example loads all the model and mapping files in the calling assembly, referenced assemblies, and other assemblies in the bin directory of an application.</span></span>  
   
 ```  
 Metadata=res://*/  
 ```  
   
- 下面的示例从 AdventureWorks 程序集加载 model.csdl 文件，并从正在运行的应用程序的默认目录加载 model.ssdl 和 model.msl 文件。  
+ <span data-ttu-id="5da9c-174">下面的示例从 AdventureWorks 程序集加载 model.csdl 文件，并从正在运行的应用程序的默认目录加载 model.ssdl 和 model.msl 文件。</span><span class="sxs-lookup"><span data-stu-id="5da9c-174">The following example loads the model.csdl file from the AdventureWorks assembly, and loads the model.ssdl and model.msl files from the default directory of the running application.</span></span>  
   
 ```  
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.csdl|model.ssdl|model.msl  
 ```  
   
- 下面的示例从特定程序集加载三个指定的资源。  
+ <span data-ttu-id="5da9c-175">下面的示例从特定程序集加载三个指定的资源。</span><span class="sxs-lookup"><span data-stu-id="5da9c-175">The following example loads the three specified resources from the specific assembly.</span></span>  
   
 ```  
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.csdl|   
@@ -85,42 +83,42 @@ res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.ssdl|
 res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.msl  
 ```  
   
- 下面的示例从程序集中加载所有扩展名为 .csdl、.msl 和 .ssdl 的嵌入资源。  
+ <span data-ttu-id="5da9c-176">下面的示例从程序集中加载所有扩展名为 .csdl、.msl 和 .ssdl 的嵌入资源。</span><span class="sxs-lookup"><span data-stu-id="5da9c-176">The following example loads all the embedded resources with the extensions .csdl, .msl, and .ssdl from the assembly.</span></span>  
   
 ```  
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/  
 ```  
   
- 下面的示例从已加载程序集的位置加载相对文件路径加上“datadir\\metadata\\”中的所有资源。  
+ <span data-ttu-id="5da9c-177">下面的示例加载加号的相对文件路径中的所有资源"datadir\metadata\\"从加载的程序集位置。</span><span class="sxs-lookup"><span data-stu-id="5da9c-177">The following example loads all the resources in the relative file path plus "datadir\metadata\\" from the loaded assembly location.</span></span>  
   
 ```  
 Metadata=datadir\metadata\  
 ```  
   
- 下面的示例从已加载程序集的位置加载相对文件路径中的所有资源。  
+ <span data-ttu-id="5da9c-178">下面的示例从已加载程序集的位置加载相对文件路径中的所有资源。</span><span class="sxs-lookup"><span data-stu-id="5da9c-178">The following example loads all the resources in the relative file path from the loaded assembly location.</span></span>  
   
 ```  
 Metadata=.\  
 ```  
   
-## 对 &#124;DataDirectory&#124; 替代字符串和 Web 应用程序根目录运算符 \(~\) 的支持  
- `DataDirectory` 和 ~ 运算符作为 `Metadata` 和 `Provider Connection String` 关键字的一部分用于 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> `` 中。  <xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a><span data-ttu-id="5da9c-179">支持 &#124; DataDirectory &#124;替代字符串和 Web 应用程序根目录运算符 （~）</span><span class="sxs-lookup"><span data-stu-id="5da9c-179">Support for the &#124;DataDirectory&#124; Substitution String and the Web Application Root Operator (~)</span></span>  
+ <span data-ttu-id="5da9c-180">`DataDirectory`和 ~ 运算符用在<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>作为的一部分`Metadata`和`Provider Connection String`关键字。</span><span class="sxs-lookup"><span data-stu-id="5da9c-180">`DataDirectory` and the ~ operator are used in the <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> as part of the `Metadata` and `Provider Connection String` keywords.</span></span> <span data-ttu-id="5da9c-181"><xref:System.Data.EntityClient.EntityConnection> 将 `DataDirectory` 和 ~ 运算符分别转发给 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存储提供程序。</span><span class="sxs-lookup"><span data-stu-id="5da9c-181">The <xref:System.Data.EntityClient.EntityConnection> forwards the `DataDirectory` and the ~ operator to <xref:System.Data.Metadata.Edm.MetadataWorkspace> and the store provider, respectively.</span></span>  
   
-|术语|描述|  
-|--------|--------|  
-|`&#124;DataDirectory&#124;`|解析为映射和元数据文件的相对路径。  这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。  `DataDirectory` 替代字符串必须由竖线字符括起来，并且在其名称与竖线字符之间不能存在任何空格。  `DataDirectory` 名称不区分大小写。<br /><br /> 如果名为“DataDirectory”的物理目录必须作为元数据路径列表的成员传递，则应在该名称的一边或两边添加空格，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。  ASP.NET 应用程序将 &#124;DataDirectory&#124; 解析为“\<应用程序根目录\>\/app\_data”文件夹。|  
-|~|解析为 Web 应用程序根目录。  位于开头的 ~ 字符总是被解释为 Web 应用程序根目录运算符 \(~\)，不过它也可以表示有效的本地子目录。  若要引用这样的本地子目录，用户应显示传递 `./~`。|  
+|<span data-ttu-id="5da9c-182">术语</span><span class="sxs-lookup"><span data-stu-id="5da9c-182">Term</span></span>|<span data-ttu-id="5da9c-183">描述</span><span class="sxs-lookup"><span data-stu-id="5da9c-183">Description</span></span>|  
+|----------|-----------------|  
+|`&#124;DataDirectory&#124;`|<span data-ttu-id="5da9c-184">解析为映射和元数据文件的相对路径。</span><span class="sxs-lookup"><span data-stu-id="5da9c-184">Resolves to a relative path to a mapping and metadata files.</span></span> <span data-ttu-id="5da9c-185">这是通过 `AppDomain.SetData("DataDirectory", objValue)` 方法设置的值。</span><span class="sxs-lookup"><span data-stu-id="5da9c-185">This is the value that is set through the `AppDomain.SetData("DataDirectory", objValue)` method.</span></span> <span data-ttu-id="5da9c-186">`DataDirectory` 替代字符串必须由竖线字符括起来，并且在其名称与竖线字符之间不能存在任何空格。</span><span class="sxs-lookup"><span data-stu-id="5da9c-186">The `DataDirectory` substitution string must be surrounded by the pipe characters and there cannot be any whitespace between its name and the pipe characters.</span></span> <span data-ttu-id="5da9c-187">`DataDirectory` 名称不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="5da9c-187">The `DataDirectory` name is not case-sensitive.</span></span><br /><br /> <span data-ttu-id="5da9c-188">如果名为“DataDirectory”的物理目录必须作为元数据路径列表的成员传递，则应在该名称的一边或两边添加空格，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。</span><span class="sxs-lookup"><span data-stu-id="5da9c-188">If a physical directory named "DataDirectory" has to be passed as a member of the list of metadata paths, add whitespace should on either side or both sides of the name, for example: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`.</span></span> <span data-ttu-id="5da9c-189">ASP.NET 应用程序解析 &#124; DataDirectory &#124;到"\<应用程序根目录 > / app_data"文件夹。</span><span class="sxs-lookup"><span data-stu-id="5da9c-189">An ASP.NET application resolves &#124;DataDirectory&#124; to the "\<application root>/app_data" folder.</span></span>|  
+|~|<span data-ttu-id="5da9c-190">解析为 Web 应用程序根目录。</span><span class="sxs-lookup"><span data-stu-id="5da9c-190">Resolves to the Web application root.</span></span> <span data-ttu-id="5da9c-191">位于开头的 ~ 字符总是被解释为 Web 应用程序根目录运算符 (~)，不过它也可以表示有效的本地子目录。</span><span class="sxs-lookup"><span data-stu-id="5da9c-191">The ~ character at a leading position is always interpreted as the Web application root operator (~), although it might represent a valid local subdirectory.</span></span> <span data-ttu-id="5da9c-192">若要引用这样的本地子目录，用户应显示传递 `./~`。</span><span class="sxs-lookup"><span data-stu-id="5da9c-192">To refer to such a local subdirectory, the user should explicitly pass `./~`.</span></span>|  
   
- `DataDirectory` 和 ~ 运算符仅应指定在路径的开头，放在任何其他位置将得不到解析。  实体框架将尝试解析 `~/data`，但会将 `/data/~` 视为物理路径。  
+ <span data-ttu-id="5da9c-193">`DataDirectory` 和 ~ 运算符仅应指定在路径的开头，放在任何其他位置将得不到解析。</span><span class="sxs-lookup"><span data-stu-id="5da9c-193">`DataDirectory` and the ~ operator should be specified only at the beginning of a path, they are not resolved at any other position.</span></span> <span data-ttu-id="5da9c-194">实体框架将尝试解析 `~/data`，但会将 `/data/~` 视为物理路径。</span><span class="sxs-lookup"><span data-stu-id="5da9c-194">The Entity Framework will try to resolve `~/data`, but it will treat `/data/~` as a physical path.</span></span>  
   
- 以 `DataDirectory` 或 ~ 运算符开头的路径不能解析为 `DataDirectory` 和 ~ 运算符分支之外的物理路径。  例如，下面的路径将获得解析：`~`、`~/data`、`~/bin/Model/SqlServer`。  下面的路径无法解析：`~/..`、`~/../other`。  
+ <span data-ttu-id="5da9c-195">以 `DataDirectory` 或 ~ 运算符开头的路径不能解析为 `DataDirectory` 和 ~ 运算符分支之外的物理路径。</span><span class="sxs-lookup"><span data-stu-id="5da9c-195">A path that starts with the `DataDirectory` or the ~ operator cannot resolve to a physical path outside the branch of the `DataDirectory` and the ~ operator.</span></span> <span data-ttu-id="5da9c-196">例如，下面的路径将获得解析：`~`、`~/data`、`~/bin/Model/SqlServer`。</span><span class="sxs-lookup"><span data-stu-id="5da9c-196">For example, the following paths will resolve: `~` , `~/data` , `~/bin/Model/SqlServer`.</span></span> <span data-ttu-id="5da9c-197">下面的路径无法解析：`~/..`、`~/../other`。</span><span class="sxs-lookup"><span data-stu-id="5da9c-197">The following paths will fail to resolve: `~/..`, `~/../other`.</span></span>  
   
- `DataDirectory` 和 ~ 运算符可扩展为包含子目录，如下所示：`|DataDirectory|\Model`、`~/bin/Model`  
+ <span data-ttu-id="5da9c-198">`DataDirectory` 和 ~ 运算符可扩展为包含子目录，如下所示：`|DataDirectory|\Model`、`~/bin/Model`</span><span class="sxs-lookup"><span data-stu-id="5da9c-198">`DataDirectory` and the ~ operator can be extended to include sub-directories, as follows: `|DataDirectory|\Model`, `~/bin/Model`</span></span>  
   
- 对 `DataDirectory` 替代字符串和 ~ 运算符的解析不是递归进行的。  例如，如果 `DataDirectory` 包含 `~` 字符，则引发异常。  这样可以避免无穷递归。  
+ <span data-ttu-id="5da9c-199">对 `DataDirectory` 替代字符串和 ~ 运算符的解析不是递归进行的。</span><span class="sxs-lookup"><span data-stu-id="5da9c-199">The resolution of the `DataDirectory` substitution string and the ~ operator is non-recursive.</span></span> <span data-ttu-id="5da9c-200">例如，如果 `DataDirectory` 包含 `~` 字符，则引发异常。</span><span class="sxs-lookup"><span data-stu-id="5da9c-200">For example, when `DataDirectory` includes the `~` character, an exception will occur.</span></span> <span data-ttu-id="5da9c-201">这样可以避免无穷递归。</span><span class="sxs-lookup"><span data-stu-id="5da9c-201">This prevents an infinite recursion.</span></span>  
   
-## 请参阅  
- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)   
- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)   
- [Managing Connections and Transactions](http://msdn.microsoft.com/zh-cn/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)   
- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a><span data-ttu-id="5da9c-202">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5da9c-202">See Also</span></span>  
+ [<span data-ttu-id="5da9c-203">使用数据提供程序</span><span class="sxs-lookup"><span data-stu-id="5da9c-203">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
+ [<span data-ttu-id="5da9c-204">部署注意事项</span><span class="sxs-lookup"><span data-stu-id="5da9c-204">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [<span data-ttu-id="5da9c-205">管理连接和事务</span><span class="sxs-lookup"><span data-stu-id="5da9c-205">Managing Connections and Transactions</span></span>](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [<span data-ttu-id="5da9c-206">连接字符串</span><span class="sxs-lookup"><span data-stu-id="5da9c-206">Connection Strings</span></span>](../../../../../docs/framework/data/adonet/connection-strings.md)

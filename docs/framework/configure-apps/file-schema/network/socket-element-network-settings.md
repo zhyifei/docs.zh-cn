@@ -1,104 +1,105 @@
 ---
-title: "&lt;socket&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#socket"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<socket> 元素"
-  - "socket 元素"
+title: "&lt;套接字&gt;元素 （网络设置）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#socket
+helpviewer_keywords:
+- <socket> element
+- socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-caps.latest.revision: 21
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;socket&gt; 元素（网络设置）
-指定套接字操作是否使用完成端口。  
+# <a name="ltsocketgt-element-network-settings"></a><span data-ttu-id="c40d9-102">&lt;套接字&gt;元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="c40d9-102">&lt;socket&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="c40d9-103">指定的套接字操作是否使用完成端口。</span><span class="sxs-lookup"><span data-stu-id="c40d9-103">Specifies whether socket operations use completion ports.</span></span>  
   
-## 语法  
+ <span data-ttu-id="c40d9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c40d9-104">\<configuration></span></span>  
+<span data-ttu-id="c40d9-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="c40d9-105">\<system.net></span></span>  
+<span data-ttu-id="c40d9-106">\<设置 ></span><span class="sxs-lookup"><span data-stu-id="c40d9-106">\<settings></span></span>  
+<span data-ttu-id="c40d9-107">\<套接字 ></span><span class="sxs-lookup"><span data-stu-id="c40d9-107">\<socket></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c40d9-108">语法</span><span class="sxs-lookup"><span data-stu-id="c40d9-108">Syntax</span></span>  
   
-      <socket  
+```xml  
+<socket  
   alwaysUseCompletionPortsForConnect="true|false"  
   alwaysUseCompletionPortsForAccept="true|false"  
-  ipProtectionLevel ="EdgeRestricted|Restricted|Unrestricted|Unspecified"  
-/socket>  
+  ipProtectionLevel="EdgeRestricted|Restricted|Unrestricted|Unspecified"  
+/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c40d9-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c40d9-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c40d9-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c40d9-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="c40d9-111">特性</span><span class="sxs-lookup"><span data-stu-id="c40d9-111">Attributes</span></span>  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|`alwaysUseCompletionPortsForAccept`|指示套接字是否应当始终对 Accept 方法调用使用完成端口。  默认值为 `false`。|  
-|`alwaysUseCompletionPortsForConnect`|指示套接字是否应当始终对 Connect 方法调用使用完成端口。  默认值为 `false`。|  
-|`ipProtectionLevel`|指定用于套接字的默认 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>。  默认值取决于 Windows 的版本。|  
+|<span data-ttu-id="c40d9-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="c40d9-112">**Attribute**</span></span>|<span data-ttu-id="c40d9-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="c40d9-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`alwaysUseCompletionPortsForAccept`|<span data-ttu-id="c40d9-114">指示是否套接字始终应该使用完成端口用于接受方法调用。</span><span class="sxs-lookup"><span data-stu-id="c40d9-114">Indicates whether the socket should always use completion ports for Accept method calls.</span></span> <span data-ttu-id="c40d9-115">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="c40d9-115">The default value is `false`.</span></span>|  
+|`alwaysUseCompletionPortsForConnect`|<span data-ttu-id="c40d9-116">指示是否套接字始终应连接方法调用使用完成端口。</span><span class="sxs-lookup"><span data-stu-id="c40d9-116">Indicates whether the socket should always use completion ports for Connect method calls.</span></span> <span data-ttu-id="c40d9-117">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="c40d9-117">The default value is `false`.</span></span>|  
+|`ipProtectionLevel`|<span data-ttu-id="c40d9-118">指定的默认<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>用于套接字。</span><span class="sxs-lookup"><span data-stu-id="c40d9-118">Specifies the default <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> to use for a socket.</span></span> <span data-ttu-id="c40d9-119">默认值取决于 Windows 的版本。</span><span class="sxs-lookup"><span data-stu-id="c40d9-119">The default value depends on the version of Windows.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="c40d9-120">子元素</span><span class="sxs-lookup"><span data-stu-id="c40d9-120">Child Elements</span></span>  
+ <span data-ttu-id="c40d9-121">无。</span><span class="sxs-lookup"><span data-stu-id="c40d9-121">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="c40d9-122">父元素</span><span class="sxs-lookup"><span data-stu-id="c40d9-122">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|<span data-ttu-id="c40d9-123">**元素**</span><span class="sxs-lookup"><span data-stu-id="c40d9-123">**Element**</span></span>|<span data-ttu-id="c40d9-124">**描述**</span><span class="sxs-lookup"><span data-stu-id="c40d9-124">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="c40d9-125">设置</span><span class="sxs-lookup"><span data-stu-id="c40d9-125">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="c40d9-126">配置 <xref:System.Net> 命名空间的基本网络选项。</span><span class="sxs-lookup"><span data-stu-id="c40d9-126">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## 备注  
- `alwaysUseCompletionPortsForAccept` and `alwaysUseCompletionPortsForConnect`属性被用来指定关于<xref:System.Net.Sockets?displayProperty=fullName>命名空间中的类使用完全端口的默认的行为。  对于高性能的服务器应用程序，建议使用完成端口。  
+## <a name="remarks"></a><span data-ttu-id="c40d9-127">备注</span><span class="sxs-lookup"><span data-stu-id="c40d9-127">Remarks</span></span>  
+ <span data-ttu-id="c40d9-128">`alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 特性用于指定 <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace 中的类在使用完全端口时的默认行为。</span><span class="sxs-lookup"><span data-stu-id="c40d9-128">The `alwaysUseCompletionPortsForAccept` and `alwaysUseCompletionPortsForConnect` attributes are used to specify the default behavior regarding the use of completion ports by the classes in the <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace.</span></span> <span data-ttu-id="c40d9-129">对于高性能服务器应用程序建议使用完成端口。</span><span class="sxs-lookup"><span data-stu-id="c40d9-129">Completion ports are recommended for high performance server applications.</span></span>  
   
- `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 特性的默认值是 **false**。  
+ <span data-ttu-id="c40d9-130">默认值为`alwaysUseCompletionPortsForAccept`和`alwaysUseCompletionPortsForConnect`属性， **false**。</span><span class="sxs-lookup"><span data-stu-id="c40d9-130">The default value for the `alwaysUseCompletionPortsForAccept` and `alwaysUseCompletionPortsForConnect` attributes is **false**.</span></span>  
   
- <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> 属性可用于从适用的配置文件获取 `alwaysUseCompletionPortsForAccept` 特性的当前值。  <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> 属性可用于从适用的配置文件获取 `alwaysUseCompletionPortsForConnect` 特性的当前值。  
+ <span data-ttu-id="c40d9-131"><xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A>可以用于获取的当前值`alwaysUseCompletionPortsForAccept`从适用的配置文件的属性。</span><span class="sxs-lookup"><span data-stu-id="c40d9-131">The <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> can be used to get the current value of the `alwaysUseCompletionPortsForAccept` attribute from applicable configuration files.</span></span> <span data-ttu-id="c40d9-132"><xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A>可以用于获取的当前值`alwaysUseCompletionPortsForConnect`从适用的配置文件的属性。</span><span class="sxs-lookup"><span data-stu-id="c40d9-132">The <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> can be used to get the current value of the `alwaysUseCompletionPortsForConnect` attribute from applicable configuration files.</span></span>  
   
- `ipProtectionLevel` 特性指定用于套接字的默认 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>。  <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> 属性允许将 IPv6 套接字限制配置为一个指定范围，例如限制为具有相同的链接本地或站点本地前缀的地址。  通过使用此选项，应用程序可限制对 IPv6 套接字的访问。  通过应用此类限制，可让在专用局域网上运行的应用程序能够通过简单的方式很好地增强自身的安全性，以便防范外部攻击。  此选项可扩大或缩小侦听套接字的范围，从而使得公共用户和私人用户可以在适当情况下对站点进行无限制的访问，或者可以根据需要对同一站点进行有限制的访问。  
+ <span data-ttu-id="c40d9-133">`ipProtectionLevel`属性指定的默认<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>用于套接字。</span><span class="sxs-lookup"><span data-stu-id="c40d9-133">The `ipProtectionLevel` attribute specifies the default <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> to use for a socket.</span></span> <span data-ttu-id="c40d9-134"><xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>属性可配置到指定的作用域，将 IPv6 套接字的限制，如具有相同的地址的链接本地或站点本地前缀。</span><span class="sxs-lookup"><span data-stu-id="c40d9-134">The <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> property enables configuration of a restriction for an IPv6 socket to a specified scope, such as addresses with the same link local or site local prefix.</span></span> <span data-ttu-id="c40d9-135">此选项使应用程序可以限制对 IPv6 套接字的访问。</span><span class="sxs-lookup"><span data-stu-id="c40d9-135">This option enables applications to place access restrictions on IPv6 sockets.</span></span> <span data-ttu-id="c40d9-136">通过应用此类限制，可让在专用局域网上运行的应用程序能够通过简单的方式很好地增强自身的安全性，以便防范外部攻击。</span><span class="sxs-lookup"><span data-stu-id="c40d9-136">Such restrictions enable an application running on a private LAN to simply and robustly harden itself against external attacks.</span></span> <span data-ttu-id="c40d9-137">此选项可以扩大或缩小侦听套接字，从而使得公共和私有用户如果合适的话，或对同一站点中，根据需要限制的访问的不受限制访问的范围。</span><span class="sxs-lookup"><span data-stu-id="c40d9-137">This option widens or narrows the scope of a listening socket, enabling unrestricted access from public and private users when appropriate, or restricting access only to the same site, as required.</span></span>  
   
- 此 `ipProtectionLevel` 特性设置仅影响初始传入网络流量：  
+ <span data-ttu-id="c40d9-138">这`ipProtectionLevel`属性设置会影响仅初始的传入流量：</span><span class="sxs-lookup"><span data-stu-id="c40d9-138">This `ipProtectionLevel` attribute setting affects only initial incoming traffic:</span></span>  
   
--   侦听套接字的传入连接的 TCP 服务器。  
+-   <span data-ttu-id="c40d9-139">TCP 服务器侦听套接字上的传入连接。</span><span class="sxs-lookup"><span data-stu-id="c40d9-139">A TCP server listening for incoming connections on a socket.</span></span>  
   
--   接收套接字的数据包的 UDP 应用程序。  
+-   <span data-ttu-id="c40d9-140">接收套接字上的数据包一个 UDP 应用程序。</span><span class="sxs-lookup"><span data-stu-id="c40d9-140">A UDP application receiving a packet on a socket.</span></span>  
   
- 此配置设置不会影响已建立的 TCP 连接（通信在两个方向上无限制）并且不会影响应用程序发送 UDP 包。  
+ <span data-ttu-id="c40d9-141">此配置设置不会影响已建立的 TCP 连接 （两个方向对流量无限制），不影响应用程序发送 UDP 数据包。</span><span class="sxs-lookup"><span data-stu-id="c40d9-141">This configuration setting does not affect already established TCP connections (traffic is unrestricted in both directions) and does not affect an application sending UDP packets.</span></span>  
   
- `ipProtectionLevel` 特性设置的可能值与 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName> 枚举中指定的已定义保护级别对应，如下所示：  
+ <span data-ttu-id="c40d9-142">可能值`ipProtectionLevel`属性设置中指定的已定义的保护级别与对应<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>枚举，如下所示：</span><span class="sxs-lookup"><span data-stu-id="c40d9-142">The possible values for the `ipProtectionLevel` attribute setting correspond with the defined protection levels specified in the <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> enumeration as follows:</span></span>  
   
-|||  
+|<span data-ttu-id="c40d9-143">**属性值**</span><span class="sxs-lookup"><span data-stu-id="c40d9-143">**Attribute Value**</span></span>|<span data-ttu-id="c40d9-144">**描述**</span><span class="sxs-lookup"><span data-stu-id="c40d9-144">**Description**</span></span>|  
 |-|-|  
-|**特性值**|**说明**|  
-|EdgeRestricted|IP 保护级别是“边缘受限的”。  此值应由设计为在 Internet 上运行的应用程序使用。  此设置不允许使用 Windows Teredo 实现的网络地址转换 \(NAT\) 遍历。  这些应用程序可能会绕过 IPv4 防火墙，因此，必须加强应用程序的安全性以防范针对开放端口的 Internet 攻击。  在 Windows Server 2003 和 Windows XP 中，针对套接字的 IP 保护级别的默认值是“边缘受限的”。|  
-|Restricted|IP 保护级别是“受限的”。  此值应由未实现 Internet 方案的 Intranet 应用程序使用。  一般情况下，不会针对 Internet 样式的攻击来对这些应用程序进行测试或加强安全性。  此设置将限制仅接收链接本地的通信。|  
-|无限制|IP 保护级别是“不受限的”。  此值应由设计为在 Internet 上运行的应用程序使用，包括利用 Windows 中内置的 IPv6 NAT 遍历功能（例如，Teredo）的应用程序。  这些应用程序可能会绕过 IPv4 防火墙，因此，必须加强应用程序的安全性以防范针对开放端口的 Internet 攻击。  在 Windows Server 2008 R2 和 Windows Vista 中，针对套接字的 IP 保护级别的默认值是“不受限的”。|  
-|Unspecified|IP 保护级别是“未指定的”。  在 Windows 7 和 Windows Server 2008 R2 中，针对套接字的 IP 保护级别的默认值是“未指定的”。|  
+|<span data-ttu-id="c40d9-145">EdgeRestricted</span><span class="sxs-lookup"><span data-stu-id="c40d9-145">EdgeRestricted</span></span>|<span data-ttu-id="c40d9-146">IP 保护级别是受限的边缘。</span><span class="sxs-lookup"><span data-stu-id="c40d9-146">The IP protection level is edge restricted.</span></span> <span data-ttu-id="c40d9-147">设计在 internet 上运行的应用程序将使用此值。</span><span class="sxs-lookup"><span data-stu-id="c40d9-147">This value would be used by applications designed to operate across the Internet.</span></span> <span data-ttu-id="c40d9-148">此设置不允许使用 Windows Teredo 实现的网络地址转换 (NAT) 遍历。</span><span class="sxs-lookup"><span data-stu-id="c40d9-148">This setting does not allow Network Address Translation (NAT) traversal using the Windows Teredo implementation.</span></span> <span data-ttu-id="c40d9-149">这些应用程序可能会绕过 IPv4 防火墙，因此必须针对 Internet 攻击在打开的端口定向强化应用程序。</span><span class="sxs-lookup"><span data-stu-id="c40d9-149">These applications may bypass IPv4 firewalls, so applications must be hardened against Internet attacks directed at the opened port.</span></span> <span data-ttu-id="c40d9-150">在 Windows Server 2003 和 Windows XP，套接字上的 IP 保护级别的默认值是受限的边缘。</span><span class="sxs-lookup"><span data-stu-id="c40d9-150">On Windows Server 2003 and Windows XP, the default value for the IP Protection level on a socket is edge restricted.</span></span>|  
+|<span data-ttu-id="c40d9-151">限制</span><span class="sxs-lookup"><span data-stu-id="c40d9-151">Restricted</span></span>|<span data-ttu-id="c40d9-152">IP 保护级别是受限的。</span><span class="sxs-lookup"><span data-stu-id="c40d9-152">The IP protection level is restricted.</span></span> <span data-ttu-id="c40d9-153">未实现 Internet 方案的 intranet 应用程序将使用此值。</span><span class="sxs-lookup"><span data-stu-id="c40d9-153">This value would be used by intranet applications that do not implement Internet scenarios.</span></span> <span data-ttu-id="c40d9-154">通常，这些应用程序是不要测试或者针对 Internet 样式攻击强化。</span><span class="sxs-lookup"><span data-stu-id="c40d9-154">These applications are generally not tested or hardened against Internet-style attacks.</span></span> <span data-ttu-id="c40d9-155">此设置将限制到仅链接本地的接收的流量。</span><span class="sxs-lookup"><span data-stu-id="c40d9-155">This setting will limit the received traffic to link-local only.</span></span>|  
+|<span data-ttu-id="c40d9-156">不受限制</span><span class="sxs-lookup"><span data-stu-id="c40d9-156">Unrestricted</span></span>|<span data-ttu-id="c40d9-157">IP 保护级别是不受限制。</span><span class="sxs-lookup"><span data-stu-id="c40d9-157">The IP protection level is unrestricted.</span></span> <span data-ttu-id="c40d9-158">应用程序设计为在 Internet 上，包括利用内置的 IPv6 NAT 遍历功能的应用程序运行时将使用此值为 Windows (例如，Teredo)。</span><span class="sxs-lookup"><span data-stu-id="c40d9-158">This value would be used by applications designed to operate across the Internet, including applications taking advantage of IPv6 NAT traversal capabilities built into Windows (Teredo, for example).</span></span> <span data-ttu-id="c40d9-159">这些应用程序可能会绕过 IPv4 防火墙，因此必须针对 Internet 攻击在打开的端口定向强化应用程序。</span><span class="sxs-lookup"><span data-stu-id="c40d9-159">These applications may bypass IPv4 firewalls, so applications must be hardened against Internet attacks directed at the opened port.</span></span> <span data-ttu-id="c40d9-160">在 Windows Server 2008 R2 和 Windows Vista，套接字上的 IP 保护级别的默认值是不受限制。</span><span class="sxs-lookup"><span data-stu-id="c40d9-160">On Windows Server 2008 R2 and Windows Vista, the default value for the IP Protection level on a socket is unrestricted.</span></span>|  
+|<span data-ttu-id="c40d9-161">未指定</span><span class="sxs-lookup"><span data-stu-id="c40d9-161">Unspecified</span></span>|<span data-ttu-id="c40d9-162">IP 保护级别是未指定。</span><span class="sxs-lookup"><span data-stu-id="c40d9-162">The IP protection level is unspecified.</span></span> <span data-ttu-id="c40d9-163">在 Windows 7 和 Windows Server 2008 R2，套接字上的 IP 保护级别的默认值是未指定。</span><span class="sxs-lookup"><span data-stu-id="c40d9-163">On Windows 7 and Windows Server 2008 R2, the default value for the IP Protection level on a socket is unspecified.</span></span>|  
   
- `ipProtectionLevel` 特性的默认值是 **Unspecified**。  
+ <span data-ttu-id="c40d9-164">默认值为`ipProtectionLevel`属性是**未指定**。</span><span class="sxs-lookup"><span data-stu-id="c40d9-164">The default value for the `ipProtectionLevel` attribute is **Unspecified**.</span></span>  
   
- <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> 属性可用于从适用的配置文件获取 `ipProtectionLevel` 特性的当前值。  
+ <span data-ttu-id="c40d9-165"><xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>属性可以用于获取的当前值`ipProtectionLevel`从适用的配置文件的属性。</span><span class="sxs-lookup"><span data-stu-id="c40d9-165">The <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> property can be used to get the current value of the `ipProtectionLevel` attribute from applicable configuration files.</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a><span data-ttu-id="c40d9-166">配置文件</span><span class="sxs-lookup"><span data-stu-id="c40d9-166">Configuration Files</span></span>  
+ <span data-ttu-id="c40d9-167">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="c40d9-167">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
- 下面的代码示例演示如何指定应使用的完成端口以及应该不受限制的默认 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>。  
+## <a name="example"></a><span data-ttu-id="c40d9-168">示例</span><span class="sxs-lookup"><span data-stu-id="c40d9-168">Example</span></span>  
+ <span data-ttu-id="c40d9-169">下面的示例演示如何指定应使用完成端口，以及默认值<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>应为不受限制。</span><span class="sxs-lookup"><span data-stu-id="c40d9-169">The following example shows how to specify that completion ports should be used and that the default <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> should be unrestricted.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -112,10 +113,10 @@ caps.handback.revision: 21
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net?displayProperty=fullName>   
- <xref:System.Net.Configuration.SocketElement?displayProperty=fullName>   
- <xref:System.Net.Sockets?displayProperty=fullName>   
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="c40d9-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c40d9-170">See Also</span></span>  
+ <xref:System.Net?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+ [<span data-ttu-id="c40d9-171">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="c40d9-171">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

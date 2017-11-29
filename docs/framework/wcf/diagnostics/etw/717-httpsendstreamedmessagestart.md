@@ -1,35 +1,38 @@
 ---
-title: "717 - HttpSendStreamedMessageStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 717 - HttpSendStreamedMessageStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a157fdd5-b1b7-4498-9b0c-8a68c6f1f020
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a19e67a342eca4a883f50a63790dd7e3a4a3e30c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 717 - HttpSendStreamedMessageStart
-## 属性  
+# <a name="717---httpsendstreamedmessagestart"></a><span data-ttu-id="495fd-102">717 - HttpSendStreamedMessageStart</span><span class="sxs-lookup"><span data-stu-id="495fd-102">717 - HttpSendStreamedMessageStart</span></span>
+## <a name="properties"></a><span data-ttu-id="495fd-103">属性</span><span class="sxs-lookup"><span data-stu-id="495fd-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|717|  
-|关键字|HTTP|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="495fd-104">ID</span><span class="sxs-lookup"><span data-stu-id="495fd-104">ID</span></span>|<span data-ttu-id="495fd-105">717</span><span class="sxs-lookup"><span data-stu-id="495fd-105">717</span></span>|  
+|<span data-ttu-id="495fd-106">关键字</span><span class="sxs-lookup"><span data-stu-id="495fd-106">Keywords</span></span>|<span data-ttu-id="495fd-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="495fd-107">HTTP</span></span>|  
+|<span data-ttu-id="495fd-108">级别</span><span class="sxs-lookup"><span data-stu-id="495fd-108">Level</span></span>|<span data-ttu-id="495fd-109">信息</span><span class="sxs-lookup"><span data-stu-id="495fd-109">Information</span></span>|  
+|<span data-ttu-id="495fd-110">通道</span><span class="sxs-lookup"><span data-stu-id="495fd-110">Channel</span></span>|<span data-ttu-id="495fd-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="495fd-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 当启动 Http 发送流处理消息时，发出此事件。  
+## <a name="description"></a><span data-ttu-id="495fd-112">描述</span><span class="sxs-lookup"><span data-stu-id="495fd-112">Description</span></span>  
+ <span data-ttu-id="495fd-113">当启动 Http 发送流处理消息时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="495fd-113">This event is emitted when Http Send streamed message starts.</span></span>  
   
-## 消息  
- Http Send 启动流处理消息。  
+## <a name="message"></a><span data-ttu-id="495fd-114">消息</span><span class="sxs-lookup"><span data-stu-id="495fd-114">Message</span></span>  
+ <span data-ttu-id="495fd-115">Http Send 启动流处理消息。</span><span class="sxs-lookup"><span data-stu-id="495fd-115">Http Send streamed message started.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="495fd-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="495fd-116">Details</span></span>

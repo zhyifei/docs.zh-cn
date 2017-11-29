@@ -1,29 +1,33 @@
 ---
-title: "声明性约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "声明性约束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a51f77864478dcefbe5b2742288f9cc91648f7bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 声明性约束
-声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。本主题概述了如何使用声明性约束提供活动验证。  
+# <a name="declarative-constraints"></a><span data-ttu-id="25fe8-102">声明性约束</span><span class="sxs-lookup"><span data-stu-id="25fe8-102">Declarative Constraints</span></span>
+<span data-ttu-id="25fe8-103">声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。</span><span class="sxs-lookup"><span data-stu-id="25fe8-103">Declarative constraints provide a powerful method of validation for an activity and its relationships with other activities.</span></span> <span data-ttu-id="25fe8-104">约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。</span><span class="sxs-lookup"><span data-stu-id="25fe8-104">Constraints are configured for an activity during the authoring process, but additional constraints can also be specified by the workflow host.</span></span> <span data-ttu-id="25fe8-105">本主题概述了如何使用声明性约束提供活动验证。</span><span class="sxs-lookup"><span data-stu-id="25fe8-105">This topic provides an overview of using declarative constraints to provide activity validation.</span></span>  
   
-## 使用声明性约束  
- 约束是包含验证逻辑的活动。可以用代码或 XAML 创作此约束活动。创建约束活动之后，活动作者可将此约束添加到该活动的 <xref:System.Activities.Activity.Constraints%2A> 属性中以进行验证，或者他们也可以通过使用 <xref:System.Activities.Validation.ValidationSettings> 实例的 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 属性，使用该约束提供其他验证。验证逻辑可以包含简单的验证（如验证活动的元数据），也可以执行考虑当前活动与其父级、子级和同级活动的关系的验证。使用 <xref:System.Activities.Validation.Constraint%601> 活动创作约束，并且提供了多个其他验证活动以协助创建验证错误和警告并提供有关工作流中相关活动的信息。  
+## <a name="using-declarative-constraints"></a><span data-ttu-id="25fe8-106">使用声明性约束</span><span class="sxs-lookup"><span data-stu-id="25fe8-106">Using Declarative Constraints</span></span>  
+ <span data-ttu-id="25fe8-107">约束是包含验证逻辑的活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-107">A constraint is an activity that contains validation logic.</span></span> <span data-ttu-id="25fe8-108">可以用代码或 XAML 创作此约束活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-108">This constraint activity can be authored in code or in XAML.</span></span> <span data-ttu-id="25fe8-109">创建约束活动之后，活动作者可将此约束添加到该活动的 <xref:System.Activities.Activity.Constraints%2A> 属性中以进行验证，或者他们也可以使用该约束通过使用 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 实例的 <xref:System.Activities.Validation.ValidationSettings> 属性提供其他验证。</span><span class="sxs-lookup"><span data-stu-id="25fe8-109">After a constraint activity is created, activity authors add this constraint to the <xref:System.Activities.Activity.Constraints%2A> property of the activity to validate, or they use the constraint to provide additional validation by using the <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> property of a <xref:System.Activities.Validation.ValidationSettings> instance.</span></span> <span data-ttu-id="25fe8-110">验证逻辑可以包含简单的验证（如验证活动的元数据），也可以执行考虑当前活动与其父级、子级和同级活动的关系的验证。</span><span class="sxs-lookup"><span data-stu-id="25fe8-110">The validation logic can consist of simple validations such as validating an activity’s metadata, but it can also perform validation that takes into account the relationship of the current activity to its parent, children, and sibling activities.</span></span> <span data-ttu-id="25fe8-111"><xref:System.Activities.Validation.Constraint%601> 活动可用于创作约束，并且提供了多个其他验证活动以协助创建验证错误和警告并提供有关工作流中相关活动的信息。</span><span class="sxs-lookup"><span data-stu-id="25fe8-111">Constraints are authored by using the <xref:System.Activities.Validation.Constraint%601> activity, and several additional validation activities are provided to assist with the creation of validation errors and warnings and to provide information about related activities in the workflow.</span></span>  
   
-### AssertValidation 和 AddValidationError  
- <xref:System.Activities.Validation.AssertValidation> 活动计算其 <xref:System.Activities.Validation.AssertValidation.Assertion%2A> 属性引用的表达式，如果该表达式的计算结果为 `false`，则会向 <xref:System.Activities.Validation.ValidationResults> 添加验证错误或警告。<xref:System.Activities.Validation.AssertValidation.Message%2A> 属性描述验证错误，<xref:System.Activities.Validation.AssertValidation.IsWarning%2A> 属性指示验证失败为错误还是警告。<xref:System.Activities.Validation.AssertValidation.IsWarning%2A> 的默认值为 `false`。  
+### <a name="assertvalidation-and-addvalidationerror"></a><span data-ttu-id="25fe8-112">AssertValidation 和 AddValidationError</span><span class="sxs-lookup"><span data-stu-id="25fe8-112">AssertValidation and AddValidationError</span></span>  
+ <span data-ttu-id="25fe8-113"><xref:System.Activities.Validation.AssertValidation> 活动计算其 <xref:System.Activities.Validation.AssertValidation.Assertion%2A> 属性引用的表达式，如果表达式的计算结果为 `false`，则会向 <xref:System.Activities.Validation.ValidationResults> 添加验证错误或警告。</span><span class="sxs-lookup"><span data-stu-id="25fe8-113">The <xref:System.Activities.Validation.AssertValidation> activity evaluates the expression referenced by its <xref:System.Activities.Validation.AssertValidation.Assertion%2A> property, and if the expression evaluates to `false`, a validation error or warning is added to the <xref:System.Activities.Validation.ValidationResults>.</span></span> <span data-ttu-id="25fe8-114"><xref:System.Activities.Validation.AssertValidation.Message%2A> 属性描述验证错误，<xref:System.Activities.Validation.AssertValidation.IsWarning%2A> 属性指示验证失败为错误还是警告。</span><span class="sxs-lookup"><span data-stu-id="25fe8-114">The <xref:System.Activities.Validation.AssertValidation.Message%2A> property describes the validation error and the <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> property indicates whether the validation failure is an error or a warning.</span></span> <span data-ttu-id="25fe8-115"><xref:System.Activities.Validation.AssertValidation.IsWarning%2A> 的默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="25fe8-115">The default value for <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> is `false`.</span></span>  
   
- 在下面的示例中，声明一个约束，如果验证的活动的 <xref:System.Activities.Activity.DisplayName%2A> 是两个字符或更少字符，则该约束返回一个验证警告。用于 <xref:System.Activities.Validation.Constraint%601> 的泛型类型参数指定该约束验证的活动类型。此约束使用 <xref:System.Activities.Activity> 作为泛型类型并且可用于验证所有类型的活动。  
+ <span data-ttu-id="25fe8-116">在下面的示例中，声明一个约束，如果验证的活动的 <xref:System.Activities.Activity.DisplayName%2A> 是两个字符或更少字符，则该约束返回一个验证警告。</span><span class="sxs-lookup"><span data-stu-id="25fe8-116">In the following example, a constraint is declared that returns a validation warning if the <xref:System.Activities.Activity.DisplayName%2A> of the activity being validated is two characters or less in length.</span></span> <span data-ttu-id="25fe8-117">用于 <xref:System.Activities.Validation.Constraint%601> 的泛型类型参数指定该约束验证的活动类型。</span><span class="sxs-lookup"><span data-stu-id="25fe8-117">The generic type parameter used for <xref:System.Activities.Validation.Constraint%601> specifies the type of activity that is validated by the constraint.</span></span> <span data-ttu-id="25fe8-118">此约束使用 <xref:System.Activities.Activity> 作为泛型类型并且可用于验证所有类型的活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-118">This constraint uses <xref:System.Activities.Activity> as the generic type and can be used to validate all types of activities.</span></span>  
   
 ```csharp  
 public static Constraint ActivityDisplayNameIsNotSetWarning()  
@@ -46,7 +50,7 @@ public static Constraint ActivityDisplayNameIsNotSetWarning()
 }  
 ```  
   
- 若要为某个活动指定此约束，请将其添加到该活动的 <xref:System.Activities.Activity.Constraints%2A> 中，如以下代码示例所示。  
+ <span data-ttu-id="25fe8-119">若要为某个活动指定此约束，请将其添加到该活动的 <xref:System.Activities.Activity.Constraints%2A> 中，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="25fe8-119">To specify this constraint for an activity, it is added to the <xref:System.Activities.Activity.Constraints%2A> of the activity, as shown in the following example code.</span></span>  
   
 ```csharp  
 public sealed class SampleActivity : CodeActivity  
@@ -60,14 +64,14 @@ public sealed class SampleActivity : CodeActivity
 }  
 ```  
   
- 主机还可使用 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 为工作流中的活动指定此约束，将在下一节中对此内容进行介绍。  
+ <span data-ttu-id="25fe8-120">宿主还可使用 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 为工作流中的活动指定此约束，将在下一节中对此内容进行介绍。</span><span class="sxs-lookup"><span data-stu-id="25fe8-120">The host could also specify this constraint for activities in a workflow by using <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, which is covered in the next section.</span></span>  
   
- <xref:System.Activities.Validation.AddValidationError> 活动用于生成验证错误或警告，而无需对表达式进行计算。其属性类似于 <xref:System.Activities.Validation.AssertValidation> 并且可以将其与约束的流控制活动（如 <xref:System.Activities.Statements.If> 活动）结合使用。  
+ <span data-ttu-id="25fe8-121"><xref:System.Activities.Validation.AddValidationError> 活动用于生成验证错误或警告，而无需对表达式进行计算。</span><span class="sxs-lookup"><span data-stu-id="25fe8-121">The <xref:System.Activities.Validation.AddValidationError> activity is used to generate a validation error or warning without requiring the evaluation of an expression.</span></span> <span data-ttu-id="25fe8-122">其属性类似于 <xref:System.Activities.Validation.AssertValidation> 并且可以将其与约束的流控制活动（如 <xref:System.Activities.Statements.If> 活动）结合使用。</span><span class="sxs-lookup"><span data-stu-id="25fe8-122">Its properties are similar to <xref:System.Activities.Validation.AssertValidation> and it can be used in conjunction with flow control activities of a constraint such as the <xref:System.Activities.Statements.If> activity.</span></span>  
   
-### 工作流关系活动  
- 可以使用多个验证活动，这些活动提供工作流中与验证的活动有关的其他活动的相关信息。<xref:System.Activities.Validation.GetParentChain> 返回一个活动集合，该集合包含当前活动和根活动之间的所有活动。<xref:System.Activities.Validation.GetChildSubtree> 提供一个活动集合，该集合包含采用递归模式的子活动，并且 <xref:System.Activities.Validation.GetWorkflowTree> 获取工作流中的所有活动。  
+### <a name="workflow-relationship-activities"></a><span data-ttu-id="25fe8-123">工作流关系活动</span><span class="sxs-lookup"><span data-stu-id="25fe8-123">Workflow Relationship Activities</span></span>  
+ <span data-ttu-id="25fe8-124">可以使用多个验证活动，这些活动提供工作流中与验证的活动有关的其他活动的相关信息。</span><span class="sxs-lookup"><span data-stu-id="25fe8-124">Several validation activities are available that provide information about the other activities in the workflow in relation to the activity being validated.</span></span> <span data-ttu-id="25fe8-125"><xref:System.Activities.Validation.GetParentChain> 返回一个活动集合，该集合包含当前活动和根活动之间的所有活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-125"><xref:System.Activities.Validation.GetParentChain> returns a collection of activities that contains all of the activities between the current activity and the root activity.</span></span> <span data-ttu-id="25fe8-126"><xref:System.Activities.Validation.GetChildSubtree> 提供一个活动集合，该集合包含采用递归模式的子活动，并且 <xref:System.Activities.Validation.GetWorkflowTree> 获取工作流中的所有活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-126"><xref:System.Activities.Validation.GetChildSubtree> provides a collection of activities that contains the child activities in a recursive pattern, and <xref:System.Activities.Validation.GetWorkflowTree> gets all the activities in the workflow.</span></span>  
   
- 在来自 [活动关系验证](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) 示例的以下示例中，定义了一个 `CreateState` 活动。`CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。 `GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。  
+ <span data-ttu-id="25fe8-127">在下面的示例从[活动关系验证](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md)示例中，`CreateState`定义活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-127">In the following example from the [Activity Relationships Validation](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) sample, a `CreateState` activity is defined.</span></span> <span data-ttu-id="25fe8-128">`CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。 </span><span class="sxs-lookup"><span data-stu-id="25fe8-128">The `CreateState` activity must be contained within a `CreateCountry` activity, and the `GetParent` method returns a constraint that enforces this requirement.</span></span> <span data-ttu-id="25fe8-129">`GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。</span><span class="sxs-lookup"><span data-stu-id="25fe8-129">`GetParent` uses the <xref:System.Activities.Validation.GetParentChain> activity in conjunction with a <xref:System.Activities.Statements.ForEach%601> activity to inspect the parent activities of the `CreateState` activity to determine if the requirement is met.</span></span>  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -141,10 +145,10 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] Windows Workflow Foundation [验证](../../../docs/framework/windows-workflow-foundation/samples/validation.md)示例。  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="25fe8-130">Windows Workflow Foundation[验证](../../../docs/framework/windows-workflow-foundation/samples/validation.md)示例。</span><span class="sxs-lookup"><span data-stu-id="25fe8-130"> the Windows Workflow Foundation [Validation](../../../docs/framework/windows-workflow-foundation/samples/validation.md) samples.</span></span>  
   
-## 其他约束  
- 工作流宿主创作者可以通过创建约束并将这些约束添加到 <xref:System.Activities.Validation.ValidationSettings> 实例的 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 字典中为工作流中的活动指定其他验证约束。<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每个项目都包含应用约束的活动类型以及用于该活动类型的其他约束列表。为工作流调用验证时，指定类型的每个活动（包括派生的类）都计算约束。在本示例中，将上一节中的 `ActivityDisplayNameIsNotSetWarning` 约束应用于工作流中的所有活动。  
+## <a name="additional-constraints"></a><span data-ttu-id="25fe8-131">其他约束</span><span class="sxs-lookup"><span data-stu-id="25fe8-131">Additional Constraints</span></span>  
+ <span data-ttu-id="25fe8-132">工作流宿主创作者可以通过创建约束并将这些约束添加到 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 实例的 <xref:System.Activities.Validation.ValidationSettings> 字典中为工作流中的活动指定其他验证约束。</span><span class="sxs-lookup"><span data-stu-id="25fe8-132">Workflow host authors can specify additional validation constraints for activities in a workflow by creating constraints and adding them to the <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> dictionary of a <xref:System.Activities.Validation.ValidationSettings> instance.</span></span> <span data-ttu-id="25fe8-133"><xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每个项目都包含应用约束的活动类型以及用于该活动类型的其他约束列表。</span><span class="sxs-lookup"><span data-stu-id="25fe8-133">Each item in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contains the type of activity for which the constraints apply and a list of the additional constraints for that type of activity.</span></span> <span data-ttu-id="25fe8-134">为工作流调用验证时，指定类型的每个活动（包括派生的类）都计算约束。</span><span class="sxs-lookup"><span data-stu-id="25fe8-134">When validation is invoked for the workflow, each activity of the specified type, including derived classes, evaluates the constraints.</span></span> <span data-ttu-id="25fe8-135">在本示例中，将上一节中的 `ActivityDisplayNameIsNotSetWarning` 约束应用于工作流中的所有活动。</span><span class="sxs-lookup"><span data-stu-id="25fe8-135">In this example, the `ActivityDisplayNameIsNotSetWarning` constraint from the previous section is applied to all activities in a workflow.</span></span>  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -182,4 +186,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings> 的 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。对于检查工作流的特定验证配置，这非常有用。但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。有关调用验证的 [!INCLUDE[crabout](../../../includes/crabout-md.md)]，请参见 [调用活动验证](../../../docs/framework/windows-workflow-foundation//invoking-activity-validation.md)。
+ <span data-ttu-id="25fe8-136">如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。</span><span class="sxs-lookup"><span data-stu-id="25fe8-136">If the <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> property of <xref:System.Activities.Validation.ValidationSettings> is `true`, then only the specified additional constraints are evaluated when validation is invoked by calling <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>.</span></span> <span data-ttu-id="25fe8-137">对于检查工作流的特定验证配置，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="25fe8-137">This can be useful for inspecting workflows for specific validation configurations.</span></span> <span data-ttu-id="25fe8-138">但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。</span><span class="sxs-lookup"><span data-stu-id="25fe8-138">Note however that when the workflow is invoked, the validation logic configured in the workflow is evaluated and must pass for the workflow to successfully begin.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="25fe8-139">调用验证，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。</span><span class="sxs-lookup"><span data-stu-id="25fe8-139"> invoking validation, see [Invoking Activity Validation](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).</span></span>

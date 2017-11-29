@@ -1,65 +1,68 @@
 ---
-title: "ADO.NET 中的新增功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "什么 &#39; s ADO.NET 中的新增功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9c0c9eb02cb95522d04765f454cd870f01a633f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET 中的新增功能
-以下是 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的新增功能。  
+# <a name="what39s-new-in-adonet"></a><span data-ttu-id="e21c1-102">什么 &#39; s ADO.NET 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="e21c1-102">What&#39;s New in ADO.NET</span></span>
+<span data-ttu-id="e21c1-103">以下是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新增功能。</span><span class="sxs-lookup"><span data-stu-id="e21c1-103">The following features are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
-## SqlClient Data Provider  
- 以下是 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中用于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的新增功能：  
+## <a name="sqlclient-data-provider"></a><span data-ttu-id="e21c1-104">SqlClient Data Provider</span><span class="sxs-lookup"><span data-stu-id="e21c1-104">SqlClient Data Provider</span></span>  
+ <span data-ttu-id="e21c1-105">以下是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中用于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 数据提供程序的新增功能：</span><span class="sxs-lookup"><span data-stu-id="e21c1-105">The following features are new in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:</span></span>  
   
--   ConnectRetryCount 和 ConnectRetryInterval 连接字符串关键字 \(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>\) 可以让你控制空闲连接复原功能。  
+-   <span data-ttu-id="e21c1-106">ConnectRetryCount 和 ConnectRetryInterval 连接字符串关键字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可以让你控制空闲连接复原功能。</span><span class="sxs-lookup"><span data-stu-id="e21c1-106">The ConnectRetryCount and ConnectRetryInterval connection string keywords (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) let you control the idle connection resiliency feature.</span></span>  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 到应用程序的流支持支持服务器上的数据是非结构化的情况。  有关更多信息，请参见[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
+-   <span data-ttu-id="e21c1-107">[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 到应用程序的流支持支持服务器上的数据是非结构化的情况。</span><span class="sxs-lookup"><span data-stu-id="e21c1-107">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to an application supports scenarios where data on the server is unstructured.</span></span>  <span data-ttu-id="e21c1-108">请参阅[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="e21c1-108">See [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) for more information.</span></span>  
   
--   已添加了异步编程支持。  有关更多信息，请参见[异步编程](../../../../docs/framework/data/adonet/asynchronous-programming.md)。  
+-   <span data-ttu-id="e21c1-109">已添加了异步编程支持。</span><span class="sxs-lookup"><span data-stu-id="e21c1-109">Support has been added for asynchronous programming.</span></span>  <span data-ttu-id="e21c1-110">请参阅[异步编程](../../../../docs/framework/data/adonet/asynchronous-programming.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="e21c1-110">See [Asynchronous Programming](../../../../docs/framework/data/adonet/asynchronous-programming.md) for more information.</span></span>  
   
--   连接故障现在将记录在扩展事件日志中。  有关详细信息，请参阅[ADO.NET 中的数据跟踪](../../../../docs/framework/data/adonet/data-tracing.md)。  
+-   <span data-ttu-id="e21c1-111">连接故障现在将记录在扩展事件日志中。</span><span class="sxs-lookup"><span data-stu-id="e21c1-111">Connection failures will now be logged in the extended events log.</span></span> <span data-ttu-id="e21c1-112">有关详细信息，请参阅 [ADO.NET 中的数据跟踪](../../../../docs/framework/data/adonet/data-tracing.md)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-112">For more information, see [Data Tracing in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).</span></span>  
   
--   SqlClient 现在支持 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的高可用性、灾难恢复功能 AlwaysOn。  有关详细信息，请参阅[SqlClient 对高可用性的支持，灾难恢复](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。  
+-   <span data-ttu-id="e21c1-113">SqlClient 现在支持 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的高可用性、灾难恢复功能 AlwaysOn。</span><span class="sxs-lookup"><span data-stu-id="e21c1-113">SqlClient now has support for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]'s high availability, disaster recovery feature, AlwaysOn.</span></span> <span data-ttu-id="e21c1-114">有关详细信息，请参阅[对高可用性、 灾难恢复的 SqlClient 支持](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-114">For more information, see [SqlClient Support for High Availability, Disaster Recovery](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).</span></span>  
   
--   使用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 身份验证时，密码可以作为 <xref:System.Security.SecureString> 传递。  有关更多信息，请参见<xref:System.Data.SqlClient.SqlCredential>。  
+-   <span data-ttu-id="e21c1-115">使用 <xref:System.Security.SecureString> 身份验证时，密码可以作为 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 传递。</span><span class="sxs-lookup"><span data-stu-id="e21c1-115">A password can be passed as a <xref:System.Security.SecureString> when using [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Authentication.</span></span> <span data-ttu-id="e21c1-116">有关更多信息，请参见<xref:System.Data.SqlClient.SqlCredential>。</span><span class="sxs-lookup"><span data-stu-id="e21c1-116">See <xref:System.Data.SqlClient.SqlCredential> for more information.</span></span>  
   
--   如果 `TrustServerCertificate` 为 false 且 `Encrypt` 为 true，则 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 证书中的服务器名称（或 IP 地址）必须与连接字符串中指定的服务器名称（或 IP 地址）完全匹配。  否则，连接尝试将失败。  有关更多信息，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中 `Encrypt` 选项的说明。  
+-   <span data-ttu-id="e21c1-117">如果 `TrustServerCertificate` 为 false 且 `Encrypt` 为 true，则 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 证书中的服务器名称（或 IP 地址）必须与连接字符串中指定的服务器名称（或 IP 地址）完全匹配。</span><span class="sxs-lookup"><span data-stu-id="e21c1-117">When `TrustServerCertificate` is false and `Encrypt` is true, the server name (or IP address) in a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL certificate must exactly match the server name (or IP address) specified in the connection string.</span></span> <span data-ttu-id="e21c1-118">否则，连接尝试将失败。</span><span class="sxs-lookup"><span data-stu-id="e21c1-118">Otherwise, the connection attempt will fail.</span></span> <span data-ttu-id="e21c1-119">有关更多信息，请参见 `Encrypt` 中 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 选项的说明。</span><span class="sxs-lookup"><span data-stu-id="e21c1-119">For more information, see the description of the `Encrypt` connection option in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
-     如果此更改导致现有应用程序不再连接，可以通过以下方法之一修复应用程序：  
+     <span data-ttu-id="e21c1-120">如果此更改导致现有应用程序不再连接，可以通过以下方法之一修复应用程序：</span><span class="sxs-lookup"><span data-stu-id="e21c1-120">If this change causes an existing application to no longer connect, you can fix the application using one of the following:</span></span>  
   
-    -   颁发证书，以在公用名 \(CN\) 或主题备用名称 \(SAN\) 字段中指定短名称。  此解决方案将适用于数据库镜像。  
+    -   <span data-ttu-id="e21c1-121">颁发证书，以在公用名 (CN) 或主题备用名称 (SAN) 字段中指定短名称。</span><span class="sxs-lookup"><span data-stu-id="e21c1-121">Issue a certificate that specifies the short name in the Common Name (CN) or Subject Alternative Name (SAN) field.</span></span> <span data-ttu-id="e21c1-122">此解决方案将适用于数据库镜像。</span><span class="sxs-lookup"><span data-stu-id="e21c1-122">This solution will work for database mirroring.</span></span>  
   
-    -   添加别名，将短名称映射到完全限定的域名。  
+    -   <span data-ttu-id="e21c1-123">添加别名，将短名称映射到完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e21c1-123">Add an alias that maps the short name to the fully-qualified domain name.</span></span>  
   
-    -   在连接字符串中使用完全限定的域名。  
+    -   <span data-ttu-id="e21c1-124">在连接字符串中使用完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="e21c1-124">Use the fully-qualified domain name in the connection string.</span></span>  
   
--   SqlClient 支持扩展保护。  有关扩展保护的详细信息，请参阅[使用扩展保护连接到数据库引擎](http://go.microsoft.com/fwlink/?LinkId=219978)。  
+-   <span data-ttu-id="e21c1-125">SqlClient 支持扩展保护。</span><span class="sxs-lookup"><span data-stu-id="e21c1-125">SqlClient supports Extended Protection.</span></span> <span data-ttu-id="e21c1-126">有关扩展保护的详细信息，请参阅[连接到数据库引擎使用扩展保护](http://go.microsoft.com/fwlink/?LinkId=219978)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-126">For more information about Extended Protection, see [Connecting to the Database Engine Using Extended Protection](http://go.microsoft.com/fwlink/?LinkId=219978).</span></span>  
   
--   SqlClient 支持连接到 LocalDB 数据库。  有关详细信息，请参阅[SqlClient 对 LocalDB 的支持](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)。  
+-   <span data-ttu-id="e21c1-127">SqlClient 支持连接到 LocalDB 数据库。</span><span class="sxs-lookup"><span data-stu-id="e21c1-127">SqlClient supports connections to LocalDB databases.</span></span> <span data-ttu-id="e21c1-128">有关详细信息，请参阅[SqlClient 对 LocalDB 的支持](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-128">For more information, see [SqlClient Support for LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).</span></span>  
   
--   `Type System Version=SQL Server 2012;` 是传递给 `Type System Version` 连接属性的新值。  `Type System Version=Latest;` 值现已过时，它与 `Type System Version=SQL Server 2008;` 等效。  有关详细信息，请参阅<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
+-   <span data-ttu-id="e21c1-129">`Type System Version=SQL Server 2012;` 是传递给 `Type System Version` 连接属性的新值。</span><span class="sxs-lookup"><span data-stu-id="e21c1-129">`Type System Version=SQL Server 2012;` is new value to pass to the `Type System Version` connection property.</span></span> <span data-ttu-id="e21c1-130">`Type System Version=Latest;` 值现已过时，它与 `Type System Version=SQL Server 2008;` 等效。</span><span class="sxs-lookup"><span data-stu-id="e21c1-130">The `Type System Version=Latest;` value is now obsolete and has been made equivalent to `Type System Version=SQL Server 2008;`.</span></span> <span data-ttu-id="e21c1-131">有关详细信息，请参阅<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。</span><span class="sxs-lookup"><span data-stu-id="e21c1-131">For more information, see <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
--   SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。  如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指示某列是否为稀疏列（有关更多信息，请参见 [SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)）。  有关稀疏列的详细信息，请参阅[使用稀疏列](http://go.microsoft.com/fwlink/?LinkId=224244)。  
+-   <span data-ttu-id="e21c1-132">SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。</span><span class="sxs-lookup"><span data-stu-id="e21c1-132">SqlClient provides additional support for sparse columns, a feature that was added in SQL Server 2008.</span></span> <span data-ttu-id="e21c1-133">如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。</span><span class="sxs-lookup"><span data-stu-id="e21c1-133">If your application already accesses data in a table that uses sparse columns, you should see an increase in performance.</span></span> <span data-ttu-id="e21c1-134"><xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。</span><span class="sxs-lookup"><span data-stu-id="e21c1-134">The IsColumnSet column of <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indicates if a column is a sparse column that is a member of a column set.</span></span> <span data-ttu-id="e21c1-135"><xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>指示列是否为稀疏列 (请参阅[SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)有关详细信息)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-135"><xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indicates if a column is a sparse column (see [SQL Server Schema Collections](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) for more information).</span></span> <span data-ttu-id="e21c1-136">有关稀疏列的详细信息，请参阅[使用稀疏列](http://go.microsoft.com/fwlink/?LinkId=224244)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-136">For more information about sparse columns, see [Using Sparse Columns](http://go.microsoft.com/fwlink/?LinkId=224244).</span></span>  
   
--   包含空间数据类型的程序集 Microsoft.SqlServer.Types.dll 已从 10.0 版本升级到版本 11.0。  引用此程序集的应用程序可能失败。  有关详细信息，请参阅[数据库引擎功能的重大更改](http://go.microsoft.com/fwlink/?LinkId=224367)。  
+-   <span data-ttu-id="e21c1-137">包含空间数据类型的程序集 Microsoft.SqlServer.Types.dll 已从 10.0 版本升级到版本 11.0。</span><span class="sxs-lookup"><span data-stu-id="e21c1-137">The assembly Microsoft.SqlServer.Types.dll, which contains the spatial data types, has been upgraded from version 10.0 to version 11.0.</span></span> <span data-ttu-id="e21c1-138">引用此程序集的应用程序可能失败。</span><span class="sxs-lookup"><span data-stu-id="e21c1-138">Applications that reference this assembly may fail.</span></span> <span data-ttu-id="e21c1-139">有关详细信息，请参阅[数据库引擎功能的重大更改](http://go.microsoft.com/fwlink/?LinkId=224367)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-139">For more information, see [Breaking Changes to Database Engine Features](http://go.microsoft.com/fwlink/?LinkId=224367).</span></span>  
   
-## ADO.NET Entity Framework  
- 当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。  有关添加到 Entity Framework 5.0 的改进和功能的更多信息，请参见下列主题：[新增功能](http://go.microsoft.com/fwlink/?LinkID=251106)（可能为英文网页）和[实体框架发行和版本管理](http://go.microsoft.com/fwlink/?LinkId=234899)（可能为英文网页）。  
+## <a name="adonet-entity-framework"></a><span data-ttu-id="e21c1-140">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="e21c1-140">ADO.NET Entity Framework</span></span>  
+ <span data-ttu-id="e21c1-141">当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。</span><span class="sxs-lookup"><span data-stu-id="e21c1-141">The [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] adds APIs that enable new scenarios when working with the Entity Framework 5.0.</span></span> <span data-ttu-id="e21c1-142">有关改进和功能的已添加到实体框架 5.0 的详细信息，请参阅以下主题：[新增](http://go.microsoft.com/fwlink/?LinkID=251106)和[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。</span><span class="sxs-lookup"><span data-stu-id="e21c1-142">For more information about improvements and features that were added to the Entity Framework 5.0, see the following topics: [What’s New](http://go.microsoft.com/fwlink/?LinkID=251106) and [Entity Framework Releases and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).</span></span>  
   
-## 请参阅  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)   
- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
- [What's New in WCF Data Services](http://msdn.microsoft.com/zh-cn/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e21c1-143">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e21c1-143">See Also</span></span>  
+ [<span data-ttu-id="e21c1-144">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e21c1-144">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="e21c1-145">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="e21c1-145">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [<span data-ttu-id="e21c1-146">SQL Server 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e21c1-146">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="e21c1-147">WCF Data Services 新增功能</span><span class="sxs-lookup"><span data-stu-id="e21c1-147">What's New in WCF Data Services</span></span>](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [<span data-ttu-id="e21c1-148">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="e21c1-148">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

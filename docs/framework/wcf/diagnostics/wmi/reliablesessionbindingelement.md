@@ -1,25 +1,28 @@
 ---
-title: "ReliableSessionBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ReliableSessionBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f4aff60c96db5071d41a3f011019b05746f0c96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ReliableSessionBindingElement
-ReliableSessionBindingElement  
+# <a name="reliablesessionbindingelement"></a><span data-ttu-id="0c850-102">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="0c850-102">ReliableSessionBindingElement</span></span>
+<span data-ttu-id="0c850-103">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="0c850-103">ReliableSessionBindingElement</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="0c850-104">语法</span><span class="sxs-lookup"><span data-stu-id="0c850-104">Syntax</span></span>  
   
 ```  
 class ReliableSessionBindingElement : BindingElement  
@@ -35,73 +38,73 @@ class ReliableSessionBindingElement : BindingElement
 };  
 ```  
   
-## 方法  
- ReliableSessionBindingElement 类未定义任何方法。  
+## <a name="methods"></a><span data-ttu-id="0c850-105">方法</span><span class="sxs-lookup"><span data-stu-id="0c850-105">Methods</span></span>  
+ <span data-ttu-id="0c850-106">ReliableSessionBindingElement 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="0c850-106">The ReliableSessionBindingElement class does not define any methods.</span></span>  
   
-## 属性  
- ReliableSessionBindingElement 类具有下列属性：  
+## <a name="properties"></a><span data-ttu-id="0c850-107">属性</span><span class="sxs-lookup"><span data-stu-id="0c850-107">Properties</span></span>  
+ <span data-ttu-id="0c850-108">ReliableSessionBindingElement 类具有下列属性：</span><span class="sxs-lookup"><span data-stu-id="0c850-108">The ReliableSessionBindingElement class has the following properties:</span></span>  
   
-### AcknowledgementInterval  
- 数据类型：DateTime  
+### <a name="acknowledgementinterval"></a><span data-ttu-id="0c850-109">AcknowledgementInterval</span><span class="sxs-lookup"><span data-stu-id="0c850-109">AcknowledgementInterval</span></span>  
+ <span data-ttu-id="0c850-110">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="0c850-110">Data type: datetime</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-111">Access type: Read-only</span></span>  
   
- 向工厂创建的可靠通道上的消息源发送确认之前目标等待的时间间隔。  
+ <span data-ttu-id="0c850-112">向工厂创建的可靠通道上的消息源发送确认之前目标等待的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="0c850-112">The interval of time that a destination waits before sending an acknowledgement to the message source on reliable channels that are created by the factory.</span></span>  
   
-### FlowControlEnabled  
- 数据类型：Boolean  
+### <a name="flowcontrolenabled"></a><span data-ttu-id="0c850-113">FlowControlEnabled</span><span class="sxs-lookup"><span data-stu-id="0c850-113">FlowControlEnabled</span></span>  
+ <span data-ttu-id="0c850-114">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="0c850-114">Data type: boolean</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-115">Access type: Read-only</span></span>  
   
- 一个布尔值，指定是否启用流控制。  
+ <span data-ttu-id="0c850-116">一个布尔值，指定是否启用流控制。</span><span class="sxs-lookup"><span data-stu-id="0c850-116">A Boolean value that specifies whether flow control is enabled.</span></span>  
   
-### InactivityTimeout  
- 数据类型：DateTime  
+### <a name="inactivitytimeout"></a><span data-ttu-id="0c850-117">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="0c850-117">InactivityTimeout</span></span>  
+ <span data-ttu-id="0c850-118">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="0c850-118">Data type: datetime</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-119">Access type: Read-only</span></span>  
   
- 指定通道出错之前，通道允许其他通信方不发送任何消息的最长持续时间。  
+ <span data-ttu-id="0c850-120">指定通道出错之前，通道允许其他通信方不发送任何消息的最长持续时间。</span><span class="sxs-lookup"><span data-stu-id="0c850-120">Specifies the maximum duration the channel is going to allow the other communicating party not to send any messages before faulting the channel.</span></span>  
   
-### MaxPendingChannels  
- 数据类型：sint32  
+### <a name="maxpendingchannels"></a><span data-ttu-id="0c850-121">MaxPendingChannels</span><span class="sxs-lookup"><span data-stu-id="0c850-121">MaxPendingChannels</span></span>  
+ <span data-ttu-id="0c850-122">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="0c850-122">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-123">Access type: Read-only</span></span>  
   
- 侦听器上可等待接受的最大通道数。  
+ <span data-ttu-id="0c850-124">侦听器上可等待接受的最大通道数。</span><span class="sxs-lookup"><span data-stu-id="0c850-124">The maximum number of channels that can wait to be accepted on the listener.</span></span>  
   
-### MaxRetryCount  
- 数据类型：sint32  
+### <a name="maxretrycount"></a><span data-ttu-id="0c850-125">MaxRetryCount</span><span class="sxs-lookup"><span data-stu-id="0c850-125">MaxRetryCount</span></span>  
+ <span data-ttu-id="0c850-126">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="0c850-126">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-127">Access type: Read-only</span></span>  
   
- 可靠通道未收到消息确认时，通过在其基础通道上调用 `Send` 尝试重新传输该消息的最多尝试次数。  
+ <span data-ttu-id="0c850-128">可靠通道未收到消息确认时，通过在其基础通道上调用 `Send` 尝试重新传输该消息的最多尝试次数。</span><span class="sxs-lookup"><span data-stu-id="0c850-128">The maximum number of times a reliable channel attempts to retransmit a message it has not received an acknowledgement for, by calling `Send` on its underlying channel.</span></span>  
   
-### MaxTransferWindowSize  
- 数据类型：sint32  
+### <a name="maxtransferwindowsize"></a><span data-ttu-id="0c850-129">MaxTransferWindowSize</span><span class="sxs-lookup"><span data-stu-id="0c850-129">MaxTransferWindowSize</span></span>  
+ <span data-ttu-id="0c850-130">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="0c850-130">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-131">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-131">Access type: Read-only</span></span>  
   
- 可靠会话的最大传输窗口大小。  
+ <span data-ttu-id="0c850-132">可靠会话的最大传输窗口大小。</span><span class="sxs-lookup"><span data-stu-id="0c850-132">The maximum transfer window size for the reliable session.</span></span>  
   
-### Ordered  
- 数据类型：Boolean  
+### <a name="ordered"></a><span data-ttu-id="0c850-133">Ordered</span><span class="sxs-lookup"><span data-stu-id="0c850-133">Ordered</span></span>  
+ <span data-ttu-id="0c850-134">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="0c850-134">Data type: boolean</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-135">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-135">Access type: Read-only</span></span>  
   
- 一个布尔值，指定是否保证消息以其发送顺序抵达。  
+ <span data-ttu-id="0c850-136">一个布尔值，指定是否保证消息以其发送顺序抵达。</span><span class="sxs-lookup"><span data-stu-id="0c850-136">A Boolean value that specifies whether messages are guaranteed to arrive in the order they were sent.</span></span>  
   
-### ReliableMessagingVersion  
- 数据类型：Integer  
+### <a name="reliablemessagingversion"></a><span data-ttu-id="0c850-137">ReliableMessagingVersion</span><span class="sxs-lookup"><span data-stu-id="0c850-137">ReliableMessagingVersion</span></span>  
+ <span data-ttu-id="0c850-138">数据类型：Integer</span><span class="sxs-lookup"><span data-stu-id="0c850-138">Data type: integer</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="0c850-139">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="0c850-139">Access type: Read-only</span></span>  
   
- 一个整数，指定可靠会话中使用的 WS\-ReliableMessaging 协议版本。  
+ <span data-ttu-id="0c850-140">一个整数，指定可靠会话中使用的 WS-ReliableMessaging 协议版本。</span><span class="sxs-lookup"><span data-stu-id="0c850-140">An integer that specifies the WS-ReliableMessaging protocol version used in the reliable session.</span></span>  
   
-## 要求  
+## <a name="requirements"></a><span data-ttu-id="0c850-141">要求</span><span class="sxs-lookup"><span data-stu-id="0c850-141">Requirements</span></span>  
   
-|MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|<span data-ttu-id="0c850-142">MOF</span><span class="sxs-lookup"><span data-stu-id="0c850-142">MOF</span></span>|<span data-ttu-id="0c850-143">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="0c850-143">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="0c850-144">命名空间</span><span class="sxs-lookup"><span data-stu-id="0c850-144">Namespace</span></span>|<span data-ttu-id="0c850-145">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="0c850-145">Defined in root\ServiceModel</span></span>|  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="0c850-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0c850-146">See Also</span></span>  
  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

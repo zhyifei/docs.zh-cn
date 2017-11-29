@@ -1,35 +1,41 @@
 ---
-title: "指定 XML 值作为参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将 XML 值指定为参数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 指定 XML 值作为参数
-如果查询需要值为 XML 字符串的参数，开发人员可以使用 **SqlXml** 数据类型的实例提供该值。  真的没有任何窍门；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="833ea-102">将 XML 值指定为参数</span><span class="sxs-lookup"><span data-stu-id="833ea-102">Specifying XML Values as Parameters</span></span>
+<span data-ttu-id="833ea-103">如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。</span><span class="sxs-lookup"><span data-stu-id="833ea-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="833ea-104">真的没有任何窍门；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 列接受参数值的方式与其他数据类型完全相同。</span><span class="sxs-lookup"><span data-stu-id="833ea-104">There really are no tricks; XML columns in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] accept parameter values in exactly the same way as other data types.</span></span>  
   
-## 示例  
- 以下控制台应用程序在 **AdventureWorks** 数据库中新建一个表。  新表包括一个名为 **SalesID** 的列和一个名为 **SalesInfo** 的 XML 列。  
+## <a name="example"></a><span data-ttu-id="833ea-105">示例</span><span class="sxs-lookup"><span data-stu-id="833ea-105">Example</span></span>  
+ <span data-ttu-id="833ea-106">以下控制台应用程序创建的新表中**AdventureWorks**数据库。</span><span class="sxs-lookup"><span data-stu-id="833ea-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="833ea-107">新表包括一个名为**SalesID**和名为的 XML 列**SalesInfo**。</span><span class="sxs-lookup"><span data-stu-id="833ea-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
->  默认情况下，在安装 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 时不安装 **AdventureWorks** 示例数据库。  可以通过运行 SQL Server 安装程序来安装。  
+>  <span data-ttu-id="833ea-108">**AdventureWorks**示例数据库未安装默认情况下，当你安装时[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="833ea-108">The **AdventureWorks** sample database is not installed by default when you install [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="833ea-109">可以通过运行 SQL Server 安装程序来安装。</span><span class="sxs-lookup"><span data-stu-id="833ea-109">You can install it by running SQL Server Setup.</span></span>  
   
- 示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。  保存的文件为 **SalesInfo** 列提供所需的 XML 数据。  
+ <span data-ttu-id="833ea-110">示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。</span><span class="sxs-lookup"><span data-stu-id="833ea-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="833ea-111">保存的文件提供所需的 XML 数据**SalesInfo**列。</span><span class="sxs-lookup"><span data-stu-id="833ea-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- 要创建运行示例所需的文件，在项目所处的相同文件夹中新建一个文本文件。  将文件命名为 MyTestStoreData.xml。  在记事本中打开该文件，然后复制并粘贴以下文本：  
+ <span data-ttu-id="833ea-112">要创建运行示例所需的文件，在项目所处的相同文件夹中新建一个文本文件。</span><span class="sxs-lookup"><span data-stu-id="833ea-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="833ea-113">将文件命名为 MyTestStoreData.xml。</span><span class="sxs-lookup"><span data-stu-id="833ea-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="833ea-114">在记事本中打开该文件，然后复制并粘贴以下文本：</span><span class="sxs-lookup"><span data-stu-id="833ea-114">Open the file in Notepad and copy and paste the following text:</span></span>  
   
-```  
+```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
@@ -44,9 +50,7 @@ caps.handback.revision: 5
 </StoreSurvey>  
 ```  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
 Imports System.Data.SqlTypes  
@@ -104,9 +108,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -167,7 +169,7 @@ class Class1
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.SqlTypes.SqlXml>   
- [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="833ea-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="833ea-115">See Also</span></span>  
+ <xref:System.Data.SqlTypes.SqlXml>  
+ [<span data-ttu-id="833ea-116">SQL Server 中的 XML 数据</span><span class="sxs-lookup"><span data-stu-id="833ea-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [<span data-ttu-id="833ea-117">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="833ea-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

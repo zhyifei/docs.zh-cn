@@ -1,28 +1,31 @@
 ---
-title: "标准终结点的用法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "标准终结点的用法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 85dda1619fe3a77c4716806de2467cb96287b2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 标准终结点的用法
-此示例演示如何在服务配置文件中使用标准终结点。  通过标准终结点，用户可以使用单个属性来描述地址、绑定和协定组合以及与其关联的附加属性，从而简化终结点定义。  此示例演示如何定义和实现自定义标准终结点，以及如何在终结点中定义特定属性。  
+# <a name="usage-of-standard-endpoints"></a><span data-ttu-id="79213-102">标准终结点的用法</span><span class="sxs-lookup"><span data-stu-id="79213-102">Usage of Standard Endpoints</span></span>
+<span data-ttu-id="79213-103">此示例演示如何在服务配置文件中使用标准终结点。</span><span class="sxs-lookup"><span data-stu-id="79213-103">This sample demonstrates how to use standard endpoints in service configuration files.</span></span> <span data-ttu-id="79213-104">通过标准终结点，用户可以使用单个属性来描述地址、绑定和协定组合以及与其关联的附加属性，从而简化终结点定义。</span><span class="sxs-lookup"><span data-stu-id="79213-104">A standard endpoint allows the user to simplify endpoint definitions by using a single property to describe an address, binding and contract combination with additional properties associated to it.</span></span> <span data-ttu-id="79213-105">此示例演示如何定义和实现自定义标准终结点，以及如何在终结点中定义特定属性。</span><span class="sxs-lookup"><span data-stu-id="79213-105">This sample demonstrates how to define and implement a custom standard endpoint and how to define specific properties in the endpoint.</span></span>  
   
-## 示例详细信息  
- 可以通过指定地址、绑定和协定这三个参数来指定服务终结点。  可以提供的其他参数包括行为配置、标头、侦听 URI 等。  在某些情况下，任何或所有地址、绑定和协定具有无法更改的值。  因此，可以使用标准终结点。  这类终结点包括元数据交换终结点和发现终结点。  标准终结点还允许配置服务终结点，而不必提供固定性质的信息或创建其自己的标准终结点，从而提高了可用性，例如通过提供一组合理的默认值，从而降低配置文件的详细级别，来提高可用性。  
+## <a name="sample-details"></a><span data-ttu-id="79213-106">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="79213-106">Sample Details</span></span>  
+ <span data-ttu-id="79213-107">可以通过指定地址、绑定和协定这三个参数来指定服务终结点。</span><span class="sxs-lookup"><span data-stu-id="79213-107">Service endpoints can be specified by supplying three parameters: address, binding and contract.</span></span> <span data-ttu-id="79213-108">可以提供的其他参数包括行为配置、标头、侦听 URI 等。</span><span class="sxs-lookup"><span data-stu-id="79213-108">Other parameters that can be supplied include behavior configuration, headers, listen URI, and so on.</span></span> <span data-ttu-id="79213-109">在某些情况下，任何或所有地址、绑定和协定具有无法更改的值。</span><span class="sxs-lookup"><span data-stu-id="79213-109">In some cases, any or all of addresses, bindings and contracts have values that cannot change.</span></span> <span data-ttu-id="79213-110">因此，可以使用标准终结点。</span><span class="sxs-lookup"><span data-stu-id="79213-110">For this reason, it is possible to use standard endpoints.</span></span> <span data-ttu-id="79213-111">这类终结点包括元数据交换终结点和发现终结点。</span><span class="sxs-lookup"><span data-stu-id="79213-111">Some examples of such endpoints include metadata exchange endpoints and discovery endpoints.</span></span> <span data-ttu-id="79213-112">标准终结点还允许配置服务终结点，而不必提供固定性质的信息或创建其自己的标准终结点，从而提高了可用性，例如通过提供一组合理的默认值，从而降低配置文件的详细级别，来提高可用性。</span><span class="sxs-lookup"><span data-stu-id="79213-112">Standard endpoints also improve usability by allowing configuration of service endpoints without having to provide information of a fixed nature or to create their own standard endpoints, for example to improve usability by supplying a reasonable set of default values and thus reducing the verbosity of configuration files.</span></span>  
   
- 此示例由两个项目组成：定义两个标准终结点的服务以及与该服务通信的客户端。  下面的示例演示如何为配置文件中的服务定义标准终结点。  
+ <span data-ttu-id="79213-113">此示例由两个项目组成：定义两个标准终结点的服务以及与该服务通信的客户端。</span><span class="sxs-lookup"><span data-stu-id="79213-113">This sample consists of two projects: the service that defines two standard endpoints and the client that communicates with the service.</span></span> <span data-ttu-id="79213-114">下面的示例演示如何为配置文件中的服务定义标准终结点。</span><span class="sxs-lookup"><span data-stu-id="79213-114">The way the standard endpoints are defined for the service in the configuration file is show in the following example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,12 +56,11 @@ caps.handback.revision: 8
     </standardEndpoints>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- 为服务定义的第一个终结点的类型为 `customEndpoint`，其定义在 `<standardEndpoints>` 节中，其中为属性 `property` 提供了值 `true`。  这是使用新属性自定义终结点的情况。  第二个终结点对应于元数据终结点，其中地址、绑定和协定的值是固定的。  
+ <span data-ttu-id="79213-115">为服务定义的第一个终结点的类型为 `customEndpoint`，其定义在 `<standardEndpoints>` 节中，其中为属性 `property` 提供了值 `true`。</span><span class="sxs-lookup"><span data-stu-id="79213-115">The first endpoint defined for the service is of kind `customEndpoint`, whose definition can be seen in the `<standardEndpoints>` section, in which the property `property` is given the value `true`.</span></span> <span data-ttu-id="79213-116">这是使用新属性自定义终结点的情况。</span><span class="sxs-lookup"><span data-stu-id="79213-116">This is the case of an endpoint customized with a new property.</span></span> <span data-ttu-id="79213-117">第二个终结点对应于元数据终结点，其中地址、绑定和协定的值是固定的。</span><span class="sxs-lookup"><span data-stu-id="79213-117">The second endpoint corresponds to a metadata endpoint, in which the values for address, binding and contract are fixed.</span></span>  
   
- 若要定义标准终结点元素，必须创建从 `StandardEndpointElement` 派生的类。  在此示例中，已定义了 `CustomEndpointElement` 类，如下面的示例所示。  
+ <span data-ttu-id="79213-118">若要定义标准终结点元素，必须创建从 `StandardEndpointElement` 派生的类。</span><span class="sxs-lookup"><span data-stu-id="79213-118">To define the standard endpoint element, a class that derives from `StandardEndpointElement` must be created.</span></span> <span data-ttu-id="79213-119">在此示例中，已定义了 `CustomEndpointElement` 类，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="79213-119">In the case of this sample, the `CustomEndpointElement` class has been defined as shown in the following example.</span></span>  
   
 ```csharp  
 public class CustomEndpointElement : StandardEndpointElement  
@@ -109,10 +111,9 @@ public class CustomEndpointElement : StandardEndpointElement
     {  
     }  
 }  
-  
 ```  
   
- 在 `CreateServiceEndpoint` 函数中，创建了一个 `CustomEndpoint` 对象。  其定义如下面的示例所示。  
+ <span data-ttu-id="79213-120">在 `CreateServiceEndpoint` 函数中，创建了一个 `CustomEndpoint` 对象。</span><span class="sxs-lookup"><span data-stu-id="79213-120">In the `CreateServiceEndpoint` function, a `CustomEndpoint` object is created.</span></span> <span data-ttu-id="79213-121">其定义如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="79213-121">Its definition is shown in the following example.</span></span>  
   
 ```  
 public class CustomEndpoint : ServiceEndpoint  
@@ -140,43 +141,42 @@ public class CustomEndpoint : ServiceEndpoint
             set;  
         }  
     }  
-  
 ```  
   
- 若要在服务与客户端之间执行通信，需要在客户端中创建对服务的服务引用。  当生成和执行示例时，服务会执行，且客户端与之进行通信。  请注意，每次对服务进行更改时，都应更新服务引用。  
+ <span data-ttu-id="79213-122">若要在服务与客户端之间执行通信，需要在客户端中创建对服务的服务引用。</span><span class="sxs-lookup"><span data-stu-id="79213-122">To perform the communication between service and client, a service reference is created in the client to the service.</span></span> <span data-ttu-id="79213-123">当生成和执行示例时，服务会执行，且客户端与之进行通信。</span><span class="sxs-lookup"><span data-stu-id="79213-123">When the sample is built and executed, the service executes and the client communicates with it.</span></span> <span data-ttu-id="79213-124">请注意，每次对服务进行更改时，都应更新服务引用。</span><span class="sxs-lookup"><span data-stu-id="79213-124">Note that the service reference should be updated every time there is some change in the service.</span></span>  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="79213-125">使用此示例</span><span class="sxs-lookup"><span data-stu-id="79213-125">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 StandardEndpoints.sln 文件。  
+1.  <span data-ttu-id="79213-126">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 StandardEndpoints.sln 文件。</span><span class="sxs-lookup"><span data-stu-id="79213-126">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the StandardEndpoints.sln file.</span></span>  
   
-2.  使多个项目可以启动。  
+2.  <span data-ttu-id="79213-127">使多个项目可以启动。</span><span class="sxs-lookup"><span data-stu-id="79213-127">Enable multiple projects to start up.</span></span>  
   
-    1.  在**“解决方案资源管理器”**中，右击标准终结点解决方案，然后选择**“属性”**。  
+    1.  <span data-ttu-id="79213-128">在**解决方案资源管理器**，右键单击该标准终结点解决方案，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="79213-128">In **Solution Explorer**, right-click the Standard Endpoints solution and then select **Properties**.</span></span>  
   
-    2.  在**“通用属性”**中，选择**“启动项目”**，然后单击**“多启动项目”**。  
+    2.  <span data-ttu-id="79213-129">在**通用属性**，选择**启动项目**，然后单击**多启动项目**。</span><span class="sxs-lookup"><span data-stu-id="79213-129">In **Common Properties**, select **Startup Project**, and then click **Multiple Startup Projects**.</span></span>  
   
-    3.  将服务项目移动至列表开头，将**“操作”**设置为**“启动”**。  
+    3.  <span data-ttu-id="79213-130">将服务项目移动到列表中，开始使用**操作**设置为**启动**。</span><span class="sxs-lookup"><span data-stu-id="79213-130">Move the Service project to the beginning of the list, with the **Action** set to **Start**.</span></span>  
   
-    4.  将客户端项目移动至服务项目之后，也将**“操作”**设置为**“启动”**。  
+    4.  <span data-ttu-id="79213-131">客户端将项目移动服务项目中之后, 还与**操作**设置为**启动**。</span><span class="sxs-lookup"><span data-stu-id="79213-131">Move the Client project after the Service project, also with the **Action** set to **Start**.</span></span>  
   
-         这指定客户端项目在服务项目之后执行。  
+         <span data-ttu-id="79213-132">这指定客户端项目在服务项目之后执行。</span><span class="sxs-lookup"><span data-stu-id="79213-132">This specifies that the Client project is executed after the Service project.</span></span>  
   
-3.  若要运行解决方案，请按 F5。  
+3.  <span data-ttu-id="79213-133">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="79213-133">To run the solution, press F5.</span></span>  
   
 > [!NOTE]
->  如果这些步骤不起作用，则通过以下步骤来确保已正确设置环境。  
+>  <span data-ttu-id="79213-134">如果这些步骤不起作用，则通过以下步骤来确保已正确设置环境。</span><span class="sxs-lookup"><span data-stu-id="79213-134">If these steps do not work, then make sure that your environment has been properly set up, using the following steps.</span></span>  
 >   
->  1.  确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-> 2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
-> 3.  若要用单机配置或多计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+>  1.  <span data-ttu-id="79213-135">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="79213-135">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+> 2.  <span data-ttu-id="79213-136">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="79213-136">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+> 3.  <span data-ttu-id="79213-137">若要在一个或多个计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="79213-137">To run the sample in a single or multiple computer configurations, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="79213-138">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="79213-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="79213-139">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="79213-139">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  <span data-ttu-id="79213-140">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="79213-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="79213-141">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="79213-141">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="79213-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="79213-142">See Also</span></span>

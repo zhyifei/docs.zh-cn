@@ -1,57 +1,60 @@
 ---
-title: "实现 UI 自动化 TableItem 控件模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件模式，表项"
-  - "UI 自动化，表 Item 控件模式"
-  - "TableItem 控件模式"
+title: "实现 UI 自动化 TableItem 控件模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Table Item
+- UI Automation, Table Item control pattern
+- TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-caps.latest.revision: 14
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 5861ab24627f9b78cd20f97fcdb1b1b3d681991a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 实现 UI 自动化 TableItem 控件模式
+# <a name="implementing-the-ui-automation-tableitem-control-pattern"></a><span data-ttu-id="20cf3-102">实现 UI 自动化 TableItem 控件模式</span><span class="sxs-lookup"><span data-stu-id="20cf3-102">Implementing the UI Automation TableItem Control Pattern</span></span>
 > [!NOTE]
->  本文档适用于.NET Framework 开发人员想要使用托管[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中定义的类<xref:System.Windows.Automation>命名空间。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="20cf3-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="20cf3-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="20cf3-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="20cf3-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题介绍的实现准则和约定<xref:System.Windows.Automation.Provider.ITableItemProvider>，包括有关事件和属性的信息。 本概述的结尾列出了指向其他参考资料的链接。  
+ <span data-ttu-id="20cf3-105">本主题介绍的实现准则和约定<xref:System.Windows.Automation.Provider.ITableItemProvider>，包括有关事件和属性的信息。</span><span class="sxs-lookup"><span data-stu-id="20cf3-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITableItemProvider>, including information about events and properties.</span></span> <span data-ttu-id="20cf3-106">本概述的结尾列出了指向其他参考资料的链接。</span><span class="sxs-lookup"><span data-stu-id="20cf3-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- <xref:System.Windows.Automation.TableItemPattern>控件模式用于支持子控件的容器的实现<xref:System.Windows.Automation.Provider.ITableProvider>。 对单个单元格功能的访问提供的必需的并发实现<xref:System.Windows.Automation.Provider.IGridItemProvider>。 此控件模式相当于<xref:System.Windows.Automation.Provider.IGridItemProvider>与任何控件实现的区别<xref:System.Windows.Automation.Provider.ITableItemProvider>必须以编程方式公开单个单元格和其行和列信息之间的关系。 实现此控件模式的控件的示例，请参阅[UI 自动化客户端控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <span data-ttu-id="20cf3-107"><xref:System.Windows.Automation.TableItemPattern>控件模式用于支持实现的容器的子控件<xref:System.Windows.Automation.Provider.ITableProvider>。</span><span class="sxs-lookup"><span data-stu-id="20cf3-107">The <xref:System.Windows.Automation.TableItemPattern> control pattern is used to support child controls of containers that implement <xref:System.Windows.Automation.Provider.ITableProvider>.</span></span> <span data-ttu-id="20cf3-108">对个别单元格功能的访问必需的并发实现提供<xref:System.Windows.Automation.Provider.IGridItemProvider>。</span><span class="sxs-lookup"><span data-stu-id="20cf3-108">Access to individual cell functionality is provided by the required concurrent implementation of <xref:System.Windows.Automation.Provider.IGridItemProvider>.</span></span> <span data-ttu-id="20cf3-109">此控件模式相当于<xref:System.Windows.Automation.Provider.IGridItemProvider>任何控件实现区别<xref:System.Windows.Automation.Provider.ITableItemProvider>必须以编程方式公开各个单元格与其行和列信息之间的关系。</span><span class="sxs-lookup"><span data-stu-id="20cf3-109">This control pattern is analogous to <xref:System.Windows.Automation.Provider.IGridItemProvider> with the distinction that any control implementing <xref:System.Windows.Automation.Provider.ITableItemProvider> must programmatically expose the relationship between the individual cell and its row and column information.</span></span> <span data-ttu-id="20cf3-110">有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="20cf3-110">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="20cf3-111">实现准则和约定</span><span class="sxs-lookup"><span data-stu-id="20cf3-111">Implementation Guidelines and Conventions</span></span>  
   
--   有关相关的网格项功能，请参阅[实现 UI 自动化 GridItem 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)。  
+-   <span data-ttu-id="20cf3-112">有关相关的网格项功能，请参阅[实现 UI 自动化 GridItem 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)。</span><span class="sxs-lookup"><span data-stu-id="20cf3-112">For related grid item functionality, see [Implementing the UI Automation GridItem Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md).</span></span>  
   
 <a name="Required_Members_for_ITableItemProvider"></a>   
-## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider 必需的成员  
+## <a name="required-members-for-itableitemprovider"></a><span data-ttu-id="20cf3-113">ITableItemProvider 必需的成员</span><span class="sxs-lookup"><span data-stu-id="20cf3-113">Required Members for ITableItemProvider</span></span>  
   
-|必需的成员|成员类型|备注|  
+|<span data-ttu-id="20cf3-114">必需的成员</span><span class="sxs-lookup"><span data-stu-id="20cf3-114">Required member</span></span>|<span data-ttu-id="20cf3-115">成员类型</span><span class="sxs-lookup"><span data-stu-id="20cf3-115">Member type</span></span>|<span data-ttu-id="20cf3-116">备注</span><span class="sxs-lookup"><span data-stu-id="20cf3-116">Notes</span></span>|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|方法|无|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|<span data-ttu-id="20cf3-117">方法</span><span class="sxs-lookup"><span data-stu-id="20cf3-117">Method</span></span>|<span data-ttu-id="20cf3-118">无</span><span class="sxs-lookup"><span data-stu-id="20cf3-118">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|<span data-ttu-id="20cf3-119">方法</span><span class="sxs-lookup"><span data-stu-id="20cf3-119">Method</span></span>|<span data-ttu-id="20cf3-120">无</span><span class="sxs-lookup"><span data-stu-id="20cf3-120">None</span></span>|  
   
- 没有与此控件模式关联的属性或事件。  
+ <span data-ttu-id="20cf3-121">没有与此控件模式关联的属性或事件。</span><span class="sxs-lookup"><span data-stu-id="20cf3-121">This control pattern has no associated properties or events.</span></span>  
   
 <a name="Exceptions"></a>   
-## <a name="exceptions"></a>异常  
- 没有与此控件模式关联的异常。  
+## <a name="exceptions"></a><span data-ttu-id="20cf3-122">异常</span><span class="sxs-lookup"><span data-stu-id="20cf3-122">Exceptions</span></span>  
+ <span data-ttu-id="20cf3-123">没有与此控件模式关联的异常。</span><span class="sxs-lookup"><span data-stu-id="20cf3-123">This control pattern has no associated exceptions.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [客户端 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [实现 UI 自动化 Table 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)   
- [实现 UI 自动化 GridItem 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)   
- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="20cf3-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20cf3-124">See Also</span></span>  
+ [<span data-ttu-id="20cf3-125">UI 自动化控件模式概述</span><span class="sxs-lookup"><span data-stu-id="20cf3-125">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="20cf3-126">在 UI 自动化提供程序中支持控件模式</span><span class="sxs-lookup"><span data-stu-id="20cf3-126">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="20cf3-127">客户端的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="20cf3-127">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="20cf3-128">实现 UI 自动化 Table 控件模式</span><span class="sxs-lookup"><span data-stu-id="20cf3-128">Implementing the UI Automation Table Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
+ [<span data-ttu-id="20cf3-129">实现 UI 自动化 GridItem 控件模式</span><span class="sxs-lookup"><span data-stu-id="20cf3-129">Implementing the UI Automation GridItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
+ [<span data-ttu-id="20cf3-130">UI 自动化树概述</span><span class="sxs-lookup"><span data-stu-id="20cf3-130">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="20cf3-131">使用在 UI 自动化中缓存</span><span class="sxs-lookup"><span data-stu-id="20cf3-131">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,977 +1,964 @@
 ---
-title: "安全协议 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全 [WCF], 协议"
+title: "安全协议"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-caps.latest.revision: 11
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 安全协议
-Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。本节介绍以下 Web 服务安全协议的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 细节（在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中实现）。  
+# <a name="security-protocols"></a><span data-ttu-id="b1861-102">安全协议</span><span class="sxs-lookup"><span data-stu-id="b1861-102">Security Protocols</span></span>
+<span data-ttu-id="b1861-103">Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。</span><span class="sxs-lookup"><span data-stu-id="b1861-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="b1861-104">本节介绍以下 Web 服务安全协议的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 细节（在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中实现）。</span><span class="sxs-lookup"><span data-stu-id="b1861-104">This section describes the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  
+  
+|<span data-ttu-id="b1861-105">规范/文档</span><span class="sxs-lookup"><span data-stu-id="b1861-105">Specification/Document</span></span>|<span data-ttu-id="b1861-106">Link</span><span class="sxs-lookup"><span data-stu-id="b1861-106">Link</span></span>|  
+|-|-|  
+|<span data-ttu-id="b1861-107">WSS：SOAP 消息安全 1.0</span><span class="sxs-lookup"><span data-stu-id="b1861-107">WSS: SOAP Message Security 1.0</span></span>|<span data-ttu-id="b1861-108">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-108">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf</span></span>|  
+|<span data-ttu-id="b1861-109">WSS：用户名令牌配置文件 1.0</span><span class="sxs-lookup"><span data-stu-id="b1861-109">WSS: Username Token Profile 1.0</span></span>|<span data-ttu-id="b1861-110">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-110">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="b1861-111">WSS：X509 令牌配置文件 1.0</span><span class="sxs-lookup"><span data-stu-id="b1861-111">WSS: X509 Token Profile 1.0</span></span>|<span data-ttu-id="b1861-112">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-112">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="b1861-113">WSS：SAML 1.1 令牌配置文件 1.0</span><span class="sxs-lookup"><span data-stu-id="b1861-113">WSS: SAML 1.1 Token Profile 1.0</span></span>|<span data-ttu-id="b1861-114">http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-114">http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="b1861-115">WSS：SOAP 消息安全 1.1</span><span class="sxs-lookup"><span data-stu-id="b1861-115">WSS: SOAP Message Security 1.1</span></span>|<span data-ttu-id="b1861-116">http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-116">http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf</span></span>|  
+|<span data-ttu-id="b1861-117">WSS 用户名令牌配置文件 1.1</span><span class="sxs-lookup"><span data-stu-id="b1861-117">WSS Username Token Profile 1.1</span></span>|<span data-ttu-id="b1861-118">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-118">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="b1861-119">WSS：X.509 令牌配置文件 1.1</span><span class="sxs-lookup"><span data-stu-id="b1861-119">WSS: X.509 Token Profile 1.1</span></span>|<span data-ttu-id="b1861-120">http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-120">http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf</span></span>|  
+|<span data-ttu-id="b1861-121">WSS：Kerberos 令牌配置文件 1.1</span><span class="sxs-lookup"><span data-stu-id="b1861-121">WSS: Kerberos Token Profile 1.1</span></span>|<span data-ttu-id="b1861-122">http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-122">http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf</span></span>|  
+|<span data-ttu-id="b1861-123">WSS：SAML 1.1 令牌配置文件 1.1</span><span class="sxs-lookup"><span data-stu-id="b1861-123">WSS: SAML 1.1 Token Profile 1.1</span></span>|<span data-ttu-id="b1861-124">http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-124">http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf</span></span>|  
+|<span data-ttu-id="b1861-125">WS-Secure Conversation 1.3</span><span class="sxs-lookup"><span data-stu-id="b1861-125">WS-Secure Conversation 1.3</span></span>|<span data-ttu-id="b1861-126">http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-126">http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf</span></span>|  
+|<span data-ttu-id="b1861-127">WS 信任 1.3</span><span class="sxs-lookup"><span data-stu-id="b1861-127">WS-Trust 1.3</span></span>|<span data-ttu-id="b1861-128">http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-128">http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf</span></span>|  
+|<span data-ttu-id="b1861-129">应用说明：</span><span class="sxs-lookup"><span data-stu-id="b1861-129">Application Note:</span></span><br /><br /> <span data-ttu-id="b1861-130">将 WS-Trust 用于 TLS 握手</span><span class="sxs-lookup"><span data-stu-id="b1861-130">Using WS-Trust for TLS Handshake</span></span>|<span data-ttu-id="b1861-131">即将发布</span><span class="sxs-lookup"><span data-stu-id="b1861-131">To be published</span></span>|  
+|<span data-ttu-id="b1861-132">应用说明：</span><span class="sxs-lookup"><span data-stu-id="b1861-132">Application Note:</span></span><br /><br /> <span data-ttu-id="b1861-133">将 WS-Trust 用于 SPNEGO</span><span class="sxs-lookup"><span data-stu-id="b1861-133">Using WS-Trust for SPNEGO</span></span>|<span data-ttu-id="b1861-134">即将发布</span><span class="sxs-lookup"><span data-stu-id="b1861-134">To be published</span></span>|  
+|<span data-ttu-id="b1861-135">应用说明：</span><span class="sxs-lookup"><span data-stu-id="b1861-135">Application Note:</span></span><br /><br /> <span data-ttu-id="b1861-136">Web 服务寻址终结点引用和标识</span><span class="sxs-lookup"><span data-stu-id="b1861-136">Web Services Addressing Endpoint References And Identity</span></span>|<span data-ttu-id="b1861-137">即将发布</span><span class="sxs-lookup"><span data-stu-id="b1861-137">To be published</span></span>|  
+|<span data-ttu-id="b1861-138">WS-SecurityPolicy 1.2 (2007/04)</span><span class="sxs-lookup"><span data-stu-id="b1861-138">WS-SecurityPolicy 1.2 (2007/04)</span></span>|<span data-ttu-id="b1861-139">http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf</span><span class="sxs-lookup"><span data-stu-id="b1861-139">http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf</span></span>|  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-140"> 版本 1 提供了 17 种身份验证模式，可用作 Web 服务安全配置的基础。</span><span class="sxs-lookup"><span data-stu-id="b1861-140">, version 1, provides 17 authentication modes that can be used as the basis for Web services security configuration.</span></span> <span data-ttu-id="b1861-141">每一种模式都针对一组常用部署要求进行了优化，如：</span><span class="sxs-lookup"><span data-stu-id="b1861-141">Each mode is optimized for a common set of deployment requirements, such as:</span></span>  
+  
+-   <span data-ttu-id="b1861-142">用于对客户端和服务进行身份验证的凭据。</span><span class="sxs-lookup"><span data-stu-id="b1861-142">Credentials used to authenticate client and service.</span></span>  
+  
+-   <span data-ttu-id="b1861-143">消息或传输安全保护机制。</span><span class="sxs-lookup"><span data-stu-id="b1861-143">Message or transport security protection mechanisms.</span></span>  
+  
+-   <span data-ttu-id="b1861-144">消息交换模式。</span><span class="sxs-lookup"><span data-stu-id="b1861-144">Message exchange patterns.</span></span>  
+  
+|<span data-ttu-id="b1861-145">身份验证模式</span><span class="sxs-lookup"><span data-stu-id="b1861-145">Authentication Mode</span></span>|<span data-ttu-id="b1861-146">客户端身份验证</span><span class="sxs-lookup"><span data-stu-id="b1861-146">Client Authentication</span></span>|<span data-ttu-id="b1861-147">服务器身份验证</span><span class="sxs-lookup"><span data-stu-id="b1861-147">Server Authentication</span></span>|<span data-ttu-id="b1861-148">模式</span><span class="sxs-lookup"><span data-stu-id="b1861-148">Mode</span></span>|  
+|-------------------------|---------------------------|---------------------------|----------|  
+|<span data-ttu-id="b1861-149">UserNameOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-149">UserNameOverTransport</span></span>|<span data-ttu-id="b1861-150">用户名/密码</span><span class="sxs-lookup"><span data-stu-id="b1861-150">User name/password</span></span>|<span data-ttu-id="b1861-151">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-151">X509</span></span>|<span data-ttu-id="b1861-152">传输</span><span class="sxs-lookup"><span data-stu-id="b1861-152">Transport</span></span>|  
+|<span data-ttu-id="b1861-153">CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-153">CertificateOverTransport</span></span>|<span data-ttu-id="b1861-154">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-154">X509</span></span>|<span data-ttu-id="b1861-155">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-155">X509</span></span>|<span data-ttu-id="b1861-156">传输</span><span class="sxs-lookup"><span data-stu-id="b1861-156">Transport</span></span>|  
+|<span data-ttu-id="b1861-157">KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-157">KerberosOverTransport</span></span>|<span data-ttu-id="b1861-158">Windows</span><span class="sxs-lookup"><span data-stu-id="b1861-158">Windows</span></span>|<span data-ttu-id="b1861-159">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-159">X509</span></span>|<span data-ttu-id="b1861-160">传输</span><span class="sxs-lookup"><span data-stu-id="b1861-160">Transport</span></span>|  
+|<span data-ttu-id="b1861-161">IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-161">IssuedTokenOverTransport</span></span>|<span data-ttu-id="b1861-162">联合</span><span class="sxs-lookup"><span data-stu-id="b1861-162">Federated</span></span>|<span data-ttu-id="b1861-163">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-163">X509</span></span>|<span data-ttu-id="b1861-164">传输</span><span class="sxs-lookup"><span data-stu-id="b1861-164">Transport</span></span>|  
+|<span data-ttu-id="b1861-165">SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-165">SspiNegotiatedOverTransport</span></span>|<span data-ttu-id="b1861-166">协商的 Windows Sspi</span><span class="sxs-lookup"><span data-stu-id="b1861-166">Windows Sspi Negotiated</span></span>|<span data-ttu-id="b1861-167">协商的 Windows Sspi</span><span class="sxs-lookup"><span data-stu-id="b1861-167">Windows Sspi Negotiated</span></span>|<span data-ttu-id="b1861-168">传输</span><span class="sxs-lookup"><span data-stu-id="b1861-168">Transport</span></span>|  
+|<span data-ttu-id="b1861-169">AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-169">AnonymousForCertificate</span></span>|<span data-ttu-id="b1861-170">无</span><span class="sxs-lookup"><span data-stu-id="b1861-170">None</span></span>|<span data-ttu-id="b1861-171">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-171">X509</span></span>|<span data-ttu-id="b1861-172">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-172">Message</span></span>|  
+|<span data-ttu-id="b1861-173">UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-173">UserNameForCertificate</span></span>|<span data-ttu-id="b1861-174">用户名/密码</span><span class="sxs-lookup"><span data-stu-id="b1861-174">User name/password</span></span>|<span data-ttu-id="b1861-175">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-175">X509</span></span>|<span data-ttu-id="b1861-176">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-176">Message</span></span>|  
+|<span data-ttu-id="b1861-177">MutualCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-177">MutualCertificate</span></span>|<span data-ttu-id="b1861-178">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-178">X509</span></span>|<span data-ttu-id="b1861-179">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-179">X509</span></span>|<span data-ttu-id="b1861-180">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-180">Message</span></span>|  
+|<span data-ttu-id="b1861-181">MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="b1861-181">MutualCertificateDuplex</span></span>|<span data-ttu-id="b1861-182">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-182">X509</span></span>|<span data-ttu-id="b1861-183">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-183">X509</span></span>|<span data-ttu-id="b1861-184">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-184">Message</span></span>|  
+|<span data-ttu-id="b1861-185">IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-185">IssuedTokenForCertificate</span></span>|<span data-ttu-id="b1861-186">联合</span><span class="sxs-lookup"><span data-stu-id="b1861-186">Federated</span></span>|<span data-ttu-id="b1861-187">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-187">X509</span></span>|<span data-ttu-id="b1861-188">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-188">Message</span></span>|  
+|<span data-ttu-id="b1861-189">Kerberos</span><span class="sxs-lookup"><span data-stu-id="b1861-189">Kerberos</span></span>|<span data-ttu-id="b1861-190">Windows</span><span class="sxs-lookup"><span data-stu-id="b1861-190">Windows</span></span>|<span data-ttu-id="b1861-191">Windows</span><span class="sxs-lookup"><span data-stu-id="b1861-191">Windows</span></span>|<span data-ttu-id="b1861-192">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-192">Message</span></span>|  
+|<span data-ttu-id="b1861-193">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="b1861-193">IssuedToken</span></span>|<span data-ttu-id="b1861-194">联合</span><span class="sxs-lookup"><span data-stu-id="b1861-194">Federated</span></span>|<span data-ttu-id="b1861-195">联合</span><span class="sxs-lookup"><span data-stu-id="b1861-195">Federated</span></span>|<span data-ttu-id="b1861-196">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-196">Message</span></span>|  
+|<span data-ttu-id="b1861-197">SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-197">SspiNegotiated</span></span>|<span data-ttu-id="b1861-198">协商的 Windows Sspi</span><span class="sxs-lookup"><span data-stu-id="b1861-198">Windows Sspi Negotiated</span></span>|<span data-ttu-id="b1861-199">协商的 Windows Sspi</span><span class="sxs-lookup"><span data-stu-id="b1861-199">Windows Sspi Negotiated</span></span>|<span data-ttu-id="b1861-200">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-200">Message</span></span>|  
+|<span data-ttu-id="b1861-201">AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-201">AnonymousForSslNegotiated</span></span>|<span data-ttu-id="b1861-202">无</span><span class="sxs-lookup"><span data-stu-id="b1861-202">None</span></span>|<span data-ttu-id="b1861-203">X509、TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="b1861-203">X509, TLS-Nego</span></span>|<span data-ttu-id="b1861-204">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-204">Message</span></span>|  
+|<span data-ttu-id="b1861-205">UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-205">UserNameForSslNegotiated</span></span>|<span data-ttu-id="b1861-206">用户名/密码</span><span class="sxs-lookup"><span data-stu-id="b1861-206">User name/password</span></span>|<span data-ttu-id="b1861-207">X509、TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="b1861-207">X509, TLS-Nego</span></span>|<span data-ttu-id="b1861-208">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-208">Message</span></span>|  
+|<span data-ttu-id="b1861-209">MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-209">MutualSslNegotiated</span></span>|<span data-ttu-id="b1861-210">X509</span><span class="sxs-lookup"><span data-stu-id="b1861-210">X509</span></span>|<span data-ttu-id="b1861-211">X509、TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="b1861-211">X509, TLS-Nego</span></span>|<span data-ttu-id="b1861-212">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-212">Message</span></span>|  
+|<span data-ttu-id="b1861-213">IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-213">IssuedTokenForSslNegotiated</span></span>|<span data-ttu-id="b1861-214">联合</span><span class="sxs-lookup"><span data-stu-id="b1861-214">Federated</span></span>|<span data-ttu-id="b1861-215">X509、TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="b1861-215">X509, TLS-Nego</span></span>|<span data-ttu-id="b1861-216">消息</span><span class="sxs-lookup"><span data-stu-id="b1861-216">Message</span></span>|  
+  
+ <span data-ttu-id="b1861-217">使用此类身份验证模式的终结点可以使用 WS-SecurityPolicy (WS-SP) 表示其安全要求。</span><span class="sxs-lookup"><span data-stu-id="b1861-217">Endpoints using such authentication modes can express their security requirements using WS-SecurityPolicy (WS-SP).</span></span> <span data-ttu-id="b1861-218">本文档介绍每种身份验证模式的安全标头和基础结构消息的结构，并提供策略和消息的示例。</span><span class="sxs-lookup"><span data-stu-id="b1861-218">This document describes the structure of security header and infrastructure messages for each authentication mode and provides examples of policies and messages.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-219"> 利用 WS-SecureConversation 来提供安全会话支持，以保护应用程序之间的多消息交换。</span><span class="sxs-lookup"><span data-stu-id="b1861-219"> leverages WS-SecureConversation to provide secure sessions support to protect multi-message exchanges between applications.</span></span>  <span data-ttu-id="b1861-220">请参见下面的“安全会话”了解实现细节。</span><span class="sxs-lookup"><span data-stu-id="b1861-220">See "Secure Sessions" below for implementation details.</span></span>  
+  
+ <span data-ttu-id="b1861-221">除了身份验证模式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供一些设置，用以控制应用于大多数基于消息安全的身份验证模式的常见保护机制，例如：签名对加密操作的顺序、算法组、密钥派生和签名确认。</span><span class="sxs-lookup"><span data-stu-id="b1861-221">In addition to authentication modes, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides settings to control common protection mechanisms that apply to most message security-based authentication modes, for example: order of signature versus encryption operations, algorithm suites, key derivation, and signature confirmation.</span></span>  
+  
+ <span data-ttu-id="b1861-222">本文档使用以下前缀和命名空间。</span><span class="sxs-lookup"><span data-stu-id="b1861-222">The following prefixes and namespaces are used in this document.</span></span>  
+  
+|<span data-ttu-id="b1861-223">前缀</span><span class="sxs-lookup"><span data-stu-id="b1861-223">Prefix</span></span>|<span data-ttu-id="b1861-224">命名空间</span><span class="sxs-lookup"><span data-stu-id="b1861-224">Namespace</span></span>|  
+|------------|---------------|  
+|<span data-ttu-id="b1861-225">s</span><span class="sxs-lookup"><span data-stu-id="b1861-225">s</span></span>|<span data-ttu-id="b1861-226">http://www.w3.org/2003/05/soap-envelope</span><span class="sxs-lookup"><span data-stu-id="b1861-226">http://www.w3.org/2003/05/soap-envelope</span></span>|  
+|<span data-ttu-id="b1861-227">sp</span><span class="sxs-lookup"><span data-stu-id="b1861-227">sp</span></span>|<span data-ttu-id="b1861-228">http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702</span><span class="sxs-lookup"><span data-stu-id="b1861-228">http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702</span></span>|  
+|<span data-ttu-id="b1861-229">a</span><span class="sxs-lookup"><span data-stu-id="b1861-229">a</span></span>|<span data-ttu-id="b1861-230">http://www.w3.org/2005/08/addressing</span><span class="sxs-lookup"><span data-stu-id="b1861-230">http://www.w3.org/2005/08/addressing</span></span>|  
+|<span data-ttu-id="b1861-231">wsse</span><span class="sxs-lookup"><span data-stu-id="b1861-231">wsse</span></span>|<span data-ttu-id="b1861-232">TBD – OASIS WSS 1.0 URI</span><span class="sxs-lookup"><span data-stu-id="b1861-232">TBD – OASIS WSS 1.0 URI</span></span>|  
+|<span data-ttu-id="b1861-233">wsse11</span><span class="sxs-lookup"><span data-stu-id="b1861-233">wsse11</span></span>|<span data-ttu-id="b1861-234">TBD – OASIS WSS 1.1 URI</span><span class="sxs-lookup"><span data-stu-id="b1861-234">TBD – OASIS WSS 1.1 URI</span></span>|  
+|<span data-ttu-id="b1861-235">wsu</span><span class="sxs-lookup"><span data-stu-id="b1861-235">wsu</span></span>|<span data-ttu-id="b1861-236">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</span><span class="sxs-lookup"><span data-stu-id="b1861-236">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</span></span>|  
+|<span data-ttu-id="b1861-237">ds</span><span class="sxs-lookup"><span data-stu-id="b1861-237">ds</span></span>|<span data-ttu-id="b1861-238">TBD – W3C XMLDSig URI</span><span class="sxs-lookup"><span data-stu-id="b1861-238">TBD – W3C XMLDSig URI</span></span>|  
+|<span data-ttu-id="b1861-239">wst</span><span class="sxs-lookup"><span data-stu-id="b1861-239">wst</span></span>|<span data-ttu-id="b1861-240">TBD – WS-Trust 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="b1861-240">TBD – WS-Trust 2005/02 URI</span></span>|  
+|<span data-ttu-id="b1861-241">wssc</span><span class="sxs-lookup"><span data-stu-id="b1861-241">wssc</span></span>|<span data-ttu-id="b1861-242">TBD – WS-SecureConversation 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="b1861-242">TBD – WS-SecureConversation 2005/02 URI</span></span>|  
+|<span data-ttu-id="b1861-243">wsaw</span><span class="sxs-lookup"><span data-stu-id="b1861-243">wsaw</span></span>|<span data-ttu-id="b1861-244">http://www.w3.org/2006/05/addressing/wsdl</span><span class="sxs-lookup"><span data-stu-id="b1861-244">http://www.w3.org/2006/05/addressing/wsdl</span></span>|  
+|<span data-ttu-id="b1861-245">wsp</span><span class="sxs-lookup"><span data-stu-id="b1861-245">wsp</span></span>|<span data-ttu-id="b1861-246">http://schemas.xmlsoap.org/ws/2004/09/policy</span><span class="sxs-lookup"><span data-stu-id="b1861-246">http://schemas.xmlsoap.org/ws/2004/09/policy</span></span>|  
+|<span data-ttu-id="b1861-247">mssp</span><span class="sxs-lookup"><span data-stu-id="b1861-247">mssp</span></span>|<span data-ttu-id="b1861-248">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span><span class="sxs-lookup"><span data-stu-id="b1861-248">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span></span>|  
+  
+## <a name="1-token-profiles"></a><span data-ttu-id="b1861-249">1.令牌配置文件</span><span class="sxs-lookup"><span data-stu-id="b1861-249">1. Token Profiles</span></span>  
+ <span data-ttu-id="b1861-250">Web 服务安全规范将凭据表示为安全令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-250">Web Services Security specifications represent credential as security tokens.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-251"> 支持以下令牌类型：</span><span class="sxs-lookup"><span data-stu-id="b1861-251"> supports the following token types:</span></span>  
+  
+### <a name="11-usernametoken"></a><span data-ttu-id="b1861-252">1.1 UsernameToken</span><span class="sxs-lookup"><span data-stu-id="b1861-252">1.1 UsernameToken</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-253"> 遵循 UsernameToken10 和 UsernameToken11 配置文件，且有以下约束：</span><span class="sxs-lookup"><span data-stu-id="b1861-253"> follows UsernameToken10 and UsernameToken11 profiles with the following constraints:</span></span>  
+  
+ <span data-ttu-id="b1861-254">R1101 UsernameToken\Password 元素的 PasswordType 属性必须省略或者值为 #PasswordText（默认值）。</span><span class="sxs-lookup"><span data-stu-id="b1861-254">R1101 PasswordType attribute on UsernameToken\Password element MUST be either omitted or have value #PasswordText (default).</span></span>  
+  
+ <span data-ttu-id="b1861-255">可以使用可扩展性实现 #PasswordDigest。</span><span class="sxs-lookup"><span data-stu-id="b1861-255">One can implement the #PasswordDigest using extensibility.</span></span> <span data-ttu-id="b1861-256">人们已经发现，#PasswordDigest 经常被误认为是足够安全的密码保护机制。</span><span class="sxs-lookup"><span data-stu-id="b1861-256">It has been observed that #PasswordDigest was often mistaken to be a secure enough password protection mechanism.</span></span> <span data-ttu-id="b1861-257">但实际上，#PasswordDigest 不可取代 UsernameToken 加密。</span><span class="sxs-lookup"><span data-stu-id="b1861-257">But #PasswordDigest cannot serve as a substitute for encryption of the UsernameToken.</span></span> <span data-ttu-id="b1861-258">#PasswordDigest 的主要目的是防止重放攻击。</span><span class="sxs-lookup"><span data-stu-id="b1861-258">The primary goal of #PasswordDigest is protection against replay attacks.</span></span> <span data-ttu-id="b1861-259">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 身份验证模式下，使用消息签名可减轻重放攻击威胁。</span><span class="sxs-lookup"><span data-stu-id="b1861-259">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] authentication modes, replay attack threats are mitigated by using message signatures.</span></span>  
+  
+ <span data-ttu-id="b1861-260">B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不会省略 UsernameToken 的 Nonce 和 Created 子元素。</span><span class="sxs-lookup"><span data-stu-id="b1861-260">B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] never emits Nonce and Created sub-elements of the UsernameToken.</span></span>  
+  
+ <span data-ttu-id="b1861-261">这些子元素旨在帮助重放检测。</span><span class="sxs-lookup"><span data-stu-id="b1861-261">These sub-elements are intended to help replay detection.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-262"> 改用消息签名。</span><span class="sxs-lookup"><span data-stu-id="b1861-262"> uses message signatures instead.</span></span>  
+  
+ <span data-ttu-id="b1861-263">OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) 引入了从密码派生密钥的功能。</span><span class="sxs-lookup"><span data-stu-id="b1861-263">OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) introduced key derivation from password feature.</span></span>  
+  
+ <span data-ttu-id="b1861-264">B1103 UsernameToken 密码不得用于密钥派生，因此也不得用于加密操作。</span><span class="sxs-lookup"><span data-stu-id="b1861-264">B1103 UsernameToken password MUST not be used for key derivation and therefore for cryptographic operations.</span></span>  
+  
+ <span data-ttu-id="b1861-265">根本原因：密码通常被视为过于脆弱，不适合用于加密操作。</span><span class="sxs-lookup"><span data-stu-id="b1861-265">Rationale: passwords are generally considered too weak to be used for cryptographic operations.</span></span>  
+  
+### <a name="12-x509-token"></a><span data-ttu-id="b1861-266">1.2 X509 令牌</span><span class="sxs-lookup"><span data-stu-id="b1861-266">1.2 X509 Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-267"> 支持 X509v3 证书作为凭据类型，并且遵循 X509TokenProfile1.0 和 X509TokenProfile1.1，且有以下约束：</span><span class="sxs-lookup"><span data-stu-id="b1861-267"> supports X509v3 certificates as a credential type and follows X509TokenProfile1.0 and X509TokenProfile1.1 with the following constraints:</span></span>  
+  
+ <span data-ttu-id="b1861-268">R1201 在包含 X509v3 证书时，BinarySecurityToken 元素的 ValueType 属性必须值为 #X509v3。</span><span class="sxs-lookup"><span data-stu-id="b1861-268">R1201 The ValueType attribute on the BinarySecurityToken element must have value #X509v3 when it contains an X509v3 certificate.</span></span>  
+  
+ <span data-ttu-id="b1861-269">WSS X509 Token Profile 1.0 和 1.1 还定义了 #X509PKIPathv1 和 #PKCS7 作为值类型。</span><span class="sxs-lookup"><span data-stu-id="b1861-269">WSS X509 Token Profile 1.0 and 1.1 define also #X509PKIPathv1 and #PKCS7 as value types.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-270"> 不支持这些类型。</span><span class="sxs-lookup"><span data-stu-id="b1861-270"> does not support these types.</span></span>  
+  
+ <span data-ttu-id="b1861-271">R1202 如果 SubjectKeyIdentifier (SKI) 扩展在 X509 证书中存在，wsse:KeyIdentifier 应该用于对该令牌的外部引用，并且 ValueType 属性为 #X509SubjectKeyIdentifier 且其内容为证书的 SKI 扩展的 base64 编码值。</span><span class="sxs-lookup"><span data-stu-id="b1861-271">R1202 If a SubjectKeyIdentifier (SKI) extension is present in an X509 certificate, wsse:KeyIdentifier should be used for external references to the token, with the ValueType attribute as #X509SubjectKeyIdentifier and its content the base64-encoded value of certificate's SKI extension.</span></span>  
+  
+ <span data-ttu-id="b1861-272">SKI 引用已广泛实现，已证明是高度可互操作的外部引用类型。</span><span class="sxs-lookup"><span data-stu-id="b1861-272">SKI references are widely implemented and proven to be a highly interoperable external reference type.</span></span>  
+  
+ <span data-ttu-id="b1861-273">R1203 对 X509 安全令牌的外部引用不应使用 ds:X509IssuerSerial。</span><span class="sxs-lookup"><span data-stu-id="b1861-273">R1203 An external Reference to X509 Security Token SHOULD NOT use ds:X509IssuerSerial.</span></span>  
+  
+ <span data-ttu-id="b1861-274">R1204 如果使用 X509TokenProfile1.1，则对 X509 安全令牌的外部引用应该使用 WS-Security 1.1 引入的指纹。</span><span class="sxs-lookup"><span data-stu-id="b1861-274">R1204 If X509TokenProfile1.1 is in use, an external reference to X509 Security Token SHOULD use the thumbprint introduced by WS-Security 1.1.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-275"> 支持 X509IssuerSerial。</span><span class="sxs-lookup"><span data-stu-id="b1861-275"> supports X509IssuerSerial.</span></span> <span data-ttu-id="b1861-276">但是，X509IssuerSerial 存在互操作性问题：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用一个字符串来比较 X509IssuerSerial 的两个值。</span><span class="sxs-lookup"><span data-stu-id="b1861-276">However there are interoperability issues with X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses a string to compare two values of X509IssuerSerial.</span></span> <span data-ttu-id="b1861-277">因此，如果有人重新排序了“主题名称”的各个组成部分，并向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务发送对证书的引用，则可能找不到该引用。</span><span class="sxs-lookup"><span data-stu-id="b1861-277">Therefore if one reorders components of the Subject Name and sends to an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service a reference to a certificate, it may not be found.</span></span>  
+  
+### <a name="13-kerberos-token"></a><span data-ttu-id="b1861-278">1.3 Kerberos 令牌</span><span class="sxs-lookup"><span data-stu-id="b1861-278">1.3 Kerberos Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-279"> 支持 KerberosTokenProfile1.1 用于 Windows 身份验证，且有以下约束：</span><span class="sxs-lookup"><span data-stu-id="b1861-279"> supports KerberosTokenProfile1.1 for the purpose of Windows authentication with the following constraints:</span></span>  
+  
+ <span data-ttu-id="b1861-280">R1301 Kerberos 令牌必须携带 GSS_API 和 Kerberos 规范中定义的 GSS 包装的 Kerberos v4 AP_REQ 的值，并且必须有值为 #GSS_Kerberosv5_AP_REQ 的 ValueType 属性。</span><span class="sxs-lookup"><span data-stu-id="b1861-280">R1301 A Kerberos Token must carry the value of a GSS wrapped Kerberos v4 AP_REQ as defined in GSS_API and the Kerberos specification, and must have the ValueType attribute with the value #GSS_Kerberosv5_AP_REQ.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-281"> 使用 GSS 包装的 Kerberos AP-REQ，而不是裸 AP-REQ。</span><span class="sxs-lookup"><span data-stu-id="b1861-281"> uses GSS wrapped Kerberos AP-REQ, not a bare AP-REQ.</span></span> <span data-ttu-id="b1861-282">这是一种安全最佳做法。</span><span class="sxs-lookup"><span data-stu-id="b1861-282">This is a security best practice.</span></span>  
+  
+### <a name="14-saml-v11-token"></a><span data-ttu-id="b1861-283">1.4 SAML v1.1 令牌</span><span class="sxs-lookup"><span data-stu-id="b1861-283">1.4 SAML v1.1 Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-284"> 支持针对 SAML v1.1 令牌的 WSS SAML Token Profile 1.0 和 1.1。</span><span class="sxs-lookup"><span data-stu-id="b1861-284"> supports WSS SAML Token profiles 1.0 and 1.1 for SAML v1.1 tokens.</span></span> <span data-ttu-id="b1861-285">可以实现其他版本的 SAML 令牌格式。</span><span class="sxs-lookup"><span data-stu-id="b1861-285">It is possible to implement other versions of SAML token formats.</span></span>  
+  
+### <a name="15-security-context-token"></a><span data-ttu-id="b1861-286">1.5 安全上下文令牌</span><span class="sxs-lookup"><span data-stu-id="b1861-286">1.5 Security Context Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-287"> 支持 WS-SecureCoversation 中引入的安全上下文令牌 (SCT)。</span><span class="sxs-lookup"><span data-stu-id="b1861-287"> supports the Security Context Token (SCT) introduced in WS-SecureCoversation.</span></span> <span data-ttu-id="b1861-288">SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。</span><span class="sxs-lookup"><span data-stu-id="b1861-288">SCT is used to represent a security context established in SecureConversation as well as the binary negotiation protocols TLS and SSPI, described below.</span></span>  
+  
+## <a name="2-common-message-security-parameters"></a><span data-ttu-id="b1861-289">2.常用消息安全参数</span><span class="sxs-lookup"><span data-stu-id="b1861-289">2. Common Message Security Parameters</span></span>  
+  
+### <a name="21-timestamp"></a><span data-ttu-id="b1861-290">2.1 时间戳</span><span class="sxs-lookup"><span data-stu-id="b1861-290">2.1 TimeStamp</span></span>  
+ <span data-ttu-id="b1861-291">时间戳存在与否是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性控制的。</span><span class="sxs-lookup"><span data-stu-id="b1861-291">Timestamp presence is controlled using the <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> property of the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-292"> 总是序列化带有 wsse:Created 和 wsse:Expires 字段的 wsse:TimeStamp。</span><span class="sxs-lookup"><span data-stu-id="b1861-292"> always serializes wsse:TimeStamp with wsse:Created and wsse:Expires fields.</span></span> <span data-ttu-id="b1861-293">使用签名时，总会对 wsse:TimeStamp 进行签名。</span><span class="sxs-lookup"><span data-stu-id="b1861-293">The wsse:TimeStamp is always signed when signing is used.</span></span>  
+  
+### <a name="22-protection-order"></a><span data-ttu-id="b1861-294">2.2 保护顺序</span><span class="sxs-lookup"><span data-stu-id="b1861-294">2.2 Protection Order</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-295">支持的消息保护顺序"签名前加密"和"加密前签名"(安全策略 1.2)。</span><span class="sxs-lookup"><span data-stu-id="b1861-295"> supports the message protection order "Sign Before Encrypt" and "Encrypt Before Sign" (Security Policy 1.2).</span></span> <span data-ttu-id="b1861-296">建议使用“加密前签名”，其原因包括：除非使用 WS-Security 1.1 SignatureConfirmation 机制，否则使用“签名前加密”进行保护的消息易受签名替换攻击，并且对加密内容进行签名使得审核更加困难。</span><span class="sxs-lookup"><span data-stu-id="b1861-296">"Sign Before Encrypt" is recommended for reasons including: messages protected with Encrypt Before Sign are open to signature substitution attacks unless the WS-Security 1.1 SignatureConfirmation mechanism is used, and a signature over encrypted content makes auditing harder.</span></span>  
+  
+### <a name="23-signature-protection"></a><span data-ttu-id="b1861-297">2.3 签名保护</span><span class="sxs-lookup"><span data-stu-id="b1861-297">2.3 Signature Protection</span></span>  
+ <span data-ttu-id="b1861-298">在使用“签名前加密”时，建议保护签名以防止对加密内容或签名密钥进行猜测的蛮力攻击（尤其是在自定义令牌与弱密钥材料一起使用时）。</span><span class="sxs-lookup"><span data-stu-id="b1861-298">When Encrypt Before Sign is used, it is recommended to protect the signature to prevent brute force attacks for guessing the encrypted content or the signing key (especially when a custom token is used with weak key material).</span></span>  
+  
+### <a name="24-algorithm-suite"></a><span data-ttu-id="b1861-299">2.4 算法组</span><span class="sxs-lookup"><span data-stu-id="b1861-299">2.4 Algorithm Suite</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-300">支持安全策略 1.2 中列出的所有算法套件。</span><span class="sxs-lookup"><span data-stu-id="b1861-300"> supports all algorithm suites listed in Security Policy 1.2.</span></span>  
+  
+### <a name="25-key-derivation"></a><span data-ttu-id="b1861-301">2.5 密钥派生</span><span class="sxs-lookup"><span data-stu-id="b1861-301">2.5 Key Derivation</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-302"> 使用 WS-SecureConversation 中所述的“对称密钥的密钥派生”。</span><span class="sxs-lookup"><span data-stu-id="b1861-302"> uses "Key Derivation for symmetric keys" as described in WS-SecureConversation.</span></span>  
+  
+### <a name="26-signature-confirmation"></a><span data-ttu-id="b1861-303">2.6 签名确认</span><span class="sxs-lookup"><span data-stu-id="b1861-303">2.6 Signature Confirmation</span></span>  
+ <span data-ttu-id="b1861-304">签名确认可用于防止中间人攻击以保护签名集。</span><span class="sxs-lookup"><span data-stu-id="b1861-304">Signature confirmation can be used as protection from middle man attacks to protect the set of signatures.</span></span>  
+  
+### <a name="27-security-header-layout"></a><span data-ttu-id="b1861-305">2.7 安全标头布局</span><span class="sxs-lookup"><span data-stu-id="b1861-305">2.7 Security Header Layout</span></span>  
+ <span data-ttu-id="b1861-306">每种身份验证模式都描述一种特定的安全标头布局。</span><span class="sxs-lookup"><span data-stu-id="b1861-306">Each authentication mode describes a certain layout for the security header.</span></span> <span data-ttu-id="b1861-307">安全标头内的元素为半有序。</span><span class="sxs-lookup"><span data-stu-id="b1861-307">Elements within the security header are semi-ordered.</span></span> <span data-ttu-id="b1861-308">为了定义安全标头子元素的顺序，WS-Security Policy 定义了以下安全标头布局模式：</span><span class="sxs-lookup"><span data-stu-id="b1861-308">To define the order of security header child elements, WS-Security Policy defines the following security header layout modes:</span></span>  
   
 |||  
 |-|-|  
-|规范\/文档|链接|  
-|WSS：SOAP 消息安全 1.0|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-soap\-message\-security\-1.0.pdf|  
-|WSS：用户名令牌配置文件 1.0|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-username\-token\-profile\-1.0.pdf|  
-|WSS：X509 令牌配置文件 1.0|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-x509\-token\-profile\-1.0.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.0|http:\/\/docs.oasis\-open.org\/wss\/oasis\-wss\-saml\-token\-profile\-1.0.pdf|  
-|WSS：SOAP 消息安全 1.1|http:\/\/www.oasis\-open.org\/committees\/download.php\/16790\/wss\-v1.1\-spec\-os\-SOAPMessageSecurity.pdf|  
-|WSS 用户名令牌配置文件 1.1|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-username\-token\-profile\-1.0.pdf|  
-|WSS：X.509 令牌配置文件 1.1|http:\/\/www.oasis\-open.org\/committees\/download.php\/16785\/wss\-v1.1\-spec\-os\-x509TokenProfile.pdf|  
-|WSS：Kerberos 令牌配置文件 1.1|http:\/\/www.oasis\-open.org\/committees\/download.php\/16788\/wss\-v1.1\-spec\-os\-KerberosTokenProfile.pdf|  
-|WSS：SAML 1.1 令牌配置文件 1.1|http:\/\/www.oasis\-open.org\/committees\/download.php\/16768\/wss\-v1.1\-spec\-os\-SAMLTokenProfile.pdf|  
-|WS\-Secure Conversation 1.3|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-secureconversation\/200512\/ws\-secureconversation\-1.3\-os.pdf|  
-|WS\-Trust 1.3|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-trust\/200512\/ws\-trust\-1.3\-os.pdf|  
-|应用说明：<br /><br /> 将 WS\-Trust 用于 TLS 握手|即将发布|  
-|应用说明：<br /><br /> 将 WS\-Trust 用于 SPNEGO|即将发布|  
-|应用说明：<br /><br /> Web 服务寻址终结点引用和标识|即将发布|  
-|WS\-SecurityPolicy 1.2 \(2007\/04\)|http:\/\/www.oasis\-open.org\/committees\/download.php\/23821\/ws\-securitypolicy\-1.2\-spec\-cs.pdf|  
+|<span data-ttu-id="b1861-309">Strict</span><span class="sxs-lookup"><span data-stu-id="b1861-309">Strict</span></span>|<span data-ttu-id="b1861-310">根据“使用前先声明”的一般原则，各项按照 Security Policy 第 7.7.1 节中所述的编号布局规则添加到安全标头中。</span><span class="sxs-lookup"><span data-stu-id="b1861-310">Items are added to the security header following the numbered layout rules described in Security Policy section 7.7.1 according to a general principle of "declare before use".</span></span>|  
+|<span data-ttu-id="b1861-311">Lax</span><span class="sxs-lookup"><span data-stu-id="b1861-311">Lax</span></span>|<span data-ttu-id="b1861-312">各项以任何符合“WSS: SOAP 消息安全”的顺序添加到安全标头中。</span><span class="sxs-lookup"><span data-stu-id="b1861-312">Items are added to the security header in any order that conforms to WSS: SOAP Message Security.</span></span>|  
+|<span data-ttu-id="b1861-313">LaxTimestampFirst</span><span class="sxs-lookup"><span data-stu-id="b1861-313">LaxTimestampFirst</span></span>|<span data-ttu-id="b1861-314">与 Lax 相同，只是安全标头中的第一项必须为 wsse:Timestamp</span><span class="sxs-lookup"><span data-stu-id="b1861-314">Same as Lax except that the first item in the security header must be a wsse:Timestamp</span></span>|  
+|<span data-ttu-id="b1861-315">LaxTimestampLast</span><span class="sxs-lookup"><span data-stu-id="b1861-315">LaxTimestampLast</span></span>|<span data-ttu-id="b1861-316">与 lax 相同，只是安全标头中的最后一项必须为 wsse:Timestamp</span><span class="sxs-lookup"><span data-stu-id="b1861-316">Same as lax except that the last item in the security header must be a wsse:Timestamp</span></span>|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本 1 提供了 17 种身份验证模式，可用作 Web 服务安全配置的基础。每一种模式都针对一组常用部署要求进行了优化，如：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-317"> 支持安全标头布局的所有四种模式。</span><span class="sxs-lookup"><span data-stu-id="b1861-317"> supports all four modes for security header layout.</span></span> <span data-ttu-id="b1861-318">以下针对身份验证模式的安全标头结构和消息示例遵循“Strict”模式。</span><span class="sxs-lookup"><span data-stu-id="b1861-318">Security header structure and message examples for authentication modes below follow the "Strict" mode.</span></span>  
   
--   用于对客户端和服务进行身份验证的凭据。  
+## <a name="3-common-message-security-parameters"></a><span data-ttu-id="b1861-319">3.常用消息安全参数</span><span class="sxs-lookup"><span data-stu-id="b1861-319">3. Common Message Security Parameters</span></span>  
+ <span data-ttu-id="b1861-320">本节介绍每种身份验证模式的示例策略以及演示客户端和服务所交换的消息中的安全标头结构的示例。</span><span class="sxs-lookup"><span data-stu-id="b1861-320">This section provides example policies for each authentication mode along with examples showing security header structure in messages exchanged by client and service.</span></span>  
   
--   消息或传输安全保护机制。  
+### <a name="31-transport-protection"></a><span data-ttu-id="b1861-321">3.1 传输保护</span><span class="sxs-lookup"><span data-stu-id="b1861-321">3.1 Transport Protection</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b1861-322"> 提供了五种使用安全传输来保护消息的身份验证模式：UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。</span><span class="sxs-lookup"><span data-stu-id="b1861-322"> provides five authentication modes that use secure transport to protect messages; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport and SspiNegotiatedOverTransport.</span></span>  
   
--   消息交换模式。  
+ <span data-ttu-id="b1861-323">这些身份验证模式是使用 SecurityPolicy 中描述的传输绑定构造的。</span><span class="sxs-lookup"><span data-stu-id="b1861-323">These authentication modes are constructed using the transport binding described in SecurityPolicy.</span></span> <span data-ttu-id="b1861-324">对于 UserNameOverTransport 身份验证模式，UsernameToken 是签名支持令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-324">For the UserNameOverTransport authentication mode the UsernameToken is a signed supporting token.</span></span> <span data-ttu-id="b1861-325">对于其他身份验证模式，令牌作为签名认可令牌出现。</span><span class="sxs-lookup"><span data-stu-id="b1861-325">For the other authentication modes the token appears as a signed endorsing token.</span></span> <span data-ttu-id="b1861-326">SecurityPolicy 的附录 C.1.2 和 C.1.3 详细介绍了安全标头布局。</span><span class="sxs-lookup"><span data-stu-id="b1861-326">Appendix C.1.2 and C.1.3 of SecurityPolicy describe the security header layout in detail.</span></span> <span data-ttu-id="b1861-327">下面的示例安全标头演示给定身份验证模式的 Strict 布局。</span><span class="sxs-lookup"><span data-stu-id="b1861-327">The following example security headers show the Strict layout for a given authentication mode.</span></span>  
   
-|身份验证模式|客户端身份验证|服务器身份验证|模式|  
-|------------|-------------|-------------|--------|  
-|UserNameOverTransport|用户名\/密码|X509|传输|  
-|CertificateOverTransport|X509|X509|传输|  
-|KerberosOverTransport|Windows|X509|传输|  
-|IssuedTokenOverTransport|联合|X509|Transport|  
-|SspiNegotiatedOverTransport|协商的 Windows Sspi|协商的 Windows Sspi|Transport|  
-|AnonymousForCertificate|无|X509|消息|  
-|UserNameForCertificate|用户名\/密码|X509|消息|  
-|MutualCertificate|X509|X509|消息|  
-|MutualCertificateDuplex|X509|X509|消息|  
-|IssuedTokenForCertificate|联合|X509|消息|  
-|Kerberos|Windows|Windows|消息|  
-|IssuedToken|联合|联合|消息|  
-|SspiNegotiated|协商的 Windows Sspi|协商的 Windows Sspi|消息|  
-|AnonymousForSslNegotiated|None|X509、TLS\-Nego|消息|  
-|UserNameForSslNegotiated|用户名\/密码|X509、TLS\-Nego|消息|  
-|MutualSslNegotiated|X509|X509、TLS\-Nego|消息|  
-|IssuedTokenForSslNegotiated|联合|X509、TLS\-Nego|消息|  
+ <span data-ttu-id="b1861-328">任何情况下，令牌的“Derived Keys”属性的值总是为“false”。</span><span class="sxs-lookup"><span data-stu-id="b1861-328">The value of the "Derived Keys" property for the tokens in all cases is "false".</span></span>  
   
- 使用此类身份验证模式的终结点可以使用 WS\-SecurityPolicy \(WS\-SP\) 表示其安全要求。本文档介绍每种身份验证模式的安全标头和基础结构消息的结构，并提供策略和消息的示例。  
+ <span data-ttu-id="b1861-329">传输绑定的各个属性的值如下：</span><span class="sxs-lookup"><span data-stu-id="b1861-329">The values of the various properties of the transport binding are as follows:</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 利用 WS\-SecureConversation 来提供安全会话支持，以保护应用程序之间的多消息交换。请参见下面的“安全会话”了解实现细节。  
+ <span data-ttu-id="b1861-330">时间戳：true</span><span class="sxs-lookup"><span data-stu-id="b1861-330">Timestamp: true</span></span>  
   
- 除了身份验证模式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供一些设置，用以控制应用于大多数基于消息安全的身份验证模式的常见保护机制，例如：签名对加密操作的顺序、算法组、密钥派生和签名确认。  
+ <span data-ttu-id="b1861-331">安全标头布局：Strict</span><span class="sxs-lookup"><span data-stu-id="b1861-331">Security Header Layout: Strict</span></span>  
   
- 本文档使用以下前缀和命名空间。  
+ <span data-ttu-id="b1861-332">算法组：Basic256</span><span class="sxs-lookup"><span data-stu-id="b1861-332">Algorithm Suite: Basic256</span></span>  
   
-|前缀|命名空间|  
-|--------|----------|  
-|s|http:\/\/www.w3.org\/2003\/05\/soap\-envelope|  
-|sp|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-securitypolicy\/200702|  
-|a|http:\/\/www.w3.org\/2005\/08\/addressing|  
-|wsse|TBD – OASIS WSS 1.0 URI|  
-|wsse11|TBD – OASIS WSS 1.1 URI|  
-|wsu|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-utility\-1.0.xsd|  
-|ds|TBD – W3C XMLDSig URI|  
-|wst|TBD – WS\-Trust 2005\/02 URI|  
-|wssc|TBD – WS\-SecureConversation 2005\/02 URI|  
-|wsaw|http:\/\/www.w3.org\/2006\/05\/addressing\/wsdl|  
-|wsp|http:\/\/schemas.xmlsoap.org\/ws\/2004\/09\/policy|  
-|mssp|http:\/\/schemas.microsoft.com\/ws\/2005\/07\/securitypolicy|  
+#### <a name="311-usernameovertransport"></a><span data-ttu-id="b1861-333">3.1.1 UsernameOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-333">3.1.1 UsernameOverTransport</span></span>  
+ <span data-ttu-id="b1861-334">在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-334">With this authentication mode, the client authenticates with a Username Token which appears at the SOAP layer as a signed supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="b1861-335">在传输层，服务是用 X.509 证书进行身份验证的。</span><span class="sxs-lookup"><span data-stu-id="b1861-335">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="b1861-336">所用绑定为传输绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-336">The binding used is a transport binding.</span></span>  
   
-## 1.令牌配置文件  
- Web 服务安全规范将凭据表示为安全令牌。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持以下令牌类型：  
+ <span data-ttu-id="b1861-337">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-337">Policy</span></span>  
   
-### 1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 UsernameToken10 和 UsernameToken11 配置文件，且有以下约束：  
-  
- R1101 UsernameToken\\Password 元素的 PasswordType 属性必须省略或者值为 \#PasswordText（默认值）。  
-  
- 可以使用可扩展性实现 \#PasswordDigest。人们已经发现，\#PasswordDigest 经常被误认为是足够安全的密码保护机制。但实际上，\#PasswordDigest 不可取代 UsernameToken 加密。\#PasswordDigest 的主要目的是防止重放攻击。在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 身份验证模式下，使用消息签名可减轻重放攻击威胁。  
-  
- B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不会省略 UsernameToken 的 Nonce 和 Created 子元素。  
-  
- 这些子元素旨在帮助重放检测。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 改用消息签名。  
-  
- OASIS WSS SOAP Message Security UsernameToken Profile 1.1 \(UsernameToken11\) 引入了从密码派生密钥的功能。  
-  
- B1103 UsernameToken 密码不得用于密钥派生，因此也不得用于加密操作。  
-  
- 根本原因：密码通常被视为过于脆弱，不适合用于加密操作。  
-  
-### 1.2 X509 令牌  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 X509v3 证书作为凭据类型，并且遵循 X509TokenProfile1.0 和 X509TokenProfile1.1，且有以下约束：  
-  
- R1201 在包含 X509v3 证书时，BinarySecurityToken 元素的 ValueType 属性必须值为 \#X509v3。  
-  
- WSS X509 Token Profile 1.0 和 1.1 还定义了 \#X509PKIPathv1 和 \#PKCS7 作为值类型。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持这些类型。  
-  
- R1202 如果 SubjectKeyIdentifier \(SKI\) 扩展在 X509 证书中存在，wsse:KeyIdentifier 应该用于对该令牌的外部引用，并且 ValueType 属性为 \#X509SubjectKeyIdentifier 且其内容为证书的 SKI 扩展的 base64 编码值。  
-  
- SKI 引用已广泛实现，已证明是高度可互操作的外部引用类型。  
-  
- R1203 对 X509 安全令牌的外部引用不应使用 ds:X509IssuerSerial。  
-  
- R1204 如果使用 X509TokenProfile1.1，则对 X509 安全令牌的外部引用应该使用 WS\-Security 1.1 引入的指纹。  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 X509IssuerSerial。但是，X509IssuerSerial 存在互操作性问题：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用一个字符串来比较 X509IssuerSerial 的两个值。因此，如果有人重新排序了“主题名称”的各个组成部分，并向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务发送对证书的引用，则可能找不到该引用。  
-  
-### 1.3 Kerberos 令牌  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 KerberosTokenProfile1.1 用于 Windows 身份验证，且有以下约束：  
-  
- R1301 Kerberos 令牌必须携带 GSS\_API 和 Kerberos 规范中定义的 GSS 包装的 Kerberos v4 AP\_REQ 的值，并且必须有值为 \#GSS\_Kerberosv5\_AP\_REQ 的 ValueType 属性。  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 GSS 包装的 Kerberos AP\-REQ，而不是裸 AP\-REQ。这是一种安全最佳做法。  
-  
-### 1.4 SAML v1.1 令牌  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持针对 SAML v1.1 令牌的 WSS SAML Token Profile 1.0 和 1.1。可以实现其他版本的 SAML 令牌格式。  
-  
-### 1.5 安全上下文令牌  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 WS\-SecureCoversation 中引入的安全上下文令牌 \(SCT\)。SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。  
-  
-## 2.常用消息安全参数  
-  
-### 2.1 时间戳  
- 时间戳存在与否是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 属性控制的。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 总是序列化带有 wsse:Created 和 wsse:Expires 字段的 wsse:TimeStamp。使用签名时，总会对 wsse:TimeStamp 进行签名。  
-  
-### 2.2 保护顺序  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持消息保护顺序“加密前签名”和“签名前加密”\(Security Policy 1.2\)。"建议使用“加密前签名”，其原因包括：除非使用 WS\-Security 1.1 SignatureConfirmation 机制，否则使用“签名前加密”进行保护的消息易受签名替换攻击，并且对加密内容进行签名使得审核更加困难。  
-  
-### 2.3 签名保护  
- 在使用“签名前加密”时，建议保护签名以防止对加密内容或签名密钥进行猜测的蛮力攻击（尤其是在自定义令牌与弱密钥材料一起使用时）。  
-  
-### 2.4 算法组  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 Security Policy 1.2 中列出的所有算法组。  
-  
-### 2.5 密钥派生  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS\-SecureConversation 中所述的“对称密钥的密钥派生”。  
-  
-### 2.6 签名确认  
- 签名确认可用于防止中间人攻击以保护签名集。  
-  
-### 2.7 安全标头布局  
- 每种身份验证模式都描述一种特定的安全标头布局。安全标头内的元素为半有序。为了定义安全标头子元素的顺序，WS\-Security Policy 定义了以下安全标头布局模式：  
-  
-|||  
-|-|-|  
-|Strict|根据“使用前先声明”的一般原则，各项按照 Security Policy 第 7.7.1 节中所述的编号布局规则添加到安全标头中。|  
-|Lax|各项以任何符合“WSS: SOAP 消息安全”的顺序添加到安全标头中。|  
-|LaxTimestampFirst|与 Lax 相同，只是安全标头中的第一项必须为 wsse:Timestamp|  
-|LaxTimestampLast|与 lax 相同，只是安全标头中的最后一项必须为 wsse:Timestamp|  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持安全标头布局的所有四种模式。以下针对身份验证模式的安全标头结构和消息示例遵循“Strict”模式。  
-  
-## 3.常用消息安全参数  
- 本节介绍每种身份验证模式的示例策略以及演示客户端和服务所交换的消息中的安全标头结构的示例。  
-  
-### 3.1 传输保护  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了五种使用安全传输来保护消息的身份验证模式：UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
-  
- 这些身份验证模式是使用 SecurityPolicy 中描述的传输绑定构造的。对于 UserNameOverTransport 身份验证模式，UsernameToken 是签名支持令牌。对于其他身份验证模式，令牌作为签名认可令牌出现。SecurityPolicy 的附录 C.1.2 和 C.1.3 详细介绍了安全标头布局。下面的示例安全标头演示给定身份验证模式的 Strict 布局。  
-  
- 任何情况下，令牌的“Derived Keys”属性的值总是为“false”。  
-  
- 传输绑定的各个属性的值如下：  
-  
- 时间戳：true  
-  
- 安全标头布局：Strict  
-  
- 算法组：Basic256  
-  
-#### 3.1.1 UsernameOverTransport  
- 在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。在传输层，服务是用 X.509 证书进行身份验证的。所用绑定为传输绑定。  
-  
- 策略  
-  
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- 安全标头布局  
+ <span data-ttu-id="b1861-338">安全标头布局</span><span class="sxs-lookup"><span data-stu-id="b1861-338">Security Header Layout</span></span>  
   
- 请求  
+ <span data-ttu-id="b1861-339">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-339">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:UsernameToken u:Id="uuid-b96fbb3a-e646-4403-9473-2e5ffc733ff8-1"> ... </o:UsernameToken></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-340">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-340">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.2 CertificateOverTransport  
- 在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。在传输层，服务是用 X.509 证书进行身份验证的。所用绑定为传输绑定。CertificateOverTransport 仅对 SOAP 标头而非 SOAP 正文进行签名。这是由 TransportWithMessageCredentials 安全模式使用的身份验证模式。仅对 SOAP 标头进行签名，因为身份验证是通过使用消息凭据进行的。  
+#### <a name="312-certificateovertransport"></a><span data-ttu-id="b1861-341">3.1.2 CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-341">3.1.2 CertificateOverTransport</span></span>  
+ <span data-ttu-id="b1861-342">在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-342">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="b1861-343">在传输层，服务是用 X.509 证书进行身份验证的。</span><span class="sxs-lookup"><span data-stu-id="b1861-343">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="b1861-344">所用绑定为传输绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-344">The binding used is a transport binding.</span></span> <span data-ttu-id="b1861-345">CertificateOverTransport 仅对 SOAP 标头而非 SOAP 正文进行签名。</span><span class="sxs-lookup"><span data-stu-id="b1861-345">CertificateOverTransport only signs the SOAP headers, not the SOAP body.</span></span> <span data-ttu-id="b1861-346">这是由 TransportWithMessageCredentials 安全模式使用的身份验证模式。</span><span class="sxs-lookup"><span data-stu-id="b1861-346">This is the authentication mode used by the TransportWithMessageCredentials security mode.</span></span> <span data-ttu-id="b1861-347">仅对 SOAP 标头进行签名，因为身份验证是通过使用消息凭据进行的。</span><span class="sxs-lookup"><span data-stu-id="b1861-347">Only the SOAP headers are signed because authentication is done by using message credentials.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-348">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-348">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="CertificateOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- 安全标头布局  
+ <span data-ttu-id="b1861-349">安全标头布局</span><span class="sxs-lookup"><span data-stu-id="b1861-349">Security Header Layout</span></span>  
   
- 请求  
+ <span data-ttu-id="b1861-350">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-350">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-351">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-351">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.3 IssuedTokenOverTransport  
- 在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由安全令牌服务 \(STS\) 颁发的令牌，并证明掌握了共享密钥。颁发的令牌作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。在传输层，服务是用 X.509 证书进行身份验证的。绑定为传输绑定。  
+#### <a name="313-issuedtokenovertransport"></a><span data-ttu-id="b1861-352">3.1.3 IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-352">3.1.3 IssuedTokenOverTransport</span></span>  
+ <span data-ttu-id="b1861-353">在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由安全令牌服务 (STS) 颁发的令牌，并证明掌握了共享密钥。</span><span class="sxs-lookup"><span data-stu-id="b1861-353">With this authentication mode the client does not authenticate to the service, as such, but rather presents a token issued by a Security Token Service (STS) and proves knowledge of a shared key.</span></span> <span data-ttu-id="b1861-354">颁发的令牌作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-354">The issued token appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="b1861-355">在传输层，服务是用 X.509 证书进行身份验证的。</span><span class="sxs-lookup"><span data-stu-id="b1861-355">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="b1861-356">绑定为传输绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-356">The binding is a transport binding.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-357">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-357">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy  
 ```  
   
- 安全标头布局  
+ <span data-ttu-id="b1861-358">安全标头布局</span><span class="sxs-lookup"><span data-stu-id="b1861-358">Security Header Layout</span></span>  
   
- 请求  
+ <span data-ttu-id="b1861-359">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-359">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-67692bb6-85b7-4299-8587-3ce60086b0d2-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-fab7e1b2-8dc4-412b-bda9-b95a4f836815-16" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-360">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-360">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-fab7e1b2-8dc4-412b-bda9-b95a4f836815-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-#### 3.1.4 KerberosOverTransport  
- 在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。Kerberos 令牌作为认可支持令牌出现在 SOAP 层上。在传输层，服务是用 X.509 证书进行身份验证的。绑定为传输绑定。  
+#### <a name="314-kerberosovertransport"></a><span data-ttu-id="b1861-361">3.1.4 KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-361">3.1.4 KerberosOverTransport</span></span>  
+ <span data-ttu-id="b1861-362">在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-362">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="b1861-363">Kerberos 令牌作为认可支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-363">The Kerberos token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="b1861-364">在传输层，服务是用 X.509 证书进行身份验证的。</span><span class="sxs-lookup"><span data-stu-id="b1861-364">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="b1861-365">绑定为传输绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-365">The binding is a transport binding.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-366">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-366">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="KerberosOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- 安全标头布局  
+ <span data-ttu-id="b1861-367">安全标头布局</span><span class="sxs-lookup"><span data-stu-id="b1861-367">Security Header Layout</span></span>  
   
- 请求  
+ <span data-ttu-id="b1861-368">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-368">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-369">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-369">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.5 SspiNegotiatedOverTransport  
- 在此模式下，将使用协商协议来执行客户端和服务器身份验证。如果可能，就使用 Kerberos，否则使用 NTLM。产生的 SCT 作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。在传输层，服务还是由 X.509 证书另外进行身份验证。所用绑定为传输绑定。"“SPNEGO”（协商）描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何将 SSPI 二进制协商协议用于 WS\-Trust。在通过 SPNEGO 握手建立 SCT 之后，本节将介绍安全标头示例。  
+#### <a name="315-sspinegotiatedovertransport"></a><span data-ttu-id="b1861-370">3.1.5 SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="b1861-370">3.1.5 SspiNegotiatedOverTransport</span></span>  
+ <span data-ttu-id="b1861-371">在此模式下，将使用协商协议来执行客户端和服务器身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-371">With this mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="b1861-372">如果可能，就使用 Kerberos，否则使用 NTLM。</span><span class="sxs-lookup"><span data-stu-id="b1861-372">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="b1861-373">产生的 SCT 作为认可支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-373">The resulting SCT appears at the SOAP layer as an endorsing supporting token that is always sent from initiator to recipient.</span></span> <span data-ttu-id="b1861-374">在传输层，服务还是由 X.509 证书另外进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-374">The service is additionally authenticated at the transport layer by an X.509 certificate.</span></span> <span data-ttu-id="b1861-375">所用绑定为传输绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-375">The binding used is a transport binding.</span></span> <span data-ttu-id="b1861-376">“SPNEGO”（协商）描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何将 SSPI 二进制协商协议用于 WS-Trust。</span><span class="sxs-lookup"><span data-stu-id="b1861-376">"SPNEGO" (negotiation) describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses SSPI binary negotiation protocol with WS-Trust.</span></span> <span data-ttu-id="b1861-377">在通过 SPNEGO 握手建立 SCT 之后，本节将介绍安全标头示例。</span><span class="sxs-lookup"><span data-stu-id="b1861-377">Security header examples in this section are after the SCT has been established through the SPNEGO handshake.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-378">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-378">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiatedOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例  
- 在使用 WS\-Trust 二进制协商通过 SPNEGO 握手建立安全上下文令牌之后，应用程序消息将具有如下结构的安全标头。  
+### <a name="security-header-examples"></a><span data-ttu-id="b1861-379">安全标头示例</span><span class="sxs-lookup"><span data-stu-id="b1861-379">Security Header Examples</span></span>  
+ <span data-ttu-id="b1861-380">在使用 WS-Trust 二进制协商通过 SPNEGO 握手建立安全上下文令牌之后，应用程序消息将具有如下结构的安全标头。</span><span class="sxs-lookup"><span data-stu-id="b1861-380">Once the Security Context Token is established through SPNEGO handshake using WS-Trust Binary Negotiation, the application messages have security headers with the following structure.</span></span>  
   
- 请求  
+ <span data-ttu-id="b1861-381">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-381">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-9a29d087-5dae-4d40-bf86-5746d9d30eca-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-382">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-382">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### 3.2 将 X.509 证书用于服务身份验证  
- 本节介绍以下身份验证模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
+### <a name="32-using-x509-certificates-for-service-authentication"></a><span data-ttu-id="b1861-383">3.2 使用 X.509 证书用于服务身份验证</span><span class="sxs-lookup"><span data-stu-id="b1861-383">3.2 Using X.509 Certificates for Service Authentication</span></span>  
+ <span data-ttu-id="b1861-384">本节介绍以下身份验证模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。</span><span class="sxs-lookup"><span data-stu-id="b1861-384">This section describes the following authentication modes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate and IssuedTokenForCertificate.</span></span>  
   
-#### 3.2.1 MutualCertificate WSS1.0  
- 在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为发起方令牌出现在 SOAP 层上。同样使用 X.509 证书对服务进行身份验证。同时对 SOAP 标头和 SOAP 正文进行签名。创建对称密钥并使用收件人的传输证书对该密钥进行加密。  
+#### <a name="321-mutualcertificate-wss10"></a><span data-ttu-id="b1861-385">3.2.1 MutualCertificate WSS1.0</span><span class="sxs-lookup"><span data-stu-id="b1861-385">3.2.1 MutualCertificate WSS1.0</span></span>  
+ <span data-ttu-id="b1861-386">在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为发起方令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-386">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="b1861-387">同样使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-387">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-388">同时对 SOAP 标头和 SOAP 正文进行签名。</span><span class="sxs-lookup"><span data-stu-id="b1861-388">Both the SOAP headers and the SOAP body are signed.</span></span> <span data-ttu-id="b1861-389">创建对称密钥并使用收件人的传输证书对该密钥进行加密。</span><span class="sxs-lookup"><span data-stu-id="b1861-389">A symmetric key is created and is encrypted with the transport certificate for the recipient.</span></span>  
   
- 所用绑定为带有以下属性值的非对称绑定：  
+ <span data-ttu-id="b1861-390">所用绑定为带有以下属性值的非对称绑定：</span><span class="sxs-lookup"><span data-stu-id="b1861-390">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- 发起方令牌：客户端的 X.509 证书，包含模式设置为 ...\/IncludeToken\/AlwaysToRecipient  
+ <span data-ttu-id="b1861-391">发起方令牌：客户端的 X.509 证书，包含模式设置为 .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="b1861-391">Initiator Token: the client’s X.509 certificate, with inclusion mode set to .../IncludeToken/AlwaysToRecipient</span></span>  
   
- 接收方令牌：服务器的 X.509 证书，包含模式设置为 ...\/IncludeToken\/Never  
+ <span data-ttu-id="b1861-392">接收方令牌：服务器的 X.509 证书，包含模式设置为 .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="b1861-392">Recipient Token: Server’s X.509 Certificate, with inclusion mode is set .../IncludeToken/Never</span></span>  
   
- 令牌保护：False  
+ <span data-ttu-id="b1861-393">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-393">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-394">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-394">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-395">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-395">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-396">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-396">Encrypt Signature: True</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-397">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-397">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/></wsp:Policy></sp:Wss10><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-398">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-398">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-399">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-399">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-39cb393e-9da8-4d5d-b273-540ef614569b-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-400">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-400">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"> <u:Timestamp u:Id="uuid-3d742930-70d3-4d7e-aa0a-8721128dc115-8"> ... </u:Timestamp><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_5" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-401">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-401">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/></wsp:Policy></sp:Wss10><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-402">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-402">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-403">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-403">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-73da3e21-abff-4294-a910-e75303d280cc-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-404">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-404">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-02f276b6-804f-480d-99e9-2e90fc76ab27-3"> ... </u:Timestamp><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.2 MutualCertificateDuplex  
- 在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为发起方令牌出现在 SOAP 层上。同样使用 X.509 证书对服务进行身份验证。  
+#### <a name="322-mutualcertificateduplex"></a><span data-ttu-id="b1861-405">3.2.2 MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="b1861-405">3.2.2 MutualCertificateDuplex</span></span>  
+ <span data-ttu-id="b1861-406">在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为发起方令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-406">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="b1861-407">同样使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-407">The service is also authenticated using an X.509 certificate.</span></span>  
   
- 所用绑定为带有以下属性值的非对称绑定：  
+ <span data-ttu-id="b1861-408">所用绑定为带有以下属性值的非对称绑定：</span><span class="sxs-lookup"><span data-stu-id="b1861-408">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- 发起方令牌：客户端的 X509 证书，包含模式设置为 ...\/IncludeToken\/AlwaysToRecipient  
+ <span data-ttu-id="b1861-409">发起方令牌：客户端的 X509 证书，包含模式设置为 .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="b1861-409">Initiator Token: Client’s X509 Certificate, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
   
- 接收方令牌：服务器的 X509 证书，包含模式设置为 ...\/IncludeToken\/AlwaysToInitiator  
+ <span data-ttu-id="b1861-410">接收方令牌：服务器的 X509 证书，包含模式设置为 .../IncludeToken/AlwaysToInitiator</span><span class="sxs-lookup"><span data-stu-id="b1861-410">Recipient Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/AlwaysToInitiator</span></span>  
   
- 令牌保护：False  
+ <span data-ttu-id="b1861-411">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-411">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-412">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-412">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-413">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-413">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-414">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-414">Encrypt Signature: True</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-415">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-415">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificateDuplex_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex"/><ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求和响应  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-416">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-416">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-417">请求和响应</span><span class="sxs-lookup"><span data-stu-id="b1861-417">Request and Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-4dec3da4-b572-4654-ba4d-4a2f84a87510-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-418">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-418">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificateDuplex_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex"/><ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求和响应  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-419">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-419">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-420">请求和响应</span><span class="sxs-lookup"><span data-stu-id="b1861-420">Request and Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b0e23feb-cd2d-4dc1-bad9-284bc45f3be3-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.3 将 SymmetricBinding 用于 X.509 服务身份验证  
- “WSS10”对 X509 令牌方案提供有限支持。例如，如果消息仅使用服务 X509 令牌，则无法为其提供签名和加密保护。"WSS11”将 EncryptedKey 用作对称令牌。现在，为服务的 X.509 证书加密的临时密钥可同时用于请求和响应消息保护。下面第 3.4 节中介绍的身份验证模式使用此模式。  
+#### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a><span data-ttu-id="b1861-421">3.2.3 将 SymmetricBinding 用于 X.509 服务身份验证</span><span class="sxs-lookup"><span data-stu-id="b1861-421">3.2.3 Using SymmetricBinding with X.509 Service Authentication</span></span>  
+ <span data-ttu-id="b1861-422">“WSS10”对 X509 令牌方案提供有限支持。</span><span class="sxs-lookup"><span data-stu-id="b1861-422">"WSS10" provided limited support for scenarios with X509 tokens.</span></span> <span data-ttu-id="b1861-423">例如，如果消息仅使用服务 X509 令牌，则无法为其提供签名和加密保护。</span><span class="sxs-lookup"><span data-stu-id="b1861-423">For example, there was no way to provide signature and encryption protection for messages using only service X509 token.</span></span> <span data-ttu-id="b1861-424">“WSS11”将 EncryptedKey 用作对称令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-424">"WSS11" introduced the usage of EncryptedKey as a symmetric token.</span></span> <span data-ttu-id="b1861-425">现在，为服务的 X.509 证书加密的临时密钥可同时用于请求和响应消息保护。</span><span class="sxs-lookup"><span data-stu-id="b1861-425">Now a temporary key encrypted for the service's X.509 certificate could be used for both request and response messages protection.</span></span> <span data-ttu-id="b1861-426">3.4 以下部分中介绍的身份验证模式使用此模式。</span><span class="sxs-lookup"><span data-stu-id="b1861-426">The authentication modes described in the section 3.4 below use this pattern.</span></span>  
   
- WS\-SecurityPolicy 描述了此模式，即将 SymmetricBinding 用于服务 X509 令牌作为保护令牌。  
+ <span data-ttu-id="b1861-427">WS-SecurityPolicy 描述了此模式，即将 SymmetricBinding 用于服务 X509 令牌作为保护令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-427">WS-SecurityPolicy describes this pattern using SymmetricBinding with Service X509 token as the protection token.</span></span>  
   
- 身份验证模式 AnonymousForCertificate、UsernameForCertificate、MutualCertificate WSS11 和 IssuedTokenForCertificate 都使用具有以下属性值的类似的 sp:SymmetricBinding 实例：  
+ <span data-ttu-id="b1861-428">身份验证模式 AnonymousForCertificate、UsernameForCertificate、MutualCertificate WSS11 和 IssuedTokenForCertificate 都使用具有以下属性值的类似的 sp:SymmetricBinding 实例：</span><span class="sxs-lookup"><span data-stu-id="b1861-428">Authentication modes AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 and IssuedTokenForCertificate all use a similar instance of sp:SymmetricBinding with the following property values:</span></span>  
   
- 保护令牌：服务器的 X509 证书，包含模式设置为 …\/IncludeToken\/Never  
-令牌保护：False  
+ <span data-ttu-id="b1861-429">保护令牌：服务器的 X509 证书，包含模式设置为 …/IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="b1861-429">Protection Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="b1861-430">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-430">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-431">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-431">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-432">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-432">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-433">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-433">Encrypt Signature: True</span></span>  
   
- 上述身份验证模式的区别仅在于它们所使用的支持令牌。AnonymousForCertificate 没有任何支持令牌，MutualCertificate WSS 1.1 将客户端的 X509 证书作为认可支持令牌，UserNameForCertificate 将“用户名令牌”作为签名支持令牌，而 IssuedTokenForCertificate 将颁发的令牌作为认可支持令牌。  
+ <span data-ttu-id="b1861-434">上述身份验证模式的区别仅在于它们所使用的支持令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-434">The above authentication modes only differ by the supporting tokens they use.</span></span> <span data-ttu-id="b1861-435">AnonymousForCertificate 没有任何支持令牌，MutualCertificate WSS 1.1 将客户端的 X509 证书作为认可支持令牌，UserNameForCertificate 将“用户名令牌”作为签名支持令牌，而 IssuedTokenForCertificate 将颁发的令牌作为认可支持令牌。</span><span class="sxs-lookup"><span data-stu-id="b1861-435">AnonymousForCertificate does not have any supporting tokens, MutualCertificate WSS 1.1 has the client’s X509 certificate as an endorsing supporting tokens, UserNameForCertificate has a UserName Token as a signed supporting token and IssuedTokenForCertificate has the issued token as an endorsing supporting token.</span></span>  
   
-#### 3.2.4 AnonymousForCertificate  
- 在此身份验证模式下，客户端是匿名的，而使用 X.509 证书对服务进行身份验证。所用绑定是对称绑定的一个实例，如上面 3.4.2 中所述。  
+#### <a name="324-anonymousforcertificate"></a><span data-ttu-id="b1861-436">3.2.4 AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-436">3.2.4 AnonymousForCertificate</span></span>  
+ <span data-ttu-id="b1861-437">在此身份验证模式下，客户端是匿名的，而使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-437">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-438">所用绑定是对称绑定的一个实例，如上面 3.4.2 中所述。</span><span class="sxs-lookup"><span data-stu-id="b1861-438">The binding used is an instance of symmetric binding as described in 3.4.2.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-439">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-439">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousforCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-440">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-440">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-441">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-441">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-4de2d2a1-6266-4a02-93e6-242a1ac2aeb3-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-4de2d2a1-6266-4a02-93e6-242a1ac2aeb3-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-442">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-442">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b06cb481-3176-4c56-af35-c38252bb6c78-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_2" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-443">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-443">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousforCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-444">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-444">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-445">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-445">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-562aac68-8cdd-45d5-bc03-df662e6ed048-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-562aac68-8cdd-45d5-bc03-df662e6ed048-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-446">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-446">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-15b48260-23da-424d-8dc4-8f4e150fb8cf-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="ALF+QNGmWn2k3LpWEDIzSBgTkvo=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.5 UserNameForCertificate  
- 在此身份验证模式下，客户端使用“用户名令牌”向服务进行身份验证，该令牌作为签名支持令牌出现在 SOAP 层上。服务使用 X.509 证书对客户端进行身份验证。所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。  
+#### <a name="325-usernameforcertificate"></a><span data-ttu-id="b1861-447">3.2.5 UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-447">3.2.5 UserNameForCertificate</span></span>  
+ <span data-ttu-id="b1861-448">在此身份验证模式下，客户端使用“用户名令牌”向服务进行身份验证，该令牌作为签名支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-448">With this authentication mode the client authenticates to the service using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="b1861-449">服务使用 X.509 证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-449">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="b1861-450">所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。</span><span class="sxs-lookup"><span data-stu-id="b1861-450">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-451">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-451">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-452">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-452">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-453">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-453">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-27196139-acb9-410f-a2c6-51d20d24278b-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-27196139-acb9-410f-a2c6-51d20d24278b-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-454">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-454">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-681226f7-126a-4806-b732-fcca097cd7a8-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-455">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-455">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
   
-```  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-456">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-456">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-457">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-457">Request</span></span>  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
-  
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8276d8b7-74a0-4257-b8a5-e25350e7c2d4-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-8276d8b7-74a0-4257-b8a5-e25350e7c2d4-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-458">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-458">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8a7ad353-f071-49dc-90dd-5ad2e9abd40a-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
-#### 3.2.6 MutualCertificate \(WSS 1.1\)  
- 在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为认可支持令牌出现在 SOAP 层上。同样使用 X.509 证书对服务进行身份验证。所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。  
+#### <a name="326-mutualcertificate-wss-11"></a><span data-ttu-id="b1861-459">3.2.6 MutualCertificate (WSS 1.1)</span><span class="sxs-lookup"><span data-stu-id="b1861-459">3.2.6 MutualCertificate (WSS 1.1)</span></span>  
+ <span data-ttu-id="b1861-460">在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为认可支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-460">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="b1861-461">同样使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-461">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-462">所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。</span><span class="sxs-lookup"><span data-stu-id="b1861-462">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-463">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-463">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-464">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-464">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-465">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-465">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-75305d4e-f54f-4e36-9de9-45b6d2053c80-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-75305d4e-f54f-4e36-9de9-45b6d2053c80-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_2" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><o:BinarySecurityToken> ...</o:BinarySecurityToken><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_10" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-466">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-466">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8c73fa91-f95b-40ff-b088-48118e6fadcf-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_3" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_10" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-467">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-467">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-468">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-468">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-469">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-469">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-0b940a9e-606f-43b9-b05d-a162043529bc-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-0b940a9e-606f-43b9-b05d-a162043529bc-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature Id="_2" xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-470">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-470">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-67dacc31-4a50-4866-b673-ccc03e156337-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="mYyksUQKkK27Fd6hmgOiqFwvudk=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><k:SignatureConfirmation u:Id="_3" Value="SreOZ4Rr2BcXjFQFvgN55ERypI/1/86hdWThE5lav0eYIxF1OCzQgZF+y7cQ82t+g3CRnLbE3c52DqMpY/HXlrdMct3m3rnpDH+fqdhNY4fE+M2v4zUMFR7uxDKWcEm9zZpmUvJCDfJRfKRaKjy5cTbccRKqSxw7HAqOYnqibA4=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.7 IssuedTokenForCertificate  
- 在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由 STS 颁发的令牌，并证明掌握了共享密钥。颁发的令牌作为认可支持令牌出现在 SOAP 层上。服务使用 X.509 证书对客户端进行身份验证。所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。  
+#### <a name="327-issuedtokenforcertificate"></a><span data-ttu-id="b1861-471">3.2.7 IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="b1861-471">3.2.7 IssuedTokenForCertificate</span></span>  
+ <span data-ttu-id="b1861-472">在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由 STS 颁发的令牌，并证明掌握了共享密钥。</span><span class="sxs-lookup"><span data-stu-id="b1861-472">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by a STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="b1861-473">颁发的令牌作为认可支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-473">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="b1861-474">服务使用 X.509 证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-474">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="b1861-475">所用绑定为对称绑定，其保护令牌是由客户端生成的密钥，用服务的公钥进行加密。</span><span class="sxs-lookup"><span data-stu-id="b1861-475">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-476">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-476">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-477">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-477">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-478">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-478">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-1d2c03e6-0b69-4483-903a-6ef9b9d286ed-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-3f0f57fa-046d-40c0-919f-d0d7aa640b9f-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
-  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-479">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-479">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-3f0f57fa-046d-40c0-919f-d0d7aa640b9f-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 策略  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-480">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-480">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-481">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-481">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
- 请求  
+ <span data-ttu-id="b1861-482">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-482">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-de1c51aa-2ecc-4e70-b6bd-9dca58331fa7-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-16" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-483">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-483">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-## 3.3 Kerberos  
- 在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。该票证还提供服务器身份验证。所用绑定为对称绑定，具有以下属性：  
+## <a name="33-kerberos"></a><span data-ttu-id="b1861-484">3.3 Kerberos</span><span class="sxs-lookup"><span data-stu-id="b1861-484">3.3 Kerberos</span></span>  
+ <span data-ttu-id="b1861-485">在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-485">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="b1861-486">该票证还提供服务器身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-486">That same ticket also provides server authentication.</span></span> <span data-ttu-id="b1861-487">所用绑定为对称绑定，具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="b1861-487">The binding used is a symmetric binding with the following properties;</span></span>  
   
- 保护令牌：Kerberos 票证，包含模式设置为 ...\/IncludeToken\/Once  
-令牌保护：False  
+ <span data-ttu-id="b1861-488">保护令牌：Kerberos 票证，包含模式设置为 .../IncludeToken/Once</span><span class="sxs-lookup"><span data-stu-id="b1861-488">Protection Token: Kerberos Ticket, inclusion mode is set to .../IncludeToken/Once</span></span>  
+<span data-ttu-id="b1861-489">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-489">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-490">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-490">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-491">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-491">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-492">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-492">Encrypt Signature: True</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-493">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-493">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="Kerberos_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:RequireDerivedKeys/><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-494">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-494">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-495">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-495">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e8f6dc3b-407d-4387-bd33-97aedfd8bf13-2"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
-  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-496">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-496">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7b03568e-66ae-49da-82ee-5d12d372876e-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-497">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-497">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="Kerberos_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:RequireDerivedKeys/><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-498">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-498">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-499">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-499">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d29247f0-f220-4e81-9a8d-a15f5ac31072-2"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-500">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-500">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.4 IssuedToken  
- 在此身份验证模式下，客户端不向服务进行身份验证，而是提供一个由 STS 颁发的令牌，并证明掌握了共享密钥。服务也不向客户端进行身份验证，而是由 STS 将共享密钥作为颁发的令牌的一部分进行加密，这样，只有服务才能解密该密钥。所用绑定为对称绑定，具有以下属性：  
+#### <a name="34-issuedtoken"></a><span data-ttu-id="b1861-501">3.4 k e n</span><span class="sxs-lookup"><span data-stu-id="b1861-501">3.4 IssuedToken</span></span>  
+ <span data-ttu-id="b1861-502">在此身份验证模式下，客户端不向服务进行身份验证，而是提供一个由 STS 颁发的令牌，并证明掌握了共享密钥。</span><span class="sxs-lookup"><span data-stu-id="b1861-502">With this authentication mode the client does not authenticate to the service, as such, rather the client presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="b1861-503">服务也不向客户端进行身份验证，而是由 STS 将共享密钥作为颁发的令牌的一部分进行加密，这样，只有服务才能解密该密钥。</span><span class="sxs-lookup"><span data-stu-id="b1861-503">The service is not authenticated to the client, as such, instead the STS encrypts the shared key as part of the issued token such that only the service can decrypt the key.</span></span> <span data-ttu-id="b1861-504">所用绑定为对称绑定，具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="b1861-504">The binding used is as symmetric binding with the following properties;</span></span>  
   
- 保护令牌：颁发的令牌，包含模式设置为 ...\/IncludeToken\/AlwaysToRecipient  
-令牌保护：False  
+ <span data-ttu-id="b1861-505">保护令牌：颁发的令牌，包含模式设置为 .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="b1861-505">Protection Token: Issued Token, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="b1861-506">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-506">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-507">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-507">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-508">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-508">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-509">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-509">Encrypt Signature: True</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-510">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-510">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedToken_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-511">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-511">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-512">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-512">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-61ce3989-bc38-4d67-8262-6232c9d49a26-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-513">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-513">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>    
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-514">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-514">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedToken_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-515">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-515">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-516">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-516">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-1dc8bdef-4202-4e08-8a5e-ab94da579dec-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-517">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-517">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### 3.5 将 SslNegotiated 用于服务身份验证  
- 本节介绍的一组身份验证模式将对称绑定用于保护令牌，作为安全上下文令牌（符合 WS\-SecureConversation \(WS\-SC\)），其键值是通过对 WS\-Trust \(WS\-T\) RST\/RSTR 消息执行 TLS 协议进行协商的。有关使用 WS\-Trust 实现 TLS 握手的详细信息，请参见 TLSNEGO 中的内容。此处的消息示例中，我们假设已通过握手建立了带有关联安全上下文的 SCT。  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a><span data-ttu-id="b1861-518">3.5 将 SslNegotiated 用于服务身份验证</span><span class="sxs-lookup"><span data-stu-id="b1861-518">3.5 Using SslNegotiated for Service Authentication</span></span>  
+ <span data-ttu-id="b1861-519">本节介绍的一组身份验证模式将对称绑定用于保护令牌，作为安全上下文令牌（符合 WS-SecureConversation (WS-SC)），其键值是通过对 WS-Trust (WS-T) RST/RSTR 消息执行 TLS 协议进行协商的。</span><span class="sxs-lookup"><span data-stu-id="b1861-519">This section describes a group of authentication modes that use a symmetric binding with the protection token being a Security Context Token per WS-SecureConversation (WS-SC) whose key value is negotiated by executing the TLS protocol over WS-Trust (WS-T) RST/RSTR messages.</span></span> <span data-ttu-id="b1861-520">有关使用 WS-Trust 实现 TLS 握手的详细信息，请参见 TLSNEGO 中的内容。</span><span class="sxs-lookup"><span data-stu-id="b1861-520">Details of the TLS handshake implementation using WS-Trust are described in TLSNEGO.</span></span> <span data-ttu-id="b1861-521">此处的消息示例中，我们假设已通过握手建立了带有关联安全上下文的 SCT。</span><span class="sxs-lookup"><span data-stu-id="b1861-521">Here in the message examples we will assume that SCT with an associated security context is already established through a handshake.</span></span>  
   
- 所用绑定为对称绑定，具有以下属性：  
+ <span data-ttu-id="b1861-522">所用绑定为对称绑定，具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="b1861-522">The binding used is a symmetric binding with the following properties;</span></span>  
   
- 保护令牌：SslContextToken，包含模式设置为 ...\/IncludeToken\/Never  
-令牌保护：False  
+ <span data-ttu-id="b1861-523">保护令牌：SslContextToken，包含模式设置为 .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="b1861-523">Protection Token: SslContextToken, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="b1861-524">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-524">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-525">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-525">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-526">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-526">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-527">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-527">Encrypt Signature: True</span></span>  
   
-#### 3.5.1 SslNegotiated 服务身份验证的策略  
- 本节介绍的所有身份验证模式的策略都相似，唯一的区别在于，所用的特定签名支持令牌或认可令牌不相同。  
+#### <a name="351-policy-for-sslnegotiated-service-authentication"></a><span data-ttu-id="b1861-528">3.5.1 SslNegotiated 服务身份验证的策略</span><span class="sxs-lookup"><span data-stu-id="b1861-528">3.5.1 Policy for SslNegotiated service authentication</span></span>  
+ <span data-ttu-id="b1861-529">本节介绍的所有身份验证模式的策略都相似，唯一的区别在于，所用的特定签名支持令牌或认可令牌不相同。</span><span class="sxs-lookup"><span data-stu-id="b1861-529">Policy for all authentication modes in this section are similar and differ only by specific signed supporting or endorsing tokens used.</span></span>  
   
-#### 3.5.2 AnonymousForSslNegotiated  
- 在此身份验证模式下，客户端是匿名的，而使用 X.509 证书对服务进行身份验证。所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。  
+#### <a name="352-anonymousforsslnegotiated"></a><span data-ttu-id="b1861-530">3.5.2 AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-530">3.5.2 AnonymousForSslNegotiated</span></span>  
+ <span data-ttu-id="b1861-531">在此身份验证模式下，客户端是匿名的，而使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-531">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-532">所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。</span><span class="sxs-lookup"><span data-stu-id="b1861-532">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-533">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-533">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-534">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-534">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-535">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-535">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f4b86ce2-4ba6-4c55-bac1-2e920fc6d5db-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-d21ec2b8-99f5-443c-a4c6-a4d40619187e-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-536">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-536">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d21ec2b8-99f5-443c-a4c6-a4d40619187e-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-537">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-537">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-538">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-538">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-539">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-539">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-c84b24b9-39e0-4cc3-99e2-cec088f1b9eb-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-df206ad9-1ee2-46d7-9fb4-6e4631c9762f-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-540">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-540">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-df206ad9-1ee2-46d7-9fb4-6e4631c9762f-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.5.3 UserNameForSslNegotiated  
- 在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌出现在 SOAP 层上。使用 X.509 证书对服务进行身份验证。所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。  
+#### <a name="353-usernameforsslnegotiated"></a><span data-ttu-id="b1861-541">3.5.3 UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-541">3.5.3 UserNameForSslNegotiated</span></span>  
+ <span data-ttu-id="b1861-542">在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-542">With this authentication mode the client is authenticates using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="b1861-543">使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-543">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-544">所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。</span><span class="sxs-lookup"><span data-stu-id="b1861-544">The binding used is an instance of symmetric binding as described in 3.5.1.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-545">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-545">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-546">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-546">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-547">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-547">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-3d1a12c3-e690-474a-a223-a346fc0329a9-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-137ea768-7d49-404b-87eb-f11d9c7154aa-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-548">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-548">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-137ea768-7d49-404b-87eb-f11d9c7154aa-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-549">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-549">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-550">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-550">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-551">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-551">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-56e931e8-20c2-457f-a83e-8fcd6b92c258-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-83d053cb-03a0-4461-9616-86475cf083c4-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-552">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-552">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-83d053cb-03a0-4461-9616-86475cf083c4-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.5.4 IssuedTokenForSslNegotiated  
- 在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由 STS 颁发的令牌，并证明掌握了共享密钥。颁发的令牌作为认可支持令牌出现在 SOAP 层上。使用 X.509 证书对服务进行身份验证。所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。  
+#### <a name="354-issuedtokenforsslnegotiated"></a><span data-ttu-id="b1861-553">3.5.4 IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-553">3.5.4 IssuedTokenForSslNegotiated</span></span>  
+ <span data-ttu-id="b1861-554">在此身份验证模式下，客户端不向服务进行身份验证，而是出示一个由 STS 颁发的令牌，并证明掌握了共享密钥。</span><span class="sxs-lookup"><span data-stu-id="b1861-554">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="b1861-555">颁发的令牌作为认可支持令牌出现在 SOAP 层上。</span><span class="sxs-lookup"><span data-stu-id="b1861-555">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="b1861-556">使用 X.509 证书对服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-556">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="b1861-557">所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。</span><span class="sxs-lookup"><span data-stu-id="b1861-557">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-558">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-558">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-559">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-559">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-560">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-560">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b19fb2e7-8f0c-45c1-b62c-45d6ff6d57e7-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-199509f9-7963-42b7-b340-7598ee261d5a-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-561">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-561">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-199509f9-7963-42b7-b340-7598ee261d5a-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-562">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-562">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>    
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-563">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-563">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-564">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-564">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d75104d5-313e-440f-b112-db8aff57a5fe-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-e668caab-b7e4-4056-ac42-4015ae2a67a6-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-565">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-565">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e668caab-b7e4-4056-ac42-4015ae2a67a6-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-#### 3.5.5 MutualSslNegotiated  
- 在此身份验证模式下，客户端和服务都使用 X.509 证书进行身份验证。所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。  
+#### <a name="355-mutualsslnegotiated"></a><span data-ttu-id="b1861-566">3.5.5 MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-566">3.5.5 MutualSslNegotiated</span></span>  
+ <span data-ttu-id="b1861-567">在此身份验证模式下，客户端和服务都使用 X.509 证书进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-567">With this authentication mode the client and the service authenticate using X.509 certificates.</span></span> <span data-ttu-id="b1861-568">所用绑定是对称绑定的一个实例，如上面 3.5.1 中所述。</span><span class="sxs-lookup"><span data-stu-id="b1861-568">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-569">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-569">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-570">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-570">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-571">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-571">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d1e6037e-8a64-494f-9447-07d3125b81b5-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-e4b73625-3011-4f6d-a6f9-4d682e860801-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-572">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-572">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e4b73625-3011-4f6d-a6f9-4d682e860801-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-573">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-573">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>   
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-574">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-574">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-575">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-575">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-c2a6ab10-889a-4ee1-871d-05410c90fc10-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-576">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-576">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### 3.6 SspiNegotiated  
- 在此身份验证模式下，将使用协商协议来执行客户端和服务器身份验证。如果可能，就使用 Kerberos，否则使用 NTLM。所用绑定为对称绑定，具有以下属性：  
+### <a name="36-sspinegotiated"></a><span data-ttu-id="b1861-577">3.6 SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="b1861-577">3.6 SspiNegotiated</span></span>  
+ <span data-ttu-id="b1861-578">在此身份验证模式下，将使用协商协议来执行客户端和服务器身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-578">With this authentication mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="b1861-579">如果可能，就使用 Kerberos，否则使用 NTLM。</span><span class="sxs-lookup"><span data-stu-id="b1861-579">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="b1861-580">所用绑定为对称绑定，具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="b1861-580">The binding used is a symmetric binding with the following properties;</span></span>  
   
- 保护令牌：SpnegoContextToken，包含模式设置为 ...\/IncludeToken\/AlwaysToRecipient  
-令牌保护：False  
+ <span data-ttu-id="b1861-581">保护令牌：SpnegoContextToken，包含模式设置为 .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="b1861-581">Protection Token: SpnegoContextToken, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="b1861-582">令牌保护：False</span><span class="sxs-lookup"><span data-stu-id="b1861-582">Token Protection: False</span></span>  
   
- 整个标头和正文签名：True  
+ <span data-ttu-id="b1861-583">整个标头和正文签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-583">Entire Header And Body Signatures: True</span></span>  
   
- 保护顺序：SignBeforeEncrypt  
+ <span data-ttu-id="b1861-584">保护顺序：SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="b1861-584">Protection Order: SignBeforeEncrypt</span></span>  
   
- 加密签名：True  
+ <span data-ttu-id="b1861-585">加密签名：True</span><span class="sxs-lookup"><span data-stu-id="b1861-585">Encrypt Signature: True</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-586">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-586">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-587">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-587">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-588">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-588">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9a954fcb-4df2-4610-9800-f542f2b5130a-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-589">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-589">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>   
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-590">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-590">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-591">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-591">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-592">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-592">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f1673773-f9a7-4b43-b13b-405e7dd4a6e3-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-593">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-593">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### 3.7 SecureConversation  
- 所用绑定为对称绑定，保护令牌为符合 WS\-SecureConversation \(WS\-SC\) 的 SCT。该 SCT 是根据嵌套的绑定使用 WS\-Trust \(WS\-Trust\) 或 WS\-SecureConversation \(WS\-SC\) 协商的，该嵌套绑定本身是使用协商协议的对称绑定。如果可能，协商协议将使用 Kerberos 来执行客户端和服务器身份验证。如果无法使用 Kerberos，则退而使用 NTLM。  
+### <a name="37-secureconversation"></a><span data-ttu-id="b1861-594">3.7 SecureConversation</span><span class="sxs-lookup"><span data-stu-id="b1861-594">3.7 SecureConversation</span></span>  
+ <span data-ttu-id="b1861-595">所用绑定为对称绑定，保护令牌为符合 WS-SecureConversation (WS-SC) 的 SCT。</span><span class="sxs-lookup"><span data-stu-id="b1861-595">The binding used is a symmetric binding with the protection token being a SCT per WS-SecureConversation (WS-SC).</span></span> <span data-ttu-id="b1861-596">该 SCT 是根据嵌套的绑定使用 WS-Trust (WS-Trust) 或 WS-SecureConversation (WS-SC) 协商的，该嵌套绑定本身是使用协商协议的对称绑定。</span><span class="sxs-lookup"><span data-stu-id="b1861-596">The SCT is negotiated using WS-Trust (WS-Trust) or WS-SecureConversation (WS-SC) according to a nested binding, which is itself a symmetric binding that uses a negotiation protocol.</span></span> <span data-ttu-id="b1861-597">如果可能，协商协议将使用 Kerberos 来执行客户端和服务器身份验证。</span><span class="sxs-lookup"><span data-stu-id="b1861-597">The negotiation protocol will use Kerberos to perform client and server authentication if possible.</span></span> <span data-ttu-id="b1861-598">如果无法使用 Kerberos，则退而使用 NTLM。</span><span class="sxs-lookup"><span data-stu-id="b1861-598">If Kerberos cannot be used, it will fall back to NTLM.</span></span>  
   
- 策略  
+ <span data-ttu-id="b1861-599">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-599">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SecureConversation_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:BootstrapPolicy><wsp:Policy><sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts><sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/></sp:EncryptedParts><sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust10></wsp:Policy></sp:BootstrapPolicy><sp:MustNotSendAmend/></wsp:Policy></sp:SecureConversationToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### 安全标头示例：SignBeforeEncrypt、EncryptSignature  
- 请求  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="b1861-600">安全标头示例：SignBeforeEncrypt、EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="b1861-600">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="b1861-601">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-601">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f01c6159-f159-454d-bd97-bbcc9b8e25d3-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-582920d7-14a7-4adc-8091-e1f92d7d8055-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-602">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-602">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-582920d7-14a7-4adc-8091-e1f92d7d8055-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 策略  
+ <span data-ttu-id="b1861-603">策略</span><span class="sxs-lookup"><span data-stu-id="b1861-603">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SecureConversation_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:BootstrapPolicy><wsp:Policy><sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts><sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/></sp:EncryptedParts><sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust10></wsp:Policy></sp:BootstrapPolicy><sp:MustNotSendAmend/></wsp:Policy></sp:SecureConversationToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### 安全标头示例：EncryptBeforeSign  
- 请求  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="b1861-604">安全标头示例：EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="b1861-604">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="b1861-605">请求</span><span class="sxs-lookup"><span data-stu-id="b1861-605">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d57e6342-1c68-4095-a0c1-41979088a944-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-9b22407d-b914-4c41-9105-1cf8cf7c3fe5-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- 响应  
+ <span data-ttu-id="b1861-606">响应</span><span class="sxs-lookup"><span data-stu-id="b1861-606">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9b22407d-b914-4c41-9105-1cf8cf7c3fe5-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```

@@ -1,95 +1,84 @@
 ---
-title: "WCF 的 &lt;activityStateQuery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 的 &lt;activityStateQuery&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f1a8639581a4b954609b221038d1e519746178ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 的 &lt;activityStateQuery&gt;
-表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。  例如，您可能希望对工作流实例中的“发送电子邮件”活动的每次完成进行跟踪。  跟踪参与者需要用此查询来订阅活动状态记录对象。  在 ActivityStates 中指定了要订阅的可用状态。  
+# <a name="ltactivitystatequerygt-of-wcf"></a><span data-ttu-id="aee3b-102">WCF 的 &lt;activityStateQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="aee3b-102">&lt;activityStateQuery&gt; of WCF</span></span>
+<span data-ttu-id="aee3b-103">表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。</span><span class="sxs-lookup"><span data-stu-id="aee3b-103">Represents a query that is used to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="aee3b-104">例如，你可能想要跟踪的每次完成工作流实例中的"发送电子邮件"活动。</span><span class="sxs-lookup"><span data-stu-id="aee3b-104">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="aee3b-105">跟踪参与者需要用此查询来订阅活动状态记录对象。</span><span class="sxs-lookup"><span data-stu-id="aee3b-105">This query is necessary for a tracking participant to subscribe to activity state record objects.</span></span> <span data-ttu-id="aee3b-106">在 ActivityStates 中指定了要订阅的可用状态。</span><span class="sxs-lookup"><span data-stu-id="aee3b-106">The available states to subscribe to are specified in ActivityStates.</span></span>  
   
- 有关跟踪配置文件查询的更多信息，请参见[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)。  
+ <span data-ttu-id="aee3b-107">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="aee3b-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-## 语法  
+ <span data-ttu-id="aee3b-108">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="aee3b-108">\<system.serviceModel></span></span>  
+<span data-ttu-id="aee3b-109">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="aee3b-109">\<tracking></span></span>  
+<span data-ttu-id="aee3b-110">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="aee3b-110">\<trackingProfile></span></span>  
+<span data-ttu-id="aee3b-111">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="aee3b-111">\<workflow></span></span>  
+<span data-ttu-id="aee3b-112">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="aee3b-112">\<activityStateQueries></span></span>  
+<span data-ttu-id="aee3b-113">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="aee3b-113">\<activityStateQuery></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="aee3b-114">语法</span><span class="sxs-lookup"><span data-stu-id="aee3b-114">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <activityStateQueries>  
-             <activityStateQuery activityName="String" />  
-                <arguments>  
-                   <argument name="String"/>  
-                </arguments>  
-                <states>  
-                   <state name="String"/>  
-                </states>  
-                <variables>  
-                   <variable name="String"/>  
-                </variables>  
-          </activityStateQueries>  
-       </workflow>  
-   </trackingProfile>  
-</tracking>  
-  
+```xml  
+<tracking>   <trackingProfile name="Name">       <workflow>          <activityStateQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>       </workflow>   </trackingProfile></tracking>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="aee3b-115">特性和元素</span><span class="sxs-lookup"><span data-stu-id="aee3b-115">Attributes and Elements</span></span>  
+ <span data-ttu-id="aee3b-116">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="aee3b-116">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="aee3b-117">特性</span><span class="sxs-lookup"><span data-stu-id="aee3b-117">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|activityName|一个字符串，指定要对其筛选 <xref:System.Activities.Tracking.ActivityStateRecord> 实例的活动的名称。|  
+|<span data-ttu-id="aee3b-118">特性</span><span class="sxs-lookup"><span data-stu-id="aee3b-118">Attribute</span></span>|<span data-ttu-id="aee3b-119">描述</span><span class="sxs-lookup"><span data-stu-id="aee3b-119">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="aee3b-120">activityName</span><span class="sxs-lookup"><span data-stu-id="aee3b-120">activityName</span></span>|<span data-ttu-id="aee3b-121">一个字符串，指定要对其筛选 <xref:System.Activities.Tracking.ActivityStateRecord> 实例的活动的名称。</span><span class="sxs-lookup"><span data-stu-id="aee3b-121">A string that specifies the name of the activity to filter <xref:System.Activities.Tracking.ActivityStateRecord> instances on.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="aee3b-122">子元素</span><span class="sxs-lookup"><span data-stu-id="aee3b-122">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<arguments\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|与此活动查询关联的参数的集合。|  
-|[\<states\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|一个配置元素集合，这些元素包含应为其发出跟踪记录的已订阅活动的状态。|  
-|[\<states\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|与此活动查询关联的变量的集合。|  
+|<span data-ttu-id="aee3b-123">元素</span><span class="sxs-lookup"><span data-stu-id="aee3b-123">Element</span></span>|<span data-ttu-id="aee3b-124">描述</span><span class="sxs-lookup"><span data-stu-id="aee3b-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="aee3b-125">\<自变量 ></span><span class="sxs-lookup"><span data-stu-id="aee3b-125">\<arguments></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|<span data-ttu-id="aee3b-126">与此活动查询关联的自变量的集合。</span><span class="sxs-lookup"><span data-stu-id="aee3b-126">A collection of arguments associated with this activity query.</span></span>|  
+|[<span data-ttu-id="aee3b-127">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="aee3b-127">\<states></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|<span data-ttu-id="aee3b-128">一个配置元素集合，这些元素包含应为其发出跟踪记录的已订阅活动的状态。</span><span class="sxs-lookup"><span data-stu-id="aee3b-128">A collection of configuration elements that contain the states of the subscribed activity for which a tracking record should be emitted.</span></span>|  
+|[<span data-ttu-id="aee3b-129">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="aee3b-129">\<states></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|<span data-ttu-id="aee3b-130">与此活动查询关联的变量的集合。</span><span class="sxs-lookup"><span data-stu-id="aee3b-130">A collection of variables associated with this activity query.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="aee3b-131">父元素</span><span class="sxs-lookup"><span data-stu-id="aee3b-131">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<faultPropagationQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|表示一个配置元素列表，这些元素用于跟踪父活动取消子活动的请求。  跟踪参与者需要用此查询来订阅取消请求记录对象。|  
+|<span data-ttu-id="aee3b-132">元素</span><span class="sxs-lookup"><span data-stu-id="aee3b-132">Element</span></span>|<span data-ttu-id="aee3b-133">描述</span><span class="sxs-lookup"><span data-stu-id="aee3b-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="aee3b-134">\<faultPropagationQuery ></span><span class="sxs-lookup"><span data-stu-id="aee3b-134">\<faultPropagationQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|<span data-ttu-id="aee3b-135">表示一个配置元素列表，这些元素用于跟踪父活动取消子活动的请求。</span><span class="sxs-lookup"><span data-stu-id="aee3b-135">Represents a list of configuration elements that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="aee3b-136">跟踪参与者需要用此查询来订阅取消请求记录对象。</span><span class="sxs-lookup"><span data-stu-id="aee3b-136">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>|  
   
-## 备注  
- ActivityStateQuery 的一项独特功能是能够在跟踪工作流的执行时提取数据。  这在访问跟踪记录后续执行时可提供其他上下文。  可以使用 [\<arguments\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)[\<states\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)[\<states\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) 和 `Closed`元素从工作流中的任何活动提取任何变量或参数。下面的示例演示在发出活动的 跟踪记录时提取变量和参数的活动状态查询。  变量和参数只能使用 ActivityStateRecord 来提取，因此使用 [\<activityStateQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md) 在跟踪配置文件内进行订阅。  
+## <a name="remarks"></a><span data-ttu-id="aee3b-137">备注</span><span class="sxs-lookup"><span data-stu-id="aee3b-137">Remarks</span></span>  
+ <span data-ttu-id="aee3b-138">ActivityStateQuery 的一项独特功能是能够在跟踪工作流的执行时提取数据。</span><span class="sxs-lookup"><span data-stu-id="aee3b-138">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="aee3b-139">这在访问跟踪记录后续执行时可提供其他上下文。</span><span class="sxs-lookup"><span data-stu-id="aee3b-139">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="aee3b-140">你可以使用[\<自变量 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)， [\<状态 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)和[\<状态 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)元素提取任何变量或自变量从工作流中的任何活动。下面的示例演示提取变量和自变量的活动状态查询时活动的`Closed`发出跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="aee3b-140">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="aee3b-141">变量和自变量只能使用 ActivityStateRecord 来提取，并因此内进行订阅跟踪配置文件使用[ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)。</span><span class="sxs-lookup"><span data-stu-id="aee3b-141">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
   
-```  
-  
+```xml  
 <activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <variables>  
-    <variable name="FromAddress"/>  
-  </variables>  
+  <states>  
+    <state name="Closed"/>  
+  </states>  
+  <variables>  
+    <variable name="FromAddress"/>  
+  </variables>  
   <arguments>  
     <argument name="Result"/>  
   </arguments>  
 </activityStateQuery>  
-  
 ```  
   
-## 请参阅  
- [System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement](assetId:///System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.ActivityStateQuery](assetId:///System.Activities.Tracking.ActivityStateQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="aee3b-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aee3b-142">See Also</span></span>  
+ <span data-ttu-id="aee3b-143"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement></span><span class="sxs-lookup"><span data-stu-id="aee3b-143"><xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement></span></span>    
+ <span data-ttu-id="aee3b-144"><xref:System.Activities.Tracking.ActivityStateQuery></span><span class="sxs-lookup"><span data-stu-id="aee3b-144"><xref:System.Activities.Tracking.ActivityStateQuery></span></span>     
+ [<span data-ttu-id="aee3b-145">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="aee3b-145">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="aee3b-146">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="aee3b-146">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

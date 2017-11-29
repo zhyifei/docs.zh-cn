@@ -1,28 +1,36 @@
 ---
-title: "&lt;localClientSettings&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;localClientSettings&gt; 元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d56c7c199ed437fdfc1277ecb6c99f7b8c6cbe38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;localClientSettings&gt; 元素
-指定此绑定的本地客户端安全设置。  
+# <a name="ltlocalclientsettingsgt-element"></a><span data-ttu-id="a8a69-102">&lt;localClientSettings&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="a8a69-102">&lt;localClientSettings&gt; element</span></span>
+<span data-ttu-id="a8a69-103">指定此绑定的本地客户端安全设置。</span><span class="sxs-lookup"><span data-stu-id="a8a69-103">Specifies the security settings of a local client for this binding.</span></span>  
   
-## 语法  
+ <span data-ttu-id="a8a69-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="a8a69-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="a8a69-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="a8a69-105">\<bindings></span></span>  
+<span data-ttu-id="a8a69-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="a8a69-106">\<customBinding></span></span>  
+<span data-ttu-id="a8a69-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="a8a69-107">\<binding></span></span>  
+<span data-ttu-id="a8a69-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="a8a69-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a8a69-109">语法</span><span class="sxs-lookup"><span data-stu-id="a8a69-109">Syntax</span></span>  
   
+```xml  
 <security>  
    <localClientSettings cacheCookies="Boolean"  
       cookieRenewalThresholdPercentage="Integer"  
@@ -38,47 +46,47 @@ caps.handback.revision: 12
 </security>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a8a69-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a8a69-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a8a69-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a8a69-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="a8a69-112">特性</span><span class="sxs-lookup"><span data-stu-id="a8a69-112">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|`cacheCookies`|一个布尔值，指定是否启用 Cookie 缓存。  默认值为 `false`。|  
-|`cookieRenewalThresholdPercentage`|一个整数，指定可续订的最大 Cookie 百分比。  该值应介于 0 至 100 之间（包括这两个数）。  默认值为 90。|  
-|`detectReplays`|一个布尔值，指定是否自动检测和处理针对通道的重放攻击。  默认值为 `false`。|  
-|`maxClockSkew`|一个 <xref:System.TimeSpan>，指定通信双方的系统时钟之间的最大时间差异。  默认值为“00:05:00”。<br /><br /> 当此值被设置为默认值时，接收方所接受的消息的发送时间时间戳最多可比消息接收时间晚或早 5 分钟。  未通过发送时间测试的消息会被拒绝。  此设置与 `replayWindow` 属性结合使用。|  
-|`maxCookieCachingTime`|一个 <xref:System.TimeSpan>，指定 Cookie 的最长生存期。  默认值为“10675199.02:48:05.4775807”。|  
-|`reconnectTransportOnFailure`|一个布尔值，指定使用 WS\-ReliableMessaging 的连接是否将在传输失败后尝试重新连接。  默认值为 `true`，表示将进行无限次重新连接尝试。  非活动超时能够打断此循环；非活动超时在无法重新连接通道时使其引发异常。|  
-|`replayCacheSize`|一个正整数，指定用于重播检测的缓存 Nonce 的数目。  如果超出此限制，则会移除最旧的 Nonce，并且为新消息创建一个新的 Nonce。  默认值为 500000。|  
-|`replayWindow`|一个 <xref:System.TimeSpan>，指定单个消息 Nonce 有效的持续时间。<br /><br /> 在此持续时间之后，如果发送的消息与之前发送的消息具有相同的 Nonce，则该消息将被拒绝。  此属性与 `maxClockSkew` 属性结合使用，以防止遭受重放攻击。  攻击者可以在其重放时间窗口过期之后重放消息。  但是，该消息将无法通过 `maxClockSkew` 测试；如果消息的发送时间时间戳比消息接收时间晚或早指定的时间，则该测试会拒绝消息。|  
-|`sessionKeyRenewalInterval`|一个 <xref:System.TimeSpan>，指定一段持续时间，发起方在此段时间之后将续订安全会话的密钥。  默认值为“10:00:00”。|  
-|`sessionKeyRolloverInterval`|一个 <xref:System.TimeSpan>，指定在密钥续订期间，上一个会话密钥对于传入消息有效的时间间隔。  默认值为“00:05:00”。<br /><br /> 在密钥续订期间，客户端和服务器必须总是使用最新的可用密钥来发送消息。  在延期时间到期前，双方都可以接受以上一个会话密钥加密的传入消息。|  
-|`timestampValidityDuration`|一个值为正的 <xref:System.TimeSpan>，指定时间戳有效的持续时间。  默认值为“00:15:00”。|  
+|<span data-ttu-id="a8a69-113">特性</span><span class="sxs-lookup"><span data-stu-id="a8a69-113">Attribute</span></span>|<span data-ttu-id="a8a69-114">描述</span><span class="sxs-lookup"><span data-stu-id="a8a69-114">Description</span></span>|  
+|---------------|-----------------|  
+|`cacheCookies`|<span data-ttu-id="a8a69-115">一个布尔值，指定是否启用 Cookie 缓存。</span><span class="sxs-lookup"><span data-stu-id="a8a69-115">A Boolean value that specifies whether cookie caching is enabled.</span></span> <span data-ttu-id="a8a69-116">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a8a69-116">The default is `false`.</span></span>|  
+|`cookieRenewalThresholdPercentage`|<span data-ttu-id="a8a69-117">一个整数，指定可续订的最大 Cookie 百分比。</span><span class="sxs-lookup"><span data-stu-id="a8a69-117">An integer that specifies the maximum percentage of cookies that can be renewed.</span></span> <span data-ttu-id="a8a69-118">该值应介于 0 至 100 之间（包括这两个数）。</span><span class="sxs-lookup"><span data-stu-id="a8a69-118">This value should be between 0 and 100 inclusively.</span></span> <span data-ttu-id="a8a69-119">默认值为 90。</span><span class="sxs-lookup"><span data-stu-id="a8a69-119">The default is 90.</span></span>|  
+|`detectReplays`|<span data-ttu-id="a8a69-120">一个布尔值，指定是否自动检测和处理针对通道的重放攻击。</span><span class="sxs-lookup"><span data-stu-id="a8a69-120">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span> <span data-ttu-id="a8a69-121">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a8a69-121">The default is `false`.</span></span>|  
+|`maxClockSkew`|<span data-ttu-id="a8a69-122">一个 <xref:System.TimeSpan>，指定通信双方的系统时钟之间的最大时间差异。</span><span class="sxs-lookup"><span data-stu-id="a8a69-122">A <xref:System.TimeSpan> that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span> <span data-ttu-id="a8a69-123">默认值为“00:05:00”。</span><span class="sxs-lookup"><span data-stu-id="a8a69-123">The default value is "00:05:00".</span></span><br /><br /> <span data-ttu-id="a8a69-124">当此值被设置为默认值时，接收方所接受的消息的发送时间时间戳最多可比消息接收时间晚或早 5 分钟。</span><span class="sxs-lookup"><span data-stu-id="a8a69-124">When this value is set to the default, the receiver accepts messages with send-time time stamps up to 5 minutes later or earlier than the time the message was received.</span></span> <span data-ttu-id="a8a69-125">未通过发送时间测试的消息会被拒绝。</span><span class="sxs-lookup"><span data-stu-id="a8a69-125">Messages that do not pass the send-time test are rejected.</span></span> <span data-ttu-id="a8a69-126">此设置与 `replayWindow` 属性结合使用。</span><span class="sxs-lookup"><span data-stu-id="a8a69-126">This setting is used in conjunction with the `replayWindow` attribute.</span></span>|  
+|`maxCookieCachingTime`|<span data-ttu-id="a8a69-127">一个 <xref:System.TimeSpan>，指定 Cookie 的最长生存期。</span><span class="sxs-lookup"><span data-stu-id="a8a69-127">A <xref:System.TimeSpan> that specifies the maximum lifetime of cookies.</span></span> <span data-ttu-id="a8a69-128">默认值为“10675199.02:48:05.4775807”。</span><span class="sxs-lookup"><span data-stu-id="a8a69-128">The default value is "10675199.02:48:05.4775807".</span></span>|  
+|`reconnectTransportOnFailure`|<span data-ttu-id="a8a69-129">一个布尔值，指定使用 WS-ReliableMessaging 的连接是否将在传输失败后尝试重新连接。</span><span class="sxs-lookup"><span data-stu-id="a8a69-129">A Boolean value that specifies whether connections using WS-Reliable messaging will attempt to reconnect after transport failures.</span></span> <span data-ttu-id="a8a69-130">默认值为 `true`，表示将进行无限次重新连接尝试。</span><span class="sxs-lookup"><span data-stu-id="a8a69-130">The default is `true`, which means that infinite attempts to reconnect are attempted.</span></span> <span data-ttu-id="a8a69-131">非活动超时能够打断此循环；非活动超时在无法重新连接通道时使其引发异常。</span><span class="sxs-lookup"><span data-stu-id="a8a69-131">The cycle is broken by the inactivity time-out, which causes the channel to throw an exception when it cannot be reconnected.</span></span>|  
+|`replayCacheSize`|<span data-ttu-id="a8a69-132">一个正整数，指定用于重播检测的缓存 Nonce 的数目。</span><span class="sxs-lookup"><span data-stu-id="a8a69-132">A positive integer that specifies the number of cached nonces used for replay detection.</span></span> <span data-ttu-id="a8a69-133">如果超出此限制，则会移除最旧的 Nonce，并且为新消息创建一个新的 Nonce。</span><span class="sxs-lookup"><span data-stu-id="a8a69-133">If this limit is exceeded, the oldest nonce is removed and a new nonce is created for the new message.</span></span> <span data-ttu-id="a8a69-134">默认值为 500000。</span><span class="sxs-lookup"><span data-stu-id="a8a69-134">The default value is 500000.</span></span>|  
+|`replayWindow`|<span data-ttu-id="a8a69-135">一个 <xref:System.TimeSpan>，指定单个消息 Nonce 有效的持续时间。</span><span class="sxs-lookup"><span data-stu-id="a8a69-135">A <xref:System.TimeSpan> that specifies the duration in which individual message nonces are valid.</span></span><br /><br /> <span data-ttu-id="a8a69-136">在此持续时间之后，如果发送的消息与之前发送的消息具有相同的 Nonce，则该消息将被拒绝。</span><span class="sxs-lookup"><span data-stu-id="a8a69-136">After this duration, a message sent with the same nonce as the one sent before will not be accepted.</span></span> <span data-ttu-id="a8a69-137">此属性与 `maxClockSkew` 属性结合使用，以防止遭受重放攻击。</span><span class="sxs-lookup"><span data-stu-id="a8a69-137">This attribute is used in conjunction with the `maxClockSkew` attribute to prevent replay attacks.</span></span> <span data-ttu-id="a8a69-138">攻击者可以在其重放时间窗口过期之后重放消息。</span><span class="sxs-lookup"><span data-stu-id="a8a69-138">An attacker could replay a message after its replay window has expired.</span></span> <span data-ttu-id="a8a69-139">但是，该消息将无法通过 `maxClockSkew` 测试；如果消息的发送时间时间戳比消息接收时间晚或早指定的时间，则该测试会拒绝消息。</span><span class="sxs-lookup"><span data-stu-id="a8a69-139">This message, however, would fail the `maxClockSkew` test which rejects messages with send-time timestamps up to a specified time later or earlier than the time the message was received.</span></span>|  
+|`sessionKeyRenewalInterval`|<span data-ttu-id="a8a69-140">一个 <xref:System.TimeSpan>，指定一段持续时间，发起方在此段时间之后将续订安全会话的密钥。</span><span class="sxs-lookup"><span data-stu-id="a8a69-140">A <xref:System.TimeSpan> that specifies the duration after which the initiator will renew the key for the security session.</span></span> <span data-ttu-id="a8a69-141">默认值为“10:00:00”。</span><span class="sxs-lookup"><span data-stu-id="a8a69-141">The default is "10:00:00".</span></span>|  
+|`sessionKeyRolloverInterval`|<span data-ttu-id="a8a69-142">一个 <xref:System.TimeSpan>，指定在密钥续订期间，上一个会话密钥对于传入消息有效的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="a8a69-142">A <xref:System.TimeSpan> that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span> <span data-ttu-id="a8a69-143">默认值为“00:05:00”。</span><span class="sxs-lookup"><span data-stu-id="a8a69-143">The default is "00:05:00".</span></span><br /><br /> <span data-ttu-id="a8a69-144">在密钥续订期间，客户端和服务器必须总是使用最新的可用密钥来发送消息。</span><span class="sxs-lookup"><span data-stu-id="a8a69-144">During key renewal, the client and server must always send messages using the most current available key.</span></span> <span data-ttu-id="a8a69-145">在延期时间到期前，双方都可以接受以上一个会话密钥加密的传入消息。</span><span class="sxs-lookup"><span data-stu-id="a8a69-145">Both parties will accept incoming messages secured with the previous session key until the rollover time expires.</span></span>|  
+|`timestampValidityDuration`|<span data-ttu-id="a8a69-146">一个值为正的 <xref:System.TimeSpan>，指定时间戳有效的持续时间。</span><span class="sxs-lookup"><span data-stu-id="a8a69-146">A positive <xref:System.TimeSpan> that specifies the duration in which a time stamp is valid.</span></span> <span data-ttu-id="a8a69-147">默认值为“00:15:00”。</span><span class="sxs-lookup"><span data-stu-id="a8a69-147">The default is "00:15:00".</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="a8a69-148">子元素</span><span class="sxs-lookup"><span data-stu-id="a8a69-148">Child Elements</span></span>  
+ <span data-ttu-id="a8a69-149">无</span><span class="sxs-lookup"><span data-stu-id="a8a69-149">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="a8a69-150">父元素</span><span class="sxs-lookup"><span data-stu-id="a8a69-150">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
-|[\<secureConversationBootstrap\>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
+|<span data-ttu-id="a8a69-151">元素</span><span class="sxs-lookup"><span data-stu-id="a8a69-151">Element</span></span>|<span data-ttu-id="a8a69-152">描述</span><span class="sxs-lookup"><span data-stu-id="a8a69-152">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a8a69-153">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="a8a69-153">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="a8a69-154">指定自定义绑定的安全选项。</span><span class="sxs-lookup"><span data-stu-id="a8a69-154">Specifies the security options for a custom binding.</span></span>|  
+|[<span data-ttu-id="a8a69-155">\<secureConversationBootstrap ></span><span class="sxs-lookup"><span data-stu-id="a8a69-155">\<secureConversationBootstrap></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|<span data-ttu-id="a8a69-156">指定用于启动安全对话服务的默认值。</span><span class="sxs-lookup"><span data-stu-id="a8a69-156">Specifies the default values used for initiating a secure conversation service.</span></span>|  
   
-## 备注  
- 这些设置不是从服务的安全策略派生而来的，从这个意义上说，它们是本地的。  
+## <a name="remarks"></a><span data-ttu-id="a8a69-157">备注</span><span class="sxs-lookup"><span data-stu-id="a8a69-157">Remarks</span></span>  
+ <span data-ttu-id="a8a69-158">这些设置不是从服务的安全策略派生而来的，从这个意义上说，它们是本地的。</span><span class="sxs-lookup"><span data-stu-id="a8a69-158">The settings are local in the sense that they are not settings derived from the security policy of the service.</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>   
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>   
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a><span data-ttu-id="a8a69-159">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8a69-159">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>  
+ <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>  
+ <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="a8a69-160">绑定</span><span class="sxs-lookup"><span data-stu-id="a8a69-160">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a8a69-161">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="a8a69-161">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="a8a69-162">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="a8a69-162">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="a8a69-163">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="a8a69-163">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="a8a69-164">如何： 创建自定义绑定使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="a8a69-164">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="a8a69-165">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="a8a69-165">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

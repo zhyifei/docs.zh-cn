@@ -1,70 +1,74 @@
 ---
-title: "如何：实现 ICommandSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ICommandSource 接口, 实现"
-  - "接口, ICommandSource, 实现"
+title: "如何：实现 ICommandSource"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdff5ebeb51daff4e8848e9a7c8282c2eee6f208
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现 ICommandSource
-本示例演示如何通过实现 <xref:System.Windows.Input.ICommandSource> 来创建命令源。  命令源是一个知道如何调用命令的对象。  <xref:System.Windows.Input.ICommandSource> 接口公开三个成员：<xref:System.Windows.Input.ICommandSource.Command%2A>、<xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 和 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是将调用的命令。  <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 是用户定义的数据类型，它从命令源传递到处理命令的方法。  <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是命令所作用于的对象。  
+# <a name="how-to-implement-icommandsource"></a><span data-ttu-id="486eb-102">如何：实现 ICommandSource</span><span class="sxs-lookup"><span data-stu-id="486eb-102">How to: Implement ICommandSource</span></span>
+<span data-ttu-id="486eb-103">此示例演示如何通过实现来创建命令源<xref:System.Windows.Input.ICommandSource>。</span><span class="sxs-lookup"><span data-stu-id="486eb-103">This example shows how to create a command source by implementing <xref:System.Windows.Input.ICommandSource>.</span></span>  <span data-ttu-id="486eb-104">命令源是知道如何调用命令的对象。</span><span class="sxs-lookup"><span data-stu-id="486eb-104">A command source is an object that knows how to invoke a command.</span></span>  <span data-ttu-id="486eb-105"><xref:System.Windows.Input.ICommandSource>接口公开三个成员： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。</span><span class="sxs-lookup"><span data-stu-id="486eb-105">The <xref:System.Windows.Input.ICommandSource> interface exposes three members: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, and <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.</span></span>  <span data-ttu-id="486eb-106"><xref:System.Windows.Input.ICommandSource.Command%2A>是将调用该命令。</span><span class="sxs-lookup"><span data-stu-id="486eb-106"><xref:System.Windows.Input.ICommandSource.Command%2A> is the command which will be invoked.</span></span> <span data-ttu-id="486eb-107"><xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是从命令源传递到该方法用于处理该命令的用户定义数据类型。</span><span class="sxs-lookup"><span data-stu-id="486eb-107">The <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> is a user-defined data type which is passed from the command source to the method which handles the command.</span></span> <span data-ttu-id="486eb-108"><xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是在其执行该命令的对象。</span><span class="sxs-lookup"><span data-stu-id="486eb-108">The <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> is the object that the command is being executed on.</span></span>  
   
- 在本示例中，创建这样一个类：它是 <xref:System.Windows.Controls.Slider> 控件的子类并实现 <xref:System.Windows.Input.ICommandSource>。  
+ <span data-ttu-id="486eb-109">在此示例中，创建类的子类<xref:System.Windows.Controls.Slider>控制和实现<xref:System.Windows.Input.ICommandSource>。</span><span class="sxs-lookup"><span data-stu-id="486eb-109">In this example, a class is created which subclasses the <xref:System.Windows.Controls.Slider> control and implements <xref:System.Windows.Input.ICommandSource>.</span></span>  
   
-## 示例  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供许多实现 <xref:System.Windows.Input.ICommandSource> 的类，如 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.MenuItem> 和 <xref:System.Windows.Controls.ListBoxItem>。  命令源定义其调用命令的方式。  单击 <xref:System.Windows.Controls.Button> 和 <xref:System.Windows.Controls.MenuItem> 时，它们就会调用命令。  <xref:System.Windows.Controls.ListBoxItem> 在被双击时调用一个命令。  这些类只有在设置了 <xref:System.Windows.Input.ICommandSource.Command%2A> 属性时才会成为命令源。  
+## <a name="example"></a><span data-ttu-id="486eb-110">示例</span><span class="sxs-lookup"><span data-stu-id="486eb-110">Example</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="486eb-111">提供了多个类实现该<xref:System.Windows.Input.ICommandSource>，如<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Controls.ListBoxItem>。</span><span class="sxs-lookup"><span data-stu-id="486eb-111"> provides a number of classes which implement <xref:System.Windows.Input.ICommandSource>, such as <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, and <xref:System.Windows.Controls.ListBoxItem>.</span></span>  <span data-ttu-id="486eb-112">命令源定义它将命令的调用。</span><span class="sxs-lookup"><span data-stu-id="486eb-112">A command source defines how it invokes a command.</span></span>   <span data-ttu-id="486eb-113"><xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.MenuItem>在被单击时调用的命令。</span><span class="sxs-lookup"><span data-stu-id="486eb-113"><xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.MenuItem> invoke a command when they are clicked.</span></span>  <span data-ttu-id="486eb-114">A<xref:System.Windows.Controls.ListBoxItem>时被双击调用命令。</span><span class="sxs-lookup"><span data-stu-id="486eb-114">A <xref:System.Windows.Controls.ListBoxItem> invokes a command when it is double clicked.</span></span> <span data-ttu-id="486eb-115">这些类仅会成为命令源时其<xref:System.Windows.Input.ICommandSource.Command%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="486eb-115">These classes only become a command source when their <xref:System.Windows.Input.ICommandSource.Command%2A> property is set.</span></span>  
   
- 对于本示例，我们将在滑块移动时调用命令，更准确地说，是在 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 属性更改时调用命令。  
+ <span data-ttu-id="486eb-116">此示例中我们将调用该命令，当移动滑块时，更准确地说，当<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>属性更改。</span><span class="sxs-lookup"><span data-stu-id="486eb-116">For this example we will invoke the command when the slider is moved, or more accurately, when the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> property is changed.</span></span>  
   
- 类定义如下。  
+ <span data-ttu-id="486eb-117">下面是类定义。</span><span class="sxs-lookup"><span data-stu-id="486eb-117">The following is the class definition.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- 下一步是实现 <xref:System.Windows.Input.ICommandSource> 成员。  在本示例中，属性实现为 <xref:System.Windows.DependencyProperty> 对象。  这使属性可以使用数据绑定。  有关 <xref:System.Windows.DependencyProperty> 类的更多信息，请参见[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  有关数据绑定的更多信息，请参见[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ <span data-ttu-id="486eb-118">下一步是实现<xref:System.Windows.Input.ICommandSource>成员。</span><span class="sxs-lookup"><span data-stu-id="486eb-118">The next step is to implement the <xref:System.Windows.Input.ICommandSource> members.</span></span>  <span data-ttu-id="486eb-119">在此示例中，属性作为实现<xref:System.Windows.DependencyProperty>对象。</span><span class="sxs-lookup"><span data-stu-id="486eb-119">In this example, the properties are implemented as <xref:System.Windows.DependencyProperty> objects.</span></span>  <span data-ttu-id="486eb-120">这样，要使用数据绑定的属性。</span><span class="sxs-lookup"><span data-stu-id="486eb-120">This enables the properties to use data binding.</span></span>  <span data-ttu-id="486eb-121">有关详细信息<xref:System.Windows.DependencyProperty>类，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="486eb-121">For more information about the <xref:System.Windows.DependencyProperty> class, see the [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  <span data-ttu-id="486eb-122">有关数据绑定的详细信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="486eb-122">For more information about data binding, see the [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
- 这里只显示 <xref:System.Windows.Input.ICommandSource.Command%2A> 属性。  
+ <span data-ttu-id="486eb-123">仅<xref:System.Windows.Input.ICommandSource.Command%2A>属性如下所示。</span><span class="sxs-lookup"><span data-stu-id="486eb-123">Only the <xref:System.Windows.Input.ICommandSource.Command%2A> property is shown here.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
- 下面是 <xref:System.Windows.DependencyProperty> 更改回调。  
+ <span data-ttu-id="486eb-124">以下是<xref:System.Windows.DependencyProperty>更改回调。</span><span class="sxs-lookup"><span data-stu-id="486eb-124">The following is the <xref:System.Windows.DependencyProperty> change callback.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- 下一步是添加和移除与命令源关联的命令。  在添加新命令时，不能简单地改写 <xref:System.Windows.Input.ICommandSource.Command%2A> 属性，因为必须先移除与前一个命令关联的事件处理程序（如果有的话）。  
+ <span data-ttu-id="486eb-125">下一步是添加和删除与命令源关联的命令。</span><span class="sxs-lookup"><span data-stu-id="486eb-125">The next step is to add and remove the command which is associated with the command source.</span></span>  <span data-ttu-id="486eb-126"><xref:System.Windows.Input.ICommandSource.Command%2A>属性不能只需被覆盖时添加一个新的命令，因为事件处理程序与前一个命令中，如果有的话，必须先删除。</span><span class="sxs-lookup"><span data-stu-id="486eb-126">The <xref:System.Windows.Input.ICommandSource.Command%2A> property cannot simply be overwritten when a new command is added, because the event handlers associated with the previous command, if there was one, must be removed first.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
- 最后一步是为 <xref:System.Windows.Input.ICommand.CanExecuteChanged> 处理程序和 <xref:System.Windows.Input.ICommand.Execute%2A> 方法创建逻辑。  
+ <span data-ttu-id="486eb-127">最后一步是创建逻辑<xref:System.Windows.Input.ICommand.CanExecuteChanged>处理程序和<xref:System.Windows.Input.ICommand.Execute%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="486eb-127">The last step is to create logic for the <xref:System.Windows.Input.ICommand.CanExecuteChanged> handler and the <xref:System.Windows.Input.ICommand.Execute%2A> method.</span></span>  
   
- <xref:System.Windows.Input.ICommand.CanExecuteChanged> 事件通知命令源，在当前命令目标上执行命令的能力可能已更改。  当命令源接收到此事件时，通常会对命令调用 <xref:System.Windows.Input.ICommand.CanExecute%2A> 方法。  如果命令无法在当前命令目标上执行，那么命令源通常会禁用自身。  如果命令可以在当前命令目标上执行，那么命令源通常会启用自身。  
+ <span data-ttu-id="486eb-128"><xref:System.Windows.Input.ICommand.CanExecuteChanged>事件通知当前的命令目标执行命令的能力可能已更改的命令源。</span><span class="sxs-lookup"><span data-stu-id="486eb-128">The <xref:System.Windows.Input.ICommand.CanExecuteChanged> event notifies the command source that the ability of the command to execute on the current command target may have changed.</span></span>  <span data-ttu-id="486eb-129">当命令源收到此事件时，它通常会调用<xref:System.Windows.Input.ICommand.CanExecute%2A>命令的方法。</span><span class="sxs-lookup"><span data-stu-id="486eb-129">When a command source receives this event, it typically calls the <xref:System.Windows.Input.ICommand.CanExecute%2A> method on the command.</span></span>  <span data-ttu-id="486eb-130">如果该命令不能执行当前命令目标，命令源通常会禁用自身。</span><span class="sxs-lookup"><span data-stu-id="486eb-130">If the command cannot execute on the current command target, the command source will typically disable itself.</span></span>  <span data-ttu-id="486eb-131">如果此命令可执行对当前的命令目标，命令源通常会启用自身。</span><span class="sxs-lookup"><span data-stu-id="486eb-131">If the command can execute on the current command target, the command source will typically enable itself.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
- 最后一步是 <xref:System.Windows.Input.ICommand.Execute%2A> 方法。  如果命令是 <xref:System.Windows.Input.RoutedCommand>，则会调用 <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> 方法；否则会调用 <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> 方法。  
+ <span data-ttu-id="486eb-132">最后一步是<xref:System.Windows.Input.ICommand.Execute%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="486eb-132">The last step is the <xref:System.Windows.Input.ICommand.Execute%2A> method.</span></span>  <span data-ttu-id="486eb-133">如果该命令是<xref:System.Windows.Input.RoutedCommand>、 <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A>方法是调用; 否则为<xref:System.Windows.Input.ICommand><xref:System.Windows.Input.ICommand.Execute%2A>调用方法。</span><span class="sxs-lookup"><span data-stu-id="486eb-133">If the command is a <xref:System.Windows.Input.RoutedCommand>, the <xref:System.Windows.Input.RoutedCommand> <xref:System.Windows.Input.RoutedCommand.Execute%2A> method is called; otherwise, the <xref:System.Windows.Input.ICommand> <xref:System.Windows.Input.ICommand.Execute%2A> method is called.</span></span>  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## 请参阅  
- <xref:System.Windows.Input.ICommandSource>   
- <xref:System.Windows.Input.ICommand>   
- <xref:System.Windows.Input.RoutedCommand>   
- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+## <a name="see-also"></a><span data-ttu-id="486eb-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="486eb-134">See Also</span></span>  
+ <xref:System.Windows.Input.ICommandSource>  
+ <xref:System.Windows.Input.ICommand>  
+ <xref:System.Windows.Input.RoutedCommand>  
+ [<span data-ttu-id="486eb-135">命令概述</span><span class="sxs-lookup"><span data-stu-id="486eb-135">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)

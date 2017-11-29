@@ -1,38 +1,42 @@
 ---
-title: "执行属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "执行属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5a394ff136464dd2e69f8c38f07b1b2542bf4a87
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 执行属性
-此示例演示如何在自定义活动中定义并使用执行属性。在此示例中，执行属性可确定控制台的前景色。示例工作流演示执行的各个逻辑路径（<xref:System.Activities.Statements.Parallel> 活动的分支）如何保留不同的控制台颜色，而不管活动的交错执行（跨 <xref:System.Activities.Statements.Parallel> 活动的分支）。  
+# <a name="execution-properties"></a><span data-ttu-id="ca6f1-102">执行属性</span><span class="sxs-lookup"><span data-stu-id="ca6f1-102">Execution Properties</span></span>
+<span data-ttu-id="ca6f1-103">此示例演示如何在自定义活动中定义并使用执行属性。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-103">This sample shows how to define and use an execution property in a custom activity.</span></span> <span data-ttu-id="ca6f1-104">在此示例中，执行属性可确定控制台的前景色。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-104">In this example, the execution property determines the console's foreground color.</span></span> <span data-ttu-id="ca6f1-105">示例工作流演示执行的各个逻辑路径（<xref:System.Activities.Statements.Parallel> 活动的分支）如何保留不同的控制台颜色，而不管活动的交错执行（跨 <xref:System.Activities.Statements.Parallel> 活动的分支）。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-105">An example workflow shows how different logical paths of execution (branches of a <xref:System.Activities.Statements.Parallel> activity) can maintain different console colors despite interleaved execution of activities (across the branches of the <xref:System.Activities.Statements.Parallel> activity).</span></span>  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ca6f1-106">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="ca6f1-106">To set up, build, and run the sample</span></span>  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 ExecutionProperties.sln 示例解决方案。  
+1.  <span data-ttu-id="ca6f1-107">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 ExecutionProperties.sln 示例解决方案。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-107">Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
     > [!NOTE]
-    >  由于必须在生成解决方案的同时生成使用的自定义活动，因此在生成解决方案前查看 ThreeColors.xaml 会显示错误。  
+    >  <span data-ttu-id="ca6f1-108">由于必须在生成解决方案的同时生成使用的自定义活动，因此在生成解决方案前查看 ThreeColors.xaml 会显示错误。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-108">Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.</span></span>  
   
-2.  生成和运行解决方案。  
+2.  <span data-ttu-id="ca6f1-109">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-109">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="ca6f1-110">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ca6f1-111">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="ca6f1-111">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="ca6f1-112">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="ca6f1-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ca6f1-113">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="ca6f1-113">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="ca6f1-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ca6f1-114">See Also</span></span>

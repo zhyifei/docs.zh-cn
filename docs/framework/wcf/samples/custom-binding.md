@@ -1,33 +1,36 @@
 ---
-title: "自定义绑定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义绑定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0df615d0320c769aa986e8cca5d272ab6df4ad2d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 自定义绑定
-本节包含演示如何使用终结点元素的自定义绑定特性的示例。  
+# <a name="custom-binding"></a><span data-ttu-id="1a44a-102">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="1a44a-102">Custom Binding</span></span>
+<span data-ttu-id="1a44a-103">本节包含演示如何使用终结点元素的自定义绑定特性的示例。</span><span class="sxs-lookup"><span data-stu-id="1a44a-103">This section contains samples that demonstrate using a custom binding attribute of an endpoint element.</span></span>  
   
-## 本节内容  
- [自定义绑定命令](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
- 演示如何在不使用配置文件或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成的客户端的情况下，编写命令性代码以定义和使用自定义绑定。  
+## <a name="in-this-section"></a><span data-ttu-id="1a44a-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="1a44a-104">In This Section</span></span>  
+ [<span data-ttu-id="1a44a-105">自定义绑定命令</span><span class="sxs-lookup"><span data-stu-id="1a44a-105">Custom Binding Imperative</span></span>](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
+ <span data-ttu-id="1a44a-106">演示如何在不使用配置文件或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成的客户端的情况下，编写命令性代码以定义和使用自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="1a44a-106">Demonstrates how to write imperative code to define and use custom bindings without using a configuration file or a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generated client.</span></span>  
   
- [自定义绑定传输和编码](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
- 演示如何使用各种传输和消息编码元素来配置自定义绑定。  
+ [<span data-ttu-id="1a44a-107">自定义绑定传输和编码</span><span class="sxs-lookup"><span data-stu-id="1a44a-107">Custom Binding Transport and Encoding</span></span>](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
+ <span data-ttu-id="1a44a-108">演示如何使用各种传输和消息编码元素来配置自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="1a44a-108">Demonstrates how to configure a custom binding with various transport and message encoding elements.</span></span>  
   
- [自定义绑定可靠会话](../../../../docs/framework/wcf/samples/custom-binding-reliable-session.md)  
- 演示如何使用各种传输和消息编码元素来配置自定义绑定，尤其是启用可靠会话。  
+ [<span data-ttu-id="1a44a-109">自定义绑定可靠会话</span><span class="sxs-lookup"><span data-stu-id="1a44a-109">Custom Binding Reliable Session</span></span>](../../../../docs/framework/wcf/samples/custom-binding-reliable-session.md)  
+ <span data-ttu-id="1a44a-110">演示如何使用各种传输和消息编码元素配置自定义绑定，特别是启用可靠会话。</span><span class="sxs-lookup"><span data-stu-id="1a44a-110">Demonstrates how to configure a custom binding with various transport and message encoding elements, especially enabling reliable sessions.</span></span>  
   
- [基于 HTTPS 的自定义绑定可靠会话](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)  
- 演示将 SSL 传输安全用于可靠会话。
+ [<span data-ttu-id="1a44a-111">自定义绑定可靠会话通过 HTTPS</span><span class="sxs-lookup"><span data-stu-id="1a44a-111">Custom Binding Reliable Session over HTTPS</span></span>](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)  
+ <span data-ttu-id="1a44a-112">演示对可靠会话使用 SSL 传输安全。</span><span class="sxs-lookup"><span data-stu-id="1a44a-112">Demonstrates the use of SSL transport security with Reliable Sessions.</span></span>

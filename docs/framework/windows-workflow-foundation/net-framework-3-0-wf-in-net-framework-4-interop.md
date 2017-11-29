@@ -1,63 +1,67 @@
 ---
-title: "在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5dd122549c1977745f198a83484495e3fd960ebf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用
- <xref:System.Activities.Statements.Interop> 活动是 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活动包装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 内的 (WF 3.5) 活动 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流。 WF 3 活动可以是单叶活动，也可以是整个活动树。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的执行（包括取消和异常处理）和持久化在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中进行。  
+# <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a><span data-ttu-id="d9d5a-102">在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用</span><span class="sxs-lookup"><span data-stu-id="d9d5a-102">Using .NET Framework 3.0 WF Activities in .NET Framework 4 with the Interop Activity</span></span>
+<span data-ttu-id="d9d5a-103"><xref:System.Activities.Statements.Interop> 活动是一个 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活动，该活动将一个 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活动包装在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-103">The <xref:System.Activities.Statements.Interop> activity is a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) activity that wraps a [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) activity within a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="d9d5a-104">WF 3 活动可以是单叶活动，也可以是整个活动树。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-104">The WF 3 activity can be a single leaf activity or an entire tree of activities.</span></span> <span data-ttu-id="d9d5a-105">[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的执行（包括取消和异常处理）和持久化在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中进行。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-105">The execution (including cancellation and exception handling) and the persistence of the [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity occur within the context of the [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow instance that is executing.</span></span>  
   
 > [!NOTE]
->   <xref:System.Activities.Statements.Interop> 活动不会不会显示在工作流设计器工具箱除非工作流的项目都有其 **目标框架** 设置设为 **.NET Framework 4.5**。  
+>  <span data-ttu-id="d9d5a-106"><xref:System.Activities.Statements.Interop>活动在工作流的项目具有除非未出现在工作流设计器工具箱其**目标框架**设置设为**.NET Framework 4.5**。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-106">The <xref:System.Activities.Statements.Interop> activity does not appear in the workflow designer toolbox unless the workflow's project has its **Target Framework** setting set to **.NET Framework 4.5**.</span></span>  
   
-## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>将 WF 3 活动与 Interop 活动一起使用的条件  
- 若要成功执行在使 WF 3 活动 <xref:System.Activities.Statements.Interop> 活动，必须满足以下条件︰  
+## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a><span data-ttu-id="d9d5a-107">将 WF 3 活动与 Interop 活动一起使用的条件</span><span class="sxs-lookup"><span data-stu-id="d9d5a-107">Criteria for Using a WF 3 Activity with an Interop Activity</span></span>  
+ <span data-ttu-id="d9d5a-108">若要使 WF 3 活动在 <xref:System.Activities.Statements.Interop> 活动中成功执行，必须满足以下条件：</span><span class="sxs-lookup"><span data-stu-id="d9d5a-108">For a WF 3 activity to successfully execute within an <xref:System.Activities.Statements.Interop> activity, the following criteria must be met:</span></span>  
   
--   WF 3 活动必须派生自 <xref:System.Workflow.ComponentModel.Activity?displayProperty=fullName>。  
+-   <span data-ttu-id="d9d5a-109">WF 3 活动必须派生自 <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-109">The WF 3 activity must derive from <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.</span></span>  
   
--   必须将 WF 3 活动声明为 `public`，不能为 `abstract`。  
+-   <span data-ttu-id="d9d5a-110">必须将 WF 3 活动声明为 `public`，不能为 `abstract`。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-110">The WF 3 activity must be declared as `public` and cannot be `abstract`.</span></span>  
   
--   WF 3 活动必须具有一个公共的默认构造函数。  
+-   <span data-ttu-id="d9d5a-111">WF 3 活动必须具有一个公共的默认构造函数。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-111">The WF 3 activity must have a public default constructor.</span></span>  
   
--   由于在界面中的限制类型 <xref:System.Activities.Statements.Interop> 活动可以支持， <xref:System.Workflow.Activities.HandleExternalEventActivity> 和 <xref:System.Workflow.Activities.CallExternalMethodActivity> 不能为使用直接，但是的派生活动创建工作流通信活动工具 (WCA.exe) 可以使用。 请参阅 [Windows Workflow Foundation 工具](http://go.microsoft.com/fwlink/?LinkId=178889) 有关的详细信息。  
+-   <span data-ttu-id="d9d5a-112">由于 <xref:System.Activities.Statements.Interop> 活动可以支持的接口类型的限制，因此无法直接使用 <xref:System.Workflow.Activities.HandleExternalEventActivity> 和 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但是可以使用通过工作流通信活动工具 (WCA.exe) 创建的派生活动。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-112">Due to limitations in the interface types that the <xref:System.Activities.Statements.Interop> activity can support, <xref:System.Workflow.Activities.HandleExternalEventActivity> and <xref:System.Workflow.Activities.CallExternalMethodActivity> cannot be used directly, but derivative activities created using the Workflow Communication Activity tool (WCA.exe) can be used.</span></span> <span data-ttu-id="d9d5a-113">请参阅[Windows Workflow Foundation 工具](http://go.microsoft.com/fwlink/?LinkId=178889)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-113">See [Windows Workflow Foundation Tools](http://go.microsoft.com/fwlink/?LinkId=178889) for details.</span></span>  
   
-## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>在 Interop 活动中配置 WF 3 活动  
- 若要配置和跨互操作边界将数据传入和传出 WF 3 活动，WF 3 活动的元数据属性公开的属性和 <xref:System.Activities.Statements.Interop> 活动。 WF 3 活动的元数据属性 (如 <xref:System.Workflow.ComponentModel.Activity.Name%2A>) 通过公开 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 集合。 这是一个名称/值对的集合，用于为 WF 3 活动的元数据属性定义值。 元数据属性是为其支持依赖项属性的属性 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions> 设置标志。  
+## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a><span data-ttu-id="d9d5a-114">在 Interop 活动中配置 WF 3 活动</span><span class="sxs-lookup"><span data-stu-id="d9d5a-114">Configuring a WF 3 Activity Within an Interop Activity</span></span>  
+ <span data-ttu-id="d9d5a-115">若要跨互操作边界配置 WF 3 活动并将数据传入和传出该活动，则 <xref:System.Activities.Statements.Interop> 活动应公开 WF 3 活动的属性和元数据属性。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-115">To configure and pass data into and out of a WF 3 activity, across the interoperation boundary, the WF 3 activity’s properties and metadata properties are exposed by the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="d9d5a-116">WF 3 活动的元数据属性（如 <xref:System.Workflow.ComponentModel.Activity.Name%2A>）通过 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 集合公开。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-116">The WF 3 activity’s metadata properties (such as <xref:System.Workflow.ComponentModel.Activity.Name%2A>) are exposed through the <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> collection.</span></span> <span data-ttu-id="d9d5a-117">这是一个名称/值对的集合，用于为 WF 3 活动的元数据属性定义值。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-117">This is a collection of name-value pairs used to define the values for the WF 3 activity’s metadata properties.</span></span> <span data-ttu-id="d9d5a-118">元数据属性是由设置了 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 标志的依赖项属性支持的属性。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-118">A metadata property is a property backed by dependency property for which the <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> flag is set.</span></span>  
   
- 通过公开 WF 3 活动属性 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 集合。 这是一组名称 / 值对，其中每个值 <xref:System.Activities.Argument> 对象，用于为 WF 3 活动的属性定义参数。 由于无法推断 WF 3 活动属性的方向，每个属性呈现为 <xref:System.Activities.InArgument>/<xref:System.Activities.OutArgument> 对。 根据活动的使用情况的属性，您可能想要提供 <xref:System.Activities.InArgument> 条目， <xref:System.Activities.OutArgument> 条目，或两者。 所需的名称 <xref:System.Activities.InArgument> 对集合中的项的 WF 3 活动上定义为属性的名称。 所需的名称 <xref:System.Activities.OutArgument> 集合中的条目将是属性的名称和字符串"Out"的串联。  
+ <span data-ttu-id="d9d5a-119">WF 3 活动的属性通过 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 集合公开。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-119">The WF 3 activity’s properties are exposed through the <xref:System.Activities.Statements.Interop.ActivityProperties%2A> collection.</span></span> <span data-ttu-id="d9d5a-120">这是一个名称/值对的集合，其中每个值都是一个 <xref:System.Activities.Argument> 对象，用于为 WF 3 活动的属性定义参数。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-120">This is a set of name-value pairs, where each value is a <xref:System.Activities.Argument> object, used to define the arguments for the WF 3 activity’s properties.</span></span> <span data-ttu-id="d9d5a-121">因为不能推断 WF 3 活动属性的方向，将每个属性呈现为<xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument>对。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-121">Because the direction of a WF 3 activity property cannot be inferred, every property is surfaced as an <xref:System.Activities.InArgument>/<xref:System.Activities.OutArgument> pair.</span></span> <span data-ttu-id="d9d5a-122">根据活动属性的用法的不同，您可能希望提供一个 <xref:System.Activities.InArgument> 项和/或一个 <xref:System.Activities.OutArgument> 项。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-122">Depending on the activity’s usage of the property, you may want to provide an <xref:System.Activities.InArgument> entry, an <xref:System.Activities.OutArgument> entry, or both.</span></span> <span data-ttu-id="d9d5a-123">集合中 <xref:System.Activities.InArgument> 项的期望名称为在 WF 3 活动上定义的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-123">The expected name of the <xref:System.Activities.InArgument> entry in the collection is the name of the property as defined on the WF 3 activity.</span></span> <span data-ttu-id="d9d5a-124">期望的名称<xref:System.Activities.OutArgument>集合中的项是属性和字符串"Out"的名称的串联。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-124">The expected name of the <xref:System.Activities.OutArgument> entry in the collection is a concatenation of the name of the property and the string "Out".</span></span>  
   
-## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>在 Interop 活动中使用 WF 3 活动的限制  
- WF 3 系统提供的活动不能直接包装在 <xref:System.Activities.Statements.Interop> 活动。 对于某些 WF 3 活动，如 <xref:System.Workflow.Activities.DelayActivity>, ，这是因为存在类似的 WF 4.5 活动。 对于其他活动，这是因为不支持活动的这个功能。 许多 WF 3 系统提供的活动可以在通过包装的工作流使用 <xref:System.Activities.Statements.Interop> 活动，但受到以下限制︰  
+## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a><span data-ttu-id="d9d5a-125">在 Interop 活动中使用 WF 3 活动的限制</span><span class="sxs-lookup"><span data-stu-id="d9d5a-125">Limitations of Using a WF 3 Activity Within an Interop Activity</span></span>  
+ <span data-ttu-id="d9d5a-126">不能将 WF 3 系统提供的活动直接包装在 <xref:System.Activities.Statements.Interop> 活动中。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-126">The WF 3 system-provided activities cannot be directly wrapped in an <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="d9d5a-127">对于某些 WF 3 活动，如 <xref:System.Workflow.Activities.DelayActivity>，这是因为存在类似的 WF 4.5 活动。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-127">For some WF 3 activities, such as <xref:System.Workflow.Activities.DelayActivity>, this is because there is an analogous WF 4.5 activity.</span></span> <span data-ttu-id="d9d5a-128">对于其他活动，这是因为不支持活动的这个功能。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-128">For others, this is because the functionality of the activity is not supported.</span></span> <span data-ttu-id="d9d5a-129">许多 WF 3 系统提供的活动可在由 <xref:System.Activities.Statements.Interop> 活动包装的工作流中使用，但受到以下限制：</span><span class="sxs-lookup"><span data-stu-id="d9d5a-129">Many WF 3 system-provided activities can be used within workflows wrapped by the <xref:System.Activities.Statements.Interop> activity, subject to the following restrictions:</span></span>  
   
-1.  <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 中不能使用 <xref:System.Activities.Statements.Interop> 活动。  
+1.  <span data-ttu-id="d9d5a-130">不能在 <xref:System.ServiceModel.Activities.Send> 活动中使用 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.Activities.Statements.Interop>。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-130"><xref:System.ServiceModel.Activities.Send> and <xref:System.ServiceModel.Activities.Receive> cannot be used in an <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
-2.  <xref:System.Workflow.Activities.WebServiceInputActivity>, ，<xref:System.Workflow.Activities.WebServiceOutputActivity>, ，和 <xref:System.Workflow.Activities.WebServiceFaultActivity> 中不能使用 <xref:System.Activities.Statements.Interop> 活动。  
+2.  <span data-ttu-id="d9d5a-131">不能在 <xref:System.Workflow.Activities.WebServiceInputActivity> 活动中使用 <xref:System.Workflow.Activities.WebServiceOutputActivity>、<xref:System.Workflow.Activities.WebServiceFaultActivity> 和 <xref:System.Activities.Statements.Interop>。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-131"><xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, and <xref:System.Workflow.Activities.WebServiceFaultActivity> cannot be used within an <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
-3.  <xref:System.Workflow.Activities.InvokeWorkflowActivity> 中不能使用 <xref:System.Activities.Statements.Interop> 活动。  
+3.  <span data-ttu-id="d9d5a-132">不能在 <xref:System.Workflow.Activities.InvokeWorkflowActivity> 活动中使用 <xref:System.Activities.Statements.Interop>。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-132"><xref:System.Workflow.Activities.InvokeWorkflowActivity> cannot be used within an <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
-4.  <xref:System.Workflow.ComponentModel.SuspendActivity> 中不能使用 <xref:System.Activities.Statements.Interop> 活动。  
+4.  <span data-ttu-id="d9d5a-133">不能在 <xref:System.Workflow.ComponentModel.SuspendActivity> 活动中使用 <xref:System.Activities.Statements.Interop>。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-133"><xref:System.Workflow.ComponentModel.SuspendActivity> cannot be used within an <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
-5.  中不能使用与补偿相关的活动 <xref:System.Activities.Statements.Interop> 活动。  
+5.  <span data-ttu-id="d9d5a-134">不能在 <xref:System.Activities.Statements.Interop> 活动中使用与补偿相关的活动。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-134">Compensation-related activities cannot be used within an <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
- 另外，还有一些行为具体信息可了解有关使用 WF 3 活动内 <xref:System.Activities.Statements.Interop> 活动︰  
+ <span data-ttu-id="d9d5a-135">还有一些行为具体信息，可了解有关在 <xref:System.Activities.Statements.Interop> 活动中使用 WF 3 活动的信息：</span><span class="sxs-lookup"><span data-stu-id="d9d5a-135">There are also some behavioral specifics to understand regarding the use of WF 3 activities within the <xref:System.Activities.Statements.Interop> activity:</span></span>  
   
-1.  WF 3 中包含的活动 <xref:System.Activities.Statements.Interop> 活动初始化时 <xref:System.Activities.Statements.Interop> 执行活动。 在 WF 4.5 中，执行之前工作流实例没有初始化阶段。  
+1.  <span data-ttu-id="d9d5a-136">执行 <xref:System.Activities.Statements.Interop> 活动时会对 <xref:System.Activities.Statements.Interop> 活动中包含的 WF 3 活动进行初始化。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-136">WF 3 activities contained within an <xref:System.Activities.Statements.Interop> activity are initialized when the <xref:System.Activities.Statements.Interop> activity is executed.</span></span> <span data-ttu-id="d9d5a-137">在 WF 4.5 中，执行之前工作流实例没有初始化阶段。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-137">In WF 4.5 there is no initialization phase for a workflow instance prior to its execution.</span></span>  
   
-2.  WF 4.5 运行时事务开始后，无论事务开始的位置没有检查点工作流实例状态 (内部还是外部 <xref:System.Activities.Statements.Interop> 活动)。  
+2.  <span data-ttu-id="d9d5a-138">事务开始后，WF 4.5 运行时没有检查点工作流实例状态，无论事务开始的位置如何（在 <xref:System.Activities.Statements.Interop> 活动内部还是外部）。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-138">The WF 4.5 runtime does not checkpoint workflow instance state when a transaction begins, regardless of where that transaction begins (within or outside of an <xref:System.Activities.Statements.Interop> activity).</span></span>  
   
-3.  中活动的 WF 3 跟踪记录 <xref:System.Activities.Statements.Interop> 活动提供给 WF 4.5 跟踪参与者为 <xref:System.Activities.Tracking.InteropTrackingRecord> 对象。 <xref:System.Activities.Tracking.InteropTrackingRecord> 派生 <xref:System.Activities.Tracking.CustomTrackingRecord>。  
+3.  <span data-ttu-id="d9d5a-139">将  <xref:System.Activities.Statements.Interop> 活动中活动的 WF 3 跟踪记录以 <xref:System.Activities.Tracking.InteropTrackingRecord> 对象的形式提供给 WF 4.5 跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-139">WF 3 tracking records for activities within an <xref:System.Activities.Statements.Interop> activity are provided to WF 4.5 tracking participants as <xref:System.Activities.Tracking.InteropTrackingRecord> objects.</span></span> <span data-ttu-id="d9d5a-140"><xref:System.Activities.Tracking.InteropTrackingRecord> 是从 <xref:System.Activities.Tracking.CustomTrackingRecord> 派生的。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-140"><xref:System.Activities.Tracking.InteropTrackingRecord> is a derivative of <xref:System.Activities.Tracking.CustomTrackingRecord>.</span></span>  
   
-4.  WF 3 自定义活动可以在互操作环境中使用工作流队列访问数据，其访问方式与在 WF 3 工作流运行时中完全相同。 不需要更改任何自定义活动代码。 在主机上，数据排入 WF 3 工作流队列是通过恢复 <xref:System.Activities.Bookmark>。 书签的名称是字符串形式的 <xref:System.IComparable> 工作流队列名称。  
+4.  <span data-ttu-id="d9d5a-141">WF 3 自定义活动可以在互操作环境中使用工作流队列访问数据，其访问方式与在 WF 3 工作流运行时中完全相同。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-141">A WF 3 custom activity can access data using workflow queues within the interoperation environment in exactly the same way as within the WF 3 workflow runtime.</span></span> <span data-ttu-id="d9d5a-142">不需要更改任何自定义活动代码。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-142">No custom activity code changes are required.</span></span> <span data-ttu-id="d9d5a-143">在宿主上，通过恢复 <xref:System.Activities.Bookmark> 可将数据排入 WF 3 工作流队列。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-143">On the host, data is enqueued to a WF 3 workflow queue by resuming a <xref:System.Activities.Bookmark>.</span></span> <span data-ttu-id="d9d5a-144">书签的名称是字符串形式的 <xref:System.IComparable> 工作流队列名称。</span><span class="sxs-lookup"><span data-stu-id="d9d5a-144">The name of the bookmark is the string form of the <xref:System.IComparable> workflow queue name.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在.NET Framework 4.5 工作流中使用.NET Framework 3.0 或.NET Framework 3.5 活动](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+## <a name="see-also"></a><span data-ttu-id="d9d5a-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d9d5a-145">See Also</span></span>  
+ [<span data-ttu-id="d9d5a-146">在.NET Framework 4.5 工作流中使用.NET Framework 3.0 或.NET Framework 3.5 活动</span><span class="sxs-lookup"><span data-stu-id="d9d5a-146">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

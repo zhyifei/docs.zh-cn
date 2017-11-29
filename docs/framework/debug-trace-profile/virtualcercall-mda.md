@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
 - virtualCERCall MDA
@@ -22,33 +16,32 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 334900cbcc04cb1883b93a6bac17309add9ec159
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f3f0c06eef7524c18e252ade9122d8c9cb3c2f8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="virtualcercall-mda"></a>virtualCERCall MDA
-`virtualCERCall` 托管调试助手 (MDA) 作为警告被激活，指示某个受约束的执行区域 (CER) 调用关系图中的调用站点引用了虚拟目标，即对非最终虚拟方法的虚拟调用或使用接口的调用。 公共语言运行时 (CLR) 无法只凭中间语言和元数据分析预测这些调用的目标方法。 因此无法将调用树准备为 CER 关系图的一部分，且无法阻止该子树中的线程中止。 此 MDA 警告以下情况：一旦计算调用目标所需的附加信息在运行时已知，则可能需要使用对 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法的显式调用来扩展 CER。  
+# <a name="virtualcercall-mda"></a><span data-ttu-id="4d54f-102">virtualCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="4d54f-102">virtualCERCall MDA</span></span>
+<span data-ttu-id="4d54f-103">`virtualCERCall` 托管调试助手 (MDA) 作为警告被激活，指示某个受约束的执行区域 (CER) 调用关系图中的调用站点引用了虚拟目标，即对非最终虚拟方法的虚拟调用或使用接口的调用。</span><span class="sxs-lookup"><span data-stu-id="4d54f-103">The `virtualCERCall` managed debugging assistant (MDA) is activated as a warning indicating that a call site within a constrained execution region (CER) call graph refers to a virtual target, that is, a virtual call to a non-final virtual method or a call using an interface.</span></span> <span data-ttu-id="4d54f-104">公共语言运行时 (CLR) 无法只凭中间语言和元数据分析预测这些调用的目标方法。</span><span class="sxs-lookup"><span data-stu-id="4d54f-104">The common language runtime (CLR) cannot predict the destination method of these calls from the intermediate language and metadata analysis alone.</span></span> <span data-ttu-id="4d54f-105">因此无法将调用树准备为 CER 关系图的一部分，且无法阻止该子树中的线程中止。</span><span class="sxs-lookup"><span data-stu-id="4d54f-105">As a result, the call tree cannot be prepared as part of the CER graph and thread aborts in that subtree cannot be automatically blocked.</span></span> <span data-ttu-id="4d54f-106">此 MDA 警告以下情况：一旦计算调用目标所需的附加信息在运行时已知，则可能需要使用对 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法的显式调用来扩展 CER。</span><span class="sxs-lookup"><span data-stu-id="4d54f-106">This MDA warns of cases where a CER might need to be extended by using explicit calls to the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method once the additional information required to compute the call target is known at run time.</span></span>  
   
-## <a name="symptoms"></a>症状  
- 线程中止或应用程序域卸载时 CER 不运行。  
+## <a name="symptoms"></a><span data-ttu-id="4d54f-107">症状</span><span class="sxs-lookup"><span data-stu-id="4d54f-107">Symptoms</span></span>  
+ <span data-ttu-id="4d54f-108">线程中止或应用程序域卸载时 CER 不运行。</span><span class="sxs-lookup"><span data-stu-id="4d54f-108">CERs that do not run when a thread is aborted or an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a>原因  
- CER 包含对无法自动准备的虚拟方法的调用。  
+## <a name="cause"></a><span data-ttu-id="4d54f-109">原因</span><span class="sxs-lookup"><span data-stu-id="4d54f-109">Cause</span></span>  
+ <span data-ttu-id="4d54f-110">CER 包含对无法自动准备的虚拟方法的调用。</span><span class="sxs-lookup"><span data-stu-id="4d54f-110">A CER contains a call to a virtual method that cannot be prepared automatically.</span></span>  
   
-## <a name="resolution"></a>解决方法  
- 为该虚拟方法调用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>。  
+## <a name="resolution"></a><span data-ttu-id="4d54f-111">解决方法</span><span class="sxs-lookup"><span data-stu-id="4d54f-111">Resolution</span></span>  
+ <span data-ttu-id="4d54f-112">为该虚拟方法调用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>。</span><span class="sxs-lookup"><span data-stu-id="4d54f-112">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> for the virtual method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>对运行时的影响  
- 此 MDA 对 CLR 无任何影响。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4d54f-113">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="4d54f-113">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4d54f-114">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="4d54f-114">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>输出  
+## <a name="output"></a><span data-ttu-id="4d54f-115">输出</span><span class="sxs-lookup"><span data-stu-id="4d54f-115">Output</span></span>  
   
 ```  
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
@@ -61,7 +54,7 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a><span data-ttu-id="4d54f-116">配置</span><span class="sxs-lookup"><span data-stu-id="4d54f-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -71,7 +64,7 @@ declaringType name="VirtualCERCall+MyClass"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="4d54f-117">示例</span><span class="sxs-lookup"><span data-stu-id="4d54f-117">Example</span></span>  
   
 ```  
 class MyClass  
@@ -111,8 +104,7 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="4d54f-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4d54f-118">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="4d54f-119">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="4d54f-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="4d54f-120">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="4d54f-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

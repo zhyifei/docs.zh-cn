@@ -1,83 +1,82 @@
 ---
-title: "LINQ to Entities 中的查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "LINQ to Entities 中的查询"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 220416aa4e282cb342ee6080d9040f9f4818fbf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to Entities 中的查询
-查询是一种从数据源检索数据的表达式。  查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。  因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。  语言集成查询 \(LINQ\) 为跨各种数据源和格式处理数据提供了一种更简单的、一致的模型。  在 LINQ 查询中，您始终可以使用编程对象。  
+# <a name="queries-in-linq-to-entities"></a><span data-ttu-id="87744-102">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="87744-102">Queries in LINQ to Entities</span></span>
+<span data-ttu-id="87744-103">查询是一种从数据源检索数据的表达式。</span><span class="sxs-lookup"><span data-stu-id="87744-103">A query is an expression that retrieves data from a data source.</span></span> <span data-ttu-id="87744-104">查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。</span><span class="sxs-lookup"><span data-stu-id="87744-104">Queries are usually expressed in a specialized query language, such as SQL for relational databases and XQuery for XML.</span></span> <span data-ttu-id="87744-105">因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。</span><span class="sxs-lookup"><span data-stu-id="87744-105">Therefore, developers have had to learn a new query language for each type of data source or data format that they query.</span></span> <span data-ttu-id="87744-106">语言集成查询 (LINQ) 为跨各种数据源和格式处理数据提供了一种更简单的、一致的模型。</span><span class="sxs-lookup"><span data-stu-id="87744-106">Language-Integrated Query (LINQ) offers a simpler, consistent model for working with data across various kinds of data sources and formats.</span></span> <span data-ttu-id="87744-107">在 LINQ 查询中，您始终可以使用编程对象。</span><span class="sxs-lookup"><span data-stu-id="87744-107">In a LINQ query, you always work with programming objects.</span></span>  
   
- LINQ 查询操作包含三个操作：获得一个或多个数据源、创建查询并执行查询。  
+ <span data-ttu-id="87744-108">LINQ 查询操作包含三个操作：获得一个或多个数据源、创建查询并执行查询。</span><span class="sxs-lookup"><span data-stu-id="87744-108">A LINQ query operation consists of three actions: obtain the data source or sources, create the query, and execute the query.</span></span>  
   
- 可以通过 LINQ 查询实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口或 <xref:System.Linq.IQueryable%601> 泛型接口的数据源。  <xref:System.Data.Objects.ObjectQuery%601> 泛型类（可实现 <xref:System.Linq.IQueryable%601> 泛型接口）的实例可充当 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的数据源。  <xref:System.Data.Objects.ObjectQuery%601> 泛型类表示一个查询，该查询返回零个或多个类型化对象的集合。  您还可以通过使用 C\# 关键字 `var`（在 Visual Basic 中为 Dim）让编译器推断实体的类型。  
+ <span data-ttu-id="87744-109">可以通过 LINQ 查询实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口或 <xref:System.Linq.IQueryable%601> 泛型接口的数据源。</span><span class="sxs-lookup"><span data-stu-id="87744-109">Data sources that implement the <xref:System.Collections.Generic.IEnumerable%601> generic interface or the <xref:System.Linq.IQueryable%601> generic interface can be queried through LINQ.</span></span> <span data-ttu-id="87744-110">泛型实例<xref:System.Data.Objects.ObjectQuery%601>类，该类实现泛型<xref:System.Linq.IQueryable%601>接口，用作数据源[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询。</span><span class="sxs-lookup"><span data-stu-id="87744-110">Instances of the generic <xref:System.Data.Objects.ObjectQuery%601> class, which implements the generic <xref:System.Linq.IQueryable%601> interface, serve as the data source for [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span> <span data-ttu-id="87744-111"><xref:System.Data.Objects.ObjectQuery%601> 泛型类表示一个查询，该查询返回零个或多个类型化对象的集合。</span><span class="sxs-lookup"><span data-stu-id="87744-111">The <xref:System.Data.Objects.ObjectQuery%601> generic class represents a query that returns a collection of zero or more typed objects.</span></span> <span data-ttu-id="87744-112">你还可以让编译器推断实体的类型通过 C# 关键字`var`（在 Visual Basic 中为灰显）。</span><span class="sxs-lookup"><span data-stu-id="87744-112">You can also let the compiler infer the type of an entity by using the C# keyword `var` (Dim in Visual Basic).</span></span>  
   
- 在查询中，您可以确切指定要从数据源检索哪些信息。  查询也可以指定返回信息之前信息的排序、分组和表现方式。  在 LINQ 中，查询存储在变量中。  如果查询返回一系列值，则查询变量本身必须为可查询的类型。  此查询变量不执行任何操作，也不返回任何数据；它只存储查询信息。  创建查询后必须执行该查询以检索任何数据。  
+ <span data-ttu-id="87744-113">在查询中，您可以确切指定要从数据源检索哪些信息。</span><span class="sxs-lookup"><span data-stu-id="87744-113">In the query, you specify exactly the information that you want to retrieve from the data source.</span></span> <span data-ttu-id="87744-114">查询也可以指定返回信息之前信息的排序、分组和表现方式。</span><span class="sxs-lookup"><span data-stu-id="87744-114">A query can also specify how that information should be sorted, grouped, and shaped before it is returned.</span></span> <span data-ttu-id="87744-115">在 LINQ 中，查询存储在变量中。</span><span class="sxs-lookup"><span data-stu-id="87744-115">In LINQ, a query is stored in a variable.</span></span> <span data-ttu-id="87744-116">如果查询返回一系列值，则查询变量本身必须为可查询的类型。</span><span class="sxs-lookup"><span data-stu-id="87744-116">If the query returns a sequence of values, the query variable itself must be a queryable type.</span></span> <span data-ttu-id="87744-117">此查询变量不执行任何操作，也不返回任何数据；它只存储查询信息。</span><span class="sxs-lookup"><span data-stu-id="87744-117">This query variable takes no action and returns no data; it only stores the query information.</span></span> <span data-ttu-id="87744-118">创建查询后必须执行该查询以检索任何数据。</span><span class="sxs-lookup"><span data-stu-id="87744-118">After you create a query you must execute that query to retrieve any data.</span></span>  
   
-## 查询语法  
- 可以通过两种不同的语法编写 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询：查询表达式语法和基于方法的查询语法。  查询表达式语法是 C\# 3.0 和 Visual Basic 9.0 中的新增功能，它由一组用类似于 Transact\-SQL 或 XQuery 的声明性语法所编写的子句组成。  不过，[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 公共语言运行库 \(CLR\) 无法读取查询表达式语法本身。  因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。  这些方法称为“标准查询运算符”。  作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。有关详细信息，请参阅[Query Syntax and Method Syntax in LINQ](../Topic/Query%20Syntax%20and%20Method%20Syntax%20in%20LINQ%20\(C%23\).md)。  
+## <a name="query-syntax"></a><span data-ttu-id="87744-119">查询语法</span><span class="sxs-lookup"><span data-stu-id="87744-119">Query Syntax</span></span>  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]<span data-ttu-id="87744-120">可以在两个不同的语法编写查询： 查询表达式语法和基于方法的查询语法。</span><span class="sxs-lookup"><span data-stu-id="87744-120"> queries can be composed in two different syntaxes: query expression syntax and method-based query syntax.</span></span> <span data-ttu-id="87744-121">查询表达式语法是 C# 3.0 和 Visual Basic 9.0 中的新增功能，它由一组用类似于 Transact-SQL 或 XQuery 的声明性语法所编写的子句组成。</span><span class="sxs-lookup"><span data-stu-id="87744-121">Query expression syntax is new in C# 3.0 and Visual Basic 9.0, and it consists of a set of clauses written in a declarative syntax similar to Transact-SQL or XQuery.</span></span> <span data-ttu-id="87744-122">不过，[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 公共语言运行库 (CLR) 无法读取查询表达式语法本身。</span><span class="sxs-lookup"><span data-stu-id="87744-122">However, the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] common language runtime (CLR) cannot read the query expression syntax itself.</span></span> <span data-ttu-id="87744-123">因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。</span><span class="sxs-lookup"><span data-stu-id="87744-123">Therefore, at compile time, query expressions are translated to something that the CLR does understand: method calls.</span></span> <span data-ttu-id="87744-124">这些方法称为*标准查询运算符*。</span><span class="sxs-lookup"><span data-stu-id="87744-124">These methods are known as the *standard query operators*.</span></span> <span data-ttu-id="87744-125">作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。</span><span class="sxs-lookup"><span data-stu-id="87744-125">As a developer, you have the option of calling them directly by using method syntax, instead of using query syntax.</span></span> <span data-ttu-id="87744-126">有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="87744-126">For more information, see [Query Syntax and Method Syntax in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
-### 查询表达式语法  
- 查询表达式是一种声明性查询语法。  通过这一语法，开发人员可以使用类似于 Transact\-SQL 的高级语言格式编写查询。  通过使用查询表达式语法，您可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。  有关详细信息，请参阅[基本查询操作 \(Visual Basic\)](../Topic/Basic%20Query%20Operations%20\(Visual%20Basic\).md)。  有关演示如何使用查询表达式语法的示例，请参见以下主题：  
+### <a name="query-expression-syntax"></a><span data-ttu-id="87744-127">查询表达式语法</span><span class="sxs-lookup"><span data-stu-id="87744-127">Query Expression Syntax</span></span>  
+ <span data-ttu-id="87744-128">查询表达式是一种声明性查询语法。</span><span class="sxs-lookup"><span data-stu-id="87744-128">Query expressions are a declarative query syntax.</span></span> <span data-ttu-id="87744-129">通过这一语法，开发人员可以使用类似于 Transact-SQL 的高级语言格式编写查询。</span><span class="sxs-lookup"><span data-stu-id="87744-129">This syntax enables a developer to write queries in a high-level language that is formatted similar to Transact-SQL.</span></span> <span data-ttu-id="87744-130">通过使用查询表达式语法，你可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。</span><span class="sxs-lookup"><span data-stu-id="87744-130">By using query expression syntax, you can perform even complex filtering, ordering, and grouping operations on data sources with minimal code.</span></span> <span data-ttu-id="87744-131">有关详细信息，[基本查询操作 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="87744-131">For more information, [Basic Query Operations (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span></span> <span data-ttu-id="87744-132">有关演示如何使用查询表达式语法的示例，请参见以下主题：</span><span class="sxs-lookup"><span data-stu-id="87744-132">For examples that demonstrate how to use the query expression syntax, see the following topics:</span></span>  
   
--   [查询表达式语法示例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [<span data-ttu-id="87744-133">查询表达式语法示例： 投影</span><span class="sxs-lookup"><span data-stu-id="87744-133">Query Expression Syntax Examples: Projection</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [查询表达式语法示例：筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+-   [<span data-ttu-id="87744-134">查询表达式语法示例： 筛选</span><span class="sxs-lookup"><span data-stu-id="87744-134">Query Expression Syntax Examples: Filtering</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [查询表达式语法示例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [<span data-ttu-id="87744-135">查询表达式语法示例： 排序</span><span class="sxs-lookup"><span data-stu-id="87744-135">Query Expression Syntax Examples: Ordering</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [查询表达式语法示例：聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="87744-136">查询表达式语法示例： 聚合运算符</span><span class="sxs-lookup"><span data-stu-id="87744-136">Query Expression Syntax Examples: Aggregate Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [查询表达式语法示例：分区](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="87744-137">查询表达式语法示例： 分区</span><span class="sxs-lookup"><span data-stu-id="87744-137">Query Expression Syntax Examples: Partitioning</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [查询表达式语法示例：联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="87744-138">查询表达式语法示例： 联接运算符</span><span class="sxs-lookup"><span data-stu-id="87744-138">Query Expression Syntax Examples: Join Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [查询表达式语法示例：元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="87744-139">查询表达式语法示例： 元素运算符</span><span class="sxs-lookup"><span data-stu-id="87744-139">Query Expression Syntax Examples: Element Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [查询表达式语法示例：分组](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+-   [<span data-ttu-id="87744-140">查询表达式语法示例： 分组</span><span class="sxs-lookup"><span data-stu-id="87744-140">Query Expression Syntax Examples: Grouping</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [查询表达式语法示例：导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [<span data-ttu-id="87744-141">查询表达式语法示例： 导航关系</span><span class="sxs-lookup"><span data-stu-id="87744-141">Query Expression Syntax Examples: Navigating Relationships</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
-### 基于方法的查询语法  
- 另一种编写 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的方法是使用基于方法的查询。  基于方法的查询语法是一系列针对 LINQ 运算符方法的直接方法调用，同时将 lambda 表达式作为参数传递。  有关详细信息，请参阅 [Lambda 表达式](../Topic/Lambda%20Expressions%20\(C%23%20Programming%20Guide\).md)。  有关演示如何使用基于方法的语法的示例，请参见以下主题：  
+### <a name="method-based-query-syntax"></a><span data-ttu-id="87744-142">基于方法的查询语法</span><span class="sxs-lookup"><span data-stu-id="87744-142">Method-Based Query Syntax</span></span>  
+ <span data-ttu-id="87744-143">另一种编写 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的方法是使用基于方法的查询。</span><span class="sxs-lookup"><span data-stu-id="87744-143">Another way to compose [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries is by using method-based queries.</span></span> <span data-ttu-id="87744-144">基于方法的查询语法是一系列针对 LINQ 运算符方法的直接方法调用，同时将 lambda 表达式作为参数传递。</span><span class="sxs-lookup"><span data-stu-id="87744-144">The method-based query syntax is a sequence of direct method calls to LINQ operator methods, passing lambda expressions as the parameters.</span></span> <span data-ttu-id="87744-145">有关详细信息，请参阅 [Lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="87744-145">For more information, see [Lambda Expressions](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span> <span data-ttu-id="87744-146">有关演示如何使用基于方法的语法的示例，请参见以下主题：</span><span class="sxs-lookup"><span data-stu-id="87744-146">For examples that demonstrate how to use method-based syntax, see the following topics:</span></span>  
   
--   [基于方法的查询语法示例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [<span data-ttu-id="87744-147">基于方法的查询语法示例： 投影</span><span class="sxs-lookup"><span data-stu-id="87744-147">Method-Based Query Syntax Examples: Projection</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [基于方法的查询语法示例：筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [<span data-ttu-id="87744-148">基于方法的查询语法示例： 筛选</span><span class="sxs-lookup"><span data-stu-id="87744-148">Method-Based Query Syntax Examples: Filtering</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [基于方法的查询语法示例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [<span data-ttu-id="87744-149">基于方法的查询语法示例： 排序</span><span class="sxs-lookup"><span data-stu-id="87744-149">Method-Based Query Syntax Examples: Ordering</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [基于方法的查询语法示例：聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="87744-150">基于方法的查询语法示例： 聚合运算符</span><span class="sxs-lookup"><span data-stu-id="87744-150">Method-Based Query Syntax Examples: Aggregate Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [基于方法的查询语法示例：分区](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="87744-151">基于方法的查询语法示例： 分区</span><span class="sxs-lookup"><span data-stu-id="87744-151">Method-Based Query Syntax Examples: Partitioning</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [基于方法的查询语法示例：转换](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [<span data-ttu-id="87744-152">基于方法的查询语法示例： 转换</span><span class="sxs-lookup"><span data-stu-id="87744-152">Method-Based Query Syntax Examples: Conversion</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [基于方法的查询语法示例：联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="87744-153">基于方法的查询语法示例： 联接运算符</span><span class="sxs-lookup"><span data-stu-id="87744-153">Method-Based Query Syntax Examples: Join Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [基于方法的查询语法示例：元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="87744-154">基于方法的查询语法示例： 元素运算符</span><span class="sxs-lookup"><span data-stu-id="87744-154">Method-Based Query Syntax Examples: Element Operators</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [基于方法的查询语法示例：分组](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [<span data-ttu-id="87744-155">基于方法的查询语法示例： 分组</span><span class="sxs-lookup"><span data-stu-id="87744-155">Method-Based Query Syntax Examples: Grouping</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [基于方法的查询语法示例：导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [<span data-ttu-id="87744-156">基于方法的查询语法示例： 导航关系</span><span class="sxs-lookup"><span data-stu-id="87744-156">Method-Based Query Syntax Examples: Navigating Relationships</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
-## 请参阅  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)   
- [Getting Started with LINQ in C\#](../Topic/Getting%20Started%20with%20LINQ%20in%20C%23.md)   
- [Getting Started with LINQ in Visual Basic](../Topic/Getting%20Started%20with%20LINQ%20in%20Visual%20Basic.md)   
- [实体框架合并选项和已编译的查询](http://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a><span data-ttu-id="87744-157">另请参阅</span><span class="sxs-lookup"><span data-stu-id="87744-157">See Also</span></span>  
+ [<span data-ttu-id="87744-158">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="87744-158">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [<span data-ttu-id="87744-159">C# 中的 LINQ 入门</span><span class="sxs-lookup"><span data-stu-id="87744-159">Getting Started with LINQ in C#</span></span>](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="87744-160">Visual Basic 中的 LINQ 入门</span><span class="sxs-lookup"><span data-stu-id="87744-160">Getting Started with LINQ in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="87744-161">实体框架合并选项和已编译的查询</span><span class="sxs-lookup"><span data-stu-id="87744-161">Entity Framework Merge Options and Compiled Queries</span></span>](http://go.microsoft.com/fwlink/?LinkId=199591)

@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageLogging&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
-该元素定义 Windows Communication Foundation (WCF) 的消息日志记录功能的设置。  
+# <a name="ltmessagelogginggt"></a><span data-ttu-id="0a74d-102">&lt;messageLogging&gt;</span><span class="sxs-lookup"><span data-stu-id="0a74d-102">&lt;messageLogging&gt;</span></span>
+<span data-ttu-id="0a74d-103">该元素定义 Windows Communication Foundation (WCF) 的消息日志记录功能的设置。</span><span class="sxs-lookup"><span data-stu-id="0a74d-103">This element defines the settings for the message-logging capabilities of Windows Communication Foundation (WCF).</span></span>  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ <span data-ttu-id="0a74d-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0a74d-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0a74d-105">\<诊断 ></span><span class="sxs-lookup"><span data-stu-id="0a74d-105">\<diagnostic></span></span>  
+<span data-ttu-id="0a74d-106">\<messageLogging ></span><span class="sxs-lookup"><span data-stu-id="0a74d-106">\<messageLogging></span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="0a74d-107">语法</span><span class="sxs-lookup"><span data-stu-id="0a74d-107">Syntax</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -43,40 +45,40 @@ caps.handback.revision: 16
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0a74d-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0a74d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0a74d-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0a74d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a><span data-ttu-id="0a74d-110">特性</span><span class="sxs-lookup"><span data-stu-id="0a74d-110">Attributes</span></span>  
   
-|特性|描述|  
+|<span data-ttu-id="0a74d-111">特性</span><span class="sxs-lookup"><span data-stu-id="0a74d-111">Attribute</span></span>|<span data-ttu-id="0a74d-112">描述</span><span class="sxs-lookup"><span data-stu-id="0a74d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`logEntireMessage`|一个布尔值，指定是否记录整个消息（消息头和正文）。 默认值为 `false`，这意味着仅记录消息头。 此设置会影响所有消息日志记录级别（服务、传输和格式不正确）。|  
-|`logMalformedMessages`|一个布尔值，指定是否记录格式不正确的消息。 格式不正确的消息将不计入 `maxMessagesToLog`。 默认值为 `false`。|  
-|`logMessagesAtServiceLevel`|一个布尔值，指定是否在服务级别跟踪消息（在与加密和传输有关的转换之前）。 默认值为 `false`。|  
-|`logMessagesAtTransportLevel`|一个布尔值，指定是否在传输级别跟踪消息。 配置文件中指定的所有筛选器都会应用，但仅跟踪与这些筛选器相匹配的消息。 默认值为 `false`。|  
-|`maxMessagesToLog`|一个正整数，指定要记录的最大消息数。 默认值为 1000。|  
-|`maxSizeOfMessageToLog`|一个正整数，指定要记录的最大消息大小（字节）。 大小超出限制的消息将不会被记录。 此设置会影响所有跟踪级别。 默认值为 262144 (0x4000)。|  
+|`logEntireMessage`|<span data-ttu-id="0a74d-113">一个布尔值，指定是否记录整个消息（消息头和正文）。</span><span class="sxs-lookup"><span data-stu-id="0a74d-113">A Boolean value that specifies whether the entire message (message header and body) is logged.</span></span> <span data-ttu-id="0a74d-114">默认值为 `false`，这意味着仅记录消息头。</span><span class="sxs-lookup"><span data-stu-id="0a74d-114">The default is `false`, which means that only the message header is logged.</span></span> <span data-ttu-id="0a74d-115">此设置会影响所有消息日志记录级别（服务、传输和格式不正确）。</span><span class="sxs-lookup"><span data-stu-id="0a74d-115">This setting affects all message logging levels (service, transport, and malformed).</span></span>|  
+|`logMalformedMessages`|<span data-ttu-id="0a74d-116">一个布尔值，指定是否记录格式不正确的消息。</span><span class="sxs-lookup"><span data-stu-id="0a74d-116">A Boolean value that specifies whether malformed messages are logged.</span></span> <span data-ttu-id="0a74d-117">格式不正确的消息将不计入 `maxMessagesToLog`。</span><span class="sxs-lookup"><span data-stu-id="0a74d-117">Malformed messages do not count toward the `maxMessagesToLog`.</span></span> <span data-ttu-id="0a74d-118">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="0a74d-118">The default is `false`.</span></span>|  
+|`logMessagesAtServiceLevel`|<span data-ttu-id="0a74d-119">一个布尔值，指定是否在服务级别跟踪消息（在与加密和传输有关的转换之前）。</span><span class="sxs-lookup"><span data-stu-id="0a74d-119">A Boolean value that specifies whether messages are traced at the service level (before encryption- and transport-related transforms).</span></span> <span data-ttu-id="0a74d-120">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="0a74d-120">The default is `false`.</span></span>|  
+|`logMessagesAtTransportLevel`|<span data-ttu-id="0a74d-121">一个布尔值，指定是否在传输级别跟踪消息。</span><span class="sxs-lookup"><span data-stu-id="0a74d-121">A Boolean value that specifies whether messages are traced at the transport level.</span></span> <span data-ttu-id="0a74d-122">配置文件中指定的所有筛选器都会应用，但仅跟踪与这些筛选器相匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="0a74d-122">Any filters specified in the config file are applied, and only messages that match the filters are traced.</span></span> <span data-ttu-id="0a74d-123">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="0a74d-123">The default is `false`.</span></span>|  
+|`maxMessagesToLog`|<span data-ttu-id="0a74d-124">一个正整数，指定要记录的最大消息数。</span><span class="sxs-lookup"><span data-stu-id="0a74d-124">A positive integer that specifies the maximum number of messages to log.</span></span> <span data-ttu-id="0a74d-125">默认值为 1000。</span><span class="sxs-lookup"><span data-stu-id="0a74d-125">The default is 1000.</span></span>|  
+|`maxSizeOfMessageToLog`|<span data-ttu-id="0a74d-126">一个正整数，指定要记录的最大消息大小（字节）。</span><span class="sxs-lookup"><span data-stu-id="0a74d-126">A positive integer that specifies the maximum size, in bytes, of a message to log.</span></span> <span data-ttu-id="0a74d-127">大小超出限制的消息将不会被记录。</span><span class="sxs-lookup"><span data-stu-id="0a74d-127">Messages larger than the limit will not be logged.</span></span> <span data-ttu-id="0a74d-128">此设置会影响所有跟踪级别。</span><span class="sxs-lookup"><span data-stu-id="0a74d-128">This setting affects all trace levels.</span></span> <span data-ttu-id="0a74d-129">默认值为 262144 (0x4000)。</span><span class="sxs-lookup"><span data-stu-id="0a74d-129">The default is 262144(0x4000).</span></span>|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a><span data-ttu-id="0a74d-130">子元素</span><span class="sxs-lookup"><span data-stu-id="0a74d-130">Child Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="0a74d-131">元素</span><span class="sxs-lookup"><span data-stu-id="0a74d-131">Element</span></span>|<span data-ttu-id="0a74d-132">描述</span><span class="sxs-lookup"><span data-stu-id="0a74d-132">Description</span></span>|  
 |-------------|-----------------|  
-|筛选器|`filters` 元素包含 XPath 筛选器集合。 启用传输消息日志记录后（`logMessagesAtTransportLevel` 为 `true`），只有与筛选器匹配的消息才会记录下来。<br /><br /> 筛选器仅应用于传输层。 筛选器不影响服务级别和格式不正确的消息日志记录。<br /><br /> 此元素唯一的属性为 `filter` XpathFilter。<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|<span data-ttu-id="0a74d-133">筛选器</span><span class="sxs-lookup"><span data-stu-id="0a74d-133">filters</span></span>|<span data-ttu-id="0a74d-134">`filters` 元素包含 XPath 筛选器集合。</span><span class="sxs-lookup"><span data-stu-id="0a74d-134">The `filters` element holds a collection of XPath filters.</span></span> <span data-ttu-id="0a74d-135">启用传输消息日志记录后（`logMessagesAtTransportLevel` 为 `true`），只有与筛选器匹配的消息才会记录下来。</span><span class="sxs-lookup"><span data-stu-id="0a74d-135">When transport message logging is enabled (`logMessagesAtTransportLevel` is `true`), only messages matching the filters will be logged.</span></span><br /><br /> <span data-ttu-id="0a74d-136">筛选器仅应用于传输层。</span><span class="sxs-lookup"><span data-stu-id="0a74d-136">Filters are applied only at the transport layer.</span></span> <span data-ttu-id="0a74d-137">筛选器不影响服务级别和格式不正确的消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="0a74d-137">Service level and malformed message logging are not affected by filters.</span></span><br /><br /> <span data-ttu-id="0a74d-138">此元素唯一的属性为 `filter` XpathFilter。</span><span class="sxs-lookup"><span data-stu-id="0a74d-138">The only attribute for this element, `filter`, is an XpathFilter.</span></span><br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
-### <a name="parent-elements"></a>父元素  
+### <a name="parent-elements"></a><span data-ttu-id="0a74d-139">父元素</span><span class="sxs-lookup"><span data-stu-id="0a74d-139">Parent Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="0a74d-140">元素</span><span class="sxs-lookup"><span data-stu-id="0a74d-140">Element</span></span>|<span data-ttu-id="0a74d-141">描述</span><span class="sxs-lookup"><span data-stu-id="0a74d-141">Description</span></span>|  
 |-------------|-----------------|  
-|诊断|定义管理员运行时检查和控制的 WCF 设置。|  
+|<span data-ttu-id="0a74d-142">诊断</span><span class="sxs-lookup"><span data-stu-id="0a74d-142">diagnostics</span></span>|<span data-ttu-id="0a74d-143">定义管理员运行时检查和控制的 WCF 设置。</span><span class="sxs-lookup"><span data-stu-id="0a74d-143">Defines WCF settings for runtime inspection and control for the administrator.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 将在堆栈中以下三个不同级别记录消息：服务、传输和格式不正确。 可以单独激活每个级别。  
+## <a name="remarks"></a><span data-ttu-id="0a74d-144">备注</span><span class="sxs-lookup"><span data-stu-id="0a74d-144">Remarks</span></span>  
+ <span data-ttu-id="0a74d-145">将在堆栈中以下三个不同级别记录消息：服务、传输和格式不正确。</span><span class="sxs-lookup"><span data-stu-id="0a74d-145">Messages are logged at three different levels in the stack: service, transport, and malformed.</span></span> <span data-ttu-id="0a74d-146">可以单独激活每个级别。</span><span class="sxs-lookup"><span data-stu-id="0a74d-146">Each level can be activated separately.</span></span>  
   
- 可添加 XPath 筛选器以记录传输和服务级别的特定消息。 如果未定义任何筛选器，则记录所有消息。 筛选器仅应用于消息的标头。 正文会被忽略。 WCF 将忽略消息正文，以便提高性能。 如果要根据正文内容进行筛选，可以创建一个自定义侦听器，并采用具有相应功能的筛选器。  
+ <span data-ttu-id="0a74d-147">可添加 XPath 筛选器以记录传输和服务级别的特定消息。</span><span class="sxs-lookup"><span data-stu-id="0a74d-147">XPath filters can be added to log specific messages at the transport and service levels.</span></span> <span data-ttu-id="0a74d-148">如果未定义任何筛选器，则记录所有消息。</span><span class="sxs-lookup"><span data-stu-id="0a74d-148">If no filters are defined, all messages are logged.</span></span> <span data-ttu-id="0a74d-149">筛选器仅应用于消息的标头。</span><span class="sxs-lookup"><span data-stu-id="0a74d-149">Filters are applied only to the headers of the message.</span></span> <span data-ttu-id="0a74d-150">正文会被忽略。</span><span class="sxs-lookup"><span data-stu-id="0a74d-150">The body is ignored.</span></span> <span data-ttu-id="0a74d-151">WCF 将忽略消息正文，以便提高性能。</span><span class="sxs-lookup"><span data-stu-id="0a74d-151">WCF ignores the message body to improve performance.</span></span> <span data-ttu-id="0a74d-152">如果要根据正文内容进行筛选，可以创建一个自定义侦听器，并采用具有相应功能的筛选器。</span><span class="sxs-lookup"><span data-stu-id="0a74d-152">If you want to filter based on the content of the body, you can create a custom listener with a filter that does so.</span></span>  
   
- 您需要创建一个跟踪侦听器以激活消息跟踪。 侦听器本身可以是适用于任何侦听器<xref:System.Diagnostics>跟踪体系结构。 下面的示例演示如何创建此类侦听器。  
+ <span data-ttu-id="0a74d-153">您需要创建一个跟踪侦听器以激活消息跟踪。</span><span class="sxs-lookup"><span data-stu-id="0a74d-153">You need to create a trace listener to activate message tracing.</span></span> <span data-ttu-id="0a74d-154">侦听器本身可以是使用 <xref:System.Diagnostics> 跟踪体系结构的任何侦听器。</span><span class="sxs-lookup"><span data-stu-id="0a74d-154">The listener itself can be any listener that works with the <xref:System.Diagnostics> tracing architecture.</span></span> <span data-ttu-id="0a74d-155">下面的示例演示如何创建此类侦听器。</span><span class="sxs-lookup"><span data-stu-id="0a74d-155">The following example demonstrates how to create such a listener.</span></span>  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -109,9 +111,9 @@ caps.handback.revision: 16
 </system.diagnostics>  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="0a74d-156">示例</span><span class="sxs-lookup"><span data-stu-id="0a74d-156">Example</span></span>  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -124,9 +126,9 @@ caps.handback.revision: 16
  </messageLogging>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
- [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+## <a name="see-also"></a><span data-ttu-id="0a74d-157">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0a74d-157">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
+ [<span data-ttu-id="0a74d-158">配置消息日志记录</span><span class="sxs-lookup"><span data-stu-id="0a74d-158">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

@@ -1,54 +1,54 @@
 ---
-title: "如何：注册和配置服务标记 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "COM [WCF], 配置服务标记"
-  - "COM [WCF], 注册服务标记"
+title: "如何：注册和配置服务标记"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- COM [WCF], configure service monikers
+- COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 86938301d28cbb0293ece4b3e12a2ef2d2a54e69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：注册和配置服务标记
-在 COM 应用程序中使用具有类型化协定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记之前，必须先向 COM 注册所需的属性化类型，然后为 COM 应用程序和标记配置所需的绑定配置。  
+# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="5c125-102">如何：注册和配置服务标记</span><span class="sxs-lookup"><span data-stu-id="5c125-102">How to: Register and Configure a Service Moniker</span></span>
+<span data-ttu-id="5c125-103">在 COM 应用程序中使用具有类型化协定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记之前，必须先向 COM 注册所需的属性化类型，然后为 COM 应用程序和标记配置所需的绑定配置。</span><span class="sxs-lookup"><span data-stu-id="5c125-103">Before using the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  
   
-### 向 COM 注册所需的属性化类型  
+### <a name="to-register-the-required-attributed-types-with-com"></a><span data-ttu-id="5c125-104">向 COM 注册所需的属性化类型</span><span class="sxs-lookup"><span data-stu-id="5c125-104">To register the required attributed types with COM</span></span>  
   
-1.  使用 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务检索元数据协定。  这会为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端程序集和客户端应用程序配置文件生成源代码。  
+1.  <span data-ttu-id="5c125-105">使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具以检索元数据协定从[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。</span><span class="sxs-lookup"><span data-stu-id="5c125-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="5c125-106">这会为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端程序集和客户端应用程序配置文件生成源代码。</span><span class="sxs-lookup"><span data-stu-id="5c125-106">This generates the source code for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client assembly and a client application configuration file.</span></span>  
   
-2.  确保将程序集中的类型标记为 `ComVisible`。  为此，请将下面的属性添加到 Visual Studio 项目的 AssemblyInfo.cs 文件中。  
+2.  <span data-ttu-id="5c125-107">确保将程序集中的类型标记为 `ComVisible`。</span><span class="sxs-lookup"><span data-stu-id="5c125-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="5c125-108">为此，请将下面的属性添加到 Visual Studio 项目的 AssemblyInfo.cs 文件中。</span><span class="sxs-lookup"><span data-stu-id="5c125-108">To do so, add the following attribute to the AssemblyInfo.cs file in your Visual Studio project.</span></span>  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  将托管的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端编译为强名称程序集。  这要求使用加密密钥对进行签名。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 《.NET 开发员指南》中的[使用强名称为程序集签名](http://go.microsoft.com/fwlink/?LinkId=94874)（可能为英文网页）。  
+3.  <span data-ttu-id="5c125-109">将托管的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端编译为强名称程序集。</span><span class="sxs-lookup"><span data-stu-id="5c125-109">Compile the managed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as a strong-named assembly.</span></span> <span data-ttu-id="5c125-110">这要求使用加密密钥对进行签名。</span><span class="sxs-lookup"><span data-stu-id="5c125-110">This requires signing with a cryptographic key pair.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="5c125-111">[为程序集具有强名称签名](http://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。</span><span class="sxs-lookup"><span data-stu-id="5c125-111"> [Signing an Assembly with a Strong Name](http://go.microsoft.com/fwlink/?LinkId=94874) in the .NET Developer's Guide.</span></span>  
   
-4.  使用带有 `/tlb` 选项的程序集注册 \(Regasm.exe\) 工具向 COM 注册程序集中的类型。  
+4.  <span data-ttu-id="5c125-112">使用带有 `/tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="5c125-112">Use the Assembly Registration (Regasm.exe) tool with the `/tlb` option to register the types in the assembly with COM.</span></span>  
   
-5.  使用全局程序集缓存 \(Gacutil.exe\) 工具将该程序集添加到全局程序集缓存中。  
+5.  <span data-ttu-id="5c125-113">使用全局程序集缓存 (Gacutil.exe) 工具将该程序集添加到全局程序集缓存中。</span><span class="sxs-lookup"><span data-stu-id="5c125-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>  
   
     > [!NOTE]
-    >  对程序集进行签名并将其添加到全局程序集缓存中是可选步骤，不过，这两个步骤可以简化在运行时从正确位置加载程序集的过程。  
+    >  <span data-ttu-id="5c125-114">对程序集进行签名并将其添加到全局程序集缓存中是可选步骤，不过，这两个步骤可以简化在运行时从正确位置加载程序集的过程。</span><span class="sxs-lookup"><span data-stu-id="5c125-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>  
   
-### 为 COM 应用程序和标记配置所需的绑定配置  
+### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="5c125-115">为 COM 应用程序和标记配置所需的绑定配置</span><span class="sxs-lookup"><span data-stu-id="5c125-115">To configure the COM application and the moniker with the required binding configuration</span></span>  
   
--   将绑定定义（由 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 在生成的客户端应用程序配置文件中生成）放置到客户端应用程序的配置文件中。  例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。  此时，客户端应用程序就可以使用标记了。  请注意，如果使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的标准绑定类型之一，则绑定配置不是必需的。  
+-   <span data-ttu-id="5c125-116">将绑定定义放置 (由生成[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端应用程序配置文件中) 在客户端应用程序的配置文件中。</span><span class="sxs-lookup"><span data-stu-id="5c125-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="5c125-117">例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。</span><span class="sxs-lookup"><span data-stu-id="5c125-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="5c125-118">此时，客户端应用程序就可以使用标记了。</span><span class="sxs-lookup"><span data-stu-id="5c125-118">The client application can now use the moniker.</span></span> <span data-ttu-id="5c125-119">请注意，如果使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的标准绑定类型之一，则绑定配置不是必需的。</span><span class="sxs-lookup"><span data-stu-id="5c125-119">Note that the binding configuration is not required if using one of the standard binding types provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-     注册下面的类型。  
+     <span data-ttu-id="5c125-120">注册下面的类型。</span><span class="sxs-lookup"><span data-stu-id="5c125-120">The following type is registered.</span></span>  
   
     ```  
     using System.ServiceModel;  
@@ -65,21 +65,19 @@ caps.handback.revision: 20
     }  
     ```  
   
-     使用 `wsHttpBinding` 绑定来公开应用程序。  对于给定的类型和应用程序配置，将使用以下的示例标记字符串。  
+     <span data-ttu-id="5c125-121">使用 `wsHttpBinding` 绑定来公开应用程序。</span><span class="sxs-lookup"><span data-stu-id="5c125-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="5c125-122">对于给定的类型和应用程序配置，将使用以下的示例标记字符串。</span><span class="sxs-lookup"><span data-stu-id="5c125-122">For the given type and application configuration, the following example moniker strings are used.</span></span>  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
-  
     ```  
   
      `or`  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
-  
     ```  
   
-     在将引用添加到包含 `IMathService` 类型的程序集后，您可以使用 Visual Basic 6.0 应用程序中的这些标记字符串中的任何一个，如下面的示例代码中所示。  
+     <span data-ttu-id="5c125-123">在将引用添加到包含 `IMathService` 类型的程序集后，您可以使用 Visual Basic 6.0 应用程序中的这些标记字符串中的任何一个，如下面的示例代码中所示。</span><span class="sxs-lookup"><span data-stu-id="5c125-123">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>  
   
     ```  
     Dim MathProxy As IMathService  
@@ -91,24 +89,23 @@ caps.handback.revision: 20
             bindingConfiguration=Binding1")  
   
     result = MathProxy.Add(3, 5)  
-  
     ```  
   
-     在本示例中，绑定配置 `Binding1` 的定义存储在该客户端应用程序的适当命名的配置文件中，如 vb6appname.exe.config。  
+     <span data-ttu-id="5c125-124">在本示例中，绑定配置 `Binding1` 的定义存储在该客户端应用程序的适当命名的配置文件中，如 vb6appname.exe.config。</span><span class="sxs-lookup"><span data-stu-id="5c125-124">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as vb6appname.exe.config.</span></span>  
   
     > [!NOTE]
-    >  您可以在 C\#、C\+\+ 或其他任何 .NET 语言的应用程序中使用类似的代码。  
+    >  <span data-ttu-id="5c125-125">您可以在 C#、C++ 或其他任何 .NET 语言的应用程序中使用类似的代码。</span><span class="sxs-lookup"><span data-stu-id="5c125-125">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>  
   
     > [!NOTE]
-    >  ：如果标记格式不正确，或者服务不可用，则对 `GetObject` 的调用会返回一个“语法无效”错误。  如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
+    >  <span data-ttu-id="5c125-126">：如果标记格式不正确，或者服务不可用，则对 `GetObject` 的调用会返回一个“语法无效”错误。</span><span class="sxs-lookup"><span data-stu-id="5c125-126">: If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="5c125-127">如果您收到此错误，请确保所使用的标记正确无误且服务可用。</span><span class="sxs-lookup"><span data-stu-id="5c125-127">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
   
-     尽管此主题重点介绍通过 VB 6.0 代码使用服务标记，您还是可以通过其他语言使用服务标记。  当通过 C\+\+ 代码使用标记时，应使用“no\_namespace named\_guids raw\_interfaces\_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。  
+     <span data-ttu-id="5c125-128">尽管此主题重点介绍通过 VB 6.0 代码使用服务标记，您还是可以通过其他语言使用服务标记。</span><span class="sxs-lookup"><span data-stu-id="5c125-128">Although this topic focuses on using the service moniker from VB 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="5c125-129">当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="5c125-129">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。  其他任何返回值都将转换为 out 参数。  方法的总体执行情况保持不变。  这将允许您确定在代理上调用方法时出现异常的原因。  仅可通过 C\+\+ 代码来使用此功能。  
+     <span data-ttu-id="5c125-130">这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。</span><span class="sxs-lookup"><span data-stu-id="5c125-130">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="5c125-131">其他任何返回值都将转换为 out 参数。</span><span class="sxs-lookup"><span data-stu-id="5c125-131">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="5c125-132">方法的总体执行情况保持不变。</span><span class="sxs-lookup"><span data-stu-id="5c125-132">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="5c125-133">这将允许您确定在代理上调用方法时出现异常的原因。</span><span class="sxs-lookup"><span data-stu-id="5c125-133">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="5c125-134">仅可通过 C++ 代码来使用此功能。</span><span class="sxs-lookup"><span data-stu-id="5c125-134">This functionality is only available from C++ code.</span></span>  
   
-## 请参阅  
- [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="5c125-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5c125-135">See Also</span></span>  
+ [<span data-ttu-id="5c125-136">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="5c125-136">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

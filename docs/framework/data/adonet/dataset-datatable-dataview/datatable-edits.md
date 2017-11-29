@@ -1,33 +1,39 @@
 ---
-title: "DataTable 编辑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据表编辑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d33bd8900c48222142a46ed2c5bd64412d2eaab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataTable 编辑
-当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。  然后，<xref:System.Data.DataRowState> 会设置为 **Modified**，并使用 **DataRow** 的 <xref:System.Data.DataRow.AcceptChanges%2A> 或 <xref:System.Data.DataRow.RejectChanges%2A> 方法来接受或拒绝所做更改。  **DataRow** 还提供了三种可用于在编辑行时将行的状态挂起的方法。  这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+# <a name="datatable-edits"></a><span data-ttu-id="7ae9f-102">数据表编辑</span><span class="sxs-lookup"><span data-stu-id="7ae9f-102">DataTable Edits</span></span>
+<span data-ttu-id="7ae9f-103">当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-103">When you make changes to column values in a <xref:System.Data.DataRow>, the changes are immediately placed in the current state of the row.</span></span> <span data-ttu-id="7ae9f-104"><xref:System.Data.DataRowState>然后将设置为**已修改**，并接受或拒绝使用更改<xref:System.Data.DataRow.AcceptChanges%2A>或<xref:System.Data.DataRow.RejectChanges%2A>方法**DataRow**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-104">The <xref:System.Data.DataRowState> is then set to **Modified**, and the changes are accepted or rejected using the <xref:System.Data.DataRow.AcceptChanges%2A> or <xref:System.Data.DataRow.RejectChanges%2A> methods of the **DataRow**.</span></span> <span data-ttu-id="7ae9f-105">**DataRow**还提供了可用于进行编辑时挂起的行状态的三种方法。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-105">The **DataRow** also provides three methods that you can use to suspend the state of the row while you are editing it.</span></span> <span data-ttu-id="7ae9f-106">这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-106">These methods are <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, and <xref:System.Data.DataRow.CancelEdit%2A>.</span></span>  
   
- 当您直接在 **DataRow** 中修改列值时，**DataRow** 会使用 **Current**、**Default** 和 **Original** 行版本来管理列值。  除了这些行版本之外，**BeginEdit**、**EndEdit** 和 **CancelEdit** 方法使用第四种行版本：**Proposed**。  有关行版本的更多信息，请参见[行状态与行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ <span data-ttu-id="7ae9f-107">当您修改列中的值**DataRow**直接， **DataRow**管理使用的列的值**当前**，**默认**，和**原始**行版本。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-107">When you modify column values in a **DataRow** directly, the **DataRow** manages the column values using the **Current**, **Default**, and **Original** row versions.</span></span> <span data-ttu-id="7ae9f-108">除了这些行版本中， **BeginEdit**， **EndEdit**，和**CancelEdit**方法使用第四个行版本：**建议**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-108">In addition to these row versions, the **BeginEdit**, **EndEdit**, and **CancelEdit** methods use a fourth row version: **Proposed**.</span></span> <span data-ttu-id="7ae9f-109">有关行版本的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-109">For more information about row versions, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
- 在执行编辑操作（通过调用 **BeginEdit** 开始，并且通过使用 **EndEdit** 或 **CancelEdit** 或者通过调用 **AcceptChanges** 或 **RejectChanges** 结束）的过程中，**Proposed** 行版本会存在。  
+ <span data-ttu-id="7ae9f-110">**建议**行版本在通过调用开始编辑操作过程中存在**BeginEdit**和用于结束通过使用**EndEdit**或**CancelEdit，**或通过调用**AcceptChanges**或**RejectChanges**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-110">The **Proposed** row version exists during an edit operation that begins by calling **BeginEdit** and that ends either by using **EndEdit** or **CancelEdit,** or by calling **AcceptChanges** or **RejectChanges**.</span></span>  
   
- 在编辑操作过程中，您可以通过计算 **DataTable** 的 **ColumnChanged** 事件中的 **ProposedValue** 来将验证逻辑应用于各列。  **ColumnChanged** 事件保存 **DataColumnChangeEventArgs**，可保持对正在更改的列和 **ProposedValue** 的引用。  计算了建议值后，可以对其进行修改或取消编辑。  编辑结束时，行从 **Proposed** 状态中移出。  
+ <span data-ttu-id="7ae9f-111">在编辑操作时，你可以将验证逻辑应用于各列通过评估来评估**ProposedValue**中**ColumnChanged**事件**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-111">During the edit operation, you can apply validation logic to individual columns by evaluating the **ProposedValue** in the **ColumnChanged** event of the **DataTable**.</span></span> <span data-ttu-id="7ae9f-112">**ColumnChanged**事件保存**DataColumnChangeEventArgs** ，保留的引用，到正在更改的列和**ProposedValue**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-112">The **ColumnChanged** event holds **DataColumnChangeEventArgs** that keep a reference to the column that is changing and to the **ProposedValue**.</span></span> <span data-ttu-id="7ae9f-113">计算了建议值后，可以对其进行修改或取消编辑。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-113">After you evaluate the proposed value, you can either modify it or cancel the edit.</span></span> <span data-ttu-id="7ae9f-114">当编辑结束时，行移出**建议**状态。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-114">When the edit is ended, the row moves out of the **Proposed** state.</span></span>  
   
- 您可以通过调用 **EndEdit** 来确认编辑，也可以通过调用 **CancelEdit** 来取消编辑。  请注意，尽管 **EndEdit** 确实已确认您所做的编辑，但在调用 **AcceptChanges** 之前，**DataSet** 并没有实际接受更改。  另外请注意，如果在使用 **EndEdit** 或 **CancelEdit** 结束编辑之前调用 **AcceptChanges**，编辑将会结束，并接受 **Current** 和 **Original** 行版本的 **Proposed** 行值。  同样，调用 **RejectChanges** 也会结束编辑，并放弃 **Current** 和 **Proposed** 行版本。  在调用 **AcceptChanges** 或 **RejectChanges** 之后调用 **EndEdit** 或 **CancelEdit** 不会起作用，因为编辑已经结束。  
+ <span data-ttu-id="7ae9f-115">可以通过调用来确认编辑**EndEdit**，也可以通过调用取消它们**CancelEdit**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-115">You can confirm edits by calling **EndEdit**, or you can cancel them by calling **CancelEdit**.</span></span> <span data-ttu-id="7ae9f-116">请注意，当**EndEdit**确实已确认所做的编辑，**数据集**没有实际接受更改直至**AcceptChanges**调用。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-116">Note that while **EndEdit** does confirm your edits, the **DataSet** does not actually accept the changes until **AcceptChanges** is called.</span></span> <span data-ttu-id="7ae9f-117">另请注意，如果调用**AcceptChanges**已结束编辑之前**EndEdit**或**CancelEdit**，编辑将会结束和**建议**行值接受**当前**和**原始**行版本。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-117">Note also that if you call **AcceptChanges** before you have ended the edit with **EndEdit** or **CancelEdit**, the edit is ended and the **Proposed** row values are accepted for both the **Current** and **Original** row versions.</span></span> <span data-ttu-id="7ae9f-118">在同样的方式调用**RejectChanges**结束编辑并放弃**当前**和**建议**行版本。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-118">In the same manner, calling **RejectChanges** ends the edit and discards the **Current** and **Proposed** row versions.</span></span> <span data-ttu-id="7ae9f-119">调用**EndEdit**或**CancelEdit**之后调用**AcceptChanges**或**RejectChanges**不起任何作用，因为编辑已经结束。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-119">Calling **EndEdit** or **CancelEdit** after calling **AcceptChanges** or **RejectChanges** has no effect because the edit has already ended.</span></span>  
   
- 以下示例演示了如何将 **BeginEdit** 与 **EndEdit** 和 **CancelEdit** 一起使用。  本示例还会检查 **ColumnChanged** 事件中的 **ProposedValue**，并决定是否取消编辑。  
+ <span data-ttu-id="7ae9f-120">下面的示例演示如何使用**BeginEdit**与**EndEdit**和**CancelEdit**。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-120">The following example demonstrates how to use **BeginEdit** with **EndEdit** and **CancelEdit**.</span></span> <span data-ttu-id="7ae9f-121">该示例还将检查**ProposedValue**中**ColumnChanged**事件并决定是否取消编辑。</span><span class="sxs-lookup"><span data-stu-id="7ae9f-121">The example also checks the **ProposedValue** in the **ColumnChanged** event and decides whether to cancel the edit.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -57,7 +63,6 @@ Private Shared Sub OnColumnChanged( _
     End If  
   End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -91,10 +96,10 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## 请参阅  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataRowVersion>   
- [在 DataTable 中处理数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [处理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7ae9f-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ae9f-122">See Also</span></span>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataRowVersion>  
+ [<span data-ttu-id="7ae9f-123">操作数据表中的数据</span><span class="sxs-lookup"><span data-stu-id="7ae9f-123">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="7ae9f-124">处理数据表事件</span><span class="sxs-lookup"><span data-stu-id="7ae9f-124">Handling DataTable Events</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [<span data-ttu-id="7ae9f-125">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="7ae9f-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,29 +1,35 @@
 ---
-title: "查询结果分页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过查询结果分页"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b4a51eec840b74d04aaab97226191b2ed30d8826
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 查询结果分页
-查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。  它通常用于以易于管理的小块形式向用户显示结果。  
+# <a name="paging-through-a-query-result"></a><span data-ttu-id="3c91d-102">通过查询结果分页</span><span class="sxs-lookup"><span data-stu-id="3c91d-102">Paging Through a Query Result</span></span>
+<span data-ttu-id="3c91d-103">查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。</span><span class="sxs-lookup"><span data-stu-id="3c91d-103">Paging through a query result is the process of returning the results of a query in smaller subsets of data, or pages.</span></span> <span data-ttu-id="3c91d-104">它通常用于以易于管理的小块形式向用户显示结果。</span><span class="sxs-lookup"><span data-stu-id="3c91d-104">This is a common practice for displaying results to a user in small, easy-to-manage chunks.</span></span>  
   
- **DataAdapter** 提供了通过 **Fill** 方法的重载来仅返回一页数据的功能。  但是，对于大量的查询结果，它可能并不是首选的分页方法，因为 **DataAdapter** 虽然仅使用所请求的记录来填充目标 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet>，但仍会使用返回整个查询的资源。  若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。  
+ <span data-ttu-id="3c91d-105">**DataAdapter**为仅返回一页的数据，通过重载提供工具**填充**方法。</span><span class="sxs-lookup"><span data-stu-id="3c91d-105">The **DataAdapter** provides a facility for returning only a page of data, through overloads of the **Fill** method.</span></span> <span data-ttu-id="3c91d-106">但是，这可能不是最适合进行大型查询结果分页，因为，虽然**DataAdapter**填充目标<xref:System.Data.DataTable>或<xref:System.Data.DataSet>仅的请求记录，若要返回的资源仍然用于将整个查询。</span><span class="sxs-lookup"><span data-stu-id="3c91d-106">However, this might not be the best choice for paging through large query results because, although the **DataAdapter** fills the target <xref:System.Data.DataTable> or <xref:System.Data.DataSet> with only the requested records, the resources to return the entire query are still used.</span></span> <span data-ttu-id="3c91d-107">若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。</span><span class="sxs-lookup"><span data-stu-id="3c91d-107">To return a page of data from a data source without using the resources to return the entire query, specify additional criteria for your query that reduce the rows returned to only those required.</span></span>  
   
- 若要使用 **Fill** 方法返回一页数据，请指定 **startRecord** 参数（代表该数据页中的第一个记录），并指定 **maxRecords** 参数（代表该数据页中的记录数）。  
+ <span data-ttu-id="3c91d-108">若要使用**填充**方法以返回一页数据，指定**startRecord**参数，第一条记录的页中的数据，和一个**maxRecords**参数的数目中的数据页的记录。</span><span class="sxs-lookup"><span data-stu-id="3c91d-108">To use the **Fill** method to return a page of data, specify a **startRecord** parameter, for the first record in the page of data, and a **maxRecords** parameter, for the number of records in the page of data.</span></span>  
   
- 以下代码示例显示如何使用 **Fill** 方法来返回查询结果（页大小为 5 个记录）的第一页。  
+ <span data-ttu-id="3c91d-109">下面的代码示例演示如何使用**填充**方法以返回查询结果的第一页的页大小为 5 个记录的位置。</span><span class="sxs-lookup"><span data-stu-id="3c91d-109">The following code example shows how to use the **Fill** method to return the first page of a query result where the page size is five records.</span></span>  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -50,7 +56,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 在上例中，**DataSet** 只填充了 5 个记录，但却返回了整个 **Orders** 表。  若要用相同的 5 个记录填充 **DataSet** 但仅返回这 5 个记录，请在 SQL 语句中使用 TOP 和 WHERE 子句，如以下代码示例所示。  
+ <span data-ttu-id="3c91d-110">在前面的示例中，**数据集**只填充了 5 个记录，但整个**订单**返回表。</span><span class="sxs-lookup"><span data-stu-id="3c91d-110">In the previous example, the **DataSet** is only filled with five records, but the entire **Orders** table is returned.</span></span> <span data-ttu-id="3c91d-111">若要填充**数据集**具有相同的五个记录，但仅返回这 5 个记录，使用 TOP 和 WHERE 子句在 SQL 语句，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="3c91d-111">To fill the **DataSet** with those same five records, but only return five records, use the TOP and WHERE clauses in your SQL statement, as in the following code example.</span></span>  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -75,7 +81,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- 请注意，当以这种方式进行查询结果分页时，必须保留用于对行进行排序的唯一标识符，以便将唯一 ID 传递给用于返回下一页记录的命令，如以下代码示例所示。  
+ <span data-ttu-id="3c91d-112">请注意，当以这种方式进行查询结果分页时，必须保留用于对行进行排序的唯一标识符，以便将唯一 ID 传递给用于返回下一页记录的命令，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="3c91d-112">Note that, when paging through the query results in this way, you must preserve the unique identifier that orders the rows, in order to pass the unique ID to the command to return the next page of records, as shown in the following code example.</span></span>  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -87,7 +93,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- 若要使用接受 **startRecord** 和 **maxRecords** 参数的 **Fill** 方法的重载来返回下一页记录，请使当前记录索引按页大小递增，并填充该表。  请记住，即使仅在 **DataSet** 中添加一页记录，数据库服务器仍会返回全部查询结果。  在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。  您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。  
+ <span data-ttu-id="3c91d-113">若要返回下一页记录使用的重载**填充**采用的方法**startRecord**和**maxRecords**参数，递增的当前记录索引页大小和填充表。</span><span class="sxs-lookup"><span data-stu-id="3c91d-113">To return the next page of records using the overload of the **Fill** method that takes the **startRecord** and **maxRecords** parameters, increment the current record index by the page size and fill the table.</span></span> <span data-ttu-id="3c91d-114">请记住，数据库服务器将返回整个查询结果，即使只有一个页的记录添加到**数据集**。</span><span class="sxs-lookup"><span data-stu-id="3c91d-114">Remember that the database server returns the entire query results even though only one page of records is added to the **DataSet**.</span></span> <span data-ttu-id="3c91d-115">在以下代码示例中，先清除表行，然后再用下一页数据填充这些表行。</span><span class="sxs-lookup"><span data-stu-id="3c91d-115">In the following code example, the table rows are cleared before they are filled with the next page of data.</span></span> <span data-ttu-id="3c91d-116">您可能需要在本地缓存中保留一定数量的返回行，以减少与数据库服务器的往返次数。</span><span class="sxs-lookup"><span data-stu-id="3c91d-116">You might want to preserve a certain number of returned rows in a local cache to reduce trips to the database server.</span></span>  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -105,7 +111,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 若要返回下一页记录而不让数据库服务器返回整个查询，请指定对 SQL SELECT 语句的限制条件。  由于上例保留了返回的最后一个记录，因此可以在 WHERE 子句中使用它来指定查询的起点，如以下代码示例所示。  
+ <span data-ttu-id="3c91d-117">若要返回下一页记录而不让数据库服务器返回整个查询，请指定对 SQL SELECT 语句的限制条件。</span><span class="sxs-lookup"><span data-stu-id="3c91d-117">To return the next page of records without having the database server return the entire query, specify restrictive criteria to the SELECT statement.</span></span> <span data-ttu-id="3c91d-118">由于上例保留了返回的最后一个记录，因此可以在 WHERE 子句中使用它来指定查询的起点，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="3c91d-118">Because the preceding example preserved the last record returned, you can use it in the WHERE clause to specify a starting point for the query, as shown in the following code example.</span></span>  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -127,6 +133,6 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## 请参阅  
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3c91d-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3c91d-119">See Also</span></span>  
+ [<span data-ttu-id="3c91d-120">Dataadapter 和 Datareader</span><span class="sxs-lookup"><span data-stu-id="3c91d-120">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="3c91d-121">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="3c91d-121">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,124 +1,127 @@
 ---
-title: "ServiceModel 属性和 ServiceDescription 引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ServiceModel 属性和 ServiceDescription 引用"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba41bd63f1dc23441cc7f265a8b1339d0b1194d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceModel 属性和 ServiceDescription 引用
-*说明树* 是类型的层次结构 （从开始 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=fullName>类），一起描述服务的各个方面。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]使用说明树形版本有效的服务运行时，发布网站\/网页服务描述语言 \(WSDL\)，XML架构定义语言 \(XSD\) 和客户端可以使用连接到和使用服务，并生成树形值描述的各种代码和配置文件表示服务的政策断言 （元数据）。  
+# <a name="servicemodel-attributes-and-servicedescription-reference"></a><span data-ttu-id="4b9fc-102">ServiceModel 属性和 ServiceDescription 引用</span><span class="sxs-lookup"><span data-stu-id="4b9fc-102">ServiceModel Attributes and ServiceDescription Reference</span></span>
+<span data-ttu-id="4b9fc-103">*说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类)，一起描述服务的每个方面。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-103">The *description tree* is the hierarchy of types (starting with the <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> class) that together describe every aspect of a service.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="4b9fc-104"> 使用说明树形来生成有效的服务运行时，发布 Web 服务描述语言 (WSDL)、XML 架构定义语言 (XSD) 和有关服务的策略断言（元数据）（客户端可用来连接和使用服务），并生成各种代码和说明树值的配置文件表示形式。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-104"> uses a description tree to build a valid service runtime, to publish Web Services Description Language (WSDL), XML Schema definition language (XSD), and policy assertions (metadata) about the service that clients can use to connect to and use the service, and to generate various code and configuration file representations of the description tree values.</span></span>  
   
- 本主题介绍如何从服务协定获取与协定相关的属性，如何实现这些属性，以及如何将这些属性添加到说明树。在某些情况下，属性值会转换为行为属性，然后行为会插入到说明树中。如何将说明树值转换为元数据的更多信息，请参见 。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何将说明树值转换为元数据的更多信息，请参见 [ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ <span data-ttu-id="4b9fc-105">本主题介绍如何从服务协定获取与协定相关的属性，如何实现这些属性，以及如何将这些属性添加到说明树。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-105">This topic describes how contract-related properties are obtained from the service contract, and how they are implemented and added to the description tree.</span></span> <span data-ttu-id="4b9fc-106">在某些情况下，特性值会转换为行为属性，然后行为会插入到说明树中。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-106">In some cases, attribute values are converted into behavior properties and behavior is then inserted into the description tree.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4b9fc-107">如何说明树值将转换为元数据，请参阅[ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-107"> how the description tree values are converted into metadata, see [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).</span></span>  
   
-## 将操作映射到说明树  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中，服务协定是由接口（或类）建模的，这些接口（或类）使用属性将接口（或类）及其方法标记为一组操作。<xref:System.ServiceModel.ServiceHost> 类打开后，所有服务协定和实现都会反映出来，并和配置信息一起合并到说明树中。  
+## <a name="mapping-operations-to-the-description-tree"></a><span data-ttu-id="4b9fc-108">将操作映射到说明树</span><span class="sxs-lookup"><span data-stu-id="4b9fc-108">Mapping Operations to the Description Tree</span></span>  
+ <span data-ttu-id="4b9fc-109">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中，服务协定是由接口（或类）建模的，这些接口（或类）使用属性将接口（或类）及其方法标记为一组操作。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications, service contracts are modeled by interfaces (or classes) that use attributes to mark the interface or class and its methods as a grouping of operations.</span></span> <span data-ttu-id="4b9fc-110"><xref:System.ServiceModel.ServiceHost> 类打开后，所有服务协定和实现都会反映出来，并和配置信息一起合并到说明树中。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-110">When a <xref:System.ServiceModel.ServiceHost> class is opened, any service contracts and implementations are reflected over and merged with configuration information into a description tree.</span></span>  
   
- 操作模型有两种类型：参数模型和消息协定模型。参数模型使用的托管方法不具有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=fullName> 类标记的参数或返回值类型。在这种模型中，开发人员控制参数和返回值的序列化，但 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会生成一些值，用于填充服务及其协定的说明树。  
+ <span data-ttu-id="4b9fc-111">有两种类型的操作模型：*参数*模型和*消息协定*模型。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-111">There are two types of operation models: the *parameter* model and the *message contract* model.</span></span> <span data-ttu-id="4b9fc-112">参数模型使用的托管方法不具有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 类标记的参数或返回值类型。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-112">The parameter model uses managed methods that do not have a parameter or return value type that is marked by the <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="4b9fc-113">在这种模型中，开发人员控制参数和返回值的序列化，但 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会生成一些值，用于填充服务及其协定的说明树。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-113">In this model, developers control the serialization of parameters and return values, but [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generates the values that are used to populate the description tree for the service and its contract.</span></span>  
   
- 配置文件中指定的绑定直接加载到 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=fullName> 属性中。  
+ <span data-ttu-id="4b9fc-114">配置文件中指定的绑定直接加载到 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> 属性中。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-114">Bindings specified in configuration files are loaded directly into the <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> property.</span></span>  
   
-|ServiceBehaviorAttribute 属性|受影响的说明树值|  
-|---------------------------------|--------------|  
-|Name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
-|ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
-|IgnoreExtensionDataObject|设置所有操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 属性。|  
-|MaxItemsInObjectGraph|设置所有操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> 属性。|  
+|<span data-ttu-id="4b9fc-115">ServiceBehaviorAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="4b9fc-115">ServiceBehaviorAttribute Property</span></span>|<span data-ttu-id="4b9fc-116">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-116">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-117">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-117">Name</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|<span data-ttu-id="4b9fc-118">命名空间</span><span class="sxs-lookup"><span data-stu-id="4b9fc-118">Namespace</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
+|<span data-ttu-id="4b9fc-119">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="4b9fc-119">ConfigurationName</span></span>|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
+|<span data-ttu-id="4b9fc-120">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="4b9fc-120">IgnoreExtensionDataObject</span></span>|<span data-ttu-id="4b9fc-121">设置所有操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-121">Sets the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> property for all operations.</span></span>|  
+|<span data-ttu-id="4b9fc-122">MaxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="4b9fc-122">MaxItemsInObjectGraph</span></span>|<span data-ttu-id="4b9fc-123">设置所有操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-123">Sets the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> property for all operations.</span></span>|  
   
-|ServiceContractAttribute 属性|受影响的说明树值|  
-|---------------------------------|--------------|  
-|CallbackContract|添加到所有操作 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> 的 <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription>。|  
-|ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A>和可能的子保护级别。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]保护级别层次结构的更多信息，请参见[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
+|<span data-ttu-id="4b9fc-124">ServiceContractAttribute 属性</span><span class="sxs-lookup"><span data-stu-id="4b9fc-124">ServiceContractAttribute Property</span></span>|<span data-ttu-id="4b9fc-125">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-125">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-126">CallbackContract</span><span class="sxs-lookup"><span data-stu-id="4b9fc-126">CallbackContract</span></span>|<span data-ttu-id="4b9fc-127">添加到所有操作 <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A> 的 <xref:System.ServiceModel.Description.MessageDescription>, <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-127"><xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> added to all operations <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.</span></span>|  
+|<span data-ttu-id="4b9fc-128">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="4b9fc-128">ConfigurationName</span></span>|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
+|<span data-ttu-id="4b9fc-129">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-129">ProtectionLevel</span></span>|<span data-ttu-id="4b9fc-130"><xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 和可能的子保护级别。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-130"><xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> and possibly child protection levels.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4b9fc-131">保护级别的层次结构，请参阅[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md)。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-131"> the protection-level hierarchy, see [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).</span></span>|  
+|<span data-ttu-id="4b9fc-132">SessionMode</span><span class="sxs-lookup"><span data-stu-id="4b9fc-132">SessionMode</span></span>|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
-|ServiceKnownTypesAttribute 值|受影响的说明树值|  
-|----------------------------------|--------------|  
-|MethodName|<xref:System.ServiceModel.Description.OperationDescription.KnownTypes%2A>|  
+|<span data-ttu-id="4b9fc-133">ServiceKnownTypesAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-133">ServiceKnownTypesAttribute Value</span></span>|<span data-ttu-id="4b9fc-134">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-134">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-135">MethodName</span><span class="sxs-lookup"><span data-stu-id="4b9fc-135">MethodName</span></span>|<xref:System.ServiceModel.Description.OperationDescription.KnownTypes%2A>|  
   
-|OperationContractAttribute 值|受影响的说明树值|  
-|----------------------------------|--------------|  
-|Action|用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定\/回调协定。|  
-|AsyncPattern|如果为 True，则执行 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|映射到 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> 中的单个 <xref:System.ServiceModel.Description.MessageDescription>|  
-|IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
-|IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|名称|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A>和可能的子保护级别。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]保护级别层次结构的更多信息，请参见[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|ReplyAction|用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定\/回调协定。|  
+|<span data-ttu-id="4b9fc-136">OperationContractAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-136">OperationContractAttribute Value</span></span>|<span data-ttu-id="4b9fc-137">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-137">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-138">操作</span><span class="sxs-lookup"><span data-stu-id="4b9fc-138">Action</span></span>|<span data-ttu-id="4b9fc-139">用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定/回调协定。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-139"><xref:System.ServiceModel.Description.MessageDescription.Action%2A> for the output message or input message, depending upon contract/callback contract.</span></span>|  
+|<span data-ttu-id="4b9fc-140">AsyncPattern</span><span class="sxs-lookup"><span data-stu-id="4b9fc-140">AsyncPattern</span></span>|<span data-ttu-id="4b9fc-141">如果为 True，则执行 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-141">If true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> and <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A></span></span>|  
+|<span data-ttu-id="4b9fc-142">IsOneWay</span><span class="sxs-lookup"><span data-stu-id="4b9fc-142">IsOneWay</span></span>|<span data-ttu-id="4b9fc-143">映射到 <xref:System.ServiceModel.Description.MessageDescription> 中的单个 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-143">Maps to a single <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A></span></span>|  
+|<span data-ttu-id="4b9fc-144">IsInitiating</span><span class="sxs-lookup"><span data-stu-id="4b9fc-144">IsInitiating</span></span>|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
+|<span data-ttu-id="4b9fc-145">IsTerminating</span><span class="sxs-lookup"><span data-stu-id="4b9fc-145">IsTerminating</span></span>|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
+|<span data-ttu-id="4b9fc-146">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-146">Name</span></span>|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|<span data-ttu-id="4b9fc-147">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-147">ProtectionLevel</span></span>|<span data-ttu-id="4b9fc-148"><xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 和可能的子保护级别。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-148"><xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> and possibly child protection levels.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4b9fc-149">保护级别的层次结构，请参阅[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md)。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-149"> the protection-level hierarchy, see [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).</span></span>|  
+|<span data-ttu-id="4b9fc-150">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="4b9fc-150">ReplyAction</span></span>|<span data-ttu-id="4b9fc-151">用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定/回调协定。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-151"><xref:System.ServiceModel.Description.MessageDescription.Action%2A> for the output message or input message, depending upon contract/callback contract.</span></span>|  
   
-|FaultContractAttribute 值|受影响的说明树值|  
-|------------------------------|--------------|  
-|操作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>，它取决于协定\/回调协定。|  
-|DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|Name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="4b9fc-152">FaultContractAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-152">FaultContractAttribute Value</span></span>|<span data-ttu-id="4b9fc-153">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-153">Description Tree Value Affected</span></span>|  
+|----------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-154">操作</span><span class="sxs-lookup"><span data-stu-id="4b9fc-154">Action</span></span>|<span data-ttu-id="4b9fc-155"><xref:System.ServiceModel.Description.FaultDescription.Action%2A>，它取决于协定/回调协定。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-155"><xref:System.ServiceModel.Description.FaultDescription.Action%2A> depending upon contract/callback contract.</span></span>|  
+|<span data-ttu-id="4b9fc-156">DetailType</span><span class="sxs-lookup"><span data-stu-id="4b9fc-156">DetailType</span></span>|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
+|<span data-ttu-id="4b9fc-157">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-157">Name</span></span>|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|<span data-ttu-id="4b9fc-158">命名空间</span><span class="sxs-lookup"><span data-stu-id="4b9fc-158">Namespace</span></span>|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
+|<span data-ttu-id="4b9fc-159">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-159">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
-|DataContractFormatAttribute 值|受影响的说明树值|  
-|-----------------------------------|--------------|  
-|Use|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 值是在操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 上设置的。|  
+|<span data-ttu-id="4b9fc-160">DataContractFormatAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-160">DataContractFormatAttribute Value</span></span>|<span data-ttu-id="4b9fc-161">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-161">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-162">使用</span><span class="sxs-lookup"><span data-stu-id="4b9fc-162">Use</span></span>|<span data-ttu-id="4b9fc-163"><xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 值是在操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 上设置的。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-163">The <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> value is set on the <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> for the operation.</span></span>|  
   
-|XmlSerializerFormatAttribute 值|受影响的说明树值|  
-|------------------------------------|--------------|  
-|Style|此 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上设置的。|  
-|Use|<xref:System.ServiceModel.XmlSerializerFormatAttribute> 是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上设置的。|  
+|<span data-ttu-id="4b9fc-164">XmlSerializerFormatAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-164">XmlSerializerFormatAttribute Value</span></span>|<span data-ttu-id="4b9fc-165">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-165">Description Tree Value Affected</span></span>|  
+|----------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-166">样式</span><span class="sxs-lookup"><span data-stu-id="4b9fc-166">Style</span></span>|<span data-ttu-id="4b9fc-167">此 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上设置的。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-167">This <xref:System.ServiceModel.XmlSerializerFormatAttribute> property is set on the <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> for the operation.</span></span>|  
+|<span data-ttu-id="4b9fc-168">使用</span><span class="sxs-lookup"><span data-stu-id="4b9fc-168">Use</span></span>|<span data-ttu-id="4b9fc-169"><xref:System.ServiceModel.XmlSerializerFormatAttribute> 是在操作的 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 上设置的。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-169">The <xref:System.ServiceModel.XmlSerializerFormatAttribute> is set on the <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> for the operation.</span></span>|  
   
-|TransactionFlowAttribute 值|受影响的说明树值|  
-|--------------------------------|--------------|  
-|TransactionFlowOption|<xref:System.ServiceModel.TransactionFlowAttribute> 作为操作行为添加到 <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> 属性。|  
+|<span data-ttu-id="4b9fc-170">TransactionFlowAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-170">TransactionFlowAttribute Value</span></span>|<span data-ttu-id="4b9fc-171">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-171">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-172">TransactionFlowOption</span><span class="sxs-lookup"><span data-stu-id="4b9fc-172">TransactionFlowOption</span></span>|<span data-ttu-id="4b9fc-173"><xref:System.ServiceModel.TransactionFlowAttribute> 作为操作行为添加到 <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-173">The <xref:System.ServiceModel.TransactionFlowAttribute> is added as an operation behavior to the <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A> property.</span></span>|  
   
-|MessageContractAttribute 值|受影响的说明树值|  
-|--------------------------------|--------------|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessageDescription.ProtectionLevel%2A>|  
-|WrapperName|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperName%2A>|  
-|WrapperNamespace|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace%2A>|  
+|<span data-ttu-id="4b9fc-174">MessageContractAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-174">MessageContractAttribute Value</span></span>|<span data-ttu-id="4b9fc-175">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-175">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-176">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-176">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.MessageDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="4b9fc-177">WrapperName</span><span class="sxs-lookup"><span data-stu-id="4b9fc-177">WrapperName</span></span>|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperName%2A>|  
+|<span data-ttu-id="4b9fc-178">WrapperNamespace</span><span class="sxs-lookup"><span data-stu-id="4b9fc-178">WrapperNamespace</span></span>|<xref:System.ServiceModel.Description.MessageBodyDescription.WrapperNamespace%2A>|  
   
-|MessageHeaderAttribute 值|受影响的说明树值|  
-|------------------------------|--------------|  
-|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 中相应标头的<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|<span data-ttu-id="4b9fc-179">MessageHeaderAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-179">MessageHeaderAttribute Value</span></span>|<span data-ttu-id="4b9fc-180">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-180">Description Tree Value Affected</span></span>|  
+|----------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-181">Actor</span><span class="sxs-lookup"><span data-stu-id="4b9fc-181">Actor</span></span>|<span data-ttu-id="4b9fc-182"><xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-182"><xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="4b9fc-183">MustUnderstand</span><span class="sxs-lookup"><span data-stu-id="4b9fc-183">MustUnderstand</span></span>|<span data-ttu-id="4b9fc-184"><xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-184"><xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="4b9fc-185">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-185">Name</span></span>|<span data-ttu-id="4b9fc-186"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-186"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="4b9fc-187">命名空间</span><span class="sxs-lookup"><span data-stu-id="4b9fc-187">Namespace</span></span>|<span data-ttu-id="4b9fc-188"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-188"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="4b9fc-189">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-189">ProtectionLevel</span></span>|<span data-ttu-id="4b9fc-190"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-190"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
+|<span data-ttu-id="4b9fc-191">Relay</span><span class="sxs-lookup"><span data-stu-id="4b9fc-191">Relay</span></span>|<span data-ttu-id="4b9fc-192"><xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-192"><xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> for the corresponding header in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A></span></span>|  
   
-|MessageBodyMemberAttribute 值|受影响的说明树值|  
-|----------------------------------|--------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中相应部分的<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Namespace|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中相应部分的<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Order|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中相应部分的<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中相应部分的<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|<span data-ttu-id="4b9fc-193">MessageBodyMemberAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-193">MessageBodyMemberAttribute Value</span></span>|<span data-ttu-id="4b9fc-194">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-194">Description Tree Value Affected</span></span>|  
+|--------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-195">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-195">Name</span></span>|<span data-ttu-id="4b9fc-196"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-196"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="4b9fc-197">命名空间</span><span class="sxs-lookup"><span data-stu-id="4b9fc-197">Namespace</span></span>|<span data-ttu-id="4b9fc-198"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-198"><xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="4b9fc-199">Order</span><span class="sxs-lookup"><span data-stu-id="4b9fc-199">Order</span></span>|<span data-ttu-id="4b9fc-200"><xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-200"><xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
+|<span data-ttu-id="4b9fc-201">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-201">ProtectionLevel</span></span>|<span data-ttu-id="4b9fc-202"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-202"><xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
   
-|MessageHeaderArrayAttribute 值|受影响的说明树值|  
-|-----------------------------------|--------------|  
-|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
-|命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
+|<span data-ttu-id="4b9fc-203">MessageHeaderArrayAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-203">MessageHeaderArrayAttribute Value</span></span>|<span data-ttu-id="4b9fc-204">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-204">Description Tree Value Affected</span></span>|  
+|---------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-205">Actor</span><span class="sxs-lookup"><span data-stu-id="4b9fc-205">Actor</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
+|<span data-ttu-id="4b9fc-206">MustUnderstand</span><span class="sxs-lookup"><span data-stu-id="4b9fc-206">MustUnderstand</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
+|<span data-ttu-id="4b9fc-207">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-207">Name</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|<span data-ttu-id="4b9fc-208">命名空间</span><span class="sxs-lookup"><span data-stu-id="4b9fc-208">Namespace</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
+|<span data-ttu-id="4b9fc-209">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="4b9fc-209">ProtectionLevel</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
+|<span data-ttu-id="4b9fc-210">Relay</span><span class="sxs-lookup"><span data-stu-id="4b9fc-210">Relay</span></span>|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
-|MessagePropertyAttribute 值|受影响的说明树值|  
-|--------------------------------|--------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|<span data-ttu-id="4b9fc-211">MessagePropertyAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-211">MessagePropertyAttribute Value</span></span>|<span data-ttu-id="4b9fc-212">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-212">Description Tree Value Affected</span></span>|  
+|------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-213">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-213">Name</span></span>|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
-|MessageParameterAttribute 值|受影响的说明树值|  
-|---------------------------------|--------------|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.name%2A> 中相应部分的<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|<span data-ttu-id="4b9fc-214">MessageParameterAttribute 值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-214">MessageParameterAttribute Value</span></span>|<span data-ttu-id="4b9fc-215">受影响的说明树值</span><span class="sxs-lookup"><span data-stu-id="4b9fc-215">Description Tree Value Affected</span></span>|  
+|-------------------------------------|-------------------------------------|  
+|<span data-ttu-id="4b9fc-216">名称</span><span class="sxs-lookup"><span data-stu-id="4b9fc-216">Name</span></span>|<span data-ttu-id="4b9fc-217"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span><span class="sxs-lookup"><span data-stu-id="4b9fc-217"><xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> for the corresponding part in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A></span></span>|  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何将说明树值转换为元数据的更多信息，请参见 [ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4b9fc-218">如何说明树值将转换为元数据，请参阅[ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="4b9fc-218"> how the description tree values are converted into metadata, see [ServiceDescription and WSDL Reference](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).</span></span>  
   
-## 请参阅  
- [ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a><span data-ttu-id="4b9fc-219">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4b9fc-219">See Also</span></span>  
+ [<span data-ttu-id="4b9fc-220">ServiceDescription 和 WSDL 引用</span><span class="sxs-lookup"><span data-stu-id="4b9fc-220">ServiceDescription and WSDL Reference</span></span>](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

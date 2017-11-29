@@ -1,34 +1,37 @@
 ---
-title: "双向通信 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "双向通信"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b9d55087eb46cc304fa2a42a3e64208d9a4fec5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 双向通信
-本示例演示如何通过 MSMQ 执行事务处理双向排队通信。  本示例使用 `netMsmqBinding` 绑定。  在本例中，服务是一个自承载的控制台应用程序，通过它可以观察服务接收排队消息。  
+# <a name="two-way-communication"></a><span data-ttu-id="4ef20-102">双向通信</span><span class="sxs-lookup"><span data-stu-id="4ef20-102">Two-Way Communication</span></span>
+<span data-ttu-id="4ef20-103">本示例演示如何通过 MSMQ 执行事务处理双向排队通信。</span><span class="sxs-lookup"><span data-stu-id="4ef20-103">This sample demonstrates how to perform transacted two-way queued communication over MSMQ.</span></span> <span data-ttu-id="4ef20-104">本示例使用 `netMsmqBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="4ef20-105">在本例中，服务是一个自承载的控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="4ef20-105">In this case, the service is a self-hosted console application that allows you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="4ef20-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="4ef20-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 此示例基于[已经过事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
+ <span data-ttu-id="4ef20-107">此示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="4ef20-107">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
- 在排队通信中，客户端使用队列与服务进行通信。  客户端向队列发送消息，服务从队列接收消息。  因此不必同时运行服务和客户端便可使用队列进行通信。  
+ <span data-ttu-id="4ef20-108">在排队通信中，客户端使用队列与服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="4ef20-108">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="4ef20-109">客户端向队列发送消息，服务从队列接收消息。</span><span class="sxs-lookup"><span data-stu-id="4ef20-109">The client sends messages to a queue, and the service receives messages from the queue.</span></span> <span data-ttu-id="4ef20-110">因此不必同时运行服务和客户端便可使用队列进行通信。</span><span class="sxs-lookup"><span data-stu-id="4ef20-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- 本示例演示使用队列的双向通信。  客户端从事务范围内向队列发送采购订单。  服务接收订单、处理订单，然后在事务范围内使用队列中订单的状态回调客户端。  为了便于双向通信，客户端和服务都使用队列以便将采购订单和订单状态排入队列。  
+ <span data-ttu-id="4ef20-111">本示例演示使用队列的双向通信。</span><span class="sxs-lookup"><span data-stu-id="4ef20-111">This sample demonstrates 2-way communication using queues.</span></span> <span data-ttu-id="4ef20-112">客户端从事务范围内向队列发送采购订单。</span><span class="sxs-lookup"><span data-stu-id="4ef20-112">The client sends purchase orders to the queue from within the scope of a transaction.</span></span> <span data-ttu-id="4ef20-113">服务接收订单、处理订单，然后在事务范围内使用队列中订单的状态回调客户端。</span><span class="sxs-lookup"><span data-stu-id="4ef20-113">The service receives the orders, processes the order and then calls back the client with the status of the order from the queue within the scope of a transaction.</span></span> <span data-ttu-id="4ef20-114">为了便于双向通信，客户端和服务都使用队列以便将采购订单和订单状态排入队列。</span><span class="sxs-lookup"><span data-stu-id="4ef20-114">To facilitate two-way communication the client and service both use queues to enqueue purchase orders and order status.</span></span>  
   
- 服务协定 `IOrderProcessor` 定义适合使用队列的单向服务操作。  服务操作包括用于向其发送订单状态的答复终结点。  答复终结点是用于将订单状态发回客户端的队列的 URI。  订单处理应用程序实现下面的协定。  
+ <span data-ttu-id="4ef20-115">服务协定 `IOrderProcessor` 定义适合使用队列的单向服务操作。</span><span class="sxs-lookup"><span data-stu-id="4ef20-115">The service contract `IOrderProcessor` defines one-way service operations that suit the use of queuing.</span></span> <span data-ttu-id="4ef20-116">服务操作包括用于向其发送订单状态的答复终结点。</span><span class="sxs-lookup"><span data-stu-id="4ef20-116">The service operation includes the reply endpoint to use to send the order statuses to.</span></span> <span data-ttu-id="4ef20-117">答复终结点是用于将订单状态发回客户端的队列的 URI。</span><span class="sxs-lookup"><span data-stu-id="4ef20-117">The reply endpoint is the URI of the queue to send the order status back to the client.</span></span> <span data-ttu-id="4ef20-118">订单处理应用程序实现下面的协定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-118">The order processing application implements this contract.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -38,10 +41,9 @@ public interface IOrderProcessor
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
 }  
-  
 ```  
   
- 用于发送订单状态的答复协定由客户端指定。  客户端实现订单状态协定。  服务使用下面协定的生成的代理将订单状态发回客户端。  
+ <span data-ttu-id="4ef20-119">用于发送订单状态的答复协定由客户端指定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-119">The reply contract to send order status is specified by the client.</span></span> <span data-ttu-id="4ef20-120">客户端实现订单状态协定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-120">The client implements the order status contract.</span></span> <span data-ttu-id="4ef20-121">服务使用下面协定的生成的代理将订单状态发回客户端。</span><span class="sxs-lookup"><span data-stu-id="4ef20-121">The service uses the generated proxy of this contract to send order status back to the client.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -52,9 +54,9 @@ public interface IOrderStatus
 }  
 ```  
   
- 服务操作处理提交的采购订单。  对服务操作应用 <xref:System.ServiceModel.OperationBehaviorAttribute> 以在用于从队列中接收消息的事务中指定自动登记，并指定在服务操作完成时事务自动完成。  `Orders` 类封装了订单处理功能。  在本例中，它将采购订单添加到字典。  `Orders` 类中的操作可以使用服务操作登记的事务。  
+ <span data-ttu-id="4ef20-122">服务操作处理提交的采购订单。</span><span class="sxs-lookup"><span data-stu-id="4ef20-122">The service operation processes the submitted purchase order.</span></span> <span data-ttu-id="4ef20-123">对服务操作应用 <xref:System.ServiceModel.OperationBehaviorAttribute> 以在用于从队列中接收消息的事务中指定自动登记，并指定在服务操作完成时事务自动完成。</span><span class="sxs-lookup"><span data-stu-id="4ef20-123">The <xref:System.ServiceModel.OperationBehaviorAttribute> is applied to the service operation to specify automatic enlistment in a transaction that is used to receive the message from the queue and automatic completion of transactions on completion of the service operation.</span></span> <span data-ttu-id="4ef20-124">`Orders` 类封装了订单处理功能。</span><span class="sxs-lookup"><span data-stu-id="4ef20-124">The `Orders` class encapsulates order processing functionality.</span></span> <span data-ttu-id="4ef20-125">在本例中，它将采购订单添加到字典。</span><span class="sxs-lookup"><span data-stu-id="4ef20-125">In this case, it adds the purchase order to a dictionary.</span></span> <span data-ttu-id="4ef20-126">`Orders` 类中的操作可以使用服务操作登记的事务。</span><span class="sxs-lookup"><span data-stu-id="4ef20-126">The transaction that the service operation enlisted in is available to the operations in the `Orders` class.</span></span>  
   
- 服务操作除了处理提交的采购订单之外，还向客户端答复有关订单状态的信息。  
+ <span data-ttu-id="4ef20-127">服务操作除了处理提交的采购订单之外，还向客户端答复有关订单状态的信息。</span><span class="sxs-lookup"><span data-stu-id="4ef20-127">The service operation, in addition to processing the submitted purchase order, replies back to the client on the status of the order.</span></span>  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -78,12 +80,12 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
 }  
 ```  
   
- MSMQ 队列名称是在配置文件的 appSettings 节中指定的。  服务的终结点是在配置文件的 System.ServiceModel 节中定义的。  
+ <span data-ttu-id="4ef20-128">MSMQ 队列名称是在配置文件的 appSettings 节中指定的。</span><span class="sxs-lookup"><span data-stu-id="4ef20-128">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span> <span data-ttu-id="4ef20-129">服务的终结点是在配置文件的 System.ServiceModel 节中定义的。</span><span class="sxs-lookup"><span data-stu-id="4ef20-129">The endpoint for the service is defined in the System.ServiceModel section of the configuration file.</span></span>  
   
 > [!NOTE]
->  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。  MSMQ 队列名称为本地计算机使用圆点 \(.\)，并在其路径中使用反斜杠分隔符。  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。  若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
+>  <span data-ttu-id="4ef20-130">MSMQ 队列名称和终结点地址使用略有不同的寻址约定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-130">The MSMQ queue name and endpoint address use slightly different addressing conventions.</span></span> <span data-ttu-id="4ef20-131">MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。</span><span class="sxs-lookup"><span data-stu-id="4ef20-131">The MSMQ queue name uses a dot (.) for the local machine and backslash separators in its path.</span></span> <span data-ttu-id="4ef20-132">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。</span><span class="sxs-lookup"><span data-stu-id="4ef20-132">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local machine, and uses forward slashes in its path.</span></span> <span data-ttu-id="4ef20-133">若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。</span><span class="sxs-lookup"><span data-stu-id="4ef20-133">To read from a queue that is hosted on the remote machine, replace the "." and "localhost" to the remote machine name.</span></span>  
   
- 服务是自承载服务。  使用 MSMQ 传输时，必须提前创建所使用的队列。  可以手动或通过代码完成此操作。  在此示例中，该服务检查队列是否存在并在必要时创建队列。  从配置文件中读取队列名称。  [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 使用该基址来生成服务的代理。  
+ <span data-ttu-id="4ef20-134">服务是自承载服务。</span><span class="sxs-lookup"><span data-stu-id="4ef20-134">The service is self hosted.</span></span> <span data-ttu-id="4ef20-135">使用 MSMQ 传输时，必须提前创建所使用的队列。</span><span class="sxs-lookup"><span data-stu-id="4ef20-135">When using the MSMQ transport, the queue used must be created in advance.</span></span> <span data-ttu-id="4ef20-136">可以手动或通过代码完成此操作。</span><span class="sxs-lookup"><span data-stu-id="4ef20-136">This can be done manually or through code.</span></span> <span data-ttu-id="4ef20-137">在此示例中，该服务检查队列是否存在并在必要时创建队列。</span><span class="sxs-lookup"><span data-stu-id="4ef20-137">In this sample, the service checks for the existence of the queue and creates it, if necessary.</span></span> <span data-ttu-id="4ef20-138">从配置文件中读取队列名称。</span><span class="sxs-lookup"><span data-stu-id="4ef20-138">The queue name is read from the configuration file.</span></span> <span data-ttu-id="4ef20-139">基址由[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来生成到服务代理。</span><span class="sxs-lookup"><span data-stu-id="4ef20-139">The base address is used by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy to the service.</span></span>  
   
 ```  
 // Host the service within this EXE console application.  
@@ -111,7 +113,7 @@ public static void Main()
 }  
 ```  
   
- 客户端创建事务。  与队列的通信在事务范围内进行，从而可以将事务范围视为所有消息在其中成功或失败的原子单元。  
+ <span data-ttu-id="4ef20-140">客户端创建事务。</span><span class="sxs-lookup"><span data-stu-id="4ef20-140">The client creates a transaction.</span></span> <span data-ttu-id="4ef20-141">与队列的通信在事务范围内进行，从而可以将事务范围视为所有消息在其中成功或失败的原子单元。</span><span class="sxs-lookup"><span data-stu-id="4ef20-141">Communication with the queue takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages succeed or fail.</span></span>  
   
 ```  
 // Create a ServiceHost for the OrderStatus service type.  
@@ -149,10 +151,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-  
 ```  
   
- 客户端代码实现 `IOrderStatus` 协定以便从服务接收订单状态。  在本例中，它输出订单状态。  
+ <span data-ttu-id="4ef20-142">客户端代码实现 `IOrderStatus` 协定以便从服务接收订单状态。</span><span class="sxs-lookup"><span data-stu-id="4ef20-142">The client code implements the `IOrderStatus` contract to receive order status from the service.</span></span> <span data-ttu-id="4ef20-143">在本例中，它输出订单状态。</span><span class="sxs-lookup"><span data-stu-id="4ef20-143">In this case, it prints out the order status.</span></span>  
   
 ```  
 [ServiceBehavior]  
@@ -166,12 +167,11 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-  
 ```  
   
- 订单状态队列在 `Main` 方法中创建。  客户端配置包括订单状态服务配置，以便承载订单状态服务，如下面的示例配置所示。  
+ <span data-ttu-id="4ef20-144">订单状态队列在 `Main` 方法中创建。</span><span class="sxs-lookup"><span data-stu-id="4ef20-144">The order status queue is created in the `Main` method.</span></span> <span data-ttu-id="4ef20-145">客户端配置包括订单状态服务配置，以便承载订单状态服务，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="4ef20-145">The client configuration includes the order status service configuration to host the order status service, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <appSettings>  
   <!-- Use appSetting to configure MSMQ queue name. -->  
   <add key="queueName" value=".\private$\ServiceModelSamplesTwo-way/OrderStatus" />  
@@ -198,12 +198,11 @@ public class OrderStatusService : IOrderStatus
   </client>  
   
 </system.serviceModel>  
-  
 ```  
   
- 运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。  您可以看到服务从客户端接收消息。  在每个控制台窗口中按 Enter 可以关闭服务和客户端。  
+ <span data-ttu-id="4ef20-146">运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="4ef20-146">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="4ef20-147">您可以看到服务从客户端接收消息。</span><span class="sxs-lookup"><span data-stu-id="4ef20-147">You can see the service receive messages from the client.</span></span> <span data-ttu-id="4ef20-148">在每个控制台窗口中按 Enter 可以关闭服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="4ef20-148">Press ENTER in each console window to shut down the service and client.</span></span>  
   
- 服务显示采购订单信息并指示正在将订单状态发回订单状态队列。  
+ <span data-ttu-id="4ef20-149">服务显示采购订单信息并指示正在将订单状态发回订单状态队列。</span><span class="sxs-lookup"><span data-stu-id="4ef20-149">The service displays the purchase order information and indicates it is sending back the order status to the order status queue.</span></span>  
   
 ```  
 The service is ready.  
@@ -220,32 +219,31 @@ Processing Purchase Order: 124a1f69-3699-4b16-9bcc-43147a8756fc
 Sending back order status information  
 ```  
   
- 客户端显示由服务发送的订单状态信息。  
+ <span data-ttu-id="4ef20-150">客户端显示由服务发送的订单状态信息。</span><span class="sxs-lookup"><span data-stu-id="4ef20-150">The client displays the order status information sent by the service.</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
 Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending  
-  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4ef20-151">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="4ef20-151">To set up, build, and run the sample</span></span>  
   
-1.  确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="4ef20-152">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="4ef20-152">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="4ef20-153">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="4ef20-153">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="4ef20-154">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="4ef20-154">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  如果使用 Svcutil.exe 为该示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
+    >  <span data-ttu-id="4ef20-155">如果使用 Svcutil.exe 为该示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。</span><span class="sxs-lookup"><span data-stu-id="4ef20-155">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint names in the client configuration to match the client code.</span></span>  
   
- 默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。  MSMQ 传输安全性有两个相关的属性，即 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>。默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。  为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。  如果在不满足这些条件的计算机上运行此示例，将会收到错误。  
+ <span data-ttu-id="4ef20-156">默认情况下使用 <xref:System.ServiceModel.NetMsmqBinding> 启用传输安全。</span><span class="sxs-lookup"><span data-stu-id="4ef20-156">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="4ef20-157">有两个相关属性对于 MSMQ 传输安全，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>和<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`默认情况下，身份验证模式设置为`Windows`和保护级别设置为`Sign`。</span><span class="sxs-lookup"><span data-stu-id="4ef20-157">There are two relevant properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="4ef20-158">为了使 MSMQ 提供身份验证和签名功能，MSMQ 必须是域的一部分，并且必须安装 MSMQ 的 Active Directory 集成选项。</span><span class="sxs-lookup"><span data-stu-id="4ef20-158">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="4ef20-159">如果在不满足这些条件的计算机上运行此示例，将会收到错误。</span><span class="sxs-lookup"><span data-stu-id="4ef20-159">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
   
-### 在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="4ef20-160">在加入到工作组或在没有 Active Directory 集成的计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="4ef20-160">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
   
-1.  如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置所示：  
+1.  <span data-ttu-id="4ef20-161">如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置所示：</span><span class="sxs-lookup"><span data-stu-id="4ef20-161">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
   
       <appSettings>  
@@ -276,12 +274,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
       </system.serviceModel>  
   
     </configuration>  
-  
     ```  
   
-2.  关闭客户端配置的安全性将生成下面的内容：  
+2.  <span data-ttu-id="4ef20-162">关闭客户端配置的安全性将生成下面的内容：</span><span class="sxs-lookup"><span data-stu-id="4ef20-162">Turning off security for a client configuration generates the following:</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <appSettings>  
@@ -323,25 +320,25 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3.  本示例中的服务在 `OrderProcessorService` 中创建一个绑定。  实例化该绑定后添加一行代码以将安全模式设置为 `None`。  
+3.  <span data-ttu-id="4ef20-163">本示例中的服务在 `OrderProcessorService` 中创建一个绑定。</span><span class="sxs-lookup"><span data-stu-id="4ef20-163">The service for this sample creates a binding in the `OrderProcessorService`.</span></span> <span data-ttu-id="4ef20-164">实例化该绑定后添加一行代码以将安全模式设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="4ef20-164">Add a line of code after the binding is instantiated to set the security mode to `None`.</span></span>  
   
     ```  
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  
   
-4.  确保在运行示例前更改服务器和客户端上的配置。  
+4.  <span data-ttu-id="4ef20-165">确保在运行示例前更改服务器和客户端上的配置。</span><span class="sxs-lookup"><span data-stu-id="4ef20-165">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  将 `security mode` 设置为`None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 或 `Message` 安全设置为 `None`。  
+    >  <span data-ttu-id="4ef20-166">将 `security mode` 设置为`None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 或 `Message` 安全设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="4ef20-166">Setting `security mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> or `Message` security to `None`.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="4ef20-167">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="4ef20-167">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4ef20-168">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="4ef20-168">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  <span data-ttu-id="4ef20-169">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="4ef20-169">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4ef20-170">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="4ef20-170">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="4ef20-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4ef20-171">See Also</span></span>

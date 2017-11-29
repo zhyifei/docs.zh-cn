@@ -1,51 +1,33 @@
 ---
-title: "不能用具有返回类型的委托类型声明事件 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "事件不能用具有返回类型的委托类型声明"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31084
 - vbc31084
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31084
+helpviewer_keywords: BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9829a0270d1969121f02bf6e46779b0e447cbb80
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 281864fd9054fbb53471f32bbebaa885ba85c4dc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>事件不能用具有返回类型的委托类型声明
-Function 过程为指定的委托。  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="7742c-102">事件不能用具有返回类型的委托类型声明</span><span class="sxs-lookup"><span data-stu-id="7742c-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="7742c-103">为函数过程指定委托。</span><span class="sxs-lookup"><span data-stu-id="7742c-103">A delegate was specified for a function procedure.</span></span>  
   
- **错误 ID:** BC31084  
+ <span data-ttu-id="7742c-104">**错误 ID:** BC31084</span><span class="sxs-lookup"><span data-stu-id="7742c-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7742c-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="7742c-105">To correct this error</span></span>  
   
--   指定的委托`Sub`过程。  
+-   <span data-ttu-id="7742c-106">指定的委托`Sub`过程。</span><span class="sxs-lookup"><span data-stu-id="7742c-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="7742c-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7742c-107">See Also</span></span>  
+ [<span data-ttu-id="7742c-108">事件</span><span class="sxs-lookup"><span data-stu-id="7742c-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -1,49 +1,52 @@
 ---
-title: "Oracle 的 .NET Framework 数据提供程序的系统要求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle 的 .NET Framework 数据提供程序的系统需求"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 84bf37dfadf038bc418fc8c2c6746baa58d717b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle 的 .NET Framework 数据提供程序的系统要求
-Oracle .NET Framework 数据提供程序需要 Microsoft 数据访问组件 \(MDAC\) 2.6 版或更高版本。  建议使用 MDAC 2.8 SP1。  
+# <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a><span data-ttu-id="0002f-102">Oracle 的 .NET Framework 数据提供程序的系统需求</span><span class="sxs-lookup"><span data-stu-id="0002f-102">System Requirements for the .NET Framework Data Provider for Oracle</span></span>
+<span data-ttu-id="0002f-103">Oracle .NET Framework 数据提供程序需要 Microsoft 数据访问组件 (MDAC) 2.6 版或更高版本。</span><span class="sxs-lookup"><span data-stu-id="0002f-103">The .NET Framework Data Provider for Oracle requires Microsoft Data Access Components (MDAC) version 2.6 or later.</span></span> <span data-ttu-id="0002f-104">建议使用 MDAC 2.8 SP1。</span><span class="sxs-lookup"><span data-stu-id="0002f-104">MDAC 2.8 SP1 is recommended.</span></span>  
   
- 还必须安装 Oracle 8i Release 3 \(8.1.7\) 客户端或更高版本。  
+ <span data-ttu-id="0002f-105">还必须安装 Oracle 8i Release 3 (8.1.7) 客户端或更高版本。</span><span class="sxs-lookup"><span data-stu-id="0002f-105">You must also have Oracle 8i Release 3 (8.1.7) Client or later installed.</span></span>  
   
- Oracle 9i 版本之前的 Oracle 客户端软件无法访问 UTF16 数据库，因为 UTF16 是 Oracle 9i 中的一项新功能。  要使用此功能，必须将客户端软件升级到 Oracle 9i 或更高版本。  
+ <span data-ttu-id="0002f-106">Oracle 9i 版本之前的 Oracle 客户端软件无法访问 UTF16 数据库，因为 UTF16 是 Oracle 9i 中的一项新功能。</span><span class="sxs-lookup"><span data-stu-id="0002f-106">Oracle Client software prior to version Oracle 9i cannot access UTF16 databases because UTF16 is a new feature in Oracle 9i.</span></span> <span data-ttu-id="0002f-107">要使用此功能，必须将客户端软件升级到 Oracle 9i 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="0002f-107">To use this feature, you must upgrade your client software to Oracle 9i or later.</span></span>  
   
-## 使用 Oracle 数据提供程序和 Unicode 数据  
- 下表列出在使用 Oracle .NET Framework 数据提供程序和 Oracle 客户端库时，应考虑的与 Unicode 有关的问题。  有关更多信息，请参见 Oracle 文档。  
+## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a><span data-ttu-id="0002f-108">使用 Oracle 数据提供程序和 Unicode 数据</span><span class="sxs-lookup"><span data-stu-id="0002f-108">Working with the Data Provider for Oracle and Unicode Data</span></span>  
+ <span data-ttu-id="0002f-109">下表列出在使用 Oracle .NET Framework 数据提供程序和 Oracle 客户端库时，应考虑的与 Unicode 有关的问题。</span><span class="sxs-lookup"><span data-stu-id="0002f-109">Following is a list of Unicode-related issues that you should consider when working with the .NET Framework Data Provider for Oracle and Oracle client libraries.</span></span> <span data-ttu-id="0002f-110">有关更多信息，请参见 Oracle 文档。</span><span class="sxs-lookup"><span data-stu-id="0002f-110">For more information, see your Oracle documentation.</span></span>  
   
-### 在连接字符串属性中设置 Unicode 值  
- 在使用 Oracle 时，可以使用连接字符串属性  
+### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a><span data-ttu-id="0002f-111">在连接字符串属性中设置 Unicode 值</span><span class="sxs-lookup"><span data-stu-id="0002f-111">Setting the Unicode Value in a Connection String Attribute</span></span>  
+ <span data-ttu-id="0002f-112">在使用 Oracle 时，可以使用连接字符串属性</span><span class="sxs-lookup"><span data-stu-id="0002f-112">When working with Oracle, you can use the connection string attribute</span></span>  
   
 ```  
 Unicode=True   
 ```  
   
- 在 UTF\-16 模式下初始化 Oracle 客户端库。  这样可以使 Oracle 客户端库接受 UTF\-16（与 UCS\-2 非常类似），而不是多字节字符串。  这样，Oracle 数据提供程序始终可以使用任何 Oracle 代码页，不需要进行其他转换工作。  只有使用 Oracle 9i 客户端与包含备选字符集 AL16UTF16 的 Oracle 9i 数据库进行通信时，此配置才有效。  当 Oracle 9i 客户端与 Oracle 9i 服务器进行通信时，需要使用其他资源将 Unicode **CommandText** 值转换为 Oracle9i 服务器使用的相应的多字节字符集。  如果确定已通过将 `Unicode=True` 添加到连接字符串中而拥有了安全的配置，则可以避免此问题。  
+ <span data-ttu-id="0002f-113">在 UTF-16 模式下初始化 Oracle 客户端库。</span><span class="sxs-lookup"><span data-stu-id="0002f-113">to initialize the Oracle client libraries in UTF-16 mode.</span></span> <span data-ttu-id="0002f-114">这样可以使 Oracle 客户端库接受 UTF-16（与 UCS-2 非常类似），而不是多字节字符串。</span><span class="sxs-lookup"><span data-stu-id="0002f-114">This causes the Oracle client libraries to accept UTF-16 (which is very similar to UCS-2) instead of multi-byte strings.</span></span> <span data-ttu-id="0002f-115">这样，Oracle 数据提供程序始终可以使用任何 Oracle 代码页，不需要进行其他转换工作。</span><span class="sxs-lookup"><span data-stu-id="0002f-115">This allows the Data Provider for Oracle to always work with any Oracle code page without additional translation work.</span></span> <span data-ttu-id="0002f-116">只有使用 Oracle 9i 客户端与包含备选字符集 AL16UTF16 的 Oracle 9i 数据库进行通信时，此配置才有效。</span><span class="sxs-lookup"><span data-stu-id="0002f-116">This configuration only works if you are using Oracle 9i clients to communicate with an Oracle 9i database with the alternate character set of AL16UTF16.</span></span> <span data-ttu-id="0002f-117">当 Oracle 9i 客户端与 Oracle 9i 服务器进行通信时，其他资源所需转换 Unicode **CommandText**为相应的多字节字符的值设置为 Oracle9i 服务器使用。</span><span class="sxs-lookup"><span data-stu-id="0002f-117">When an Oracle 9i client communicates with an Oracle 9i server, additional resources are required to convert the Unicode **CommandText** values to the appropriate multi-byte character set that the Oracle9i server uses.</span></span> <span data-ttu-id="0002f-118">如果确定已通过将 `Unicode=True` 添加到连接字符串中而拥有了安全的配置，则可以避免此问题。</span><span class="sxs-lookup"><span data-stu-id="0002f-118">This can be avoided when you know that you have the safe configuration by adding `Unicode=True` to your connection string.</span></span>  
   
-### 混合版本的 Oracle 客户端和 Oracle 服务器  
- 如果服务器的国家字符集指定为 AL16UTF16（Oracle 9i 的默认设置），Oracle 8i 客户端无法访问 Oracle 9i 数据库中的 **NCHAR**、**NVARCHAR2** 或 **NCLOB** 数据。  因为直到 Oracle 9i 才引入对 UTF\-16 字符集的支持，Oracle 8i 客户端无法读取。  
+### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a><span data-ttu-id="0002f-119">混合版本的 Oracle 客户端和 Oracle 服务器</span><span class="sxs-lookup"><span data-stu-id="0002f-119">Mixing Versions of Oracle Client and Oracle Server</span></span>  
+ <span data-ttu-id="0002f-120">Oracle 8i 客户端无法访问**NCHAR**， **NVARCHAR2**，或**NCLOB**时服务器的国家字符集指定为 AL16UTF16 的 Oracle 9i 数据库中的数据 (默认设置对于 Oracle 9i）。</span><span class="sxs-lookup"><span data-stu-id="0002f-120">Oracle 8i clients cannot access **NCHAR**, **NVARCHAR2**, or **NCLOB** data in Oracle 9i databases when the server's national character set is specified as AL16UTF16 (the default setting for Oracle 9i).</span></span> <span data-ttu-id="0002f-121">因为直到 Oracle 9i 才引入对 UTF-16 字符集的支持，Oracle 8i 客户端无法读取。</span><span class="sxs-lookup"><span data-stu-id="0002f-121">Because support for the UTF-16 character set was not introduced until Oracle 9i, Oracle 8i clients cannot read it.</span></span>  
   
-### 使用 UTF\-8 数据  
- 要设置备选字符集，将注册表项 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\ORACLE\\HOMEID\\NLS\_LANG 设置为 UTF8。  有关更多信息，请参见适合您的平台的 Oracle 安装说明。  默认设置为安装 Oracle 客户端软件所使用的语言的主要字符集。  如果设置的语言与所连接的数据库的国家语言字符集不匹配，将使参数和列绑定使用主要数据库字符集发送或接收数据，而不是使用国家字符集。  
+### <a name="working-with-utf-8-data"></a><span data-ttu-id="0002f-122">使用 UTF-8 数据</span><span class="sxs-lookup"><span data-stu-id="0002f-122">Working with UTF-8 Data</span></span>  
+ <span data-ttu-id="0002f-123">要设置备选字符集，将注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG 设置为 UTF8。</span><span class="sxs-lookup"><span data-stu-id="0002f-123">To set the alternate character set, set the Registry Key HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG to UTF8.</span></span> <span data-ttu-id="0002f-124">有关更多信息，请参见适合您的平台的 Oracle 安装说明。</span><span class="sxs-lookup"><span data-stu-id="0002f-124">See the Oracle Installation notes on your platform for more information.</span></span> <span data-ttu-id="0002f-125">默认设置为安装 Oracle 客户端软件所使用的语言的主要字符集。</span><span class="sxs-lookup"><span data-stu-id="0002f-125">The default setting is the primary character set of the language from which you are installing the Oracle Client software.</span></span> <span data-ttu-id="0002f-126">如果设置的语言与所连接的数据库的国家语言字符集不匹配，将使参数和列绑定使用主要数据库字符集发送或接收数据，而不是使用国家字符集。</span><span class="sxs-lookup"><span data-stu-id="0002f-126">Not setting the language to match the national language character set of the database to which you are connecting will cause parameter and column bindings to send or receive data in your primary database character set, not the national character set.</span></span>  
   
-### OracleLob 只能更新完整字符。  
- 出于可用性原因，<xref:System.Data.OracleClient.OracleLob> 对象继承自 .NET Framework 流类，并提供 **ReadByte** 和 **WriteByte** 方法。  该对象还实现 **CopyTo** 和 **Erase** 等方法，适用于 Oracle **LOB** 对象的各个部分。  相反，Oracle 客户端软件提供许多 API 来使用字符 **LOB**（**CLOB** 和 **NCLOB**）。  但是，这些 API 只适用于完整字符。  因为这一区别，Oracle 数据提供程序实现了对 **Read** 和 **ReadByte** 的支持，以便以字节感应的方式使用 UTF\-16 数据。  但是，**OracleLob** 对象的其他方法只允许完整字符操作。  
+### <a name="oraclelob-can-only-update-full-characters"></a><span data-ttu-id="0002f-127">OracleLob 只能更新完整字符。</span><span class="sxs-lookup"><span data-stu-id="0002f-127">OracleLob Can Only Update Full Characters.</span></span>  
+ <span data-ttu-id="0002f-128">出于可用性原因，<xref:System.Data.OracleClient.OracleLob>对象继承自.NET Framework 流的类，并提供**ReadByte**和**WriteByte**方法。</span><span class="sxs-lookup"><span data-stu-id="0002f-128">For usability reasons, the <xref:System.Data.OracleClient.OracleLob> object inherits from the .NET Framework Stream class, and provides **ReadByte** and **WriteByte** methods.</span></span> <span data-ttu-id="0002f-129">它还实现方法，如**CopyTo**和**擦除**，则该工作上的 Oracle 部分**LOB**对象。</span><span class="sxs-lookup"><span data-stu-id="0002f-129">It also implements methods, such as **CopyTo** and **Erase**, that work on sections of Oracle **LOB** objects.</span></span> <span data-ttu-id="0002f-130">与此相反，Oracle 客户端软件提供大量的 Api 来使用字符**LOB**s (**CLOB**和**NCLOB**)。</span><span class="sxs-lookup"><span data-stu-id="0002f-130">In contrast, Oracle client software provides a number of APIs to work with character **LOB**s (**CLOB** and **NCLOB**).</span></span> <span data-ttu-id="0002f-131">但是，这些 API 只适用于完整字符。</span><span class="sxs-lookup"><span data-stu-id="0002f-131">However, these APIs work on full characters only.</span></span> <span data-ttu-id="0002f-132">因为这一区别，Oracle 数据提供程序实现支持**读取**和**ReadByte**以便以便方式使用 utf-16 数据。</span><span class="sxs-lookup"><span data-stu-id="0002f-132">Because of this difference, the Data Provider for Oracle implements support for **Read** and **ReadByte** to work with UTF-16 data in a byte-wise manner.</span></span> <span data-ttu-id="0002f-133">但是，其他方法的**OracleLob**对象只允许完整字符操作。</span><span class="sxs-lookup"><span data-stu-id="0002f-133">However, the other methods of the **OracleLob** object only allow full-character operations.</span></span>  
   
-## 请参阅  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0002f-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0002f-134">See Also</span></span>  
+ [<span data-ttu-id="0002f-135">Oracle 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0002f-135">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [<span data-ttu-id="0002f-136">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="0002f-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

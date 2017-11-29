@@ -1,57 +1,60 @@
 ---
-title: "Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Basic2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb77e794119db2434a38ff7271912f50e483d766
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Basic
-本节包含演示基本 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能的示例部分。  
+# <a name="basic"></a><span data-ttu-id="bf58b-102">Basic</span><span class="sxs-lookup"><span data-stu-id="bf58b-102">Basic</span></span>
+<span data-ttu-id="bf58b-103">本节包含演示基本 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能的示例部分。</span><span class="sxs-lookup"><span data-stu-id="bf58b-103">This section includes sections of samples that demonstrate basic [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]functionality.</span></span>  
   
-## 本节内容  
- [入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- 演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现典型服务和典型客户端。  
+## <a name="in-this-section"></a><span data-ttu-id="bf58b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="bf58b-104">In This Section</span></span>  
+ [<span data-ttu-id="bf58b-105">入门</span><span class="sxs-lookup"><span data-stu-id="bf58b-105">Getting Started</span></span>](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ <span data-ttu-id="bf58b-106">演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现典型的服务和典型的客户端。</span><span class="sxs-lookup"><span data-stu-id="bf58b-106">Demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
- 演示异步 JavaScript 和 XML。  
+ [<span data-ttu-id="bf58b-107">AJAX</span><span class="sxs-lookup"><span data-stu-id="bf58b-107">AJAX</span></span>](../../../../docs/framework/wcf/samples/ajax.md)  
+ <span data-ttu-id="bf58b-108">演示异步 JavaScript 和 XML。</span><span class="sxs-lookup"><span data-stu-id="bf58b-108">Demonstrates Asynchronous JavaScript and XML.</span></span>  
   
- [绑定](../../../../docs/framework/wcf/samples/binding.md)  
- 演示如何使用终结点元素的绑定特性。  
+ [<span data-ttu-id="bf58b-109">绑定</span><span class="sxs-lookup"><span data-stu-id="bf58b-109">Binding</span></span>](../../../../docs/framework/wcf/samples/binding.md)  
+ <span data-ttu-id="bf58b-110">演示如何使用终结点元素的绑定特性。</span><span class="sxs-lookup"><span data-stu-id="bf58b-110">Demonstrates using the binding attribute of an endpoint element.</span></span>  
   
- [客户端](../../../../docs/framework/wcf/samples/client.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序。  
+ [<span data-ttu-id="bf58b-111">客户端</span><span class="sxs-lookup"><span data-stu-id="bf58b-111">Client</span></span>](../../../../docs/framework/wcf/samples/client.md)  
+ <span data-ttu-id="bf58b-112">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="bf58b-112">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client applications.</span></span>  
   
- [协定](../../../../docs/framework/wcf/samples/contract.md)  
- 演示数据协定。  
+ [<span data-ttu-id="bf58b-113">协定</span><span class="sxs-lookup"><span data-stu-id="bf58b-113">Contract</span></span>](../../../../docs/framework/wcf/samples/contract.md)  
+ <span data-ttu-id="bf58b-114">演示数据协定。</span><span class="sxs-lookup"><span data-stu-id="bf58b-114">Demonstrates data contracts.</span></span>  
   
- [发现](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发现。  
+ [<span data-ttu-id="bf58b-115">发现</span><span class="sxs-lookup"><span data-stu-id="bf58b-115">Discovery</span></span>](../../../../docs/framework/wcf/samples/discovery-samples.md)  
+ <span data-ttu-id="bf58b-116">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发现。</span><span class="sxs-lookup"><span data-stu-id="bf58b-116">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] discovery.</span></span>  
   
- [管理](../../../../docs/framework/wcf/samples/management.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 管理。  
+ [<span data-ttu-id="bf58b-117">管理</span><span class="sxs-lookup"><span data-stu-id="bf58b-117">Management</span></span>](../../../../docs/framework/wcf/samples/management.md)  
+ <span data-ttu-id="bf58b-118">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 管理。</span><span class="sxs-lookup"><span data-stu-id="bf58b-118">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] management.</span></span>  
   
- [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 路由服务。  
+ [<span data-ttu-id="bf58b-119">路由服务</span><span class="sxs-lookup"><span data-stu-id="bf58b-119">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)  
+ <span data-ttu-id="bf58b-120">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 路由服务。</span><span class="sxs-lookup"><span data-stu-id="bf58b-120">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] routing services.</span></span>  
   
- [安全性](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全。  
+ [<span data-ttu-id="bf58b-121">安全性</span><span class="sxs-lookup"><span data-stu-id="bf58b-121">Security</span></span>](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
+ <span data-ttu-id="bf58b-122">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全。</span><span class="sxs-lookup"><span data-stu-id="bf58b-122">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security.</span></span>  
   
- [服务](../../../../docs/framework/wcf/samples/services.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+ [<span data-ttu-id="bf58b-123">服务</span><span class="sxs-lookup"><span data-stu-id="bf58b-123">Services</span></span>](../../../../docs/framework/wcf/samples/services.md)  
+ <span data-ttu-id="bf58b-124">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="bf58b-124">Demonstrates [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [联合](../../../../docs/framework/wcf/samples/syndication.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合。  
+ [<span data-ttu-id="bf58b-125">联合</span><span class="sxs-lookup"><span data-stu-id="bf58b-125">Syndication</span></span>](../../../../docs/framework/wcf/samples/syndication.md)  
+ <span data-ttu-id="bf58b-126">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合。</span><span class="sxs-lookup"><span data-stu-id="bf58b-126">Demonstrates[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] syndication.</span></span>  
   
- [Web](../../../../docs/framework/wcf/samples/web.md)  
- 演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 Web 宿主。
+ [<span data-ttu-id="bf58b-127">Web</span><span class="sxs-lookup"><span data-stu-id="bf58b-127">Web</span></span>](../../../../docs/framework/wcf/samples/web.md)  
+ <span data-ttu-id="bf58b-128">演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 Web 宿主。</span><span class="sxs-lookup"><span data-stu-id="bf58b-128">Demonstrates Web-hosting in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>

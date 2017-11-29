@@ -1,74 +1,75 @@
 ---
-title: "图形编程入门 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绘图"
-  - "示例 [Windows 窗体], 图形"
-  - "入门, 图形编程"
-  - "图形, 入门"
+title: "图形编程入门"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], getting started
+- getting started [Windows Forms], graphics programming
+- examples [Windows Forms], graphics
+- drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 图形编程入门
-本节介绍如何在 Windows 窗体应用程序中开始使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  下列主题演示如何完成一些 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 任务，如绘制和填充形状和文本。  
+# <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="5ed7d-102">图形编程入门</span><span class="sxs-lookup"><span data-stu-id="5ed7d-102">Getting Started with Graphics Programming</span></span>
+<span data-ttu-id="5ed7d-103">本部分说明如何开始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]在 Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="5ed7d-104">下面的主题介绍如何完成几个[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]任务，如绘制和填充形状和文本。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  
   
-## 本节内容  
- [如何：创建用于绘制的 Graphics 对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- 演示如何创建 <xref:System.Drawing.Graphics> 对象以进行绘制。  
+## <a name="in-this-section"></a><span data-ttu-id="5ed7d-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="5ed7d-105">In This Section</span></span>  
+ [<span data-ttu-id="5ed7d-106">如何：创建用于绘制的图形对象</span><span class="sxs-lookup"><span data-stu-id="5ed7d-106">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="5ed7d-107">演示如何创建<xref:System.Drawing.Graphics>对象以进行绘制。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-107">Shows how to create a <xref:System.Drawing.Graphics> object for drawing.</span></span>  
   
- [如何：创建钢笔](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- 演示如何创建钢笔。  
+ [<span data-ttu-id="5ed7d-108">如何：创建笔</span><span class="sxs-lookup"><span data-stu-id="5ed7d-108">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ <span data-ttu-id="5ed7d-109">演示如何创建钢笔。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-109">Shows how to create a pen.</span></span>  
   
- [如何：设置钢笔颜色](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- 演示如何设置钢笔的颜色。  
+ [<span data-ttu-id="5ed7d-110">如何：设置笔颜色</span><span class="sxs-lookup"><span data-stu-id="5ed7d-110">How to: Set the Color of a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ <span data-ttu-id="5ed7d-111">演示如何设置钢笔颜色。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-111">Demonstrates how to set the color of a pen.</span></span>  
   
- [如何：创建实心画笔](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- 描述如何创建实心画笔。  
+ [<span data-ttu-id="5ed7d-112">如何：创建实心画笔</span><span class="sxs-lookup"><span data-stu-id="5ed7d-112">How to: Create a Solid Brush</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
+ <span data-ttu-id="5ed7d-113">描述如何创建实心画笔。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-113">Describes how to create a solid brush.</span></span>  
   
- [如何：在 Windows 窗体上绘制线条](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- 演示如何绘制线条。  
+ [<span data-ttu-id="5ed7d-114">如何：在 Windows 窗体上绘制直线</span><span class="sxs-lookup"><span data-stu-id="5ed7d-114">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ <span data-ttu-id="5ed7d-115">演示如何绘制线条。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-115">Demonstrates how to draw a line.</span></span>  
   
- [如何：绘制空心形状](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- 描述如何绘制形状。  
+ [<span data-ttu-id="5ed7d-116">如何：绘制显示边框的形状</span><span class="sxs-lookup"><span data-stu-id="5ed7d-116">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ <span data-ttu-id="5ed7d-117">描述如何绘制形状。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-117">Describes how to draw a shape.</span></span>  
   
- [如何：在 Windows 窗体上绘制实心矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- 说明如何绘制矩形。  
+ [<span data-ttu-id="5ed7d-118">如何：在 Windows 窗体上绘制填充矩形</span><span class="sxs-lookup"><span data-stu-id="5ed7d-118">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ <span data-ttu-id="5ed7d-119">说明如何绘制矩形。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-119">Explains how to draw a rectangle.</span></span>  
   
- [如何：在 Windows 窗体上绘制实心椭圆](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- 演示如何绘制实心椭圆。  
+ [<span data-ttu-id="5ed7d-120">如何：在 Windows 窗体上绘制填充椭圆形</span><span class="sxs-lookup"><span data-stu-id="5ed7d-120">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ <span data-ttu-id="5ed7d-121">演示如何绘制实心的椭圆。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-121">Shows how to draw a filled ellipse.</span></span>  
   
- [如何：在 Windows 窗体上绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- 描述如何绘制文本。  
+ [<span data-ttu-id="5ed7d-122">如何：在 Windows 窗体上绘制文本</span><span class="sxs-lookup"><span data-stu-id="5ed7d-122">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ <span data-ttu-id="5ed7d-123">描述如何绘制文本。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-123">Describes how to draw text.</span></span>  
   
- [如何：在 Windows 窗体上绘制垂直文本](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- 演示如何绘制竖排文本。  
+ [<span data-ttu-id="5ed7d-124">如何：在 Windows 窗体上绘制竖排文本</span><span class="sxs-lookup"><span data-stu-id="5ed7d-124">How to: Draw Vertical Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
+ <span data-ttu-id="5ed7d-125">演示如何绘制垂直文本。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-125">Shows how to draw vertical text.</span></span>  
   
- [如何：使用 GDI\+ 呈现图像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- 演示如何绘制图像。  
+ [<span data-ttu-id="5ed7d-126">如何：使用 GDI+ 呈现图像</span><span class="sxs-lookup"><span data-stu-id="5ed7d-126">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ <span data-ttu-id="5ed7d-127">演示如何绘制图像。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-127">Demonstrates how to draw images.</span></span>  
   
- [如何：创建特定形状的 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- 解释如何更改窗体的形状。  
+ [<span data-ttu-id="5ed7d-128">如何：创建具有特定形状的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="5ed7d-128">How to: Create a Shaped Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
+ <span data-ttu-id="5ed7d-129">说明如何更改窗体的形状。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-129">Explains how to change the shape of a form.</span></span>  
   
- [如何：在 Windows 窗体中复制像素以减少闪烁](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- 说明如何将像素从一个区域复制到另一个区域。  
+ [<span data-ttu-id="5ed7d-130">如何：在 Windows 窗体中复制像素以减少闪烁</span><span class="sxs-lookup"><span data-stu-id="5ed7d-130">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ <span data-ttu-id="5ed7d-131">说明如何从一个区域的像素为单位复制到另一个。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-131">Explains how to copy pixels from one area to another.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="5ed7d-132">参考</span><span class="sxs-lookup"><span data-stu-id="5ed7d-132">Reference</span></span>  
  <xref:System.Drawing>  
- 描述此命名空间并提供指向其所有成员的链接。  
+ <span data-ttu-id="5ed7d-133">描述此命名空间，并提供指向其所有成员。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-133">Describes this namespace and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms>  
- 描述此命名空间并提供指向其所有成员的链接。
+ <span data-ttu-id="5ed7d-134">描述此命名空间，并提供指向其所有成员。</span><span class="sxs-lookup"><span data-stu-id="5ed7d-134">Describes this namespace and has links to all of its members.</span></span>

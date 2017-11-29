@@ -1,59 +1,58 @@
 ---
-title: "可修改和不可修改参数之间的差异 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "变量 [Visual Basic], 可修改的"
-  - "变量 [Visual Basic], 不可修改的"
-  - "过程参数"
-  - "过程, 参数"
-  - "Visual Basic 代码, 过程"
+title: "可修改和不可修改自变量之间的差异 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedure arguments
+- arguments [Visual Basic], nonmodifiable
+- Visual Basic code, procedures
+- arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ab108d064f5c6740f80328a9b6db4785334550ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 可修改和不可修改参数之间的差异 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-当调用过程时，通常要将一个或多个参数传递给它。  每个参数对应于一个基础编程元素。  基础元素和参数可更改还是不可更改。  
+# <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a><span data-ttu-id="84708-102">可修改和不可修改自变量之间的差异 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84708-102">Differences Between Modifiable and Nonmodifiable Arguments (Visual Basic)</span></span>
+<span data-ttu-id="84708-103">当调用过程时，您通常给它传递了一个或多个自变量。</span><span class="sxs-lookup"><span data-stu-id="84708-103">When you call a procedure, you typically pass one or more arguments to it.</span></span> <span data-ttu-id="84708-104">每个自变量与基础的编程元素相对应。</span><span class="sxs-lookup"><span data-stu-id="84708-104">Each argument corresponds to an underlying programming element.</span></span> <span data-ttu-id="84708-105">基本元素和参数本身可以是可修改或不可修改。</span><span class="sxs-lookup"><span data-stu-id="84708-105">Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.</span></span>  
   
-## 可更改和不可更改元素  
- 一个编程元素可以是 " *可更改元素*，可以有它的已更改值， *不可更改*元素，一次具有固定值它已创建。  
+## <a name="modifiable-and-nonmodifiable-elements"></a><span data-ttu-id="84708-106">可修改和不可修改的元素</span><span class="sxs-lookup"><span data-stu-id="84708-106">Modifiable and Nonmodifiable Elements</span></span>  
+ <span data-ttu-id="84708-107">编程元素可以是*可修改的元素*，它可以具有其值已更改，或*不可修改的元素*，它创建后，它具有固定的值。</span><span class="sxs-lookup"><span data-stu-id="84708-107">A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.</span></span>  
   
- 下表列出了可更改和不可更改的编程元素。  
+ <span data-ttu-id="84708-108">下表列出了可修改和不可修改的编程元素。</span><span class="sxs-lookup"><span data-stu-id="84708-108">The following table lists modifiable and nonmodifiable programming elements.</span></span>  
   
-|可更改元素|不可更改元素|  
-|-----------|------------|  
-|局部变量 \(在过程内声明\)，包括对象变量，不包括只读|只读变量、字段和属性|  
-|字段 \(模块、类和结构的成员变量\)，不包括只读|常数和文本|  
-|属性，不包括只读|枚举成员|  
-|数组元素|表达式 \(即使元素可更改\)|  
+|<span data-ttu-id="84708-109">可修改的元素</span><span class="sxs-lookup"><span data-stu-id="84708-109">Modifiable elements</span></span>|<span data-ttu-id="84708-110">不可修改的元素</span><span class="sxs-lookup"><span data-stu-id="84708-110">Nonmodifiable elements</span></span>|  
+|-------------------------|----------------------------|  
+|<span data-ttu-id="84708-111">本地变量 （在过程声明），包括对象变量，包括只读</span><span class="sxs-lookup"><span data-stu-id="84708-111">Local variables (declared inside procedures), including object variables, except for read-only</span></span>|<span data-ttu-id="84708-112">只读变量、 字段和属性</span><span class="sxs-lookup"><span data-stu-id="84708-112">Read-only variables, fields, and properties</span></span>|  
+|<span data-ttu-id="84708-113">包括只读字段 （的模块、 类和结构的成员变量）</span><span class="sxs-lookup"><span data-stu-id="84708-113">Fields (member variables of modules, classes, and structures), except for read-only</span></span>|<span data-ttu-id="84708-114">常量和文本</span><span class="sxs-lookup"><span data-stu-id="84708-114">Constants and literals</span></span>|  
+|<span data-ttu-id="84708-115">属性，包括只读</span><span class="sxs-lookup"><span data-stu-id="84708-115">Properties, except for read-only</span></span>|<span data-ttu-id="84708-116">枚举成员</span><span class="sxs-lookup"><span data-stu-id="84708-116">Enumeration members</span></span>|  
+|<span data-ttu-id="84708-117">数组元素</span><span class="sxs-lookup"><span data-stu-id="84708-117">Array elements</span></span>|<span data-ttu-id="84708-118">表达式 （即使其元素是可修改）</span><span class="sxs-lookup"><span data-stu-id="84708-118">Expressions (even if their elements are modifiable)</span></span>|  
   
-## 可更改和不可更改参数  
- *可修改的参数* 是一个带有可更改基础元素。  调用代码可以随时存储一个新值，，并且，如果您传递参数， [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)过程中的代码还可以更改调用代码中的基础元素。  
+## <a name="modifiable-and-nonmodifiable-arguments"></a><span data-ttu-id="84708-119">可修改和不可修改参数</span><span class="sxs-lookup"><span data-stu-id="84708-119">Modifiable and Nonmodifiable Arguments</span></span>  
+ <span data-ttu-id="84708-120">A*可修改参数*是指具有一个可修改的基础元素。</span><span class="sxs-lookup"><span data-stu-id="84708-120">A *modifiable argument* is one with a modifiable underlying element.</span></span> <span data-ttu-id="84708-121">调用代码可以将新值存储在任何时候，如果传递参数和[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，过程中的代码还可以修改调用代码中的基础元素。</span><span class="sxs-lookup"><span data-stu-id="84708-121">The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.</span></span>  
   
- *不可更改参数* 具有不可更改的基础元素或者传递 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。  该过程不能更改调用代码中的基础元素，因此，即使它是一个可修改的元素。  如果是不可更改元素，调用代码不能修改它。  
+ <span data-ttu-id="84708-122">A*不可修改自变量*具有不可修改的基础元素或传递[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。</span><span class="sxs-lookup"><span data-stu-id="84708-122">A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).</span></span> <span data-ttu-id="84708-123">过程不能修改调用代码中中的基础元素，即使它是可修改的元素。</span><span class="sxs-lookup"><span data-stu-id="84708-123">The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element.</span></span> <span data-ttu-id="84708-124">如果它是不可修改的元素，调用代码本身不能修改它。</span><span class="sxs-lookup"><span data-stu-id="84708-124">If it is a nonmodifiable element, the calling code itself cannot modify it.</span></span>  
   
- 被调用过程可以更改它的不可更改参数的本地副本，，但更改不会影响调用代码中的基础元素。  
+ <span data-ttu-id="84708-125">被调用的过程可以修改其本地副本的一个不可修改的自变量，但该修改不会影响中调用代码的基础元素。</span><span class="sxs-lookup"><span data-stu-id="84708-125">The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.</span></span>  
   
-## 请参阅  
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [过程参数和自变量](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [如何：将参数传递给过程](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [通过值和通过引用传递参数](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [通过值传递参数和通过引用传递参数之间的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)   
- [如何：更改过程参数的值](../../../../visual-basic/programming-guide/language-features/procedures/how-to-change-the-value-of-a-procedure-argument.md)   
- [如何：防止过程参数的值被更改](../../../../visual-basic/programming-guide/language-features/procedures/how-to-protect-a-procedure-argument-against-value-changes.md)   
- [如何：强制通过值传递参数](../../../../visual-basic/programming-guide/language-features/procedures/how-to-force-an-argument-to-be-passed-by-value.md)   
- [按位置和按名称传递参数](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a><span data-ttu-id="84708-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="84708-126">See Also</span></span>  
+ [<span data-ttu-id="84708-127">过程</span><span class="sxs-lookup"><span data-stu-id="84708-127">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="84708-128">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="84708-128">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="84708-129">如何：将自变量传递给过程</span><span class="sxs-lookup"><span data-stu-id="84708-129">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="84708-130">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="84708-130">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="84708-131">通过值传递自变量和通过引用传递自变量之间的差异</span><span class="sxs-lookup"><span data-stu-id="84708-131">Differences Between Passing an Argument By Value and By Reference</span></span>](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
+ [<span data-ttu-id="84708-132">如何：更改过程自变量的值</span><span class="sxs-lookup"><span data-stu-id="84708-132">How to: Change the Value of a Procedure Argument</span></span>](./how-to-change-the-value-of-a-procedure-argument.md)  
+ [<span data-ttu-id="84708-133">如何：防止过程自变量的值被更改</span><span class="sxs-lookup"><span data-stu-id="84708-133">How to: Protect a Procedure Argument Against Value Changes</span></span>](./how-to-protect-a-procedure-argument-against-value-changes.md)  
+ [<span data-ttu-id="84708-134">如何：强制通过值传递自变量</span><span class="sxs-lookup"><span data-stu-id="84708-134">How to: Force an Argument to Be Passed by Value</span></span>](./how-to-force-an-argument-to-be-passed-by-value.md)  
+ [<span data-ttu-id="84708-135">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="84708-135">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="84708-136">值类型和引用类型</span><span class="sxs-lookup"><span data-stu-id="84708-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

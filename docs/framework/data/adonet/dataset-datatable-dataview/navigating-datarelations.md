@@ -1,36 +1,42 @@
 ---
-title: "导航 DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "导航 DataRelation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5b90b58595c86fc3c4dcaf7fd453c517d6f14904
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 导航 DataRelation
-<xref:System.Data.DataRelation> 的一项主要功能就是在 <xref:System.Data.DataSet> 中从一个 <xref:System.Data.DataTable> 浏览到另一个。  它使您能够在给定相关 **DataTable** 中的单个 **DataRow** 的情况下检索一个 **DataTable** 中的所有相关 <xref:System.Data.DataRow> 对象。  例如，当建立客户表和订单表之间的 **DataRelation** 后，可以使用 **GetChildRows** 检索特定客户行的所有订单行。  
+# <a name="navigating-datarelations"></a><span data-ttu-id="62be1-102">导航 DataRelation</span><span class="sxs-lookup"><span data-stu-id="62be1-102">Navigating DataRelations</span></span>
+<span data-ttu-id="62be1-103"><xref:System.Data.DataRelation> 的一项主要功能就是在 <xref:System.Data.DataTable> 中从一个 <xref:System.Data.DataSet> 浏览到另一个。</span><span class="sxs-lookup"><span data-stu-id="62be1-103">One of the primary functions of a <xref:System.Data.DataRelation> is to allow navigation from one <xref:System.Data.DataTable> to another within a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="62be1-104">这允许您检索所有相关<xref:System.Data.DataRow>中一个对象**DataTable**在给定单个**DataRow**从相关**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="62be1-104">This allows you to retrieve all the related <xref:System.Data.DataRow> objects in one **DataTable** when given a single **DataRow** from a related **DataTable**.</span></span> <span data-ttu-id="62be1-105">例如，在建立后**DataRelation**之间客户表和订单表，你可以检索特定客户行使用的所有订单行**GetChildRows**。</span><span class="sxs-lookup"><span data-stu-id="62be1-105">For example, after establishing a **DataRelation** between a table of customers and a table of orders, you can retrieve all the order rows for a particular customer row using **GetChildRows**.</span></span>  
   
- 以下代码示例创建 **DataSet** 的 **Customers** 表和 **Orders** 表之间的 **DataRelation**，并返回每个客户的所有订单。  
+ <span data-ttu-id="62be1-106">下面的代码示例创建**DataRelation**之间**客户**表和**订单**表**数据集**并返回每个客户的所有订单。</span><span class="sxs-lookup"><span data-stu-id="62be1-106">The following code example creates a **DataRelation** between the **Customers** table and the **Orders** table of a **DataSet** and returns all the orders for each customer.</span></span>  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- 下一示例以上例为基础，将四个表关联在一起，并浏览这些关系。  如上例所示，**CustomerID** 使 **Customers** 表与 **Orders** 表相关联。  对于 **Customers** 表中的每个客户，将确定 **Orders** 表中的所有子行，以返回特定客户的订单数以及他们的 **OrderID** 值。  
+ <span data-ttu-id="62be1-107">下一示例以上例为基础，将四个表关联在一起，并浏览这些关系。</span><span class="sxs-lookup"><span data-stu-id="62be1-107">The next example builds on the preceding example, relating four tables together and navigating those relationships.</span></span> <span data-ttu-id="62be1-108">与前面的示例中， **CustomerID**相关**客户**表**订单**表。</span><span class="sxs-lookup"><span data-stu-id="62be1-108">As in the previous example, **CustomerID** relates the **Customers** table to the **Orders** table.</span></span> <span data-ttu-id="62be1-109">对于中的每个客户**客户**表中的所有子行**订单**确定都表，以返回特定客户的订单数以及它们**OrderID**值。</span><span class="sxs-lookup"><span data-stu-id="62be1-109">For each customer in the **Customers** table, all the child rows in the **Orders** table are determined, in order to return the number of orders a particular customer has and their **OrderID** values.</span></span>  
   
- 该扩展示例还将返回 **OrderDetails** 表和 **Products** 表中的值。  **Orders** 表使用 **OrderID** 与 **OrderDetails** 表相关联，以确定在每一客户订单中订购的产品及数量。  由于 **OrderDetails** 表只包含已订购产品的 **ProductID**，**OrderDetails** 将使用 **ProductID** 与 **Products** 相关联，以返回 **ProductName**。  在这一关系中，**Products** 表为父表，而 **Order Details** 表为子表。  因此，当循环访问 **OrderDetails** 表时，将调用 **GetParentRow** 来检索相关的 **ProductName** 值。  
+ <span data-ttu-id="62be1-110">该扩展的示例还返回的值从**OrderDetails**和**产品**表。</span><span class="sxs-lookup"><span data-stu-id="62be1-110">The expanded example also returns the values from the **OrderDetails** and **Products** tables.</span></span> <span data-ttu-id="62be1-111">**订单**与相关表**OrderDetails**表使用**OrderID**以确定每个客户订单的产品及数量已经排序。</span><span class="sxs-lookup"><span data-stu-id="62be1-111">The **Orders** table is related to the **OrderDetails** table using **OrderID** to determine, for each customer order, what products and quantities were ordered.</span></span> <span data-ttu-id="62be1-112">因为**OrderDetails**表仅包含**ProductID**已订购产品， **OrderDetails**与相关**产品**使用**ProductID**为了返回**ProductName**。</span><span class="sxs-lookup"><span data-stu-id="62be1-112">Because the **OrderDetails** table only contains the **ProductID** of an ordered product, **OrderDetails** is related to **Products** using **ProductID** in order to return the **ProductName**.</span></span> <span data-ttu-id="62be1-113">在这一关系，**产品**表为父表和**订单详细信息**表为子表。</span><span class="sxs-lookup"><span data-stu-id="62be1-113">In this relation, the **Products** table is the parent and the **Order Details** table is the child.</span></span> <span data-ttu-id="62be1-114">因此，当循环访问**OrderDetails**表， **GetParentRow**调用来检索相关**ProductName**值。</span><span class="sxs-lookup"><span data-stu-id="62be1-114">As a result, when iterating through the **OrderDetails** table, **GetParentRow** is called to retrieve the related **ProductName** value.</span></span>  
   
- 请注意，当为 **Customers** 表和 **Orders** 表创建 **DataRelation** 时，没有为 **createConstraints** 标志指定任何值（默认为 **true**）。  它假定 **Orders** 表中的所有行都具有一个存在于父 **Customers** 表中的 **CustomerID** 值。  如果 **CustomerID** 存在于 **Customers** 表之外的 **Orders** 表中，则 <xref:System.Data.ForeignKeyConstraint> 将引发异常。  
+ <span data-ttu-id="62be1-115">请注意，当**DataRelation**为创建**客户**和**订单**表，为指定任何值**createConstraints**标志 (默认值是**true**)。</span><span class="sxs-lookup"><span data-stu-id="62be1-115">Notice that when the **DataRelation** is created for the **Customers** and **Orders** tables, no value is specified for the **createConstraints** flag (the default is **true**).</span></span> <span data-ttu-id="62be1-116">此操作假定所有中的行**订单**表具有**CustomerID**存在的父代中的值**客户**表。</span><span class="sxs-lookup"><span data-stu-id="62be1-116">This assumes that all the rows in the **Orders** table have a **CustomerID** value that exists in the parent **Customers** table.</span></span> <span data-ttu-id="62be1-117">如果**CustomerID**中存在**订单**中不存在的表**客户**表，<xref:System.Data.ForeignKeyConstraint>导致引发异常。</span><span class="sxs-lookup"><span data-stu-id="62be1-117">If a **CustomerID** exists in the **Orders** table that does not exist in the **Customers** table, a <xref:System.Data.ForeignKeyConstraint> causes an exception to be thrown.</span></span>  
   
- 如果子列可能包含父列不包含的值，添加 **DataRelation** 时请将 **createConstraints** 标志设置为 **false**。  在该示例中，对于 **Orders** 表和 **OrderDetails** 表之间的 **DataRelation**，**createConstraints** 标志将设置为 **false**。  这样，应用程序就可以返回 **OrderDetails** 表中的所有记录并只返回 **Orders** 表中记录的子集，而不会生成运行时异常。  该扩展示例生成以下格式的输出。  
+ <span data-ttu-id="62be1-118">如果子列可能包含父列不包含的值，设置**createConstraints**标志切换为**false**添加时**DataRelation**。</span><span class="sxs-lookup"><span data-stu-id="62be1-118">When the child column might contain values that the parent column does not contain, set the **createConstraints** flag to **false** when adding the **DataRelation**.</span></span> <span data-ttu-id="62be1-119">在示例中， **createConstraints**标志设置为**false**为**DataRelation**之间**订单**表和**OrderDetails**表。</span><span class="sxs-lookup"><span data-stu-id="62be1-119">In the example, the **createConstraints** flag is set to **false** for the **DataRelation** between the **Orders** table and the **OrderDetails** table.</span></span> <span data-ttu-id="62be1-120">这使应用程序返回中的所有记录**OrderDetails**表和仅从记录的子集**订单**表而不会产生运行时异常。</span><span class="sxs-lookup"><span data-stu-id="62be1-120">This enables the application to return all the records from the **OrderDetails** table and only a subset of records from the **Orders** table without generating a run-time exception.</span></span> <span data-ttu-id="62be1-121">该扩展示例生成以下格式的输出。</span><span class="sxs-lookup"><span data-stu-id="62be1-121">The expanded sample generates output in the following format.</span></span>  
   
 ```  
 Customer ID: NORTS  
@@ -48,11 +54,11 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- 以下代码示例是一个扩展示例，在该示例中将返回 **OrderDetails** 表和 **Products** 表中的值，并只返回 **Orders** 表中记录的子集。  
+ <span data-ttu-id="62be1-122">下面的代码示例是展开的示例其中的值从**OrderDetails**和**产品**返回表，其中仅中记录的子集有**订单**所返回的表。</span><span class="sxs-lookup"><span data-stu-id="62be1-122">The following code example is an expanded sample where the values from the **OrderDetails** and **Products** tables are returned, with only a subset of the records in the **Orders** table being returned.</span></span>  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
-## 请参阅  
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="62be1-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="62be1-123">See Also</span></span>  
+ [<span data-ttu-id="62be1-124">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="62be1-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="62be1-125">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="62be1-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

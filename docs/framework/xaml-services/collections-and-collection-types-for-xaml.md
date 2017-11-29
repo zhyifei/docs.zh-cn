@@ -1,52 +1,55 @@
 ---
-title: "Collections and Collection Types for XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XAML 的集合类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: 2
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 991360433b5fb09c13e59f63be94e0fa0ec94b61
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Collections and Collection Types for XAML
-本主题介绍如何定义用于支持集合类型的属性和支持实例化的集合项的 XAML 语法为父对象元素或属性元素的元素子级。  
+# <a name="collections-and-collection-types-for-xaml"></a><span data-ttu-id="3f589-102">XAML 的集合类型</span><span class="sxs-lookup"><span data-stu-id="3f589-102">Collections and Collection Types for XAML</span></span>
+<span data-ttu-id="3f589-103">本主题介绍如何定义旨在支持一个集合，并以用于实例化作为元素的父对象元素或属性元素的子级的收集项的支持 XAML 语法的类型的属性。</span><span class="sxs-lookup"><span data-stu-id="3f589-103">This topic describes how to define properties of types that are intended to support a collection, and to support the XAML syntax for instantiating collection items as element children of a parent object element or property element.</span></span>  
   
-## XAML 集合概念  
- 从概念上而言， XAML 的必须实现任何关系在具有多个子项在 XAML 对象元素或 XAML 特性元素的范围内作为集合。  必须将该集合与该关系的父 XAML 类型的特定 XAML 特性。  ，因为 XAML 处理器需要分配标记中的每一项都是支持集合属性的一个新添加的项目中，属性必须是集合。  
+## <a name="xaml-collection-concepts"></a><span data-ttu-id="3f589-104">XAML 集合概念</span><span class="sxs-lookup"><span data-stu-id="3f589-104">XAML Collection Concepts</span></span>  
+ <span data-ttu-id="3f589-105">从概念上讲，任何在 XAML 中有多个范围中的 XAML 对象元素的子项或 XAML 属性元素必须以集合形式实现关系。</span><span class="sxs-lookup"><span data-stu-id="3f589-105">Conceptually, any relationship in XAML where there are multiple child items within the scope of a XAML object element or XAML property element must be implemented as a collection.</span></span> <span data-ttu-id="3f589-106">该集合必须与为该关系中的父级的 XAML 类型的特定 XAML 属性相关联。</span><span class="sxs-lookup"><span data-stu-id="3f589-106">That collection must be associated with a particular XAML property of the XAML type that is the parent in that relationship.</span></span> <span data-ttu-id="3f589-107">属性必须是一个集合，因为 XAML 处理器需要分配标记为新添加的项的支持集合属性中的每个项。</span><span class="sxs-lookup"><span data-stu-id="3f589-107">The property must be a collection because a XAML processor expects to assign each item in markup to be a newly added item of the backing collection property.</span></span>  
   
- 在 XAML 语言级别，集合的具体要求支持不完全定义。  后备类型表示或列表或的概念集合可以为、或列表或字典 \(，而不是两个\) 中定义的 XAML 语言级别，但是，字典未定义的由 XAML 语言。  
+ <span data-ttu-id="3f589-108">在 XAML 语言级别，集合支持的精确要求未完全定义。</span><span class="sxs-lookup"><span data-stu-id="3f589-108">At the XAML language level, the exact requirements of collection support are not fully defined.</span></span> <span data-ttu-id="3f589-109">在 XAML 语言级别，定义一个集合可以是要么列表或字典 （但不是两者） 的概念，但后备类型表示任一列表或字典不由 XAML 语言定义。</span><span class="sxs-lookup"><span data-stu-id="3f589-109">The concept that a collection can be either a list or a dictionary(but not both) is defined at the XAML language level, but which backing types represent either lists or dictionaries is not defined by the XAML language.</span></span>  
   
- 在 .NET framework XAML 服务中， XAML 集合的概念支持是明确定义基于 .NET framework 后备类型。  具体而言， XAML 为集合支持基于多个 .NET framework 概念，以及使用 API 通常列表和字典 .NET framework 编程。  
+ <span data-ttu-id="3f589-110">在.NET Framework XAML 服务中，根据后备类型的.NET Framework 更清楚地定义 XAML 集合支持的概念。</span><span class="sxs-lookup"><span data-stu-id="3f589-110">In .NET Framework XAML Services, the concept of XAML collection support is more clearly defined in terms of .NET Framework backing types.</span></span> <span data-ttu-id="3f589-111">具体而言，对集合的 XAML 支持基于多个.NET Framework 概念和对于列表和字典常规.NET Framework 编程中的使用的 Api。</span><span class="sxs-lookup"><span data-stu-id="3f589-111">Specifically, the XAML support for collections is based on several .NET Framework concepts and APIs that are used for lists and dictionaries in general .NET Framework programming.</span></span>  
   
-1.  <xref:System.Collections.IList> 接口指示列表集合。  
+1.  <span data-ttu-id="3f589-112"><xref:System.Collections.IList>接口指示列表集合。</span><span class="sxs-lookup"><span data-stu-id="3f589-112">The <xref:System.Collections.IList> interface indicates a list collection.</span></span>  
   
-2.  <xref:System.Collections.IDictionary> 接口指示 dicionary 集合。  
+2.  <span data-ttu-id="3f589-113"><xref:System.Collections.IDictionary>接口指示 dicionary 集合。</span><span class="sxs-lookup"><span data-stu-id="3f589-113">The <xref:System.Collections.IDictionary> interface indicates a dicionary collection.</span></span>  
   
-3.  <xref:System.Array> 表示数组，并且，数组支持 <xref:System.Collections.IList> 方法。  
+3.  <span data-ttu-id="3f589-114"><xref:System.Array>表示一个数组，以及数组支持<xref:System.Collections.IList>方法。</span><span class="sxs-lookup"><span data-stu-id="3f589-114"><xref:System.Array> represents an array, and an array supports <xref:System.Collections.IList> methods.</span></span>  
   
- 在这些概念集合中的每个元素， .NET framework XAML 服务 XAML 处理器需要调用在集合属性类型的特定实例的 `Add` 方法。  或者，在序列化方案， XAML 处理器会在列表、字典或数组中找到的每个项目的分离 XAML 类型的实例基于每个 “项目”集合的特定概念。  这些是: <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; <xref:System.Array>的显式 <xref:System.Array.System%23Collections%23IList%23Item%2A> 。  
+ <span data-ttu-id="3f589-115">在每个这些集合概念，.NET Framework XAML 服务 XAML 处理器需要调用`Add`集合属性的类型的特定实例上的方法。</span><span class="sxs-lookup"><span data-stu-id="3f589-115">In each of these collection concepts, a .NET Framework XAML Services XAML processor expects to call the `Add` method on a specific instance of the collection property's type.</span></span> <span data-ttu-id="3f589-116">或者，在序列化方案中，XAML 处理器生成的每个项列表、 字典或基于每个集合的特定概念"项"数组中找到的离散 XAML 类型实例。</span><span class="sxs-lookup"><span data-stu-id="3f589-116">Or, in a serialization scenario, a XAML processor produces discrete XAML-type instances for each item found in the list, dictionary or array based on each collection's specific concept of "Items".</span></span> <span data-ttu-id="3f589-117">这些是： <xref:System.Collections.IList.Item%2A>;<xref:System.Collections.IDictionary.Item%2A>; 显式<xref:System.Array.System%23Collections%23IList%23Item%2A>为<xref:System.Array>。</span><span class="sxs-lookup"><span data-stu-id="3f589-117">These are : <xref:System.Collections.IList.Item%2A>; <xref:System.Collections.IDictionary.Item%2A>; the explicit <xref:System.Array.System%23Collections%23IList%23Item%2A> for <xref:System.Array>.</span></span>  
   
-## 泛型集合  
- 泛型集合是用于编程常规 .NET framework，并且可用于 XAML 集合属性还使用。  但是，泛型接口 <xref:System.Collections.Generic.IList%601> 和 <xref:System.Collections.Generic.IDictionary%602> 不确定的是 .NET framework XAML 服务 XAML 处理器看成等效于非泛型 <xref:System.Collections.IList> 或 <xref:System.Collections.IDictionary>。  而不是实现接口，泛型集合属性类型的一个建议的方法是从类 <xref:System.Collections.Generic.List%601> 或 <xref:System.Collections.Generic.Dictionary%602>派生。  这些类实现非泛型接口从而包括预期的为基实现的 XAML 集合支持。  
+## <a name="generic-collections"></a><span data-ttu-id="3f589-118">泛型集合</span><span class="sxs-lookup"><span data-stu-id="3f589-118">Generic Collections</span></span>  
+ <span data-ttu-id="3f589-119">泛型集合可用于常规.NET Framework 编程，并还可以用于 XAML 集合属性。</span><span class="sxs-lookup"><span data-stu-id="3f589-119">Generic collections can be useful for general .NET Framework programming, and can also be used for XAML collection properties.</span></span> <span data-ttu-id="3f589-120">但是，泛型接口<xref:System.Collections.Generic.IList%601>和<xref:System.Collections.Generic.IDictionary%602>不识别的视为等效于非泛型的.NET Framework XAML 服务 XAML 处理器<xref:System.Collections.IList>或<xref:System.Collections.IDictionary>。</span><span class="sxs-lookup"><span data-stu-id="3f589-120">However, the generic interfaces <xref:System.Collections.Generic.IList%601> and <xref:System.Collections.Generic.IDictionary%602> are not identified by .NET Framework XAML Services XAML processors as being equivalent to the non-generic <xref:System.Collections.IList> or <xref:System.Collections.IDictionary>.</span></span> <span data-ttu-id="3f589-121">建议的泛型集合属性类型的方法是派生自类而不是实现接口，<xref:System.Collections.Generic.List%601>或<xref:System.Collections.Generic.Dictionary%602>。</span><span class="sxs-lookup"><span data-stu-id="3f589-121">Rather than implementing the interfaces, a recommended approach for generic collection property types is to derive from the classes <xref:System.Collections.Generic.List%601> or <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="3f589-122">这些类实现非泛型接口，并因此在基实现中包括 XAML 集合的预期的支持。</span><span class="sxs-lookup"><span data-stu-id="3f589-122">These classes implement the non-generic interfaces and thus include the expected support for XAML collections in the base implementation.</span></span>  
   
-## 只读集合和初始化逻辑  
- 在编程 .NET framework，它是使表示集合的值作为只读集合的所有特性的常用设计模式。  此模式允许拥有集合属性改进控件的实例发生的集合。  具体地说，该模式通过设置属性来防止整个预先存在的集合的意外替换。  在此模式中，应通过调用方法或属性对集合的所有访问由调用方如支持由集合类型和相关集合接口例如 <xref:System.Collections.IList>。  
+## <a name="read-only-collections-and-initialization-logic"></a><span data-ttu-id="3f589-123">只读集合和初始化逻辑</span><span class="sxs-lookup"><span data-stu-id="3f589-123">Read-Only Collections and Initialization Logic</span></span>  
+ <span data-ttu-id="3f589-124">在.NET Framework 编程中，很常见的设计模式，以使保存集合为只读集合的值的任何属性。</span><span class="sxs-lookup"><span data-stu-id="3f589-124">In .NET Framework programming, it is a common design pattern to make any property that holds a value of a collection as a read-only collection.</span></span> <span data-ttu-id="3f589-125">此模式允许拥有实例的集合会发生什么情况的更好地控制的集合属性...</span><span class="sxs-lookup"><span data-stu-id="3f589-125">This pattern permits the instance that owns the collection property to better control what happens to the collection..</span></span> <span data-ttu-id="3f589-126">具体而言，模式通过将属性设置阻止意外替换整个预先存在的收集。</span><span class="sxs-lookup"><span data-stu-id="3f589-126">Specifically, the pattern prevents accidental replacement of the entire pre-existing collection by setting the property.</span></span> <span data-ttu-id="3f589-127">在此模式中，对由调用方集合的任何访问而是应将通过调用方法或属性，如支持的集合类型和/或相关的集合接口<xref:System.Collections.IList>。</span><span class="sxs-lookup"><span data-stu-id="3f589-127">In this pattern, any access to the collection by callers should instead be made by calling methods or properties as supported by the collection type and/or the relevant collection interfaces such as <xref:System.Collections.IList>.</span></span>  
   
- 使用此模式提示显示只读集合属性的任何类都必须先初始化该属性保存空集合。  为类的，构造行为的一部分通常初始化执行。  若要可用于 XAML，重要的此类逻辑由默认构造函数始终引用，，因为中的 XAML 处理属性之前通常调用默认构造函数 \(集合属性或\)。  
+ <span data-ttu-id="3f589-128">使用此模式意味着任何公开的只读集合属性的类必须先初始化该属性以存放空集合。</span><span class="sxs-lookup"><span data-stu-id="3f589-128">Using this pattern implies that any class that exposes a read-only collection property must first initialize that property to hold an empty collection.</span></span> <span data-ttu-id="3f589-129">通常初始化类的构造行为的一部分执行。</span><span class="sxs-lookup"><span data-stu-id="3f589-129">Typically the initialization is performed as part of the construction behavior for the class.</span></span> <span data-ttu-id="3f589-130">对 XAML 人员很有用，很重要，这种逻辑始终引用默认构造函数，因为 XAML 通常调用默认构造函数之前处理属性 (集合属性或其他)。</span><span class="sxs-lookup"><span data-stu-id="3f589-130">To be useful for XAML, it is important that such logic is always referenced by the default constructor, because XAML generally calls the default constructor prior to processing the properties (collection properties or otherwise).</span></span>  
   
-## XAML 类型系统支持和集合  
- 在分析 XAML 和填充或序列化以外的集合属性的基本机制， XAML 类型系统为已实现在 .NET framework XAML 服务中包括与在 XAML 的集合的若干设计功能。  
+## <a name="xaml-type-system-support-and-collections"></a><span data-ttu-id="3f589-131">XAML 类型系统支持和集合</span><span class="sxs-lookup"><span data-stu-id="3f589-131">XAML Type System Support and Collections</span></span>  
+ <span data-ttu-id="3f589-132">超出的分析 XAML 和填充或序列化集合的属性的基本机制，在.NET Framework XAML 服务中实现的 XAML 类型系统包括了一些设计功能，适用于 XAML 中的集合。</span><span class="sxs-lookup"><span data-stu-id="3f589-132">Beyond the basic mechanics of parsing XAML and populating or serializing collection properties, the XAML type system as implemented in .NET Framework XAML Services includes several design features that pertain to collections in XAML.</span></span>  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A> 返回 true，则 XAML 类型由提供 XAML 集合支持的类型返回。  
+1.  <span data-ttu-id="3f589-133"><xref:System.Xaml.XamlType.IsCollection%2A>如果 XAML 类型由提供 XAML 集合支持的类型，，返回 true。</span><span class="sxs-lookup"><span data-stu-id="3f589-133"><xref:System.Xaml.XamlType.IsCollection%2A> returns true if the XAML type is backed by a type that provides XAML collection support.</span></span>  
   
-2.  集合 模式 XAML 类型支持的<xref:System.Xaml.XamlType.IsDictionary%2A> 和 <xref:System.Xaml.XamlType.IsArray%2A> 进一步标识。  根据 .NET framework XAML 服务和 XAML 类型系统，但不基于现有 <xref:System.Xaml.XamlWriter> 实现的自定义 XAML 处理器，了解使用哪个集合模式可能需要才能知道哪个方法为集合的过程调用。  
+2.  <span data-ttu-id="3f589-134"><xref:System.Xaml.XamlType.IsDictionary%2A>和<xref:System.Xaml.XamlType.IsArray%2A>进一步可以识别的 XAML 类型支持哪些集合模式。</span><span class="sxs-lookup"><span data-stu-id="3f589-134"><xref:System.Xaml.XamlType.IsDictionary%2A> and <xref:System.Xaml.XamlType.IsArray%2A> can further identify which collection mode the XAML type supports.</span></span> <span data-ttu-id="3f589-135">自定义 xaml 处理器基于.NET Framework XAML 服务和 XAML 类型系统，但不是基于现有<xref:System.Xaml.XamlWriter>实现中，了解所使用的集合模式可能有必要才能知道要为调用的方法集合处理。</span><span class="sxs-lookup"><span data-stu-id="3f589-135">For custom XAML processors that are based on .NET Framework XAML Services and the XAML type system but not based on existing <xref:System.Xaml.XamlWriter> implementations, knowing which collection mode is used might be necessary in order to know which method to invoke for collection processing.</span></span>  
   
-3.  可能会影响每个前面的属性值会重写在 XAML 类型的 <xref:System.Xaml.XamlType.LookupCollectionKind%2A> 。
+3.  <span data-ttu-id="3f589-136">每个以前的属性值可能受的重写<xref:System.Xaml.XamlType.LookupCollectionKind%2A>XAML 类型上。</span><span class="sxs-lookup"><span data-stu-id="3f589-136">Each of the previous property values are potentially influenced by overrides of <xref:System.Xaml.XamlType.LookupCollectionKind%2A> on a XAML type.</span></span>

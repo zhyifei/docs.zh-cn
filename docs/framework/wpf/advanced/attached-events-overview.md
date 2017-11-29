@@ -1,101 +1,107 @@
 ---
-title: "附加事件概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "附加事件 [WPF], 定义"
-  - "附加事件 [WPF], 方案"
-  - "附加事件与路由事件 [WPF]"
-  - "将路由事件用作附加事件的后备 [WPF]"
-  - "将附加事件定义为路由事件 [WPF]"
-  - "处理附加事件 [WPF]"
+title: "附加事件概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- handling attached events [WPF]
+- defining attached events as routed events [WPF]
+- attached events [WPF], scenarios for
+- attached events vs. routed events [WPF]
+- backing attached events with routed events [WPF]
+- attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 87df4a79ec288323fff3dda5789fbbd90c0e88e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 附加事件概述
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义了一个语言组件和称为“附加事件”的事件类型。  附加事件的概念允许您针对特定事件为任意元素（而不是为实际定义或继承该事件的元素）添加处理程序。  在这种情况下，对象既不会引发该事件，目标处理实例也不会定义或“拥有”该事件。  
+# <a name="attached-events-overview"></a><span data-ttu-id="c5f52-102">附加事件概述</span><span class="sxs-lookup"><span data-stu-id="c5f52-102">Attached Events Overview</span></span>
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="c5f52-103"> 定义了一个语言组件和称为附加事件的事件类型。</span><span class="sxs-lookup"><span data-stu-id="c5f52-103"> defines a language component and type of event called an *attached event*.</span></span> <span data-ttu-id="c5f52-104">通过附加事件的概念，你能够向任意元素（而不是实际定义或继承事件的元素）添加特定事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="c5f52-104">The concept of an attached event enables you to add a handler for a particular event to an arbitrary element rather than to an element that actually defines or inherits the event.</span></span> <span data-ttu-id="c5f52-105">在这种情况下，对象既不会引发事件，目标处理实例也不会定义或“拥有”事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-105">In this case, neither the object potentially raising the event nor the destination handling instance defines or otherwise "owns" the event.</span></span>  
   
-   
+ 
   
 <a name="prerequisites"></a>   
-## 必备组件  
- 本主题假定您已阅读[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)和 [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="c5f52-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="c5f52-106">Prerequisites</span></span>  
+ <span data-ttu-id="c5f52-107">本主题假定你已阅读[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)和 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="c5f52-107">This topic assumes that you have read [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md) and [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
 <a name="Syntax"></a>   
-## 附加事件语法  
- 附加事件具有一种 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法和编码模式，后备代码必须使用该语法和编码模式才支持附加事件的使用。  
+## <a name="attached-event-syntax"></a><span data-ttu-id="c5f52-108">附加事件语法</span><span class="sxs-lookup"><span data-stu-id="c5f52-108">Attached Event Syntax</span></span>  
+ <span data-ttu-id="c5f52-109">附加事件具有一种 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法和编码模式，后备代码必须使用该语法和编码模式才能支持使用附加事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-109">Attached events have a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax and a coding pattern that must be used by the backing code in order to support the attached event usage.</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法中，不仅可以通过事件名称来指定附加事件，而且还可以通过用点 \(.\) 分隔的事件拥有类型加上事件名称来指定。  因为事件名称是使用其拥有类型的名称限定的，所以附加事件语法允许将任何附加事件附加到可以实例化的任何元素上。  
+ <span data-ttu-id="c5f52-110">在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法中，不仅可以通过事件名称来指定附加事件，还可以通过事件所属类型和事件名称来指定，中间以句点 (.) 分隔。</span><span class="sxs-lookup"><span data-stu-id="c5f52-110">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax, the attached event is specified not just by its event name, but by its owning type plus the event name, separated by a dot (.).</span></span> <span data-ttu-id="c5f52-111">因为事件名称是使用具有其所属类型的名称限定的，所以附加事件语法允许将任何附加事件附加到可以实例化的任何元素。</span><span class="sxs-lookup"><span data-stu-id="c5f52-111">Because the event name is qualified with the name of its owning type, the attached event syntax allows any attached event to be attached to any element that can be instantiated.</span></span>  
   
- 例如，下面是为自定义 `NeedsCleaning` 附加事件附加处理程序的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法：  
+ <span data-ttu-id="c5f52-112">例如，下面是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法，用于附加自定义 `NeedsCleaning` 附加事件的处理程序：</span><span class="sxs-lookup"><span data-stu-id="c5f52-112">For example, the following is the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax for attaching a handler for a custom `NeedsCleaning` attached event:</span></span>  
   
- [!code-xml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
- 请注意 `aqua:` 前缀；该前缀在本例中是必需的，因为附加事件是来自自定义映射 xmlns 的自定义事件。  
+ <span data-ttu-id="c5f52-113">请注意 `aqua:` 前缀；该前缀在本例中是必需的，因为附加事件是来自自定义映射 xmlns 的自定义事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-113">Note the `aqua:` prefix; the prefix is necessary in this case because the attached event is a custom event that comes from a custom mapped xmlns.</span></span>  
   
 <a name="WPFImplements"></a>   
-## 如何在 WPF 中实现附加事件  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，附加事件由 <xref:System.Windows.RoutedEvent> 字段来支持，并在引发后通过元素树进行路由。  通常，附加事件的源（引发该事件的对象）是系统或服务源，所以运行引发该事件的代码的对象并不是元素树的直接组成部分。  
+## <a name="how-wpf-implements-attached-events"></a><span data-ttu-id="c5f52-114">WPF 如何实现附加事件</span><span class="sxs-lookup"><span data-stu-id="c5f52-114">How WPF Implements Attached Events</span></span>  
+ <span data-ttu-id="c5f52-115">在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、 附加事件由<xref:System.Windows.RoutedEvent>字段和后引发它们时通过树路由。</span><span class="sxs-lookup"><span data-stu-id="c5f52-115">In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], attached events are backed by a <xref:System.Windows.RoutedEvent> field and are routed through the tree after they are raised.</span></span> <span data-ttu-id="c5f52-116">通常，附加事件的源（引发该事件的对象）是系统或服务源，所以运行引发该事件的代码的对象并不是元素树的直接组成部分。</span><span class="sxs-lookup"><span data-stu-id="c5f52-116">Typically, the source of the attached event (the object that raises the event) is a system or service source, and the object that runs the code that raises the event is therefore not a direct part of the element tree.</span></span>  
   
 <a name="Scenarios"></a>   
-## 附加事件的方案  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，附加事件存在于具有服务级抽象的某些功能区域，例如，对于通过静态 <xref:System.Windows.Input.Mouse> 类或 <xref:System.Windows.Controls.Validation> 类实现的事件。  与服务交互或使用服务的类可以在附加事件语法中使用该事件，也可以选择将附加事件作为路由事件来实现（这是类如何集成服务功能的一部分）。  
+## <a name="scenarios-for-attached-events"></a><span data-ttu-id="c5f52-117">附加事件的方案</span><span class="sxs-lookup"><span data-stu-id="c5f52-117">Scenarios for Attached Events</span></span>  
+ <span data-ttu-id="c5f52-118">在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、 附加事件都位于特定功能区域没有服务级别抽象，如启用由静态事件<xref:System.Windows.Input.Mouse>类或<xref:System.Windows.Controls.Validation>类。</span><span class="sxs-lookup"><span data-stu-id="c5f52-118">In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], attached events are present in certain feature areas where there is service-level abstraction, such as for the events enabled by the static <xref:System.Windows.Input.Mouse> class or the <xref:System.Windows.Controls.Validation> class.</span></span> <span data-ttu-id="c5f52-119">与该服务交互或使用该服务的类可以在附加事件语法中使用该事件，也可以选择将附加事件作为路由事件来呈现，这是类如何集成服务功能的一部分。</span><span class="sxs-lookup"><span data-stu-id="c5f52-119">Classes that interact with or use the service can either use the event in the attached event syntax, or they can choose to surface the attached event as a routed event that is part of how the class integrates the capabilities of the service.</span></span>  
   
- 尽管 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义了许多附加事件，但您直接使用或处理附加事件的方案却很有限。  一般情况下，附加事件用于实现体系结构目的，但随后即被转发给非附加（使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件“包装”提供支持）路由事件。  
+ <span data-ttu-id="c5f52-120">尽管 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义了许多附加事件，但直接使用或处理附加事件的情形却很少。</span><span class="sxs-lookup"><span data-stu-id="c5f52-120">Although [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] defines a number of attached events, the scenarios where you will either use or handle the attached event directly are very limited.</span></span> <span data-ttu-id="c5f52-121">一般情况下，附加事件用于体系结构，但随后即被转发给非附加（使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件“包装器”提供支持）路由事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-121">Generally, the attached event serves an architecture purpose, but is then forwarded to a non-attached (backed with a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] event "wrapper") routed event.</span></span>  
   
- 例如，通过针对该 <xref:System.Windows.UIElement> 使用 <xref:System.Windows.UIElement.MouseDown>（而不是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 或代码中处理附加事件语法），可以针对任何给定的 <xref:System.Windows.UIElement>，更方便地处理基础附加事件 <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=fullName>。  附加事件用于实现体系结构目的，因为它允许进一部扩展输入设备。  假设的设备只需引发 <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=fullName> 即可模拟鼠标输入，而不需要从 <xref:System.Windows.Input.Mouse> 派生。  但是，此方案会涉及事件的代码处理，而附加事件的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理则与此方案无关。  
+ <span data-ttu-id="c5f52-122">例如，基础附加事件<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>可以更方便地处理针对任何给定<xref:System.Windows.UIElement>使用<xref:System.Windows.UIElement.MouseDown>上<xref:System.Windows.UIElement>而不是可以处理附加的事件语法中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或代码。</span><span class="sxs-lookup"><span data-stu-id="c5f52-122">For instance, the underlying attached event <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> can more easily be handled on any given <xref:System.Windows.UIElement> by using <xref:System.Windows.UIElement.MouseDown> on that <xref:System.Windows.UIElement> rather than dealing with attached event syntax either in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="c5f52-123">附加事件用于体系结构，因为它允许进一部扩展输入设备。</span><span class="sxs-lookup"><span data-stu-id="c5f52-123">The attached event serves a purpose in the architecture because it allows for future expansion of input devices.</span></span> <span data-ttu-id="c5f52-124">假设设备只需引发<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>在订购模拟鼠标输入并不需要派生自<xref:System.Windows.Input.Mouse>若要这样做。</span><span class="sxs-lookup"><span data-stu-id="c5f52-124">The hypothetical device would only need to raise <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> in order to simulate mouse input, and would not need to derive from <xref:System.Windows.Input.Mouse> to do so.</span></span> <span data-ttu-id="c5f52-125">但是，此方案会涉及事件的代码处理，而附加事件的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理则与此方案无关。</span><span class="sxs-lookup"><span data-stu-id="c5f52-125">However, this scenario involves code handling of the events, and [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] handling of the attached event is not relevant to this scenario.</span></span>  
   
 <a name="Handling"></a>   
-## 在 WPF 中处理附加事件  
- 处理附加事件的过程以及您将要编写的处理程序代码与路由事件基本相同。  
+## <a name="handling-an-attached-event-in-wpf"></a><span data-ttu-id="c5f52-126">在 WPF 中处理附加事件</span><span class="sxs-lookup"><span data-stu-id="c5f52-126">Handling an Attached Event in WPF</span></span>  
+ <span data-ttu-id="c5f52-127">处理附加事件的过程以及将要编写的处理程序代码与路由事件的基本相同。</span><span class="sxs-lookup"><span data-stu-id="c5f52-127">The process for handling an attached event, and the handler code that you will write, is basically the same as for a routed event.</span></span>  
   
- 一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 路由事件并没有太大的区别。  不同之处在于如何确定事件的源，以及如何通过类将事件作为成员进行公开。（这还将影响 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理程序语法。）  
+ <span data-ttu-id="c5f52-128">一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 路由事件并没有太大的区别。</span><span class="sxs-lookup"><span data-stu-id="c5f52-128">In general, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] attached event is not very different from a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] routed event.</span></span> <span data-ttu-id="c5f52-129">不同之处在于如何确定事件的源，以及如何通过类将事件作为成员进行公开（这还将影响 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理程序语法）。</span><span class="sxs-lookup"><span data-stu-id="c5f52-129">The differences are how the event is sourced and how it is exposed by a class as a member (which also affects the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] handler syntax).</span></span>  
   
- 但是，正如前文所述，现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件并不是专门用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中进行处理。  该事件的目的常常是实现合成元素，以便向合成中的父元素报告某个状态，在这种情况下，该事件常常在代码中引发，并且还依赖于相关父类中的类处理。  例如，<xref:System.Windows.Controls.Primitives.Selector> 中的项应引发附加的 <xref:System.Windows.Controls.Primitives.Selector.Selected> 事件，该事件随后将由 <xref:System.Windows.Controls.Primitives.Selector> 类进行类处理，然后可能由 <xref:System.Windows.Controls.Primitives.Selector> 类转换为不同的路由事件 <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>。  有关路由事件和类处理的更多信息，请参见[将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ <span data-ttu-id="c5f52-130">但是，正如前文所述，现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件并不是专门用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中进行处理。</span><span class="sxs-lookup"><span data-stu-id="c5f52-130">However, as noted earlier, the existing [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] attached events are not particularly intended for handling in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="c5f52-131">更多情况下，该事件用于在复合时，使复合元素能够向父元素报告状态，在这种情况下，事件通常用代码引发，同时依赖于相关父类中的类处理。</span><span class="sxs-lookup"><span data-stu-id="c5f52-131">More often, the purpose of the event is to enable a composited element to report a state to a parent element in compositing, in which case the event is usually raised in code and also relies on class handling in the relevant parent class.</span></span> <span data-ttu-id="c5f52-132">例如内的项<xref:System.Windows.Controls.Primitives.Selector>应引发附加<xref:System.Windows.Controls.Primitives.Selector.Selected>事件，然后是类由处理<xref:System.Windows.Controls.Primitives.Selector>类，然后可能通过转换<xref:System.Windows.Controls.Primitives.Selector>到不同的路由事件的类<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>.</span><span class="sxs-lookup"><span data-stu-id="c5f52-132">For instance, items within a <xref:System.Windows.Controls.Primitives.Selector> are expected to raise the attached <xref:System.Windows.Controls.Primitives.Selector.Selected> event, which is then class handled by the <xref:System.Windows.Controls.Primitives.Selector> class and then potentially converted by the <xref:System.Windows.Controls.Primitives.Selector> class into a different routed event, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>.</span></span> <span data-ttu-id="c5f52-133">有关路由事件和类处理的详细信息，请参阅[将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。</span><span class="sxs-lookup"><span data-stu-id="c5f52-133">For more information on routed events and class handling, see [Marking Routed Events as Handled, and Class Handling](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).</span></span>  
   
 <a name="Custom"></a>   
-## 将您自己的附加事件定义为路由事件  
- 如果您从通用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基类派生，则可以通过在类中包括某些模式方法并使用基类中已经存在的实用工具方法来实现您自己的附加事件。  
+## <a name="defining-your-own-attached-events-as-routed-events"></a><span data-ttu-id="c5f52-134">将自己的附加事件定义为路由事件</span><span class="sxs-lookup"><span data-stu-id="c5f52-134">Defining Your Own Attached Events as Routed Events</span></span>  
+ <span data-ttu-id="c5f52-135">如果从通用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基类派生，则可以通过在类中包括某些模式方法并使用基类中已经存在的实用工具方法来实现自己的附加事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-135">If you are deriving from common [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] base classes, you can implement your own attached events by including certain pattern methods in your class and by using utility methods that are already present on the base classes.</span></span>  
   
- 模式如下：  
+ <span data-ttu-id="c5f52-136">模式如下：</span><span class="sxs-lookup"><span data-stu-id="c5f52-136">The pattern is as follows:</span></span>  
   
--   带有两个参数的方法 `Add*Handler`。  第一个参数必须标识事件，而标识的事件必须与方法名称中带有 \* 的名称相匹配。  第二个参数是要添加的处理程序。  该方法必须是公共且静态的，没有任何返回值。  
+-   <span data-ttu-id="c5f52-137">含两个参数的方法 `Add*Handler`。</span><span class="sxs-lookup"><span data-stu-id="c5f52-137">A method `Add*Handler` with two parameters.</span></span> <span data-ttu-id="c5f52-138">第一个参数必须标识事件，而标识的事件必须与方法名称中带有 * 的名称相匹配。</span><span class="sxs-lookup"><span data-stu-id="c5f52-138">The first parameter must identify the event, and the identified event must match names with the * in the method name.</span></span> <span data-ttu-id="c5f52-139">第二个参数是要添加的处理程序。</span><span class="sxs-lookup"><span data-stu-id="c5f52-139">The second parameter is the handler to add.</span></span> <span data-ttu-id="c5f52-140">该方法必须是公共且静态的，没有任何返回值。</span><span class="sxs-lookup"><span data-stu-id="c5f52-140">The method must be public and static, with no return value.</span></span>  
   
--   带有两个参数的方法 `Remove*Handler`。  第一个参数必须标识事件，而标识的事件必须与方法名称中带有 \* 的名称相匹配。  第二个参数是要移除的处理程序。  该方法必须是公共且静态的，没有任何返回值。  
+-   <span data-ttu-id="c5f52-141">含两个参数的方法 `Remove*Handler`。</span><span class="sxs-lookup"><span data-stu-id="c5f52-141">A method `Remove*Handler` with two parameters.</span></span> <span data-ttu-id="c5f52-142">第一个参数必须标识事件，而标识的事件必须与方法名称中带有 * 的名称相匹配。</span><span class="sxs-lookup"><span data-stu-id="c5f52-142">The first parameter must identify the event, and the identified event must match names with the * in the method name.</span></span> <span data-ttu-id="c5f52-143">第二个参数是要删除的处理程序。</span><span class="sxs-lookup"><span data-stu-id="c5f52-143">The second parameter is the handler to remove.</span></span> <span data-ttu-id="c5f52-144">该方法必须是公共且静态的，没有任何返回值。</span><span class="sxs-lookup"><span data-stu-id="c5f52-144">The method must be public and static, with no return value.</span></span>  
   
- 当针对某个元素声明附加事件处理程序特性时，`Add*Handler` 访问器方法可以加快 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理。  `Add*Handler` 和 `Remove*Handler` 方法还可实现对附加事件的事件处理程序存储区的代码访问。  
+ <span data-ttu-id="c5f52-145">当在某个元素中声明附加事件处理程序属性时，`Add*Handler` 访问器方法可以加快 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理。</span><span class="sxs-lookup"><span data-stu-id="c5f52-145">The `Add*Handler` accessor method facilitates the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processing when attached event handler attributes are declared on an element.</span></span> <span data-ttu-id="c5f52-146">`Add*Handler` 和 `Remove*Handler` 方法还可实现对附加事件的事件处理程序存储的代码访问。</span><span class="sxs-lookup"><span data-stu-id="c5f52-146">The `Add*Handler` and `Remove*Handler` methods also enable code access to the event handler store for the attached event.</span></span>  
   
- 这个普通模式对于框架中的实际实现还不够精确，因为任何给定的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 读取器实现都可能采用不同的架构在支持语言和体系结构中标识基础事件。  这是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将附加事件作为路由事件来实现的原因之一；用于事件的标识符 \(<xref:System.Windows.RoutedEvent>\) 已经由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统进行定义。  而且，路由一个事件也是对附加事件的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语言级概念的自然实现扩展。  
+ <span data-ttu-id="c5f52-147">此常规模式对于框架中的实际实现还不够精确，因为任何给定的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 读取器实现都可能采用不同的方案在支持语言和体系结构中标识基础事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-147">This general pattern is not yet precise enough for practical implementation in a framework, because any given [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reader implementation might have different schemes for identifying underlying events in the supporting language and architecture.</span></span> <span data-ttu-id="c5f52-148">这是由于原因之一，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现附加作为路由事件的事件; 要使用的事件的标识符 (<xref:System.Windows.RoutedEvent>) 已由定义[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统。</span><span class="sxs-lookup"><span data-stu-id="c5f52-148">This is one of the reasons that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implements attached events as routed events; the identifier to use for an event (<xref:System.Windows.RoutedEvent>) is already defined by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] event system.</span></span> <span data-ttu-id="c5f52-149">另外，路由一个事件也是对附加事件的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语言级概念的自然实现扩展。</span><span class="sxs-lookup"><span data-stu-id="c5f52-149">Also, routing an event is a natural implementation extension on the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] language-level concept of an attached event.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件的 `Add*Handler` 实现包括将路由事件和处理程序用作参数来调用 <xref:System.Windows.UIElement.AddHandler%2A>。  
+ <span data-ttu-id="c5f52-150">`Add*Handler`实现[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附加的事件包含调用<xref:System.Windows.UIElement.AddHandler%2A>与路由的事件和作为自变量的处理程序。</span><span class="sxs-lookup"><span data-stu-id="c5f52-150">The `Add*Handler` implementation for a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] attached event consists of calling the <xref:System.Windows.UIElement.AddHandler%2A> with the routed event and handler as arguments.</span></span>  
   
- 此实现策略和路由事件系统一般将附加事件的处理限制为 <xref:System.Windows.UIElement> 派生类或 <xref:System.Windows.ContentElement> 派生类，因为只有这些类才具有 <xref:System.Windows.UIElement.AddHandler%2A> 实现。  
+ <span data-ttu-id="c5f52-151">此实现策略和路由的事件系统通常将附加事件的处理限制为<xref:System.Windows.UIElement>派生类或<xref:System.Windows.ContentElement>派生类中，因为只有这些类具有<xref:System.Windows.UIElement.AddHandler%2A>实现。</span><span class="sxs-lookup"><span data-stu-id="c5f52-151">This implementation strategy and the routed event system in general restrict handling for attached events to either <xref:System.Windows.UIElement> derived classes or <xref:System.Windows.ContentElement> derived classes, because only those classes have <xref:System.Windows.UIElement.AddHandler%2A> implementations.</span></span>  
   
- 例如，下面的代码按照 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将附加事件作为路由事件进行声明的附加事件策略为所有者类 `Aquarium` 定义 `NeedsCleaning` 附加事件。  
+ <span data-ttu-id="c5f52-152">例如，以下代码通过将附加事件声明为路由事件的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件策略，在所有者类 `Aquarium` 中定义 `NeedsCleaning` 附加事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-152">For example, the following code defines the `NeedsCleaning` attached event on the owner class `Aquarium`, using the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] attached event strategy of declaring the attached event as a routed event.</span></span>  
   
  [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
  [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- 请注意，用来确定附加事件标识符字段的方法 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 实际上与用来注册非附加路由事件的方法相同。  附加事件和路由事件都是在集中管理的内部存储区中进行注册的。  此事件存储区实现则实现了[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中讨论的“事件作为界面”概念方面的注意事项。  
+ <span data-ttu-id="c5f52-153">请注意，该方法用于建立附加的事件标识符字段， <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>，是实际的用于注册非附加路由的事件的相同的方法。</span><span class="sxs-lookup"><span data-stu-id="c5f52-153">Note that the method used to establish the attached event identifier field, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, is actually the same method that is used to register a non-attached routed event.</span></span> <span data-ttu-id="c5f52-154">附加事件和路由事件都已注册到集中式内部存储。</span><span class="sxs-lookup"><span data-stu-id="c5f52-154">Attached events and routed events all are registered to a centralized internal store.</span></span> <span data-ttu-id="c5f52-155">此事件存储实现能够考虑到[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中介绍的“事件即界面”概念。</span><span class="sxs-lookup"><span data-stu-id="c5f52-155">This event store implementation enables the "events as an interface" conceptual consideration that is discussed in [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
 <a name="Raising"></a>   
-## 引发 WPF 附加事件  
- 通常不需要从代码中引发 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义的现有附加事件。  这些事件采用一般的“服务”概念模型，而服务类（如 <xref:System.Windows.Input.InputManager>）则负责引发事件。  
+## <a name="raising-a-wpf-attached-event"></a><span data-ttu-id="c5f52-156">引发 WPF 附加事件</span><span class="sxs-lookup"><span data-stu-id="c5f52-156">Raising a WPF Attached Event</span></span>  
+ <span data-ttu-id="c5f52-157">通常不需要从代码中引发 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义的现有附加事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-157">You do not typically need to raise existing [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] defined attached events from your code.</span></span> <span data-ttu-id="c5f52-158">这些事件遵循常规"服务"概念模型中，并如服务类<xref:System.Windows.Input.InputManager>负责引发事件。</span><span class="sxs-lookup"><span data-stu-id="c5f52-158">These events follow the general "service" conceptual model, and service classes such as <xref:System.Windows.Input.InputManager> are responsible for raising the events.</span></span>  
   
- 但是，如果您根据将 <xref:System.Windows.RoutedEvent> 作为附加事件基础的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模型来定义自定义附加事件，则可以使用 <xref:System.Windows.UIElement.RaiseEvent%2A> 从任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 中引发附加事件。  引发路由事件（不管是否附加）要求声明元素树中的一个特定元素作为事件源；该事件源被报告为 <xref:System.Windows.UIElement.RaiseEvent%2A> 调用方。  您的服务负责决定将哪个元素报告为元素树中的事件源。  
+ <span data-ttu-id="c5f52-159">但是，如果要定义基于自定义的附加的事件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型的基础上附加事件<xref:System.Windows.RoutedEvent>，你可以使用<xref:System.Windows.UIElement.RaiseEvent%2A>以引发从任何一个附加的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>。</span><span class="sxs-lookup"><span data-stu-id="c5f52-159">However, if you are defining a custom attached event based on the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] model of basing attached events on <xref:System.Windows.RoutedEvent>, you can use <xref:System.Windows.UIElement.RaiseEvent%2A> to raise an attached event from any <xref:System.Windows.UIElement> or <xref:System.Windows.ContentElement>.</span></span> <span data-ttu-id="c5f52-160">引发路由的事件 （不管附加） 要求先声明作为事件源中; 在元素树中的特定元素该源将报告为<xref:System.Windows.UIElement.RaiseEvent%2A>调用方。</span><span class="sxs-lookup"><span data-stu-id="c5f52-160">Raising a routed event (attached or not) requires that you declare a particular element in the element tree as the event source; that source is reported as the <xref:System.Windows.UIElement.RaiseEvent%2A> caller.</span></span> <span data-ttu-id="c5f52-161">服务负责确定将哪个元素报告为元素树中的事件源</span><span class="sxs-lookup"><span data-stu-id="c5f52-161">Determining which element is reported as the source in the tree is your service's responsibility</span></span>  
   
-## 请参阅  
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)   
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="c5f52-162">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c5f52-162">See Also</span></span>  
+ [<span data-ttu-id="c5f52-163">路由事件概述</span><span class="sxs-lookup"><span data-stu-id="c5f52-163">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="c5f52-164">XAML 语法详述</span><span class="sxs-lookup"><span data-stu-id="c5f52-164">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
+ [<span data-ttu-id="c5f52-165">XAML 及 WPF 的自定义类</span><span class="sxs-lookup"><span data-stu-id="c5f52-165">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

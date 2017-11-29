@@ -1,12 +1,9 @@
 ---
 title: "Visual Basic 语言参考"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic language reference
 - run-time libraries, Visual Basic
@@ -16,98 +13,82 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="visual-basic-language-reference"></a>Visual Basic 语言参考
-此部分提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的参考信息。  
+# <a name="visual-basic-language-reference"></a><span data-ttu-id="61f75-102">Visual Basic 语言参考</span><span class="sxs-lookup"><span data-stu-id="61f75-102">Visual Basic Language Reference</span></span>
+<span data-ttu-id="61f75-103">此部分提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的参考信息。</span><span class="sxs-lookup"><span data-stu-id="61f75-103">This section provides reference information for various aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
- [版式和代码约定](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- 概述了关键字、占位符和其他语言元素在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文档中的格式设置方式。  
+## <a name="in-this-section"></a><span data-ttu-id="61f75-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="61f75-104">In This Section</span></span>  
+ [<span data-ttu-id="61f75-105">版式和代码约定</span><span class="sxs-lookup"><span data-stu-id="61f75-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ <span data-ttu-id="61f75-106">概述了关键字、占位符和其他语言元素在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文档中的格式设置方式。</span><span class="sxs-lookup"><span data-stu-id="61f75-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] documentation.</span></span>  
   
- [Visual Basic 运行库成员](../../visual-basic/language-reference/runtime-library-members.md)  
- 列出了 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空间的类和模块，同时收录了它们的成员函数、方法、属性、常量和枚举链接。  
+ [<span data-ttu-id="61f75-107">Visual Basic 运行库成员</span><span class="sxs-lookup"><span data-stu-id="61f75-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ <span data-ttu-id="61f75-108">列出了 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间的类和模块，同时收录了它们的成员函数、方法、属性、常量和枚举链接。</span><span class="sxs-lookup"><span data-stu-id="61f75-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
   
- [关键字](../../visual-basic/language-reference/keywords/index.md)  
- 列出了所有 Visual Basic 关键字，并收录了详细信息链接。  
+ [<span data-ttu-id="61f75-109">关键字</span><span class="sxs-lookup"><span data-stu-id="61f75-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ <span data-ttu-id="61f75-110">列出了所有 Visual Basic 关键字，并收录了详细信息链接。</span><span class="sxs-lookup"><span data-stu-id="61f75-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
   
- [属性 (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用属性。  
+ [<span data-ttu-id="61f75-111">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="61f75-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="61f75-112">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用属性。</span><span class="sxs-lookup"><span data-stu-id="61f75-112">Documents the attributes available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [常量和枚举](../../visual-basic/language-reference/constants-and-enumerations.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用常量和枚举。  
+ [<span data-ttu-id="61f75-113">常量和枚举</span><span class="sxs-lookup"><span data-stu-id="61f75-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ <span data-ttu-id="61f75-114">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用常量和枚举。</span><span class="sxs-lookup"><span data-stu-id="61f75-114">Documents the constants and enumerations available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [数据类型](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用数据类型。  
+ [<span data-ttu-id="61f75-115">数据类型</span><span class="sxs-lookup"><span data-stu-id="61f75-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ <span data-ttu-id="61f75-116">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用数据类型。</span><span class="sxs-lookup"><span data-stu-id="61f75-116">Documents the data types available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [指令](../../visual-basic/language-reference/directives/directives.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用编译器指令。  
+ [<span data-ttu-id="61f75-117">指令</span><span class="sxs-lookup"><span data-stu-id="61f75-117">Directives</span></span>](../../visual-basic/language-reference/directives/directives.md)  
+ <span data-ttu-id="61f75-118">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用编译器指令。</span><span class="sxs-lookup"><span data-stu-id="61f75-118">Documents the compiler directives available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [函数](../../visual-basic/language-reference/functions/index.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用运行时函数。  
+ [<span data-ttu-id="61f75-119">函数</span><span class="sxs-lookup"><span data-stu-id="61f75-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
+ <span data-ttu-id="61f75-120">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用运行时函数。</span><span class="sxs-lookup"><span data-stu-id="61f75-120">Documents the run-time functions available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [修饰符](../../visual-basic/language-reference/modifiers/index.md)  
- 列出了 Visual Basic 运行时修饰符，并收录了详细信息链接。  
+ [<span data-ttu-id="61f75-121">修饰符</span><span class="sxs-lookup"><span data-stu-id="61f75-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
+ <span data-ttu-id="61f75-122">列出了 Visual Basic 运行时修饰符，并收录了详细信息链接。</span><span class="sxs-lookup"><span data-stu-id="61f75-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
   
- [模块](../../visual-basic/language-reference/modules.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用模块及其成员。  
+ [<span data-ttu-id="61f75-123">模块</span><span class="sxs-lookup"><span data-stu-id="61f75-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
+ <span data-ttu-id="61f75-124">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用模块及其成员。</span><span class="sxs-lookup"><span data-stu-id="61f75-124">Documents the modules available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and their members.</span></span>  
   
- [Nothing](../../visual-basic/language-reference/nothing.md)  
- 介绍了任意数据类型的默认值。  
+ [<span data-ttu-id="61f75-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="61f75-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ <span data-ttu-id="61f75-126">介绍了任意数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="61f75-126">Describes the default value of any data type.</span></span>  
   
- [对象](../../visual-basic/language-reference/objects/index.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用对象及其成员。  
+ [<span data-ttu-id="61f75-127">对象</span><span class="sxs-lookup"><span data-stu-id="61f75-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
+ <span data-ttu-id="61f75-128">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用对象及其成员。</span><span class="sxs-lookup"><span data-stu-id="61f75-128">Documents the objects available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and their members.</span></span>  
   
- [运算符](../../visual-basic/language-reference/operators/index.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用运算符。  
+ [<span data-ttu-id="61f75-129">运算符</span><span class="sxs-lookup"><span data-stu-id="61f75-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
+ <span data-ttu-id="61f75-130">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用运算符。</span><span class="sxs-lookup"><span data-stu-id="61f75-130">Documents the operators available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [属性](../../visual-basic/language-reference/properties.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用属性。  
+ [<span data-ttu-id="61f75-131">属性</span><span class="sxs-lookup"><span data-stu-id="61f75-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
+ <span data-ttu-id="61f75-132">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用属性。</span><span class="sxs-lookup"><span data-stu-id="61f75-132">Documents the properties available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [查询](../../visual-basic/language-reference/queries/queries.md)  
- 提供了有关如何在代码中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式的参考信息。  
+ [<span data-ttu-id="61f75-133">查询</span><span class="sxs-lookup"><span data-stu-id="61f75-133">Queries</span></span>](../../visual-basic/language-reference/queries/queries.md)  
+ <span data-ttu-id="61f75-134">提供了有关如何在代码中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 表达式的参考信息。</span><span class="sxs-lookup"><span data-stu-id="61f75-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
- [语句](../../visual-basic/language-reference/statements/index.md)  
- 记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用声明和可执行语句。  
+ [<span data-ttu-id="61f75-135">语句</span><span class="sxs-lookup"><span data-stu-id="61f75-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="61f75-136">记录了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的可用声明和可执行语句。</span><span class="sxs-lookup"><span data-stu-id="61f75-136">Documents the declaration and executable statements available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [XML 注释标记](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- 介绍了在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码编辑器中为其提供 IntelliSense 的文档注释。  
+ [<span data-ttu-id="61f75-137">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="61f75-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ <span data-ttu-id="61f75-138">介绍了在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码编辑器中为其提供 IntelliSense 的文档注释。</span><span class="sxs-lookup"><span data-stu-id="61f75-138">Describes the documentation comments for which IntelliSense is provided in the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Code Editor.</span></span>  
   
- [XML 轴属性](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- 收录了有关如何使用 XML 轴属性直接在代码中访问 XML 的信息链接。  
+ [<span data-ttu-id="61f75-139">XML 轴属性</span><span class="sxs-lookup"><span data-stu-id="61f75-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ <span data-ttu-id="61f75-140">收录了有关如何使用 XML 轴属性直接在代码中访问 XML 的信息链接。</span><span class="sxs-lookup"><span data-stu-id="61f75-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
   
- [XML 文本](../../visual-basic/language-reference/xml-literals/index.md)  
- 收录了有关如何使用 XML 文本直接在代码中合并 XML 的信息链接。  
+ [<span data-ttu-id="61f75-141">XML 文本</span><span class="sxs-lookup"><span data-stu-id="61f75-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
+ <span data-ttu-id="61f75-142">收录了有关如何使用 XML 文本直接在代码中合并 XML 的信息链接。</span><span class="sxs-lookup"><span data-stu-id="61f75-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
   
- [错误消息](../../visual-basic/language-reference/error-messages/index.md)  
- 提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器和运行时错误消息列表，以及如何处理这些错误消息的相关帮助。  
+ [<span data-ttu-id="61f75-143">错误消息</span><span class="sxs-lookup"><span data-stu-id="61f75-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
+ <span data-ttu-id="61f75-144">提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器和运行时错误消息列表，以及如何处理这些错误消息的相关帮助。</span><span class="sxs-lookup"><span data-stu-id="61f75-144">Provides a listing of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler and run-time error messages and help on how to handle them.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- [Visual Basic](../../visual-basic/index.md)  
- 提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的综合帮助。  
+## <a name="related-sections"></a><span data-ttu-id="61f75-145">相关章节</span><span class="sxs-lookup"><span data-stu-id="61f75-145">Related Sections</span></span>  
+ [<span data-ttu-id="61f75-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="61f75-146">Visual Basic</span></span>](../../visual-basic/index.md)  
+ <span data-ttu-id="61f75-147">提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的综合帮助。</span><span class="sxs-lookup"><span data-stu-id="61f75-147">Provides comprehensive help on all areas of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
- [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
- 介绍了如何将命令行编译器用作一种替代方法，从而在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中编译程序。
-
+ [<span data-ttu-id="61f75-148">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="61f75-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="61f75-149">介绍了如何将命令行编译器用作一种替代方法，从而在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中编译程序。</span><span class="sxs-lookup"><span data-stu-id="61f75-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span>

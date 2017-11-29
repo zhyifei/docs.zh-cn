@@ -1,67 +1,72 @@
 ---
-title: "&lt;rsa&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;rsa&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ab07508c4cab32cb2a60d37af368c345a0f12d88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;rsa&gt;
-通过此标识连接到终结点的安全 WCF 客户端将验证在服务器提供的众多声明中是否具有一个包含用于构建此标识的 RSA 公钥的声明。  
+# <a name="ltrsagt"></a><span data-ttu-id="8b770-102">&lt;rsa&gt;</span><span class="sxs-lookup"><span data-stu-id="8b770-102">&lt;rsa&gt;</span></span>
+<span data-ttu-id="8b770-103">通过此标识连接到终结点的安全 WCF 客户端将验证在服务器提供的众多声明中是否具有一个包含用于构建此标识的 RSA 公钥的声明。</span><span class="sxs-lookup"><span data-stu-id="8b770-103">A secure WCF client that connects to an endpoint with this identity verifies that the claims presented by the server contain a claim that contains the RSA public key used to construct this identity.</span></span>  
   
-## 语法  
+ <span data-ttu-id="8b770-104">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="8b770-104">\<identity></span></span>  
+<span data-ttu-id="8b770-105">\<rsa ></span><span class="sxs-lookup"><span data-stu-id="8b770-105">\<rsa></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="8b770-106">语法</span><span class="sxs-lookup"><span data-stu-id="8b770-106">Syntax</span></span>  
   
+```xml  
 <rsa value = "String" />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8b770-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8b770-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="8b770-108">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8b770-108">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="8b770-109">特性</span><span class="sxs-lookup"><span data-stu-id="8b770-109">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|值|可选的字符串。  客户端上要进行比较的 RSA 公钥值。|  
+|<span data-ttu-id="8b770-110">特性</span><span class="sxs-lookup"><span data-stu-id="8b770-110">Attribute</span></span>|<span data-ttu-id="8b770-111">描述</span><span class="sxs-lookup"><span data-stu-id="8b770-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="8b770-112">值</span><span class="sxs-lookup"><span data-stu-id="8b770-112">value</span></span>|<span data-ttu-id="8b770-113">可选的字符串。</span><span class="sxs-lookup"><span data-stu-id="8b770-113">Optional String.</span></span> <span data-ttu-id="8b770-114">客户端上要进行比较的 RSA 公钥值。</span><span class="sxs-lookup"><span data-stu-id="8b770-114">The RSA public key value to be compared with on the client.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="8b770-115">子元素</span><span class="sxs-lookup"><span data-stu-id="8b770-115">Child Elements</span></span>  
+ <span data-ttu-id="8b770-116">无</span><span class="sxs-lookup"><span data-stu-id="8b770-116">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="8b770-117">父元素</span><span class="sxs-lookup"><span data-stu-id="8b770-117">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<标识\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定要由客户端进行身份验证的服务的标识。|  
+|<span data-ttu-id="8b770-118">元素</span><span class="sxs-lookup"><span data-stu-id="8b770-118">Element</span></span>|<span data-ttu-id="8b770-119">描述</span><span class="sxs-lookup"><span data-stu-id="8b770-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8b770-120">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="8b770-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="8b770-121">指定要由客户端进行身份验证的服务的标识。</span><span class="sxs-lookup"><span data-stu-id="8b770-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## 备注  
- 您可以通过 RSA 检查将身份验证明确限制为单个基于其 RSA 密钥或生成的个人的 RSA 密钥值的证书。  这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。  
+## <a name="remarks"></a><span data-ttu-id="8b770-122">备注</span><span class="sxs-lookup"><span data-stu-id="8b770-122">Remarks</span></span>  
+ <span data-ttu-id="8b770-123">您可以通过 RSA 检查将身份验证明确限制为单个基于其 RSA 密钥或生成的个人的 RSA 密钥值的证书。</span><span class="sxs-lookup"><span data-stu-id="8b770-123">A RSA check enables you to specifically restrict authentication to a single certificate based upon its RSA key or generated your own RSA key value.</span></span> <span data-ttu-id="8b770-124">这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。</span><span class="sxs-lookup"><span data-stu-id="8b770-124">This enables stricter authentication of a specific RSA key at the expense of the service no longer working with existing clients if the RSA key value is changed.</span></span>  
   
- 有关使用标识向客户端验证服务的更多信息，请参见[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ <span data-ttu-id="8b770-125">有关使用身份验证服务进行客户端的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="8b770-125">For more information about using identity to validate a service to a client, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
-## 示例  
- 下面的配置代码指定用于对服务器进行身份验证的 X.509 证书的公钥值。  
+## <a name="example"></a><span data-ttu-id="8b770-126">示例</span><span class="sxs-lookup"><span data-stu-id="8b770-126">Example</span></span>  
+ <span data-ttu-id="8b770-127">下面的配置代码指定用于对服务器进行身份验证的 X.509 证书的公钥值。</span><span class="sxs-lookup"><span data-stu-id="8b770-127">The following configuration code specifies the public key value of an X.509 certificate that is used to authenticate a server.</span></span>  
   
-```  
+```xml  
 <identity>  
   <rsa value = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>  
 </identity>  
 ```  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>   
- <xref:System.ServiceModel.RsaEndpointIdentity>   
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<标识\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a><span data-ttu-id="8b770-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8b770-128">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
+ <xref:System.ServiceModel.RsaEndpointIdentity>  
+ [<span data-ttu-id="8b770-129">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="8b770-129">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="8b770-130">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="8b770-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

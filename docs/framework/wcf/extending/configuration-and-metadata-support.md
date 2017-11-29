@@ -1,46 +1,49 @@
 ---
-title: "配置和元数据支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置和元数据支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d2e0153a9ab8839aed1af948183397f7728e3d2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 配置和元数据支持
-本主题说明如何启用配置和元数据对绑定和绑定元素的支持。  
+# <a name="configuration-and-metadata-support"></a><span data-ttu-id="bb628-102">配置和元数据支持</span><span class="sxs-lookup"><span data-stu-id="bb628-102">Configuration and Metadata Support</span></span>
+<span data-ttu-id="bb628-103">本主题说明如何启用配置和元数据对绑定和绑定元素的支持。</span><span class="sxs-lookup"><span data-stu-id="bb628-103">This topic describes how to enable configuration and metadata support for bindings and binding elements.</span></span>  
   
-## 配置和元数据概述  
- 本主题讨论下列任务，它们是 [开发通道](../../../../docs/framework/wcf/extending/developing-channels.md) 任务列表中的可选项 1、2 和 4。  
+## <a name="overview-of-configuration-and-metadata"></a><span data-ttu-id="bb628-104">配置和元数据概述</span><span class="sxs-lookup"><span data-stu-id="bb628-104">Overview of Configuration and Metadata</span></span>  
+ <span data-ttu-id="bb628-105">本主题讨论了以下任务，这些是可选的项 1、 2 和 4 任务中[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)任务列表。</span><span class="sxs-lookup"><span data-stu-id="bb628-105">This topic discusses the following tasks, which are optional items 1, 2, and 4 in the [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md) task list.</span></span>  
   
--   启用配置文件对绑定元素的支持。  
+-   <span data-ttu-id="bb628-106">启用配置文件对绑定元素的支持。</span><span class="sxs-lookup"><span data-stu-id="bb628-106">Enabling configuration file support for a binding element.</span></span>  
   
--   启用配置文件对绑定的支持。  
+-   <span data-ttu-id="bb628-107">启用配置文件对绑定的支持。</span><span class="sxs-lookup"><span data-stu-id="bb628-107">Enabling configuration file support for a binding.</span></span>  
   
--   导出绑定元素的 WSDL 和策略断言。  
+-   <span data-ttu-id="bb628-108">导出绑定元素的 WSDL 和策略断言。</span><span class="sxs-lookup"><span data-stu-id="bb628-108">Exporting WSDL and policy assertions for a binding element.</span></span>  
   
--   标识 WSDL 和策略断言以插入或配置您的绑定或绑定元素。  
+-   <span data-ttu-id="bb628-109">标识 WSDL 和策略断言以插入或配置你的绑定或绑定元素。</span><span class="sxs-lookup"><span data-stu-id="bb628-109">Identifying WSDL and policy assertions to insert and configure your binding or binding element.</span></span>  
   
- 有关创建用户自定义绑定和绑定元素的更多信息，请分别参见[创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)和[创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)。  
+ <span data-ttu-id="bb628-110">有关创建用户定义的绑定和绑定元素的信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)和[创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分别。</span><span class="sxs-lookup"><span data-stu-id="bb628-110">For information about creating user-defined bindings and binding elements, see [Creating User-Defined Bindings](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) and [Creating a BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), respectively.</span></span>  
   
-## 添加配置支持  
- 若要启用配置文件对通道的支持，必须实现两个配置节：<xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=fullName>（启用配置对绑定元素的支持）以及 <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=fullName> 和 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=fullName>（启用配置对绑定的支持）。  
+## <a name="adding-configuration-support"></a><span data-ttu-id="bb628-111">添加配置支持</span><span class="sxs-lookup"><span data-stu-id="bb628-111">Adding Configuration Support</span></span>  
+ <span data-ttu-id="bb628-112">若要启用配置文件对通道的支持，必须实现两个配置节：<xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>（启用配置对绑定元素的支持）以及 <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>（启用配置对绑定的支持）。</span><span class="sxs-lookup"><span data-stu-id="bb628-112">To enable configuration file support for a channel, you must implement two configuration sections, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, which enables configuration support for binding elements, and the <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> and <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>, which enable configuration support for bindings.</span></span>  
   
- 实现上述目标的更简便方式是使用 [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) 示例工具为您的绑定和绑定元素生成配置代码。  
+ <span data-ttu-id="bb628-113">若要这样做更简单的方法是使用[ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)示例工具生成绑定和绑定元素的配置代码。</span><span class="sxs-lookup"><span data-stu-id="bb628-113">An easier way to do this is to use the [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) sample tool to generate configuration code for your bindings and binding elements.</span></span>  
   
-### 扩展 BindingElementExtensionElement  
- 下面的示例代码摘自[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。`UdpTransportElement` 是一个 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>，它向配置系统公开 `UdpTransportBindingElement`。通过若干基本重写，此示例定义配置节名称、绑定元素的类型以及如何创建绑定元素。然后，用户可以按如下方式注册配置文件中的扩展节。  
+### <a name="extending-bindingelementextensionelement"></a><span data-ttu-id="bb628-114">扩展 BindingElementExtensionElement</span><span class="sxs-lookup"><span data-stu-id="bb628-114">Extending BindingElementExtensionElement</span></span>  
+ <span data-ttu-id="bb628-115">下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。</span><span class="sxs-lookup"><span data-stu-id="bb628-115">The following example code is taken from the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="bb628-116">`UdpTransportElement` 是一个 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>，它向配置系统公开 `UdpTransportBindingElement`。</span><span class="sxs-lookup"><span data-stu-id="bb628-116">The `UdpTransportElement` is a <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> that exposes `UdpTransportBindingElement` to the configuration system.</span></span> <span data-ttu-id="bb628-117">通过若干基本重写，此示例定义配置节名称、绑定元素的类型以及如何创建绑定元素。</span><span class="sxs-lookup"><span data-stu-id="bb628-117">With a few basic overrides, the sample defines the configuration section name, the type of the binding element and how to create the binding element.</span></span> <span data-ttu-id="bb628-118">然后，用户可以按如下方式注册配置文件中的扩展节。</span><span class="sxs-lookup"><span data-stu-id="bb628-118">Users can then register the extension section in a configuration file as follows.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <extensions>  
@@ -50,12 +53,11 @@ caps.handback.revision: 12
     </extensions>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- 可以从自定义绑定中引用此扩展以使用 UDP 作为传输协议。  
+ <span data-ttu-id="bb628-119">可以从自定义绑定来引用该扩展以将 UDP 用作传输协议。</span><span class="sxs-lookup"><span data-stu-id="bb628-119">The extension can be referenced from custom bindings to use UDP as the transport.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -67,11 +69,10 @@ caps.handback.revision: 12
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-### 为绑定添加配置  
- `SampleProfileUdpBindingCollectionElement` 节是一个 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它向配置系统公开 `SampleProfileUdpBinding`。批量实现委派给从 <xref:System.ServiceModel.Configuration.StandardBindingElement> 中派生的 `SampleProfileUdpBindingConfigurationElement`。`SampleProfileUdpBindingConfigurationElement` 具有与 `SampleProfileUdpBinding` 上的属性对应的属性，以及从 `ConfigurationElement` 绑定映射的函数。最后，在 `SampleProfileUdpBinding` 中重写 `OnApplyConfiguration` 方法，如下面的代码示例中所示。  
+### <a name="adding-configuration-for-a-binding"></a><span data-ttu-id="bb628-120">为绑定添加配置</span><span class="sxs-lookup"><span data-stu-id="bb628-120">Adding Configuration for a Binding</span></span>  
+ <span data-ttu-id="bb628-121">`SampleProfileUdpBindingCollectionElement` 节是一个 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>，它向配置系统公开 `SampleProfileUdpBinding`。</span><span class="sxs-lookup"><span data-stu-id="bb628-121">The section `SampleProfileUdpBindingCollectionElement` is a <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> that exposes `SampleProfileUdpBinding` to the configuration system.</span></span> <span data-ttu-id="bb628-122">批量实现委派给从 `SampleProfileUdpBindingConfigurationElement` 派生的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="bb628-122">The bulk of the implementation is delegated to the `SampleProfileUdpBindingConfigurationElement`, which derives from <xref:System.ServiceModel.Configuration.StandardBindingElement>.</span></span> <span data-ttu-id="bb628-123">`SampleProfileUdpBindingConfigurationElement`具有在对应于属性的属性`SampleProfileUdpBinding`，和函数，以便从中映射`ConfigurationElement`绑定。</span><span class="sxs-lookup"><span data-stu-id="bb628-123">The `SampleProfileUdpBindingConfigurationElement` has properties that correspond to the properties on `SampleProfileUdpBinding`, and functions to map from the `ConfigurationElement` binding.</span></span> <span data-ttu-id="bb628-124">最后，在 `OnApplyConfiguration` 中重写 `SampleProfileUdpBinding` 方法，如下面的代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="bb628-124">Finally, the `OnApplyConfiguration` method is overridden in the `SampleProfileUdpBinding`, as shown in the following sample code.</span></span>  
   
 ```  
 protected override void OnApplyConfiguration(string configurationName)  
@@ -94,12 +95,11 @@ protected override void OnApplyConfiguration(string configurationName)
             if (this.ClientBaseAddress != null)  
                    udpBinding.ClientBaseAddress = ClientBaseAddress;  
 }  
-  
 ```  
   
- 若要使用配置系统注册此处理程序，请将下一节添加到相关的配置文件中。  
+ <span data-ttu-id="bb628-125">若要使用配置系统注册此处理程序，请将下一节添加到相关的配置文件中。</span><span class="sxs-lookup"><span data-stu-id="bb628-125">To register this handler with the configuration system, add the following section to the relevant configuration file.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <configSections>  
      <sectionGroup name="system.serviceModel">  
@@ -111,9 +111,9 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- 然后可以从 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 配置节引用它。  
+ <span data-ttu-id="bb628-126">然后可以从引用[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)配置节。</span><span class="sxs-lookup"><span data-stu-id="bb628-126">It can then be referenced from the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) configuration section.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
@@ -126,17 +126,16 @@ protected override void OnApplyConfiguration(string configurationName)
     </client>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 为绑定元素添加元数据支持  
- 若要将通道集成到元数据系统中，系统必须支持策略的导入和导出。这使工具（如 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)）可以生成绑定元素的客户端。  
+## <a name="adding-metadata-support-for-a-binding-element"></a><span data-ttu-id="bb628-127">为绑定元素添加元数据支持</span><span class="sxs-lookup"><span data-stu-id="bb628-127">Adding Metadata Support for a Binding Element</span></span>  
+ <span data-ttu-id="bb628-128">若要将通道集成到元数据系统中，系统必须支持策略的导入和导出。</span><span class="sxs-lookup"><span data-stu-id="bb628-128">To integrate a channel into the metadata system, it must support both the import and export of policy.</span></span> <span data-ttu-id="bb628-129">这允许工具，如[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端的绑定元素。</span><span class="sxs-lookup"><span data-stu-id="bb628-129">This allows tools such as [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate clients of the binding element.</span></span>  
   
-### 添加 WSDL 支持  
- 绑定中的传输绑定元素负责导出和导入元数据中的寻址信息。当使用 SOAP 绑定时，传输绑定元素还应在元数据中导出正确的传输 URI。下面的示例代码摘自[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。  
+### <a name="adding-wsdl-support"></a><span data-ttu-id="bb628-130">添加 WSDL 支持</span><span class="sxs-lookup"><span data-stu-id="bb628-130">Adding WSDL Support</span></span>  
+ <span data-ttu-id="bb628-131">绑定中的传输绑定元素负责导出和导入元数据中的寻址信息。</span><span class="sxs-lookup"><span data-stu-id="bb628-131">The transport binding element in a binding is responsible for exporting and importing addressing information in metadata.</span></span> <span data-ttu-id="bb628-132">当使用 SOAP 绑定时，传输绑定元素还应在元数据中导出正确的传输 URI。</span><span class="sxs-lookup"><span data-stu-id="bb628-132">When using a SOAP binding, the transport binding element should also export a correct transport URI in metadata.</span></span> <span data-ttu-id="bb628-133">下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。</span><span class="sxs-lookup"><span data-stu-id="bb628-133">The following example code is taken from the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-#### WSDL 导出  
- 若要导出寻址信息，`UdpTransportBindingElement` 需要实现 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName>接口。<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=fullName>方法将正确的寻址信息添加到 WSDL 端口中。  
+#### <a name="wsdl-export"></a><span data-ttu-id="bb628-134">WSDL 导出</span><span class="sxs-lookup"><span data-stu-id="bb628-134">WSDL Export</span></span>  
+ <span data-ttu-id="bb628-135">若要导出寻址信息`UdpTransportBindingElement`实现<xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>接口。</span><span class="sxs-lookup"><span data-stu-id="bb628-135">To export addressing information, the `UdpTransportBindingElement` implements the <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="bb628-136"><xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> 方法将正确的寻址信息添加到 WSDL 端口中。</span><span class="sxs-lookup"><span data-stu-id="bb628-136">The <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> method adds the correct addressing information to the WSDL port.</span></span>  
   
 ```  
 if (context.WsdlPort != null)  
@@ -145,7 +144,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- 当终结点使用 SOAP 绑定时，<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 方法的 `UdpTransportBindingElement` 实现也会导出传输 URI：  
+ <span data-ttu-id="bb628-137">当终结点使用 SOAP 绑定时，`UdpTransportBindingElement` 方法的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 实现也会导出传输 URI：</span><span class="sxs-lookup"><span data-stu-id="bb628-137">The `UdpTransportBindingElement` implementation of the <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> method also exports a transport URI when the endpoint uses a SOAP binding:</span></span>  
   
 ```  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -155,10 +154,10 @@ if (soapBinding != null)
 }  
 ```  
   
-#### WSDL 导入  
- 若要扩展 WSDL 导入系统以处理导入地址，请将以下配置添加到 Svcutil.exe 的配置文件，如 Svcutil.exe.config 文件所示：  
+#### <a name="wsdl-import"></a><span data-ttu-id="bb628-138">WSDL 导入</span><span class="sxs-lookup"><span data-stu-id="bb628-138">WSDL Import</span></span>  
+ <span data-ttu-id="bb628-139">若要扩展 WSDL 导入系统以处理导入地址，请将以下配置添加到 Svcutil.exe 的配置文件，如 Svcutil.exe.config 文件所示：</span><span class="sxs-lookup"><span data-stu-id="bb628-139">To extend the WSDL import system to handle importing the addresses, add the following configuration to the configuration file for Svcutil.exe as shown in the Svcutil.exe.config file:</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
@@ -172,13 +171,13 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- 当运行 Svcutil.exe 时，有两个选项使 Svcutil.exe 加载 WSDL 导入扩展：  
+ <span data-ttu-id="bb628-140">当运行 Svcutil.exe 时，有两个选项可用来获取 Svcutil.exe 以加载 WSDL 导入扩展：</span><span class="sxs-lookup"><span data-stu-id="bb628-140">When running Svcutil.exe, there are two options for getting Svcutil.exe to load the WSDL import extensions:</span></span>  
   
-1.  使用 \/SvcutilConfig:\<文件\> 使 Svcutil.exe 指向配置文件。  
+1.  <span data-ttu-id="bb628-141">Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。</span><span class="sxs-lookup"><span data-stu-id="bb628-141">Point Svcutil.exe to the configuration file using the /SvcutilConfig:\<file>.</span></span>  
   
-2.  将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
+2.  <span data-ttu-id="bb628-142">将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。</span><span class="sxs-lookup"><span data-stu-id="bb628-142">Add the configuration section to Svcutil.exe.config in the same directory as Svcutil.exe.</span></span>  
   
- `UdpBindingElementImporter` 类型实现 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=fullName>接口。`ImportEndpoint` 方法从 WSDL 端口导入地址：  
+ <span data-ttu-id="bb628-143">`UdpBindingElementImporter` 类型实现 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 接口。</span><span class="sxs-lookup"><span data-stu-id="bb628-143">The `UdpBindingElementImporter` type implements the <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="bb628-144">`ImportEndpoint` 方法从 WSDL 端口导入地址：</span><span class="sxs-lookup"><span data-stu-id="bb628-144">The `ImportEndpoint` method imports the address from the WSDL port:</span></span>  
   
 ```  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -189,13 +188,13 @@ if (transportBindingElement is UdpTransportBindingElement)
 }  
 ```  
   
-### 添加策略支持  
- 自定义绑定元素可以在 WSDL 绑定中为服务终结点导出策略断言以表示该绑定元素的功能。下面的示例代码摘自[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 示例。  
+### <a name="adding-policy-support"></a><span data-ttu-id="bb628-145">添加策略支持</span><span class="sxs-lookup"><span data-stu-id="bb628-145">Adding Policy Support</span></span>  
+ <span data-ttu-id="bb628-146">自定义绑定元素可以在 WSDL 绑定中为服务终结点导出策略断言以表示该绑定元素的功能。</span><span class="sxs-lookup"><span data-stu-id="bb628-146">The custom binding element can export policy assertions in the WSDL binding for a service endpoint to express the capabilities of that binding element.</span></span> <span data-ttu-id="bb628-147">下面的代码示例摘自[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。</span><span class="sxs-lookup"><span data-stu-id="bb628-147">The following example code is taken from the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-#### 策略导出  
- `UdpTransportBindingElement` 类型实现``<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=fullName>以添加对导出策略的支持。因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=fullName> 在为任何包括它的绑定生成的策略中包括 `UdpTransportBindingElement`。  
+#### <a name="policy-export"></a><span data-ttu-id="bb628-148">策略导出</span><span class="sxs-lookup"><span data-stu-id="bb628-148">Policy Export</span></span>  
+ <span data-ttu-id="bb628-149">`UdpTransportBindingElement`类型实现 '<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>来添加对导出策略支持。</span><span class="sxs-lookup"><span data-stu-id="bb628-149">The `UdpTransportBindingElement` type implements``<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> to add support for exporting policy.</span></span> <span data-ttu-id="bb628-150">因此，<xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 在为任何包含它的绑定而生成策略时都包含 `UdpTransportBindingElement`。</span><span class="sxs-lookup"><span data-stu-id="bb628-150">As a result, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> includes `UdpTransportBindingElement` in the generation of policy for any binding that includes it.</span></span>  
   
- 在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=fullName> 中，如果通道处于多路广播模式，添加 UDP 的断言和其他断言。这是因为多路广播模式影响通信堆栈的构造方式，因此必须在两端之间进行协调。  
+ <span data-ttu-id="bb628-151">在 <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> 中，如果通道处于多路广播模式，添加 UDP 的断言和其他断言。</span><span class="sxs-lookup"><span data-stu-id="bb628-151">In <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, add an assertion for UDP and another assertion if the channel is in multicast mode.</span></span> <span data-ttu-id="bb628-152">这是因为，多路广播模式影响通信堆栈的构造方式，因此必须在两端之间进行协调。</span><span class="sxs-lookup"><span data-stu-id="bb628-152">This is because multicast mode affects how the communication stack is constructed, and thus must be coordinated between both sides.</span></span>  
   
 ```  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
@@ -209,16 +208,16 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
 }  
 ```  
   
- 因为自定义传输绑定元素负责处理寻址，所以 `UdpTransportBindingElement` 上的 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=fullName> 实现还必须处理导出相应的 WS\-Addressing 策略断言以指示正在使用的 WS\-Addressing 的版本。  
+ <span data-ttu-id="bb628-153">因为自定义传输绑定元素负责处理寻址，所以 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上的 `UdpTransportBindingElement` 实现还必须处理导出相应的 WS-Addressing 策略断言以指示正在使用的 WS-Addressing 的版本。</span><span class="sxs-lookup"><span data-stu-id="bb628-153">Because custom transport binding elements are responsible for handling addressing, the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> implementation on the `UdpTransportBindingElement` must also handle exporting the appropriate WS-Addressing policy assertions to indicate the version of WS-Addressing being used.</span></span>  
   
 ```  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
-#### 策略导入  
- 若要扩展策略导入系统，请将以下配置添加到 Svcutil.exe 的配置文件，如 Svcutil.exe.config 文件所示：  
+#### <a name="policy-import"></a><span data-ttu-id="bb628-154">策略导入</span><span class="sxs-lookup"><span data-stu-id="bb628-154">Policy Import</span></span>  
+ <span data-ttu-id="bb628-155">若要扩展策略导入系统，请将以下配置添加到 Svcutil.exe 的配置文件，如 Svcutil.exe.config 文件所示：</span><span class="sxs-lookup"><span data-stu-id="bb628-155">To extend the policy import system, add the following configuration to the configuration file for Svcutil.exe as shown in the Svcutil.exe.config file:</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
@@ -232,16 +231,16 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- 然后从已注册的类 \(`UdpBindingElementImporter`\) 中实现 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=fullName>。在 <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=fullName> 中，检查适当命名空间中的断言并处理那些生成传输和检查它是否为多路广播的断言。此外，从绑定断言列表中删除导入程序处理的断言。同样，当运行 Svcutil.exe 时，有两个用于集成的选项：  
+ <span data-ttu-id="bb628-156">然后从已注册的类 (<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>) 中实现 `UdpBindingElementImporter`。</span><span class="sxs-lookup"><span data-stu-id="bb628-156">Then we implement <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> from our registered class (`UdpBindingElementImporter`).</span></span> <span data-ttu-id="bb628-157">在 <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> 中，检查适当命名空间中的断言并处理那些生成传输和检查它是否为多路广播的断言。</span><span class="sxs-lookup"><span data-stu-id="bb628-157">In <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, examine the assertions in the appropriate namespace and process the ones for generating the transport and checking if it is multicast.</span></span> <span data-ttu-id="bb628-158">此外，从绑定断言列表中删除导入程序处理的断言。</span><span class="sxs-lookup"><span data-stu-id="bb628-158">In addition, remove the assertions that the importer handles from the list of binding assertions.</span></span> <span data-ttu-id="bb628-159">同样，当运行 Svcutil.exe 时，有两个用于集成的选项：</span><span class="sxs-lookup"><span data-stu-id="bb628-159">Again, when running Svcutil.exe, there are two options for integration:</span></span>  
   
-1.  使用 \/SvcutilConfig:\<文件\> 使 Svcutil.exe 指向配置文件。  
+1.  <span data-ttu-id="bb628-160">Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。</span><span class="sxs-lookup"><span data-stu-id="bb628-160">Point Svcutil.exe to our configuration file using the /SvcutilConfig:\<file>.</span></span>  
   
-2.  将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
+2.  <span data-ttu-id="bb628-161">将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。</span><span class="sxs-lookup"><span data-stu-id="bb628-161">Add the configuration section to Svcutil.exe.config in the same directory as Svcutil.exe.</span></span>  
   
-### 添加自定义标准绑定导入程序  
- 默认情况下，Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> 类型识别并导入系统提供的绑定。否则，绑定作为 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName> 实例导入。若要启用 Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter> 以导入 `SampleProfileUdpBinding`，`UdpBindingElementImporter` 还需充当自定义标准绑定导入程序。  
+### <a name="adding-a-custom-standard-binding-importer"></a><span data-ttu-id="bb628-162">添加自定义标准绑定导入程序</span><span class="sxs-lookup"><span data-stu-id="bb628-162">Adding a Custom Standard Binding Importer</span></span>  
+ <span data-ttu-id="bb628-163">默认情况下，Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 类型识别并导入系统提供的绑定。</span><span class="sxs-lookup"><span data-stu-id="bb628-163">Svcutil.exe and the <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> type, by default, recognize and import system-provided bindings.</span></span> <span data-ttu-id="bb628-164">否则，绑定将作为 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 实例而导入。</span><span class="sxs-lookup"><span data-stu-id="bb628-164">Otherwise, the binding gets imported as a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="bb628-165">若要启用 Svcutil.exe 和 <xref:System.ServiceModel.Description.WsdlImporter> 以导入 `SampleProfileUdpBinding`，`UdpBindingElementImporter` 还需充当自定义标准绑定导入程序。</span><span class="sxs-lookup"><span data-stu-id="bb628-165">To enable Svcutil.exe and the <xref:System.ServiceModel.Description.WsdlImporter> to import the `SampleProfileUdpBinding` the `UdpBindingElementImporter` also acts as a custom standard binding importer.</span></span>  
   
- 自定义标准绑定导入程序在 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=fullName> 接口上实现 `ImportEndpoint` 方法，以检查从元数据导入的 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>实例，以确定它是否可由特定的标准绑定生成。  
+ <span data-ttu-id="bb628-166">自定义标准绑定导入程序实现`ImportEndpoint`方法<xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>接口来检查<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>从元数据以便了解是否它无法具有由生成特定的标准绑定导入的实例。</span><span class="sxs-lookup"><span data-stu-id="bb628-166">A custom standard binding importer implements the `ImportEndpoint` method on the <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface to examine the <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> instance imported from metadata to see if it could have been generated by specific standard binding.</span></span>  
   
 ```  
 if (context.Endpoint.Binding is CustomBinding)  
@@ -261,4 +260,4 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- 通常，实现自定义标准绑定导入程序包括检查导入的绑定元素的属性以验证是否仅更改了标准绑定可以设置的属性，而所有其他属性都是各自的默认值。用于实现标准绑定导入程序的基本策略是创建标准绑定的实例，将绑定元素中的属性传播到标准绑定支持的标准绑定实例中，然后将标准绑定中的绑定元素与导入的绑定元素进行比较。
+ <span data-ttu-id="bb628-167">通常，实现自定义标准绑定导入程序包括检查导入的绑定元素的属性以验证是否仅更改了标准绑定可以设置的属性，而所有其他属性都是各自的默认值。</span><span class="sxs-lookup"><span data-stu-id="bb628-167">Generally, implementing a custom standard binding importer involves checking the properties of the imported binding elements to verify that only properties that could have been set by the standard binding have changed and all other properties are their defaults.</span></span> <span data-ttu-id="bb628-168">用于实现标准绑定导入程序的基本策略是创建标准绑定的实例，将绑定元素中的属性传播到标准绑定支持的标准绑定实例中，然后将标准绑定中的绑定元素与导入的绑定元素进行比较。</span><span class="sxs-lookup"><span data-stu-id="bb628-168">A basic strategy for implementing a standard binding importer is to create an instance of the standard binding, propagate the properties from the binding elements to the standard binding instance that the standard binding supports, and the compare the binding elements from the standard binding with the imported binding elements.</span></span>

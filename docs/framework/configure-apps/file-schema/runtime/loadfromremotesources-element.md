@@ -1,102 +1,104 @@
 ---
-title: "&lt;loadFromRemoteSources&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "loadFromRemoteSources 元素"
-  - "<loadFromRemoteSources> 元素"
+title: "&lt;loadFromRemoteSources&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loadFromRemoteSources element
+- <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-caps.latest.revision: 31
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 959073381ef936fa7c0b248419c8529deaee969f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;loadFromRemoteSources&gt; 元素
-指定来自远程源的程序集是否应授予完全信任。  
+# <a name="ltloadfromremotesourcesgt-element"></a><span data-ttu-id="d08b6-102">&lt;loadFromRemoteSources&gt;元素</span><span class="sxs-lookup"><span data-stu-id="d08b6-102">&lt;loadFromRemoteSources&gt; Element</span></span>
+<span data-ttu-id="d08b6-103">指定是否从远程数据源的程序集应被授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-103">Specifies whether assemblies from remote sources should be granted full trust.</span></span>  
   
 > [!NOTE]
->  如果由于 Visual Studio 项目错误列表中或生成错误中的错误消息，而定向到此主题，请参见[如何：在 Visual Studio 中使用 Web 上的程序集](http://msdn.microsoft.com/zh-cn/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  <span data-ttu-id="d08b6-104">如果你已由于采用 Visual Studio 项目错误列表或生成错误的错误消息定向到本主题，请参阅[如何： 使用 Visual Studio 中的来自 Web 的程序集](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070)。</span><span class="sxs-lookup"><span data-stu-id="d08b6-104">If you were directed to this topic because of an error message in the Visual Studio project error list or a build error, see [How to: Use an Assembly from the Web in Visual Studio](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070).</span></span>  
   
-## 语法  
+ <span data-ttu-id="d08b6-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d08b6-105">\<configuration></span></span>  
+<span data-ttu-id="d08b6-106">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="d08b6-106">\<runtime></span></span>  
+<span data-ttu-id="d08b6-107">\<loadFromRemoteSources ></span><span class="sxs-lookup"><span data-stu-id="d08b6-107">\<loadFromRemoteSources></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d08b6-108">语法</span><span class="sxs-lookup"><span data-stu-id="d08b6-108">Syntax</span></span>  
+  
+```xml  
 <loadFromRemoteSources    
    enabled="true|false"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d08b6-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d08b6-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d08b6-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d08b6-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="d08b6-111">特性</span><span class="sxs-lookup"><span data-stu-id="d08b6-111">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定加载自远程源的程序集是否应授予完全信任。|  
+|<span data-ttu-id="d08b6-112">特性</span><span class="sxs-lookup"><span data-stu-id="d08b6-112">Attribute</span></span>|<span data-ttu-id="d08b6-113">描述</span><span class="sxs-lookup"><span data-stu-id="d08b6-113">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="d08b6-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="d08b6-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="d08b6-115">指定是否从远程数据源加载程序集应被授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-115">Specifies whether an assembly that is loaded from remote sources should be granted full trust.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="d08b6-116">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="d08b6-116">enabled Attribute</span></span>  
   
-|值|说明|  
-|-------|--------|  
-|`false`|不要向来自远程源的应用程序授予完全信任。  这是默认设置。|  
-|`true`|向来自远程源的应用程序授予完全信任。|  
+|<span data-ttu-id="d08b6-117">值</span><span class="sxs-lookup"><span data-stu-id="d08b6-117">Value</span></span>|<span data-ttu-id="d08b6-118">描述</span><span class="sxs-lookup"><span data-stu-id="d08b6-118">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="d08b6-119">不要授予完全信任应用程序从远程数据源。</span><span class="sxs-lookup"><span data-stu-id="d08b6-119">Do not grant full trust to applications from remote sources.</span></span> <span data-ttu-id="d08b6-120">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="d08b6-120">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="d08b6-121">从远程数据源，请向应用程序授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-121">Grant full trust to applications from remote sources.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="d08b6-122">子元素</span><span class="sxs-lookup"><span data-stu-id="d08b6-122">Child Elements</span></span>  
+ <span data-ttu-id="d08b6-123">无。</span><span class="sxs-lookup"><span data-stu-id="d08b6-123">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="d08b6-124">父元素</span><span class="sxs-lookup"><span data-stu-id="d08b6-124">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含关于运行时初始化选项的信息。|  
+|<span data-ttu-id="d08b6-125">元素</span><span class="sxs-lookup"><span data-stu-id="d08b6-125">Element</span></span>|<span data-ttu-id="d08b6-126">描述</span><span class="sxs-lookup"><span data-stu-id="d08b6-126">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="d08b6-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="d08b6-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="d08b6-128">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="d08b6-128">Contains information about runtime initialization options.</span></span>|  
   
-## 备注  
- 在 .NET Framework 3.5 版本和早期版本中，如果从远程位置加载一个程序集，则该程序集将作为部分信任的程序集运行，并获得与其加载自的区域相关的授权集。  例如，加载自某个网站的程序集会加载到 Internet 区域中并被授予 Internet 权限集。  换言之，将在 Internet 沙盒中执行这些程序集。  如果尝试在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和以后的版本中运行该程序集，会引发异常；必须为程序集\(参见[如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)\)显式创建一个沙盒，或在完全信任环境下运行它。  
+## <a name="remarks"></a><span data-ttu-id="d08b6-129">备注</span><span class="sxs-lookup"><span data-stu-id="d08b6-129">Remarks</span></span>  
+ <span data-ttu-id="d08b6-130">在.NET Framework 版本 3.5 和更早版本中，如果从远程位置，加载程序集的程序集将运行部分受信任的依赖在已加载它区域上的授予集。</span><span class="sxs-lookup"><span data-stu-id="d08b6-130">In the .NET Framework version 3.5 and earlier versions, if you loaded an assembly from a remote location, the assembly would run partially trusted with a grant set that depended on the zone in which it was loaded.</span></span> <span data-ttu-id="d08b6-131">例如，如果从网站加载程序集，则会将其加载到 Internet 区域中并被授予 Internet 权限集。</span><span class="sxs-lookup"><span data-stu-id="d08b6-131">For example, if you loaded an assembly from a website, it was loaded into the Internet zone and granted the Internet permission set.</span></span> <span data-ttu-id="d08b6-132">换而言之，它在中执行 Internet 沙盒。</span><span class="sxs-lookup"><span data-stu-id="d08b6-132">In other words, it executed in an Internet sandbox.</span></span> <span data-ttu-id="d08b6-133">如果你尝试在运行该程序集[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更高版本，将引发异常; 您必须显式创建沙盒的程序集 (请参阅[如何： 运行部分受信任的代码在沙盒中](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))，或在完全信任中运行它。</span><span class="sxs-lookup"><span data-stu-id="d08b6-133">If you try to run that assembly in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later versions, an exception is thrown; you must either explicitly create a sandbox for the assembly (see [How to: Run Partially Trusted Code in a Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)), or run it in full trust.</span></span>  
   
- 利用 `<loadFromRemoteSources>` 元素，您可以指定在早期版本的 .NET Framework 中作为部分信任的程序集运行的程序集在  [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和以后版本中作为完全信任的程序集运行。  默认情况下，远程程序集不在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 和之后版本中运行。  若要运行远程的程序集，则运行为完全受信任或者创建运行它的沙盒<xref:System.AppDomain>。  
-  
-> [!NOTE]
->  在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]，则本地网络共享运行的程序集默认情况下作为完全信任；您不必启用 `<loadFromRemoteSources>` 元素。  
+ <span data-ttu-id="d08b6-134">通过 `<loadFromRemoteSources>` 元素，可以指定那些在先前版本的 .NET Framework 中以部分信任方式运行的程序集在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 和更高版本以完全信任的方式运行。</span><span class="sxs-lookup"><span data-stu-id="d08b6-134">The `<loadFromRemoteSources>` element lets you specify that the assemblies that would have run partially trusted in earlier versions of the .NET Framework are to be run fully trusted in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later versions.</span></span> <span data-ttu-id="d08b6-135">默认情况下，远程程序集不在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 和更高版本中运行。</span><span class="sxs-lookup"><span data-stu-id="d08b6-135">By default, remote assemblies do not run in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later.</span></span> <span data-ttu-id="d08b6-136">若要运行远程程序集，则必须以完全信任方式运行它，或者创建沙盒 <xref:System.AppDomain> 来运行它。</span><span class="sxs-lookup"><span data-stu-id="d08b6-136">To run a remote assembly, you must either run it as fully trusted or create a sandboxed <xref:System.AppDomain> in which to run it.</span></span>  
   
 > [!NOTE]
->  如果应用程序已经从Web中复制，则它由 Windows 标记为 Web 应用程序，即使它驻留在本地计算机上。  通过更改文件属性，您可以更改该标记，也可以使用 `<loadFromRemoteSources>` 元素对程序集授予完全信任。  或者，可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法加载操作系统标记为从网站加载的本地的程序集。  
-  
- 此元素的 `enabled` 特性仅在禁用代码访问安全性 \(CAS\) 时有效。  默认情况下，[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 和更高版本中会禁用 CAS 策略。  如果将 `enabled` 设置为 `true`，则会将远程应用程序作为完全信任的应用程序运行。  
-  
- 如果未将 `<loadFromRemoteSources>` `enabled` 设置为 `true`，则在以下情况下会引发异常：  
-  
--   当前域的沙盒行为与其在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 中的沙盒行为不同。  这要求禁用 CAS 策略，并且当前域不进行沙盒处理。  
-  
--   所加载的程序集不是来自 `MyComputer` 区域。  
+>  <span data-ttu-id="d08b6-137">在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中，本地网络共享中的程序集默认以完全信任方式运行；您不必启用 `<loadFromRemoteSources>` 元素。</span><span class="sxs-lookup"><span data-stu-id="d08b6-137">In the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], assemblies on local network shares are run as full trust by default; you do not have to enable the `<loadFromRemoteSources>` element.</span></span>  
   
 > [!NOTE]
->  当您尝试从承载计算机上的链接文件夹加载文件时，您可以在 Windows Virtual PC 应用程序中获取 <xref:System.IO.FileLoadException>。  此错误还可生成，则在尝试从[远程桌面服务](http://go.microsoft.com/fwlink/?LinkId=182775) \("终端服务\)上链接的文件夹加载文件时。  若要避免此异常，请将 `enabled` 设置为 `true`  
+>  <span data-ttu-id="d08b6-138">如果应用程序是从 Web 复制而来，Windows 会将其标记为 Web 应用程序，即使它驻留在本地计算机上也不例外。</span><span class="sxs-lookup"><span data-stu-id="d08b6-138">If an application has been copied from the web, it is flagged by Windows as being a web application, even if it resides on the local computer.</span></span> <span data-ttu-id="d08b6-139">你可以更改该标记通过更改文件属性，或者可以使用`<loadFromRemoteSources>`元素对程序集授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-139">You can change that designation by changing the file properties, or you can use the `<loadFromRemoteSources>` element to grant the assembly full trust.</span></span> <span data-ttu-id="d08b6-140">对于操作系统标记为从 Web 加载的本地程序集，也可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法进行加载。</span><span class="sxs-lookup"><span data-stu-id="d08b6-140">As an alternative, you can use the <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> method to load a local assembly that the operating system has flagged as having been loaded from the web.</span></span>  
   
- 将 `<loadFromRemoteSources>` 元素设置为 `true` 可防止出现此异常。  可利用此元素指定，您不依赖于公共语言运行时来对加载的程序集进行沙盒处理以确保安全，并指定可以将这些程序集作为完全信任的程序集运行。  
+ <span data-ttu-id="d08b6-141">`enabled`属性仅当禁用代码访问安全性 (CAS) 时，此元素时有效。</span><span class="sxs-lookup"><span data-stu-id="d08b6-141">The `enabled` attribute for this element is effective only when code access security (CAS) is disabled.</span></span> <span data-ttu-id="d08b6-142">默认情况下，CAS 策略中禁用[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]及更高版本。</span><span class="sxs-lookup"><span data-stu-id="d08b6-142">By default, CAS policy is disabled in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later versions.</span></span> <span data-ttu-id="d08b6-143">如果你设置`enabled`到`true`，远程应用程序被授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-143">If you set `enabled` to `true`, remote applications are granted full trust.</span></span>  
+  
+ <span data-ttu-id="d08b6-144">如果`<loadFromRemoteSources>``enabled`未设置为`true`，以下情况下引发异常：</span><span class="sxs-lookup"><span data-stu-id="d08b6-144">If `<loadFromRemoteSources>``enabled` is not set to `true`, an exception is thrown under the following conditions:</span></span>  
+  
+-   <span data-ttu-id="d08b6-145">当前域的沙盒处理行为是不同于在其行为[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d08b6-145">The sandboxing behavior of the current domain is different from its behavior in the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span> <span data-ttu-id="d08b6-146">这要求 CAS 策略被禁用，并且不进行沙盒处理的当前域。</span><span class="sxs-lookup"><span data-stu-id="d08b6-146">This requires CAS policy to be disabled, and the current domain not to be sandboxed.</span></span>  
+  
+-   <span data-ttu-id="d08b6-147">正在加载的程序集不是来自`MyComputer`区域。</span><span class="sxs-lookup"><span data-stu-id="d08b6-147">The assembly being loaded is not from the `MyComputer` zone.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="d08b6-148">你可能会收到<xref:System.IO.FileLoadException>在 Windows Virtual PC 应用程序尝试以从托管计算机上的链接文件夹加载文件时。</span><span class="sxs-lookup"><span data-stu-id="d08b6-148">You may get a <xref:System.IO.FileLoadException> in a Windows Virtual PC application when you try to load a file from linked folders on the hosting computer.</span></span> <span data-ttu-id="d08b6-149">当你尝试从通过链接的文件夹加载文件时，也可能发生此错误[远程桌面服务](http://go.microsoft.com/fwlink/?LinkId=182775)（终端服务）。</span><span class="sxs-lookup"><span data-stu-id="d08b6-149">This error may also occur when you try to load a file from a folder linked over [Remote Desktop Services](http://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Services).</span></span> <span data-ttu-id="d08b6-150">若要避免此异常，设置`enabled`到`true`。</span><span class="sxs-lookup"><span data-stu-id="d08b6-150">To avoid the exception, set `enabled` to `true`.</span></span>  
+  
+ <span data-ttu-id="d08b6-151">设置`<loadFromRemoteSources>`元素`true`可防止引发此异常。</span><span class="sxs-lookup"><span data-stu-id="d08b6-151">Setting the `<loadFromRemoteSources>` element to `true` prevents this exception from being thrown.</span></span> <span data-ttu-id="d08b6-152">它可用于指定，你将不依赖于公共语言运行时沙盒为安全起见，已加载程序集和它们可以有权以执行完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-152">It enables you to specify that you are not relying on the common language runtime to sandbox the loaded assemblies for security, and that they can be allowed to execute as full trust.</span></span>  
   
 > [!IMPORTANT]
->  如果不应在完全信任环境下运行该程序集，请不要设置此配置元素，  而应创建一个在其中加载该程序集的沙盒化 <xref:System.AppDomain>。  
+>  <span data-ttu-id="d08b6-153">如果程序集不应以完全信任权限运行，则不要设置此配置元素。</span><span class="sxs-lookup"><span data-stu-id="d08b6-153">If the assembly should not run in full trust, do not set this configuration element.</span></span> <span data-ttu-id="d08b6-154">相反，创建沙盒<xref:System.AppDomain>要在其中加载程序集。</span><span class="sxs-lookup"><span data-stu-id="d08b6-154">Instead, create a sandboxed <xref:System.AppDomain> in which to load the assembly.</span></span>  
   
-## 配置文件  
- 此元素通常用在应用程序配置文件，则根据上下文可用在其他配置文件。  有关更多信息，请参见 .NET 安全的博客文章 [使用 CAS 策略的更隐式的使用：loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)。  
+## <a name="configuration-file"></a><span data-ttu-id="d08b6-155">配置文件</span><span class="sxs-lookup"><span data-stu-id="d08b6-155">Configuration File</span></span>  
+ <span data-ttu-id="d08b6-156">此元素通常用在应用程序配置文件中，但可根据上下文用于其他配置文件。</span><span class="sxs-lookup"><span data-stu-id="d08b6-156">This element is typically used in the application configuration file, but can be used in other configuration files depending upon the context.</span></span> <span data-ttu-id="d08b6-157">有关详细信息，请参阅文章[详细隐式使用的 CAS 策略： loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839) .NET 安全博客中。</span><span class="sxs-lookup"><span data-stu-id="d08b6-157">For more information, see the article [More Implicit Uses of CAS Policy: loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839) in the .NET Security blog.</span></span>  
   
-## 示例  
- 下面的示例演示如何从远程源对应用程序授予完全信任。  
+## <a name="example"></a><span data-ttu-id="d08b6-158">示例</span><span class="sxs-lookup"><span data-stu-id="d08b6-158">Example</span></span>  
+ <span data-ttu-id="d08b6-159">下面的示例演示如何从远程数据源向应用程序授予完全信任。</span><span class="sxs-lookup"><span data-stu-id="d08b6-159">The following example shows how to grant full trust to applications from remote sources.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <loadFromRemoteSources enabled="true"/>  
@@ -104,8 +106,8 @@ caps.handback.revision: 31
 </configuration>  
 ```  
   
-## 请参阅  
- [使用 CAS 策略的更隐式的使用：loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)   
- [如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)   
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="d08b6-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d08b6-160">See Also</span></span>  
+ [<span data-ttu-id="d08b6-161">更多隐式使用 CAS 策略： loadFromRemoteSources</span><span class="sxs-lookup"><span data-stu-id="d08b6-161">More Implicit Uses of CAS Policy: loadFromRemoteSources</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=266839)  
+ [<span data-ttu-id="d08b6-162">如何：运行沙盒中部分受信任的代码</span><span class="sxs-lookup"><span data-stu-id="d08b6-162">How to: Run Partially Trusted Code in a Sandbox</span></span>](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+ [<span data-ttu-id="d08b6-163">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="d08b6-163">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="d08b6-164">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="d08b6-164">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

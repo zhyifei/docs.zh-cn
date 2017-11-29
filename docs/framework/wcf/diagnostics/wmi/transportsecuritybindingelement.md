@@ -1,25 +1,28 @@
 ---
-title: "TransportSecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TransportSecurityBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 31b8cd3b-3be5-4b6c-93f0-69d7aaf791d0
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 24d97d1659452a68e6d2107a756a2976419d79ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# TransportSecurityBindingElement
-TransportSecurityBindingElement  
+# <a name="transportsecuritybindingelement"></a><span data-ttu-id="e2083-102">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="e2083-102">TransportSecurityBindingElement</span></span>
+<span data-ttu-id="e2083-103">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="e2083-103">TransportSecurityBindingElement</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="e2083-104">语法</span><span class="sxs-lookup"><span data-stu-id="e2083-104">Syntax</span></span>  
   
 ```  
 class TransportSecurityBindingElement : SecurityBindingElement  
@@ -27,14 +30,14 @@ class TransportSecurityBindingElement : SecurityBindingElement
 };  
 ```  
   
-## 方法  
- TransportSecurityBindingElement 类继承自 SecurityBindingElement，但不定义其他方法或属性。  
+## <a name="methods"></a><span data-ttu-id="e2083-105">方法</span><span class="sxs-lookup"><span data-stu-id="e2083-105">Methods</span></span>  
+ <span data-ttu-id="e2083-106">TransportSecurityBindingElement 类继承自 SecurityBindingElement，但不定义其他方法或属性。</span><span class="sxs-lookup"><span data-stu-id="e2083-106">The TransportSecurityBindingElement class inherits from SecurityBindingElement but does not define additional methods or properties.</span></span>  
   
-## 要求  
+## <a name="requirements"></a><span data-ttu-id="e2083-107">要求</span><span class="sxs-lookup"><span data-stu-id="e2083-107">Requirements</span></span>  
   
-|MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|<span data-ttu-id="e2083-108">MOF</span><span class="sxs-lookup"><span data-stu-id="e2083-108">MOF</span></span>|<span data-ttu-id="e2083-109">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="e2083-109">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="e2083-110">命名空间</span><span class="sxs-lookup"><span data-stu-id="e2083-110">Namespace</span></span>|<span data-ttu-id="e2083-111">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="e2083-111">Defined in root\ServiceModel</span></span>|  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="e2083-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e2083-112">See Also</span></span>  
  <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>

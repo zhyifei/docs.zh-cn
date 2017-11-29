@@ -1,84 +1,85 @@
 ---
-title: "&lt;system.codedom&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.codedom"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.codedom> 元素"
-  - "编译器配置元素, <system.codedom> 元素"
-  - "system.codedom 元素"
+title: "&lt;system.codedom&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.codedom
+helpviewer_keywords:
+- compiler configuration elements, <system.codedom> element
+- system.codedom element
+- <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 8b223ab6ab742c5b7d3b3d2f5640e99835afe268
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;system.codedom&gt; 元素
-指定可用语言提供程序的编译器配置设置。  
+# <a name="ltsystemcodedomgt-element"></a><span data-ttu-id="a3966-102">&lt;system.codedom&gt;元素</span><span class="sxs-lookup"><span data-stu-id="a3966-102">&lt;system.codedom&gt; Element</span></span>
+<span data-ttu-id="a3966-103">指定可用语言提供程序的编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-103">Specifies compiler configuration settings for available language providers.</span></span>  
   
-## 语法  
+ <span data-ttu-id="a3966-104">\<配置 > 元素</span><span class="sxs-lookup"><span data-stu-id="a3966-104">\<configuration> Element</span></span>  
+<span data-ttu-id="a3966-105">\<system.codedom > 元素</span><span class="sxs-lookup"><span data-stu-id="a3966-105">\<system.codedom> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a3966-106">语法</span><span class="sxs-lookup"><span data-stu-id="a3966-106">Syntax</span></span>  
+  
+```xml  
 <system.codedom>  
   <compilers> ... </compilers>  
 </system.codedom>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a3966-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a3966-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="a3966-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="a3966-109">特性</span><span class="sxs-lookup"><span data-stu-id="a3966-109">Attributes</span></span>  
+ <span data-ttu-id="a3966-110">无。</span><span class="sxs-lookup"><span data-stu-id="a3966-110">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="a3966-111">子元素</span><span class="sxs-lookup"><span data-stu-id="a3966-111">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<编译器\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素的容器；包含0或者多个[\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。|  
+|<span data-ttu-id="a3966-112">元素</span><span class="sxs-lookup"><span data-stu-id="a3966-112">Element</span></span>|<span data-ttu-id="a3966-113">描述</span><span class="sxs-lookup"><span data-stu-id="a3966-113">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a3966-114">\<compilers></span><span class="sxs-lookup"><span data-stu-id="a3966-114">\<compilers></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="a3966-115">编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-115">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="a3966-116">父元素</span><span class="sxs-lookup"><span data-stu-id="a3966-116">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<configuration（配置）\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|<span data-ttu-id="a3966-117">元素</span><span class="sxs-lookup"><span data-stu-id="a3966-117">Element</span></span>|<span data-ttu-id="a3966-118">描述</span><span class="sxs-lookup"><span data-stu-id="a3966-118">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a3966-119">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a3966-119">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="a3966-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## 备注  
+## <a name="remarks"></a><span data-ttu-id="a3966-121">备注</span><span class="sxs-lookup"><span data-stu-id="a3966-121">Remarks</span></span>  
   
-## .NET Framework 2.0 版  
- [\<system.codedom\>\< 元素除了包含随 .NET Framework 一起安装的默认提供程序（如 \>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) <xref:Microsoft.CSharp.CSharpCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider>）的编译器配置设置外，还包含计算机上安装的其他语言提供程序的编译器配置设置。  [\<\<compilers\>\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 元素包含零个或多个 [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。  每个Each [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素为一个特定语言提供程序指定编译器配置特性。  
+## <a name="net-framework-version-20"></a><span data-ttu-id="a3966-122">.NET framework 2.0 版</span><span class="sxs-lookup"><span data-stu-id="a3966-122">.NET Framework Version 2.0</span></span>  
+ <span data-ttu-id="a3966-123">[ \<System.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)元素包含除了如安装.NET Framework 中，使用的默认提供程序的计算机上安装的语言提供程序的编译器配置设置<xref:Microsoft.CSharp.CSharpCodeProvider>和<xref:Microsoft.VisualBasic.VBCodeProvider>。</span><span class="sxs-lookup"><span data-stu-id="a3966-123">The [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) element contains compiler configuration settings for language providers installed on a computer in addition to the default providers that are installed with the .NET Framework, such as the <xref:Microsoft.CSharp.CSharpCodeProvider> and the <xref:Microsoft.VisualBasic.VBCodeProvider>.</span></span> <span data-ttu-id="a3966-124">[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含零个或多[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-124">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span> <span data-ttu-id="a3966-125">每个[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素指定特定的语言提供程序的编译器配置特性。</span><span class="sxs-lookup"><span data-stu-id="a3966-125">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- 开发人员和编译器供应商可以为新的 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现在计算机配置文件 \(Machine.config\) 中添加配置设置。  使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 方法，可以通过编程方式同时枚举默认语言提供程序和由计算机上的编译器配置设置所标识的语言提供程序。  
+ <span data-ttu-id="a3966-126">开发人员和编译器供应商可以将配置设置添加到计算机配置文件 (Machine.config) 对新<xref:System.CodeDom.Compiler.CodeDomProvider>实现。</span><span class="sxs-lookup"><span data-stu-id="a3966-126">Developers and compiler vendors can add configuration settings to the machine configuration file (Machine.config) for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="a3966-127">使用<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>方法以编程方式枚举的默认语言提供程序和语言提供程序由在计算机上的编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-127">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate both the default language providers and language providers identified by the compiler configuration settings on a computer.</span></span>  
   
 > [!NOTE]
->  在 .NET Framework 1.0 和 1.1 版中，由 .NET Framework 提供的默认语言提供程序是在 [\<compilers\>\<\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) 元素中标识的。  在 .NET Framework 2.0 版中，默认语言提供程序未在 [\<compilers\>\< 元素中标识，但可以使用 \>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> 方法来枚举。  
+>  <span data-ttu-id="a3966-128">在.NET framework 1.0 和 1.1 中，在标识提供程序由.NET Framework 提供的默认语言[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-128">In the .NET Framework versions 1.0 and 1.1, the default language providers supplied by the .NET Framework are identified in the [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element.</span></span> <span data-ttu-id="a3966-129">在.NET Framework 2.0 版中，默认语言提供程序不会在标识[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素，但可以使用枚举<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a3966-129">In the .NET Framework version 2.0, the default language providers are not identified in the [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element, but can be enumerated using the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> method.</span></span>  
   
-## .NET Framework 1.0 和 1.1 版  
- [\<system.codedom\>\<\>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)元素包含计算机上的语言提供程序的编译器配置设置。  [\<compilers\>\< 元素包含零个或多个 \>\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。  每个Each [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素为一个特定语言提供程序指定编译器配置特性。  
+## <a name="net-framework-versions-10-and-11"></a><span data-ttu-id="a3966-130">.NET framework 1.0 和 1.1 版</span><span class="sxs-lookup"><span data-stu-id="a3966-130">.NET Framework Versions 1.0 and 1.1</span></span>  
+ <span data-ttu-id="a3966-131">[ \<System.codedom >](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)元素包含的计算机上的语言提供程序的编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-131">The [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="a3966-132">[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)元素包含零个或多[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-132">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span> <span data-ttu-id="a3966-133">每个[\<编译器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)元素指定特定的语言提供程序的编译器配置特性。</span><span class="sxs-lookup"><span data-stu-id="a3966-133">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- .NET Framework 在计算机配置文件 \(Machine.config\) 中定义初始编译器设置。  开发人员和编译器供应商可以为新的 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现添加配置设置。  使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 方法可在计算机上以编程方式枚举语言提供程序和编译器配置设置。  
+ <span data-ttu-id="a3966-134">.NET Framework 在计算机配置文件 (Machine.config) 中定义初始编译器设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-134">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="a3966-135">开发人员和编译器供应商可以添加新 <xref:System.CodeDom.Compiler.CodeDomProvider> 实现的配置设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-135">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="a3966-136">使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 方法，以编程方式枚举计算机上的语言提供程序和编译器配置设置。</span><span class="sxs-lookup"><span data-stu-id="a3966-136">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## 配置文件  
- 此元素可以在计算机配置文件和应用程序配置文件中使用。  
+## <a name="configuration-file"></a><span data-ttu-id="a3966-137">配置文件</span><span class="sxs-lookup"><span data-stu-id="a3966-137">Configuration File</span></span>  
+ <span data-ttu-id="a3966-138">计算机配置文件和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="a3966-138">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## 示例  
- 下面的示例阐释了一个典型的编译器配置。  
+## <a name="example"></a><span data-ttu-id="a3966-139">示例</span><span class="sxs-lookup"><span data-stu-id="a3966-139">Example</span></span>  
+ <span data-ttu-id="a3966-140">下面的示例说明了典型的编译器配置。</span><span class="sxs-lookup"><span data-stu-id="a3966-140">The following example illustrates a typical compiler configuration.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.codedom>  
     <compilers>  
@@ -96,9 +97,9 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)   
- [\<compiler\> 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+## <a name="see-also"></a><span data-ttu-id="a3966-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a3966-141">See Also</span></span>  
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [<span data-ttu-id="a3966-142">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="a3966-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="a3966-143">编译器和语言提供程序设置架构</span><span class="sxs-lookup"><span data-stu-id="a3966-143">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+ [<span data-ttu-id="a3966-144">\<compiler> Element</span><span class="sxs-lookup"><span data-stu-id="a3966-144">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -1,67 +1,68 @@
 ---
-title: "用于列出选项的 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows 窗体中的选项列表"
-  - "Windows 窗体控件, 列表选项"
+title: "用于列出选项的 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, listing options
+- option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 用于列出选项的 Windows 窗体控件
-如果要提供一个选项列表以供用户从中选择，则可以向 Windows 窗体添加各种控件。  根据所希望的对用户输入的限制程度，可以添加 <xref:System.Windows.Forms.ListBox> 控件、<xref:System.Windows.Forms.ComboBox> 控件或 <xref:System.Windows.Forms.CheckedListBox> 控件。  使用下列链接确定哪种控件最适合您的需要。  
+# <a name="windows-forms-controls-used-to-list-options"></a><span data-ttu-id="d0b7d-102">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="d0b7d-102">Windows Forms Controls Used to List Options</span></span>
+<span data-ttu-id="d0b7d-103">如果你想要为用户提供的选项可供选择的列表，你可以将各种控件添加到 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-103">You can add a variety of controls to a Windows Form if you want to provide users with a list of options to choose from.</span></span> <span data-ttu-id="d0b7d-104">具体取决于多少你想要限制用户的输入，你可以添加<xref:System.Windows.Forms.ListBox>控件，<xref:System.Windows.Forms.ComboBox>控件，或<xref:System.Windows.Forms.CheckedListBox>控件。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-104">Depending on how much you want to restrict your users' input, you can add a <xref:System.Windows.Forms.ListBox> control, a <xref:System.Windows.Forms.ComboBox> control, or a <xref:System.Windows.Forms.CheckedListBox> control.</span></span> <span data-ttu-id="d0b7d-105">使用以下链接来确定哪种控件最适合你的需求。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-105">Use the following links to determine which control best suits your needs.</span></span>  
   
-## 本节内容  
- [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- 根据 Windows 窗体的需要和限制推荐适当的基于列表的控件。  
+## <a name="in-this-section"></a><span data-ttu-id="d0b7d-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="d0b7d-106">In This Section</span></span>  
+ [<span data-ttu-id="d0b7d-107">何时使用 Windows 窗体 ComboBox 而非 ListBox</span><span class="sxs-lookup"><span data-stu-id="d0b7d-107">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ <span data-ttu-id="d0b7d-108">建议根据需求和限制的 Windows 窗体的适当的基于列表的控件。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-108">Recommends an appropriate list-based control depending on the needs and restrictions of your Windows Form.</span></span>  
   
- [如何：访问 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中的特定项](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- 提供有关如何以编程方式确定列表中的哪一项出现在给定位置的说明。  
+ [<span data-ttu-id="d0b7d-109">如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中访问特定项</span><span class="sxs-lookup"><span data-stu-id="d0b7d-109">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ <span data-ttu-id="d0b7d-110">提供用于以编程方式确定列表中的项出现在给定位置的说明。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-110">Gives instructions for programmatically determining which item in a list appears in a given position.</span></span>  
   
- [如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
- 提供有关如何在控件的项列表中添加项或移除项的说明。  
+ [<span data-ttu-id="d0b7d-111">如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中添加和删除项</span><span class="sxs-lookup"><span data-stu-id="d0b7d-111">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ <span data-ttu-id="d0b7d-112">用于添加或移除的项的控件的列表项提供的说明。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-112">Gives instructions for adding or removing items from a control's list of items.</span></span>  
   
- [如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- 提供有关如何以有用的格式显示和存储窗体数据的说明。  
+ [<span data-ttu-id="d0b7d-113">如何：创建 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的查找表</span><span class="sxs-lookup"><span data-stu-id="d0b7d-113">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ <span data-ttu-id="d0b7d-114">提供有关显示和以有用的格式存储窗体数据的指导。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-114">Gives directions for displaying and storing form data in useful formats.</span></span>  
   
- [如何：将 Windows 窗体 ComboBox 控件或 ListBox 控件绑定到数据](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- 提供有关如何将基于列表的控件绑定到数据源的说明。  
+ [<span data-ttu-id="d0b7d-115">如何：将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据</span><span class="sxs-lookup"><span data-stu-id="d0b7d-115">How to: Bind a Windows Forms ComboBox or ListBox Control to Data</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ <span data-ttu-id="d0b7d-116">提供有关如何将基于列表的控件绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-116">Gives directions for binding a list-based control to a data source.</span></span>  
   
- [如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- 解释如何在数据源中对列表数据进行排序。  
+ [<span data-ttu-id="d0b7d-117">如何：对 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序</span><span class="sxs-lookup"><span data-stu-id="d0b7d-117">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ <span data-ttu-id="d0b7d-118">说明如何在其数据源的列表数据进行排序。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-118">Explains how to sort list data at its data source.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="d0b7d-119">参考</span><span class="sxs-lookup"><span data-stu-id="d0b7d-119">Reference</span></span>  
  <xref:System.Windows.Forms.CheckedListBox>  
- 描述该类并提供指向其所有成员的链接。  
+ <span data-ttu-id="d0b7d-120">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-120">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.ComboBox>  
- 描述该类并提供指向其所有成员的链接。  
+ <span data-ttu-id="d0b7d-121">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-121">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.ListBox>  
- 描述该类并提供指向其所有成员的链接。  
+ <span data-ttu-id="d0b7d-122">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-122">Describes this class and has links to all its members.</span></span>  
   
-## 相关章节  
- [CheckedListBox 控件概述](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+## <a name="related-sections"></a><span data-ttu-id="d0b7d-123">相关章节</span><span class="sxs-lookup"><span data-stu-id="d0b7d-123">Related Sections</span></span>  
+ [<span data-ttu-id="d0b7d-124">CheckedListBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="d0b7d-124">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="d0b7d-125">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-125">Explains what this control is and its key features and properties.</span></span>  
   
- [ComboBox 控件概述](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+ [<span data-ttu-id="d0b7d-126">ComboBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="d0b7d-126">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ <span data-ttu-id="d0b7d-127">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-127">Explains what this control is and its key features and properties.</span></span>  
   
- [ListBox 控件概述](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+ [<span data-ttu-id="d0b7d-128">ListBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="d0b7d-128">ListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="d0b7d-129">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-129">Explains what this control is and its key features and properties.</span></span>  
   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+ [<span data-ttu-id="d0b7d-130">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="d0b7d-130">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="d0b7d-131">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="d0b7d-131">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

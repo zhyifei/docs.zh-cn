@@ -1,29 +1,35 @@
 ---
-title: "如何：使用用户定义的标量值函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用标量值用户定义的函数"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ef9e687522e200487e0fc2a661bbd545d4eb4bbf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：使用用户定义的标量值函数
-您可以通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性将类中定义的客户端方法映射到用户定义的函数。  请注意，方法体会构造一个捕获方法调用意向的表达式，并将该表达式传递给 <xref:System.Data.Linq.DataContext> 进行转换和执行。  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a><span data-ttu-id="9d17b-102">如何：使用标量值用户定义的函数</span><span class="sxs-lookup"><span data-stu-id="9d17b-102">How to: Use Scalar-Valued User-Defined Functions</span></span>
+<span data-ttu-id="9d17b-103">您可以通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性将类中定义的客户端方法映射到用户定义的函数。</span><span class="sxs-lookup"><span data-stu-id="9d17b-103">You can map a client method defined on a class to a user-defined function by using the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute.</span></span> <span data-ttu-id="9d17b-104">请注意，方法体会构造一个捕获方法调用意向的表达式，并将该表达式传递给 <xref:System.Data.Linq.DataContext> 进行转换和执行。</span><span class="sxs-lookup"><span data-stu-id="9d17b-104">Note that the body of the method constructs an expression that captures the intent of the method call, and passes that expression to the <xref:System.Data.Linq.DataContext> for translation and execution.</span></span>  
   
 > [!NOTE]
->  只有在查询外部调用此函数时，才会直接执行。  有关详细信息，请参阅[如何：以内联方式调用用户定义的函数](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)。  
+>  <span data-ttu-id="9d17b-105">只有在查询外部调用此函数时，才会直接执行。</span><span class="sxs-lookup"><span data-stu-id="9d17b-105">Direct execution occurs only if the function is called outside a query.</span></span> <span data-ttu-id="9d17b-106">有关详细信息，请参阅[How to: Call User-Defined 函数内联](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)。</span><span class="sxs-lookup"><span data-stu-id="9d17b-106">For more information, see [How to: Call User-Defined Functions Inline](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).</span></span>  
   
-## 示例  
- 下面的 SQL 代码展示了一个用户定义的标量值函数 `ReverseCustName()`。  
+## <a name="example"></a><span data-ttu-id="9d17b-107">示例</span><span class="sxs-lookup"><span data-stu-id="9d17b-107">Example</span></span>  
+ <span data-ttu-id="9d17b-108">下面的 SQL 代码展示了一个用户定义的标量值函数 `ReverseCustName()`。</span><span class="sxs-lookup"><span data-stu-id="9d17b-108">The following SQL code presents a scalar-valued user-defined function `ReverseCustName()`.</span></span>  
   
 ```  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
@@ -36,10 +42,10 @@ BEGIN
 END  
 ```  
   
- 您可以为此代码映射一个客户端方法，例如，可以映射下面这个方法：  
+ <span data-ttu-id="9d17b-109">你可以为此代码映射一个客户端方法，例如，可以映射下面这个方法：</span><span class="sxs-lookup"><span data-stu-id="9d17b-109">You would map a client method such as the following for this code:</span></span>  
   
  [!code-csharp[DLinqUDFS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#3)]
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  
   
-## 请参阅  
- [用户定义函数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="9d17b-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9d17b-110">See Also</span></span>  
+ [<span data-ttu-id="9d17b-111">用户定义函数</span><span class="sxs-lookup"><span data-stu-id="9d17b-111">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

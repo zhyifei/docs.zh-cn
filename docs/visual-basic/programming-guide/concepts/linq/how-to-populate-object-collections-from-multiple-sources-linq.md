@@ -1,43 +1,35 @@
 ---
-title: "如何︰ 从多个源 (LINQ) (Visual Basic 中) 填充对象集合 |Microsoft 文档"
+title: "如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何︰ 从多个源 (LINQ) (Visual Basic 中) 填充对象集合
-此示例演示如何将来自不同源的数据合并到一系列新的类型。  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="94be2-102">如何： 从多个源 (LINQ) (Visual Basic) 填充对象集合</span><span class="sxs-lookup"><span data-stu-id="94be2-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="94be2-103">本示例演示如何将来自不同源的数据合并到一系列新的类型。</span><span class="sxs-lookup"><span data-stu-id="94be2-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  不要尝试将仍在数据库的数据的文件系统中的内存中数据。 这种跨域联接可以产生未定义的结果，因为联接操作可能定义为数据库查询和其他类型的源的不同方式。 此外，是这样的操作可能导致内存不足异常，如果数据库中的数据量足够大的风险。 若要加入数据从一个数据库复制到内存中的数据，首先调用`ToList`或`ToArray`对数据库查询，请然后对返回的集合中执行联接。  
+>  <span data-ttu-id="94be2-104">请勿尝试将内存数据或文件系统中的数据与仍在数据库中的数据进行联接。</span><span class="sxs-lookup"><span data-stu-id="94be2-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="94be2-105">这种跨域联接可能产生未定义的结果，因为可能为数据库查询和其他类型的源定义了联接操作的不同方式。</span><span class="sxs-lookup"><span data-stu-id="94be2-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="94be2-106">此外，如果数据库中的数据量足够大，这样的操作还存在可能导致内存不足的异常的风险。</span><span class="sxs-lookup"><span data-stu-id="94be2-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="94be2-107">若要将数据库中的数据联接到内存数据，首先对数据库查询调用 `ToList` 或 `ToArray`，然后对返回的集合执行联接。</span><span class="sxs-lookup"><span data-stu-id="94be2-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>创建数据文件  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="94be2-108">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="94be2-108">To create the data file</span></span>  
   
--   如中所述，将 names.csv 和 scores.csv 文件复制到项目文件夹中， [How to︰ 内容加入从不同的文件 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。  
+-   <span data-ttu-id="94be2-109">将的 names.csv 和 scores.csv 文件复制到你的项目文件夹中所述[How to： 内容加入从不同文件 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="94be2-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用命名的类型`Student`合并中存储数据的字符串的模拟以.csv 格式的电子表格数据的两个内存中集合。 字符串的第一个集合表示学生姓名和 Id，并且第二个集合表示学生 ID （在第一列） 和四次考试分数。 该 ID 用作外键。  
+## <a name="example"></a><span data-ttu-id="94be2-110">示例</span><span class="sxs-lookup"><span data-stu-id="94be2-110">Example</span></span>  
+ <span data-ttu-id="94be2-111">下面的示例演示如何使用命名类型 `Student` 存储来自两个内存字符串集合（模拟 .csv 格式的电子表格数据）的合并数据。</span><span class="sxs-lookup"><span data-stu-id="94be2-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="94be2-112">第一个字符串集合代表学生姓名和 ID，第二个集合代表学生 ID（在第一列）和四次考试分数。</span><span class="sxs-lookup"><span data-stu-id="94be2-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="94be2-113">此 ID 用作外键。</span><span class="sxs-lookup"><span data-stu-id="94be2-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- 在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句中，对象初始值设定项用于实例化每个新`Student`使用两个来源的数据的对象。  
+ <span data-ttu-id="94be2-114">在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，对象初始值设定项用于实例化每个新`Student`从两个源中使用的数据的对象。</span><span class="sxs-lookup"><span data-stu-id="94be2-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- 如果不需要存储查询的结果，匿名类型可以是命名类型相比，更方便。 如果传递的查询结果在执行查询时的方法外，所需命名的类型。 下面的示例执行相同的任务与前面的示例中，但使用而不是命名类型的匿名类型︰  
+ <span data-ttu-id="94be2-115">如果不需要存储查询的结果，那么和命名类型相比，匿名类型使用起来更方便。</span><span class="sxs-lookup"><span data-stu-id="94be2-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="94be2-116">如果在执行查询的方法外部传递查询结果，则需要使用命名类型。</span><span class="sxs-lookup"><span data-stu-id="94be2-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="94be2-117">下面的示例执行与前面的示例相同的任务，但使用的是匿名类型，而不是命名类型：</span><span class="sxs-lookup"><span data-stu-id="94be2-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -140,8 +132,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="94be2-118">编译代码</span><span class="sxs-lookup"><span data-stu-id="94be2-118">Compiling the Code</span></span>  
+ <span data-ttu-id="94be2-119">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="94be2-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="94be2-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="94be2-120">See Also</span></span>  
+ [<span data-ttu-id="94be2-121">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="94be2-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

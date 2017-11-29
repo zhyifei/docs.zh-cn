@@ -1,56 +1,39 @@
 ---
-title: "如何︰ 计算数值 (Visual Basic 中) |Microsoft 文档"
+title: "如何：计算数值 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - operator precedence
 - operators [Visual Basic]
 - expressions [Visual Basic], numeric
-- calculations, numeric expressions
-- precedence, of operators
+- calculations [Visual Basic], numeric expressions
+- precedence [Visual Basic], of operators
 - Visual Basic code, operators
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d844e2af3892d897125e21d3fd7047a8b295d10a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：计算数值 (Visual Basic)
-您可以计算通过使用数值表达式的数值。 一个*数值表达式*一个表达式，包含文本、 常量和变量表示数值，以及处理这些值的运算符。  
+# <a name="how-to-calculate-numeric-values-visual-basic"></a><span data-ttu-id="33d2c-102">如何：计算数值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33d2c-102">How to: Calculate Numeric Values (Visual Basic)</span></span>
+<span data-ttu-id="33d2c-103">您可以计算通过数值表达式使用的数字值。</span><span class="sxs-lookup"><span data-stu-id="33d2c-103">You can calculate numeric values through the use of numeric expressions.</span></span> <span data-ttu-id="33d2c-104">A*数值表达式*会包含文本、 常量和变量表示数字值的表达式并处理这些值的运算符。</span><span class="sxs-lookup"><span data-stu-id="33d2c-104">A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.</span></span>  
   
-## <a name="calculating-numeric-values"></a>计算数值  
+## <a name="calculating-numeric-values"></a><span data-ttu-id="33d2c-105">计算数值</span><span class="sxs-lookup"><span data-stu-id="33d2c-105">Calculating Numeric Values</span></span>  
   
-#### <a name="to-calculate-a-numeric-value"></a>若要计算的数字值  
+#### <a name="to-calculate-a-numeric-value"></a><span data-ttu-id="33d2c-106">若要计算的数字值</span><span class="sxs-lookup"><span data-stu-id="33d2c-106">To calculate a numeric value</span></span>  
   
--   将一个或多个数字文本、 常量和变量组合到一个数值表达式。 下面的示例显示了一些有效的数值表达式。  
+-   <span data-ttu-id="33d2c-107">将一个或多个数值的文本、 常量和变量组合到一个数值表达式。</span><span class="sxs-lookup"><span data-stu-id="33d2c-107">Combine one or more numeric literals, constants, and variables into a numeric expression.</span></span> <span data-ttu-id="33d2c-108">下面的示例显示了一些有效的数值表达式。</span><span class="sxs-lookup"><span data-stu-id="33d2c-108">The following example shows some valid numeric expressions.</span></span>  
   
      `93.217`  
   
@@ -60,37 +43,37 @@ ms.lasthandoff: 03/13/2017
   
      `4 * (67 + i)`  
   
-     前三行显示文本、 常量和变量。 每个构成有效的数值表达式本身。 最后一行演示具有两个字符串的变量的组合。  
+     <span data-ttu-id="33d2c-109">前三个行显示文本、 常量和变量。</span><span class="sxs-lookup"><span data-stu-id="33d2c-109">The first three lines show a literal, a constant, and a variable.</span></span> <span data-ttu-id="33d2c-110">每个单独构成有效的数值表达式。</span><span class="sxs-lookup"><span data-stu-id="33d2c-110">Each one forms a valid numeric expression by itself.</span></span> <span data-ttu-id="33d2c-111">最后一行显示了具有两个文本的变量的组合。</span><span class="sxs-lookup"><span data-stu-id="33d2c-111">The final line shows a combination of a variable with two literals.</span></span>  
   
-     请注意，并未数值表达式组成的完整[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]本身的语句。 作为一个完整的语句的一部分，必须使用表达式。  
+     <span data-ttu-id="33d2c-112">请注意，并未数值表达式组成的完整[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]单独的语句。</span><span class="sxs-lookup"><span data-stu-id="33d2c-112">Note that a numeric expression does not form a complete [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] statement by itself.</span></span> <span data-ttu-id="33d2c-113">作为一个完整的语句的一部分，必须使用表达式。</span><span class="sxs-lookup"><span data-stu-id="33d2c-113">You must use the expression as part of a complete statement.</span></span>  
   
-#### <a name="to-store-a-numeric-value"></a>若要存储的数字值  
+#### <a name="to-store-a-numeric-value"></a><span data-ttu-id="33d2c-114">若要存储的数字值</span><span class="sxs-lookup"><span data-stu-id="33d2c-114">To store a numeric value</span></span>  
   
--   赋值语句可用于将分配给一个变量，数值表达式所表示的值，如下面的示例所示。  
+-   <span data-ttu-id="33d2c-115">赋值语句可用于分配给一个变量，一个数值表达式所表示的值，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="33d2c-115">You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.</span></span>  
   
-     [!code-vb[VbVbalrOperators #&82;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
-     在前面的示例中，相等运算符右侧的表达式的值 (`=`) 赋给变量`j`运算符，左侧以便`j`的计算结果为 276。  
+     <span data-ttu-id="33d2c-116">在前面的示例中，相等运算符右侧的表达式的值 (`=`) 分配给变量`j`运算符，左侧以便`j`计算结果为 276。</span><span class="sxs-lookup"><span data-stu-id="33d2c-116">In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.</span></span>  
   
-     有关详细信息，请参阅[语句](../../../../visual-basic/language-reference/statements/index.md)。  
+     <span data-ttu-id="33d2c-117">有关详细信息，请参阅[语句](../../../../visual-basic/language-reference/statements/index.md)。</span><span class="sxs-lookup"><span data-stu-id="33d2c-117">For more information, see [Statements](../../../../visual-basic/language-reference/statements/index.md).</span></span>  
   
-## <a name="multiple-operators"></a>多个运算符  
- 如果数值表达式包含多个运算符，它们的计算顺序由运算符优先级的规则确定。 若要覆盖的运算符优先顺序规则，则将表达式括在括号内，如上面的示例;首先计算括起来的表达式。  
+## <a name="multiple-operators"></a><span data-ttu-id="33d2c-118">多个运算符</span><span class="sxs-lookup"><span data-stu-id="33d2c-118">Multiple Operators</span></span>  
+ <span data-ttu-id="33d2c-119">如果数值的表达式包含多个运算符，将计算它们的顺序由运算符优先级规则确定。</span><span class="sxs-lookup"><span data-stu-id="33d2c-119">If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence.</span></span> <span data-ttu-id="33d2c-120">若要覆盖的运算符优先顺序规则，则将表达式括在括号，如下所示上面的示例;首先计算括起来的表达式。</span><span class="sxs-lookup"><span data-stu-id="33d2c-120">To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.</span></span>  
   
-#### <a name="to-override-normal-operator-precedence"></a>若要重写常规运算符优先级  
+#### <a name="to-override-normal-operator-precedence"></a><span data-ttu-id="33d2c-121">若要重写正常运算符优先级</span><span class="sxs-lookup"><span data-stu-id="33d2c-121">To override normal operator precedence</span></span>  
   
--   使用括号括住您想要首先执行的操作。 下面的示例演示具有相同的操作数和运算符的两个不同的结果。  
+-   <span data-ttu-id="33d2c-122">使用括号括住你想要首先执行的操作。</span><span class="sxs-lookup"><span data-stu-id="33d2c-122">Use parentheses to enclose the operations you want to be performed first.</span></span> <span data-ttu-id="33d2c-123">下面的示例演示具有相同的操作数和运算符的两个不同的结果。</span><span class="sxs-lookup"><span data-stu-id="33d2c-123">The following example shows two different results with the same operands and operators.</span></span>  
   
-     [!code-vb[VbVbalrOperators #&83;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
-     在前面的示例中，用于计算`j`执行加法运算符 (`+`) 第一个因为两边的括号`(67 + i)`正常的优先级和赋予的值重写`j`为 276 (4 次 69)。 用于计算`k`按常规优先级执行运算符 (`*`之前`+`)，和赋予的值`k`为 270 （268 加 2）。  
+     <span data-ttu-id="33d2c-124">在前面的示例中，针对的计算`j`执行加法运算符 (`+`) 第一个因为两边的括号`(67 + i)`重写正常优先级和分配给值`j`为 276 (4 次 69)。</span><span class="sxs-lookup"><span data-stu-id="33d2c-124">In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69).</span></span> <span data-ttu-id="33d2c-125">对计算`k`执行运算符在其正常优先 (`*`之前`+`)，和的值分配给`k`为 270 （268 加 2）。</span><span class="sxs-lookup"><span data-stu-id="33d2c-125">The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).</span></span>  
   
-     有关详细信息，请参阅[Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
+     <span data-ttu-id="33d2c-126">有关详细信息，请参阅[Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。</span><span class="sxs-lookup"><span data-stu-id="33d2c-126">For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).</span></span>  
   
-## <a name="see-also"></a>请参见  
- [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [语句](../../../../visual-basic/language-reference/statements/index.md)   
- [在 Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [算术运算符](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+## <a name="see-also"></a><span data-ttu-id="33d2c-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="33d2c-127">See Also</span></span>  
+ [<span data-ttu-id="33d2c-128">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="33d2c-128">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="33d2c-129">值的比较</span><span class="sxs-lookup"><span data-stu-id="33d2c-129">Value Comparisons</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [<span data-ttu-id="33d2c-130">语句</span><span class="sxs-lookup"><span data-stu-id="33d2c-130">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)  
+ [<span data-ttu-id="33d2c-131">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="33d2c-131">Operator Precedence in Visual Basic</span></span>](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="33d2c-132">算术运算符</span><span class="sxs-lookup"><span data-stu-id="33d2c-132">Arithmetic Operators</span></span>](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="33d2c-133">运算符的有效组合</span><span class="sxs-lookup"><span data-stu-id="33d2c-133">Efficient Combination of Operators</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

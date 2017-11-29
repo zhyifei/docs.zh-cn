@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, connections
 - HTTP, classes for connecting
@@ -25,32 +23,31 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53170432e108a6d866bc2b96ef1ebf8b5bee6f28
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f3a8900aca9ebfa14fbf49d4d3634bc486793c0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="managing-connections"></a>管理连接
-使用 HTTP 连接到数据资源的应用程序可使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 类管理与 Internet 的连接并有助于实现最优规模和最佳性能。  
+# <a name="managing-connections"></a><span data-ttu-id="421eb-102">管理连接</span><span class="sxs-lookup"><span data-stu-id="421eb-102">Managing Connections</span></span>
+<span data-ttu-id="421eb-103">使用 HTTP 连接到数据资源的应用程序可使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 类管理与 Internet 的连接并有助于实现最优规模和最佳性能。</span><span class="sxs-lookup"><span data-stu-id="421eb-103">Applications that use HTTP to connect to data resources can use the .NET Framework's <xref:System.Net.ServicePoint> and <xref:System.Net.ServicePointManager> classes to manage connections to the Internet and to help them achieve optimum scale and performance.</span></span>  
   
- ServicePoint 类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。 每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接。  
+ <span data-ttu-id="421eb-104">ServicePoint 类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。</span><span class="sxs-lookup"><span data-stu-id="421eb-104">The **ServicePoint** class provides an application with an endpoint to which the application can connect to access Internet resources.</span></span> <span data-ttu-id="421eb-105">每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接。</span><span class="sxs-lookup"><span data-stu-id="421eb-105">Each **ServicePoint** contains information that helps optimize connections with an Internet server by sharing optimization information between connections to improve performance.</span></span>  
   
- 每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类。 例如，相同的 ServicePoint 实例将提供对 URI（http://www.contoso.com/index.htm 和 http://www.contoso.com/news.htm?date=today）的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段 (www.contoso.com)。 如果应用程序已具有与服务器 www.contoso.com 的持久连接，它使用该连接检索两个请求，避免创建两个连接。  
+ <span data-ttu-id="421eb-106">每个 ServicePoint 都由统一资源标识符 (URI) 标识，并根据方案标识符和 URI 的主机片段分类。</span><span class="sxs-lookup"><span data-stu-id="421eb-106">Each **ServicePoint** is identified by a Uniform Resource Identifier (URI) and is categorized according to the scheme identifier and host fragments of the URI.</span></span> <span data-ttu-id="421eb-107">例如，相同的 ServicePoint 实例将提供对 URI（http://www.contoso.com/index.htm 和 http://www.contoso.com/news.htm?date=today）的请求，因为它们具有相同的方案标识符片段 (http) 和主机片段 (www.contoso.com)。</span><span class="sxs-lookup"><span data-stu-id="421eb-107">For example, the same **ServicePoint** instance would provide requests to the URIs http://www.contoso.com/index.htm and http://www.contoso.com/news.htm?date=today since they have the same scheme identifier (http) and host fragments (www.contoso.com).</span></span> <span data-ttu-id="421eb-108">如果应用程序已具有与服务器 www.contoso.com 的持久连接，它使用该连接检索两个请求，避免创建两个连接。</span><span class="sxs-lookup"><span data-stu-id="421eb-108">If the application already has a persistent connection to the server www.contoso.com, it uses that connection to retrieve both requests, avoiding the need to create two connections.</span></span>  
   
- ServicePointManager 是管理 ServicePoint 实例的创建和析构的静态类。 如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源， ServicePointManager 将会创建 ServicePoint。 在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例。 可通过设置 ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和 ServicePoint 实例的最大数量。  
+ <span data-ttu-id="421eb-109">ServicePointManager 是管理 ServicePoint 实例的创建和析构的静态类。</span><span class="sxs-lookup"><span data-stu-id="421eb-109">**ServicePointManager** is a static class that manages the creation and destruction of **ServicePoint** instances.</span></span> <span data-ttu-id="421eb-110">如果应用程序请求一个不在现有  ServicePoint 实例集合里的 Internet 资源， ServicePointManager 将会创建 ServicePoint。</span><span class="sxs-lookup"><span data-stu-id="421eb-110">The **ServicePointManager** creates a **ServicePoint** when the application requests an Internet resource that is not in the collection of existing **ServicePoint** instances.</span></span> <span data-ttu-id="421eb-111">在 ServicePoint 实例超出最长空闲时间或现有数量超过应用程序的 ServicePoint 实例最大数量时，将销毁 ServicePoint 实例。</span><span class="sxs-lookup"><span data-stu-id="421eb-111">**ServicePoint** instances are destroyed when they have exceeded their maximum idle time or when the number of existing **ServicePoint** instances exceeds the maximum number of **ServicePoint** instances for the application.</span></span> <span data-ttu-id="421eb-112">可通过设置 ServicePointManager 上的 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 和 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 属性，来控制默认空闲时间的最大值和 ServicePoint 实例的最大数量。</span><span class="sxs-lookup"><span data-stu-id="421eb-112">You can control both the default maximum idle time and the maximum number of **ServicePoint** instances by setting the <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> and <xref:System.Net.ServicePointManager.MaxServicePoints%2A> properties on the **ServicePointManager**.</span></span>  
   
- 客户端和服务器之间的连接数可能会对应用程序吞吐量产生重大影响。 默认情况下，使用 <xref:System.Net.HttpWebRequest> 类的应用程序最多使用与给定服务器的两个持久连接，但是，可以基于每个应用程序设置最大连接数。  
+ <span data-ttu-id="421eb-113">客户端和服务器之间的连接数可能会对应用程序吞吐量产生重大影响。</span><span class="sxs-lookup"><span data-stu-id="421eb-113">The number of connections between a client and server can have a dramatic impact on application throughput.</span></span> <span data-ttu-id="421eb-114">默认情况下，使用 <xref:System.Net.HttpWebRequest> 类的应用程序最多使用与给定服务器的两个持久连接，但是，可以基于每个应用程序设置最大连接数。</span><span class="sxs-lookup"><span data-stu-id="421eb-114">By default, an application using the <xref:System.Net.HttpWebRequest> class uses a maximum of two persistent connections to a given server, but you can set the maximum number of connections on a per-application basis.</span></span>  
   
 > [!NOTE]
->  HTTP/1.1 规范将一个应用程序中的连接数限制为每个服务器两个连接。  
+>  <span data-ttu-id="421eb-115">HTTP/1.1 规范将一个应用程序中的连接数限制为每个服务器两个连接。</span><span class="sxs-lookup"><span data-stu-id="421eb-115">The HTTP/1.1 specification limits the number of connections from an application to two connections per server.</span></span>  
   
- 连接的最佳数目取决于应用程序运行的实际情况。 增加应用程序的可用连接数可能不影响应用程序性能。 要确定更多连接的影响，请在改变连接数时运行性能测试。 在应用程序初始化时改变 ServicePointManager 类上的静态 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性，可以更改应用程序使用的连接数，如以下代码示例所示。  
+ <span data-ttu-id="421eb-116">连接的最佳数目取决于应用程序运行的实际情况。</span><span class="sxs-lookup"><span data-stu-id="421eb-116">The optimum number of connections depends on the actual conditions in which the application runs.</span></span> <span data-ttu-id="421eb-117">增加应用程序的可用连接数可能不影响应用程序性能。</span><span class="sxs-lookup"><span data-stu-id="421eb-117">Increasing the number of connections available to the application may not affect application performance.</span></span> <span data-ttu-id="421eb-118">要确定更多连接的影响，请在改变连接数时运行性能测试。</span><span class="sxs-lookup"><span data-stu-id="421eb-118">To determine the impact of more connections, run performance tests while varying the number of connections.</span></span> <span data-ttu-id="421eb-119">在应用程序初始化时改变 ServicePointManager 类上的静态 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 属性，可以更改应用程序使用的连接数，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="421eb-119">You can change the number of connections that an application uses by changing the static <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> property on the **ServicePointManager** class at application initialization, as shown in the following code sample.</span></span>  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -62,7 +59,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- 更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的 ServicePoint 实例。 下面的代码演示如何将服务器 http://www.contoso.com 现有 ServicePoint 上的连接限制更改为存储在 `newLimit` 中的值。  
+ <span data-ttu-id="421eb-120">更改  ServicePointManager.DefaultConnectionLimit 属性不会影响之前初始化的 ServicePoint 实例。</span><span class="sxs-lookup"><span data-stu-id="421eb-120">Changing the **ServicePointManager.DefaultConnectionLimit** property does not affect previously initialized **ServicePoint** instances.</span></span> <span data-ttu-id="421eb-121">下面的代码演示如何将服务器 http://www.contoso.com 现有 ServicePoint 上的连接限制更改为存储在 `newLimit` 中的值。</span><span class="sxs-lookup"><span data-stu-id="421eb-121">The following code demonstrates changing the connection limit on an existing **ServicePoint** for the server http://www.contoso.com to the value stored in `newLimit`.</span></span>  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  
@@ -76,7 +73,6 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [连接分组](../../../docs/framework/network-programming/connection-grouping.md)   
- [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)
-
+## <a name="see-also"></a><span data-ttu-id="421eb-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="421eb-122">See Also</span></span>  
+ [<span data-ttu-id="421eb-123">连接分组</span><span class="sxs-lookup"><span data-stu-id="421eb-123">Connection Grouping</span></span>](../../../docs/framework/network-programming/connection-grouping.md)  
+ [<span data-ttu-id="421eb-124">使用应用程序协议</span><span class="sxs-lookup"><span data-stu-id="421eb-124">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)

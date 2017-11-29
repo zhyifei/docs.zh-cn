@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - visible classes
 - managed debugging assistants (MDAs), COM visible classes
@@ -22,34 +16,33 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f6da0e4a2046ac80a35894383f732eb266b8459
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b43ad5c039be3ad1c4e57bad12304927a76fb6c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
-当本机或非托管代码在派生自非 COM 可见基类的 COM 可见托管类的 COM 可调用包装器 (CCW) 调用 `QueryInterface` 时，将激活 `nonComVisibleBaseClass` 托管调试助手 (MDA)。  仅在调用需要 COM 可见托管类的类接口或默认 `IDispatch` 的情况下，`QueryInterface` 调用才会引起 MDA 激活。  对应用了 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 特性的显式接口调用 `QueryInterface`，并且调用由 COM 可见类显式实现时，则不会激活 MDA。  
+# <a name="noncomvisiblebaseclass-mda"></a><span data-ttu-id="9d552-102">nonComVisibleBaseClass MDA</span><span class="sxs-lookup"><span data-stu-id="9d552-102">nonComVisibleBaseClass MDA</span></span>
+<span data-ttu-id="9d552-103">当本机或非托管代码在派生自非 COM 可见基类的 COM 可见托管类的 COM 可调用包装器 (CCW) 调用 `QueryInterface` 时，将激活 `nonComVisibleBaseClass` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="9d552-103">The `nonComVisibleBaseClass` managed debugging assistant (MDA) is activated when a `QueryInterface` call is made by native or unmanaged code on the COM callable wrapper (CCW) of a COM-visible managed class that derives from a base class that is not COM visible.</span></span>  <span data-ttu-id="9d552-104">仅在调用需要 COM 可见托管类的类接口或默认 `IDispatch` 的情况下，`QueryInterface` 调用才会引起 MDA 激活。</span><span class="sxs-lookup"><span data-stu-id="9d552-104">The `QueryInterface` call causes the MDA to activate only in cases where call requests the class interface or default `IDispatch` of the COM-visible managed class.</span></span>  <span data-ttu-id="9d552-105">对应用了 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 特性的显式接口调用 `QueryInterface`，并且调用由 COM 可见类显式实现时，则不会激活 MDA。</span><span class="sxs-lookup"><span data-stu-id="9d552-105">The MDA is not activated when the `QueryInterface` is for an explicit interface that has the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute applied and is explicitly implemented by the COM-visible class.</span></span>  
   
-## <a name="symptoms"></a>症状  
- 本机代码发起的`QueryInterface` 调用失败并返回 COR_E_INVALIDOPERATION HRESULT。  HRESULT 可能因运行时禁止可能激活此 MDA 的 `QueryInterface` 调用。  
+## <a name="symptoms"></a><span data-ttu-id="9d552-106">症状</span><span class="sxs-lookup"><span data-stu-id="9d552-106">Symptoms</span></span>  
+ <span data-ttu-id="9d552-107">本机代码发起的`QueryInterface` 调用失败并返回 COR_E_INVALIDOPERATION HRESULT。</span><span class="sxs-lookup"><span data-stu-id="9d552-107">A `QueryInterface` call made from native code that is failing with a COR_E_INVALIDOPERATION HRESULT.</span></span>  <span data-ttu-id="9d552-108">HRESULT 可能因运行时禁止可能激活此 MDA 的 `QueryInterface` 调用。</span><span class="sxs-lookup"><span data-stu-id="9d552-108">The HRESULT might be due to the runtime disallowing `QueryInterface` calls that would cause the activation of this MDA.</span></span>  
   
-## <a name="cause"></a>原因  
- 运行时不允许派生自非 COM 可见类的 COM 可见类的类接口或默认 `IDispatch` 接口调用 `QueryInterface`，因为可能引发版本控制问题。  例如，如果向非 COM 可见基类添加任何公共成员，则使用派生类的现有 COM 客户端可能会中止，因为进行此类更改时，包含基类成员的派生类的 vtable 可能被更改。  向 COM 公开的显式接口没有这个问题，因为它们不将接口的基成员包括到 vtable 中。  
+## <a name="cause"></a><span data-ttu-id="9d552-109">原因</span><span class="sxs-lookup"><span data-stu-id="9d552-109">Cause</span></span>  
+ <span data-ttu-id="9d552-110">运行时不允许派生自非 COM 可见类的 COM 可见类的类接口或默认 `IDispatch` 接口调用 `QueryInterface`，因为可能引发版本控制问题。</span><span class="sxs-lookup"><span data-stu-id="9d552-110">The runtime cannot allow `QueryInterface` calls for the class interface or default `IDispatch` interface of a COM-visible class that derives from a class that is not COM-visible because of potential versioning problems.</span></span>  <span data-ttu-id="9d552-111">例如，如果向非 COM 可见基类添加任何公共成员，则使用派生类的现有 COM 客户端可能会中止，因为进行此类更改时，包含基类成员的派生类的 vtable 可能被更改。</span><span class="sxs-lookup"><span data-stu-id="9d552-111">For example, if any public members were added to the base class that is not COM-visible, existing COM clients using the derived class could potentially break because the vtable of the derived class, which contains the base class members, would be altered by such a change.</span></span>  <span data-ttu-id="9d552-112">向 COM 公开的显式接口没有这个问题，因为它们不将接口的基成员包括到 vtable 中。</span><span class="sxs-lookup"><span data-stu-id="9d552-112">Explicit interfaces exposed to COM do not have this problem because they do not include the base members of interfaces in the vtable.</span></span>  
   
-## <a name="resolution"></a>解决方法  
- 不要公开类接口。 定义显式接口并向其应用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 特性。  
+## <a name="resolution"></a><span data-ttu-id="9d552-113">解决方法</span><span class="sxs-lookup"><span data-stu-id="9d552-113">Resolution</span></span>  
+ <span data-ttu-id="9d552-114">不要公开类接口。</span><span class="sxs-lookup"><span data-stu-id="9d552-114">Do not expose the class interface.</span></span> <span data-ttu-id="9d552-115">定义显式接口并向其应用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 特性。</span><span class="sxs-lookup"><span data-stu-id="9d552-115">Define an explicit interface and apply the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute to it.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>对运行时的影响  
- 此 MDA 对 CLR 无任何影响。  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="9d552-116">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="9d552-116">Effect on the Runtime</span></span>  
+ <span data-ttu-id="9d552-117">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="9d552-117">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>输出  
- 下面是有关在派生自非 COM 可见类 `Base` 的 COM 可见类 `Derived` 上调用 `QueryInterface` 的示例消息。  
+## <a name="output"></a><span data-ttu-id="9d552-118">输出</span><span class="sxs-lookup"><span data-stu-id="9d552-118">Output</span></span>  
+ <span data-ttu-id="9d552-119">下面是有关在派生自非 COM 可见类 `Base` 的 COM 可见类 `Derived` 上调用 `QueryInterface` 的示例消息。</span><span class="sxs-lookup"><span data-stu-id="9d552-119">The following is an example message for a `QueryInterface` call on a COM-visible class `Derived` that derives from a non-COM-visible class `Base`.</span></span>  
   
 ```  
 A QueryInterface call was made requesting the class interface of COM   
@@ -59,7 +52,7 @@ is done to prevent the non COM visible base class from being
 constrained by the COM versioning rules.   
 ```  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a><span data-ttu-id="9d552-120">配置</span><span class="sxs-lookup"><span data-stu-id="9d552-120">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -69,8 +62,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="9d552-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9d552-121">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="9d552-122">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="9d552-122">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="9d552-123">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="9d552-123">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

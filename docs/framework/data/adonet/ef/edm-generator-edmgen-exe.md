@@ -1,88 +1,87 @@
 ---
-title: "EDM 生成器 (EdmGen.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "EDM 生成器 (EdmGen.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: da99c43d9142ee754b2b48db45ca070d1ab7c4e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# EDM 生成器 (EdmGen.exe)
-EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。  使用 EdmGen.exe 工具可以执行以下任务：  
+# <a name="edm-generator-edmgenexe"></a><span data-ttu-id="43f25-102">EDM 生成器 (EdmGen.exe)</span><span class="sxs-lookup"><span data-stu-id="43f25-102">EDM Generator (EdmGen.exe)</span></span>
+<span data-ttu-id="43f25-103">EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。</span><span class="sxs-lookup"><span data-stu-id="43f25-103">EdmGen.exe is a command-line tool used for working with [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model and mapping files.</span></span> <span data-ttu-id="43f25-104">使用 EdmGen.exe 工具可以执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="43f25-104">You can use the EdmGen.exe tool to do the following:</span></span>  
   
--   使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，生成[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用的概念模型 \(.csdl\)、存储模型 \(.ssdl\) 以及映射 \(.msl\) 文件。  有关详细信息，请参阅[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
+-   <span data-ttu-id="43f25-105">使用特定于数据源的 .NET Framework 数据提供程序连接到数据源，生成[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用的概念模型 (.csdl)、存储模型 (.ssdl) 以及映射 (.msl) 文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-105">Connect to a data source by using a data source–specific .NET Framework data provider, and generate the conceptual model (.csdl), storage model (.ssdl), and mapping (.msl) files that are used by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="43f25-106">有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="43f25-106">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span>  
   
--   验证现有模型。  有关详细信息，请参阅[如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。  
+-   <span data-ttu-id="43f25-107">验证现有模型。</span><span class="sxs-lookup"><span data-stu-id="43f25-107">Validate an existing model.</span></span> <span data-ttu-id="43f25-108">有关详细信息，请参阅[如何： 使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="43f25-108">For more information, see [How to: Use EdmGen.exe to Validate Model and Mapping Files](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).</span></span>  
   
--   生成包含从概念模型 \(.csdl\) 文件生成的对象类的 C\# 或 Visual Basic 代码文件。  有关详细信息，请参阅[如何：使用 EdmGen.exe 生成对象层代码](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
+-   <span data-ttu-id="43f25-109">生成包含从概念模型 (.csdl) 文件生成的对象类的 C# 或 Visual Basic 代码文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-109">Generate a C# or Visual Basic code file that contains the object classes generated from a conceptual model (.csdl) file.</span></span> <span data-ttu-id="43f25-110">有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成对象层代码到](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。</span><span class="sxs-lookup"><span data-stu-id="43f25-110">For more information, see [How to: Use EdmGen.exe to Generate Object-Layer Code](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).</span></span>  
   
--   生成包含现有模型的预生成视图的 C\# 或 Visual Basic 代码文件。  有关更多信息，请参见[How to: Pre\-Generate Views to Improve Query Performance](http://msdn.microsoft.com/zh-cn/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   <span data-ttu-id="43f25-111">生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-111">Generate a C# or Visual Basic code file that contains the pre-generated views for an existing model.</span></span> <span data-ttu-id="43f25-112">有关详细信息， [How to： 提高查询性能的 Pre-Generate 视图](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)。</span><span class="sxs-lookup"><span data-stu-id="43f25-112">For more information, [How to: Pre-Generate Views to Improve Query Performance](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579).</span></span>  
   
- EdmGen.exe 工具安装在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目录中。  多数情况下，它位于 C:\\windows\\Microsoft.NET\\Framework\\v4.0 中。  对于 64 位系统，它位于 C:\\windows\\Microsoft.NET\\Framework64\\v4.0 中。  此外，从 Visual Studio 命令提示也可以访问 EdmGen.exe 工具（单击**“开始”**，依次指向**“所有程序”**、**“Microsoft Visual Studio 2010”**、**“Visual Studio 工具”**，然后单击**“Visual Studio 2010 命令提示”**）。  
+ <span data-ttu-id="43f25-113">EdmGen.exe 工具安装在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目录中。</span><span class="sxs-lookup"><span data-stu-id="43f25-113">The EdmGen.exe tool is installed in the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] directory.</span></span> <span data-ttu-id="43f25-114">多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。</span><span class="sxs-lookup"><span data-stu-id="43f25-114">In many cases, this is located in C:\windows\Microsoft.NET\Framework\v4.0.</span></span> <span data-ttu-id="43f25-115">对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。</span><span class="sxs-lookup"><span data-stu-id="43f25-115">For 64-bit systems, this is located in C:\windows\Microsoft.NET\Framework64\v4.0.</span></span> <span data-ttu-id="43f25-116">此外可以从 Visual Studio 命令提示符处访问 EdmGen.exe 工具 (单击**启动**，指向**所有程序**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。</span><span class="sxs-lookup"><span data-stu-id="43f25-116">You can also access the EdmGen.exe tool from the Visual Studio command prompt (Click **Start**, point to **All Programs**, point to **Microsoft Visual Studio 2010**, point to **Visual Studio Tools**, and then click **Visual Studio 2010 Command Prompt**).</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="43f25-117">语法</span><span class="sxs-lookup"><span data-stu-id="43f25-117">Syntax</span></span>  
   
 ```  
 EdmGen /mode:choice [options]  
 ```  
   
-## 模式  
- 使用 EdmGen.exe 工具时，必须指定以下模式之一。  
+## <a name="mode"></a><span data-ttu-id="43f25-118">模式</span><span class="sxs-lookup"><span data-stu-id="43f25-118">Mode</span></span>  
+ <span data-ttu-id="43f25-119">使用 EdmGen.exe 工具时，必须指定以下模式之一。</span><span class="sxs-lookup"><span data-stu-id="43f25-119">When using the EdmGen.exe tool, you must specify one of the following modes.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`/mode:ValidateArtifacts`|验证 .csdl、.ssdl 和 .msl 文件并显示所有错误或警告。<br /><br /> 此选项需要至少一个 `/inssdl` 或 `/incsdl` 参数。  如果指定 `/inmsl`，则还需要 `/inssdl` 和 `/incsdl` 参数。|  
-|`/mode:FullGeneration`|使用 `/connectionstring` 选项中指定的数据库连接信息，生成 .csdl、.ssdl、.msl、对象层和视图文件。<br /><br /> 此选项需要一个 `/connectionstring` 参数以及一个 `/project` 参数或 `/outssdl`、`/outcsdl`、`/outmsdl`、`/outobjectlayer`、`/outviews`、`/namespace` 和 `/entitycontainer` 参数。|  
-|`/mode:FromSSDLGeneration`|根据指定的 .ssdl 文件生成 .csdl 和 .msl 文件、源代码和视图。<br /><br /> 此选项需要 `/inssdl` 参数，以及 `/project` 参数或 `/outcsdl`、`/outmsl`、`/outobjectlayer`、`/outviews`、`/namespace` 和 `/entitycontainer` 参数。|  
-|`/mode:EntityClassGeneration`|创建包含根据 .csdl 文件生成的类的源代码文件。<br /><br /> 此选项需要 `/incsdl` 参数，以及 `/project` 参数或 `/outobjectlayer` 参数。  `/language` 参数是可选的。|  
-|`/mode:ViewGeneration`|创建包含根据 .csdl、.ssdl 和 .msl 文件生成的视图的源代码文件。<br /><br /> 此选项需要 `/inssdl`、`/incsdl`、`/inmsl`，以及 `/project` 或 `/outviews` 参数。  `/language` 参数是可选的。|  
+|<span data-ttu-id="43f25-120">模式</span><span class="sxs-lookup"><span data-stu-id="43f25-120">Mode</span></span>|<span data-ttu-id="43f25-121">描述</span><span class="sxs-lookup"><span data-stu-id="43f25-121">Description</span></span>|  
+|----------|-----------------|  
+|`/mode:ValidateArtifacts`|<span data-ttu-id="43f25-122">验证 .csdl、.ssdl 和 .msl 文件并显示所有错误或警告。</span><span class="sxs-lookup"><span data-stu-id="43f25-122">Validates the .csdl, .ssdl, and .msl files and displays any errors or warnings.</span></span><br /><br /> <span data-ttu-id="43f25-123">此选项需要至少一个 `/inssdl` 或 `/incsdl` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-123">This option requires at least one of the `/inssdl` or `/incsdl` arguments.</span></span> <span data-ttu-id="43f25-124">如果指定 `/inmsl`，则还需要 `/inssdl` 和 `/incsdl` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-124">If `/inmsl` is specified, the `/inssdl` and `/incsdl` arguments are also required.</span></span>|  
+|`/mode:FullGeneration`|<span data-ttu-id="43f25-125">使用 `/connectionstring` 选项中指定的数据库连接信息，生成 .csdl、.ssdl、.msl、对象层和视图文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-125">Uses the database connection information specified in the `/connectionstring` option and generates .csdl, .ssdl, .msl, object layer, and view files.</span></span><br /><br /> <span data-ttu-id="43f25-126">此选项需要一个 `/connectionstring` 参数以及一个 `/project` 参数或 `/outssdl`、`/outcsdl`、`/outmsdl`、`/outobjectlayer`、`/outviews`、`/namespace` 和 `/entitycontainer` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-126">This option requires a `/connectionstring` argument and either a `/project` argument or `/outssdl`, `/outcsdl`, `/outmsdl`, `/outobjectlayer`, `/outviews`, `/namespace`, and `/entitycontainer` arguments.</span></span>|  
+|`/mode:FromSSDLGeneration`|<span data-ttu-id="43f25-127">根据指定的 .ssdl 文件生成 .csdl 和 .msl 文件、源代码和视图。</span><span class="sxs-lookup"><span data-stu-id="43f25-127">Generates .csdl and .msl files, source code, and views from the specified .ssdl file.</span></span><br /><br /> <span data-ttu-id="43f25-128">此选项需要 `/inssdl` 参数，以及 `/project` 参数或 `/outcsdl`、`/outmsl`、`/outobjectlayer`、`/outviews`、`/namespace,` 和 `/entitycontainer` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-128">This option requires the `/inssdl` argument and either a `/project` argument or the `/outcsdl`, `/outmsl`, `/outobjectlayer`, `/outviews`, `/namespace,` and `/entitycontainer` arguments.</span></span>|  
+|`/mode:EntityClassGeneration`|<span data-ttu-id="43f25-129">创建包含根据 .csdl 文件生成的类的源代码文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-129">Creates a source code file that contains the classes generated from the .csdl file.</span></span><br /><br /> <span data-ttu-id="43f25-130">此选项需要 `/incsdl` 参数，以及 `/project` 参数或 `/outobjectlayer` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-130">This option requires the `/incsdl` argument and either the `/project` argument or the `/outobjectlayer` argument.</span></span> <span data-ttu-id="43f25-131">`/language` 参数是可选的。</span><span class="sxs-lookup"><span data-stu-id="43f25-131">The `/language` argument is optional.</span></span>|  
+|`/mode:ViewGeneration`|<span data-ttu-id="43f25-132">创建包含根据 .csdl、.ssdl 和 .msl 文件生成的视图的源代码文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-132">Creates a source code file that contains the views generated from the .csdl, .ssdl, and .msl files.</span></span><br /><br /> <span data-ttu-id="43f25-133">此选项需要 `/inssdl`、`/incsdl`、`/inmsl,`，以及 `/project` 或 `/outviews` 参数。</span><span class="sxs-lookup"><span data-stu-id="43f25-133">This option requires the `/inssdl`, `/incsdl`, `/inmsl,` and either the `/project` or `/outviews` arguments.</span></span> <span data-ttu-id="43f25-134">`/language` 参数是可选的。</span><span class="sxs-lookup"><span data-stu-id="43f25-134">The `/language` argument is optional.</span></span>|  
   
-## 选项  
+## <a name="options"></a><span data-ttu-id="43f25-135">选项</span><span class="sxs-lookup"><span data-stu-id="43f25-135">Options</span></span>  
   
-|选项|描述|  
-|--------|--------|  
-|`/p[roject]:`\<string\>|指定要使用的项目名称。  该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。  实体容器名称设置为 \<项目\>Context。|  
-|`/prov[ider]:`\<string\>|生成存储模型 \(.ssdl\) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。  默认的提供程序是用于 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序 \(<xref:System.Data.SqlClient?displayProperty=fullName>\)。|  
-|`/c[onnectionstring]:`\<connection string\>|指定用于连接数据源的字符串。|  
-|`/incsdl:`\<file\>|指定 .csdl 文件或 .csdl 文件所在的目录。  此参数可多次指定，这样可以指定多个目录或 .csdl 文件。  当概念模型跨多个文件拆分时，对于生成类 \(`/mode:EntityClassGeneration`\) 或视图 \(`/mode:ViewGeneration`\)，指定多个目录十分有用。  如果希望验证多个模型 \(`/mode:ValidateArtifacts`\)，这样做也很有用。|  
-|`/refcsdl:`\<file\>|指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。  （源 .csdl 文件是 `/incsdl` 选项指定的文件）。  `/refcsdl` 文件包含源 .csdl 文件所依赖的类型。  此参数可多次指定。|  
-|`/inmsl:`\<file\>|指定 .msl 文件或 .msl 文件所在的目录。  此参数可多次指定，这样可以指定多个目录或 .msl 文件。  当概念模型跨多个文件拆分时，对于生成视图 \(`/mode:ViewGeneration`\)，指定多个目录十分有用。  如果希望验证多个模型 \(`/mode:ValidateArtifacts`\)，这样做也很有用。|  
-|`/inssdl:`\<file\>|指定 .ssdl 文件或 .ssdl 文件所在的目录。  此参数可多次指定，这样可以指定多个目录或 .ssdl 文件。  如果希望验证多个模型 \(`(/mode:ValidateArtifacts)`\)，这样做很有用。|  
-|`/outcsdl:`\<file\>|指定将创建的 .csdl 文件的名称。|  
-|`/outmsl:`\<file\>|指定将创建的 .msl 文件的名称。|  
-|`/outssdl:`\<file\>|指定将创建的 .ssdl 文件的名称。|  
-|`/outobjectlayer:`\<file\>|指定包含根据 .csdl 文件生成的对象的源代码文件的名称。|  
-|`/outviews:`\<file\>|指定包含所生成的视图的源代码文件的名称。|  
-|`/language:`\[VB&#124;CSharp\]|指定生成的源代码文件的语言。  默认语言为 C\#。|  
-|`/namespace:`\<string\>|指定要使用的模型命名空间。  命名空间是在运行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 时在 .csdl 文件中设置的。  在运行 `/mode:EntityClassGeneration` 时不使用该命名空间。|  
-|`/entitycontainer:`\<string\>|指定要应用于生成的模型和映射文件中 `<EntityContainer>` 元素的名称。|  
-|`/pl[uralize]`|对概念模型中 `Entity`、`EntitySet` 和 `NavigationProperty` 名称的单复数形式应用英语语言规则。  此选项将执行以下操作：<br /><br /> -   使所有 `EntityType` 名称采用单数形式。<br />-   使所有 `EntitySet` 名称采用复数形式。<br />-   对于每个最多返回一个实体的 `NavigationProperty`，使名称采用单数形式。<br />-   对于每个返回多个实体的 `NavigationProperty`，使名称采用复数形式。|  
-|`/SupressForeignKeyProperties or /nofk`|防止外键列公开为概念模型中实体类型上的标量属性。|  
-|`/help` 或`?`|显示该工具的命令语法和选项。|  
-|`/nologo`|禁止显示版权信息。|  
-|`/targetversion:` \<string\>|将用于编译生成的代码的 .NET Framework 版本。  支持的版本是 4 和 4.5。  默认值为 4。|  
+|<span data-ttu-id="43f25-136">选项</span><span class="sxs-lookup"><span data-stu-id="43f25-136">Option</span></span>|<span data-ttu-id="43f25-137">描述</span><span class="sxs-lookup"><span data-stu-id="43f25-137">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="43f25-138">`/p[roject]:`\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-138">`/p[roject]:`\<string></span></span>|<span data-ttu-id="43f25-139">指定要使用的项目名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-139">Specifies the project name to use.</span></span> <span data-ttu-id="43f25-140">该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。</span><span class="sxs-lookup"><span data-stu-id="43f25-140">The project name is used as a default for the namespace setting, the name of the model and mapping files, the name of object source file, and the name of view generation source file.</span></span> <span data-ttu-id="43f25-141">实体容器名称设置为\<项目 > 上下文。</span><span class="sxs-lookup"><span data-stu-id="43f25-141">The entity container name is set to \<project>Context.</span></span>|  
+|<span data-ttu-id="43f25-142">`/prov[ider]:`\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-142">`/prov[ider]:`\<string></span></span>|<span data-ttu-id="43f25-143">生成存储模型 (.ssdl) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-143">The name of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider to be used to generate the storage model (.ssdl) file.</span></span> <span data-ttu-id="43f25-144">默认的提供程序[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]SQL Server 数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="43f25-144">The default provider is the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).</span></span>|  
+|<span data-ttu-id="43f25-145">`/c[onnectionstring]:`\<连接字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-145">`/c[onnectionstring]:`\<connection string></span></span>|<span data-ttu-id="43f25-146">指定用于连接数据源的字符串。</span><span class="sxs-lookup"><span data-stu-id="43f25-146">Specifies the string that is used to connect to the data source.</span></span>|  
+|<span data-ttu-id="43f25-147">`/incsdl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-147">`/incsdl:`\<file></span></span>|<span data-ttu-id="43f25-148">指定 .csdl 文件或 .csdl 文件所在的目录。</span><span class="sxs-lookup"><span data-stu-id="43f25-148">Specifies the .csdl file or a directory where the .csdl files are located.</span></span> <span data-ttu-id="43f25-149">此参数可多次指定，这样可以指定多个目录或 .csdl 文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-149">This argument can be specified multiple times so that you can specify several directories or .csdl files.</span></span> <span data-ttu-id="43f25-150">当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。</span><span class="sxs-lookup"><span data-stu-id="43f25-150">Specifying multiple directories can be useful for generating classes (`/mode:EntityClassGeneration`) or views (`/mode:ViewGeneration`) when the conceptual model is split across several files.</span></span> <span data-ttu-id="43f25-151">如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。</span><span class="sxs-lookup"><span data-stu-id="43f25-151">This can also be useful when you want to validate multiple models (`/mode:ValidateArtifacts`).</span></span>|  
+|<span data-ttu-id="43f25-152">`/refcsdl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-152">`/refcsdl:`\<file></span></span>|<span data-ttu-id="43f25-153">指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-153">Specifies the additional .csdl file or files used to resolve any references in the source .csdl file.</span></span> <span data-ttu-id="43f25-154">（源 .csdl 文件是 `/incsdl` 选项指定的文件）。</span><span class="sxs-lookup"><span data-stu-id="43f25-154">(The source .csdl file is, the file specified by the `/incsdl` option).</span></span> <span data-ttu-id="43f25-155">`/refcsdl` 文件包含源 .csdl 文件所依赖的类型。</span><span class="sxs-lookup"><span data-stu-id="43f25-155">The `/refcsdl` file contains types that the source .csdl file is dependent upon.</span></span> <span data-ttu-id="43f25-156">此自变量可多次指定。</span><span class="sxs-lookup"><span data-stu-id="43f25-156">This argument can be specified multiple times.</span></span>|  
+|<span data-ttu-id="43f25-157">`/inmsl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-157">`/inmsl:`\<file></span></span>|<span data-ttu-id="43f25-158">指定 .msl 文件或 .msl 文件所在的目录。</span><span class="sxs-lookup"><span data-stu-id="43f25-158">Specifies the .msl file or a directory where the .msl files are located.</span></span> <span data-ttu-id="43f25-159">此参数可多次指定，这样可以指定多个目录或 .msl 文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-159">This argument can be specified multiple times so that you can specify several directories or .msl files.</span></span> <span data-ttu-id="43f25-160">当概念模型跨多个文件拆分时，对于生成视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。</span><span class="sxs-lookup"><span data-stu-id="43f25-160">Specifying multiple directories can be useful for generating views (`/mode:ViewGeneration`) when the conceptual model is split across several files.</span></span> <span data-ttu-id="43f25-161">如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。</span><span class="sxs-lookup"><span data-stu-id="43f25-161">This can also be useful when you want to validate multiple models (`/mode:ValidateArtifacts`).</span></span>|  
+|<span data-ttu-id="43f25-162">`/inssdl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-162">`/inssdl:`\<file></span></span>|<span data-ttu-id="43f25-163">指定 .ssdl 文件或 .ssdl 文件所在的目录。</span><span class="sxs-lookup"><span data-stu-id="43f25-163">Specifies the .ssdl file or a directory where the .ssdl file is located.</span></span> <span data-ttu-id="43f25-164">此参数可多次指定，这样可以指定多个目录或 .ssdl 文件。</span><span class="sxs-lookup"><span data-stu-id="43f25-164">This argument can be specified multiple times so that you can specify several directories or .ssdl files.</span></span> <span data-ttu-id="43f25-165">如果希望验证多个模型 (`(/mode:ValidateArtifacts)`)，这样做很有用。</span><span class="sxs-lookup"><span data-stu-id="43f25-165">This can be useful when you want to validate multiple models `(/mode:ValidateArtifacts)`.</span></span>|  
+|<span data-ttu-id="43f25-166">`/outcsdl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-166">`/outcsdl:`\<file></span></span>|<span data-ttu-id="43f25-167">指定将创建的 .csdl 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-167">Specifies the name of the .csdl file that will be created.</span></span>|  
+|<span data-ttu-id="43f25-168">`/outmsl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-168">`/outmsl:`\<file></span></span>|<span data-ttu-id="43f25-169">指定将创建的 .msl 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-169">Specifies the name of the .msl file that will be created.</span></span>|  
+|<span data-ttu-id="43f25-170">`/outssdl:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-170">`/outssdl:`\<file></span></span>|<span data-ttu-id="43f25-171">指定将创建的 .ssdl 文件的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-171">Specifies the name of the .ssdl file that will be created.</span></span>|  
+|<span data-ttu-id="43f25-172">`/outobjectlayer:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-172">`/outobjectlayer:`\<file></span></span>|<span data-ttu-id="43f25-173">指定包含根据 .csdl 文件生成的对象的源代码文件的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-173">Specifies the name of the source code file that contains the objects generated from the .csdl file.</span></span>|  
+|<span data-ttu-id="43f25-174">`/outviews:`\<文件 ></span><span class="sxs-lookup"><span data-stu-id="43f25-174">`/outviews:`\<file></span></span>|<span data-ttu-id="43f25-175">指定包含所生成的视图的源代码文件的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-175">Specifies the name of the source code file that contains the views that were generated.</span></span>|  
+|<span data-ttu-id="43f25-176">`/language:`[VB &#124;CSharp]</span><span class="sxs-lookup"><span data-stu-id="43f25-176">`/language:`[VB&#124;CSharp]</span></span>|<span data-ttu-id="43f25-177">指定生成的源代码文件的语言。</span><span class="sxs-lookup"><span data-stu-id="43f25-177">Specifies the language for the generated source code files.</span></span> <span data-ttu-id="43f25-178">默认语言为 C#。</span><span class="sxs-lookup"><span data-stu-id="43f25-178">The language defaults to C#.</span></span>|  
+|<span data-ttu-id="43f25-179">`/namespace:`\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-179">`/namespace:`\<string></span></span>|<span data-ttu-id="43f25-180">指定要使用的模型命名空间。</span><span class="sxs-lookup"><span data-stu-id="43f25-180">Specifies the model namespace to use.</span></span> <span data-ttu-id="43f25-181">命名空间是在运行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 时在 .csdl 文件中设置的。</span><span class="sxs-lookup"><span data-stu-id="43f25-181">The namespace is set in the .csdl file when running `/mode:FullGeneration` or `/mode:FromSSDLGeneration`.</span></span> <span data-ttu-id="43f25-182">在运行 `/mode:EntityClassGeneration` 时不使用该命名空间。</span><span class="sxs-lookup"><span data-stu-id="43f25-182">The namespace is not used when running `/mode:EntityClassGeneration`.</span></span>|  
+|<span data-ttu-id="43f25-183">`/entitycontainer:`\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-183">`/entitycontainer:`\<string></span></span>|<span data-ttu-id="43f25-184">指定要应用于生成的模型和映射文件中 `<EntityContainer>` 元素的名称。</span><span class="sxs-lookup"><span data-stu-id="43f25-184">Specifies the name to apply to the `<EntityContainer>` element in the generated model and mapping files.</span></span>|  
+|`/pl[uralize]`|<span data-ttu-id="43f25-185">对概念模型中 `Entity`、`EntitySet` 和 `NavigationProperty` 名称的单复数形式应用英语语言规则。</span><span class="sxs-lookup"><span data-stu-id="43f25-185">Applies English-language rules for singulars and plurals to `Entity`, `EntitySet`, and `NavigationProperty` names in the conceptual model.</span></span> <span data-ttu-id="43f25-186">此选项将执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="43f25-186">This option will perform the following actions:</span></span><br /><br /> <span data-ttu-id="43f25-187">-使所有`EntityType`名称采用单数形式。</span><span class="sxs-lookup"><span data-stu-id="43f25-187">-   Make all `EntityType` names singular.</span></span><br /><span data-ttu-id="43f25-188">-使所有`EntitySet`名称采用复数形式。</span><span class="sxs-lookup"><span data-stu-id="43f25-188">-   Make all `EntitySet` names plural.</span></span><br /><span data-ttu-id="43f25-189">-对于每个`NavigationProperty`返回最多一个实体，使名称采用单数形式。</span><span class="sxs-lookup"><span data-stu-id="43f25-189">-   For each `NavigationProperty` that returns at most one entity, make the name singular.</span></span><br /><span data-ttu-id="43f25-190">-对于每个`NavigationProperty`返回多个实体，使名称采用复数形式。</span><span class="sxs-lookup"><span data-stu-id="43f25-190">-   For each `NavigationProperty` that returns more than one entity, make the name plural.</span></span>|  
+|`/SupressForeignKeyProperties or /nofk`|<span data-ttu-id="43f25-191">防止外键列公开为概念模型中实体类型上的标量属性。</span><span class="sxs-lookup"><span data-stu-id="43f25-191">Prevents foreign key columns from being exposed as scalar properties on entity types in the conceptual model.</span></span>|  
+|<span data-ttu-id="43f25-192">`/help` 或 `?`</span><span class="sxs-lookup"><span data-stu-id="43f25-192">`/help` or `?`</span></span>|<span data-ttu-id="43f25-193">显示该工具的命令语法和选项。</span><span class="sxs-lookup"><span data-stu-id="43f25-193">Displays command syntax and options for the tool.</span></span>|  
+|`/nologo`|<span data-ttu-id="43f25-194">禁止显示版权信息。</span><span class="sxs-lookup"><span data-stu-id="43f25-194">Suppresses the copyright message from displaying.</span></span>|  
+|<span data-ttu-id="43f25-195">`/targetversion:`\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="43f25-195">`/targetversion:` \<string></span></span>|<span data-ttu-id="43f25-196">将用于编译生成的代码的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="43f25-196">The .NET Framework version that will be used to compile the generated code.</span></span> <span data-ttu-id="43f25-197">支持的版本是 4 和 4.5。</span><span class="sxs-lookup"><span data-stu-id="43f25-197">The supported versions are 4 and 4.5.</span></span> <span data-ttu-id="43f25-198">默认值为 4。</span><span class="sxs-lookup"><span data-stu-id="43f25-198">Defaults to 4.</span></span>|  
   
-## 本节内容  
- [如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
+## <a name="in-this-section"></a><span data-ttu-id="43f25-199">本节内容</span><span class="sxs-lookup"><span data-stu-id="43f25-199">In This Section</span></span>  
+ [<span data-ttu-id="43f25-200">如何： 使用 EdmGen.exe 生成模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="43f25-200">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [如何：使用 EdmGen.exe 生成对象层代码](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [<span data-ttu-id="43f25-201">如何： 使用 EdmGen.exe 生成对象层代码</span><span class="sxs-lookup"><span data-stu-id="43f25-201">How to: Use EdmGen.exe to Generate Object-Layer Code</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
- [如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
+ [<span data-ttu-id="43f25-202">如何： 使用 EdmGen.exe 验证模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="43f25-202">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## 请参阅  
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/zh-cn/91076853-0881-421b-837a-f582f36be527)   
- [实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)   
- [CSDL、SSDL 和 MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a><span data-ttu-id="43f25-203">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43f25-203">See Also</span></span>  
+ [<span data-ttu-id="43f25-204">ADO.NET 实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="43f25-204">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [<span data-ttu-id="43f25-205">实体数据模型</span><span class="sxs-lookup"><span data-stu-id="43f25-205">Entity Data Model</span></span>](../../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [<span data-ttu-id="43f25-206">CSDL、SSDL 和 MSL 规范</span><span class="sxs-lookup"><span data-stu-id="43f25-206">CSDL, SSDL, and MSL Specifications</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -1,32 +1,35 @@
 ---
-title: "流处理源示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "流处理源示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: becc388a03d065b5763669929806c2f85e171ffc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 流处理源示例
-此示例演示如何管理包含大量项的联合源。在服务器上，该示例演示如何在源中延迟创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，直至就在将该项写入网络流之前。  
+# <a name="streaming-feeds-sample"></a><span data-ttu-id="326ac-102">流处理源示例</span><span class="sxs-lookup"><span data-stu-id="326ac-102">Streaming Feeds Sample</span></span>
+<span data-ttu-id="326ac-103">此示例演示如何管理包含大量项的联合源。</span><span class="sxs-lookup"><span data-stu-id="326ac-103">This sample demonstrates how to manage syndication feeds that contain large numbers of items.</span></span> <span data-ttu-id="326ac-104">在服务器上，此示例演示如何延迟在源中创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，一直到项就要被写入网络流之前。</span><span class="sxs-lookup"><span data-stu-id="326ac-104">On the server, the sample demonstrates how to delay the creation of individual <xref:System.ServiceModel.Syndication.SyndicationItem> objects within the feed until immediately before the item is written to the network stream.</span></span>  
   
- 在客户端上，该示例演示如何使用自定义联合源格式化程序来读取网络流中的各个项，以便正在读取的源永远不会完全缓冲到内存中。  
+ <span data-ttu-id="326ac-105">在客户端上，该示例演示如何使用自定义联合源格式化程序读取网络流中的各个项，以使当前读取的源永远不会完全缓冲到内存中。</span><span class="sxs-lookup"><span data-stu-id="326ac-105">On the client, the sample shows how a custom syndication feed formatter can be used to read individual items from the network stream so that the feed being read is never fully buffered into memory.</span></span>  
   
- 为了最充分地演示联合 API 的流处理功能，此示例使用了一个似乎不可能的方案，在这个方案中，服务器公开一个包含无数个项的源。在这种情况下，服务器继续在源中生成新的项，一直到它认为客户端已从源中读取指定数目（默认为 10）的项为止。为简单起见，客户端和服务器是在同一个进程中实现的，并且使用一个共享 `ItemCounter` 对象跟踪客户端生成的项数。`ItemCounter` 类型存在的唯一目的是为了使示例方案能够完全终止，它并不是所演示的模式的核心元素。  
+ <span data-ttu-id="326ac-106">为了最充分地演示联合 API 的流处理功能，此示例使用了一个似乎不可能的方案，在这个方案中，服务器公开一个包含无数个项的源。</span><span class="sxs-lookup"><span data-stu-id="326ac-106">To best demonstrate the streaming capability of the syndication API, this sample uses a somewhat unlikely scenario in which the server exposes a feed that contains an infinite number of items.</span></span> <span data-ttu-id="326ac-107">在这种情况下，服务器继续在源中生成新的项，一直到它认为客户端已从源中读取指定数目（默认为 10）的项为止。</span><span class="sxs-lookup"><span data-stu-id="326ac-107">In this case, the server continues generating new items into the feed until it determines that the client has read a specified number of items from the feed (by default, 10).</span></span> <span data-ttu-id="326ac-108">为简单起见，客户端和服务器是在同一个进程中实现的，并且使用一个共享 `ItemCounter` 对象跟踪客户端生成的项数。</span><span class="sxs-lookup"><span data-stu-id="326ac-108">For simplicity, both the client and the server are implemented in the same process and use a shared `ItemCounter` object to keep track of how many items the client has produced.</span></span> <span data-ttu-id="326ac-109">`ItemCounter` 类型存在的唯一目的是为了使示例方案能够完全终止，它并不是所演示的模式的核心元素。</span><span class="sxs-lookup"><span data-stu-id="326ac-109">The `ItemCounter` type exists only for the purpose of allowing the sample scenario to terminate cleanly, and is not a core element of the pattern being demonstrated.</span></span>  
   
- 演示使用了 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 迭代器 （使用 `yield``return` 关键字构造）。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 迭代器，请参阅"使用迭代器"在 MSDN 上的主题。  
+ <span data-ttu-id="326ac-110">演示使用[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]迭代器 (使用`yield``return`关键字构造)。</span><span class="sxs-lookup"><span data-stu-id="326ac-110">The demonstration makes use of [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] iterators (using the `yield``return` keyword construct).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="326ac-111">迭代器，请参阅 MSDN 上的“使用迭代器”主题。</span><span class="sxs-lookup"><span data-stu-id="326ac-111"> iterators, see the "Using Iterators" topic on MSDN.</span></span>  
   
-## 服务  
- 服务实现包含一个操作的基本 <xref:System.ServiceModel.Web.WebGetAttribute> 协定，如下面的代码所示。  
+## <a name="service"></a><span data-ttu-id="326ac-112">服务</span><span class="sxs-lookup"><span data-stu-id="326ac-112">Service</span></span>  
+ <span data-ttu-id="326ac-113">服务实现包含一个操作的基本 <xref:System.ServiceModel.Web.WebGetAttribute> 协定，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="326ac-113">The service implements a basic <xref:System.ServiceModel.Web.WebGetAttribute> contract that consists of one operation, as shown in the following code.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -36,10 +39,9 @@ interface IStreamingFeedService
     [OperationContract]  
     Atom10FeedFormatter StreamedFeed();  
 }  
-  
 ```  
   
- 服务通过使用 `ItemGenerator` 类创建一个可能无限的 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例流（使用迭代器）来实现此协定，如下面的代码所示。  
+ <span data-ttu-id="326ac-114">服务通过使用 `ItemGenerator` 类创建一个可能无限的 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例流（使用迭代器）来实现此协定，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="326ac-114">The service implements this contract by using an `ItemGenerator` class to create a potentially infinite stream of <xref:System.ServiceModel.Syndication.SyndicationItem> instances using an iterator, as shown in the following code.</span></span>  
   
 ```  
 class ItemGenerator  
@@ -55,10 +57,9 @@ class ItemGenerator
     }  
     ...  
 }  
-  
 ```  
   
- 当服务实现创建源时，使用 `ItemGenerator.GenerateItems()` 的输出，而不是使用缓冲的项集合。  
+ <span data-ttu-id="326ac-115">当服务实现创建源时，使用 `ItemGenerator.GenerateItems()` 的输出，而不是使用缓冲的项集合。</span><span class="sxs-lookup"><span data-stu-id="326ac-115">When the service implementation creates the feed, the output of `ItemGenerator.GenerateItems()` is used instead of a buffered collection of items.</span></span>  
   
 ```  
 public Atom10FeedFormatter StreamedFeed()  
@@ -72,23 +73,21 @@ public Atom10FeedFormatter StreamedFeed()
     feed.Items = itemGenerator.GenerateItems();  
     return feed.GetAtom10Formatter();  
 }  
-  
 ```  
   
- 因此，项流永远不会完全缓冲到内存中。通过在 `ItemGenerator.GenerateItems()` 方法内的 `yield``return` 语句中设置一个断点，并注意此断点是服务在返回 `StreamedFeed()` 方法的结果后第一次遇到，可以观察到此行为。  
+ <span data-ttu-id="326ac-116">因此，项流永远不会完全缓冲到内存中。</span><span class="sxs-lookup"><span data-stu-id="326ac-116">As a result, the item stream is never fully buffered into memory.</span></span> <span data-ttu-id="326ac-117">你可以通过上设置断点来观察此行为`yield``return`语句内的`ItemGenerator.GenerateItems()`方法，并注意此断点服务在返回的结果后第一次遇到`StreamedFeed()`方法。</span><span class="sxs-lookup"><span data-stu-id="326ac-117">You can observe this behavior by setting a breakpoint on the `yield``return` statement inside of the `ItemGenerator.GenerateItems()` method and noting that this breakpoint is encountered for the first time after the service has returned the result of the `StreamedFeed()` method.</span></span>  
   
-## 客户端  
- 此示例中的客户端使用自定义 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 实现，该实现延迟各个项在源中的具体化，而不是将它们缓冲到内存中。自定义 `StreamedAtom10FeedFormatter` 实例的使用如下所示。  
+## <a name="client"></a><span data-ttu-id="326ac-118">客户端</span><span class="sxs-lookup"><span data-stu-id="326ac-118">Client</span></span>  
+ <span data-ttu-id="326ac-119">此示例中的客户端使用自定义 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 实现，该实现延迟各个项在源中的具体化，而不是将它们缓冲到内存中。</span><span class="sxs-lookup"><span data-stu-id="326ac-119">The client in this sample uses a custom <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> implementation that delays the materialization of individual items in the feed instead of buffering them into memory.</span></span> <span data-ttu-id="326ac-120">自定义 `StreamedAtom10FeedFormatter` 实例的使用如下所示。</span><span class="sxs-lookup"><span data-stu-id="326ac-120">The custom `StreamedAtom10FeedFormatter` instance is used as follows.</span></span>  
   
 ```  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
 StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter);  
   
 SyndicationFeed feed = formatter.ReadFrom(reader);  
-  
 ```  
   
- 通常，在从网络中读取源的全部内容并将内容缓冲到内存中之前，并不会返回对 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> 的调用。但是，`StreamedAtom10FeedFormatter` 对象重写了 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> 以返回迭代器，而不是返回缓冲的集合，如下面的代码所示。  
+ <span data-ttu-id="326ac-121">通常，在从网络中读取源的全部内容并将内容缓冲到内存中之前，并不会返回对 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> 的调用。</span><span class="sxs-lookup"><span data-stu-id="326ac-121">Normally, a call to <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> does not return until the entire contents of the feed have been read from the network and buffered into memory.</span></span> <span data-ttu-id="326ac-122">但是，`StreamedAtom10FeedFormatter` 对象重写了 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> 以返回迭代器，而不是返回缓冲的集合，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="326ac-122">However, the `StreamedAtom10FeedFormatter` object overrides <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> to return an iterator instead of a buffered collection, as shown in the following code.</span></span>  
   
 ```  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
@@ -106,29 +105,28 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
   
     reader.ReadEndElement();  
 }  
-  
 ```  
   
- 因此，在遍历 `ReadItems()` 结果的客户端应用程序准备好使用每个项之前，并不会从网络中读取每个项。通过在 `StreamedAtom10FeedFormatter.DelayReadItems()` 内的 `yield``return` 语句中设置一个断点，并注意此断点是对 `ReadFrom()` 的调用完成后第一次遇到，可以观察到此行为。  
+ <span data-ttu-id="326ac-123">因此，在遍历 `ReadItems()` 结果的客户端应用程序准备好使用每个项之前，并不会从网络中读取每个项。</span><span class="sxs-lookup"><span data-stu-id="326ac-123">As a result, each item is not read from the network until the client application traversing the results of `ReadItems()` is ready to use it.</span></span> <span data-ttu-id="326ac-124">你可以通过上设置断点来观察此行为`yield``return`语句内的`StreamedAtom10FeedFormatter.DelayReadItems()`并注意到在调用后首次遇到此断点`ReadFrom()`完成。</span><span class="sxs-lookup"><span data-stu-id="326ac-124">You can observe this behavior by setting a breakpoint on the `yield``return` statement inside of `StreamedAtom10FeedFormatter.DelayReadItems()` and noticing that this breakpoint is encountered for the first time after the call to `ReadFrom()` completes.</span></span>  
   
- 下面的说明演示如何生成并运行示例。请注意，尽管服务器在客户端读取 10 个项后停止生成项，但输出显示客户端读取的项数远远超过 10 个。这是因为示例使用的网络绑定以 4 KB 段传输数据。因此，客户端在有机会读取一个项之前，已收到 4KB 的项数据。这是正常的行为（以合理大小的段发送经过流处理的 HTTP 数据可以提高性能）。  
+ <span data-ttu-id="326ac-125">下面的说明演示如何生成并运行示例。</span><span class="sxs-lookup"><span data-stu-id="326ac-125">The following instructions show how to build and run the sample.</span></span> <span data-ttu-id="326ac-126">请注意，尽管服务器在客户端读取 10 个项后停止生成项，但输出显示客户端读取的项数远远超过 10 个。</span><span class="sxs-lookup"><span data-stu-id="326ac-126">Note that although the server stops generating items after the client has read 10 items, the output shows that the client reads significantly more than 10 items.</span></span> <span data-ttu-id="326ac-127">这是因为示例使用的网络绑定以 4 KB 段传输数据。</span><span class="sxs-lookup"><span data-stu-id="326ac-127">This is because the networking binding used by the sample transmits data in four-kilobyte (KB) segments.</span></span> <span data-ttu-id="326ac-128">因此，客户端在有机会读取一个项之前，已收到 4KB 的项数据。</span><span class="sxs-lookup"><span data-stu-id="326ac-128">As such, the client receives 4KB of item data before it has the opportunity to read even one item.</span></span> <span data-ttu-id="326ac-129">这是正常的行为（以合理大小的段发送经过流处理的 HTTP 数据可以提高性能）。</span><span class="sxs-lookup"><span data-stu-id="326ac-129">This is normal behavior (sending streamed HTTP data in reasonably-sized segments increases performance).</span></span>  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="326ac-130">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="326ac-130">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="326ac-131">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="326ac-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="326ac-132">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="326ac-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="326ac-133">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="326ac-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="326ac-134">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="326ac-134">The samples may already be installed on your computer.</span></span> <span data-ttu-id="326ac-135">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="326ac-135">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="326ac-136">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="326ac-136">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="326ac-137">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="326ac-137">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## 请参阅  
- [独立诊断源](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+## <a name="see-also"></a><span data-ttu-id="326ac-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="326ac-138">See Also</span></span>  
+ [<span data-ttu-id="326ac-139">独立诊断源</span><span class="sxs-lookup"><span data-stu-id="326ac-139">Stand-Alone Diagnostics Feed</span></span>](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

@@ -1,74 +1,57 @@
 ---
-title: "/delaysign |Microsoft 文档"
-ms.date: 2015-07-20
+title: /delaysign
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delaysign compiler option [Visual Basic]
 - /delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59d4ec227286c20b2b4ecf749a91f0c4ee8d25ca
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="delaysign"></a>/delaysign
-指定程序集是完全签名的还是部分签名的。  
+# <a name="delaysign"></a><span data-ttu-id="bb4d2-102">/delaysign</span><span class="sxs-lookup"><span data-stu-id="bb4d2-102">/delaysign</span></span>
+<span data-ttu-id="bb4d2-103">指定程序集是完全签名的还是部分签名的。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-103">Specifies whether the assembly will be fully or partially signed.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="bb4d2-104">语法</span><span class="sxs-lookup"><span data-stu-id="bb4d2-104">Syntax</span></span>  
   
 ```  
 /delaysign[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
- `+` &#124; `-`  
- 可选。 如果需要完全签名的程序集，则使用 `/delaysign-`。 使用`/delaysign+`如果想要将公钥放在有符号哈希的程序集和保留空间。 默认值为 `/delaysign-`。  
+## <a name="arguments"></a><span data-ttu-id="bb4d2-105">参数</span><span class="sxs-lookup"><span data-stu-id="bb4d2-105">Arguments</span></span>  
+ <span data-ttu-id="bb4d2-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="bb4d2-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="bb4d2-107">可选。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-107">Optional.</span></span> <span data-ttu-id="bb4d2-108">如果需要完全签名的程序集，则使用 `/delaysign-`。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-108">Use `/delaysign-` if you want a fully signed assembly.</span></span> <span data-ttu-id="bb4d2-109">使用`/delaysign+`如果你想要将公钥放在有符号哈希的程序集和保留空间。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-109">Use `/delaysign+` if you want to place the public key in the assembly and reserve space for the signed hash.</span></span> <span data-ttu-id="bb4d2-110">默认值为 `/delaysign-`。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-110">The default is `/delaysign-`.</span></span>  
   
-## <a name="remarks"></a>备注  
- `/delaysign`选项没有任何影响，除非用于[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)或[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)。  
+## <a name="remarks"></a><span data-ttu-id="bb4d2-111">备注</span><span class="sxs-lookup"><span data-stu-id="bb4d2-111">Remarks</span></span>  
+ <span data-ttu-id="bb4d2-112">`/delaysign`选项没有任何影响，除非用于[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)或[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-112">The `/delaysign` option has no effect unless used with [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) or [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).</span></span>  
   
- 在请求完全签名的程序集时，编译器进行哈希的文件，包含清单 （程序集元数据） 并使用私钥进行签名的哈希处理。 产生的数字签名存储在包含清单的文件中。 在程序集延迟签名时，编译器不会不计算，并在文件中存储的签名，但保留空间以便稍后可添加签名。  
+ <span data-ttu-id="bb4d2-113">在请求完全签名的程序集时，编译器会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-113">When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</span></span> <span data-ttu-id="bb4d2-114">产生的数字签名存储在包含清单的文件中。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-114">The resulting digital signature is stored in the file that contains the manifest.</span></span> <span data-ttu-id="bb4d2-115">在程序集延迟签名时，编译器不会不计算和存储在文件的签名而预留空间，以便稍后可添加签名。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-115">When an assembly is delay signed, the compiler does not compute and store the signature but reserves space in the file so the signature can be added later.</span></span>  
   
- 例如，通过使用`/delaysign+`，在组织中的开发人员可以分发未签名的测试版本的程序集的测试人员可以全局程序集缓存中注册和使用。 针对程序集的工作完成后，负责组织的私钥的人员可以完全签名程序集。 这种划分保护组织的私钥泄露，同时允许所有开发人员能够在程序集上。  
+ <span data-ttu-id="bb4d2-116">例如，通过使用`/delaysign+`，组织中的开发人员可以分发的程序集的测试人员可以全局程序集缓存中注册和使用的无符号的测试版本。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-116">For example, by using `/delaysign+`, a developer in an organization can distribute unsigned test versions of an assembly that testers can register with the global assembly cache and use.</span></span> <span data-ttu-id="bb4d2-117">程序集上的工作完成后，负责组织的私钥的人员可以完全签名的程序集。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-117">When work on the assembly is completed, the person responsible for the organization's private key can fully sign the assembly.</span></span> <span data-ttu-id="bb4d2-118">这种划分可防止组织的私钥泄露，同时允许所有开发人员能够对程序集。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-118">This compartmentalization protects the organization's private key from disclosure, while allowing all developers to work on the assemblies.</span></span>  
   
- 请参阅[创建和使用具有强名称程序集](https://msdn.microsoft.com/library/xwb8f617)有关程序集进行签名的详细信息。  
+ <span data-ttu-id="bb4d2-119">请参阅[创建和使用具有强名称程序集](https://msdn.microsoft.com/library/xwb8f617)有关程序集进行签名的详细信息。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-119">See [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) for more information on signing an assembly.</span></span>  
   
-### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>在 Visual Studio 中设置 /delaysign 集成开发环境  
+### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="bb4d2-120">在 Visual Studio 中设置 /delaysign 集成开发环境</span><span class="sxs-lookup"><span data-stu-id="bb4d2-120">To set /delaysign in the Visual Studio integrated development environment</span></span>  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  <span data-ttu-id="bb4d2-121">在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-121">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="bb4d2-122">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-122">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="bb4d2-123">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-123">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  单击**签名**选项卡。  
+2.  <span data-ttu-id="bb4d2-124">单击“签名”选项卡。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-124">Click the **Signing** tab.</span></span>  
   
-3.  中的值设置**仅延迟签名**框。  
+3.  <span data-ttu-id="bb4d2-125">设置中的值**仅延迟签名**框。</span><span class="sxs-lookup"><span data-stu-id="bb4d2-125">Set the value in the **Delay sign only** box.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="bb4d2-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bb4d2-126">See Also</span></span>  
+ [<span data-ttu-id="bb4d2-127">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="bb4d2-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="bb4d2-128">/keyfile</span><span class="sxs-lookup"><span data-stu-id="bb4d2-128">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="bb4d2-129">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="bb4d2-129">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
+ [<span data-ttu-id="bb4d2-130">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="bb4d2-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

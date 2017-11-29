@@ -1,45 +1,46 @@
 ---
-title: "Windows 窗体应用程序中的网络 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "连网, Windows 窗体"
-  - "Windows 窗体, 连网"
+title: "Windows 窗体应用程序中的网络"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- networking [Windows Forms], Windows Forms
+- Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Windows 窗体应用程序中的网络
-.NET Framework 提供用来显示网页、下载 Web 内容、与文件传输协议 \(FTP\) 站点交互以及使用 Web 服务的类，这样便于在应用程序中内置网络功能。  下列资源将帮助您了解 .NET Framework 的网络技术以及如何将它们集成到 Windows 窗体中。  
+# <a name="networking-in-windows-forms-applications"></a><span data-ttu-id="ca720-102">Windows 窗体应用程序中的网络</span><span class="sxs-lookup"><span data-stu-id="ca720-102">Networking in Windows Forms Applications</span></span>
+<span data-ttu-id="ca720-103">.NET Framework 提供了用于显示网页、 下载 Web 内容、 文件传输协议 (FTP) 站点，与之交互和使用 Web 服务，从而便于到你的应用程序生成的网络功能的类。</span><span class="sxs-lookup"><span data-stu-id="ca720-103">The .NET Framework provides classes for displaying Web pages, downloading Web content, interacting with file transfer protocol (FTP) sites, and consuming Web Services, making it easy to build network functionality into your application.</span></span> <span data-ttu-id="ca720-104">以下资源将帮助你了解这些网络技术的.NET Framework 和如何你可以将其集成到 Windows 窗体。</span><span class="sxs-lookup"><span data-stu-id="ca720-104">The following resources will help you understand the networking technologies of the .NET Framework and how you can integrate them into Windows Forms.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="ca720-105">参考</span><span class="sxs-lookup"><span data-stu-id="ca720-105">Reference</span></span>  
  <xref:System.Net>  
- .NET Framework 中用来处理网络连接的类的根命名空间。  
+ <span data-ttu-id="ca720-106">.NET Framework 该句柄网络连接中类根命名空间。</span><span class="sxs-lookup"><span data-stu-id="ca720-106">The root namespace for classes in the .NET Framework that handle network connectivity.</span></span>  
   
  <xref:System.Net.WebClient>  
- 用来以编程方式检索基于 Web 或基于 HTTP 的内容的方便类。  
+ <span data-ttu-id="ca720-107">用于以编程方式检索 Web 或基于 HTTP 的内容的方便类。</span><span class="sxs-lookup"><span data-stu-id="ca720-107">A convenient class for retrieving Web or HTTP-based content programmatically.</span></span>  
   
  <xref:System.Net.FtpWebRequest>  
- 用来通过 FTP 检索和发送文件的类。  
+ <span data-ttu-id="ca720-108">用于检索和发送文件使用 FTP 类。</span><span class="sxs-lookup"><span data-stu-id="ca720-108">A class for retrieving and sending files with FTP.</span></span>  
   
  <xref:System.Windows.Forms.WebBrowser>  
- 包含在 Windows 中的 `WebBrowser` 控件的托管包装类。  
+ <span data-ttu-id="ca720-109">托管的包装类`WebBrowser`是 Windows 附带的控件。</span><span class="sxs-lookup"><span data-stu-id="ca720-109">A managed wrapper class for the `WebBrowser` control that is included with Windows.</span></span>  
   
-## 相关章节  
- [.NET Framework 中的网络编程](../../../../docs/framework/network-programming/index.md)  
- 介绍 .NET Framework 中的网络技术。  
+## <a name="related-sections"></a><span data-ttu-id="ca720-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="ca720-110">Related Sections</span></span>  
+ [<span data-ttu-id="ca720-111">.NET Framework 中的网络编程</span><span class="sxs-lookup"><span data-stu-id="ca720-111">Network Programming in the .NET Framework</span></span>](../../../../docs/framework/network-programming/index.md)  
+ <span data-ttu-id="ca720-112">.NET Framework 中的联网简介。</span><span class="sxs-lookup"><span data-stu-id="ca720-112">An introduction to networking in the .NET Framework.</span></span>  
   
- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- 描述如何在应用程序中显示数据库内容（从本地数据存储区或从位于网络上的数据库）。
+ [<span data-ttu-id="ca720-113">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="ca720-113">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="ca720-114">描述如何在你的应用程序，从本地数据存储或位于网络上的数据库中显示数据库内容。</span><span class="sxs-lookup"><span data-stu-id="ca720-114">Describes how to display database content in your application, either from a local data store or a database located on a network.</span></span>

@@ -1,39 +1,43 @@
 ---
-title: "1126 - InvokedMethodThrewException | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1126 - InvokedMethodThrewException
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d3cff1a-97e6-4b6c-be18-108c6881bfc0
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b11c2f167ce7afce992cddb2f32f840212d4ac8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 1126 - InvokedMethodThrewException
-## 属性  
+# <a name="1126---invokedmethodthrewexception"></a><span data-ttu-id="486fb-102">1126 - InvokedMethodThrewException</span><span class="sxs-lookup"><span data-stu-id="486fb-102">1126 - InvokedMethodThrewException</span></span>
+## <a name="properties"></a><span data-ttu-id="486fb-103">属性</span><span class="sxs-lookup"><span data-stu-id="486fb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1126|  
-|关键字|WFRuntime|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="486fb-104">ID</span><span class="sxs-lookup"><span data-stu-id="486fb-104">ID</span></span>|<span data-ttu-id="486fb-105">1126</span><span class="sxs-lookup"><span data-stu-id="486fb-105">1126</span></span>|  
+|<span data-ttu-id="486fb-106">关键字</span><span class="sxs-lookup"><span data-stu-id="486fb-106">Keywords</span></span>|<span data-ttu-id="486fb-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="486fb-107">WFRuntime</span></span>|  
+|<span data-ttu-id="486fb-108">级别</span><span class="sxs-lookup"><span data-stu-id="486fb-108">Level</span></span>|<span data-ttu-id="486fb-109">信息</span><span class="sxs-lookup"><span data-stu-id="486fb-109">Information</span></span>|  
+|<span data-ttu-id="486fb-110">通道</span><span class="sxs-lookup"><span data-stu-id="486fb-110">Channel</span></span>|<span data-ttu-id="486fb-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="486fb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 指示 InvokeMethod 活动调用的方法引发了异常。  
+## <a name="description"></a><span data-ttu-id="486fb-112">描述</span><span class="sxs-lookup"><span data-stu-id="486fb-112">Description</span></span>  
+ <span data-ttu-id="486fb-113">指示 InvokeMethod 活动调用的方法引发了异常。</span><span class="sxs-lookup"><span data-stu-id="486fb-113">Indicates an exception was thrown by the method called by the InvokeMethod activity.</span></span>  
   
-## 消息  
- 在活动“%1”调用的方法中，引发了异常。  %2  
+## <a name="message"></a><span data-ttu-id="486fb-114">消息</span><span class="sxs-lookup"><span data-stu-id="486fb-114">Message</span></span>  
+ <span data-ttu-id="486fb-115">在活动“%1”调用的方法中，引发了异常。</span><span class="sxs-lookup"><span data-stu-id="486fb-115">An exception was thrown in the method called by the activity '%1'.</span></span> <span data-ttu-id="486fb-116">%2</span><span class="sxs-lookup"><span data-stu-id="486fb-116">%2</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="486fb-117">详细信息</span><span class="sxs-lookup"><span data-stu-id="486fb-117">Details</span></span>  
   
-|数据项名称|数据项类型|描述|  
-|-----------|-----------|--------|  
-|InvokeMethod|xs:string|InvokeMethod 活动的显示名称。|  
-|例外|xs:string|异常的异常详细信息|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="486fb-118">数据项名称</span><span class="sxs-lookup"><span data-stu-id="486fb-118">Data Item Name</span></span>|<span data-ttu-id="486fb-119">数据项类型</span><span class="sxs-lookup"><span data-stu-id="486fb-119">Data Item Type</span></span>|<span data-ttu-id="486fb-120">描述</span><span class="sxs-lookup"><span data-stu-id="486fb-120">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="486fb-121">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="486fb-121">InvokeMethod</span></span>|<span data-ttu-id="486fb-122">xs:string</span><span class="sxs-lookup"><span data-stu-id="486fb-122">xs:string</span></span>|<span data-ttu-id="486fb-123">InvokeMethod 活动的显示名称。</span><span class="sxs-lookup"><span data-stu-id="486fb-123">The display name of the InvokeMethod activity.</span></span>|  
+|<span data-ttu-id="486fb-124">例外</span><span class="sxs-lookup"><span data-stu-id="486fb-124">Exception</span></span>|<span data-ttu-id="486fb-125">xs:string</span><span class="sxs-lookup"><span data-stu-id="486fb-125">xs:string</span></span>|<span data-ttu-id="486fb-126">异常的异常详细信息</span><span class="sxs-lookup"><span data-stu-id="486fb-126">The exception details for the exception</span></span>|  
+|<span data-ttu-id="486fb-127">AppDomain</span><span class="sxs-lookup"><span data-stu-id="486fb-127">AppDomain</span></span>|<span data-ttu-id="486fb-128">xs:string</span><span class="sxs-lookup"><span data-stu-id="486fb-128">xs:string</span></span>|<span data-ttu-id="486fb-129">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="486fb-129">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

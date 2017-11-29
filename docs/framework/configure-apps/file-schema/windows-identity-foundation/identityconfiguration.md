@@ -1,100 +1,107 @@
 ---
-title: "&lt;identityConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;identityConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;identityConfiguration&gt;
-指定的服务级别标识设置。  
+# <a name="ltidentityconfigurationgt"></a><span data-ttu-id="5eacd-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="5eacd-102">&lt;identityConfiguration&gt;</span></span>
+<span data-ttu-id="5eacd-103">指定服务级别标识设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-103">Specifies service-level identity settings.</span></span>  
   
-## 语法  
+ <span data-ttu-id="5eacd-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="5eacd-104">\<system.identityModel></span></span>  
+<span data-ttu-id="5eacd-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="5eacd-105">\<identityConfiguration></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="5eacd-106">语法</span><span class="sxs-lookup"><span data-stu-id="5eacd-106">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration  
-      name=xs:string  
-      saveBootstrapContext=xs:boolean>  
-      maximumClockSkew=TimeSpan >  
-  </identityConfiguration>  
+  <identityConfiguration  
+      name=xs:string  
+      saveBootstrapContext=xs:boolean>  
+      maximumClockSkew=TimeSpan >  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5eacd-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="5eacd-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="5eacd-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="5eacd-109">特性</span><span class="sxs-lookup"><span data-stu-id="5eacd-109">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|name|标识配置节的名称。  您可以使用此名称来引用特定的配置节。  如果不是`name`指定属性，部分所定义的默认配置。  被动联合身份验证的情况下，总是使用默认配置。  有关更多信息，请参见 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素。|  
-|saveBootstrapContext|指定是否应包含引导标记的会话令牌中。  该值还通过设置设置标记处理程序集合上`saveBootstrapContext`属性上[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。  上的标记处理程序集合值将替代该服务上设置的值。|  
-|maximumClockSkew|A <xref:System.TimeSpan> ，它指定允许的最大时钟不一致。  执行时间敏感型业务，如验证登录会话的到期时间时，可以控制允许的最大时钟不一致。  默认为 5 分钟，"00: 05: 00"。  有关如何指定<xref:System.TimeSpan>的值，请参阅[Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues)。  也可以在标记处理程序集合上通过设置设置的最大时钟偏差`maximumClockSkew`属性上[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。  上的标记处理程序集合值将替代该服务上设置的值。|  
+|<span data-ttu-id="5eacd-110">特性</span><span class="sxs-lookup"><span data-stu-id="5eacd-110">Attribute</span></span>|<span data-ttu-id="5eacd-111">描述</span><span class="sxs-lookup"><span data-stu-id="5eacd-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="5eacd-112">name</span><span class="sxs-lookup"><span data-stu-id="5eacd-112">name</span></span>|<span data-ttu-id="5eacd-113">标识配置节的名称。</span><span class="sxs-lookup"><span data-stu-id="5eacd-113">The name of the identity configuration section.</span></span> <span data-ttu-id="5eacd-114">可以使用此名称以引用特定的配置节。</span><span class="sxs-lookup"><span data-stu-id="5eacd-114">You can use this name to reference a specific configuration section.</span></span> <span data-ttu-id="5eacd-115">如果没有`name`指定属性，部分所定义的默认配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-115">If no `name` attribute is specified, the section defines the default configuration.</span></span> <span data-ttu-id="5eacd-116">默认配置始终用于被动联合身份验证方案。</span><span class="sxs-lookup"><span data-stu-id="5eacd-116">The default configuration is always used for passive federation scenarios.</span></span> <span data-ttu-id="5eacd-117">有关详细信息，请参阅[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-117">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>|  
+|<span data-ttu-id="5eacd-118">saveBootstrapContext</span><span class="sxs-lookup"><span data-stu-id="5eacd-118">saveBootstrapContext</span></span>|<span data-ttu-id="5eacd-119">指定是否应在会话令牌中包含启动令牌。</span><span class="sxs-lookup"><span data-stu-id="5eacd-119">Specifies whether bootstrap tokens should be included in the session token.</span></span> <span data-ttu-id="5eacd-120">值还可以设置对令牌处理程序集合通过设置`saveBootstrapContext`属性[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-120">The value may also be set on a token handler collection by setting the `saveBootstrapContext` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="5eacd-121">令牌处理程序集合设置一个值重写在服务上设置的值。</span><span class="sxs-lookup"><span data-stu-id="5eacd-121">A value set on the token handler collection overrides the value set on the service.</span></span>|  
+|<span data-ttu-id="5eacd-122">maximumClockSkew</span><span class="sxs-lookup"><span data-stu-id="5eacd-122">maximumClockSkew</span></span>|<span data-ttu-id="5eacd-123">A <xref:System.TimeSpan> ，指定最大允许的时钟偏差。</span><span class="sxs-lookup"><span data-stu-id="5eacd-123">A <xref:System.TimeSpan> that specifies the maximum allowed clock skew.</span></span> <span data-ttu-id="5eacd-124">执行具有时效性操作，例如验证登录会话的过期时间时，可以控制最大允许的时钟偏差。</span><span class="sxs-lookup"><span data-stu-id="5eacd-124">Controls the maximum allowed clock skew when performing time-sensitive operations, such as validating the expiration time of a sign-in session.</span></span> <span data-ttu-id="5eacd-125">默认值为 5 分钟，"00: 05:00"。</span><span class="sxs-lookup"><span data-stu-id="5eacd-125">The default is 5 minutes, "00:05:00".</span></span> <span data-ttu-id="5eacd-126">有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。</span><span class="sxs-lookup"><span data-stu-id="5eacd-126">For more information about how to specify <xref:System.TimeSpan> values, see [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="5eacd-127">最大时钟偏差还可以设置对令牌处理程序集合通过设置`maximumClockSkew`属性[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-127">The maximum clock skew may also be set on a token handler collection by setting the `maximumClockSkew` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="5eacd-128">令牌处理程序集合设置一个值重写在服务上设置的值。</span><span class="sxs-lookup"><span data-stu-id="5eacd-128">A value set on the token handler collection overrides the value set on the service.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="5eacd-129">子元素</span><span class="sxs-lookup"><span data-stu-id="5eacd-129">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重做检测的缓存。  可指定服务级别或安全令牌的处理程序集。  可选。|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制用于验证证书的标记处理程序的设置。  可指定服务级别或安全令牌的处理程序集。  可选。|  
-|[\<claimsAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|为传入的声明的声明身份验证管理器中注册。  可选。|  
-|[\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|为传入的声明的声明授权管理器中注册。  可选。|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|指定所需的传入安全令牌的报销申请的一组。  可选。|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定安全标记处理程序的集合。  可指定零个或更多的安全令牌的处理程序的集合。  可选。|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用标记重做检测并指定标记的过期时间。  可指定服务级别或安全令牌的处理程序集。  可选。|  
+|<span data-ttu-id="5eacd-130">元素</span><span class="sxs-lookup"><span data-stu-id="5eacd-130">Element</span></span>|<span data-ttu-id="5eacd-131">描述</span><span class="sxs-lookup"><span data-stu-id="5eacd-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="5eacd-132">\<缓存 ></span><span class="sxs-lookup"><span data-stu-id="5eacd-132">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="5eacd-133">注册用于会话令牌和令牌重放检测的缓存。</span><span class="sxs-lookup"><span data-stu-id="5eacd-133">Registers the caches used for session tokens and token replay detection.</span></span> <span data-ttu-id="5eacd-134">可以指定在服务级别或对安全令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="5eacd-134">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="5eacd-135">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-135">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-136">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="5eacd-136">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="5eacd-137">控制令牌处理程序用来验证证书的设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-137">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="5eacd-138">可以指定在服务级别或对安全令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="5eacd-138">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="5eacd-139">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-139">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-140">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="5eacd-140">\<claimsAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|<span data-ttu-id="5eacd-141">注册用于传入声明的声明身份验证管理器。</span><span class="sxs-lookup"><span data-stu-id="5eacd-141">Registers a claims authentication manager for the incoming claims.</span></span> <span data-ttu-id="5eacd-142">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-142">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-143">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="5eacd-143">\<claimsAuthorizationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|<span data-ttu-id="5eacd-144">注册用于传入声明的声明授权管理器。</span><span class="sxs-lookup"><span data-stu-id="5eacd-144">Registers a claims authorization manager for the incoming claims.</span></span> <span data-ttu-id="5eacd-145">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-145">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-146">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="5eacd-146">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="5eacd-147">指定传入安全令牌所需的声明的集。</span><span class="sxs-lookup"><span data-stu-id="5eacd-147">Specifies the set of required claims for incoming security tokens.</span></span> <span data-ttu-id="5eacd-148">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-148">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-149">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="5eacd-149">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="5eacd-150">指定安全令牌处理程序的集合。</span><span class="sxs-lookup"><span data-stu-id="5eacd-150">Specifies a collection of security token handlers.</span></span> <span data-ttu-id="5eacd-151">可以指定零个或多个安全令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="5eacd-151">Zero or more collections of security token handlers can be specified.</span></span> <span data-ttu-id="5eacd-152">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-152">Optional.</span></span>|  
+|[<span data-ttu-id="5eacd-153">\<tokenReplayDetection ></span><span class="sxs-lookup"><span data-stu-id="5eacd-153">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|<span data-ttu-id="5eacd-154">启用令牌重放检测并指定令牌的过期时间。</span><span class="sxs-lookup"><span data-stu-id="5eacd-154">Enables token replay detection and specifies the expiration time for tokens.</span></span> <span data-ttu-id="5eacd-155">可以指定在服务级别或对安全令牌处理程序集合。</span><span class="sxs-lookup"><span data-stu-id="5eacd-155">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="5eacd-156">可选。</span><span class="sxs-lookup"><span data-stu-id="5eacd-156">Optional.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="5eacd-157">父元素</span><span class="sxs-lookup"><span data-stu-id="5eacd-157">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|提供有关启用 Windows 标识基础 \(WIF\) 选项，在应用程序中的配置。|  
+|<span data-ttu-id="5eacd-158">元素</span><span class="sxs-lookup"><span data-stu-id="5eacd-158">Element</span></span>|<span data-ttu-id="5eacd-159">描述</span><span class="sxs-lookup"><span data-stu-id="5eacd-159">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="5eacd-160">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="5eacd-160">\<system.identityModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|<span data-ttu-id="5eacd-161">提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-161">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>|  
   
-## 备注  
- 多个标识可能定义的配置，每个都有一个唯一的名称。  行为如下所示：  
+## <a name="remarks"></a><span data-ttu-id="5eacd-162">备注</span><span class="sxs-lookup"><span data-stu-id="5eacd-162">Remarks</span></span>  
+ <span data-ttu-id="5eacd-163">可能定义配置，每个都有一个唯一的名称的多个标识。</span><span class="sxs-lookup"><span data-stu-id="5eacd-163">Multiple identity configurations may be defined, each with a unique name.</span></span> <span data-ttu-id="5eacd-164">行为是，如下所示：</span><span class="sxs-lookup"><span data-stu-id="5eacd-164">The behavior is as follows:</span></span>  
   
-1.  如果不是`<identityConfiguration>`元素被指定。  标识的默认配置是在运行时创建并使用默认值填充。  
+1.  <span data-ttu-id="5eacd-165">如果没有`<identityConfiguration>`指定元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-165">If no `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="5eacd-166">默认标识配置为在运行时创建，且使用默认值填充。</span><span class="sxs-lookup"><span data-stu-id="5eacd-166">A default identity configuration is created at runtime and populated with default values.</span></span>  
   
-2.  如果一个`<identityConfiguration>`元素被指定。  它是默认标识配置。  这种是否被命名或未命名的。  
+2.  <span data-ttu-id="5eacd-167">如果某个`<identityConfiguration>`指定元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-167">If a single `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="5eacd-168">它是默认标识配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-168">It is the default identity configuration.</span></span> <span data-ttu-id="5eacd-169">无论它是名为还是未命名的它并不重要。</span><span class="sxs-lookup"><span data-stu-id="5eacd-169">It does not matter whether it is named or unnamed.</span></span>  
   
-3.  如果多个`<identityConfiguration>`指定的元素。  未命名的元素指定的默认标识配置。  当指定多个推荐的`<identityConfiguration>`元素，其中之一应是未命名。  
+3.  <span data-ttu-id="5eacd-170">如果选择多个`<identityConfiguration>`中指定了元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-170">If multiple `<identityConfiguration>` elements are specified.</span></span> <span data-ttu-id="5eacd-171">未命名的元素指定的默认标识配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-171">The unnamed element specifies the default identity configuration.</span></span> <span data-ttu-id="5eacd-172">当指定多个建议的`<identityConfiguration>`至少其中一个应未命名的元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-172">It is recommended that when you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span>  
   
 > [!WARNING]
->  如果您指定多个`<identityConfiguration>`元素，其中之一应是未命名。  未命名的元素将默认标识配置。  
+>  <span data-ttu-id="5eacd-173">如果指定多个`<identityConfiguration>`至少其中一个应未命名的元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-173">If you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span> <span data-ttu-id="5eacd-174">未命名的元素将默认标识配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-174">The unnamed element will be the default identity configuration.</span></span>  
   
- 某些设置中指定`<identityConfiguration>`元素可以被重写安全标记处理程序集合上的设置或者设置单独的安全令牌的处理程序。  
-  
-> [!IMPORTANT]
->  使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类来提供基于声明的访问控制，在代码中，所引用的标识配置`<federationConfiguration>`元素配置的索赔授权管理器和策略，用于做出授权决定。  是这样，即使在不是被动的 Web 方案，例如 Windows 资格） 应用程序或不是基于 Web 的应用程序的方案中。  如果应用程序不是被动的 Web 应用程序中， [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和它的子策略元素，如果有的话） 的引用的标识配置将应用的唯一设置。  所有其他设置都被忽略。  有关更多信息，请参见 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素。  
-  
- `<identityConfiguration>`元素都由<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>类。  标识配置节由<xref:System.IdentityModel.Configuration.IdentityConfiguration>类。  
+ <span data-ttu-id="5eacd-175">中指定的设置的一些`<identityConfiguration>`可以重写元素，由对安全令牌处理程序集合的设置或通过在单独的安全令牌处理程序的设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-175">Some of the settings specified in the `<identityConfiguration>` element can be overridden by settings on a security token handler collection or by settings on individual security token handlers.</span></span>  
   
 > [!IMPORTANT]
->  指定下列元素的子元素作为`<identityConfiguration>`元素已被否决，虽然仍支持向后兼容性的行为。  这些元素，而下指定[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。  
+>  <span data-ttu-id="5eacd-176">使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类提供在代码中，引用的标识配置的基于声明的访问控制`<federationConfiguration>`元素会配置的声明授权管理器和用于使的策略授权决策。</span><span class="sxs-lookup"><span data-stu-id="5eacd-176">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="5eacd-177">这是为 true，即使在不是被动 Web 方案，例如 Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序的方案中。</span><span class="sxs-lookup"><span data-stu-id="5eacd-177">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="5eacd-178">如果应用程序不是被动的 Web 应用程序， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和其子策略元素，如果存在） 的引用的标识配置的应用的唯一设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-178">If the application is not a passive Web application, the [\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="5eacd-179">将忽略所有其他设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-179">All other settings are ignored.</span></span> <span data-ttu-id="5eacd-180">有关详细信息，请参阅[ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-180">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
+  
+ <span data-ttu-id="5eacd-181">`<identityConfiguration>`元素表示由<xref:System.IdentityModel.Configuration.IdentityConfigurationElement>类。</span><span class="sxs-lookup"><span data-stu-id="5eacd-181">The `<identityConfiguration>` element is represented by the <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> class.</span></span> <span data-ttu-id="5eacd-182">表示一个标识配置节<xref:System.IdentityModel.Configuration.IdentityConfiguration>类。</span><span class="sxs-lookup"><span data-stu-id="5eacd-182">An identity configuration section is represented by the <xref:System.IdentityModel.Configuration.IdentityConfiguration> class.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="5eacd-183">指定以下元素作为子元素的`<identityConfiguration>`元素已被否决，尽管行为仍支持向后兼容。</span><span class="sxs-lookup"><span data-stu-id="5eacd-183">Specifying the following elements as child elements of the `<identityConfiguration>` element has been deprecated, although the behavior is still supported for backward compatibility.</span></span> <span data-ttu-id="5eacd-184">相反，应下, 指定这些元素[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)元素。</span><span class="sxs-lookup"><span data-stu-id="5eacd-184">These elements should, instead, be specified under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span>  
 >   
->  -   [\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [<span data-ttu-id="5eacd-185">\<audienceUris ></span><span class="sxs-lookup"><span data-stu-id="5eacd-185">\<audienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [<span data-ttu-id="5eacd-186">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="5eacd-186">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [<span data-ttu-id="5eacd-187">\<issuerTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="5eacd-187">\<issuerTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [<span data-ttu-id="5eacd-188">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="5eacd-188">\<serviceTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## 示例  
- 下面的示例创建一个名为"alternateConfiguration"的标识配置。  标识配置指定的默认设置。  
+## <a name="example"></a><span data-ttu-id="5eacd-189">示例</span><span class="sxs-lookup"><span data-stu-id="5eacd-189">Example</span></span>  
+ <span data-ttu-id="5eacd-190">下面的示例创建名为"alternateConfiguration"标识配置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-190">The following example creates an identity configuration named "alternateConfiguration".</span></span> <span data-ttu-id="5eacd-191">标识配置指定默认设置。</span><span class="sxs-lookup"><span data-stu-id="5eacd-191">The identity configuration specifies default settings.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration name="alternateConfiguration"/>  
 </system.identityModel>  
 ```  
   
-## 请参阅  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>   
+## <a name="see-also"></a><span data-ttu-id="5eacd-192">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5eacd-192">See Also</span></span>  
+ <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
  <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

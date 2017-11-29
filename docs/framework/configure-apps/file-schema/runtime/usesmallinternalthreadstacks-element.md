@@ -1,76 +1,78 @@
 ---
-title: "&lt;UseSmallInternalThreadStacks&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<UseSmallInternalThreadStacks> 元素"
-  - "UseSmallInternalThreadStacks 元素"
+title: "&lt;UseSmallInternalThreadStacks&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UseSmallInternalThreadStacks element
+- <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2558423b412333a4d6ac9f650ad8ff3dab449d74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;UseSmallInternalThreadStacks&gt; 元素
-请求公共语言运行库 \(CLR\) 减少内存使用，方法是在其创建内部使用的特定线程时指定堆栈大小，而不是使用那些线程的默认堆栈大小。  
+# <a name="ltusesmallinternalthreadstacksgt-element"></a><span data-ttu-id="afb15-102">&lt;UseSmallInternalThreadStacks&gt;元素</span><span class="sxs-lookup"><span data-stu-id="afb15-102">&lt;UseSmallInternalThreadStacks&gt; Element</span></span>
+<span data-ttu-id="afb15-103">请求公共语言运行时 (CLR) 减少内存使用通过指定显式的堆栈大小，创建某些它在内部使用，而不是使用默认堆栈大小适用于这些线程的线程时。</span><span class="sxs-lookup"><span data-stu-id="afb15-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
   
-## 语法  
+ <span data-ttu-id="afb15-104">\<配置 > 元素</span><span class="sxs-lookup"><span data-stu-id="afb15-104">\<configuration> Element</span></span>  
+<span data-ttu-id="afb15-105">\<运行时 > 元素</span><span class="sxs-lookup"><span data-stu-id="afb15-105">\<runtime> Element</span></span>  
+<span data-ttu-id="afb15-106">\<UseSmallInternalThreadStacks > 元素</span><span class="sxs-lookup"><span data-stu-id="afb15-106">\<UseSmallInternalThreadStacks> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="afb15-107">语法</span><span class="sxs-lookup"><span data-stu-id="afb15-107">Syntax</span></span>  
+  
+```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="afb15-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="afb15-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="afb15-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="afb15-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="afb15-110">特性</span><span class="sxs-lookup"><span data-stu-id="afb15-110">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|enabled|必需的特性。<br /><br /> 指定是否求的 CLR 使用显式的堆栈大小而不是默认堆栈大小，前提是它创建在内部使用的特定线程时。  显式的堆栈大小都小于 1 MB 的默认堆栈大小。|  
+|<span data-ttu-id="afb15-111">特性</span><span class="sxs-lookup"><span data-stu-id="afb15-111">Attribute</span></span>|<span data-ttu-id="afb15-112">描述</span><span class="sxs-lookup"><span data-stu-id="afb15-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="afb15-113">enabled</span><span class="sxs-lookup"><span data-stu-id="afb15-113">enabled</span></span>|<span data-ttu-id="afb15-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="afb15-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="afb15-115">指定是否请求，而不是默认堆栈大小的 CLR 使用显式的堆栈大小创建某些内部使用的线程时。</span><span class="sxs-lookup"><span data-stu-id="afb15-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="afb15-116">显式堆栈大小为小于 1 MB 的默认堆栈大小。</span><span class="sxs-lookup"><span data-stu-id="afb15-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="afb15-117">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="afb15-117">enabled Attribute</span></span>  
   
-|值|说明|  
-|-------|--------|  
-|true|请求显式堆栈大小。|  
-|false|使用默认堆栈大小。  这是 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 的默认值。|  
+|<span data-ttu-id="afb15-118">值</span><span class="sxs-lookup"><span data-stu-id="afb15-118">Value</span></span>|<span data-ttu-id="afb15-119">描述</span><span class="sxs-lookup"><span data-stu-id="afb15-119">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="afb15-120">true</span><span class="sxs-lookup"><span data-stu-id="afb15-120">true</span></span>|<span data-ttu-id="afb15-121">请求显式的堆栈大小。</span><span class="sxs-lookup"><span data-stu-id="afb15-121">Request explicit stack sizes.</span></span>|  
+|<span data-ttu-id="afb15-122">false</span><span class="sxs-lookup"><span data-stu-id="afb15-122">false</span></span>|<span data-ttu-id="afb15-123">使用默认堆栈大小。</span><span class="sxs-lookup"><span data-stu-id="afb15-123">Use the default stack size.</span></span> <span data-ttu-id="afb15-124">这是默认值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="afb15-124">This is the default for the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="afb15-125">子元素</span><span class="sxs-lookup"><span data-stu-id="afb15-125">Child Elements</span></span>  
+ <span data-ttu-id="afb15-126">无。</span><span class="sxs-lookup"><span data-stu-id="afb15-126">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="afb15-127">父元素</span><span class="sxs-lookup"><span data-stu-id="afb15-127">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="afb15-128">元素</span><span class="sxs-lookup"><span data-stu-id="afb15-128">Element</span></span>|<span data-ttu-id="afb15-129">描述</span><span class="sxs-lookup"><span data-stu-id="afb15-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="afb15-130">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="afb15-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="afb15-131">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="afb15-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 备注  
- 此配置元素用来请求在一个过程中的减少虚拟内存的使用，因为如果请求生效，CLR 对其内部的线程使用的显式线程大小都小于默认大小。  
+## <a name="remarks"></a><span data-ttu-id="afb15-132">备注</span><span class="sxs-lookup"><span data-stu-id="afb15-132">Remarks</span></span>  
+ <span data-ttu-id="afb15-133">此配置元素用来请求减少的虚拟内存使用在过程中，因为对于其内部的线程，使用的 CLR，如果接受请求，为显式线程大小都小于默认大小。</span><span class="sxs-lookup"><span data-stu-id="afb15-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
   
 > [!IMPORTANT]
->  此配置元素是一个 CLR 请求，而不是绝对的请求。  在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，请求仅遵守 x 86 体系结构。  此元素可能在将来的 CLR 版本中被完全忽略或被始终用于选定的内部线程的显式堆栈大小替换。  
+>  <span data-ttu-id="afb15-134">此配置元素是对 CLR，而不是绝对要求的请求。</span><span class="sxs-lookup"><span data-stu-id="afb15-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="afb15-135">在[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，则请求响应仅适用于 x86 体系结构。</span><span class="sxs-lookup"><span data-stu-id="afb15-135">In the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="afb15-136">可能的 CLR，未来版本中完全忽略此元素，或将其替换为显式堆栈大小始终用于所选的内部线程。</span><span class="sxs-lookup"><span data-stu-id="afb15-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
   
- 如果 CLR 接受请求，指定此配置元素交易的可靠性，因为较小的堆栈大小可能会使堆栈更有可能溢出。  
+ <span data-ttu-id="afb15-137">指定此配置元素交易的可靠性较小的虚拟内存使用是否 CLR 接受请求，因为较小的堆栈大小可能会使堆栈更有可能溢出。</span><span class="sxs-lookup"><span data-stu-id="afb15-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
   
-## 示例  
- 下面的示例说明如何请求 CLR 使用显式堆栈大小，用于某些在内部使用的线程。  
+## <a name="example"></a><span data-ttu-id="afb15-138">示例</span><span class="sxs-lookup"><span data-stu-id="afb15-138">Example</span></span>  
+ <span data-ttu-id="afb15-139">下面的示例演示如何请求 CLR 使用显式堆栈调整某些大小它在内部使用的线程。</span><span class="sxs-lookup"><span data-stu-id="afb15-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <UseSmallInternalThreadStacks enabled="true" />  
@@ -78,6 +80,6 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="afb15-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afb15-140">See Also</span></span>  
+ [<span data-ttu-id="afb15-141">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="afb15-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="afb15-142">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="afb15-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

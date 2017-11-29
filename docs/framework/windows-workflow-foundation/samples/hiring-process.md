@@ -1,243 +1,247 @@
 ---
-title: "招聘流程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "招聘流程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 招聘流程
-本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
+# <a name="hiring-process"></a><span data-ttu-id="209b3-102">招聘流程</span><span class="sxs-lookup"><span data-stu-id="209b3-102">Hiring Process</span></span>
+<span data-ttu-id="209b3-103">本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。</span><span class="sxs-lookup"><span data-stu-id="209b3-103">This sample demonstrates how to implement a business process using messaging activities and two workflows hosted as workflow services.</span></span> <span data-ttu-id="209b3-104">这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。</span><span class="sxs-lookup"><span data-stu-id="209b3-104">These workflows are part of the IT infrastructure of a fictional company called Contoso, Inc.</span></span>  
   
- `HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。为了实现此目标，此工作流使用组织中的其他现有服务（对我们而言，是实现为纯 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的收件箱服务和组织数据服务）。  
+ <span data-ttu-id="209b3-105">`HiringRequest` 工作流程（实现为 <xref:System.Activities.Statements.Flowchart>）需经组织的多名经理授权。</span><span class="sxs-lookup"><span data-stu-id="209b3-105">The `HiringRequest` workflow process (implemented as a <xref:System.Activities.Statements.Flowchart>) asks for authorization from several managers in the organization.</span></span> <span data-ttu-id="209b3-106">为了实现此目标，此工作流使用组织中的其他现有服务（对我们而言，是实现为纯 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的收件箱服务和组织数据服务）。</span><span class="sxs-lookup"><span data-stu-id="209b3-106">To achieve this goal, the workflow uses other existing services in the organization (in our case, an inbox service and an organizational data service implemented as plain [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services).</span></span>  
   
- `ResumeRequest` 工作流（实现为 <xref:System.Activities.Statements.Sequence>）在 Contoso 的外部工作机会网站中发布一份招聘启事并管理收到的简历。一份招聘启事可在外部网站中存在一段固定的时间，直到截止日期到期为止，或直到 Contoso 的某名员工决定删除它为止。  
+ <span data-ttu-id="209b3-107">`ResumeRequest` 工作流（实现为 <xref:System.Activities.Statements.Sequence>）在 Contoso 的外部工作机会网站中发布一份招聘启事并管理收到的简历。</span><span class="sxs-lookup"><span data-stu-id="209b3-107">The `ResumeRequest` workflow (implemented as a <xref:System.Activities.Statements.Sequence>) publishes a job posting in Contoso's external careers Web site and manages the acquisition of resumes.</span></span> <span data-ttu-id="209b3-108">一份招聘启事可在外部网站中存在一段固定的时间，直到截止日期到期为止，或直到 Contoso 的某名员工决定删除它为止。</span><span class="sxs-lookup"><span data-stu-id="209b3-108">A job posting is available in the external Web site for a fixed period of time (until a timeout expires) or until an employee from Contoso decides to remove it.</span></span>  
   
- 此示例演示 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的以下功能：  
+ <span data-ttu-id="209b3-109">此示例演示 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的以下功能：</span><span class="sxs-lookup"><span data-stu-id="209b3-109">This sample demonstrates the following features of [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]:</span></span>  
   
--   用于对业务流程进行建模的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流。  
+-   <span data-ttu-id="209b3-110">用于对业务流程进行建模的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流。</span><span class="sxs-lookup"><span data-stu-id="209b3-110"><xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Sequence> workflows for modeling business processes.</span></span>  
   
--   工作流服务。  
+-   <span data-ttu-id="209b3-111">工作流服务。</span><span class="sxs-lookup"><span data-stu-id="209b3-111">Workflow Services.</span></span>  
   
--   消息传递活动。  
+-   <span data-ttu-id="209b3-112">消息传递活动。</span><span class="sxs-lookup"><span data-stu-id="209b3-112">Messaging Activities.</span></span>  
   
--   基于内容的相关性。  
+-   <span data-ttu-id="209b3-113">基于内容的相关性。</span><span class="sxs-lookup"><span data-stu-id="209b3-113">Content-based correlation.</span></span>  
   
--   自定义活动（声明性和基于代码）。  
+-   <span data-ttu-id="209b3-114">自定义活动（声明性和基于代码）。</span><span class="sxs-lookup"><span data-stu-id="209b3-114">Custom activities (declarative and code-based).</span></span>  
   
--   系统提供的 SQL Server 持久性。  
+-   <span data-ttu-id="209b3-115">系统提供的 SQL Server 持久性。</span><span class="sxs-lookup"><span data-stu-id="209b3-115">System-provided SQL server persistence.</span></span>  
   
--   自定义的 <xref:System.Activities.Persistence.PersistenceParticipant>。  
+-   <span data-ttu-id="209b3-116">自定义的 <xref:System.Activities.Persistence.PersistenceParticipant>。</span><span class="sxs-lookup"><span data-stu-id="209b3-116">Custom <xref:System.Activities.Persistence.PersistenceParticipant>.</span></span>  
   
--   自定义跟踪。  
+-   <span data-ttu-id="209b3-117">自定义跟踪。</span><span class="sxs-lookup"><span data-stu-id="209b3-117">Custom tracking.</span></span>  
   
--   Windows 事件跟踪 \(ETW\) 跟踪。  
+-   <span data-ttu-id="209b3-118">Windows 事件跟踪 (ETW) 跟踪。</span><span class="sxs-lookup"><span data-stu-id="209b3-118">Event Tracking for Windows (ETW) Tracking.</span></span>  
   
--   活动撰写。  
+-   <span data-ttu-id="209b3-119">活动的构成。</span><span class="sxs-lookup"><span data-stu-id="209b3-119">Composition of activities.</span></span>  
   
--   <xref:System.Activities.Statements.Parallel> 活动。  
+-   <span data-ttu-id="209b3-120"><xref:System.Activities.Statements.Parallel> 活动。</span><span class="sxs-lookup"><span data-stu-id="209b3-120"><xref:System.Activities.Statements.Parallel> activities.</span></span>  
   
--   <xref:System.Activities.Statements.CancellationScope> 活动。  
+-   <span data-ttu-id="209b3-121"><xref:System.Activities.Statements.CancellationScope> 活动。</span><span class="sxs-lookup"><span data-stu-id="209b3-121"><xref:System.Activities.Statements.CancellationScope> activity.</span></span>  
   
--   持久性计时器（<xref:System.Activities.Statements.Delay> 活动）。  
+-   <span data-ttu-id="209b3-122">持久性计时器（<xref:System.Activities.Statements.Delay> 活动）。</span><span class="sxs-lookup"><span data-stu-id="209b3-122">Durable timers (<xref:System.Activities.Statements.Delay> activity).</span></span>  
   
--   事务。  
+-   <span data-ttu-id="209b3-123">事务。</span><span class="sxs-lookup"><span data-stu-id="209b3-123">Transactions.</span></span>  
   
--   同一个解决方案中多个工作流。  
+-   <span data-ttu-id="209b3-124">同一个解决方案中多个工作流。</span><span class="sxs-lookup"><span data-stu-id="209b3-124">More than one workflow in the same solution.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="209b3-125">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="209b3-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="209b3-126">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="209b3-126">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="209b3-127">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="209b3-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="209b3-128">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="209b3-128">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Application\HiringProcess`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
-## 流程说明  
- Contoso, Inc.希望严密控制其每个部门的员工总数。因此，每当有任意员工想要启动新的招聘流程时，在招聘实际发生之前，这些员工都需要经过招聘请求流程的审批。此流程称为招聘流程请求（在 HiringRequestService 项目中定义），它包括以下几个步骤：  
+## <a name="description-of-the-process"></a><span data-ttu-id="209b3-129">流程说明</span><span class="sxs-lookup"><span data-stu-id="209b3-129">Description of the Process</span></span>  
+ <span data-ttu-id="209b3-130">Contoso, Inc. 希望严密控制其每个部门的员工总数。</span><span class="sxs-lookup"><span data-stu-id="209b3-130">Contoso, Inc. wants to have close control of the headcount in each of its departments.</span></span> <span data-ttu-id="209b3-131">因此，每当有任意员工想要启动新的招聘流程时，在招聘实际发生之前，这些员工都需要经过招聘请求流程的审批。</span><span class="sxs-lookup"><span data-stu-id="209b3-131">Therefore, anytime any employee wants to start a new hiring process, they need to go through a hiring request process approval before the recruiting can actually happen.</span></span> <span data-ttu-id="209b3-132">此流程称为招聘流程请求（在 HiringRequestService 项目中定义），它包括以下几个步骤：</span><span class="sxs-lookup"><span data-stu-id="209b3-132">This process is called hiring process request (defined in the HiringRequestService project) and consists of the following steps:</span></span>  
   
-1.  员工（请求方）启动招聘流程请求。  
+1.  <span data-ttu-id="209b3-133">员工（请求方）启动招聘流程请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-133">An employee (the requester) starts the hiring process request.</span></span>  
   
-2.  请求方的经理必须审批请求：  
+2.  <span data-ttu-id="209b3-134">请求方的经理必须审批请求：</span><span class="sxs-lookup"><span data-stu-id="209b3-134">The requester’s manager must approve the request:</span></span>  
   
-    1.  经理可以拒绝请求。  
+    1.  <span data-ttu-id="209b3-135">经理可以拒绝请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-135">The manager can reject the request.</span></span>  
   
-    2.  经理可将请求返回给请求方以获取其他信息：  
+    2.  <span data-ttu-id="209b3-136">经理可将请求返回给请求方以获取其他信息：</span><span class="sxs-lookup"><span data-stu-id="209b3-136">The manager can return the request to the requester for additional information:</span></span>  
   
-        1.  请求方复查请求并将请求发送回经理。  
+        1.  <span data-ttu-id="209b3-137">请求方复查请求并将请求发送回经理。</span><span class="sxs-lookup"><span data-stu-id="209b3-137">The requester reviews and sends the request back to the manager.</span></span>  
   
-    3.  经理可以批准请求。  
+    3.  <span data-ttu-id="209b3-138">经理可以批准请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-138">The manager can approve.</span></span>  
   
-3.  在请求方的经理批准后，部门所有人必须审批请求：  
+3.  <span data-ttu-id="209b3-139">在请求方的经理批准后，部门所有人必须审批请求：</span><span class="sxs-lookup"><span data-stu-id="209b3-139">After the requester’s manager approves, the department owner must approve the request:</span></span>  
   
-    1.  部门所有人可以拒绝请求。  
+    1.  <span data-ttu-id="209b3-140">部门所有人可以拒绝请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-140">The department owner can reject.</span></span>  
   
-    2.  部门所有人可以批准请求。  
+    2.  <span data-ttu-id="209b3-141">部门所有人可以批准请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-141">The department owner can approve.</span></span>  
   
-4.  在部门所有人批准后，流程需要经过两名 HR 经理或 CEO 的审批：  
+4.  <span data-ttu-id="209b3-142">在部门所有人批准后，流程需要经过两名 HR 经理或 CEO 的审批：</span><span class="sxs-lookup"><span data-stu-id="209b3-142">After the department owner approves, the process requires the approval of 2 HR managers or the CEO:</span></span>  
   
-    1.  流程可转换为已接受或已拒绝状态。  
+    1.  <span data-ttu-id="209b3-143">流程可转换为已接受或已拒绝状态。</span><span class="sxs-lookup"><span data-stu-id="209b3-143">The process can transition to the accepted or rejected state.</span></span>  
   
-    2.  如果流程为已接受状态，则启动 `ResumeRequest` 工作流的新实例（通过服务引用将 `ResumeRequest` 链接到 HiringRequest.csproj）。  
+    2.  <span data-ttu-id="209b3-144">如果流程为已接受状态，则启动 `ResumeRequest` 工作流的新实例（通过服务引用将 `ResumeRequest` 链接到 HiringRequest.csproj）。</span><span class="sxs-lookup"><span data-stu-id="209b3-144">If the process is Accepted, a new instance of the `ResumeRequest` workflow is started (`ResumeRequest` is linked to HiringRequest.csproj through a service reference.)</span></span>  
   
- 一旦经理批准招聘新员工，HR 必须找到合适的人选。此流程由第二个工作流（在 ResumeRequestService.csproj 中定义的 `ResumeRequest`）执行。此工作流定义向 Contoso 的外部工作机会网站提交提供职位空缺的招聘启事的流程，接收申请人的简历并监视招聘启事的状态。职位可存在一段固定的时间，直到时间到期为止，或直到 Contoso 的某员工决定删除它为止。`ResumeRequest` 工作流包含以下几个步骤：  
+ <span data-ttu-id="209b3-145">一旦经理批准招聘新员工，HR 必须找到合适的人选。</span><span class="sxs-lookup"><span data-stu-id="209b3-145">Once the managers approve the hiring of a new employee, HR must find the appropriate candidate.</span></span> <span data-ttu-id="209b3-146">此流程由第二个工作流（在 ResumeRequestService.csproj 中定义的 `ResumeRequest`）执行。</span><span class="sxs-lookup"><span data-stu-id="209b3-146">This process is performed by the second workflow (`ResumeRequest`, defined in ResumeRequestService.csproj).</span></span> <span data-ttu-id="209b3-147">此工作流定义向 Contoso 的外部工作机会网站提交提供职位空缺的招聘启事的流程，接收申请人的简历并监视招聘启事的状态。</span><span class="sxs-lookup"><span data-stu-id="209b3-147">This workflow defines the process for submitting a job posting with a career opportunity to Contoso's external Careers Web site, receives resumes from applicants, and monitors the state of the job posting.</span></span> <span data-ttu-id="209b3-148">职位可存在一段固定的时间，直到时间到期为止，或直到 Contoso 的某员工决定删除它为止。</span><span class="sxs-lookup"><span data-stu-id="209b3-148">Positions are available for a fixed time period (until a time expires) or until an employee from Contoso decides to remove it.</span></span> <span data-ttu-id="209b3-149">`ResumeRequest` 工作流包含以下几个步骤：</span><span class="sxs-lookup"><span data-stu-id="209b3-149">The `ResumeRequest` workflow consists of the following steps:</span></span>  
   
-1.  Contoso 的某员工键入有关职位和超时持续时间的信息。在员工键入此类信息之后，相应职位将发布在工作机会网站上。  
+1.  <span data-ttu-id="209b3-150">Contoso 的某员工键入有关职位和超时持续时间的信息。</span><span class="sxs-lookup"><span data-stu-id="209b3-150">An employee from Contoso types in the information about the position and a time-out duration.</span></span> <span data-ttu-id="209b3-151">在员工键入此类信息之后，相应职位将发布在工作机会网站上。</span><span class="sxs-lookup"><span data-stu-id="209b3-151">Once the employee types in this information, the position is posted in the Careers Web site.</span></span>  
   
-2.  信息一经发布，感兴趣的人即可提交自己的简历。提交简历时，将简历存储在链接到职位空缺的记录中。  
+2.  <span data-ttu-id="209b3-152">信息一经发布，感兴趣的人即可提交自己的简历。</span><span class="sxs-lookup"><span data-stu-id="209b3-152">Once the information is published, interested parties can submit their resumes.</span></span> <span data-ttu-id="209b3-153">提交简历时，将简历存储在链接到职位空缺的记录中。</span><span class="sxs-lookup"><span data-stu-id="209b3-153">When a resume is submitted, it is stored in a record linked to the job opening.</span></span>  
   
-3.  在超时到期之前，或 Contoso HR 部门的某员工通过停止流程明确决定删除此招聘信息之前，申请者均可提交简历。  
+3.  <span data-ttu-id="209b3-154">在超时到期之前，或 Contoso HR 部门的某员工通过停止流程明确决定删除此招聘信息之前，申请者均可提交简历。</span><span class="sxs-lookup"><span data-stu-id="209b3-154">Applicants can submit resumes until the time-out expires or someone from Contoso HR department explicitly decides to remove the posting by stopping the process.</span></span>  
   
-## 示例中的项目  
- 下表显示示例解决方案中的项目。  
+## <a name="projects-in-the-sample"></a><span data-ttu-id="209b3-155">示例中的项目</span><span class="sxs-lookup"><span data-stu-id="209b3-155">Projects in the sample</span></span>  
+ <span data-ttu-id="209b3-156">下表显示示例解决方案中的项目。</span><span class="sxs-lookup"><span data-stu-id="209b3-156">The following table shows the projects in the sample solution.</span></span>  
   
-|项目|说明|  
-|--------|--------|  
-|ContosoHR|包含数据协定、业务对象和储存库类。|  
-|HiringRequestService|包含招聘请求流程工作流的定义。<br /><br /> 此项目实现为控制台应用程序，该应用程序自承载作为服务的工作流（xaml 文件）。|  
-|ResumeRequestService|收集申请者的简历（直到超时到期或有人决定必须停止此流程为止）的工作流服务。<br /><br /> 此项目实现为声明性工作流服务 \(xamlx\)。|  
-|OrgService|公开组织信息（员工、职位、职位类型和部门）的服务。可将此服务视为企业资源计划 \(ERP\) 的公司组织模块。<br /><br /> 此项目实现为公开 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的控制台应用程序。|  
-|InboxService|包含针对员工的可操作任务的收件箱。<br /><br /> 此项目实现为公开 WCF 服务的控制台应用程序。|  
-|InternalClient|与流程交互的 Web 应用程序。用户可启动、参与和查看其 HiringProcess 工作流。通过使用此应用程序，用户还可以启动和监视 ResumeRequest 流程。<br /><br /> 此网站实现为 Contoso 的 Intranet 内部网站。此项目实现为 ASP.NET 网站。|  
-|CareersWebSite|公开 Contoso 的空缺职位的外部网站。任意可能的申请者都可导航到此网站并提交简历。|  
+|<span data-ttu-id="209b3-157">Project</span><span class="sxs-lookup"><span data-stu-id="209b3-157">Project</span></span>|<span data-ttu-id="209b3-158">描述</span><span class="sxs-lookup"><span data-stu-id="209b3-158">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="209b3-159">ContosoHR</span><span class="sxs-lookup"><span data-stu-id="209b3-159">ContosoHR</span></span>|<span data-ttu-id="209b3-160">包含数据协定、业务对象和储存库类。</span><span class="sxs-lookup"><span data-stu-id="209b3-160">Contains data contracts, business objects and repository classes.</span></span>|  
+|<span data-ttu-id="209b3-161">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-161">HiringRequestService</span></span>|<span data-ttu-id="209b3-162">包含招聘请求流程工作流的定义。</span><span class="sxs-lookup"><span data-stu-id="209b3-162">Contains the definition of the Hiring Request Process workflow.</span></span><br /><br /> <span data-ttu-id="209b3-163">此项目实现为控制台应用程序，该应用程序自承载作为服务的工作流（xaml 文件）。</span><span class="sxs-lookup"><span data-stu-id="209b3-163">This project is implemented as a console application that self-hosts the workflow (xaml file) as a service.</span></span>|  
+|<span data-ttu-id="209b3-164">ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-164">ResumeRequestService</span></span>|<span data-ttu-id="209b3-165">收集申请者的简历（直到超时到期或有人决定必须停止此流程为止）的工作流服务。</span><span class="sxs-lookup"><span data-stu-id="209b3-165">A workflow service that collects resumes from candidates until a time-out expires or someone decides that the process has to be stopped.</span></span><br /><br /> <span data-ttu-id="209b3-166">此项目实现为声明性工作流服务 (xamlx)。</span><span class="sxs-lookup"><span data-stu-id="209b3-166">This project is implemented as a declarative workflow service (xamlx).</span></span>|  
+|<span data-ttu-id="209b3-167">OrgService</span><span class="sxs-lookup"><span data-stu-id="209b3-167">OrgService</span></span>|<span data-ttu-id="209b3-168">公开组织信息（员工、职位、职位类型和部门）的服务。</span><span class="sxs-lookup"><span data-stu-id="209b3-168">A service that exposes organizational information (Employees, Positions, PositionTypes, and Departments).</span></span> <span data-ttu-id="209b3-169">可将此服务视为企业资源计划 (ERP) 的公司组织模块。</span><span class="sxs-lookup"><span data-stu-id="209b3-169">You can think of this service as the Company Organization module of an Enterprise Resource Plan (ERP).</span></span><br /><br /> <span data-ttu-id="209b3-170">此项目实现为公开 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="209b3-170">This project is implemented as a console application that exposes a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span>|  
+|<span data-ttu-id="209b3-171">InboxService</span><span class="sxs-lookup"><span data-stu-id="209b3-171">InboxService</span></span>|<span data-ttu-id="209b3-172">包含针对员工的可操作任务的收件箱。</span><span class="sxs-lookup"><span data-stu-id="209b3-172">An inbox that contains actionable tasks for employees.</span></span><br /><br /> <span data-ttu-id="209b3-173">此项目实现为公开 WCF 服务的控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="209b3-173">This project is implemented as a console application that exposes a WCF service.</span></span>|  
+|<span data-ttu-id="209b3-174">InternalClient</span><span class="sxs-lookup"><span data-stu-id="209b3-174">InternalClient</span></span>|<span data-ttu-id="209b3-175">与流程交互的 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="209b3-175">A Web application for interacting with the process.</span></span> <span data-ttu-id="209b3-176">用户可启动、参与和查看其 HiringProcess 工作流。</span><span class="sxs-lookup"><span data-stu-id="209b3-176">Users can start, participate, and view their HiringProcess workflows.</span></span> <span data-ttu-id="209b3-177">通过使用此应用程序，用户还可以启动和监视 ResumeRequest 流程。</span><span class="sxs-lookup"><span data-stu-id="209b3-177">Using this application, they can also start and monitor ResumeRequest processes.</span></span><br /><br /> <span data-ttu-id="209b3-178">此网站实现为 Contoso 的 Intranet 内部网站。</span><span class="sxs-lookup"><span data-stu-id="209b3-178">This site is implemented to be internal to Contoso's intranet.</span></span> <span data-ttu-id="209b3-179">此项目实现为 ASP.NET 网站。</span><span class="sxs-lookup"><span data-stu-id="209b3-179">This project is implemented as an ASP.NET Web site.</span></span>|  
+|<span data-ttu-id="209b3-180">CareersWebSite</span><span class="sxs-lookup"><span data-stu-id="209b3-180">CareersWebSite</span></span>|<span data-ttu-id="209b3-181">公开 Contoso 的空缺职位的外部网站。</span><span class="sxs-lookup"><span data-stu-id="209b3-181">An external Web site that exposes the open positions in Contoso.</span></span> <span data-ttu-id="209b3-182">任意可能的申请者都可导航到此网站并提交简历。</span><span class="sxs-lookup"><span data-stu-id="209b3-182">Any potential candidate can navigate to this site and submit a resume.</span></span>|  
   
-## 功能概述  
- 下表说明每个功能在此示例中的使用方式。  
+## <a name="feature-summary"></a><span data-ttu-id="209b3-183">功能概述</span><span class="sxs-lookup"><span data-stu-id="209b3-183">Feature summary</span></span>  
+ <span data-ttu-id="209b3-184">下表说明每个功能在此示例中的使用方式。</span><span class="sxs-lookup"><span data-stu-id="209b3-184">The following table describes how each feature is used in this sample.</span></span>  
   
-|功能|说明|项目|  
-|--------|--------|--------|  
-|流程图|业务流程表示为流程图。此流程图说明表示流程的方式与业务在白板中绘制流程的方式相同。|HiringRequestService|  
-|工作流服务|包含流程定义的流程图承载于某服务（在此示例中，此服务承载于控制台应用程序中）。|HiringRequestService|  
-|消息传递活动|此流程图以两种方式使用消息传递活动：<br /><br /> -   获取用户信息（以接收每个审批步骤中的决定及相关信息）。<br />-   与其他现有服务（可通过服务引用使用的 InboxService 和 OrgDataService）交互。|HiringRequestService|  
-|基于内容的相关性|批准消息根据招聘请求的 ID 属性相关：<br /><br /> -   启动流程时，使用请求 ID 初始化相关性句柄。<br />-   传入的批准消息根据其 ID 相关（每个批准消息的第一个参数即为请求的 ID）。|HiringRequestService \/ ResumeRequestService|  
-|自定义活动（声明性和基于代码）|此示例中有几个自定义活动：<br /><br /> -   `SaveActionTracking`：此活动发出一个自定义的 <xref:System.Activities.Tracking.TrackingRecord>（使用 <xref:System.Activities.NativeActivityContext.Track%2A>）。此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。<br />-   `GetEmployeesByPositionTypes`：此活动接收职位类型 ID 的列表，并返回在 Contoso 中拥有相应职位的人员列表。此活动已通过声明性方式进行创作（使用活动设计器）。<br />-   `SaveHiringRequestInfo`：此活动保存 `HiringRequest` 的信息（使用 `HiringRequestRepository.Save`）。此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。|HiringRequestService|  
-|系统提供的 SQL Server 持久性|将承载流程图过程定义的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例配置为使用系统提供的 SQL Server 持久性。|HiringRequestService \/ ResumeRequestService|  
-|自定义跟踪|此示例包含保存 `HiringRequestProcess` 的历史记录（记录完成的操作、执行者以及执行时间）的自定义跟踪参与者。源代码位于 HiringRequestService 的跟踪文件夹中。|HiringRequestService|  
-|ETW 跟踪|在 HiringRequestService 服务的 App.config 文件中配置系统提供的 ETW 跟踪。|HiringRequestService|  
-|活动撰写|此过程定义使用 <xref:System.Activities.Activity> 的自由撰写。流程图包含若干个顺序活动和并行活动，而这些活动同时又包含其他活动，等待。|HiringRequestService|  
-|并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601> 用于以并行方式在 CEO 和 HR 经理的收件箱中注册（等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel> 用于在“已完成”和“已拒绝”步骤中执行一些清理任务。|HiringRequestService|  
-|模型取消|此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。|HiringRequestService|  
-|客户持久性参与者|`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。|HiringRequestService|  
-|工作流服务|使用工作流服务实现 `ResumeRequestService`。工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。此服务配置为使用持久性和跟踪。|ResumeRequestService|  
-|持久性计时器|`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间（一旦超时到期，将关闭招聘启事）。|ResumeRequestService|  
-|事务|<xref:System.Activities.Statements.TransactionScope> 用于确保数据在若干个活动的执行期间（接收新简历时）保持一致。|ResumeRequestService|  
-|事务|自定义持久性参与者 \(`HiringRequestPersistenceParticipant`\) 和自定义跟踪参与者 \(`HistoryFileTrackingParticipant`\) 使用相同的事务。|HiringRequestService|  
-|在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序中使用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]。|从两个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序访问工作流。|InternalClient \/ CareersWebSite|  
+|<span data-ttu-id="209b3-185">功能</span><span class="sxs-lookup"><span data-stu-id="209b3-185">Feature</span></span>|<span data-ttu-id="209b3-186">描述</span><span class="sxs-lookup"><span data-stu-id="209b3-186">Description</span></span>|<span data-ttu-id="209b3-187">Project</span><span class="sxs-lookup"><span data-stu-id="209b3-187">Project</span></span>|  
+|-------------|-----------------|-------------|  
+|<span data-ttu-id="209b3-188">流程图</span><span class="sxs-lookup"><span data-stu-id="209b3-188">Flowchart</span></span>|<span data-ttu-id="209b3-189">业务流程表示为流程图。</span><span class="sxs-lookup"><span data-stu-id="209b3-189">The business process is represented as a flowchart .</span></span> <span data-ttu-id="209b3-190">此流程图说明表示流程的方式与业务在白板中绘制流程的方式相同。</span><span class="sxs-lookup"><span data-stu-id="209b3-190">This flowchart description represents the process in the same way in which a business would have drawn it in a whiteboard.</span></span>|<span data-ttu-id="209b3-191">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-191">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-192">工作流服务</span><span class="sxs-lookup"><span data-stu-id="209b3-192">Workflow services</span></span>|<span data-ttu-id="209b3-193">包含流程定义的流程图承载于某服务（在此示例中，此服务承载于控制台应用程序中）。</span><span class="sxs-lookup"><span data-stu-id="209b3-193">The Flowchart with the process definition is hosted in a service (in this example, the service is hosted in a console application).</span></span>|<span data-ttu-id="209b3-194">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-194">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-195">消息传递活动</span><span class="sxs-lookup"><span data-stu-id="209b3-195">Messaging activities</span></span>|<span data-ttu-id="209b3-196">此流程图以两种方式使用消息传递活动：</span><span class="sxs-lookup"><span data-stu-id="209b3-196">The flowchart uses messaging activities in two ways:</span></span><br /><br /> <span data-ttu-id="209b3-197">-若要获取用户 （以每个审批步骤中接收的决定及相关的信息） 的信息。</span><span class="sxs-lookup"><span data-stu-id="209b3-197">-   To get information from the user (to receive the decisions and related information in each approval step).</span></span><br /><span data-ttu-id="209b3-198">-若要与其他现有服务 （InboxService 和 OrgDataService 通过服务引用使用） 进行交互。</span><span class="sxs-lookup"><span data-stu-id="209b3-198">-   To interact with other existing services (InboxService and OrgDataService, used through service references).</span></span>|<span data-ttu-id="209b3-199">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-199">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-200">基于内容的相关性</span><span class="sxs-lookup"><span data-stu-id="209b3-200">Content based correlation</span></span>|<span data-ttu-id="209b3-201">批准消息根据招聘请求的 ID 属性相关：</span><span class="sxs-lookup"><span data-stu-id="209b3-201">Approval messages correlate on the ID property of the hiring request:</span></span><br /><br /> <span data-ttu-id="209b3-202">-当将启动的进程，使用的请求的 ID 初始化相关句柄。</span><span class="sxs-lookup"><span data-stu-id="209b3-202">-   When a process is started, the correlation handle is initialized with the ID of the request.</span></span><br /><span data-ttu-id="209b3-203">-传入的批准消息根据 （每个批准消息的第一个参数是请求的 ID） 其 ID 相关。</span><span class="sxs-lookup"><span data-stu-id="209b3-203">-   Incoming approval messages correlate on their ID (the first parameter of each approval message is the ID of the request).</span></span>|<span data-ttu-id="209b3-204">HiringRequestService / ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-204">HiringRequestService / ResumeRequestService</span></span>|  
+|<span data-ttu-id="209b3-205">自定义活动（声明性和基于代码）</span><span class="sxs-lookup"><span data-stu-id="209b3-205">Custom activities (declarative and code based)</span></span>|<span data-ttu-id="209b3-206">此示例中有几个自定义活动：</span><span class="sxs-lookup"><span data-stu-id="209b3-206">There are several custom activities in this sample:</span></span><br /><br /> <span data-ttu-id="209b3-207">-   `SaveActionTracking`： 此活动发出一个自定义<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。</span><span class="sxs-lookup"><span data-stu-id="209b3-207">-   `SaveActionTracking`: This activity emits a custom <xref:System.Activities.Tracking.TrackingRecord> (using <xref:System.Activities.NativeActivityContext.Track%2A>).</span></span> <span data-ttu-id="209b3-208">此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。</span><span class="sxs-lookup"><span data-stu-id="209b3-208">This activity has been authored using imperative code extending <xref:System.Activities.NativeActivity>.</span></span><br /><span data-ttu-id="209b3-209">-   `GetEmployeesByPositionTypes`： 此活动接收职位类型 Id 的列表，并返回对具有 Contoso 中的此位置的人员列表。</span><span class="sxs-lookup"><span data-stu-id="209b3-209">-   `GetEmployeesByPositionTypes`: This activity receives a list of position type IDs and returns a list of people that have that position in Contoso.</span></span> <span data-ttu-id="209b3-210">此活动已通过声明性方式进行创作（使用活动设计器）。</span><span class="sxs-lookup"><span data-stu-id="209b3-210">This activity has been authored declaratively (using the activity designer).</span></span><br /><span data-ttu-id="209b3-211">-   `SaveHiringRequestInfo`： 此活动保存的信息`HiringRequest`(使用`HiringRequestRepository.Save`)。</span><span class="sxs-lookup"><span data-stu-id="209b3-211">-   `SaveHiringRequestInfo`: This activity saves the information of a `HiringRequest` (using `HiringRequestRepository.Save`).</span></span> <span data-ttu-id="209b3-212">此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。</span><span class="sxs-lookup"><span data-stu-id="209b3-212">This activity has been authored using imperative code extending <xref:System.Activities.CodeActivity>.</span></span>|<span data-ttu-id="209b3-213">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-213">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-214">系统提供的 SQL Server 持久性</span><span class="sxs-lookup"><span data-stu-id="209b3-214">System-provided SQL Server Persistence</span></span>|<span data-ttu-id="209b3-215">将承载流程图过程定义的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例配置为使用系统提供的 SQL Server 持久性。</span><span class="sxs-lookup"><span data-stu-id="209b3-215">The <xref:System.ServiceModel.Activities.WorkflowServiceHost> instance that hosts the Flowchart process definition is configured to use the system-provided SQL Server persistence.</span></span>|<span data-ttu-id="209b3-216">HiringRequestService / ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-216">HiringRequestService / ResumeRequestService</span></span>|  
+|<span data-ttu-id="209b3-217">自定义跟踪</span><span class="sxs-lookup"><span data-stu-id="209b3-217">Custom Tracking</span></span>|<span data-ttu-id="209b3-218">此示例包含保存 `HiringRequestProcess` 的历史记录（记录完成的操作、执行者以及执行时间）的自定义跟踪参与者。</span><span class="sxs-lookup"><span data-stu-id="209b3-218">The sample includes a custom tracking participant that saves the history of a `HiringRequestProcess` (this records what action has been done, by whom, and when).</span></span> <span data-ttu-id="209b3-219">源代码位于 HiringRequestService 的跟踪文件夹中。</span><span class="sxs-lookup"><span data-stu-id="209b3-219">The source code is in the Tracking folder of HiringRequestService.</span></span>|<span data-ttu-id="209b3-220">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-220">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-221">ETW 跟踪</span><span class="sxs-lookup"><span data-stu-id="209b3-221">ETW Tracking</span></span>|<span data-ttu-id="209b3-222">在 HiringRequestService 服务的 App.config 文件中配置系统提供的 ETW 跟踪。</span><span class="sxs-lookup"><span data-stu-id="209b3-222">System-provided ETW Tracking is configured in the App.config file in the HiringRequestService service.</span></span>|<span data-ttu-id="209b3-223">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-223">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-224">活动的构成</span><span class="sxs-lookup"><span data-stu-id="209b3-224">Composition of Activities</span></span>|<span data-ttu-id="209b3-225">此过程定义使用 <xref:System.Activities.Activity> 的自由构成。</span><span class="sxs-lookup"><span data-stu-id="209b3-225">The process definition uses the free composition of <xref:System.Activities.Activity>.</span></span> <span data-ttu-id="209b3-226">流程图包含若干个顺序活动和并行活动，而这些活动同时又包含其他活动，等待。</span><span class="sxs-lookup"><span data-stu-id="209b3-226">The Flowchart contains several Sequence and Parallel activities that at the same time contain other activities (and so on).</span></span>|<span data-ttu-id="209b3-227">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-227">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-228">并行活动</span><span class="sxs-lookup"><span data-stu-id="209b3-228">Parallel Activities</span></span>|<span data-ttu-id="209b3-229">-   <xref:System.Activities.Statements.ParallelForEach%601>用于在 CEO 和 HR 经理的收件箱中注册并行 （等待两名 HR 经理的审批步骤）。</span><span class="sxs-lookup"><span data-stu-id="209b3-229">-   <xref:System.Activities.Statements.ParallelForEach%601> is used to register in the Inbox of the CEO and HR Managers in parallel (Waiting for two HR Managers' Approval step).</span></span><br /><span data-ttu-id="209b3-230">-   <xref:System.Activities.Statements.Parallel>用于执行一些清理任务。 在已完成和已拒绝步骤中</span><span class="sxs-lookup"><span data-stu-id="209b3-230">-   <xref:System.Activities.Statements.Parallel> is used to do some clean-up tasks in the Completed and Rejected steps</span></span>|<span data-ttu-id="209b3-231">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-231">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-232">模型取消</span><span class="sxs-lookup"><span data-stu-id="209b3-232">Model Cancellation</span></span>|<span data-ttu-id="209b3-233">此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。</span><span class="sxs-lookup"><span data-stu-id="209b3-233">The Flowchart uses <xref:System.Activities.Statements.CancellationScope> to create cancellation behavior (in this case it does some clean-up.)</span></span>|<span data-ttu-id="209b3-234">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-234">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-235">客户持久性参与者</span><span class="sxs-lookup"><span data-stu-id="209b3-235">Customer Persistence Participant</span></span>|<span data-ttu-id="209b3-236">`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。</span><span class="sxs-lookup"><span data-stu-id="209b3-236">`HiringRequestPersistenceParticipant` saves data from a workflow variable to a table stored in the Contoso HR database.</span></span>|<span data-ttu-id="209b3-237">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-237">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-238">工作流服务</span><span class="sxs-lookup"><span data-stu-id="209b3-238">Workflow Services</span></span>|<span data-ttu-id="209b3-239">使用工作流服务实现 `ResumeRequestService`。</span><span class="sxs-lookup"><span data-stu-id="209b3-239">`ResumeRequestService` is implemented using workflow services.</span></span> <span data-ttu-id="209b3-240">工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。</span><span class="sxs-lookup"><span data-stu-id="209b3-240">Workflow definition and service information is contained in ResumeRequestService.xamlx.</span></span> <span data-ttu-id="209b3-241">此服务配置为使用持久性和跟踪。</span><span class="sxs-lookup"><span data-stu-id="209b3-241">The service is configured to use persistence and tracking.</span></span>|<span data-ttu-id="209b3-242">ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-242">ResumeRequestService</span></span>|  
+|<span data-ttu-id="209b3-243">持久性计时器</span><span class="sxs-lookup"><span data-stu-id="209b3-243">Durable Timers</span></span>|<span data-ttu-id="209b3-244">`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间（一旦超时到期，将关闭招聘启事）。</span><span class="sxs-lookup"><span data-stu-id="209b3-244">`ResumeRequestService` uses durable timers to define the duration of a Job Posting (once a time-out expires, the Job Posting is closed).</span></span>|<span data-ttu-id="209b3-245">ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-245">ResumeRequestService</span></span>|  
+|<span data-ttu-id="209b3-246">事务</span><span class="sxs-lookup"><span data-stu-id="209b3-246">Transactions</span></span>|<span data-ttu-id="209b3-247"><xref:System.Activities.Statements.TransactionScope> 用于确保数据在若干个活动的执行期间（接收新简历时）保持一致。</span><span class="sxs-lookup"><span data-stu-id="209b3-247"><xref:System.Activities.Statements.TransactionScope> is used to ensure consistency of data within the execution of several activities (when a new resume is received).</span></span>|<span data-ttu-id="209b3-248">ResumeRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-248">ResumeRequestService</span></span>|  
+|<span data-ttu-id="209b3-249">事务</span><span class="sxs-lookup"><span data-stu-id="209b3-249">Transactions</span></span>|<span data-ttu-id="209b3-250">自定义持久性参与者 (`HiringRequestPersistenceParticipant`) 和自定义跟踪参与者 (`HistoryFileTrackingParticipant`) 使用相同的事务。</span><span class="sxs-lookup"><span data-stu-id="209b3-250">The custom persistence participant (`HiringRequestPersistenceParticipant`) and custom tracking participant (`HistoryFileTrackingParticipant`) use the same transaction.</span></span>|<span data-ttu-id="209b3-251">HiringRequestService</span><span class="sxs-lookup"><span data-stu-id="209b3-251">HiringRequestService</span></span>|  
+|<span data-ttu-id="209b3-252">在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 应用程序中使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="209b3-252">Using [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications.</span></span>|<span data-ttu-id="209b3-253">从两个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序访问工作流。</span><span class="sxs-lookup"><span data-stu-id="209b3-253">Workflows are accessed from two [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications.</span></span>|<span data-ttu-id="209b3-254">InternalClient / CareersWebSite</span><span class="sxs-lookup"><span data-stu-id="209b3-254">InternalClient / CareersWebSite</span></span>|  
   
-## 数据存储  
- 数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。  
+## <a name="data-storage"></a><span data-ttu-id="209b3-255">数据存储</span><span class="sxs-lookup"><span data-stu-id="209b3-255">Data Storage</span></span>  
+ <span data-ttu-id="209b3-256">数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。</span><span class="sxs-lookup"><span data-stu-id="209b3-256">Data is stored in a SQL Server database called `ContosoHR` (the script for creating this database is located in the `DbSetup` folder).</span></span> <span data-ttu-id="209b3-257">工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。</span><span class="sxs-lookup"><span data-stu-id="209b3-257">Workflow instances are stored in a SQL Server database called `InstanceStore` (the scripts for creating the instance store are part of the [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] distribution).</span></span>  
   
- 通过从 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示中运行 Setup.cmd 脚本可创建这两个数据库。  
+ <span data-ttu-id="209b3-258">通过从 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示中运行 Setup.cmd 脚本可创建这两个数据库。</span><span class="sxs-lookup"><span data-stu-id="209b3-258">Both databases are created by running Setup.cmd script from a  [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] command prompt.</span></span>  
   
-## 运行示例  
+## <a name="running-the-sample"></a><span data-ttu-id="209b3-259">运行示例</span><span class="sxs-lookup"><span data-stu-id="209b3-259">Running the sample</span></span>  
   
-#### 创建数据库  
+#### <a name="to-create-the-databases"></a><span data-ttu-id="209b3-260">创建数据库</span><span class="sxs-lookup"><span data-stu-id="209b3-260">To create the databases</span></span>  
   
-1.  打开 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示符。  
+1.  <span data-ttu-id="209b3-261">打开一个 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示符。</span><span class="sxs-lookup"><span data-stu-id="209b3-261">Open a [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] command prompt.</span></span>  
   
-2.  导航到示例文件夹。  
+2.  <span data-ttu-id="209b3-262">导航到示例文件夹。</span><span class="sxs-lookup"><span data-stu-id="209b3-262">Navigate to the sample folder.</span></span>  
   
-3.  运行 Setup.cmd。  
+3.  <span data-ttu-id="209b3-263">运行 Setup.cmd。</span><span class="sxs-lookup"><span data-stu-id="209b3-263">Run Setup.cmd.</span></span>  
   
-4.  验证 `ContosoHR` 和 `InstanceStore` 这两个数据库是否已在 SQL Express 中创建。  
+4.  <span data-ttu-id="209b3-264">验证 `ContosoHR` 和 `InstanceStore` 这两个数据库是否已在 SQL Express 中创建。</span><span class="sxs-lookup"><span data-stu-id="209b3-264">Verify that the two databases `ContosoHR` and `InstanceStore` were created in SQL Express.</span></span>  
   
-#### 设置执行解决方案  
+#### <a name="to-set-up-the-solution-for-execution"></a><span data-ttu-id="209b3-265">设置执行解决方案</span><span class="sxs-lookup"><span data-stu-id="209b3-265">To set up the solution for execution</span></span>  
   
-1.  以管理员身份运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。打开 HiringRequest.sln。  
+1.  <span data-ttu-id="209b3-266">以管理员身份运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="209b3-266">Run [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] as an administrator.</span></span> <span data-ttu-id="209b3-267">打开 HiringRequest.sln。</span><span class="sxs-lookup"><span data-stu-id="209b3-267">Open HiringRequest.sln.</span></span>  
   
-2.  在**“解决方案资源管理器”**中右键单击此解决方案并选择**“属性”**。  
+2.  <span data-ttu-id="209b3-268">右键单击该解决方案中的**解决方案资源管理器**和选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="209b3-268">Right-click the solution in **Solution Explorer** and select **Properties**.</span></span>  
   
-3.  选择**“多启动项目”**选项，然后将**“CareersWebSite”**、**“InternalClient”**、**“HiringRequestService”**和**“ResumeRequestService”**设置为**“启动”**。保留**“ContosoHR”**、**“InboxService”**和**“OrgService”**为“无”。  
+3.  <span data-ttu-id="209b3-269">选择选项**多启动项目**并设置**CareersWebSite**， **InternalClient**， **HiringRequestService**，和**ResumeRequestService**到**启动**。</span><span class="sxs-lookup"><span data-stu-id="209b3-269">Select the option **Multiple Startup Projects** and set the **CareersWebSite**, **InternalClient**, **HiringRequestService**, and **ResumeRequestService** to **Start**.</span></span> <span data-ttu-id="209b3-270">保留**ContosoHR**， **InboxService**，和**OrgService**为 None。</span><span class="sxs-lookup"><span data-stu-id="209b3-270">Leave **ContosoHR**, **InboxService**, and **OrgService** as None.</span></span>  
   
-4.  按 Ctrl\+Shift\+B 生成解决方案。验证此生成是否已成功。  
+4.  <span data-ttu-id="209b3-271">按 Ctrl+Shift+B 生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="209b3-271">Build the solution by pressing CTRL+SHIFT+B.</span></span> <span data-ttu-id="209b3-272">验证此生成是否已成功。</span><span class="sxs-lookup"><span data-stu-id="209b3-272">Verify that the build succeeded.</span></span>  
   
-#### 运行解决方案  
+#### <a name="to-run-the-solution"></a><span data-ttu-id="209b3-273">运行解决方案</span><span class="sxs-lookup"><span data-stu-id="209b3-273">To run the solution</span></span>  
   
-1.  解决方案生成后，按 Ctrl\+F5 无需调试即可运行。验证所有服务是否已启动。  
+1.  <span data-ttu-id="209b3-274">解决方案生成后，按 Ctrl+F5 无需调试即可运行。</span><span class="sxs-lookup"><span data-stu-id="209b3-274">After the solution builds, press CTRL+F5 to run without debugging.</span></span> <span data-ttu-id="209b3-275">验证所有服务是否已启动。</span><span class="sxs-lookup"><span data-stu-id="209b3-275">Verify that all services have started.</span></span>  
   
-2.  在解决方案中右键单击**“InternalClient”**，然后选择**“用浏览器查看”**。随即显示 `InternalClient` 的默认页。确保服务正在运行，然后单击链接。  
+2.  <span data-ttu-id="209b3-276">右键单击**InternalClient**中解决方案，然后选择**用浏览器查看**。</span><span class="sxs-lookup"><span data-stu-id="209b3-276">Right click **InternalClient** in the solution and then select **View in Browser**.</span></span> <span data-ttu-id="209b3-277">随即显示 `InternalClient` 的默认页。</span><span class="sxs-lookup"><span data-stu-id="209b3-277">The default page for `InternalClient` is displayed.</span></span> <span data-ttu-id="209b3-278">确保服务正在运行，然后单击链接。</span><span class="sxs-lookup"><span data-stu-id="209b3-278">Ensure that services are running, and click the link.</span></span>  
   
-3.  将显示**“HiringRequest”**模块。可遵循此处详细描述的方案。  
+3.  <span data-ttu-id="209b3-279">**HiringRequest**显示模块。</span><span class="sxs-lookup"><span data-stu-id="209b3-279">The **HiringRequest** module is displayed.</span></span> <span data-ttu-id="209b3-280">可遵循此处详细描述的方案。</span><span class="sxs-lookup"><span data-stu-id="209b3-280">You can follow the scenario detailed here.</span></span>  
   
-4.  `HiringRequest` 完成后，可启动 `ResumeRequest`。可遵循此处详细描述的方案。  
+4.  <span data-ttu-id="209b3-281">`HiringRequest` 完成后，可启动 `ResumeRequest`。</span><span class="sxs-lookup"><span data-stu-id="209b3-281">Once the `HiringRequest` is complete, you can start the `ResumeRequest`.</span></span> <span data-ttu-id="209b3-282">可遵循此处详细描述的方案。</span><span class="sxs-lookup"><span data-stu-id="209b3-282">You can follow the scenario detailed here.</span></span>  
   
-5.  发布 `ResumeRequest` 时，信息将显示在公共网站（Contoso 工作机会网站）中。若要查看招聘启事和申请职位，请导航到此工作机会网站。  
+5.  <span data-ttu-id="209b3-283">发布 `ResumeRequest` 时，信息将显示在公共网站（Contoso 工作机会网站）中。</span><span class="sxs-lookup"><span data-stu-id="209b3-283">When the `ResumeRequest` is posted, it is available in the public Web site (Contoso Careers Web Site).</span></span> <span data-ttu-id="209b3-284">若要查看招聘启事和申请职位，请导航到此工作机会网站。</span><span class="sxs-lookup"><span data-stu-id="209b3-284">To see the Job Posting (and apply for the position), navigate to the Careers Web Site.</span></span>  
   
-6.  在解决方案中右键单击**“CareersWebSite”**，然后选择**“用浏览器查看”**。  
+6.  <span data-ttu-id="209b3-285">右键单击**CareersWebSite**中解决方案，选择**用浏览器查看**。</span><span class="sxs-lookup"><span data-stu-id="209b3-285">Right-click **CareersWebSite** in the solution and select **View in Browser**.</span></span>  
   
-7.  通过在解决方案中右键单击**“InternalClient”**并选择**“用浏览器查看”**，导航回 `InternalClient`。  
+7.  <span data-ttu-id="209b3-286">向后定位到`InternalClient`通过右键单击**InternalClient**解决方案中，然后选择**用浏览器查看**。</span><span class="sxs-lookup"><span data-stu-id="209b3-286">Navigate back to the `InternalClient` by right-clicking **InternalClient** in the solution and selecting **View in Browser**.</span></span>  
   
-8.  通过单击收件箱顶部菜单中的**“招聘启事”**链接，转到**“JobPostings”**部分。可遵循此处详细描述的方案。  
+8.  <span data-ttu-id="209b3-287">转到**JobPostings**节中的，单击**招聘广告**收件箱顶部菜单中的链接。</span><span class="sxs-lookup"><span data-stu-id="209b3-287">Go to the **JobPostings** section by clicking the **Job Postings** link in the inbox top menu.</span></span> <span data-ttu-id="209b3-288">可遵循此处详细描述的方案。</span><span class="sxs-lookup"><span data-stu-id="209b3-288">You can follow the scenario detailed here.</span></span>  
   
-## 方案  
+## <a name="scenarios"></a><span data-ttu-id="209b3-289">方案</span><span class="sxs-lookup"><span data-stu-id="209b3-289">Scenarios</span></span>  
   
-### 招聘请求  
+### <a name="hiring-request"></a><span data-ttu-id="209b3-290">招聘请求</span><span class="sxs-lookup"><span data-stu-id="209b3-290">Hiring request</span></span>  
   
-1.  Michael Alexander（软件工程师）希望请求一个新职位，以便在工程部门雇佣一名至少具有 3 年 C\# 使用经验的软件开发测试工程师 \(SDET\)。  
+1.  <span data-ttu-id="209b3-291">Michael Alexander（软件工程师）希望请求一个新职位，以便在工程部门雇佣一名至少具有 3 年 C# 使用经验的软件开发测试工程师 (SDET)。</span><span class="sxs-lookup"><span data-stu-id="209b3-291">Michael Alexander (Software Engineer) wants to request a new position for hiring a Software Engineer in Test (SDET) in the Engineering department who has at least 3 years of experience in C#.</span></span>  
   
-2.  创建后，此请求将出现在 Michael 的收件箱中（如果您看不到此请求，请单击**“刷新”**），等待 Michael 的经理 Peter Brehm 的审批。  
+2.  <span data-ttu-id="209b3-292">创建后，请求将出现在 Michael 的收件箱 (单击**刷新**如果你看不到请求) 等待 Peter Brehm 的审批，Michael 的经理是。</span><span class="sxs-lookup"><span data-stu-id="209b3-292">After being created, the request appears in Michael’s inbox (click **Refresh** if you do not see the request) awaiting Peter Brehm’s approval, who is Michael’s manager.</span></span>  
   
-3.  Peter 需要处理 Michael 的请求。他认为此职位需要 5 年的 C\# 工作经验而不是 3 年，因此他发回自己的建议以进行复查。  
+3.  <span data-ttu-id="209b3-293">Peter 需要处理 Michael 的请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-293">Peter wants to act on Michael’s request.</span></span> <span data-ttu-id="209b3-294">他认为此职位需要 5 年的 C# 工作经验而不是 3 年，因此他发回自己的建议以进行复查。</span><span class="sxs-lookup"><span data-stu-id="209b3-294">He thinks the position demands 5 years of C# experience instead of 3, so he sends his comments back for review.</span></span>  
   
-4.  Michael 查看收件箱中来自他的经理的邮件并需要执行操作。Michael 查看此职位请求的历史记录，并同意 Peter 的建议。Michael 修改说明以要求 5 年的 C\# 工作经验，并接受修改。  
+4.  <span data-ttu-id="209b3-295">Michael 查看收件箱中来自他的经理的邮件并需要执行操作。Michael 查看此职位请求的历史记录，并同意 Peter 的建议。</span><span class="sxs-lookup"><span data-stu-id="209b3-295">Michael sees a message in his inbox from his manager and wants to act. Michael sees the history of the position request and agrees with Peter.</span></span> <span data-ttu-id="209b3-296">Michael 修改说明以要求 5 年的 C# 工作经验，并接受修改。</span><span class="sxs-lookup"><span data-stu-id="209b3-296">Michael modifies the description to require 5 years of C# experience and accepts the modification.</span></span>  
   
-5.  Peter 处理 Michael 修改过的请求，并接受它。现在必须由工程总监 Tsvi Reiter 审批此请求。  
+5.  <span data-ttu-id="209b3-297">Peter 处理 Michael 修改过的请求，并接受它。</span><span class="sxs-lookup"><span data-stu-id="209b3-297">Peter acts on Michael’s modified request and accepts it.</span></span> <span data-ttu-id="209b3-298">现在必须由工程总监 Tsvi Reiter 审批此请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-298">The request now must be approved by the Director of Engineering, Tsvi Reiter.</span></span>  
   
-6.  Tsvi Reiter 希望迅速发出此请求，因此，他加上一条注释，说明此请求非常紧急并接受它。  
+6.  <span data-ttu-id="209b3-299">Tsvi Reiter 希望迅速发出此请求，因此，他加上一条注释，说明此请求非常紧急并接受它。</span><span class="sxs-lookup"><span data-stu-id="209b3-299">Tsvi Reiter wants to expedite the request, so he puts in a comment to say that the request is urgent and accepts it.</span></span>  
   
-7.  现在必须由两名 HR 经理或 CEO 审批此请求。CEO Brian Richard Goldstein 看到了 Tsvi 发出的此紧急请求。他接受此请求，从而不再需要两名 HR 经理的审批。  
+7.  <span data-ttu-id="209b3-300">现在必须由两名 HR 经理或 CEO 审批此请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-300">The request now has to be approved by two HR managers or the CEO.</span></span> <span data-ttu-id="209b3-301">CEO Brian Richard Goldstein 看到了 Tsvi 发出的此紧急请求。</span><span class="sxs-lookup"><span data-stu-id="209b3-301">The CEO, Brian Richard Goldstein, sees the urgent request by Tsvi.</span></span> <span data-ttu-id="209b3-302">他接受此请求，从而不再需要两名 HR 经理的审批。</span><span class="sxs-lookup"><span data-stu-id="209b3-302">He acts on the request by accepting it, thus bypassing the approval by two HR managers.</span></span>  
   
-8.  此请求将会从 Michael 的收件箱中删除，招聘 SDET 的过程现已开始。  
+8.  <span data-ttu-id="209b3-303">此请求将会从 Michael 的收件箱中删除，招聘 SDET 的过程现已开始。</span><span class="sxs-lookup"><span data-stu-id="209b3-303">The request is removed from Michael’s inbox and the process of hiring an SDET has now begun.</span></span>  
   
-### 启动简历请求  
+### <a name="start-resume-request"></a><span data-ttu-id="209b3-304">启动简历请求</span><span class="sxs-lookup"><span data-stu-id="209b3-304">Start Resume Request</span></span>  
   
-1.  现在，此招聘启事正等待发布到人们可申请的外部网站（单击**“招聘启事”**链接可进行查看）。目前，此招聘启事由 HR 代表接手，他负责最后确定招聘启事并进行发布。  
+1.  <span data-ttu-id="209b3-305">现在，此招聘启事正等待发布到外部网站人们可申请 (你可以看到它单击**招聘广告**链接)。</span><span class="sxs-lookup"><span data-stu-id="209b3-305">Now, the job position is waiting to be posted to an external Web site where people can apply (you can see it clicking the **Job Postings** link).</span></span> <span data-ttu-id="209b3-306">目前，此招聘启事由 HR 代表接手，他负责最后确定招聘启事并进行发布。</span><span class="sxs-lookup"><span data-stu-id="209b3-306">Currently, the job position is sitting with an HR representative who is responsible for finalizing the job position and posting it.</span></span>  
   
-2.  HR 希望编辑此招聘启事（通过单击**“编辑”**链接）将超时设置为 60 分钟（现实生活中，此值可以是几天或几个星期）。超时允许根据指定的时间从外部网站中删除此招聘启事。  
+2.  <span data-ttu-id="209b3-307">HR 希望编辑此招聘启事 (通过单击**编辑**链接) 通过设置超时值为 60 分钟 （现实生活中，这可能是几天或数周）。</span><span class="sxs-lookup"><span data-stu-id="209b3-307">HR wants to edit this job position (by clicking the **Edit** link) by setting a time-out of 60 minutes (in real life, this could be days or weeks).</span></span> <span data-ttu-id="209b3-308">超时允许根据指定的时间从外部网站中删除此招聘启事。</span><span class="sxs-lookup"><span data-stu-id="209b3-308">The time-out allows the job position to be taken off the external Web site according to the time specified.</span></span>  
   
-3.  在保存编辑的招聘启事后，它将显示在**“接收简历”**选项卡中（刷新网页可看到此新招聘启事）。  
+3.  <span data-ttu-id="209b3-309">后保存编辑的招聘启事，它将显示在**接收简历**选项卡中 （刷新网页可看到此新招聘启事）。</span><span class="sxs-lookup"><span data-stu-id="209b3-309">After saving the edited job position, it appears in the **Receiving Resumes** tab (refresh the Web page to see the new job position).</span></span>  
   
-### 收集简历  
+### <a name="collecting-resumes"></a><span data-ttu-id="209b3-310">收集简历</span><span class="sxs-lookup"><span data-stu-id="209b3-310">Collecting Resumes</span></span>  
   
-1.  招聘启事应显示在外部网站上。如果某人对此工作有兴趣，则可申请此职位并提交简历。  
+1.  <span data-ttu-id="209b3-311">招聘启事应显示在外部网站上。</span><span class="sxs-lookup"><span data-stu-id="209b3-311">The job position should appear on the external Web site.</span></span> <span data-ttu-id="209b3-312">如果某人对此工作有兴趣，则可申请此职位并提交简历。</span><span class="sxs-lookup"><span data-stu-id="209b3-312">As a person interested in applying for the job, you may apply for this position and submit your resume.</span></span>  
   
-2.  如果返回到“招聘启事列表”服务，您可“查看简历”（目前为止已收集到的简历）。  
+2.  <span data-ttu-id="209b3-313">如果要返回到招聘启事列表服务中，您可"查看简历"，到目前为止已收集。</span><span class="sxs-lookup"><span data-stu-id="209b3-313">If you go back to the Job Postings List service, you can "view resumes" that have been collected so far.</span></span>  
   
-3.  HR 还可停止收集简历（例如，确定了合适的人选）。  
+3.  <span data-ttu-id="209b3-314">HR 还可停止收集简历（例如，确定了合适的人选）。</span><span class="sxs-lookup"><span data-stu-id="209b3-314">HR can also stop collecting resumes (for example, once the right candidate has been identified).</span></span>  
   
-## 疑难解答  
+## <a name="troubleshooting"></a><span data-ttu-id="209b3-315">疑难解答</span><span class="sxs-lookup"><span data-stu-id="209b3-315">Troubleshooting</span></span>  
   
-1.  确保您使用管理员权限运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+1.  <span data-ttu-id="209b3-316">确保您使用管理员权限运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="209b3-316">Ensure that you are running [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] with administrator privileges.</span></span>  
   
-2.  如果生成解决方案失败，请验证以下内容：  
+2.  <span data-ttu-id="209b3-317">如果生成解决方案失败，请验证以下内容：</span><span class="sxs-lookup"><span data-stu-id="209b3-317">If the solution fails to build, verify the following:</span></span>  
   
-    -   `InternalClient` 或 `CareersWebSite` 项目不缺少对 `ContosoHR` 的引用。  
+    -   <span data-ttu-id="209b3-318">对引用`ContosoHR`不缺少`InternalClient`或`CareersWebSite`项目。</span><span class="sxs-lookup"><span data-stu-id="209b3-318">The reference to `ContosoHR` is not missing from the `InternalClient` or `CareersWebSite` projects.</span></span>  
   
-3.  如果执行解决方案失败，请验证以下内容：  
+3.  <span data-ttu-id="209b3-319">如果执行解决方案失败，请验证以下内容：</span><span class="sxs-lookup"><span data-stu-id="209b3-319">If the solution fails to execute, verify the following:</span></span>  
   
-    1.  所有服务正在运行。  
+    1.  <span data-ttu-id="209b3-320">所有服务正在运行。</span><span class="sxs-lookup"><span data-stu-id="209b3-320">All services are running.</span></span>  
   
-    2.  服务引用已更新。  
+    2.  <span data-ttu-id="209b3-321">服务引用已更新。</span><span class="sxs-lookup"><span data-stu-id="209b3-321">The service references are updated.</span></span>  
   
-        1.  打开 App\_WebReferences 文件夹  
+        1.  <span data-ttu-id="209b3-322">打开 App_WebReferences 文件夹</span><span class="sxs-lookup"><span data-stu-id="209b3-322">Open the App_WebReferences folder</span></span>  
   
-        2.  右键单击**“Contoso”**，并选择**“更新 Web\/服务引用”**。  
+        2.  <span data-ttu-id="209b3-323">右键单击**Contoso**和选择**更新 Web/服务引用**。</span><span class="sxs-lookup"><span data-stu-id="209b3-323">Right-click **Contoso** and select **Update Web/Service References**.</span></span>  
   
-        3.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中按 Ctrl\+Shift\+B 重新生成解决方案。  
+        3.  <span data-ttu-id="209b3-324">在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中按 Ctrl+Shift+B 重新生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="209b3-324">Rebuild the solution by pressing CTRL+SHIFT+B in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span></span>  
   
-## 卸载  
+## <a name="uninstalling"></a><span data-ttu-id="209b3-325">卸载</span><span class="sxs-lookup"><span data-stu-id="209b3-325">Uninstalling</span></span>  
   
-1.  通过运行 Cleanup.bat 删除位于 DbSetup 文件夹的 SQL Server 实例存储。  
+1.  <span data-ttu-id="209b3-326">通过运行 Cleanup.bat 删除位于 DbSetup 文件夹的 SQL Server 实例存储。</span><span class="sxs-lookup"><span data-stu-id="209b3-326">Delete the SQL Server instance store by running Cleanup.bat, located in DbSetup folder.</span></span>  
   
-2.  从硬盘上删除源代码。  
+2.  <span data-ttu-id="209b3-327">从硬盘上删除源代码。</span><span class="sxs-lookup"><span data-stu-id="209b3-327">Delete the source code form your hard drive.</span></span>  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="209b3-328">另请参阅</span><span class="sxs-lookup"><span data-stu-id="209b3-328">See Also</span></span>

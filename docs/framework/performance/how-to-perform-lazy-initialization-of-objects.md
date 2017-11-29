@@ -5,29 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- lazy initialization in .NET, how to perform
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b616aa284b6f7fff01b3b1fbfb15f2ceb54c9663
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：执行对象的延迟初始化
-<xref:System.Lazy%601?displayProperty=fullName> 类可简化执行迟缓初始化和对象实例化的工作。 通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="33c1f-102">如何：执行对象的延迟初始化</span><span class="sxs-lookup"><span data-stu-id="33c1f-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="33c1f-103"><xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。</span><span class="sxs-lookup"><span data-stu-id="33c1f-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="33c1f-104">通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。</span><span class="sxs-lookup"><span data-stu-id="33c1f-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="33c1f-105">若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)</span><span class="sxs-lookup"><span data-stu-id="33c1f-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## <a name="example"></a>示例  
- 以下示例演示如何使用 <xref:System.Lazy%601> 初始化值。 假定可能不需要迟缓变量，这取决于将 `someCondition` 变量设置为 true 或 false 的一些其他代码。  
+## <a name="example"></a><span data-ttu-id="33c1f-106">示例</span><span class="sxs-lookup"><span data-stu-id="33c1f-106">Example</span></span>  
+ <span data-ttu-id="33c1f-107">以下示例演示如何使用 <xref:System.Lazy%601> 初始化值。</span><span class="sxs-lookup"><span data-stu-id="33c1f-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="33c1f-108">假定可能不需要迟缓变量，这取决于将 `someCondition` 变量设置为 true 或 false 的一些其他代码。</span><span class="sxs-lookup"><span data-stu-id="33c1f-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -77,12 +77,12 @@ End Sub
 }  
 ```  
   
-## <a name="example"></a>示例  
- 以下示例演示如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> 类初始化仅对当前线程上的当前对象实例可见的类型。  
+## <a name="example"></a><span data-ttu-id="33c1f-109">示例</span><span class="sxs-lookup"><span data-stu-id="33c1f-109">Example</span></span>  
+ <span data-ttu-id="33c1f-110">以下示例演示如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类初始化仅对当前线程上的当前对象实例可见的类型。</span><span class="sxs-lookup"><span data-stu-id="33c1f-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
+ [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
- [迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="33c1f-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="33c1f-111">See Also</span></span>  
+ <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
+ [<span data-ttu-id="33c1f-112">迟缓初始化</span><span class="sxs-lookup"><span data-stu-id="33c1f-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)

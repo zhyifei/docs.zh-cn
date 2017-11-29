@@ -1,55 +1,56 @@
 ---
-title: "使用应用程序设置和用户设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序设置 [Windows 窗体], 帮助主题"
-  - "用户设置 [Windows 窗体]"
+title: "使用应用程序设置和用户设置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user settings [Windows Forms]
+- application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用应用程序设置和用户设置
-从 .NET Framework 2.0 开始，您可以创建和访问在应用程序执行会话之间保留的值。  这些值称为“设置”。  设置可表示用户首选项或应用程序需要使用的有价值的信息。  例如，可以创建用于存储用户对应用程序的配色方案的首选项的一系列设置。  也可以存储用于指定应用程序使用的数据库的连接字符串。  设置不仅允许您在代码外部保留对于应用程序很重要的信息，还允许您创建用于存储各个用户的首选项的配置文件。  
+# <a name="using-application-settings-and-user-settings"></a><span data-ttu-id="fe9bf-102">使用应用程序设置和用户设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-102">Using Application Settings and User Settings</span></span>
+<span data-ttu-id="fe9bf-103">从.NET Framework 2.0 开始，可以创建和访问应用程序执行会话之间保留的值。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-103">Starting with the .NET Framework 2.0, you can create and access values that are persisted between application execution sessions.</span></span> <span data-ttu-id="fe9bf-104">这些值称为*设置*。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-104">These values are called *settings*.</span></span> <span data-ttu-id="fe9bf-105">设置可以表示用户首选项，或者有价值信息的应用程序需要使用。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-105">Settings can represent user preferences, or valuable information the application needs to use.</span></span> <span data-ttu-id="fe9bf-106">例如，你可能会创建一系列存储应用程序的配色方案的用户首选项的设置。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-106">For example, you might create a series of settings that store user preferences for the color scheme of an application.</span></span> <span data-ttu-id="fe9bf-107">或者，你可能会存储指定你的应用程序使用的数据库的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-107">Or you might store the connection string that specifies a database that your application uses.</span></span> <span data-ttu-id="fe9bf-108">设置允许你同时保留对外部代码，并创建存储的单个用户的首选项的配置文件的应用程序至关重要的信息。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-108">Settings allow you to both persist information that is critical to the application outside the code, and to create profiles that store the preferences of individual users.</span></span>  
   
- 本节中的主题描述如何在设计时和运行时使用设置。  
+ <span data-ttu-id="fe9bf-109">本部分中的主题介绍如何在设计时使用的设置，运行时间。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-109">The topics in this section describe how to use settings at design time and run time.</span></span>  
   
-## 本节内容  
- [如何：在设计时创建新设置](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fe9bf-110">本节内容</span><span class="sxs-lookup"><span data-stu-id="fe9bf-110">In This Section</span></span>  
+ [<span data-ttu-id="fe9bf-111">如何：在设计时创建新设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-111">How To: Create a New Setting at Design Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
- 解释如何使用 Visual Studio 为应用程序创建新设置。  
+ <span data-ttu-id="fe9bf-112">说明如何使用 Visual Studio 创建新的设置应用程序。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-112">Explains how to use Visual Studio to create a new setting for an application.</span></span>  
   
- [如何：在设计时更改现有设置的值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [<span data-ttu-id="fe9bf-113">如何：在设计时更改现有设置的值</span><span class="sxs-lookup"><span data-stu-id="fe9bf-113">How To: Change the Value of an Existing Setting at Design Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
- 描述如何使用 Visual Studio 更改现有设置的值。  
+ <span data-ttu-id="fe9bf-114">描述如何使用 Visual Studio 更改现有设置的值。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-114">Describes how to use Visual Studio to change the value of an existing setting.</span></span>  
   
- [如何：在应用程序会话之间更改设置值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [<span data-ttu-id="fe9bf-115">如何：在应用程序会话之间更改设置值</span><span class="sxs-lookup"><span data-stu-id="fe9bf-115">How To: Change the Value of a Setting Between Application Sessions</span></span>](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- 详细说明如何在已编译的应用程序中更改应用程序会话之间的设置的值。  
+ <span data-ttu-id="fe9bf-116">详细介绍如何更改应用程序会话之间编译的应用程序中的设置的值。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-116">Details how to change the value of a setting in a compiled application between application sessions.</span></span>  
   
- [如何：在运行时读取设置 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [<span data-ttu-id="fe9bf-117">如何：在运行时使用 C# 读取设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-117">How To: Read Settings at Run Time With C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
   
- 描述如何使用 C\# 代码来读取设置。  
+ <span data-ttu-id="fe9bf-118">描述如何使用代码来读取使用 C# 的设置。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-118">Describes how to use code to read settings with C#.</span></span>  
   
- [如何：在运行时编写用户设置 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [<span data-ttu-id="fe9bf-119">如何：在运行时使用 C# 编写用户设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-119">How To: Write User Settings at Run Time with C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- 解释如何使用 C\# 代码来编写和保存用户设置的值。  
+ <span data-ttu-id="fe9bf-120">说明如何使用代码来编写和使用 C# 保存用户设置的值。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-120">Explains how to use code to write and save the values of user settings with C#.</span></span>  
   
- [如何：向应用程序添加多个设置组 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [<span data-ttu-id="fe9bf-121">如何：使用 C# 向应用程序添加多组设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-121">How To: Add Multiple Sets of Settings To Your Application in C#</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- 详细说明如何使用 C\# 向应用程序添加多个设置组。  
+ <span data-ttu-id="fe9bf-122">详细介绍如何使用 C# 应用程序中添加多组设置。</span><span class="sxs-lookup"><span data-stu-id="fe9bf-122">Details how to add multiple sets of settings to an application with C#.</span></span>  
   
-## 请参阅  
- [Windows 窗体的应用程序设置](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fe9bf-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fe9bf-123">See Also</span></span>  
+ [<span data-ttu-id="fe9bf-124">Windows 窗体的应用程序设置</span><span class="sxs-lookup"><span data-stu-id="fe9bf-124">Application Settings for Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

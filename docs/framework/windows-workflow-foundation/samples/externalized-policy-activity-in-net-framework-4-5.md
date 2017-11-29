@@ -1,33 +1,36 @@
 ---
-title: ".NET Framework 4.5 中的外部化策略活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ".NET Framework 4.5 中的外部化的策略活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c2aa6bd10d95abefd37fb53f88916d90cfe2344
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# .NET Framework 4.5 中的外部化策略活动
-此示例演示 ExternalizedPolicy4 活动如何使用 WF 3.5 中附带的规则引擎在 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] \(WF 4.5\) 中直接使用现有 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] \(WF 3.5\) <xref:System.Workflow.Activities.Rules.RuleSet>。通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎的更多信息（此信息已作为 Windows Workflow Foundation 的一部分包含），请参见 [Windows Workflow Foundation 规则引擎简介](http://go.microsoft.com/fwlink/?LinkId=166079)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关将规则迁移到 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]，请阅读 [迁移指南](../../../../docs/framework/windows-workflow-foundation//migration-guidance.md) 的迁移指导。  
+# <a name="externalized-policy-activity-in-net-framework-45"></a><span data-ttu-id="2cd73-102">.NET Framework 4.5 中的外部化的策略活动</span><span class="sxs-lookup"><span data-stu-id="2cd73-102">Externalized Policy Activity in .NET Framework 4.5</span></span>
+<span data-ttu-id="2cd73-103">此示例演示 ExternalizedPolicy4 活动如何允许执行现有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。</span><span class="sxs-lookup"><span data-stu-id="2cd73-103">This sample demonstrates how the ExternalizedPolicy4 activity allows executing existing [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objects in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) directly by using the rules engine that is shipped in WF 3.5.</span></span> <span data-ttu-id="2cd73-104">通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。</span><span class="sxs-lookup"><span data-stu-id="2cd73-104">By using this activity, you can open and execute any existing WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2cd73-105">WF 3.5 规则引擎包含的 Windows Workflow Foundation，请阅读[Windows Workflow Foundation 规则引擎简介](http://go.microsoft.com/fwlink/?LinkId=166079)。</span><span class="sxs-lookup"><span data-stu-id="2cd73-105"> WF 3.5 Rules Engine included as part of Windows Workflow Foundation, please read [Introduction to the Windows Workflow Foundation Rules Engine](http://go.microsoft.com/fwlink/?LinkId=166079).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2cd73-106">迁移到规则[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，请阅读上的迁移指南[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。</span><span class="sxs-lookup"><span data-stu-id="2cd73-106"> migrating rules to [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], please read the migration guidance at [Migration Guidance](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).</span></span>  
   
-## 此示例中的项目  
+## <a name="projects-in-this-sample"></a><span data-ttu-id="2cd73-107">此示例中的项目</span><span class="sxs-lookup"><span data-stu-id="2cd73-107">Projects in this Sample</span></span>  
   
-||||  
+|<span data-ttu-id="2cd73-108">项目名称</span><span class="sxs-lookup"><span data-stu-id="2cd73-108">Project Name</span></span>|<span data-ttu-id="2cd73-109">描述</span><span class="sxs-lookup"><span data-stu-id="2cd73-109">Description</span></span>|<span data-ttu-id="2cd73-110">主要文件</span><span class="sxs-lookup"><span data-stu-id="2cd73-110">Main Files</span></span>|  
 |-|-|-|  
-|项目名称|说明|主要文件|  
-|ExternalizedPolicy4|包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。|**ExternalizedPolicy4.cs**：活动定义。<br /><br /> **ExternalizedPolicy4Designer.xaml**：ExternalizedPolicy4 活动的自定义设计器。它使用来自 WF 3.5 规则引擎的规则编辑器 \(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>\)。|  
-|ImperativeCodeClientSample|一个示例客户端应用程序，它使用命令性 C\# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。|**ApplyDiscount.rules**：带有 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 规则定义的文件。<br /><br /> **Order.cs**：表示客户订单的类型。规则适用于此类型的对象。<br /><br /> **Program.cs**：配置和运行具有 Policy4 活动的工作流以将 ApplyDiscount.rules 中定义的规则应用于 Order 对象的实例。<br /><br /> App.config：带有规则文件的路径的配置文件。|  
-|DesignerClientSample|一个示例客户端应用程序，它在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 设计器中配置和运行使用 ExternalPolicy4 应用程序的工作流。|**Sequence1.xaml**：使用 Policy4 活动执行规则计算的顺序工作流。<br /><br /> **Program.cs**：运行 Sequence1.xaml 中定义的工作流的实例。|  
+|<span data-ttu-id="2cd73-111">ExternalizedPolicy4</span><span class="sxs-lookup"><span data-stu-id="2cd73-111">ExternalizedPolicy4</span></span>|<span data-ttu-id="2cd73-112">包含 ExternalizedPolicy4 活动及其 WF 4.5 设计器。</span><span class="sxs-lookup"><span data-stu-id="2cd73-112">Contains the ExternalizedPolicy4 activity and its WF 4.5 designer.</span></span>|<span data-ttu-id="2cd73-113">**ExternalizedPolicy4.cs**： 活动定义。</span><span class="sxs-lookup"><span data-stu-id="2cd73-113">**ExternalizedPolicy4.cs**: activity definition.</span></span><br /><br /> <span data-ttu-id="2cd73-114">**ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 活动的自定义设计器。</span><span class="sxs-lookup"><span data-stu-id="2cd73-114">**ExternalizedPolicy4Designer.xaml**: Custom designer for ExternalizedPolicy4 activity.</span></span> <span data-ttu-id="2cd73-115">它使用来自 WF 3.5 规则引擎的规则编辑器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。</span><span class="sxs-lookup"><span data-stu-id="2cd73-115">It uses the Rules editor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) from WF 3.5 Rules Engine.</span></span>|  
+|<span data-ttu-id="2cd73-116">ImperativeCodeClientSample</span><span class="sxs-lookup"><span data-stu-id="2cd73-116">ImperativeCodeClientSample</span></span>|<span data-ttu-id="2cd73-117">一个示例客户端应用程序，它使用命令性 C# 代码（未使用设计器）配置和运行使用 ExternalizedPolicy4 应用程序的工作流。</span><span class="sxs-lookup"><span data-stu-id="2cd73-117">Sample client application that configures and runs a workflow using an ExternalizedPolicy4 application using imperative C# code (no designer used).</span></span>|<span data-ttu-id="2cd73-118">**ApplyDiscount.rules**： 使用文件[!INCLUDE[wf1](../../../../includes/wf1-md.md)]规则定义。</span><span class="sxs-lookup"><span data-stu-id="2cd73-118">**ApplyDiscount.rules**: File with [!INCLUDE[wf1](../../../../includes/wf1-md.md)] rule definitions.</span></span><br /><br /> <span data-ttu-id="2cd73-119">**Order.cs**： 表示客户订单的类型。</span><span class="sxs-lookup"><span data-stu-id="2cd73-119">**Order.cs**: Type that represents a customer order.</span></span> <span data-ttu-id="2cd73-120">规则适用于此类型的对象。</span><span class="sxs-lookup"><span data-stu-id="2cd73-120">Rules are applied to objects of this type.</span></span><br /><br /> <span data-ttu-id="2cd73-121">**Program.cs**： 配置和运行具有 Policy4 活动要应用于 Order 对象的实例的 ApplyDiscount.rules 中定义的规则的工作流。</span><span class="sxs-lookup"><span data-stu-id="2cd73-121">**Program.cs**: Configures and runs a workflow that has a Policy4 activity to apply rules defined in ApplyDiscount.rules to instances of Order objects.</span></span><br /><br /> <span data-ttu-id="2cd73-122">App.config：带有规则文件的路径的配置文件。</span><span class="sxs-lookup"><span data-stu-id="2cd73-122">App.config: The configuration file with the path of the rules file.</span></span>|  
+|<span data-ttu-id="2cd73-123">DesignerClientSample</span><span class="sxs-lookup"><span data-stu-id="2cd73-123">DesignerClientSample</span></span>|<span data-ttu-id="2cd73-124">一个示例客户端应用程序，它在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 设计器中配置和运行使用 ExternalPolicy4 应用程序的工作流。</span><span class="sxs-lookup"><span data-stu-id="2cd73-124">Sample client application that configures and runs a workflow using an ExternalPolicy4 application in the [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Designer.</span></span>|<span data-ttu-id="2cd73-125">**Sequence1.xaml**： 使用 Policy4 活动执行规则计算的顺序工作流。</span><span class="sxs-lookup"><span data-stu-id="2cd73-125">**Sequence1.xaml**: Sequential workflow that uses a Policy4 activity to perform rule evaluations.</span></span><br /><br /> <span data-ttu-id="2cd73-126">**Program.cs**： 运行 Sequence1.xaml 中定义的工作流的实例。</span><span class="sxs-lookup"><span data-stu-id="2cd73-126">**Program.cs**: Runs an instance of the workflow defined in Sequence1.xaml.</span></span>|  
   
-## ExternalizedPolicy4 活动  
- ExternalizedPolicy4 活动是一个 <xref:System.Activities.NativeActivity>，它允许在 WF 4.5 工作流中执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 对象。下面的示例是活动的公共对象模型的简化定义。  
+## <a name="the-externalizedpolicy4-activity"></a><span data-ttu-id="2cd73-127">ExternalizedPolicy4 活动</span><span class="sxs-lookup"><span data-stu-id="2cd73-127">The ExternalizedPolicy4 Activity</span></span>  
+ <span data-ttu-id="2cd73-128">ExternalizedPolicy4 活动是一个 <xref:System.Activities.NativeActivity>，它允许在 WF 4.5 工作流中执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 对象。</span><span class="sxs-lookup"><span data-stu-id="2cd73-128">The ExternalizedPolicy4 activity is a <xref:System.Activities.NativeActivity> that allows executing WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> objects within WF 4.5 workflows.</span></span> <span data-ttu-id="2cd73-129">下面的示例是活动的公共对象模型的简化定义。</span><span class="sxs-lookup"><span data-stu-id="2cd73-129">The following example is a simplified definition of the public object model of the activity.</span></span>  
   
 ```  
 public class ExternalizedPolicy4Activity<TResult>: CodeActivity  
@@ -46,49 +49,48 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }  
 ```  
   
-|||  
+|<span data-ttu-id="2cd73-130">属性</span><span class="sxs-lookup"><span data-stu-id="2cd73-130">Property</span></span>|<span data-ttu-id="2cd73-131">描述</span><span class="sxs-lookup"><span data-stu-id="2cd73-131">Description</span></span>|  
 |-|-|  
-|属性|说明|  
-|RuleSetFilePath|执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。|  
-|RuleSetName|要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。|  
-|TargetObject|对其计算 <xref:System.Workflow.Activities.Rules.RuleSet> 中的 <xref:System.Workflow.Activities.Rules.Rule> 对象的对象。|  
-|ResultObject|应用规则后的结果对象（例如，对 Input 参数应用规则并将结果存储在 Result 参数中）。|  
-|ValidationError|在执行前对目标对象验证 <xref:System.Workflow.Activities.Rules.RuleSet> 时由 WF 3.5 规则引擎返回的验证错误的列表。|  
+|<span data-ttu-id="2cd73-132">RuleSetFilePath</span><span class="sxs-lookup"><span data-stu-id="2cd73-132">RuleSetFilePath</span></span>|<span data-ttu-id="2cd73-133">执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="2cd73-133">Path to the .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> file to be evaluated when the activity is executed.</span></span>|  
+|<span data-ttu-id="2cd73-134">RuleSetName</span><span class="sxs-lookup"><span data-stu-id="2cd73-134">RuleSetName</span></span>|<span data-ttu-id="2cd73-135">要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。</span><span class="sxs-lookup"><span data-stu-id="2cd73-135">Name of the <xref:System.Workflow.Activities.Rules.RuleSet> to be used within the .rules file.</span></span>|  
+|<span data-ttu-id="2cd73-136">TargetObject</span><span class="sxs-lookup"><span data-stu-id="2cd73-136">TargetObject</span></span>|<span data-ttu-id="2cd73-137">对其计算 <xref:System.Workflow.Activities.Rules.Rule> 中的 <xref:System.Workflow.Activities.Rules.RuleSet> 对象的对象。</span><span class="sxs-lookup"><span data-stu-id="2cd73-137">The object on which the <xref:System.Workflow.Activities.Rules.Rule> objects in the <xref:System.Workflow.Activities.Rules.RuleSet> is evaluated against.</span></span>|  
+|<span data-ttu-id="2cd73-138">ResultObject</span><span class="sxs-lookup"><span data-stu-id="2cd73-138">ResultObject</span></span>|<span data-ttu-id="2cd73-139">应用规则后的结果对象（例如，对 Input 参数应用规则并将结果存储在 Result 参数中）。</span><span class="sxs-lookup"><span data-stu-id="2cd73-139">The resulting object after the rules are applied (for example, rules are applied against the Input argument and the result is stored in the Result argument.</span></span>|  
+|<span data-ttu-id="2cd73-140">ValidationError</span><span class="sxs-lookup"><span data-stu-id="2cd73-140">ValidationError</span></span>|<span data-ttu-id="2cd73-141">在执行前对目标对象验证 <xref:System.Workflow.Activities.Rules.RuleSet> 时由 WF 3.5 规则引擎返回的验证错误的列表。</span><span class="sxs-lookup"><span data-stu-id="2cd73-141">The list of validation errors returned by the WF 3.5 Rules Engine when validating the <xref:System.Workflow.Activities.Rules.RuleSet> against the target object before execution.</span></span>|  
   
-## ExternalizedPolicy4 活动设计器  
- 利用 ExternalizedPolicy4 设计器，可以将活动配置为使用现有 RuleSet 而不编写代码。仅设置 .rules 文件所在的路径并指定要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名称。还可以使用此设计器修改 <xref:System.Workflow.Activities.Rules.RuleSet>。生成解决方案之后，可以在工具箱中的“Microsoft.Samples.Activities.Rules”部分找到此功能。 可以利用此设计器选择 .rules 文件和 <xref:System.Workflow.Activities.Rules.RuleSet>。单击**“编辑 RuleSet”**按钮时，将显示 WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>。此对话框是重新承载的 WF 3.5 规则编辑器，它可用于查看和编辑 ExternalizedPolicy4 活动执行的规则。  
+## <a name="externalizedpolicy4-activity-designer"></a><span data-ttu-id="2cd73-142">ExternalizedPolicy4 活动设计器</span><span class="sxs-lookup"><span data-stu-id="2cd73-142">ExternalizedPolicy4 Activity Designer</span></span>  
+ <span data-ttu-id="2cd73-143">利用 ExternalizedPolicy4 设计器，可以将活动配置为使用现有 RuleSet 而不编写代码。</span><span class="sxs-lookup"><span data-stu-id="2cd73-143">The ExternalizedPolicy4 designer allows you to configure an activity to use an existing RuleSet without writing code.</span></span> <span data-ttu-id="2cd73-144">仅设置 .rules 文件所在的路径并指定要使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 名称。</span><span class="sxs-lookup"><span data-stu-id="2cd73-144">Just set the path where the .rules file is located and specify the <xref:System.Workflow.Activities.Rules.RuleSet> name that you want use.</span></span> <span data-ttu-id="2cd73-145">还可以使用此设计器修改 <xref:System.Workflow.Activities.Rules.RuleSet>。</span><span class="sxs-lookup"><span data-stu-id="2cd73-145">It also allows you to modify the <xref:System.Workflow.Activities.Rules.RuleSet>.</span></span> <span data-ttu-id="2cd73-146">生成解决方案之后，可以在工具箱中的“Microsoft.Samples.Activities.Rules”部分找到此功能。 </span><span class="sxs-lookup"><span data-stu-id="2cd73-146">After building the solution, it can be found in the toolbox in the section Microsoft.Samples.Activities.Rules.</span></span> <span data-ttu-id="2cd73-147">可以利用此设计器选择 .rules 文件和 <xref:System.Workflow.Activities.Rules.RuleSet>。</span><span class="sxs-lookup"><span data-stu-id="2cd73-147">The designer allows you to select a .rules file and a <xref:System.Workflow.Activities.Rules.RuleSet>.</span></span> <span data-ttu-id="2cd73-148">当**编辑 RuleSet**单击按钮时，WF 3.5<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>显示。</span><span class="sxs-lookup"><span data-stu-id="2cd73-148">When the **Edit RuleSet** button is clicked, the WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> is displayed.</span></span> <span data-ttu-id="2cd73-149">此对话框是重新承载的 WF 3.5 规则编辑器，它可用于查看和编辑 ExternalizedPolicy4 活动执行的规则。</span><span class="sxs-lookup"><span data-stu-id="2cd73-149">This dialog is the re-hosted WF 3.5 rules editor and it is used to view and edit the rules that the ExternalizedPolicy4 activity executes.</span></span>  
   
-## Policy4 和 ExternalPolicy4  
- [.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) 活动允许您在 WF 4.5 工作流中创建和执行 .NET Framework 3.5 RuleSet。<xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。  
+## <a name="policy4-and-externalpolicy4"></a><span data-ttu-id="2cd73-150">Policy4 和 ExternalPolicy4</span><span class="sxs-lookup"><span data-stu-id="2cd73-150">Policy4 and ExternalPolicy4</span></span>  
+ <span data-ttu-id="2cd73-151">[.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)活动允许您创建和执行 WF 4.5 工作流中的.NET Framework 3.5 规则集。</span><span class="sxs-lookup"><span data-stu-id="2cd73-151">The [Policy Activity in .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) activity allows you to create and execute a .NET Framework 3.5 RuleSet in a WF 4.5 workflow.</span></span> <span data-ttu-id="2cd73-152"><xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。</span><span class="sxs-lookup"><span data-stu-id="2cd73-152">The <xref:System.Workflow.Activities.Rules.RuleSet> is serialized inline in the Policy4 activity XAML definition.</span></span> <span data-ttu-id="2cd73-153">ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。</span><span class="sxs-lookup"><span data-stu-id="2cd73-153">The ExternalizedPolicy4 sample shows how to use an existing external <xref:System.Workflow.Activities.Rules.RuleSet> (contained in a .rules file).</span></span>  
   
-## 使用此示例  
- 无需进行特殊设置即可运行此示例。在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开解决方案，然后按 F5 运行应用程序。  
+## <a name="using-this-sample"></a><span data-ttu-id="2cd73-154">使用此示例</span><span class="sxs-lookup"><span data-stu-id="2cd73-154">Using this sample</span></span>  
+ <span data-ttu-id="2cd73-155">无需进行特殊设置即可运行此示例。</span><span class="sxs-lookup"><span data-stu-id="2cd73-155">No special set-up is required to run this sample.</span></span> <span data-ttu-id="2cd73-156">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开解决方案，然后按 F5 运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="2cd73-156">Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], and press F5 to run the application.</span></span>  
   
- 此示例包含两个客户端应用程序，即 ImperativeCodeClientSample 和 DesignerClientSample。ImperativeCodeClientSample 客户端演示如何使用 C\# 命令性代码来配置和运行 ExternalizedPolicy4 活动。DesignerClientSample 演示如何使用设计器配置和运行 ExternalizedPolicy4 活动。  
+ <span data-ttu-id="2cd73-157">此示例包含两个客户端应用程序，即 ImperativeCodeClientSample 和 DesignerClientSample。</span><span class="sxs-lookup"><span data-stu-id="2cd73-157">This sample contains two client applications: ImperativeCodeClientSample and DesignerClientSample.</span></span> <span data-ttu-id="2cd73-158">ImperativeCodeClientSample 客户端演示如何使用 C# 命令性代码来配置和运行 ExternalizedPolicy4 活动。</span><span class="sxs-lookup"><span data-stu-id="2cd73-158">The ImperativeCodeClientSample client shows how to configure and run the ExternalizedPolicy4 activity using C# imperative code.</span></span> <span data-ttu-id="2cd73-159">DesignerClientSample 演示如何使用设计器配置和运行 ExternalizedPolicy4 活动。</span><span class="sxs-lookup"><span data-stu-id="2cd73-159">The DesignerClientSample shows how to configure and run the ExternalizedPolicy4 activity using the designer.</span></span>  
   
-#### 运行 ImperativeCodeClientSample 应用程序  
+#### <a name="to-run-the-imperativecodeclientsample-application"></a><span data-ttu-id="2cd73-160">运行 ImperativeCodeClientSample 应用程序</span><span class="sxs-lookup"><span data-stu-id="2cd73-160">To run the ImperativeCodeClientSample application</span></span>  
   
-1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 Policy4sample.sln 解决方案文件。  
+1.  <span data-ttu-id="2cd73-161">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 Policy4sample.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="2cd73-161">Using the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Policy4sample.sln solution file.</span></span>  
   
-2.  在**“解决方案资源管理器”**中，右击**“ImperativeCodeClientSample”**项目，然后选择**“设为启动项目”**。  
+2.  <span data-ttu-id="2cd73-162">在**解决方案资源管理器**，右键单击**ImperativeCodeClientSample**项目，然后选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="2cd73-162">In **Solution Explorer**, right-click the **ImperativeCodeClientSample** project and then select **Set as startup project**.</span></span>  
   
-3.  若要运行项目，请按 Ctrl\+F5。  
+3.  <span data-ttu-id="2cd73-163">若要运行项目，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="2cd73-163">To run the project, press CTRL+F5.</span></span>  
   
-#### 运行 DesignerClientSample 应用程序  
+#### <a name="to-run-the-designerclientsample-application"></a><span data-ttu-id="2cd73-164">运行 DesignerClientSample 应用程序</span><span class="sxs-lookup"><span data-stu-id="2cd73-164">To run the DesignerClientSample application</span></span>  
   
-1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 Policy4sample.sln 解决方案文件。  
+1.  <span data-ttu-id="2cd73-165">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 Policy4sample.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="2cd73-165">Using the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Policy4sample.sln solution file.</span></span>  
   
-2.  在**“解决方案资源管理器”**中，右击**“DesignerClientSample”**项目，然后选择**“设为启动项目”**。  
+2.  <span data-ttu-id="2cd73-166">在**解决方案资源管理器**，右键单击**DesignerClientSample**项目，然后选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="2cd73-166">In **Solution Explorer**, right-click the **DesignerClientSample** project and then select **Set as startup project**.</span></span>  
   
-3.  请按 Ctrl\+Shift\+B 编译项目。  
+3.  <span data-ttu-id="2cd73-167">若要编译项目，请按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="2cd73-167">Press CTRL+SHIFT+B to compile the project.</span></span>  
   
-4.  按 Ctrl\+F5 运行项目。  
+4.  <span data-ttu-id="2cd73-168">按 Ctrl+F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="2cd73-168">Press CTRL+F5 to run the project.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="2cd73-169">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2cd73-169">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2cd73-170">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2cd73-170">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="2cd73-171">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="2cd73-171">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2cd73-172">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2cd73-172">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ExternalizedPolicy4`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-ExternalizedPolicy4`

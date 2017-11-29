@@ -1,102 +1,105 @@
 ---
-title: "排队通信的最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最佳做法 [WCF], 排队通信"
-  - "队列 [WCF], 最佳做法"
+title: "排队通信的最佳做法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queues [WCF], best practices
+- best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: db0506f6fbbda7758d4cbfc3624d68277a301268
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 排队通信的最佳做法
-本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信提供建议做法。以下各节从方案角度讨论建议的做法。  
+# <a name="best-practices-for-queued-communication"></a><span data-ttu-id="c4bf4-102">排队通信的最佳做法</span><span class="sxs-lookup"><span data-stu-id="c4bf4-102">Best Practices for Queued Communication</span></span>
+<span data-ttu-id="c4bf4-103">本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信提供建议做法。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-103">This topic provides recommended practices for queued communication in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="c4bf4-104">以下各节从方案角度讨论建议的做法。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-104">The following sections discuss recommended practices from a scenario perspective.</span></span>  
   
-## 快速、高效的排队消息处理  
- 如果方案需要排队消息处理所提供的分离，还需要具有高效保证的快速、高性能消息处理，请使用非事务性队列并将 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 属性设置为 `false`。  
+## <a name="fast-best-effort-queued-messaging"></a><span data-ttu-id="c4bf4-105">快速、高效的排队消息处理</span><span class="sxs-lookup"><span data-stu-id="c4bf4-105">Fast, Best-Effort Queued Messaging</span></span>  
+ <span data-ttu-id="c4bf4-106">如果方案需要排队消息处理所提供的分离，还需要具有高效保证的快速、高性能消息处理，请使用非事务性队列并将 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-106">For scenarios that require separation that queued messaging provides and fast, high-performance messaging with best-effort assurances, use a non-transactional queue and set the <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> property to `false`.</span></span>  
   
- 此外，将 <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性设置为 `false`，还可以选择不产生磁盘写入开销。  
+ <span data-ttu-id="c4bf4-107">此外，将 <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性设置为 `false`，还可以选择不产生磁盘写入开销。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-107">In addition, you can choose not to incur the cost of disk writes by setting the <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> property to `false`.</span></span>  
   
- 安全性对性能有影响。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][性能注意事项](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ <span data-ttu-id="c4bf4-108">安全性对性能有影响。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-108">Security has implications on performance.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-109">[性能注意事项](../../../../docs/framework/wcf/feature-details/performance-considerations.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-109"> [Performance Considerations](../../../../docs/framework/wcf/feature-details/performance-considerations.md).</span></span>  
   
-## 可靠的端对端排队消息处理  
- 以下各节介绍的建议做法适用于要求进行端对端可靠消息处理的方案。  
+## <a name="reliable-end-to-end-queued-messaging"></a><span data-ttu-id="c4bf4-110">可靠的端对端排队消息处理</span><span class="sxs-lookup"><span data-stu-id="c4bf4-110">Reliable End-to-End Queued Messaging</span></span>  
+ <span data-ttu-id="c4bf4-111">以下各节介绍的建议做法适用于要求进行端对端可靠消息处理的方案。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-111">The following sections describe recommended practices for scenarios that require end-to-end reliable messaging.</span></span>  
   
-### 基本可靠的传输  
- 要实现端对端可靠性，请将 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 属性设置为 `true` 以确保传输安全。<xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性可以设置为 `true` 或 `false`，具体取决于您的要求（默认值为 `true`）。作为端对端可靠性的一部分，<xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性通常设置为 `true`。代价是性能损失，但可使消息持久，这样，即使队列管理器崩溃，消息也不会丢失。  
+### <a name="basic-reliable-transfer"></a><span data-ttu-id="c4bf4-112">基本可靠的传输</span><span class="sxs-lookup"><span data-stu-id="c4bf4-112">Basic Reliable Transfer</span></span>  
+ <span data-ttu-id="c4bf4-113">要实现端对端可靠性，请将 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 属性设置为 `true` 以确保传输安全。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-113">For end-to-end reliability, set the <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> property to `true` to ensure transfer.</span></span> <span data-ttu-id="c4bf4-114"><xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性可以设置为 `true` 或 `false`，具体取决于您的要求（默认值为 `true`）。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-114">The <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> property can be set to `true` or `false` depending on your requirements (the default is `true`).</span></span> <span data-ttu-id="c4bf4-115">作为端对端可靠性的一部分，<xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性通常设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-115">Generally, the <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> property is set to `true` as part of end-to-end reliability.</span></span> <span data-ttu-id="c4bf4-116">代价是性能损失，但可使消息持久，这样，即使队列管理器崩溃，消息也不会丢失。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-116">The compromise is a performance cost, but makes the message durable so that the message is not lost if a queue manager crashes.</span></span>  
   
-### 事务的使用  
- 必须使用事务来确保端对端可靠性。`ExactlyOnce` 保证只能确保将消息传送到目标队列。若要确保接收到消息，请使用事务。如果不使用事务，在服务崩溃的情况下，将丢失虽然正在传递实际上已传送到应用程序的消息。  
+### <a name="use-of-transactions"></a><span data-ttu-id="c4bf4-117">事务的使用</span><span class="sxs-lookup"><span data-stu-id="c4bf4-117">Use of Transactions</span></span>  
+ <span data-ttu-id="c4bf4-118">必须使用事务来确保端对端可靠性。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-118">You must use transactions to ensure end-to-end reliability.</span></span> <span data-ttu-id="c4bf4-119">`ExactlyOnce` 保证只能确保将消息传送到目标队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-119">`ExactlyOnce` assurances only ensure that messages are delivered to the target queue.</span></span> <span data-ttu-id="c4bf4-120">若要确保接收到消息，请使用事务。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-120">To ensure that the message is received, use transactions.</span></span> <span data-ttu-id="c4bf4-121">如果不使用事务，在服务崩溃的情况下，将丢失虽然正在传递实际上已传送到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-121">Without transactions, if the service crashes, you lose the message that is being delivered but is actually delivered to the application.</span></span>  
   
-### 死信队列的使用  
- 死信队列可确保您在消息未能传递到目标队列时收到通知。您可以使用系统提供的死信队列，也可以使用自定义的死信队列。通常，最好使用自定义的死信队列，因为这样可以将死信消息从一个应用程序发送到单个死信队列。否则，系统上运行的所有应用程序产生的所有死信消息都会传递到单个队列。然后，每个应用程序都必须在该死信队列中搜索，寻找与自己相关的死信消息。有时，使用自定义死信队列并不可行，例如使用 MSMQ 3.0 时。  
+### <a name="use-of-dead-letter-queues"></a><span data-ttu-id="c4bf4-122">死信队列的使用</span><span class="sxs-lookup"><span data-stu-id="c4bf4-122">Use of Dead-letter Queues</span></span>  
+ <span data-ttu-id="c4bf4-123">死信队列可确保您在消息未能传递到目标队列时收到通知。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-123">Dead-letter queues ensure that you are notified if a message fails to be delivered to the target queue.</span></span> <span data-ttu-id="c4bf4-124">您可以使用系统提供的死信队列，也可以使用自定义的死信队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-124">You can use the system-provided dead-letter queue or a custom dead-letter queue.</span></span> <span data-ttu-id="c4bf4-125">通常，最好使用自定义的死信队列，因为这样可以将死信消息从一个应用程序发送到单个死信队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-125">In general, using a custom dead-letter queue is best because it enables you to send dead-letter messages from one application into a single dead-letter queue.</span></span> <span data-ttu-id="c4bf4-126">否则，系统上运行的所有应用程序产生的所有死信消息都会传递到单个队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-126">Otherwise, all dead-letter messages that occur for all applications running on the system are delivered to a single queue.</span></span> <span data-ttu-id="c4bf4-127">然后，每个应用程序都必须在该死信队列中搜索，寻找与自己相关的死信消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-127">Each application must then search though the dead-letter queue to find the dead-letter messages that are relevant to that application.</span></span> <span data-ttu-id="c4bf4-128">有时，使用自定义死信队列并不可行，例如使用 MSMQ 3.0 时。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-128">Sometimes, using a custom dead-letter queue is not feasible, such as when using MSMQ 3.0.</span></span>  
   
- 不建议为端对端可靠通信关闭死信队列。  
+ <span data-ttu-id="c4bf4-129">不建议为端对端可靠通信关闭死信队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-129">Turning off dead-letter queues for end-to-end reliable communication is not recommended.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-130">[使用的死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-130"> [Using Dead-Letter Queues to Handle Message Transfer Failures](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).</span></span>  
   
-### 病毒消息处理的使用  
- 通过病毒消息处理，可从消息处理失败的状态下恢复。  
+### <a name="use-of-poison-message-handling"></a><span data-ttu-id="c4bf4-131">病毒消息处理的使用</span><span class="sxs-lookup"><span data-stu-id="c4bf4-131">Use of Poison-Message Handling</span></span>  
+ <span data-ttu-id="c4bf4-132">通过病毒消息处理，可从消息处理失败的状态下恢复。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-132">Poison-message handling provides the ability to recover from the failure to process messages.</span></span>  
   
- 在使用病毒消息处理功能时，请确保将 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 属性设置为适当的值。将该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling> 表示数据丢失。另一方面，如果该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling>，服务主机一旦检测到病毒消息，则被视为出现了错误。使用 MSMQ 3.0 时，最好使用 <xref:System.ServiceModel.ReceiveErrorHandling> 来避免数据丢失并移出病毒消息。使用 MSMQ 4.0 时，建议使用 <xref:System.ServiceModel.ReceiveErrorHandling>。<xref:System.ServiceModel.ReceiveErrorHandling> 将病毒消息移出队列，以便服务可以继续处理新消息。这样，病毒消息服务就可以单独处理病毒消息。  
+ <span data-ttu-id="c4bf4-133">在使用病毒消息处理功能时，请确保将 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-133">When using the poison-message handling feature, ensure that the <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> property is set to the appropriate value.</span></span> <span data-ttu-id="c4bf4-134">将该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示数据丢失。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-134">Setting it to <xref:System.ServiceModel.ReceiveErrorHandling.Drop> means the data is lost.</span></span> <span data-ttu-id="c4bf4-135">另一方面，如果该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>，服务主机一旦检测到病毒消息，则被视为出现了错误。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-135">On the other hand, setting it to <xref:System.ServiceModel.ReceiveErrorHandling.Fault> faults the service host when it detects a poison message.</span></span> <span data-ttu-id="c4bf4-136">使用 MSMQ 3.0 时，最好使用 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 来避免数据丢失并移出病毒消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-136">Using MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> is the best option to avoid data loss and move the poison message out of the way.</span></span> <span data-ttu-id="c4bf4-137">使用 MSMQ 4.0 时，建议使用 <xref:System.ServiceModel.ReceiveErrorHandling.Move>。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-137">Using MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> is the recommended approach.</span></span> <span data-ttu-id="c4bf4-138"><xref:System.ServiceModel.ReceiveErrorHandling.Move> 将病毒消息移出队列，以便服务可以继续处理新消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-138"><xref:System.ServiceModel.ReceiveErrorHandling.Move> moves a poisoned message out of the queue so the service can continue to process new messages.</span></span> <span data-ttu-id="c4bf4-139">这样，病毒消息服务就可以单独处理病毒消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-139">The poison-message service can then process the poison message separately.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-140">[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-140"> [Poison Message Handling](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).</span></span>  
   
-## 实现高吞吐量  
- 若要在单个终结点上实现高吞吐量，请使用下面的方法：  
+## <a name="achieving-high-throughput"></a><span data-ttu-id="c4bf4-141">实现高吞吐量</span><span class="sxs-lookup"><span data-stu-id="c4bf4-141">Achieving High Throughput</span></span>  
+ <span data-ttu-id="c4bf4-142">若要在单个终结点上实现高吞吐量，请使用下面的方法：</span><span class="sxs-lookup"><span data-stu-id="c4bf4-142">To achieve high throughput on a single endpoint, use the following:</span></span>  
   
--   事务处理批处理。事务处理批处理可确保在单个事务中能够读取多个消息。这样可优化事务提交，从而提高整体性能。批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   <span data-ttu-id="c4bf4-143">事务处理批处理。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-143">Transacted batching.</span></span> <span data-ttu-id="c4bf4-144">事务处理批处理可确保在单个事务中能够读取多个消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-144">Transacted batching ensures that many messages can be read in a single transaction.</span></span> <span data-ttu-id="c4bf4-145">这样可优化事务提交，从而提高整体性能。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-145">This optimizes transaction commits, increasing overall performance.</span></span> <span data-ttu-id="c4bf4-146">批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-146">The cost of batching is that if a failure occurs in a single message within a batch, then the entire batch is rolled back and the messages must be processed one at a time until it is safe to batch again.</span></span> <span data-ttu-id="c4bf4-147">大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-147">In most cases, poison messages are rare, so batching is the preferred way to increase system performance, particularly when you have other resource managers that participate in the transaction.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-148">[对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-148"> [Batching Messages in a Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).</span></span>  
   
--   并发。并发可增加吞吐量，但并发也会影响对共享资源的争用。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][并发](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   <span data-ttu-id="c4bf4-149">并发。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-149">Concurrency.</span></span> <span data-ttu-id="c4bf4-150">并发可增加吞吐量，但并发也会影响对共享资源的争用。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-150">Concurrency increases throughput, but concurrency also affects contention to shared resources.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-151">[并发](../../../../docs/framework/wcf/samples/concurrency.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-151"> [Concurrency](../../../../docs/framework/wcf/samples/concurrency.md).</span></span>  
   
--   遏制。要实现最佳性能，需要遏制调度程序管线中的消息数。有关如何进行遏制的示例，请参见[遏制](../../../../docs/framework/wcf/samples/throttling.md)。  
+-   <span data-ttu-id="c4bf4-152">遏制。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-152">Throttling.</span></span> <span data-ttu-id="c4bf4-153">要实现最佳性能，需要遏制调度程序管线中的消息数。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-153">For optimal performance, throttle the number of messages in the dispatcher pipeline.</span></span> <span data-ttu-id="c4bf4-154">有关如何执行此操作的示例，请参阅[限制](../../../../docs/framework/wcf/samples/throttling.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-154">For an example of how to do this, see [Throttling](../../../../docs/framework/wcf/samples/throttling.md).</span></span>  
   
- 使用批处理时，应注意并发和遏制转换为并发批处理。  
+ <span data-ttu-id="c4bf4-155">使用批处理时，应注意并发和遏制转换为并发批处理。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-155">When using batching, be aware that concurrency and throttling translate to concurrent batches.</span></span>  
   
- 若要实现高吞吐量和可用性，请使用从队列中进行读取操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务场。这要求所有这些服务都在相同的终结点上公开相同的协定。场方法最适用于具有高消息产生率的应用程序，因为它使大量服务都从同一队列中进行读取操作。  
+ <span data-ttu-id="c4bf4-156">若要实现高吞吐量和可用性，请使用从队列中进行读取操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务场。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-156">To achieve higher throughput and availability, use a farm of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that read from the queue.</span></span> <span data-ttu-id="c4bf4-157">这要求所有这些服务都在相同的终结点上公开相同的协定。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-157">This requires that all of these services expose the same contract on the same endpoint.</span></span> <span data-ttu-id="c4bf4-158">场方法最适用于具有高消息产生率的应用程序，因为它使大量服务都从同一队列中进行读取操作。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-158">The farm approach works best for applications that have high production rates of messages because it enables a number of services to all read from the same queue.</span></span>  
   
- 使用场时，应注意 MSMQ 3.0 不支持远程事务处理读取。MSMQ 4.0 支持远程事务处理读取。  
+ <span data-ttu-id="c4bf4-159">使用场时，应注意 MSMQ 3.0 不支持远程事务处理读取。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-159">When using farms, be aware that MSMQ 3.0 does not support remote transacted reads.</span></span> <span data-ttu-id="c4bf4-160">MSMQ 4.0 支持远程事务处理读取。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-160">MSMQ 4.0 does support remote transacted reads.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) 和 [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-161">[对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)和[Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-161"> [Batching Messages in a Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) and [Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).</span></span>  
   
-## 以工作语义为单元排队  
- 某些情况下，队列中的一组消息可能具有相关性，因此这些消息的顺序很重要。在这些情况下，将一组相关消息作为单个单元进行处理：要么成功处理所有消息，要么所有消息的处理都不成功。若要实现这样的行为，请将会话用于队列。  
+## <a name="queuing-with-unit-of-work-semantics"></a><span data-ttu-id="c4bf4-162">以工作语义为单元排队</span><span class="sxs-lookup"><span data-stu-id="c4bf4-162">Queuing with Unit of Work Semantics</span></span>  
+ <span data-ttu-id="c4bf4-163">某些情况下，队列中的一组消息可能具有相关性，因此这些消息的顺序很重要。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-163">In some scenarios a group of messages in a queue may be related and, therefore, the ordering of these messages is significant.</span></span> <span data-ttu-id="c4bf4-164">在这些情况下，将一组相关消息作为单个单元进行处理：要么成功处理所有消息，要么所有消息的处理都不成功。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-164">In such scenarios, process a group of related messages together as a single unit: either all of the messages are processed successfully or none are.</span></span> <span data-ttu-id="c4bf4-165">若要实现这样的行为，请将会话用于队列。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-165">To implement such behavior, use sessions with queues.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [在会话中对排队消息进行分组](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c4bf4-166">[分组在会话中的排队的消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-166"> [Grouping Queued Messages in a Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span></span>  
   
-## 关联请求\-回复消息  
- 虽然队列一般是单向的，但在某些情况下，可能希望将接收到的回复关联到先前发送的请求。如果需要此类关联，建议应用自己的 SOAP 消息头，它包含消息的关联信息。通常，发送方将此标头附加到消息，接收方处理消息并在回复队列中用新消息回复时，会附加发送方的消息头，消息头包含关联信息，这样发送方就能通过请求消息识别出回复消息。  
+## <a name="correlating-request-reply-messages"></a><span data-ttu-id="c4bf4-167">关联请求-回复消息</span><span class="sxs-lookup"><span data-stu-id="c4bf4-167">Correlating Request-Reply Messages</span></span>  
+ <span data-ttu-id="c4bf4-168">虽然队列一般是单向的，但在某些情况下，可能希望将接收到的回复关联到先前发送的请求。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-168">Though queues are typically one-way, in some scenarios you may want to correlate a reply received to a request sent earlier.</span></span> <span data-ttu-id="c4bf4-169">如果需要此类关联，建议应用自己的 SOAP 消息头，它包含消息的关联信息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-169">If you require such correlation, it is recommended that you apply your own SOAP message header that contains correlation information with the message.</span></span> <span data-ttu-id="c4bf4-170">通常，发送方将此标头附加到消息，接收方处理消息并在回复队列中用新消息回复时，会附加发送方的消息头，消息头包含关联信息，这样发送方就能通过请求消息识别出回复消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-170">Typically, the sender attaches this header with the message, and the receiver, upon processing the message and replying back with a new message on a reply queue, attaches the sender's message header that contains the correlation information so that the sender can identify the reply message with the request message.</span></span>  
   
-## 集成非 WCF 应用程序  
- 当集成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或客户端与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或客户端时，可使用 `MsmqIntegrationBinding`。非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序可以是一个使用 System.Messaging、COM\+、[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 C\+\+ 编写的 MSMQ 应用程序。  
+## <a name="integrating-with-non-wcf-applications"></a><span data-ttu-id="c4bf4-171">集成非 WCF 应用程序</span><span class="sxs-lookup"><span data-stu-id="c4bf4-171">Integrating with Non-WCF Applications</span></span>  
+ <span data-ttu-id="c4bf4-172">当集成 `MsmqIntegrationBinding` 服务或客户端与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务或客户端时，可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-172">Use `MsmqIntegrationBinding` when integrating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services or clients with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services or clients.</span></span> <span data-ttu-id="c4bf4-173">非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序可以是一个使用 System.Messaging、COM+、[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 C++ 编写的 MSMQ 应用程序。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-173">The non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application can be an MSMQ application written using System.Messaging, COM+, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], or C++.</span></span>  
   
- 使用 `MsmqIntegrationBinding` 时，应注意以下几点：  
+ <span data-ttu-id="c4bf4-174">使用 `MsmqIntegrationBinding` 时，应注意以下几点：</span><span class="sxs-lookup"><span data-stu-id="c4bf4-174">When using `MsmqIntegrationBinding`, be aware of the following:</span></span>  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文与 MSMQ 消息正文不同。使用排队绑定发送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文置于 MSMQ 消息内。MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。  
+-   <span data-ttu-id="c4bf4-175">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文与 MSMQ 消息正文不同。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-175">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message body is not the same as a MSMQ message body.</span></span> <span data-ttu-id="c4bf4-176">使用排队绑定发送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息正文置于 MSMQ 消息内。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-176">When sending a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message using a queued binding, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message body is placed inside of a MSMQ message.</span></span> <span data-ttu-id="c4bf4-177">MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-177">The MSMQ infrastructure is oblivious to this extra information; it sees only the MSMQ message.</span></span>  
   
--   `MsmqIntegrationBinding` 支持常见的序列化类型。根据序列化类型和一般消息的正文类型，<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 采用不同的类型参数。例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat> 需要 `MsmqMessage\<byte[]>` 而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat> 需要 `MsmqMessage<Stream>`。  
+-   <span data-ttu-id="c4bf4-178">`MsmqIntegrationBinding` 支持常见的序列化类型。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-178">`MsmqIntegrationBinding` supports popular serialization types.</span></span> <span data-ttu-id="c4bf4-179">根据序列化类型和一般消息的正文类型，<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 采用不同的类型参数。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-179">Based on the serialization type, the body type of the generic message, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, takes different type parameters.</span></span> <span data-ttu-id="c4bf4-180">例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>` 而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-180">For example, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requires `MsmqMessage\<byte[]>` and <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requires `MsmqMessage<Stream>`.</span></span>  
   
--   对于 XML 序列化，可以使用 `KnownTypes` 属性在 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 元素上指定已知类型，然后使用该元素确定反序列化 XML 消息的方式。  
+-   <span data-ttu-id="c4bf4-181">使用 XML 序列化，您可以指定已知的类型使用`KnownTypes`属性[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素，然后将其用于确定如何反序列化 XML 消息。</span><span class="sxs-lookup"><span data-stu-id="c4bf4-181">With XML serialization, you can specify the known type using the `KnownTypes` attribute on the [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element that is then used to determine how to deserialize the XML message.</span></span>  
   
-## 请参阅  
- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)   
- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)   
- [在会话中对排队消息进行分组](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)   
- [在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)   
- [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)   
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)   
- [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)   
- [使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)   
- [使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)   
- [排队消息处理疑难解答](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+## <a name="see-also"></a><span data-ttu-id="c4bf4-182">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c4bf4-182">See Also</span></span>  
+ [<span data-ttu-id="c4bf4-183">在 WCF 中排队</span><span class="sxs-lookup"><span data-stu-id="c4bf4-183">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [<span data-ttu-id="c4bf4-184">如何： 交换排队消息的 WCF 终结点</span><span class="sxs-lookup"><span data-stu-id="c4bf4-184">How to: Exchange Queued Messages with WCF Endpoints</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [<span data-ttu-id="c4bf4-185">如何： 与 WCF 终结点交换消息和消息队列应用程序</span><span class="sxs-lookup"><span data-stu-id="c4bf4-185">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [<span data-ttu-id="c4bf4-186">分组在会话中排入队列消息</span><span class="sxs-lookup"><span data-stu-id="c4bf4-186">Grouping Queued Messages in a Session</span></span>](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [<span data-ttu-id="c4bf4-187">对在事务中的消息进行批处理</span><span class="sxs-lookup"><span data-stu-id="c4bf4-187">Batching Messages in a Transaction</span></span>](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [<span data-ttu-id="c4bf4-188">使用死信队列来处理消息传输故障</span><span class="sxs-lookup"><span data-stu-id="c4bf4-188">Using Dead-Letter Queues to Handle Message Transfer Failures</span></span>](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [<span data-ttu-id="c4bf4-189">病毒消息处理</span><span class="sxs-lookup"><span data-stu-id="c4bf4-189">Poison Message Handling</span></span>](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ [<span data-ttu-id="c4bf4-190">Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异</span><span class="sxs-lookup"><span data-stu-id="c4bf4-190">Differences in Queuing Features in Windows Vista, Windows Server 2003, and Windows XP</span></span>](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [<span data-ttu-id="c4bf4-191">使用传输安全保护消息</span><span class="sxs-lookup"><span data-stu-id="c4bf4-191">Securing Messages Using Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [<span data-ttu-id="c4bf4-192">使用消息安全保护消息</span><span class="sxs-lookup"><span data-stu-id="c4bf4-192">Securing Messages Using Message Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [<span data-ttu-id="c4bf4-193">排队消息处理疑难解答</span><span class="sxs-lookup"><span data-stu-id="c4bf4-193">Troubleshooting Queued Messaging</span></span>](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

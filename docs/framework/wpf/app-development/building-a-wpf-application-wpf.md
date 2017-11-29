@@ -1,77 +1,81 @@
 ---
-title: "生成 WPF 应用程序 (WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WPF 应用程序, 生成"
+title: "生成 WPF 应用程序 (WPF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 45
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 42
+caps.latest.revision: "45"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cc027381ec8a5311d53077f103be035dd6c311d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 生成 WPF 应用程序 (WPF)
-可以将 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序生成为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 \(.exe\)、库 \(.dll\) 或这两种类型的程序集的组合。  本主题介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并介绍生成过程的关键步骤。  
+# <a name="building-a-wpf-application-wpf"></a><span data-ttu-id="4b857-102">生成 WPF 应用程序 (WPF)</span><span class="sxs-lookup"><span data-stu-id="4b857-102">Building a WPF Application (WPF)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="4b857-103"> 应用程序可以以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 (.exe)、库 (.dll) 或这两类程序集相结合的形式来生成。</span><span class="sxs-lookup"><span data-stu-id="4b857-103"> applications can be built as [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] executables (.exe), libraries (.dll), or a combination of both types of assemblies.</span></span> <span data-ttu-id="4b857-104">本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。</span><span class="sxs-lookup"><span data-stu-id="4b857-104">This topic introduces how to build [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications and describes the key steps in the build process.</span></span>  
   
-   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
-## 生成 WPF 应用程序  
- 可以通过以下方式编译 WPF 应用程序：  
+## <a name="building-a-wpf-application"></a><span data-ttu-id="4b857-105">生成 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="4b857-105">Building a WPF Application</span></span>  
+ <span data-ttu-id="4b857-106">WPF 应用程序可通过以下方式编译：</span><span class="sxs-lookup"><span data-stu-id="4b857-106">A WPF application can be compiled in the following ways:</span></span>  
   
--   命令行。  应用程序必须只包含代码（不是 XAML）和应用程序定义文件。  有关更多信息，请参见[在命令行上使用 csc.exe 生成](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成 \(Visual Basic\)](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md)。  
+-   <span data-ttu-id="4b857-107">命令行。</span><span class="sxs-lookup"><span data-stu-id="4b857-107">Command-line.</span></span> <span data-ttu-id="4b857-108">应用程序必须只包含代码（并非 XAML）和一个应用程序定义文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-108">The application must contain only code (no XAML) and an application definition file.</span></span> <span data-ttu-id="4b857-109">有关详细信息，请参阅[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[从命令行生成 (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="4b857-109">For more information, see [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) or [Building from the Command Line (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
   
--   Microsoft Build Engine \(MSBuild\)。  除代码和 XAML 文件之外，应用程序还必须包含 MSBuild 项目文件。  有关更多信息，请参见 [MSBuild](../Topic/MSBuild1.md)。  
+-   <span data-ttu-id="4b857-110">Microsoft 生成引擎 (MSBuild)。</span><span class="sxs-lookup"><span data-stu-id="4b857-110">Microsoft Build Engine (MSBuild).</span></span> <span data-ttu-id="4b857-111">除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-111">In addition to the code and XAML files, the application must contain an MSBuild project file.</span></span> <span data-ttu-id="4b857-112">有关详细信息，请参阅“MSBuild”。</span><span class="sxs-lookup"><span data-stu-id="4b857-112">For more information, see "MSBuild".</span></span>  
   
--   Visual Studio。  Visual Studio 是一个集成开发环境，可以通过 MSBuild 来编译 WPF 应用程序，并包含用于创建 UI 的可视化设计器。  有关更多信息，请参见 [Visual Studio 中的应用程序开发](http://msdn.microsoft.com/zh-cn/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)。  
+-   <span data-ttu-id="4b857-113">Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="4b857-113">Visual Studio.</span></span> <span data-ttu-id="4b857-114">Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。</span><span class="sxs-lookup"><span data-stu-id="4b857-114">Visual Studio is an integrated development environment that compiles WPF applications with MSBuild and includes a visual designer for creating UI.</span></span> <span data-ttu-id="4b857-115">有关详细信息，请参阅 [Visual Studio 中的应用程序开发](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68)和 [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。</span><span class="sxs-lookup"><span data-stu-id="4b857-115">For more information, see [Application Development in Visual Studio](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68) and [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).</span></span>  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
-## WPF 生成管道  
- 生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目时，将调用特定于语言的目标和特定于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的目标的组合。  执行这些目标的过程称为生成管线，下图阐释了其主要步骤。  
+## <a name="wpf-build-pipeline"></a><span data-ttu-id="4b857-116">WPF 生成管道</span><span class="sxs-lookup"><span data-stu-id="4b857-116">WPF Build Pipeline</span></span>  
+ <span data-ttu-id="4b857-117">在生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目时，会组合调用特定于语言的目标和特定于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的目标。</span><span class="sxs-lookup"><span data-stu-id="4b857-117">When a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] project is built, the combination of language-specific and [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-specific targets are invoked.</span></span> <span data-ttu-id="4b857-118">执行这些目标的进程被称为生成管道，相关的关键步骤已显示在下图中。</span><span class="sxs-lookup"><span data-stu-id="4b857-118">The process of executing these targets is called the build pipeline, and the key steps are illustrated by the following figure.</span></span>  
   
- ![WPF 生成过程](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem\_Figure1")  
+ <span data-ttu-id="4b857-119">![WPF 生成过程](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")</span><span class="sxs-lookup"><span data-stu-id="4b857-119">![WPF build process](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")</span></span>  
   
 <a name="Pre_Build_Initializations"></a>   
-### 预生成初始化  
- 进行生成之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 会确定重要工具和库的位置，其中包括：  
+### <a name="pre-build-initializations"></a><span data-ttu-id="4b857-120">预生成初始化</span><span class="sxs-lookup"><span data-stu-id="4b857-120">Pre-Build Initializations</span></span>  
+ <span data-ttu-id="4b857-121">在生成之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 会先确定重要工具和库的相应位置，其中包括：</span><span class="sxs-lookup"><span data-stu-id="4b857-121">Before building, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] determines the location of important tools and libraries, including the following:</span></span>  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。  
+-   <span data-ttu-id="4b857-122">[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4b857-122">The [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].</span></span>  
   
--   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目录。  
+-   <span data-ttu-id="4b857-123">[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目录。</span><span class="sxs-lookup"><span data-stu-id="4b857-123">The [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] directories.</span></span>  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 引用程序集的位置。  
+-   <span data-ttu-id="4b857-124">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 引用程序集的位置。</span><span class="sxs-lookup"><span data-stu-id="4b857-124">The location of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] reference assemblies.</span></span>  
   
--   程序集搜索路径的属性。  
+-   <span data-ttu-id="4b857-125">程序集搜索路径的属性。</span><span class="sxs-lookup"><span data-stu-id="4b857-125">The property for the assembly search paths.</span></span>  
   
- [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 搜索程序集的第一个位置是引用程序集目录 \(%ProgramFiles%\\Reference Assemblies\\Microsoft\\Framework\\v3.0\\\)。  在执行此步骤的过程中，生成过程还初始化各种属性和项组，并且执行任何必要的清理工作。  
+ <span data-ttu-id="4b857-126">[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 首先会在引用程序集目录 (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\) 中搜索程序集。</span><span class="sxs-lookup"><span data-stu-id="4b857-126">The first location where [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] searches for assemblies is the reference assembly directory (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\).</span></span> <span data-ttu-id="4b857-127">在执行这个步骤时，生成进程还会初始化各种属性和项组，并执行所有必要的清理工作。</span><span class="sxs-lookup"><span data-stu-id="4b857-127">During this step, the build process also initializes the various properties and item groups and performs any required cleanup work.</span></span>  
   
 <a name="Resolving_references"></a>   
-### 解析引用  
- 生成过程定位并绑定生成应用程序项目所需的程序集。  此逻辑包含在 `ResolveAssemblyReference` 任务中。  在项目文件中声明为 `Reference` 的所有程序集都被提供给该任务，同时提供给该任务的还有关于搜索路径的信息以及系统上已经安装的程序集中的元数据。  该任务查找程序集，并且使用已安装的程序集的元数据来筛选掉那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。  这样做的目的是避免在 ClickOnce 清单中出现多余的信息。  例如，因为可以将 PresentationFramework.dll 视为在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 上为其生成的应用程序的代表性程序集，而且因为所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集在每台安装了 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的计算机上都存在于同一位置，所以无需在清单中包含有关所有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 引用程序集的所有信息。  
+### <a name="resolving-references"></a><span data-ttu-id="4b857-128">解析引用</span><span class="sxs-lookup"><span data-stu-id="4b857-128">Resolving References</span></span>  
+ <span data-ttu-id="4b857-129">生成进程会查找并绑定生成应用程序项目所需的程序集。</span><span class="sxs-lookup"><span data-stu-id="4b857-129">The build process locates and binds the assemblies required to build the application project.</span></span> <span data-ttu-id="4b857-130">这个逻辑包含在 `ResolveAssemblyReference` 任务中。</span><span class="sxs-lookup"><span data-stu-id="4b857-130">This logic is contained in the `ResolveAssemblyReference` task.</span></span> <span data-ttu-id="4b857-131">在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。</span><span class="sxs-lookup"><span data-stu-id="4b857-131">All assemblies declared as `Reference` in the project file are provided to the task along with information on the search paths and metadata on assemblies already installed on the system.</span></span> <span data-ttu-id="4b857-132">该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。</span><span class="sxs-lookup"><span data-stu-id="4b857-132">The task looks up assemblies and uses the installed assembly's metadata to filter out those core [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assemblies that need not show up in the output manifests.</span></span> <span data-ttu-id="4b857-133">这么做可以避免 ClickOnce 清单中出现冗余信息。</span><span class="sxs-lookup"><span data-stu-id="4b857-133">This is done to avoid redundant information in the ClickOnce manifests.</span></span> <span data-ttu-id="4b857-134">例如，由于 PresentationFramework.dll 可能会被视为代表基于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 和为其所生成的应用程序，而且每台计算机上的所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集都存放在 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的安装位置，因此无需将所有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 引用程序集的所有相关信息都包含到清单中。</span><span class="sxs-lookup"><span data-stu-id="4b857-134">For example, since PresentationFramework.dll can be considered representative of an application built on and for the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] and moreover since all [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assemblies exist at the same location on every machine that has the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] installed, there is no need to include all information on all [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] reference assemblies in the manifests.</span></span>  
   
 <a name="Markup_Compilation___Pass_1"></a>   
-### 标记编译 — 第 1 趟  
- 在此步骤中，将分析和编译 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，以使运行时无需花费时间来分析 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 和验证属性值。  编译后的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件被预先标记化，以便在运行时能够以比加载 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件快得多的速度加载它。  
+### <a name="markup-compilationpass-1"></a><span data-ttu-id="4b857-135">标记编译 - 第 1 次传递</span><span class="sxs-lookup"><span data-stu-id="4b857-135">Markup Compilation—Pass 1</span></span>  
+ <span data-ttu-id="4b857-136">这个步骤会分析并编译 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，这样运行时便无需再花时间来分析 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 并验证属性值。</span><span class="sxs-lookup"><span data-stu-id="4b857-136">In this step, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files are parsed and compiled so that the runtime does not spend time parsing [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] and validating property values.</span></span> <span data-ttu-id="4b857-137">编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件会进行预标记，因此其在运行时的加载速度应该要远高于 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件的加载速度。</span><span class="sxs-lookup"><span data-stu-id="4b857-137">The compiled [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file is pre-tokenized so that, at run time, loading it should be much faster than loading a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file.</span></span>  
   
- 在执行此步骤的过程中，对于每个作为 `Page` 生成项的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，都将发生下列活动：  
+ <span data-ttu-id="4b857-138">这个步骤会针对属于 `Page` 生成项的每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件完成以下活动：</span><span class="sxs-lookup"><span data-stu-id="4b857-138">During this step, the following activities take place for every [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file that is a `Page` build item:</span></span>  
   
-1.  标记编译器对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析。  
+1.  <span data-ttu-id="4b857-139">由标记编译器对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析。</span><span class="sxs-lookup"><span data-stu-id="4b857-139">The [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file is parsed by the markup compiler.</span></span>  
   
-2.  为该 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 创建编译表示形式并将其复制到 obj\\Release 文件夹。  
+2.  <span data-ttu-id="4b857-140">创建编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并将其复制到 obj\Release 文件夹。</span><span class="sxs-lookup"><span data-stu-id="4b857-140">A compiled representation is created for that [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and copied to the obj\Release folder.</span></span>  
   
-3.  创建新的分部类的 CodeDOM 表示形式并将其复制到 obj\\Release 文件夹。  
+3.  <span data-ttu-id="4b857-141">创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。</span><span class="sxs-lookup"><span data-stu-id="4b857-141">A CodeDOM representation of a new partial class is created and copied to the obj\Release folder.</span></span>  
   
- 此外，为每个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。例如，为 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 项目中的 Page1.xaml 页生成 Page1.g.vb；为 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 项目中的 Page1.xaml 页生成 Page1.g.cs。  文件名中的“.g”指示该文件是生成的代码，其中包含标记文件的顶级元素（例如，`Page` 或 `Window`）的分部类声明。  该类使用 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 中的 `partial` 修饰符（或 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 中的 `Extends` 修饰符）进行声明，以指示在其他位置（通常是在代码隐藏文件 Page1.xaml.cs 中）存在该类的另一个声明。  
+ <span data-ttu-id="4b857-142">另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-142">In addition, a language-specific code file is generated for every [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file.</span></span> <span data-ttu-id="4b857-143">例如，对于 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 项目中的 Page1.xaml 页面，会生成 Page1.g.vb；对于 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 项目中的 Page1.xaml 页面，会生成 Page1.g.cs。</span><span class="sxs-lookup"><span data-stu-id="4b857-143">For example, for a Page1.xaml page in a [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] project, a Page1.g.vb is generated; for a Page1.xaml page in a [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] project, a Page1.g.cs is generated.</span></span> <span data-ttu-id="4b857-144">文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。</span><span class="sxs-lookup"><span data-stu-id="4b857-144">The ".g" in the file name indicates the file is generated code that has a partial class declaration for the top-level element of the markup file (such as `Page` or `Window`).</span></span> <span data-ttu-id="4b857-145">在 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 中，该类使用 `partial` 修饰符来声明（在 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 中则使用 `Extends`），以表明该类在其他位置（通常是在代码隐藏文件 page1.xaml.cs 中）还存在另一声明。</span><span class="sxs-lookup"><span data-stu-id="4b857-145">The class is declared with the `partial` modifier in [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] (`Extends` in [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]) to indicate there is another declaration for the class elsewhere, usually in the code-behind file Page1.xaml.cs.</span></span>  
   
- 该分部类从适当的基类（例如页的 <xref:System.Windows.Controls.Page>）进行扩展，并且实现 <xref:System.Windows.Markup.IComponentConnector?displayProperty=fullName> 接口。  <xref:System.Windows.Markup.IComponentConnector> 接口具有相应的方法，可用来初始化组件以及连接其内容中的元素上的名称和事件。  因此，生成的代码文件具有如下所示的方法实现：  
+ <span data-ttu-id="4b857-146">分部类扩展从适当的基类 (如<xref:System.Windows.Controls.Page>页) 并实现<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>接口。</span><span class="sxs-lookup"><span data-stu-id="4b857-146">The partial class extends from the appropriate base class (such as <xref:System.Windows.Controls.Page> for a page) and implements the <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="4b857-147"><xref:System.Windows.Markup.IComponentConnector>接口具有初始化组件和连接名称和其内容中的元素上的事件的方法。</span><span class="sxs-lookup"><span data-stu-id="4b857-147">The <xref:System.Windows.Markup.IComponentConnector> interface has methods to initialize a component and connect names and events on elements in its content.</span></span> <span data-ttu-id="4b857-148">因此，生成的代码文件中都包含如下所示的方法实现：</span><span class="sxs-lookup"><span data-stu-id="4b857-148">Consequently, the generated code file has a method implementation like the following:</span></span>  
   
 ```csharp  
 public void InitializeComponent() {  
@@ -103,76 +107,76 @@ Public Sub InitializeComponent() _
 End Sub  
 ```  
   
- 默认情况下，标记编译在与 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 引擎相同的 <xref:System.AppDomain> 中运行。  这样可以显著提高性能。  可以使用 `AlwaysCompileMarkupFilesInSeparateDomain` 属性切换此行为。  其优点是可以通过卸载单独的 <xref:System.AppDomain> 来卸载所有引用程序集。  
+ <span data-ttu-id="4b857-149">默认情况下，标记编译运行在同一<xref:System.AppDomain>作为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]引擎。</span><span class="sxs-lookup"><span data-stu-id="4b857-149">By default, markup compilation runs in the same <xref:System.AppDomain> as the [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] engine.</span></span> <span data-ttu-id="4b857-150">这可以显著提高性能。</span><span class="sxs-lookup"><span data-stu-id="4b857-150">This provides significant performance gains.</span></span> <span data-ttu-id="4b857-151">此行为可通过 `AlwaysCompileMarkupFilesInSeparateDomain` 属性来切换。</span><span class="sxs-lookup"><span data-stu-id="4b857-151">This behavior can be toggled with the `AlwaysCompileMarkupFilesInSeparateDomain` property.</span></span> <span data-ttu-id="4b857-152">这样做的卸载单独卸载所有的引用程序集的优势<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="4b857-152">This has the advantage of unloading all reference assemblies by unloading the separate <xref:System.AppDomain>.</span></span>  
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
-### 标记编译 — 第 2 趟  
- 并非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页都在标记编译的第 1 轮即进行编译。  包含本地定义类型引用（引用同一项目中其他位置的代码中定义的类型）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件此时将免于编译。  这是因为这些本地定义的类型仅存在于源中，并且尚未进行编译。  分析器使用试探法来确定这一点，这需要在标记文件中查找 `x:Name` 之类的项。  如果找到这样的实例，则标记文件的编译将推迟至代码文件编译之后完成，此时，第二趟标记编译将处理这些文件。  
+### <a name="markup-compilationpass-2"></a><span data-ttu-id="4b857-153">标记编译 - 第 2 次传递</span><span class="sxs-lookup"><span data-stu-id="4b857-153">Markup Compilation—Pass 2</span></span>  
+ <span data-ttu-id="4b857-154">并非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面都会在标记编译的第 1 次传递过程中完成编译。</span><span class="sxs-lookup"><span data-stu-id="4b857-154">Not all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages are compiled at during pass 1 of markup compilation.</span></span> <span data-ttu-id="4b857-155">包含本地定义类型引用（引用同一项目中其他位置的代码所定义的类型）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件就不会在此期间进行编译。</span><span class="sxs-lookup"><span data-stu-id="4b857-155">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files that have locally defined type references (references to types defined in code elsewhere in the same project) are exempt from compilation at this time.</span></span> <span data-ttu-id="4b857-156">这是因为这些本地定义的类型仅存在于源中，并且尚未编译。</span><span class="sxs-lookup"><span data-stu-id="4b857-156">This is because those locally defined types exist only in source and have not yet been compiled.</span></span> <span data-ttu-id="4b857-157">分析器会采用试探法来确定文件是否已编译，而这一操作会涉及在标记文件中查找 `x:Name` 之类的项。</span><span class="sxs-lookup"><span data-stu-id="4b857-157">In order to determine this, the parser uses heuristics that involve looking for items such as `x:Name` in the markup file.</span></span> <span data-ttu-id="4b857-158">如果找到此类实例，标记文件的编译将会推迟，直至代码文件完成编译；在代码文件完成编译后，标记文件会在第二次标记编译传递期间得到处理。</span><span class="sxs-lookup"><span data-stu-id="4b857-158">When such an instance is found, that markup file’s compilation is postponed until the code files have been compiled, after which, the second markup compilation pass processes these files.</span></span>  
   
 <a name="File_Classification"></a>   
-### 文件分类  
- 生成过程根据用于存放输出文件的应用程序集的不同，将这些文件放入不同的资源组中。  在典型的非本地化应用程序中，所有被标记为 `Resource` 的数据文件都放置在主程序集（可执行文件或库）中。  如果在项目中设置了 `UICulture`，则所有经过编译的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件以及那些被专门标记为特定于语言的资源都放在附属资源程序集中。  此外，所有非特定语言的资源都放在主程序集中。  在生成过程的这一步骤中，将做出这一决定。  
+### <a name="file-classification"></a><span data-ttu-id="4b857-159">文件分类</span><span class="sxs-lookup"><span data-stu-id="4b857-159">File Classification</span></span>  
+ <span data-ttu-id="4b857-160">生成进程会根据输出文件将被置于哪个应用程序集中，将输出文件放入不同的资源组。</span><span class="sxs-lookup"><span data-stu-id="4b857-160">The build process puts output files into different resource groups based on which application assembly they will be placed in.</span></span> <span data-ttu-id="4b857-161">在典型的非本地化应用程序中，所有被标记为 `Resource` 的数据文件都会置于主程序集（可执行文件或库）中。</span><span class="sxs-lookup"><span data-stu-id="4b857-161">In a typical nonlocalized application, all data files marked as `Resource` are placed in the main assembly (executable or library).</span></span> <span data-ttu-id="4b857-162">如果在项目中设置了 `UICulture`，则所有编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件以及那些专门标记为特定于语言的资源会置于附属资源程序集中。</span><span class="sxs-lookup"><span data-stu-id="4b857-162">When `UICulture` is set in the project, all compiled [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files and those resources specifically marked as language-specific are placed in the satellite resource assembly.</span></span> <span data-ttu-id="4b857-163">此外，所有中性语言资源都会置于主程序集中。</span><span class="sxs-lookup"><span data-stu-id="4b857-163">Furthermore, all language-neutral resources are placed in the main assembly.</span></span> <span data-ttu-id="4b857-164">生成进程会在执行这个步骤时确定放置位置。</span><span class="sxs-lookup"><span data-stu-id="4b857-164">In this step of the build process, that determination is made.</span></span>  
   
- 项目文件中的 `ApplicationDefinition`、`Page` 和 `Resource` 生成操作可以使用 `Localizable` 元数据（可接受的值为 `true` 和 `false`）进行扩充，此元数据指示该文件是特定于语言的还是非特定语言的。  
+ <span data-ttu-id="4b857-165">项目文件中的 `ApplicationDefinition`、`Page` 和 `Resource` 生成操作可以使用 `Localizable` 元数据（可接受的值为 `true` 和 `false`）来扩充，该元数据会指明文件是特定于语言的文件还是中性语言文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-165">The `ApplicationDefinition`, `Page`, and `Resource` build actions in the project file can be augmented with the `Localizable` metadata (acceptable values are `true` and `false`), which dictates whether the file is language-specific or language-neutral.</span></span>  
   
 <a name="Core_Compilation"></a>   
-### 核心编译  
- 核心编译步骤包括代码文件的编译。  这是在特定于语言的目标文件 Microsoft.CSharp.targets 和 Microsoft.VisualBasic.targets 中的逻辑协调下进行的。  如果试探法确定标记编译器运行一趟就足够了，则生成主程序集。  但是，如果项目中的一个或多个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件具有对本地定义类型的引用，则生成一个临时 .dll 文件，以便可以在第二趟标记编译完成之后创建最终的应用程序集。  
+### <a name="core-compilation"></a><span data-ttu-id="4b857-166">内核编译</span><span class="sxs-lookup"><span data-stu-id="4b857-166">Core Compilation</span></span>  
+ <span data-ttu-id="4b857-167">内核编译步骤涉及代码文件的编译。</span><span class="sxs-lookup"><span data-stu-id="4b857-167">The core compile step involves compilation of code files.</span></span> <span data-ttu-id="4b857-168">这要由特定于语言的目标文件 Microsoft.CSharp.targets 和 Microsoft.VisualBasic.targets 中的逻辑来协调。</span><span class="sxs-lookup"><span data-stu-id="4b857-168">This is orchestrated by logic in the language-specific targets files Microsoft.CSharp.targets and Microsoft.VisualBasic.targets.</span></span> <span data-ttu-id="4b857-169">如果试探法确定标记编译器只需要进行一次传递，则会生成主程序集。</span><span class="sxs-lookup"><span data-stu-id="4b857-169">If heuristics have determined that a single pass of the markup compiler is sufficient, then the main assembly is generated.</span></span> <span data-ttu-id="4b857-170">但是，如果项目中的一个或多个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件引用了本地定义的类型，则会生成一个临时的.dll 文件，最终的应用程序集则可能会在标记编译的第二次传递完成后再创建。</span><span class="sxs-lookup"><span data-stu-id="4b857-170">However, if one or more [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files in the project have references to locally defined types, then a temporary .dll file is generated so the final application assemblies may be created after the second pass of markup compilation is complete.</span></span>  
   
 <a name="Manifest_generation"></a>   
-### 清单生成  
- 在生成过程的末尾，当所有应用程序集和内容文件都准备好之后，将生成应用程序的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 清单。  
+### <a name="manifest-generation"></a><span data-ttu-id="4b857-171">清单生成</span><span class="sxs-lookup"><span data-stu-id="4b857-171">Manifest Generation</span></span>  
+ <span data-ttu-id="4b857-172">生成进程的最后一步是：在所有应用程序集和内容文件都准备就绪后，为应用程序生成 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 清单。</span><span class="sxs-lookup"><span data-stu-id="4b857-172">At the end of the build process, after all the application assemblies and content files are ready, the [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] manifests for the application are generated.</span></span>  
   
- 部署清单文件描述部署模型：当前版本、更新行为、发行者标识以及数字签名。  此清单应该由处理部署的管理员创作。  对于 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]，文件扩展名为 .xbap；对于安装的应用程序，文件扩展名为 .application。  前者由 `HostInBrowser` 项目属性指示，因此，清单将应用程序标识为浏览器承载的应用程序。  
+ <span data-ttu-id="4b857-173">部署清单文件可描述部署模型：当前版本、更新行为、发布服务器标识以及数字签名。</span><span class="sxs-lookup"><span data-stu-id="4b857-173">The deployment manifest file describes the deployment model: the current version, update behavior, and publisher identity along with digital signature.</span></span> <span data-ttu-id="4b857-174">该清单应由负责处理部署的管理员来编写。</span><span class="sxs-lookup"><span data-stu-id="4b857-174">This manifest is intended to be authored by administrators who handle deployment.</span></span> <span data-ttu-id="4b857-175">对于 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]，这个文件的扩展名为 .xbap；对于已安装的应用程序，扩展名则为 .application。</span><span class="sxs-lookup"><span data-stu-id="4b857-175">The file extension is .xbap (for [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) and .application for installed applications.</span></span> <span data-ttu-id="4b857-176">前者受 `HostInBrowser` 项目属性支配，因此清单会将应用程序标识为由浏览器承载。</span><span class="sxs-lookup"><span data-stu-id="4b857-176">The former is dictated by the `HostInBrowser` project property and as a result the manifest identifies the application as browser-hosted.</span></span>  
   
- 应用程序清单（.exe.manifest 文件）描述应用程序集和依赖库，并列出应用程序所需的权限。  此文件应该由应用程序开发人员创作。  为了启动 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 应用程序，用户应该打开应用程序的部署清单文件。  
+ <span data-ttu-id="4b857-177">应用程序清单（一个 .exe.manifest 文件）可描述应用程序集和依赖库，并列出应用程序所需的权限。</span><span class="sxs-lookup"><span data-stu-id="4b857-177">The application manifest (an .exe.manifest file) describes the application assemblies and dependent libraries and lists permissions required by the application.</span></span> <span data-ttu-id="4b857-178">该文件应由应用程序开发者编写。</span><span class="sxs-lookup"><span data-stu-id="4b857-178">This file is intended to be authored by the application developer.</span></span> <span data-ttu-id="4b857-179">为了启动 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 应用程序，用户会打开该应用程序的部署清单文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-179">In order to launch a [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] application, a user opens the application's deployment manifest file.</span></span>  
   
- 对于 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，始终会创建这些清单文件。  对于安装的应用程序，除非在项目文件中使用值 `true` 指定 `GenerateManifests` 属性，否则不会创建它们。  
+ <span data-ttu-id="4b857-180">对于 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，始终会创建这些清单文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-180">These manifest files are always created for [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="4b857-181">对于已安装的应用程序，这些文件不会创建，除非在项目文件中为 `GenerateManifests` 属性指定值 `true`。</span><span class="sxs-lookup"><span data-stu-id="4b857-181">For installed applications, they are not created unless the `GenerateManifests` property is specified in the project file with value `true`.</span></span>  
   
- 除了分配给典型的 Internet 区域应用程序的那些权限以外，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 还获得了两项额外的权限：<xref:System.Security.Permissions.WebBrowserPermission> 和 <xref:System.Security.Permissions.MediaPermission>。  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统在应用程序清单中声明这些权限。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]<span data-ttu-id="4b857-182">获取这些权限分配给典型 Internet 区域的应用程序遇到两个其他权限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。</span><span class="sxs-lookup"><span data-stu-id="4b857-182"> get two additional permissions over and above those permissions assigned to typical Internet zone applications: <xref:System.Security.Permissions.WebBrowserPermission> and <xref:System.Security.Permissions.MediaPermission>.</span></span> <span data-ttu-id="4b857-183">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。</span><span class="sxs-lookup"><span data-stu-id="4b857-183">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] build system declares those permissions in the application manifest.</span></span>  
   
 <a name="Incremental_Build_Support"></a>   
-## 增量生成支持  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统为增量生成提供了支持。  它相当智能地检测对标记或代码所做的更改，并且仅编辑那些受到更改影响的项目。  增量生成机制使用下列文件：  
+## <a name="incremental-build-support"></a><span data-ttu-id="4b857-184">增量生成支持</span><span class="sxs-lookup"><span data-stu-id="4b857-184">Incremental Build Support</span></span>  
+ <span data-ttu-id="4b857-185">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统可以为增量生成提供支持。</span><span class="sxs-lookup"><span data-stu-id="4b857-185">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] build system provides support for incremental builds.</span></span> <span data-ttu-id="4b857-186">该系统能以非常智能化的方式来检测对标记或代码所做的各种更改，而且只会编译那些受到更改操作影响的项目。</span><span class="sxs-lookup"><span data-stu-id="4b857-186">It is fairly intelligent about detecting changes made to markup or code, and it compiles only those artifacts affected by the change.</span></span> <span data-ttu-id="4b857-187">增量生成机制会使用以下文件：</span><span class="sxs-lookup"><span data-stu-id="4b857-187">The incremental build mechanism uses the following files:</span></span>  
   
--   一个 $\(*程序集名称*\)\_MarkupCompiler.Cache 文件，用于保持当前编译器状态。  
+-   <span data-ttu-id="4b857-188">$(*AssemblyName*)_MarkupCompiler.Cache 文件，用于维护当前的编译器状态。</span><span class="sxs-lookup"><span data-stu-id="4b857-188">An $(*AssemblyName*)_MarkupCompiler.Cache file to maintain current compiler state.</span></span>  
   
--   一个 $\(*程序集名称*\)\_MarkupCompiler.lref 文件，用于缓存包含对本地定义类型的引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。  
+-   <span data-ttu-id="4b857-189">$(*AssemblyName*)_MarkupCompiler.lref 文件，用于缓存引用了本地定义类型的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-189">An $(*AssemblyName*)_MarkupCompiler.lref file to cache the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files with references to locally defined types.</span></span>  
   
- 下面是一组对增量生成进行管理的规则：  
+ <span data-ttu-id="4b857-190">下面显示了一组用于控制增量生成的规则：</span><span class="sxs-lookup"><span data-stu-id="4b857-190">The following is a set of rules governing incremental build:</span></span>  
   
--   文件是生成系统检测是否存在更改的最小单位。  因此，对于代码文件而言，生成系统无法断定是否更改了某个类型或是否添加了代码。  对于项目文件而言，同样如此。  
+-   <span data-ttu-id="4b857-191">文件是生成系统检测更改时的最小单位。</span><span class="sxs-lookup"><span data-stu-id="4b857-191">The file is the smallest unit at which the build system detects change.</span></span> <span data-ttu-id="4b857-192">因此，对于代码文件，生成系统无法判断类型是否已更改或者是否添加了代码。</span><span class="sxs-lookup"><span data-stu-id="4b857-192">So, for a code file, the build system cannot tell if a type was changed or if code was added.</span></span> <span data-ttu-id="4b857-193">对于项目文件也是如此。</span><span class="sxs-lookup"><span data-stu-id="4b857-193">The same holds for project files.</span></span>  
   
--   增量生成机制必须知道 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页定义了类还是使用其他类。  
+-   <span data-ttu-id="4b857-194">增量生成机制必须确定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面是定义了一个类，还是使用了其他类。</span><span class="sxs-lookup"><span data-stu-id="4b857-194">The incremental build mechanism must be cognizant that a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page either defines a class or uses other classes.</span></span>  
   
--   如果 `Reference` 项更改，则重新编译所有页。  
+-   <span data-ttu-id="4b857-195">如果 `Reference` 条目发生变化，则会重新编译所有页面。</span><span class="sxs-lookup"><span data-stu-id="4b857-195">If `Reference` entries change, then recompile all pages.</span></span>  
   
--   如果代码文件更改，则重新编译所有包含本地定义类型引用的页。  
+-   <span data-ttu-id="4b857-196">如果代码文件发生变化，则会重新编译引用了本地定义类型的所有页面。</span><span class="sxs-lookup"><span data-stu-id="4b857-196">If a code file changes, recompile all pages with locally defined type references.</span></span>  
   
--   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件更改，则：  
+-   <span data-ttu-id="4b857-197">如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件发生变化：</span><span class="sxs-lookup"><span data-stu-id="4b857-197">If a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file changes:</span></span>  
   
-    -   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中声明为 `Page`，则：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 不包含本地定义类型引用，则重新编译该 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及所有包含本地引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 包含本地引用，则重新编译所有包含本地引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页。  
+    -   <span data-ttu-id="4b857-198">如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中被声明为 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 没有引用本地定义的类型，则会重新编译 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 包含本地引用，则会重新编译包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面。</span><span class="sxs-lookup"><span data-stu-id="4b857-198">If [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is declared as `Page` in the project: if the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] does not have locally defined type references, recompile that [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plus all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages with local references; if the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] has local references, recompile all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages with local references.</span></span>  
   
-    -   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在项目中声明为 `ApplicationDefinition`，则：重新编译所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页（原因：每个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 都包含对可能已经更改的 <xref:System.Windows.Application> 类型的引用）。  
+    -   <span data-ttu-id="4b857-199">如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]声明为`ApplicationDefinition`项目中： 重新编译所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页 (原因： 每个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有对引用<xref:System.Windows.Application>可能已更改的类型)。</span><span class="sxs-lookup"><span data-stu-id="4b857-199">If [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is declared as `ApplicationDefinition` in the project: recompile all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages (reason: each [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] has reference to an <xref:System.Windows.Application> type that may have changed).</span></span>  
   
--   如果项目文件将代码文件声明为应用程序定义而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件，则：  
+-   <span data-ttu-id="4b857-200">如果项目文件将代码文件声明为应用程序定义，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件：</span><span class="sxs-lookup"><span data-stu-id="4b857-200">If the project file declares a code file as application definition instead of a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file:</span></span>  
   
-    -   检查项目文件中的 `ApplicationClassName` 值是否已经更改（是否存在新的应用程序类型？）。  如果该值已更改，则重新编译整个应用程序。  
+    -   <span data-ttu-id="4b857-201">检查项目文件中的 `ApplicationClassName` 值是不是发生了变化（是不是有新的应用程序类型？）。</span><span class="sxs-lookup"><span data-stu-id="4b857-201">Check if the `ApplicationClassName` value in the project file has changed (is there a new application type?).</span></span> <span data-ttu-id="4b857-202">如果是，则重新编译整个应用程序。</span><span class="sxs-lookup"><span data-stu-id="4b857-202">If so, recompile the entire application.</span></span>  
   
-    -   否则，重新编译所有包含本地引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页。  
+    -   <span data-ttu-id="4b857-203">否则，重新编译包含本地引用的所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面。</span><span class="sxs-lookup"><span data-stu-id="4b857-203">Otherwise, recompile all [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages with local references.</span></span>  
   
--   如果项目文件已更改，则：应用前面的所有规则，了解哪些内容需要重新编译。  对下列属性所做的更改将触发彻底的重新编译操作：`AssemblyName`、`IntermediateOutputPath`、`RootNamespace` 和 `HostInBrowser`。  
+-   <span data-ttu-id="4b857-204">如果项目文件发生变化：应用前面的所有规则，并确认哪些内容需要重新编译。</span><span class="sxs-lookup"><span data-stu-id="4b857-204">If a project file changes: apply all preceding rules and see what needs to be recompiled.</span></span> <span data-ttu-id="4b857-205">以下属性发生变化会触发全面的重新编译：`AssemblyName`、`IntermediateOutputPath`、`RootNamespace` 和 `HostInBrowser`。</span><span class="sxs-lookup"><span data-stu-id="4b857-205">Changes to the following properties trigger a complete recompile: `AssemblyName`, `IntermediateOutputPath`, `RootNamespace`, and `HostInBrowser`.</span></span>  
   
- 下列重新编译方案可能适用：  
+ <span data-ttu-id="4b857-206">可能会出现以下重新编译情形：</span><span class="sxs-lookup"><span data-stu-id="4b857-206">The following recompile scenarios are possible:</span></span>  
   
--   重新编译整个应用程序。  
+-   <span data-ttu-id="4b857-207">重新编译整个应用程序。</span><span class="sxs-lookup"><span data-stu-id="4b857-207">The entire application is recompiled.</span></span>  
   
--   仅重新编译那些包含本地定义类型引用的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。  
+-   <span data-ttu-id="4b857-208">仅重新编译那些引用了本地定义类型的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件。</span><span class="sxs-lookup"><span data-stu-id="4b857-208">Only those [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files that have locally defined type references are recompiled.</span></span>  
   
--   不重新编译任何内容（如果项目中没有任何内容发生更改）。  
+-   <span data-ttu-id="4b857-209">不会重新编译任何内容（如果项目未发生任何变化）。</span><span class="sxs-lookup"><span data-stu-id="4b857-209">Nothing is recompiled (if nothing in the project has changed).</span></span>  
   
-## 请参阅  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)   
- [WPF MSBuild 参考](../Topic/WPF%20MSBuild%20Reference.md)   
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)   
- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a><span data-ttu-id="4b857-210">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4b857-210">See Also</span></span>  
+ [<span data-ttu-id="4b857-211">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="4b857-211">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="4b857-212">WPF MSBuild 参考</span><span class="sxs-lookup"><span data-stu-id="4b857-212">WPF MSBuild Reference</span></span>](/visualstudio/msbuild/wpf-msbuild-reference)  
+ [<span data-ttu-id="4b857-213">WPF 中的 Pack URI</span><span class="sxs-lookup"><span data-stu-id="4b857-213">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [<span data-ttu-id="4b857-214">WPF 应用程序资源、内容和数据文件</span><span class="sxs-lookup"><span data-stu-id="4b857-214">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

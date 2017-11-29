@@ -1,59 +1,64 @@
 ---
-title: "如何：创建使用自定义证书验证程序的服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, Authentication — 身份验证"
+title: "如何：创建使用自定义证书验证程序的服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3533b17a1e7f3d244bc3c1d97eb82459a5316af1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：创建使用自定义证书验证程序的服务
-本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。  
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a><span data-ttu-id="87363-102">如何：创建使用自定义证书验证程序的服务</span><span class="sxs-lookup"><span data-stu-id="87363-102">How to: Create a Service that Employs a Custom Certificate Validator</span></span>
+<span data-ttu-id="87363-103">本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。</span><span class="sxs-lookup"><span data-stu-id="87363-103">This topic shows how to implement a custom certificate validator and how to configure client or service credentials to replace the default certificate validation logic with the custom certificate validator.</span></span>  
   
- 如果使用 X.509 证书对客户端或服务进行身份验证，则默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 Windows 证书存储区和加密 API 来验证该证书并确保它是受信任的。  有时，内置证书验证功能并不足够且必须更改。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种简单的方法，允许用户添加自定义证书验证程序来更改验证逻辑。  如果指定了自定义证书验证程序，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不使用内置证书验证逻辑，而是依靠自定义验证程序。  
+ <span data-ttu-id="87363-104">如果使用 X.509 证书对客户端或服务进行身份验证，则默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 Windows 证书存储区和加密 API 来验证该证书并确保它是受信任的。</span><span class="sxs-lookup"><span data-stu-id="87363-104">If the X.509 certificate is used to authenticate a client or service, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] by default uses the Windows certificate store and Crypto API to validate the certificate and to ensure that it is trusted.</span></span> <span data-ttu-id="87363-105">有时，内置证书验证功能并不足够且必须更改。</span><span class="sxs-lookup"><span data-stu-id="87363-105">Sometimes the built-in certificate validation functionality is not enough and must be changed.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="87363-106"> 提供了一种简单的方法，允许用户添加自定义证书验证程序来更改验证逻辑。</span><span class="sxs-lookup"><span data-stu-id="87363-106"> provides an easy way to change the validation logic by allowing users to add a custom certificate validator.</span></span> <span data-ttu-id="87363-107">如果指定了自定义证书验证程序，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不使用内置证书验证逻辑，而是依靠自定义验证程序。</span><span class="sxs-lookup"><span data-stu-id="87363-107">If a custom certificate validator is specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not use the built-in certificate validation logic but relies on the custom validator instead.</span></span>  
   
-## 过程  
+## <a name="procedures"></a><span data-ttu-id="87363-108">过程</span><span class="sxs-lookup"><span data-stu-id="87363-108">Procedures</span></span>  
   
-#### 创建自定义证书验证程序  
+#### <a name="to-create-a-custom-certificate-validator"></a><span data-ttu-id="87363-109">创建自定义证书验证程序</span><span class="sxs-lookup"><span data-stu-id="87363-109">To create a custom certificate validator</span></span>  
   
-1.  定义一个从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 派生的新类。  
+1.  <span data-ttu-id="87363-110">定义一个从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 派生的新类。</span><span class="sxs-lookup"><span data-stu-id="87363-110">Define a new class derived from <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span>  
   
-2.  实现抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。  将必须验证的证书作为参数传递给该方法。  如果根据验证逻辑，传递的证书无效，则此方法引发 <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>。  如果证书有效，则此方法返回到调用方。  
+2.  <span data-ttu-id="87363-111">实现抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="87363-111">Implement the abstract <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> method.</span></span> <span data-ttu-id="87363-112">将必须验证的证书作为参数传递给该方法。</span><span class="sxs-lookup"><span data-stu-id="87363-112">The certificate that must be validated is passed as an argument to the method.</span></span> <span data-ttu-id="87363-113">如果根据验证逻辑，传递的证书无效，则此方法引发 <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>。</span><span class="sxs-lookup"><span data-stu-id="87363-113">If the passed certificate is not valid according to the validation logic, this method throws a <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.</span></span> <span data-ttu-id="87363-114">如果证书有效，则此方法返回到调用方。</span><span class="sxs-lookup"><span data-stu-id="87363-114">If the certificate is valid, the method returns to the caller.</span></span>  
   
     > [!NOTE]
-    >  若要将身份验证错误返回到客户端，应在 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> 方法中引发 <xref:System.ServiceModel.FaultException>。  
+    >  <span data-ttu-id="87363-115">若要将身份验证错误返回到客户端，应在 <xref:System.ServiceModel.FaultException> 方法中引发 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>。</span><span class="sxs-lookup"><span data-stu-id="87363-115">To return authentication errors back to the client, throw a <xref:System.ServiceModel.FaultException> in the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> method.</span></span>  
   
  [!code-csharp[c_CustomCertificateValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#2)]
  [!code-vb[c_CustomCertificateValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#2)]  
   
-#### 指定服务配置中的自定义证书验证程序  
+#### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a><span data-ttu-id="87363-116">指定服务配置中的自定义证书验证程序</span><span class="sxs-lookup"><span data-stu-id="87363-116">To specify a custom certificate validator in service configuration</span></span>  
   
-1.  向 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 元素添加一个 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 元素和一个 [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。  
+1.  <span data-ttu-id="87363-117">添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。</span><span class="sxs-lookup"><span data-stu-id="87363-117">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element and a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  添加一个 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并将 `name` 属性设置为适当的值。  
+2.  <span data-ttu-id="87363-118">添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并设置`name`属性设为适当的值。</span><span class="sxs-lookup"><span data-stu-id="87363-118">Add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) and set the `name` attribute to an appropriate value.</span></span>  
   
-3.  向 `<behavior>` 元素中添加一个 [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
+3.  <span data-ttu-id="87363-119">添加[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)到`<behavior>`元素。</span><span class="sxs-lookup"><span data-stu-id="87363-119">Add a [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) to the `<behavior>` element.</span></span>  
   
-4.  向 `<serviceCredentials>` 元素中添加一个 `<clientCertificate>` 元素。  
+4.  <span data-ttu-id="87363-120">向 `<clientCertificate>` 元素中添加一个 `<serviceCredentials>` 元素。</span><span class="sxs-lookup"><span data-stu-id="87363-120">Add a `<clientCertificate>` element to the `<serviceCredentials>` element.</span></span>  
   
-5.  向 `<clientCertificate>` 元素添加一个 [\<authentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)。  
+5.  <span data-ttu-id="87363-121">添加[\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)到`<clientCertificate>`元素。</span><span class="sxs-lookup"><span data-stu-id="87363-121">Add an [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) to the `<clientCertificate>` element.</span></span>  
   
-6.  将 `customCertificateValidatorType` 属性设置为验证程序类型。  下面的示例将该属性设置为类型的命名空间和名称。  
+6.  <span data-ttu-id="87363-122">将 `customCertificateValidatorType` 属性设置为验证程序类型。</span><span class="sxs-lookup"><span data-stu-id="87363-122">Set the `customCertificateValidatorType` attribute to the validator type.</span></span> <span data-ttu-id="87363-123">下面的示例将该属性设置为类型的命名空间和名称。</span><span class="sxs-lookup"><span data-stu-id="87363-123">The following example sets the attribute to the namespace and name of the type.</span></span>  
   
-7.  将 `certificateValidationMode` 属性设置为 `Custom`。  
+7.  <span data-ttu-id="87363-124">将 `certificateValidationMode` 属性设置为 `Custom`。</span><span class="sxs-lookup"><span data-stu-id="87363-124">Set the `certificateValidationMode` attribute to `Custom`.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
      <system.serviceModel>  
       <behaviors>  
@@ -71,25 +76,25 @@ caps.handback.revision: 14
     </configuration>  
     ```  
   
-#### 使用客户端上的配置指定自定义证书验证程序  
+#### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a><span data-ttu-id="87363-125">使用客户端上的配置指定自定义证书验证程序</span><span class="sxs-lookup"><span data-stu-id="87363-125">To specify a custom certificate validator using configuration on the client</span></span>  
   
-1.  向 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 元素添加一个 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 元素和一个 [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。  
+1.  <span data-ttu-id="87363-126">添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。</span><span class="sxs-lookup"><span data-stu-id="87363-126">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element and a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  添加一个 [\<endpointBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 元素。  
+2.  <span data-ttu-id="87363-127">添加[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)元素。</span><span class="sxs-lookup"><span data-stu-id="87363-127">Add an [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element.</span></span>  
   
-3.  添加一个 `<behavior>` 元素，并将 `name` 属性设置为适当的值。  
+3.  <span data-ttu-id="87363-128">添加一个 `<behavior>` 元素，并将 `name` 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="87363-128">Add a `<behavior>` element and set the `name` attribute to an appropriate value.</span></span>  
   
-4.  添加一个 [\<clientCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 元素。  
+4.  <span data-ttu-id="87363-129">添加[ \<c a t e >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。</span><span class="sxs-lookup"><span data-stu-id="87363-129">Add a [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element.</span></span>  
   
-5.  添加一个 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)。  
+5.  <span data-ttu-id="87363-130">添加[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="87363-130">Add a [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).</span></span>  
   
-6.  添加一个 [\<Authentication — 身份验证\>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)，如下面的示例所示。  
+6.  <span data-ttu-id="87363-131">添加[\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="87363-131">Add an [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) as shown on the following example.</span></span>  
   
-7.  将 `customCertificateValidatorType` 属性设置为验证程序类型。  
+7.  <span data-ttu-id="87363-132">将 `customCertificateValidatorType` 属性设置为验证程序类型。</span><span class="sxs-lookup"><span data-stu-id="87363-132">Set the `customCertificateValidatorType` attribute to the validator type.</span></span>  
   
-8.  将 `certificateValidationMode` 属性设置为 `Custom`。  下面的示例将该属性设置为类型的命名空间和名称。  
+8.  <span data-ttu-id="87363-133">将 `certificateValidationMode` 属性设置为 `Custom`。</span><span class="sxs-lookup"><span data-stu-id="87363-133">Set the `certificateValidationMode` attribute to `Custom`.</span></span> <span data-ttu-id="87363-134">下面的示例将该属性设置为类型的命名空间和名称。</span><span class="sxs-lookup"><span data-stu-id="87363-134">The following example sets the attribute to the namespace and name of the type.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
      <system.serviceModel>  
       <behaviors>  
@@ -109,29 +114,29 @@ caps.handback.revision: 14
     </configuration>  
     ```  
   
-#### 使用服务上的代码指定自定义证书验证程序  
+#### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-service"></a><span data-ttu-id="87363-135">使用服务上的代码指定自定义证书验证程序</span><span class="sxs-lookup"><span data-stu-id="87363-135">To specify a custom certificate validator using code on the service</span></span>  
   
-1.  指定 <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> 属性的自定义证书验证程序。  您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问服务凭据。  
+1.  <span data-ttu-id="87363-136">指定 <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> 属性的自定义证书验证程序。</span><span class="sxs-lookup"><span data-stu-id="87363-136">Specify the custom certificate validator on the <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> property.</span></span> <span data-ttu-id="87363-137">您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问服务凭据。</span><span class="sxs-lookup"><span data-stu-id="87363-137">You can access the service credentials using the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property.</span></span>  
   
-2.  将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode>。  
+2.  <span data-ttu-id="87363-138">将 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。</span><span class="sxs-lookup"><span data-stu-id="87363-138">Set the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> property to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span>  
   
  [!code-csharp[c_CustomCertificateValidator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#1)]
  [!code-vb[c_CustomCertificateValidator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#1)]  
   
-#### 使用客户端上的代码指定自定义证书验证程序  
+#### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a><span data-ttu-id="87363-139">使用客户端上的代码指定自定义证书验证程序</span><span class="sxs-lookup"><span data-stu-id="87363-139">To specify a custom certificate validator using code on the client</span></span>  
   
-1.  使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 属性指定自定义证书验证程序。  您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问客户端凭据。  （由 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 生成的客户端类始终是从 <xref:System.ServiceModel.ClientBase%601> 类派生而来的。）  
+1.  <span data-ttu-id="87363-140">使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 属性指定自定义证书验证程序。</span><span class="sxs-lookup"><span data-stu-id="87363-140">Specify the custom certificate validator using the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> property.</span></span> <span data-ttu-id="87363-141">您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="87363-141">You can access the client credentials using the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property.</span></span> <span data-ttu-id="87363-142">(生成的客户端类[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)始终派生自<xref:System.ServiceModel.ClientBase%601>类。)</span><span class="sxs-lookup"><span data-stu-id="87363-142">(The client class generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) always derives from the <xref:System.ServiceModel.ClientBase%601> class.)</span></span>  
   
-2.  将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode>。  
+2.  <span data-ttu-id="87363-143">将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。</span><span class="sxs-lookup"><span data-stu-id="87363-143">Set the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> property to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="87363-144">示例</span><span class="sxs-lookup"><span data-stu-id="87363-144">Example</span></span>  
   
-### 描述  
- 下面的示例演示自定义证书验证程序的实现及其在服务上的用法。  
+### <a name="description"></a><span data-ttu-id="87363-145">描述</span><span class="sxs-lookup"><span data-stu-id="87363-145">Description</span></span>  
+ <span data-ttu-id="87363-146">下面的示例演示自定义证书验证程序的实现及其在服务上的用法。</span><span class="sxs-lookup"><span data-stu-id="87363-146">The following sample shows an implementation of a custom certificate validator and its usage on the service.</span></span>  
   
-### 代码  
+### <a name="code"></a><span data-ttu-id="87363-147">代码</span><span class="sxs-lookup"><span data-stu-id="87363-147">Code</span></span>  
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="87363-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="87363-148">See Also</span></span>  
  <xref:System.IdentityModel.Selectors.X509CertificateValidator>

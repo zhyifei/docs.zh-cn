@@ -1,56 +1,61 @@
 ---
-title: "如何：使用通道工厂以异步方式调用操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用通道工厂以异步方式调用操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c907ed4c5c8cc76899d4f785ef1abf5a2821274f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：使用通道工厂以异步方式调用操作
-本主题介绍客户端如何在使用基于 <xref:System.ServiceModel.ChannelFactory%601> 的客户端应用程序时以异步方式访问服务操作。  （当使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=fullName> 对象调用服务时，可以使用事件驱动的异步调用模型。  有关详细信息，请参阅[如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  有关基于事件的异步调用模型的更多信息，请参见[Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)。）  
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a><span data-ttu-id="ec870-102">如何：使用通道工厂以异步方式调用操作</span><span class="sxs-lookup"><span data-stu-id="ec870-102">How to: Call Operations Asynchronously Using a Channel Factory</span></span>
+<span data-ttu-id="ec870-103">本主题介绍客户端如何在使用基于 <xref:System.ServiceModel.ChannelFactory%601> 的客户端应用程序时以异步方式访问服务操作。</span><span class="sxs-lookup"><span data-stu-id="ec870-103">This topic covers how a client can access a service operation asynchronously when using a <xref:System.ServiceModel.ChannelFactory%601>-based client application.</span></span> <span data-ttu-id="ec870-104">（当使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 对象调用服务时，可以使用事件驱动的异步调用模型。</span><span class="sxs-lookup"><span data-stu-id="ec870-104">(When using a <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> object to invoke a service you can use the event-driven asynchronous calling model.</span></span> <span data-ttu-id="ec870-105">有关详细信息，请参阅[如何： 以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。</span><span class="sxs-lookup"><span data-stu-id="ec870-105">For more information, see [How to: Call Service Operations Asynchronously](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).</span></span> <span data-ttu-id="ec870-106">有关基于事件的异步调用模型的详细信息，请参阅[使用基于事件的异步模式的多线程编程](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)。)</span><span class="sxs-lookup"><span data-stu-id="ec870-106">For more information about the event-based asynchronous calling model, see [Multithreaded Programming with the Event-based Asynchronous Pattern](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)</span></span>  
   
- 本主题中的服务可实现 `ICalculator` 接口。  客户端可以在此接口上以异步方式调用操作，这意味着像 `Add` 这样的操作将拆分为两个方法：`BeginAdd` 和 `EndAdd`。前一个方法启动调用，而后一个方法在操作完成时检索结果。  有关演示如何在服务中以异步方式实现操作的示例，请参见[如何：实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。  有关同步和异步操作的详细信息，请参见[同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
+ <span data-ttu-id="ec870-107">本主题中的服务可实现 `ICalculator` 接口。</span><span class="sxs-lookup"><span data-stu-id="ec870-107">The service in this topic implements the `ICalculator` interface.</span></span> <span data-ttu-id="ec870-108">客户端可以在此接口上以异步方式调用操作，这意味着像 `Add` 这样的操作将拆分为两个方法：`BeginAdd` 和 `EndAdd`。前一个方法启动调用，而后一个方法在操作完成时检索结果。</span><span class="sxs-lookup"><span data-stu-id="ec870-108">The client can call the operations on this interface asynchronously, which means that operations like `Add` are split into two methods, `BeginAdd` and `EndAdd`, the former of which initiates the call and the latter of which retrieves the result when the operation completes.</span></span> <span data-ttu-id="ec870-109">有关演示如何实现一个操作以异步方式在服务中的示例，请参阅[如何： 实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="ec870-109">For an example showing how to implement an operation asynchronously in a service, see [How to: Implement an Asynchronous Service Operation](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).</span></span> <span data-ttu-id="ec870-110">有关同步和异步操作的详细信息，请参阅[同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="ec870-110">For details about synchronous and asynchronous operations, see [Synchronous and Asynchronous Operations](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).</span></span>  
   
-## 过程  
+## <a name="procedure"></a><span data-ttu-id="ec870-111">过程</span><span class="sxs-lookup"><span data-stu-id="ec870-111">Procedure</span></span>  
   
-#### 以异步方式调用 WCF 服务操作  
+#### <a name="to-call-wcf-service-operations-asynchronously"></a><span data-ttu-id="ec870-112">以异步方式调用 WCF 服务操作</span><span class="sxs-lookup"><span data-stu-id="ec870-112">To call WCF service operations asynchronously</span></span>  
   
-1.  按照下面的命令所示，使用 `/async` 选项运行 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具。  
+1.  <span data-ttu-id="ec870-113">运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具`/async`选项下面的命令中所示。</span><span class="sxs-lookup"><span data-stu-id="ec870-113">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool with the `/async` option as shown in the following command.</span></span>  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
-  
     ```  
   
-     这将生成该操作的服务协定的异步客户端版本。  
+     <span data-ttu-id="ec870-114">这将生成该操作的服务协定的异步客户端版本。</span><span class="sxs-lookup"><span data-stu-id="ec870-114">This generates an asynchronous client version of the service contract for the operation.</span></span>  
   
-2.  创建一个异步操作完成时将要调用的回调函数，如下面的示例代码所示。  
+2.  <span data-ttu-id="ec870-115">创建一个异步操作完成时将要调用的回调函数，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="ec870-115">Create a callback function to be called when the asynchronous operation is complete, as shown in the following sample code.</span></span>  
   
      [!code-csharp[C_How_To_CF_Async#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#2)]
      [!code-vb[C_How_To_CF_Async#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#2)]  
   
-3.  若要以异步方式访问服务操作，请创建客户端、调用 `Begin[Operation]`（例如 `BeginAdd`），并指定一个回调函数，如下面的示例代码所示。  
+3.  <span data-ttu-id="ec870-116">若要以异步方式访问服务操作，请创建客户端、调用 `Begin[Operation]`（例如 `BeginAdd`），并指定一个回调函数，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="ec870-116">To access a service operation asynchronously, create the client and call the `Begin[Operation]` (for example, `BeginAdd`) and specify a callback function, as shown in the following sample code.</span></span>  
   
      [!code-csharp[C_How_To_CF_Async#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#3)]
      [!code-vb[C_How_To_CF_Async#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#3)]  
   
-     执行该回调函数时，客户端将调用 `End<operation>`（例如 `EndAdd`）以检索结果。  
+     <span data-ttu-id="ec870-117">执行该回调函数时，客户端将调用 `End<operation>`（例如 `EndAdd`）以检索结果。</span><span class="sxs-lookup"><span data-stu-id="ec870-117">When the callback function executes, the client calls `End<operation>` (for example, `EndAdd`) to retrieve the result.</span></span>  
   
-## 示例  
- 上面过程中的客户端代码使用的服务可实现 `ICalculator` 接口，如下面的代码所示。  在服务端，协定的 `Add` 和 `Subtract` 操作由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 运行库以同步方式调用，即使前面的客户端步骤是在客户端以异步方式调用的也是如此。  在服务端，`Multiply` 和 `Divide` 操作用于在服务端以异步方式调用服务，即使客户端以同步方式调用这两个操作也是如此。  此示例将 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`。  此属性设置与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 异步模式的实现一起，可让运行库以异步方式调用该操作。  
+## <a name="example"></a><span data-ttu-id="ec870-118">示例</span><span class="sxs-lookup"><span data-stu-id="ec870-118">Example</span></span>  
+ <span data-ttu-id="ec870-119">上面过程中的客户端代码使用的服务可实现 `ICalculator` 接口，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="ec870-119">The service that is used with the client code that is used in the preceding procedure implements the `ICalculator` interface as shown in the following code.</span></span> <span data-ttu-id="ec870-120">在服务端，协定的 `Add` 和 `Subtract` 操作由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 运行库以同步方式调用，即使前面的客户端步骤是在客户端以异步方式调用的也是如此。</span><span class="sxs-lookup"><span data-stu-id="ec870-120">On the service side, the `Add` and `Subtract` operations of the contract are invoked synchronously by the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] run time, even though the preceding client steps are invoked asynchronously on the client.</span></span> <span data-ttu-id="ec870-121">在服务端，`Multiply` 和 `Divide` 操作用于在服务端以异步方式调用服务，即使客户端以同步方式调用这两个操作也是如此。</span><span class="sxs-lookup"><span data-stu-id="ec870-121">The `Multiply` and `Divide` operations are used to invoke the service asynchronously on the service side, even if the client invokes them synchronously.</span></span> <span data-ttu-id="ec870-122">此示例将 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="ec870-122">This example sets the <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> property to `true`.</span></span> <span data-ttu-id="ec870-123">此属性设置与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 异步模式的实现一起，可让运行库以异步方式调用该操作。</span><span class="sxs-lookup"><span data-stu-id="ec870-123">This property setting, in combination with the implementation of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] asynchronous pattern, tells the run time to invoke the operation asynchronously.</span></span>  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
-## 请参阅  
- [Service Contract: Asynchronous Sample](http://msdn.microsoft.com/zh-cn/833db946-f511-4f64-a26f-2759a11217c7)
+## <a name="see-also"></a><span data-ttu-id="ec870-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ec870-124">See Also</span></span>  
+ [<span data-ttu-id="ec870-125">服务协定： 异步示例</span><span class="sxs-lookup"><span data-stu-id="ec870-125">Service Contract: Asynchronous Sample</span></span>](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7)

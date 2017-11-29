@@ -1,97 +1,100 @@
 ---
-title: "&lt;trace&gt; 的 &lt;listeners&gt; 的 &lt;add&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> 的 <add> 元素"
-  - "<listeners> 的 add 元素"
-  - "initializeData 特性"
+title: "&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- <add> element for <listeners>
+- add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 24
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bbb74d9a542833a96c61bcc09f6e4e5f0807843d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;trace&gt; 的 &lt;listeners&gt; 的 &lt;add&gt; 元素
-将侦听器添加到 **Listeners** 集合中。  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="42b81-102">&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;</span><span class="sxs-lookup"><span data-stu-id="42b81-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="42b81-103">将侦听器添加到**侦听器**集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-103">Adds a listener to the **Listeners** collection.</span></span>  
   
-## 语法  
+ <span data-ttu-id="42b81-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="42b81-104">\<configuration></span></span>  
+<span data-ttu-id="42b81-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="42b81-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="42b81-106">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="42b81-106">\<trace></span></span>  
+<span data-ttu-id="42b81-107">\<侦听器 ></span><span class="sxs-lookup"><span data-stu-id="42b81-107">\<listeners></span></span>  
+<span data-ttu-id="42b81-108">\<add></span><span class="sxs-lookup"><span data-stu-id="42b81-108">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="42b81-109">语法</span><span class="sxs-lookup"><span data-stu-id="42b81-109">Syntax</span></span>  
+  
+```xml  
 <add name="name"   
      type="trace listener class name, Version, Culture, PublicKeyToken"  
      initializeData="data"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="42b81-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="42b81-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="42b81-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="42b81-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="42b81-112">特性</span><span class="sxs-lookup"><span data-stu-id="42b81-112">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|**type**|必需的特性。<br /><br /> 指定侦听器的类型。  必须使用满足[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)中指定的要求的字符串。|  
-|**initializeData**|可选特性。<br /><br /> 传递到指定类的构造函数的字符串。|  
-|**name**|可选特性。<br /><br /> 指定侦听器的名称。|  
+|<span data-ttu-id="42b81-113">特性</span><span class="sxs-lookup"><span data-stu-id="42b81-113">Attribute</span></span>|<span data-ttu-id="42b81-114">描述</span><span class="sxs-lookup"><span data-stu-id="42b81-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="42b81-115">**type**</span><span class="sxs-lookup"><span data-stu-id="42b81-115">**type**</span></span>|<span data-ttu-id="42b81-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="42b81-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="42b81-117">指定侦听器的类型。</span><span class="sxs-lookup"><span data-stu-id="42b81-117">Specifies the type of the listener.</span></span> <span data-ttu-id="42b81-118">你必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="42b81-118">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="42b81-119">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="42b81-119">**initializeData**</span></span>|<span data-ttu-id="42b81-120">可选特性。</span><span class="sxs-lookup"><span data-stu-id="42b81-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="42b81-121">传递给构造函数指定类的字符串。</span><span class="sxs-lookup"><span data-stu-id="42b81-121">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="42b81-122">**name**</span><span class="sxs-lookup"><span data-stu-id="42b81-122">**name**</span></span>|<span data-ttu-id="42b81-123">可选特性。</span><span class="sxs-lookup"><span data-stu-id="42b81-123">Optional attribute.</span></span><br /><br /> <span data-ttu-id="42b81-124">指定侦听器的名称。</span><span class="sxs-lookup"><span data-stu-id="42b81-124">Specifies the name of the listener.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="42b81-125">子元素</span><span class="sxs-lookup"><span data-stu-id="42b81-125">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|向跟踪的 `Listeners` 集合中的侦听器添加筛选器。|  
+|<span data-ttu-id="42b81-126">元素</span><span class="sxs-lookup"><span data-stu-id="42b81-126">Element</span></span>|<span data-ttu-id="42b81-127">描述</span><span class="sxs-lookup"><span data-stu-id="42b81-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="42b81-128">\<filter></span><span class="sxs-lookup"><span data-stu-id="42b81-128">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="42b81-129">将筛选器添加到中的侦听器`Listeners`跟踪的集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-129">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="42b81-130">父元素</span><span class="sxs-lookup"><span data-stu-id="42b81-130">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`listeners`|指定对消息进行收集、存储和路由的侦听器。  侦听器将跟踪输出定向到合适的目标。|  
-|`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
-|`trace`|包含对跟踪消息进行收集、存储和路由的侦听器。|  
+|<span data-ttu-id="42b81-131">元素</span><span class="sxs-lookup"><span data-stu-id="42b81-131">Element</span></span>|<span data-ttu-id="42b81-132">描述</span><span class="sxs-lookup"><span data-stu-id="42b81-132">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="42b81-133">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="42b81-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="42b81-134">指定收集，侦听器存储区，并将消息路由。</span><span class="sxs-lookup"><span data-stu-id="42b81-134">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="42b81-135">侦听器将跟踪输出定向到适当的目标。</span><span class="sxs-lookup"><span data-stu-id="42b81-135">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="42b81-136">为 ASP.NET 配置节指定根元素。</span><span class="sxs-lookup"><span data-stu-id="42b81-136">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="42b81-137">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="42b81-137">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## 备注  
- <xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.Trace> 类共享同一个 **Listeners** 集合。  如果将侦听器对象添加到其中一个类的集合中，其他类则会使用相同的侦听器。  侦听器类派生自 [TraceListener 类](frlrfSystemDiagnosticsTraceListenerClassTopic)。  
+## <a name="remarks"></a><span data-ttu-id="42b81-138">备注</span><span class="sxs-lookup"><span data-stu-id="42b81-138">Remarks</span></span>  
+ <span data-ttu-id="42b81-139"><xref:System.Diagnostics.Debug>和<xref:System.Diagnostics.Trace>类共用同一个**侦听器**集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-139">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="42b81-140">如果你将侦听器对象添加到这些类之一中的集合，其他类将使用相同的侦听器。</span><span class="sxs-lookup"><span data-stu-id="42b81-140">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="42b81-141">侦听器类派生自<xref:System.Diagnostics.TraceListener>。</span><span class="sxs-lookup"><span data-stu-id="42b81-141">The listener classes derive from the <xref:System.Diagnostics.TraceListener>.</span></span>  
   
- 如果不指定跟踪侦听器的 `nam`e 特性，则跟踪侦听器的 <xref:System.Diagnostics.TraceListener.Name%2A> 会默认为空字符串 \(""\)。  如果应用程序只有一个侦听器，则可以在不指定名称的情况下添加它，还可以通过指定空字符串作为名称来移除它。  但是，如果应用程序有多个侦听器，则应该为每个跟踪侦听器指定唯一名称，这样，便可以在 <xref:System.Diagnostics.Debug.Listeners%2A> 和 <xref:System.Diagnostics.Trace.Listeners%2A> 集合中标识和管理各个跟踪侦听器。  
-  
-> [!NOTE]
->  添加多个相同类型和相同名称的跟踪侦听器将导致仅有一个该类型和名称的侦听器被添加到 `Listeners` 集合中。  但是可以通过编程方式向 `Listeners` 集合添加多个完全相同的侦听器。  
-  
- **initializeData** 特性的值取决于您创建的侦听器的类型。  并非所有跟踪侦听器都要求您指定 **initializeData**。  
+ <span data-ttu-id="42b81-142">如果不指定`name`特性，则跟踪侦听器，<xref:System.Diagnostics.TraceListener.Name%2A>的跟踪侦听器默认值为空字符串 ("")。</span><span class="sxs-lookup"><span data-stu-id="42b81-142">If you do not specify the `name` attribute of the trace listener, the <xref:System.Diagnostics.TraceListener.Name%2A> of the trace listener defaults to an empty string ("").</span></span> <span data-ttu-id="42b81-143">如果你的应用程序具有一个侦听器，可以将其添加而无需指定一个名称，并将其删除通过指定名称为空字符串。</span><span class="sxs-lookup"><span data-stu-id="42b81-143">If your application has only one listener, you can add it without specifying a name, and remove it by specifying an empty string for the name.</span></span> <span data-ttu-id="42b81-144">但是，如果你的应用程序具有多个侦听器，则应指定为每个跟踪侦听器，这样就可以识别和管理各个跟踪侦听器中的唯一名称<xref:System.Diagnostics.Debug.Listeners%2A>和<xref:System.Diagnostics.Trace.Listeners%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-144">However, if your application has more than one listener, you should specify unique names for each trace listener, which allows you to identify and manage individual trace listeners within the <xref:System.Diagnostics.Debug.Listeners%2A> and <xref:System.Diagnostics.Trace.Listeners%2A> collections.</span></span>  
   
 > [!NOTE]
->  当您使用 `initializeData` 特性时，可能会收到编译器警告“未声明‘initializeData’特性”。出现此警告是因为，在根据抽象基类 <xref:System.Diagnostics.TraceListener> 验证配置设置时，该基类不能识别 `initializeData` 特性。  通常，如果跟踪侦听器实现具有带参数的构造函数，则可以忽略此警告。  
+>  <span data-ttu-id="42b81-145">添加多个跟踪侦听器的相同类型条件且具有相同名称只有一个跟踪侦听器中的该类型的结果和名称添加到`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-145">Adding more than one trace listener of the same type and with the same name results in only one trace listener of that type and name being added to the `Listeners` collection.</span></span> <span data-ttu-id="42b81-146">但是，你可以以编程方式添加到多个完全相同的侦听器`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-146">However, you can programmatically add multiple identical listeners to the `Listeners` collection.</span></span>  
   
- 下表说明 .NET Framework 中包含的跟踪侦听器，同时描述了这些侦听器的 **initializeData** 特性值。  
+ <span data-ttu-id="42b81-147">值**initializeData**属性取决于你创建的侦听器的类型。</span><span class="sxs-lookup"><span data-stu-id="42b81-147">The value for the **initializeData** attribute depends on the type of listener you create.</span></span> <span data-ttu-id="42b81-148">并非所有的跟踪侦听器需要你指定**initializeData**。</span><span class="sxs-lookup"><span data-stu-id="42b81-148">Not all trace listeners require that you specify **initializeData**.</span></span>  
   
-|跟踪侦听器类|initializeData 特性值|  
-|------------|------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 构造函数的 `useErrorStream` 值。将 `initializeData` 特性设置为“`true`”可将跟踪和调试输出写至 <xref:System.Console.Error%2A?displayProperty=fullName>；设置为“`false`”可写至 <xref:System.Console.Out%2A?displayProperty=fullName>。|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.DelimitedListTraceListener> 写入的文件名。|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|现有事件日志源的名称。|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.EventSchemaTraceListener> 写入的文件的名称。|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.TextWriterTraceListener> 写入的文件的名称。|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|<xref:System.Diagnostics.XmlWriterTraceListener> 写入的文件的名称。|  
+> [!NOTE]
+>  <span data-ttu-id="42b81-149">当你使用`initializeData`属性中，你可能会收到编译器警告"未声明 initializeData 特性。"</span><span class="sxs-lookup"><span data-stu-id="42b81-149">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="42b81-150">因为配置设置验证针对的抽象基类，会出现此警告<xref:System.Diagnostics.TraceListener>，这不能识别`initializeData`属性。</span><span class="sxs-lookup"><span data-stu-id="42b81-150">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="42b81-151">通常情况下，你可以忽略此警告的具有构造函数采用参数的跟踪侦听器实现。</span><span class="sxs-lookup"><span data-stu-id="42b81-151">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
   
-## 示例  
- 下面的示例演示了如何使用**\<add\>**元素来把侦听器`MyListener`和`MyEventListener`加到**Listeners**收集器。  `MyListener` 创建一个名为 `MyListener.log` 的文件，并将输出写入到该文件。  `MyEventListener` 在事件日志中创建一项。  
+ <span data-ttu-id="42b81-152">下表显示.NET Framework 附带的跟踪侦听器，并描述的值的其**initializeData**属性。</span><span class="sxs-lookup"><span data-stu-id="42b81-152">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their **initializeData** attributes.</span></span>  
   
-```  
+|<span data-ttu-id="42b81-153">跟踪侦听器类</span><span class="sxs-lookup"><span data-stu-id="42b81-153">Trace listener class</span></span>|<span data-ttu-id="42b81-154">initializeData 特性值</span><span class="sxs-lookup"><span data-stu-id="42b81-154">initializeData attribute value</span></span>|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-155">`useErrorStream`值<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>构造函数。</span><span class="sxs-lookup"><span data-stu-id="42b81-155">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="42b81-156">设置`initializeData`属性设为"`true`"编写跟踪和调试输出到<xref:System.Console.Error%2A?displayProperty=nameWithType>;"`false`"写入<xref:System.Console.Out%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="42b81-156">Set the `initializeData` attribute to "`true`" to write trace and debug output to <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" to write to <xref:System.Console.Out%2A?displayProperty=nameWithType>.</span></span>|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-157">文件的名称<xref:System.Diagnostics.DelimitedListTraceListener>写入。</span><span class="sxs-lookup"><span data-stu-id="42b81-157">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-158">现有的事件日志源的名称的名称。</span><span class="sxs-lookup"><span data-stu-id="42b81-158">The name of the name of an existing event log source.</span></span>|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-159">文件的名称，<xref:System.Diagnostics.EventSchemaTraceListener>写入。</span><span class="sxs-lookup"><span data-stu-id="42b81-159">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-160">文件的名称，<xref:System.Diagnostics.TextWriterTraceListener>写入。</span><span class="sxs-lookup"><span data-stu-id="42b81-160">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="42b81-161">文件的名称，<xref:System.Diagnostics.XmlWriterTraceListener>写入。</span><span class="sxs-lookup"><span data-stu-id="42b81-161">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
+  
+## <a name="example"></a><span data-ttu-id="42b81-162">示例</span><span class="sxs-lookup"><span data-stu-id="42b81-162">Example</span></span>  
+ <span data-ttu-id="42b81-163">下面的示例演示如何使用**\<添加 >**元素将侦听器`MyListener`和`MyEventListener`到**侦听器**集合。</span><span class="sxs-lookup"><span data-stu-id="42b81-163">The following example shows how to use **\<add>** elements to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="42b81-164">`MyListener`创建名为的文件`MyListener.log`并将输出写入文件。</span><span class="sxs-lookup"><span data-stu-id="42b81-164">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="42b81-165">`MyEventListener`事件日志中创建的项。</span><span class="sxs-lookup"><span data-stu-id="42b81-165">`MyEventListener` creates an entry in the event log.</span></span>  
+  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <trace autoflush="true" indentsize="0">  
@@ -107,11 +110,11 @@ caps.handback.revision: 22
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.Debug>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="42b81-166">另请参阅</span><span class="sxs-lookup"><span data-stu-id="42b81-166">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.Debug>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ [<span data-ttu-id="42b81-167">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="42b81-167">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="42b81-168">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="42b81-168">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -1,66 +1,68 @@
 ---
-title: "如何：访问硬件加密设备 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "密码系统"
-  - "CspParameters"
-  - "加密"
-  - "硬件加密"
-  - "密钥卡"
+title: "如何：访问硬件加密设备"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- encryption
+- key card
+- cryptography
+- hardware encryption
+- CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5156316387f94d434301e2d5286bd325d7e04320
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：访问硬件加密设备
-可使用 <xref:System.Security.Cryptography.CspParameters> 类来访问硬件加密设备。  例如，可以使用此类将你的应用程序与智能卡、硬件随机数字生成器或特定加密算法的硬件实现进行集成。  
+# <a name="how-to-access-hardware-encryption-devices"></a><span data-ttu-id="5ee98-102">如何：访问硬件加密设备</span><span class="sxs-lookup"><span data-stu-id="5ee98-102">How to: Access Hardware Encryption Devices</span></span>
+<span data-ttu-id="5ee98-103">可使用 <xref:System.Security.Cryptography.CspParameters> 类来访问硬件加密设备。</span><span class="sxs-lookup"><span data-stu-id="5ee98-103">You can use the <xref:System.Security.Cryptography.CspParameters> class to access hardware encryption devices.</span></span> <span data-ttu-id="5ee98-104">例如，可以使用此类将你的应用程序与智能卡、硬件随机数字生成器或特定加密算法的硬件实现进行集成。</span><span class="sxs-lookup"><span data-stu-id="5ee98-104">For example, you can use this class to integrate your application with a smart card, a hardware random number generator, or a hardware implementation of a particular cryptographic algorithm.</span></span>  
   
- <xref:System.Security.Cryptography.CspParameters> 类会创建一个加密服务提供程序 \(CSP\)，该程序可访问正确安装的硬件加密设备。  你可以通过使用注册表编辑器 \(Regedit.exe\) 检查下列注册表项来验证 CSP 的可用性：HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Cryptography\\Defaults\\Provider。  
+ <span data-ttu-id="5ee98-105"><xref:System.Security.Cryptography.CspParameters> 类会创建一个加密服务提供程序 (CSP)，该程序可访问正确安装的硬件加密设备。</span><span class="sxs-lookup"><span data-stu-id="5ee98-105">The <xref:System.Security.Cryptography.CspParameters> class creates a cryptographic service provider (CSP) that accesses a properly installed hardware encryption device.</span></span>  <span data-ttu-id="5ee98-106">你可以通过使用注册表编辑器 (Regedit.exe) 检查下列注册表项来验证 CSP 的可用性：HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider。</span><span class="sxs-lookup"><span data-stu-id="5ee98-106">You can verify the availability of a CSP by inspecting the following registry key using the Registry Editor (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.</span></span>  
   
-### 使用密钥卡对数据进行签名  
+### <a name="to-sign-data-using-a-key-card"></a><span data-ttu-id="5ee98-107">使用密钥卡对数据进行签名</span><span class="sxs-lookup"><span data-stu-id="5ee98-107">To sign data using a key card</span></span>  
   
-1.  通过将整数提供程序类型和提供程序名称传递给构造函数，创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例。  
+1.  <span data-ttu-id="5ee98-108">通过将整数提供程序类型和提供程序名称传递给构造函数，创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="5ee98-108">Create a new instance of the <xref:System.Security.Cryptography.CspParameters> class, passing the integer provider type and the provider name to the constructor.</span></span>  
   
-2.  将适当的标志传递给新创建的 <xref:System.Security.Cryptography.CspParameters> 对象的 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 属性。  例如，传递 <xref:System.Security.Cryptography.CspProviderFlags> 标志。  
+2.  <span data-ttu-id="5ee98-109">将适当的标志传递给新创建的 <xref:System.Security.Cryptography.CspParameters> 对象的 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="5ee98-109">Pass the appropriate flags to the <xref:System.Security.Cryptography.CspParameters.Flags%2A> property of the newly created <xref:System.Security.Cryptography.CspParameters> object.</span></span>  <span data-ttu-id="5ee98-110">例如，传递 <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> 标志。</span><span class="sxs-lookup"><span data-stu-id="5ee98-110">For example, pass the <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> flag.</span></span>  
   
-3.  通过将 <xref:System.Security.Cryptography.CspParameters> 对象传递给构造函数，创建 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 类（如 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类）的新实例。  
+3.  <span data-ttu-id="5ee98-111">通过将 <xref:System.Security.Cryptography.CspParameters> 对象传递给构造函数，创建 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 类（如 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 类）的新实例。</span><span class="sxs-lookup"><span data-stu-id="5ee98-111">Create a new instance of an <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (for example, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class), passing the <xref:System.Security.Cryptography.CspParameters> object to the constructor.</span></span>  
   
-4.  使用其中一种 `Sign` 方法对你的数据进行签名，并使用其中一种 `Verify` 方法来验证你的数据。  
+4.  <span data-ttu-id="5ee98-112">使用其中一种 `Sign` 方法对你的数据进行签名，并使用其中一种 `Verify` 方法来验证你的数据。</span><span class="sxs-lookup"><span data-stu-id="5ee98-112">Sign your data using one of the `Sign` methods and verify your data using one of the `Verify` methods.</span></span>  
   
-### 使用硬件随机数字生成器生成随机数  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a><span data-ttu-id="5ee98-113">使用硬件随机数字生成器生成随机数</span><span class="sxs-lookup"><span data-stu-id="5ee98-113">To generate a random number using a hardware random number generator</span></span>  
   
-1.  通过将整数提供程序类型和提供程序名称传递给构造函数，创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例。  
+1.  <span data-ttu-id="5ee98-114">通过将整数提供程序类型和提供程序名称传递给构造函数，创建 <xref:System.Security.Cryptography.CspParameters> 类的新实例。</span><span class="sxs-lookup"><span data-stu-id="5ee98-114">Create a new instance of the <xref:System.Security.Cryptography.CspParameters> class, passing the integer provider type and the provider name to the constructor.</span></span>  
   
-2.  通过将 <xref:System.Security.Cryptography.CspParameters> 对象传递给构造函数，创建 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 的新实例。  
+2.  <span data-ttu-id="5ee98-115">通过将 <xref:System.Security.Cryptography.CspParameters> 对象传递给构造函数，创建 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 的新实例。</span><span class="sxs-lookup"><span data-stu-id="5ee98-115">Create a new instance of the <xref:System.Security.Cryptography.RNGCryptoServiceProvider>, passing the <xref:System.Security.Cryptography.CspParameters> object to the constructor.</span></span>  
   
-3.  使用 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> 或 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> 方法创建一个随机值。  
+3.  <span data-ttu-id="5ee98-116">使用 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> 或 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> 方法创建一个随机值。</span><span class="sxs-lookup"><span data-stu-id="5ee98-116">Create a random value using the <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> or <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> method.</span></span>  
   
-## 示例  
- 下列代码示例演示如何使用智能卡对数据进行签名。  此代码示例创建一个公开智能卡的 <xref:System.Security.Cryptography.CspParameters> 对象，然后使用 CSP 初始化 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象。  然后此代码示例会对某些数据进行签名和验证。  
+## <a name="example"></a><span data-ttu-id="5ee98-117">示例</span><span class="sxs-lookup"><span data-stu-id="5ee98-117">Example</span></span>  
+ <span data-ttu-id="5ee98-118">下列代码示例演示如何使用智能卡对数据进行签名。</span><span class="sxs-lookup"><span data-stu-id="5ee98-118">The following code example demonstrates how to sign data using a smart card.</span></span>  <span data-ttu-id="5ee98-119">此代码示例创建一个公开智能卡的 <xref:System.Security.Cryptography.CspParameters> 对象，然后使用 CSP 初始化 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象。</span><span class="sxs-lookup"><span data-stu-id="5ee98-119">The code example creates a <xref:System.Security.Cryptography.CspParameters> object that exposes a smart card, and then initializes an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object using the CSP.</span></span>  <span data-ttu-id="5ee98-120">然后此代码示例会对某些数据进行签名和验证。</span><span class="sxs-lookup"><span data-stu-id="5ee98-120">The code example then signs and verifies some data.</span></span>  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
  [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="5ee98-121">编译代码</span><span class="sxs-lookup"><span data-stu-id="5ee98-121">Compiling the Code</span></span>  
   
--   包括 <xref:System> 和 <xref:System.Security.Cryptography> 命名空间。  
+-   <span data-ttu-id="5ee98-122">包括 <xref:System> 和 <xref:System.Security.Cryptography> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="5ee98-122">Include the <xref:System> and <xref:System.Security.Cryptography> namespaces.</span></span>  
   
--   计算机上必须安装有智能卡读卡器和驱动程序。  
+-   <span data-ttu-id="5ee98-123">计算机上必须安装有智能卡读卡器和驱动程序。</span><span class="sxs-lookup"><span data-stu-id="5ee98-123">You must have a smart card reader and drivers installed on your computer.</span></span>  
   
--   必须使用特定于读卡器的信息来初始化 <xref:System.Security.Cryptography.CspParameters> 对象。  有关详细信息，请参阅读卡器的文档。
+-   <span data-ttu-id="5ee98-124">必须使用特定于读卡器的信息来初始化 <xref:System.Security.Cryptography.CspParameters> 对象。</span><span class="sxs-lookup"><span data-stu-id="5ee98-124">You must initialize the <xref:System.Security.Cryptography.CspParameters> object using information specific to your card reader.</span></span>  <span data-ttu-id="5ee98-125">有关详细信息，请参阅读卡器的文档。</span><span class="sxs-lookup"><span data-stu-id="5ee98-125">For more information, see the documentation of your card reader.</span></span>

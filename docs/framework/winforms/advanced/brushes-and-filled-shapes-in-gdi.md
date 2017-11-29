@@ -1,92 +1,96 @@
 ---
-title: "GDI+ 中的画笔和实心形状 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "画笔, GDI+"
-  - "画笔, 渐变"
-  - "已填充的形状, GDI+"
-  - "GDI+, 画笔"
-  - "GDI+, 已填充的形状"
-  - "渐变画刷"
-  - "形状, GDI+"
+title: "GDI+ 中的画笔和实心形状"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [Windows Forms], GDI+
+- filled shapes [Windows Forms], GDI+
+- shapes [Windows Forms], GDI+
+- GDI+, brushes
+- GDI+, filled shapes
+- gradient brushes
+- brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# GDI+ 中的画笔和实心形状
-闭合的形状（例如，矩形或椭圆）由轮廓和内部组成。  使用钢笔绘制出轮廓，并用画笔填充其内部。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了几种填充闭合形状内部的画笔类：<xref:System.Drawing.SolidBrush>、<xref:System.Drawing.Drawing2D.HatchBrush>、<xref:System.Drawing.TextureBrush>、<xref:System.Drawing.Drawing2D.LinearGradientBrush> 和 <xref:System.Drawing.Drawing2D.PathGradientBrush>。  所有这些类都是从 <xref:System.Drawing.Brush> 类继承的。  下面的插图显示了用实心画笔填充的矩形和用阴影画笔填充的椭圆。  
+# <a name="brushes-and-filled-shapes-in-gdi"></a><span data-ttu-id="42d13-102">GDI+ 中的画笔和实心形状</span><span class="sxs-lookup"><span data-stu-id="42d13-102">Brushes and Filled Shapes in GDI+</span></span>
+<span data-ttu-id="42d13-103">闭合的形状，如矩形或椭圆由概述和内部组成。</span><span class="sxs-lookup"><span data-stu-id="42d13-103">A closed shape, such as a rectangle or an ellipse, consists of an outline and an interior.</span></span> <span data-ttu-id="42d13-104">使用钢笔绘制轮廓和使用画笔填充其内部。</span><span class="sxs-lookup"><span data-stu-id="42d13-104">The outline is drawn with a pen and the interior is filled with a brush.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="42d13-105">提供了几个画笔类填充的闭合形状的内部： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。</span><span class="sxs-lookup"><span data-stu-id="42d13-105"> provides several brush classes for filling the interiors of closed shapes: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, and <xref:System.Drawing.Drawing2D.PathGradientBrush>.</span></span> <span data-ttu-id="42d13-106">这些类都继承自<xref:System.Drawing.Brush>类。</span><span class="sxs-lookup"><span data-stu-id="42d13-106">All of these classes inherit from the <xref:System.Drawing.Brush> class.</span></span> <span data-ttu-id="42d13-107">下图显示用纯色画笔填充的矩形和椭圆用阴影画笔填充。</span><span class="sxs-lookup"><span data-stu-id="42d13-107">The following illustration shows a rectangle filled with a solid brush and an ellipse filled with a hatch brush.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.png "Aboutgdip02\_art17")  
+ <span data-ttu-id="42d13-108">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")</span><span class="sxs-lookup"><span data-stu-id="42d13-108">![Filled Shapes](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")</span></span>  
   
-## 实心画笔  
- 若要填充闭合的形状，需要 <xref:System.Drawing.Graphics> 类的实例和 <xref:System.Drawing.Brush>。  <xref:System.Drawing.Graphics> 类的实例提供方法，如 <xref:System.Drawing.Graphics.FillRectangle%2A> 和 <xref:System.Drawing.Graphics.FillEllipse%2A>，而 <xref:System.Drawing.Brush> 存储填充的特性，如颜色和模式。  <xref:System.Drawing.Brush> 作为参数之一传递给填充方法。  下面的代码示例演示如何用纯红色填充椭圆。  
+## <a name="solid-brushes"></a><span data-ttu-id="42d13-109">实心画笔</span><span class="sxs-lookup"><span data-stu-id="42d13-109">Solid Brushes</span></span>  
+ <span data-ttu-id="42d13-110">若要填充的闭合的形状，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Brush>。</span><span class="sxs-lookup"><span data-stu-id="42d13-110">To fill a closed shape, you need an instance of the <xref:System.Drawing.Graphics> class and a <xref:System.Drawing.Brush>.</span></span> <span data-ttu-id="42d13-111">实例<xref:System.Drawing.Graphics>类提供了方法，如<xref:System.Drawing.Graphics.FillRectangle%2A>和<xref:System.Drawing.Graphics.FillEllipse%2A>，和<xref:System.Drawing.Brush>存储填充，如颜色和模式的特性。</span><span class="sxs-lookup"><span data-stu-id="42d13-111">The instance of the <xref:System.Drawing.Graphics> class provides methods, such as <xref:System.Drawing.Graphics.FillRectangle%2A> and <xref:System.Drawing.Graphics.FillEllipse%2A>, and the <xref:System.Drawing.Brush> stores attributes of the fill, such as color and pattern.</span></span> <span data-ttu-id="42d13-112"><xref:System.Drawing.Brush>作为一个参数传递给填充方法。</span><span class="sxs-lookup"><span data-stu-id="42d13-112">The <xref:System.Drawing.Brush> is passed as one of the arguments to the fill method.</span></span> <span data-ttu-id="42d13-113">下面的代码示例演示如何用红色纯色填充椭圆。</span><span class="sxs-lookup"><span data-stu-id="42d13-113">The following code example shows how to fill an ellipse with a solid red color.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#121](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  在前面的示例中，画笔为 <xref:System.Drawing.SolidBrush> 类型，该类型从 <xref:System.Drawing.Brush> 继承。  
+>  <span data-ttu-id="42d13-114">在前面的示例中，画笔属于类型<xref:System.Drawing.SolidBrush>，它继承自<xref:System.Drawing.Brush>。</span><span class="sxs-lookup"><span data-stu-id="42d13-114">In the preceding example, the brush is of type <xref:System.Drawing.SolidBrush>, which inherits from <xref:System.Drawing.Brush>.</span></span>  
   
-## 阴影画笔  
- 用阴影画笔填充图形时，要指定前景色、背景色和阴影样式。  前景色是阴影的颜色。  
+## <a name="hatch-brushes"></a><span data-ttu-id="42d13-115">阴影画笔</span><span class="sxs-lookup"><span data-stu-id="42d13-115">Hatch Brushes</span></span>  
+ <span data-ttu-id="42d13-116">当使用阴影画笔填充形状时，指定前景颜色、 背景色和阴影样式。</span><span class="sxs-lookup"><span data-stu-id="42d13-116">When you fill a shape with a hatch brush, you specify a foreground color, a background color, and a hatch style.</span></span> <span data-ttu-id="42d13-117">前景色为阴影的颜色。</span><span class="sxs-lookup"><span data-stu-id="42d13-117">The foreground color is the color of the hatching.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 50 多种阴影样式；在下面的插图中显示的三种样式为：<xref:System.Drawing.Drawing2D.HatchStyle>、<xref:System.Drawing.Drawing2D.HatchStyle> 和 <xref:System.Drawing.Drawing2D.HatchStyle>。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="42d13-118">提供 50 多台的阴影样式;下图中所示的三个样式<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。</span><span class="sxs-lookup"><span data-stu-id="42d13-118"> provides more than 50 hatch styles; the three styles shown in the following illustration are <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, and <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.png "Aboutgdip02\_art18")  
+ <span data-ttu-id="42d13-119">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")</span><span class="sxs-lookup"><span data-stu-id="42d13-119">![Filled Shapes](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")</span></span>  
   
-## 纹理画笔  
- 有了纹理画笔，您就可以用位图中存储的图案来填充图形。  例如，假定下面的图片存储在名为 `MyTexture.bmp` 的磁盘文件中。  
+## <a name="texture-brushes"></a><span data-ttu-id="42d13-120">纹理画笔</span><span class="sxs-lookup"><span data-stu-id="42d13-120">Texture Brushes</span></span>  
+ <span data-ttu-id="42d13-121">使用纹理画笔，你可以用位图中存储的图案填充形状。</span><span class="sxs-lookup"><span data-stu-id="42d13-121">With a texture brush, you can fill a shape with a pattern stored in a bitmap.</span></span> <span data-ttu-id="42d13-122">例如，假设以下图片存储在名为磁盘文件`MyTexture.bmp`。</span><span class="sxs-lookup"><span data-stu-id="42d13-122">For example, suppose the following picture is stored in a disk file named `MyTexture.bmp`.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.png "Aboutgdip02\_Art19")  
+ <span data-ttu-id="42d13-123">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")</span><span class="sxs-lookup"><span data-stu-id="42d13-123">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")</span></span>  
   
- 下面的代码示例演示了如何通过重复存储在 `MyTexture.bmp` 中的图片来填充椭圆。  
+ <span data-ttu-id="42d13-124">下面的代码示例演示如何通过重复图片存储在填充椭圆`MyTexture.bmp`。</span><span class="sxs-lookup"><span data-stu-id="42d13-124">The following code example shows how to fill an ellipse by repeating the picture stored in `MyTexture.bmp`.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#123](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#123)]
  [!code-vb[LinesCurvesAndShapes#123](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#123)]  
   
- 下面的插图显示已填充的椭圆。  
+ <span data-ttu-id="42d13-125">下图显示实心的椭圆。</span><span class="sxs-lookup"><span data-stu-id="42d13-125">The following illustration shows the filled ellipse.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.png "AboutGdip02\_Art20")  
+ <span data-ttu-id="42d13-126">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")</span><span class="sxs-lookup"><span data-stu-id="42d13-126">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")</span></span>  
   
-## 渐变画笔  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供两种渐变画笔：线性和路径。  您可以使用线性渐变画笔来用颜色（在您横向、纵向或斜向移过图形时会逐渐变化的颜色）填充图形。  下面的代码示例演示如何用水平渐变画笔填充一个椭圆，当从椭圆的左边缘向右边缘移动时，画笔颜色会由蓝变为绿。  
+## <a name="gradient-brushes"></a><span data-ttu-id="42d13-127">渐变画刷</span><span class="sxs-lookup"><span data-stu-id="42d13-127">Gradient Brushes</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="42d13-128">提供两种类型的渐变画刷： 线性和路径。</span><span class="sxs-lookup"><span data-stu-id="42d13-128"> provides two kinds of gradient brushes: linear and path.</span></span> <span data-ttu-id="42d13-129">可以使用线性渐变画笔填充形状更改逐渐水平、 垂直移过图形或对角线方向的颜色。</span><span class="sxs-lookup"><span data-stu-id="42d13-129">You can use a linear gradient brush to fill a shape with color that changes gradually as you move across the shape horizontally, vertically, or diagonally.</span></span> <span data-ttu-id="42d13-130">下面的代码示例演示如何用从蓝绿色到移动时改变距左边缘的椭圆的右边缘的水平渐变画笔填充椭圆。</span><span class="sxs-lookup"><span data-stu-id="42d13-130">The following code example shows how to fill an ellipse with a horizontal gradient brush that changes from blue to green as you move from the left edge of the ellipse to the right edge.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
- 下面的插图显示已填充的椭圆。  
+ <span data-ttu-id="42d13-131">下图显示实心的椭圆。</span><span class="sxs-lookup"><span data-stu-id="42d13-131">The following illustration shows the filled ellipse.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.png "AboutGdip02\_Art21")  
+ <span data-ttu-id="42d13-132">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")</span><span class="sxs-lookup"><span data-stu-id="42d13-132">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")</span></span>  
   
- 路径渐变画笔可配置为当您从图形中心向边缘移动时颜色随之改变。  
+ <span data-ttu-id="42d13-133">路径渐变画笔可以配置为当您从边缘形状的中心移动更改颜色。</span><span class="sxs-lookup"><span data-stu-id="42d13-133">A path gradient brush can be configured to change color as you move from the center of a shape toward the edge.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.png "AboutGdip02\_Art22")  
+ <span data-ttu-id="42d13-134">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")</span><span class="sxs-lookup"><span data-stu-id="42d13-134">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")</span></span>  
   
- 路径渐变画笔非常灵活。  用于填充下面插图中三角形的渐变画笔，颜色从中心由红色开始到顶点逐渐变为三种不同的颜色。  
+ <span data-ttu-id="42d13-135">路径渐变画刷是非常灵活。</span><span class="sxs-lookup"><span data-stu-id="42d13-135">Path gradient brushes are quite flexible.</span></span> <span data-ttu-id="42d13-136">渐变画笔用于填充逐渐从在中心的红色对每个顶点处的三种不同颜色的以下图更改中的三角形。</span><span class="sxs-lookup"><span data-stu-id="42d13-136">The gradient brush used to fill the triangle in the following illustration changes gradually from red at the center to each of three different colors at the vertices.</span></span>  
   
- ![实心形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.png "AboutGdip02\_Art23")  
+ <span data-ttu-id="42d13-137">![填充形状](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")</span><span class="sxs-lookup"><span data-stu-id="42d13-137">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")</span></span>  
   
-## 请参阅  
- <xref:System.Drawing.SolidBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=fullName>   
- <xref:System.Drawing.TextureBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>   
- [直线、曲线和图形](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [如何：在 Windows 窗体上绘制实心矩形](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)   
- [如何：在 Windows 窗体上绘制实心椭圆](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+## <a name="see-also"></a><span data-ttu-id="42d13-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="42d13-138">See Also</span></span>  
+ <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ [<span data-ttu-id="42d13-139">直线、曲线和形状</span><span class="sxs-lookup"><span data-stu-id="42d13-139">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="42d13-140">如何：在 Windows 窗体上绘制填充矩形</span><span class="sxs-lookup"><span data-stu-id="42d13-140">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [<span data-ttu-id="42d13-141">如何：在 Windows 窗体上绘制填充椭圆形</span><span class="sxs-lookup"><span data-stu-id="42d13-141">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)

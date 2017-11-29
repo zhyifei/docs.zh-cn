@@ -1,41 +1,42 @@
 ---
-title: "Splitter 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "多个视图"
-  - "Splitter 控件 [Windows 窗体]"
-  - "视图, 每个框架有多个"
+title: "Splitter 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple views
+- Splitter control [Windows Forms]
+- views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b6a1438a48cd6cd21532a977dcf9cee69fd2cea
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Splitter 控件（Windows 窗体）
-Windows 窗体 `Splitter` 控件用于在运行时调整停靠控件的大小。  `Splitter` 控件常用于一类窗体，这类窗体上的控件所显示的数据长度可变，如 Windows 资源管理器，它的数据窗格所包含的信息在不同的时间有不同的宽度。  
+# <a name="splitter-control-windows-forms"></a><span data-ttu-id="5f9c0-102">Splitter 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="5f9c0-102">Splitter Control (Windows Forms)</span></span>
+<span data-ttu-id="5f9c0-103">Windows 窗体`Splitter`控制用于在运行时调整停靠的控件的大小。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="5f9c0-104">`Splitter`控件常用于在与具有数据要呈现，如 Windows 资源管理器，其数据窗格包含不同的宽度的信息在不同时间的长度可变的控件的窗体上。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  
   
 > [!NOTE]
->  尽管 <xref:System.Windows.Forms.SplitContainer> 替换了早期版本的 `Splitter` 控件并添加了功能；但是也可选择保留 `Splitter` 以备向后兼容和将来使用。  
+>  <span data-ttu-id="5f9c0-105">尽管<xref:System.Windows.Forms.SplitContainer>替换并添加了功能`Splitter`的早期版本中，控件`Splitter`可以选择保留向后兼容性和将来使用。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-105">Although <xref:System.Windows.Forms.SplitContainer> replaces and adds functionality to the `Splitter` control of previous versions, `Splitter` is retained for both backward compatibility and future use if you choose.</span></span>  
   
-## 本节内容  
- [Splitter 控件概述](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+## <a name="in-this-section"></a><span data-ttu-id="5f9c0-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="5f9c0-106">In This Section</span></span>  
+ [<span data-ttu-id="5f9c0-107">Splitter 控件概述</span><span class="sxs-lookup"><span data-stu-id="5f9c0-107">Splitter Control Overview</span></span>](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
+ <span data-ttu-id="5f9c0-108">说明此控件的本质及其主要功能和属性。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-108">Explains what this control is and its key features and properties.</span></span>  
   
-## 参考  
- <xref:System.Windows.Forms.Splitter> 类  
- 描述该类并提供指向其所有成员的链接。  
+## <a name="reference"></a><span data-ttu-id="5f9c0-109">参考</span><span class="sxs-lookup"><span data-stu-id="5f9c0-109">Reference</span></span>  
+ <span data-ttu-id="5f9c0-110"><xref:System.Windows.Forms.Splitter> 类</span><span class="sxs-lookup"><span data-stu-id="5f9c0-110"><xref:System.Windows.Forms.Splitter> class</span></span>  
+ <span data-ttu-id="5f9c0-111">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-111">Describes this class and has links to all its members.</span></span>  
   
-## 相关章节  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+## <a name="related-sections"></a><span data-ttu-id="5f9c0-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="5f9c0-112">Related Sections</span></span>  
+ [<span data-ttu-id="5f9c0-113">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="5f9c0-113">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="5f9c0-114">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="5f9c0-114">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

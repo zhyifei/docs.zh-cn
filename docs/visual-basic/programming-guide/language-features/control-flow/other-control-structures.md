@@ -1,55 +1,38 @@
 ---
-title: "其他控件结构 (Visual Basic 中) |Microsoft 文档"
+title: "其他控件结构 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - statements [Visual Basic], control flow
-- control structures
+- control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 639571b493037f26951bd8fbf140d7bce3244889
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 09e59d25b3b2fc89026295e8500c30dad7b75086
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="other-control-structures-visual-basic"></a>其他控件结构 (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供帮助您的控制结构释放资源或减少您必须重复的对象引用的次数。  
+# <a name="other-control-structures-visual-basic"></a><span data-ttu-id="51b77-102">其他控件结构 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51b77-102">Other Control Structures (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="51b77-103">提供帮助你的控制结构释放资源，或减少你需要重复操作的对象引用的次数。</span><span class="sxs-lookup"><span data-stu-id="51b77-103"> provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.</span></span>  
   
-## <a name="usingend-using-construction"></a>使用...结束使用构造  
- `Using...End Using`构造建立要在其中一个语句块使用的资源，例如 SQL 连接。 （可选） 可以获取具有资源`Using`语句。 当您退出`Using`块中， [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ，以便它不用于其他代码以使用自动释放资源。 资源必须是本地且可释放。 有关详细信息，请参阅[Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+## <a name="usingend-using-construction"></a><span data-ttu-id="51b77-104">使用...结束使用构造</span><span class="sxs-lookup"><span data-stu-id="51b77-104">Using...End Using Construction</span></span>  
+ <span data-ttu-id="51b77-105">`Using...End Using`构造建立可在其中一个语句块使用的资源，例如 SQL 连接。</span><span class="sxs-lookup"><span data-stu-id="51b77-105">The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection.</span></span> <span data-ttu-id="51b77-106">您可以根据需要获取的资源`Using`语句。</span><span class="sxs-lookup"><span data-stu-id="51b77-106">You can optionally acquire the resource with the `Using` statement.</span></span> <span data-ttu-id="51b77-107">当您退出`Using`块， [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ，以便它不用于其他代码以使用自动释放资源。</span><span class="sxs-lookup"><span data-stu-id="51b77-107">When you exit the `Using` block, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically disposes of the resource so that it is available for other code to use.</span></span> <span data-ttu-id="51b77-108">资源必须是本地且可释放。</span><span class="sxs-lookup"><span data-stu-id="51b77-108">The resource must be local and disposable.</span></span> <span data-ttu-id="51b77-109">有关详细信息，请参阅 [Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="51b77-109">For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).</span></span>  
   
-## <a name="withend-with-construction"></a>使用...以构造结尾  
- `With...End With`构造允许您指定的对象引用一次，然后运行一系列访问其成员的语句。 这可以简化代码，并提高性能，因为[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]无需重新建立访问它的每个语句的引用。 有关详细信息，请参阅[与...使用语句结束](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)。  
+## <a name="withend-with-construction"></a><span data-ttu-id="51b77-110">使用...以构造结尾</span><span class="sxs-lookup"><span data-stu-id="51b77-110">With...End With Construction</span></span>  
+ <span data-ttu-id="51b77-111">`With...End With`构造，可以一次指定的对象引用，然后运行一系列访问其成员的语句。</span><span class="sxs-lookup"><span data-stu-id="51b77-111">The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members.</span></span> <span data-ttu-id="51b77-112">这可以简化你的代码并提高性能，因为[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不必重新建立访问它的每个语句的引用。</span><span class="sxs-lookup"><span data-stu-id="51b77-112">This can simplify your code and improve performance because [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] does not have to re-establish the reference for each statement that accesses it.</span></span> <span data-ttu-id="51b77-113">有关详细信息，请参阅[与...使用语句结束](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="51b77-113">For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [嵌套的控件结构](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Using 语句](../../../../visual-basic/language-reference/statements/using-statement.md)   
- [With...End With 语句](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a><span data-ttu-id="51b77-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="51b77-114">See Also</span></span>  
+ [<span data-ttu-id="51b77-115">控制流</span><span class="sxs-lookup"><span data-stu-id="51b77-115">Control Flow</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [<span data-ttu-id="51b77-116">决策结构</span><span class="sxs-lookup"><span data-stu-id="51b77-116">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [<span data-ttu-id="51b77-117">循环结构</span><span class="sxs-lookup"><span data-stu-id="51b77-117">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="51b77-118">嵌套的控件结构</span><span class="sxs-lookup"><span data-stu-id="51b77-118">Nested Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [<span data-ttu-id="51b77-119">Using 语句</span><span class="sxs-lookup"><span data-stu-id="51b77-119">Using Statement</span></span>](../../../../visual-basic/language-reference/statements/using-statement.md)  
+ [<span data-ttu-id="51b77-120">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="51b77-120">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
