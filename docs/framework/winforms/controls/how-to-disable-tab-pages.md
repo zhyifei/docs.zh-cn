@@ -1,43 +1,48 @@
 ---
-title: "如何：禁用选项卡页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选项卡页, 在窗体中隐藏"
-  - "TabControl 控件 [Windows 窗体], 禁用页"
+title: "如何：禁用选项卡页"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tab pages [Windows Forms], hiding in forms
+- TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：禁用选项卡页
-在某些时候，您将希望限制对 Windows 窗体应用程序内可用的数据的访问。  这种情况的一个例子是您将数据显示在选项卡控件的选项卡页中时；管理员可能在选项卡页上放置了您不希望来宾或低级别用户访问的信息。  
+# <a name="how-to-disable-tab-pages"></a>如何：禁用选项卡页
+在某些情况下，你将想要限制对 Windows 窗体应用程序中可用的数据的访问。 这一个示例可能是当已在选项卡控件; 选项卡页中显示的数据管理员可以在你想要限制从来宾或较低级别的用户选项卡页的信息。  
   
-### 以编程方式禁用选项卡页  
+### <a name="to-disable-tab-pages-programmatically"></a>若要以编程方式禁用选项卡页  
   
-1.  编写用来处理选项卡控件 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件的代码。  这是在用户从一个选项卡切换到另一个选项卡时引发的事件。  
+1.  编写代码来处理选项卡控件<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>事件。 这是当用户从一个选项卡切换到下一步时引发的事件。  
   
-2.  检查凭据。  根据提供的信息，您可能希望在允许用户查看选项卡之前，检查用户登录所使用的用户名或某个其他形式的凭据。  
+2.  检查凭据。 根据提供的信息，你可能想要检查用户已登录时使用的用户名称或某种其他形式的凭据，然后允许用户查看选项卡。  
   
-3.  如果用户具有适当的凭据，则显示已单击的选项卡。  如果用户没有适当的凭据，则显示一个消息框或某个其他用户界面以指示用户没有访问权限，然后返回到初始选项卡。  
+3.  如果用户有相应的凭据，显示被单击的选项卡。 如果用户没有适当的凭据，显示一个消息框或某些其他用户界面以指示它们不具有访问权限，并返回到初始选项卡。  
   
     > [!NOTE]
-    >  在生产应用程序中实现此功能时，可以在窗体的 <xref:System.Windows.Forms.Form.Load> 事件期间执行此凭据检查。  这样，您就可以在显示任何用户界面之前隐藏选项卡（这是一种更简洁的编程方法）。  下面使用的方法（在 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件期间检查凭据并禁用选项卡）对这一点进行了阐述。  
+    >  当你在生产应用程序中实现此功能时，你可以在窗体的过程中执行此凭据检查<xref:System.Windows.Forms.Form.Load>事件。 这样，你可以在任何用户界面会显示，这是更简洁的编程方法前隐藏选项卡。 使用下面的方法 (检查凭据并禁用期间选项卡<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>事件) 用于说明目的。  
   
-4.  或者，如果有两个以上的选项卡页，则显示与原始选项卡页不同的选项卡页。  
+4.  （可选） 如果你有两个以上的选项卡页，则显示原始版本不同的选项卡页。  
   
-     在下面的示例中，用 <xref:System.Windows.Forms.CheckBox> 控件代替检查凭据，因为访问选项卡的标准会因应用程序而异。  在引发 <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> 事件时，如果凭据检查为真（即选中了复选框）且选定的选项卡为 `TabPage2`（本示例中为带有机密信息的选项卡），则显示 `TabPage2`。  否则，显示 `TabPage3`，并向用户显示一个消息框，指出他们没有相应的访问特权。  下面的代码假定窗体具有一个 <xref:System.Windows.Forms.CheckBox> 控件 \(`CredentialCheck`\) 和一个具有三个选项卡页的 <xref:System.Windows.Forms.TabControl> 控件。  
+     在示例中，<xref:System.Windows.Forms.CheckBox>控件用于检查凭据，作为条件访问的选项卡将因应用程序的替代。 当<xref:System.Windows.Forms.TabControl.SelectedIndexChanged>引发事件时，如果凭据检查为 true （即，选中复选框） 和已选定选项卡是`TabPage2`（此示例中的机密信息的选项卡），然后`TabPage2`显示。 否则为`TabPage3`将显示一个消息框显示给用户，指出他们没有适当的访问权限。 下面的代码假定的窗体具有<xref:System.Windows.Forms.CheckBox>控件 (`CredentialCheck`) 和一个<xref:System.Windows.Forms.TabControl>带有三个选项卡页的控件。  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
           TabControl1.SelectedTab = TabPage3  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -71,7 +75,6 @@ caps.handback.revision: 15
             tabControl1.SelectedTab = tabPage3;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,12 +99,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-     （Visual C\# 和 Visual C\+\+）在窗体的构造函数中放置以下代码，以注册事件处理程序。  
+     （visual C#、 Visual c + +）将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
        new System.EventHandler(this.tabControl1_SelectedIndexChanged);  
-  
     ```  
   
     ```cpp  
@@ -109,8 +111,8 @@ caps.handback.revision: 15
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## 请参阅  
- [TabControl 控件概述](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [如何：将控件添加到选项卡页](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [如何：使用 Windows 窗体 TabControl 添加和移除选项卡](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)   
- [如何：更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>另请参阅  
+ [TabControl 控件概述](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [如何：向选项卡页添加控件](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [如何：使用 Windows 窗体 TabControl 控件添加和删除选项卡](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [如何：更改 Windows 窗体 TabControl 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

@@ -1,40 +1,32 @@
 ---
-title: "中 Visual Basic2 XML 文本简介 |Microsoft 文档"
+title: "中 Visual Basic2 XML 文本简介"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 文本简介
-本节提供有关使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 创建 XML 树的信息。  
+本节提供有关使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建 XML 树的信息。  
   
- 有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[功能构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[函数构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
- 有关详细信息中的 XML 文本[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 有关详细信息中的 XML 文本[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>创建 XML 树  
- 下面的示例演示如何创建<xref:System.Xml.Linq.XElement>，在这种情况下`contacts`:</xref:System.Xml.Linq.XElement>  
+ 下面的示例演示如何创建一个 <xref:System.Xml.Linq.XElement>，在本例中为 `contacts`：  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>创建包含简单内容的 XElement  
- 您可以创建<xref:System.Xml.Linq.XElement>包含简单内容，如下所示︰</xref:System.Xml.Linq.XElement>  
+ 可以创建包含简单内容的 <xref:System.Xml.Linq.XElement>，如下所示：  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>创建空元素  
- 您可以创建一个空<xref:System.Xml.Linq.XElement>、，如下所示︰</xref:System.Xml.Linq.XElement>  
+ 可以创建一个空 <xref:System.Xml.Linq.XElement>，如下所示：  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>使用嵌入式表达式  
- XML 文本的一个重要特性是允许使用嵌入式表达式。 使用嵌入式表达式可以对表达式进行计算，并将表达式的结果插入到 XML 树中。 如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XElement>，一个元素插入到树。</xref:System.Xml.Linq.XElement> 如果该表达式的计算结果为一种类型的<xref:System.Xml.Linq.XAttribute>，属性插入到树。</xref:System.Xml.Linq.XAttribute> 只能将元素和属性插入到它们在树中有效的位置。  
+ XML 文本的一个重要特性是允许使用嵌入式表达式。 使用嵌入式表达式可以对表达式进行计算，并将表达式的结果插入到 XML 树中。 如果表达式计算结果为 <xref:System.Xml.Linq.XElement> 类型，则向树中插入元素。 如果表达式计算结果为 <xref:System.Xml.Linq.XAttribute> 类型，则向树中插入属性。 只能将元素和属性插入到它们在树中有效的位置。  
   
  应当注意，只能将单个表达式放入嵌入式表达式。 不能嵌入多个语句。 如果表达式超过一行，必须使用行继续符。  
   

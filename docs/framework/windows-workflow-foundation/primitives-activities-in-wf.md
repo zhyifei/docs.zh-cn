@@ -1,24 +1,28 @@
 ---
-title: "WF 中的基元活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WF 中的基元活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8e9009d1-236e-4d8e-86fc-e43132bf6dfc
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c0bd34984b421f353c53da8c97533b396a49751d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WF 中的基元活动
+# <a name="primitives-activities-in-wf"></a>WF 中的基元活动
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 提供了多个系统提供的活动，这些活动提供了一个用于执行常规任务的方便机制。  
   
 |Activity|描述|  
-|--------------|--------|  
+|--------------|-----------------|  
 |<xref:System.Activities.Statements.Assign>|将值分配给当前范围中的变量。|  
 |<xref:System.Activities.Statements.Delay>|将一个执行路径置于空闲状态，可能允许卸载工作流。|  
 |<xref:System.Activities.Statements.InvokeDelegate>|执行派生自 <xref:System.Activities.ActivityDelegate> 的委托并且作为属性公开。|  

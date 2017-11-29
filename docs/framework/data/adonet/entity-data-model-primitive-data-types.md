@@ -1,34 +1,37 @@
 ---
-title: "实体数据模型：基元数据类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "实体数据模型：基元数据类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 实体数据模型：基元数据类型
-实体数据模型 \(EDM\) 支持一组用于定义概念模型中的[属性](../../../../docs/framework/data/adonet/property.md)的抽象基元数据类型（例如 String、Boolean、Int32 等等）。  这些基元数据类型是存储或承载环境（例如 SQL Server 数据库或公共语言运行库 \(CLR\)）中所支持的实际基元数据类型的代理。  EDM 没有定义基元数据类型的操作或转换语义；这些语义由存储或承载环境定义。  通常，EDM 中的基元数据类型将映射至存储或承载环境中的对应基元数据类型。  有关实体框架如何将 EDM 中的基元类型映射至 SQL Server 数据类型的信息，请参见 [用于实体框架的 SqlClient 类型](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
+# <a name="entity-data-model-primitive-data-types"></a>实体数据模型：基元数据类型
+实体数据模型 (EDM) 支持 （如字符串、 布尔值，Int32，等等） 的抽象基元数据类型，用于定义一组[属性](../../../../docs/framework/data/adonet/property.md)概念模型中。 这些基元数据类型是存储或承载环境（例如 SQL Server 数据库或公共语言运行库 (CLR)）中所支持的实际基元数据类型的代理。 EDM 没有定义基元数据类型的操作或转换语义；这些语义由存储或承载环境定义。 通常，EDM 中的基元数据类型将映射至存储或承载环境中的对应基元数据类型。 有关实体框架如何映射到 SQL Server 数据类型的 EDM 中的基元类型的信息，请参阅[实体 FrameworkTypes 的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
   
 > [!NOTE]
 >  EDM 不支持基元数据类型的集合。  
   
- 有关 EDM 中的结构化数据类型的信息，请参见[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和[复杂类型](../../../../docs/framework/data/adonet/complex-type.md)。  
+ 有关 EDM 中的结构化的数据类型的信息，请参阅[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和[复杂类型](../../../../docs/framework/data/adonet/complex-type.md)。  
   
-## 实体数据模型中支持的基元数据类型  
- 下表列出了 EDM 支持的基元数据类型。  该表还列出了可应用于每个基元数据类型的[方面](../../../../docs/framework/data/adonet/facet.md)。  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>实体数据模型中支持的基元数据类型  
+ 下表列出了 EDM 支持的基元数据类型。 该表还列出[方面](../../../../docs/framework/data/adonet/facet.md)，可以应用于每个基元数据类型。  
   
 |基元数据类型|描述|适用的方面|  
-|------------|--------|-----------|  
+|-------------------------|-----------------|-----------------------|  
 |二进制|包含二进制数据。|MaxLength、FixedLength、Nullable、Default|  
 |Boolean|包含值 `true` 或 `false`。|Nullable、Default|  
 |Byte|包含一个无符号的 8 位整数值。|Precision、Nullable、Default|  
@@ -45,6 +48,6 @@ caps.handback.revision: 2
 |String|包含字符数据。|Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default|  
 |时间|包含当天的时间。|Precision、Nullable、Default|  
   
-## 请参阅  
- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
+## <a name="see-also"></a>另请参阅  
+ [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

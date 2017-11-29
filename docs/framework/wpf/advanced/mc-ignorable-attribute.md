@@ -1,32 +1,35 @@
 ---
-title: "mc:Ignorable 特性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mc XML 命名空间前缀"
-  - "mc:Ignorable 特性"
-  - "mc:ProcessContent 特性"
-  - "XAML, mc:Ignorable 特性"
-  - "XAML, mc:ProcessContent 特性"
-  - "XML, mc 命名空间前缀"
+title: "mc:Ignorable 特性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mc XML namespace prefix [WPF]
+- mc:Ignorable attribute
+- XML [WPF], mc namespace prefix
+- XAML [WPF], mc:Ignorable attribute
+- mc:ProcessContent attribute
+- XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3be5949ee26fbb21d913a7aefe2664202c5bef38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# mc:Ignorable 特性
-指定标记文件中遇到的哪些 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间前缀可以被 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器忽略。  `mc:Ignorable` 特性为自定义命名空间映射和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本管理提供标记兼容性支持。  
+# <a name="mcignorable-attribute"></a>mc:Ignorable 特性
+指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]可能忽略在标记文件中遇到的命名空间前缀[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 `mc:Ignorable`属性支持标记兼容性，为自定义命名空间映射和[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
   
-## XAML 特性用法（一个前缀）  
+## <a name="xaml-attribute-usage-single-prefix"></a>XAML 属性用法 （单个前缀）  
   
 ```  
 <object  
@@ -37,43 +40,43 @@ caps.handback.revision: 8
 </object>  
 ```  
   
-## XAML 特性用法（两个前缀）  
+## <a name="xaml-attribute-usage-two-prefixes"></a>XAML 属性用法 （两个前缀）  
   
 ```  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
-  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
+  mc:Ignorable="ignorablePrefix1 ignorablePrefix2"...>  
     <ignorablePrefix1:ThisElementCanBeIgnored/>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|*ignorablePrefix、ignorablePrefix1 等*|任何符合 XML 1.0 规范的有效的前缀字符串。|  
-|*ignorableUri*|任何符合 XML 1.0 规范、用于指定命名空间的有效 URI。|  
-|*ThisElementCanBeIgnored*|可以由[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 处理器实现忽略的元素（如果无法解析基础类型）。|  
+|*ignorablePrefix、 ignorablePrefix1，等等。*|根据 XML 1.0 规范任何有效的前缀字符串。|  
+|*ignorableUri*|任何有效的 URI，指定命名空间中的，根据 XML 1.0 规范。|  
+|*ThisElementCanBeIgnored*|可通过忽略的元素[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]处理器实现，如果基础类型不能解析。|  
   
-## 备注  
- 映射 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 兼容命名空间 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 时，建议使用 `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间前缀作为前缀约定。  
+## <a name="remarks"></a>备注  
+ `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间前缀是要使用映射时的推荐的前缀约定[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]兼容性命名空间[!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]。  
   
- 元素名称的前缀部分标识为 `mc:Ignorable` 的元素或特性在由 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理时，将不会引发错误。  如果该特性未能解析为基础类型或编程构造，则忽略此元素。  但是，请注意被忽略的元素仍可能会因为其他元素要求而生成其他分析错误，这是未处理该元素的副作用。  例如，某个特定元素内容模型可能刚好只需要一个子元素，但如果该指定子元素已位于 `mc:Ignorable` 前缀中并且未能解析为一个类型，则 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器可能会引发错误。  
+ 元素或属性的元素名称的前缀部分被视为`mc:Ignorable`不会引发错误时由处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 如果该属性不能解析为基础类型或编程构造，则忽略该元素。 但是请注意，被忽略的元素仍可能会生成其他分析错误，因为将会不处理该元素的负面影响的其他元素要求。 例如，特定元素的内容模型可能需要一个子元素，但如果指定的子元素已在`mc:Ignorable`前缀和指定的子元素不能被解析为的类型，则[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器可能引发错误。  
   
- `mc:Ignorable` 仅应用于命名空间与标识符字符串的映射。  `mc:Ignorable` 并不应用于命名空间与程序集的映射，该映射指定 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间和程序集（或默认为作为程序集的当前可执行文件）。  
+ `mc:Ignorable`仅适用于命名空间映射为标识符字符串。 `mc:Ignorable`不适用于命名空间映射到指定的程序集[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间和程序集 （或与程序集的当前可执行文件的默认值）。  
   
- 如果您实现的是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器，在对由标识为 `mc:Ignorable` 的前缀限定的任何元素或特性进行类型解析时，您的处理器实现不能引发分析或处理错误，  但仍然可以引发作为无法加载或处理某元素的间接后果的异常（例如前面的一个子元素示例）。  
+ 如果你要实现[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，处理器实现必须不会引发分析或处理的任何元素或由标识为前缀限定的属性的类型解析错误`mc:Ignorable`。 但仍然可以引发作为无法加载或处理，如前面的一个子元素示例某元素的间接后果的异常。  
   
- 默认情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器将忽略被忽略元素中的内容。  但是，您可以指定一个附加特性 [mc:ProcessContent 特性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)，以要求下一个可用的父元素继续处理被忽略元素中的内容。  
+ 默认情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将忽略中被忽略的元素的内容。 但是，你可以指定另一个属性， [mc:ProcessContent 属性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)，需要忽略元素的下一个可用的父元素内的内容的继续的处理。  
   
- 可以使用一个或多个空格作为分隔符在特性中指定多个前缀，例如：`mc:Ignorable="ignore1 ignore2"`。  
+ 可以在使用一个或多个空白字符作为分隔符，例如属性指定多个前缀： `mc:Ignorable="ignore1 ignore2"`。  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 命名空间定义了本部分[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 中未介绍的其他元素和特性。  有关更多信息，请参见 [XML Markup Compatibility Specification](http://go.microsoft.com/fwlink/?LinkId=73824)（XML 标记兼容性规范）。  
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义其他元素和属性未记录的此区域内[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 有关详细信息，请参阅[XML 标记兼容性规范](http://go.microsoft.com/fwlink/?LinkId=73824)。  
   
-## 请参阅  
- <xref:System.Windows.Markup.XamlReader>   
- [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)   
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Markup.XamlReader>  
+ [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)  
+ [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

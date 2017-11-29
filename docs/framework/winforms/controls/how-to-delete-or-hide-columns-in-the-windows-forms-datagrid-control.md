@@ -1,50 +1,54 @@
 ---
-title: "如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "列 [Windows 窗体], 在数据网格中删除"
-  - "列 [Windows 窗体], 隐藏"
-  - "数据网格, 删除列"
-  - "数据网格, 隐藏列"
-  - "DataGrid 控件 [Windows 窗体], 删除列"
-  - "DataGrid 控件 [Windows 窗体], 隐藏列"
+title: "如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], deleting columns
+- DataGrid control [Windows Forms], deleting columns
+- data grids [Windows Forms], hiding columns
+- columns [Windows Forms], hiding
+- columns [Windows Forms], deleting in data grids
+- DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d89f14d034c1050d364282c04424b1326bcff9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 使用 <xref:System.Windows.Forms.GridColumnStylesCollection> 和 <xref:System.Windows.Forms.DataGridColumnStyle> 对象（属于 <xref:System.Windows.Forms.DataGridTableStyle> 类的成员）的属性和方法，可以通过编程方式删除或隐藏 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中的列。  
+ 你可以以编程方式删除或隐藏 Windows 窗体中的列<xref:System.Windows.Forms.DataGrid>控件使用的属性和方法<xref:System.Windows.Forms.GridColumnStylesCollection>和<xref:System.Windows.Forms.DataGridColumnStyle>对象 (的成员<xref:System.Windows.Forms.DataGridTableStyle>类)。  
   
- 已删除或隐藏的列仍存在于网格绑定到的数据源中，而且仍然可以通过编程方式访问。  只是在数据网格中无法再看到它们。  
+ 在网格绑定到和仍可以通过编程方式访问数据源中仍存在已删除或隐藏列。 它们将只需不再在数据网格中可见。  
   
 > [!NOTE]
->  如果您的应用程序不访问某些数据列，而且您不希望在数据网格中显示它们，那么，一开始就不必将它们包括在数据源中。  
+>  如果你的应用程序不会访问数据，某些列，并且不希望它们显示在数据网格，然后它不可能需要首先将其包含在数据源中。  
   
-### 以编程方式从 DataGrid 中删除列  
+### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>若要以编程方式从数据网格中删除列  
   
-1.  在窗体的声明区域中声明 <xref:System.Windows.Forms.DataGridTableStyle> 类的新实例。  
+1.  在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
   
-2.  将 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=fullName> 属性设置为希望应用样式的数据源中的表。  下面的示例使用 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=fullName> 属性（假设已经设置了它）。  
+2.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>到您想要应用该样式的数据源中的表的属性。 下面的示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，假设已设置了它。  
   
-3.  向数据网格的表样式集合中添加新的 <xref:System.Windows.Forms.DataGridTableStyle> 对象。  
+3.  添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
   
-4.  调用 <xref:System.Windows.Forms.DataGrid> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 集合的 <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> 方法，指定要删除列的列索引。  
+4.  调用<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.DataGrid>的<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，指定要删除的列的列索引。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -62,7 +66,6 @@ caps.handback.revision: 11
        ' Delete the first column (index 0)  
        DataGrid1.TableStyles(0).GridColumnStyles.RemoveAt(0)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -84,15 +87,15 @@ caps.handback.revision: 11
     }  
     ```  
   
-### 以编程方式隐藏数据网格中的列  
+### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>若要以编程方式隐藏 DataGrid 中的列  
   
-1.  在窗体的声明区域中声明 <xref:System.Windows.Forms.DataGridTableStyle> 类的新实例。  
+1.  在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
   
-2.  将 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为希望应用样式的数据源中的表。  下面的代码示例使用 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=fullName> 属性（假设已经设置了它）。  
+2.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性<xref:System.Windows.Forms.DataGridTableStyle>到您想要应用该样式的数据源中的表。 下面的代码示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，假设已设置了它。  
   
-3.  向数据网格的表样式集合中添加新的 <xref:System.Windows.Forms.DataGridTableStyle> 对象。  
+3.  添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
   
-4.  通过将列的 `Width`  属性设置为 0，并指定要隐藏的列的列索引来隐藏列。  
+4.  通过设置隐藏列其`Width`属性设置为 0，并指定要隐藏的列的列索引。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -110,7 +113,6 @@ caps.handback.revision: 11
        ' Hide the first column (index 0)  
        DataGrid1.TableStyles(0).GridColumnStyles(0).Width = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -132,6 +134,6 @@ caps.handback.revision: 11
     }  
     ```  
   
-## 请参阅  
- [如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：在运行时更改 Windows 窗体 DataGrid 控件中显示的数据](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
  [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

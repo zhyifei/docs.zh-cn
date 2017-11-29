@@ -1,39 +1,38 @@
 ---
-title: "My.Application.Info 对象 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application.AssemblyInfo 对象"
-  - "My.Application.Info 对象"
+title: "My.Application.Info 对象"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.Application.Info object
+- My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a4aa70edbe5de2d2411f62e6dcd7677896585c48
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# My.Application.Info 对象
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供用来获取应用程序信息（如版本号、说明、加载的程序集等）的属性。  
+# <a name="myapplicationinfo-object"></a>My.Application.Info 对象
+提供用于获取有关应用程序，如版本号、 描述、 加载的程序集和等等的信息的属性。  
   
-## 备注  
- 有关 `My.Application.Info` 对象的方法和属性的信息，请参见 <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。  
+## <a name="remarks"></a>备注  
+ 有关的方法和属性的信息`My.Application.Info`对象，请参阅<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>。  
   
 > [!NOTE]
->  可以使用 <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName> 类的属性获取有关文件的信息在磁盘上。  
+>  你可以使用属性的<xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType>类来获取有关磁盘上的文件的信息。  
   
-## 要求  
- **命名空间：** <xref:Microsoft.VisualBasic.ApplicationServices>  
+## <a name="requirements"></a>要求  
+ **Namespace:**<xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **类：** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **类：**<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **程序集：**Visual Basic 运行库（位于 Microsoft.VisualBasic.dll 中）  
+ **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [My.Application 对象](../../../visual-basic/language-reference/objects/my-application-object.md)

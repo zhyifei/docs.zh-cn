@@ -1,71 +1,75 @@
 ---
-title: "集合类型依赖项属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合类型属性"
-  - "依赖项属性"
-  - "属性, 集合类型"
-  - "属性, 依赖项"
+title: "集合类型依赖项属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 集合类型依赖项属性
-本主题为属性类型是集合类型的情况下如何实现[依赖项属性](GTMT)提供了指导和建议的模式。  
+# <a name="collection-type-dependency-properties"></a>集合类型依赖项属性
+本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。  
   
-   
+ 
   
 <a name="implementing"></a>   
-## 实现集合类型依赖项属性  
- 通常情况下对于依赖项属性，遵循的实现是定义一个 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性包装，其中该属性由一个 <xref:System.Windows.DependencyProperty> 标识符（而不是字段或其他构造）支持。  若要实现一个集合类型属性，请遵循同样的模式。  但是，每当集合中包含的类型本身为 <xref:System.Windows.DependencyObject> 或 <xref:System.Windows.Freezable> 派生类时，集合类型属性会使模式更加复杂。  
+## <a name="implementing-a-collection-type-dependency-property"></a>实现集合类型依赖属性  
+ 依赖项属性的一般情况下，你遵循的实现模式是你定义[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]属性包装器，该属性由<xref:System.Windows.DependencyProperty>标识符而不是字段或其他构造。 实现集合类型属性时也应按照此相同模式。 但是，集合类型属性的复杂性模式集合内包含的类型时本身<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>派生类。  
   
 <a name="initializing"></a>   
-## 不使用默认值初始化集合  
- 在您创建依赖项属性时，没有将属性默认值指定为初始字段值，  而是通过依赖项属性元数据指定默认值。  如果属性是一种引用类型，则在依赖项属性元数据中指定的默认值不是各个实例的默认值，而是应用到该类型的所有实例的默认值。  因此，您必须注意不要将集合属性元数据所定义的单个静态集合用作新创建的类型实例的适用默认值。  并且，在类构造函数逻辑中，必须确保特意将集合值设置为唯一的（实例）集合。  否则，会创建一个意外的单独的类。  
+## <a name="initializing-the-collection-beyond-the-default-value"></a>不使用默认值初始化集合  
+ 创建依赖属性时，不要将属性默认值指定为初始字段值。 相反，应通过依赖属性元数据指定默认值。 如果属性为引用类型，则依赖属性元数据中指定的默认值不是每个实例分别的默认值，而是应用到类型的所有实例的默认值。 因此，对于类型的新创建实例，必须小心，不要将集合属性元数据定义的单个静态集合用作工作默认值。 相反，必须确保有意将集合值设置为唯一（实例）集合，作为类构造函数逻辑的一部分。 否则，你会创建一个不需要的单例类。  
   
- 请看下面的示例。  下面的示例部分演示 `Aquarium` 类的定义。  该类定义集合类型依赖项属性 `AquariumObjects`，它将泛型 <xref:System.Collections.Generic.List%601> 类型与 <xref:System.Windows.FrameworkElement> 类型约束一起使用。  在对依赖项属性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 调用中，元数据将默认值建立为一个新的泛型 <xref:System.Collections.Generic.List%601>。  
+ 请看下面的示例。 示例的以下部分显示类 `Aquarium` 的定义。 类定义的集合类型依赖项属性`AquariumObjects`，它使用泛型<xref:System.Collections.Generic.List%601>类型具有<xref:System.Windows.FrameworkElement>类型约束。 在<xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>依赖项属性，元数据的调用建立的默认值为一个新的泛型<xref:System.Collections.Generic.List%601>。  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- 但是，如果您只是使用下面的代码，则该单个列表默认值会在 `Aquarium` 的所有实例中共享。  如果运行下面的测试代码（该测试代码旨在演示如何实例化两个独立的 `Aquarium` 实例并向这两个实例中分别添加一个不同的 `Fish`），您会看到令人惊讶的结果：  
+ 但是，如果仅如上所示保留代码，该单一列表默认值会对 `Aquarium` 的所有实例共享。 如果运行以下测试代码（用于演示如何实例化两个单独的 `Aquarium` 实例并向二者皆添加一个不同的 `Fish`），则其结果可能出乎意料：  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- 每个集合的计数不是 1，而是 2\!  这是因为元数据中的单个构造函数调用导致每个 `Aquarium` 都将其 `Fish` 添加到默认值集合，从而会在所有实例中共享。  这种情况应该不是您想要的。  
+ 每个集合具有两个计数，而不是一个！ 这是因为，每个 `Aquarium` 将其 `Fish` 添加到默认值集合，此默认值集合因元数据中单个构造函数调用而产生，因此会在所有实例之间共享。 而你全然不希望出现这种情况。  
   
- 为了纠正此问题，在类构造函数调用中，必须将集合依赖项属性值重设为唯一的实例。  因为该属性是只读的依赖项属性，所以应使用 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> 方法通过只能在该类中访问的 <xref:System.Windows.DependencyPropertyKey> 对该属性进行设置。  
+ 为纠正此问题，必须将集合依赖属性值重置为唯一实例，作为类构造函数调用的一部分。 因为该属性是只读的依赖项属性，你使用<xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>方法以设置它，使用<xref:System.Windows.DependencyPropertyKey>，则只需在类中访问。  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- 现在，如果您再次运行上述测试代码，应能看到更接近预期的结果，其中每个 `Aquarium` 都支持它自己的唯一集合。  
+ 现在，如果再次运行此相同测试代码，则每个 `Aquarium` 会仅支持自己的唯一集合，这样的结果更符合预期。  
   
- 如果您选择使集合属性成为读写属性，则此模式会稍有变化。  此时，您将从构造函数调用公共 set 访问器来执行初始化，即仍使用公共的 <xref:System.Windows.DependencyProperty> 标识符来调用 set 包装中 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> 的非键签名。  
+ 如果选择集合属性为读写，则此模式会稍有变化。 在这种情况下，您可以从要执行初始化，而这仍调用的非键签名的构造函数调用公共 set 访问器<xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29>set 包装中, 使用的是公共<xref:System.Windows.DependencyProperty>标识符。  
   
-## 从集合属性报告绑定值更改  
- 本身为依赖项属性的集合属性不会自动报告对其子属性的更改。  如果正在创建与集合的绑定，这可以防止绑定报告更改而使某些数据绑定方案无效。  但是，如果您使用集合类型 <xref:System.Windows.FreezableCollection%601> 作为您的集合类型，则会以合适的方式报告对集合所包含元素的子属性更改，并且绑定会按预期工作。  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a>报告集合属性中的绑定值更改  
+ 本身为依赖属性的集合属性不会自动将更改报告给其子属性。 如果将绑定创建到集合，这可阻止绑定报告更改，从而使某些数据绑定方案无效。 但是，如果你使用的集合类型<xref:System.Windows.FreezableCollection%601>作为集合类型，然后在集合中包含的元素的子属性更改正确报告，并按预期工作的绑定。  
   
- 若要在依赖项对象集合中启用子属性绑定，请将集合属性创建为类型 <xref:System.Windows.FreezableCollection%601>，该集合的类型约束到任何 <xref:System.Windows.DependencyObject> 派生类。  
+ 若要启用依赖项对象集合中的子属性绑定，创建作为类型的集合属性<xref:System.Windows.FreezableCollection%601>，到任何该集合的类型约束<xref:System.Windows.DependencyObject>派生类。  
   
-## 请参阅  
- <xref:System.Windows.FreezableCollection%601>   
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.FreezableCollection%601>  
+ [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

@@ -1,39 +1,40 @@
 ---
-title: "如何：调整 Windows 窗体标签控件大小以适应其内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "标题, 调整大小"
-  - "Label 控件 [Windows 窗体], 调整大小以适应内容"
-  - "标签, 调整大小以适应内容"
-  - "大小, 控件"
-  - "调整控件大小"
+title: "如何：调整 Windows 窗体标签控件大小以适应其内容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- captions [Windows Forms], sizing
+- sizing controls
+- size [Windows Forms], controls
+- labels [Windows Forms], sizing to fit contents
+- Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd89d72264e5837d2c41fcb0ab024a7b16f4205b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：调整 Windows 窗体标签控件大小以适应其内容
-Windows 窗体 <xref:System.Windows.Forms.Label> 控件可为单行或多行，可以为固定大小，也可以自动调整自身大小以容纳其标题。  <xref:System.Windows.Forms.Label.AutoSize%2A> 属性帮助您调整控件大小以适应较大或较小的标题。如果标题在运行时会发生更改，这个属性尤为有用。  
+# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>如何：调整 Windows 窗体标签控件大小以适应其内容
+Windows 窗体<xref:System.Windows.Forms.Label>控件均可以是单行或多行，并且它可以为固定大小，或可以自动调整自身大小以适应其标题。 <xref:System.Windows.Forms.Label.AutoSize%2A>属性可帮助你调整控件大小以适应更大或更小的标题，即如果标题将更改在运行时特别有用的大小。  
   
-### 使标签控件 \(Label\) 动态调整大小以适应其内容  
+### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>若要使动态调整大小以适应其内容的标签控件  
   
-1.  将其 <xref:System.Windows.Forms.Label.AutoSize%2A> 属性设置为 `true`。  
+1.  设置其<xref:System.Windows.Forms.Label.AutoSize%2A>属性`true`。  
   
- 如果将 <xref:System.Windows.Forms.Label.AutoSize%2A> 设置为 `false`，则在 <xref:System.Windows.Forms.Label.Text%2A> 属性中指定的文字将切换到下一行（如果可能），但该控件不会增大。  
+ 如果<xref:System.Windows.Forms.Label.AutoSize%2A>设置为`false`中, 指定的词语<xref:System.Windows.Forms.Label.Text%2A>属性将换到下一行如果可能，但不是会增长到控件。  
   
-## 请参阅  
- [如何：使用 Windows 窗体 Label 控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)   
- [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：使用 Windows 窗体 Label 控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  [Label 控件](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

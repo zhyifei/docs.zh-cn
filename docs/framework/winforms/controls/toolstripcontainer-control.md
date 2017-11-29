@@ -1,33 +1,34 @@
 ---
-title: "ToolStripContainer 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "工具栏 [Windows 窗体], 内置漂浮"
-  - "ToolStrip 控件 [Windows 窗体], ToolStripContainer"
-  - "ToolStripContainer 控件 [Windows 窗体]"
+title: "ToolStripContainer 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], built-in rafting
+- ToolStripContainer control [Windows Forms]
+- ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 763ce6d47b0fe40eb2d27b2e062d46cfd9e1b8a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ToolStripContainer 控件
+# <a name="toolstripcontainer-control"></a>ToolStripContainer 控件
 <xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。  
   
  本节中的主题介绍可用于将 <xref:System.Windows.Forms.ToolStripContainer> 功能构建到应用程序中的概念和技术。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [ToolStripContainer 控件概述](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  提供介绍 Windows 窗体 <xref:System.Windows.Forms.ToolStripContainer> 控件的用途和主要概念的主题。  
   
@@ -37,18 +38,18 @@ caps.handback.revision: 8
  [如何：向 ToolStripContentPanel 添加控件](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  演示如何向 <xref:System.Windows.Forms.ToolStripContentPanel> 添加控件。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ToolStripContainer>  
  提供关于 <xref:System.Windows.Forms.ToolStripContainer> 控件的参考文档。  
   
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  提供 <xref:System.Windows.Forms.ToolStripContainer> 控件的 <xref:System.Windows.Forms.ToolStripContentPanel> 的参考文档。  
   
- 另请参阅 [ToolStripContainer 任务对话框](http://msdn.microsoft.com/library/ms233647%20\(v=vs.110\))。  
+ 另请参阅[ToolStripContainer 任务对话框](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  <xref:System.Windows.Forms.ToolStripPanel>  
  提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

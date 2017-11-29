@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 检索元素 (LINQ to XML) 的值 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d38928df51006a8db9417d34ccbe6cd03091db66
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: e688872ea514e822a81b4b3e285ad0d0aa8a0f17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何︰ 检索元素 (LINQ to XML) 的值 (Visual Basic)
-本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将强制转换<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XAttribute>到所需的类型。</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 或者，可以使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>属性或<xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>属性。</xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)
+本主题演示如何获取元素的值。 有两种主要方法可以完成此操作。 一种方法是将 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型。 然后，显式转换运算符将元素或属性的内容转换为指定的类型，并将其分配给变量。 此外，还可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 属性。  
   
- 对于 Visual Basic，最好的方法是使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>属性。</xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+ 对于 Visual Basic，最好的方法是使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 属性。  
   
 ## <a name="example"></a>示例  
- 若要检索的元素的值，只需转换<xref:System.Xml.Linq.XElement>对象传递给所需的类型。</xref:System.Xml.Linq.XElement> 任何时候都可以将元素强制转换为字符串，如下所示：  
+ 若要检索元素的值，只需将 <xref:System.Xml.Linq.XElement> 对象强制转换为所需的类型即可。 任何时候都可以将元素强制转换为字符串，如下所示：  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -38,7 +34,7 @@ Console.WriteLine("Value of e:" & e.Value)
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -54,17 +50,17 @@ Console.WriteLine("Value of e:" & CInt(e))
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提供了以下数据类型的显式强制转换运算符：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了以下数据类型的显式强制转换运算符：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]提供的相同的强制转换运算符<xref:System.Xml.Linq.XAttribute>对象。</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 为 <xref:System.Xml.Linq.XAttribute> 对象提供了相同的强制转换运算符。  
   
 ## <a name="example"></a>示例  
- 您可以使用<xref:System.Xml.Linq.XElement.Value%2A>属性来检索元素的内容︰</xref:System.Xml.Linq.XElement.Value%2A>  
+ 可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 属性来检索元素的内容：  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -74,13 +70,13 @@ Console.WriteLine("Value of e:" & e.Value)
   
  该示例产生下面的输出：  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
 ## <a name="example"></a>示例  
- 有时，尽管不能确定某个元素是否存在，还是会尝试检索该元素的值。 在这种情况下，当您将分配的强制转换后的元素为 null 的类型 (或者`string`或中可以为 null 的类型之一[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)])，如果该元素不存在则将分配变量设置为`Nothing`。 下面的代码演示当元素可能存在也可能不存在，它更加轻松地使用强制转换比使用<xref:System.Xml.Linq.XElement.Value%2A>属性。</xref:System.Xml.Linq.XElement.Value%2A>  
+ 有时，尽管不能确定某个元素是否存在，还是会尝试检索该元素的值。 在这种情况下，将强制转换后的元素分配给可以为 null 的类型（`string` 或 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中可以为 null 的类型之一）时，如果该元素不存在，则将分配的变量设置为 `Nothing`。 下面的代码演示当元素可能存在也可能不存在时，使用强制转换比使用 <xref:System.Xml.Linq.XElement.Value%2A> 属性更加简单。  
   
 ```vb  
 Dim root As XElement = <Root>  

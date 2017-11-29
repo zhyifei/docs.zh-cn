@@ -1,31 +1,31 @@
 ---
-title: "开发复合 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "复合控件"
-  - "复合控件, Windows 窗体"
-  - "控件 [Windows 窗体], 复合"
-  - "自定义控件 [Windows 窗体], 复合控件"
-  - "UserControl 类"
+title: "开发复合 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], composite controls
+- composite controls [Windows Forms]
+- composite controls [Windows Forms], Windows Forms
+- controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 开发复合 Windows 窗体控件
-可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。  派生自 [System.Windows.Forms.UserControl](frlrfSystemWebUIUserControlClassTopic) 的复合控件称为用户控件。  基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。  关于用户控件的示例，请参阅[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)中的 <xref:System.Windows.Forms.UserControl> 示例。  
+# <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
+可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生自的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何： 应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
   
  [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] 中的 Windows 窗体设计器为编写用户控件提供丰富的设计时支持。  
   
@@ -33,7 +33,7 @@ caps.handback.revision: 17
   
 -   [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [演练：使用 Visual C\# 从 Windows 窗体控件继承](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [演练：使用 Visual C# 从 Windows 窗体控件继承](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438)  
   
 -   [如何：为控件提供工具箱位图](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -55,7 +55,7 @@ caps.handback.revision: 17
   
 -   [演练：使用 Visual Basic 创作复合控件](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [演练：使用 Visual C\# 创作复合控件](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [演练：使用 Visual C# 创作复合控件](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f)）  
   
 -   [演练：使用 Visual Basic 从 Windows 窗体控件继承](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 17
   
 -   [如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## 请参阅  
- [如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)   
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
+ [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

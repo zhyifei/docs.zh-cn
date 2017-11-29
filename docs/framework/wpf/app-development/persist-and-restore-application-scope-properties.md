@@ -1,36 +1,42 @@
 ---
-title: "如何：跨应用程序会话保持和还原应用程序范围的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "应用程序范围属性, 保持"
-  - "应用程序范围属性, 还原"
-  - "保持应用程序范围属性"
-  - "属性, 保持"
-  - "属性, 还原"
-  - "还原应用程序范围属性"
+title: "如何：跨应用程序会话保持和还原应用程序范围的属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- application-scope properties [WPF], persisting
+- persisting application-scope properties [WPF]
+- properties [WPF], persisting
+- restoring application-scope properties [WPF]
+- properties [WPF], restoring
+- application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：跨应用程序会话保持和还原应用程序范围的属性
-此示例演示如何在应用程序关闭时保持应用程序范围的属性，以及当应用程序下一次启动后如何还原应用程序范围的属性。  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>如何：跨应用程序会话保持和还原应用程序范围的属性
+此示例演示如何保留应用程序作用域属性，当应用程序关闭时和还原应用程序作用域属性当应用程序下一次启动后如何。  
   
-## 示例  
- 应用程序将应用程序范围的属性保持到独立存储区中，并从中还原这些属性。  独立存储区是受保护的存储区域，可以安全地供应用程序使用，而不需要文件访问权限。  
+## <a name="example"></a>示例  
+ 应用程序仍然存在应用程序作用域属性，并将其还原从独立存储。 独立的存储是不具备文件访问权限的应用程序可以安全地使用受保护的存储区域。  
   
- [!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
+[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind1)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]  

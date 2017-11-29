@@ -1,41 +1,47 @@
 ---
-title: "如何：装饰面板的子级 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "装饰器, 绑定到面板的子级"
-  - "Panel 控件, 将装饰器绑定到子级"
+title: "如何：装饰面板的子级"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- adorners [WPF], binding to children of Panels
+- Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d30e9e5ac15f48dabf983123ba007674a14626d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：装饰面板的子级
-此示例演示如何以编程方式将装饰器绑定到指定的 <xref:System.Windows.Controls.Panel> 的子级。  
+# <a name="how-to-adorn-the-children-of-a-panel"></a>如何：装饰面板的子级
+此示例演示如何以编程方式将装饰器绑定到指定的子级<xref:System.Windows.Controls.Panel>。  
   
-## 示例  
- 若要将装饰器绑定到 <xref:System.Windows.Controls.Panel> 的子级，请按照下列步骤操作：  
+## <a name="example"></a>示例  
+ 若要将装饰器绑定到的子级<xref:System.Windows.Controls.Panel>，请按照下列步骤：  
   
-1.  声明一个新的 <xref:System.Windows.Documents.AdornerLayer> 对象并调用 `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 方法来查找要对其子级进行装饰的元素的装饰器层。  
+1.  声明新<xref:System.Windows.Documents.AdornerLayer>对象并调用`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>方法以查找要装饰的子级的元素的装饰器层。  
   
-2.  依次枚举父元素的子级并调用 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 方法将装饰器绑定到每个子级元素。  
+2.  枚举的子级的父元素和调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到每个子元素。  
   
- 以下示例将 SimpleCircleAdorner（如上所示）绑定到名为 *myStackPanel* 的 <xref:System.Windows.Controls.StackPanel> 的子级。  
+ 下面的示例将绑定 （上面所述） 的子级 SimpleCircleAdorner<xref:System.Windows.Controls.StackPanel>名为*myStackPanel*。  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 > [!NOTE]
->  目前不支持使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。  
+>  目前不支持使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)

@@ -1,30 +1,34 @@
 ---
-title: "在 Windows 窗体控件中定义事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自定义控件 [Windows 窗体], 使用代码的事件"
-  - "事件 [Windows 窗体], 在 Windows 窗体自定义控件中定义"
+title: "在 Windows 窗体控件中定义事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- events [Windows Forms], defining within Windows Forms custom controls
+- custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 592efefecb0428f87e5ac612c8fb162aa2fe85dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows 窗体控件中定义事件
-有关定义自定义事件的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)。  如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。  剩下的工作就是定义一个事件成员和一个引发该事件的受保护的 `On`*事件名称* 方法。  
+# <a name="defining-an-event-in-windows-forms-controls"></a>在 Windows 窗体控件中定义事件
+有关定义自定义事件的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)。 如果你定义的事件没有任何关联的数据，则使用事件数据的基类型 <xref:System.EventArgs>，并使用 <xref:System.EventHandler> 作为事件委托。 所有这些剩下工作就是定义一个事件成员和受保护`On` *EventName*引发事件的方法。  
   
- 以下代码段显示了 `FlashTrackBar` 自定义控件如何定义自定义事件 `ValueChanged`。  有关 `FlashTrackBar` 示例的完整代码，请参阅[如何：创建显示进度的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 以下代码段显示了 `FlashTrackBar` 自定义控件如何定义自定义事件 `ValueChanged`。 有关的完整代码`FlashTrackBar`示例，请参阅[如何： 创建 Windows 窗体控件，显示进度](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ```vb  
 Option Explicit  
@@ -83,7 +87,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## 请参阅  
- [Windows 窗体控件中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [事件](../../../../docs/standard/events/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [Windows 窗体控件中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [事件](../../../../docs/standard/events/index.md)  
  [事件](../../../../docs/standard/events/index.md)

@@ -1,23 +1,26 @@
 ---
-title: "SAML 令牌提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SAML 令牌提供程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fc6eaa916507c7e1c530d4ee757097bf0bffcd34
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# SAML 令牌提供程序
-本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。  令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。  自定义令牌提供程序在下列情况下有用：  
+# <a name="saml-token-provider"></a>SAML 令牌提供程序
+本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 -   存在不能由这些令牌提供程序操作的凭据存储。  
   
@@ -37,9 +40,9 @@ caps.handback.revision: 15
   
 -   客户端如何使用服务器的 X.509 证书对服务器进行身份验证。  
   
- 服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。  每个终结点由地址、绑定和协定组成。  绑定由使用消息安全的标准 `wsFederationHttpBinding` 进行配置。  一个终结点需要客户端用使用对称校验密钥的 SAML 令牌进行身份验证，而另一个终结点需要客户端用使用不对称校验密钥的 SAML 令牌进行身份验证。  服务还使用 `serviceCredentials` 行为来配置服务证书。  使用 `serviceCredentials` 行为可以配置服务证书。  客户端使用服务证书对服务进行身份验证并提供消息保护。  以下配置引用了在示例安装过程中安装的“localhost”证书，如本主题最后的安装说明所述。  使用 `serviceCredentials` 行为还可以配置受信任的证书以对 SAML 令牌进行签名。  下面的配置引用了在示例过程中安装的“Alice”证书。  
+ 服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。每个终结点由地址、绑定和协定组成。 绑定由使用消息安全的标准 `wsFederationHttpBinding` 进行配置。 一个终结点需要客户端用使用对称校验密钥的 SAML 令牌进行身份验证，而另一个终结点需要客户端用使用不对称校验密钥的 SAML 令牌进行身份验证。 服务还使用 `serviceCredentials` 行为来配置服务证书。 使用 `serviceCredentials` 行为可以配置服务证书。 客户端使用服务证书对服务进行身份验证并提供消息保护。 以下配置引用了在示例安装过程中安装的“localhost”证书，如本主题最后的安装说明所述。 使用 `serviceCredentials` 行为还可以配置受信任的证书以对 SAML 令牌进行签名。 下面的配置引用了在示例过程中安装的“Alice”证书。  
   
-```  
+```xml  
 <system.serviceModel>  
  <services>  
   <service   
@@ -124,7 +127,7 @@ caps.handback.revision: 15
   
      示例实现一个自定义 SAML 令牌提供程序，该提供程序根据在构造时提供的 SAML 断言返回一个安全令牌。  
   
-     为了执行此任务，从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类派生了自定义令牌提供程序并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。  此方法创建并返回一个新的 `SecurityToken`。  
+     为了执行此任务，从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类派生了自定义令牌提供程序并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法。 此方法创建并返回一个新的 `SecurityToken`。  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -165,7 +168,7 @@ caps.handback.revision: 15
   
 2.  编写自定义安全令牌管理器。  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类用于为在 `CreateSecurityTokenProvider` 方法中传入的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>。  安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在本示例中。  在本示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，以便当传递的令牌要求指示请求 SAML 令牌时返回自定义 SAML 令牌提供程序。  如果客户端凭据类（请参见步骤 3）未指定一个断言，则安全令牌管理器将创建一个相应的实例。  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在本示例中。 在本示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，以便当传递的令牌要求指示请求 SAML 令牌时返回自定义 SAML 令牌提供程序。 如果客户端凭据类（请参见步骤 3）未指定一个断言，则安全令牌管理器将创建一个相应的实例。  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -233,7 +236,6 @@ caps.handback.revision: 15
        return base.CreateSecurityTokenProvider(tokenRequirement);  
       }  
     }  
-  
     ```  
   
 3.  编写自定义客户端凭据。  
@@ -304,16 +306,16 @@ caps.handback.revision: 15
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- 在服务上，将显示与调用方关联的声明。  运行示例时，操作请求和响应将显示在客户端控制台窗口中。  在客户端窗口中按 Enter 可以关闭客户端。  
+ 在服务上，将显示与调用方关联的声明。 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
-## 设置批处理文件  
- 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。  必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
+## <a name="setup-batch-file"></a>设置批处理文件  
+ 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
   
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。  
   
 -   创建服务器证书：  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  `%SERVER_NAME%`变量指定服务器名称。  更改此变量可以指定您自己的服务器名称。  此批处理文件中的默认值为 localhost。  
+     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。  
   
      证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。  
   
@@ -329,7 +331,7 @@ caps.handback.revision: 15
   
 -   将服务器证书安装到客户端的受信任证书存储区中：  
   
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。  因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。  如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
@@ -337,7 +339,7 @@ caps.handback.revision: 15
   
 -   创建颁发者证书。  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的颁发者证书。  `%USER_NAME%` 变量指定颁发者名称。  更改此变量可以指定您自己的颁发者名称。  此批处理文件中的默认值为 Alice。  
+     Setup.bat 批处理文件中的以下行创建将要使用的颁发者证书。 `%USER_NAME%` 变量指定颁发者名称。 更改此变量可以指定您自己的颁发者名称。 此批处理文件中的默认值为 Alice。  
   
      证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。  
   
@@ -353,59 +355,58 @@ caps.handback.revision: 15
   
 -   将颁发者证书安装到服务器的受信任证书存储区中。  
   
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。  因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。  如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用颁发者证书填充服务器证书存储这一步骤。  
+     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用颁发者证书填充服务器证书存储这一步骤。  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
-#### 设置和生成示例  
+#### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 > [!NOTE]
 >  如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
   
-1.  在使用管理员特权运行的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。  这将安装运行示例所需的所有证书。  
+1.  在使用管理员特权运行的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
+    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
   
-2.  启动 service\\bin 中的 Service.exe。  
+2.  启动 service\bin 中的 Service.exe。  
   
-3.  启动 \\client\\bin 中的 Client.exe。  客户端活动将显示在客户端控制台应用程序上。  
+3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 跨计算机运行示例  
+#### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
 1.  在服务计算机上为服务二进制文件创建一个目录。  
   
-2.  将服务程序文件复制到服务计算机上的服务目录。  另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。  必须更新 Service.exe.config 文件以反映此新证书名称。  可以通过修改 Setup.bat 批处理文件来创建服务器证书。  请注意，必须在使用管理员特权打开的 Visual Studio 命令提示窗口中运行 setup.bat 文件。  必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，必须在使用管理员特权打开的 Visual Studio 命令提示窗口中运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
-4.  将服务器证书复制到客户端的 CurrentUser\-TrustedPeople 存储中。  如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
+4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
   
 5.  在服务计算机的 Service.exe.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
   
 6.  在服务计算机上，在命令提示符下运行 Service.exe。  
   
-7.  将 \\client\\bin\\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+7.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
 8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
-10. 如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

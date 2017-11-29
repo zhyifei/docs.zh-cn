@@ -1,118 +1,124 @@
 ---
-title: "如何：创建路径渐变 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "渐变, 创建路径"
-  - "图形路径, 创建渐变"
-  - "路径渐变, 创建"
+title: "如何：创建路径渐变"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- path gradients [Windows Forms], creating
+- gradients [Windows Forms], creating path
+- graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：创建路径渐变
-<xref:System.Drawing.Drawing2D.PathGradientBrush> 类使您可以自定义用渐变色填充形状的方式。  例如，可为轨迹的中心指定一种颜色；为轨迹的边界指定另一种颜色。  还可为轨迹边界上的七个点分别指定颜色。  
+# <a name="how-to-create-a-path-gradient"></a>如何：创建路径渐变
+<xref:System.Drawing.Drawing2D.PathGradientBrush>类允许您自定义用渐变颜色填充形状的方式。 例如，你可以指定路径的中心的一种颜色和路径的边界的另一种颜色。 此外可以为每个几个点沿边界路径的指定单独的颜色。  
   
 > [!NOTE]
->  在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 中，路径是由 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象维护的一系列线条和曲线。  有关 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 路径的更多信息，请参见[GDI\+ 中的图形路径](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)和[构造并绘制轨迹](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)。  
+>  在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，路径是一系列的直线和曲线由维护<xref:System.Drawing.Drawing2D.GraphicsPath>对象。 有关详细信息[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]路径，请参阅[GDI + 中的图形路径](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)和[Constructing 和绘制路径](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)。  
   
-### 使用路径渐变填充椭圆  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>若要用路径渐变填充椭圆  
   
--   下面的示例用路径渐变画笔填充椭圆。  中心的颜色设置为蓝色；边界的颜色设置为浅绿色。  下面的插图显示已填充的椭圆。  
+-   下面的示例用填充椭圆路径渐变画笔。 中间颜色设置为蓝色，边界颜色设置为浅绿色。 下图显示实心的椭圆。  
   
      ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")  
   
-     默认情况下，路径渐变画笔不会延伸到路径边界以外。  如果您使用路径渐变画笔来填充延伸到路径边界以外的图形，则无法填充路径以外的屏幕区域。  
+     默认情况下，路径渐变画笔不会扩展边界之外的路径。 如果路径渐变画笔用于填充一个图，它超出了路径的边界，则不会填充在路径外屏幕的区域。  
   
-     下图演示在将以下代码中的 <xref:System.Drawing.Graphics.FillEllipse%2A> 调用更改为 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)` 后所出现的情况。  
+     如果更改会发生什么情况如下图所示<xref:System.Drawing.Graphics.FillEllipse%2A>到下面的代码中调用`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`。  
   
      ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     前面的代码示例旨在用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> e。  
+     前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>e，这是参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
-### 在边界上指定点  
+### <a name="to-specify-points-on-the-boundary"></a>若要指定点的边界上  
   
--   下面的示例由星形轨迹构造路径渐变画笔。  该代码设置 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> 属性，它将星形中心的颜色设置为红色。  然后，该代码设置 <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> 属性，以便在 `points` 数组中的各个点处指定不同的颜色（存储在 `colors` 数组中）。  最后一个代码语句用路径渐变画笔填充星形轨迹。  
+-   下面的示例构造路径渐变画笔从星形的路径。 该代码设置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>属性，用于设置在为红色星号的质心的颜色。 然后代码集<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>属性来指定不同的颜色 (存储在`colors`数组) 中的各个点处`points`数组。 最后一个代码语句填充路径渐变画笔的星形路径。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   下面的示例在代码中不使用 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象而绘制一个路径渐变。  在该示例中，特定的 <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> 构造函数接收一系列点，但是不需要 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象。  同时，请注意，<xref:System.Drawing.Drawing2D.PathGradientBrush> 用于填充矩形而不是填充路径。  矩形比用于定义画笔的闭合轨迹大，因此矩形的某些部分未由画笔涂色。  下面的插图显示该矩形（虚线）以及该矩形被路径渐变画笔涂色的那部分。  
+-   下面的示例绘制路径渐变而无需<xref:System.Drawing.Drawing2D.GraphicsPath>在代码中的对象。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>在示例中的构造函数接收的点数组，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>对象。 另请注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用来填充的矩形，而不是路径。 矩形大于用于定义画笔，使画笔不绘制矩形的某些部分的已关闭路径。 下图显示矩形 （虚线） 和路径渐变画笔绘制的矩形的部分。  
   
      ![渐变](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### 自定义路径渐变  
+### <a name="to-customize-a-path-gradient"></a>若要自定义路径渐变  
   
--   自定义路径渐变画笔的一种方法就是设置它的 <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> 属性。  聚焦缩放指定位于主轨迹内部的内部轨迹。  中心颜色显示在内部轨迹中的任何地方，而不是只显示在中心点。  
+-   自定义路径渐变画笔的一种方法是将设置其<xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>属性。 聚焦缩放指定位于内部的主路径的内部路径。 在内部轨迹中而不是仅在中心点无处不在显示中间颜色。  
   
-     下面的示例根据椭圆轨迹创建路径渐变画笔。  该代码将边界颜色设置为蓝色，将中心颜色设置为浅绿色，然后使用路径渐变画笔填充椭圆轨迹。  
+     下面的示例创建路径渐变画笔基于椭圆的路径。 该代码设置为蓝色的边界颜色、 中间颜色设置为浅绿色，然后使用路径渐变画笔填充椭圆路径。  
   
-     接着，该代码设置路径渐变画笔的聚焦缩放。  x 聚焦缩放被设置为 0.3，y 聚焦缩放被设置为 0.8。  该代码调用 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.TranslateTransform%2A> 方法，以便后来对 <xref:System.Drawing.Graphics.FillPath%2A> 的调用填充位于第一个椭圆右侧的椭圆。  
+     接下来，代码将设置路径渐变画笔的焦点刻度。 X 聚焦缩放被设置为 0.3，并且 y 焦点缩放比例设置为 0.8。 该代码调用<xref:System.Drawing.Graphics.TranslateTransform%2A>方法<xref:System.Drawing.Graphics>对象，以便后续调用<xref:System.Drawing.Graphics.FillPath%2A>填充椭圆位于右侧的第一个椭圆。  
   
-     若要观看聚焦缩放的效果，请设想一个与主椭圆共用一个中心的小椭圆。  小（内部）椭圆是由主椭圆在水平方向上缩小 0.3 倍，在垂直方向上缩小 0.8 倍（围绕其中心）得到的。  当从外部椭圆的边界移到内部椭圆的边界时，颜色逐渐从蓝色变成浅绿色。  当从内部椭圆的边界移到共用中心时，颜色保持浅绿色。  
+     若要查看聚焦缩放的效果，假设与主椭圆共享其中心一个小椭圆。 小型 （内部） 椭圆是 0.8 的 0.3 的主要椭圆 （围绕中心） 横向扩展倍和垂直倍。 当从外部的椭圆的边界移动到内部椭圆的边界时，颜色逐渐从变为蓝色浅绿色。 当您移动到共享的中心，颜色保持浅绿色从内部椭圆的边界。  
   
-     下面的插图显示以下代码的输出。  左边的椭圆只在中心点上为浅绿色。  右边的椭圆在内部轨迹内部的任何地方都为浅绿色。  
+     下图显示以下代码的输出。 在左侧椭圆是只能在中心点的浅绿色。 在右侧的省略号为浅绿色无处不在内部路径内。  
   
  ![渐变](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### 使用插值自定义  
+### <a name="to-customize-with-interpolation"></a>使用插值自定义  
   
--   自定义路径渐变画笔的另一种方法是指定插值颜色数组和插值位置数组。  
+-   自定义路径渐变画笔另一种方法是指定的内插颜色数组和数组的内插位置。  
   
-     下面的示例基于三角形创建路径渐变画笔。  该代码设置路径渐变画笔的 <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> 属性，以便指定插值颜色数组（深绿色，浅绿色，蓝色）和插值位置数组 \(0, 0.25, 1\)。  当从三角形的边界移到中心点时，颜色将从深绿色逐渐变成浅绿色，然后从浅绿色变成蓝色。  深绿色到浅绿色的转变发生在深绿色到蓝色转变的距离的 25% 处。  
+     下面的示例创建路径渐变画笔基于一个三角形。 该代码设置<xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A>路径的渐变画笔指定内插颜色深绿色，浅绿色 （蓝色） 的数组和数组的内插位置 （0，0.25，1） 的属性。 当您移动到中心点从的三角形边界的颜色更改逐渐从深绿色为浅绿色，然后从浅绿色为蓝色。 为浅绿色从深绿色更改发生在 25%的深绿色为蓝色的距离。  
   
-     下面的插图显示用自定义路径渐变画笔填充的三角形。  
+     下图显示用自定义路径渐变画笔填充的三角形。  
+  
+     ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### 设置中心点  
+### <a name="to-set-the-center-point"></a>若要设置的中心点  
   
--   在默认情况下，路径渐变画笔的中心点位于用来构造梯度刷的轨迹的形心。  可通过设置 <xref:System.Drawing.Drawing2D.PathGradientBrush> 类的 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 属性更改中心点的位置。  
+-   默认情况下，路径渐变画笔的中心点为中心的用来构造画笔的路径。 你可以通过设置更改的中心点的位置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>属性<xref:System.Drawing.Drawing2D.PathGradientBrush>类。  
   
-     下面的示例基于椭圆来创建路径渐变画笔。  椭圆的中心位于 \(70, 35\)，但是路径渐变画笔的中心点设置在 \(120, 40\)。  
+     下面的示例创建路径渐变画笔基于椭圆。 椭圆的中心位于 70 (35），但路径渐变画笔的中心点设置为 120 (40）。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     下面的插图显示实心椭圆和路径渐变画笔的中心点。  
+     下图显示实心的椭圆和路径渐变画笔的中心点。  
   
      ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")  
   
--   可将路径渐变画笔的中心点设置在用于构造梯度刷的轨迹外部的某个位置。  下面的示例通过替换调用来设置以上代码中的 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 属性。  
+-   可以将路径渐变画笔的中心点设置为用于构造画笔的路径之外的位置。 下面的示例替换用于设置的调用<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>在前面的代码的属性。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     下面的插图显示更改后的输出。  
+     下图显示进行此更改后的输出。  
   
      ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")  
   
-     在上面的插图中，椭圆最右边的那些点不是纯蓝色（尽管它们非常接近）。  渐变中颜色的定位就好像是填充到颜色为纯蓝色 \(0, 0, 255\) 的点 \(145, 35\)。  但是，由于路径渐变画笔只在其轨迹内部涂色，所以并未填充到点 \(145, 35\)。  
+     在上图中，在最右侧的点的椭圆不是纯蓝色 （尽管它们是非常接近）。 渐变中的颜色位于就像是填充到颜色将纯蓝色 （0、 0、 255） 的点 （145，35）。 但并未填充到 （145，35） 因为路径渐变画笔绘制仅在其路径内。  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它们需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a>编译代码  
+ 前面的示例专用于 Windows 窗体，并且它们要求<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用渐变画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
