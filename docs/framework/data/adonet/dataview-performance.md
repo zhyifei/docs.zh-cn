@@ -1,43 +1,49 @@
 ---
-title: "DataView 性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataView 性能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3b1f702740b1085302e413120f2bdd23c1613b25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# DataView 性能
-本主题讨论使用 <xref:System.Data.DataView> 类的 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法并在 Web 应用程序中缓存 <xref:System.Data.DataView> 时所具有的性能优势。  
+# <a name="dataview-performance"></a><span data-ttu-id="bf9d9-102">DataView 性能</span><span class="sxs-lookup"><span data-stu-id="bf9d9-102">DataView Performance</span></span>
+<span data-ttu-id="bf9d9-103">本主题讨论使用 <xref:System.Data.DataView.Find%2A> 类的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法并在 Web 应用程序中缓存 <xref:System.Data.DataView> 时所具有的性能优势。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-103">This topic discusses the performance benefits of using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView> class, and of caching a <xref:System.Data.DataView> in a Web application.</span></span>  
   
-## Find 和 FindRows  
- <xref:System.Data.DataView> 构造一个索引。  索引包含从表或视图中的一个或多个列生成的键。  这些键存储在结构中，这种结构可使 <xref:System.Data.DataView> 能够快速有效地查找行或与键值关联的行。  使用索引的操作（如筛选和排序）可显著提高性能。  创建 <xref:System.Data.DataView> 及修改任何排序或筛选信息时，均会生成 <xref:System.Data.DataView> 的索引。  创建 <xref:System.Data.DataView> 然后设置排序或筛选信息会使索引生成至少两次：一次是在创建 <xref:System.Data.DataView> 时，另一次是在修改任何排序或筛选属性时。  有关使用 <xref:System.Data.DataView> 进行筛选和排序的更多信息，请参见[使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)和[使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)。  
+## <a name="find-and-findrows"></a><span data-ttu-id="bf9d9-104">Find 和 FindRows</span><span class="sxs-lookup"><span data-stu-id="bf9d9-104">Find and FindRows</span></span>  
+ <span data-ttu-id="bf9d9-105"><xref:System.Data.DataView> 构造一个索引。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-105"><xref:System.Data.DataView> constructs an index.</span></span> <span data-ttu-id="bf9d9-106">索引包含从表或视图中的一个或多个列生成的键。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-106">An index contains keys built from one or more columns in the table or view.</span></span> <span data-ttu-id="bf9d9-107">这些键存储在结构中，这种结构可使 <xref:System.Data.DataView> 能够快速有效地查找行或与键值关联的行。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-107">These keys are stored in a structure that enables the <xref:System.Data.DataView> to find the row or rows associated with the key values quickly and efficiently.</span></span> <span data-ttu-id="bf9d9-108">使用索引的操作（如筛选和排序）可显著提高性能。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-108">Operations that use the index, such as filtering and sorting, see signifcant performance increases.</span></span> <span data-ttu-id="bf9d9-109">创建 <xref:System.Data.DataView> 及修改任何排序或筛选信息时，均会生成 <xref:System.Data.DataView> 的索引。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-109">The index for a <xref:System.Data.DataView> is built both when the <xref:System.Data.DataView> is created and when any of the sorting or filtering information is modified.</span></span> <span data-ttu-id="bf9d9-110">创建 <xref:System.Data.DataView> 然后设置排序或筛选信息会使索引生成至少两次：一次是在创建 <xref:System.Data.DataView> 时，另一次是在修改任何排序或筛选属性时。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-110">Creating a <xref:System.Data.DataView> and then setting the sorting or filtering information later causes the index to be built at least twice: once when the <xref:System.Data.DataView> is created, and again when any of the sort or filter properties are modified.</span></span> <span data-ttu-id="bf9d9-111">有关筛选和排序使用的详细信息<xref:System.Data.DataView>，请参阅[使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)和[使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-111">For more information about filtering and sorting with <xref:System.Data.DataView>, see [Filtering with DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) and [Sorting with DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).</span></span>  
   
- 如果要返回特定数据查询的结果而不是提供数据子集的动态视图，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法，而不设置 <xref:System.Data.DataView.RowFilter%2A> 属性。  <xref:System.Data.DataView.RowFilter%2A> 属性最适合用于用绑定控件显示筛选结果的数据绑定应用程序。  设置 <xref:System.Data.DataView.RowFilter%2A> 属性会重新生成数据的索引，从而增加应用程序的系统开销并降低性能。  <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法使用当前索引，而不要求重新生成索引。  如果只想调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，则应使用现有的 <xref:System.Data.DataView>。  如果想要调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，则应该创建一个新的 <xref:System.Data.DataView> 以便对想要搜索的列重新生成索引，然后调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。  有关 <xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法的更多信息，请参见[查找行](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)。  
+ <span data-ttu-id="bf9d9-112">如果要返回特定数据查询的结果而不是提供数据子集的动态视图，则可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 或 <xref:System.Data.DataView> 方法，而不设置 <xref:System.Data.DataView.RowFilter%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-112">If you want to return the results of a particular query on the data, as opposed to providing a dynamic view of a subset of the data, you can use the <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView>, rather than setting the <xref:System.Data.DataView.RowFilter%2A> property.</span></span> <span data-ttu-id="bf9d9-113"><xref:System.Data.DataView.RowFilter%2A> 属性最适合用于用绑定控件显示筛选结果的数据绑定应用程序。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-113">The <xref:System.Data.DataView.RowFilter%2A> property is best used in a data-bound application where a bound control displays filtered results.</span></span> <span data-ttu-id="bf9d9-114">设置 <xref:System.Data.DataView.RowFilter%2A> 属性会重新生成数据的索引，从而增加应用程序的系统开销并降低性能。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-114">Setting the <xref:System.Data.DataView.RowFilter%2A> property rebuilds the index for the data, adding overhead to your application and decreasing performance.</span></span> <span data-ttu-id="bf9d9-115"><xref:System.Data.DataView.Find%2A> 和 <xref:System.Data.DataView.FindRows%2A> 方法使用当前索引，而不要求重新生成索引。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-115">The <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods use the current index without requiring the index to be rebuilt.</span></span> <span data-ttu-id="bf9d9-116">如果只想调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 一次，则应使用现有的 <xref:System.Data.DataView>。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-116">If you are going to call <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> only once, then you should use the existing <xref:System.Data.DataView>.</span></span> <span data-ttu-id="bf9d9-117">如果想要调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 多次，则应该创建一个新的 <xref:System.Data.DataView> 以便对想要搜索的列重新生成索引，然后调用 <xref:System.Data.DataView.Find%2A> 或 <xref:System.Data.DataView.FindRows%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-117">If you are going to call <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> multiple times, you should create a new <xref:System.Data.DataView> to rebuild the index on the column you want to search on, and then call the <xref:System.Data.DataView.Find%2A> or <xref:System.Data.DataView.FindRows%2A> methods.</span></span> <span data-ttu-id="bf9d9-118">有关详细信息<xref:System.Data.DataView.Find%2A>和<xref:System.Data.DataView.FindRows%2A>方法，请参阅[查找行](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-118">For more information about the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods, see [Finding Rows](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).</span></span>  
   
- 下面的示例使用 <xref:System.Data.DataView.Find%2A> 方法来查找姓氏为“Zhu”的联系人。  
+ <span data-ttu-id="bf9d9-119">下面的示例使用 <xref:System.Data.DataView.Find%2A> 方法来查找姓氏为“Zhu”的联系人。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-119">The following example uses the <xref:System.Data.DataView.Find%2A> method to find a contact with the last name "Zhu".</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryorderbyfind)]
  [!code-vb[DP DataView Samples#LDVFromQueryOrderByFind](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryorderbyfind)]  
   
- 下面的示例使用 <xref:System.Data.DataView.FindRows%2A> 方法来查找所有红颜色的产品。  
+ <span data-ttu-id="bf9d9-120">下面的示例使用 <xref:System.Data.DataView.FindRows%2A> 方法来查找所有红颜色的产品。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-120">The following example uses the <xref:System.Data.DataView.FindRows%2A> method to find all the red colored products.</span></span>  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryfindrows)]
  [!code-vb[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryfindrows)]  
   
-## ASP.NET  
- ASP.NET 具有一种缓存机制，允许您在内存中存储需要创建大量服务器资源的对象。  缓存这些类型的资源可以显著提高应用程序的性能。  缓存由 <xref:System.Web.Caching.Cache> 类实现，缓存实例专用于每个应用程序。  由于创建新的 <xref:System.Data.DataView> 对象需要大量资源，因此您可能希望在 Web 应用程序中使用此缓存功能，使得每次刷新网页时，不必重新生成 <xref:System.Data.DataView>。  
+## <a name="aspnet"></a><span data-ttu-id="bf9d9-121">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="bf9d9-121">ASP.NET</span></span>  
+ <span data-ttu-id="bf9d9-122">ASP.NET 具有一种缓存机制，允许您在内存中存储需要创建大量服务器资源的对象。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-122">ASP.NET has a caching mechanism that allows you to store objects that require extensive server resources to create in memory.</span></span> <span data-ttu-id="bf9d9-123">缓存这些类型的资源可以显著提高应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-123">Caching these types of resources can significantly improve the performance of your application.</span></span> <span data-ttu-id="bf9d9-124">缓存由 <xref:System.Web.Caching.Cache> 类实现，缓存实例专用于每个应用程序。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-124">Caching is implemented by the <xref:System.Web.Caching.Cache> class, with cache instances that are private to each application.</span></span> <span data-ttu-id="bf9d9-125">由于创建新的 <xref:System.Data.DataView> 对象需要大量资源，因此您可能希望在 Web 应用程序中使用此缓存功能，使得每次刷新网页时，不必重新生成 <xref:System.Data.DataView>。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-125">Because creating a new <xref:System.Data.DataView> object can be resource intensive, you might want to use this caching functionality in Web applications so that the <xref:System.Data.DataView> does not have to be rebuilt every time the Web page is refreshed.</span></span>  
   
- 在下面的示例中，对 <xref:System.Data.DataView> 进行缓存以便在刷新该页时不必对数据重新排序。  
+ <span data-ttu-id="bf9d9-126">在下面的示例中，对 <xref:System.Data.DataView> 进行缓存以便在刷新该页时不必对数据重新排序。</span><span class="sxs-lookup"><span data-stu-id="bf9d9-126">In the following example, the <xref:System.Data.DataView> is cached so that the data does not have to be re-sorted when the page is refreshed.</span></span>  
   
 ```vb  
 If (Cache("ordersView") = Nothing) Then  
@@ -90,5 +96,5 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## 请参阅  
- [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="bf9d9-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bf9d9-127">See Also</span></span>  
+ [<span data-ttu-id="bf9d9-128">数据绑定和 LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="bf9d9-128">Data Binding and LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
