@@ -1,31 +1,35 @@
 ---
-title: "表达式 [.NET Framework 4] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Expressions1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: faf9e70cbe2c2a035874e5514ac04cf0f291661b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 表达式 [.NET Framework 4]
-[!INCLUDE[wf](../../../includes/wf-md.md)] 表达式是返回结果的任何活动。从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.Activity%601.Result%2A> 的 <xref:System.Activities.OutArgument> 属性作为活动的返回值。[!INCLUDE[wf1](../../../includes/wf1-md.md)] 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。  
+# <a name="expressions"></a><span data-ttu-id="ddc48-102">表达式</span><span class="sxs-lookup"><span data-stu-id="ddc48-102">Expressions</span></span>
+<span data-ttu-id="ddc48-103">[!INCLUDE[wf](../../../includes/wf-md.md)] 表达式是返回结果的任何活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-103">A [!INCLUDE[wf](../../../includes/wf-md.md)] expression is any activity that returns a result.</span></span> <span data-ttu-id="ddc48-104">从 <xref:System.Activities.Activity%601> 间接派生的所有表达式活动，其中包含名为 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 属性作为活动的返回值。</span><span class="sxs-lookup"><span data-stu-id="ddc48-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="ddc48-105"> 随附了从简单活动（如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，它们通过运算符活动提供对单个工作流变量的访问）到复杂活动（如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，它们提供对 Visual Basic 语言的全面访问，以获得结果）的广泛表达式活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-105"> ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="ddc48-106">可以通过从 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 派生来创建其他表达式活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>  
   
-## 使用表达式  
- 工作流设计器对 Visual Basic 项目中的所有表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>，对 C\# 工作流项目中的所有表达式使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601>。  
+## <a name="using-expressions"></a><span data-ttu-id="ddc48-107">使用表达式</span><span class="sxs-lookup"><span data-stu-id="ddc48-107">Using Expressions</span></span>  
+ <span data-ttu-id="ddc48-108">工作流设计器对 Visual Basic 项目中的所有表达式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>，对 C# 工作流项目中的所有表达式使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601>。</span><span class="sxs-lookup"><span data-stu-id="ddc48-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>  
   
 > [!NOTE]
->  对工作流项目中 C\# 表达式的支持是在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C\# 表达式](../../../docs/framework/windows-workflow-foundation//csharp-expressions.md).  
+>  <span data-ttu-id="ddc48-109">对工作流项目中 C# 表达式的支持是在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的。</span><span class="sxs-lookup"><span data-stu-id="ddc48-109">Support for C# expressions in workflow projects was introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ddc48-110">[C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="ddc48-110"> [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).</span></span>  
   
- 设计器生成的工作流保存在 XAML 中，其中表达式位于方括号中，如以下示例所示。  
+ <span data-ttu-id="ddc48-111">设计器生成的工作流保存在 XAML 中，其中表达式位于方括号中，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="ddc48-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>  
   
-```  
+```xml  
 <Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">  
   <Sequence.Variables>  
     <Variable x:TypeArguments="x:Int32" Default="1" Name="a" />  
@@ -42,10 +46,9 @@ caps.handback.revision: 17
     </Assign.Value>  
   </Assign>  
 </Sequence>  
-  
 ```  
   
- 在代码中定义工作流时，可以使用所有表达式活动。下面的示例演示如何使用运算符活动的组合添加三个数字。  
+ <span data-ttu-id="ddc48-112">在代码中定义工作流时，可以使用所有表达式活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="ddc48-113">下面的示例演示如何使用运算符活动的组合添加三个数字。</span><span class="sxs-lookup"><span data-stu-id="ddc48-113">The following example shows the usage of a composition of operator activities to add three numbers.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -72,10 +75,9 @@ Sequence w = new Sequence
         }  
     }  
 };  
-  
 ```  
   
- 使用 C\# lambda 表达式可以更简洁地表示同一工作流，如下面的示例所示。  
+ <span data-ttu-id="ddc48-114">使用 C# lambda 表达式可以更简洁地表示同一工作流，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="ddc48-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -94,10 +96,9 @@ Sequence w = new Sequence
         }  
     }  
 };  
-  
 ```  
   
- 还可以使用 Visual Basic 表达式活动表示该工作流，如下面的示例所示。  
+ <span data-ttu-id="ddc48-115">还可以使用 Visual Basic 表达式活动表示该工作流，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="ddc48-115">The workflow can also be expressed by using Visual Basic expression activities, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -116,11 +117,10 @@ Sequence w = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-## 使用自定义表达式活动扩展可用的表达式  
- 可以扩展 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的表达式，从而允许创建其他表达式活动。下面的示例演示返回三个整数值之和的活动。  
+## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="ddc48-116">使用自定义表达式活动扩展可用的表达式</span><span class="sxs-lookup"><span data-stu-id="ddc48-116">Extending Available Expressions with Custom Expression Activities</span></span>  
+ <span data-ttu-id="ddc48-117">可以扩展 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的表达式，从而允许创建其他表达式活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-117">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="ddc48-118">下面的示例演示返回三个整数值之和的活动。</span><span class="sxs-lookup"><span data-stu-id="ddc48-118">The following example shows an activity that returns a sum of three integer values.</span></span>  
   
 ```  
 using System;  
@@ -147,7 +147,7 @@ namespace ExpressionsDemo
 }  
 ```  
   
- 通过这个新活动，您可以重新编写前面添加三个值的工作流，如下面的示例所示。  
+ <span data-ttu-id="ddc48-119">通过这个新活动，您可以重新编写前面添加三个值的工作流，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="ddc48-119">With this new activity you can rewrite the previous workflow that added three values as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -172,7 +172,6 @@ Sequence w = new Sequence
         }  
     }  
 };  
-  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]在代码中使用表达式的更多信息，请参见[使用命令性代码创作工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ddc48-120">在代码中使用表达式，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。</span><span class="sxs-lookup"><span data-stu-id="ddc48-120"> using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>

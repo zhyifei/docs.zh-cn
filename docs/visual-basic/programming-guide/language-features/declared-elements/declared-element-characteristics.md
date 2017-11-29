@@ -1,73 +1,72 @@
 ---
-title: "已声明元素的特性 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "访问级别, 已声明的元素"
-  - "数据类型 [Visual Basic], 已声明的元素"
-  - "已声明的元素, 访问级别"
-  - "已声明的元素, 生存期"
-  - "已声明的元素, 范围"
-  - "已声明的元素, 可见性"
-  - "元素, 编程"
-  - "生存期, 已声明的元素"
-  - "范围, 已声明的元素"
-  - "可见性, 已声明的元素"
+title: "已声明元素的特性 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declared elements [Visual Basic], lifetime
+- access levels, declared elements
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- elements [Visual Basic], programming
+- scope [Visual Basic], declared elements
+- lifetime [Visual Basic], declared elements
+- declared elements [Visual Basic], access level
+- data types [Visual Basic], declared elements
+- declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 已声明元素的特性 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-已声明元素的“特性”是该元素影响代码可以如何与自己进行交互的方面。  每个已声明元素都具有以下一个或多个与之关联的特性：  
+# <a name="declared-element-characteristics-visual-basic"></a><span data-ttu-id="3d222-102">已声明元素的特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d222-102">Declared Element Characteristics (Visual Basic)</span></span>
+<span data-ttu-id="3d222-103">A*特征*的已声明元素都是会影响代码如何能与它交互该元素的一个方面。</span><span class="sxs-lookup"><span data-stu-id="3d222-103">A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it.</span></span> <span data-ttu-id="3d222-104">每个声明的元素具有一个或多个与之关联的以下特征：</span><span class="sxs-lookup"><span data-stu-id="3d222-104">Every declared element has one or more of the following characteristics associated with it:</span></span>  
   
--   数据类型 \- 元素可以持有的值，及其存储这些值的方式。  有关更多信息，请参见[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+-   <span data-ttu-id="3d222-105">*数据类型*-元素可以持有的值，并将存储这些值如何。</span><span class="sxs-lookup"><span data-stu-id="3d222-105">*Data type* — the values the element can hold, and how it stores those values.</span></span> <span data-ttu-id="3d222-106">有关详细信息，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。</span><span class="sxs-lookup"><span data-stu-id="3d222-106">For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
--   生存期 \- 执行时间的周期，元素在此期间可供使用。  有关更多信息，请参见 [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+-   <span data-ttu-id="3d222-107">*生存期*— 在此期间，该元素是可供使用的执行时间段。</span><span class="sxs-lookup"><span data-stu-id="3d222-107">*Lifetime* — the period of execution time during which the element is available for use.</span></span> <span data-ttu-id="3d222-108">有关详细信息，请参阅[Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。</span><span class="sxs-lookup"><span data-stu-id="3d222-108">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   范围 \- 所有无需限定元素名称即可引用元素的代码的集合。  有关更多信息，请参见[如何：控制变量的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
+-   <span data-ttu-id="3d222-109">*作用域*— 无需限定其名称元素可以引用的所有代码组。</span><span class="sxs-lookup"><span data-stu-id="3d222-109">*Scope* — the set of all code that can refer to the element without qualifying its name.</span></span> <span data-ttu-id="3d222-110">有关详细信息，请参阅[如何： 控制变量的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。</span><span class="sxs-lookup"><span data-stu-id="3d222-110">For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).</span></span>  
   
--   访问级别 \- 代码使用元素的权限。  有关更多信息，请参见[如何：控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
+-   <span data-ttu-id="3d222-111">*访问级别*-代码，使权限的元素。</span><span class="sxs-lookup"><span data-stu-id="3d222-111">*Access level* — the permission for code to make use of the element.</span></span> <span data-ttu-id="3d222-112">有关详细信息，请参阅[如何： 控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。</span><span class="sxs-lookup"><span data-stu-id="3d222-112">For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).</span></span>  
   
-## 元素的特性  
- 下表显示了已声明元素和适用于各个元素的特性。  
+## <a name="characteristics-of-the-elements"></a><span data-ttu-id="3d222-113">元素的特征</span><span class="sxs-lookup"><span data-stu-id="3d222-113">Characteristics of the Elements</span></span>  
+ <span data-ttu-id="3d222-114">下表显示已声明的元素和适用于每个特征。</span><span class="sxs-lookup"><span data-stu-id="3d222-114">The following table shows the declared elements and the characteristics that apply to each one.</span></span>  
   
-|元素|数据类型|生存期|范围 <sup>1</sup>|访问级别|  
-|--------|----------|---------|---------------------|----------|  
-|变量|是|是|是|是|  
-|常量|是|否|是|是|  
-|Enumeration|是|否|是|是|  
-|结构|否|否|是|是|  
-|属性|是|是|是|是|  
-|方法|否|是|是|是|  
-|过程（`Sub` 或 `Function`）|否|是|是|是|  
-|过程参数|是|是|是|否|  
-|函数返回值|是|是|是|否|  
-|运算符|是|否|是|是|  
-|接口|否|否|是|是|  
-|类|否|否|是|是|  
-|Event|否|否|是|是|  
-|委托|否|否|是|是|  
+|<span data-ttu-id="3d222-115">元素</span><span class="sxs-lookup"><span data-stu-id="3d222-115">Element</span></span>|<span data-ttu-id="3d222-116">数据类型</span><span class="sxs-lookup"><span data-stu-id="3d222-116">Data Type</span></span>|<span data-ttu-id="3d222-117">生存期</span><span class="sxs-lookup"><span data-stu-id="3d222-117">Lifetime</span></span>|<span data-ttu-id="3d222-118">作用域<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="3d222-118">Scope <sup>1</sup></span></span>|<span data-ttu-id="3d222-119">访问级别</span><span class="sxs-lookup"><span data-stu-id="3d222-119">Access Level</span></span>|  
+|-------------|---------------|--------------|------------------------|------------------|  
+|<span data-ttu-id="3d222-120">变量</span><span class="sxs-lookup"><span data-stu-id="3d222-120">Variable</span></span>|<span data-ttu-id="3d222-121">是</span><span class="sxs-lookup"><span data-stu-id="3d222-121">Yes</span></span>|<span data-ttu-id="3d222-122">是</span><span class="sxs-lookup"><span data-stu-id="3d222-122">Yes</span></span>|<span data-ttu-id="3d222-123">是</span><span class="sxs-lookup"><span data-stu-id="3d222-123">Yes</span></span>|<span data-ttu-id="3d222-124">是</span><span class="sxs-lookup"><span data-stu-id="3d222-124">Yes</span></span>|  
+|<span data-ttu-id="3d222-125">常量</span><span class="sxs-lookup"><span data-stu-id="3d222-125">Constant</span></span>|<span data-ttu-id="3d222-126">是</span><span class="sxs-lookup"><span data-stu-id="3d222-126">Yes</span></span>|<span data-ttu-id="3d222-127">No</span><span class="sxs-lookup"><span data-stu-id="3d222-127">No</span></span>|<span data-ttu-id="3d222-128">是</span><span class="sxs-lookup"><span data-stu-id="3d222-128">Yes</span></span>|<span data-ttu-id="3d222-129">是</span><span class="sxs-lookup"><span data-stu-id="3d222-129">Yes</span></span>|  
+|<span data-ttu-id="3d222-130">枚举</span><span class="sxs-lookup"><span data-stu-id="3d222-130">Enumeration</span></span>|<span data-ttu-id="3d222-131">是</span><span class="sxs-lookup"><span data-stu-id="3d222-131">Yes</span></span>|<span data-ttu-id="3d222-132">No</span><span class="sxs-lookup"><span data-stu-id="3d222-132">No</span></span>|<span data-ttu-id="3d222-133">是</span><span class="sxs-lookup"><span data-stu-id="3d222-133">Yes</span></span>|<span data-ttu-id="3d222-134">是</span><span class="sxs-lookup"><span data-stu-id="3d222-134">Yes</span></span>|  
+|<span data-ttu-id="3d222-135">结构</span><span class="sxs-lookup"><span data-stu-id="3d222-135">Structure</span></span>|<span data-ttu-id="3d222-136">No</span><span class="sxs-lookup"><span data-stu-id="3d222-136">No</span></span>|<span data-ttu-id="3d222-137">No</span><span class="sxs-lookup"><span data-stu-id="3d222-137">No</span></span>|<span data-ttu-id="3d222-138">是</span><span class="sxs-lookup"><span data-stu-id="3d222-138">Yes</span></span>|<span data-ttu-id="3d222-139">是</span><span class="sxs-lookup"><span data-stu-id="3d222-139">Yes</span></span>|  
+|<span data-ttu-id="3d222-140">属性</span><span class="sxs-lookup"><span data-stu-id="3d222-140">Property</span></span>|<span data-ttu-id="3d222-141">是</span><span class="sxs-lookup"><span data-stu-id="3d222-141">Yes</span></span>|<span data-ttu-id="3d222-142">是</span><span class="sxs-lookup"><span data-stu-id="3d222-142">Yes</span></span>|<span data-ttu-id="3d222-143">是</span><span class="sxs-lookup"><span data-stu-id="3d222-143">Yes</span></span>|<span data-ttu-id="3d222-144">是</span><span class="sxs-lookup"><span data-stu-id="3d222-144">Yes</span></span>|  
+|<span data-ttu-id="3d222-145">方法</span><span class="sxs-lookup"><span data-stu-id="3d222-145">Method</span></span>|<span data-ttu-id="3d222-146">No</span><span class="sxs-lookup"><span data-stu-id="3d222-146">No</span></span>|<span data-ttu-id="3d222-147">是</span><span class="sxs-lookup"><span data-stu-id="3d222-147">Yes</span></span>|<span data-ttu-id="3d222-148">是</span><span class="sxs-lookup"><span data-stu-id="3d222-148">Yes</span></span>|<span data-ttu-id="3d222-149">是</span><span class="sxs-lookup"><span data-stu-id="3d222-149">Yes</span></span>|  
+|<span data-ttu-id="3d222-150">过程 (`Sub`或`Function`)</span><span class="sxs-lookup"><span data-stu-id="3d222-150">Procedure (`Sub` or `Function`)</span></span>|<span data-ttu-id="3d222-151">No</span><span class="sxs-lookup"><span data-stu-id="3d222-151">No</span></span>|<span data-ttu-id="3d222-152">是</span><span class="sxs-lookup"><span data-stu-id="3d222-152">Yes</span></span>|<span data-ttu-id="3d222-153">是</span><span class="sxs-lookup"><span data-stu-id="3d222-153">Yes</span></span>|<span data-ttu-id="3d222-154">是</span><span class="sxs-lookup"><span data-stu-id="3d222-154">Yes</span></span>|  
+|<span data-ttu-id="3d222-155">过程参数</span><span class="sxs-lookup"><span data-stu-id="3d222-155">Procedure parameter</span></span>|<span data-ttu-id="3d222-156">是</span><span class="sxs-lookup"><span data-stu-id="3d222-156">Yes</span></span>|<span data-ttu-id="3d222-157">是</span><span class="sxs-lookup"><span data-stu-id="3d222-157">Yes</span></span>|<span data-ttu-id="3d222-158">是</span><span class="sxs-lookup"><span data-stu-id="3d222-158">Yes</span></span>|<span data-ttu-id="3d222-159">No</span><span class="sxs-lookup"><span data-stu-id="3d222-159">No</span></span>|  
+|<span data-ttu-id="3d222-160">函数返回值</span><span class="sxs-lookup"><span data-stu-id="3d222-160">Function return</span></span>|<span data-ttu-id="3d222-161">是</span><span class="sxs-lookup"><span data-stu-id="3d222-161">Yes</span></span>|<span data-ttu-id="3d222-162">是</span><span class="sxs-lookup"><span data-stu-id="3d222-162">Yes</span></span>|<span data-ttu-id="3d222-163">是</span><span class="sxs-lookup"><span data-stu-id="3d222-163">Yes</span></span>|<span data-ttu-id="3d222-164">No</span><span class="sxs-lookup"><span data-stu-id="3d222-164">No</span></span>|  
+|<span data-ttu-id="3d222-165">运算符</span><span class="sxs-lookup"><span data-stu-id="3d222-165">Operator</span></span>|<span data-ttu-id="3d222-166">是</span><span class="sxs-lookup"><span data-stu-id="3d222-166">Yes</span></span>|<span data-ttu-id="3d222-167">No</span><span class="sxs-lookup"><span data-stu-id="3d222-167">No</span></span>|<span data-ttu-id="3d222-168">是</span><span class="sxs-lookup"><span data-stu-id="3d222-168">Yes</span></span>|<span data-ttu-id="3d222-169">是</span><span class="sxs-lookup"><span data-stu-id="3d222-169">Yes</span></span>|  
+|<span data-ttu-id="3d222-170">接口</span><span class="sxs-lookup"><span data-stu-id="3d222-170">Interface</span></span>|<span data-ttu-id="3d222-171">No</span><span class="sxs-lookup"><span data-stu-id="3d222-171">No</span></span>|<span data-ttu-id="3d222-172">No</span><span class="sxs-lookup"><span data-stu-id="3d222-172">No</span></span>|<span data-ttu-id="3d222-173">是</span><span class="sxs-lookup"><span data-stu-id="3d222-173">Yes</span></span>|<span data-ttu-id="3d222-174">是</span><span class="sxs-lookup"><span data-stu-id="3d222-174">Yes</span></span>|  
+|<span data-ttu-id="3d222-175">类</span><span class="sxs-lookup"><span data-stu-id="3d222-175">Class</span></span>|<span data-ttu-id="3d222-176">No</span><span class="sxs-lookup"><span data-stu-id="3d222-176">No</span></span>|<span data-ttu-id="3d222-177">No</span><span class="sxs-lookup"><span data-stu-id="3d222-177">No</span></span>|<span data-ttu-id="3d222-178">是</span><span class="sxs-lookup"><span data-stu-id="3d222-178">Yes</span></span>|<span data-ttu-id="3d222-179">是</span><span class="sxs-lookup"><span data-stu-id="3d222-179">Yes</span></span>|  
+|<span data-ttu-id="3d222-180">Event</span><span class="sxs-lookup"><span data-stu-id="3d222-180">Event</span></span>|<span data-ttu-id="3d222-181">No</span><span class="sxs-lookup"><span data-stu-id="3d222-181">No</span></span>|<span data-ttu-id="3d222-182">No</span><span class="sxs-lookup"><span data-stu-id="3d222-182">No</span></span>|<span data-ttu-id="3d222-183">是</span><span class="sxs-lookup"><span data-stu-id="3d222-183">Yes</span></span>|<span data-ttu-id="3d222-184">是</span><span class="sxs-lookup"><span data-stu-id="3d222-184">Yes</span></span>|  
+|<span data-ttu-id="3d222-185">委托</span><span class="sxs-lookup"><span data-stu-id="3d222-185">Delegate</span></span>|<span data-ttu-id="3d222-186">No</span><span class="sxs-lookup"><span data-stu-id="3d222-186">No</span></span>|<span data-ttu-id="3d222-187">No</span><span class="sxs-lookup"><span data-stu-id="3d222-187">No</span></span>|<span data-ttu-id="3d222-188">是</span><span class="sxs-lookup"><span data-stu-id="3d222-188">Yes</span></span>|<span data-ttu-id="3d222-189">是</span><span class="sxs-lookup"><span data-stu-id="3d222-189">Yes</span></span>|  
   
- <sup>1</sup> 范围有时被称为“可见性”。  
+ <span data-ttu-id="3d222-190"><sup>1</sup>作用域有时称为*可见性*。</span><span class="sxs-lookup"><span data-stu-id="3d222-190"><sup>1</sup> Scope is sometimes referred to as *visibility*.</span></span>  
   
-## 请参阅  
- [已声明的元素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="3d222-191">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d222-191">See Also</span></span>  
+ [<span data-ttu-id="3d222-192">已声明的元素</span><span class="sxs-lookup"><span data-stu-id="3d222-192">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [<span data-ttu-id="3d222-193">已声明的元素名称</span><span class="sxs-lookup"><span data-stu-id="3d222-193">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="3d222-194">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="3d222-194">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="3d222-195">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="3d222-195">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="3d222-196">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="3d222-196">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="3d222-197">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="3d222-197">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="3d222-198">数据类型</span><span class="sxs-lookup"><span data-stu-id="3d222-198">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="3d222-199">变量声明</span><span class="sxs-lookup"><span data-stu-id="3d222-199">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

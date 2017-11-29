@@ -1,47 +1,145 @@
 ---
-title: "如何：设置 JPEG 压缩级别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "图像 [Windows 窗体], 更改编码器参数"
-  - "JPEG 图像, 设置质量级别"
+title: "如何：设置 JPEG 压缩级别"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], changing encoder parameters
+- JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：设置 JPEG 压缩级别
-将图像保存到磁盘中时，可能需要修改图像的参数以最大限度地减小文件的大小或提高质量。  可以通过修改 JPEG 图像的压缩级别来调整其质量。  若要在保存 JPEG 图像时指定压缩级别，必须创建一个 <xref:System.Drawing.Imaging.EncoderParameters> 对象，并且将此对象传递给 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.Save%2A> 方法。  初始化 <xref:System.Drawing.Imaging.EncoderParameters> 对象，以使其具有包含一个 <xref:System.Drawing.Imaging.EncoderParameter> 的数组。  创建 <xref:System.Drawing.Imaging.EncoderParameter> 时，指定 <xref:System.Drawing.Imaging.Encoder.Quality> 编码器和所需的压缩级别。  
+# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="4a792-102">如何：设置 JPEG 压缩级别</span><span class="sxs-lookup"><span data-stu-id="4a792-102">How to: Set JPEG Compression Level</span></span>
+<span data-ttu-id="4a792-103">在将图像保存到磁盘中时，可能需要修改图像的参数，以最大限度地减小文件的大小或提高其质量。</span><span class="sxs-lookup"><span data-stu-id="4a792-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="4a792-104">可以通过修改 JPEG 图像的压缩级别来调整其质量。</span><span class="sxs-lookup"><span data-stu-id="4a792-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="4a792-105">若要保存为 JPEG 图像时，请指定压缩级别，必须创建<xref:System.Drawing.Imaging.EncoderParameters>对象，并将其传递到<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>类。</span><span class="sxs-lookup"><span data-stu-id="4a792-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="4a792-106">初始化<xref:System.Drawing.Imaging.EncoderParameters>对象以使其具有一个数组，其中包含一个<xref:System.Drawing.Imaging.EncoderParameter>。</span><span class="sxs-lookup"><span data-stu-id="4a792-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="4a792-107">当你创建<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>编码器选项和所需的压缩级别。</span><span class="sxs-lookup"><span data-stu-id="4a792-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
   
-## 示例  
- 下面的代码示例创建一个 <xref:System.Drawing.Imaging.EncoderParameter> 对象并保存三幅 JPEG 图像。  通过修改传递给 <xref:System.Drawing.Imaging.EncoderParameter> 构造函数的 `long` 值，使用不同的质量级别保存每个 JPEG 图像。  质量级别 0 对应于最大压缩，而质量级别 100 对应于最小压缩。  
+## <a name="example"></a><span data-ttu-id="4a792-108">示例</span><span class="sxs-lookup"><span data-stu-id="4a792-108">Example</span></span>  
+ <span data-ttu-id="4a792-109">下面的示例代码创建<xref:System.Drawing.Imaging.EncoderParameter>对象，并将保存三个 JPEG 图像。</span><span class="sxs-lookup"><span data-stu-id="4a792-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="4a792-110">通过修改与不同质量级别，保存每个 JPEG 图像`long`值传递给<xref:System.Drawing.Imaging.EncoderParameter>构造函数。</span><span class="sxs-lookup"><span data-stu-id="4a792-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="4a792-111">质量级别 0 对应于最大压缩，而质量级别 100 对应于最小压缩。</span><span class="sxs-lookup"><span data-stu-id="4a792-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
   
- [!code-csharp[UsingImageEncodersDecoders#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#8)]
- [!code-vb[UsingImageEncodersDecoders#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#8)]  
-[!code-csharp[UsingImageEncodersDecoders#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#6)]
-[!code-vb[UsingImageEncodersDecoders#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#6)]  
+```csharp  
+private void VaryQualityLevel()  
+    {  
+        // Get a bitmap. The using statement ensures objects  
+        // are automatically disposed from memory after use.  
+        using (Bitmap bmp1 = new Bitmap(@"C:\TestPhoto.jpg"))  
+        {  
+            ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);  
   
-## 编译代码  
- 此示例需要：  
+            // Create an Encoder object based on the GUID  
+            // for the Quality parameter category.  
+            System.Drawing.Imaging.Encoder myEncoder =  
+                System.Drawing.Imaging.Encoder.Quality;  
   
--   Windows 窗体应用程序。  
+            // Create an EncoderParameters object.  
+            // An EncoderParameters object has an array of EncoderParameter  
+            // objects. In this case, there is only one  
+            // EncoderParameter object in the array.  
+            EncoderParameters myEncoderParameters = new EncoderParameters(1);  
   
--   <xref:System.Windows.Forms.PaintEventArgs>，它是 <xref:System.Windows.Forms.PaintEventHandler> 的一个参数。  
+            EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, 50L);  
+            myEncoderParameters.Param[0] = myEncoderParameter;  
+            bmp1.Save(@"c:\TestPhotoQualityFifty.jpg", jpgEncoder, myEncoderParameters);  
   
--   一个位于 **c:\\** 位置的名为 `TestPhoto.jpg` 的图像文件。  
+            myEncoderParameter = new EncoderParameter(myEncoder, 100L);  
+            myEncoderParameters.Param[0] = myEncoderParameter;  
+            bmp1.Save(@"C:\TestPhotoQualityHundred.jpg", jpgEncoder, myEncoderParameters);  
   
-## 请参阅  
- [如何：确定编码器支持的参数](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)   
- [位图类型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)   
- [在托管 GDI\+ 中使用图像编码器和解码器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+            // Save the bitmap as a JPG file with zero quality level compression.  
+            myEncoderParameter = new EncoderParameter(myEncoder, 0L);  
+            myEncoderParameters.Param[0] = myEncoderParameter;  
+            bmp1.Save(@"C:\TestPhotoQualityZero.jpg", jpgEncoder, myEncoderParameters);  
+        }  
+    }  
+```  
+  
+```vb  
+Private Sub VaryQualityLevel()  
+    ' Get a bitmap. The Using statement ensures objects  
+    ' are automatically disposed from memory after use.  
+    Using bmp1 As New Bitmap("C:\test\TestPhoto.jpg")  
+        Dim jpgEncoder As ImageCodecInfo = GetEncoder(ImageFormat.Jpeg)  
+  
+        ' Create an Encoder object based on the GUID  
+        ' for the Quality parameter category.  
+        Dim myEncoder As System.Drawing.Imaging.Encoder = System.Drawing.Imaging.Encoder.Quality  
+  
+        ' Create an EncoderParameters object.  
+        ' An EncoderParameters object has an array of EncoderParameter  
+        ' objects. In this case, there is only one  
+        ' EncoderParameter object in the array.  
+        Dim myEncoderParameters As New EncoderParameters(1)  
+  
+        Dim myEncoderParameter As New EncoderParameter(myEncoder, 50L)  
+        myEncoderParameters.Param(0) = myEncoderParameter  
+        bmp1.Save("c:\test\TestPhotoQualityFifty.jpg", jpgEncoder, myEncoderParameters)  
+  
+        myEncoderParameter = New EncoderParameter(myEncoder, 100L)  
+        myEncoderParameters.Param(0) = myEncoderParameter  
+        bmp1.Save("C:\test\TestPhotoQualityHundred.jpg", jpgEncoder, myEncoderParameters)  
+  
+        ' Save the bitmap as a JPG file with zero quality level compression.  
+        myEncoderParameter = New EncoderParameter(myEncoder, 0L)  
+        myEncoderParameters.Param(0) = myEncoderParameter  
+        bmp1.Save("C:\test\TestPhotoQualityZero.jpg", jpgEncoder, myEncoderParameters)  
+    End Using  
+End Sub  
+```  
+  
+```csharp  
+private ImageCodecInfo GetEncoder(ImageFormat format)  
+{  
+    ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();  
+    foreach (ImageCodecInfo codec in codecs)  
+    {  
+        if (codec.FormatID == format.Guid)  
+        {  
+            return codec;  
+        }  
+    }  
+    return null;  
+}  
+```  
+  
+```vb  
+Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo  
+  
+    Dim codecs As ImageCodecInfo() = ImageCodecInfo.GetImageDecoders()  
+    Dim codec As ImageCodecInfo  
+    For Each codec In codecs  
+        If codec.FormatID = format.Guid Then  
+            Return codec  
+        End If  
+    Next codec  
+    Return Nothing  
+  
+End Function  
+```  
+  
+## <a name="compiling-the-code"></a><span data-ttu-id="4a792-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="4a792-112">Compiling the Code</span></span>  
+ <span data-ttu-id="4a792-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="4a792-113">This example requires:</span></span>  
+  
+-   <span data-ttu-id="4a792-114">Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="4a792-114">A Windows Forms application.</span></span>  
+  
+-   <span data-ttu-id="4a792-115">A <xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="4a792-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+  
+-   <span data-ttu-id="4a792-116">一个位于 **c:\\** 位置的名为 `TestPhoto.jpg` 的图像文件。</span><span class="sxs-lookup"><span data-stu-id="4a792-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4a792-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4a792-117">See Also</span></span>  
+ [<span data-ttu-id="4a792-118">如何：确定编码器支持的参数</span><span class="sxs-lookup"><span data-stu-id="4a792-118">How to: Determine the Parameters Supported by an Encoder</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ [<span data-ttu-id="4a792-119">位图类型</span><span class="sxs-lookup"><span data-stu-id="4a792-119">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [<span data-ttu-id="4a792-120">在托管 GDI+ 中使用图像编码器和解码器</span><span class="sxs-lookup"><span data-stu-id="4a792-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

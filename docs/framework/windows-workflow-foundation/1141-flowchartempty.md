@@ -1,38 +1,42 @@
 ---
-title: "1141 - FlowchartEmpty | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1141 - FlowchartEmpty
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5361db9-c3b5-40fc-96d5-4879953c4cd9
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f81dbbc7a9fa062de628a822fe8279ab90c29d04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 1141 - FlowchartEmpty
-## 属性  
+# <a name="1141---flowchartempty"></a><span data-ttu-id="77eff-102">1141 - FlowchartEmpty</span><span class="sxs-lookup"><span data-stu-id="77eff-102">1141 - FlowchartEmpty</span></span>
+## <a name="properties"></a><span data-ttu-id="77eff-103">属性</span><span class="sxs-lookup"><span data-stu-id="77eff-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1141|  
-|关键字|WFActivities|  
-|级别|警告|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="77eff-104">ID</span><span class="sxs-lookup"><span data-stu-id="77eff-104">ID</span></span>|<span data-ttu-id="77eff-105">1141</span><span class="sxs-lookup"><span data-stu-id="77eff-105">1141</span></span>|  
+|<span data-ttu-id="77eff-106">关键字</span><span class="sxs-lookup"><span data-stu-id="77eff-106">Keywords</span></span>|<span data-ttu-id="77eff-107">WFActivities</span><span class="sxs-lookup"><span data-stu-id="77eff-107">WFActivities</span></span>|  
+|<span data-ttu-id="77eff-108">级别</span><span class="sxs-lookup"><span data-stu-id="77eff-108">Level</span></span>|<span data-ttu-id="77eff-109">警告</span><span class="sxs-lookup"><span data-stu-id="77eff-109">Warning</span></span>|  
+|<span data-ttu-id="77eff-110">通道</span><span class="sxs-lookup"><span data-stu-id="77eff-110">Channel</span></span>|<span data-ttu-id="77eff-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="77eff-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 指示在无节点的情况下执行 Flowchart。  
+## <a name="description"></a><span data-ttu-id="77eff-112">描述</span><span class="sxs-lookup"><span data-stu-id="77eff-112">Description</span></span>  
+ <span data-ttu-id="77eff-113">指示在无节点的情况下执行 Flowchart。</span><span class="sxs-lookup"><span data-stu-id="77eff-113">Indicates a Flowchart was executed with no nodes.</span></span>  
   
-## 消息  
- Flowchart“%1”\- 在无节点的情况下执行。  
+## <a name="message"></a><span data-ttu-id="77eff-114">消息</span><span class="sxs-lookup"><span data-stu-id="77eff-114">Message</span></span>  
+ <span data-ttu-id="77eff-115">Flowchart“%1”- 在无节点的情况下执行。</span><span class="sxs-lookup"><span data-stu-id="77eff-115">Flowchart '%1' - was executed with no Nodes.</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="77eff-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="77eff-116">Details</span></span>  
   
-|数据项名称|数据项类型|描述|  
-|-----------|-----------|--------|  
-|FlowChart|xs:string|FlowChart 的显示名称。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="77eff-117">数据项名称</span><span class="sxs-lookup"><span data-stu-id="77eff-117">Data Item Name</span></span>|<span data-ttu-id="77eff-118">数据项类型</span><span class="sxs-lookup"><span data-stu-id="77eff-118">Data Item Type</span></span>|<span data-ttu-id="77eff-119">描述</span><span class="sxs-lookup"><span data-stu-id="77eff-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="77eff-120">FlowChart</span><span class="sxs-lookup"><span data-stu-id="77eff-120">FlowChart</span></span>|<span data-ttu-id="77eff-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="77eff-121">xs:string</span></span>|<span data-ttu-id="77eff-122">FlowChart 的显示名称。</span><span class="sxs-lookup"><span data-stu-id="77eff-122">The display name of the FlowChart.</span></span>|  
+|<span data-ttu-id="77eff-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="77eff-123">AppDomain</span></span>|<span data-ttu-id="77eff-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="77eff-124">xs:string</span></span>|<span data-ttu-id="77eff-125">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="77eff-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

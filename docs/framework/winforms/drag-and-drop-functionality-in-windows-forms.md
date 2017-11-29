@@ -1,56 +1,57 @@
 ---
-title: "Windows 窗体中的拖放功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "拖放, Windows 窗体"
-  - "Windows 窗体, 拖放"
+title: "Windows 窗体中的拖放功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drag and drop [Windows Forms], Windows Forms
+- Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f86ff2fbb3944ce2ed381cb29e2b3c6df39b62bf
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Windows 窗体中的拖放功能
-Windows 窗体包含一组实现拖放行为的方法、事件和类。  本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。  
+# <a name="drag-and-drop-functionality-in-windows-forms"></a><span data-ttu-id="7ab6f-102">Windows 窗体中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="7ab6f-102">Drag-and-Drop Functionality in Windows Forms</span></span>
+<span data-ttu-id="7ab6f-103">Windows 窗体包含一组实现拖放行为的方法、事件和类。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-103">Windows Forms includes a set of methods, events, and classes that implement drag-and-drop behavior.</span></span> <span data-ttu-id="7ab6f-104">本主题概述了 Windows 窗体对拖放功能的支持。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-104">This topic provides an overview of the drag-and-drop support in Windows Forms.</span></span>  <span data-ttu-id="7ab6f-105">另请参阅[拖放操作和剪贴板支持](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-105">Also see [Drag-and-Drop Operations and Clipboard Support](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).</span></span>  
   
-## 执行拖放操作  
- 若要执行拖放操作，请使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。  有关如何执行拖放操作的详细信息，请参阅 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。  若要获取拖放操作开始前鼠标指针必须拖动到的矩形，请使用 <xref:System.Windows.Forms.SystemInformation> 类的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 属性。  
+## <a name="performing-drag-and-drop-operations"></a><span data-ttu-id="7ab6f-106">执行拖放操作</span><span class="sxs-lookup"><span data-stu-id="7ab6f-106">Performing Drag-and-Drop Operations</span></span>  
+ <span data-ttu-id="7ab6f-107">若要执行拖放操作，请使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-107">To perform a drag-and-drop operation, use the <xref:System.Windows.Forms.Control.DoDragDrop%2A> method of the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="7ab6f-108">有关如何执行拖放操作的详细信息，请参阅 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-108">For more information about how a drag-and-drop operation is performed, see <xref:System.Windows.Forms.Control.DoDragDrop%2A>.</span></span> <span data-ttu-id="7ab6f-109">若要获取拖放操作开始前鼠标指针必须拖动到的矩形，请使用 <xref:System.Windows.Forms.SystemInformation> 类的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-109">To get the rectangle that the mouse pointer must be dragged over before a drag-and-drop operation begins, use the <xref:System.Windows.Forms.SystemInformation.DragSize%2A> property of the <xref:System.Windows.Forms.SystemInformation> class.</span></span>  
   
-## 与拖放操作相关的事件  
- 拖放操作中有两类事件：一类是拖放操作的当前目标上发生的事件，一类是拖放操作的源上发生的事件。  
+## <a name="events-related-to-drag-and-drop-operations"></a><span data-ttu-id="7ab6f-110">与拖放操作相关的事件</span><span class="sxs-lookup"><span data-stu-id="7ab6f-110">Events Related to Drag-and-Drop Operations</span></span>  
+ <span data-ttu-id="7ab6f-111">拖放操作中有两类事件：一类是拖放操作的当前目标上发生的事件，一类是拖放操作的源上发生的事件。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-111">There are two categories of events in a drag and drop operation: events that occur on the current target of the drag-and-drop operation, and events that occur on the source of the drag and drop operation.</span></span>  
   
-### 当前目标上的事件  
- 下表显示在拖放操作的当前目标上发生的事件。  
+### <a name="events-on-the-current-target"></a><span data-ttu-id="7ab6f-112">当前目标上的事件</span><span class="sxs-lookup"><span data-stu-id="7ab6f-112">Events on the Current Target</span></span>  
+ <span data-ttu-id="7ab6f-113">下表显示在拖放操作的当前目标上发生的事件。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-113">The following table shows the events that occur on the current target of a drag-and-drop operation.</span></span>  
   
-|鼠标事件|描述|  
-|----------|--------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|将对象拖入控件的边界时此事件发生。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragOver>|在鼠标指针位于控件的边界内时如果拖动对象则此事件发生。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragDrop>|拖放操作完成时此事件发生。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.DragLeave>|将对象拖出控件的边界时此事件发生。  此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
+|<span data-ttu-id="7ab6f-114">鼠标事件</span><span class="sxs-lookup"><span data-stu-id="7ab6f-114">Mouse Event</span></span>|<span data-ttu-id="7ab6f-115">描述</span><span class="sxs-lookup"><span data-stu-id="7ab6f-115">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.DragEnter>|<span data-ttu-id="7ab6f-116">将对象拖入控件的边界时此事件发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-116">This event occurs when an object is dragged into the control's bounds.</span></span> <span data-ttu-id="7ab6f-117">此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-117">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragOver>|<span data-ttu-id="7ab6f-118">在鼠标指针位于控件的边界内时如果拖动对象则此事件发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-118">This event occurs when an object is dragged while the mouse pointer is within the control's bounds.</span></span> <span data-ttu-id="7ab6f-119">此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-119">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragDrop>|<span data-ttu-id="7ab6f-120">拖放操作完成时此事件发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-120">This event occurs when a drag-and-drop operation is completed.</span></span> <span data-ttu-id="7ab6f-121">此事件的处理程序接收类型为 <xref:System.Windows.Forms.DragEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-121">The handler for this event receives an argument of type <xref:System.Windows.Forms.DragEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.DragLeave>|<span data-ttu-id="7ab6f-122">将对象拖出控件的边界时此事件发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-122">This event occurs when an object is dragged out of the control's bounds.</span></span> <span data-ttu-id="7ab6f-123">此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-123">The handler for this event receives an argument of type <xref:System.EventArgs>.</span></span>|  
   
- <xref:System.Windows.Forms.DragEventArgs> 类提供鼠标指针的位置、鼠标按钮和键盘修改键的当前状态、正在拖动的数据以及 <xref:System.Windows.Forms.DragDropEffects> 值（指定拖动事件的源所允许的操作以及操作的目标放置效果）。  
+ <span data-ttu-id="7ab6f-124"><xref:System.Windows.Forms.DragEventArgs> 类提供鼠标指针的位置、鼠标按钮和键盘修改键的当前状态、正在拖动的数据以及 <xref:System.Windows.Forms.DragDropEffects> 值（指定拖动事件的源所允许的操作以及操作的目标放置效果）。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-124">The <xref:System.Windows.Forms.DragEventArgs> class provides the location of the mouse pointer, the current state of the mouse buttons and modifier keys of the keyboard, the data being dragged, and <xref:System.Windows.Forms.DragDropEffects> values that specify the operations allowed by the source of the drag event and the target drop effect for the operation.</span></span>  
   
-### 源上的事件  
- 下表显示在拖放操作的源上发生的事件。  
+### <a name="events-on-the-source"></a><span data-ttu-id="7ab6f-125">源上的事件</span><span class="sxs-lookup"><span data-stu-id="7ab6f-125">Events on the Source</span></span>  
+ <span data-ttu-id="7ab6f-126">下表显示在拖放操作的源上发生的事件。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-126">The following table shows the events that occur on the source of the drag-and-drop operation.</span></span>  
   
-|鼠标事件|描述|  
-|----------|--------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|此事件在执行拖动操作期间发生。  借助此事件，可向用户提供可视提示（例如更改鼠标指针），通知拖放操作正在发生。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 的参数。|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|此事件在拖放操作期间引发，并使拖动源可以确定是否应取消拖放操作。  此事件的处理程序接收类型为 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 的参数。|  
+|<span data-ttu-id="7ab6f-127">鼠标事件</span><span class="sxs-lookup"><span data-stu-id="7ab6f-127">Mouse Event</span></span>|<span data-ttu-id="7ab6f-128">描述</span><span class="sxs-lookup"><span data-stu-id="7ab6f-128">Description</span></span>|  
+|-----------------|-----------------|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|<span data-ttu-id="7ab6f-129">此事件在执行拖动操作期间发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-129">This event occurs during a drag operation.</span></span> <span data-ttu-id="7ab6f-130">借助此事件，可向用户提供可视提示（例如更改鼠标指针），通知拖放操作正在发生。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-130">It provides an opportunity to give a visual cue to the user that the drag-and-drop operation is occurring, such as changing the mouse pointer.</span></span> <span data-ttu-id="7ab6f-131">此事件的处理程序接收类型为 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-131">The handler for this event receives an argument of type <xref:System.Windows.Forms.GiveFeedbackEventArgs>.</span></span>|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|<span data-ttu-id="7ab6f-132">此事件在拖放操作期间引发，并使拖动源可以确定是否应取消拖放操作。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-132">This event is raised during a drag-and-drop operation and enables the drag source to determine whether the drag-and-drop operation should be canceled.</span></span> <span data-ttu-id="7ab6f-133">此事件的处理程序接收类型为 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 的参数。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-133">The handler for this event receives an argument of type <xref:System.Windows.Forms.QueryContinueDragEventArgs>.</span></span>|  
   
- <xref:System.Windows.Forms.QueryContinueDragEventArgs> 类提供鼠标按钮和键盘修改键的当前状态、指定是否按 ESC 键的值以及 <xref:System.Windows.Forms.DragAction> 值（可设置为指定是否应继续拖放操作）。  
+ <span data-ttu-id="7ab6f-134"><xref:System.Windows.Forms.QueryContinueDragEventArgs> 类提供鼠标按钮和键盘修改键的当前状态、指定是否按 ESC 键的值以及 <xref:System.Windows.Forms.DragAction> 值（可设置为指定是否应继续拖放操作）。</span><span class="sxs-lookup"><span data-stu-id="7ab6f-134">The <xref:System.Windows.Forms.QueryContinueDragEventArgs> class provides the current state of the mouse buttons and modifier keys of the keyboard, a value specifying whether the ESC key was pressed, and a <xref:System.Windows.Forms.DragAction> value that can be set to specify whether the drag-and-drop operation should continue.</span></span>  
   
-## 请参阅  
- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="7ab6f-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ab6f-135">See Also</span></span>  
+ [<span data-ttu-id="7ab6f-136">Windows 窗体应用程序中的鼠标输入</span><span class="sxs-lookup"><span data-stu-id="7ab6f-136">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

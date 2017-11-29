@@ -1,69 +1,71 @@
 ---
-title: "审核安全事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "审核安全事件 [WCF]"
+title: "审核安全事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 审核安全事件
-使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建的应用程序可以利用审核功能来记录安全事件（成功、失败或两者）。这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
+# <a name="auditing-security-events"></a><span data-ttu-id="63161-102">审核安全事件</span><span class="sxs-lookup"><span data-stu-id="63161-102">Auditing Security Events</span></span>
+<span data-ttu-id="63161-103">使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建的应用程序可以利用审核功能来记录安全事件（成功、失败或两者）。</span><span class="sxs-lookup"><span data-stu-id="63161-103">Applications created with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] can log security events (either success, failure, or both) with the auditing feature.</span></span> <span data-ttu-id="63161-104">这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。</span><span class="sxs-lookup"><span data-stu-id="63161-104">The events are written to the Windows system event log and can be examined using the Event Viewer.</span></span>  
   
- 审核为管理员提供了一种检测已经发生或正在发生的攻击的方式。此外，审核有助于开发人员调试与安全相关的问题。例如，如果授权或检查策略配置中的错误意外拒绝授权用户进行访问，开发人员可以通过检查事件日志迅速发现并隔离此错误的原因。  
+ <span data-ttu-id="63161-105">审核为管理员提供了一种检测已经发生或正在发生的攻击的方式。</span><span class="sxs-lookup"><span data-stu-id="63161-105">Auditing provides a way for an administrator to detect an attack that has already occurred or is in progress.</span></span> <span data-ttu-id="63161-106">此外，审核有助于开发人员调试与安全相关的问题。</span><span class="sxs-lookup"><span data-stu-id="63161-106">In addition, auditing can help a developer to debug security-related problems.</span></span> <span data-ttu-id="63161-107">例如，如果授权或检查策略配置中的错误意外拒绝授权用户进行访问，开发人员可以通过检查事件日志迅速发现并隔离此错误的原因。</span><span class="sxs-lookup"><span data-stu-id="63161-107">For example, if an error in the configuration of the authorization or checking policy accidentally denies access to an authorized user, a developer can quickly discover and isolate the cause of this error by examining the event log.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全的更多信息，请参见 [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程的更多信息，请参见[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="63161-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="63161-108"> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="63161-109">编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="63161-109"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  
   
-## 审核级别和行为  
- 存在两个安全审核级别：  
+## <a name="audit-level-and-behavior"></a><span data-ttu-id="63161-110">审核级别和行为</span><span class="sxs-lookup"><span data-stu-id="63161-110">Audit Level and Behavior</span></span>  
+ <span data-ttu-id="63161-111">存在两个安全审核级别：</span><span class="sxs-lookup"><span data-stu-id="63161-111">Two levels of security audits exist:</span></span>  
   
--   服务授权级别，在该级别对调用方进行授权。  
+-   <span data-ttu-id="63161-112">服务授权级别，在该级别对调用方进行授权。</span><span class="sxs-lookup"><span data-stu-id="63161-112">Service authorization level, in which a caller is authorized.</span></span>  
   
--   消息级别，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该级别检查消息的有效性，并对调用方进行身份验证。  
+-   <span data-ttu-id="63161-113">消息级别，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该级别检查消息的有效性，并对调用方进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="63161-113">Message level, in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] checks for message validity and authenticates the caller.</span></span>  
   
- 您可以检查这两个审核级别是成功还是失败，这称为“审核行为”。  
+ <span data-ttu-id="63161-114">你可以检查这两个审核级别成功或失败，这被称为*审核行为*。</span><span class="sxs-lookup"><span data-stu-id="63161-114">You can check both audit levels for success or failure, which is known as the *audit behavior*.</span></span>  
   
-## 审核日志位置  
- 一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。有以下三种选择：Default、Application 和 Security。当指定 Default 时，实际日志取决于所使用的系统以及该系统是否支持写入 Security 日志。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主题后面的“操作系统”部分。  
+## <a name="audit-log-location"></a><span data-ttu-id="63161-115">审核日志位置</span><span class="sxs-lookup"><span data-stu-id="63161-115">Audit Log Location</span></span>  
+ <span data-ttu-id="63161-116">一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。</span><span class="sxs-lookup"><span data-stu-id="63161-116">Once you determine an audit level and behavior, you (or an administrator) can specify a location for the audit log.</span></span> <span data-ttu-id="63161-117">有以下三种选择：Default、Application 和 Security。</span><span class="sxs-lookup"><span data-stu-id="63161-117">The three choices include: Default, Application, and Security.</span></span> <span data-ttu-id="63161-118">当指定“默认值”时，实际日志取决于所使用的系统以及该系统是否支持写入安全日志。</span><span class="sxs-lookup"><span data-stu-id="63161-118">When you specify Default, the actual log depends on which system you are using and whether the system supports writing to the security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="63161-119">本主题后面的“操作系统”部分。</span><span class="sxs-lookup"><span data-stu-id="63161-119"> the "Operating System" section later in this topic.</span></span>  
   
- 写入 Security 日志要求具有 `SeAuditPrivilege`。默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。默认情况下，只有管理员具有此特权。  
+ <span data-ttu-id="63161-120">写入 Security 日志要求具有 `SeAuditPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="63161-120">To write to the Security log requires the `SeAuditPrivilege`.</span></span> <span data-ttu-id="63161-121">默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。</span><span class="sxs-lookup"><span data-stu-id="63161-121">By default, only Local System and Network Service accounts have this privilege.</span></span> <span data-ttu-id="63161-122">管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="63161-122">To manage the Security log functions `read` and `delete` requires the `SeSecurityPrivilege`.</span></span> <span data-ttu-id="63161-123">默认情况下，只有管理员具有此特权。</span><span class="sxs-lookup"><span data-stu-id="63161-123">By default, only administrators have this privilege.</span></span>  
   
- 与此相反，经过身份验证的用户可以读取和写入应用程序日志。默认情况下，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 将审核事件写入到应用程序日志。该日志还包含对所有通过身份验证的用户可见的个人信息。  
+ <span data-ttu-id="63161-124">与此相反，经过身份验证的用户可以读取和写入应用程序日志。</span><span class="sxs-lookup"><span data-stu-id="63161-124">In contrast, authenticated users can read and write to the Application log.</span></span> <span data-ttu-id="63161-125">默认情况下，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 将审核事件写入到应用程序日志。</span><span class="sxs-lookup"><span data-stu-id="63161-125">[!INCLUDE[wxp](../../../../includes/wxp-md.md)] writes audit events to the Application log by default.</span></span> <span data-ttu-id="63161-126">该日志还包含对所有通过身份验证的用户可见的个人信息。</span><span class="sxs-lookup"><span data-stu-id="63161-126">The log can also contain personal information that is visible to all authenticated users.</span></span>  
   
-## 禁止显示审核失败  
- 审核过程中的另一个选择为是否禁止显示任何审核失败。默认情况下，审核失败不会影响应用程序。但是，如若需要，可将此选项设置为 `false`，这将导致引发异常。  
+## <a name="suppressing-audit-failures"></a><span data-ttu-id="63161-127">禁止显示审核失败</span><span class="sxs-lookup"><span data-stu-id="63161-127">Suppressing Audit Failures</span></span>  
+ <span data-ttu-id="63161-128">审核过程中的另一个选择为是否禁止显示任何审核失败。</span><span class="sxs-lookup"><span data-stu-id="63161-128">Another option during auditing is whether to suppress any audit failure.</span></span> <span data-ttu-id="63161-129">默认情况下，审核失败不会影响应用程序。</span><span class="sxs-lookup"><span data-stu-id="63161-129">By default, an audit failure does not affect an application.</span></span> <span data-ttu-id="63161-130">但是，如若需要，可将此选项设置为 `false`，这将导致引发异常。</span><span class="sxs-lookup"><span data-stu-id="63161-130">If required, however, you can set the option to `false`, which causes an exception to be thrown.</span></span>  
   
-## 审核编程  
- 可以通过编程或通过配置来指定审核行为。  
+## <a name="programming-auditing"></a><span data-ttu-id="63161-131">审核编程</span><span class="sxs-lookup"><span data-stu-id="63161-131">Programming Auditing</span></span>  
+ <span data-ttu-id="63161-132">可以通过编程或通过配置来指定审核行为。</span><span class="sxs-lookup"><span data-stu-id="63161-132">You can specify auditing behavior either programmatically or through configuration.</span></span>  
   
-### 审核类  
- 下表描述了用于对审核行为进行编程的类和属性。  
+### <a name="auditing-classes"></a><span data-ttu-id="63161-133">审核类</span><span class="sxs-lookup"><span data-stu-id="63161-133">Auditing Classes</span></span>  
+ <span data-ttu-id="63161-134">下表描述了用于对审核行为进行编程的类和属性。</span><span class="sxs-lookup"><span data-stu-id="63161-134">The following table describes the classes and properties used to program auditing behavior.</span></span>  
   
-|类|说明|  
-|-------|--------|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|将设置审核选项作为服务行为启用。|  
-|<xref:System.ServiceModel.AuditLogLocation>|枚举值，用于指定要写入的日志。可能的值为 Default、Application 和 Security。选择 Default 时，操作系统将确定实际日志位置。请参见本主题后面的“Application 或 Security 事件日志选择”部分。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|指定在消息级别审核哪些类型的消息身份验证事件。选择包括 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|指定在服务级别审核哪些类型的服务授权事件。选择包括 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|指定在审核失败时如何处理客户端请求。例如，当服务尝试写入 Security 日志但不具有 `SeAuditPrivilege` 时。默认值 `true` 指示忽略失败，因此将正常处理客户端请求。|  
+|<span data-ttu-id="63161-135">类</span><span class="sxs-lookup"><span data-stu-id="63161-135">Class</span></span>|<span data-ttu-id="63161-136">描述</span><span class="sxs-lookup"><span data-stu-id="63161-136">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|<span data-ttu-id="63161-137">将设置审核选项作为服务行为启用。</span><span class="sxs-lookup"><span data-stu-id="63161-137">Enables setting options for auditing as a service behavior.</span></span>|  
+|<xref:System.ServiceModel.AuditLogLocation>|<span data-ttu-id="63161-138">枚举值，用于指定要写入的日志。</span><span class="sxs-lookup"><span data-stu-id="63161-138">Enumeration to specify which log to write to.</span></span> <span data-ttu-id="63161-139">可能的值为 Default、Application 和 Security。</span><span class="sxs-lookup"><span data-stu-id="63161-139">The possible values are Default, Application, and Security.</span></span> <span data-ttu-id="63161-140">选择 Default 时，操作系统将确定实际日志位置。</span><span class="sxs-lookup"><span data-stu-id="63161-140">When you select Default, the operating system determines the actual log location.</span></span> <span data-ttu-id="63161-141">请参见本主题后面的“Application 或 Security 事件日志选择”部分。</span><span class="sxs-lookup"><span data-stu-id="63161-141">See the "Application or Security Event Log Choice" section later in this topic.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|<span data-ttu-id="63161-142">指定在消息级别审核哪些类型的消息身份验证事件。</span><span class="sxs-lookup"><span data-stu-id="63161-142">Specifies which types of message authentication events are audited at the message level.</span></span> <span data-ttu-id="63161-143">选择包括 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。</span><span class="sxs-lookup"><span data-stu-id="63161-143">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|<span data-ttu-id="63161-144">指定在服务级别审核哪些类型的服务授权事件。</span><span class="sxs-lookup"><span data-stu-id="63161-144">Specifies which types of service authorization events are audited at the service level.</span></span> <span data-ttu-id="63161-145">选择包括 `None`、`Failure`、`Success` 和 `SuccessOrFailure`。</span><span class="sxs-lookup"><span data-stu-id="63161-145">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|<span data-ttu-id="63161-146">指定在审核失败时如何处理客户端请求。</span><span class="sxs-lookup"><span data-stu-id="63161-146">Specifies what happens to the client request when auditing fails.</span></span> <span data-ttu-id="63161-147">例如，当服务尝试写入 Security 日志但不具有 `SeAuditPrivilege` 时。</span><span class="sxs-lookup"><span data-stu-id="63161-147">For example, when the service attempts to write to the security log, but does not have `SeAuditPrivilege`.</span></span> <span data-ttu-id="63161-148">默认值 `true` 指示忽略失败，因此将正常处理客户端请求。</span><span class="sxs-lookup"><span data-stu-id="63161-148">The default value of `true` indicates that failures are ignored, and the client request is processed normally.</span></span>|  
   
- 有关如何设置应用程序以记录审核事件的示例，请参见[如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ <span data-ttu-id="63161-149">有关设置应用程序日志审核事件的示例，请参阅[如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。</span><span class="sxs-lookup"><span data-stu-id="63161-149">For an example of setting up an application to log audit events, see [How to: Audit Security Events](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span></span>  
   
-### 配置  
- 您还可以使用配置来指定审核行为，方法是将一个 [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)添加到 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)下。必须如下面的代码所示将该元素添加到 [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)下。  
+### <a name="configuration"></a><span data-ttu-id="63161-150">配置</span><span class="sxs-lookup"><span data-stu-id="63161-150">Configuration</span></span>  
+ <span data-ttu-id="63161-151">你可以使用配置来指定审核行为通过添加[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)下[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="63161-151">You can also use configuration to specify auditing behavior by adding a [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) under the [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span></span> <span data-ttu-id="63161-152">你必须添加下的元素[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)中下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="63161-152">You must add the element under a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) as shown in the following code.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
@@ -80,37 +82,37 @@ caps.handback.revision: 27
 </configuration>  
 ```  
   
- 如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。仅 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 操作系统支持写入安全日志。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主题后面的“操作系统”部分。  
+ <span data-ttu-id="63161-153">如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。</span><span class="sxs-lookup"><span data-stu-id="63161-153">If auditing is enabled and an `auditLogLocation` is not specified, the default log name is "Security" log for the platform supporting writing to the Security log; otherwise, it is "Application" log.</span></span> <span data-ttu-id="63161-154">仅 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 操作系统支持写入安全日志。</span><span class="sxs-lookup"><span data-stu-id="63161-154">Only the [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems support writing to the Security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="63161-155">本主题后面的“操作系统”部分。</span><span class="sxs-lookup"><span data-stu-id="63161-155"> the "Operating System" section later in this topic.</span></span>  
   
-## 安全注意事项  
- 如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。如果以这种方式填充审核日志，则审核系统会出现故障。若要缓解此问题，可以将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，并使用事件查看器的属性来控制审核行为。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]关于在 Windows XP 中使用事件查看器查看和管理事件日志的 Microsoft 支持文章，该文章位于 [How to view and manage event logs in Event Viewer in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150)（如何在 Windows XP 中使用事件查看器查看和管理事件日志）。  
+## <a name="security-considerations"></a><span data-ttu-id="63161-156">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="63161-156">Security Considerations</span></span>  
+ <span data-ttu-id="63161-157">如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。</span><span class="sxs-lookup"><span data-stu-id="63161-157">If a malicious user knows that auditing is enabled, that attacker can send invalid messages that cause audit entries to be written.</span></span> <span data-ttu-id="63161-158">如果以这种方式填充审核日志，则审核系统会出现故障。</span><span class="sxs-lookup"><span data-stu-id="63161-158">If the audit log is filled in this manner, the auditing system fails.</span></span> <span data-ttu-id="63161-159">为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。</span><span class="sxs-lookup"><span data-stu-id="63161-159">To mitigate this, set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> property to `true` and use the properties of the Event Viewer to control the auditing behavior.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="63161-160">查看和管理在 Windows XP 中使用事件查看器的事件日志上的 Microsoft 支持文章[如何查看和管理在 Windows XP 中的事件查看器中的事件日志](http://go.microsoft.com/fwlink/?LinkId=89150)。</span><span class="sxs-lookup"><span data-stu-id="63161-160"> the Microsoft Support article on viewing and managing event logs by using the Event Viewer in Windows XP available at [How to view and manage event logs in Event Viewer in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).</span></span>  
   
- 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上写入 Application 日志的审核事件对任何通过身份验证的用户都是可见的。  
+ <span data-ttu-id="63161-161">在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上写入 Application 日志的审核事件对任何通过身份验证的用户都是可见的。</span><span class="sxs-lookup"><span data-stu-id="63161-161">Audit events that are written to the Application Log on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] are visible to any authenticated user.</span></span>  
   
-## 选择 Application 或 Security 事件日志  
- 下表提供的信息有助于您选择是记录到 Application 事件日志中还是记录到 Security 事件日志中。  
+## <a name="choosing-between-application-and-security-event-logs"></a><span data-ttu-id="63161-162">选择 Application 或 Security 事件日志</span><span class="sxs-lookup"><span data-stu-id="63161-162">Choosing Between Application and Security Event Logs</span></span>  
+ <span data-ttu-id="63161-163">下表提供的信息有助于您选择是记录到 Application 事件日志中还是记录到 Security 事件日志中。</span><span class="sxs-lookup"><span data-stu-id="63161-163">The following tables provide information to help you choose whether to log into the Application or the Security event log.</span></span>  
   
-#### 操作系统  
+#### <a name="operating-system"></a><span data-ttu-id="63161-164">操作系统</span><span class="sxs-lookup"><span data-stu-id="63161-164">Operating System</span></span>  
   
-|系统|Application 日志|Security 日志|  
-|--------|--------------------|-----------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 或更高版本|是否支持|不支持|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 以及[!INCLUDE[wv](../../../../includes/wv-md.md)]|是否支持|线程上下文必须具有 `SeAuditPrivilege`|  
+|<span data-ttu-id="63161-165">系统</span><span class="sxs-lookup"><span data-stu-id="63161-165">System</span></span>|<span data-ttu-id="63161-166">Application 日志</span><span class="sxs-lookup"><span data-stu-id="63161-166">Application log</span></span>|<span data-ttu-id="63161-167">Security 日志</span><span class="sxs-lookup"><span data-stu-id="63161-167">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]<span data-ttu-id="63161-168"> 或更高版本</span><span class="sxs-lookup"><span data-stu-id="63161-168"> or later</span></span>|<span data-ttu-id="63161-169">支持</span><span class="sxs-lookup"><span data-stu-id="63161-169">Supported</span></span>|<span data-ttu-id="63161-170">不支持</span><span class="sxs-lookup"><span data-stu-id="63161-170">Not supported</span></span>|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)]<span data-ttu-id="63161-171"> 和 [!INCLUDE[wv](../../../../includes/wv-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63161-171"> and [!INCLUDE[wv](../../../../includes/wv-md.md)]</span></span>|<span data-ttu-id="63161-172">支持</span><span class="sxs-lookup"><span data-stu-id="63161-172">Supported</span></span>|<span data-ttu-id="63161-173">线程上下文必须具有 `SeAuditPrivilege`</span><span class="sxs-lookup"><span data-stu-id="63161-173">Thread context must possess `SeAuditPrivilege`</span></span>|  
   
-#### 其他因素  
- 除操作系统以外，下表描述了其他用于控制是否启用日志记录的设置。  
+#### <a name="other-factors"></a><span data-ttu-id="63161-174">其他因素</span><span class="sxs-lookup"><span data-stu-id="63161-174">Other Factors</span></span>  
+ <span data-ttu-id="63161-175">除操作系统以外，下表描述了其他用于控制是否启用日志记录的设置。</span><span class="sxs-lookup"><span data-stu-id="63161-175">In addition to the operating system, the following table describes other settings that control the enablement of logging.</span></span>  
   
-|因素|Application 日志|Security 日志|  
-|--------|--------------------|-----------------|  
-|审核策略管理|不适用。|除配置以外，Security 日志还受到本地安全机构 \(LSA\) 策略的控制。还必须启用“审核对象访问”类别。|  
-|默认用户体验|所有通过身份验证的用户都可以写入 Application 日志，因此对于应用程序进程，不需要执行其他权限步骤。|应用程序进程（上下文）必须具有 `SeAuditPrivilege`。|  
+|<span data-ttu-id="63161-176">因素</span><span class="sxs-lookup"><span data-stu-id="63161-176">Factor</span></span>|<span data-ttu-id="63161-177">Application 日志</span><span class="sxs-lookup"><span data-stu-id="63161-177">Application log</span></span>|<span data-ttu-id="63161-178">Security 日志</span><span class="sxs-lookup"><span data-stu-id="63161-178">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|<span data-ttu-id="63161-179">审核策略管理</span><span class="sxs-lookup"><span data-stu-id="63161-179">Audit policy management</span></span>|<span data-ttu-id="63161-180">不适用。</span><span class="sxs-lookup"><span data-stu-id="63161-180">Not applicable.</span></span>|<span data-ttu-id="63161-181">除配置以外，Security 日志还受到本地安全机构 (LSA) 策略的控制。</span><span class="sxs-lookup"><span data-stu-id="63161-181">Along with configuration, the Security log is also controlled by the local security authority (LSA) policy.</span></span> <span data-ttu-id="63161-182">还必须启用“审核对象访问”类别。</span><span class="sxs-lookup"><span data-stu-id="63161-182">The "Audit object access" category must also be enabled.</span></span>|  
+|<span data-ttu-id="63161-183">默认用户体验</span><span class="sxs-lookup"><span data-stu-id="63161-183">Default user experience</span></span>|<span data-ttu-id="63161-184">所有通过身份验证的用户都可以写入 Application 日志，因此对于应用程序进程，不需要执行其他权限步骤。</span><span class="sxs-lookup"><span data-stu-id="63161-184">All authenticated users can write to the Application log, so no additional permission step is needed for application processes.</span></span>|<span data-ttu-id="63161-185">应用程序进程（上下文）必须具有 `SeAuditPrivilege`。</span><span class="sxs-lookup"><span data-stu-id="63161-185">The application process (context) must have `SeAuditPrivilege`.</span></span>|  
   
-## 请参阅  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>   
- <xref:System.ServiceModel.AuditLogLocation>   
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)   
- [如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)   
- [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)   
- [\<行为\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="63161-186">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63161-186">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
+ <xref:System.ServiceModel.AuditLogLocation>  
+ [<span data-ttu-id="63161-187">安全性概述</span><span class="sxs-lookup"><span data-stu-id="63161-187">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="63161-188">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="63161-188">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="63161-189">如何： 审核安全事件</span><span class="sxs-lookup"><span data-stu-id="63161-189">How to: Audit Security Events</span></span>](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [<span data-ttu-id="63161-190">\<serviceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="63161-190">\<serviceSecurityAudit></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
+ [<span data-ttu-id="63161-191">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="63161-191">\<behaviors></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [<span data-ttu-id="63161-192">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="63161-192">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

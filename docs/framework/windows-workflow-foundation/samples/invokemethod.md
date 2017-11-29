@@ -1,77 +1,81 @@
 ---
-title: "InvokeMethod | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: InvokeMethod
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0fc081f4958420b7f3a1236441f33cf124dade54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# InvokeMethod
-本示例演示使用 <xref:System.Activities.Statements.InvokeMethod> 活动调用类的方法的不同方式。  
+# <a name="invokemethod"></a><span data-ttu-id="cb291-102">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="cb291-102">InvokeMethod</span></span>
+<span data-ttu-id="cb291-103">本示例演示使用 <xref:System.Activities.Statements.InvokeMethod> 活动调用类的方法的不同方式。</span><span class="sxs-lookup"><span data-stu-id="cb291-103">This sample shows the different ways of using the <xref:System.Activities.Statements.InvokeMethod> activity to invoke methods of a class.</span></span>  
   
- 方法属于一个类，并表示所包含的操作集。<xref:System.Activities.Statements.InvokeMethod> 活动使您能够针对对象或类型调用方法，传入参数，并获取返回值。可以同步或异步调用方法。  
+ <span data-ttu-id="cb291-104">方法属于一个类，并表示所包含的操作集。</span><span class="sxs-lookup"><span data-stu-id="cb291-104">A method belongs to a class and represents a contained set of operations.</span></span> <span data-ttu-id="cb291-105"><xref:System.Activities.Statements.InvokeMethod> 活动使您能够针对对象或类型调用方法，传入参数，并获取返回值。</span><span class="sxs-lookup"><span data-stu-id="cb291-105">The <xref:System.Activities.Statements.InvokeMethod> activity gives you the ability to call methods against objects or types, pass in parameters, and get the return value.</span></span> <span data-ttu-id="cb291-106">可以同步或异步调用方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-106">Methods can be invoked synchronously or asynchronously.</span></span>  
   
-## 示例详细信息  
- 本示例使用 <xref:System.Activities.Statements.InvokeMethod> 活动执行以下方案：  
+## <a name="sample-details"></a><span data-ttu-id="cb291-107">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="cb291-107">Sample Details</span></span>  
+ <span data-ttu-id="cb291-108">本示例使用 <xref:System.Activities.Statements.InvokeMethod> 活动执行以下方案：</span><span class="sxs-lookup"><span data-stu-id="cb291-108">This sample uses the <xref:System.Activities.Statements.InvokeMethod> activity to perform the following scenarios:</span></span>  
   
-1.  调用不含参数的实例方法。  
+1.  <span data-ttu-id="cb291-109">调用不含参数的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-109">Invoke an instance method without parameters.</span></span>  
   
-2.  调用含有两个参数（<xref:System.String> 和 <xref:System.Int32>）的实例方法。  
+2.  <span data-ttu-id="cb291-110">调用含有两个参数（<xref:System.String> 和 <xref:System.Int32>）的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-110">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>).</span></span>  
   
-3.  调用含有两个参数（<xref:System.String> 和 <xref:System.Int32>）和一个 <xref:System.String>\[\] 类型的参数数组的实例方法。  
+3.  <span data-ttu-id="cb291-111">调用含有两个参数（<xref:System.String> 和 <xref:System.Int32>）和一个 <xref:System.String>[] 类型的参数数组的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-111">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>) and a parameter array of type <xref:System.String>[].</span></span>  
   
-4.  调用含有 <xref:System.Int32> 类型的两个参数和一个 <xref:System.Int32> 类型的结果的实例方法。在本方案中，结果值绑定到一个变量，并在另一个活动中使用。使用 <xref:System.Activities.Statements.WriteLine> 活动在控制台中显示该结果值。  
+4.  <span data-ttu-id="cb291-112">调用含有 <xref:System.Int32> 类型的两个参数和一个 <xref:System.Int32> 类型的结果的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-112">Invoke an instance method with two parameters of type <xref:System.Int32> and a result of type <xref:System.Int32>.</span></span> <span data-ttu-id="cb291-113">在本方案中，结果值绑定到一个变量，并在另一个活动中使用。</span><span class="sxs-lookup"><span data-stu-id="cb291-113">In this scenario, the result value is bound to a variable and used in another activity.</span></span> <span data-ttu-id="cb291-114">使用 <xref:System.Activities.Statements.WriteLine> 活动在控制台中显示该结果值。</span><span class="sxs-lookup"><span data-stu-id="cb291-114">It is displayed in the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-5.  调用含有 <xref:System.String> 类型和 <xref:System.Int32> 类型的两个参数的静态方法。  
+5.  <span data-ttu-id="cb291-115">调用含有 <xref:System.String> 类型和 <xref:System.Int32> 类型的两个参数的静态方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-115">Invoke a static method with two parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-6.  调用含有一个 <xref:System.String> 类型的泛型参数的实例方法。  
+6.  <span data-ttu-id="cb291-116">调用含有一个 <xref:System.String> 类型的泛型参数的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-116">Invoke an instance method with one generic parameter of type <xref:System.String>.</span></span>  
   
-7.  调用含有 <xref:System.String> 类型和 <xref:System.Int32> 类型的两个泛型参数的静态方法。  
+7.  <span data-ttu-id="cb291-117">调用含有 <xref:System.String> 类型和 <xref:System.Int32> 类型的两个泛型参数的静态方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-117">Invoke a static method with two generic parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-8.  调用具有一个由 <xref:System.String> 类型的引用传递的参数的实例方法。在本方案中，引用参数绑定到一个变量 \(`outParam`\)，并在另一个活动中使用。使用 <xref:System.Activities.Statements.WriteLine> 活动在控制台上显示该引用参数。  
+8.  <span data-ttu-id="cb291-118">调用具有一个由 <xref:System.String> 类型的引用传递的参数的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-118">Invoke an instance method that has one parameter passed by reference of type <xref:System.String>.</span></span> <span data-ttu-id="cb291-119">在本方案中，引用参数绑定到一个变量 (`outParam`)，并在另一个活动中使用。</span><span class="sxs-lookup"><span data-stu-id="cb291-119">In this scenario, the reference parameter is bound to a variable (`outParam`) and used in another activity.</span></span> <span data-ttu-id="cb291-120">使用 <xref:System.Activities.Statements.WriteLine> 活动在控制台上显示该引用参数。</span><span class="sxs-lookup"><span data-stu-id="cb291-120">It is displayed on the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-9. 调用异步的实例方法。  
+9. <span data-ttu-id="cb291-121">调用异步的实例方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-121">Invoke an asynchronous instance method.</span></span>  
   
-10. 使用两个 <xref:System.Activities.Statements.InvokeMethod> 活动对一个对象的同一个实例调用两个不同的方法。  
+10. <span data-ttu-id="cb291-122">使用两个 <xref:System.Activities.Statements.InvokeMethod> 活动对一个对象的同一个实例调用两个不同的方法。</span><span class="sxs-lookup"><span data-stu-id="cb291-122">Invoke two different methods on the same instance of an object using two <xref:System.Activities.Statements.InvokeMethod> activities.</span></span>  
   
-11. 在对象的实例中存储一个值。  
+11. <span data-ttu-id="cb291-123">在对象的实例中存储一个值。</span><span class="sxs-lookup"><span data-stu-id="cb291-123">Store a value in an instance of an object.</span></span>  
   
-12. 从对象的实例检索一个值。  
+12. <span data-ttu-id="cb291-124">从对象的实例检索一个值。</span><span class="sxs-lookup"><span data-stu-id="cb291-124">Retrieve a value from an instance of an object.</span></span>  
   
-## 使用此示例  
- 此示例分为两个版本。此示例的第一个版本通过 C\# 代码使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 编程模型演示 <xref:System.Activities.Statements.InvokeMethod> 的用法，它可以在 CodedWorkflow\\CS 文件夹下找到。此示例的第二个版本使用 XAML 演示 <xref:System.Activities.Statements.InvokeMethod> 的用法，它可以在 DesignerWorkflow\\CS 文件夹下找到。  
+## <a name="to-use-this-sample"></a><span data-ttu-id="cb291-125">使用此示例</span><span class="sxs-lookup"><span data-stu-id="cb291-125">To use this sample</span></span>  
+ <span data-ttu-id="cb291-126">此示例分为两个版本。</span><span class="sxs-lookup"><span data-stu-id="cb291-126">This sample is provided in two versions.</span></span> <span data-ttu-id="cb291-127">此示例的第一个版本通过 C# 代码使用 <xref:System.Activities.Statements.InvokeMethod> 编程模型演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的用法，它可以在 CodedWorkflow\CS 文件夹下找到。</span><span class="sxs-lookup"><span data-stu-id="cb291-127">The first version of this sample demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> through C# code using the [!INCLUDE[wf](../../../../includes/wf-md.md)] programming model and can be found under the CodedWorkflow\CS folder.</span></span> <span data-ttu-id="cb291-128">此示例的第二个版本使用 XAML 演示 <xref:System.Activities.Statements.InvokeMethod> 的用法，它可以在 DesignerWorkflow\CS 文件夹下找到。</span><span class="sxs-lookup"><span data-stu-id="cb291-128">The second version demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> using XAML and can be found under the DesignerWorkflow\CS folder.</span></span>  
   
-#### 运行编码的工作流示例  
+#### <a name="to-run-the-coded-workflow-sample"></a><span data-ttu-id="cb291-129">运行编码的工作流示例</span><span class="sxs-lookup"><span data-stu-id="cb291-129">To run the coded workflow sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 CodedWorkflow\\CS 文件夹中的 InvokeMethodUsage.sln 解决方案文件。  
+1.  <span data-ttu-id="cb291-130">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 CodedWorkflow\CS 文件夹中的 InvokeMethodUsage.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="cb291-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the CodedWorkflow\CS folder.</span></span>  
   
-2.  要生成解决方案，按 Ctrl\+Shift\+B。  
+2.  <span data-ttu-id="cb291-131">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="cb291-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要运行解决方案，请按 Ctrl\+F5。  
+3.  <span data-ttu-id="cb291-132">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="cb291-132">To run the solution, press CTRL+F5.</span></span>  
   
-#### 运行设计器工作流示例  
+#### <a name="to-run-the-designer-workflow-sample"></a><span data-ttu-id="cb291-133">运行设计器工作流示例</span><span class="sxs-lookup"><span data-stu-id="cb291-133">To run the designer workflow sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 DesignerWorkflow\\CS 文件夹中的 InvokeMethodUsage.sln 解决方案文件。  
+1.  <span data-ttu-id="cb291-134">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 DesignerWorkflow\CS 文件夹中的 InvokeMethodUsage.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="cb291-134">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the DesignerWorkflow\CS folder.</span></span>  
   
-2.  要生成解决方案，按 Ctrl\+Shift\+B。  
+2.  <span data-ttu-id="cb291-135">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="cb291-135">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要运行解决方案，请按 Ctrl\+F5。  
+3.  <span data-ttu-id="cb291-136">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="cb291-136">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="cb291-137">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="cb291-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cb291-138">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="cb291-138">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="cb291-139">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="cb291-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cb291-140">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="cb291-140">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="cb291-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cb291-141">See Also</span></span>

@@ -1,118 +1,124 @@
 ---
-title: "如何：创建路径渐变 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "渐变, 创建路径"
-  - "图形路径, 创建渐变"
-  - "路径渐变, 创建"
+title: "如何：创建路径渐变"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- path gradients [Windows Forms], creating
+- gradients [Windows Forms], creating path
+- graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：创建路径渐变
-<xref:System.Drawing.Drawing2D.PathGradientBrush> 类使您可以自定义用渐变色填充形状的方式。  例如，可为轨迹的中心指定一种颜色；为轨迹的边界指定另一种颜色。  还可为轨迹边界上的七个点分别指定颜色。  
+# <a name="how-to-create-a-path-gradient"></a><span data-ttu-id="7ef26-102">如何：创建路径渐变</span><span class="sxs-lookup"><span data-stu-id="7ef26-102">How to: Create a Path Gradient</span></span>
+<span data-ttu-id="7ef26-103"><xref:System.Drawing.Drawing2D.PathGradientBrush>类允许您自定义用渐变颜色填充形状的方式。</span><span class="sxs-lookup"><span data-stu-id="7ef26-103">The <xref:System.Drawing.Drawing2D.PathGradientBrush> class allows you to customize the way you fill a shape with gradually changing colors.</span></span> <span data-ttu-id="7ef26-104">例如，你可以指定路径的中心的一种颜色和路径的边界的另一种颜色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-104">For example, you can specify one color for the center of a path and another color for the boundary of a path.</span></span> <span data-ttu-id="7ef26-105">此外可以为每个几个点沿边界路径的指定单独的颜色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-105">You can also specify separate colors for each of several points along the boundary of a path.</span></span>  
   
 > [!NOTE]
->  在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 中，路径是由 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象维护的一系列线条和曲线。  有关 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 路径的更多信息，请参见[GDI\+ 中的图形路径](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)和[构造并绘制轨迹](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)。  
+>  <span data-ttu-id="7ef26-106">在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，路径是一系列的直线和曲线由维护<xref:System.Drawing.Drawing2D.GraphicsPath>对象。</span><span class="sxs-lookup"><span data-stu-id="7ef26-106">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], a path is a sequence of lines and curves maintained by a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="7ef26-107">有关详细信息[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]路径，请参阅[GDI + 中的图形路径](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)和[Constructing 和绘制路径](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)。</span><span class="sxs-lookup"><span data-stu-id="7ef26-107">For more information about [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] paths, see [Graphics Paths in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) and [Constructing and Drawing Paths](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).</span></span>  
   
-### 使用路径渐变填充椭圆  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a><span data-ttu-id="7ef26-108">若要用路径渐变填充椭圆</span><span class="sxs-lookup"><span data-stu-id="7ef26-108">To fill an ellipse with a path gradient</span></span>  
   
--   下面的示例用路径渐变画笔填充椭圆。  中心的颜色设置为蓝色；边界的颜色设置为浅绿色。  下面的插图显示已填充的椭圆。  
+-   <span data-ttu-id="7ef26-109">下面的示例用填充椭圆路径渐变画笔。</span><span class="sxs-lookup"><span data-stu-id="7ef26-109">The following example fills an ellipse with a path gradient brush.</span></span> <span data-ttu-id="7ef26-110">中间颜色设置为蓝色，边界颜色设置为浅绿色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-110">The center color is set to blue and the boundary color is set to aqua.</span></span> <span data-ttu-id="7ef26-111">下图显示实心的椭圆。</span><span class="sxs-lookup"><span data-stu-id="7ef26-111">The following illustration shows the filled ellipse.</span></span>  
   
-     ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")  
+     <span data-ttu-id="7ef26-112">![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")</span><span class="sxs-lookup"><span data-stu-id="7ef26-112">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")</span></span>  
   
-     默认情况下，路径渐变画笔不会延伸到路径边界以外。  如果您使用路径渐变画笔来填充延伸到路径边界以外的图形，则无法填充路径以外的屏幕区域。  
+     <span data-ttu-id="7ef26-113">默认情况下，路径渐变画笔不会扩展边界之外的路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-113">By default, a path gradient brush does not extend outside the boundary of the path.</span></span> <span data-ttu-id="7ef26-114">如果路径渐变画笔用于填充一个图，它超出了路径的边界，则不会填充在路径外屏幕的区域。</span><span class="sxs-lookup"><span data-stu-id="7ef26-114">If you use the path gradient brush to fill a figure that extends beyond the boundary of the path, the area of the screen outside the path will not be filled.</span></span>  
   
-     下图演示在将以下代码中的 <xref:System.Drawing.Graphics.FillEllipse%2A> 调用更改为 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)` 后所出现的情况。  
+     <span data-ttu-id="7ef26-115">如果更改会发生什么情况如下图所示<xref:System.Drawing.Graphics.FillEllipse%2A>到下面的代码中调用`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`。</span><span class="sxs-lookup"><span data-stu-id="7ef26-115">The following illustration shows what happens if you change the <xref:System.Drawing.Graphics.FillEllipse%2A> call in the following code to `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.</span></span>  
   
-     ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")  
+     <span data-ttu-id="7ef26-116">![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")</span><span class="sxs-lookup"><span data-stu-id="7ef26-116">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     前面的代码示例旨在用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> e。  
+     <span data-ttu-id="7ef26-117">前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>e，这是参数的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="7ef26-117">The preceding code example is designed for use with Windows Forms, and it requires the <xref:System.Windows.Forms.PaintEventArgs> e, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-### 在边界上指定点  
+### <a name="to-specify-points-on-the-boundary"></a><span data-ttu-id="7ef26-118">若要指定点的边界上</span><span class="sxs-lookup"><span data-stu-id="7ef26-118">To specify points on the boundary</span></span>  
   
--   下面的示例由星形轨迹构造路径渐变画笔。  该代码设置 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> 属性，它将星形中心的颜色设置为红色。  然后，该代码设置 <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> 属性，以便在 `points` 数组中的各个点处指定不同的颜色（存储在 `colors` 数组中）。  最后一个代码语句用路径渐变画笔填充星形轨迹。  
+-   <span data-ttu-id="7ef26-119">下面的示例构造路径渐变画笔从星形的路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-119">The following example constructs a path gradient brush from a star-shaped path.</span></span> <span data-ttu-id="7ef26-120">该代码设置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>属性，用于设置在为红色星号的质心的颜色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-120">The code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> property, which sets the color at the centroid of the star to red.</span></span> <span data-ttu-id="7ef26-121">然后代码集<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>属性来指定不同的颜色 (存储在`colors`数组) 中的各个点处`points`数组。</span><span class="sxs-lookup"><span data-stu-id="7ef26-121">Then the code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> property to specify various colors (stored in the `colors` array) at the individual points in the `points` array.</span></span> <span data-ttu-id="7ef26-122">最后一个代码语句填充路径渐变画笔的星形路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-122">The final code statement fills the star-shaped path with the path gradient brush.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   下面的示例在代码中不使用 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象而绘制一个路径渐变。  在该示例中，特定的 <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> 构造函数接收一系列点，但是不需要 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象。  同时，请注意，<xref:System.Drawing.Drawing2D.PathGradientBrush> 用于填充矩形而不是填充路径。  矩形比用于定义画笔的闭合轨迹大，因此矩形的某些部分未由画笔涂色。  下面的插图显示该矩形（虚线）以及该矩形被路径渐变画笔涂色的那部分。  
+-   <span data-ttu-id="7ef26-123">下面的示例绘制路径渐变而无需<xref:System.Drawing.Drawing2D.GraphicsPath>在代码中的对象。</span><span class="sxs-lookup"><span data-stu-id="7ef26-123">The following example draws a path gradient without a <xref:System.Drawing.Drawing2D.GraphicsPath> object in the code.</span></span> <span data-ttu-id="7ef26-124">特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>在示例中的构造函数接收的点数组，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>对象。</span><span class="sxs-lookup"><span data-stu-id="7ef26-124">The particular <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor in the example receives an array of points but does not require a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="7ef26-125">另请注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用来填充的矩形，而不是路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-125">Also, note that the <xref:System.Drawing.Drawing2D.PathGradientBrush> is used to fill a rectangle, not a path.</span></span> <span data-ttu-id="7ef26-126">矩形大于用于定义画笔，使画笔不绘制矩形的某些部分的已关闭路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-126">The rectangle is larger than the closed path used to define the brush, so some of the rectangle is not painted by the brush.</span></span> <span data-ttu-id="7ef26-127">下图显示矩形 （虚线） 和路径渐变画笔绘制的矩形的部分。</span><span class="sxs-lookup"><span data-stu-id="7ef26-127">The following illustration shows the rectangle (dotted line) and the portion of the rectangle painted by the path gradient brush.</span></span>  
   
-     ![渐变](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")  
+     <span data-ttu-id="7ef26-128">![渐变](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")</span><span class="sxs-lookup"><span data-stu-id="7ef26-128">![Gradient](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### 自定义路径渐变  
+### <a name="to-customize-a-path-gradient"></a><span data-ttu-id="7ef26-129">若要自定义路径渐变</span><span class="sxs-lookup"><span data-stu-id="7ef26-129">To customize a path gradient</span></span>  
   
--   自定义路径渐变画笔的一种方法就是设置它的 <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> 属性。  聚焦缩放指定位于主轨迹内部的内部轨迹。  中心颜色显示在内部轨迹中的任何地方，而不是只显示在中心点。  
+-   <span data-ttu-id="7ef26-130">自定义路径渐变画笔的一种方法是将设置其<xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="7ef26-130">One way to customize a path gradient brush is to set its <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> property.</span></span> <span data-ttu-id="7ef26-131">聚焦缩放指定位于内部的主路径的内部路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-131">The focus scales specify an inner path that lies inside the main path.</span></span> <span data-ttu-id="7ef26-132">在内部轨迹中而不是仅在中心点无处不在显示中间颜色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-132">The center color is displayed everywhere inside that inner path rather than only at the center point.</span></span>  
   
-     下面的示例根据椭圆轨迹创建路径渐变画笔。  该代码将边界颜色设置为蓝色，将中心颜色设置为浅绿色，然后使用路径渐变画笔填充椭圆轨迹。  
+     <span data-ttu-id="7ef26-133">下面的示例创建路径渐变画笔基于椭圆的路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-133">The following example creates a path gradient brush based on an elliptical path.</span></span> <span data-ttu-id="7ef26-134">该代码设置为蓝色的边界颜色、 中间颜色设置为浅绿色，然后使用路径渐变画笔填充椭圆路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-134">The code sets the boundary color to blue, sets the center color to aqua, and then uses the path gradient brush to fill the elliptical path.</span></span>  
   
-     接着，该代码设置路径渐变画笔的聚焦缩放。  x 聚焦缩放被设置为 0.3，y 聚焦缩放被设置为 0.8。  该代码调用 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.TranslateTransform%2A> 方法，以便后来对 <xref:System.Drawing.Graphics.FillPath%2A> 的调用填充位于第一个椭圆右侧的椭圆。  
+     <span data-ttu-id="7ef26-135">接下来，代码将设置路径渐变画笔的焦点刻度。</span><span class="sxs-lookup"><span data-stu-id="7ef26-135">Next, the code sets the focus scales of the path gradient brush.</span></span> <span data-ttu-id="7ef26-136">X 聚焦缩放被设置为 0.3，并且 y 焦点缩放比例设置为 0.8。</span><span class="sxs-lookup"><span data-stu-id="7ef26-136">The x focus scale is set to 0.3, and the y focus scale is set to 0.8.</span></span> <span data-ttu-id="7ef26-137">该代码调用<xref:System.Drawing.Graphics.TranslateTransform%2A>方法<xref:System.Drawing.Graphics>对象，以便后续调用<xref:System.Drawing.Graphics.FillPath%2A>填充椭圆位于右侧的第一个椭圆。</span><span class="sxs-lookup"><span data-stu-id="7ef26-137">The code calls the <xref:System.Drawing.Graphics.TranslateTransform%2A> method of a <xref:System.Drawing.Graphics> object so that the subsequent call to <xref:System.Drawing.Graphics.FillPath%2A> fills an ellipse that sits to the right of the first ellipse.</span></span>  
   
-     若要观看聚焦缩放的效果，请设想一个与主椭圆共用一个中心的小椭圆。  小（内部）椭圆是由主椭圆在水平方向上缩小 0.3 倍，在垂直方向上缩小 0.8 倍（围绕其中心）得到的。  当从外部椭圆的边界移到内部椭圆的边界时，颜色逐渐从蓝色变成浅绿色。  当从内部椭圆的边界移到共用中心时，颜色保持浅绿色。  
+     <span data-ttu-id="7ef26-138">若要查看聚焦缩放的效果，假设与主椭圆共享其中心一个小椭圆。</span><span class="sxs-lookup"><span data-stu-id="7ef26-138">To see the effect of the focus scales, imagine a small ellipse that shares its center with the main ellipse.</span></span> <span data-ttu-id="7ef26-139">小型 （内部） 椭圆是 0.8 的 0.3 的主要椭圆 （围绕中心） 横向扩展倍和垂直倍。</span><span class="sxs-lookup"><span data-stu-id="7ef26-139">The small (inner) ellipse is the main ellipse scaled (about its center) horizontally by a factor of 0.3 and vertically by a factor of 0.8.</span></span> <span data-ttu-id="7ef26-140">当从外部的椭圆的边界移动到内部椭圆的边界时，颜色逐渐从变为蓝色浅绿色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-140">As you move from the boundary of the outer ellipse to the boundary of the inner ellipse, the color changes gradually from blue to aqua.</span></span> <span data-ttu-id="7ef26-141">当您移动到共享的中心，颜色保持浅绿色从内部椭圆的边界。</span><span class="sxs-lookup"><span data-stu-id="7ef26-141">As you move from the boundary of the inner ellipse to the shared center, the color remains aqua.</span></span>  
   
-     下面的插图显示以下代码的输出。  左边的椭圆只在中心点上为浅绿色。  右边的椭圆在内部轨迹内部的任何地方都为浅绿色。  
+     <span data-ttu-id="7ef26-142">下图显示以下代码的输出。</span><span class="sxs-lookup"><span data-stu-id="7ef26-142">The following illustration shows the output of the following code.</span></span> <span data-ttu-id="7ef26-143">在左侧椭圆是只能在中心点的浅绿色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-143">The ellipse on the left is aqua only at the center point.</span></span> <span data-ttu-id="7ef26-144">在右侧的省略号为浅绿色无处不在内部路径内。</span><span class="sxs-lookup"><span data-stu-id="7ef26-144">The ellipse on the right is aqua everywhere inside the inner path.</span></span>  
   
- ![渐变](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")  
+ <span data-ttu-id="7ef26-145">![渐变](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")</span><span class="sxs-lookup"><span data-stu-id="7ef26-145">![Gradient](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")</span></span>  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### 使用插值自定义  
+### <a name="to-customize-with-interpolation"></a><span data-ttu-id="7ef26-146">使用插值自定义</span><span class="sxs-lookup"><span data-stu-id="7ef26-146">To customize with interpolation</span></span>  
   
--   自定义路径渐变画笔的另一种方法是指定插值颜色数组和插值位置数组。  
+-   <span data-ttu-id="7ef26-147">自定义路径渐变画笔另一种方法是指定的内插颜色数组和数组的内插位置。</span><span class="sxs-lookup"><span data-stu-id="7ef26-147">Another way to customize a path gradient brush is to specify an array of interpolation colors and an array of interpolation positions.</span></span>  
   
-     下面的示例基于三角形创建路径渐变画笔。  该代码设置路径渐变画笔的 <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> 属性，以便指定插值颜色数组（深绿色，浅绿色，蓝色）和插值位置数组 \(0, 0.25, 1\)。  当从三角形的边界移到中心点时，颜色将从深绿色逐渐变成浅绿色，然后从浅绿色变成蓝色。  深绿色到浅绿色的转变发生在深绿色到蓝色转变的距离的 25% 处。  
+     <span data-ttu-id="7ef26-148">下面的示例创建路径渐变画笔基于一个三角形。</span><span class="sxs-lookup"><span data-stu-id="7ef26-148">The following example creates a path gradient brush based on a triangle.</span></span> <span data-ttu-id="7ef26-149">该代码设置<xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A>路径的渐变画笔指定内插颜色深绿色，浅绿色 （蓝色） 的数组和数组的内插位置 （0，0.25，1） 的属性。</span><span class="sxs-lookup"><span data-stu-id="7ef26-149">The code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> property of the path gradient brush to specify an array of interpolation colors (dark green, aqua, blue) and an array of interpolation positions (0, 0.25, 1).</span></span> <span data-ttu-id="7ef26-150">当您移动到中心点从的三角形边界的颜色更改逐渐从深绿色为浅绿色，然后从浅绿色为蓝色。</span><span class="sxs-lookup"><span data-stu-id="7ef26-150">As you move from the boundary of the triangle to the center point, the color changes gradually from dark green to aqua and then from aqua to blue.</span></span> <span data-ttu-id="7ef26-151">为浅绿色从深绿色更改发生在 25%的深绿色为蓝色的距离。</span><span class="sxs-lookup"><span data-stu-id="7ef26-151">The change from dark green to aqua happens in 25 percent of the distance from dark green to blue.</span></span>  
   
-     下面的插图显示用自定义路径渐变画笔填充的三角形。  
+     <span data-ttu-id="7ef26-152">下图显示用自定义路径渐变画笔填充的三角形。</span><span class="sxs-lookup"><span data-stu-id="7ef26-152">The following illustration shows the triangle filled with the custom path gradient brush.</span></span>  
+  
+     <span data-ttu-id="7ef26-153">![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")</span><span class="sxs-lookup"><span data-stu-id="7ef26-153">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### 设置中心点  
+### <a name="to-set-the-center-point"></a><span data-ttu-id="7ef26-154">若要设置的中心点</span><span class="sxs-lookup"><span data-stu-id="7ef26-154">To set the center point</span></span>  
   
--   在默认情况下，路径渐变画笔的中心点位于用来构造梯度刷的轨迹的形心。  可通过设置 <xref:System.Drawing.Drawing2D.PathGradientBrush> 类的 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 属性更改中心点的位置。  
+-   <span data-ttu-id="7ef26-155">默认情况下，路径渐变画笔的中心点为中心的用来构造画笔的路径。</span><span class="sxs-lookup"><span data-stu-id="7ef26-155">By default, the center point of a path gradient brush is at the centroid of the path used to construct the brush.</span></span> <span data-ttu-id="7ef26-156">你可以通过设置更改的中心点的位置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>属性<xref:System.Drawing.Drawing2D.PathGradientBrush>类。</span><span class="sxs-lookup"><span data-stu-id="7ef26-156">You can change the location of the center point by setting the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> property of the <xref:System.Drawing.Drawing2D.PathGradientBrush> class.</span></span>  
   
-     下面的示例基于椭圆来创建路径渐变画笔。  椭圆的中心位于 \(70, 35\)，但是路径渐变画笔的中心点设置在 \(120, 40\)。  
+     <span data-ttu-id="7ef26-157">下面的示例创建路径渐变画笔基于椭圆。</span><span class="sxs-lookup"><span data-stu-id="7ef26-157">The following example creates a path gradient brush based on an ellipse.</span></span> <span data-ttu-id="7ef26-158">椭圆的中心位于 70 (35），但路径渐变画笔的中心点设置为 120 (40）。</span><span class="sxs-lookup"><span data-stu-id="7ef26-158">The center of the ellipse is at (70, 35), but the center point of the path gradient brush is set to (120, 40).</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     下面的插图显示实心椭圆和路径渐变画笔的中心点。  
+     <span data-ttu-id="7ef26-159">下图显示实心的椭圆和路径渐变画笔的中心点。</span><span class="sxs-lookup"><span data-stu-id="7ef26-159">The following illustration shows the filled ellipse and the center point of the path gradient brush.</span></span>  
   
-     ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")  
+     <span data-ttu-id="7ef26-160">![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")</span><span class="sxs-lookup"><span data-stu-id="7ef26-160">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")</span></span>  
   
--   可将路径渐变画笔的中心点设置在用于构造梯度刷的轨迹外部的某个位置。  下面的示例通过替换调用来设置以上代码中的 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 属性。  
+-   <span data-ttu-id="7ef26-161">可以将路径渐变画笔的中心点设置为用于构造画笔的路径之外的位置。</span><span class="sxs-lookup"><span data-stu-id="7ef26-161">You can set the center point of a path gradient brush to a location outside the path that was used to construct the brush.</span></span> <span data-ttu-id="7ef26-162">下面的示例替换用于设置的调用<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>在前面的代码的属性。</span><span class="sxs-lookup"><span data-stu-id="7ef26-162">The following example replaces the call to set the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> property in the preceding code.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     下面的插图显示更改后的输出。  
+     <span data-ttu-id="7ef26-163">下图显示进行此更改后的输出。</span><span class="sxs-lookup"><span data-stu-id="7ef26-163">The following illustration shows the output with this change.</span></span>  
   
-     ![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")  
+     <span data-ttu-id="7ef26-164">![渐变路径](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")</span><span class="sxs-lookup"><span data-stu-id="7ef26-164">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")</span></span>  
   
-     在上面的插图中，椭圆最右边的那些点不是纯蓝色（尽管它们非常接近）。  渐变中颜色的定位就好像是填充到颜色为纯蓝色 \(0, 0, 255\) 的点 \(145, 35\)。  但是，由于路径渐变画笔只在其轨迹内部涂色，所以并未填充到点 \(145, 35\)。  
+     <span data-ttu-id="7ef26-165">在上图中，在最右侧的点的椭圆不是纯蓝色 （尽管它们是非常接近）。</span><span class="sxs-lookup"><span data-stu-id="7ef26-165">In the preceding illustration, the points at the far right of the ellipse are not pure blue (although they are very close).</span></span> <span data-ttu-id="7ef26-166">渐变中的颜色位于就像是填充到颜色将纯蓝色 （0、 0、 255） 的点 （145，35）。</span><span class="sxs-lookup"><span data-stu-id="7ef26-166">The colors in the gradient are positioned as if the fill reached the point (145, 35) where the color would be pure blue (0, 0, 255).</span></span> <span data-ttu-id="7ef26-167">但并未填充到 （145，35） 因为路径渐变画笔绘制仅在其路径内。</span><span class="sxs-lookup"><span data-stu-id="7ef26-167">But the fill never reaches (145, 35) because a path gradient brush paints only inside its path.</span></span>  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它们需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="7ef26-168">编译代码</span><span class="sxs-lookup"><span data-stu-id="7ef26-168">Compiling the Code</span></span>  
+ <span data-ttu-id="7ef26-169">前面的示例专用于 Windows 窗体，并且它们要求<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="7ef26-169">The preceding examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 请参阅  
- [使用渐变画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="7ef26-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ef26-170">See Also</span></span>  
+ [<span data-ttu-id="7ef26-171">使用渐变画笔填充形状</span><span class="sxs-lookup"><span data-stu-id="7ef26-171">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

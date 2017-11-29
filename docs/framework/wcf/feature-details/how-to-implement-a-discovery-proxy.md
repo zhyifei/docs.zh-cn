@@ -1,52 +1,55 @@
 ---
-title: "如何：实现发现代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：实现发现代理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d3c4dd0ec54334cb59b8cc896ddcd9fcc6af482e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现发现代理
-本主题介绍如何实现发现代理。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中的发现功能的更多信息，请参见 [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。此示例中定义并使用了多个其他支持类。`OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。这些类实现 <xref:System.IAsyncResult> 接口。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> 的更多信息，请参见 [System.IAsyncResult接口](http://go.microsoft.com/fwlink/?LinkId=128519)  
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="101ab-102">如何：实现发现代理</span><span class="sxs-lookup"><span data-stu-id="101ab-102">How to: Implement a Discovery Proxy</span></span>
+<span data-ttu-id="101ab-103">本主题介绍如何实现发现代理。</span><span class="sxs-lookup"><span data-stu-id="101ab-103">This topic explains how to implement a discovery proxy.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="101ab-104">中的发现功能[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，请参阅[WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="101ab-104"> the discovery feature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="101ab-105">可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。</span><span class="sxs-lookup"><span data-stu-id="101ab-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="101ab-106">此示例中定义并使用了多个其他支持类。</span><span class="sxs-lookup"><span data-stu-id="101ab-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="101ab-107">`OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。</span><span class="sxs-lookup"><span data-stu-id="101ab-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="101ab-108">这些类实现 <xref:System.IAsyncResult> 接口。</span><span class="sxs-lookup"><span data-stu-id="101ab-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="101ab-109"><xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。</span><span class="sxs-lookup"><span data-stu-id="101ab-109"> <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
   
- 本主题分三个主要部分来讨论如何实现发现代理：  
+ <span data-ttu-id="101ab-110">本主题分三个主要部分来讨论如何实现发现代理：</span><span class="sxs-lookup"><span data-stu-id="101ab-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>  
   
--   定义一个包含数据存储并扩展抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 类的类。  
+-   <span data-ttu-id="101ab-111">定义一个包含数据存储并扩展抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 类的类。</span><span class="sxs-lookup"><span data-stu-id="101ab-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>  
   
--   实现帮助器 `AsyncResult` 类。  
+-   <span data-ttu-id="101ab-112">实现帮助器 `AsyncResult` 类。</span><span class="sxs-lookup"><span data-stu-id="101ab-112">Implement the helper `AsyncResult` class.</span></span>  
   
--   承载发现代理。  
+-   <span data-ttu-id="101ab-113">承载发现代理。</span><span class="sxs-lookup"><span data-stu-id="101ab-113">Host the Discovery Proxy.</span></span>  
   
-### 创建新的控制台应用程序项目  
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="101ab-114">创建新的控制台应用程序项目</span><span class="sxs-lookup"><span data-stu-id="101ab-114">To create a new console application project</span></span>  
   
-1.  启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
+1.  <span data-ttu-id="101ab-115">启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="101ab-115">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  创建新的控制台应用程序项目。将项目命名为 `DiscoveryProxy`，并将解决方案命名为 `DiscoveryProxyExample`。  
+2.  <span data-ttu-id="101ab-116">创建新的控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="101ab-116">Create a new console application project.</span></span> <span data-ttu-id="101ab-117">将项目命名为 `DiscoveryProxy`，并将解决方案命名为 `DiscoveryProxyExample`。</span><span class="sxs-lookup"><span data-stu-id="101ab-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>  
   
-3.  添加对项目的以下引用  
+3.  <span data-ttu-id="101ab-118">添加对项目的以下引用</span><span class="sxs-lookup"><span data-stu-id="101ab-118">Add the following references to the project</span></span>  
   
-    1.  System.ServiceModel.dll  
+    1.  <span data-ttu-id="101ab-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="101ab-119">System.ServiceModel.dll</span></span>  
   
-    2.  System.Servicemodel.Discovery.dll  
+    2.  <span data-ttu-id="101ab-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="101ab-120">System.Servicemodel.Discovery.dll</span></span>  
   
     > [!CAUTION]
-    >  确保引用这些程序集的版本 4.0 或更高版本。  
+    >  <span data-ttu-id="101ab-121">确保引用这些程序集的版本 4.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="101ab-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>  
   
-### 实现 ProxyDiscoveryService 类  
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="101ab-122">实现 ProxyDiscoveryService 类</span><span class="sxs-lookup"><span data-stu-id="101ab-122">To implement the ProxyDiscoveryService class</span></span>  
   
-1.  向项目添加新代码文件并将其命名为 DiscoveryProxy.cs。  
+1.  <span data-ttu-id="101ab-123">向项目添加新代码文件并将其命名为 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="101ab-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>  
   
-2.  将以下 `using` 语句添加到 DiscoveryProxy.cs。  
+2.  <span data-ttu-id="101ab-124">将以下 `using` 语句添加到 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="101ab-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>  
   
     ```  
     using System;  
@@ -56,7 +59,7 @@ caps.handback.revision: 19
     using System.Xml;  
     ```  
   
-3.  从 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 派生 `DiscoveryProxyService`。将 `ServiceBehavior` 特性应用到下面的示例所示的类。  
+3.  <span data-ttu-id="101ab-125">从 `DiscoveryProxyService` 派生 <xref:System.ServiceModel.Discovery.DiscoveryProxy>。</span><span class="sxs-lookup"><span data-stu-id="101ab-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="101ab-126">将 `ServiceBehavior` 特性应用到下面的示例所示的类。</span><span class="sxs-lookup"><span data-stu-id="101ab-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>  
   
     ```  
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods  
@@ -64,30 +67,27 @@ caps.handback.revision: 19
     public class DiscoveryProxyService : DiscoveryProxy  
     {  
     }  
-  
     ```  
   
-4.  在 `DiscoveryProxy` 类内，定义一个字典以保存注册的服务。  
+4.  <span data-ttu-id="101ab-127">在 `DiscoveryProxy` 类内，定义一个字典以保存注册的服务。</span><span class="sxs-lookup"><span data-stu-id="101ab-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>  
   
     ```  
     // Repository to store EndpointDiscoveryMetadata.   
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;  
-  
     ```  
   
-5.  定义一个初始化该字典的构造函数。  
+5.  <span data-ttu-id="101ab-128">定义一个初始化该字典的构造函数。</span><span class="sxs-lookup"><span data-stu-id="101ab-128">Define a constructor that initializes the dictionary.</span></span>  
   
     ```  
     public DiscoveryProxyService()  
             {  
                 this.onlineServices = new Dictionary<EndpointAddress, EndpointDiscoveryMetadata>();  
             }  
-  
     ```  
   
-### 定义用于更新发现代理缓存的方法  
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="101ab-129">定义用于更新发现代理缓存的方法</span><span class="sxs-lookup"><span data-stu-id="101ab-129">To define the methods used to update the discovery proxy cache</span></span>  
   
-1.  实现 `AddOnlineservice` 方法以向缓存中添加服务。每次代理接收到公告消息时，都会调用此方法。  
+1.  <span data-ttu-id="101ab-130">实现 `AddOnlineservice` 方法以向缓存中添加服务。</span><span class="sxs-lookup"><span data-stu-id="101ab-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="101ab-131">每次代理接收到公告消息时，都会调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-131">This is called every time the proxy receives an announcement message.</span></span>  
   
     ```  
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -99,10 +99,9 @@ caps.handback.revision: 19
   
                 PrintDiscoveryMetadata(endpointDiscoveryMetadata, "Adding");  
             }  
-  
     ```  
   
-2.  实现 `RemoveOnlineService` 方法，该方法用于从缓存删除服务。  
+2.  <span data-ttu-id="101ab-132">实现 `RemoveOnlineService` 方法，该方法用于从缓存删除服务。</span><span class="sxs-lookup"><span data-stu-id="101ab-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>  
   
     ```  
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -117,10 +116,9 @@ caps.handback.revision: 19
                     PrintDiscoveryMetadata(endpointDiscoveryMetadata, "Removing");  
                 }      
             }  
-  
     ```  
   
-3.  实现 `MatchFromOnlineService` 方法，这些方法尝试将一个服务与字典中的服务相匹配。  
+3.  <span data-ttu-id="101ab-133">实现 `MatchFromOnlineService` 方法，这些方法尝试将一个服务与字典中的服务相匹配。</span><span class="sxs-lookup"><span data-stu-id="101ab-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>  
   
     ```  
     void MatchFromOnlineService(FindRequestContext findRequestContext)  
@@ -136,7 +134,6 @@ caps.handback.revision: 19
                     }  
                 }  
             }  
-  
     ```  
   
     ```  
@@ -155,10 +152,9 @@ caps.handback.revision: 19
                 }  
                 return matchingEndpoint;  
             }  
-  
     ```  
   
-4.  实现 `PrintDiscoveryMetadata` 方法，该方法为用户提供发现代理所执行的操作的控制台文本输出。  
+4.  <span data-ttu-id="101ab-134">实现 `PrintDiscoveryMetadata` 方法，该方法为用户提供发现代理所执行的操作的控制台文本输出。</span><span class="sxs-lookup"><span data-stu-id="101ab-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>  
   
     ```  
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)  
@@ -171,10 +167,9 @@ caps.handback.revision: 19
                 }  
                 Console.WriteLine("**** Operation Completed");  
             }  
-  
     ```  
   
-5.  将以下 AsyncResult 类添加到 DiscoveryProxyService。这些类用于区分不同的异步操作结果。  
+5.  <span data-ttu-id="101ab-135">将以下 AsyncResult 类添加到 DiscoveryProxyService。</span><span class="sxs-lookup"><span data-stu-id="101ab-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="101ab-136">这些类用于区分不同的异步操作结果。</span><span class="sxs-lookup"><span data-stu-id="101ab-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>  
   
     ```  
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult  
@@ -236,12 +231,11 @@ caps.handback.revision: 19
                     return thisPtr.matchingEndpoint;  
                 }  
             }  
-  
     ```  
   
-### 定义实现发现代理功能的方法  
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="101ab-137">定义实现发现代理功能的方法</span><span class="sxs-lookup"><span data-stu-id="101ab-137">To define the methods that implement the discovery proxy functionality</span></span>  
   
-1.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement%2A> 方法。当发现代理接收到联机公告消息时，将调用此方法。  
+1.  <span data-ttu-id="101ab-138">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-139">当发现代理接收到联机公告消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-139">This method is called when the discovery proxy receives an online announcement message.</span></span>  
   
     ```  
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy  
@@ -250,20 +244,18 @@ caps.handback.revision: 19
                 this.AddOnlineService(endpointDiscoveryMetadata);  
                 return new OnOnlineAnnouncementAsyncResult(callback, state);  
             }  
-  
     ```  
   
-2.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndOnlineAnnouncement%2A> 方法。当发现代理完成处理公告消息时，将调用此方法。  
+2.  <span data-ttu-id="101ab-140">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-141">当发现代理完成处理公告消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>  
   
     ```  
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)  
             {  
                 OnOnlineAnnouncementAsyncResult.End(result);  
             }  
-  
     ```  
   
-3.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOfflineAnnouncement%2A> 方法。当发现代理接收到脱机公告消息时，将调用此方法。  
+3.  <span data-ttu-id="101ab-142">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-143">当发现代理接收到脱机公告消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>  
   
     ```  
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy  
@@ -272,20 +264,18 @@ caps.handback.revision: 19
                 this.RemoveOnlineService(endpointDiscoveryMetadata);  
                 return new OnOfflineAnnouncementAsyncResult(callback, state);  
             }  
-  
     ```  
   
-4.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndOfflineAnnouncement%2A> 方法。当发现代理完成处理脱机公告消息时，将调用此方法。  
+4.  <span data-ttu-id="101ab-144">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-145">当发现代理完成处理脱机公告消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>  
   
     ```  
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)  
             {  
                 OnOfflineAnnouncementAsyncResult.End(result);  
             }  
-  
     ```  
   
-5.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginFind%2A> 方法。当发现代理接收到查找请求时，将调用此方法。  
+5.  <span data-ttu-id="101ab-146">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-147">当发现代理接收到查找请求时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-147">This method is called when the discovery proxy receives a find request.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Probe request message is received by the Proxy  
@@ -304,17 +294,16 @@ caps.handback.revision: 19
     }  
     ```  
   
-6.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndFind%2A> 方法。当发现代理完成查找请求的处理时，将调用此方法。  
+6.  <span data-ttu-id="101ab-148">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-149">当发现代理完成查找请求的处理时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-149">This method is called when the discovery proxy finishes processing a find request.</span></span>  
   
     ```  
     protected override void OnEndFind(IAsyncResult result)  
             {  
                 OnFindAsyncResult.End(result);  
             }  
-  
     ```  
   
-7.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginResolve%2A> 方法。当发现代理接收到解决消息时，将调用此方法。  
+7.  <span data-ttu-id="101ab-150">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-151">当发现代理接收到解决消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-151">This method is called when the discovery proxy receives a resolve message.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Resolve request message is received by the Proxy  
@@ -331,33 +320,31 @@ caps.handback.revision: 19
     }  
     ```  
   
-8.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndResolve%2A> 方法。当发现代理完成处理解决消息时，将调用此方法。  
+8.  <span data-ttu-id="101ab-152">重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="101ab-153">当发现代理完成处理解决消息时，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="101ab-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>  
   
     ```  
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)  
     {  
         return OnResolveAsyncResult.End(result);  
     }  
-  
     ```  
   
- OnBegin..\/ OnEnd..方法提供后续发现操作的逻辑。例如，<xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndFind%2A> 方法实现发现代理的查找逻辑。当发现代理接收到探测消息时，将执行这些方法以便向客户端回发响应。您可以根据需要修改查找逻辑，例如，可以将按算法实现的自定义范围匹配或应用程序特定 XML 元数据分析合并到查找操作中。  
+ <span data-ttu-id="101ab-154">OnBegin..</span><span class="sxs-lookup"><span data-stu-id="101ab-154">The OnBegin..</span></span> <span data-ttu-id="101ab-155">/ OnEnd..</span><span class="sxs-lookup"><span data-stu-id="101ab-155">/ OnEnd..</span></span> <span data-ttu-id="101ab-156">方法提供后续发现操作的逻辑。</span><span class="sxs-lookup"><span data-stu-id="101ab-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="101ab-157">例如，<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 方法实现发现代理的查找逻辑。</span><span class="sxs-lookup"><span data-stu-id="101ab-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="101ab-158">当发现代理接收到探测消息时，将执行这些方法以便向客户端回发响应。</span><span class="sxs-lookup"><span data-stu-id="101ab-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="101ab-159">您可以根据需要修改查找逻辑，例如，可以将按算法实现的自定义范围匹配或应用程序特定 XML 元数据分析合并到查找操作中。</span><span class="sxs-lookup"><span data-stu-id="101ab-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>  
   
-### 实现 AsyncResult 类  
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="101ab-160">实现 AsyncResult 类</span><span class="sxs-lookup"><span data-stu-id="101ab-160">To implement the AsyncResult class</span></span>  
   
-1.  定义用于派生各种异步结果类的抽象基类 AsyncResult。  
+1.  <span data-ttu-id="101ab-161">定义用于派生各种异步结果类的抽象基类 AsyncResult。</span><span class="sxs-lookup"><span data-stu-id="101ab-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>  
   
-2.  创建一个名为 AsyncResult.cs 的新代码文件。  
+2.  <span data-ttu-id="101ab-162">创建一个名为 AsyncResult.cs 的新代码文件。</span><span class="sxs-lookup"><span data-stu-id="101ab-162">Create a new code file called AsyncResult.cs.</span></span>  
   
-3.  将以下 `using` 语句添加到 AsyncResult.cs。  
+3.  <span data-ttu-id="101ab-163">将以下 `using` 语句添加到 AsyncResult.cs。</span><span class="sxs-lookup"><span data-stu-id="101ab-163">Add the following `using` statements to AsyncResult.cs.</span></span>  
   
     ```  
     using System;  
     using System.Threading;  
-  
     ```  
   
-4.  添加以下 AsyncResult 类。  
+4.  <span data-ttu-id="101ab-164">添加以下 AsyncResult 类。</span><span class="sxs-lookup"><span data-stu-id="101ab-164">Add the following AsyncResult class.</span></span>  
   
     ```  
     abstract class AsyncResult : IAsyncResult  
@@ -506,14 +493,13 @@ caps.handback.revision: 19
                 Complete(completedSynchronously);  
             }  
         }  
-  
     ```  
   
-### 承载 DiscoveryProxy  
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="101ab-165">承载 DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="101ab-165">To host the DiscoveryProxy</span></span>  
   
-1.  打开 DiscoveryProxyExample 项目中的 Program.cs 文件。  
+1.  <span data-ttu-id="101ab-166">打开 DiscoveryProxyExample 项目中的 Program.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="101ab-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>  
   
-2.  添加下面的 `using` 语句。  
+2.  <span data-ttu-id="101ab-167">添加下面的 `using` 语句。</span><span class="sxs-lookup"><span data-stu-id="101ab-167">Add the following `using` statements.</span></span>  
   
     ```  
     using System;  
@@ -521,7 +507,7 @@ caps.handback.revision: 19
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  在 `Main()` 方法中，添加下面的代码。这将创建 `DiscoveryProxy` 类的一个实例。  
+3.  <span data-ttu-id="101ab-168">在 `Main()` 方法中，添加下面的代码。</span><span class="sxs-lookup"><span data-stu-id="101ab-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="101ab-169">这将创建 `DiscoveryProxy` 类的一个实例。</span><span class="sxs-lookup"><span data-stu-id="101ab-169">This creates an instance of the `DiscoveryProxy` class.</span></span>  
   
     ```  
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
@@ -529,10 +515,9 @@ caps.handback.revision: 19
   
                 // Host the DiscoveryProxy service  
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());  
-  
     ```  
   
-4.  接下来，将以下代码添加到发现终结点和公告终结点。  
+4.  <span data-ttu-id="101ab-170">接下来，将以下代码添加到发现终结点和公告终结点。</span><span class="sxs-lookup"><span data-stu-id="101ab-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>  
   
     ```  
     try  
@@ -571,13 +556,12 @@ caps.handback.revision: 19
                   Console.WriteLine("Aborting the service...");  
                   proxyServiceHost.Abort();  
               }  
-  
     ```  
   
- 您已完成实现发现代理。请继续阅读[如何：实现向发现代理注册的可检测到的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)。  
+ <span data-ttu-id="101ab-171">您已完成实现发现代理。</span><span class="sxs-lookup"><span data-stu-id="101ab-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="101ab-172">继续[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="101ab-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>  
   
-## 示例  
- 下面是本主题中使用的代码的完整清单。  
+## <a name="example"></a><span data-ttu-id="101ab-173">示例</span><span class="sxs-lookup"><span data-stu-id="101ab-173">Example</span></span>  
+ <span data-ttu-id="101ab-174">下面是本主题中使用的代码的完整清单。</span><span class="sxs-lookup"><span data-stu-id="101ab-174">This is the full listing of the code used in this topic.</span></span>  
   
 ```  
 // DiscoveryProxy.cs  
@@ -778,7 +762,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -939,7 +922,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -1003,11 +985,10 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-## 请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [如何：实现向发现代理注册的可检测到的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)   
- [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)   
- [如何：测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="101ab-175">另请参阅</span><span class="sxs-lookup"><span data-stu-id="101ab-175">See Also</span></span>  
+ [<span data-ttu-id="101ab-176">WCF Discovery 概述</span><span class="sxs-lookup"><span data-stu-id="101ab-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="101ab-177">如何： 实现向发现代理注册的可发现服务</span><span class="sxs-lookup"><span data-stu-id="101ab-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [<span data-ttu-id="101ab-178">如何： 实现使用发现代理查找服务的客户端应用程序</span><span class="sxs-lookup"><span data-stu-id="101ab-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [<span data-ttu-id="101ab-179">如何： 测试发现代理</span><span class="sxs-lookup"><span data-stu-id="101ab-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

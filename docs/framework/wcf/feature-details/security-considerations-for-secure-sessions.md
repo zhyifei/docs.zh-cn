@@ -1,33 +1,36 @@
 ---
-title: "安全会话的安全注意事项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全会话的安全注意事项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 安全会话的安全注意事项
-您应考虑实现安全会话时影响安全的下列事项。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全注意事项，请参见 [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) 和 [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  
+# <a name="security-considerations-for-secure-sessions"></a><span data-ttu-id="18ccf-102">安全会话的安全注意事项</span><span class="sxs-lookup"><span data-stu-id="18ccf-102">Security Considerations for Secure Sessions</span></span>
+<span data-ttu-id="18ccf-103">您应考虑实现安全会话时影响安全的下列事项。</span><span class="sxs-lookup"><span data-stu-id="18ccf-103">You should consider the following items that affect security when implementing secure sessions.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="18ccf-104">安全注意事项，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)和[安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="18ccf-104"> security considerations, see [Security Considerations](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) and [Best Practices for Security](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  
   
-## 安全会话和元数据  
- 当建立安全会话并且 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `false` 时，作为服务终结点的 Web Services 描述语言 \(WSDL\) 文档中元数据的一部分，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 发送 `mssp:MustNotSendCancel` 断言。`mssp:MustNotSendCancel` 断言通知客户端此服务不响应取消安全会话的请求。当 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `true` 时，在 WSDL 文档中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不发出 `mssp:MustNotSendCancel` 断言。当客户端不再需要安全会话时，客户端应向服务发送一个取消请求。当使用 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 生成客户端时，客户端代码对 `mssp:MustNotSendCancel` 断言的存在与否会做出适当的响应。  
+## <a name="secure-sessions-and-metadata"></a><span data-ttu-id="18ccf-105">安全会话和元数据</span><span class="sxs-lookup"><span data-stu-id="18ccf-105">Secure Sessions and Metadata</span></span>  
+ <span data-ttu-id="18ccf-106">当建立安全会话并且 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `false` 时，作为服务终结点的 Web Services 描述语言 (WSDL) 文档中元数据的一部分，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 发送 `mssp:MustNotSendCancel` 断言。</span><span class="sxs-lookup"><span data-stu-id="18ccf-106">When a secure session is established and the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> property is set to `false`, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sends an `mssp:MustNotSendCancel` assertion as part of the metadata in the Web Services Description Language (WSDL) document for the service endpoint.</span></span> <span data-ttu-id="18ccf-107">`mssp:MustNotSendCancel` 断言通知客户端此服务不响应取消安全会话的请求。</span><span class="sxs-lookup"><span data-stu-id="18ccf-107">The `mssp:MustNotSendCancel` assertion informs clients that the service does not respond to requests to cancel the secure session.</span></span> <span data-ttu-id="18ccf-108">当 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 属性设置为 `true` 时，在 WSDL 文档中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不发出 `mssp:MustNotSendCancel` 断言。</span><span class="sxs-lookup"><span data-stu-id="18ccf-108">When the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> property is set to `true`, then [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not emit an `mssp:MustNotSendCancel` assertion in the WSDL document.</span></span> <span data-ttu-id="18ccf-109">当客户端不再需要安全会话时，客户端应向服务发送一个取消请求。</span><span class="sxs-lookup"><span data-stu-id="18ccf-109">Clients are expected to send a cancel request to the service when they no longer require the secure session.</span></span> <span data-ttu-id="18ccf-110">使用生成客户端时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，客户端代码是否存在对相应地做出反应`mssp:MustNotSendCancel`断言。</span><span class="sxs-lookup"><span data-stu-id="18ccf-110">When a client is generated using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), the client code reacts appropriately to the presence or absence of the `mssp:MustNotSendCancel` assertion.</span></span>  
   
-## 安全对话和自定义令牌  
- 将自定义令牌和派生密钥混合使用会产生一些问题，这是它在 WS\-SecureConversation 规范中的定义方式所导致的。该规范指出 `wsse:SecurityTokenReference` 是引用派生令牌的可选元素：“`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` 此可选元素用来指定安全上下文令牌、安全令牌或用于派生的共享密钥\/机密。如果未指定，则假定收件人可以从消息上下文确定共享密钥。如果无法确定上下文，则应该引发诸如 `wsc:UnknownDerivationSource` 之类的错误。”  
+## <a name="secure-conversations-and-custom-tokens"></a><span data-ttu-id="18ccf-111">安全对话和自定义令牌</span><span class="sxs-lookup"><span data-stu-id="18ccf-111">Secure Conversations and Custom Tokens</span></span>  
+ <span data-ttu-id="18ccf-112">将自定义令牌和派生密钥混合使用会产生一些问题，这是它在 WS-SecureConversation 规范中的定义方式所导致的。</span><span class="sxs-lookup"><span data-stu-id="18ccf-112">There are some issues with mixing custom tokens and derived keys due to the way it is defined in the WS-SecureConversation specification.</span></span> <span data-ttu-id="18ccf-113">该规范指出`wsse:SecurityTokenReference`是引用派生的令牌的可选元素:"`/wsc:DerivedKeyToken/wsse:SecurityTokenReference`这一可选元素用于指定安全上下文令牌、 安全令牌或用于派生的共享的密钥/机密。</span><span class="sxs-lookup"><span data-stu-id="18ccf-113">The specification says that `wsse:SecurityTokenReference` is an optional element that references the derived token: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` This optional element is used to specify security context token, security token, or shared key/secret used for the derivation.</span></span> <span data-ttu-id="18ccf-114">如果未指定，则假定收件人可以从消息上下文确定共享密钥。</span><span class="sxs-lookup"><span data-stu-id="18ccf-114">If not specified, it is assumed that the recipient can determine the shared key from the message context.</span></span> <span data-ttu-id="18ccf-115">如果无法确定上下文，然后如错误`wsc:UnknownDerivationSource`应引发。"</span><span class="sxs-lookup"><span data-stu-id="18ccf-115">If the context cannot be determined, then a fault such as `wsc:UnknownDerivationSource` should be raised."</span></span>  
   
- 这意味着，如果希望派生自定义令牌，应该将其子句类型包装在 `SecurityTokenReference` 元素中。有一个选项可关闭派生，但是默认为派生密钥。如果无法封装密钥，则对派生密钥令牌进行序列化将成功，但是尝试对其进行反序列化将引发异常。  
+ <span data-ttu-id="18ccf-116">这意味着，如果希望派生自定义令牌，应该将其子句类型包装在 `SecurityTokenReference` 元素中。</span><span class="sxs-lookup"><span data-stu-id="18ccf-116">This means that if you want a custom token to be derived, you should wrap its clause type in a `SecurityTokenReference` element.</span></span> <span data-ttu-id="18ccf-117">有一个选项可关闭派生，但是默认为派生密钥。</span><span class="sxs-lookup"><span data-stu-id="18ccf-117">There is an option to turn off derivation but the default is to derive keys.</span></span> <span data-ttu-id="18ccf-118">如果无法封装密钥，则对派生密钥令牌进行序列化将成功，但是尝试对其进行反序列化将引发异常。</span><span class="sxs-lookup"><span data-stu-id="18ccf-118">If you fail to wrap the key, serializing the derived key token succeeds, but attempting to deserialize it throws an exception.</span></span>  
   
-## 请参阅  
- [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)   
- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="18ccf-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="18ccf-119">See Also</span></span>  
+ [<span data-ttu-id="18ccf-120">如何： 禁用安全会话在 WSFederationHttpBinding 上</span><span class="sxs-lookup"><span data-stu-id="18ccf-120">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="18ccf-121">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="18ccf-121">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="18ccf-122">安全性的最佳做法</span><span class="sxs-lookup"><span data-stu-id="18ccf-122">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

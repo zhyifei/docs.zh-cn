@@ -1,69 +1,74 @@
 ---
-title: "WPF 应用程序资源、内容和数据文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "应用程序开发 [WPF], 文件"
-  - "应用程序管理 [WPF]"
-  - "内容文件 [WPF]"
-  - "嵌入的资源 [WPF]"
-  - "文件 [WPF]"
-  - "松散资源 [WPF]"
-  - "引用应用程序文件 [WPF]"
-  - "远程文件 [WPF]"
-  - "资源文件 [WPF]"
-  - "源站点文件 [WPF]"
-  - "WPF 应用程序, 文件"
+title: "WPF 应用程序资源、内容和数据文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WPF application [WPF], files
+- loose resources [WPF]
+- content files [WPF]
+- Site of Origin files [WPF]
+- resource files [WPF]
+- remote files [WPF]
+- embedded resources [WPF]
+- files [WPF]
+- referencing application files [WPF]
+- application development [WPF], files
+- application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19fd82daabd5ed12776b2deee6bc850529a6ef23
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# WPF 应用程序资源、内容和数据文件
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 应用程序通常依赖包含不可执行数据的文件，如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、图像、视频和音频。  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 为配置、识别和使用这些类型的数据文件（称为应用程序数据文件）提供了特殊支持。  这种支持主要针对一组特定的应用程序数据文件类型，包括：  
+# <a name="wpf-application-resource-content-and-data-files"></a><span data-ttu-id="654b5-102">WPF 应用程序资源、内容和数据文件</span><span class="sxs-lookup"><span data-stu-id="654b5-102">WPF Application Resource, Content, and Data Files</span></span>
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]<span data-ttu-id="654b5-103">应用程序通常依赖于文件中包含非可执行文件数据，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。</span><span class="sxs-lookup"><span data-stu-id="654b5-103"> applications often depend on files that contain non-executable data, such as [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], images, video, and audio.</span></span> [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="654b5-104"> 为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供了特殊支持。</span><span class="sxs-lookup"><span data-stu-id="654b5-104"> offers special support for configuring, identifying, and using these types of data files, which are called application data files.</span></span> <span data-ttu-id="654b5-105">这种支持主要针对一组特定的应用程序数据文件类型，包括：</span><span class="sxs-lookup"><span data-stu-id="654b5-105">This support revolves around a specific set of application data file types, including:</span></span>  
   
--   **资源文件**：编译到可执行或库 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集中的数据文件。  
+-   <span data-ttu-id="654b5-106">**资源文件**： 编译为可执行文件或库的数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-106">**Resource Files**: Data files that are compiled into either an executable or library [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.</span></span>  
   
--   **内容文件**：与可执行 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集具有显式关联的独立数据文件。  
+-   <span data-ttu-id="654b5-107">**内容文件**： 独立数据文件具有与可执行文件的显式关联[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-107">**Content Files**: Standalone data files that have an explicit association with an executable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.</span></span>  
   
--   **源站点文件**：与可执行 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集没有关联的独立数据文件。  
+-   <span data-ttu-id="654b5-108">**源站点文件**： 与可执行文件没有关联的独立数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-108">**Site of Origin Files**: Standalone data files that have no association with an executable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.</span></span>  
   
- 这三种类型的文件之间的一个重要区别是：资源文件和内容文件在生成时是已知的；程序集明确地知道它们的存在。  但是对于源站点文件，程序集可能完全不知道它们，或者通过 pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 引用知道它们的存在；在后一种情况下，不能保证被引用的源站点文件实际存在。  
+ <span data-ttu-id="654b5-109">这三种类型的文件之间的一个重要区别是：资源文件和内容文件在生成时即为程序集所知；程序集明确知道它们的存在。</span><span class="sxs-lookup"><span data-stu-id="654b5-109">One important distinction to make between these three types of files is that resource files and content files are known at build time; an assembly has explicit knowledge of them.</span></span> <span data-ttu-id="654b5-110">为源站点文件，但是，程序集可能完全不了解它们，或通过包的隐式知识[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]引用; 后者的情况下验证实际是否存在原始文件的引用的站点不能保证。</span><span class="sxs-lookup"><span data-stu-id="654b5-110">For site of origin files, however, an assembly may have no knowledge of them at all, or implicit knowledge through a pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] reference; the case of the latter, there is no guarantee that the referenced site of origin file actually exists.</span></span>  
   
- 为了引用应用程序数据文件，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 使用 Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 方案，这将在 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)中详细介绍。  
+ <span data-ttu-id="654b5-111">若要引用应用程序数据文件，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]使用包[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]方案，这中的详细信息中所述[WPF 中的包 Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。</span><span class="sxs-lookup"><span data-stu-id="654b5-111">To reference application data files, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uses the Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Scheme, which is described in detail in [Pack URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).</span></span>  
   
- 本主题介绍如何配置和使用应用程序数据文件。  
+ <span data-ttu-id="654b5-112">本主题介绍如何配置和使用应用程序数据文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-112">This topic describes how to configure and use application data files.</span></span>  
   
-   
   
 <a name="Resource_Files"></a>   
-## 资源文件  
- 如果应用程序数据文件必须始终可供某个应用程序使用，那么保证可用性的唯一方法是将其编译到应用程序的主可执行程序集中，或者它所引用的程序集中。  这种类型的应用程序数据文件称为“资源文件”。  
+## <a name="resource-files"></a><span data-ttu-id="654b5-113">资源文件</span><span class="sxs-lookup"><span data-stu-id="654b5-113">Resource Files</span></span>  
+ <span data-ttu-id="654b5-114">如果应用程序数据文件必须始终可供某个应用程序使用，那么保证可用性的唯一方法是将其编译到应用程序的主可执行程序集内，或者它所引用的程序集内。</span><span class="sxs-lookup"><span data-stu-id="654b5-114">If an application data file must always be available to an application, the only way to guarantee availability is to compile it into an application's main executable assembly or one of its referenced assemblies.</span></span> <span data-ttu-id="654b5-115">此类型的应用程序数据文件被称为*资源文件*。</span><span class="sxs-lookup"><span data-stu-id="654b5-115">This type of application data file is known as a *resource file*.</span></span>  
   
- 应在以下情况下使用资源文件：  
+ <span data-ttu-id="654b5-116">应在以下情况下使用资源文件：</span><span class="sxs-lookup"><span data-stu-id="654b5-116">You should use resource files when:</span></span>  
   
--   在将资源文件编译到程序集中之后，不需要更新资源文件的内容。  
+-   <span data-ttu-id="654b5-117">将资源文件编译到程序集内之后，无需更新资源文件的内容。</span><span class="sxs-lookup"><span data-stu-id="654b5-117">You don't need to update the resource file's content after it is compiled into an assembly.</span></span>  
   
--   希望通过减少文件依赖项的数量来简化应用程序分发的复杂性。  
+-   <span data-ttu-id="654b5-118">希望通过减少文件依赖项的数量来简化应用程序分发的复杂性。</span><span class="sxs-lookup"><span data-stu-id="654b5-118">You want to simplify application distribution complexity by reducing the number of file dependencies.</span></span>  
   
--   应用程序数据文件必须是可本地化的（请参见 [WPF 全球化和本地化概述](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)）。  
+-   <span data-ttu-id="654b5-119">你的应用程序数据文件需要是可本地化 (请参阅[WPF 全球化和本地化概述](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md))。</span><span class="sxs-lookup"><span data-stu-id="654b5-119">Your application data file needs to be localizable (see [WPF Globalization and Localization Overview](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).</span></span>  
   
 > [!NOTE]
->  本节描述的资源文件与资源文件不同描述在 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md) 和不同于在 [管理应用程序资源 \(.NET\)](../Topic/Managing%20Application%20Resources%20\(.NET\).md)描述的嵌入或链接的资源。  
+>  <span data-ttu-id="654b5-120">本节中所述的资源文件是不同于资源文件中所述[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)和不同于中所述的嵌入或链接资源[管理应用程序资源 (.NET)](http://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).</span><span class="sxs-lookup"><span data-stu-id="654b5-120">The resource files described in this section are different than the resource files described in [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) and different than the embedded or linked resources described in [Managing Application Resources (.NET)](http://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).</span></span>  
   
-### 配置资源文件  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，资源文件是作为 `Resource` 项包含在 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 项目中的文件。  
+### <a name="configuring-resource-files"></a><span data-ttu-id="654b5-121">配置资源文件</span><span class="sxs-lookup"><span data-stu-id="654b5-121">Configuring Resource Files</span></span>  
+ <span data-ttu-id="654b5-122">在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，资源文件是包含在一个文件[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]项目用作`Resource`项。</span><span class="sxs-lookup"><span data-stu-id="654b5-122">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a resource file is a file that is included in an [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] project as a `Resource` item.</span></span>  
   
-```  
+```xml  
 <Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
@@ -74,37 +79,37 @@ caps.handback.revision: 21
 ```  
   
 > [!NOTE]
->  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，可通过将一个文件添加到项目并将其 `Build Action` 设置为 `Resource` 来创建资源文件。  
+>  <span data-ttu-id="654b5-123">在[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，你创建的资源文件通过将文件添加到项目并设置其`Build Action`到`Resource`。</span><span class="sxs-lookup"><span data-stu-id="654b5-123">In [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], you create a resource file by adding a file to a project and setting its `Build Action` to `Resource`.</span></span>  
   
- 项目生成时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 会将该资源编译到程序集中。  
+ <span data-ttu-id="654b5-124">当生成该项目时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]将资源编译为程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-124">When the project is built, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] compiles the resource into the assembly.</span></span>  
   
-### 使用资源文件  
- 若要加载资源文件，可以调用 <xref:System.Windows.Application> 类的 <xref:System.Windows.Application.GetResourceStream%2A> 方法，同时传递标识所需资源文件的 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  <xref:System.Windows.Application.GetResourceStream%2A> 将返回一个 <xref:System.Windows.Resources.StreamResourceInfo> 对象，该对象将该资源文件作为 <xref:System.IO.Stream> 公开，并描述其内容类型。  
+### <a name="using-resource-files"></a><span data-ttu-id="654b5-125">使用资源文件</span><span class="sxs-lookup"><span data-stu-id="654b5-125">Using Resource Files</span></span>  
+ <span data-ttu-id="654b5-126">若要加载资源文件，可以调用<xref:System.Windows.Application.GetResourceStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的资源文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-126">To load a resource file, you can call the <xref:System.Windows.Application.GetResourceStream%2A> method of the <xref:System.Windows.Application> class, passing a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that identifies the desired resource file.</span></span> <span data-ttu-id="654b5-127"><xref:System.Windows.Application.GetResourceStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开资源文件作为<xref:System.IO.Stream>并描述其内容类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-127"><xref:System.Windows.Application.GetResourceStream%2A> returns a <xref:System.Windows.Resources.StreamResourceInfo> object, which exposes the resource file as a <xref:System.IO.Stream> and describes its content type.</span></span>  
   
- 例如，下面的代码演示如何使用 <xref:System.Windows.Application.GetResourceStream%2A> 来加载 <xref:System.Windows.Controls.Page> 资源文件，并将其设置为 <xref:System.Windows.Controls.Frame> \(`pageFrame`\) 的内容：  
+ <span data-ttu-id="654b5-128">例如，下面的代码演示如何使用<xref:System.Windows.Application.GetResourceStream%2A>加载<xref:System.Windows.Controls.Page>资源文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`):</span><span class="sxs-lookup"><span data-stu-id="654b5-128">As an example, the following code shows how to use <xref:System.Windows.Application.GetResourceStream%2A> to load a <xref:System.Windows.Controls.Page> resource file and set it as the content of a <xref:System.Windows.Controls.Frame> (`pageFrame`):</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- 虽然通过调用 <xref:System.Windows.Application.GetResourceStream%2A> 可以访问 <xref:System.IO.Stream>，但是需要进行一些额外的工作来将其转换为将要设置的属性的类型。  可以改为通过使用代码将资源文件直接加载到某个类型的属性，来让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 负责打开和转换 <xref:System.IO.Stream>。  
+ <span data-ttu-id="654b5-129">虽然通过调用<xref:System.Windows.Application.GetResourceStream%2A>，可以访问<xref:System.IO.Stream>，你需要执行额外的工作来将其转换为你将为设置与属性的类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-129">While calling <xref:System.Windows.Application.GetResourceStream%2A> gives you access to the <xref:System.IO.Stream>, you need to perform the additional work of converting it to the type of the property that you'll be setting it with.</span></span> <span data-ttu-id="654b5-130">相反，你可以让[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]负责打开和转换<xref:System.IO.Stream>由加载资源文件直接到使用代码的类型的属性。</span><span class="sxs-lookup"><span data-stu-id="654b5-130">Instead, you can let [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] take care of opening and converting the <xref:System.IO.Stream> by loading a resource file directly into the property of a type using code.</span></span>  
   
- 下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> \(`pageFrame`\)中。  
+ <span data-ttu-id="654b5-131">下面的示例演示如何加载<xref:System.Windows.Controls.Page>直接插入<xref:System.Windows.Controls.Frame>(`pageFrame`) 使用代码。</span><span class="sxs-lookup"><span data-stu-id="654b5-131">The following example shows how to load a <xref:System.Windows.Controls.Page> directly into a <xref:System.Windows.Controls.Frame> (`pageFrame`) using code.</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
   
- 下面的示例是与上例等效的标记。  
+ <span data-ttu-id="654b5-132">下面的示例是与上例等效的标记。</span><span class="sxs-lookup"><span data-stu-id="654b5-132">The following example is the markup equivalent of the preceding example.</span></span>  
   
- [!code-xml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
-### 作为资源文件的应用程序代码文件  
- 可以使用 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 来引用一组特殊的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序代码文件，包括窗口、页、流文档和资源词典。  例如，可以将 <xref:System.Windows.Application.StartupUri%2A?displayProperty=fullName> 属性设置为一个 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]，该 URL 引用要在应用程序启动时加载的窗口或页。  
+### <a name="application-code-files-as-resource-files"></a><span data-ttu-id="654b5-133">作为资源文件的应用程序代码文件</span><span class="sxs-lookup"><span data-stu-id="654b5-133">Application Code Files as Resource Files</span></span>  
+ <span data-ttu-id="654b5-134">一种特殊的设置[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可以使用包引用应用程序代码文件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，包括 windows、 页、 流文档和资源字典。</span><span class="sxs-lookup"><span data-stu-id="654b5-134">A special set of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application code files can be referenced using pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], including windows, pages, flow documents, and resource dictionaries.</span></span> <span data-ttu-id="654b5-135">例如，你可以设置<xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>与包属性[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]引用该窗口或你想要应用程序启动时加载的页。</span><span class="sxs-lookup"><span data-stu-id="654b5-135">For example, you can set the <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> property with a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that references the window or page that you would like to load when an application starts.</span></span>  
   
- [!code-xml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
- 当 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件作为一个 `Page` 项包含在 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 项目中时，可以进行此操作。  
+ <span data-ttu-id="654b5-136">你可以这样做：[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中包含了文件[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]项目用作`Page`项。</span><span class="sxs-lookup"><span data-stu-id="654b5-136">You can do this when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file is included in an [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] project as a `Page` item.</span></span>  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
@@ -115,25 +120,25 @@ caps.handback.revision: 21
 ```  
   
 > [!NOTE]
->  在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，可以将新的 <xref:System.Windows.Window>、<xref:System.Windows.Navigation.NavigationWindow>、<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.FlowDocument> 或 <xref:System.Windows.ResourceDictionary> 添加到项目，标记文件的 `Build Action` 将默认为 `Page`。  
+>  <span data-ttu-id="654b5-137">在[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，添加新<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Documents.FlowDocument>，或<xref:System.Windows.ResourceDictionary>到项目中，`Build Action`的标记文件将默认为`Page`。</span><span class="sxs-lookup"><span data-stu-id="654b5-137">In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], you add a new <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>, or <xref:System.Windows.ResourceDictionary> to a project, the `Build Action` for the markup file will default to `Page`.</span></span>  
   
- 在编译含有 `Page` 项的项目时，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 项将转换为二进制格式，并编译到关联的程序集中。  因此，可以像使用典型的资源文件一样使用这些文件。  
+ <span data-ttu-id="654b5-138">当与项目`Page`编译项目后，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]项转换为二进制格式，并且将其编译为关联的程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-138">When a project with `Page` items is compiled, the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] items are converted to binary format and compiled into the associated assembly.</span></span> <span data-ttu-id="654b5-139">因此，可以像使用典型的资源文件一样使用这些文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-139">Consequently, these files can be used in the same way as typical resource files.</span></span>  
   
 > [!NOTE]
->  如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件配置为 `Resource` 项，并且没有代码隐藏文件，则原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 将编译到程序集中，而不是原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的二进制版本。  
+>  <span data-ttu-id="654b5-140">如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件配置为`Resource`项，并且没有代码隐藏文件，原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]将编译为程序集，而不是原始的二进制版本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="654b5-140">If a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file is configured as a `Resource` item, and does not have a code-behind file, the raw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is compiled into an assembly rather than a binary version of the raw [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
 <a name="Content_Files"></a>   
-## 内容文件  
- 内容文件是作为松散文件与可执行程序集一起分发的。  虽然它们不编译到程序集中，但编译程序集时所使用的元数据建立了与每个内容文件的关联。  
+## <a name="content-files"></a><span data-ttu-id="654b5-141">内容文件</span><span class="sxs-lookup"><span data-stu-id="654b5-141">Content Files</span></span>  
+ <span data-ttu-id="654b5-142">A*内容文件*作为松散文件与可执行程序集一起分发。</span><span class="sxs-lookup"><span data-stu-id="654b5-142">A *content file* is distributed as a loose file alongside an executable assembly.</span></span> <span data-ttu-id="654b5-143">虽然它们不编译到程序集内，但编译程序集时所使用的元数据建立了与每个内容文件的关联。</span><span class="sxs-lookup"><span data-stu-id="654b5-143">Although they are not compiled into an assembly, assemblies are compiled with metadata that establishes an association with each content file.</span></span>  
   
- 如果应用程序需要一组特定的应用程序数据文件，并且您希望能够更新这些文件，而无需重新编译使用它们的程序集，则应该使用内容文件。  
+ <span data-ttu-id="654b5-144">如果应用程序需要一组特定的应用程序数据文件，并且你希望能够更新这些文件，而无需重新编译使用它们的程序集，应使用内容文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-144">You should use content files when your application requires a specific set of application data files that you want to be able to update without recompiling the assembly that consumes them.</span></span>  
   
-### 配置内容文件  
- 若要将内容文件添加到项目中，必须在 `Content` 项中包含一个应用程序数据文件。  此外，因为内容文件不直接编译到程序集中，所以需要设置 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]```CopyToOutputDirectory` 元数据元素，以指定将内容文件复制到一个相对于生成的程序集的位置。  如果希望在每次生成项目时都将资源复制到生成输出文件夹，可将 `CopyToOutputDirectory` 元数据元素设置为 `Always` 值。  否则，可以使用 `PreserveNewest` 值来确保只有最新版本的资源才会复制到生成输出文件夹。  
+### <a name="configuring-content-files"></a><span data-ttu-id="654b5-145">配置内容文件</span><span class="sxs-lookup"><span data-stu-id="654b5-145">Configuring Content Files</span></span>  
+ <span data-ttu-id="654b5-146">若要将内容文件添加到项目中，应用程序数据文件必须包含作为`Content`项。</span><span class="sxs-lookup"><span data-stu-id="654b5-146">To add a content file to a project, an application data file must be included as a `Content` item.</span></span> <span data-ttu-id="654b5-147">此外，由于未直接入程序集编译的内容文件，你需要设置[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`要指定的内容文件将复制到相对于生成的程序集位置的元数据元素。</span><span class="sxs-lookup"><span data-stu-id="654b5-147">Furthermore, because a content file is not compiled directly into the assembly, you need to set the [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` metadata element to specify that the content file is copied to a location that is relative to the built assembly.</span></span> <span data-ttu-id="654b5-148">如果你想存储资源复制到生成输出文件夹每次生成项目时，你将设置`CopyToOutputDirectory`具有的元数据元素`Always`值。</span><span class="sxs-lookup"><span data-stu-id="654b5-148">If you want the resource to be copied to the build output folder every time a project is built, you set the `CopyToOutputDirectory` metadata element with the `Always` value.</span></span> <span data-ttu-id="654b5-149">否则，你可以确保，仅最新版本的资源将复制到生成输出文件夹使用`PreserveNewest`值。</span><span class="sxs-lookup"><span data-stu-id="654b5-149">Otherwise, you can ensure that only the newest version of the resource is copied to the build output folder by using the `PreserveNewest` value.</span></span>  
   
- 下面演示的是一个配置为内容文件的文件，只有在将新版本的资源添加到项目时，它才会复制到生成输出文件夹。  
+ <span data-ttu-id="654b5-150">下面演示的是一个配置为内容文件的文件，此内容文件只有在将新版本的资源添加到项目时才会复制到生成输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="654b5-150">The following shows a file that is configured as a content file which is copied to the build output folder only when a new version of the resource is added to the project.</span></span>  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
@@ -146,66 +151,66 @@ caps.handback.revision: 21
 ```  
   
 > [!NOTE]
->  在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，可通过将一个文件添加到项目并将其 `Build Action` 设置为 `Content` 来创建内容文件，然后将其 `Copy to Output Directory` 设置为 `Copy always`（与 `Always` 相同）和 `Copy if newer`（与 `PreserveNewest` 相同）。  
+>  <span data-ttu-id="654b5-151">在[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，通过将文件添加到项目和设置创建的内容文件其`Build Action`到`Content`，并设置其`Copy to Output Directory`到`Copy always`(与相同`Always`) 和`Copy if newer`(与相同`PreserveNewest`)。</span><span class="sxs-lookup"><span data-stu-id="654b5-151">In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], you create a content file by adding a file to a project and setting its `Build Action` to `Content`, and set its `Copy to Output Directory` to `Copy always` (same as `Always`) and `Copy if newer` (same as `PreserveNewest`).</span></span>  
   
- 生成项目时，对于每一个内容文件，将有一个相应的 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 特性编译到程序集的元数据中。  
+ <span data-ttu-id="654b5-152">当生成该项目时，<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>属性会编译成每个内容文件的程序集的元数据。</span><span class="sxs-lookup"><span data-stu-id="654b5-152">When the project is built, an <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> attribute is compiled into the metadata of the assembly for each content file.</span></span>  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 的值表示内容文件相对于其在项目中的位置的路径。  例如，如果内容文件位于某个项目子文件夹中，则附加路径信息将合并到 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值中。  
+ <span data-ttu-id="654b5-153">值<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>意味着到相对于其位置在项目中的内容文件的路径。</span><span class="sxs-lookup"><span data-stu-id="654b5-153">The value of the <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> implies the path to the content file relative to its position in the project.</span></span> <span data-ttu-id="654b5-154">例如，如果内容文件位于项目子文件夹中的附加路径信息将合并到<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>值。</span><span class="sxs-lookup"><span data-stu-id="654b5-154">For example, if a content file was located in a project subfolder, the additional path information would be incorporated into the <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> value.</span></span>  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 值也是内容文件在生成输出文件夹中的路径的值。  
+ <span data-ttu-id="654b5-155"><xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>值也是生成输出文件夹中的内容文件的路径的值。</span><span class="sxs-lookup"><span data-stu-id="654b5-155">The <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> value is also the value of the path to the content file in the build output folder.</span></span>  
   
-### 使用内容文件  
- 若要加载内容文件，可以调用 <xref:System.Windows.Application> 类的 <xref:System.Windows.Application.GetContentStream%2A> 方法，同时传递标识所需内容文件的 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  <xref:System.Windows.Application.GetContentStream%2A> 将返回一个 <xref:System.Windows.Resources.StreamResourceInfo> 对象，该对象将该内容文件作为 <xref:System.IO.Stream> 公开，并描述其内容类型。  
+### <a name="using-content-files"></a><span data-ttu-id="654b5-156">使用内容文件</span><span class="sxs-lookup"><span data-stu-id="654b5-156">Using Content Files</span></span>  
+ <span data-ttu-id="654b5-157">若要加载的内容文件，可以调用<xref:System.Windows.Application.GetContentStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识所需的内容文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-157">To load a content file, you can call the <xref:System.Windows.Application.GetContentStream%2A> method of the <xref:System.Windows.Application> class, passing a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that identifies the desired content file.</span></span> <span data-ttu-id="654b5-158"><xref:System.Windows.Application.GetContentStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，后者公开内容文件作为<xref:System.IO.Stream>并描述其内容类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-158"><xref:System.Windows.Application.GetContentStream%2A> returns a <xref:System.Windows.Resources.StreamResourceInfo> object, which exposes the content file as a <xref:System.IO.Stream> and describes its content type.</span></span>  
   
- 例如，下面的代码演示如何使用 <xref:System.Windows.Application.GetContentStream%2A> 来加载 <xref:System.Windows.Controls.Page> 内容文件，并将其设置为 <xref:System.Windows.Controls.Frame> \(`pageFrame`\) 的内容：  
+ <span data-ttu-id="654b5-159">例如，下面的代码演示如何使用<xref:System.Windows.Application.GetContentStream%2A>加载<xref:System.Windows.Controls.Page>内容文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`)。</span><span class="sxs-lookup"><span data-stu-id="654b5-159">As an example, the following code shows how to use <xref:System.Windows.Application.GetContentStream%2A> to load a <xref:System.Windows.Controls.Page> content file and set it as the content of a <xref:System.Windows.Controls.Frame> (`pageFrame`).</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- 虽然通过调用 <xref:System.Windows.Application.GetContentStream%2A> 可以访问 <xref:System.IO.Stream>，但是需要进行一些额外的工作来将其转换为将要设置的属性的类型。  可以改为通过使用代码将资源文件直接加载到某个类型的属性，来让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 负责打开和转换 <xref:System.IO.Stream>。  
+ <span data-ttu-id="654b5-160">虽然通过调用<xref:System.Windows.Application.GetContentStream%2A>，可以访问<xref:System.IO.Stream>，你需要执行额外的工作来将其转换为你将为设置与属性的类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-160">While calling <xref:System.Windows.Application.GetContentStream%2A> gives you access to the <xref:System.IO.Stream>, you need to perform the additional work of converting it to the type of the property that you'll be setting it with.</span></span> <span data-ttu-id="654b5-161">相反，你可以让[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]负责打开和转换<xref:System.IO.Stream>由加载资源文件直接到使用代码的类型的属性。</span><span class="sxs-lookup"><span data-stu-id="654b5-161">Instead, you can let [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] take care of opening and converting the <xref:System.IO.Stream> by loading a resource file directly into the property of a type using code.</span></span>  
   
- 下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> \(`pageFrame`\)中。  
+ <span data-ttu-id="654b5-162">下面的示例演示如何加载<xref:System.Windows.Controls.Page>直接插入<xref:System.Windows.Controls.Frame>(`pageFrame`) 使用代码。</span><span class="sxs-lookup"><span data-stu-id="654b5-162">The following example shows how to load a <xref:System.Windows.Controls.Page> directly into a <xref:System.Windows.Controls.Frame> (`pageFrame`) using code.</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
   
- 下面的示例是与上例等效的标记。  
+ <span data-ttu-id="654b5-163">下面的示例是与上例等效的标记。</span><span class="sxs-lookup"><span data-stu-id="654b5-163">The following example is the markup equivalent of the preceding example.</span></span>  
   
- [!code-xml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
   
 <a name="Site_of_Origin_Files"></a>   
-## 源站点文件。  
- 资源文件与同其一起分发的程序集有显式关系，这一关系由 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 定义。  但是，有些情况下可能需要在程序集和应用程序数据文件之间建立隐式关系或不存在的关系，这些情况包括：  
+## <a name="site-of-origin-files"></a><span data-ttu-id="654b5-164">源站点文件</span><span class="sxs-lookup"><span data-stu-id="654b5-164">Site of Origin Files</span></span>  
+ <span data-ttu-id="654b5-165">资源文件有使用一起分发的程序集的显式关系由定义<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>。</span><span class="sxs-lookup"><span data-stu-id="654b5-165">Resource files have an explicit relationship with the assemblies that they are distributed alongside, as defined by the <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>.</span></span> <span data-ttu-id="654b5-166">但是，有些情况下可能需要在程序集和应用程序数据文件之间建立隐式关系或不存在的关系，这些情况包括：</span><span class="sxs-lookup"><span data-stu-id="654b5-166">But, there are times when you may want to establish either an implicit or non-existent relationship between an assembly and an application data file, including when:</span></span>  
   
--   编译时文件不存在。  
+-   <span data-ttu-id="654b5-167">编译时文件不存在。</span><span class="sxs-lookup"><span data-stu-id="654b5-167">A file doesn't exist when at compile time.</span></span>  
   
--   在运行之前您不知道程序集将需要哪些文件。  
+-   <span data-ttu-id="654b5-168">在运行之前不知道程序集将需要哪些文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-168">You don't know what files your assembly will require until run time.</span></span>  
   
--   您希望能够更新文件，而又无需重新编译与这些文件关联的程序集。  
+-   <span data-ttu-id="654b5-169">希望能够更新文件，无需重新编译与这些文件关联的程序集。</span><span class="sxs-lookup"><span data-stu-id="654b5-169">You want to be able to update files without recompiling the assembly that they are associated with.</span></span>  
   
--   应用程序使用大型数据文件，如音频和视频，并且您希望仅在用户选择下载时才下载这些文件。  
+-   <span data-ttu-id="654b5-170">应用程序使用大型数据文件（如音频和视频），并且你希望仅在用户选择下载时才下载这些文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-170">Your application uses large data files, such as audio and video, and you only want users to download them if they choose to.</span></span>  
   
- 使用传统的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 方案可以加载这些类型的文件，如 file:\/\/\/ 和 http:\/\/ 方案。  
+ <span data-ttu-id="654b5-171">可以加载这些类型的文件，通过使用传统[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]方案，如 file:/// 和 http:// 方案。</span><span class="sxs-lookup"><span data-stu-id="654b5-171">It is possible to load these types of files by using traditional [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schemes, such as the file:/// and http:// schemes.</span></span>  
   
- [!code-xml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- 但是，file:\/\/\/ 和 http:\/\/ 方案要求应用程序具有完全信任。  如果应用程序是从 Internet 或 Intranet 启动的 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，并且它请求的权限集只针对从这些位置启动的应用程序，则松散文件只能从应用程序的源站点（启动位置）加载。  这样的文件称为“源站点”文件。  
+ <span data-ttu-id="654b5-172">但是，file:/// 和 http:// 方案要求应用程序具有完全信任。</span><span class="sxs-lookup"><span data-stu-id="654b5-172">However, the file:/// and http:// schemes require your application to have full trust.</span></span> <span data-ttu-id="654b5-173">如果你的应用程序[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]启动从 Internet 或 intranet，并且它请求的允许从这些位置中，启动的应用程序只能从原点 （应用程序的站点加载松散文件的权限集启动位置）。</span><span class="sxs-lookup"><span data-stu-id="654b5-173">If your application is a [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] that was launched from the Internet or intranet, and it requests only the set of permissions that are allowed for applications launched from those locations, loose files can only be loaded from the application's site of origin (launch location).</span></span> <span data-ttu-id="654b5-174">此类文件称为*源站点的*文件。</span><span class="sxs-lookup"><span data-stu-id="654b5-174">Such files are known as *site of origin* files.</span></span>  
   
- 虽然源站点文件并不仅限于部分可信应用程序，但它却是部分可信应用程序的唯一选择。  完全可信应用程序可能仍然需要加载它们在生成时所不知道的应用程序数据文件；但是完全可信应用程序可以使用 file:\/\/\/，应用程序数据文件很可能将安装在该应用程序集的同一个文件夹或其子文件夹中。  在此情况下，使用源站点引用比使用 file:\/\/\/ 更加容易，因为使用 file:\/\/\/ 需要找出文件的完整路径。  
+ <span data-ttu-id="654b5-175">虽然源站点文件并不仅限于部分信任应用程序，但这些文件是部分信任应用程序的唯一选择。</span><span class="sxs-lookup"><span data-stu-id="654b5-175">Site of origin files are the only option for partial trust applications, although are not limited to partial trust applications.</span></span> <span data-ttu-id="654b5-176">完全信任应用程序可能仍然需要加载它们在生成时所不知道的应用程序数据文件；但是完全信任应用程序可以使用 file:///，应用程序数据文件很可能将安装在该应用程序程序集所在的文件夹或其子文件夹中。</span><span class="sxs-lookup"><span data-stu-id="654b5-176">Full trust applications may still need to load application data files that they do not know about at build time; while full trust applications could use file:///, it is likely that the application data files will be installed in the same folder as, or a subfolder of, the application assembly.</span></span> <span data-ttu-id="654b5-177">在此情况下，使用源站点引用比使用 file:/// 更加容易，因为使用 file:/// 需要找出文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="654b5-177">In this case, using site of origin referencing is easier than using file:///, because using file:/// requires you to work out the full path the file.</span></span>  
   
 > [!NOTE]
->  源站点文件不会与 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 一起缓存在客户端计算机上，而内容文件却会如此。  所以，只有在专门请求下载源站点文件时，才会下载它们。  如果 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 应用程序有大型媒体文件，则将这些文件配置为源站点文件意味着应用程序初始启动更快，并且这些文件只会按需下载。  
+>  <span data-ttu-id="654b5-178">文件不会缓存使用的源站点的[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]在客户端计算机上，内容文件时。</span><span class="sxs-lookup"><span data-stu-id="654b5-178">Site of origin files are not cached with an [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] on a client machine, while content files are.</span></span> <span data-ttu-id="654b5-179">因此，只有在专门请求下载源站点文件时，才会下载它们。</span><span class="sxs-lookup"><span data-stu-id="654b5-179">Consequently, they are only downloaded when specifically requested.</span></span> <span data-ttu-id="654b5-180">如果[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]应用程序具有大型媒体文件，如源站点文件意味着初始应用程序启动快得多，并且仅按需下载文件对其进行配置。</span><span class="sxs-lookup"><span data-stu-id="654b5-180">If an [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] application has large media files, configuring them as site of origin files means the initial application launch is much faster, and the files are only downloaded on demand.</span></span>  
   
-### 配置源站点文件  
- 如果源站点文件在编译时不存在或未知，则需要使用传统部署机制来确保所需文件在运行时可用，包括使用 `XCopy` 命令行程序或 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)]。  
+### <a name="configuring-site-of-origin-files"></a><span data-ttu-id="654b5-181">配置源站点文件</span><span class="sxs-lookup"><span data-stu-id="654b5-181">Configuring Site of Origin Files</span></span>  
+ <span data-ttu-id="654b5-182">如果你的站点的源文件在编译时是不存在的或未知，则需要使用传统的部署机制，用于确保所需的文件可在运行时，包括使用`XCopy`命令行程序或[!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].</span><span class="sxs-lookup"><span data-stu-id="654b5-182">If your site of origin files are non-existent or unknown at compile time, you need to use traditional deployment mechanisms for ensuring the required files are available at run time, including using either the `XCopy` command-line program or the [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].</span></span>  
   
- 如果在编译时您知道要放置于源站点的文件，但仍然希望避免显式依赖项，则可以将这些文件作为 `None` 项添加到 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 项目中。  与内容文件一样，需要设置 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` 特性来指定将源站点文件复制到一个相对于生成的程序集的位置（通过指定 `Always` 值或 `PreserveNewest` 值）。  
+ <span data-ttu-id="654b5-183">如果您知道在编译时将要放置在源站点的但仍想要避免显式依赖项的文件，则可以添加到这些文件[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]项目用作`None`项。</span><span class="sxs-lookup"><span data-stu-id="654b5-183">If you do know at compile time the files that you would like to be located at the site of origin, but still want to avoid an explicit dependency, you can add those files to an [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] project as `None` item.</span></span> <span data-ttu-id="654b5-184">根据需要设置的内容文件， [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory`特性以指定的站点的原始文件将复制到的位置相对于生成的程序集，通过指定`Always`值或`PreserveNewest`值。</span><span class="sxs-lookup"><span data-stu-id="654b5-184">As with content files, you need to set the [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` attribute to specify that the site of origin file is copied to a location that is relative to the built assembly, by specifying either the `Always` value or the `PreserveNewest` value.</span></span>  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <None Include="PageSiteOfOriginFile.xaml">  
@@ -216,32 +221,32 @@ caps.handback.revision: 21
 ```  
   
 > [!NOTE]
->  在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中，可通过将一个文件添加到项目，并将其 `Build Action` 设置为 `None` 来创建源站点文件。  
+>  <span data-ttu-id="654b5-185">在[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，你创建的原始文件站点通过将文件添加到项目并设置其`Build Action`到`None`。</span><span class="sxs-lookup"><span data-stu-id="654b5-185">In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], you create a site of origin file by adding a file to a project and setting its `Build Action` to `None`.</span></span>  
   
- 在项目生成时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 将指定文件复制到生成输出文件夹。  
+ <span data-ttu-id="654b5-186">当生成该项目时，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]将指定的文件复制到生成输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="654b5-186">When the project is built, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] copies the specified files to the build output folder.</span></span>  
   
-### 使用源站点文件  
- 若要原始文件的站点，可以调用 <xref:System.Windows.Application> 类的 <xref:System.Windows.Application.GetRemoteStream%2A> 方法，同时传递标识原始文件的所需站点的 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  <xref:System.Windows.Application.GetRemoteStream%2A> 将返回一个 <xref:System.Windows.Resources.StreamResourceInfo> 对象，该对象将原始文件的该站点作为 <xref:System.IO.Stream> 公开，并描述其内容类型。  
+### <a name="using-site-of-origin-files"></a><span data-ttu-id="654b5-187">使用源站点文件</span><span class="sxs-lookup"><span data-stu-id="654b5-187">Using Site of Origin Files</span></span>  
+ <span data-ttu-id="654b5-188">若要加载的原始文件的站点，你可以调用<xref:System.Windows.Application.GetRemoteStream%2A>方法<xref:System.Windows.Application>类，并传入包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]标识原始文件的所需的网站。</span><span class="sxs-lookup"><span data-stu-id="654b5-188">To load a site of origin file, you can call the <xref:System.Windows.Application.GetRemoteStream%2A> method of the <xref:System.Windows.Application> class, passing a pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] that identifies the desired site of origin file.</span></span> <span data-ttu-id="654b5-189"><xref:System.Windows.Application.GetRemoteStream%2A>返回<xref:System.Windows.Resources.StreamResourceInfo>对象，它公开的原始文件作为站点<xref:System.IO.Stream>并描述其内容类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-189"><xref:System.Windows.Application.GetRemoteStream%2A> returns a <xref:System.Windows.Resources.StreamResourceInfo> object, which exposes the site of origin file as a <xref:System.IO.Stream> and describes its content type.</span></span>  
   
- 例如，下面的代码演示如何使用 <xref:System.Windows.Application.GetRemoteStream%2A> 来加载 <xref:System.Windows.Controls.Page> 源站点文件，并将其设置为 <xref:System.Windows.Controls.Frame> \(`pageFrame`\) 的内容。  
+ <span data-ttu-id="654b5-190">例如，下面的代码演示如何使用<xref:System.Windows.Application.GetRemoteStream%2A>加载<xref:System.Windows.Controls.Page>源站点的文件，并将其设置为的内容<xref:System.Windows.Controls.Frame>(`pageFrame`)。</span><span class="sxs-lookup"><span data-stu-id="654b5-190">As an example, the following code shows how to use <xref:System.Windows.Application.GetRemoteStream%2A> to load a <xref:System.Windows.Controls.Page> site of origin file and set it as the content of a <xref:System.Windows.Controls.Frame> (`pageFrame`).</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- 虽然通过调用 <xref:System.Windows.Application.GetRemoteStream%2A> 可以访问 <xref:System.IO.Stream>，但是需要进行一些额外的工作来将其转换为将要设置的属性的类型。  可以改为通过使用代码将资源文件直接加载到某个类型的属性，来让 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 负责打开和转换 <xref:System.IO.Stream>。  
+ <span data-ttu-id="654b5-191">虽然通过调用<xref:System.Windows.Application.GetRemoteStream%2A>，可以访问<xref:System.IO.Stream>，你需要执行额外的工作来将其转换为你将为设置与属性的类型。</span><span class="sxs-lookup"><span data-stu-id="654b5-191">While calling <xref:System.Windows.Application.GetRemoteStream%2A> gives you access to the <xref:System.IO.Stream>, you need to perform the additional work of converting it to the type of the property that you'll be setting it with.</span></span> <span data-ttu-id="654b5-192">相反，你可以让[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]负责打开和转换<xref:System.IO.Stream>由加载资源文件直接到使用代码的类型的属性。</span><span class="sxs-lookup"><span data-stu-id="654b5-192">Instead, you can let [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] take care of opening and converting the <xref:System.IO.Stream> by loading a resource file directly into the property of a type using code.</span></span>  
   
- 下面的示例演示如何使用代码将 <xref:System.Windows.Controls.Page> 直接加载到 <xref:System.Windows.Controls.Frame> \(`pageFrame`\)中。  
+ <span data-ttu-id="654b5-193">下面的示例演示如何加载<xref:System.Windows.Controls.Page>直接插入<xref:System.Windows.Controls.Frame>(`pageFrame`) 使用代码。</span><span class="sxs-lookup"><span data-stu-id="654b5-193">The following example shows how to load a <xref:System.Windows.Controls.Page> directly into a <xref:System.Windows.Controls.Frame> (`pageFrame`) using code.</span></span>  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
   
- 下面的示例是与上例等效的标记。  
+ <span data-ttu-id="654b5-194">下面的示例是与上例等效的标记。</span><span class="sxs-lookup"><span data-stu-id="654b5-194">The following example is the markup equivalent of the preceding example.</span></span>  
   
- [!code-xml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
   
 <a name="Rebuilding_after_Changing_Build_Type"></a>   
-## 更改生成类型后重新生成  
- 在更改应用程序数据文件的生成类型后，需要重新生成整个应用程序以确保应用这些更改。  如果只生成应用程序，则不会应用更改。  
+## <a name="rebuilding-after-changing-build-type"></a><span data-ttu-id="654b5-195">更改生成类型后重新生成</span><span class="sxs-lookup"><span data-stu-id="654b5-195">Rebuilding After Changing Build Type</span></span>  
+ <span data-ttu-id="654b5-196">在更改应用程序数据文件的生成类型后，需要重新生成整个应用程序以确保应用这些更改。</span><span class="sxs-lookup"><span data-stu-id="654b5-196">After you change the build type of an application data file, you need to rebuild the entire application to ensure those changes are applied.</span></span> <span data-ttu-id="654b5-197">如果只生成应用程序，则不会应用更改。</span><span class="sxs-lookup"><span data-stu-id="654b5-197">If you only build the application, the changes are not applied.</span></span>  
   
-## 请参阅  
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="654b5-198">另请参阅</span><span class="sxs-lookup"><span data-stu-id="654b5-198">See Also</span></span>  
+ [<span data-ttu-id="654b5-199">WPF 中的 Pack URI</span><span class="sxs-lookup"><span data-stu-id="654b5-199">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

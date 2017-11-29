@@ -1,71 +1,75 @@
 ---
-title: "集合类型依赖项属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合类型属性"
-  - "依赖项属性"
-  - "属性, 集合类型"
-  - "属性, 依赖项"
+title: "集合类型依赖项属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 集合类型依赖项属性
-本主题为属性类型是集合类型的情况下如何实现[依赖项属性](GTMT)提供了指导和建议的模式。  
+# <a name="collection-type-dependency-properties"></a><span data-ttu-id="18258-102">集合类型依赖项属性</span><span class="sxs-lookup"><span data-stu-id="18258-102">Collection-Type Dependency Properties</span></span>
+<span data-ttu-id="18258-103">本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。</span><span class="sxs-lookup"><span data-stu-id="18258-103">This topic provides guidance and suggested patterns for how to implement a dependency property where the type of the property is a collection type.</span></span>  
   
-   
+ 
   
 <a name="implementing"></a>   
-## 实现集合类型依赖项属性  
- 通常情况下对于依赖项属性，遵循的实现是定义一个 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性包装，其中该属性由一个 <xref:System.Windows.DependencyProperty> 标识符（而不是字段或其他构造）支持。  若要实现一个集合类型属性，请遵循同样的模式。  但是，每当集合中包含的类型本身为 <xref:System.Windows.DependencyObject> 或 <xref:System.Windows.Freezable> 派生类时，集合类型属性会使模式更加复杂。  
+## <a name="implementing-a-collection-type-dependency-property"></a><span data-ttu-id="18258-104">实现集合类型依赖属性</span><span class="sxs-lookup"><span data-stu-id="18258-104">Implementing a Collection-Type Dependency Property</span></span>  
+ <span data-ttu-id="18258-105">依赖项属性的一般情况下，你遵循的实现模式是你定义[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]属性包装器，该属性由<xref:System.Windows.DependencyProperty>标识符而不是字段或其他构造。</span><span class="sxs-lookup"><span data-stu-id="18258-105">For a dependency property in general, the implementation pattern that you follow is that you define a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property wrapper, where that property is backed by a <xref:System.Windows.DependencyProperty> identifier rather than a field or other construct.</span></span> <span data-ttu-id="18258-106">实现集合类型属性时也应按照此相同模式。</span><span class="sxs-lookup"><span data-stu-id="18258-106">You follow this same pattern when you implement a collection-type property.</span></span> <span data-ttu-id="18258-107">但是，集合类型属性的复杂性模式集合内包含的类型时本身<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>派生类。</span><span class="sxs-lookup"><span data-stu-id="18258-107">However, a collection-type property introduces some complexity to the pattern whenever the type that is contained within the collection is itself a <xref:System.Windows.DependencyObject> or <xref:System.Windows.Freezable> derived class.</span></span>  
   
 <a name="initializing"></a>   
-## 不使用默认值初始化集合  
- 在您创建依赖项属性时，没有将属性默认值指定为初始字段值，  而是通过依赖项属性元数据指定默认值。  如果属性是一种引用类型，则在依赖项属性元数据中指定的默认值不是各个实例的默认值，而是应用到该类型的所有实例的默认值。  因此，您必须注意不要将集合属性元数据所定义的单个静态集合用作新创建的类型实例的适用默认值。  并且，在类构造函数逻辑中，必须确保特意将集合值设置为唯一的（实例）集合。  否则，会创建一个意外的单独的类。  
+## <a name="initializing-the-collection-beyond-the-default-value"></a><span data-ttu-id="18258-108">不使用默认值初始化集合</span><span class="sxs-lookup"><span data-stu-id="18258-108">Initializing the Collection Beyond the Default Value</span></span>  
+ <span data-ttu-id="18258-109">创建依赖属性时，不要将属性默认值指定为初始字段值。</span><span class="sxs-lookup"><span data-stu-id="18258-109">When you create a dependency property, you do not specify the property default value as the initial field value.</span></span> <span data-ttu-id="18258-110">相反，应通过依赖属性元数据指定默认值。</span><span class="sxs-lookup"><span data-stu-id="18258-110">Instead, you specify the default value through the dependency property metadata.</span></span> <span data-ttu-id="18258-111">如果属性为引用类型，则依赖属性元数据中指定的默认值不是每个实例分别的默认值，而是应用到类型的所有实例的默认值。</span><span class="sxs-lookup"><span data-stu-id="18258-111">If your property is a reference type, the default value specified in dependency property metadata is not a default value per instance; instead it is a default value that applies to all instances of the type.</span></span> <span data-ttu-id="18258-112">因此，对于类型的新创建实例，必须小心，不要将集合属性元数据定义的单个静态集合用作工作默认值。</span><span class="sxs-lookup"><span data-stu-id="18258-112">Therefore you must be careful to not use the singular static collection defined by the collection property metadata as the working default value for newly created instances of your type.</span></span> <span data-ttu-id="18258-113">相反，必须确保有意将集合值设置为唯一（实例）集合，作为类构造函数逻辑的一部分。</span><span class="sxs-lookup"><span data-stu-id="18258-113">Instead, you must make sure that you deliberately set the collection value to a unique (instance) collection as part of your class constructor logic.</span></span> <span data-ttu-id="18258-114">否则，你会创建一个不需要的单例类。</span><span class="sxs-lookup"><span data-stu-id="18258-114">Otherwise you will have created an unintentional singleton class.</span></span>  
   
- 请看下面的示例。  下面的示例部分演示 `Aquarium` 类的定义。  该类定义集合类型依赖项属性 `AquariumObjects`，它将泛型 <xref:System.Collections.Generic.List%601> 类型与 <xref:System.Windows.FrameworkElement> 类型约束一起使用。  在对依赖项属性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 调用中，元数据将默认值建立为一个新的泛型 <xref:System.Collections.Generic.List%601>。  
+ <span data-ttu-id="18258-115">请看下面的示例。</span><span class="sxs-lookup"><span data-stu-id="18258-115">Consider the following example.</span></span> <span data-ttu-id="18258-116">示例的以下部分显示类 `Aquarium` 的定义。</span><span class="sxs-lookup"><span data-stu-id="18258-116">The following section of the example shows the definition for a class `Aquarium`.</span></span> <span data-ttu-id="18258-117">类定义的集合类型依赖项属性`AquariumObjects`，它使用泛型<xref:System.Collections.Generic.List%601>类型具有<xref:System.Windows.FrameworkElement>类型约束。</span><span class="sxs-lookup"><span data-stu-id="18258-117">The class defines the collection type dependency property `AquariumObjects`, which uses the generic <xref:System.Collections.Generic.List%601> type with a <xref:System.Windows.FrameworkElement> type constraint.</span></span> <span data-ttu-id="18258-118">在<xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>依赖项属性，元数据的调用建立的默认值为一个新的泛型<xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="18258-118">In the <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> call for the dependency property, the metadata establishes the default value to be a new generic <xref:System.Collections.Generic.List%601>.</span></span>  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- 但是，如果您只是使用下面的代码，则该单个列表默认值会在 `Aquarium` 的所有实例中共享。  如果运行下面的测试代码（该测试代码旨在演示如何实例化两个独立的 `Aquarium` 实例并向这两个实例中分别添加一个不同的 `Fish`），您会看到令人惊讶的结果：  
+ <span data-ttu-id="18258-119">但是，如果仅如上所示保留代码，该单一列表默认值会对 `Aquarium` 的所有实例共享。</span><span class="sxs-lookup"><span data-stu-id="18258-119">However, if you just left the code as shown, that single list default value is shared for all instances of `Aquarium`.</span></span> <span data-ttu-id="18258-120">如果运行以下测试代码（用于演示如何实例化两个单独的 `Aquarium` 实例并向二者皆添加一个不同的 `Fish`），则其结果可能出乎意料：</span><span class="sxs-lookup"><span data-stu-id="18258-120">If you ran the following test code, which is intended to show how you would instantiate two separate `Aquarium` instances and add a single different `Fish` to each of them, you would see a surprising result:</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- 每个集合的计数不是 1，而是 2\!  这是因为元数据中的单个构造函数调用导致每个 `Aquarium` 都将其 `Fish` 添加到默认值集合，从而会在所有实例中共享。  这种情况应该不是您想要的。  
+ <span data-ttu-id="18258-121">每个集合具有两个计数，而不是一个！</span><span class="sxs-lookup"><span data-stu-id="18258-121">Instead of each collection having a count of one, each collection has a count of two!</span></span> <span data-ttu-id="18258-122">这是因为，每个 `Aquarium` 将其 `Fish` 添加到默认值集合，此默认值集合因元数据中单个构造函数调用而产生，因此会在所有实例之间共享。</span><span class="sxs-lookup"><span data-stu-id="18258-122">This is because each `Aquarium` added its `Fish` to the default value collection, which resulted from a single constructor call in the metadata and is therefore shared between all instances.</span></span> <span data-ttu-id="18258-123">而你全然不希望出现这种情况。</span><span class="sxs-lookup"><span data-stu-id="18258-123">This situation is almost never what you want.</span></span>  
   
- 为了纠正此问题，在类构造函数调用中，必须将集合依赖项属性值重设为唯一的实例。  因为该属性是只读的依赖项属性，所以应使用 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> 方法通过只能在该类中访问的 <xref:System.Windows.DependencyPropertyKey> 对该属性进行设置。  
+ <span data-ttu-id="18258-124">为纠正此问题，必须将集合依赖属性值重置为唯一实例，作为类构造函数调用的一部分。</span><span class="sxs-lookup"><span data-stu-id="18258-124">To correct this problem, you must reset the collection dependency property value to a unique instance, as part of the class constructor call.</span></span> <span data-ttu-id="18258-125">因为该属性是只读的依赖项属性，你使用<xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>方法以设置它，使用<xref:System.Windows.DependencyPropertyKey>，则只需在类中访问。</span><span class="sxs-lookup"><span data-stu-id="18258-125">Because the property is a read-only dependency property, you use the <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> method to set it, using the <xref:System.Windows.DependencyPropertyKey> that is only accessible within the class.</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- 现在，如果您再次运行上述测试代码，应能看到更接近预期的结果，其中每个 `Aquarium` 都支持它自己的唯一集合。  
+ <span data-ttu-id="18258-126">现在，如果再次运行此相同测试代码，则每个 `Aquarium` 会仅支持自己的唯一集合，这样的结果更符合预期。</span><span class="sxs-lookup"><span data-stu-id="18258-126">Now, if you ran that same test code again, you could see more expected results, where each `Aquarium` supported its own unique collection.</span></span>  
   
- 如果您选择使集合属性成为读写属性，则此模式会稍有变化。  此时，您将从构造函数调用公共 set 访问器来执行初始化，即仍使用公共的 <xref:System.Windows.DependencyProperty> 标识符来调用 set 包装中 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> 的非键签名。  
+ <span data-ttu-id="18258-127">如果选择集合属性为读写，则此模式会稍有变化。</span><span class="sxs-lookup"><span data-stu-id="18258-127">There would be a slight variation on this pattern if you chose to have your collection property be read-write.</span></span> <span data-ttu-id="18258-128">在这种情况下，您可以从要执行初始化，而这仍调用的非键签名的构造函数调用公共 set 访问器<xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29>set 包装中, 使用的是公共<xref:System.Windows.DependencyProperty>标识符。</span><span class="sxs-lookup"><span data-stu-id="18258-128">In that case, you could call the public set accessor from the constructor to do the initialization, which would still be calling the nonkey signature of <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> within your set wrapper, using a public <xref:System.Windows.DependencyProperty> identifier.</span></span>  
   
-## 从集合属性报告绑定值更改  
- 本身为依赖项属性的集合属性不会自动报告对其子属性的更改。  如果正在创建与集合的绑定，这可以防止绑定报告更改而使某些数据绑定方案无效。  但是，如果您使用集合类型 <xref:System.Windows.FreezableCollection%601> 作为您的集合类型，则会以合适的方式报告对集合所包含元素的子属性更改，并且绑定会按预期工作。  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a><span data-ttu-id="18258-129">报告集合属性中的绑定值更改</span><span class="sxs-lookup"><span data-stu-id="18258-129">Reporting Binding Value Changes from Collection Properties</span></span>  
+ <span data-ttu-id="18258-130">本身为依赖属性的集合属性不会自动将更改报告给其子属性。</span><span class="sxs-lookup"><span data-stu-id="18258-130">A collection property that is itself a dependency property does not automatically report changes to its subproperties.</span></span> <span data-ttu-id="18258-131">如果将绑定创建到集合，这可阻止绑定报告更改，从而使某些数据绑定方案无效。</span><span class="sxs-lookup"><span data-stu-id="18258-131">If you are creating bindings into a collection, this can prevent the binding from reporting changes, thus invalidating some data binding scenarios.</span></span> <span data-ttu-id="18258-132">但是，如果你使用的集合类型<xref:System.Windows.FreezableCollection%601>作为集合类型，然后在集合中包含的元素的子属性更改正确报告，并按预期工作的绑定。</span><span class="sxs-lookup"><span data-stu-id="18258-132">However, if you use the collection type <xref:System.Windows.FreezableCollection%601> as your collection type, then subproperty changes to contained elements in the collection are properly reported, and binding works as expected.</span></span>  
   
- 若要在依赖项对象集合中启用子属性绑定，请将集合属性创建为类型 <xref:System.Windows.FreezableCollection%601>，该集合的类型约束到任何 <xref:System.Windows.DependencyObject> 派生类。  
+ <span data-ttu-id="18258-133">若要启用依赖项对象集合中的子属性绑定，创建作为类型的集合属性<xref:System.Windows.FreezableCollection%601>，到任何该集合的类型约束<xref:System.Windows.DependencyObject>派生类。</span><span class="sxs-lookup"><span data-stu-id="18258-133">To enable subproperty binding in a dependency object collection, create the collection property as type <xref:System.Windows.FreezableCollection%601>, with a type constraint for that collection to any <xref:System.Windows.DependencyObject> derived class.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.FreezableCollection%601>   
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="18258-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="18258-134">See Also</span></span>  
+ <xref:System.Windows.FreezableCollection%601>  
+ [<span data-ttu-id="18258-135">XAML 及 WPF 的自定义类</span><span class="sxs-lookup"><span data-stu-id="18258-135">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="18258-136">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="18258-136">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="18258-137">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="18258-137">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="18258-138">自定义依赖属性</span><span class="sxs-lookup"><span data-stu-id="18258-138">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="18258-139">依赖属性元数据</span><span class="sxs-lookup"><span data-stu-id="18258-139">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

@@ -1,106 +1,111 @@
 ---
-title: "数据协定中的枚举类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据协定 [WCF], 枚举类型"
+title: "数据协定中的枚举类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea76ae136695ce2dc9eca0a9c7660e4e1ffe547d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 数据协定中的枚举类型
-枚举可以用数据协定模型来表示。  本主题演练几个介绍编程模型的示例。  
+# <a name="enumeration-types-in-data-contracts"></a><span data-ttu-id="976ae-102">数据协定中的枚举类型</span><span class="sxs-lookup"><span data-stu-id="976ae-102">Enumeration Types in Data Contracts</span></span>
+<span data-ttu-id="976ae-103">枚举可以用数据协定模型来表示。</span><span class="sxs-lookup"><span data-stu-id="976ae-103">Enumerations can be expressed in the data contract model.</span></span> <span data-ttu-id="976ae-104">本主题演练几个介绍编程模型的示例。</span><span class="sxs-lookup"><span data-stu-id="976ae-104">This topic walks through several examples that explain the programming model.</span></span>  
   
-## 枚举基础知识  
- 若要使用以数据协定模型表示的枚举类型，一种方法就是将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于该类型。  然后，必须将 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性应用于每个必须在数据协定中包含的成员。  
+## <a name="enumeration-basics"></a><span data-ttu-id="976ae-105">枚举基础知识</span><span class="sxs-lookup"><span data-stu-id="976ae-105">Enumeration Basics</span></span>  
+ <span data-ttu-id="976ae-106">若要使用以数据协定模型表示的枚举类型，一种方法就是将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于该类型。</span><span class="sxs-lookup"><span data-stu-id="976ae-106">One way to use enumeration types in the data contract model is to apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the type.</span></span> <span data-ttu-id="976ae-107">然后，必须将 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性应用于每个必须在数据协定中包含的成员。</span><span class="sxs-lookup"><span data-stu-id="976ae-107">You must then apply the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute to each member that must be included in the data contract.</span></span>  
   
- 下面的示例演示了两个类。  第一个类使用枚举，第二个类定义枚举。  
+ <span data-ttu-id="976ae-108">下面的示例演示了两个类。</span><span class="sxs-lookup"><span data-stu-id="976ae-108">The following example shows two classes.</span></span> <span data-ttu-id="976ae-109">第一个类使用枚举，第二个类定义枚举。</span><span class="sxs-lookup"><span data-stu-id="976ae-109">The first uses the enumeration and the second defines the enumeration.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#1)]
  [!code-vb[c_DataContractEnumerations#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#1)]  
   
- 仅当将 `condition` 字段的值设置为 `New`、`Used` 或 `Rental` 之一时，才可发送或接收 `Car` 类的实例。  如果 `condition` 为 `Broken` 或 `Stolen`，则会引发一个 <xref:System.Runtime.Serialization.SerializationException>。  
+ <span data-ttu-id="976ae-110">仅当将 `Car` 字段的值设置为 `condition`、`New` 或 `Used` 之一时，才可发送或接收 `Rental` 类的实例。</span><span class="sxs-lookup"><span data-stu-id="976ae-110">An instance of the `Car` class can be sent or received only if the `condition` field is set to one of the values `New`, `Used`, or `Rental`.</span></span> <span data-ttu-id="976ae-111">如果 `condition` 为 `Broken` 或 `Stolen`，则会引发一个 <xref:System.Runtime.Serialization.SerializationException>。</span><span class="sxs-lookup"><span data-stu-id="976ae-111">If the `condition` is `Broken` or `Stolen`, a <xref:System.Runtime.Serialization.SerializationException> is thrown.</span></span>  
   
- 可以照常将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性（<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>）用于枚举数据协定。  
+ <span data-ttu-id="976ae-112">可以照常将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性（<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>）用于枚举数据协定。</span><span class="sxs-lookup"><span data-stu-id="976ae-112">You can use the <xref:System.Runtime.Serialization.DataContractAttribute> properties (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> and <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) as usual for enumeration data contracts.</span></span>  
   
-### 枚举成员值  
- 通常数据协定包括枚举成员名称，而不包括数值。  但是，如果使用数据协定模型并且接收端为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，则导出的架构保留数值。  请注意，如果使用 [使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)，则情况并非如此。  
+### <a name="enumeration-member-values"></a><span data-ttu-id="976ae-113">枚举成员值</span><span class="sxs-lookup"><span data-stu-id="976ae-113">Enumeration Member Values</span></span>  
+ <span data-ttu-id="976ae-114">通常数据协定包括枚举成员名称，而不包括数值。</span><span class="sxs-lookup"><span data-stu-id="976ae-114">Generally the data contract includes enumeration member names, not numerical values.</span></span> <span data-ttu-id="976ae-115">但是，如果使用数据协定模型并且接收端为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，则导出的架构保留数值。</span><span class="sxs-lookup"><span data-stu-id="976ae-115">However, when using the data contract model, if the receiving side is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, the exported schema preserves the numerical values.</span></span> <span data-ttu-id="976ae-116">请注意，这不是这样使用时[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。</span><span class="sxs-lookup"><span data-stu-id="976ae-116">Note that this is not the case when using the [Using the XmlSerializer Class](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).</span></span>  
   
- 在上面的示例中，如果将 `condition` 设置为 `Used` 并且将数据序列化为 XML，则生成的 XML 是 `<condition>Used</condition>` 而不是 `<condition>1</condition>`。  因此，下面的数据协定等效于 `CarConditionEnum` 的数据协定。  
+ <span data-ttu-id="976ae-117">在上面的示例中，如果将 `condition` 设置为 `Used` 并且将数据序列化为 XML，则生成的 XML 是 `<condition>Used</condition>` 而不是 `<condition>1</condition>`。</span><span class="sxs-lookup"><span data-stu-id="976ae-117">In the preceding example, if `condition` is set to `Used` and the data is serialized to XML, the resulting XML is `<condition>Used</condition>` and not `<condition>1</condition>`.</span></span> <span data-ttu-id="976ae-118">因此，下面的数据协定等效于 `CarConditionEnum` 的数据协定。</span><span class="sxs-lookup"><span data-stu-id="976ae-118">Therefore, the following data contract is equivalent to the data contract of `CarConditionEnum`.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#2)]
  [!code-vb[c_DataContractEnumerations#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#2)]  
   
- 例如，您可以在发送端使用 `CarConditionEnum` 并且在接收端使用 `CarConditionWithNumbers`。  尽管发送端的 `Used` 使用值“1”而接收端使用值“20”，但是两端的 XML 表示形式均为 `<condition>Used</condition>`。  
+ <span data-ttu-id="976ae-119">例如，您可以在发送端使用 `CarConditionEnum` 并且在接收端使用 `CarConditionWithNumbers`。</span><span class="sxs-lookup"><span data-stu-id="976ae-119">For example, you can use `CarConditionEnum` on the sending side and `CarConditionWithNumbers` on the receiving side.</span></span> <span data-ttu-id="976ae-120">尽管发送端的 `Used` 使用值“1”而接收端使用值“20”，但是两端的 XML 表示形式均为 `<condition>Used</condition>`。</span><span class="sxs-lookup"><span data-stu-id="976ae-120">Although the sending side uses the value "1" for `Used` and the receiving side uses the value "20," the XML representation is `<condition>Used</condition>` for both sides.</span></span>  
   
- 若要包含在数据协定中，必须应用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。  在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，可以始终将特殊值 0（零）应用到枚举中，它是任何枚举的默认值。  但是，即使对于此特殊值零，也只能使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性标记才能进行序列化。  
+ <span data-ttu-id="976ae-121">若要包含在数据协定中，必须应用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="976ae-121">To be included in the data contract, you must apply the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute.</span></span> <span data-ttu-id="976ae-122">在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，可以始终将特殊值 0（零）应用到枚举中，它是任何枚举的默认值。</span><span class="sxs-lookup"><span data-stu-id="976ae-122">In the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], you can always apply the special value 0 (zero) to an enumeration, which is also the default value for any enumeration.</span></span> <span data-ttu-id="976ae-123">但是，即使对于此特殊值零，也只能使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性标记才能进行序列化。</span><span class="sxs-lookup"><span data-stu-id="976ae-123">However, even this special zero value cannot be serialized unless it is marked with the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute.</span></span>  
   
- 以下为此规则的两种例外情况：  
+ <span data-ttu-id="976ae-124">以下为此规则的两种例外情况：</span><span class="sxs-lookup"><span data-stu-id="976ae-124">There are two exceptions to this:</span></span>  
   
--   标志枚举（本主题的后面部分将进行讨论）。  
+-   <span data-ttu-id="976ae-125">标志枚举（本主题的后面部分将进行讨论）。</span><span class="sxs-lookup"><span data-stu-id="976ae-125">Flag enumerations (discussed later in this topic).</span></span>  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 属性设置为 `false` 的枚举数据成员（这种情况下将从序列化数据中省略值为零的枚举）。  
+-   <span data-ttu-id="976ae-126"><xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 属性设置为 `false` 的枚举数据成员（这种情况下将从序列化数据中省略值为零的枚举）。</span><span class="sxs-lookup"><span data-stu-id="976ae-126">Enumeration data members with the <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> property set to `false` (in which case, the enumeration with the value zero is omitted from the serialized data).</span></span>  
   
-### 自定义枚举成员值  
- 可以通过使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性 \(attribute\) 的 <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 属性 \(property\) 对作为数据协定构成部分的枚举成员值进行自定义。  
+### <a name="customizing-enumeration-member-values"></a><span data-ttu-id="976ae-127">自定义枚举成员值</span><span class="sxs-lookup"><span data-stu-id="976ae-127">Customizing Enumeration Member Values</span></span>  
+ <span data-ttu-id="976ae-128">可以通过使用 <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 属性 (attribute) 的 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性 (property) 对作为数据协定构成部分的枚举成员值进行自定义。</span><span class="sxs-lookup"><span data-stu-id="976ae-128">You can customize the enumeration member value that forms a part of the data contract by using the <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> property of the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute.</span></span>  
   
- 例如，下面的数据协定也等效于 `CarConditionEnum` 的数据协定。  
+ <span data-ttu-id="976ae-129">例如，下面的数据协定也等效于 `CarConditionEnum` 的数据协定。</span><span class="sxs-lookup"><span data-stu-id="976ae-129">For example, the following data contract is also equivalent to the data contract of the `CarConditionEnum`.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#3)]
  [!code-vb[c_DataContractEnumerations#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#3)]  
   
- 在序列化时，`PreviouslyOwned` 的值的 XML 表示形式为 `<condition>Used</condition>`。  
+ <span data-ttu-id="976ae-130">在序列化时，`PreviouslyOwned` 的值的 XML 表示形式为 `<condition>Used</condition>`。</span><span class="sxs-lookup"><span data-stu-id="976ae-130">When serialized, the value of `PreviouslyOwned` has the XML representation `<condition>Used</condition>`.</span></span>  
   
-## 简单枚举  
- 您还可以对未向其应用 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的枚举类型进行序列化。  可以按照上述方式来处理这种枚举类型，只不过将每个成员（这些成员未应用 <xref:System.NonSerializedAttribute> 属性）视为已应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。  例如，下面的枚举隐式具有一个与上面的 `CarConditionEnum` 示例等效的数据协定。  
+## <a name="simple-enumerations"></a><span data-ttu-id="976ae-131">简单枚举</span><span class="sxs-lookup"><span data-stu-id="976ae-131">Simple Enumerations</span></span>  
+ <span data-ttu-id="976ae-132">您还可以对未向其应用 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的枚举类型进行序列化。</span><span class="sxs-lookup"><span data-stu-id="976ae-132">You can also serialize enumeration types to which the <xref:System.Runtime.Serialization.DataContractAttribute> attribute has not been applied.</span></span> <span data-ttu-id="976ae-133">可以按照上述方式来处理这种枚举类型，只不过将每个成员（这些成员未应用 <xref:System.NonSerializedAttribute> 属性）视为已应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="976ae-133">Such enumeration types are treated exactly as previously described, except that every member (that does not have the <xref:System.NonSerializedAttribute> attribute applied) is treated as if the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute has been applied.</span></span> <span data-ttu-id="976ae-134">例如，下面的枚举隐式具有一个与上面的 `CarConditionEnum` 示例等效的数据协定。</span><span class="sxs-lookup"><span data-stu-id="976ae-134">For example, the following enumeration implicitly has a data contract equivalent to the preceding `CarConditionEnum` example.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#6)]
  [!code-vb[c_DataContractEnumerations#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#6)]  
   
- 如果您不需要自定义枚举的数据协定名称、命名空间以及枚举成员值，则可以使用简单枚举。  
+ <span data-ttu-id="976ae-135">如果您不需要自定义枚举的数据协定名称、命名空间以及枚举成员值，则可以使用简单枚举。</span><span class="sxs-lookup"><span data-stu-id="976ae-135">You can use simple enumerations when you do not need to customize the enumeration's data contract name and namespace and the enumeration member values.</span></span>  
   
-#### 简单枚举说明  
- 将 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性应用于简单枚举是无效的。  
+#### <a name="notes-on-simple-enumerations"></a><span data-ttu-id="976ae-136">简单枚举说明</span><span class="sxs-lookup"><span data-stu-id="976ae-136">Notes on Simple Enumerations</span></span>  
+ <span data-ttu-id="976ae-137">将 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性应用于简单枚举是无效的。</span><span class="sxs-lookup"><span data-stu-id="976ae-137">Applying the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute to simple enumerations has no effect.</span></span>  
   
- 是否将 <xref:System.SerializableAttribute> 属性应用于简单枚举并没有任何区别。  
+ <span data-ttu-id="976ae-138">是否将 <xref:System.SerializableAttribute> 属性应用于简单枚举并没有任何区别。</span><span class="sxs-lookup"><span data-stu-id="976ae-138">It makes no difference whether or not the <xref:System.SerializableAttribute> attribute is applied to the enumeration.</span></span>  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> 类采用应用于枚举成员的 <xref:System.NonSerializedAttribute> 属性的事实不同于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 的行为。  这两种序列化程序都忽略 <xref:System.NonSerializedAttribute> 属性。  
+ <span data-ttu-id="976ae-139"><xref:System.Runtime.Serialization.DataContractSerializer> 类采用应用于枚举成员的 <xref:System.NonSerializedAttribute> 属性的事实不同于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 的行为。</span><span class="sxs-lookup"><span data-stu-id="976ae-139">The fact that the <xref:System.Runtime.Serialization.DataContractSerializer> class honors the <xref:System.NonSerializedAttribute> attribute applied to enumeration members is different from the behavior of the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and the <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span></span> <span data-ttu-id="976ae-140">这两种序列化程序都忽略 <xref:System.NonSerializedAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="976ae-140">Both of those serializers ignore the <xref:System.NonSerializedAttribute> attribute.</span></span>  
   
-## 标志枚举  
- 可以将 <xref:System.FlagsAttribute> 属性应用于枚举。  在这种情况下，可以同时发送或接收包含零个或多个枚举值的列表。  
+## <a name="flag-enumerations"></a><span data-ttu-id="976ae-141">标志枚举</span><span class="sxs-lookup"><span data-stu-id="976ae-141">Flag Enumerations</span></span>  
+ <span data-ttu-id="976ae-142">可以将 <xref:System.FlagsAttribute> 属性应用于枚举。</span><span class="sxs-lookup"><span data-stu-id="976ae-142">You can apply the <xref:System.FlagsAttribute> attribute to enumerations.</span></span> <span data-ttu-id="976ae-143">在这种情况下，可以同时发送或接收包含零个或多个枚举值的列表。</span><span class="sxs-lookup"><span data-stu-id="976ae-143">In that case, a list of zero or more enumeration values can be sent or received simultaneously.</span></span>  
   
- 为此，请将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于标志枚举，然后使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性对所有为 2 的幂的成员进行标记。  请注意，若要使用标志枚举，级数必须为不间断的 2 的幂的序列（例如，1、2、4、8、16、32、64）。  
+ <span data-ttu-id="976ae-144">为此，请将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于标志枚举，然后使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性对所有为 2 的幂的成员进行标记。</span><span class="sxs-lookup"><span data-stu-id="976ae-144">To do so, apply the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the flag enumeration and then mark all the members that are powers of two with the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute.</span></span> <span data-ttu-id="976ae-145">请注意，若要使用标志枚举，级数必须为不间断的 2 的幂的序列（例如，1、2、4、8、16、32、64）。</span><span class="sxs-lookup"><span data-stu-id="976ae-145">Note that to use a flag enumeration, the progression must be an uninterrupted sequence of powers of 2 (for example, 1, 2, 4, 8, 16, 32, 64).</span></span>  
   
- 可以使用下面的步骤来发送标志的枚举值：  
+ <span data-ttu-id="976ae-146">可以使用下面的步骤来发送标志的枚举值：</span><span class="sxs-lookup"><span data-stu-id="976ae-146">The following steps apply to sending a flag's enumeration value:</span></span>  
   
-1.  尝试查找映射到数值的枚举成员（应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）。  如果可以找到，请发送仅包含该成员的列表。  
+1.  <span data-ttu-id="976ae-147">尝试查找映射到数值的枚举成员（应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）。</span><span class="sxs-lookup"><span data-stu-id="976ae-147">Attempt to find an enumeration member (with the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute applied) that maps to the numeric value.</span></span> <span data-ttu-id="976ae-148">如果可以找到，请发送仅包含该成员的列表。</span><span class="sxs-lookup"><span data-stu-id="976ae-148">If found, send a list that contains just that member.</span></span>  
   
-2.  尝试将此数值分解为和的形式，以便枚举成员（每个成员都应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）可以映射到和的各个部分。  发送包含所有这些成员的列表。  请注意，将使用“贪婪算法”查找这样的和，因此即使存在这样的和，也不一定能找到它。  为避免出现这种问题，请确保枚举成员的数值为 2 的幂。  
+2.  <span data-ttu-id="976ae-149">尝试将此数值分解为和的形式，以便枚举成员（每个成员都应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）可以映射到和的各个部分。</span><span class="sxs-lookup"><span data-stu-id="976ae-149">Attempt to break the numeric value into a sum such that there are enumeration members (each with the <xref:System.Runtime.Serialization.EnumMemberAttribute> attribute applied) that map to each part of the sum.</span></span> <span data-ttu-id="976ae-150">发送包含所有这些成员的列表。</span><span class="sxs-lookup"><span data-stu-id="976ae-150">Send the list of all these members.</span></span> <span data-ttu-id="976ae-151">请注意，*贪婪算法*用于查找这样的和，并因此就不能保证即使存在找到这样的和。</span><span class="sxs-lookup"><span data-stu-id="976ae-151">Note that the *greedy algorithm* is used to find such a sum, and thus there is no guarantee that such a sum is found even if it is present.</span></span> <span data-ttu-id="976ae-152">为避免出现这种问题，请确保枚举成员的数值为 2 的幂。</span><span class="sxs-lookup"><span data-stu-id="976ae-152">To avoid this problem, make sure that the numeric values of the enumeration members are powers of two.</span></span>  
   
-3.  如果上面的两个步骤均无法实现并且数值为非零，则引发一个 <xref:System.Runtime.Serialization.SerializationException>。  如果数值为零，则发送空列表。  
+3.  <span data-ttu-id="976ae-153">如果上面的两个步骤均无法实现并且数值为非零，则引发一个 <xref:System.Runtime.Serialization.SerializationException>。</span><span class="sxs-lookup"><span data-stu-id="976ae-153">If the preceding two steps fail, and the numeric value is nonzero, throw a <xref:System.Runtime.Serialization.SerializationException>.</span></span> <span data-ttu-id="976ae-154">如果数值为零，则发送空列表。</span><span class="sxs-lookup"><span data-stu-id="976ae-154">If the numeric value is zero, send the empty list.</span></span>  
   
-### 示例  
- 下面的枚举示例可用于标志操作。  
+### <a name="example"></a><span data-ttu-id="976ae-155">示例</span><span class="sxs-lookup"><span data-stu-id="976ae-155">Example</span></span>  
+ <span data-ttu-id="976ae-156">下面的枚举示例可用于标志操作。</span><span class="sxs-lookup"><span data-stu-id="976ae-156">The following enumeration example can be used in a flag operation.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#4)]
  [!code-vb[c_DataContractEnumerations#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#4)]  
   
- 下面的示例值将按照指示的方式进行序列化。  
+ <span data-ttu-id="976ae-157">下面的示例值将按照指示的方式进行序列化。</span><span class="sxs-lookup"><span data-stu-id="976ae-157">The following example values are serialized as indicated.</span></span>  
   
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## 请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="976ae-158">另请参阅</span><span class="sxs-lookup"><span data-stu-id="976ae-158">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [<span data-ttu-id="976ae-159">使用数据协定</span><span class="sxs-lookup"><span data-stu-id="976ae-159">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="976ae-160">Specifying Data Transfer in Service Contracts</span><span class="sxs-lookup"><span data-stu-id="976ae-160">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

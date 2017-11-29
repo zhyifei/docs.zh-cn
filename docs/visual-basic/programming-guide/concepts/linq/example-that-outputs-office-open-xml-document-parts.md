@@ -1,34 +1,30 @@
 ---
-title: "输出 Office Open XML 文档部件 (Visual Basic 中) 的示例 |Microsoft 文档"
+title: "示例输出 Office Open XML 文档部件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72e8cd6126cd049cafff6e18e1ef609f600cf7c9
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 96596c86674f5df2b9949a07adab2f313a07633d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>输出 Office Open XML 文档部件 (Visual Basic 中) 的示例
-本主题演示如何打开 Office Open XML 文档并访问其中的部分。  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="cd278-102">示例输出 Office Open XML 文档部件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd278-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="cd278-103">本主题演示如何打开 Office Open XML 文档并访问其中的部分。</span><span class="sxs-lookup"><span data-stu-id="cd278-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例打开 Office Open XML 文档，并将文档部分和样式部分输出到控制台。  
+## <a name="example"></a><span data-ttu-id="cd278-104">示例</span><span class="sxs-lookup"><span data-stu-id="cd278-104">Example</span></span>  
+ <span data-ttu-id="cd278-105">下面的示例打开 Office Open XML 文档，并将文档部分和样式部分输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="cd278-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- 本示例使用 WindowsBase 程序集中的类。 它使用中的类型<xref:System.IO.Packaging?displayProperty=fullName>命名空间。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="cd278-106">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="cd278-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="cd278-107">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="cd278-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -77,5 +73,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="cd278-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cd278-108">See Also</span></span>  
+ [<span data-ttu-id="cd278-109">详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd278-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

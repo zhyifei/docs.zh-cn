@@ -1,34 +1,36 @@
 ---
-title: "如何：实现 Windows Communication Foundation 服务协定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "服务协定 [WCF], 实现"
+title: "如何：实现 Windows Communication Foundation 服务协定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c8ef9d97d9ed76175c0ca4c4d5ba40ca401f8f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：实现 Windows Communication Foundation 服务协定
-这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务和可以调用该服务的客户端所需的六项任务中的第二项任务。  有关全部六项任务的概述，请参见[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="2fb2c-102">如何：实现 Windows Communication Foundation 服务协定</span><span class="sxs-lookup"><span data-stu-id="2fb2c-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+<span data-ttu-id="2fb2c-103">这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务和可以调用该服务的客户端所需的六项任务中的第二项任务。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-103">This is the second of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service and a client that can call the service.</span></span> <span data-ttu-id="2fb2c-104">所有六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- 创建 WCF 应用程序的下一步是实现服务接口。  这涉及到创建一个名为 `CalculatorService` 的类，该类实现用户定义的 `ICalculator` 接口。  
+ <span data-ttu-id="2fb2c-105">创建 WCF 应用程序的下一步是实现服务接口。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="2fb2c-106">这涉及到创建一个名为 `CalculatorService` 的类，该类实现用户定义的 `ICalculator` 接口。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>  
   
-### 实现 WCF 服务协定  
+### <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="2fb2c-107">实现 WCF 服务协定</span><span class="sxs-lookup"><span data-stu-id="2fb2c-107">To implement a WCF service contract</span></span>  
   
-1.  打开 Service1.cs 或 Service1.vb 文件进行编辑，并添加以下代码：  
+1.  <span data-ttu-id="2fb2c-108">打开 Service1.cs 或 Service1.vb 文件进行编辑，并添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="2fb2c-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>  
   
     ```csharp  
     //Service1.cs  
@@ -77,10 +79,9 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
-    ```  
+    ```vb
     ‘Service1.vb  
     Imports System  
     Imports System.ServiceModel  
@@ -125,12 +126,12 @@ caps.handback.revision: 38
     End Namespace  
     ```  
   
-     每个方法都实现计算器操作，并将一些文本写入控制台以便简化测试。  
+     <span data-ttu-id="2fb2c-109">每个方法都实现计算器操作，并将一些文本写入控制台以便简化测试。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>  
   
-## 示例  
- 下面的代码演示定义协定的接口和接口的实现。  
+## <a name="example"></a><span data-ttu-id="2fb2c-110">示例</span><span class="sxs-lookup"><span data-stu-id="2fb2c-110">Example</span></span>  
+ <span data-ttu-id="2fb2c-111">下面的代码演示定义协定的接口和接口的实现。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -154,10 +155,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +204,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```vb
 ‘IService.vb  
 Imports System  
 Imports System.ServiceModel  
@@ -229,7 +228,7 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
-```  
+```vb
 Imports System  
 Imports System.ServiceModel  
   
@@ -273,11 +272,11 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
- 现在已创建并实现了服务协定。  生成该解决方案以确保不存在编译错误，然后按照[如何：承载和运行基本的服务](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)中的说明运行服务。  有关疑难解答信息，请参见[入门教程疑难解答](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
+ <span data-ttu-id="2fb2c-112">现在已创建并实现了服务协定。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-112">Now the service contract is created and implemented.</span></span> <span data-ttu-id="2fb2c-113">生成解决方案以确保没有编译错误并继续[如何： 承载和运行基本服务](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)运行该服务。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-113">Build the solution to ensure there are no compilation errors and then proceed to [How to: Host and Run a Basic Service](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) to run the service.</span></span> <span data-ttu-id="2fb2c-114">有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-114">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>  
   
-## 编译代码  
- 如果使用的是 Visual Studio，请在“生成”菜单上单击“生成解决方案”（或按 Ctrl\+Shift\+B）。  
+## <a name="compiling-the-code"></a><span data-ttu-id="2fb2c-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="2fb2c-115">Compiling the Code</span></span>  
+ <span data-ttu-id="2fb2c-116">如果使用 Visual Studio，在生成菜单上单击生成解决方案 （或按 CTRL + SHIFT + B）。</span><span class="sxs-lookup"><span data-stu-id="2fb2c-116">If you are using Visual Studio, on the Build menu click Build Solution (or press CTRL+SHIFT+B).</span></span>  
   
-## 请参阅  
- [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [自承载](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="2fb2c-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2fb2c-117">See Also</span></span>  
+ [<span data-ttu-id="2fb2c-118">入门</span><span class="sxs-lookup"><span data-stu-id="2fb2c-118">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="2fb2c-119">自承载</span><span class="sxs-lookup"><span data-stu-id="2fb2c-119">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

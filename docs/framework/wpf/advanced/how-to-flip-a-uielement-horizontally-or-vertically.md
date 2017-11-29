@@ -1,60 +1,63 @@
 ---
-title: "如何：水平或垂直翻转 UIElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "翻转 UIElements"
-  - "UIElements, 翻转"
+title: "如何：水平或垂直翻转 UIElement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flipping UIElements [WPF]
+- UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84d1360246141cfa565d669fff108e3e4db3ce33
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：水平或垂直翻转 UIElement
-本示例演示如何使用 <xref:System.Windows.Media.ScaleTransform> 水平或垂直翻转 <xref:System.Windows.UIElement>。  在本示例中，通过向一个 <xref:System.Windows.UIElement> 类型的 <xref:System.Windows.Controls.Button> 控件的 <xref:System.Windows.UIElement.RenderTransform%2A> 属性应用 <xref:System.Windows.Media.ScaleTransform> 来翻转该控件。  
+# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a><span data-ttu-id="653f8-102">如何：水平或垂直翻转 UIElement</span><span class="sxs-lookup"><span data-stu-id="653f8-102">How to: Flip a UIElement Horizontally or Vertically</span></span>
+<span data-ttu-id="653f8-103">此示例演示如何使用<xref:System.Windows.Media.ScaleTransform>翻转<xref:System.Windows.UIElement>水平或垂直。</span><span class="sxs-lookup"><span data-stu-id="653f8-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to flip a <xref:System.Windows.UIElement> horizontally or vertically.</span></span> <span data-ttu-id="653f8-104">在此示例中，<xref:System.Windows.Controls.Button>控件 (一种<xref:System.Windows.UIElement>) 通过应用翻转<xref:System.Windows.Media.ScaleTransform>到其<xref:System.Windows.UIElement.RenderTransform%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="653f8-104">In this example, a <xref:System.Windows.Controls.Button> control (a type of <xref:System.Windows.UIElement>) is flipped by applying a <xref:System.Windows.Media.ScaleTransform> to its <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span>  
   
-## 示例  
- 下图显示要翻转的按钮。  
+## <a name="example"></a><span data-ttu-id="653f8-105">示例</span><span class="sxs-lookup"><span data-stu-id="653f8-105">Example</span></span>  
+ <span data-ttu-id="653f8-106">下图显示要翻转的按钮。</span><span class="sxs-lookup"><span data-stu-id="653f8-106">The following illustration shows the button to flip.</span></span>  
   
- ![无变换的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.png "graphicsmm\_buttonflipbeforeflip")  
-要翻转的 UIElement  
+ <span data-ttu-id="653f8-107">![未进行任何变换的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")</span><span class="sxs-lookup"><span data-stu-id="653f8-107">![A button with no transform](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipbeforeflip.gif "graphicsmm_buttonflipbeforeflip")</span></span>  
+<span data-ttu-id="653f8-108">若要翻转 UIElement</span><span class="sxs-lookup"><span data-stu-id="653f8-108">The UIElement to flip</span></span>  
   
- 下面显示创建该按钮的代码。  
+ <span data-ttu-id="653f8-109">下面显示创建按钮的代码。</span><span class="sxs-lookup"><span data-stu-id="653f8-109">The following shows the code that creates the button.</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
+ [!code-xaml[Transforms_snip#GraphicsMMButtonWithoutFlip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmbuttonwithoutflip)]  
   
-## 示例  
- 若要水平翻转按钮，请创建一个 <xref:System.Windows.Media.ScaleTransform> 并将它的 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 属性设置为 \-1。  将 <xref:System.Windows.Media.ScaleTransform> 应用于按钮的 <xref:System.Windows.UIElement.RenderTransform%2A> 属性。  
+## <a name="example"></a><span data-ttu-id="653f8-110">示例</span><span class="sxs-lookup"><span data-stu-id="653f8-110">Example</span></span>  
+ <span data-ttu-id="653f8-111">若要水平翻转的按钮，创建<xref:System.Windows.Media.ScaleTransform>并设置其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>为-1 的属性。</span><span class="sxs-lookup"><span data-stu-id="653f8-111">To flip the button horizontally, create a <xref:System.Windows.Media.ScaleTransform> and set its <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> property to -1.</span></span> <span data-ttu-id="653f8-112">应用<xref:System.Windows.Media.ScaleTransform>到按钮的<xref:System.Windows.UIElement.RenderTransform%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="653f8-112">Apply the <xref:System.Windows.Media.ScaleTransform> to the button's <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample1)]  
   
- ![围绕 &#40;0,0&#41; 水平翻转的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.png "graphicsmm\_buttonfliphorizontalflip\_displaced")  
-应用 ScaleTransform 之后的按钮  
+ <span data-ttu-id="653f8-113">![有关水平翻转的按钮 &#40; 0，0 &#41;] (../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")</span><span class="sxs-lookup"><span data-stu-id="653f8-113">![A button flipped horizontally about &#40;0,0&#41;](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-displaced.gif "graphicsmm_buttonfliphorizontalflip_displaced")</span></span>  
+<span data-ttu-id="653f8-114">在应用 scaletransform 缩放后按钮</span><span class="sxs-lookup"><span data-stu-id="653f8-114">The button after applying the ScaleTransform</span></span>  
   
-## 示例  
- 从上图可以看出，翻转了按钮，但是同时也移动了该按钮。  这是因为按钮是从左上角开始翻转的。  若要原地翻转按钮，需要将 <xref:System.Windows.Media.ScaleTransform> 应用于按钮的中心，而不是角。  将 <xref:System.Windows.Media.ScaleTransform> 应用于按钮中心的一个简便方法是将按钮的 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 属性设置为 0.5, 0.5。  
+## <a name="example"></a><span data-ttu-id="653f8-115">示例</span><span class="sxs-lookup"><span data-stu-id="653f8-115">Example</span></span>  
+ <span data-ttu-id="653f8-116">正如您可以看到从上图中，已翻转的按钮，但它已移动。</span><span class="sxs-lookup"><span data-stu-id="653f8-116">As you can see from the previous illustration, the button was flipped, but it was also moved.</span></span> <span data-ttu-id="653f8-117">这是因为已从其左上角翻转的按钮。</span><span class="sxs-lookup"><span data-stu-id="653f8-117">That's because the button was flipped from its top left corner.</span></span> <span data-ttu-id="653f8-118">若要就地翻转的按钮，你想要应用<xref:System.Windows.Media.ScaleTransform>到的中心，而不是角。</span><span class="sxs-lookup"><span data-stu-id="653f8-118">To flip the button in place, you want to apply the <xref:System.Windows.Media.ScaleTransform> to its center, not its corner.</span></span> <span data-ttu-id="653f8-119">应用的简单办法<xref:System.Windows.Media.ScaleTransform>center 是为的按钮： 设置按钮的<xref:System.Windows.UIElement.RenderTransformOrigin%2A>属性设置为 0.5，0.5。</span><span class="sxs-lookup"><span data-stu-id="653f8-119">An easy way to apply the <xref:System.Windows.Media.ScaleTransform> to the buttons center is to set the button's <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property to 0.5, 0.5.</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmflipbuttonexample2)]  
   
- ![围绕中心水平翻转的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.png "graphicsmm\_buttonfliphorizontalflip\_inplace")  
-RenderTransformOrigin 为 0.5, 0.5 的按钮  
+ <span data-ttu-id="653f8-120">![围绕中心水平翻转的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")</span><span class="sxs-lookup"><span data-stu-id="653f8-120">![A button flipped horizontally about its center](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonfliphorizontalflip-inplace.gif "graphicsmm_buttonfliphorizontalflip_inplace")</span></span>  
+<span data-ttu-id="653f8-121">与为 0.5，RenderTransformOrigin 按钮 0.5</span><span class="sxs-lookup"><span data-stu-id="653f8-121">The button with a RenderTransformOrigin of 0.5, 0.5</span></span>  
   
-## 示例  
- 若要垂直翻转按钮，请设置 <xref:System.Windows.Media.ScaleTransform> 对象的 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 属性，而不是 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 属性。  
+## <a name="example"></a><span data-ttu-id="653f8-122">示例</span><span class="sxs-lookup"><span data-stu-id="653f8-122">Example</span></span>  
+ <span data-ttu-id="653f8-123">若要垂直翻转的按钮，将设置<xref:System.Windows.Media.ScaleTransform>对象的<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>属性而不是其<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="653f8-123">To flip the button vertically, set the <xref:System.Windows.Media.ScaleTransform> object's <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> property instead of its <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> property.</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMVerticalFlipButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/FlipExample.xaml#graphicsmmverticalflipbuttonexample2)]  
   
- ![围绕中心垂直翻转的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.png "graphicsmm\_buttonflipverticalflip\_inplace")  
-垂直翻转的按钮  
+ <span data-ttu-id="653f8-124">![围绕中心垂直翻转的按钮](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")</span><span class="sxs-lookup"><span data-stu-id="653f8-124">![A button flipped vertically about its center](../../../../docs/framework/wpf/advanced/media/graphicsmm-buttonflipverticalflip-inplace.gif "graphicsmm_buttonflipverticalflip_inplace")</span></span>  
+<span data-ttu-id="653f8-125">垂直翻转的按钮</span><span class="sxs-lookup"><span data-stu-id="653f8-125">The vertically flipped button</span></span>  
   
-## 请参阅  
- [变换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="653f8-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="653f8-126">See Also</span></span>  
+ [<span data-ttu-id="653f8-127">转换概述</span><span class="sxs-lookup"><span data-stu-id="653f8-127">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

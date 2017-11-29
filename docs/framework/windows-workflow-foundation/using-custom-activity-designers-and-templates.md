@@ -1,36 +1,40 @@
 ---
-title: "使用自定义活动设计器和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用自定义活动设计器和模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c07855537e7fdbd2d2323c00b7fe8f5c7cb1d4f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用自定义活动设计器和模板
-本节包含一些主题，这些主题描述如何创建自定义活动设计器和自定义活动模板。  
+# <a name="using-custom-activity-designers-and-templates"></a><span data-ttu-id="09d98-102">使用自定义活动设计器和模板</span><span class="sxs-lookup"><span data-stu-id="09d98-102">Using Custom Activity Designers and Templates</span></span>
+<span data-ttu-id="09d98-103">本节包含一些主题，这些主题描述如何创建自定义活动设计器和自定义活动模板。</span><span class="sxs-lookup"><span data-stu-id="09d98-103">This section contains topics describing how to create custom activity designers and custom activity templates.</span></span>  
   
-## 本节内容  
- [如何：创建自定义活动设计器](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-activity-designer.md)  
- 描述如何在工作流提供的设计器不适用于设计任务时创建自定义的活动设计器。  
+## <a name="in-this-section"></a><span data-ttu-id="09d98-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="09d98-104">In This Section</span></span>  
+ [<span data-ttu-id="09d98-105">如何：创建自定义活动设计器</span><span class="sxs-lookup"><span data-stu-id="09d98-105">How to: Create a Custom Activity Designer</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
+ <span data-ttu-id="09d98-106">描述如何在工作流提供的设计器不适用于设计任务时创建自定义的活动设计器。</span><span class="sxs-lookup"><span data-stu-id="09d98-106">Describes how create a customized activity designer when the designers provided by the workflow are not appropriate to the design tasks.</span></span>  
   
- [如何：创建自定义活动模板](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-activity-template.md)  
- 描述如何使用自定义活动模板来预配置活动，以便用户不必单独创建每个活动和手动配置它们的属性和其他设置。  
+ [<span data-ttu-id="09d98-107">如何：创建自定义活动模板</span><span class="sxs-lookup"><span data-stu-id="09d98-107">How to: Create a Custom Activity Template</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-template.md)  
+ <span data-ttu-id="09d98-108">描述如何使用自定义活动模板来预配置活动，以便用户不必单独创建每个活动和手动配置它们的属性和其他设置。</span><span class="sxs-lookup"><span data-stu-id="09d98-108">Describes how to use custom activity templates to preconfigure activities so that users do not have to create each activity individually and configure their properties and other settings manually.</span></span>  
   
- [使用 ModelItem 编辑上下文](../../../docs/framework/windows-workflow-foundation//using-the-modelitem-editing-context.md)  
- 描述如何使用编辑上下文的 ModelItem 的功能，允许设计器与主机进行交互。  
+ [<span data-ttu-id="09d98-109">使用 ModelItem 编辑上下文</span><span class="sxs-lookup"><span data-stu-id="09d98-109">Using the ModelItem Editing Context</span></span>](../../../docs/framework/windows-workflow-foundation/using-the-modelitem-editing-context.md)  
+ <span data-ttu-id="09d98-110">描述如何使用 ModelItem 编辑上下文的功能，以便允许设计器与主机进行交互。</span><span class="sxs-lookup"><span data-stu-id="09d98-110">Describes how to use the features of the ModelItem editing context to allow the designer to interact with the host.</span></span>  
   
- [将自定义活动属性绑定到设计器控件](../../../docs/framework/windows-workflow-foundation//binding-a-custom-activity-property-to-a-designer-control.md)  
- 描述如何将 listview 控件绑定到设计器中的活动属性。  
+ [<span data-ttu-id="09d98-111">将自定义活动属性绑定到设计器控件</span><span class="sxs-lookup"><span data-stu-id="09d98-111">Binding a custom activity property to a designer control</span></span>](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
+ <span data-ttu-id="09d98-112">描述如何将 listview 控件绑定到设计器中的活动属性。</span><span class="sxs-lookup"><span data-stu-id="09d98-112">Describes how to bind a listview control to an activity property in the designer.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="09d98-113">参考</span><span class="sxs-lookup"><span data-stu-id="09d98-113">Reference</span></span>  
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  
@@ -41,8 +45,8 @@ caps.handback.revision: 8
   
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
-## 相关章节  
- [重新承载工作流设计器](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)  
+## <a name="related-sections"></a><span data-ttu-id="09d98-114">相关章节</span><span class="sxs-lookup"><span data-stu-id="09d98-114">Related Sections</span></span>  
+ [<span data-ttu-id="09d98-115">重新托管工作流设计器</span><span class="sxs-lookup"><span data-stu-id="09d98-115">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
   
-## 外部资源  
- [自定义活动](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)
+## <a name="external-resources"></a><span data-ttu-id="09d98-116">外部资源</span><span class="sxs-lookup"><span data-stu-id="09d98-116">External Resources</span></span>  
+ [<span data-ttu-id="09d98-117">自定义活动</span><span class="sxs-lookup"><span data-stu-id="09d98-117">Custom Activities</span></span>](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)

@@ -1,138 +1,142 @@
 ---
-title: "协定优先的工作流服务开发 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "协定优先的工作流服务开发"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0bb95fa473cdad05a4ecb9d1ee596ecf6639874c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 协定优先的工作流服务开发
-从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，[!INCLUDE[wf](../../../includes/wf-md.md)] 功能将 Web 服务和工作流更好地集成在第一个协定优先工作流开发的形式中。通过协定优先的工作流开发工具，可以在代码中优先设计协定。然后该工具在工具箱中为协定中的操作自动生成活动模板。本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。关于创建协定优先工作流服务的分步示例，请参见[如何：创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+# <a name="contract-first-workflow-service-development"></a><span data-ttu-id="32dae-102">协定优先的工作流服务开发</span><span class="sxs-lookup"><span data-stu-id="32dae-102">Contract First Workflow Service Development</span></span>
+<span data-ttu-id="32dae-103">从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，[!INCLUDE[wf](../../../includes/wf-md.md)] 功能将 Web 服务和工作流更好地集成在第一个协定优先工作流开发的形式中。</span><span class="sxs-lookup"><span data-stu-id="32dae-103">Starting with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="32dae-104">通过协定优先的工作流开发工具，可以在代码中优先设计协定。</span><span class="sxs-lookup"><span data-stu-id="32dae-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="32dae-105">然后该工具在工具箱中为协定中的操作自动生成活动模板。</span><span class="sxs-lookup"><span data-stu-id="32dae-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span> <span data-ttu-id="32dae-106">本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。</span><span class="sxs-lookup"><span data-stu-id="32dae-106">This topic provides an overview of how the activities and properties in a workflow service map to the attributes of a service contract.</span></span> <span data-ttu-id="32dae-107">有关创建协定优先工作流服务的分步示例，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="32dae-107">For a step-by-step example of creating a contract-first workflow service, see [How to: Create a workflow service that consumes an existing service contract](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).</span></span>  
   
-## 主题内容  
+## <a name="in-this-topic"></a><span data-ttu-id="32dae-108">主题内容</span><span class="sxs-lookup"><span data-stu-id="32dae-108">In this topic</span></span>  
   
--   [将服务协定特性映射到工作流特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MappingAttributes)  
+-   [<span data-ttu-id="32dae-109">将服务协定特性映射到的工作流属性</span><span class="sxs-lookup"><span data-stu-id="32dae-109">Mapping service contract attributes to workflow attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [服务协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ServiceContract)  
+    -   [<span data-ttu-id="32dae-110">服务协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-110">Service Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [操作协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#OperationContract)  
+    -   [<span data-ttu-id="32dae-111">操作协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-111">Operation Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [消息协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MessageContract)  
+    -   [<span data-ttu-id="32dae-112">消息协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-112">Message Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [数据协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#DataContract)  
+    -   [<span data-ttu-id="32dae-113">数据协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-113">Data Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
   
-    -   [错误协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#FaultContract)  
+    -   [<span data-ttu-id="32dae-114">错误协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-114">Fault Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
--   [其他支持和实现信息](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [<span data-ttu-id="32dae-115">其他支持和实现信息</span><span class="sxs-lookup"><span data-stu-id="32dae-115">Additional Support and Implementation Information</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [不支持的服务协定功能](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [<span data-ttu-id="32dae-116">不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="32dae-116">Unsupported service contract features</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [配置消息活动的生成](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [<span data-ttu-id="32dae-117">生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="32dae-117">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a> 将服务协定特性映射到工作流特性  
- 下面几节中的表指定不同 WCF 特性和属性，以及它们如何映射到协定优先工作流中的消息活动和属性。  
+##  <span data-ttu-id="32dae-118"><a name="MappingAttributes"></a>将服务协定特性映射到的工作流属性</span><span class="sxs-lookup"><span data-stu-id="32dae-118"><a name="MappingAttributes"></a> Mapping service contract attributes to workflow attributes</span></span>  
+ <span data-ttu-id="32dae-119">下面几节中的表指定不同 WCF 特性和属性，以及它们如何映射到协定优先工作流中的消息活动和属性。</span><span class="sxs-lookup"><span data-stu-id="32dae-119">The tables in the following sections specify the different WCF attributes and properties and how they are mapped to the messaging activities and properties in a contract-first workflow.</span></span>  
   
--   [服务协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ServiceContract)  
+-   [<span data-ttu-id="32dae-120">服务协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-120">Service Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
   
--   [操作协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#OperationContract)  
+-   [<span data-ttu-id="32dae-121">操作协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-121">Operation Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
   
--   [消息协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#MessageContract)  
+-   [<span data-ttu-id="32dae-122">消息协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-122">Message Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
   
--   [数据协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#DataContract)  
+-   [<span data-ttu-id="32dae-123">数据协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-123">Data Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
   
--   [错误协定特性](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#FaultContract)  
+-   [<span data-ttu-id="32dae-124">错误协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-124">Fault Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a> 服务协定特性  
+###  <span data-ttu-id="32dae-125"><a name="ServiceContract"></a>服务协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-125"><a name="ServiceContract"></a> Service Contract Attributes</span></span>  
   
-|属性名|支持|描述|WF 验证|  
-|---------|--------|--------|-----------|  
-|CallbackContract|否|获取或设置当协定为双工协定时的回调协定类型。|\(N\/A\)|  
-|ConfigurationName|否|获取或设置用于查找应用程序配置文件中的服务的名称。|\(N\/A\)|  
-|HasProtectionLevel|是|获取一个值，该值指示是否对成员分配保护级别。|Receive.ProtectionLevel 不应为 null。|  
-|名称|是|获取或设置 Web 服务描述语言 \(WSDL\) 中的 \<portType\> 元素的名称。|Receive.ServiceContractName.LocalName 应当匹配。|  
-|命名空间|是|获取或设置 Web 服务描述语言 \(WSDL\) 中的 \<portType\> 元素的命名空间。|Receive.ServiceContractName.NameSpace 应当匹配|  
-|ProtectionLevel|是|指定协定的绑定是否必须支持 ProtectionLevel 属性的值。|Receive.ProtectionLevel 应当匹配。|  
-|SessionMode|否|获取或设置是否允许、不允许或要求会话。|\(N\/A\)|  
-|TypeId|否|在派生类中实现时，获取此特性的唯一标识符。（从特性继承。）|\(N\/A\)|  
+|<span data-ttu-id="32dae-126">属性名</span><span class="sxs-lookup"><span data-stu-id="32dae-126">Property Name</span></span>|<span data-ttu-id="32dae-127">支持</span><span class="sxs-lookup"><span data-stu-id="32dae-127">Supported</span></span>|<span data-ttu-id="32dae-128">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-128">Description</span></span>|<span data-ttu-id="32dae-129">WF 验证</span><span class="sxs-lookup"><span data-stu-id="32dae-129">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="32dae-130">CallbackContract</span><span class="sxs-lookup"><span data-stu-id="32dae-130">CallbackContract</span></span>|<span data-ttu-id="32dae-131">No</span><span class="sxs-lookup"><span data-stu-id="32dae-131">No</span></span>|<span data-ttu-id="32dae-132">获取或设置当协定为双工协定时的回调协定类型。</span><span class="sxs-lookup"><span data-stu-id="32dae-132">Gets or sets the type of callback contract when the contract is a duplex contract.</span></span>|<span data-ttu-id="32dae-133">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-133">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-134">ConfigurationName</span><span class="sxs-lookup"><span data-stu-id="32dae-134">ConfigurationName</span></span>|<span data-ttu-id="32dae-135">No</span><span class="sxs-lookup"><span data-stu-id="32dae-135">No</span></span>|<span data-ttu-id="32dae-136">获取或设置用于查找应用程序配置文件中的服务的名称。</span><span class="sxs-lookup"><span data-stu-id="32dae-136">Gets or sets the name used to locate the service in an application configuration file.</span></span>|<span data-ttu-id="32dae-137">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-137">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-138">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-138">HasProtectionLevel</span></span>|<span data-ttu-id="32dae-139">是</span><span class="sxs-lookup"><span data-stu-id="32dae-139">Yes</span></span>|<span data-ttu-id="32dae-140">获取一个值，该值指示是否对成员分配保护级别。</span><span class="sxs-lookup"><span data-stu-id="32dae-140">Gets a value that indicates whether the member has a protection level assigned.</span></span>|<span data-ttu-id="32dae-141">Receive.ProtectionLevel 不应为 null。</span><span class="sxs-lookup"><span data-stu-id="32dae-141">Receive.ProtectionLevel should not be null.</span></span>|  
+|<span data-ttu-id="32dae-142">名称</span><span class="sxs-lookup"><span data-stu-id="32dae-142">Name</span></span>|<span data-ttu-id="32dae-143">是</span><span class="sxs-lookup"><span data-stu-id="32dae-143">Yes</span></span>|<span data-ttu-id="32dae-144">获取或设置的名称\<portType > 元素中 Web 服务描述语言 (WSDL)。</span><span class="sxs-lookup"><span data-stu-id="32dae-144">Gets or sets the name for the \<portType> element in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="32dae-145">Receive.ServiceContractName.LocalName 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-145">Receive.ServiceContractName.LocalName should match.</span></span>|  
+|<span data-ttu-id="32dae-146">命名空间</span><span class="sxs-lookup"><span data-stu-id="32dae-146">Namespace</span></span>|<span data-ttu-id="32dae-147">是</span><span class="sxs-lookup"><span data-stu-id="32dae-147">Yes</span></span>|<span data-ttu-id="32dae-148">获取或设置的命名空间\<portType > 元素中 Web 服务描述语言 (WSDL)。</span><span class="sxs-lookup"><span data-stu-id="32dae-148">Gets or sets the namespace of the \<portType> element in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="32dae-149">Receive.ServiceContractName.NameSpace 应当匹配</span><span class="sxs-lookup"><span data-stu-id="32dae-149">Receive.ServiceContractName.NameSpace should match</span></span>|  
+|<span data-ttu-id="32dae-150">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-150">ProtectionLevel</span></span>|<span data-ttu-id="32dae-151">是</span><span class="sxs-lookup"><span data-stu-id="32dae-151">Yes</span></span>|<span data-ttu-id="32dae-152">指定协定的绑定是否必须支持 ProtectionLevel 属性的值。</span><span class="sxs-lookup"><span data-stu-id="32dae-152">Specifies whether the binding for the contract must support the value of the ProtectionLevel property.</span></span>|<span data-ttu-id="32dae-153">Receive.ProtectionLevel 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-153">Receive.ProtectionLevel should match.</span></span>|  
+|<span data-ttu-id="32dae-154">SessionMode</span><span class="sxs-lookup"><span data-stu-id="32dae-154">SessionMode</span></span>|<span data-ttu-id="32dae-155">No</span><span class="sxs-lookup"><span data-stu-id="32dae-155">No</span></span>|<span data-ttu-id="32dae-156">获取或设置是否允许、不允许或要求会话。</span><span class="sxs-lookup"><span data-stu-id="32dae-156">Gets or sets whether sessions are allowed, not allowed or required.</span></span>|<span data-ttu-id="32dae-157">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-157">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-158">TypeId</span><span class="sxs-lookup"><span data-stu-id="32dae-158">TypeId</span></span>|<span data-ttu-id="32dae-159">No</span><span class="sxs-lookup"><span data-stu-id="32dae-159">No</span></span>|<span data-ttu-id="32dae-160">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="32dae-160">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="32dae-161">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="32dae-161">(Inherited from Attribute.)</span></span>|<span data-ttu-id="32dae-162">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-162">(N/A)</span></span>|  
   
- 在此处插入小节正文。  
+ <span data-ttu-id="32dae-163">在此处插入小节正文。</span><span class="sxs-lookup"><span data-stu-id="32dae-163">Insert subsection body here.</span></span>  
   
-###  <a name="OperationContract"></a> 操作协定特性  
+###  <span data-ttu-id="32dae-164"><a name="OperationContract"></a>操作协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-164"><a name="OperationContract"></a> Operation Contract Attributes</span></span>  
   
-|属性名|支持|描述|WF 验证|  
-|---------|--------|--------|-----------|  
-|操作|是|获取或设置请求消息的 WS\-Addressing 操作。|Receive.Action 应当匹配。|  
-|AsyncPattern|否|指示操作是在服务协定中使用 Begin\<方法名\> 和 End\<方法名\> 方法对异步实现的。|\(N\/A\)|  
-|HasProtectionLevel|是|获取一个值，该值指示是否必须对此操作的消息进行加密和\/或签名。|Receive.ProtectionLevel 不应为 null。|  
-|IsInitiating|否|获取或设置一个值，该值指示方法是否实现可在服务器上启动会话（如果存在会话）的操作。|\(N\/A\)|  
-|IsOneWay|是|获取或设置一个值，该值指示操作是否返回答复消息。|\(此 Receive 无对应 SendReply 或此 Send 无对应 ReceiveReply）。|  
-|IsTerminating|否|获取或设置一个值，该值指示服务操作在发送答复消息（如果存在）后，是否会导致服务器关闭会话。|\(N\/A\)|  
-|名称|是|获取或设置操作的名称。|Receive.OperationName 应当匹配。|  
-|ProtectionLevel|是|获取或设置一个值，该值指定是否必须对操作的消息进行加密和\/或签名。|Receive.ProtectionLevel 应当匹配。|  
-|ReplyAction|是|获取或设置用于该操作答复消息的 SOAP 操作的值。|SendReply.Action 应当匹配。|  
-|TypeId|否|在派生类中实现时，获取此特性的唯一标识符。（从特性继承。）|\(N\/A\)|  
+|<span data-ttu-id="32dae-165">属性名</span><span class="sxs-lookup"><span data-stu-id="32dae-165">Property Name</span></span>|<span data-ttu-id="32dae-166">支持</span><span class="sxs-lookup"><span data-stu-id="32dae-166">Supported</span></span>|<span data-ttu-id="32dae-167">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-167">Description</span></span>|<span data-ttu-id="32dae-168">WF 验证</span><span class="sxs-lookup"><span data-stu-id="32dae-168">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="32dae-169">操作</span><span class="sxs-lookup"><span data-stu-id="32dae-169">Action</span></span>|<span data-ttu-id="32dae-170">是</span><span class="sxs-lookup"><span data-stu-id="32dae-170">Yes</span></span>|<span data-ttu-id="32dae-171">获取或设置请求消息的 WS-Addressing 操作。</span><span class="sxs-lookup"><span data-stu-id="32dae-171">Gets or sets the WS-Addressing action of the request message.</span></span>|<span data-ttu-id="32dae-172">Receive.Action 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-172">Receive.Action should match.</span></span>|  
+|<span data-ttu-id="32dae-173">AsyncPattern</span><span class="sxs-lookup"><span data-stu-id="32dae-173">AsyncPattern</span></span>|<span data-ttu-id="32dae-174">No</span><span class="sxs-lookup"><span data-stu-id="32dae-174">No</span></span>|<span data-ttu-id="32dae-175">指示使用 Begin 以异步方式实现某个操作\<方法名称 > 和结束\<方法名称 > 服务协定中的方法对。</span><span class="sxs-lookup"><span data-stu-id="32dae-175">Indicates that an operation is implemented asynchronously using a Begin\<methodName> and End\<methodName> method pair in a service contract.</span></span>|<span data-ttu-id="32dae-176">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-176">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-177">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-177">HasProtectionLevel</span></span>|<span data-ttu-id="32dae-178">是</span><span class="sxs-lookup"><span data-stu-id="32dae-178">Yes</span></span>|<span data-ttu-id="32dae-179">获取一个值，该值指示是否必须对此操作的消息进行加密和/或签名。</span><span class="sxs-lookup"><span data-stu-id="32dae-179">Gets a value that indicates whether the messages for this operation must be encrypted, signed, or both.</span></span>|<span data-ttu-id="32dae-180">Receive.ProtectionLevel 不应为 null。</span><span class="sxs-lookup"><span data-stu-id="32dae-180">Receive.ProtectionLevel should not be null.</span></span>|  
+|<span data-ttu-id="32dae-181">IsInitiating</span><span class="sxs-lookup"><span data-stu-id="32dae-181">IsInitiating</span></span>|<span data-ttu-id="32dae-182">No</span><span class="sxs-lookup"><span data-stu-id="32dae-182">No</span></span>|<span data-ttu-id="32dae-183">获取或设置一个值，该值指示方法是否实现可在服务器上启动会话（如果存在会话）的操作。</span><span class="sxs-lookup"><span data-stu-id="32dae-183">Gets or sets a value that indicates whether the method implements an operation that can initiate a session on the server(if such a session exists).</span></span>|<span data-ttu-id="32dae-184">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-184">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-185">IsOneWay</span><span class="sxs-lookup"><span data-stu-id="32dae-185">IsOneWay</span></span>|<span data-ttu-id="32dae-186">是</span><span class="sxs-lookup"><span data-stu-id="32dae-186">Yes</span></span>|<span data-ttu-id="32dae-187">获取或设置一个值，该值指示操作是否返回答复消息。</span><span class="sxs-lookup"><span data-stu-id="32dae-187">Gets or sets a value that indicates whether an operation returns a reply message.</span></span>|<span data-ttu-id="32dae-188">(此 Receive 无对应 SendReply 或此 Send 无对应 ReceiveReply）。</span><span class="sxs-lookup"><span data-stu-id="32dae-188">(No SendReply for this Receive OR no ReceiveReply for this Send).</span></span>|  
+|<span data-ttu-id="32dae-189">IsTerminating</span><span class="sxs-lookup"><span data-stu-id="32dae-189">IsTerminating</span></span>|<span data-ttu-id="32dae-190">No</span><span class="sxs-lookup"><span data-stu-id="32dae-190">No</span></span>|<span data-ttu-id="32dae-191">获取或设置一个值，该值指示服务操作在发送答复消息（如果存在）后，是否会导致服务器关闭会话。</span><span class="sxs-lookup"><span data-stu-id="32dae-191">Gets or sets a value that indicates whether the service operation causes the server to close the session after the reply message, if any, is sent.</span></span>|<span data-ttu-id="32dae-192">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-192">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-193">名称</span><span class="sxs-lookup"><span data-stu-id="32dae-193">Name</span></span>|<span data-ttu-id="32dae-194">是</span><span class="sxs-lookup"><span data-stu-id="32dae-194">Yes</span></span>|<span data-ttu-id="32dae-195">获取或设置操作的名称。</span><span class="sxs-lookup"><span data-stu-id="32dae-195">Gets or sets the name of the operation.</span></span>|<span data-ttu-id="32dae-196">Receive.OperationName 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-196">Receive.OperationName should match.</span></span>|  
+|<span data-ttu-id="32dae-197">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-197">ProtectionLevel</span></span>|<span data-ttu-id="32dae-198">是</span><span class="sxs-lookup"><span data-stu-id="32dae-198">Yes</span></span>|<span data-ttu-id="32dae-199">获取或设置一个值，该值指定是否必须对操作的消息进行加密和/或签名。</span><span class="sxs-lookup"><span data-stu-id="32dae-199">Gets or sets a value that specifies whether the messages of an operation must be encrypted, signed, or both.</span></span>|<span data-ttu-id="32dae-200">Receive.ProtectionLevel 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-200">Receive.ProtectionLevel should match.</span></span>|  
+|<span data-ttu-id="32dae-201">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="32dae-201">ReplyAction</span></span>|<span data-ttu-id="32dae-202">是</span><span class="sxs-lookup"><span data-stu-id="32dae-202">Yes</span></span>|<span data-ttu-id="32dae-203">获取或设置用于该操作答复消息的 SOAP 操作的值。</span><span class="sxs-lookup"><span data-stu-id="32dae-203">Gets or sets the value of the SOAP action for the reply message of the operation.</span></span>|<span data-ttu-id="32dae-204">SendReply.Action 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-204">SendReply.Action should match.</span></span>|  
+|<span data-ttu-id="32dae-205">TypeId</span><span class="sxs-lookup"><span data-stu-id="32dae-205">TypeId</span></span>|<span data-ttu-id="32dae-206">No</span><span class="sxs-lookup"><span data-stu-id="32dae-206">No</span></span>|<span data-ttu-id="32dae-207">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="32dae-207">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="32dae-208">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="32dae-208">(Inherited from Attribute.)</span></span>|<span data-ttu-id="32dae-209">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-209">(N/A)</span></span>|  
   
-###  <a name="MessageContract"></a> 消息协定特性  
+###  <span data-ttu-id="32dae-210"><a name="MessageContract"></a>消息协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-210"><a name="MessageContract"></a> Message Contract Attributes</span></span>  
   
-|属性名|支持|描述|WF 验证|  
-|---------|--------|--------|-----------|  
-|HasProtectionLevel|是|获取一个值，该值指示消息是否有保护级别。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
-|IsWrapped|是|获取或设置一个值，该值指定消息正文是否有包装元素。|无验证（Receive.Content 和 Sendreply.Content 必须匹配消息协定类型）。|  
-|ProtectionLevel|否|获取或设置一个值，该值指定是否对消息进行加密、签名或同时执行这两种操作。|\(N\/A\)|  
-|TypeId|是|在派生类中实现时，获取此特性的唯一标识符。（从特性继承。）|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
-|WrapperName|是|获取或设置消息正文的包装元素名称。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
-|WrapperNamespace|否|获取或设置消息正文包装元素的命名空间。|\(N\/A\)|  
+|<span data-ttu-id="32dae-211">属性名</span><span class="sxs-lookup"><span data-stu-id="32dae-211">Property Name</span></span>|<span data-ttu-id="32dae-212">支持</span><span class="sxs-lookup"><span data-stu-id="32dae-212">Supported</span></span>|<span data-ttu-id="32dae-213">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-213">Description</span></span>|<span data-ttu-id="32dae-214">WF 验证</span><span class="sxs-lookup"><span data-stu-id="32dae-214">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="32dae-215">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-215">HasProtectionLevel</span></span>|<span data-ttu-id="32dae-216">是</span><span class="sxs-lookup"><span data-stu-id="32dae-216">Yes</span></span>|<span data-ttu-id="32dae-217">获取一个值，该值指示消息是否有保护级别。</span><span class="sxs-lookup"><span data-stu-id="32dae-217">Gets a value that indicates whether the message has a protection level.</span></span>|<span data-ttu-id="32dae-218">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-218">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-219">IsWrapped</span><span class="sxs-lookup"><span data-stu-id="32dae-219">IsWrapped</span></span>|<span data-ttu-id="32dae-220">是</span><span class="sxs-lookup"><span data-stu-id="32dae-220">Yes</span></span>|<span data-ttu-id="32dae-221">获取或设置一个值，该值指定消息正文是否有包装元素。</span><span class="sxs-lookup"><span data-stu-id="32dae-221">Gets or sets a value that specifies whether the message body has a wrapper element.</span></span>|<span data-ttu-id="32dae-222">无验证（Receive.Content 和 Sendreply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-222">No validation (Receive.Content and Sendreply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-223">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-223">ProtectionLevel</span></span>|<span data-ttu-id="32dae-224">No</span><span class="sxs-lookup"><span data-stu-id="32dae-224">No</span></span>|<span data-ttu-id="32dae-225">获取或设置一个值，该值指定是否对消息进行加密、签名或同时执行这两种操作。</span><span class="sxs-lookup"><span data-stu-id="32dae-225">Gets or sets a value that specified whether the message must be encrypted, signed, or both.</span></span>|<span data-ttu-id="32dae-226">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-226">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-227">TypeId</span><span class="sxs-lookup"><span data-stu-id="32dae-227">TypeId</span></span>|<span data-ttu-id="32dae-228">是</span><span class="sxs-lookup"><span data-stu-id="32dae-228">Yes</span></span>|<span data-ttu-id="32dae-229">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="32dae-229">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="32dae-230">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="32dae-230">(Inherited from Attribute.)</span></span>|<span data-ttu-id="32dae-231">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-231">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-232">WrapperName</span><span class="sxs-lookup"><span data-stu-id="32dae-232">WrapperName</span></span>|<span data-ttu-id="32dae-233">是</span><span class="sxs-lookup"><span data-stu-id="32dae-233">Yes</span></span>|<span data-ttu-id="32dae-234">获取或设置消息正文的包装元素名称。</span><span class="sxs-lookup"><span data-stu-id="32dae-234">Gets or sets the name of the wrapper element of the message body.</span></span>|<span data-ttu-id="32dae-235">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-235">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-236">WrapperNamespace</span><span class="sxs-lookup"><span data-stu-id="32dae-236">WrapperNamespace</span></span>|<span data-ttu-id="32dae-237">No</span><span class="sxs-lookup"><span data-stu-id="32dae-237">No</span></span>|<span data-ttu-id="32dae-238">获取或设置消息正文包装元素的命名空间。</span><span class="sxs-lookup"><span data-stu-id="32dae-238">Gets or sets the namespace of the message body wrapper element.</span></span>|<span data-ttu-id="32dae-239">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-239">(N/A)</span></span>|  
   
-###  <a name="DataContract"></a> 数据协定特性  
+###  <span data-ttu-id="32dae-240"><a name="DataContract"></a>数据协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-240"><a name="DataContract"></a> Data Contract Attributes</span></span>  
   
-|属性名|支持|描述|WF 验证|  
-|---------|--------|--------|-----------|  
-|IsReference|否|获取或设置一个值，该值指示是否保留对象引用数据。|\(N\/A\)|  
-|名称|是|获取或设置类型的数据协定的名称。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
-|命名空间|是|获取或设置类型的数据协定的命名空间。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
-|TypeId|否|在派生类中实现时，获取此特性的唯一标识符。（从特性继承。）|\(N\/A\)|  
+|<span data-ttu-id="32dae-241">属性名</span><span class="sxs-lookup"><span data-stu-id="32dae-241">Property Name</span></span>|<span data-ttu-id="32dae-242">支持</span><span class="sxs-lookup"><span data-stu-id="32dae-242">Supported</span></span>|<span data-ttu-id="32dae-243">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-243">Description</span></span>|<span data-ttu-id="32dae-244">WF 验证</span><span class="sxs-lookup"><span data-stu-id="32dae-244">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="32dae-245">IsReference</span><span class="sxs-lookup"><span data-stu-id="32dae-245">IsReference</span></span>|<span data-ttu-id="32dae-246">No</span><span class="sxs-lookup"><span data-stu-id="32dae-246">No</span></span>|<span data-ttu-id="32dae-247">获取或设置一个值，该值指示是否保留对象引用数据。</span><span class="sxs-lookup"><span data-stu-id="32dae-247">Gets or sets a value that indicates whether to preserve object reference data.</span></span>|<span data-ttu-id="32dae-248">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-248">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-249">名称</span><span class="sxs-lookup"><span data-stu-id="32dae-249">Name</span></span>|<span data-ttu-id="32dae-250">是</span><span class="sxs-lookup"><span data-stu-id="32dae-250">Yes</span></span>|<span data-ttu-id="32dae-251">获取或设置类型的数据协定的名称。</span><span class="sxs-lookup"><span data-stu-id="32dae-251">Gets or sets the name of the data contract for the type.</span></span>|<span data-ttu-id="32dae-252">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-252">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-253">命名空间</span><span class="sxs-lookup"><span data-stu-id="32dae-253">Namespace</span></span>|<span data-ttu-id="32dae-254">是</span><span class="sxs-lookup"><span data-stu-id="32dae-254">Yes</span></span>|<span data-ttu-id="32dae-255">获取或设置类型的数据协定的命名空间。</span><span class="sxs-lookup"><span data-stu-id="32dae-255">Gets or sets the namespace for the data contract for the type.</span></span>|<span data-ttu-id="32dae-256">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="32dae-256">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
+|<span data-ttu-id="32dae-257">TypeId</span><span class="sxs-lookup"><span data-stu-id="32dae-257">TypeId</span></span>|<span data-ttu-id="32dae-258">No</span><span class="sxs-lookup"><span data-stu-id="32dae-258">No</span></span>|<span data-ttu-id="32dae-259">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="32dae-259">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="32dae-260">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="32dae-260">(Inherited from Attribute.)</span></span>|<span data-ttu-id="32dae-261">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-261">(N/A)</span></span>|  
   
-###  <a name="FaultContract"></a> 错误协定特性  
+###  <span data-ttu-id="32dae-262"><a name="FaultContract"></a>错误协定特性</span><span class="sxs-lookup"><span data-stu-id="32dae-262"><a name="FaultContract"></a> Fault Contract Attributes</span></span>  
   
-|属性名|支持|描述|WF 验证|  
-|---------|--------|--------|-----------|  
-|操作|是|获取或设置已指定作为操作协定一部分的 SOAP 错误消息的操作。|SendReply.Action 应当匹配。|  
-|DetailType|是|获取包含错误信息的可序列化对象的类型。|SendReply.Content 应匹配该类型|  
-|HasProtectionLevel|否|获取一个值，该值指示 SOAP 错误消息是否分配有保护级别。|\(N\/A\)|  
-|名称|否|获取或设置 Web 服务描述语言 \(WSDL\) 中的错误消息的名称。|\(N\/A\)|  
-|命名空间|否|获取或设置 SOAP 错误的命名空间。|\(N\/A\)|  
-|ProtectionLevel|否|指定 SOAP 错误要求的绑定的保护级别。|\(N\/A\)|  
-|TypeId|否|在派生类中实现时，获取此特性的唯一标识符。（从特性继承。）|\(N\/A\)|  
+|<span data-ttu-id="32dae-263">属性名</span><span class="sxs-lookup"><span data-stu-id="32dae-263">Property Name</span></span>|<span data-ttu-id="32dae-264">支持</span><span class="sxs-lookup"><span data-stu-id="32dae-264">Supported</span></span>|<span data-ttu-id="32dae-265">描述</span><span class="sxs-lookup"><span data-stu-id="32dae-265">Description</span></span>|<span data-ttu-id="32dae-266">WF 验证</span><span class="sxs-lookup"><span data-stu-id="32dae-266">WF Validation</span></span>|  
+|-------------------|---------------|-----------------|-------------------|  
+|<span data-ttu-id="32dae-267">操作</span><span class="sxs-lookup"><span data-stu-id="32dae-267">Action</span></span>|<span data-ttu-id="32dae-268">是</span><span class="sxs-lookup"><span data-stu-id="32dae-268">Yes</span></span>|<span data-ttu-id="32dae-269">获取或设置已指定作为操作协定一部分的 SOAP 错误消息的操作。</span><span class="sxs-lookup"><span data-stu-id="32dae-269">Gets or sets the action of the SOAP fault message that is specified as part of the operation contract.</span></span>|<span data-ttu-id="32dae-270">SendReply.Action 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-270">SendReply.Action should match.</span></span>|  
+|<span data-ttu-id="32dae-271">DetailType</span><span class="sxs-lookup"><span data-stu-id="32dae-271">DetailType</span></span>|<span data-ttu-id="32dae-272">是</span><span class="sxs-lookup"><span data-stu-id="32dae-272">Yes</span></span>|<span data-ttu-id="32dae-273">获取包含错误信息的可序列化对象的类型。</span><span class="sxs-lookup"><span data-stu-id="32dae-273">Gets the type of a serializable object that contains error information.</span></span>|<span data-ttu-id="32dae-274">SendReply.Content 应匹配该类型</span><span class="sxs-lookup"><span data-stu-id="32dae-274">SendReply.Content should match the type</span></span>|  
+|<span data-ttu-id="32dae-275">HasProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-275">HasProtectionLevel</span></span>|<span data-ttu-id="32dae-276">No</span><span class="sxs-lookup"><span data-stu-id="32dae-276">No</span></span>|<span data-ttu-id="32dae-277">获取一个值，该值指示 SOAP 错误消息是否分配有保护级别。</span><span class="sxs-lookup"><span data-stu-id="32dae-277">Gets a value that indicates whether the SOAP fault message has a protection level assigned.</span></span>|<span data-ttu-id="32dae-278">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-278">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-279">名称</span><span class="sxs-lookup"><span data-stu-id="32dae-279">Name</span></span>|<span data-ttu-id="32dae-280">No</span><span class="sxs-lookup"><span data-stu-id="32dae-280">No</span></span>|<span data-ttu-id="32dae-281">获取或设置 Web 服务描述语言 (WSDL) 中的错误消息的名称。</span><span class="sxs-lookup"><span data-stu-id="32dae-281">Gets or sets the name of the fault message in Web Services Description Language (WSDL).</span></span>|<span data-ttu-id="32dae-282">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-282">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-283">命名空间</span><span class="sxs-lookup"><span data-stu-id="32dae-283">Namespace</span></span>|<span data-ttu-id="32dae-284">No</span><span class="sxs-lookup"><span data-stu-id="32dae-284">No</span></span>|<span data-ttu-id="32dae-285">获取或设置 SOAP 错误的命名空间。</span><span class="sxs-lookup"><span data-stu-id="32dae-285">Gets or sets the namespace of the SOAP fault.</span></span>|<span data-ttu-id="32dae-286">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-286">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-287">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="32dae-287">ProtectionLevel</span></span>|<span data-ttu-id="32dae-288">No</span><span class="sxs-lookup"><span data-stu-id="32dae-288">No</span></span>|<span data-ttu-id="32dae-289">指定 SOAP 错误要求的绑定的保护级别。</span><span class="sxs-lookup"><span data-stu-id="32dae-289">Specifies the level of protection the SOAP fault requires from the binding.</span></span>|<span data-ttu-id="32dae-290">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-290">(N/A)</span></span>|  
+|<span data-ttu-id="32dae-291">TypeId</span><span class="sxs-lookup"><span data-stu-id="32dae-291">TypeId</span></span>|<span data-ttu-id="32dae-292">No</span><span class="sxs-lookup"><span data-stu-id="32dae-292">No</span></span>|<span data-ttu-id="32dae-293">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="32dae-293">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="32dae-294">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="32dae-294">(Inherited from Attribute.)</span></span>|<span data-ttu-id="32dae-295">(N/A)</span><span class="sxs-lookup"><span data-stu-id="32dae-295">(N/A)</span></span>|  
   
-##  <a name="AdditionalSupport"></a> 其他支持和实现信息  
+##  <span data-ttu-id="32dae-296"><a name="AdditionalSupport"></a>其他支持和实现信息</span><span class="sxs-lookup"><span data-stu-id="32dae-296"><a name="AdditionalSupport"></a> Additional Support and Implementation Information</span></span>  
   
--   [不支持的服务协定功能](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [<span data-ttu-id="32dae-297">不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="32dae-297">Unsupported service contract features</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [配置消息活动的生成](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [<span data-ttu-id="32dae-298">生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="32dae-298">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a> 不支持的服务协定功能  
+###  <span data-ttu-id="32dae-299"><a name="UnsupportedFeatures"></a>不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="32dae-299"><a name="UnsupportedFeatures"></a> Unsupported service contract features</span></span>  
   
--   不支持在协定中用 TPL（任务并行库）任务。  
+-   <span data-ttu-id="32dae-300">不支持在协定中用 TPL（任务并行库）任务。</span><span class="sxs-lookup"><span data-stu-id="32dae-300">Use of TPL (Task Parallel Library) Tasks in contracts is not supported.</span></span>  
   
--   不支持服务协定的继承。  
+-   <span data-ttu-id="32dae-301">不支持服务协定的继承。</span><span class="sxs-lookup"><span data-stu-id="32dae-301">Inheritance in Service Contracts is not supported.</span></span>  
   
-###  <a name="ActivityGeneration"></a> 配置消息活动的生成  
- 向 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动加入两个公共静态方法，以支持在使用协定优先工作流服务时生成预配置消息活动。  
+###  <span data-ttu-id="32dae-302"><a name="ActivityGeneration"></a>生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="32dae-302"><a name="ActivityGeneration"></a> Generation of configured messaging activities</span></span>  
+ <span data-ttu-id="32dae-303">向 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动加入两个公共静态方法，以支持在使用协定优先工作流服务时生成预配置消息活动。</span><span class="sxs-lookup"><span data-stu-id="32dae-303">Two public static methods are added to the <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities to support the generation of pre-configured message activities when using contract-first workflow services.</span></span>  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- 由这些方法生成的活动应当通过协定验证，因此这些方法在内部用作 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 的验证逻辑。<xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 都进行了预配置，以匹配导入的协定。在工作流设计器中的活动的内容属性页面，**“消息”**和**“参数”**部分也是预配置的，以便与协定匹配。  
+ <span data-ttu-id="32dae-304">由这些方法生成的活动应当通过协定验证，因此这些方法在内部用作 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 的验证逻辑。</span><span class="sxs-lookup"><span data-stu-id="32dae-304">The activity generated by these methods should pass contract validation, and therefore these methods are used internally as part of the validation logic for <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply>.</span></span> <span data-ttu-id="32dae-305"><xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 都进行了预配置，以匹配导入的协定。</span><span class="sxs-lookup"><span data-stu-id="32dae-305">The <xref:System.ServiceModel.Activities.Receive.OperationName%2A>,  <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>,  <xref:System.ServiceModel.Activities.Receive.Action%2A>,  <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>,  <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A>, and <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> are all pre-configured to match the imported contract.</span></span> <span data-ttu-id="32dae-306">工作流设计器中中的活动的内容属性页中**消息**或**参数**部分也是预配置为与协定匹配。</span><span class="sxs-lookup"><span data-stu-id="32dae-306">In the content properties page for the activities in the workflow designer, the **Message** or **Parameters** sections are also pre-configured to match the contract.</span></span>  
   
- WCF 错误协定的处理也是通过为 <xref:System.ServiceModel.Description.OperationDescription.Faults%2A><xref:System.ServiceModel.Description.FaultDescriptionCollection> 中显示的每个错误返回一组独立的已配置 <xref:System.ServiceModel.Activities.SendReply> 活动。  
+ <span data-ttu-id="32dae-307">WCF 错误协定也由返回一组单独的配置<xref:System.ServiceModel.Activities.SendReply>中显示的错误的每个活动<xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>。</span><span class="sxs-lookup"><span data-stu-id="32dae-307">WCF fault contracts are also handled by returning a separate set of configured <xref:System.ServiceModel.Activities.SendReply> activities for each of the faults that show up in the <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.</span></span>  
   
- 对于目前 WF 服务不支持的其他 <xref:System.ServiceModel.Description.OperationDescription> 部分（例如WebGet\/WebInvoke 行为，或自定义操作行为），该 API 将在生成和配置过程中忽略这些值。不会引发任何异常。
+ <span data-ttu-id="32dae-308">有关的其他部分<xref:System.ServiceModel.Description.OperationDescription>不支持由 WF 服务目前 （例如 WebGet/WebInvoke 行为或自定义操作行为），API 将忽略这些值在生成和配置的一部分。</span><span class="sxs-lookup"><span data-stu-id="32dae-308">For other parts of <xref:System.ServiceModel.Description.OperationDescription> that are unsupported by WF services today (e.g. WebGet/WebInvoke behaviors, or custom operation behaviors), the API will ignore those values as part of the generation and configuration.</span></span> <span data-ttu-id="32dae-309">不会引发任何异常。</span><span class="sxs-lookup"><span data-stu-id="32dae-309">No exceptions will be thrown.</span></span>

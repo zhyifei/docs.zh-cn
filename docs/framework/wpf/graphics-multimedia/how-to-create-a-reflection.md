@@ -1,40 +1,46 @@
 ---
-title: "如何：创建反射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "画笔, 创建反射"
-  - "创建反射"
-  - "反射, 创建"
+title: "如何：创建反射"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating reflections [WPF]
+- brushes [WPF], creating reflections
+- reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3032f46843c6d8efc53c45a927feae7068c3eb5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建反射
-本示例演示如何使用 <xref:System.Windows.Media.VisualBrush> 创建反射。  由于 <xref:System.Windows.Media.VisualBrush> 可以显示现有可视项目，您可以使用此功能生成有趣的可视效果，例如反射和放大。  
+# <a name="how-to-create-a-reflection"></a><span data-ttu-id="9a850-102">如何：创建反射</span><span class="sxs-lookup"><span data-stu-id="9a850-102">How to: Create a Reflection</span></span>
+<span data-ttu-id="9a850-103">此示例演示如何使用<xref:System.Windows.Media.VisualBrush>创建反射。</span><span class="sxs-lookup"><span data-stu-id="9a850-103">This example shows how to use a <xref:System.Windows.Media.VisualBrush> to create a reflection.</span></span> <span data-ttu-id="9a850-104">因为<xref:System.Windows.Media.VisualBrush>可以显示现有的视觉对象，可以使用此功能来生成有趣的视觉效果，例如反射和放大倍数。</span><span class="sxs-lookup"><span data-stu-id="9a850-104">Because a <xref:System.Windows.Media.VisualBrush> can display an existing visual, you can use this capability to produce interesting visual effects, such as reflections and magnification.</span></span>  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.VisualBrush> 创建包含若干元素的 <xref:System.Windows.Controls.Border> 的反射。  下面的插图演示此示例生成的输出。  
+## <a name="example"></a><span data-ttu-id="9a850-105">示例</span><span class="sxs-lookup"><span data-stu-id="9a850-105">Example</span></span>  
+ <span data-ttu-id="9a850-106">下面的示例使用<xref:System.Windows.Media.VisualBrush>若要创建的反射<xref:System.Windows.Controls.Border>，其中包含几个元素。</span><span class="sxs-lookup"><span data-stu-id="9a850-106">The following example uses a <xref:System.Windows.Media.VisualBrush> to create a reflection of a <xref:System.Windows.Controls.Border> that contains several elements.</span></span> <span data-ttu-id="9a850-107">下图显示了此示例生成的输出。</span><span class="sxs-lookup"><span data-stu-id="9a850-107">The following illustration shows the output that this example produces.</span></span>  
   
- ![反射的 Visual 对象](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.png "graphicsmm\_visualbrush\_reflection\_small")  
-反射的 Visual 对象  
+ <span data-ttu-id="9a850-108">![A 反映视觉对象](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")</span><span class="sxs-lookup"><span data-stu-id="9a850-108">![A reflected Visual object](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")</span></span>  
+<span data-ttu-id="9a850-109">反射的 Visual 对象</span><span class="sxs-lookup"><span data-stu-id="9a850-109">A reflected Visual object</span></span>  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
- [!code-xml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
+ [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- 有关完整示例，其中包括如何放大屏幕的各部分以及如何创建反射的示例，请参见 [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049)（VisualBrush 示例）。  
+ <span data-ttu-id="9a850-110">有关完整的示例，其中包括演示如何放大屏幕的部分以及如何创建反射的示例，请参阅[VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)。</span><span class="sxs-lookup"><span data-stu-id="9a850-110">For the complete sample, which includes examples that show how to magnify parts of the screen and how to create reflections, see [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.VisualBrush>   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="9a850-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9a850-111">See Also</span></span>  
+ <xref:System.Windows.Media.VisualBrush>  
+ [<span data-ttu-id="9a850-112">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="9a850-112">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

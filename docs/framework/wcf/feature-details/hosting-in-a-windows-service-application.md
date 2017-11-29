@@ -1,52 +1,55 @@
 ---
-title: "在 Windows 服务应用程序中承载 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 Windows 服务应用程序中承载"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 07823da6a920a22e35932f32f9320499d9cc84a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows 服务应用程序中承载
-Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。  Windows 服务应用程序的进程生存期由服务控制管理器 \(SCM\) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。  可以将 Windows 服务进程配置为在计算机启动时自动启动，使其成为“始终运行的”应用程序的合适的承载环境。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows 服务应用程序的更多信息，请参见 [Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=89450)（可能为英文网页）。  
+# <a name="hosting-in-a-windows-service-application"></a><span data-ttu-id="266d9-102">在 Windows 服务应用程序中承载</span><span class="sxs-lookup"><span data-stu-id="266d9-102">Hosting in a Windows Service Application</span></span>
+<span data-ttu-id="266d9-103">Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。</span><span class="sxs-lookup"><span data-stu-id="266d9-103">Windows services (formerly known as Windows NT services) provide a process model particularly suited to applications that must live in a long-running executable and do not display any form of user interface.</span></span> <span data-ttu-id="266d9-104">Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="266d9-104">The process lifetime of a Windows service application is managed by the service control manager (SCM), which allows you to start, stop, and pause Windows service applications.</span></span> <span data-ttu-id="266d9-105">你可以配置 Windows 服务进程启动计算机，使其成为"始终运行的"应用程序的合适的宿主环境时自动启动。</span><span class="sxs-lookup"><span data-stu-id="266d9-105">You can configure a Windows service process to start automatically when the computer starts, making it a suitable hosting environment for "always on" applications.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="266d9-106">Windows 服务应用程序，请参阅[Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=89450)。</span><span class="sxs-lookup"><span data-stu-id="266d9-106"> Windows service applications, see [Windows Service Applications](http://go.microsoft.com/fwlink/?LinkId=89450).</span></span>  
   
- 承载长时间运行的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序具有许多和 Windows 服务一样的特性。  具体而言，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是长时间运行的服务器可执行程序，并且不与用户直接交互，因此也不实现任何形式的用户界面。  因此，在 Windows 服务应用程序内承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是一个用于生成可靠的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的可行方案。  
+ <span data-ttu-id="266d9-107">承载长时间运行的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序具有许多和 Windows 服务一样的特性。</span><span class="sxs-lookup"><span data-stu-id="266d9-107">Applications that host long-running [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services share many characteristics with Windows services.</span></span> <span data-ttu-id="266d9-108">具体而言，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是长时间运行的服务器可执行程序，并且不与用户直接交互，因此也不实现任何形式的用户界面。</span><span class="sxs-lookup"><span data-stu-id="266d9-108">In particular, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services are long-running server executables that do not interact directly with the user and therefore do not implement any form of user interface.</span></span> <span data-ttu-id="266d9-109">因此，在 Windows 服务应用程序内承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务是一个用于生成可靠的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的可行方案。</span><span class="sxs-lookup"><span data-stu-id="266d9-109">As such, hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services inside of a Windows service application is one option for building robust, long-running, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span>  
   
- 通常，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员必须决定是在 Windows 服务应用程序内、Internet 信息服务 \(IIS\) 内还是在 Windows 进程激活服务 \(WAS\) 宿主环境中承载他们的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序。  在下列条件下，应考虑使用 Windows 服务应用程序：  
+ <span data-ttu-id="266d9-110">通常，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 开发人员必须决定是在 Windows 服务应用程序内、Internet 信息服务 (IIS) 内还是在 Windows 进程激活服务 (WAS) 宿主环境中承载他们的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="266d9-110">Often, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developers must decide whether to host their [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application inside of a Windows service application or inside of the Internet Information Services (IIS) or Windows Process Activation Service (WAS) hosting environment.</span></span> <span data-ttu-id="266d9-111">在下列条件下，应考虑使用 Windows 服务应用程序：</span><span class="sxs-lookup"><span data-stu-id="266d9-111">You should consider using Windows service applications under the following conditions:</span></span>  
   
--   应用程序要求显式激活。  例如，在服务器启动时应用程序必须自动启动（而不是动态启动以响应第一个传入消息）的条件下，应使用 Windows 服务。  
+-   <span data-ttu-id="266d9-112">应用程序要求显式激活。</span><span class="sxs-lookup"><span data-stu-id="266d9-112">Your application requires explicit activation.</span></span> <span data-ttu-id="266d9-113">例如，在服务器启动时应用程序必须自动启动（而不是动态启动以响应第一个传入消息）的条件下，应使用 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="266d9-113">For example, you should use Windows services when your application must start automatically when the server starts instead of being dynamically started in response to the first incoming message.</span></span>  
   
--   承载应用程序的进程必须在启动后保持运行状态。  Windows 服务进程一旦启动将一直保持运行状态，直到服务器管理员使用服务控制管理器显式关闭该进程。  在 IIS 或 WAS 中承载的应用程序可能会动态地启动和停止，以便最佳地使用系统资源。  需要显式控制其宿主进程的生存期的应用程序应使用 Windows 服务而非 IIS 或 WAS。  
+-   <span data-ttu-id="266d9-114">承载应用程序的进程必须在启动后保持运行状态。</span><span class="sxs-lookup"><span data-stu-id="266d9-114">The process that hosts your application must remain running once started.</span></span> <span data-ttu-id="266d9-115">Windows 服务进程一旦启动将一直保持运行状态，直到服务器管理员使用服务控制管理器显式关闭该进程。</span><span class="sxs-lookup"><span data-stu-id="266d9-115">Once started, a Windows service process remains running unless explicitly shut down by a server administrator using the service control manager.</span></span> <span data-ttu-id="266d9-116">在 IIS 或 WAS 中承载的应用程序可能会动态地启动和停止，以便最佳地使用系统资源。</span><span class="sxs-lookup"><span data-stu-id="266d9-116">Applications hosted in IIS or WAS may be started and stopped dynamically to make optimal use of system resources.</span></span> <span data-ttu-id="266d9-117">需要显式控制其宿主进程的生存期的应用程序应使用 Windows 服务而非 IIS 或 WAS。</span><span class="sxs-lookup"><span data-stu-id="266d9-117">Applications that require explicit control over the lifetime of their hosting process should use Windows services instead of IIS or WAS.</span></span>  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务必须在 Windows Server 2003 上运行并且必须使用 HTTP 之外的传输。  在 Windows Server 2003 上，[!INCLUDE[iis601](../../../../includes/iis601-md.md)] 宿主环境限制为仅可进行 HTTP 通信。  Windows 服务应用程序不受此限制的约束，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何传输协议，包括 net.tcp、net.pipe 和 net.msmq。  
+-   <span data-ttu-id="266d9-118">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务必须在 Windows Server 2003 上运行并且必须使用 HTTP 之外的传输。</span><span class="sxs-lookup"><span data-stu-id="266d9-118">Your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service must run on Windows Server 2003 and use transports other than HTTP.</span></span> <span data-ttu-id="266d9-119">在 Windows Server 2003 上，[!INCLUDE[iis601](../../../../includes/iis601-md.md)] 宿主环境限制为仅可进行 HTTP 通信。</span><span class="sxs-lookup"><span data-stu-id="266d9-119">On Windows Server 2003, the [!INCLUDE[iis601](../../../../includes/iis601-md.md)] hosting environment is restricted to HTTP communication only.</span></span> <span data-ttu-id="266d9-120">Windows 服务应用程序不受此限制的约束，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何传输协议，包括 net.tcp、net.pipe 和 net.msmq。</span><span class="sxs-lookup"><span data-stu-id="266d9-120">Windows service applications are not subject to this restriction and can use any transport [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports, including net.tcp, net.pipe, and net.msmq.</span></span>  
   
-### 在 Windows 服务应用程序内承载 WCF  
+### <a name="to-host-wcf-inside-of-a-windows-service-application"></a><span data-ttu-id="266d9-121">在 Windows 服务应用程序内承载 WCF</span><span class="sxs-lookup"><span data-stu-id="266d9-121">To host WCF inside of a Windows service application</span></span>  
   
-1.  创建 Windows 服务应用程序。  可以使用 <xref:System.ServiceProcess> 命名空间中的类以托管代码的形式编写 Windows 服务应用程序。  此应用程序必须包含一个继承自 <xref:System.ServiceProcess.ServiceBase> 的类。  
+1.  <span data-ttu-id="266d9-122">创建 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="266d9-122">Create a Windows service application.</span></span> <span data-ttu-id="266d9-123">可以使用 <xref:System.ServiceProcess> 命名空间中的类以托管代码的形式编写 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="266d9-123">You can write Windows service applications in managed code using the classes in the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="266d9-124">此应用程序必须包含一个继承自 <xref:System.ServiceProcess.ServiceBase> 的类。</span><span class="sxs-lookup"><span data-stu-id="266d9-124">This application must include one class that inherits from <xref:System.ServiceProcess.ServiceBase>.</span></span>  
   
-2.  将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的生存期链接到 Windows 服务应用程序的生存期。  通常，人们希望 Windows 服务应用程序中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务能够在宿主服务启动时变为活动状态，而在宿主服务停止时停止对消息的侦听，并在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务遇到错误时关闭宿主进程。  这可以通过以下操作实现：  
+2.  <span data-ttu-id="266d9-125">将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的生存期链接到 Windows 服务应用程序的生存期。</span><span class="sxs-lookup"><span data-stu-id="266d9-125">Link the lifetime of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to the lifetime of the Windows service application.</span></span> <span data-ttu-id="266d9-126">通常，人们希望 Windows 服务应用程序中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务能够在宿主服务启动时变为活动状态，而在宿主服务停止时停止对消息的侦听，并在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务遇到错误时关闭宿主进程。</span><span class="sxs-lookup"><span data-stu-id="266d9-126">Typically, you want [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services hosted in a Windows service application to become active when the hosting service starts, stop listening for messages when the hosting service is stopped, and shut down the hosting process when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service encounters an error.</span></span> <span data-ttu-id="266d9-127">这可以通过以下操作实现：</span><span class="sxs-lookup"><span data-stu-id="266d9-127">This can be accomplished as follows:</span></span>  
   
-    -   重写 [OnStart\(String\<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以打开一个或多个 <xref:System.ServiceModel.ServiceHost> 实例。  一个 Windows 服务应用程序可以承载多个作为一个组同时启动和停止的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+    -   <span data-ttu-id="266d9-128">重写 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以打开一个或多个 <xref:System.ServiceModel.ServiceHost> 实例。</span><span class="sxs-lookup"><span data-stu-id="266d9-128">Override <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> to open one or more instances of <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="266d9-129">一个 Windows 服务应用程序可以承载多个作为一个组同时启动和停止的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="266d9-129">A single Windows service application can host multiple [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that start and stop as a group.</span></span>  
   
-    -   重写 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 以在 <xref:System.ServiceModel.ServiceHost> 任何运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务上调用 <xref:System.ServiceModel.Channels.CommunicationObject.Closed>，这些服务在 [OnStart\(String\<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 过程中启动。  
+    -   <span data-ttu-id="266d9-130">重写 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 以在 <xref:System.ServiceModel.Channels.CommunicationObject.Closed> 任何运行的 <xref:System.ServiceModel.ServiceHost> 服务上调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，这些服务在 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 过程中启动。</span><span class="sxs-lookup"><span data-stu-id="266d9-130">Override <xref:System.ServiceProcess.ServiceBase.OnStop%2A> to call <xref:System.ServiceModel.Channels.CommunicationObject.Closed> on the <xref:System.ServiceModel.ServiceHost> any running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that were started during <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>.</span></span>  
   
-    -   订阅 <xref:System.ServiceModel.ServiceHost> 的 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> 事件，并使用 <xref:System.ServiceProcess.ServiceController> 类以在出现错误时关闭 Windows 服务应用程序。  
+    -   <span data-ttu-id="266d9-131">订阅 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> 的 <xref:System.ServiceModel.ServiceHost> 事件，并使用 <xref:System.ServiceProcess.ServiceController> 类以在出现错误时关闭 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="266d9-131">Subscribe to the <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> event of <xref:System.ServiceModel.ServiceHost> and use the <xref:System.ServiceProcess.ServiceController> class to shut down the Windows service application in case of error.</span></span>  
   
-     部署和管理承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 Windows 服务应用程序的方式与不使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服务应用程序的一样。  
+     <span data-ttu-id="266d9-132">部署和管理承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 Windows 服务应用程序的方式与不使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服务应用程序的一样。</span><span class="sxs-lookup"><span data-stu-id="266d9-132">Windows service applications that host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services are deployed and managed in the same way as Windows service applications that do not make use of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## 请参阅  
- <xref:System.ServiceProcess>   
- [演练：在组件设计器中创建 Windows 服务应用程序 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=94875)   
- [如何：在托管 Windows 服务中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)   
- [Windows 服务主机](../../../../docs/framework/wcf/samples/windows-service-host.md)   
- [服务应用程序编程体系结构 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=94876)   
- [Windows Server App Fabric 承载功能 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="266d9-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="266d9-133">See Also</span></span>  
+ <xref:System.ServiceProcess>  
+ [<span data-ttu-id="266d9-134">演练： 在组件设计器中创建 Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="266d9-134">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](http://go.microsoft.com/fwlink/?LinkId=94875)  
+ [<span data-ttu-id="266d9-135">如何： 承载 WCF 服务中托管的 Windows 服务</span><span class="sxs-lookup"><span data-stu-id="266d9-135">How to: Host a WCF Service in a Managed Windows Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [<span data-ttu-id="266d9-136">Windows 服务主机</span><span class="sxs-lookup"><span data-stu-id="266d9-136">Windows Service Host</span></span>](../../../../docs/framework/wcf/samples/windows-service-host.md)  
+ [<span data-ttu-id="266d9-137">服务应用程序编程体系结构</span><span class="sxs-lookup"><span data-stu-id="266d9-137">Service Application Programming Architecture</span></span>](http://go.microsoft.com/fwlink/?LinkId=94876)  
+ [<span data-ttu-id="266d9-138">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="266d9-138">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

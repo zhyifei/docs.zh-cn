@@ -1,69 +1,73 @@
 ---
-title: "持久性参与者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "持久性参与者"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a19099ea928e8867dd8206b8add0f1146496d052
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 持久性参与者
-持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带两个抽象类：**PersistenceParticipant** 和 **PersistenceIOParticipant**，您可以使用它们来创建持久性参与者。持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 集合。应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。  
+# <a name="persistence-participants"></a><span data-ttu-id="eb8ff-102">持久性参与者</span><span class="sxs-lookup"><span data-stu-id="eb8ff-102">Persistence Participants</span></span>
+<span data-ttu-id="eb8ff-103">持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-103">A persistence participant can participate in a persistence operation (Save or Load) triggered by an application host.</span></span> <span data-ttu-id="eb8ff-104">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带两个抽象类， **PersistenceParticipant**和**PersistenceIOParticipant**，可以用来创建持久性参与者。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-104">The [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ships with two abstract classes, **PersistenceParticipant** and **PersistenceIOParticipant**, which you can use to create a persistence participant.</span></span> <span data-ttu-id="eb8ff-105">持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-105">A persistence participant derives from one of these classes, implements the methods of interest, and then adds an instance of the class to the <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> collection on the <xref:System.ServiceModel.Activities.WorkflowServiceHost> .</span></span> <span data-ttu-id="eb8ff-106">应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-106">The application host may look for such workflow extensions when persisting a workflow instance and invoke appropriate methods on the persistence participants at appropriate times.</span></span>  
   
- 下面的列表介绍持久性子系统在持久保存（保存）操作的不同阶段执行的任务。持久性参与者用在第三和第四个阶段。如果参与者是 IO 参与者（还参与 IO 操作的持久性参与者），则该参与者还将在第六个阶段中使用。  
+ <span data-ttu-id="eb8ff-107">下面的列表介绍持久性子系统在持久保存（保存）操作的不同阶段执行的任务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-107">The following list describes the tasks performed by the persistence subsystem in different stages of the Persist (Save) operation.</span></span> <span data-ttu-id="eb8ff-108">持久性参与者用在第三和第四个阶段。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-108">The persistence participants are used in the third and fourth stages.</span></span> <span data-ttu-id="eb8ff-109">如果参与者是 IO 参与者（还参与 IO 操作的持久性参与者），则该参与者还将在第六个阶段中使用。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-109">If the participant is an IO participant (a persistence participant that also participates in IO operations), the participant is also used in the sixth stage.</span></span>  
   
-1.  收集内置值，包括工作流状态、书签、映射变量和时间戳。  
+1.  <span data-ttu-id="eb8ff-110">收集内置值，包括工作流状态、书签、映射变量和时间戳。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-110">Gathers built-in values, including workflow state, bookmarks, mapped variables, and timestamp.</span></span>  
   
-2.  收集已添加到与工作流实例关联的扩展集合中的所有持久性参与者。  
+2.  <span data-ttu-id="eb8ff-111">收集已添加到与工作流实例关联的扩展集合中的所有持久性参与者。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-111">Gathers all persistence participants that were added to the extension collection associated with the workflow instance.</span></span>  
   
-3.  调用由所有持久性参与者实现的 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 方法。  
+3.  <span data-ttu-id="eb8ff-112">调用由所有持久性参与者实现的 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-112">Invokes the <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> method implemented by all persistence participants.</span></span>  
   
-4.  调用由所有持久性参与者实现的 <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法。  
+4.  <span data-ttu-id="eb8ff-113">调用由所有持久性参与者实现的 <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-113">Invokes the <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> method implemented by all persistence participants.</span></span>  
   
-5.  将工作流持久保存或保存到持久性存储区。  
+5.  <span data-ttu-id="eb8ff-114">将工作流持久保存或保存到持久性存储区。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-114">Persist or save the workflow into the persistence store.</span></span>  
   
-6.  对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> 方法。如果参与者不是 IO 参与者，则跳过此任务。如果持久性段是事务性的，则在 Transaction.Current 属性中提供事务。  
+6.  <span data-ttu-id="eb8ff-115">对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-115">Invokes the <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> method on all of the persistence IO participants.</span></span> <span data-ttu-id="eb8ff-116">如果参与者不是 IO 参与者，则跳过此任务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-116">If the participant is not an IO participant, this task is skipped.</span></span> <span data-ttu-id="eb8ff-117">如果持久性段是事务性的，则在 Transaction.Current 属性中提供事务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-117">If the persistence episode is transactional, the transaction is provided in Transaction.Current property.</span></span>  
   
-7.  等待所有持久性参与者完成。如果所有参与者在持久保存实例数据时都成功，则提交事务。  
+7.  <span data-ttu-id="eb8ff-118">等待所有持久性参与者完成。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-118">Waits for all persistence participants to complete.</span></span> <span data-ttu-id="eb8ff-119">如果所有参与者在持久保存实例数据时都成功，则提交事务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-119">If all the participants succeed in persisting instance data, commits the transaction.</span></span>  
   
- 持久性参与者派生自 **PersistenceParticipant** 类，可以实现 **CollectValues** 和 **MapValues** 方法。持久性 IO 参与者派生自 **PersistenceIOParticipant** 类，除了实现 **CollectValues** 和 **MapValues** 方法外，还可以实现 **BeginOnSave** 方法。  
+ <span data-ttu-id="eb8ff-120">持久性参与者派生自**PersistenceParticipant**类，可以实现**CollectValues**和**MapValues**方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-120">A persistence participant derives from the **PersistenceParticipant** class and may implement the **CollectValues** and **MapValues** methods.</span></span> <span data-ttu-id="eb8ff-121">持久性 IO 参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnSave**除了实现的方法**CollectValues**和**MapValues**方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-121">A persistence IO participant derives from the **PersistenceIOParticipant** class and may implement the **BeginOnSave** method in addition to implementing the **CollectValues** and **MapValues** methods.</span></span>  
   
- 一个阶段完成之后才开始下一个阶段。例如，从第一个阶段中的**所有**持久性参与者收集值。然后，将在第一个阶段中收集的所有值提供给第二个阶段中的所有持久性参与者进行映射。接下来，将在第一个阶段中收集的和在第二个阶段中映射的所有值提供给第三个阶段中的持久性提供程序，依此类推。  
+ <span data-ttu-id="eb8ff-122">一个阶段完成之后才开始下一个阶段。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-122">Each stage is completed before the next stage begins.</span></span> <span data-ttu-id="eb8ff-123">例如，从收集值**所有**第一个阶段中的持久性参与者。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-123">For example, values are collected from **all** persistence participants in the first stage.</span></span> <span data-ttu-id="eb8ff-124">然后，将在第一个阶段中收集的所有值提供给第二个阶段中的所有持久性参与者进行映射。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-124">Then all the values collected in the first stage are provided to all persistence participants in the second stage for mapping.</span></span> <span data-ttu-id="eb8ff-125">接下来，将在第一个阶段中收集的和在第二个阶段中映射的所有值提供给第三个阶段中的持久性提供程序，依此类推。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-125">Then all the values collected and mapped in the first and second stages are provided to the persistence provider in the third stage, and so on.</span></span>  
   
- 下面的列表介绍持久性子系统在加载操作的不同阶段执行的任务。持久性参与者用在第四个阶段中。持久性 IO 参与者（还参与 IO 操作的持久性参与者）还在第三个阶段中使用。  
+ <span data-ttu-id="eb8ff-126">下面的列表介绍持久性子系统在加载操作的不同阶段执行的任务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-126">The following list describes the tasks performed by the persistence subsystem in different stages of the Load operation.</span></span> <span data-ttu-id="eb8ff-127">持久性参与者用在第四个阶段中。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-127">The persistence participants are used in the fourth stage.</span></span> <span data-ttu-id="eb8ff-128">持久性 IO 参与者（还参与 IO 操作的持久性参与者）还在第三个阶段中使用。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-128">The persistence IO participants (persistence participants that also participate in IO operations) are also used in the third stage.</span></span>  
   
-1.  收集已添加到与工作流实例关联的扩展集合中的所有持久性参与者。  
+1.  <span data-ttu-id="eb8ff-129">收集已添加到与工作流实例关联的扩展集合中的所有持久性参与者。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-129">Gathers all persistence participants that were added to the extension collection associated with the workflow instance.</span></span>  
   
-2.  从持久性存储区加载工作流。  
+2.  <span data-ttu-id="eb8ff-130">从持久性存储区加载工作流。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-130">Loads the workflow from the persistence store.</span></span>  
   
-3.  对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>，并等待所有持久性参与者完成。如果持久性段是事务性的，则在 Transaction.Current 中提供事务。  
+3.  <span data-ttu-id="eb8ff-131">对所有持久性 IO 参与者调用 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>，并等待所有持久性参与者完成。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-131">Invokes the <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> on all persistence IO participants and waits for all the persistence participants to complete.</span></span> <span data-ttu-id="eb8ff-132">如果持久性段是事务性的，则在 Transaction.Current 中提供事务。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-132">If the persistence episode is transactional, the transaction is provided in Transaction.Current.</span></span>  
   
-4.  基于从持久性存储区检索的数据将工作流实例加载到内存中。  
+4.  <span data-ttu-id="eb8ff-133">基于从持久性存储区检索的数据将工作流实例加载到内存中。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-133">Loads the workflow instance in memory based on the data retrieved from the persistence store.</span></span>  
   
-5.  对每个持久性参与者调用 <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>。  
+5.  <span data-ttu-id="eb8ff-134">对每个持久性参与者调用 <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-134">Invokes <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> on each persistence participant.</span></span>  
   
- 持久性参与者派生自 **PersistenceParticipant** 类，可以实现 **PublishValues** 方法。持久性 IO 参与者派生自 **PersistenceIOParticipant** 类，除了实现 **PublishValues** 方法外，还可以实现 **BeginOnLoad** 方法。  
+ <span data-ttu-id="eb8ff-135">持久性参与者派生自**PersistenceParticipant**类，可以实现**PublishValues**方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-135">A persistence participant derives from the **PersistenceParticipant** class and may implement the **PublishValues** method.</span></span> <span data-ttu-id="eb8ff-136">持久性 IO 参与者派生自**PersistenceIOParticipant**类，可以实现**BeginOnLoad**除了实现的方法**PublishValues**方法。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-136">A persistence IO participant derives from the **PersistenceIOParticipant** class and may implement the **BeginOnLoad** method in addition to implementing the **PublishValues** method.</span></span>  
   
- 加载工作流实例时持久性提供程序将在该实例上创建锁。这可防止加载方案的多节点中的多个主机的实例。如果您试图加载已锁定的工作流实例，您将看到像下面的异常：异常" System.ServiceModel.Persistence.InstanceLockException：所请求的操作无法完成，因为该锁的实例 '00000000 0000 0000 0000 000000000000' 无法获取"。该错误发生在下列情况之一引起：  
+ <span data-ttu-id="eb8ff-137">在加载工作流实例时，持久性提供程序将在该实例上创建锁。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-137">When loading a workflow instance the persistence provider creates a lock on that instance.</span></span> <span data-ttu-id="eb8ff-138">这避免该实例在多节点方案中被多个主机加载。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-138">This prevents the instance from being loaded by more than one host in a multi-node scenario.</span></span> <span data-ttu-id="eb8ff-139">如果你尝试加载已被锁定的工作流实例将会看到如下所示异常： 异常"System.ServiceModel.Persistence.InstanceLockException： 请求的操作无法完成，因为锁定的实例00000000-0000-0000-0000-000000000000 无法获取"。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-139">If you attempt to load a workflow instance that has been locked you will see an exception like the following: The exception " System.ServiceModel.Persistence.InstanceLockException: The requested operation could not complete because the lock for instance '00000000-0000-0000-0000-000000000000' could not be acquired".</span></span> <span data-ttu-id="eb8ff-140">在发生下列情况之一时将会导致该错误：</span><span class="sxs-lookup"><span data-stu-id="eb8ff-140">This error is caused when one of the following occurs:</span></span>  
   
--   在方案的多节点实例是由另一台主机加载。有几个不同的方法来解决这些类型的冲突：转发到的节点拥有锁和重试，处理或强制的负载，这会导致与其他主机无法保存他们的工作。  
+-   <span data-ttu-id="eb8ff-141">在多节点方案中，另一个主机加载了该实例。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-141">In a multi-node scenario the instance is loaded by another host.</span></span>  <span data-ttu-id="eb8ff-142">有几种不同的方法可以解决这些类型的冲突：转移对拥有锁和重试的节点的处理，或者强制将导致其他主机无法保存其工作的负载。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-142">There are a few different ways to resolve these types of conflicts: forward the processing to the node which owns the lock and retry, or force the load which will cause the other host to be unable to save their work.</span></span>  
   
--   在一个单节点方案和主机出现故障。主机启动时再次 （进程回收或创建新的持久性提供程序工厂） 新主机尝试加载一个实例，因为锁没有过期旧宿主仍锁定。  
+-   <span data-ttu-id="eb8ff-143">在单节点方案中并且主机出现崩溃。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-143">In a single-node scenario and the host crashed.</span></span>  <span data-ttu-id="eb8ff-144">在主机再次启动时（进程回收或者创建新的持久性提供程序工厂），新主机将尝试加载由于锁尚未到期而仍被旧主机锁定的实例。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-144">When the host starts up again (a process recycle or creating a new persistence provider factory) the new host attempts to load an instance which is still locked by the old host because the lock hasn't expired yet.</span></span>  
   
--   单节点方案和实例问题已中止在一些点，创建一个新的持久性提供程序实例，有一个不同的主机 ID。  
+-   <span data-ttu-id="eb8ff-145">在单节点方案中并且有关实例在某个点上已中止并且创建具有不同主机 ID 的新的持久性提供程序实例。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-145">In a single-node scenario and the instance in question was aborted at some point and a new persistence provider instance is created which has a different host ID.</span></span>  
   
- 锁超时值的默认值为 5 分钟，在调用时，可以指定一个不同的超时值 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>。  
+ <span data-ttu-id="eb8ff-146">锁定超时时间值默认为 5 分钟，您可以在调用 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> 时指定其他超时时间值。</span><span class="sxs-lookup"><span data-stu-id="eb8ff-146">The lock timeout value has a default value of 5 minutes, you can specify a different timeout value when calling <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.</span></span>  
   
-## 本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="eb8ff-147">本节内容</span><span class="sxs-lookup"><span data-stu-id="eb8ff-147">In This Section</span></span>  
   
--   [如何：创建自定义持久性参与者](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-persistence-participant.md)  
+-   [<span data-ttu-id="eb8ff-148">如何：创建自定义暂留参与者</span><span class="sxs-lookup"><span data-stu-id="eb8ff-148">How to: Create a Custom Persistence Participant</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   
-## 请参阅  
- [存储扩展性](../../../docs/framework/windows-workflow-foundation//store-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="eb8ff-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eb8ff-149">See Also</span></span>  
+ [<span data-ttu-id="eb8ff-150">存储扩展性</span><span class="sxs-lookup"><span data-stu-id="eb8ff-150">Store Extensibility</span></span>](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)

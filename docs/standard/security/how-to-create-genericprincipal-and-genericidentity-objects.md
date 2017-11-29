@@ -1,37 +1,38 @@
 ---
-title: "如何：创建 GenericPrincipal 和 GenericIdentity 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "创建泛型标识对象"
-  - "创建 GenericPrincipal 对象"
-  - "GenericIdentity 对象"
-  - "GenericPrincipal 对象"
+title: "如何：创建 GenericPrincipal 和 GenericIdentity 对象"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Creating Generic Identity Objects
+- GenericPrincipal Objects
+- Creating GenericPrincipal Objects
+- GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建 GenericPrincipal 和 GenericIdentity 对象
-可将 <xref:System.Security.Principal.GenericIdentity> 类和 <xref:System.Security.Principal.GenericPrincipal> 类结合起来使用，以创建独立于 Windows NT 或 Windows 2000 域的授权方案。  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="25d3e-102">如何：创建 GenericPrincipal 和 GenericIdentity 对象</span><span class="sxs-lookup"><span data-stu-id="25d3e-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
+<span data-ttu-id="25d3e-103">你可以使用<xref:System.Security.Principal.GenericIdentity>结合类<xref:System.Security.Principal.GenericPrincipal>类，以创建独立的 Windows 域存在授权方案。</span><span class="sxs-lookup"><span data-stu-id="25d3e-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  
   
-### 创建 GenericPrincipal 对象  
+### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="25d3e-104">创建 GenericPrincipal 对象</span><span class="sxs-lookup"><span data-stu-id="25d3e-104">To create a GenericPrincipal object</span></span>  
   
-1.  创建标识类的一个新实例，并用希望它持有的名称对其进行初始化。  以下代码创建一个新的 **GenericIdentity** 对象，并用名称 `MyUser` 对其进行初始化。  
+1.  <span data-ttu-id="25d3e-105">创建标识类的一个新实例，并用希望它持有的名称对其进行初始化。</span><span class="sxs-lookup"><span data-stu-id="25d3e-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="25d3e-106">以下代码创建一个新的 **GenericIdentity** 对象，并用名称 `MyUser` 对其进行初始化。</span><span class="sxs-lookup"><span data-stu-id="25d3e-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -41,7 +42,7 @@ caps.handback.revision: 8
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  创建 **GenericPrincipal** 类的一个新实例，并用先前创建的 **GenericIdentity** 对象和表示希望与此主体关联的角色的字符串数组对其进行初始化。  下面的代码示例指定表示一个管理员角色和一个用户角色的字符串数组。  然后用前面的 **GenericIdentity** 和该字符串数组对 **GenericPrincipal** 进行初始化。  
+2.  <span data-ttu-id="25d3e-107">创建 **GenericPrincipal** 类的一个新实例，并用先前创建的 **GenericIdentity** 对象和表示希望与此主体关联的角色的字符串数组对其进行初始化。</span><span class="sxs-lookup"><span data-stu-id="25d3e-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="25d3e-108">下面的代码示例指定表示一个管理员角色和一个用户角色的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="25d3e-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="25d3e-109">然后用前面的 **GenericIdentity** 和该字符串数组对 **GenericPrincipal** 进行初始化。</span><span class="sxs-lookup"><span data-stu-id="25d3e-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -53,7 +54,7 @@ caps.handback.revision: 8
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  使用以下代码将主体附加到当前线程中。  这在以下几种情形中很有用：必须对主体进行多次验证，必须通过应用程序中运行的其他代码对主体进行验证，或必须由 <xref:System.Security.Permissions.PrincipalPermission> 对象对主题进行验证。  不将主体附加到线程中，仍可对主体对象执行基于角色的验证。  有关更多信息，请参见[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。  
+3.  <span data-ttu-id="25d3e-110">使用以下代码将主体附加到当前线程中。</span><span class="sxs-lookup"><span data-stu-id="25d3e-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="25d3e-111">这是十分重要，其中主体必须验证几次，它必须由其他应用程序中运行的代码来验证或它必须由来验证的情况下<xref:System.Security.Permissions.PrincipalPermission>对象。</span><span class="sxs-lookup"><span data-stu-id="25d3e-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="25d3e-112">不将主体附加到线程中，仍可对主体对象执行基于角色的验证。</span><span class="sxs-lookup"><span data-stu-id="25d3e-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="25d3e-113">有关详细信息，请参阅[替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)。</span><span class="sxs-lookup"><span data-stu-id="25d3e-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -63,8 +64,8 @@ caps.handback.revision: 8
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## 示例  
- 下面的代码示例说明如何创建 **GenericPrincipal** 和 **GenericIdentity** 的实例。  此代码将这些对象的值显示到控制台。  
+## <a name="example"></a><span data-ttu-id="25d3e-114">示例</span><span class="sxs-lookup"><span data-stu-id="25d3e-114">Example</span></span>  
+ <span data-ttu-id="25d3e-115">下面的代码示例说明如何创建 **GenericPrincipal** 和 **GenericIdentity** 的实例。</span><span class="sxs-lookup"><span data-stu-id="25d3e-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="25d3e-116">此代码将这些对象的值显示到控制台中。</span><span class="sxs-lookup"><span data-stu-id="25d3e-116">This code displays the values of these objects to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -138,7 +139,7 @@ public class Class1
 }  
 ```  
   
- 执行时，应用程序显示类似于下面这样的输出。  
+ <span data-ttu-id="25d3e-117">执行时，应用程序显示类似于下面这样的输出。</span><span class="sxs-lookup"><span data-stu-id="25d3e-117">When executed, the application displays output similar to the following.</span></span>  
   
 ```  
 The Name is: MyIdentity  
@@ -146,9 +147,9 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## 请参阅  
- <xref:System.Security.Principal.GenericIdentity>   
- <xref:System.Security.Principal.GenericPrincipal>   
- <xref:System.Security.Permissions.PrincipalPermission>   
- [替换 Principal 对象](../../../docs/standard/security/replacing-a-principal-object.md)   
- [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a><span data-ttu-id="25d3e-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="25d3e-118">See Also</span></span>  
+ <xref:System.Security.Principal.GenericIdentity>  
+ <xref:System.Security.Principal.GenericPrincipal>  
+ <xref:System.Security.Permissions.PrincipalPermission>  
+ [<span data-ttu-id="25d3e-119">替换主体对象</span><span class="sxs-lookup"><span data-stu-id="25d3e-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [<span data-ttu-id="25d3e-120">主体和标识对象</span><span class="sxs-lookup"><span data-stu-id="25d3e-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)

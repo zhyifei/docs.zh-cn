@@ -1,75 +1,78 @@
 ---
-title: "如何：从工作流应用程序访问服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：从工作流应用程序访问服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d2d87c045fe81e3f5bf2cb490e47fb5fbd6bc7a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：从工作流应用程序访问服务
-本主题说明如何从工作流控制台应用程序调用工作流服务。需要先完成[如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题，才能进行本主题。尽管本主题说明如何从工作流应用程序调用工作流服务，但是，当从工作流应用程序调用任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，同样可以使用相同方法。  
+# <a name="how-to-access-a-service-from-a-workflow-application"></a><span data-ttu-id="7c5b4-102">如何：从工作流应用程序访问服务</span><span class="sxs-lookup"><span data-stu-id="7c5b4-102">How To: Access a Service From a Workflow Application</span></span>
+<span data-ttu-id="7c5b4-103">本主题说明如何从工作流控制台应用程序调用工作流服务。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-103">This topic describes how to call a workflow service from a workflow console application.</span></span> <span data-ttu-id="7c5b4-104">它依赖于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-104">It depends on completion of the [How to: Create a Workflow Service with Messaging Activities](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) topic.</span></span> <span data-ttu-id="7c5b4-105">尽管本主题说明如何从工作流应用程序调用工作流服务，但是，当从工作流应用程序调用任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，同样可以使用相同方法。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-105">Although this topic describes how to call a workflow service from a workflow application, the same methods can be used to call any [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service from a workflow application.</span></span>  
   
-### 创建工作流控制台应用程序项目  
+### <a name="create-a-workflow-console-application-project"></a><span data-ttu-id="7c5b4-106">创建工作流控制台应用程序项目</span><span class="sxs-lookup"><span data-stu-id="7c5b4-106">Create a Workflow Console Application Project</span></span>  
   
-1.  启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
+1.  <span data-ttu-id="7c5b4-107">启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-107">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  加载在[如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题中创建的 MyWFService 项目。  
+2.  <span data-ttu-id="7c5b4-108">负载中创建的 MyWFService 项目[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-108">Load the MyWFService project you created in the [How to: Create a Workflow Service with Messaging Activities](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) topic.</span></span>  
   
-3.  右击**“解决方案资源管理器”**中的**“MyWFService”**解决方案，选择**“添加”**，然后选择**“新建项目”**。从项目类型列表的**“已安装的模板”**和**“工作流控制台应用程序”**中，选择**“工作流”**。将项目命名为 MyWFClient 并保存在默认位置，如以下插图所示。  
+3.  <span data-ttu-id="7c5b4-109">右键单击**MyWFService**中的解决方案**解决方案资源管理器**和选择**添加**，**新项目**。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-109">Right click the **MyWFService** solution in the **Solution Explorer** and select **Add**, **New Project**.</span></span> <span data-ttu-id="7c5b4-110">选择**工作流**中**已安装的模板**和**工作流控制台应用程序**从项目类型列表。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-110">Select **Workflow** in the **Installed Templates** and **Workflow Console Application** from the list of project types.</span></span> <span data-ttu-id="7c5b4-111">将项目命名为 MyWFClient 并保存在默认位置，如以下插图所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-111">Name the project MyWFClient and use the default location as shown in the following illustration.</span></span>  
   
-     ![“添加新项目”对话框](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")  
+     <span data-ttu-id="7c5b4-112">![添加新项目对话框](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-112">![Add New Project Dialog](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")</span></span>  
   
-     单击**“确定”**按钮关闭**“添加新项目”**对话框。  
+     <span data-ttu-id="7c5b4-113">单击**确定**按钮以关闭**添加新项目对话框**。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-113">Click the **OK** button to dismiss the **Add New Project Dialog**.</span></span>  
   
-4.  创建项目以后，将在设计器中打开 Workflow1.xaml 文件。单击**“工具箱”**选项卡打开工具箱（如果尚未打开），然后单击图钉保持工具箱窗口打开。  
+4.  <span data-ttu-id="7c5b4-114">创建项目以后，将在设计器中打开 Workflow1.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-114">After the project is created, the Workflow1.xaml file is opened in the designer.</span></span> <span data-ttu-id="7c5b4-115">单击**工具箱**选项卡以打开工具箱中，如果不是已打开，然后单击图钉保持工具箱窗口打开。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-115">Click the **Toolbox** tab to open the toolbox if it is not already open and click the pushpin to keep the toolbox window open.</span></span>  
   
-5.  按 Ctrl\+F5 生成并启动服务。与以前一样，将启动 ASP.NET Development Server，并且 Internet Explorer 将显示 WCF 帮助页。请注意该页面的 URI，因为在下一步中，您必须使用它。  
+5.  <span data-ttu-id="7c5b4-116">按 Ctrl+F5 生成并启动服务。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-116">Press Ctrl + F5 to build and launch the service.</span></span> <span data-ttu-id="7c5b4-117">与以前一样，将启动 ASP.NET Development Server，并且 Internet Explorer 将显示 WCF 帮助页。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-117">As before, the ASP.NET Development Server is launched and Internet Explorer displays the WCF Help Page.</span></span> <span data-ttu-id="7c5b4-118">请注意该页面的 URI，因为在下一步中，您必须使用它。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-118">Notice the URI for this page as you must use it in the next step.</span></span>  
   
-     ![显示 WCF 帮助页和 URI 的 IE](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")  
+     <span data-ttu-id="7c5b4-119">![IE 显示 WCF 帮助页和 URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-119">![IE displaying WCF Help Page and URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")</span></span>  
   
-6.  在**“解决方案资源管理器”**中，右击**“MyWFClient”**项目，并选择**“添加服务引用”**。单击**“发现”**按钮搜索任何服务的当前解决方案。在“服务”列表中，单击 Service1.xamlx 旁边的三角形。单击 Service1 旁边的三角形列出由 Service1 服务实现的约定。在**“服务”**列表中，展开**“Service1”**节点。**“操作”**列表中将显示“Echo”操作，如以下插图所示。  
+6.  <span data-ttu-id="7c5b4-120">右键单击**MyWFClient**项目中**解决方案资源管理器**和选择**添加服务引用**。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-120">Right click the **MyWFClient** project in the **Solution Explorer** and select **Add Service Reference**.</span></span> <span data-ttu-id="7c5b4-121">单击**发现**按钮以搜索任何服务的当前解决方案。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-121">Click the **Discover** button to search the current solution for any services.</span></span> <span data-ttu-id="7c5b4-122">在“服务”列表中，单击 Service1.xamlx 旁边的三角形。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-122">Click the triangle next to Service1.xamlx in the Services list.</span></span> <span data-ttu-id="7c5b4-123">单击 Service1 旁边的三角形列出由 Service1 服务实现的约定。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-123">Click the triangle next to Service1 to list the contracts implemented by the Service1 service.</span></span> <span data-ttu-id="7c5b4-124">展开**Service1**中的节点**服务**列表。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-124">Expand the **Service1** node in the **Services** list.</span></span> <span data-ttu-id="7c5b4-125">Echo 操作显示在**操作**列表下图中所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-125">The Echo operation is displayed in the **Operations** list as shown in the following illustration.</span></span>  
   
-     ![“添加服务引用”对话框](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")  
+     <span data-ttu-id="7c5b4-126">![添加服务引用对话框](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-126">![Add Service Reference Dialog](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")</span></span>  
   
-     保留默认命名空间不动，然后单击**“确定”**关闭**“添加服务引用”**对话框。将显示以下对话框。  
+     <span data-ttu-id="7c5b4-127">保留默认命名空间，然后单击**确定**关闭**添加服务引用**对话框。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-127">Keep the default namespace and click **OK** to dismiss the **Add Service Reference** dialog.</span></span> <span data-ttu-id="7c5b4-128">将显示以下对话框。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-128">The following dialog is displayed.</span></span>  
   
-     ![“添加服务引用通知”对话框](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")  
+     <span data-ttu-id="7c5b4-129">![添加服务引用通知对话框](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-129">![The add service reference notification dialog](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")</span></span>  
   
-     单击**“确定”**关闭对话框。接下来，按 Ctrl\+Shift\+B 生成解决方案。请注意，工具箱中已添加一个名为**“MyWFClient.ServiceReference1.Activities”**的部分。展开此部分，请注意，此时已添加“Echo”活动，如以下插图所示。  
+     <span data-ttu-id="7c5b4-130">单击**确定**关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-130">Click **OK** to dismiss the dialog.</span></span> <span data-ttu-id="7c5b4-131">接下来，按 Ctrl+Shift+B 生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-131">Next, press CTRL+SHIFT+B to build the solution.</span></span> <span data-ttu-id="7c5b4-132">请注意，在工具箱中添加一个新节调用**MyWFClient.ServiceReference1.Activities**。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-132">Notice in the toolbox a new section has been added called **MyWFClient.ServiceReference1.Activities**.</span></span> <span data-ttu-id="7c5b4-133">展开此部分，请注意，此时已添加“Echo”活动，如以下插图所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-133">Expand this section and notice the Echo activity that has been added as shown in the following illustration.</span></span>  
   
-     ![工具箱中的 Echo 活动](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")  
+     <span data-ttu-id="7c5b4-134">![回显工具箱中的活动](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-134">![Echo activity in toolbox](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")</span></span>  
   
-7.  将 <xref:System.ServiceModel.Activities.Sequence> 活动拖放到设计器图面。该活动将位于工具箱的**“控制流”**部分下。  
+7.  <span data-ttu-id="7c5b4-135">拖放式<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动拖放到设计器图面。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-135">Drag and drop a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity onto the designer surface.</span></span> <span data-ttu-id="7c5b4-136">它位于**控制流**工具箱的部分。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-136">It is under the **Control Flow** section of the toolbox.</span></span>  
   
-8.  当焦点位于 <xref:System.ServiceModel.Activities.Sequence> 活动时，单击**“变量”**链接，然后添加一个名为 `inString` 的字符串变量。为该变量指定默认值`“Hello, world”`，并指定一个名为 `outString` 的字符串变量，如下图所示。  
+8.  <span data-ttu-id="7c5b4-137">与<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动焦点，请单击**变量**链接，然后添加一个名为的字符串变量`inString`。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-137">With the <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity in focus, click the **Variables** link and add a string variable named `inString`.</span></span> <span data-ttu-id="7c5b4-138">为该变量赋予默认值为`"Hello, world"`以及一个名为的字符串变量`outString`下图中所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-138">Give the variable a default value of `"Hello, world"` as well as a string variable named `outString` as shown in the following diagram.</span></span>  
   
-     ![添加变量](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")  
+     <span data-ttu-id="7c5b4-139">![添加变量](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-139">![Adding a variable](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")</span></span>  
   
-9. 将**“Echo”**活动拖放到 <xref:System.ServiceModel.Activities.Sequence> 中。在属性窗口中，将 \_string 参数绑定到 `inString` 变量，并将 `out_string` 参数绑定到 outString 变量，如以下插图所示。这样会将 `inString` 变量的值传入操作中，然后获取返回值，并将返回值放到 `outString` 变量中。  
+9. <span data-ttu-id="7c5b4-140">拖放式**Echo**活动放置<!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-140">Drag and drop an **Echo** activity into the <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`.</span></span> <span data-ttu-id="7c5b4-141">在属性窗口中将绑定`inMsg`参数`inString`变量和`outMsg`参数`outString`变量，如以下插图中所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-141">In the properties window bind the `inMsg` argument to the `inString` variable and the `outMsg` argument to the `outString` variable as shown in the following illustration.</span></span> <span data-ttu-id="7c5b4-142">这样会将 `inString` 变量的值传入操作中，然后获取返回值，并将返回值放到 `outString` 变量中。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-142">This passes in the value of the `inString` variable to the operation and then takes the return value and places it in the `outString` variable.</span></span>  
   
-     ![将参数绑定到变量](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")  
+     <span data-ttu-id="7c5b4-143">![自变量绑定到变量](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-143">![Binding the arguments to variables](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")</span></span>  
   
-10. 将**“WriteLine”**活动拖放至**“Echo”**活动下，以显示服务调用返回的字符串。**“WriteLine”**活动位于工具箱中的**“基元”**节点内。在**“WriteLine”**活动上的文本框中键入 `outString`，这样可以将**“WriteLine”**活动的**“Text”**参数绑定到 `outString` 变量。现在，此工作流应该如以下插图所示。  
+10. <span data-ttu-id="7c5b4-144">拖放式**WriteLine**活动下面**Echo**活动以显示服务调用所返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-144">Drag and drop a **WriteLine** activity below the **Echo** activity to display the string returned by the service call.</span></span> <span data-ttu-id="7c5b4-145">**WriteLine**活动位于**基元**工具箱中的节点。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-145">The **WriteLine** activity is located in the **Primitives** node in the toolbox.</span></span> <span data-ttu-id="7c5b4-146">将绑定**文本**参数**WriteLine**活动`outString`变量通过键入`outString`上的文本框中**WriteLine**活动。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-146">Bind the **Text** argument of the **WriteLine** activity to the `outString` variable by typing `outString` into the text box on the **WriteLine** activity.</span></span> <span data-ttu-id="7c5b4-147">现在，此工作流应该如以下插图所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-147">The workflow should now look like the following illustration.</span></span>  
   
-     ![已完成的客户端工作流](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")  
+     <span data-ttu-id="7c5b4-148">![完整的客户端工作流](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-148">![The complete client workflow](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")</span></span>  
   
-11. 右击 MyWFService 解决方案，然后选择**“设置启动项目...”**。选中**“多启动项目”**单选按钮，并对**“操作”**列中的每个项目选择**“启动”**，如以下插图所示。  
+11. <span data-ttu-id="7c5b4-149">右击 MyWFService 解决方案并选择**设置启动项目...**.选择**多启动项目**单选按钮，然后选择**启动**中每个项目**操作**列下图中所示。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-149">Right-click the MyWFService solution and select **Set Startup Projects ...**. Select the **Multiple startup projects** radio button and select **Start** for each project in the **Action** column as shown in the following illustration.</span></span>  
   
-     ![启动项目选项](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")  
+     <span data-ttu-id="7c5b4-150">![启动项目选项](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")</span><span class="sxs-lookup"><span data-stu-id="7c5b4-150">![Startup projects options](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")</span></span>  
   
-12. 按 Ctrl\+F5 启动服务和客户端。ASP.NET Development Server 将承载该服务，Internet Explorer 显示 WCF 帮助页，客户端工作流应用程序将在工作台窗口中启动，并且该应用程序显示该服务返回的字符串（“Hello, world”）。  
+12. <span data-ttu-id="7c5b4-151">按 Ctrl+F5 启动服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-151">Press Ctrl + F5 to launch both the service and the client.</span></span> <span data-ttu-id="7c5b4-152">ASP.NET Development Server 承载服务，Internet Explorer 显示 WCF 帮助页中，和客户端工作流应用程序将在控制台窗口中启动并显示从服务 （"Hello，world"） 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="7c5b4-152">The ASP.NET Development Server hosts the service, Internet Explorer displays the WCF help page, and the client workflow application is launched in a console window and displays the string returned from the service ("Hello, world").</span></span>  
   
-## 请参阅  
- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)   
- [从 Web 项目的工作流中使用 WCF 服务](http://go.microsoft.com/fwlink/?LinkId=207725)
+## <a name="see-also"></a><span data-ttu-id="7c5b4-153">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7c5b4-153">See Also</span></span>  
+ [<span data-ttu-id="7c5b4-154">工作流服务</span><span class="sxs-lookup"><span data-stu-id="7c5b4-154">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="7c5b4-155">如何： 使用消息传递活动创建工作流服务</span><span class="sxs-lookup"><span data-stu-id="7c5b4-155">How to: Create a Workflow Service with Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [<span data-ttu-id="7c5b4-156">使用工作流中的 Web 项目的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="7c5b4-156">Consuming a WCF Service from a Workflow in a Web Project</span></span>](http://go.microsoft.com/fwlink/?LinkId=207725)

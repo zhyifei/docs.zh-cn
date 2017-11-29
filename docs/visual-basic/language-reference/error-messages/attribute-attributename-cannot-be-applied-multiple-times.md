@@ -1,42 +1,40 @@
 ---
-title: "特性“&lt;特性名&gt;”不能应用多次 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30663"
-  - "vbc30663"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30663"
+title: "属性 &#39;&lt;attributename&gt;&#39; 不能应用多次"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30663
+- vbc30663
+helpviewer_keywords: BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 216cf54fd164ca95b6378517a679b5b54183559f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 特性“&lt;特性名&gt;”不能应用多次
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-此特性只能应用一次。  `AttributeUsage` 特性决定了某个特性是否可以应用多次。  
+# <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a><span data-ttu-id="fa047-102">属性 &#39;&lt;attributename&gt;&#39; 不能应用多次</span><span class="sxs-lookup"><span data-stu-id="fa047-102">Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times</span></span>
+<span data-ttu-id="fa047-103">该属性只能应用一次。</span><span class="sxs-lookup"><span data-stu-id="fa047-103">The attribute can only be applied once.</span></span> <span data-ttu-id="fa047-104">`AttributeUsage`属性确定是否可以多次应用的特性。</span><span class="sxs-lookup"><span data-stu-id="fa047-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  
   
- **错误 ID：**BC30663  
+ <span data-ttu-id="fa047-105">**错误 ID:** BC30663</span><span class="sxs-lookup"><span data-stu-id="fa047-105">**Error ID:** BC30663</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fa047-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="fa047-106">To correct this error</span></span>  
   
-1.  确保特性只应用一次。  
+1.  <span data-ttu-id="fa047-107">请确保该属性只能应用一次。</span><span class="sxs-lookup"><span data-stu-id="fa047-107">Make sure the attribute is only applied once.</span></span>  
   
-2.  如果使用的是自已开发的自定义特性，请考虑更改其 `AttributeUsage` 特性，以允许特性使用多次，如下面的示例所示。  
+2.  <span data-ttu-id="fa047-108">如果你使用你开发的自定义特性，请考虑更改其`AttributeUsage`特性以允许多个特性用法，使用与下面的示例。</span><span class="sxs-lookup"><span data-stu-id="fa047-108">If you are using custom attributes you developed, consider changing their `AttributeUsage` attribute to allow multiple attribute usage, as with the following example.</span></span>  
   
-    ```  
-    <AttributeUsage(AllowMultiple := True)>  
-    ```  
+```vb  
+<AttributeUsage(AllowMultiple := True)>  
+```  
   
-## 请参阅  
- <xref:System.AttributeUsageAttribute>   
- [创建自定义特性](../Topic/Creating%20Custom%20Attributes%20\(C%23%20and%20Visual%20Basic\).md)   
- [AttributeUsage](../Topic/AttributeUsage%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="fa047-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fa047-109">See Also</span></span>  
+ <xref:System.AttributeUsageAttribute>  
+ [<span data-ttu-id="fa047-110">创建自定义特性</span><span class="sxs-lookup"><span data-stu-id="fa047-110">Creating Custom Attributes</span></span>](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="fa047-111">AttributeUsage</span><span class="sxs-lookup"><span data-stu-id="fa047-111">AttributeUsage</span></span>](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

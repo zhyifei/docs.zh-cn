@@ -1,46 +1,47 @@
 ---
-title: "OpenFileDialog 组件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "“打开文件”对话框"
-  - "OpenFileDialog 组件"
+title: "OpenFileDialog 组件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Open File dialog box
+- OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9d7e9540c933a53bd4692aa09850a96977bfb6b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# OpenFileDialog 组件（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。  它与 Windows 操作系统公开的“打开文件”对话框相同。  它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
+# <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="fd9e2-102">OpenFileDialog 组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="fd9e2-102">OpenFileDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="fd9e2-103">Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="fd9e2-104">相同**打开的文件**公开的 Windows 操作系统的对话框。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="fd9e2-105">它继承自 <xref:System.Windows.Forms.CommonDialog> 类。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## 本节内容  
- [OpenFileDialog 组件概述](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
- 介绍 <xref:System.Windows.Forms.OpenFileDialog> 组件的一般概念，此组件使你可以显示用户可用于打开文件的预配置对话框。  
+## <a name="in-this-section"></a><span data-ttu-id="fd9e2-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="fd9e2-106">In This Section</span></span>  
+ [<span data-ttu-id="fd9e2-107">OpenFileDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fd9e2-107">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fd9e2-108">介绍 <xref:System.Windows.Forms.OpenFileDialog> 组件的一般概念，此组件使你可以显示用户可用于打开文件的预配置对话框。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-108">Introduces the general concepts of the <xref:System.Windows.Forms.OpenFileDialog> component, which allows you to display a pre-configured dialog box that users can use to open files.</span></span>  
   
- [如何：使用 OpenFileDialog 组件打开文件](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
- 说明如何通过 <xref:System.Windows.Forms.OpenFileDialog> 组件的实例在运行时打开文件。  
+ [<span data-ttu-id="fd9e2-109">如何：使用 OpenFileDialog 组件打开文件</span><span class="sxs-lookup"><span data-stu-id="fd9e2-109">How to: Open Files Using the OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
+ <span data-ttu-id="fd9e2-110">说明如何通过 <xref:System.Windows.Forms.OpenFileDialog> 组件的实例在运行时打开文件。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-110">Explains how to open a file at run time via an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="fd9e2-111">参考</span><span class="sxs-lookup"><span data-stu-id="fd9e2-111">Reference</span></span>  
  <xref:System.Windows.Forms.OpenFileDialog>  
- 提供有关 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。  
+ <span data-ttu-id="fd9e2-112">提供有关 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-112">Provides reference information on the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
-## 相关章节  
- [对话框控件和组件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- 描述一组用户可用于执行与应用程序或系统的标准交互的控件和组件。  
+## <a name="related-sections"></a><span data-ttu-id="fd9e2-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="fd9e2-113">Related Sections</span></span>  
+ [<span data-ttu-id="fd9e2-114">对话框控件和组件</span><span class="sxs-lookup"><span data-stu-id="fd9e2-114">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="fd9e2-115">描述一组用户可用于执行与应用程序或系统的标准交互的控件和组件。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-115">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
+ [<span data-ttu-id="fd9e2-116">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="fd9e2-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="fd9e2-117">提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [Windows 窗体对话框的基本代码](http://go.microsoft.com/fwlink/?LinkID=102575)  
- 讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。  （MSDN 联机库技术文章）
+ [<span data-ttu-id="fd9e2-118">Windows 窗体对话框的基本代码</span><span class="sxs-lookup"><span data-stu-id="fd9e2-118">Essential Code for Windows Forms Dialog Boxes</span></span>](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ <span data-ttu-id="fd9e2-119">讨论 Windows 窗体对话框控件和组件以及执行其基本功能必需的代码。</span><span class="sxs-lookup"><span data-stu-id="fd9e2-119">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="fd9e2-120">（MSDN 联机库技术文章）</span><span class="sxs-lookup"><span data-stu-id="fd9e2-120">(MSDN Online Library technical article)</span></span>

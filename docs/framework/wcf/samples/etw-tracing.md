@@ -1,33 +1,35 @@
 ---
-title: "ETW 跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ETW 跟踪"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-caps.latest.revision: 42
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d45852a8e03ac63ea6412e6f5b176f06fe83eb03
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# ETW 跟踪
-本示例演示如何通过使用 Windows 事件跟踪 \(ETW\) 和本示例提供的 `ETWTraceListener` 来实现端对端 \(E2E\) 跟踪。本示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  
+# <a name="etw-tracing"></a><span data-ttu-id="bc96c-102">ETW 跟踪</span><span class="sxs-lookup"><span data-stu-id="bc96c-102">ETW Tracing</span></span>
+<span data-ttu-id="bc96c-103">本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-103">This sample demonstrates how to implement End-to-End (E2E) tracing using Event Tracing for Windows (ETW) and the `ETWTraceListener` that is provided with this sample.</span></span> <span data-ttu-id="bc96c-104">示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and includes ETW tracing.</span></span>  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="bc96c-105">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="bc96c-105">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 本示例假定您熟悉[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
+ <span data-ttu-id="bc96c-106">此示例假定你熟悉[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。</span><span class="sxs-lookup"><span data-stu-id="bc96c-106">This sample assumes that you are familiar with [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).</span></span>  
   
- <xref:System.Diagnostics> 跟踪模型中的每个跟踪源都可以具有多个跟踪侦听器，这些侦听器确定跟踪数据的位置和方式。侦听器的类型定义记录跟踪数据的格式。下面的代码示例演示如何向配置中添加侦听器。  
+ <span data-ttu-id="bc96c-107"><xref:System.Diagnostics> 跟踪模型中的每个跟踪源都可以具有多个跟踪侦听器，这些侦听器确定跟踪数据的位置和方式。</span><span class="sxs-lookup"><span data-stu-id="bc96c-107">Each trace source in the <xref:System.Diagnostics> tracing model can have multiple trace listeners that determine where and how the data is traced.</span></span> <span data-ttu-id="bc96c-108">侦听器的类型定义记录跟踪数据的格式。</span><span class="sxs-lookup"><span data-stu-id="bc96c-108">The type of listener defines the format in which trace data is logged.</span></span> <span data-ttu-id="bc96c-109">下面的代码示例演示如何向配置中添加侦听器。</span><span class="sxs-lookup"><span data-stu-id="bc96c-109">The following code sample shows how to add the listener to configuration.</span></span>  
   
-```  
-  
+```xml  
 <system.diagnostics>  
     <sources>  
         <source name="System.ServiceModel"   
@@ -53,68 +55,66 @@ caps.handback.revision: 42
        </add>  
     </sharedListeners>  
 </system.diagnostics>  
-  
 ```  
   
- 在使用此侦听器之前，必须启动 ETW 跟踪会话。可以通过使用 Logman.exe 或 Tracelog.exe 来启动此会话。本示例随附一个 SetupETW.bat 文件，您可以和 CleanupETW.bat 文件一起使用此文件来设置 ETW 跟踪会话，以便关闭会话并完成日志文件。  
+ <span data-ttu-id="bc96c-110">在使用此侦听器之前，必须启动 ETW 跟踪会话。</span><span class="sxs-lookup"><span data-stu-id="bc96c-110">Before using this listener, an ETW Trace Session must be started.</span></span> <span data-ttu-id="bc96c-111">可以通过使用 Logman.exe 或 Tracelog.exe 来启动此会话。</span><span class="sxs-lookup"><span data-stu-id="bc96c-111">This session can be started by using Logman.exe or Tracelog.exe.</span></span> <span data-ttu-id="bc96c-112">本示例随附一个 SetupETW.bat 文件，您可以和 CleanupETW.bat 文件一起使用此文件来设置 ETW 跟踪会话，以便关闭会话并完成日志文件。</span><span class="sxs-lookup"><span data-stu-id="bc96c-112">A SetupETW.bat file is included with this sample so that you can set up the ETW Trace Session along with a CleanupETW.bat file for closing the session and completing the log file.</span></span>  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。有关这些工具的更多信息，请参见 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  <span data-ttu-id="bc96c-113">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="bc96c-113">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span> <span data-ttu-id="bc96c-114">有关这些工具的详细信息，请参阅[http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)</span><span class="sxs-lookup"><span data-stu-id="bc96c-114">For more information about these tools, see [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)</span></span>  
   
- 使用 ETWTraceListener 时，将在二进制 .etl 文件中记录跟踪。在打开 ServiceModel 跟踪的情况下，所有生成的跟踪都显示在同一个文件中。可以使用[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看 .etl 和 .svclog 日志文件。该查看器可创建系统的端对端视图，可以从消息源到消息目标和使用点来跟踪消息。  
+ <span data-ttu-id="bc96c-115">使用 ETWTraceListener 时，将在二进制 .etl 文件中记录跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-115">When using the ETWTraceListener, traces are logged in binary .etl files.</span></span> <span data-ttu-id="bc96c-116">在打开 ServiceModel 跟踪的情况下，所有生成的跟踪都显示在同一个文件中。</span><span class="sxs-lookup"><span data-stu-id="bc96c-116">With ServiceModel tracing turned on, all generated traces appear in the same file.</span></span> <span data-ttu-id="bc96c-117">使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用于查看.etl 和.svclog 日志文件。</span><span class="sxs-lookup"><span data-stu-id="bc96c-117">Use [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) for viewing .etl and .svclog log files.</span></span> <span data-ttu-id="bc96c-118">该查看器可创建系统的端对端视图，可以从消息源到消息目标和使用点来跟踪消息。</span><span class="sxs-lookup"><span data-stu-id="bc96c-118">The viewer creates an end-to-end view of the system that makes it possible to trace a message from its source to its destination and point of consumption.</span></span>  
   
- ETW 跟踪侦听器支持循环记录。若要启用此功能，请转到**“开始”**、**“运行”**，然后键入 `cmd` 以启动命令控制台。在下面的命令中，用日志文件的名称替换 `<logfilename>` 参数。  
+ <span data-ttu-id="bc96c-119">ETW 跟踪侦听器支持循环记录。</span><span class="sxs-lookup"><span data-stu-id="bc96c-119">The ETW Trace Listener supports circular logging.</span></span> <span data-ttu-id="bc96c-120">若要启用此功能，请转到**启动**，**运行**和类型`cmd`以启动命令控制台。</span><span class="sxs-lookup"><span data-stu-id="bc96c-120">To enable this feature, go to **Start**, **Run** and type `cmd` to start a command console.</span></span> <span data-ttu-id="bc96c-121">在下面的命令中，用日志文件的名称替换 `<logfilename>` 参数。</span><span class="sxs-lookup"><span data-stu-id="bc96c-121">In the following command, replace the `<logfilename>` parameter with the name of your log file.</span></span>  
   
 ```  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
- `-f` 和 `-max` 开关是可选的。它们分别指定二进制循环格式和 1000 MB 的最大日志大小。`-p` 开关用于指定跟踪提供程序。在我们的示例中，`"{411a0819-c24b-428c-83e2-26b41091702e}"` 是“XML ETW 示例提供程序”的 GUID。  
+ <span data-ttu-id="bc96c-122">`-f` 和 `-max` 开关是可选的。</span><span class="sxs-lookup"><span data-stu-id="bc96c-122">The `-f` and `-max` switches are optional.</span></span> <span data-ttu-id="bc96c-123">它们分别指定二进制循环格式和 1000 MB 的最大日志大小。</span><span class="sxs-lookup"><span data-stu-id="bc96c-123">They specify the binary circular format and max log size of 1000MB respectively.</span></span> <span data-ttu-id="bc96c-124">`-p` 开关用于指定跟踪提供程序。</span><span class="sxs-lookup"><span data-stu-id="bc96c-124">The `-p` switch is used to specify the trace provider.</span></span> <span data-ttu-id="bc96c-125">在我们的示例中，`"{411a0819-c24b-428c-83e2-26b41091702e}"` 是“XML ETW 示例提供程序”的 GUID。</span><span class="sxs-lookup"><span data-stu-id="bc96c-125">In our example, `"{411a0819-c24b-428c-83e2-26b41091702e}"` is the GUID for "XML ETW Sample Provider".</span></span>  
   
- 若要启动会话，请键入以下命令。  
+ <span data-ttu-id="bc96c-126">若要启动会话，请键入以下命令。</span><span class="sxs-lookup"><span data-stu-id="bc96c-126">To start the session, type in the following command.</span></span>  
   
 ```  
 Logman start Wcf  
-  
 ```  
   
- 在完成日志记录后，可以用下面的命令停止会话。  
+ <span data-ttu-id="bc96c-127">在完成日志记录后，可以用下面的命令停止会话。</span><span class="sxs-lookup"><span data-stu-id="bc96c-127">After you have finished logging, you can stop the session with the following command.</span></span>  
   
 ```  
 Logman stop Wcf  
 ```  
   
- 此进程可生成二进制循环日志，您可以使用所选的工具（包括[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt）来处理该日志。  
+ <span data-ttu-id="bc96c-128">此过程将生成二进制循环日志，你可以处理你的工具的选择，包括[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。</span><span class="sxs-lookup"><span data-stu-id="bc96c-128">This process generates binary circular logs that you can process with your tool of choice, including [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) or Tracerpt.</span></span>  
   
- 您也可以查看[循环跟踪](../../../../docs/framework/wcf/samples/circular-tracing.md)示例，了解有关用于执行循环记录的替代侦听器的更多信息。  
+ <span data-ttu-id="bc96c-129">此外可以查看[循环跟踪](../../../../docs/framework/wcf/samples/circular-tracing.md)示例为用于执行循环日志记录的替代侦听器的详细信息。</span><span class="sxs-lookup"><span data-stu-id="bc96c-129">You can also review the [Circular Tracing](../../../../docs/framework/wcf/samples/circular-tracing.md) sample for more information on an alternative listener to perform circular logging.</span></span>  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bc96c-130">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="bc96c-130">To set up, build, and run the sample</span></span>  
   
-1.  请确保已执行 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="bc96c-131">请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="bc96c-131">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="bc96c-132">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="bc96c-132">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更高版本，则还必须用提升的特权运行命令提示。为此，请右击命令提示图标，然后单击**“以管理员身份运行”**。  
+    >  <span data-ttu-id="bc96c-133">若要使用 RegisterProvider.bat、SetupETW.bat 和 CleanupETW.bat 命令，必须在本地管理员帐户下运行。</span><span class="sxs-lookup"><span data-stu-id="bc96c-133">To use the RegisterProvider.bat, SetupETW.bat and CleanupETW.bat commands, you must run under a local administrator account.</span></span> <span data-ttu-id="bc96c-134">如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或更高版本，则还必须用提升的特权运行命令提示。</span><span class="sxs-lookup"><span data-stu-id="bc96c-134">If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)] or later, you must also run the command prompt with elevated privileges.</span></span> <span data-ttu-id="bc96c-135">为此，请右键单击命令提示符图标，然后单击**以管理员身份运行**。</span><span class="sxs-lookup"><span data-stu-id="bc96c-135">To do so, right-click the command prompt icon, then click **Run as administrator**.</span></span>  
   
-3.  运行示例之前，在客户端和服务器上运行 RegisterProvider.bat。这会设置生成的 ETWTracingSampleLog.etl 文件以生成可由服务跟踪查看器读取的跟踪。此文件可以在 C:\\logs 文件夹中找到。如果此文件夹不存在，则必须创建此文件夹；否则将不会生成跟踪。然后，在客户端和服务器计算机上运行 SetupETW.bat 以开始 ETW 跟踪会话。SetupETW.bat 文件可以在 CS\\Client 文件夹下找到。  
+3.  <span data-ttu-id="bc96c-136">运行示例之前，在客户端和服务器上运行 RegisterProvider.bat。</span><span class="sxs-lookup"><span data-stu-id="bc96c-136">Before running the sample, run RegisterProvider.bat on the client and server.</span></span> <span data-ttu-id="bc96c-137">这会设置生成的 ETWTracingSampleLog.etl 文件以生成可由服务跟踪查看器读取的跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-137">This sets up the resulting ETWTracingSampleLog.etl file to generate traces that can be read by the Service Trace Viewer.</span></span> <span data-ttu-id="bc96c-138">此文件可以在 C:\logs 文件夹中找到。</span><span class="sxs-lookup"><span data-stu-id="bc96c-138">This file can be found in the C:\logs folder.</span></span> <span data-ttu-id="bc96c-139">如果此文件夹不存在，则必须创建此文件夹；否则将不会生成跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-139">If this folder does not exist, it must be created or no traces are generated.</span></span> <span data-ttu-id="bc96c-140">然后，在客户端和服务器计算机上运行 SetupETW.bat 以开始 ETW 跟踪会话。</span><span class="sxs-lookup"><span data-stu-id="bc96c-140">Then, run SetupETW.bat on the client and server computers to begin the ETW Trace Session.</span></span> <span data-ttu-id="bc96c-141">SetupETW.bat 文件可以在 CS\Client 文件夹下找到。</span><span class="sxs-lookup"><span data-stu-id="bc96c-141">The SetupETW.bat file can be found under the CS\Client folder.</span></span>  
   
-4.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  <span data-ttu-id="bc96c-142">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="bc96c-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-5.  示例完成后，运行 CleanupETW.bat 以完成 ETWTracingSampleLog.etl 文件的创建。  
+5.  <span data-ttu-id="bc96c-143">示例完成后，运行 CleanupETW.bat 以完成 ETWTracingSampleLog.etl 文件的创建。</span><span class="sxs-lookup"><span data-stu-id="bc96c-143">When the sample is completed, run CleanupETW.bat to complete the creation of the ETWTracingSampleLog.etl file.</span></span>  
   
-6.  在服务跟踪查看器中打开 ETWTracingSampleLog.etl 文件。系统会提示您将二进制格式的文件另存为 .svclog 文件。  
+6.  <span data-ttu-id="bc96c-144">在服务跟踪查看器中打开 ETWTracingSampleLog.etl 文件。</span><span class="sxs-lookup"><span data-stu-id="bc96c-144">Open the ETWTracingSampleLog.etl file from within the Service Trace Viewer.</span></span> <span data-ttu-id="bc96c-145">系统会提示您将二进制格式的文件另存为 .svclog 文件。</span><span class="sxs-lookup"><span data-stu-id="bc96c-145">You will be prompted to save the binary formatted file as a .svclog file.</span></span>  
   
-7.  从服务跟踪查看器中打开新创建的 .svclog 文件以查看 ETW 和 ServiceModel 跟踪。  
+7.  <span data-ttu-id="bc96c-146">从服务跟踪查看器中打开新创建的 .svclog 文件以查看 ETW 和 ServiceModel 跟踪。</span><span class="sxs-lookup"><span data-stu-id="bc96c-146">Open the newly created .svclog file from within the Service Trace Viewer to view the ETW and ServiceModel traces.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="bc96c-147">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="bc96c-147">The samples may already be installed on your computer.</span></span> <span data-ttu-id="bc96c-148">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="bc96c-148">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="bc96c-149">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="bc96c-149">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bc96c-150">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="bc96c-150">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## 请参阅  
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="bc96c-151">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc96c-151">See Also</span></span>  
+ [<span data-ttu-id="bc96c-152">AppFabric 监视示例</span><span class="sxs-lookup"><span data-stu-id="bc96c-152">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

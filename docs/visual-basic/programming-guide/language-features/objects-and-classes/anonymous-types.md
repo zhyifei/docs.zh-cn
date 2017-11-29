@@ -1,144 +1,142 @@
 ---
-title: "匿名类型 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.AnonymousType"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "匿名类型 [Visual Basic]"
-  - "匿名类型 [Visual Basic], 关于匿名类型"
-  - "类型 [Visual Basic], 匿名"
+title: "匿名类型 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.AnonymousType
+helpviewer_keywords:
+- anonymous types [Visual Basic], about anonymous types
+- anonymous types [Visual Basic]
+- types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 46
+caps.latest.revision: "46"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 匿名类型 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic 支持匿名类型，使您能够在不为数据类型编写类定义的情况下创建对象。  此时，编译器将为您生成类。  该类没有可用的名称，是直接从 <xref:System.Object> 继承的，它包含在声明对象时指定的属性。  由于未指定数据类型的名称，因此将它称为“匿名类型”。  
+# <a name="anonymous-types-visual-basic"></a><span data-ttu-id="b303d-102">匿名类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b303d-102">Anonymous Types (Visual Basic)</span></span>
+<span data-ttu-id="b303d-103">Visual Basic 支持匿名类型，使你可以创建对象，而无需编写数据类型的类定义。</span><span class="sxs-lookup"><span data-stu-id="b303d-103">Visual Basic supports anonymous types, which enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="b303d-104">此时，编译器将为你生成类。</span><span class="sxs-lookup"><span data-stu-id="b303d-104">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="b303d-105">类具有没有可用的名称，直接继承自<xref:System.Object>，并包含在声明对象指定的属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-105">The class has no usable name, inherits directly from <xref:System.Object>, and contains the properties you specify in declaring the object.</span></span> <span data-ttu-id="b303d-106">由于未指定数据类型的名称，因此将它称为*匿名类型*。</span><span class="sxs-lookup"><span data-stu-id="b303d-106">Because the name of the data type is not specified, it is referred to as an *anonymous type*.</span></span>  
   
- 下面的示例声明并创建变量 `product`，作为具有两个属性（`Name` 和 `Price`）的匿名类型的实例。  
+ <span data-ttu-id="b303d-107">下面的示例声明并创建变量`product`实例具有两个属性的匿名类型的形式`Name`和`Price`。</span><span class="sxs-lookup"><span data-stu-id="b303d-107">The following example declares and creates variable `product` as an instance of an anonymous type that has two properties, `Name` and `Price`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_1.vb)]  
   
- 查询表达式使用匿名类型将查询所选择的数据列组合在一起。  由于不能预测特定查询可能选择的列，因此不能提前定义结果的类型。  使用匿名类型可以编写以任何顺序选择任意个列的查询。  编译器创建与指定属性和指定顺序匹配的数据类型。  
+ <span data-ttu-id="b303d-108">A*查询表达式*使用匿名类型的查询所选择的数据的列组合在一起。</span><span class="sxs-lookup"><span data-stu-id="b303d-108">A *query expression* uses anonymous types to combine columns of data selected by a query.</span></span> <span data-ttu-id="b303d-109">你不能请提前定义的结果的类型，因为你无法预测特定查询可能会选择的列。</span><span class="sxs-lookup"><span data-stu-id="b303d-109">You cannot define the type of the result in advance, because you cannot predict the columns a particular query might select.</span></span> <span data-ttu-id="b303d-110">匿名类型使你能够编写选择任意数量的列，按任何顺序的查询。</span><span class="sxs-lookup"><span data-stu-id="b303d-110">Anonymous types enable you to write a query that selects any number of columns, in any order.</span></span> <span data-ttu-id="b303d-111">编译器创建与指定的属性和指定的顺序匹配的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-111">The compiler creates a data type that matches the specified properties and the specified order.</span></span>  
   
- 在下面的示例中，`products` 是产品对象列表，其中每个对象都有多个属性。  变量 `namePriceQuery` 保存查询的定义，该查询在执行时，返回具有两个属性（`Name` 和 `Price`）的匿名类型的实例集合。  
+ <span data-ttu-id="b303d-112">在以下示例中，`products`是 product 对象，其中每个具有许多属性的列表。</span><span class="sxs-lookup"><span data-stu-id="b303d-112">In the following examples, `products` is a list of product objects, each of which has many properties.</span></span> <span data-ttu-id="b303d-113">变量`namePriceQuery`包含的查询，它执行时，将返回具有两个属性的匿名类型的实例的集合定义`Name`和`Price`。</span><span class="sxs-lookup"><span data-stu-id="b303d-113">Variable `namePriceQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `Price`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_2.vb)]  
   
- 变量 `nameQuantityQuery` 保存查询的定义，该查询在执行时，返回具有两个属性（`Name` 和 `OnHand`）的匿名类型的实例集合。  
+ <span data-ttu-id="b303d-114">变量`nameQuantityQuery`包含的查询，它执行时，将返回具有两个属性的匿名类型的实例的集合定义`Name`和`OnHand`。</span><span class="sxs-lookup"><span data-stu-id="b303d-114">Variable `nameQuantityQuery` holds the definition of a query that, when it is executed, returns a collection of instances of an anonymous type that has two properties, `Name` and `OnHand`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_3.vb)]  
   
- 有关编译器为匿名类型创建的代码的更多信息，请参见[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
+ <span data-ttu-id="b303d-115">有关创建由编译器为匿名类型的代码的详细信息，请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。</span><span class="sxs-lookup"><span data-stu-id="b303d-115">For more information about the code created by the compiler for an anonymous type, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).</span></span>  
   
 > [!CAUTION]
->  匿名类型的名称由编译器生成，并可能随编译的不同而不同。  代码不应使用或依赖匿名类型的名称，因为重新编译项目时该名称可能更改。  
+>  <span data-ttu-id="b303d-116">匿名类型的名称是编译器生成和编译的不同而有所不同。</span><span class="sxs-lookup"><span data-stu-id="b303d-116">The name of the anonymous type is compiler generated and may vary from compilation to compilation.</span></span> <span data-ttu-id="b303d-117">你的代码不应使用或依赖于匿名类型的名称，因为重新编译项目时，可能会更改的名称。</span><span class="sxs-lookup"><span data-stu-id="b303d-117">Your code should not use or rely on the name of an anonymous type because the name might change when a project is recompiled.</span></span>  
   
-## 声明匿名类型  
- 匿名类型实例的声明使用初始值设定项列表来指定类型的属性。  在声明匿名类型时可以只指定属性，而不指定方法或事件等其他类元素。  在下面的示例中，`product1` 是具有两个属性（`Name` 和 `Price`）的匿名类型的实例。  
+## <a name="declaring-an-anonymous-type"></a><span data-ttu-id="b303d-118">声明匿名类型</span><span class="sxs-lookup"><span data-stu-id="b303d-118">Declaring an Anonymous Type</span></span>  
+ <span data-ttu-id="b303d-119">匿名类型的实例的声明使用初始值设定项列表来指定类型的属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-119">The declaration of an instance of an anonymous type uses an initializer list to specify the properties of the type.</span></span> <span data-ttu-id="b303d-120">当你声明匿名类型、 不如方法或事件的其他类元素时，你可以指定属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-120">You can specify only properties when you declare an anonymous type, not other class elements such as methods or events.</span></span> <span data-ttu-id="b303d-121">在下面的示例中，`product1`是具有两个属性的匿名类型的实例：`Name`和`Price`。</span><span class="sxs-lookup"><span data-stu-id="b303d-121">In the following example, `product1` is an instance of an anonymous type that has two properties: `Name` and `Price`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_4.vb)]  
   
- 如果将属性指定为主要属性，则可以使用它们来比较两个匿名类型实例是否相等。  不过，主要属性的值是不能更改的。  有关更多信息，请参见本主题后面的“主要属性”一节。  
+ <span data-ttu-id="b303d-122">如果将属性指定为键属性，你可以使用它们比较相等的两个匿名类型实例。</span><span class="sxs-lookup"><span data-stu-id="b303d-122">If you designate properties as key properties, you can use them to compare two anonymous type instances for equality.</span></span> <span data-ttu-id="b303d-123">但是，不能更改的键属性的值。</span><span class="sxs-lookup"><span data-stu-id="b303d-123">However, the values of key properties cannot be changed.</span></span> <span data-ttu-id="b303d-124">请参阅有关详细信息的本主题后面的密钥属性一节。</span><span class="sxs-lookup"><span data-stu-id="b303d-124">See the Key Properties section later in this topic for more information.</span></span>  
   
- 请注意，声明匿名类型的实例与使用对象初始值设定项声明命名类型的实例相似。  
+ <span data-ttu-id="b303d-125">请注意，声明匿名类型的实例是类似于使用对象初始值设定项声明命名类型的实例：</span><span class="sxs-lookup"><span data-stu-id="b303d-125">Notice that declaring an instance of an anonymous type is like declaring an instance of a named type by using an object initializer:</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_5.vb)]  
   
- 有关指定匿名类型属性的其他方式的更多信息，请参见[如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
+ <span data-ttu-id="b303d-126">指定匿名类型属性的其他方法有关的详细信息，请参阅[如何： 推断属性名和匿名类型声明中的类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。</span><span class="sxs-lookup"><span data-stu-id="b303d-126">For more information about other ways to specify anonymous type properties, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
   
-## 主要属性  
- 主要属性与非主要属性在多个重要方面存在差别：  
+## <a name="key-properties"></a><span data-ttu-id="b303d-127">键属性</span><span class="sxs-lookup"><span data-stu-id="b303d-127">Key Properties</span></span>  
+ <span data-ttu-id="b303d-128">在多个重要方面情况下，键属性不同于非键属性状态：</span><span class="sxs-lookup"><span data-stu-id="b303d-128">Key properties differ from non-key properties in several fundamental ways:</span></span>  
   
--   只在确定两个实例是否相等时才比较主要属性的值。  
+-   <span data-ttu-id="b303d-129">仅键属性的值进行比较以确定两个实例是否相等。</span><span class="sxs-lookup"><span data-stu-id="b303d-129">Only the values of key properties are compared in order to determine whether two instances are equal.</span></span>  
   
--   主要属性的值是只读的，不能更改。  
+-   <span data-ttu-id="b303d-130">键属性的值是只读的并且不能更改。</span><span class="sxs-lookup"><span data-stu-id="b303d-130">The values of key properties are read-only and cannot be changed.</span></span>  
   
--   对于匿名类型，编译器生成的哈希代码算法中只包含主要属性值。  
+-   <span data-ttu-id="b303d-131">仅在一个匿名类型的编译器生成的哈希代码算法包括键属性值。</span><span class="sxs-lookup"><span data-stu-id="b303d-131">Only key property values are included in the compiler-generated hash code algorithm for an anonymous type.</span></span>  
   
-### 相等  
- 匿名类型的实例仅当是相同匿名类型的实例时才相等。  如果两个实例满足下面的条件，则编译器将它们视为相同类型的实例：  
+### <a name="equality"></a><span data-ttu-id="b303d-132">相等</span><span class="sxs-lookup"><span data-stu-id="b303d-132">Equality</span></span>  
+ <span data-ttu-id="b303d-133">匿名类型的实例可以是相同的匿名类型的实例才相等。</span><span class="sxs-lookup"><span data-stu-id="b303d-133">Instances of anonymous types can be equal only if they are instances of the same anonymous type.</span></span> <span data-ttu-id="b303d-134">编译器将两个实例视为相同类型的实例，如果只要满足以下条件：</span><span class="sxs-lookup"><span data-stu-id="b303d-134">The compiler treats two instances as instances of the same type if they meet the following conditions:</span></span>  
   
--   在相同的程序集中声明。  
+-   <span data-ttu-id="b303d-135">同一程序集声明它们。</span><span class="sxs-lookup"><span data-stu-id="b303d-135">They are declared in the same assembly.</span></span>  
   
--   其属性具有相同的名称、相同的推断类型并且以相同顺序声明。  名称比较不区分大小写。  
+-   <span data-ttu-id="b303d-136">其属性具有相同的名称相同的推断类型和声明顺序相同。</span><span class="sxs-lookup"><span data-stu-id="b303d-136">Their properties have the same names, the same inferred types, and are declared in the same order.</span></span> <span data-ttu-id="b303d-137">名称比较不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="b303d-137">Name comparisons are not case-sensitive.</span></span>  
   
--   每个实例的相同属性都标记为主要属性。  
+-   <span data-ttu-id="b303d-138">在每个相同的属性被标记为键属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-138">The same properties in each are marked as key properties.</span></span>  
   
--   每个声明中至少有一个属性是主要属性。  
+-   <span data-ttu-id="b303d-139">每个声明中的至少一个属性是键属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-139">At least one property in each declaration is a key property.</span></span>  
   
- 没有主要属性的匿名类型的实例只等于它自身。  
+ <span data-ttu-id="b303d-140">没有键属性的匿名类型实例是仅等于其自身。</span><span class="sxs-lookup"><span data-stu-id="b303d-140">An instance of an anonymous types that has no key properties is equal only to itself.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_6.vb)]  
   
- 相同匿名类型的两个实例在其主要属性的值相等时相等。  下面的示例演示如何测试是否相等。  
+ <span data-ttu-id="b303d-141">如果它们的键属性的值相等，则相同的匿名类型的两个实例相等。</span><span class="sxs-lookup"><span data-stu-id="b303d-141">Two instances of the same anonymous type are equal if the values of their key properties are equal.</span></span> <span data-ttu-id="b303d-142">以下示例说明如何测试相等。</span><span class="sxs-lookup"><span data-stu-id="b303d-142">The following examples illustrate how equality is tested.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_7.vb)]  
   
-### 只读值  
- 主要属性的值是不能更改的。  例如，在前面示例的 `prod8` 中，`Name` 和 `Price` 为 `read-only` 字段，但 `OnHand` 是可以更改的。  
+### <a name="read-only-values"></a><span data-ttu-id="b303d-143">只读的值</span><span class="sxs-lookup"><span data-stu-id="b303d-143">Read-Only Values</span></span>  
+ <span data-ttu-id="b303d-144">无法更改的键属性的值。</span><span class="sxs-lookup"><span data-stu-id="b303d-144">The values of key properties cannot be changed.</span></span> <span data-ttu-id="b303d-145">例如，在`prod8`在前面的示例中，`Name`和`Price`字段`read-only`，但`OnHand`可以更改。</span><span class="sxs-lookup"><span data-stu-id="b303d-145">For example, in `prod8` in the previous example, the `Name` and `Price` fields are `read-only`, but `OnHand` can be changed.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
   
-## 查询表达式中的匿名类型  
- 查询表达式并不总是要求创建匿名类型。  只要可能，它们就使用现有类型来保存列数据。  当查询返回数据源的全部记录，或只返回每条记录的一个字段时，会出现这种情况。  在下面的代码示例中，`customers` 是 `Customer` 类的对象的集合。  该类有很多属性，在查询结果中，可以以任意顺序包含一个或多个属性。  在最开始的两个示例中，不需要匿名类型，因为查询选择命名类型的元素。  
+## <a name="anonymous-types-from-query-expressions"></a><span data-ttu-id="b303d-146">从查询表达式的匿名类型</span><span class="sxs-lookup"><span data-stu-id="b303d-146">Anonymous Types from Query Expressions</span></span>  
+ <span data-ttu-id="b303d-147">查询表达式并不总是要求创建匿名类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-147">Query expressions do not always require the creation of anonymous types.</span></span> <span data-ttu-id="b303d-148">如果可能，它们将使用现有类型以保存列的数据。</span><span class="sxs-lookup"><span data-stu-id="b303d-148">When possible, they use an existing type to hold the column data.</span></span> <span data-ttu-id="b303d-149">查询从数据源或只有一个字段从每个记录返回任一整条记录时，将发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="b303d-149">This occurs when the query returns either whole records from the data source, or only one field from each record.</span></span> <span data-ttu-id="b303d-150">在下面的代码示例中，`customers`是对象的集合`Customer`类。</span><span class="sxs-lookup"><span data-stu-id="b303d-150">In the following code examples, `customers` is a collection of objects of a `Customer` class.</span></span> <span data-ttu-id="b303d-151">类具有多个属性，并可以将一个或多个包含在查询结果中，按任何顺序。</span><span class="sxs-lookup"><span data-stu-id="b303d-151">The class has many properties, and you can include one or more of them in the query result, in any order.</span></span> <span data-ttu-id="b303d-152">在前两个示例中，没有匿名类型是必需的这是因为查询中选择命名类型的元素：</span><span class="sxs-lookup"><span data-stu-id="b303d-152">In the first two examples, no anonymous types are required because the queries select elements of named types:</span></span>  
   
--   `custs1` 包含字符串集合，因为 `cust.Name` 是字符串。  
+-   <span data-ttu-id="b303d-153">`custs1`将包含一个字符串，集合，因为`cust.Name`是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="b303d-153">`custs1` contains a collection of strings, because `cust.Name` is a string.</span></span>  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2` 包含 `Customer` 对象的集合，因为 `customers` 的每个元素都是 `Customer` 对象，并且整个元素都由查询选择。  
+-   <span data-ttu-id="b303d-154">`custs2`包含一套`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。</span><span class="sxs-lookup"><span data-stu-id="b303d-154">`custs2` contains a collection of `Customer` objects, because each element of `customers` is a `Customer` object, and the whole element is selected by the query.</span></span>  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
- 但是，相应的命名类型并非始终可用。  出于特定目的，可能希望执行以下操作：一，选择客户的名称和地址；二，选择客户 ID 号和位置；三，选择客户的名称、地址和订单历史。  使用匿名类型可以选择任意顺序的属性组合，而无需事先声明新的命名类型来保存结果。  相反，编译器会为每次属性编译创建匿名类型。  下面的查询从 `customers` 中的每个 `Customer` 对象中只选择客户的名称和 ID 号。  因此，编译器会创建仅包含这两个属性的匿名类型。  
+ <span data-ttu-id="b303d-155">但是，相应的命名的类型并非始终可用。</span><span class="sxs-lookup"><span data-stu-id="b303d-155">However, appropriate named types are not always available.</span></span> <span data-ttu-id="b303d-156">你可能想要选择客户名称和一种用途，客户 ID 号和位置，与其他地址和客户名称、 地址和订单历史记录中的第三个。</span><span class="sxs-lookup"><span data-stu-id="b303d-156">You might want to select customer names and addresses for one purpose, customer ID numbers and locations for another, and customer names, addresses, and order histories for a third.</span></span> <span data-ttu-id="b303d-157">匿名类型使你能够以任何顺序选择的属性，任意组合，而无需第一个声明新的命名的类型以保存结果。</span><span class="sxs-lookup"><span data-stu-id="b303d-157">Anonymous types enable you to select any combination of properties, in any order, without first declaring a new named type to hold the result.</span></span> <span data-ttu-id="b303d-158">相反，编译器将创建每个编译属性的匿名类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-158">Instead, the compiler creates an anonymous type for each compilation of properties.</span></span> <span data-ttu-id="b303d-159">以下查询从每个选择仅客户的名称和 ID 号`Customer`对象在`customers`。</span><span class="sxs-lookup"><span data-stu-id="b303d-159">The following query selects only the customer's name and ID number from each `Customer` object in `customers`.</span></span> <span data-ttu-id="b303d-160">因此，编译器将创建仅包含那些两个属性的匿名类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-160">Therefore, the compiler creates an anonymous type that contains only those two properties.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_11.vb)]  
   
- 匿名类型的属性的名称和数据类型都取自 `Select` 的参数 `cust.Name` 和 `cust.ID`。  查询所创建的匿名类型的属性始终是主要属性。  在下面的 `For Each` 循环中执行 `custs3` 时，结果是具有两个主要属性（`Name` 和 `ID`）的匿名类型的实例集合。  
+ <span data-ttu-id="b303d-161">名称和匿名类型中的属性的数据类型，将从的自变量`Select`，`cust.Name`和`cust.ID`。</span><span class="sxs-lookup"><span data-stu-id="b303d-161">Both the names and the data types of the properties in the anonymous type are taken from the arguments to `Select`, `cust.Name` and `cust.ID`.</span></span> <span data-ttu-id="b303d-162">中创建的查询的匿名类型的属性始终是键属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-162">The properties in an anonymous type that is created by a query are always key properties.</span></span> <span data-ttu-id="b303d-163">当`custs3`在下面的示例执行`For Each`循环，结果是具有两个键属性的匿名类型的实例的集合`Name`和`ID`。</span><span class="sxs-lookup"><span data-stu-id="b303d-163">When `custs3` is executed in the following `For Each` loop, the result is a collection of instances of an anonymous type with two key properties, `Name` and `ID`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_12.vb)]  
   
- `custs3` 所表示的集合中的元素是强类型的，可以使用 IntelliSense 浏览可用属性和确认其类型。  
+ <span data-ttu-id="b303d-164">通过所表示的集合中的元素`custs3`强类型，并以浏览可用的属性并确保其类型，可以使用 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="b303d-164">The elements in the collection represented by `custs3` are strongly typed, and you can use IntelliSense to navigate through the available properties and to verify their types.</span></span>  
   
- 有关更多信息，请参见 [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
+ <span data-ttu-id="b303d-165">有关详细信息，请参阅[Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="b303d-165">For more information, see [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).</span></span>  
   
-## 确定是否使用匿名类型  
- 在创建匿名类实例形式的对象之前，请考虑匿名类型是否为最佳选择。  例如，如果要创建临时对象来包含相关数据，也不需要完整类可能包含的其他字段和方法，匿名类型就是很好的解决方案。  如果每个声明都需要不同的属性选择，或者要更改属性顺序，则适于使用匿名类型。  但是，如果项目以固定顺序包括多个具有相同属性的对象，则使用具有类构造函数的命名类型来声明它们可能更为方便。  例如，使用相应的构造函数，声明 `Product` 类的多个实例比声明匿名类型的多个实例更方便。  
+## <a name="deciding-whether-to-use-anonymous-types"></a><span data-ttu-id="b303d-166">决定是否使用匿名类型</span><span class="sxs-lookup"><span data-stu-id="b303d-166">Deciding Whether to Use Anonymous Types</span></span>  
+ <span data-ttu-id="b303d-167">作为匿名类的实例创建的对象之前，考虑这是否是最佳选项。</span><span class="sxs-lookup"><span data-stu-id="b303d-167">Before you create an object as an instance of an anonymous class, consider whether that is the best option.</span></span> <span data-ttu-id="b303d-168">例如，如果你想要创建的临时对象，以包含相关的数据，并且具有无需其他字段和完整类可能包含的方法，匿名类型是一个不错的解决方案。</span><span class="sxs-lookup"><span data-stu-id="b303d-168">For example, if you want to create a temporary object to contain related data, and you have no need for other fields and methods that a complete class might contain, an anonymous type is a good solution.</span></span> <span data-ttu-id="b303d-169">匿名类型也是方便的如果你需要每个声明中，选择不同的属性或如果你想要更改属性的顺序。</span><span class="sxs-lookup"><span data-stu-id="b303d-169">Anonymous types are also convenient if you want a different selection of properties for each declaration, or if you want to change the order of the properties.</span></span> <span data-ttu-id="b303d-170">但是，如果你的项目包括几个对象的固定顺序有相同的属性，你可以声明它们更轻松地通过使用类构造函数中使用命名的类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-170">However, if your project includes several objects that have the same properties, in a fixed order, you can declare them more easily by using a named type with a class constructor.</span></span> <span data-ttu-id="b303d-171">例如，使用适当的构造函数，它是更轻松地声明的几个实例`Product`类比声明匿名类型的几个实例。</span><span class="sxs-lookup"><span data-stu-id="b303d-171">For example, with an appropriate constructor, it is easier to declare several instances of a `Product` class than it is to declare several instances of an anonymous type.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_13.vb)]  
   
- 命名类型的另一优点是编译器可以捕获属性名称的无意拼写错误。  在前面的示例中，`firstProd2`、`secondProd2` 和 `thirdProd2` 应为相同匿名类型的实例。  但是，如果使用下面的一种方式意外地声明了 `thirdProd2`，其类型将不同于 `firstProd2` 和 `secondProd2` 的类型。  
+ <span data-ttu-id="b303d-172">命名类型的另一个优点是编译器可以捕获属性名称的无意拼写错误。</span><span class="sxs-lookup"><span data-stu-id="b303d-172">Another advantage of named types is that the compiler can catch an accidental mistyping of a property name.</span></span> <span data-ttu-id="b303d-173">在前面的示例中， `firstProd2`， `secondProd2`，和`thirdProd2`都应是相同的匿名类型的实例。</span><span class="sxs-lookup"><span data-stu-id="b303d-173">In the previous examples, `firstProd2`, `secondProd2`, and `thirdProd2` are intended to be instances of the same anonymous type.</span></span> <span data-ttu-id="b303d-174">但是，如果敧意外声明`thirdProd2`在通过以下方式之一，其类型将是不同的`firstProd2`和`secondProd2`。</span><span class="sxs-lookup"><span data-stu-id="b303d-174">However, if you were to accidentally declare `thirdProd2` in one of the following ways, its type would be different from that of `firstProd2` and `secondProd2`.</span></span>  
   
  [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_14.vb)]  
   
- 更重要的是，对于未应用于命名类型实例的匿名类型，在使用上会有很多限制。  `firstProd2`、`secondProd2` 和 `thirdProd2` 是具有相同匿名类型的实例。  但是，共享匿名类型的名称不可用，不能在代码中出现在需要使用类型名称的位置。  例如，匿名类型不能用来定义方法签名，不能用来声明其他变量或字段，也不能用在任何类型声明中。  因此，如果必须在方法间共享信息，则不适合使用匿名类型。  
+ <span data-ttu-id="b303d-175">更重要的是，有不适用于命名类型的实例的匿名类型的使用限制。</span><span class="sxs-lookup"><span data-stu-id="b303d-175">More importantly, there are limitations on the use of anonymous types that do not apply to instances of named types.</span></span> <span data-ttu-id="b303d-176">`firstProd2``secondProd2`，和`thirdProd2`是相同的匿名类型的实例。</span><span class="sxs-lookup"><span data-stu-id="b303d-176">`firstProd2`, `secondProd2`, and `thirdProd2` are instances of the same anonymous type.</span></span> <span data-ttu-id="b303d-177">但是，共享的匿名类型的名称不可用，并且不能出现的地方类型名称在代码中。</span><span class="sxs-lookup"><span data-stu-id="b303d-177">However, the name for the shared anonymous type is not available and cannot appear where a type name is expected in your code.</span></span> <span data-ttu-id="b303d-178">例如，匿名类型不能用于定义方法签名，若要声明另一个变量或字段，或在任何类型声明中。</span><span class="sxs-lookup"><span data-stu-id="b303d-178">For example, an anonymous type cannot be used to define a method signature, to declare another variable or field, or in any type declaration.</span></span> <span data-ttu-id="b303d-179">因此，匿名类型是不适当，你必须在方法之间共享信息。</span><span class="sxs-lookup"><span data-stu-id="b303d-179">As a result, anonymous types are not appropriate when you have to share information across methods.</span></span>  
   
-## 匿名类型定义  
- 在响应匿名类型的实例声明时，编译器创建一个包含指定属性的新类定义。  
+## <a name="an-anonymous-type-definition"></a><span data-ttu-id="b303d-180">匿名类型定义</span><span class="sxs-lookup"><span data-stu-id="b303d-180">An Anonymous Type Definition</span></span>  
+ <span data-ttu-id="b303d-181">在响应的匿名类型的实例声明时，编译器将创建包含指定的属性的新类定义。</span><span class="sxs-lookup"><span data-stu-id="b303d-181">In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties.</span></span>  
   
- 如果匿名类型至少包含一个主要属性，则定义将重写三个从 <xref:System.Object> 继承的成员：<xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A> 和 <xref:System.Object.ToString%2A>。  生成来测试相等性和确定哈希代码值的代码仅考虑主要属性。  如果匿名类型不包含主要属性，则仅重写 <xref:System.Object.ToString%2A>。  匿名类型的显式命名属性不能与这些生成的方法冲突。  也就是说，不能使用 `.Equals`、`.GetHashCode` 或 `.ToString` 来命名属性。  
+ <span data-ttu-id="b303d-182">如果匿名类型包含至少一个键属性，定义将重写继承自的三个成员<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。</span><span class="sxs-lookup"><span data-stu-id="b303d-182">If the anonymous type contains at least one key property, the definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>.</span></span> <span data-ttu-id="b303d-183">代码生成测试相等性，并确定哈希代码值会考虑只是键属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-183">The code produced for testing equality and determining the hash code value considers only the key properties.</span></span> <span data-ttu-id="b303d-184">如果匿名类型包含任何键属性，仅<xref:System.Object.ToString%2A>被重写。</span><span class="sxs-lookup"><span data-stu-id="b303d-184">If the anonymous type contains no key properties, only <xref:System.Object.ToString%2A> is overridden.</span></span> <span data-ttu-id="b303d-185">匿名类型的显式命名的属性不能与这些生成的方法冲突。</span><span class="sxs-lookup"><span data-stu-id="b303d-185">Explicitly named properties of an anonymous type cannot conflict with these generated methods.</span></span> <span data-ttu-id="b303d-186">也就是说，不能使用`.Equals`， `.GetHashCode`，或`.ToString`以 name 属性。</span><span class="sxs-lookup"><span data-stu-id="b303d-186">That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.</span></span>  
   
- 此外，至少具有一个主要属性的匿名类型定义还实现 <xref:System.IEquatable%601?displayProperty=fullName> 接口，其中 `T` 是匿名类型的类型。  
+ <span data-ttu-id="b303d-187">至少具有一个匿名类型定义的键属性还实现<xref:System.IEquatable%601?displayProperty=nameWithType>接口，其中`T`是匿名类型的类型。</span><span class="sxs-lookup"><span data-stu-id="b303d-187">Anonymous type definitions that have at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.</span></span>  
   
- 有关编译器所创建的代码和重写方法的功能的更多信息，请参见[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
+ <span data-ttu-id="b303d-188">有关由编译器和重写方法的功能创建的代码的详细信息，请参阅[匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。</span><span class="sxs-lookup"><span data-stu-id="b303d-188">For more information about the code created by the compiler and the functionality of the overridden methods, see [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).</span></span>  
   
-## 请参阅  
- [对象初始值设定项：命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [如何：推断匿名类型声明中的属性名和类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)   
- [匿名类型定义](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)   
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+## <a name="see-also"></a><span data-ttu-id="b303d-189">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b303d-189">See Also</span></span>  
+ [<span data-ttu-id="b303d-190">对象初始值设定项：命名类型和匿名类型</span><span class="sxs-lookup"><span data-stu-id="b303d-190">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="b303d-191">局部类型推理</span><span class="sxs-lookup"><span data-stu-id="b303d-191">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="b303d-192">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="b303d-192">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="b303d-193">如何：推断匿名类型声明中的属性名和类型</span><span class="sxs-lookup"><span data-stu-id="b303d-193">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [<span data-ttu-id="b303d-194">匿名类型定义</span><span class="sxs-lookup"><span data-stu-id="b303d-194">Anonymous Type Definition</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
+ [<span data-ttu-id="b303d-195">Key</span><span class="sxs-lookup"><span data-stu-id="b303d-195">Key</span></span>](../../../../visual-basic/language-reference/modifiers/key.md)

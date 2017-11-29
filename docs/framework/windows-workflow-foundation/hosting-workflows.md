@@ -1,41 +1,44 @@
 ---
-title: "承载工作流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "编程 [WF], 承载工作流"
+title: "承载工作流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49699b1179ac10f8b69ef95be66f5e0433a1f37d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 承载工作流
-本节中的主题介绍承载工作流。  
+# <a name="hosting-workflows"></a><span data-ttu-id="d1a6e-102">承载工作流</span><span class="sxs-lookup"><span data-stu-id="d1a6e-102">Hosting Workflows</span></span>
+<span data-ttu-id="d1a6e-103">本节中的主题介绍承载工作流。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-103">The topics in this section discuss hosting workflows.</span></span>  
   
-## 本节内容  
- [工作流托管选项](../../../docs/framework/windows-workflow-foundation//workflow-hosting-options.md)  
- 介绍如何为工作流选择合适的宿主。  
+## <a name="in-this-section"></a><span data-ttu-id="d1a6e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d1a6e-104">In This Section</span></span>  
+ [<span data-ttu-id="d1a6e-105">工作流托管选项</span><span class="sxs-lookup"><span data-stu-id="d1a6e-105">Workflow Hosting Options</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-hosting-options.md)  
+ <span data-ttu-id="d1a6e-106">介绍如何为工作流选择合适的宿主。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-106">Describes how to select the appropriate host for your workflows.</span></span>  
   
- [使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation//using-workflowinvoker-and-workflowapplication.md)  
- 介绍如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 来调用工作流。  
+ [<span data-ttu-id="d1a6e-107">使用 WorkflowInvoker 和 WorkflowApplication</span><span class="sxs-lookup"><span data-stu-id="d1a6e-107">Using WorkflowInvoker and WorkflowApplication</span></span>](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)  
+ <span data-ttu-id="d1a6e-108">介绍如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 来调用工作流。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-108">Describes how to use <xref:System.Activities.WorkflowInvoker> and <xref:System.Activities.WorkflowApplication> to invoke workflows.</span></span>  
   
- [活动树检查](../../../docs/framework/windows-workflow-foundation//activity-tree-inspection.md)  
- 介绍工作流宿主作者如何使用 <xref:System.Activities.WorkflowInspectionServices> 检查工作流。  
+ [<span data-ttu-id="d1a6e-109">活动树检查</span><span class="sxs-lookup"><span data-stu-id="d1a6e-109">Activity Tree Inspection</span></span>](../../../docs/framework/windows-workflow-foundation/activity-tree-inspection.md)  
+ <span data-ttu-id="d1a6e-110">介绍工作流宿主作者如何使用 <xref:System.Activities.WorkflowInspectionServices> 检查工作流。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-110">Describes how workflow host authors can inspect a workflow using <xref:System.Activities.WorkflowInspectionServices>.</span></span>  
   
- [将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动](../../../docs/framework/windows-workflow-foundation//serializing-workflows-and-activities-to-and-from-xaml.md)  
- 描述如何将工作流序列化为 XAML，并使用已序列化的工作流定义。  
+ [<span data-ttu-id="d1a6e-111">将工作流和活动序列化到 XAML 和从中序列化工作流和活动</span><span class="sxs-lookup"><span data-stu-id="d1a6e-111">Serializing Workflows and Activities to and from XAML</span></span>](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)  
+ <span data-ttu-id="d1a6e-112">描述如何将工作流序列化为 XAML，并使用已序列化的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-112">Describes how to serialize workflows to XAML and work with serialized workflow definitions.</span></span>  
   
- [使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation//using-workflowidentity-and-versioning.md)  
- 介绍如何使用 `WorkflowIdentity` 并行承载工作流的多个版本。  
+ [<span data-ttu-id="d1a6e-113">使用 WorkflowIdentity 和版本控制</span><span class="sxs-lookup"><span data-stu-id="d1a6e-113">Using WorkflowIdentity and Versioning</span></span>](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)  
+ <span data-ttu-id="d1a6e-114">介绍如何使用 `WorkflowIdentity` 并行承载工作流的多个版本。</span><span class="sxs-lookup"><span data-stu-id="d1a6e-114">Describes how to use `WorkflowIdentity` to host multiple versions of a workflow side-by-side.</span></span>  
   
-## 请参阅  
- [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [设计工作流](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Windows Workflow Foundation 数据模型](../../../docs/framework/windows-workflow-foundation//data-model.md)
+## <a name="see-also"></a><span data-ttu-id="d1a6e-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d1a6e-115">See Also</span></span>  
+ [<span data-ttu-id="d1a6e-116">Windows Workflow Foundation 编程</span><span class="sxs-lookup"><span data-stu-id="d1a6e-116">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [<span data-ttu-id="d1a6e-117">设计工作流</span><span class="sxs-lookup"><span data-stu-id="d1a6e-117">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [<span data-ttu-id="d1a6e-118">Windows Workflow Foundation 数据模型</span><span class="sxs-lookup"><span data-stu-id="d1a6e-118">Windows Workflow Foundation Data Model</span></span>](../../../docs/framework/windows-workflow-foundation/data-model.md)

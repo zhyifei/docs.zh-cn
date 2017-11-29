@@ -1,57 +1,58 @@
 ---
-title: "WMI 提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WMI 提供程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a0a64516bea4204eb782013e718c2fa26c6024b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WMI 提供程序
-此示例演示如何在运行时使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中内置的 Windows Management Instrumentation \(WMI\) 提供程序从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中收集数据。  另外，此示例还演示如何向服务添加用户定义的 WMI 对象。  该示例激活[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)的 WMI 提供程序，并演示如何在运行时从 `ICalculator` 服务收集数据。  
+# <a name="wmi-provider"></a><span data-ttu-id="f2892-102">WMI 提供程序</span><span class="sxs-lookup"><span data-stu-id="f2892-102">WMI Provider</span></span>
+<span data-ttu-id="f2892-103">此示例演示如何在运行时使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中内置的 Windows Management Instrumentation (WMI) 提供程序从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中收集数据。</span><span class="sxs-lookup"><span data-stu-id="f2892-103">This sample demonstrates how to gather data from [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services at runtime by using the Windows Management Instrumentation (WMI) provider that is built into [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="f2892-104">另外，此示例还演示如何向服务添加用户定义的 WMI 对象。</span><span class="sxs-lookup"><span data-stu-id="f2892-104">Also, this sample demonstrates how to add a user-defined WMI object to a service.</span></span> <span data-ttu-id="f2892-105">示例激活的 WMI 提供程序[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并演示了如何收集数据`ICalculator`服务在运行时。</span><span class="sxs-lookup"><span data-stu-id="f2892-105">The sample activates the WMI provider for the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and demonstrates how to gather data from the `ICalculator` service at runtime.</span></span>  
   
- WMI 是 Microsoft 基于 Web 的企业管理 \(WBEM\) 标准的实现。  有关 WMI SDK 的更多信息，请参阅 MSDN Library  \(http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/wmisdk\/wmi\/wmi\_start\_page.asp\)。  WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
+ <span data-ttu-id="f2892-106">WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。</span><span class="sxs-lookup"><span data-stu-id="f2892-106">WMI is Microsoft's implementation of the Web-Based Enterprise Management (WBEM) standard.</span></span> <span data-ttu-id="f2892-107">有关 WMI SDK 的详细信息，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。</span><span class="sxs-lookup"><span data-stu-id="f2892-107">For more information about the WMI SDK, see [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx).</span></span> <span data-ttu-id="f2892-108">WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。</span><span class="sxs-lookup"><span data-stu-id="f2892-108">WBEM is an industry standard for how applications expose management instrumentation to external management tools.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WMI 提供程序，该提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。  管理工具可以在运行时通过接口连接至服务。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公开服务的特性，如地址、绑定、行为和侦听器。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f2892-109"> 实现 WMI 提供程序，该提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。</span><span class="sxs-lookup"><span data-stu-id="f2892-109"> implements a WMI provider, a component that exposes instrumentation at runtime through a WBEM-compatible interface.</span></span> <span data-ttu-id="f2892-110">管理工具可以在运行时通过接口连接至服务。</span><span class="sxs-lookup"><span data-stu-id="f2892-110">Management tools can connect to the services through the interface at runtime.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f2892-111"> 公开服务的特性，如地址、绑定、行为和侦听器。</span><span class="sxs-lookup"><span data-stu-id="f2892-111"> exposes attributes of services such as addresses, bindings, behaviors, and listeners.</span></span>  
   
- 在应用程序的配置文件中激活内置 WMI 提供程序。  这可以通过 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 一节中的 [\<诊断\>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)的 `wmiProviderEnabled` 特性完成，如以下配置示例所示：  
+ <span data-ttu-id="f2892-112">在应用程序的配置文件中激活内置 WMI 提供程序。</span><span class="sxs-lookup"><span data-stu-id="f2892-112">The built-in WMI provider is activated in the configuration file of the application.</span></span> <span data-ttu-id="f2892-113">通过完成此操作`wmiProviderEnabled`属性[\<诊断 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)中[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)部分，如下面的示例中所示配置：</span><span class="sxs-lookup"><span data-stu-id="f2892-113">This is done through the `wmiProviderEnabled` attribute of the [\<diagnostics>](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) section, as shown in the following sample configuration:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     ...  
     <diagnostics wmiProviderEnabled="true" />  
     ...  
 </system.serviceModel>  
-  
 ```  
   
- 此配置项公开 WMI 接口。  现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
+ <span data-ttu-id="f2892-114">此配置项公开 WMI 接口。</span><span class="sxs-lookup"><span data-stu-id="f2892-114">This configuration entry exposes a WMI interface.</span></span> <span data-ttu-id="f2892-115">现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。</span><span class="sxs-lookup"><span data-stu-id="f2892-115">Management applications can now connect through this interface and access the management instrumentation of the application.</span></span>  
   
-## 自定义 WMI 对象  
- 将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。  这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。  本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。  
+## <a name="custom-wmi-object"></a><span data-ttu-id="f2892-116">自定义 WMI 对象</span><span class="sxs-lookup"><span data-stu-id="f2892-116">Custom WMI Object</span></span>  
+ <span data-ttu-id="f2892-117">将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。</span><span class="sxs-lookup"><span data-stu-id="f2892-117">Adding WMI objects to a service makes it possible to reveal user-defined information along with the built-in WMI provider information.</span></span> <span data-ttu-id="f2892-118">这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。</span><span class="sxs-lookup"><span data-stu-id="f2892-118">This is accomplished by publishing the schema of the service to WMI by using the Installutil.exe application.</span></span> <span data-ttu-id="f2892-119">本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。</span><span class="sxs-lookup"><span data-stu-id="f2892-119">Instructions to accomplish this, along with more details can be found in the setup instructions at the end of the topic.</span></span>  
   
-## 访问 WMI 信息  
- 可以采用多种不同方式访问 WMI 数据。  Microsoft 提供脚本、[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 应用程序、C\+\+ 应用程序和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 WMI API \(http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/wmisdk\/wmi\/using\_wmi.asp\)。  
+## <a name="accessing-wmi-information"></a><span data-ttu-id="f2892-120">访问 WMI 信息</span><span class="sxs-lookup"><span data-stu-id="f2892-120">Accessing WMI Information</span></span>  
+ <span data-ttu-id="f2892-121">可以采用多种不同方式访问 WMI 数据。</span><span class="sxs-lookup"><span data-stu-id="f2892-121">WMI data can be accessed many different ways.</span></span> <span data-ttu-id="f2892-122">Microsoft 提供脚本、[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 应用程序、C++ 应用程序和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 WMI API (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp)。</span><span class="sxs-lookup"><span data-stu-id="f2892-122">Microsoft provides WMI APIs for scripts, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] applications, C++ applications, and the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).</span></span>  
   
- 此示例使用两个 Java 脚本：一个脚本用于枚举在计算机上运行的服务及其某些属性，另一个脚本用于查看用户定义的 WMI 数据。  该脚本打开与 WMI 提供程序的连接、分析数据并显示所收集的数据。  
+ <span data-ttu-id="f2892-123">此示例使用两个 Java 脚本：一个脚本用于枚举在计算机上运行的服务及其某些属性，另一个脚本用于查看用户定义的 WMI 数据。</span><span class="sxs-lookup"><span data-stu-id="f2892-123">This sample uses two Java scripts: one to enumerate services running on the computer along with some of their properties and the second to view user-defined WMI data.</span></span> <span data-ttu-id="f2892-124">该脚本打开与 WMI 提供程序的连接、分析数据并显示所收集的数据。</span><span class="sxs-lookup"><span data-stu-id="f2892-124">The script opens a connection to the WMI provider, parses data, and displays the data gathered.</span></span>  
   
- 启动该示例可以创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的一个运行中实例。  在该服务运行的同时，在命令提示符处使用以下命令运行每个 Java 脚本：  
+ <span data-ttu-id="f2892-125">启动该示例可以创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的一个运行中实例。</span><span class="sxs-lookup"><span data-stu-id="f2892-125">Start the sample to create a running instance of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="f2892-126">在该服务运行的同时，在命令提示符处使用以下命令运行每个 Java 脚本：</span><span class="sxs-lookup"><span data-stu-id="f2892-126">While the service is running, run each Java script by using the following command at the command prompt:</span></span>  
   
 ```  
 cscript EnumerateServices.js  
-  
 ```  
   
- 该脚本访问服务中包含的规范，并生成下面的输出：  
+ <span data-ttu-id="f2892-127">该脚本访问服务中包含的规范，并生成下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f2892-127">The script accesses the instrumentation contained in the service and produces the following output:</span></span>  
   
 ```  
 Microsoft (R) Windows Script Host Version 5.6  
@@ -109,50 +110,48 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
       |-Type:                       Behavior  
 ```  
   
- 接下来，运行第二个 Java 脚本可以显示用户定义的 WMI 数据：  
+ <span data-ttu-id="f2892-128">接下来，运行第二个 Java 脚本可以显示用户定义的 WMI 数据：</span><span class="sxs-lookup"><span data-stu-id="f2892-128">Next, run the second Java Script to display the user-defined WMI data:</span></span>  
   
 ```  
 cscript EnumerateCustomObjects.js  
 ```  
   
- 该脚本访问服务中包含的用户定义的规范，并生成下面的输出：  
+ <span data-ttu-id="f2892-129">该脚本访问服务中包含的用户定义的规范，并生成下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f2892-129">The script accesses the user-defined instrumentation contained in the services and produces the following output:</span></span>  
   
 ```  
-  
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
 |-WMIInfo:       User Defined WMI Information.  
-  
 ```  
   
- 该输出显示计算机上正在运行一个单一服务。  该服务公开一个实现 `ICalculator` 协定的终结点。  该终结点实现的行为和绑定的设置列作消息堆栈的各个元素的总和。  
+ <span data-ttu-id="f2892-130">该输出显示计算机上正在运行一个单一服务。</span><span class="sxs-lookup"><span data-stu-id="f2892-130">The output shows that there is a single service running on the computer.</span></span> <span data-ttu-id="f2892-131">该服务公开一个实现 `ICalculator` 协定的终结点。</span><span class="sxs-lookup"><span data-stu-id="f2892-131">The service exposes one endpoint that implements the `ICalculator` contract.</span></span> <span data-ttu-id="f2892-132">该终结点实现的行为和绑定的设置列作消息堆栈的各个元素的总和。</span><span class="sxs-lookup"><span data-stu-id="f2892-132">The settings of the behavior and binding that are implemented by the endpoint are listed as the sum of individual elements of the messaging stack.</span></span>  
   
- WMI 不仅限于公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构的管理规范。  该应用程序可以通过相同机制公开它自己的特定域数据项。  WMI 是用于检查和控制 Web 服务的统一机制。  
+ <span data-ttu-id="f2892-133">WMI 不仅限于公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构的管理规范。</span><span class="sxs-lookup"><span data-stu-id="f2892-133">WMI is not limited to exposing the management instrumentation of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure.</span></span> <span data-ttu-id="f2892-134">该应用程序可以通过相同机制公开它自己的特定域数据项。</span><span class="sxs-lookup"><span data-stu-id="f2892-134">The application can expose its own domain-specific data items through the same mechanism.</span></span> <span data-ttu-id="f2892-135">WMI 是用于检查和控制 Web 服务的统一机制。</span><span class="sxs-lookup"><span data-stu-id="f2892-135">WMI is a unified mechanism for inspection and control of a Web service.</span></span>  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f2892-136">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="f2892-136">To set up, build, and run the sample</span></span>  
   
-1.  请确保已执行 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="f2892-137">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="f2892-137">Ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成解决方案的 C\# 或 Visual Basic .NET 版本，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="f2892-138">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="f2892-138">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  通过在宿主目录中的 service.dll 文件上运行 InstallUtil.exe（InstallUtil.exe 的默认位置是“%WINDIR%\\Microsoft.NET\\Framework\\v4.0.30319”），可以将服务方案发布到 WMI。  只有在对 service.dll 文件进行了更改的情况下才需要执行此步骤。  有关详细信息，请参阅“如何：将方案发布到已检测的应用程序的 WMI”一节中位于 http:\/\/msdn2.microsoft.com\/library\/ms186147.aspx 的“通过检测应用程序提供管理信息”。  
+3.  <span data-ttu-id="f2892-139">通过在宿主目录中的 service.dll 文件上运行 InstallUtil.exe（InstallUtil.exe 的默认位置是“%WINDIR%\Microsoft.NET\Framework\v4.0.30319”），可以将服务方案发布到 WMI。</span><span class="sxs-lookup"><span data-stu-id="f2892-139">Publish the services schema to WMI by running the InstallUtil.exe (the default locations for InstallUtil.exe is "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") on the service.dll file in the hosting directory.</span></span> <span data-ttu-id="f2892-140">只有在对 service.dll 文件进行了更改的情况下才需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="f2892-140">This step only needs to be executed when changes have been made to the service.dll file.</span></span> <span data-ttu-id="f2892-141">有关详细信息，请参阅“如何：将方案发布到已检测的应用程序的 WMI”一节中位于 http://msdn2.microsoft.com/library/ms186147.aspx 的“通过检测应用程序提供管理信息”。</span><span class="sxs-lookup"><span data-stu-id="f2892-141">For more information, see Providing Management Information by Instrumenting Applications at: http://msdn2.microsoft.com/library/ms186147.aspx in the "How To: Publish the Scheme to WMI for an Instrumented Application" section.</span></span>  
   
-4.  若要在单机配置或跨计算机配置上运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  <span data-ttu-id="f2892-142">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="f2892-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  如果您在安装 ASP.NET 之后安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则可能需要运行 "%WINDIR%\\ Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\servicemodelreg.exe " \-r \-x 以便为 ASPNET 帐户授予发布 WMI 对象的权限。  
+    >  <span data-ttu-id="f2892-143">如果您在安装 ASP.NET 之后安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则可能需要运行 "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x 以便为 ASPNET 帐户授予发布 WMI 对象的权限。</span><span class="sxs-lookup"><span data-stu-id="f2892-143">If you installed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] after installing ASP.NET, you may need to run "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x to give the ASPNET account permission to publish WMI objects.</span></span>  
   
-5.  使用下面的命令可以查看通过 WMI 显示的示例：`cscript EnumerateServices.js` 或 `cscript EnumerateCustomObjects.js`。  
+5.  <span data-ttu-id="f2892-144">使用下面的命令可以查看通过 WMI 显示的示例：`cscript EnumerateServices.js` 或 `cscript EnumerateCustomObjects.js`。</span><span class="sxs-lookup"><span data-stu-id="f2892-144">View data from the sample surfaced through WMI by using the commands: `cscript EnumerateServices.js` or `cscript EnumerateCustomObjects.js`.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="f2892-145">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="f2892-145">The samples may already be installed on your computer.</span></span> <span data-ttu-id="f2892-146">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="f2892-146">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  <span data-ttu-id="f2892-147">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="f2892-147">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f2892-148">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="f2892-148">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## 请参阅  
- [AppFabric 监视示例 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="f2892-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f2892-149">See Also</span></span>  
+ [<span data-ttu-id="f2892-150">AppFabric 监视示例</span><span class="sxs-lookup"><span data-stu-id="f2892-150">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

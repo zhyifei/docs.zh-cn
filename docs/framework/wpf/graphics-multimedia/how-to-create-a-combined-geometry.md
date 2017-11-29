@@ -1,55 +1,58 @@
 ---
-title: "如何：创建组合的几何图形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "组合几何图形"
-  - "几何图形, 组合"
-  - "图形, 组合几何图形"
+title: "如何：创建组合的几何图形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- combining geometries [WPF]
+- graphics [WPF], combining geometries
+- geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2be0471f27d26b145cc29847a08bf3bc3b1d51ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：创建组合的几何图形
-此示例演示如何组合几何图形。  若要组合两个几何图形，请使用 <xref:System.Windows.Media.CombinedGeometry> 对象。  对要组合的两个几何图形，设置该对象的 <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 和 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 属性，并将 <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> 属性（确定如何将这两个几何图形组合在一起）设置为 `Union`、`Intersect`、`Exclude` 或 `Xor`。  
+# <a name="how-to-create-a-combined-geometry"></a><span data-ttu-id="124b0-102">如何：创建组合的几何图形</span><span class="sxs-lookup"><span data-stu-id="124b0-102">How to: Create a Combined Geometry</span></span>
+<span data-ttu-id="124b0-103">此示例演示如何组合几何图形。</span><span class="sxs-lookup"><span data-stu-id="124b0-103">This example shows how to combine geometries.</span></span> <span data-ttu-id="124b0-104">若要合并两个几何图形，使用<xref:System.Windows.Media.CombinedGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="124b0-104">To combine two geometries, use a <xref:System.Windows.Media.CombinedGeometry> object.</span></span> <span data-ttu-id="124b0-105">设置其<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>具有两个几何图形合并，并设置属性<xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>属性，确定如何几何图形将组合在一起，到`Union`， `Intersect`， `Exclude`，或`Xor`.</span><span class="sxs-lookup"><span data-stu-id="124b0-105">Set its <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> properties  with the two geometries to combine, and set the <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> property, which determines how the geometries will be combined together, to `Union`, `Intersect`, `Exclude`, or `Xor`.</span></span>  
   
- 若要通过两个或两个以上的几何图形创建复合几何图形，可使用 <xref:System.Windows.Media.GeometryGroup>。  
+ <span data-ttu-id="124b0-106">若要从两个或多个几何图形中创建的复合几何图形，使用<xref:System.Windows.Media.GeometryGroup>。</span><span class="sxs-lookup"><span data-stu-id="124b0-106">To create a composite geometry from two or more geometries, use a <xref:System.Windows.Media.GeometryGroup>.</span></span>  
   
-## 示例  
- 在下面的示例中，用 `Exclude` 几何图形组合模式定义了一个 <xref:System.Windows.Media.CombinedGeometry>。  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 和 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 定义为相同半径的圆，但是中心偏离 50。  
+## <a name="example"></a><span data-ttu-id="124b0-107">示例</span><span class="sxs-lookup"><span data-stu-id="124b0-107">Example</span></span>  
+ <span data-ttu-id="124b0-108">在下面的示例中，<xref:System.Windows.Media.CombinedGeometry>几何图形组合模式的定义`Exclude`。</span><span class="sxs-lookup"><span data-stu-id="124b0-108">In the following example, a <xref:System.Windows.Media.CombinedGeometry> is defined with a geometry combine mode of `Exclude`.</span></span>  <span data-ttu-id="124b0-109">同时<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>定义圆的半径相同，但是中心偏移量为 50。</span><span class="sxs-lookup"><span data-stu-id="124b0-109">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
+ [!code-xaml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
   
- ![“排除”组合模式的结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.png "mil\_task\_combined\_geometry\_exclude")  
-使用 Exclude 模式组合的几何图形  
+ <span data-ttu-id="124b0-110">![组合模式的排除结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.PNG "mil_task_combined_geometry_exclude")</span><span class="sxs-lookup"><span data-stu-id="124b0-110">![Results of the Exclude combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.PNG "mil_task_combined_geometry_exclude")</span></span>  
+<span data-ttu-id="124b0-111">合并后的几何图形排除</span><span class="sxs-lookup"><span data-stu-id="124b0-111">Combined Geometry Exclude</span></span>  
   
- 在下面的标记中，用 `Intersect` 组合模式定义了一个 <xref:System.Windows.Media.CombinedGeometry>。  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 和 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 定义为相同半径的圆，但是中心偏离 50。  
+ <span data-ttu-id="124b0-112">在下列标记中，<xref:System.Windows.Media.CombinedGeometry>组合模式的定义`Intersect`。</span><span class="sxs-lookup"><span data-stu-id="124b0-112">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Intersect`.</span></span>  <span data-ttu-id="124b0-113">同时<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>定义圆的半径相同，但是中心偏移量为 50。</span><span class="sxs-lookup"><span data-stu-id="124b0-113">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
+ [!code-xaml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
   
- ![“相交”组合模式的结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.png "mil\_task\_combined\_geometry\_intersect")  
-使用 Intersect 模式组合的几何图形  
+ <span data-ttu-id="124b0-114">![组合模式的 Intersect 结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.PNG "mil_task_combined_geometry_intersect")</span><span class="sxs-lookup"><span data-stu-id="124b0-114">![Results of the Intersect combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.PNG "mil_task_combined_geometry_intersect")</span></span>  
+<span data-ttu-id="124b0-115">合并后的几何图形相交</span><span class="sxs-lookup"><span data-stu-id="124b0-115">Combined Geometry Intersect</span></span>  
   
- 在下面的标记中，用 `Union` 组合模式定义了一个 <xref:System.Windows.Media.CombinedGeometry>。  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 和 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 定义为相同半径的圆，但是中心偏离 50。  
+ <span data-ttu-id="124b0-116">在下列标记中，<xref:System.Windows.Media.CombinedGeometry>组合模式的定义`Union`。</span><span class="sxs-lookup"><span data-stu-id="124b0-116">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Union`.</span></span>  <span data-ttu-id="124b0-117">同时<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>定义圆的半径相同，但是中心偏移量为 50。</span><span class="sxs-lookup"><span data-stu-id="124b0-117">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
+ [!code-xaml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
   
- ![“联合”组合模式的结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.png "mil\_task\_combined\_geometry\_union")  
-使用 Union 模式组合的几何图形  
+ <span data-ttu-id="124b0-118">![Results of the Union combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")</span><span class="sxs-lookup"><span data-stu-id="124b0-118">![Results of the Union combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")</span></span>  
+<span data-ttu-id="124b0-119">合并后的几何图形联合</span><span class="sxs-lookup"><span data-stu-id="124b0-119">Combined Geometry Union</span></span>  
   
- 在下面的标记中，用 `Xor` 组合模式定义了一个 <xref:System.Windows.Media.CombinedGeometry>。  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 和 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 定义为相同半径的圆，但是中心偏离 50。  
+ <span data-ttu-id="124b0-120">在下列标记中，<xref:System.Windows.Media.CombinedGeometry>组合模式的定义`Xor`。</span><span class="sxs-lookup"><span data-stu-id="124b0-120">In the following markup, a <xref:System.Windows.Media.CombinedGeometry> is defined with a combine mode of `Xor`.</span></span>  <span data-ttu-id="124b0-121">同时<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>定义圆的半径相同，但是中心偏移量为 50。</span><span class="sxs-lookup"><span data-stu-id="124b0-121">Both <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> and the <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> are defined as circles of the same radius, but with centers offset by 50.</span></span>  
   
- [!code-xml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
+ [!code-xaml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
   
- ![Xor 组合模式的结果](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.png "mil\_task\_combined\_geometry\_xor")  
-使用 Xor 模式组合的几何图形
+ <span data-ttu-id="124b0-122">![Results of the Xor combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")</span><span class="sxs-lookup"><span data-stu-id="124b0-122">![Results of the Xor combine mode](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")</span></span>  
+<span data-ttu-id="124b0-123">合并后的几何图形 Xor</span><span class="sxs-lookup"><span data-stu-id="124b0-123">Combined Geometry Xor</span></span>

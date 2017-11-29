@@ -1,210 +1,212 @@
 ---
-title: "PropertyPath XAML 语法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PropertyPath 对象"
-  - "XAML, PropertyPath 对象"
+title: "PropertyPath XAML 语法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PropertyPath object [WPF]
+- XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1dc58845a78607090002467e3aa63d4c549ec116
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# PropertyPath XAML 语法
-<xref:System.Windows.PropertyPath> 对象支持复杂内联 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法以设置将 <xref:System.Windows.PropertyPath> 类型作为其值的各种属性。  本主题讨论应用于绑定的 <xref:System.Windows.PropertyPath> 语法和动画语法。  
-  
-   
+# <a name="propertypath-xaml-syntax"></a><span data-ttu-id="3e806-102">PropertyPath XAML 语法</span><span class="sxs-lookup"><span data-stu-id="3e806-102">PropertyPath XAML Syntax</span></span>
+<span data-ttu-id="3e806-103"><xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置需要的各种属性的语法<xref:System.Windows.PropertyPath>作为其值的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-103">The <xref:System.Windows.PropertyPath> object supports a complex inline [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntax for setting various properties that take the <xref:System.Windows.PropertyPath> type as their value.</span></span> <span data-ttu-id="3e806-104">本主题讨论<xref:System.Windows.PropertyPath>语法应用于绑定和动画的语法。</span><span class="sxs-lookup"><span data-stu-id="3e806-104">This topic documents the <xref:System.Windows.PropertyPath> syntax as applied to binding and animation syntaxes.</span></span>  
+    
   
 <a name="where"></a>   
-## PropertyPath 的使用场合  
- <xref:System.Windows.PropertyPath> 是在一些 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能中使用的通用对象。  尽管使用此通用 <xref:System.Windows.PropertyPath> 可以传输属性路径信息，但是将 <xref:System.Windows.PropertyPath> 用作类型的每个功能区域的用法却各不相同。  因此，基于每个功能来讨论语法更实际一些。  
+## <a name="where-propertypath-is-used"></a><span data-ttu-id="3e806-105">PropertyPath 的使用情景</span><span class="sxs-lookup"><span data-stu-id="3e806-105">Where PropertyPath Is Used</span></span>  
+ <span data-ttu-id="3e806-106"><xref:System.Windows.PropertyPath>是一个用于多种的公共对象[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。</span><span class="sxs-lookup"><span data-stu-id="3e806-106"><xref:System.Windows.PropertyPath> is a common object that is used in several [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] features.</span></span> <span data-ttu-id="3e806-107">尽管使用此通用<xref:System.Windows.PropertyPath>为了属性路径信息，每个用法功能区域其中<xref:System.Windows.PropertyPath>用作类型而变化。</span><span class="sxs-lookup"><span data-stu-id="3e806-107">Despite using the common <xref:System.Windows.PropertyPath> to convey property path information, the usages for each feature area where <xref:System.Windows.PropertyPath> is used as a type vary.</span></span> <span data-ttu-id="3e806-108">因此，基于每个功能来讨论语法更为可行。</span><span class="sxs-lookup"><span data-stu-id="3e806-108">Therefore, it is more practical to document the syntaxes on a per-feature basis.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 主要使用 <xref:System.Windows.PropertyPath> 来描述用于传递对象数据源属性的对象模型路径，以及目标动画的目标路径。  
+ <span data-ttu-id="3e806-109">主要原因是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.PropertyPath>来描述对象模型以遍历对象数据源的属性的路径，并可进行说明目标动画的目标路径。</span><span class="sxs-lookup"><span data-stu-id="3e806-109">Primarily, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uses <xref:System.Windows.PropertyPath> to describe object-model paths for traversing the properties of an object data source, and to describe the target path for targeted animations.</span></span>  
   
- 某些样式和模板属性，例如 <xref:System.Windows.Setter.Property%2A?displayProperty=fullName> 采用貌似 <xref:System.Windows.PropertyPath> 的限定属性名。  但是，这不是真实的 <xref:System.Windows.PropertyPath>，而是由 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器与 <xref:System.Windows.DependencyProperty> 的类型转换器联合启用的限定 *owner.property* 字符串格式用法。  
+ <span data-ttu-id="3e806-110">某些样式和模板的属性，如<xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType>采用限定的属性名称看起来类似于<xref:System.Windows.PropertyPath>。</span><span class="sxs-lookup"><span data-stu-id="3e806-110">Some style and template properties such as <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> take a qualified property name that superficially resembles a <xref:System.Windows.PropertyPath>.</span></span> <span data-ttu-id="3e806-111">但这不是真正的<xref:System.Windows.PropertyPath>; 相反，它是限定*owner.property*字符串格式用法，它通过 WPF[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]结合的类型转换器的处理器<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="3e806-111">But this is not a true <xref:System.Windows.PropertyPath>; instead it is a qualified *owner.property* string format usage that is enabled by the WPF [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor in combination with the type converter for <xref:System.Windows.DependencyProperty>.</span></span>  
   
 <a name="databinding_s"></a>   
-## 数据绑定中对象的 PropertyPath  
- 数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此您可以绑定到任意[依赖项属性](GTMT)的目标值。  但是，这样的数据绑定源不需要是[依赖项属性](GTMT)，它可以是适用数据提供程序能识别的任意属性类型。  属性路径专用于 <xref:System.Windows.Data.ObjectDataProvider>，它用于从[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象及其属性获取绑定源。  
+## <a name="propertypath-for-objects-in-data-binding"></a><span data-ttu-id="3e806-112">数据绑定中对象的 PropertyPath</span><span class="sxs-lookup"><span data-stu-id="3e806-112">PropertyPath for Objects in Data Binding</span></span>  
+ <span data-ttu-id="3e806-113">数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。</span><span class="sxs-lookup"><span data-stu-id="3e806-113">Data binding is a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] feature whereby you can bind to the target value of any dependency property.</span></span> <span data-ttu-id="3e806-114">但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-114">However, the source of such a data binding need not be a dependency property; it can be any property type that is recognized by the applicable data provider.</span></span> <span data-ttu-id="3e806-115">属性路径特别适用于<xref:System.Windows.Data.ObjectDataProvider>，它用于获取从绑定源[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象及其属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-115">Property paths are particularly used for the <xref:System.Windows.Data.ObjectDataProvider>, which is used for obtaining binding sources from [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and their properties.</span></span>  
   
- 请注意，数据绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 不会使用 <xref:System.Windows.PropertyPath>，因为它不使用 <xref:System.Windows.Data.Binding> 中的 <xref:System.Windows.Data.Binding.Path%2A>。  而是，使用 <xref:System.Windows.Data.Binding.XPath%2A> 并将有效的 XPath 语法指定到数据的 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 中。  <xref:System.Windows.Data.Binding.XPath%2A> 也被指定为字符串，但是不会在此讨论；请参见 [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ <span data-ttu-id="3e806-116">请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。</span><span class="sxs-lookup"><span data-stu-id="3e806-116">Note that data binding to [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] does not use <xref:System.Windows.PropertyPath>, because it does not use <xref:System.Windows.Data.Binding.Path%2A> in the <xref:System.Windows.Data.Binding>.</span></span> <span data-ttu-id="3e806-117">相反，你使用<xref:System.Windows.Data.Binding.XPath%2A>并指定有效的 XPath 语法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。</span><span class="sxs-lookup"><span data-stu-id="3e806-117">Instead, you use <xref:System.Windows.Data.Binding.XPath%2A> and specify valid XPath syntax into the [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] of the data.</span></span> <span data-ttu-id="3e806-118"><xref:System.Windows.Data.Binding.XPath%2A>此外指定为字符串，但未在此处; 介绍请参阅[将绑定到 XML 数据使用 XPath 查询和 XMLDataProvider](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="3e806-118"><xref:System.Windows.Data.Binding.XPath%2A> is also specified as a string, but is not documented here; see [Bind to XML Data Using an XMLDataProvider and XPath Queries](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).</span></span>  
   
- 理解数据绑定中的属性路径的关键是您可以将绑定目标定为单个属性值，或者您可以绑定到采用列表或集合的目标属性。  如果要绑定集合，例如绑定将根据集合中的数据项数而展开的 <xref:System.Windows.Controls.ListBox>，则您的属性路径应引用集合对象，而不是单个集合项。  数据绑定引擎会自动将用作数据源的集合与绑定目标的类型匹配，从而导致诸如使用项数组填充 <xref:System.Windows.Controls.ListBox> 之类的行为。  
+ <span data-ttu-id="3e806-119">理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-119">A key to understanding property paths in data binding is that you can target the binding to an individual property value, or you can instead bind to target properties that take lists or collections.</span></span> <span data-ttu-id="3e806-120">如果你正在绑定集合，例如绑定<xref:System.Windows.Controls.ListBox>，将根据多少数据项是在集合中，展开然后属性路径应引用集合对象，而不是单个集合项。</span><span class="sxs-lookup"><span data-stu-id="3e806-120">If you are binding collections, for instance binding a <xref:System.Windows.Controls.ListBox> that will expand depending on how many data items are in the collection, then your property path should reference the collection object, not individual collection items.</span></span> <span data-ttu-id="3e806-121">数据绑定引擎将匹配集合用作数据源绑定目标的类型为自动，导致的行为，例如填充<xref:System.Windows.Controls.ListBox>具有项数组。</span><span class="sxs-lookup"><span data-stu-id="3e806-121">The data binding engine will match the collection used as the data source to the type of the binding target automatically, resulting in behavior such as populating a <xref:System.Windows.Controls.ListBox> with an items array.</span></span>  
   
 <a name="singlecurrent"></a>   
-### 直接对象上作为数据上下文的单个属性  
+### <a name="single-property-on-the-immediate-object-as-data-context"></a><span data-ttu-id="3e806-122">直接对象上作为数据上下文的单个属性</span><span class="sxs-lookup"><span data-stu-id="3e806-122">Single Property on the Immediate Object as Data Context</span></span>  
   
-```  
-<Binding Path="propertyName" .../>  
+```xml  
+<Binding Path="propertyName" .../>  
 ```  
   
- *属性名称* 必须解析为 <xref:System.Windows.Data.Binding.Path%2A> 用法的当前 <xref:System.Windows.FrameworkElement.DataContext%2A> 中属性的名称。  如果绑定更新源，则属性必须为读写属性，并且源对象必须可变。  
+ <span data-ttu-id="3e806-123">*propertyName*必须解析为在当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>为<xref:System.Windows.Data.Binding.Path%2A>使用情况。</span><span class="sxs-lookup"><span data-stu-id="3e806-123">*propertyName* must resolve to be the name of a property that is in the current <xref:System.Windows.FrameworkElement.DataContext%2A> for a <xref:System.Windows.Data.Binding.Path%2A> usage.</span></span> <span data-ttu-id="3e806-124">如果绑定更新源，则属性必须是可读取/写入的，并且源对象必须可变。</span><span class="sxs-lookup"><span data-stu-id="3e806-124">If your binding updates the source, that property must be read/write and the source object must be mutable.</span></span>  
   
 <a name="singleindex"></a>   
-### 直接对象上作为数据上下文的单个索引器  
+### <a name="single-indexer-on-the-immediate-object-as-data-context"></a><span data-ttu-id="3e806-125">直接对象上作为数据上下文的单个索引器</span><span class="sxs-lookup"><span data-stu-id="3e806-125">Single Indexer on the Immediate Object as Data Context</span></span>  
   
+```xml  
+<Binding Path="[key]" .../>  
 ```  
-<Binding Path="[key]" .../>  
-```  
   
- `key` 必须为字典或哈希表的键入索引，或者为数组的整数索引。  同时，键值必须为可直接绑定到所应用属性的类型。  例如，包含字符串键和字符串值的哈希表可以使用这种方式绑定到 <xref:System.Windows.Controls.TextBox> 的文本。  或者，如果键指向集合或子索引，则您可以使用此语法绑定到目标集合属性。  否则，您需要通过类似于 `<Binding Path="[``key``].``propertyName``" .../>` 的语法来引用特定属性。  
+ <span data-ttu-id="3e806-126">`key` 必须是字典或哈希表的类型化索引，或者是数组的整数索引。</span><span class="sxs-lookup"><span data-stu-id="3e806-126">`key` must be either the typed index to a dictionary or hash table, or the integer index of an array.</span></span> <span data-ttu-id="3e806-127">此外，键值必须是可直接绑定到所应用属性的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-127">Also, the value of the key must be a type that is directly bindable to the property where it is applied.</span></span> <span data-ttu-id="3e806-128">例如，包含字符串键和字符串值的哈希表可用于这种方式将绑定到文本<xref:System.Windows.Controls.TextBox>。</span><span class="sxs-lookup"><span data-stu-id="3e806-128">For instance, a hash table that contains string keys and string values can be used this way to bind to Text for a <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="3e806-129">或者，如果键指向集合或子索引，则可使用此语法绑定到目标集合属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-129">Or, if the key points to a collection or subindex, you could use this syntax to bind to a target collection property.</span></span> <span data-ttu-id="3e806-130">否则，需要通过 `<Binding Path="[``key``].``propertyName``" .../>` 等语法来引用特定属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-130">Otherwise, you need to reference a specific property, through a syntax such as `<Binding Path="[``key``].``propertyName``" .../>`.</span></span>  
   
- 如果需要，可以指定索引的类型。  有关索引属性路径方面的详细信息，请参见 <xref:System.Windows.Data.Binding.Path%2A?displayProperty=fullName>。  
+ <span data-ttu-id="3e806-131">如有必要，可以指定索引的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-131">You can specify the type of the index if necessary.</span></span> <span data-ttu-id="3e806-132">索引的属性路径的这个方面的详细信息，请参阅<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="3e806-132">For details on this aspect of an indexed property path, see <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.</span></span>  
   
 <a name="multipleindirect"></a>   
-### 多个属性（间接确定属性目标）  
+### <a name="multiple-property-indirect-property-targeting"></a><span data-ttu-id="3e806-133">多个属性（间接属性目标设置）</span><span class="sxs-lookup"><span data-stu-id="3e806-133">Multiple Property (Indirect Property Targeting)</span></span>  
   
-```  
-<Binding Path="propertyName.propertyName2" .../>  
+```xml  
+<Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName` 必须解析为作为当前 <xref:System.Windows.FrameworkElement.DataContext%2A> 的属性的名称。  路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于作为 `propertyName` 值的类型中的属性。  
+ <span data-ttu-id="3e806-134">`propertyName`必须解析为当前的属性的名称<xref:System.Windows.FrameworkElement.DataContext%2A>。</span><span class="sxs-lookup"><span data-stu-id="3e806-134">`propertyName` must resolve to be the name of a property that is the current <xref:System.Windows.FrameworkElement.DataContext%2A>.</span></span> <span data-ttu-id="3e806-135">路径属性 `propertyName` 和 `propertyName2` 可以是关系中的任意属性，其中 `propertyName2` 是存在于类型中的值为 `propertyName` 的属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-135">The path properties `propertyName` and `propertyName2` can be any properties that exist in a relationship, where `propertyName2` is a property that exists on the type that is the value of `propertyName`.</span></span>  
   
 <a name="singleattached"></a>   
-### 附加的或其他类型限定的单个属性  
+### <a name="single-property-attached-or-otherwise-type-qualified"></a><span data-ttu-id="3e806-136">附加的或类型限定的单个属性</span><span class="sxs-lookup"><span data-stu-id="3e806-136">Single Property, Attached or Otherwise Type-Qualified</span></span>  
   
+```xml  
+<object property="(ownerType.propertyName)" .../>  
 ```  
-<object property="(ownerType.propertyName)" .../>  
-```  
   
- 括号表示 <xref:System.Windows.PropertyPath> 中的此属性应该使用部分限定来构建。  它可以使用 XML 命名空间来查找具有适当的映射的类型。  `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明来搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。  大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常只有自定义类型或该命名空间之外的类型才需要前缀。   `propertyName` 必须解析为 `ownerType` 中存在的属性的名称。  此语法一般用于下列情况之一：  
+ <span data-ttu-id="3e806-137">括号，则指示在此属性<xref:System.Windows.PropertyPath>应使用部分限定构造。</span><span class="sxs-lookup"><span data-stu-id="3e806-137">The parentheses indicate that this property in a <xref:System.Windows.PropertyPath> should be constructed using a partial qualification.</span></span> <span data-ttu-id="3e806-138">它可以使用 XML 命名空间来查找具有适当映射的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-138">It can use an XML namespace to find the type with an appropriate mapping.</span></span> <span data-ttu-id="3e806-139">`ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器具有访问权限，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。</span><span class="sxs-lookup"><span data-stu-id="3e806-139">The `ownerType` searches types that a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor has access to, through the <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declarations in each assembly.</span></span> <span data-ttu-id="3e806-140">大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。</span><span class="sxs-lookup"><span data-stu-id="3e806-140">Most applications have the default XML namespace mapped to the [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] namespace, so a prefix is usually only necessary for custom types or types otherwise outside that namespace.</span></span>  <span data-ttu-id="3e806-141">`propertyName` 必须解析为 `ownerType` 中存在的属性名称。</span><span class="sxs-lookup"><span data-stu-id="3e806-141">`propertyName` must resolve to be the name of a property existing on the `ownerType`.</span></span> <span data-ttu-id="3e806-142">此语法一般用于以下任一情况：</span><span class="sxs-lookup"><span data-stu-id="3e806-142">This syntax is generally used for one of the following cases:</span></span>  
   
--   路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。  除此之外，限定用法一般无效，因为在非样式、非模式情况下，属性存在于实例中，而不是类型中。  
+-   <span data-ttu-id="3e806-143">路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。</span><span class="sxs-lookup"><span data-stu-id="3e806-143">The path is specified in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that is in a style or template that does not have a specified Target Type.</span></span> <span data-ttu-id="3e806-144">除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。</span><span class="sxs-lookup"><span data-stu-id="3e806-144">A qualified usage is generally not valid for cases other than this, because in non-style, non-template cases, the property exists on an instance, not a type.</span></span>  
   
--   属性为附加属性。  
+-   <span data-ttu-id="3e806-145">属性为附加属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-145">The property is an attached property.</span></span>  
   
--   您要绑定到静态属性。  
+-   <span data-ttu-id="3e806-146">要绑定到静态属性中。</span><span class="sxs-lookup"><span data-stu-id="3e806-146">You are binding to a static property.</span></span>  
   
- 当用作演示图板目标时，指定为 `propertyName` 的属性必须为 <xref:System.Windows.DependencyProperty>。  
+ <span data-ttu-id="3e806-147">对于将用作情节提要目标，该属性指定为`propertyName`必须<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="3e806-147">For use as storyboard target, the property specified as `propertyName` must be a <xref:System.Windows.DependencyProperty>.</span></span>  
   
 <a name="sourcetraversal"></a>   
-### 源遍历（绑定到集合的层次结构）  
+### <a name="source-traversal-binding-to-hierarchies-of-collections"></a><span data-ttu-id="3e806-148">源遍历（绑定到集合的层次结构）</span><span class="sxs-lookup"><span data-stu-id="3e806-148">Source Traversal (Binding to Hierarchies of Collections)</span></span>  
   
-```  
-<object Path="propertyName/propertyNameX" .../>  
+```xml  
+<object Path="propertyName/propertyNameX" .../>  
 ```  
   
- 此语法中的 \/ 用于在分层数据源对象中导航，并且支持使用连续的 \/ 字符分多个步骤导航层次结构。  源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。  有关与分层数据源对象的绑定的详细信息，以及数据绑定中当前记录指针的概念，请参见[对分层数据使用主\-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ <span data-ttu-id="3e806-149">此语法中的 / 用于在分层数据源对象中导航，并且支持使用连续的 / 字符分多个步骤导航层次结构。</span><span class="sxs-lookup"><span data-stu-id="3e806-149">The / in this syntax is used to navigate within a hierarchical data source object, and multiple steps into the hierarchy with successive / characters are supported.</span></span> <span data-ttu-id="3e806-150">源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。</span><span class="sxs-lookup"><span data-stu-id="3e806-150">The source traversal accounts for the current record pointer position, which is determined by synchronizing the data with the UI of its view.</span></span> <span data-ttu-id="3e806-151">有关与分层数据源对象绑定的详细信息，以及数据绑定中当前记录指针的概念，请参阅[对分层数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="3e806-151">For details on binding with hierarchical data source objects, and the concept of current record pointer in data binding, see [Use the Master-Detail Pattern with Hierarchical Data](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) or [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
 > [!NOTE]
->  此语法貌似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。  绑定到 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据源的真实 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 表达式不用作 <xref:System.Windows.Data.Binding.Path%2A> 值，而应当用于相互独占的 <xref:System.Windows.Data.Binding.XPath%2A> 属性。  
+>  <span data-ttu-id="3e806-152">此语法看起来类似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3e806-152">Superficially, this syntax resembles [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)].</span></span> <span data-ttu-id="3e806-153">真正的[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]表达式绑定到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据源不用作<xref:System.Windows.Data.Binding.Path%2A>值，并应改为将用于相互排斥<xref:System.Windows.Data.Binding.XPath%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-153">A true [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] expression for binding to an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data source is not used as a <xref:System.Windows.Data.Binding.Path%2A> value and should instead be used for the mutually exclusive <xref:System.Windows.Data.Binding.XPath%2A> property.</span></span>  
   
-### 集合视图  
- 若要引用一个已命名的集合视图，请用哈希字符 \(`#`\) 给集合视图名称加前缀。  
+### <a name="collection-views"></a><span data-ttu-id="3e806-154">集合视图</span><span class="sxs-lookup"><span data-stu-id="3e806-154">Collection Views</span></span>  
+ <span data-ttu-id="3e806-155">若要引用一个已命名的集合视图，请使用哈希字符 (`#`) 为集合视图名称添加前缀。</span><span class="sxs-lookup"><span data-stu-id="3e806-155">To reference a named collection view, prefix the collection view name with the hash character (`#`).</span></span>  
   
-### 当前记录指针  
- 若要引用集合视图的当前记录指针或引用主从数据绑定方案，请启动带正斜杠 \(`/`\) 的路径字符串。  从当前记录指针开始遍历任何超出正斜杠的路径。  
+### <a name="current-record-pointer"></a><span data-ttu-id="3e806-156">当前记录指针</span><span class="sxs-lookup"><span data-stu-id="3e806-156">Current Record Pointer</span></span>  
+ <span data-ttu-id="3e806-157">若要引用集合视图的当前记录指针或引用主从数据绑定方案，请启用带正斜杠 (`/`) 的路径字符串。</span><span class="sxs-lookup"><span data-stu-id="3e806-157">To reference the current record pointer for a collection view or master detail data binding scenario, start the path string with a forward slash (`/`).</span></span> <span data-ttu-id="3e806-158">从当前记录指针开始遍历任何超出正斜杠的路径。</span><span class="sxs-lookup"><span data-stu-id="3e806-158">Any path past the forward slash is traversed starting from the current record pointer.</span></span>  
   
-### 多个索引器  
+### <a name="multiple-indexers"></a><span data-ttu-id="3e806-159">多个索引器</span><span class="sxs-lookup"><span data-stu-id="3e806-159">Multiple Indexers</span></span>  
   
 ```  
-<object Path="[index1,index2...]" .../>  
+<object Path="[index1,index2...]" .../>  
 or  
-<object Path="propertyName[index,index2...]" .../>  
+<object Path="propertyName[index,index2...]" .../>  
 ```  
   
- 如果给定的对象支持多个索引器，则可以按顺序指定这些索引器，类似于数组引用语法。  所讨论的对象可以是当前上下文，也可以是包含多索引对象的属性值。  
+ <span data-ttu-id="3e806-160">如果给定的对象支持多个索引器，则可以按顺序指定这些索引器，类似于数组引用语法。</span><span class="sxs-lookup"><span data-stu-id="3e806-160">If a given object supports multiple indexers, those indexers can be specified in order, similar to an array referencing syntax.</span></span> <span data-ttu-id="3e806-161">上述对象可以是当前上下文，也可以是包含多个索引对象的属性的值。</span><span class="sxs-lookup"><span data-stu-id="3e806-161">The object in question can be either the current context or the value of a property that contains a multiple index object.</span></span>  
   
- 默认情况下，通过使用基础对象的特性来键入索引器值。  如果需要，可以指定索引的类型。  有关键入索引器的详细信息，请参见 <xref:System.Windows.Data.Binding.Path%2A?displayProperty=fullName>。  
+ <span data-ttu-id="3e806-162">默认情况下，通过使用基础对象的特性来类型化索引器值。</span><span class="sxs-lookup"><span data-stu-id="3e806-162">By default, the indexer values are typed by using the characteristics of the underlying object.</span></span> <span data-ttu-id="3e806-163">如有必要，可以指定索引的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-163">You can specify the type of the index if necessary.</span></span> <span data-ttu-id="3e806-164">键入索引器的详细信息，请参阅<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="3e806-164">For details on typing the indexers, see <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.</span></span>  
   
 <a name="mixing"></a>   
-### 混合语法  
- 以上显示的每条语法都可以独立使用。  例如，下面的示例创建了一个属性路径，该路径指向 `ColorGrid` 属性（该属性包含 <xref:System.Windows.Media.SolidColorBrush> 对象的像素网格数组）的特定 x，y 值处的颜色：  
+### <a name="mixing-syntaxes"></a><span data-ttu-id="3e806-165">混合语法</span><span class="sxs-lookup"><span data-stu-id="3e806-165">Mixing Syntaxes</span></span>  
+ <span data-ttu-id="3e806-166">上述每条语法都可以独立使用。</span><span class="sxs-lookup"><span data-stu-id="3e806-166">Each of the syntaxes shown above can be interspersed.</span></span> <span data-ttu-id="3e806-167">例如，以下是在特定的 x 和 y 值创建颜色的属性路径的示例`ColorGrid`属性，它包含的像素网格数组<xref:System.Windows.Media.SolidColorBrush>对象：</span><span class="sxs-lookup"><span data-stu-id="3e806-167">For instance, the following is an example that creates a property path to the color at a particular x,y of a `ColorGrid` property that contains a pixel grid array of <xref:System.Windows.Media.SolidColorBrush> objects:</span></span>  
   
+```xml  
+<Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>  
 ```  
-<Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>  
-```  
   
-### 属性路径字符串的转义  
- 对于某些业务对象中，您可能会遇到属性路径字符串需要转义序列以进行正确分析的情况。  因为大多数此类字符在常用于定义业务对象的语言方面具有类似的命名交互问题，因此转义需要非常少见。  
+### <a name="escapes-for-property-path-strings"></a><span data-ttu-id="3e806-168">属性路径字符串的转义</span><span class="sxs-lookup"><span data-stu-id="3e806-168">Escapes for Property Path Strings</span></span>  
+ <span data-ttu-id="3e806-169">对于某些业务对象，你可能会遇到这样的情况：属性路径字符串需要转义序列以进行正确分析。</span><span class="sxs-lookup"><span data-stu-id="3e806-169">For certain business objects, you might encounter a case where the property path string requires an escape sequence in order to parse correctly.</span></span> <span data-ttu-id="3e806-170">因为大多数此类字符在常用于定义业务对象的语言方面具有类似的命名交互问题，因此转义需要非常少见。</span><span class="sxs-lookup"><span data-stu-id="3e806-170">The need to escape should be rare, because many of these characters have similar naming-interaction issues in languages that would typically be used to define the business object.</span></span>  
   
--   在索引器 \(\[ \]\) 内部，插入符号 \(^\) 用于对下一个字符进行转义。  
+-   <span data-ttu-id="3e806-171">在索引器 ([ ]) 内部，脱字符号 (^) 用于对下一个字符进行转义。</span><span class="sxs-lookup"><span data-stu-id="3e806-171">Inside indexers ([ ]), the caret character (^) escapes the next character.</span></span>  
   
--   必须使用 XML 实体对 XML 语言定义专用的某些字符进行转义。  使用 `&` 对字符“&”进行转义。  使用 `>` 对结束标记“\>”进行转义。  
+-   <span data-ttu-id="3e806-172">必须（使用 XML 实体）对 XML 语言定义专用的某些字符进行转义。</span><span class="sxs-lookup"><span data-stu-id="3e806-172">You must escape (using XML entities) certain characters that are special to the XML language definition.</span></span> <span data-ttu-id="3e806-173">使用 `&` 对字符“&”进行转义。</span><span class="sxs-lookup"><span data-stu-id="3e806-173">Use `&` to escape the character "&".</span></span> <span data-ttu-id="3e806-174">使用 `>` 对结束标记“>”进行转义。</span><span class="sxs-lookup"><span data-stu-id="3e806-174">Use `>` to escape the end tag ">".</span></span>  
   
--   必须对特定于 WPF XAML 分析器行为的字符（使用反斜杠 `\`）进行转义，以处理标记扩展。  
+-   <span data-ttu-id="3e806-175">必须（使用反斜杠 `\`）对特定于 WPF XAML 分析程序行为的字符进行转义，以处理标记扩展。</span><span class="sxs-lookup"><span data-stu-id="3e806-175">You must escape (using backslash `\`) characters that are special to the WPF XAML parser behavior for processing a markup extension.</span></span>  
   
-    -   反斜杠 \(`\`\) 本身是转义字符。  
+    -   <span data-ttu-id="3e806-176">反斜杠 (`\`) 本身是转义字符。</span><span class="sxs-lookup"><span data-stu-id="3e806-176">Backslash (`\`) is the escape character itself.</span></span>  
   
-    -   等号 \(\=\) \(`=`\) 将属性名与属性值隔开。  
+    -   <span data-ttu-id="3e806-177">等号 (`=`) 将属性名与属性值分隔开。</span><span class="sxs-lookup"><span data-stu-id="3e806-177">The equal sign (`=`) separates property name from property value.</span></span>  
   
-    -   逗号 \(`,`\) 用于分隔属性。  
+    -   <span data-ttu-id="3e806-178">逗号 (`,`) 用于分隔属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-178">Comma (`,`) separates properties.</span></span>  
   
-    -   右大括号 \(`}`\) 是标记扩展的结尾。  
+    -   <span data-ttu-id="3e806-179">右大括号 (`}`) 是标记扩展的结尾。</span><span class="sxs-lookup"><span data-stu-id="3e806-179">The right curly brace (`}`) is the end of a markup extension.</span></span>  
   
 > [!NOTE]
->  从技术上讲，这些转义符还适用于演示图板属性路径，但您通常会遍历适用于现有 WPF 对象的对象模型，并且转义应该是不必要的。  
+>  <span data-ttu-id="3e806-180">从技术上讲，这些转义符还适用于情节提要属性路径，但通常会遍历适用于现有 WPF 对象的对象模型，转义应该是不必要的。</span><span class="sxs-lookup"><span data-stu-id="3e806-180">Technically, these escapes work for a storyboard property path also, but you are usually traversing object models for existing WPF objects, and escaping should be unnecessary.</span></span>  
   
 <a name="databinding_sa"></a>   
-## 动画目标的 PropertyPath  
- 动画目标属性必须是[依赖项属性](GTMT)，它采用 <xref:System.Windows.Freezable> 或基元类型。  不过，类型中的目标属性和最终动画属性可以存在于不同的对象中。  对于动画，属性路径用于通过遍历属性值中的对象\-属性关系，来定义命名动画目标对象的属性和预期目标动画属性之间的连接。  
+## <a name="propertypath-for-animation-targets"></a><span data-ttu-id="3e806-181">动画目标的 PropertyPath</span><span class="sxs-lookup"><span data-stu-id="3e806-181">PropertyPath for Animation Targets</span></span>  
+ <span data-ttu-id="3e806-182">动画的目标属性必须是接受的依赖项属性<xref:System.Windows.Freezable>或基元类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-182">The target property of an animation must be a dependency property that takes either a <xref:System.Windows.Freezable> or a primitive type.</span></span> <span data-ttu-id="3e806-183">但是，类型中的目标属性和最终动画属性可以存在于不同的对象中。</span><span class="sxs-lookup"><span data-stu-id="3e806-183">However, the targeted property on a type and the eventual animated property can exist on different objects.</span></span> <span data-ttu-id="3e806-184">对于动画，属性路径用于通过遍历属性值中的对象-属性关系，定义命名动画目标对象的属性和预期目标动画属性之间的连接。</span><span class="sxs-lookup"><span data-stu-id="3e806-184">For animations, a property path is used to define the connection between the named animation target object's property and the intended target animation property, by traversing object-property relationships in the property values.</span></span>  
   
 <a name="general"></a>   
-### 动画的一般对象属性注意事项  
- 有关一般动画概念的更多信息，请参见[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)和[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+### <a name="general-object-property-considerations-for-animations"></a><span data-ttu-id="3e806-185">动画的一般对象-属性注意事项</span><span class="sxs-lookup"><span data-stu-id="3e806-185">General Object-Property Considerations for Animations</span></span>  
+ <span data-ttu-id="3e806-186">有关一般动画概念的详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)和[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="3e806-186">For more information on animation concepts in general, see [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) and [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- 要进行动画处理的值类型或属性必须是 <xref:System.Windows.Freezable> 类型或基元。  启动路径的属性必须解析为存在于指定的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 类型中的[依赖项属性](GTMT)的名称。  
+ <span data-ttu-id="3e806-187">值类型或正在进行动画处理的属性必须是<xref:System.Windows.Freezable>类型或基元。</span><span class="sxs-lookup"><span data-stu-id="3e806-187">The value type or the property being animated must be either a <xref:System.Windows.Freezable> type or a primitive.</span></span> <span data-ttu-id="3e806-188">开始路径的属性必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-188">The property that starts the path must resolve to be the name of a dependency property that exists on the specified <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> type.</span></span>  
   
- 为了支持克隆对已冻结的 <xref:System.Windows.Freezable> 的动画处理，<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 指定的对象必须为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 派生类。  
+ <span data-ttu-id="3e806-189">为了支持克隆进行动画处理<xref:System.Windows.Freezable>的已冻结，指定的对象<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>必须<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>派生类。</span><span class="sxs-lookup"><span data-stu-id="3e806-189">In order to support cloning for animating a <xref:System.Windows.Freezable> that is already frozen, the object specified by <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> must be a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement> derived class.</span></span>  
   
 <a name="singlestepanim"></a>   
-### 目标对象上的单个属性  
+### <a name="single-property-on-the-target-object"></a><span data-ttu-id="3e806-190">目标对象上的单个属性</span><span class="sxs-lookup"><span data-stu-id="3e806-190">Single Property on the Target Object</span></span>  
   
-```  
-<animation Storyboard.TargetProperty="propertyName" .../>  
+```xml  
+<animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName` 必须解析为存在于指定的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 类型中的[依赖项属性](GTMT)的名称。  
+ <span data-ttu-id="3e806-191">`propertyName`必须解析为存在于指定的依赖项属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-191">`propertyName` must resolve to be the name of a dependency property that exists on the specified <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> type.</span></span>  
   
 <a name="indirectanim"></a>   
-### 间接确定属性目标  
+### <a name="indirect-property-targeting"></a><span data-ttu-id="3e806-192">间接属性目标设定</span><span class="sxs-lookup"><span data-stu-id="3e806-192">Indirect Property Targeting</span></span>  
   
+```xml  
+<animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
-<animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
-```  
   
- `propertyName` 必须为属于 <xref:System.Windows.Freezable> 值类型或基元的属性，该属性存在于指定的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 类型中。  
+ <span data-ttu-id="3e806-193">`propertyName`必须是一个属性，可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-193">`propertyName` must be a property that is either a <xref:System.Windows.Freezable> value type or a primitive, which exists on the specified <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> type.</span></span>  
   
- `propertyName2` 必须为[依赖项属性](GTMT)的名称，该属性存在于作为 `propertyName` 值的对象中。  换言之，`propertyName2` 必须作为依赖项属性存在于类型中，该类型为 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
+ <span data-ttu-id="3e806-194">`propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。</span><span class="sxs-lookup"><span data-stu-id="3e806-194">`propertyName2` must be the name of a dependency property that exists on the object that is the value of `propertyName`.</span></span> <span data-ttu-id="3e806-195">换而言之，`propertyName2`作为依赖项属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。</span><span class="sxs-lookup"><span data-stu-id="3e806-195">In other words, `propertyName2` must exist as a dependency property on the type that is the `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.</span></span>  
   
- 因为应用了样式和模板，所以间接确定动画的目标是必要的。  为了确定动画的目标，您需要目标对象上的 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>，该名称是由 [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) 或 <xref:System.Windows.FrameworkElement.Name%2A> 建立的。  虽然模板和样式元素也可以有名称，但是这些名称仅在样式和模板的命名范围内有效。  （如果模板和样式与应用程序标记共享命名范围，则名称不可能是唯一的。  按字面而言，样式和模板是在实例之间共享的，并会永久保留重复名称。）因此，如果您希望进行动画处理的元素的各个属性来自某个样式或模板，则您需要从不是来自样式模板的命名元素实例开始，以样式或模板可视树作为目标，来找到您希望进行动画处理的属性。  
+ <span data-ttu-id="3e806-196">因为应用了样式和模板，所以间接设定动画的目标是必要的。</span><span class="sxs-lookup"><span data-stu-id="3e806-196">Indirect targeting of animations is necessary because of applied styles and templates.</span></span> <span data-ttu-id="3e806-197">若要确定动画的目标，你需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>目标对象，而该名称将由建立[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。</span><span class="sxs-lookup"><span data-stu-id="3e806-197">In order to target an animation, you need a <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> on a target object, and that name is established by [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) or <xref:System.Windows.FrameworkElement.Name%2A>.</span></span> <span data-ttu-id="3e806-198">虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。</span><span class="sxs-lookup"><span data-stu-id="3e806-198">Although template and style elements also can have names, those names are only valid within the namescope of the style and template.</span></span> <span data-ttu-id="3e806-199">（如果模板和样式与应用程序标记共享命名范围，则名称不唯一。</span><span class="sxs-lookup"><span data-stu-id="3e806-199">(If templates and styles did share namescopes with application markup, names couldn't be unique.</span></span> <span data-ttu-id="3e806-200">样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。</span><span class="sxs-lookup"><span data-stu-id="3e806-200">The styles and templates are literally shared between instances and would perpetuate duplicate names.) Thus, if the individual properties of an element that you might wish to animate came from a style or template, you need to start with a named element instance that is not from a style template, and then target into the style or template visual tree to arrive at the property you wish to animate.</span></span>  
   
- 例如，<xref:System.Windows.Controls.Panel> 的 <xref:System.Windows.Controls.Panel.Background%2A> 属性是来自主题模板的完整 <xref:System.Windows.Media.Brush>（实际上为 <xref:System.Windows.Media.SolidColorBrush>）。  若要对 <xref:System.Windows.Media.Brush> 进行完全动画处理，将需要 BrushAnimation（可能每个 <xref:System.Windows.Media.Brush> 类型都需要一个），然而没有这样的类型。  若要对 Brush 进行动画处理，请改为对特定 <xref:System.Windows.Media.Brush> 类型的属性进行动画处理。  您需要从 <xref:System.Windows.Media.SolidColorBrush> 到其 <xref:System.Windows.Media.SolidColorBrush.Color%2A>，在那里才能应用 <xref:System.Windows.Media.Animation.ColorAnimation>。  本示例的属性路径应该为 `Background.Color`。  
+ <span data-ttu-id="3e806-201">例如，<xref:System.Windows.Controls.Panel.Background%2A>属性<xref:System.Windows.Controls.Panel>是一个完整<xref:System.Windows.Media.Brush>(实际上为<xref:System.Windows.Media.SolidColorBrush>) 来自主题模板。</span><span class="sxs-lookup"><span data-stu-id="3e806-201">For instance, the <xref:System.Windows.Controls.Panel.Background%2A> property of a <xref:System.Windows.Controls.Panel> is a complete <xref:System.Windows.Media.Brush> (actually a <xref:System.Windows.Media.SolidColorBrush>) that came from a theme template.</span></span> <span data-ttu-id="3e806-202">要进行动画处理<xref:System.Windows.Media.Brush>完全，存在都需要 BrushAnimation (可能有一个用于每个<xref:System.Windows.Media.Brush>类型) 和不存在此类的类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-202">To animate a <xref:System.Windows.Media.Brush> completely, there would need to be a BrushAnimation (probably one for every <xref:System.Windows.Media.Brush> type) and there is no such type.</span></span> <span data-ttu-id="3e806-203">要进行动画处理画笔，则改为属性进行动画处理的特定<xref:System.Windows.Media.Brush>类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-203">To animate a Brush, you instead animate properties of a particular <xref:System.Windows.Media.Brush> type.</span></span> <span data-ttu-id="3e806-204">你需要从获取<xref:System.Windows.Media.SolidColorBrush>到其<xref:System.Windows.Media.SolidColorBrush.Color%2A>应用<xref:System.Windows.Media.Animation.ColorAnimation>存在。</span><span class="sxs-lookup"><span data-stu-id="3e806-204">You need to get from <xref:System.Windows.Media.SolidColorBrush> to its <xref:System.Windows.Media.SolidColorBrush.Color%2A> to apply a <xref:System.Windows.Media.Animation.ColorAnimation> there.</span></span> <span data-ttu-id="3e806-205">本示例的属性路径是 `Background.Color`。</span><span class="sxs-lookup"><span data-stu-id="3e806-205">The property path for this example would be `Background.Color`.</span></span>  
   
 <a name="attachedanim"></a>   
-### 附加属性  
+### <a name="attached-properties"></a><span data-ttu-id="3e806-206">附加属性</span><span class="sxs-lookup"><span data-stu-id="3e806-206">Attached Properties</span></span>  
   
-```  
+```xml  
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- 括号表示 <xref:System.Windows.PropertyPath> 中的此属性应该使用部分限定来构建。  它可以使用 XML 命名空间来查找类型。  `ownerType` 通过每个程序集中的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 声明来搜索 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器有权访问的类型。  大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常只有自定义类型或该命名空间之外的类型才需要前缀。   `propertyName` 必须解析为 `ownerType` 中存在的属性的名称。  指定为 `propertyName` 的属性必须是 <xref:System.Windows.DependencyProperty>。  （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖项属性，因此该问题仅存在于自定义附加属性中。）  
+ <span data-ttu-id="3e806-207">括号，则指示在此属性<xref:System.Windows.PropertyPath>应使用部分限定构造。</span><span class="sxs-lookup"><span data-stu-id="3e806-207">The parentheses indicate that this property in a <xref:System.Windows.PropertyPath> should be constructed using a partial qualification.</span></span> <span data-ttu-id="3e806-208">可以使用 XML 命名空间来查找类型。</span><span class="sxs-lookup"><span data-stu-id="3e806-208">It can use an XML namespace to find the type.</span></span> <span data-ttu-id="3e806-209">`ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器具有访问权限，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。</span><span class="sxs-lookup"><span data-stu-id="3e806-209">The `ownerType` searches types that a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor has access to, through the <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declarations in each assembly.</span></span> <span data-ttu-id="3e806-210">大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。</span><span class="sxs-lookup"><span data-stu-id="3e806-210">Most applications have the default XML namespace mapped to the [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] namespace, so a prefix is usually only necessary for custom types or types otherwise outside that namespace.</span></span> <span data-ttu-id="3e806-211">`propertyName` 必须解析为 `ownerType` 中存在的属性名称。</span><span class="sxs-lookup"><span data-stu-id="3e806-211">`propertyName` must resolve to be the name of a property existing on the `ownerType`.</span></span> <span data-ttu-id="3e806-212">指定为属性`propertyName`必须<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="3e806-212">The property specified as `propertyName` must be a <xref:System.Windows.DependencyProperty>.</span></span> <span data-ttu-id="3e806-213">（所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）</span><span class="sxs-lookup"><span data-stu-id="3e806-213">(All [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] attached properties are implemented as dependency properties, so this issue is only of concern for custom attached properties.)</span></span>  
   
 <a name="indexanim"></a>   
-### 索引器  
+### <a name="indexers"></a><span data-ttu-id="3e806-214">索引器</span><span class="sxs-lookup"><span data-stu-id="3e806-214">Indexers</span></span>  
   
-```  
-<animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>  
+```xml  
+<animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>  
 ```  
   
- 大部分依赖项属性或 <xref:System.Windows.Freezable> 类型不支持索引器。  因此，动画路径中唯一使用索引器的地方是在用于启动命名目标上的链的属性与最终动画属性之间的中间位置。  在提供的语法中，它是 `propertyName2`。  例如，如果中间属性是属性路径（例如，`RenderTransform.Children[1].Angle`）中的集合（例如，<xref:System.Windows.Media.TransformGroup>），则可能需要使用索引器。  
+ <span data-ttu-id="3e806-215">大多数依赖项属性或<xref:System.Windows.Freezable>类型不支持索引器。</span><span class="sxs-lookup"><span data-stu-id="3e806-215">Most dependency properties or <xref:System.Windows.Freezable> types do not support an indexer.</span></span> <span data-ttu-id="3e806-216">因此，动画路径中唯一使用索引器的地方是在用于启动命名目标上的链的属性与最终动画属性之间的中间位置。</span><span class="sxs-lookup"><span data-stu-id="3e806-216">Therefore, the only usage for an indexer in an animation path is at an intermediate position between the property that starts the chain on the named target and the eventual animated property.</span></span> <span data-ttu-id="3e806-217">在提供的语法中，为 `propertyName2`。</span><span class="sxs-lookup"><span data-stu-id="3e806-217">In the provided syntax, that is `propertyName2`.</span></span> <span data-ttu-id="3e806-218">例如，索引器使用情况可能是如果中间属性是一个集合，如有必要<xref:System.Windows.Media.TransformGroup>，如属性路径中`RenderTransform.Children[1].Angle`。</span><span class="sxs-lookup"><span data-stu-id="3e806-218">For instance, an indexer usage might be necessary if the intermediate property is a collection such as <xref:System.Windows.Media.TransformGroup>, in a property path such as `RenderTransform.Children[1].Angle`.</span></span>  
   
 <a name="ppincode"></a>   
-## 代码中的 PropertyPath  
- <xref:System.Windows.PropertyPath> 的代码用法（包括如何构建 <xref:System.Windows.PropertyPath>）在 <xref:System.Windows.PropertyPath> 的参考主题中会进行说明。  
+## <a name="propertypath-in-code"></a><span data-ttu-id="3e806-219">代码中的 PropertyPath</span><span class="sxs-lookup"><span data-stu-id="3e806-219">PropertyPath in Code</span></span>  
+ <span data-ttu-id="3e806-220">代码的使用情况<xref:System.Windows.PropertyPath>，包括如何构造<xref:System.Windows.PropertyPath>中的参考主题所述<xref:System.Windows.PropertyPath>。</span><span class="sxs-lookup"><span data-stu-id="3e806-220">Code usage for <xref:System.Windows.PropertyPath>, including how to construct a <xref:System.Windows.PropertyPath>, is documented in the reference topic for <xref:System.Windows.PropertyPath>.</span></span>  
   
- 一般而言，<xref:System.Windows.PropertyPath> 旨在使用两个不同的构造函数，一个用于绑定用法和最简单的动画用法，另一个用于复杂动画用法。  对绑定用法使用 <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> 签名，其中对象是字符串。  对一步动画路径使用 <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> 签名，其中对象是 <xref:System.Windows.DependencyProperty>。  对复杂动画使用 [PropertyPath\(String, Object\<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>。  后一个构造函数使用第一个参数的标记字符串，但在该标记字符串的位置填充了一个对象数组来定义属性路径关系。  
+ <span data-ttu-id="3e806-221">一般情况下，<xref:System.Windows.PropertyPath>设计为使用两个不同的构造函数，另一个用于绑定用法和最简单的动画用法，一个用于复杂动画用法。</span><span class="sxs-lookup"><span data-stu-id="3e806-221">In general, <xref:System.Windows.PropertyPath> is designed to use two different constructors, one for the binding usages and simplest animation usages, and one for the complex animation usages.</span></span> <span data-ttu-id="3e806-222">使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>绑定用法，其中对象一个字符串的签名。</span><span class="sxs-lookup"><span data-stu-id="3e806-222">Use the <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> signature for binding usages, where the object is a string.</span></span> <span data-ttu-id="3e806-223">使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>对于一步动画路径，该对象所在的签名<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="3e806-223">Use the <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> signature for one-step animation paths, where the object is a <xref:System.Windows.DependencyProperty>.</span></span> <span data-ttu-id="3e806-224">使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>用于复杂动画的签名。</span><span class="sxs-lookup"><span data-stu-id="3e806-224">Use the <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> signature for complex animations.</span></span> <span data-ttu-id="3e806-225">后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。</span><span class="sxs-lookup"><span data-stu-id="3e806-225">This latter constructor uses a token string for the first parameter and an array of objects that fill positions in the token string to define a property path relationship.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.PropertyPath>   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3e806-226">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e806-226">See Also</span></span>  
+ <xref:System.Windows.PropertyPath>  
+ [<span data-ttu-id="3e806-227">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="3e806-227">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="3e806-228">演示图板概述</span><span class="sxs-lookup"><span data-stu-id="3e806-228">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

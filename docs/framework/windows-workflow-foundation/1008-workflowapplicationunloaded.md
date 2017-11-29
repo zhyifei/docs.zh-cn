@@ -1,38 +1,42 @@
 ---
-title: "1008 - WorkflowApplicationUnloaded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1008 - WorkflowApplicationUnloaded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a605b780-4a7e-43ab-92e7-0a3b01d053b0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 297b3ad9a677d28d12d1b00fdaeec8ec94842263
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 1008 - WorkflowApplicationUnloaded
-## 属性  
+# <a name="1008---workflowapplicationunloaded"></a><span data-ttu-id="efc6a-102">1008 - WorkflowApplicationUnloaded</span><span class="sxs-lookup"><span data-stu-id="efc6a-102">1008 - WorkflowApplicationUnloaded</span></span>
+## <a name="properties"></a><span data-ttu-id="efc6a-103">属性</span><span class="sxs-lookup"><span data-stu-id="efc6a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1008|  
-|关键字|WFRuntime|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="efc6a-104">ID</span><span class="sxs-lookup"><span data-stu-id="efc6a-104">ID</span></span>|<span data-ttu-id="efc6a-105">1008</span><span class="sxs-lookup"><span data-stu-id="efc6a-105">1008</span></span>|  
+|<span data-ttu-id="efc6a-106">关键字</span><span class="sxs-lookup"><span data-stu-id="efc6a-106">Keywords</span></span>|<span data-ttu-id="efc6a-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="efc6a-107">WFRuntime</span></span>|  
+|<span data-ttu-id="efc6a-108">级别</span><span class="sxs-lookup"><span data-stu-id="efc6a-108">Level</span></span>|<span data-ttu-id="efc6a-109">信息</span><span class="sxs-lookup"><span data-stu-id="efc6a-109">Information</span></span>|  
+|<span data-ttu-id="efc6a-110">通道</span><span class="sxs-lookup"><span data-stu-id="efc6a-110">Channel</span></span>|<span data-ttu-id="efc6a-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="efc6a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 指示工作流应用程序已卸载。  
+## <a name="description"></a><span data-ttu-id="efc6a-112">描述</span><span class="sxs-lookup"><span data-stu-id="efc6a-112">Description</span></span>  
+ <span data-ttu-id="efc6a-113">指示工作流应用程序已卸载。</span><span class="sxs-lookup"><span data-stu-id="efc6a-113">Indicates a workflow application has unloaded.</span></span>  
   
-## 消息  
- WorkflowInstance Id“%1”已卸载。  
+## <a name="message"></a><span data-ttu-id="efc6a-114">消息</span><span class="sxs-lookup"><span data-stu-id="efc6a-114">Message</span></span>  
+ <span data-ttu-id="efc6a-115">WorkflowInstance Id“%1”已卸载。</span><span class="sxs-lookup"><span data-stu-id="efc6a-115">WorkflowInstance Id: '%1' was Unloaded.</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="efc6a-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="efc6a-116">Details</span></span>  
   
-|数据项名称|数据项类型|描述|  
-|-----------|-----------|--------|  
-|WorkflowInstanceId|`xs:string`|工作流的实例 ID|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="efc6a-117">数据项名称</span><span class="sxs-lookup"><span data-stu-id="efc6a-117">Data Item Name</span></span>|<span data-ttu-id="efc6a-118">数据项类型</span><span class="sxs-lookup"><span data-stu-id="efc6a-118">Data Item Type</span></span>|<span data-ttu-id="efc6a-119">描述</span><span class="sxs-lookup"><span data-stu-id="efc6a-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="efc6a-120">WorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="efc6a-120">WorkflowInstanceId</span></span>|`xs:string`|<span data-ttu-id="efc6a-121">工作流的实例 ID</span><span class="sxs-lookup"><span data-stu-id="efc6a-121">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="efc6a-122">AppDomain</span><span class="sxs-lookup"><span data-stu-id="efc6a-122">AppDomain</span></span>|`xs:string`|<span data-ttu-id="efc6a-123">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="efc6a-123">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

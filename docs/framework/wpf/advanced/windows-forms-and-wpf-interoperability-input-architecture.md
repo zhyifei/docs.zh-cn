@@ -1,145 +1,148 @@
 ---
-title: "Windows 窗体和 WPF 互操作性输入体系结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost 键盘和消息"
-  - "输入体系结构 [WPF 互操作性]"
-  - "互操作性 [WPF], Windows 窗体"
-  - "键盘互操作 [WPF]"
-  - "消息 [WPF]"
-  - "无模式对话框 [WPF]"
-  - "无模式窗体"
-  - "Windows 窗体 [WPF], 互操作性"
-  - "Windows 窗体, WPF 互操作"
-  - "WindowsFormsHost 键盘和消息"
+title: "Windows 窗体和 WPF 互操作性输入体系结构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input architecture [WPF interoperability]
+- messages [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- modeless forms [WPF]
+- ElementHost keyboard and messages [WPF]
+- keyboard interoperation [WPF]
+- WindowsFormsHost keyboard and messages [WPF]
+- modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体和 WPF 互操作性输入体系结构
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]之间的互操作要求这两项技术都有相应的键盘输入处理。  本主题介绍这两项技术如何实现键盘和消息处理，以在混合应用程序中启用平稳的互操作。  
+# <a name="windows-forms-and-wpf-interoperability-input-architecture"></a><span data-ttu-id="9df55-102">Windows 窗体和 WPF 互操作性输入体系结构</span><span class="sxs-lookup"><span data-stu-id="9df55-102">Windows Forms and WPF Interoperability Input Architecture</span></span>
+<span data-ttu-id="9df55-103">之间的互操作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]要求这两种技术具有相应的键盘输入的处理。</span><span class="sxs-lookup"><span data-stu-id="9df55-103">Interoperation between the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requires that both technologies have the appropriate keyboard input processing.</span></span> <span data-ttu-id="9df55-104">本主题介绍这些技术键盘和消息处理，以支持混合应用程序中的平滑互操作的实现。</span><span class="sxs-lookup"><span data-stu-id="9df55-104">This topic describes how these technologies implement keyboard and message processing to enable smooth interoperation in hybrid applications.</span></span>  
   
- 本主题包含以下小节：  
+ <span data-ttu-id="9df55-105">本主题包含以下小节：</span><span class="sxs-lookup"><span data-stu-id="9df55-105">This topic contains the following subsections:</span></span>  
   
--   无模式窗体和对话框  
+-   <span data-ttu-id="9df55-106">无模式的表单和对话框</span><span class="sxs-lookup"><span data-stu-id="9df55-106">Modeless Forms and Dialog Boxes</span></span>  
   
--   WindowsFormsHost 键盘和消息处理  
+-   <span data-ttu-id="9df55-107">WindowsFormsHost 键盘和消息处理</span><span class="sxs-lookup"><span data-stu-id="9df55-107">WindowsFormsHost Keyboard and Message Processing</span></span>  
   
--   ElementHost 键盘和消息处理  
+-   <span data-ttu-id="9df55-108">ElementHost 键盘和消息处理</span><span class="sxs-lookup"><span data-stu-id="9df55-108">ElementHost Keyboard and Message Processing</span></span>  
   
-## 无模式窗体和对话框  
- 调用 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上的 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 方法可以从基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序打开无模式窗体或对话框。  
+## <a name="modeless-forms-and-dialog-boxes"></a><span data-ttu-id="9df55-109">无模式的表单和对话框</span><span class="sxs-lookup"><span data-stu-id="9df55-109">Modeless Forms and Dialog Boxes</span></span>  
+ <span data-ttu-id="9df55-110">调用<xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素以打开一个从无模式对话框窗体或对话框中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。</span><span class="sxs-lookup"><span data-stu-id="9df55-110">Call the <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> method on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element to open a modeless form or dialog box from a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
- 调用 <xref:System.Windows.Forms.Integration.ElementHost> 控件上的 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 方法可以在基于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的应用程序中打开无模式的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 页面。  
+ <span data-ttu-id="9df55-111">调用<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法<xref:System.Windows.Forms.Integration.ElementHost>打开无模式的控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页面[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-基于应用程序。</span><span class="sxs-lookup"><span data-stu-id="9df55-111">Call the <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control to open a modeless [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page in a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-based application.</span></span>  
   
-## WindowsFormsHost 键盘和消息处理  
- 当由基于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序承载时，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘和消息处理将由以下各项组成：  
+## <a name="windowsformshost-keyboard-and-message-processing"></a><span data-ttu-id="9df55-112">WindowsFormsHost 键盘和消息处理</span><span class="sxs-lookup"><span data-stu-id="9df55-112">WindowsFormsHost Keyboard and Message Processing</span></span>  
+ <span data-ttu-id="9df55-113">当由托管时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘和消息处理包含以下内容：</span><span class="sxs-lookup"><span data-stu-id="9df55-113">When hosted by a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] keyboard and message processing consists of the following:</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 类获取来自 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 消息循环的消息，这由 <xref:System.Windows.Interop.ComponentDispatcher> 类实现。  
+-   <span data-ttu-id="9df55-114"><xref:System.Windows.Forms.Integration.WindowsFormsHost>类获取来自[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]消息循环，它由实现<xref:System.Windows.Interop.ComponentDispatcher>类。</span><span class="sxs-lookup"><span data-stu-id="9df55-114">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class acquires messages from the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] message loop, which is implemented by the <xref:System.Windows.Interop.ComponentDispatcher> class.</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 类创建代理项 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环，以确保 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的例常键盘处理的进行。  
+-   <span data-ttu-id="9df55-115"><xref:System.Windows.Forms.Integration.WindowsFormsHost>类创建一个代理项[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环，以确保该普通[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘处理时发生。</span><span class="sxs-lookup"><span data-stu-id="9df55-115">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class creates a surrogate [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] message loop to ensure that ordinary [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] keyboard processing occurs.</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 类实现 <xref:System.Windows.Interop.IKeyboardInputSink> 接口，以便与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 协调焦点管理。  
+-   <span data-ttu-id="9df55-116"><xref:System.Windows.Forms.Integration.WindowsFormsHost>类实现<xref:System.Windows.Interop.IKeyboardInputSink>接口来协调使用焦点管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9df55-116">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> class implements the <xref:System.Windows.Interop.IKeyboardInputSink> interface to coordinate focus management with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件注册其自身并启动其消息循环。  
+-   <span data-ttu-id="9df55-117"><xref:System.Windows.Forms.Integration.WindowsFormsHost>控件将其本身注册并启动其消息循环。</span><span class="sxs-lookup"><span data-stu-id="9df55-117">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> controls register themselves and start their message loops.</span></span>  
   
- 后面几节更详细地介绍了该过程中的这些部分。  
+ <span data-ttu-id="9df55-118">下列各节描述这些部分的更多详细信息中的过程。</span><span class="sxs-lookup"><span data-stu-id="9df55-118">The following sections describe these parts of the process in more detail.</span></span>  
   
-### 从 WPF 消息循环获取消息  
- <xref:System.Windows.Interop.ComponentDispatcher> 类为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现消息循环管理器。  <xref:System.Windows.Interop.ComponentDispatcher> 类提供挂钩以使外部客户端可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 处理消息之前对这些消息进行筛选。  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a><span data-ttu-id="9df55-119">获取从 WPF 消息循环的消息</span><span class="sxs-lookup"><span data-stu-id="9df55-119">Acquiring Messages from the WPF Message Loop</span></span>  
+ <span data-ttu-id="9df55-120"><xref:System.Windows.Interop.ComponentDispatcher>类实现的消息循环管理器[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9df55-120">The <xref:System.Windows.Interop.ComponentDispatcher> class implements the message loop manager for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="9df55-121"><xref:System.Windows.Interop.ComponentDispatcher>类提供挂钩以启用外部客户端之前筛选消息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]处理它们。</span><span class="sxs-lookup"><span data-stu-id="9df55-121">The <xref:System.Windows.Interop.ComponentDispatcher> class provides hooks to enable external clients to filter messages before [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processes them.</span></span>  
   
- 实现的互操作可处理 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件，从而允许 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件先于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件处理消息。  
+ <span data-ttu-id="9df55-122">互操作实现句柄<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件，它使[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件以处理消息之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。</span><span class="sxs-lookup"><span data-stu-id="9df55-122">The interoperation implementation handles the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event, which enables [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls to process messages before [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controls.</span></span>  
   
-### 代理项 Windows 窗体消息循环  
- 默认情况下，<xref:System.Windows.Forms.Application?displayProperty=fullName> 类包含 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序的主消息循环。  在互操作过程中，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环不会处理消息。  因此，必须重新生成此逻辑。  <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件的处理程序执行下面的步骤：  
+### <a name="surrogate-windows-forms-message-loop"></a><span data-ttu-id="9df55-123">Windows 窗体消息循环，代理项</span><span class="sxs-lookup"><span data-stu-id="9df55-123">Surrogate Windows Forms Message Loop</span></span>  
+ <span data-ttu-id="9df55-124">默认情况下，<xref:System.Windows.Forms.Application?displayProperty=nameWithType>类包含的主消息循环[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="9df55-124">By default, the <xref:System.Windows.Forms.Application?displayProperty=nameWithType> class contains the primary message loop for [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] applications.</span></span> <span data-ttu-id="9df55-125">期间间的互操作，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]循环不处理消息的消息。</span><span class="sxs-lookup"><span data-stu-id="9df55-125">During interoperation, the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] message loop does not process messages.</span></span> <span data-ttu-id="9df55-126">因此，必须重新生成此逻辑。</span><span class="sxs-lookup"><span data-stu-id="9df55-126">Therefore, this logic must be reproduced.</span></span> <span data-ttu-id="9df55-127">处理程序<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="9df55-127">The handler for the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event performs the following steps:</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.IMessageFilter> 接口筛选消息。  
+1.  <span data-ttu-id="9df55-128">筛选消息使用<xref:System.Windows.Forms.IMessageFilter>接口。</span><span class="sxs-lookup"><span data-stu-id="9df55-128">Filters the message using the <xref:System.Windows.Forms.IMessageFilter> interface.</span></span>  
   
-2.  调用 <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName> 方法。  
+2.  <span data-ttu-id="9df55-129">调用<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="9df55-129">Calls the <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> method.</span></span>  
   
-3.  如果需要，转换并调度该消息。  
+3.  <span data-ttu-id="9df55-130">将转换，如有必要调度消息。</span><span class="sxs-lookup"><span data-stu-id="9df55-130">Translates and dispatches the message, if it is required.</span></span>  
   
-4.  如果没有其他控件处理该消息，将该消息传递给承载控件。  
+4.  <span data-ttu-id="9df55-131">将该消息传递给承载的控件中，如果没有其他控件处理消息。</span><span class="sxs-lookup"><span data-stu-id="9df55-131">Passes the message to the hosting control, if no other controls process the message.</span></span>  
   
-### IKeyboardInputSink 实现  
- 代理项消息循环处理键盘管理。  因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 方法是 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 类中唯一需要实现的 <xref:System.Windows.Interop.IKeyboardInputSink> 成员。  
+### <a name="ikeyboardinputsink-implementation"></a><span data-ttu-id="9df55-132">IKeyboardInputSink 实现</span><span class="sxs-lookup"><span data-stu-id="9df55-132">IKeyboardInputSink Implementation</span></span>  
+ <span data-ttu-id="9df55-133">代理项消息循环处理键盘管理。</span><span class="sxs-lookup"><span data-stu-id="9df55-133">The surrogate message loop handles keyboard management.</span></span> <span data-ttu-id="9df55-134">因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法是唯一<xref:System.Windows.Interop.IKeyboardInputSink>要求中的实现的成员<xref:System.Windows.Forms.Integration.WindowsFormsHost>类。</span><span class="sxs-lookup"><span data-stu-id="9df55-134">Therefore, the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> method is the only <xref:System.Windows.Interop.IKeyboardInputSink> member that requires an implementation in the <xref:System.Windows.Forms.Integration.WindowsFormsHost> class.</span></span>  
   
- 默认情况下，<xref:System.Windows.Interop.HwndHost> 类对其 <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 实现返回 `false`。  这会阻止使用 Tab 键从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件导航到 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
+ <span data-ttu-id="9df55-135">默认情况下，<xref:System.Windows.Interop.HwndHost>类返回`false`有关其<xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>实现。</span><span class="sxs-lookup"><span data-stu-id="9df55-135">By default, the <xref:System.Windows.Interop.HwndHost> class returns `false` for its <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> implementation.</span></span> <span data-ttu-id="9df55-136">这可以防止从 tab 键切换[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制转移到[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。</span><span class="sxs-lookup"><span data-stu-id="9df55-136">This prevents tabbing from a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] control to a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
- <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 方法的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 实现执行下面的步骤：  
+ <span data-ttu-id="9df55-137"><xref:System.Windows.Forms.Integration.WindowsFormsHost>实现<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="9df55-137">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementation of the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> method performs the following steps:</span></span>  
   
-1.  查找 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件包含的并且可以接收焦点的第一个或最后一个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  该控件选择取决于遍历信息。  
+1.  <span data-ttu-id="9df55-138">查找第一个或最后一个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]所包含的控件<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件，可以接收焦点。</span><span class="sxs-lookup"><span data-stu-id="9df55-138">Finds the first or last [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that is contained by the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control and that can receive focus.</span></span> <span data-ttu-id="9df55-139">控件选择取决于遍历信息。</span><span class="sxs-lookup"><span data-stu-id="9df55-139">The control choice depends on traversal information.</span></span>  
   
-2.  将焦点设置到该控件并返回 `true`。  
+2.  <span data-ttu-id="9df55-140">将焦点设置到控件，并返回`true`。</span><span class="sxs-lookup"><span data-stu-id="9df55-140">Sets focus to the control and returns `true`.</span></span>  
   
-3.  如果控件收不到焦点，则返回 `false`。  
+3.  <span data-ttu-id="9df55-141">如果没有控件可以接收焦点，则返回`false`。</span><span class="sxs-lookup"><span data-stu-id="9df55-141">If no control can receive focus, returns `false`.</span></span>  
   
-### WindowsFormsHost 注册  
- 在创建 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件的窗口句柄时，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件将调用为消息循环注册其存在的内部静态方法。  
+### <a name="windowsformshost-registration"></a><span data-ttu-id="9df55-142">WindowsFormsHost 注册</span><span class="sxs-lookup"><span data-stu-id="9df55-142">WindowsFormsHost Registration</span></span>  
+ <span data-ttu-id="9df55-143">当窗口的句柄<xref:System.Windows.Forms.Integration.WindowsFormsHost>创建控件，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件调用注册其存在消息循环的内部静态方法。</span><span class="sxs-lookup"><span data-stu-id="9df55-143">When the window handle to a <xref:System.Windows.Forms.Integration.WindowsFormsHost> control is created, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control calls an internal static method that registers its presence for the message loop.</span></span>  
   
- 在注册过程中，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件将检查消息循环。  如果消息循环尚未启动，则将创建 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件处理程序。  消息循环被视为在附加 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件处理程序时运行。  
+ <span data-ttu-id="9df55-144">注册，期间<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件将检查消息循环。</span><span class="sxs-lookup"><span data-stu-id="9df55-144">During registration, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control examines the message loop.</span></span> <span data-ttu-id="9df55-145">如果尚未启动消息循环，<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>创建事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="9df55-145">If the message loop has not been started, the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event handler is created.</span></span> <span data-ttu-id="9df55-146">消息循环运行时被视为<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件处理程序附加。</span><span class="sxs-lookup"><span data-stu-id="9df55-146">The message loop is considered to be running when the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> event handler is attached.</span></span>  
   
- 如果窗口句柄被损坏，则 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控件将从注册中移除其自身。  
+ <span data-ttu-id="9df55-147">销毁窗口句柄时，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件移除本身注册。</span><span class="sxs-lookup"><span data-stu-id="9df55-147">When the window handle is destroyed, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control removes itself from registration.</span></span>  
   
-## ElementHost 键盘和消息处理  
- 当由 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序承载时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 键盘和消息处理将由以下各项组成：  
+## <a name="elementhost-keyboard-and-message-processing"></a><span data-ttu-id="9df55-148">ElementHost 键盘和消息处理</span><span class="sxs-lookup"><span data-stu-id="9df55-148">ElementHost Keyboard and Message Processing</span></span>  
+ <span data-ttu-id="9df55-149">当由托管时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]键盘和消息处理包含以下内容：</span><span class="sxs-lookup"><span data-stu-id="9df55-149">When hosted by a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] keyboard and message processing consists of the following:</span></span>  
   
--   <xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.IKeyboardInputSink> 和 <xref:System.Windows.Interop.IKeyboardInputSite> 接口实现。  
+-   <span data-ttu-id="9df55-150"><xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>接口实现。</span><span class="sxs-lookup"><span data-stu-id="9df55-150"><xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, and <xref:System.Windows.Interop.IKeyboardInputSite> interface implementations.</span></span>  
   
--   Tab 键导航和箭头键。  
+-   <span data-ttu-id="9df55-151">按 tab 键和箭头键。</span><span class="sxs-lookup"><span data-stu-id="9df55-151">Tabbing and arrow keys.</span></span>  
   
--   命令键和对话框键。  
+-   <span data-ttu-id="9df55-152">命令键和对话框键。</span><span class="sxs-lookup"><span data-stu-id="9df55-152">Command keys and dialog box keys.</span></span>  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快捷键处理。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="9df55-153">快捷键处理。</span><span class="sxs-lookup"><span data-stu-id="9df55-153"> accelerator processing.</span></span>  
   
- 以下几节更详细地介绍了这些部分。  
+ <span data-ttu-id="9df55-154">下列各节介绍了这些部分中更多详细信息。</span><span class="sxs-lookup"><span data-stu-id="9df55-154">The following sections describe these parts in more detail.</span></span>  
   
-### 接口实现  
- 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中，键盘消息将路由到获得焦点的控件的窗口句柄。  在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中，这些消息将路由到承载的元素。  为实现此目标，<xref:System.Windows.Forms.Integration.ElementHost> 控件提供了一个 <xref:System.Windows.Interop.HwndSource> 实例。  如果 <xref:System.Windows.Forms.Integration.ElementHost> 控件获得焦点，则 <xref:System.Windows.Interop.HwndSource> 实例会路由大多数键盘输入，以使其可以由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 类处理。  
+### <a name="interface-implementations"></a><span data-ttu-id="9df55-155">接口实现</span><span class="sxs-lookup"><span data-stu-id="9df55-155">Interface Implementations</span></span>  
+ <span data-ttu-id="9df55-156">在[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]，键盘消息路由到具有焦点的控件的窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="9df55-156">In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], keyboard messages are routed to the window handle of the control that has focus.</span></span> <span data-ttu-id="9df55-157">在<xref:System.Windows.Forms.Integration.ElementHost>控件，这些消息路由到承载的元素。</span><span class="sxs-lookup"><span data-stu-id="9df55-157">In the <xref:System.Windows.Forms.Integration.ElementHost> control, these messages are routed to the hosted element.</span></span> <span data-ttu-id="9df55-158">若要实现此目的，<xref:System.Windows.Forms.Integration.ElementHost>控件提供<xref:System.Windows.Interop.HwndSource>实例。</span><span class="sxs-lookup"><span data-stu-id="9df55-158">To accomplish this, the <xref:System.Windows.Forms.Integration.ElementHost> control provides an <xref:System.Windows.Interop.HwndSource> instance.</span></span> <span data-ttu-id="9df55-159">如果<xref:System.Windows.Forms.Integration.ElementHost>控件有焦点，<xref:System.Windows.Interop.HwndSource>实例路由大多数键盘输入，以便可以由处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.InputManager>类。</span><span class="sxs-lookup"><span data-stu-id="9df55-159">If the <xref:System.Windows.Forms.Integration.ElementHost> control has focus, the <xref:System.Windows.Interop.HwndSource> instance routes most keyboard input so that it can be processed by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> class.</span></span>  
   
- <xref:System.Windows.Interop.HwndSource> 类实现 <xref:System.Windows.Interop.IKeyboardInputSink> 和 <xref:System.Windows.Interop.IKeyboardInputSite> 接口。  
+ <span data-ttu-id="9df55-160"><xref:System.Windows.Interop.HwndSource>类实现<xref:System.Windows.Interop.IKeyboardInputSink>和<xref:System.Windows.Interop.IKeyboardInputSite>接口。</span><span class="sxs-lookup"><span data-stu-id="9df55-160">The <xref:System.Windows.Interop.HwndSource> class implements the <xref:System.Windows.Interop.IKeyboardInputSink> and <xref:System.Windows.Interop.IKeyboardInputSite> interfaces.</span></span>  
   
- 键盘互操作依赖于 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 方法的实现来处理将焦点移出承载的元素的 Tab 键和箭头键输入。  
+ <span data-ttu-id="9df55-161">键盘间的互操作依赖于实现<xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>方法句柄 TAB 键和箭头键将焦点移出托管元素的输入。</span><span class="sxs-lookup"><span data-stu-id="9df55-161">Keyboard interoperation relies on implementing the <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> method to handle TAB key and arrow key input that moves focus out of hosted elements.</span></span>  
   
-### Tab 键导航和箭头键  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]选择逻辑将映射到 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 和 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 方法以实现 Tab 和箭头键导航。  重写 <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> 方法即可实现此映射。  
+### <a name="tabbing-and-arrow-keys"></a><span data-ttu-id="9df55-162">Tabbing 和箭头键</span><span class="sxs-lookup"><span data-stu-id="9df55-162">Tabbing and Arrow Keys</span></span>  
+ <span data-ttu-id="9df55-163">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]选择逻辑映射到<xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>和<xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>方法来实现选项卡和箭头键导航。</span><span class="sxs-lookup"><span data-stu-id="9df55-163">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] selection logic is mapped to the <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> and <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> methods to implement TAB and arrow key navigation.</span></span> <span data-ttu-id="9df55-164">重写<xref:System.Windows.Forms.Integration.ElementHost.Select%2A>方法来实现此映射。</span><span class="sxs-lookup"><span data-stu-id="9df55-164">Overriding the <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> method accomplishes this mapping.</span></span>  
   
-### 命令键和对话框键  
- 为了向 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供处理命令键和对话框键的第一次机会，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命令预处理连接到 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 方法。  重写 <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=fullName> 方法会连接两项技术。  
+### <a name="command-keys-and-dialog-box-keys"></a><span data-ttu-id="9df55-165">命令键和对话框键</span><span class="sxs-lookup"><span data-stu-id="9df55-165">Command Keys and Dialog Box Keys</span></span>  
+ <span data-ttu-id="9df55-166">能够在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]处理命令键和对话框键的第一个机会[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]预处理命令连接到<xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9df55-166">To give [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] the first opportunity to process command keys and dialog keys, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] command preprocessing is connected to the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> method.</span></span> <span data-ttu-id="9df55-167">重写<xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType>方法连接这两种技术。</span><span class="sxs-lookup"><span data-stu-id="9df55-167">Overriding the <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> method connects the two technologies.</span></span>  
   
- 使用 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 方法，承载的元素可以处理任何按键消息（如 WM\_KEYDOWN、WM\_KEYUP、WM\_SYSKEYDOWN 或 WM\_SYSKEYUP），包括命令键（如 Tab、Enter、Esc 以及箭头键）。  如果按键消息未被处理，则将其向上发送到 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的上级层次结构进行处理。  
+ <span data-ttu-id="9df55-168">与<xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>方法，承载的元素可以处理任何键的消息，如 WM_KEYDOWN、 WM_KEYUP、 WM_SYSKEYDOWN 或 WM_SYSKEYUP，包括命令键，例如选项卡、 ENTER、 ESC、 和箭头键。</span><span class="sxs-lookup"><span data-stu-id="9df55-168">With the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> method, the hosted elements can handle any key message, such as WM_KEYDOWN, WM_KEYUP, WM_SYSKEYDOWN, or WM_SYSKEYUP, including command keys, such as TAB, ENTER, ESC, and arrow keys.</span></span> <span data-ttu-id="9df55-169">如果未处理键消息，则将它发送[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上级层次结构进行处理。</span><span class="sxs-lookup"><span data-stu-id="9df55-169">If a key message is not handled, it is sent up the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ancestor hierarchy for handling.</span></span>  
   
-### 快捷键处理  
- 若要正确处理快捷键，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快捷键处理必须连接到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>类。  另外，所有 WM\_CHAR 消息都必须正确路由到承载的元素。  
+### <a name="accelerator-processing"></a><span data-ttu-id="9df55-170">快捷键处理</span><span class="sxs-lookup"><span data-stu-id="9df55-170">Accelerator Processing</span></span>  
+ <span data-ttu-id="9df55-171">若要正确处理快捷键，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快捷键处理必须连接到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>类。</span><span class="sxs-lookup"><span data-stu-id="9df55-171">To process accelerators correctly, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] accelerator processing must be connected to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> class.</span></span> <span data-ttu-id="9df55-172">此外，必须正确路由所有的 WM_CHAR 消息到承载的元素。</span><span class="sxs-lookup"><span data-stu-id="9df55-172">Additionally, all WM_CHAR messages must be correctly routed to hosted elements.</span></span>  
   
- 由于 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 方法的默认 <xref:System.Windows.Interop.HwndSource> 实现返回 `false`，因此将使用以下逻辑处理 WM\_CHAR 消息：  
+ <span data-ttu-id="9df55-173">因为默认值<xref:System.Windows.Interop.HwndSource>实现<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>方法返回`false`，使用以下逻辑的 WM_CHAR 消息进行处理：</span><span class="sxs-lookup"><span data-stu-id="9df55-173">Because the default <xref:System.Windows.Interop.HwndSource> implementation of the <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> method returns `false`, WM_CHAR messages are processed using the following logic:</span></span>  
   
--   重写 <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=fullName> 方法，以确保所有 WM\_CHAR 消息转发到承载的元素。  
+-   <span data-ttu-id="9df55-174"><xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法被重写，以确保所有的 WM_CHAR 消息都转发至承载的元素。</span><span class="sxs-lookup"><span data-stu-id="9df55-174">The <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> method is overridden to ensure that all WM_CHAR messages are forwarded to hosted elements.</span></span>  
   
--   如果按下 Alt 键，则显示 WM\_SYSCHAR 消息。  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不会通过 <xref:System.Windows.Forms.Control.IsInputChar%2A> 方法预处理此消息。  因此，重写 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 方法，以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 中查询已注册的快捷键。  如果找到已注册的快捷键，则 <xref:System.Windows.Input.AccessKeyManager> 将对其进行处理。  
+-   <span data-ttu-id="9df55-175">当按下 ALT 键，则消息将 WM_SYSCHAR。</span><span class="sxs-lookup"><span data-stu-id="9df55-175">If the ALT key is pressed, the message is WM_SYSCHAR.</span></span> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="9df55-176">不进行预处理通过此消息<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9df55-176"> does not preprocess this message through the <xref:System.Windows.Forms.Control.IsInputChar%2A> method.</span></span> <span data-ttu-id="9df55-177">因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>方法被重写查询[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>已注册的快捷键。</span><span class="sxs-lookup"><span data-stu-id="9df55-177">Therefore, the <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> method is overridden to query the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> for a registered accelerator.</span></span> <span data-ttu-id="9df55-178">如果找到已注册的快捷键，则<xref:System.Windows.Input.AccessKeyManager>处理它。</span><span class="sxs-lookup"><span data-stu-id="9df55-178">If a registered accelerator is found, <xref:System.Windows.Input.AccessKeyManager> processes it.</span></span>  
   
--   如果未按 Alt 键，则 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 类将处理尚未处理的输入。  如果输入为快捷键，则 <xref:System.Windows.Input.AccessKeyManager> 将对其进行处理。  为尚未处理的 WM\_CHAR 消息处理 <xref:System.Windows.Input.InputManager.PostProcessInput> 事件。  
+-   <span data-ttu-id="9df55-179">如果未按下 ALT 键， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>类处理未处理的输入。</span><span class="sxs-lookup"><span data-stu-id="9df55-179">If the ALT key is not pressed, the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> class processes the unhandled input.</span></span> <span data-ttu-id="9df55-180">如果输入是快捷键，<xref:System.Windows.Input.AccessKeyManager>处理它。</span><span class="sxs-lookup"><span data-stu-id="9df55-180">If the input is an accelerator, the <xref:System.Windows.Input.AccessKeyManager> processes it.</span></span> <span data-ttu-id="9df55-181"><xref:System.Windows.Input.InputManager.PostProcessInput>的未处理的 WM_CHAR 消息处理事件。</span><span class="sxs-lookup"><span data-stu-id="9df55-181">The <xref:System.Windows.Input.InputManager.PostProcessInput> event is handled for WM_CHAR messages that were not processed.</span></span>  
   
- 在用户按下 Alt 键时，快捷键的可视化提示将显示在整个窗体上。  若要支持此行为，活动窗体上的所有 <xref:System.Windows.Forms.Integration.ElementHost> 控件都需要接收 WM\_SYSKEYDOWN 消息，而不考虑哪个控件获得了焦点。  
+ <span data-ttu-id="9df55-182">当用户按下 ALT 键时，整个窗体上显示快捷键的可视化提示。</span><span class="sxs-lookup"><span data-stu-id="9df55-182">When the user presses the ALT key, accelerator visual cues are shown on the whole form.</span></span> <span data-ttu-id="9df55-183">若要支持此行为，所有<xref:System.Windows.Forms.Integration.ElementHost>活动窗体上的控件接收 WM_SYSKEYDOWN 消息，而在控件有焦点。</span><span class="sxs-lookup"><span data-stu-id="9df55-183">To support this behavior, all <xref:System.Windows.Forms.Integration.ElementHost> controls on the active form receive WM_SYSKEYDOWN messages, regardless of which control has focus.</span></span>  
   
- 消息将仅发送给活动窗体中的 <xref:System.Windows.Forms.Integration.ElementHost> 控件。  
+ <span data-ttu-id="9df55-184">消息将仅发送给<xref:System.Windows.Forms.Integration.ElementHost>活动窗体中的控件。</span><span class="sxs-lookup"><span data-stu-id="9df55-184">Messages are sent only to <xref:System.Windows.Forms.Integration.ElementHost> controls in the active form.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [演练：在 WPF 中承载 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+## <a name="see-also"></a><span data-ttu-id="9df55-185">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9df55-185">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="9df55-186">演练：在 WPF 中托管 Windows 窗体复合控件</span><span class="sxs-lookup"><span data-stu-id="9df55-186">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="9df55-187">演练：在 Windows 窗体中承载 WPF 复合控件</span><span class="sxs-lookup"><span data-stu-id="9df55-187">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="9df55-188">WPF 和 Win32 互操作</span><span class="sxs-lookup"><span data-stu-id="9df55-188">WPF and Win32 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

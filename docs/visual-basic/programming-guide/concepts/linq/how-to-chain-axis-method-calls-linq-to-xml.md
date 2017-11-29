@@ -1,37 +1,32 @@
 ---
-title: "如何︰ 链接轴方法调用 (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "如何： 链接轴方法调用 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c0e9d440ab50b7f275296731e5210578bcedcaa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 39579d08d339ed8964520936d28ee289de5fb15d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>如何︰ 链接轴方法调用 (LINQ to XML) (Visual Basic)
-一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a><span data-ttu-id="f6111-102">如何： 链接轴方法调用 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6111-102">How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f6111-103">一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。</span><span class="sxs-lookup"><span data-stu-id="f6111-103">A common pattern that you will use in your code is to call an axis method, then call one of the extension method axes.</span></span>  
   
- 有两个同名的轴`Elements`返回的元素的集合︰<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>方法和<xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>方法。</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。  
+ <span data-ttu-id="f6111-104">有两个返回元素集合、名称为 `Elements` 的轴：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="f6111-104">There are two axes with the name of `Elements` that return a collection of elements: the <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> method and the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="f6111-105">可以合并这两个轴，在树的给定深度，查找具有指定名称的所有元素。</span><span class="sxs-lookup"><span data-stu-id="f6111-105">You can combine these two axes to find all elements of a specified name at a given depth in the tree.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例使用<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>和<xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>来查找所有`Name`元素中的所有`Address`元素中的所有`PurchaseOrder`元素。</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>  
+## <a name="example"></a><span data-ttu-id="f6111-106">示例</span><span class="sxs-lookup"><span data-stu-id="f6111-106">Example</span></span>  
+ <span data-ttu-id="f6111-107">本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。</span><span class="sxs-lookup"><span data-stu-id="f6111-107">This example uses <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> and <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> to find all `Name` elements in all `Address` elements in all `PurchaseOrder` elements.</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="f6111-108">本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f6111-108">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -43,7 +38,7 @@ For Each e As XElement In names
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="f6111-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f6111-109">This example produces the following output:</span></span>  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -54,10 +49,10 @@ Next
 <Name>Jessica Arnold</Name>  
 ```  
   
- 这样做的原因的实现之一`Elements`轴是作为<xref:System.Collections.Generic.IEnumerable%601><xref:System.Xml.Linq.XContainer>。</xref:System.Xml.Linq.XContainer>的</xref:System.Collections.Generic.IEnumerable%601>扩展方法 <xref:System.Xml.Linq.XElement>派生自<xref:System.Xml.Linq.XContainer>，因此您可以调用<xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>方法调用的结果<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>方法。</xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer></xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="f6111-110">此方法有效是因为其中有一个 `Elements` 轴实现充当 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer> 的扩展方法。</span><span class="sxs-lookup"><span data-stu-id="f6111-110">This works because one of the implementations of the `Elements` axis is as an extension method on <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XContainer>.</span></span> <span data-ttu-id="f6111-111"><xref:System.Xml.Linq.XElement> 是从 <xref:System.Xml.Linq.XContainer> 派生的，因此可以对调用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法的结果调用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="f6111-111"><xref:System.Xml.Linq.XElement> derives from <xref:System.Xml.Linq.XContainer>, so you can call the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> method on the results of a call to the <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="example"></a>示例  
- 有时，当可能存在或不存在间隔上级时，您希望在特定的元素深度，检索所有的元素。 例如，在下面的文档中，您可能要检索属于 `ConfigParameter` 元素的子元素的所有 `Customer` 元素，而不是属于 `ConfigParameter` 元素的子元素的 `Root`。  
+## <a name="example"></a><span data-ttu-id="f6111-112">示例</span><span class="sxs-lookup"><span data-stu-id="f6111-112">Example</span></span>  
+ <span data-ttu-id="f6111-113">有时，当可能存在或不存在间隔上级时，您希望在特定的元素深度，检索所有的元素。</span><span class="sxs-lookup"><span data-stu-id="f6111-113">Sometimes you want to retrieve all elements at a particular element depth when there might or might not be intervening ancestors.</span></span> <span data-ttu-id="f6111-114">例如，在下面的文档中，您可能要检索属于 `ConfigParameter` 元素的子元素的所有 `Customer` 元素，而不是属于 `ConfigParameter` 元素的子元素的 `Root`。</span><span class="sxs-lookup"><span data-stu-id="f6111-114">For example, in the following document, you might want to retrieve all the `ConfigParameter` elements that are children of the `Customer` element, but not the `ConfigParameter` that is a child of the `Root` element.</span></span>  
   
 ```xml  
 <Root>  
@@ -81,7 +76,7 @@ Next
 </Root>  
 ```  
   
- 若要执行此操作，可以使用<xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>轴，如下所示︰</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>  
+ <span data-ttu-id="f6111-115">若要执行此操作，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 轴，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f6111-115">To do this, you can use the <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> axis, as follows:</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("Irregular.xml")  
@@ -92,17 +87,17 @@ For Each cp As XElement In configParameters
 Next  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="f6111-116">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f6111-116">This example produces the following output:</span></span>  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
 <ConfigParameter>SecondConfigParameter</ConfigParameter>  
 ```  
   
-## <a name="example"></a>示例  
- 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="f6111-117">示例</span><span class="sxs-lookup"><span data-stu-id="f6111-117">Example</span></span>  
+ <span data-ttu-id="f6111-118">下面的示例演示针对命名空间中的 XML 的相同技术。</span><span class="sxs-lookup"><span data-stu-id="f6111-118">The following example shows the same technique for XML that is in a namespace.</span></span> <span data-ttu-id="f6111-119">有关详细信息，请参阅[处理 XML 命名空间 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="f6111-119">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 多个采购订单中 Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ <span data-ttu-id="f6111-120">本示例使用以下 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="f6111-120">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -120,7 +115,7 @@ Module Module1
 End Module  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="f6111-121">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f6111-121">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
@@ -131,5 +126,5 @@ End Module
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="f6111-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f6111-122">See Also</span></span>  
+ [<span data-ttu-id="f6111-123">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6111-123">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

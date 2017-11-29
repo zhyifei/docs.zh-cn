@@ -1,35 +1,34 @@
 ---
-title: "基本数据协定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "数据协定"
+title: "基本数据协定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-caps.latest.revision: 37
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 37
+caps.latest.revision: "37"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6f428953fe6803f1ade4f4947f71b0e1360fdb96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 基本数据协定
-本示例演示如何实现数据协定。数据协定允许您在服务中传入和传出结构化数据。本示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，但使用复数代替基本数字类型。  
+# <a name="basic-data-contract"></a><span data-ttu-id="6fb8e-102">基本数据协定</span><span class="sxs-lookup"><span data-stu-id="6fb8e-102">Basic Data Contract</span></span>
+<span data-ttu-id="6fb8e-103">本示例演示如何实现数据协定。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="6fb8e-104">数据协定允许您在服务中传入和传出结构化数据。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="6fb8e-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)但使用而不是基本数值类型的复数。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  
   
- 在本示例中，服务是由 Internet 信息服务 \(IIS\) 承载的，客户端是一个控制台应用程序 \(.exe\)。  
+ <span data-ttu-id="6fb8e-106">在本示例中，服务是由 Internet 信息服务 (IIS) 承载的，客户端是一个控制台应用程序 (.exe)。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-106">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="6fb8e-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- 此服务的服务协定使用复数，如下面的示例代码所示。  
+ <span data-ttu-id="6fb8e-108">此服务的服务协定使用复数，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-108">The service contract for this service uses complex numbers, as shown in the following sample code.</span></span>  
   
 ```  
 // Define a service contract.  
@@ -45,10 +44,9 @@ public interface ICalculator
     [OperationContract]  
     ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
 }  
-  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性已应用于 `ComplexNumber` 类的定义，指示可以在客户端和服务之间通过网络传递该类的哪些字段，如下面的示例代码所示。  
+ <span data-ttu-id="6fb8e-109"><xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性已应用于 `ComplexNumber` 类的定义，指示可以在客户端和服务之间通过网络传递该类的哪些字段，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-109">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes have been applied to the definition of the `ComplexNumber` class to indicate which fields of the class can be passed over the wire between the client and the service, as shown in the following sample code.</span></span>  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -65,10 +63,9 @@ public class ComplexNumber
         this.Imaginary = imaginary;  
     }  
 }  
-  
 ```  
   
- 服务实现计算并返回相应结果，接受并返回 `ComplexNumber` 类型的数字。  
+ <span data-ttu-id="6fb8e-110">服务实现计算并返回相应结果，接受并返回 `ComplexNumber` 类型的数字。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-110">The service implementation calculates and returns the appropriate result, accepting and returning numbers of the `ComplexNumber` type.</span></span>  
   
 ```  
 // This is the service class that implements the service contract.  
@@ -105,10 +102,9 @@ public class CalculatorService : ICalculator
                                                numerator.Imaginary);  
     }  
 }  
-  
 ```  
   
- 客户端实现也使用复数。服务协定和数据协定二者都在源文件 generatedClient.cs 中定义，该文件由[ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 从服务元数据生成。  
+ <span data-ttu-id="6fb8e-111">客户端实现也使用复数。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-111">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="6fb8e-112">在源 generatedClient.cs 文件，这通过在生成定义服务协定和数据协定[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从服务元数据。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-112">Both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span>  
   
 ```  
 // Create a client.  
@@ -126,13 +122,11 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
       result.Real, result.Imaginary);   
     …  
 }  
-  
 ```  
   
- 运行示例时，操作的请求和响应将显示在客户端控制台窗口中。在客户端窗口中按 Enter 可以关闭客户端。  
+ <span data-ttu-id="6fb8e-113">运行示例时，操作的请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-113">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="6fb8e-114">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-114">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
-  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  
@@ -141,21 +135,21 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 41i
 Press <ENTER> to terminate client.  
 ```  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6fb8e-115">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="6fb8e-115">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="6fb8e-116">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="6fb8e-117">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="6fb8e-118">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="6fb8e-119">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6fb8e-120">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="6fb8e-120">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="6fb8e-121">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="6fb8e-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6fb8e-122">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="6fb8e-122">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="6fb8e-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6fb8e-123">See Also</span></span>

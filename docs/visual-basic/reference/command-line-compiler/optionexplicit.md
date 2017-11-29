@@ -1,78 +1,60 @@
 ---
-title: "/optionexplicit |Microsoft 文档"
-ms.date: 2015-07-20
+title: /optionexplicit
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- /optionexplicit
-dev_langs:
-- VB
+f1_keywords: /optionexplicit
 helpviewer_keywords:
 - /optionexplicit compiler option [Visual Basic]
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfdad72c21b7886f9ea8a2d46e7c457087e7049d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1cfdb94ebafa7d6a14253aeb59ab98b3a953fe4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="optionexplicit"></a>/optionexplicit
-如果在使用之前，不声明变量，会导致编译器报告错误。  
+# <a name="optionexplicit"></a><span data-ttu-id="4381a-102">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="4381a-102">/optionexplicit</span></span>
+<span data-ttu-id="4381a-103">如果在使用之前，不声明变量，会导致编译器报告错误。</span><span class="sxs-lookup"><span data-stu-id="4381a-103">Causes the compiler to report errors if variables are not declared before they are used.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="4381a-104">语法</span><span class="sxs-lookup"><span data-stu-id="4381a-104">Syntax</span></span>  
   
 ```  
 /optionexplicit[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
- `+` &#124; `-`  
- 可选。 指定`/optionexplicit+`需要显式声明变量。 `/optionexplicit+`选项是默认设置，等同于`/optionexplicit`。 `/optionexplicit-`选项启用隐式声明变量。  
+## <a name="arguments"></a><span data-ttu-id="4381a-105">参数</span><span class="sxs-lookup"><span data-stu-id="4381a-105">Arguments</span></span>  
+ <span data-ttu-id="4381a-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="4381a-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="4381a-107">可选。</span><span class="sxs-lookup"><span data-stu-id="4381a-107">Optional.</span></span> <span data-ttu-id="4381a-108">指定`/optionexplicit+`若要要求显式声明变量。</span><span class="sxs-lookup"><span data-stu-id="4381a-108">Specify `/optionexplicit+` to require explicit declaration of variables.</span></span> <span data-ttu-id="4381a-109">`/optionexplicit+`选项是默认设置，并为相同`/optionexplicit`。</span><span class="sxs-lookup"><span data-stu-id="4381a-109">The `/optionexplicit+` option is the default and is the same as `/optionexplicit`.</span></span> <span data-ttu-id="4381a-110">`/optionexplicit-`选项，可以隐式声明变量。</span><span class="sxs-lookup"><span data-stu-id="4381a-110">The `/optionexplicit-` option enables implicit declaration of variables.</span></span>  
   
-## <a name="remarks"></a>备注  
- 如果源代码文件包含[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)，语句将覆盖`/optionexplicit`命令行编译器设置。  
+## <a name="remarks"></a><span data-ttu-id="4381a-111">备注</span><span class="sxs-lookup"><span data-stu-id="4381a-111">Remarks</span></span>  
+ <span data-ttu-id="4381a-112">如果源代码文件包含[Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)，语句将覆盖`/optionexplicit`命令行编译器设置。</span><span class="sxs-lookup"><span data-stu-id="4381a-112">If the source code file contains an [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md), the statement overrides the `/optionexplicit` command-line compiler setting.</span></span>  
   
-### <a name="to-set-optionexplicit-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置 /optionexplicit  
+### <a name="to-set-optionexplicit-in-the-visual-studio-ide"></a><span data-ttu-id="4381a-113">在 Visual Studio IDE 中设置 /optionexplicit</span><span class="sxs-lookup"><span data-stu-id="4381a-113">To set /optionexplicit in the Visual Studio IDE</span></span>  
   
-1.  在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  <span data-ttu-id="4381a-114">在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="4381a-114">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="4381a-115">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="4381a-115">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="4381a-116">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="4381a-116">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  单击“编译”****选项卡。  
+2.  <span data-ttu-id="4381a-117">单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="4381a-117">Click the **Compile** tab.</span></span>  
   
-3.  在修改此值**Option Explicit**框。  
+3.  <span data-ttu-id="4381a-118">修改中的值**Option Explicit**框。</span><span class="sxs-lookup"><span data-stu-id="4381a-118">Modify the value in the **Option Explicit** box.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译时`/optionexplicit-`使用。  
+## <a name="example"></a><span data-ttu-id="4381a-119">示例</span><span class="sxs-lookup"><span data-stu-id="4381a-119">Example</span></span>  
+ <span data-ttu-id="4381a-120">下面的代码编译时`/optionexplicit-`使用。</span><span class="sxs-lookup"><span data-stu-id="4381a-120">The following code compiles when `/optionexplicit-` is used.</span></span>  
   
- [!code-vb[VbVbalrCompiler #&5;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)   
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [“选项”对话框 ->“项目”->“Visual Basic 默认值”](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a><span data-ttu-id="4381a-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4381a-121">See Also</span></span>  
+ [<span data-ttu-id="4381a-122">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="4381a-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="4381a-123">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="4381a-123">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [<span data-ttu-id="4381a-124">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="4381a-124">/optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [<span data-ttu-id="4381a-125">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="4381a-125">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [<span data-ttu-id="4381a-126">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="4381a-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="4381a-127">Option Explicit 语句</span><span class="sxs-lookup"><span data-stu-id="4381a-127">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="4381a-128">“选项”对话框 ->“项目”->“Visual Basic 默认值”</span><span class="sxs-lookup"><span data-stu-id="4381a-128">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

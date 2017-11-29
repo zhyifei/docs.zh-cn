@@ -1,38 +1,41 @@
 ---
-title: "支持令牌 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "支持令牌"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: 29
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bf4c153cb3bb0b977b2d1f0438d1b6ac0d46ab43
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 支持令牌
-支持令牌示例演示如何将其他令牌添加到使用 WS\-Security 的消息。  该示例除添加用户名安全令牌外，还添加 X.509 二进制安全令牌。  在 WS\-Security 消息头中将令牌从客户端传递到服务，部分消息使用与 X.509 安全令牌关联的私钥进行签名，以证明 X.509 证书相对于接收方的所有权。  这可用于当要求有多个与消息关联的声明时对发送方进行身份验证或授权。  该服务实现定义“请求\-答复”通信模式的协定。  
+# <a name="supporting-tokens"></a><span data-ttu-id="c5b5e-102">支持令牌</span><span class="sxs-lookup"><span data-stu-id="c5b5e-102">Supporting Tokens</span></span>
+<span data-ttu-id="c5b5e-103">支持令牌示例演示如何将其他令牌添加到使用 WS-Security 的消息。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-103">The Supporting Tokens sample demonstrates how to add additional tokens to a message that uses WS-Security.</span></span> <span data-ttu-id="c5b5e-104">该示例除添加用户名安全令牌外，还添加 X.509 二进制安全令牌。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-104">The example adds an X.509 binary security token in addition to a username security token.</span></span> <span data-ttu-id="c5b5e-105">在 WS-Security 消息头中将令牌从客户端传递到服务，部分消息使用与 X.509 安全令牌关联的私钥进行签名，以证明 X.509 证书相对于接收方的所有权。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-105">The token is passed in a WS-Security message header from the client to the service and part of the message is signed with the private key associated with the X.509 security token to prove the possession of the X.509 certificate to the receiver.</span></span> <span data-ttu-id="c5b5e-106">这可用于当要求有多个与消息关联的声明时对发送方进行身份验证或授权。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-106">This is useful in the case when there is a requirement to have multiple claims associated with a message to authenticate or authorize the sender.</span></span> <span data-ttu-id="c5b5e-107">该服务实现定义“请求-答复”通信模式的协定。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-107">The service implements a contract that defines a request-reply communication pattern.</span></span>  
   
-## 演示  
- 本示例演示：  
+## <a name="demonstrates"></a><span data-ttu-id="c5b5e-108">演示</span><span class="sxs-lookup"><span data-stu-id="c5b5e-108">Demonstrates</span></span>  
+ <span data-ttu-id="c5b5e-109">本示例演示：</span><span class="sxs-lookup"><span data-stu-id="c5b5e-109">The sample demonstrates:</span></span>  
   
--   客户端如何向服务传递其他安全令牌。  
+-   <span data-ttu-id="c5b5e-110">客户端如何向服务传递其他安全令牌。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-110">How a client can pass additional security tokens to a service.</span></span>  
   
--   服务器如何访问与其他安全令牌关联的声明。  
+-   <span data-ttu-id="c5b5e-111">服务器如何访问与其他安全令牌关联的声明。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-111">How the server can access claims associated with additional security tokens.</span></span>  
   
--   如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。  
+-   <span data-ttu-id="c5b5e-112">如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-112">How the server's X.509 certificate is used to protect the symmetric key used for message encryption and signature.</span></span>  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="c5b5e-113">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-113">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## 使用用户名令牌进行客户端身份验证并支持 X.509 安全令牌  
- 服务公开一个用于通信的单一终结点，此终结点是使用 `BindingHelper` 和 `EchoServiceHost` 类以编程方式创建的。  终结点由地址、绑定和协定组成。  此绑定使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 按照自定义绑定进行配置。  本示例设置了 `SymmetricSecurityBindingElement` 以便使用服务 X.509 证书在传输过程中保护对称密钥和在 WS\-Security 消息头中传递 `UserNameToken` 并支持 `X509SecurityToken`。  对称密钥用于对消息正文和用户名安全令牌进行加密。  支持令牌在 WS\-Security 消息头中作为附加二进制安全令牌进行传递。  支持令牌的真实性是使用与支持 X.509 安全令牌关联的私钥通过消息的签名部分证实的。  
+## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a><span data-ttu-id="c5b5e-114">使用用户名令牌进行客户端身份验证并支持 X.509 安全令牌</span><span class="sxs-lookup"><span data-stu-id="c5b5e-114">Client Authenticates with Username Token and Supporting X.509 Security Token</span></span>  
+ <span data-ttu-id="c5b5e-115">服务公开一个用于通信的单一终结点，此终结点是使用 `BindingHelper` 和 `EchoServiceHost` 类以编程方式创建的。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-115">The service exposes a single endpoint for communicating that is programmatically created using the `BindingHelper` and `EchoServiceHost` classes.</span></span> <span data-ttu-id="c5b5e-116">终结点由地址、绑定和协定组成。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-116">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="c5b5e-117">此绑定使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 按照自定义绑定进行配置。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-117">The binding is configured with a custom binding using `SymmetricSecurityBindingElement` and `HttpTransportBindingElement`.</span></span> <span data-ttu-id="c5b5e-118">本示例设置了 `SymmetricSecurityBindingElement` 以便使用服务 X.509 证书在传输过程中保护对称密钥和在 WS-Security 消息头中传递 `UserNameToken` 并支持 `X509SecurityToken`。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-118">This sample sets the `SymmetricSecurityBindingElement` to use a service X.509 certificate to protect the symmetric key during transmission and to pass a `UserNameToken` along with the supporting `X509SecurityToken` in a WS-Security message header.</span></span> <span data-ttu-id="c5b5e-119">对称密钥用于对消息正文和用户名安全令牌进行加密。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-119">The symmetric key is used to encrypt the message body and the username security token.</span></span> <span data-ttu-id="c5b5e-120">支持令牌在 WS-Security 消息头中作为附加二进制安全令牌进行传递。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-120">The supporting token is passed as an additional binary security token in the WS-Security message header.</span></span> <span data-ttu-id="c5b5e-121">支持令牌的真实性是使用与支持 X.509 安全令牌关联的私钥通过消息的签名部分证实的。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-121">The authenticity of the supporting token is proved by signing part of the message with the private key associated with the supporting X.509 security token.</span></span>  
   
 ```  
 public static Binding CreateMultiFactorAuthenticationBinding()  
@@ -58,10 +61,9 @@ public static Binding CreateMultiFactorAuthenticationBinding()
     // Create a CustomBinding based on the constructed security binding element.  
     return new CustomBinding(messageSecurity, httpTransport);  
 }  
-  
 ```  
   
- 此行为指定用于客户端身份验证的服务凭据和有关服务 X.509 证书的信息。  本示例在服务 X.509 证书中将 `CN=localhost` 用作主题名称。  
+ <span data-ttu-id="c5b5e-122">此行为指定用于客户端身份验证的服务凭据和有关服务 X.509 证书的信息。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-122">The behavior specifies the service credentials that are to be used for client authentication and also information about the service X.509 certificate.</span></span> <span data-ttu-id="c5b5e-123">本示例在服务 X.509 证书中将 `CN=localhost` 用作主题名称。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-123">The sample uses `CN=localhost` as a subject name in the service X.509 certificate.</span></span>  
   
 ```  
 override protected void InitializeRuntime()  
@@ -94,7 +96,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 }  
 ```  
   
- 服务代码：  
+ <span data-ttu-id="c5b5e-124">服务代码：</span><span class="sxs-lookup"><span data-stu-id="c5b5e-124">Service code:</span></span>  
   
 ```  
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]  
@@ -180,7 +182,7 @@ public class EchoService : IEchoService
 }   
 ```  
   
- 客户端终结点的配置方式与服务终结点类似。  客户端使用相同的 `BindingHelper` 类创建绑定。  设置的其余部分位于 `Client` 类中。  客户端设置有关用户名安全令牌、支持 X.509 安全令牌的信息，并在设置代码中将有关服务 X.509 证书的信息设置为客户端终结点行为集合。  
+ <span data-ttu-id="c5b5e-125">客户端终结点的配置方式与服务终结点类似。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-125">The client endpoint is configured in a similar way to the service endpoint.</span></span> <span data-ttu-id="c5b5e-126">客户端使用相同的 `BindingHelper` 类创建绑定。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-126">The client uses the same `BindingHelper` class to create a binding.</span></span> <span data-ttu-id="c5b5e-127">设置的其余部分位于 `Client` 类中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-127">The rest of the setup is located in `Client` class.</span></span> <span data-ttu-id="c5b5e-128">客户端设置有关用户名安全令牌、支持 X.509 安全令牌的信息，并在设置代码中将有关服务 X.509 证书的信息设置为客户端终结点行为集合。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-128">The client sets information about the user name security token, the supporting X.509 security token and information about the service X.509 certificate in the setup code to the client endpoint behaviors collection.</span></span>  
   
 ```  
  static void Main()  
@@ -290,8 +292,8 @@ public class EchoService : IEchoService
 }  
 ```  
   
-## 显示调用方信息  
- 若要显示调用方信息，可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下面的代码中所示。  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含与当前调用方关联的授权声明。  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 自动将这些声明提供给消息中接收的每个令牌。  
+## <a name="displaying-callers-information"></a><span data-ttu-id="c5b5e-129">显示调用方信息</span><span class="sxs-lookup"><span data-stu-id="c5b5e-129">Displaying Callers' Information</span></span>  
+ <span data-ttu-id="c5b5e-130">若要显示调用方信息，可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-130">To display the caller's information, you can use the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` as shown in the following code.</span></span> <span data-ttu-id="c5b5e-131">`ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含与当前调用方关联的授权声明。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-131">The `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contains authorization claims associated with the current caller.</span></span> <span data-ttu-id="c5b5e-132">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 自动将这些声明提供给消息中接收的每个令牌。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-132">Those claims are supplied automatically by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] for every token received in the message.</span></span>  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -353,18 +355,18 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 }  
 ```  
   
-## 运行示例  
- 运行此示例时，客户端首先提示您为用户名令牌提供用户名和密码。  请确保为系统帐户提供正确值，因为服务上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将用户名令牌中提供的值映射为系统提供的标识。  此后，客户端会显示来自服务的响应。  在客户端窗口中按 Enter 可以关闭客户端。  
+## <a name="running-the-sample"></a><span data-ttu-id="c5b5e-133">运行示例</span><span class="sxs-lookup"><span data-stu-id="c5b5e-133">Running the Sample</span></span>  
+ <span data-ttu-id="c5b5e-134">运行此示例时，客户端首先提示您为用户名令牌提供用户名和密码。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-134">When you run the sample, the client first prompts you to provide user name and password for the user name token.</span></span> <span data-ttu-id="c5b5e-135">请确保为系统帐户提供正确值，因为服务上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将用户名令牌中提供的值映射为系统提供的标识。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-135">Be sure to provide correct values for your system account, because [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] on the service maps the values supplied in the user name token into the identity provided by the system.</span></span> <span data-ttu-id="c5b5e-136">此后，客户端会显示来自服务的响应。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-136">After that, the client displays the response from the service.</span></span> <span data-ttu-id="c5b5e-137">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-137">Press ENTER in the client window to shut down the client.</span></span>  
   
-## 设置批处理文件  
- 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行以 Internet 信息服务 \(IIS\) 为宿主的应用程序，该应用程序要求基于服务器证书的安全性。  必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
+## <a name="setup-batch-file"></a><span data-ttu-id="c5b5e-138">设置批处理文件</span><span class="sxs-lookup"><span data-stu-id="c5b5e-138">Setup Batch File</span></span>  
+ <span data-ttu-id="c5b5e-139">通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行以 Internet 信息服务 (IIS) 为宿主的应用程序，该应用程序要求基于服务器证书的安全性。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-139">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run Internet Information Services (IIS) hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="c5b5e-140">必须修改此批处理文件，以便跨计算机或在非承载情况下工作。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-140">This batch file must be modified to work across machines or to work in a non-hosted case.</span></span>  
   
- 下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。  
+ <span data-ttu-id="c5b5e-141">下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-141">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in appropriate configuration.</span></span>  
   
-### 创建客户端证书  
- Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。  `%CLIENT_NAME%` 变量指定客户端证书的主题。  本示例使用“client.com”作为主题名称。  
+### <a name="creating-the-client-certificate"></a><span data-ttu-id="c5b5e-142">创建客户端证书</span><span class="sxs-lookup"><span data-stu-id="c5b5e-142">Creating the Client Certificate</span></span>  
+ <span data-ttu-id="c5b5e-143">Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-143">The following lines from the Setup.bat batch file create the client certificate to be used.</span></span> <span data-ttu-id="c5b5e-144">`%CLIENT_NAME%` 变量指定客户端证书的主题。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-144">The `%CLIENT_NAME%` variable specifies the subject of the client certificate.</span></span> <span data-ttu-id="c5b5e-145">本示例使用“client.com”作为主题名称。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-145">This sample uses "client.com" as the subject name.</span></span>  
   
- 证书存储在 `CurrentUser` 存储位置下的 My（个人）存储区中。  
+ <span data-ttu-id="c5b5e-146">证书存储在 `CurrentUser` 存储位置下的 My（个人）存储区中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-146">The certificate is stored in My (Personal) store under the `CurrentUser` store location.</span></span>  
   
 ```  
 echo ************  
@@ -373,8 +375,8 @@ echo ************
 makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
 ```  
   
-### 将客户端证书安装到服务器的受信任存储区中  
- Setup.bat 批处理文件中的以下行将客户端证书复制到服务器的受信任的人的存储区中。  因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。  如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a><span data-ttu-id="c5b5e-147">将客户端证书安装到服务器的受信任存储区中</span><span class="sxs-lookup"><span data-stu-id="c5b5e-147">Installing the Client Certificate into the Server's Trusted Store</span></span>  
+ <span data-ttu-id="c5b5e-148">Setup.bat 批处理文件中的以下行将客户端证书复制到服务器的受信任的人的存储区中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-148">The following line in the Setup.bat batch file copies the client certificate into the server’s trusted people store.</span></span> <span data-ttu-id="c5b5e-149">因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-149">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the server’s system.</span></span> <span data-ttu-id="c5b5e-150">如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-150">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
 ```  
 echo ************  
@@ -383,10 +385,10 @@ echo ************
 certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
 ```  
   
-### 创建服务器证书  
- Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  `%SERVER_NAME%` 变量指定服务器名称。  更改此变量可以指定您自己的服务器名称。  此批处理文件中的默认值为 localhost。  
+### <a name="creating-the-server-certificate"></a><span data-ttu-id="c5b5e-151">创建服务器证书</span><span class="sxs-lookup"><span data-stu-id="c5b5e-151">Creating the Server Certificate</span></span>  
+ <span data-ttu-id="c5b5e-152">Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-152">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="c5b5e-153">`%SERVER_NAME%`变量指定服务器名称。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-153">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="c5b5e-154">更改此变量可以指定您自己的服务器名称。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-154">Change this variable to specify your own server name.</span></span> <span data-ttu-id="c5b5e-155">此批处理文件中的默认值为 localhost。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-155">The default in this batch file is localhost.</span></span>  
   
- 证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。  对于 IIS 承载的服务，证书存储在 LocalMachine 存储区中。  对于自承载服务，应该通过用 CurrentUser 替换字符串 LocalMachine 来修改批处理文件，以便将服务器证书存储在 CurrentUser 存储位置中。  
+ <span data-ttu-id="c5b5e-156">证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-156">The certificate is stored in My (Personal) store under the LocalMachine store location.</span></span> <span data-ttu-id="c5b5e-157">对于 IIS 承载的服务，证书存储在 LocalMachine 存储区中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-157">The certificate is stored in the LocalMachine store for the IIS-hosted services.</span></span> <span data-ttu-id="c5b5e-158">对于自承载服务，应该通过用 CurrentUser 替换字符串 LocalMachine 来修改批处理文件，以便将服务器证书存储在 CurrentUser 存储位置中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-158">For self-hosted services, you should modify the batch file to store the server certificate in the CurrentUser store location by replacing the string LocalMachine with CurrentUser.</span></span>  
   
 ```  
 echo ************  
@@ -398,8 +400,8 @@ echo ************
 makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
 ```  
   
-### 将服务器证书安装到客户端的受信任证书存储区中  
- Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。  因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。  如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a><span data-ttu-id="c5b5e-159">将服务器证书安装到客户端的受信任证书存储区中</span><span class="sxs-lookup"><span data-stu-id="c5b5e-159">Installing Server Certificate into Client's Trusted Certificate Store</span></span>  
+ <span data-ttu-id="c5b5e-160">Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-160">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="c5b5e-161">因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-161">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="c5b5e-162">如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-162">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
 ```  
 echo ************  
@@ -407,8 +409,8 @@ echo copying server cert to client's TrustedPeople store
 echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
 ```  
   
-### 启用对证书私钥的访问  
- 若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。  这将由 Setup.bat 脚本中的最后步骤来完成。  
+### <a name="enabling-access-to-the-certificates-private-key"></a><span data-ttu-id="c5b5e-163">启用对证书私钥的访问</span><span class="sxs-lookup"><span data-stu-id="c5b5e-163">Enabling Access to the Certificate's Private Key</span></span>  
+ <span data-ttu-id="c5b5e-164">若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-164">To enable access to the certificate private key from the IIS-hosted service, the user account under which the IIS-hosted process is running must be granted appropriate permissions for the private key.</span></span> <span data-ttu-id="c5b5e-165">这将由 Setup.bat 脚本中的最后步骤来完成。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-165">This is accomplished by last steps in the Setup.bat script.</span></span>  
   
 ```  
 echo ************  
@@ -421,58 +423,58 @@ echo Y|cacls.exe "%PRIVATE_KEY_FILE%" /E /G "%WP_ACCOUNT%":R
 iisreset  
 ```  
   
-##### 设置、生成和运行示例  
+##### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c5b5e-166">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="c5b5e-166">To set up, build, and run the sample</span></span>  
   
-1.  请确保已执行 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="c5b5e-167">请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-167">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="c5b5e-168">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-168">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
+3.  <span data-ttu-id="c5b5e-169">若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-169">To run the sample in a single- or cross-machine configuration, use the following instructions.</span></span>  
   
-##### 在同一计算机上运行示例  
+##### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="c5b5e-170">在同一计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="c5b5e-170">To run the sample on the same machine</span></span>  
   
-1.  使用管理员特权在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中运行示例安装文件夹中的 Setup.bat。  这将安装运行示例所需的所有证书。  
+1.  <span data-ttu-id="c5b5e-171">使用管理员特权在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中运行示例安装文件夹中的 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-171">Run Setup.bat from the sample install folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges.</span></span> <span data-ttu-id="c5b5e-172">这将安装运行示例所需的所有证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-172">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  确保在运行完该示例后运行 Cleanup.bat 移除证书。  其他安全示例使用相同的证书。  
+    >  <span data-ttu-id="c5b5e-173">Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-173">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="c5b5e-174">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-174">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span> <span data-ttu-id="c5b5e-175">确保在运行完该示例后运行 Cleanup.bat 移除证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-175">Be sure to remove the certificates by running Cleanup.bat when finished with the sample.</span></span> <span data-ttu-id="c5b5e-176">其他安全示例使用相同的证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-176">Other security samples use the same certificates.</span></span>  
   
-2.  启动 \\client\\bin 中的 Client.exe。  客户端活动将显示在客户端控制台应用程序上。  
+2.  <span data-ttu-id="c5b5e-177">启动 \client\bin 中的 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-177">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="c5b5e-178">客户端活动将显示在客户端控制台应用程序上。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-178">Client activity is displayed on the client console application.</span></span>  
   
-3.  如果客户端与服务无法进行通信，请参见[疑难解答提示](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  <span data-ttu-id="c5b5e-179">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-179">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-##### 跨计算机运行示例  
+##### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="c5b5e-180">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="c5b5e-180">To run the sample across machines</span></span>  
   
-1.  在服务计算机上创建目录。  使用 Internet 信息服务 \(IIS\) 管理工具为此目录创建名为 servicemodelsamples 的虚拟应用程序。  
+1.  <span data-ttu-id="c5b5e-181">在服务计算机上创建目录。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-181">Create a directory on the service machine.</span></span> <span data-ttu-id="c5b5e-182">使用 Internet 信息服务 (IIS) 管理工具为此目录创建名为 servicemodelsamples 的虚拟应用程序。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-182">Create a virtual application named servicemodelsamples for this directory using the Internet Information Services (IIS) management tool.</span></span>  
   
-2.  将服务程序文件从 \\inetpub\\wwwroot\\servicemodelsamples 复制到服务计算机上的虚拟目录中。  确保复制 \\bin 子目录中的文件。  另外，将 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 文件复制到服务计算机上。  
+2.  <span data-ttu-id="c5b5e-183">将服务程序文件从 \inetpub\wwwroot\servicemodelsamples 复制到服务计算机上的虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-183">Copy the service program files from \inetpub\wwwroot\servicemodelsamples to the virtual directory on the service machine.</span></span> <span data-ttu-id="c5b5e-184">确保复制 \bin 子目录中的文件。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-184">Ensure that you copy the files in the \bin subdirectory.</span></span> <span data-ttu-id="c5b5e-185">另外，将 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-185">Also copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the service machine.</span></span>  
   
-3.  在客户端计算机上为这些客户端二进制文件创建一个目录。  
+3.  <span data-ttu-id="c5b5e-186">在客户端计算机上为这些客户端二进制文件创建一个目录。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-186">Create a directory on the client machine for the client binaries.</span></span>  
   
-4.  将客户端程序文件复制到客户端计算机上的客户端目录中。  另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
+4.  <span data-ttu-id="c5b5e-187">将客户端程序文件复制到客户端计算机上的客户端目录中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-187">Copy the client program files to the client directory on the client machine.</span></span> <span data-ttu-id="c5b5e-188">另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-188">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。  如果采用 `service` 参数运行 `` `setup.bat`，则使用计算机的完全限定域名创建一个服务证书，并将此服务证书导出到名为 Service.cer 的文件中。  
+5.  <span data-ttu-id="c5b5e-189">在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-189">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="c5b5e-190">运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-190">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  编辑 Web.config 以反映新的证书名（在 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的 `findValue` 属性中），该名称与计算机的完全限定域名相同。  
+6.  <span data-ttu-id="c5b5e-191">编辑 Web.config 以反映新的证书名称 (在`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 这是计算机的完全限定域名相同。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-191">Edit Web.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the machine.</span></span>  
   
-7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
+7.  <span data-ttu-id="c5b5e-192">将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-192">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
   
-8.  在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。  如果使用 `client` 参数运行 `setup.bat`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
+8.  <span data-ttu-id="c5b5e-193">在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-193">On the client, run `setup.bat client` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="c5b5e-194">如果使用 `setup.bat` 参数运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-194">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  通过用服务器的完全限定域名替换 localhost 来执行此操作。  
+9. <span data-ttu-id="c5b5e-195">在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-195">In the Client.exe.config file on the client machine, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="c5b5e-196">通过用服务器的完全限定域名替换 localhost 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-196">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
+10. <span data-ttu-id="c5b5e-197">将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-197">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. 在客户端上，运行 ImportServiceCert.bat。  这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+11. <span data-ttu-id="c5b5e-198">在客户端上，运行 ImportServiceCert.bat。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-198">On the client, run ImportServiceCert.bat.</span></span> <span data-ttu-id="c5b5e-199">这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-199">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. 在服务器上，运行 ImportClientCert.bat，这会将 Client.cer 文件中的客户端证书导入 LocalMachine \- TrustedPeople 存储区。  
+12. <span data-ttu-id="c5b5e-200">在服务器上，运行 ImportClientCert.bat，这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-200">On the server, run ImportClientCert.bat, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. 在客户端计算机上，从命令提示符窗口中启动 Client.exe。  如果客户端与服务无法进行通信，请参见[疑难解答提示](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+13. <span data-ttu-id="c5b5e-201">在客户端计算机上，从命令提示符窗口中启动 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-201">On the client machine, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="c5b5e-202">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-202">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-##### 运行示例后进行清理  
+##### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="c5b5e-203">运行示例后进行清理</span><span class="sxs-lookup"><span data-stu-id="c5b5e-203">To clean up after the sample</span></span>  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+-   <span data-ttu-id="c5b5e-204">运行完示例后运行示例文件夹中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-204">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。  如果已跨计算机运行使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser \- TrustedPeople 存储区中的服务证书。  为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  <span data-ttu-id="c5b5e-205">此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-205">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="c5b5e-206">如果已跨计算机运行使用证书的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储区中的服务证书。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-206">If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="c5b5e-207">为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="c5b5e-207">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="c5b5e-208">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c5b5e-208">See Also</span></span>

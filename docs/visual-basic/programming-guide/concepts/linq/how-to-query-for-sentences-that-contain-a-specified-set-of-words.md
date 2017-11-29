@@ -1,35 +1,27 @@
 ---
-title: "如何︰ 查询包含一组指定的字数 (LINQ) (Visual Basic 中) 的句子 |Microsoft 文档"
+title: "如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31561d586c9c05f502002efdfc455acb55159fed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 523b1e681c97e14f1d0e49b82a426b0e0e54fa1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)
-此示例演示如何在文本文件中包含的一组指定词语的每个匹配项中找到的句子。 尽管搜索词的数组是硬编码在此示例中，它可能也将是动态填充在运行时。 在此示例中，查询返回的句子上，"过去"包含单词"数据"和"集成"。  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="367e4-102">如何：查询包含一组指定词语的句子 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="367e4-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="367e4-103">此示例演示如何在包含一组指定的词语的每个匹配项的文本文件中查找句子。</span><span class="sxs-lookup"><span data-stu-id="367e4-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="367e4-104">尽管此示例中的搜索词数组采用硬编码形式，但它也可在运行时以动态方式进行填充。</span><span class="sxs-lookup"><span data-stu-id="367e4-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="367e4-105">在此示例中，查询将返回包含单词“Historically,”、“data,”和“integrated”的句子。</span><span class="sxs-lookup"><span data-stu-id="367e4-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="367e4-106">示例</span><span class="sxs-lookup"><span data-stu-id="367e4-106">Example</span></span>  
   
 ```vb  
 Class FindSentences  
@@ -75,12 +67,12 @@ End Class
 ' Historically, the world of data and the world of objects have not been well integrated  
 ```  
   
- 查询将起作用，首先将文本拆分成的句子，然后将句子拆分为一个包含每个单词的字符串数组。 为每个这些阵列<xref:System.Linq.Enumerable.Distinct%2A>方法中删除所有重复的单词，然后查询执行<xref:System.Linq.Enumerable.Intersect%2A>word 阵列上的操作和`wordsToMatch`数组。</xref:System.Linq.Enumerable.Intersect%2A> </xref:System.Linq.Enumerable.Distinct%2A> 交集 count 是否的计数相同`wordsToMatch`数组，字中找到所有单词，且返回原始句子。  
+ <span data-ttu-id="367e4-107">查询运行时首先将文本拆分成句子，然后将句子拆分成包含每个单词的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="367e4-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="367e4-108">对于每个数组，<xref:System.Linq.Enumerable.Distinct%2A> 方法将删除所有重复字词，然后查询将对字词数组和 `wordsToMatch` 数组执行 <xref:System.Linq.Enumerable.Intersect%2A> 操作。</span><span class="sxs-lookup"><span data-stu-id="367e4-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="367e4-109">如果相交数与 `wordsToMatch` 数组的计数相同，将在单词中找到所有单词并返回原始句子。</span><span class="sxs-lookup"><span data-stu-id="367e4-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- 在调用<xref:System.String.Split%2A>，标点符号使用作为分隔符，以便从字符串中移除。</xref:System.String.Split%2A> 如果您没有不这样做，例如"过去"您可以使用一个字符串，程序将不匹配"过去"在`wordsToMatch`数组。 您可能需要使用其他分隔符，具体取决于标点的源文本中找到的类型。  
+ <span data-ttu-id="367e4-110">在对 <xref:System.String.Split%2A> 的调用中，使用标点符号作为分隔符，以从字符串中删除标点符号。</span><span class="sxs-lookup"><span data-stu-id="367e4-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="367e4-111">如果你没有不这样做，则假如你有一个字符串 “Historically,”，该字符串不会与 `wordsToMatch` 数组中的“Historically”匹配。</span><span class="sxs-lookup"><span data-stu-id="367e4-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="367e4-112">根据在源文本中找到的标点类型，可能需要使用其他分隔符。</span><span class="sxs-lookup"><span data-stu-id="367e4-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="367e4-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="367e4-113">Compiling the Code</span></span>  
+ <span data-ttu-id="367e4-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="367e4-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="367e4-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="367e4-115">See Also</span></span>  
+ [<span data-ttu-id="367e4-116">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="367e4-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

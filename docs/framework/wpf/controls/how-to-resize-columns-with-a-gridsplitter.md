@@ -1,46 +1,49 @@
 ---
-title: "如何：使用 GridSplitter 调整列的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "网格列, 调整大小"
-  - "GridSplitter 控件, 调整网格列的大小"
-  - "调整网格列的大小"
+title: "如何：使用 GridSplitter 调整列的大小"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grid columns [WPF], resizing
+- GridSplitter control [WPF], resizing grid columns
+- resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 GridSplitter 调整列的大小
-本示例演示如何创建垂直 <xref:System.Windows.Controls.GridSplitter> 以便在不更改 <xref:System.Windows.Controls.Grid> 的尺寸的情况下重新分配 <xref:System.Windows.Controls.Grid> 中两列之间的空间。  
+# <a name="how-to-resize-columns-with-a-gridsplitter"></a><span data-ttu-id="e50e6-102">如何：使用 GridSplitter 调整列的大小</span><span class="sxs-lookup"><span data-stu-id="e50e6-102">How to: Resize Columns with a GridSplitter</span></span>
+<span data-ttu-id="e50e6-103">此示例演示如何创建垂直<xref:System.Windows.Controls.GridSplitter>以便重新分发中的两列之间的空间<xref:System.Windows.Controls.Grid>而无需更改的维度<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="e50e6-103">This example shows how to create a vertical <xref:System.Windows.Controls.GridSplitter> in order to redistribute the space between two columns in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  
   
-## 示例  
- **如何创建覆盖列边缘的 GridSplitter**  
+## <a name="example"></a><span data-ttu-id="e50e6-104">示例</span><span class="sxs-lookup"><span data-stu-id="e50e6-104">Example</span></span>  
+ <span data-ttu-id="e50e6-105">**如何创建覆盖列边缘的 GridSplitter**</span><span class="sxs-lookup"><span data-stu-id="e50e6-105">**How to create a GridSplitter that overlays the edge of a column**</span></span>  
   
- 若要指定对 <xref:System.Windows.Controls.Grid> 中相邻列的大小进行调整的 <xref:System.Windows.Controls.GridSplitter>，请将 <xref:System.Windows.Controls.Grid.Column%2A> [附加属性](GTMT)设置为要调整大小的列之一。  如果 <xref:System.Windows.Controls.Grid> 具有多个行，请将 <xref:System.Windows.Controls.Grid.RowSpan%2A> 附加属性设置为行数。  然后，将 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性设置为 <xref:System.Windows.HorizontalAlignment> 或 <xref:System.Windows.HorizontalAlignment>（设置的对齐方式取决于要调整大小的两个列）。  最后，将 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性设置为 <xref:System.Windows.VerticalAlignment>。  
+ <span data-ttu-id="e50e6-106">若要指定<xref:System.Windows.Controls.GridSplitter>中的相邻列的大小进行调整<xref:System.Windows.Controls.Grid>，将其设置<xref:System.Windows.Controls.Grid.Column%2A>附加到一个要调整大小的列的属性。</span><span class="sxs-lookup"><span data-stu-id="e50e6-106">To specify a <xref:System.Windows.Controls.GridSplitter> that resizes adjacent columns in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Column%2A> attached property to one of the columns that you want to resize.</span></span> <span data-ttu-id="e50e6-107">如果你<xref:System.Windows.Controls.Grid>有多个对应的一行，设置<xref:System.Windows.Controls.Grid.RowSpan%2A>附加属性写入的行数。</span><span class="sxs-lookup"><span data-stu-id="e50e6-107">If your <xref:System.Windows.Controls.Grid> has more than one row, set the <xref:System.Windows.Controls.Grid.RowSpan%2A> attached property to the number of rows.</span></span> <span data-ttu-id="e50e6-108">然后设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性<xref:System.Windows.HorizontalAlignment.Left>或<xref:System.Windows.HorizontalAlignment.Right>（你设置的对齐方式取决于你想要调整大小的两个列）。</span><span class="sxs-lookup"><span data-stu-id="e50e6-108">Then set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property to <xref:System.Windows.HorizontalAlignment.Left> or <xref:System.Windows.HorizontalAlignment.Right> (which alignment you set depends on which two columns you want to resize).</span></span> <span data-ttu-id="e50e6-109">最后，设置<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性<xref:System.Windows.VerticalAlignment.Stretch>。</span><span class="sxs-lookup"><span data-stu-id="e50e6-109">Finally, set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property to <xref:System.Windows.VerticalAlignment.Stretch>.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- 没有自己的列的 <xref:System.Windows.Controls.GridSplitter> 可能会被 <xref:System.Windows.Controls.Grid> 中的其他控件遮盖。  有关如何避免此问题的更多信息，请参见[确保 GridSplitter 可见](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)。  
+ <span data-ttu-id="e50e6-110">A<xref:System.Windows.Controls.GridSplitter>不具有其各自的列中的其他控件可能被遮盖<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="e50e6-110">A <xref:System.Windows.Controls.GridSplitter> that does not have its own column may be obscured by other controls in the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="e50e6-111">有关如何避免此问题的详细信息，请参阅[确保 GridSplitter 可见](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)。</span><span class="sxs-lookup"><span data-stu-id="e50e6-111">For more information about how to prevent this issue, see [Make Sure That a GridSplitter Is Visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).</span></span>  
   
- **如何创建占据一列的 GridSplitter**  
+ <span data-ttu-id="e50e6-112">**如何创建占据一列的 GridSplitter**</span><span class="sxs-lookup"><span data-stu-id="e50e6-112">**How to create a GridSplitter that occupies a column**</span></span>  
   
- 若要指定在 <xref:System.Windows.Controls.Grid> 中占据一列的 <xref:System.Windows.Controls.GridSplitter>，请将 <xref:System.Windows.Controls.Grid.Column%2A> [附加属性](GTMT)设置为要调整大小的列之一。  如果网格具有多个行，请将 <xref:System.Windows.Controls.Grid.RowSpan%2A> 附加属性设置为行数。  然后，将 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 设置为 <xref:System.Windows.HorizontalAlignment>，将 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性设置为 <xref:System.Windows.VerticalAlignment>，将包含 <xref:System.Windows.Controls.GridSplitter> 的列的 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 设置为 <xref:System.Windows.GridLength.Auto%2A>。  
+ <span data-ttu-id="e50e6-113">若要指定<xref:System.Windows.Controls.GridSplitter>占用中的列<xref:System.Windows.Controls.Grid>，将其设置<xref:System.Windows.Controls.Grid.Column%2A>附加到一个要调整大小的列的属性。</span><span class="sxs-lookup"><span data-stu-id="e50e6-113">To specify a <xref:System.Windows.Controls.GridSplitter> that occupies a column in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Column%2A> attached property to one of the columns that you want to resize.</span></span> <span data-ttu-id="e50e6-114">如果你网格包含多个行，请设置<xref:System.Windows.Controls.Grid.RowSpan%2A>附加属性写入的行数。</span><span class="sxs-lookup"><span data-stu-id="e50e6-114">If your Grid has more than one row, set the <xref:System.Windows.Controls.Grid.RowSpan%2A> attached property to the number of rows.</span></span> <span data-ttu-id="e50e6-115">然后设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>到<xref:System.Windows.HorizontalAlignment.Center>，将其设置<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性<xref:System.Windows.VerticalAlignment.Stretch>，并设置<xref:System.Windows.Controls.ColumnDefinition.Width%2A>包含的列的<xref:System.Windows.Controls.GridSplitter>到<xref:System.Windows.GridLength.Auto%2A>。</span><span class="sxs-lookup"><span data-stu-id="e50e6-115">Then set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> to <xref:System.Windows.HorizontalAlignment.Center>, set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property to <xref:System.Windows.VerticalAlignment.Stretch>, and set the <xref:System.Windows.Controls.ColumnDefinition.Width%2A> of the column that contains the <xref:System.Windows.Controls.GridSplitter> to <xref:System.Windows.GridLength.Auto%2A>.</span></span>  
   
- 下面的示例演示如何定义占据一列并对其一侧的列大小进行调整的垂直 <xref:System.Windows.Controls.GridSplitter>。  
+ <span data-ttu-id="e50e6-116">下面的示例演示如何定义垂直<xref:System.Windows.Controls.GridSplitter>，中占据一列和调整它的任何一侧列的大小。</span><span class="sxs-lookup"><span data-stu-id="e50e6-116">The following example shows how to define a vertical <xref:System.Windows.Controls.GridSplitter> that occupies a column and resizes the columns on either side of it.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
-[!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.GridSplitter>   
- [帮助主题](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="e50e6-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e50e6-117">See Also</span></span>  
+ <xref:System.Windows.Controls.GridSplitter>  
+ [<span data-ttu-id="e50e6-118">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="e50e6-118">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

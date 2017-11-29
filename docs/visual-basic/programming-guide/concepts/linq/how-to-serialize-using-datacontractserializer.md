@@ -1,37 +1,28 @@
 ---
-title: "如何︰ 使用 DataContractSerializer (Visual Basic 中) 进行序列化 |Microsoft 文档"
+title: "如何： 使用 DataContractSerializer (Visual Basic) 进行序列化"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6701834f1a99536abda37f3fbc2450bd795dcb5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e86409b3b1ff499a3be789e1a22947dff6011517
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>如何︰ 使用 DataContractSerializer (Visual Basic 中) 进行序列化
-本主题演示的示例，序列化和反序列化使用<xref:System.Runtime.Serialization.DataContractSerializer>。</xref:System.Runtime.Serialization.DataContractSerializer>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="113ac-102">如何： 使用 DataContractSerializer (Visual Basic) 进行序列化</span><span class="sxs-lookup"><span data-stu-id="113ac-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
+<span data-ttu-id="113ac-103">本主题显示一个使用 <xref:System.Runtime.Serialization.DataContractSerializer> 进行序列化和反序列化的示例。</span><span class="sxs-lookup"><span data-stu-id="113ac-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例创建这些对象包含大量<xref:System.Xml.Linq.XElement>对象。</xref:System.Xml.Linq.XElement> 然后将它们序列化为文本文件，接着从文本文件对它们进行反序列化。  
+## <a name="example"></a><span data-ttu-id="113ac-104">示例</span><span class="sxs-lookup"><span data-stu-id="113ac-104">Example</span></span>  
+ <span data-ttu-id="113ac-105">下面的示例创建多个包含 <xref:System.Xml.Linq.XElement> 对象的对象。</span><span class="sxs-lookup"><span data-stu-id="113ac-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="113ac-106">然后将它们序列化为文本文件，接着从文本文件对它们进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="113ac-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```vb  
 Imports System  
@@ -90,7 +81,7 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="113ac-107">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="113ac-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -101,6 +92,5 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [序列化包含 XElement 对象 (Visual Basic 中) 的对象图](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="113ac-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="113ac-108">See Also</span></span>  
+ [<span data-ttu-id="113ac-109">序列化对象图包含 XElement 对象 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="113ac-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
