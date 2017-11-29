@@ -1,53 +1,57 @@
 ---
-title: "如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "上下文菜单, 添加项"
-  - "上下文菜单, 示例"
-  - "上下文菜单, 移除项"
-  - "ContextMenu 组件 [Windows 窗体], 添加项"
-  - "ContextMenu 组件 [Windows 窗体], 移除项"
-  - "示例 [Windows 窗体], 上下文菜单"
-  - "快捷菜单, 添加项"
-  - "快捷菜单, 示例"
-  - "快捷菜单, 移除项"
+title: "如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- context menus [Windows Forms], removing items
+- ContextMenu component [Windows Forms], adding items
+- shortcut menus [Windows Forms], removing items
+- shortcut menus [Windows Forms], examples
+- context menus [Windows Forms], adding items
+- shortcut menus [Windows Forms], adding items
+- ContextMenu component [Windows Forms], removing items
+- context menus [Windows Forms], examples
+- examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cf0e579d5cf377169eeb4d394c4127d53fd54540
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项
-说明如何在 Windows 窗体中添加和移除快捷菜单项。  
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a><span data-ttu-id="e1341-102">如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项</span><span class="sxs-lookup"><span data-stu-id="e1341-102">How to: Add and Remove Menu Items with the Windows Forms ContextMenu Component</span></span>
+<span data-ttu-id="e1341-103">说明如何添加和删除 Windows 窗体中的快捷菜单项。</span><span class="sxs-lookup"><span data-stu-id="e1341-103">Explains how to add and remove shortcut menu items in Windows Forms.</span></span>  
   
- Windows 窗体 <xref:System.Windows.Forms.ContextMenu> 组件提供与选定对象相关的常用命令的菜单。  可以通过向 <xref:System.Windows.Forms.Menu.MenuItems%2A> 集合中添加 <xref:System.Windows.Forms.MenuItem> 对象来向快捷菜单中添加项。  
+ <span data-ttu-id="e1341-104">Windows 窗体<xref:System.Windows.Forms.ContextMenu>组件提供了与所选对象相关的常用命令的菜单。</span><span class="sxs-lookup"><span data-stu-id="e1341-104">The Windows Forms <xref:System.Windows.Forms.ContextMenu> component provides a menu of frequently used commands that are relevant to the selected object.</span></span> <span data-ttu-id="e1341-105">你可以将项添加到快捷菜单添加<xref:System.Windows.Forms.MenuItem>对象添加到<xref:System.Windows.Forms.Menu.MenuItems%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="e1341-105">You can add items to the shortcut menu by adding <xref:System.Windows.Forms.MenuItem> objects to the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection.</span></span>  
   
- 可以从快捷菜单中永久地移除项；但是在运行时隐藏或禁用项可能更为妥当。  
+ <span data-ttu-id="e1341-106">你可以永久移除项的快捷菜单;但是，在运行时它可能更合适，若要隐藏或改为禁用项。</span><span class="sxs-lookup"><span data-stu-id="e1341-106">You can remove items from a shortcut menu permanently; however, at run time it may be more appropriate to hide or disable the items instead.</span></span>  
   
 > [!IMPORTANT]
->  尽管 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 取代了早期版本的 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 控件并添加了功能，但是，可以选择保留 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 以实现向后兼容并供将来使用。  
+>  <span data-ttu-id="e1341-107">尽管<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>替换，并将功能添加到<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>的早期版本中，控件<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>如果你选择将保留用于向后兼容性和将来使用。</span><span class="sxs-lookup"><span data-stu-id="e1341-107">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
-### 从快捷菜单中移除项  
+### <a name="to-remove-items-from-a-shortcut-menu"></a><span data-ttu-id="e1341-108">若要从快捷菜单中删除项目</span><span class="sxs-lookup"><span data-stu-id="e1341-108">To remove items from a shortcut menu</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.ContextMenu> 组件的 <xref:System.Windows.Forms.Menu.MenuItems%2A> 集合的 <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> 或 <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> 方法移除特定菜单项。  
+1.  <span data-ttu-id="e1341-109">使用<xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A>或<xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.Menu.MenuItems%2A>集合<xref:System.Windows.Forms.ContextMenu>组件以删除特定的菜单项。</span><span class="sxs-lookup"><span data-stu-id="e1341-109">Use the <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> or <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> method of the <xref:System.Windows.Forms.Menu.MenuItems%2A> collection of the <xref:System.Windows.Forms.ContextMenu> component to remove a particular menu item.</span></span>  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
     ContextMenu1.MenuItems.RemoveAt(0)  
     ' Removes a particular object from the shortcut menu.  
     ContextMenu1.MenuItems.Remove(mnuItemNew)  
-  
     ```  
   
     ```csharp  
@@ -55,7 +59,6 @@ caps.handback.revision: 16
     contextMenu1.MenuItems.RemoveAt(0);  
     // Removes a particular object from the shortcut menu.  
     contextMenu1.MenuItems.Remove(mnuItemNew);  
-  
     ```  
   
     ```cpp  
@@ -65,25 +68,23 @@ caps.handback.revision: 16
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     \- 或 \-  
+     <span data-ttu-id="e1341-110">- 或 -</span><span class="sxs-lookup"><span data-stu-id="e1341-110">-or-</span></span>  
   
-2.  使用 <xref:System.Windows.Forms.ContextMenu> 组件的 `MenuItems` 集合的 `Clear` 方法，移除菜单中的所有项。  
+2.  <span data-ttu-id="e1341-111">使用`Clear`方法`MenuItems`集合<xref:System.Windows.Forms.ContextMenu>组件从菜单中移除所有项。</span><span class="sxs-lookup"><span data-stu-id="e1341-111">Use the `Clear` method of the `MenuItems` collection of the <xref:System.Windows.Forms.ContextMenu> component to remove all items from the menu.</span></span>  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
-  
     ```  
   
     ```csharp  
     contextMenu1.MenuItems.Clear();  
-  
     ```  
   
     ```cpp  
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.ContextMenu>   
- [ContextMenu 组件](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)   
- [ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e1341-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e1341-112">See Also</span></span>  
+ <xref:System.Windows.Forms.ContextMenu>  
+ [<span data-ttu-id="e1341-113">ContextMenu 组件</span><span class="sxs-lookup"><span data-stu-id="e1341-113">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
+ [<span data-ttu-id="e1341-114">ContextMenu 组件概述</span><span class="sxs-lookup"><span data-stu-id="e1341-114">ContextMenu Component Overview</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)

@@ -1,28 +1,30 @@
 ---
-title: "可重入的 ConcurrencyMode | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "可重入的 ConcurrencyMode"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 17c3bf41f9db0458b91af808cbde56634ef1fca8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 可重入的 ConcurrencyMode
-本示例演示对服务实现使用 ConcurrencyMode.Reentrant 的必要性和含义。ConcurrencyMode.Reentrant 暗示服务（或回调）只在给定时间处理一个消息（类似于 `ConcurencyMode.Single`）。为保证线程的安全，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将锁定 `InstanceContext` 处理消息，以便不再处理其他消息。在处于可重入模式的情况下，`InstanceContext` 将仅在服务进行传出调用之前解除锁定，从而允许后续调用（可按示例中的演示重入），并在下次进入服务时被锁定。为了演示此行为，示例演示了客户端和服务如何使用双工协定相互发送消息。  
+# <a name="concurrencymode-reentrant"></a><span data-ttu-id="9fb4b-102">可重入的 ConcurrencyMode</span><span class="sxs-lookup"><span data-stu-id="9fb4b-102">ConcurrencyMode Reentrant</span></span>
+<span data-ttu-id="9fb4b-103">本示例演示对服务实现使用 ConcurrencyMode.Reentrant 的必要性和含义。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-103">This sample demonstrates the necessity and implications of using ConcurrencyMode.Reentrant on a service implementation.</span></span> <span data-ttu-id="9fb4b-104">ConcurrencyMode.Reentrant 暗示服务（或回调）只在给定时间处理一个消息（类似于 `ConcurencyMode.Single`）。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-104">ConcurrencyMode.Reentrant implies that the service (or callback) processes only one message at a given time (analogous to `ConcurencyMode.Single`).</span></span> <span data-ttu-id="9fb4b-105">为保证线程的安全，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将锁定 `InstanceContext` 处理消息，以便不再处理其他消息。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-105">To ensure thread safety, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] locks the `InstanceContext` processing a message so that no other messages can be processed.</span></span> <span data-ttu-id="9fb4b-106">在处于可重入模式的情况下，`InstanceContext` 将仅在服务进行传出调用之前解除锁定，从而允许后续调用（可按示例中的演示重入），并在下次进入服务时被锁定。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-106">In case of Reentrant mode, the `InstanceContext` is unlocked just before the service makes an outgoing call thereby allowing the subsequent call, (which can be reentrant as demonstrated in the sample) to get the lock next time it comes in to the service.</span></span> <span data-ttu-id="9fb4b-107">为了演示此行为，示例演示了客户端和服务如何使用双工协定相互发送消息。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-107">To demonstrate the behavior, the sample shows how a client and service can send messages between each other using a duplex contract.</span></span>  
   
- 定义的协定是双工协定，其 `Ping` 方法由服务实现，其回调方法 `Pong` 由客户端实现。客户端用时钟周期计数调用服务的 `Ping` 方法，从而启动调用。服务检查时钟周期计数是否等于 0，然后调用回调 `Pong` 方法，同时递减时钟周期计数。以上过程通过示例中的以下代码完成。  
+ <span data-ttu-id="9fb4b-108">定义的协定是双工协定，其 `Ping` 方法由服务实现，其回调方法 `Pong` 由客户端实现。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-108">The contract defined is a duplex contract with the `Ping` method being implemented by the service and the callback method `Pong` being implemented by the client.</span></span> <span data-ttu-id="9fb4b-109">客户端用滴答计数调用服务的 `Ping` 方法，从而启动调用。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-109">A client invokes the server's `Ping` method with a tick count thereby initiating the call.</span></span> <span data-ttu-id="9fb4b-110">服务检查滴答计数是否等于 0，然后调用回调 `Pong` 方法，同时递减滴答计数。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-110">The service checks whether the tick count is not equal to 0 and then invokes the callbacks `Pong` method while decrementing the tick count.</span></span> <span data-ttu-id="9fb4b-111">以上过程通过示例中的以下代码完成。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-111">This is done by the following code in the sample.</span></span>  
   
 ```  
-  
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -32,13 +34,11 @@ public void Ping(int ticks)
          OperationContext.Current.GetCallbackChannel<IPingPongCallback>().Pong((ticks - 1));  
      }  
 }  
-  
 ```  
   
- 回调的 `Pong` 实现与 `Ping` 实现具有相同的逻辑。也就是说，该实现检查时钟周期计数是否不为零，然后对回调通道（在本例中为用于发送原始 `Ping` 消息的通道）调用 `Ping` 方法，并使时钟周期计数减 1。当时钟周期计数达到 0 时，该方法返回，从而将所有回复解包回启动该调用的客户端进行的第一个调用。回调实现中显示了此过程。  
+ 回调的 `Pong` 实现与 `Ping` 实现具有相同的逻辑。 也就是说，该实现检查滴答计数是否不为零，然后对回调通道（在本例中为用于发送原始 `Ping` 消息的通道）调用 `Ping` 方法，并使滴答计数减 1。 当滴答计数达到 0 时，该方法返回，从而将所有回复解包回启动该调用的客户端进行的第一个调用。 <span data-ttu-id="9fb4b-115">回调实现中显示了此过程。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-115">This is shown in the callback implementation.</span></span>  
   
 ```  
-  
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -50,24 +50,22 @@ public void Pong(int ticks)
         channel.Ping((ticks - 1));  
     }  
 }  
-  
 ```  
   
- `Ping` 和 `Pong` 方法都是请求\/答复，这意味着对 `CallbackChannel<T>.Pong()` 的调用返回前，对 `Ping` 的第一个调用不会返回。在客户端上，在由 `Pong` 方法进行的下一个 `Ping` 调用返回前，该方法不会返回。由于回调和服务在答复挂起请求之前，必须进行传出请求\/答复调用，因此这两个实现必须使用 ConcurrencyMode.Reentrant 行为进行标记。  
+ `Ping` 和 `Pong` 方法都是请求/答复，这意味着对 `Ping` 的调用返回前，对 `CallbackChannel<T>.Pong()` 的第一个调用不会返回。 在客户端上，在由 `Pong` 方法进行的下一个 `Ping` 调用返回前，该方法不会返回。 <span data-ttu-id="9fb4b-118">由于回调和服务在答复挂起请求之前，必须进行传出请求/答复调用，因此这两个实现必须使用 ConcurrencyMode.Reentrant 行为进行标记。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-118">Because both the callback and the service must make outgoing request/reply calls before they can reply for the pending request, both the implementations must be marked with the ConcurrencyMode.Reentrant behavior.</span></span>  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9fb4b-119">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="9fb4b-119">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="9fb4b-120">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="9fb4b-121">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="9fb4b-122">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## 演示  
- 若要运行示例，请生成客户端和服务器项目。然后，打开两个命令窗口，将目录更改为 \<示例\>\\CS\\Service\\bin\\debug 和 \<示例\>\\CS\\Client\\bin\\debug 目录。然后键入 `service.exe` 启动服务，再使用作为输入参数传递的初始滴答值调用 Client.exe。显示了 10 次滴答的示例输出。  
+## <a name="demonstrates"></a><span data-ttu-id="9fb4b-123">演示</span><span class="sxs-lookup"><span data-stu-id="9fb4b-123">Demonstrates</span></span>  
+ <span data-ttu-id="9fb4b-124">若要运行示例，请生成客户端和服务器项目。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-124">To run the sample, build the client and server projects.</span></span> <span data-ttu-id="9fb4b-125">然后打开两个命令窗口并将目录更改为\<示例 > \CS\Service\bin\debug 和\<示例 > \CS\Client\bin\debug 目录。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-125">Then open two command windows and change the directories to the \<sample>\CS\Service\bin\debug and \<sample>\CS\Client\bin\debug directories.</span></span> <span data-ttu-id="9fb4b-126">然后启动服务，通过键入`service.exe`，然后再使用调用 Client.exe 的初始滴答作为输入参数传递值。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-126">Then start the service by typing `service.exe` and then invoke the Client.exe with the initial value of ticks passed as an input argument.</span></span> <span data-ttu-id="9fb4b-127">显示了 10 次滴答的示例输出。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-127">A sample output for 10 ticks is shown.</span></span>  
   
 ```  
-  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  
@@ -83,16 +81,15 @@ Pong: Ticks = 7
 Pong: Ticks = 5  
 Pong: Ticks = 3  
 Pong: Ticks = 1  
-  
 ```  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录。  
+>  <span data-ttu-id="9fb4b-128">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9fb4b-129">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="9fb4b-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  <span data-ttu-id="9fb4b-130">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="9fb4b-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9fb4b-131">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="9fb4b-131">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>：\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="9fb4b-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9fb4b-132">See Also</span></span>

@@ -1,56 +1,59 @@
 ---
-title: "Visual Basic 和 WPF 事件处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件处理程序, Visual Basic"
-  - "Visual Basic, 事件处理程序"
+title: "Visual Basic 和 WPF 事件处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Visual Basic [WPF], event handlers
+- event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca55e31060388012e6bb94e40159c2e602484911
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Visual Basic 和 WPF 事件处理
-专门针对 [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] 语言，您可以使用语言特定的 `Handles` 关键字将事件处理程序与实例关联，而不是将事件处理程序附加到特性或使用 <xref:System.Windows.UIElement.AddHandler%2A> 方法。  但是，用于将处理程序附加到实例的 `Handles` 方法存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的一些特定[路由事件](GTMT)功能。  
+# <a name="visual-basic-and-wpf-event-handling"></a><span data-ttu-id="adfb4-102">Visual Basic 和 WPF 事件处理</span><span class="sxs-lookup"><span data-stu-id="adfb4-102">Visual Basic and WPF Event Handling</span></span>
+<span data-ttu-id="adfb4-103">有关[!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)]语言具体而言，可以使用特定于语言的`Handles`实例，而不是附加的属性的事件处理程序或使用与关联事件处理程序关键字<xref:System.Windows.UIElement.AddHandler%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="adfb4-103">For the [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] language specifically, you can use the language-specific `Handles` keyword to associate event handlers with instances, instead of attaching event handlers with attributes or using the <xref:System.Windows.UIElement.AddHandler%2A> method.</span></span> <span data-ttu-id="adfb4-104">但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。</span><span class="sxs-lookup"><span data-stu-id="adfb4-104">However, the `Handles` technique for attaching handlers to instances does have some limitations, because the `Handles` syntax cannot support some of the specific routed event features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] event system.</span></span>  
   
-## 在 WPF 应用程序中使用“Handles”  
- 通过 `Handles` 连接到实例和事件的事件处理程序必须全部在实例的分部类声明中定义，此要求也适用于通过元素上的特性值进行分配的事件处理程序。  只能为具有 <xref:System.Windows.FrameworkContentElement.Name%2A> 属性值（或声明了 [x:Name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)）的页上的元素指定 `Handles`。  这是因为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 <xref:System.Windows.FrameworkContentElement.Name%2A> 创建实例引用，该实例引用对于支持 `Handles` 语法所需的*实例.事件* 引用格式是非常必要的。  可用于 `Handles` 且没有 <xref:System.Windows.FrameworkContentElement.Name%2A> 引用的唯一元素是定义分部类的根元素实例。  
+## <a name="using-handles-in-a-wpf-application"></a><span data-ttu-id="adfb4-105">在 WPF 应用程序中使用“Handles”</span><span class="sxs-lookup"><span data-stu-id="adfb4-105">Using "Handles" in a WPF Application</span></span>  
+ <span data-ttu-id="adfb4-106">通过 `Handles` 连接到实例和事件的事件处理程序必须全部在实例的分部类声明中定义，此要求也适用于通过元素上的特性值进行分配的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-106">The event handlers that are connected to instances and events with `Handles` must all be defined within the partial class declaration of the instance, which is also a requirement for event handlers that are assigned through attribute values on elements.</span></span> <span data-ttu-id="adfb4-107">你只能指定`Handles`具有的页面上的元素<xref:System.Windows.FrameworkContentElement.Name%2A>属性值 (或[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)声明)。</span><span class="sxs-lookup"><span data-stu-id="adfb4-107">You can only specify `Handles` for an element on the page that has a <xref:System.Windows.FrameworkContentElement.Name%2A> property value (or [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md) declared).</span></span> <span data-ttu-id="adfb4-108">这是因为<xref:System.Windows.FrameworkContentElement.Name%2A>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]创建是支持所需的实例引用*实例.事件*所需的引用格式`Handles`语法。</span><span class="sxs-lookup"><span data-stu-id="adfb4-108">This is because the <xref:System.Windows.FrameworkContentElement.Name%2A> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] creates the instance reference that is necessary to support the *Instance.Event* reference format required by the `Handles` syntax.</span></span> <span data-ttu-id="adfb4-109">可用于的唯一元素`Handles`而无需<xref:System.Windows.FrameworkContentElement.Name%2A>引用是定义分部类的根元素实例。</span><span class="sxs-lookup"><span data-stu-id="adfb4-109">The only element that can be used for `Handles` without a <xref:System.Windows.FrameworkContentElement.Name%2A> reference is the root-element instance that defines the partial class.</span></span>  
   
- 您可以通过使用逗号分隔 `Handles` 后面的*实例.事件* 引用，来向多个元素分配相同的处理程序。  
+ <span data-ttu-id="adfb4-110">可以通过使用逗号分隔 `Handles` 后面的 Instance.Event 引用，向多个元素分配相同的处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-110">You can assign the same handler to multiple elements by separating *Instance.Event* references after `Handles` with commas.</span></span>  
   
- 可以使用 `Handles` 将多个处理程序分配给相同的*实例.事件* 引用。  不要对处理程序在 `Handles` 引用中的指定顺序赋予任何重要性；您应假定可以以任何顺序调用处理相同事件的处理程序。  
+ <span data-ttu-id="adfb4-111">可以使用 `Handles` 将多个处理程序分配给同一 Instance.Event 引用。</span><span class="sxs-lookup"><span data-stu-id="adfb4-111">You can use `Handles` to assign more than one handler to the same *Instance.Event*reference.</span></span> <span data-ttu-id="adfb4-112">请勿对 `Handles` 引用中特定处理程序的提供顺序赋予任何重要性；应假定可按任何顺序调用处理相同事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-112">Do not assign any importance to the order in which handlers are given in the `Handles` reference; you should assume that handlers that handle the same event can be invoked in any order.</span></span>  
   
- 若要移除声明中使用 `Handles` 添加的处理程序，请调用 <xref:System.Windows.UIElement.RemoveHandler%2A>。  
+ <span data-ttu-id="adfb4-113">若要删除的处理程序添加了与`Handles`在声明中，你可以调用<xref:System.Windows.UIElement.RemoveHandler%2A>。</span><span class="sxs-lookup"><span data-stu-id="adfb4-113">To remove a handler that was added with `Handles` in the declaration, you can call <xref:System.Windows.UIElement.RemoveHandler%2A>.</span></span>  
   
- 可以使用 `Handles` 附加[路由事件](GTMT)的处理程序，但前提是将处理程序附加到在其成员表中定义要处理的事件的实例。  对于[路由事件](GTMT)，使用 `Handles` 附加的处理程序遵循的路由规则与附加为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]特性或使用 <xref:System.Windows.UIElement.AddHandler%2A> 公共签名附加的处理程序遵循的路由规则相同。  这意味着如果事件已标记为已处理（事件数据中的 <xref:System.Windows.RoutedEventArgs.Handled%2A> 属性为 `True`），则在响应该事件实例时不会调用使用 `Handles` 附加的处理程序。  可以通过路由中的另一个元素上的实例处理程序，或者路由中的当前元素或更早元素上的类处理将事件标记为已处理。  对于支持成对隧道\/冒泡事件的输入事件，隧道路由可能已经将事件对标记为已处理。  有关路由事件的更多信息，请参见[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+ <span data-ttu-id="adfb4-114">如果要将处理程序附加到实例成员表中用于定义要处理的事件的实例，可使用 `Handles` 附加路由事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-114">You can use `Handles` to attach handlers for routed events, so long as you attach handlers to instances that define the event being handled in their members tables.</span></span> <span data-ttu-id="adfb4-115">路由事件处理程序与连接`Handles`一样作为附加的处理程序遵循相同的路由规则[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性，或使用的公用签名<xref:System.Windows.UIElement.AddHandler%2A>。</span><span class="sxs-lookup"><span data-stu-id="adfb4-115">For routed events, handlers that are attached with `Handles` follow the same routing rules as do handlers that are attached as [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributes, or with the common signature of <xref:System.Windows.UIElement.AddHandler%2A>.</span></span> <span data-ttu-id="adfb4-116">这意味着，如果事件已标记为已处理 (<xref:System.Windows.RoutedEventArgs.Handled%2A>事件数据中的属性是`True`)，然后处理程序与连接`Handles`不在响应该事件实例中调用。</span><span class="sxs-lookup"><span data-stu-id="adfb4-116">This means that if the event is already marked handled (the <xref:System.Windows.RoutedEventArgs.Handled%2A> property in the event data is `True`), then handlers attached with `Handles` are not invoked in response to that event instance.</span></span> <span data-ttu-id="adfb4-117">可通过路由中另一个元素上的实例处理程序，或通过在路由中当前元素或更早元素上进行类处理，将事件标记为已处理。</span><span class="sxs-lookup"><span data-stu-id="adfb4-117">The event could be marked handled by instance handlers on another element in the route, or by class handling either on the current element or earlier elements along the route.</span></span> <span data-ttu-id="adfb4-118">对于可支持成对的隧道事件/冒泡事件的输入事件，隧道路由可能已将事件对标记为已处理。</span><span class="sxs-lookup"><span data-stu-id="adfb4-118">For input events that support paired tunnel/bubble events, the tunneling route may have marked the event pair handled.</span></span> <span data-ttu-id="adfb4-119">有关路由事件的详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="adfb4-119">For more information about routed events, see [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
-## 用于添加处理程序的“Handles”的限制  
- `Handles` 无法为[附加事件](GTMT)引用处理程序。  您必须对该附加事件使用 `add` 访问器方法，或使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的*类型名称.事件名称* 事件特性。  有关详细信息，请参见[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+## <a name="limitations-of-handles-for-adding-handlers"></a><span data-ttu-id="adfb4-120">添加处理程序时的“Handles”限制</span><span class="sxs-lookup"><span data-stu-id="adfb4-120">Limitations of "Handles" for Adding Handlers</span></span>  
+ <span data-ttu-id="adfb4-121">`Handles` 无法引用附加事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-121">`Handles` cannot reference handlers for attached events.</span></span> <span data-ttu-id="adfb4-122">必须对该附加事件使用 `add` 访问方法，或使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 typename.eventname 事件特性。</span><span class="sxs-lookup"><span data-stu-id="adfb4-122">You must use the `add` accessor method for that attached event, or *typename.eventname* event attributes in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="adfb4-123">有关详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="adfb4-123">For details, see [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
- 对于[路由事件](GTMT)，只能使用 `Handles` 为该事件存在于实例成员表中的实例分配处理程序。  但是，对于一般的路由事件，父元素可以是来自子元素的事件的侦听器，即使该父元素的成员表中没有此事件也是如此。  在特性语法中，这可以通过*类型名称.成员名称* 特性形式来指定，此形式限定哪种类型实际定义要处理的事件。  例如，某个父 `Page`（未定义 `Click` 事件）可以通过分配 `Button.Click` 形式的特性处理程序来侦听按钮单击事件。  但 `Handles` 不支持*类型名称.成员名称* 形式，因为它必须支持与该形式冲突的*实例.事件* 形式。  有关详细信息，请参见[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+ <span data-ttu-id="adfb4-124">对于路由事件，只能使用 `Handles` 为实例成员表中存在该事件的实例分配处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-124">For routed events, you can only use `Handles` to assign handlers for instances where that event exists in the instance members table.</span></span> <span data-ttu-id="adfb4-125">但是，对于一般的路由事件，父元素可以是来自子元素的事件的侦听器，即使该父元素的成员表中没有此事件也是如此。</span><span class="sxs-lookup"><span data-stu-id="adfb4-125">However, with routed events in general, a parent element can be a listener for an event from child elements, even if the parent element does not have that event in its members table.</span></span> <span data-ttu-id="adfb4-126">在特性语法中，这可以通过 typename.membername 特性形式来指定，此形式限定哪种类型实际定义要处理的事件。</span><span class="sxs-lookup"><span data-stu-id="adfb4-126">In attribute syntax, you can specify this through a *typename.membername* attribute form that qualifies which type actually defines the event you want to handle.</span></span> <span data-ttu-id="adfb4-127">例如，父`Page`(不带`Click`定义的事件) 可以通过分配窗体中的属性处理程序侦听的按钮单击事件`Button.Click`。</span><span class="sxs-lookup"><span data-stu-id="adfb4-127">For instance, a parent `Page` (with no `Click` event defined) can listen for button-click events by assigning an attribute handler in the form `Button.Click`.</span></span> <span data-ttu-id="adfb4-128">但 `Handles` 不支持 typename.membername 形式，因为它必须支持与该形式冲突的 Instance.Event 形式。</span><span class="sxs-lookup"><span data-stu-id="adfb4-128">But `Handles` does not support the *typename.membername* form, because it must support a conflicting *Instance.Event* form.</span></span> <span data-ttu-id="adfb4-129">有关详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="adfb4-129">For details, see [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md).</span></span>  
   
- `Handles` 无法附加针对标记为已处理的事件而调用的处理程序，  而必须使用代码并调用 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 的 `handledEventsToo` 重载。  
-  
-> [!NOTE]
->  在 XAML 中为相同事件指定事件处理程序时，不要在 [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] 代码中使用 `Handles` 语法。  在这种情况下，将调用事件处理程序两次。  
-  
-## WPF 如何实现“Handles”功能  
- 编译[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 页时，中间文件会声明对设置了 <xref:System.Windows.FrameworkContentElement.Name%2A> 属性（或声明了 [x:Name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)）的页中每个元素的 `Friend` `WithEvents` 引用。  每个命名实例都可能是可以通过 `Handles` 分配给处理程序的元素。  
+ <span data-ttu-id="adfb4-130">`Handles` 无法附加针对标记为已处理的事件而调用的处理程序。</span><span class="sxs-lookup"><span data-stu-id="adfb4-130">`Handles` cannot attach handlers that are invoked for events that are already marked handled.</span></span> <span data-ttu-id="adfb4-131">相反，你必须使用代码和调用`handledEventsToo`重载<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。</span><span class="sxs-lookup"><span data-stu-id="adfb4-131">Instead, you must use code and call the `handledEventsToo` overload of <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.</span></span>  
   
 > [!NOTE]
->  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，[!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] 可以向您显示元素可用于页中的 `Handles` 引用的完成状态。  但是，这可能需要进行一次编译，以便中间文件可以填充所有 `Friends` 引用。  
+>  <span data-ttu-id="adfb4-132">在 XAML 中为相同事件指定事件处理程序时，请勿在 [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] 代码中使用 `Handles` 语法。</span><span class="sxs-lookup"><span data-stu-id="adfb4-132">Do not use the `Handles` syntax in [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] code when you specify an event handler for the same event in XAML.</span></span> <span data-ttu-id="adfb4-133">在这种情况下，将调用事件处理程序两次。</span><span class="sxs-lookup"><span data-stu-id="adfb4-133">In this case, the event handler is called twice.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.UIElement.AddHandler%2A>   
- [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="how-wpf-implements-handles-functionality"></a><span data-ttu-id="adfb4-134">WPF 如何实现“Handles”功能</span><span class="sxs-lookup"><span data-stu-id="adfb4-134">How WPF Implements "Handles" Functionality</span></span>  
+ <span data-ttu-id="adfb4-135">当[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页已编译，中间文件声明`Friend``WithEvents`对具有的页面上的每个元素的引用<xref:System.Windows.FrameworkContentElement.Name%2A>属性集 (或[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)声明)。</span><span class="sxs-lookup"><span data-stu-id="adfb4-135">When a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page is compiled, the intermediate file declares `Friend` `WithEvents` references to every element on the page that has a <xref:System.Windows.FrameworkContentElement.Name%2A> property set (or [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md) declared).</span></span> <span data-ttu-id="adfb4-136">每个命名实例都可能是可通过 `Handles` 分配给处理程序的元素。</span><span class="sxs-lookup"><span data-stu-id="adfb4-136">Each named instance is potentially an element that can be assigned to a handler through `Handles`.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="adfb4-137">在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，[!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] 可完整显示可用于页中的 `Handles` 引用的全部元素。</span><span class="sxs-lookup"><span data-stu-id="adfb4-137">Within [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], [!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] can show you completion for which elements are available for a `Handles` reference in a page.</span></span> <span data-ttu-id="adfb4-138">但是，这可能需要执行一个编译传递，以便中间文件可以填充所有 `Friends` 引用。</span><span class="sxs-lookup"><span data-stu-id="adfb4-138">However, this might take one compile pass so that the intermediate file can populate all the `Friends` references.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="adfb4-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="adfb4-139">See Also</span></span>  
+ <xref:System.Windows.UIElement.AddHandler%2A>  
+ [<span data-ttu-id="adfb4-140">将路由事件标记为“已处理”和“类处理”</span><span class="sxs-lookup"><span data-stu-id="adfb4-140">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="adfb4-141">路由事件概述</span><span class="sxs-lookup"><span data-stu-id="adfb4-141">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="adfb4-142">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="adfb4-142">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

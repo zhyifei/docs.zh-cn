@@ -1,80 +1,80 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的虚拟模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 控件 [Windows 窗体], 虚拟模式"
+title: "Windows 窗体 DataGridView 控件中的虚拟模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体 DataGridView 控件中的虚拟模式
-在虚拟模式下，您可以管理 <xref:System.Windows.Forms.DataGridView> 控件和自定义数据缓存之间的交互。  若要实现虚拟模式，请将 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true`，并处理本主题中介绍的一个或多个事件。  您通常至少要处理 `CellValueNeeded` 事件，该事件使控件能够在数据缓存中查找值。  
+# <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="20dcc-102">Windows 窗体 DataGridView 控件中的虚拟模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-102">Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="20dcc-103">虚拟模式中，你可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控制和自定义数据缓存。</span><span class="sxs-lookup"><span data-stu-id="20dcc-103">With virtual mode, you can manage the interaction between the <xref:System.Windows.Forms.DataGridView> control and a custom data cache.</span></span> <span data-ttu-id="20dcc-104">若要实现虚拟模式，设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性`true`并处理一个或多个本主题中所述的事件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-104">To implement virtual mode, set the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property to `true` and handle one or more of the events described in this topic.</span></span> <span data-ttu-id="20dcc-105">通常，你需要处理至少`CellValueNeeded`事件，它使查找数据缓存中的值的控件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-105">You will typically handle at least the `CellValueNeeded` event, which enables the control look up values in the data cache.</span></span>  
   
-## 绑定模式和虚拟模式  
- 仅在需要补充或替换绑定模式时才需要虚拟模式。  在绑定模式下，您可以设置 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性，控件会从指定的数据源自动加载数据，并将用户更改提交到该数据源。  您可以就显示哪个绑定列进行控制，数据源通常会自行处理排序等操作。  
+## <a name="bound-mode-and-virtual-mode"></a><span data-ttu-id="20dcc-106">绑定的模式和虚拟模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-106">Bound Mode and Virtual Mode</span></span>  
+ <span data-ttu-id="20dcc-107">仅在需要来补充或取代绑定的模式时，才需要虚拟模式。</span><span class="sxs-lookup"><span data-stu-id="20dcc-107">Virtual mode is necessary only when you need to supplement or replace bound mode.</span></span> <span data-ttu-id="20dcc-108">在绑定模式下，你将设置<xref:System.Windows.Forms.DataGridView.DataSource%2A>属性和控件自动将数据加载从指定的源，然后提交用户返回到该更改。</span><span class="sxs-lookup"><span data-stu-id="20dcc-108">In bound mode, you set the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property and the control automatically loads the data from the specified source and submits user changes back to it.</span></span> <span data-ttu-id="20dcc-109">可以控制哪些绑定的列会显示，并且数据源本身通常会处理如排序操作。</span><span class="sxs-lookup"><span data-stu-id="20dcc-109">You can control which of the bound columns are displayed, and the data source itself typically handles operations such as sorting.</span></span>  
   
-## 补充绑定模式  
- 您可以随绑定列一起显示未绑定列，从而对绑定模式进行补充。  这有时也称为“混合模式”，这种模式在显示计算值或用户界面 \(UI\) 控件时十分有用。  
+## <a name="supplementing-bound-mode"></a><span data-ttu-id="20dcc-110">补充绑定的模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-110">Supplementing Bound Mode</span></span>  
+ <span data-ttu-id="20dcc-111">你可以通过显示未绑定的列，以及绑定的列来补充绑定的模式。</span><span class="sxs-lookup"><span data-stu-id="20dcc-111">You can supplement bound mode by displaying unbound columns along with the bound columns.</span></span> <span data-ttu-id="20dcc-112">这有时称为"混合的模式"，可用于显示某些操作，如计算的值或用户界面 (UI) 控制。</span><span class="sxs-lookup"><span data-stu-id="20dcc-112">This is sometimes called "mixed mode" and is useful for displaying things like calculated values or user-interface (UI) controls.</span></span>  
   
- 因为未绑定列位于数据源外，所以会被数据源的排序操作忽略。  因此，当您在混合模式下启用排序时，必须管理本地缓存中的未绑定数据，并实施虚拟模式以使 <xref:System.Windows.Forms.DataGridView> 控件能与这些数据进行交互。  
+ <span data-ttu-id="20dcc-113">由于未绑定的列是外部数据源，它们将忽略由数据源的排序操作。</span><span class="sxs-lookup"><span data-stu-id="20dcc-113">Because unbound columns are outside the data source, they are ignored by the data source's sorting operations.</span></span> <span data-ttu-id="20dcc-114">因此，当你启用排序在混合模式下时，你必须管理在本地缓存中的未绑定的数据和实现虚拟模式以使<xref:System.Windows.Forms.DataGridView>控件与之进行交互。</span><span class="sxs-lookup"><span data-stu-id="20dcc-114">Therefore, when you enable sorting in mixed mode, you must manage the unbound data in a local cache and implement virtual mode to let the <xref:System.Windows.Forms.DataGridView> control interact with it.</span></span>  
   
- 有关使用虚拟模式维护未绑定列中的值的更多信息，请参见 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=fullName> 属性和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=fullName> 类参考主题中的示例。  
+ <span data-ttu-id="20dcc-115">有关使用虚拟模式来维护未绑定列中的值的详细信息，请参阅中的示例<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=nameWithType>属性和<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>类参考主题。</span><span class="sxs-lookup"><span data-stu-id="20dcc-115">For more information about using virtual mode to maintain the values in unbound columns, see the examples in the <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A?displayProperty=nameWithType> property and <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType> class reference topics.</span></span>  
   
-## 替换绑定模式  
- 如果绑定模式无法满足性能要求，则可通过虚拟模式事件处理程序管理自定义缓存中的所有数据。  例如，您可以使用虚拟模式实现一个实时数据加载机制，该机制仅从联网数据库检索必需的数据，以获得最佳的性能。  当通过速度很慢的网络连接或使用 RAM 或存储空间有限的客户端计算机处理大量数据时，此方案特别有用。  
+## <a name="replacing-bound-mode"></a><span data-ttu-id="20dcc-116">替换绑定的模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-116">Replacing Bound Mode</span></span>  
+ <span data-ttu-id="20dcc-117">如果绑定的模式不满足性能需求，你可以管理通过虚拟模式事件处理程序自定义缓存中的所有数据。</span><span class="sxs-lookup"><span data-stu-id="20dcc-117">If bound mode does not meet your performance needs, you can manage all your data in a custom cache through virtual-mode event handlers.</span></span> <span data-ttu-id="20dcc-118">例如，可以使用的虚拟模式以实现在实时数据加载机制，以仅检索多的数据从联网数据库需要的最佳性能。</span><span class="sxs-lookup"><span data-stu-id="20dcc-118">For example, you can use virtual mode to implement a just-in-time data loading mechanism that retrieves only as much data from a networked database as is necessary for optimal performance.</span></span> <span data-ttu-id="20dcc-119">这种情况下使用大量的数据通过慢速网络连接或使用具有有限的 RAM 或存储空间的客户端计算机时特别有用。</span><span class="sxs-lookup"><span data-stu-id="20dcc-119">This scenario is particularly useful when working with large amounts of data over a slow network connection or with client machines that have a limited amount of RAM or storage space.</span></span>  
   
- 有关在实时方案中使用虚拟模式的更多信息，请参见 [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)。  
+ <span data-ttu-id="20dcc-120">有关在实时方案中使用的虚拟模式的详细信息，请参阅[实时数据加载在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="20dcc-120">For more information about using virtual mode in a just-in-time scenario, see [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).</span></span>  
   
-## 虚拟模式事件  
- 如果数据是只读的，则 `CellValueNeeded` 事件可能是唯一一个需要处理的事件。  使用其他的虚拟模式事件可以启用特定的功能，如用户编辑、行的添加和删除以及行级事务。  
+## <a name="virtual-mode-events"></a><span data-ttu-id="20dcc-121">虚拟模式事件</span><span class="sxs-lookup"><span data-stu-id="20dcc-121">Virtual-Mode Events</span></span>  
+ <span data-ttu-id="20dcc-122">如果你的数据是只读的`CellValueNeeded`事件可能是你将需要处理的唯一事件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-122">If your data is read-only, the `CellValueNeeded` event may be the only event you will need to handle.</span></span> <span data-ttu-id="20dcc-123">其他虚拟模式事件，可以启用特定功能，例如，用户编辑、 添加行和删除和行级事务。</span><span class="sxs-lookup"><span data-stu-id="20dcc-123">Additional virtual-mode events let you enable specific functionality like user edits, row addition and deletion, and row-level transactions.</span></span>  
   
- 有些标准 <xref:System.Windows.Forms.DataGridView> 事件在虚拟模式下也很有用，例如在用户添加或删除行时发生的事件，以及在编辑、分析、验证或格式化单元格值时发生的事件。  您还可以处理一些事件来维护通常不存储在绑定数据源中的值，例如单元格工具提示文本、单元格和行错误文本、单元格和行快捷菜单数据以及行高数据。  
+ <span data-ttu-id="20dcc-124">某些标准<xref:System.Windows.Forms.DataGridView>事件 （如用户添加或删除行，或单元格时值时发生的事件是编辑、 分析、 验证，或格式化） 可在虚拟模式。</span><span class="sxs-lookup"><span data-stu-id="20dcc-124">Some standard <xref:System.Windows.Forms.DataGridView> events (such as events that occur when users add or delete rows, or when cell values are edited, parsed, validated, or formatted) are useful in virtual mode, as well.</span></span> <span data-ttu-id="20dcc-125">你还可以处理可以维护中的绑定的数据源，如单元格工具提示文本、 单元格和行错误文本、 单元格和行快捷菜单数据和行高度数据通常不存储的值的事件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-125">You can also handle events that let you maintain values not typically stored in a bound data source, such as cell ToolTip text, cell and row error text, cell and row shortcut menu data, and row height data.</span></span>  
   
- 有关实现虚拟模式以管理具有行级提交范围的读\/写数据的更多信息，请参见 [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+ <span data-ttu-id="20dcc-126">有关实现虚拟模式来管理与行级提交作用域的读/写数据的详细信息，请参阅[演练： 在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="20dcc-126">For more information about implementing virtual mode to manage read/write data with a row-level commit scope, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
- 有关实现具有单元格级提交范围的虚拟模式的示例，请参见 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性参考主题。  
+ <span data-ttu-id="20dcc-127">有关实现虚拟模式与单元格级提交作用域示例，请参阅<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性参考主题。</span><span class="sxs-lookup"><span data-stu-id="20dcc-127">For an example that implements virtual mode with a cell-level commit scope, see the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property reference topic.</span></span>  
   
- 以下事件仅在 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true` 时发生。  
+ <span data-ttu-id="20dcc-128">仅发生以下事件时<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-128">The following events occur only when the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is set to `true`.</span></span>  
   
-|Event|说明|  
-|-----------|--------|  
-|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|由控件用来从数据缓存检索单元格值以进行显示。  此事件仅对未绑定列中的单元格发生。|  
-|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|由控件用来将单元格中的用户输入提交到数据缓存。  此事件仅对未绑定列中的单元格发生。<br /><br /> 在从 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件处理程序外更改缓存的值时，请调用 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 方法以确保将当前值显示在控件中并应用当前有效的所有自动的大小调整模式。|  
-|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|由控件用来指示数据缓存中需要新行。|  
-|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|由控件用来确定行中是否有任何未提交的更改。|  
-|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|由控件用来指示一个行应恢复为它的缓存的值。|  
+|<span data-ttu-id="20dcc-129">Event</span><span class="sxs-lookup"><span data-stu-id="20dcc-129">Event</span></span>|<span data-ttu-id="20dcc-130">描述</span><span class="sxs-lookup"><span data-stu-id="20dcc-130">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|<span data-ttu-id="20dcc-131">由该控件用于从显示的数据缓存中检索一个单元格值。</span><span class="sxs-lookup"><span data-stu-id="20dcc-131">Used by the control to retrieve a cell value from the data cache for display.</span></span> <span data-ttu-id="20dcc-132">仅对未绑定的列中的单元格的发生此事件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-132">This event occurs only for cells in unbound columns.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CellValuePushed>|<span data-ttu-id="20dcc-133">使用控件来提交到数据缓存的单元格的用户输入。</span><span class="sxs-lookup"><span data-stu-id="20dcc-133">Used by the control to commit user input for a cell to the data cache.</span></span> <span data-ttu-id="20dcc-134">仅对未绑定的列中的单元格的发生此事件。</span><span class="sxs-lookup"><span data-stu-id="20dcc-134">This event occurs only for cells in unbound columns.</span></span><br /><br /> <span data-ttu-id="20dcc-135">调用<xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>方法时更改缓存的值之外的<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件处理程序以确保，在控件中显示的当前值并应用当前有效的任何自动调整大小模式。</span><span class="sxs-lookup"><span data-stu-id="20dcc-135">Call the <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> method when changing a cached value outside of a <xref:System.Windows.Forms.DataGridView.CellValuePushed> event handler to ensure that the current value is displayed in the control and to apply any automatic sizing modes currently in effect.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.NewRowNeeded>|<span data-ttu-id="20dcc-136">该控件用于指示数据缓存中的新行的需求。</span><span class="sxs-lookup"><span data-stu-id="20dcc-136">Used by the control to indicate the need for a new row in the data cache.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>|<span data-ttu-id="20dcc-137">该控件用于确定行是否有任何未提交的更改。</span><span class="sxs-lookup"><span data-stu-id="20dcc-137">Used by the control to determine whether a row has any uncommitted changes.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CancelRowEdit>|<span data-ttu-id="20dcc-138">该控件用于指示一个行应恢复到其缓存的值。</span><span class="sxs-lookup"><span data-stu-id="20dcc-138">Used by the control to indicate that a row should revert to its cached values.</span></span>|  
   
- 以下事件在虚拟模式下十分有用，但无论 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置如何都可使用。  
+ <span data-ttu-id="20dcc-139">以下事件可在虚拟模式下，但可以使用而不考虑<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置。</span><span class="sxs-lookup"><span data-stu-id="20dcc-139">The following events are useful in virtual mode, but can be used regardless of the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property setting.</span></span>  
   
-|事件|说明|  
-|--------|--------|  
-|<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|由控件用来指示在何时删除或添加行，使您可以相应地更新数据缓存。|  
-|<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|由控件用来设置要显示的单元格值的格式以及分析和验证用户输入。|  
-|<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>|由控件用来在设置了 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性或者 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性为 `true` 时检索单元格工具提示文本。<br /><br /> 单元格工具提示仅在 <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> 属性值为 `true` 时显示。|  
-|<xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded>|由控件用来在设置了 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性或者 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性为 `true` 时检索单元格或行的错误文本。<br /><br /> 在更改单元格或行的错误文本时，请调用 <xref:System.Windows.Forms.DataGridView.UpdateCellErrorText%2A> 方法或 <xref:System.Windows.Forms.DataGridView.UpdateRowErrorText%2A> 方法，以确保在控件中显示当前值。<br /><br /> 当 <xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A> 和 <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A> 属性值为 `true` 时，将显示单元格和行的错误标志符号。|  
-|<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>|由控件用来在设置了控件的 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性或者 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性为 `true` 时检索单元格或行的 <xref:System.Windows.Forms.ContextMenuStrip>。|  
-|<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|由控件用来在数据缓存中检索或存储行的高度信息。  在从 <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> 事件处理程序外更改缓存的行高信息时，请调用 <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> 方法以确保在控件中显示当前值。|  
+|<span data-ttu-id="20dcc-140">事件</span><span class="sxs-lookup"><span data-stu-id="20dcc-140">Events</span></span>|<span data-ttu-id="20dcc-141">描述</span><span class="sxs-lookup"><span data-stu-id="20dcc-141">Description</span></span>|  
+|------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|<span data-ttu-id="20dcc-142">该控件用于指示当删除行，或添加，从而相应地更新数据缓存。</span><span class="sxs-lookup"><span data-stu-id="20dcc-142">Used by the control to indicate when rows are deleted or added, letting you update the data cache accordingly.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|<span data-ttu-id="20dcc-143">值的格式单元格控件使用它进行显示，以及进行分析和验证用户输入。</span><span class="sxs-lookup"><span data-stu-id="20dcc-143">Used by the control to format cell values for display and to parse and validate user input.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>|<span data-ttu-id="20dcc-144">该控件用于检索单元格工具提示文本时<xref:System.Windows.Forms.DataGridView.DataSource%2A>设置属性或<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性是`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-144">Used by the control to retrieve cell ToolTip text when the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property is set or the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is `true`.</span></span><br /><br /> <span data-ttu-id="20dcc-145">显示单元格工具提示时，才<xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A>属性值是`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-145">Cell ToolTips are displayed only when the <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> property value is `true`.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CellErrorTextNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded>|<span data-ttu-id="20dcc-146">该控件用于检索单元格或行错误文本时<xref:System.Windows.Forms.DataGridView.DataSource%2A>设置属性或<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性是`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-146">Used by the control to retrieve cell or row error text when the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property is set or the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is `true`.</span></span><br /><br /> <span data-ttu-id="20dcc-147">调用<xref:System.Windows.Forms.DataGridView.UpdateCellErrorText%2A>方法或<xref:System.Windows.Forms.DataGridView.UpdateRowErrorText%2A>方法时更改单元格或行错误文本，以确保在控件中显示的当前值。</span><span class="sxs-lookup"><span data-stu-id="20dcc-147">Call the <xref:System.Windows.Forms.DataGridView.UpdateCellErrorText%2A> method or the <xref:System.Windows.Forms.DataGridView.UpdateRowErrorText%2A> method when you change the cell or row error text to ensure that the current value is displayed in the control.</span></span><br /><br /> <span data-ttu-id="20dcc-148">显示单元格和行错误标志符号时<xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A>和<xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A>属性的值为`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-148">Cell and row error glyphs are displayed when the <xref:System.Windows.Forms.DataGridView.ShowCellErrors%2A> and <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A> property values are `true`.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded>|<span data-ttu-id="20dcc-149">该控件用于检索单元格或行<xref:System.Windows.Forms.ContextMenuStrip>时控件<xref:System.Windows.Forms.DataGridView.DataSource%2A>设置属性或<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性是`true`。</span><span class="sxs-lookup"><span data-stu-id="20dcc-149">Used by the control to retrieve a cell or row <xref:System.Windows.Forms.ContextMenuStrip> when the control <xref:System.Windows.Forms.DataGridView.DataSource%2A> property is set or the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is `true`.</span></span>|  
+|<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|<span data-ttu-id="20dcc-150">使用控件来检索或存储的数据缓存中的行高度信息。</span><span class="sxs-lookup"><span data-stu-id="20dcc-150">Used by the control to retrieve or store row height information in the data cache.</span></span> <span data-ttu-id="20dcc-151">调用<xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A>方法更改之外的缓存的行高度信息时<xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>事件处理程序来确保，在显示控件中使用的当前值。</span><span class="sxs-lookup"><span data-stu-id="20dcc-151">Call the <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> method when changing the cached row height information outside of a <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> event handler to ensure that the current value is used in the display of the control.</span></span>|  
   
-## 虚拟模式下的最佳做法  
- 如果要实现虚拟模式以提高操作大量数据时的效率，则可能还需要确保对 <xref:System.Windows.Forms.DataGridView> 控件本身的有效使用。  有关有效使用单元格样式、自动大小调整、选择以及行共享的更多信息，请参见 [缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
+## <a name="best-practices-in-virtual-mode"></a><span data-ttu-id="20dcc-152">中的虚拟模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="20dcc-152">Best Practices in Virtual Mode</span></span>  
+ <span data-ttu-id="20dcc-153">如果你要实现虚拟模式，若要有效地使用大量的数据，你也要确保与你也会有效地工作<xref:System.Windows.Forms.DataGridView>控件本身。</span><span class="sxs-lookup"><span data-stu-id="20dcc-153">If you are implementing virtual mode in order to work efficiently with large amounts of data, you will also want to ensure that you are working efficiently with the <xref:System.Windows.Forms.DataGridView> control itself.</span></span> <span data-ttu-id="20dcc-154">有关有效地使用的单元格样式、 自动调整大小、 选择和行共享的详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="20dcc-154">For more information about the efficient use of cell styles, automatic sizing, selections, and row sharing, see [Best Practices for Scaling the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- [Windows 窗体 DataGridView 控件中的性能优化](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a><span data-ttu-id="20dcc-155">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20dcc-155">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ [<span data-ttu-id="20dcc-156">Windows 窗体 DataGridView 控件中的性能调整</span><span class="sxs-lookup"><span data-stu-id="20dcc-156">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="20dcc-157">有关缩放 Windows 窗体 DataGridView 控件的最佳做法</span><span class="sxs-lookup"><span data-stu-id="20dcc-157">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="20dcc-158">演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-158">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [<span data-ttu-id="20dcc-159">在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式</span><span class="sxs-lookup"><span data-stu-id="20dcc-159">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

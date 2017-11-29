@@ -1,26 +1,29 @@
 ---
-title: "公告示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "公告示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 05e2c45b66f92229877ac3ec867da9b71cd4156a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 公告示例
-此示例显示如何使用发现功能的公告功能。服务使用公告可以发出包含有关服务的元数据的公告消息。默认情况下，服务启动时会发送 Hello 公告，服务关闭时会发送 Bye 公告。这些公告可以进行多播，也可点到点发送。此示例由两个项目组成，即服务项目和客户端项目。  
+# <a name="announcements-sample"></a><span data-ttu-id="82d58-102">公告示例</span><span class="sxs-lookup"><span data-stu-id="82d58-102">Announcements Sample</span></span>
+<span data-ttu-id="82d58-103">此示例显示如何使用发现功能的公告功能。</span><span class="sxs-lookup"><span data-stu-id="82d58-103">This sample shows how to use the Announcement functionality of the Discovery feature.</span></span> <span data-ttu-id="82d58-104">服务使用公告可以发出包含有关服务的元数据的公告消息。</span><span class="sxs-lookup"><span data-stu-id="82d58-104">Announcements allow services to send out announcement messages that contain metadata about the service.</span></span> <span data-ttu-id="82d58-105">默认情况下，服务启动时会发送 Hello 公告，服务关闭时会发送 Bye 公告。</span><span class="sxs-lookup"><span data-stu-id="82d58-105">By default a hello announcement is sent when the service starts up and a bye announcement is sent when the service shuts down.</span></span> <span data-ttu-id="82d58-106">这些公告可以进行多播，也可点到点发送。</span><span class="sxs-lookup"><span data-stu-id="82d58-106">These announcements can be multicast or they can be sent point-to-point.</span></span> <span data-ttu-id="82d58-107">此示例由两个项目组成，即服务项目和客户端项目。</span><span class="sxs-lookup"><span data-stu-id="82d58-107">This sample consists of two projects service and client.</span></span>  
   
-## 服务  
- 此项目包含一个自承载计算器服务。在 `Main` 方法中，会创建一个服务主机，并向该主机添加服务终结点。接下来创建 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。若要启用公告，必须向 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 添加公告终结点。在此例中，添加一个标准终结点（使用 UDP 多播）作为公告终结点。这会向已知的 UDP 地址广播公告。  
+## <a name="service"></a><span data-ttu-id="82d58-108">服务</span><span class="sxs-lookup"><span data-stu-id="82d58-108">Service</span></span>  
+ <span data-ttu-id="82d58-109">此项目包含一个自承载计算器服务。</span><span class="sxs-lookup"><span data-stu-id="82d58-109">This project contains a self-hosted calculator service.</span></span> <span data-ttu-id="82d58-110">在 `Main` 方法中，会创建一个服务主机，并向该主机添加服务终结点。</span><span class="sxs-lookup"><span data-stu-id="82d58-110">In the `Main` method, a service host is created and a service endpoint is added to it.</span></span> <span data-ttu-id="82d58-111">接下来创建 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。</span><span class="sxs-lookup"><span data-stu-id="82d58-111">Next, a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> is created.</span></span> <span data-ttu-id="82d58-112">若要启用公告，必须向 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 添加公告终结点。</span><span class="sxs-lookup"><span data-stu-id="82d58-112">To enable announcements, an announcement endpoint must be added to the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span></span> <span data-ttu-id="82d58-113">在此例中，添加一个标准终结点（使用 UDP 多播）作为公告终结点。</span><span class="sxs-lookup"><span data-stu-id="82d58-113">In this case a standard endpoint, using UDP multicast is added as the announcement endpoint.</span></span> <span data-ttu-id="82d58-114">这会向已知的 UDP 地址广播公告。</span><span class="sxs-lookup"><span data-stu-id="82d58-114">This broadcasts the announcements over a well-known UDP address.</span></span>  
   
 ```  
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
@@ -43,8 +46,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }  
 ```  
   
-## 客户端  
- 在此项目中请注意，客户端承载 <xref:System.ServiceModel.Discovery.AnnouncementService>。此外，会向事件注册两个委托。这些事件指示客户端在接收到联机和脱机公告时执行的操作。  
+## <a name="client"></a><span data-ttu-id="82d58-115">客户端</span><span class="sxs-lookup"><span data-stu-id="82d58-115">Client</span></span>  
+ <span data-ttu-id="82d58-116">在此项目中请注意，客户端承载 <xref:System.ServiceModel.Discovery.AnnouncementService>。</span><span class="sxs-lookup"><span data-stu-id="82d58-116">In this project, note that the client hosts an <xref:System.ServiceModel.Discovery.AnnouncementService>.</span></span> <span data-ttu-id="82d58-117">此外，会向事件注册两个委托。</span><span class="sxs-lookup"><span data-stu-id="82d58-117">Furthermore, two delegates are registered with events.</span></span> <span data-ttu-id="82d58-118">这些事件指示客户端在接收到联机和脱机公告时执行的操作。</span><span class="sxs-lookup"><span data-stu-id="82d58-118">These events dictate what the client does when online and offline announcements are received.</span></span>  
   
 ```  
 // Create an AnnouncementService instance  
@@ -55,7 +58,7 @@ announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
 announcementService.OfflineAnnouncementReceived += OnOfflineEvent;  
 ```  
   
- `OnOnlineEvent` 和 `OnOfflineEvent` 方法分别处理 Hello 和 Bye 公告消息。  
+ <span data-ttu-id="82d58-119">`OnOnlineEvent` 和 `OnOfflineEvent` 方法分别处理 Hello 和 Bye 公告消息。</span><span class="sxs-lookup"><span data-stu-id="82d58-119">The `OnOnlineEvent` and `OnOfflineEvent` methods handle the hello and bye announcement messages respectively.</span></span>  
   
 ```  
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
@@ -73,25 +76,25 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 }  
 ```  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="82d58-120">使用此示例</span><span class="sxs-lookup"><span data-stu-id="82d58-120">To use this sample</span></span>  
   
-1.  此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL，有关详细信息，请参见[配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)（可能为英文网页）。使用提升的特权执行下面的命令应添加相应的 ACL。如果该命令无效，则可能需要使用您的域和用户名替换以下参数。`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  <span data-ttu-id="82d58-121">此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须将添加，请参阅[配置 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="82d58-121">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="82d58-122">使用提升的特权执行下面的命令应添加相应的 ACL。</span><span class="sxs-lookup"><span data-stu-id="82d58-122">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="82d58-123">如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。</span><span class="sxs-lookup"><span data-stu-id="82d58-123">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  生成解决方案。  
+2.  <span data-ttu-id="82d58-124">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="82d58-124">Build the solution.</span></span>  
   
-3.  运行 client.exe 应用程序。  
+3.  <span data-ttu-id="82d58-125">运行 client.exe 应用程序。</span><span class="sxs-lookup"><span data-stu-id="82d58-125">Run the client.exe application.</span></span>  
   
-4.  运行 service.exe 应用程序。请注意，客户端会接收联机公告。  
+4.  <span data-ttu-id="82d58-126">运行 service.exe 应用程序。</span><span class="sxs-lookup"><span data-stu-id="82d58-126">Run the service.exe application.</span></span> <span data-ttu-id="82d58-127">请注意，客户端会接收联机公告。</span><span class="sxs-lookup"><span data-stu-id="82d58-127">Note the client receives an online announcement.</span></span>  
   
-5.  关闭 service.exe 应用程序。请注意，客户端会接收脱机公告。  
+5.  <span data-ttu-id="82d58-128">关闭 service.exe 应用程序。</span><span class="sxs-lookup"><span data-stu-id="82d58-128">Close the service.exe application.</span></span> <span data-ttu-id="82d58-129">请注意，客户端会接收脱机公告。</span><span class="sxs-lookup"><span data-stu-id="82d58-129">Note the client receives an offline announcement.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="82d58-130">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="82d58-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="82d58-131">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="82d58-131">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  <span data-ttu-id="82d58-132">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="82d58-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="82d58-133">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="82d58-133">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="82d58-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="82d58-134">See Also</span></span>

@@ -1,81 +1,84 @@
 ---
-title: "&lt;bindingRedirect&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bindingRedirect> 元素"
-  - "bindingRedirect 元素"
-  - "容器标记, <bindingRedirect> 元素"
+title: "&lt;bindingRedirect&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect
+helpviewer_keywords:
+- <bindingRedirect> element
+- container tags, <bindingRedirect> element
+- bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3bc8abc019ddb271c8c1246b280be754585bfd61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;bindingRedirect&gt; 元素
-将一个程序集版本重定向到另一个版本。  
+# <a name="ltbindingredirectgt-element"></a><span data-ttu-id="4ee33-102">&lt;bindingRedirect&gt;元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-102">&lt;bindingRedirect&gt; Element</span></span>
+<span data-ttu-id="4ee33-103">将一个程序集版本重定向到另一个版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-103">Redirects one assembly version to another.</span></span>  
   
-## 语法  
+ <span data-ttu-id="4ee33-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4ee33-104">\<configuration></span></span>  
+<span data-ttu-id="4ee33-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="4ee33-105">\<runtime></span></span>  
+<span data-ttu-id="4ee33-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="4ee33-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="4ee33-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="4ee33-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="4ee33-108">\<bindingRedirect ></span><span class="sxs-lookup"><span data-stu-id="4ee33-108">\<bindingRedirect></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4ee33-109">语法</span><span class="sxs-lookup"><span data-stu-id="4ee33-109">Syntax</span></span>  
   
-   <bindingRedirect    
+```xml  
+   <bindingRedirect    
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4ee33-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4ee33-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4ee33-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="4ee33-112">特性</span><span class="sxs-lookup"><span data-stu-id="4ee33-112">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。  程序集版本号的格式为 *major.minor.build.revision*。  该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n \- n.n.n.n*|  
-|`newVersion`|必需的特性。<br /><br /> 指定要用来取代最初请求的版本的程序集版本（格式为：*n.n.n.n*）<br /><br /> 此值可以指定 `oldVersion` 之前的版本。|  
+|<span data-ttu-id="4ee33-113">特性</span><span class="sxs-lookup"><span data-stu-id="4ee33-113">Attribute</span></span>|<span data-ttu-id="4ee33-114">描述</span><span class="sxs-lookup"><span data-stu-id="4ee33-114">Description</span></span>|  
+|---------------|-----------------|  
+|`oldVersion`|<span data-ttu-id="4ee33-115">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="4ee33-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="4ee33-116">指定最初请求的程序集的版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-116">Specifies the version of the assembly that was originally requested.</span></span> <span data-ttu-id="4ee33-117">程序集版本号的格式是*major.minor.build.revision*。</span><span class="sxs-lookup"><span data-stu-id="4ee33-117">The format of an assembly version number is *major.minor.build.revision*.</span></span> <span data-ttu-id="4ee33-118">该版本号的每个部分的有效值介于 0 和 65535 之间。</span><span class="sxs-lookup"><span data-stu-id="4ee33-118">Valid values for each part of this version number are 0 to 65535.</span></span><br /><br /> <span data-ttu-id="4ee33-119">你还可以按下列格式指定版本范围：</span><span class="sxs-lookup"><span data-stu-id="4ee33-119">You can also specify a range of versions in the following format:</span></span><br /><br /> <span data-ttu-id="4ee33-120">*n.n.n.n-n.n.n.n*</span><span class="sxs-lookup"><span data-stu-id="4ee33-120">*n.n.n.n - n.n.n.n*</span></span>|  
+|`newVersion`|<span data-ttu-id="4ee33-121">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="4ee33-121">Required attribute.</span></span><br /><br /> <span data-ttu-id="4ee33-122">指定要使用而不是最初请求的版本格式的程序集的版本： *n.n.n.n*</span><span class="sxs-lookup"><span data-stu-id="4ee33-122">Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*</span></span><br /><br /> <span data-ttu-id="4ee33-123">此值可以指定 `oldVersion` 之前的版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-123">This value can specify an earlier version than `oldVersion`.</span></span>|  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="4ee33-124">子元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-124">Child Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|无||  
+|<span data-ttu-id="4ee33-125">元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-125">Element</span></span>|<span data-ttu-id="4ee33-126">描述</span><span class="sxs-lookup"><span data-stu-id="4ee33-126">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="4ee33-127">无</span><span class="sxs-lookup"><span data-stu-id="4ee33-127">None</span></span>||  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="4ee33-128">父元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-128">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`dependentAssembly`|封装每个程序集的绑定策略和程序集位置。  为每个程序集使用一个 dependentAssembly 元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="4ee33-129">元素</span><span class="sxs-lookup"><span data-stu-id="4ee33-129">Element</span></span>|<span data-ttu-id="4ee33-130">描述</span><span class="sxs-lookup"><span data-stu-id="4ee33-130">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="4ee33-131">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="4ee33-131">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="4ee33-132">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="4ee33-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="4ee33-133">封装每个程序集的绑定策略和程序集位置。</span><span class="sxs-lookup"><span data-stu-id="4ee33-133">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="4ee33-134">为每个程序集使用一个 dependentAssembly 元素。</span><span class="sxs-lookup"><span data-stu-id="4ee33-134">Use one dependentAssembly element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="4ee33-135">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="4ee33-135">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 备注  
- 在针对具有强名称的程序集生成 .NET Framework 应用程序时，默认情况下，应用程序在运行时使用该版本的程序集，即使提供了新版本也是如此。  但是，你可以将应用程序配置为针对更新版本的程序集运行。  有关运行时如何使用这些文件来确定要使用的程序集版本的详细信息，请参见[运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+## <a name="remarks"></a><span data-ttu-id="4ee33-136">备注</span><span class="sxs-lookup"><span data-stu-id="4ee33-136">Remarks</span></span>  
+ <span data-ttu-id="4ee33-137">在针对具有强名称的程序集生成 .NET Framework 应用程序时，默认情况下，应用程序在运行时使用该版本的程序集，即使提供了新版本也是如此。</span><span class="sxs-lookup"><span data-stu-id="4ee33-137">When you build a .NET Framework application against a strong-named assembly, the application uses that version of the assembly at run time by default, even if a new version is available.</span></span> <span data-ttu-id="4ee33-138">但是，你可以将应用程序配置为针对更新版本的程序集运行。</span><span class="sxs-lookup"><span data-stu-id="4ee33-138">However, you can configure the application to run against a newer version of the assembly.</span></span> <span data-ttu-id="4ee33-139">有关运行时如何使用这些文件来确定要使用的程序集版本的详细信息，请参阅[运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="4ee33-139">For details on how the runtime uses these files to determine which assembly version to use, see [How the Runtime Locates Assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- 通过在一个 `dependentAssembly` 元素中包含多个 `bindingRedirect` 元素，你可以重定向多个程序集版本。  你还可从程序集的更新版本重定向到较旧版本。  
+ <span data-ttu-id="4ee33-140">通过在一个 `bindingRedirect` 元素中包含多个 `dependentAssembly` 元素，你可以重定向多个程序集版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-140">You can redirect more than one assembly version by including multiple `bindingRedirect` elements in a `dependentAssembly` element.</span></span> <span data-ttu-id="4ee33-141">你还可从程序集的更新版本重定向到较旧版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-141">You can also redirect from a newer version to an older version of the assembly.</span></span>  
   
- 应用程序配置文件中的显式程序集绑定重定向需要安全权限。  这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。  该权限可通过针对 [SecurityPermission 类](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)设置 [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 标志来授予。  有关更多信息，请参见[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ <span data-ttu-id="4ee33-142">应用程序配置文件中的显式程序集绑定重定向需要安全权限。</span><span class="sxs-lookup"><span data-stu-id="4ee33-142">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="4ee33-143">这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。</span><span class="sxs-lookup"><span data-stu-id="4ee33-143">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="4ee33-144">通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。</span><span class="sxs-lookup"><span data-stu-id="4ee33-144">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="4ee33-145">有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。</span><span class="sxs-lookup"><span data-stu-id="4ee33-145">For more information, see [Assembly Binding Redirection Security Permission](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span></span>  
   
-## 示例  
- 下面的示例演示如何将一个程序集版本重定向到另一个版本。  
+## <a name="example"></a><span data-ttu-id="4ee33-146">示例</span><span class="sxs-lookup"><span data-stu-id="4ee33-146">Example</span></span>  
+ <span data-ttu-id="4ee33-147">下面的示例演示如何将一个程序集版本重定向到另一个版本。</span><span class="sxs-lookup"><span data-stu-id="4ee33-147">The following example shows how to redirect one assembly version to another.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -91,7 +94,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="4ee33-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4ee33-148">See Also</span></span>  
+ [<span data-ttu-id="4ee33-149">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="4ee33-149">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="4ee33-150">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="4ee33-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="4ee33-151">重定向程序集版本</span><span class="sxs-lookup"><span data-stu-id="4ee33-151">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

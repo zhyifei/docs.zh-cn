@@ -1,65 +1,66 @@
 ---
-title: "使用 WPF 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "互操作性 [WPF]"
-  - "Windows 窗体设计器, 与 WPF 的互操作性"
+title: "使用 WPF 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms Designer [Windows Forms], interoperability with WPF
+- interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6fe8fb972f8080bbffeed5db2063d8c0484aec4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 使用 WPF 控件
-可以在基于 Windows 窗体的应用程序中使用 Windows Presentation Foundation \(WPF\) 控件。  虽然是两种不同的视图技术，但它们可以顺利地进行交互操作。  
+# <a name="using-wpf-controls"></a><span data-ttu-id="b0d51-102">使用 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="b0d51-102">Using WPF Controls</span></span>
+<span data-ttu-id="b0d51-103">在基于 Windows 窗体的应用程序，可以使用 Windows Presentation Foundation (WPF) 控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-103">You can use Windows Presentation Foundation (WPF) controls in your Windows Forms-based applications.</span></span> <span data-ttu-id="b0d51-104">尽管这些是两个不同的视图技术，则它们顺利互操作。</span><span class="sxs-lookup"><span data-stu-id="b0d51-104">Although these are two different view technologies, they interoperate smoothly.</span></span>  
   
- Windows 窗体设计器为承载 Windows Presentation Foundation 控件提供可视化设计环境。  WPF 控件由名为 <xref:System.Windows.Forms.Integration.ElementHost> 的特殊 Windows 窗体控件承载。  此控件使 WPF 控件能够参与窗体的布局并接收键盘和鼠标消息。  在设计时，可以像排列任何 Windows 窗体控件那样来排列 <xref:System.Windows.Forms.Integration.ElementHost> 控件。  
+ <span data-ttu-id="b0d51-105">Windows 窗体设计器提供用于承载 Windows Presentation Foundation 控件的可视设计环境。</span><span class="sxs-lookup"><span data-stu-id="b0d51-105">The Windows Forms Designer provides a visual design environment for hosting Windows Presentation Foundation controls.</span></span> <span data-ttu-id="b0d51-106">由名为的特殊 Windows 窗体控件承载 WPF 控件<xref:System.Windows.Forms.Integration.ElementHost>。</span><span class="sxs-lookup"><span data-stu-id="b0d51-106">A WPF control is hosted by a special Windows Forms control that is named <xref:System.Windows.Forms.Integration.ElementHost>.</span></span> <span data-ttu-id="b0d51-107">此控件启用 WPF 控件将参与窗体的布局以及接收键盘和鼠标的消息。</span><span class="sxs-lookup"><span data-stu-id="b0d51-107">This control enables the WPF control to participate in the form's layout and to receive keyboard and mouse messages.</span></span> <span data-ttu-id="b0d51-108">在设计时，可以排列<xref:System.Windows.Forms.Integration.ElementHost>控制就像任何 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-108">At design time, you can arrange the <xref:System.Windows.Forms.Integration.ElementHost> control just as you would any Windows Forms control.</span></span>  
   
- 也可以在基于 WPF 的应用程序中使用 Windows 窗体控件。  有关更多信息，请参见 [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)。  
+ <span data-ttu-id="b0d51-109">此外可以基于 WPF 的应用程序中使用 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-109">You can also use Windows Forms controls in your WPF-based applications.</span></span> <span data-ttu-id="b0d51-110">有关详细信息，请参阅[WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。</span><span class="sxs-lookup"><span data-stu-id="b0d51-110">For more information, see [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).</span></span>  
   
-## 本节内容  
- [如何：在设计时复制并粘贴 ElementHost 控件](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
- 演示如何在 Windows 窗体上复制 Windows Presentation Foundation 控件。  
+## <a name="in-this-section"></a><span data-ttu-id="b0d51-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="b0d51-111">In This Section</span></span>  
+ [<span data-ttu-id="b0d51-112">如何：在设计时复制并粘贴 ElementHost 控件</span><span class="sxs-lookup"><span data-stu-id="b0d51-112">How to: Copy and Paste an ElementHost Control at Design Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
+ <span data-ttu-id="b0d51-113">演示如何将 Windows 窗体上的 Windows Presentation Foundation 控件复制。</span><span class="sxs-lookup"><span data-stu-id="b0d51-113">Shows how to copy a Windows Presentation Foundation control on a Windows Form.</span></span>  
   
- [演练：设计时在 Windows 窗体上排列 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- 演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）来排列 Windows Presentation Foundation 控件。  
+ [<span data-ttu-id="b0d51-114">演练：在设计时在 Windows 窗体上排列 WPF 内容</span><span class="sxs-lookup"><span data-stu-id="b0d51-114">Walkthrough: Arranging WPF Content on Windows Forms at Design Time</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
+ <span data-ttu-id="b0d51-115">演示如何使用 Windows 窗体布局功能，例如锚定和对齐线，排列 Windows Presentation Foundation 控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-115">Shows how to use the Windows Forms layout features, such as anchoring and snaplines, to arrange Windows Presentation Foundation controls.</span></span>  
   
- [演练：设计时更改承载的 WPF 元素的属性](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- 演示 Windows 窗体设计器和 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]之间用于更改 WPF 控件属性的工作流。  
+ [<span data-ttu-id="b0d51-116">演练：在设计时更改托管 WPF 元素的属性</span><span class="sxs-lookup"><span data-stu-id="b0d51-116">Walkthrough: Changing Properties of a Hosted WPF Element at Design Time</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
+ <span data-ttu-id="b0d51-117">显示 Windows 窗体设计器之间的工作流和[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]更改 WPF 控件的属性。</span><span class="sxs-lookup"><span data-stu-id="b0d51-117">Shows the workflow between the Windows Forms Designer and the [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] for changing properties on WPF controls.</span></span>  
   
- [演练：设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- 演示如何创建 Windows Presentation Foundation 控件，以便在基于 Windows 窗体的应用程序中使用。  
+ [<span data-ttu-id="b0d51-118">演练：在设计时在 Windows 窗体上新建 WPF 内容</span><span class="sxs-lookup"><span data-stu-id="b0d51-118">Walkthrough: Creating New WPF Content on Windows Forms at Design Time</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
+ <span data-ttu-id="b0d51-119">演示如何在基于 Windows 窗体的应用程序中创建使用 Windows Presentation Foundation 控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-119">Shows how to create a Windows Presentation Foundation control for use in your Windows Forms-based applications.</span></span>  
   
- [演练：将 ElementHost 控件复制并粘贴到单独的 Windows 窗体中](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- 演示如何将 Windows Presentation Foundation 控件从一个 Windows 窗体复制到另一个窗体。  
+ [<span data-ttu-id="b0d51-120">演练：将 ElementHost 控件复制并粘贴到各个 Windows 窗体中</span><span class="sxs-lookup"><span data-stu-id="b0d51-120">Walkthrough: Copying and Pasting an ElementHost Control into Separate Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
+ <span data-ttu-id="b0d51-121">演示如何将 Windows Presentation Foundation 控件从一个 Windows 窗体复制到另一个。</span><span class="sxs-lookup"><span data-stu-id="b0d51-121">Shows how to copy a Windows Presentation Foundation control from one Windows Form to another.</span></span>  
   
- [演练：设计时在 Windows 窗体上分配 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
- 演示如何选择要在窗体上显示的 Windows Presentation Foundation 控件类型。  
+ [<span data-ttu-id="b0d51-122">演练：在设计时在 Windows 窗体上分配 WPF 内容</span><span class="sxs-lookup"><span data-stu-id="b0d51-122">Walkthrough: Assigning WPF Content on Windows Forms at Design Time</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
+ <span data-ttu-id="b0d51-123">演示如何选择你想要在窗体上显示的 Windows Presentation Foundation 控件类型。</span><span class="sxs-lookup"><span data-stu-id="b0d51-123">Shows how to select the Windows Presentation Foundation control types you want to display on your form.</span></span>  
   
- [演练：设置 WPF 内容的样式](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
- 演示 Windows 窗体设计器和 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]之间的将样式应用到 Windows Presentation Foundation 控件的工作流。  
+ [<span data-ttu-id="b0d51-124">演练：设置 WPF 内容的样式</span><span class="sxs-lookup"><span data-stu-id="b0d51-124">Walkthrough: Styling WPF Content</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
+ <span data-ttu-id="b0d51-125">显示 Windows 窗体设计器之间的工作流和[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]用于将样式应用到 Windows Presentation Foundation 控件。</span><span class="sxs-lookup"><span data-stu-id="b0d51-125">Shows the workflow between the Windows Forms Designer and the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] for applying styles to Windows Presentation Foundation controls.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="b0d51-126">参考</span><span class="sxs-lookup"><span data-stu-id="b0d51-126">Reference</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
- 描述一个可用于在基于 Windows 窗体的应用程序中承载 Windows Presentation Foundation 控件的类。  
+ <span data-ttu-id="b0d51-127">介绍可以在基于 Windows 窗体的应用程序中使用到的主机 Windows Presentation Foundation 控件的类。</span><span class="sxs-lookup"><span data-stu-id="b0d51-127">Describes a class which you can use to host Windows Presentation Foundation controls in your Windows Forms-based applications.</span></span>  
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- 描述一个可用于在基于 Windows Presentation Foundation 的应用程序中承载 Windows 窗体控件的类。  
+ <span data-ttu-id="b0d51-128">介绍可以在基于 Windows Presentation Foundation 的应用程序中使用主机 Windows 窗体控件的类。</span><span class="sxs-lookup"><span data-stu-id="b0d51-128">Describes a class which you can use to host Windows Forms controls in your Windows Presentation Foundation-based application.</span></span>  
   
-## 相关章节  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- 描述 Windows Presentation Foundation 和 Windows 窗体技术之间的交互操作。  
+## <a name="related-sections"></a><span data-ttu-id="b0d51-129">相关章节</span><span class="sxs-lookup"><span data-stu-id="b0d51-129">Related Sections</span></span>  
+ [<span data-ttu-id="b0d51-130">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="b0d51-130">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ <span data-ttu-id="b0d51-131">介绍 Windows Presentation Foundation 和 Windows 窗体技术之间的互操作。</span><span class="sxs-lookup"><span data-stu-id="b0d51-131">Describes interoperation between the Windows Presentation Foundation and Windows Forms technologies.</span></span>  
   
- [WPF 设计器](http://msdn.microsoft.com/zh-cn/c6c65214-8411-4e16-b254-163ed4099c26)  
- 描述如何在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中设计 Windows Presentation Foundation 控件。
+ [<span data-ttu-id="b0d51-132">WPF 设计器</span><span class="sxs-lookup"><span data-stu-id="b0d51-132">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ <span data-ttu-id="b0d51-133">描述如何设计中的 Windows Presentation Foundation 控件[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="b0d51-133">Describes how to design Windows Presentation Foundation controls in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>

@@ -1,35 +1,38 @@
 ---
-title: "1405 - OpenTimeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1405 - OpenTimeout
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45470cf9-b84c-4e5e-86e2-2eb7722cbc1a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6899f09bbed50e22a5b693c0ccb075129a0f26c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 1405 - OpenTimeout
-## 属性  
+# <a name="1405---opentimeout"></a><span data-ttu-id="8763a-102">1405 - OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="8763a-102">1405 - OpenTimeout</span></span>
+## <a name="properties"></a><span data-ttu-id="8763a-103">属性</span><span class="sxs-lookup"><span data-stu-id="8763a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1405|  
-|关键字|ServiceModel|  
-|级别|错误|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="8763a-104">ID</span><span class="sxs-lookup"><span data-stu-id="8763a-104">ID</span></span>|<span data-ttu-id="8763a-105">1405</span><span class="sxs-lookup"><span data-stu-id="8763a-105">1405</span></span>|  
+|<span data-ttu-id="8763a-106">关键字</span><span class="sxs-lookup"><span data-stu-id="8763a-106">Keywords</span></span>|<span data-ttu-id="8763a-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8763a-107">ServiceModel</span></span>|  
+|<span data-ttu-id="8763a-108">级别</span><span class="sxs-lookup"><span data-stu-id="8763a-108">Level</span></span>|<span data-ttu-id="8763a-109">错误</span><span class="sxs-lookup"><span data-stu-id="8763a-109">Error</span></span>|  
+|<span data-ttu-id="8763a-110">通道</span><span class="sxs-lookup"><span data-stu-id="8763a-110">Channel</span></span>|<span data-ttu-id="8763a-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="8763a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 出现打开超时时发出此事件。  
+## <a name="description"></a><span data-ttu-id="8763a-112">描述</span><span class="sxs-lookup"><span data-stu-id="8763a-112">Description</span></span>  
+ <span data-ttu-id="8763a-113">出现打开超时时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="8763a-113">This event is emitted on open timeout.</span></span>  
   
-## 消息  
- 1%  
+## <a name="message"></a><span data-ttu-id="8763a-114">消息</span><span class="sxs-lookup"><span data-stu-id="8763a-114">Message</span></span>  
+ <span data-ttu-id="8763a-115">1%</span><span class="sxs-lookup"><span data-stu-id="8763a-115">1%</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="8763a-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="8763a-116">Details</span></span>

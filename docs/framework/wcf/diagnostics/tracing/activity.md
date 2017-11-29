@@ -1,112 +1,115 @@
 ---
-title: "活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e6e97bf935d37f9a39569190b7393a47a54781a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 活动
-本主题介绍 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动跟踪。活动是帮助用户缩小故障范围的处理单位。在同一活动中发生的错误直接相关。例如，消息解密失败可导致操作失败。操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
+# <a name="activity"></a><span data-ttu-id="23645-102">活动</span><span class="sxs-lookup"><span data-stu-id="23645-102">Activity</span></span>
+<span data-ttu-id="23645-103">本主题介绍 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-103">This topic describes activity traces in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] tracing model.</span></span> <span data-ttu-id="23645-104">活动是帮助用户缩小故障范围的处理单位。</span><span class="sxs-lookup"><span data-stu-id="23645-104">Activities are processing units that help the user narrow down the scope of a failure.</span></span> <span data-ttu-id="23645-105">在同一活动中发生的错误直接相关。</span><span class="sxs-lookup"><span data-stu-id="23645-105">Errors that occur in the same activity are directly related.</span></span> <span data-ttu-id="23645-106">例如，消息解密失败可导致操作失败。</span><span class="sxs-lookup"><span data-stu-id="23645-106">For example, an operation fails because message decryption has failed.</span></span> <span data-ttu-id="23645-107">操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。</span><span class="sxs-lookup"><span data-stu-id="23645-107">The traces for both the operation and message decryption failure appear in the same activity, showing direct correlation between the decryption error and the request error.</span></span>  
   
-## 配置活动跟踪  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 提供了用于处理应用程序的预定义活动（请参见[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)）。您还可以用编程方式定义活动，以便对用户跟踪进行分组。有关更多信息，请参见[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+## <a name="configuring-activity-tracing"></a><span data-ttu-id="23645-108">配置活动跟踪</span><span class="sxs-lookup"><span data-stu-id="23645-108">Configuring Activity Tracing</span></span>  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="23645-109">提供预定义的活动，用于处理应用程序 (请参阅[活动列表](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。</span><span class="sxs-lookup"><span data-stu-id="23645-109"> provides pre-defined activities for processing applications (see [Activity List](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)).</span></span> <span data-ttu-id="23645-110">您还可以用编程方式定义活动，以便对用户跟踪进行分组。</span><span class="sxs-lookup"><span data-stu-id="23645-110">You can also define activities programmatically to group user traces.</span></span> <span data-ttu-id="23645-111">有关详细信息，请参阅[发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。</span><span class="sxs-lookup"><span data-stu-id="23645-111">For more information, see [Emitting User-Code Traces](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).</span></span>  
   
- 若要在运行时发出活动跟踪，请对 `System.ServiceModel` 跟踪源或其他 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 或自定义跟踪源使用 `ActivityTracing` 设置，如下面的配置代码所示。  
+ <span data-ttu-id="23645-112">若要在运行时发出活动跟踪，请对 `ActivityTracing` 跟踪源或其他 `System.ServiceModel` 或自定义跟踪源使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 设置，如下面的配置代码所示。</span><span class="sxs-lookup"><span data-stu-id="23645-112">To emit activity traces at run time, use the `ActivityTracing` setting for the `System.ServiceModel` trace source, or other [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] or custom trace sources, as demonstrated by the following configuration code.</span></span>  
   
-```  
+```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
- 若要了解有关所使用的配置元素和属性的更多信息，请参见[配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题。  
+ <span data-ttu-id="23645-113">若要了解有关配置元素，并正在使用的特性的详细信息，请参阅[配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题。</span><span class="sxs-lookup"><span data-stu-id="23645-113">To understand more about the configuration element and attributes being used, see the [Configuring Tracing](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) topic.</span></span>  
   
-## 查看活动  
- 可以在[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)中查看活动及其效用。启用 ActivityTracing 后，此工具将获得跟踪并基于活动对它们进行分类。您还可以查看跟踪传输。跟踪传输指示不同的活动如何互相关联。您可以看到某个特定活动导致另外一个活动启动。例如，消息请求可启动安全握手以获取安全对话令牌。  
+## <a name="viewing-activities"></a><span data-ttu-id="23645-114">查看活动</span><span class="sxs-lookup"><span data-stu-id="23645-114">Viewing Activities</span></span>  
+ <span data-ttu-id="23645-115">你可以查看的活动，并且在其实用工具[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="23645-115">You can view the activities and their utility in the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="23645-116">启用 ActivityTracing 后，此工具将获得跟踪并基于活动对它们进行分类。</span><span class="sxs-lookup"><span data-stu-id="23645-116">When ActivityTracing is enabled, this tool takes the traces and sorts them based on activity.</span></span> <span data-ttu-id="23645-117">您还可以查看跟踪传输。</span><span class="sxs-lookup"><span data-stu-id="23645-117">You can also see trace transfers.</span></span> <span data-ttu-id="23645-118">跟踪传输指示不同的活动如何互相关联。</span><span class="sxs-lookup"><span data-stu-id="23645-118">A trace transfer indicates how different activities are related to each other.</span></span> <span data-ttu-id="23645-119">您可以看到某个特定活动导致另外一个活动启动。</span><span class="sxs-lookup"><span data-stu-id="23645-119">You can see that a particular activity caused another to start.</span></span> <span data-ttu-id="23645-120">例如，消息请求可启动安全握手以获取安全对话令牌。</span><span class="sxs-lookup"><span data-stu-id="23645-120">For example, a message request started a security handshake to get a Secure Conversation Token.</span></span>  
   
-### 在服务跟踪查看器中关联活动  
- 服务跟踪查看器工具提供了两个活动视图：  
+### <a name="correlating-activities-in-service-trace-viewer"></a><span data-ttu-id="23645-121">在服务跟踪查看器中关联活动</span><span class="sxs-lookup"><span data-stu-id="23645-121">Correlating Activities in Service Trace Viewer</span></span>  
+ <span data-ttu-id="23645-122">服务跟踪查看器工具提供了两个活动视图：</span><span class="sxs-lookup"><span data-stu-id="23645-122">The Service Trace Viewer tool provides two views of activities:</span></span>  
   
--   **“列表”**视图，其中，活动 ID 用于跨进程直接将跟踪相互关联。来自不同进程（例如，客户端和服务），但具有相同活动 ID 的跟踪被分组到同一活动中。因此，如果在服务上发生一个错误，然后该错误又导致客户端上发生错误，那么这两个错误都将出现在该工具的同一活动视图中。  
+-   <span data-ttu-id="23645-123">**列表**视图，其中的活动 ID 用于直接在进程之间关联跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-123">**List** view, where the activity ID is used to directly correlate traces across processes.</span></span> <span data-ttu-id="23645-124">来自不同进程（例如客户端和服务）但具有相同活动 ID 的跟踪被分组到同一活动中。</span><span class="sxs-lookup"><span data-stu-id="23645-124">Traces from different processes, for example, client and service, but with the same activity ID are grouped in the same activity.</span></span> <span data-ttu-id="23645-125">因此，如果在服务上发生一个错误，然后该错误又导致客户端上发生错误，那么这两个错误都将出现在该工具的同一活动视图中。</span><span class="sxs-lookup"><span data-stu-id="23645-125">Therefore, an error occurring on the service which then causes an error on the client will both show up in the same activity view in the tool.</span></span>  
   
--   **“图形”**视图，其中，活动按进程分组。在此视图中，具有相同活动 ID 的客户端和服务的跟踪位于不同的活动中。为了将位于不同进程但具有相同活动 ID 的活动相互关联，该工具显示了跨越相关活动的消息流。  
+-   <span data-ttu-id="23645-126">**关系图**视图中，活动按进程分组。</span><span class="sxs-lookup"><span data-stu-id="23645-126">**Graph** view, where activities are grouped by processes.</span></span> <span data-ttu-id="23645-127">在此视图中，具有相同活动 ID 的客户端和服务的跟踪位于不同的活动中。</span><span class="sxs-lookup"><span data-stu-id="23645-127">In this view, a client and service with the same activity ID have their traces in different activities.</span></span> <span data-ttu-id="23645-128">为了将位于不同进程但具有相同活动 ID 的活动相互关联，该工具显示了跨越相关活动的消息流。</span><span class="sxs-lookup"><span data-stu-id="23645-128">To correlate activities with the same activity ID in different processes, the tool shows message flows across the related activities.</span></span>  
   
- 有关更多信息以及服务跟踪查看器工具的图形视图，请参见[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)和[使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ <span data-ttu-id="23645-129">有关详细信息，并查看服务跟踪查看器工具的图形视图，请参阅[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)和[使用服务跟踪查看器查看相关跟踪和故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。</span><span class="sxs-lookup"><span data-stu-id="23645-129">For more information, and to see a graphical view of the Service Trace Viewer tool, see [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) and [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).</span></span>  
   
-## 定义活动范围  
- 活动是在设计时定义的，并且表示一个逻辑工作单元。所发出的具有相同活动标识符的跟踪直接相关，它们都属于同一个活动。因为一个活动可能跨越终结点边界（例如请求），因此为活动定义两个范围。  
+## <a name="defining-the-scope-of-an-activity"></a><span data-ttu-id="23645-130">定义活动范围</span><span class="sxs-lookup"><span data-stu-id="23645-130">Defining the Scope of an Activity</span></span>  
+ <span data-ttu-id="23645-131">活动是在设计时定义的，并且表示一个逻辑工作单元。</span><span class="sxs-lookup"><span data-stu-id="23645-131">An activity is defined at design time and denotes a logical unit of work.</span></span> <span data-ttu-id="23645-132">所发出的具有相同活动标识符的跟踪直接相关，它们都属于同一个活动。</span><span class="sxs-lookup"><span data-stu-id="23645-132">Emitted traces with the same activity identifier are directly related, they are part of the same activity.</span></span> <span data-ttu-id="23645-133">因为一个活动可能跨越终结点边界（请求），所以为活动定义两个范围。</span><span class="sxs-lookup"><span data-stu-id="23645-133">Because an activity can cross endpoint boundaries (a request), two scopes for an activity are defined.</span></span>  
   
--   `Global` 范围，限于每个应用程序。在此范围中，活动由其 128 位全局唯一活动标识符 gAId 进行标识。gAid 是跨越终结点传播的内容。  
+-   <span data-ttu-id="23645-134">`Global` 范围，限于每个应用程序。</span><span class="sxs-lookup"><span data-stu-id="23645-134">`Global` scope, per application.</span></span> <span data-ttu-id="23645-135">在此范围中，活动由其 128 位全局唯一活动标识符 gAId 进行标识。</span><span class="sxs-lookup"><span data-stu-id="23645-135">In this scope, the activity is identified by its 128-bit globally unique activity identifier, the gAId.</span></span> <span data-ttu-id="23645-136">gAid 是跨越终结点传播的内容。</span><span class="sxs-lookup"><span data-stu-id="23645-136">The gAid is what is propagated across endpoints.</span></span>  
   
--   以终结点为边界的 `Local` 范围。在此范围中，活动由它的 gAId 以及发出活动跟踪的跟踪源名称和进程 ID 标识。这三部分内容构成了本地活动 ID，即 lAId。lAId 用于定义活动的（本地）边界。  
+-   <span data-ttu-id="23645-137">以终结点为边界的 `Local` 范围。</span><span class="sxs-lookup"><span data-stu-id="23645-137">`Local` scope, per endpoint.</span></span> <span data-ttu-id="23645-138">在此范围中，活动由它的 gAId 以及发出活动跟踪的跟踪源名称和进程 ID 标识。这三部分内容构成了本地活动 ID，即 lAId。</span><span class="sxs-lookup"><span data-stu-id="23645-138">In this scope, the activity is identified by its gAId, along with the trace source name emitting the activity traces and the process Id. This triplet constitutes the local activity id, lAId.</span></span> <span data-ttu-id="23645-139">lAId 用于定义活动的（本地）边界。</span><span class="sxs-lookup"><span data-stu-id="23645-139">The lAId is used to define the (local) boundaries of an activity.</span></span>  
   
-## 跟踪架构  
- 可以使用任何架构以及跨 Microsoft 平台发出跟踪。“e2e”（表示“端到端”）是一种常用的架构。此架构包含一个 128 位标识符 \(gAId\)、跟踪源名称和进程 ID。在托管代码中，<xref:System.Diagnostics.XmlWriterTraceListener> 可在 E2E 架构中发出跟踪。  
+## <a name="trace-schema"></a><span data-ttu-id="23645-140">跟踪架构</span><span class="sxs-lookup"><span data-stu-id="23645-140">Trace Schema</span></span>  
+ <span data-ttu-id="23645-141">可以使用任何架构以及跨 Microsoft 平台发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-141">Traces can be emitted using any schema, and across Microsoft platforms.</span></span> <span data-ttu-id="23645-142">"e2e"（表示"端到端"） 是一个常用的架构。</span><span class="sxs-lookup"><span data-stu-id="23645-142">"e2e" (for "End to End") is a commonly used schema.</span></span> <span data-ttu-id="23645-143">此架构包含一个 128 位标识符 (gAId)、跟踪源名称和进程 ID。</span><span class="sxs-lookup"><span data-stu-id="23645-143">This schema includes a 128 bit identifier (gAId), the trace source name, and process ID.</span></span> <span data-ttu-id="23645-144">在托管代码中，<xref:System.Diagnostics.XmlWriterTraceListener> 可在 E2E 架构中发出跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-144">In managed code, <xref:System.Diagnostics.XmlWriterTraceListener> emits traces in the E2E schema.</span></span>  
   
- 开发人员可以通过使用线程本地存储 \(TLS\) 上的 Guid 设置 <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> 属性来设置随跟踪发出的 AID。下面的示例对此进行说明。  
+ <span data-ttu-id="23645-145">开发人员可以通过使用线程本地存储 (TLS) 上的 Guid 设置 <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> 属性来设置随跟踪发出的 AID。</span><span class="sxs-lookup"><span data-stu-id="23645-145">Developers can set the AID that is emitted with a trace by setting the <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> property with a Guid on Thread Local Storage (TLS).</span></span> <span data-ttu-id="23645-146">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="23645-146">The following example demonstrates this.</span></span>  
   
 ```  
 // set the current Activity ID to a new GUID.  
 CorrelationManager.ActivityId = Guid.NewGuid();  
 ```  
   
- 使用跟踪源发出跟踪时，设置 TLS 中的 gAId 非常简单，如下面的示例所示。  
+ <span data-ttu-id="23645-147">使用跟踪源发出跟踪时，设置 TLS 中的 gAId 非常简单，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="23645-147">Setting the gAId in TLS will be evident when traces are emitted using a trace source, as shown by the following example.</span></span>  
   
 ```  
 TraceSource traceSource = new TraceSource("myTraceSource");  
 traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");  
 ```  
   
- 发出的跟踪将包含当前 TLS 中的 gAId、作为参数传递给跟踪源构造函数的跟踪源名称和当前进程的 ID。  
+ <span data-ttu-id="23645-148">发出的跟踪将包含当前 TLS 中的 gAId、作为参数传递给跟踪源构造函数的跟踪源名称和当前进程的 ID。</span><span class="sxs-lookup"><span data-stu-id="23645-148">The trace emitted will contain the gAId currently in TLS, the trace source name passed as a parameter to the trace source’s constructor, and the current process’s ID.</span></span>  
   
-## 活动生存期  
- 用最严格的术语表述，活动的证据从第一次在发出的跟踪中使用活动 ID 时开始，到最后一次在发出的跟踪中使用活动 ID 时结束。<xref:System.Diagnostics> 提供了一组预定义的跟踪类型（包括“开始”和“停止”），以便显式标记活动生存期边界。  
+## <a name="activity-lifetime"></a><span data-ttu-id="23645-149">活动生存期</span><span class="sxs-lookup"><span data-stu-id="23645-149">Activity Lifetime</span></span>  
+ <span data-ttu-id="23645-150">用最严格的术语表述，活动的证据从第一次在发出的跟踪中使用活动 ID 时开始，到最后一次在发出的跟踪中使用活动 ID 时结束。</span><span class="sxs-lookup"><span data-stu-id="23645-150">In strictest terms, evidence of an activity starts the first time the activity ID is used in an emitted trace, and ends the last time it is used in an emitted trace.</span></span> <span data-ttu-id="23645-151"><xref:System.Diagnostics> 提供了一组预定义的跟踪类型（包括“开始”和“停止”），以便显式标记活动生存期边界。</span><span class="sxs-lookup"><span data-stu-id="23645-151">A predefined set of trace types are provided by <xref:System.Diagnostics>, including Start and Stop, to explicitly mark the activity lifetime boundaries.</span></span>  
   
--   开始：指示活动开始。“开始”跟踪提供开始一个新的处理里程碑的记录。它包含给定进程中给定跟踪源的新活动 ID，但是，当活动 ID 跨越终结点传播时除外 — 在这种情况下，我们会在每个终结点中看到一个“开始”跟踪。开始新活动的示例包括创建新的处理线程或进入新的公共方法。  
+-   <span data-ttu-id="23645-152">开始：指示活动开始。</span><span class="sxs-lookup"><span data-stu-id="23645-152">Start: Indicates the beginning of an activity.</span></span> <span data-ttu-id="23645-153">"开始"跟踪提供开始新的处理里程碑的记录。</span><span class="sxs-lookup"><span data-stu-id="23645-153">A "Start" trace provides a record of beginning a new processing milestone.</span></span> <span data-ttu-id="23645-154">它包含给定进程中给定跟踪源的新活动 ID，但是，当活动 ID 跨越终结点传播时除外 — 在这种情况下，我们会在每个终结点中看到一个“开始”跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-154">It contains a new activity ID for a given trace source in a given process, except when the activity ID is propagated across endpoints, in which case we see one "Start" per endpoint.</span></span> <span data-ttu-id="23645-155">开始新活动的示例包括创建新的处理线程或进入新的公共方法。</span><span class="sxs-lookup"><span data-stu-id="23645-155">Examples of starting a new activity include creating a new thread for processing, or entering a new public method.</span></span>  
   
--   停止：指示活动结束。“停止”跟踪提供结束现有处理里程碑的记录。它包含给定进程中给定跟踪源的现有活动 ID，但在终结点之间传播活动 ID 时除外。在这种情况下，我们会在每个终结点中看到一个“停止”跟踪。停止活动的示例包括终止处理线程或退出以“开始”跟踪表示开始的方法。  
+-   <span data-ttu-id="23645-156">停止：指示活动结束。</span><span class="sxs-lookup"><span data-stu-id="23645-156">Stop: Indicates the end of an activity.</span></span> <span data-ttu-id="23645-157">"停止"跟踪提供结束现有处理里程碑的记录。</span><span class="sxs-lookup"><span data-stu-id="23645-157">A "Stop" trace provides a record of ending an existing processing milestone.</span></span> <span data-ttu-id="23645-158">它包含给定进程中给定跟踪源的现有活动 ID，但在终结点之间传播活动 ID 时除外。在这种情况下，我们会在每个终结点中看到一个“停止”跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-158">It contains an existing activity ID for a given trace source in a given process, except when the activity ID is propagated across endpoints, in which case we see one "Stop" per endpoint.</span></span>  <span data-ttu-id="23645-159">停止活动的示例包括终止处理线程或退出使用"开始"跟踪表示开始的方法。</span><span class="sxs-lookup"><span data-stu-id="23645-159">Examples of stopping an activity include terminating a processing thread, or exiting a method whose beginning was denoted with a "Start" trace.</span></span>  
   
--   挂起：指示活动的处理已挂起。“挂起”跟踪包含一个现有活动 ID，其处理预期稍后将继续。在“挂起”和“恢复”事件之间，不会从当前跟踪源发出具有此 ID 的跟踪。示例包括调用外部库函数或等待资源（如 I\/O 完成端口）时暂停一个活动。  
+-   <span data-ttu-id="23645-160">挂起：指示活动的处理已挂起。</span><span class="sxs-lookup"><span data-stu-id="23645-160">Suspend: Indicates suspension of processing of an activity.</span></span> <span data-ttu-id="23645-161">"挂起"跟踪包含其处理预期在以后恢复一个现有活动 ID。</span><span class="sxs-lookup"><span data-stu-id="23645-161">A "Suspend" trace contains an existing activity ID whose processing is expected to resume at a later time.</span></span> <span data-ttu-id="23645-162">在“挂起”和“恢复”事件之间，不会从当前跟踪源发出具有此 ID 的跟踪。</span><span class="sxs-lookup"><span data-stu-id="23645-162">No traces are emitted with this ID between the Suspend and Resume events from the current trace source.</span></span> <span data-ttu-id="23645-163">示例包括调用外部库函数或等待资源（如 I/O 完成端口）时暂停一个活动。</span><span class="sxs-lookup"><span data-stu-id="23645-163">Examples include pausing an activity when calling into an external library function, or when waiting on a resource such as an I/O completion port.</span></span>  
   
--   恢复：指示继续处理活动。“恢复”跟踪包含一个现有活动 ID，从当前跟踪源发出的最后一个有关它的跟踪是“挂起”跟踪。示例包括从对外部库函数的调用返回或发出让资源（如 I\/O 完成端口）恢复处理的信号。  
+-   <span data-ttu-id="23645-164">恢复：指示继续处理活动。</span><span class="sxs-lookup"><span data-stu-id="23645-164">Resume: Indicates the resumption of processing of an activity.</span></span> <span data-ttu-id="23645-165">"恢复"跟踪包含当前跟踪源从其最后一个发出的跟踪是"挂起"跟踪一个现有活动 id。</span><span class="sxs-lookup"><span data-stu-id="23645-165">A "Resume" trace contains an existing activity id whose last emitted trace from the current trace source was a "Suspend" trace.</span></span> <span data-ttu-id="23645-166">示例包括从对外部库函数的调用返回或发出让资源（如 I/O 完成端口）恢复处理的信号。</span><span class="sxs-lookup"><span data-stu-id="23645-166">Examples include returning from a call to an external library function, or when signaled to resume processing by a resource such as an I/O completion port.</span></span>  
   
--   转换：因为一些活动是由其他活动导致的或与其他活动相关，所以可以通过“转换”跟踪将活动相互关联。转换跟踪记录了活动之间的定向关系。  
+-   <span data-ttu-id="23645-167">传输： 因为一些活动由其他人，或与其他相关，可以将相关的活动通过"转换"跟踪其他活动。</span><span class="sxs-lookup"><span data-stu-id="23645-167">Transfer: Because some activities are caused by others, or relate to others, activities can be related to other activities through "Transfer" traces.</span></span> <span data-ttu-id="23645-168">转换跟踪记录了活动之间的定向关系。</span><span class="sxs-lookup"><span data-stu-id="23645-168">A transfer records the directed relationship of one activity to another</span></span>  
   
- “开始”和“停止”跟踪并不是关联所必需的。然而，它们可以帮助提高性能、分析和验证活动范围。  
+ <span data-ttu-id="23645-169">“开始”和“停止”跟踪并不是关联所必需的。</span><span class="sxs-lookup"><span data-stu-id="23645-169">Start and Stop traces are not critical for correlation.</span></span> <span data-ttu-id="23645-170">然而，它们可以帮助提高性能、分析和验证活动范围。</span><span class="sxs-lookup"><span data-stu-id="23645-170">However, they can help in increasing performance, profiling, and activity scope validation.</span></span>  
   
- 使用这些类型时，工具可以优化跟踪日志的导航以查找同一活动的直接相关事件，或者如果工具追踪传输跟踪，可查找相关活动中的事件。例如，当工具遇到开始\/停止跟踪时，将停止分析给定活动的日志。  
+ <span data-ttu-id="23645-171">使用这些类型时，工具可以优化跟踪日志的导航以查找同一活动的直接相关事件，或者如果工具追踪传输跟踪，可查找相关活动中的事件。</span><span class="sxs-lookup"><span data-stu-id="23645-171">Using these types, the tools can optimize navigating the trace logs to find the immediately related events of the same activity, or events in related activities if the tool follows transfer traces.</span></span> <span data-ttu-id="23645-172">例如，当工具遇到开始/停止跟踪时，将停止分析给定活动的日志。</span><span class="sxs-lookup"><span data-stu-id="23645-172">For example, the tools will stop parsing the logs for a given activity when they see a Start/Stop trace.</span></span>  
   
- 这些跟踪类型也可以用于分析。在开始和停止标记之间消耗的资源表示活动的全部时间，包括所包含的逻辑活动时间。减去“挂起”和“恢复”跟踪之间的时间间隔就得到实际活动时间。  
+ <span data-ttu-id="23645-173">这些跟踪类型也可以用于分析。</span><span class="sxs-lookup"><span data-stu-id="23645-173">These trace types can also be used for profiling.</span></span> <span data-ttu-id="23645-174">在开始和停止标记之间消耗的资源表示活动的全部时间，包括所包含的逻辑活动时间。</span><span class="sxs-lookup"><span data-stu-id="23645-174">Resources consumed between the start and stop markers represent the activity’s inclusive time including contained logical activities.</span></span> <span data-ttu-id="23645-175">减去“挂起”和“恢复”跟踪之间的时间间隔就得到实际活动时间。</span><span class="sxs-lookup"><span data-stu-id="23645-175">Subtracting the time intervals between the Suspend and Resume traces provides the actual activity time.</span></span>  
   
- “停止”跟踪还对验证已实现活动的范围特别有用。如果某些处理跟踪出现在停止跟踪之后，而不是出现在给定活动之内，这可能暗示代码有缺陷。  
+ <span data-ttu-id="23645-176">“停止”跟踪还对验证已实现活动的范围特别有用。</span><span class="sxs-lookup"><span data-stu-id="23645-176">The Stop trace is also particularly useful for validating the scope of the implemented activities.</span></span> <span data-ttu-id="23645-177">如果某些处理跟踪出现在停止跟踪之后，而不是出现在给定活动之内，这可能暗示代码有缺陷。</span><span class="sxs-lookup"><span data-stu-id="23645-177">If some processing traces appear after the Stop trace instead of inside a given activity, this can suggests code defect.</span></span>  
   
-## 活动跟踪使用指南  
- 以下是使用 ActivityTracing 跟踪（开始、停止、挂起、恢复和转换）的指南。  
+## <a name="guidelines-for-using-activity-tracing"></a><span data-ttu-id="23645-178">活动跟踪使用指南</span><span class="sxs-lookup"><span data-stu-id="23645-178">Guidelines for Using Activity Tracing</span></span>  
+ <span data-ttu-id="23645-179">以下是使用 ActivityTracing 跟踪（开始、停止、挂起、恢复和转换）的指南。</span><span class="sxs-lookup"><span data-stu-id="23645-179">The following is a guideline of using ActivityTracing traces (Start, Stop, Suspend, Resume, and Transfer).</span></span>  
   
--   跟踪是一个定向循环图，而不是树。可以将控制返回到生成活动的活动。  
+-   <span data-ttu-id="23645-180">跟踪是一个定向循环图，而不是树。</span><span class="sxs-lookup"><span data-stu-id="23645-180">Tracing is a directed cyclic graph, not a tree.</span></span> <span data-ttu-id="23645-181">可以将控制返回到生成活动的活动。</span><span class="sxs-lookup"><span data-stu-id="23645-181">You can return control to an activity which spawned an activity.</span></span>  
   
--   活动表示一个处理边界，该边界对于系统管理员可能很有意义，或者可以用来实现可支持性。  
+-   <span data-ttu-id="23645-182">活动表示一个处理边界，该边界对于系统管理员可能很有意义，或者可以用来实现可支持性。</span><span class="sxs-lookup"><span data-stu-id="23645-182">An activity denotes a processing boundary which can be meaningful to the administrator of the system or for supportability.</span></span>  
   
--   无论是在客户端上还是在服务器上，每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 方法都由开始一个新活动、然后（工作完成后）结束该新活动并返回到环境活动来限定。  
+-   <span data-ttu-id="23645-183">无论是在客户端上还是在服务器上，每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 方法都由开始一个新活动、然后（工作完成后）结束该新活动并返回到环境活动来限定。</span><span class="sxs-lookup"><span data-stu-id="23645-183">Each [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] method, both on the client and server, is bounded by beginning a new activity, then (after work is done) ending the new activity and returning to the ambient activity.</span></span>  
   
--   长时间运行（正在运行）的活动（例如，侦听连接或等待消息）由相应的开始\/停止标记表示。  
+-   <span data-ttu-id="23645-184">长时间运行（正在运行）的活动（例如，侦听连接或等待消息）由相应的开始/停止标记表示。</span><span class="sxs-lookup"><span data-stu-id="23645-184">Long running (ongoing) activities such as listening for connections or waiting for messages are represented by corresponding start/stop markers.</span></span>  
   
--   由接收或处理消息触发的活动由跟踪边界来表示。  
+-   <span data-ttu-id="23645-185">由接收或处理消息触发的活动由跟踪边界来表示。</span><span class="sxs-lookup"><span data-stu-id="23645-185">Activities triggered by the receipt or processing of a message are represented by trace boundaries.</span></span>  
   
--   活动表示的是活动本身，而未必是对象。应该将活动理解为“这是在 ...（发出有意义的跟踪）时发生的”。  
+-   <span data-ttu-id="23645-186">活动表示的是活动本身，而未必是对象。</span><span class="sxs-lookup"><span data-stu-id="23645-186">Activities represent activities, not necessarily objects.</span></span> <span data-ttu-id="23645-187">活动应被视为"这时。</span><span class="sxs-lookup"><span data-stu-id="23645-187">An activity should be interpreted as "this was happening when .</span></span> <span data-ttu-id="23645-188">.</span><span class="sxs-lookup"><span data-stu-id="23645-188">.</span></span> <span data-ttu-id="23645-189">。</span><span class="sxs-lookup"><span data-stu-id="23645-189">.</span></span> <span data-ttu-id="23645-190">（发出有意义的跟踪）时发生的”。</span><span class="sxs-lookup"><span data-stu-id="23645-190">(meaningful trace emission occurred)."</span></span>  
   
-## 请参阅  
- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)   
- [使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)   
- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)   
- [服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)   
- [发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a><span data-ttu-id="23645-191">另请参阅</span><span class="sxs-lookup"><span data-stu-id="23645-191">See Also</span></span>  
+ [<span data-ttu-id="23645-192">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="23645-192">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="23645-193">使用服务跟踪查看器查看相关跟踪和进行故障排除</span><span class="sxs-lookup"><span data-stu-id="23645-193">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="23645-194">端到端跟踪方案</span><span class="sxs-lookup"><span data-stu-id="23645-194">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="23645-195">服务跟踪查看器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="23645-195">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [<span data-ttu-id="23645-196">发出用户代码跟踪</span><span class="sxs-lookup"><span data-stu-id="23645-196">Emitting User-Code Traces</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

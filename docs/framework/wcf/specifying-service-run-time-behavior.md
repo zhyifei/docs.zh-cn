@@ -1,129 +1,135 @@
 ---
-title: "指定服务运行时行为 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定服务运行时行为"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f37259a971ab20cf68776ac9889615929996ad00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 指定服务运行时行为
-在已经设计（[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。[!INCLUDE[crabout](../../../includes/crabout-md.md)]配置服务应用程序，请参阅[正在配置服务](../../../docs/framework/wcf/configuring-services.md)。  
+# <a name="specifying-service-run-time-behavior"></a><span data-ttu-id="00add-102">指定服务运行时行为</span><span class="sxs-lookup"><span data-stu-id="00add-102">Specifying Service Run-Time Behavior</span></span>
+<span data-ttu-id="00add-103">在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。</span><span class="sxs-lookup"><span data-stu-id="00add-103">Once you have designed a service contract ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) and implemented your service contract ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) you can configure the operation behavior of the service runtime.</span></span> <span data-ttu-id="00add-104">本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。</span><span class="sxs-lookup"><span data-stu-id="00add-104">This topic discusses system-provided service and operation behaviors and describes where to find more information to create new behaviors.</span></span> <span data-ttu-id="00add-105">尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。</span><span class="sxs-lookup"><span data-stu-id="00add-105">While some behaviors are applied as attributes, many are applied using an application configuration file or programmatically.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="00add-106"> 配置服务应用程序，请参阅 [Configuring Services](../../../docs/framework/wcf/configuring-services.md)。</span><span class="sxs-lookup"><span data-stu-id="00add-106"> configuring your service application, see [Configuring Services](../../../docs/framework/wcf/configuring-services.md).</span></span>  
   
-## 概述  
- 协定定义相应类型的服务的输入、输出、数据类型和功能。 实现一个服务协定将会创建一个类，当使用某个地址的绑定对该类进行配置时，该类会满足其实现的协定。 客户端了解协定、绑定和地址信息等所有信息，如果没有它们，客户端将不能使用相应服务。  
+## <a name="overview"></a><span data-ttu-id="00add-107">概述</span><span class="sxs-lookup"><span data-stu-id="00add-107">Overview</span></span>  
+ <span data-ttu-id="00add-108">协定定义相应类型的服务的输入、输出、数据类型和功能。</span><span class="sxs-lookup"><span data-stu-id="00add-108">The contract defines the inputs, outputs, data types, and capabilities of a service of that type.</span></span> <span data-ttu-id="00add-109">实现一个服务协定将会创建一个类，当使用某个地址的绑定对该类进行配置时，该类会满足其实现的协定。</span><span class="sxs-lookup"><span data-stu-id="00add-109">Implementing a service contract creates a class that, when configured with a binding at an address, fulfills the contract it implements.</span></span> <span data-ttu-id="00add-110">客户端了解协定、绑定和地址信息等所有信息，如果没有它们，客户端将不能使用相应服务。</span><span class="sxs-lookup"><span data-stu-id="00add-110">Contractual, binding, and address information are all known by the client; without them, the client cannot make use of the service.</span></span>  
   
- 但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。 在已实现服务协定之后，就可以使用行为配置大量操作特征。 行为是一些对象，可通过设置运行时属性或通过在运行时中插入自定义类型来修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 运行时。[!INCLUDE[crabout](../../../includes/crabout-md.md)]通过创建用户定义的行为来修改运行时，请参阅[扩展 ServiceHost 和服务模块层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ <span data-ttu-id="00add-111">但是，操作详细信息（例如，线程处理问题或实例管理）对客户端是不透明的。</span><span class="sxs-lookup"><span data-stu-id="00add-111">However, operation specifics, such as threading issues or instance management, are opaque to clients.</span></span> <span data-ttu-id="00add-112">在已实现服务协定之后，就可以使用行为 配置大量操作特征。</span><span class="sxs-lookup"><span data-stu-id="00add-112">Once you have implemented your service contract, you can configure a large number of operation characteristics by using *behaviors*.</span></span> <span data-ttu-id="00add-113">行为是一些对象，可通过设置运行时属性或通过在运行时中插入自定义类型来修改 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 运行时。</span><span class="sxs-lookup"><span data-stu-id="00add-113">Behaviors are objects that modify the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] runtime by either setting a runtime property or by inserting a customization type into the runtime.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="00add-114"> 通过创建用户定义的行为来修改运行时，请参阅 [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。</span><span class="sxs-lookup"><span data-stu-id="00add-114"> modifying the runtime by creating user-defined behaviors, see [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=fullName> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=fullName> 属性是用途最广泛的行为，公开了最常请求的操作功能。 因为它们是属性，所以应将其应用于服务或操作实现。 其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=fullName>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。  
+ <span data-ttu-id="00add-115"><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 和 <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性是用途最广泛的行为，公开了最常请求的操作功能。</span><span class="sxs-lookup"><span data-stu-id="00add-115">The <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> and <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> attributes are the most widely useful behaviors and expose the most commonly requested operation features.</span></span> <span data-ttu-id="00add-116">因为它们是属性，所以应将其应用于服务或操作实现。</span><span class="sxs-lookup"><span data-stu-id="00add-116">Because they are attributes, you apply them to the service or operation implementation.</span></span> <span data-ttu-id="00add-117">其他行为（例如，<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>）通常是使用应用程序配置文件进行应用的，但可以以编程方式使用它们。</span><span class="sxs-lookup"><span data-stu-id="00add-117">Other behaviors, such as the <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, are typically applied using an application configuration file, although you can use them programmatically.</span></span>  
   
- 本主题提供 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性的概述，描述行为可以操作的不同范围，并为很多系统提供的不同范围的行为（[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 开发人员可能此感兴趣）提供快速说明。  
+ <span data-ttu-id="00add-118">本主题提供 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性的概述，描述行为可以操作的不同范围，并为很多系统提供的不同范围的行为（ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 开发人员可能此感兴趣）提供快速说明。</span><span class="sxs-lookup"><span data-stu-id="00add-118">This topic provides an overview of the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes, describes the various scopes at which behaviors can operate, and provides a quick description of many of the system-provided behaviors at the various scopes that may be of interest to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] developers.</span></span>  
   
-## ServiceBehaviorAttribute 和 OperationBehaviorAttribute  
- 最重要的行为是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性，可以使用这两个属性来控制以下各项：  
+## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a><span data-ttu-id="00add-119">ServiceBehaviorAttribute 和 OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="00add-119">ServiceBehaviorAttribute and OperationBehaviorAttribute</span></span>  
+ <span data-ttu-id="00add-120">最重要的行为是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性，可以使用这两个属性来控制以下各项：</span><span class="sxs-lookup"><span data-stu-id="00add-120">The most important behaviors are the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes, which you can use to control:</span></span>  
   
--   实例生存期  
+-   <span data-ttu-id="00add-121">实例生存期</span><span class="sxs-lookup"><span data-stu-id="00add-121">Instance lifetimes</span></span>  
   
--   并发和同步支持  
+-   <span data-ttu-id="00add-122">并发和同步支持</span><span class="sxs-lookup"><span data-stu-id="00add-122">Concurrency and synchronization support</span></span>  
   
--   配置行为  
+-   <span data-ttu-id="00add-123">配置行为</span><span class="sxs-lookup"><span data-stu-id="00add-123">Configuration behavior</span></span>  
   
--   事务行为  
+-   <span data-ttu-id="00add-124">事务行为</span><span class="sxs-lookup"><span data-stu-id="00add-124">Transaction behavior</span></span>  
   
--   序列化行为  
+-   <span data-ttu-id="00add-125">序列化行为</span><span class="sxs-lookup"><span data-stu-id="00add-125">Serialization behavior</span></span>  
   
--   元数据转换  
+-   <span data-ttu-id="00add-126">元数据转换</span><span class="sxs-lookup"><span data-stu-id="00add-126">Metadata transformation</span></span>  
   
--   会话生存期  
+-   <span data-ttu-id="00add-127">会话生存期</span><span class="sxs-lookup"><span data-stu-id="00add-127">Session lifetime</span></span>  
   
--   地址筛选和标头处理  
+-   <span data-ttu-id="00add-128">地址筛选和标头处理</span><span class="sxs-lookup"><span data-stu-id="00add-128">Address filtering and header processing</span></span>  
   
--   模拟  
+-   <span data-ttu-id="00add-129">模拟</span><span class="sxs-lookup"><span data-stu-id="00add-129">Impersonation</span></span>  
   
--   若要使用这些属性，请使用适合对应范围的属性来标记服务或操作实现并设置属性。 例如，下面的代码示例演示了一个操作实现，该实现使用 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=fullName> 属性来要求此操作的调用方支持模拟。  
+-   <span data-ttu-id="00add-130">若要使用这些属性，请使用适合对应范围的属性来标记服务或操作实现并设置属性。</span><span class="sxs-lookup"><span data-stu-id="00add-130">To use these attributes, mark the service or operation implementation with the attribute appropriate to that scope and set the properties.</span></span> <span data-ttu-id="00add-131">例如，下面的代码示例演示了一个操作实现，该实现使用 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> 属性来要求此操作的调用方支持模拟。</span><span class="sxs-lookup"><span data-stu-id="00add-131">For example, the following code example shows an operation implementation that uses the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> property to require that callers of this operation support impersonation.</span></span>  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
   
- 许多属性需要来自绑定的附加支持。 例如，要求来自客户端的事务的操作必须配置为使用支持流事务的绑定。  
+ <span data-ttu-id="00add-132">许多属性需要来自绑定的附加支持。</span><span class="sxs-lookup"><span data-stu-id="00add-132">Many of the properties require additional support from the binding.</span></span> <span data-ttu-id="00add-133">例如，要求来自客户端的事务的操作必须配置为使用支持流事务的绑定。</span><span class="sxs-lookup"><span data-stu-id="00add-133">For example, an operation that requires a transaction from the client must be configured to use a binding that supports flowed transactions.</span></span>  
   
-### 已知的单一实例服务  
- 可以使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性来控制某些生存期，包括 <xref:System.ServiceModel.InstanceContext> 的生存期和实现操作的服务对象的生存期。  
+### <a name="well-known-singleton-services"></a><span data-ttu-id="00add-134">已知的单一实例服务</span><span class="sxs-lookup"><span data-stu-id="00add-134">Well-Known Singleton Services</span></span>  
+ <span data-ttu-id="00add-135">可以使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性来控制某些生存期，包括 <xref:System.ServiceModel.InstanceContext> 的生存期和实现操作的服务对象的生存期。</span><span class="sxs-lookup"><span data-stu-id="00add-135">You can use the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes to control certain lifetimes, both of the <xref:System.ServiceModel.InstanceContext> and of the service objects that implement the operations.</span></span>  
   
- 例如，<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=fullName> 属性控制释放 <xref:System.ServiceModel.InstanceContext> 的频率，而 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=fullName> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=fullName> 属性控制释放服务对象的时间。  
+ <span data-ttu-id="00add-136">例如，<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性控制释放 <xref:System.ServiceModel.InstanceContext> 的频率，而 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> 属性控制释放服务对象的时间。</span><span class="sxs-lookup"><span data-stu-id="00add-136">For example, the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> property controls how often the <xref:System.ServiceModel.InstanceContext> is released, and the <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> and <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> properties control when the service object is released.</span></span>  
   
- 但是，也可以自己创建服务对象以及创建使用该对象的服务主机。 为此，您还必须将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=fullName> 属性设置为 <xref:System.ServiceModel.InstanceContextMode>，否则在打开该服务主机时将引发异常。  
+ <span data-ttu-id="00add-137">但是，也可以自己创建服务对象以及创建使用该对象的服务主机。</span><span class="sxs-lookup"><span data-stu-id="00add-137">However, you can also create a service object yourself and create the service host using that object.</span></span> <span data-ttu-id="00add-138">为此，您还必须将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.Single>，否则在打开该服务主机时将引发异常。</span><span class="sxs-lookup"><span data-stu-id="00add-138">To do so, you must also set the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.InstanceContextMode.Single> or an exception is thrown when the service host is opened.</span></span>  
   
- 可使用 [ServiceHost.ServiceHost\(Object, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=fullName> 构造函数创建此类服务。 当您希望提供一个特定的对象实例供单一实例服务使用时，可以使用它作为实现自定义 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=fullName> 的替代方法。 当服务实现类型难以构造时（例如，它没有实现默认的无参数的公共构造函数），可以使用此重载。  
+ <span data-ttu-id="00add-139">可使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 构造函数创建此类服务。</span><span class="sxs-lookup"><span data-stu-id="00add-139">Use the <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> constructor to create such a service.</span></span> <span data-ttu-id="00add-140">当您希望提供一个特定的对象实例供单一实例服务使用时，可以使用它作为实现自定义 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的替代方法。</span><span class="sxs-lookup"><span data-stu-id="00add-140">It provides an alternative to implementing a custom <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> when you wish to provide a specific object instance for use by a singleton service.</span></span> <span data-ttu-id="00add-141">当服务实现类型难以构造时（例如，它没有实现默认的无参数的公共构造函数），可以使用此重载。</span><span class="sxs-lookup"><span data-stu-id="00add-141">You can use this overload when your service implementation type is difficult to construct (for example, if it does not implement a default public constructor that has no parameters).</span></span>  
   
- 请注意，在为此构造函数提供对象时，一些与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 实例化行为相关的功能将有不同的工作方式。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=fullName> 没有任何效果。 同样，也将忽略所有其他实例释放机制。<xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=fullName> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode?displayProperty=fullName> 一样。  
+ <span data-ttu-id="00add-142">请注意，在为此构造函数提供对象时，一些与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 实例化行为相关的功能将有不同的工作方式。</span><span class="sxs-lookup"><span data-stu-id="00add-142">Note that when an object is provided to this constructor, some features related to the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] instancing behavior work differently.</span></span> <span data-ttu-id="00add-143">例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。</span><span class="sxs-lookup"><span data-stu-id="00add-143">For example, calling <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> has no effect when a well-known object instance is provided.</span></span> <span data-ttu-id="00add-144">同样，也将忽略所有其他实例释放机制。</span><span class="sxs-lookup"><span data-stu-id="00add-144">Similarly, any other instance release mechanism is ignored.</span></span> <span data-ttu-id="00add-145"><xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。</span><span class="sxs-lookup"><span data-stu-id="00add-145">The <xref:System.ServiceModel.ServiceHost> class always behaves as if the <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> property is set to <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> for all operations.</span></span>  
   
-## 其他服务、终结点、协定和操作行为  
- 服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。 例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=fullName> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode?displayProperty=fullName>，则必须自己在服务中的每个操作内处理线程同步问题。 终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。 协定行为在协定级别上运行，并且操作行为修改操作传递。  
+## <a name="other-service-endpoint-contract-and-operation-behaviors"></a><span data-ttu-id="00add-146">其他服务、终结点、协定和操作行为</span><span class="sxs-lookup"><span data-stu-id="00add-146">Other Service, Endpoint, Contract, and Operation Behaviors</span></span>  
+ <span data-ttu-id="00add-147">服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。</span><span class="sxs-lookup"><span data-stu-id="00add-147">Service behaviors, such as the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute, operate across an entire service.</span></span> <span data-ttu-id="00add-148">例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>，则必须自己在服务中的每个操作内处理线程同步问题。</span><span class="sxs-lookup"><span data-stu-id="00add-148">For example, if you set the <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> property to <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> you must handle thread synchronization issues inside each operation in that service yourself.</span></span> <span data-ttu-id="00add-149">终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。</span><span class="sxs-lookup"><span data-stu-id="00add-149">Endpoint behaviors operate across an endpoint; many of the system-provided endpoint behaviors are for client functionality.</span></span> <span data-ttu-id="00add-150">协定行为在协定级别上运行，并且操作行为修改操作传递。</span><span class="sxs-lookup"><span data-stu-id="00add-150">Contract behaviors operate at the contract level, and operation behaviors modify operation delivery.</span></span>  
   
- 许多这些行为在属性上进行实现，并且可以像操作 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性一样使用它们（通过将这些行为应用于相应的服务类或操作实现）。 其他行为（如 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 对象）通常使用应用程序配置文件进行应用，但也可以以编程方式使用它们。  
+ <span data-ttu-id="00add-151">许多这些行为在属性上进行实现，并且可以像操作 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性一样使用它们（通过将这些行为应用于相应的服务类或操作实现）。</span><span class="sxs-lookup"><span data-stu-id="00add-151">Many of these behaviors are implemented on attributes, and you make use of them as you do the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes—by applying them to the appropriate service class or operation implementation.</span></span> <span data-ttu-id="00add-152">其他行为（如 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 对象）通常使用应用程序配置文件进行应用，但也可以以编程方式使用它们。</span><span class="sxs-lookup"><span data-stu-id="00add-152">Other behaviors, such as the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> or <xref:System.ServiceModel.Description.ServiceDebugBehavior> objects, are typically applied using an application configuration file, although they can also be used programmatically.</span></span>  
   
- 例如，可以通过使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 对象来配置元数据的发布。 下面的应用程序配置文件演示了最常见的用法。  
+ <span data-ttu-id="00add-153">例如，可以通过使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 对象来配置元数据的发布。</span><span class="sxs-lookup"><span data-stu-id="00add-153">For example, the publication of metadata is configured by using the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> object.</span></span> <span data-ttu-id="00add-154">下面的应用程序配置文件演示了最常见的用法。</span><span class="sxs-lookup"><span data-stu-id="00add-154">The following application configuration file shows the most common usage.</span></span>  
   
  [!code-csharp[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.cs#1)]  
   
- 下面的章节描述了许多最有用的系统提供的行为，您可以使用这些行为修改服务或客户端的运行时传递。 请参见相应的参考主题以确定如何使用每种行为。  
+ <span data-ttu-id="00add-155">下面的章节描述了许多最有用的系统提供的行为，您可以使用这些行为修改服务或客户端的运行时传递。</span><span class="sxs-lookup"><span data-stu-id="00add-155">The following sections describe many of the most useful system-provided behaviors that you can use to modify the runtime delivery of your service or client.</span></span> <span data-ttu-id="00add-156">请参见相应的参考主题以确定如何使用每种行为。</span><span class="sxs-lookup"><span data-stu-id="00add-156">See the reference topic to determine how to use each one.</span></span>  
   
-### 服务行为  
- 下面的行为在服务上运行。  
+### <a name="service-behaviors"></a><span data-ttu-id="00add-157">服务行为</span><span class="sxs-lookup"><span data-stu-id="00add-157">Service Behaviors</span></span>  
+ <span data-ttu-id="00add-158">下面的行为在服务上运行。</span><span class="sxs-lookup"><span data-stu-id="00add-158">The following behaviors operate on services.</span></span>  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务以指示该服务是否可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 兼容模式下运行。  
+-   <span data-ttu-id="00add-159"><xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。</span><span class="sxs-lookup"><span data-stu-id="00add-159"><xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>.</span></span> <span data-ttu-id="00add-160">应用于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务以指示该服务是否可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 兼容模式下运行。</span><span class="sxs-lookup"><span data-stu-id="00add-160">Applied to a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service to indicate whether that service can be run in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Compatibility Mode.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
+-   <span data-ttu-id="00add-161"><xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-161"><xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.</span></span> <span data-ttu-id="00add-162">控制服务如何向客户端声明授权。</span><span class="sxs-lookup"><span data-stu-id="00add-162">Controls how the service authorizes client claims.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>。 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
+-   <span data-ttu-id="00add-163"><xref:System.ServiceModel.Description.ServiceCredentials>。</span><span class="sxs-lookup"><span data-stu-id="00add-163"><xref:System.ServiceModel.Description.ServiceCredentials>.</span></span> <span data-ttu-id="00add-164">配置服务凭据。</span><span class="sxs-lookup"><span data-stu-id="00add-164">Configures a service credential.</span></span> <span data-ttu-id="00add-165">使用此类可指定服务的凭据，如 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="00add-165">Use this class to specify the credential for the service, such as an X.509 certificate.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的调试和帮助信息功能。  
+-   <span data-ttu-id="00add-166"><xref:System.ServiceModel.Description.ServiceDebugBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-166"><xref:System.ServiceModel.Description.ServiceDebugBehavior>.</span></span> <span data-ttu-id="00add-167">启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的调试和帮助信息功能。</span><span class="sxs-lookup"><span data-stu-id="00add-167">Enables debugging and Help information features for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服务元数据和相关信息的发布。  
+-   <span data-ttu-id="00add-168"><xref:System.ServiceModel.Description.ServiceMetadataBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-168"><xref:System.ServiceModel.Description.ServiceMetadataBehavior>.</span></span> <span data-ttu-id="00add-169">控制服务元数据和相关信息的发布。</span><span class="sxs-lookup"><span data-stu-id="00add-169">Controls the publication of service metadata and associated information.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 指定安全性事件的审核行为。  
+-   <span data-ttu-id="00add-170"><xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-170"><xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>.</span></span> <span data-ttu-id="00add-171">指定安全性事件的审核行为。</span><span class="sxs-lookup"><span data-stu-id="00add-171">Specifies the audit behavior of security events.</span></span>  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 配置运行时吞吐量设置，这些设置可以让您优化服务性能。  
+-   <span data-ttu-id="00add-172"><xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-172"><xref:System.ServiceModel.Description.ServiceThrottlingBehavior>.</span></span> <span data-ttu-id="00add-173">配置运行时吞吐量设置，这些设置可以让您优化服务性能。</span><span class="sxs-lookup"><span data-stu-id="00add-173">Configures run-time throughput settings that enable you to tune service performance.</span></span>  
   
-### 终结点行为  
- 下面的行为在终结点上运行。 许多这些行为在客户端应用程序中使用。  
+### <a name="endpoint-behaviors"></a><span data-ttu-id="00add-174">终结点行为</span><span class="sxs-lookup"><span data-stu-id="00add-174">Endpoint Behaviors</span></span>  
+ <span data-ttu-id="00add-175">下面的行为在终结点上运行。</span><span class="sxs-lookup"><span data-stu-id="00add-175">The following behaviors operate on endpoints.</span></span> <span data-ttu-id="00add-176">许多这些行为在客户端应用程序中使用。</span><span class="sxs-lookup"><span data-stu-id="00add-176">Many of these behaviors are used in client applications.</span></span>  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
+-   <span data-ttu-id="00add-177"><xref:System.ServiceModel.CallbackBehaviorAttribute>。</span><span class="sxs-lookup"><span data-stu-id="00add-177"><xref:System.ServiceModel.CallbackBehaviorAttribute>.</span></span> <span data-ttu-id="00add-178">在双工客户端应用程序中配置回调服务实现。</span><span class="sxs-lookup"><span data-stu-id="00add-178">Configures a callback service implementation in a duplex client application.</span></span>  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 回调对象的服务调试。  
+-   <span data-ttu-id="00add-179"><xref:System.ServiceModel.Description.CallbackDebugBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-179"><xref:System.ServiceModel.Description.CallbackDebugBehavior>.</span></span> <span data-ttu-id="00add-180">启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 回调对象的服务调试。</span><span class="sxs-lookup"><span data-stu-id="00add-180">Enables service debugging for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] callback object.</span></span>  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
+-   <span data-ttu-id="00add-181"><xref:System.ServiceModel.Description.ClientCredentials>。</span><span class="sxs-lookup"><span data-stu-id="00add-181"><xref:System.ServiceModel.Description.ClientCredentials>.</span></span> <span data-ttu-id="00add-182">允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。</span><span class="sxs-lookup"><span data-stu-id="00add-182">Allows the user to configure client and service credentials as well as service credential authentication settings for use on the client.</span></span>  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 \(URI\)。  
+-   <span data-ttu-id="00add-183"><xref:System.ServiceModel.Description.ClientViaBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-183"><xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span> <span data-ttu-id="00add-184">由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。</span><span class="sxs-lookup"><span data-stu-id="00add-184">Used by clients to specify the Uniform Resource Identifier (URI) for which the transport channel should be created.</span></span>  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 禁用 `MustUnderstand` 处理。  
+-   <span data-ttu-id="00add-185"><xref:System.ServiceModel.Description.MustUnderstandBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-185"><xref:System.ServiceModel.Description.MustUnderstandBehavior>.</span></span> <span data-ttu-id="00add-186">指示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 禁用 `MustUnderstand` 处理。</span><span class="sxs-lookup"><span data-stu-id="00add-186">Instructs [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to disable the `MustUnderstand` processing.</span></span>  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
+-   <span data-ttu-id="00add-187"><xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-187"><xref:System.ServiceModel.Description.SynchronousReceiveBehavior>.</span></span> <span data-ttu-id="00add-188">指示运行库对通道使用同步接收进程。</span><span class="sxs-lookup"><span data-stu-id="00add-188">Instructs the runtime to use a synchronous receive process for channels.</span></span>  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 优化支持事务性接收的传输的接收操作。  
+-   <span data-ttu-id="00add-189"><xref:System.ServiceModel.Description.TransactedBatchingBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-189"><xref:System.ServiceModel.Description.TransactedBatchingBehavior>.</span></span> <span data-ttu-id="00add-190">优化支持事务性接收的传输的接收操作。</span><span class="sxs-lookup"><span data-stu-id="00add-190">Optimizes the receive operations for transports that support transactional receives.</span></span>  
   
-### 协定行为  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>。 指定绑定必须提供给服务或客户端实现的功能要求。  
+### <a name="contract-behaviors"></a><span data-ttu-id="00add-191">协定行为</span><span class="sxs-lookup"><span data-stu-id="00add-191">Contract Behaviors</span></span>  
+ <span data-ttu-id="00add-192"><xref:System.ServiceModel.DeliveryRequirementsAttribute>。</span><span class="sxs-lookup"><span data-stu-id="00add-192"><xref:System.ServiceModel.DeliveryRequirementsAttribute>.</span></span> <span data-ttu-id="00add-193">指定绑定必须提供给服务或客户端实现的功能要求。</span><span class="sxs-lookup"><span data-stu-id="00add-193">Specifies the feature requirements that bindings must provide to the service or client implementation.</span></span>  
   
-### 操作行为  
- 下面的操作行为指定操作的序列化和事务控制。  
+### <a name="operation-behaviors"></a><span data-ttu-id="00add-194">操作行为</span><span class="sxs-lookup"><span data-stu-id="00add-194">Operation Behaviors</span></span>  
+ <span data-ttu-id="00add-195">下面的操作行为指定操作的序列化和事务控制。</span><span class="sxs-lookup"><span data-stu-id="00add-195">The following operation behaviors specify serialization and transaction controls for operations.</span></span>  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 的运行时行为。  
+-   <span data-ttu-id="00add-196"><xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-196"><xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.</span></span> <span data-ttu-id="00add-197">表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 的运行时行为。</span><span class="sxs-lookup"><span data-stu-id="00add-197">Represents the run-time behavior of the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span></span>  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
+-   <span data-ttu-id="00add-198"><xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。</span><span class="sxs-lookup"><span data-stu-id="00add-198"><xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>.</span></span> <span data-ttu-id="00add-199">控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。</span><span class="sxs-lookup"><span data-stu-id="00add-199">Controls run-time behavior of the `XmlSerializer` and associates it with an operation.</span></span>  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
+-   <span data-ttu-id="00add-200"><xref:System.ServiceModel.TransactionFlowAttribute>。</span><span class="sxs-lookup"><span data-stu-id="00add-200"><xref:System.ServiceModel.TransactionFlowAttribute>.</span></span> <span data-ttu-id="00add-201">指定服务操作接受事务标头所处的级别。</span><span class="sxs-lookup"><span data-stu-id="00add-201">Specifies the level in which a service operation accepts a transaction header.</span></span>  
   
-## 请参阅  
- [正在配置服务](../../../docs/framework/wcf/configuring-services.md)   
- [如何：控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a><span data-ttu-id="00add-202">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00add-202">See Also</span></span>  
+ [<span data-ttu-id="00add-203">配置服务</span><span class="sxs-lookup"><span data-stu-id="00add-203">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
+ [<span data-ttu-id="00add-204">如何： 控制服务实例化</span><span class="sxs-lookup"><span data-stu-id="00add-204">How to: Control Service Instancing</span></span>](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

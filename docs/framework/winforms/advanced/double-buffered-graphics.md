@@ -1,51 +1,52 @@
 ---
-title: "双缓冲图形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "双缓冲"
-  - "示例 [Windows 窗体], 双缓冲的图形"
-  - "闪烁, 使用双缓冲来减少"
-  - "图形, 双缓冲的"
+title: "双缓冲图形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- double buffering
+- graphics [Windows Forms], double-buffered
+- flicker [Windows Forms], reducing with double buffering
+- examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 双缓冲图形
-闪烁是图形编程的一个常见问题。  需要多重复杂绘制操作的图形操作会导致呈现的图像闪烁或具有其他不可接受的外观。  为解决这些问题，.NET Framework 提供了对双缓冲的使用。  
+# <a name="double-buffered-graphics"></a><span data-ttu-id="523fb-102">双缓冲图形</span><span class="sxs-lookup"><span data-stu-id="523fb-102">Double Buffered Graphics</span></span>
+<span data-ttu-id="523fb-103">对图形进行编程时出现闪烁是一个常见问题。</span><span class="sxs-lookup"><span data-stu-id="523fb-103">Flicker is a common problem when programming graphics.</span></span> <span data-ttu-id="523fb-104">需要多个复杂画图操作的图形操作可导致呈现的图像出现闪烁或具有不可接受的外观。</span><span class="sxs-lookup"><span data-stu-id="523fb-104">Graphics operations that require multiple complex painting operations can cause the rendered images to appear to flicker or have an otherwise unacceptable appearance.</span></span> <span data-ttu-id="523fb-105">为解决这些问题，.NET Framework 提供了双缓冲功能。</span><span class="sxs-lookup"><span data-stu-id="523fb-105">To address these problems, the .NET Framework provides access to double buffering.</span></span>  
   
- 双缓冲使用内存缓冲区来解决由多重绘制操作造成的闪烁问题。  当启用双缓冲时，所有绘制操作首先呈现到内存缓冲区，而不是屏幕上的绘图图面。  所有绘制操作完成后，内存缓冲区直接复制到与其关联的绘图图面。  因为在屏幕上只执行一个图形操作，所以消除了由复杂绘制操作造成的图像闪烁。  
+ <span data-ttu-id="523fb-106">双缓冲使用内容缓冲来解决与多个画图操作相关的闪烁问题。</span><span class="sxs-lookup"><span data-stu-id="523fb-106">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="523fb-107">启用双缓冲后，所有画图操作会首先呈现到内存缓冲而不是屏幕上的绘图图面。</span><span class="sxs-lookup"><span data-stu-id="523fb-107">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="523fb-108">所有画图操作完成后，内存缓冲会直接复制到与之关联的绘图图面。</span><span class="sxs-lookup"><span data-stu-id="523fb-108">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="523fb-109">由于屏幕上仅执行一个图形操作，因此与复杂画图操作相关的图像闪烁可得以消除。</span><span class="sxs-lookup"><span data-stu-id="523fb-109">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.</span></span>  
   
-## 默认双缓冲  
- 在应用程序中使用双缓冲的最简便的方法是使用 .NET Framework 为窗体和控件提供的默认双缓冲。  通过将 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 属性设置为 `true` 或使用 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法可以为 Windows 窗体和所创作的 Windows 控件启用默认双缓冲。  有关更多信息，请参见 [如何：通过对窗体和控件使用双缓冲来减少图形闪烁](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)。  
+## <a name="default-double-buffering"></a><span data-ttu-id="523fb-110">默认双缓冲</span><span class="sxs-lookup"><span data-stu-id="523fb-110">Default Double Buffering</span></span>  
+ <span data-ttu-id="523fb-111">在应用程序中使用双缓冲的最简单方式是对 .NET Framework 所提供的的窗体和控件使用默认双缓冲。</span><span class="sxs-lookup"><span data-stu-id="523fb-111">The easiest way to use double buffering in your applications is to use the default double buffering for forms and controls that is provided by the .NET Framework.</span></span> <span data-ttu-id="523fb-112">你可以启用默认双缓冲为 Windows 窗体并通过设置创作 Windows 控件<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性`true`或通过使用<xref:System.Windows.Forms.Control.SetStyle%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="523fb-112">You can enable default double buffering for your Windows Forms and authored Windows controls by setting the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true` or by using the <xref:System.Windows.Forms.Control.SetStyle%2A> method.</span></span> <span data-ttu-id="523fb-113">有关详细信息，请参阅[如何：通过对窗体和控件使用双缓冲来减少图形闪烁](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="523fb-113">For more information, see [How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md).</span></span>  
   
-## 手动管理缓冲的图形  
- 对于更多的高级双缓冲情形（如动画或高级内存管理），可以使用 .NET Framework 中的类实现自己的双缓冲逻辑。  负责单独分配和管理图形缓冲区的类是 <xref:System.Drawing.BufferedGraphicsContext> 类。  每个应用程序域都有自己的默认 <xref:System.Drawing.BufferedGraphicsContext> 实例来管理此应用程序的所有默认双缓冲。  大多数情况下，每个应用程序只有一个应用程序域，所以每个应用程序通常只有一个默认 <xref:System.Drawing.BufferedGraphicsContext>。  默认 <xref:System.Drawing.BufferedGraphicsContext> 实例由 <xref:System.Drawing.BufferedGraphicsManager> 类管理。  通过调用 [BufferedGraphicsManager.Current 属性](frlrfSystemDrawingBufferedGraphicsManagerClassCurrentTopic)可以检索对默认 <xref:System.Drawing.BufferedGraphicsContext> 实例的引用。  还可以创建一个专用的 <xref:System.Drawing.BufferedGraphicsContext> 实例以提高图形密集型应用程序的性能。  有关如何创建 <xref:System.Drawing.BufferedGraphicsContext> 实例的信息，请参见 [如何：手动管理缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)。  
+## <a name="manually-managing-buffered-graphics"></a><span data-ttu-id="523fb-114">手动管理缓冲图形</span><span class="sxs-lookup"><span data-stu-id="523fb-114">Manually Managing Buffered Graphics</span></span>  
+ <span data-ttu-id="523fb-115">对于更高级的双缓冲方案（如动画或高级内存管理），可使用 .NET Framework 类来实现自己的双缓冲逻辑。</span><span class="sxs-lookup"><span data-stu-id="523fb-115">For more advanced double buffering scenarios, such as animation or advanced memory management, you can use the .NET Framework classes to implement your own double-buffering logic.</span></span> <span data-ttu-id="523fb-116">类负责分配和管理各自的图形缓冲区是<xref:System.Drawing.BufferedGraphicsContext>类。</span><span class="sxs-lookup"><span data-stu-id="523fb-116">The class responsible for allocating and managing individual graphics buffers is the <xref:System.Drawing.BufferedGraphicsContext> class.</span></span> <span data-ttu-id="523fb-117">每个应用程序域都有自己的默认<xref:System.Drawing.BufferedGraphicsContext>管理所有默认双缓冲为该应用程序的实例。</span><span class="sxs-lookup"><span data-stu-id="523fb-117">Every application domain has its own default <xref:System.Drawing.BufferedGraphicsContext> instance that manages all of the default double buffering for that application.</span></span> <span data-ttu-id="523fb-118">在大多数情况下将有一个应用程序域，每个应用程序，因此通常一个默认<xref:System.Drawing.BufferedGraphicsContext>每个应用程序。</span><span class="sxs-lookup"><span data-stu-id="523fb-118">In most cases there will be only one application domain per application, so there is generally one default <xref:System.Drawing.BufferedGraphicsContext> per application.</span></span> <span data-ttu-id="523fb-119">默认<xref:System.Drawing.BufferedGraphicsContext>实例由<xref:System.Drawing.BufferedGraphicsManager>类。</span><span class="sxs-lookup"><span data-stu-id="523fb-119">Default <xref:System.Drawing.BufferedGraphicsContext> instances are managed by the <xref:System.Drawing.BufferedGraphicsManager> class.</span></span> <span data-ttu-id="523fb-120">你可以检索默认值对的引用<xref:System.Drawing.BufferedGraphicsContext>实例通过调用<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。</span><span class="sxs-lookup"><span data-stu-id="523fb-120">You can retrieve a reference to the default <xref:System.Drawing.BufferedGraphicsContext> instance by calling the <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span></span> <span data-ttu-id="523fb-121">你还可以创建专用<xref:System.Drawing.BufferedGraphicsContext>实例，这可以提高图形密集型应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="523fb-121">You can also create a dedicated <xref:System.Drawing.BufferedGraphicsContext> instance, which can improve performance for graphically intensive applications.</span></span> <span data-ttu-id="523fb-122">有关如何创建<xref:System.Drawing.BufferedGraphicsContext>实例，请参阅[如何： 手动管理缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)。</span><span class="sxs-lookup"><span data-stu-id="523fb-122">For information on how to create a <xref:System.Drawing.BufferedGraphicsContext> instance, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-## 手动显示缓冲的图形  
- 通过调用 [BufferedGraphicsContext.Allocate 方法](frlrfSystemDrawingBufferedGraphicsContextClassAllocateTopic)（该方法返回 <xref:System.Drawing.BufferedGraphics> 类的实例），可以使用 <xref:System.Drawing.BufferedGraphicsContext> 类的实例创建图形缓冲区。  <xref:System.Drawing.BufferedGraphics> 对象管理与呈现图面（如窗体或控件）关联的内存缓冲区。  
+## <a name="manually-displaying-buffered-graphics"></a><span data-ttu-id="523fb-123">手动显示缓冲图形</span><span class="sxs-lookup"><span data-stu-id="523fb-123">Manually Displaying Buffered Graphics</span></span>  
+ <span data-ttu-id="523fb-124">你可以使用的实例<xref:System.Drawing.BufferedGraphicsContext>类通过调用创建图形缓冲区<xref:System.Drawing.BufferedGraphicsContext.Allocate%2A?displayProperty=nameWithType>，它返回的实例<xref:System.Drawing.BufferedGraphics>类。</span><span class="sxs-lookup"><span data-stu-id="523fb-124">You can use an instance of the <xref:System.Drawing.BufferedGraphicsContext> class to create graphics buffers by calling the <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A?displayProperty=nameWithType>, which returns an instance of the <xref:System.Drawing.BufferedGraphics> class.</span></span> <span data-ttu-id="523fb-125">A<xref:System.Drawing.BufferedGraphics>对象管理与呈现图面，如窗体或控件相关联的内存缓冲区。</span><span class="sxs-lookup"><span data-stu-id="523fb-125">A <xref:System.Drawing.BufferedGraphics> object manages a memory buffer that is associated with a rendering surface, such as a form or control.</span></span>  
   
- <xref:System.Drawing.BufferedGraphics> 类在实例化后将图形呈现到内存的图形缓冲区中。  通过 [BufferedGraphics.Graphics 属性](frlrfSystemDrawingBufferedGraphicsClassGraphicsTopic)可以在内存缓冲区中呈现图形，该属性公开了一个直接表示内存缓冲区的 <xref:System.Drawing.Graphics> 对象。  可以绘制到此 <xref:System.Drawing.Graphics> 对象，这与绘制到表示绘图图面的 <xref:System.Drawing.Graphics> 对象一样。  所有图形绘制到缓冲区后，可以使用 [BufferedGraphics.Render 方法](frlrfSystemDrawingBufferedGraphicsClassRenderTopic)将缓冲区的内容复制到屏幕上的绘图图面。  
+ <span data-ttu-id="523fb-126">实例化后，<xref:System.Drawing.BufferedGraphics>类管理到内存中图形缓冲区的呈现。</span><span class="sxs-lookup"><span data-stu-id="523fb-126">After it is instantiated, the <xref:System.Drawing.BufferedGraphics> class manages rendering to an in-memory graphics buffer.</span></span> <span data-ttu-id="523fb-127">你可以呈现到内存缓冲区中通过图形<xref:System.Drawing.BufferedGraphics.Graphics%2A>，这会公开<xref:System.Drawing.Graphics>直接表示内存缓冲区的对象。</span><span class="sxs-lookup"><span data-stu-id="523fb-127">You can render graphics to the memory buffer through the <xref:System.Drawing.BufferedGraphics.Graphics%2A>, which exposes a <xref:System.Drawing.Graphics> object that directly represents the memory buffer.</span></span> <span data-ttu-id="523fb-128">你可以绘制到此<xref:System.Drawing.Graphics>对象就像到<xref:System.Drawing.Graphics>对象，它表示绘图图面。</span><span class="sxs-lookup"><span data-stu-id="523fb-128">You can paint to this <xref:System.Drawing.Graphics> object just as you would to a <xref:System.Drawing.Graphics> object that represents a drawing surface.</span></span> <span data-ttu-id="523fb-129">所有图形都绘制到的缓冲区之后，你可以使用<xref:System.Drawing.BufferedGraphics.Render%2A?displayProperty=nameWithType>将缓冲区的内容复制到在屏幕上的绘图图面。</span><span class="sxs-lookup"><span data-stu-id="523fb-129">After all the graphics have been drawn to the buffer, you can use the <xref:System.Drawing.BufferedGraphics.Render%2A?displayProperty=nameWithType> to copy the contents of the buffer to the drawing surface on the screen.</span></span>  
   
- 有关使用 <xref:System.Drawing.BufferedGraphics> 类的更多信息，请参见[手动呈现缓冲的图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)。  有关呈现图形的更多信息，请参见 [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ <span data-ttu-id="523fb-130">有关详细信息使用<xref:System.Drawing.BufferedGraphics>类，请参阅[手动呈现缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)。</span><span class="sxs-lookup"><span data-stu-id="523fb-130">For more information on using the <xref:System.Drawing.BufferedGraphics> class, see [Manually Rendering Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md).</span></span> <span data-ttu-id="523fb-131">有关呈现图形的详细信息，请参阅 [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)</span><span class="sxs-lookup"><span data-stu-id="523fb-131">For more information on rendering graphics, see [Graphics and Drawing in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)</span></span>  
   
-## 请参阅  
- <xref:System.Drawing.BufferedGraphics>   
- <xref:System.Drawing.BufferedGraphicsContext>   
- <xref:System.Drawing.BufferedGraphicsManager>   
- [如何：手动呈现缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)   
- [如何：通过对窗体和控件使用双缓冲来减少图形闪烁](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)   
- [如何：手动管理缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)   
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="523fb-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="523fb-132">See Also</span></span>  
+ <xref:System.Drawing.BufferedGraphics>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ <xref:System.Drawing.BufferedGraphicsManager>  
+ [<span data-ttu-id="523fb-133">如何：手动呈现缓冲的图形</span><span class="sxs-lookup"><span data-stu-id="523fb-133">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [<span data-ttu-id="523fb-134">如何：通过对窗体和控件使用双缓冲来减少图形闪烁</span><span class="sxs-lookup"><span data-stu-id="523fb-134">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ [<span data-ttu-id="523fb-135">如何：手动管理缓冲的图形</span><span class="sxs-lookup"><span data-stu-id="523fb-135">How to: Manually Manage Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ [<span data-ttu-id="523fb-136">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="523fb-136">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

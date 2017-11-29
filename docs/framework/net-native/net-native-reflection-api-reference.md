@@ -5,60 +5,57 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 695c6626c997fd8d1f034b700f4a4918eddf7db6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6c12c583d6c2040a093fb769803b79a6d88459ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三种新的异常类型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 请注意有关所有三种异常类型的以下内容：  
+# <a name="net-native-reflection-api-reference"></a><span data-ttu-id="f5f96-102">.NET Native 本机反射 API 参考</span><span class="sxs-lookup"><span data-stu-id="f5f96-102">.NET Native Reflection API Reference</span></span>
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]<span data-ttu-id="f5f96-103"> 包含三种新的异常类型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。</span><span class="sxs-lookup"><span data-stu-id="f5f96-103"> includes three new exception types: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), and [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md).</span></span> <span data-ttu-id="f5f96-104">请注意有关所有三种异常类型的以下内容：</span><span class="sxs-lookup"><span data-stu-id="f5f96-104">Note the following about all three exception types:</span></span>  
   
- 这些类型仅供内部使用。  
- 这三种异常类型仅适用于 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的使用。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链检测到缺少数据而无法使程序执行继续进行时，引发异常。  
+ <span data-ttu-id="f5f96-105">这些类型仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="f5f96-105">These types are for internal use only.</span></span>  
+ <span data-ttu-id="f5f96-106">这三种异常类型仅适用于 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的使用。</span><span class="sxs-lookup"><span data-stu-id="f5f96-106">These three exception types are for the use of the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span> <span data-ttu-id="f5f96-107">[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链检测到缺少数据而无法使程序执行继续进行时，引发异常。</span><span class="sxs-lookup"><span data-stu-id="f5f96-107">The exceptions are thrown when the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain detects missing data that does not allow program execution to continue.</span></span>  
   
- 不在代码中处理这些异常。  
- 这些异常指示缺少应用程序所需的元数据（ [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常）或缺少应用程序所需的实现代码（ [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常）。 可以通过修改运行时指令 (.rd.xml) 文件，使所需的元数据或实现代码在运行时可用，从而更正这些异常条件。 有关更多信息，请参见 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 有两个故障排除程序可用于为运行时指令文件提供合适的条目，指令文件将消除 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常：  
+ <span data-ttu-id="f5f96-108">不在代码中处理这些异常。</span><span class="sxs-lookup"><span data-stu-id="f5f96-108">Do not handle these exceptions in your code.</span></span>  
+ <span data-ttu-id="f5f96-109">这些异常指示缺少应用程序所需的元数据（ [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常）或缺少应用程序所需的实现代码（ [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常）。</span><span class="sxs-lookup"><span data-stu-id="f5f96-109">These exceptions indicate either that metadata needed by your application is absent (the [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) and [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exceptions) or that implementation code needed by your application is missing (the [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exception).</span></span> <span data-ttu-id="f5f96-110">可以通过修改运行时指令 (.rd.xml) 文件，使所需的元数据或实现代码在运行时可用，从而更正这些异常条件。</span><span class="sxs-lookup"><span data-stu-id="f5f96-110">You correct these exception conditions by modifying a runtime directives (.rd.xml) file to make the required metadata or implementation code available at runtime.</span></span> <span data-ttu-id="f5f96-111">有关更多信息，请参见 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="f5f96-111">For more information, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="f5f96-112">有两个故障排除程序可用于为运行时指令文件提供合适的条目，指令文件将消除 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常：</span><span class="sxs-lookup"><span data-stu-id="f5f96-112">Two troubleshooters are available that supply the appropriate entries for your runtime directives file that will eliminate [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) and [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) exceptions:</span></span>  
   
--   类型的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/type.html) 。  
+-   <span data-ttu-id="f5f96-113">类型的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/type.html) 。</span><span class="sxs-lookup"><span data-stu-id="f5f96-113">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
   
--   方法的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/method.html) 。  
+-   <span data-ttu-id="f5f96-114">方法的 [MissingMetadataException 故障排除程序](http://dotnet.github.io/native/troubleshooter/method.html) 。</span><span class="sxs-lookup"><span data-stu-id="f5f96-114">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
 > [!NOTE]
->  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 要查看 .NET Framework 核心反射 API 的引用文档，请参阅 [System.Reflection 命名控件](http://msdn.microsoft.com/library/gg145033.aspx)。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
+>  <span data-ttu-id="f5f96-115">此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。</span><span class="sxs-lookup"><span data-stu-id="f5f96-115">This reference documents three exception types that are unique to [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span></span> <span data-ttu-id="f5f96-116">要查看 .NET Framework 核心反射 API 的引用文档，请参阅 [System.Reflection 命名控件](http://msdn.microsoft.com/library/gg145033.aspx)。</span><span class="sxs-lookup"><span data-stu-id="f5f96-116">For reference documentation for the .NET Framework core reflection API, see [System.Reflection Namespaces](http://msdn.microsoft.com/library/gg145033.aspx).</span></span> <span data-ttu-id="f5f96-117">要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。</span><span class="sxs-lookup"><span data-stu-id="f5f96-117">For reference documentation for the .NET Framework core interop API, see <xref:System.Runtime.InteropServices>.</span></span>  
   
-## <a name="systemreflection-namespace"></a>System.Reflection 命名空间  
- <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：  
+## <a name="systemreflection-namespace"></a><span data-ttu-id="f5f96-118">System.Reflection 命名空间</span><span class="sxs-lookup"><span data-stu-id="f5f96-118">System.Reflection namespace</span></span>  
+ <span data-ttu-id="f5f96-119"><xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。</span><span class="sxs-lookup"><span data-stu-id="f5f96-119">The <xref:System.Reflection> namespace contains the core types used for reflection in the .NET Framework.</span></span> <span data-ttu-id="f5f96-120">对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：</span><span class="sxs-lookup"><span data-stu-id="f5f96-120">For [!INCLUDE[net_native](../../../includes/net-native-md.md)], it also includes two new exception types:</span></span>  
   
-|类|说明|  
+|<span data-ttu-id="f5f96-121">类</span><span class="sxs-lookup"><span data-stu-id="f5f96-121">Class</span></span>|<span data-ttu-id="f5f96-122">说明</span><span class="sxs-lookup"><span data-stu-id="f5f96-122">Description</span></span>|  
 |-----------|-----------------|  
-|[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
-|[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
+|[<span data-ttu-id="f5f96-123">MissingMetadataException</span><span class="sxs-lookup"><span data-stu-id="f5f96-123">MissingMetadataException</span></span>](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|<span data-ttu-id="f5f96-124">当反射用于检索不存在的元数据时会引起此异常。</span><span class="sxs-lookup"><span data-stu-id="f5f96-124">The exception that is thrown when reflection is used to retrieve metadata that isn't present.</span></span>|  
+|[<span data-ttu-id="f5f96-125">MissingRuntimeArtifactException</span><span class="sxs-lookup"><span data-stu-id="f5f96-125">MissingRuntimeArtifactException</span></span>](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|<span data-ttu-id="f5f96-126">当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。</span><span class="sxs-lookup"><span data-stu-id="f5f96-126">The exception that is thrown when metadata for a type or type member is available but its implementation has been removed.</span></span>|  
   
- 要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Reflection> 引用页面。  
+ <span data-ttu-id="f5f96-127">要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Reflection> 引用页面。</span><span class="sxs-lookup"><span data-stu-id="f5f96-127">For documentation about the other types in this namespace, see the <xref:System.Reflection> reference pages in the .NET Framework documentation set.</span></span>  
   
-## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 命名空间  
- <xref:System.Runtime.CompilerServices> 命名空间包括通过语言编译器为用户设计的类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括一个新的异常类型：  
+## <a name="systemruntimecompilerservices-namespace"></a><span data-ttu-id="f5f96-128">System.Runtime.CompilerServices 命名空间</span><span class="sxs-lookup"><span data-stu-id="f5f96-128">System.Runtime.CompilerServices namespace</span></span>  
+ <span data-ttu-id="f5f96-129"><xref:System.Runtime.CompilerServices> 命名空间包括通过语言编译器为用户设计的类型。</span><span class="sxs-lookup"><span data-stu-id="f5f96-129">The <xref:System.Runtime.CompilerServices> namespace includes types designed for user by language compilers.</span></span> <span data-ttu-id="f5f96-130">对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括一个新的异常类型：</span><span class="sxs-lookup"><span data-stu-id="f5f96-130">For [!INCLUDE[net_native](../../../includes/net-native-md.md)], it also includes a new exception type:</span></span>  
   
-|类|说明|  
+|<span data-ttu-id="f5f96-131">类</span><span class="sxs-lookup"><span data-stu-id="f5f96-131">Class</span></span>|<span data-ttu-id="f5f96-132">说明</span><span class="sxs-lookup"><span data-stu-id="f5f96-132">Description</span></span>|  
 |-----------|-----------------|  
-|[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
+|[<span data-ttu-id="f5f96-133">MissingInteropDataException</span><span class="sxs-lookup"><span data-stu-id="f5f96-133">MissingInteropDataException</span></span>](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|<span data-ttu-id="f5f96-134">当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。</span><span class="sxs-lookup"><span data-stu-id="f5f96-134">The exception that is thrown when a manual marshaling method is called, but metadata for a type isn't found by static analysis or in a runtime directives file.</span></span>|  
   
- 要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。  
+ <span data-ttu-id="f5f96-135">要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。</span><span class="sxs-lookup"><span data-stu-id="f5f96-135">For documentation about the other types in this namespace, see the <xref:System.Runtime.CompilerServices> reference pages in the .NET Framework documentation set.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)   
- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)   
- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)   
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-
+## <a name="see-also"></a><span data-ttu-id="f5f96-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f5f96-136">See Also</span></span>  
+ [<span data-ttu-id="f5f96-137">MissingInteropDataException 类</span><span class="sxs-lookup"><span data-stu-id="f5f96-137">MissingInteropDataException Class</span></span>](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
+ [<span data-ttu-id="f5f96-138">丢失元数据异常类</span><span class="sxs-lookup"><span data-stu-id="f5f96-138">MissingMetadataException Class</span></span>](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
+ [<span data-ttu-id="f5f96-139">MissingRuntimeArtifactException 类</span><span class="sxs-lookup"><span data-stu-id="f5f96-139">MissingRuntimeArtifactException Class</span></span>](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
+ [<span data-ttu-id="f5f96-140">入门</span><span class="sxs-lookup"><span data-stu-id="f5f96-140">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)

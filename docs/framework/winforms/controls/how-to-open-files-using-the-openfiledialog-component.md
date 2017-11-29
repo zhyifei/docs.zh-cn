@@ -1,47 +1,51 @@
 ---
-title: "如何：使用 OpenFileDialog 组件打开文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "文件, 使用 OpenFileDialog 组件打开"
-  - "OpenFile 方法"
-  - "OpenFile 方法, OpenFileDialog 组件"
-  - "OpenFileDialog 组件, 打开文件"
+title: "如何：使用 OpenFileDialog 组件打开文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- OpenFileDialog component [Windows Forms], opening files
+- OpenFile method [Windows Forms], OpenFileDialog component
+- files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52726a770e33bec4b5ec9b24f33deb44ed6379b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 OpenFileDialog 组件打开文件
-用户可以使用 <xref:System.Windows.Forms.OpenFileDialog> 组件浏览他们的计算机以及网络中任何计算机上的文件夹，并选择打开一个或多个文件。  该对话框返回用户在对话框中选定的文件的路径和名称。  
+# <a name="how-to-open-files-using-the-openfiledialog-component"></a><span data-ttu-id="75742-102">如何：使用 OpenFileDialog 组件打开文件</span><span class="sxs-lookup"><span data-stu-id="75742-102">How to: Open Files Using the OpenFileDialog Component</span></span>
+<span data-ttu-id="75742-103"><xref:System.Windows.Forms.OpenFileDialog>组件，用户可以浏览他们的计算机或网络上的任何计算机的文件夹并选择一个或多个要打开的文件。</span><span class="sxs-lookup"><span data-stu-id="75742-103">The <xref:System.Windows.Forms.OpenFileDialog> component allows users to browse the folders of their computer or any computer on the network and select one or more files to open.</span></span> <span data-ttu-id="75742-104">对话框返回用户在对话框中所选的文件路径和名称。</span><span class="sxs-lookup"><span data-stu-id="75742-104">The dialog box returns the path and name of the file the user selected in the dialog box.</span></span>  
   
- 用户选定要打开的文件后，可以使用两种机制来打开文件。  如果希望使用文件流，则可以创建 <xref:System.IO.StreamReader> 类的实例。  另一种方法是使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法打开选定的文件。  
+ <span data-ttu-id="75742-105">用户选定要打开的文件后，可以使用两种机制来打开文件。</span><span class="sxs-lookup"><span data-stu-id="75742-105">Once the user has selected the file to be opened, there are two approaches to the mechanism of opening the file.</span></span> <span data-ttu-id="75742-106">如果想要使用文件流，则可以创建的实例<xref:System.IO.StreamReader>类。</span><span class="sxs-lookup"><span data-stu-id="75742-106">If you prefer to work with file streams, you can create an instance of the <xref:System.IO.StreamReader> class.</span></span> <span data-ttu-id="75742-107">或者，可以使用<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法打开所选的文件。</span><span class="sxs-lookup"><span data-stu-id="75742-107">Alternately, you can use the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the selected file.</span></span>  
   
- 下面的第一个示例包括 <xref:System.Security.Permissions.FileIOPermission> 权限检查（如下面的“安全说明”中所述），但示例授予了您访问文件名的权限。  您可以在本地计算机、Intranet 以及 Internet 区域中使用这种技术。  第二个方法也执行了 <xref:System.Security.Permissions.FileIOPermission> 权限检查，但更适合于 Intranet 或 Internet 区域中的应用程序。  
+ <span data-ttu-id="75742-108">下面的第一个示例涉及<xref:System.Security.Permissions.FileIOPermission>权限检查 （如在下面的"安全说明"中所述），但是，可以访问为文件名。</span><span class="sxs-lookup"><span data-stu-id="75742-108">The first example below involves a <xref:System.Security.Permissions.FileIOPermission> permission check (as described in the "Security Note" below), but gives you access to the filename.</span></span> <span data-ttu-id="75742-109">你可以在本地计算机、Intranet 以及 Internet 区域中使用这种技术。</span><span class="sxs-lookup"><span data-stu-id="75742-109">You can use this technique from the Local Machine, Intranet, and Internet zones.</span></span> <span data-ttu-id="75742-110">第二种方法还执行<xref:System.Security.Permissions.FileIOPermission>权限检查，但适合更好地用于 Intranet 或 Internet 区域中的应用程序。</span><span class="sxs-lookup"><span data-stu-id="75742-110">The second method also does a <xref:System.Security.Permissions.FileIOPermission> permission check, but is better suited for applications in the Intranet or Internet zones.</span></span>  
   
-### 使用 OpenFileDialog 组件以流方式打开文件  
+### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a><span data-ttu-id="75742-111">使用 OpenFileDialog 组件以流形式打开文件</span><span class="sxs-lookup"><span data-stu-id="75742-111">To open a file as a stream using the OpenFileDialog component</span></span>  
   
-1.  显示**“打开文件”**对话框，并调用方法打开用户选定的文件。  
+1.  <span data-ttu-id="75742-112">显示“打开文件”对话框，并调用方法来打开用户选择的文件。</span><span class="sxs-lookup"><span data-stu-id="75742-112">Display the **Open File** dialog box and call a method to open the file selected by the user.</span></span>  
   
-     其中一个方法是使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法显示“打开文件”对话框，并使用 <xref:System.IO.StreamReader> 类的实例打开文件。  
+     <span data-ttu-id="75742-113">一种方法是使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法以显示打开文件对话框中，并使用的实例<xref:System.IO.StreamReader>类来打开文件。</span><span class="sxs-lookup"><span data-stu-id="75742-113">One approach is to use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the Open File dialog box, and use an instance of the <xref:System.IO.StreamReader> class to open the file.</span></span>  
   
-     下面的示例使用 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Click> 事件处理程序打开 <xref:System.Windows.Forms.OpenFileDialog> 组件的实例。  当用户选定某个文件并单击**“确定”**后，将打开对话框中选定的文件。  在这种情况下，内容将显示在一个消息框中，并且只是说明已读取文件流。  
+     <span data-ttu-id="75742-114">下面的示例使用<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件处理程序来打开的实例<xref:System.Windows.Forms.OpenFileDialog>组件。</span><span class="sxs-lookup"><span data-stu-id="75742-114">The example below uses the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler to open an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span> <span data-ttu-id="75742-115">当用户选定某个文件并单击“确定”时，将打开对话框中所选的文件。</span><span class="sxs-lookup"><span data-stu-id="75742-115">When a file is chosen and the user clicks **OK**, the file selected in the dialog box opens.</span></span> <span data-ttu-id="75742-116">在这种情况下，内容会显示在一个消息框中，用于说明已经读取文件流。</span><span class="sxs-lookup"><span data-stu-id="75742-116">In this case, the contents are displayed in a message box, just to show that the file stream has been read.</span></span>  
   
     > [!IMPORTANT]
-    >  若要获取或设置 <xref:System.Windows.Forms.FileDialog.FileName%2A> 属性，程序集需要具有由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName> 类授予的特权级别。  如果在部分信任的上下文中运行，则该进程可能会因特权不足而引发一个异常。  有关更多信息，请参见[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  <span data-ttu-id="75742-117">要获取或设置<xref:System.Windows.Forms.FileDialog.FileName%2A>属性，您的程序集需要特权级别授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。</span><span class="sxs-lookup"><span data-stu-id="75742-117">To get or set the <xref:System.Windows.Forms.FileDialog.FileName%2A> property, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="75742-118">如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。</span><span class="sxs-lookup"><span data-stu-id="75742-118">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="75742-119">有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="75742-119">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
-     本示例假设窗体具有一个 <xref:System.Windows.Forms.Button> 控件和一个 <xref:System.Windows.Forms.OpenFileDialog> 组件。  
+     <span data-ttu-id="75742-120">该示例假定你的窗体具有<xref:System.Windows.Forms.Button>控件和<xref:System.Windows.Forms.OpenFileDialog>组件。</span><span class="sxs-lookup"><span data-stu-id="75742-120">The example assumes your form has a <xref:System.Windows.Forms.Button> control and an <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -52,7 +56,6 @@ caps.handback.revision: 18
          sr.Close()  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -66,7 +69,6 @@ caps.handback.revision: 18
           sr.Close();  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -84,11 +86,10 @@ caps.handback.revision: 18
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）在窗体的构造函数中放置以下代码来注册事件处理程序。  
+     <span data-ttu-id="75742-121">（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="75742-121">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -97,18 +98,18 @@ caps.handback.revision: 18
     ```  
   
     > [!NOTE]
-    >  有关从文件流中进行读取的更多信息，请参见 [FileStream.BeginRead 方法](frlrfSystemIOFileStreamClassBeginReadTopic)和 [FileStream.Read 方法](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)。  
+    >  <span data-ttu-id="75742-122">从文件流中读取有关的详细信息，请参阅<xref:System.IO.FileStream.BeginRead%2A>和<xref:System.IO.FileStream.Read%2A>。</span><span class="sxs-lookup"><span data-stu-id="75742-122">For more information about reading from file streams, see <xref:System.IO.FileStream.BeginRead%2A> and <xref:System.IO.FileStream.Read%2A>.</span></span>  
   
-### 使用 OpenFileDialog 组件以文件方式打开文件  
+### <a name="to-open-a-file-as-a-file-using-the-openfiledialog-component"></a><span data-ttu-id="75742-123">使用 OpenFileDialog 组件以文件形式打开文件</span><span class="sxs-lookup"><span data-stu-id="75742-123">To open a file as a file using the OpenFileDialog component</span></span>  
   
-1.  使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法显示对话框，并使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法打开文件。  
+1.  <span data-ttu-id="75742-124">使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法以显示对话框中和<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法打开该文件。</span><span class="sxs-lookup"><span data-stu-id="75742-124">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box and the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method to open the file.</span></span>  
   
-     <xref:System.Windows.Forms.OpenFileDialog> 组件的 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法返回构成文件的字节。  这些字节为您提供了一个可从中读取的流。  在下面的示例中，将实例化一个具有“cursor”筛选器的 <xref:System.Windows.Forms.OpenFileDialog> 组件，使用户只能选择具有`.cur` 文件扩展名的文件。  如果选择了一个`.cur` 文件，该窗体的光标将设置为选定的光标。  
+     <span data-ttu-id="75742-125"><xref:System.Windows.Forms.OpenFileDialog>组件的<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法返回的字节构成文件。</span><span class="sxs-lookup"><span data-stu-id="75742-125">The <xref:System.Windows.Forms.OpenFileDialog> component's <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method returns the bytes that compose the file.</span></span> <span data-ttu-id="75742-126">这些字节提供可从中读取的流。</span><span class="sxs-lookup"><span data-stu-id="75742-126">These bytes give you a stream to read from.</span></span> <span data-ttu-id="75742-127">在示例中， <xref:System.Windows.Forms.OpenFileDialog> "光标"筛选器，允许用户选择仅具有文件扩展名的文件与实例化组件`.cur`。</span><span class="sxs-lookup"><span data-stu-id="75742-127">In the example below, an <xref:System.Windows.Forms.OpenFileDialog> component is instantiated with a "cursor" filter on it, allowing the user to choose only files with the file name extension`.cur`.</span></span> <span data-ttu-id="75742-128">选择 `.cur` 文件后，窗体的光标将设置为所选光标。</span><span class="sxs-lookup"><span data-stu-id="75742-128">If a`.cur` file is chosen, the form's cursor is set to the selected cursor.</span></span>  
   
     > [!IMPORTANT]
-    >  若要调用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法，程序集需要具有由 <xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName> 类授予的特权级别。  如果在部分信任的上下文中运行，则该进程可能会因特权不足而引发一个异常。  有关更多信息，请参见[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  <span data-ttu-id="75742-129">若要调用<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>方法，您的程序集需要特权级别授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。</span><span class="sxs-lookup"><span data-stu-id="75742-129">To call the <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> method, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="75742-130">如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。</span><span class="sxs-lookup"><span data-stu-id="75742-130">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="75742-131">有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="75742-131">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
-     本示例假设窗体具有一个 <xref:System.Windows.Forms.Button> 控件。  
+     <span data-ttu-id="75742-132">该示例假定你的窗体具有<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="75742-132">The example assumes your form has a <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -126,7 +127,6 @@ caps.handback.revision: 18
          Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -146,7 +146,6 @@ caps.handback.revision: 18
           this.Cursor = new Cursor(openFileDialog1.OpenFile());  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -171,14 +170,12 @@ caps.handback.revision: 18
                 openFileDialog1->OpenFile());  
           }  
        }  
-  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）在窗体的构造函数中放置以下代码来注册事件处理程序。  
+     <span data-ttu-id="75742-133">（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="75742-133">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -186,6 +183,6 @@ caps.handback.revision: 18
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.OpenFileDialog>   
- [OpenFileDialog 组件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="75742-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="75742-134">See Also</span></span>  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ [<span data-ttu-id="75742-135">OpenFileDialog 组件</span><span class="sxs-lookup"><span data-stu-id="75742-135">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

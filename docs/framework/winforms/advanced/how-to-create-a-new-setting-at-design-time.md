@@ -1,46 +1,47 @@
 ---
-title: "如何：在设计时创建新设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序设置 [Windows 窗体], 创建"
-  - "应用程序设置 [Windows 窗体], 设计时"
+title: "如何：在设计时创建新设置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], design time
+- application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在设计时创建新设置
-通过使用设置设计器，可以在运行时创建新设置。  设置设计器是一个网格样式的界面，它允许您创建新设置并指定这些设置的属性。  必须为新设置指定名称、值、类型和范围。  一旦创建某个设置，就可以使用代码访问它。  
+# <a name="how-to-create-a-new-setting-at-design-time"></a><span data-ttu-id="ca482-102">如何：在设计时创建新设置</span><span class="sxs-lookup"><span data-stu-id="ca482-102">How To: Create a New Setting at Design Time</span></span>
+<span data-ttu-id="ca482-103">通过使用设置设计器，可以在设计时创建的新的设置。</span><span class="sxs-lookup"><span data-stu-id="ca482-103">You can create a new setting at design time by using the Settings designer.</span></span> <span data-ttu-id="ca482-104">设置设计器是一个网格样式接口，允许你创建新的设置，并指定这些设置的属性。</span><span class="sxs-lookup"><span data-stu-id="ca482-104">The Settings designer is a grid-style interface that allows you to create new settings and specify properties for those settings.</span></span> <span data-ttu-id="ca482-105">必须指定名称、 值、 类型和作用域为新设置。</span><span class="sxs-lookup"><span data-stu-id="ca482-105">You must specify Name, Value, Type and Scope for your new settings.</span></span> <span data-ttu-id="ca482-106">创建一个设置后，可在代码中访问。</span><span class="sxs-lookup"><span data-stu-id="ca482-106">Once a setting is created, it is accessible in code.</span></span>  
   
-### 在设计时创建新设置 \(C\#\)  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a><span data-ttu-id="ca482-107">若要在 C# 中的设计时创建新的设置</span><span class="sxs-lookup"><span data-stu-id="ca482-107">To create a new setting at design time in C#</span></span>  
   
-1.  在**“解决方案资源管理器”**中，展开项目的**“属性”**节点。  
+1.  <span data-ttu-id="ca482-108">在**解决方案资源管理器**，展开**属性**你的项目节点。</span><span class="sxs-lookup"><span data-stu-id="ca482-108">In **Solution Explorer**, expand the **Properties** node of your project.</span></span>  
   
-2.  双击要在其中添加新设置的 .settings 文件。  此文件的默认名称为 Settings.settings。  
+2.  <span data-ttu-id="ca482-109">双击想要添加新设置的.settings 文件。</span><span class="sxs-lookup"><span data-stu-id="ca482-109">Double-click the .settings file in which you want to add a new setting.</span></span> <span data-ttu-id="ca482-110">此文件的默认名称是 Settings.settings。</span><span class="sxs-lookup"><span data-stu-id="ca482-110">The default name for this file is Settings.settings.</span></span>  
   
-3.  在设置设计器中，设置您的设置的名称、值、类型和范围。  每一行代表一个设置。  
+3.  <span data-ttu-id="ca482-111">在设置设计器中，设置名称、 值、 类型和为你设置的作用域。</span><span class="sxs-lookup"><span data-stu-id="ca482-111">In the Settings designer, set the Name, Value, Type, and Scope for your setting.</span></span> <span data-ttu-id="ca482-112">每一行表示单个设置。</span><span class="sxs-lookup"><span data-stu-id="ca482-112">Each row represents a single setting.</span></span>  
   
-### 在设计时创建新设置 \(Visual Basic\)  
+### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a><span data-ttu-id="ca482-113">若要在 Visual Basic 中的设计时创建新的设置</span><span class="sxs-lookup"><span data-stu-id="ca482-113">To create a new setting at design time in Visual Basic</span></span>  
   
-1.  在**“解决方案资源管理器”**中，右击项目节点并选择**“属性”**。  
+1.  <span data-ttu-id="ca482-114">在**解决方案资源管理器**，右键单击你的项目节点，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="ca482-114">In **Solution Explorer**, right-click your project node and choose **Properties**.</span></span>  
   
-2.  在**“属性”**页中，选择**“设置”**选项卡。  
+2.  <span data-ttu-id="ca482-115">在**属性**页上，选择**设置**选项卡。</span><span class="sxs-lookup"><span data-stu-id="ca482-115">In the **Properties** page, select the **Settings** tab.</span></span>  
   
-3.  在设置设计器中，设置您的设置的名称、值、类型和范围。  每一行代表一个设置。  
+3.  <span data-ttu-id="ca482-116">在设置设计器中，设置名称、 值、 类型和为你设置的作用域。</span><span class="sxs-lookup"><span data-stu-id="ca482-116">In the Settings designer, set the Name, Value, Type, and Scope for your setting.</span></span> <span data-ttu-id="ca482-117">每一行表示单个设置。</span><span class="sxs-lookup"><span data-stu-id="ca482-117">Each row represents a single setting.</span></span>  
   
-## 请参阅  
- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)   
- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [如何：在设计时更改现有设置的值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+## <a name="see-also"></a><span data-ttu-id="ca482-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ca482-118">See Also</span></span>  
+ [<span data-ttu-id="ca482-119">使用应用程序设置和用户设置</span><span class="sxs-lookup"><span data-stu-id="ca482-119">Using Application Settings and User Settings</span></span>](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [<span data-ttu-id="ca482-120">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="ca482-120">Application Settings Overview</span></span>](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [<span data-ttu-id="ca482-121">如何：在设计时更改现有设置的值</span><span class="sxs-lookup"><span data-stu-id="ca482-121">How To: Change the Value of an Existing Setting at Design Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)

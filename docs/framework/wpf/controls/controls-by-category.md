@@ -1,28 +1,30 @@
 ---
-title: "按类别分类的控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件, 按类别列出"
+title: "按类别分类的控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 按类别分类的控件
-可以按逻辑将 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控件分组为若干类别。  可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
+# <a name="controls-by-category"></a><span data-ttu-id="bc07e-102">按类别分类的控件</span><span class="sxs-lookup"><span data-stu-id="bc07e-102">Controls by Category</span></span>
+<span data-ttu-id="bc07e-103">可以按逻辑将 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控件分组为若干类别。</span><span class="sxs-lookup"><span data-stu-id="bc07e-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] controls can be logically grouped into several categories.</span></span> <span data-ttu-id="bc07e-104">可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。</span><span class="sxs-lookup"><span data-stu-id="bc07e-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  
   
-## 布局  
- 布局控件用于管理子元素的大小、尺寸、位置和排列。  
+## <a name="layout"></a><span data-ttu-id="bc07e-105">布局</span><span class="sxs-lookup"><span data-stu-id="bc07e-105">Layout</span></span>  
+ <span data-ttu-id="bc07e-106">布局控件用于管理子元素的大小、尺寸、位置和排列。</span><span class="sxs-lookup"><span data-stu-id="bc07e-106">Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.</span></span>  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,15 +64,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## 按钮  
- 按钮是最基本的用户界面控件之一。  当用户单击按钮时，应用程序通常执行 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件中的某些任务。  
+## <a name="buttons"></a><span data-ttu-id="bc07e-107">按钮</span><span class="sxs-lookup"><span data-stu-id="bc07e-107">Buttons</span></span>  
+ <span data-ttu-id="bc07e-108">按钮是最基本的用户界面控件之一。</span><span class="sxs-lookup"><span data-stu-id="bc07e-108">Buttons are one of the most basic user interface controls.</span></span> <span data-ttu-id="bc07e-109">应用程序通常执行中的某个任务<xref:System.Windows.Controls.Primitives.ButtonBase.Click>当用户单击在其上的事件。</span><span class="sxs-lookup"><span data-stu-id="bc07e-109">Applications typically perform some task in the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event when a user clicks on them.</span></span>  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## 数据显示  
- 数据显示控件用于显示来自数据源的信息。  
+## <a name="data-display"></a><span data-ttu-id="bc07e-110">数据显示</span><span class="sxs-lookup"><span data-stu-id="bc07e-110">Data Display</span></span>  
+ <span data-ttu-id="bc07e-111">数据显示控件用于显示来自数据源的信息。</span><span class="sxs-lookup"><span data-stu-id="bc07e-111">Data display controls are used to show information from a data source.</span></span>  
   
 -   <xref:System.Windows.Controls.DataGrid>  
   
@@ -78,15 +80,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## 日期显示和选择  
- 日期控件用于显示和选择日历信息。  
+## <a name="date-display-and-selection"></a><span data-ttu-id="bc07e-112">日期显示和选项</span><span class="sxs-lookup"><span data-stu-id="bc07e-112">Date Display and Selection</span></span>  
+ <span data-ttu-id="bc07e-113">日期控件用于显示和选择日历信息。</span><span class="sxs-lookup"><span data-stu-id="bc07e-113">Date controls are used to display and select calendar information.</span></span>  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## 菜单  
- 菜单用于将关联的操作分组或提供上下文帮助。  
+## <a name="menus"></a><span data-ttu-id="bc07e-114">菜单</span><span class="sxs-lookup"><span data-stu-id="bc07e-114">Menus</span></span>  
+ <span data-ttu-id="bc07e-115">菜单用于对关联的操作进行分组或提供上下文帮助。</span><span class="sxs-lookup"><span data-stu-id="bc07e-115">Menus are used to group related actions or to provide contextual assistance.</span></span>  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## Selection  
- 选择控件用于使用户选择一个或多个选项。  
+## <a name="selection"></a><span data-ttu-id="bc07e-116">选择</span><span class="sxs-lookup"><span data-stu-id="bc07e-116">Selection</span></span>  
+ <span data-ttu-id="bc07e-117">选择控件用于使用户选择一个或多个选项。</span><span class="sxs-lookup"><span data-stu-id="bc07e-117">Selection controls are used to enable a user to select one or more options.</span></span>  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## 导航  
- 导航控件通过创建目标框架或选项卡式的应用程序外观来增强或扩展应用程序导航体验。  
+## <a name="navigation"></a><span data-ttu-id="bc07e-118">导航</span><span class="sxs-lookup"><span data-stu-id="bc07e-118">Navigation</span></span>  
+ <span data-ttu-id="bc07e-119">导航控件通过创建目标框架或选项卡式的应用程序外观来增强或扩展应用程序导航体验。</span><span class="sxs-lookup"><span data-stu-id="bc07e-119">Navigation controls enhance or extend the application navigation experience by creating targeting frames or tabbed application appearance.</span></span>  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## 对话框  
- 对话框为常见用户交互方案（如打印）提供目标支持。  
+## <a name="dialog-boxes"></a><span data-ttu-id="bc07e-120">对话框</span><span class="sxs-lookup"><span data-stu-id="bc07e-120">Dialog Boxes</span></span>  
+ <span data-ttu-id="bc07e-121">对话框为常见的用户交互方案（如打印）提供目标支持。</span><span class="sxs-lookup"><span data-stu-id="bc07e-121">Dialog boxes provide targeted support for common user-interaction scenarios such as printing.</span></span>  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ caps.handback.revision: 17
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## 用户信息  
- 用户信息控件提供上下文反馈或阐明应用程序的用户界面。  用户通常无法与这些控件进行交互。  
+## <a name="user-information"></a><span data-ttu-id="bc07e-122">用户信息</span><span class="sxs-lookup"><span data-stu-id="bc07e-122">User Information</span></span>  
+ <span data-ttu-id="bc07e-123">用户信息控件提供上下文反馈或阐明应用程序的用户界面。</span><span class="sxs-lookup"><span data-stu-id="bc07e-123">User information controls provide contextual feedback or clarify an application's user interface.</span></span> <span data-ttu-id="bc07e-124">用户通常无法与这些控件进行交互。</span><span class="sxs-lookup"><span data-stu-id="bc07e-124">The user typically cannot interact with these controls.</span></span>  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## 文档  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含若干查看文档的专用控件。  这些控件基于目标用户方案优化阅读体验。  
+## <a name="documents"></a><span data-ttu-id="bc07e-125">文档</span><span class="sxs-lookup"><span data-stu-id="bc07e-125">Documents</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="bc07e-126"> 包含几个用于查看文档的专用控件。</span><span class="sxs-lookup"><span data-stu-id="bc07e-126"> includes several specialized controls for viewing documents.</span></span> <span data-ttu-id="bc07e-127">这些控件基于目标用户方案优化阅读体验。</span><span class="sxs-lookup"><span data-stu-id="bc07e-127">These controls optimize the reading experience, based on the targeted user scenario.</span></span>  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,8 +161,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## 输入  
- 输入控件可以使用户输入文本和其他内容。  
+## <a name="input"></a><span data-ttu-id="bc07e-128">输入</span><span class="sxs-lookup"><span data-stu-id="bc07e-128">Input</span></span>  
+ <span data-ttu-id="bc07e-129">输入控件可以使用户输入文本和其他内容。</span><span class="sxs-lookup"><span data-stu-id="bc07e-129">Input controls enable the user to input text and other content.</span></span>  
   
 -   <xref:System.Windows.Controls.TextBox>  
   
@@ -168,8 +170,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## 媒体  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不仅包括大多数常见图像格式的 [codecs](GTMT)，而且还包括对承载音频和视频内容的集成支持。  
+## <a name="media"></a><span data-ttu-id="bc07e-130">媒体</span><span class="sxs-lookup"><span data-stu-id="bc07e-130">Media</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="bc07e-131"> 不仅包括大多数常见图像格式的 [codecs]，而且还包括对承载音频和视频内容的集成支持。</span><span class="sxs-lookup"><span data-stu-id="bc07e-131"> includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.</span></span>  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## 数字墨迹  
- 数字墨迹控件为诸如墨迹查看和墨迹输入等 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 功能提供集成支持。  
+## <a name="digital-ink"></a><span data-ttu-id="bc07e-132">数字墨迹</span><span class="sxs-lookup"><span data-stu-id="bc07e-132">Digital Ink</span></span>  
+ <span data-ttu-id="bc07e-133">数字墨迹控件提供对诸如墨迹查看和墨迹输入等 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] 功能的集成支持。</span><span class="sxs-lookup"><span data-stu-id="bc07e-133">Digital ink controls provide integrated support for [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] features, such as ink viewing and ink input.</span></span>  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## 请参阅  
- [控件库](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a><span data-ttu-id="bc07e-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc07e-134">See Also</span></span>  
+ [<span data-ttu-id="bc07e-135">控件库</span><span class="sxs-lookup"><span data-stu-id="bc07e-135">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)

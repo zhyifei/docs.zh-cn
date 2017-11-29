@@ -1,73 +1,76 @@
 ---
-title: "Direct3D9 和 WPF 互操作性的性能注意事项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9 [WPF 互操作性], 性能"
-  - "WPF, Direct3D9 互操作性能"
+title: "Direct3D9 和 WPF 互操作性的性能注意事项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF [WPF], Direct3D9 interop performance
+- Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 886ef6c8c9df9d14b5c2a805da2e3948d5e55f69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Direct3D9 和 WPF 互操作性的性能注意事项
-可以使用 <xref:System.Windows.Interop.D3DImage> 类来承载 Direct3D9 内容。  承载 Direct3D9 内容可能会影响应用程序的性能。  本主题介绍在 Windows Presentation Foundation \(WPF\) 应用程序中承载 Direct3D9 内容时,优化性能的最佳做法。  这些最佳做法包括如何使用 <xref:System.Windows.Interop.D3DImage>，以及使用 Windows Vista、Windows XP 和多显示器显示时的最佳做法。  
+# <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a><span data-ttu-id="233e3-102">Direct3D9 和 WPF 互操作性的性能注意事项</span><span class="sxs-lookup"><span data-stu-id="233e3-102">Performance Considerations for Direct3D9 and WPF Interoperability</span></span>
+<span data-ttu-id="233e3-103">你可以通过使用承载 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。</span><span class="sxs-lookup"><span data-stu-id="233e3-103">You can host Direct3D9 content by using the <xref:System.Windows.Interop.D3DImage> class.</span></span> <span data-ttu-id="233e3-104">承载 Direct3D9 内容可能会影响你的应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-104">Hosting Direct3D9 content can affect the performance of your application.</span></span> <span data-ttu-id="233e3-105">本主题介绍在承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容时优化性能的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="233e3-105">This topic describes best practices to optimize performance when hosting Direct3D9 content in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="233e3-106">这些最佳实践包括如何使用<xref:System.Windows.Interop.D3DImage>以及当你使用的 Windows Vista、 Windows XP 中，且多监视器显示最佳实践。</span><span class="sxs-lookup"><span data-stu-id="233e3-106">These best practices include how to use <xref:System.Windows.Interop.D3DImage> and best practices when you are using Windows Vista, Windows XP, and multi-monitor displays.</span></span>  
   
 > [!NOTE]
->  有关演示这些最佳做法的代码示例，请参见[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+>  <span data-ttu-id="233e3-107">有关演示这些最佳做法的代码示例，请参阅[WPF 和 Direct3D9 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="233e3-107">For code examples that demonstrate these best practices, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span></span>  
   
-## 慎重使用 D3DImage  
- <xref:System.Windows.Interop.D3DImage> 实例中承载的 Direct3D9 内容在呈现时，速度不像在纯 Direct3D 应用程序中那样快。  复制图面和刷新命令缓冲区操作可能需要不少开销。  随着 <xref:System.Windows.Interop.D3DImage> 实例数的增加，刷新次数变多，性能随之下降。  因此，应慎重使用 <xref:System.Windows.Interop.D3DImage>。  
+## <a name="use-d3dimage-sparingly"></a><span data-ttu-id="233e3-108">应谨慎使用 D3DImage</span><span class="sxs-lookup"><span data-stu-id="233e3-108">Use D3DImage Sparingly</span></span>  
+ <span data-ttu-id="233e3-109">在承载 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>实例不呈现为快速如下所示纯的 Direct3D 应用程序。</span><span class="sxs-lookup"><span data-stu-id="233e3-109">Direct3D9 content hosted in a <xref:System.Windows.Interop.D3DImage> instance does not render as fast as in a pure Direct3D application.</span></span> <span data-ttu-id="233e3-110">复制图面和刷新命令缓冲区可能成本高昂的操作。</span><span class="sxs-lookup"><span data-stu-id="233e3-110">Copying the surface and flushing the command buffer can be costly operations.</span></span> <span data-ttu-id="233e3-111">数字的形式<xref:System.Windows.Interop.D3DImage>实例将提高，多个刷新发生，并且性能下降。</span><span class="sxs-lookup"><span data-stu-id="233e3-111">As the number of <xref:System.Windows.Interop.D3DImage> instances increases, more flushing occurs, and performance degrades.</span></span> <span data-ttu-id="233e3-112">因此，应使用<xref:System.Windows.Interop.D3DImage>谨慎。</span><span class="sxs-lookup"><span data-stu-id="233e3-112">Therefore, you should use <xref:System.Windows.Interop.D3DImage> sparingly.</span></span>  
   
-## Windows Vista 中的最佳做法  
- 要使配置为使用 Windows 显示驱动程序模型 \(WDDM\) 的显示器在 Windows Vista 中具有最佳性能，应在 `IDirect3DDevice9Ex` 设备上创建 Direct3D9 图面。  这样可以启用图面共享。  视频卡必须支持 Windows Vista 中的 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 和 `D3DCAPS2_CANSHARERESOURCE` 驱动程序功能。  其他任何设置都会导致通过软件复制图面，这将显著降低性能。  
-  
-> [!NOTE]
->  如果 Windows Vista 中的显示器配置为使用 Windows XP 显示驱动程序模型 \(XDDM\)，则无论设置如何，都始终通过软件复制图面。  借助适当的设置和视频卡，使用 WDDM 时，在 Windows Vista 上可以观察到更好的性能，因为此时图面复制是在硬件中执行的。  
-  
-## Windows XP 中的最佳做法  
- 要在使用 Windows XP 显示驱动程序模型 \(XDDM\) 的 Windows XP 上获得最佳性能，应创建能在调用 `IDirect3DSurface9::GetDC` 方法时正常工作的可锁定图面。  在内部，`BitBlt` 方法在硬件的各个设备之间传输图面。  `GetDC` 方法始终适用于 XRGB 图面。  但是，如果客户端计算机运行的是 Windows XP SP3 或 SP2，并且如果客户端还具有分层窗口功能的修补程序，则此方法仅适用于 ARGB 图面。  视频卡必须支持 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 驱动程序功能。  
-  
- 16 位桌面显示深度会显著降低性能。  建议使用 32 位桌面。  
-  
- 如果您针对 Windows Vista 和 Windows XP 进行开发，请在 Windows XP 上测试性能。  在 Windows XP 上，视频内存不足是一个需要关注的问题。  此外，与 Windows Vista WDDM 相比，Windows XP 上的 <xref:System.Windows.Interop.D3DImage> 会使用更多的视频内存和带宽，因为需要额外的视频内存复制。  因此，对同一视频硬件而言，可以预料其在 Windows XP 上的性能不如在 Windows Vista 上的性能。  
+## <a name="best-practices-on-windows-vista"></a><span data-ttu-id="233e3-113">在 Windows Vista 上的最佳做法</span><span class="sxs-lookup"><span data-stu-id="233e3-113">Best Practices on Windows Vista</span></span>  
+ <span data-ttu-id="233e3-114">对于具有配置为使用 Windows 显示驱动程序模型 (WDDM) 显示在 Windows Vista 上获得最佳性能上, 创建 Direct3D9 面`IDirect3DDevice9Ex`设备。</span><span class="sxs-lookup"><span data-stu-id="233e3-114">For best performance on Windows Vista with a display that is configured to use the Windows Display Driver Model (WDDM), create your Direct3D9 surface on an `IDirect3DDevice9Ex` device.</span></span> <span data-ttu-id="233e3-115">这使图面共享。</span><span class="sxs-lookup"><span data-stu-id="233e3-115">This enables surface sharing.</span></span> <span data-ttu-id="233e3-116">视频卡必须支持`D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES`和`D3DCAPS2_CANSHARERESOURCE`在 Windows Vista 上的驱动程序功能。</span><span class="sxs-lookup"><span data-stu-id="233e3-116">The video card must support the `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` and `D3DCAPS2_CANSHARERESOURCE` driver capabilities on Windows Vista.</span></span> <span data-ttu-id="233e3-117">任何其他设置会导致面复制通过软件，这将显著降低性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-117">Any other settings cause the surface to be copied through software, which reduces performance significantly.</span></span>  
   
 > [!NOTE]
->  XDDM 在 Windows XP 和 Windows Vista 上都可用；但 WDDM 仅在 Windows Vista 上可用。  
+>  <span data-ttu-id="233e3-118">如果 Windows Vista 具有配置为使用 Windows XP 显示驱动程序模型 (XDDM) 显示，面将总是复制通过软件，而不考虑设置。</span><span class="sxs-lookup"><span data-stu-id="233e3-118">If Windows Vista has a display that is configured to use the Windows XP Display Driver Model (XDDM), the surface is always copied through software, regardless of settings.</span></span> <span data-ttu-id="233e3-119">正确的设置和视频卡，你将在 Windows Vista 上看到更好的性能时因为图面副本执行硬件中使用的 WDDM。</span><span class="sxs-lookup"><span data-stu-id="233e3-119">With the proper settings and video card, you will see better performance on Windows Vista when you use the WDDM because surface copies are performed in hardware.</span></span>  
   
-## 通行最佳做法  
- 创建设备时，使用 `D3DCREATE_MULTITHREADED` 创建标记。  这会降低性能，但 WPF 呈现系统会在此设备上从另一线程调用方法。  请确保正确遵守锁定协议，防止两个线程同时访问设备。  
+## <a name="best-practices-on-windows-xp"></a><span data-ttu-id="233e3-120">在 Windows XP 上的最佳做法</span><span class="sxs-lookup"><span data-stu-id="233e3-120">Best Practices on Windows XP</span></span>  
+ <span data-ttu-id="233e3-121">为了获得最佳性能，在 Windows XP 中，使用 Windows XP 显示驱动程序模型 (XDDM)，创建正确的行为的可锁定面时`IDirect3DSurface9::GetDC`调用方法。</span><span class="sxs-lookup"><span data-stu-id="233e3-121">For best performance on Windows XP, which uses the Windows XP Display Driver Model (XDDM), create a lockable surface that behaves correctly when the `IDirect3DSurface9::GetDC` method is called.</span></span> <span data-ttu-id="233e3-122">在内部，`BitBlt`方法硬件中的设备之间传输图面。</span><span class="sxs-lookup"><span data-stu-id="233e3-122">Internally, the `BitBlt` method transfers the surface across devices in hardware.</span></span> <span data-ttu-id="233e3-123">`GetDC`方法始终适用 XRGB 图面上。</span><span class="sxs-lookup"><span data-stu-id="233e3-123">The `GetDC` method always works on XRGB surfaces.</span></span> <span data-ttu-id="233e3-124">但是，如果客户端计算机正在运行 Windows XP SP3 或 SP2，并且客户端还具有分层窗口功能的修补程序，此方法仅适用于 ARGB 图面。</span><span class="sxs-lookup"><span data-stu-id="233e3-124">However, if the client computer is running Windows XP with SP3 or SP2, and if the client also has the hotfix for the layered-window feature, this method only works on ARGB surfaces.</span></span> <span data-ttu-id="233e3-125">视频卡必须支持`D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES`驱动程序功能。</span><span class="sxs-lookup"><span data-stu-id="233e3-125">The video card must support the `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` driver capability.</span></span>  
   
- 如果呈现是在 WPF 托管线程上执行的，强烈建议您使用 `D3DCREATE_FPU_PRESERVE` 创建标记来创建设备。  若无此设置，D3D 呈现将降低 WPF 双精度操作的精确度，且引入呈现问题。  
+ <span data-ttu-id="233e3-126">16 位桌面显示深度可以显著降低性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-126">A 16-bit desktop display depth can significantly reduce performance.</span></span> <span data-ttu-id="233e3-127">建议的 32 位桌面。</span><span class="sxs-lookup"><span data-stu-id="233e3-127">A 32-bit desktop is recommended.</span></span>  
   
- 除非在没有硬件支持的情况下平铺非 pow2 图面，或者平铺包含 <xref:System.Windows.Interop.D3DImage> 的 <xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush>，否则 <xref:System.Windows.Interop.D3DImage> 的平铺速度会很快。  
+ <span data-ttu-id="233e3-128">如果你要开发用于 Windows Vista 和 Windows XP，则测试 Windows XP 上的性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-128">If you are developing for Windows Vista and Windows XP, test the performance on Windows XP.</span></span> <span data-ttu-id="233e3-129">在 Windows XP 上的视频内存不足是一个问题。</span><span class="sxs-lookup"><span data-stu-id="233e3-129">Running out of video memory on Windows XP is a concern.</span></span> <span data-ttu-id="233e3-130">此外， <xref:System.Windows.Interop.D3DImage> Windows XP 上使用更多的视频内存和带宽比 Windows Vista WDDM，由于所需的额外视频内存复制。</span><span class="sxs-lookup"><span data-stu-id="233e3-130">In addition, <xref:System.Windows.Interop.D3DImage> on Windows XP uses more video memory and bandwidth than Windows Vista WDDM, due to a necessary extra video memory copy.</span></span> <span data-ttu-id="233e3-131">因此，你可能会更糟的是在比在 Windows Vista 上的 Windows XP 上为视频的相同硬件的性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-131">Therefore, you can expect performance to be worse on Windows XP than on Windows Vista for the same video hardware.</span></span>  
   
-## 多显示器显示的最佳做法  
- 如果您使用的计算机安装了多个显示器，则应该遵循前面介绍的最佳做法。  对于多显示器配置，还有其他一些性能注意事项。  
+> [!NOTE]
+>  <span data-ttu-id="233e3-132">XDDM 是适用于 Windows XP 和 Windows Vista;但是，WDDM 是仅在 Windows Vista 上可用。</span><span class="sxs-lookup"><span data-stu-id="233e3-132">XDDM is available on both Windows XP and Windows Vista; however, WDDM is available only on Windows Vista.</span></span>  
   
- 创建后台缓冲区时，它是在特定的设备和适配器上创建的，但 WPF 可能是在任何适配器上显示前台缓冲区。  若选择通过在适配器间进行复制来更新前台缓冲区，开销将非常大。  在配置为使用 WDDM（具有多个视频卡和一个 `IDirect3DDevice9Ex` 设备）的 Windows Vista 上，如果前台缓冲区位于其他适配器上，但视频卡仍相同，对性能将没有影响。  但是，在 Windows XP 和具有多个视频卡的 XDDM 上，当前台缓冲区显示在异于后台缓冲区的适配器上时，对性能将有很大影响。  有关更多信息，请参见[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+## <a name="general-best-practices"></a><span data-ttu-id="233e3-133">常规最佳做法</span><span class="sxs-lookup"><span data-stu-id="233e3-133">General Best Practices</span></span>  
+ <span data-ttu-id="233e3-134">创建设备时，使用`D3DCREATE_MULTITHREADED`创建标志。</span><span class="sxs-lookup"><span data-stu-id="233e3-134">When you create the device, use the `D3DCREATE_MULTITHREADED` creation flag.</span></span> <span data-ttu-id="233e3-135">这会降低性能，但 WPF 呈现系统从另一个线程在此设备上调用方法。</span><span class="sxs-lookup"><span data-stu-id="233e3-135">This reduces performance, but the WPF rendering system calls methods on this device from another thread.</span></span> <span data-ttu-id="233e3-136">因此，没有两个线程同时访问设备，则请确保正确，随后锁定的协议。</span><span class="sxs-lookup"><span data-stu-id="233e3-136">Be sure to follow the locking protocol correctly, so that no two threads access the device at the same time.</span></span>  
   
-## 性能摘要  
- 下表显示了前台缓冲区更新的性能对操作系统、像素格式和图面可锁定性的函数。  其中假设前、后台缓冲区位于同一适配器上。  硬件更新通常比软件更新速度快得多，具体程度取决于适配器配置。  
+ <span data-ttu-id="233e3-137">如果 WPF 托管线程上执行呈现，则强烈建议你创建带有设备`D3DCREATE_FPU_PRESERVE`创建标志。</span><span class="sxs-lookup"><span data-stu-id="233e3-137">If your rendering is performed on a WPF managed thread, it is strongly recommended that you create the device with the `D3DCREATE_FPU_PRESERVE` creation flag.</span></span> <span data-ttu-id="233e3-138">没有此设置，D3D 呈现可以减少 WPF 双精度运算的准确性，并引发呈现问题。</span><span class="sxs-lookup"><span data-stu-id="233e3-138">Without this setting, the D3D rendering can reduce the accuracy of WPF double-precision operations and introduce rendering issues.</span></span>  
   
-|图面像素格式|Windows Vista、WDDM 和 9Ex|其他 Windows Vista 配置|Windows XP SP3 或带修补程序的 SP2|Windows XP SP2|  
-|------------|------------------------------|-------------------------|--------------------------------|--------------------|  
-|D3DFMT\_X8R8G8B8（不可锁定）|**硬件更新**|软件更新|软件更新|软件更新|  
-|D3DFMT\_X8R8G8B8（可锁定）|**硬件更新**|软件更新|**硬件更新**|**硬件更新**|  
-|D3DFMT\_A8R8G8B8（不可锁定）|**硬件更新**|软件更新|软件更新|软件更新|  
-|D3DFMT\_A8R8G8B8（可锁定）|**硬件更新**|软件更新|**硬件更新**|软件更新|  
+ <span data-ttu-id="233e3-139">平铺<xref:System.Windows.Interop.D3DImage>除非磁贴没有硬件支持非 pow2 面，或者你磁贴并快速，<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>包含<xref:System.Windows.Interop.D3DImage>。</span><span class="sxs-lookup"><span data-stu-id="233e3-139">Tiling a <xref:System.Windows.Interop.D3DImage> is fast, unless you tile a non-pow2 surface without hardware support, or if you tile a <xref:System.Windows.Media.DrawingBrush> or <xref:System.Windows.Media.VisualBrush> that contains a <xref:System.Windows.Interop.D3DImage>.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Interop.D3DImage>   
- [WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)   
- [演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)   
- [演练：在 WPF 中承载 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+## <a name="best-practices-for-multi-monitor-displays"></a><span data-ttu-id="233e3-140">多监视器显示的最佳实践</span><span class="sxs-lookup"><span data-stu-id="233e3-140">Best Practices for Multi-Monitor Displays</span></span>  
+ <span data-ttu-id="233e3-141">如果你使用的具有多个监视器的计算机，你应遵循前面所述的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="233e3-141">If you are using a computer that has multiple monitors, you should follow the previously described best practices.</span></span> <span data-ttu-id="233e3-142">也有一些额外的性能注意事项多监视器配置。</span><span class="sxs-lookup"><span data-stu-id="233e3-142">There are also some additional performance considerations for a multi-monitor configuration.</span></span>  
+  
+ <span data-ttu-id="233e3-143">创建后台缓冲区时，它将创建上特定设备和适配器，但 WPF 可能会显示任何适配器上的前台缓冲区。</span><span class="sxs-lookup"><span data-stu-id="233e3-143">When you create the back buffer, it is created on a specific device and adapter, but WPF may display the front buffer on any adapter.</span></span> <span data-ttu-id="233e3-144">在适配器，以更新前台缓冲区之间复制会产生大量费用。</span><span class="sxs-lookup"><span data-stu-id="233e3-144">Copying across adapters to update the front buffer can be very expensive.</span></span> <span data-ttu-id="233e3-145">在 Windows Vista 上，配置为与多个视频卡以及使用的 WDDM`IDirect3DDevice9Ex`设备，如果前台缓冲区位于其他适配器，但不失为这相同的视频卡上，没有任何性能损失。</span><span class="sxs-lookup"><span data-stu-id="233e3-145">On Windows Vista that is configured to use the WDDM with multiple video cards and with an `IDirect3DDevice9Ex` device, if the front buffer is on a different adapter but still the same video card, there is no performance penalty.</span></span> <span data-ttu-id="233e3-146">但是，在 Windows XP 和具有多个视频卡 XDDM，没有对显著的性能产生负面影响时前台缓冲区显示在不同于后台缓冲区适配器上。</span><span class="sxs-lookup"><span data-stu-id="233e3-146">However, on Windows XP and the XDDM with multiple video cards, there is a significant performance penalty when the front buffer is displayed on a different adapter than the back buffer.</span></span> <span data-ttu-id="233e3-147">有关详细信息，请参阅[WPF 和 Direct3D9 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。</span><span class="sxs-lookup"><span data-stu-id="233e3-147">For more information, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span></span>  
+  
+## <a name="performance-summary"></a><span data-ttu-id="233e3-148">性能摘要</span><span class="sxs-lookup"><span data-stu-id="233e3-148">Performance Summary</span></span>  
+ <span data-ttu-id="233e3-149">下表显示了前台缓冲区更新的操作系统、 像素格式和图面可锁定性的函数的性能。</span><span class="sxs-lookup"><span data-stu-id="233e3-149">The following table shows performance of the front buffer update as a function of operating system, pixel format, and surface lockability.</span></span> <span data-ttu-id="233e3-150">前台缓冲区和后台缓冲区被假定为同一适配器上。</span><span class="sxs-lookup"><span data-stu-id="233e3-150">The front buffer and back buffer are assumed to be on the same adapter.</span></span> <span data-ttu-id="233e3-151">具体取决于适配器配置中，硬件更新是通常比软件更新快得多。</span><span class="sxs-lookup"><span data-stu-id="233e3-151">Depending on the adapter configuration, hardware updates are generally much faster than software updates.</span></span>  
+  
+|<span data-ttu-id="233e3-152">图面像素格式</span><span class="sxs-lookup"><span data-stu-id="233e3-152">Surface pixel format</span></span>|<span data-ttu-id="233e3-153">Windows Vista、 WDDM 和 9Ex</span><span class="sxs-lookup"><span data-stu-id="233e3-153">Windows Vista, WDDM and 9Ex</span></span>|<span data-ttu-id="233e3-154">其他 Windows Vista 配置</span><span class="sxs-lookup"><span data-stu-id="233e3-154">Other Windows Vista configurations</span></span>|<span data-ttu-id="233e3-155">Windows XP SP3 或修补程序带 SP2</span><span class="sxs-lookup"><span data-stu-id="233e3-155">Windows XP SP3 or SP2 w/ hotfix</span></span>|<span data-ttu-id="233e3-156">Windows XP SP2</span><span class="sxs-lookup"><span data-stu-id="233e3-156">Windows XP SP2</span></span>|  
+|--------------------------|---------------------------------|----------------------------------------|--------------------------------------|--------------------|  
+|<span data-ttu-id="233e3-157">D3DFMT_X8R8G8B8 （不可锁定）</span><span class="sxs-lookup"><span data-stu-id="233e3-157">D3DFMT_X8R8G8B8 (not lockable)</span></span>|<span data-ttu-id="233e3-158">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-158">**Hardware Update**</span></span>|<span data-ttu-id="233e3-159">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-159">Software Update</span></span>|<span data-ttu-id="233e3-160">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-160">Software Update</span></span>|<span data-ttu-id="233e3-161">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-161">Software Update</span></span>|  
+|<span data-ttu-id="233e3-162">D3DFMT_X8R8G8B8 （可锁定）</span><span class="sxs-lookup"><span data-stu-id="233e3-162">D3DFMT_X8R8G8B8 (lockable)</span></span>|<span data-ttu-id="233e3-163">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-163">**Hardware Update**</span></span>|<span data-ttu-id="233e3-164">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-164">Software Update</span></span>|<span data-ttu-id="233e3-165">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-165">**Hardware Update**</span></span>|<span data-ttu-id="233e3-166">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-166">**Hardware Update**</span></span>|  
+|<span data-ttu-id="233e3-167">D3DFMT_A8R8G8B8 （不可锁定）</span><span class="sxs-lookup"><span data-stu-id="233e3-167">D3DFMT_A8R8G8B8 (not lockable)</span></span>|<span data-ttu-id="233e3-168">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-168">**Hardware Update**</span></span>|<span data-ttu-id="233e3-169">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-169">Software Update</span></span>|<span data-ttu-id="233e3-170">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-170">Software Update</span></span>|<span data-ttu-id="233e3-171">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-171">Software Update</span></span>|  
+|<span data-ttu-id="233e3-172">D3DFMT_A8R8G8B8 （可锁定）</span><span class="sxs-lookup"><span data-stu-id="233e3-172">D3DFMT_A8R8G8B8 (lockable)</span></span>|<span data-ttu-id="233e3-173">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-173">**Hardware Update**</span></span>|<span data-ttu-id="233e3-174">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-174">Software Update</span></span>|<span data-ttu-id="233e3-175">**硬件更新**</span><span class="sxs-lookup"><span data-stu-id="233e3-175">**Hardware Update**</span></span>|<span data-ttu-id="233e3-176">软件更新</span><span class="sxs-lookup"><span data-stu-id="233e3-176">Software Update</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="233e3-177">另请参阅</span><span class="sxs-lookup"><span data-stu-id="233e3-177">See Also</span></span>  
+ <xref:System.Windows.Interop.D3DImage>  
+ [<span data-ttu-id="233e3-178">WPF 和 Direct3D9 互操作</span><span class="sxs-lookup"><span data-stu-id="233e3-178">WPF and Direct3D9 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [<span data-ttu-id="233e3-179">演练：创建在 WPF 中托管的 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="233e3-179">Walkthrough: Creating Direct3D9 Content for Hosting in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
+ [<span data-ttu-id="233e3-180">演练：在 WPF 中托管 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="233e3-180">Walkthrough: Hosting Direct3D9 Content in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -1,43 +1,47 @@
 ---
-title: "事务管理升级  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "事务管理升级"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0ac45390d78f4fbce15c8910fcdcc95713c5898a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 事务管理升级 
-Windows 承载一组服务和模块，它们共同构成了一个事务管理器。事务管理升级描述将事务从一个事务管理器组件迁移到另一个事务管理器组件的过程。  
+# <a name="transaction-management-escalation"></a><span data-ttu-id="bdc21-102">事务管理升级</span><span class="sxs-lookup"><span data-stu-id="bdc21-102">Transaction Management Escalation</span></span>
+<span data-ttu-id="bdc21-103">Windows 承载一组服务和模块，它们共同构成了一个事务管理器。</span><span class="sxs-lookup"><span data-stu-id="bdc21-103">Windows hosts a set of services and modules that together constitute a transaction manager.</span></span> <span data-ttu-id="bdc21-104">事务管理升级描述将事务从一个事务管理器组件迁移到另一个事务管理器组件的过程。</span><span class="sxs-lookup"><span data-stu-id="bdc21-104">Transaction management escalation describes the process of migrating a transaction from one of the transaction manager's components to another.</span></span>  
   
- <xref:System.Transactions> 包含一个事务管理器组件，该组件协调的事务最多涉及一个持久资源或多个可变资源。由于事务管理器仅使用应用程序内的域调用，因此会获得最佳性能。开发人员无需直接与事务管理器交互。而是由 <xref:System.Transactions> 命名空间提供一个公共基础结构来定义接口、常见行为和帮助器类。  
+ <span data-ttu-id="bdc21-105"><xref:System.Transactions> 包含一个事务管理器组件，该组件协调的事务最多涉及一个持久资源或多个可变资源。</span><span class="sxs-lookup"><span data-stu-id="bdc21-105"><xref:System.Transactions> includes a transaction manager component that coordinates a transaction involving at most, a single durable resource or multiple volatile resources.</span></span> <span data-ttu-id="bdc21-106">由于事务管理器仅使用应用程序内的域调用，因此会获得最佳性能。</span><span class="sxs-lookup"><span data-stu-id="bdc21-106">Because the transaction manager uses only intra-application domain calls, it yields the best performance.</span></span> <span data-ttu-id="bdc21-107">开发人员无需直接与事务管理器交互。</span><span class="sxs-lookup"><span data-stu-id="bdc21-107">Developers need not interact with the transaction manager directly.</span></span> <span data-ttu-id="bdc21-108">而是由 <xref:System.Transactions> 命名空间提供一个公共基础结构来定义接口、常见行为和帮助器类。</span><span class="sxs-lookup"><span data-stu-id="bdc21-108">Instead, a common infrastructure that defines interfaces, common behavior, and helper classes is provided by the <xref:System.Transactions> namespace.</span></span>  
   
- 如果要将事务提供给其他应用程序域（包括跨进程和计算机边界的应用程序域）中的其他对象，则 <xref:System.Transactions> 基础结构会自动将事务升级为由 Microsoft 分布式事务协调器 \(MSDTC\) 进行管理。此外，如果登记其他持久资源管理器，也会执行此升级。在升级过程中，事务在其提升状态下仍被托管，直到其完成升级为止。  
+ <span data-ttu-id="bdc21-109">如果你想要在同一计算机上提供的事务 （包括跨进程和计算机边界） 的另一个应用程序域中的对象为<xref:System.Transactions>基础结构自动呈报事务由 Microsoft 管理分布式的事务处理协调器 (MSDTC)。</span><span class="sxs-lookup"><span data-stu-id="bdc21-109">When you want to provide the transaction to an object in another application domain (including across process and machine boundaries) on the same computer, the <xref:System.Transactions> infrastructure automatically escalates the transaction to be managed by the Microsoft Distributed Transaction Coordinator (MSDTC).</span></span> <span data-ttu-id="bdc21-110">此外，如果登记其他持久资源管理器，也会执行此升级。</span><span class="sxs-lookup"><span data-stu-id="bdc21-110">The escalation also occurs if you enlist another durable resource manager.</span></span> <span data-ttu-id="bdc21-111">在升级过程中，事务在其提升状态下仍被托管，直到其完成升级为止。</span><span class="sxs-lookup"><span data-stu-id="bdc21-111">When escalated, the transaction remains managed in its elevated state until its completion.</span></span>  
   
- 在 <xref:System.Transactions> 事务和 MSDTC 事务之间，存在可通过可提升的单阶段登记 \(PSPE\) 而提供的中间类型的事务。PSPE 是 <xref:System.Transactions> 中用于性能优化的另一种重要机制。通过该机制，无需将位于不同的应用程序域、进程或计算机中的远程持久资源升级为 MSDTC 事务，就可使其参与 <xref:System.Transactions> 事务。有关 PSPE 的更多信息，请参见[在事务中将资源登记为参与者 ](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)。  
+ <span data-ttu-id="bdc21-112">在 <xref:System.Transactions> 事务和 MSDTC 事务之间，存在可通过可提升的单阶段登记 (PSPE) 而提供的中间类型的事务。</span><span class="sxs-lookup"><span data-stu-id="bdc21-112">Between the <xref:System.Transactions> transaction and MSDTC transaction, there is an intermediary type of transaction that is made available through the Promotable Single Phase Enlistment (PSPE).</span></span> <span data-ttu-id="bdc21-113">PSPE 是 <xref:System.Transactions> 中用于性能优化的另一种重要机制。</span><span class="sxs-lookup"><span data-stu-id="bdc21-113">PSPE is another important mechanism in <xref:System.Transactions> for performance optimization.</span></span> <span data-ttu-id="bdc21-114">通过该机制，无需将位于不同的应用程序域、进程或计算机中的远程持久资源升级为 MSDTC 事务，就可使其参与 <xref:System.Transactions> 事务。</span><span class="sxs-lookup"><span data-stu-id="bdc21-114">It allows a remote durable resource, located in a different application domain, process or computer, to participate in a <xref:System.Transactions> transaction without causing it to be escalated to an MSDTC transaction.</span></span> <span data-ttu-id="bdc21-115">有关 PSPE 的详细信息，请参阅[作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc21-115">For more information about PSPE, see [Enlisting Resources as Participants in a Transaction](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md).</span></span>  
   
-## 如何启动升级  
- 由于 MSDTC 位于单独的进程中，而将事务升级到 MSDTC 会导致跨进程发送消息，因此升级事务会降低性能。若要改善性能，应延迟或避免升级到 MSDTC；因此，您需要了解启动升级的方式和时间。  
+## <a name="how-escalation-is-initiated"></a><span data-ttu-id="bdc21-116">如何启动升级</span><span class="sxs-lookup"><span data-stu-id="bdc21-116">How Escalation is Initiated</span></span>  
+ <span data-ttu-id="bdc21-117">由于 MSDTC 位于单独的进程中，而将事务升级到 MSDTC 会导致跨进程发送消息，因此升级事务会降低性能。</span><span class="sxs-lookup"><span data-stu-id="bdc21-117">Transaction escalation reduces performance because the MSDTC resides in a separate process, and escalating a transaction to the MSDTC results in messages being sent across process.</span></span> <span data-ttu-id="bdc21-118">若要提高性能，您应延迟，或避免升级到 MSDTC;因此，你需要知道如何以及何时启动升级。</span><span class="sxs-lookup"><span data-stu-id="bdc21-118">To improve performance, you should delay or avoid escalation to MSDTC; thus, you need to know how and when the escalation is initiated.</span></span>  
   
- 只要 <xref:System.Transactions> 基础结构处理支持单阶段通知的多个可变资源和最多一个的持久资源，事务就会保留在 <xref:System.Transactions> 基础结构的所有权中。事务管理器本身仅适用于位于同一应用程序域中的资源，以及不需要日志记录（将事务结果写入磁盘）的资源。当满足下列任一条件时，<xref:System.Transactions> 基础结构就会执行将事务的所有权传送到 MSDTC 的升级：  
+ <span data-ttu-id="bdc21-119">只要 <xref:System.Transactions> 基础结构处理支持单阶段通知的多个可变资源和最多一个的持久资源，事务就会保留在 <xref:System.Transactions> 基础结构的所有权中。</span><span class="sxs-lookup"><span data-stu-id="bdc21-119">As long as the <xref:System.Transactions> infrastructure handles volatile resources and at most one durable resource that supports single-phase notifications, the transaction remains in the ownership of the <xref:System.Transactions> infrastructure.</span></span> <span data-ttu-id="bdc21-120">事务管理器本身仅适用于位于同一应用程序域中的资源，以及不需要日志记录（将事务结果写入磁盘）的资源。</span><span class="sxs-lookup"><span data-stu-id="bdc21-120">The transaction manager avails itself only to those resources that live in the same application domain and for which logging (writing the transaction outcome to disk) is not required.</span></span> <span data-ttu-id="bdc21-121">当满足下列任一条件时，<xref:System.Transactions> 基础结构就会执行将事务的所有权传送到 MSDTC 的升级：</span><span class="sxs-lookup"><span data-stu-id="bdc21-121">An escalation that results in the <xref:System.Transactions> infrastructure transferring the ownership of the transaction to MSDTC happens when:</span></span>  
   
--   在事务中至少登记了一个不支持单阶段通知的持久资源。  
+-   <span data-ttu-id="bdc21-122">在事务中至少登记了一个不支持单阶段通知的持久资源。</span><span class="sxs-lookup"><span data-stu-id="bdc21-122">At least one durable resource that does not support single-phase notifications is enlisted in the transaction.</span></span>  
   
--   在事务中至少登记了两个支持单阶段通知的持久资源。例如，登记与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的单个连接不会使事务提升。但是，每当打开与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 数据库的另一个连接而导致该数据库登记时，<xref:System.Transactions> 基础结构就会检测到该连接是事务中的第二个持久资源，并将其升级为 MSDTC 事务。  
+-   <span data-ttu-id="bdc21-123">在事务中至少登记了两个支持单阶段通知的持久资源。</span><span class="sxs-lookup"><span data-stu-id="bdc21-123">At least two durable resources that support single-phase notifications are enlisted in the transaction.</span></span> <span data-ttu-id="bdc21-124">例如，登记与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 的单个连接不会使事务提升。</span><span class="sxs-lookup"><span data-stu-id="bdc21-124">For example, enlisting a single connection with [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] does not cause a transaction to be promoted.</span></span> <span data-ttu-id="bdc21-125">但是，每当打开与 [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] 数据库的另一个连接而导致该数据库登记时，<xref:System.Transactions> 基础结构就会检测到该连接是事务中的第二个持久资源，并将其升级为 MSDTC 事务。</span><span class="sxs-lookup"><span data-stu-id="bdc21-125">However, whenever you open a second connection to a [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] database causing the database to enlist, the <xref:System.Transactions> infrastructure detects that it is the second durable resource in the transaction, and escalates it to an MSDTC transaction.</span></span>  
   
--   调用请求来将事务“封送”到其他应用程序域或其他进程。例如，跨应用程序域边界序列化事务对象。事务对象是按值封送的，这意味着跨应用程序域边界（甚至在同一进程中）传递它的任何尝试都会导致序列化该事务对象。您可以通过调用采用 <xref:System.Transactions.Transaction> 作为参数的远程方法来传递事务对象，也可以尝试访问远程事务所提供的组件。这会序列化事务对象并使其升级，比如跨应用程序域序列化事务时。将分布该事务，并且本地事务管理器将不再胜任。  
+-   <span data-ttu-id="bdc21-126">调用请求来将事务“封送”到其他应用程序域或其他进程。</span><span class="sxs-lookup"><span data-stu-id="bdc21-126">A request to "marshal" the transaction to a different application domain or different process is invoked.</span></span> <span data-ttu-id="bdc21-127">例如，跨应用程序域边界序列化事务对象。</span><span class="sxs-lookup"><span data-stu-id="bdc21-127">For example, the serialization of the transaction object across an application domain boundary.</span></span> <span data-ttu-id="bdc21-128">事务对象是按值封送的，这意味着跨应用程序域边界（甚至在同一进程中）传递它的任何尝试都会导致序列化该事务对象。</span><span class="sxs-lookup"><span data-stu-id="bdc21-128">The transaction object is marshaled-by-value, meaning that any attempt to pass it across an application domain boundary (even in the same process) results in serialization of the transaction object.</span></span> <span data-ttu-id="bdc21-129">您可以通过调用采用 <xref:System.Transactions.Transaction> 作为参数的远程方法来传递事务对象，也可以尝试访问远程事务所提供的组件。</span><span class="sxs-lookup"><span data-stu-id="bdc21-129">You can pass the transaction objects by making a call on a remote method that takes a <xref:System.Transactions.Transaction> as a parameter or you can try to access a remote transactional-serviced component.</span></span> <span data-ttu-id="bdc21-130">这会序列化事务对象并使其升级，比如跨应用程序域序列化事务时。</span><span class="sxs-lookup"><span data-stu-id="bdc21-130">This serializes the transaction object and results in an escalation, as when a transaction is serialized across an application domain.</span></span> <span data-ttu-id="bdc21-131">将分布该事务，并且本地事务管理器将不再胜任。</span><span class="sxs-lookup"><span data-stu-id="bdc21-131">It is being distributed and the local transaction manager is no longer adequate.</span></span>  
   
- 下表列出了在升级期间可能会引发的所有可能的异常。  
+ <span data-ttu-id="bdc21-132">下表列出了在升级期间可能会引发的所有可能的异常。</span><span class="sxs-lookup"><span data-stu-id="bdc21-132">The following table lists all the possible exceptions that can be thrown during escalation.</span></span>  
   
-|异常类型|条件|  
-|----------|--------|  
-|<xref:System.InvalidOperationException>|尝试升级隔离级别等于 <xref:System.Transactions.IsolationLevel> 的事务。|  
-|<xref:System.Transactions.TransactionAbortedException>|事务管理器已关闭。|  
-|<xref:System.Transactions.TransactionException>|升级失败并且应用程序已中止。|
+|<span data-ttu-id="bdc21-133">异常类型</span><span class="sxs-lookup"><span data-stu-id="bdc21-133">Exception type</span></span>|<span data-ttu-id="bdc21-134">条件</span><span class="sxs-lookup"><span data-stu-id="bdc21-134">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="bdc21-135">尝试升级隔离级别等于 <xref:System.Transactions.IsolationLevel.Snapshot> 的事务。</span><span class="sxs-lookup"><span data-stu-id="bdc21-135">An attempt to escalate a transaction with isolation level equal to <xref:System.Transactions.IsolationLevel.Snapshot>.</span></span>|  
+|<xref:System.Transactions.TransactionAbortedException>|<span data-ttu-id="bdc21-136">事务管理器已关闭。</span><span class="sxs-lookup"><span data-stu-id="bdc21-136">The transaction manager is down.</span></span>|  
+|<xref:System.Transactions.TransactionException>|<span data-ttu-id="bdc21-137">升级失败并且应用程序已中止。</span><span class="sxs-lookup"><span data-stu-id="bdc21-137">The escalation fails and the application is aborted.</span></span>|

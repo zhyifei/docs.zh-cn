@@ -1,37 +1,40 @@
 ---
-title: "REF CURSOR 示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "REF CURSOR 示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 112f544531bfeed3aa791fa9215e316f05f99169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# REF CURSOR 示例
-REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。  
+# <a name="ref-cursor-examples"></a><span data-ttu-id="fe4b6-102">REF CURSOR 示例</span><span class="sxs-lookup"><span data-stu-id="fe4b6-102">REF CURSOR Examples</span></span>
+<span data-ttu-id="fe4b6-103">REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-103">The REF CURSOR examples are comprised of the following three Microsoft Visual Basic examples that demonstrate using REF CURSORs.</span></span>  
   
-|示例|描述|  
-|--------|--------|  
-|[OracleDataReader 中的 REF CURSOR 参数](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|此示例执行一个 PL\/SQL 存储过程，返回 REF CURSOR 参数，并将值作为 <xref:System.Data.OracleClient.OracleDataReader> 读取。|  
-|[使用 OracleDataReader 从多个 REF CURSOR 检索数据](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此示例执行一个 PL\/SQL 存储过程，返回两个 REF CURSOR 参数，并使用 **OracleDataReader** 读取值。|  
-|[使用一个或多个 REF CURSOR 填充 DataSet](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|此示例执行一个 PL\/SQL 存储过程，返回两个 REF CURSOR 参数，并使用返回的行填充 <xref:System.Data.DataSet>。|  
+|<span data-ttu-id="fe4b6-104">示例</span><span class="sxs-lookup"><span data-stu-id="fe4b6-104">Sample</span></span>|<span data-ttu-id="fe4b6-105">描述</span><span class="sxs-lookup"><span data-stu-id="fe4b6-105">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="fe4b6-106">OracleDataReader 中的 REF CURSOR 参数</span><span class="sxs-lookup"><span data-stu-id="fe4b6-106">REF CURSOR Parameters in an OracleDataReader</span></span>](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|<span data-ttu-id="fe4b6-107">此示例执行一个 PL/SQL 存储过程，返回 REF CURSOR 参数，并将值作为 <xref:System.Data.OracleClient.OracleDataReader> 读取。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-107">This example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>|  
+|[<span data-ttu-id="fe4b6-108">从使用 OracleDataReader 的多个 REF Cursor 中检索数据</span><span class="sxs-lookup"><span data-stu-id="fe4b6-108">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|<span data-ttu-id="fe4b6-109">此示例执行一个 PL/SQL 存储过程，返回两个 REF CURSOR 参数，并读取使用的值**OracleDataReader**。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-109">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an **OracleDataReader**.</span></span>|  
+|[<span data-ttu-id="fe4b6-110">填充数据集使用一个或多个 REF Cursor</span><span class="sxs-lookup"><span data-stu-id="fe4b6-110">Filling a DataSet Using One or More REF CURSORs</span></span>](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|<span data-ttu-id="fe4b6-111">此示例执行一个 PL/SQL 存储过程，返回两个 REF CURSOR 参数，并使用返回的行填充 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-111">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>|  
   
- 要使用这些示例，可能需要创建 Oracle 表，并且必须创建 PL\/SQL 包和包正文。  
+ <span data-ttu-id="fe4b6-112">要使用这些示例，可能需要创建 Oracle 表，并且必须创建 PL/SQL 包和包正文。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-112">To use these examples, you may need to create the Oracle tables, and you must create a PL/SQL package and package body.</span></span>  
   
-## 创建 Oracle 表  
- 这些示例使用 Oracle Scott\/Tiger 架构中定义的表。  大多数 Oracle 安装均包括 Oracle Scott\/Tiger 架构。  如果此架构不存在，可以使用 {OracleHome}\\rdbms\\admin\\scott.sql 中的 SQL 命令文件创建供这些示例使用的表和索引。  
+## <a name="creating-the-oracle-tables"></a><span data-ttu-id="fe4b6-113">创建 Oracle 表</span><span class="sxs-lookup"><span data-stu-id="fe4b6-113">Creating the Oracle Tables</span></span>  
+ <span data-ttu-id="fe4b6-114">这些示例使用 Oracle Scott/Tiger 架构中定义的表。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-114">These examples use tables that are defined in the Oracle Scott/Tiger schema.</span></span> <span data-ttu-id="fe4b6-115">大多数 Oracle 安装均包括 Oracle Scott/Tiger 架构。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-115">The Oracle Scott/Tiger schema is included with most Oracle installations.</span></span> <span data-ttu-id="fe4b6-116">如果此架构不存在，可以使用 {OracleHome}\rdbms\admin\scott.sql 中的 SQL 命令文件创建供这些示例使用的表和索引。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-116">If this schema does not exist, you can use the SQL commands file in {OracleHome}\rdbms\admin\scott.sql to create the tables and indexes used by these examples.</span></span>  
   
-## 创建 Oracle 包和包正文  
- 这些示例要求服务器上存在以下 PL\/SQL 包和包正文。  在 Oracle 服务器上创建以下 Oracle 包。  
+## <a name="creating-the-oracle-package-and-package-body"></a><span data-ttu-id="fe4b6-117">创建 Oracle 包和包正文</span><span class="sxs-lookup"><span data-stu-id="fe4b6-117">Creating the Oracle Package and Package Body</span></span>  
+ <span data-ttu-id="fe4b6-118">这些示例要求服务器上存在以下 PL/SQL 包和包正文。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-118">These examples require the following PL/SQL package and package body on your server.</span></span> <span data-ttu-id="fe4b6-119">在 Oracle 服务器上创建以下 Oracle 包。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-119">Create the following Oracle package on the Oracle server.</span></span>  
   
 ```  
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -44,7 +47,7 @@ END CURSPKG;
 /   
 ```  
   
- 在 Oracle 服务器上创建下面的 Oracle 包正文。  
+ <span data-ttu-id="fe4b6-120">在 Oracle 服务器上创建下面的 Oracle 包正文。</span><span class="sxs-lookup"><span data-stu-id="fe4b6-120">Create the following Oracle package body on the Oracle server.</span></span>  
   
 ```  
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
@@ -86,6 +89,6 @@ END CURSPKG;
 /  
 ```  
   
-## 请参阅  
- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="fe4b6-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fe4b6-121">See Also</span></span>  
+ [<span data-ttu-id="fe4b6-122">Oracle REF Cursor</span><span class="sxs-lookup"><span data-stu-id="fe4b6-122">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="fe4b6-123">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="fe4b6-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

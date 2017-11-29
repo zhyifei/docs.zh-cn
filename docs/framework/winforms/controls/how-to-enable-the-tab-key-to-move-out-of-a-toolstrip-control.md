@@ -1,37 +1,38 @@
 ---
-title: "如何：使 Tab 键能够移出 ToolStrip 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 在控件之间移动"
-  - "Tab 键, 启用"
-  - "ToolStrip 控件 [Windows 窗体], 移出"
+title: "如何：使 Tab 键能够移出 ToolStrip 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], moving between
+- TAB key [Windows Forms], enabling
+- ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f4583a0381af6f0f85f9c2e2aea1d122f5174ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使 Tab 键能够移出 ToolStrip 控件
-使用以下过程可以使用户按 Tab 键就能以 Tab 键顺序从 <xref:System.Windows.Forms.ToolStrip> 移出到下一个控件。  
+# <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a><span data-ttu-id="ac0e7-102">如何：使 Tab 键能够移出 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="ac0e7-102">How to: Enable the TAB Key to Move Out of a ToolStrip Control</span></span>
+<span data-ttu-id="ac0e7-103">使用以下过程以使用户能够按 TAB 键能够移出的<xref:System.Windows.Forms.ToolStrip>的 tab 键顺序的下一个控件。</span><span class="sxs-lookup"><span data-stu-id="ac0e7-103">Use the following procedure to enable the user to press the TAB key to move out of a <xref:System.Windows.Forms.ToolStrip> to the next control in the tab order.</span></span>  
   
- <xref:System.Windows.Forms.ToolStrip> 接受第一次按 Tab 键，然后箭头键选择 <xref:System.Windows.Forms.ToolStrip> 内的项。  用户第二次按 Tab 键时，将按 Tab 键顺序移到下一个控件。  
+ <span data-ttu-id="ac0e7-104"><xref:System.Windows.Forms.ToolStrip>接受第一次按 TAB 键和箭头键中的选择项<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="ac0e7-104">The <xref:System.Windows.Forms.ToolStrip> accepts the first press of the TAB key, and the arrow keys select items within the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="ac0e7-105">当用户在第二次按 TAB 键时，它将用户带到下一个控件的 tab 键顺序。</span><span class="sxs-lookup"><span data-stu-id="ac0e7-105">When the user presses the TAB key a second time, it takes the user to the next control in the tab order.</span></span>  
   
-### 使用户能够按 Tab 键便从 ToolStrip 移出到下一个控件  
+### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a><span data-ttu-id="ac0e7-106">若要使用户能够按 TAB 键能够移出 ToolStrip 到下一个控件</span><span class="sxs-lookup"><span data-stu-id="ac0e7-106">To enable the user to press the TAB key to move out of a ToolStrip to the next control</span></span>  
   
--   将 <xref:System.Windows.Forms.ToolStrip> 的 <xref:System.Windows.Forms.ToolStrip.TabStop%2A> 属性设置为 `true`。  
+-   <span data-ttu-id="ac0e7-107">设置<xref:System.Windows.Forms.ToolStrip.TabStop%2A>属性<xref:System.Windows.Forms.ToolStrip>到`true`。</span><span class="sxs-lookup"><span data-stu-id="ac0e7-107">Set the <xref:System.Windows.Forms.ToolStrip.TabStop%2A> property of the <xref:System.Windows.Forms.ToolStrip> to `true`.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.TabStop%2A>   
- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ac0e7-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ac0e7-108">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.TabStop%2A>  
+ [<span data-ttu-id="ac0e7-109">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="ac0e7-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

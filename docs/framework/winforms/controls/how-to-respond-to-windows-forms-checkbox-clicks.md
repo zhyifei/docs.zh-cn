@@ -1,35 +1,40 @@
 ---
-title: "如何：响应 Windows 窗体 CheckBox 的单击 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "复选框, 对事件作出响应"
-  - "CheckBox 控件 [Windows 窗体], Click 事件"
-  - "Click 事件, CheckBox 控件"
-  - "双击"
-  - "事件 [Windows 窗体], Click 事件"
+title: "如何：响应 Windows 窗体 CheckBox 的单击"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Click event [Windows Forms], CheckBox control
+- CheckBox control [Windows Forms], Click events
+- events [Windows Forms], Click events
+- double-clicks
+- check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f15adb84f92c9434d6835e80f08bf1d9bd500ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：响应 Windows 窗体 CheckBox 的单击
-每当用户单击某 Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件时，便引发 <xref:System.Windows.Forms.Control.Click> 事件。  可以编写应用程序以根据复选框的状态执行某些操作。  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="7820f-102">如何：响应 Windows 窗体 CheckBox 的单击</span><span class="sxs-lookup"><span data-stu-id="7820f-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
+<span data-ttu-id="7820f-103">每当用户单击 Windows 窗体<xref:System.Windows.Forms.CheckBox>控件，<xref:System.Windows.Forms.Control.Click>事件发生。</span><span class="sxs-lookup"><span data-stu-id="7820f-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="7820f-104">你可以在应用程序中执行一些操作根据复选框的状态。</span><span class="sxs-lookup"><span data-stu-id="7820f-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
   
-### 响应 CheckBox 单击  
+### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="7820f-105">若要响应复选框单击</span><span class="sxs-lookup"><span data-stu-id="7820f-105">To respond to CheckBox clicks</span></span>  
   
-1.  在 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，使用 <xref:System.Windows.Forms.CheckBox.Checked%2A> 属性确定控件的状态，并执行任何必要操作。  
+1.  <span data-ttu-id="7820f-106">在<xref:System.Windows.Forms.Control.Click>事件处理程序中，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>属性来确定控件的状态，然后执行任何必要的操作。</span><span class="sxs-lookup"><span data-stu-id="7820f-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -41,7 +46,6 @@ caps.handback.revision: 11
           CheckBox1.Text = "Unchecked"  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +62,6 @@ caps.handback.revision: 11
           checkBox1.Text = "Unchecked";  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -78,16 +81,16 @@ caps.handback.revision: 11
     ```  
   
     > [!NOTE]
-    >  如果用户尝试双击 <xref:System.Windows.Forms.CheckBox> 控件，每次单击都将单独处理；也就是说，<xref:System.Windows.Forms.CheckBox> 控件不支持双击事件。  
+    >  <span data-ttu-id="7820f-107">如果用户尝试双击<xref:System.Windows.Forms.CheckBox>控件，每次单击将单独处理; 也就是，则<xref:System.Windows.Forms.CheckBox>控件不支持双击事件。</span><span class="sxs-lookup"><span data-stu-id="7820f-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
   
     > [!NOTE]
-    >  如果 <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> 属性为 `true`（默认值），则 <xref:System.Windows.Forms.CheckBox> 在被单击时会自动选中或清除。  否则，当 <xref:System.Windows.Forms.Control.Click> 事件引发时，必须手动设置 <xref:System.Windows.Forms.CheckBox.Checked%2A> 属性。  
+    >  <span data-ttu-id="7820f-108">当<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>属性是`true`（默认值）、<xref:System.Windows.Forms.CheckBox>自动选中或清除单击时其。</span><span class="sxs-lookup"><span data-stu-id="7820f-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="7820f-109">否则，你必须手动设置<xref:System.Windows.Forms.CheckBox.Checked%2A>属性时<xref:System.Windows.Forms.Control.Click>事件发生。</span><span class="sxs-lookup"><span data-stu-id="7820f-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
   
-     还可以使用 <xref:System.Windows.Forms.CheckBox> 控件确定操作的进程。  
+     <span data-ttu-id="7820f-110">你还可以使用<xref:System.Windows.Forms.CheckBox>控件来确定的操作过程。</span><span class="sxs-lookup"><span data-stu-id="7820f-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
   
-### 单击复选框时确定操作的进程  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="7820f-111">若要确定操作过程的复选框时单击</span><span class="sxs-lookup"><span data-stu-id="7820f-111">To determine a course of action when a check box is clicked</span></span>  
   
-1.  使用 case 语句查询 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 属性的值以确定操作的进程。  当 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 属性设置为 `true` 时，<xref:System.Windows.Forms.CheckBox.CheckState%2A> 属性可以返回三个可能值，表示该复选框已选中、未选中或第三种不确定状态（此时复选框以浅灰色显示，表示该选项不可用）。  
+1.  <span data-ttu-id="7820f-112">使用 case 语句来查询的值<xref:System.Windows.Forms.CheckBox.CheckState%2A>属性来确定的操作过程。</span><span class="sxs-lookup"><span data-stu-id="7820f-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="7820f-113">当<xref:System.Windows.Forms.CheckBox.ThreeState%2A>属性设置为`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>属性可能会返回三个可能的值，表示要检查该复选框，框未选中或第三个不确定状态将显示的框与为灰色外观，表示该选项不可用。</span><span class="sxs-lookup"><span data-stu-id="7820f-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -100,7 +103,6 @@ caps.handback.revision: 11
              ' Code for indeterminate state.  
        End Select   
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -119,7 +121,6 @@ caps.handback.revision: 11
              break;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -142,10 +143,10 @@ caps.handback.revision: 11
     ```  
   
     > [!NOTE]
-    >  当 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 属性设置为 `true` 时，<xref:System.Windows.Forms.CheckBox.Checked%2A> 属性对于 <xref:System.Windows.Forms.CheckState> 和 <xref:System.Windows.Forms.CheckState> 都返回 `true`。  
+    >  <span data-ttu-id="7820f-114">当<xref:System.Windows.Forms.CheckBox.ThreeState%2A>属性设置为`true`、<xref:System.Windows.Forms.CheckBox.Checked%2A>属性返回`true`两个<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。</span><span class="sxs-lookup"><span data-stu-id="7820f-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.CheckBox>   
- [CheckBox 控件概述](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [如何：使用 Windows 窗体 CheckBox 控件设置选项](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)   
- [CheckBox 控件](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7820f-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7820f-115">See Also</span></span>  
+ <xref:System.Windows.Forms.CheckBox>  
+ [<span data-ttu-id="7820f-116">CheckBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="7820f-116">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="7820f-117">如何：使用 Windows 窗体 CheckBox 控件设置选项</span><span class="sxs-lookup"><span data-stu-id="7820f-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [<span data-ttu-id="7820f-118">CheckBox 控件</span><span class="sxs-lookup"><span data-stu-id="7820f-118">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

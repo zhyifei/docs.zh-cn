@@ -1,53 +1,57 @@
 ---
-title: "动态参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "动态自变量"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 212f2df9e84a4af4e1c9e7d6792277adfb17351d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 动态参数
-此示例演示如何实现由活动使用方而不是活动作者为其定义参数的活动。此示例是通过重写运行时构造活动元数据的方式来做到这一点的。  
+# <a name="dynamic-arguments"></a><span data-ttu-id="a2c9f-102">动态自变量</span><span class="sxs-lookup"><span data-stu-id="a2c9f-102">Dynamic Arguments</span></span>
+<span data-ttu-id="a2c9f-103">此示例演示如何实现由活动使用方而不是活动作者为其定义自变量的活动。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-103">This sample demonstrates how to implement an activity for which the arguments are defined by the activity consumer rather than the activity author.</span></span> <span data-ttu-id="a2c9f-104">此示例是通过重写运行时构造活动元数据的方式来做到这一点的。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-104">It does this by overriding the way the runtime constructs the activity’s metadata.</span></span>  
   
-## 示例详细信息  
- 在执行之前，运行时通过以下方法生成活动的描述：检查活动类型的公共成员，并自动声明参数、变量、子级活动和活动委托作为活动元数据一部分。这样做可确保构造正确的工作流，以及管理运行时关系和生存期规则。通常，活动作者通过指定派生自 <xref:System.Activities.Argument> 的活动类型的公共成员，定义活动的参数。对于每个派生自 <xref:System.Activities.Argument> 的公共成员，运行时创建一个 <xref:System.Activities.RuntimeArgument>，并将其绑定到该成员上用户提供的参数集。但是，在某些情况下，活动的使用方会提供一些可确定参数集的配置。活动作者重写 <xref:System.Activities.Activity.CacheMetadata%2A> 以自定义生成活动元数据的方式，其中包括与活动相关的参数集。  
+## <a name="sample-details"></a><span data-ttu-id="a2c9f-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="a2c9f-105">Sample details</span></span>  
+ <span data-ttu-id="a2c9f-106">在执行之前，运行时通过以下方法生成活动的描述：检查活动类型的公共成员，并自动声明参数、变量、子级活动和活动委托作为活动元数据一部分。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-106">Prior to execution, the runtime builds a description of an activity by examining the public members of the activity type and automatically declaring arguments, variables, child activities, and activity delegates as part of an activity’s metadata.</span></span> <span data-ttu-id="a2c9f-107">这样做可确保构造正确的工作流，以及管理运行时关系和生存期规则。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-107">It does this to ensure correct construction of a workflow as well as to manage run-time relationships and lifetime rules.</span></span> <span data-ttu-id="a2c9f-108">通常，活动作者通过指定派生自 <xref:System.Activities.Argument> 的活动类型的公共成员，定义活动的参数。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-108">Typically an activity author defines the arguments of an activity by specifying public members on the activity type that derive from <xref:System.Activities.Argument>.</span></span> <span data-ttu-id="a2c9f-109">对于每个派生自 <xref:System.Activities.Argument> 的公共成员，运行时创建一个 <xref:System.Activities.RuntimeArgument>，并将其绑定到该成员上用户提供的参数集。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-109">For each public member that derives from <xref:System.Activities.Argument>, the runtime creates a <xref:System.Activities.RuntimeArgument> and binds it to the user-provided argument set on that member.</span></span> <span data-ttu-id="a2c9f-110">但是，在某些情况下，活动的使用方会提供一些可确定参数集的配置。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-110">In some cases, however, the consumer of the activity provides some configuration that determines the set of arguments.</span></span> <span data-ttu-id="a2c9f-111">活动作者重写 <xref:System.Activities.Activity.CacheMetadata%2A> 以自定义生成活动元数据的方式，其中包括与活动相关的参数集。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-111">An activity author overrides <xref:System.Activities.Activity.CacheMetadata%2A> to customize the way activity metadata is built, which includes the set of arguments associated with the activity.</span></span>  
   
- 此示例演示如何为一个可调用方法的活动动态生成参数列表。活动使用方指定需要调用的类型和方法名称以及要传递到该方法的参数集合。  
+ <span data-ttu-id="a2c9f-112">此示例演示如何为一个可调用方法的活动动态生成参数列表。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-112">This sample demonstrates how to build an argument list dynamically for an activity that invokes a method.</span></span> <span data-ttu-id="a2c9f-113">活动使用方指定需要调用的类型和方法名称以及要传递到该方法的参数集合。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-113">The activity consumer specifies the type and the method name they want to invoke along with a collection of arguments to be passed to that method.</span></span>  
   
 > [!NOTE]
->  此示例的目的是演示如何重写 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 以及如何使用 <xref:System.Activities.RuntimeArgument>。关于此活动可以调用的方法的种类有一些要注意的事项。例如，它不能使用泛型数组或参数数组。.NET Framework 中随附的 <xref:System.Activities.Statements.InvokeMethod> 活动可处理这些情况以及其他情况。  
+>  <span data-ttu-id="a2c9f-114">此示例的目的是演示如何重写 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 以及如何使用 <xref:System.Activities.RuntimeArgument>。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-114">The purpose of this sample is to demonstrate how to override <xref:System.Activities.CodeActivity.CacheMetadata%2A> and how to use <xref:System.Activities.RuntimeArgument>.</span></span> <span data-ttu-id="a2c9f-115">关于此活动可以调用的方法的种类有一些要注意的事项。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-115">There are several caveats with respect to the kinds of methods that this activity can invoke.</span></span> <span data-ttu-id="a2c9f-116">例如，它不能使用泛型数组或参数数组。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-116">For example, it does not work with generics or parameter arrays.</span></span> <span data-ttu-id="a2c9f-117">.NET Framework 中随附的 <xref:System.Activities.Statements.InvokeMethod> 活动可处理这些情况以及其他情况。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-117">The <xref:System.Activities.Statements.InvokeMethod> activity that ships in.NET Framework handles these cases and more.</span></span>  
   
- `MethodInvoke` 活动重写 <xref:System.Activities.CodeActivity.CacheMetadata%2A>，并首先创建 <xref:System.Activities.RuntimeArgument> 以处理方法调用的任何结果。它将此 <xref:System.Activities.RuntimeArgument> 绑定到名为 `Result` 的公共的、可设置的 <xref:System.Activities.OutArgument>。如果 `MethodInvoke.Result` 为 `null`，则运行时会自动使用一个 <xref:System.Activities.OutArgument>（配置为对其类型使用默认表达式）填充它。此行为意味着，活动作者从来不必检查参数属性是否为 `null`。  
+ <span data-ttu-id="a2c9f-118">`MethodInvoke` 活动重写 <xref:System.Activities.CodeActivity.CacheMetadata%2A>，并首先创建 <xref:System.Activities.RuntimeArgument> 以处理方法调用的任何结果。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-118">The `MethodInvoke` activity overrides <xref:System.Activities.CodeActivity.CacheMetadata%2A> and begins by creating a <xref:System.Activities.RuntimeArgument> to handle any result from the method invocation.</span></span> <span data-ttu-id="a2c9f-119">它将此 <xref:System.Activities.RuntimeArgument> 绑定到名为 <xref:System.Activities.OutArgument> 的公共的、可设置的 `Result`。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-119">It binds this <xref:System.Activities.RuntimeArgument> to the publicly settable <xref:System.Activities.OutArgument> named `Result`.</span></span> <span data-ttu-id="a2c9f-120">如果 `MethodInvoke.Result` 为 `null`，则运行时会自动使用一个 <xref:System.Activities.OutArgument>（配置为对其类型使用默认表达式）填充它。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-120">If `MethodInvoke.Result` is `null`, the runtime automatically populates it with an <xref:System.Activities.OutArgument> configured with the default expression for its type.</span></span> <span data-ttu-id="a2c9f-121">此行为意味着，活动作者从来不必检查参数属性是否为 `null`。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-121">This behavior means an activity author never has to check whether an argument property is `null`.</span></span>  
   
- 接下来，<xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写从用户提供的 `MethodName` 和 `TargetType` 中确定它用于调用的 `MethodInfo`。`DetermineMethodInfo` 方法采用传递到 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写的 <xref:System.Activities.CodeActivityMetadata> 参数，以便可以将任何配置错误报告为验证错误。可以通过调用 `metadata.AddValidationError` 来完成此操作。  
+ <span data-ttu-id="a2c9f-122">接下来，<xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写从用户提供的 `MethodInfo` 和 `MethodName` 中确定它用于调用的 `TargetType`。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-122">Next, the <xref:System.Activities.CodeActivity.CacheMetadata%2A> override determines the `MethodInfo` it uses for invocation from the user-provided `MethodName` and `TargetType`.</span></span> <span data-ttu-id="a2c9f-123">`DetermineMethodInfo` 方法采用传递到 <xref:System.Activities.CodeActivityMetadata> 重写的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 参数，以便可以将任何配置错误报告为验证错误。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-123">The `DetermineMethodInfo` method takes the <xref:System.Activities.CodeActivityMetadata> parameter passed to the <xref:System.Activities.CodeActivity.CacheMetadata%2A> override so that any configuration errors can be reported as validation errors.</span></span> <span data-ttu-id="a2c9f-124">可以通过调用 `metadata.AddValidationError` 来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-124">This is done by calling `metadata.AddValidationError`.</span></span>  
   
- 在设置 `MethodInfo` 之后，此示例将循环访问 `MethodInfo` 参数。对于每个参数，它将创建一个 <xref:System.Activities.RuntimeArgument>，并将其从 `Parameters` 属性绑定到用户提供的集合中的对应参数。最后，通过调用 `metadata.SetArgumentsCollection`，将 <xref:System.Activities.RuntimeArgument> 的集合与该活动关联。  
+ <span data-ttu-id="a2c9f-125">在设置 `MethodInfo` 之后，此示例将循环访问 `MethodInfo` 参数。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-125">Once the `MethodInfo` has been set, the sample iterates over the `MethodInfo` parameters.</span></span> <span data-ttu-id="a2c9f-126">对于每个参数，它将创建一个 <xref:System.Activities.RuntimeArgument>，并将其从 `Parameters` 属性绑定到用户提供的集合中的对应参数。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-126">For each parameter, it creates a <xref:System.Activities.RuntimeArgument> and binds it to the corresponding argument in the user-provided collection from the `Parameters` property.</span></span> <span data-ttu-id="a2c9f-127">最后，通过调用 <xref:System.Activities.RuntimeArgument>，将 `metadata.SetArgumentsCollection` 的集合与该活动关联。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-127">Finally, the collection of <xref:System.Activities.RuntimeArgument>s is associated with the activity by calling `metadata.SetArgumentsCollection`.</span></span>  
   
- 请注意，可以使用 <xref:System.Activities.RuntimeArgument> 进行参数解析，就如同处理 `resultArgument` 或用户提供的参数以及 `Parameters` 集合一样。  
+ <span data-ttu-id="a2c9f-128">请注意，可以使用 <xref:System.Activities.RuntimeArgument> 进行参数解析，就如同处理 `resultArgument` 或用户提供的参数以及 `Parameters` 集合一样。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-128">Note that argument resolution can be done using a <xref:System.Activities.RuntimeArgument>, as in the case of `resultArgument` or the user-provided argument, as in the case of the `Parameters` collection.</span></span>  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="a2c9f-129">使用此示例</span><span class="sxs-lookup"><span data-stu-id="a2c9f-129">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 DynamicArguments.sln 文件。  
+1.  <span data-ttu-id="a2c9f-130">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 DynamicArguments.sln 文件。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicArguments.sln file.</span></span>  
   
-2.  要生成解决方案，按 Ctrl\+Shift\+B。  
+2.  <span data-ttu-id="a2c9f-131">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要运行解决方案，请按 Ctrl\+F5。  
+3.  <span data-ttu-id="a2c9f-132">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-132">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="a2c9f-133">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a2c9f-134">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="a2c9f-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="a2c9f-135">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="a2c9f-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a2c9f-136">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="a2c9f-136">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="a2c9f-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a2c9f-137">See Also</span></span>

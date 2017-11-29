@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - application protocols, types
 - protocols, application
@@ -24,22 +19,20 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e7cd2ec072666c039e8bd9fa89aeb70cfd0bb31
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cbbdc2f3fc326de43e9e6a066350ef28aacbec05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用应用程序协议
-.NET Framework 支持常用的 Internet 应用程序协议。 本部分包括有关使用 [HTTP](../../../docs/framework/network-programming/http.md)、“TCP”和“UDP”协议的信息，以及使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 接口实现自定义协议的相关信息。  
+# <a name="using-application-protocols"></a><span data-ttu-id="69f51-102">使用应用程序协议</span><span class="sxs-lookup"><span data-stu-id="69f51-102">Using Application Protocols</span></span>
+<span data-ttu-id="69f51-103">.NET Framework 支持常用的 Internet 应用程序协议。</span><span class="sxs-lookup"><span data-stu-id="69f51-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="69f51-104">本部分包括有关使用 [HTTP](../../../docs/framework/network-programming/http.md)、“TCP”和“UDP”协议的信息，以及使用 [Windows Sockets](../../../docs/framework/network-programming/sockets.md) 接口实现自定义协议的相关信息。</span><span class="sxs-lookup"><span data-stu-id="69f51-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
   
-## 另请参阅  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)   
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)   
- [MSDN 代码库中的 .NET 联网示例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-
+## <a name="see-also"></a><span data-ttu-id="69f51-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="69f51-105">See Also</span></span>  
+ [<span data-ttu-id="69f51-106">.NET Framework 中的网络编程</span><span class="sxs-lookup"><span data-stu-id="69f51-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="69f51-107">网络编程示例</span><span class="sxs-lookup"><span data-stu-id="69f51-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="69f51-108">MSDN 代码库中的 .NET 联网示例</span><span class="sxs-lookup"><span data-stu-id="69f51-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

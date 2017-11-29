@@ -1,27 +1,30 @@
 ---
-title: "推断关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "推断关系"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 41c73ac31105cdae0a23c2367211747dee8d44f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 推断关系
-如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。  一个名为 **ParentTableName\_Id** 的新列将添加到为父元素创建的表以及为子元素创建的表中。  此标识列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  该列将成为父表的自动递增主键，并将用于两个表之间的 **DataRelation**。  所添加的标识列的数据类型将为 **System.Int32**，与所有其他被推断的列的数据类型不同，后者的数据类型为 **System.String**。  **DeleteRule** \= **Cascade** 的 <xref:System.Data.ForeignKeyConstraint> 也将使用父表和子表中的新列创建。  
+# <a name="inferring-relationships"></a><span data-ttu-id="b62a4-102">推断关系</span><span class="sxs-lookup"><span data-stu-id="b62a4-102">Inferring Relationships</span></span>
+<span data-ttu-id="b62a4-103">如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。</span><span class="sxs-lookup"><span data-stu-id="b62a4-103">If an element that is inferred as a table has a child element that is also inferred as a table, a <xref:System.Data.DataRelation> will be created between the two tables.</span></span> <span data-ttu-id="b62a4-104">名称的新列**ParentTableName_Id**将添加到父元素中，创建的表和子元素创建的表。</span><span class="sxs-lookup"><span data-stu-id="b62a4-104">A new column with a name of **ParentTableName_Id** will be added to both the table created for the parent element, and the table created for the child element.</span></span> <span data-ttu-id="b62a4-105">**ColumnMapping**此标识列的属性将设置为**MappingType.Hidden**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-105">The **ColumnMapping** property of this identity column will be set to **MappingType.Hidden**.</span></span> <span data-ttu-id="b62a4-106">列将用于父表中，已自动递增的主关键字和将用于**DataRelation**两个表之间。</span><span class="sxs-lookup"><span data-stu-id="b62a4-106">The column will be an auto-incrementing primary key for the parent table, and will be used for the **DataRelation** between the two tables.</span></span> <span data-ttu-id="b62a4-107">添加的标识列的数据类型将是**System.Int32**，与所有其他被推断的列的数据类型，这是**System.String**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-107">The data type of the added identity column will be **System.Int32**, unlike the data type of all other inferred columns, which is **System.String**.</span></span> <span data-ttu-id="b62a4-108">A<xref:System.Data.ForeignKeyConstraint>与**DeleteRule** = **Cascade**还将在父与子表中使用新的列创建。</span><span class="sxs-lookup"><span data-stu-id="b62a4-108">A <xref:System.Data.ForeignKeyConstraint> with **DeleteRule** = **Cascade** will also be created using the new column in both the parent and child tables.</span></span>  
   
- 例如，考虑以下 XML：  
+ <span data-ttu-id="b62a4-109">例如，考虑以下 XML：</span><span class="sxs-lookup"><span data-stu-id="b62a4-109">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1 attr1="value1" attr2="value2"/>  
@@ -30,57 +33,57 @@ caps.handback.revision: 4
 </DocumentElement>  
 ```  
   
- 推理过程将生成两个表：**Element1** 和 **ChildElement1**。  
+ <span data-ttu-id="b62a4-110">推断过程将生成两个表： **Element1**和**ChildElement1**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-110">The inference process will produce two tables: **Element1** and **ChildElement1**.</span></span>  
   
- **Element1** 表具有两个列：**Element1\_Id** 和 **ChildElement2**。  **Element1\_Id** 列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  **ChildElement2** 列的 **ColumnMapping** 属性将设置为 **MappingType.Element**。  **Element1\_Id** 列将设置为 **Element1** 表的主键。  
+ <span data-ttu-id="b62a4-111">**Element1**表将有两个列： **Element1_Id**和**ChildElement2**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-111">The **Element1** table will have two columns: **Element1_Id** and **ChildElement2**.</span></span> <span data-ttu-id="b62a4-112">**ColumnMapping**属性**Element1_Id**列将设置为**MappingType.Hidden**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-112">The **ColumnMapping** property of the **Element1_Id** column will be set to **MappingType.Hidden**.</span></span> <span data-ttu-id="b62a4-113">**ColumnMapping**属性**ChildElement2**列将设置为**MappingType.Element**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-113">The **ColumnMapping** property of the **ChildElement2** column will be set to **MappingType.Element**.</span></span> <span data-ttu-id="b62a4-114">**Element1_Id**列将设置为主键的**Element1**表。</span><span class="sxs-lookup"><span data-stu-id="b62a4-114">The **Element1_Id** column will be set as the primary key of the **Element1** table.</span></span>  
   
- **ChildElement1** 表具有三个列：**attr1**、**attr2** 和 **Element1\_Id**。  **attr1** 和 **attr2** 列的 **ColumnMapping** 属性将设置为 **MappingType.Attribute**。  **Element1\_Id** 列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  
+ <span data-ttu-id="b62a4-115">**ChildElement1**表将具有三列： **attr1**， **attr2**和**Element1_Id**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-115">The **ChildElement1** table will have three columns: **attr1**, **attr2** and **Element1_Id**.</span></span> <span data-ttu-id="b62a4-116">**ColumnMapping**属性**attr1**和**attr2**列将设置为**MappingType.Attribute**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-116">The **ColumnMapping** property for the **attr1** and **attr2** columns will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="b62a4-117">**ColumnMapping**属性**Element1_Id**列将设置为**MappingType.Hidden**。</span><span class="sxs-lookup"><span data-stu-id="b62a4-117">The **ColumnMapping** property of the **Element1_Id** column will be set to **MappingType.Hidden**.</span></span>  
   
- **DataRelation** 和 **ForeignKeyConstraint** 将使用两个表中的 **Element1\_Id** 列来创建。  
+ <span data-ttu-id="b62a4-118">A **DataRelation**和**ForeignKeyConstraint**将使用创建**Element1_Id**这两个表中的列。</span><span class="sxs-lookup"><span data-stu-id="b62a4-118">A **DataRelation** and **ForeignKeyConstraint** will be created using the **Element1_Id** columns from both tables.</span></span>  
   
- **DataSet：**DocumentElement  
+ <span data-ttu-id="b62a4-119">**数据集：** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="b62a4-119">**DataSet:** DocumentElement</span></span>  
   
- **Table：**Element1  
+ <span data-ttu-id="b62a4-120">**表：** Element1</span><span class="sxs-lookup"><span data-stu-id="b62a4-120">**Table:** Element1</span></span>  
   
-|Element1\_Id|ChildElement2|  
+|<span data-ttu-id="b62a4-121">Element1_Id</span><span class="sxs-lookup"><span data-stu-id="b62a4-121">Element1_Id</span></span>|<span data-ttu-id="b62a4-122">ChildElement2</span><span class="sxs-lookup"><span data-stu-id="b62a4-122">ChildElement2</span></span>|  
 |------------------|-------------------|  
-|0|Text2|  
+|<span data-ttu-id="b62a4-123">0</span><span class="sxs-lookup"><span data-stu-id="b62a4-123">0</span></span>|<span data-ttu-id="b62a4-124">Text2</span><span class="sxs-lookup"><span data-stu-id="b62a4-124">Text2</span></span>|  
   
- **Table：**ChildElement1  
+ <span data-ttu-id="b62a4-125">**表：** ChildElement1</span><span class="sxs-lookup"><span data-stu-id="b62a4-125">**Table:** ChildElement1</span></span>  
   
-|attr1|attr2|Element1\_Id|  
+|<span data-ttu-id="b62a4-126">attr1</span><span class="sxs-lookup"><span data-stu-id="b62a4-126">attr1</span></span>|<span data-ttu-id="b62a4-127">attr2</span><span class="sxs-lookup"><span data-stu-id="b62a4-127">attr2</span></span>|<span data-ttu-id="b62a4-128">Element1_Id</span><span class="sxs-lookup"><span data-stu-id="b62a4-128">Element1_Id</span></span>|  
 |-----------|-----------|------------------|  
-|value1|value2|0|  
+|<span data-ttu-id="b62a4-129">value1</span><span class="sxs-lookup"><span data-stu-id="b62a4-129">value1</span></span>|<span data-ttu-id="b62a4-130">value2</span><span class="sxs-lookup"><span data-stu-id="b62a4-130">value2</span></span>|<span data-ttu-id="b62a4-131">0</span><span class="sxs-lookup"><span data-stu-id="b62a4-131">0</span></span>|  
   
- **DataRelation：**Element1\_ChildElement1  
+ <span data-ttu-id="b62a4-132">**DataRelation:** Element1_ChildElement1</span><span class="sxs-lookup"><span data-stu-id="b62a4-132">**DataRelation:** Element1_ChildElement1</span></span>  
   
- **ParentTable：**Element1  
+ <span data-ttu-id="b62a4-133">**ParentTable:** Element1</span><span class="sxs-lookup"><span data-stu-id="b62a4-133">**ParentTable:** Element1</span></span>  
   
- **ParentColumn：**Element1\_Id  
+ <span data-ttu-id="b62a4-134">**ParentColumn:** Element1_Id</span><span class="sxs-lookup"><span data-stu-id="b62a4-134">**ParentColumn:** Element1_Id</span></span>  
   
- **ChildTable：**ChildElement1  
+ <span data-ttu-id="b62a4-135">**ChildTable:** ChildElement1</span><span class="sxs-lookup"><span data-stu-id="b62a4-135">**ChildTable:** ChildElement1</span></span>  
   
- **ChildColumn：**Element1\_Id  
+ <span data-ttu-id="b62a4-136">**ChildColumn:** Element1_Id</span><span class="sxs-lookup"><span data-stu-id="b62a4-136">**ChildColumn:** Element1_Id</span></span>  
   
- **Nested：**True  
+ <span data-ttu-id="b62a4-137">**嵌套：** True</span><span class="sxs-lookup"><span data-stu-id="b62a4-137">**Nested:** True</span></span>  
   
- **ForeignKeyConstraint：**Element1\_ChildElement1  
+ <span data-ttu-id="b62a4-138">**ForeignKeyConstraint:** Element1_ChildElement1</span><span class="sxs-lookup"><span data-stu-id="b62a4-138">**ForeignKeyConstraint:** Element1_ChildElement1</span></span>  
   
- **Column：**Element1\_Id  
+ <span data-ttu-id="b62a4-139">**列：** Element1_Id</span><span class="sxs-lookup"><span data-stu-id="b62a4-139">**Column:** Element1_Id</span></span>  
   
- **ParentTable：**Element1  
+ <span data-ttu-id="b62a4-140">**ParentTable:** Element1</span><span class="sxs-lookup"><span data-stu-id="b62a4-140">**ParentTable:** Element1</span></span>  
   
- **ChildTable：**ChildElement1  
+ <span data-ttu-id="b62a4-141">**ChildTable:** ChildElement1</span><span class="sxs-lookup"><span data-stu-id="b62a4-141">**ChildTable:** ChildElement1</span></span>  
   
- **DeleteRule：**Cascade  
+ <span data-ttu-id="b62a4-142">**DeleteRule:** Cascade</span><span class="sxs-lookup"><span data-stu-id="b62a4-142">**DeleteRule:** Cascade</span></span>  
   
- **AcceptRejectRule：**None  
+ <span data-ttu-id="b62a4-143">**AcceptRejectRule:**无</span><span class="sxs-lookup"><span data-stu-id="b62a4-143">**AcceptRejectRule:** None</span></span>  
   
-## 请参阅  
- [从 XML 推断 DataSet 关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [从 XML 中加载 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [从 XML 中加载 DataSet 架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b62a4-144">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b62a4-144">See Also</span></span>  
+ [<span data-ttu-id="b62a4-145">从 XML 推断数据集关系结构</span><span class="sxs-lookup"><span data-stu-id="b62a4-145">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="b62a4-146">从 XML 加载数据集</span><span class="sxs-lookup"><span data-stu-id="b62a4-146">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="b62a4-147">从 XML 加载数据集架构信息</span><span class="sxs-lookup"><span data-stu-id="b62a4-147">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="b62a4-148">嵌套 Datarelation</span><span class="sxs-lookup"><span data-stu-id="b62a4-148">Nesting DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [<span data-ttu-id="b62a4-149">在数据集中使用 XML</span><span class="sxs-lookup"><span data-stu-id="b62a4-149">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="b62a4-150">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="b62a4-150">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="b62a4-151">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="b62a4-151">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

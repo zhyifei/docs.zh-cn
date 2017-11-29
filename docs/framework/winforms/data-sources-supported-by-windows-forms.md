@@ -1,73 +1,73 @@
 ---
-title: "Windows 窗体支持的数据源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数组 [Windows 窗体]"
-  - "集合 [Windows 窗体], 绑定"
-  - "数据 [Windows 窗体], 数据提供程序"
-  - "数据提供程序 [Windows 窗体]"
-  - "数据源 [Windows 窗体]"
-  - "DataColumn 类"
-  - "DataSet 类, 绑定和 Windows 窗体"
-  - "DataTable 类, 绑定和 Windows 窗体"
-  - "DataView 类, 绑定和 Windows 窗体"
-  - "DataViewManager 类, 绑定和 Windows 窗体"
-  - "OLE DB 提供程序, Windows 窗体"
-  - "Windows 窗体, 数据绑定"
-  - "Windows 窗体, 源数据"
+title: "Windows 窗体支持的数据源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Windows Forms], binding to
+- OLE DB providers [Windows Forms], Windows Forms
+- DataTable class [Windows Forms], binding and Windows Forms
+- Windows Forms, data binding
+- DataView class [Windows Forms], binding and Windows Forms
+- DataViewManager class [Windows Forms], binding and Windows Forms
+- Windows Forms, source data
+- arrays [Windows Forms]
+- data sources [Windows Forms]
+- data providers [Windows Forms]
+- DataSet class [Windows Forms], binding and Windows Forms
+- data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体支持的数据源
-传统上，在应用程序内使用数据绑定以利用数据库中存储的数据。  使用 Windows 窗体数据绑定功能，可以访问数据库中的数据和其他结构中的数据（如数组和集合），但前提是已满足某些最低要求。  
+# <a name="data-sources-supported-by-windows-forms"></a><span data-ttu-id="c515f-102">Windows 窗体支持的数据源</span><span class="sxs-lookup"><span data-stu-id="c515f-102">Data Sources Supported by Windows Forms</span></span>
+<span data-ttu-id="c515f-103">传统上，数据绑定具有内使用应用程序以利用在数据库中存储的数据。</span><span class="sxs-lookup"><span data-stu-id="c515f-103">Traditionally, data binding has been used within applications to take advantage of data stored in databases.</span></span> <span data-ttu-id="c515f-104">使用 Windows 窗体数据绑定，你可以在访问数据时从数据库以及其他结构，如数组和集合中的数据处理程序，但前提是已满足某些最低要求。</span><span class="sxs-lookup"><span data-stu-id="c515f-104">With Windows Forms data binding, you can access data from databases as well as data in other structures, such as arrays and collections, so long as certain minimum requirements have been met.</span></span>  
   
-## 要绑定到的结构  
- 在 Windows 窗体中，可以绑定到广泛的结构，从简单对象（简单绑定）到诸如 ADO.NET 数据表之类的复杂列表（复杂绑定）。  对于简单绑定，Windows 窗体支持绑定到简单对象的公共属性。  基于 Windows 窗体列表的绑定通常要求对象支持 <xref:System.Collections.IList> 或 <xref:System.ComponentModel.IListSource> 接口。  另外，如果要通过 <xref:System.Windows.Forms.BindingSource> 组件进行绑定，则可以绑定到支持 <xref:System.Collections.IEnumerable> 接口的对象。  有关与数据绑定相关的接口的更多信息，请参见 [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
+## <a name="structures-to-bind-to"></a><span data-ttu-id="c515f-105">绑定到结构</span><span class="sxs-lookup"><span data-stu-id="c515f-105">Structures to Bind To</span></span>  
+ <span data-ttu-id="c515f-106">在 Windows 窗体，你可以将绑定到各种结构，从简单到如 ADO.NET 数据表 （复杂绑定） 的复杂列表的对象 （简单绑定）。</span><span class="sxs-lookup"><span data-stu-id="c515f-106">In Windows Forms, you can bind to a wide variety of structures, from simple objects (simple binding) to complex lists such as ADO.NET data tables (complex binding).</span></span> <span data-ttu-id="c515f-107">对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。</span><span class="sxs-lookup"><span data-stu-id="c515f-107">For simple binding, Windows Forms supports binding to the public properties on the simple object.</span></span> <span data-ttu-id="c515f-108">Windows 窗体的基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。</span><span class="sxs-lookup"><span data-stu-id="c515f-108">Windows Forms list-based binding generally requires that the object support the <xref:System.Collections.IList> interface or the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="c515f-109">此外，如果你正在通过绑定与<xref:System.Windows.Forms.BindingSource>组件，你可以将绑定到支持的对象<xref:System.Collections.IEnumerable>接口。</span><span class="sxs-lookup"><span data-stu-id="c515f-109">Additionally, if you are binding with through a <xref:System.Windows.Forms.BindingSource> component, you can bind to an object that supports the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="c515f-110">有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="c515f-110">For more information about interfaces related to data binding, see [Interfaces Related to Data Binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).</span></span>  
   
- 下面的列表演示 Windows 窗体中可绑定到的结构。  
+ <span data-ttu-id="c515f-111">以下列表显示了你可以将绑定到 Windows 窗体中的结构。</span><span class="sxs-lookup"><span data-stu-id="c515f-111">The following list shows the structures you can bind to in Windows Forms.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingSource> 是最常见的 Windows 窗体数据源，并充当数据源和 Windows 窗体控件之间的代理。  常规 <xref:System.Windows.Forms.BindingSource> 使用模式如下：将控件绑定到 <xref:System.Windows.Forms.BindingSource>，将 <xref:System.Windows.Forms.BindingSource> 绑定到数据源（例如，ADO.NET 数据表或业务对象）。  <xref:System.Windows.Forms.BindingSource> 提供的服务可启用并提高数据绑定支持级别。  例如，基于 Windows 窗体列表的控件（如 <xref:System.Windows.Forms.DataGridView> 和 <xref:System.Windows.Forms.ComboBox>）不直接支持到 <xref:System.Collections.IEnumerable> 数据源的绑定，但是，可以通过 <xref:System.Windows.Forms.BindingSource> 由绑定功能启用此方案。  在这种情况下，<xref:System.Windows.Forms.BindingSource> 会将数据源转换为 <xref:System.Collections.IList>。  
+ <span data-ttu-id="c515f-112">A<xref:System.Windows.Forms.BindingSource>是最常见的 Windows 窗体数据源和数据源和 Windows 窗体控件之间的代理的作用。</span><span class="sxs-lookup"><span data-stu-id="c515f-112">A <xref:System.Windows.Forms.BindingSource> is the most common Windows Forms data source and acts a proxy between a data source and Windows Forms controls.</span></span> <span data-ttu-id="c515f-113">常规<xref:System.Windows.Forms.BindingSource>用法模式是你将控件绑定到<xref:System.Windows.Forms.BindingSource>并将绑定<xref:System.Windows.Forms.BindingSource>到数据源 （例如，ADO.NET 数据表或业务对象）。</span><span class="sxs-lookup"><span data-stu-id="c515f-113">The general <xref:System.Windows.Forms.BindingSource> usage pattern is to bind your controls to the <xref:System.Windows.Forms.BindingSource> and bind the <xref:System.Windows.Forms.BindingSource> to the data source (for example, an ADO.NET data table or a business object).</span></span> <span data-ttu-id="c515f-114"><xref:System.Windows.Forms.BindingSource>提供服务，启用和改进的数据绑定支持的级别。</span><span class="sxs-lookup"><span data-stu-id="c515f-114">The <xref:System.Windows.Forms.BindingSource> provides services that enable and improve the level of data binding support.</span></span> <span data-ttu-id="c515f-115">例如，Windows 窗体列表基于控件如<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.ComboBox>不直接支持绑定到<xref:System.Collections.IEnumerable>数据源但是，你可以启用这种情况下通过绑定<xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="c515f-115">For example, Windows Forms list based controls such as the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.ComboBox> do not directly support binding to <xref:System.Collections.IEnumerable> data sources however, you can enable this scenario by binding through a <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="c515f-116">在这种情况下，<xref:System.Windows.Forms.BindingSource>会将转换到的数据源<xref:System.Collections.IList>。</span><span class="sxs-lookup"><span data-stu-id="c515f-116">In this case, the <xref:System.Windows.Forms.BindingSource> will convert the data source to an <xref:System.Collections.IList>.</span></span>  
   
- 简单对象  
- Windows 窗体支持使用 <xref:System.Windows.Forms.Binding> 类型，将控件属性的数据绑定到对象实例的公共属性。  在使用 <xref:System.Windows.Forms.BindingSource> 时，Windows 窗体还支持将基于列表的控件（如 <xref:System.Windows.Forms.ListControl>）绑定到对象实例。  
+ <span data-ttu-id="c515f-117">简单对象</span><span class="sxs-lookup"><span data-stu-id="c515f-117">Simple objects</span></span>  
+ <span data-ttu-id="c515f-118">Windows 窗体支持数据绑定控件属性绑定到公共属性的对象使用的实例上<xref:System.Windows.Forms.Binding>类型。</span><span class="sxs-lookup"><span data-stu-id="c515f-118">Windows Forms supports data binding control properties to public properties on the instance of an object using the <xref:System.Windows.Forms.Binding> type.</span></span> <span data-ttu-id="c515f-119">Windows 窗体还支持绑定基于列表的控件，如<xref:System.Windows.Forms.ListControl>到对象实例时<xref:System.Windows.Forms.BindingSource>使用。</span><span class="sxs-lookup"><span data-stu-id="c515f-119">Windows Forms also supports binding list based controls, such as a <xref:System.Windows.Forms.ListControl> to an object instance when a <xref:System.Windows.Forms.BindingSource> is used.</span></span>  
   
- 数组或集合  
- 若要充当数据源，列表必须实现 <xref:System.Collections.IList> 接口；它的一个示例将是作为 <xref:System.Array> 类的实例的数组。  有关数组的更多信息，请参见[How to: Create an Array of Objects \(Visual Basic\)](http://msdn.microsoft.com/zh-cn/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ <span data-ttu-id="c515f-120">数组或集合</span><span class="sxs-lookup"><span data-stu-id="c515f-120">array or collection</span></span>  
+ <span data-ttu-id="c515f-121">若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例将数组的实例<xref:System.Array>类。</span><span class="sxs-lookup"><span data-stu-id="c515f-121">To act as a data source, a list must implement the <xref:System.Collections.IList> interface; one example would be an array that is an instance of the <xref:System.Array> class.</span></span> <span data-ttu-id="c515f-122">在阵列上的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3)。</span><span class="sxs-lookup"><span data-stu-id="c515f-122">For more information on arrays, see [How to: Create an Array of Objects (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).</span></span>  
   
- 通常，当创建用于数据绑定的对象的列表时，应当使用 <xref:System.ComponentModel.BindingList%601>。  <xref:System.ComponentModel.BindingList%601> 是 <xref:System.ComponentModel.IBindingList> 接口的一个泛型版本。  <xref:System.ComponentModel.IBindingList> 接口通过添加双向数据绑定所需的属性、方法和事件来扩展 <xref:System.Collections.IList> 接口。  
+ <span data-ttu-id="c515f-123">一般情况下，应使用<xref:System.ComponentModel.BindingList%601>当你创建的数据绑定的对象的列表。</span><span class="sxs-lookup"><span data-stu-id="c515f-123">In general, you should use <xref:System.ComponentModel.BindingList%601> when you create lists of objects for data binding.</span></span> <span data-ttu-id="c515f-124"><xref:System.ComponentModel.BindingList%601>是一个泛型版本<xref:System.ComponentModel.IBindingList>接口。</span><span class="sxs-lookup"><span data-stu-id="c515f-124"><xref:System.ComponentModel.BindingList%601> is a generic version of the <xref:System.ComponentModel.IBindingList> interface.</span></span> <span data-ttu-id="c515f-125"><xref:System.ComponentModel.IBindingList>接口扩展<xref:System.Collections.IList>通过添加属性、 方法和事件所需双向数据绑定接口。</span><span class="sxs-lookup"><span data-stu-id="c515f-125">The <xref:System.ComponentModel.IBindingList> interface extends the <xref:System.Collections.IList> interface by adding properties, methods and events necessary for two-way data binding.</span></span>  
   
  <xref:System.Collections.IEnumerable>  
- 如果要通过 <xref:System.Windows.Forms.BindingSource> 组件进行绑定，则可以将 Windows 窗体控件绑定到仅支持 <xref:System.Collections.IEnumerable> 接口的数据源。  
+ <span data-ttu-id="c515f-126">Windows 窗体控件可以绑定到数据源仅支持<xref:System.Collections.IEnumerable>接口如果它们绑定通过<xref:System.Windows.Forms.BindingSource>组件。</span><span class="sxs-lookup"><span data-stu-id="c515f-126">Windows Forms controls can be bound to data sources that only support the <xref:System.Collections.IEnumerable> interface if they are bound through a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 数据对象  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 提供大量适于绑定到的数据结构。  这些结构在复杂程度和复杂性方面各不相同。  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]<span data-ttu-id="c515f-127">数据对象</span><span class="sxs-lookup"><span data-stu-id="c515f-127"> data objects</span></span>  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]<span data-ttu-id="c515f-128">提供多种适用于绑定到的数据结构。</span><span class="sxs-lookup"><span data-stu-id="c515f-128"> provides a number of data structures suitable for binding to.</span></span> <span data-ttu-id="c515f-129">在复杂程度和复杂性，每个而异。</span><span class="sxs-lookup"><span data-stu-id="c515f-129">Each varies in its sophistication and complexity.</span></span>  
   
--   <xref:System.Data.DataColumn>.  <xref:System.Data.DataColumn> 是 <xref:System.Data.DataTable> 的基本构造块，因为表是由许多列组成的。  每个 <xref:System.Data.DataColumn> 都有一个 <xref:System.Data.DataColumn.DataType%2A> 属性，此属性确定该列保存的数据种类（例如，描述汽车的表中的汽车组成部分）。  可以将控件（如 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性）简单绑定到数据表内的某列。  
+-   <span data-ttu-id="c515f-130"><xref:System.Data.DataColumn>。</span><span class="sxs-lookup"><span data-stu-id="c515f-130"><xref:System.Data.DataColumn>.</span></span> <span data-ttu-id="c515f-131">A<xref:System.Data.DataColumn>是基本的构建基块的<xref:System.Data.DataTable>，因为大量的列构成表。</span><span class="sxs-lookup"><span data-stu-id="c515f-131">A <xref:System.Data.DataColumn> is the essential building block of a <xref:System.Data.DataTable>, in that a number of columns comprise a table.</span></span> <span data-ttu-id="c515f-132">每个<xref:System.Data.DataColumn>具有<xref:System.Data.DataColumn.DataType%2A>确定的数据列保留 （例如，描述汽车的表中的汽车的品牌） 类型的属性。</span><span class="sxs-lookup"><span data-stu-id="c515f-132">Each <xref:System.Data.DataColumn> has a <xref:System.Data.DataColumn.DataType%2A> property that determines the kind of data the column holds (for example, the make of an automobile in a table describing cars).</span></span> <span data-ttu-id="c515f-133">你可以简单绑定控件 (如<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.Text%2A>属性) 到数据表中的列。</span><span class="sxs-lookup"><span data-stu-id="c515f-133">You can simple-bind a control (such as a <xref:System.Windows.Forms.TextBox> control's <xref:System.Windows.Forms.Control.Text%2A> property) to a column within a data table.</span></span>  
   
--   <xref:System.Data.DataTable>.  <xref:System.Data.DataTable> 是 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 中对包含行和列的表的表示形式。  数据表中包含两个集合：<xref:System.Data.DataColumn> 和 <xref:System.Data.DataRow>，前者表示给定表中的数据列（这会最终确定可在该表中输入的数据种类），后者表示给定表中的数据行。  可以将控件复杂绑定到数据表中包含的信息（例如将 <xref:System.Windows.Forms.DataGridView> 控件绑定到数据表）。  但是，当绑定到 <xref:System.Data.DataTable> 时，实际上是绑定到该表的默认视图。  
+-   <span data-ttu-id="c515f-134"><xref:System.Data.DataTable>。</span><span class="sxs-lookup"><span data-stu-id="c515f-134"><xref:System.Data.DataTable>.</span></span> <span data-ttu-id="c515f-135">A<xref:System.Data.DataTable>处于的表示形式的表，具有行和列， [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c515f-135">A <xref:System.Data.DataTable> is the representation of a table, with rows and columns, in [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="c515f-136">数据表包含两个集合： <xref:System.Data.DataColumn>，表示给定的表 （其最终确定的可以进入该表的数据类型） 中的数据的列和<xref:System.Data.DataRow>，表示给定表中的数据行。</span><span class="sxs-lookup"><span data-stu-id="c515f-136">A data table contains two collections: <xref:System.Data.DataColumn>, representing the columns of data in a given table (which ultimately determine the kinds of data that can be entered into that table), and <xref:System.Data.DataRow>, representing the rows of data in a given table.</span></span> <span data-ttu-id="c515f-137">你可以复杂绑定控件到数据表中包含的信息 (如绑定<xref:System.Windows.Forms.DataGridView>到数据表的控件)。</span><span class="sxs-lookup"><span data-stu-id="c515f-137">You can complex-bind a control to the information contained in a data table (such as binding the <xref:System.Windows.Forms.DataGridView> control to a data table).</span></span> <span data-ttu-id="c515f-138">但是，当绑定到<xref:System.Data.DataTable>，则实际上绑定到表的默认视图。</span><span class="sxs-lookup"><span data-stu-id="c515f-138">However, when you bind to a <xref:System.Data.DataTable>, you are a really binding to the table's default view.</span></span>  
   
--   <xref:System.Data.DataView>.  <xref:System.Data.DataView> 是可筛选或排序的单个数据表的自定义视图。  数据视图是复杂绑定控件使用的数据“快照”。  可以简单绑定或复杂绑定到数据视图中的数据，但请注意，绑定到的是数据的固定“图片”而不是一个干净的、不断更新的数据源。  
+-   <span data-ttu-id="c515f-139"><xref:System.Data.DataView>。</span><span class="sxs-lookup"><span data-stu-id="c515f-139"><xref:System.Data.DataView>.</span></span> <span data-ttu-id="c515f-140">A<xref:System.Data.DataView>是单个的数据表可能筛选或排序的自定义的视图。</span><span class="sxs-lookup"><span data-stu-id="c515f-140">A <xref:System.Data.DataView> is a customized view of a single data table that may be filtered or sorted.</span></span> <span data-ttu-id="c515f-141">数据视图是"快照"使用的复杂绑定控件的数据。</span><span class="sxs-lookup"><span data-stu-id="c515f-141">A data view is the data "snapshot" used by complex-bound controls.</span></span> <span data-ttu-id="c515f-142">你可以简单绑定或复杂绑定到的数据在数据视图中，但请注意你正在绑定到的固定"图片"的数据，而不是干净的、 不断更新数据源。</span><span class="sxs-lookup"><span data-stu-id="c515f-142">You can simple-bind or complex-bind to the data within a data view, but be aware that you are binding to a fixed "picture" of the data rather than a clean, updating data source.</span></span>  
   
--   <xref:System.Data.DataSet>.  <xref:System.Data.DataSet> 是数据库中表、关系和数据约束的集合。  可以简单绑定或复杂绑定到数据集内的数据，但请注意，绑定到的是 <xref:System.Data.DataSet> 的默认 <xref:System.Data.DataViewManager>（请参见下一个项目符号的内容）。  
+-   <span data-ttu-id="c515f-143"><xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="c515f-143"><xref:System.Data.DataSet>.</span></span> <span data-ttu-id="c515f-144">A<xref:System.Data.DataSet>是表、 关系和约束的数据库中的数据的集合。</span><span class="sxs-lookup"><span data-stu-id="c515f-144">A <xref:System.Data.DataSet> is a collection of tables, relationships, and constraints of the data in a database.</span></span> <span data-ttu-id="c515f-145">你可以简单绑定或复杂绑定到数据集中，但请注意你正在绑定到默认值<xref:System.Data.DataViewManager>为<xref:System.Data.DataSet>（请参阅下一步项目符号的内容）。</span><span class="sxs-lookup"><span data-stu-id="c515f-145">You can simple-bind or complex-bind to the data within a dataset, but be aware that you are binding to the default <xref:System.Data.DataViewManager> for the <xref:System.Data.DataSet> (see the next bullet point).</span></span>  
   
--   <xref:System.Data.DataViewManager>.  <xref:System.Data.DataViewManager> 是整个 <xref:System.Data.DataView> 的自定义视图，它与 <xref:System.Data.DataSet> 类似，但其中包括各种关系。  使用 <xref:System.Data.DataViewManager.DataViewSettings%2A> 集合，可以为给定表的 <xref:System.Data.DataViewManager> 具有的任何视图设置默认筛选器和排序选项。  
+-   <span data-ttu-id="c515f-146"><xref:System.Data.DataViewManager>。</span><span class="sxs-lookup"><span data-stu-id="c515f-146"><xref:System.Data.DataViewManager>.</span></span> <span data-ttu-id="c515f-147">A<xref:System.Data.DataViewManager>是整个的自定义的视图<xref:System.Data.DataSet>，类似于<xref:System.Data.DataView>，但其中包括各种关系。</span><span class="sxs-lookup"><span data-stu-id="c515f-147">A <xref:System.Data.DataViewManager> is a customized view of the entire <xref:System.Data.DataSet>, analogous to a <xref:System.Data.DataView>, but with relations included.</span></span> <span data-ttu-id="c515f-148">与<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，你可以设置默认筛选器和任何视图的排序选项，<xref:System.Data.DataViewManager>具有给定表的。</span><span class="sxs-lookup"><span data-stu-id="c515f-148">With a <xref:System.Data.DataViewManager.DataViewSettings%2A> collection, you can set default filters and sort options for any views that the <xref:System.Data.DataViewManager> has for a given table.</span></span>  
   
-## 请参阅  
- [Windows 窗体数据绑定中的更改通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a><span data-ttu-id="c515f-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c515f-149">See Also</span></span>  
+ [<span data-ttu-id="c515f-150">Windows 窗体数据绑定中的更改通知</span><span class="sxs-lookup"><span data-stu-id="c515f-150">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [<span data-ttu-id="c515f-151">数据绑定和 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="c515f-151">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [<span data-ttu-id="c515f-152">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="c515f-152">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)

@@ -1,50 +1,53 @@
 ---
-title: "跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "跟踪"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 跟踪
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 可为错误监视和分析提供应用程序检测和诊断数据。您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。您还可以在组件之间关联错误和处理，以提供端对端体验。  
+# <a name="tracing"></a><span data-ttu-id="40647-102">跟踪</span><span class="sxs-lookup"><span data-stu-id="40647-102">Tracing</span></span>
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="40647-103"> 可为错误监视和分析提供应用程序检测和诊断数据。</span><span class="sxs-lookup"><span data-stu-id="40647-103"> provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="40647-104">您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。</span><span class="sxs-lookup"><span data-stu-id="40647-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="40647-105">您还可以在组件之间关联错误和处理，以提供端对端体验。</span><span class="sxs-lookup"><span data-stu-id="40647-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 可以为诊断跟踪提供以下数据：  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="40647-106"> 输出以下用于诊断跟踪的数据：</span><span class="sxs-lookup"><span data-stu-id="40647-106"> outputs the following data for diagnostic tracing:</span></span>  
   
--   应用程序所有组件之间进程里程碑的跟踪，如操作调用、代码异常、警告及其他重大处理事件。  
+-   <span data-ttu-id="40647-107">应用程序所有组件之间进程里程碑的跟踪，如操作调用、代码异常、警告及其他重大处理事件。</span><span class="sxs-lookup"><span data-stu-id="40647-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
   
--   跟踪功能出现故障时发生的 Windows 错误事件。  
+-   <span data-ttu-id="40647-108">跟踪功能出现故障时发生的 Windows 错误事件。</span><span class="sxs-lookup"><span data-stu-id="40647-108">Windows error events when the tracing feature malfunctions.</span></span>  
   
-## 本节内容  
- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="40647-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="40647-109">In This Section</span></span>  
+ [<span data-ttu-id="40647-110">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="40647-110">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
- 本主题说明如何在不同级别配置跟踪以适应特定的需要。  
+ <span data-ttu-id="40647-111">本主题说明如何在不同级别配置跟踪以适应特定的需要。</span><span class="sxs-lookup"><span data-stu-id="40647-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
   
- [端到端跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [<span data-ttu-id="40647-112">端到端跟踪</span><span class="sxs-lookup"><span data-stu-id="40647-112">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
- 本节说明如何使用端对端关联的活动跟踪和传播以帮助调试。  
+ <span data-ttu-id="40647-113">本节说明如何使用端对端关联的活动跟踪和传播以帮助调试。</span><span class="sxs-lookup"><span data-stu-id="40647-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
   
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="40647-114">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="40647-114">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
- 本节说明如何使用跟踪来调试应用程序。  
+ <span data-ttu-id="40647-115">本节说明如何使用跟踪来调试应用程序。</span><span class="sxs-lookup"><span data-stu-id="40647-115">This section describes how you can use tracing to debug your application.</span></span>  
   
- [有关跟踪的安全注意事项和有用提示](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [<span data-ttu-id="40647-116">安全问题和用于跟踪有用的提示</span><span class="sxs-lookup"><span data-stu-id="40647-116">Security Concerns and Useful Tips for Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
- 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
+ <span data-ttu-id="40647-117">本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。</span><span class="sxs-lookup"><span data-stu-id="40647-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
   
- [跟踪参考](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [<span data-ttu-id="40647-118">跟踪引用</span><span class="sxs-lookup"><span data-stu-id="40647-118">Traces Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- 本主题列出由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 生成的所有跟踪。  
+ <span data-ttu-id="40647-119">本主题列出由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 生成的所有跟踪。</span><span class="sxs-lookup"><span data-stu-id="40647-119">This topic lists all the traces generated by [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>  
   
-## 请参阅  
- [服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="40647-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="40647-120">See Also</span></span>  
+ [<span data-ttu-id="40647-121">服务跟踪查看器工具 (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="40647-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

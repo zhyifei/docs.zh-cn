@@ -1,89 +1,92 @@
 ---
-title: "计时事件概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clock 类"
-  - "类中时钟"
-  - "时间线"
-  - "计时事件"
+title: "计时事件概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- timelines [WPF]
+- timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 计时事件概述
-本主题介绍如何使用上可用的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。  
+# <a name="timing-events-overview"></a><span data-ttu-id="c3e6b-102">计时事件概述</span><span class="sxs-lookup"><span data-stu-id="c3e6b-102">Timing Events Overview</span></span>
+<span data-ttu-id="c3e6b-103">本主题介绍如何使用可在上找到的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-103">This topic describes how to use the five timing events available on <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> objects.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
-## <a name="prerequisites"></a>先决条件  
- 若要了解本主题，应了解如何创建和使用动画。 若要开始使用动画，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="c3e6b-104">先决条件</span><span class="sxs-lookup"><span data-stu-id="c3e6b-104">Prerequisites</span></span>  
+ <span data-ttu-id="c3e6b-105">若要了解本主题，应了解如何创建和使用动画。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-105">To understand this topic, you should understand how to create and use animations.</span></span> <span data-ttu-id="c3e6b-106">若要开始使用动画，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-106">To get started with animation, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- 有多种方法中的属性进行动画处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ <span data-ttu-id="c3e6b-107">有多种方法中的属性进行动画处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="c3e6b-107">There are multiple ways to animate properties in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span></span>  
   
--   **使用情节提要对象**（标记和代码）︰ 您可以使用<xref:System.Windows.Media.Animation.Storyboard>对象来排列和分发到一个或多个对象的动画。 有关示例，请参阅[使用演示图板对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)。  
+-   <span data-ttu-id="c3e6b-108">**使用情节提要对象**（标记和代码）： 你可以使用<xref:System.Windows.Media.Animation.Storyboard>对象以排列，并将分发到一个或多个对象的动画。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-108">**Using storyboard objects** (markup and code): You can use <xref:System.Windows.Media.Animation.Storyboard> objects to arrange and distribute animations to one or more objects.</span></span> <span data-ttu-id="c3e6b-109">有关示例，请参阅[使用情节提要属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-109">For an example, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).</span></span>  
   
--   **使用本地动画**（仅代码）︰ 您可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>对象直接与它们进行动画处理的属性。 有关示例，请参阅[进行动画处理属性而不使用演示图板](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
+-   <span data-ttu-id="c3e6b-110">**使用本地动画**（仅代码）： 你可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>对象直接与它们进行动画处理的属性。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-110">**Using local animations** (code only): You can apply <xref:System.Windows.Media.Animation.AnimationTimeline> objects directly to the properties they animate.</span></span> <span data-ttu-id="c3e6b-111">有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-111">For an example, see [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).</span></span>  
   
--   **使用时钟**（仅代码）︰ 您可以显式管理时钟创建并将分发用户的动画时钟。  有关示例，请参阅[使用 AnimationClock 对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)。  
+-   <span data-ttu-id="c3e6b-112">**使用时钟**（仅代码）：可以显式管理时钟创建并自行分发动画时钟。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-112">**Using clocks** (code only): You can explicitly manage clock creation and distribute the animation clocks yourself.</span></span>  <span data-ttu-id="c3e6b-113">有关示例，请参阅[使用 AnimationClock 属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-113">For an example, see [Animate a Property by Using an AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).</span></span>  
   
- 因为您可以使用这些标记和代码中，此概述中的示例使用<xref:System.Windows.Media.Animation.Storyboard>对象。 但是，所述的概念可以应用于属性进行动画处理的其他方法。  
+ <span data-ttu-id="c3e6b-114">因为你可以将其用于标记和代码，此概述中的示例使用<xref:System.Windows.Media.Animation.Storyboard>对象。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-114">Because you can use them in markup and code, the examples in this overview use <xref:System.Windows.Media.Animation.Storyboard> objects.</span></span> <span data-ttu-id="c3e6b-115">但是，所介绍的概念适用于其他对属性进行动画处理的方法。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-115">However, the concepts described can be applied to the other methods of animating properties.</span></span>  
   
-### <a name="what-is-a-clock"></a>时钟是什么？  
- 时间线，其本身而言，实际上没有任何除了描述一个时间段。 它是时间线的<xref:System.Windows.Media.Animation.Clock>对象，不能实际工作︰ 维护与计时相关用于时间线的运行时状态。 在大多数情况下，例如使用演示图板时，一个时钟自动创建为时间线。 您还可以创建<xref:System.Windows.Media.Animation.Clock>使用由显式<xref:System.Windows.Media.Animation.Timeline.CreateClock%2A>方法。 有关详细信息<xref:System.Windows.Media.Animation.Clock>对象，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+### <a name="what-is-a-clock"></a><span data-ttu-id="c3e6b-116">是什么时钟？</span><span class="sxs-lookup"><span data-stu-id="c3e6b-116">What is a clock?</span></span>  
+ <span data-ttu-id="c3e6b-117">除了描述时间段外，时间线本身并无其他任何作用。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-117">A timeline, by itself, doesn't actually do anything other than describe a segment of time.</span></span> <span data-ttu-id="c3e6b-118">它是时间线的<xref:System.Windows.Media.Animation.Clock>对象，不能实际工作： 它维护与计时相关时间线的运行时状态。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-118">It's the timeline's <xref:System.Windows.Media.Animation.Clock> object that does the real work: it maintains timing-related run-time state for the timeline.</span></span> <span data-ttu-id="c3e6b-119">在大多数情况下，比如使用情节提要时，会自动为时间线创建时钟。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-119">In most cases, such as when using storyboards, a clock is created automatically for your timeline.</span></span> <span data-ttu-id="c3e6b-120">你还可以创建<xref:System.Windows.Media.Animation.Clock>通过使用显式<xref:System.Windows.Media.Animation.Timeline.CreateClock%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-120">You can also create a <xref:System.Windows.Media.Animation.Clock> explicitly by using the <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> method.</span></span> <span data-ttu-id="c3e6b-121">有关详细信息<xref:System.Windows.Media.Animation.Clock>对象，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-121">For more information about <xref:System.Windows.Media.Animation.Clock> objects, see the [Animation and Timing System Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).</span></span>  
   
-## <a name="why-use-events"></a>为什么使用事件？  
- 除了一个 （寻道对齐为最后一个时钟周期），是异步的所有交互计时操作。 没有，您需要知道正好在其将执行方法。 当您有其他代码，取决于您的计时操作时，这可以是个问题。 假设您想要停止一个矩形进行动画处理的时间线。 时间线停止后，您可以更改矩形的颜色。  
+## <a name="why-use-events"></a><span data-ttu-id="c3e6b-122">为什么使用事件？</span><span class="sxs-lookup"><span data-stu-id="c3e6b-122">Why Use Events?</span></span>  
+ <span data-ttu-id="c3e6b-123">除了一个例外（对齐到上一时钟周期的查找操作），所有交互式计时操作均为异步操作。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-123">With the exception of one (seek aligned to last tick), all interactive timing operations are asynchronous.</span></span> <span data-ttu-id="c3e6b-124">无法准确知道它们何时执行。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-124">There is no way for you to know exactly when they will execute.</span></span> <span data-ttu-id="c3e6b-125">当存在其他代码依赖于计时操作时，可能会产生问题。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-125">That can be a problem when you have other code that's dependent upon your timing operation.</span></span> <span data-ttu-id="c3e6b-126">假设你希望停止对矩形进行动画处理的时间线。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-126">Suppose that you wanted to stop a timeline that animated a rectangle.</span></span> <span data-ttu-id="c3e6b-127">在时间线停止后，更改矩形的颜色。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-127">After the timeline stops, you change the color of the rectangle.</span></span>  
   
  [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
  [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
- 在上一示例中，第二行代码可能会在情节提要停止前执行。 这是因为停止是一个异步操作。 告诉时间线或时钟停止创建"停止"的排序不处理请求之前计时引擎下一步刻度线。  
+ <span data-ttu-id="c3e6b-128">在上一示例中，第二行代码可能会在情节提要停止前执行。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-128">In the previous example, the second line of code might execute before the storyboard stops.</span></span> <span data-ttu-id="c3e6b-129">这是因为停止操作是异步操作。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-129">That's because stopping is an asynchronous operation.</span></span> <span data-ttu-id="c3e6b-130">告知时间线或时钟停止将创建各种“停止请求”，但它仅在计时引擎的下一时钟周期才会处理。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-130">Telling a timeline or clock to stop creates a "stop request" of sorts that isn't processed until the timing engine's next tick.</span></span>  
   
- 若要执行命令，在时间线完成后，使用计时事件。 在下面的示例中，事件处理程序用于在演示图板停止播放后更改矩形的颜色。  
+ <span data-ttu-id="c3e6b-131">若要在时间线完成后执行命令，请使用计时事件。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-131">To execute commands after a timeline completes, use timing events.</span></span> <span data-ttu-id="c3e6b-132">在下面的示例中，事件处理程序用于在情节提要停止播放后更改矩形的颜色。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-132">In the following example, an event handler is used to change the color of a rectangle after the storyboard stops playing.</span></span>  
   
  [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
  [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 有关更完整的示例，请参阅[收到通知时时钟的状态更改](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)。  
+ <span data-ttu-id="c3e6b-133">有关更完整示例，请参阅[收到通知时时钟的状态更改](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-133">For a more complete example, see [Receive Notification When a Clock's State Changes](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).</span></span>  
   
-## <a name="public-events"></a>公共事件  
- <xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类都提供&5; 个计时事件。 下表列出这些事件，触发它们的条件。  
+## <a name="public-events"></a><span data-ttu-id="c3e6b-134">公共事件</span><span class="sxs-lookup"><span data-stu-id="c3e6b-134">Public Events</span></span>  
+ <span data-ttu-id="c3e6b-135"><xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类都提供五个计时事件。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-135">The <xref:System.Windows.Media.Animation.Timeline> and <xref:System.Windows.Media.Animation.Clock> classes both provide five timing events.</span></span> <span data-ttu-id="c3e6b-136">下表列出了这些事件及其触发条件。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-136">The following table lists these events and the conditions that trigger them.</span></span>  
   
-|事件|触发交互操作|其他触发器|  
+|<span data-ttu-id="c3e6b-137">Event</span><span class="sxs-lookup"><span data-stu-id="c3e6b-137">Event</span></span>|<span data-ttu-id="c3e6b-138">触发交互式操作</span><span class="sxs-lookup"><span data-stu-id="c3e6b-138">Triggering interactive operation</span></span>|<span data-ttu-id="c3e6b-139">其他触发器</span><span class="sxs-lookup"><span data-stu-id="c3e6b-139">Other triggers</span></span>|  
 |-----------|--------------------------------------|--------------------|  
-|**已完成**|跳过以填充|时钟完成。|  
-|**CurrentGlobalSpeedInvalidated**|暂停、 恢复、 查找、 设置速度比、 跳过以填充、 停止|时钟反转、 加快了、 启动或停止。|  
-|**CurrentStateInvalidated**|开始、 跳过以填充、 停止|时钟开始、 停止或填充。|  
-|**CurrentTimeInvalidated**|开始、 查找、 跳过以填充、 停止|时钟前进。|  
-|**RemoveRequested**|删除||  
+|<span data-ttu-id="c3e6b-140">**Completed**</span><span class="sxs-lookup"><span data-stu-id="c3e6b-140">**Completed**</span></span>|<span data-ttu-id="c3e6b-141">跳过以填充</span><span class="sxs-lookup"><span data-stu-id="c3e6b-141">Skip to fill</span></span>|<span data-ttu-id="c3e6b-142">时钟完成。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-142">The clock completes.</span></span>|  
+|<span data-ttu-id="c3e6b-143">**CurrentGlobalSpeedInvalidated**</span><span class="sxs-lookup"><span data-stu-id="c3e6b-143">**CurrentGlobalSpeedInvalidated**</span></span>|<span data-ttu-id="c3e6b-144">暂停、恢复、查找、设置速度比、跳过以填充、停止</span><span class="sxs-lookup"><span data-stu-id="c3e6b-144">Pause, resume, seek, set speed ratio, skip to fill, stop</span></span>|<span data-ttu-id="c3e6b-145">时钟反转、加速、启动或停止。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-145">The clock reverses, accelerates, starts, or stops.</span></span>|  
+|<span data-ttu-id="c3e6b-146">**CurrentStateInvalidated**</span><span class="sxs-lookup"><span data-stu-id="c3e6b-146">**CurrentStateInvalidated**</span></span>|<span data-ttu-id="c3e6b-147">开始、跳过以填充、停止</span><span class="sxs-lookup"><span data-stu-id="c3e6b-147">Begin, skip to fill, stop</span></span>|<span data-ttu-id="c3e6b-148">时钟开始、停止或填充。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-148">The clock starts, stops, or fills.</span></span>|  
+|<span data-ttu-id="c3e6b-149">**CurrentTimeInvalidated**</span><span class="sxs-lookup"><span data-stu-id="c3e6b-149">**CurrentTimeInvalidated**</span></span>|<span data-ttu-id="c3e6b-150">开始、查找、跳过以填充、停止</span><span class="sxs-lookup"><span data-stu-id="c3e6b-150">Begin, seek, skip to fill, stop</span></span>|<span data-ttu-id="c3e6b-151">时钟前进。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-151">The clock progresses.</span></span>|  
+|<span data-ttu-id="c3e6b-152">**RemoveRequested**</span><span class="sxs-lookup"><span data-stu-id="c3e6b-152">**RemoveRequested**</span></span>|<span data-ttu-id="c3e6b-153">删除</span><span class="sxs-lookup"><span data-stu-id="c3e6b-153">Remove</span></span>||  
   
-## <a name="ticking-and-event-consolidation"></a>计时和事件合并  
- 当您设置中的对象有动画效果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，它是管理您的动画的计时引擎。 计时引擎跟踪时间的进度，并计算每个动画的状态。 它使第二个中的很多这样的计算过程。 这些计算过程被称为"时钟周期。  
+## <a name="ticking-and-event-consolidation"></a><span data-ttu-id="c3e6b-154">时钟周期和事件合并</span><span class="sxs-lookup"><span data-stu-id="c3e6b-154">Ticking and Event Consolidation</span></span>  
+ <span data-ttu-id="c3e6b-155">当您创建动画中的对象[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，它是管理您的动画的计时引擎。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-155">When you animate objects in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], it’s the timing engine that manages your animations.</span></span> <span data-ttu-id="c3e6b-156">计时引擎跟踪时间进度，并计算每个动画的状态。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-156">The timing engine tracks the progression of time and computes the state of each animation.</span></span> <span data-ttu-id="c3e6b-157">它一秒内进行多次计算。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-157">It makes many such evaluation passes in a second.</span></span> <span data-ttu-id="c3e6b-158">这些计算过程称为“时钟周期”。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-158">These evaluation passes are known as "ticks."</span></span>  
   
- 虽然计时周期频繁发生，则可能会有很多种刻度之间发生这种情况。 例如，时间线可能会停止、 启动，并且再次停止，在这种情况下其当前状态将更改三次。 从理论上讲，可能会引发此事件多次在为一个时钟周期;但是，计时引擎将合并事件，以便每滴答一次引发的每个事件。  
+ <span data-ttu-id="c3e6b-159">尽管时钟周期频繁发生，但是不同时钟周期之间可能会很多操作。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-159">While ticks occur frequently, it's possible for a lot of things to happen between ticks.</span></span> <span data-ttu-id="c3e6b-160">例如，时间线可能会停止、启动、再次停止，在这种情况下其当前状态将更改三次。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-160">For example, a timeline might be stopped, started, and stopped again, in which case its current state will have changed three times.</span></span> <span data-ttu-id="c3e6b-161">从理论上讲，在一个时钟周期内，可以多次引发事件；但是，计时引擎会合并事件，因此每个事件在每个时钟周期内只能引发一次。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-161">In theory, the event could be raised multiple times in a single tick; however, the timing engine consolidates events, so that each event can be raised at most once per tick.</span></span>  
   
-## <a name="registering-for-events"></a>正在注册的事件  
- 有两种方法来注册，以便计时事件︰ 您可以注册时间线以及与创建从该时间线的时钟。 直接向时钟注册事件是相当简单明了，但只能通过编写代码实现。 您可以注册的事件的时间线从标记或代码。 下一节介绍如何注册时间线的时钟事件。  
+## <a name="registering-for-events"></a><span data-ttu-id="c3e6b-162">注册事件</span><span class="sxs-lookup"><span data-stu-id="c3e6b-162">Registering for Events</span></span>  
+ <span data-ttu-id="c3e6b-163">可以通过两种方法注册计时事件：使用时间线或使用从时间线创建的时钟进行注册。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-163">There are two ways to register for timing events: you can register with the timeline or with the clock created from the timeline.</span></span> <span data-ttu-id="c3e6b-164">直接使用时钟注册事件相当简单，不过该方法只能在代码中执行。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-164">Registering for an event directly with a clock is fairly straightforward, although it can only be done from code.</span></span> <span data-ttu-id="c3e6b-165">可以在标记或代码中使用时间线注册事件。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-165">You can register for events with a timeline from markup or code.</span></span> <span data-ttu-id="c3e6b-166">下一节介绍如何使用时间线注册时钟事件。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-166">The next section describes how to register for clock events with a timeline.</span></span>  
   
 <a name="registeringforclockeventswithatimeline"></a>   
-## <a name="registering-for-clock-events-with-a-timeline"></a>正在注册的时钟时间线事件  
- 虽然时间线的<xref:System.Windows.Media.Animation.Timeline.Completed>， <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>， <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>， <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>，和<xref:System.Windows.Media.Animation.Timeline.RemoveRequested>事件似乎与时间线上，这些事件实际上将与一个事件处理程序相关联的注册相关联<xref:System.Windows.Media.Animation.Clock>创建时间线。  
+## <a name="registering-for-clock-events-with-a-timeline"></a><span data-ttu-id="c3e6b-167">使用时间线注册时钟事件</span><span class="sxs-lookup"><span data-stu-id="c3e6b-167">Registering for Clock Events with a Timeline</span></span>  
+ <span data-ttu-id="c3e6b-168">虽然时间线的<xref:System.Windows.Media.Animation.Timeline.Completed>， <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>， <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>， <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>，和<xref:System.Windows.Media.Animation.Timeline.RemoveRequested>事件显示为与时间线，注册这些事件实际上将关联的事件处理程序替换为关联<xref:System.Windows.Media.Animation.Clock>为时间线创建。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-168">Although a timeline's <xref:System.Windows.Media.Animation.Timeline.Completed>, <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>, <xref:System.Windows.Media.Animation.Timeline.CurrentTimeInvalidated>, and <xref:System.Windows.Media.Animation.Timeline.RemoveRequested> events appear to be associated with the timeline, registering for these events actually associates an event handler with the <xref:System.Windows.Media.Animation.Clock> created for the timeline.</span></span>  
   
- 当您注册，以便<xref:System.Windows.Media.Animation.Timeline.Completed>时间线上的事件，例如，您实际上通知系统注册为<xref:System.Windows.Media.Animation.Clock.Completed>事件的时间线创建每个时钟。 在代码中，您必须注册此事件之前<xref:System.Windows.Media.Animation.Clock>创建为此时间线; 否则，不会收到通知。 发生这种情况中自动[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 分析器自动为该事件注册<xref:System.Windows.Media.Animation.Clock>创建。  
+ <span data-ttu-id="c3e6b-169">当你注册<xref:System.Windows.Media.Animation.Timeline.Completed>时间线上的事件，例如，你正在实际相当于告诉系统注册<xref:System.Windows.Media.Animation.Clock.Completed>事件的时间线创建每个时钟。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-169">When you register for the <xref:System.Windows.Media.Animation.Timeline.Completed> event on a timeline, for example, you're actually telling the system to register for the <xref:System.Windows.Media.Animation.Clock.Completed> event of each clock that is created for the timeline.</span></span> <span data-ttu-id="c3e6b-170">在代码中，你必须注册此事件之前<xref:System.Windows.Media.Animation.Clock>创建为此时间线; 否则，你不会收到通知。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-170">In code, you must register for this event before the <xref:System.Windows.Media.Animation.Clock> is created for this timeline; otherwise, you won't receive notification.</span></span> <span data-ttu-id="c3e6b-171">发生这种情况会自动在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 分析器自动注册为事件之前<xref:System.Windows.Media.Animation.Clock>创建。</span><span class="sxs-lookup"><span data-stu-id="c3e6b-171">This happens automatically in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; the parser automatically registers for the event before the <xref:System.Windows.Media.Animation.Clock> is created.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c3e6b-172">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3e6b-172">See Also</span></span>  
+ [<span data-ttu-id="c3e6b-173">动画和计时系统概述</span><span class="sxs-lookup"><span data-stu-id="c3e6b-173">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="c3e6b-174">动画概述</span><span class="sxs-lookup"><span data-stu-id="c3e6b-174">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="c3e6b-175">计时行为概述</span><span class="sxs-lookup"><span data-stu-id="c3e6b-175">Timing Behaviors Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

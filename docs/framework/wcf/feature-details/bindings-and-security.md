@@ -1,239 +1,242 @@
 ---
-title: "绑定与安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "绑定 [WCF]"
-  - "绑定 [WCF], 安全"
-  - "WCF 安全"
-  - "Windows Communication Foundation, 安全"
+title: "绑定与安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bindings [WCF], security
+- WCF security
+- Windows Communication Foundation, security
+- bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 绑定与安全
-包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。但有一个例外，就是所有绑定都启用了默认的安全方案。本主题将帮助您根据安全需要来选择正确的绑定。  
+# <a name="bindings-and-security"></a><span data-ttu-id="d801d-102">绑定与安全</span><span class="sxs-lookup"><span data-stu-id="d801d-102">Bindings and Security</span></span>
+<span data-ttu-id="d801d-103">包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。</span><span class="sxs-lookup"><span data-stu-id="d801d-103">The system-provided bindings included with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offer a quick way to program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="d801d-104">但有一个例外，就是所有绑定都启用了默认的安全方案。</span><span class="sxs-lookup"><span data-stu-id="d801d-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="d801d-105">本主题将帮助你根据安全需要来选择正确的绑定。</span><span class="sxs-lookup"><span data-stu-id="d801d-105">This topic helps you select the right binding for your security needs.</span></span>  
   
- 有关 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性的概述，请参见[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用绑定进行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程的更多信息，请参见 [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ <span data-ttu-id="d801d-106">有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-106">For an overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d801d-107">编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-107"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] using bindings, see [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span></span>  
   
- 如果已经选择了绑定，有关安全性的关联运行时行为的更多信息，请参见 [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ <span data-ttu-id="d801d-108">如果你已选择一个绑定，则可以了解有关在中与安全性相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-108">If you have already selected a binding, you can find out more about the run-time behaviors that are associated with security in [Security Behaviors](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span></span>  
   
- 部分安全性功能无法用系统提供的绑定进行编程。有关如何更为灵活地使用自定义绑定的信息，请参见[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ <span data-ttu-id="d801d-109">部分安全性功能无法用系统提供的绑定进行编程。</span><span class="sxs-lookup"><span data-stu-id="d801d-109">Some security functions are not programmable using the system-provided bindings.</span></span> <span data-ttu-id="d801d-110">使用自定义绑定的更多控制，请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-110">For more control using a custom binding, see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## 绑定的安全功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。如果某个特定绑定不能满足要求，您还可以创建自定义绑定。有关系统提供的绑定的列表，请参见[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义绑定的更多信息，请参见[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+## <a name="security-functions-of-bindings"></a><span data-ttu-id="d801d-111">绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="d801d-111">Security Functions of Bindings</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d801d-112"> 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。</span><span class="sxs-lookup"><span data-stu-id="d801d-112"> includes a number of system-provided bindings that meet most needs.</span></span> <span data-ttu-id="d801d-113">如果某个特定绑定不能满足要求，你还可以创建自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="d801d-113">If a particular binding does not suffice, you can also create a custom binding.</span></span> <span data-ttu-id="d801d-114">系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-114">For a list of system-provided bindings, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d801d-115">自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-115"> custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个绑定都具有两种形式：一种是 API，一种是在配置文件中使用的 XML 元素。例如，`WSHttpBinding` \(API\) 在 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 中具有对应项。  
+ <span data-ttu-id="d801d-116">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个绑定都具有两种形式：一种是 API，一种是在配置文件中使用的 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="d801d-116">Every binding in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has two forms: as an API and as an XML element used in a configuration file.</span></span> <span data-ttu-id="d801d-117">例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-117">For example, the `WSHttpBinding` (API) has a counterpart in the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- 下一节列出了每个绑定的两种形式，并概括了安全功能。  
+ <span data-ttu-id="d801d-118">下一节列出了每个绑定的两种形式，并概括了安全功能。</span><span class="sxs-lookup"><span data-stu-id="d801d-118">The following section lists both forms for each binding and summarizes the security features.</span></span>  
   
-### BasicHttp  
- 在代码中，请使用 <xref:System.ServiceModel.BasicHttpBinding> 类；在配置中，请使用 [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
+### <a name="basichttp"></a><span data-ttu-id="d801d-119">BasicHttp</span><span class="sxs-lookup"><span data-stu-id="d801d-119">BasicHttp</span></span>  
+ <span data-ttu-id="d801d-120">在代码中，使用<xref:System.ServiceModel.BasicHttpBinding>类; 在配置中，使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-120">In code, use the <xref:System.ServiceModel.BasicHttpBinding> class; in configuration, use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
- 此绑定的目的是与如下一系列现有技术一起使用：  
+ <span data-ttu-id="d801d-121">此绑定的目的是与如下一系列现有技术一起使用：</span><span class="sxs-lookup"><span data-stu-id="d801d-121">This binding is designed for use with a range of existing technologies, including the following:</span></span>  
   
--   ASP.NET Web 服务 \(ASMX\) 版本 1。  
+-   <span data-ttu-id="d801d-122">ASP.NET Web 服务 (ASMX) 版本 1。</span><span class="sxs-lookup"><span data-stu-id="d801d-122">ASP.NET Web services (ASMX), version 1.</span></span>  
   
--   Web Service Enhancements \(WSE\) 应用程序。  
+-   <span data-ttu-id="d801d-123">Web Service Enhancements (WSE) 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d801d-123">Web Service Enhancements (WSE) applications.</span></span>  
   
--   Web 服务互操作性 \(WS\-I\) 规范中定义的基本配置文件（[http:\/\/go.microsoft.com\/fwlink\/?LinkId\=38955](http://go.microsoft.com/fwlink/?LinkId=38955)（可能为英文网页））。  
+-   <span data-ttu-id="d801d-124">基本配置文件定义在 Web 服务互操作性 (WS-我) 规范 ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955))。</span><span class="sxs-lookup"><span data-stu-id="d801d-124">Basic Profile as defined in the Web Services Interoperability (WS-I) specification ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span></span>  
   
--   WS\-I 中定义的基本安全配置文件。  
+-   <span data-ttu-id="d801d-125">WS-I 中定义的基本安全配置文件。</span><span class="sxs-lookup"><span data-stu-id="d801d-125">Basic security profile as defined in WS-I.</span></span>  
   
- 默认情况下，此绑定是不安全的。它的目的是与 ASMX 服务进行互操作。启用安全性后，此绑定可以与 Internet 信息服务 \(IIS\) 安全机制（例如基本身份验证、摘要和 Windows 集成安全性）进行无缝的互操作。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).此绑定支持以下功能：  
+ <span data-ttu-id="d801d-126">默认情况下，此绑定是不安全的。</span><span class="sxs-lookup"><span data-stu-id="d801d-126">By default, this binding is not secure.</span></span> <span data-ttu-id="d801d-127">它的目的是与 ASMX 服务进行互操作。</span><span class="sxs-lookup"><span data-stu-id="d801d-127">It is designed to interoperate with ASMX services.</span></span> <span data-ttu-id="d801d-128">启用安全性后，此绑定可以与 Internet 信息服务 (IIS) 安全机制（例如基本身份验证、摘要和 Windows 集成安全性）进行无缝的互操作。</span><span class="sxs-lookup"><span data-stu-id="d801d-128">When security is enabled, the binding is designed for seamless interoperation with Internet Information Services (IIS) security mechanisms, such as basic authentication, digest, and integrated Windows security.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-129">[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-129"> [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span> <span data-ttu-id="d801d-130">此绑定支持以下功能：</span><span class="sxs-lookup"><span data-stu-id="d801d-130">This binding supports the following:</span></span>  
   
--   HTTPS 传输安全。  
+-   <span data-ttu-id="d801d-131">HTTPS 传输安全。</span><span class="sxs-lookup"><span data-stu-id="d801d-131">HTTPS transport security.</span></span>  
   
--   HTTP 基本身份验证。  
+-   <span data-ttu-id="d801d-132">HTTP 基本身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-132">HTTP basic authentication.</span></span>  
   
--   WS\-Security。  
+-   <span data-ttu-id="d801d-133">WS-Security。</span><span class="sxs-lookup"><span data-stu-id="d801d-133">WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>、<xref:System.ServiceModel.BasicHttpMessageSecurity>、<xref:System.ServiceModel.BasicHttpMessageCredentialType> 和 <xref:System.ServiceModel.BasicHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-134"> <xref:System.ServiceModel.BasicHttpSecurity>、<xref:System.ServiceModel.BasicHttpMessageSecurity>、<xref:System.ServiceModel.BasicHttpMessageCredentialType> 和 <xref:System.ServiceModel.BasicHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="d801d-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, and <xref:System.ServiceModel.BasicHttpSecurityMode>.</span></span>  
   
-### WSHttpBinding  
- 在代码中，请使用 <xref:System.ServiceModel.WSHttpBinding> 类；在配置中，请使用 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+### <a name="wshttpbinding"></a><span data-ttu-id="d801d-135">WSHttpBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-135">WSHttpBinding</span></span>  
+ <span data-ttu-id="d801d-136">在代码中，使用<xref:System.ServiceModel.WSHttpBinding>类; 在配置中，使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-136">In code, use the <xref:System.ServiceModel.WSHttpBinding> class; in configuration, use the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- 默认情况下，此绑定实现 WS\-Security 规范，并提供与实现 WS\-\* 规范的服务的互操作性。它支持以下功能：  
+ <span data-ttu-id="d801d-137">默认情况下，此绑定实现 WS-Security 规范，并提供与实现 WS-* 规范的服务的互操作性。</span><span class="sxs-lookup"><span data-stu-id="d801d-137">By default, this binding implements the WS-Security specification and provides interoperability with services that implement the WS-* specifications.</span></span> <span data-ttu-id="d801d-138">它支持以下功能：</span><span class="sxs-lookup"><span data-stu-id="d801d-138">It supports the following:</span></span>  
   
--   HTTPS 传输安全。  
+-   <span data-ttu-id="d801d-139">HTTPS 传输安全。</span><span class="sxs-lookup"><span data-stu-id="d801d-139">HTTPS transport security.</span></span>  
   
--   WS\-Security。  
+-   <span data-ttu-id="d801d-140">WS-Security。</span><span class="sxs-lookup"><span data-stu-id="d801d-140">WS-Security.</span></span>  
   
--   使用 SOAP 消息凭据安全对调用方进行身份验证的 HTTPS 传输保护。  
+-   <span data-ttu-id="d801d-141">使用 SOAP 消息凭据安全对调用方进行身份验证的 HTTPS 传输保护。</span><span class="sxs-lookup"><span data-stu-id="d801d-141">HTTPS transport protection with SOAP message credential security for authenticating the caller.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>、<xref:System.ServiceModel.MessageSecurityOverHttp>、<xref:System.ServiceModel.MessageCredentialType>、<xref:System.ServiceModel.SecurityMode>、<xref:System.ServiceModel.HttpTransportSecurity>、<xref:System.ServiceModel.HttpClientCredentialType> 和 <xref:System.ServiceModel.HttpProxyCredentialType>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-142"> <xref:System.ServiceModel.WSHttpSecurity>、<xref:System.ServiceModel.MessageSecurityOverHttp>、<xref:System.ServiceModel.MessageCredentialType>、<xref:System.ServiceModel.SecurityMode>、<xref:System.ServiceModel.HttpTransportSecurity>、<xref:System.ServiceModel.HttpClientCredentialType> 和 <xref:System.ServiceModel.HttpProxyCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="d801d-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, and <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>  
   
-### WSDualHttpBinding  
- 在代码中，请使用 <xref:System.ServiceModel.WSDualHttpBinding> 类；在配置中，请使用 [\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。  
+### <a name="wsdualhttpbinding"></a><span data-ttu-id="d801d-143">WSDualHttpBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-143">WSDualHttpBinding</span></span>  
+ <span data-ttu-id="d801d-144">在代码中，使用<xref:System.ServiceModel.WSDualHttpBinding>类; 在配置中，使用[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-144">In code, use the <xref:System.ServiceModel.WSDualHttpBinding> class; in configuration, use the [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- 此绑定的目的是启用双工服务应用程序。此绑定实现了 WS\-Security 规范，以便获得基于消息的传送安全。传输安全不可用。默认情况下，它提供下列功能：  
+ <span data-ttu-id="d801d-145">此绑定的目的是启用双工服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="d801d-145">This binding is designed to enable duplex service applications.</span></span> <span data-ttu-id="d801d-146">此绑定实现了 WS-Security 规范，以便获得基于消息的传送安全。</span><span class="sxs-lookup"><span data-stu-id="d801d-146">This binding implements the WS-Security specification for message-based transfer security.</span></span> <span data-ttu-id="d801d-147">传输安全不可用。</span><span class="sxs-lookup"><span data-stu-id="d801d-147">Transport security is not available.</span></span> <span data-ttu-id="d801d-148">默认情况下，它提供下列功能：</span><span class="sxs-lookup"><span data-stu-id="d801d-148">By default, it provides the following features:</span></span>  
   
--   实现 WS\-Reliable Messaging 以保证可靠性。  
+-   <span data-ttu-id="d801d-149">实现 WS-Reliable Messaging 以保证可靠性。</span><span class="sxs-lookup"><span data-stu-id="d801d-149">Implements WS-Reliable Messaging for reliability.</span></span>  
   
--   实现 WS\-Security 以保证传送安全和身份验证。  
+-   <span data-ttu-id="d801d-150">实现 WS-Security 以保证传送安全和身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-150">Implements WS-Security for transfer security and authentication.</span></span>  
   
--   使用 HTTP 进行消息传递。  
+-   <span data-ttu-id="d801d-151">使用 HTTP 进行消息传递。</span><span class="sxs-lookup"><span data-stu-id="d801d-151">Uses HTTP for message delivery.</span></span>  
   
--   使用文本\/XML 消息编码。  
+-   <span data-ttu-id="d801d-152">使用文本/XML 消息编码。</span><span class="sxs-lookup"><span data-stu-id="d801d-152">Uses text/XML message encoding.</span></span>  
   
- 使用 WS\-Security（消息层安全性），可通过此绑定配置下列参数：  
+ <span data-ttu-id="d801d-153">使用 WS-Security（消息层安全性），可通过此绑定配置下列参数：</span><span class="sxs-lookup"><span data-stu-id="d801d-153">Using WS-Security (message-layer security), the binding allows you to configure the following parameters:</span></span>  
   
--   用来确定加密算法的安全算法组。  
+-   <span data-ttu-id="d801d-154">用来确定加密算法的安全算法组。</span><span class="sxs-lookup"><span data-stu-id="d801d-154">The security algorithm suite to determine the cryptographic algorithm.</span></span>  
   
--   下列功能的绑定选项：  
+-   <span data-ttu-id="d801d-155">下列功能的绑定选项：</span><span class="sxs-lookup"><span data-stu-id="d801d-155">Binding options for the following:</span></span>  
   
-    -   提供可在客户端带外使用的服务凭据。  
+    -   <span data-ttu-id="d801d-156">提供可在客户端带外使用的服务凭据。</span><span class="sxs-lookup"><span data-stu-id="d801d-156">Providing service credentials available out-of-band at the client.</span></span>  
   
-    -   提供从服务协商的服务凭据作为通道设置的一部分。  
+    -   <span data-ttu-id="d801d-157">提供从服务协商的服务凭据作为通道设置的一部分。</span><span class="sxs-lookup"><span data-stu-id="d801d-157">Providing service credentials negotiated from the service as part of channel setup.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> 和 <xref:System.ServiceModel.WSDualHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-158"><xref:System.ServiceModel.WSDualHttpSecurity>和<xref:System.ServiceModel.WSDualHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="d801d-158"> <xref:System.ServiceModel.WSDualHttpSecurity> and <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>  
   
-### NetTcpBinding  
- 在代码中，请使用 <xref:System.ServiceModel.NetTcpBinding> 类；在配置中，请使用 [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+### <a name="nettcpbinding"></a><span data-ttu-id="d801d-159">NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-159">NetTcpBinding</span></span>  
+ <span data-ttu-id="d801d-160">在代码中，使用<xref:System.ServiceModel.NetTcpBinding>类; 在配置中，使用[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-160">In code, use the <xref:System.ServiceModel.NetTcpBinding> class; in configuration, use the [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  
   
- 此绑定针对计算机之间的通信进行了优化。默认情况下，它具有以下特征：  
+ <span data-ttu-id="d801d-161">此绑定针对计算机之间的通信进行了优化。</span><span class="sxs-lookup"><span data-stu-id="d801d-161">This binding is optimized for cross-machine communication.</span></span> <span data-ttu-id="d801d-162">默认情况下，它具有以下特征：</span><span class="sxs-lookup"><span data-stu-id="d801d-162">By default, it has the following characteristics:</span></span>  
   
--   实现传输层安全性。  
+-   <span data-ttu-id="d801d-163">实现传输层安全性。</span><span class="sxs-lookup"><span data-stu-id="d801d-163">Implements transport-layer security.</span></span>  
   
--   利用 Windows 安全性来实现传送安全性和身份验证。  
+-   <span data-ttu-id="d801d-164">利用 Windows 安全性来实现传送安全性和身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-164">Leverages Windows security for transfer security and authentication.</span></span>  
   
--   使用 TCP 进行传输。  
+-   <span data-ttu-id="d801d-165">使用 TCP 进行传输。</span><span class="sxs-lookup"><span data-stu-id="d801d-165">Uses TCP for transport.</span></span>  
   
--   实现二进制消息编码。  
+-   <span data-ttu-id="d801d-166">实现二进制消息编码。</span><span class="sxs-lookup"><span data-stu-id="d801d-166">Implements binary message encoding.</span></span>  
   
--   实现 WS\-Reliable Messaging。  
+-   <span data-ttu-id="d801d-167">实现 WS-Reliable Messaging。</span><span class="sxs-lookup"><span data-stu-id="d801d-167">Implements WS-Reliable Messaging.</span></span>  
   
- 此绑定具有下列选项：  
+ <span data-ttu-id="d801d-168">此绑定具有下列选项：</span><span class="sxs-lookup"><span data-stu-id="d801d-168">Options include the following:</span></span>  
   
--   消息层安全性（使用 WS\-Security）。  
+-   <span data-ttu-id="d801d-169">消息层安全性（使用 WS-Security）。</span><span class="sxs-lookup"><span data-stu-id="d801d-169">Message-layer security (using WS-Security).</span></span>  
   
--   使用消息凭据实现传输安全性：保密性和完整性由 Transport Layer Security \(TLS\) over TCP 提供，授权凭据由 WS\-Security 提供。  
+-   <span data-ttu-id="d801d-170">使用消息凭据实现传输安全性：保密性和完整性由 Transport Layer Security (TLS) over TCP 提供，授权凭据由 WS-Security 提供。</span><span class="sxs-lookup"><span data-stu-id="d801d-170">Transport security with message credential—confidentiality and integrity provided by Transport Layer Security (TLS) over TCP, and credentials for authorization provided by WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>、<xref:System.ServiceModel.TcpTransportSecurity>、<xref:System.ServiceModel.TcpClientCredentialType>、<xref:System.ServiceModel.MessageSecurityOverTcp> 和 <xref:System.ServiceModel.MessageCredentialType>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-171"> <xref:System.ServiceModel.NetTcpSecurity>、<xref:System.ServiceModel.TcpTransportSecurity>、<xref:System.ServiceModel.TcpClientCredentialType>、<xref:System.ServiceModel.MessageSecurityOverTcp> 和 <xref:System.ServiceModel.MessageCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="d801d-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, and <xref:System.ServiceModel.MessageCredentialType>.</span></span>  
   
-### NetNamedPipeBinding  
- 在代码中，请使用 <xref:System.ServiceModel.NetNamedPipeBinding> 类；在配置中，请使用 [\<netNamedPipeBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。  
+### <a name="netnamedpipebinding"></a><span data-ttu-id="d801d-172">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-172">NetNamedPipeBinding</span></span>  
+ <span data-ttu-id="d801d-173">在代码中，使用<xref:System.ServiceModel.NetNamedPipeBinding>类; 在配置中，使用[ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-173">In code, use the <xref:System.ServiceModel.NetNamedPipeBinding> class; in configuration, use the [\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>  
   
- 此绑定针对进程之间的通信（通常在同一台计算机上）进行了优化。默认情况下，此绑定具有以下特征：  
+ <span data-ttu-id="d801d-174">此绑定针对进程之间的通信（通常在同一台计算机上）进行了优化。</span><span class="sxs-lookup"><span data-stu-id="d801d-174">This binding is optimized for cross-process communication (usually on the same machine).</span></span> <span data-ttu-id="d801d-175">默认情况下，此绑定具有以下特征：</span><span class="sxs-lookup"><span data-stu-id="d801d-175">By default, this binding has the following characteristics:</span></span>  
   
--   使用传输安全性来实现消息传输和身份验证。  
+-   <span data-ttu-id="d801d-176">使用传输安全性来实现消息传输和身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-176">Uses transport security for message transfer and authentication.</span></span>  
   
--   使用命名管道进行消息传递。  
+-   <span data-ttu-id="d801d-177">使用命名管道进行消息传递。</span><span class="sxs-lookup"><span data-stu-id="d801d-177">Uses named pipes for message delivery.</span></span>  
   
--   实现二进制消息编码。  
+-   <span data-ttu-id="d801d-178">实现二进制消息编码。</span><span class="sxs-lookup"><span data-stu-id="d801d-178">Implements binary message encoding.</span></span>  
   
--   加密和消息签名。  
+-   <span data-ttu-id="d801d-179">加密和消息签名。</span><span class="sxs-lookup"><span data-stu-id="d801d-179">Encryption and message signing.</span></span>  
   
- 此绑定具有下列选项：  
+ <span data-ttu-id="d801d-180">此绑定具有下列选项：</span><span class="sxs-lookup"><span data-stu-id="d801d-180">Options include the following:</span></span>  
   
--   使用 Windows 安全性进行身份验证。  
+-   <span data-ttu-id="d801d-181">使用 Windows 安全性进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-181">Authentication using Windows security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode> 和 <xref:System.ServiceModel.NamedPipeTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode> 和 <xref:System.ServiceModel.NamedPipeTransportSecurity>。</span><span class="sxs-lookup"><span data-stu-id="d801d-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, and <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span></span>  
   
-### MsmqIntegrationBinding  
- 在代码中，请使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 类；在配置中，请使用 [\<msmqIntegrationBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
+### <a name="msmqintegrationbinding"></a><span data-ttu-id="d801d-183">MsmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-183">MsmqIntegrationBinding</span></span>  
+ <span data-ttu-id="d801d-184">在代码中，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>类; 在配置中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-184">In code, use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> class; in configuration, use the [\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>  
   
- 此绑定最适合于创建与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft 消息队列 \(MSMQ\) 终结点进行互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和服务。  
+ <span data-ttu-id="d801d-185">此绑定最适合于创建与非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft 消息队列 (MSMQ) 终结点进行互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="d801d-185">This binding is optimized for creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and services that interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) endpoints.</span></span>  
   
- 默认情况下，此绑定使用传输安全性并提供下列安全特征：  
+ <span data-ttu-id="d801d-186">默认情况下，此绑定使用传输安全性并提供下列安全特征：</span><span class="sxs-lookup"><span data-stu-id="d801d-186">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   可以禁用安全性 \(None\)。  
+-   <span data-ttu-id="d801d-187">可以禁用安全性 (None)。</span><span class="sxs-lookup"><span data-stu-id="d801d-187">Security can be disabled (None).</span></span>  
   
--   MSMQ 传输安全性 \(Transport\)。  
+-   <span data-ttu-id="d801d-188">MSMQ 传输安全性 (Transport)。</span><span class="sxs-lookup"><span data-stu-id="d801d-188">MSMQ transport security (Transport).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> 和 <xref:System.ServiceModel.NetMsmqSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-189"><xref:System.ServiceModel.NetMsmqSecurity>和<xref:System.ServiceModel.NetMsmqSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="d801d-189"> <xref:System.ServiceModel.NetMsmqSecurity> and <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>  
   
-### NetMsmqBinding  
- 在代码中，请使用 <xref:System.ServiceModel.NetMsmqBinding> 类；在配置中，请使用 [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
+### <a name="netmsmqbinding"></a><span data-ttu-id="d801d-190">NetMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-190">NetMsmqBinding</span></span>  
+ <span data-ttu-id="d801d-191">在代码中，使用<xref:System.ServiceModel.NetMsmqBinding>类; 在配置中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-191">In code, use the <xref:System.ServiceModel.NetMsmqBinding> class; in configuration, use the [\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span></span>  
   
- 此绑定适合在创建需要 MSMQ 排队消息支持的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时使用。  
+ <span data-ttu-id="d801d-192">此绑定适合在创建需要 MSMQ 排队消息支持的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时使用。</span><span class="sxs-lookup"><span data-stu-id="d801d-192">This binding is intended for use when creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that require MSMQ queued message support.</span></span>  
   
- 默认情况下，此绑定使用传输安全性并提供下列安全特征：  
+ <span data-ttu-id="d801d-193">默认情况下，此绑定使用传输安全性并提供下列安全特征：</span><span class="sxs-lookup"><span data-stu-id="d801d-193">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   可以禁用安全性 \(None\)。  
+-   <span data-ttu-id="d801d-194">可以禁用安全性 (None)。</span><span class="sxs-lookup"><span data-stu-id="d801d-194">Security can be disabled (None).</span></span>  
   
--   MSMQ 传输安全性 \(Transport\)。  
+-   <span data-ttu-id="d801d-195">MSMQ 传输安全性 (Transport)。</span><span class="sxs-lookup"><span data-stu-id="d801d-195">MSMQ transport security (Transport).</span></span>  
   
--   基于 SOAP 的消息安全性 \(Message\)。  
+-   <span data-ttu-id="d801d-196">基于 SOAP 的消息安全性 (Message)。</span><span class="sxs-lookup"><span data-stu-id="d801d-196">SOAP-based message security (Message).</span></span>  
   
--   同时启用传输安全性和消息安全性 \(Both\)。  
+-   <span data-ttu-id="d801d-197">同时启用传输安全性和消息安全性 (Both)。</span><span class="sxs-lookup"><span data-stu-id="d801d-197">Simultaneous Transport and Message security (Both).</span></span>  
   
--   支持的客户端凭据类型：None、Windows、UserName、Certificate、IssuedToken。  
+-   <span data-ttu-id="d801d-198">支持的客户端凭据类型：None、Windows、UserName、Certificate、IssuedToken。</span><span class="sxs-lookup"><span data-stu-id="d801d-198">Client Credential Types supported: None, Windows, UserName, Certificate, IssuedToken.</span></span>  
   
- 仅当安全模式设置为 <xref:System.ServiceModel.NetMsmqSecurityMode> 或 <xref:System.ServiceModel.NetMsmqSecurityMode> 时，才支持 <xref:System.ServiceModel.MessageCredentialType> 凭据。  
+ <span data-ttu-id="d801d-199">仅当安全模式设置为 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 时，才支持 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 凭据。</span><span class="sxs-lookup"><span data-stu-id="d801d-199">The <xref:System.ServiceModel.MessageCredentialType.Certificate> credential is supported only when the security mode is set to either <xref:System.ServiceModel.NetMsmqSecurityMode.Both> or <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> 和 <xref:System.ServiceModel.MsmqTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-200"><xref:System.ServiceModel.MessageSecurityOverMsmq>和<xref:System.ServiceModel.MsmqTransportSecurity>。</span><span class="sxs-lookup"><span data-stu-id="d801d-200"> <xref:System.ServiceModel.MessageSecurityOverMsmq> and <xref:System.ServiceModel.MsmqTransportSecurity>.</span></span>  
   
-### WSFederationHttpBinding  
- 在代码中，请使用 <xref:System.ServiceModel.WSFederationHttpBinding> 类；在配置中，请使用 [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+### <a name="wsfederationhttpbinding"></a><span data-ttu-id="d801d-201">WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="d801d-201">WSFederationHttpBinding</span></span>  
+ <span data-ttu-id="d801d-202">在代码中，使用<xref:System.ServiceModel.WSFederationHttpBinding>类; 在配置中，使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-202">In code, use the <xref:System.ServiceModel.WSFederationHttpBinding> class; in configuration, use the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- 默认情况下，此绑定使用 WS\-Security（消息层安全性）。  
+ <span data-ttu-id="d801d-203">默认情况下，此绑定使用 WS-Security（消息层安全性）。</span><span class="sxs-lookup"><span data-stu-id="d801d-203">By default, this binding uses WS-Security (message-layer security).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [联合](../../../../docs/framework/wcf/feature-details/federation.md)、<xref:System.ServiceModel.WSFederationHttpSecurity> 和 <xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-204">[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="d801d-204"> [Federation](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, and <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>  
   
-## 自定义绑定  
- 如果系统提供的绑定都不能满足您的要求，则可以使用自定义安全绑定元素来创建自定义绑定。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+## <a name="custom-bindings"></a><span data-ttu-id="d801d-205">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="d801d-205">Custom Bindings</span></span>  
+ <span data-ttu-id="d801d-206">如果系统提供的绑定都不能满足您的需求，则可以使用自定义安全绑定元素来创建自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="d801d-206">If none of the system-provided bindings meets you requirements, you can create a custom binding with a custom security binding element.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-207">[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-207"> [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## 绑定选择  
- 下表概括了安全模式设置中提供的功能，也就是说，它列出了当安全模式设置为 `Transport`、`Message` 或 `TransportWithMessageCredential` 时可以使用的功能。使用此表可帮助您找到应用程序所需的安全功能。  
+## <a name="binding-choices"></a><span data-ttu-id="d801d-208">绑定选择</span><span class="sxs-lookup"><span data-stu-id="d801d-208">Binding Choices</span></span>  
+ <span data-ttu-id="d801d-209">下表概括了安全模式设置中提供的功能，也就是说，它列出了当安全模式设置为 `Transport`、`Message` 或 `TransportWithMessageCredential` 时可以使用的功能。</span><span class="sxs-lookup"><span data-stu-id="d801d-209">The following table summarizes the features offered in the security mode setting, that is, it lists the features available when the security mode is set to `Transport`, `Message`, or `TransportWithMessageCredential`.</span></span> <span data-ttu-id="d801d-210">使用此表可帮助您找到应用程序所需的安全功能。</span><span class="sxs-lookup"><span data-stu-id="d801d-210">Use this table to help you find the security features your application requires.</span></span>  
   
-|设置|功能|  
-|--------|--------|  
-|Transport|服务器身份验证<br /><br /> 客户端身份验证<br /><br /> 点对点安全性<br /><br /> 互操作性<br /><br /> 硬件加速<br /><br /> 高吞吐量<br /><br /> 安全防火墙<br /><br /> 高延迟应用程序<br /><br /> 跨越多个跃点重新加密|  
-|Message|服务器身份验证<br /><br /> 客户端身份验证<br /><br /> 端对端安全性<br /><br /> 互操作性<br /><br /> 丰富的声明<br /><br /> 联合<br /><br /> 多因素身份验证<br /><br /> 自定义令牌<br /><br /> 公证人\/时间戳服务<br /><br /> 高延迟应用程序<br /><br /> 消息签名的持久性|  
-|TransportWithMessageCredential|服务器身份验证<br /><br /> 客户端身份验证<br /><br /> 点对点安全性<br /><br /> 互操作性<br /><br /> 硬件加速<br /><br /> 高吞吐量<br /><br /> 丰富的客户端声明<br /><br /> 联合<br /><br /> 多因素身份验证<br /><br /> 自定义令牌<br /><br /> 安全防火墙<br /><br /> 高延迟应用程序<br /><br /> 跨越多个跃点重新加密|  
+|<span data-ttu-id="d801d-211">设置</span><span class="sxs-lookup"><span data-stu-id="d801d-211">Setting</span></span>|<span data-ttu-id="d801d-212">功能</span><span class="sxs-lookup"><span data-stu-id="d801d-212">Features</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="d801d-213">传输</span><span class="sxs-lookup"><span data-stu-id="d801d-213">Transport</span></span>|<span data-ttu-id="d801d-214">服务器身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-214">Server authentication</span></span><br /><br /> <span data-ttu-id="d801d-215">客户端身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-215">Client authentication</span></span><br /><br /> <span data-ttu-id="d801d-216">点对点安全性</span><span class="sxs-lookup"><span data-stu-id="d801d-216">Point-to-point security</span></span><br /><br /> <span data-ttu-id="d801d-217">互操作性</span><span class="sxs-lookup"><span data-stu-id="d801d-217">Interoperability</span></span><br /><br /> <span data-ttu-id="d801d-218">硬件加速</span><span class="sxs-lookup"><span data-stu-id="d801d-218">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="d801d-219">高吞吐量</span><span class="sxs-lookup"><span data-stu-id="d801d-219">High throughput</span></span><br /><br /> <span data-ttu-id="d801d-220">安全防火墙</span><span class="sxs-lookup"><span data-stu-id="d801d-220">Secure firewall</span></span><br /><br /> <span data-ttu-id="d801d-221">高延迟应用程序</span><span class="sxs-lookup"><span data-stu-id="d801d-221">High-latency applications</span></span><br /><br /> <span data-ttu-id="d801d-222">跨越多个跃点重新加密</span><span class="sxs-lookup"><span data-stu-id="d801d-222">Re-encryption across multiple hops</span></span>|  
+|<span data-ttu-id="d801d-223">消息</span><span class="sxs-lookup"><span data-stu-id="d801d-223">Message</span></span>|<span data-ttu-id="d801d-224">服务器身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-224">Server authentication</span></span><br /><br /> <span data-ttu-id="d801d-225">客户端身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-225">Client authentication</span></span><br /><br /> <span data-ttu-id="d801d-226">端对端安全性</span><span class="sxs-lookup"><span data-stu-id="d801d-226">End-to-end security</span></span><br /><br /> <span data-ttu-id="d801d-227">互操作性</span><span class="sxs-lookup"><span data-stu-id="d801d-227">Interoperability</span></span><br /><br /> <span data-ttu-id="d801d-228">丰富的声明</span><span class="sxs-lookup"><span data-stu-id="d801d-228">Rich claims</span></span><br /><br /> <span data-ttu-id="d801d-229">联合</span><span class="sxs-lookup"><span data-stu-id="d801d-229">Federation</span></span><br /><br /> <span data-ttu-id="d801d-230">多因素身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-230">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="d801d-231">自定义令牌</span><span class="sxs-lookup"><span data-stu-id="d801d-231">Custom tokens</span></span><br /><br /> <span data-ttu-id="d801d-232">公证人/时间戳服务</span><span class="sxs-lookup"><span data-stu-id="d801d-232">Notary/timestamp service</span></span><br /><br /> <span data-ttu-id="d801d-233">高延迟应用程序</span><span class="sxs-lookup"><span data-stu-id="d801d-233">High-latency applications</span></span><br /><br /> <span data-ttu-id="d801d-234">消息签名的持久性</span><span class="sxs-lookup"><span data-stu-id="d801d-234">Persistence of message signatures</span></span>|  
+|<span data-ttu-id="d801d-235">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="d801d-235">TransportWithMessageCredential</span></span>|<span data-ttu-id="d801d-236">服务器身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-236">Server authentication</span></span><br /><br /> <span data-ttu-id="d801d-237">客户端身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-237">Client authentication</span></span><br /><br /> <span data-ttu-id="d801d-238">点对点安全性</span><span class="sxs-lookup"><span data-stu-id="d801d-238">Point-to-point security</span></span><br /><br /> <span data-ttu-id="d801d-239">互操作性</span><span class="sxs-lookup"><span data-stu-id="d801d-239">Interoperability</span></span><br /><br /> <span data-ttu-id="d801d-240">硬件加速</span><span class="sxs-lookup"><span data-stu-id="d801d-240">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="d801d-241">高吞吐量</span><span class="sxs-lookup"><span data-stu-id="d801d-241">High throughput</span></span><br /><br /> <span data-ttu-id="d801d-242">丰富的客户端声明</span><span class="sxs-lookup"><span data-stu-id="d801d-242">Rich client claims</span></span><br /><br /> <span data-ttu-id="d801d-243">联合</span><span class="sxs-lookup"><span data-stu-id="d801d-243">Federation</span></span><br /><br /> <span data-ttu-id="d801d-244">多因素身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-244">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="d801d-245">自定义令牌</span><span class="sxs-lookup"><span data-stu-id="d801d-245">Custom tokens</span></span><br /><br /> <span data-ttu-id="d801d-246">安全防火墙</span><span class="sxs-lookup"><span data-stu-id="d801d-246">Secure firewall</span></span><br /><br /> <span data-ttu-id="d801d-247">高延迟应用程序</span><span class="sxs-lookup"><span data-stu-id="d801d-247">High-latency applications</span></span><br /><br /> <span data-ttu-id="d801d-248">跨越多个跃点重新加密</span><span class="sxs-lookup"><span data-stu-id="d801d-248">Re-encryption across multiple hops</span></span>|  
   
- 下表列出了支持各种模式设置的绑定。请从该表中选择用来创建服务终结点的绑定。  
+ <span data-ttu-id="d801d-249">下表列出了支持各种模式设置的绑定。</span><span class="sxs-lookup"><span data-stu-id="d801d-249">The following table lists the bindings that support the various mode settings.</span></span> <span data-ttu-id="d801d-250">请从该表中选择用来创建服务终结点的绑定。</span><span class="sxs-lookup"><span data-stu-id="d801d-250">Select a binding from the table to use to create your service endpoint.</span></span>  
   
-|绑定|是否支持 Transport 模式|是否支持 Message 模式|是否支持 TransportWithMessageCredential|  
-|--------|-----------------------|---------------------|-----------------------------------------|  
-|`BasicHttpBinding`|是|是|是|  
-|`WSHttpBinding`|是|是|是|  
-|`WSDualHttpBinding`|否|是|否|  
-|`NetTcpBinding`|是|是|是|  
-|`NetNamedPipeBinding`|是|否|否|  
-|`NetMsmqBinding`|是|是|否|  
-|`MsmqIntegrationBinding`|是|否|否|  
-|`wsFederationHttpBinding`|否|是|是|  
+|<span data-ttu-id="d801d-251">绑定</span><span class="sxs-lookup"><span data-stu-id="d801d-251">Binding</span></span>|<span data-ttu-id="d801d-252">是否支持 Transport 模式</span><span class="sxs-lookup"><span data-stu-id="d801d-252">Transport mode support</span></span>|<span data-ttu-id="d801d-253">是否支持 Message 模式</span><span class="sxs-lookup"><span data-stu-id="d801d-253">Message mode support</span></span>|<span data-ttu-id="d801d-254">是否支持 TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="d801d-254">TransportWithMessageCredential support</span></span>|  
+|-------------|----------------------------|--------------------------|--------------------------------------------|  
+|`BasicHttpBinding`|<span data-ttu-id="d801d-255">是</span><span class="sxs-lookup"><span data-stu-id="d801d-255">Yes</span></span>|<span data-ttu-id="d801d-256">是</span><span class="sxs-lookup"><span data-stu-id="d801d-256">Yes</span></span>|<span data-ttu-id="d801d-257">是</span><span class="sxs-lookup"><span data-stu-id="d801d-257">Yes</span></span>|  
+|`WSHttpBinding`|<span data-ttu-id="d801d-258">是</span><span class="sxs-lookup"><span data-stu-id="d801d-258">Yes</span></span>|<span data-ttu-id="d801d-259">是</span><span class="sxs-lookup"><span data-stu-id="d801d-259">Yes</span></span>|<span data-ttu-id="d801d-260">是</span><span class="sxs-lookup"><span data-stu-id="d801d-260">Yes</span></span>|  
+|`WSDualHttpBinding`|<span data-ttu-id="d801d-261">No</span><span class="sxs-lookup"><span data-stu-id="d801d-261">No</span></span>|<span data-ttu-id="d801d-262">是</span><span class="sxs-lookup"><span data-stu-id="d801d-262">Yes</span></span>|<span data-ttu-id="d801d-263">No</span><span class="sxs-lookup"><span data-stu-id="d801d-263">No</span></span>|  
+|`NetTcpBinding`|<span data-ttu-id="d801d-264">是</span><span class="sxs-lookup"><span data-stu-id="d801d-264">Yes</span></span>|<span data-ttu-id="d801d-265">是</span><span class="sxs-lookup"><span data-stu-id="d801d-265">Yes</span></span>|<span data-ttu-id="d801d-266">是</span><span class="sxs-lookup"><span data-stu-id="d801d-266">Yes</span></span>|  
+|`NetNamedPipeBinding`|<span data-ttu-id="d801d-267">是</span><span class="sxs-lookup"><span data-stu-id="d801d-267">Yes</span></span>|<span data-ttu-id="d801d-268">No</span><span class="sxs-lookup"><span data-stu-id="d801d-268">No</span></span>|<span data-ttu-id="d801d-269">No</span><span class="sxs-lookup"><span data-stu-id="d801d-269">No</span></span>|  
+|`NetMsmqBinding`|<span data-ttu-id="d801d-270">是</span><span class="sxs-lookup"><span data-stu-id="d801d-270">Yes</span></span>|<span data-ttu-id="d801d-271">是</span><span class="sxs-lookup"><span data-stu-id="d801d-271">Yes</span></span>|<span data-ttu-id="d801d-272">No</span><span class="sxs-lookup"><span data-stu-id="d801d-272">No</span></span>|  
+|`MsmqIntegrationBinding`|<span data-ttu-id="d801d-273">是</span><span class="sxs-lookup"><span data-stu-id="d801d-273">Yes</span></span>|<span data-ttu-id="d801d-274">No</span><span class="sxs-lookup"><span data-stu-id="d801d-274">No</span></span>|<span data-ttu-id="d801d-275">No</span><span class="sxs-lookup"><span data-stu-id="d801d-275">No</span></span>|  
+|`wsFederationHttpBinding`|<span data-ttu-id="d801d-276">No</span><span class="sxs-lookup"><span data-stu-id="d801d-276">No</span></span>|<span data-ttu-id="d801d-277">是</span><span class="sxs-lookup"><span data-stu-id="d801d-277">Yes</span></span>|<span data-ttu-id="d801d-278">是</span><span class="sxs-lookup"><span data-stu-id="d801d-278">Yes</span></span>|  
   
-## 绑定中的传输凭据  
- 下表列出了在传输安全模式下使用 `BasicHttpBinding` 或 `WSHttpBinding` 时可用的客户端凭据类型。  
+## <a name="transport-credentials-in-bindings"></a><span data-ttu-id="d801d-279">绑定中的传输凭据</span><span class="sxs-lookup"><span data-stu-id="d801d-279">Transport Credentials in Bindings</span></span>  
+ <span data-ttu-id="d801d-280">下表列出了在传输安全模式下使用 `BasicHttpBinding` 或 `WSHttpBinding` 时可用的客户端凭据类型。</span><span class="sxs-lookup"><span data-stu-id="d801d-280">The following table lists the client credential types available when using either `BasicHttpBinding` or `WSHttpBinding` in transport security mode.</span></span>  
   
-|类型|说明|  
-|--------|--------|  
-|None|指定客户端不需要提供任何凭据。这相当于匿名客户端。|  
-|Basic|基本身份验证[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]位于 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023)（可能为英文网页）的“RFC 2617 – HTTP Authentication: Basic and Digest Authentication”（RFC 2617 – HTTP 身份验证：基本和摘要式身份验证）。|  
-|Digest|摘要式身份验证。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]位于 [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023)（可能为英文网页）的“RFC 2617 – HTTP Authentication: Basic and Digest Authentication”（RFC 2617 – HTTP 身份验证：基本和摘要式身份验证）。|  
-|NTLM|NT LAN Manager \(NTLM\) 身份验证。|  
-|Windows|Windows 身份验证。|  
-|Certificate|使用证书执行的身份验证。|  
-|IssuedToken|允许服务要求使用由安全令牌服务或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 颁发的令牌对客户端进行身份验证。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|<span data-ttu-id="d801d-281">类型</span><span class="sxs-lookup"><span data-stu-id="d801d-281">Type</span></span>|<span data-ttu-id="d801d-282">描述</span><span class="sxs-lookup"><span data-stu-id="d801d-282">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="d801d-283">无</span><span class="sxs-lookup"><span data-stu-id="d801d-283">None</span></span>|<span data-ttu-id="d801d-284">指定客户端不需要提供任何凭据。</span><span class="sxs-lookup"><span data-stu-id="d801d-284">Specifies that the client does not need to present any credential.</span></span> <span data-ttu-id="d801d-285">这相当于匿名客户端。</span><span class="sxs-lookup"><span data-stu-id="d801d-285">This translates to an anonymous client.</span></span>|  
+|<span data-ttu-id="d801d-286">Basic</span><span class="sxs-lookup"><span data-stu-id="d801d-286">Basic</span></span>|<span data-ttu-id="d801d-287">基本身份验证</span><span class="sxs-lookup"><span data-stu-id="d801d-287">Basic authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-288">RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。</span><span class="sxs-lookup"><span data-stu-id="d801d-288"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="d801d-289">摘要</span><span class="sxs-lookup"><span data-stu-id="d801d-289">Digest</span></span>|<span data-ttu-id="d801d-290">摘要式身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-290">Digest authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-291">RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。</span><span class="sxs-lookup"><span data-stu-id="d801d-291"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="d801d-292">NTLM</span><span class="sxs-lookup"><span data-stu-id="d801d-292">NTLM</span></span>|<span data-ttu-id="d801d-293">NT LAN Manager (NTLM) 身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-293">NT LAN Manager (NTLM) authentication.</span></span>|  
+|<span data-ttu-id="d801d-294">Windows</span><span class="sxs-lookup"><span data-stu-id="d801d-294">Windows</span></span>|<span data-ttu-id="d801d-295">Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-295">Windows authentication.</span></span>|  
+|<span data-ttu-id="d801d-296">证书</span><span class="sxs-lookup"><span data-stu-id="d801d-296">Certificate</span></span>|<span data-ttu-id="d801d-297">使用证书执行的身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-297">Authentication performed using a certificate.</span></span>|  
+|<span data-ttu-id="d801d-298">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="d801d-298">IssuedToken</span></span>|<span data-ttu-id="d801d-299">允许服务要求使用由安全令牌服务或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 颁发的令牌对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-299">Allows the service to require that the client be authenticated using a token issued by a security token service or by [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="d801d-300">[联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。</span><span class="sxs-lookup"><span data-stu-id="d801d-300"> [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>|  
   
-### 绑定中的消息客户端凭据  
- 下表列出在 Message 安全模式下使用绑定时可用的客户端凭据类型。  
+### <a name="message-client-credentials-in-bindings"></a><span data-ttu-id="d801d-301">绑定中的消息客户端凭据</span><span class="sxs-lookup"><span data-stu-id="d801d-301">Message Client Credentials in Bindings</span></span>  
+ <span data-ttu-id="d801d-302">下表列出在 Message 安全模式下使用绑定时可用的客户端凭据类型。</span><span class="sxs-lookup"><span data-stu-id="d801d-302">The following table lists the client credential types available when using a binding in Message security mode.</span></span>  
   
-|类型|说明|  
-|--------|--------|  
-|None|允许服务与匿名客户端交互。|  
-|Windows|允许在 Windows 凭据的已通过身份验证的上下文中执行 SOAP 消息交换。|  
-|用户名|允许服务要求使用用户名凭据对客户端进行身份验证。请注意，当安全模式设置为 `TransportWithMessageCredential` 时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并将这样的密钥用于 Message 模式安全。因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 强制要求在使用用户名凭据时确保传输的安全性。|  
-|证书|允许服务要求使用证书对客户端进行身份验证。|  
-|IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
+|<span data-ttu-id="d801d-303">类型</span><span class="sxs-lookup"><span data-stu-id="d801d-303">Type</span></span>|<span data-ttu-id="d801d-304">描述</span><span class="sxs-lookup"><span data-stu-id="d801d-304">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="d801d-305">无</span><span class="sxs-lookup"><span data-stu-id="d801d-305">None</span></span>|<span data-ttu-id="d801d-306">允许服务与匿名客户端交互。</span><span class="sxs-lookup"><span data-stu-id="d801d-306">Allows the service to interact with anonymous clients.</span></span>|  
+|<span data-ttu-id="d801d-307">Windows</span><span class="sxs-lookup"><span data-stu-id="d801d-307">Windows</span></span>|<span data-ttu-id="d801d-308">允许在 Windows 凭据的已通过身份验证的上下文中执行 SOAP 消息交换。</span><span class="sxs-lookup"><span data-stu-id="d801d-308">Allows SOAP message exchanges to be made under the authenticated context of a Windows credential.</span></span>|  
+|<span data-ttu-id="d801d-309">UserName</span><span class="sxs-lookup"><span data-stu-id="d801d-309">UserName</span></span>|<span data-ttu-id="d801d-310">允许服务要求使用用户名凭据对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-310">Allows the service to require that the client be authenticated using a user name credential.</span></span> <span data-ttu-id="d801d-311">请注意，当安全模式设置为 `TransportWithMessageCredential` 时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并将这样的密钥用于 Message 模式安全。</span><span class="sxs-lookup"><span data-stu-id="d801d-311">Note that when the security mode is set to `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using password and using such keys for Message mode security.</span></span> <span data-ttu-id="d801d-312">因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 强制要求在使用用户名凭据时确保传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="d801d-312">As such, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enforces that the transport is secured when using user name credentials.</span></span>|  
+|<span data-ttu-id="d801d-313">证书</span><span class="sxs-lookup"><span data-stu-id="d801d-313">Certificate</span></span>|<span data-ttu-id="d801d-314">允许服务要求使用证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="d801d-314">Allows the service to require that the client be authenticated using a certificate.</span></span>|  
+|<span data-ttu-id="d801d-315">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="d801d-315">IssuedToken</span></span>|<span data-ttu-id="d801d-316">允许服务使用安全令牌服务来提供自定义令牌。</span><span class="sxs-lookup"><span data-stu-id="d801d-316">Allows the service to use a security token service to supply a custom token.</span></span>|  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="d801d-317">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d801d-317">See Also</span></span>  
+ [<span data-ttu-id="d801d-318">安全性概述</span><span class="sxs-lookup"><span data-stu-id="d801d-318">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="d801d-319">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="d801d-319">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="d801d-320">选择凭据类型</span><span class="sxs-lookup"><span data-stu-id="d801d-320">Selecting a Credential Type</span></span>](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="d801d-321">使用自定义绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="d801d-321">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="d801d-322">安全行为</span><span class="sxs-lookup"><span data-stu-id="d801d-322">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="d801d-323">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="d801d-323">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

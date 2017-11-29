@@ -1,44 +1,48 @@
 ---
-title: "如何：对文本使用抗锯齿效果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Antialias 处理, 使用文本"
-  - "字符串 [Windows 窗体], 绘制时进行 Antialias 处理"
-  - "字符串 [Windows 窗体], 平滑绘制"
-  - "文本 [Windows 窗体], Antialias 处理"
-  - "文本 [Windows 窗体], 平滑"
+title: "如何：对文本使用抗锯齿效果"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- strings [Windows Forms], smoothing drawn
+- antialiasing [Windows Forms], using with text
+- text [Windows Forms], smoothing
+- text [Windows Forms], antialiasing
+- strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb5a57f8bcbdc1edad78dcd48ad495a187bbb44a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：对文本使用抗锯齿效果
-“抗锯齿”是指对绘制的图形和文本的粗糙边缘进行平滑处理以改进它们的外观或可读性。  通过托管 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 类，既可以呈现高质量的抗锯齿的文本，也可以呈现低质量文本。  通常，呈现的质量越高，所需的处理时间越长。  若要设置文本的质量级别，请将 <xref:System.Drawing.Graphics> 的 <xref:System.Drawing.Graphics.TextRenderingHint%2A> 属性设置为 <xref:System.Drawing.Text.TextRenderingHint> 枚举元素之一  
+# <a name="how-to-use-antialiasing-with-text"></a><span data-ttu-id="52966-102">如何：对文本使用抗锯齿效果</span><span class="sxs-lookup"><span data-stu-id="52966-102">How to: Use Antialiasing with Text</span></span>
+<span data-ttu-id="52966-103">*抗锯齿*指的是平滑的粗糙边缘绘制的图形和文本，以提高其外观或可读性。</span><span class="sxs-lookup"><span data-stu-id="52966-103">*Antialiasing* refers to the smoothing of jagged edges of drawn graphics and text to improve their appearance or readability.</span></span> <span data-ttu-id="52966-104">通过托管[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]类，可以呈现高质量消除锯齿的文本，以及较低质量的文本。</span><span class="sxs-lookup"><span data-stu-id="52966-104">With the managed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classes, you can render high quality antialiased text, as well as lower quality text.</span></span> <span data-ttu-id="52966-105">通常情况下，呈现的质量越高采用更多的处理时间比较低质量呈现。</span><span class="sxs-lookup"><span data-stu-id="52966-105">Typically, higher quality rendering takes more processing time than lower quality rendering.</span></span> <span data-ttu-id="52966-106">若要设置的文本质量级别，设置<xref:System.Drawing.Graphics.TextRenderingHint%2A>属性<xref:System.Drawing.Graphics>到的元素之一<xref:System.Drawing.Text.TextRenderingHint>枚举</span><span class="sxs-lookup"><span data-stu-id="52966-106">To set the text quality level, set the <xref:System.Drawing.Graphics.TextRenderingHint%2A> property of a <xref:System.Drawing.Graphics> to one of the elements of the <xref:System.Drawing.Text.TextRenderingHint> enumeration</span></span>  
   
-## 示例  
- 下面的代码示例以两种不同的质量设置绘制文本：  
+## <a name="example"></a><span data-ttu-id="52966-107">示例</span><span class="sxs-lookup"><span data-stu-id="52966-107">Example</span></span>  
+ <span data-ttu-id="52966-108">下面的代码示例绘制了两种不同的质量设置的文本。</span><span class="sxs-lookup"><span data-stu-id="52966-108">The following code example draws text with two different quality settings.</span></span>  
   
- 下面的插图显示修改后的代码示例的输出。  
+ <span data-ttu-id="52966-109">下图显示 cod 的输出示例代码。</span><span class="sxs-lookup"><span data-stu-id="52966-109">The following illustration shows the output of the cod example code.</span></span>  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext10.png "FontsText10")  
+ <span data-ttu-id="52966-110">![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext10.png "FontsText10")</span><span class="sxs-lookup"><span data-stu-id="52966-110">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext10.png "FontsText10")</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.FontsAndText#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#21)]  
   
-## 编译代码  
- 前面的代码示例是为用于 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="52966-111">编译代码</span><span class="sxs-lookup"><span data-stu-id="52966-111">Compiling the Code</span></span>  
+ <span data-ttu-id="52966-112">前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="52966-112">The preceding code example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 请参阅  
- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="52966-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="52966-113">See Also</span></span>  
+ [<span data-ttu-id="52966-114">使用字体和文本</span><span class="sxs-lookup"><span data-stu-id="52966-114">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

@@ -1,35 +1,38 @@
 ---
-title: "3416 - WebSocketConnectionRequestSendStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3416 - WebSocketConnectionRequestSendStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2288f390-9263-4acf-b0ef-b0cab82bbec1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c8995ebd27d0d59b2eadc4620bc095f554ad4182
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 3416 - WebSocketConnectionRequestSendStop
-## 属性  
+# <a name="3416---websocketconnectionrequestsendstop"></a><span data-ttu-id="c0f8c-102">3416 - WebSocketConnectionRequestSendStop</span><span class="sxs-lookup"><span data-stu-id="c0f8c-102">3416 - WebSocketConnectionRequestSendStop</span></span>
+## <a name="properties"></a><span data-ttu-id="c0f8c-103">属性</span><span class="sxs-lookup"><span data-stu-id="c0f8c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3416|  
-|关键字|HTTP|  
-|级别|详细|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="c0f8c-104">ID</span><span class="sxs-lookup"><span data-stu-id="c0f8c-104">ID</span></span>|<span data-ttu-id="c0f8c-105">3416</span><span class="sxs-lookup"><span data-stu-id="c0f8c-105">3416</span></span>|  
+|<span data-ttu-id="c0f8c-106">关键字</span><span class="sxs-lookup"><span data-stu-id="c0f8c-106">Keywords</span></span>|<span data-ttu-id="c0f8c-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="c0f8c-107">HTTP</span></span>|  
+|<span data-ttu-id="c0f8c-108">级别</span><span class="sxs-lookup"><span data-stu-id="c0f8c-108">Level</span></span>|<span data-ttu-id="c0f8c-109">详细</span><span class="sxs-lookup"><span data-stu-id="c0f8c-109">Verbose</span></span>|  
+|<span data-ttu-id="c0f8c-110">通道</span><span class="sxs-lookup"><span data-stu-id="c0f8c-110">Channel</span></span>|<span data-ttu-id="c0f8c-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="c0f8c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 当要发送的 WebSocket 连接请求停止时，将发出此事件。  
+## <a name="description"></a><span data-ttu-id="c0f8c-112">描述</span><span class="sxs-lookup"><span data-stu-id="c0f8c-112">Description</span></span>  
+ <span data-ttu-id="c0f8c-113">当要发送的 WebSocket 连接请求停止时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="c0f8c-113">This event is emitted when WebSocket connection request to send has stopped.</span></span>  
   
-## 消息  
- WebSocketId：%1 连接请求已发送。  
+## <a name="message"></a><span data-ttu-id="c0f8c-114">消息</span><span class="sxs-lookup"><span data-stu-id="c0f8c-114">Message</span></span>  
+ <span data-ttu-id="c0f8c-115">WebSocketId：%1 连接请求已发送。</span><span class="sxs-lookup"><span data-stu-id="c0f8c-115">WebSocketId:%1 connection request sent.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="c0f8c-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="c0f8c-116">Details</span></span>

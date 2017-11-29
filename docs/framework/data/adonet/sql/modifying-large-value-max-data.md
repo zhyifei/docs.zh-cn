@@ -1,49 +1,55 @@
 ---
-title: "在 ADO.NET 中修改大值 (max) 数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 ADO.NET 中修改大值 (max) 数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3a80f316ffc3380408802fefe1a26d71e5e76ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 ADO.NET 中修改大值 (max) 数据
-大型对象 \(LOB\) 数据类型是那些超过 8 千字节 \(KB\) 最大行大小的数据类型。  SQL Server 为 `varchar`、`nvarchar` 和 `varbinary` 数据类型提供了 `max` 说明符以允许存储最大为 2^32 字节的值。  表列和 Transact\-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。  在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来获取，并可指定为输入和输出参数值而无需任何特殊处理。  对于大型 `varchar` 数据类型，可以增量检索和更新数据。  
+# <a name="modifying-large-value-max-data-in-adonet"></a><span data-ttu-id="5e8a9-102">在 ADO.NET 中修改大值 (max) 数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-102">Modifying Large-Value (max) Data in ADO.NET</span></span>
+<span data-ttu-id="5e8a9-103">大型对象 (LOB) 数据类型是那些超过 8 千字节 (KB) 最大行大小的数据类型。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-103">Large object (LOB) data types are those that exceed the maximum row size of 8 kilobytes (KB).</span></span> <span data-ttu-id="5e8a9-104">SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型提供了 `varbinary` 说明符以允许存储最大为 2^32 字节的值。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-104">SQL Server provides a `max` specifier for `varchar`, `nvarchar`, and `varbinary` data types to allow storage of values as large as 2^32 bytes.</span></span> <span data-ttu-id="5e8a9-105">表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-105">Table columns and Transact-SQL variables may specify `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` data types.</span></span> <span data-ttu-id="5e8a9-106">在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来获取，并可指定为输入和输出参数值而无需任何特殊处理。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-106">In ADO.NET, the `max` data types can be fetched by a `DataReader`, and can also be specified as both input and output parameter values without any special handling.</span></span> <span data-ttu-id="5e8a9-107">对于大型 `varchar` 数据类型，可以增量检索和更新数据。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-107">For large `varchar` data types, data can be retrieved and updated incrementally.</span></span>  
   
- 可以使用 `max` 数据类型进行比较（作为 Transact\-SQL 变量）和进行串联。  它们还可以用于 SELECT 语句的 DISTINCT、ORDER BY、GROUP BY 子句中，以及用于聚合、联接和子查询中。  
+ <span data-ttu-id="5e8a9-108">可以使用 `max` 数据类型进行比较（作为 Transact-SQL 变量）和进行串联。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-108">The `max` data types can be used for comparisons, as Transact-SQL variables, and for concatenation.</span></span> <span data-ttu-id="5e8a9-109">它们还可以用于 SELECT 语句的 DISTINCT、ORDER BY、GROUP BY 子句中，以及用于聚合、联接和子查询中。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-109">They can also be used in the DISTINCT, ORDER BY, GROUP BY clauses of a SELECT statement as well as in aggregates, joins, and subqueries.</span></span>  
   
- 下表提供指向 SQL Server 联机丛书中的文档的链接。  
+ <span data-ttu-id="5e8a9-110">下表提供指向 SQL Server 联机丛书中的文档的链接。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-110">The following table provides links to the documentation in SQL Server Books Online.</span></span>  
   
- **SQL Server 联机丛书**  
+ <span data-ttu-id="5e8a9-111">**SQL Server 联机丛书**</span><span class="sxs-lookup"><span data-stu-id="5e8a9-111">**SQL Server Books Online**</span></span>  
   
-1.  [使用大值数据类型](http://go.microsoft.com/fwlink/?LinkId=120498)（可能为英文网页）  
+1.  [<span data-ttu-id="5e8a9-112">使用大值数据类型</span><span class="sxs-lookup"><span data-stu-id="5e8a9-112">Using Large-Value Data Types</span></span>](http://go.microsoft.com/fwlink/?LinkId=120498)  
   
-## 大值类型限制  
- 下面的限制适用于 `max` 数据类型，但对于较小的数据类型则不存在此限制：  
+## <a name="large-value-type-restrictions"></a><span data-ttu-id="5e8a9-113">大值类型限制</span><span class="sxs-lookup"><span data-stu-id="5e8a9-113">Large-Value Type Restrictions</span></span>  
+ <span data-ttu-id="5e8a9-114">下面的限制适用于 `max` 数据类型，但对于较小的数据类型则不存在此限制：</span><span class="sxs-lookup"><span data-stu-id="5e8a9-114">The following restrictions apply to the `max` data types, which do not exist for smaller data types:</span></span>  
   
--   `sql_variant` 不能包含大型 `varchar` 数据类型。  
+-   <span data-ttu-id="5e8a9-115">`sql_variant` 不能包含大型 `varchar` 数据类型。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-115">A `sql_variant` cannot contain a large `varchar` data type.</span></span>  
   
--   大型 `varchar` 列不能指定为索引中的键列。  它们可以存在于非聚集索引中包含的列中。  
+-   <span data-ttu-id="5e8a9-116">大型 `varchar` 列不能指定为索引中的键列。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-116">Large `varchar` columns cannot be specified as a key column in an index.</span></span> <span data-ttu-id="5e8a9-117">它们可以存在于非聚集索引中包含的列中。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-117">They are allowed in an included column in a non-clustered index.</span></span>  
   
--   大型 `varchar` 列不能用作分区键列。  
+-   <span data-ttu-id="5e8a9-118">大型 `varchar` 列不能用作分区键列。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-118">Large `varchar` columns cannot be used as partitioning key columns.</span></span>  
   
-## 在 Transact\-SQL 中使用大值类型  
- Transact\-SQL `OPENROWSET` 函数是一个用于连接和访问远程数据的一次性方法。  它包含从 OLE DB 数据源访问远程数据所需的所有连接信息。  可以在某一查询的 FROM 子句中像表名称一样引用 `OPENROWSET`。  根据 OLE DB 提供程序的功能，它还可作为 INSERT、UPDATE 或 DELETE 语句的目标表被引用。  
+## <a name="working-with-large-value-types-in-transact-sql"></a><span data-ttu-id="5e8a9-119">在 Transact-SQL 中使用大值类型</span><span class="sxs-lookup"><span data-stu-id="5e8a9-119">Working with Large-Value Types in Transact-SQL</span></span>  
+ <span data-ttu-id="5e8a9-120">Transact-SQL `OPENROWSET` 函数是一个用于连接和访问远程数据的一次性方法。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-120">The Transact-SQL `OPENROWSET` function is a one-time method of connecting and accessing remote data.</span></span> <span data-ttu-id="5e8a9-121">它包含从 OLE DB 数据源访问远程数据所需的所有连接信息。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-121">It includes all of the connection information necessary to access remote data from an OLE DB data source.</span></span> <span data-ttu-id="5e8a9-122">可以在某一查询的 FROM 子句中像表名称一样引用 `OPENROWSET`。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-122">`OPENROWSET` can be referenced in the FROM clause of a query as though it were a table name.</span></span> <span data-ttu-id="5e8a9-123">根据 OLE DB 提供程序的功能，它还可作为 INSERT、UPDATE 或 DELETE 语句的目标表被引用。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-123">It can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement, subject to the capabilities of the OLE DB provider.</span></span>  
   
- `OPENROWSET` 功能包含 `BULK` 行集提供程序，通过此提供程序，您可以直接从文件读取数据而不必将数据加载到目标表  这使您可以在简单的 INSERT SELECT 语句中使用 `OPENROWSET`。  
+ <span data-ttu-id="5e8a9-124">`OPENROWSET` 功能包含 `BULK` 行集提供程序，通过此提供程序，您可以直接从文件读取数据而不必将数据加载到目标表</span><span class="sxs-lookup"><span data-stu-id="5e8a9-124">The `OPENROWSET` function includes the `BULK` rowset provider, which allows you to read data directly from a file without loading the data into a target table.</span></span> <span data-ttu-id="5e8a9-125">这使您可以在简单的 INSERT SELECT 语句中使用 `OPENROWSET`。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-125">This enables you to use `OPENROWSET` in a simple INSERT SELECT statement.</span></span>  
   
- `OPENROWSET`  `BULK` 选项参数可以有效地控制在何处开始和结束读取数据、如何处理错误以及如何解释数据。  例如，可以指定将数据文件作为 `varbinary`、`varchar` 或 `nvarchar` 类型的单行单列行集合进行读取。  有关完整语法和选项，请参见 SQL Server 联机图书。  
+ <span data-ttu-id="5e8a9-126">`OPENROWSET``BULK`选项参数有效地控制在何处开始和结束读取数据、 如何处理错误，以及如何解释数据。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-126">The `OPENROWSET``BULK` option arguments provide significant control over where to begin and end reading data, how to deal with errors, and how data is interpreted.</span></span> <span data-ttu-id="5e8a9-127">例如，可以指定将数据文件作为 `varbinary`、`varchar` 或 `nvarchar` 类型的单行单列行集合进行读取。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-127">For example, you can specify that the data file be read as a single-row, single-column rowset of type `varbinary`, `varchar`, or `nvarchar`.</span></span> <span data-ttu-id="5e8a9-128">有关完整语法和选项，请参见 SQL Server 联机图书。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-128">For the complete syntax and options, see SQL Server Books Online.</span></span>  
   
- 下面的示例将一幅照片插入 AdventureWorks 示例数据库的 ProductPhoto 表中。  在使用 `BULK``OPENROWSET` 提供程序时，即使不将值插入每个列中，也必须提供列的命名列表。  在本例中，主键定义为标识列，并可从列的列表中省略。  请注意，您还必须在 `OPENROWSET` 语句的末尾提供一个相关名称，在本例中该名称是 ThumbnailPhoto。  该名称与文件要加载到的 `ProductPhoto` 表中的列关联。  
+ <span data-ttu-id="5e8a9-129">下面的示例将一幅照片插入 AdventureWorks 示例数据库的 ProductPhoto 表中。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-129">The following example inserts a photo into the ProductPhoto table in the AdventureWorks sample database.</span></span> <span data-ttu-id="5e8a9-130">使用时`BULK``OPENROWSET`提供程序，您必须提供命名的列表列甚至如果不将值插入到每个列。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-130">When using the `BULK``OPENROWSET` provider, you must supply the named list of columns even if you aren't inserting values into every column.</span></span> <span data-ttu-id="5e8a9-131">在本例中，主键定义为标识列，并可从列的列表中省略。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-131">The primary key in this case is defined as an identity column, and may be omitted from the column list.</span></span> <span data-ttu-id="5e8a9-132">请注意，您还必须在 `OPENROWSET` 语句的末尾提供一个相关名称，在本例中该名称是 ThumbnailPhoto。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-132">Note that you must also supply a correlation name at the end of the `OPENROWSET` statement, which in this case is ThumbnailPhoto.</span></span> <span data-ttu-id="5e8a9-133">该名称与文件要加载到的 `ProductPhoto` 表中的列关联。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-133">This correlates with the column in the `ProductPhoto` table into which the file is being loaded.</span></span>  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -56,31 +62,31 @@ FROM OPENROWSET
     (BULK 'c:\images\tricycle.jpg', SINGLE_BLOB) ThumbnailPhoto  
 ```  
   
-## 使用 UPDATE .WRITE 更新数据  
- Transact\-SQL UPDATE 语句具有新的 WRITE 语法，用于修改 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 列的内容。  它允许您对数据执行部分更新。  此处所示的 UPDATE .WRITE 语法为缩写形式：  
+## <a name="updating-data-using-update-write"></a><span data-ttu-id="5e8a9-134">使用 UPDATE .WRITE 更新数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-134">Updating Data Using UPDATE .WRITE</span></span>  
+ <span data-ttu-id="5e8a9-135">Transact-SQL UPDATE 语句具有新的 WRITE 语法，用于修改 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 列的内容。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-135">The Transact-SQL UPDATE statement has new WRITE syntax for modifying the contents of `varchar(max)`, `nvarchar(max)`, or `varbinary(max)` columns.</span></span> <span data-ttu-id="5e8a9-136">它允许您对数据执行部分更新。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-136">This allows you to perform partial updates of the data.</span></span> <span data-ttu-id="5e8a9-137">此处所示的 UPDATE .WRITE 语法为缩写形式：</span><span class="sxs-lookup"><span data-stu-id="5e8a9-137">The UPDATE .WRITE syntax is shown here in abbreviated form:</span></span>  
   
- UPDATE  
+ <span data-ttu-id="5e8a9-138">更新</span><span class="sxs-lookup"><span data-stu-id="5e8a9-138">UPDATE</span></span>  
   
- { *\<object\>* }  
+ <span data-ttu-id="5e8a9-139">{ *\<对象 >* }</span><span class="sxs-lookup"><span data-stu-id="5e8a9-139">{ *\<object>* }</span></span>  
   
- SET  
+ <span data-ttu-id="5e8a9-140">SET</span><span class="sxs-lookup"><span data-stu-id="5e8a9-140">SET</span></span>  
   
- { *column\_name* \= { .WRITE \( *expression* , @Offset , @Length \) }  
+ <span data-ttu-id="5e8a9-141">{ *column_name* = {。写入 (*表达式*， @Offset ， @Length )}</span><span class="sxs-lookup"><span data-stu-id="5e8a9-141">{ *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }</span></span>  
   
- WRITE 方法指定将修改 *column\_name* 值的某个部分。  表达式是将复制到 *column\_name* 的值，`@Offset` 是将写入表达式的开始点，`@Length` 参数是列中该部分的长度。  
+ <span data-ttu-id="5e8a9-142">WRITE 方法指定的值的部分*column_name*将进行相应修改。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-142">The WRITE method specifies that a section of the value of the *column_name* will be modified.</span></span> <span data-ttu-id="5e8a9-143">表达式是将复制到的值*column_name*、`@Offset`是从该处将写入表达式的开始点和`@Length`自变量是列中部分的长度。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-143">The expression is the value that will be copied to the *column_name*, the `@Offset` is the beginning point at which the expression will be written, and the `@Length` argument is the length of the section in the column.</span></span>  
   
-|如果|Then|  
+|<span data-ttu-id="5e8a9-144">如果</span><span class="sxs-lookup"><span data-stu-id="5e8a9-144">If</span></span>|<span data-ttu-id="5e8a9-145">Then</span><span class="sxs-lookup"><span data-stu-id="5e8a9-145">Then</span></span>|  
 |--------|----------|  
-|表达式设置为 NULL|忽略 `@Length`，并在指定的 `@Offset` 处截断 *column\_name* 中的值。|  
-|`@Offset` 为 NULL|更新操作将表达式追加到现有 *column\_name* 值的末尾并忽略 `@Length`。|  
-|`@Offset` 大于 column\_name 值的长度|SQL Server 返回一个错误。|  
-|`@Length` 为 NULL|更新操作移除从 `@Offset` 到 `column_name` 值末尾的所有数据。|  
+|<span data-ttu-id="5e8a9-146">表达式设置为 NULL</span><span class="sxs-lookup"><span data-stu-id="5e8a9-146">The expression is set to NULL</span></span>|<span data-ttu-id="5e8a9-147">`@Length`将忽略和中的值*column_name*将被截断处指定`@Offset`。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-147">`@Length` is ignored and the value in *column_name* is truncated at the specified `@Offset`.</span></span>|  
+|<span data-ttu-id="5e8a9-148">`@Offset` 为 NULL</span><span class="sxs-lookup"><span data-stu-id="5e8a9-148">`@Offset` is NULL</span></span>|<span data-ttu-id="5e8a9-149">更新操作将在现有的末尾表达式追加*column_name*值和`@Length`将被忽略。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-149">The update operation appends the expression at the end of the existing *column_name* value and `@Length` is ignored.</span></span>|  
+|<span data-ttu-id="5e8a9-150">`@Offset` 大于 column_name 值的长度</span><span class="sxs-lookup"><span data-stu-id="5e8a9-150">`@Offset` is greater than the length of the column_name value</span></span>|<span data-ttu-id="5e8a9-151">SQL Server 返回一个错误。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-151">SQL Server returns an error.</span></span>|  
+|<span data-ttu-id="5e8a9-152">`@Length` 为 NULL</span><span class="sxs-lookup"><span data-stu-id="5e8a9-152">`@Length` is NULL</span></span>|<span data-ttu-id="5e8a9-153">更新操作移除从 `@Offset` 到 `column_name` 值末尾的所有数据。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-153">The update operation removes all data from `@Offset` to the end of the `column_name` value.</span></span>|  
   
 > [!NOTE]
->  `@Offset` 和 `@Length` 都不能是负数。  
+>  <span data-ttu-id="5e8a9-154">`@Offset` 和 `@Length` 都不能是负数。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-154">Neither `@Offset` nor `@Length` can be a negative number.</span></span>  
   
-## 示例  
- 此 Transact\-SQL 示例更新 DocumentSummary（AdventureWorks 数据库的 Document 表中的 `nvarchar(max)` 列）中的部分值。  通过指定替换单词、现有数据中要替换的单词的开始位置（偏移量）以及要替换的字符数（长度），单词“components”将被替换为“features”。  该示例在 UPDATE 语句之前和之后都包含 SELECT 语句以便比较结果。  
+## <a name="example"></a><span data-ttu-id="5e8a9-155">示例</span><span class="sxs-lookup"><span data-stu-id="5e8a9-155">Example</span></span>  
+ <span data-ttu-id="5e8a9-156">此 Transact-SQL 示例更新 DocumentSummary（AdventureWorks 数据库的 Document 表中的 `nvarchar(max)` 列）中的部分值。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-156">This Transact-SQL example updates a partial value in DocumentSummary, an `nvarchar(max)` column in the Document table in the AdventureWorks database.</span></span> <span data-ttu-id="5e8a9-157">通过指定替换单词、现有数据中要替换的单词的开始位置（偏移量）以及要替换的字符数（长度），单词“components”将被替换为“features”。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-157">The word 'components' is replaced by the word 'features' by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length).</span></span> <span data-ttu-id="5e8a9-158">该示例在 UPDATE 语句之前和之后都包含 SELECT 语句以便比较结果。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-158">The example includes SELECT statements before and after the UPDATE statement to compare results.</span></span>  
   
 ```  
 USE AdventureWorks;  
@@ -107,11 +113,11 @@ GO
 -- Reflectors are vital safety features of your bicycle.  
 ```  
   
-## 在 ADO.NET 中使用大值类型  
- 通过将大值类型指定为 <xref:System.Data.SqlClient.SqlDataReader> 中的 <xref:System.Data.SqlClient.SqlParameter> `` 对象以返回结果集，或者通过使用 <xref:System.Data.SqlClient.SqlDataAdapter> 来填充 `DataSet`\/`DataTable`，您可以在 ADO.NET 中使用大值类型。  使用大值类型的方式和使用其相关的较小值数据类型的方式之间没有什么不同。  
+## <a name="working-with-large-value-types-in-adonet"></a><span data-ttu-id="5e8a9-159">在 ADO.NET 中使用大值类型</span><span class="sxs-lookup"><span data-stu-id="5e8a9-159">Working with Large-Value Types in ADO.NET</span></span>  
+ <span data-ttu-id="5e8a9-160">你可以使用大值类型在 ADO.NET 中通过指定较大的值类型作为<xref:System.Data.SqlClient.SqlParameter>中的对象<xref:System.Data.SqlClient.SqlDataReader>以返回结果集，或者通过使用<xref:System.Data.SqlClient.SqlDataAdapter>以填充`DataSet` / `DataTable`。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-160">You can work with large value types in ADO.NET by specifying large value types as <xref:System.Data.SqlClient.SqlParameter> objects in a <xref:System.Data.SqlClient.SqlDataReader> to return a result set, or by using a <xref:System.Data.SqlClient.SqlDataAdapter> to fill a `DataSet`/`DataTable`.</span></span> <span data-ttu-id="5e8a9-161">使用大值类型的方式和使用其相关的较小值数据类型的方式之间没有什么不同。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-161">There is no difference between the way you work with a large value type and its related, smaller value data type.</span></span>  
   
-### 使用 GetSqlBytes 检索数据  
- <xref:System.Data.SqlClient.SqlDataReader> 的 `GetSqlBytes` 方法可用于检索 `varbinary(max)` 列的内容。  下面的代码段假定一个名为 `cmd` 的 <xref:System.Data.SqlClient.SqlCommand> 对象（该对象可从表中选择 `varbinary(max)` 数据）和一个名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象（该对象可将该数据检索为 <xref:System.Data.SqlTypes.SqlBytes>）。  
+### <a name="using-getsqlbytes-to-retrieve-data"></a><span data-ttu-id="5e8a9-162">使用 GetSqlBytes 检索数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-162">Using GetSqlBytes to Retrieve Data</span></span>  
+ <span data-ttu-id="5e8a9-163">`GetSqlBytes` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用于检索 `varbinary(max)` 列的内容。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-163">The `GetSqlBytes` method of the <xref:System.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column.</span></span> <span data-ttu-id="5e8a9-164">下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 对象（该对象可从表中选择 `varbinary(max)` 数据）和一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象（该对象可将该数据检索为 <xref:System.Data.SqlTypes.SqlBytes>）。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-164">The following code fragment assumes a <xref:System.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as <xref:System.Data.SqlTypes.SqlBytes>.</span></span>  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -128,8 +134,8 @@ while (reader.Read())
     }  
 ```  
   
-### 使用 GetSqlChars 检索数据  
- <xref:System.Data.SqlClient.SqlDataReader> 的 `GetSqlChars` 方法可用于检索 `varchar(max)` 或 `nvarchar(max)` 列的内容。  下面的代码段假定一个名为 `cmd` 的 <xref:System.Data.SqlClient.SqlCommand> 对象（该对象可从表中选择 `nvarchar(max)` 数据）和一个名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象（该对象可检索该数据）。  
+### <a name="using-getsqlchars-to-retrieve-data"></a><span data-ttu-id="5e8a9-165">使用 GetSqlChars 检索数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-165">Using GetSqlChars to Retrieve Data</span></span>  
+ <span data-ttu-id="5e8a9-166">`GetSqlChars` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用于检索 `varchar(max)` 或 `nvarchar(max)` 列的内容。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-166">The `GetSqlChars` method of the <xref:System.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varchar(max)` or `nvarchar(max)` column.</span></span> <span data-ttu-id="5e8a9-167">下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 对象（该对象可从表中选择 `nvarchar(max)` 数据）和一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象（该对象可检索该数据）。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-167">The following code fragment assumes a <xref:System.Data.SqlClient.SqlCommand> object named `cmd` that selects `nvarchar(max)` data from a table and a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.</span></span>  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -146,8 +152,8 @@ while (reader.Read())
 }  
 ```  
   
-### 使用 GetSqlBinary 检索数据  
- <xref:System.Data.SqlClient.SqlDataReader> 的 `GetSqlBinary` 方法可用于检索 `varbinary(max)` 列的内容。  下面的代码段假定一个名为 `cmd` 的 <xref:System.Data.SqlClient.SqlCommand> 对象（该对象可从表中选择 `varbinary(max)` 数据）和一个名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象（该对象可将该数据检索为 <xref:System.Data.SqlTypes.SqlBinary> 流）。  
+### <a name="using-getsqlbinary-to-retrieve-data"></a><span data-ttu-id="5e8a9-168">使用 GetSqlBinary 检索数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-168">Using GetSqlBinary to Retrieve Data</span></span>  
+ <span data-ttu-id="5e8a9-169">`GetSqlBinary` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法可用于检索 `varbinary(max)` 列的内容。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-169">The `GetSqlBinary` method of a <xref:System.Data.SqlClient.SqlDataReader> can be used to retrieve the contents of a `varbinary(max)` column.</span></span> <span data-ttu-id="5e8a9-170">下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlCommand> 的 `cmd` 对象（该对象可从表中选择 `varbinary(max)` 数据）和一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象（该对象可将该数据检索为 <xref:System.Data.SqlTypes.SqlBinary> 流）。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-170">The following code fragment assumes a <xref:System.Data.SqlClient.SqlCommand> object named `cmd` that selects `varbinary(max)` data from a table and a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data as a <xref:System.Data.SqlTypes.SqlBinary> stream.</span></span>  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -164,8 +170,8 @@ while (reader.Read())
     }  
 ```  
   
-### 使用 GetBytes 检索数据  
- <xref:System.Data.SqlClient.SqlDataReader> 的 `GetBytes` 方法将从指定列偏移量开始的字节流读入到数组中从指定数组偏移量开始的位置。  下面的代码段假定一个名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象，该对象可将字节检索到字节数组中。  请注意，与 `GetSqlBytes` 不同，`GetBytes` 要求指定数组缓冲区的大小。  
+### <a name="using-getbytes-to-retrieve-data"></a><span data-ttu-id="5e8a9-171">使用 GetBytes 检索数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-171">Using GetBytes to Retrieve Data</span></span>  
+ <span data-ttu-id="5e8a9-172">`GetBytes` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法将从指定列偏移量开始的字节流读入到数组中从指定数组偏移量开始的位置。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-172">The `GetBytes` method of a <xref:System.Data.SqlClient.SqlDataReader> reads a stream of bytes from the specified column offset into a byte array starting at the specified array offset.</span></span> <span data-ttu-id="5e8a9-173">下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象，该对象可将字节检索到字节数组中。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-173">The following code fragment assumes a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves bytes into a byte array.</span></span> <span data-ttu-id="5e8a9-174">请注意，与 `GetSqlBytes` 不同，`GetBytes` 要求指定数组缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-174">Note that, unlike `GetSqlBytes`, `GetBytes` requires a size for the array buffer.</span></span>  
   
 ```vb  
 While reader.Read()  
@@ -183,8 +189,8 @@ while (reader.Read())
 }  
 ```  
   
-### 使用 GetValue 检索数据  
- <xref:System.Data.SqlClient.SqlDataReader> 的 `GetValue` 方法将指定列偏移量处的值读入数组。  下面的代码段假定一个名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象，该对象检索第一个列偏移量处的二进制数据，然后检索第二个列偏移量处的字符串数据。  
+### <a name="using-getvalue-to-retrieve-data"></a><span data-ttu-id="5e8a9-175">使用 GetValue 检索数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-175">Using GetValue to Retrieve Data</span></span>  
+ <span data-ttu-id="5e8a9-176">`GetValue` 的 <xref:System.Data.SqlClient.SqlDataReader> 方法将指定列偏移量处的值读入数组。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-176">The `GetValue` method of a <xref:System.Data.SqlClient.SqlDataReader> reads the value from the specified column offset into an array.</span></span> <span data-ttu-id="5e8a9-177">下面的代码段假定一个名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象，该对象检索第一个列偏移量处的二进制数据，然后检索第二个列偏移量处的字符串数据。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-177">The following code fragment assumes a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves binary data from the first column offset, and then string data from the second column offset.</span></span>  
   
 ```vb  
 While reader.Read()  
@@ -207,8 +213,8 @@ while (reader.Read())
 }  
 ```  
   
-## 从大值类型转换为 CLR 类型  
- 可以使用任何字符串转换方法（例如 `ToString`）来转换 `varchar(max)` 或 `nvarchar(max)` 列的内容。  下面的代码段假定一个可检索数据的名为 `reader` 的 <xref:System.Data.SqlClient.SqlDataReader> 对象。  
+## <a name="converting-from-large-value-types-to-clr-types"></a><span data-ttu-id="5e8a9-178">从大值类型转换为 CLR 类型</span><span class="sxs-lookup"><span data-stu-id="5e8a9-178">Converting from Large Value Types to CLR Types</span></span>  
+ <span data-ttu-id="5e8a9-179">可以使用任何字符串转换方法（例如 `varchar(max)`）来转换 `nvarchar(max)` 或 `ToString` 列的内容。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-179">You can convert the contents of a `varchar(max)` or `nvarchar(max)` column using any of the string conversion methods, such as `ToString`.</span></span> <span data-ttu-id="5e8a9-180">下面的代码段假定一个可检索数据的名为 <xref:System.Data.SqlClient.SqlDataReader> 的 `reader` 对象。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-180">The following code fragment assumes a <xref:System.Data.SqlClient.SqlDataReader> object named `reader` that retrieves the data.</span></span>  
   
 ```vb  
 While reader.Read()  
@@ -225,14 +231,14 @@ while (reader.Read())
 }  
 ```  
   
-### 示例  
- 下面的代码检索 `AdventureWorks` 数据库的 `ProductPhoto` 表中的名称和 `LargePhoto` 对象，并将其保存到文件。  编译程序集时需要引用 <xref:System.Drawing> 命名空间。  <xref:System.Data.SqlClient.SqlDataReader> 的 <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 方法返回一个 <xref:System.Data.SqlTypes.SqlBytes> 对象，该对象公开 `Stream` 属性。  代码使用此对象创建新的 `Bitmap` 对象，然后以 Gif`ImageFormat` 格式保存该对象。  
+### <a name="example"></a><span data-ttu-id="5e8a9-181">示例</span><span class="sxs-lookup"><span data-stu-id="5e8a9-181">Example</span></span>  
+ <span data-ttu-id="5e8a9-182">下面的代码检索 `LargePhoto` 数据库的 `ProductPhoto` 表中的名称和 `AdventureWorks` 对象，并将其保存到文件。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-182">The following code retrieves the name and the `LargePhoto` object from the `ProductPhoto` table in the `AdventureWorks` database and saves it to a file.</span></span> <span data-ttu-id="5e8a9-183">编译程序集时需要引用 <xref:System.Drawing> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-183">The assembly needs to be compiled with a reference to the <xref:System.Drawing> namespace.</span></span>  <span data-ttu-id="5e8a9-184"><xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 的 <xref:System.Data.SqlClient.SqlDataReader> 方法返回一个 <xref:System.Data.SqlTypes.SqlBytes> 对象，该对象公开 `Stream` 属性。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-184">The <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> method of the <xref:System.Data.SqlClient.SqlDataReader> returns a <xref:System.Data.SqlTypes.SqlBytes> object that exposes a `Stream` property.</span></span> <span data-ttu-id="5e8a9-185">代码使用此创建新`Bitmap`对象，并将它保存在 Gif `ImageFormat`。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-185">The code uses this to create a new `Bitmap` object, and then saves it in the Gif `ImageFormat`.</span></span>  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
-## 使用大值类型参数  
- 在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用大型值类型的方法与在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用较小值类型的方法相同。  可以将大值类型作为 <xref:System.Data.SqlClient.SqlParameter> `` 值进行检索，如下面的示例所示。  代码假定在 AdventureWorks 示例数据库中存在以下 GetDocumentSummary 存储过程。  该存储过程采用名为 @DocumentID 的输入参数，并在 @DocumentSummary 输出参数中返回 DocumentSummary 列的内容。  
+## <a name="using-large-value-type-parameters"></a><span data-ttu-id="5e8a9-186">使用大值类型参数</span><span class="sxs-lookup"><span data-stu-id="5e8a9-186">Using Large Value Type Parameters</span></span>  
+ <span data-ttu-id="5e8a9-187">在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用大型值类型的方法与在 <xref:System.Data.SqlClient.SqlParameter> 对象中使用较小值类型的方法相同。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-187">Large value types can be used in <xref:System.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:System.Data.SqlClient.SqlParameter> objects.</span></span> <span data-ttu-id="5e8a9-188">你可以检索较大的值类型作为<xref:System.Data.SqlClient.SqlParameter>值，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-188">You can retrieve large value types as <xref:System.Data.SqlClient.SqlParameter> values, as shown in the following example.</span></span> <span data-ttu-id="5e8a9-189">代码假定在 AdventureWorks 示例数据库中存在以下 GetDocumentSummary 存储过程。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-189">The code assumes that the following GetDocumentSummary stored procedure exists in the AdventureWorks sample database.</span></span> <span data-ttu-id="5e8a9-190">该存储的过程采用名为的输入的参数@DocumentID并返回 DocumentSummary 列中的内容@DocumentSummary输出参数。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-190">The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.</span></span>  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -247,14 +253,14 @@ FROM    Production.Document
 WHERE   DocumentID=@DocumentID  
 ```  
   
-### 示例  
- ADO.NET 代码创建 <xref:System.Data.SqlClient.SqlConnection> 和 <xref:System.Data.SqlClient.SqlCommand> 对象，以执行 GetDocumentSummary 存储过程并检索以大值类型存储的文档摘要。  代码为 @DocumentID 输入参数传递一个值，并在控制台窗口显示 @DocumentSummary 输出参数中传回的结果。  
+### <a name="example"></a><span data-ttu-id="5e8a9-191">示例</span><span class="sxs-lookup"><span data-stu-id="5e8a9-191">Example</span></span>  
+ <span data-ttu-id="5e8a9-192">ADO.NET 代码创建 <xref:System.Data.SqlClient.SqlConnection> 和 <xref:System.Data.SqlClient.SqlCommand> 对象，以执行 GetDocumentSummary 存储过程并检索以大值类型存储的文档摘要。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-192">The ADO.NET code creates <xref:System.Data.SqlClient.SqlConnection> and <xref:System.Data.SqlClient.SqlCommand> objects to execute the GetDocumentSummary stored procedure and retrieve the document summary, which is stored as a large value type.</span></span> <span data-ttu-id="5e8a9-193">代码中传递的值@DocumentID输入参数，并显示结果传递进来@DocumentSummary输出在控制台窗口中的参数。</span><span class="sxs-lookup"><span data-stu-id="5e8a9-193">The code passes a value for the @DocumentID input parameter, and displays the results passed back in the @DocumentSummary output parameter in the Console window.</span></span>  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## 请参阅  
- [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="5e8a9-194">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5e8a9-194">See Also</span></span>  
+ [<span data-ttu-id="5e8a9-195">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="5e8a9-195">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="5e8a9-196">SQL Server 数据类型映射</span><span class="sxs-lookup"><span data-stu-id="5e8a9-196">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="5e8a9-197">ADO.NET 中的 SQL Server 数据操作</span><span class="sxs-lookup"><span data-stu-id="5e8a9-197">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [<span data-ttu-id="5e8a9-198">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="5e8a9-198">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

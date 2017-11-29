@@ -1,69 +1,72 @@
 ---
-title: "WCF Web HTTP 编程模型概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF Web HTTP 编程模型概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: 45
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 45
+caps.latest.revision: "45"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ebc3c349e0eedcbe20f126f5252dadf8a6b8096
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF Web HTTP 编程模型概述
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
+# <a name="wcf-web-http-programming-model-overview"></a><span data-ttu-id="8ef99-102">WCF Web HTTP 编程模型概述</span><span class="sxs-lookup"><span data-stu-id="8ef99-102">WCF Web HTTP Programming Model Overview</span></span>
+<span data-ttu-id="8ef99-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。</span><span class="sxs-lookup"><span data-stu-id="8ef99-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP programming model provides the basic elements required to build WEB HTTP services with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8ef99-104"> WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：</span><span class="sxs-lookup"><span data-stu-id="8ef99-104"> WEB HTTP services are designed to be accessed by the widest range of possible clients, including Web browsers and have the following unique requirements:</span></span>  
   
--   **URI 和 URI 处理** URI 在 WEB HTTP 服务的设计中扮演着核心角色。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类来提供 URI 处理功能。  
+-   <span data-ttu-id="8ef99-105">**Uri 和 URI 处理**Uri 在 WEB HTTP 服务的设计中扮演着重要作用。</span><span class="sxs-lookup"><span data-stu-id="8ef99-105">**URIs and URI Processing** URIs play a central role in the design of WEB HTTP services.</span></span> <span data-ttu-id="8ef99-106">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类来提供 URI 处理功能。</span><span class="sxs-lookup"><span data-stu-id="8ef99-106">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model uses the <xref:System.UriTemplate> and <xref:System.UriTemplateTable> classes to provide URI processing capabilities.</span></span>  
   
--   **支持 GET 和 POST 操作** 除了使用各种调用谓词来进行数据修改和远程调用之外，WEB HTTP 服务还使用 GET 谓词进行数据检索。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 将服务操作与 GET 和其他 HTTP 谓词（如 PUT、POST 和 DELETE）相关联。  
+-   <span data-ttu-id="8ef99-107">**支持 GET 和 POST 操作**WEB HTTP 服务还使用 GET 谓词进行数据检索，除了各种调用谓词来进行数据修改和远程调用。</span><span class="sxs-lookup"><span data-stu-id="8ef99-107">**Support for GET and POST operations** WEB HTTP services make use of the GET verb for data retrieval, in addition to various invoke verbs for data modification and remote invocation.</span></span> <span data-ttu-id="8ef99-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 将服务操作与 GET 和其他 HTTP 谓词（如 PUT、POST 和 DELETE）相关联。</span><span class="sxs-lookup"><span data-stu-id="8ef99-108">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model uses the <xref:System.ServiceModel.Web.WebGetAttribute> and <xref:System.ServiceModel.Web.WebInvokeAttribute> to associate service operations with both GET and other HTTP verbs like PUT, POST, and DELETE.</span></span>  
   
--   **多种数据格式** Web 样式服务除了处理 SOAP 消息之外，还可处理很多种数据。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持许多不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（例如图像、视频文件或纯文本）的流。  
+-   <span data-ttu-id="8ef99-109">**多种数据格式**Web 样式服务处理很多种数据以外的 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="8ef99-109">**Multiple data formats** Web-style services process many kinds of data in addition to SOAP messages.</span></span> <span data-ttu-id="8ef99-110">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 来支持许多不同的数据格式，包括 XML 文档、JSON 数据对象和二进制内容（例如图像、视频文件或纯文本）的流。</span><span class="sxs-lookup"><span data-stu-id="8ef99-110">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model uses the <xref:System.ServiceModel.WebHttpBinding> and <xref:System.ServiceModel.Description.WebHttpBehavior> to support many different data formats including XML documents, JSON data object, and streams of binary content such as images, video files, or plain text.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 \(ATOM\/RSS\) 源。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX 和 JSON 服务的更多信息，请参见 [AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]联合的更多信息，请参见 [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
+ <span data-ttu-id="8ef99-111">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。</span><span class="sxs-lookup"><span data-stu-id="8ef99-111">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model extends the reach of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to cover Web-style scenarios that include WEB HTTP services, AJAX and JSON services, and Syndication (ATOM/RSS) feeds.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-112">AJAX 和 JSON 服务，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。</span><span class="sxs-lookup"><span data-stu-id="8ef99-112"> AJAX and JSON services, see [AJAX Integration and JSON Support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-113">联合，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="8ef99-113"> Syndication, see [WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).</span></span>  
   
- 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。任何可序列化类型都可以从 WEB HTTP 服务操作返回。因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。有关默认情况下支持的类型的更多信息，请参见下面的 **UriTemplate 查询字符串参数和 URL** 一节。通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ <span data-ttu-id="8ef99-114">对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。</span><span class="sxs-lookup"><span data-stu-id="8ef99-114">There are no extra restrictions on the types of data that can be returned from a WEB HTTP service.</span></span> <span data-ttu-id="8ef99-115">任何可序列化类型都可以从 WEB HTTP 服务操作返回。</span><span class="sxs-lookup"><span data-stu-id="8ef99-115">Any serializable type can be returned from an WEB HTTP service operation.</span></span> <span data-ttu-id="8ef99-116">因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。</span><span class="sxs-lookup"><span data-stu-id="8ef99-116">Because WEB HTTP service operations can be invoke by a web browser there is a limitation on what data types can be specified in a URL.</span></span> <span data-ttu-id="8ef99-117">默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。</span><span class="sxs-lookup"><span data-stu-id="8ef99-117">For more information on what types are supported by default see the **UriTemplate Query String Parameters and URLs** section below.</span></span> <span data-ttu-id="8ef99-118">通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。</span><span class="sxs-lookup"><span data-stu-id="8ef99-118">The default behavior can be changed by providing your own T:System.ServiceModel.Dispatcher.QueryStringConverter implementation which specifies how to convert the parameters specified in a URL to the actual parameter type.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8ef99-119"> <xref:System.ServiceModel.Dispatcher.QueryStringConverter></span><span class="sxs-lookup"><span data-stu-id="8ef99-119"> <xref:System.ServiceModel.Dispatcher.QueryStringConverter></span></span>  
   
 > [!CAUTION]
->  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。然而，您可通过使用 HTTP 承载服务来使用基于传输的安全性。[!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全的更多信息，请参见[安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  <span data-ttu-id="8ef99-120">使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="8ef99-120">Services written with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model do not use SOAP messages.</span></span> <span data-ttu-id="8ef99-121">由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。</span><span class="sxs-lookup"><span data-stu-id="8ef99-121">Because SOAP is not used, the security features provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cannot be used.</span></span> <span data-ttu-id="8ef99-122">然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="8ef99-122">You can, however use transport-based security by hosting your service with HTTPS.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-123">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)</span><span class="sxs-lookup"><span data-stu-id="8ef99-123"> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md)</span></span>  
   
 > [!WARNING]
->  为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。若要解决此问题，您可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  <span data-ttu-id="8ef99-124">为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。</span><span class="sxs-lookup"><span data-stu-id="8ef99-124">Installing the WebDAV extension for IIS can cause Web HTTP services to return an HTTP 405 error as the WebDAV extension attempts to handle all PUT requests.</span></span> <span data-ttu-id="8ef99-125">若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。</span><span class="sxs-lookup"><span data-stu-id="8ef99-125">To work around this issue you can uninstall the WebDAV extension or disable the WebDAV extension for your web site.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="8ef99-126">[IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)</span><span class="sxs-lookup"><span data-stu-id="8ef99-126"> [IIS and WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)</span></span>  
   
-## 使用 UriTemplate 和 UriTemplateTable 进行 URI 处理  
- URI 模板提供了一种可以高效地表示很大的结构相似的 URI 集的语法。例如，下面的模板表示所有以“a”开始并以“c”结束而中间段的值不限的、由三个段组成的 URI：a\/{segment}\/c  
+## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a><span data-ttu-id="8ef99-127">使用 UriTemplate 和 UriTemplateTable 进行 URI 处理</span><span class="sxs-lookup"><span data-stu-id="8ef99-127">URI Processing with UriTemplate and UriTemplateTable</span></span>  
+ <span data-ttu-id="8ef99-128">URI 模板提供了一种可以高效地表示很大的结构相似的 URI 集的语法。</span><span class="sxs-lookup"><span data-stu-id="8ef99-128">URI templates provide an efficient syntax for expressing large sets of structurally similar URIs.</span></span> <span data-ttu-id="8ef99-129">例如，下面的模板表示所有以“a”开始并以“c”结束而中间段的值不限的、由三个段组成的 URI：a/{segment}/c</span><span class="sxs-lookup"><span data-stu-id="8ef99-129">For example, the following template expresses the set of all three-segment URIs that begin with "a" and end with "c" without regard to the value of the intermediate segment: a/{segment}/c</span></span>  
   
- 此模板描述如下所示的 URI：  
+ <span data-ttu-id="8ef99-130">此模板描述如下所示的 URI：</span><span class="sxs-lookup"><span data-stu-id="8ef99-130">This template describes URIs like the following:</span></span>  
   
--   a\/x\/c  
+-   <span data-ttu-id="8ef99-131">a/x/c</span><span class="sxs-lookup"><span data-stu-id="8ef99-131">a/x/c</span></span>  
   
--   a\/y\/c  
+-   <span data-ttu-id="8ef99-132">a/y/c</span><span class="sxs-lookup"><span data-stu-id="8ef99-132">a/y/c</span></span>  
   
--   a\/z\/c  
+-   <span data-ttu-id="8ef99-133">a/z/c</span><span class="sxs-lookup"><span data-stu-id="8ef99-133">a/z/c</span></span>  
   
--   等等。  
+-   <span data-ttu-id="8ef99-134">等等。</span><span class="sxs-lookup"><span data-stu-id="8ef99-134">and so on.</span></span>  
   
- 在此模板中，大括号表示法 \("{segment}"\) 指示变量段而不是文本值。  
+ <span data-ttu-id="8ef99-135">在此模板中，大括号表示法 ("{segment}") 指示变量段而不是文本值。</span><span class="sxs-lookup"><span data-stu-id="8ef99-135">In this template, the curly brace notation ("{segment}") indicates a variable segment instead of a literal value.</span></span>  
   
- .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。`UriTemplates` 允许执行下列操作：  
+ <span data-ttu-id="8ef99-136">.NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。</span><span class="sxs-lookup"><span data-stu-id="8ef99-136">.NET Framework provides an API for working with URI templates called <xref:System.UriTemplate>.</span></span> <span data-ttu-id="8ef99-137">`UriTemplates` 允许执行下列操作：</span><span class="sxs-lookup"><span data-stu-id="8ef99-137">`UriTemplates` allow you to do the following:</span></span>  
   
--   可以使用一组参数来调用 `Bind` 方法之一，以生成一个与模板匹配的完全封闭的 URI。这意味着，URI 模板中的所有变量均由实际值替换。  
+-   <span data-ttu-id="8ef99-138">你可以调用之一`Bind`具有参数，以生成一组方法*完全封闭的 URI* ，与模板匹配。</span><span class="sxs-lookup"><span data-stu-id="8ef99-138">You can call one of the `Bind` methods with a set of parameters to produce a *fully-closed URI* that matches the template.</span></span> <span data-ttu-id="8ef99-139">这意味着，URI 模板中的所有变量均由实际值替换。</span><span class="sxs-lookup"><span data-stu-id="8ef99-139">This means all variables within the URI template are replaced with actual values.</span></span>  
   
--   可以使用候选 URI 调用 `Match`\(\)，此时会使用模板将候选 URI 的各个组成部分分解开来，并会返回一个字典，其中包含根据模板中的变量标记的 URI 的不同部分。  
+-   <span data-ttu-id="8ef99-140">可以使用候选 URI 调用 `Match`()，此时会使用模板将候选 URI 的各个组成部分分解开来，并会返回一个字典，其中包含根据模板中的变量标记的 URI 的不同部分。</span><span class="sxs-lookup"><span data-stu-id="8ef99-140">You can call `Match`() with a candidate URI, which uses a template to break up a candidate URI into its constituent parts and returns a dictionary that contains the different parts of the URI labeled according to the variables in the template.</span></span>  
   
--   `Bind`\(\) 和 `Match`\(\) 互为逆方法，因此可以调用 `Match`\( `Bind`\( x \) \) 并返回到开始时的相同环境。  
+-   <span data-ttu-id="8ef99-141">`Bind`() 和 `Match`() 互为逆方法，因此可以调用 `Match`( `Bind`( x ) ) 并返回到开始时的相同环境。</span><span class="sxs-lookup"><span data-stu-id="8ef99-141">`Bind`() and `Match`() are inverses so that you can call `Match`( `Bind`( x ) ) and come back with the same environment you started with.</span></span>  
   
- 有很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您都需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。<xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。这与任何特定网络堆栈（包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]）不相关，因此可以在任何需要的地方使用。  
+ <span data-ttu-id="8ef99-142">在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。</span><span class="sxs-lookup"><span data-stu-id="8ef99-142">There are many times (especially on the server, where dispatching a request to a service operation based on the URI is necessary) that you want to keep track of a set of <xref:System.UriTemplate> objects in a data structure that can independently address each of the contained templates.</span></span> <span data-ttu-id="8ef99-143"><xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。</span><span class="sxs-lookup"><span data-stu-id="8ef99-143"><xref:System.UriTemplateTable> represents a set of URI templates and selects the best match given a set of templates and a candidate URI.</span></span> <span data-ttu-id="8ef99-144">这与任何特定网络堆栈（包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]）不相关，因此可以在任何需要的地方使用。</span><span class="sxs-lookup"><span data-stu-id="8ef99-144">This is not affiliated with any particular networking stack ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] included) so you can use it wherever necessary.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。通过使用 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute>，将服务操作与 <xref:System.UriTemplate> 相关联。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 的更多信息，请参见 [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ <span data-ttu-id="8ef99-145">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。</span><span class="sxs-lookup"><span data-stu-id="8ef99-145">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service Model makes use of <xref:System.UriTemplate> and <xref:System.UriTemplateTable> to associate service operations with a set of URIs described by a <xref:System.UriTemplate>.</span></span> <span data-ttu-id="8ef99-146">通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。</span><span class="sxs-lookup"><span data-stu-id="8ef99-146">A service operation is associated with a <xref:System.UriTemplate>, using either the <xref:System.ServiceModel.Web.WebGetAttribute> or the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-147"><xref:System.UriTemplate>和<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)</span><span class="sxs-lookup"><span data-stu-id="8ef99-147"> <xref:System.UriTemplate> and <xref:System.UriTemplateTable>, see [UriTemplate and UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)</span></span>  
   
-## WebGet 和 WebInvoke 特性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务除了使用各种调用谓词（例如 HTTP POST、PUT 和 DELETE）之外，还使用检索谓词（例如 HTTP GET）。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型允许服务开发人员使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 控制与其服务操作相关联的 URI 模板和谓词。可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 来控制各个操作如何绑定到 URI 以及与这些 URI 相关联的 HTTP 方法。例如，在下面的代码中添加 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute>。  
+## <a name="webget-and-webinvoke-attributes"></a><span data-ttu-id="8ef99-148">WebGet 和 WebInvoke 特性</span><span class="sxs-lookup"><span data-stu-id="8ef99-148">WebGet and WebInvoke Attributes</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8ef99-149"> WEB HTTP 服务除了使用各种调用谓词（例如 HTTP POST、PUT 和 DELETE）之外，还使用检索谓词（例如 HTTP GET）。</span><span class="sxs-lookup"><span data-stu-id="8ef99-149"> WEB HTTP services make use of retrieval verbs (for example HTTP GET) in addition to various invoke verbs (for example HTTP POST, PUT, and DELETE).</span></span> <span data-ttu-id="8ef99-150">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型允许服务开发人员使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 控制与其服务操作相关联的 URI 模板和谓词。</span><span class="sxs-lookup"><span data-stu-id="8ef99-150">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model allows service developers to control the both the URI template and verb associated with their service operations with the <xref:System.ServiceModel.Web.WebGetAttribute> and <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="8ef99-151">可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 来控制各个操作如何绑定到 URI 以及与这些 URI 相关联的 HTTP 方法。</span><span class="sxs-lookup"><span data-stu-id="8ef99-151">The <xref:System.ServiceModel.Web.WebGetAttribute> and the <xref:System.ServiceModel.Web.WebInvokeAttribute> allow you to control how individual operations get bound to URIs and the HTTP methods associated with those URIs.</span></span> <span data-ttu-id="8ef99-152">例如，在下面的代码中添加 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute>。</span><span class="sxs-lookup"><span data-stu-id="8ef99-152">For example, adding <xref:System.ServiceModel.Web.WebGetAttribute> and <xref:System.ServiceModel.Web.WebInvokeAttribute> in the following code.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -81,13 +84,13 @@ interface ICustomer
 }  
 ```  
   
- 可以使用上面的代码生成下面的 HTTP 请求。  
+ <span data-ttu-id="8ef99-153">可以使用上面的代码生成下面的 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="8ef99-153">The preceding code allows you to make the following HTTP requests.</span></span>  
   
  `GET /GetCustomer`  
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 的默认值为 POST，但也可以将其用于其他谓词。  
+ <span data-ttu-id="8ef99-154"><xref:System.ServiceModel.Web.WebInvokeAttribute> 的默认值为 POST，但也可以将其用于其他谓词。</span><span class="sxs-lookup"><span data-stu-id="8ef99-154"><xref:System.ServiceModel.Web.WebInvokeAttribute> defaults to POST but you can use it for other verbs too.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -97,60 +100,60 @@ interface ICustomer
     [WebGet( UriTemplate="customers/{id}" )]  
   Customer GetCustomer( string id ):  
   
-  //"Do It“ -> HTTP PUT  
+  //"Do It" -> HTTP PUT  
   [WebInvoke( UriTemplate="customers/{id}", Method="PUT" )]  
   Customer UpdateCustomer( string id, Customer newCustomer );  
 }  
 ```  
   
- 若要查看使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的完整示例，请参见[如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ <span data-ttu-id="8ef99-155">若要查看的完整示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用的服务[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WEB HTTP 编程模型，请参阅[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)</span><span class="sxs-lookup"><span data-stu-id="8ef99-155">To see a complete sample of a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that uses the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model, see [How to: Create a Basic WCF Web HTTP Service](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)</span></span>  
   
-## UriTemplate 查询字符串参数和 URL  
- 可以通过键入与服务操作相关联的 URL 来从 Web 浏览器调用 Web 样式服务。这些服务操作可以采用查询字符串参数，必须在 URL 内使用字符串格式指定这些参数。下表演示可以在 URL 内传递的类型和使用的格式。  
+## <a name="uritemplate-query-string-parameters-and-urls"></a><span data-ttu-id="8ef99-156">UriTemplate 查询字符串参数和 URL</span><span class="sxs-lookup"><span data-stu-id="8ef99-156">UriTemplate Query String Parameters and URLs</span></span>  
+ <span data-ttu-id="8ef99-157">可以通过键入与服务操作相关联的 URL 来从 Web 浏览器调用 Web 样式服务。</span><span class="sxs-lookup"><span data-stu-id="8ef99-157">Web-style services can be called from a Web browser by typing a URL that is associated with a service operation.</span></span> <span data-ttu-id="8ef99-158">这些服务操作可以采用查询字符串参数，必须在 URL 内使用字符串格式指定这些参数。</span><span class="sxs-lookup"><span data-stu-id="8ef99-158">These service operations may take query string parameters that must be specified in a string form within the URL.</span></span> <span data-ttu-id="8ef99-159">下表演示可以在 URL 内传递的类型和使用的格式。</span><span class="sxs-lookup"><span data-stu-id="8ef99-159">The following table shows the types that can be passed within a URL and the format used.</span></span>  
   
-|类型|格式|  
-|--------|--------|  
-|<xref:System.Byte>|0 \- 255|  
-|<xref:System.SByte>|\-128 \- 127|  
-|<xref:System.Int16>|\-32768 \- 32767|  
-|<xref:System.Int32>|\-2,147,483,648 \- 2,147,483,647|  
-|<xref:System.Int64>|\-9,223,372,036,854,775,808 \- 9,223,372,036,854,775,807|  
-|<xref:System.UInt16>|0 \- 65535|  
-|<xref:System.UInt32>|0 \- 4,294,967,295|  
-|<xref:System.UInt64>|0 \- 18,446,744,073,709,551,615|  
-|<xref:System.Single>|\-3.402823e38 \- 3.402823e38（不需要指数表示法）|  
-|<xref:System.Double>|\-1.79769313486232e308 \- 1.79769313486232e308（不需要指数表示法）|  
-|<xref:System.Char>|任何单个字符|  
-|<xref:System.Decimal>|使用标准表示法的任何小数（无指数）|  
-|<xref:System.Boolean>|True 或 False（不区分大小写）|  
-|<xref:System.String>|任何字符串（不支持空字符串，且不进行转义）|  
-|<xref:System.DateTime>|MM\/DD\/YYYY<br /><br /> MM\/DD\/YYYY HH:MM:SS \[AM&#124;PM\]<br /><br /> 月、日、年<br /><br /> 月、日、年 HH:MM:SS \[AM&#124;PM\]|  
-|<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 此处，DD \= 天、HH \= 小时、MM \= 分钟、SS \= 秒钟|  
-|<xref:System.Guid>|一个 GUID，例如：<br /><br /> 936DA01F\-9ABD\-4d9d\-80C7\-02AF85C822A8|  
-|<xref:System.DateTimeOffset>|MM\/DD\/YYYY HH:MM:SS MM:SS<br /><br /> 此处，DD \= 天、HH \= 小时、MM \= 分钟、SS \= 秒钟|  
-|枚举|例如，定义枚举的枚举值，如以下代码中所示。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 可以在查询字符串中指定任何单独的枚举值（或其对应的整数值）。|  
-|具有可在类型和字符串表示形式之间来回进行转换的 `TypeConverterAttribute` 的类型。|取决于类型转换器。|  
+|<span data-ttu-id="8ef99-160">类型</span><span class="sxs-lookup"><span data-stu-id="8ef99-160">Type</span></span>|<span data-ttu-id="8ef99-161">格式</span><span class="sxs-lookup"><span data-stu-id="8ef99-161">Format</span></span>|  
+|----------|------------|  
+|<xref:System.Byte>|<span data-ttu-id="8ef99-162">0 - 255</span><span class="sxs-lookup"><span data-stu-id="8ef99-162">0 - 255</span></span>|  
+|<xref:System.SByte>|<span data-ttu-id="8ef99-163">-128 - 127</span><span class="sxs-lookup"><span data-stu-id="8ef99-163">-128 - 127</span></span>|  
+|<xref:System.Int16>|<span data-ttu-id="8ef99-164">-32768 - 32767</span><span class="sxs-lookup"><span data-stu-id="8ef99-164">-32768 - 32767</span></span>|  
+|<xref:System.Int32>|<span data-ttu-id="8ef99-165">-2,147,483,648 - 2,147,483,647</span><span class="sxs-lookup"><span data-stu-id="8ef99-165">-2,147,483,648 - 2,147,483,647</span></span>|  
+|<xref:System.Int64>|<span data-ttu-id="8ef99-166">-9,223,372,036,854,775,808 - 9,223,372,036,854,775,807</span><span class="sxs-lookup"><span data-stu-id="8ef99-166">-9,223,372,036,854,775,808 - 9,223,372,036,854,775,807</span></span>|  
+|<xref:System.UInt16>|<span data-ttu-id="8ef99-167">0 - 65535</span><span class="sxs-lookup"><span data-stu-id="8ef99-167">0 - 65535</span></span>|  
+|<xref:System.UInt32>|<span data-ttu-id="8ef99-168">0 - 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="8ef99-168">0 - 4,294,967,295</span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="8ef99-169">0 - 18,446,744,073,709,551,615</span><span class="sxs-lookup"><span data-stu-id="8ef99-169">0 - 18,446,744,073,709,551,615</span></span>|  
+|<xref:System.Single>|<span data-ttu-id="8ef99-170">-3.402823e38 - 3.402823e38（不需要指数表示法）</span><span class="sxs-lookup"><span data-stu-id="8ef99-170">-3.402823e38 - 3.402823e38 (exponent notation is not required)</span></span>|  
+|<xref:System.Double>|<span data-ttu-id="8ef99-171">-1.79769313486232e308 - 1.79769313486232e308（不需要指数表示法）</span><span class="sxs-lookup"><span data-stu-id="8ef99-171">-1.79769313486232e308 - 1.79769313486232e308 (exponent notation is not required)</span></span>|  
+|<xref:System.Char>|<span data-ttu-id="8ef99-172">任何单个字符</span><span class="sxs-lookup"><span data-stu-id="8ef99-172">Any single character</span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="8ef99-173">使用标准表示法的任何小数（无指数）</span><span class="sxs-lookup"><span data-stu-id="8ef99-173">Any decimal in standard notation (no exponent)</span></span>|  
+|<xref:System.Boolean>|<span data-ttu-id="8ef99-174">True 或 False（不区分大小写）</span><span class="sxs-lookup"><span data-stu-id="8ef99-174">True or False (case insensitive)</span></span>|  
+|<xref:System.String>|<span data-ttu-id="8ef99-175">任何字符串（不支持空字符串，且不进行转义）</span><span class="sxs-lookup"><span data-stu-id="8ef99-175">Any string (null string is not supported and no escaping is done)</span></span>|  
+|<xref:System.DateTime>|<span data-ttu-id="8ef99-176">MM/DD/YYYY</span><span class="sxs-lookup"><span data-stu-id="8ef99-176">MM/DD/YYYY</span></span><br /><br /> <span data-ttu-id="8ef99-177">MM/DD/YYYY HH: MM: [AM &#124;PM]</span><span class="sxs-lookup"><span data-stu-id="8ef99-177">MM/DD/YYYY HH:MM:SS [AM&#124;PM]</span></span><br /><br /> <span data-ttu-id="8ef99-178">月、日、年</span><span class="sxs-lookup"><span data-stu-id="8ef99-178">Month Day Year</span></span><br /><br /> <span data-ttu-id="8ef99-179">年月日年 hh: mm: [AM &#124;PM]</span><span class="sxs-lookup"><span data-stu-id="8ef99-179">Month Day Year HH:MM:SS [AM&#124;PM]</span></span>|  
+|<xref:System.TimeSpan>|<span data-ttu-id="8ef99-180">DD.HH:MM:SS</span><span class="sxs-lookup"><span data-stu-id="8ef99-180">DD.HH:MM:SS</span></span><br /><br /> <span data-ttu-id="8ef99-181">此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟</span><span class="sxs-lookup"><span data-stu-id="8ef99-181">Where DD = Days, HH = Hours, MM = minutes, SS = Seconds</span></span>|  
+|<xref:System.Guid>|<span data-ttu-id="8ef99-182">一个 GUID，例如：</span><span class="sxs-lookup"><span data-stu-id="8ef99-182">A GUID, for example:</span></span><br /><br /> <span data-ttu-id="8ef99-183">936DA01F-9ABD-4d9d-80C7-02AF85C822A8</span><span class="sxs-lookup"><span data-stu-id="8ef99-183">936DA01F-9ABD-4d9d-80C7-02AF85C822A8</span></span>|  
+|<xref:System.DateTimeOffset>|<span data-ttu-id="8ef99-184">MM/DD/YYYY HH:MM:SS MM:SS</span><span class="sxs-lookup"><span data-stu-id="8ef99-184">MM/DD/YYYY HH:MM:SS MM:SS</span></span><br /><br /> <span data-ttu-id="8ef99-185">此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟</span><span class="sxs-lookup"><span data-stu-id="8ef99-185">Where DD = Days, HH = Hours, MM = minutes, SS = Seconds</span></span>|  
+|<span data-ttu-id="8ef99-186">枚举</span><span class="sxs-lookup"><span data-stu-id="8ef99-186">Enumerations</span></span>|<span data-ttu-id="8ef99-187">例如，定义枚举的枚举值，如以下代码中所示。</span><span class="sxs-lookup"><span data-stu-id="8ef99-187">The enumeration value for example, which defines the enumeration as shown in the following code.</span></span><br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> <span data-ttu-id="8ef99-188">可以在查询字符串中指定任何单独的枚举值（或其对应的整数值）。</span><span class="sxs-lookup"><span data-stu-id="8ef99-188">Any of the individual enumeration values (or their corresponding integer values) may be specified in the query string.</span></span>|  
+|<span data-ttu-id="8ef99-189">具有可在类型和字符串表示形式之间来回进行转换的 `TypeConverterAttribute` 的类型。</span><span class="sxs-lookup"><span data-stu-id="8ef99-189">Types that have a `TypeConverterAttribute` that can convert the type to and from a string representation.</span></span>|<span data-ttu-id="8ef99-190">取决于类型转换器。</span><span class="sxs-lookup"><span data-stu-id="8ef99-190">Depends on the Type Converter.</span></span>|  
   
-## 格式和 WCF WEB HTTP 编程模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型具有一些可以处理许多不同的数据格式的新功能。在绑定层上，<xref:System.ServiceModel.WebHttpBinding> 可以读取和写入下列不同种类的数据：  
+## <a name="formats-and-the-wcf-web-http-programming-model"></a><span data-ttu-id="8ef99-191">格式和 WCF WEB HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="8ef99-191">Formats and the WCF WEB HTTP Programming Model</span></span>  
+ <span data-ttu-id="8ef99-192">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型具有一些可以处理许多不同的数据格式的新功能。</span><span class="sxs-lookup"><span data-stu-id="8ef99-192">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model has new features to work with many different data formats.</span></span> <span data-ttu-id="8ef99-193">在绑定层上，<xref:System.ServiceModel.WebHttpBinding> 可以读取和写入下列不同种类的数据：</span><span class="sxs-lookup"><span data-stu-id="8ef99-193">At the binding layer, the <xref:System.ServiceModel.WebHttpBinding> can read and write the following different kinds of data:</span></span>  
   
--   XML  
+-   <span data-ttu-id="8ef99-194">XML</span><span class="sxs-lookup"><span data-stu-id="8ef99-194">XML</span></span>  
   
--   JSON  
+-   <span data-ttu-id="8ef99-195">JSON</span><span class="sxs-lookup"><span data-stu-id="8ef99-195">JSON</span></span>  
   
--   不透明二进制流  
+-   <span data-ttu-id="8ef99-196">不透明二进制流</span><span class="sxs-lookup"><span data-stu-id="8ef99-196">Opaque binary streams</span></span>  
   
- 这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型可以处理任何类型的数据，但是您可能会对 <xref:System.IO.Stream> 进行编程。  
+ <span data-ttu-id="8ef99-197">这意味着 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型可以处理任何类型的数据，但是您可能会对 <xref:System.IO.Stream> 进行编程。</span><span class="sxs-lookup"><span data-stu-id="8ef99-197">This means the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model can handle any type of data but, you may be programming against <xref:System.IO.Stream>.</span></span>  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支持 JSON 数据 \(AJAX\) 和联合源（包括 ATOM 和 RSS）。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]这些功能的更多信息，请参见 [WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) 和 [AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]<span data-ttu-id="8ef99-198"> 支持 JSON 数据 (AJAX) 和联合源（包括 ATOM 和 RSS）。</span><span class="sxs-lookup"><span data-stu-id="8ef99-198"> provides support for JSON data (AJAX) as well as Syndication feeds (including ATOM and RSS).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-199">这些功能，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。</span><span class="sxs-lookup"><span data-stu-id="8ef99-199"> these features, see [WCF Web HTTP Formatting](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) and [AJAX Integration and JSON Support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).</span></span>  
   
-## WCF WEB HTTP 编程模型和安全  
- 由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS\-\* 协议，因此保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 设置 SSL 的更多信息，请参见[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)  
+## <a name="wcf-web-http-programming-model-and-security"></a><span data-ttu-id="8ef99-200">WCF WEB HTTP 编程模型和安全</span><span class="sxs-lookup"><span data-stu-id="8ef99-200">WCF WEB HTTP Programming Model and Security</span></span>  
+ <span data-ttu-id="8ef99-201">由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型不支持 WS-* 协议，因此保证 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务安全的唯一方式是使用 SSL 通过 HTTPS 公开服务。</span><span class="sxs-lookup"><span data-stu-id="8ef99-201">Because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programming model does not support the WS-* protocols, the only way to secure a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP service is to expose the service over HTTPS using SSL.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ef99-202">设置 SSL 与[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](http://go.microsoft.com/fwlink/?LinkId=131613)</span><span class="sxs-lookup"><span data-stu-id="8ef99-202"> setting up SSL with [!INCLUDE[iisver](../../../../includes/iisver-md.md)], see [How to implement SSL in IIS](http://go.microsoft.com/fwlink/?LinkId=131613)</span></span>  
   
-## WCF WEB HTTP 编程模型疑难解答  
- 当使用 <xref:System.ServiceModel.Channels.ChannelFactory%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.EndpointAddress> 传递给 <xref:System.ServiceModel.Channels.ChannelFactory%601>，<xref:System.ServiceModel.Description.WebHttpBehavior> 也会使用配置文件中设置的 <xref:System.ServiceModel.EndpointAddress>。  
+## <a name="troubleshooting-the-wcf-web-http-programming-model"></a><span data-ttu-id="8ef99-203">WCF WEB HTTP 编程模型疑难解答</span><span class="sxs-lookup"><span data-stu-id="8ef99-203">Troubleshooting the WCF WEB HTTP Programming Model</span></span>  
+ <span data-ttu-id="8ef99-204">当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。</span><span class="sxs-lookup"><span data-stu-id="8ef99-204">When calling WCF WEB HTTP services using a <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> to create a channel, the <xref:System.ServiceModel.Description.WebHttpBehavior> uses the <xref:System.ServiceModel.EndpointAddress> set in the configuration file even if a different <xref:System.ServiceModel.EndpointAddress> is passed to the <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.</span></span>  
   
-## 请参阅  
- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)   
- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)   
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="8ef99-205">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8ef99-205">See Also</span></span>  
+ [<span data-ttu-id="8ef99-206">WCF 联合</span><span class="sxs-lookup"><span data-stu-id="8ef99-206">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+ [<span data-ttu-id="8ef99-207">WCF Web HTTP 编程对象模型</span><span class="sxs-lookup"><span data-stu-id="8ef99-207">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [<span data-ttu-id="8ef99-208">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="8ef99-208">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

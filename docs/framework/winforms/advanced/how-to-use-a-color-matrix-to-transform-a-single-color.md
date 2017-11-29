@@ -1,74 +1,78 @@
 ---
-title: "如何：使用颜色矩阵对单色进行变换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "颜色矩阵, using"
-  - "图像颜色, 转换"
+title: "如何：使用颜色矩阵对单色进行转换"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image colors [Windows Forms], transforming
+- color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用颜色矩阵对单色进行变换
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供用于存储和操作图像的 <xref:System.Drawing.Image> 和 <xref:System.Drawing.Bitmap> 类。  <xref:System.Drawing.Image> 和 <xref:System.Drawing.Bitmap> 对象用一个 32 位数字存储每个像素的颜色：红、绿、蓝和 Alpha 各 8 位。  这四个分量的值都是 0 到 255，其中 0 表示没有亮度，255 表示最大亮度。  alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a><span data-ttu-id="3931f-102">如何：使用颜色矩阵对单色进行转换</span><span class="sxs-lookup"><span data-stu-id="3931f-102">How to: Use a Color Matrix to Transform a Single Color</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3931f-103">提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>类用于存储和操作图像。</span><span class="sxs-lookup"><span data-stu-id="3931f-103"> provides the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> classes for storing and manipulating images.</span></span> <span data-ttu-id="3931f-104"><xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>对象 32 位数字的形式存储的每个像素的颜色： 8 位每次都红、 绿、 蓝方和字母。</span><span class="sxs-lookup"><span data-stu-id="3931f-104"><xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> objects store the color of each pixel as a 32-bit number: 8 bits each for red, green, blue, and alpha.</span></span> <span data-ttu-id="3931f-105">每个四个组件是一个介于 0 到 255，其中 0 表示没有亮度，255 表示完整的强度。</span><span class="sxs-lookup"><span data-stu-id="3931f-105">Each of the four components is a number from 0 through 255, with 0 representing no intensity and 255 representing full intensity.</span></span> <span data-ttu-id="3931f-106">Alpha 分量指定颜色的透明度： 0 表示完全透明，255 是完全不透明。</span><span class="sxs-lookup"><span data-stu-id="3931f-106">The alpha component specifies the transparency of the color: 0 is fully transparent, and 255 is fully opaque.</span></span>  
   
- 颜色矢量采用 4 元组形式（红色、绿色、蓝色、alpha）。  例如，颜色矢量 \(0, 255, 0, 255\) 表示一种没有红色和蓝色但绿色达到最大亮度的不透明颜色。  
+ <span data-ttu-id="3931f-107">颜色向量是窗体 （红色、 绿色，蓝色、 alpha） 4 元组。</span><span class="sxs-lookup"><span data-stu-id="3931f-107">A color vector is a 4-tuple of the form (red, green, blue, alpha).</span></span> <span data-ttu-id="3931f-108">例如，颜色向量 （0，255，0，255） 表示一个不透明颜色没有红色或蓝色，但会达到最大亮度具有绿色。</span><span class="sxs-lookup"><span data-stu-id="3931f-108">For example, the color vector (0, 255, 0, 255) represents an opaque color that has no red or blue, but has green at full intensity.</span></span>  
   
- 表示颜色的另一种惯例是用数字 1 表示亮度达到最大。  通过使用这种约定，上一段中描述的颜色将可以由矢量 \(0, 1, 0, 1\) 表示。  在执行颜色变换时，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 遵循使用 1 为最大亮度的惯例。  
+ <span data-ttu-id="3931f-109">用于表示颜色的另一个约定亮度达到最大使用数字 1。</span><span class="sxs-lookup"><span data-stu-id="3931f-109">Another convention for representing colors uses the number 1 for full intensity.</span></span> <span data-ttu-id="3931f-110">使用这种约定，将由向量 （0、 1、 0、 1） 表示上一段中所述的颜色。</span><span class="sxs-lookup"><span data-stu-id="3931f-110">Using that convention, the color described in the preceding paragraph would be represented by the vector (0, 1, 0, 1).</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3931f-111">执行颜色转换时，请使用的约定 1 作为最大亮度。</span><span class="sxs-lookup"><span data-stu-id="3931f-111"> uses the convention of 1 as full intensity when it performs color transformations.</span></span>  
   
- 可通过用 4×4 矩阵乘以这些颜色矢量将线性变换（旋转和缩放等）应用到颜色矢量中。  但是，您不能使用 4×4 矩阵进行平移（非线性）。  如果在每个颜色矢量中再添加一个虚拟的第 5 坐标（例如，数字 1），则可使用 5×5 矩阵应用任何组合形式的线性变换和平移。  由线性变换组成的后跟平移的变换称为仿射变换。  
+ <span data-ttu-id="3931f-112">乘以的 4 × 4 矩阵的颜色矢量，你可以应用到颜色矢量线性转换 （旋转、 缩放，以及类似的）。</span><span class="sxs-lookup"><span data-stu-id="3931f-112">You can apply linear transformations (rotation, scaling, and the like) to color vectors by multiplying the color vectors by a 4×4 matrix.</span></span> <span data-ttu-id="3931f-113">但是，不能使用的 4 × 4 矩阵翻译 （非线性）。</span><span class="sxs-lookup"><span data-stu-id="3931f-113">However, you cannot use a 4×4 matrix to perform a translation (nonlinear).</span></span> <span data-ttu-id="3931f-114">如果将虚拟的第五个坐标 （例如，数字 1） 添加到每个颜色矢量，可以使用的 5 × 5 矩阵将线性转换和翻译的任意组合。</span><span class="sxs-lookup"><span data-stu-id="3931f-114">If you add a dummy fifth coordinate (for example, the number 1) to each of the color vectors, you can use a 5×5 matrix to apply any combination of linear transformations and translations.</span></span> <span data-ttu-id="3931f-115">包含跟平移线性转换的转换称为仿射转换。</span><span class="sxs-lookup"><span data-stu-id="3931f-115">A transformation consisting of a linear transformation followed by a translation is called an affine transformation.</span></span>  
   
- 例如，假设您希望从颜色 \(0.2, 0.0, 0.4, 1.0\) 开始并应用下面的变换：  
+ <span data-ttu-id="3931f-116">例如，假设你想要使用的颜色 （0.2，0.0，0.4，1.0） 开始，并应用以下转换：</span><span class="sxs-lookup"><span data-stu-id="3931f-116">For example, suppose you want to start with the color (0.2, 0.0, 0.4, 1.0) and apply the following transformations:</span></span>  
   
-1.  将红色分量乘以 2。  
+1.  <span data-ttu-id="3931f-117">Double 红色的组件</span><span class="sxs-lookup"><span data-stu-id="3931f-117">Double the red component</span></span>  
   
-2.  将 0.2 添加到红色、绿色和蓝色分量中。  
+2.  <span data-ttu-id="3931f-118">将 0.2 添加到红色、 绿色和蓝色组件</span><span class="sxs-lookup"><span data-stu-id="3931f-118">Add 0.2 to the red, green, and blue components</span></span>  
   
- 下面的矩阵乘法将按照列出的顺序进行这对变换。  
+ <span data-ttu-id="3931f-119">下面的矩阵乘法将按列出的顺序执行转换的对。</span><span class="sxs-lookup"><span data-stu-id="3931f-119">The following matrix multiplication will perform the pair of transformations in the order listed.</span></span>  
   
- ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring01.png "recoloring01")  
+ <span data-ttu-id="3931f-120">![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")</span><span class="sxs-lookup"><span data-stu-id="3931f-120">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")</span></span>  
   
- 颜色矩阵的元素按照先行后列（从 0 开始）的顺序进行索引。  例如，矩阵 M 的第五行第三列由 M\[4\]\[2\] 表示。  
+ <span data-ttu-id="3931f-121">颜色矩阵的元素是按行和列然后索引 （从零开始）。</span><span class="sxs-lookup"><span data-stu-id="3931f-121">The elements of a color matrix are indexed (zero-based) by row and then column.</span></span> <span data-ttu-id="3931f-122">例如，由 M [4] [2] 表示第五个行和矩阵 M 的第三个列中的条目。</span><span class="sxs-lookup"><span data-stu-id="3931f-122">For example, the entry in the fifth row and third column of matrix M is denoted by M[4][2].</span></span>  
   
- 5×5 单位矩阵（在下面的插图中显示）在对角线上为 1，在其他任何地方为 0。  如果用单位矩阵乘以颜色矢量，则颜色矢量不会发生改变。  形成颜色变换矩阵的一种简便方法是从单位矩阵开始，然后进行较小的改动以产生所需的变换。  
+ <span data-ttu-id="3931f-123">（在下图中所示） 的 5 × 5 标识矩阵具有的对角线上 1 和 0 其他位置。</span><span class="sxs-lookup"><span data-stu-id="3931f-123">The 5×5 identity matrix (shown in the following illustration) has 1s on the diagonal and 0s everywhere else.</span></span> <span data-ttu-id="3931f-124">如果颜色向量乘以单位矩阵，则不会更改颜色向量。</span><span class="sxs-lookup"><span data-stu-id="3931f-124">If you multiply a color vector by the identity matrix, the color vector does not change.</span></span> <span data-ttu-id="3931f-125">窗体的颜色转换矩阵一种简便方式是以开始单位矩阵，进行少量更改生成所需的转换。</span><span class="sxs-lookup"><span data-stu-id="3931f-125">A convenient way to form the matrix of a color transformation is to start with the identity matrix and make a small change that produces the desired transformation.</span></span>  
   
- ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ <span data-ttu-id="3931f-126">![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")</span><span class="sxs-lookup"><span data-stu-id="3931f-126">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")</span></span>  
   
- 有关矩阵和变换的更详细的讨论，请参见[坐标系统和变形](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
+ <span data-ttu-id="3931f-127">矩阵和转换的更多详细讨论，请参阅[坐标系和坐标转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。</span><span class="sxs-lookup"><span data-stu-id="3931f-127">For a more detailed discussion of matrices and transformations, see [Coordinate Systems and Transformations](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).</span></span>  
   
-## 示例  
- 下面的示例采用一个使用一种颜色 \(0.2, 0.0, 0.4, 1.0\) 的图像，并应用上一段中描述的变换。  
+## <a name="example"></a><span data-ttu-id="3931f-128">示例</span><span class="sxs-lookup"><span data-stu-id="3931f-128">Example</span></span>  
+ <span data-ttu-id="3931f-129">下面的示例将一种颜色 （0.2，0.0，0.4，1.0） 和应用转换上面几段中所述的映像。</span><span class="sxs-lookup"><span data-stu-id="3931f-129">The following example takes an image that is all one color (0.2, 0.0, 0.4, 1.0) and applies the transformation described in the preceding paragraphs.</span></span>  
   
- 下面的插图在左侧显示原来的图像，在右侧显示变换后的图像。  
+ <span data-ttu-id="3931f-130">下图右侧显示在左侧的原始映像和变换后的图像。</span><span class="sxs-lookup"><span data-stu-id="3931f-130">The following illustration shows the original image on the left and the transformed image on the right.</span></span>  
   
- ![颜色](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ <span data-ttu-id="3931f-131">![颜色](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")</span><span class="sxs-lookup"><span data-stu-id="3931f-131">![Colors](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")</span></span>  
   
- 下面示例中的代码使用以下步骤进行重新着色：  
+ <span data-ttu-id="3931f-132">下面的示例中的代码使用以下步骤进行重新着色：</span><span class="sxs-lookup"><span data-stu-id="3931f-132">The code in the following example uses the following steps to perform the recoloring:</span></span>  
   
-1.  初始化 <xref:System.Drawing.Imaging.ColorMatrix> 对象。  
+1.  <span data-ttu-id="3931f-133">初始化<xref:System.Drawing.Imaging.ColorMatrix>对象。</span><span class="sxs-lookup"><span data-stu-id="3931f-133">Initialize a <xref:System.Drawing.Imaging.ColorMatrix> object.</span></span>  
   
-2.  创建一个 <xref:System.Drawing.Imaging.ImageAttributes> 对象，并将 <xref:System.Drawing.Imaging.ColorMatrix> 对象传递给 <xref:System.Drawing.Imaging.ImageAttributes> 对象的 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 方法。  
+2.  <span data-ttu-id="3931f-134">创建<xref:System.Drawing.Imaging.ImageAttributes>对象并将传递<xref:System.Drawing.Imaging.ColorMatrix>对象传递给<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>对象。</span><span class="sxs-lookup"><span data-stu-id="3931f-134">Create an <xref:System.Drawing.Imaging.ImageAttributes> object and pass the <xref:System.Drawing.Imaging.ColorMatrix> object to the <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> method of the <xref:System.Drawing.Imaging.ImageAttributes> object.</span></span>  
   
-3.  将 <xref:System.Drawing.Imaging.ImageAttributes> 对象传递给 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.DrawImage%2A> 方法。  
+3.  <span data-ttu-id="3931f-135">传递<xref:System.Drawing.Imaging.ImageAttributes>对象传递给<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="3931f-135">Pass the <xref:System.Drawing.Imaging.ImageAttributes> object to the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="3931f-136">编译代码</span><span class="sxs-lookup"><span data-stu-id="3931f-136">Compiling the Code</span></span>  
+ <span data-ttu-id="3931f-137">前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。</span><span class="sxs-lookup"><span data-stu-id="3931f-137">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 请参阅  
- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
- [坐标系和坐标变换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="3931f-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3931f-138">See Also</span></span>  
+ [<span data-ttu-id="3931f-139">对图像重新着色</span><span class="sxs-lookup"><span data-stu-id="3931f-139">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [<span data-ttu-id="3931f-140">坐标系统和转换</span><span class="sxs-lookup"><span data-stu-id="3931f-140">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

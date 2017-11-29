@@ -1,92 +1,91 @@
 ---
-title: "LINQ to Entities 查询中的标准查询运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "LINQ to Entities 查询中的标准查询运算符"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 97782834480e8acb5f66d8da2099089b1c47e093
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to Entities 查询中的标准查询运算符
-在查询中，您可以指定要从数据源检索哪些信息。  查询也可以指定返回信息之前信息的排序、分组和表现方式。  LINQ 提供了一组可在查询中使用的标准查询方法。  这些方法中的大多数都在序列上进行运算；在此上下文中，序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。  标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。  一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。  查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。  查询表达式子句在编译时被转换为对查询方法的调用。  有关包含等效查询表达式子句的标准查询运算符的列表，请参见[Standard Query Operators Overview](../../../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+# <a name="standard-query-operators-in-linq-to-entities-queries"></a><span data-ttu-id="37aab-102">LINQ to Entities 查询中的标准查询运算符</span><span class="sxs-lookup"><span data-stu-id="37aab-102">Standard Query Operators in LINQ to Entities Queries</span></span>
+<span data-ttu-id="37aab-103">在查询中，您可以指定要从数据源检索哪些信息。</span><span class="sxs-lookup"><span data-stu-id="37aab-103">In a query, you specify the information that you want to retrieve from the data source.</span></span> <span data-ttu-id="37aab-104">查询也可以指定返回信息之前信息的排序、分组和表现方式。</span><span class="sxs-lookup"><span data-stu-id="37aab-104">A query can also specify how that information should be sorted, grouped, and shaped before it is returned.</span></span> <span data-ttu-id="37aab-105">LINQ 提供了一组可在查询中使用的标准查询方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-105">LINQ provides a set of standard query methods that you can use in a query.</span></span> <span data-ttu-id="37aab-106">这些方法的大多数作用于序列;在此上下文中，序列是其类型实现的对象<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。</span><span class="sxs-lookup"><span data-stu-id="37aab-106">Most of these methods operate on sequences; in this context, a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="37aab-107">标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。</span><span class="sxs-lookup"><span data-stu-id="37aab-107">The standard query operators query functionality includes filtering, projection, aggregation, sorting, grouping, paging, and more.</span></span> <span data-ttu-id="37aab-108">一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。</span><span class="sxs-lookup"><span data-stu-id="37aab-108">Some of the more frequently used standard query operators have dedicated keyword syntax so that they can be called by using query expression syntax.</span></span> <span data-ttu-id="37aab-109">查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-109">A query expression is a different, more readable way to express a query than the method-based equivalent.</span></span> <span data-ttu-id="37aab-110">查询表达式子句在编译时被转换为对查询方法的调用。</span><span class="sxs-lookup"><span data-stu-id="37aab-110">Query expression clauses are translated into calls to the query methods at compile time.</span></span> <span data-ttu-id="37aab-111">具有等效的查询表达式子句的标准查询运算符的列表，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。</span><span class="sxs-lookup"><span data-stu-id="37aab-111">For a list of standard query operators that have equivalent query expression clauses, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询并不支持所有标准查询运算符。  有关更多信息，请参见[支持和不支持的 LINQ 方法 \(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。本主题提供有关特定于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 的标准查询运算符的信息。  有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中的已知问题的更多信息，请参见 [LINQ to Entities 的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。  
+ <span data-ttu-id="37aab-112">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询并不支持所有标准查询运算符。</span><span class="sxs-lookup"><span data-stu-id="37aab-112">Not all of the standard query operators are supported in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span> <span data-ttu-id="37aab-113">有关详细信息，请参阅[支持和不受支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="37aab-113">For more information, see [Supported and Unsupported LINQ Methods (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).</span></span> <span data-ttu-id="37aab-114">本主题提供有关特定于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 的标准查询运算符的信息。</span><span class="sxs-lookup"><span data-stu-id="37aab-114">This topic provides information about the standard query operators that is specific to [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span></span> <span data-ttu-id="37aab-115">有关中的已知问题的详细信息[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询，请参阅[已知问题和注意事项在 LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="37aab-115">For more information about known issues in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries, see [Known Issues and Considerations in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).</span></span>  
   
-## 投影和筛选方法  
- “投影”是指将结果集的元素转换到所需的形式。  例如，可以从结果集中的每个对象投影所需的属性子集，可以投影一个属性并对其执行数学计算，也可以从结果集投影整个对象。  投影方法有 `Select` 和 `SelectMany`。  
+## <a name="projection-and-filtering-methods"></a><span data-ttu-id="37aab-116">投影和筛选方法</span><span class="sxs-lookup"><span data-stu-id="37aab-116">Projection and Filtering Methods</span></span>  
+ <span data-ttu-id="37aab-117">*投影*指将转换结果设置为所需的形式的元素。</span><span class="sxs-lookup"><span data-stu-id="37aab-117">*Projection* refers to transforming the elements of a result set into a desired form.</span></span> <span data-ttu-id="37aab-118">例如，可以从结果集中的每个对象投影所需的属性子集，可以投影一个属性并对其执行数学计算，也可以从结果集投影整个对象。</span><span class="sxs-lookup"><span data-stu-id="37aab-118">For example, you can project a subset of the properties you need from each object in the result set, you can project a property and perform a mathematical calculation on it, or you can project the entire object from the result set.</span></span> <span data-ttu-id="37aab-119">投影方法有 `Select` 和 `SelectMany`。</span><span class="sxs-lookup"><span data-stu-id="37aab-119">The projection methods are `Select` and `SelectMany`.</span></span>  
   
- “筛选”是指将结果集限制为仅包含满足指定条件的元素的操作。  筛选方法为 `Where`。  
+ <span data-ttu-id="37aab-120">*筛选*引用的设置以包含与指定的条件匹配的这些元素将结果限制为该操作。</span><span class="sxs-lookup"><span data-stu-id="37aab-120">*Filtering* refers to the operation of restricting the result set to contain only those elements that match a specified condition.</span></span> <span data-ttu-id="37aab-121">筛选方法为 `Where`。</span><span class="sxs-lookup"><span data-stu-id="37aab-121">The filtering method is `Where`.</span></span>  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数投影和筛选方法的重载，除了那些接受位置参数的方法。  
+ <span data-ttu-id="37aab-122">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数投影和筛选方法的重载，除了那些接受位置参数的方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-122">Most overloads of the projection and filtering methods are supported in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], with the exception of those that accept a positional argument.</span></span>  
   
-## 联接方法  
- 在面向相互之间没有可导航关系的数据源的查询中，联接是一项重要的操作。  联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同属性的对象相关联。  联接方法有 `Join` 和 `GroupJoin`。  
+## <a name="join-methods"></a><span data-ttu-id="37aab-123">联接方法</span><span class="sxs-lookup"><span data-stu-id="37aab-123">Join Methods</span></span>  
+ <span data-ttu-id="37aab-124">在面向相互之间没有可导航关系的数据源的查询中，联接是一项重要的操作。</span><span class="sxs-lookup"><span data-stu-id="37aab-124">Joining is an important operation in queries that target data sources that have no navigable relationships to each other.</span></span> <span data-ttu-id="37aab-125">联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同属性的对象相关联。</span><span class="sxs-lookup"><span data-stu-id="37aab-125">A join of two data sources is the association of objects in one data source with objects in the other data source that share a common attribute or property.</span></span> <span data-ttu-id="37aab-126">联接方法有 `Join` 和 `GroupJoin`。</span><span class="sxs-lookup"><span data-stu-id="37aab-126">The join methods are `Join` and `GroupJoin`.</span></span>  
   
- 大多数联接方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的方法。  这是因为比较器不能转换为数据源。  
+ <span data-ttu-id="37aab-127">大多数联接方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-127">Most overloads of the join methods are supported, with the exception of those that use a <xref:System.Collections.Generic.IEqualityComparer%601>.</span></span> <span data-ttu-id="37aab-128">这是因为比较器不能转换为数据源。</span><span class="sxs-lookup"><span data-stu-id="37aab-128">This is because the comparer cannot be translated to the data source.</span></span>  
   
-## 集方法  
- LINQ 中的集运算是根据包含或不包含本集合或其他集合（或集）中的等价元素，对其结果集执行查询运算。  集方法有 `All`、`Any`、`Concat`、`Contains`、`DefaultIfEmpty`、`Distinct`、`EqualAll`、`Except`、`Intersect` 和 `Union`。  
+## <a name="set-methods"></a><span data-ttu-id="37aab-129">集方法</span><span class="sxs-lookup"><span data-stu-id="37aab-129">Set Methods</span></span>  
+ <span data-ttu-id="37aab-130">LINQ 中的集运算是根据包含或不包含本集合或其他集合（或集）中的等价元素，对其结果集执行查询运算。</span><span class="sxs-lookup"><span data-stu-id="37aab-130">Set operations in LINQ are query operations that base their result sets on the presence or absence of equivalent elements within the same or in another collection (or set).</span></span> <span data-ttu-id="37aab-131">集方法有 `All`、`Any`、`Concat`、`Contains`、`DefaultIfEmpty`、`Distinct`、`EqualAll`、`Except`、`Intersect` 和 `Union`。</span><span class="sxs-lookup"><span data-stu-id="37aab-131">The set methods are `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect`, and `Union`.</span></span>  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数集方法的重载，只是与 LINQ to Objects 在行为上有所不同。  但是，并不支持使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的集方法，原因是比较器不能转换为数据源。  
+ <span data-ttu-id="37aab-132">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数集方法的重载，只是与 LINQ to Objects 在行为上有所不同。</span><span class="sxs-lookup"><span data-stu-id="37aab-132">Most overloads of the set methods are supported in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], though there are some differences in behavior compared to LINQ to Objects.</span></span> <span data-ttu-id="37aab-133">但是，并不支持使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的集方法，原因是比较器不能转换为数据源。</span><span class="sxs-lookup"><span data-stu-id="37aab-133">However, set methods that use an <xref:System.Collections.Generic.IEqualityComparer%601> are not supported because the comparer cannot be translated to the data source.</span></span>  
   
-## 排序方法  
- 排序是指基于一个或多个属性对结果集中的元素排序。  指定多个排序条件可在组中消除并列。  
+## <a name="ordering-methods"></a><span data-ttu-id="37aab-134">排序方法</span><span class="sxs-lookup"><span data-stu-id="37aab-134">Ordering Methods</span></span>  
+ <span data-ttu-id="37aab-135">排序是指基于一个或多个属性对结果集中的元素排序。</span><span class="sxs-lookup"><span data-stu-id="37aab-135">Ordering, or sorting, refers to the ordering the elements of a result set based on one or more attributes.</span></span> <span data-ttu-id="37aab-136">指定多个排序条件可在组中消除并列。</span><span class="sxs-lookup"><span data-stu-id="37aab-136">By specifying more than one sort criterion, you can break ties within a group.</span></span>  
   
- 大多数排序方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IComparer%601> 的方法。  这是因为比较器不能转换为数据源。  排序方法有 `OrderBy`、`OrderByDescending`、`ThenBy`、`ThenByDescending` 和 `Reverse`。  
+ <span data-ttu-id="37aab-137">大多数排序方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IComparer%601> 的方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-137">Most overloads of the ordering methods are supported, with the exception of those that use an <xref:System.Collections.Generic.IComparer%601>.</span></span> <span data-ttu-id="37aab-138">这是因为比较器不能转换为数据源。</span><span class="sxs-lookup"><span data-stu-id="37aab-138">This is because the comparer cannot be translated to the data source.</span></span> <span data-ttu-id="37aab-139">排序方法有 `OrderBy`、`OrderByDescending`、`ThenBy`、`ThenByDescending` 和 `Reverse`。</span><span class="sxs-lookup"><span data-stu-id="37aab-139">The ordering methods are `OrderBy`, `OrderByDescending`, `ThenBy`, `ThenByDescending`, and `Reverse`.</span></span>  
   
- 由于查询在数据源上执行，因此排序行为与在 CLR 中执行的查询可能有所不同。  这是因为可以在数据源中设置诸如区分大小写排序、日本文字排序和 null 值排序等排序选项。  根据数据源的不同，这些排序选项可能会产生与 CLR 中不同的结果。  
+ <span data-ttu-id="37aab-140">由于查询在数据源上执行，因此排序行为与在 CLR 中执行的查询可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="37aab-140">Because the query is executed on the data source, the ordering behavior may differ from queries executed in the CLR.</span></span> <span data-ttu-id="37aab-141">这是因为可以在数据源中设置诸如区分大小写排序、日本文字排序和 null 值排序等排序选项。</span><span class="sxs-lookup"><span data-stu-id="37aab-141">This is because ordering options, such as case ordering, kanji ordering, and null ordering, can be set in the data source.</span></span> <span data-ttu-id="37aab-142">根据数据源的不同，这些排序选项可能会产生与 CLR 中不同的结果。</span><span class="sxs-lookup"><span data-stu-id="37aab-142">Depending on the data source, these ordering options might produce different results than in the CLR.</span></span>  
   
- 如果在多个排序操作中指定相同的关键字选择器，则会产生重复排序。  此举无效并将引发异常。  
+ <span data-ttu-id="37aab-143">如果在多个排序操作中指定相同的关键字选择器，则会产生重复排序。</span><span class="sxs-lookup"><span data-stu-id="37aab-143">If you specify the same key selector in more than one ordering operation, a duplicate ordering will be produced.</span></span> <span data-ttu-id="37aab-144">此举无效并将引发异常。</span><span class="sxs-lookup"><span data-stu-id="37aab-144">This is not valid and an exception will be thrown.</span></span>  
   
-## 分组方法  
- 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  分组方法为 `GroupBy`。  
+## <a name="grouping-methods"></a><span data-ttu-id="37aab-145">分组方法</span><span class="sxs-lookup"><span data-stu-id="37aab-145">Grouping Methods</span></span>  
+ <span data-ttu-id="37aab-146">分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。</span><span class="sxs-lookup"><span data-stu-id="37aab-146">Grouping refers to placing data into groups so that the elements in each group share a common attribute.</span></span> <span data-ttu-id="37aab-147">分组方法为 `GroupBy`。</span><span class="sxs-lookup"><span data-stu-id="37aab-147">The grouping method is `GroupBy`.</span></span>  
   
- 大多数分组方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的方法。  这是因为比较器不能转换为数据源。  
+ <span data-ttu-id="37aab-148">大多数分组方法的重载都受支持，除了使用 <xref:System.Collections.Generic.IEqualityComparer%601> 的方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-148">Most overloads of the grouping methods are supported, with the exception of those that use an <xref:System.Collections.Generic.IEqualityComparer%601>.</span></span> <span data-ttu-id="37aab-149">这是因为比较器不能转换为数据源。</span><span class="sxs-lookup"><span data-stu-id="37aab-149">This is because the comparer cannot be translated to the data source.</span></span>  
   
- 分组方法使用对关键字选择器的不同子查询映射到数据源。  关键字选择器比较子查询使用数据源的语义执行，其中包括与比较 `null` 值相关的问题。  
+ <span data-ttu-id="37aab-150">分组方法使用对关键字选择器的不同子查询映射到数据源。</span><span class="sxs-lookup"><span data-stu-id="37aab-150">The grouping methods are mapped to the data source using a distinct sub-query for the key selector.</span></span> <span data-ttu-id="37aab-151">关键字选择器比较子查询使用数据源的语义执行，其中包括与比较 `null` 值相关的问题。</span><span class="sxs-lookup"><span data-stu-id="37aab-151">The key selector comparison sub-query is executed by using the semantics of the data source, including issues related to comparing `null` values.</span></span>  
   
-## 聚合方法  
- 聚合运算从值的集合中计算出单个值。  例如，从一个月累计的每日温度值计算出日温度平均值就是一个聚合运算。  聚合方法有 `Aggregate`、`Average`、`Count`、`LongCount`、`Max`、`Min` 和 `Sum`。  
+## <a name="aggregate-methods"></a><span data-ttu-id="37aab-152">聚合方法</span><span class="sxs-lookup"><span data-stu-id="37aab-152">Aggregate Methods</span></span>  
+ <span data-ttu-id="37aab-153">聚合运算从值的集合中计算出单个值。</span><span class="sxs-lookup"><span data-stu-id="37aab-153">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="37aab-154">例如，从一个月累计的每日温度值计算出日温度平均值就是一个聚合运算。</span><span class="sxs-lookup"><span data-stu-id="37aab-154">For example, calculating the average daily temperature from a month's worth of daily temperature values is an aggregation operation.</span></span> <span data-ttu-id="37aab-155">聚合方法有 `Aggregate`、`Average`、`Count`、`LongCount`、`Max`、`Min` 和 `Sum`。</span><span class="sxs-lookup"><span data-stu-id="37aab-155">The aggregate methods are `Aggregate`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum`.</span></span>  
   
- 大多数聚合方法的重载都受支持。  对于与 null 值有关的行为，聚合方法使用数据源语义。  根据使用的后端数据源的不同，聚合方法在涉及 null 值时的行为也可能会有所不同。  使用数据源语义的聚合方法行为与 CLR 方法的预期行为也可能有所不同。  例如，SQL Server 上的 `Sum` 方法的默认行为是忽略所有 null 值，而不是引发异常。  
+ <span data-ttu-id="37aab-156">大多数聚合方法的重载都受支持。</span><span class="sxs-lookup"><span data-stu-id="37aab-156">Most overloads of the aggregate methods are supported.</span></span> <span data-ttu-id="37aab-157">对于与 null 值有关的行为，聚合方法使用数据源语义。</span><span class="sxs-lookup"><span data-stu-id="37aab-157">For behavior related to null values, the aggregate methods use the data source semantics.</span></span> <span data-ttu-id="37aab-158">根据使用的后端数据源的不同，聚合方法在涉及 null 值时的行为也可能会有所不同。</span><span class="sxs-lookup"><span data-stu-id="37aab-158">The behavior of the aggregation methods when null values are involved might be different, depending on which back-end data source is being used.</span></span> <span data-ttu-id="37aab-159">使用数据源语义的聚合方法行为与 CLR 方法的预期行为也可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="37aab-159">Aggregate method behavior using the semantics of the data source might also be different from what is expected from CLR methods.</span></span> <span data-ttu-id="37aab-160">例如，SQL Server 上的 `Sum` 方法的默认行为是忽略所有 null 值，而不是引发异常。</span><span class="sxs-lookup"><span data-stu-id="37aab-160">For example, the default behavior for the `Sum` method on SQL Server is to ignore any null values instead of throwing an exception.</span></span>  
   
- 聚合导致的任何异常（如 `Sum` 函数的溢出）都会在查询结果具体化的过程中作为数据源异常或实体框架异常引发。  
+ <span data-ttu-id="37aab-161">聚合导致的任何异常（如 `Sum` 函数的溢出）都会在查询结果具体化的过程中作为数据源异常或实体框架异常引发。</span><span class="sxs-lookup"><span data-stu-id="37aab-161">Any exceptions that result from aggregation, such as an overflow from the `Sum` function, are thrown as data source exceptions or Entity Framework exceptions during the materialization of the query results.</span></span>  
   
- 对于涉及序列计算的方法，如 `Sum` 和 `Average`，真正的计算将在服务器上执行。  因此，服务器上可能发生类型转换和精度损失，其结果与使用 CLR 语义预期得出的结果可能有所不同。  
+ <span data-ttu-id="37aab-162">对于涉及序列计算的方法，如 `Sum` 和 `Average`，真正的计算将在服务器上执行。</span><span class="sxs-lookup"><span data-stu-id="37aab-162">For those methods that involve a calculation over a sequence, such as `Sum` or `Average`, the actual calculation is performed on the server.</span></span> <span data-ttu-id="37aab-163">因此，服务器上可能发生类型转换和精度损失，其结果与使用 CLR 语义预期得出的结果可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="37aab-163">As a result, type conversions and loss of precision might occur on the server, and the results might differ from what is expected using CLR semantics.</span></span>  
   
- 下表显示了聚合方法对 null 值和非 null 值的默认行为：  
+ <span data-ttu-id="37aab-164">下表显示了聚合方法对 null 值和非 null 值的默认行为：</span><span class="sxs-lookup"><span data-stu-id="37aab-164">The default behavior of the aggregate methods for null/non-null values is shown in the following table:</span></span>  
   
-|方法|无数据|全部 null 值|部分 null 值|无 null 值|  
-|--------|---------|---------------|---------------|--------------|  
-|`Average`|返回 Null。|返回 Null。|返回序列中非 null 值的平均值。|计算数值序列的平均值。|  
-|`Count`|返回 0|返回序列中 null 值的个数。|返回序列中的 null 值和非 null 值个数。|返回序列中的元素数。|  
-|`Max`|返回 Null。|返回 Null。|返回序列中非 null 值的最大值。|返回序列中的最大值。|  
-|`Min`|返回 Null。|返回 Null。|返回序列中非 null 值的最小值。|返回序列中的最小值。|  
-|`Sum`|返回 Null。|返回 Null。|返回序列中非 null 值的和。|计算数值序列的和。|  
+|<span data-ttu-id="37aab-165">方法</span><span class="sxs-lookup"><span data-stu-id="37aab-165">Method</span></span>|<span data-ttu-id="37aab-166">无数据</span><span class="sxs-lookup"><span data-stu-id="37aab-166">No data</span></span>|<span data-ttu-id="37aab-167">全部 null 值</span><span class="sxs-lookup"><span data-stu-id="37aab-167">All null values</span></span>|<span data-ttu-id="37aab-168">部分 null 值</span><span class="sxs-lookup"><span data-stu-id="37aab-168">Some null values</span></span>|<span data-ttu-id="37aab-169">无 null 值</span><span class="sxs-lookup"><span data-stu-id="37aab-169">No null values</span></span>|  
+|------------|-------------|---------------------|----------------------|--------------------|  
+|`Average`|<span data-ttu-id="37aab-170">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-170">Returns null.</span></span>|<span data-ttu-id="37aab-171">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-171">Returns null.</span></span>|<span data-ttu-id="37aab-172">返回序列中非 null 值的平均值。</span><span class="sxs-lookup"><span data-stu-id="37aab-172">Returns the average of the non-null values in a sequence.</span></span>|<span data-ttu-id="37aab-173">计算数值序列的平均值。</span><span class="sxs-lookup"><span data-stu-id="37aab-173">Computes the average of a sequence of numeric values.</span></span>|  
+|`Count`|<span data-ttu-id="37aab-174">返回 0</span><span class="sxs-lookup"><span data-stu-id="37aab-174">Returns 0</span></span>|<span data-ttu-id="37aab-175">返回序列中 null 值的个数。</span><span class="sxs-lookup"><span data-stu-id="37aab-175">Returns the number of null values in the sequence.</span></span>|<span data-ttu-id="37aab-176">返回序列中的 null 值和非 null 值个数。</span><span class="sxs-lookup"><span data-stu-id="37aab-176">Returns the number of null and non-null values in the sequence.</span></span>|<span data-ttu-id="37aab-177">返回序列中的元素数。</span><span class="sxs-lookup"><span data-stu-id="37aab-177">Returns the number of elements in the sequence.</span></span>|  
+|`Max`|<span data-ttu-id="37aab-178">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-178">Returns null.</span></span>|<span data-ttu-id="37aab-179">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-179">Returns null.</span></span>|<span data-ttu-id="37aab-180">返回序列中非 null 值的最大值。</span><span class="sxs-lookup"><span data-stu-id="37aab-180">Returns the maximum non-null value in a sequence.</span></span>|<span data-ttu-id="37aab-181">返回序列中的最大值。</span><span class="sxs-lookup"><span data-stu-id="37aab-181">Returns the maximum value in a sequence.</span></span>|  
+|`Min`|<span data-ttu-id="37aab-182">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-182">Returns null.</span></span>|<span data-ttu-id="37aab-183">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-183">Returns null.</span></span>|<span data-ttu-id="37aab-184">返回序列中非 null 值的最小值。</span><span class="sxs-lookup"><span data-stu-id="37aab-184">Returns the minimum non-null value in a sequence.</span></span>|<span data-ttu-id="37aab-185">返回序列中的最小值。</span><span class="sxs-lookup"><span data-stu-id="37aab-185">Returns the minimum value in a sequence.</span></span>|  
+|`Sum`|<span data-ttu-id="37aab-186">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-186">Returns null.</span></span>|<span data-ttu-id="37aab-187">返回 Null。</span><span class="sxs-lookup"><span data-stu-id="37aab-187">Returns null.</span></span>|<span data-ttu-id="37aab-188">返回序列中非 null 值的和。</span><span class="sxs-lookup"><span data-stu-id="37aab-188">Returns the sum of the non-null value in a sequence.</span></span>|<span data-ttu-id="37aab-189">计算数值序列的和。</span><span class="sxs-lookup"><span data-stu-id="37aab-189">Computes the sum of a sequence of numeric values.</span></span>|  
   
-## 类型方法  
- 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。  这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。  有关这些类型的列表，请参见[Conceptual Model Types \(CSDL\)](http://msdn.microsoft.com/zh-cn/987b995f-e429-4569-9559-b4146744def4)。  类型方法有 `Convert` 和 `OfType`。  
+## <a name="type-methods"></a><span data-ttu-id="37aab-190">类型方法</span><span class="sxs-lookup"><span data-stu-id="37aab-190">Type Methods</span></span>  
+ <span data-ttu-id="37aab-191">在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-191">The two LINQ methods that deal with type conversion and testing are both supported in the context of the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="37aab-192">这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。</span><span class="sxs-lookup"><span data-stu-id="37aab-192">This means that the only supported types are types that map to the appropriate [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] type.</span></span> <span data-ttu-id="37aab-193">有关这些类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。</span><span class="sxs-lookup"><span data-stu-id="37aab-193">For a list of these types, see [Conceptual Model Types (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).</span></span> <span data-ttu-id="37aab-194">类型方法有 `Convert` 和 `OfType`。</span><span class="sxs-lookup"><span data-stu-id="37aab-194">The type methods are `Convert` and `OfType`.</span></span>  
   
- 对于实体类型支持 `OfType`。  对概念模型基元类型支持 `Convert`。  还支持 C\# 的 `is` 和 `as` 方法。  
+ <span data-ttu-id="37aab-195">对于实体类型支持 `OfType`。</span><span class="sxs-lookup"><span data-stu-id="37aab-195">`OfType` is supported for entity types.</span></span> <span data-ttu-id="37aab-196">对概念模型基元类型支持 `Convert`。</span><span class="sxs-lookup"><span data-stu-id="37aab-196">`Convert` is supported for conceptual model primitive types.</span></span>  <span data-ttu-id="37aab-197">还支持 C# 的 `is` 和 `as` 方法。</span><span class="sxs-lookup"><span data-stu-id="37aab-197">The C# `is` and `as` methods are also supported.</span></span>  
   
-## 分页方法  
- 分页操作从序列中返回唯一、特定的元素。  这些元素方法有 `ElementAt`、`First`、`FirstOrDefault`、`Last`、`LastOrDefault`、`Single`、`Skip`、`Take` 和 `TakeWhile`。  
+## <a name="paging-methods"></a><span data-ttu-id="37aab-198">分页方法</span><span class="sxs-lookup"><span data-stu-id="37aab-198">Paging Methods</span></span>  
+ <span data-ttu-id="37aab-199">分页操作从序列中返回唯一、特定的元素。</span><span class="sxs-lookup"><span data-stu-id="37aab-199">Paging operations return a single, specific element from a sequence.</span></span> <span data-ttu-id="37aab-200">这些元素方法有 `ElementAt`、`First`、`FirstOrDefault`、`Last`、`LastOrDefault`、`Single`、`Skip`、`Take` 和 `TakeWhile`。</span><span class="sxs-lookup"><span data-stu-id="37aab-200">The element methods are `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take`, `TakeWhile`.</span></span>  
   
- 有些分页方法不受支持，原因可能是无法将函数映射到数据源，或是数据源上缺少集的隐式排序。  返回默认值的方法仅限于默认值为 null 的概念模型基元类型和引用类型。  对空序列执行的分页方法将返回 null。  
+ <span data-ttu-id="37aab-201">有些分页方法不受支持，原因可能是无法将函数映射到数据源，或是数据源上缺少集的隐式排序。</span><span class="sxs-lookup"><span data-stu-id="37aab-201">A number of the paging methods are not supported, due either to the inability to map functions to the data source or to the lack of implicit ordering of sets on the data source.</span></span> <span data-ttu-id="37aab-202">返回默认值的方法仅限于默认值为 null 的概念模型基元类型和引用类型。</span><span class="sxs-lookup"><span data-stu-id="37aab-202">Methods that return a default value are restricted to conceptual model primitive types and reference types with null defaults.</span></span> <span data-ttu-id="37aab-203">对空序列执行的分页方法将返回 null。</span><span class="sxs-lookup"><span data-stu-id="37aab-203">Paging methods that are executed on an empty sequence will return null.</span></span>  
   
-## 请参阅  
- [支持和不支持的 LINQ 方法 \(LINQ to Entities\)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)   
- [Standard Query Operators Overview](../../../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a><span data-ttu-id="37aab-204">另请参阅</span><span class="sxs-lookup"><span data-stu-id="37aab-204">See Also</span></span>  
+ [<span data-ttu-id="37aab-205">支持和不支持的 LINQ 方法 (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="37aab-205">Supported and Unsupported LINQ Methods (LINQ to Entities)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [<span data-ttu-id="37aab-206">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="37aab-206">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

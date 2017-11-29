@@ -1,42 +1,44 @@
 ---
-title: "如何：使用自动布局创建按钮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自动布局, 创建按钮"
-  - "Button 控件, 使用自动布局进行创建"
-  - "创建, 自动布局的按钮"
+title: "如何：使用自动布局创建按钮"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Button controls [WPF], creating with automatic layout
+- automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d55dc1330c21e7eb9f7cfd7f554234dccd6f274
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用自动布局创建按钮
-此示例描述如何使用自动布局方法在可本地化的应用程序中创建按钮。  
+# <a name="how-to-use-automatic-layout-to-create-a-button"></a><span data-ttu-id="a8446-102">如何：使用自动布局创建按钮</span><span class="sxs-lookup"><span data-stu-id="a8446-102">How to: Use Automatic Layout to Create a Button</span></span>
+<span data-ttu-id="a8446-103">本示例介绍如何使用自动布局方法在可本地化的应用程序中创建按钮。</span><span class="sxs-lookup"><span data-stu-id="a8446-103">This example describes how to use the automatic layout approach to create a button in a localizable application.</span></span>  
   
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的本地化是一个很耗时的过程。  通常，本地化人员除了需要翻译文本之外，还需要调整元素的大小并重新定位元素。  过去，要针对任何一种语言改编 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 都需要进行调整。  现在，使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的功能，您可以对元素进行设计以减少必需的调整工作。  这种编写可以更方便地调整大小和重新定位的应用程序的方法称为 `automatic layout`。  
+ <span data-ttu-id="a8446-104">本地化[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]可能是一个耗时的过程。</span><span class="sxs-lookup"><span data-stu-id="a8446-104">Localization of a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] can be a time consuming process.</span></span> <span data-ttu-id="a8446-105">通常，本地化人员除翻译文本外，还需要重新调整元素大小并重新定位元素。</span><span class="sxs-lookup"><span data-stu-id="a8446-105">Often localizers need to resize and reposition elements in addition to translating text.</span></span> <span data-ttu-id="a8446-106">在过去每种语言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已适用于需要调整。</span><span class="sxs-lookup"><span data-stu-id="a8446-106">In the past each language that a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was adapted for required adjustment.</span></span> <span data-ttu-id="a8446-107">现在使用的功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可以设计减少必需的调整的元素。</span><span class="sxs-lookup"><span data-stu-id="a8446-107">Now with the capabilities of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] you can design elements that reduce the need for adjustment.</span></span> <span data-ttu-id="a8446-108">编写的应用程序可以更轻松地调整大小和重新定位的种方法称为`automatic layout`。</span><span class="sxs-lookup"><span data-stu-id="a8446-108">The approach to writing applications that can be more easily resized and repositioned is called `automatic layout`.</span></span>  
   
- 以下两个[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 示例创建两个实例化按钮的应用程序；一个使用英文文本，另一个使用西班牙文本。  请注意，除文本之外代码是相同的；将调整按钮使其适合文本。  
+ <span data-ttu-id="a8446-109">以下两个[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]示例创建的应用程序实例化一个按钮; 另一个使用英文文本和一个具有西班牙语文本。</span><span class="sxs-lookup"><span data-stu-id="a8446-109">The following two [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] examples create applications that instantiate a button; one with English text and one with Spanish text.</span></span> <span data-ttu-id="a8446-110">请注意，除文本之外，代码都一样；按钮会配合文字进行调整。</span><span class="sxs-lookup"><span data-stu-id="a8446-110">Notice that the code is the same except for the text; the button adjusts to fit the text.</span></span>  
   
-## 示例  
- [!code-xml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="a8446-111">示例</span><span class="sxs-lookup"><span data-stu-id="a8446-111">Example</span></span>  
+ [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- [!code-xml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- 下图演示代码示例的输出。  
+ <span data-ttu-id="a8446-112">下图显示代码示例的输出。</span><span class="sxs-lookup"><span data-stu-id="a8446-112">The following graphic shows the output of the code samples.</span></span>  
   
- ![具有不同语言的文本的同一按钮](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
-可自动调整大小的按钮  
+ <span data-ttu-id="a8446-113">![具有不同语言的文本的同一按钮](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span><span class="sxs-lookup"><span data-stu-id="a8446-113">![The same button with text in different languages](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span></span>  
+<span data-ttu-id="a8446-114">自动调整大小的按钮</span><span class="sxs-lookup"><span data-stu-id="a8446-114">Auto Resizable Button</span></span>  
   
-## 请参阅  
- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)   
- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a><span data-ttu-id="a8446-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8446-115">See Also</span></span>  
+ [<span data-ttu-id="a8446-116">使用自动布局概述</span><span class="sxs-lookup"><span data-stu-id="a8446-116">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [<span data-ttu-id="a8446-117">使用网格进行自动布局</span><span class="sxs-lookup"><span data-stu-id="a8446-117">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

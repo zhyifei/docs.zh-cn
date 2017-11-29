@@ -1,43 +1,43 @@
 ---
-title: "选择 Windows 窗体 Button 控件的方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button 控件 [Windows 窗体], 选择"
+title: "选择 Windows 窗体 Button 控件的方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08b5359446a80da257f5afec07cc70e3d4aad46b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 选择 Windows 窗体 Button 控件的方法
-可以用下列方法选择 Windows 窗体按钮：  
+# <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="68508-102">选择 Windows 窗体 Button 控件的方法</span><span class="sxs-lookup"><span data-stu-id="68508-102">Ways to Select a Windows Forms Button Control</span></span>
+<span data-ttu-id="68508-103">Windows 窗体按钮可以选择通过以下方式：</span><span class="sxs-lookup"><span data-stu-id="68508-103">A Windows Forms button can be selected in the following ways:</span></span>  
   
--   使用鼠标单击该按钮。  
+-   <span data-ttu-id="68508-104">使用鼠标单击的按钮。</span><span class="sxs-lookup"><span data-stu-id="68508-104">Use a mouse to click the button.</span></span>  
   
--   在代码中调用该按钮的 <xref:System.Windows.Forms.Control.Click> 事件。  
+-   <span data-ttu-id="68508-105">调用该按钮的<xref:System.Windows.Forms.Control.Click>在代码中的事件。</span><span class="sxs-lookup"><span data-stu-id="68508-105">Invoke the button's <xref:System.Windows.Forms.Control.Click> event in code.</span></span>  
   
--   通过按 Tab 键将焦点移动到该按钮上，然后按空格键或 Enter 选择该按钮。  
+-   <span data-ttu-id="68508-106">将焦点移到按钮，通过按 TAB 键，并按空格键或 enter 键，然后选择该按钮。</span><span class="sxs-lookup"><span data-stu-id="68508-106">Move the focus to the button by pressing the TAB key, and then choose the button by pressing the SPACEBAR or ENTER.</span></span>  
   
--   按该按钮的访问键（Alt \+ 带有下划线的字母）。  有关访问键的更多信息，请参见 [如何：创建 Windows 窗体控件的访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
+-   <span data-ttu-id="68508-107">按该按钮的访问密钥 （ALT + 带下划线的字母）。</span><span class="sxs-lookup"><span data-stu-id="68508-107">Press the access key (ALT + the underlined letter) for the button.</span></span> <span data-ttu-id="68508-108">有关访问密钥的详细信息，请参阅[如何： 为 Windows 窗体控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="68508-108">For more information about access keys, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span></span>  
   
--   如果该按钮是窗体的“接受”按钮，那么即使另一个控件具有焦点（但该控件不可以是另一个按钮、多行文本框或捕获 Enter 键的自定义控件），按 Enter 也将选择该按钮。  
+-   <span data-ttu-id="68508-109">如果按钮是窗体的"接受"按钮，并按 enter 键选择此按钮时，即使另一个控件具有焦点，但该控件可以是另一个按钮、 多行文本框中或捕获 enter 键的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="68508-109">If the button is the "accept" button of the form, pressing ENTER chooses the button, even if another control has the focus — except if that other control is another button, a multi-line text box, or a custom control that traps the enter key.</span></span>  
   
--   如果该按钮是窗体的“取消”按钮，那么即使另一个控件具有焦点，按 Esc 也将选择该按钮。  
+-   <span data-ttu-id="68508-110">如果按钮是窗体的"取消"按钮，按 esc 键选择此按钮时，即使另一个控件具有焦点。</span><span class="sxs-lookup"><span data-stu-id="68508-110">If the button is the "cancel" button of the form, pressing ESC chooses the button, even if another control has the focus.</span></span>  
   
--   调用 <xref:System.Windows.Forms.Button.PerformClick%2A> 方法以编程方式选择该按钮。  
+-   <span data-ttu-id="68508-111">调用<xref:System.Windows.Forms.Button.PerformClick%2A>方法以编程方式选择按钮。</span><span class="sxs-lookup"><span data-stu-id="68508-111">Call the <xref:System.Windows.Forms.Button.PerformClick%2A> method to select the button programmatically.</span></span>  
   
-## 请参阅  
- [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [如何：响应 Windows 窗体按钮的单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="68508-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="68508-112">See Also</span></span>  
+ [<span data-ttu-id="68508-113">Button 控件概述</span><span class="sxs-lookup"><span data-stu-id="68508-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="68508-114">如何：响应 Windows 窗体 Button 控件单击</span><span class="sxs-lookup"><span data-stu-id="68508-114">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="68508-115">Button 控件</span><span class="sxs-lookup"><span data-stu-id="68508-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

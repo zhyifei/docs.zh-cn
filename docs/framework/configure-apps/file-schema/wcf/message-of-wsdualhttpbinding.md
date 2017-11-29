@@ -1,28 +1,37 @@
 ---
-title: "&lt;wsDualHttpBinding&gt; 的 &lt;message&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;wsDualHttpBinding&gt; 的 &lt;message&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2d4eda0a1975da4518d077b6cfa779a8e764a66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsDualHttpBinding&gt; 的 &lt;message&gt;
-定义 [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)的消息级安全性。  
+# <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="a1673-102">&lt;wsDualHttpBinding&gt; 的 &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="a1673-102">&lt;message&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="a1673-103">定义消息级别的安全性[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="a1673-103">Defines message-level security for the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
-## 语法  
+ <span data-ttu-id="a1673-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a1673-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a1673-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="a1673-105">\<bindings></span></span>  
+<span data-ttu-id="a1673-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="a1673-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="a1673-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="a1673-107">\<binding></span></span>  
+<span data-ttu-id="a1673-108">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="a1673-108">\<security></span></span>  
+<span data-ttu-id="a1673-109">\<消息 ></span><span class="sxs-lookup"><span data-stu-id="a1673-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a1673-110">语法</span><span class="sxs-lookup"><span data-stu-id="a1673-110">Syntax</span></span>  
   
+```xml  
 <message   
       clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
      negotiateServiceCredential="Boolean"  
@@ -30,67 +39,67 @@ caps.handback.revision: 12
 </message>  
 ```  
   
-## 类型  
+## <a name="type"></a><span data-ttu-id="a1673-111">类型</span><span class="sxs-lookup"><span data-stu-id="a1673-111">Type</span></span>  
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a1673-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a1673-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="a1673-113">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a1673-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="a1673-114">特性</span><span class="sxs-lookup"><span data-stu-id="a1673-114">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|algorithmSuite|可选。  设置消息加密和密钥包装算法。  算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。  这些算法映射到安全策略语言 \(WS\-SecurityPolicy\) 规范中指定的算法。<br /><br /> 请参见下面可能的值。  默认值为 `Basic256`。|  
-|clientCredentialType|可选。  指定要在使用安全模式执行客户端身份验证时使用的凭据类型是 `Message`。  请参见下面可能的值。  默认值为 `Windows`。<br /><br /> 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
-|negotiateServiceCredential|可选。  一个布尔值，指定是在带外客户端提供服务凭据，还是通过协商过程由客户端从服务获取服务凭据。  这种协商是正常消息交换的前提。<br /><br /> 如果 `clientCredentialType` 属性等于 None、Username 或 Certificate，那么将此特性设置为 `false` 意味着可以在带外客户端使用服务证书，并且客户端需要在 [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服务行为中指定服务证书（使用 [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)）。  此模式可与实现 WS\-Trust 和 WS\-SecureConversation 的 SOAP 堆栈交互操作。<br /><br /> 如果 `ClientCredentialType` 属性设置为 `Windows`，则将此属性设置为 `false` 会指定基于 Kerberos 的身份验证。  这意味着客户端和服务必须是相同 Kerberos 域的一部分。  此模式可与实现 Kerberos 令牌配置文件（如 OASIS WSS TC 中所定义）以及 WS\-Trust 和 WS\-SecureConversation 的 SOAP 堆栈交互操作。  当此属性为 `true` 时，会引起通过 SOAP 消息进行 SPNego 交换的 .NET SOAP 协商。<br /><br /> 默认值为 `true`。|  
+|<span data-ttu-id="a1673-115">特性</span><span class="sxs-lookup"><span data-stu-id="a1673-115">Attribute</span></span>|<span data-ttu-id="a1673-116">描述</span><span class="sxs-lookup"><span data-stu-id="a1673-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="a1673-117">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="a1673-117">algorithmSuite</span></span>|<span data-ttu-id="a1673-118">可选。</span><span class="sxs-lookup"><span data-stu-id="a1673-118">Optional.</span></span> <span data-ttu-id="a1673-119">设置消息加密和密钥包装算法。</span><span class="sxs-lookup"><span data-stu-id="a1673-119">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="a1673-120">算法和密钥大小由 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 类确定。</span><span class="sxs-lookup"><span data-stu-id="a1673-120">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="a1673-121">这些算法映射到安全策略语言 (WS-SecurityPolicy) 规范中指定的算法。</span><span class="sxs-lookup"><span data-stu-id="a1673-121">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="a1673-122">请参见下面可能的值。</span><span class="sxs-lookup"><span data-stu-id="a1673-122">See below for possible values.</span></span> <span data-ttu-id="a1673-123">默认值为 `Basic256`。</span><span class="sxs-lookup"><span data-stu-id="a1673-123">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="a1673-124">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="a1673-124">clientCredentialType</span></span>|<span data-ttu-id="a1673-125">可选。</span><span class="sxs-lookup"><span data-stu-id="a1673-125">Optional.</span></span> <span data-ttu-id="a1673-126">指定要在使用安全模式执行客户端身份验证时使用的凭据类型是 `Message`。</span><span class="sxs-lookup"><span data-stu-id="a1673-126">Specifies the type of credential to be used when performing client authentication using the security mode is `Message`.</span></span> <span data-ttu-id="a1673-127">请参见下面可能的值。</span><span class="sxs-lookup"><span data-stu-id="a1673-127">See below for possible values.</span></span> <span data-ttu-id="a1673-128">默认值为 `Windows`。</span><span class="sxs-lookup"><span data-stu-id="a1673-128">The default is `Windows`.</span></span><br /><br /> <span data-ttu-id="a1673-129">此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="a1673-129">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|<span data-ttu-id="a1673-130">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="a1673-130">negotiateServiceCredential</span></span>|<span data-ttu-id="a1673-131">可选。</span><span class="sxs-lookup"><span data-stu-id="a1673-131">Optional.</span></span> <span data-ttu-id="a1673-132">一个布尔值，指定是在带外客户端提供服务凭据，还是通过协商过程由客户端从服务获取服务凭据。</span><span class="sxs-lookup"><span data-stu-id="a1673-132">A Boolean value that specifies whether the service credential is provisioned at the client out of band or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="a1673-133">这种协商是正常消息交换的前提。</span><span class="sxs-lookup"><span data-stu-id="a1673-133">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="a1673-134">如果`clientCredentialType`属性为无，用户名或证书，此属性设置为等于`false`意味着服务证书位于带外客户端和客户端需要指定服务证书 (使用[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 中[ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)服务行为。</span><span class="sxs-lookup"><span data-stu-id="a1673-134">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client needs to specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="a1673-135">此模式可与实现 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。</span><span class="sxs-lookup"><span data-stu-id="a1673-135">This mode is interoperable with SOAP stacks which implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="a1673-136">如果 `ClientCredentialType` 属性设置为 `Windows`，则将此属性设置为 `false` 会指定基于 Kerberos 的身份验证。</span><span class="sxs-lookup"><span data-stu-id="a1673-136">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="a1673-137">这意味着客户端和服务必须是相同 Kerberos 域的一部分。</span><span class="sxs-lookup"><span data-stu-id="a1673-137">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="a1673-138">此模式可与实现 Kerberos 令牌配置文件（如 OASIS WSS TC 中所定义）以及 WS-Trust 和 WS-SecureConversation 的 SOAP 堆栈交互操作。</span><span class="sxs-lookup"><span data-stu-id="a1673-138">This mode is interoperable with SOAP stacks which implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span> <span data-ttu-id="a1673-139">当此属性为 `true` 时，会引起通过 SOAP 消息进行 SPNego 交换的 .NET SOAP 协商。</span><span class="sxs-lookup"><span data-stu-id="a1673-139">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels SPNego exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="a1673-140">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="a1673-140">The default is `true`.</span></span>|  
   
-## algorithmSuite 属性  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="a1673-141">algorithmSuite 属性</span><span class="sxs-lookup"><span data-stu-id="a1673-141">algorithmSuite Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|Basic128|使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic192|使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic256|使用 Aes256 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic256Rsa15|对消息加密使用 Aes256，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|Basic192Rsa15|对消息加密使用 Aes192，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|TripleDes|使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic128Rsa15|对消息加密使用 Aes128，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|TripleDesRsa15|使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。|  
-|Basic128Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic192Sha256|对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic256Sha256|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|TripleDesSha256|对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa\-oaep\-mgf1p。|  
-|Basic128Sha256Rsa15|对消息加密使用 Aes128，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
-|Basic192Sha256Rsa15|对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
-|Basic256Sha256Rsa15|对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
-|TripleDesSha256Rsa15|对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。|  
+|<span data-ttu-id="a1673-142">值</span><span class="sxs-lookup"><span data-stu-id="a1673-142">Value</span></span>|<span data-ttu-id="a1673-143">描述</span><span class="sxs-lookup"><span data-stu-id="a1673-143">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="a1673-144">Basic128</span><span class="sxs-lookup"><span data-stu-id="a1673-144">Basic128</span></span>|<span data-ttu-id="a1673-145">使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-145">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-146">Basic192</span><span class="sxs-lookup"><span data-stu-id="a1673-146">Basic192</span></span>|<span data-ttu-id="a1673-147">使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-147">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-148">Basic256</span><span class="sxs-lookup"><span data-stu-id="a1673-148">Basic256</span></span>|<span data-ttu-id="a1673-149">使用 Aes256 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-149">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-150">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-150">Basic256Rsa15</span></span>|<span data-ttu-id="a1673-151">对消息加密使用 Aes256，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-151">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-152">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-152">Basic192Rsa15</span></span>|<span data-ttu-id="a1673-153">对消息加密使用 Aes192，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-153">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-154">TripleDes</span><span class="sxs-lookup"><span data-stu-id="a1673-154">TripleDes</span></span>|<span data-ttu-id="a1673-155">使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-155">Use TripleDes encryption, , Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-156">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-156">Basic128Rsa15</span></span>|<span data-ttu-id="a1673-157">对消息加密使用 Aes128，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-157">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-158">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-158">TripleDesRsa15</span></span>|<span data-ttu-id="a1673-159">使用 TripleDes 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-159">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-160">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="a1673-160">Basic128Sha256</span></span>|<span data-ttu-id="a1673-161">对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-161">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-162">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="a1673-162">Basic192Sha256</span></span>|<span data-ttu-id="a1673-163">对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-164">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="a1673-164">Basic256Sha256</span></span>|<span data-ttu-id="a1673-165">对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-166">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="a1673-166">TripleDesSha256</span></span>|<span data-ttu-id="a1673-167">对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa-oaep-mgf1p。</span><span class="sxs-lookup"><span data-stu-id="a1673-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-168">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-168">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="a1673-169">对消息加密使用 Aes128，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-169">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-170">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-170">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="a1673-171">对消息加密使用 Aes192，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-171">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-172">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-172">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="a1673-173">对消息加密使用 Aes256，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-173">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a1673-174">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a1673-174">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="a1673-175">对消息加密使用 TripleDes，对消息摘要使用 Sha256，对密钥包装使用 Rsa15。</span><span class="sxs-lookup"><span data-stu-id="a1673-175">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## clientCredentialType 属性  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="a1673-176">clientCredentialType 属性</span><span class="sxs-lookup"><span data-stu-id="a1673-176">clientCredentialType Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|无|允许服务与匿名客户端交互。  在服务端，这表示该服务不需要任何客户端凭据。  对于客户端，这表示客户端不提供任何客户端凭据。|  
-|Windows|允许 SOAP 交换在已通过身份验证的 Windows 凭据上下文中执行。  如果 `negotiateServiceCredential` 属性设置为 `true`，则将执行 SSPI 协商或 Kerberos（一种可互操作的标准）。|  
-|UserName|允许服务要求使用 UserName 凭据对客户端进行身份验证。  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支持发送密码摘要，也不支持使用密码派生密钥并使用这样的密钥来提供消息安全性。  因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。  这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。|  
-|证书|允许服务要求使用证书对客户端进行身份验证。  如果使用消息安全模式且 `negotiateServiceCredential` 属性设置为 `false`，则需要向客户端提供服务证书。|  
-|IssuedToken|指定自定义令牌，该令牌通常由安全令牌服务颁发。|  
+|<span data-ttu-id="a1673-177">值</span><span class="sxs-lookup"><span data-stu-id="a1673-177">Value</span></span>|<span data-ttu-id="a1673-178">描述</span><span class="sxs-lookup"><span data-stu-id="a1673-178">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="a1673-179">无</span><span class="sxs-lookup"><span data-stu-id="a1673-179">None</span></span>|<span data-ttu-id="a1673-180">允许服务与匿名客户端交互。</span><span class="sxs-lookup"><span data-stu-id="a1673-180">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="a1673-181">在服务端，这表示该服务不需要任何客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="a1673-181">On the service side, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="a1673-182">对于客户端，这表示客户端不提供任何客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="a1673-182">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|<span data-ttu-id="a1673-183">Windows</span><span class="sxs-lookup"><span data-stu-id="a1673-183">Windows</span></span>|<span data-ttu-id="a1673-184">允许 SOAP 交换在已通过身份验证的 Windows 凭据上下文中执行。</span><span class="sxs-lookup"><span data-stu-id="a1673-184">Allows the SOAP exchanges to be under the authenticated context of a Windows credential.</span></span> <span data-ttu-id="a1673-185">如果 `negotiateServiceCredential` 属性设置为 `true`，则将执行 SSPI 协商或 Kerberos（一种可互操作的标准）。</span><span class="sxs-lookup"><span data-stu-id="a1673-185">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI Negotiation or Kerberos (an interoperable standard).</span></span>|  
+|<span data-ttu-id="a1673-186">UserName</span><span class="sxs-lookup"><span data-stu-id="a1673-186">UserName</span></span>|<span data-ttu-id="a1673-187">允许服务要求使用 UserName 凭据对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a1673-187">Allows the service to require that the client be authenticated using a UserName credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="a1673-188"> 不支持发送密码摘要，也不支持使用密码派生密钥并使用这样的密钥来提供消息安全性。</span><span class="sxs-lookup"><span data-stu-id="a1673-188"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="a1673-189">因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保传输的安全性。</span><span class="sxs-lookup"><span data-stu-id="a1673-189">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using UserName credentials.</span></span> <span data-ttu-id="a1673-190">这种凭据模式将产生可互操作的交换或不可互操作的协商，具体取决于 `negotiateServiceCredential` 属性。</span><span class="sxs-lookup"><span data-stu-id="a1673-190">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|<span data-ttu-id="a1673-191">证书</span><span class="sxs-lookup"><span data-stu-id="a1673-191">Certificate</span></span>|<span data-ttu-id="a1673-192">允许服务要求使用证书对客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="a1673-192">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="a1673-193">如果使用消息安全模式且 `negotiateServiceCredential` 属性设置为 `false`，则需要向客户端提供服务证书。</span><span class="sxs-lookup"><span data-stu-id="a1673-193">If message security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client needs to be provisioned with the service certificate.</span></span>|  
+|<span data-ttu-id="a1673-194">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="a1673-194">IssuedToken</span></span>|<span data-ttu-id="a1673-195">指定自定义令牌，该令牌通常由安全令牌服务颁发。</span><span class="sxs-lookup"><span data-stu-id="a1673-195">Specifies a custom token, usually issued by a Security Token Service.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="a1673-196">子元素</span><span class="sxs-lookup"><span data-stu-id="a1673-196">Child Elements</span></span>  
+ <span data-ttu-id="a1673-197">无。</span><span class="sxs-lookup"><span data-stu-id="a1673-197">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="a1673-198">父元素</span><span class="sxs-lookup"><span data-stu-id="a1673-198">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|定义 [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)的安全功能。|  
+|<span data-ttu-id="a1673-199">元素</span><span class="sxs-lookup"><span data-stu-id="a1673-199">Element</span></span>|<span data-ttu-id="a1673-200">描述</span><span class="sxs-lookup"><span data-stu-id="a1673-200">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a1673-201">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="a1673-201">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|<span data-ttu-id="a1673-202">定义的安全功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="a1673-202">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>   
- <xref:System.ServiceModel.MessageSecurityOverHttp>   
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-cn/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="a1673-203">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a1673-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
+ <xref:System.ServiceModel.MessageSecurityOverHttp>  
+ [<span data-ttu-id="a1673-204">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="a1673-204">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="a1673-205">绑定</span><span class="sxs-lookup"><span data-stu-id="a1673-205">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a1673-206">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="a1673-206">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="a1673-207">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="a1673-207">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="a1673-208">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="a1673-208">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

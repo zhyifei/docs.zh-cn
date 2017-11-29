@@ -1,28 +1,33 @@
 ---
-title: "&lt;标识&gt;的&lt; certificateReference&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;标识&gt;的&lt; certificateReference&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 883ae318e32493013f009f3580ef102e4d39b3e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;标识&gt;的&lt; certificateReference&gt;
-指定 X.509 证书验证的设置。  通过此标识连接到终结点的安全 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 将验证由服务器提供的声明是否包含一个用于构造此标识的标识声明。  
+# <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="d5749-102">&lt;标识&gt;的&lt; certificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="d5749-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="d5749-103">指定 X.509 证书验证的设置。</span><span class="sxs-lookup"><span data-stu-id="d5749-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="d5749-104">通过此标识连接到终结点的安全 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 将验证由服务器提供的声明是否包含一个用于构造此标识的标识声明。</span><span class="sxs-lookup"><span data-stu-id="d5749-104">A secure [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  
   
-## 语法  
+ <span data-ttu-id="d5749-105">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="d5749-105">\<identity></span></span>  
+<span data-ttu-id="d5749-106">\<certificateReference ></span><span class="sxs-lookup"><span data-stu-id="d5749-106">\<certificateReference></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d5749-107">语法</span><span class="sxs-lookup"><span data-stu-id="d5749-107">Syntax</span></span>  
   
+```xml  
 <certificateReference   
         findValue="String"   
     isChainIncluded="Boolean"  
@@ -34,30 +39,30 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </certificateReference>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d5749-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d5749-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d5749-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d5749-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="d5749-110">特性</span><span class="sxs-lookup"><span data-stu-id="d5749-110">Attributes</span></span>  
   
-|特性|描述|  
-|--------|--------|  
-|findValue|指定要在 X.509 证书存储中搜索的值。  此属性中包含的类型必须满足指定的 `X509FindType` 值的要求。  默认值为一个空字符串。|  
-|isChainIncluded|一个布尔值，指定是否使用证书链来执行验证。|  
-|storeLocation|指定客户端可用于验证服务器证书的证书存储的位置。<br /><br /> 包括以下有效值：<br /><br /> -   LocalMachine：分配给本地计算机的证书存储。<br />-   CurrentUser：分配给当前用户的证书存储。<br /><br /> 默认值为 LocalMachine。<br /><br /> 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
-|storeName|指定要打开的 X.509 证书存储区的名称。<br /><br /> 包括以下有效值：<br /><br /> -   AddressBook：其他用户的证书存储。<br />-   AuthRoot：第三方证书颁发机构 \(CA\) 的证书存储。<br />-   CertificateAuthority：中间 CA 的证书存储。<br />-   Disallowed：吊销的证书的证书存储。<br />-   My：个人证书的证书存储。<br />-   Root：受信任的根 CA 的证书存储。<br />-   TrustedPeople：直接受信任的人和资源的证书存储。<br />-   TrustedPublisher：直接受信任的发行者的证书存储。<br /><br /> 默认值为 My。<br /><br /> 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreName>。|  
-|X509FindType|指定要执行的 X.509 搜索的类型。  `findValue` 属性中包含的类型必须满足指定 X509FindType 的要求。<br /><br /> 包括以下有效值：<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> 默认值为 FindBySubjectDistinguishedName。<br /><br /> 此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。|  
+|<span data-ttu-id="d5749-111">特性</span><span class="sxs-lookup"><span data-stu-id="d5749-111">Attribute</span></span>|<span data-ttu-id="d5749-112">描述</span><span class="sxs-lookup"><span data-stu-id="d5749-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d5749-113">findValue</span><span class="sxs-lookup"><span data-stu-id="d5749-113">findValue</span></span>|<span data-ttu-id="d5749-114">指定要在 X.509 证书存储中搜索的值。</span><span class="sxs-lookup"><span data-stu-id="d5749-114">Specifies the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="d5749-115">此属性中包含的类型必须满足指定的 `X509FindType` 值的要求。</span><span class="sxs-lookup"><span data-stu-id="d5749-115">The type contained in this attribute must satisfy the requirements of the specified `X509FindType` value.</span></span> <span data-ttu-id="d5749-116">默认值为一个空字符串。</span><span class="sxs-lookup"><span data-stu-id="d5749-116">The default is an empty string.</span></span>|  
+|<span data-ttu-id="d5749-117">isChainIncluded</span><span class="sxs-lookup"><span data-stu-id="d5749-117">isChainIncluded</span></span>|<span data-ttu-id="d5749-118">一个布尔值，指定是否使用证书链来执行验证。</span><span class="sxs-lookup"><span data-stu-id="d5749-118">A Boolean value that specifies if the validation is done using a certificate chain.</span></span>|  
+|<span data-ttu-id="d5749-119">storeLocation</span><span class="sxs-lookup"><span data-stu-id="d5749-119">storeLocation</span></span>|<span data-ttu-id="d5749-120">指定客户端可用于验证服务器证书的证书存储的位置。</span><span class="sxs-lookup"><span data-stu-id="d5749-120">Specifies the location of the certificate store that the client can use to validate the server’s certificate.</span></span><br /><br /> <span data-ttu-id="d5749-121">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="d5749-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="d5749-122">-LocalMachine： 分配到本地计算机的证书存储。</span><span class="sxs-lookup"><span data-stu-id="d5749-122">-   LocalMachine: The cert store assigned to the local machine.</span></span><br /><span data-ttu-id="d5749-123">-CurrentUser： 分配给当前用户的证书存储。</span><span class="sxs-lookup"><span data-stu-id="d5749-123">-   CurrentUser: The cert store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="d5749-124">默认值为 LocalMachine。</span><span class="sxs-lookup"><span data-stu-id="d5749-124">The default value is LocalMachine.</span></span><br /><br /> <span data-ttu-id="d5749-125">此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。</span><span class="sxs-lookup"><span data-stu-id="d5749-125">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|<span data-ttu-id="d5749-126">storeName</span><span class="sxs-lookup"><span data-stu-id="d5749-126">storeName</span></span>|<span data-ttu-id="d5749-127">指定要打开的 X.509 证书存储区的名称。</span><span class="sxs-lookup"><span data-stu-id="d5749-127">Specifies the name of the X.509 certificate store to open.</span></span><br /><br /> <span data-ttu-id="d5749-128">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="d5749-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="d5749-129">-AddressBook： 其他用户证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-129">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="d5749-130">-AuthRoot： 证书存储第三方证书颁发机构 (Ca)。</span><span class="sxs-lookup"><span data-stu-id="d5749-130">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="d5749-131">-CertificateAuthority： 中间 Ca 证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-131">-   CertificateAuthority: Certificate store for intermediate CAs.</span></span><br /><span data-ttu-id="d5749-132">-不允许： 证书吊销的证书存储。</span><span class="sxs-lookup"><span data-stu-id="d5749-132">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="d5749-133">-My： 个人证书的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-133">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="d5749-134">-Root： 受信任的根 Ca 证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-134">-   Root: Certificate store for trusted root CAs.</span></span><br /><span data-ttu-id="d5749-135">-TrustedPeople： 直接受信任的人和资源的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-135">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="d5749-136">-TrustedPublisher： 直接受信任的发行者的证书存储区。</span><span class="sxs-lookup"><span data-stu-id="d5749-136">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="d5749-137">默认值为 My。</span><span class="sxs-lookup"><span data-stu-id="d5749-137">The default value is My.</span></span><br /><br /> <span data-ttu-id="d5749-138">此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.StoreName>。</span><span class="sxs-lookup"><span data-stu-id="d5749-138">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="d5749-139">X509FindType</span><span class="sxs-lookup"><span data-stu-id="d5749-139">X509FindType</span></span>|<span data-ttu-id="d5749-140">指定要执行的 X.509 搜索的类型。</span><span class="sxs-lookup"><span data-stu-id="d5749-140">Specifies the type of X.509 search to be executed.</span></span> <span data-ttu-id="d5749-141">`findValue` 属性中包含的类型必须满足指定 X509FindType 的要求。</span><span class="sxs-lookup"><span data-stu-id="d5749-141">The type contained in the `findValue` attribute must satisfy the requirements of the specified X509FindType.</span></span><br /><br /> <span data-ttu-id="d5749-142">包括以下有效值：</span><span class="sxs-lookup"><span data-stu-id="d5749-142">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="d5749-143">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="d5749-143">-   FindByThumbPrint</span></span><br /><span data-ttu-id="d5749-144">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="d5749-144">-   FindBySubjectName</span></span><br /><span data-ttu-id="d5749-145">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="d5749-145">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="d5749-146">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="d5749-146">-   FindByIssuerName</span></span><br /><span data-ttu-id="d5749-147">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="d5749-147">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="d5749-148">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="d5749-148">-   FindBySerialNumber</span></span><br /><span data-ttu-id="d5749-149">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="d5749-149">-   FindByTimeValid</span></span><br /><span data-ttu-id="d5749-150">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="d5749-150">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="d5749-151">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="d5749-151">-   FindByTemplateName</span></span><br /><span data-ttu-id="d5749-152">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="d5749-152">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="d5749-153">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="d5749-153">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="d5749-154">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="d5749-154">-   FindByExtension</span></span><br /><span data-ttu-id="d5749-155">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="d5749-155">-   FindByKeyUsage</span></span><br /><span data-ttu-id="d5749-156">-和 FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="d5749-156">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="d5749-157">默认值为 FindBySubjectDistinguishedName。</span><span class="sxs-lookup"><span data-stu-id="d5749-157">The default value is FindBySubjectDistinguishedName.</span></span><br /><br /> <span data-ttu-id="d5749-158">此属性的类型为 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。</span><span class="sxs-lookup"><span data-stu-id="d5749-158">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="d5749-159">子元素</span><span class="sxs-lookup"><span data-stu-id="d5749-159">Child Elements</span></span>  
+ <span data-ttu-id="d5749-160">无。</span><span class="sxs-lookup"><span data-stu-id="d5749-160">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="d5749-161">父元素</span><span class="sxs-lookup"><span data-stu-id="d5749-161">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<标识\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定一些设置，与某个终结点交换消息的其他终结点可以使用这些设置对该终结点进行身份验证。|  
+|<span data-ttu-id="d5749-162">元素</span><span class="sxs-lookup"><span data-stu-id="d5749-162">Element</span></span>|<span data-ttu-id="d5749-163">描述</span><span class="sxs-lookup"><span data-stu-id="d5749-163">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d5749-164">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="d5749-164">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="d5749-165">指定一些设置，与某个终结点交换消息的其他终结点可以使用这些设置对该终结点进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="d5749-165">Specifies settings that enable the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>   
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
+## <a name="see-also"></a><span data-ttu-id="d5749-166">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d5749-166">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>

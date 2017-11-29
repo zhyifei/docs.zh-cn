@@ -1,47 +1,50 @@
 ---
-title: "令牌提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "令牌提供程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-caps.latest.revision: 22
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 87965b8802dd770d6977154ab805889838e9c5e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 令牌提供程序
-此示例演示如何实现自定义令牌提供程序。[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。自定义令牌提供程序在下列情况下有用：  
+# <a name="token-provider"></a><span data-ttu-id="9e77a-102">令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="9e77a-102">Token Provider</span></span>
+<span data-ttu-id="9e77a-103">此示例演示如何实现自定义令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-103">This sample demonstrates how to implement a custom token provider.</span></span> <span data-ttu-id="9e77a-104">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。</span><span class="sxs-lookup"><span data-stu-id="9e77a-104">A token provider in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure.</span></span> <span data-ttu-id="9e77a-105">令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。</span><span class="sxs-lookup"><span data-stu-id="9e77a-105">The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="9e77a-106"> 随附有默认凭据管理器令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-106"> ships with the default Credential Manager Token Provider.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="9e77a-107"> 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-107"> also ships with an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token provider.</span></span> <span data-ttu-id="9e77a-108">自定义令牌提供程序在下列情况下有用：</span><span class="sxs-lookup"><span data-stu-id="9e77a-108">Custom token providers are useful in the following cases:</span></span>  
   
--   存在不能由这些令牌提供程序操作的凭据存储。  
+-   <span data-ttu-id="9e77a-109">存在不能由这些令牌提供程序操作的凭据存储。</span><span class="sxs-lookup"><span data-stu-id="9e77a-109">If you have a credential store that these token providers cannot operate with.</span></span>  
   
--   想要提供自己的自定义传输机制，以便从用户提供详细信息这一刻起到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端框架使用凭据时转换凭据。  
+-   <span data-ttu-id="9e77a-110">想要提供自己的自定义传输机制，以便从用户提供详细信息这一刻起到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端框架使用凭据时转换凭据。</span><span class="sxs-lookup"><span data-stu-id="9e77a-110">If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.</span></span>  
   
--   要生成一个自定义令牌。  
+-   <span data-ttu-id="9e77a-111">要生成一个自定义令牌。</span><span class="sxs-lookup"><span data-stu-id="9e77a-111">If you are building a custom token.</span></span>  
   
- 此示例演示如何生成一个自定义令牌提供程序，以便将用户的输入转换为另一种格式。  
+ <span data-ttu-id="9e77a-112">此示例演示如何生成一个自定义令牌提供程序，以便将用户的输入转换为另一种格式。</span><span class="sxs-lookup"><span data-stu-id="9e77a-112">This sample shows how to build a custom token provider that transforms the input from the user into a different format.</span></span>  
   
- 总之，此示例将演示如下内容：  
+ <span data-ttu-id="9e77a-113">总之，此示例将演示如下内容：</span><span class="sxs-lookup"><span data-stu-id="9e77a-113">To summarize, this sample demonstrates the following:</span></span>  
   
--   客户端如何使用用户名\/密码对来进行身份验证。  
+-   <span data-ttu-id="9e77a-114">客户端如何使用用户名/密码对来进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="9e77a-114">How a client can authenticate using a username/password pair.</span></span>  
   
--   如何使用自定义令牌提供程序对客户端进行配置。  
+-   <span data-ttu-id="9e77a-115">如何使用自定义令牌提供程序对客户端进行配置。</span><span class="sxs-lookup"><span data-stu-id="9e77a-115">How a client can be configured with a custom token provider.</span></span>  
   
--   服务器如何使用密码和自定义 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>（用来验证用户名和密码是否相匹配）来验证客户端凭据。  
+-   <span data-ttu-id="9e77a-116">服务器如何使用密码和自定义 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>（用来验证用户名和密码是否相匹配）来验证客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="9e77a-116">How the server can validate the client credentials using a password with a custom <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> that validates that the username and password match.</span></span>  
   
--   客户端如何使用服务器的 X.509 证书对服务器进行身份验证。  
+-   <span data-ttu-id="9e77a-117">客户端如何使用服务器的 X.509 证书对服务器进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="9e77a-117">How the server is authenticated by the client using the server's X.509 certificate.</span></span>  
   
- 此示例还演示在执行自定义令牌身份验证过程之后，如何访问调用方的标识。  
+ <span data-ttu-id="9e77a-118">此示例还演示在执行自定义令牌身份验证过程之后，如何访问调用方的标识。</span><span class="sxs-lookup"><span data-stu-id="9e77a-118">This sample also shows how the caller's identity is accessible after the custom token authentication process.</span></span>  
   
- 服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。绑定是使用标准 `wsHttpBinding` 配置的，该元素在默认情况下使用消息安全性。此示例将标准 `wsHttpBinding` 设置为使用客户端用户名身份验证。服务还使用 serviceCredentials 行为来配置服务证书。使用 serviceCredentials 行为可以配置服务证书。客户端使用服务证书对服务进行身份验证并提供消息保护。以下配置引用了在示例设置过程中安装的 localhost 证书，如下面的设置说明中所述。  
+ <span data-ttu-id="9e77a-119">服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="9e77a-119">The service exposes a single endpoint for communicating with the service, defined using the App.config configuration file.</span></span> <span data-ttu-id="9e77a-120">终结点由地址、绑定和协定组成。</span><span class="sxs-lookup"><span data-stu-id="9e77a-120">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="9e77a-121">绑定是使用标准 `wsHttpBinding` 配置的，该元素在默认情况下使用消息安全性。</span><span class="sxs-lookup"><span data-stu-id="9e77a-121">The binding is configured with a standard `wsHttpBinding`, which uses message security by default.</span></span> <span data-ttu-id="9e77a-122">此示例将标准 `wsHttpBinding`设置为使用客户端用户名身份验证。</span><span class="sxs-lookup"><span data-stu-id="9e77a-122">This sample sets the standard `wsHttpBinding` to use client username authentication.</span></span> <span data-ttu-id="9e77a-123">服务还使用 serviceCredentials 行为来配置服务证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-123">The service also configures the service certificate using the serviceCredentials behavior.</span></span> <span data-ttu-id="9e77a-124">使用 serviceCredentials 行为可以配置服务证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-124">The serviceCredentials behavior allows you to configure a service certificate.</span></span> <span data-ttu-id="9e77a-125">客户端使用服务证书对服务进行身份验证并提供消息保护。</span><span class="sxs-lookup"><span data-stu-id="9e77a-125">A service certificate is used by a client to authenticate the service and provide message protection.</span></span> <span data-ttu-id="9e77a-126">以下配置引用了在示例设置过程中安装的 localhost 证书，如下面的设置说明中所述。</span><span class="sxs-lookup"><span data-stu-id="9e77a-126">The following configuration references the localhost certificate installed during the sample setup as described in the following setup instructions.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service   
@@ -87,12 +90,11 @@ caps.handback.revision: 22
       </serviceBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
- 客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。该客户端绑定是使用适当的 `Mode` 和消息 `clientCredentialType` 配置的。  
+ <span data-ttu-id="9e77a-127">客户端终结点配置由配置名称、服务终结点的绝对地址、绑定和协定组成。</span><span class="sxs-lookup"><span data-stu-id="9e77a-127">The client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="9e77a-128">该客户端绑定是使用适当的 `Mode` 和消息 `clientCredentialType` 配置的。</span><span class="sxs-lookup"><span data-stu-id="9e77a-128">The client binding is configured with the appropriate `Mode` and message `clientCredentialType`.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <client>  
     <endpoint name=""  
@@ -115,13 +117,13 @@ caps.handback.revision: 22
 </system.serviceModel>  
 ```  
   
- 下列步骤演示如何开发自定义令牌提供程序并将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架集成在一起：  
+ <span data-ttu-id="9e77a-129">下列步骤演示如何开发自定义令牌提供程序并将其与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全框架集成在一起：</span><span class="sxs-lookup"><span data-stu-id="9e77a-129">The following steps show how to develop a custom token provider and integrate it with the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security framework:</span></span>  
   
-1.  编写自定义令牌提供程序。  
+1.  <span data-ttu-id="9e77a-130">编写自定义令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-130">Write a custom token provider.</span></span>  
   
-     此示例实现一个用来获取用户名和密码的自定义令牌提供程序。密码必须与用户名相匹配。这个自定义的令牌提供程序仅用于演示目的，不建议用在实际部署中。  
+     <span data-ttu-id="9e77a-131">此示例实现一个用来获取用户名和密码的自定义令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-131">The sample implements a custom token provider that obtains the username and password.</span></span> <span data-ttu-id="9e77a-132">密码必须与用户名相匹配。</span><span class="sxs-lookup"><span data-stu-id="9e77a-132">The password must match this username.</span></span> <span data-ttu-id="9e77a-133">这个自定义的令牌提供程序仅用于演示目的，不建议用在实际部署中。</span><span class="sxs-lookup"><span data-stu-id="9e77a-133">This custom token provider is for demonstration purposes only and is not recommended for real world deployment.</span></span>  
   
-     为了执行此任务，自定义令牌提供程序派生了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类，并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法。此方法创建并返回一个新的 `UserNameSecurityToken`。  
+     <span data-ttu-id="9e77a-134">为了执行此任务，自定义令牌提供程序派生了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类，并重写了 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="9e77a-134">To perform this task, the custom token provider derives the <xref:System.IdentityModel.Selectors.SecurityTokenProvider> class and overrides the <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> method.</span></span> <span data-ttu-id="9e77a-135">此方法创建并返回一个新的 `UserNameSecurityToken`。</span><span class="sxs-lookup"><span data-stu-id="9e77a-135">This method creates and returns a new `UserNameSecurityToken`.</span></span>  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -134,12 +136,11 @@ caps.handback.revision: 22
         // return new UserNameSecurityToken containing information obtained from user  
         return new UserNameSecurityToken(username, password);  
     }  
-  
     ```  
   
-2.  编写自定义安全令牌管理器。  
+2.  <span data-ttu-id="9e77a-136">编写自定义安全令牌管理器。</span><span class="sxs-lookup"><span data-stu-id="9e77a-136">Write custom security token manager.</span></span>  
   
-     使用 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，可以为在 `CreateSecurityTokenProvider` 方法中传入该管理器的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>。安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在此示例中。在此示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，这样，当所传递令牌的要求指示需要用户名提供程序时，将返回自定义用户名令牌提供程序。  
+     <span data-ttu-id="9e77a-137">使用 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，可以为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入该管理器的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。</span><span class="sxs-lookup"><span data-stu-id="9e77a-137">The <xref:System.IdentityModel.Selectors.SecurityTokenManager> is used to create <xref:System.IdentityModel.Selectors.SecurityTokenProvider> for specific <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> that is passed to it in `CreateSecurityTokenProvider` method.</span></span> <span data-ttu-id="9e77a-138">安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在此示例中。</span><span class="sxs-lookup"><span data-stu-id="9e77a-138">Security token manager is also used to create token authenticators and a token serializer, but those are not covered by this sample.</span></span> <span data-ttu-id="9e77a-139">在此示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，这样，当所传递令牌的要求指示需要用户名提供程序时，将返回自定义用户名令牌提供程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-139">In this sample, the custom security token manager inherits from <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> class and overrides the `CreateSecurityTokenProvider` method to return custom username token provider when the passed token requirements indicate that username provider is requested.</span></span>  
   
     ```  
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager  
@@ -168,9 +169,9 @@ caps.handback.revision: 22
     }  
     ```  
   
-3.  编写自定义客户端凭据。  
+3.  <span data-ttu-id="9e77a-140">编写自定义客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="9e77a-140">Write a custom client credential.</span></span>  
   
-     客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。  
+     <span data-ttu-id="9e77a-141">客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-141">Client credentials class is used to represent the credentials that are configured for the client proxy and creates security token manager that is used to obtain token authenticators, token providers and a token serializer.</span></span>  
   
     ```  
     public class MyUserNameClientCredentials : ClientCredentials  
@@ -193,9 +194,9 @@ caps.handback.revision: 22
     }  
     ```  
   
-4.  配置客户端以使用自定义客户端凭据。  
+4.  <span data-ttu-id="9e77a-142">配置客户端以使用自定义客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="9e77a-142">Configure the client to use the custom client credential.</span></span>  
   
-     为了让客户端使用自定义客户端凭据，此示例删除了默认的客户端凭据类并提供了新的客户端凭据类。  
+     <span data-ttu-id="9e77a-143">为了让客户端使用自定义客户端凭据，此示例删除了默认的客户端凭据类并提供了新的客户端凭据类。</span><span class="sxs-lookup"><span data-stu-id="9e77a-143">In order for the client to use the custom client credential, the sample deletes the default client credential class and supplies the new client credential class.</span></span>  
   
     ```  
     static void Main()  
@@ -209,10 +210,9 @@ caps.handback.revision: 22
          client.ChannelFactory.Endpoint.Behaviors.Add(new MyUserNameClientCredentials());  
        // ...  
     }  
-  
     ```  
   
- 在服务上，若要显示调用方信息，请使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>，如下面的代码示例中所示。<xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 包含有关当前调用方的声明信息。  
+ <span data-ttu-id="9e77a-144">在服务上，若要显示调用方信息，请使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>，如下面的代码示例中所示。</span><span class="sxs-lookup"><span data-stu-id="9e77a-144">On the service, to display the caller's information, use the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> as shown in the following code example.</span></span> <span data-ttu-id="9e77a-145"><xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 包含有关当前调用方的声明信息。</span><span class="sxs-lookup"><span data-stu-id="9e77a-145">The <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contains claims information about the current caller.</span></span>  
   
 ```  
 static void DisplayIdentityInformation()  
@@ -220,19 +220,18 @@ static void DisplayIdentityInformation()
     Console.WriteLine("\t\tSecurity context identity  :  {0}",   
         ServiceSecurityContext.Current.PrimaryIdentity.Name);  
 }  
-  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。在客户端窗口中按 Enter 可以关闭客户端。  
+ <span data-ttu-id="9e77a-146">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="9e77a-146">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="9e77a-147">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="9e77a-147">Press ENTER in the client window to shut down the client.</span></span>  
   
-## 设置批处理文件  
- 通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
+## <a name="setup-batch-file"></a><span data-ttu-id="9e77a-148">设置批处理文件</span><span class="sxs-lookup"><span data-stu-id="9e77a-148">Setup Batch File</span></span>  
+ <span data-ttu-id="9e77a-149">通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。</span><span class="sxs-lookup"><span data-stu-id="9e77a-149">The Setup.bat batch file included with this sample allows you to configure the server with the relevant certificate to run a self-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="9e77a-150">必须修改此批处理文件，以便跨计算机或在非承载情况下工作。</span><span class="sxs-lookup"><span data-stu-id="9e77a-150">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- 下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：  
+ <span data-ttu-id="9e77a-151">下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：</span><span class="sxs-lookup"><span data-stu-id="9e77a-151">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration:</span></span>  
   
--   创建服务器证书。  
+-   <span data-ttu-id="9e77a-152">创建服务器证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-152">Creating the server certificate.</span></span>  
   
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。`%SERVER_NAME%` 变量指定服务器名称。更改此变量可以指定您自己的服务器名称。此批处理文件中的默认值为 localhost。  
+     <span data-ttu-id="9e77a-153">Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-153">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="9e77a-154">`%SERVER_NAME%`变量指定服务器名称。</span><span class="sxs-lookup"><span data-stu-id="9e77a-154">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="9e77a-155">更改此变量可以指定您自己的服务器名称。</span><span class="sxs-lookup"><span data-stu-id="9e77a-155">Change this variable to specify your own server name.</span></span> <span data-ttu-id="9e77a-156">此批处理文件中的默认值为 localhost。</span><span class="sxs-lookup"><span data-stu-id="9e77a-156">The default value in this batch file is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -244,65 +243,64 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   将服务器证书安装到客户端的受信任证书存储区中：  
+-   <span data-ttu-id="9e77a-157">将服务器证书安装到客户端的受信任证书存储区中：</span><span class="sxs-lookup"><span data-stu-id="9e77a-157">Installing the server certificate into the client's trusted certificate store:</span></span>  
   
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
+     <span data-ttu-id="9e77a-158">Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。</span><span class="sxs-lookup"><span data-stu-id="9e77a-158">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="9e77a-159">因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="9e77a-159">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="9e77a-160">如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。</span><span class="sxs-lookup"><span data-stu-id="9e77a-160">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
 > [!NOTE]
->  Setup.bat 批处理文件设计为通过 Windows SDK 命令提示运行。这要求 MSSDK 环境变量指向 SDK 的安装目录。将在 Windows SDK 命令提示中自动设置此环境变量。  
+>  <span data-ttu-id="9e77a-161">Setup.bat 批处理文件设计为通过 Windows SDK 命令提示运行。</span><span class="sxs-lookup"><span data-stu-id="9e77a-161">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="9e77a-162">这要求 MSSDK 环境变量指向 SDK 的安装目录。</span><span class="sxs-lookup"><span data-stu-id="9e77a-162">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="9e77a-163">将在 Windows SDK 命令提示中自动设置此环境变量。</span><span class="sxs-lookup"><span data-stu-id="9e77a-163">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span>  
   
-#### 设置和生成示例  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="9e77a-164">设置和生成示例</span><span class="sxs-lookup"><span data-stu-id="9e77a-164">To set up and build the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="9e77a-165">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9e77a-165">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="9e77a-166">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="9e77a-166">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="9e77a-167">在同一计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="9e77a-167">To run the sample on the same computer</span></span>  
   
-1.  在使用管理员特权打开的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。这将安装运行示例所需的所有证书。  
+1.  <span data-ttu-id="9e77a-168">在使用管理员特权打开的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中，从示例安装文件夹运行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="9e77a-168">Run Setup.bat from the sample installation folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges.</span></span> <span data-ttu-id="9e77a-169">这将安装运行示例所需的所有证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-169">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。  
+    >  <span data-ttu-id="9e77a-170">Setup.bat 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。</span><span class="sxs-lookup"><span data-stu-id="9e77a-170">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="9e77a-171">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中设置的 PATH 环境变量指向包含 Setup.bat 脚本所需的可执行文件的目录。</span><span class="sxs-lookup"><span data-stu-id="9e77a-171">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  启动 service\\bin 中的 service.exe。  
+2.  <span data-ttu-id="9e77a-172">启动 service\bin 中的 service.exe。</span><span class="sxs-lookup"><span data-stu-id="9e77a-172">Launch service.exe from service\bin.</span></span>  
   
-3.  启动 \\client\\bin 中的 Client.exe。客户端活动将显示在客户端控制台应用程序上。  
+3.  <span data-ttu-id="9e77a-173">启动 \client\bin 中的 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="9e77a-173">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="9e77a-174">客户端活动将显示在客户端控制台应用程序上。</span><span class="sxs-lookup"><span data-stu-id="9e77a-174">Client activity is displayed on the client console application.</span></span>  
   
-4.  在用户名提示下，键入一个用户名。  
+4.  <span data-ttu-id="9e77a-175">在用户名提示下，键入一个用户名。</span><span class="sxs-lookup"><span data-stu-id="9e77a-175">At the username prompt, type a user name.</span></span>  
   
-5.  在密码提示下，使用已在用户名提示下键入的字符串。  
+5.  <span data-ttu-id="9e77a-176">在密码提示下，使用已在用户名提示下键入的字符串。</span><span class="sxs-lookup"><span data-stu-id="9e77a-176">At the password prompt, use the same string that was typed for the username prompt.</span></span>  
   
-6.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+6.  <span data-ttu-id="9e77a-177">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="9e77a-177">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 跨计算机运行示例  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="9e77a-178">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="9e77a-178">To run the sample across computers</span></span>  
   
-1.  在服务计算机上为服务二进制文件创建一个目录。  
+1.  <span data-ttu-id="9e77a-179">在服务计算机上为服务二进制文件创建一个目录。</span><span class="sxs-lookup"><span data-stu-id="9e77a-179">Create a directory on the service computer for the service binaries.</span></span>  
   
-2.  将服务程序文件复制到服务计算机上的服务目录。另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+2.  <span data-ttu-id="9e77a-180">将服务程序文件复制到服务计算机上的服务目录。</span><span class="sxs-lookup"><span data-stu-id="9e77a-180">Copy the service program files to the service directory on the service computer.</span></span> <span data-ttu-id="9e77a-181">另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="9e77a-181">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。必须更新 Service.exe.config 文件以反映此新证书名称。可以通过修改 Setup.bat 批处理文件来创建服务器证书。请注意，setup.bat 文件必须在使用管理员特权打开的 Visual Studio 命令提示中运行。必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3.  <span data-ttu-id="9e77a-182">必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-182">You must have a server certificate with the subject name that contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="9e77a-183">必须更新 Service.exe.config 文件以反映此新证书名称。</span><span class="sxs-lookup"><span data-stu-id="9e77a-183">The Service.exe.config file must be updated to reflect this new certificate name.</span></span> <span data-ttu-id="9e77a-184">可以通过修改 Setup.bat 批处理文件来创建服务器证书。</span><span class="sxs-lookup"><span data-stu-id="9e77a-184">You can create server certificate by modifying the Setup.bat batch file.</span></span> <span data-ttu-id="9e77a-185">请注意，setup.bat 文件必须在使用管理员特权打开的 Visual Studio 命令提示中运行。</span><span class="sxs-lookup"><span data-stu-id="9e77a-185">Note that the setup.bat file must be run from a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="9e77a-186">必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。</span><span class="sxs-lookup"><span data-stu-id="9e77a-186">You must set `%SERVER_NAME%` variable to fully-qualified host name of the computer that is used to host the service.</span></span>  
   
-4.  将服务器证书复制到客户端的 CurrentUser\-TrustedPeople 存储中。当服务器证书是由客户端的受信任颁发者颁发时，不必执行此操作。  
+4.  <span data-ttu-id="9e77a-187">将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。</span><span class="sxs-lookup"><span data-stu-id="9e77a-187">Copy the server certificate into the CurrentUser-TrustedPeople store of the client.</span></span> <span data-ttu-id="9e77a-188">当服务器证书是由客户端的受信任颁发者颁发时，不必执行此操作。</span><span class="sxs-lookup"><span data-stu-id="9e77a-188">You do not need to do this when the server certificate is issued by a client trusted issuer.</span></span>  
   
-5.  在服务计算机的 Service.exe.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
+5.  <span data-ttu-id="9e77a-189">在服务计算机的 Service.exe.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。</span><span class="sxs-lookup"><span data-stu-id="9e77a-189">In the Service.exe.config file on the service computer, change the value of the base address to specify a fully-qualified computer name instead of localhost.</span></span>  
   
-6.  在服务计算机上，在命令提示符下运行 service.exe。  
+6.  <span data-ttu-id="9e77a-190">在服务计算机上，在命令提示符下运行 service.exe。</span><span class="sxs-lookup"><span data-stu-id="9e77a-190">On the service computer, run service.exe from a command prompt.</span></span>  
   
-7.  将 \\client\\bin\\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+7.  <span data-ttu-id="9e77a-191">将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。</span><span class="sxs-lookup"><span data-stu-id="9e77a-191">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
+8.  <span data-ttu-id="9e77a-192">在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="9e77a-192">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
+9. <span data-ttu-id="9e77a-193">在客户端计算机上，从命令提示窗口中启动 `Client.exe`。</span><span class="sxs-lookup"><span data-stu-id="9e77a-193">On the client computer, launch `Client.exe` from a command prompt window.</span></span>  
   
-10. 如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. <span data-ttu-id="9e77a-194">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="9e77a-194">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="9e77a-195">运行示例后进行清理</span><span class="sxs-lookup"><span data-stu-id="9e77a-195">To clean up after the sample</span></span>  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
+1.  <span data-ttu-id="9e77a-196">运行完示例后运行示例文件夹中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="9e77a-196">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="9e77a-197">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9e77a-197">See Also</span></span>

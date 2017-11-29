@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e4da2dadfb1a3995edff9836f5a2bbedde1e156d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 56a28aac1a8fccf0e820536e144c8b5d10f43c2b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
-为要求对保护级别进行签名的 <xref:System.ServiceModel.NetTcpBinding> 指定上下文。 NetTcpContextBinding 的 contextExchangeMechanism 是 SOAPHeader。  
+# <a name="ltnettcpcontextbindinggt"></a><span data-ttu-id="90a86-102">&lt;netTcpContextBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="90a86-102">&lt;netTcpContextBinding&gt;</span></span>
+<span data-ttu-id="90a86-103">为要求对保护级别进行签名的 <xref:System.ServiceModel.NetTcpBinding> 指定上下文。</span><span class="sxs-lookup"><span data-stu-id="90a86-103">Specifies a context for the <xref:System.ServiceModel.NetTcpBinding> that requires that the protection level be signed.</span></span> <span data-ttu-id="90a86-104">NetTcpContextBinding 的 contextExchangeMechanism 是 SOAPHeader。</span><span class="sxs-lookup"><span data-stu-id="90a86-104">The contextExchangeMechanism for NetTcpContextBinding is SOAPHeader.</span></span>  
   
- \<系统。ServiceModel >  
-\<绑定 >  
-\<netTcpContextBinding >  
+ <span data-ttu-id="90a86-105">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="90a86-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="90a86-106">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="90a86-106">\<bindings></span></span>  
+<span data-ttu-id="90a86-107">\<netTcpContextBinding ></span><span class="sxs-lookup"><span data-stu-id="90a86-107">\<netTcpContextBinding></span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="90a86-108">语法</span><span class="sxs-lookup"><span data-stu-id="90a86-108">Syntax</span></span>  
   
 ```xml  
 <netTcpContextBinding>  
@@ -69,52 +67,51 @@ ms.lasthandoff: 09/25/2017
 </netTcpContextBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="90a86-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="90a86-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="90a86-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="90a86-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a><span data-ttu-id="90a86-111">特性</span><span class="sxs-lookup"><span data-stu-id="90a86-111">Attributes</span></span>  
   
-|特性|描述|  
+|<span data-ttu-id="90a86-112">特性</span><span class="sxs-lookup"><span data-stu-id="90a86-112">Attribute</span></span>|<span data-ttu-id="90a86-113">描述</span><span class="sxs-lookup"><span data-stu-id="90a86-113">Description</span></span>|  
 |---------------|-----------------|  
-|closeTimeout|一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
-|contextProtectionLevel|一个有效的 <xref:System.Net.Security.ProtectionLevel> 值，指定用于传播上下文信息的 SOAP 标头的所需保护级别。  默认值为 `Sign`。|  
-|hostnameComparisonMode|指定用于分析 URI 的 HTTP 主机名比较模式。 此属性的类型为 `System.ServiceModel.HostnameComparisonMode`，指示在对 URI 进行匹配时，是否使用主机名来访问服务。 默认值为 `StrongWildcard`，表示忽略匹配项中的主机名。|  
-|listenBacklog|一个正整数，指定侦听器上等待接受的最大通道数。 超出此限制的连接会被排队，直到连接数低于限制值。 `connectionTimeout` 属性限制客户端在引发连接异常之前将等待连接的时间。 默认值为 10。|  
-|maxBufferPoolSize|一个整数，指定此绑定的最大缓冲池大小。 默认值为 512 * 1024 字节。 Windows Communication Foundation (WCF) 的许多部件使用缓冲区。 每次使用缓冲区时，创建和销毁它们都将占用大量资源，而缓冲区的垃圾回收过程也是如此。 利用缓冲池，可以从缓冲池中获得缓冲区，使用缓冲区，然后在完成工作后将其返回给缓冲池。 这样就避免了创建和销毁缓冲区的系统开销。|  
-|maxBufferSize|一个正整数，指定内存中用于存储消息的缓冲区的最大大小（字节）。 如果缓冲区已满，则多余的数据会保留在基础套接字中，直到缓冲区重新具有可用空间。 该值不能小于 `maxReceivedMessageSize` 属性。 默认值为 65536。 有关详细信息，请参阅<xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>。|  
-|maxConnections|一个整数，指定服务将创建/接受的最大出站和入站连接数。 传入和传出连接分别根据此属性指定的限制进行计数。<br /><br /> 超出此限制的入站连接需要排队，直到连接数低于限制值。<br /><br /> 超出此限制的出站连接需要排队，直到连接数低于限制值。<br /><br /> 默认值为 10。|  
-|maxReceivedMessageSize|一个正整数，指定采用此绑定配置的通道上可以接收的最大消息大小（字节），包括消息头。 如果消息超出此限制，则发送方将收到 SOAP 错误。 接收方将删除该消息，并在跟踪日志中创建事件项。 默认值为 65536。|  
-|name|一个包含绑定的配置名称的字符串。 因为此值用作绑定的标识，所以它应该是唯一的。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
-|openTimeout|一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
-|portSharingEnabled|一个布尔值，指定是否为此连接启用 TCP 端口共享。 如果此值为 `false`，则每个绑定都使用自己的独占端口。 此设置只与服务相关，因为客户端不受影响。|  
-|receiveTimeout|一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:10:00。|  
-|sendTimeout|一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。 此值应大于或等于 <xref:System.TimeSpan.Zero>。 默认值为 00:01:00。|  
-|transactionFlow|一个布尔值，指定绑定是否支持流动 WS-Transactions。 默认值为 `false`。|  
-|transactionProtocol|指定与此绑定一起使用的事务处理协议。 有效值为<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> 默认值为 OleTransactions。 此属性的类型为 <xref:System.ServiceModel.TransactionProtocol>。|  
-|transferMode|一个 <xref:System.ServiceModel.TransferMode> 值，指定为请求或响应对消息进行缓冲处理还是流式处理。|  
+|<span data-ttu-id="90a86-114">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="90a86-114">closeTimeout</span></span>|<span data-ttu-id="90a86-115">一个 <xref:System.TimeSpan> 值，指定为完成关闭操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="90a86-115">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="90a86-116">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="90a86-116">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="90a86-117">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="90a86-117">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="90a86-118">contextProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="90a86-118">contextProtectionLevel</span></span>|<span data-ttu-id="90a86-119">一个有效的 <xref:System.Net.Security.ProtectionLevel> 值，指定用于传播上下文信息的 SOAP 标头的所需保护级别。</span><span class="sxs-lookup"><span data-stu-id="90a86-119">A valid <xref:System.Net.Security.ProtectionLevel> value that specifies the desired protection level of the SOAP header used to propagate the context information.</span></span>  <span data-ttu-id="90a86-120">默认值为 `Sign`。</span><span class="sxs-lookup"><span data-stu-id="90a86-120">The default value is `Sign`.</span></span>|  
+|<span data-ttu-id="90a86-121">hostnameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="90a86-121">hostnameComparisonMode</span></span>|<span data-ttu-id="90a86-122">指定用于分析 URI 的 HTTP 主机名比较模式。</span><span class="sxs-lookup"><span data-stu-id="90a86-122">Specifies the HTTP hostname comparison mode used to parse URIs.</span></span> <span data-ttu-id="90a86-123">此属性的类型为 `System.ServiceModel.HostnameComparisonMode`，指示在对 URI 进行匹配时，是否使用主机名来访问服务。</span><span class="sxs-lookup"><span data-stu-id="90a86-123">This attribute is of type `System.ServiceModel.HostnameComparisonMode`, which indicates whether the hostname is used to reach the service when matching on the URI.</span></span> <span data-ttu-id="90a86-124">默认值为 `StrongWildcard`，表示忽略匹配项中的主机名。</span><span class="sxs-lookup"><span data-stu-id="90a86-124">The default value is `StrongWildcard`, which ignores the hostname in the match.</span></span>|  
+|<span data-ttu-id="90a86-125">listenBacklog</span><span class="sxs-lookup"><span data-stu-id="90a86-125">listenBacklog</span></span>|<span data-ttu-id="90a86-126">一个正整数，指定侦听器上等待接受的最大通道数。</span><span class="sxs-lookup"><span data-stu-id="90a86-126">A positive integer that specifies the maximum number of channels waiting to be accepted on the listener.</span></span> <span data-ttu-id="90a86-127">超出此限制的连接会被排队，直到连接数低于限制值。</span><span class="sxs-lookup"><span data-stu-id="90a86-127">Connections in excess of this limit are queued until space below the limit becomes available.</span></span> <span data-ttu-id="90a86-128">`connectionTimeout` 属性限制客户端在引发连接异常之前将等待连接的时间。</span><span class="sxs-lookup"><span data-stu-id="90a86-128">The `connectionTimeout` attribute limits the time a client will wait to be connected before throwing a connection exception.</span></span> <span data-ttu-id="90a86-129">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="90a86-129">The default is 10.</span></span>|  
+|<span data-ttu-id="90a86-130">maxBufferPoolSize</span><span class="sxs-lookup"><span data-stu-id="90a86-130">maxBufferPoolSize</span></span>|<span data-ttu-id="90a86-131">一个整数，指定此绑定的最大缓冲池大小。</span><span class="sxs-lookup"><span data-stu-id="90a86-131">An integer that specifies the maximum buffer pool size for this binding.</span></span> <span data-ttu-id="90a86-132">默认值为 512 * 1024 字节。</span><span class="sxs-lookup"><span data-stu-id="90a86-132">The default is 512 * 1024 bytes.</span></span> <span data-ttu-id="90a86-133">Windows Communication Foundation (WCF) 的许多部件使用缓冲区。</span><span class="sxs-lookup"><span data-stu-id="90a86-133">Many parts of Windows Communication Foundation (WCF) use buffers.</span></span> <span data-ttu-id="90a86-134">每次使用缓冲区时，创建和销毁它们都将占用大量资源，而缓冲区的垃圾回收过程也是如此。</span><span class="sxs-lookup"><span data-stu-id="90a86-134">Creating and destroying buffers each time they are used is expensive, and garbage collection for buffers is also expensive.</span></span> <span data-ttu-id="90a86-135">利用缓冲池，可以从缓冲池中获得缓冲区，使用缓冲区，然后在完成工作后将其返回给缓冲池。</span><span class="sxs-lookup"><span data-stu-id="90a86-135">With buffer pools, you can take a buffer from the pool, use it, and return it to the pool once you are done.</span></span> <span data-ttu-id="90a86-136">这样就避免了创建和销毁缓冲区的系统开销。</span><span class="sxs-lookup"><span data-stu-id="90a86-136">Thus the overhead in creating and destroying buffers is avoided.</span></span>|  
+|<span data-ttu-id="90a86-137">maxBufferSize</span><span class="sxs-lookup"><span data-stu-id="90a86-137">maxBufferSize</span></span>|<span data-ttu-id="90a86-138">一个正整数，指定内存中用于存储消息的缓冲区的最大大小（字节）。</span><span class="sxs-lookup"><span data-stu-id="90a86-138">A positive integer that specifies the maximum size, in bytes, of the buffer used to store messages in memory.</span></span> <span data-ttu-id="90a86-139">如果缓冲区已满，则多余的数据会保留在基础套接字中，直到缓冲区重新具有可用空间。</span><span class="sxs-lookup"><span data-stu-id="90a86-139">If the buffer is full, excess data remains in the underlying socket until the buffer has room again.</span></span> <span data-ttu-id="90a86-140">该值不能小于 `maxReceivedMessageSize` 属性。</span><span class="sxs-lookup"><span data-stu-id="90a86-140">This value cannot be less than `maxReceivedMessageSize` attribute.</span></span> <span data-ttu-id="90a86-141">默认值为 65536。</span><span class="sxs-lookup"><span data-stu-id="90a86-141">The default is 65536.</span></span> <span data-ttu-id="90a86-142">有关详细信息，请参阅<xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>。</span><span class="sxs-lookup"><span data-stu-id="90a86-142">For more information, see <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.</span></span>|  
+|<span data-ttu-id="90a86-143">maxConnections</span><span class="sxs-lookup"><span data-stu-id="90a86-143">maxConnections</span></span>|<span data-ttu-id="90a86-144">一个整数，指定服务将创建/接受的最大出站和入站连接数。</span><span class="sxs-lookup"><span data-stu-id="90a86-144">An integer that specifies the maximum number of outbound and inbound connections the service will create/accept.</span></span> <span data-ttu-id="90a86-145">传入和传出连接分别根据此属性指定的限制进行计数。</span><span class="sxs-lookup"><span data-stu-id="90a86-145">Incoming and outgoing connections are counted against a separate limit specified by this attribute.</span></span><br /><br /> <span data-ttu-id="90a86-146">超出此限制的入站连接需要排队，直到连接数低于限制值。</span><span class="sxs-lookup"><span data-stu-id="90a86-146">Inbound connections in excess of the limit are queued until a space below the limit becomes available.</span></span><br /><br /> <span data-ttu-id="90a86-147">超出此限制的出站连接需要排队，直到连接数低于限制值。</span><span class="sxs-lookup"><span data-stu-id="90a86-147">Outbound connections in excess of the limit are queued until a space below the limit becomes available.</span></span><br /><br /> <span data-ttu-id="90a86-148">默认值为 10。</span><span class="sxs-lookup"><span data-stu-id="90a86-148">The default is 10.</span></span>|  
+|<span data-ttu-id="90a86-149">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="90a86-149">maxReceivedMessageSize</span></span>|<span data-ttu-id="90a86-150">一个正整数，指定采用此绑定配置的通道上可以接收的最大消息大小（字节），包括消息头。</span><span class="sxs-lookup"><span data-stu-id="90a86-150">A positive integer that specifies the maximum message size, in bytes, including headers, that can be received on a channel configured with this binding.</span></span> <span data-ttu-id="90a86-151">如果消息超出此限制，则发送方将收到 SOAP 错误。</span><span class="sxs-lookup"><span data-stu-id="90a86-151">The sender of a message exceeding this limit will receive a SOAP fault.</span></span> <span data-ttu-id="90a86-152">接收方将删除该消息，并在跟踪日志中创建事件项。</span><span class="sxs-lookup"><span data-stu-id="90a86-152">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="90a86-153">默认值为 65536。</span><span class="sxs-lookup"><span data-stu-id="90a86-153">The default is 65536.</span></span>|  
+|<span data-ttu-id="90a86-154">name</span><span class="sxs-lookup"><span data-stu-id="90a86-154">name</span></span>|<span data-ttu-id="90a86-155">一个包含绑定的配置名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="90a86-155">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="90a86-156">因为此值用作绑定的标识，所以它应该是唯一的。</span><span class="sxs-lookup"><span data-stu-id="90a86-156">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="90a86-157">从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。</span><span class="sxs-lookup"><span data-stu-id="90a86-157">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="90a86-158">有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="90a86-158">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="90a86-159">openTimeout</span><span class="sxs-lookup"><span data-stu-id="90a86-159">openTimeout</span></span>|<span data-ttu-id="90a86-160">一个 <xref:System.TimeSpan> 值，指定为完成打开操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="90a86-160">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="90a86-161">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="90a86-161">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="90a86-162">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="90a86-162">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="90a86-163">portSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="90a86-163">portSharingEnabled</span></span>|<span data-ttu-id="90a86-164">一个布尔值，指定是否为此连接启用 TCP 端口共享。</span><span class="sxs-lookup"><span data-stu-id="90a86-164">A Boolean value that specifies whether TCP port sharing is enabled for this connection.</span></span> <span data-ttu-id="90a86-165">如果此值为 `false`，则每个绑定都使用自己的独占端口。</span><span class="sxs-lookup"><span data-stu-id="90a86-165">If this is `false`, each binding uses its own exclusive port.</span></span> <span data-ttu-id="90a86-166">此设置只与服务相关，因为客户端不受影响。</span><span class="sxs-lookup"><span data-stu-id="90a86-166">This setting is relevant only to services, because clients are not affected.</span></span>|  
+|<span data-ttu-id="90a86-167">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="90a86-167">receiveTimeout</span></span>|<span data-ttu-id="90a86-168">一个 <xref:System.TimeSpan> 值，指定为完成接收操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="90a86-168">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="90a86-169">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="90a86-169">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="90a86-170">默认值为 00:10:00。</span><span class="sxs-lookup"><span data-stu-id="90a86-170">The default is 00:10:00.</span></span>|  
+|<span data-ttu-id="90a86-171">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="90a86-171">sendTimeout</span></span>|<span data-ttu-id="90a86-172">一个 <xref:System.TimeSpan> 值，指定为完成发送操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="90a86-172">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="90a86-173">此值应大于或等于 <xref:System.TimeSpan.Zero>。</span><span class="sxs-lookup"><span data-stu-id="90a86-173">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="90a86-174">默认值为 00:01:00。</span><span class="sxs-lookup"><span data-stu-id="90a86-174">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="90a86-175">transactionFlow</span><span class="sxs-lookup"><span data-stu-id="90a86-175">transactionFlow</span></span>|<span data-ttu-id="90a86-176">一个布尔值，指定绑定是否支持流动 WS-Transactions。</span><span class="sxs-lookup"><span data-stu-id="90a86-176">A Boolean value that specifies whether the binding supports flowing WS-Transactions.</span></span> <span data-ttu-id="90a86-177">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="90a86-177">The default is `false`.</span></span>|  
+|<span data-ttu-id="90a86-178">transactionProtocol</span><span class="sxs-lookup"><span data-stu-id="90a86-178">transactionProtocol</span></span>|<span data-ttu-id="90a86-179">指定与此绑定一起使用的事务处理协议。</span><span class="sxs-lookup"><span data-stu-id="90a86-179">Specifies the transaction protocol to be used with this binding.</span></span> <span data-ttu-id="90a86-180">有效值为</span><span class="sxs-lookup"><span data-stu-id="90a86-180">Valid values are</span></span><br /><br /> <span data-ttu-id="90a86-181">-OleTransactions</span><span class="sxs-lookup"><span data-stu-id="90a86-181">-   OleTransactions</span></span><br /><span data-ttu-id="90a86-182">-WSAtomicTransactionOctober2004</span><span class="sxs-lookup"><span data-stu-id="90a86-182">-   WSAtomicTransactionOctober2004</span></span><br /><br /> <span data-ttu-id="90a86-183">默认值为 OleTransactions。</span><span class="sxs-lookup"><span data-stu-id="90a86-183">The default is OleTransactions.</span></span> <span data-ttu-id="90a86-184">此属性的类型为 <xref:System.ServiceModel.TransactionProtocol>。</span><span class="sxs-lookup"><span data-stu-id="90a86-184">This attribute is of type <xref:System.ServiceModel.TransactionProtocol>.</span></span>|  
+|<span data-ttu-id="90a86-185">transferMode</span><span class="sxs-lookup"><span data-stu-id="90a86-185">transferMode</span></span>|<span data-ttu-id="90a86-186">一个 <xref:System.ServiceModel.TransferMode> 值，指定为请求或响应对消息进行缓冲处理还是流式处理。</span><span class="sxs-lookup"><span data-stu-id="90a86-186">A <xref:System.ServiceModel.TransferMode> value that specifies whether messages are buffered or streamed or a request or response.</span></span>|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a><span data-ttu-id="90a86-187">子元素</span><span class="sxs-lookup"><span data-stu-id="90a86-187">Child Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="90a86-188">元素</span><span class="sxs-lookup"><span data-stu-id="90a86-188">Element</span></span>|<span data-ttu-id="90a86-189">描述</span><span class="sxs-lookup"><span data-stu-id="90a86-189">Description</span></span>|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>。|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
-|[reliableSession](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|指定是否在通道终结点之间建立可靠会话。|  
+|[<span data-ttu-id="90a86-190">\<安全 ></span><span class="sxs-lookup"><span data-stu-id="90a86-190">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|<span data-ttu-id="90a86-191">定义绑定的安全设置。</span><span class="sxs-lookup"><span data-stu-id="90a86-191">Defines the security settings for the binding.</span></span> <span data-ttu-id="90a86-192">此元素的类型为 <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="90a86-192">This element is of type <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.</span></span>|  
+|[<span data-ttu-id="90a86-193">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="90a86-193">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="90a86-194">定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。</span><span class="sxs-lookup"><span data-stu-id="90a86-194">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="90a86-195">此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。</span><span class="sxs-lookup"><span data-stu-id="90a86-195">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="90a86-196">reliableSession</span><span class="sxs-lookup"><span data-stu-id="90a86-196">reliableSession</span></span>](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|<span data-ttu-id="90a86-197">指定是否在通道终结点之间建立可靠会话。</span><span class="sxs-lookup"><span data-stu-id="90a86-197">Specifies if reliable sessions are established between channel endpoints.</span></span>|  
   
-### <a name="parent-elements"></a>父元素  
+### <a name="parent-elements"></a><span data-ttu-id="90a86-198">父元素</span><span class="sxs-lookup"><span data-stu-id="90a86-198">Parent Elements</span></span>  
   
-|元素|描述|  
+|<span data-ttu-id="90a86-199">元素</span><span class="sxs-lookup"><span data-stu-id="90a86-199">Element</span></span>|<span data-ttu-id="90a86-200">描述</span><span class="sxs-lookup"><span data-stu-id="90a86-200">Description</span></span>|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[<span data-ttu-id="90a86-201">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="90a86-201">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="90a86-202">此元素包含标准绑定和自定义绑定的集合。</span><span class="sxs-lookup"><span data-stu-id="90a86-202">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.NetTcpBinding>   
- <xref:System.ServiceModel.NetTcpContextBinding>   
- <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>   
- <xref:System.ServiceModel.Channels.ContextBindingElement>   
- [\<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
-
+## <a name="see-also"></a><span data-ttu-id="90a86-203">另请参阅</span><span class="sxs-lookup"><span data-stu-id="90a86-203">See Also</span></span>  
+ <xref:System.ServiceModel.NetTcpBinding>  
+ <xref:System.ServiceModel.NetTcpContextBinding>  
+ <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  
+ <xref:System.ServiceModel.Channels.ContextBindingElement>  
+ [<span data-ttu-id="90a86-204">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="90a86-204">\<netTcpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [<span data-ttu-id="90a86-205">绑定</span><span class="sxs-lookup"><span data-stu-id="90a86-205">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="90a86-206">配置系统提供的绑定</span><span class="sxs-lookup"><span data-stu-id="90a86-206">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="90a86-207">使用绑定来配置 Windows Communication Foundation 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="90a86-207">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="90a86-208">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="90a86-208">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

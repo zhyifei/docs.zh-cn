@@ -1,25 +1,28 @@
 ---
-title: "TextMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TextMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e1eccbaae35a16fe4fb133296698d347c190e94
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# TextMessageEncodingBindingElement
-TextMessageEncodingBindingElement  
+# <a name="textmessageencodingbindingelement"></a><span data-ttu-id="4f08c-102">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="4f08c-102">TextMessageEncodingBindingElement</span></span>
+<span data-ttu-id="4f08c-103">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="4f08c-103">TextMessageEncodingBindingElement</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="4f08c-104">语法</span><span class="sxs-lookup"><span data-stu-id="4f08c-104">Syntax</span></span>  
   
 ```  
 class TextMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## 方法  
- TextMessageEncodingBindingElement 类不定义任何方法。  
+## <a name="methods"></a><span data-ttu-id="4f08c-105">方法</span><span class="sxs-lookup"><span data-stu-id="4f08c-105">Methods</span></span>  
+ <span data-ttu-id="4f08c-106">TextMessageEncodingBindingElement 类不定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="4f08c-106">The TextMessageEncodingBindingElement class does not define any methods.</span></span>  
   
-## 属性  
- TextMessageEncodingBindingElement 类具有下列属性：  
+## <a name="properties"></a><span data-ttu-id="4f08c-107">属性</span><span class="sxs-lookup"><span data-stu-id="4f08c-107">Properties</span></span>  
+ <span data-ttu-id="4f08c-108">TextMessageEncodingBindingElement 类具有下列属性：</span><span class="sxs-lookup"><span data-stu-id="4f08c-108">The TextMessageEncodingBindingElement class has the following properties:</span></span>  
   
-### Encoding  
- 数据类型：String  
+### <a name="encoding"></a><span data-ttu-id="4f08c-109">编码</span><span class="sxs-lookup"><span data-stu-id="4f08c-109">Encoding</span></span>  
+ <span data-ttu-id="4f08c-110">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="4f08c-110">Data type: string</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="4f08c-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="4f08c-111">Access type: Read-only</span></span>  
   
- 要用来在绑定上发出消息的字符集编码。  
+ <span data-ttu-id="4f08c-112">要用来在绑定上发出消息的字符集编码。</span><span class="sxs-lookup"><span data-stu-id="4f08c-112">The character set encoding to be used for emitting messages on the binding.</span></span>  
   
-### MaxReadPoolSize  
- 数据类型：sint32  
+### <a name="maxreadpoolsize"></a><span data-ttu-id="4f08c-113">MaxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="4f08c-113">MaxReadPoolSize</span></span>  
+ <span data-ttu-id="4f08c-114">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="4f08c-114">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="4f08c-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="4f08c-115">Access type: Read-only</span></span>  
   
- 一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。  
+ <span data-ttu-id="4f08c-116">一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。</span><span class="sxs-lookup"><span data-stu-id="4f08c-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span>  
   
-### MaxWritePoolSize  
- 数据类型：sint32  
+### <a name="maxwritepoolsize"></a><span data-ttu-id="4f08c-117">MaxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="4f08c-117">MaxWritePoolSize</span></span>  
+ <span data-ttu-id="4f08c-118">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="4f08c-118">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="4f08c-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="4f08c-119">Access type: Read-only</span></span>  
   
- 一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。  
+ <span data-ttu-id="4f08c-120">一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。</span><span class="sxs-lookup"><span data-stu-id="4f08c-120">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span>  
   
-### ReaderQuotas  
- 数据类型：XmlDictionaryReaderQuotas  
+### <a name="readerquotas"></a><span data-ttu-id="4f08c-121">ReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="4f08c-121">ReaderQuotas</span></span>  
+ <span data-ttu-id="4f08c-122">数据类型：XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="4f08c-122">Data type: XmlDictionaryReaderQuotas</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="4f08c-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="4f08c-123">Access type: Read-only</span></span>  
   
- 读取器的配额。  
+ <span data-ttu-id="4f08c-124">读取器的配额。</span><span class="sxs-lookup"><span data-stu-id="4f08c-124">The quotas of the readers.</span></span>  
   
-## 要求  
+## <a name="requirements"></a><span data-ttu-id="4f08c-125">要求</span><span class="sxs-lookup"><span data-stu-id="4f08c-125">Requirements</span></span>  
   
-|MOF|在 Servicemodel.mof 中声明。|  
-|---------|-----------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|<span data-ttu-id="4f08c-126">MOF</span><span class="sxs-lookup"><span data-stu-id="4f08c-126">MOF</span></span>|<span data-ttu-id="4f08c-127">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="4f08c-127">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="4f08c-128">命名空间</span><span class="sxs-lookup"><span data-stu-id="4f08c-128">Namespace</span></span>|<span data-ttu-id="4f08c-129">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="4f08c-129">Defined in root\ServiceModel</span></span>|  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="4f08c-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4f08c-130">See Also</span></span>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

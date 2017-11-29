@@ -1,45 +1,43 @@
 ---
-title: "指定程序集的位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序配置 [.NET Framework]"
-  - "程序集 [.NET Framework], 指定位置"
-  - "配置 [.NET Framework], 应用程序"
+title: "指定程序集 &#39; s 位置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration [.NET Framework], applications
+- application configuration [.NET Framework]
+- assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f747d921e9c131edaa8a1749c5adc5eae14623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 指定程序集的位置
-有两种方法用来指定程序集的位置：  
+# <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="80e0e-102">指定程序集 &#39; s 位置</span><span class="sxs-lookup"><span data-stu-id="80e0e-102">Specifying an Assembly&#39;s Location</span></span>
+<span data-ttu-id="80e0e-103">有两种方法来指定程序集的位置：</span><span class="sxs-lookup"><span data-stu-id="80e0e-103">There are two ways to specify an assembly's location:</span></span>  
   
--   使用 [\<codeBase\>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素  
+-   <span data-ttu-id="80e0e-104">使用[\<基本代码 >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="80e0e-104">Using the [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element.</span></span>  
   
--   使用 [\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)元素  
+-   <span data-ttu-id="80e0e-105">使用[\<探测 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="80e0e-105">Using the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element.</span></span>  
   
- 还可以使用 [.NET Framework 配置工具 \(Mscorcfg.msc\)](http://msdn.microsoft.com/zh-cn/a7106c52-68da-490e-b129-971b2c743764) 来指定程序集位置或者为公共语言运行时指定要探测程序集的位置。  
+ <span data-ttu-id="80e0e-106">你还可以使用[.NET Framework 配置工具 (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764)以指定程序集的位置或指定为公共语言运行时来探测程序集的位置。</span><span class="sxs-lookup"><span data-stu-id="80e0e-106">You can also use the [.NET Framework Configuration Tool (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) to specify assembly locations or specify locations for the common language runtime to probe for assemblies.</span></span>  
   
-## 使用 \<codeBase\> 元素  
- 只有在计算机配置文件或重定向程序集版本的发行者策略文件中，才可以使用**\<codeBase\>**元素。  在运行时确定要使用哪一程序集版本时，它应用确定版本的文件中的基本代码设置。  如果未指出基本代码，那么运行时就以通常的方法探测程序集。  有关详细信息，请参见[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+## <a name="using-the-codebase-element"></a><span data-ttu-id="80e0e-107">使用\<基本代码 > 元素</span><span class="sxs-lookup"><span data-stu-id="80e0e-107">Using the \<codeBase> Element</span></span>  
+ <span data-ttu-id="80e0e-108">你可以使用**\<基本代码 >**仅在计算机配置文件或发布服务器策略文件也重定向程序集版本程序中的元素。</span><span class="sxs-lookup"><span data-stu-id="80e0e-108">You can use the **\<codeBase>** element only in machine configuration or publisher policy files that also redirect the assembly version.</span></span> <span data-ttu-id="80e0e-109">当运行时确定要使用的程序集版本时，它适用确定版本的文件中的基本代码设置。</span><span class="sxs-lookup"><span data-stu-id="80e0e-109">When the runtime determines which assembly version to use, it applies the code base setting from the file that determines the version.</span></span> <span data-ttu-id="80e0e-110">如果指示没有基本代码，运行时探测程序集以正常方式。</span><span class="sxs-lookup"><span data-stu-id="80e0e-110">If no code base is indicated, the runtime probes for the assembly in the normal way.</span></span> <span data-ttu-id="80e0e-111">有关详细信息，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="80e0e-111">For details, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- 下面的示例说明如何指定程序集的位置。  
+ <span data-ttu-id="80e0e-112">下面的示例演示如何指定程序集的位置。</span><span class="sxs-lookup"><span data-stu-id="80e0e-112">The following example shows how to specify an assembly's location.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -55,17 +53,17 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- 对于所有具有强名称的程序集，要求 **version** 特性，但对于不具有强名称的程序集应省略。  **\<codeBase\>** 元素要求**href**特性。  在**\<codeBase\>**元素中不能指定版本范围。  
+ <span data-ttu-id="80e0e-113">**版本**属性是必需的所有具有强名称程序集，但应省略不具有强名称的程序集。</span><span class="sxs-lookup"><span data-stu-id="80e0e-113">The **version** attribute is required for all strong-named assemblies but should be omitted for assemblies that are not strong-named.</span></span> <span data-ttu-id="80e0e-114">**\<基本代码 >**元素需要**href**属性。</span><span class="sxs-lookup"><span data-stu-id="80e0e-114">The **\<codeBase>** element requires the **href** attribute.</span></span> <span data-ttu-id="80e0e-115">你不能指定版本范围中的**\<基本代码 >**元素。</span><span class="sxs-lookup"><span data-stu-id="80e0e-115">You cannot specify version ranges in the **\<codeBase>** element.</span></span>  
   
 > [!NOTE]
->  如果为不具有强名称的程序集提供基本代码提示，那么该提示必须指向应用程序基或该应用程序基目录的子目录。  
+>  <span data-ttu-id="80e0e-116">如果你所提供的不是具有强名称程序集的基本代码的提示，提示必须指向应用程序基或应用程序基目录的子目录。</span><span class="sxs-lookup"><span data-stu-id="80e0e-116">If you are supplying a code base hint for an assembly that is not strong-named, the hint must point to the application base or a subdirectory of the application base directory.</span></span>  
   
-## 使用\<probing\>元素  
- 运行时通过探测的方法来查找没有基本代码的程序集。  有关探测的更多信息，请参见[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
+## <a name="using-the-probing-element"></a><span data-ttu-id="80e0e-117">使用\<探测 > 元素</span><span class="sxs-lookup"><span data-stu-id="80e0e-117">Using the \<probing> Element</span></span>  
+ <span data-ttu-id="80e0e-118">运行时定位通过探测没有的基本代码的程序集。</span><span class="sxs-lookup"><span data-stu-id="80e0e-118">The runtime locates assemblies that do not have a code base by probing.</span></span> <span data-ttu-id="80e0e-119">有关探测的详细信息，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="80e0e-119">For more information about probing, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- 可以在应用程序配置文件中使用[\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)元素，来指定在查找程序集时运行时应搜索的子目录。  下面的示例说明如何指定运行时应搜索的目录。  
+ <span data-ttu-id="80e0e-120">你可以使用[\<探测 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)应用程序配置文件来指定运行时应搜索在查找程序集的子目录中的元素。</span><span class="sxs-lookup"><span data-stu-id="80e0e-120">You can use the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element in the application configuration file to specify subdirectories the runtime should search when locating an assembly.</span></span> <span data-ttu-id="80e0e-121">下面的示例演示如何指定运行时应搜索的目录。</span><span class="sxs-lookup"><span data-stu-id="80e0e-121">The following example shows how to specify directories the runtime should search.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -75,10 +73,10 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- **privatePath** 特性包含运行时应在其中搜索程序集的目录。  如果应用程序位于 C:\\Program Files\\MyApp，那么运行时将在 C:\\Program Files\\MyApp\\Bin、C:\\Program Files\\MyApp\\Bin2\\Subbin 和 C:\\Program Files\\MyApp\\Bin3 中查找未指定基本代码的程序集。  **privatePath** 中指定的目录必须是应用程序基目录的子目录。  
+ <span data-ttu-id="80e0e-122">**PrivatePath**属性包含运行时应搜索程序集的目录。</span><span class="sxs-lookup"><span data-stu-id="80e0e-122">The **privatePath** attribute contains the directories that the runtime should search for assemblies.</span></span> <span data-ttu-id="80e0e-123">如果应用程序位于 C:\Program Files\MyApp，运行时将查找没有在 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中指定的基本代码的程序集。</span><span class="sxs-lookup"><span data-stu-id="80e0e-123">If the application is located at C:\Program Files\MyApp, the runtime will look for assemblies that do not specify a code base in C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin, and C:\Program Files\MyApp\Bin3.</span></span> <span data-ttu-id="80e0e-124">中指定的目录**privatePath**必须是应用程序基目录的子目录。</span><span class="sxs-lookup"><span data-stu-id="80e0e-124">The directories specified in **privatePath** must be subdirectories of the application base directory.</span></span>  
   
-## 请参阅  
- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/zh-cn/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a><span data-ttu-id="80e0e-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80e0e-125">See Also</span></span>  
+ <span data-ttu-id="80e0e-126">[Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）</span><span class="sxs-lookup"><span data-stu-id="80e0e-126">[Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)</span></span>  
+ [<span data-ttu-id="80e0e-127">使用程序集编程</span><span class="sxs-lookup"><span data-stu-id="80e0e-127">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="80e0e-128">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="80e0e-128">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="80e0e-129">配置.NET Framework 应用</span><span class="sxs-lookup"><span data-stu-id="80e0e-129">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

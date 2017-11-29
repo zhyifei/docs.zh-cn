@@ -1,27 +1,30 @@
 ---
-title: "Calls Per Second（每秒调用次数） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Calls Per Second（每秒调用次数）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0efb5a94-d83b-4793-b529-6fcbedb65c43
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 54e8b60679c7e7106f5b2e28abfebe5adc589174
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Calls Per Second（每秒调用次数）
-计数器名称：Calls Per Second（每秒调用次数）  
+# <a name="calls-per-second"></a><span data-ttu-id="0b13d-102">Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="0b13d-102">Calls Per Second</span></span>
+<span data-ttu-id="0b13d-103">计数器名称：Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="0b13d-103">Counter Name: Calls Per Second</span></span>  
   
-## 说明  
- 一秒内对此操作调用的次数。  
+## <a name="description"></a><span data-ttu-id="0b13d-104">描述</span><span class="sxs-lookup"><span data-stu-id="0b13d-104">Description</span></span>  
+ <span data-ttu-id="0b13d-105">一秒内对此操作调用的次数。</span><span class="sxs-lookup"><span data-stu-id="0b13d-105">Number of calls to this operation in a second.</span></span>  
   
- 此计数器为性能计数器类型 [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，可使用以下公式计算其值：  
+ <span data-ttu-id="0b13d-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="0b13d-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ <span data-ttu-id="0b13d-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="0b13d-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

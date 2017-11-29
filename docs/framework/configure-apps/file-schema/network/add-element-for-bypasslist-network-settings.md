@@ -1,80 +1,83 @@
 ---
-title: "bypasslist -&gt; &lt;add&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 元素, bypasslist"
-  - "<bypasslist>, add 元素"
-  - "add 元素, bypasslist"
-  - "bypasslist, add 元素"
+title: "&lt;添加&gt;将 bypasslist （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <bypasslist>, add element
+- bypasslist, add element
+- <add> element, bypasslist
+- add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# bypasslist -&gt; &lt;add&gt; 元素（网络设置）
-将 IP 地址或 DNS 名称添加到代理忽略列表中。  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="91c04-102">&lt;添加&gt;将 bypasslist （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="91c04-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="91c04-103">将 IP 地址或 DNS 名称添加到代理绕过列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
   
-## 语法  
+ <span data-ttu-id="91c04-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="91c04-104">\<configuration></span></span>  
+<span data-ttu-id="91c04-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="91c04-105">\<system.net></span></span>  
+<span data-ttu-id="91c04-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="91c04-106">\<defaultProxy></span></span>  
+<span data-ttu-id="91c04-107">\<将 bypasslist ></span><span class="sxs-lookup"><span data-stu-id="91c04-107">\<bypasslist></span></span>  
+<span data-ttu-id="91c04-108">\<add></span><span class="sxs-lookup"><span data-stu-id="91c04-108">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="91c04-109">语法</span><span class="sxs-lookup"><span data-stu-id="91c04-109">Syntax</span></span>  
   
-      <add   
-   address = "regular expression"   
+```xml  
+<add   
+  address="regular expression"   
 />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="91c04-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="91c04-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="91c04-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="91c04-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="91c04-112">特性</span><span class="sxs-lookup"><span data-stu-id="91c04-112">Attributes</span></span>  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|**address**|描述 IP 地址或 DNS 名称的正则表达式。|  
+|<span data-ttu-id="91c04-113">**特性**</span><span class="sxs-lookup"><span data-stu-id="91c04-113">**Attribute**</span></span>|<span data-ttu-id="91c04-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="91c04-114">**Description**</span></span>|  
+|-------------------|---------------------|  
+|<span data-ttu-id="91c04-115">**address**</span><span class="sxs-lookup"><span data-stu-id="91c04-115">**address**</span></span>|<span data-ttu-id="91c04-116">正则表达式描述的 IP 地址或 DNS 名称。</span><span class="sxs-lookup"><span data-stu-id="91c04-116">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="91c04-117">子元素</span><span class="sxs-lookup"><span data-stu-id="91c04-117">Child Elements</span></span>  
+ <span data-ttu-id="91c04-118">无。</span><span class="sxs-lookup"><span data-stu-id="91c04-118">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="91c04-119">父元素</span><span class="sxs-lookup"><span data-stu-id="91c04-119">Parent Elements</span></span>  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组正则表达式来描述不使用代理的地址。|  
+|<span data-ttu-id="91c04-120">**元素**</span><span class="sxs-lookup"><span data-stu-id="91c04-120">**Element**</span></span>|<span data-ttu-id="91c04-121">**描述**</span><span class="sxs-lookup"><span data-stu-id="91c04-121">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="91c04-122">将 bypasslist</span><span class="sxs-lookup"><span data-stu-id="91c04-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="91c04-123">提供一组描述不使用代理的地址的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="91c04-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## 备注  
- `add` 元素将描述 IP 地址或 DNS 服务器名称的正则表达式插入忽略代理服务器的地址的列表中。  
+## <a name="remarks"></a><span data-ttu-id="91c04-124">备注</span><span class="sxs-lookup"><span data-stu-id="91c04-124">Remarks</span></span>  
+ <span data-ttu-id="91c04-125">`add`元素插入正则表达式描述 IP 地址或 DNS 服务器名称的绕过代理服务器的地址的列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
   
- `address` 特性的值应当是描述一组 IP 地址或主机名的一个正则表达式。  
+ <span data-ttu-id="91c04-126">值`address`属性应为正则表达式描述一组 IP 地址或主机名。</span><span class="sxs-lookup"><span data-stu-id="91c04-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- 在为该元素指定正则表达式时应小心。  正则表达式“\[a\-z\]\+\\.contoso\\.com”不仅与 contoso.com 域中的任何主机匹配，而且还与 contoso.com.cpandl.com 域中的任何主机匹配。  若要仅与 contoso.com 域中的主机匹配，应使用定位点（“$”）：“\[a\-z\]\+\\.contoso\\.com$”。  
+ <span data-ttu-id="91c04-127">指定此元素的正则表达式时，应使用警告。</span><span class="sxs-lookup"><span data-stu-id="91c04-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="91c04-128">正则表达式"[a 到 z] +\\.contoso\\.com"匹配任何承载在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。</span><span class="sxs-lookup"><span data-stu-id="91c04-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="91c04-129">若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a 到 z] +\\.contoso\\.com$"。</span><span class="sxs-lookup"><span data-stu-id="91c04-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
   
- 有关正则表达式的更多信息，请参见 [.NET Framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ <span data-ttu-id="91c04-130">有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="91c04-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a><span data-ttu-id="91c04-131">配置文件</span><span class="sxs-lookup"><span data-stu-id="91c04-131">Configuration Files</span></span>  
+ <span data-ttu-id="91c04-132">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="91c04-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 示例  
- 下面的代码示例向忽略列表添加两个地址。  第一个地址忽略 contoso.com 域中所有服务器的代理；第二个地址忽略 IP 地址以 192.168 开头的所有服务器的代理。  
+## <a name="example"></a><span data-ttu-id="91c04-133">示例</span><span class="sxs-lookup"><span data-stu-id="91c04-133">Example</span></span>  
+ <span data-ttu-id="91c04-134">下面的示例将两个地址添加到跳过列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="91c04-135">第一个绕过用于 contoso.com 域; 中的所有服务器的代理第二个绕过用于与 192.168 其 IP 地址开始的所有服务器的代理。</span><span class="sxs-lookup"><span data-stu-id="91c04-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -87,6 +90,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="91c04-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91c04-136">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="91c04-137">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="91c04-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

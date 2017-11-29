@@ -1,79 +1,81 @@
 ---
-title: "&lt;disableFusionUpdatesFromADManager&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableFusionUpdatesFromADManager> 元素"
-  - "disableFusionUpdatesFromADManager 元素"
+title: "&lt;disableFusionUpdatesFromADManager&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disableFusionUpdatesFromADManager element
+- <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d4aa3343e7f3f60bbf6a57340d858c1ef12197bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;disableFusionUpdatesFromADManager&gt; 元素
-指定是否禁用默认行为，此行为允许运行时主机重写应用程序域的配置设置。  
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a><span data-ttu-id="7d5e3-102">&lt;disableFusionUpdatesFromADManager&gt;元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-102">&lt;disableFusionUpdatesFromADManager&gt; Element</span></span>
+<span data-ttu-id="7d5e3-103">指定是否禁用允许运行时主机为应用程序域重写配置设置的默认行为。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-103">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>  
   
-## 语法  
+ <span data-ttu-id="7d5e3-104">\<配置 > 元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-104">\<configuration> Element</span></span>  
+<span data-ttu-id="7d5e3-105">\<运行时 > 元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-105">\<runtime> Element</span></span>  
+<span data-ttu-id="7d5e3-106">\<disableFusionUpdatesFromADManager ></span><span class="sxs-lookup"><span data-stu-id="7d5e3-106">\<disableFusionUpdatesFromADManager></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7d5e3-107">语法</span><span class="sxs-lookup"><span data-stu-id="7d5e3-107">Syntax</span></span>  
+  
+```xml  
 <disableFusionUpdatesFromADManager enabled="0|1"/>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7d5e3-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7d5e3-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="7d5e3-110">特性</span><span class="sxs-lookup"><span data-stu-id="7d5e3-110">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|enabled|必需的特性。<br /><br /> 指定是否禁用用于重写合成设置的默认功能。|  
+|<span data-ttu-id="7d5e3-111">特性</span><span class="sxs-lookup"><span data-stu-id="7d5e3-111">Attribute</span></span>|<span data-ttu-id="7d5e3-112">描述</span><span class="sxs-lookup"><span data-stu-id="7d5e3-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="7d5e3-113">enabled</span><span class="sxs-lookup"><span data-stu-id="7d5e3-113">enabled</span></span>|<span data-ttu-id="7d5e3-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="7d5e3-115">指定是否禁用重写合成设置的默认功能。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-115">Specifies whether the default ability to override Fusion settings is disabled.</span></span>|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a><span data-ttu-id="7d5e3-116">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="7d5e3-116">enabled Attribute</span></span>  
   
-|值|说明|  
-|-------|--------|  
-|0|不禁用用于重写合成设置的功能。  从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]开始，这是默认行为。|  
-|1|禁用用于重写合成设置的功能。  这将恢复为早期版本的 .NET Framework 的行为。|  
+|<span data-ttu-id="7d5e3-117">值</span><span class="sxs-lookup"><span data-stu-id="7d5e3-117">Value</span></span>|<span data-ttu-id="7d5e3-118">描述</span><span class="sxs-lookup"><span data-stu-id="7d5e3-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="7d5e3-119">0</span><span class="sxs-lookup"><span data-stu-id="7d5e3-119">0</span></span>|<span data-ttu-id="7d5e3-120">不要禁用重写合成设置的能力。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-120">Do not disable the ability to override Fusion settings.</span></span> <span data-ttu-id="7d5e3-121">这是默认行为，从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-121">This is the default behavior, starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="7d5e3-122">1</span><span class="sxs-lookup"><span data-stu-id="7d5e3-122">1</span></span>|<span data-ttu-id="7d5e3-123">禁用替代合成设置。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-123">Disable the ability to override Fusion settings.</span></span> <span data-ttu-id="7d5e3-124">这将恢复为.NET Framework 的早期版本的行为。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-124">This reverts to the behavior of earlier versions of the .NET Framework.</span></span>|  
   
-### 子元素  
- 无。  
+### <a name="child-elements"></a><span data-ttu-id="7d5e3-125">子元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-125">Child Elements</span></span>  
+ <span data-ttu-id="7d5e3-126">无。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-126">None.</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="7d5e3-127">父元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-127">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
+|<span data-ttu-id="7d5e3-128">元素</span><span class="sxs-lookup"><span data-stu-id="7d5e3-128">Element</span></span>|<span data-ttu-id="7d5e3-129">描述</span><span class="sxs-lookup"><span data-stu-id="7d5e3-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="7d5e3-130">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="7d5e3-131">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 备注  
- 从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]开始，默认行为是允许 <xref:System.AppDomainManager> 对象通过以下方式重写配置设置：在 <xref:System.AppDomainManager> 的子类中，使用传递给 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName> 方法的实现的 <xref:System.AppDomainSetup> 对象的 <xref:System.AppDomainSetup.ConfigurationFile%2A> 属性或 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 方法。  对于默认应用程序域，您更改的设置会重写由应用程序配置文件指定的设置。  对于其他应用程序域，您更改的设置会重写已传递给 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> 或 <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName> 方法的配置设置。  
+## <a name="remarks"></a><span data-ttu-id="7d5e3-132">备注</span><span class="sxs-lookup"><span data-stu-id="7d5e3-132">Remarks</span></span>  
+ <span data-ttu-id="7d5e3-133">从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，默认行为是允许<xref:System.AppDomainManager>对象重写配置设置，通过使用<xref:System.AppDomainSetup.ConfigurationFile%2A>属性或<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>对象传递给您的实现<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法的子类中<xref:System.AppDomainManager>。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-133">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the default behavior is to allow the <xref:System.AppDomainManager> object to override configuration settings by using the <xref:System.AppDomainSetup.ConfigurationFile%2A> property or the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method of the <xref:System.AppDomainSetup> object that is passed to your implementation of the <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> method, in your subclass of <xref:System.AppDomainManager>.</span></span> <span data-ttu-id="7d5e3-134">对于默认应用程序域中，你更改的设置重写该应用程序配置文件指定的设置。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-134">For the default application domain, the settings you change override the settings that were specified by the application configuration file.</span></span> <span data-ttu-id="7d5e3-135">对于其他应用程序域，它们将覆盖配置设置传递到<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-135">For other application domains, they override the configuration settings that were passed to the <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> method.</span></span>  
   
- 您可以传递新的配置信息或传递 null（在 Visual Basic 中为 `Nothing`）来消除已传入的配置信息。  
+ <span data-ttu-id="7d5e3-136">你可以通过新的配置信息，或传递了 null (`Nothing`在 Visual Basic 中) 以消除中传递的配置信息。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-136">You can either pass new configuration information, or pass null (`Nothing` in Visual Basic) to eliminate configuration information that was passed in.</span></span>  
   
- 不要将配置信息传递给 <xref:System.AppDomainSetup.ConfigurationFile%2A> 属性和 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 方法。  如果将配置信息传递给这二者，则会忽略传递给 <xref:System.AppDomainSetup.ConfigurationFile%2A> 属性的信息，这是因为 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 方法会重写应用程序配置文件中的配置信息。  如果使用 <xref:System.AppDomainSetup.ConfigurationFile%2A> 属性，则可以将 null（在 Visual Basic 中为 `Nothing`）传递给 <xref:System.AppDomainSetup.SetConfigurationBytes%2A> 方法，从而消除在对 <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> 或 <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName> 方法的调用中已指定的任何配置字节。  
+ <span data-ttu-id="7d5e3-137">不要将配置信息传递给这二者<xref:System.AppDomainSetup.ConfigurationFile%2A>属性和<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-137">Do not pass configuration information to both the <xref:System.AppDomainSetup.ConfigurationFile%2A> property and the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method.</span></span> <span data-ttu-id="7d5e3-138">如果你将配置信息传递给这二者，信息将传递给<xref:System.AppDomainSetup.ConfigurationFile%2A>属性被忽略，因为<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法重写应用程序配置文件中的配置信息。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-138">If you pass configuration information to both, the information you pass to the <xref:System.AppDomainSetup.ConfigurationFile%2A> property is ignored, because the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method overrides configuration information from the application configuration file.</span></span> <span data-ttu-id="7d5e3-139">如果你使用<xref:System.AppDomainSetup.ConfigurationFile%2A>属性，你可以传递了 null (`Nothing`在 Visual Basic 中) 到<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法，以消除对的调用中指定任何配置字节<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-139">If you use the <xref:System.AppDomainSetup.ConfigurationFile%2A> property, you can pass null (`Nothing` in Visual Basic) to the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method to eliminate any configuration bytes that were specified in the call to the <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> method.</span></span>  
   
- 除了配置信息之外，您还可以更改传递给 <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName> 方法的实现的 <xref:System.AppDomainSetup> 对象上的以下设置：<xref:System.AppDomainSetup.ApplicationBase%2A>、<xref:System.AppDomainSetup.ApplicationName%2A>、<xref:System.AppDomainSetup.CachePath%2A>、<xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>、<xref:System.AppDomainSetup.DisallowBindingRedirects%2A>、<xref:System.AppDomainSetup.DisallowCodeDownload%2A>、<xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>、<xref:System.AppDomainSetup.DynamicBase%2A>、<xref:System.AppDomainSetup.LoaderOptimization%2A>、<xref:System.AppDomainSetup.PrivateBinPath%2A>、<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>、<xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 和 <xref:System.AppDomainSetup.ShadowCopyFiles%2A>。  
+ <span data-ttu-id="7d5e3-140">除了配置信息，可以更改以下设置，在<xref:System.AppDomainSetup>对象传递给你的实现<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法： <xref:System.AppDomainSetup.ApplicationBase%2A>， <xref:System.AppDomainSetup.ApplicationName%2A>， <xref:System.AppDomainSetup.CachePath%2A>， <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>， <xref:System.AppDomainSetup.DisallowBindingRedirects%2A><xref:System.AppDomainSetup.DisallowCodeDownload%2A>， <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>， <xref:System.AppDomainSetup.DynamicBase%2A>， <xref:System.AppDomainSetup.LoaderOptimization%2A>， <xref:System.AppDomainSetup.PrivateBinPath%2A>， <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>， <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>，和<xref:System.AppDomainSetup.ShadowCopyFiles%2A>。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-140">In addition to configuration information, you can change the following settings on the <xref:System.AppDomainSetup> object that is passed to your implementation of the <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> method: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A>, <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, and <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.</span></span>  
   
- 作为使用 `<disableFusionUpdatesFromADManager>` 元素的替代方法，您可以通过创建注册表设置或通过设置环境变量来禁用默认行为。  在注册表中，在 `HKCU\Software\Microsoft\.NETFramework` 或 `HKLM\Software\Microsoft\.NETFramework` 下创建一个名为 `COMPLUS_disableFusionUpdatesFromADManager` 的 DWORD 值，并将此值设置为 1。  在命令行上，将环境变量 `COMPLUS_disableFusionUpdatesFromADManager` 设置为 1。  
+ <span data-ttu-id="7d5e3-141">作为使用的替代方法`<disableFusionUpdatesFromADManager>`元素，您可以禁用默认行为通过创建注册表设置或通过设置环境变量。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-141">As an alternative to using the `<disableFusionUpdatesFromADManager>` element, you can disable the default behavior by creating a registry setting or by setting an environment variable.</span></span> <span data-ttu-id="7d5e3-142">在注册表中，创建一个名为的 DWORD 值`COMPLUS_disableFusionUpdatesFromADManager`下`HKCU\Software\Microsoft\.NETFramework`或`HKLM\Software\Microsoft\.NETFramework`，并将值设置为 1。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-142">In the registry, create a DWORD value named `COMPLUS_disableFusionUpdatesFromADManager` under `HKCU\Software\Microsoft\.NETFramework` or `HKLM\Software\Microsoft\.NETFramework`, and set the value to 1.</span></span> <span data-ttu-id="7d5e3-143">在命令行设置环境变量`COMPLUS_disableFusionUpdatesFromADManager`为 1。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-143">At the command line, set the environment variable `COMPLUS_disableFusionUpdatesFromADManager` to 1.</span></span>  
   
-## 示例  
- 下面的代码示例演示如何通过使用 `<disableFusionUpdatesFromADManager>` 元素来禁用用于重写合成设置的功能。  
+## <a name="example"></a><span data-ttu-id="7d5e3-144">示例</span><span class="sxs-lookup"><span data-stu-id="7d5e3-144">Example</span></span>  
+ <span data-ttu-id="7d5e3-145">下面的示例演示如何禁用能够通过使用替代合成设置`<disableFusionUpdatesFromADManager>`元素。</span><span class="sxs-lookup"><span data-stu-id="7d5e3-145">The following example shows how to disable the ability to override Fusion settings by using the `<disableFusionUpdatesFromADManager>` element.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableFusionUpdatesFromADManager enabled="1" />  
@@ -81,7 +83,7 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="7d5e3-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d5e3-146">See Also</span></span>  
+ [<span data-ttu-id="7d5e3-147">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="7d5e3-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="7d5e3-148">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="7d5e3-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="7d5e3-149">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="7d5e3-149">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

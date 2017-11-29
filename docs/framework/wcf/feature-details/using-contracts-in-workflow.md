@@ -1,49 +1,52 @@
 ---
-title: "在工作流中使用协定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在工作流中使用协定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1c84483b2ca18d63f20e64a62bb757e244db9b24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在工作流中使用协定
-当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。这些数据表示为数据协定和消息协定；[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和工作流服务均在服务说明中使用数据协定和消息协定定义。服务自身以 WSDL 形式公开元数据，以便描述服务的操作。在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，服务协定和操作协定将定义该框架支持的服务和操作。但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的流程在元数据中公开。  
+# <a name="using-contracts-in-workflow"></a><span data-ttu-id="27425-102">在工作流中使用协定</span><span class="sxs-lookup"><span data-stu-id="27425-102">Using Contracts in Workflow</span></span>
+<span data-ttu-id="27425-103">当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。</span><span class="sxs-lookup"><span data-stu-id="27425-103">When implementing a service, you define a number of contracts that describe the service and the data that it sends and receives.</span></span> <span data-ttu-id="27425-104">这些数据表示为数据协定和消息协定；[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和工作流服务均在服务说明中使用数据协定和消息协定定义。</span><span class="sxs-lookup"><span data-stu-id="27425-104">The data is represented as data contracts and message contracts; both [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and workflow services use data contract and message contract definitions as part of service descriptions.</span></span> <span data-ttu-id="27425-105">服务自身以 WSDL 形式公开元数据，以便描述服务的操作。</span><span class="sxs-lookup"><span data-stu-id="27425-105">The service itself exposes metadata (in the form of WSDL) in order to describe the operations of the service.</span></span> <span data-ttu-id="27425-106">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，服务协定和操作协定将定义该框架支持的服务和操作。</span><span class="sxs-lookup"><span data-stu-id="27425-106">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], service contracts and operation contracts define the service and the operations it supports.</span></span> <span data-ttu-id="27425-107">但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的过程在元数据中公开。</span><span class="sxs-lookup"><span data-stu-id="27425-107">However, in a workflow service, these contracts are part of the business process itself; they are exposed in metadata by a process called contract inference.</span></span>  
   
-## 协定推理  
- 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载工作流服务时，将检查工作流定义，并根据在工作流中找到的消息传递活动集生成协定。具体而言，是使用下面的活动和属性来生成协定：  
+## <a name="contract-inference"></a><span data-ttu-id="27425-108">协定推理</span><span class="sxs-lookup"><span data-stu-id="27425-108">Contract Inference</span></span>  
+ <span data-ttu-id="27425-109">使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载工作流服务时，将检查工作流定义，并根据在工作流中找到的消息传递活动集生成协定。</span><span class="sxs-lookup"><span data-stu-id="27425-109">When a workflow service is hosted using <xref:System.ServiceModel.Activities.WorkflowServiceHost>, the workflow definition is examined and a contract is generated based on the set of messaging activities found in the workflow.</span></span> <span data-ttu-id="27425-110">具体而言，是使用下面的活动和属性来生成协定：</span><span class="sxs-lookup"><span data-stu-id="27425-110">In particular the following activities and properties are used to generate the contract:</span></span>  
   
- <xref:System.ServiceModel.Activities.Receive> 活动  
+ <span data-ttu-id="27425-111"><xref:System.ServiceModel.Activities.Receive> 活动</span><span class="sxs-lookup"><span data-stu-id="27425-111"><xref:System.ServiceModel.Activities.Receive> Activity</span></span>  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  --> `System.ServiceModel.Activities.Receive.OperationContractName`
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.ValueType%2A> --> `System.ServiceModel.Activities.Receive.ValueType`
   
- <xref:System.ServiceModel.Activities.SendReply> 活动  
+ <span data-ttu-id="27425-112"><xref:System.ServiceModel.Activities.SendReply> 活动</span><span class="sxs-lookup"><span data-stu-id="27425-112"><xref:System.ServiceModel.Activities.SendReply> Activity</span></span>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>-->  `System.ServiceModel.Activities.SendReply.ValueType`
   
- <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动  
+ <span data-ttu-id="27425-113"><xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动</span><span class="sxs-lookup"><span data-stu-id="27425-113"><xref:System.ServiceModel.Activities.TransactedReceiveScope> Activity</span></span>  
   
- 协定推理的最终结果是具有与 WCF 服务和操作协定相同的数据结构的服务说明。然后，将使用此信息对工作流服务公开 WSDL。  
+ <span data-ttu-id="27425-114">协定推理的最终结果是具有与 WCF 服务和操作协定相同的数据结构的服务说明。</span><span class="sxs-lookup"><span data-stu-id="27425-114">The end result of contract inference is a description of the service using the same data structures as WCF service and operation contracts.</span></span> <span data-ttu-id="27425-115">然后，将使用此信息对工作流服务公开 WSDL。</span><span class="sxs-lookup"><span data-stu-id="27425-115">This information is then used to expose WSDL for the workflow service.</span></span>  
   
-## 请参阅  
- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)   
- [如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)   
- [如何：创建使用现有服务协定的工作流服务](../../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+## <a name="see-also"></a><span data-ttu-id="27425-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="27425-116">See Also</span></span>  
+ [<span data-ttu-id="27425-117">工作流服务</span><span class="sxs-lookup"><span data-stu-id="27425-117">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="27425-118">消息传递活动</span><span class="sxs-lookup"><span data-stu-id="27425-118">Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
+ [<span data-ttu-id="27425-119">如何： 使用消息传递活动创建工作流服务</span><span class="sxs-lookup"><span data-stu-id="27425-119">How to: Create a Workflow Service with Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [<span data-ttu-id="27425-120">如何：创建使用现有服务协定的工作流服务</span><span class="sxs-lookup"><span data-stu-id="27425-120">How to: Create a workflow service that consumes an existing service contract</span></span>](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

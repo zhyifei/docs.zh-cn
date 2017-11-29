@@ -1,56 +1,59 @@
 ---
-title: "只读依赖项属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "依赖项属性, 只读"
-  - "只读依赖项属性"
+title: "只读依赖项属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], read-only
+- read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9cb4477fe388c294bbd6b87589d5a3108a90d27f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 只读依赖项属性
-本主题介绍只读依赖项属性，包括现有的只读依赖项属性和创建自定义只读依赖项属性的方案和方法。  
+# <a name="read-only-dependency-properties"></a><span data-ttu-id="bcc3a-102">只读依赖项属性</span><span class="sxs-lookup"><span data-stu-id="bcc3a-102">Read-Only Dependency Properties</span></span>
+<span data-ttu-id="bcc3a-103">本主题介绍只读依赖属性，包括现有只读依赖属性、创建自定义只读依赖属性的方案和技术。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-103">This topic describes read-only dependency properties, including existing read-only dependency properties and the scenarios and techniques for creating a custom read-only dependency property.</span></span>  
   
-   
+
   
 <a name="prerequisites"></a>   
-## 必备组件  
- 本主题假定您了解实现依赖项属性的基本方案以及如何将元数据应用到自定义依赖项属性。  有关上下文，请参见[自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="bcc3a-104">先决条件</span><span class="sxs-lookup"><span data-stu-id="bcc3a-104">Prerequisites</span></span>  
+ <span data-ttu-id="bcc3a-105">本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-105">This topic assumes that you understand the basic scenarios of implementing a dependency property, and how metadata is applied to a custom dependency property.</span></span> <span data-ttu-id="bcc3a-106">有关上下文，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-106">See [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) for context.</span></span>  
   
 <a name="existing"></a>   
-## 现有的只读依赖项属性  
- 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 框架中定义的某些依赖项属性为只读。  通常指定只读依赖项属性的原因是：这些属性应该用于状态确定，但是有多种因素影响该状态，从用户界面设计的角度看，仅将属性设置为该状态并不能达到预期的效果。  例如，通过鼠标输入确认，属性 <xref:System.Windows.UIElement.IsMouseOver%2A> 实际上仅为表层状态。  任何通过避开真正的鼠标输入以编程方式设置此值的尝试都将是不可预期的并将导致产生不一致的情况。  
+## <a name="existing-read-only-dependency-properties"></a><span data-ttu-id="bcc3a-107">现有只读依赖属性</span><span class="sxs-lookup"><span data-stu-id="bcc3a-107">Existing Read-Only Dependency Properties</span></span>  
+ <span data-ttu-id="bcc3a-108">在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 框架中定义的某些依赖属性是只读的。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-108">Some of the dependency properties defined in the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework are read-only.</span></span> <span data-ttu-id="bcc3a-109">指定只读依赖属性的一般原因如下：这些属性应该用于状态确定，但是有多种因素影响该状态，从用户界面设计的角度看，仅将属性设置为该状态并不能达到预期的效果。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-109">The typical reason for specifying a read-only dependency property is that these are properties that should be used for state determination, but where that state is influenced by a multitude of factors, but just setting the property to that state isn't desirable from a user interface design perspective.</span></span> <span data-ttu-id="bcc3a-110">例如，属性<xref:System.Windows.UIElement.IsMouseOver%2A>实际上只提供从鼠标输入确定的状态。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-110">For example, the property <xref:System.Windows.UIElement.IsMouseOver%2A> is really just surfacing state as determined from the mouse input.</span></span> <span data-ttu-id="bcc3a-111">任何通过避开实际的鼠标输入以编程方式设置此值的尝试都是不可预期的，并将导致不一致。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-111">Any attempt to set this value programmatically by circumventing the true mouse input would be unpredictable and would cause inconsistency.</span></span>  
   
- 由于不可设置性，只读依赖项属性不适于很多依赖项属性通常为其提供一个解决方案（即：数据绑定，可直接对值、验证、动画和继承样式化）的情形。  尽管具有不可设置性，只读依赖项属性仍有一些其他由属性系统中的依赖项属性支持的功能。  只读依赖项属性仍可以用作样式中的属性触发器，这是其他功能中最为重要的一个。  您无法使用常规的[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性启用触发器，因为该属性必须是依赖项属性。  前面提到的 <xref:System.Windows.UIElement.IsMouseOver%2A> 属性是以下情形的一个极好的示例：对于定义一个控件的样式非常有用；当用户将鼠标放置在某些控件的定义的区域上方时，一些诸如背景、前景或控件内复合元素的类似属性等可视属性将会发生更改。  属性系统固有的失效过程还可以检测并报告只读依赖项属性发生的更改，这实际上是在内部支持属性触发器功能。  
+ <span data-ttu-id="bcc3a-112">由于其不可设置性，只读依赖属性不适用于依赖属性通常为其提供一个解决方案（即：数据绑定，直接样式化为某个值、验证、动画和继承）的多种方案。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-112">By virtue of not being settable, read-only dependency properties aren't appropriate for many of the scenarios for which dependency properties normally offer a solution (namely: data binding, directly stylable to a value, validation, animation, inheritance).</span></span> <span data-ttu-id="bcc3a-113">尽管不可设置，但只读依赖属性仍具有一些由属性系统中的依赖属性支持的其他功能。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-113">Despite not being settable, read-only dependency properties still have some of the additional capabilities supported by dependency properties in the property system.</span></span> <span data-ttu-id="bcc3a-114">只读依赖属性仍可以用作样式中的属性触发器，这是其他功能中最重要的功能。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-114">The most important remaining capability is that the read-only dependency property can still be used as a property trigger in a style.</span></span> <span data-ttu-id="bcc3a-115">无法使用常规的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性启用触发器；必须使用依赖属性才行。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-115">You can't enable triggers with a normal [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property; it needs to be a dependency property.</span></span> <span data-ttu-id="bcc3a-116">前面提到<xref:System.Windows.UIElement.IsMouseOver%2A>属性是一个完美它可能是非常有用，其中一些定义控件的样式的方案的示例如背景、 前景或类似的属性内复合元素的可见属性当用户将鼠标放置在你的控制某些定义区域上方，控件将更改。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-116">The aforementioned <xref:System.Windows.UIElement.IsMouseOver%2A> property is a perfect example of a scenario where it might be quite useful to define a style for a control, where some visible property such as a background, foreground, or similar properties of composited elements within the control will change when the user places a mouse over some defined region of your control.</span></span> <span data-ttu-id="bcc3a-117">只读依赖属性中的更改还可以由属性系统的固有失效进程检测并报告，这实际上是在内部支持属性触发器功能。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-117">Changes in a read-only dependency property can also be detected and reported by the property system's inherent invalidation processes, and this in fact supports the property trigger functionality internally.</span></span>  
   
 <a name="new"></a>   
-## 创建自定义只读依赖项属性  
- 请确保已阅读上一节中有关只读依赖项属性对很多典型的依赖项属性情形不起作用的原因。  如果您有适当的方案，则可能希望创建自己的只读依赖项属性。  
+## <a name="creating-custom-read-only-dependency-properties"></a><span data-ttu-id="bcc3a-118">创建自定义只读依赖属性</span><span class="sxs-lookup"><span data-stu-id="bcc3a-118">Creating Custom Read-Only Dependency Properties</span></span>  
+ <span data-ttu-id="bcc3a-119">请务必阅读上一节中有关只读依赖属性为何不适用于许多典型依赖属性方案的内容。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-119">Make sure to read the section above regarding why read-only dependency properties won't work for many typical dependency-property scenarios.</span></span> <span data-ttu-id="bcc3a-120">但是如果有适当的方案，可能需要创建自己的只读依赖属性。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-120">But if you have an appropriate scenario, you may wish to create your own read-only dependency property.</span></span>  
   
- 创建只读依赖项属性的大部分过程与[自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[实现依赖项属性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)主题中介绍的内容相同。  其中有三个重要的差异：  
+ <span data-ttu-id="bcc3a-121">创建只读依赖属性的大多数过程与[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[实现依赖属性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)主题中介绍的过程相同。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-121">Much of the process of creating a read-only dependency property is the same as is described in the [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Implement a Dependency Property](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) topics.</span></span> <span data-ttu-id="bcc3a-122">但有三个重要的差异：</span><span class="sxs-lookup"><span data-stu-id="bcc3a-122">There are three important differences:</span></span>  
   
--   注册属性时，调用 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> 方法而不是常规的 <xref:System.Windows.DependencyProperty.Register%2A> 方法进行属性注册。  
+-   <span data-ttu-id="bcc3a-123">注册你的属性，当调用<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法而不是普通<xref:System.Windows.DependencyProperty.Register%2A>注册属性的方法。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-123">When registering your property, call the <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> method instead of the normal <xref:System.Windows.DependencyProperty.Register%2A> method for property registration.</span></span>  
   
--   当实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装”属性时，请确保该包装也没有设置的实现，以使公开的公共包装的只读状态中不存在不一致现象。  
+-   <span data-ttu-id="bcc3a-124">实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性时，请确保该包装器也没有设置的实现，以便在公开的公共包装器的只读状态中不存在不一致现象。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-124">When implementing the [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "wrapper" property, make sure that the wrapper too doesn't have a set implementation, so that there is no inconsistency in read-only state for the public wrapper you expose.</span></span>  
   
--   只读注册返回的对象是 <xref:System.Windows.DependencyPropertyKey>，而不是 <xref:System.Windows.DependencyProperty>。  您仍应将此字段作为成员存储，但是通常不将其设置为此类型的公共成员。  
+-   <span data-ttu-id="bcc3a-125">只读注册所返回的对象是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-125">The object returned by the read-only registration is <xref:System.Windows.DependencyPropertyKey> rather than <xref:System.Windows.DependencyProperty>.</span></span> <span data-ttu-id="bcc3a-126">仍应将该字段存储为成员，但通常不将其设置为类型的公共成员。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-126">You should still store this field as a member but typically you would not make it a public member of the type.</span></span>  
   
- 当然，无论是用私有字段还是值支持只读依赖项属性，使用任何您决定的逻辑都可以是完全可写的。  但是，无论是在初始状态下，还是在作为运行时逻辑的一部分时，设置该属性最简单的方法是使用属性系统的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避开该属性系统和直接设置私有支持字段。  尤其是当存在接受类型 <xref:System.Windows.DependencyPropertyKey> 的参数的 <xref:System.Windows.DependencyObject.SetValue%2A> 的签名的情况时更是如此。  在应用程序逻辑中以编程方式设置此值的方式和位置都将影响可能希望如何设置首次注册依赖项属性时创建的 <xref:System.Windows.DependencyPropertyKey> 上的访问。  如果在可以使此逻辑变为私有的类中处理它，或者需要在程序集（可以在内部设置该逻辑）的其他部分设置该逻辑，  则一种方法是调用关联事件的类事件处理程序内的 <xref:System.Windows.DependencyObject.SetValue%2A>，该关联事件通知类实例：存储的属性值需要进行更改。  另一种方法是通过在注册期间将成对的 <xref:System.Windows.PropertyChangedCallback> 和 <xref:System.Windows.CoerceValueCallback> 回调用作这些属性元数据的一部分来将依赖项属性关联在一起。  
+ <span data-ttu-id="bcc3a-127">无论你具有什么专用字段或值，可使用你确定的任何逻辑来完全编写对只读依赖属性的支持。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-127">Whatever private field or value you have backing your read-only dependency property can of course be fully writable using whatever logic you decide.</span></span> <span data-ttu-id="bcc3a-128">但是，在最初或运行时逻辑过程中设置属性的最简单方法是使用属性系统的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避开属性系统并直接设置专有支持字段。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-128">However, the most straightforward way to set the property either initially or as part of runtime logic is to use the property system's [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], rather than circumventing the property system and setting the private backing field directly.</span></span> <span data-ttu-id="bcc3a-129">具体而言，没有的签名<xref:System.Windows.DependencyObject.SetValue%2A>接受类型的参数<xref:System.Windows.DependencyPropertyKey>。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-129">In particular, there is a signature of <xref:System.Windows.DependencyObject.SetValue%2A> that accepts a parameter of type <xref:System.Windows.DependencyPropertyKey>.</span></span> <span data-ttu-id="bcc3a-130">如何以及在何处您设置此值以编程方式应用程序逻辑中将会影响如何，你可能希望将访问权限设置上<xref:System.Windows.DependencyPropertyKey>创建时首次注册依赖属性。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-130">How and where you set this value programmatically within your application logic will affect how you may wish to set access on the <xref:System.Windows.DependencyPropertyKey> created when you first registered the dependency property.</span></span> <span data-ttu-id="bcc3a-131">如果完全在专有类中处理此逻辑，或者如果要求从程序集的其他部分对其进行设置，可以在内部进行设置。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-131">If you handle this logic all within the class you could make it private, or if you require it to be set from other portions of the assembly you might set it internal.</span></span> <span data-ttu-id="bcc3a-132">一种方法是调用<xref:System.Windows.DependencyObject.SetValue%2A>类事件通知的存储的属性值需要更改的类实例的相关事件的处理程序内。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-132">One approach is to call <xref:System.Windows.DependencyObject.SetValue%2A> within a class event handler of a relevant event that informs a class instance that the stored property value needs to be changed.</span></span> <span data-ttu-id="bcc3a-133">另一种方法是将依赖项属性绑定在一起使用配对<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>作为在注册过程中的这些属性的元数据一部分的回调。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-133">Another approach is to tie dependency properties together by using paired <xref:System.Windows.PropertyChangedCallback> and <xref:System.Windows.CoerceValueCallback> callbacks as part of those properties' metadata during registration.</span></span>  
   
- 由于 <xref:System.Windows.DependencyPropertyKey> 是私有的，属性系统不会将其传播到代码外，因此只读依赖项属性相对于读写依赖项属性的确具有更好的设置安全。  对于读写依赖项属性，由于标识字段为显式或隐式公开，所以这种属性可广泛设置。  有关详细内容，请参见[依赖项属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
+ <span data-ttu-id="bcc3a-134">因为<xref:System.Windows.DependencyPropertyKey>是私有的并且不会传播由外部代码的属性系统安全更好地设置比读写依赖项属性具有只读依赖属性。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-134">Because the <xref:System.Windows.DependencyPropertyKey> is private, and is not propagated by the property system outside of your code, a read-only dependency property does have better setting security than a read-write dependency property.</span></span> <span data-ttu-id="bcc3a-135">对于读写依赖属性，标识字段是显式或隐式公用的，因此该属性可广泛设置。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-135">For a read-write dependency property, the identifying field is explicitly or implicitly public and thus the property is widely settable.</span></span> <span data-ttu-id="bcc3a-136">有关更多详细信息，请参阅[依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。</span><span class="sxs-lookup"><span data-stu-id="bcc3a-136">For more specifics, see [Dependency Property Security](../../../../docs/framework/wpf/advanced/dependency-property-security.md).</span></span>  
   
-## 请参阅  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="bcc3a-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bcc3a-137">See Also</span></span>  
+ [<span data-ttu-id="bcc3a-138">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="bcc3a-138">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="bcc3a-139">自定义依赖属性</span><span class="sxs-lookup"><span data-stu-id="bcc3a-139">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="bcc3a-140">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="bcc3a-140">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

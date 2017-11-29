@@ -1,41 +1,45 @@
 ---
-title: "在托管 HTML 文档对象模型中访问未公开成员 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "托管 HTML DOM, 访问未公开成员"
-  - "未公开成员"
+title: "在托管 HTML 文档对象模型中访问未公开成员"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- unexposed members
+- managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 在托管 HTML 文档对象模型中访问未公开成员
-托管 HTML 文档对象模型 \(DOM\) 包含一个名为 <xref:System.Windows.Forms.HtmlElement> 的类，该类公开所有 HTML 元素所共同拥有的属性、方法和事件。  不过在某些情况下，您需要访问托管接口不直接公开的成员。  本主题将分析两种访问未公开成员的方法，包括在网页内部定义的 [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] 和 VBScript 函数。  
+# <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a><span data-ttu-id="bc2ac-102">在托管 HTML 文档对象模型中访问未公开成员</span><span class="sxs-lookup"><span data-stu-id="bc2ac-102">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="bc2ac-103">托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和所有 HTML 元素都具有共同的事件。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-103">The managed HTML Document Object Model (DOM) contains a class called <xref:System.Windows.Forms.HtmlElement> that exposes the properties, methods, and events that all HTML elements have in common.</span></span> <span data-ttu-id="bc2ac-104">有时，但是，你将需要访问托管的接口未直接公开的成员。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-104">Sometimes, however, you will need to access members that the managed interface does not directly expose.</span></span> <span data-ttu-id="bc2ac-105">本主题检查两种方式访问未公开的成员，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和 VBScript 函数定义内网页。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-105">This topic examines two ways for accessing unexposed members, including [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] and VBScript functions defined inside of a Web page.</span></span>  
   
-## 通过托管接口访问未公开的成员  
- <xref:System.Windows.Forms.HtmlDocument> 和 <xref:System.Windows.Forms.HtmlElement> 提供了四种可以访问未公开成员的方式。  下表显示了各种类型及其相应的方法。  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a><span data-ttu-id="bc2ac-106">通过托管接口访问未公开的成员</span><span class="sxs-lookup"><span data-stu-id="bc2ac-106">Accessing Unexposed Members through Managed Interfaces</span></span>  
+ <span data-ttu-id="bc2ac-107"><xref:System.Windows.Forms.HtmlDocument>和<xref:System.Windows.Forms.HtmlElement>提供四个启用对未公开成员的访问的方法。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-107"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> provide four methods that enable access to unexposed members.</span></span> <span data-ttu-id="bc2ac-108">下表显示类型和其相应的方法。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-108">The following table shows the types and their corresponding methods.</span></span>  
   
-|成员类型|方法|  
-|----------|--------|  
-|属性 \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
-|方法|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
-|事件 \(<xref:System.Windows.Forms.HtmlDocument>\)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
-|事件 \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
-|事件 \(<xref:System.Windows.Forms.HtmlWindow>\)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
+|<span data-ttu-id="bc2ac-109">成员类型</span><span class="sxs-lookup"><span data-stu-id="bc2ac-109">Member Type</span></span>|<span data-ttu-id="bc2ac-110">方法</span><span class="sxs-lookup"><span data-stu-id="bc2ac-110">Method(s)</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="bc2ac-111">属性 (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="bc2ac-111">Properties (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
+|<span data-ttu-id="bc2ac-112">方法</span><span class="sxs-lookup"><span data-stu-id="bc2ac-112">Methods</span></span>|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
+|<span data-ttu-id="bc2ac-113">事件 (<xref:System.Windows.Forms.HtmlDocument>)</span><span class="sxs-lookup"><span data-stu-id="bc2ac-113">Events (<xref:System.Windows.Forms.HtmlDocument>)</span></span>|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
+|<span data-ttu-id="bc2ac-114">事件 (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="bc2ac-114">Events (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
+|<span data-ttu-id="bc2ac-115">事件 (<xref:System.Windows.Forms.HtmlWindow>)</span><span class="sxs-lookup"><span data-stu-id="bc2ac-115">Events (<xref:System.Windows.Forms.HtmlWindow>)</span></span>|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- 使用这些方法时，假设您有一个具有基础类型恰好合适的元素。  假设您要侦听 HTML 页上的 `FORM` 元素的 `Submit` 事件，以便可以在用户向服务器提交 `FORM` 的值之前先对这些值进行某些预处理。  理想情况下，如果可以控制 HTML，则可以将 `FORM` 定义为拥有唯一的 `ID` 特性。  
+ <span data-ttu-id="bc2ac-116">当你使用这些方法时，假定你有正确的基础类型的元素。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-116">When you use these methods, it is assumed that you have an element of the correct underlying type.</span></span> <span data-ttu-id="bc2ac-117">假设你想要侦听`Submit`事件`FORM`上 HTML 元素页上，因此，你可以在执行某些预处理`FORM`的值之前用户将其提交到服务器。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-117">Suppose that you want to listen to the `Submit` event of a `FORM` element on an HTML page, so that you can perform some pre-processing on the `FORM`'s values before the user submits them to the server.</span></span> <span data-ttu-id="bc2ac-118">理想情况下，如果你可以控制 HTML，则可以定义`FORM`以具有一个唯一`ID`属性。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-118">Ideally, if you have control over the HTML, you would define the `FORM` to have a unique `ID` attribute.</span></span>  
   
 ```  
 <HTML>  
@@ -53,29 +57,29 @@ caps.handback.revision: 10
 </HTML>  
 ```  
   
- 将此页加载到 <xref:System.Windows.Forms.WebBrowser> 控件后，可以将 `form1` 作为参数使用 <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> 方法在运行时检索 `FORM`。  
+ <span data-ttu-id="bc2ac-119">加载到此页后<xref:System.Windows.Forms.WebBrowser>控件，你可以使用<xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>方法来检索`FORM`在运行的时使用`form1`作为自变量。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-119">After you load this page into the <xref:System.Windows.Forms.WebBrowser> control, you can use the <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> method to retrieve the `FORM` at run time using `form1` as the argument.</span></span>  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## 访问非托管接口  
- 您还可以使用由每个 DOM 类公开的非托管组件对象模型 \(COM\) 接口来访问托管 HTML DOM 上的未公开成员。  如果必须多次调用未公开成员，或者未公开成员返回不是由托管 HTML DOM 包装的其他非托管接口，建议使用此方式。  
+## <a name="accessing-unmanaged-interfaces"></a><span data-ttu-id="bc2ac-120">访问非托管的接口</span><span class="sxs-lookup"><span data-stu-id="bc2ac-120">Accessing Unmanaged Interfaces</span></span>  
+ <span data-ttu-id="bc2ac-121">你可以使用由每个 DOM 类公开的非托管的组件对象模型 (COM) 接口来访问托管 HTML DOM 上的未公开的成员。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-121">You can also access unexposed members on the managed HTML DOM by using the unmanaged Component Object Model (COM) interfaces exposed by each DOM class.</span></span> <span data-ttu-id="bc2ac-122">这被建议如果您需要进行多次调用未公开成员，或者如果未公开的成员返回未包装的托管 HTML dom。 其他非托管的接口</span><span class="sxs-lookup"><span data-stu-id="bc2ac-122">This is recommended if you have to make several calls against unexposed members, or if the unexposed members return other unmanaged interfaces not wrapped by the managed HTML DOM.</span></span>  
   
- 下表显示了通过托管 HTML DOM 公开的所有非托管接口。  单击每个链接可以获取其用法及代码示例的解释。  
+ <span data-ttu-id="bc2ac-123">下表显示所有托管 HTML dom。 通过公开的非托管接口</span><span class="sxs-lookup"><span data-stu-id="bc2ac-123">The following table shows all of the unmanaged interfaces exposed through the managed HTML DOM.</span></span> <span data-ttu-id="bc2ac-124">单击每个链接了解其使用情况和有关示例代码的说明。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-124">Click on each link for an explanation of its usage and for example code.</span></span>  
   
-|类型|非托管接口|  
-|--------|-----------|  
+|<span data-ttu-id="bc2ac-125">类型</span><span class="sxs-lookup"><span data-stu-id="bc2ac-125">Type</span></span>|<span data-ttu-id="bc2ac-126">非托管的接口</span><span class="sxs-lookup"><span data-stu-id="bc2ac-126">Unmanaged Interface</span></span>|  
+|----------|-------------------------|  
 |<xref:System.Windows.Forms.HtmlDocument>|<xref:System.Windows.Forms.HtmlDocument.DomDocument%2A>|  
 |<xref:System.Windows.Forms.HtmlElement>|<xref:System.Windows.Forms.HtmlElement.DomElement%2A>|  
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- 使用 COM 接口的最简便方法将添加对非托管 HTML DOM 库 \(mshtml.dll\) 从应用程序，不过，这是不受支持。  有关更多信息，请参见 [知识库第 934368](http://support.microsoft.com/kb/934368)。  
+ <span data-ttu-id="bc2ac-127">使用 COM 接口的最简单方法是添加到非托管 HTML DOM 库 (MSHTML.dll) 的引用从应用程序，尽管这是不受支持。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-127">The easiest way to use the COM interfaces is to add a reference to the unmanaged HTML DOM library (MSHTML.dll) from your application, although this is unsupported.</span></span> <span data-ttu-id="bc2ac-128">有关详细信息，请参阅[知识库文章 934368](http://support.microsoft.com/kb/934368)。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-128">For more information, see [Knowledge Base Article 934368](http://support.microsoft.com/kb/934368).</span></span>  
   
-## 访问 Script 函数  
- 通过使用脚本语言（如 [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] 或 VBScript），HTML 页可以定义一个或多个函数。  这些函数均放置在此页中的 `SCRIPT` 页内，并且可以按需运行或响应 DOM 中的事件。  
+## <a name="accessing-script-functions"></a><span data-ttu-id="bc2ac-129">访问脚本函数</span><span class="sxs-lookup"><span data-stu-id="bc2ac-129">Accessing Script Functions</span></span>  
+ <span data-ttu-id="bc2ac-130">HTML 页可以定义一个或多个函数，通过使用一种脚本语言，如[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]或 VBScript。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-130">An HTML page can define one or more functions by using a scripting language such as [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] or VBScript.</span></span> <span data-ttu-id="bc2ac-131">这些函数位于内`SCRIPT`页在页中，并可对 DOM 按需或响应事件中运行</span><span class="sxs-lookup"><span data-stu-id="bc2ac-131">These functions are placed inside of a `SCRIPT` page in the page, and can be run on demand or in response to an event on the DOM.</span></span>  
   
- 您可以使用 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> 方法调用在 HTML 页中定义的任何脚本函数。  如果此脚本方法返回一个 HTML 元素，则可以使用强制转换将此结果转换为 <xref:System.Windows.Forms.HtmlElement>。  有关详细信息及代码示例，请参见 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
+ <span data-ttu-id="bc2ac-132">你可以调用任何脚本函数定义在 HTML 页使用<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-132">You can call any script functions you define in an HTML page using the <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> method.</span></span> <span data-ttu-id="bc2ac-133">如果脚本方法返回的 HTML 元素，你可以使用强制转换将转换到此返回结果<xref:System.Windows.Forms.HtmlElement>。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-133">If the script method returns an HTML element, you can use a cast to convert this return result to an <xref:System.Windows.Forms.HtmlElement>.</span></span> <span data-ttu-id="bc2ac-134">有关详细信息和示例代码，请参阅<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。</span><span class="sxs-lookup"><span data-stu-id="bc2ac-134">For details and example code, see <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.</span></span>  
   
-## 请参阅  
- [使用托管 HTML 文档对象模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="bc2ac-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc2ac-135">See Also</span></span>  
+ [<span data-ttu-id="bc2ac-136">使用托管 HTML 文档对象模型</span><span class="sxs-lookup"><span data-stu-id="bc2ac-136">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

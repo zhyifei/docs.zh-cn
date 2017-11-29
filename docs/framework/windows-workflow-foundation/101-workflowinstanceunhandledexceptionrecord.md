@@ -1,49 +1,53 @@
 ---
-title: "101 - WorkflowInstanceUnhandledExceptionRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 101 - WorkflowInstanceUnhandledExceptionRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab7d50a0-5347-4390-8445-1def4dfdff6a
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0347bf20b17c964763fc2a9a8e1094cdb01586de
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 101 - WorkflowInstanceUnhandledExceptionRecord
-## 属性  
+# <a name="101---workflowinstanceunhandledexceptionrecord"></a><span data-ttu-id="5434a-102">101 - WorkflowInstanceUnhandledExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="5434a-102">101 - WorkflowInstanceUnhandledExceptionRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="5434a-103">属性</span><span class="sxs-lookup"><span data-stu-id="5434a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|101|  
-|关键字|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|级别|错误|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="5434a-104">Id</span><span class="sxs-lookup"><span data-stu-id="5434a-104">Id</span></span>|<span data-ttu-id="5434a-105">101</span><span class="sxs-lookup"><span data-stu-id="5434a-105">101</span></span>|  
+|<span data-ttu-id="5434a-106">关键字</span><span class="sxs-lookup"><span data-stu-id="5434a-106">Keywords</span></span>|<span data-ttu-id="5434a-107">EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="5434a-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="5434a-108">级别</span><span class="sxs-lookup"><span data-stu-id="5434a-108">Level</span></span>|<span data-ttu-id="5434a-109">错误</span><span class="sxs-lookup"><span data-stu-id="5434a-109">Error</span></span>|  
+|<span data-ttu-id="5434a-110">通道</span><span class="sxs-lookup"><span data-stu-id="5434a-110">Channel</span></span>|<span data-ttu-id="5434a-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="5434a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 说明  
- 当工作流实例发出 WorkflowInstanceUnhandledExceptionRecord 时，ETW 跟踪参与者将发出此事件。  
+## <a name="description"></a><span data-ttu-id="5434a-112">描述</span><span class="sxs-lookup"><span data-stu-id="5434a-112">Description</span></span>  
+ <span data-ttu-id="5434a-113">当工作流实例发出 WorkflowInstanceUnhandledExceptionRecord 时，ETW 跟踪参与者将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="5434a-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## 消息  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, SourceName \= %5, SourceId \= %6, SourceInstanceId \= %7, SourceTypeName\=%8, Exception\=%9, Annotations\= %10, ProfileName \= %11  
+## <a name="message"></a><span data-ttu-id="5434a-114">消息</span><span class="sxs-lookup"><span data-stu-id="5434a-114">Message</span></span>  
+ <span data-ttu-id="5434a-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11</span><span class="sxs-lookup"><span data-stu-id="5434a-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="5434a-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="5434a-116">Details</span></span>  
   
-|数据项名称|数据项类型|说明|  
-|-----------|-----------|--------|  
-|InstanceId|xs:GUID|工作流的实例 ID|  
-|RecordNumber|xs:long|发出的记录的序列号|  
-|EventTime|xs:dateTime|发出该事件时的 UTC 时间|  
-|ActivityDefinitionId|xs:string|工作流中根活动的名称|  
-|SourceName|xs:string|导致 unhandledException 的出错源活动的名称|  
-|SourceId|xs:string|出错源活动的活动 ID|  
-|SourceInstanceId|xs:string|出错源活动的活动实例 ID|  
-|SourceTypeName|xs:string|导致 unhandledException 的出错源活动类型名称|  
-|Exception|xs:string|未经处理的异常的异常详细信息|  
-|Annotations|xs:string|已添加到此事件中的批注。这些值存储在一个 xml 元素中，格式为 \<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果未指定任何批注，则该字符串包含 \<items\/\>。ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。如果事件的大小超出 ETW 限制，则通过丢弃批注并将批注值替换为 \<items\>...\<\/items\> 来截断事件。|  
-|ProfileName|xs:string|导致发出此事件的跟踪配置文件的名称|  
-|HostReference|xs:string|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。此字段的格式定义为“网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;服务名称”，示例：“默认网站\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService”|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="5434a-117">数据项名称</span><span class="sxs-lookup"><span data-stu-id="5434a-117">Data Item Name</span></span>|<span data-ttu-id="5434a-118">数据项类型</span><span class="sxs-lookup"><span data-stu-id="5434a-118">Data Item Type</span></span>|<span data-ttu-id="5434a-119">描述</span><span class="sxs-lookup"><span data-stu-id="5434a-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="5434a-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="5434a-120">InstanceId</span></span>|<span data-ttu-id="5434a-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="5434a-121">xs:GUID</span></span>|<span data-ttu-id="5434a-122">工作流的实例 ID</span><span class="sxs-lookup"><span data-stu-id="5434a-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="5434a-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="5434a-123">RecordNumber</span></span>|<span data-ttu-id="5434a-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="5434a-124">xs:long</span></span>|<span data-ttu-id="5434a-125">发出的记录的序列号</span><span class="sxs-lookup"><span data-stu-id="5434a-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="5434a-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="5434a-126">EventTime</span></span>|<span data-ttu-id="5434a-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="5434a-127">xs:dateTime</span></span>|<span data-ttu-id="5434a-128">发出该事件时的 UTC 时间</span><span class="sxs-lookup"><span data-stu-id="5434a-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="5434a-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="5434a-129">ActivityDefinitionId</span></span>|<span data-ttu-id="5434a-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-130">xs:string</span></span>|<span data-ttu-id="5434a-131">工作流中根活动的名称</span><span class="sxs-lookup"><span data-stu-id="5434a-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="5434a-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="5434a-132">SourceName</span></span>|<span data-ttu-id="5434a-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-133">xs:string</span></span>|<span data-ttu-id="5434a-134">导致 unhandledException 的出错源活动的名称</span><span class="sxs-lookup"><span data-stu-id="5434a-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="5434a-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="5434a-135">SourceId</span></span>|<span data-ttu-id="5434a-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-136">xs:string</span></span>|<span data-ttu-id="5434a-137">出错源活动的活动 ID</span><span class="sxs-lookup"><span data-stu-id="5434a-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="5434a-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="5434a-138">SourceInstanceId</span></span>|<span data-ttu-id="5434a-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-139">xs:string</span></span>|<span data-ttu-id="5434a-140">出错源活动的活动实例 ID</span><span class="sxs-lookup"><span data-stu-id="5434a-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="5434a-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="5434a-141">SourceTypeName</span></span>|<span data-ttu-id="5434a-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-142">xs:string</span></span>|<span data-ttu-id="5434a-143">导致 unhandledException 的出错源活动类型名称</span><span class="sxs-lookup"><span data-stu-id="5434a-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="5434a-144">例外</span><span class="sxs-lookup"><span data-stu-id="5434a-144">Exception</span></span>|<span data-ttu-id="5434a-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-145">xs:string</span></span>|<span data-ttu-id="5434a-146">未经处理的异常的异常详细信息</span><span class="sxs-lookup"><span data-stu-id="5434a-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="5434a-147">批注</span><span class="sxs-lookup"><span data-stu-id="5434a-147">Annotations</span></span>|<span data-ttu-id="5434a-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-148">xs:string</span></span>|<span data-ttu-id="5434a-149">已添加到此事件中的批注。</span><span class="sxs-lookup"><span data-stu-id="5434a-149">The annotations that were added to this event.</span></span>  <span data-ttu-id="5434a-150">这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="annotationName"type ="> annotationValue\</项 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="5434a-150">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="5434a-151">如果不指定任何批注，则该字符串包含\<项 / >。</span><span class="sxs-lookup"><span data-stu-id="5434a-151">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="5434a-152">ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。</span><span class="sxs-lookup"><span data-stu-id="5434a-152">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="5434a-153">如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="5434a-153">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="5434a-154">ProfileName</span><span class="sxs-lookup"><span data-stu-id="5434a-154">ProfileName</span></span>|<span data-ttu-id="5434a-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-155">xs:string</span></span>|<span data-ttu-id="5434a-156">导致发出此事件的跟踪配置文件的名称</span><span class="sxs-lookup"><span data-stu-id="5434a-156">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="5434a-157">HostReference</span><span class="sxs-lookup"><span data-stu-id="5434a-157">HostReference</span></span>|<span data-ttu-id="5434a-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-158">xs:string</span></span>|<span data-ttu-id="5434a-159">对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。</span><span class="sxs-lookup"><span data-stu-id="5434a-159">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="5434a-160">格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName 示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService</span><span class="sxs-lookup"><span data-stu-id="5434a-160">It's format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="5434a-161">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5434a-161">AppDomain</span></span>|<span data-ttu-id="5434a-162">xs:string</span><span class="sxs-lookup"><span data-stu-id="5434a-162">xs:string</span></span>|<span data-ttu-id="5434a-163">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="5434a-163">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

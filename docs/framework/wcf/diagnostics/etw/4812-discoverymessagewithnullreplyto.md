@@ -1,35 +1,38 @@
 ---
-title: "4812 - DiscoveryMessageWithNullReplyTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4812 - DiscoveryMessageWithNullReplyTo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a40e6b7e-c2a6-4186-b1d6-c9560f24a959
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dad079e4cd2a781d9a8fe7dea388f44400549a63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 4812 - DiscoveryMessageWithNullReplyTo
-## 属性  
+# <a name="4812---discoverymessagewithnullreplyto"></a><span data-ttu-id="83977-102">4812 - DiscoveryMessageWithNullReplyTo</span><span class="sxs-lookup"><span data-stu-id="83977-102">4812 - DiscoveryMessageWithNullReplyTo</span></span>
+## <a name="properties"></a><span data-ttu-id="83977-103">属性</span><span class="sxs-lookup"><span data-stu-id="83977-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|4812|  
-|关键字|发现|  
-|级别|警告|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/调试|  
+|<span data-ttu-id="83977-104">ID</span><span class="sxs-lookup"><span data-stu-id="83977-104">ID</span></span>|<span data-ttu-id="83977-105">4812</span><span class="sxs-lookup"><span data-stu-id="83977-105">4812</span></span>|  
+|<span data-ttu-id="83977-106">关键字</span><span class="sxs-lookup"><span data-stu-id="83977-106">Keywords</span></span>|<span data-ttu-id="83977-107">发现</span><span class="sxs-lookup"><span data-stu-id="83977-107">Discovery</span></span>|  
+|<span data-ttu-id="83977-108">级别</span><span class="sxs-lookup"><span data-stu-id="83977-108">Level</span></span>|<span data-ttu-id="83977-109">警告</span><span class="sxs-lookup"><span data-stu-id="83977-109">Warning</span></span>|  
+|<span data-ttu-id="83977-110">通道</span><span class="sxs-lookup"><span data-stu-id="83977-110">Channel</span></span>|<span data-ttu-id="83977-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="83977-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 当发现消息由于 DiscoveryClient 没有 ReplyTo 地址而被丢弃时发出此事件。  
+## <a name="description"></a><span data-ttu-id="83977-112">描述</span><span class="sxs-lookup"><span data-stu-id="83977-112">Description</span></span>  
+ <span data-ttu-id="83977-113">当发现消息由于 DiscoveryClient 没有 ReplyTo 地址而被丢弃时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="83977-113">This event is emitted when the discovery message was dropped by the DiscoveryClient because it did not have a ReplyTo address.</span></span>  
   
-## 消息  
- messageId 为“%1”的发现请求消息由于没有 ReplyTo 地址而被丢弃。  
+## <a name="message"></a><span data-ttu-id="83977-114">消息</span><span class="sxs-lookup"><span data-stu-id="83977-114">Message</span></span>  
+ <span data-ttu-id="83977-115">messageId 为“%1”的发现请求消息由于没有 ReplyTo 地址而被丢弃。</span><span class="sxs-lookup"><span data-stu-id="83977-115">A discovery request message with messageId='%1' was dropped because it did not have a ReplyTo address.</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="83977-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="83977-116">Details</span></span>

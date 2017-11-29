@@ -1,44 +1,45 @@
 ---
-title: "构造并绘制轨迹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绘制路径"
-  - "示例 [Windows 窗体], 绘制路径"
-  - "图形路径, 创建"
-  - "图形路径, 绘图"
-  - "路径, 绘图"
+title: "构造并绘制轨迹"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- paths [Windows Forms], drawing
+- drawing paths [Windows Forms]
+- graphics paths [Windows Forms], creating
+- graphics paths [Windows Forms], drawing
+- examples [Windows Forms], drawing paths
 ms.assetid: f16ec921-56cf-46d1-9741-d7316ad06b23
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 构造并绘制轨迹
-轨迹由一系列可作为单个单元来操作和绘制的图形基元（直线、矩形、曲线、文本等）组成。  轨迹可划分为开放式或闭合式“图形”。  一个图形中可包含几个基元。  
+# <a name="constructing-and-drawing-paths"></a><span data-ttu-id="c5b0c-102">构造并绘制轨迹</span><span class="sxs-lookup"><span data-stu-id="c5b0c-102">Constructing and Drawing Paths</span></span>
+<span data-ttu-id="c5b0c-103">路径是可操作并作为单个单元绘制图形基元 （线条、 矩形、 曲线、 文本和 like） 的序列。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-103">A path is a sequence of graphics primitives (lines, rectangles, curves, text, and the like) that can be manipulated and drawn as a single unit.</span></span> <span data-ttu-id="c5b0c-104">路径可以划分为*数字*，是打开还是关闭。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-104">A path can be divided into *figures* that are either open or closed.</span></span> <span data-ttu-id="c5b0c-105">图可以包含多个基元。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-105">A figure can contain several primitives.</span></span>  
   
- 可通过调用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawPath%2A> 方法绘制轨迹；调用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.FillPath%2A> 方法填充轨迹。  
+ <span data-ttu-id="c5b0c-106">你可以通过调用绘制路径<xref:System.Drawing.Graphics.DrawPath%2A>方法<xref:System.Drawing.Graphics>类，并且你可以通过调用填充路径<xref:System.Drawing.Graphics.FillPath%2A>方法<xref:System.Drawing.Graphics>类。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-106">You can draw a path by calling the <xref:System.Drawing.Graphics.DrawPath%2A> method of the <xref:System.Drawing.Graphics> class, and you can fill a path by calling the <xref:System.Drawing.Graphics.FillPath%2A> method of the <xref:System.Drawing.Graphics> class.</span></span>  
   
-## 本节内容  
- [如何：使用线条、曲线和形状创建图形](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
- 演示如何使用 <xref:System.Drawing.Drawing2D.GraphicsPath> 创建图形。  
+## <a name="in-this-section"></a><span data-ttu-id="c5b0c-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="c5b0c-107">In This Section</span></span>  
+ [<span data-ttu-id="c5b0c-108">如何：通过直线、曲线和形状创建图</span><span class="sxs-lookup"><span data-stu-id="c5b0c-108">How to: Create Figures from Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
+ <span data-ttu-id="c5b0c-109">演示如何使用<xref:System.Drawing.Drawing2D.GraphicsPath>创建图表。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-109">Shows how to use a <xref:System.Drawing.Drawing2D.GraphicsPath> to create figures.</span></span>  
   
- [如何：填充开放图形](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
- 说明如何填充 <xref:System.Drawing.Drawing2D.GraphicsPath>。  
+ [<span data-ttu-id="c5b0c-110">如何：填充开放图形</span><span class="sxs-lookup"><span data-stu-id="c5b0c-110">How to: Fill Open Figures</span></span>](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
+ <span data-ttu-id="c5b0c-111">说明如何填充<xref:System.Drawing.Drawing2D.GraphicsPath>。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-111">Explains how to fill a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
   
- [如何：将曲线路径展平为直线](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
- 演示如何将 <xref:System.Drawing.Drawing2D.GraphicsPath> 拉直。  
+ [<span data-ttu-id="c5b0c-112">如何：将曲线路径展平成直线</span><span class="sxs-lookup"><span data-stu-id="c5b0c-112">How to: Flatten a Curved Path into a Line</span></span>](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
+ <span data-ttu-id="c5b0c-113">演示如何以平展<xref:System.Drawing.Drawing2D.GraphicsPath>。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-113">Shows how to flatten a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="c5b0c-114">参考</span><span class="sxs-lookup"><span data-stu-id="c5b0c-114">Reference</span></span>  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
- 描述此类并包含指向其所有成员的链接。
+ <span data-ttu-id="c5b0c-115">对此类进行描述，并包含其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c5b0c-115">Describes this class and contains links to all of its members.</span></span>

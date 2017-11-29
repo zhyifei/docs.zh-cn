@@ -1,33 +1,36 @@
 ---
-title: "如何：对元素或画笔的不透明度进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, Opacity 属性"
-  - "不透明度, 动画处理"
+title: "如何：对元素或画笔的不透明度进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- opacity [WPF], animating
+- animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：对元素或画笔的不透明度进行动画处理
-若要使框架元素淡入和淡出视野，可以对其 <xref:System.Windows.UIElement.Opacity%2A> 属性进行动画处理，或者对用于绘制该框架元素的 <xref:System.Windows.Media.Brush>（画笔）的 <xref:System.Windows.Media.Brush.Opacity%2A> 属性进行动画处理。  对元素的不透明度进行动画处理，可以令该元素及其子元素淡入和淡出视野，不过，如果对用于绘制元素的画笔进行动画处理，则您可以选择使元素的哪部分淡入淡出。  例如，您可以对用于绘制按钮背景的画笔的不透明度进行动画处理。  这会导致按钮的背景淡入和淡出视野，同时使其文本完全不透明。  
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a><span data-ttu-id="c5132-102">如何：对元素或画笔的不透明度进行动画处理</span><span class="sxs-lookup"><span data-stu-id="c5132-102">How to: Animate the Opacity of an Element or Brush</span></span>
+<span data-ttu-id="c5132-103">若要使淡入淡出的视图内外的框架元素，可以动态显示其<xref:System.Windows.UIElement.Opacity%2A>属性也可以进行动画处理<xref:System.Windows.Media.Brush.Opacity%2A>属性<xref:System.Windows.Media.Brush>（或画笔） 用来绘制它。</span><span class="sxs-lookup"><span data-stu-id="c5132-103">To make a framework element fade in and out of view, you can animate its <xref:System.Windows.UIElement.Opacity%2A> property or you can animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Brush> (or brushes) used to paint it.</span></span> <span data-ttu-id="c5132-104">对进行动画处理的元素的不透明度能并其子淡入和移出视图中，但对进行动画处理的画笔用于绘制元素使您可以更选择性有关元素的哪些部分淡。</span><span class="sxs-lookup"><span data-stu-id="c5132-104">Animating the element's opacity makes it and its children fade in and out of view, but animating the brush used to paint the element enables you to be more selective about which portion of the element fades.</span></span> <span data-ttu-id="c5132-105">例如，您可以创建动画用于绘制按钮的背景的画笔的不透明度。</span><span class="sxs-lookup"><span data-stu-id="c5132-105">For example, you could animate the opacity of a brush used to paint a button's background.</span></span> <span data-ttu-id="c5132-106">这将导致该按钮的背景以淡入淡出视图，同时使其文本完全不透明。</span><span class="sxs-lookup"><span data-stu-id="c5132-106">This would cause the button's background to fade in and out of view, while leaving its text fully opaque.</span></span>  
   
 > [!NOTE]
->  对 <xref:System.Windows.Media.Brush> 的 <xref:System.Windows.Media.Brush.Opacity%2A> 进行动画处理在性能上要优于对元素的 <xref:System.Windows.UIElement.Opacity%2A> 属性进行动画处理。  
+>  <span data-ttu-id="c5132-107">对进行动画处理<xref:System.Windows.Media.Brush.Opacity%2A>的<xref:System.Windows.Media.Brush>基础上进行动画处理提供了性能优势<xref:System.Windows.UIElement.Opacity%2A>元素的属性。</span><span class="sxs-lookup"><span data-stu-id="c5132-107">Animating the <xref:System.Windows.Media.Brush.Opacity%2A> of a <xref:System.Windows.Media.Brush> provides performance benefits over animating the <xref:System.Windows.UIElement.Opacity%2A> property of an element.</span></span>  
   
- 在下面的示例中，将对两个按钮进行动画处理，使其淡入和淡出视野。  第一个 <xref:System.Windows.Controls.Button> 的 Opacity 在 5 秒的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 内以动画形式从 `1.0` 过渡到 `0.0`。  第二个按钮也进行了动画处理，不过是对用于绘制其 <xref:System.Windows.Controls.Control.Background%2A> 的 SolidColorBrush 的 Opacity 进行动画处理，而不是对整个按钮的 Opacity 进行动画处理。  当此示例运行时，第一个按钮会整个地淡入和淡出视野，而第二个按钮只有背景部分淡入和淡出视野。  其文本和边框则保持完全不透明状态。  
+ <span data-ttu-id="c5132-108">在下面的示例中，两个按钮进行动画处理，以便它们淡入淡出视野。</span><span class="sxs-lookup"><span data-stu-id="c5132-108">In the following example, two buttons are animated so that they fade in and out of view.</span></span> <span data-ttu-id="c5132-109">第一个的不透明度<xref:System.Windows.Controls.Button>以动画形式从`1.0`到`0.0`通过<xref:System.Windows.Media.Animation.Timeline.Duration%2A>5 秒。</span><span class="sxs-lookup"><span data-stu-id="c5132-109">The Opacity of the first <xref:System.Windows.Controls.Button> is animated from `1.0` to `0.0` over a <xref:System.Windows.Media.Animation.Timeline.Duration%2A> of five seconds.</span></span> <span data-ttu-id="c5132-110">第二个按钮还进行动画处理，但 SolidColorBrush 的不透明度用于绘制其<xref:System.Windows.Controls.Control.Background%2A>动画处理的而不是整个按钮的不透明度。</span><span class="sxs-lookup"><span data-stu-id="c5132-110">The second button is also animated, but the Opacity of the SolidColorBrush used to paint its <xref:System.Windows.Controls.Control.Background%2A> is animated rather than the opacity of the entire button.</span></span> <span data-ttu-id="c5132-111">当运行示例时，第一个按钮完全淡入淡出视图中，仅第二个按钮的背景淡入淡出视图时。</span><span class="sxs-lookup"><span data-stu-id="c5132-111">When the example is run, the first button completely fades in and out of view, while only the background of the second button fades in and out of view.</span></span> <span data-ttu-id="c5132-112">其文本和边框保持完全不透明。</span><span class="sxs-lookup"><span data-stu-id="c5132-112">Its text and border remain fully opaque.</span></span>  
   
-## 示例  
- [!code-xml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
+## <a name="example"></a><span data-ttu-id="c5132-113">示例</span><span class="sxs-lookup"><span data-stu-id="c5132-113">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- 此示例省略了代码。  完整的示例还演示如何对 <xref:System.Windows.Media.LinearGradientBrush> 内的 <xref:System.Windows.Media.Color> 的不透明度进行动画处理。  有关完整示例，请参见 [Animating the Opacity of an Element Sample](http://go.microsoft.com/fwlink/?LinkID=159968)（对元素的不透明度进行动画处理示例）。
+ <span data-ttu-id="c5132-114">此示例中，代码已被省略。</span><span class="sxs-lookup"><span data-stu-id="c5132-114">Code has been omitted from this example.</span></span> <span data-ttu-id="c5132-115">完整示例还演示如何进行动画处理的不透明度<xref:System.Windows.Media.Color>内<xref:System.Windows.Media.LinearGradientBrush>。</span><span class="sxs-lookup"><span data-stu-id="c5132-115">The full sample also shows how to animate the opacity of a <xref:System.Windows.Media.Color> within a <xref:System.Windows.Media.LinearGradientBrush>.</span></span>  <span data-ttu-id="c5132-116">有关完整示例，请参阅[进行动画处理的元素示例不透明度](http://go.microsoft.com/fwlink/?LinkID=159968)。</span><span class="sxs-lookup"><span data-stu-id="c5132-116">For the full sample, see the [Animating the Opacity of an Element Sample](http://go.microsoft.com/fwlink/?LinkID=159968).</span></span>

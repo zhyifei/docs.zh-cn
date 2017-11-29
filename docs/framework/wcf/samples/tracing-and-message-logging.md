@@ -1,36 +1,35 @@
 ---
-title: "跟踪和消息日志记录 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "跟踪和日志记录"
+title: "跟踪和消息日志记录"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 53
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 53
+caps.latest.revision: "53"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a73c6e544b7aae003a525c29743d68db18a54515
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 跟踪和消息日志记录
-本示例演示如何启用跟踪和消息日志记录。生成的跟踪和消息日志可以使用[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 查看。此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+# <a name="tracing-and-message-logging"></a><span data-ttu-id="59186-102">跟踪和消息日志记录</span><span class="sxs-lookup"><span data-stu-id="59186-102">Tracing and Message Logging</span></span>
+<span data-ttu-id="59186-103">本示例演示如何启用跟踪和消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="59186-103">This sample demonstrates how to enable tracing and message logging.</span></span> <span data-ttu-id="59186-104">生成的跟踪和消息日志使用查看[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-104">The resulting traces and message logs are viewed using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="59186-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="59186-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="59186-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## 跟踪  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 <xref:System.Diagnostics> 命名空间中定义的跟踪机制。在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。每个源均由名称进行标识。跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可通过设置服务模型跟踪源 `switchValue` 并将下面的代码添加到服务或客户端的配置文件中来实现此目的：  
+## <a name="tracing"></a><span data-ttu-id="59186-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="59186-107">Tracing</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="59186-108"> 使用 <xref:System.Diagnostics> 命名空间中定义的跟踪机制。</span><span class="sxs-lookup"><span data-stu-id="59186-108"> uses the tracing mechanism defined in the <xref:System.Diagnostics> namespace.</span></span> <span data-ttu-id="59186-109">在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。</span><span class="sxs-lookup"><span data-stu-id="59186-109">In this tracing model, trace data is produced by trace sources that applications implement.</span></span> <span data-ttu-id="59186-110">每个源均由名称进行标识。</span><span class="sxs-lookup"><span data-stu-id="59186-110">Each source is identified by a name.</span></span> <span data-ttu-id="59186-111">跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。</span><span class="sxs-lookup"><span data-stu-id="59186-111">Trace consumers create trace listeners for the trace sources for which they want to retrieve information.</span></span> <span data-ttu-id="59186-112">若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。</span><span class="sxs-lookup"><span data-stu-id="59186-112">To receive trace data, you must create a listener for the trace source.</span></span> <span data-ttu-id="59186-113">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可通过设置服务模型跟踪源 `switchValue` 并将下面的代码添加到服务或客户端的配置文件中来实现此目的：</span><span class="sxs-lookup"><span data-stu-id="59186-113">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], this can be done by adding the following code to either the service’s or client’s configuration file by setting the Service Model trace source `switchValue`:</span></span>  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
       <source name="System.ServiceModel" switchValue="Information,ActivityTracing"  
@@ -53,27 +52,27 @@ caps.handback.revision: 53
 </system.diagnostics>  
 ```  
   
- 有关跟踪源的更多信息，请参见[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题中的“跟踪源”一节。  
+ <span data-ttu-id="59186-114">有关跟踪源的详细信息，请参阅中的跟踪源节[配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主题。</span><span class="sxs-lookup"><span data-stu-id="59186-114">For more information about trace sources, see the Trace Source section in the [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) topic.</span></span>  
   
-## 活动跟踪和传播  
- 在客户端和服务的 `system.ServiceModel` 跟踪源中启用 `ActivityTracing` 并将 `propagateActivity` 设置为 `true` 可在逻辑处理单元（活动）内、在终结点内的多个活动（通过活动传输）之间和在跨多个终结点的多个活动（通过活动 ID 传播）之间关联跟踪。  
+## <a name="activity-tracing-and-propagation"></a><span data-ttu-id="59186-115">活动跟踪和传播</span><span class="sxs-lookup"><span data-stu-id="59186-115">Activity Tracing and Propagation</span></span>  
+ <span data-ttu-id="59186-116">具有`ActivityTracing`启用和`propagateActivity`设置为`true`中`system.ServiceModel`客户端和服务的跟踪源跨终结点 （中的活动提供的逻辑单元的处理 （活动） 中的跟踪相关性通过活动传输），以及跨跨越多个终结点 （通过活动 ID 传播） 的活动。</span><span class="sxs-lookup"><span data-stu-id="59186-116">Having `ActivityTracing` enabled and `propagateActivity` set to `true` in the `system.ServiceModel` trace sources for both the client and service provide correlation of traces within logical units of processing (activities), across activities within endpoints (through activity transfers), and across activities spanning multiple endpoints (through activity ID propagation).</span></span>  
   
- 这三种机制（活动、传输和传播）可帮助您使用服务跟踪查看器工具更快地找到错误的根源。有关更多信息，请参见[使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ <span data-ttu-id="59186-117">这三种机制（活动、传输和传播）可帮助您使用服务跟踪查看器工具更快地找到错误的根本原因。</span><span class="sxs-lookup"><span data-stu-id="59186-117">These three mechanisms (activities, transfers, and propagation) can help you locate the root cause of an error more quickly using the Service Trace Viewer tool.</span></span> <span data-ttu-id="59186-118">有关详细信息，请参阅[使用服务跟踪查看器查看相关跟踪和故障排除](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-118">For more information, see [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).</span></span>  
   
- 通过创建用户定义的活动跟踪可以扩展 ServiceModel 提供的跟踪。用户定义的活动跟踪允许用户创建跟踪活动，以便执行下列操作：  
+ <span data-ttu-id="59186-119">通过创建用户定义的活动跟踪可以扩展 ServiceModel 提供的跟踪。</span><span class="sxs-lookup"><span data-stu-id="59186-119">It is possible to extend the tracing that is provided by the ServiceModel by creating user-defined activity traces.</span></span> <span data-ttu-id="59186-120">用户定义的活动跟踪允许用户创建跟踪活动，以便执行下列操作：</span><span class="sxs-lookup"><span data-stu-id="59186-120">User-defined activity tracing allows the user to create trace activities to:</span></span>  
   
--   将跟踪分组到逻辑工作单元。  
+-   <span data-ttu-id="59186-121">将跟踪分组到逻辑工作单元。</span><span class="sxs-lookup"><span data-stu-id="59186-121">Group traces into logical units of work.</span></span>  
   
--   通过传输和传播关联活动。  
+-   <span data-ttu-id="59186-122">通过传输和传播关联活动。</span><span class="sxs-lookup"><span data-stu-id="59186-122">Correlate activities through transfers and propagation.</span></span>  
   
--   降低 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 跟踪的性能成本（例如，日志文件的磁盘空间成本）。  
+-   <span data-ttu-id="59186-123">降低 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 跟踪的性能成本（例如，日志文件的磁盘空间成本）。</span><span class="sxs-lookup"><span data-stu-id="59186-123">Lessen the performance cost of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tracing (for example, the disk space cost of a log file).</span></span>  
   
- 有关用户定义的活动跟踪的更多信息，请参见[扩展跟踪](../../../../docs/framework/wcf/samples/extending-tracing.md)示例。  
+ <span data-ttu-id="59186-124">有关用户定义的活动跟踪的详细信息，请参阅[扩展跟踪](../../../../docs/framework/wcf/samples/extending-tracing.md)示例。</span><span class="sxs-lookup"><span data-stu-id="59186-124">For more information about user-defined activity trace, please see the [Extending Tracing](../../../../docs/framework/wcf/samples/extending-tracing.md) sample.</span></span>  
   
-## 消息日志记录  
- 可以在任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的客户端和服务上启用消息日志记录。若要启动消息日志记录，必须将下面的代码添加到客户端或服务：  
+## <a name="message-logging"></a><span data-ttu-id="59186-125">消息日志记录</span><span class="sxs-lookup"><span data-stu-id="59186-125">Message Logging</span></span>  
+ <span data-ttu-id="59186-126">可以在任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的客户端和服务上启用消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="59186-126">Message logging can be enabled both on the client and service of any [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application.</span></span> <span data-ttu-id="59186-127">若要启动消息日志记录，必须将下面的代码添加到客户端或服务：</span><span class="sxs-lookup"><span data-stu-id="59186-127">To enable message logging, you must add the following code to either the client or service:</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <diagnostics>  
@@ -89,11 +88,11 @@ caps.handback.revision: 53
 </configuration>  
 ```  
   
- 记录消息时，跟踪类型取决于是在客户端还是在服务器上进行跟踪。例如，发送到客户端的“Add”消息将在客户端的“TransportWrite”类别下跟踪，而同一消息将在服务的“TransportRead”类别下跟踪。  
+ <span data-ttu-id="59186-128">记录消息时，跟踪类型取决于是在客户端还是在服务器上进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="59186-128">When a message is recorded, the trace type depends on whether it is being traced at the client or the server.</span></span> <span data-ttu-id="59186-129">例如，发送到客户端的“Add”消息将在客户端的“TransportWrite”类别下跟踪，而同一消息将在服务的“TransportRead”类别下跟踪。</span><span class="sxs-lookup"><span data-stu-id="59186-129">For example, an "Add" message that is sent to a client is traced under the "TransportWrite" category at the client, whereas the same message is traced under the "TransportRead" category at the service.</span></span>  
   
- 通过将下面的代码添加到客户端的 App.config 文件或服务的 Web.config 文件的 <xref:System.Diagnostics> 节，可以配置跟踪侦听器：  
+ <span data-ttu-id="59186-130">通过将下面的代码添加到客户端的 App.config 文件或服务的 Web.config 文件的 <xref:System.Diagnostics> 节，可以配置跟踪侦听器：</span><span class="sxs-lookup"><span data-stu-id="59186-130">Configure the trace listener by adding the following code to the <xref:System.Diagnostics> section of the client's App.config file or the service's Web.config file:</span></span>  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
       <source name="System.ServiceModel" switchValue="Information,ActivityTracing"  
@@ -116,32 +115,32 @@ caps.handback.revision: 53
   </system.diagnostics>  
 ```  
   
- 消息将以 XML 格式记录在配置文件中指定的目标目录中。  
+ <span data-ttu-id="59186-131">消息将以 XML 格式记录在配置文件中指定的目标目录中。</span><span class="sxs-lookup"><span data-stu-id="59186-131">Messages are logged in XML format in the target directory specified in the configuration file.</span></span>  
   
 > [!NOTE]
->  如果开始时未创建日志目录，则不会创建跟踪文件。请确保 C:\\logs\\ 目录存在，或在侦听器配置中指定一个替换日志记录目录。有关更多信息，请参见本文档最后的初始安装说明。  
+>  <span data-ttu-id="59186-132">如果开始时未创建日志目录，则不会创建跟踪文件。</span><span class="sxs-lookup"><span data-stu-id="59186-132">Trace files are not created without initially creating the log directory.</span></span> <span data-ttu-id="59186-133">请确保 C:\logs\ 目录存在，或在侦听器配置中指定一个替换日志记录目录。</span><span class="sxs-lookup"><span data-stu-id="59186-133">Make sure that the directory C:\logs\ exists, or specify an alternate logging directory in the listener configuration.</span></span> <span data-ttu-id="59186-134">有关更多信息，请参见本文档最后的初始安装说明。</span><span class="sxs-lookup"><span data-stu-id="59186-134">See the initial setup instructions at the end of this document for more information.</span></span>  
   
- 有关消息日志记录的更多信息，请参见[配置消息日志记录](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。  
+ <span data-ttu-id="59186-135">有关消息日志记录的详细信息，请参阅[配置消息日志记录](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。</span><span class="sxs-lookup"><span data-stu-id="59186-135">For more information about message logging, see the [Configuring Message Logging](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) topic.</span></span>  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="59186-136">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="59186-136">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="59186-137">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-137">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  运行“跟踪和消息日志记录”示例之前，创建 C:\\logs\\ 目录以便服务向其中写入 .svclog 文件。此目录的名称在配置文件中定义为要记录的跟踪和消息的路径，并可以进行更改。向用户授予对日志目录的网络服务写权限。  
+2.  <span data-ttu-id="59186-138">运行“跟踪和消息日志记录”示例之前，创建 C:\logs\ 目录以便服务向其中写入 .svclog 文件。</span><span class="sxs-lookup"><span data-stu-id="59186-138">Before running the Tracing and Message Logging sample, create the directory C:\logs\ for the service to write the .svclog files to.</span></span> <span data-ttu-id="59186-139">此目录的名称在配置文件中定义为要记录的跟踪和消息的路径，并可以进行更改。</span><span class="sxs-lookup"><span data-stu-id="59186-139">The name of this directory is defined in the configuration file as the path for the traces and messages to be logged and can be changed.</span></span> <span data-ttu-id="59186-140">向用户授予对日志目录的网络服务写权限。</span><span class="sxs-lookup"><span data-stu-id="59186-140">Give the user Network Service write access to the logs directory.</span></span>  
   
-3.  若要生成 C\#、C\+\+ 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="59186-141">若要生成解决方案的 C#、 c + + 或 Visual Basic.NET 版本，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-141">To build the C#, C++, or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  <span data-ttu-id="59186-142">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="59186-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="59186-143">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="59186-143">The samples may already be installed on your computer.</span></span> <span data-ttu-id="59186-144">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="59186-144">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="59186-145">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="59186-145">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="59186-146">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="59186-146">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## 请参阅  
- [跟踪](../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="59186-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="59186-147">See Also</span></span>  
+ [<span data-ttu-id="59186-148">跟踪</span><span class="sxs-lookup"><span data-stu-id="59186-148">Tracing</span></span>](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="59186-149">AppFabric 监视示例</span><span class="sxs-lookup"><span data-stu-id="59186-149">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

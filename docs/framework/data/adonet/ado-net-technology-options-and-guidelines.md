@@ -1,52 +1,55 @@
 ---
-title: "ADO.NET 技术选项和指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO.NET 技术选项和准则"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET 技术选项和指南
-ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。  此平台包括 ADO.NET 实体框架和相关技术。  
+# <a name="adonet-technology-options-and-guidelines"></a><span data-ttu-id="e51f5-102">ADO.NET 技术选项和准则</span><span class="sxs-lookup"><span data-stu-id="e51f5-102">ADO.NET Technology Options and Guidelines</span></span>
+<span data-ttu-id="e51f5-103">ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。</span><span class="sxs-lookup"><span data-stu-id="e51f5-103">The ADO.NET Data Platform is a multi-release strategy to decrease the amount of coding and maintenance required for developers by enabling them to program against conceptual entity data models.</span></span> <span data-ttu-id="e51f5-104">此平台包括 ADO.NET 实体框架和相关技术。</span><span class="sxs-lookup"><span data-stu-id="e51f5-104">This platform includes the ADO.NET Entity Framework and related technologies.</span></span>  
   
-## Entity Framework  
- ADO.NET 实体框架专门用于让开发人员能够通过针对概念应用程序模型进行编程（而不是直接针对关系存储架构进行编程）来创建数据访问应用程序。  这样做的目的是减少面向数据的应用程序所需的编码和维护工作。  有关详细信息，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。  
+## <a name="entity-framework"></a><span data-ttu-id="e51f5-105">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e51f5-105">Entity Framework</span></span>  
+ <span data-ttu-id="e51f5-106">ADO.NET 实体框架专门用于让开发人员能够通过针对概念应用程序模型进行编程（而不是直接针对关系存储架构进行编程）来创建数据访问应用程序。</span><span class="sxs-lookup"><span data-stu-id="e51f5-106">The ADO.NET Entity Framework is designed to enable developers to create data access applications by programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> <span data-ttu-id="e51f5-107">这样做的目的是减少面向数据的应用程序所需的编码和维护工作。</span><span class="sxs-lookup"><span data-stu-id="e51f5-107">The goal is to decrease the amount of code and maintenance required for data-oriented applications.</span></span> <span data-ttu-id="e51f5-108">有关详细信息，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-108">For more information, see [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span></span>  
   
-### 实体数据模型 \(EDM\)  
- 实体数据模型 \(EDM\) 是一种将应用程序数据定义为多组实体和关系的设计规范。  此模型中的数据支持跨应用程序边界的数据关系映射和数据可编程性。  
+### <a name="entity-data-model-edm"></a><span data-ttu-id="e51f5-109">实体数据模型 (EDM)</span><span class="sxs-lookup"><span data-stu-id="e51f5-109">Entity Data Model (EDM)</span></span>  
+ <span data-ttu-id="e51f5-110">实体数据模型 (EDM) 是一种将应用程序数据定义为多组实体和关系的设计规范。</span><span class="sxs-lookup"><span data-stu-id="e51f5-110">An Entity Data Model (EDM) is a design specification that defines application data as sets of entities and relationships.</span></span> <span data-ttu-id="e51f5-111">此模型中的数据支持跨应用程序边界的数据关系映射和数据可编程性。</span><span class="sxs-lookup"><span data-stu-id="e51f5-111">Data in this model supports object-relational mapping and data programmability across application boundaries.</span></span>  
   
-### Object Services — 对象服务  
- 对象服务允许程序员通过一组公共语言运行库 \(CLR\) 类与概念模型进行交互。  这些类既可以从概念模型自动生成，也可以单独开发以反映概念模型的结构。  对象服务还为实体框架提供基础结构支持，包括状态管理、更改跟踪、标识解析、加载和导航关系、将对象更改传播到数据库修改和实体 SQL 查询生成支持等服务。  有关详细信息，请参阅[Object Services Overview \(Entity Framework\)](http://msdn.microsoft.com/zh-cn/43014cf9-c9cb-4538-bfbb-197820b60038)。  
+### <a name="object-services"></a><span data-ttu-id="e51f5-112">Object Services — 对象服务</span><span class="sxs-lookup"><span data-stu-id="e51f5-112">Object Services</span></span>  
+ <span data-ttu-id="e51f5-113">对象服务允许程序员通过一组公共语言运行库 (CLR) 类与概念模型进行交互。</span><span class="sxs-lookup"><span data-stu-id="e51f5-113">Object Services allows programmers to interact with the conceptual model through a set of common language runtime (CLR) classes.</span></span> <span data-ttu-id="e51f5-114">这些类既可以从概念模型自动生成，也可以单独开发以反映概念模型的结构。</span><span class="sxs-lookup"><span data-stu-id="e51f5-114">These classes can be automatically generated from the conceptual model or can be developed independently to reflect the structure of the conceptual model.</span></span> <span data-ttu-id="e51f5-115">对象服务还为实体框架提供基础结构支持，包括状态管理、更改跟踪、标识解析、加载和导航关系、将对象更改传播到数据库修改和实体 SQL 查询生成支持等服务。</span><span class="sxs-lookup"><span data-stu-id="e51f5-115">Object Services also provides infrastructure support for the Entity Framework, including services such as state management, change tracking, identity resolution, loading and navigating relationships, propagating object changes to database modifications, and query building support for Entity SQL.</span></span> <span data-ttu-id="e51f5-116">有关详细信息，请参阅[对象服务概述 （实体框架）](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-116">For more information, see [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).</span></span>  
   
-### LINQ to Entities  
- LINQ to Entities 是一种语言集成查询 \(LINQ\) 实现，它允许开发人员通过使用 LINQ 表达式和 LINQ 标准查询运算符，根据实体框架对象上下文创建强类型查询。  LINQ to Entities 使开发人员能够针对一个概念模型开展工作，在此模型中，可在 Microsoft SQL Server 和第三方数据库之间非常灵活地进行对象关系映射。  有关详细信息，请参阅[LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+### <a name="linq-to-entities"></a><span data-ttu-id="e51f5-117">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="e51f5-117">LINQ to Entities</span></span>  
+ <span data-ttu-id="e51f5-118">LINQ to Entities 是一种语言集成查询 (LINQ) 实现，它允许开发人员通过使用 LINQ 表达式和 LINQ 标准查询运算符，根据实体框架对象上下文创建强类型查询。</span><span class="sxs-lookup"><span data-stu-id="e51f5-118">LINQ to Entities is a language-integrated query (LINQ) implementation that allows developers to create strongly-typed queries against the Entity Framework object context by using LINQ expressions and LINQ standard query operators.</span></span> <span data-ttu-id="e51f5-119">LINQ to Entities 使开发人员能够针对一个概念模型开展工作，在此模型中，可在 Microsoft SQL Server 和第三方数据库之间非常灵活地进行对象关系映射。</span><span class="sxs-lookup"><span data-stu-id="e51f5-119">LINQ to Entities allows developers to work against a conceptual model with a very flexible object-relational mapping across Microsoft SQL Server and third-party databases.</span></span> <span data-ttu-id="e51f5-120">有关详细信息，请参阅[LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-120">For more information, see [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).</span></span>  
   
-### Entity SQL  
- 实体 SQL 是一种基于文本的查询语言，专门用于与实体数据模型进行交互。  实体 SQL 是一种 SQL 变体，其中包含针对更高级别的建模概念的查询构造，例如继承、复杂类型和显式关系。  开发人员也可以直接将实体 SQL 与对象服务一起使用。  有关详细信息，请参阅[Entity SQL 语言](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。  
+### <a name="entity-sql"></a><span data-ttu-id="e51f5-121">Entity SQL</span><span class="sxs-lookup"><span data-stu-id="e51f5-121">Entity SQL</span></span>  
+ <span data-ttu-id="e51f5-122">实体 SQL 是一种基于文本的查询语言，专门用于与实体数据模型进行交互。</span><span class="sxs-lookup"><span data-stu-id="e51f5-122">Entity SQL is a text-based query language designed to interact with an Entity Data Model.</span></span> <span data-ttu-id="e51f5-123">实体 SQL 是一种 SQL 变体，其中包含针对更高级别的建模概念的查询构造，例如继承、复杂类型和显式关系。</span><span class="sxs-lookup"><span data-stu-id="e51f5-123">Entity SQL is an SQL dialect that contains constructs for querying in terms of higher-level modeling concepts, such as inheritance, complex types, and explicit relationships.</span></span> <span data-ttu-id="e51f5-124">开发人员也可以直接将实体 SQL 与对象服务一起使用。</span><span class="sxs-lookup"><span data-stu-id="e51f5-124">Developers can also use Entity SQL directly with Object Services.</span></span> <span data-ttu-id="e51f5-125">有关详细信息，请参阅[Entity SQL 语言](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-125">For more information, see [Entity SQL Language](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).</span></span>  
   
-### EntityClient  
- EntityClient 是一种用于与实体数据模型交互的新的 .NET Framework 数据提供程序。  EntityClient 遵循 .NET Framework 数据提供程序模式，公开可返回 <xref:System.Data.EntityClient.EntityDataReader> 的 <xref:System.Data.EntityClient.EntityConnection> 对象和 <xref:System.Data.EntityClient.EntityCommand> 对象。  EntityClient 与实体 SQL 语言一起使用，可提供与特定于存储的数据提供程序的灵活映射。  有关详细信息，请参阅[EntityClient and Entity SQL](http://msdn.microsoft.com/zh-cn/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
+### <a name="entityclient"></a><span data-ttu-id="e51f5-126">EntityClient</span><span class="sxs-lookup"><span data-stu-id="e51f5-126">EntityClient</span></span>  
+ <span data-ttu-id="e51f5-127">EntityClient 是一种用于与实体数据模型交互的新的 .NET Framework 数据提供程序。</span><span class="sxs-lookup"><span data-stu-id="e51f5-127">EntityClient is a new .NET Framework data provider used for interacting with an Entity Data Model.</span></span> <span data-ttu-id="e51f5-128">EntityClient 遵循 .NET Framework 数据提供程序模式，公开可返回 <xref:System.Data.EntityClient.EntityConnection> 的 <xref:System.Data.EntityClient.EntityCommand> 对象和 <xref:System.Data.EntityClient.EntityDataReader> 对象。</span><span class="sxs-lookup"><span data-stu-id="e51f5-128">EntityClient follows the .NET Framework data provider pattern of exposing <xref:System.Data.EntityClient.EntityConnection> and <xref:System.Data.EntityClient.EntityCommand> objects that return an <xref:System.Data.EntityClient.EntityDataReader>.</span></span> <span data-ttu-id="e51f5-129">EntityClient 与实体 SQL 语言一起使用，可提供与特定于存储的数据提供程序的灵活映射。</span><span class="sxs-lookup"><span data-stu-id="e51f5-129">EntityClient works with the Entity SQL language, providing flexible mapping to storage-specific data providers.</span></span> <span data-ttu-id="e51f5-130">有关详细信息，请参阅 [EntityClient and Entity SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-130">For more information, see [EntityClient and Entity SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).</span></span>  
   
-### 实体数据模型工具  
- 实体框架提供了命令行工具、向导和设计器来帮助生成 EDM 应用程序。  EntityDataSource 控件支持基于 EDM 的数据绑定方案。  EntityDataSource 控件的编程接口与 Visual Studio 中的其他数据源控件类似。  有关详细信息，请参阅[ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/zh-cn/91076853-0881-421b-837a-f582f36be527)。  
+### <a name="entity-data-model-tools"></a><span data-ttu-id="e51f5-131">实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="e51f5-131">Entity Data Model Tools</span></span>  
+ <span data-ttu-id="e51f5-132">实体框架提供了命令行工具、向导和设计器来帮助生成 EDM 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e51f5-132">The Entity Framework provides command-line tools, wizards, and designers to facilitate building EDM applications.</span></span> <span data-ttu-id="e51f5-133">EntityDataSource 控件支持基于 EDM 的数据绑定方案。</span><span class="sxs-lookup"><span data-stu-id="e51f5-133">The EntityDataSource control supports data binding scenarios based on the EDM.</span></span> <span data-ttu-id="e51f5-134">EntityDataSource 控件的编程接口与 Visual Studio 中的其他数据源控件类似。</span><span class="sxs-lookup"><span data-stu-id="e51f5-134">The programming surface of the EntityDataSource control is similar to other data source controls in Visual Studio.</span></span> <span data-ttu-id="e51f5-135">有关详细信息，请参阅[ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-135">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span>  
   
-## LINQ to SQL  
- LINQ to SQL 是一种对象关系映射 \(OR\/M\) 实现，它使您能够使用 .NET Framework 类为 SQL Server 数据建模。  LINQ to SQL 允许您使用 LINQ 来查询数据库，以及在数据库中更新、插入和删除数据。  LINQ to SQL 支持事务、视图和存储过程，因此可以方便地将数据验证和业务逻辑规则集成到数据模型中。  您可以使用对象关系设计器（O\/R 设计器），为基于数据库中对象的实体类和关联建模。  有关详细信息，请参阅[LINQ to SQL 工具在 Visual Studio 中](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)。  
+## <a name="linq-to-sql"></a><span data-ttu-id="e51f5-136">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="e51f5-136">LINQ to SQL</span></span>  
+ <span data-ttu-id="e51f5-137">LINQ to SQL 是一种对象关系映射 (OR/M) 实现，它使您能够使用 .NET Framework 类为 SQL Server 数据建模。</span><span class="sxs-lookup"><span data-stu-id="e51f5-137">LINQ to SQL is an object relational mapping (OR/M) implementation that allows you to model a SQL Server database by using .NET Framework classes.</span></span> <span data-ttu-id="e51f5-138">LINQ to SQL 允许您使用 LINQ 来查询数据库，以及在数据库中更新、插入和删除数据。</span><span class="sxs-lookup"><span data-stu-id="e51f5-138">LINQ to SQL allows you to query your database by using LINQ, as well as update, insert and delete data from it.</span></span> <span data-ttu-id="e51f5-139">LINQ to SQL 支持事务、视图和存储过程，因此可以方便地将数据验证和业务逻辑规则集成到数据模型中。</span><span class="sxs-lookup"><span data-stu-id="e51f5-139">LINQ to SQL supports transactions, views, and stored procedures, providing an easy way to integrate data validation and business logic rules into your data model.</span></span> <span data-ttu-id="e51f5-140">您可以使用对象关系设计器（O/R 设计器），为基于数据库中对象的实体类和关联建模。</span><span class="sxs-lookup"><span data-stu-id="e51f5-140">You can use the Object Relational Designer (O/R Designer) to model the entity classes and associations that are based on objects in a database.</span></span> <span data-ttu-id="e51f5-141">有关详细信息，请参阅 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-141">For more information, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## WCF 数据服务  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可在 Web 或 Intranet 上部署数据服务。  这些数据将按照实体数据模型的规范组织成不同的实体和关系。  在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。  有关详细信息，请参阅[WCF 数据服务 4.5](../../../../docs/framework/data/wcf/index.md)。  
+## <a name="wcf-data-services"></a><span data-ttu-id="e51f5-142">WCF 数据服务</span><span class="sxs-lookup"><span data-stu-id="e51f5-142">WCF Data Services</span></span>  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e51f5-143"> 可在 Web 或 Intranet 上部署数据服务。</span><span class="sxs-lookup"><span data-stu-id="e51f5-143"> deploys data services on the Web or on an intranet.</span></span> <span data-ttu-id="e51f5-144">这些数据将按照实体数据模型的规范组织成不同的实体和关系。</span><span class="sxs-lookup"><span data-stu-id="e51f5-144">The data is structured as entities and relationships according to the specifications of the Entity Data Model.</span></span> <span data-ttu-id="e51f5-145">在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。</span><span class="sxs-lookup"><span data-stu-id="e51f5-145">Data deployed on this model is addressable by standard HTTP protocol.</span></span> <span data-ttu-id="e51f5-146">有关详细信息，请参阅[WCF 数据服务 4.5](../../../../docs/framework/data/wcf/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e51f5-146">For more information, see [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).</span></span>  
   
-## 请参阅  
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)   
- [ADO.NET 中的新增功能](../../../../docs/framework/data/adonet/whats-new.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e51f5-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e51f5-147">See Also</span></span>  
+ [<span data-ttu-id="e51f5-148">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="e51f5-148">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [<span data-ttu-id="e51f5-149">ADO.NET 新增功能</span><span class="sxs-lookup"><span data-stu-id="e51f5-149">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
+ [<span data-ttu-id="e51f5-150">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="e51f5-150">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

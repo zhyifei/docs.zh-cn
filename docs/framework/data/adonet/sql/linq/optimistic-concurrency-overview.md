@@ -1,99 +1,102 @@
 ---
-title: "开放式并发：概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "开放式并发：概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52e83f443c0ae74587b4585beb51ddbeb093486a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 开放式并发：概述
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持开放式并发控制。  下表介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文档中涉及开放式并发的术语：  
+# <a name="optimistic-concurrency-overview"></a><span data-ttu-id="1cd6f-102">开放式并发：概述</span><span class="sxs-lookup"><span data-stu-id="1cd6f-102">Optimistic Concurrency: Overview</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1cd6f-103"> 支持开放式并发控制。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-103"> supports optimistic concurrency control.</span></span> <span data-ttu-id="1cd6f-104">下表描述了适用于在开放式并发的条款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档：</span><span class="sxs-lookup"><span data-stu-id="1cd6f-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  
   
-|术语|描述|  
-|--------|--------|  
-|并发|两个或更多用户同时尝试更新同一数据库行的情形。|  
-|并发冲突|两个或更多用户同时尝试向一行的一列或多列提交冲突值的情形。|  
-|并发控制|用于解决并发冲突的技术。|  
-|开放式并发控制|先调查其他事务是否已更改了行中的值，再允许提交更改的技术。<br /><br /> 相比之下，保守式并发控制则是通过锁定记录来避免发生并发冲突。<br /><br /> 之所以称作开放式控制，是因为它将一个事务干扰另一事务视为不太可能发生。|  
-|冲突解决|通过重新查询数据库刷新出现冲突的项，然后协调差异的过程。<br /><br /> 刷新对象时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改跟踪器会保留以下数据：<br /><br /> -   最初从数据库获取并用于更新检查的值。<br />-   通过后续查询获得的新数据库值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 随后会确定相应对象是否发生冲突（即它的一个或多个成员值是否已发生更改）。  如果此对象发生冲突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 下一步会确定它的哪些成员发生冲突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 发现的任何成员冲突都会添加到冲突列表中。|  
+|<span data-ttu-id="1cd6f-105">术语</span><span class="sxs-lookup"><span data-stu-id="1cd6f-105">Terms</span></span>|<span data-ttu-id="1cd6f-106">描述</span><span class="sxs-lookup"><span data-stu-id="1cd6f-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="1cd6f-107">并发</span><span class="sxs-lookup"><span data-stu-id="1cd6f-107">concurrency</span></span>|<span data-ttu-id="1cd6f-108">两个或更多用户同时尝试更新同一数据库行的情形。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-108">The situation in which two or more users at the same time try to update the same database row.</span></span>|  
+|<span data-ttu-id="1cd6f-109">并发冲突</span><span class="sxs-lookup"><span data-stu-id="1cd6f-109">concurrency conflict</span></span>|<span data-ttu-id="1cd6f-110">两个或更多用户同时尝试向一行的一列或多列提交冲突值的情形。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-110">The situation in which two or more users at the same time try to submit conflicting values to one or more columns of a row.</span></span>|  
+|<span data-ttu-id="1cd6f-111">并发控制</span><span class="sxs-lookup"><span data-stu-id="1cd6f-111">concurrency control</span></span>|<span data-ttu-id="1cd6f-112">用于解决并发冲突的技术。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-112">The technique used to resolve concurrency conflicts.</span></span>|  
+|<span data-ttu-id="1cd6f-113">开放式并发控制</span><span class="sxs-lookup"><span data-stu-id="1cd6f-113">optimistic concurrency control</span></span>|<span data-ttu-id="1cd6f-114">先调查其他事务是否已更改了行中的值，再允许提交更改的技术。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-114">The technique that first investigates whether other transactions have changed values in a row before permitting changes to be submitted.</span></span><br /><br /> <span data-ttu-id="1cd6f-115">与之相反*保守式并发控制*，这将锁定要避免发生并发冲突的记录。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-115">Contrast with *pessimistic concurrency control*, which locks the record to avoid concurrency conflicts.</span></span><br /><br /> <span data-ttu-id="1cd6f-116">*开放式*控件之所以称作，因为它将一个事务干扰另一位作为可能的事务的可能性。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-116">*Optimistic* control is so termed because it considers the chances of one transaction interfering with another to be unlikely.</span></span>|  
+|<span data-ttu-id="1cd6f-117">冲突解决</span><span class="sxs-lookup"><span data-stu-id="1cd6f-117">conflict resolution</span></span>|<span data-ttu-id="1cd6f-118">通过重新查询数据库刷新出现冲突的项，然后协调差异的过程。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-118">The process of refreshing a conflicting item by querying the database again and then reconciling differences.</span></span><br /><br /> <span data-ttu-id="1cd6f-119">刷新对象时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改跟踪器会保留以下数据：</span><span class="sxs-lookup"><span data-stu-id="1cd6f-119">When an object is refreshed, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] change tracker holds the following data:</span></span><br /><br /> <span data-ttu-id="1cd6f-120">的值最初从数据库获取并用于更新检查。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-120">-   The values originally taken from the database and used for the update check.</span></span><br /><span data-ttu-id="1cd6f-121">的通过后续查询新数据库值。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-121">-   The new database values from the subsequent query.</span></span><br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1cd6f-122"> 随后会确定相应对象是否发生冲突（即它的一个或多个成员值是否已发生更改）。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-122"> then determines whether the object is in conflict (that is, whether one or more of its member values has changed).</span></span> <span data-ttu-id="1cd6f-123">如果此对象发生冲突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 下一步会确定它的哪些成员发生冲突。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-123">If the object is in conflict, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] next determines which of its members are in conflict.</span></span><br /><br /> <span data-ttu-id="1cd6f-124">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 发现的任何成员冲突都会添加到冲突列表中。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-124">Any member conflict that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] discovers is added to a conflict list.</span></span>|  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型中，当以下两个条件都得到满足时，就会发生“开放式并发冲突”：  
+ <span data-ttu-id="1cd6f-125">在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型，*开放式并发冲突*两个以下条件，则会发生：</span><span class="sxs-lookup"><span data-stu-id="1cd6f-125">In the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, an *optimistic concurrency conflict* occurs when both of the following conditions are true:</span></span>  
   
--   客户端尝试向数据库提交更改。  
+-   <span data-ttu-id="1cd6f-126">客户端尝试向数据库提交更改。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-126">The client tries to submit changes to the database.</span></span>  
   
--   数据库中的一个或多个更新检查值自客户端上次读取它们以来已得到更新。  
+-   <span data-ttu-id="1cd6f-127">数据库中的一个或多个更新检查值自客户端上次读取它们以来已得到更新。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-127">One or more update-check values have been updated in the database since the client last read them.</span></span>  
   
- 此冲突的解决过程包括查明对象的哪些成员发生冲突，然后决定您希望如何进行处理。  
+ <span data-ttu-id="1cd6f-128">此冲突的解决过程包括查明对象的哪些成员发生冲突，然后决定您希望如何进行处理。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-128">Resolution of this conflict includes discovering which members of the object are in conflict, and then deciding what you want to do about it.</span></span>  
   
 > [!NOTE]
->  只有映射为 <xref:System.Data.Linq.Mapping.UpdateCheck> 或 <xref:System.Data.Linq.Mapping.UpdateCheck> 的成员才会参与开放式并发检查。  对于标记为 <xref:System.Data.Linq.Mapping.UpdateCheck> 的成员，不执行检查。  有关详细信息，请参阅<xref:System.Data.Linq.Mapping.UpdateCheck>。  
+>  <span data-ttu-id="1cd6f-129">只有映射为 <xref:System.Data.Linq.Mapping.UpdateCheck.Always> 或 <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> 的成员才会参与开放式并发检查。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-129">Only members mapped as <xref:System.Data.Linq.Mapping.UpdateCheck.Always> or <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participate in optimistic concurrency checks.</span></span> <span data-ttu-id="1cd6f-130">对于标记为 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> 的成员，不执行检查。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-130">No check is performed for members marked <xref:System.Data.Linq.Mapping.UpdateCheck.Never>.</span></span> <span data-ttu-id="1cd6f-131">有关详细信息，请参阅<xref:System.Data.Linq.Mapping.UpdateCheck>。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-131">For more information, see <xref:System.Data.Linq.Mapping.UpdateCheck>.</span></span>  
   
-## 示例  
- 例如，在下面的情况中，User1 通过查询数据库中的某一行开始准备更新。  User1 收到包含 Alfreds、Maria 和 Sales 值的一行。  
+## <a name="example"></a><span data-ttu-id="1cd6f-132">示例</span><span class="sxs-lookup"><span data-stu-id="1cd6f-132">Example</span></span>  
+ <span data-ttu-id="1cd6f-133">例如，在下面的情况中，User1 通过查询数据库中的某一行开始准备更新。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-133">For example, in the following scenario, User1 starts to prepare an update by querying the database for a row.</span></span> <span data-ttu-id="1cd6f-134">User1 收到包含 Alfreds、Maria 和 Sales 值的一行。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-134">User1 receives a row with values of Alfreds, Maria, and Sales.</span></span>  
   
- User1 希望将 Manager 列的值更改为 Alfred，将 Department 列的值更改为 Marketing。  在 User2 将更改提交到数据库后，User1 才能提交这些更改。  所以，现在 Assistant 列的值已更改为 Mary，Department 列的值已更改为 Service。  
+ <span data-ttu-id="1cd6f-135">User1 希望将 Manager 列的值更改为 Alfred，将 Department 列的值更改为 Marketing。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-135">User1 wants to change the value of the Manager column to Alfred and the value of the Department column to Marketing.</span></span> <span data-ttu-id="1cd6f-136">在 User2 将更改提交到数据库后，User1 才能提交这些更改。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-136">Before User1 can submit those changes, User2 has submitted changes to the database.</span></span> <span data-ttu-id="1cd6f-137">所以，现在 Assistant 列的值已更改为 Mary，Department 列的值已更改为 Service。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-137">So now the value of the Assistant column has been changed to Mary and the value of the Department column to Service.</span></span>  
   
- 当 User1 现在尝试提交更改时，提交失败并且引发 <xref:System.Data.Linq.ChangeConflictException> 异常。  出现这种结果是因为 Assistant 列和 Department 列的数据库值并不是他们所预期的那些值。  表示 Assistant 和 Department 列的成员发生了冲突。  下表对这种情形作了总结。  
+ <span data-ttu-id="1cd6f-138">当 User1 现在尝试提交更改时，提交失败并且引发 <xref:System.Data.Linq.ChangeConflictException> 异常。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-138">When User1 now tries to submit changes, the submission fails and a <xref:System.Data.Linq.ChangeConflictException> exception is thrown.</span></span> <span data-ttu-id="1cd6f-139">出现这种结果是因为 Assistant 列和 Department 列的数据库值并不是他们所预期的那些值。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-139">This result occurs because the database values for the Assistant column and the Department column are not those that were expected.</span></span> <span data-ttu-id="1cd6f-140">表示 Assistant 和 Department 列的成员发生了冲突。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-140">Members representing the Assistant and Department columns are in conflict.</span></span> <span data-ttu-id="1cd6f-141">下表对这种情形作了总结。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-141">The following table summarizes the situation.</span></span>  
   
-||Manager|Assistant|Department|  
+||<span data-ttu-id="1cd6f-142">Manager</span><span class="sxs-lookup"><span data-stu-id="1cd6f-142">Manager</span></span>|<span data-ttu-id="1cd6f-143">Assistant</span><span class="sxs-lookup"><span data-stu-id="1cd6f-143">Assistant</span></span>|<span data-ttu-id="1cd6f-144">Department</span><span class="sxs-lookup"><span data-stu-id="1cd6f-144">Department</span></span>|  
 |------|-------------|---------------|----------------|  
-|原始状态|Alfreds|Maria|销售额|  
-|User1|Alfred||Marketing|  
-|User2||Mary|服务|  
+|<span data-ttu-id="1cd6f-145">原始状态</span><span class="sxs-lookup"><span data-stu-id="1cd6f-145">Original state</span></span>|<span data-ttu-id="1cd6f-146">Alfreds</span><span class="sxs-lookup"><span data-stu-id="1cd6f-146">Alfreds</span></span>|<span data-ttu-id="1cd6f-147">Maria</span><span class="sxs-lookup"><span data-stu-id="1cd6f-147">Maria</span></span>|<span data-ttu-id="1cd6f-148">销售额</span><span class="sxs-lookup"><span data-stu-id="1cd6f-148">Sales</span></span>|  
+|<span data-ttu-id="1cd6f-149">User1</span><span class="sxs-lookup"><span data-stu-id="1cd6f-149">User1</span></span>|<span data-ttu-id="1cd6f-150">Alfred</span><span class="sxs-lookup"><span data-stu-id="1cd6f-150">Alfred</span></span>||<span data-ttu-id="1cd6f-151">Marketing</span><span class="sxs-lookup"><span data-stu-id="1cd6f-151">Marketing</span></span>|  
+|<span data-ttu-id="1cd6f-152">User2</span><span class="sxs-lookup"><span data-stu-id="1cd6f-152">User2</span></span>||<span data-ttu-id="1cd6f-153">Mary</span><span class="sxs-lookup"><span data-stu-id="1cd6f-153">Mary</span></span>|<span data-ttu-id="1cd6f-154">服务</span><span class="sxs-lookup"><span data-stu-id="1cd6f-154">Service</span></span>|  
   
- 您可以用多种不同的方式来解决此类冲突。  有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ <span data-ttu-id="1cd6f-155">您可以用多种不同的方式来解决此类冲突。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-155">You can resolve conflicts such as this in different ways.</span></span> <span data-ttu-id="1cd6f-156">有关详细信息，请参阅[如何： 管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-156">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## 冲突检测和解决检查表  
- 您可以检测和解决任意详细等级的冲突。  一种极端情况是，您可以用三种方式之一（请参见 <xref:System.Data.Linq.RefreshMode>）来解决所有冲突，而不再作其他方面的考虑。  另一种极端情况是，您可以为发生冲突的每个成员上的每种冲突指定特定操作。  
+## <a name="conflict-detection-and-resolution-checklist"></a><span data-ttu-id="1cd6f-157">冲突检测和解决检查表</span><span class="sxs-lookup"><span data-stu-id="1cd6f-157">Conflict Detection and Resolution Checklist</span></span>  
+ <span data-ttu-id="1cd6f-158">您可以检测和解决任意详细等级的冲突。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-158">You can detect and resolve conflicts at any level of detail.</span></span> <span data-ttu-id="1cd6f-159">一种极端情况是，您可以用三种方式之一（请参见 <xref:System.Data.Linq.RefreshMode>）来解决所有冲突，而不再作其他方面的考虑。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-159">At one extreme, you can resolve all conflicts in one of three ways (see <xref:System.Data.Linq.RefreshMode>) without additional consideration.</span></span> <span data-ttu-id="1cd6f-160">另一种极端情况是，您可以为发生冲突的每个成员上的每种冲突指定特定操作。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-160">At the other extreme, you can designate a specific action for each type of conflict on every member in conflict.</span></span>  
   
--   在您的对象模型中指定或修改 <xref:System.Data.Linq.Mapping.UpdateCheck> 选项。  
+-   <span data-ttu-id="1cd6f-161">在您的对象模型中指定或修改 <xref:System.Data.Linq.Mapping.UpdateCheck> 选项。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-161">Specify or revise <xref:System.Data.Linq.Mapping.UpdateCheck> options in your object model.</span></span>  
   
-     有关详细信息，请参阅[如何：指定测试哪些成员是否发生并发冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。  
+     <span data-ttu-id="1cd6f-162">有关详细信息，请参阅[如何： 指定该成员进行测试并发冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-162">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
--   在对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 的调用的 try\/catch 块中，指定您希望在哪个点引发异常。  
+-   <span data-ttu-id="1cd6f-163">在对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 的调用的 try/catch 块中，指定您希望在哪个点引发异常。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-163">In the try/catch block of your call to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, specify at what point you want exceptions to be thrown.</span></span>  
   
-     有关详细信息，请参阅[如何：指定并发异常的引发时间](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。  
+     <span data-ttu-id="1cd6f-164">有关详细信息，请参阅[如何： 指定当并发异常引发](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-164">For more information, see [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
--   决定您希望检索的冲突详细信息量，并在 try\/catch 块中包括相应的代码。  
+-   <span data-ttu-id="1cd6f-165">决定你希望检索的冲突详细信息量，并在 try/catch 块中包括相应的代码。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-165">Determine how much conflict detail you want to retrieve, and include code in your try/catch block accordingly.</span></span>  
   
-     有关详细信息，请参阅[如何：检索实体冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)和[如何：检索成员冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。  
+     <span data-ttu-id="1cd6f-166">有关详细信息，请参阅[如何： 检索实体冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)和[如何： 检索成员冲突信息](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-166">For more information, see [How to: Retrieve Entity Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) and [How to: Retrieve Member Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span></span>  
   
--   在 `try`\/`catch` 代码中包括您希望解决您发现的各种冲突的方式。  
+-   <span data-ttu-id="1cd6f-167">在中包括你`try` / `catch`代码你希望解决你发现的各种冲突的方式。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-167">Include in your `try`/`catch` code how you want to resolve the various conflicts you discover.</span></span>  
   
-     有关详细信息，请参阅[如何：通过保留数据库值解决冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)、[如何：通过覆盖数据库值解决冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)和[如何：通过与数据库值合并解决并发冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)。  
+     <span data-ttu-id="1cd6f-168">有关详细信息，请参阅[如何： 通过保留数据库值解决冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)，[如何： 通过覆盖数据库值解决冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)，和[如何： 通过合并解决冲突用数据库值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)。</span><span class="sxs-lookup"><span data-stu-id="1cd6f-168">For more information, see [How to: Resolve Conflicts by Retaining Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [How to: Resolve Conflicts by Overwriting Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), and [How to: Resolve Conflicts by Merging with Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span></span>  
   
-## 支持冲突发现和解决的 LINQ to SQL 类型  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支持解决开放式并发冲突的类和功能包括：  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a><span data-ttu-id="1cd6f-169">支持冲突发现和解决的 LINQ to SQL 类型</span><span class="sxs-lookup"><span data-stu-id="1cd6f-169">LINQ to SQL Types That Support Conflict Discovery and Resolution</span></span>  
+ <span data-ttu-id="1cd6f-170">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支持解决开放式并发冲突的类和功能包括：</span><span class="sxs-lookup"><span data-stu-id="1cd6f-170">Classes and features to support the resolution of conflicts in optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] include the following:</span></span>  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=fullName>  
+-   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## 请参阅  
- [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="1cd6f-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1cd6f-171">See Also</span></span>  
+ [<span data-ttu-id="1cd6f-172">如何： 管理更改冲突</span><span class="sxs-lookup"><span data-stu-id="1cd6f-172">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

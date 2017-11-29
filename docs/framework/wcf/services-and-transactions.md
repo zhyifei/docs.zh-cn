@@ -1,31 +1,33 @@
 ---
-title: "服务和事务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "服务协定 [WCF], 设计服务和事务"
+title: "服务和事务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a206ff3d82378e825cd612a6564366ef1e07977
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 服务和事务
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序可以从客户端中启动事务，然后在服务操作中协调该事务。客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
+# <a name="services-and-transactions"></a><span data-ttu-id="0daff-102">服务和事务</span><span class="sxs-lookup"><span data-stu-id="0daff-102">Services and Transactions</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="0daff-103"> 应用程序可以从客户端中启动事务，然后在服务操作中协调该事务。</span><span class="sxs-lookup"><span data-stu-id="0daff-103"> applications can initiate a transaction from within a client and coordinate the transaction within the service operation.</span></span> <span data-ttu-id="0daff-104">客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。</span><span class="sxs-lookup"><span data-stu-id="0daff-104">Clients can initiate a transaction and invoke several service operations and ensure that the service operations are either committed or rolled back as a single unit.</span></span>  
   
- 通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理的异常的情况下，在其中执行方法的事务是否自动完成。[!INCLUDE[crabout](../../../includes/crabout-md.md)]这些同学的更多信息，请参见[ServiceModel 事务属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+ <span data-ttu-id="0daff-105">通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。</span><span class="sxs-lookup"><span data-stu-id="0daff-105">You can enable the transaction behavior in the service contract by specifying a <xref:System.ServiceModel.ServiceBehaviorAttribute> and setting its <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> and <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> properties for service operations that require client transactions.</span></span> <span data-ttu-id="0daff-106"><xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理异常的情况下，在其中执行方法的事务是否自动完成。</span><span class="sxs-lookup"><span data-stu-id="0daff-106">The <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> parameter specifies whether the transaction in which the method executes is automatically completed if no unhandled exceptions are thrown.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="0daff-107">这些属性，请参阅[ServiceModel 事务属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="0daff-107"> these attributes, see [ServiceModel Transaction Attributes](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span></span>  
   
- 在服务操作中执行并由资源管理器管理的工作（如记录数据库更新）是客户端事务的一部分。  
+ <span data-ttu-id="0daff-108">在服务操作中执行并由资源管理器管理的工作（如记录数据库更新）是客户端事务的一部分。</span><span class="sxs-lookup"><span data-stu-id="0daff-108">The work that is performed in the service operations and managed by a resource manager, such as logging database updates, is part of the client’s transaction.</span></span>  
   
- 下面的示例演示如何使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性来控制服务端的事务行为。  
+ <span data-ttu-id="0daff-109">下面的示例演示如何使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性来控制服务端的事务行为。</span><span class="sxs-lookup"><span data-stu-id="0daff-109">The following sample demonstrates usage of the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes to control service-side transaction behavior.</span></span>  
   
 ```  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
@@ -66,9 +68,9 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- 可以启用事务和事务流，方法是将客户端和服务绑定配置为使用 WS\-AtomicTransaction 协议，然后将 [\<transactionFlow\>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 元素设置为 `true`，如下面的示例配置中所示。  
+ <span data-ttu-id="0daff-110">你可以启用事务和事务流通过配置客户端和服务绑定使用 Ws-atomictransaction 协议，以及设置[ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)元素`true`，如所示在下面的示例配置。</span><span class="sxs-lookup"><span data-stu-id="0daff-110">You can enable transactions and transaction flow by configuring the client and service bindings to use the WS-AtomicTransaction protocol, and setting the [\<transactionFlow>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) element to `true`, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <client>  
     <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
           binding="netTcpBinding"   
@@ -85,7 +87,7 @@ public class CalculatorService: ICalculatorLog
 </bindings>  
 ```  
   
- 客户端可以通过创建 <xref:System.Transactions.TransactionScope>，然后在该事务范围内调用服务操作来开始该事务。  
+ <span data-ttu-id="0daff-111">客户端可以通过创建 <xref:System.Transactions.TransactionScope>，然后在该事务范围内调用服务操作来开始该事务。</span><span class="sxs-lookup"><span data-stu-id="0daff-111">Clients can begin a transaction by creating a <xref:System.Transactions.TransactionScope> and invoking service operations within the scope of the transaction.</span></span>  
   
 ```  
 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -95,7 +97,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## 请参阅  
- [System.ServiceModel 中的事务性支持](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)   
- [事务模型](../../../docs/framework/wcf/feature-details/transaction-models.md)   
- [WS 事务流](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a><span data-ttu-id="0daff-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0daff-112">See Also</span></span>  
+ [<span data-ttu-id="0daff-113">System.ServiceModel 中的事务性支持</span><span class="sxs-lookup"><span data-stu-id="0daff-113">Transactional Support in System.ServiceModel</span></span>](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [<span data-ttu-id="0daff-114">事务模型</span><span class="sxs-lookup"><span data-stu-id="0daff-114">Transaction Models</span></span>](../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [<span data-ttu-id="0daff-115">WS 事务流</span><span class="sxs-lookup"><span data-stu-id="0daff-115">WS Transaction Flow</span></span>](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

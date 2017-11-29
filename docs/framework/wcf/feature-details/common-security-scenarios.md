@@ -1,91 +1,93 @@
 ---
-title: "常用安全方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全 [WCF], 方案"
+title: "常用安全方案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9428c5d7c8c6cf0f571b05a8b9c33b96d073d7a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 常用安全方案
-本节中的主题对众多可能的客户端和服务安全配置进行分类。配置会随多种因素而变化。例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。  
+# <a name="common-security-scenarios"></a><span data-ttu-id="effe5-102">常用安全方案</span><span class="sxs-lookup"><span data-stu-id="effe5-102">Common Security Scenarios</span></span>
+<span data-ttu-id="effe5-103">本节中的主题对众多可能的客户端和服务安全配置进行分类。</span><span class="sxs-lookup"><span data-stu-id="effe5-103">The topics in this section catalog a number of possible client and service security configurations.</span></span> <span data-ttu-id="effe5-104">配置会随多种因素而变化。</span><span class="sxs-lookup"><span data-stu-id="effe5-104">Configurations vary according to a number of factors.</span></span> <span data-ttu-id="effe5-105">例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。</span><span class="sxs-lookup"><span data-stu-id="effe5-105">For example, whether a service or client is on an intranet, or whether the security is provided by Windows or transport (such as HTTPS).</span></span>  
   
-## 本节内容  
- [不安全的 Internet 客户端和服务](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
- 一个公共的、不安全的客户端和服务的示例。  
+## <a name="in-this-section"></a><span data-ttu-id="effe5-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="effe5-106">In This Section</span></span>  
+ [<span data-ttu-id="effe5-107">不安全的 Internet 的客户端和服务</span><span class="sxs-lookup"><span data-stu-id="effe5-107">Internet Unsecured Client and Service</span></span>](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
+ <span data-ttu-id="effe5-108">一个公共的、不安全的客户端和服务的示例。</span><span class="sxs-lookup"><span data-stu-id="effe5-108">An example of a public, unsecured client and service.</span></span>  
   
- [不安全的 Intranet 客户端和服务](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 为了在安全私有网络上向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序提供信息而开发的一项基本 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。  
+ [<span data-ttu-id="effe5-109">Intranet 不安全的客户端和服务</span><span class="sxs-lookup"><span data-stu-id="effe5-109">Intranet Unsecured Client and Service</span></span>](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ <span data-ttu-id="effe5-110">为了在安全私有网络上向 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序提供信息而开发的一项基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-110">A basic [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service developed to provide information on a secure private network to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application.</span></span>  
   
- [通过基本身份验证确保的传输安全](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- 应用程序允许客户端使用自定义身份验证进行登录。  
+ [<span data-ttu-id="effe5-111">使用基本身份验证的传输安全性</span><span class="sxs-lookup"><span data-stu-id="effe5-111">Transport Security with Basic Authentication</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ <span data-ttu-id="effe5-112">应用程序允许客户端使用自定义身份验证进行登录。</span><span class="sxs-lookup"><span data-stu-id="effe5-112">The application allows clients to log on using custom authentication.</span></span>  
   
- [通过 Windows 身份验证确保的传输安全](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
- 显示由 Windows 安全保护的客户端和服务。  
+ [<span data-ttu-id="effe5-113">使用 Windows 身份验证的传输安全性</span><span class="sxs-lookup"><span data-stu-id="effe5-113">Transport Security with Windows Authentication</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
+ <span data-ttu-id="effe5-114">显示由 Windows 安全保护的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-114">Shows a client and service secured by Windows security.</span></span>  
   
- [匿名客户端的传输安全](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
- 此方案使用传输安全（如 HTTPS）确保保密性和完整性。  
+ [<span data-ttu-id="effe5-115">匿名客户端使用的传输安全性</span><span class="sxs-lookup"><span data-stu-id="effe5-115">Transport Security with an Anonymous Client</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
+ <span data-ttu-id="effe5-116">此方案使用传输安全（如 HTTPS）确保保密性和完整性。</span><span class="sxs-lookup"><span data-stu-id="effe5-116">This scenario uses transport security (such as HTTPS) to ensure confidentiality and integrity.</span></span>  
   
- [利用证书身份验证的传输安全](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
- 显示由证书保护的客户端和服务。  
+ [<span data-ttu-id="effe5-117">使用证书身份验证的传输安全性</span><span class="sxs-lookup"><span data-stu-id="effe5-117">Transport Security with Certificate Authentication</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
+ <span data-ttu-id="effe5-118">显示由证书保护的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-118">Shows a client and service secured by a certificate.</span></span>  
   
- [匿名客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 显示由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全保护的客户端和服务。  
+ [<span data-ttu-id="effe5-119">使用匿名客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-119">Message Security with an Anonymous Client</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
+ <span data-ttu-id="effe5-120">显示由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息安全保护的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-120">Shows a client and service secured by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message security.</span></span>  
   
- [用户名客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
- 客户端是一个 Windows 窗体应用程序，允许客户端使用域用户名和密码登录。  
+ [<span data-ttu-id="effe5-121">使用的用户名称客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-121">Message Security with a User Name Client</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
+ <span data-ttu-id="effe5-122">客户端是一个 Windows 窗体应用程序，允许客户端使用域用户名和密码登录。</span><span class="sxs-lookup"><span data-stu-id="effe5-122">The client is a Windows Forms application that allows clients to log on using a domain user name and password.</span></span>  
   
- [使用证书客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
- 服务器有多个证书，每个客户端各有一个证书。通过传输层安全 \(TLS\) 协商建立安全上下文。  
+ [<span data-ttu-id="effe5-123">使用证书客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-123">Message Security with a Certificate Client</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
+ <span data-ttu-id="effe5-124">服务器有多个证书，每个客户端各有一个证书。</span><span class="sxs-lookup"><span data-stu-id="effe5-124">Servers have certificates, and each client has a certificate.</span></span> <span data-ttu-id="effe5-125">通过传输层安全 (TLS) 协商建立安全上下文。</span><span class="sxs-lookup"><span data-stu-id="effe5-125">A security context is established through Transport Layer Security (TLS) negotiation.</span></span>  
   
- [Windows 客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
- 证书客户端的变体。服务器有多个证书，每个客户端各有一个证书。通过 TLS 协商建立安全上下文。  
+ [<span data-ttu-id="effe5-126">使用 Windows 客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-126">Message Security with a Windows Client</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
+ <span data-ttu-id="effe5-127">证书客户端的变体。</span><span class="sxs-lookup"><span data-stu-id="effe5-127">A variation of the certificate client.</span></span> <span data-ttu-id="effe5-128">服务器有多个证书，每个客户端各有一个证书。</span><span class="sxs-lookup"><span data-stu-id="effe5-128">Servers have certificates, and each client has a certificate.</span></span> <span data-ttu-id="effe5-129">通过 TLS 协商建立安全上下文。</span><span class="sxs-lookup"><span data-stu-id="effe5-129">A security context is established through TLS negotiation.</span></span>  
   
- [没有凭据协商的 Windows 客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
- 显示由 Kerberos 域保护的客户端和服务。  
+ [<span data-ttu-id="effe5-130">无凭据协商的 Windows 客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-130">Message Security with a Windows Client without Credential Negotiation</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
+ <span data-ttu-id="effe5-131">显示由 Kerberos 域保护的客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-131">Shows a client and service secured by a Kerberos domain.</span></span>  
   
- [使用相互证书的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
- 服务器有多个证书，每个客户端各有一个证书。服务器证书随应用程序一起分发，而可在带外使用。  
+ [<span data-ttu-id="effe5-132">使用相互证书的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-132">Message Security with Mutual Certificates</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
+ <span data-ttu-id="effe5-133">服务器有多个证书，每个客户端各有一个证书。</span><span class="sxs-lookup"><span data-stu-id="effe5-133">Servers have certificates, and each client has a certificate.</span></span> <span data-ttu-id="effe5-134">服务器证书随应用程序一起分发，而可在带外使用。</span><span class="sxs-lookup"><span data-stu-id="effe5-134">The server certificate is distributed with the application and is available out of band.</span></span>  
   
- [使用已颁发令牌的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
- 允许在独立域间建立信任的联合安全。  
+ [<span data-ttu-id="effe5-135">使用已颁发令牌的消息安全</span><span class="sxs-lookup"><span data-stu-id="effe5-135">Message Security with Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
+ <span data-ttu-id="effe5-136">允许在独立域间建立信任的联合安全。</span><span class="sxs-lookup"><span data-stu-id="effe5-136">Federated security that enables the establishment of trust between independent domains.</span></span>  
   
- [受信任的子系统](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
- 客户端访问分布在网络上的一个或多个 Web 服务。Web 服务访问必须加以保护的其他资源（如数据库或其他 Web 服务）。  
+ [<span data-ttu-id="effe5-137">受信任的子系统</span><span class="sxs-lookup"><span data-stu-id="effe5-137">Trusted Subsystem</span></span>](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
+ <span data-ttu-id="effe5-138">客户端访问分布在网络上的一个或多个 Web 服务。</span><span class="sxs-lookup"><span data-stu-id="effe5-138">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="effe5-139">Web 服务访问必须加以保护的其他资源（如数据库或其他 Web 服务）。</span><span class="sxs-lookup"><span data-stu-id="effe5-139">The Web services access additional resources (such as databases or other Web services) that must be secured.</span></span>  
   
-## 参考  
+## <a name="reference"></a><span data-ttu-id="effe5-140">参考</span><span class="sxs-lookup"><span data-stu-id="effe5-140">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## 相关章节  
- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="effe5-141">相关章节</span><span class="sxs-lookup"><span data-stu-id="effe5-141">Related Sections</span></span>  
+ [<span data-ttu-id="effe5-142">授权</span><span class="sxs-lookup"><span data-stu-id="effe5-142">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="effe5-143">安全性概述</span><span class="sxs-lookup"><span data-stu-id="effe5-143">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
+ [<span data-ttu-id="effe5-144">安全性</span><span class="sxs-lookup"><span data-stu-id="effe5-144">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="effe5-145">绑定与安全</span><span class="sxs-lookup"><span data-stu-id="effe5-145">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="effe5-146">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="effe5-146">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
- [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [<span data-ttu-id="effe5-147">身份验证</span><span class="sxs-lookup"><span data-stu-id="effe5-147">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="effe5-148">授权</span><span class="sxs-lookup"><span data-stu-id="effe5-148">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="effe5-149">联合身份验证和已颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="effe5-149">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [<span data-ttu-id="effe5-150">审核</span><span class="sxs-lookup"><span data-stu-id="effe5-150">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## 请参阅  
- [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="effe5-151">另请参阅</span><span class="sxs-lookup"><span data-stu-id="effe5-151">See Also</span></span>  
+ [<span data-ttu-id="effe5-152">安全指导和最佳实践</span><span class="sxs-lookup"><span data-stu-id="effe5-152">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [<span data-ttu-id="effe5-153">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="effe5-153">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

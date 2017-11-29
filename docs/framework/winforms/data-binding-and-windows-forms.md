@@ -1,70 +1,70 @@
 ---
-title: "数据绑定和 Windows 窗体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绑定控件, Windows 窗体"
-  - "数据 [Windows 窗体], 复杂的数据绑定"
-  - "数据 [Windows 窗体], 数据绑定"
-  - "数据 [Windows 窗体], 简单的数据绑定"
-  - "数据绑定, Windows 窗体"
-  - "数据绑定控件, Windows 窗体"
-  - "查找表, 数据绑定"
-  - "主-详细信息列表"
-  - "报告, Windows 窗体"
-  - "Windows 窗体控件, 数据绑定"
+title: "数据绑定和 Windows 窗体"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master-details lists
+- data [Windows Forms], data binding
+- reports [Windows Forms], Windows Forms
+- lookup tables [Windows Forms], data binding
+- data [Windows Forms], complex data binding
+- data binding [Windows Forms], Windows Forms
+- data [Windows Forms], simple data binding
+- Windows Forms controls, data binding
+- data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c20753aab569bf90b7db2f062050c7e185d638fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 数据绑定和 Windows 窗体
-在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。  可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。  
+# <a name="data-binding-and-windows-forms"></a><span data-ttu-id="dd019-102">数据绑定和 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="dd019-102">Data Binding and Windows Forms</span></span>
+<span data-ttu-id="dd019-103">在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。</span><span class="sxs-lookup"><span data-stu-id="dd019-103">In Windows Forms, you can bind to not just traditional data sources, but also to almost any structure that contains data.</span></span> <span data-ttu-id="dd019-104">可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。</span><span class="sxs-lookup"><span data-stu-id="dd019-104">You can bind to an array of values that you calculate at run time, read from a file, or derive from the values of other controls.</span></span>  
   
- 此外，你可将任何控件的任何属性绑定到数据源。  在传统数据绑定中，你通常将显示属性（例如 <xref:System.Windows.Forms.TextBox> 控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性）绑定到数据源。  通过 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，你还可选择通过绑定来设置其他属性。  你可以使用绑定来执行以下任务：  
+ <span data-ttu-id="dd019-105">此外，你可将任何控件的任何属性绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="dd019-105">In addition, you can bind any property of any control to the data source.</span></span> <span data-ttu-id="dd019-106">在传统数据绑定中，你通常将显示属性（例如 <xref:System.Windows.Forms.Control.Text%2A> 控件的 <xref:System.Windows.Forms.TextBox> 属性）绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="dd019-106">In traditional data binding, you typically bind the display property—for example, the <xref:System.Windows.Forms.Control.Text%2A> property of a <xref:System.Windows.Forms.TextBox> control—to the data source.</span></span> <span data-ttu-id="dd019-107">通过 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，你还可选择通过绑定来设置其他属性。</span><span class="sxs-lookup"><span data-stu-id="dd019-107">With the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], you also have the option of setting other properties through binding as well.</span></span> <span data-ttu-id="dd019-108">你可以使用绑定来执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="dd019-108">You might use binding to perform the following tasks:</span></span>  
   
--   设置图像控件的图形。  
+-   <span data-ttu-id="dd019-109">设置图像控件的图形。</span><span class="sxs-lookup"><span data-stu-id="dd019-109">Setting the graphic of an image control.</span></span>  
   
--   设置一个或多个控件的背景色。  
+-   <span data-ttu-id="dd019-110">设置一个或多个控件的背景色。</span><span class="sxs-lookup"><span data-stu-id="dd019-110">Setting the background color of one or more controls.</span></span>  
   
--   设置控件的大小。  
+-   <span data-ttu-id="dd019-111">设置控件的大小。</span><span class="sxs-lookup"><span data-stu-id="dd019-111">Setting the size of controls.</span></span>  
   
- 从根本上讲，数据绑定是一种设置窗体上任何控件的任何运行时可访问属性的自动方法。  
+ <span data-ttu-id="dd019-112">从根本上讲，数据绑定是一种设置窗体上任何控件的任何运行时可访问属性的自动方法。</span><span class="sxs-lookup"><span data-stu-id="dd019-112">Essentially, data binding is an automatic way of setting any run-time accessible property of any control on a form.</span></span>  
   
-## 数据绑定的类型  
- Windows 窗体可以利用两种类型的数据绑定：简单绑定和复杂绑定。  每一种都有不同的优势。  
+## <a name="types-of-data-binding"></a><span data-ttu-id="dd019-113">数据绑定的类型</span><span class="sxs-lookup"><span data-stu-id="dd019-113">Types of Data Binding</span></span>  
+ <span data-ttu-id="dd019-114">Windows 窗体可以利用两种类型的数据绑定： 简单绑定和复杂的绑定。</span><span class="sxs-lookup"><span data-stu-id="dd019-114">Windows Forms can take advantage of two types of data binding: simple binding and complex binding.</span></span> <span data-ttu-id="dd019-115">每一种都有不同的优势。</span><span class="sxs-lookup"><span data-stu-id="dd019-115">Each offers different advantages.</span></span>  
   
-|数据绑定的类型|描述|  
-|-------------|--------|  
-|简单数据绑定|控件绑定到单个数据元素（如数据集表的列中的值）的能力。  对于诸如 <xref:System.Windows.Forms.TextBox> 控件或 <xref:System.Windows.Forms.Label> 控件的控件，即通常只显示单个值的控件，通常使用这种绑定。  事实上，控件上的任何属性都可以绑定到数据库中的字段。  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，对此功能提供广泛支持。<br /><br /> 有关更多信息，请参见：<br /><br /> -   [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [如何：在 Windows 窗体中导航数据](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [如何：在 Windows 窗体上创建简单绑定控件](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
-|复杂数据绑定|控件绑定一个以上数据元素（通常为一个数据库中的一个以上的记录）的能力。  复杂绑定也称基于列表的绑定。  支持复杂绑定的控件示例为 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox> 和 <xref:System.Windows.Forms.ComboBox> 控件。  有关复杂数据绑定的示例，请参阅[如何：将 Windows 窗体 ComboBox 控件或 ListBox 控件绑定到数据](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)。|  
+|<span data-ttu-id="dd019-116">数据绑定的类型</span><span class="sxs-lookup"><span data-stu-id="dd019-116">Type of data binding</span></span>|<span data-ttu-id="dd019-117">描述</span><span class="sxs-lookup"><span data-stu-id="dd019-117">Description</span></span>|  
+|--------------------------|-----------------|  
+|<span data-ttu-id="dd019-118">简单数据绑定</span><span class="sxs-lookup"><span data-stu-id="dd019-118">Simple data binding</span></span>|<span data-ttu-id="dd019-119">控件绑定到单个数据元素（如数据集表的列中的值）的能力。</span><span class="sxs-lookup"><span data-stu-id="dd019-119">The ability of a control to bind to a single data element, such as a value in a column in a dataset table.</span></span> <span data-ttu-id="dd019-120">对于诸如 <xref:System.Windows.Forms.TextBox> 控件或 <xref:System.Windows.Forms.Label> 控件的控件，即通常只显示单个值的控件，通常使用这种绑定。</span><span class="sxs-lookup"><span data-stu-id="dd019-120">This is the type of binding typical for controls such as a <xref:System.Windows.Forms.TextBox> control or <xref:System.Windows.Forms.Label> control, which are controls that typically only displays a single value.</span></span> <span data-ttu-id="dd019-121">事实上，控件上的任何属性都可以绑定到数据库中的字段。</span><span class="sxs-lookup"><span data-stu-id="dd019-121">In fact, any property on a control can be bound to a field in a database.</span></span> <span data-ttu-id="dd019-122">在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，对此功能提供广泛支持。</span><span class="sxs-lookup"><span data-stu-id="dd019-122">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span><br /><br /> <span data-ttu-id="dd019-123">有关详细信息，请参见:</span><span class="sxs-lookup"><span data-stu-id="dd019-123">For more information, see:</span></span><br /><br /> <span data-ttu-id="dd019-124">-   [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)</span><span class="sxs-lookup"><span data-stu-id="dd019-124">-   [Interfaces Related to Data Binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)</span></span><br /><span data-ttu-id="dd019-125">-   [如何： 在 Windows 窗体中导航数据](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)</span><span class="sxs-lookup"><span data-stu-id="dd019-125">-   [How to: Navigate Data in Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)</span></span><br /><span data-ttu-id="dd019-126">-   [如何： 创建 Windows 窗体上的简单绑定控件](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)</span><span class="sxs-lookup"><span data-stu-id="dd019-126">-   [How to: Create a Simple-Bound Control on a Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)</span></span>|  
+|<span data-ttu-id="dd019-127">复杂数据绑定</span><span class="sxs-lookup"><span data-stu-id="dd019-127">Complex data binding</span></span>|<span data-ttu-id="dd019-128">控件绑定一个以上数据元素（通常为一个数据库中的一个以上的记录）的能力。</span><span class="sxs-lookup"><span data-stu-id="dd019-128">The ability of a control to bind to more than one data element, typically more than one record in a database.</span></span> <span data-ttu-id="dd019-129">复杂绑定也称基于列表的绑定。</span><span class="sxs-lookup"><span data-stu-id="dd019-129">Complex binding is also called list-based binding.</span></span> <span data-ttu-id="dd019-130">支持复杂绑定的控件示例为 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox> 和 <xref:System.Windows.Forms.ComboBox> 控件。</span><span class="sxs-lookup"><span data-stu-id="dd019-130">Examples of controls that support complex binding are the <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox>, and <xref:System.Windows.Forms.ComboBox> controls.</span></span> <span data-ttu-id="dd019-131">复杂数据绑定的示例，请参阅[如何： 将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)。</span><span class="sxs-lookup"><span data-stu-id="dd019-131">For an example of complex data binding, see [How to: Bind a Windows Forms ComboBox or ListBox Control to Data](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).</span></span>|  
   
-## BindingSource 组件  
- 为了简化数据绑定，Windows 窗体让你可将数据源绑定到 <xref:System.Windows.Forms.BindingSource> 组件，然后将控件绑定到 <xref:System.Windows.Forms.BindingSource>。  你可以在简单或复杂绑定方案中使用 <xref:System.Windows.Forms.BindingSource>。  在任一种情况下，<xref:System.Windows.Forms.BindingSource> 均充当数据源和绑定控件的中介，提供更改通知货币管理和其他服务。  
+## <a name="bindingsource-component"></a><span data-ttu-id="dd019-132">BindingSource 组件</span><span class="sxs-lookup"><span data-stu-id="dd019-132">BindingSource Component</span></span>  
+ <span data-ttu-id="dd019-133">为了简化数据绑定，Windows 窗体让你可将数据源绑定到 <xref:System.Windows.Forms.BindingSource> 组件，然后将控件绑定到 <xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="dd019-133">To simplify data binding, Windows Forms enables you to bind a data source to the <xref:System.Windows.Forms.BindingSource> component and then bind controls to the <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="dd019-134">你可以在简单或复杂绑定方案中使用 <xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="dd019-134">You can use the <xref:System.Windows.Forms.BindingSource> in simple or complex binding scenarios.</span></span> <span data-ttu-id="dd019-135">在任一种情况下，<xref:System.Windows.Forms.BindingSource> 均充当数据源和绑定控件的中介，提供更改通知货币管理和其他服务。</span><span class="sxs-lookup"><span data-stu-id="dd019-135">In either case, the <xref:System.Windows.Forms.BindingSource> acts as an intermediary between the data source and bound controls providing change notification currency management and other services.</span></span>  
   
-## 采用数据绑定的常见方案  
- 几乎每个商业应用程序都使用读取自一种类型或另一种类型的数据源的信息，方法通常是数据绑定。  以下列表显示了几个最常见的利用数据绑定作为数据表示和操作方法的方案。  
+## <a name="common-scenarios-that-employ-data-binding"></a><span data-ttu-id="dd019-136">采用数据绑定的常见方案</span><span class="sxs-lookup"><span data-stu-id="dd019-136">Common Scenarios That Employ Data Binding</span></span>  
+ <span data-ttu-id="dd019-137">几乎每个商业应用程序都使用读取自一种类型或另一种类型的数据源的信息，方法通常是数据绑定。</span><span class="sxs-lookup"><span data-stu-id="dd019-137">Nearly every commercial application uses information read from data sources of one type or another, usually through data binding.</span></span> <span data-ttu-id="dd019-138">以下列表显示了几个最常见的利用数据绑定作为数据表示和操作方法的方案。</span><span class="sxs-lookup"><span data-stu-id="dd019-138">The following list shows a few of the most common scenarios that utilize data binding as the method of data presentation and manipulation.</span></span>  
   
-|方案|描述|  
-|--------|--------|  
-|Reporting|报表为你提供了一种灵活的方式来显示和汇总打印出的文档中的数据。  一种很常见的做法是：创建一个将数据源的选定内容打印到屏幕或打印机的报表。  常见的报表包括列表、发票和摘要。  通常将项格式化成列表的列，在每个列表项下组织子项，但你应选择最适合数据的布局。|  
-|数据输入|输入大量相关数据或提示用户输入信息的常用方法是使用数据输入表单。  用户可以使用文本框、选项按钮、下拉列表和复选框来输入信息或选择选项。  然后提交信息并将其存储在数据库中，数据库结构基于所输入的信息。|  
-|大纲\/细节关系|大纲\/细节应用程序是查看相关数据的一种格式。  具体来说，有两个彼此间有关系的数据表 — 在经典商业示例中，“顾客”表和“订单”表之间存在联系客户和对应订单的关系。  有关使用两个 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件创建大纲\/细节应用程序的详细信息，请参阅[如何：使用两个 Windows 窗体 DataGridView 控件创建一个主\/从窗体](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagrids.md)。|  
-|查找表|另一个常见的数据表示\/操作方案是表查找。  通常情况下，作为较大数据显示的一部分，<xref:System.Windows.Forms.ComboBox> 控件用于显示和操作数据。  关键在于 <xref:System.Windows.Forms.ComboBox> 控件中显示的数据与写入数据库中的数据不同。  例如，如果你有一个显示杂货店中的物料的 <xref:System.Windows.Forms.ComboBox> 控件，你可能想要查看产品名称（面包、牛奶、鸡蛋）。  但是，为了便于在数据库中检索信息或使数据库标准化，你可能会将给定订单特定项的信息存储为物料编号（\#501、\#603 等等）。  因此，你窗体上的 <xref:System.Windows.Forms.ComboBox> 控件中的杂货物料“友好名称”和存在于订单中的物料编号间有着隐式联系。  这就是表查找的实质。  有关详细信息，请参阅[如何：使用 Windows 窗体 BindingSource 组件创建查找表](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)。|  
+|<span data-ttu-id="dd019-139">方案</span><span class="sxs-lookup"><span data-stu-id="dd019-139">Scenario</span></span>|<span data-ttu-id="dd019-140">描述</span><span class="sxs-lookup"><span data-stu-id="dd019-140">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="dd019-141">Reporting</span><span class="sxs-lookup"><span data-stu-id="dd019-141">Reporting</span></span>|<span data-ttu-id="dd019-142">报表为你提供了一种灵活的方式来显示和汇总打印出的文档中的数据。</span><span class="sxs-lookup"><span data-stu-id="dd019-142">Reports provide a flexible way for you to display and summarize your data in a printed document.</span></span> <span data-ttu-id="dd019-143">一种很常见的做法是：创建一个将数据源的选定内容打印到屏幕或打印机的报表。</span><span class="sxs-lookup"><span data-stu-id="dd019-143">It is very common to create a report that prints selected contents of a data source either to the screen or to a printer.</span></span> <span data-ttu-id="dd019-144">常见的报表包括列表、发票和摘要。</span><span class="sxs-lookup"><span data-stu-id="dd019-144">Common reports include lists, invoices, and summaries.</span></span> <span data-ttu-id="dd019-145">通常将项格式化成列表的列，在每个列表项下组织子项，但你应选择最适合数据的布局。</span><span class="sxs-lookup"><span data-stu-id="dd019-145">Items are usually formatted into columns of lists, with sub-items organized under each list item, but you should choose the layout that best suits the data.</span></span>|  
+|<span data-ttu-id="dd019-146">数据输入</span><span class="sxs-lookup"><span data-stu-id="dd019-146">Data entry</span></span>|<span data-ttu-id="dd019-147">输入大量相关数据或提示用户输入信息的常用方法是使用数据输入表单。</span><span class="sxs-lookup"><span data-stu-id="dd019-147">A common way to enter large amounts of related data or to prompt users for information is through a data entry form.</span></span> <span data-ttu-id="dd019-148">用户可以使用文本框、选项按钮、下拉列表和复选框来输入信息或选择选项。</span><span class="sxs-lookup"><span data-stu-id="dd019-148">Users can enter information or select choices using text boxes, option buttons, drop-down lists, and check boxes.</span></span> <span data-ttu-id="dd019-149">然后提交信息并将其存储在数据库中，数据库结构基于所输入的信息。</span><span class="sxs-lookup"><span data-stu-id="dd019-149">Information is then submitted and stored in a database, whose structure is based on the information entered.</span></span>|  
+|<span data-ttu-id="dd019-150">大纲/细节关系</span><span class="sxs-lookup"><span data-stu-id="dd019-150">Master/detail relationship</span></span>|<span data-ttu-id="dd019-151">大纲/细节应用程序是查看相关数据的一种格式。</span><span class="sxs-lookup"><span data-stu-id="dd019-151">A master/detail application is one format for looking at related data.</span></span> <span data-ttu-id="dd019-152">具体来说，有两个彼此间有关系的数据表 — 在经典商业示例中，“顾客”表和“订单”表之间存在联系客户和对应订单的关系。</span><span class="sxs-lookup"><span data-stu-id="dd019-152">Specifically, there are two tables of data with a relation connecting them—in the classic business example, a "Customers" table and an "Orders" table with a relationship between them linking customers and their respective orders.</span></span> <span data-ttu-id="dd019-153">有关使用两个 Windows 窗体中创建主/从应用程序的详细信息<xref:System.Windows.Forms.DataGridView>控件，请参阅[如何： 创建主/从窗体使用两个 Windows 窗体 DataGridView 控件](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)</span><span class="sxs-lookup"><span data-stu-id="dd019-153">For more information about creating a master/detail application with two Windows Forms <xref:System.Windows.Forms.DataGridView> controls, see [How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)</span></span>|  
+|<span data-ttu-id="dd019-154">查找表</span><span class="sxs-lookup"><span data-stu-id="dd019-154">Lookup Table</span></span>|<span data-ttu-id="dd019-155">另一个常见的数据表示/操作方案是表查找。</span><span class="sxs-lookup"><span data-stu-id="dd019-155">Another common data presentation/manipulation scenario is the table lookup.</span></span> <span data-ttu-id="dd019-156">通常情况下，作为较大数据显示的一部分，<xref:System.Windows.Forms.ComboBox> 控件用于显示和操作数据。</span><span class="sxs-lookup"><span data-stu-id="dd019-156">Often, as part of a larger data display, a <xref:System.Windows.Forms.ComboBox> control is used to display and manipulate data.</span></span> <span data-ttu-id="dd019-157">关键在于 <xref:System.Windows.Forms.ComboBox> 控件中显示的数据与写入数据库中的数据不同。</span><span class="sxs-lookup"><span data-stu-id="dd019-157">The key is that the data displayed in the <xref:System.Windows.Forms.ComboBox> control is different than the data written to the database.</span></span> <span data-ttu-id="dd019-158">例如，如果你有一个显示杂货店中的物料的 <xref:System.Windows.Forms.ComboBox> 控件，你可能想要查看产品名称（面包、牛奶、鸡蛋）。</span><span class="sxs-lookup"><span data-stu-id="dd019-158">For example, if you have a <xref:System.Windows.Forms.ComboBox> control displaying the items available from a grocery store, you would probably like to see the names of the products (bread, milk, eggs).</span></span> <span data-ttu-id="dd019-159">但是，为了便于在数据库中检索信息或使数据库标准化，你可能会将给定订单特定项的信息存储为物料编号（#501、#603 等等）。</span><span class="sxs-lookup"><span data-stu-id="dd019-159">However, to ease information retrieval within the database and for database normalization, you would probably store the information for the specific items of a given order as item numbers (#501, #603, and so on).</span></span> <span data-ttu-id="dd019-160">因此，你窗体上的 <xref:System.Windows.Forms.ComboBox> 控件中的杂货物料“友好名称”和存在于订单中的物料编号间有着隐式联系。</span><span class="sxs-lookup"><span data-stu-id="dd019-160">Thus, there is an implicit connection between the "friendly name" of the grocery item in the <xref:System.Windows.Forms.ComboBox> control on your form and the related item number that is present in an order.</span></span> <span data-ttu-id="dd019-161">这就是表查找的实质。</span><span class="sxs-lookup"><span data-stu-id="dd019-161">This is the essence of a table lookup.</span></span> <span data-ttu-id="dd019-162">有关详细信息，请参阅[如何： 使用 Windows 窗体 BindingSource 组件创建查找表](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)。</span><span class="sxs-lookup"><span data-stu-id="dd019-162">For more information, see [How to: Create a Lookup Table with the Windows Forms BindingSource Component](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Forms.Binding>   
- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)   
- [BindingSource 组件](../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a><span data-ttu-id="dd019-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dd019-163">See Also</span></span>  
+ <xref:System.Windows.Forms.Binding>  
+ [<span data-ttu-id="dd019-164">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="dd019-164">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [<span data-ttu-id="dd019-165">如何：将 Windows 窗体 DataGrid 控件绑定到数据源</span><span class="sxs-lookup"><span data-stu-id="dd019-165">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [<span data-ttu-id="dd019-166">BindingSource 组件</span><span class="sxs-lookup"><span data-stu-id="dd019-166">BindingSource Component</span></span>](../../../docs/framework/winforms/controls/bindingsource-component.md)

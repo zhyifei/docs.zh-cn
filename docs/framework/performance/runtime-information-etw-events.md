@@ -5,55 +5,52 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="runtime-information-etw-events"></a>运行时信息 ETW 事件
-这些 ETW 事件记录有关运行时的信息，包括 SKU、版本号、激活运行时的方式、启动运行时所使用的命令行参数、GUID（如果适用）以及其他相关信息。 如果多个运行时在一个进程内执行，这些事件 (ClrInstanceID) 提供的信息可帮助消除不同运行时的歧义。  
+# <a name="runtime-information-etw-events"></a><span data-ttu-id="d6c1b-102">运行时信息 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="d6c1b-102">Runtime Information ETW Events</span></span>
+<span data-ttu-id="d6c1b-103">这些 ETW 事件记录有关运行时的信息，包括 SKU、版本号、激活运行时的方式、启动运行时所使用的命令行参数、GUID（如果适用）以及其他相关信息。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="d6c1b-104">如果多个运行时在一个进程内执行，这些事件 (ClrInstanceID) 提供的信息可帮助消除不同运行时的歧义。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  
   
- 下表显示了两个运行时信息事件。 这两个事件可在任意关键字或掩码下引发。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
+ <span data-ttu-id="d6c1b-105">下表显示了两个运行时信息事件。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-105">The following table shows the two runtime information events.</span></span> <span data-ttu-id="d6c1b-106">这两个事件可在任意关键字或掩码下引发。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-106">The events can be raised under any keyword or mask.</span></span> <span data-ttu-id="d6c1b-107">（有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）</span><span class="sxs-lookup"><span data-stu-id="d6c1b-107">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Event|事件 ID|提供程序|描述|  
+|<span data-ttu-id="d6c1b-108">Event</span><span class="sxs-lookup"><span data-stu-id="d6c1b-108">Event</span></span>|<span data-ttu-id="d6c1b-109">事件 ID</span><span class="sxs-lookup"><span data-stu-id="d6c1b-109">Event ID</span></span>|<span data-ttu-id="d6c1b-110">提供程序</span><span class="sxs-lookup"><span data-stu-id="d6c1b-110">Provider</span></span>|<span data-ttu-id="d6c1b-111">描述</span><span class="sxs-lookup"><span data-stu-id="d6c1b-111">Description</span></span>|  
 |-----------|--------------|--------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|加载运行时时引发。|  
-|`RuntimeInformationDCStart`|187|CLRRundown|枚举加载的运行时。|  
+|`RuntimeInformationEvent`|<span data-ttu-id="d6c1b-112">187</span><span class="sxs-lookup"><span data-stu-id="d6c1b-112">187</span></span>|<span data-ttu-id="d6c1b-113">CLRRuntime</span><span class="sxs-lookup"><span data-stu-id="d6c1b-113">CLRRuntime</span></span>|<span data-ttu-id="d6c1b-114">加载运行时时引发。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-114">Raised when a runtime is loaded.</span></span>|  
+|`RuntimeInformationDCStart`|<span data-ttu-id="d6c1b-115">187</span><span class="sxs-lookup"><span data-stu-id="d6c1b-115">187</span></span>|<span data-ttu-id="d6c1b-116">CLRRundown</span><span class="sxs-lookup"><span data-stu-id="d6c1b-116">CLRRundown</span></span>|<span data-ttu-id="d6c1b-117">枚举加载的运行时。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-117">Enumerates the runtimes that are loaded.</span></span>|  
   
- 下表显示了事件数据。  
+ <span data-ttu-id="d6c1b-118">下表显示了事件数据。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-118">The following table shows event data.</span></span>  
   
-|字段名|数据类型|描述|  
+|<span data-ttu-id="d6c1b-119">字段名</span><span class="sxs-lookup"><span data-stu-id="d6c1b-119">Field name</span></span>|<span data-ttu-id="d6c1b-120">数据类型</span><span class="sxs-lookup"><span data-stu-id="d6c1b-120">Data type</span></span>|<span data-ttu-id="d6c1b-121">描述</span><span class="sxs-lookup"><span data-stu-id="d6c1b-121">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
-|Sku|win:UInt16|1 – 桌面 CLR。<br /><br /> 2 – CoreCLR。|  
-|BclVersion – 主版本|win:UInt16|mscorlib.dll 的主版本。|  
-|BclVersion – 次版本|win:UInt16|mscorlib.dll 的次版本号。|  
-|BclVersion – 生成号|win:UInt16|mscorlib.dll 的生成号。|  
-|BclVersion – QFE|win:UInt16|mscorlib.dll 的修补程序版本号。|  
-|VMVersion – 主版本|win:UInt16|clr.dll 或 coreclr.dll 的版本（取决于 SKU）。|  
-|VMVersion – 次版本|win:UInt16|clr.dll 或 coreclr.dll 的次版本（取决于 SKU）。|  
-|VMVersion – 生成号|win:UInt16|clr.dll 或 coreclr.dll 的生成号。|  
-|VMVersion – QFE|win:UInt16|clr.dll 或 coreclr.dll 的修补程序版本号。|  
-|StartupFlags|win:UInt32|在 mscoree.h 中定义的启动标志。|  
-|StartupMode|win:UInt8|0x01 - 托管可执行文件。<br /><br /> 0x02 - 托管 CLR。<br /><br /> 0x04 - C++ 托管互操作。<br /><br /> 0x08 - 已激活 COM。<br /><br /> 0x10 - 其他。|  
-|CommandLine|win:UnicodeString|仅在 StartupMode=0x01 时为非 NULL。|  
-|ComObjectGUID|win:GUID|仅在 StartupMode=0x08 时为非 NULL。|  
-|RuntimeDLLPath|win:UnicodeString|已加载到进程的 CLR.dll 文件的路径。|  
+|<span data-ttu-id="d6c1b-122">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="d6c1b-122">ClrInstanceID</span></span>|<span data-ttu-id="d6c1b-123">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-123">win:UInt16</span></span>|<span data-ttu-id="d6c1b-124">CLR 或 CoreCLR 的实例的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-124">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="d6c1b-125">Sku</span><span class="sxs-lookup"><span data-stu-id="d6c1b-125">Sku</span></span>|<span data-ttu-id="d6c1b-126">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-126">win:UInt16</span></span>|<span data-ttu-id="d6c1b-127">1 – 桌面 CLR。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-127">1 – Desktop CLR.</span></span><br /><br /> <span data-ttu-id="d6c1b-128">2 – CoreCLR。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-128">2 – CoreCLR.</span></span>|  
+|<span data-ttu-id="d6c1b-129">BclVersion – 主版本</span><span class="sxs-lookup"><span data-stu-id="d6c1b-129">BclVersion – Major Version</span></span>|<span data-ttu-id="d6c1b-130">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-130">win:UInt16</span></span>|<span data-ttu-id="d6c1b-131">mscorlib.dll 的主版本。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-131">Major version of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-132">BclVersion – 次版本</span><span class="sxs-lookup"><span data-stu-id="d6c1b-132">BclVersion – Minor Version</span></span>|<span data-ttu-id="d6c1b-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-133">win:UInt16</span></span>|<span data-ttu-id="d6c1b-134">mscorlib.dll 的次版本号。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-134">Minor version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-135">BclVersion – 生成号</span><span class="sxs-lookup"><span data-stu-id="d6c1b-135">BclVersion – Build Number</span></span>|<span data-ttu-id="d6c1b-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-136">win:UInt16</span></span>|<span data-ttu-id="d6c1b-137">mscorlib.dll 的生成号。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-137">Build number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-138">BclVersion – QFE</span><span class="sxs-lookup"><span data-stu-id="d6c1b-138">BclVersion – QFE</span></span>|<span data-ttu-id="d6c1b-139">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-139">win:UInt16</span></span>|<span data-ttu-id="d6c1b-140">mscorlib.dll 的修补程序版本号。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-140">Hotfix version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-141">VMVersion – 主版本</span><span class="sxs-lookup"><span data-stu-id="d6c1b-141">VMVersion – Major Version</span></span>|<span data-ttu-id="d6c1b-142">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-142">win:UInt16</span></span>|<span data-ttu-id="d6c1b-143">clr.dll 或 coreclr.dll 的版本（取决于 SKU）。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-143">Version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="d6c1b-144">VMVersion – 次版本</span><span class="sxs-lookup"><span data-stu-id="d6c1b-144">VMVersion – Minor Version</span></span>|<span data-ttu-id="d6c1b-145">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-145">win:UInt16</span></span>|<span data-ttu-id="d6c1b-146">clr.dll 或 coreclr.dll 的次版本（取决于 SKU）。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-146">Minor version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="d6c1b-147">VMVersion – 生成号</span><span class="sxs-lookup"><span data-stu-id="d6c1b-147">VMVersion – Build Number</span></span>|<span data-ttu-id="d6c1b-148">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-148">win:UInt16</span></span>|<span data-ttu-id="d6c1b-149">clr.dll 或 coreclr.dll 的生成号。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-149">Build number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-150">VMVersion – QFE</span><span class="sxs-lookup"><span data-stu-id="d6c1b-150">VMVersion – QFE</span></span>|<span data-ttu-id="d6c1b-151">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="d6c1b-151">win:UInt16</span></span>|<span data-ttu-id="d6c1b-152">clr.dll 或 coreclr.dll 的修补程序版本号。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-152">Hotfix version number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="d6c1b-153">StartupFlags</span><span class="sxs-lookup"><span data-stu-id="d6c1b-153">StartupFlags</span></span>|<span data-ttu-id="d6c1b-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="d6c1b-154">win:UInt32</span></span>|<span data-ttu-id="d6c1b-155">在 mscoree.h 中定义的启动标志。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-155">Startup flags defined in mscoree.h.</span></span>|  
+|<span data-ttu-id="d6c1b-156">StartupMode</span><span class="sxs-lookup"><span data-stu-id="d6c1b-156">StartupMode</span></span>|<span data-ttu-id="d6c1b-157">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="d6c1b-157">win:UInt8</span></span>|<span data-ttu-id="d6c1b-158">0x01 - 托管可执行文件。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-158">0x01 - Managed executable.</span></span><br /><br /> <span data-ttu-id="d6c1b-159">0x02 - 托管 CLR。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-159">0x02 - Hosted CLR.</span></span><br /><br /> <span data-ttu-id="d6c1b-160">0x04 - C++ 托管互操作。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-160">0x04 - C++ managed interop.</span></span><br /><br /> <span data-ttu-id="d6c1b-161">0x08 - 已激活 COM。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-161">0x08 - COM-activated.</span></span><br /><br /> <span data-ttu-id="d6c1b-162">0x10 - 其他。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-162">0x10 - Other.</span></span>|  
+|<span data-ttu-id="d6c1b-163">CommandLine</span><span class="sxs-lookup"><span data-stu-id="d6c1b-163">CommandLine</span></span>|<span data-ttu-id="d6c1b-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d6c1b-164">win:UnicodeString</span></span>|<span data-ttu-id="d6c1b-165">仅在 StartupMode=0x01 时为非 NULL。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-165">Non-null only if StartupMode=0x01.</span></span>|  
+|<span data-ttu-id="d6c1b-166">ComObjectGUID</span><span class="sxs-lookup"><span data-stu-id="d6c1b-166">ComObjectGUID</span></span>|<span data-ttu-id="d6c1b-167">win:GUID</span><span class="sxs-lookup"><span data-stu-id="d6c1b-167">win:GUID</span></span>|<span data-ttu-id="d6c1b-168">仅在 StartupMode=0x08 时为非 NULL。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-168">Non-null only if StartupMode=0x08.</span></span>|  
+|<span data-ttu-id="d6c1b-169">RuntimeDLLPath</span><span class="sxs-lookup"><span data-stu-id="d6c1b-169">RuntimeDLLPath</span></span>|<span data-ttu-id="d6c1b-170">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="d6c1b-170">win:UnicodeString</span></span>|<span data-ttu-id="d6c1b-171">已加载到进程的 CLR.dll 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="d6c1b-171">Path to the CLR .dll file that was loaded into the process.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="d6c1b-172">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6c1b-172">See Also</span></span>  
+ [<span data-ttu-id="d6c1b-173">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="d6c1b-173">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

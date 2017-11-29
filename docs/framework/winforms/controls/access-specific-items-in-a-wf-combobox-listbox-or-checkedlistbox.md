@@ -1,43 +1,47 @@
 ---
-title: "如何：访问 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中的特定项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox 控件 [Windows 窗体], 访问项"
-  - "组合框, 访问项"
-  - "ComboBox 控件 [Windows 窗体], 访问项"
-  - "列表框, 访问项"
-  - "ListBox 控件 [Windows 窗体], 访问项"
-  - "ListBox 控件 [Windows 窗体], 返回项信息"
+title: "如何：访问 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中的特定项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：访问 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中的特定项
-访问 Windows 窗体组合框、列表框或复选列表框中的特定项是一项基本任务。  它使您可以编程方式确定列表中任意给定位置处的内容。  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="80152-102">如何：访问 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中的特定项</span><span class="sxs-lookup"><span data-stu-id="80152-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="80152-103">访问 Windows 窗体组合框、 列表框中或选中的列表框中的特定项是一项基本任务。</span><span class="sxs-lookup"><span data-stu-id="80152-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="80152-104">它使您可以以编程方式确定在任何给定位置的列表中的内容。</span><span class="sxs-lookup"><span data-stu-id="80152-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### 访问特定项  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="80152-105">若要访问特定项</span><span class="sxs-lookup"><span data-stu-id="80152-105">To access a specific item</span></span>  
   
-1.  使用指定项的索引查询 `Items`  集合：  
+1.  <span data-ttu-id="80152-106">查询`Items`使用特定项的索引集合：</span><span class="sxs-lookup"><span data-stu-id="80152-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 13
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ caps.handback.revision: 13
        }  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="80152-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80152-107">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [<span data-ttu-id="80152-108">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="80152-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

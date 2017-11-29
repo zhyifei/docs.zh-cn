@@ -1,222 +1,226 @@
 ---
-title: "演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI 窗体"
-  - "MDI 窗体, 创建"
-  - "MDI 窗体, 演练"
-  - "MDI, 创建窗体"
-  - "多文档界面窗体"
-  - "工具栏 [Windows 窗体]"
-  - "ToolStrip 控件 [Windows 窗体]"
-  - "ToolStripPanel 控件 [Windows 窗体]"
+title: "演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStripPanel control [Windows Forms]
+- MDI [Windows Forms], creating forms
+- multiple document interface forms
+- MDI forms
+- ToolStrip control [Windows Forms]
+- MDI forms [Windows Forms], creating
+- MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca5439f247951496d82c03b57ec1fa0e21a8271
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体
-<xref:System.Windows.Forms?displayProperty=fullName> 命名空间支持多文档界面 \(MDI\) 应用程序，<xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。  MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。  
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a><span data-ttu-id="80626-102">演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体</span><span class="sxs-lookup"><span data-stu-id="80626-102">Walkthrough: Creating an MDI Form with Menu Merging and ToolStrip Controls</span></span>
+<span data-ttu-id="80626-103"><xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间支持多文档界面 (MDI) 应用程序，而 <xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。</span><span class="sxs-lookup"><span data-stu-id="80626-103">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace supports multiple document interface (MDI) applications, and the <xref:System.Windows.Forms.MenuStrip> control supports menu merging.</span></span> <span data-ttu-id="80626-104">MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="80626-104">MDI forms can also <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- 本演练演示如何将 <xref:System.Windows.Forms.ToolStripPanel> 控件用于 MDI 窗体。  该窗体还支持与子菜单的菜单合并。  本演练演示了以下任务：  
+ <span data-ttu-id="80626-105">本演练演示如何使用<xref:System.Windows.Forms.ToolStripPanel>具有的 MDI 窗体的控件。</span><span class="sxs-lookup"><span data-stu-id="80626-105">This walkthrough demonstrates how to use <xref:System.Windows.Forms.ToolStripPanel> controls with an MDI form.</span></span> <span data-ttu-id="80626-106">此窗体还支持菜单与子菜单合并。</span><span class="sxs-lookup"><span data-stu-id="80626-106">The form also supports menu merging with child menus.</span></span> <span data-ttu-id="80626-107">在本演练阐释了以下任务：</span><span class="sxs-lookup"><span data-stu-id="80626-107">The following tasks are illustrated in this walkthrough:</span></span>  
   
--   创建 Windows 窗体项目。  
+-   <span data-ttu-id="80626-108">创建 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="80626-108">Creating a Windows Forms project.</span></span>  
   
--   创建窗体的主菜单。  菜单的实际名称将有所不同。  
+-   <span data-ttu-id="80626-109">创建你的窗体的主菜单。</span><span class="sxs-lookup"><span data-stu-id="80626-109">Creating the main menu for your form.</span></span> <span data-ttu-id="80626-110">菜单上的实际名称将有所不同。</span><span class="sxs-lookup"><span data-stu-id="80626-110">The actual name of the menu will vary.</span></span>  
   
--   将 <xref:System.Windows.Forms.ToolStripPanel> 控件添加到**“工具箱”**中。  
+-   <span data-ttu-id="80626-111">添加<xref:System.Windows.Forms.ToolStripPanel>控制转移到**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="80626-111">Adding the <xref:System.Windows.Forms.ToolStripPanel> control to the **Toolbox**.</span></span>  
   
--   创建子窗体。  
+-   <span data-ttu-id="80626-112">创建子窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-112">Creating a child form.</span></span>  
   
--   按 Z 顺序排列 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
+-   <span data-ttu-id="80626-113">排列<xref:System.Windows.Forms.ToolStripPanel>按 z 顺序的控件。</span><span class="sxs-lookup"><span data-stu-id="80626-113">Arranging <xref:System.Windows.Forms.ToolStripPanel> controls by z-order.</span></span>  
   
- 完成这些步骤之后，您会得到一个支持菜单合并和可移动 <xref:System.Windows.Forms.ToolStrip> 控件的 MDI 窗体。  
+ <span data-ttu-id="80626-114">完成后，你将具有支持菜单合并功能和可移动的 MDI 窗体<xref:System.Windows.Forms.ToolStrip>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-114">When you are finished, you will have an MDI form that supports menu merging and movable <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- 若要将本主题中的代码作为一个单独的清单进行复制，请参见 [如何：创建合并了菜单并具有 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+ <span data-ttu-id="80626-115">若要将代码复制本主题中的一个单独的清单，请参阅[如何： 创建具有菜单合并和 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="80626-115">To copy the code in this topic as a single listing, see [How to: Create an MDI Form with Menu Merging and ToolStrip Controls](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="80626-116">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="80626-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="80626-117">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="80626-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="80626-118">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="80626-118">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 系统必备  
- 若要完成本演练，您需要：  
+## <a name="prerequisites"></a><span data-ttu-id="80626-119">先决条件</span><span class="sxs-lookup"><span data-stu-id="80626-119">Prerequisites</span></span>  
+ <span data-ttu-id="80626-120">若要完成本演练，你将需要：</span><span class="sxs-lookup"><span data-stu-id="80626-120">In order to complete this walkthrough, you will need:</span></span>  
   
--   足以在安装了 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 的计算机上创建和运行 Windows 窗体应用程序项目的权限。  
+-   <span data-ttu-id="80626-121">若要能够创建和运行的计算机上的 Windows 窗体应用程序项目的足够权限其中[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]安装。</span><span class="sxs-lookup"><span data-stu-id="80626-121">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
   
-## 创建项目  
- 第一步是创建项目并设置窗体。  
+## <a name="creating-the-project"></a><span data-ttu-id="80626-122">创建项目</span><span class="sxs-lookup"><span data-stu-id="80626-122">Creating the Project</span></span>  
+ <span data-ttu-id="80626-123">第一步是创建项目并设置窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-123">The first step is to create the project and set up the form.</span></span>  
   
-#### 创建项目  
+#### <a name="to-create-the-project"></a><span data-ttu-id="80626-124">创建项目</span><span class="sxs-lookup"><span data-stu-id="80626-124">To create the project</span></span>  
   
-1.  创建名为“MdiForm”的 Windows 应用程序项目。  
+1.  <span data-ttu-id="80626-125">创建一个名为的 Windows 应用程序项目**mdi 窗体**。</span><span class="sxs-lookup"><span data-stu-id="80626-125">Create a Windows Application project called **MdiForm**.</span></span>  
   
-     有关更多信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+     <span data-ttu-id="80626-126">有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="80626-126">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  在 Windows 窗体设计器中，选择该窗体。  
+2.  <span data-ttu-id="80626-127">在 Windows 窗体设计器中，选择窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-127">In the Windows Forms Designer, select the form.</span></span>  
   
-3.  在“属性”窗口中，将 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 的值设置为 `true`。  
+3.  <span data-ttu-id="80626-128">在属性窗口中，将的值设置<xref:System.Windows.Forms.Form.IsMdiContainer%2A>到`true`。</span><span class="sxs-lookup"><span data-stu-id="80626-128">In the Properties window, set the value of the <xref:System.Windows.Forms.Form.IsMdiContainer%2A> to `true`.</span></span>  
   
-## 创建主菜单  
- 父 MDI 窗体包含主菜单。  主菜单有一个名为**“窗口”**的菜单项。  使用**“窗口”**菜单项，可以创建子窗体。  来自子窗体的菜单项将合并到主菜单中。  
+## <a name="creating-the-main-menu"></a><span data-ttu-id="80626-129">创建主菜单</span><span class="sxs-lookup"><span data-stu-id="80626-129">Creating the Main Menu</span></span>  
+ <span data-ttu-id="80626-130">MDI 父窗体包含主菜单。</span><span class="sxs-lookup"><span data-stu-id="80626-130">The parent MDI form contains the main menu.</span></span> <span data-ttu-id="80626-131">主菜单有一个名为菜单项**窗口**。</span><span class="sxs-lookup"><span data-stu-id="80626-131">The main menu has one menu item named **Window**.</span></span> <span data-ttu-id="80626-132">与**窗口**菜单项，你可以创建子窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-132">With the **Window** menu item, you can create child forms.</span></span> <span data-ttu-id="80626-133">从子窗体的菜单项合并到主菜单中。</span><span class="sxs-lookup"><span data-stu-id="80626-133">Menu items from child forms are merged into the main menu.</span></span>  
   
-#### 创建主菜单  
+#### <a name="to-create-the-main-menu"></a><span data-ttu-id="80626-134">若要创建主菜单</span><span class="sxs-lookup"><span data-stu-id="80626-134">To create the Main menu</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.MenuStrip> 控件拖动到窗体上。  
+1.  <span data-ttu-id="80626-135">从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>拖到窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-135">From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto the form.</span></span>  
   
-2.  向 <xref:System.Windows.Forms.MenuStrip> 控件添加一个 <xref:System.Windows.Forms.ToolStripMenuItem>，并将其命名为“窗口”。  
+2.  <span data-ttu-id="80626-136">添加<xref:System.Windows.Forms.ToolStripMenuItem>到<xref:System.Windows.Forms.MenuStrip>控制并将其命名**窗口**。</span><span class="sxs-lookup"><span data-stu-id="80626-136">Add a <xref:System.Windows.Forms.ToolStripMenuItem> to the <xref:System.Windows.Forms.MenuStrip> control and name it **Window**.</span></span>  
   
-3.  选择 <xref:System.Windows.Forms.MenuStrip> 控件。  
+3.  <span data-ttu-id="80626-137">选择 <xref:System.Windows.Forms.MenuStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="80626-137">Select the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
-4.  在“属性”窗口中，将 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 属性的值设置为 `ToolStripMenuItem1`。  
+4.  <span data-ttu-id="80626-138">在属性窗口中，将的值设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性`ToolStripMenuItem1`。</span><span class="sxs-lookup"><span data-stu-id="80626-138">In the Properties window, set the value of the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property to `ToolStripMenuItem1`.</span></span>  
   
-5.  向**“窗口”**菜单项添加一个子项，并将其命名为“新建”。  
+5.  <span data-ttu-id="80626-139">添加到一个子项**窗口**菜单项，并将其命名**新建**。</span><span class="sxs-lookup"><span data-stu-id="80626-139">Add a subitem to the **Window** menu item, and then name the subitem **New**.</span></span>  
   
-6.  在“属性”窗口中，单击**“事件”**。  
+6.  <span data-ttu-id="80626-140">在属性窗口中，单击**事件**。</span><span class="sxs-lookup"><span data-stu-id="80626-140">In the Properties window, click **Events**.</span></span>  
   
-7.  双击 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+7.  <span data-ttu-id="80626-141">双击<xref:System.Windows.Forms.ToolStripItem.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="80626-141">Double-click the <xref:System.Windows.Forms.ToolStripItem.Click> event.</span></span>  
   
-     Windows 窗体设计器为 <xref:System.Windows.Forms.ToolStripItem.Click> 事件生成一个事件处理程序。  
+     <span data-ttu-id="80626-142">Windows 窗体设计器生成的事件处理程序<xref:System.Windows.Forms.ToolStripItem.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="80626-142">The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event.</span></span>  
   
-8.  将下面的代码插入到事件处理程序中。  
+8.  <span data-ttu-id="80626-143">下列代码插入到事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="80626-143">Insert the following code into the event handler.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
   
-## 将 ToolStripPanel 控件添加到工具箱中  
- 将 <xref:System.Windows.Forms.MenuStrip> 控件用于 MDI 窗体时，必须具有 <xref:System.Windows.Forms.ToolStripPanel> 控件。  必须在**“工具箱”**中添加 <xref:System.Windows.Forms.ToolStripPanel> 控件，以便在 Windows 窗体设计器中构建 MDI 窗体。  
+## <a name="adding-the-toolstrippanel-control-to-the-toolbox"></a><span data-ttu-id="80626-144">将 ToolStripPanel 控件添加到工具箱</span><span class="sxs-lookup"><span data-stu-id="80626-144">Adding the ToolStripPanel Control to the Toolbox</span></span>  
+ <span data-ttu-id="80626-145">当你使用<xref:System.Windows.Forms.MenuStrip>具有必须具有的 MDI 窗体的控件<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-145">When you use <xref:System.Windows.Forms.MenuStrip> controls with an MDI form you must have the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span> <span data-ttu-id="80626-146">你必须添加<xref:System.Windows.Forms.ToolStripPanel>控制转移到**工具箱**来生成你在 Windows 窗体设计器中的 MDI 窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-146">You must add the <xref:System.Windows.Forms.ToolStripPanel> control to the **Toolbox** to build your MDI form in the Windows Forms Designer.</span></span>  
   
-#### 将 ToolStripPanel 控件添加到工具箱中  
+#### <a name="to-add-the-toolstrippanel-control-to-the-toolbox"></a><span data-ttu-id="80626-147">ToolStripPanel 控件添加到工具箱</span><span class="sxs-lookup"><span data-stu-id="80626-147">To add the ToolStripPanel control to the Toolbox</span></span>  
   
-1.  打开**“工具箱”**并单击**“所有 Windows 窗体”**选项卡，以显示可用的 Windows 窗体控件。  
+1.  <span data-ttu-id="80626-148">打开**工具箱**，然后单击**所有 Windows 窗体**选项卡来显示可用的 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-148">Open the **Toolbox**, and then click the **All Windows Forms** tab to show the available Windows Forms controls.</span></span>  
   
-2.  单击右键打开快捷菜单，再选择**“选择项”**。  
+2.  <span data-ttu-id="80626-149">右键单击以打开快捷菜单，然后选择**选择项**。</span><span class="sxs-lookup"><span data-stu-id="80626-149">Right-click to open the shortcut menu, and select **Choose Items**.</span></span>  
   
-3.  在**“选择工具箱项”**对话框中，向下滚动**“名称”**列，直到找到**“ToolStripPanel”**。  
+3.  <span data-ttu-id="80626-150">在**选择工具箱项**对话框中，向下滚动**名称**列直到找到**ToolStripPanel**。</span><span class="sxs-lookup"><span data-stu-id="80626-150">In the **Choose Toolbox Items** dialog box, scroll down the **Name** column until you find **ToolStripPanel**.</span></span>  
   
-4.  选择**“ToolStripPanel”**旁边的复选框并单击**“确定”**。  
+4.  <span data-ttu-id="80626-151">选中的复选框通过**ToolStripPanel**，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="80626-151">Select the check box by **ToolStripPanel**, and then click **OK**.</span></span>  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 控件将出现在**“工具箱”**中。  
+     <span data-ttu-id="80626-152"><xref:System.Windows.Forms.ToolStripPanel>控件会出现在**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="80626-152">The <xref:System.Windows.Forms.ToolStripPanel> control appears in the **Toolbox**.</span></span>  
   
-## 创建子窗体  
- 在此过程中，您将定义一个单独的子窗体类，其中包含它自己的 <xref:System.Windows.Forms.MenuStrip> 控件。  此窗体的菜单项将与父窗体的菜单项合并。  
+## <a name="creating-a-child-form"></a><span data-ttu-id="80626-153">创建子窗体</span><span class="sxs-lookup"><span data-stu-id="80626-153">Creating a Child Form</span></span>  
+ <span data-ttu-id="80626-154">在此过程中，你将定义具有其自己的单独的子窗体类<xref:System.Windows.Forms.MenuStrip>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-154">In this procedure, you will define a separate child form class that has its own <xref:System.Windows.Forms.MenuStrip> control.</span></span> <span data-ttu-id="80626-155">此窗体的菜单项会与父窗体的合并。</span><span class="sxs-lookup"><span data-stu-id="80626-155">The menu items for this form are merged with those of the parent form.</span></span>  
   
-#### 定义子窗体  
+#### <a name="to-define-a-child-form"></a><span data-ttu-id="80626-156">若要定义子窗体</span><span class="sxs-lookup"><span data-stu-id="80626-156">To define a child form</span></span>  
   
-1.  向项目中添加一个名为 `ChildForm` 的新窗体。  
+1.  <span data-ttu-id="80626-157">添加名为的新窗体`ChildForm`到项目。</span><span class="sxs-lookup"><span data-stu-id="80626-157">Add a new form named `ChildForm` to the project.</span></span>  
   
-     有关更多信息，请参见 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-cn/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+     <span data-ttu-id="80626-158">有关详细信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。</span><span class="sxs-lookup"><span data-stu-id="80626-158">For more information, see [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).</span></span>  
   
-2.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.MenuStrip> 控件拖动到该子窗体上。  
+2.  <span data-ttu-id="80626-159">从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>拖到子窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-159">From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto the child form.</span></span>  
   
-3.  单击 <xref:System.Windows.Forms.MenuStrip> 控件的智能标记标志符号 \(![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)，然后选择**“编辑项”**。  
+3.  <span data-ttu-id="80626-160">单击<xref:System.Windows.Forms.MenuStrip>控件的智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**编辑项**。</span><span class="sxs-lookup"><span data-stu-id="80626-160">Click the <xref:System.Windows.Forms.MenuStrip> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), and then select **Edit Items**.</span></span>  
   
-4.  在**“项集合编辑器”**对话框中，向子菜单中添加一个名为 ChildMenuItem 的新 <xref:System.Windows.Forms.ToolStripMenuItem>。  
+4.  <span data-ttu-id="80626-161">在**项集合编辑器**对话框框中，添加一个新<xref:System.Windows.Forms.ToolStripMenuItem>名为**ChildMenuItem**到子菜单。</span><span class="sxs-lookup"><span data-stu-id="80626-161">In the **Items Collection Editor** dialog box, add a new <xref:System.Windows.Forms.ToolStripMenuItem> named **ChildMenuItem** to the child menu.</span></span>  
   
-     有关更多信息，请参见 [ToolStrip Items Collection Editor](http://msdn.microsoft.com/zh-cn/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。  
+     <span data-ttu-id="80626-162">有关详细信息，请参阅[ToolStrip 项集合编辑器](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25)。</span><span class="sxs-lookup"><span data-stu-id="80626-162">For more information, see [ToolStrip Items Collection Editor](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).</span></span>  
   
-## 测试窗体  
+## <a name="testing-the-form"></a><span data-ttu-id="80626-163">测试窗体</span><span class="sxs-lookup"><span data-stu-id="80626-163">Testing the Form</span></span>  
   
-#### 测试窗体  
+#### <a name="to-test-your-form"></a><span data-ttu-id="80626-164">若要测试你的窗体</span><span class="sxs-lookup"><span data-stu-id="80626-164">To test your form</span></span>  
   
-1.  按 F5 编译并运行窗体。  
+1.  <span data-ttu-id="80626-165">按 F5 编译和运行你的窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-165">Press F5 to compile and run your form.</span></span>  
   
-2.  单击**“窗口”**菜单项打开菜单，然后单击**“新建”**。  
+2.  <span data-ttu-id="80626-166">单击**窗口**菜单项，以打开菜单，然后单击**新建**。</span><span class="sxs-lookup"><span data-stu-id="80626-166">Click the **Window** menu item to open the menu, and then click **New**.</span></span>  
   
-     在该窗体的 MDI 工作区中将创建一个新的子窗体。  该子窗体的菜单将与主菜单合并。  
+     <span data-ttu-id="80626-167">在窗体的 MDI 工作区中创建新的子窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-167">A new child form is created in the form's MDI client area.</span></span> <span data-ttu-id="80626-168">主菜单与子窗体的菜单合并。</span><span class="sxs-lookup"><span data-stu-id="80626-168">The child form's menu is merged with the main menu.</span></span>  
   
-3.  关闭子窗体。  
+3.  <span data-ttu-id="80626-169">关闭子窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-169">Close the child form.</span></span>  
   
-     该子窗体的菜单从主菜单中移除。  
+     <span data-ttu-id="80626-170">从主菜单中删除子窗体的菜单。</span><span class="sxs-lookup"><span data-stu-id="80626-170">The child form's menu is removed from the main menu.</span></span>  
   
-4.  单击**“新建”**若干次。  
+4.  <span data-ttu-id="80626-171">单击**新建**多次。</span><span class="sxs-lookup"><span data-stu-id="80626-171">Click **New** several times.</span></span>  
   
-     因为指定了 <xref:System.Windows.Forms.MenuStrip> 控件的 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 属性，所以**“窗口”**菜单项下会自动列出子窗体。  
+     <span data-ttu-id="80626-172">子窗体自动下列出 W**窗口**菜单项，因为<xref:System.Windows.Forms.MenuStrip>控件的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性分配。</span><span class="sxs-lookup"><span data-stu-id="80626-172">The child forms are automatically listed under the W**indow** menu item because the <xref:System.Windows.Forms.MenuStrip> control's <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property is assigned.</span></span>  
   
-## 添加 ToolStrip 支持  
- 在此过程中，将向 MDI 父窗体添加四个 <xref:System.Windows.Forms.ToolStrip> 控件。  每个 <xref:System.Windows.Forms.ToolStrip> 控件均被添加到停靠于窗体边缘的一个 <xref:System.Windows.Forms.ToolStripPanel> 控件中。  
+## <a name="adding-toolstrip-support"></a><span data-ttu-id="80626-173">添加 ToolStrip 支持</span><span class="sxs-lookup"><span data-stu-id="80626-173">Adding ToolStrip Support</span></span>  
+ <span data-ttu-id="80626-174">在此过程中，你将添加四个<xref:System.Windows.Forms.ToolStrip>到 MDI 父窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-174">In this procedure, you will add four <xref:System.Windows.Forms.ToolStrip> controls to the MDI parent form.</span></span> <span data-ttu-id="80626-175">每个<xref:System.Windows.Forms.ToolStrip>内添加控件<xref:System.Windows.Forms.ToolStripPanel>控件，该窗体的边缘停靠。</span><span class="sxs-lookup"><span data-stu-id="80626-175">Each <xref:System.Windows.Forms.ToolStrip> control is added inside a <xref:System.Windows.Forms.ToolStripPanel> control, which is docked to the edge of the form.</span></span>  
   
-#### 向 MDI 父窗体添加 ToolStrip 控件  
+#### <a name="to-add-toolstrip-controls-to-the-mdi-parent-form"></a><span data-ttu-id="80626-176">若要添加到 MDI 父窗体的 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="80626-176">To add ToolStrip controls to the MDI parent form</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.ToolStripPanel> 控件拖动到窗体上。  
+1.  <span data-ttu-id="80626-177">从**工具箱**，拖动<xref:System.Windows.Forms.ToolStripPanel>拖到窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-177">From the **Toolbox**, drag a <xref:System.Windows.Forms.ToolStripPanel> control onto the form.</span></span>  
   
-2.  选择了 <xref:System.Windows.Forms.ToolStripPanel> 控件之后，在**“工具箱”**中双击 <xref:System.Windows.Forms.ToolStrip> 控件。  
+2.  <span data-ttu-id="80626-178">与<xref:System.Windows.Forms.ToolStripPanel>选择控件中，双击<xref:System.Windows.Forms.ToolStrip>中控制**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="80626-178">With the <xref:System.Windows.Forms.ToolStripPanel> control selected, double-click the <xref:System.Windows.Forms.ToolStrip> control in the **Toolbox**.</span></span>  
   
-     在 <xref:System.Windows.Forms.ToolStripPanel> 控件中会创建一个 <xref:System.Windows.Forms.ToolStrip> 控件。  
+     <span data-ttu-id="80626-179">A<xref:System.Windows.Forms.ToolStrip>控件中创建<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-179">A <xref:System.Windows.Forms.ToolStrip> control is created in the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-3.  选择 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
+3.  <span data-ttu-id="80626-180">选择 <xref:System.Windows.Forms.ToolStripPanel> 控件。</span><span class="sxs-lookup"><span data-stu-id="80626-180">Select the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-4.  在“属性”窗口中，将控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle>。  
+4.  <span data-ttu-id="80626-181">在属性窗口中，更改控件的值，<xref:System.Windows.Forms.Control.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Left>。</span><span class="sxs-lookup"><span data-stu-id="80626-181">In the Properties window, change the value of the control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Left>.</span></span>  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 控件将停靠于窗体的左侧，位于主菜单的下方。  调整 MDI 工作区的大小以容纳该 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
+     <span data-ttu-id="80626-182"><xref:System.Windows.Forms.ToolStripPanel>控制停靠到窗体中，主菜单下的左侧。</span><span class="sxs-lookup"><span data-stu-id="80626-182">The <xref:System.Windows.Forms.ToolStripPanel> control docks to the left side of the form, underneath the main menu.</span></span> <span data-ttu-id="80626-183">MDI 客户端区域调整大小以适合<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-183">The MDI client area resizes to fit the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-5.  重复步骤 1 到 4。  
+5.  <span data-ttu-id="80626-184">重复步骤 1 至 4。</span><span class="sxs-lookup"><span data-stu-id="80626-184">Repeat steps 1 through 4.</span></span>  
   
-     将新的 <xref:System.Windows.Forms.ToolStripPanel> 控件停靠在窗体的顶部。  
+     <span data-ttu-id="80626-185">停靠新<xref:System.Windows.Forms.ToolStripPanel>控件添加到窗体顶部。</span><span class="sxs-lookup"><span data-stu-id="80626-185">Dock the new <xref:System.Windows.Forms.ToolStripPanel> control to the top of the form.</span></span>  
   
-     <xref:System.Windows.Forms.ToolStripPanel> 控件停靠于主菜单的下方，但位于第一个 <xref:System.Windows.Forms.ToolStripPanel> 控件的右侧。  此步骤说明 Z 顺序对于正确放置 <xref:System.Windows.Forms.ToolStripPanel> 控件的重要性。  
+     <span data-ttu-id="80626-186"><xref:System.Windows.Forms.ToolStripPanel>控件停靠下方主菜单中，但第一个右侧<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-186">The <xref:System.Windows.Forms.ToolStripPanel> control is docked underneath the main menu, but to the right of the first <xref:System.Windows.Forms.ToolStripPanel> control.</span></span> <span data-ttu-id="80626-187">本步骤说明了中正确定位的 z 顺序的重要性<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-187">This step illustrates the importance of z-order in correctly positioning <xref:System.Windows.Forms.ToolStripPanel> controls.</span></span>  
   
-6.  重复步骤 1 到步骤 4 以另外添加两个 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
+6.  <span data-ttu-id="80626-188">对两个以上重复步骤 1 至 4<xref:System.Windows.Forms.ToolStripPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="80626-188">Repeat steps 1 through 4 for two more <xref:System.Windows.Forms.ToolStripPanel> controls.</span></span>  
   
-     将这两个新的 <xref:System.Windows.Forms.ToolStripPanel> 控件分别停靠于窗体的右侧和底部。  
+     <span data-ttu-id="80626-189">停靠新<xref:System.Windows.Forms.ToolStripPanel>向右侧和底部的窗体控件。</span><span class="sxs-lookup"><span data-stu-id="80626-189">Dock the new <xref:System.Windows.Forms.ToolStripPanel> controls to the right and bottom of the form.</span></span>  
   
-## 按照 Z 顺序排列 ToolStripPanel 控件  
- <xref:System.Windows.Forms.ToolStripPanel> 控件在 MDI 窗体上的停靠位置由该控件在 Z 顺序中的位置确定。  在“文档大纲”窗口中可以方便地排列控件的 Z 顺序。  
+## <a name="arranging-toolstrippanel-controls-by-z-order"></a><span data-ttu-id="80626-190">排列按 Z 顺序的 ToolStripPanel 控件</span><span class="sxs-lookup"><span data-stu-id="80626-190">Arranging ToolStripPanel Controls by Z-order</span></span>  
+ <span data-ttu-id="80626-191">停靠的位置<xref:System.Windows.Forms.ToolStripPanel>MDI 窗体上的控件由在 z 顺序中的控件的位置。</span><span class="sxs-lookup"><span data-stu-id="80626-191">The position of a docked <xref:System.Windows.Forms.ToolStripPanel> control on your MDI form is determined by the control's position in the z-order.</span></span> <span data-ttu-id="80626-192">你可以方便地排列的文档大纲窗口中控件的 z 顺序。</span><span class="sxs-lookup"><span data-stu-id="80626-192">You can easily arrange the z-order of your controls in the Document Outline window.</span></span>  
   
-#### 按照 Z 顺序排列 ToolStripPanel 控件  
+#### <a name="to-arrange-toolstrippanel-controls-by-z-order"></a><span data-ttu-id="80626-193">排列按 Z 顺序的 ToolStripPanel 控件</span><span class="sxs-lookup"><span data-stu-id="80626-193">To arrange ToolStripPanel controls by Z-order</span></span>  
   
-1.  单击**“视图”**菜单中的**“其他窗口”**，再选择**“文档大纲”**。  
+1.  <span data-ttu-id="80626-194">在**视图**菜单上，单击**其他窗口**，然后单击**文档大纲**。</span><span class="sxs-lookup"><span data-stu-id="80626-194">In the **View** menu, click **Other Windows**, and then click **Document Outline**.</span></span>  
   
-     在上面的过程中，<xref:System.Windows.Forms.ToolStripPanel> 控件的排列是非标准排列。  这是因为 Z 顺序不正确。  请使用“文档大纲”窗口更改控件的 Z 顺序。  
+     <span data-ttu-id="80626-195">排列方式你<xref:System.Windows.Forms.ToolStripPanel>控件从前面的过程是使用了非标准。</span><span class="sxs-lookup"><span data-stu-id="80626-195">The arrangement of your <xref:System.Windows.Forms.ToolStripPanel> controls from the previous procedure is nonstandard.</span></span> <span data-ttu-id="80626-196">这是因为 z 顺序不正确。</span><span class="sxs-lookup"><span data-stu-id="80626-196">This is because the z-order is not correct.</span></span> <span data-ttu-id="80626-197">使用文档大纲窗口更改控件的 z 顺序。</span><span class="sxs-lookup"><span data-stu-id="80626-197">Use the Document Outline window to change the z-order of the controls.</span></span>  
   
-2.  在“文档大纲”窗口中，选择**“ToolStripPanel4”**。  
+2.  <span data-ttu-id="80626-198">在文档大纲窗口中，选择**ToolStripPanel4**。</span><span class="sxs-lookup"><span data-stu-id="80626-198">In the Document Outline window, select **ToolStripPanel4**.</span></span>  
   
-3.  重复单击向下箭头按钮，直到将**“ToolStripPanel4”**置于列表底部。  
+3.  <span data-ttu-id="80626-199">单击向下箭头按钮重复，直到**ToolStripPanel4**位于列表的底部。</span><span class="sxs-lookup"><span data-stu-id="80626-199">Click the down-arrow button repeatedly, until **ToolStripPanel4** is at the bottom of the list.</span></span>  
   
-     **“ToolStripPanel4”**控件被停靠于窗体的底部，位于其他控件的下方。  
+     <span data-ttu-id="80626-200">**ToolStripPanel4**控件停靠到窗体，其他控件下的底部。</span><span class="sxs-lookup"><span data-stu-id="80626-200">The **ToolStripPanel4** control is docked to the bottom of the form, underneath the other controls.</span></span>  
   
-4.  选择**“ToolStripPanel2”**。  
+4.  <span data-ttu-id="80626-201">选择**ToolStripPanel2**。</span><span class="sxs-lookup"><span data-stu-id="80626-201">Select **ToolStripPanel2**.</span></span>  
   
-5.  单击向下箭头一次，将控件定位在列表中的第三列。  
+5.  <span data-ttu-id="80626-202">一次单击向下箭头按钮在列表中的第三个定位控件。</span><span class="sxs-lookup"><span data-stu-id="80626-202">Click the down-arrow button one time to position the control third in the list.</span></span>  
   
-     **“ToolStripPanel2”**控件停靠于窗体的顶部，位于主菜单之下，其他控件之上。  
+     <span data-ttu-id="80626-203">**ToolStripPanel2**控件停靠到窗体，下方的主菜单和其他控件上方的顶部。</span><span class="sxs-lookup"><span data-stu-id="80626-203">The **ToolStripPanel2** control is docked to the top of the form, underneath the main menu and above the other controls.</span></span>  
   
-6.  在**“文档大纲”**窗口中选择不同的控件并将它们移动到 Z 顺序中的不同位置。  请注意 Z 顺序对放置停靠控件的影响。  使用 Ctrl\-Z 或**“编辑”**菜单中的**“撤消”**来撤消所做的更改。  
+6.  <span data-ttu-id="80626-204">选择在不同的控件**文档大纲**窗口并将它们移到不同的 z 顺序的位置。</span><span class="sxs-lookup"><span data-stu-id="80626-204">Select various controls in the **Document Outline** window and move them to different positions in the z-order.</span></span> <span data-ttu-id="80626-205">请注意对放置停靠的控件的 z 顺序的影响。</span><span class="sxs-lookup"><span data-stu-id="80626-205">Note the effect of the z-order on the placement of docked controls.</span></span> <span data-ttu-id="80626-206">使用 CTRL-Z 或**撤消**上**编辑**菜单上，若要撤消所做的更改。</span><span class="sxs-lookup"><span data-stu-id="80626-206">Use CTRL-Z or **Undo** on the **Edit** menu to undo your changes.</span></span>  
   
-## 检查点  
+## <a name="checkpoint"></a><span data-ttu-id="80626-207">检查点</span><span class="sxs-lookup"><span data-stu-id="80626-207">Checkpoint</span></span>  
   
-#### 测试窗体  
+#### <a name="to-test-your-form"></a><span data-ttu-id="80626-208">若要测试你的窗体</span><span class="sxs-lookup"><span data-stu-id="80626-208">To test your form</span></span>  
   
-1.  按 F5 编译并运行窗体。  
+1.  <span data-ttu-id="80626-209">按 F5 编译和运行你的窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-209">Press F5 to compile and run your form.</span></span>  
   
-2.  单击 <xref:System.Windows.Forms.ToolStrip> 控件的手柄并将控件拖动到窗体中的其他位置。  
+2.  <span data-ttu-id="80626-210">单击的手柄<xref:System.Windows.Forms.ToolStrip>控件并将控件拖动到不同的位置，在窗体上。</span><span class="sxs-lookup"><span data-stu-id="80626-210">Click the grip of a <xref:System.Windows.Forms.ToolStrip> control and drag the control to different positions on the form.</span></span>  
   
-     可以将 <xref:System.Windows.Forms.ToolStrip> 控件从一个 <xref:System.Windows.Forms.ToolStripPanel> 控件拖动到另一个控件。  
+     <span data-ttu-id="80626-211">您可以拖动<xref:System.Windows.Forms.ToolStrip>控件从一个<xref:System.Windows.Forms.ToolStripPanel>到另一个控件。</span><span class="sxs-lookup"><span data-stu-id="80626-211">You can drag a <xref:System.Windows.Forms.ToolStrip> control from one <xref:System.Windows.Forms.ToolStripPanel> control to another.</span></span>  
   
-## 后续步骤  
- 在本演练中，您已经创建了包含 <xref:System.Windows.Forms.ToolStrip> 控件和菜单合并功能的 MDI 父窗体。  <xref:System.Windows.Forms.ToolStrip> 系列控件有很多其他用途：  
+## <a name="next-steps"></a><span data-ttu-id="80626-212">后续步骤</span><span class="sxs-lookup"><span data-stu-id="80626-212">Next Steps</span></span>  
+ <span data-ttu-id="80626-213">在本演练中，您已经创建具有一个 MDI 父窗体<xref:System.Windows.Forms.ToolStrip>控件和菜单合并。</span><span class="sxs-lookup"><span data-stu-id="80626-213">In this walkthrough, you have created an MDI parent form with <xref:System.Windows.Forms.ToolStrip> controls and menu merging.</span></span> <span data-ttu-id="80626-214">你可以使用<xref:System.Windows.Forms.ToolStrip>系列实现多种其他用途的控件：</span><span class="sxs-lookup"><span data-stu-id="80626-214">You can use the <xref:System.Windows.Forms.ToolStrip> family of controls for many other purposes:</span></span>  
   
--   使用 <xref:System.Windows.Forms.ContextMenuStrip> 来创建控件的快捷菜单。  有关更多信息，请参见 [ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
+-   <span data-ttu-id="80626-215">创建与你的控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="80626-215">Create shortcut menus for your controls with <xref:System.Windows.Forms.ContextMenuStrip>.</span></span> <span data-ttu-id="80626-216">有关详细信息，请参阅[ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="80626-216">For more information, see [ContextMenu Component Overview](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span></span>  
   
--   创建一个自动填充有标准菜单的窗体。  有关更多信息，请参见 [演练：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
+-   <span data-ttu-id="80626-217">创建一个自动填充的标准菜单的窗体。</span><span class="sxs-lookup"><span data-stu-id="80626-217">Created a form with an automatically populated standard menu.</span></span> <span data-ttu-id="80626-218">有关详细信息，请参阅[演练： 向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。</span><span class="sxs-lookup"><span data-stu-id="80626-218">For more information, see [Walkthrough: Providing Standard Menu Items to a Form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).</span></span>  
   
--   赋予 <xref:System.Windows.Forms.ToolStrip> 控件专业的外观。  有关更多信息，请参见 [如何：为应用程序设置 ToolStrip 呈现程序](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。  
+-   <span data-ttu-id="80626-219">提供你<xref:System.Windows.Forms.ToolStrip>控件专业的外观。</span><span class="sxs-lookup"><span data-stu-id="80626-219">Give your <xref:System.Windows.Forms.ToolStrip> controls a professional appearance.</span></span> <span data-ttu-id="80626-220">有关详细信息，请参阅[如何： 设置 ToolStrip 呈现程序应用程序](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md)。</span><span class="sxs-lookup"><span data-stu-id="80626-220">For more information, see [How to: Set the ToolStrip Renderer for an Application](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [如何：将 MenuStrip 插入 MDI 下拉菜单](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)   
- [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="80626-221">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80626-221">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [<span data-ttu-id="80626-222">如何：创建 MDI 父窗体</span><span class="sxs-lookup"><span data-stu-id="80626-222">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="80626-223">如何：创建 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="80626-223">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="80626-224">如何：将 MenuStrip 插入 MDI 下拉菜单</span><span class="sxs-lookup"><span data-stu-id="80626-224">How to: Insert a MenuStrip into an MDI Drop-Down Menu</span></span>](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ [<span data-ttu-id="80626-225">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="80626-225">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

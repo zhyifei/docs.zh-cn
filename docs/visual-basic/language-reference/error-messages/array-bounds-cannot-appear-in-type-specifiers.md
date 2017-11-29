@@ -1,44 +1,42 @@
 ---
-title: "数组界限不能出现在类型说明符中 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30638"
-  - "bc30638"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30638"
+title: "数组界限不能出现在类型说明符中"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30638
+- bc30638
+helpviewer_keywords: BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 770f86ca960110965b6917a22d284678ff8b6f8c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 数组界限不能出现在类型说明符中
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-不能将数组大小声明为数据类型说明符的一部分。  
+# <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="9f45a-102">数组界限不能出现在类型说明符中</span><span class="sxs-lookup"><span data-stu-id="9f45a-102">Array bounds cannot appear in type specifiers</span></span>
+<span data-ttu-id="9f45a-103">数组大小不能声明为数据类型说明符的一部分。</span><span class="sxs-lookup"><span data-stu-id="9f45a-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  
   
- **错误 ID：**BC30638  
+ <span data-ttu-id="9f45a-104">**错误 ID:** BC30638</span><span class="sxs-lookup"><span data-stu-id="9f45a-104">**Error ID:** BC30638</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9f45a-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="9f45a-105">To correct this error</span></span>  
   
--   紧跟在变量名之后指定数组大小，而不要将其置于类型之后，如下例所示。  
+-   <span data-ttu-id="9f45a-106">指定紧靠而不是类型之后，将数组大小的变量名称，如下面的示例中所示的数组的大小。</span><span class="sxs-lookup"><span data-stu-id="9f45a-106">Specify the size of the array immediately following the variable name instead of placing the array size after the type, as shown in the following example.</span></span>  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
--   定义一个数组，并将其初始值设置为要求的元素个数，如下例所示。  
+-   <span data-ttu-id="9f45a-107">定义一个数组，并将其与所需的元素数进行初始化，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="9f45a-107">Define an array and initialize it with the desired number of elements, as shown in the following example.</span></span>  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## 请参阅  
- [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="9f45a-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9f45a-108">See Also</span></span>  
+ [<span data-ttu-id="9f45a-109">阵列</span><span class="sxs-lookup"><span data-stu-id="9f45a-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
