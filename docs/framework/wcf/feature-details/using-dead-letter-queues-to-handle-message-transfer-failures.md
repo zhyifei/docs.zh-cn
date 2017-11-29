@@ -1,22 +1,28 @@
 ---
-title: "使用死信队列处理消息传输故障 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用死信队列处理消息传输故障"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1b02d1d826e78d7f324e638d7e2baac96bb8bbaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用死信队列处理消息传输故障
+# <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
   
  如果接收应用程序未从队列中及时读取排队消息，则这些消息可能会在队列中长时间保留。 这种行为对于时效性较强的消息可能不合适。 时效较强的消息在排队绑定中设置了一个生存时间 (TTL) 属性，该属性指示在这些消息必须过期之前可以在队列中保留多长时间。 过期消息将发送到一个称为死信队列的特殊队列中。 也可以出于其他原因将这些消息放入死信队列，如超出队列配额或由于身份验证失败。  
@@ -45,11 +51,11 @@ caps.handback.revision: 19
   
 -   若要从系统的非事务性死信队列中读取消息，URI 必须为以下形式：net.msmq://localhost/system$;DeadLetter。  
   
--   若要从自定义死信队列读取消息，URI 必须为窗体︰ net.msmq://localhost/private/*自定义 dlq 名称*1> 其中*自定义 dlq 名称*是自定义死信队列的名称。  
+-   若要从自定义死信队列读取消息，URI 必须为的窗体： net.msmq://localhost/private/\<*自定义 dlq 名称*> 其中*自定义 dlq 名称*是自定义的名称死信队列。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何解决队列，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
- 接收器上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈将该服务正在侦听的各个地址与消息上的地址进行匹配。 如果地址匹配，则调度该消息；否则，不调度该消息。 在从死信队列中进行读取时，这种操作可能会引发问题，原因是死信队列中的消息通常将寻址到该服务而非死信队列服务。 因此，从死信队列中进行读取的服务必须安装一个地址筛选器 `ServiceBehavior`，指示堆栈独立于被寻地址来与队列中的所有消息匹配。 具体而言，必须添加`ServiceBehavior`与<xref:System.ServiceModel.AddressFilterMode>到从死信队列读取消息的服务的参数。  
+ 接收器上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈将该服务正在侦听的各个地址与消息上的地址进行匹配。 如果地址匹配，则调度该消息；否则，不调度该消息。 在从死信队列中进行读取时，这种操作可能会引发问题，原因是死信队列中的消息通常将寻址到该服务而非死信队列服务。 因此，从死信队列中进行读取的服务必须安装一个地址筛选器 `ServiceBehavior`，指示堆栈独立于被寻地址来与队列中的所有消息匹配。 具体而言，您必须将一个带有 `ServiceBehavior` 参数的 <xref:System.ServiceModel.AddressFilterMode.Any> 添加到从死信队列中读取消息的服务中。  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>死信队列中的病毒消息处理  
  病毒消息处理在死信队列中可用，但有一些条件。 因为在从系统的死信队列中进行读取时，您无法从系统队列创建子队列，所以不能将 `ReceiveErrorHandling` 设置为 `Move`。 请注意，如果您正在从自定义死信队列中读取，则可以拥有子队列，因此 `Move` 对于病毒消息为有效处理。  
@@ -57,7 +63,7 @@ caps.handback.revision: 19
  在将 `ReceiveErrorHandling` 设置为 `Reject` 以及从自定义死信队列中进行读取时，病毒消息将放入系统的死信队列。 如果从系统的死信队列中进行读取，则将丢弃（清除）该消息。 在 MSMQ 的系统死信队列中执行拒绝将丢弃（清除）该消息。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何创建死信队列以及如何使用该队列来处理过期消息。 该示例基于中的示例[如何︰ 使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)。 下面的示例演示如何将客户端代码写入将死信队列用于每个应用程序的订单处理服务。 该示例还显示如何处理死信队列中的消息。  
+ 下面的示例演示如何创建死信队列以及如何使用该队列来处理过期消息。 示例基于中的示例[如何： 使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)。 下面的示例演示如何将客户端代码写入将死信队列用于每个应用程序的订单处理服务。 该示例还显示如何处理死信队列中的消息。  
   
  下面是为每个应用程序指定死信队列的客户端的代码。  
   
@@ -78,6 +84,6 @@ caps.handback.revision: 19
   
   
 ## <a name="see-also"></a>另请参阅  
- [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [如何︰ 使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)   
+ [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

@@ -1,138 +1,144 @@
 ---
-title: "绑定声明概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "绑定数据, 声明"
-  - "绑定声明"
-  - "Data Binding — 数据绑定, 声明"
-  - "标记扩展"
-  - "对象元素语法"
-  - "语法, 对象元素"
+title: "绑定声明概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- markup extensions [WPF]
+- data binding [WPF], declarations
+- object element syntax [WPF]
+- binding data [WPF], declarations
+- syntax [WPF], object elements
+- binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 34
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28b139f6ea2aad41e4d733e8c622699f2474b3e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 绑定声明概述
+# <a name="binding-declarations-overview"></a>绑定声明概述
 本主题讨论声明绑定的不同方法。  
   
-   
+ 
   
 <a name="Prereq"></a>   
-## 必备组件  
- 在阅读本主题之前，应当先熟悉标记扩展的概念和使用，这一点非常重要。  有关标记扩展的更多信息，请参见[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 在阅读本主题之前，请务必熟悉标记扩展的概念和使用。 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
- 本主题不介绍数据绑定的概念。  有关数据绑定概念的讨论，请参见[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 本主题未涉及数据绑定概念。 有关数据绑定概念的讨论，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
 <a name="BindinginXAML"></a>   
-## 在 XAML 中声明绑定  
- 本节讨论如何在 XAML 中声明绑定。  
+## <a name="declaring-a-binding-in-xaml"></a>在 XAML 中声明绑定  
+ 本部分介绍如何在 XAML 中声明绑定。  
   
 <a name="MarkupExtensionSyntax"></a>   
-### 标记扩展使用  
- <xref:System.Windows.Data.Binding> 是标记扩展。  当您使用绑定扩展来声明绑定时，声明包含一系列子句，这些子句跟在 `Binding` 关键字后面，并由逗号 \(,\) 分隔。  绑定声明中的子句可以按任意顺序排列，因此有许多可能的组合。  子句是*名称*\=*值* 对，其中*名称* 是 <xref:System.Windows.Data.Binding> 属性，*值* 是您要为该属性设置的值。  
+### <a name="markup-extension-usage"></a>标记扩展使用  
+ <xref:System.Windows.Data.Binding> 是标记扩展。 使用绑定扩展声明绑定时，声明包含一系列子句，这些子句跟在 `Binding` 关键字后面，并由逗号 (,) 分隔。 绑定声明中的子句可以按任意顺序排列，有多种可能的组合。 子句是*名称*=*值*对 where*名称*是的名称<xref:System.Windows.Data.Binding>属性和*值*是你设置的属性值。  
   
- 当在标记中创建绑定声明字符串时，必须将它们附加到目标对象的特定[依赖项属性](GTMT)。  下面的示例演示如何通过使用绑定扩展并指定 <xref:System.Windows.Data.Binding.Source%2A> 和 <xref:System.Windows.Data.Binding.Path%2A> 属性来绑定 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> 属性。  
+ 在标记中创建绑定声明字符串时，必须将这些字符串附加到目标对象的特定依赖属性。 下面的示例演示如何将绑定<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>属性使用的绑定扩展、 指定<xref:System.Windows.Data.Binding.Source%2A>和<xref:System.Windows.Data.Binding.Path%2A>属性。  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- 您可以通过这种方法来指定 <xref:System.Windows.Data.Binding> 类的大部分属性。  有关绑定扩展的更多信息，以及不能使用绑定扩展设置的 <xref:System.Windows.Data.Binding> 属性的列表，请参见 [绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)概述。  
+ 你可以指定的属性中的大多数<xref:System.Windows.Data.Binding>类这种方式。 有关更多信息以及与的列表的绑定扩展<xref:System.Windows.Data.Binding>属性不能将使用的绑定扩展，请参阅[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)概述。  
   
 <a name="ObjectElementSyntax"></a>   
-### 对象元素语法  
- 对象元素语法是创建绑定声明的另一种方法。  在大多数情况下，使用标记扩展或对象元素语法没有特定的优势。  但是，在标记扩展不支持您的方案的情况下，例如，当您的属性值是不存在类型转换的非字符串类型时，您将需要使用对象元素语法。  
+### <a name="object-element-syntax"></a>对象元素语法  
+ 对象元素语法是创建绑定声明的替代方法。 在大多数情况下，使用标记扩展或对象元素语法没有特定的优势。 不过，如果标记扩展不支持你的方案，例如，当属性值是不存在任何类型转换的非字符串类型时，需要使用对象元素语法。  
   
- 下面是对象元素语法和标记扩展使用的一个示例：  
+ 下面是对象元素语法和标记扩展使用的示例：  
   
- [!code-xml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- 此示例通过使用扩展语法声明绑定来绑定 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 属性。  <xref:System.Windows.Controls.TextBlock.Text%2A> 属性的绑定声明使用对象元素语法。  
+ 该示例将绑定<xref:System.Windows.Controls.TextBlock.Foreground%2A>通过声明使用扩展语法的绑定的属性。 绑定声明<xref:System.Windows.Controls.TextBlock.Text%2A>属性使用的对象元素语法。  
   
- 有关不同术语的更多信息，请参见 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 有关其他术语的详细信息，请参阅 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
 <a name="MBandPB"></a>   
-### MultiBinding 和 PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> 和 <xref:System.Windows.Data.PriorityBinding> 不支持 XAML 扩展语法。  因此，如果要在 XAML 中声明 <xref:System.Windows.Data.MultiBinding> 或 <xref:System.Windows.Data.PriorityBinding>，则必须使用对象元素语法。  
+### <a name="multibinding-and-prioritybinding"></a>MultiBinding 和 PriorityBinding  
+ <xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>不支持 XAML 扩展语法。 因此，你必须使用对象元素语法，如果你声明<xref:System.Windows.Data.MultiBinding>或<xref:System.Windows.Data.PriorityBinding>在 XAML 中。  
   
 <a name="BindinginCode"></a>   
-## 在代码中创建绑定  
- 指定绑定的另一种方法是在代码中直接为 <xref:System.Windows.Data.Binding> 对象设置属性。  下面的示例演示如何在代码中创建 <xref:System.Windows.Data.Binding> 对象并指定属性。  在此示例中，`TheConverter` 是实现 <xref:System.Windows.Data.IValueConverter> 接口的对象。  
+## <a name="creating-a-binding-in-code"></a>在代码中创建绑定  
+ 另一种方法可指定的绑定是直接在上设置属性<xref:System.Windows.Data.Binding>在代码中的对象。 下面的示例演示如何创建<xref:System.Windows.Data.Binding>对象，并在代码中指定的属性。  在此示例中，`TheConverter`是一个对象，实现<xref:System.Windows.Data.IValueConverter>接口。  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
 [!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
 [!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
- 如果您要绑定的对象是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>，则您可以直接对该对象调用 `SetBinding` 方法，而不是使用 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=fullName>。  有关示例，请参见[在代码中创建绑定](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)。  
+ 如果你正在绑定的对象是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>可以调用`SetBinding`直接而不是使用你的对象的方法<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 有关示例，请参阅[在代码中创建绑定](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)。  
   
 <a name="Path_Syntax"></a>   
-## 绑定路径语法  
- 使用 <xref:System.Windows.Data.Binding.Path%2A> 属性可以指定您要绑定到的源值：  
+## <a name="binding-path-syntax"></a>绑定路径语法  
+ 使用<xref:System.Windows.Data.Binding.Path%2A>属性来指定想要绑定到源值：  
   
--   在最简单的情况下，<xref:System.Windows.Data.Binding.Path%2A> 属性值是要用于绑定的源对象的属性名，如 `Path=PropertyName`。  
+-   在最简单的情况下，<xref:System.Windows.Data.Binding.Path%2A>属性值是要使用的绑定，如的源对象的属性的名称`Path=PropertyName`。  
   
--   在 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 中可以通过类似语法指定属性的子属性。  例如，子句 `Path=ShoppingCart.Order` 设置与对象或属性 `ShoppingCart` 的 `Order` 子属性的绑定。  
+-   在 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 中，可以通过类似语法指定属性的子属性。 例如，子句 `Path=ShoppingCart.Order` 设置与对象或属性 `ShoppingCart` 的子属性 `Order` 的绑定。  
   
--   若要绑定到[附加属性](GTMT)，应在[附加属性](GTMT)周围放置圆括号。  例如，若要绑定到[附加属性](GTMT) <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=fullName>，则语法是 `Path=(DockPanel.Dock)`。  
+-   若要绑定到附加属性，请将附加属性置于括号中。 例如，若要将绑定到附加的属性<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>，语法是`Path=(DockPanel.Dock)`。  
   
--   可以在要应用索引器的属性名后面的方括号内指定属性的索引器。  例如，子句 `Path=ShoppingCart[0]` 将绑定设置为与属性的内部索引处理文本字符串“0”的方式对应的索引。  还支持嵌套的索引器。  
+-   可以在已应用索引器的属性名后面的方括号内指定属性的索引器。 例如，子句 `Path=ShoppingCart[0]` 将绑定设置为与属性的内部索引处理文本字符串“0”的方式对应的索引。 还支持嵌套索引器。  
   
--   可以在 `Path` 子句中混合索引器和子属性；例如，`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   可以在 `Path` 子句中混用索引器和子属性，例如 `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
--   在索引器内部，您可以有多个由逗号 \(,\) 分隔的索引器参数。  可以使用圆括号指定每个参数的类型。  例如，您可以有 `Path="[(sys:Int32)42,(sys:Int32)24]"`，其中 `sys` 映射到 `System` 命名空间。  
+-   可以在索引器内使用多个由逗号 (,) 分隔的索引器参数。 可以使用括号指定每个参数的类型。 例如，可以使用 `Path="[(sys:Int32)42,(sys:Int32)24]"`，其中 `sys` 将映射到 `System` 命名空间。  
   
--   如果源为集合视图，则可以用斜杠 \(\/\) 指定当前项。  例如，子句 `Path=/` 用于设置到视图中当前项的绑定。  如果源为集合，则此语法指定默认集合视图的当前项。  
+-   如果源是集合视图，则可以使用斜杠 (/) 指定当前项。 例如，子句 `Path=/` 设置与视图中当前项的绑定。 如果源是集合，则此语法指定默认集合视图的当前项。  
   
--   可以结合使用属性名和斜杠来遍历作为集合的属性。  例如，`Path=/Offices/ManagerName` 指定源集合的当前项，该源集合包含也作为集合的 `Offices` 属性。  其当前项是一个包含 `ManagerName` 属性的对象。  
+-   可以组合使用属性名和斜杠，以遍历作为集合的属性。 例如，`Path=/Offices/ManagerName` 指定源集合的当前项，源集合中包含的 `Offices` 属性也是一个集合。 它的当前项是一个包含 `ManagerName` 属性的对象。  
   
--   也可以使用句点 \(.\) 路径绑定到当前源。  例如，`Text="{Binding}"` 等效于 `Text="{Binding Path=.}"`。  
+-   句点 (.) 路径也可以用于绑定到当前源。 例如，`Text="{Binding}"` 与 `Text="{Binding Path=.}"` 等效。  
   
-### 转义机制  
+### <a name="escaping-mechanism"></a>转义机制  
   
--   在索引器 \(\[ \]\) 内部，插入符号 \(^\) 用于对下一个字符进行转义。  
+-   在索引器 ([ ]) 内部，脱字符号 (^) 用于对下一个字符进行转义。  
   
--   如果在 XAML 中设置 <xref:System.Windows.Data.Binding.Path%2A>，则还需要使用 XML 实体对 XML 语言定义专用的某些字符进行转义：  
+-   如果你设置<xref:System.Windows.Data.Binding.Path%2A>在 XAML 中，你还需要进行转义 （使用 XML 实体） 是特殊的 XML 语言定义的某些字符：  
   
     -   使用 `&` 对字符“&”进行转义。  
   
-    -   使用 `>` 对结束标记“\>”进行转义。  
+    -   使用 `>` 对结束标记“>”进行转义。  
   
--   此外，如果您使用标记扩展语法描述特性中的整个绑定，则需要使用反斜杠 \\ 对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 标记扩展分析程序专用的字符进行转义：  
+-   此外，如果在属性中使用标记扩展语法描述整个绑定，需要（使用反斜杠 \\）对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 标记扩展分析器专用的字符进行转义：  
   
-    -   反斜杠 \\ 本身是转义字符。  
+    -   反斜杠 (\\) 本身是转义字符。  
   
-    -   等号 \(\=\) 将属性名与属性值隔开。  
+    -   等号 (=) 将属性名与属性值分隔开。  
   
-    -   逗号 \(,\) 用于分隔属性。  
+    -   逗号 (,) 用于分隔属性。  
   
-    -   右大括号 \(}\) 是标记扩展的结尾。  
+    -   右大括号 (}) 是标记扩展的结尾。  
   
 <a name="Default"></a>   
-## 默认行为  
- 如果未在声明中指定默认行为，则默认行为如下。  
+## <a name="default-behaviors"></a>默认行为  
+ 如果未在声明中指定默认行为，则默认行为如下所示。  
   
--   创建一个尝试在[绑定源](GTMT)值与[绑定目标](GTMT)值之间执行类型转换的默认转换器。  如果无法进行转换，则默认转换器会返回 `null`。  
+-   创建一个默认转换器，尝试在绑定源值和绑定目标值之间执行类型转换。 如果不能进行转换，默认转换器会返回 `null`。  
   
--   如果您不设置 <xref:System.Windows.Data.Binding.ConverterCulture%2A>，则绑定引擎会使用[绑定目标](GTMT)对象的 `Language` 属性。  在 XAML 中，此属性默认为“en\-US”，如果已显式设置了一个值，则从页面的根元素（或任何元素）继承该值。  
+-   如果你未设置<xref:System.Windows.Data.Binding.ConverterCulture%2A>，绑定引擎使用`Language`绑定目标对象的属性。 在 XAML 中，此属性默认为“en-US”，如果已显式设置了一个值，则从页面的根元素（或任何元素）继承该值。  
   
--   只要绑定已有数据上下文（例如，来自父元素的继承数据上下文），并且该上下文所返回的项或集合适合于绑定，而不需要进一步的路径修改，则绑定声明可以不必有任何子句：`{Binding}`。在绑定作用于集合的情况下，这通常是为数据样式指定绑定的方式。  有关更多信息，请参见[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)中的“整个对象用作绑定源”一节。  
+-   只要绑定已具有数据上下文（例如，来自父元素的继承数据上下文），并且该上下文返回的任何项或集合无需进一步修改路径即适用于绑定，则绑定声明可以不必使用任何子句：`{Binding}`。这通常是为数据样式指定绑定所用的方法，其中该绑定作用于某个集合。 有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)中的“整个对象用作绑定源”一节。  
   
--   默认 <xref:System.Windows.Data.Binding.Mode%2A> 可能是单向，也可能是双向，具体取决于所绑定的[依赖项属性](GTMT)。  您始终可以显式声明绑定模式，以确保绑定具有所需的行为。  通常，用户可编辑的控件属性（如 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> 和 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=fullName>）默认为双向绑定，而其他大多数属性默认为单向绑定。  
+-   默认值<xref:System.Windows.Data.Binding.Mode%2A>单向和双向取决于要绑定的依赖项属性之间会有所不同。 始终可以显式声明绑定模式，以确保绑定具有所需行为。 在常规，用户可编辑的控件属性中，如<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>，默认为双向绑定，而其他大多数属性默认为单向绑定。  
   
--   默认 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 值可能是 <xref:System.Windows.Data.UpdateSourceTrigger>，也可能是 <xref:System.Windows.Data.UpdateSourceTrigger>，具体也取决于所绑定的[依赖项属性](GTMT)。  多数[依赖项属性](GTMT)的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> 属性的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger>。  
+-   默认值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值而异<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>和<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>具体取决于绑定的依赖项属性。 大多数依赖属性的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 属性的默认值为 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。  
   
-## 请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [PropertyPath XAML 语法](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

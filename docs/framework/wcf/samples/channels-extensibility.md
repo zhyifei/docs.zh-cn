@@ -1,30 +1,33 @@
 ---
-title: "通道扩展性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通道扩展性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e0cf92edc4ec05df3e5e8c25b90bcf253e94ed6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 通道扩展性
+# <a name="channels-extensibility"></a>通道扩展性
 本节包含演示自定义通道的示例。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [本地通道](../../../../docs/framework/wcf/samples/local-channel.md)  
  演示本地通道，这是用于在相同应用程序域内进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输通道。  
   
  [可靠安全配置文件](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- 演示如何编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和可靠安全配置文件 \(RSP\)。  
+ 演示如何编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和可靠安全配置文件 (RSP)。  
   
  [自定义通道调度程序](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
  演示如何通过直接实现 <xref:System.ServiceModel.ServiceHostBase> 以自定义方式生成通道堆栈，以及如何在 Web 主机环境中创建自定义通道调度程序。  

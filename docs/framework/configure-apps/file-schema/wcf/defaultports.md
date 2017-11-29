@@ -1,52 +1,61 @@
 ---
-title: "&lt;defaultPorts&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;d d&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0e127935977795181411dfa6b03d8b09fe88e0f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;defaultPorts&gt;
+# <a name="ltdefaultportsgt"></a>&lt;d d&gt;
 一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。  
   
-## 语法  
+\<系统。ServiceModel >  
+\<行为 >  
+\<serviceBehaviors >  
+\<行为 >  
+\<useRequestHeadersForMetadataAddress >  
+\<d d >  
   
-```  
+## <a name="syntax"></a>语法  
   
-<useRequestHeadersForMetadataAddress>  
-   <defaultPorts>  
-      <add scheme="http" port="integer" />  
-   </defaultPorts>  
+```xml  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add scheme="http" port="integer" />
+  </defaultPorts>
 </useRequestHeadersForMetadataAddress>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<defaultPorts\> 的 \<add\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|客户端应用程序侦听的默认通信终结点。|  
+|-------------|-----------------|  
+|[\<添加 > 的\<d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|客户端应用程序侦听的默认通信终结点。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<useRequestHeadersForMetadataAddress\>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|默认端口列表。|  
+|-------------|-----------------|  
+|[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|默认端口列表。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Configuration.DefaultPortElementCollection>

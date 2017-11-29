@@ -1,40 +1,44 @@
 ---
-title: "如何：向 Windows 窗体 ListView 控件中添加列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "列 [Windows 窗体], 添加到 ListView 控件"
-  - "列表视图, 添加列"
-  - "ListView 控件 [Windows 窗体], 添加列标题"
+title: "如何：向 Windows 窗体 ListView 控件中添加列"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], adding column headers
+- columns [Windows Forms], adding to ListView controls
+- list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8df87e62e8c19ee6e30ffdbc2a4e473b444f538
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：向 Windows 窗体 ListView 控件中添加列
-在“详细信息”视图中，<xref:System.Windows.Forms.ListView> 控件可以为每个列表项显示多个列。  可使用这些列向用户显示每个列表项若干类型的信息。  例如，文件列表可以显示文件名、文件类型、大小和文件最近一次修改的日期。  有关在创建列后对列进行填充的信息，请参见 [如何：使用 Windows 窗体 ListView 控件在列中显示子项](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>如何：向 Windows 窗体 ListView 控件中添加列
+在详细信息视图中，<xref:System.Windows.Forms.ListView>控件可以显示每个列表项的多个列。 列可用于向用户显示几种类型的每个列表项的相关信息。 例如，文件的列表，无法显示文件名、 文件类型、 大小和上次修改文件的日期。 有关它们在创建后填充各列的信息，请参阅[如何： 在使用 Windows 窗体 ListView 控件的列中显示子项](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
   
-### 以编程方式添加列  
+### <a name="to-add-columns-programmatically"></a>以编程方式添加列  
   
-1.  将该控件的 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View>。  
+1.  设置控件的<xref:System.Windows.Forms.ListView.View%2A>属性<xref:System.Windows.Forms.View.Details>。  
   
-2.  使用列表视图 <xref:System.Windows.Forms.ListView.Columns%2A> 属性的 <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> 方法。  
+2.  使用<xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A>方法的列表视图<xref:System.Windows.Forms.ListView.Columns%2A>属性。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## 请参阅  
- <xref:System.Windows.Forms.ListView>   
- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.ListView>  
+ [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [ListView 控件概述](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

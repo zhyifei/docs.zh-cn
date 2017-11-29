@@ -1,39 +1,42 @@
 ---
-title: "将 keyref XML 架构 (XSD) 约束映射为数据集约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将 keyref XML 架构 (XSD) 约束映射到数据集约束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4ca72292bd2c43fec6f3833d521ddb83c01c32c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 将 keyref XML 架构 (XSD) 约束映射为数据集约束
-**keyref** 元素用于在文档中的元素之间建立链接。  它类似于关系数据库中的外键关系。  如果架构指定了 **keyref** 元素，则在架构映射过程中，该元素将转换为 <xref:System.Data.DataSet> 的表列上的相应外键约束。  默认情况下，**keyref** 元素还会生成关系，并对关系指定 **ParentTable**、**ChildTable**、**ParentColumn** 和 **ChildColumn** 属性。  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>将 keyref XML 架构 (XSD) 约束映射到数据集约束
+**Keyref**元素，你可以在文档内的元素之间建立链接。 它类似于关系数据库中的外键关系。 如果架构指定**keyref**元素，该元素转换到的表中的列上的相应外键约束在架构映射过程<xref:System.Data.DataSet>。 默认情况下， **keyref**元素还会生成关系，使用**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**对关系指定的属性。  
   
- 下表概括了可在 **keyref** 元素中指定的 **msdata** 属性。  
+ 下表概括了**msdata**属性可以指定在**keyref**元素。  
   
 |特性名|描述|  
-|---------|--------|  
-|**msdata:ConstraintOnly**|如果对架构中的 **keyref** 元素指定了 **ConstraintOnly\="true"**，则将创建约束但不创建任何关系。  如果此属性未指定（或设置为 **False**），则将在 **DataSet** 中创建约束和关系。|  
-|**msdata:ConstraintName**|如果指定了 **ConstraintName** 属性，则将其值用作约束的名称。  否则，架构中 **keyref** 元素的 **name** 属性将提供 **DataSet** 中的约束名称。|  
-|**msdata:UpdateRule**|如果在架构的 **keyref** 元素中指定了 **UpdateRule** 属性，则将其值赋给 **DataSet** 中的 **UpdateRule** 约束属性。  否则，**UpdateRule** 属性将设置为 **Cascade**。|  
-|**msdata:DeleteRule**|如果在架构的 **keyref** 元素中指定了 **DeleteRule** 属性，则将其值赋给 **DataSet** 中的 **DeleteRule** 约束属性。  否则，**DeleteRule** 属性将设置为 **Cascade**。|  
-|**msdata:AcceptRejectRule**|如果在架构的 **keyref** 元素中指定了 **AcceptRejectRule** 属性，则将其值赋给 **DataSet** 中的 **AcceptRejectRule** 约束属性。  否则，**AcceptRejectRule** 属性将设置为 **None**。|  
+|--------------------|-----------------|  
+|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"**上指定**keyref**架构中的元素，将创建一个约束，但不创建任何关系。 如果未指定此属性 (或设置为**False**)，在中创建约束和关系**数据集**。|  
+|**msdata:ConstraintName**|如果**ConstraintName**指定属性，其值用作约束的名称。 否则为**名称**属性**keyref**架构中的元素提供中的约束名称**数据集**。|  
+|**msdata:UpdateRule**|如果**UpdateRule**中指定属性**keyref**架构中的元素，其值分配给**UpdateRule**中的约束属性**数据集**。 否则为**UpdateRule**属性设置为**Cascade**。|  
+|**msdata:DeleteRule**|如果**DeleteRule**中指定属性**keyref**架构中的元素，其值分配给**DeleteRule**中的约束属性**数据集**。 否则为**DeleteRule**属性设置为**Cascade**。|  
+|**msdata:AcceptRejectRule**|如果**AcceptRejectRule**中指定属性**keyref**架构中的元素，其值分配给**AcceptRejectRule** 中的约束属性**数据集**。 否则为**AcceptRejectRule**属性设置为**无**。|  
   
- 以下示例包含一个架构，在 **Order** 元素的 **OrderNumber** 子元素和 **OrderDetail** 元素的 **OrderNo** 子元素之间指定 **key** 和 **keyref** 关系。  
+ 下面的示例包含一个架构，指定**密钥**和**keyref**之间的关系**OrderNumber**的子元素**顺序**元素和**OrderNo**的子元素**OrderDetail**元素。  
   
- 在该示例中，**OrderDetail** 元素的 **OrderNumber** 子元素引用 **Order** 元素的 **OrderNo** 键子元素。  
+ 在示例中， **OrderNumber**的子元素**OrderDetail**元素是指**OrderNo**的密钥的子元素**顺序**元素。  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -73,19 +76,18 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- XML 架构定义语言 \(XSD\) 架构映射过程生成以下包含两个表的 **DataSet**：  
+ XML 架构定义语言 (XSD) 架构映射过程将生成以下**数据集**包含两个表：  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- 此外，该 **DataSet** 还定义以下约束：  
+ 此外，**数据集**定义以下约束：  
   
--   **Order** 表的唯一约束。  
+-   上的唯一约束**顺序**表。  
   
     ```  
-  
               Table: Order  
     Columns: OrderNumber   
     ConstraintName: OrderNumberKey  
@@ -93,10 +95,9 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   **Order** 表和 **OrderDetail** 表之间的关系。  由于这两个元素都不嵌套在架构中，所以 **Nested** 属性设置为 **False**。  
+-   之间的关系**顺序**和**OrderDetail**表。 **嵌套**属性设置为**False**因为两个元素不嵌套在架构中。  
   
     ```  
-  
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -107,10 +108,9 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   **OrderDetail** 表的外键约束。  
+-   上的外键约束**OrderDetail**表。  
   
     ```  
-  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -119,7 +119,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## 请参阅  
- [将 XML 架构 \(XSD\) 约束映射到 DataSet 约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [从 XML 架构 \(XSD\) 生成 DataSet 关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
+## <a name="see-also"></a>另请参阅  
+ [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [从 XML 架构 (XSD) 生成数据集关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

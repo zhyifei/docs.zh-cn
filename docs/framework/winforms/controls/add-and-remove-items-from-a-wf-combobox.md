@@ -1,73 +1,74 @@
 ---
-title: "如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox 控件 [Windows 窗体], 添加和移除项"
-  - "组合框, 添加项"
-  - "组合框, 移除项"
-  - "ComboBox 控件 [Windows 窗体], 添加和移除项"
-  - "列表框, 添加项"
-  - "列表框, 移除项"
-  - "ListBox 控件 [Windows 窗体], 添加和移除项"
+title: "如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- combo boxes [Windows Forms], adding items
+- list boxes [Windows Forms], removing items
+- ComboBox control [Windows Forms], adding and removing items
+- ListBox control [Windows Forms], adding and removing items
+- list boxes [Windows Forms], adding items
+- combo boxes [Windows Forms], removing items
+- CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项
-可以以多种方式向 Windows 窗体组合框、列表框或选中列表框添加项，因为这些控件可以绑定到多种数据源。  但本主题　介绍最简单的方法，该方法无需进行数据绑定。  所显示的项通常为字符串；但是可使用任何对象。  控件中显示的文本是对象的 `ToString`  方法所返回的值。  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项
+项可以添加到 Windows 窗体组合框中，列表框中，或检查在有许多种情况下，列表框中的，因为这些控件可以绑定到各种数据源。 但是，本主题演示的最简单方法，并不需要数据绑定。 显示的项通常是字符串;但是，可以使用任何对象。 在控件中显示的文本是由对象的返回的值`ToString`方法。  
   
-### 添加项  
+### <a name="to-add-items"></a>若要添加项目  
   
-1.  使用 `ObjectCollection` 类的 `Add` 方法向列表添加字符串或对象。  使用 `Items`  属性引用集合：  
+1.  通过使用添加到列表的字符串或对象`Add`方法`ObjectCollection`类。 使用引用集合`Items`属性：  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
-  
     ```  
   
     ```csharp  
     comboBox1.Items.Add("Tokyo");  
-  
     ```  
   
     ```cpp  
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     \- 或 \-  
+     - 或 -  
   
-2.  使用 `Insert`  方法在列表中所需位置插入字符串或对象：  
+2.  在使用列表中的所需点处插入的字符串或对象`Insert`方法：  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
-  
     ```  
   
     ```csharp  
     checkedListBox1.Items.Insert(0, "Copenhagen");  
-  
     ```  
   
     ```cpp  
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     \- 或 \-  
+     - 或 -  
   
-3.  向 `Items`  集合分配整个数组：  
+3.  分配到的整个数组`Items`集合：  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -76,7 +77,6 @@ caps.handback.revision: 19
        ItemObject(i) = "Item" & i  
     Next i  
     ListBox1.Items.AddRange(ItemObject)  
-  
     ```  
   
     ```csharp  
@@ -86,7 +86,6 @@ caps.handback.revision: 19
        ItemObject[i] = "Item" + i;  
     }  
     listBox1.Items.AddRange(ItemObject);  
-  
     ```  
   
     ```cpp  
@@ -98,11 +97,11 @@ caps.handback.revision: 19
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### 移除项  
+### <a name="to-remove-an-item"></a>若要移除一个项  
   
-1.  调用 `Remove`  或 `RemoveAt`  方法来删除项。  
+1.  调用`Remove`或`RemoveAt`方法来删除项。  
   
-     `Remove`  有一个参数可指定要移除的项。`RemoveAt`  移除具有指定的索引号的项。  
+     `Remove`有一个参数，指定要删除的项。`RemoveAt` 移除具有指定的索引编号的项。  
   
     ```vb  
     ' To remove item with index 0:  
@@ -111,7 +110,6 @@ caps.handback.revision: 19
     ComboBox1.Items.Remove(ComboBox1.SelectedItem)  
     ' To remove "Tokyo" item:  
     ComboBox1.Items.Remove("Tokyo")  
-  
     ```  
   
     ```csharp  
@@ -121,7 +119,6 @@ caps.handback.revision: 19
     comboBox1.Items.Remove(comboBox1.SelectedItem);  
     // To remove "Tokyo" item:  
     comboBox1.Items.Remove("Tokyo");  
-  
     ```  
   
     ```cpp  
@@ -133,28 +130,26 @@ caps.handback.revision: 19
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### 移除所有项  
+### <a name="to-remove-all-items"></a>要删除所有项  
   
-1.  调用 `Clear` 方法从集合移除所有项：  
+1.  调用`Clear`方法从集合中移除所有项：  
   
     ```vb  
     ListBox1.Items.Clear()  
-  
     ```  
   
     ```csharp  
     listBox1.Items.Clear();  
-  
     ```  
   
     ```cpp  
     listBox1->Items->Clear();  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [如何：对 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

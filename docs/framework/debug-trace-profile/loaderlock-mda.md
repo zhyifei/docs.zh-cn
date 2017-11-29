@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` 托管调试助手 (MDA) 检测在持有 Microsoft Windows 操作系统加载程序锁的线程上执行托管代码的尝试。  任何此类执行都是非法的，因为这样可能会导致死锁，并导致在操作系统的加载程序已初始化 DLL 之前使用 DLL。  
@@ -45,7 +38,7 @@ ms.lasthandoff: 08/21/2017
  最后，还存在这样的情况：在操作系统的加载程序正确初始化 DLL 之前，调入 DLL。  死锁故障可通过检查死锁中涉及的所有线程的堆栈进行诊断，但这不同于死锁故障，在不使用此 MDA 的情况下很难诊断出未初始化的 DLL 的使用。  
   
 ## <a name="cause"></a>原因  
- 除非采用了特殊措施（例如，与 /NOENTRY 链接），否则为 .NET Framework 1.0 或 1.1 版生成的混合托管/非托管 C++ 程序集通常尝试在加载程序锁内执行托管代码。  有关这些问题的详细说明，请参阅 MSDN 库中的“混合 DLL 加载问题”。  
+ 除非采用了特殊措施（例如，与 /NOENTRY 链接），否则为 .NET Framework 1.0 或 1.1 版生成的混合托管/非托管 C++ 程序集通常尝试在加载程序锁内执行托管代码。
   
  为 .NET Framework 2.0 版生成的混合托管/非托管 C++ 程序集与使用违反操作系统规则的非托管 DLL 的应用程序相同，风险减低，不太容易受到这些问题的影响。  例如，如果非托管 DLL 的 `DllMain` 入口点调用`CoCreateInstance` 获取已向 COM 公开的托管对象，结果就是尝试在加载程序锁内执行托管代码。 有关 .NET Framework 2.0 及更高版本中加载程序锁问题的详细信息，请参阅[混合程序集的初始化](/cpp/dotnet/initialization-of-mixed-assemblies)。  
   
@@ -72,4 +65,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

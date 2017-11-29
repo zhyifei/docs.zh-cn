@@ -1,40 +1,38 @@
 ---
-title: "成员设计准则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "关于成员设计准则的成员设计准则 [.NET Framework]"
-  - "成员 [.NET Framework] 设计准则"
-  - "类库设计准则 [.NET Framework] 成员"
-  - "成员设计准则 [.NET Framework]"
+title: "成员设计准则"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- member design guidelines [.NET Framework], about member design guidelines
+- members [.NET Framework], design guidelines
+- class library design guidelines [.NET Framework], members
+- member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 成员设计准则
-方法、 属性、 事件、 构造函数和字段统称为成员。 成员最终是框架功能公开给最终用户的一种框架的方式。  
+# <a name="member-design-guidelines"></a>成员设计准则
+方法、 属性、 事件、 构造函数和字段统称作为成员。 成员最终是依据 framework 功能公开给最终用户的 framework 的手段。  
   
- 成员可以是虚拟或非虚拟或抽象的具体的静态方法或实例，并且可以有多个不同的作用域的可访问性。 所有这样的多样性提供令人难以置信的表现力，但在同一时间需要的部分框架设计器的关注。  
+ 成员可以是虚拟或非虚拟、 实际或抽象的静态或实例，并且可以有多个不同的作用域的可访问性。 所有多样性提供难以置信表现力，但同时需要部分 framework 设计器的小心。  
   
- 这一章提供基本设计的任何类型成员时应遵循的指导原则。  
+ 本章介绍了设计的任何类型的成员时，应遵循的基本指导原则。  
   
-## 本节内容  
- [对成员进行重载](../../../docs/standard/design-guidelines/member-overloading.md)  
+## <a name="in-this-section"></a>本节内容  
+ [重载的成员](../../../docs/standard/design-guidelines/member-overloading.md)  
  [属性设计](../../../docs/standard/design-guidelines/property.md)  
  [构造函数设计](../../../docs/standard/design-guidelines/constructor.md)  
  [事件设计](../../../docs/standard/design-guidelines/event.md)  
@@ -42,9 +40,9 @@ caps.handback.revision: 14
  [扩展方法](../../../docs/standard/design-guidelines/extension-methods.md)  
  [运算符重载](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [参数设计](../../../docs/standard/design-guidelines/parameter-design.md)  
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另请参阅  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)

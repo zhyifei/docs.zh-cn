@@ -1,32 +1,35 @@
 ---
-title: "如何：在样式中进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 属性, 在样式中"
-  - "样式, 对属性进行动画处理"
+title: "如何：在样式中进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], properties [WPF], within styles
+- styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10cd243c633e7a7e458d2026fc5e3d91d2996427
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：在样式中进行动画处理
-本主题中的示例演示如何对样式中的属性进行动画处理。  在样式中进行动画处理时，只能直接以定义了样式的框架元素作为目标。  若要以可冻结的对象为目标，必须从带样式元素的属性“暂且记下”。  
+# <a name="how-to-animate-in-a-style"></a>如何：在样式中进行动画处理
+此示例演示如何在样式中的属性进行动画处理。 在样式中进行动画处理时, 可以直接针对为其定义样式的框架元素。 若要针对可冻结对象，你必须"dot 向下"从应用了样式元素的属性。  
   
- 在下面的示例中，在样式中定义了几个动画，并将这些动画应用于 <xref:System.Windows.Controls.Button>。  当用户将鼠标移到按钮上时，它会反复从不透明淡化为半透明并从半透明淡化为不透明。  当用户将鼠标移出按钮时，按钮会变得完全不透明。  当按钮被单击时，它的背景色会再次从橙色改为黑白色。  由于不能直接以用来绘制按钮的 <xref:System.Windows.Media.SolidColorBrush> 作为目标，因此该 SolidColorBrush 只能通过从按钮的 <xref:System.Windows.Controls.Control.Background%2A> 属性“草草记下”来访问。  
+ 在下面的示例中，在样式中定义并应用于多个动画<xref:System.Windows.Controls.Button>。 当用户将鼠标移到按钮上方时，它淡出从不透明为部分半透明和后反复。 当用户移动鼠标按钮关闭时，它将成为完全不透明。 当单击按钮时，它的背景色更改从橙色改为白色，然后再返回。 因为<xref:System.Windows.Media.SolidColorBrush>用于绘制按钮不能直接目标，它可通过向下按钮的从散布<xref:System.Windows.Controls.Control.Background%2A>属性。  
   
-## 示例  
- [!code-xml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
+## <a name="example"></a>示例  
+ [!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
   
- 请注意，在样式中进行动画处理时，可以将不存在的对象作为目标。  例如，假设您的样式使用 <xref:System.Windows.Media.SolidColorBrush> 来设置 Button 的背景属性，但是在某个点，该样式被重写，用 <xref:System.Windows.Media.LinearGradientBrush> 设置了该按钮的背景。  尝试对 <xref:System.Windows.Media.SolidColorBrush> 进行动画处理将不会引发异常；动画将只是自行失败。  
+ 请注意，在样式中进行动画处理时, 可能不存在的目标对象。 例如，假设您的方式使用<xref:System.Windows.Media.SolidColorBrush>设置按钮的背景属性，但在某些点，该样式被重写且按钮的背景设置用<xref:System.Windows.Media.LinearGradientBrush>。  尝试进行动画处理<xref:System.Windows.Media.SolidColorBrush>不会引发异常; 动画将只需以静默方式失败。  
   
- 有关演示图板目标设定语法的更多信息，请参见[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  有关动画的更多信息，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  有关样式的更多信息，请参见[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。
+ 有关演示图板目标设定语法的详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。 有关动画的详细信息，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 有关样式的详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。

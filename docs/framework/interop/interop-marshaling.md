@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -88,7 +81,7 @@ ms.lasthandoff: 08/21/2017
  如果计划导出托管服务器，请注意，COM 客户端确定服务器的单元。 在 MTA 中初始化的 COM 客户端所调用的托管服务器必须确保线程安全。  
   
 ### <a name="managed-clients-and-com-servers"></a>托管客户端和 COM 服务器  
- 托管客户端单元的默认设置为 MTA；但是，.NET 客户端的应用程序类型可以更改默认设置。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 客户端单元设置为 STA。 可以使用 <xref:System.STAThreadAttribute?displayProperty=fullName>、<xref:System.MTAThreadAttribute?displayProperty=fullName>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 属性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName> 属性检查并更改托管客户端的单元设置。  
+ 托管客户端单元的默认设置为 MTA；但是，.NET 客户端的应用程序类型可以更改默认设置。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 客户端单元设置为 STA。 可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 属性检查并更改托管客户端的单元设置。  
   
  组件的作者设置 COM 服务器的线程关联。 下表显示 .NET 客户端和 COM 服务器的单元设置的组合。 同时还显示得到的针对这些组合的封送要求。  
   
@@ -174,7 +167,6 @@ ms.lasthandoff: 08/21/2017
   
 <a name="reference"></a>   
 ## <a name="reference"></a>引用  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [返回页首](#top)
-

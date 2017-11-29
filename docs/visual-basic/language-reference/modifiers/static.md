@@ -1,63 +1,61 @@
 ---
-title: "Static (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Static"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Static 关键字"
-  - "静态修饰符"
+title: Static (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Static
+helpviewer_keywords:
+- static modifier
+- Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e08f46076281e766a5bc0b99cd61fee9cd41ece5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Static (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定在其中声明一个或多个局部变量的过程终止后，这些已声明的局部变量继续存在并保留其最新值。  
+# <a name="static-visual-basic"></a>Static (Visual Basic)
+指定一个或多个声明的局部变量要继续存在，并在其中声明它们的过程终止后保留最新值。  
   
-## 备注  
- 通常，过程终止后，此过程中的局部变量将立即消失。  静态变量可继续存在，并保留其最新值。  您的代码下次调用该过程时，此变量不会重新初始化，仍然保存已赋给它的最新值。  静态变量在定义它的类或模块的生存期内继续存在。  
+## <a name="remarks"></a>备注  
+ 通常情况下，一个过程中的本地变量将停止存在就会立即停止该过程。 静态变量继续存在，并会保留其最新值。 你的代码调用该过程的下一步时间变量不会重新初始化，并仍保留分配给它的最新值。 静态变量将继续存在的类或模块中定义的生存期内。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **声明上下文。**只能对局部变量使用 `Static`。  这意味着 `Static` 变量的声明上下文必须是一个过程或过程中的块，而不能是源文件、命名空间、类、结构或模块。  
+-   **声明上下文。** 你可以使用`Static`仅对本地变量。 这意味着的声明上下文`Static`变量必须是一个过程或块在过程中，并且它不能为源文件、 命名空间、 类、 结构或模块。  
   
-     不能在结构过程内使用 `Static`。  
+     不能使用`Static`结构过程内。  
   
--   无法推断出 `Static` 局部变量的数据类型。  有关更多信息，请参见[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+-   数据类型的`Static`无法推断出本地变量。 有关详细信息，请参阅[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
--   **组合修饰符。**不能在同一个声明中同时指定 `Static` 与 `ReadOnly`、`Shadows` 或 `Shared`。  
+-   **组合的修饰符。** 不能指定`Static`连同`ReadOnly`， `Shadows`，或`Shared`同一声明中。  
   
-## 行为  
- 在声明在 `Shared` 程序的静态变量，因此，只有该静态变量的复制为整个应用程序可用。  您调用 `Shared` 程序使用类名称，指向类的实例不是的变量。  
+## <a name="behavior"></a>行为  
+ 当声明中的静态变量`Shared`过程中，只有静态变量的一个副本可对整个应用程序。 你调用`Shared`过程的方法是使用类名称，不是指向类的实例的变量。  
   
- 在声明在不是 `Shared`程序的一个静态变量，因此，只有该变量的副本对类的每个实例都可用。  您调用非共享程序以指向特定类实例的变量。  
+ 当声明不是一个过程中的静态变量`Shared`，只有一个变量的副本可为每个类实例。 使用指向类的特定实例的变量调用非共享过程。  
   
-## 示例  
- 下面的示例说明 `Static` 的用法。  
+## <a name="example"></a>示例  
+ 以下示例演示了 `Static` 的用法。  
   
  [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
- `Static` 变量 `totalSales` 只初始化为 0 一次。  每次输入 `updateSales` 时，`totalSales` 仍然包含为其计算的最新值。  
+ `Static`变量`totalSales`将初始化为 0 仅一次。 你输入每次`updateSales`，`totalSales`仍然具有为其计算的最新值。  
   
- `Static` 修饰符可用于下面的上下文中：  
+ `Static`修饰符可用于在此上下文中：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## 请参阅  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+## <a name="see-also"></a>另请参阅  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [在 Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

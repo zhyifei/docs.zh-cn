@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11c93b296bf34b24037b51a216b536087fe6cc2e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 969b2468b9b627d9b69f02209f30362edbbcce3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-directive-policy-settings"></a>运行时指令策略设置
 > [!NOTE]
@@ -138,6 +136,5 @@ ms.lasthandoff: 08/21/2017
 |`Required All`|要求工具链在不管所有类型是否受到占用情况下都保留它们，并为它们启用策略。|✓||  
   
 ## <a name="see-also"></a>另请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-

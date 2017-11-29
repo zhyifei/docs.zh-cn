@@ -1,74 +1,78 @@
 ---
-title: "如何：使用颜色矩阵对单色进行变换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "颜色矩阵, using"
-  - "图像颜色, 转换"
+title: "如何：使用颜色矩阵对单色进行转换"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image colors [Windows Forms], transforming
+- color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用颜色矩阵对单色进行变换
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供用于存储和操作图像的 <xref:System.Drawing.Image> 和 <xref:System.Drawing.Bitmap> 类。  <xref:System.Drawing.Image> 和 <xref:System.Drawing.Bitmap> 对象用一个 32 位数字存储每个像素的颜色：红、绿、蓝和 Alpha 各 8 位。  这四个分量的值都是 0 到 255，其中 0 表示没有亮度，255 表示最大亮度。  alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用颜色矩阵对单色进行转换
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>类用于存储和操作图像。 <xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>对象 32 位数字的形式存储的每个像素的颜色： 8 位每次都红、 绿、 蓝方和字母。 每个四个组件是一个介于 0 到 255，其中 0 表示没有亮度，255 表示完整的强度。 Alpha 分量指定颜色的透明度： 0 表示完全透明，255 是完全不透明。  
   
- 颜色矢量采用 4 元组形式（红色、绿色、蓝色、alpha）。  例如，颜色矢量 \(0, 255, 0, 255\) 表示一种没有红色和蓝色但绿色达到最大亮度的不透明颜色。  
+ 颜色向量是窗体 （红色、 绿色，蓝色、 alpha） 4 元组。 例如，颜色向量 （0，255，0，255） 表示一个不透明颜色没有红色或蓝色，但会达到最大亮度具有绿色。  
   
- 表示颜色的另一种惯例是用数字 1 表示亮度达到最大。  通过使用这种约定，上一段中描述的颜色将可以由矢量 \(0, 1, 0, 1\) 表示。  在执行颜色变换时，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 遵循使用 1 为最大亮度的惯例。  
+ 用于表示颜色的另一个约定亮度达到最大使用数字 1。 使用这种约定，将由向量 （0、 1、 0、 1） 表示上一段中所述的颜色。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]执行颜色转换时，请使用的约定 1 作为最大亮度。  
   
- 可通过用 4×4 矩阵乘以这些颜色矢量将线性变换（旋转和缩放等）应用到颜色矢量中。  但是，您不能使用 4×4 矩阵进行平移（非线性）。  如果在每个颜色矢量中再添加一个虚拟的第 5 坐标（例如，数字 1），则可使用 5×5 矩阵应用任何组合形式的线性变换和平移。  由线性变换组成的后跟平移的变换称为仿射变换。  
+ 乘以的 4 × 4 矩阵的颜色矢量，你可以应用到颜色矢量线性转换 （旋转、 缩放，以及类似的）。 但是，不能使用的 4 × 4 矩阵翻译 （非线性）。 如果将虚拟的第五个坐标 （例如，数字 1） 添加到每个颜色矢量，可以使用的 5 × 5 矩阵将线性转换和翻译的任意组合。 包含跟平移线性转换的转换称为仿射转换。  
   
- 例如，假设您希望从颜色 \(0.2, 0.0, 0.4, 1.0\) 开始并应用下面的变换：  
+ 例如，假设你想要使用的颜色 （0.2，0.0，0.4，1.0） 开始，并应用以下转换：  
   
-1.  将红色分量乘以 2。  
+1.  Double 红色的组件  
   
-2.  将 0.2 添加到红色、绿色和蓝色分量中。  
+2.  将 0.2 添加到红色、 绿色和蓝色组件  
   
- 下面的矩阵乘法将按照列出的顺序进行这对变换。  
+ 下面的矩阵乘法将按列出的顺序执行转换的对。  
   
- ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring01.png "recoloring01")  
+ ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
   
- 颜色矩阵的元素按照先行后列（从 0 开始）的顺序进行索引。  例如，矩阵 M 的第五行第三列由 M\[4\]\[2\] 表示。  
+ 颜色矩阵的元素是按行和列然后索引 （从零开始）。 例如，由 M [4] [2] 表示第五个行和矩阵 M 的第三个列中的条目。  
   
- 5×5 单位矩阵（在下面的插图中显示）在对角线上为 1，在其他任何地方为 0。  如果用单位矩阵乘以颜色矢量，则颜色矢量不会发生改变。  形成颜色变换矩阵的一种简便方法是从单位矩阵开始，然后进行较小的改动以产生所需的变换。  
+ （在下图中所示） 的 5 × 5 标识矩阵具有的对角线上 1 和 0 其他位置。 如果颜色向量乘以单位矩阵，则不会更改颜色向量。 窗体的颜色转换矩阵一种简便方式是以开始单位矩阵，进行少量更改生成所需的转换。  
   
  ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
   
- 有关矩阵和变换的更详细的讨论，请参见[坐标系统和变形](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
+ 矩阵和转换的更多详细讨论，请参阅[坐标系和坐标转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
   
-## 示例  
- 下面的示例采用一个使用一种颜色 \(0.2, 0.0, 0.4, 1.0\) 的图像，并应用上一段中描述的变换。  
+## <a name="example"></a>示例  
+ 下面的示例将一种颜色 （0.2，0.0，0.4，1.0） 和应用转换上面几段中所述的映像。  
   
- 下面的插图在左侧显示原来的图像，在右侧显示变换后的图像。  
+ 下图右侧显示在左侧的原始映像和变换后的图像。  
   
  ![颜色](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
   
- 下面示例中的代码使用以下步骤进行重新着色：  
+ 下面的示例中的代码使用以下步骤进行重新着色：  
   
-1.  初始化 <xref:System.Drawing.Imaging.ColorMatrix> 对象。  
+1.  初始化<xref:System.Drawing.Imaging.ColorMatrix>对象。  
   
-2.  创建一个 <xref:System.Drawing.Imaging.ImageAttributes> 对象，并将 <xref:System.Drawing.Imaging.ColorMatrix> 对象传递给 <xref:System.Drawing.Imaging.ImageAttributes> 对象的 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 方法。  
+2.  创建<xref:System.Drawing.Imaging.ImageAttributes>对象并将传递<xref:System.Drawing.Imaging.ColorMatrix>对象传递给<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>对象。  
   
-3.  将 <xref:System.Drawing.Imaging.ImageAttributes> 对象传递给 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.DrawImage%2A> 方法。  
+3.  传递<xref:System.Drawing.Imaging.ImageAttributes>对象传递给<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象。  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a>编译代码  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## 请参阅  
- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
- [坐标系和坐标变换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+## <a name="see-also"></a>另请参阅  
+ [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

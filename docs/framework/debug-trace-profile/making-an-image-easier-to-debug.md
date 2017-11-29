@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e844cde5f33c1accb8addf953b5a72415f4dc301
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>令映像更易于调试
 编译非托管代码时，可以通过设置 IDE 开关或命令线选项来配置可执行映像进行调试。 例如，可以使用 Visual C++ 中的 /Zi 命令行选项，使其发出调试符号文件（文件扩展名为 .pdb）。 同样，/Od 命令行选项告知编译器禁用优化。 所产生的代码运行速度更慢，但更易于调试，这很必要。  
@@ -59,7 +52,7 @@ AllowOptimize=0
 >  在 .NET Framework 2.0 版中，无论 `GenerateTrackingInfo` 的值为多少，JIT 编译器始终生成跟踪信息；但是，`AllowOptimize` 值仍产生影响。 如果使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)预编译本机映像而不进行优化，Ngen.exe 执行时 .ini 文件必须存在于 `AllowOptimize=0` 的目标文件夹。 如果已经预编译程序集而不进行优化，则必须使用 NGen.exe /uninstall 选项删除预编译的代码，才能重新运行 Ngen.exe 将代码预编译为优化。 如果文件夹中不存在 .ini 文件，则默认 Ngen.exe 将代码预编译为优化。  
   
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=fullName> 控制程序集的设置。 DebuggableAttribute 包括两个字段，用于记录 JIT 编译器是否应优化和/或生成跟踪信息的设置。 在 .NET Framework 2.0 版本中，JIT 编译器将始终生成跟踪信息。  
+>  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> 控制程序集的设置。 DebuggableAttribute 包括两个字段，用于记录 JIT 编译器是否应优化和/或生成跟踪信息的设置。 在 .NET Framework 2.0 版本中，JIT 编译器将始终生成跟踪信息。  
   
 > [!NOTE]
 >  对于零售版本，编译器不设置任何 DebuggableAttribute。 JIT 编译器的默认行为是生成最高性能最难调试的机器码。 启用实时跟踪会稍微降低性能，禁用优化会极大降低性能。  
@@ -71,7 +64,6 @@ AllowOptimize=0
 >  在 .NET Framework 1.0 版本中，当指定 /clr 和 /Zi 编译器选项时，Microsoft Visual C++ 编译器将添加 DebuggableAttribute。 在 .NET Framework 1.1 版本中，必须在代码中手动添加 DebugabbleAttribute，或者使用 /ASSEMBLYDEBUG 链接器选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)   
- [启用 JIT 附加调试](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)   
+ [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)  
+ [启用 JIT 附加调试](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [启用分析](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
-

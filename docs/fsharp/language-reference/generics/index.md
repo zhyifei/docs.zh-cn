@@ -1,6 +1,6 @@
 ---
 title: "泛型 (F#)"
-description: "泛型 (F#)"
+description: "了解如何使用 F # 泛型函数和类型，从而使你能够编写代码，而无需重复代码可与不同的类型。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>泛型
 
 F# 函式值、方法、属性和聚合类型（如类、记录和可区分联合）都可以是“泛型”。 泛型构造至少包含一个类型参数，该类型参数通常由泛型构造的用户提供。 通过泛型函数和类型，可编写可用于各种类型的代码，而无需针对每个类型重复编写代码。 利用 F# 编写泛型代码很简单，这是因为编译器的类型推理和自动泛化机制通常会将代码隐式地推断为泛型代码。
@@ -81,7 +80,7 @@ type type-name<type-parameters> type-definition
 有两种方法可以通过名称指代泛型类型。 例如，`list<int>` 和 `int list` 这两种方法可用来指代具有单个类型参数 `list` 的泛型类型 `int`。 后一种形式通常只用于内置 F# 类型，例如 `list` 和 `option`。 如果存在多个类型参数，通常会使用语法 `Dictionary<int, string>`，但还可使用语法 `(int, string) Dictionary`。
 
 ## <a name="wildcards-as-type-arguments"></a>通配符作为类型参数
-若要指定应由编译器推断类型参数，可以使用下划线或通配符 (`_`)，而不要使用已命名的类型参数。 以下代码对此进行演示。
+若要指定应由编译器推断类型参数，可以使用下划线或通配符 (`_`)，而不要使用已命名的类型参数。 以下代码对此进行了演示。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
     
@@ -103,7 +102,7 @@ type type-name<type-parameters> type-definition
 
 [静态解析的类型参数](statically-resolved-type-parameters.md)
 
-[.NET Framework 中的泛型](https://msdn.microsoft.com/library/ms172192.aspx)
+[.NET Framework 中的泛型](~/docs/standard/generics/index.md)
 
 [自动泛化](automatic-generalization.md)
 

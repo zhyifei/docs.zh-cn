@@ -1,46 +1,49 @@
 ---
-title: "UI Automation Properties Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, properties"
-  - "properties, UI Automation"
+title: "UI 自动化属性概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, properties
+- properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-caps.latest.revision: 17
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: a6fec422e235413bd76d86cdcb5a72a351bb3f97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Properties Overview
+# <a name="ui-automation-properties-overview"></a>UI 自动化属性概述
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- UI 自动化提供程序公开 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 元素的属性。 这些属性使 UI 自动化客户端应用程序能够发现 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 各部分（特别是控件）的信息，包括静态数据和动态数据。  
+ UI 自动化提供程序公开 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 元素的属性。 这些属性使 UI 自动化客户端应用程序能够发现 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]各部分（特别是控件）的信息，包括静态数据和动态数据。  
   
  本节概括了 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 属性。 下面各主题中提供了更具体的信息：  
   
 -   [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+-   [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
-## 属性标识符  
- 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty> 来标识它们希望检索的属性。  
+## <a name="property-identifiers"></a>属性标识符  
+ 每个属性都由一个数字和名称标识。 属性的名称仅用于调试和诊断。 提供程序使用数字 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 来标识传入的属性请求。 但是，客户端应用程序只使用封装了数字和名称的 <xref:System.Windows.Automation.AutomationProperty>来标识它们希望检索的属性。  
   
- 表示特定属性的 <xref:System.Windows.Automation.AutomationProperty> 对象在各个类中以字段的形式提供。 出于安全原因，UI 自动化提供程序将从 Uiautomationtypes.dll 中包含的一组单独的类中获取这些对象。  
+ 表示特定属性的<xref:System.Windows.Automation.AutomationProperty> 对象在各个类中以字段的形式提供。 出于安全原因，UI 自动化提供程序将从 Uiautomationtypes.dll 中包含的一组单独的类中获取这些对象。  
   
- 下表按包含 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 的类对属性进行分类。  
+ 下表按包含 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]。  
   
 |属性的种类|客户端从中获取 ID|提供程序从中获取 ID|  
-|-----------|----------------|-----------------|  
+|-------------------------|--------------------------|----------------------------|  
 |所有元素共有的属性（请参阅下表）|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
 |停靠窗口的位置|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
 |可展开和折叠的元素的状态|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
@@ -55,42 +58,42 @@ caps.handback.revision: 17
 |表的列和行标题以及方向|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
 |切换控件的状态|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
 |可移动、旋转、或调整大小的元素的功能|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
-|具有值的元素的值和读\/写功能|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
+|具有值的元素的值和读/写功能|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |窗口的功能和状态|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>   
-## 按类别列出的属性  
- 下表对其 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 位于 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers> 中的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
+## <a name="properties-by-category"></a>按类别列出的属性  
+ 下表对其 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 位于 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers>中的属性进行分类。 这些属性是所有控件共有的。 很少一些属性在提供程序应用程序的生存期内可能是静态的；大多数动态属性都与控件模式关联。  
   
- 除 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 和 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> 之外，“属性访问”列还列出了每个属性的任何其他访问器。 有关在客户端应用程序中获取属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ 除 **和** 之外， <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A><xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>“属性访问”列还列出了每个属性的任何其他访问器。 有关在客户端应用程序中获取属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
 > [!NOTE]
->  有关每个属性的具体信息，请访问“属性访问”列中的链接。  
+>  有关每个属性的具体信息，请访问  “属性访问”列中的链接。  
   
-### 显示特征  
+### <a name="display-characteristics"></a>显示特征  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.CultureProperty>|无|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### 元素类型  
+### <a name="element-type"></a>元素类型  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsControlElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### 标识  
+### <a name="identification"></a>标识  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.FrameworkIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.FrameworkId%2A>|  
@@ -100,10 +103,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty>|<xref:System.Windows.Automation.AutomationElement.GetRuntimeId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle%2A>|  
   
-### 交互  
+### <a name="interaction"></a>交互  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>|<xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>|  
@@ -111,10 +114,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsKeyboardFocusable%2A>|  
   
-### 对模式的支持  
+### <a name="support-for-patterns"></a>对模式的支持  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsExpandCollapsePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsGridItemPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
@@ -134,16 +137,16 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### 杂项  
+### <a name="miscellaneous"></a>杂项  
   
-|属性标识符|属性访问|  
-|-----------|----------|  
+|属性标识符|和|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>   
-## 本地化  
+## <a name="localization"></a>本地化  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序应按照操作系统的语言呈现下列属性：  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
@@ -157,19 +160,19 @@ caps.handback.revision: 17
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
-## 属性和事件  
+## <a name="properties-and-events"></a>属性和事件  
  属性更改事件的概念与 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中的属性密切相关。 对于动态属性，客户端应用程序需要一种途径来了解属性值已更改，以便它能够用某种其他方式更新信息缓存或对新信息做出响应。  
   
  当 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的内容发生更改时，提供程序将引发事件。 例如，如果选中或清除了复选框，则提供程序的切换模式实现将引发属性更改事件。 提供程序可以有选择地引发事件，具体取决于任何客户端是在侦听事件还是在侦听特定事件。  
   
  并非所有属性更改都会引发事件；这完全由元素的 UI 自动化提供程序实现所决定。 例如，列表框的标准代理提供程序在 <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> 更改时不会引发事件。 相反，在这种情况下，应用程序必须侦听 <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>。  
   
- 客户端通过订阅事件来侦听事件。 订阅事件是指创建可处理事件的委托方法，然后将方法随将在这些方法中处理的特定事件一起传递给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 特别是对于属性更改事件，客户端必须实现 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>。  
+ 客户端通过订阅事件来侦听事件。 订阅事件是指创建可处理事件的委托方法，然后将方法随将在这些方法中处理的特定事件一起传递给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 特别是对于属性更改事件，客户端必须实现 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>。  
   
-## 请参阅  
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)   
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)   
- [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)   
- [Find a UI Automation Element Based on a Property Condition](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)   
- [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)   
- [Raise Events from a UI Automation Provider](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a>另请参阅  
+ [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [查找 UI 自动化元素基于属性条件](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [从 UI 自动化提供程序返回属性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

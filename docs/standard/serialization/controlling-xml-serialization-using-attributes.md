@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - classes, serializing
 - XML serialization, examples
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: c00ceea5e9700b0e964b799684eea743c540992d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e921402980b1382761dd25d9cbbabda6b2c6a038
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用属性控制 XML 序列化
 使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  
@@ -320,11 +317,10 @@ public class Group{
  可能会出现公共属性或字段无需进行序列化的情况。 例如，字段或属性可能用于包含元数据。 在这样的情况下，可将 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 应用于该字段或属性，而 <xref:System.Xml.Serialization.XmlSerializer> 将跳过它。  
   
 ## <a name="see-also"></a>另请参阅  
- [控制 XML 序列化的特性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
- [控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [用来控制 XML 序列化的属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

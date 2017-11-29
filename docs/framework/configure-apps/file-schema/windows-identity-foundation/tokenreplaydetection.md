@@ -1,58 +1,66 @@
 ---
-title: "&lt;tokenReplayDetection&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;tokenReplayDetection&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f95d200f74621a40d2987acf68bc554df8d17ab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;tokenReplayDetection&gt;
-启用标记重播检测并指定标记的到期时间。  
+# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+启用令牌重放检测并指定令牌的过期时间。  
   
-## 语法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<tokenReplayDetection >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
-    </tokenReplayDetection>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
+    </tokenReplayDetection>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 类型  
+## <a name="type"></a>类型  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|启用|指定的值标记重播检测是否启用;“true”启用标记重播检测。|  
-|expirationPeriod|<xref:System.TimeSpan> 中的项之前指定最大时间被视为从缓存过期并将其移除。  有关如何指定 <xref:System.TimeSpan> 值的更多信息，请 [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues)参见。|  
+|特性|描述|  
+|---------------|-----------------|  
+|enabled|一个值，指定是否启用令牌重放检测;"true"若要启用令牌重放检测。|  
+|expirationPeriod|A <xref:System.TimeSpan> ，它指定的最大项被视为过期并从缓存中删除之前的时间量。  有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别的标识设置。|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|出于安全标记处理程序的集合提供配置。|  
+|元素|描述|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
-## 备注  
- `<tokenReplayDetection>` 元素既可以在服务级别在 `<identityConfiguration>` 元素下或在 `<securityTokenHandlerConfiguration>` 元素下的安全标记处理程序集合级别。  在服务重写这些指定的标记处理程序集合的设置。  
+## <a name="remarks"></a>备注  
+ A`<tokenReplayDetection>`可以在服务级别下指定元素`<identityConfiguration>`元素或下位于安全令牌处理程序集合级别`<securityTokenHandlerConfiguration>`元素。 令牌处理程序集合上的设置会覆盖在服务上指定。  
   
- 标记重播缓存的类型由元素中指定 [\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 。
+ 指定的令牌重放缓存类型[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)元素。

@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace sources
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1df5f06afaf23795a0efd6af763e29193ba82d90
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1fc1e843bb5841fcd5571bb1b57d6fb449336240
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>如何：创建和初始化跟踪源
 <xref:System.Diagnostics.TraceSource> 类由应用程序用来生成可与应用程序相关联的跟踪。 <xref:System.Diagnostics.TraceSource> 提供了一些跟踪方法，利用这些跟踪方法，你可以方便地跟踪事件，跟踪数据和发出信息跟踪。 你可以使用或不使用配置文件来创建和初始化 <xref:System.Diagnostics.TraceSource> 的跟踪输出。 本主题提供这两种选项的说明。 但是，建议你使用配置文件，以便于重新配置在运行时由跟踪源生成的跟踪。  
@@ -37,7 +33,8 @@ ms.lasthandoff: 08/21/2017
   
 1.  创建 Visual Studio 控制台应用程序项目，然后使用以下代码替换提供的代码。 此代码将记录错误和警告，并将其中一些输出到控制台，将其中一些输出到由配置文件中的各个项创建的 myListener 文件。  
   
-     [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]  [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
+     [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
+     [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
 2.  向项目添加一个应用程序配置文件（如果没有），以初始化步骤 1 代码示例中名为 `TraceSourceApp` 的跟踪源。  
   
@@ -80,18 +77,18 @@ ms.lasthandoff: 08/21/2017
   
      配置文件在初始化应用程序时初始化跟踪源的设置。 应用程序可以动态更改配置文件设置的属性，以重写用户指定的任何设置。 例如，你可能想要确保始终将关键消息发送到文本文件，而不管当前配置设置如何。 示例代码演示如何重写配置文件设置以确保将关键消息输出到跟踪侦听器。  
   
-     在应用程序执行时更改配置文件设置不会更改初始设置。 若要更改设置，必须重新启动应用程序或使用 <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName> 方法以编程方式刷新应用程序。  
+     在应用程序执行时更改配置文件设置不会更改初始设置。 若要更改设置，必须重新启动应用程序或使用 <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> 方法以编程方式刷新应用程序。  
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>不使用配置文件初始化跟踪源、侦听器和筛选器  
   
 -   使用以下示例代码在不使用配置文件的情况下通过跟踪源启用跟踪。 这不是建议的做法，但在某此情况下，你可能不想依赖配置文件来确保跟踪。  
   
-     [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]  [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
+     [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
+     [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventTypeFilter>   
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventTypeFilter>  
  [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-

@@ -1,26 +1,30 @@
 ---
-title: "使用自定义活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用自定义活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e534f9a3e8d0a7d675e43bc03266e4863f95d45d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用自定义活动
-派生自 <xref:System.Activities.Activity> 或其子类的活动可以组合到更大的工作流中，或以代码直接创建。此主题说明如何使用工作流中以代码或通过设计器创建的自定义活动。  
+# <a name="using-a-custom-activity"></a>使用自定义活动
+派生自 <xref:System.Activities.Activity> 或其子类的活动可以组合到更大的工作流中，或以代码直接创建。 此主题说明如何使用工作流中以代码或通过设计器创建的自定义活动。  
   
 > [!NOTE]
->  自定义活动可在定义这些活动的同一项目中使用，只要自定义活动与使用它的活动经过编译即可（即：由正在实例化的、生成过程所生成的类型所加载）。如果引用活动动态加载（例如使用 ActivityXAMLServices），则被引用的程序集应放到其他项目中，否则设计器生成的 XAML 需要经过手动编辑才能实现这一功能。  
+>  可以在其中定义它们，同一项目中使用自定义活动，只要自定义活动和使用它的活动都可编译 （即由生成过程生成的实例化类型加载） 如果在加载引用的活动动态 （例如使用 ActivityXAMLServices），然后应将引用的程序集放在不同的项目，或设计器生成的 XAML 需要经过手动编辑要启用此功能。  
   
-#### 将自定义活动用于工作流项目  
+#### <a name="using-a-custom-activity-to-a-workflow-project"></a>将自定义活动用于工作流项目  
   
 1.  添加从宿主项目指向包含自定义活动的活动库项目的引用。  
   

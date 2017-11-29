@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM interop, COM wrappers
 - RCW
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 607f5689e9b2221a916c80732bb54d64cd21bf4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 980ed0a10c4e8152da20846710b21c244a341271
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -72,9 +65,8 @@ COM 接口和运行时可调用包装
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
 ## <a name="see-also"></a>另请参阅  
- [COM 包装器](../../../docs/framework/interop/com-wrappers.md)   
- [封送处理所选接口](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)   
- [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)   
- [有关从类型库转换到程序集的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
+ [COM 包装](../../../docs/framework/interop/com-wrappers.md)  
+ [封送选定的接口](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
+ [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [有关从类型库转换到程序集的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-

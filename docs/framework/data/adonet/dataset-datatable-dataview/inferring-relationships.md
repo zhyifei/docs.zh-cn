@@ -1,27 +1,30 @@
 ---
-title: "推断关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "推断关系"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 41c73ac31105cdae0a23c2367211747dee8d44f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 推断关系
-如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。  一个名为 **ParentTableName\_Id** 的新列将添加到为父元素创建的表以及为子元素创建的表中。  此标识列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  该列将成为父表的自动递增主键，并将用于两个表之间的 **DataRelation**。  所添加的标识列的数据类型将为 **System.Int32**，与所有其他被推断的列的数据类型不同，后者的数据类型为 **System.String**。  **DeleteRule** \= **Cascade** 的 <xref:System.Data.ForeignKeyConstraint> 也将使用父表和子表中的新列创建。  
+# <a name="inferring-relationships"></a>推断关系
+如果被推断为表的元素具有一个同样被推断为表的子元素，则将在这两个表之间创建 <xref:System.Data.DataRelation>。 名称的新列**ParentTableName_Id**将添加到父元素中，创建的表和子元素创建的表。 **ColumnMapping**此标识列的属性将设置为**MappingType.Hidden**。 列将用于父表中，已自动递增的主关键字和将用于**DataRelation**两个表之间。 添加的标识列的数据类型将是**System.Int32**，与所有其他被推断的列的数据类型，这是**System.String**。 A<xref:System.Data.ForeignKeyConstraint>与**DeleteRule** = **Cascade**还将在父与子表中使用新的列创建。  
   
  例如，考虑以下 XML：  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1 attr1="value1" attr2="value2"/>  
@@ -30,57 +33,57 @@ caps.handback.revision: 4
 </DocumentElement>  
 ```  
   
- 推理过程将生成两个表：**Element1** 和 **ChildElement1**。  
+ 推断过程将生成两个表： **Element1**和**ChildElement1**。  
   
- **Element1** 表具有两个列：**Element1\_Id** 和 **ChildElement2**。  **Element1\_Id** 列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  **ChildElement2** 列的 **ColumnMapping** 属性将设置为 **MappingType.Element**。  **Element1\_Id** 列将设置为 **Element1** 表的主键。  
+ **Element1**表将有两个列： **Element1_Id**和**ChildElement2**。 **ColumnMapping**属性**Element1_Id**列将设置为**MappingType.Hidden**。 **ColumnMapping**属性**ChildElement2**列将设置为**MappingType.Element**。 **Element1_Id**列将设置为主键的**Element1**表。  
   
- **ChildElement1** 表具有三个列：**attr1**、**attr2** 和 **Element1\_Id**。  **attr1** 和 **attr2** 列的 **ColumnMapping** 属性将设置为 **MappingType.Attribute**。  **Element1\_Id** 列的 **ColumnMapping** 属性将设置为 **MappingType.Hidden**。  
+ **ChildElement1**表将具有三列： **attr1**， **attr2**和**Element1_Id**。 **ColumnMapping**属性**attr1**和**attr2**列将设置为**MappingType.Attribute**。 **ColumnMapping**属性**Element1_Id**列将设置为**MappingType.Hidden**。  
   
- **DataRelation** 和 **ForeignKeyConstraint** 将使用两个表中的 **Element1\_Id** 列来创建。  
+ A **DataRelation**和**ForeignKeyConstraint**将使用创建**Element1_Id**这两个表中的列。  
   
- **DataSet：**DocumentElement  
+ **数据集：** DocumentElement  
   
- **Table：**Element1  
+ **表：** Element1  
   
-|Element1\_Id|ChildElement2|  
+|Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **Table：**ChildElement1  
+ **表：** ChildElement1  
   
-|attr1|attr2|Element1\_Id|  
+|attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation：**Element1\_ChildElement1  
+ **DataRelation:** Element1_ChildElement1  
   
- **ParentTable：**Element1  
+ **ParentTable:** Element1  
   
- **ParentColumn：**Element1\_Id  
+ **ParentColumn:** Element1_Id  
   
- **ChildTable：**ChildElement1  
+ **ChildTable:** ChildElement1  
   
- **ChildColumn：**Element1\_Id  
+ **ChildColumn:** Element1_Id  
   
- **Nested：**True  
+ **嵌套：** True  
   
- **ForeignKeyConstraint：**Element1\_ChildElement1  
+ **ForeignKeyConstraint:** Element1_ChildElement1  
   
- **Column：**Element1\_Id  
+ **列：** Element1_Id  
   
- **ParentTable：**Element1  
+ **ParentTable:** Element1  
   
- **ChildTable：**ChildElement1  
+ **ChildTable:** ChildElement1  
   
- **DeleteRule：**Cascade  
+ **DeleteRule:** Cascade  
   
- **AcceptRejectRule：**None  
+ **AcceptRejectRule:**无  
   
-## 请参阅  
- [从 XML 推断 DataSet 关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [从 XML 中加载 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [从 XML 中加载 DataSet 架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [从 XML 加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

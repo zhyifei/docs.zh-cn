@@ -1,67 +1,68 @@
 ---
-title: "ToolBar 样式和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ToolBar"
-  - "部件 [WPF], ToolBar"
-  - "状态 [WPF], ToolBar"
-  - "样式 [WPF], ToolBar"
-  - "模板 [WPF], ToolBar"
-  - "ToolBar [WPF], 样式和模板"
+title: "ToolBar 样式和模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], ToolBar
+- styles [WPF], ToolBar
+- ControlTemplate [WPF], ToolBar
+- parts [WPF], ToolBar
+- ToolBar [WPF], styles and templates
+- templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e153ff0fd89259dafedf6f8abb669090a944e91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ToolBar 样式和模板
-本主题介绍 <xref:System.Windows.Controls.ToolBar> 控件的样式和模板。  您可以修改默认的 <xref:System.Windows.Controls.ControlTemplate>，以便为控件提供一个独特的外观。  有关更多信息，请参见[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="toolbar-styles-and-templates"></a>ToolBar 样式和模板
+本主题介绍的样式和模板的<xref:System.Windows.Controls.ToolBar>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## ToolBar 部件  
- 下表列出了 <xref:System.Windows.Controls.ToolBar> 控件的命名部件。  
+## <a name="toolbar-parts"></a>工具栏部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.ToolBar>控件。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|包含 <xref:System.Windows.Controls.ToolBar> 上的控件的对象。|  
-|PART\_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|包含 <xref:System.Windows.Controls.ToolBar> 溢出区域中的控件的对象。|  
+|PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|包含的控件的对象<xref:System.Windows.Controls.ToolBar>。|  
+|PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|包含的溢出区域中的控件的对象<xref:System.Windows.Controls.ToolBar>。|  
   
- 在为 <xref:System.Windows.Controls.ToolBar> 创建 <xref:System.Windows.Controls.ControlTemplate> 时，模板可能在 <xref:System.Windows.Controls.ScrollViewer> 中包含 <xref:System.Windows.Controls.ItemsPresenter>。  （<xref:System.Windows.Controls.ItemsPresenter> 显示 <xref:System.Windows.Controls.ToolBar> 中的每一项；通过 <xref:System.Windows.Controls.ScrollViewer> 可以在控件内滚动）。  如果 <xref:System.Windows.Controls.ItemsPresenter> 不是 <xref:System.Windows.Controls.ScrollViewer> 的直接子级，则您必须为 <xref:System.Windows.Controls.ItemsPresenter> 提供名称 `ItemsPresenter`。  
+ 当你创建<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ToolBar>，你的模板可能包含<xref:System.Windows.Controls.ItemsPresenter>内<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>显示中的每一项<xref:System.Windows.Controls.ToolBar>;<xref:System.Windows.Controls.ScrollViewer>使控件内滚动)。  如果<xref:System.Windows.Controls.ItemsPresenter>不的直接子级<xref:System.Windows.Controls.ScrollViewer>，您必须为指定<xref:System.Windows.Controls.ItemsPresenter>名称， `ItemsPresenter`。  
   
-## ToolBar 状态  
- 下表列出了 <xref:System.Windows.Controls.ToolBar> 控件的可视状态。  
+## <a name="toolbar-states"></a>工具栏状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.ToolBar>控件。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Valid|ValidationStates|该控件使用 <xref:System.Windows.Controls.Validation> 类，<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `false`。|  
-|InvalidFocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件具有焦点。|  
-|InvalidUnfocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件没有焦点。|  
+|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`具有该控件没有焦点。|  
   
-## ToolBar ControlTemplate 示例  
- 下面的示例演示如何为 <xref:System.Windows.Controls.ToolBar> 控件定义 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="toolbar-controltemplate-example"></a>工具栏 ControlTemplate 示例  
+ 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ToolBar>控件。  
   
- [!code-xml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
+ [!code-xaml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
   
- 上面的示例使用下面的一个或多个资源。  
+ 上一示例使用了一个或多个以下资源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 有关完整示例，请参见 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)（使用 ControlTemplates 设置样式的示例）。  
+ 有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

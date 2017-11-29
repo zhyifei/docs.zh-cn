@@ -1,34 +1,38 @@
 ---
-title: "如何：创建使用现有服务协定的工作流服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建使用现有服务协定的工作流服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a811609f601e844d55d4173eb94df24701fcc7d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：创建使用现有服务协定的工作流服务
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。通过协定优先工作流开发工具，您可以首先用代码来设计协定。该工具随后会针对协定中的操作，在工具箱中自动生成活动模板。  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>如何：创建使用现有服务协定的工作流服务
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。  
   
 > [!NOTE]
->  本主题提供了有关创建协定优先工作流服务的分步指南。[!INCLUDE[crabout](../../../includes/crabout-md.md)] 协定优先工作流服务开发的更多信息，请参见[协定优先的工作流服务开发](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md)。  
+>  本主题提供了有关创建协定优先工作流服务的分步指南。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]协定优先工作流服务开发，请参阅[协定第一个工作流服务开发](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
   
-### 创建工作流项目  
+### <a name="creating-the-workflow-project"></a>创建工作流项目  
   
-1.  在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中，选择**“文件”**、**“新建项目”**。在**“模板”**树中的**“C\#”**节点下选择**“WCF”**节点，然后选择**“WCF 工作流服务应用程序”**模板。  
+1.  在[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，选择**文件**，**新项目**。 选择**WCF**节点下的**C#**中的节点**模板**树，然后选择**WCF 工作流服务应用程序**模板。  
   
-2.  将新项目命名为 `ContractFirst`，然后单击**“确定”**。  
+2.  将新项目`ContractFirst`单击**确定**。  
   
-### 创建服务协定  
+### <a name="creating-the-service-contract"></a>创建服务协定  
   
-1.  在**解决方案资源管理器**中右键单击该项目，然后选择**“添加”**、**“新建项...”**。选择左侧的**“代码”**节点和右侧的**“类”**模板。将新类命名为 `IBookService`，然后单击**“确定”**。  
+1.  右键单击中的项目**解决方案资源管理器**和选择**添加**，**新建项...**. 选择**代码**在左侧，节点和**类**右侧的模板。 将新类`IBookService`单击**确定**。  
   
 2.  在显示的代码窗口的顶部，向 `System.Servicemodel` 添加一个 Using 语句。  
   
@@ -50,20 +54,20 @@ caps.handback.revision: 5
         }  
     ```  
   
-4.  通过按**“Ctrl\+Shift\+B”**来生成项目。  
+4.  通过按生成项目**Ctrl + Shift + B**。  
   
-### 导入服务协定  
+### <a name="importing-the-service-contract"></a>导入服务协定  
   
-1.  在**解决方案资源管理器**中右键单击该项目，然后选择**“导入服务协定”**。在**“\<当前项目\>”**下面，打开所有子节点，然后选择**“IBookService”**。单击**“确定”**。  
+1.  右键单击中的项目**解决方案资源管理器**和选择**导入服务协定**。 下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击“确定”。  
   
-2.  将会打开一个对话框，提示您该操作已成功完成，并且在生成该项目后，所生成的活动将出现在工具箱中。单击**“确定”**。  
+2.  将会打开一个对话框，提示您该操作已成功完成，并且在生成该项目后，所生成的活动将出现在工具箱中。 单击“确定”。  
   
-3.  通过按**“Ctrl\+Shift\+B”**生成项目，这样，导入的活动将出现在工具箱中。  
+3.  通过按生成项目**Ctrl + Shift + B**，以便导入的活动将出现在工具箱。  
   
-4.  在**解决方案资源管理器**中，打开 Service1.xamlx。该工作流服务将出现在设计器中。  
+4.  在**解决方案资源管理器**，打开 Service1.xamlx。 该工作流服务将出现在设计器中。  
   
-5.  选择**“Sequence”**活动。在“属性”窗口中，单击**“ImplementedContract”**属性中的**“...”**按钮。在显示的**“类型集合编辑器”**窗口中，单击**“类型”**下拉列表，然后选择**“浏览类型...”** 条目。在**“浏览并选择 .Net 类型”**对话框中的**“\<当前项目\>”**下面，打开所有子节点，然后选择**“IBookService”**。单击**“确定”**。在**“类型集合编辑器”**对话框中，单击**“确定”**。  
+5.  选择**序列**活动。 在属性窗口中，单击**...** 按钮**ImplementedContract**属性。 在**类型集合编辑器**出现窗口中，单击**类型**下拉列表中，然后选择**浏览类型...** 项。 在**浏览并选择.Net 类型**对话框下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击“确定”。 在**类型集合编辑器**对话框中，单击**确定**。  
   
-6.  选择并删除**“ReceiveRequest”**和**“SendResponse”**活动。  
+6.  选择并删除**ReceiveRequest**和**SendResponse**活动。  
   
-7.  将**“Buy\_ReceiveAndSendReply”**和**“Checkout\_Receive”**活动从工具箱拖动到**“Sequential Service”**活动上。
+7.  从工具箱中，将**Buy_ReceiveAndSendReply**和**Checkout_Receive**活动拖放到**顺序服务**活动。

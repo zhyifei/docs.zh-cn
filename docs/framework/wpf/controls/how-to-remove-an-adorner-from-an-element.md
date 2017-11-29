@@ -1,37 +1,42 @@
 ---
-title: "如何：从元素移除装饰器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "装饰器, 移除"
+title: "如何：从元素移除装饰器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe11dc8df1a29518ba05792877bd26670f96b29d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：从元素移除装饰器
-此示例演示如何以编程方式从指定的 <xref:System.Windows.UIElement> 中移除特定的装饰器。  
+# <a name="how-to-remove-an-adorner-from-an-element"></a>如何：从元素移除装饰器
+此示例演示如何以编程方式移除从指定的一个特定的装饰器<xref:System.Windows.UIElement>。  
   
-## 示例  
- 此详细代码示例移除由 <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> 返回的装饰器数组中的第一个装饰器。  此示例恰好从名为 *myTextBox* 的 <xref:System.Windows.UIElement> 中检索装饰器。  如果在对 <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> 的调用中指定的元素没有装饰器，则返回 `null`。  此代码显式检查 null 数组，最适用于其中 null 数组相对来说应比较常见的应用程序。  
+## <a name="example"></a>示例  
+ 此详细的代码示例的装饰器返回的数组中移除的第一个装饰器<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>。  此示例碰巧上检索装饰器<xref:System.Windows.UIElement>名为*myTextBox*。  如果该元素指定的调用中<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>没有装饰器，`null`返回。  此代码显式检查 null 数组，并最适合应用程序的其中一个空数组应为相对常见。  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornerlong)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornerlong)]  
   
-## 示例  
- 此简化的代码示例在功能上等效于上述详细示例。  此代码不显式检查 null 数组，因此可能会引发一个 <xref:System.NullReferenceException> 异常。  此代码最适用于其中应很少出现 null 数组的应用程序。  
+## <a name="example"></a>示例  
+ 此简化的代码示例在功能上等效于详细示例如上所示。 此代码不显式检查 null 数组，因此很可能，<xref:System.NullReferenceException>可能引发异常。  此代码最适合应用程序是一个空数组的地方很少见。  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornershort)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)

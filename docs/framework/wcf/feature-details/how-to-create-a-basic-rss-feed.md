@@ -1,33 +1,39 @@
 ---
-title: "如何：创建基本 RSS 源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建基本 RSS 源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6671e5707863c3be0421a81351cb1fed04eb0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建基本 RSS 源
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开联合源的服务。本主题讨论如何创建公开 RSS 联合源的联合服务。  
+# <a name="how-to-create-a-basic-rss-feed"></a>如何：创建基本 RSS 源
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建公开联合源的服务。 本主题讨论如何创建公开 RSS 联合源的联合服务。  
   
-### 创建基本联合服务  
+### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
-1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。作为联合源公开的每个操作应返回 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 对象。  
+1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。 作为联合源公开的每个操作应返回 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 对象。  
   
      [!code-csharp[htRssBasic#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#0)]
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  将所有应用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性的服务操作映射到 HTTP GET 请求。若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  将所有应用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性的服务操作映射到 HTTP GET 请求。 若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2.  实现服务协定。  
   
@@ -54,7 +60,7 @@ caps.handback.revision: 18
      [!code-csharp[htRssBasic#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#5)]
      [!code-vb[htRssBasic#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#5)]  
   
-### 承载服务  
+### <a name="to-host-a-service"></a>承载服务  
   
 1.  创建 <xref:System.ServiceModel.Web.WebServiceHost> 对象。  
   
@@ -66,11 +72,11 @@ caps.handback.revision: 18
      [!code-csharp[htRssBasic#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#8)]
      [!code-vb[htRssBasic#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#8)]  
   
-### 使用 HTTP GET 调用 GetBlog\(\)  
+### <a name="to-call-getblog-with-an-http-get"></a>使用 HTTP GET 调用 GetBlog()  
   
-1.  打开 Internet Explorer，键入下面的 URL 并按 Enter：http:\/\/localhost:8000\/BlogService\/GetBlog。URL 包含服务的基址 \(http:\/\/localhost:8000\/BlogService\)、终结点的相对地址，以及要调用的服务操作。  
+1.  打开 Internet Explorer，键入下面的 URL 并按 Enter：http://localhost:8000/BlogService/GetBlog。 URL 包含服务的基址 (http://localhost:8000/BlogService)、终结点的相对地址，以及要调用的服务操作。  
   
-### 从代码中调用 GetBlog\(\)  
+### <a name="to-call-getblog-from-code"></a>从代码中调用 GetBlog()  
   
 1.  使用基址和调用的方法创建 <xref:System.Xml.XmlReader>。  
   
@@ -89,15 +95,15 @@ caps.handback.revision: 18
      [!code-csharp[htRssBasic#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#11)]
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  
   
-## 示例  
+## <a name="example"></a>示例  
  下面列出了此示例的完整代码。  
   
  [!code-csharp[htRssBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#12)]
  [!code-vb[htRssBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#12)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
  编译前面的代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## 请参阅  
- <xref:System.ServiceModel.WebHttpBinding>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

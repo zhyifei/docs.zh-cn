@@ -1,39 +1,41 @@
 ---
-title: "IEnumRAWINPUTDEVIC:Clone | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clone 方法"
+title: IEnumRAWINPUTDEVIC:Clone
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 35f3c00f3a0efd41c425ba29f8465a73e78d624c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# IEnumRAWINPUTDEVIC:Clone
-创建与当前枚举数的状态相同的另一个原始输入设备枚举数，以循环访问同一列表。  
+# <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
+创建一个与当权枚举器相同状态的原始输入设备枚举器，以循环访问相同的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ppenum`  
   
- \[out\] 接收 [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) 接口指针的输出变量的地址。  如果此方法失败，则未定义此输出变量的值。  
+ [out]接收的输出变量的地址[IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)接口指针。 如果方法不成功，则此输出变量的值不确定。  
   
-## 属性值\/返回值  
- HRESULT：此方法支持标准返回值 E\_INVALIDARG、E\_OUTOFMEMORY 和 E\_UNEXPECTED。  
+## <a name="property-valuereturn-value"></a>属性值/返回值  
+ HRESULT： 此方法支持 E_INVALIDARG、 E_OUTOFMEMORY 和 E_UNEXPECTED 标准的返回值。  
   
-## 备注  
- 使用此方法，可以记录枚举序列中之后要返回到的点。  调用方必须独立于第一个枚举数来发布这一新的枚举数。
+## <a name="remarks"></a>备注  
+ 此方法使可以枚举序列中记录一个点，以便稍后返回到该点。 调用方必须释放此新的枚举器，单独从第一个枚举器。

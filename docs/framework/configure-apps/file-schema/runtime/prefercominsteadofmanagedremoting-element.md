@@ -1,77 +1,79 @@
 ---
-title: "&lt;PreferComInsteadOfManagedRemoting&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<PreferComInsteadOfManagedRemoting> 元素"
-  - "PreferComInsteadOfManagedRemoting 元素"
+title: "&lt;PreferComInsteadOfManagedRemoting&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <PreferComInsteadOfManagedRemoting> element
+- PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;PreferComInsteadOfManagedRemoting&gt; 元素
-指定运行时是否将为跨应用程序域边界的所有调用使用 COM 互操作而不是远程处理。  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt;元素
+指定是否运行时将使用 COM 互操作而不是远程处理所有调用跨应用程序域边界。  
   
-## 语法  
+ \<configuration>  
+\<运行时 >  
+\<PreferComInsteadOfManagedRemoting >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指示运行时是否将跨应用程序域边界使用 COM 互操作而不是远程处理。|  
+|特性|描述|  
+|---------------|-----------------|  
+|`enabled`|必需的特性。<br /><br /> 指示运行时将使用 COM 互操作而不是远程处理跨应用程序域边界。|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|说明|  
-|-------|--------|  
-|`false`|运行时将跨应用程序域边界使用远程处理。  这是默认设置。|  
+|值|描述|  
+|-----------|-----------------|  
+|`false`|运行时将跨应用程序域边界使用远程处理。 这是默认设置。|  
 |`true`|运行时将跨应用程序域边界使用 COM 互操作。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
-## 备注  
- 在将 `enabled` 特性设置为 `true` 时，运行时的行为如下所示：  
+## <a name="remarks"></a>备注  
+ 当你将设置`enabled`属性设为`true`，运行时的行为，如下所示：  
   
--   当[IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003)接口通过 COM接口进入域时，运行时不会为[IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口调用[IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867)。  相反，运行时会围绕对象构建一个[运行时可调用包装](../../../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\)。  
+-   运行时不会调用[iunknown:: Queryinterface](http://go.microsoft.com/fwlink/?LinkID=144867)为[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003)接口进入通过 COM 接口域。 相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 针对对象。  
   
--   当运行时收到针对此域中已创建的任何 [COM 可调用包装](../../../../../docs/framework/interop/com-callable-wrapper.md) \(CCW\) 的 [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 接口的 `QueryInterface` 调用时，它会返回 E\_NOINTERFACE。  
+-   在接收时，则运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)任何接口[COM 可调用包装](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。  
   
- 这两种行为可确保，针对跨应用程序域边界的托管对象之间的 COM 接口的所有调用都使用 COM 和 COM 互操作，而不是远程处理。  
+ 请确保这两种行为，COM 上的所有调用之间的都接口的托管的对象跨应用程序域边界使用 COM 和 COM 互操作而不是远程处理。  
   
-## 示例  
- 下面的示例演示如何指定运行时应跨隔离边界使用 COM 互操作：  
+## <a name="example"></a>示例  
+ 下面的示例演示如何指定运行时应使用 COM 互操作跨隔离边界：  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <PreferComInsteadOfManagedRemoting enabled="true"/>  
@@ -79,6 +81,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

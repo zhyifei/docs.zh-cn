@@ -1,6 +1,6 @@
 ---
 title: "成员 (F#)"
-description: "成员 (F#)"
+description: "了解在 F # 编程语言的对象成员。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: fe14657b25d122296a6826daba37ea99b6ee64b4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="members"></a>成员
 
 本部分介绍 F# 对象类型的成员。
@@ -44,4 +43,3 @@ ms.lasthandoff: 04/05/2017
 |[运算符重载](../operator-overloading.md)|介绍类型的自定义运算符的定义。|
 |[事件](events.md)|介绍 F# 中的事件定义和事件处理支持。|
 |[显式字段：`val` 关键字](explicit-fields-the-val-keyword.md)|介绍类型中未初始化字段的定义。|
-

@@ -1,83 +1,86 @@
 ---
-title: "bypasslist -&gt; &lt;remove&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, remove 元素"
-  - "bypasslist, remove 元素"
-  - "remove 元素, bypasslist"
-  - "remove 元素, bypasslist"
+title: "&lt;删除&gt;将 bypasslist （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- <bypasslist>, remove element
+- remove elemment, bypasslist
+- bypasslist, remove element
+- remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# bypasslist -&gt; &lt;remove&gt; 元素（网络设置）
-从代理忽略地址列表中移除 IP 地址或 DNS 名称。  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;删除&gt;将 bypasslist （网络设置） 的元素
+从代理绕过列表中删除 IP 地址或 DNS 名称。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<defaultProxy >  
+\<将 bypasslist >  
+\<删除 >  
   
+## <a name="syntax"></a>语法  
+  
+```xml  
+<remove   
+  address="regular expression"   
+/>
 ```  
   
-      <remove   
-   name = "regular expression"   
-/>  
-```  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+### <a name="attributes"></a>特性  
   
-### 特性  
+|**特性**|**描述**|  
+|-------------------|---------------------|  
+|`address`|正则表达式描述的 IP 地址或 DNS 名称。|  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|`name`|描述 IP 地址或 DNS 名称的正则表达式。|  
-  
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组正则表达式来描述不使用代理的地址。|  
+|**元素**|**描述**|  
+|-----------------|---------------------|  
+|[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
   
-## 备注  
- `remove` 元素将描述 IP 地址或 DNS 服务器名称的正则表达式从忽略代理服务器的地址的列表中移除。  这些地址是较早在配置文件中或在配置层次结构的较高级别定义的。  
+## <a name="remarks"></a>备注  
+ `remove`元素中删除描述 IP 地址或 DNS 服务器名称，从列表中不使用代理服务器的地址的正则表达式。 地址已在配置文件中或在配置层次结构中较高级别前面定义。  
   
- `name` 特性的值应当是描述一组 IP 地址或主机名的正则表达式。  
+ 值`address`属性应为正则表达式描述一组 IP 地址或主机名。  
   
- 有关正则表达式的更多信息，请参见 [.NET Framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a>配置文件  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## 示例  
- 下面的代码示例移除 adventure\-works.com 域的所有以前的定义，然后将 contoso.com 域添加到忽略列表中。  
+## <a name="example"></a>示例  
+ 下面的示例中删除任何以前的定义对于 adventure works.com 域中，并将 contoso.com 域添加到跳过列表。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <bypasslist>  
-        <remove name = "[a-z]+\.adventure-works\.com$" />  
+        <remove address="[a-z]+\.adventure-works\.com$" />  
         <add address="[a-z]+\.contoso\.com$" />  
       </bypasslist>  
     </defaultProxy>  
@@ -85,6 +88,6 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

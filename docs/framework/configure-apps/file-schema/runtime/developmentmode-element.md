@@ -1,75 +1,77 @@
 ---
-title: "&lt;developmentMode&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#developmentMode"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<developmentMode> 元素"
-  - "容器标记, <developmentMode> 元素"
-  - "developmentMode 元素"
+title: "&lt;developmentMode&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#developmentMode
+helpviewer_keywords:
+- developmentMode element
+- container tags, <developmentMode> element
+- <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4573c3a5e0cf64996f2a4e109736d966b754494a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;developmentMode&gt; 元素
-指定运行时是否在 DEVPATH 环境变量指定的目录中搜索程序集。  
+# <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt;元素
+指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。  
   
-## 语法  
+ \<configuration>  
+\<运行时 >  
+\<developmentMode >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <developmentMode developerInstallation="true | false"/>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|**developerInstallation**|指定运行时是否在 DEVPATH 环境变量指定的目录中搜索程序集。|  
+|特性|描述|  
+|---------------|-----------------|  
+|**developerInstallation**|指定运行时是否搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
   
-## developerInstallation 特性  
+## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
   
-|值|说明|  
-|-------|--------|  
-|**true**|在 DEVPATH 环境变量指定的目录中搜索程序集。|  
-|**false**|不在 DEVPATH 环境变量指定的目录中搜索程序集。  此为默认值。|  
+|值|描述|  
+|-----------|-----------------|  
+|**true**|搜索由 DEVPATH 环境变量指定的目录中的程序集。|  
+|**false**|不会搜索 DEVPATH 环境变量指定的目录中的程序集。 这是默认值|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
-## 备注  
- 仅在开发时使用此设置。  运行时不检查在 DEVPATH 中找到的具有强名称的程序集的版本。  它只是使用所找到的第一个程序集。  
+## <a name="remarks"></a>备注  
+ 仅在开发期间使用此设置。 运行时不会检查上 DEVPATH 中找到的具有强名称的程序集的版本。 它只需使用它找到的第一个程序集。  
   
-## 示例  
- 下面的示例说明如何使运行时在由 DEVPATH 环境变量所指定的目录中搜索程序集。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使运行时搜索 DEVPATH 环境变量指定的目录中的程序集。  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <developmentMode developerInstallation="true"/>  
@@ -77,7 +79,7 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [如何：使用 DEVPATH 查找程序集](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

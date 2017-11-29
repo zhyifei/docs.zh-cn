@@ -1,25 +1,28 @@
 ---
-title: "HttpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b1542406caf9bb3684ccf2d97ed441f1dc3d0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# HttpTransportBindingElement
+# <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class HttpTransportBindingElement : TransportBindingElement  
@@ -39,101 +42,101 @@ class HttpTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  HttpTransportBindingElement 类未定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  HttpTransportBindingElement 类具有以下属性：  
   
-### AllowCookies  
+### <a name="allowcookies"></a>AllowCookies  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个值，指示客户端是否接受 cookie 并根据将来的请求对其进行传播。  
   
-### AuthenticationScheme  
+### <a name="authenticationscheme"></a>AuthenticationScheme  
  数据类型：String  
   
  访问类型：只读  
   
  用来验证 HTTP 侦听器正在处理的客户端请求的身份验证方案。  
   
-### BypassProxyOnLocal  
+### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个值，指示是否忽略本地地址的代理。  
   
-### HostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  数据类型：String  
   
  访问类型：只读  
   
  一个值，指示在对 URI 进行匹配时，是否使用主机名来访问服务。  
   
-### KeepAliveEnabled  
+### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  数据类型：Boolean  
   
  访问类型：只读  
   
  启用后，HTTP 连接将保持活动状态，无论是什么活动级别。  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  数据类型：sint32  
   
  访问类型：只读  
   
  缓冲池的最大大小。  
   
-### ProxyAddress  
+### <a name="proxyaddress"></a>ProxyAddress  
  数据类型：String  
   
  访问类型：只读  
   
  一个 URI，包含用于 HTTP 请求的代理地址。  
   
-### ProxyAuthenticationScheme  
+### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
  数据类型：String  
   
  访问类型：只读  
   
  用来验证 HTTP 代理正在处理的客户端请求的身份验证方案。  
   
-### Realm  
+### <a name="realm"></a>Realm  
  数据类型：String  
   
  访问类型：只读  
   
  身份验证领域。  
   
-### TransferMode  
+### <a name="transfermode"></a>TransferMode  
  数据类型：String  
   
  访问类型：只读  
   
  一个值，指定对消息进行缓冲处理还是流式处理，或者指定消息是请求还是响应。  
   
-### UnsafeConnectionNtlmAuthentication  
+### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个值，指示服务器上是否启用了不安全连接共享。  
   
-### UseDefaultWebProxy  
+### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  数据类型：Boolean  
   
  访问类型：只读  
   
  一个值，指示是否使用计算机范围的代理设置，而不使用用户特定的设置。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

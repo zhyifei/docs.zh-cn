@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。  
@@ -33,7 +31,8 @@ ms.lasthandoff: 08/21/2017
   
  当你的最终用户与你的应用交互时，他们期望应用能够响应。  永远不应阻止键入或命令处理。  帮助应该迅速弹出，如果用户继续键入则帮助应中止。  你的应用应该避免通过使应用感觉迟钝的长计算阻止 UI 线程。  
   
- 如果想了解有关新编译器的详细信息，请访问 [.NET 编译器平台 ("Roslyn") 开源项目](http://roslyn.codeplex.com/)。  
+ 有关 Roslyn 编译器的详细信息，请访问[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的存储库。
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>事实小结  
  在优化性能和创建响应性 .NET Framework 应用时，请考虑以下事实。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="boxing"></a>装箱  
  当通常存在于堆栈或数据结构中的值类型包装在一个对象中时，[装箱](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)便会发生。  即，你分配一个对象以保存数据，然后将一个指针返回到该对象。  .NET Framework 有时由于方法的签名或存储位置的类型而装箱值。  在一个对象中包装值类型导致内存分配。  许多装箱操作可以向你的应用提供分配（以 MB 或 GB 为单位），这意味着你的应用将产生更多的 GC。 .NET Framework 和语言编译器应尽可能地避免装箱，但有时它会在最不经意的时候发生。  
   
- 若要查看 PerfView 中的装箱，打开跟踪，并在你的应用的进程名称（请记住，PerfView 报告所有进程）下查看 GC Heap Alloc Stack。  如果你在分配下看到类似于 <xref:System.Int32?displayProperty=fullName> 和 <xref:System.Char?displayProperty=fullName> 的类型，即表示你正在装箱值类型。  选择这些类型中一个，将显示它们在其中装箱的堆栈和函数。  
+ 若要查看 PerfView 中的装箱，打开跟踪，并在你的应用的进程名称（请记住，PerfView 报告所有进程）下查看 GC Heap Alloc Stack。  如果你在分配下看到类似于 <xref:System.Int32?displayProperty=nameWithType> 和 <xref:System.Char?displayProperty=nameWithType> 的类型，即表示你正在装箱值类型。  选择这些类型中一个，将显示它们在其中装箱的堆栈和函数。  
   
  **示例 1：字符串方法和值类型参数**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- 枚举类型上另一种常见的装箱源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> 方法。  传递到 <xref:System.Enum.HasFlag%28System.Enum%29> 的参数必须进行装箱。  大多数情况下，将对 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> 的调用替换为按位测试更简单并且无需分配。  
+ 枚举类型上另一种常见的装箱源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 方法。  传递到 <xref:System.Enum.HasFlag%28System.Enum%29> 的参数必须进行装箱。  大多数情况下，将对 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 的调用替换为按位测试更简单并且无需分配。  
   
  请记住第一个性能事实（即，切勿过早优化），不要以这种方式开始重写你所有的代码。    请留意这些装箱成本，但仅在分析完应用并找到热点后才更改你的代码。  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  这两个 `new` 分配（一个用于环境类，另一个用于委托）现在是显式的。  
   
- 现在查看对 `FirstOrDefault` 的调用。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 类型上的此扩展方法也会导致分配。  因为 `FirstOrDefault` 采用 <xref:System.Collections.Generic.IEnumerable%601> 对象作为它的第一个参数，你可以将调用扩展到以下代码（略微简化以便讨论）：  
+ 现在查看对 `FirstOrDefault` 的调用。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 类型上的此扩展方法也会导致分配。  因为 `FirstOrDefault` 采用 <xref:System.Collections.Generic.IEnumerable%601> 对象作为它的第一个参数，你可以将调用扩展到以下代码（略微简化以便讨论）：  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **示例 6 的修复**  
   
- 若要删除已完成的 <xref:System.Threading.Tasks.Task> 分配，你可以使用已完成的结果缓存任务对象：  
+ 若要删除已完成<xref:System.Threading.Tasks.Task>分配，你可以缓存已完成的结果的任务对象：  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。  
   
 ## <a name="see-also"></a>另请参阅  
- [此主题的演示视频](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [性能](../../../docs/framework/performance/index.md)   
- [.NET 性能提示](http://msdn.microsoft.com/library/ms973839.aspx)   
- [Windows Phone 性能分析工具](http://msdn.microsoft.com/magazine/hh781024.aspx)   
- [使用 Visual Studio 探查器查找应用程序瓶颈](http://msdn.microsoft.com/magazine/cc337887.aspx)   
- [第 9 频道 PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)   
- [高级性能提示](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)   
- [.NET 编译器平台 ("Roslyn") 开源项目](http://roslyn.codeplex.com/)
-
+ [本主题的演示文稿的视频](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [性能](../../../docs/framework/performance/index.md)  
+ [.NET 性能提示](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone 性能分析工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [查找与 Visual Studio 探查器的应用程序瓶颈](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [通道 9 PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [高级性能提示](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [在 GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

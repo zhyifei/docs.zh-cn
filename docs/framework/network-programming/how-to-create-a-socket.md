@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - Networking
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 721839e0e27682477f7ba3739d3c666208fae417
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-socket"></a>如何：创建套接字
 必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。 <xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。  
@@ -73,6 +70,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)   
+ [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)  
  [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
-

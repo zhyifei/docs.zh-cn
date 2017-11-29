@@ -1,39 +1,38 @@
 ---
-title: "Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF [WCF]"
-  - "Windows Communication Foundation [WCF]"
-ms.assetid: 96aad289-58bc-4389-89d0-b09dfc4d5c58
-caps.latest.revision: 2
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+title: Windows Communication Foundation
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF]
+- WCF [WCF]
+ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是 Microsoft 为构建面向服务的应用程序而提供的统一编程模型。  借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。  
-  
-## 本节内容  
+# <a name="developing-service-oriented-applications-with-wcf"></a>用 WCF 开发面向服务的应用程序
+本文档的此节提供有关 Windows Communication Foundation (WCF) 的信息，WCF 是用于构建面向服务的应用程序的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。
+ 
+## <a name="in-this-section"></a>本节内容  
  [Windows Communication Foundation 4.5 中的新增功能](../../../docs/framework/wcf/whats-new.md)  
  讨论 Windows Communication Foundation 的新功能。  
   
  [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)  
  讨论使编写 WCF 应用程序变得更简单的新功能。  
   
- [文档指南](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [文档使用指南](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  WCF 文档的描述  
   
- [概念概述](../../../docs/framework/wcf/conceptual-overview.md)  
- 概括介绍有关 Windows Communication Foundation \(WCF\) 消息传递系统以及对使用该系统提供支持的类的信息。  
+ [概念性概述](../../../docs/framework/wcf/conceptual-overview.md)  
+ 概括介绍有关 Windows Communication Foundation (WCF) 消息传递系统以及对使用该系统提供支持的类的信息。  
   
  [入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)  
  创建 WCF 服务和客户端的分步教程  
@@ -47,16 +46,16 @@ caps.handback.revision: 10
  [扩展 WCF](../../../docs/framework/wcf/extending/extending-wcf.md)  
  描述如何修改和扩展 WCF 运行时组件  
   
- [准则与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- 提供用于创建 Windows Communication Foundation \(WCF\) 应用程序的准则。  
+ [指南与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ 提供用于创建 Windows Communication Foundation (WCF) 应用程序的准则。  
   
  [管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)  
  介绍 WCF 的诊断功能  
   
  [系统要求](../../../docs/framework/wcf/wcf-system-requirements.md)  
- 介绍运行 WCF 所需的系统要求  
+ 介绍运行 WCF 所需的系统需求  
   
- [WCF 所要求的操作系统资源](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
+ [WCF 需要的操作系统资源](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
  介绍 WCF 要求的操作系统资源  
   
  [安装问题疑难解答](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
@@ -85,7 +84,3 @@ caps.handback.revision: 10
   
  [隐私信息](../../../docs/framework/wcf/privacy-information.md)  
  有关 WCF 和隐私的信息  
-  
-## 参考  
-  
-## 相关章节

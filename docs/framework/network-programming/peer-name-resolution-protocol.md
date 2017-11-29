@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 对等名称解析协议
+# <a name="peer-name-resolution-protocol"></a>对等名称解析协议
 在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。 过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。  
   
  Microsoft® Windows® 对等网络平台使用对等名称解析协议 (PNRP) 解决了这个问题，该协议是一个安全、可缩放的动态名称注册和名称解析协议，最早开发用于 Windows XP，然后在 Windows Vista™ 中得到升级。 PNRP 与传统的名称解析系统相比有很大不同，为应用程序开发者带来了振奋人心的全新可能。  
@@ -45,7 +39,7 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## System.Net.PeerToPeer 命名空间  
+## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 命名空间  
   
 -   PNRP 功能由 .NET Framework 版本 3.5 内的 <xref:System.Net.PeerToPeer> 命名空间定义。 它提供的类型集可以用于注册可用的 PNRP 服务并解析其对等名称。  
   
@@ -73,9 +67,8 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## 另请参阅  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [PeerToPeer 技术示例](http://go.microsoft.com/fwlink/?LinkID=179571)
-

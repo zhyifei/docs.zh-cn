@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 76883fd9702e475bd6afd9629fb4702ca42395d4
-ms.openlocfilehash: 61eaf6ba83b94724555ca3fee53e3a4d538ee11a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5fa93919bfc6f7f078fd2de4653e8b9e878a84fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 定义一个绑定元素，该元素用于为响应 HTTP 请求（而不是 SOAP 消息）的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服务配置终结点。  
@@ -104,11 +102,10 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的联合支持和 ASP.AJAX 集成都建立在 Web 编程模型的基础之上。 对模型的详细信息，请参阅[WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>   
- [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [绑定](../../../../../docs/framework/wcf/bindings.md)   
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
+ [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [绑定](../../../../../docs/framework/wcf/bindings.md)  
+ [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<绑定 >](../../../../../docs/framework/misc/binding.md)
-

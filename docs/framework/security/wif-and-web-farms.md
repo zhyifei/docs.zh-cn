@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
     </securityTokenHandlers>  
     ```  
   
--   派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
+-   派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -262,8 +260,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+ <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
  [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)
-

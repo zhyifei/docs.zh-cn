@@ -1,32 +1,37 @@
 ---
-title: "如何：确定 Windows 窗体 CheckedListBox 控件中的选定项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "复选框, 确定选中状态"
-  - "CheckedListBox 控件 [Windows 窗体], 确定选中状态"
+title: "如何：确定 Windows 窗体 CheckedListBox 控件中的选定项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- check boxes [Windows Forms], determining checked state
+- CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f45006b437ad0a2fa537e6b8ea4312ab0060c882
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：确定 Windows 窗体 CheckedListBox 控件中的选定项
-当显示 Windows 窗体 <xref:System.Windows.Forms.CheckedListBox> 控件中的数据时，可以循环访问 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 属性中存储的集合，或者使用 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法逐句通过列表来确定选中的项。  <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法接受一个项索引号作为参数，并返回 `true` 或 `false`。  可能与您期望的相反，<xref:System.Windows.Forms.ListBox.SelectedItems%2A> 和 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 属性并不确定哪些项已选中；它们确定哪些项为突出显示。  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：确定 Windows 窗体 CheckedListBox 控件中的选定项
+当 Windows 窗体中呈现数据<xref:System.Windows.Forms.CheckedListBox>控件，你可以可以循环访问集合中存储<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>属性或列表使用单步调试<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法来确定选中了哪些项。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法采用项索引号作为其自变量并返回`true`或`false`。 与你所料，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>属性不用于确定选中了哪些项; 它们来确定哪些项将突出显示。  
   
-### 确定 CheckedListBox 控件中的已选中项  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>若要确定 CheckedListBox 控件中的选中的项  
   
-1.  因为 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 集合是从零开始的，所以请从 0 开始循环访问该集合。  注意，此方法将向您提供项在已选中项列表而不是整个列表中的编号。  因此，如果未选中列表中的第一项而选中了第二项，则下面的代码显示的文本将类似于“Checked Item 1 \= MyListItem2”（选中的第 1 项 \= MyListItem2）。  
+1.  循环访问<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>从 0 开始因为集合是从零开始的集合。 请注意，此方法将使你的项编号列表中选中的项，不是整个列表。 因此，如果未选中列表中的第一个项，并选中第二个项，下面的代码将显示类似文本"选中的项 1 = MyListItem2"。  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -39,7 +44,6 @@ caps.handback.revision: 14
        Next x  
        MessageBox.Show(s)  
     End If  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ caps.handback.revision: 14
        }  
     MessageBox.Show (s);  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,9 +76,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-     \- 或 \-  
+     - 或 -  
   
-2.  因为 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 集合是从零开始的，所以请从 0 开始逐句通过该集合，并对每个项调用 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法。  请注意，此方法将为您提供总体列表中的项号，因此如果未选中该列表中的第一个项，而选中了第二个项，则显示的内容类似“Item 2 \= MyListItem2”。  
+2.  单步执行<xref:System.Windows.Forms.CheckedListBox.Items%2A>集合，从 0 开始因为集合是从零开始，并调用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法中的为每个项。 请注意，此方法将向您提供的项编号在总体的列表中，因此如果第一项不会检查列表，并选中第二个项，它将显示类似"项 2 = MyListItem2"。  
   
     ```vb  
     Dim i As Integer  
@@ -87,7 +90,6 @@ caps.handback.revision: 14
        End If  
     Next  
     MessageBox.Show(s)  
-  
     ```  
   
     ```csharp  
@@ -102,7 +104,6 @@ caps.handback.revision: 14
        }  
     }  
     MessageBox.Show (s);  
-  
     ```  
   
     ```cpp  
@@ -120,5 +121,5 @@ caps.handback.revision: 14
     MessageBox::Show(s);  
     ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

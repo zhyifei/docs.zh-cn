@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d18e1f2575481522e54c6c50256418ac026dfb7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
@@ -90,8 +87,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+ [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [套接字](../../../docs/framework/network-programming/sockets.md)
-

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - IAuthenticationModule interface
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internet-authentication"></a>Internet 身份验证
 <xref:System.Net> 类支持多种客户端身份验证机制，包括标准 Internet 身份验证方法、基本、摘要式、协商、NTLM 和 Kerberos 身份验证，以及可以创建的自定义方法。  
@@ -46,7 +40,7 @@ ms.lasthandoff: 08/21/2017
   
  CredentialCache 类存储各种 Web 资源的凭据集合。 调用 <xref:System.Net.CredentialCache.GetCredential%2A> 方法时，CredentialCache 会返回适合的凭据集，由 Web 资源的 URI 以及请求的身份验证方案来确定。 通过不同的身份验证方案使用各种 Internet 资源的应用程序可从使用 CredentialCache 中受益，因为此类可以存储所有凭据，并按照请求提供这些凭据。  
   
- Internet 资源请求身份验证时，<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> 方法将 <xref:System.Net.WebRequest> 发送给 AuthenticationManager，同时会发送对凭据的请求。 之后会根据以下过程对请求进行身份验证：  
+ Internet 资源请求身份验证时，<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 方法将 <xref:System.Net.WebRequest> 发送给 AuthenticationManager，同时会发送对凭据的请求。 之后会根据以下过程对请求进行身份验证：  
   
 1.  AuthenticationManager 按照注册的顺序在每个已注册的身份验证模块上调用 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 方法。 AuthenticationManager 使用第一个不返回 null 的模块来执行身份验证过程。 此过程的详细信息根据所涉及到的身份验证模块类型而异。  
   
@@ -55,7 +49,6 @@ ms.lasthandoff: 08/21/2017
  某些身份验证方案可以对用户进行身份验证，而无需首先对资源发出请求。 应用程序可以使用资源预先对用户进行身份验证以节省时间，这样可以减少至少到服务器的一个往返。 或者，它也可以在程序启动期间执行身份验证，便于稍后更好地响应用户。 可以使用预身份验证的身份验证方案将 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 属性设置为“true”。  
   
 ## <a name="see-also"></a>另请参阅  
- [基本和摘要式身份验证](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [NTLM 和 Kerberos 身份验证](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [基本和摘要式身份验证](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [NTLM 和 Kerberos 身份验证](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
-

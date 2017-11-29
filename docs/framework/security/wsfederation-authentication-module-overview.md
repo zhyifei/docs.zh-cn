@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a53900d8305352a1122efda1abc75ce2b1626fe6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ea17e384ecb4536ed544e3b874631db6fe54e0e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -48,7 +46,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
 1.  被动重定向：如果未经身份验证的用户尝试访问受保护的资源，且你希望在无需登录页的情况下将它们重定向到 STS，则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
-2.  对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=fullName> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
+2.  对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被动重定向中，所有通信通过来自客户端（通常为浏览器）的响应/重定向执行。 可将 WS-FAM 添加到应用程序的 HTTP 管道，它将在管道中监视未经身份验证的用户请求并将用户重定向到指定的 STS。  
   
@@ -76,7 +74,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
 -   ASP.NET 基础结构调用模块的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法来初始化模块。  
   
--   ASP.NET 基础结构首次在派生于 <xref:System.IdentityModel.Services.HttpModuleBase> 的某个应用程序模块上调用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法时将引发 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=fullName> 事件。 此方法访问静态 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> 属性，导致从 Web.config 文件加载配置。 仅在首次访问此属性时引发该事件。 可以通过事件处理程序中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> 属性访问从配置中初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 对象。 可以在将配置应用到任何模块前使用此事件修改配置。 可以在 Application_Start 方法中为此事件添加处理程序：  
+-   ASP.NET 基础结构首次在派生于 <xref:System.IdentityModel.Services.HttpModuleBase> 的某个应用程序模块上调用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法时将引发 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 此方法访问静态 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 属性，导致从 Web.config 文件加载配置。 仅在首次访问此属性时引发该事件。 可以通过事件处理程序中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 属性访问从配置中初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 对象。 可以在将配置应用到任何模块前使用此事件修改配置。 可以在 Application_Start 方法中为此事件添加处理程序：  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -85,7 +83,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
     }  
     ```  
   
-     每个模块替代 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=fullName> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=fullName> 抽象方法。 第一种方法为与模块相关的 ASP.NET 管道事件添加处理程序。 大多数情况下，模块的默认实现便已足够。 第二种方法从模块的 <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=fullName> 属性初始化其各个属性。 （这是之前加载的配置的副本。）如果要支持从派生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的类中的配置初始化新属性，则需要替代第二种方法。 在此情况下，也需要从相应的配置对象进行派生，从而支持添加的配置属性；例如，从 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 派生。  
+     每个模块替代 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> 抽象方法。 第一种方法为与模块相关的 ASP.NET 管道事件添加处理程序。 大多数情况下，模块的默认实现便已足够。 第二种方法从模块的 <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> 属性初始化其各个属性。 （这是之前加载的配置的副本。）如果要支持从派生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的类中的配置初始化新属性，则需要替代第二种方法。 在此情况下，也需要从相应的配置对象进行派生，从而支持添加的配置属性；例如，从 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 派生。  
   
 -   WS-FAM 截获由 STS 颁发的安全令牌时引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
   
@@ -102,7 +100,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 -   为每个用户关闭会话时，WS FAM 将对每个会话引发一次 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件。 如果在客户端上关闭会话（例如，通过删除会话 Cookie 的方式），则不会引发该事件。 在 SSO 环境中，IP-STS 也可以请求每个 RP 注销。 这也将引发此事件，这时 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 设置为 `true`。  
   
 > [!NOTE]
->  不应在由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 引发的任何事件期间使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 属性。 这是因为 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 是在身份验证进程后设置的，而事件是在身份验证进程中引发的。  
+>  不应在由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 引发的任何事件期间使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 这是因为 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 是在身份验证进程后设置的，而事件是在身份验证进程中引发的。  
   
 ### <a name="configuration-of-federated-authentication"></a>联合身份验证的配置  
  WS-FAM 和 SAM 通过 [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 元素进行配置。 [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) 子元素配置 WS-FAM 属性的默认值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> 属性和 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> 属性。 （可以通过为一些 WS-FAM 事件提供处理程序来按请求更改这些值；例如 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>。）由 SAM 使用的 Cookie 处理程序通过 [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) 子元素进行配置。 WIF 提供在 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 类中实现的默认 Cookie 处理程序，可以通过 [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) 元素设置该处理程序的区块大小。 `<federationConfiguration>` 元素引用 <xref:System.IdentityModel.Configuration.IdentityConfiguration>，为在应用程序中使用的其他 WIF 组件提供配置，如 <xref:System.Security.Claims.ClaimsAuthenticationManager> 和 <xref:System.Security.Claims.ClaimsAuthorizationManager>。 可以通过指定 `<federationConfiguration>` 元素的 `identityConfigurationName` 属性中名为 [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 的元素显式引用标识配置。 如果未显式引用标识配置，则将使用默认标识配置。  
@@ -151,7 +149,6 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
+ <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
-

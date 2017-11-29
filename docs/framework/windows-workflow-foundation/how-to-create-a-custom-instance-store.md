@@ -1,30 +1,34 @@
 ---
-title: "如何：创建自定义实例存储 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建自定义实例存储"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：创建自定义实例存储
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，它是使用 SQL Server 保存工作流数据的实例存储区。  如果您的应用程序需要将工作流数据保存到其他介质，例如不同的数据库或文件系统，则可以实现自定义实例存储区。  通过扩展抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类并且实现完成自定义实例存储区所需的方法，创建自定义实例存储区。  有关自定义实例存储区的完整实现，请参见[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。  
+# <a name="how-to-create-a-custom-instance-store"></a>如何：创建自定义实例存储
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，它是使用 SQL Server 保存工作流数据的实例存储区。 如果您的应用程序需要将工作流数据保存到其他介质，例如不同的数据库或文件系统，则可以实现自定义实例存储区。 通过扩展抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类并且实现完成自定义实例存储区所需的方法，创建自定义实例存储区。 有关自定义实例存储的完整实现，请参阅[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。  
   
-## 实现 BeginTryCommand 方法  
- <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 由持久性引擎发送给实例存储区。  `command` 参数的类型指示要执行的命令；此参数可以是以下类型：  
+## <a name="implementing-the-begintrycommand-method"></a>实现 BeginTryCommand 方法  
+ <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 由持久性引擎发送给实例存储区。 `command` 参数的类型指示要执行的命令；此参数可以是以下类型：  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：在工作流要保存到存储介质时，持久性引擎将此命令发送到实例存储区。  工作流持久性数据将提供给在 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 参数的 `command` 成员中的方法。  
+-   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：在工作流要保存到存储介质时，持久性引擎将此命令发送到实例存储区。 工作流持久性数据将提供给在 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 参数的 `command` 成员中的方法。   
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>：要从存储介质中加载工作流时，持久性引擎将此命令发送到实例存储区。  将要加载的工作流的实例 ID 提供给 `instanceId` 参数的 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 属性的 `context` 参数中的方法。  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>：要从存储介质中加载工作流时，持久性引擎将此命令发送到实例存储区。 将要加载的工作流的实例 ID 提供给 `instanceId` 参数的 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 属性的 `context` 参数中的方法。   
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>：持久性引擎在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 必须注册为锁所有者时将此命令发送给实例存储区。   应使用 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 参数的 `context` 方法将当前工作流的实例 ID 提供给实例存储区。  
+-   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>：持久性引擎在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 必须注册为锁所有者时将此命令发送给实例存储区。  应使用 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 参数的 `context` 方法将当前工作流的实例 ID 提供给实例存储区。   
   
      下面的代码段演示如何实现 CreateWorkflowOwner 命令来分配显式锁所有者。  
   
@@ -44,10 +48,9 @@ caps.handback.revision: 11
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>：在从实例存储区中移除锁所有者的实例 ID 时持久性引擎将此命令发送到实例存储区。   像 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> 一样，锁所有者的 ID 应由应用程序提供。  
+-   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>：在从实例存储区中移除锁所有者的实例 ID 时持久性引擎将此命令发送到实例存储区。  像 <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> 一样，锁所有者的 ID 应由应用程序提供。   
   
      下面的代码段演示如何使用 <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> 释放锁。  
   
@@ -72,10 +75,9 @@ caps.handback.revision: 11
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     上述方法应在子实例运行时在 Try\/Catch 块中调用。  
+     上述方法应在子实例运行时在 Try/Catch 块中调用。  
   
     ```  
     try  
@@ -90,14 +92,13 @@ caps.handback.revision: 11
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>：在使用工作流的实例键加载工作流实例时，持久性引擎将此命令发送到实例存储区。  使用命令的 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 参数可以确定该实例键的 ID。  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>：在使用工作流的实例键加载工作流实例时，持久性引擎将此命令发送到实例存储区。 使用命令的 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 参数可以确定该实例键的 ID。    
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>：持久性引擎将此命令发送到实例存储区来检索持久性工作流的激活参数，以便创建可在之后加载工作流的工作流主机。  在找到可以激活的实例时，引擎为响应对主机引发 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> 的实例存储区而发送此命令。  应对实例存储区进行轮询，以便确定是否存在可激活的工作流。  
+-   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>：持久性引擎将此命令发送到实例存储区来检索持久性工作流的激活参数，以便创建可在之后加载工作流的工作流主机。 在找到可以激活的实例时，引擎为响应对主机引发 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> 的实例存储区而发送此命令。 应对实例存储区进行轮询，以便确定是否存在可激活的工作流。  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>：持久性引擎将此命令发送到实例存储区，以便加载可运行的工作流实例。  在找到可以运行的实例时，引擎为响应对主机引发 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 的实例存储区而发送此命令。  实例存储区应轮询可以运行的工作流。  下面的代码段演示如何对实例存储区进行轮询以便获得可运行或激活的工作流。  
+-   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>：持久性引擎将此命令发送到实例存储区，以便加载可运行的工作流实例。 在找到可以运行的实例时，引擎为响应对主机引发 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 的实例存储区而发送此命令。 实例存储区应轮询可以运行的工作流。 下面的代码段演示如何对实例存储区进行轮询以便获得可运行或激活的工作流。  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ caps.handback.revision: 11
             }  
         }  
     }  
-  
     ```  
   
-     在上面的代码段中，实例存储区将查询可用事件，并对每个事件进行检查，以确该事件是否为 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 事件。  如果找到了这样的事件，则对 <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> 进行调用，以便通知主机将命令发送到实例存储区。  下面的代码段演示如何为此命令实现处理程序。  
+     在上面的代码段中，实例存储区将查询可用事件，并对每个事件进行检查，以确该事件是否为 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> 事件。 如果找到了这样的事件，则对 <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> 进行调用，以便通知主机将命令发送到实例存储区。  下面的代码段演示如何为此命令实现处理程序。  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ caps.handback.revision: 11
             break;  
         }  
     }  
-  
     ```  
   
-     在上面的代码段中，实例存储区搜索可运行实例。  如果找到了一个实例，则该实例将绑定到执行上下文并加载。  
+     在上面的代码段中，实例存储区搜索可运行实例。 如果找到了一个实例，则该实例将绑定到执行上下文并加载。  
   
-## 使用自定义实例存储区  
- 若要实现自定义实例存储区，请将实例存储区的实例分配给 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，然后执行 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 方法。   有关具体细节，请参见[如何：创建和运行长时间运行的工作流](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md)教程。  
+## <a name="using-a-custom-instance-store"></a>使用自定义实例存储区  
+ 若要实现自定义实例存储区，请将实例存储区的实例分配给 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，然后执行 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 方法。   请参阅[如何： 创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)教程有关的详细信息。  
   
-## 示例实例存储区  
- 下面的代码示例是一个完整的实例存储区实现，它摘自[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。  该实例存储区使用 XML 将工作流数据保存到某一文件。  
+## <a name="a-sample-instance-store"></a>示例实例存储区  
+ 下面的代码示例是完整的实例存储区实现，摘自[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。 该实例存储区使用 XML 将工作流数据保存到某一文件。  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

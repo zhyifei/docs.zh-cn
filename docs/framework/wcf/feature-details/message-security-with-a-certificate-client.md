@@ -1,30 +1,36 @@
 ---
-title: "使用证书客户端的消息安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用证书客户端的消息安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用证书客户端的消息安全
-下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。使用证书对客户端和服务进行身份验证。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+# <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
+下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 使用证书对客户端和服务进行身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
- 有关示例应用程序，请参见[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
+ 有关示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
- ![有证书的客户端](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
+ ![使用证书的客户端](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
-|特征|说明|  
-|--------|--------|  
+|特征|描述|  
+|--------------------|-----------------|  
 |安全模式|消息|  
 |互操作性|仅 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
 |身份验证（服务器）|使用服务证书|  
@@ -34,23 +40,23 @@ caps.handback.revision: 16
 |传输|HTTP|  
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## 服务  
- 下面的代码和配置应独立运行。执行下列操作之一：  
+## <a name="service"></a>服务  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 -   使用代码（而不使用配置）创建独立服务。  
   
 -   使用提供的配置创建服务，但不定义任何终结点。  
   
-### 代码  
+### <a name="code"></a>代码  
  下面的代码演示如何创建一个使用消息安全来建立安全上下文的服务终结点。  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### 配置  
+### <a name="configuration"></a>配置  
  以下配置可代替代码使用。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## 客户端  
- 下面的代码和配置将独立运行。执行下列操作之一：  
+## <a name="client"></a>客户端  
+ 下面的代码和配置应独立运行。 执行下列操作之一：  
   
 -   使用代码（和客户端代码）创建独立客户端。  
   
--   创建不定义任何终结点地址的客户端。而使用将配置名称作为参数的客户端构造函数。例如：  
+-   创建不定义任何终结点地址的客户端。 而使用将配置名称作为参数的客户端构造函数。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### 代码  
- 下面的代码创建客户端。绑定设置为消息模式安全，客户端凭据类型设置为 `Certificate`。  
+### <a name="code"></a>代码  
+ 下面的代码创建客户端。 绑定设置为消息模式安全，客户端凭据类型设置为 `Certificate`。  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### 配置  
- 下面的配置使用终结点行为指定客户端证书。有关证书的更多信息，请参见[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。该代码还使用 \<`identity`\> 元素来指定所需服务器标识的域名系统 \(DNS\)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]标识的更多信息，请参见[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+### <a name="configuration"></a>配置  
+ 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 代码还使用 <`identity`> 元素，用于指定域名系统 (DNS) 的预期的服务器标识。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -147,8 +153,8 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a>另请参阅  
+ [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：  
@@ -50,7 +43,7 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="cause"></a>原因  
   
--   该线程之前已初始化为不同的 COM 单元状态。 请注意，可显式或隐式设置线程的单元状态。 显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。 应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。  
+-   该线程之前已初始化为不同的 COM 单元状态。 请注意，可显式或隐式设置线程的单元状态。 显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。 应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。  
   
 -   在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。  
   
@@ -93,7 +86,6 @@ namespace ApartmentStateMDA
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
-

@@ -1,45 +1,46 @@
 ---
-title: "在 Windows 窗体上承载 ActiveX 控件时的注意事项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX 控件 [Windows 窗体], 添加"
-  - "ActiveX 控件 [Windows 窗体], 承载"
-  - "Windows 窗体控件, ActiveX 控件"
-  - "Windows 窗体, ActiveX 控件"
-  - "Windows 窗体, 承载 ActiveX 控件"
+title: "在 Windows 窗体上承载 ActiveX 控件时的注意事项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- ActiveX controls [Windows Forms], hosting
+- Windows Forms, ActiveX controls
+- Windows Forms, hosting ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows 窗体上承载 ActiveX 控件时的注意事项
-尽管 Windows 窗体已经为承载 Windows 窗体控件而进行了优化，您仍可以使用 ActiveX 控件。  规划使用 ActiveX 控件的应用程序时应注意下列事项：  
+# <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>在 Windows 窗体上承载 ActiveX 控件时的注意事项
+尽管 Windows 窗体已经为承载 Windows 窗体控件而进行了优化，但仍可使用 ActiveX 控件。 规划使用 ActiveX 控件的应用程序时应谨记以下注意事项：  
   
--   **安全性** 公共语言运行时已增强了代码访问安全性。  以 Windows 窗体为特色的应用程序在完全受信任的环境中运行不会有任何问题；在不完全受信任的环境中运行时，大部分功能是可访问的。  Windows 窗体控件不用编译就可以在浏览器中承载。  然而，Windows 窗体上的 ActiveX 控件无法利用这些安全性增强。  运行 ActiveX 控件需要非托管代码权限，这种权限是使用 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=fullName> 属性设置的。  有关安全性和非托管代码权限的更多信息，请参见 [SecurityPermissionAttribute 类](frlrfSystemSecurityPermissionsSecurityPermissionAttributeClassTopic)。  
+-   **安全性** - 公共语言运行时已在代码访问安全性方面得到了增强。 以 Windows 窗体为特色的应用程序在完全信任的环境中运行不会有任何问题；在不完全信任的环境中运行时，大部分功能也是可访问的。 Windows 窗体控件不用编译就可以在浏览器中承载。 然而，Windows 窗体上的 ActiveX 控件无法利用这些安全性增强功能。 运行 ActiveX 控件需要非托管的代码的权限，这设置与<xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType>属性。 有关安全和非托管的代码权限的详细信息，请参阅<xref:System.Security.Permissions.SecurityPermissionAttribute>。  
   
--   **总拥有成本** 添加到 Windows 窗体的 ActiveX 控件将作为一个整体部署到该 Windows 窗体中，这会显著增加所创建文件的大小。  另外，在 Windows 窗体上使用 ActiveX 控件要求写入注册表。  与不要求这样做的 Windows 窗体控件相比，ActiveX 控件对用户的计算机更具有侵略性。  
-  
-    > [!NOTE]
-    >  使用 ActiveX 控件时需要使用 COM 互操作包装。  有关更多信息，请参见 [Visual Basic 和 Visual C\# 中的 COM 互操作性](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md)。  
+-   **总拥有成本** - 添加到 Windows 窗体的 ActiveX 控件将作为一个整体部署到该 Windows 窗体中，这会显著增加所创建文件的大小。 另外，在 Windows 窗体上使用 ActiveX 控件时需要写入注册表。 对用户的计算机来说，这比 Windows 窗体控件更具侵入性，因为后者不需要这样做。  
   
     > [!NOTE]
-    >  如果 ActiveX 控件的某个成员名与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定义的某一名称匹配，则 ActiveX 控件导入程序在创建 <xref:System.Windows.Forms.AxHost> 派生类时会在该成员名前加上 **Ctl** 前缀。  例如，如果 ActiveX 控件有一个名为 **Layout** 的成员，由于 **Layout** 事件已在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定义，所以该成员将在 AxHost 派生类中重命名为 **CtlLayout**。  
+    >  使用 ActiveX 控件时需要使用 COM 互操作包装器。 有关详细信息，请参阅 [Visual Basic 和 Visual C# 中的 COM 互操作性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## 请参阅  
- [如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [代码访问安全性](../../../../docs/framework/misc/code-access-security.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/zh-cn/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [将控件放在 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
+    > [!NOTE]
+    >  如果 ActiveX 控件的成员的名称中定义的名称匹配[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，则 ActiveX 控件导入程序将成员名称加上前缀**Ctl**创建时<xref:System.Windows.Forms.AxHost>派生类。 例如，如果 ActiveX 控件有一个名为 **Layout** 的成员，由于在 .[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定义了 **Layout** 事件，因此该成员将在 AxHost 派生类中重命名为 **CtlLayout**。  
+  
+## <a name="see-also"></a>另请参阅  
+ [如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [代码访问安全性](../../../../docs/framework/misc/code-access-security.md)  
+ [不同语言和库中的控件和可编程对象的比较](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [将控件置于 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)

@@ -1,29 +1,32 @@
 ---
-title: "如何：使用单向和请求-答复协定访问 WCF 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用单向和请求-答复协定访问 WCF 服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 20d9cad52c0f528b521b031173b5dce1cb4f2a50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：使用单向和请求-答复协定访问 WCF 服务
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>如何：使用单向和请求-答复协定访问 WCF 服务
 下面的过程描述了如何访问一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，该服务定义一个单向协定和一个请求-答复协定，并且未使用双工通信模式。  
   
 ### <a name="to-define-the-service"></a>定义服务  
   
-1.  声明服务协定。 要成为单向的操作必须`IsOneWay`设置为`true`内<xref:System.ServiceModel.OperationContractAttribute>。 下面的代码声明具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 的单向操作的 `Divide` 协定。 它还定义称为 `SayHello` 的请求响应操作。  
+1.  声明服务协定。 要成为单向的操作必须在 `IsOneWay` 中将 `true` 设置为 <xref:System.ServiceModel.OperationContractAttribute>。 下面的代码声明具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 的单向操作的 `Divide` 协定。 它还定义称为 `SayHello` 的请求响应操作。  
   
-    ```  
+    ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -42,7 +45,7 @@ caps.handback.revision: 8
   
 2.  实现服务协定。 下面的代码实现 `IOnewayCalculator` 接口。  
   
-    ```  
+    ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
     public class CalculatorService : IOneWayCalculator  
     {  
@@ -80,7 +83,7 @@ caps.handback.revision: 8
   
 3.  在控制台应用程序中承载服务。 下面的代码演示如何承载服务。  
   
-    ```  
+    ```csharp  
     // Host the service within this EXE console application.  
     public static void Main()  
     {  
@@ -116,9 +119,9 @@ caps.handback.revision: 8
   
 ### <a name="to-access-the-service"></a>访问服务  
   
-1.  运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用元数据交换终结点地址创建使用以下命令行的服务的客户端类︰ `Svcutil http://localhost:8000/Service` [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如下面的示例代码中所示。  
+1.  运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用元数据交换终结点地址创建使用下面的命令行的服务的客户端类： `Svcutil http://localhost:8000/Service` [ServiceModel元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一组接口和类，如下面的示例代码中所示。  
   
-    ```  
+    ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="IOneWayCalculator")]  
     public interface IOneWayCalculator  
@@ -199,24 +202,22 @@ caps.handback.revision: 8
             return base.Channel.SayHello(name);  
         }  
     }  
-  
     ```  
   
-     请注意，在`IOneWayCalculator`接口中，单向服务操作已<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>属性设置为`true`，请求-答复服务操作已将属性设置为默认值为`false`。 此外，请注意 `OneWayCalculatorClient` 类。 这是将用于调用服务的类。  
+     请注意，在 `IOneWayCalculator` 接口中，单向服务操作已将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性设置为 `true`，请求-答复服务操作已将属性设置为默认值 `false`。 此外，请注意 `OneWayCalculatorClient` 类。 这是将用于调用服务的类。  
   
 2.  创建客户端对象。  
   
-    ```  
+    ```csharp  
     // Create a client  
     WSHttpBinding binding = new WSHttpBinding();  
     EndpointAddress epAddress = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
-  
     ```  
   
 3.  调用服务操作。  
   
-    ```  
+    ```csharp  
     // Call the Add service operation.  
     double value1 = 100.00D;  
     double value2 = 15.99D;  
@@ -246,21 +247,19 @@ caps.handback.revision: 8
     string response = client.SayHello(name);  
     Console.WriteLine("SayHello([0])", name);  
     Console.WriteLine("SayHello() returned: " + response);  
-  
     ```  
   
 4.  关闭客户端，以便关闭连接并清理资源。  
   
-    ```  
+    ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
-  
     ```  
   
 ## <a name="example"></a>示例  
  下面列出了本主题中使用的完整代码。  
   
-```  
+```csharp  
 // Service.cs  
 using System;  
 using System.Configuration;  
@@ -352,8 +351,10 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-}  
-  
+} 
+```
+
+```csharp
 // client.cs  
 using System;  
 using System.ServiceModel;  
@@ -407,10 +408,7 @@ namespace Microsoft.ServiceModel.Samples
         }  
     }  
 }  
-  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
   
 ## <a name="see-also"></a>另请参阅  
  [单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)

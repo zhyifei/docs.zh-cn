@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>对 2.0 版中的 System.Uri 命名空间的更改
-对 <xref:System.Uri?displayProperty=fullName> 类进行了少量更改。 这些更改修复了不正确的行为、提高了可用性、增强了安全性。  
+对 <xref:System.Uri?displayProperty=nameWithType> 类进行了少量更改。 这些更改修复了不正确的行为、提高了可用性、增强了安全性。  
   
 ## <a name="obsolete-and-deprecated-members"></a>已过时和弃用的成员  
  构造函数：  
@@ -85,5 +79,4 @@ ms.lasthandoff: 08/21/2017
 -   URI 路径压缩已修复，所以断开的 URI 不能遍历根以上的文件系统。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

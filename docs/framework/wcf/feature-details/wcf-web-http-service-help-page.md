@@ -1,32 +1,35 @@
 ---
-title: "WCF Web HTTP 服务帮助页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF Web HTTP 服务帮助页"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96c54320c77de766f00bde1e560eb5b0f0df2671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WCF Web HTTP 服务帮助页
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。此帮助页列出了每个操作的说明，请求和响应格式以及架构。默认情况下关闭此功能。如果用户浏览到 WCF WEB HTTP 服务并在 URL 的末尾附加“\/Help”（例如 http:\/\/localhost:8000\/Customers\/Help），则将显示如下所示的帮助页。  
+# <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 如果用户浏览到 WCF WEB HTTP 服务并在 URL 的末尾附加“/Help”（例如 http://localhost:8000/Customers/Help），则将显示如下所示的帮助页。  
   
- ![WCF REST 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.png "WCFRESTHELPPAGEMAIN")  
+ ![WCF REST 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- 用户随后可以单击帮助页中列出的任何方法，并且所显示的该操作的详细页中显示了有关该方法的更多信息，其中包括消息格式和示例响应。下图是方法帮助页的一个示例。  
+ 用户随后可以单击帮助页中列出的任何方法，并且所显示的该操作的详细页中显示了有关该方法的更多信息，其中包括消息格式和示例响应。 下图是方法帮助页的一个示例。  
   
- ![WCF REST 帮助页详细信息](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.png "WCFRESTHELPPAGEDETAIL2")  
+ ![WCF REST 帮助页详细介绍](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
-## 使用 WCF Web HTTP 帮助页  
- WCF WEB HTTP 帮助页显示了每个操作的简单说明（假设您使用 <xref:System.ComponentModel.DescriptionAttribute> 指定了操作）。此特性接受一个字符串，该字符串中包含它所应用到的操作的简短说明。例如，下面的代码演示如何使用 <xref:System.ComponentModel.DescriptionAttribute> 来提供简短说明。  
+## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 帮助页  
+ WCF WEB HTTP 帮助页显示了每个操作的简单说明（假设您使用 <xref:System.ComponentModel.DescriptionAttribute> 指定了操作）。 此特性接受一个字符串，该字符串中包含它所应用到的操作的简短说明。 例如，下面的代码演示如何使用 <xref:System.ComponentModel.DescriptionAttribute> 来提供简短说明。  
   
 ```  
 [OperationContract]  
@@ -35,9 +38,9 @@ caps.handback.revision: 11
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- 若要打开 WCF WEB HTTP 帮助页，您必须向服务的终结点添加一个终结点行为。可以通过配置或代码完成此操作。若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>``enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。下面的配置代码演示如何执行此操作。  
+ 若要打开 WCF WEB HTTP 帮助页，您必须向服务的终结点添加一个终结点行为。 可以通过配置或代码完成此操作。 若要通过配置启用 WCF WEB HTTP 帮助页，请使用 `<webHttp>``enableHelp` 元素添加终结点行为，将 `true` 设置为 ，添加一个终结点并将其配置为使用终结点行为。 下面的配置代码演示如何执行此操作。  
   
-```  
+```xml  
 <endpointBehaviors>  
    <behavior name="RESTEndpointBehavior">  
       <webHttp enableHelp="true"/>  
@@ -52,7 +55,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- 若要通过代码启用 WCF Web HTTP 帮助页，请添加一个服务终结点，将 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加到该终结点，并将 <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A> 设置为 `true`。下面的代码演示如何执行此操作。  
+ 若要启用 WCF Web HTTP 帮助页在代码中的，添加服务终结点，并添加<xref:System.ServiceModel.Description.WebHttpBehavior>到终结点设置<!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>-->`EnableHelp`到`true`。 下面的代码演示如何执行此操作。  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -63,12 +66,12 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- 帮助页基于 XHTML，它带有可标识页的不同部分的标记。这样使客户端能够使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 以编程方式访问帮助页。  
+ 帮助页基于 XHTML，它带有可标识页的不同部分的标记。 这样使客户端能够使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 以编程方式访问帮助页。  
   
-## WCF Web HTTP 服务帮助页中使用的架构  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页中使用的架构  
  WCF Web HTTP 服务帮助页中使用了以下架构。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="anyType" nillable="true" type="xs:anyType" />  
@@ -245,7 +248,6 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
   </xs:complexType>  
   <xs:element name="ArrayOfQName" nillable="true" type="tns:ArrayOfQName" />  
 </xs:schema>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定序列化架构的更多信息，请参见[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定序列化架构，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

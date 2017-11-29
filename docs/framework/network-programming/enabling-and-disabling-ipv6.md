@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dee5dd53a88bdd108b84d05cfb75799630836033
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>启用和禁用 IPv6
 若要使用 IPv6 协议，请确保当前运行的操作系统版本支持 IPv6，并确保正确配置了操作系统和网络类。  
@@ -51,13 +45,12 @@ ms.lasthandoff: 08/21/2017
 </system.net>  
 ```  
   
- 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=fullName> 类的成员是否返回 IPv6 地址。  
+ 对于 .NET Framework 1.1 及更早版本，ipv6 enabled 配置开关的值指定 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员是否返回 IPv6 地址。  
   
- 对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=fullName> 类的成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName> 方法）将返回含一个限制的 IPv6 地址。 DNS <xref:System.Net.Dns?displayProperty=fullName> 的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=fullName> 方法）将读取并识别配置文件中 ipv6 enabled 设置的值。  
+ 对于 .NET Framework 2.0 和更高版本，如果 Windows 支持 IPv6，则 <xref:System.Net.Dns?displayProperty=nameWithType> 类的成员（例如 <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 方法）将返回含一个限制的 IPv6 地址。 DNS <xref:System.Net.Dns?displayProperty=nameWithType> 的已过时成员（例如，<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 方法）将读取并识别配置文件中 ipv6 enabled 设置的值。  
   
 ## <a name="see-also"></a>另请参阅  
- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [套接字](../../../docs/framework/network-programming/sockets.md)   
- [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [套接字](../../../docs/framework/network-programming/sockets.md)  
+ [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<ipv6> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-

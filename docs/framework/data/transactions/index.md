@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5248dd3a4da450e411dd5d9a7843df6c9263026e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="transaction-processing"></a>事务处理
 当您从网上书店购买书籍时，会用钱（以信贷方式）来交换书籍。 如果您的信用良好，则一系列相关操作可确保您和书店可以相应地获得书籍和钱。 但如果在交换期间该系列操作中的单个操作发生故障，则整个交换就会失败。 结果，您就得不到书籍，而书店也得不到钱。  
@@ -38,4 +37,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="reference"></a>参考  
  <xref:System.Transactions>  
  提供用于使您的代码参与事务的类。 这些类支持的事务可使用多个分布式参与者、多阶段通知和持久登记。
-

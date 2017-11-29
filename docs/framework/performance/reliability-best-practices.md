@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 以下可靠性规则是面向 SQL Server 的；但是，它们也适用于任何基于主机的服务器应用程序。 对 SQL Server 等服务器而言，不泄露资源且不会遭遇停机是极其重要的。  然而，这不能通过为改变对象状态的每个方法写入退出代码来实现。  目标不在于编写出将结合退出代码从每个位置的错误进行恢复的 100% 可靠的托管代码。  那将是一项艰巨的任务，并且成功的可能性较小。  公共语言运行时 (CLR) 无法轻松地向托管代码提供足够强大的保证以使编写出完美的代码成为可行的做法。  请注意，不同于 ASP.NET，SQL Server 仅使用一个进程，在没有将数据库关闭相当长的一段时间的情况下，此进程是无法被回收的。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 08/21/2017
   
  目前具有终结器以简单清理操作系统句柄的大多数类将不再需要终结器了。 相反，终结器将位于 <xref:System.Runtime.InteropServices.SafeHandle> 派生类上。  
   
- 请注意，<xref:System.Runtime.InteropServices.SafeHandle> 不能取代 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>。  显示释放操作系统资源仍然有潜在的资源争用和性能优势。  但要知道显示释放资源的 `finally` 块可能不会执行到完成。  
+ 请注意，<xref:System.Runtime.InteropServices.SafeHandle> 不能取代 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>。  显示释放操作系统资源仍然有潜在的资源争用和性能优势。  但要知道显示释放资源的 `finally` 块可能不会执行到完成。  
   
  <xref:System.Runtime.InteropServices.SafeHandle> 使你能够实现自己的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法，此方法可执行工作以释放句柄，例如将状态传递到操作系统句柄释放例程或释放循环中的句柄集。  CLR 会保证此方法的运行。  在任何情况下，实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 以确保句柄被释放是创建者的责任。 如果不能做到这点将导致句柄泄露，这通常会导致与句柄相关的本机资源泄露。 因此，构建 <xref:System.Runtime.InteropServices.SafeHandle> 派生类是至关重要的，如此一来，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 实现便不需要任何在调用时可能不可用的资源分配。 请注意，调用在实现 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 中可能失败的方法是允许的，只要你的代码可以处理此类失败并且完成协议以释放本机句柄即可。 出于调试目的，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 具有一个 <xref:System.Boolean> 返回值，如果遇到阻止资源释放的灾难性错误，此值可能会被设置为 `false`。 这样做将激活 [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA（如果已启用）以辅助确定问题。 它不会以其他任何方式影响运行时；<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 将不会为同一资源再次被调用，并且因此将导致句柄泄露。  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  这样做将指示实时编译器首先在 finally 块中准备所有代码，然后才运行 `try` 块。 这保证代码会在 finally 块中生成并且将在所有情况下运行。 CER 中具有空 `try` 块的情况并不罕见。 使用 CER 防止出现异步线程中止和内存不足异常。 有关进一步为极深代码处理堆栈溢出的 CER 形式，请参阅 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 编程和主机保护特性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

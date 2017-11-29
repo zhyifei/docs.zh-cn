@@ -1,34 +1,37 @@
 ---
-title: "结构分析工具 (Mefx) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "撰写分析工具 [MEF]"
-  - "MEF, 结构分析工具"
-  - "Mefx [MEF], 结构分析工具"
+title: "结构分析工具 (Mefx)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Composition Analysis Tool [MEF]
+- MEF, Composition Analysis Tool
+- Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 740ba87fd247e05b1bc32e3732819514ba2806ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 结构分析工具 (Mefx)
-组合分析工具 \(Mefx\) 是一款命令行应用程序，用于分析包含 Managed Extensibility Framework \(MEF\) 部件的库 \(.dll\) 和应用程序 \(.exe\) 文件。 Mefx 的主要用途是为开发人员提供一种无需向应用程序本身添加繁琐的跟踪代码即可诊断其 MEF 应用程序中组合失败情况的方法。 它还可用于帮助你了解第三方所提供库中的部件。 本主题介绍如何使用 Mefx，并提供其语法参考。  
+# <a name="composition-analysis-tool-mefx"></a>结构分析工具 (Mefx)
+组合分析工具 (Mefx) 是一款命令行应用程序，用于分析包含 Managed Extensibility Framework (MEF) 部件的库 (.dll) 和应用程序 (.exe) 文件。 Mefx 的主要用途是为开发人员提供一种无需向应用程序本身添加繁琐的跟踪代码即可诊断其 MEF 应用程序中组合失败情况的方法。 它还可用于帮助你了解第三方所提供库中的部件。 本主题介绍如何使用 Mefx，并提供其语法参考。  
   
 <a name="getting_mefx"></a>   
-## 获取 Mefx  
- 可在 Codeplex 的 [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkID=187078) 上获取 Mefx。 只需下载并解压缩该工具。  
+## <a name="getting-mefx"></a>获取 Mefx  
+ 在 GitHub 上提供 Mefx 了[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0)。 只需下载并解压缩该工具。  
   
 <a name="basic_syntax"></a>   
-## 基本语法  
+## <a name="basic-syntax"></a>基本语法  
  采用以下格式从命令行调用 Mefx：  
   
 ```  
@@ -47,7 +50,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
  列出文件和目录后，必须指定一个命令并为该命令指定一个选项。  
   
 <a name="listing_available_parts"></a>   
-## 列出可用部件  
+## <a name="listing-available-parts"></a>列出可用部件  
  使用 `/parts` 操作列出所加载文件中声明的所有部件。 此时将显示一个简单的部件名称列表。  
   
 ```  
@@ -65,7 +68,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ```  
   
 <a name="listing_imports_and_exports"></a>   
-## 列出导入和导出的部件  
+## <a name="listing-imports-and-exports"></a>列出导入和导出的部件  
  `/imports` 和 `/exports` 操作分别将列出所有导入的部件和所有导出的部件。 你还可以通过使用 `/importers` 或 `/exporters` 操作列出导入或导出特殊类型的部件。  
   
 ```  
@@ -76,10 +79,10 @@ MyAddin.AddIn
  你还可以向这些操作应用 `/verbose` 选项。  
   
 <a name="finding_rejected_parts"></a>   
-## 查找拒绝的部件  
- 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为*“拒绝的部件”*。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
+## <a name="finding-rejected-parts"></a>查找拒绝的部件  
+ 一旦加载可用部件，Mefx 将使用 MEF 组合引擎将它们组合起来。 不能成功组合的部件称为 *“拒绝的部件”*。 若要列出所有拒绝的部件，请使用 `/rejected` 操作。  
   
- 你可以结合使用 `/verbose` 选项和 `/rejected` 选项打印关于拒绝的部件的详细信息。 在下面的示例中，`ClassLibrary1` DLL 包含 `AddIn` 部件，该部件导入 `MemberPart` 和 `ChainOne` 部件。`ChainOne` 导入 `ChainTwo`，但 `ChainTwo` 不存在。 这意味着，`ChainOne` 被拒绝，这将导致 `AddIn` 被拒绝。  
+ 你可以结合使用 `/verbose` 选项和 `/rejected` 选项打印关于拒绝的部件的详细信息。 在下面的示例中， `ClassLibrary1` DLL 包含 `AddIn` 部件，该部件导入 `MemberPart` 和 `ChainOne` 部件。 `ChainOne` 导入 `ChainTwo`，但 `ChainTwo` 不存在。 这意味着， `ChainOne` 被拒绝，这将导致 `AddIn` 被拒绝。  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
@@ -110,20 +113,20 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
    at Microsoft.ComponentModel.Composition.Diagnostics.CompositionInfo.AnalyzeImportDefinition(ExportProvider host, IEnumerable`1 availableParts, ImportDefinition id)  
 ```  
   
- 相关信息包含在 `[Exception]` 和 `[Unsuitable]` 结果中。`[Exception]` 结果提供有关部件为何被拒绝的信息。`[Unsuitable]` 结果指示以其他方式匹配的部件为何不能填充导入；在本例中，是因为该部件本身被拒绝而不能导入。  
+ 相关信息包含在 `[Exception]` 和 `[Unsuitable]` 结果中。 `[Exception]` 结果提供有关部件为何被拒绝的信息。 `[Unsuitable]` 结果指示以其他方式匹配的部件为何不能填充导入；在本例中，是因为该部件本身被拒绝而不能导入。  
   
 <a name="analyzing_primary_causes"></a>   
-## 分析主要原因  
+## <a name="analyzing-primary-causes"></a>分析主要原因  
  如果多个部件位于一个长的依赖关系链中，则关系链底部涉及部件的问题可能会导致整个关系链被拒绝。 由于失败的根源并不总是显而易见的，诊断这些问题可能很困难。 若要帮助解决问题，可以使用 `/causes` 操作，该操作将尝试查找任何级联拒绝的根源。  
   
- 在前面的示例中使用 `/causes` 操作将仅列出 `ChainOne` 的信息，其未填充导入是 `AddIn` 被拒的根源。`/causes` 操作可在正常选项和 `/verbose` 选项中使用。  
+ 在前面的示例中使用 `/causes` 操作将仅列出 `ChainOne`的信息，其未填充导入是 `AddIn`被拒的根源。 `/causes` 操作可在正常选项和 `/verbose` 选项中使用。  
   
 > [!NOTE]
 >  在大多数情况下，Mefx 将能够诊断级联失败的根源。 但是，在以编程方式将部件添加到容器的情况下，在涉及层次结构容器的情况下，或者在涉及自定义 `ExportProvider` 实现的情况下，Mefx 将不能诊断原因。 一般情况下，因尽可能避免前面所述的各种情况，因为失败原因通常很难诊断。  
   
 <a name="white_lists"></a>   
-## 白名单  
- 使用 `/whitelist` 选项可以指定一个文本文件，其中列出预期将被拒绝的部件。 意外的拒绝则将被标记出来。 在分析不完整的库或分析缺少某些依赖关系的子库时，这将很有帮助。`/whitelist` 选项可应用于 `/rejected` 或 `/causes` 操作。  
+## <a name="white-lists"></a>白名单  
+ 使用 `/whitelist` 选项可以指定一个文本文件，其中列出预期将被拒绝的部件。 意外的拒绝则将被标记出来。 在分析不完整的库或分析缺少某些依赖关系的子库时，这将很有帮助。 `/whitelist` 选项可应用于 `/rejected` 或 `/causes` 操作。  
   
  请考虑名为 test.txt 且包含文本“ClassLibrary1.ChainOne”的文件。 如果在前面的示例中将 `/rejected` 操作用于 `/whitelist` 选项，它将生成以下输出：  
   

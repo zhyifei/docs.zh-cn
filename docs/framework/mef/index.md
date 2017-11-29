@@ -1,25 +1,31 @@
 ---
-title: "Managed Extensibility Framework (MEF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Managed Extensibility Framework 概述"
-  - "MEF 概述"
+title: Managed Extensibility Framework (MEF)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Managed Extensibility Framework, overview
+- MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-caps.latest.revision: 31
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0994303cb758439dda08ee7df206f0a3bcecd854
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-# Managed Extensibility Framework (MEF)
+# <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 该话题为在 .NET Framework 4 中引入的 Managed Extensibility Framework 提供了一个概述。  
   
 <a name="what_is_mef"></a>   
@@ -42,7 +48,7 @@ caps.handback.revision: 31
   
 <a name="what_mef_provides"></a>   
 ## <a name="what-mef-provides"></a>MEF 提供什么  
- 而不是明确记录可用组件，MEF 提供了一种隐式地发现这些方法通过*组合*。  MEF 组件，称为*一部分*、 以声明方式指定了其依赖项 (称为*导入*) 和有哪些功能 (称为*导出*) 可通过其。 当创建一个部分时，MEF 组合引擎利用从其他部分获得的功能满足其导入需要。  
+ 而不是明确记录可用组件，MEF 提供了一种隐式发现它们方法通过*组合*。  MEF 组件，称为*一部分*，以声明方式指定了其依赖项 (称为*导入*) 和哪些功能 (称为*导出*) 可提供。 当创建一个部分时，MEF 组合引擎利用从其他部分获得的功能满足其导入需要。  
   
  该方法解决了在之前部分中讨论的问题。  因为 MEF 部分以声明方式详细说明了其可在运行时发现自身的功能，这意味着应用程序不使用硬编码引用或脆弱的配置文件也能够使用 MEF 部分。  MEF 让应用程序得以通过元数据发现和检查部分，而无须将部分实例化甚至于加载其程序集。 因此，无须仔细说明应当何时加载扩展以及如何加载。  
   
@@ -67,13 +73,13 @@ caps.handback.revision: 31
  若要下载此示例的完整代码，请参阅[简单计算器示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
   
 > [!NOTE]
->  简单计算器旨在演示 MEF 的概念和语法而非必须为其使用提供现实情况。 许多将从 MEF 的功能受益最大的应用程序比简单计算器更加复杂。 有关更多扩展性示例，请参阅[Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282) Codeplex 上。  
+>  简单计算器旨在演示 MEF 的概念和语法而非必须为其使用提供现实情况。 许多将从 MEF 的功能受益最大的应用程序比简单计算器更加复杂。 有关更多扩展性示例，请参阅[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) GitHub 上。
   
- 若要开始，在[!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]，创建一个名为的新控制台应用程序项目`SimpleCalculator`。 向系统添加参考。MEF 位于 ComponentModel.Composition 程序集中。 打开 Module1.vb 或 Program.cs，然后添加 System.ComponentModel.Composition 和 System.ComponentModel.Composition.Hosting 的 `Imports` 或 `using` 语句。 这两个名称空间包含你开发可扩展应用程序将需要的 MEF 类型。 在 Visual Basic 中，将 `Public` 关键字添加到声明 `Module1` 模块的行中。  
+ 若要开始，在[!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]，创建名为的新控制台应用程序项目`SimpleCalculator`。 向系统添加参考。MEF 位于 ComponentModel.Composition 程序集中。 打开 Module1.vb 或 Program.cs，然后添加 System.ComponentModel.Composition 和 System.ComponentModel.Composition.Hosting 的 `Imports` 或 `using` 语句。 这两个名称空间包含你开发可扩展应用程序将需要的 MEF 类型。 在 Visual Basic 中，将 `Public` 关键字添加到声明 `Module1` 模块的行中。  
   
 <a name="composition_container_and_catalogs"></a>   
 ## <a name="composition-container-and-catalogs"></a>撰写容器和目录  
- MEF 组合模型的核心是*撰写容器*，其中包含所有可用部件并执行撰写。  （它是对导入到导出进行的匹配。）撰写容器最常见类型是<xref:System.ComponentModel.Composition.Hosting.CompositionContainer>，并且您将用于简单计算器。  
+ MEF 组合模型的核心是*撰写容器*，其中包含所有可用部件并执行撰写。  （它是对导入到导出进行的匹配。）撰写容器最常用的类型是 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>，它将用于简单计算器。  
   
  在 Visual Basic 的 Module1.vb 中添加一个叫作 `Program` 的公用类。 之后将下一行添加到 Module1.vb 或 Program.cs 中的 `Program` 类中：  
   
@@ -85,7 +91,7 @@ Dim _container As CompositionContainer
 private CompositionContainer _container;  
 ```  
   
- 为了发现对它的组合容器可用的部件使用的*目录*。 目录是让你从某些来源中发现可用部件的对象。  MEF 提供目录来发现来自提供的类型、程序集或目录的部件。 应用程序开发人员可以轻松地创建新的目录来发现来自其他来源（例如 Web 服务）的部件。  
+ 为了发现对它撰写容器可用的部件使用*目录*。 目录是让你从某些来源中发现可用部件的对象。  MEF 提供目录来发现来自提供的类型、程序集或目录的部件。 应用程序开发人员可以轻松地创建新的目录来发现来自其他来源（例如 Web 服务）的部件。  
   
  将下面的构造函数添加到 `Program` 类中:  
   
@@ -132,7 +138,7 @@ private Program()
 }  
 ```  
   
- 对调用<xref:System.ComponentModel.Composition.AttributedModelServices.ComposeParts%2A>通知撰写容器撰写一组特定的组件，在这种情况下的当前实例`Program`。 但此时不会发生任何事，因为 `Program` 没有需要填写的导入。  
+ 对 <xref:System.ComponentModel.Composition.AttributedModelServices.ComposeParts%2A> 的调用通知撰写容器撰写一组特定组件，在此情况下即为 `Program` 的当前实例。 但此时不会发生任何事，因为 `Program` 没有需要填写的导入。  
   
 <a name="imports_and_exports_with_attributes"></a>   
 ## <a name="imports-and-exports-with-attributes"></a>具有属性的导入和导出  
@@ -150,9 +156,9 @@ Public Property calculator As ICalculator
 public ICalculator calculator;  
 ```  
   
- 请注意，声明`calculator`对象不是有点奇怪，但它用修饰<xref:System.ComponentModel.Composition.ImportAttribute>属性。  属性声明了某些操作为导入；在撰写对象时，它将由组合引擎进行填写。  
+ 请注意，`calculator` 对象的声明并非异常，但它使用了 <xref:System.ComponentModel.Composition.ImportAttribute> 属性进行修饰。  属性声明了某些操作为导入；在撰写对象时，它将由组合引擎进行填写。  
   
- 每个导入具有*协定*，从而确定它将与匹配的导出。 协定可以是显示指定的字符串，还可由 MEF 在给定类型中自动产生，在此情况下即为界面 `ICalculator`。  任一使用匹配协定进行声明的导出将完成此导入。  请注意，尽管 `calculator` 对象的类型实际上为 `ICalculator`，但对此并无要求。 协定独立于导入对象的类型。  （在此情况下，你可以略去 `typeof(ICalculator)`。）  除非你明确指定，否则 MEF 会自动假定协定基于导入的类型。  
+ 每个导入具有*协定*，决定将与之匹配什么导出。 协定可以是显示指定的字符串，还可由 MEF 在给定类型中自动产生，在此情况下即为界面 `ICalculator`。  任一使用匹配协定进行声明的导出将完成此导入。  请注意，尽管 `calculator` 对象的类型实际上为 `ICalculator`，但对此并无要求。 协定独立于导入对象的类型。  （在此情况下，你可以略去 `typeof(ICalculator)`。）  除非你明确指定，否则 MEF 会自动假定协定基于导入的类型。  
   
  将此非常简单的界面添加到模块或 `SimpleCalculator` 名称空间中：  
   
@@ -225,9 +231,9 @@ static void Main(string[] args)
   
 <a name="further_imports_and_importmany"></a>   
 ## <a name="further-imports-and-importmany"></a>进一步的导入和 ImportMany  
- 为了使简单计算器获得可扩性，它需要导入一组操作。 普通<xref:System.ComponentModel.Composition.ImportAttribute>属性的内容由一个且只有一个<xref:System.ComponentModel.Composition.ExportAttribute>。  如果可用数目超过一，则组合引擎生成错误。  若要创建可由任意数目的导出填写的导入，可以使用<xref:System.ComponentModel.Composition.ImportManyAttribute>属性。  
+ 为了使简单计算器获得可扩性，它需要导入一组操作。 一般 <xref:System.ComponentModel.Composition.ImportAttribute> 属性由且只能由 <xref:System.ComponentModel.Composition.ExportAttribute> 填写。  如果可用数目超过一，则组合引擎生成错误。  你可以使用 <xref:System.ComponentModel.Composition.ImportManyAttribute> 属性来创建可由任意数目的导出填写的导入。  
   
- 以下操作将属性添加到`MySimpleCalculator`类︰  
+ 以下操作将属性添加到`MySimpleCalculator`类：  
   
 ```vb  
 <ImportMany()>  
@@ -239,7 +245,7 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;  
 ```  
   
- <xref:System.Lazy%602>是由 MEF 提供来保存对导出的间接引用的类型。</T, TMetadata>  在这里，除了导出对象本身，您还可以获取*导出元数据*，或描述导出的对象的信息。 每个<xref:System.Lazy%602>包含`IOperation`表示实际操作的对象和一个`IOperationData`对象，表示其元数据。\</T, TMetadata>  
+ <xref:System.Lazy%602> 是由 MEF 提供来保存对导出的间接引用的类型。  在这里，除了导出对象本身，你还可以获取*导出元数据*，或描述导出的对象的信息。 每个 <xref:System.Lazy%602> 都包含一个代表实际操作的 `IOperation` 对象和一个代表元数据的 `IOperationData` 对象。  
   
  将下列简单界面添加到模块或 `SimpleCalculator` 名称空间中：  
   
@@ -291,7 +297,7 @@ class Add: IOperation
 }  
 ```  
   
- <xref:System.ComponentModel.Composition.ExportAttribute>属性函数和之前一致。  <xref:System.ComponentModel.Composition.ExportMetadataAttribute>属性将名称 / 值对的形式在元数据附加到导出。  尽管 `Add` 类执行 `IOperation`，但执行 `IOperationData` 的类并无明确定义。 相反，由 MEF 隐式创建的类具有基于提供的元数据名称的属性。  （这是用于访问 MEF 中的元数据的方法之一。）  
+ <xref:System.ComponentModel.Composition.ExportAttribute> 属性函数和之前一致。  <xref:System.ComponentModel.Composition.ExportMetadataAttribute> 属性将采用名称值对形式的元数据附加到导出。  尽管 `Add` 类执行 `IOperation`，但执行 `IOperationData` 的类并无明确定义。 相反，由 MEF 隐式创建的类具有基于提供的元数据名称的属性。  （这是用于访问 MEF 中的元数据的方法之一。）  
   
  MEF 中的组合是*递归*。 你明确撰写了 `Program` 对象（导入了结果为 `ICalculator` 类型的 `MySimpleCalculator`）。  反过来，`MySimpleCalculator` 导入一组 `IOperation` 对象，且该导入将在创建 `MySimpleCalculator` 时进行填写，同时进行 `Program` 的导入。 如果 `Add` 类声明了一项进一步的导入，则该导入也须进行填写，等等。 任何将空缺结果留在撰写错误中的导入。  （然而，有可能声明导入为可选的或为其分配默认值。）  
   
@@ -353,7 +359,7 @@ public String Calculate(String input)
 }  
 ```  
   
- 初始步骤将输入字符串解析到左右操作数和一个运算符字符。  在 `foreach` 循环中，`operations` 集合的每个成员都要检查。 这些对象属于类型<xref:System.Lazy%602>，并可以通过访问其元数据值和导出的对象<xref:System.Lazy%602.Metadata%2A>属性和<xref:System.Lazy%601.Value%2A>属性分别。</T, TMetadata> 在此情况下，如果发现 `Symbol` 对象的 `IOperationData` 属性为匹配项，则计算器调用 `Operate` 对象的 `IOperation` 方法并返回结果。  
+ 初始步骤将输入字符串解析到左右操作数和一个运算符字符。  在 `foreach` 循环中，`operations` 集合的每个成员都要检查。 这些对象是 <xref:System.Lazy%602> 类型，其元数据值和导出对象可分别使用 <xref:System.Lazy%602.Metadata%2A> 属性和<xref:System.Lazy%601.Value%2A> 属性进行访问。 在此情况下，如果发现 `Symbol` 对象的 `IOperationData` 属性为匹配项，则计算器调用 `Operate` 对象的 `IOperation` 方法并返回结果。  
   
  你还需要返回字符串中的首个非数字字符位置的 helper 方法来完成计算器。  将下面的 helper 方法添加到 `MySimpleCalculator` 类中：  
   
@@ -411,11 +417,11 @@ class Subtract : IOperation
   
 <a name="extending_simplecalculator_using_a_new_assembly"></a>   
 ## <a name="extending-simplecalculator-using-a-new-assembly"></a>采用新程序集扩展简单计算器  
- 将类添加到源代码非常简单，但 MEF 提供了观察应用程序部件源之外的内容的功能。 为了演示它，您将需要修改简单计算器从而加上搜索目录，以及其自己的程序集的部件， <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>。  
+ 将类添加到源代码非常简单，但 MEF 提供了观察应用程序部件源之外的内容的功能。 为了演示它，你将需要通过添加 <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 来修改简单计算器从而为部件搜索目录以及其自身的程序集。  
   
  添加一个名为的新目录`Extensions`到简单计算器项目。  确保将其添加到项目级别（而非解决方法级别）中。 然后将新的类库项目添加到解决方案中，名为`ExtendedOperations`。 新项目将编译为一个单独的程序集。  
   
- 打开扩展操作项目中项目属性设计器，然后单击**编译**或**生成**选项卡。 更改**生成输出路径**或**输出路径**为指向扩展目录，它位于简单计算器项目目录中 (...\SimpleCalculator\Extensions\\)。  
+ 打开项目属性设计器中为扩展操作项目，然后单击**编译**或**生成**选项卡。更改**生成输出路径**或**输出路径**为指向扩展目录，它位于简单计算器项目目录中 (...\SimpleCalculator\Extensions\\)。  
   
  在 Module1.vb 或 Program.cs 中，将下一行添加到 `Program` 构造函数中：  
   
@@ -427,7 +433,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));  
 ```  
   
- 将示例路径替换为指向扩展目录的路径。  （此绝对路径仅供调试目的使用。  在生产应用程序中，你应该使用相对路径。）<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>现在将添加在扩展目录到撰写容器的任何程序集中的所有部分。  
+ 将示例路径替换为指向扩展目录的路径。  （此绝对路径仅供调试目的使用。  在生产应用程序中，你应该使用相对路径。）现在，<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 将把在扩展目录中的所有程序集中发现的部件添加到撰写容器中。  
   
  在扩展操作项目中，将参考添加到简单计算器和 System.ComponentModel.Composition 中。 在扩展操作类文件中，添加一个 System.ComponentModel.Composition 的 `Imports` 或 `using` 语句。 在 Visual Basic 中，也添加一个简单计算器的 `Imports` 语句。 然后将下面的类添加到扩展操作类文件中：  
   
@@ -455,7 +461,7 @@ public class Mod : SimpleCalculator.IOperation
 }  
 ```  
   
- 请注意，为了使协定匹配， <xref:System.ComponentModel.Composition.ExportAttribute>属性必须具有相同的类型<xref:System.ComponentModel.Composition.ImportAttribute>。  
+ 请注意，为了使协定匹配，<xref:System.ComponentModel.Composition.ExportAttribute> 属性必须与 <xref:System.ComponentModel.Composition.ImportAttribute> 的类型相同。  
   
  编译并运行该项目。 测试新的 Mod (%) 运算符。  
   
@@ -475,4 +481,4 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="where-do-i-go-now"></a>现在我该转到哪儿？  
  若要下载此示例的完整代码，请参阅[简单计算器示例](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)。  
   
- 有关详细信息和代码示例，请参阅[Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282)。 MEF 类型的列表，请参阅<xref:System.ComponentModel.Composition?displayProperty=fullName>命名空间。
+ 有关详细信息和代码示例，请参阅[Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282)。 一组 MEF 类型，请参阅<xref:System.ComponentModel.Composition?displayProperty=nameWithType>名称空间。

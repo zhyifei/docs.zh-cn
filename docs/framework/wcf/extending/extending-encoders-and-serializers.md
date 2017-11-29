@@ -1,25 +1,28 @@
 ---
-title: "扩展编码器和序列化程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "扩展编码器和序列化程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97aec970-d73c-469c-9b93-8b86be701c44
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ebc113ac5695c82c2fbedb0655dd5bbe9223186
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 扩展编码器和序列化程序
+# <a name="extending-encoders-and-serializers"></a>扩展编码器和序列化程序
 本节主题描述了如何扩展 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 序列化系统。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
  描述如何使用数据协定代理类自定义序列化、反序列化、架构导出和架构导入。  
   

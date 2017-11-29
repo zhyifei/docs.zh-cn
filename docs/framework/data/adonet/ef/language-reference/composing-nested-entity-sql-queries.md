@@ -1,30 +1,29 @@
 ---
-title: "编写嵌套 Entity SQL 查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "撰写嵌套的 Entity SQL 查询"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 175affdd8e9763f6cc7d0c48c38498af6e8ffabb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 编写嵌套 Entity SQL 查询
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的构造块是一个表达式。  与传统的 SQL 不同，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持编写可以包含文本、参数或嵌套表达式的复杂表达式。  表达式中的值可以参数化，或者也可以由其他表达式构成。  
+# <a name="composing-nested-entity-sql-queries"></a>撰写嵌套的 Entity SQL 查询
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。 与传统的 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写可以具有文本、 参数或嵌套的表达式的复杂表达式。 表达式中的值可以参数化，或由其他表达式构成。  
   
-## 嵌套表达式  
- 嵌套表达式可以放置在任何可接受其返回类型值的位置。  例如：  
+## <a name="nested-expressions"></a>嵌套表达式  
+ 嵌套表达式可以放置在任何可接受其返回类型值的位置。 例如：  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -36,7 +35,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 嵌套查询可以放在投影子句中。  例如：  
+ 嵌套查询可以放在投影子句中。 例如：  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -57,10 +56,10 @@ UNION ALL
 FROM … );  
 ```  
   
- 下面的示例演示如何在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中正确嵌套表达式：[How to: Order the Union of Two Queries](http://msdn.microsoft.com/zh-cn/853c583a-eaba-4400-830d-be974e735313)。  
+ 下面的示例演示如何正确嵌套中的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to： 排序联合的两个查询](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)。  
   
-## 投影中的嵌套查询  
- 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。  在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。  
+## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
+ 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。  
   
  以下是这种查询的一个示例：  
   
@@ -68,8 +67,8 @@ FROM … );
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## 嵌套查询排序  
- 在实体框架中，嵌套表达式可置于查询中的任何位置。  Entity SQL 为编写查询提供了非常大的灵活性，可以在编写的查询中包含对嵌套查询的排序。  但是，将不保留嵌套查询的顺序。  
+## <a name="ordering-nested-queries"></a>嵌套查询排序  
+ 在实体框架中，嵌套表达式可置于查询中的任何位置。 Entity SQL 为编写查询提供了非常大的灵活性，可以在编写的查询中包含对嵌套查询的排序。 但是，将不保留嵌套查询的顺序。  
   
 ```  
 -- The following query will order the results by last name.  
@@ -86,5 +85,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

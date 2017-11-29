@@ -1,80 +1,83 @@
 ---
-title: "bypasslist -&gt; &lt;add&gt; 元素（网络设置） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 元素, bypasslist"
-  - "<bypasslist>, add 元素"
-  - "add 元素, bypasslist"
-  - "bypasslist, add 元素"
+title: "&lt;添加&gt;将 bypasslist （网络设置） 的元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <bypasslist>, add element
+- bypasslist, add element
+- <add> element, bypasslist
+- add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# bypasslist -&gt; &lt;add&gt; 元素（网络设置）
-将 IP 地址或 DNS 名称添加到代理忽略列表中。  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;添加&gt;将 bypasslist （网络设置） 的元素
+将 IP 地址或 DNS 名称添加到代理绕过列表。  
   
-## 语法  
+ \<configuration>  
+\<system.net >  
+\<defaultProxy >  
+\<将 bypasslist >  
+\<add>  
   
-```  
+## <a name="syntax"></a>语法  
   
-      <add   
-   address = "regular expression"   
+```xml  
+<add   
+  address="regular expression"   
 />  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a>特性和元素  
+ 下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
-|------------|------------|  
-|**address**|描述 IP 地址或 DNS 名称的正则表达式。|  
+|**特性**|**描述**|  
+|-------------------|---------------------|  
+|**address**|正则表达式描述的 IP 地址或 DNS 名称。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
-|------------|------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组正则表达式来描述不使用代理的地址。|  
+|**元素**|**描述**|  
+|-----------------|---------------------|  
+|[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
   
-## 备注  
- `add` 元素将描述 IP 地址或 DNS 服务器名称的正则表达式插入忽略代理服务器的地址的列表中。  
+## <a name="remarks"></a>备注  
+ `add`元素插入正则表达式描述 IP 地址或 DNS 服务器名称的绕过代理服务器的地址的列表。  
   
- `address` 特性的值应当是描述一组 IP 地址或主机名的一个正则表达式。  
+ 值`address`属性应为正则表达式描述一组 IP 地址或主机名。  
   
- 在为该元素指定正则表达式时应小心。  正则表达式“\[a\-z\]\+\\.contoso\\.com”不仅与 contoso.com 域中的任何主机匹配，而且还与 contoso.com.cpandl.com 域中的任何主机匹配。  若要仅与 contoso.com 域中的主机匹配，应使用定位点（“$”）：“\[a\-z\]\+\\.contoso\\.com$”。  
+ 指定此元素的正则表达式时，应使用警告。 正则表达式"[a 到 z] +\\.contoso\\.com"匹配任何承载在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。 若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a 到 z] +\\.contoso\\.com$"。  
   
- 有关正则表达式的更多信息，请参见 [.NET Framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
+ 有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。  
   
-## 配置文件  
- 此元素可以用在应用程序配置文件或计算机配置文件 \(Machine.config\) 中。  
+## <a name="configuration-files"></a>配置文件  
+ 此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## 示例  
- 下面的代码示例向忽略列表添加两个地址。  第一个地址忽略 contoso.com 域中所有服务器的代理；第二个地址忽略 IP 地址以 192.168 开头的所有服务器的代理。  
+## <a name="example"></a>示例  
+ 下面的示例将两个地址添加到跳过列表。 第一个绕过用于 contoso.com 域; 中的所有服务器的代理第二个绕过用于与 192.168 其 IP 地址开始的所有服务器的代理。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -87,6 +90,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 请参阅  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

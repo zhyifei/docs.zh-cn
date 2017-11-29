@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - prototypes in managed code
 - COM interop, DLL functions
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a3dcc625a838dc8823930e31541543b9c4c7f8f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 59cfb9160ccd84c41d71ad29b417b05fb4a17233
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/21/2017
  在从托管代码访问非托管 DLL 函数之前，需要知道函数的名称以及将其导出的 DLL 的名称。 使用此信息，可开始为 DLL 中实现的非托管函数编写托管定义。 此外，可调整平台调用创建函数以及将数据封送到函数和从中封送数据的方法。  
   
 > [!NOTE]
->  借助分配字符串的 Win32 API 函数，你可以使用 `LocalFree` 等方法释放字符串。 平台调用以不同方式处理此类参数。 为了调用平台调用，将参数设为 `IntPtr` 类型，而不是 `String` 类型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName> 类提供的方法手动将类型转换为字符串，并将其手动释放。  
+>  借助分配字符串的 Win32 API 函数，你可以使用 `LocalFree` 等方法释放字符串。 平台调用以不同方式处理此类参数。 为了调用平台调用，将参数设为 `IntPtr` 类型，而不是 `String` 类型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 类提供的方法手动将类型转换为字符串，并将其手动释放。  
   
 ## <a name="declaration-basics"></a>声明基本知识  
  如以下示例所示，非托管函数的托管定义依赖于语言。 有关更完整的代码示例，请参阅[平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)。  
@@ -233,12 +230,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [指定字符集](../../../docs/framework/interop/specifying-a-character-set.md)   
- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)   
- [平台调用安全注意事项](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)   
- [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
- [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
+ [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [指定字符集](../../../docs/framework/interop/specifying-a-character-set.md)  
+ [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [平台调用安全注意事项](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
-
