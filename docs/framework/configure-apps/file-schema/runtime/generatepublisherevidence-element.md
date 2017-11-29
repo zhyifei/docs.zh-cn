@@ -1,89 +1,91 @@
 ---
-title: "&lt;generatePublisherEvidence&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<generatePublisherEvidence> 元素"
-  - "generatePublisherEvidence 元素"
+title: "&lt;generatePublisherEvidence&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generatePublisherEvidence element
+- <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 78293c396687f9c0c99ffdfbe94cf1f3c548289d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;generatePublisherEvidence&gt; 元素
-指定运行时是否为代码访问安全性 \(CAS\) 创建 <xref:System.Security.Policy.Publisher> 证据。  
+# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt;元素
+指定运行时是否创建<xref:System.Security.Policy.Publisher>代码访问安全性 (CAS) 的证据。  
   
-## 语法  
+ \<configuration>  
+\<运行时 >  
+\<generatePublisherEvidence >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <generatePublisherEvidence    
    enabled="true|false"/>  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|`enabled`|必需的特性。<br /><br /> 指定运行时是否创建 <xref:System.Security.Policy.Publisher> 证据。|  
+|特性|描述|  
+|---------------|-----------------|  
+|`enabled`|必需的特性。<br /><br /> 指定运行时是否创建<xref:System.Security.Policy.Publisher>证据。|  
   
-## enabled 特性  
+## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|说明|  
-|-------|--------|  
-|`false`|不会创建 <xref:System.Security.Policy.Publisher> 证据。|  
-|`true`|创建 <xref:System.Security.Policy.Publisher> 证据。  这是默认设置。|  
+|值|描述|  
+|-----------|-----------------|  
+|`false`|不会创建<xref:System.Security.Policy.Publisher>证据。|  
+|`true`|创建<xref:System.Security.Policy.Publisher>证据。 这是默认设置。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含关于运行时初始化选项的信息。|  
+|`runtime`|包含有关运行时初始化选项的信息。|  
   
-## 备注  
-  
-> [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 和更高版本中，此元素对程序集加载时间没有影响。  有关更多信息，请参见 [安全更改](../../../../../docs/framework/security/security-changes.md)中的“安全策略简化”一节。  
-  
- 公共语言运行时 \(CLR\) 尝试在加载时验证 Authenticode 签名，以便为程序集创建 <xref:System.Security.Policy.Publisher> 证据。  但在默认情况下，大部分应用程序都不需要 <xref:System.Security.Policy.Publisher> 证据。  标准的 CAS 策略不依赖于 <xref:System.Security.Policy.PublisherMembershipCondition>。  除非在使用自定义 CAS 策略的计算机上执行应用程序或者应用程序要满足部分信任环境中对 <xref:System.Security.Permissions.PublisherIdentityPermission> 的要求，否则应避免与验证发行者签名相关的不必要的启动成本。（在完全受信任的环境中，标识权限的要求总是会成功。）  
+## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  建议服务使用 `<generatePublisherEvidence>` 元素来改进启动性能。使用此元素还有助于避免会导致超时和取消服务启动的延迟。  
+>  在[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更高版本，此元素不会影响程序集加载时间。 有关详细信息，请参阅中的"安全策略简化"一节[安全更改](../../../../../docs/framework/security/security-changes.md)。  
   
-## 配置文件  
- 此元素只可用于应用程序配置文件中。  
+ 公共语言运行时 (CLR) 尝试在加载时创建验证验证码签名<xref:System.Security.Policy.Publisher>程序集的证据。 但是，默认情况下，大多数应用程序不需要<xref:System.Security.Policy.Publisher>证据。 标准的 CAS 策略不依赖于<xref:System.Security.Policy.PublisherMembershipCondition>。 应避免与验证发布者签名，除非你的应用程序具有自定义的 CAS 策略的计算机上执行，或想要满足的需求相关的不必要的启动成本<xref:System.Security.Permissions.PublisherIdentityPermission>在部分信任环境中。 （标识权限的要求总是在完全信任环境中成功。）  
   
-## 示例  
- 下面的示例演示如何使用 `<generatePublisherEvidence>` 元素为应用程序禁用 CAS 发行者策略检查。  
+> [!NOTE]
+>  我们建议，服务使用`<generatePublisherEvidence>`元素以提高启动性能。  使用此元素还可以帮助避免可能导致超时和服务启动后的取消操作的延迟。  
   
-```  
+## <a name="configuration-file"></a>配置文件  
+ 仅在应用程序配置文件中，可以使用此元素。  
+  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`<generatePublisherEvidence>`要禁用的应用程序的 CA 发布服务器策略检查元素。  
+  
+```xml  
 <configuration>  
-    <runtime>  
-        <generatePublisherEvidence enabled="false"/>  
-    </runtime>  
+    <runtime>  
+        <generatePublisherEvidence enabled="false"/>  
+    </runtime>  
 </configuration>  
 ```  
   
-## 请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

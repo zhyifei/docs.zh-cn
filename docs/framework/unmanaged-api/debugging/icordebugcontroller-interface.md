@@ -1,0 +1,62 @@
+---
+title: "ICorDebugController 接口 1"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorDebugController
+api_location: mscordbi.dll
+api_type: COM
+f1_keywords: ICorDebugController
+helpviewer_keywords: ICorDebugController interface [.NET Framework debugging]
+ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
+topic_type: apiref
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b1484d6bcfa77b8bf5fe45b2f83d5dcbff02f907
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
+---
+# <a name="icordebugcontroller-interface1"></a>ICorDebugController 接口 1
+表示可以控制代码执行上下文的 <xref:System.Diagnostics.Process> 或 <xref:System.AppDomain> 范围。  
+  
+## <a name="methods"></a>方法  
+  
+|方法|描述|  
+|------------|-----------------|  
+|`ICorDebugController::CanCommitChanges`|此方法已过时。|  
+|`ICorDebugController::CommitChanges`|此方法已过时。|  
+|[Continue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|恢复后调用的托管线程的执行[icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。|  
+|[Detach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|从分离调试器进程或应用程序域。|  
+|[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|在过程中获取活动的托管线程的枚举数。|  
+|[HasQueuedCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|获取一个值，该值指示是否任何托管的回调当前正在排队等待指定的线程。|  
+|[IsRunning 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|获取一个值，该值指示是否在进程中的线程当前自由地运行。|  
+|[SetAllThreadsDebugState 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|设置进程中的所有托管线程调试状态。|  
+|[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|在进程中运行托管的代码的所有线程上执行协作停止。|  
+|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|终止指定的退出代码的进程。|  
+  
+## <a name="remarks"></a>备注  
+ 如果`ICorDebugController`是控制某个进程的作用域包括进程的所有线程。 如果`ICorDebugController`是控制应用程序域的作用域包括仅该特定应用程序域的线程。  
+  
+> [!NOTE]
+>  此接口不支持跨计算机或跨进程远程调用。  
+  
+## <a name="requirements"></a>要求  
+ **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+  
+ **标头：** CorDebug.idl、 CorDebug.h  
+  
+ **库：** CorGuids.lib  
+  
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

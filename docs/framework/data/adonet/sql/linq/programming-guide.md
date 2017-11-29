@@ -1,27 +1,30 @@
 ---
-title: "编程指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "编程指南"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03d4febc7e61425d0057c48949b18281ca3dec4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 编程指南
-本节包含有关如何创建和使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型的信息。  如果您使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则还可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来执行这些任务中的许多任务。  
+# <a name="programming-guide"></a>编程指南
+本节包含有关如何创建和使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型的信息。 如果您使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则还可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来执行这些任务中的许多任务。  
   
- 还可以在 MSDN Library 中搜索特定问题，并且可以参与 [LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)（可能为英文网页），在这里可以与专家们详细讨论更复杂的主题。  最后，[LINQ to SQL：关系数据的 .NET 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)（可能为英文网页）白皮书详细介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含了 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C\# 代码示例。  
+ 你还可以搜索 Microsoft 文档的特定问题，并且可以参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。 最后，[LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205)（LINQ to SQL：关系数据的 .NET 语言集成查询）白皮书详细介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含了 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 代码示例。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [创建对象模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
  说明如何生成对象模型。  
   
@@ -31,7 +34,7 @@ caps.handback.revision: 3
  [查询数据库](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
  说明如何在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中执行查询，并提供了许多示例。  
   
- [生成和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
  说明如何更改数据库中的数据。  
   
  [调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
@@ -40,12 +43,12 @@ caps.handback.revision: 3
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  包括针对更高级用户的附加项，如并发冲突解决方法、创建新数据库等。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供指向一些主题的链接，这些主题阐释了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并演示了一些功能。  
   
- [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  包含指向一些主题的链接，这些主题演示了如何使用存储过程。  
   
- [Introduction to LINQ](../../../../../../ocs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [LINQ 简介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
  提供可帮助您开始了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些资源。

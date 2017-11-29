@@ -1,70 +1,74 @@
 ---
-title: "&lt;oidEntry&gt; 元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidEntry> 元素"
-  - "oidEntry 元素"
+title: "&lt;oidEntry&gt;元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
+helpviewer_keywords:
+- <oidEntry> element
+- oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;oidEntry&gt; 元素
-将 ASN.1 对象标识符 \(OID\) 映射到友好名称。  
+# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;元素
+将 ASN.1 对象标识符 (OID) 映射到友好名称。  
   
-## 语法  
+ \<configuration>  
+\<mscorlib >  
+\<g s >  
+\<oidMap >  
+\<oidEntry >  
   
-```  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
   
-|特性|说明|  
-|--------|--------|  
-|**OID**|必需的特性。<br /><br /> 指定与类实现的算法相对应的 ASN.1 OID。|  
-|**name**|必需的特性。<br /><br /> 为[\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标签中**name** 属性指定值。|  
+|特性|描述|  
+|---------------|-----------------|  
+|**OID**|必需的特性。<br /><br /> 指定对应于由您的类实现的算法 ASN.1 OID。|  
+|**name**|必需的特性。<br /><br /> 指定的值**名称**属性中[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)标记。|  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
  无。  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
-|--------|--------|  
+|元素|描述|  
+|-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`cryptographySettings`|包含密码设置。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
-|`oidMap`|包含到类的 ASN.1 对象标识符 \(OID\) 映射。|  
+|`cryptographySettings`|包含加密设置。|  
+|`mscorlib`|包含`cryptographySettings`元素。|  
+|`oidMap`|包含 ASN.1 对象标识符 (OID) 映射到类。|  
   
-## 备注  
- ASN.1 对象标识符以某些加密格式标识算法。  将对象标识符映射到要标识的算法的友好名称。  有关对象标识符的更多信息，请参见 MSDN Library。  
+## <a name="remarks"></a>备注  
+ ASN.1 对象标识符标识中某些加密格式的算法。 将对象标识符映射到你希望确定的算法的友好名称。  
   
-## 示例  
- 下面的示例演示了如何使用**\<oidEntry\>**元素来为RIPEMD\-160哈希算法映射一个对象标识符映射到哈希算法的实现。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用 **\<oidEntry >**元素将 ripemd-160 哈希算法的对象标识符映射到该哈希算法实现。  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -84,9 +88,9 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)   
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>另请参阅  
+ [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
+ [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

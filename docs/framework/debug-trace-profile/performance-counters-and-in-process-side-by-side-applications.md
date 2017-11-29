@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>性能计数器和进程内并行应用程序
 使用性能监视器 (Perfmon.exe) 有可能在每个运行时基础上区分性能计数器。 本主题介绍启用此功能所需的注册表更改。  
@@ -59,7 +55,8 @@ ms.lasthandoff: 08/21/2017
   
  下面的示例演示如何以编程方式更改 `ProcessNameFormat` 值。  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  在进行此注册表更改时，Perfmon.exe 会将面向 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的应用程序的名称显示为 application_`p`processID\_`r`runtimeID，其中，application 为应用程序的名称，processID 为应用程序的进程标识符，runtimeID 为公共语言运行时标识符。 例如，如果一个名为 myapp.exe 的应用程序加载了两个公共语言运行时实例，Perfmon.exe 可能会将这两个实例分别标识为 myapp_p1416_r10 和 myapp_p3160_r10。 运行时标识符仅可区分进程内的运行时；它不会提供有关运行时的任何其他信息。 （例如，运行时 ID 与运行时的版本或 SKU 无关。）  
   
@@ -69,4 +66,3 @@ ms.lasthandoff: 08/21/2017
 >  进程标识符可消除在解析名称相同且使用运行时早期版本的两个应用程序时存在的歧义性。 因为旧版公共语言运行时不支持并行方案，所以它们不需要运行时标识符。  
   
  如果 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 不存在或已卸载，则设置注册表项不起作用。 这意味着名称相同的两个应用程序在 Perfmon.exe 中将继续显示为 application 和 application#1（例如，myapp 和 myapp#1）。
-

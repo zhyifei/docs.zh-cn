@@ -1,59 +1,54 @@
 ---
-title: "&lt;backupLists&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;backupLists&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f63dbad93fb36eab1b44c3f4135be3530ebdf340
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;backupLists&gt;
-表示一个配置节，用于定义一组用来处理错误的备份服务。  每个子元素都是一个备份列表，用于枚举当无法访问主终结点时路由服务将使用的一组终结点。如果列表中的第一个终结点已关闭，路由服务将自动故障转移到列表中的下一个终结点。这使您能够快速提高应用程序的可靠性，而不必告诉客户端应用程序应如何处理复杂模式或所有服务的部署位置。  
+# <a name="ltbackuplistsgt"></a>&lt;backupLists&gt;
+表示一个配置节，用于定义一组用来处理错误的备份服务。 每个子元素是枚举一组你想要用于在的情况下无法访问主终结点的路由服务的终结点的备份列表。 如果列表中的第一个终结点关闭，则路由服务会自动故障转移到列表中的下一个终结点。  这样，可以方便地提高应用程序的可靠性，而不必告诉客户端应用程序应如何处理复杂模式或所有服务的部署位置。  
   
-## 语法  
+ \<system.serviceModel >  
+\<路由 >  
+\<backupLists >  
   
-```vb  
+## <a name="syntax"></a>语法  
   
-<routing>  
-  <backupLists>  
-    <backupList name="String">  
-      <add endpointName="String" />  
-    </backupList>    
-  </backupLists>  
-</routing>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## 特性和元素  
+```xml
+   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
+```
+
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<筛选器\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|包含当无法访问主终结点时路由服务将使用的终结点的列表。|  
+|-------------|-----------------|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)|包含你想要用于在的情况下无法访问主终结点的路由服务的终结点的列表。 .|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<路由\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及用于定义在筛选器匹配时消息发送到的目标终结点的路由表。|  
+|-------------|-----------------|  
+|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|表示用于定义一组路由筛选器的配置节，这些筛选器确定计算传入消息时使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的类型，以及用于定义在筛选器匹配时消息发送到的目标终结点的路由表。|  
   
-## 请参阅  
- [System.ServiceModel.Routing.Configuration.BackupListCollection](assetId:///System.ServiceModel.Routing.Configuration.BackupListCollection?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
