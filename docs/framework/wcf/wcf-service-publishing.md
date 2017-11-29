@@ -1,89 +1,86 @@
 ---
-title: "WCF 服务发布 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 服务发布"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1dd63ca472ef5ee9211a8a9a1fd19d983694b43f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 服务发布
-从基于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端提供的早期开发环境进行处理，到实际将应用程序部署到生产环境中以进行测试，[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布都对您有所帮助。  在提交最终部署计划之前，可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布来验证您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务是否正常运行以及是否可以发布。  也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。  
+# <a name="wcf-service-publishing"></a><span data-ttu-id="a2435-102">WCF 服务发布</span><span class="sxs-lookup"><span data-stu-id="a2435-102">WCF Service Publishing</span></span>
+<span data-ttu-id="a2435-103">从基于 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端提供的早期开发环境进行处理，到实际将应用程序部署到生产环境中以进行测试，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布都对您有所帮助。</span><span class="sxs-lookup"><span data-stu-id="a2435-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Publishing assists you in progressing from the early development environment provided by [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host and [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test Client to actually deploying the application to a production environment for testing purposes.</span></span> <span data-ttu-id="a2435-104">在提交最终部署计划之前，可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布来验证您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务是否正常运行以及是否可以发布。</span><span class="sxs-lookup"><span data-stu-id="a2435-104">Before you commit to a final deployment plan, you can use [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Publishing to verify that your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service performs correctly and is ready to be published.</span></span> <span data-ttu-id="a2435-105">也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。</span><span class="sxs-lookup"><span data-stu-id="a2435-105">You can also choose to deploy your [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service libraries to various target locations for testing.</span></span>  
   
-## 支持的服务和目标位置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布支持发布基于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板集及其对应的项模板创建的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。这些模板包括：  
+## <a name="supported-services-and-target-locations"></a><span data-ttu-id="a2435-106">支持的服务和目标位置</span><span class="sxs-lookup"><span data-stu-id="a2435-106">Supported Services and Target Locations</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="a2435-107"> 服务发布支持发布基于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板集及其对应的项模板创建的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。这些模板包括：</span><span class="sxs-lookup"><span data-stu-id="a2435-107"> Service Publishing supports publishing [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services created from the set of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library templates, and their corresponding item templates, which include the following:</span></span>  
   
--   带有项模板的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板。  
+-   <span data-ttu-id="a2435-108">带有项模板的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库模板。</span><span class="sxs-lookup"><span data-stu-id="a2435-108">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library template with item template.</span></span>  
   
--   带有项模板的顺序工作流服务库模板。  
+-   <span data-ttu-id="a2435-109">联合服务库。</span><span class="sxs-lookup"><span data-stu-id="a2435-109">Syndication Service Library.</span></span>  
   
--   带有项模板的状态机工作流服务库模板。  
+ <span data-ttu-id="a2435-110">你可以通过选择找到这些服务模板**文件** -> **新项目** -> **Visual Basic**或**Visual C#**  ->  **WCF**。</span><span class="sxs-lookup"><span data-stu-id="a2435-110">You can find these service templates by choosing **File** -> **New Project** -> **Visual Basic** or **Visual C#** -> **WCF**.</span></span> <span data-ttu-id="a2435-111">在此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 的其他 WCF 模板可以发布使用[一键式发布为 web 应用程序](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx)。</span><span class="sxs-lookup"><span data-stu-id="a2435-111">For other WCF templates in this location (including WCF Workflow Service Application and WCF Service Application) you can publish using [One-Click publishing for web applications](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).</span></span>  
   
--   联合服务库。  
+ <span data-ttu-id="a2435-112">可以将服务发布到以下目标位置。</span><span class="sxs-lookup"><span data-stu-id="a2435-112">The service can be published to the following target locations.</span></span>  
   
- 可以通过以下方法找到这些服务模板：选择“文件”\-\>“新建项目”\-\>“Visual Basic”或“Visual C\#”\-\>“WCF”。  
+-   <span data-ttu-id="a2435-113">本地 IIS。</span><span class="sxs-lookup"><span data-stu-id="a2435-113">Local IIS.</span></span>  
   
- 可以将服务发布到以下目标位置。  
+-   <span data-ttu-id="a2435-114">文件系统。</span><span class="sxs-lookup"><span data-stu-id="a2435-114">File System.</span></span>  
   
--   本地 IIS。  
+-   <span data-ttu-id="a2435-115">FTP 站点。</span><span class="sxs-lookup"><span data-stu-id="a2435-115">FTP Site.</span></span>  
   
--   文件系统。  
+## <a name="using-wcf-service-publishing"></a><span data-ttu-id="a2435-116">使用 WCF 服务发布</span><span class="sxs-lookup"><span data-stu-id="a2435-116">Using WCF Service Publishing</span></span>  
+ <span data-ttu-id="a2435-117">若要部署服务实现，请执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="a2435-117">Perform the following steps to deploy a service implementation:</span></span>  
   
--   FTP 站点。  
+1.  <span data-ttu-id="a2435-118">使用提升的特权打开 Visual Studio （右键单击可执行文件和使用"以管理员身份运行"以启动它）。</span><span class="sxs-lookup"><span data-stu-id="a2435-118">Open Visual Studio with elevated privilege ( right-click the executable and use "Run as Administrator" to launch it).</span></span>  <span data-ttu-id="a2435-119">如果你使用的 IIS 7.0 或更高版本，请确保你已安装"IIS 元数据库和 iis 6 配置兼容性"组件使用"打开或关闭 Windows 功能"控制面板中。</span><span class="sxs-lookup"><span data-stu-id="a2435-119">If you are using IIS 7.0 or later, ensure that you have installed the "IIS Metabase and IIS6 Configuration Compatibility" component using "'Turn Windows features on or off" in Control Panel.</span></span>  
   
--   远程站点。  
+2.  <span data-ttu-id="a2435-120">打开服务项目中，选择**生成**->**发布\<项目名称 >**从主菜单中，右键单击中的项目或**解决方案资源管理器**单击**发布**。</span><span class="sxs-lookup"><span data-stu-id="a2435-120">Open a service project, select **Build**->**Publish \<Project Name>** from the main menu, or right-click the project in **Solution Explorer** and click **Publish**.</span></span>  
   
-## 使用 WCF 服务发布  
- 若要部署服务实现，请执行以下步骤：  
+3.  <span data-ttu-id="a2435-121">**发布**窗口随即显示。</span><span class="sxs-lookup"><span data-stu-id="a2435-121">The **Publish** window appears.</span></span> <span data-ttu-id="a2435-122">单击**...**.</span><span class="sxs-lookup"><span data-stu-id="a2435-122">Click the **…**.</span></span> <span data-ttu-id="a2435-123">按钮指定服务应部署到的目标位置。</span><span class="sxs-lookup"><span data-stu-id="a2435-123">button to specify the target location that the service should be deployed to.</span></span> <span data-ttu-id="a2435-124">你可以选择将应用部署到本地 IIS、 文件系统或 FTP 站点。</span><span class="sxs-lookup"><span data-stu-id="a2435-124">You can select to deploy the application to local IIS, File System, or FTP Site.</span></span> <span data-ttu-id="a2435-125">如果部署到本地 IIS 应用程序，你可以选择你的网站，并通过单击创建 web 应用程序在其下**创建新的 Web 应用程序**在右上角的图标。</span><span class="sxs-lookup"><span data-stu-id="a2435-125">If deploying the application to local IIS, you can select your website and create your web application under it, by clicking the **Create New Web Application** icon at the top right corner.</span></span>  
   
-1.  使用提升的特权打开 Visual Studio（即，右击可执行文件并使用“以管理员身份运行”来启动它）。  如果使用的是 IIS 7.0 或更高版本，请确保已使用“控制面板”中的“打开或关闭 Windows 功能”安装“IIS 元数据库和 IIS 6 配置兼容性”组件。  
+4.  <span data-ttu-id="a2435-126">单击后**发布**主窗口中，在 Visual Studio 部署到指定的目标位置的应用程序，并将 Web.config、.svc 和程序集文件复制到目标目录。</span><span class="sxs-lookup"><span data-stu-id="a2435-126">After you click **Publish** in the main window, Visual Studio deploys the application to the specified target location and copies the Web.config, .svc, and assembly files to the target directory.</span></span> <span data-ttu-id="a2435-127">.</span><span class="sxs-lookup"><span data-stu-id="a2435-127">.</span></span> <span data-ttu-id="a2435-128">.Svc 的名称将为"ProjectName.ServiceName.svc"。</span><span class="sxs-lookup"><span data-stu-id="a2435-128">The name of .svc will be "ProjectName.ServiceName.svc".</span></span> <span data-ttu-id="a2435-129">已成功发布服务后，你可以在 Visual Studio 输出窗口中，其外观类似于"正在连接到超链接"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName..."中找到一个热链接。</span><span class="sxs-lookup"><span data-stu-id="a2435-129">After the service is published successfully, you can find a hotlink in the Visual Studio Output window, which looks similar to "Connecting to  HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...".</span></span> <span data-ttu-id="a2435-130">可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。</span><span class="sxs-lookup"><span data-stu-id="a2435-130">You can press CTRL and click the link to open a browser page inside Visual Studio to view the service directory structure.</span></span>  
   
-2.  打开服务项目，从主菜单中选择“生成”\-\>“发布 \<项目名称\>”，或者在“解决方案资源管理器”中右击该项目，然后单击“发布”。  
+     <span data-ttu-id="a2435-131">如果您无法浏览到网站，这可能是因为 IIS 中未启用目录浏览器。</span><span class="sxs-lookup"><span data-stu-id="a2435-131">If you cannot browse to the site, it may because directory browser is not enabled in IIS.</span></span> <span data-ttu-id="a2435-132">请按照要启用它的"可尝试的方法"部分中的提示。</span><span class="sxs-lookup"><span data-stu-id="a2435-132">Please follow the tips in the "Things you can try" section to enable it.</span></span> <span data-ttu-id="a2435-133">或者，你可以直接键入"超链接"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc"来查看服务页面。</span><span class="sxs-lookup"><span data-stu-id="a2435-133">Alternatively, you can directly type" HYPERLINK "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" to view your service page.</span></span>  
   
-3.  将出现**“发布”**窗口。  单击**“…”**。  按钮指定服务应部署到的目标位置。  可以选择将应用程序部署到本地 IIS、文件系统、FTP 站点或远程站点。  如果将应用程序部署到本地 IIS，则可选择您的网站，并通过单击右上角的**“创建新 Web 应用程序”**图标在该网站下创建 Web 应用程序。  
+ <span data-ttu-id="a2435-134">你可以使用**发布**指定是否你想要复制程序集、 配置和目标位置，到项目中定义的所有服务的.svc 文件，并覆盖目标位置的现有文件。</span><span class="sxs-lookup"><span data-stu-id="a2435-134">You can use **Publish** to specify if you want to copy the assembly, configuration, and .svc file for all services defined in the project to the target location, and overwrite existing files at the destination.</span></span>  
   
-4.  单击主窗口中的**“发布”**后，Visual Studio 会将此应用程序部署到指定的目标位置，并将 Web.config、.svc 和程序集文件复制到目标目录。  .  .svc 的名称将为“ProjectName.ServiceName.svc”。  在成功发布服务后，可在“Visual Studio 输出”窗口中找到一个热链接，该链接的外观类似于“正在连接到 http:\/\/localhost\/WebApplicationFolderName ...”。  可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。  
+ <span data-ttu-id="a2435-135">如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。</span><span class="sxs-lookup"><span data-stu-id="a2435-135">If you choose to deploy your application to local IIS, you may encounter errors related to IIS setup.</span></span> <span data-ttu-id="a2435-136">请确保已正确安装 IIS。</span><span class="sxs-lookup"><span data-stu-id="a2435-136">Please ensure that IIS is installed properly.</span></span> <span data-ttu-id="a2435-137">可以在浏览器中键入"超链接"http://localhost"http://localhost"，然后检查是否显示了 IIS 默认页面。</span><span class="sxs-lookup"><span data-stu-id="a2435-137">You can type " HYPERLINK "http://localhost" http://localhost" in your browser and check whether the IIS default page is showing up.</span></span>  <span data-ttu-id="a2435-138">在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。</span><span class="sxs-lookup"><span data-stu-id="a2435-138">In some cases, the issues may also be caused by ASP.NET or [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] improper registration in IIS.</span></span> <span data-ttu-id="a2435-139">你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。</span><span class="sxs-lookup"><span data-stu-id="a2435-139">You can open the Visual Studio Command Prompt and run the command "aspnet_regiis.exe -ir" to fix ASP.NET registration issues, or run command "ServiceModelReg.exe –ia" to fix WCF registration issues.</span></span>  
   
-     如果您无法浏览到网站，这可能是因为 IIS 中未启用目录浏览器。  请按照“可尝试的操作”一节中的提示执行操作来启用目录浏览器。  或者，您可以直接键入“http:\/\/localhost\/WebApplicationFolderName\/ProjectName.ServiceName.svc”来查看服务页面。  
+## <a name="files-generated-for-publishing"></a><span data-ttu-id="a2435-140">生成的待发布文件</span><span class="sxs-lookup"><span data-stu-id="a2435-140">Files Generated for Publishing</span></span>  
+ <span data-ttu-id="a2435-141">在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库可以由 Web 承载之前，该工具生成以下文件：程序集文件、Web.config 文件和 .svc 文件。</span><span class="sxs-lookup"><span data-stu-id="a2435-141">Before a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library can be Web-hosted, the following files are generated by the tool: assembly files, Web.config file, and .svc file.</span></span> <span data-ttu-id="a2435-142">这些文件全部复制到目标位置。</span><span class="sxs-lookup"><span data-stu-id="a2435-142">All the files are copied to the target location.</span></span> <span data-ttu-id="a2435-143">然后发布该服务。</span><span class="sxs-lookup"><span data-stu-id="a2435-143">The service is then published.</span></span>  
   
- 可以使用**“发布”**来指定是否要将项目中定义的所有服务的程序集、配置和 .svc 文件复制到目标位置，并覆盖位于目标位置的现有文件。  
+### <a name="assembly-files"></a><span data-ttu-id="a2435-144">程序集文件</span><span class="sxs-lookup"><span data-stu-id="a2435-144">Assembly files</span></span>  
+ <span data-ttu-id="a2435-145">使用此工具发布 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务时，首先自动生成该服务，生成完毕后将在服务项目中生成程序集文件。</span><span class="sxs-lookup"><span data-stu-id="a2435-145">When you publish a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service using this tool, the service is automatically built first and the assembly files are generated in the service project after building.</span></span>  
   
- 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。  请确保已正确安装 IIS。  可在浏览器中键入“http:\/\/localhost”并检查是否显示了 IIS 默认页面。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。  可打开 Visual Studio 命令提示并运行命令“aspnet\_regiis.exe \-ir”来解决 ASP.NET 注册问题，或运行命令“ServiceModelReg.exe –ia”来解决 WCF 注册问题。  
+### <a name="svc-file"></a><span data-ttu-id="a2435-146">.SVC 文件</span><span class="sxs-lookup"><span data-stu-id="a2435-146">.SVC File</span></span>  
+ <span data-ttu-id="a2435-147">发布操作为每个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务生成一个 *.svc 文件（无论该文件存在与否），以确保版本有效性。</span><span class="sxs-lookup"><span data-stu-id="a2435-147">The publishing operation generates a *.svc file for each [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, whether the file exists or not, to ensure version validity.</span></span> <span data-ttu-id="a2435-148">有两种不同的 svc 文件：一种针对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库和联合服务库，另一种针对顺序和状态机工作流服务库。</span><span class="sxs-lookup"><span data-stu-id="a2435-148">There are two different kinds of svc files: one for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library and Syndication Service Library, and another one for Sequential and State Machine Workflow Service Library.</span></span> <span data-ttu-id="a2435-149">生成\*.svc 文件复制到目标位置中的根文件夹。</span><span class="sxs-lookup"><span data-stu-id="a2435-149">The generated \*.svc file is copied to the root folder in the target location.</span></span>  
   
-## 生成的待发布文件  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库可以由 Web 承载之前，该工具生成以下文件：程序集文件、Web.config 文件和 .svc 文件。  这些文件全部复制到目标位置。  然后发布该服务。  
+### <a name="webconfig-file"></a><span data-ttu-id="a2435-150">Web.config 文件</span><span class="sxs-lookup"><span data-stu-id="a2435-150">Web.config File</span></span>  
+ <span data-ttu-id="a2435-151">每次将服务项目发布到特定目标位置时，都会创建一个 Web.config 文件。</span><span class="sxs-lookup"><span data-stu-id="a2435-151">Each time a service project is published to a specific target location, a Web.config file is created.</span></span>  
   
-### 程序集文件  
- 使用此工具发布 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务时，首先自动生成该服务，生成完毕后将在服务项目中生成程序集文件。  
+ <span data-ttu-id="a2435-152">生成的 Web.config 文件包括一些对 Web 承载有用的 Web 节，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库的 App.config 的内容，其中包含以下更改：</span><span class="sxs-lookup"><span data-stu-id="a2435-152">The generated Web.config file includes Web sections that are useful for Web hosting, and the content of App.config for the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service library with the following changes:</span></span>  
   
-### .SVC 文件  
- 发布操作为每个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务生成一个 \*.svc 文件（无论该文件存在与否），以确保版本有效性。  有两种不同的 svc 文件：一种针对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库和联合服务库，另一种针对顺序和状态机工作流服务库。  生成的 \*.svc 文件复制到目标位置的根文件夹中。  
+-   <span data-ttu-id="a2435-153">排除了基址。</span><span class="sxs-lookup"><span data-stu-id="a2435-153">The base address is excluded.</span></span>  
   
-### Web.config 文件  
- 每次将服务项目发布到特定目标位置时，都会创建一个 Web.config 文件。  
+-   <span data-ttu-id="a2435-154">排除了 `<diagnostics>` 元素中的设置以保留目标平台的跟踪设置。</span><span class="sxs-lookup"><span data-stu-id="a2435-154">Settings in the `<diagnostics>` element are excluded to preserve the tracing settings of the target platform.</span></span>  
   
- 生成的 Web.config 文件包括一些对 Web 承载有用的 Web 节，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库的 App.config 的内容，其中包含以下更改：  
+## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a><span data-ttu-id="a2435-155">将具有非 HTTP 绑定的 WCF 服务发布到 IIS</span><span class="sxs-lookup"><span data-stu-id="a2435-155">Publishing WCF services with non-HTTP Bindings to IIS</span></span>  
+ <span data-ttu-id="a2435-156">如果使用的是 IIS 7.0 或更高版本，则可使用非 HTTP 绑定将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布到 IIS。</span><span class="sxs-lookup"><span data-stu-id="a2435-156">If you are using IIS7.0 or later, you can publish [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services with non-HTTP bindings to IIS.</span></span> <span data-ttu-id="a2435-157">需要进行一些预配置。</span><span class="sxs-lookup"><span data-stu-id="a2435-157">You need to do some pre-configurations.</span></span> <span data-ttu-id="a2435-158">有关详细信息，请参阅在主题[在 Windows 进程激活服务中承载](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。</span><span class="sxs-lookup"><span data-stu-id="a2435-158">For more information, please see the topics at  [Hosting in Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).</span></span>  
   
--   排除了基址。  
+## <a name="security"></a><span data-ttu-id="a2435-159">安全性</span><span class="sxs-lookup"><span data-stu-id="a2435-159">Security</span></span>  
+ <span data-ttu-id="a2435-160">发布到本地 IIS 需要具有管理员权限，原因是 IIS 要求以 Administrator 帐户身份运行。</span><span class="sxs-lookup"><span data-stu-id="a2435-160">Publishing to local IIS requires administrator privilege, because IIS requires running in Administrator account.</span></span> <span data-ttu-id="a2435-161">如果打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布的用户不具有管理员权限，则 IIS 将不可用作目标位置。</span><span class="sxs-lookup"><span data-stu-id="a2435-161">If a user without administrator privilege opens [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Publishing, IIS is not available as a target location.</span></span> <span data-ttu-id="a2435-162">发布到文件系统或 FTP 站点的工作方式没有管理员权限。</span><span class="sxs-lookup"><span data-stu-id="a2435-162">Publishing to File System, or FTP Site works without administrator privilege.</span></span>  
   
--   排除了 `<diagnostics>` 元素中的设置以保留目标平台的跟踪设置。  
-  
-## 将具有非 HTTP 绑定的 WCF 服务发布到 IIS  
- 如果使用的是 IIS 7.0 或更高版本，则可使用非 HTTP 绑定将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布到 IIS。  需要进行一些预配置。  有关更多信息，请参见 [在 Windows 进程激活服务中承载](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)中的主题。  
-  
-## 安全性  
- 发布到本地 IIS 需要具有管理员权限，原因是 IIS 要求以 Administrator 帐户身份运行。  如果打开 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布的用户不具有管理员权限，则 IIS 将不可用作目标位置。  发布到文件系统、FTP 站点或远程站点不需要具有管理员权限。  
-  
-## 请参阅  
- [WCF Visual Studio 模板](../../../docs/framework/wcf/wcf-vs-templates.md)   
- [WCF 服务主机 \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [WCF 测试客户端 \(WcfTestClient.exe\)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a><span data-ttu-id="a2435-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a2435-163">See Also</span></span>  
+ [<span data-ttu-id="a2435-164">WCF Visual Studio 模板</span><span class="sxs-lookup"><span data-stu-id="a2435-164">WCF Visual Studio Templates</span></span>](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [<span data-ttu-id="a2435-165">WCF 服务主机 (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="a2435-165">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="a2435-166">WCF 测试客户端 (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="a2435-166">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

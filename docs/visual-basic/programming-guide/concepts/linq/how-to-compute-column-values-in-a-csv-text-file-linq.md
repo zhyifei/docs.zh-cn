@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值 |Microsoft 文档"
+title: "如何： 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何︰ 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
-此示例演示如何在.csv 文件的列上执行聚合计算，如总和、 平均值、 最小值、 和最大值。 如下所示的示例原则可以应用于其他类型的结构化文本。  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="fad28-102">如何： 在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值</span><span class="sxs-lookup"><span data-stu-id="fad28-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="fad28-103">此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。</span><span class="sxs-lookup"><span data-stu-id="fad28-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="fad28-104">此处所示的示例原则可以应用于其他类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="fad28-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a>若要创建的源文件  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="fad28-105">创建源文件</span><span class="sxs-lookup"><span data-stu-id="fad28-105">To create the source file</span></span>  
   
-1.  将以下行复制到名为 scores.csv 文件并将其保存在项目文件夹中。 假定第一列代表一个学生 ID，并且后续列表示四次考试的分数。  
+1.  <span data-ttu-id="fad28-106">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="fad28-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="fad28-107">假定第一列表示学生 ID，后面几列表示四次考试的分数。</span><span class="sxs-lookup"><span data-stu-id="fad28-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="fad28-108">示例</span><span class="sxs-lookup"><span data-stu-id="fad28-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- 查询的工作方式是使用<xref:System.String.Split%2A>方法将每个文本行转换为数组。</xref:System.String.Split%2A> 每个数组元素表示的列。 最后，每个列中的文本将转换为其数字表示形式。 如果您的文件是一个制表符分隔的文件，只需更新中的参数`Split`方法`\t`。  
+ <span data-ttu-id="fad28-109">查询的工作原理是使用 <xref:System.String.Split%2A> 方法将每一行文本转换为数组。</span><span class="sxs-lookup"><span data-stu-id="fad28-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="fad28-110">每个数组元素表示一列。</span><span class="sxs-lookup"><span data-stu-id="fad28-110">Each array element represents a column.</span></span> <span data-ttu-id="fad28-111">最后，每一列中的文本都转换为其数字表示形式。</span><span class="sxs-lookup"><span data-stu-id="fad28-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="fad28-112">如果文件是制表符分隔文件，只需将 `Split` 方法中的参数更新为 `\t`。</span><span class="sxs-lookup"><span data-stu-id="fad28-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="fad28-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="fad28-113">Compiling the Code</span></span>  
+ <span data-ttu-id="fad28-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="fad28-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="fad28-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fad28-115">See Also</span></span>  
+ [<span data-ttu-id="fad28-116">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad28-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="fad28-117">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad28-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

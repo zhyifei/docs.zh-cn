@@ -1,31 +1,30 @@
 ---
-title: "实现服务协定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "实现服务协定 [WCF]"
+title: "实现服务协定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0b40b93b33e57bf15b7ab614405ccffa44abb8df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 实现服务协定
-服务是一个类，会在一个或多个终结点公开客户端可用的功能。若要创建服务，请编写一个实现 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 协定的类。可以通过两种方法执行此操作。可以将协定单独定义为接口，然后创建一个实现该接口的类。或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
+# <a name="implementing-service-contracts"></a><span data-ttu-id="95975-102">实现服务协定</span><span class="sxs-lookup"><span data-stu-id="95975-102">Implementing Service Contracts</span></span>
+<span data-ttu-id="95975-103">服务是一个类，会在一个或多个终结点公开客户端可用的功能。</span><span class="sxs-lookup"><span data-stu-id="95975-103">A service is a class that exposes functionality available to clients at one or more endpoints.</span></span> <span data-ttu-id="95975-104">若要创建服务，请编写一个实现 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 协定的类。</span><span class="sxs-lookup"><span data-stu-id="95975-104">To create a service, write a class that implements a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] contract.</span></span> <span data-ttu-id="95975-105">可以通过两种方法执行此操作。</span><span class="sxs-lookup"><span data-stu-id="95975-105">You can do this in one of two ways.</span></span> <span data-ttu-id="95975-106">可以将协定单独定义为接口，然后创建一个实现该接口的类。</span><span class="sxs-lookup"><span data-stu-id="95975-106">You can define the contract separately as an interface and then create a class that implements that interface.</span></span> <span data-ttu-id="95975-107">或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。</span><span class="sxs-lookup"><span data-stu-id="95975-107">Alternatively, you can create the class and contract directly by placing the <xref:System.ServiceModel.ServiceContractAttribute> attribute on the class itself and the <xref:System.ServiceModel.OperationContractAttribute> attribute on the methods available to the clients of the service.</span></span>  
   
-## 创建服务类  
- 下面的示例是实现已单独定义的 `IMath` 协定的服务。  
+## <a name="creating-a-service-class"></a><span data-ttu-id="95975-108">创建服务类</span><span class="sxs-lookup"><span data-stu-id="95975-108">Creating a service class</span></span>  
+ <span data-ttu-id="95975-109">下面的示例是实现已单独定义的 `IMath` 协定的服务。</span><span class="sxs-lookup"><span data-stu-id="95975-109">The following is an example of a service that implements an `IMath` contract that has been defined separately.</span></span>  
   
 ```csharp  
 // Define the IMath contract.  
@@ -47,7 +46,7 @@ public class MathService : IMath
 }  
 ```  
   
- 或者，服务可以直接公开协定。下面的示例是定义和实现 `MathService` 协定的服务类。  
+ <span data-ttu-id="95975-110">或者，服务可以直接公开协定。</span><span class="sxs-lookup"><span data-stu-id="95975-110">Alternatively, a service can expose a contract directly.</span></span> <span data-ttu-id="95975-111">下面的示例是定义和实现 `MathService` 协定的服务类。</span><span class="sxs-lookup"><span data-stu-id="95975-111">The following is an example of a service class that defines and implements a `MathService` contract.</span></span>  
   
 ```csharp  
 // Define the MathService contract directly on the service class.  
@@ -61,14 +60,14 @@ class MathService
 }  
 ```  
   
- 请注意，上面的服务公开不同的协定，因为协定名称是不同的。在第一个示例中，公开的协定命名为“`IMath`”，而在第二个示例中，协定命名为“`MathService`”。  
+ <span data-ttu-id="95975-112">请注意，上面的服务公开不同的协定，因为协定名称是不同的。</span><span class="sxs-lookup"><span data-stu-id="95975-112">Note that the preceding services expose different contracts because the contract names are different.</span></span> <span data-ttu-id="95975-113">在第一个示例中，公开的协定命名为“`IMath`”，而在第二个示例中，协定命名为“`MathService`”。</span><span class="sxs-lookup"><span data-stu-id="95975-113">In the first case, the exposed contract is named "`IMath`" while in the second case the contract is named "`MathService`".</span></span>  
   
- 您可以在服务和操作实现级别设置一些配置，如并发性和实例化。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md).  
+ <span data-ttu-id="95975-114">您可以在服务和操作实现级别设置一些配置，如并发性和实例化。</span><span class="sxs-lookup"><span data-stu-id="95975-114">You can set a few things at the service and operation implementation levels, such as concurrency and instancing.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="95975-115">[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)。</span><span class="sxs-lookup"><span data-stu-id="95975-115"> [Designing and Implementing Services](../../../docs/framework/wcf/designing-and-implementing-services.md).</span></span>  
   
- 在实现服务协定后，必须为该服务创建一个或多个终结点。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)]如何运行服务的更多信息，请参见[承载服务](../../../docs/framework/wcf/hosting-services.md)。  
+ <span data-ttu-id="95975-116">在实现服务协定后，必须为该服务创建一个或多个终结点。</span><span class="sxs-lookup"><span data-stu-id="95975-116">After implementing a service contract, you must create one or more endpoints for the service.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="95975-117">[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="95975-117"> [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="95975-118">如何运行服务，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。</span><span class="sxs-lookup"><span data-stu-id="95975-118"> how to run a service, see [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-## 请参阅  
- [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)   
- [如何：使用约定类创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)   
- [如何：使用协定接口创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)   
- [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="95975-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="95975-119">See Also</span></span>  
+ [<span data-ttu-id="95975-120">设计和实现服务</span><span class="sxs-lookup"><span data-stu-id="95975-120">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [<span data-ttu-id="95975-121">如何： 使用约定类创建服务</span><span class="sxs-lookup"><span data-stu-id="95975-121">How to: Create a Service with a Contract Class</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
+ [<span data-ttu-id="95975-122">如何： 使用协定接口创建服务</span><span class="sxs-lookup"><span data-stu-id="95975-122">How to: Create a Service with a Contract Interface</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
+ [<span data-ttu-id="95975-123">指定服务运行时行为</span><span class="sxs-lookup"><span data-stu-id="95975-123">Specifying Service Run-Time Behavior</span></span>](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

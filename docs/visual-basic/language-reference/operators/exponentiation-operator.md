@@ -1,95 +1,92 @@
 ---
-title: "^ 运算符 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.^"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "^ 运算符 [Visual Basic]"
-  - "^ 运算符 [Visual Basic], 幂"
-  - "算术运算符, 幂"
-  - "指数"
-  - "exponentiation 运算符 [Visual Basic]"
-  - "数字, 放样"
-  - "幂"
-  - "将数字提升到幂"
-  - "平方运算符"
+title: "^ 运算符 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.^
+helpviewer_keywords:
+- raising numbers to powers
+- ^ operator [Visual Basic], exponention
+- square operator [Visual Basic]
+- ^ operator [Visual Basic]
+- exponentiation operator [Visual Basic]
+- exponent
+- numbers [Visual Basic], rasing
+- powers
+- arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ^ 运算符 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-求以某个数为底、以另一个数为指数的幂。  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="49965-102">^ 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49965-102">^ Operator (Visual Basic)</span></span>
+<span data-ttu-id="49965-103">引发到另一个数字的幂的数字。</span><span class="sxs-lookup"><span data-stu-id="49965-103">Raises a number to the power of another number.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="49965-104">语法</span><span class="sxs-lookup"><span data-stu-id="49965-104">Syntax</span></span>  
   
 ```  
-  
 number ^ exponent  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="49965-105">部件</span><span class="sxs-lookup"><span data-stu-id="49965-105">Parts</span></span>  
  `number`  
- 必选。  任何数值表达式。  
+ <span data-ttu-id="49965-106">必需。</span><span class="sxs-lookup"><span data-stu-id="49965-106">Required.</span></span> <span data-ttu-id="49965-107">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="49965-107">Any numeric expression.</span></span>  
   
  `exponent`  
- 必选。  任何数值表达式。  
+ <span data-ttu-id="49965-108">必需。</span><span class="sxs-lookup"><span data-stu-id="49965-108">Required.</span></span> <span data-ttu-id="49965-109">任何数值表达式。</span><span class="sxs-lookup"><span data-stu-id="49965-109">Any numeric expression.</span></span>  
   
-## 结果  
- 结果总是 `Double` 类型的以 `number` 为底、以 `exponent` 为指数的幂运算值。  
+## <a name="result"></a><span data-ttu-id="49965-110">结果</span><span class="sxs-lookup"><span data-stu-id="49965-110">Result</span></span>  
+ <span data-ttu-id="49965-111">结果是`number`的幂`exponent`，始终为`Double`值。</span><span class="sxs-lookup"><span data-stu-id="49965-111">The result is `number` raised to the power of `exponent`, always as a `Double` value.</span></span>  
   
-## 支持的类型  
- `Double`.  任何其他类型的操作数将转换为 `Double`。  
+## <a name="supported-types"></a><span data-ttu-id="49965-112">支持的类型</span><span class="sxs-lookup"><span data-stu-id="49965-112">Supported Types</span></span>  
+ <span data-ttu-id="49965-113">`Double`。</span><span class="sxs-lookup"><span data-stu-id="49965-113">`Double`.</span></span> <span data-ttu-id="49965-114">任何其他类型的操作数将转换为`Double`。</span><span class="sxs-lookup"><span data-stu-id="49965-114">Operands of any different type are converted to `Double`.</span></span>  
   
-## 备注  
- Visual Basic 总是以 [Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md) 形式执行求幂运算。  
+## <a name="remarks"></a><span data-ttu-id="49965-115">备注</span><span class="sxs-lookup"><span data-stu-id="49965-115">Remarks</span></span>  
+ <span data-ttu-id="49965-116">Visual Basic 始终执行求幂中的[Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)。</span><span class="sxs-lookup"><span data-stu-id="49965-116">Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).</span></span>  
   
- `exponent` 的值可以是分数、负数或负分数。  
+ <span data-ttu-id="49965-117">值`exponent`可以是小数，负的、 和/或文件名。</span><span class="sxs-lookup"><span data-stu-id="49965-117">The value of `exponent` can be fractional, negative, or both.</span></span>  
   
- 如果在单个表达式中执行多个求幂运算，则按 `^` 运算符从左到右出现的顺序进行计算。  
+ <span data-ttu-id="49965-118">在单个表达式中执行多个求幂时`^`运算符从左到右出现的顺序进行计算。</span><span class="sxs-lookup"><span data-stu-id="49965-118">When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.</span></span>  
   
 > [!NOTE]
->  `^` 运算符可以被“重载”，这意味着当操作数具有某个类或结构的类型时，该类或结构可以重新定义其行为。  如果代码在这样的类或结构上使用此运算符，那么您一定要了解其重新定义的行为。  有关更多信息，请参见 [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  <span data-ttu-id="49965-119">`^`运算符可以被*重载*，这意味着，一个类或结构可以重新定义其行为时，操作数的类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="49965-119">The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="49965-120">如果你的代码使用此运算符对这样的类或结构，请确保你了解其重新定义的行为。</span><span class="sxs-lookup"><span data-stu-id="49965-120">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="49965-121">有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="49965-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 示例  
- 下面的示例使用 `^` 运算符对一个数和一个指数进行求幂运算。  结果是以第一个操作数为底、以第二个操作数为指数的求幂运算的值。  
+## <a name="example"></a><span data-ttu-id="49965-122">示例</span><span class="sxs-lookup"><span data-stu-id="49965-122">Example</span></span>  
+ <span data-ttu-id="49965-123">下面的示例使用`^`运算符的指数次幂数。</span><span class="sxs-lookup"><span data-stu-id="49965-123">The following example uses the `^` operator to raise a number to the power of an exponent.</span></span> <span data-ttu-id="49965-124">结果是第一个操作数的第二个次幂。</span><span class="sxs-lookup"><span data-stu-id="49965-124">The result is the first operand raised to the power of the second.</span></span>  
   
  [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
- 上面的示例产生下列结果：  
+ <span data-ttu-id="49965-125">前面的示例将生成下列结果：</span><span class="sxs-lookup"><span data-stu-id="49965-125">The preceding example produces the following results:</span></span>  
   
- `exp1` 的结果为 4（2 的平方）。  
+ <span data-ttu-id="49965-126">`exp1`设置为 4 (2 平方值)。</span><span class="sxs-lookup"><span data-stu-id="49965-126">`exp1` is set to 4 (2 squared).</span></span>  
   
- `exp2` 的结果为 19683（先求 3 的立方，再对得到的值求立方）。  
+ <span data-ttu-id="49965-127">`exp2`设置为 19683 (3 立方，然后的值求立方)。</span><span class="sxs-lookup"><span data-stu-id="49965-127">`exp2` is set to 19683 (3 cubed, then that value cubed).</span></span>  
   
- `exp3` 的结果为 \-125（\-5 的立方）。  
+ <span data-ttu-id="49965-128">`exp3`设置为-125 (-5 的立方)。</span><span class="sxs-lookup"><span data-stu-id="49965-128">`exp3` is set to -125 (-5 cubed).</span></span>  
   
- `exp4` 的结果为 625（\-5 的四次方）。  
+ <span data-ttu-id="49965-129">`exp4`设置为 625 (-5 的四次幂)。</span><span class="sxs-lookup"><span data-stu-id="49965-129">`exp4` is set to 625 (-5 to the fourth power).</span></span>  
   
- `exp5` 的结果为 2（8 的立方根）。  
+ <span data-ttu-id="49965-130">`exp5`设置为 2 （8 的立方根）。</span><span class="sxs-lookup"><span data-stu-id="49965-130">`exp5` is set to 2 (cube root of 8).</span></span>  
   
- `exp6` 的结果为 0.5（1.0 除以 8 的立方根）。  
+ <span data-ttu-id="49965-131">`exp6`设置为 0.5 (1.0 除以 8 的立方根)。</span><span class="sxs-lookup"><span data-stu-id="49965-131">`exp6` is set to 0.5 (1.0 divided by the cube root of 8).</span></span>  
   
- 请注意在上面示例的表达式中括号的重要性。  按照运算符优先级，Visual Basic 通常先执行 `^` 运算符，然后执行任何其他运算符，一元 `–` 运算符也不例外。  如果 `exp4` 和 `exp6` 计算时不带括号，将会产生下面的结果：  
+ <span data-ttu-id="49965-132">请注意在前面的示例中的表达式中的括号的重要性。</span><span class="sxs-lookup"><span data-stu-id="49965-132">Note the importance of the parentheses in the expressions in the preceding example.</span></span> <span data-ttu-id="49965-133">由于*运算符优先级*，通常情况下，Visual Basic 执行`^`运算符之前的任何其他，即使一元`–`运算符。</span><span class="sxs-lookup"><span data-stu-id="49965-133">Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator.</span></span> <span data-ttu-id="49965-134">如果`exp4`和`exp6`计算时不带括号，将会产生以下结果：</span><span class="sxs-lookup"><span data-stu-id="49965-134">If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:</span></span>  
   
- `exp4 = -5 ^ 4` 将计算 \(5 到第四个电源\)，导致 \-625。  
+ <span data-ttu-id="49965-135">`exp4 = -5 ^ 4`将计算为 – (5 四次幂)，这将导致-625。</span><span class="sxs-lookup"><span data-stu-id="49965-135">`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.</span></span>  
   
- `exp6 = 8 ^ -1.0 / 3.0` 将按“（8 的 –1 次幂，即 0.125）除以 3.0”进行计算，得到的结果为 0.041666666666666666666666666666667。  
+ <span data-ttu-id="49965-136">`exp6 = 8 ^ -1.0 / 3.0`将计算方式 (8 到为-1 电源中或从 0.125) 除以 3.0，它的结果为 0.041666666666666666666666666666667。</span><span class="sxs-lookup"><span data-stu-id="49965-136">`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.</span></span>  
   
-## 请参阅  
- [^\= 运算符](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)   
- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [算术运算符 \(Visual Basic\)](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="49965-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="49965-137">See Also</span></span>  
+ [<span data-ttu-id="49965-138">^= 运算符</span><span class="sxs-lookup"><span data-stu-id="49965-138">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [<span data-ttu-id="49965-139">算术运算符</span><span class="sxs-lookup"><span data-stu-id="49965-139">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="49965-140">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="49965-140">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="49965-141">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="49965-141">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="49965-142">在 Visual Basic 中的算术运算符</span><span class="sxs-lookup"><span data-stu-id="49965-142">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

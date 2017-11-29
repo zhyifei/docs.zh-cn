@@ -1,81 +1,78 @@
 ---
-title: "TypeOf 运算符 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "TypeOf"
-  - "vb.TypeOf"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "比较运算符"
-  - "兼容的数据类型"
-  - "数据类型 [Visual Basic], 兼容的"
-  - "TypeOf 运算符 [Visual Basic]"
-  - "TypeOf...Is 表达式"
-  - "类型 [Visual Basic], 兼容的"
+title: "TypeOf 运算符 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- TypeOf
+- vb.TypeOf
+helpviewer_keywords:
+- types [Visual Basic], compatible
+- comparison operators [Visual Basic]
+- TypeOf...Is expression
+- data types [Visual Basic], compatible
+- TypeOf operator [Visual Basic]
+- compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# TypeOf 运算符 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-将对象引用变量与数据类型进行比较。  
+# <a name="typeof-operator-visual-basic"></a><span data-ttu-id="35ef4-102">TypeOf 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35ef4-102">TypeOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="35ef4-103">将对象引用变量与数据类型进行比较。</span><span class="sxs-lookup"><span data-stu-id="35ef4-103">Compares an object reference variable to a data type.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="35ef4-104">语法</span><span class="sxs-lookup"><span data-stu-id="35ef4-104">Syntax</span></span>  
   
 ```  
-  
 result = TypeOf objectexpression Is typename  
 ```  
   
 ```  
-  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="35ef4-105">部件</span><span class="sxs-lookup"><span data-stu-id="35ef4-105">Parts</span></span>  
  `result`  
- 返回。  一个 `Boolean` 值。  
+ <span data-ttu-id="35ef4-106">返回。</span><span class="sxs-lookup"><span data-stu-id="35ef4-106">Returned.</span></span> <span data-ttu-id="35ef4-107">一个 `Boolean` 值。</span><span class="sxs-lookup"><span data-stu-id="35ef4-107">A `Boolean` value.</span></span>  
   
  `objectexpression`  
- 必需。  计算结果为引用类型的任何表达式。  
+ <span data-ttu-id="35ef4-108">必需。</span><span class="sxs-lookup"><span data-stu-id="35ef4-108">Required.</span></span> <span data-ttu-id="35ef4-109">计算结果为引用类型的任何表达式。</span><span class="sxs-lookup"><span data-stu-id="35ef4-109">Any expression that evaluates to a reference type.</span></span>  
   
  `typename`  
- 必需。  任何数据类型名。  
+ <span data-ttu-id="35ef4-110">必需。</span><span class="sxs-lookup"><span data-stu-id="35ef4-110">Required.</span></span> <span data-ttu-id="35ef4-111">任何数据类型名。</span><span class="sxs-lookup"><span data-stu-id="35ef4-111">Any data type name.</span></span>  
   
-## 备注  
- `TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。  兼容性取决于 `typename` 的类型类别。  下表显示如何确定兼容性。  
+## <a name="remarks"></a><span data-ttu-id="35ef4-112">备注</span><span class="sxs-lookup"><span data-stu-id="35ef4-112">Remarks</span></span>  
+ <span data-ttu-id="35ef4-113">`TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。</span><span class="sxs-lookup"><span data-stu-id="35ef4-113">The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`.</span></span> <span data-ttu-id="35ef4-114">兼容性取决于 `typename` 的类型类别。</span><span class="sxs-lookup"><span data-stu-id="35ef4-114">The compatibility depends on the type category of `typename`.</span></span> <span data-ttu-id="35ef4-115">下表显示如何确定兼容性。</span><span class="sxs-lookup"><span data-stu-id="35ef4-115">The following table shows how compatibility is determined.</span></span>  
   
-|`typename` 的类型类别|兼容性条件|  
-|----------------------|-----------|  
-|类|`objectexpression` 属于类型 `typename` 或继承自 `typename`|  
-|结构|`objectexpression` 属于类型 `typename`|  
-|接口|`objectexpression` 实现 `typename` 或继承自实现 `typename` 的类|  
+|<span data-ttu-id="35ef4-116">`typename` 的类型类别</span><span class="sxs-lookup"><span data-stu-id="35ef4-116">Type category of `typename`</span></span>|<span data-ttu-id="35ef4-117">兼容性条件</span><span class="sxs-lookup"><span data-stu-id="35ef4-117">Compatibility criterion</span></span>|  
+|---------------------------------|-----------------------------|  
+|<span data-ttu-id="35ef4-118">类</span><span class="sxs-lookup"><span data-stu-id="35ef4-118">Class</span></span>|<span data-ttu-id="35ef4-119">`objectexpression` 属于类型 `typename` 或继承自 `typename`</span><span class="sxs-lookup"><span data-stu-id="35ef4-119">`objectexpression` is of type `typename` or inherits from `typename`</span></span>|  
+|<span data-ttu-id="35ef4-120">结构</span><span class="sxs-lookup"><span data-stu-id="35ef4-120">Structure</span></span>|<span data-ttu-id="35ef4-121">`objectexpression` 属于类型 `typename`</span><span class="sxs-lookup"><span data-stu-id="35ef4-121">`objectexpression` is of type `typename`</span></span>|  
+|<span data-ttu-id="35ef4-122">接口</span><span class="sxs-lookup"><span data-stu-id="35ef4-122">Interface</span></span>|<span data-ttu-id="35ef4-123">`objectexpression` 实现 `typename` 或继承自实现 `typename` 的类</span><span class="sxs-lookup"><span data-stu-id="35ef4-123">`objectexpression` implements `typename` or inherits from a class that implements `typename`</span></span>|  
   
- 如果 `objectexpression` 的运行时类型满足兼容性条件，则 `result` 是 `True`。  否则 `result` 是 `False`。  如果 `objectexpression` 为 null，则 `TypeOf`...`Is` 返回 `False`，...`IsNot` 返回 `True`。  
+ <span data-ttu-id="35ef4-124">如果 `objectexpression` 的运行时类型满足兼容性条件，则 `result` 是 `True`。</span><span class="sxs-lookup"><span data-stu-id="35ef4-124">If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`.</span></span> <span data-ttu-id="35ef4-125">否则 `result` 是 `False`。</span><span class="sxs-lookup"><span data-stu-id="35ef4-125">Otherwise, `result` is `False`.</span></span>  <span data-ttu-id="35ef4-126">如果 `objectexpression` 为 null，则 `TypeOf`...`Is` 返回 `False`，...`IsNot` 返回 `True`。</span><span class="sxs-lookup"><span data-stu-id="35ef4-126">If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.</span></span>  
   
- `TypeOf` 始终与 `Is` 关键字一起使用来构造 `TypeOf`...`Is` 表达式，或与 `IsNot` 关键字一起使用来构造 `TypeOf`...`IsNot` 表达式。  
+ <span data-ttu-id="35ef4-127">`TypeOf` 始终与 `Is` 关键字一起使用来构造 `TypeOf`...`Is` 表达式，或与 `IsNot` 关键字一起使用来构造 `TypeOf`...`IsNot` 表达式。</span><span class="sxs-lookup"><span data-stu-id="35ef4-127">`TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.</span></span>  
   
-## 示例  
- 下面的示例使用 `TypeOf`...`Is` 表达式测试具有不同数据类型的两个对象引用变量的类型兼容性。  
+## <a name="example"></a><span data-ttu-id="35ef4-128">示例</span><span class="sxs-lookup"><span data-stu-id="35ef4-128">Example</span></span>  
+ <span data-ttu-id="35ef4-129">下面的示例使用 `TypeOf`...`Is` 表达式测试具有不同数据类型的两个对象引用变量的类型兼容性。</span><span class="sxs-lookup"><span data-stu-id="35ef4-129">The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.</span></span>  
   
  [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
- 变量 `refInteger` 具有运行时类型 `Integer`。  它与 `Integer` 兼容，但不与 `Double` 兼容。  变量 `refForm` 具有运行时类型 <xref:System.Windows.Forms.Form>。  它与 <xref:System.Windows.Forms.Form> 兼容因为这是其类型，与 <xref:System.Windows.Forms.Control> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.Windows.Forms.Control>，与 <xref:System.ComponentModel.IComponent> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.ComponentModel.Component>（它实现 <xref:System.ComponentModel.IComponent>）。  但是，`refForm` 与 <xref:System.Windows.Forms.Label> 不兼容。  
+ <span data-ttu-id="35ef4-130">变量 `refInteger` 具有运行时类型 `Integer`。</span><span class="sxs-lookup"><span data-stu-id="35ef4-130">The variable `refInteger` has a run-time type of `Integer`.</span></span> <span data-ttu-id="35ef4-131">它与 `Integer` 兼容，但不与 `Double` 兼容。</span><span class="sxs-lookup"><span data-stu-id="35ef4-131">It is compatible with `Integer` but not with `Double`.</span></span> <span data-ttu-id="35ef4-132">变量 `refForm` 具有运行时类型 <xref:System.Windows.Forms.Form>。</span><span class="sxs-lookup"><span data-stu-id="35ef4-132">The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>.</span></span> <span data-ttu-id="35ef4-133">它与 <xref:System.Windows.Forms.Form> 兼容因为这是其类型，与 <xref:System.Windows.Forms.Control> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.Windows.Forms.Control>，与 <xref:System.ComponentModel.IComponent> 兼容因为 <xref:System.Windows.Forms.Form> 继承自 <xref:System.ComponentModel.Component>（它实现 <xref:System.ComponentModel.IComponent>）。</span><span class="sxs-lookup"><span data-stu-id="35ef4-133">It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="35ef4-134">但是，`refForm` 与 <xref:System.Windows.Forms.Label> 不兼容。</span><span class="sxs-lookup"><span data-stu-id="35ef4-134">However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.</span></span>  
   
-## 请参阅  
- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [比较运算符 \(Visual Basic\)](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="35ef4-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="35ef4-135">See Also</span></span>  
+ [<span data-ttu-id="35ef4-136">Is 运算符</span><span class="sxs-lookup"><span data-stu-id="35ef4-136">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="35ef4-137">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="35ef4-137">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="35ef4-138">在 Visual Basic 中的比较运算符</span><span class="sxs-lookup"><span data-stu-id="35ef4-138">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="35ef4-139">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="35ef4-139">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="35ef4-140">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="35ef4-140">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="35ef4-141">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="35ef4-141">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

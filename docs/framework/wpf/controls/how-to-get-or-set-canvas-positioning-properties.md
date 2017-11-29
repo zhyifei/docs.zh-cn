@@ -1,40 +1,45 @@
 ---
-title: "如何：获取或设置画布定位属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Canvas 控件, 设置定位属性"
+title: "如何：获取或设置画布定位属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：获取或设置画布定位属性
-下面的示例演示如何使用 <xref:System.Windows.Controls.Canvas> 元素的定位方法来定位子内容。  此示例使用 <xref:System.Windows.Controls.ListBoxItem> 中的内容来表示定位值，并将这些值转换为 <xref:System.Double>（定位时必需的参数）的实例。  然后，使用 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 方法将这些值重新转换为字符串，并在 <xref:System.Windows.Controls.TextBlock> 元素中将其显示为文本。  
+# <a name="how-to-get-or-set-canvas-positioning-properties"></a><span data-ttu-id="41fb1-102">如何：获取或设置画布定位属性</span><span class="sxs-lookup"><span data-stu-id="41fb1-102">How to: Get or Set Canvas Positioning Properties</span></span>
+<span data-ttu-id="41fb1-103">此示例演示如何使用的定位方法<xref:System.Windows.Controls.Canvas>元素来定位子内容。</span><span class="sxs-lookup"><span data-stu-id="41fb1-103">This example shows how to use the positioning methods of the <xref:System.Windows.Controls.Canvas> element to position child content.</span></span> <span data-ttu-id="41fb1-104">此示例使用中的内容<xref:System.Windows.Controls.ListBoxItem>来表示定位值，并将值的实例转换为<xref:System.Double>，这是用于定位一个必需的参数。</span><span class="sxs-lookup"><span data-stu-id="41fb1-104">This example uses content in a <xref:System.Windows.Controls.ListBoxItem> to represent positioning values and converts the values into instances of <xref:System.Double>, which is a required argument for positioning.</span></span> <span data-ttu-id="41fb1-105">然后重新转换为字符串和文本的形式显示值<xref:System.Windows.Controls.TextBlock>元素中的使用<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="41fb1-105">The values are then converted back into strings and displayed as text in a <xref:System.Windows.Controls.TextBlock> element by using the <xref:System.Windows.Controls.Canvas.GetLeft%2A> method.</span></span>  
   
-## 示例  
- 下面的示例将创建具有十一个可选 <xref:System.Windows.Controls.ListBoxItem> 元素的 <xref:System.Windows.Controls.ListBox> 元素。  <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> 事件触发 `ChangeLeft` 自定义方法，后续代码块将定义该方法。  
+## <a name="example"></a><span data-ttu-id="41fb1-106">示例</span><span class="sxs-lookup"><span data-stu-id="41fb1-106">Example</span></span>  
+ <span data-ttu-id="41fb1-107">下面的示例创建<xref:System.Windows.Controls.ListBox>具有十一个可选择的元素<xref:System.Windows.Controls.ListBoxItem>元素。</span><span class="sxs-lookup"><span data-stu-id="41fb1-107">The following example creates a <xref:System.Windows.Controls.ListBox> element that has eleven selectable <xref:System.Windows.Controls.ListBoxItem> elements.</span></span> <span data-ttu-id="41fb1-108"><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>事件触发器`ChangeLeft`自定义方法，后者在后续代码阻塞定义。</span><span class="sxs-lookup"><span data-stu-id="41fb1-108">The <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event triggers the `ChangeLeft` custom method, which the subsequent code block defines.</span></span>  
   
- 每个 <xref:System.Windows.Controls.ListBoxItem> 都表示一个 <xref:System.Double> 值，该值是 <xref:System.Windows.Controls.Canvas> 的 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 方法可接受的参数之一。  要使用 <xref:System.Windows.Controls.ListBoxItem> 来表示 <xref:System.Double> 的实例，必须先将 <xref:System.Windows.Controls.ListBoxItem> 转换为正确的数据类型。  
+ <span data-ttu-id="41fb1-109">每个<xref:System.Windows.Controls.ListBoxItem>表示<xref:System.Double>值，该值的自变量之一是，<xref:System.Windows.Controls.Canvas.SetLeft%2A>方法<xref:System.Windows.Controls.Canvas>接受。</span><span class="sxs-lookup"><span data-stu-id="41fb1-109">Each <xref:System.Windows.Controls.ListBoxItem> represents a <xref:System.Double> value, which is one of the arguments that the <xref:System.Windows.Controls.Canvas.SetLeft%2A> method of <xref:System.Windows.Controls.Canvas> accepts.</span></span> <span data-ttu-id="41fb1-110">若要使用<xref:System.Windows.Controls.ListBoxItem>来表示的实例<xref:System.Double>，您必须先将转换<xref:System.Windows.Controls.ListBoxItem>到正确的数据类型。</span><span class="sxs-lookup"><span data-stu-id="41fb1-110">In order to use a <xref:System.Windows.Controls.ListBoxItem> to represent an instance of <xref:System.Double>, you must first convert the <xref:System.Windows.Controls.ListBoxItem> to the correct data type.</span></span>  
   
- [!code-xml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
+ [!code-xaml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
   
- 当用户更改 <xref:System.Windows.Controls.ListBox> 选择时，将会调用 `ChangeLeft` 自定义方法。  此方法会将 <xref:System.Windows.Controls.ListBoxItem> 传递给 <xref:System.Windows.LengthConverter> 对象，该对象会将 <xref:System.Windows.Controls.ListBoxItem> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 转换为 <xref:System.Double> 的实例（请注意，已使用 <xref:System.Windows.Controls.Control.ToString%2A> 方法将此值转换为 <xref:System.String>）。  此值随后将回传给 <xref:System.Windows.Controls.Canvas> 的 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 和 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 方法，以便更改 `text1` 对象的位置。  
+ <span data-ttu-id="41fb1-111">当用户更改<xref:System.Windows.Controls.ListBox>选择时，它调用`ChangeLeft`自定义的方法。</span><span class="sxs-lookup"><span data-stu-id="41fb1-111">When a user changes the <xref:System.Windows.Controls.ListBox> selection, it invokes the `ChangeLeft` custom method.</span></span> <span data-ttu-id="41fb1-112">此方法将传递<xref:System.Windows.Controls.ListBoxItem>到<xref:System.Windows.LengthConverter>对象，后者将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>到实例<xref:System.Double>(请注意，此值已转换为<xref:System.String>使用<xref:System.Windows.Controls.Control.ToString%2A>方法）。</span><span class="sxs-lookup"><span data-stu-id="41fb1-112">This method passes the <xref:System.Windows.Controls.ListBoxItem> to a <xref:System.Windows.LengthConverter> object, which converts the <xref:System.Windows.Controls.ContentControl.Content%2A> of a <xref:System.Windows.Controls.ListBoxItem> to an instance of <xref:System.Double> (notice that this value has already been converted to a <xref:System.String> by using the <xref:System.Windows.Controls.Control.ToString%2A> method).</span></span> <span data-ttu-id="41fb1-113">然后，此值会传递回<xref:System.Windows.Controls.Canvas.SetLeft%2A>和<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法<xref:System.Windows.Controls.Canvas>以便更改的位置`text1`对象。</span><span class="sxs-lookup"><span data-stu-id="41fb1-113">This value is then passed back to the <xref:System.Windows.Controls.Canvas.SetLeft%2A> and <xref:System.Windows.Controls.Canvas.GetLeft%2A> methods of <xref:System.Windows.Controls.Canvas> in order to change the position of the `text1` object.</span></span>  
   
  [!code-csharp[CanvasPositioningProperties#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml.cs#2)]
  [!code-vb[CanvasPositioningProperties#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.Canvas>   
- <xref:System.Windows.Controls.ListBoxItem>   
- <xref:System.Windows.LengthConverter>   
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a><span data-ttu-id="41fb1-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="41fb1-114">See Also</span></span>  
+ <xref:System.Windows.Controls.Canvas>  
+ <xref:System.Windows.Controls.ListBoxItem>  
+ <xref:System.Windows.LengthConverter>  
+ [<span data-ttu-id="41fb1-115">面板概述</span><span class="sxs-lookup"><span data-stu-id="41fb1-115">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)

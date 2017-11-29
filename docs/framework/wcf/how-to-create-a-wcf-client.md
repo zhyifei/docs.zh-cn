@@ -1,71 +1,69 @@
 ---
-title: "如何：创建 Windows Communication Foundation 客户端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "客户端 [WCF], 运行"
-  - "WCF 客户端 [WCF], 运行"
+title: "如何：创建 Windows Communication Foundation 客户端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clients [WCF], running
+- WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 64
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 64
+caps.latest.revision: "64"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0d207a067fe6d654fdd8384f1955a25c69185320
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建 Windows Communication Foundation 客户端
-这是创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第四项任务。有关全部六项任务的概述，请参见[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+# <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="a2965-102">如何：创建 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="a2965-102">How to: Create a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="a2965-103">这是创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第四项任务。</span><span class="sxs-lookup"><span data-stu-id="a2965-103">This is the fourth of six tasks required to create a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="a2965-104">有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="a2965-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- 本主题描述如何检索 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的元数据，以及如何使用这些元数据创建可以访问该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 代理。通过使用 Visual Studio 提供的添加服务引用功能完成此任务。此工具从服务的 MEX 终结点获取元数据，并以所选语言（默认情况下为 C\#）为客户端代理生成托管源代码文件。除了创建客户端代理外，该工具还会为客户端创建或更新客户端配置文件，以使客户端应用程序能够连接至其某个终结点上的服务。  
+ <span data-ttu-id="a2965-105">本主题描述如何检索 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的元数据，以及如何使用这些元数据创建可以访问该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 代理。</span><span class="sxs-lookup"><span data-stu-id="a2965-105">This topic describes how to retrieve metadata from a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and use it to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy that can access the service.</span></span> <span data-ttu-id="a2965-106">通过使用 Visual Studio 提供的“添加服务引用”功能完成此任务。</span><span class="sxs-lookup"><span data-stu-id="a2965-106">This task is completed by using the Add Service Reference functionality provided by Visual Studio .</span></span> <span data-ttu-id="a2965-107">此工具从服务的 MEX 终结点获取元数据，并以所选语言（默认情况下为 C#）为客户端代理生成托管源代码文件。</span><span class="sxs-lookup"><span data-stu-id="a2965-107">This tool obtains the metadata from the service’s MEX endpoint and generates a managed source code file for a client proxy in the language you have chosen (C# by default).</span></span> <span data-ttu-id="a2965-108">除了创建客户端代理外，该工具还会创建或更新客户端配置文件，以使客户端应用程序能够连接至其某个终结点上的服务。</span><span class="sxs-lookup"><span data-stu-id="a2965-108">In addition to creating the client proxy, the tool also creates or updates the client configuration file which enables the client application to connect to the service at one of its endpoints.</span></span>  
   
 > [!NOTE]
->  您还可以使用[ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具生成代理类和配置，而不使用 Visual Studio 内的添加服务引用。  
+>  <span data-ttu-id="a2965-109">你还可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具生成的代理类和配置，而非使用在 Visual Studio 添加服务引用。</span><span class="sxs-lookup"><span data-stu-id="a2965-109">You can also use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to generate the proxy class and configuration instead of using Add Service Reference inside of Visual Studio.</span></span>  
   
 > [!WARNING]
->  当在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中从某个类库项目调用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务时，可以使用添加服务引用功能自动生成代理和关联配置文件。该类库项目不会使用配置文件。需要将生成的配置文件中的设置添加到将调用该类库的可执行 app.config 文件中。  
+>  <span data-ttu-id="a2965-110">当在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中从某个类库项目调用 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 服务时，可以使用添加服务引用功能自动生成代理和关联配置文件。</span><span class="sxs-lookup"><span data-stu-id="a2965-110">When calling a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service from a class library project in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] you can use the Add Service Reference feature to automatically generate a proxy and associated configuration file.</span></span>  <span data-ttu-id="a2965-111">该类库项目不会使用配置文件。</span><span class="sxs-lookup"><span data-stu-id="a2965-111">The configuration file will not be used by the class library project.</span></span> <span data-ttu-id="a2965-112">您需要将生成的配置文件中的设置添加到将调用该类库的可执行文件的 app.config 文件中。</span><span class="sxs-lookup"><span data-stu-id="a2965-112">You will need to add the settings in the generated configuration file to the app.config file for the executable that will call the class library.</span></span>  
   
- 客户端应用程序使用生成的代理类与服务通信。[如何：使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)中对此过程进行了描述。  
+ <span data-ttu-id="a2965-113">客户端应用程序使用生成的代理类与服务通信。</span><span class="sxs-lookup"><span data-stu-id="a2965-113">The client application uses the generated proxy class to communicate with the service.</span></span> <span data-ttu-id="a2965-114">中介绍了此过程[如何： 使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。</span><span class="sxs-lookup"><span data-stu-id="a2965-114">This procedure is described in [How to: Use a Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).</span></span>  
   
-### 创建 Windows Communication Foundation 客户端  
+### <a name="to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="a2965-115">创建 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="a2965-115">To create a Windows Communication Foundation client</span></span>  
   
-1.  通过右击入门解决方案，依次选择**“添加”**、**“新项目”**，创建新的控制台应用程序项目。在对话框左侧的**“添加新项目”** 对话框中，在**“C\#”**或**“VB”**下选择**“Windows”**。在对话框中的中心部分中选择**“控制台应用程序”**。为项目 `GettingStartedClient` 命名。  
+1.  <span data-ttu-id="a2965-116">通过右键单击入门解决方案，依次选择创建新的控制台应用程序项目**添加**，**新项目**。</span><span class="sxs-lookup"><span data-stu-id="a2965-116">Create a new console application project by right-clicking on the Getting Started solution, selecting, **Add**, **New Project**.</span></span> <span data-ttu-id="a2965-117">在**添加新项目**对话框中的，在对话框中，选择左侧**Windows**下**C#**或**VB**。</span><span class="sxs-lookup"><span data-stu-id="a2965-117">In the **Add New Project** dialog on the left hand side of the dialog select **Windows** under **C#** or **VB**.</span></span> <span data-ttu-id="a2965-118">在对话框的中心部分选择**控制台应用程序**。</span><span class="sxs-lookup"><span data-stu-id="a2965-118">In the center section of the dialog select **Console Application**.</span></span> <span data-ttu-id="a2965-119">将项目命名为 `GettingStartedClient`。</span><span class="sxs-lookup"><span data-stu-id="a2965-119">Name the project `GettingStartedClient`.</span></span>  
   
-2.  通过右击解决方案资源管理器中的**“GettingStartedClient”** 并选择**“属性”**，将 GettingStartedClient 项目的目标框架设置为 .NET Framework 4.5在标记的**“目标框架”**下拉框中，选择**“.NET Framework 4.5”**。设置 VB 项目的目标框架稍有不同，在 GettingStartedClient 项目属性对话框中，单击屏幕左侧的**“编译”**选项卡，然后单击对话框左下角的**“高级编译选项”**按钮。然后在标记的**“目标框架”**中选择**“.NET Framework 4.5”**。  
+2.  <span data-ttu-id="a2965-120">通过右键单击 GettingStartedClient 项目的目标框架设置为.NET Framework 4.5 **GettingStartedClient**在解决方案资源管理器并选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="a2965-120">Set the target framework of the GettingStartedClient project to .NET Framework 4.5 by right clicking on **GettingStartedClient** in the Solution Explorer and selecting **Properties**.</span></span> <span data-ttu-id="a2965-121">在下拉框中标记为**目标框架**选择**.NET Framework 4.5**。</span><span class="sxs-lookup"><span data-stu-id="a2965-121">In the dropdown box labeled **Target Framework** select **.NET Framework 4.5**.</span></span> <span data-ttu-id="a2965-122">为 VB 项目是稍有不同，在 GettingStartedClient 项目属性对话框，请设置目标框架，单击**编译**屏幕中，左侧选项卡，然后单击**高级编译选项**在对话框左下角的按钮。</span><span class="sxs-lookup"><span data-stu-id="a2965-122">Setting the target framework for a VB project is a little different, in the GettingStartedClient project properties dialog, click the **Compile** tab on the left-hand side of the screen, and then click the **Advanced Compile Options** button at the lower left-hand corner of the dialog.</span></span> <span data-ttu-id="a2965-123">然后选择**.NET Framework 4.5**的下拉框中标记为**目标框架**。</span><span class="sxs-lookup"><span data-stu-id="a2965-123">Then select **.NET Framework 4.5** in the dropdown box labeled **Target Framework**.</span></span>  
   
-     设置目标框架将导致 Visual Studio 2011 重新加载解决方案，在提示时按**“确定”**。  
+     <span data-ttu-id="a2965-124">设置目标框架将导致 Visual Studio 2011 重新加载解决方案，按**确定**出现提示时。</span><span class="sxs-lookup"><span data-stu-id="a2965-124">Setting the target framework will cause Visual Studio 2011 to reload the solution, press **OK** when prompted.</span></span>  
   
-3.  通过右击解决方案资源管理器中 GettingStartedClient 项目下的**“引用”**文件夹，并选择**“添加”**引用，将对 System.ServiceModel 的引用添加到 GettingStartedClient 项目。在**“添加引用”**对话框中，选择对话框左侧的**“框架”**。请在搜索程序集文本框中，键入 `System.ServiceModel`。在对话框中的中心部分，选择**“System.ServiceModel”**，单击**“添加”**按钮，然后单击**“关闭”**按钮。在主菜单中单击**“全部保存”**按钮保存解决方案。  
+3.  <span data-ttu-id="a2965-125">将对 System.ServiceModel 的引用添加到 GettingStartedClient 项目中，右键单击**引用**在解决方案资源管理器，选择 GettingStartedClient 项目下的文件夹**添加**引用。</span><span class="sxs-lookup"><span data-stu-id="a2965-125">Add a reference to System.ServiceModel to the GettingStartedClient project by right-clicking the **Reference** folder under the GettingStartedClient project in Solution Explorer and select **Add** Reference.</span></span> <span data-ttu-id="a2965-126">在**添加引用**对话框中，选择**Framework**在对话框的左侧。</span><span class="sxs-lookup"><span data-stu-id="a2965-126">In the **Add Reference** dialog select **Framework** on the left-hand side of the dialog.</span></span> <span data-ttu-id="a2965-127">请在“搜索程序集”文本框中，键入 `System.ServiceModel`。</span><span class="sxs-lookup"><span data-stu-id="a2965-127">In the Search Assemblies textbox, type in `System.ServiceModel`.</span></span> <span data-ttu-id="a2965-128">在对话框的中心部分选择**System.ServiceModel**，单击**添加**按钮，然后单击**关闭**按钮。</span><span class="sxs-lookup"><span data-stu-id="a2965-128">In the center section of the dialog select **System.ServiceModel**, click the **Add** button, and click the **Close** button.</span></span> <span data-ttu-id="a2965-129">通过单击保存解决方案**保存所有**主菜单下的按钮。</span><span class="sxs-lookup"><span data-stu-id="a2965-129">Save the solution by clicking the **Save All** button below the main menu.</span></span>  
   
-4.  接下来，将计算器服务添加到服务引用。在此之前，必须先启动 GettingStartedHost 控制台应用程序。主机运行后，可在解决方案资源管理器中的 GettingStartedClient 项目下右击引用文件夹，选择添加服务引用，并在添加服务引用对话框的地址框中键入以下 URL： http:\/\/localhost:8000\/ServiceModelSamples\/Service，然后单击**“转到”**按钮。然后，CalculatorService 应显示在服务列表框中，双击 CalculatorService，然后它将展开并显示由该服务实现的服务协定。原样保留默认命名空间，并单击**“确定”**按钮。  
+4.  <span data-ttu-id="a2965-130">接下来，将服务引用添加到计算器服务。</span><span class="sxs-lookup"><span data-stu-id="a2965-130">Next you wlll add a service reference to the Calculator Service.</span></span> <span data-ttu-id="a2965-131">在此之前，必须先启动 GettingStartedHost 控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="a2965-131">Before you can do that, you must start up the GettingStartedHost console application.</span></span> <span data-ttu-id="a2965-132">主机运行后，你可右键单击解决方案资源管理器中 GettingStartedClient 项目下的引用文件夹，并选择添加服务引用对话框的地址框中的以下 URL 中添加服务引用和类型： 超链接"http:// localhost:8000/ServiceModelSamples/Service": //localhost: 8000/ServiceModelSamples/Service，然后单击**转**按钮。</span><span class="sxs-lookup"><span data-stu-id="a2965-132">Once the host is running you can right click the References folder under the GettingStartedClient project in the Solution Explorer and select Add Service Reference and type in the following URL in the address box of the Add Service Reference dialog:  HYPERLINK "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service and   click the **Go** button.</span></span> <span data-ttu-id="a2965-133">然后，CalculatorService 应显示在“服务”列表框中，双击 CalculatorService，然后它将展开并显示由该服务实现的服务协定。</span><span class="sxs-lookup"><span data-stu-id="a2965-133">The CalculatorService should then be displayed in the Services list box, Double click CalculatorService and it will expand and show the service contracts implemented by the service.</span></span> <span data-ttu-id="a2965-134">保留默认命名空间，并且单击**确定**按钮。</span><span class="sxs-lookup"><span data-stu-id="a2965-134">Leave the default namespace as is and click the **OK** button.</span></span>  
   
-     使用 Visual Studio 将引用添加到服务时，解决方案资源管理器中 GettingStartedClient 项目下的服务引用文件夹下将显示新项。如果使用[ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具将，将生成一个源代码文件和 app.config 文件。  
+     <span data-ttu-id="a2965-135">使用 Visual Studio 将引用添加到服务时，解决方案资源管理器中 GettingStartedClient 项目下的“服务引用”文件夹下将显示一个新项。</span><span class="sxs-lookup"><span data-stu-id="a2965-135">When you add a reference to a service using Visual Studio a new item will appear in the Solution Explorer under the Service References folder under the GettingStartedClient project.</span></span>  <span data-ttu-id="a2965-136">如果你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具将生成一个源代码文件和 app.config 文件。</span><span class="sxs-lookup"><span data-stu-id="a2965-136">If you use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool a source code file and app.config file will be generated.</span></span>  
   
-     也可将命令行工具[ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 与适当的开关一起使用以创建客户端代码。下面的示例生成服务的代码文件和配置文件。第一个示例显示如何以 VB 生成代理，第二个示例显示如何以 C\# 生成代理：  
+     <span data-ttu-id="a2965-137">你还可以使用命令行工具[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)与相应的开关来创建客户端代码。</span><span class="sxs-lookup"><span data-stu-id="a2965-137">You can also use the command-line tool [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) with the appropriate switches to create the client code.</span></span> <span data-ttu-id="a2965-138">下面的示例生成服务的代码文件和配置文件。</span><span class="sxs-lookup"><span data-stu-id="a2965-138">The following example generates a code file and a configuration file for the service.</span></span> <span data-ttu-id="a2965-139">第一个示例显示如何在 VB 中生成代理，第二个示例显示如何在 C# 中生成代理：</span><span class="sxs-lookup"><span data-stu-id="a2965-139">The first example shows how to generate the proxy in VB and the second shows how to generated the proxy in C#:</span></span>  
   
     ```  
     svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service  
-  
     ```  
   
     ```csharp  
     svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service  
-  
     ```  
   
- 现在，您已创建了客户端应用程序将用于调用计数器服务的代理。继续该系列中的下一主题：[如何：配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ <span data-ttu-id="a2965-140">现在，您已创建了客户端应用程序将用于调用计算器服务的代理。</span><span class="sxs-lookup"><span data-stu-id="a2965-140">You have now created the proxy that the client application will use to call the calculator service.</span></span> <span data-ttu-id="a2965-141">继续执行下一主题序列中：[如何： 配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)</span><span class="sxs-lookup"><span data-stu-id="a2965-141">Proceed to the next topic in the series: [How to: Configure a Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)</span></span>  
   
-## 请参阅  
- [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [自承载](../../../docs/framework/wcf/samples/self-host.md)   
- [如何：使用配置文件发布服务的元数据](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [如何：使用 Svcutil.exe 下载元数据文档](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+## <a name="see-also"></a><span data-ttu-id="a2965-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a2965-142">See Also</span></span>  
+ [<span data-ttu-id="a2965-143">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="a2965-143">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="a2965-144">入门</span><span class="sxs-lookup"><span data-stu-id="a2965-144">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="a2965-145">自承载</span><span class="sxs-lookup"><span data-stu-id="a2965-145">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)  
+ [<span data-ttu-id="a2965-146">如何： 使用配置文件为服务中发布元数据</span><span class="sxs-lookup"><span data-stu-id="a2965-146">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="a2965-147">如何： 使用 Svcutil.exe 下载元数据文档</span><span class="sxs-lookup"><span data-stu-id="a2965-147">How to: Use Svcutil.exe to Download Metadata Documents</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

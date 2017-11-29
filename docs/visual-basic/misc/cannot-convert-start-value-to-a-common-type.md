@@ -1,25 +1,27 @@
 ---
-title: "无法将类型“&lt;type1&gt;”的起始值、“&lt;type2&gt;”的限制值和“&lt;type3&gt;”的步长值转换为常用类型 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrForLoop_CommonType3"
+title: "无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39;，限制值的 &#39;&lt;type2&gt;&#39; 和步长值的 &#39;&lt;type3&gt;&#39; 为通用类型"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 08bee0060898fce5db9404162a4cdea2e9e59774
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 无法将类型“&lt;type1&gt;”的起始值、“&lt;type2&gt;”的限制值和“&lt;type3&gt;”的步长值转换为常用类型
-指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a><span data-ttu-id="fad05-102">无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39;，限制值的 &#39;&lt;type2&gt;&#39; 和步长值的 &#39;&lt;type3&gt;&#39; 为通用类型</span><span class="sxs-lookup"><span data-stu-id="fad05-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39;, limit value of &#39;&lt;type2&gt;&#39; and step value of &#39;&lt;type3&gt;&#39; to a common type</span></span>
+<span data-ttu-id="fad05-103">指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。</span><span class="sxs-lookup"><span data-stu-id="fad05-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fad05-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="fad05-104">To correct this error</span></span>  
   
-1.  更改一个或多个值的类型，以便所有值都可以转换为常用类型。  
+1.  <span data-ttu-id="fad05-105">更改一个或多个值的类型，以便所有值都可以转换为常用类型。</span><span class="sxs-lookup"><span data-stu-id="fad05-105">Change the type of one or more of the values so all can be converted to a common type.</span></span>  
   
-## 请参阅  
- [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/zh-cn/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next 语句](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="fad05-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fad05-106">See Also</span></span>  
+ [<span data-ttu-id="fad05-107">调试在 Visual Basic.NET 中的更改</span><span class="sxs-lookup"><span data-stu-id="fad05-107">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [<span data-ttu-id="fad05-108">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="fad05-108">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)

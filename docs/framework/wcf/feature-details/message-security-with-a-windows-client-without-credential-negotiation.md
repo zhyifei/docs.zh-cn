@@ -1,68 +1,74 @@
 ---
-title: "没有凭据协商的 Windows 客户端的消息安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "没有凭据协商的 Windows 客户端的消息安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 943e3f32334bbf5746d3730f34371793bbd2754c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 没有凭据协商的 Windows 客户端的消息安全
-下面的方案演示了由 Kerberos 协议保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。  
+# <a name="message-security-with-a-windows-client-without-credential-negotiation"></a><span data-ttu-id="b71c9-102">没有凭据协商的 Windows 客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="b71c9-102">Message Security with a Windows Client without Credential Negotiation</span></span>
+<span data-ttu-id="b71c9-103">下面的方案演示了由 Kerberos 协议保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="b71c9-103">The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client and service secured by the Kerberos protocol.</span></span>  
   
- 服务和客户端位于相同的域或可信域。  
-  
-> [!NOTE]
->  此方案与 [Windows 客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)之间的区别在于，此方案在发送应用程序消息前并不与服务协商服务凭据。  此外，由于这需要 Kerberos 协议，所以此方案需要一个 Windows 域环境。  
-  
- ![无凭据协商的消息安全](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa\-2439\-4ef9\-92f4\-43c242d85d0d")  
-  
-|特征|描述|  
-|--------|--------|  
-|安全模式|消息|  
-|互操作性|是，WS\-Security 使用 Kerberos 令牌配置文件兼容的客户端|  
-|身份验证（服务器）|服务器和客户端的相互身份验证|  
-|身份验证（客户端）|服务器和客户端的相互身份验证|  
-|完整性|是|  
-|保密性|是|  
-|传输|HTTP|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding>|  
-  
-## 服务  
- 下面的代码和配置应独立运行。  执行下列操作之一：  
-  
--   使用代码（而不使用配置）创建独立服务。  
-  
--   使用提供的配置创建服务，但不定义任何终结点。  
-  
-### 代码  
- 下面的代码创建使用消息安全的服务终结点。  代码禁用了服务凭据协商并禁止建立安全上下文令牌 \(SCT\)。  
+ <span data-ttu-id="b71c9-104">服务和客户端位于相同的域或可信域。</span><span class="sxs-lookup"><span data-stu-id="b71c9-104">Both the service and the client are in the same domain or trusted domains.</span></span>  
   
 > [!NOTE]
->  若要使用没有协商的 Windows 凭据类型，则服务的用户帐户必须能够访问在 Active Directory 域注册的服务主体名称 \(SPN\)。  可以通过以下两种方式执行此操作：  
+>  <span data-ttu-id="b71c9-105">此方案之间的差异和[使用 Windows 客户端的消息安全](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)是这种情况下不协商服务凭据与在发送应用程序消息之前服务。</span><span class="sxs-lookup"><span data-stu-id="b71c9-105">The difference between this scenario and [Message Security with a Windows Client](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) is that this scenario does not negotiate the service credential with the service prior to sending the application message.</span></span> <span data-ttu-id="b71c9-106">此外，由于这需要 Kerberos 协议，所以此方案需要一个 Windows 域环境。</span><span class="sxs-lookup"><span data-stu-id="b71c9-106">Additionally, because this requires the Kerberos protocol, this scenario requires a Windows domain environment.</span></span>  
   
-1.  使用 `NetworkService` 或 `LocalSystem` 帐户运行服务。  由于这些帐户能够访问在计算机连接 Active Directory 域时建立的计算机 SPN，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将自动在服务的元数据（Web 服务描述语言 \(WSDL\)）中的该服务终结点内生成正确的 SPN 元素。  
+ <span data-ttu-id="b71c9-107">![消息无凭据协商的安全](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")</span><span class="sxs-lookup"><span data-stu-id="b71c9-107">![Message security without credential negotiation](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")</span></span>  
   
-2.  使用任意 Active Directory 域帐户运行服务。  在这种情况下，您需要为该域帐户建立一个 SPN。  执行此操作的一种方法是使用 Setspn.exe 实用工具。  为该服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 \(WSDL\) 将该 SPN 发布到服务的客户端。  通过为公开的终结点设置终结点标识（或通过应用程序配置文件或代码）也可完成此操作。  下面的示例以编程方式发布标识。  
+|<span data-ttu-id="b71c9-108">特征</span><span class="sxs-lookup"><span data-stu-id="b71c9-108">Characteristic</span></span>|<span data-ttu-id="b71c9-109">描述</span><span class="sxs-lookup"><span data-stu-id="b71c9-109">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="b71c9-110">安全模式</span><span class="sxs-lookup"><span data-stu-id="b71c9-110">Security Mode</span></span>|<span data-ttu-id="b71c9-111">消息</span><span class="sxs-lookup"><span data-stu-id="b71c9-111">Message</span></span>|  
+|<span data-ttu-id="b71c9-112">互操作性</span><span class="sxs-lookup"><span data-stu-id="b71c9-112">Interoperability</span></span>|<span data-ttu-id="b71c9-113">是，WS-Security 使用 Kerberos 令牌配置文件兼容的客户端</span><span class="sxs-lookup"><span data-stu-id="b71c9-113">Yes, WS-Security with Kerberos token-profile compatible clients</span></span>|  
+|<span data-ttu-id="b71c9-114">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="b71c9-114">Authentication (Server)</span></span>|<span data-ttu-id="b71c9-115">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="b71c9-115">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="b71c9-116">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="b71c9-116">Authentication (Client)</span></span>|<span data-ttu-id="b71c9-117">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="b71c9-117">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="b71c9-118">完整性</span><span class="sxs-lookup"><span data-stu-id="b71c9-118">Integrity</span></span>|<span data-ttu-id="b71c9-119">是</span><span class="sxs-lookup"><span data-stu-id="b71c9-119">Yes</span></span>|  
+|<span data-ttu-id="b71c9-120">保密性</span><span class="sxs-lookup"><span data-stu-id="b71c9-120">Confidentiality</span></span>|<span data-ttu-id="b71c9-121">是</span><span class="sxs-lookup"><span data-stu-id="b71c9-121">Yes</span></span>|  
+|<span data-ttu-id="b71c9-122">传输</span><span class="sxs-lookup"><span data-stu-id="b71c9-122">Transport</span></span>|<span data-ttu-id="b71c9-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="b71c9-123">HTTP</span></span>|  
+|<span data-ttu-id="b71c9-124">绑定</span><span class="sxs-lookup"><span data-stu-id="b71c9-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SPN、Kerberos 协议和 Active Directory 的更多信息，请参见[面向 Windows 的 Kerberos 技术补充](http://go.microsoft.com/fwlink/?LinkId=88330)（可能为英文网页）。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]终结点标识的更多信息，请参见[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+## <a name="service"></a><span data-ttu-id="b71c9-125">服务</span><span class="sxs-lookup"><span data-stu-id="b71c9-125">Service</span></span>  
+ <span data-ttu-id="b71c9-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="b71c9-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b71c9-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="b71c9-127">Do one of the following:</span></span>  
+  
+-   <span data-ttu-id="b71c9-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="b71c9-128">Create a stand-alone service using the code with no configuration.</span></span>  
+  
+-   <span data-ttu-id="b71c9-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="b71c9-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+  
+### <a name="code"></a><span data-ttu-id="b71c9-130">代码</span><span class="sxs-lookup"><span data-stu-id="b71c9-130">Code</span></span>  
+ <span data-ttu-id="b71c9-131">下面的代码创建使用消息安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="b71c9-131">The following code creates a service endpoint that uses message security.</span></span> <span data-ttu-id="b71c9-132">代码禁用了服务凭据协商并禁止建立安全上下文令牌 (SCT)。</span><span class="sxs-lookup"><span data-stu-id="b71c9-132">The code disables service credential negotiation, and the establishment of a security context token (SCT).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="b71c9-133">若要使用没有协商的 Windows 凭据类型，则服务的用户帐户必须能够访问在 Active Directory 域注册的服务主体名称 (SPN)。</span><span class="sxs-lookup"><span data-stu-id="b71c9-133">To use the Windows credential type without negotiation, the service's user account must have access to service principal name (SPN) that is registered with the Active Directory domain.</span></span> <span data-ttu-id="b71c9-134">可以通过以下两种方式执行此操作：</span><span class="sxs-lookup"><span data-stu-id="b71c9-134">You can do this in two ways:</span></span>  
+  
+1.  <span data-ttu-id="b71c9-135">使用 `NetworkService` 或 `LocalSystem` 帐户运行服务。</span><span class="sxs-lookup"><span data-stu-id="b71c9-135">Use the `NetworkService` or `LocalSystem` account to run your service.</span></span> <span data-ttu-id="b71c9-136">由于这些帐户能够访问在计算机连接 Active Directory 域时建立的计算机 SPN，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将自动在服务的元数据（Web 服务描述语言 (WSDL)）中的该服务终结点内生成正确的 SPN 元素。</span><span class="sxs-lookup"><span data-stu-id="b71c9-136">Because those accounts have access to the machine SPN that is established when the machine joins the Active Directory domain, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically generates the proper SPN element inside the service's endpoint in the service's metadata (Web Services Description Language, or WSDL).</span></span>  
+  
+2.  <span data-ttu-id="b71c9-137">使用任意 Active Directory 域帐户运行服务。</span><span class="sxs-lookup"><span data-stu-id="b71c9-137">Use an arbitrary Active Directory domain account to run your service.</span></span> <span data-ttu-id="b71c9-138">在这种情况下，您需要为该域帐户建立一个 SPN。</span><span class="sxs-lookup"><span data-stu-id="b71c9-138">In this case, you need to establish an SPN for that domain account.</span></span> <span data-ttu-id="b71c9-139">执行此操作的一种方法是使用 Setspn.exe 实用工具。</span><span class="sxs-lookup"><span data-stu-id="b71c9-139">One way of doing this is to use the Setspn.exe utility tool.</span></span> <span data-ttu-id="b71c9-140">为该服务的帐户创建 SPN 后，配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以通过服务的元数据 (WSDL) 将该 SPN 发布到服务的客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-140">Once the SPN is created for the service's account, configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to publish that SPN to the service's clients through its metadata (WSDL).</span></span> <span data-ttu-id="b71c9-141">通过为公开的终结点设置终结点标识（或通过应用程序配置文件或代码）也可完成此操作。</span><span class="sxs-lookup"><span data-stu-id="b71c9-141">This is done by setting the endpoint identity for the exposed endpoint, either though an application configuration file or code.</span></span> <span data-ttu-id="b71c9-142">下面的示例以编程方式发布标识。</span><span class="sxs-lookup"><span data-stu-id="b71c9-142">The following example publishes the identity programmatically.</span></span>  
+  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b71c9-143">Spn、 Kerberos 协议和 Active Directory，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。</span><span class="sxs-lookup"><span data-stu-id="b71c9-143"> SPNs, the Kerberos protocol, and Active Directory, see [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=88330).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b71c9-144">终结点标识，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。</span><span class="sxs-lookup"><span data-stu-id="b71c9-144"> endpoint identities, see [SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span></span>  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
   
-### 配置  
- 以下配置可代替代码使用。  
+### <a name="configuration"></a><span data-ttu-id="b71c9-145">配置</span><span class="sxs-lookup"><span data-stu-id="b71c9-145">Configuration</span></span>  
+ <span data-ttu-id="b71c9-146">以下配置可代替代码使用。</span><span class="sxs-lookup"><span data-stu-id="b71c9-146">The following configuration can be used instead of the code.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -96,31 +102,31 @@ caps.handback.revision: 18
 </configuration>  
 ```  
   
-## 客户端  
- 下面的代码和配置应独立运行。  执行下列操作之一：  
+## <a name="client"></a><span data-ttu-id="b71c9-147">客户端</span><span class="sxs-lookup"><span data-stu-id="b71c9-147">Client</span></span>  
+ <span data-ttu-id="b71c9-148">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="b71c9-148">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b71c9-149">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="b71c9-149">Do one of the following:</span></span>  
   
--   使用代码（和客户端代码）创建独立客户端。  
+-   <span data-ttu-id="b71c9-150">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-150">Create a stand-alone client using the code (and client code).</span></span>  
   
--   创建不定义任何终结点地址的客户端。  而使用将配置名称作为参数的客户端构造函数。  例如：  
+-   <span data-ttu-id="b71c9-151">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-151">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="b71c9-152">而使用将配置名称作为参数的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="b71c9-152">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="b71c9-153">例如：</span><span class="sxs-lookup"><span data-stu-id="b71c9-153">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### 代码  
- 下面的代码将配置客户端。  安全模式设置为 Message，客户端凭据类型设置为 Windows。  请注意，<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。  
+### <a name="code"></a><span data-ttu-id="b71c9-154">代码</span><span class="sxs-lookup"><span data-stu-id="b71c9-154">Code</span></span>  
+ <span data-ttu-id="b71c9-155">下面的代码将配置客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-155">The following code configures the client.</span></span> <span data-ttu-id="b71c9-156">安全模式设置为 Message，客户端凭据类型设置为 Windows。</span><span class="sxs-lookup"><span data-stu-id="b71c9-156">The security mode is set to Message, and the client credential type is set to Windows.</span></span> <span data-ttu-id="b71c9-157">请注意，<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="b71c9-157">Note that the <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> and <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> properties are set to `false`.</span></span>  
   
 > [!NOTE]
->  若要使用没有协商的 Windows 凭据类型，则必须在开始与服务进行通信前使用服务的帐户 SPN 配置客户端。  客户端使用 SPN 获取 Kerberos 令牌对与服务的通信进行身份验证和保护。  下面的示例演示如何使用服务的 SPN 配置客户端。  如果使用 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 生成客户端，则服务的 SPN 将自动从服务的元数据 \(WSDL\) 传播到客户端（如果服务的元数据包含该信息）。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何将服务配置为在服务的元数据中包含服务的 SPN 的更多信息，请参见本主题后面的“服务”部分。  
+>  <span data-ttu-id="b71c9-158">若要使用没有协商的 Windows 凭据类型，则必须在开始与服务进行通信前使用服务的帐户 SPN 配置客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-158">To use Windows credential type without negotiation, the client must be configured with the service's account SPN prior to commencing the communication with the service.</span></span> <span data-ttu-id="b71c9-159">客户端使用 SPN 获取 Kerberos 令牌对与服务的通信进行身份验证和保护。</span><span class="sxs-lookup"><span data-stu-id="b71c9-159">The client uses the SPN to get the Kerberos token to authenticate and secure the communication with the service.</span></span> <span data-ttu-id="b71c9-160">下面的示例演示如何使用服务的 SPN 配置客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-160">The following sample shows how to configure the client with the service's SPN.</span></span> <span data-ttu-id="b71c9-161">如果你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要生成客户端，服务的 SPN 将自动传播到客户端从服务的元数据 (WSDL)，如果服务的元数据包含该信息。</span><span class="sxs-lookup"><span data-stu-id="b71c9-161">If you are using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the client, the service's SPN will be automatically propagated to the client from the service's metadata (WSDL), if the service's metadata contains that information.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b71c9-162">如何将服务配置为在服务的元数据中包含服务的 SPN 的更多信息，请参见本主题后面的“服务”部分。</span><span class="sxs-lookup"><span data-stu-id="b71c9-162"> how to configure the service to include its SPN in the service's metadata, see the "Service" section later in this topic .</span></span>  
 >   
->  有关 SPN、Kerberos 和 Active Directory 的更多信息，请参见[面向 Windows 的 Kerberos 技术补充](http://go.microsoft.com/fwlink/?LinkId=88330)（可能为英文网页）。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]终结点标识的更多信息，请参见 [SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主题。  
+>  <span data-ttu-id="b71c9-163">有关 Spn、 Kerberos 和 Active Directory 的详细信息，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkId=88330)。</span><span class="sxs-lookup"><span data-stu-id="b71c9-163">For more information about SPNs, Kerberos, and Active Directory, see [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=88330).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b71c9-164">终结点标识，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主题。</span><span class="sxs-lookup"><span data-stu-id="b71c9-164"> endpoint identities, see [SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) topic.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
-### 配置  
- 下面的代码将配置客户端。  请注意，必须将 [\<servicePrincipalName\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 元素设置为与在 Active Directory 域中为服务帐户注册的服务 SPN 相匹配。  
+### <a name="configuration"></a><span data-ttu-id="b71c9-165">配置</span><span class="sxs-lookup"><span data-stu-id="b71c9-165">Configuration</span></span>  
+ <span data-ttu-id="b71c9-166">下面的代码将配置客户端。</span><span class="sxs-lookup"><span data-stu-id="b71c9-166">The following code configures the client.</span></span> <span data-ttu-id="b71c9-167">请注意， [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素必须设置为与为 Active Directory 域中的服务的帐户注册服务的 SPN 匹配。</span><span class="sxs-lookup"><span data-stu-id="b71c9-167">Note that the [\<servicePrincipalName>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) element must be set to match the service's SPN as registered for the service's account in the Active Directory domain.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -150,7 +156,7 @@ caps.handback.revision: 18
 </configuration>  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Windows Server App Fabric 的安全模型 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="b71c9-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b71c9-168">See Also</span></span>  
+ [<span data-ttu-id="b71c9-169">安全性概述</span><span class="sxs-lookup"><span data-stu-id="b71c9-169">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="b71c9-170">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="b71c9-170">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="b71c9-171">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="b71c9-171">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

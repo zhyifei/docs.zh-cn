@@ -1,49 +1,53 @@
 ---
-title: "如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], LinkLabel 控件"
-  - "链接, 到其他窗体"
-  - "LinkLabel 控件 [Windows 窗体], 示例"
-  - "LinkLabel 控件 [Windows 窗体], 链接到对象或网页"
-  - "链接, 到其他窗体"
-  - "网页链接控件"
-  - "Windows 窗体, 链接到对象"
-  - "Windows 窗体, 链接到网页"
+title: "如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Windows Forms, linking to objects
+- Web page link control
+- linking [Windows Forms], to other forms
+- Windows Forms, linking to Web pages
+- links [Windows Forms], to other forms
+- LinkLabel control [Windows Forms], linking to object or Web page
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页
-Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体上创建 Web 样式的链接。  单击链接后，可以更改链接的颜色来指示该链接已被访问。  有关更改颜色的更多信息，请参见 [如何：更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a><span data-ttu-id="ca61c-102">如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页</span><span class="sxs-lookup"><span data-stu-id="ca61c-102">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="ca61c-103">Windows 窗体<xref:System.Windows.Forms.LinkLabel>控制可以在你的窗体上创建 Web 样式的链接。</span><span class="sxs-lookup"><span data-stu-id="ca61c-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to create Web-style links on your form.</span></span> <span data-ttu-id="ca61c-104">单击该链接后，你可以更改其颜色来表示访问链接。</span><span class="sxs-lookup"><span data-stu-id="ca61c-104">When the link is clicked, you can change its color to indicate the link has been visited.</span></span> <span data-ttu-id="ca61c-105">将颜色更改的详细信息，请参阅[如何： 更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。</span><span class="sxs-lookup"><span data-stu-id="ca61c-105">For more information on changing the color, see [How to: Change the Appearance of the Windows Forms LinkLabel Control](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span></span>  
   
-## 链接到另一个窗体  
+## <a name="linking-to-another-form"></a><span data-ttu-id="ca61c-106">将链接到另一个窗体</span><span class="sxs-lookup"><span data-stu-id="ca61c-106">Linking to Another Form</span></span>  
   
-#### 使用 LinkLabel 控件链接到另一个窗体  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a><span data-ttu-id="ca61c-107">若要链接到另一个窗体 LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="ca61c-107">To link to another form with a LinkLabel control</span></span>  
   
-1.  将 <xref:System.Windows.Forms.LinkLabel.Text%2A> 属性设置为相应的标题。  
+1.  <span data-ttu-id="ca61c-108">设置<xref:System.Windows.Forms.LinkLabel.Text%2A>为适当标题的属性。</span><span class="sxs-lookup"><span data-stu-id="ca61c-108">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  设置 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 属性，以确定将标题的哪一部分作为链接。  指示的方式取决于该链接标签与外观相关的属性。  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 值是用包含两个数字的 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 对象表示的，这两个数字分别表示起始字符位置和字符数目。  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 属性可以在“属性”窗口中设置，也可以在代码中按类似下面的方式设置：  
+2.  <span data-ttu-id="ca61c-109">设置<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>属性来确定哪个部分的标题将指示的链接的形式。</span><span class="sxs-lookup"><span data-stu-id="ca61c-109">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span> <span data-ttu-id="ca61c-110">指示方式取决于的链接标签的外观相关的属性。</span><span class="sxs-lookup"><span data-stu-id="ca61c-110">How it is indicated depends on the appearance-related properties of the link label.</span></span> <span data-ttu-id="ca61c-111"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A>表示值<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>对象，其中包含两个数字、 起始字符位置和字符数。</span><span class="sxs-lookup"><span data-stu-id="ca61c-111">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented by a <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> object containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="ca61c-112"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A>属性可以在属性窗口或在代码中的方式类似于以下设置：</span><span class="sxs-lookup"><span data-stu-id="ca61c-112">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property can be set in the Properties window or in code in a manner similar to the following:</span></span>  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
     ' at the first character and extend for eight characters.  
     ' You may need to modify this based on the text entered in Step 1.  
     LinkLabel1.LinkArea = New LinkArea(0, 8)  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
     // at the first character and extend for eight characters.  
     // You may need to modify this based on the text entered in Step 1.  
     linkLabel1.LinkArea = new LinkArea(0,8);  
-  
     ```  
   
     ```cpp  
@@ -61,10 +64,10 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  在 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 事件处理程序中，调用 <xref:System.Windows.Forms.Form.Show%2A> 方法以打开项目中的另一个窗体，并将 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 属性设置为 `true`。  
+3.  <span data-ttu-id="ca61c-113">在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件处理程序调用<xref:System.Windows.Forms.Form.Show%2A>方法以在项目中，打开另一个窗体，并设置<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="ca61c-113">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, invoke the <xref:System.Windows.Forms.Form.Show%2A> method to open another form in the project, and set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> 类的实例具有对已单击的 <xref:System.Windows.Forms.LinkLabel> 控件的引用，因此不需要强制转换`sender` 对象。  
+    >  <span data-ttu-id="ca61c-114">实例<xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>类执行的引用<xref:System.Windows.Forms.LinkLabel>控件被单击，因此不需要强制转换`sender`对象。</span><span class="sxs-lookup"><span data-stu-id="ca61c-114">An instance of the <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> class carries a reference to the <xref:System.Windows.Forms.LinkLabel> control that was clicked, so there is no need to cast the `sender` object.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -75,7 +78,6 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        f2.Show  
        LinkLabel1.LinkVisited = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -86,7 +88,6 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        f2.Show();  
        linkLabel1.LinkVisited = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -101,19 +102,19 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        }  
     ```  
   
-## 链接到网页  
- <xref:System.Windows.Forms.LinkLabel> 控件还可用于使用默认浏览器显示网页。  
+## <a name="linking-to-a-web-page"></a><span data-ttu-id="ca61c-115">将链接到网页</span><span class="sxs-lookup"><span data-stu-id="ca61c-115">Linking to a Web Page</span></span>  
+ <span data-ttu-id="ca61c-116"><xref:System.Windows.Forms.LinkLabel>控件还可以用于显示具有默认浏览器的 Web 页。</span><span class="sxs-lookup"><span data-stu-id="ca61c-116">The <xref:System.Windows.Forms.LinkLabel> control can also be used to display a Web page with the default browser.</span></span>  
   
-#### 使用 LinkLabel 控件启动 Internet Explorer 并链接到 Web 页  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a><span data-ttu-id="ca61c-117">若要使用 LinkLabel 控件启动 Internet Explorer 并链接到网页</span><span class="sxs-lookup"><span data-stu-id="ca61c-117">To start Internet Explorer and link to a Web page with a LinkLabel control</span></span>  
   
-1.  将 <xref:System.Windows.Forms.LinkLabel.Text%2A> 属性设置为相应的标题。  
+1.  <span data-ttu-id="ca61c-118">设置<xref:System.Windows.Forms.LinkLabel.Text%2A>为适当标题的属性。</span><span class="sxs-lookup"><span data-stu-id="ca61c-118">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  设置 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 属性，以确定将标题的哪一部分作为链接。  
+2.  <span data-ttu-id="ca61c-119">设置<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>属性来确定哪个部分的标题将指示的链接的形式。</span><span class="sxs-lookup"><span data-stu-id="ca61c-119">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-3.  在 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 事件处理程序的异常处理块中间，调用将 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 属性设置为 `true` 的第二个过程，并使用 <xref:System.Diagnostics.Process.Start%2A> 方法和一个 URL 启动默认浏览器。  若要使用 <xref:System.Diagnostics.Process.Start%2A> 方法，需要添加对 <xref:System.Diagnostics?displayProperty=fullName> 命名空间的引用。  
+3.  <span data-ttu-id="ca61c-120">在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件处理程序，在过程中的异常处理块中，调用设置的第二个过程<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性`true`并使用<xref:System.Diagnostics.Process.Start%2A>方法以提供一个 URL 启动默认浏览器。</span><span class="sxs-lookup"><span data-stu-id="ca61c-120">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, in the midst of an exception-handling block, call a second procedure that sets the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true` and uses the <xref:System.Diagnostics.Process.Start%2A> method to start the default browser with a URL.</span></span> <span data-ttu-id="ca61c-121">若要使用<xref:System.Diagnostics.Process.Start%2A>方法需要添加对引用<xref:System.Diagnostics?displayProperty=nameWithType>命名空间。</span><span class="sxs-lookup"><span data-stu-id="ca61c-121">To use the <xref:System.Diagnostics.Process.Start%2A> method you need to add a reference to the <xref:System.Diagnostics?displayProperty=nameWithType> namespace.</span></span>  
   
     > [!IMPORTANT]
-    >  如果以下代码运行在部分信任的环境（如共享驱动器上）中，则在调用 `VisitLink` 方法时 JIT 编译器将失败。  `System.Diagnostics.Process.Start`语句生成失败的链接请求。  通过在调用 `VisitLink` 方法时捕获异常，以下代码可确保在 JIT 编译器失败时妥善处理错误。  
+    >  <span data-ttu-id="ca61c-122">如果在部分信任环境中运行下面的代码 (如共享驱动器上)，JIT 编译器失败时`VisitLink`调用方法。</span><span class="sxs-lookup"><span data-stu-id="ca61c-122">If the code below is run in a partial-trust environment (such as on a shared drive), the JIT compiler fails when the `VisitLink` method is called.</span></span> <span data-ttu-id="ca61c-123">`System.Diagnostics.Process.Start`语句会导致失败的链接要求。</span><span class="sxs-lookup"><span data-stu-id="ca61c-123">The `System.Diagnostics.Process.Start` statement causes a link demand that fails.</span></span> <span data-ttu-id="ca61c-124">通过捕获异常时`VisitLink`方法被调用时，下面的代码可确保如果 JIT 编译器失败，适当地处理错误。</span><span class="sxs-lookup"><span data-stu-id="ca61c-124">By catching the exception when the `VisitLink` method is called, the code below ensures that if the JIT compiler fails, the error is handled gracefully.</span></span>  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -135,7 +136,6 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        ' with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -160,7 +160,6 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        //with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com");  
     }  
-  
     ```  
   
     ```cpp  
@@ -189,8 +188,8 @@ Windows 窗体 <xref:System.Windows.Forms.LinkLabel> 控件使您可以在窗体
        }  
     ```  
   
-## 请参阅  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName>   
- [LinkLabel 控件概述](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)   
- [如何：更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)   
- [LinkLabel 控件](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ca61c-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ca61c-125">See Also</span></span>  
+ <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ca61c-126">LinkLabel 控件概述</span><span class="sxs-lookup"><span data-stu-id="ca61c-126">LinkLabel Control Overview</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="ca61c-127">如何：更改 Windows 窗体 LinkLabel 控件的外观</span><span class="sxs-lookup"><span data-stu-id="ca61c-127">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ [<span data-ttu-id="ca61c-128">LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="ca61c-128">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

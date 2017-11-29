@@ -1,14 +1,10 @@
 ---
 title: "-filealign（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /filealign
-dev_langs:
-- CSharp
+f1_keywords: /filealign
 helpviewer_keywords:
 - /alignment compiler option [C#]
 - filealign compiler option [C#]
@@ -22,63 +18,47 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b13dee0a221bc0b97349be5897a04188304ff16
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign（C# 编译器选项）
-**/filealign** 选项用于指定输出文件中各节的大小。  
+# <a name="filealign-c-compiler-options"></a><span data-ttu-id="e29a5-102">/filealign（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="e29a5-102">/filealign (C# Compiler Options)</span></span>
+<span data-ttu-id="e29a5-103">**/filealign** 选项用于指定输出文件中各节的大小。</span><span class="sxs-lookup"><span data-stu-id="e29a5-103">The **/filealign** option lets you specify the size of sections in your output file.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="e29a5-104">语法</span><span class="sxs-lookup"><span data-stu-id="e29a5-104">Syntax</span></span>  
   
 ```console  
 /filealign:number  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="e29a5-105">参数</span><span class="sxs-lookup"><span data-stu-id="e29a5-105">Arguments</span></span>  
  `number`  
- 一个值，用于指定输出文件中各节的大小。 有效值为 512、1024、2048、4096 和 8192。 这些值以字节为单位。  
+ <span data-ttu-id="e29a5-106">一个值，用于指定输出文件中各节的大小。</span><span class="sxs-lookup"><span data-stu-id="e29a5-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="e29a5-107">有效值为 512、1024、2048、4096 和 8192。</span><span class="sxs-lookup"><span data-stu-id="e29a5-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="e29a5-108">这些值以字节为单位。</span><span class="sxs-lookup"><span data-stu-id="e29a5-108">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a>备注  
- 每个节将在是 **/filealign** 值的倍数的边界上对齐。 没有固定的默认值。 如果未指定 **/filealign**，则公共语言运行时在编译时会选取一个默认值。  
+## <a name="remarks"></a><span data-ttu-id="e29a5-109">备注</span><span class="sxs-lookup"><span data-stu-id="e29a5-109">Remarks</span></span>  
+ <span data-ttu-id="e29a5-110">每个节将在是 **/filealign** 值的倍数的边界上对齐。</span><span class="sxs-lookup"><span data-stu-id="e29a5-110">Each section will be aligned on a boundary that is a multiple of the **/filealign** value.</span></span> <span data-ttu-id="e29a5-111">没有固定的默认值。</span><span class="sxs-lookup"><span data-stu-id="e29a5-111">There is no fixed default.</span></span> <span data-ttu-id="e29a5-112">如果未指定 **/filealign**，则公共语言运行时在编译时会选取一个默认值。</span><span class="sxs-lookup"><span data-stu-id="e29a5-112">If **/filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
   
- 通过指定节的大小，可以影响输出文件的大小。 修改节的大小可能对将在较小设备上运行的程序有用。  
+ <span data-ttu-id="e29a5-113">通过指定节的大小，可以影响输出文件的大小。</span><span class="sxs-lookup"><span data-stu-id="e29a5-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="e29a5-114">修改节的大小可能对将在较小设备上运行的程序有用。</span><span class="sxs-lookup"><span data-stu-id="e29a5-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
- 使用 [DUMPBIN](/cpp/build/reference/dumpbin-options) 可查看有关输出文件中各节的信息。  
+ <span data-ttu-id="e29a5-115">使用 [DUMPBIN](/cpp/build/reference/dumpbin-options) 可查看有关输出文件中各节的信息。</span><span class="sxs-lookup"><span data-stu-id="e29a5-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="e29a5-116">在 Visual Studio 开发环境中设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="e29a5-116">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  打开项目的“属性”页。  
+1.  <span data-ttu-id="e29a5-117">打开项目的“属性”页。</span><span class="sxs-lookup"><span data-stu-id="e29a5-117">Open the project's **Properties** page.</span></span>  
   
-2.  单击“生成”属性页。  
+2.  <span data-ttu-id="e29a5-118">单击“生成”属性页。</span><span class="sxs-lookup"><span data-stu-id="e29a5-118">Click the **Build** property page.</span></span>  
   
-3.  单击 **“高级”** 按钮。  
+3.  <span data-ttu-id="e29a5-119">单击 **“高级”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="e29a5-119">Click the **Advanced** button.</span></span>  
   
-4.  修改“文件对齐”属性。  
+4.  <span data-ttu-id="e29a5-120">修改“文件对齐”属性。</span><span class="sxs-lookup"><span data-stu-id="e29a5-120">Modify the **File Alignment** property.</span></span>  
   
- 有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
+ <span data-ttu-id="e29a5-121">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="e29a5-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="e29a5-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e29a5-122">See Also</span></span>  
+ [<span data-ttu-id="e29a5-123">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="e29a5-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="e29a5-124">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="e29a5-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

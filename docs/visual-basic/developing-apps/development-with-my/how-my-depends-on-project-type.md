@@ -1,92 +1,74 @@
 ---
-title: "我如何取决于项目类型 (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "My 对项目类型的依赖方式 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- _MYTYPE
+helpviewer_keywords: _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d193dade94980f04b31605ea6fa968f9fa7d0ad6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-my-depends-on-project-type-visual-basic"></a>My 对项目类型的依赖方式 (Visual Basic)
-`My`只公开这些对象所需的特定项目类型。 例如，`My.Forms`对象是在 Windows 窗体应用程序中可用，但在一个控制台应用程序中不可用。 本主题介绍其中`My`对象类型都提供不同的项目。  
+# <a name="how-my-depends-on-project-type-visual-basic"></a><span data-ttu-id="21ba1-102">My 对项目类型的依赖方式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21ba1-102">How My Depends on Project Type (Visual Basic)</span></span>
+<span data-ttu-id="21ba1-103">`My`公开特定项目类型所需的那些对象。</span><span class="sxs-lookup"><span data-stu-id="21ba1-103">`My` exposes only those objects required by a particular project type.</span></span> <span data-ttu-id="21ba1-104">例如，`My.Forms`对象是在 Windows 窗体应用程序中可用但在一个控制台应用程序中不可用。</span><span class="sxs-lookup"><span data-stu-id="21ba1-104">For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application.</span></span> <span data-ttu-id="21ba1-105">本主题介绍其中`My`对象可在不同项目类型。</span><span class="sxs-lookup"><span data-stu-id="21ba1-105">This topic describes which `My` objects are available in different project types.</span></span>  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>我在 Windows 应用程序和网站  
- `My`将在当前的项目类型; 非常有用的对象公开将禁止不适用的对象。 例如下, 图显示`My`Windows 窗体项目中的对象模型。  
+## <a name="my-in-windows-applications-and-web-sites"></a><span data-ttu-id="21ba1-106">我在 Windows 应用程序和网站</span><span class="sxs-lookup"><span data-stu-id="21ba1-106">My in Windows Applications and Web Sites</span></span>  
+ <span data-ttu-id="21ba1-107">`My`公开在当前的项目类型中; 很有用的对象将禁止不适用的对象。</span><span class="sxs-lookup"><span data-stu-id="21ba1-107">`My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable.</span></span> <span data-ttu-id="21ba1-108">例如下, 图显示`My`Windows 窗体项目中的对象模型。</span><span class="sxs-lookup"><span data-stu-id="21ba1-108">For example, the following image shows the `My` object model in a Windows Forms project.</span></span>  
   
- ![形状的我在 Windows 窗体应用程序中](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ <span data-ttu-id="21ba1-109">![形状我在 Windows 窗体应用程序中](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span><span class="sxs-lookup"><span data-stu-id="21ba1-109">![Shape of My in a Windows Forms application](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span></span>  
   
- 在网站项目中，`My`公开为 Web 开发人员相关的对象 (如`My.Request`和`My.Response`对象) 时禁止不相关的对象 (如`My.Forms`对象)。 下图显示`My`网站项目中的对象模型︰  
+ <span data-ttu-id="21ba1-110">在网站项目中，`My`公开与 Web 开发人员相关的对象 (如`My.Request`和`My.Response`对象) 时禁止显示不相关的对象 (如`My.Forms`对象)。</span><span class="sxs-lookup"><span data-stu-id="21ba1-110">In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object).</span></span> <span data-ttu-id="21ba1-111">下图显示`My`网站项目中的对象模型：</span><span class="sxs-lookup"><span data-stu-id="21ba1-111">The following image shows the `My` object model in a Web site project:</span></span>  
   
- ![形状的我的 Web 应用中](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ <span data-ttu-id="21ba1-112">![形状的我的 Web 应用中](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span><span class="sxs-lookup"><span data-stu-id="21ba1-112">![Shape of My in a Web application](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span></span>  
   
-## <a name="project-details"></a>项目详细信息  
- 下表显示了哪些`My`对象启用默认情况下了八个项目类型︰ Windows 应用程序、 类库、 控制台应用程序、 Windows 控件库、 Web 控件库、 Windows 服务、 为空和网站。  
+## <a name="project-details"></a><span data-ttu-id="21ba1-113">项目详细信息</span><span class="sxs-lookup"><span data-stu-id="21ba1-113">Project Details</span></span>  
+ <span data-ttu-id="21ba1-114">下表显示了哪些`My`对象启用默认情况下，为八个项目类型： Windows 应用程序、 类库、 控制台应用程序、 Windows 控件库，Web 控件库、 Windows 服务、 为空和网站。</span><span class="sxs-lookup"><span data-stu-id="21ba1-114">The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.</span></span>  
   
- 有三个版本的`My.Application`对象、 两个版本的`My.Computer`对象和两个版本的`My.User`对象; 在下表之后的批注中给出有关这些版本的详细信息。  
+ <span data-ttu-id="21ba1-115">有三种版本的`My.Application`对象、 两个版本的`My.Computer`对象，并且两个版本的`My.User`对象; 在表后的批注中给出有关这些版本的详细信息。</span><span class="sxs-lookup"><span data-stu-id="21ba1-115">There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.</span></span>  
   
-|My 对象|Windows 应用程序|类库|控制台应用程序|Windows 控件库|Web 控件库|Windows 服务|空|网站|  
+|<span data-ttu-id="21ba1-116">My 对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-116">My Object</span></span>|<span data-ttu-id="21ba1-117">Windows 应用程序</span><span class="sxs-lookup"><span data-stu-id="21ba1-117">Windows Application</span></span>|<span data-ttu-id="21ba1-118">类库</span><span class="sxs-lookup"><span data-stu-id="21ba1-118">Class Library</span></span>|<span data-ttu-id="21ba1-119">控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="21ba1-119">Console Application</span></span>|<span data-ttu-id="21ba1-120">Windows 控件库</span><span class="sxs-lookup"><span data-stu-id="21ba1-120">Windows Control Library</span></span>|<span data-ttu-id="21ba1-121">Web 控件库</span><span class="sxs-lookup"><span data-stu-id="21ba1-121">Web Control Library</span></span>|<span data-ttu-id="21ba1-122">Windows 服务</span><span class="sxs-lookup"><span data-stu-id="21ba1-122">Windows Service</span></span>|<span data-ttu-id="21ba1-123">空</span><span class="sxs-lookup"><span data-stu-id="21ba1-123">Empty</span></span>|<span data-ttu-id="21ba1-124">网站</span><span class="sxs-lookup"><span data-stu-id="21ba1-124">Web Site</span></span>|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|否|**Yes** <sup>3</sup>|否|否|  
-|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|否|**Yes** <sup>5</sup>|  
-|`My.Forms`|**是**|否|否|**是**|否|否|否|否|  
-|`My.Log`|否|否|否|否|否|否|否|**是**|  
-|`My.Request`|否|否|否|否|否|否|否|**是**|  
-|`My.Resources`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
-|`My.Response`|否|否|否|否|否|否|否|**是**|  
-|`My.Settings`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
-|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|否|**Yes** <sup>7</sup>|  
-|`My.WebServices`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
+|`My.Application`|<span data-ttu-id="21ba1-125">**是** <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-125">**Yes** <sup>1</sup></span></span>|<span data-ttu-id="21ba1-126">**是** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-126">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="21ba1-127">**是** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-127">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="21ba1-128">**是** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-128">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="21ba1-129">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-129">No</span></span>|<span data-ttu-id="21ba1-130">**是** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-130">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="21ba1-131">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-131">No</span></span>|<span data-ttu-id="21ba1-132">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-132">No</span></span>|  
+|`My.Computer`|<span data-ttu-id="21ba1-133">**是** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-133">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="21ba1-134">**是** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-134">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="21ba1-135">**是** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-135">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="21ba1-136">**是** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-136">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="21ba1-137">**是** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-137">**Yes** <sup>5</sup></span></span>|<span data-ttu-id="21ba1-138">**是** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-138">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="21ba1-139">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-139">No</span></span>|<span data-ttu-id="21ba1-140">**是** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-140">**Yes** <sup>5</sup></span></span>|  
+|`My.Forms`|<span data-ttu-id="21ba1-141">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-141">**Yes**</span></span>|<span data-ttu-id="21ba1-142">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-142">No</span></span>|<span data-ttu-id="21ba1-143">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-143">No</span></span>|<span data-ttu-id="21ba1-144">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-144">**Yes**</span></span>|<span data-ttu-id="21ba1-145">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-145">No</span></span>|<span data-ttu-id="21ba1-146">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-146">No</span></span>|<span data-ttu-id="21ba1-147">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-147">No</span></span>|<span data-ttu-id="21ba1-148">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-148">No</span></span>|  
+|`My.Log`|<span data-ttu-id="21ba1-149">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-149">No</span></span>|<span data-ttu-id="21ba1-150">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-150">No</span></span>|<span data-ttu-id="21ba1-151">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-151">No</span></span>|<span data-ttu-id="21ba1-152">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-152">No</span></span>|<span data-ttu-id="21ba1-153">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-153">No</span></span>|<span data-ttu-id="21ba1-154">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-154">No</span></span>|<span data-ttu-id="21ba1-155">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-155">No</span></span>|<span data-ttu-id="21ba1-156">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-156">**Yes**</span></span>|  
+|`My.Request`|<span data-ttu-id="21ba1-157">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-157">No</span></span>|<span data-ttu-id="21ba1-158">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-158">No</span></span>|<span data-ttu-id="21ba1-159">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-159">No</span></span>|<span data-ttu-id="21ba1-160">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-160">No</span></span>|<span data-ttu-id="21ba1-161">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-161">No</span></span>|<span data-ttu-id="21ba1-162">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-162">No</span></span>|<span data-ttu-id="21ba1-163">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-163">No</span></span>|<span data-ttu-id="21ba1-164">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-164">**Yes**</span></span>|  
+|`My.Resources`|<span data-ttu-id="21ba1-165">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-165">**Yes**</span></span>|<span data-ttu-id="21ba1-166">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-166">**Yes**</span></span>|<span data-ttu-id="21ba1-167">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-167">**Yes**</span></span>|<span data-ttu-id="21ba1-168">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-168">**Yes**</span></span>|<span data-ttu-id="21ba1-169">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-169">**Yes**</span></span>|<span data-ttu-id="21ba1-170">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-170">**Yes**</span></span>|<span data-ttu-id="21ba1-171">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-171">No</span></span>|<span data-ttu-id="21ba1-172">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-172">No</span></span>|  
+|`My.Response`|<span data-ttu-id="21ba1-173">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-173">No</span></span>|<span data-ttu-id="21ba1-174">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-174">No</span></span>|<span data-ttu-id="21ba1-175">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-175">No</span></span>|<span data-ttu-id="21ba1-176">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-176">No</span></span>|<span data-ttu-id="21ba1-177">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-177">No</span></span>|<span data-ttu-id="21ba1-178">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-178">No</span></span>|<span data-ttu-id="21ba1-179">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-179">No</span></span>|<span data-ttu-id="21ba1-180">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-180">**Yes**</span></span>|  
+|`My.Settings`|<span data-ttu-id="21ba1-181">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-181">**Yes**</span></span>|<span data-ttu-id="21ba1-182">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-182">**Yes**</span></span>|<span data-ttu-id="21ba1-183">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-183">**Yes**</span></span>|<span data-ttu-id="21ba1-184">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-184">**Yes**</span></span>|<span data-ttu-id="21ba1-185">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-185">**Yes**</span></span>|<span data-ttu-id="21ba1-186">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-186">**Yes**</span></span>|<span data-ttu-id="21ba1-187">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-187">No</span></span>|<span data-ttu-id="21ba1-188">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-188">No</span></span>|  
+|`My.User`|<span data-ttu-id="21ba1-189">**是** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-189">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="21ba1-190">**是** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-190">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="21ba1-191">**是** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-191">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="21ba1-192">**是** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-192">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="21ba1-193">**是** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-193">**Yes** <sup>7</sup></span></span>|<span data-ttu-id="21ba1-194">**是** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-194">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="21ba1-195">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-195">No</span></span>|<span data-ttu-id="21ba1-196">**是** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="21ba1-196">**Yes** <sup>7</sup></span></span>|  
+|`My.WebServices`|<span data-ttu-id="21ba1-197">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-197">**Yes**</span></span>|<span data-ttu-id="21ba1-198">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-198">**Yes**</span></span>|<span data-ttu-id="21ba1-199">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-199">**Yes**</span></span>|<span data-ttu-id="21ba1-200">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-200">**Yes**</span></span>|<span data-ttu-id="21ba1-201">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-201">**Yes**</span></span>|<span data-ttu-id="21ba1-202">**是**</span><span class="sxs-lookup"><span data-stu-id="21ba1-202">**Yes**</span></span>|<span data-ttu-id="21ba1-203">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-203">No</span></span>|<span data-ttu-id="21ba1-204">No</span><span class="sxs-lookup"><span data-stu-id="21ba1-204">No</span></span>|  
   
- <sup>1</sup>的 Windows 窗体版本`My.Application`。 派生自控制台版本 （请参阅备注 3）;添加对与应用程序的 windows 进行交互的支持，并提供[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]应用程序模型。  
+ <span data-ttu-id="21ba1-205"><sup>1</sup>的 Windows 窗体版本`My.Application`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-205"><sup>1</sup> Windows Forms version of `My.Application`.</span></span> <span data-ttu-id="21ba1-206">派生自控制台版本 （请参阅说明 3）;添加支持与应用程序的 windows 交互，并且提供[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]应用程序模型。</span><span class="sxs-lookup"><span data-stu-id="21ba1-206">Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model.</span></span>  
   
- <sup>2</sup> library 版本`My.Application`。 提供应用程序所需的基本功能︰ 提供用于写入应用程序日志和访问应用程序信息的成员。  
+ <span data-ttu-id="21ba1-207"><sup>2</sup>的库版本`My.Application`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-207"><sup>2</sup> Library version of `My.Application`.</span></span> <span data-ttu-id="21ba1-208">提供应用程序所需的基本功能： 用于写入应用程序日志，并访问应用程序信息的成员。</span><span class="sxs-lookup"><span data-stu-id="21ba1-208">Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.</span></span>  
   
- <sup>3</sup>的控制台版本`My.Application`。 派生自的库版本 （请参阅备注 2），并将其他成员添加用于访问应用程序的命令行参数和 ClickOnce 部署信息。  
+ <span data-ttu-id="21ba1-209"><sup>3</sup>控制台版本`My.Application`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-209"><sup>3</sup> Console version of `My.Application`.</span></span> <span data-ttu-id="21ba1-210">派生自的库版本 （请参阅备注 2），并将其他成员添加用于访问应用程序的命令行自变量和 ClickOnce 部署信息。</span><span class="sxs-lookup"><span data-stu-id="21ba1-210">Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.</span></span>  
   
- <sup>4</sup>的 Windows 版本`My.Computer`。 派生自的服务器版本 （请参阅备注 5），并在客户端计算机上，如键盘、 屏幕和鼠标提供对有用对象的访问。  
+ <span data-ttu-id="21ba1-211"><sup>4</sup>的 Windows 版本`My.Computer`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-211"><sup>4</sup> Windows version of `My.Computer`.</span></span> <span data-ttu-id="21ba1-212">派生自的服务器版本 （请参阅备注 5），并在客户端计算机上，例如键盘、 屏幕和鼠标提供有用的对象的访问权限。</span><span class="sxs-lookup"><span data-stu-id="21ba1-212">Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.</span></span>  
   
- <sup>5</sup>服务器版本`My.Computer`。 提供基本信息的计算机，如名称、 访问的时钟，依次类推。  
+ <span data-ttu-id="21ba1-213"><sup>5</sup>服务器版本`My.Computer`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-213"><sup>5</sup> Server version of `My.Computer`.</span></span> <span data-ttu-id="21ba1-214">提供计算机的信息，如名称、 访问的时钟和等等的基本信息。</span><span class="sxs-lookup"><span data-stu-id="21ba1-214">Provides basic information about the computer, such as the name, access to the clock, and so on.</span></span>  
   
- <sup>6</sup>的 Windows 版本`My.User`。 此对象是与线程的当前标识相关联。  
+ <span data-ttu-id="21ba1-215"><sup>6</sup>的 Windows 版本`My.User`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-215"><sup>6</sup> Windows version of `My.User`.</span></span> <span data-ttu-id="21ba1-216">此对象是与线程的当前标识相关联。</span><span class="sxs-lookup"><span data-stu-id="21ba1-216">This object is associated with the thread's current identity.</span></span>  
   
- <sup>7</sup> web 版本`My.User`。 此对象是与应用程序的当前 HTTP 请求的用户标识相关联。  
+ <span data-ttu-id="21ba1-217"><sup>7</sup> web 版本的`My.User`。</span><span class="sxs-lookup"><span data-stu-id="21ba1-217"><sup>7</sup> Web version of `My.User`.</span></span> <span data-ttu-id="21ba1-218">此对象是与应用程序的当前 HTTP 请求的用户标识相关联。</span><span class="sxs-lookup"><span data-stu-id="21ba1-218">This object is associated with the user identity of the application's current HTTP request.</span></span>  
   
-## <a name="see-also"></a>请参见  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [自定义的对象都将在我](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)   
- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="21ba1-219">另请参阅</span><span class="sxs-lookup"><span data-stu-id="21ba1-219">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.Logging.Log>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="21ba1-220">自定义 My 中可用的对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-220">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [<span data-ttu-id="21ba1-221">条件编译</span><span class="sxs-lookup"><span data-stu-id="21ba1-221">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="21ba1-222">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="21ba1-222">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="21ba1-223">My.Forms 对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-223">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [<span data-ttu-id="21ba1-224">My.Request 对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-224">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [<span data-ttu-id="21ba1-225">My.Response 对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-225">My.Response Object</span></span>](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [<span data-ttu-id="21ba1-226">My.WebServices 对象</span><span class="sxs-lookup"><span data-stu-id="21ba1-226">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

@@ -1,37 +1,37 @@
 ---
-title: "ToolTip 组件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolTip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolTip 组件 [Windows 窗体], 关于 ToolTip 组件"
-  - "工具提示 [Windows 窗体], 关于工具提示"
+title: "ToolTip 组件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolTip
+helpviewer_keywords:
+- tooltips [Windows Forms], about tooltips
+- ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff2364b5c7223c265571257920a7c7e794b4921b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ToolTip 组件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示相应的文本。  工具提示可与任何控件相关联。  举一个使用此组件的示例：为节省窗体上的空间，可以在按钮上显示一个小图标并用工具提示解释该按钮的功能。  
+# <a name="tooltip-component-overview-windows-forms"></a><span data-ttu-id="2d5ae-102">ToolTip 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="2d5ae-102">ToolTip Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="2d5ae-103">Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示文本。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="2d5ae-104">ToolTip 可与任何控件关联。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="2d5ae-105">此组件的一个用法示例： 若要在窗体上节省空间，可以在按钮上显示一个小图标，并使用 ToolTip 来解释按钮的功能。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-105">An example use of this component: to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
   
-## 使用 ToolTip 组件  
- <xref:System.Windows.Forms.ToolTip> 组件为 Windows 窗体或其他容器上的多个控件提供 `ToolTip` 属性。  例如，如果将一个 <xref:System.Windows.Forms.ToolTip> 组件置于窗体上，则可以为一个 <xref:System.Windows.Forms.TextBox> 控件显示“Type your name here”（在此键入您的姓名），并为一个 <xref:System.Windows.Forms.Button> 控件显示“Click here to save changes”（单击此处保存更改）。  
+## <a name="working-with-the-tooltip-component"></a><span data-ttu-id="2d5ae-106">使用工具提示组件</span><span class="sxs-lookup"><span data-stu-id="2d5ae-106">Working with the ToolTip Component</span></span>  
+ <span data-ttu-id="2d5ae-107">A<xref:System.Windows.Forms.ToolTip>组件提供`ToolTip`到 Windows 窗体或其他容器上的多个控件的属性。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-107">A <xref:System.Windows.Forms.ToolTip> component provides a `ToolTip` property to multiple controls on a Windows Form or other container.</span></span> <span data-ttu-id="2d5ae-108">例如，如果您将某个<xref:System.Windows.Forms.ToolTip>窗体上的组件，可以显示"键入你在本文中的名称"<xref:System.Windows.Forms.TextBox>控制和"单击此处以保存更改"为<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-108">For example, if you place one <xref:System.Windows.Forms.ToolTip> component on a form, you can display "Type your name here" for a <xref:System.Windows.Forms.TextBox> control and "Click here to save changes" for a <xref:System.Windows.Forms.Button> control.</span></span>  
   
- <xref:System.Windows.Forms.ToolTip> 组件的主要方法包括 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 和 <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>。  可以使用 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 方法设置为控件显示的工具提示。  有关更多信息，请参见 [如何：在设计时为 Windows 窗体上的控件设置工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。  主要属性有 <xref:System.Windows.Forms.ToolTip.Active%2A> 和 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>，前者必须设置为 `true` 才能显示工具提示，后者用于设置以下三项内容：显示工具提示字符串的时间，用户必须指在控件上多长时间才会显示工具提示，需要多久才会显示随后的工具提示窗口。  有关更多信息，请参见 [如何：更改 Windows 窗体 ToolTip 组件的延迟](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。  
+ <span data-ttu-id="2d5ae-109">主要方法<xref:System.Windows.Forms.ToolTip>组件<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>和<xref:System.Windows.Forms.ToolTip.GetToolTip%2A>。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-109">The key methods of the <xref:System.Windows.Forms.ToolTip> component are <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> and <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>.</span></span> <span data-ttu-id="2d5ae-110">你可以使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法以设置控件显示的工具提示。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-110">You can use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method to set the ToolTips displayed for controls.</span></span> <span data-ttu-id="2d5ae-111">有关详细信息，请参阅[如何： 在设计时的 Windows 窗体上的控件设置工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-111">For more information, see [How to: Set ToolTips for Controls on a Windows Form at Design Time](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md).</span></span> <span data-ttu-id="2d5ae-112">主要属性包括<xref:System.Windows.Forms.ToolTip.Active%2A>，其必须设置为`true`的工具提示显示，和<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>，这会设置的工具提示字符串会显示的时间长度，多长时间，用户必须指向控件的工具提示显示，以及如何长它将显示后续工具提示窗口。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-112">The key properties are <xref:System.Windows.Forms.ToolTip.Active%2A>, which must be set to `true` for the ToolTip to appear, and <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, which sets the length of time that the ToolTip string is shown, how long the user must point at the control for the ToolTip to appear, and how long it takes for subsequent ToolTip windows to appear.</span></span> <span data-ttu-id="2d5ae-113">有关详细信息，请参阅[如何： 更改 Windows 窗体 ToolTip 组件的延迟](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。</span><span class="sxs-lookup"><span data-stu-id="2d5ae-113">For more information, see [How to: Change the Delay of the Windows Forms ToolTip Component](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolTip>   
- [如何：在设计时为 Windows 窗体上的控件设置工具提示](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)   
- [如何：更改 Windows 窗体 ToolTip 组件的延迟](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+## <a name="see-also"></a><span data-ttu-id="2d5ae-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d5ae-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolTip>  
+ [<span data-ttu-id="2d5ae-115">如何：在设计时设置 Windows 窗体控件的工具提示</span><span class="sxs-lookup"><span data-stu-id="2d5ae-115">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ [<span data-ttu-id="2d5ae-116">如何：更改 Windows 窗体 ToolTip 组件的延迟</span><span class="sxs-lookup"><span data-stu-id="2d5ae-116">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)

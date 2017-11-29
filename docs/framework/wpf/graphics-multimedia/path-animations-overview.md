@@ -1,102 +1,107 @@
 ---
-title: "路径动画概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "路径动画"
-  - "路径动画"
+title: "路径动画概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], paths
+- path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 237dbe83fa52bb967d2f2429fb2beb021c084f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 路径动画概述
-<a name="introduction"></a>本主题介绍路径动画，使您能够使用几何路径来生成输出值。 路径动画可用于移动和旋转对象沿复杂的路径。  
+# <a name="path-animations-overview"></a><span data-ttu-id="de24e-102">路径动画概述</span><span class="sxs-lookup"><span data-stu-id="de24e-102">Path Animations Overview</span></span>
+<span data-ttu-id="de24e-103"><a name="introduction"></a>本主题介绍了路径动画，使你能够使用几何路径来生成输出值。</span><span class="sxs-lookup"><span data-stu-id="de24e-103"><a name="introduction"></a> This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="de24e-104">路径动画可用于沿着复杂路径移动和旋转对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
- 若要了解本主题，您应熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画功能。 动画功能的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="de24e-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="de24e-105">Prerequisites</span></span>  
+ <span data-ttu-id="de24e-106">若要了解本主题，你应熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画功能。</span><span class="sxs-lookup"><span data-stu-id="de24e-106">To understand this topic, you should be familiar with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animations features.</span></span> <span data-ttu-id="de24e-107">动画功能的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="de24e-107">For an introduction to animation features, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- 因为您使用<xref:System.Windows.Media.PathGeometry>对象来定义一个路径的动画，您还应熟悉<xref:System.Windows.Media.PathGeometry>和不同类型的<xref:System.Windows.Media.PathSegment>对象。 有关详细信息，请参阅[Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ <span data-ttu-id="de24e-108">因为你使用<xref:System.Windows.Media.PathGeometry>对象以定义路径动画，您还应熟悉<xref:System.Windows.Media.PathGeometry>和不同类型的<xref:System.Windows.Media.PathSegment>对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-108">Because you use a <xref:System.Windows.Media.PathGeometry> object to define a path animation, you should also be familiar with <xref:System.Windows.Media.PathGeometry> and the different types of <xref:System.Windows.Media.PathSegment> objects.</span></span> <span data-ttu-id="de24e-109">有关详细信息，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="de24e-109">For more information, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
 <a name="what_is_a_path_animation"></a>   
-## <a name="what-is-a-path-animation"></a>路径动画是什么？  
- 路径动画是一种<xref:System.Windows.Media.Animation.AnimationTimeline> ，它使用<xref:System.Windows.Media.PathGeometry>作为其输入。 而不是设置 From、 To 或 By 属性 (如替 From/To/By 动画) 或使用关键帧 （与您用于关键帧动画），您定义的几何路径并使用它来设置`PathGeometry`路径动画的属性。 在路径动画运行时，它从路径中读取 x、 y 和角度信息并使用该信息来生成其输出。  
+## <a name="what-is-a-path-animation"></a><span data-ttu-id="de24e-110">什么是路径动画？</span><span class="sxs-lookup"><span data-stu-id="de24e-110">What Is a Path Animation?</span></span>  
+ <span data-ttu-id="de24e-111">路径动画，则一种<xref:System.Windows.Media.Animation.AnimationTimeline>使用<xref:System.Windows.Media.PathGeometry>作为其输入。</span><span class="sxs-lookup"><span data-stu-id="de24e-111">A path animation is a type of <xref:System.Windows.Media.Animation.AnimationTimeline> that uses a <xref:System.Windows.Media.PathGeometry> as its input.</span></span> <span data-ttu-id="de24e-112">而不是，设置 From、 或属性 (像对 From/To/By 动画) 或使用关键帧 （与您用于关键帧动画），定义的几何路径并使用它来设置`PathGeometry`路径动画的属性。</span><span class="sxs-lookup"><span data-stu-id="de24e-112">Instead of setting a From, To, or By property (as you do for a From/To/By animation) or using key frames (as you use for a key-frame animation), you define a geometric path and use it to set the `PathGeometry` property of the path animation.</span></span> <span data-ttu-id="de24e-113">路径动画运行时，会从路径中读取 x、y 和角度信息并使用该信息生成其输出。</span><span class="sxs-lookup"><span data-stu-id="de24e-113">As the path animation progresses, it reads the x, y, and angle information from the path and uses that information to generate its output.</span></span>  
   
- 路径动画是对于沿着复杂路径对对象进行动画处理非常有用。 移动路径上的位置的对象是要使用的一种方法<xref:System.Windows.Media.MatrixTransform>和<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>转换沿复杂路径对象。 下面的示例演示这种技术，通过使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>对象进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性<xref:System.Windows.Media.MatrixTransform>。 <xref:System.Windows.Media.MatrixTransform>应用于一个按钮，并且会导致它沿曲线路径移动。 因为<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性设置为`true`，矩形就会旋转沿该路径的正切值。  
+ <span data-ttu-id="de24e-114">路径动画对沿着复杂路径的对象进行动画处理非常有用。</span><span class="sxs-lookup"><span data-stu-id="de24e-114">Path animations are very useful for animating an object along a complex path.</span></span> <span data-ttu-id="de24e-115">一种方法将沿着路径对对象是使用<xref:System.Windows.Media.MatrixTransform>和<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>转换沿复杂路径的对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-115">One way to move an object along a path is to use a <xref:System.Windows.Media.MatrixTransform> and a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> to transform an object along a complex path.</span></span> <span data-ttu-id="de24e-116">下面的示例演示此技术，通过使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>对象要进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性<xref:System.Windows.Media.MatrixTransform>。</span><span class="sxs-lookup"><span data-stu-id="de24e-116">The following example demonstrates this technique by using the <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> object to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform>.</span></span> <span data-ttu-id="de24e-117"><xref:System.Windows.Media.MatrixTransform>应用于一个按钮并使其将沿曲线的路径。</span><span class="sxs-lookup"><span data-stu-id="de24e-117">The <xref:System.Windows.Media.MatrixTransform> is applied to a button and causes it to move along a curved path.</span></span> <span data-ttu-id="de24e-118">因为<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性设置为`true`，矩形沿该路径的切线旋转。</span><span class="sxs-lookup"><span data-stu-id="de24e-118">Because the <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> property is set to `true`, the rectangle rotates along the tangent of the path.</span></span>  
   
- [!code-xml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
+ [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。 有关完整的示例，请参阅[路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)。  
+ <span data-ttu-id="de24e-119">有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。</span><span class="sxs-lookup"><span data-stu-id="de24e-119">For more information about the path syntax that is used in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) overview.</span></span> <span data-ttu-id="de24e-120">有关完整的示例，请参阅[路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)。</span><span class="sxs-lookup"><span data-stu-id="de24e-120">For the complete sample, see [Path Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160028).</span></span>  
   
- 通过使用应用于属性路径动画<xref:System.Windows.Media.Animation.Storyboard>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码，或通过使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>代码中的方法。 路径动画还可用来创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。 有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ <span data-ttu-id="de24e-121">你可以使用的路径动画应用到属性<xref:System.Windows.Media.Animation.Storyboard>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码，或通过使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>代码中的方法。</span><span class="sxs-lookup"><span data-stu-id="de24e-121">You can apply a path animation to a property by using a <xref:System.Windows.Media.Animation.Storyboard> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and code, or by using the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method in code.</span></span> <span data-ttu-id="de24e-122">你还可以使用路径动画创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。</span><span class="sxs-lookup"><span data-stu-id="de24e-122">You can also use a path animation to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to one or more properties.</span></span> <span data-ttu-id="de24e-123">有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="de24e-123">For more information about the different methods for applying animations, see [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
 <a name="animation_types"></a>   
-## <a name="path-animation-types"></a>路径动画类型  
- 由于动画生成属性值，有不同的属性类型的不同的动画类型。 采用属性进行动画处理<xref:System.Double> (如<xref:System.Windows.Media.TranslateTransform.X%2A>属性<xref:System.Windows.Media.TranslateTransform>)，使用生成的动画<xref:System.Double>值。 采用属性进行动画处理<xref:System.Windows.Point>，使用生成的动画<xref:System.Windows.Point>值，等等。  
+## <a name="path-animation-types"></a><span data-ttu-id="de24e-124">路径动画类型</span><span class="sxs-lookup"><span data-stu-id="de24e-124">Path Animation Types</span></span>  
+ <span data-ttu-id="de24e-125">由于动画会生成属性值，因此不同的属性类型具有不同的动画类型。</span><span class="sxs-lookup"><span data-stu-id="de24e-125">Because animations generate property values, there are different animation types for different property types.</span></span> <span data-ttu-id="de24e-126">要进行动画处理的属性<xref:System.Double>(如<xref:System.Windows.Media.TranslateTransform.X%2A>属性<xref:System.Windows.Media.TranslateTransform>)，使用动画生成<xref:System.Double>值。</span><span class="sxs-lookup"><span data-stu-id="de24e-126">To animate a property that takes a <xref:System.Double> (such as the <xref:System.Windows.Media.TranslateTransform.X%2A> property of a <xref:System.Windows.Media.TranslateTransform>), you use an animation that produces <xref:System.Double> values.</span></span> <span data-ttu-id="de24e-127">要进行动画处理的属性<xref:System.Windows.Point>，使用动画生成<xref:System.Windows.Point>值，等等。</span><span class="sxs-lookup"><span data-stu-id="de24e-127">To animate a property that takes a <xref:System.Windows.Point>, you use an animation that produces <xref:System.Windows.Point> values, and so on.</span></span>  
   
- 路径动画类属于<xref:System.Windows.Media.Animation>命名空间并使用以下命名约定︰  
+ <span data-ttu-id="de24e-128">路径动画类属于<xref:System.Windows.Media.Animation>命名空间并使用以下命名约定：</span><span class="sxs-lookup"><span data-stu-id="de24e-128">Path animation classes belong to the <xref:System.Windows.Media.Animation> namespace and use the following naming convention:</span></span>  
   
- *<>\>*`AnimationUsingPath`  
+ <span data-ttu-id="de24e-129">*\<Type>* `AnimationUsingPath`</span><span class="sxs-lookup"><span data-stu-id="de24e-129">*\<Type>* `AnimationUsingPath`</span></span>  
   
- 其中* <> \> *是该类进行动画处理的值的类型。  
+ <span data-ttu-id="de24e-130">其中 *\<Type>* 为该类进行动画处理的值的类型。</span><span class="sxs-lookup"><span data-stu-id="de24e-130">Where *\<Type>* is the type of value that the class animates.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供以下路径动画类。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="de24e-131"> 提供以下路径动画类。</span><span class="sxs-lookup"><span data-stu-id="de24e-131"> provides the following path animation classes.</span></span>  
   
-|属性类型|相应的路径动画类|示例|  
+|<span data-ttu-id="de24e-132">属性类型</span><span class="sxs-lookup"><span data-stu-id="de24e-132">Property type</span></span>|<span data-ttu-id="de24e-133">相应的路径动画类</span><span class="sxs-lookup"><span data-stu-id="de24e-133">Corresponding path animation class</span></span>|<span data-ttu-id="de24e-134">示例</span><span class="sxs-lookup"><span data-stu-id="de24e-134">Example</span></span>|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[沿着路径 （双重动画） 对象进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[沿着路径 （矩阵动画） 对象进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[沿着路径 （点动画） 对象进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[<span data-ttu-id="de24e-135">沿着路径针对对象进行动画处理（双重动画）</span><span class="sxs-lookup"><span data-stu-id="de24e-135">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[<span data-ttu-id="de24e-136">沿着路径针对对象进行动画处理（矩阵动画）</span><span class="sxs-lookup"><span data-stu-id="de24e-136">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[<span data-ttu-id="de24e-137">沿着路径针对对象进行动画处理（点动画）</span><span class="sxs-lookup"><span data-stu-id="de24e-137">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
   
- 一个<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>生成<xref:System.Windows.Media.Matrix>值从其<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>。 如果用于<xref:System.Windows.Media.MatrixTransform>、 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>可以移动沿着路径对象。 如果您设置<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>到`true`，它还会沿着路径的曲线的对象。  
+ <span data-ttu-id="de24e-138">A<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>生成<xref:System.Windows.Media.Matrix>值从其<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>。</span><span class="sxs-lookup"><span data-stu-id="de24e-138">A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> generates <xref:System.Windows.Media.Matrix> values from its <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>.</span></span> <span data-ttu-id="de24e-139">如果用于<xref:System.Windows.Media.MatrixTransform>、<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>可以移动沿路径对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-139">When used with a <xref:System.Windows.Media.MatrixTransform>, a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> can move an object along a path.</span></span> <span data-ttu-id="de24e-140">如果你设置<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>到`true`，它还会沿着路径的曲线的对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-140">If you set the <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> property of the <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> to `true`, it also rotates the object along the curves of the path.</span></span>  
   
- 一个<xref:System.Windows.Media.Animation.PointAnimationUsingPath>生成<xref:System.Windows.Point>值从 x 坐标和 y 坐标的其<xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>。 通过使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>采用属性进行动画处理<xref:System.Windows.Point>值，可以移动沿着路径对象。 一个<xref:System.Windows.Media.Animation.PointAnimationUsingPath>无法旋转对象。  
+ <span data-ttu-id="de24e-141">A<xref:System.Windows.Media.Animation.PointAnimationUsingPath>生成<xref:System.Windows.Point>值从 x 坐标和 y 坐标的其<xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>。</span><span class="sxs-lookup"><span data-stu-id="de24e-141">A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> generates <xref:System.Windows.Point> values from the x- and y-coordinates of its <xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>.</span></span> <span data-ttu-id="de24e-142">通过使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>采用属性进行动画处理<xref:System.Windows.Point>值，可以移动沿路径对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-142">By using a <xref:System.Windows.Media.Animation.PointAnimationUsingPath> to animate a property that takes <xref:System.Windows.Point> values, you can move an object along a path.</span></span> <span data-ttu-id="de24e-143">A<xref:System.Windows.Media.Animation.PointAnimationUsingPath>无法旋转对象。</span><span class="sxs-lookup"><span data-stu-id="de24e-143">A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> cannot rotate objects.</span></span>  
   
- 一个<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>生成<xref:System.Double>值从其<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>。 通过设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A>属性，可以指定是否<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>作为其输出中使用的 x 坐标，y 坐标或路径的角度。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>来旋转对象或将其移动沿 x 轴或 y 轴。  
+ <span data-ttu-id="de24e-144">A<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>生成<xref:System.Double>值从其<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>。</span><span class="sxs-lookup"><span data-stu-id="de24e-144">A <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> generates <xref:System.Double> values from its <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>.</span></span> <span data-ttu-id="de24e-145">通过设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A>属性，你可以指定是否<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>使用作为其输出的 x 坐标，y 坐标或路径的角度。</span><span class="sxs-lookup"><span data-stu-id="de24e-145">By setting the <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A> property, you can specify whether the <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> uses the x-coordinate, y-coordinate, or angle of the path as its output.</span></span> <span data-ttu-id="de24e-146">你可以使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>旋转对象或将其移沿 x 轴或 y 轴。</span><span class="sxs-lookup"><span data-stu-id="de24e-146">You can use a <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> to rotate an object or move it along the x-axis or y-axis.</span></span>  
   
 <a name="pathanimationinput"></a>   
-## <a name="path-animation-input"></a>路径动画输入  
- 每个路径动画类提供了<xref:System.Windows.Media.PathGeometry>用于指定其输入的属性。 路径动画使用<xref:System.Windows.Media.PathGeometry>来生成其输出值。 <xref:System.Windows.Media.PathGeometry>类允许您描述组成弧线、 曲线和行的多个复杂图形。  
+## <a name="path-animation-input"></a><span data-ttu-id="de24e-147">路径动画输入</span><span class="sxs-lookup"><span data-stu-id="de24e-147">Path Animation Input</span></span>  
+ <span data-ttu-id="de24e-148">每个路径动画类提供<xref:System.Windows.Media.PathGeometry>指定其输入的属性。</span><span class="sxs-lookup"><span data-stu-id="de24e-148">Each path animation class provides a <xref:System.Windows.Media.PathGeometry> property for specifying its input.</span></span> <span data-ttu-id="de24e-149">路径动画使用<xref:System.Windows.Media.PathGeometry>来生成其输出值。</span><span class="sxs-lookup"><span data-stu-id="de24e-149">The path animation uses the <xref:System.Windows.Media.PathGeometry> to generate its output values.</span></span> <span data-ttu-id="de24e-150"><xref:System.Windows.Media.PathGeometry>类允许您描述组成弧、 曲线和行的多个复杂的图形。</span><span class="sxs-lookup"><span data-stu-id="de24e-150">The <xref:System.Windows.Media.PathGeometry> class lets you describe multiple complex figures that are composed of arcs, curves, and lines.</span></span>  
   
- 核心<xref:System.Windows.Media.PathGeometry>是一套<xref:System.Windows.Media.PathFigure>对象; 这些对象这样命名是因为每个图描述了中的离散形状<xref:System.Windows.Media.PathGeometry>。 每个<xref:System.Windows.Media.PathFigure>组成一个或多个<xref:System.Windows.Media.PathSegment>对象，其中每个描述该图中的段。  
+ <span data-ttu-id="de24e-151">核心<xref:System.Windows.Media.PathGeometry>是一套<xref:System.Windows.Media.PathFigure>对象; 这些对象这样命名是因为每个图描述了中的一个离散形状<xref:System.Windows.Media.PathGeometry>。</span><span class="sxs-lookup"><span data-stu-id="de24e-151">At the heart of a <xref:System.Windows.Media.PathGeometry> is a collection of <xref:System.Windows.Media.PathFigure> objects; these objects are so named because each figure describes a discrete shape in the <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="de24e-152">每个<xref:System.Windows.Media.PathFigure>组成一个或多个<xref:System.Windows.Media.PathSegment>对象，其中每个描述图一段。</span><span class="sxs-lookup"><span data-stu-id="de24e-152">Each <xref:System.Windows.Media.PathFigure> consists of one or more <xref:System.Windows.Media.PathSegment> objects, each of which describes a segment of the figure.</span></span>  
   
- 有许多类型的段。  
+ <span data-ttu-id="de24e-153">有多种类型的线段。</span><span class="sxs-lookup"><span data-stu-id="de24e-153">There are many types of segments.</span></span>  
   
-|段类型|描述|  
+|<span data-ttu-id="de24e-154">线段类型</span><span class="sxs-lookup"><span data-stu-id="de24e-154">Segment Type</span></span>|<span data-ttu-id="de24e-155">描述</span><span class="sxs-lookup"><span data-stu-id="de24e-155">Description</span></span>|  
 |------------------|-----------------|  
-|<xref:System.Windows.Media.ArcSegment>|创建两个点之间的椭圆弧。|  
-|<xref:System.Windows.Media.BezierSegment>|创建两个点之间的三次方贝塞尔曲线。|  
-|<xref:System.Windows.Media.LineSegment>|创建两个点之间的线条。|  
-|<xref:System.Windows.Media.PolyBezierSegment>|创建一系列三次方贝塞尔曲线。|  
-|<xref:System.Windows.Media.PolyLineSegment>|创建一系列的行。|  
-|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|创建一系列的二次贝塞尔曲线。|  
-|<xref:System.Windows.Media.QuadraticBezierSegment>|创建二次贝塞尔曲线。|  
+|<xref:System.Windows.Media.ArcSegment>|<span data-ttu-id="de24e-156">创建两个点之间的椭圆弧。</span><span class="sxs-lookup"><span data-stu-id="de24e-156">Creates an elliptical arc between two points.</span></span>|  
+|<xref:System.Windows.Media.BezierSegment>|<span data-ttu-id="de24e-157">创建两个点之间的三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="de24e-157">Creates a cubic Bezier curve between two points.</span></span>|  
+|<xref:System.Windows.Media.LineSegment>|<span data-ttu-id="de24e-158">创建两个点之间的直线。</span><span class="sxs-lookup"><span data-stu-id="de24e-158">Creates a line between two points.</span></span>|  
+|<xref:System.Windows.Media.PolyBezierSegment>|<span data-ttu-id="de24e-159">创建一系列三次方贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="de24e-159">Creates a series of cubic Bezier curves.</span></span>|  
+|<xref:System.Windows.Media.PolyLineSegment>|<span data-ttu-id="de24e-160">创建一系列直线。</span><span class="sxs-lookup"><span data-stu-id="de24e-160">Creates a series of lines.</span></span>|  
+|<xref:System.Windows.Media.PolyQuadraticBezierSegment>|<span data-ttu-id="de24e-161">创建一系列的二次贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="de24e-161">Creates a series of quadratic Bezier curves.</span></span>|  
+|<xref:System.Windows.Media.QuadraticBezierSegment>|<span data-ttu-id="de24e-162">创建一条二次贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="de24e-162">Creates a quadratic Bezier curve.</span></span>|  
   
- 中的各段<xref:System.Windows.Media.PathFigure>合并成单一几何形状，它使用段的结束点作为下一段的起始点。 <xref:System.Windows.Media.PathFigure.StartPoint%2A>属性<xref:System.Windows.Media.PathFigure>指定从中提取第一条线段的点。 每个后续段从上一段的结束点开始。 例如，一条竖线从`10,50`到`10,150`可通过设置定义<xref:System.Windows.Media.PathFigure.StartPoint%2A>属性设置为`10,50`和创建<xref:System.Windows.Media.LineSegment>与<xref:System.Windows.Media.LineSegment.Point%2A>的属性的设置`10,150`。  
+ <span data-ttu-id="de24e-163">中的段<xref:System.Windows.Media.PathFigure>合并成单一的几何形状，使用作为下一段的起始点的线段的终点。</span><span class="sxs-lookup"><span data-stu-id="de24e-163">The segments in a <xref:System.Windows.Media.PathFigure> are combined into a single geometric shape, which uses the end point of a segment as the start point of the next segment.</span></span> <span data-ttu-id="de24e-164"><xref:System.Windows.Media.PathFigure.StartPoint%2A>属性<xref:System.Windows.Media.PathFigure>指定从中提取第一条线段的点。</span><span class="sxs-lookup"><span data-stu-id="de24e-164">The <xref:System.Windows.Media.PathFigure.StartPoint%2A> property of a <xref:System.Windows.Media.PathFigure> specifies the point from which the first segment is drawn.</span></span> <span data-ttu-id="de24e-165">每个后续线段都从上一线段的终点开始。</span><span class="sxs-lookup"><span data-stu-id="de24e-165">Each subsequent segment starts at the end point of the previous segment.</span></span> <span data-ttu-id="de24e-166">例如，从竖线`10,50`到`10,150`可以通过设置定义<xref:System.Windows.Media.PathFigure.StartPoint%2A>属性`10,50`和创建<xref:System.Windows.Media.LineSegment>与<xref:System.Windows.Media.LineSegment.Point%2A>属性设置的`10,150`。</span><span class="sxs-lookup"><span data-stu-id="de24e-166">For example, a vertical line from `10,50` to `10,150` can be defined by setting the <xref:System.Windows.Media.PathFigure.StartPoint%2A> property to `10,50` and creating a <xref:System.Windows.Media.LineSegment> with a <xref:System.Windows.Media.LineSegment.Point%2A> property setting of `10,150`.</span></span>  
   
- 有关详细信息<xref:System.Windows.Media.PathGeometry>对象，请参阅[Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ <span data-ttu-id="de24e-167">有关详细信息<xref:System.Windows.Media.PathGeometry>对象，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="de24e-167">For more information about <xref:System.Windows.Media.PathGeometry> objects, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
- 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，还可以使用特殊的缩写的语法来设置<xref:System.Windows.Media.PathGeometry.Figures%2A>属性<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。  
+ <span data-ttu-id="de24e-168">在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，还可以使用特殊的缩写的语法设置<xref:System.Windows.Media.PathGeometry.Figures%2A>属性<xref:System.Windows.Media.PathGeometry>。</span><span class="sxs-lookup"><span data-stu-id="de24e-168">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can also use a special abbreviated syntax to set the <xref:System.Windows.Media.PathGeometry.Figures%2A> property of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="de24e-169">有关详细信息，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。</span><span class="sxs-lookup"><span data-stu-id="de24e-169">For more information, see [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) overview.</span></span>  
   
- 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。  
+ <span data-ttu-id="de24e-170">有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。</span><span class="sxs-lookup"><span data-stu-id="de24e-170">For more information about the path syntax that is used in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example, see the [Path Markup Syntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) overview.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)   
- [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)   
- [路径动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="de24e-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="de24e-171">See Also</span></span>  
+ [<span data-ttu-id="de24e-172">路径动画示例</span><span class="sxs-lookup"><span data-stu-id="de24e-172">Path Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160028)  
+ [<span data-ttu-id="de24e-173">路径标记语法</span><span class="sxs-lookup"><span data-stu-id="de24e-173">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [<span data-ttu-id="de24e-174">路径动画操作说明主题</span><span class="sxs-lookup"><span data-stu-id="de24e-174">Path Animation How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
+ [<span data-ttu-id="de24e-175">动画概述</span><span class="sxs-lookup"><span data-stu-id="de24e-175">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="de24e-176">属性动画技术概述</span><span class="sxs-lookup"><span data-stu-id="de24e-176">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

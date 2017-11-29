@@ -1,38 +1,38 @@
 ---
-title: "DateTimePicker 控件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DateTimePicker"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "日期和时间选择器控件"
-  - "DateTimePicker 控件 [Windows 窗体], 关于"
+title: "DateTimePicker 控件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DateTimePicker
+helpviewer_keywords:
+- DateTimePicker control [Windows Forms], about
+- date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a97eecc43614c84867e9dbdd527dbebd7dfd426e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DateTimePicker 控件概述（Windows 窗体）
-使用 Windows 窗体 <xref:System.Windows.Forms.DateTimePicker> 控件，用户可以从日期或时间列表中选择单个项。  在用来表示日期时，它显示为两部分：一个下拉列表（带有以文本形式表示的日期）和一个网格（在单击列表旁边的向下箭头时显示）。  该网格看起来很像可用于选择多个日期的 <xref:System.Windows.Forms.MonthCalendar> 控件。  有关 <xref:System.Windows.Forms.MonthCalendar> 控件的更多信息，请参见 [MonthCalendar 控件概述](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)。  
+# <a name="datetimepicker-control-overview-windows-forms"></a><span data-ttu-id="153d4-102">DateTimePicker 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="153d4-102">DateTimePicker Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="153d4-103">Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件允许用户从日期或时间的列表中选择单个项。</span><span class="sxs-lookup"><span data-stu-id="153d4-103">The Windows Forms <xref:System.Windows.Forms.DateTimePicker> control allows the user to select a single item from a list of dates or times.</span></span> <span data-ttu-id="153d4-104">当用于表示的日期，它将显示在两个部分： 文本，并单击列表旁的向下箭头时出现的网格中所表示日期的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="153d4-104">When used to represent a date, it appears in two parts: a drop-down list with a date represented in text, and a grid that appears when you click on the down-arrow next to the list.</span></span> <span data-ttu-id="153d4-105">网格如下所示<xref:System.Windows.Forms.MonthCalendar>控件，可用于选择多个日期。</span><span class="sxs-lookup"><span data-stu-id="153d4-105">The grid looks like the <xref:System.Windows.Forms.MonthCalendar> control, which can be used for selecting multiple dates.</span></span> <span data-ttu-id="153d4-106">有关详细信息<xref:System.Windows.Forms.MonthCalendar>控制，请参阅[MonthCalendar 控件概述](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="153d4-106">For more information on the <xref:System.Windows.Forms.MonthCalendar> control, see [MonthCalendar Control Overview](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).</span></span>  
   
-## 主要属性  
- 如果您希望 <xref:System.Windows.Forms.DateTimePicker> 作为选取或编辑时间（而不是日期）的控件出现，请将 <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> 属性设置为 `true`，并将 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置为 <xref:System.Windows.Forms.DateTimePickerFormat>。  有关更多信息，请参见[如何：使用 DateTimePicker 控件显示时间](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)。  
+## <a name="key-properties"></a><span data-ttu-id="153d4-107">键属性</span><span class="sxs-lookup"><span data-stu-id="153d4-107">Key Properties</span></span>  
+ <span data-ttu-id="153d4-108">如果你想<xref:System.Windows.Forms.DateTimePicker>若要显示为选取或编辑而不是日期时间的控件，将设置<xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A>属性`true`和<xref:System.Windows.Forms.DateTimePicker.Format%2A>属性<xref:System.Windows.Forms.DateTimePickerFormat.Time>。</span><span class="sxs-lookup"><span data-stu-id="153d4-108">If you wish the <xref:System.Windows.Forms.DateTimePicker> to appear as a control for picking or editing times instead of dates, set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property to `true` and the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time>.</span></span> <span data-ttu-id="153d4-109">有关详细信息请参阅[如何： 使用 DateTimePicker 控件显示时间](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)。</span><span class="sxs-lookup"><span data-stu-id="153d4-109">For more information see [How to: Display Time with the DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span></span>  
   
- 当 <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> 属性设置为 `true` 时，该控件中的选定日期旁边将显示一个复选框。  当选中该复选框时，选定的日期时间值可以更新。  当复选框为空时，值显示为不可用。  
+ <span data-ttu-id="153d4-110">当<xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A>属性设置为`true`，控件中的选定日期旁边显示一个复选框。</span><span class="sxs-lookup"><span data-stu-id="153d4-110">When the <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> property is set to `true`, a check box is displayed next to the selected date in the control.</span></span> <span data-ttu-id="153d4-111">选中复选框后，可以更新所选的日期时间值。</span><span class="sxs-lookup"><span data-stu-id="153d4-111">When the check box is checked, the selected date-time value can be updated.</span></span> <span data-ttu-id="153d4-112">如果复选框为空，值显示为不可用。</span><span class="sxs-lookup"><span data-stu-id="153d4-112">When the check box is empty, the value appears unavailable.</span></span>  
   
- 该控件的 <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> 和 <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> 属性确定日期和时间的范围。  <xref:System.Windows.Forms.DateTimePicker.Value%2A> 属性包含该控件设置为的当前日期和时间。  有关详细信息，请参见[如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)。  值可以按以下四种格式显示（这些格式通过 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置）：<xref:System.Windows.Forms.DateTimePickerFormat>、<xref:System.Windows.Forms.DateTimePickerFormat>、<xref:System.Windows.Forms.DateTimePickerFormat> 或 <xref:System.Windows.Forms.DateTimePickerFormat>。  如果选择自定义格式，则必须将 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 属性设置为适当的字符串。  有关详细信息，请参见[如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)。  
+ <span data-ttu-id="153d4-113">控件的<xref:System.Windows.Forms.DateTimePicker.MaxDate%2A>和<xref:System.Windows.Forms.DateTimePicker.MinDate%2A>属性确定日期和时间的范围。</span><span class="sxs-lookup"><span data-stu-id="153d4-113">The control's <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> and <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> properties determine the range of dates and times.</span></span> <span data-ttu-id="153d4-114"><xref:System.Windows.Forms.DateTimePicker.Value%2A>属性包含的当前日期和时间控件设置为。</span><span class="sxs-lookup"><span data-stu-id="153d4-114">The <xref:System.Windows.Forms.DateTimePicker.Value%2A> property contains the current date and time the control is set to.</span></span> <span data-ttu-id="153d4-115">有关详细信息，请参阅[如何： 设置和使用 Windows 窗体 DateTimePicker 控件返回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)。</span><span class="sxs-lookup"><span data-stu-id="153d4-115">For details, see [How to: Set and Return Dates with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).</span></span> <span data-ttu-id="153d4-116">值可以显示在四种格式，通过设置<xref:System.Windows.Forms.DateTimePicker.Format%2A>属性： <xref:System.Windows.Forms.DateTimePickerFormat.Long>， <xref:System.Windows.Forms.DateTimePickerFormat.Short>， <xref:System.Windows.Forms.DateTimePickerFormat.Time>，或<xref:System.Windows.Forms.DateTimePickerFormat.Custom>。</span><span class="sxs-lookup"><span data-stu-id="153d4-116">The values can be displayed in four formats, which are set by the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, or <xref:System.Windows.Forms.DateTimePickerFormat.Custom>.</span></span> <span data-ttu-id="153d4-117">如果选择自定义格式，则必须设置<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>为适当的字符串的属性。</span><span class="sxs-lookup"><span data-stu-id="153d4-117">If a custom format is selected, you must set the <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> property to an appropriate string.</span></span> <span data-ttu-id="153d4-118">有关详细信息，请参阅[如何： 使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)。</span><span class="sxs-lookup"><span data-stu-id="153d4-118">For details, see [How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).</span></span>  
   
-## 请参阅  
- [如何：使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)   
- [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a><span data-ttu-id="153d4-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="153d4-119">See Also</span></span>  
+ [<span data-ttu-id="153d4-120">如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期</span><span class="sxs-lookup"><span data-stu-id="153d4-120">How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ [<span data-ttu-id="153d4-121">如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期</span><span class="sxs-lookup"><span data-stu-id="153d4-121">How to: Set and Return Dates with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

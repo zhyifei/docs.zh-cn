@@ -1,41 +1,44 @@
 ---
-title: "如何：从 Windows 窗体中播放系统声音 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "为系统事件播放的声音"
-  - "播放声音，Windows 窗体"
-  - "从 Windows 窗体播放系统声音"
-  - "播放声音，系统"
-  - "SoundPlayer 类，系统声音"
-  - "播放声音"
-  - "示例 [Windows 窗体] 声音"
+title: "如何：从 Windows 窗体中播放系统声音"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- sounds [Windows Forms], playing for system events
+- playing sounds [Windows Forms], Windows Forms
+- system sounds [Windows Forms], playing from Windows Forms
+- playing sounds [Windows Forms], system
+- SoundPlayer class [Windows Forms], system sounds
+- sounds [Windows Forms], playing
+- examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 51de367f2558abfc28be740409d8a0d394065acf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：从 Windows 窗体中播放系统声音
-下面的代码示例中起`Exclamation`在运行时的系统声音。 有关系统声音的详细信息，请参阅<xref:System.Media.SystemSounds>。  
+# <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="4303a-102">如何：从 Windows 窗体中播放系统声音</span><span class="sxs-lookup"><span data-stu-id="4303a-102">How to: Play a System Sound from a Windows Form</span></span>
+<span data-ttu-id="4303a-103">下面的代码示例在运行时播放 `Exclamation` 系统声音。</span><span class="sxs-lookup"><span data-stu-id="4303a-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="4303a-104">有关系统声音的详细信息，请参阅<xref:System.Media.SystemSounds>。</span><span class="sxs-lookup"><span data-stu-id="4303a-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="4303a-105">示例</span><span class="sxs-lookup"><span data-stu-id="4303a-105">Example</span></span>  
   
 ```vb  
 Public Sub PlayExclamation()  
     SystemSounds.Exclamation.Play()  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -45,13 +48,13 @@ public void playExclamation()
 }  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="4303a-106">编译代码</span><span class="sxs-lookup"><span data-stu-id="4303a-106">Compiling the Code</span></span>  
+ <span data-ttu-id="4303a-107">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="4303a-107">This example requires:</span></span>  
   
--   对引用<xref:System.Media?displayProperty=fullName>命名空间。  
+-   <span data-ttu-id="4303a-108">对 <xref:System.Media?displayProperty=nameWithType> 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="4303a-108">A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Media.SoundPlayer>   
- <xref:System.Media.SystemSounds>   
- [如何︰ 在 Windows 窗体播放提示音](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)   
- [如何︰ 从 Windows 窗体播放声音](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a><span data-ttu-id="4303a-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4303a-109">See Also</span></span>  
+ <xref:System.Media.SoundPlayer>  
+ <xref:System.Media.SystemSounds>  
+ [<span data-ttu-id="4303a-110">如何：通过 Windows 窗体播放提示音</span><span class="sxs-lookup"><span data-stu-id="4303a-110">How to: Play a Beep from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [<span data-ttu-id="4303a-111">如何：从 Windows 窗体播放声音</span><span class="sxs-lookup"><span data-stu-id="4303a-111">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

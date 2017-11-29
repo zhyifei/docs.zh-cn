@@ -1,40 +1,41 @@
 ---
-title: "Windows 窗体应用程序中的帮助系统 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "帮助, 添加到 Windows 应用程序"
-  - "帮助, Windows 窗体"
-  - "HelpProvider 组件 [Windows 窗体], 在 Windows 应用程序中提供帮助"
-  - "这是什么？帮助"
-  - "Windows 应用程序, 提供帮助系统"
+title: "Windows 窗体应用程序中的帮助系统"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help [Windows Forms], adding to Windows applications
+- Windows applications [Windows Forms], providing Help systems
+- What's This? Help
+- Help [Windows Forms], Windows Forms
+- HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 45d3385d008f823050f213252fdc2e1851cf422b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体应用程序中的帮助系统
-作为应用程序的开发人员，您能够为用户提供的最重要的帮助之一便是功能完善的帮助系统。  这是他们在迷惑不解时所求助的对象。  使用 [HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) 可以在基于 Windows 的应用程序中轻松地提供帮助系统。  
+# <a name="help-systems-in-windows-forms-applications"></a><span data-ttu-id="38f92-102">Windows 窗体应用程序中的帮助系统</span><span class="sxs-lookup"><span data-stu-id="38f92-102">Help Systems in Windows Forms Applications</span></span>
+<span data-ttu-id="38f92-103">一个最重要的帮助，如应用程序，开发人员可以为用户提供的功能完善的帮助系统。</span><span class="sxs-lookup"><span data-stu-id="38f92-103">One of the most important courtesies you, as a developer of applications, can furnish your users with is a competent Help system.</span></span> <span data-ttu-id="38f92-104">这是它们将在这里打开时它们迷惑不解。</span><span class="sxs-lookup"><span data-stu-id="38f92-104">This is where they will turn when they become confused or disoriented.</span></span> <span data-ttu-id="38f92-105">提供在基于 Windows 的应用程序中的帮助系统可通过使用轻松地完成[HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="38f92-105">Providing a Help system in a Windows-based application is easily done by using the [HelpProvider Component](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).</span></span>  
   
-## 不同类型的帮助  
- Windows 窗体 <xref:System.Windows.Forms.HelpProvider> 组件用于将 HTML Help 1.x 帮助文件（.htm 文件或由 HTML Help Workshop 产生的 .chm 文件）与基于 Windows 的应用程序关联。  <xref:System.Windows.Forms.HelpProvider> 组件可用于为 Windows 窗体上的控件或特定控件提供区分上下文的帮助。  另外，<xref:System.Windows.Forms.HelpProvider> 组件还可以在特定区域（例如目录、索引或搜索功能的主页）打开帮助文件。  有关 <xref:System.Windows.Forms.HelpProvider> 组件的一般信息，请参见 [HelpProvider 组件概述](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)。  有关如何使用 <xref:System.Windows.Forms.HelpProvider> 组件在 Windows 窗体上显示弹出式帮助的信息，请参见 [如何：显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  有关如何使用 <xref:System.Windows.Forms.ToolTip> 组件显示控件特定帮助的信息，请参见 [使用工具提示的控件帮助](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)。  
+## <a name="different-types-of-help"></a><span data-ttu-id="38f92-106">不同类型的帮助</span><span class="sxs-lookup"><span data-stu-id="38f92-106">Different Types of Help</span></span>  
+ <span data-ttu-id="38f92-107">Windows 窗体 <xref:System.Windows.Forms.HelpProvider> 组件用于将基于 Windows 的应用程序与 HTML Help 1.x 帮助文件（HTML Help Workshop 生成的 .chm 文件，或 .htm 文件）关联。</span><span class="sxs-lookup"><span data-stu-id="38f92-107">The Windows Forms <xref:System.Windows.Forms.HelpProvider> component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span> <span data-ttu-id="38f92-108"><xref:System.Windows.Forms.HelpProvider>组件可以用于为 Windows 窗体上的控件或特定的控件提供区分上下文的帮助。</span><span class="sxs-lookup"><span data-stu-id="38f92-108">The <xref:System.Windows.Forms.HelpProvider> component can be used to provide context-sensitive Help for controls on Windows Forms or specific controls.</span></span> <span data-ttu-id="38f92-109">此外，<xref:System.Windows.Forms.HelpProvider>组件可以打开到特定区域，如一个表的内容、 索引或搜索功能的主页上的帮助文件。</span><span class="sxs-lookup"><span data-stu-id="38f92-109">Additionally, the <xref:System.Windows.Forms.HelpProvider> component can open a Help file to specific areas, such as the main page of a table of contents, an index, or a search function.</span></span> <span data-ttu-id="38f92-110">有关常规信息<xref:System.Windows.Forms.HelpProvider>组件，请参阅[HelpProvider 组件概述](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="38f92-110">For general information about the <xref:System.Windows.Forms.HelpProvider> component, see [HelpProvider Component Overview](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md).</span></span> <span data-ttu-id="38f92-111">有关如何使用信息<xref:System.Windows.Forms.HelpProvider>组件以显示弹出帮助 Windows 窗体上，请参阅[如何： 显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。</span><span class="sxs-lookup"><span data-stu-id="38f92-111">For information on how to use the <xref:System.Windows.Forms.HelpProvider> component to show pop-up Help on Windows Forms, see [How to: Display Pop-up Help](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).</span></span> <span data-ttu-id="38f92-112">有关使用信息<xref:System.Windows.Forms.ToolTip>组件显示特定于控件的帮助，请参阅[控件帮助使用工具提示](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)。</span><span class="sxs-lookup"><span data-stu-id="38f92-112">For information on using the <xref:System.Windows.Forms.ToolTip> component to show control-specific Help, see [Control Help Using ToolTips](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md).</span></span>  
   
- 您可以使用 HTML Help Workshop 来生成 HTML 帮助 1.x 文件。  有关 HTML 帮助的更多信息，请参见 MSDN 中的“HTML Help Workshop”或其他“HTML Help”主题。  
+ <span data-ttu-id="38f92-113">你可以生成与 HTML Help Workshop 的 HTML 帮助 1.x 文件。</span><span class="sxs-lookup"><span data-stu-id="38f92-113">You can generate HTML Help 1.x files with the HTML Help Workshop.</span></span> <span data-ttu-id="38f92-114">HTML 帮助的详细信息，请参阅"HTML Help Workshop"或在 MSDN 中的其他"HTML 帮助"主题。</span><span class="sxs-lookup"><span data-stu-id="38f92-114">For more information on HTML Help, see the "HTML Help Workshop" or the other "HTML Help" topics in MSDN.</span></span>  
   
-## 请参阅  
- [在 Windows 窗体中集成用户帮助](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)   
- [HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)   
- [ToolTip 组件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)   
- [Windows 窗体概述](../../../../docs/framework/winforms/windows-forms-overview.md)   
- [Windows 窗体](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="38f92-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="38f92-115">See Also</span></span>  
+ [<span data-ttu-id="38f92-116">在 Windows 窗体中集成用户帮助</span><span class="sxs-lookup"><span data-stu-id="38f92-116">Integrating User Help in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [<span data-ttu-id="38f92-117">HelpProvider 组件</span><span class="sxs-lookup"><span data-stu-id="38f92-117">HelpProvider Component</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ [<span data-ttu-id="38f92-118">ToolTip 组件</span><span class="sxs-lookup"><span data-stu-id="38f92-118">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [<span data-ttu-id="38f92-119">Windows 窗体概述</span><span class="sxs-lookup"><span data-stu-id="38f92-119">Windows Forms Overview</span></span>](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [<span data-ttu-id="38f92-120">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="38f92-120">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)

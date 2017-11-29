@@ -1,41 +1,44 @@
 ---
-title: "如何：使用关键帧对字符串进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 使用关键帧对字符串进行动画处理"
-  - "关键帧, 对字符串进行动画处理"
-  - "字符串, 使用关键帧进行动画处理"
+title: "如何：使用关键帧对字符串进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], strings with key frames
+- strings [WPF], animating with key frames
+- key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f8947669178de1252c10b6a8b2c01a6b55baa424
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用关键帧对字符串进行动画处理
-此示例演示如何使用关键帧对字符串（本例中为 <xref:System.Windows.Controls.Button> 控件的 <xref:System.Windows.Controls.ContentControl.Content%2A> 属性）进行动画处理。  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a><span data-ttu-id="69faa-102">如何：使用关键帧对字符串进行动画处理</span><span class="sxs-lookup"><span data-stu-id="69faa-102">How to: Animate a String by Using Key Frames</span></span>
+<span data-ttu-id="69faa-103">此示例演示如何进行动画处理的字符串，它在此示例中为<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.Windows.Controls.Button>控件，通过使用关键帧。</span><span class="sxs-lookup"><span data-stu-id="69faa-103">This example shows how to animate a string, which in this example is the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button> control, by using key frames.</span></span>  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> 类对 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 属性进行动画处理。  
+## <a name="example"></a><span data-ttu-id="69faa-104">示例</span><span class="sxs-lookup"><span data-stu-id="69faa-104">Example</span></span>  
+ <span data-ttu-id="69faa-105">下面的示例使用<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="69faa-105">The following example uses the <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- 此示例中的所有关键帧均使用 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> 类的实例，因为用关键帧创建的字符串动画只能使用离散关键帧。  离散关键帧（如 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>）将使值发生突变，也就是说，动画变化是快速发生的，并且不是细微变化。  
+ <span data-ttu-id="69faa-106">在此示例中的所有关键帧使用的实例<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>类，因为创建关键帧的字符串动画只能使用离散关键帧。</span><span class="sxs-lookup"><span data-stu-id="69faa-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> class because a string animation that is created with key frames can only use discrete key frames.</span></span> <span data-ttu-id="69faa-107">之类的离散的关键帧<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>突变值，即，更改到动画快速发生的并且不是细微变化。</span><span class="sxs-lookup"><span data-stu-id="69faa-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> create sudden jumps between values, that is, changes to the animation occur quickly and are not subtle.</span></span>  
   
- [!code-xml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- 有关完整示例，请参见 [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012)（KeyFrame 动画示例）。  
+ <span data-ttu-id="69faa-108">有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。</span><span class="sxs-lookup"><span data-stu-id="69faa-108">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>   
- <xref:System.Windows.Controls.ContentControl.Content%2A>   
- <xref:System.Windows.Controls.Button>   
- <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [关键帧动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="69faa-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="69faa-109">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
+ <xref:System.Windows.Controls.ContentControl.Content%2A>  
+ <xref:System.Windows.Controls.Button>  
+ <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>  
+ [<span data-ttu-id="69faa-110">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="69faa-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="69faa-111">关键帧操作说明主题</span><span class="sxs-lookup"><span data-stu-id="69faa-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

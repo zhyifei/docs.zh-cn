@@ -1,148 +1,142 @@
 ---
-title: "安全透明的代码，级别 2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "级别 2 透明度"
-  - "安全-关键代码"
-  - "安全透明的代码"
-  - "透明度"
+title: "安全透明的代码，级别 2"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transparency
+- level 2 transparency
+- security-transparent code
+- security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: 37
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 35
+caps.latest.revision: "37"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 0bd4ee6c43b5089c45789b4f22326e17ec2218c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 安全透明的代码，级别 2
-<a name="top"></a> [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。  
+# <a name="security-transparent-code-level-2"></a><span data-ttu-id="34bdf-102">安全透明的代码，级别 2</span><span class="sxs-lookup"><span data-stu-id="34bdf-102">Security-Transparent Code, Level 2</span></span>
+<a name="top"></a>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
--   透明代码（包括以完全信任权限运行的代码）只能调用其他透明代码或安全可靠关键代码。 它只能执行域的部分信任权限集（如果存在）允许的操作。 透明代码不能：  
+ <span data-ttu-id="34bdf-103">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了 2 级透明度。</span><span class="sxs-lookup"><span data-stu-id="34bdf-103">Level 2 transparency was introduced in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="34bdf-104">此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-104">The three tenets of this model are transparent code, security-safe-critical code, and security-critical code.</span></span>  
   
-    -   执行 <xref:System.Security.CodeAccessPermission.Assert%2A> 或特权提升。  
+-   <span data-ttu-id="34bdf-105">透明代码（包括以完全信任权限运行的代码）只能调用其他透明代码或安全可靠关键代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-105">Transparent code, including code that is running as full trust, can call other transparent code or security-safe-critical code only.</span></span> <span data-ttu-id="34bdf-106">它只能执行域的部分信任权限集（如果存在）允许的操作。</span><span class="sxs-lookup"><span data-stu-id="34bdf-106">It can only perform actions allowed by the domain’s partial trust permission set (if one exists).</span></span> <span data-ttu-id="34bdf-107">透明代码不能：</span><span class="sxs-lookup"><span data-stu-id="34bdf-107">Transparent code cannot do the following:</span></span>  
   
-    -   包含不安全或不可验证的代码。  
+    -   <span data-ttu-id="34bdf-108">执行 <xref:System.Security.CodeAccessPermission.Assert%2A> 或特权提升。</span><span class="sxs-lookup"><span data-stu-id="34bdf-108">Perform an <xref:System.Security.CodeAccessPermission.Assert%2A> or elevation of privilege.</span></span>  
   
-    -   直接调用关键代码。  
+    -   <span data-ttu-id="34bdf-109">包含不安全或不可验证的代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-109">Contain unsafe or unverifiable code.</span></span>  
   
-    -   调用本机代码或具有 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 特性的代码。  
+    -   <span data-ttu-id="34bdf-110">直接调用关键代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-110">Directly call critical code.</span></span>  
   
-    -   调用受 <xref:System.Security.Permissions.SecurityAction> 保护的成员。  
+    -   <span data-ttu-id="34bdf-111">调用本机代码或具有 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 特性的代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-111">Call native code or code with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute.</span></span>  
   
-    -   从关键类型继承。  
+    -   <span data-ttu-id="34bdf-112">调用受 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 保护的成员。</span><span class="sxs-lookup"><span data-stu-id="34bdf-112">Call a member that is protected by a <xref:System.Security.Permissions.SecurityAction.LinkDemand>.</span></span>  
   
-     此外，透明方法不能重写关键虚拟方法或实现关键接口方法。  
+    -   <span data-ttu-id="34bdf-113">从关键类型继承。</span><span class="sxs-lookup"><span data-stu-id="34bdf-113">Inherit from critical types.</span></span>  
   
--   可靠关键代码是完全信任的代码，且可被透明代码调用的代码。 它公开完全信任代码的有限外围应用；可靠关键代码中会进行准确性和安全性验证。  
+     <span data-ttu-id="34bdf-114">此外，透明方法不能重写关键虚拟方法或实现关键接口方法。</span><span class="sxs-lookup"><span data-stu-id="34bdf-114">In addition, transparent methods cannot override critical virtual methods or implement critical interface methods.</span></span>  
   
--   安全关键代码可以调用完全信任的任何代码，但不能被透明代码调用。  
+-   <span data-ttu-id="34bdf-115">可靠关键代码是完全信任的代码，且可被透明代码调用的代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-115">Safe-critical code is fully trusted but is callable by transparent code.</span></span> <span data-ttu-id="34bdf-116">它公开完全信任代码的有限外围应用；可靠关键代码中会进行准确性和安全性验证。</span><span class="sxs-lookup"><span data-stu-id="34bdf-116">It exposes a limited surface area of full-trust code; correctness and security verifications happen in safe-critical code.</span></span>  
   
-> [!CAUTION]
->  代码访问安全性和部分受信任的代码  
->   
->  .NET Framework 提供一种机制，对在相同应用程序中运行的不同代码强制实施不同的信任级别，该机制称为代码访问安全性 \(CAS\)。  .NET Framework 中的代码访问安全性不应用作部分受信任的代码（特别是未知来源的代码）的安全边界。 建议在未实施其他安全措施的情况下，不要加载和执行未知来源的代码。  
->   
->  此策略适用于 .NET Framework 的所有版本，但不适用于 Silverlight 中所含的 .NET Framework。  
+-   <span data-ttu-id="34bdf-117">安全关键代码可以调用完全信任的任何代码，但不能被透明代码调用。</span><span class="sxs-lookup"><span data-stu-id="34bdf-117">Security-critical code can call any code and is fully trusted, but it cannot be called by transparent code.</span></span>  
   
- 本主题包含以下各节：  
+ <span data-ttu-id="34bdf-118">本主题包含以下各节：</span><span class="sxs-lookup"><span data-stu-id="34bdf-118">This topic contains the following sections:</span></span>  
   
--   [用法示例和行为](#examples)  
+-   [<span data-ttu-id="34bdf-119">用法示例和行为</span><span class="sxs-lookup"><span data-stu-id="34bdf-119">Usage Examples and Behaviors</span></span>](#examples)  
   
--   [重写模式](#override)  
+-   [<span data-ttu-id="34bdf-120">重写模式</span><span class="sxs-lookup"><span data-stu-id="34bdf-120">Override Patterns</span></span>](#override)  
   
--   [继承规则](#inheritance)  
+-   [<span data-ttu-id="34bdf-121">继承规则</span><span class="sxs-lookup"><span data-stu-id="34bdf-121">Inheritance Rules</span></span>](#inheritance)  
   
--   [其他信息和规则](#additional)  
+-   [<span data-ttu-id="34bdf-122">其他信息和规则</span><span class="sxs-lookup"><span data-stu-id="34bdf-122">Additional Information and Rules</span></span>](#additional)  
   
 <a name="examples"></a>   
-## 用法示例和行为  
- 若要指定 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则（ 2 级透明度），请对程序集使用以下批注：  
+## <a name="usage-examples-and-behaviors"></a><span data-ttu-id="34bdf-123">用法示例和行为</span><span class="sxs-lookup"><span data-stu-id="34bdf-123">Usage Examples and Behaviors</span></span>  
+ <span data-ttu-id="34bdf-124">若要指定 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则（ 2 级透明度），请对程序集使用以下批注：</span><span class="sxs-lookup"><span data-stu-id="34bdf-124">To specify [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules (level 2 transparency), use the following annotation for an assembly:</span></span>  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level2)]  
 ```  
   
- 若要锁定至 .NET Framework 2.0 规则（1 级透明度），请使用以下批注：  
+ <span data-ttu-id="34bdf-125">若要锁定至 .NET Framework 2.0 规则（1 级透明度），请使用以下批注：</span><span class="sxs-lookup"><span data-stu-id="34bdf-125">To lock into the .NET Framework 2.0 rules (level 1 transparency), use the following annotation:</span></span>  
   
 ```  
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- 如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。 但是，建议的最佳做法是使用 <xref:System.Security.SecurityRulesAttribute> 特性，而不是依赖默认值。  
+ <span data-ttu-id="34bdf-126">如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。</span><span class="sxs-lookup"><span data-stu-id="34bdf-126">If you do not annotate an assembly, the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rules are used by default.</span></span> <span data-ttu-id="34bdf-127">但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性，而不是依赖默认值。</span><span class="sxs-lookup"><span data-stu-id="34bdf-127">However, the recommended best practice is to use the <xref:System.Security.SecurityRulesAttribute> attribute instead of depending on the default.</span></span>  
   
-### 程序集范围的批注  
- 以下规则适用于程序集级别的特性使用：  
+### <a name="assembly-wide-annotation"></a><span data-ttu-id="34bdf-128">程序集范围的批注</span><span class="sxs-lookup"><span data-stu-id="34bdf-128">Assembly-wide Annotation</span></span>  
+ <span data-ttu-id="34bdf-129">以下规则适用于程序集级别的特性使用：</span><span class="sxs-lookup"><span data-stu-id="34bdf-129">The following rules apply to the use of attributes at the assembly level:</span></span>  
   
--   无特性：如果不指定任何特性，则运行时会将所有代码解释为安全关键代码，除非安全关键代码违反继承规则（例如，当重写或实现透明虚拟或接口方法时）。 在这些情况下，方法是可靠关键方法。 指定无特性会导致公用语言运行时为你确定透明度规则。  
+-   <span data-ttu-id="34bdf-130">无特性：如果不指定任何特性，则运行时会将所有代码解释为安全关键代码，除非安全关键代码违反继承规则（例如，当重写或实现透明虚拟或接口方法时）。</span><span class="sxs-lookup"><span data-stu-id="34bdf-130">No attributes: If you do not specify any attributes, the runtime interprets all code as security-critical, except where being security-critical violates an inheritance rule (for example, when overriding or implementing a transparent virtual or interface method).</span></span> <span data-ttu-id="34bdf-131">在这些情况下，方法是可靠关键方法。</span><span class="sxs-lookup"><span data-stu-id="34bdf-131">In those cases, the methods are safe-critical.</span></span> <span data-ttu-id="34bdf-132">指定无特性会导致公用语言运行时为你确定透明度规则。</span><span class="sxs-lookup"><span data-stu-id="34bdf-132">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span>  
   
--   `SecurityTransparent`：所有代码都是透明的；整个程序集不会执行任何特权代码或不安全的代码。  
+-   <span data-ttu-id="34bdf-133">`SecurityTransparent`：所有代码都是透明的；整个程序集不会执行任何特权代码或不安全的代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-133">`SecurityTransparent`: All code is transparent; the entire assembly will not do anything privileged or unsafe.</span></span>  
   
--   `SecurityCritical`：由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明代码。 这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。 例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。 你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。 当基类和派生类位于相同的程序集时，此规则也适用。  
+-   <span data-ttu-id="34bdf-134">`SecurityCritical`：由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明代码。</span><span class="sxs-lookup"><span data-stu-id="34bdf-134">`SecurityCritical`: All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="34bdf-135">这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。</span><span class="sxs-lookup"><span data-stu-id="34bdf-135">This scenario is similar to not specifying any attributes; however, the common language runtime does not automatically determine the transparency rules.</span></span> <span data-ttu-id="34bdf-136">例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-136">For example, if you override a virtual or abstract method or implement an interface method, by default, that method is transparent.</span></span> <span data-ttu-id="34bdf-137">你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。</span><span class="sxs-lookup"><span data-stu-id="34bdf-137">You must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`; otherwise, a <xref:System.TypeLoadException> will be thrown at load time.</span></span> <span data-ttu-id="34bdf-138">当基类和派生类位于相同的程序集时，此规则也适用。</span><span class="sxs-lookup"><span data-stu-id="34bdf-138">This rule also applies when both the base class and the derived class are in the same assembly.</span></span>  
   
--   `AllowPartiallyTrustedCallers`（仅 2 级）：所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。  
+-   <span data-ttu-id="34bdf-139">`AllowPartiallyTrustedCallers`（仅 2 级）：所有代码默认都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-139">`AllowPartiallyTrustedCallers` (level 2 only): All code defaults to transparent.</span></span> <span data-ttu-id="34bdf-140">但是，各个类型和成员可以有其他特性。</span><span class="sxs-lookup"><span data-stu-id="34bdf-140">However, individual types and members can have other attributes.</span></span>  
   
- 下表比较了 2 级与 1 级程序集的行为。  
+ <span data-ttu-id="34bdf-141">下表比较了 2 级与 1 级程序集的行为。</span><span class="sxs-lookup"><span data-stu-id="34bdf-141">The following table compares the assembly level behavior for Level 2 with Level 1 .</span></span>  
   
-|Assembly 特性|级别2|级别1|  
-|-----------------|---------|---------|  
-|部分信任的程序集上无特性|类型和成员默认是透明的，但可以是安全关键或安全可靠关键的。|所有类型和成员都是透明的。|  
-|无特性|指定无特性会导致公用语言运行时为你确定透明度规则。 所有类型和成员都是安全关键的，除非安全关键违反继承规则。|在完全信任的程序集上（在全局程序缓集缓存或 `AppDomain` 中标识为完全信任的程序集中），所有类型都是透明的，所有成员都是安全可靠关键的。|  
-|`SecurityTransparent`|所有类型和成员都是透明的。|所有类型和成员都是透明的。|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|不适用。|所有类型和成员都是安全关键的。|  
-|`SecurityCritical`|由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明的。 如果重写虚拟方法或抽象方法或者实现接口方法，则必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`。|所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。|  
+|<span data-ttu-id="34bdf-142">Assembly 特性</span><span class="sxs-lookup"><span data-stu-id="34bdf-142">Assembly attribute</span></span>|<span data-ttu-id="34bdf-143">级别2</span><span class="sxs-lookup"><span data-stu-id="34bdf-143">Level 2</span></span>|<span data-ttu-id="34bdf-144">级别1</span><span class="sxs-lookup"><span data-stu-id="34bdf-144">Level 1</span></span>|  
+|------------------------|-------------|-------------|  
+|<span data-ttu-id="34bdf-145">部分信任的程序集上无特性</span><span class="sxs-lookup"><span data-stu-id="34bdf-145">No attribute on a partially trusted assembly</span></span>|<span data-ttu-id="34bdf-146">类型和成员默认是透明的，但可以是安全关键或安全可靠关键的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-146">Types and members are by default transparent, but can be security-critical or security-safe-critical.</span></span>|<span data-ttu-id="34bdf-147">所有类型和成员都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-147">All types and members are transparent.</span></span>|  
+|<span data-ttu-id="34bdf-148">无特性</span><span class="sxs-lookup"><span data-stu-id="34bdf-148">No attribute</span></span>|<span data-ttu-id="34bdf-149">指定无特性会导致公用语言运行时为你确定透明度规则。</span><span class="sxs-lookup"><span data-stu-id="34bdf-149">Specifying no attribute causes the common language runtime to determine the transparency rules for you.</span></span> <span data-ttu-id="34bdf-150">所有类型和成员都是安全关键的，除非安全关键违反继承规则。</span><span class="sxs-lookup"><span data-stu-id="34bdf-150">All types and members are security-critical, except where being security-critical violates an inheritance rule.</span></span>|<span data-ttu-id="34bdf-151">在完全信任的程序集上（在全局程序缓集缓存或 `AppDomain` 中标识为完全信任的程序集中），所有类型都是透明的，所有成员都是安全可靠关键的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-151">On a fully trusted assembly (in the global assembly cache or identified as full trust in the `AppDomain`) all types are transparent and all members are security-safe-critical.</span></span>|  
+|`SecurityTransparent`|<span data-ttu-id="34bdf-152">所有类型和成员都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-152">All types and members are transparent.</span></span>|<span data-ttu-id="34bdf-153">所有类型和成员都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-153">All types and members are transparent.</span></span>|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|<span data-ttu-id="34bdf-154">不适用。</span><span class="sxs-lookup"><span data-stu-id="34bdf-154">Not applicable.</span></span>|<span data-ttu-id="34bdf-155">所有类型和成员都是安全关键的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-155">All types and members are security-critical.</span></span>|  
+|`SecurityCritical`|<span data-ttu-id="34bdf-156">由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-156">All code that is introduced by types in this assembly is critical; all other code is transparent.</span></span> <span data-ttu-id="34bdf-157">如果重写虚拟方法或抽象方法或者实现接口方法，则必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`。</span><span class="sxs-lookup"><span data-stu-id="34bdf-157">If you override a virtual or abstract method or implement an interface method, you must explicitly annotate the method as `SecurityCritical` or `SecuritySafeCritical`.</span></span>|<span data-ttu-id="34bdf-158">所有代码默认都是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-158">All code defaults to transparent.</span></span> <span data-ttu-id="34bdf-159">但是，各个类型和成员可以有其他特性。</span><span class="sxs-lookup"><span data-stu-id="34bdf-159">However, individual types and members can have other attributes.</span></span>|  
   
-### 类型和成员批注  
- 适用于安全类型的安全特性也适用于该类型引入的成员。 但是，这些规则不适用于基类或接口实现的虚拟或抽象重写。 以下规则适用于类型和成员级别的特性使用：  
+### <a name="type-and-member-annotation"></a><span data-ttu-id="34bdf-160">类型和成员批注</span><span class="sxs-lookup"><span data-stu-id="34bdf-160">Type and Member Annotation</span></span>  
+ <span data-ttu-id="34bdf-161">适用于安全类型的安全特性也适用于该类型引入的成员。</span><span class="sxs-lookup"><span data-stu-id="34bdf-161">The security attributes that are applied to a type also apply to the members that are introduced by the type.</span></span> <span data-ttu-id="34bdf-162">但是，这些规则不适用于基类或接口实现的虚拟或抽象重写。</span><span class="sxs-lookup"><span data-stu-id="34bdf-162">However, they do not apply to virtual or abstract overrides of the base class or interface implementations.</span></span> <span data-ttu-id="34bdf-163">以下规则适用于类型和成员级别的特性使用：</span><span class="sxs-lookup"><span data-stu-id="34bdf-163">The following rules apply to the use of attributes at the type and member level:</span></span>  
   
--   `SecurityCritical`：类型或成员是关键的，并且只能由完全信任代码调用。 安全关键类型中引入的方法是关键的。  
+-   <span data-ttu-id="34bdf-164">`SecurityCritical`：类型或成员是关键的，并且只能由完全信任代码调用。</span><span class="sxs-lookup"><span data-stu-id="34bdf-164">`SecurityCritical`: The type or member is critical and can be called only by full-trust code.</span></span> <span data-ttu-id="34bdf-165">安全关键类型中引入的方法是关键的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-165">Methods that are introduced in a security-critical type are critical.</span></span>  
   
     > [!IMPORTANT]
-    >  基类或接口中引入的以及安全关键类中重写或实现的虚拟和抽象方法默认是透明的。 这些方法必须标识为 `SecuritySafeCritical` 或 `SecurityCritical`。  
+    >  <span data-ttu-id="34bdf-166">基类或接口中引入的以及安全关键类中重写或实现的虚拟和抽象方法默认是透明的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-166">Virtual and abstract methods that are introduced in base classes or interfaces, and overridden or implemented in a security-critical class are transparent by default.</span></span> <span data-ttu-id="34bdf-167">这些方法必须标识为 `SecuritySafeCritical` 或 `SecurityCritical`。</span><span class="sxs-lookup"><span data-stu-id="34bdf-167">They must be identified as either `SecuritySafeCritical` or `SecurityCritical`.</span></span>  
   
--   `SecuritySafeCritical`：类型或成员是可靠关键的。 但是，类型或成员可以从透明（部分信任的）代码调用，并且与任何其他关键代码一样。 必须审核代码的安全性。  
+-   <span data-ttu-id="34bdf-168">`SecuritySafeCritical`：类型或成员是可靠关键的。</span><span class="sxs-lookup"><span data-stu-id="34bdf-168">`SecuritySafeCritical`: The type or member is safe-critical.</span></span> <span data-ttu-id="34bdf-169">但是，类型或成员可以从透明（部分信任的）代码调用，并且与任何其他关键代码一样。</span><span class="sxs-lookup"><span data-stu-id="34bdf-169">However, the type or member can be called from transparent (partially trusted) code and is as capable as any other critical code.</span></span> <span data-ttu-id="34bdf-170">必须审核代码的安全性。</span><span class="sxs-lookup"><span data-stu-id="34bdf-170">The code must be audited for security.</span></span>  
   
- [返回页首](#top)  
+ [<span data-ttu-id="34bdf-171">返回页首</span><span class="sxs-lookup"><span data-stu-id="34bdf-171">Back to top</span></span>](#top)  
   
 <a name="override"></a>   
-## 重写模式  
- 下表显示 2 级透明度允许的方法重写。  
+## <a name="override-patterns"></a><span data-ttu-id="34bdf-172">重写模式</span><span class="sxs-lookup"><span data-stu-id="34bdf-172">Override Patterns</span></span>  
+ <span data-ttu-id="34bdf-173">下表显示 2 级透明度允许的方法重写。</span><span class="sxs-lookup"><span data-stu-id="34bdf-173">The following table shows the method overrides allowed for level 2 transparency.</span></span>  
   
-|基虚拟\/接口成员|重写\/接口|  
-|---------------|------------|  
+|<span data-ttu-id="34bdf-174">基虚拟/接口成员</span><span class="sxs-lookup"><span data-stu-id="34bdf-174">Base virtual/interface member</span></span>|<span data-ttu-id="34bdf-175">重写/接口</span><span class="sxs-lookup"><span data-stu-id="34bdf-175">Override/interface</span></span>|  
+|------------------------------------|-------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`SafeCritical`|`Transparent`|  
 |`SafeCritical`|`SafeCritical`|  
 |`Critical`|`Critical`|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="34bdf-176">返回页首</span><span class="sxs-lookup"><span data-stu-id="34bdf-176">Back to top</span></span>](#top)  
   
 <a name="inheritance"></a>   
-## 继承规则  
- 在此部分中，基于访问权限和功能对 `Transparent`、`Critical` 和 `SafeCritical` 代码指定以下顺序：  
+## <a name="inheritance-rules"></a><span data-ttu-id="34bdf-177">继承规则</span><span class="sxs-lookup"><span data-stu-id="34bdf-177">Inheritance Rules</span></span>  
+ <span data-ttu-id="34bdf-178">在此部分中，基于访问权限和功能对 `Transparent`、`Critical` 和 `SafeCritical` 代码指定以下顺序：</span><span class="sxs-lookup"><span data-stu-id="34bdf-178">In this section, the following order is assigned to `Transparent`, `Critical`, and `SafeCritical` code based on access and capabilities:</span></span>  
   
- `Transparent` \< `SafeCritical` \< `Critical`  
+ `Transparent` < `SafeCritical` < `Critical`  
   
--   类型的规则：从左到右访问权限受到限制。 派生类型至少必须与基类型具有相同的受限访问权限。  
+-   <span data-ttu-id="34bdf-179">类型的规则：从左到右访问权限受到限制。</span><span class="sxs-lookup"><span data-stu-id="34bdf-179">Rules for types: Going from left to right, access becomes more restrictive.</span></span> <span data-ttu-id="34bdf-180">派生类型至少必须与基类型具有相同的受限访问权限。</span><span class="sxs-lookup"><span data-stu-id="34bdf-180">Derived types must be at least as restrictive as the base type.</span></span>  
   
--   方法的规则：派生方法的可访问性不能从基方法更改。 对于默认行为，不带批注的所有派生方法都是 `Transparent`。 如果重写方法未显示批注为 `SecurityCritical`，则派生关键类型会导致引发异常。  
+-   <span data-ttu-id="34bdf-181">方法的规则：派生方法的可访问性不能从基方法更改。</span><span class="sxs-lookup"><span data-stu-id="34bdf-181">Rules for methods: Derived methods cannot change accessibility from the base method.</span></span> <span data-ttu-id="34bdf-182">对于默认行为，不带批注的所有派生方法都是 `Transparent`。</span><span class="sxs-lookup"><span data-stu-id="34bdf-182">For default behavior, all derived methods that are not annotated are `Transparent`.</span></span> <span data-ttu-id="34bdf-183">如果重写方法未显示批注为 `SecurityCritical`，则派生关键类型会导致引发异常。</span><span class="sxs-lookup"><span data-stu-id="34bdf-183">Derivatives of critical types cause an exception to be thrown if the overridden method is not explicitly annotated as `SecurityCritical`.</span></span>  
   
- 下表显示允许的类型继承模式。  
+ <span data-ttu-id="34bdf-184">下表显示允许的类型继承模式。</span><span class="sxs-lookup"><span data-stu-id="34bdf-184">The following table shows the allowed type inheritance patterns.</span></span>  
   
-|基类|派生类可以是|  
-|--------|------------|  
+|<span data-ttu-id="34bdf-185">基类</span><span class="sxs-lookup"><span data-stu-id="34bdf-185">Base class</span></span>|<span data-ttu-id="34bdf-186">派生类可以是</span><span class="sxs-lookup"><span data-stu-id="34bdf-186">Derived class can be</span></span>|  
+|----------------|--------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`Transparent`|`Critical`|  
@@ -150,61 +144,61 @@ caps.handback.revision: 35
 |`SafeCritical`|`Critical`|  
 |`Critical`|`Critical`|  
   
- 下表显示不允许的类型继承模式。  
+ <span data-ttu-id="34bdf-187">下表显示不允许的类型继承模式。</span><span class="sxs-lookup"><span data-stu-id="34bdf-187">The following table shows the disallowed type inheritance patterns.</span></span>  
   
-|基类|派生类不可以是|  
-|--------|-------------|  
+|<span data-ttu-id="34bdf-188">基类</span><span class="sxs-lookup"><span data-stu-id="34bdf-188">Base class</span></span>|<span data-ttu-id="34bdf-189">派生类不可以是</span><span class="sxs-lookup"><span data-stu-id="34bdf-189">Derived class cannot be</span></span>|  
+|----------------|-----------------------------|  
 |`SafeCritical`|`Transparent`|  
 |`Critical`|`Transparent`|  
 |`Critical`|`SafeCritical`|  
   
- 下表显示允许的方法继承模式。  
+ <span data-ttu-id="34bdf-190">下表显示允许的方法继承模式。</span><span class="sxs-lookup"><span data-stu-id="34bdf-190">The following table shows the allowed method inheritance patterns.</span></span>  
   
-|基方法|派生方法可以是|  
-|---------|-------------|  
+|<span data-ttu-id="34bdf-191">基方法</span><span class="sxs-lookup"><span data-stu-id="34bdf-191">Base method</span></span>|<span data-ttu-id="34bdf-192">派生方法可以是</span><span class="sxs-lookup"><span data-stu-id="34bdf-192">Derived method can be</span></span>|  
+|-----------------|---------------------------|  
 |`Transparent`|`Transparent`|  
 |`Transparent`|`SafeCritical`|  
 |`SafeCritical`|`Transparent`|  
 |`SafeCritical`|`SafeCritical`|  
 |`Critical`|`Critical`|  
   
- 下表显示不允许的方法继承模式。  
+ <span data-ttu-id="34bdf-193">下表显示不允许的方法继承模式。</span><span class="sxs-lookup"><span data-stu-id="34bdf-193">The following table shows the disallowed method inheritance patterns.</span></span>  
   
-|基方法|派生方法不可以是|  
-|---------|--------------|  
+|<span data-ttu-id="34bdf-194">基方法</span><span class="sxs-lookup"><span data-stu-id="34bdf-194">Base method</span></span>|<span data-ttu-id="34bdf-195">派生方法不可以是</span><span class="sxs-lookup"><span data-stu-id="34bdf-195">Derived method cannot be</span></span>|  
+|-----------------|------------------------------|  
 |`Transparent`|`Critical`|  
 |`SafeCritical`|`Critical`|  
 |`Critical`|`Transparent`|  
 |`Critical`|`SafeCritical`|  
   
 > [!NOTE]
->  这些继承规则适用于 2 级类型和成员。 1 级程序集中的类型可以从 2 级安全关键类型和成员继承。 因此，2 级类型和成员必须与 1 级继承者具有不同的继承需求。  
+>  <span data-ttu-id="34bdf-196">这些继承规则适用于 2 级类型和成员。</span><span class="sxs-lookup"><span data-stu-id="34bdf-196">These inheritance rules apply to level 2 types and members.</span></span> <span data-ttu-id="34bdf-197">1 级程序集中的类型可以从 2 级安全关键类型和成员继承。</span><span class="sxs-lookup"><span data-stu-id="34bdf-197">Types in level 1 assemblies can inherit from level 2 security-critical types and members.</span></span> <span data-ttu-id="34bdf-198">因此，2 级类型和成员必须与 1 级继承者具有不同的继承需求。</span><span class="sxs-lookup"><span data-stu-id="34bdf-198">Therefore, level 2 types and members must have separate inheritance demands for level 1 inheritors.</span></span>  
   
- [返回页首](#top)  
+ [<span data-ttu-id="34bdf-199">返回页首</span><span class="sxs-lookup"><span data-stu-id="34bdf-199">Back to top</span></span>](#top)  
   
 <a name="additional"></a>   
-## 其他信息和规则  
+## <a name="additional-information-and-rules"></a><span data-ttu-id="34bdf-200">其他信息和规则</span><span class="sxs-lookup"><span data-stu-id="34bdf-200">Additional Information and Rules</span></span>  
   
-### LinkDemand 支持  
- 2 级透明度模型将 <xref:System.Security.Permissions.SecurityAction> 替换为 <xref:System.Security.SecurityCriticalAttribute> 特性。 在遗留（1 级）代码中，<xref:System.Security.Permissions.SecurityAction> 自动被视为 <xref:System.Security.Permissions.SecurityAction>。  
+### <a name="linkdemand-support"></a><span data-ttu-id="34bdf-201">LinkDemand 支持</span><span class="sxs-lookup"><span data-stu-id="34bdf-201">LinkDemand Support</span></span>  
+ <span data-ttu-id="34bdf-202">2 级透明度模型将 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 替换为 <xref:System.Security.SecurityCriticalAttribute> 特性。</span><span class="sxs-lookup"><span data-stu-id="34bdf-202">The level 2 transparency model replaces the <xref:System.Security.Permissions.SecurityAction.LinkDemand> with the <xref:System.Security.SecurityCriticalAttribute> attribute.</span></span> <span data-ttu-id="34bdf-203">在遗留（1 级）代码中，<xref:System.Security.Permissions.SecurityAction.LinkDemand> 自动被视为 <xref:System.Security.Permissions.SecurityAction.Demand>。</span><span class="sxs-lookup"><span data-stu-id="34bdf-203">In legacy (level 1) code, a <xref:System.Security.Permissions.SecurityAction.LinkDemand> is automatically treated as a <xref:System.Security.Permissions.SecurityAction.Demand>.</span></span>  
   
-### 映像  
- 调用关键方法或读取关键字段会触发对完全信任权限的要求（就像调用私有方法或字段一样）。 因此，完全信任的代码可以调用关键方法，而部分信任的代码则不能。  
+### <a name="reflection"></a><span data-ttu-id="34bdf-204">映像</span><span class="sxs-lookup"><span data-stu-id="34bdf-204">Reflection</span></span>  
+ <span data-ttu-id="34bdf-205">调用关键方法或读取关键字段会触发对完全信任权限的要求（就像调用私有方法或字段一样）。</span><span class="sxs-lookup"><span data-stu-id="34bdf-205">Invoking a critical method or reading a critical field triggers a demand for full trust (just as if you were invoking a private method or field).</span></span> <span data-ttu-id="34bdf-206">因此，完全信任的代码可以调用关键方法，而部分信任的代码则不能。</span><span class="sxs-lookup"><span data-stu-id="34bdf-206">Therefore, full-trust code can invoke a critical method, whereas partial-trust code cannot.</span></span>  
   
- 以下属性已添加到 <xref:System.Reflection> 命名空间，以确定类型、方法或字段是否为 `SecurityCritical``SecuritySafeCritical` 或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。 使用这些属性可通过反射而非检查特性是否存在确定透明度。 透明度规则比较复杂，检查特性可能不够充分。  
+ <span data-ttu-id="34bdf-207">以下属性已添加到 <xref:System.Reflection> 命名空间，以确定类型、方法或字段是否为 `SecurityCritical``SecuritySafeCritical` 或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。</span><span class="sxs-lookup"><span data-stu-id="34bdf-207">The following properties have been added to the <xref:System.Reflection> namespace to determine whether the type, method, or field is `SecurityCritical`, `SecuritySafeCritical`, or `SecurityTransparent`:  <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>.</span></span> <span data-ttu-id="34bdf-208">使用这些属性可通过反射而非检查特性是否存在确定透明度。</span><span class="sxs-lookup"><span data-stu-id="34bdf-208">Use these properties to determine transparency by using reflection instead of checking for the presence of the attribute.</span></span> <span data-ttu-id="34bdf-209">透明度规则比较复杂，检查特性可能不够充分。</span><span class="sxs-lookup"><span data-stu-id="34bdf-209">The transparency rules are complex, and checking for the attribute may not be sufficient.</span></span>  
   
 > [!NOTE]
->  `SafeCritical` 方法为 <xref:System.Type.IsSecurityCritical%2A>`` 和 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 返回 `true`，因为 `SafeCritical` 事实上是关键的（它与关键代码具有相同的功能，但可以从透明代码调用）。  
+>  <span data-ttu-id="34bdf-210">A`SafeCritical`方法返回`true`两个<xref:System.Type.IsSecurityCritical%2A>和<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>，这是因为`SafeCritical`事实上是关键的 （它具有相同的功能与关键代码，但它可以从透明代码调用）。</span><span class="sxs-lookup"><span data-stu-id="34bdf-210">A `SafeCritical` method returns `true` for both <xref:System.Type.IsSecurityCritical%2A> and <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>, because `SafeCritical` is indeed critical (it has the same capabilities as critical code, but it can be called from transparent code).</span></span>  
   
- 动态方法继承其附加到的模块的透明度；他们不继承类型的透明度（如果它们附加到一个类型）。  
+ <span data-ttu-id="34bdf-211">动态方法继承其附加到的模块的透明度；他们不继承类型的透明度（如果它们附加到一个类型）。</span><span class="sxs-lookup"><span data-stu-id="34bdf-211">Dynamic methods inherit the transparency of the modules they are attached to; they do not inherit the transparency of the type (if they are attached to a type).</span></span>  
   
-### 在完全信任的环境中跳过验证  
- 你可以通过在 <xref:System.Security.SecurityRulesAttribute> 特性中将 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性设置为 `true`，跳过完全信任的透明程序集的验证。  
+### <a name="skip-verification-in-full-trust"></a><span data-ttu-id="34bdf-212">在完全信任的环境中跳过验证</span><span class="sxs-lookup"><span data-stu-id="34bdf-212">Skip Verification in Full Trust</span></span>  
+ <span data-ttu-id="34bdf-213">你可以通过在 <xref:System.Security.SecurityRulesAttribute> 特性中将 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性设置为 `true`，跳过完全信任的透明程序集的验证。</span><span class="sxs-lookup"><span data-stu-id="34bdf-213">You can skip verification for fully trusted transparent assemblies by setting the <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property to `true` in the <xref:System.Security.SecurityRulesAttribute> attribute:</span></span>  
   
  `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
   
- <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 你应确保程序集中的透明代码可以通过使用 [PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)中的 `transparent` 选项验证。  
+ <span data-ttu-id="34bdf-214"><xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。</span><span class="sxs-lookup"><span data-stu-id="34bdf-214">The <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> property is `false` by default, so the property must be set to `true` to skip verification.</span></span> <span data-ttu-id="34bdf-215">只能出于优化目的跳过验证。</span><span class="sxs-lookup"><span data-stu-id="34bdf-215">This should be done for optimization purposes only.</span></span> <span data-ttu-id="34bdf-216">你应确保程序集中的透明代码是通过使用验证`transparent`选项[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="34bdf-216">You should ensure that the transparent code in the assembly is verifiable by using the `transparent` option in the [PEVerify tool](../../../docs/framework/tools/peverify-exe-peverify-tool.md).</span></span>  
   
-## 请参阅  
- [安全透明的代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)   
- [安全更改](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a><span data-ttu-id="34bdf-217">另请参阅</span><span class="sxs-lookup"><span data-stu-id="34bdf-217">See Also</span></span>  
+ [<span data-ttu-id="34bdf-218">安全透明的代码，级别 1</span><span class="sxs-lookup"><span data-stu-id="34bdf-218">Security-Transparent Code, Level 1</span></span>](../../../docs/framework/misc/security-transparent-code-level-1.md)  
+ [<span data-ttu-id="34bdf-219">安全更改</span><span class="sxs-lookup"><span data-stu-id="34bdf-219">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)

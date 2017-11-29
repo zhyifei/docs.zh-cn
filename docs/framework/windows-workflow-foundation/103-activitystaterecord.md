@@ -1,50 +1,54 @@
 ---
-title: "103 - ActivityStateRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 103 - ActivityStateRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 57636a9a-561e-44aa-aef9-1f1894aaa6dd
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 60dff5365ea98d767a271998a2de9fe3b1aae591
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 103 - ActivityStateRecord
-## 属性  
+# <a name="103---activitystaterecord"></a><span data-ttu-id="6acfa-102">103 - ActivityStateRecord</span><span class="sxs-lookup"><span data-stu-id="6acfa-102">103 - ActivityStateRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="6acfa-103">属性</span><span class="sxs-lookup"><span data-stu-id="6acfa-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|103|  
-|Keywords|EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="6acfa-104">Id</span><span class="sxs-lookup"><span data-stu-id="6acfa-104">Id</span></span>|<span data-ttu-id="6acfa-105">103</span><span class="sxs-lookup"><span data-stu-id="6acfa-105">103</span></span>|  
+|<span data-ttu-id="6acfa-106">关键字</span><span class="sxs-lookup"><span data-stu-id="6acfa-106">Keywords</span></span>|<span data-ttu-id="6acfa-107">EndToEndMonitoring、Troubleshooting、HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="6acfa-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="6acfa-108">级别</span><span class="sxs-lookup"><span data-stu-id="6acfa-108">Level</span></span>|<span data-ttu-id="6acfa-109">信息</span><span class="sxs-lookup"><span data-stu-id="6acfa-109">Information</span></span>|  
+|<span data-ttu-id="6acfa-110">通道</span><span class="sxs-lookup"><span data-stu-id="6acfa-110">Channel</span></span>|<span data-ttu-id="6acfa-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="6acfa-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 说明  
- 当工作流实例中的某个活动发出 ActivityStateRecord 时，ETW 跟踪参与者将发出此事件。  
+## <a name="description"></a><span data-ttu-id="6acfa-112">描述</span><span class="sxs-lookup"><span data-stu-id="6acfa-112">Description</span></span>  
+ <span data-ttu-id="6acfa-113">当工作流实例中的某个活动发出 ActivityStateRecord 时，ETW 跟踪参与者将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="6acfa-113">This event is emitted by the ETW tracking participant when a activity within a workflow instance emits ActivityStateRecord</span></span>  
   
-## 消息  
- TrackRecord \= ActivityStateRecord, InstanceID \= %1, RecordNumber\=%2, EventTime\=%3, State \= %4, Name\=%5, ActivityId\=%6, ActivityInstanceId\=%7, ActivityTypeName\=%8, Arguments\=%9, Variables\=%10, Annotations\=%11, ProfileName \= %12  
+## <a name="message"></a><span data-ttu-id="6acfa-114">消息</span><span class="sxs-lookup"><span data-stu-id="6acfa-114">Message</span></span>  
+ <span data-ttu-id="6acfa-115">TrackRecord = ActivityStateRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, State = %4, Name=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Arguments=%9, Variables=%10, Annotations=%11, ProfileName = %12</span><span class="sxs-lookup"><span data-stu-id="6acfa-115">TrackRecord = ActivityStateRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, State = %4, Name=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Arguments=%9, Variables=%10, Annotations=%11, ProfileName = %12</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="6acfa-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="6acfa-116">Details</span></span>  
   
-|数据项名称|数据项类型|说明|  
-|-----------|-----------|--------|  
-|InstanceId|xs:GUID|工作流的实例 ID|  
-|RecordNumber|xs:long|发出的记录的序列号|  
-|EventTime|xs:dateTime|发出该事件时的 UTC 时间|  
-|State|xs:string|活动的状态|  
-|Name|xs:string|发出该事件的活动的显示名称|  
-|ActivityId|xs:string|发出的活动的活动 ID|  
-|ActivityInstanceId|xs:string|发出的活动的活动实例 ID|  
-|ActivityTypeName|xs:string|发出的活动的类型名称|  
-|Arguments|xs:string|在此事件中跟踪的参数。这些值存储在一个 xml 元素中，格式为 \<items\>\<\> item  name \= "argumentName" type\="System.String"\<argumentValue\>\<\/item\>\/items。如果未跟踪任何参数，则该字符串包含 \<items\/\>。ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。如果事件的大小超出 ETW 限制，则通过丢弃批注并将批注值替换为 \<items\>...\<\/items\> 来截断事件。以下类型以从 ToString\(\) 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。|  
-|Variables|xs:string|在此事件中跟踪的变量。这些值存储在一个 xml 元素中，格式为 \<items\>\<\> item  name \= "variableName" type\="System.String"\<variableValue\>\<\/item\>\/items。如果未跟踪任何变量，则该字符串包含 \<items\/\>。ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。如果事件的大小超出 ETW 限制，则通过丢弃批注并将变量值替换为 \<items\>...\<\/items\> 来截断事件。以下类型以从 ToString\(\) 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。|  
-|Annotations|xs:string|已添加到此事件中的批注。这些值存储在一个 xml 元素中，格式为 \<items\>\<\> item  name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果未指定任何批注，则该字符串包含 \<items\/\>。ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。如果事件的大小超出 ETW 限制，则通过丢弃批注并将批注值替换为 \<items\>...\<\/items\> 来截断事件。|  
-|ProfileName|xs:string|导致发出此事件的跟踪配置文件的名称|  
-|HostReference|xs:string|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。此字段的格式定义为“网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;服务名称”，示例：“默认网站\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService”|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="6acfa-117">数据项名称</span><span class="sxs-lookup"><span data-stu-id="6acfa-117">Data Item Name</span></span>|<span data-ttu-id="6acfa-118">数据项类型</span><span class="sxs-lookup"><span data-stu-id="6acfa-118">Data Item Type</span></span>|<span data-ttu-id="6acfa-119">描述</span><span class="sxs-lookup"><span data-stu-id="6acfa-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="6acfa-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="6acfa-120">InstanceId</span></span>|<span data-ttu-id="6acfa-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="6acfa-121">xs:GUID</span></span>|<span data-ttu-id="6acfa-122">工作流的实例 ID</span><span class="sxs-lookup"><span data-stu-id="6acfa-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="6acfa-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="6acfa-123">RecordNumber</span></span>|<span data-ttu-id="6acfa-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="6acfa-124">xs:long</span></span>|<span data-ttu-id="6acfa-125">发出的记录的序列号</span><span class="sxs-lookup"><span data-stu-id="6acfa-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="6acfa-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="6acfa-126">EventTime</span></span>|<span data-ttu-id="6acfa-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="6acfa-127">xs:dateTime</span></span>|<span data-ttu-id="6acfa-128">发出该事件时的 UTC 时间</span><span class="sxs-lookup"><span data-stu-id="6acfa-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="6acfa-129">状态</span><span class="sxs-lookup"><span data-stu-id="6acfa-129">State</span></span>|<span data-ttu-id="6acfa-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-130">xs:string</span></span>|<span data-ttu-id="6acfa-131">活动的状态</span><span class="sxs-lookup"><span data-stu-id="6acfa-131">The state of the activity</span></span>|  
+|<span data-ttu-id="6acfa-132">名称</span><span class="sxs-lookup"><span data-stu-id="6acfa-132">Name</span></span>|<span data-ttu-id="6acfa-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-133">xs:string</span></span>|<span data-ttu-id="6acfa-134">发出该事件的活动的显示名称</span><span class="sxs-lookup"><span data-stu-id="6acfa-134">The display name of the activity that emitted the event</span></span>|  
+|<span data-ttu-id="6acfa-135">ActivityId</span><span class="sxs-lookup"><span data-stu-id="6acfa-135">ActivityId</span></span>|<span data-ttu-id="6acfa-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-136">xs:string</span></span>|<span data-ttu-id="6acfa-137">发出的活动的活动 ID</span><span class="sxs-lookup"><span data-stu-id="6acfa-137">The activity id of the emitting activity</span></span>|  
+|<span data-ttu-id="6acfa-138">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="6acfa-138">ActivityInstanceId</span></span>|<span data-ttu-id="6acfa-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-139">xs:string</span></span>|<span data-ttu-id="6acfa-140">发出的活动的活动实例 ID</span><span class="sxs-lookup"><span data-stu-id="6acfa-140">The activity instance id of the emitting activity</span></span>|  
+|<span data-ttu-id="6acfa-141">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="6acfa-141">ActivityTypeName</span></span>|<span data-ttu-id="6acfa-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-142">xs:string</span></span>|<span data-ttu-id="6acfa-143">发出的活动的类型名称</span><span class="sxs-lookup"><span data-stu-id="6acfa-143">The type name of the emitting activity</span></span>|  
+|<span data-ttu-id="6acfa-144">参数</span><span class="sxs-lookup"><span data-stu-id="6acfa-144">Arguments</span></span>|<span data-ttu-id="6acfa-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-145">xs:string</span></span>|<span data-ttu-id="6acfa-146">在此事件中跟踪的参数。</span><span class="sxs-lookup"><span data-stu-id="6acfa-146">The arguments that were tracked with this event.</span></span>  <span data-ttu-id="6acfa-147">这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="argumentName"type ="> argumentValue\</项 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-147">The values are stored in an xml element in the format \<items>\< item  name = "argumentName" type="System.String">argumentValue\</item>\</items>.</span></span>  <span data-ttu-id="6acfa-148">如果未不跟踪任何参数，则该字符串包含\<项 / >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-148">If no arguments were tracked then the string contains \<items/>.</span></span> <span data-ttu-id="6acfa-149">ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。</span><span class="sxs-lookup"><span data-stu-id="6acfa-149">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="6acfa-150">如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-150">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>  <span data-ttu-id="6acfa-151">以下类型以从 ToString() 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。</span><span class="sxs-lookup"><span data-stu-id="6acfa-151">The following types are stored as their value as returned by ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.</span></span>  <span data-ttu-id="6acfa-152">所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。</span><span class="sxs-lookup"><span data-stu-id="6acfa-152">All other types are serialized using System.Runtime.Serialization.NetDataContractSerializer.</span></span>|  
+|<span data-ttu-id="6acfa-153">变量</span><span class="sxs-lookup"><span data-stu-id="6acfa-153">Variables</span></span>|<span data-ttu-id="6acfa-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-154">xs:string</span></span>|<span data-ttu-id="6acfa-155">在此事件中跟踪的变量。</span><span class="sxs-lookup"><span data-stu-id="6acfa-155">The variables that were tracked with this event.</span></span>  <span data-ttu-id="6acfa-156">这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="variableName"type ="> variableValue\</项 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-156">The values are stored in an xml element in the format \<items>\< item  name = "variableName" type="System.String">variableValue\</item>\</items>.</span></span>  <span data-ttu-id="6acfa-157">如果未不跟踪任何变量，则该字符串包含\<项 / >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-157">If no variables were tracked then the string contains \<items/>.</span></span> <span data-ttu-id="6acfa-158">ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。</span><span class="sxs-lookup"><span data-stu-id="6acfa-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="6acfa-159">如果事件大小超出 ETW 限制，则通过丢弃批注并将变量值与截断事件\<项 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the variables value with \<items>...\</items>.</span></span>  <span data-ttu-id="6acfa-160">以下类型以从 ToString() 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。</span><span class="sxs-lookup"><span data-stu-id="6acfa-160">The following types are stored as their value as returned by ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.</span></span>  <span data-ttu-id="6acfa-161">所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。</span><span class="sxs-lookup"><span data-stu-id="6acfa-161">All other types are serialized using System.Runtime.Serialization.NetDataContractSerializer.</span></span>|  
+|<span data-ttu-id="6acfa-162">批注</span><span class="sxs-lookup"><span data-stu-id="6acfa-162">Annotations</span></span>|<span data-ttu-id="6acfa-163">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-163">xs:string</span></span>|<span data-ttu-id="6acfa-164">已添加到此事件中的批注。</span><span class="sxs-lookup"><span data-stu-id="6acfa-164">The annotations that were added to this event.</span></span>  <span data-ttu-id="6acfa-165">这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="annotationName"type ="> annotationValue\</项 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-165">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="6acfa-166">如果不指定任何批注，则该字符串包含\<项 / >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-166">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="6acfa-167">ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。</span><span class="sxs-lookup"><span data-stu-id="6acfa-167">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="6acfa-168">如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="6acfa-168">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="6acfa-169">ProfileName</span><span class="sxs-lookup"><span data-stu-id="6acfa-169">ProfileName</span></span>|<span data-ttu-id="6acfa-170">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-170">xs:string</span></span>|<span data-ttu-id="6acfa-171">导致发出此事件的跟踪配置文件的名称</span><span class="sxs-lookup"><span data-stu-id="6acfa-171">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="6acfa-172">HostReference</span><span class="sxs-lookup"><span data-stu-id="6acfa-172">HostReference</span></span>|<span data-ttu-id="6acfa-173">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-173">xs:string</span></span>|<span data-ttu-id="6acfa-174">对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。</span><span class="sxs-lookup"><span data-stu-id="6acfa-174">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="6acfa-175">其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName 示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService</span><span class="sxs-lookup"><span data-stu-id="6acfa-175">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="6acfa-176">AppDomain</span><span class="sxs-lookup"><span data-stu-id="6acfa-176">AppDomain</span></span>|<span data-ttu-id="6acfa-177">xs:string</span><span class="sxs-lookup"><span data-stu-id="6acfa-177">xs:string</span></span>|<span data-ttu-id="6acfa-178">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="6acfa-178">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

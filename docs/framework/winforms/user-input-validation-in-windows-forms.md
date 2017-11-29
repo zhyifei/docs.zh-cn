@@ -1,107 +1,108 @@
 ---
-title: "Windows 窗体中的用户输入验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "用户输入, 在 Windows 窗体中验证"
-  - "验证用户输入, Windows 窗体"
-  - "验证, Windows 窗体用户输入"
-  - "Windows 窗体, 验证用户输入"
+title: "Windows 窗体中的用户输入验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, validating user input
+- validation [Windows Forms], Windows Forms user input
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体中的用户输入验证
-用户在应用程序中输入数据时，可能需要在应用程序使用该数据之前，验证该数据是否有效。  可能需要让某些文本字段的长度不为零，或者让字段的格式设置为符合电话号码或其他类型的格式良好的数据，或者让字符串不包含任何可用来降低数据库安全性的不安全字符。  Windows 窗体提供了几种验证应用程序中的输入的方法。  
+# <a name="user-input-validation-in-windows-forms"></a><span data-ttu-id="3e6d0-102">Windows 窗体中的用户输入验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-102">User Input Validation in Windows Forms</span></span>
+<span data-ttu-id="3e6d0-103">当用户输入到你的应用程序的数据时，你可能想要验证数据有效，然后再应用程序将使用它。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-103">When users enter data into your application, you may want to verify that the data is valid before your application uses it.</span></span> <span data-ttu-id="3e6d0-104">你可能需要某些文本字段不为零长度、 字段将转为电话号码或其他类型的数据格式正确，或字符串不包含任何不安全的字符，无法用于危及安全的数据库。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-104">You may require that certain text fields not be zero-length, that a field be formatted as a telephone number or other type of well-formed data, or that a string not contain any unsafe characters that could be used to compromise the security of a database.</span></span> <span data-ttu-id="3e6d0-105">Windows 窗体提供了几种方法来验证你的应用程序中输入。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-105">Windows Forms provides several ways for you to validate input in your application.</span></span>  
   
-## 使用 MaskedTextBox 控件的验证  
- 如果需要要求用户按正确定义的格式（例如，电话号码或部件号码）输入数据，则使用 <xref:System.Windows.Forms.MaskedTextBox> 控件可以用少量代码快速实现此目的。  掩码是由掩码语言中的字符组成的字符串，用于指定在文本框中的任何给定位置可以输入哪些字符。  该控件将向用户显示一组提示。  如果用户键入不正确的项（例如，在需要数字时用户键入字母），则该控件将自动拒绝输入。  
+## <a name="validation-with-the-maskedtextbox-control"></a><span data-ttu-id="3e6d0-106">MaskedTextBox 控件的验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-106">Validation with the MaskedTextBox Control</span></span>  
+ <span data-ttu-id="3e6d0-107">如果你需要要求用户输入数据中明确定义的格式，如电话号码或的部件号，你可以通过完成此速度快、 最少的代码使用<xref:System.Windows.Forms.MaskedTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-107">If you need to require users to enter data in a well-defined format, such as a telephone number or a part number, you can accomplish this quickly and with minimal code by using the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span> <span data-ttu-id="3e6d0-108">A*掩码*是从一种屏蔽语言，用于指定可以在任何给定位置在文本框中输入的字符的字符组成的字符串。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-108">A *mask* is a string made up of characters from a masking language that specifies which characters can be entered at any given position in the text box.</span></span> <span data-ttu-id="3e6d0-109">控件向用户显示一组提示。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-109">The control displays a set of prompts to the user.</span></span> <span data-ttu-id="3e6d0-110">如果用户键入输入错误，例如，用户键入字母数字时所需，该控件将自动拒绝输入。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-110">If the user types an incorrect entry, for example, the user types a letter when a digit is required, the control will automatically reject the input.</span></span>  
   
- <xref:System.Windows.Forms.MaskedTextBox> 使用的掩码语言非常灵活。  您可以通过掩码语言指定必选字符、可选字符、文字字符（如连字符和圆括号）、货币字符和日期分隔符。  该控件在绑定到数据源时也可以正常工作。  可使用数据绑定上的 <xref:System.Windows.Forms.Binding.Format> 事件重新设置传入数据的格式以符合掩码要求，并且可使用 <xref:System.Windows.Forms.Binding.Parse> 事件重新设置传出数据的格式以符合数据字段的规范。  
+ <span data-ttu-id="3e6d0-111">使用的屏蔽语言<xref:System.Windows.Forms.MaskedTextBox>非常灵活。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-111">The masking language that is used by <xref:System.Windows.Forms.MaskedTextBox> is very flexible.</span></span> <span data-ttu-id="3e6d0-112">它允许你指定所需的字符、 可选的字符、 原义字符，例如连字符和括号，货币字符和日期分隔符。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-112">It allows you to specify required characters, optional characters, literal characters, such as hyphens and parentheses, currency characters, and date separators.</span></span> <span data-ttu-id="3e6d0-113">控件也适用于很好地时绑定到数据源。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-113">The control also works well when bound to a data source.</span></span> <span data-ttu-id="3e6d0-114"><xref:System.Windows.Forms.Binding.Format>的数据绑定事件可用于对传入的数据以符合掩码，重新设置格式和<xref:System.Windows.Forms.Binding.Parse>事件可用于重新设置格式要符合规范的数据字段的传出数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-114">The <xref:System.Windows.Forms.Binding.Format> event on a data binding can be used to reformat incoming data to comply with the mask, and the <xref:System.Windows.Forms.Binding.Parse> event can be used to reformat outgoing data to comply with the specifications of the data field.</span></span>  
   
- 有关更多信息，请参见 [MaskedTextBox 控件](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)。  
+ <span data-ttu-id="3e6d0-115">有关详细信息，请参阅[MaskedTextBox 控件](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-115">For more information, see [MaskedTextBox Control](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).</span></span>  
   
-## 事件驱动的验证  
- 如果想完全通过编程来控制验证，或者需要执行复杂的验证检查，应当使用大多数 Windows 窗体控件中内置的验证事件。  每个接受任意形式的用户输入的控件都有 <xref:System.Windows.Forms.Control.Validating> 事件，一旦控件需要数据验证，该事件就会发生。  在 <xref:System.Windows.Forms.Control.Validating> 事件处理方法中，可以采用多种方式验证用户输入。  例如，如果有一个必须包含邮政编码的文本框，则可以用以下方法执行验证：  
+## <a name="event-driven-validation"></a><span data-ttu-id="3e6d0-116">事件驱动的验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-116">Event-Driven Validation</span></span>  
+ <span data-ttu-id="3e6d0-117">如果你想要以完全编程控制验证，或需要执行复杂的验证检查，则应使用内置于大多数 Windows 窗体控件的验证事件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-117">If you want full programmatic control over validation, or need to perform complex validation checks, you should use the validation events built into most Windows Forms controls.</span></span> <span data-ttu-id="3e6d0-118">接受自由格式用户输入的每个控件具有<xref:System.Windows.Forms.Control.Validating>，该控件所需数据验证都会发生的事件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-118">Each control that accepts free-form user input has a <xref:System.Windows.Forms.Control.Validating> event that will occur whenever the control requires data validation.</span></span> <span data-ttu-id="3e6d0-119">在<xref:System.Windows.Forms.Control.Validating>事件处理方法，你可以验证用户输入以下几种方式。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-119">In the <xref:System.Windows.Forms.Control.Validating> event-handling method, you can validate user input in several ways.</span></span> <span data-ttu-id="3e6d0-120">例如，如果你有必须包含邮政编码的文本框中，你可以通过以下方式来执行验证：</span><span class="sxs-lookup"><span data-stu-id="3e6d0-120">For example, if you have a text box that must contain a postal code, you can perform the validation in the following ways:</span></span>  
   
--   如果邮政编码必须属于某个特定的邮政编码组，则可以对输入执行字符串比较以验证用户输入的数据。  例如，如果邮政编码必须处于 {10001, 10002, 10003} 集中，则可以使用字符串比较来验证数据。  
+-   <span data-ttu-id="3e6d0-121">如果邮政编码必须属于一组特定的邮政编码，你可以对要验证用户输入的数据的输入执行字符串比较。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-121">If the postal code must belong to a specific group of zip codes, you can perform a string comparison on the input to validate the data entered by the user.</span></span> <span data-ttu-id="3e6d0-122">例如，如果邮政编码必须在 {10001、 10002，10003} 的集，然后可以使用字符串比较来验证数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-122">For example, if the postal code must be in the set {10001, 10002, 10003}, then you can use a string comparison to validate the data.</span></span>  
   
--   如果邮政编码必须采用特定的格式，则可以使用正则表达式来验证用户输入的数据。  例如，若要验证 `#####` 或 `#####-####` 格式，则可以使用正则表达式 `^(\d{5})(-\d{4})?$`。  若要验证 `A#A #A#` 格式，则可以使用正则表达式 `[A-Z]\d[A-Z] \d[A-Z]\d`。  有关正则表达式的更多信息，请参见 [.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)和[正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)。  
+-   <span data-ttu-id="3e6d0-123">如果特定的形式必须为邮政代码可以使用正则表达式来验证用户输入的数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-123">If the postal code must be in a specific form you can use regular expressions to validate the data entered by the user.</span></span> <span data-ttu-id="3e6d0-124">例如，若要验证的表单`#####`或`#####-####`，你可以使用正则表达式`^(\d{5})(-\d{4})?$`。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-124">For example, to validate the form `#####` or `#####-####`, you can use the regular expression `^(\d{5})(-\d{4})?$`.</span></span> <span data-ttu-id="3e6d0-125">若要验证的表单`A#A #A#`，你可以使用正则表达式`[A-Z]\d[A-Z] \d[A-Z]\d`。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-125">To validate the form `A#A #A#`, you can use the regular expression `[A-Z]\d[A-Z] \d[A-Z]\d`.</span></span> <span data-ttu-id="3e6d0-126">有关正则表达式的详细信息，请参阅[.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)和[正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-126">For more information about regular expressions, see [.NET Framework Regular Expressions](../../../docs/standard/base-types/regular-expressions.md) and [Regular Expression Examples](../../../docs/standard/base-types/regular-expression-examples.md).</span></span>  
   
--   如果邮政编码必须是有效的美国邮政编码，则可以调用一个邮政编码 Web 服务来验证用户输入的数据。  
+-   <span data-ttu-id="3e6d0-127">如果邮政编码必须是有效的美国邮政编码，则可以调用邮政编码 Web 服务以验证用户输入的数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-127">If the postal code must be a valid United States Zip code, you could call a Zip code Web service to validate the data entered by the user.</span></span>  
   
- 系统为 <xref:System.Windows.Forms.Control.Validating> 事件提供了类型为 <xref:System.ComponentModel.CancelEventArgs> 的对象。  如果确定控件的数据无效，则可以通过将此对象的 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 `true` 来取消 <xref:System.Windows.Forms.Control.Validating> 事件。  如果未设置 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性，则 Windows 窗体将假定该控件的验证已成功，并引发 <xref:System.Windows.Forms.Control.Validated> 事件。  
+ <span data-ttu-id="3e6d0-128"><xref:System.Windows.Forms.Control.Validating>提供事件类型的对象<xref:System.ComponentModel.CancelEventArgs>。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-128">The <xref:System.Windows.Forms.Control.Validating> event is supplied an object of type <xref:System.ComponentModel.CancelEventArgs>.</span></span> <span data-ttu-id="3e6d0-129">如果你确定控件的数据无效，则可以取消<xref:System.Windows.Forms.Control.Validating>通过设置此对象的事件<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-129">If you determine that the control's data is not valid, you can cancel the <xref:System.Windows.Forms.Control.Validating> event by setting this object's <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property to `true`.</span></span> <span data-ttu-id="3e6d0-130">如果你未设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性，Windows 窗体将假定该验证成功对于该控件，并引发<xref:System.Windows.Forms.Control.Validated>事件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-130">If you do not set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property, Windows Forms will assume that validation succeeded for that control, and raise the <xref:System.Windows.Forms.Control.Validated> event.</span></span>  
   
- 有关验证 <xref:System.Windows.Controls.TextBox> 中的电子邮件地址的代码示例，请参见 <xref:System.Windows.Forms.Control.Validating>。  
+ <span data-ttu-id="3e6d0-131">有关验证电子邮件地址中的代码示例<xref:System.Windows.Controls.TextBox>，请参阅<xref:System.Windows.Forms.Control.Validating>。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-131">For a code example that validates an e-mail address in a <xref:System.Windows.Controls.TextBox>, see <xref:System.Windows.Forms.Control.Validating>.</span></span>  
   
-### 数据绑定和事件驱动的验证  
- 在已将控件绑定到数据源（例如，数据库表）时，验证非常有用。  通过使用验证，可以确保控件的数据满足数据源要求的格式，并且其中不包含任何特殊字符（例如，可能不安全的引号和反斜杠）。  
+### <a name="data-binding-and-event-driven-validation"></a><span data-ttu-id="3e6d0-132">数据绑定和事件驱动的验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-132">Data Binding and Event-Driven Validation</span></span>  
+ <span data-ttu-id="3e6d0-133">将控件绑定到数据源，如数据库表时，验证将非常有用。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-133">Validation is very useful when you have bound your controls to a data source, such as a database table.</span></span> <span data-ttu-id="3e6d0-134">通过使用验证，你可以确保控件的数据满足数据源所要求的格式和其不包含任何特殊字符如引号引起来，备份正斜杠可能不安全。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-134">By using validation, you can make sure that your control's data satisfies the format required by the data source, and that it does not contain any special characters such as quotation marks and back slashes that might be unsafe.</span></span>  
   
- 使用数据绑定时，控件中的数据将在执行 <xref:System.Windows.Forms.Control.Validating> 事件期间与数据源同步。  如果取消 <xref:System.Windows.Forms.Control.Validating> 事件，数据将不与数据源同步。  
+ <span data-ttu-id="3e6d0-135">当使用数据绑定时，你的控件中的数据与同步数据源执行期间<xref:System.Windows.Forms.Control.Validating>事件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-135">When you use data binding, the data in your control is synchronized with the data source during execution of the <xref:System.Windows.Forms.Control.Validating> event.</span></span> <span data-ttu-id="3e6d0-136">如果你取消<xref:System.Windows.Forms.Control.Validating>事件，不会与数据源同步数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-136">If you cancel the <xref:System.Windows.Forms.Control.Validating> event, the data will not be synchronized with the data source.</span></span>  
   
 > [!IMPORTANT]
->  如果您的自定义验证在 <xref:System.Windows.Forms.Control.Validating> 事件之后发生，则该验证将不会影响数据绑定。  例如，如果 <xref:System.Windows.Forms.Control.Validated> 事件中的代码尝试取消数据绑定的代码，则仍将发生数据绑定。  在此情况下，若要在 <xref:System.Windows.Forms.Control.Validated> 事件中执行验证，请将控件的**“数据源更新模式”**属性（在**“\(数据绑定\)”**\\**“\(高级\)”**下）从**“OnValidation”**更改为**“从不”**，并且将*控件*`.DataBindings["`*\<您的字段\>*`"].WriteValue()` 添加到验证代码中。  
+>  <span data-ttu-id="3e6d0-137">如果你有之后发生的自定义验证<xref:System.Windows.Forms.Control.Validating>事件，它将不会影响的数据绑定。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-137">If you have custom validation that takes place after the <xref:System.Windows.Forms.Control.Validating> event, it will not affect the data binding.</span></span> <span data-ttu-id="3e6d0-138">例如，如果具有代码<xref:System.Windows.Forms.Control.Validated>尝试取消数据绑定的事件，仍将发生数据绑定。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-138">For example, if you have code in a <xref:System.Windows.Forms.Control.Validated> event that attempts to cancel the data binding, the data binding will still occur.</span></span> <span data-ttu-id="3e6d0-139">在此情况下，若要执行中的验证<xref:System.Windows.Forms.Control.Validated>事件，更改控件的**数据源更新模式**属性 (**(Databindings) 下**\\**（高级）**) 从**OnValidation**到**从不**，并添加*控件*`.DataBindings["`*\<YOURFIELD >* `"].WriteValue()`到你的验证代码。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-139">In this case, to perform validation in the <xref:System.Windows.Forms.Control.Validated> event, change the control's **Data Source Update Mode** property (**under (Databindings)**\\**(Advanced)**) from **OnValidation** to **Never**, and add *Control*`.DataBindings["`*\<YOURFIELD>*`"].WriteValue()` to your validation code.</span></span>  
   
-### 隐式和显式验证  
- 何时验证控件的数据？  这要由您 \- 开发人员来回答。  可以根据应用程序的需要来使用隐式或显式验证。  
+### <a name="implicit-and-explicit-validation"></a><span data-ttu-id="3e6d0-140">隐式和显式验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-140">Implicit and Explicit Validation</span></span>  
+ <span data-ttu-id="3e6d0-141">因此何时控件的数据验证？</span><span class="sxs-lookup"><span data-stu-id="3e6d0-141">So when does a control's data get validated?</span></span> <span data-ttu-id="3e6d0-142">这是由您决定，开发人员。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-142">This is up to you, the developer.</span></span> <span data-ttu-id="3e6d0-143">你可以使用隐式或显式验证，具体取决于你的应用程序的需求。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-143">You can use either implicit or explicit validation, depending on the needs of your application.</span></span>  
   
-#### 隐式验证  
- 隐式验证方法将在用户输入数据的过程中验证数据。  如果在键被按下时读取键，则可以在向控件中输入数据时验证数据，或者更常见的做法是，在用户将输入焦点从一个控件移向下一个控件时验证数据。  当需要为用户提供有关所使用的数据的即时反馈时，此方法很有用。  
+#### <a name="implicit-validation"></a><span data-ttu-id="3e6d0-144">隐式验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-144">Implicit Validation</span></span>  
+ <span data-ttu-id="3e6d0-145">在用户输入它时，隐式验证方法将验证数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-145">The implicit validation approach validates data as the user enters it.</span></span> <span data-ttu-id="3e6d0-146">你可以验证数据，因为通常每当用户将输入的焦点离开一个控件，并将移动到下一步，在通过读取的项，如您按下，控件或多个输入的数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-146">You can validate the data as the data is entered in a control by reading the keys as they are pressed, or more commonly whenever the user takes the input focus away from one control and moves to the next.</span></span> <span data-ttu-id="3e6d0-147">当你想要将有关的数据的用户即时反馈，因为他们正在处理时，此方法非常有用。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-147">This approach is useful when you want to give the user immediate feedback about the data as they are working.</span></span>  
   
- 如果要使用控件的隐式验证，则必须将该控件的 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 属性设置为 `true`。  如果取消 <xref:System.Windows.Forms.Control.Validating> 事件，则该控件的行为将由分配给 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 的值来确定。  如果分配了 <xref:System.Windows.Forms.AutoValidate>，则取消事件不会导致 <xref:System.Windows.Forms.Control.Validated> 事件发生。  在用户将数据更改为有效输入之前，输入焦点将一直保留在当前控件上。  如果分配了 <xref:System.Windows.Forms.AutoValidate>，则取消事件时将不会发生 <xref:System.Windows.Forms.Control.Validated> 事件，但焦点仍将更改到下一个控件上。  
+ <span data-ttu-id="3e6d0-148">如果你想要使用的控件的隐式验证，则必须设置该控件的<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-148">If you want to use implicit validation for a control, you must set that control's <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property to `true`.</span></span> <span data-ttu-id="3e6d0-149">如果你取消<xref:System.Windows.Forms.Control.Validating>事件，该控件的行为将由何值你分配给<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-149">If you cancel the <xref:System.Windows.Forms.Control.Validating> event, the behavior of the control will be determined by what value that you assigned to <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>.</span></span> <span data-ttu-id="3e6d0-150">如果分配<xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>，取消该事件将导致<xref:System.Windows.Forms.Control.Validated>事件不发生。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-150">If you assigned <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, canceling the event will cause the <xref:System.Windows.Forms.Control.Validated> event not to occur.</span></span> <span data-ttu-id="3e6d0-151">输入的焦点将保留在当前控件上，直到用户将数据更改为有效的输入。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-151">Input focus will remain on the current control until the user changes the data to a valid input.</span></span> <span data-ttu-id="3e6d0-152">如果分配<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>、<xref:System.Windows.Forms.Control.Validated>时取消该事件，但将仍会将焦点更改为下一个控件的事件将不会发生。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-152">If you assigned <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>, the <xref:System.Windows.Forms.Control.Validated> event will not occur when you cancel the event, but focus will still change to the next control.</span></span>  
   
- 如果将 <xref:System.Windows.Forms.AutoValidate> 分配给 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 属性，将同时防止隐式验证。  若要验证控件，则必须使用显式验证。  
+ <span data-ttu-id="3e6d0-153">分配<xref:System.Windows.Forms.AutoValidate.Disable>到<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>属性完全阻止隐式验证。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-153">Assigning <xref:System.Windows.Forms.AutoValidate.Disable> to the <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property prevents implicit validation altogether.</span></span> <span data-ttu-id="3e6d0-154">若要验证你的控件，你将需要使用显式验证。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-154">To validate your controls, you will have to use explicit validation.</span></span>  
   
-#### 显式验证  
- 显式验证方法将一次性验证数据。  可以验证数据以响应用户操作，例如单击“保存”按钮或“下一步”链接的操作。  当发生用户操作时，可以通过下列方法之一来触发显式验证：  
+#### <a name="explicit-validation"></a><span data-ttu-id="3e6d0-155">显式验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-155">Explicit Validation</span></span>  
+ <span data-ttu-id="3e6d0-156">显式验证方法一次验证数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-156">The explicit validation approach validates data at one time.</span></span> <span data-ttu-id="3e6d0-157">你可以验证响应用户操作，例如单击保存按钮或下一步链接中的数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-157">You can validate the data in response to a user action, such as clicking a Save button or a Next link.</span></span> <span data-ttu-id="3e6d0-158">当用户执行任何操作发生时，你可以通过以下方式之一来触发显式验证：</span><span class="sxs-lookup"><span data-stu-id="3e6d0-158">When the user action occurs, you can trigger explicit validation in one of the following ways:</span></span>  
   
--   调用 <xref:System.Windows.Forms.ContainerControl.Validate%2A> 以验证上一个失去焦点的控件。  
+-   <span data-ttu-id="3e6d0-159">调用<xref:System.Windows.Forms.ContainerControl.Validate%2A>验证失去焦点的最后一个控件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-159">Call <xref:System.Windows.Forms.ContainerControl.Validate%2A> to validate the last control to have lost focus.</span></span>  
   
--   调用 <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> 以验证窗体或容器控件中的所有子控件。  
+-   <span data-ttu-id="3e6d0-160">调用<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>以验证窗体或容器控件中的所有子控件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-160">Call <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> to validate all child controls in a form or container control.</span></span>  
   
--   调用自定义方法以手动验证控件中的数据。  
+-   <span data-ttu-id="3e6d0-161">调用自定义方法，以手动验证控件中的数据。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-161">Call a custom method to validate the data in the controls manually.</span></span>  
   
-#### Windows 窗体控件的默认隐式验证行为  
- 不同的 Windows 窗体控件的 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 属性有不同的默认值。  下表显示了最常见的控件及其默认值。  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a><span data-ttu-id="3e6d0-162">默认隐式验证行为适用于 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="3e6d0-162">Default Implicit Validation Behavior for Windows Forms Controls</span></span>  
+ <span data-ttu-id="3e6d0-163">不同的 Windows 窗体控件具有不同的默认值为其<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-163">Different Windows Forms controls have different defaults for their <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> property.</span></span> <span data-ttu-id="3e6d0-164">下表显示了最常见的控件以及各自的默认值。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-164">The following table shows the most common controls and their defaults.</span></span>  
   
-|控件|默认验证行为|  
-|--------|------------|  
-|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.PropertyGrid>|Visual Studio 中不公开的属性|  
-|<xref:System.Windows.Forms.ToolStripContainer>|Visual Studio 中不公开的属性|  
-|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate>|  
-|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate>|  
+|<span data-ttu-id="3e6d0-165">控件</span><span class="sxs-lookup"><span data-stu-id="3e6d0-165">Control</span></span>|<span data-ttu-id="3e6d0-166">默认验证行为</span><span class="sxs-lookup"><span data-stu-id="3e6d0-166">Default Validation Behavior</span></span>|  
+|-------------|---------------------------------|  
+|<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
+|<xref:System.Windows.Forms.PropertyGrid>|<span data-ttu-id="3e6d0-167">不在 Visual Studio 中公开的属性</span><span class="sxs-lookup"><span data-stu-id="3e6d0-167">Property not exposed in Visual Studio</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer>|<span data-ttu-id="3e6d0-168">不在 Visual Studio 中公开的属性</span><span class="sxs-lookup"><span data-stu-id="3e6d0-168">Property not exposed in Visual Studio</span></span>|  
+|<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
+|<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## 关闭窗体和重写验证  
- 当控件因包含的数据无效而保持焦点时，使用以下常规方法之一将无法关闭父窗体：  
+## <a name="closing-the-form-and-overriding-validation"></a><span data-ttu-id="3e6d0-169">关闭窗体和重写验证</span><span class="sxs-lookup"><span data-stu-id="3e6d0-169">Closing the Form and Overriding Validation</span></span>  
+ <span data-ttu-id="3e6d0-170">当控件保持焦点，因为它包含的数据无效时，不可能以常用方式之一关闭了父窗体：</span><span class="sxs-lookup"><span data-stu-id="3e6d0-170">When a control maintains focus because the data it contains is invalid, it is impossible to close the parent form in one of the usual ways:</span></span>  
   
--   通过单击**“关闭”**按钮。  
+-   <span data-ttu-id="3e6d0-171">通过单击**关闭**按钮。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-171">By clicking the **Close** button.</span></span>  
   
--   通过在**“系统”**菜单中选择**“关闭”**。  
+-   <span data-ttu-id="3e6d0-172">通过选择**关闭**中**系统**菜单。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-172">By selecting **Close** in the **System** menu.</span></span>  
   
--   以编程方式调用 <xref:System.Windows.Forms.Form.Close%2A> 方法。  
+-   <span data-ttu-id="3e6d0-173">通过调用<xref:System.Windows.Forms.Form.Close%2A>方法以编程方式。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-173">By calling the <xref:System.Windows.Forms.Form.Close%2A> method programmatically.</span></span>  
   
- 但在某些情况下，无论控件中的值是否有效，您都可能要让用户关闭窗体。  通过创建窗体的 <xref:System.Windows.Forms.Form.Closing> 事件的处理程序，您可以重写验证并关闭仍包含无效数据的窗体。  在事件中，将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 `false`。  这将强制关闭该窗体。  有关更多信息及示例，请参见<xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>。  
+ <span data-ttu-id="3e6d0-174">但是，在某些情况下，你可能想要让用户关闭该窗体，而不考虑在控件中的值是否有效。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-174">However, in some cases, you might want to let the user close the form regardless of whether the values in the controls are valid.</span></span> <span data-ttu-id="3e6d0-175">你可以重写验证并关闭仍包含无效的数据，通过创建的处理程序窗体的窗体<xref:System.Windows.Forms.Form.Closing>事件。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-175">You can override validation and close a form that still contains invalid data by creating a handler for the form's <xref:System.Windows.Forms.Form.Closing> event.</span></span> <span data-ttu-id="3e6d0-176">在事件中，设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性`false`。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-176">In the event, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property to `false`.</span></span> <span data-ttu-id="3e6d0-177">这将强制关闭该窗体。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-177">This forces the form to close.</span></span> <span data-ttu-id="3e6d0-178">有关详细信息及示例，请参阅<xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-178">For more information and an example, see <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.</span></span>  
   
 > [!NOTE]
->  如果以这种方式强制关闭窗体，则窗体的控件中尚未保存的任何数据都将丢失。  此外，模式窗体在关闭时不会验证控件的内容。  仍可以使用控件验证将焦点锁定到某个控件，但不必考虑与关闭窗体关联的行为。  
+>  <span data-ttu-id="3e6d0-179">如果你强制执行这种方式关闭该窗体，则尚未保存的窗体的控件中的任何数据将丢失。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-179">If you force the form to close in this manner, any data in the form's controls that has not already been saved is lost.</span></span> <span data-ttu-id="3e6d0-180">此外，模式的窗体被关闭时不会验证控件的内容。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-180">In addition, modal forms do not validate the contents of controls when they are closed.</span></span> <span data-ttu-id="3e6d0-181">您仍可以使用控件验证锁定焦点移到控件，但无需关心信息与关闭窗体关联的行为。</span><span class="sxs-lookup"><span data-stu-id="3e6d0-181">You can still use control validation to lock focus to a control, but you do not have to be concerned about the behavior associated with closing the form.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Control.Validating?displayProperty=fullName>   
- <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>   
- <xref:System.ComponentModel.CancelEventArgs?displayProperty=fullName>   
- [MaskedTextBox 控件](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)   
- [正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)
+## <a name="see-also"></a><span data-ttu-id="3e6d0-182">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3e6d0-182">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+ <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  
+ [<span data-ttu-id="3e6d0-183">MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="3e6d0-183">MaskedTextBox Control</span></span>](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="3e6d0-184">正则表达式示例</span><span class="sxs-lookup"><span data-stu-id="3e6d0-184">Regular Expression Examples</span></span>](../../../docs/standard/base-types/regular-expression-examples.md)

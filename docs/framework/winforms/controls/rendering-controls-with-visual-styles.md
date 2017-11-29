@@ -1,40 +1,41 @@
 ---
-title: "使用视觉样式呈现控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "专业的外观, 呈现 Windows 窗体控件"
-  - "主题, Window 窗体中的 XP 视觉样式"
-  - "自定义控件 [Windows 窗体], 呈现"
-  - "自定义控件 [Windows 窗体], 绘画"
-  - "视觉主题, 呈现 Windows 窗体控件"
-  - "用户控件 [Windows 窗体], 绘画"
-  - "视觉式样, 呈现 Windows 窗体控件"
+title: "使用视觉样式呈现控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- professional appearance [Windows Forms], rendering Windows Forms controls
+- themes [Windows Forms], XP visual styles in Window Forms
+- custom controls [Windows Forms], rendering
+- custom controls [Windows Forms], painting
+- visual themes [Windows Forms], rendering Windows Forms controls
+- user controls [Windows Forms], painting
+- visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 使用视觉样式呈现控件
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 \(UI\) 元素提供支持。 本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。  
+# <a name="rendering-controls-with-visual-styles"></a><span data-ttu-id="c44a3-102">使用视觉样式呈现控件</span><span class="sxs-lookup"><span data-stu-id="c44a3-102">Rendering Controls with Visual Styles</span></span>
+<span data-ttu-id="c44a3-103">[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。</span><span class="sxs-lookup"><span data-stu-id="c44a3-103">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides support for rendering controls and other Windows user interface (UI) elements using visual styles in operating systems that support them.</span></span> <span data-ttu-id="c44a3-104">本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。</span><span class="sxs-lookup"><span data-stu-id="c44a3-104">This topic discusses the several levels of support in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for rendering controls and other UI elements with the current visual style of the operating system.</span></span>  
   
-## 公共控件的呈现类  
- 呈现控件是指绘制控件的用户界面。<xref:System.Windows.Forms?displayProperty=fullName> 命名空间提供了用来呈现某些公共 Windows 窗体控件的 <xref:System.Windows.Forms.ControlPaint> 类。 但是，此类以经典 Windows 样式绘制的控件，当在启用了视觉样式的应用程序中绘制自定义控件时，难以维护 UI 体验的一致性。  
+## <a name="rendering-classes-for-common-controls"></a><span data-ttu-id="c44a3-105">公共控件的呈现类</span><span class="sxs-lookup"><span data-stu-id="c44a3-105">Rendering Classes for Common Controls</span></span>  
+ <span data-ttu-id="c44a3-106">呈现控件是指绘制控件的用户界面。</span><span class="sxs-lookup"><span data-stu-id="c44a3-106">Rendering a control refers to drawing the user interface of a control.</span></span> <span data-ttu-id="c44a3-107"><xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间提供了用来呈现某些公共 Windows 窗体控件的 <xref:System.Windows.Forms.ControlPaint> 类。</span><span class="sxs-lookup"><span data-stu-id="c44a3-107">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace provides the <xref:System.Windows.Forms.ControlPaint> class for rendering some common Windows Forms controls.</span></span> <span data-ttu-id="c44a3-108">但是，此类以经典 Windows 样式绘制的控件，当在启用了视觉样式的应用程序中绘制自定义控件时，难以维护 UI 体验的一致性。</span><span class="sxs-lookup"><span data-stu-id="c44a3-108">However, this class draws controls in the classic Windows style, which can make it difficult to maintain a consistent UI experience when drawing custom controls in applications with visual styles enabled.</span></span>  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 包括 <xref:System.Windows.Forms?displayProperty=fullName> 命名空间中使用视觉样式呈现部件和公共控件状态的类。 每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。  
+ <span data-ttu-id="c44a3-109">[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]包括中的类<xref:System.Windows.Forms?displayProperty=nameWithType>呈现的部件和状态以视觉样式的公共控件的命名空间。</span><span class="sxs-lookup"><span data-stu-id="c44a3-109">The [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] includes classes in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace that render the parts and states of common controls with visual styles.</span></span> <span data-ttu-id="c44a3-110">每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。</span><span class="sxs-lookup"><span data-stu-id="c44a3-110">Each of these classes includes `static` methods for drawing the control or parts of the control in a particular state with the current visual style of the operating system.</span></span>  
   
- 其中一些类旨在绘制相关控件，而不考虑视觉样式是否可用。 如果启用了视觉样式，类成员将使用视觉样式绘制相关控件；如果禁用了视觉样式，类成员将以经典 Windows 样式绘制控件。 这些类包括：  
+ <span data-ttu-id="c44a3-111">其中一些类旨在绘制相关控件，而不考虑视觉样式是否可用。</span><span class="sxs-lookup"><span data-stu-id="c44a3-111">Some of these classes are designed to draw the related control regardless of whether visual styles are available.</span></span> <span data-ttu-id="c44a3-112">如果启用了视觉样式，类成员将使用视觉样式绘制相关控件；如果禁用了视觉样式，类成员将以经典 Windows 样式绘制控件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-112">If visual styles are enabled, then the class members will draw the related control with visual styles; if visual styles are disabled, then the class members will draw the control in the classic Windows style.</span></span> <span data-ttu-id="c44a3-113">这些类包括：</span><span class="sxs-lookup"><span data-stu-id="c44a3-113">These classes include:</span></span>  
   
 -   <xref:System.Windows.Forms.ButtonRenderer>  
   
@@ -44,7 +45,7 @@ caps.handback.revision: 19
   
 -   <xref:System.Windows.Forms.RadioButtonRenderer>  
   
- 视觉样式可用时，其他类才能绘制相关控件，如果禁用了视觉样式，则类成员会引发异常。 这些类包括：  
+ <span data-ttu-id="c44a3-114">视觉样式可用时，其他类才能绘制相关控件，如果禁用了视觉样式，则类成员会引发异常。</span><span class="sxs-lookup"><span data-stu-id="c44a3-114">Other classes can only draw the related control when visual styles are available, and their members will throw an exception if visual styles are disabled.</span></span> <span data-ttu-id="c44a3-115">这些类包括：</span><span class="sxs-lookup"><span data-stu-id="c44a3-115">These classes include:</span></span>  
   
 -   <xref:System.Windows.Forms.ComboBoxRenderer>  
   
@@ -58,34 +59,34 @@ caps.handback.revision: 19
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- 有关使用这些类绘制控件的详细信息，请参阅 [如何：使用控件呈现类](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md)。  
+ <span data-ttu-id="c44a3-116">有关使用这些类绘制控件的详细信息，请参阅 [How to: Use a Control Rendering Class](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md)。</span><span class="sxs-lookup"><span data-stu-id="c44a3-116">For more information on using these classes to draw a control, see [How to: Use a Control Rendering Class](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).</span></span>  
   
-## 视觉样式元素和呈现类  
- <xref:System.Windows.Forms.VisualStyles?displayProperty=fullName> 命名空间包含用于绘制和获取视觉样式支持的任何控件或 UI 元素信息的类。 支持的控件包括在 <xref:System.Windows.Forms?displayProperty=fullName> 命名空间中具有呈现类的公共控件（请参阅上一节）以及诸如选项卡控件和 rebar 控件的其他控件。 其他受支持的 UI 元素包括“开始”菜单、任务栏和 Windows 非工作区的各部分。  
+## <a name="visual-style-element-and-rendering-classes"></a><span data-ttu-id="c44a3-117">视觉样式元素和呈现类</span><span class="sxs-lookup"><span data-stu-id="c44a3-117">Visual Style Element and Rendering Classes</span></span>  
+ <span data-ttu-id="c44a3-118"><xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含用于绘制和获取视觉样式支持的任何控件或 UI 元素信息的类。</span><span class="sxs-lookup"><span data-stu-id="c44a3-118">The <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace includes classes that can be used to draw and get information about any control or UI element that is supported by visual styles.</span></span> <span data-ttu-id="c44a3-119">支持的控件包括在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中具有呈现类的公共控件（请参阅上一节）以及诸如选项卡控件和 rebar 控件的其他控件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-119">Supported controls include common controls that have a rendering class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace (see the previous section), as well as other controls, such as tab controls and rebar controls.</span></span> <span data-ttu-id="c44a3-120">其他受支持的 UI 元素包括“开始”  菜单、任务栏和 Windows 非工作区的各部分。</span><span class="sxs-lookup"><span data-stu-id="c44a3-120">Other supported UI elements include the parts of the **Start** menu, the taskbar, and the nonclient area of windows.</span></span>  
   
- <xref:System.Windows.Forms.VisualStyles?displayProperty=fullName> 命名空间的主要类为 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。<xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是一个基础类，用于标识视觉样式支持的任何控件或用户界面元素。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身，<xref:System.Windows.Forms.VisualStyles?displayProperty=fullName> 命名空间包含许多 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 嵌套类，这些类具有为视觉样式支持的控件、控件部件或其他 UI 元素的状态返回 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的 `static` 属性。  
+ <span data-ttu-id="c44a3-121"><xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间的主要类为 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。</span><span class="sxs-lookup"><span data-stu-id="c44a3-121">The main classes of the <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace are <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> and <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.</span></span> <span data-ttu-id="c44a3-122"><xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是一个基础类，用于标识视觉样式支持的任何控件或用户界面元素。</span><span class="sxs-lookup"><span data-stu-id="c44a3-122"><xref:System.Windows.Forms.VisualStyles.VisualStyleElement> is a foundation class for identifying any control or user interface element supported by visual styles.</span></span> <span data-ttu-id="c44a3-123">除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身，<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含许多 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 嵌套类，这些类具有为视觉样式支持的控件、控件部件或其他 UI 元素的状态返回 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的 `static` 属性。</span><span class="sxs-lookup"><span data-stu-id="c44a3-123">In addition to <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> itself, the <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace includes many nested classes of <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> with `static` properties that return a <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> for every state of a control, control part, or other UI element supported by visual styles.</span></span>  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 \(UxTheme\) API 的功能。 有关详细信息，请参阅位于 [http:\/\/msdn.microsoft.com\/library](http://msdn.microsoft.com/library/) 上的 MSDN Library 的 Platform SDK 部分中的“使用 Windows XP 视觉样式”。  
+ <span data-ttu-id="c44a3-124"><xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。</span><span class="sxs-lookup"><span data-stu-id="c44a3-124"><xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> provides the methods that draw and get information about each <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> defined by the current visual style of the operating system.</span></span> <span data-ttu-id="c44a3-125">可以检索的元素信息包括其默认大小、背景类型和颜色定义。</span><span class="sxs-lookup"><span data-stu-id="c44a3-125">Information that can be retrieved about an element includes its default size, background type, and color definitions.</span></span> <span data-ttu-id="c44a3-126"><xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。</span><span class="sxs-lookup"><span data-stu-id="c44a3-126"><xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> wraps the functionality of the visual styles (UxTheme) API from the Windows Shell portion of the Windows Platform SDK.</span></span> <span data-ttu-id="c44a3-127">有关详细信息，请参阅[使用 Windows XP 视觉样式](https://msdn.microsoft.com/library/ms997649.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c44a3-127">For more information, see [Using Windows XP Visual Styles](https://msdn.microsoft.com/library/ms997649.aspx).</span></span>  
   
- 有关使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的详细信息，请参阅 [如何：呈现视觉样式元素](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md)。  
+ <span data-ttu-id="c44a3-128">有关使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>的详细信息，请参阅 [How to: Render a Visual Style Element](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md)。</span><span class="sxs-lookup"><span data-stu-id="c44a3-128">For more information about using <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> and <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, see [How to: Render a Visual Style Element](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).</span></span>  
   
-## 启用视觉样式  
- 若要为针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 编写的应用程序启用视觉样式，程序员必须将应用清单包含进来。该清单指定使用 ComCtl32.dll 版本 6 或更高版本绘制控件。 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.1 或更高版本生成的应用可以使用 <xref:System.Windows.Forms.Application> 类的 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> 方法。  
+## <a name="enabling-visual-styles"></a><span data-ttu-id="c44a3-129">启用视觉样式</span><span class="sxs-lookup"><span data-stu-id="c44a3-129">Enabling Visual Styles</span></span>  
+ <span data-ttu-id="c44a3-130">若要为针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 编写的应用程序启用视觉样式，程序员必须将应用清单包含进来。该清单指定使用 ComCtl32.dll 版本 6 或更高版本绘制控件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-130">To enable visual styles for an application written for the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, programmers must include an application manifest that specifies that ComCtl32.dll version 6 or later will be used to draw controls.</span></span> <span data-ttu-id="c44a3-131">使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.1 或更高版本生成的应用可以使用 <xref:System.Windows.Forms.Application> 类的 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c44a3-131">Applications built with the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 or later can use the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method of the <xref:System.Windows.Forms.Application> class.</span></span>  
   
-## 检查视觉样式支持  
- <xref:System.Windows.Forms.Application> 类的 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 属性指示当前应用程序是否正在使用视觉样式绘制控件。 绘制自定义控件时，可以检查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值来确定是否应使用视觉样式呈现控件。 下表列出了 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 返回 `true` 必须存在的四个条件。  
+## <a name="checking-for-visual-styles-support"></a><span data-ttu-id="c44a3-132">检查视觉样式支持</span><span class="sxs-lookup"><span data-stu-id="c44a3-132">Checking for Visual Styles Support</span></span>  
+ <span data-ttu-id="c44a3-133"><xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 类的 <xref:System.Windows.Forms.Application> 属性指示当前应用程序是否正在使用视觉样式绘制控件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-133">The <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> property of the <xref:System.Windows.Forms.Application> class indicates whether the current application is drawing controls with visual styles.</span></span> <span data-ttu-id="c44a3-134">绘制自定义控件时，可以检查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值来确定是否应使用视觉样式呈现控件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-134">When painting a custom control, you can check the value of <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> to determine whether you should render your control with or without visual styles.</span></span> <span data-ttu-id="c44a3-135">下表列出了 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 返回 `true`必须存在的四个条件。</span><span class="sxs-lookup"><span data-stu-id="c44a3-135">The following table lists the four conditions that must exist for <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> to return `true`.</span></span>  
   
-|条件|备注|  
-|--------|--------|  
-|操作系统支持视觉样式。|若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> 属性。|  
-|用户已在操作系统中启用视觉样式。|若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> 属性。|  
-|应用程序中已启用视觉样式。|可以通过调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> 方法或使用指定用 ComCtl32.dll 版本 6 或更高版本绘制控件的应用程序清单来启用应用程序中的视觉样式。|  
-|正在使用视觉样式来绘制应用程序窗口的工作区。|若要单独验证这种情况，请使用 <xref:System.Windows.Forms.Application> 类的 <xref:System.Windows.Forms.Application.VisualStyleState%2A> 属性，验证它是否具有 <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=fullName> 或 <xref:System.Windows.Forms.VisualStyles.VisualStyleState?displayProperty=fullName> 值。|  
+|<span data-ttu-id="c44a3-136">条件</span><span class="sxs-lookup"><span data-stu-id="c44a3-136">Condition</span></span>|<span data-ttu-id="c44a3-137">备注</span><span class="sxs-lookup"><span data-stu-id="c44a3-137">Notes</span></span>|  
+|---------------|-----------|  
+|<span data-ttu-id="c44a3-138">操作系统支持视觉样式。</span><span class="sxs-lookup"><span data-stu-id="c44a3-138">The operating system supports visual styles.</span></span>|<span data-ttu-id="c44a3-139">若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 属性。</span><span class="sxs-lookup"><span data-stu-id="c44a3-139">To verify this condition separately, use the <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> property of the <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> class.</span></span>|  
+|<span data-ttu-id="c44a3-140">用户已在操作系统中启用视觉样式。</span><span class="sxs-lookup"><span data-stu-id="c44a3-140">The user has enabled visual styles in the operating system.</span></span>|<span data-ttu-id="c44a3-141">若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 属性。</span><span class="sxs-lookup"><span data-stu-id="c44a3-141">To verify this condition separately, use the <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> property of the <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> class.</span></span>|  
+|<span data-ttu-id="c44a3-142">应用程序中已启用视觉样式。</span><span class="sxs-lookup"><span data-stu-id="c44a3-142">Visual styles are enabled in the application.</span></span>|<span data-ttu-id="c44a3-143">可以通过调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 方法或使用指定用 ComCtl32.dll 版本 6 或更高版本绘制控件的应用程序清单来启用应用程序中的视觉样式。</span><span class="sxs-lookup"><span data-stu-id="c44a3-143">Visual styles can be enabled in an application by calling the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method or by using an application manifest that specifies that ComCtl32.dll version 6 or later will be used to draw controls.</span></span>|  
+|<span data-ttu-id="c44a3-144">正在使用视觉样式来绘制应用程序窗口的工作区。</span><span class="sxs-lookup"><span data-stu-id="c44a3-144">Visual styles are being used to draw the client area of application windows.</span></span>|<span data-ttu-id="c44a3-145">若要单独验证这种情况，请使用 <xref:System.Windows.Forms.Application> 类的 <xref:System.Windows.Forms.Application.VisualStyleState%2A> 属性，验证它是否具有 <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled?displayProperty=nameWithType> 值。</span><span class="sxs-lookup"><span data-stu-id="c44a3-145">To verify this condition separately, use the <xref:System.Windows.Forms.Application.VisualStyleState%2A> property of the <xref:System.Windows.Forms.Application> class and verify that it has the value <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled?displayProperty=nameWithType> or <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled?displayProperty=nameWithType>.</span></span>|  
   
- 若要确定用户何时启用或禁用视觉样式，或何时从一种视觉样式切换到另种，请检查 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=fullName> 或 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=fullName> 事件处理程序中的 <xref:Microsoft.Win32.UserPreferenceCategory?displayProperty=fullName> 值。  
+ <span data-ttu-id="c44a3-146">若要确定用户何时启用或禁用视觉样式，或何时从一种视觉样式切换到另种，请检查 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=nameWithType> 或 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> 事件处理程序中的 <xref:Microsoft.Win32.UserPreferenceCategory.VisualStyle?displayProperty=nameWithType> 值。</span><span class="sxs-lookup"><span data-stu-id="c44a3-146">To determine when a user enables or disables visual styles, or switches from one visual style to another, check for the <xref:Microsoft.Win32.UserPreferenceCategory.VisualStyle?displayProperty=nameWithType> value in the handlers for the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=nameWithType> or <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> events.</span></span>  
   
 > [!IMPORTANT]
->  如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 时如果使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 类，则会引发异常。  
+>  <span data-ttu-id="c44a3-147">如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。</span><span class="sxs-lookup"><span data-stu-id="c44a3-147">If you want to use <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> to render a control or UI element when the user enables or switches visual styles, make sure that you do this when handling the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event instead of the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> event.</span></span> <span data-ttu-id="c44a3-148">处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。</span><span class="sxs-lookup"><span data-stu-id="c44a3-148">An exception will be thrown if you use the <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> class when handling <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.</span></span>  
   
-## 请参阅  
- [自定义控件的绘制和呈现](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+## <a name="see-also"></a><span data-ttu-id="c44a3-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c44a3-149">See Also</span></span>  
+ [<span data-ttu-id="c44a3-150">自定义控件的绘制和呈现</span><span class="sxs-lookup"><span data-stu-id="c44a3-150">Custom Control Painting and Rendering</span></span>](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

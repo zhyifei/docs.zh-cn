@@ -1,41 +1,37 @@
 ---
 title: "将标准查询运算符链接在一起 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 47e936bffd79784b0ee6850bfc29d1d1f5b3224d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>将标准查询运算符链接在一起 (C#)
-这是[教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 教程中的最后一个主题。  
+# <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="0a294-102">将标准查询运算符链接在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="0a294-102">Chaining Standard Query Operators Together (C#)</span></span>
+<span data-ttu-id="0a294-103">这是[教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 教程中的最后一个主题。</span><span class="sxs-lookup"><span data-stu-id="0a294-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  
   
- 标准查询运算符也可以链接在一起。 例如，您可以插入 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 运算符，并且该运算符也可以以迟缓方式操作。 它不会具体化任何中间结果。  
+ <span data-ttu-id="0a294-104">标准查询运算符也可以链接在一起。</span><span class="sxs-lookup"><span data-stu-id="0a294-104">The standard query operators can also be chained together.</span></span> <span data-ttu-id="0a294-105">例如，您可以插入 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 运算符，并且该运算符也可以以迟缓方式操作。</span><span class="sxs-lookup"><span data-stu-id="0a294-105">For example, you can interject the <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, and it also operates in a lazy fashion.</span></span> <span data-ttu-id="0a294-106">它不会具体化任何中间结果。</span><span class="sxs-lookup"><span data-stu-id="0a294-106">No intermediate results are materialized by it.</span></span>  
   
-## <a name="example"></a>示例  
- 在此示例中，调用 <xref:System.Linq.Enumerable.Where%2A> 之前将调用 `ConvertCollectionToUpperCase` 方法。 <xref:System.Linq.Enumerable.Where%2A> 方法的操作方式与本教程前面示例中使用的迟缓方法 `ConvertCollectionToUpperCase` 和 `AppendString` 几乎完全相同。  
+## <a name="example"></a><span data-ttu-id="0a294-107">示例</span><span class="sxs-lookup"><span data-stu-id="0a294-107">Example</span></span>  
+ <span data-ttu-id="0a294-108">在此示例中，调用 <xref:System.Linq.Enumerable.Where%2A> 之前将调用 `ConvertCollectionToUpperCase` 方法。</span><span class="sxs-lookup"><span data-stu-id="0a294-108">In this example, the <xref:System.Linq.Enumerable.Where%2A> method is called before calling `ConvertCollectionToUpperCase`.</span></span> <span data-ttu-id="0a294-109"><xref:System.Linq.Enumerable.Where%2A> 方法的操作方式与本教程前面示例中使用的迟缓方法 `ConvertCollectionToUpperCase` 和 `AppendString` 几乎完全相同。</span><span class="sxs-lookup"><span data-stu-id="0a294-109">The <xref:System.Linq.Enumerable.Where%2A> method operates in almost exactly the same way as the lazy methods used in previous examples in this tutorial, `ConvertCollectionToUpperCase` and `AppendString`.</span></span>  
   
- 区别之一是在本例中，<xref:System.Linq.Enumerable.Where%2A> 方法循环访问其源集合，确定第一项不传递谓词，然后获取传递谓词的下一项。 示例然后生成第二项。  
+ <span data-ttu-id="0a294-110">区别之一是在本例中，<xref:System.Linq.Enumerable.Where%2A> 方法循环访问其源集合，确定第一项不传递谓词，然后获取传递谓词的下一项。</span><span class="sxs-lookup"><span data-stu-id="0a294-110">One difference is that in this case, the <xref:System.Linq.Enumerable.Where%2A> method iterates through its source collection, determines that the first item does not pass the predicate, and then gets the next item, which does pass.</span></span> <span data-ttu-id="0a294-111">示例然后生成第二项。</span><span class="sxs-lookup"><span data-stu-id="0a294-111">It then yields the second item.</span></span>  
   
- 但基本要旨是相同的：除非必要，否则不具体化中间集合。  
+ <span data-ttu-id="0a294-112">但基本要旨是相同的：除非必要，否则不具体化中间集合。</span><span class="sxs-lookup"><span data-stu-id="0a294-112">However, the basic idea is the same: Intermediate collections are not materialized unless they have to be.</span></span>  
   
- 在使用查询表达式时，会将查询表达式转换为对标准查询运算符的调用，这一原理同样适用。  
+ <span data-ttu-id="0a294-113">在使用查询表达式时，会将查询表达式转换为对标准查询运算符的调用，这一原理同样适用。</span><span class="sxs-lookup"><span data-stu-id="0a294-113">When query expressions are used, they are converted to calls to the standard query operators, and the same principles apply.</span></span>  
   
- 本节中查询 Office Open XML 文档的所有示例都使用相同的原理。 延迟执行和迟缓计算是有效使用 LINQ（和 LINQ to XML）所必须理解的一些基础概念。  
+ <span data-ttu-id="0a294-114">本节中查询 Office Open XML 文档的所有示例都使用相同的原理。</span><span class="sxs-lookup"><span data-stu-id="0a294-114">All of the examples in this section that are querying Office Open XML documents use the same principle.</span></span> <span data-ttu-id="0a294-115">延迟执行和迟缓计算是有效使用 LINQ（和 LINQ to XML）所必须理解的一些基础概念。</span><span class="sxs-lookup"><span data-stu-id="0a294-115">Deferred execution and lazy evaluation are some of the fundamental concepts that you must understand  to use LINQ (and LINQ to XML) effectively.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -85,7 +81,7 @@ class Program
 }  
 ```  
   
- 该示例产生下面的输出：  
+ <span data-ttu-id="0a294-116">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0a294-116">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -98,6 +94,5 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="0a294-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0a294-117">See Also</span></span>  
+ [<span data-ttu-id="0a294-118">教程：将查询链接在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="0a294-118">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

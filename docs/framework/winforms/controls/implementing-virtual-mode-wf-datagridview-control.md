@@ -1,43 +1,48 @@
 ---
-title: "演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据 [Windows 窗体], 管理大型数据集"
-  - "DataGridView 控件 [Windows 窗体], 大型数据集"
-  - "DataGridView 控件 [Windows 窗体], 虚拟模式"
-  - "虚拟模式, 演练"
-  - "演练 [Windows 窗体], DataGridView 控件"
+title: "演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- virtual mode [Windows Forms], walkthroughs
+- DataGridView control [Windows Forms], large data sets
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31806d3ed13776e26634914b48bc887297ea4dab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式
-如果要在 <xref:System.Windows.Forms.DataGridView> 控件中显示非常大量的表格数据，可以将 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 属性设置为 `true`，并显式管理控件与其数据存储区的交互。  这样，您便可以在这种情况下精细调整该控件的性能。  
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="e6924-102">演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="e6924-102">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="e6924-103">如果想要显示非常大量的表格数据<xref:System.Windows.Forms.DataGridView>控件，则可设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性`true`和显式管理与其数据存储区的控件的交互。</span><span class="sxs-lookup"><span data-stu-id="e6924-103">When you want to display very large quantities of tabular data in a <xref:System.Windows.Forms.DataGridView> control, you can set the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property to `true` and explicitly manage the control's interaction with its data store.</span></span> <span data-ttu-id="e6924-104">这样可以微调控件在此情况下的性能。</span><span class="sxs-lookup"><span data-stu-id="e6924-104">This lets you fine-tune the performance of the control in this situation.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView> 控件提供若干事件，您可以通过处理这些事件来与自定义数据存储区进行交互。  本演练引导您完成实现这些事件处理程序的过程。  为便于说明，本主题中的代码示例使用一个非常简单的数据源。  在生产设置中，通常仅将需要显示的行加载到缓存中，并处理 <xref:System.Windows.Forms.DataGridView> 事件以便与缓存进行交互和更新缓存。  有关更多信息，请参见 [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ <span data-ttu-id="e6924-105"><xref:System.Windows.Forms.DataGridView>控件提供可以处理与自定义数据存储区交互的几个事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-105">The <xref:System.Windows.Forms.DataGridView> control provides several events that you can handle to interact with a custom data store.</span></span> <span data-ttu-id="e6924-106">本演练将指导你完成实现这些事件处理程序的过程。</span><span class="sxs-lookup"><span data-stu-id="e6924-106">This walkthrough guides you through the process of implementing these event handlers.</span></span> <span data-ttu-id="e6924-107">本主题中的代码示例用于说明目的使用非常简单的数据源。</span><span class="sxs-lookup"><span data-stu-id="e6924-107">The code example in this topic uses a very simple data source for illustration purposes.</span></span> <span data-ttu-id="e6924-108">在生产设置中，你通常将加载只有需要到缓存中，显示和处理的行<xref:System.Windows.Forms.DataGridView>事件交互并进行更新缓存。</span><span class="sxs-lookup"><span data-stu-id="e6924-108">In a production setting, you will typically load only the rows you need to display into a cache, and handle <xref:System.Windows.Forms.DataGridView> events to interact with and update the cache.</span></span> <span data-ttu-id="e6924-109">有关详细信息，请参阅[实时数据加载在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)</span><span class="sxs-lookup"><span data-stu-id="e6924-109">For more information, see [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)</span></span>  
   
- 若要以单个列表的形式复制本主题中的代码，请参见 [如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。  
+ <span data-ttu-id="e6924-110">若要将代码复制本主题中的一个单独的清单，请参阅[如何： 在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="e6924-110">To copy the code in this topic as a single listing, see [How to: Implement Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 创建窗体  
+## <a name="creating-the-form"></a><span data-ttu-id="e6924-111">创建窗体</span><span class="sxs-lookup"><span data-stu-id="e6924-111">Creating the Form</span></span>  
   
-#### 实现虚拟模式  
+#### <a name="to-implement-virtual-mode"></a><span data-ttu-id="e6924-112">若要实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="e6924-112">To implement virtual mode</span></span>  
   
-1.  创建一个从 <xref:System.Windows.Forms.Form> 派生并包含 <xref:System.Windows.Forms.DataGridView> 控件的类。  
+1.  <span data-ttu-id="e6924-113">创建一个类，派生自<xref:System.Windows.Forms.Form>和包含<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="e6924-113">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     下面的代码包含一些简单的初始化操作。  它将声明一些将在后续步骤中使用的变量，提供 `Main` 方法，并在类的构造函数中提供一个简单的窗体布局。  
+     <span data-ttu-id="e6924-114">下面的代码包含一些基本的初始化。</span><span class="sxs-lookup"><span data-stu-id="e6924-114">The following code contains some basic initialization.</span></span> <span data-ttu-id="e6924-115">它声明将在后续步骤中使用某些变量，提供`Main`方法，并提供在类构造函数的简单窗体布局。</span><span class="sxs-lookup"><span data-stu-id="e6924-115">It declares some variables that will be used in later steps, provides a `Main` method, and provides a simple form layout in the class constructor.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#001](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#001)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#001](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#001)]
@@ -46,101 +51,101 @@ caps.handback.revision: 14
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  为窗体的 <xref:System.Windows.Forms.Form.Load> 事件实现一个处理程序，该处理程序初始化 <xref:System.Windows.Forms.DataGridView> 控件并用示例值填充数据存储区。  
+2.  <span data-ttu-id="e6924-116">实现你的窗体的处理<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>控件并填充具有示例值的数据存储区。</span><span class="sxs-lookup"><span data-stu-id="e6924-116">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> control and populates the data store with sample values.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  为 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 事件实现一个处理程序，从数据存储区或当前正在编辑的 `Customer` 对象中检索请求的单元格值。  
+3.  <span data-ttu-id="e6924-117">实现的处理程序<xref:System.Windows.Forms.DataGridView.CellValueNeeded>从数据存储中检索请求的单元格的值的事件或`Customer`当前正在编辑的对象。</span><span class="sxs-lookup"><span data-stu-id="e6924-117">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event that retrieves the requested cell value from the data store or the `Customer` object currently in edit.</span></span>  
   
-     只要 <xref:System.Windows.Forms.DataGridView> 控件需要绘制单元格，就会发生此事件。  
+     <span data-ttu-id="e6924-118">每当发生此事件<xref:System.Windows.Forms.DataGridView>控件需要绘制单元格。</span><span class="sxs-lookup"><span data-stu-id="e6924-118">This event occurs whenever the <xref:System.Windows.Forms.DataGridView> control needs to paint a cell.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#120)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  为 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件实现一个处理程序，将编辑后的单元格值存储在代表已编辑的行的 `Customer` 对象中。  只要用户提交对单元格值的更改，就会发生此事件。  
+4.  <span data-ttu-id="e6924-119">实现的处理程序<xref:System.Windows.Forms.DataGridView.CellValuePushed>存储中的编辑后的单元值的事件`Customer`表示编辑过的行的对象。</span><span class="sxs-lookup"><span data-stu-id="e6924-119">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CellValuePushed> event that stores an edited cell value in the `Customer` object representing the edited row.</span></span> <span data-ttu-id="e6924-120">每当用户提交单元格值更改，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-120">This event occurs whenever the user commits a cell value change.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  为 <xref:System.Windows.Forms.DataGridView.NewRowNeeded> 事件实现一个处理程序，创建一个代表新建行的新 `Customer` 对象。  
+5.  <span data-ttu-id="e6924-121">实现的处理程序<xref:System.Windows.Forms.DataGridView.NewRowNeeded>创建一个新的事件`Customer`表示新创建的行的对象。</span><span class="sxs-lookup"><span data-stu-id="e6924-121">Implement a handler for the <xref:System.Windows.Forms.DataGridView.NewRowNeeded> event that creates a new `Customer` object representing a newly created row.</span></span>  
   
-     只要用户进入新的记录行，就会发生此事件。  
+     <span data-ttu-id="e6924-122">每当用户输入新记录的行，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-122">This event occurs whenever the user enters the row for new records.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#140)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  为 <xref:System.Windows.Forms.DataGridView.RowValidated> 事件实现一个处理程序，将新的或修改后的行保存到数据存储区中。  
+6.  <span data-ttu-id="e6924-123">实现的处理程序<xref:System.Windows.Forms.DataGridView.RowValidated>将新的或已修改行保存到数据存储的事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-123">Implement a handler for the <xref:System.Windows.Forms.DataGridView.RowValidated> event that saves new or modified rows to the data store.</span></span>  
   
-     只要用户更改当前行，就会发生此事件。  
+     <span data-ttu-id="e6924-124">每当用户更改当前行，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-124">This event occurs whenever the user changes the current row.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#150)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  为 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 事件实现一个处理程序，指示当用户通过在编辑模式下按 Esc 两次或在非编辑模式下按 Esc 一次来指示行恢复时，是否发生 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 事件。  
+7.  <span data-ttu-id="e6924-125">实现的处理程序<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件，该值指示是否<xref:System.Windows.Forms.DataGridView.CancelRowEdit>用户按 esc 键两次处于编辑模式或第一次外部编辑模式，用信号通知行恢复时，事件将会发生。</span><span class="sxs-lookup"><span data-stu-id="e6924-125">Implement a handler for the <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event that indicates whether the <xref:System.Windows.Forms.DataGridView.CancelRowEdit> event will occur when the user signals row reversion by pressing ESC twice in edit mode or once outside of edit mode.</span></span>  
   
-     默认情况下，除非 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 事件处理程序中的 <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=fullName> 属性设置为 `true`，否则，只要当前行中有任何单元格被修改，就会在恢复行时发生 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 事件。  如果提交范围是在运行时确定的，则此事件非常有用。  
+     <span data-ttu-id="e6924-126">默认情况下，<xref:System.Windows.Forms.DataGridView.CancelRowEdit>在恢复行已被修改任何当前行中的单元格，除非时发生<xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>属性设置为`true`中<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="e6924-126">By default, <xref:System.Windows.Forms.DataGridView.CancelRowEdit> occurs upon row reversion when any cells in the current row have been modified unless the <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> property is set to `true` in the <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event handler.</span></span> <span data-ttu-id="e6924-127">当在运行时确定提交作用域时，此事件非常有用。</span><span class="sxs-lookup"><span data-stu-id="e6924-127">This event is useful when the commit scope is determined at run time.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#160)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  为 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 事件实现一个处理程序，丢弃表示当前行的 `Customer` 对象的值。  
+8.  <span data-ttu-id="e6924-128">实现的处理程序<xref:System.Windows.Forms.DataGridView.CancelRowEdit>放弃的值的事件`Customer`对象，表示当前行。</span><span class="sxs-lookup"><span data-stu-id="e6924-128">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CancelRowEdit> event that discards the values of the `Customer` object representing the current row.</span></span>  
   
-     当用户通过在编辑模式下按 Esc 两次或在非编辑模式下按 Esc 一次来指示行恢复时，会发生此事件。  如果当前行中没有任何单元格被修改，或者，<xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=fullName> 属性的值已在 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 事件处理程序中设置为 `false`，则不会发生此事件。  
+     <span data-ttu-id="e6924-129">当用户按 esc 键两次处于编辑模式或第一次外部编辑模式，用信号通知行恢复时，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-129">This event occurs when the user signals row reversion by pressing ESC twice in edit mode or once outside of edit mode.</span></span> <span data-ttu-id="e6924-130">如果没有当前行中的单元格进行了修改，或如果不会发生此事件的值<xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>属性已设置为`false`中<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="e6924-130">This event does not occur if no cells in the current row have been modified or if the value of the <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> property has been set to `false` in a <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event handler.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#170)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#170)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#170)]  
   
-9. 为 <xref:System.Windows.Forms.DataGridView.UserDeletingRow> 事件实现一个处理程序，该事件将现有的 `Customer` 对象从数据存储区中删除，或丢弃表示新建行的未保存的 `Customer` 对象。  
+9. <span data-ttu-id="e6924-131">实现的处理程序<xref:System.Windows.Forms.DataGridView.UserDeletingRow>删除现有的事件`Customer`从数据存储的对象或放弃未保存`Customer`表示新创建的行的对象。</span><span class="sxs-lookup"><span data-stu-id="e6924-131">Implement a handler for the <xref:System.Windows.Forms.DataGridView.UserDeletingRow> event that deletes an existing `Customer` object from the data store or discards an unsaved `Customer` object representing a newly created row.</span></span>  
   
-     只要用户通过单击行标题再按 Delete 键来删除行，就会发生此事件。  
+     <span data-ttu-id="e6924-132">每当用户通过单击行标题并按 DELETE 键删除行，将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="e6924-132">This event occurs whenever the user deletes a row by clicking a row header and pressing the DELETE key.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#180)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#180)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#180)]  
   
-10. 实现一个简单的 `Customers` 类来表示此代码示例使用的数据项。  
+10. <span data-ttu-id="e6924-133">实现一个简单`Customers`类来表示此代码示例使用的数据项目。</span><span class="sxs-lookup"><span data-stu-id="e6924-133">Implement a simple `Customers` class to represent the data items used by this code example.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#200)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#200)]  
   
-## 测试应用程序  
- 现在可以测试窗体，以确保其行为与预期相同。  
+## <a name="testing-the-application"></a><span data-ttu-id="e6924-134">测试应用程序</span><span class="sxs-lookup"><span data-stu-id="e6924-134">Testing the Application</span></span>  
+ <span data-ttu-id="e6924-135">你现在可以测试窗体，以确保其行为与预期相同。</span><span class="sxs-lookup"><span data-stu-id="e6924-135">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### 测试窗体  
+#### <a name="to-test-the-form"></a><span data-ttu-id="e6924-136">若要测试窗体</span><span class="sxs-lookup"><span data-stu-id="e6924-136">To test the form</span></span>  
   
--   编译并运行应用程序。  
+-   <span data-ttu-id="e6924-137">编译并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="e6924-137">Compile and run the application.</span></span>  
   
-     您将看到填入了三个客户记录的 <xref:System.Windows.Forms.DataGridView> 控件。  您可以修改一行中的多个单元格的值，然后在编辑模式下按 Esc 两次或在非编辑模式下按 Esc 一次，将整行恢复为原始值。  当在控件中修改、添加或删除行时，数据存储区中的 `Customer` 对象也会相应地修改、添加或删除。  
+     <span data-ttu-id="e6924-138">你将看到<xref:System.Windows.Forms.DataGridView>填充三个客户记录的控件。</span><span class="sxs-lookup"><span data-stu-id="e6924-138">You will see a <xref:System.Windows.Forms.DataGridView> control populated with three customer records.</span></span> <span data-ttu-id="e6924-139">你可以修改行中的多个单元格的值，并按 ESC，两次处于编辑模式和一次外部编辑模式，以便还原为其原始值的整个行。</span><span class="sxs-lookup"><span data-stu-id="e6924-139">You can modify the values of multiple cells in a row and press ESC twice in edit mode and once outside of edit mode to revert the entire row to its original values.</span></span> <span data-ttu-id="e6924-140">当你修改、 添加或删除在控件中，行`Customer`修改、 添加或删除以及数据存储区中的对象。</span><span class="sxs-lookup"><span data-stu-id="e6924-140">When you modify, add, or delete rows in the control, `Customer` objects in the data store are modified, added, or deleted as well.</span></span>  
   
-## 后续步骤  
- 此应用程序使您可以基本了解在 <xref:System.Windows.Forms.DataGridView> 控件中实现虚拟模式所必须处理的事件。  可以通过许多方法来改进这个简单的应用程序：  
+## <a name="next-steps"></a><span data-ttu-id="e6924-141">后续步骤</span><span class="sxs-lookup"><span data-stu-id="e6924-141">Next Steps</span></span>  
+ <span data-ttu-id="e6924-142">此应用程序，必须处理才能实现中的虚拟模式的事件基本了解<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="e6924-142">This application gives you a basic understanding of the events you must handle to implement virtual mode in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="e6924-143">您可以提高此多种方式的基本应用程序：</span><span class="sxs-lookup"><span data-stu-id="e6924-143">You can improve this basic application in a number of ways:</span></span>  
   
--   实现用于缓存来自外部数据库的值的数据存储区。  此缓存应根据需要检索和丢弃值，以便仅仅包含必须显示的内容，从而确保只占用客户端计算机上的少量内存。  
+-   <span data-ttu-id="e6924-144">实现缓存从外部数据库的值的数据存储区。</span><span class="sxs-lookup"><span data-stu-id="e6924-144">Implement a data store that caches values from an external database.</span></span> <span data-ttu-id="e6924-145">缓存应检索并放弃根据需要的值，以使其仅包含必要的操作时使用的少量内存客户端计算机上的显示。</span><span class="sxs-lookup"><span data-stu-id="e6924-145">The cache should retrieve and discard values as necessary so that it only contains what is necessary for display while consuming a small amount of memory on the client computer.</span></span>  
   
--   根据实际要求精细调整数据存储区的性能。  例如，您可能要使用更大规模的缓存并将数据库查询的数目控制在最少，从而补偿慢速网络连接，而不是根据客户端计算机的内存限制进行调整。  
+-   <span data-ttu-id="e6924-146">微调具体取决于你的要求的数据存储的性能。</span><span class="sxs-lookup"><span data-stu-id="e6924-146">Fine-tune the performance of the data store depending on your requirements.</span></span> <span data-ttu-id="e6924-147">例如，你可能想要通过使用更大的缓存大小以及尽量减少数据库查询数补偿慢速网络连接，而不是客户端计算机的内存限制。</span><span class="sxs-lookup"><span data-stu-id="e6924-147">For example, you might want to compensate for slow network connections rather than client-computer memory limitations by using a larger cache size and minimizing the number of database queries.</span></span>  
   
- 有关缓存来自外部数据库的值的更多信息，请参见 [如何：在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
+ <span data-ttu-id="e6924-148">有关缓存从外部数据库的值的详细信息，请参阅[如何： 实现虚拟模式在 Windows 窗体 DataGridView 控件中的实时数据加载](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="e6924-148">For more information about caching values from an external database, see [How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- <xref:System.Windows.Forms.DataGridView.CellValueNeeded>   
- <xref:System.Windows.Forms.DataGridView.CellValuePushed>   
- <xref:System.Windows.Forms.DataGridView.NewRowNeeded>   
- <xref:System.Windows.Forms.DataGridView.RowValidated>   
- <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>   
- <xref:System.Windows.Forms.DataGridView.CancelRowEdit>   
- <xref:System.Windows.Forms.DataGridView.UserDeletingRow>   
- [Windows 窗体 DataGridView 控件中的性能优化](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)   
- [如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="e6924-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e6924-149">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ <xref:System.Windows.Forms.DataGridView.CellValueNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CellValuePushed>  
+ <xref:System.Windows.Forms.DataGridView.NewRowNeeded>  
+ <xref:System.Windows.Forms.DataGridView.RowValidated>  
+ <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CancelRowEdit>  
+ <xref:System.Windows.Forms.DataGridView.UserDeletingRow>  
+ [<span data-ttu-id="e6924-150">Windows 窗体 DataGridView 控件中的性能调整</span><span class="sxs-lookup"><span data-stu-id="e6924-150">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="e6924-151">有关缩放 Windows 窗体 DataGridView 控件的最佳做法</span><span class="sxs-lookup"><span data-stu-id="e6924-151">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="e6924-152">在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式</span><span class="sxs-lookup"><span data-stu-id="e6924-152">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ [<span data-ttu-id="e6924-153">如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="e6924-153">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

@@ -1,82 +1,82 @@
 ---
-title: "AutoSize 属性概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自动调整大小"
-  - "AutoSize 属性"
-  - "AutoSizeMode 属性"
-  - "布局 [Windows 窗体], AutoSize"
-  - "调整大小, 自动"
+title: "AutoSize 属性概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sizing [Windows Forms], automatic
+- layout [Windows Forms], AutoSize
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8216880ebdede03bbd01fe53b622c14ca8c514d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# AutoSize 属性概述
-<xref:System.Windows.Forms.Control.AutoSize%2A> 属性使控件能够更改其大小（如有必要），以达到由 <xref:System.Windows.Forms.Control.PreferredSize%2A> 属性指定的值。  通过设置 `AutoSizeMode` 属性，可以调整特定控件的大小调整行为。  
+# <a name="autosize-property-overview"></a><span data-ttu-id="fcc8c-102">AutoSize 属性概述</span><span class="sxs-lookup"><span data-stu-id="fcc8c-102">AutoSize Property Overview</span></span>
+<span data-ttu-id="fcc8c-103"><xref:System.Windows.Forms.Control.AutoSize%2A>属性使控件能够更改其大小，如有必要，以获得指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-103">The <xref:System.Windows.Forms.Control.AutoSize%2A> property enables a control to change its size, if necessary, to attain the value specified by the <xref:System.Windows.Forms.Control.PreferredSize%2A> property.</span></span> <span data-ttu-id="fcc8c-104">通过设置调整特定的控件的大小调整行为`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-104">You adjust the sizing behavior for specific controls by setting the `AutoSizeMode` property.</span></span>  
   
-## AutoSize 行为  
- 只有一些控件支持 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  此外，一些支持 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性的控件也支持 `AutoSizeMode` 属性。  
+## <a name="autosize-behavior"></a><span data-ttu-id="fcc8c-105">自动调整大小行为</span><span class="sxs-lookup"><span data-stu-id="fcc8c-105">AutoSize Behavior</span></span>  
+ <span data-ttu-id="fcc8c-106">某些控件仅支持<xref:System.Windows.Forms.Control.AutoSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-106">Only some controls support the <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span> <span data-ttu-id="fcc8c-107">此外，某些控件支持<xref:System.Windows.Forms.Control.AutoSize%2A>属性还支持`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-107">In addition, some controls that support the <xref:System.Windows.Forms.Control.AutoSize%2A> property also support the `AutoSizeMode` property.</span></span>  
   
- 根据特定控件类型以及 `AutoSizeMode` 属性的值（如果该属性存在），<xref:System.Windows.Forms.Control.AutoSize%2A> 属性可产生某些不同的行为。  下表描述了始终正确的行为，并提供每种行为的简要说明：  
+ <span data-ttu-id="fcc8c-108"><xref:System.Windows.Forms.Control.AutoSize%2A>属性会产生稍有不同的行为，具体取决于特定的控件类型和值`AutoSizeMode`属性，如果存在的属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-108">The <xref:System.Windows.Forms.Control.AutoSize%2A> property produces somewhat different behavior, depending on the specific control type and the value of the `AutoSizeMode` property, if the property exists.</span></span> <span data-ttu-id="fcc8c-109">下表描述了始终正确的行为，并提供每个的简要说明：</span><span class="sxs-lookup"><span data-stu-id="fcc8c-109">The following table describes the behaviors that are always true and provides a brief description of each:</span></span>  
   
-|始终正确的行为|说明|  
-|-------------|--------|  
-|自动大小调整是运行时功能。|这意味着不会在增大或缩小控件后不产生进一步的影响。|  
-|控件更改大小时其 <xref:System.Windows.Forms.Control.Location%2A> 属性的值始终保持不变。|当控件的内容导致控件增大时，控件向右向下增大。  控件不会向左增大。|  
-|<xref:System.Windows.Forms.Control.AutoSize%2A> 为 `true` 时，<xref:System.Windows.Forms.Control.Dock%2A> 和 <xref:System.Windows.Forms.Control.Anchor%2A> 属性将起作用。|控件的 <xref:System.Windows.Forms.Control.Location%2A> 属性的值会调整为正确值。<br /><br /> **注意** <xref:System.Windows.Forms.Label> 控件是此规则的例外。  将停靠的 <xref:System.Windows.Forms.Label> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值设置为 `true` 时，<xref:System.Windows.Forms.Label> 控件不会拉伸。|  
-|无论控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性的值是什么，控件的 <xref:System.Windows.Forms.Control.MaximumSize%2A> 和 <xref:System.Windows.Forms.Control.MinimumSize%2A> 属性都始终会起作用。|<xref:System.Windows.Forms.Control.MaximumSize%2A> 和 <xref:System.Windows.Forms.Control.MinimumSize%2A> 属性不受 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性影响。|  
-|默认情况下不设置最小大小。|这意味着，如果将某个控件设置为依据 <xref:System.Windows.Forms.Control.AutoSize%2A> 缩小，且该控件中没有内容，则该控件的 <xref:System.Windows.Forms.Control.Size%2A> 属性的值为 0,0。  这种情况下，该控件将缩小为一个点，并不容易看到。|  
-|如果控件没有实现 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 方法，则 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 方法返回分配给 <xref:System.Windows.Forms.Control.Size%2A> 属性的上一个值。|这意味着将 <xref:System.Windows.Forms.Control.AutoSize%2A> 设置为 `true` 不会产生任何效果。|  
-|<xref:System.Windows.Forms.TableLayoutPanel> 单元格中的控件始终会缩小以适合单元格，直至达到控件的 <xref:System.Windows.Forms.Control.MinimumSize%2A>。|此大小将强制为最大大小。  单元格是 <xref:System.Windows.Forms.SizeType> 行或列的部分时并非如此。|  
+|<span data-ttu-id="fcc8c-110">始终正确的行为</span><span class="sxs-lookup"><span data-stu-id="fcc8c-110">Always true behavior</span></span>|<span data-ttu-id="fcc8c-111">描述</span><span class="sxs-lookup"><span data-stu-id="fcc8c-111">Description</span></span>|  
+|--------------------------|-----------------|  
+|<span data-ttu-id="fcc8c-112">自动调整大小是一个运行时功能。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-112">Automatic sizing is a run-time feature.</span></span>|<span data-ttu-id="fcc8c-113">这意味着它永远不会增长或收缩一个控件，则进一步无效。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-113">This means it never grows or shrinks a control and then has no further effect.</span></span>|  
+|<span data-ttu-id="fcc8c-114">如果控件大小的值更改其<xref:System.Windows.Forms.Control.Location%2A>属性始终保持不变。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-114">If a control changes size, the value of its <xref:System.Windows.Forms.Control.Location%2A> property always remains constant.</span></span>|<span data-ttu-id="fcc8c-115">当控件的内容会导致它增长时，控件将增长向右和向下。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-115">When a control's contents cause it to grow, the control grows toward the right and downward.</span></span> <span data-ttu-id="fcc8c-116">控件不会增加到左侧中。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-116">Controls do not grow to the left.</span></span>|  
+|<span data-ttu-id="fcc8c-117"><xref:System.Windows.Forms.Control.Dock%2A>和<xref:System.Windows.Forms.Control.Anchor%2A>属性会遵循<xref:System.Windows.Forms.Control.AutoSize%2A>是`true`。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-117">The <xref:System.Windows.Forms.Control.Dock%2A> and <xref:System.Windows.Forms.Control.Anchor%2A> properties are honored when <xref:System.Windows.Forms.Control.AutoSize%2A> is `true`.</span></span>|<span data-ttu-id="fcc8c-118">控件的值<xref:System.Windows.Forms.Control.Location%2A>属性调整为正确的值。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-118">The value of the control's <xref:System.Windows.Forms.Control.Location%2A> property is adjusted to the correct value.</span></span><br /><br /> <span data-ttu-id="fcc8c-119">**请注意**<xref:System.Windows.Forms.Label>控件是此规则的例外。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-119">**Note** The <xref:System.Windows.Forms.Label> control is the exception to this rule.</span></span> <span data-ttu-id="fcc8c-120">当你设置的值的停靠<xref:System.Windows.Forms.Label>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性`true`、<xref:System.Windows.Forms.Label>控件不会拉伸。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-120">When you set the value of a docked <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`, the <xref:System.Windows.Forms.Label> control will not stretch.</span></span>|  
+|<span data-ttu-id="fcc8c-121">控件的<xref:System.Windows.Forms.Control.MaximumSize%2A>和<xref:System.Windows.Forms.Control.MinimumSize%2A>无论的值如何，将始终遵循属性其<xref:System.Windows.Forms.Control.AutoSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-121">A control's <xref:System.Windows.Forms.Control.MaximumSize%2A> and <xref:System.Windows.Forms.Control.MinimumSize%2A> properties are always honored, regardless of the value of its <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span>|<span data-ttu-id="fcc8c-122"><xref:System.Windows.Forms.Control.MaximumSize%2A>和<xref:System.Windows.Forms.Control.MinimumSize%2A>属性不受<xref:System.Windows.Forms.Control.AutoSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-122">The <xref:System.Windows.Forms.Control.MaximumSize%2A> and <xref:System.Windows.Forms.Control.MinimumSize%2A> properties are not affected by the <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span>|  
+|<span data-ttu-id="fcc8c-123">没有默认设置最小大小。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-123">There is no minimum size set by default.</span></span>|<span data-ttu-id="fcc8c-124">这意味着，如果控件设置下收缩<xref:System.Windows.Forms.Control.AutoSize%2A>它未包含任何内容的值和其<xref:System.Windows.Forms.Control.Size%2A>属性为 0，0。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-124">This means that if a control is set to shrink under <xref:System.Windows.Forms.Control.AutoSize%2A> and it has no contents, the value of its <xref:System.Windows.Forms.Control.Size%2A> property is 0,0.</span></span> <span data-ttu-id="fcc8c-125">在这种情况下，该控件将缩小到点，并不容易看到。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-125">In this case, your control will shrink to a point, and it will not be readily visible.</span></span>|  
+|<span data-ttu-id="fcc8c-126">如果控件不实现<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法，<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法返回最后一个值分配给<xref:System.Windows.Forms.Control.Size%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-126">If a control does not implement the <xref:System.Windows.Forms.Control.GetPreferredSize%2A> method, the <xref:System.Windows.Forms.Control.GetPreferredSize%2A> method returns last value assigned to the <xref:System.Windows.Forms.Control.Size%2A> property.</span></span>|<span data-ttu-id="fcc8c-127">这意味着该设置<xref:System.Windows.Forms.Control.AutoSize%2A>到`true`将产生任何影响。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-127">This means that setting <xref:System.Windows.Forms.Control.AutoSize%2A> to `true` will have no effect.</span></span>|  
+|<span data-ttu-id="fcc8c-128">中的控件<xref:System.Windows.Forms.TableLayoutPanel>单元格始终会缩小以适合单元格，直至其<xref:System.Windows.Forms.Control.MinimumSize%2A>为止。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-128">A control in a <xref:System.Windows.Forms.TableLayoutPanel> cell always shrinks to fit in the cell until its <xref:System.Windows.Forms.Control.MinimumSize%2A> is reached.</span></span>|<span data-ttu-id="fcc8c-129">此大小为最大大小强制执行。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-129">This size is enforced as a maximum size.</span></span> <span data-ttu-id="fcc8c-130">这不是这种情况，属于单元格时<xref:System.Windows.Forms.SizeType.AutoSize>行或列。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-130">This is not the case when the cell is part of an <xref:System.Windows.Forms.SizeType.AutoSize> row or column.</span></span>|  
   
-## AutoSizeMode 属性  
- `AutoSizeMode` 属性提供了对默认 <xref:System.Windows.Forms.Control.AutoSize%2A> 行为的更多细节上的控制。  `AutoSizeMode` 属性指定控件如何根据其内容调整自身大小。  例如，内容可以是 <xref:System.Windows.Forms.Button> 控件的文本或容器的子控件。  
+## <a name="autosizemode-property"></a><span data-ttu-id="fcc8c-131">AutoSizeMode 属性</span><span class="sxs-lookup"><span data-stu-id="fcc8c-131">AutoSizeMode Property</span></span>  
+ <span data-ttu-id="fcc8c-132">`AutoSizeMode`属性提供默认值的更好地细化控制<xref:System.Windows.Forms.Control.AutoSize%2A>行为。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-132">The `AutoSizeMode` property provides more fine-grained control over the default <xref:System.Windows.Forms.Control.AutoSize%2A> behavior.</span></span> <span data-ttu-id="fcc8c-133">`AutoSizeMode`属性指定如何控件调整自身大小以其内容。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-133">The `AutoSizeMode` property specifies how a control sizes itself to its content.</span></span> <span data-ttu-id="fcc8c-134">内容，例如，可以是文本<xref:System.Windows.Forms.Button>控件或容器的子控件。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-134">The content, for example, could be the text for a <xref:System.Windows.Forms.Button> control or the child controls for a container.</span></span>  
   
- 下表显示了 <xref:System.Windows.Forms.AutoSizeMode> 设置以及每种设置引起的行为的说明。  
+ <span data-ttu-id="fcc8c-135">下表显示<xref:System.Windows.Forms.AutoSizeMode>每种设置引起的设置和行为的说明。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-135">The following table shows the <xref:System.Windows.Forms.AutoSizeMode> settings and a description of the behavior each setting elicits.</span></span>  
   
-|AutoSizeMode 设置|行为|  
-|---------------------|--------|  
-|GrowAndShrink|控件增大或缩小以包含其内容。<br /><br /> <xref:System.Windows.Forms.Control.MinimumSize%2A> 和 <xref:System.Windows.Forms.Control.MaximumSize%2A> 的值将起作用，但将忽略 <xref:System.Windows.Forms.Control.Size%2A> 属性的当前值。<br /><br /> 具有 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性但没有 `AutoSizeMode` 属性的控件的行为与此相同。|  
-|GrowOnly|控件会增大到足以包含其内容，但不会缩小到小于由其 <xref:System.Windows.Forms.Control.Size%2A> 属性指定的值。<br /><br /> 这是 `AutoSizeMode` 的默认值。|  
+|<span data-ttu-id="fcc8c-136">AutoSizeMode 设置</span><span class="sxs-lookup"><span data-stu-id="fcc8c-136">AutoSizeMode setting</span></span>|<span data-ttu-id="fcc8c-137">行为</span><span class="sxs-lookup"><span data-stu-id="fcc8c-137">Behavior</span></span>|  
+|--------------------------|--------------|  
+|<span data-ttu-id="fcc8c-138">GrowAndShrink</span><span class="sxs-lookup"><span data-stu-id="fcc8c-138">GrowAndShrink</span></span>|<span data-ttu-id="fcc8c-139">控件增大或缩小以覆盖其内容。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-139">The control grows or shrinks to encompass its contents.</span></span><br /><br /> <span data-ttu-id="fcc8c-140"><xref:System.Windows.Forms.Control.MinimumSize%2A>和<xref:System.Windows.Forms.Control.MaximumSize%2A>值将起作用，但的当前值<xref:System.Windows.Forms.Control.Size%2A>忽略属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-140">The <xref:System.Windows.Forms.Control.MinimumSize%2A> and <xref:System.Windows.Forms.Control.MaximumSize%2A> values are honored, but the current value of the <xref:System.Windows.Forms.Control.Size%2A> property is ignored.</span></span><br /><br /> <span data-ttu-id="fcc8c-141">这是与控件相同的行为<xref:System.Windows.Forms.Control.AutoSize%2A>属性但没有`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-141">This is the same behavior as controls with the <xref:System.Windows.Forms.Control.AutoSize%2A> property and no `AutoSizeMode` property.</span></span>|  
+|<span data-ttu-id="fcc8c-142">GrowOnly</span><span class="sxs-lookup"><span data-stu-id="fcc8c-142">GrowOnly</span></span>|<span data-ttu-id="fcc8c-143">控件增大根据需要在尽可能以覆盖其内容，但它不会缩小到指定的值小于其<xref:System.Windows.Forms.Control.Size%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-143">The control grows as much as necessary to encompass its contents, but it will not shrink smaller than the value specified by its <xref:System.Windows.Forms.Control.Size%2A> property.</span></span><br /><br /> <span data-ttu-id="fcc8c-144">这是 `AutoSizeMode` 的默认值。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-144">This is the default value for `AutoSizeMode`.</span></span>|  
   
-## 支持 AutoSize 属性的控件  
- 下表列出了支持 <xref:System.Windows.Forms.Control.AutoSize%2A> 和 `AutoSizeMode` 属性的控件。  
+## <a name="controls-that-support-the-autosize-property"></a><span data-ttu-id="fcc8c-145">支持自动调整大小属性的控件</span><span class="sxs-lookup"><span data-stu-id="fcc8c-145">Controls That Support the AutoSize Property</span></span>  
+ <span data-ttu-id="fcc8c-146">下表列出了支持的控件<xref:System.Windows.Forms.Control.AutoSize%2A>和`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-146">The following table lists the controls that support the <xref:System.Windows.Forms.Control.AutoSize%2A> and `AutoSizeMode` properties.</span></span>  
   
-|AutoSize 支持|控件类型|  
-|-----------------|----------|  
-|-   支持 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。<br />-   没有 `AutoSizeMode` 属性。|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <xref:System.Windows.Forms.MaskedTextBox>（<xref:System.Windows.Forms.TextBox> 基控件）<br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
-|-   支持 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。<br />-   支持 `AutoSizeMode` 属性。|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
-|-   没有 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
+|<span data-ttu-id="fcc8c-147">AutoSize 支持</span><span class="sxs-lookup"><span data-stu-id="fcc8c-147">AutoSize support</span></span>|<span data-ttu-id="fcc8c-148">控件类型</span><span class="sxs-lookup"><span data-stu-id="fcc8c-148">Control type</span></span>|  
+|----------------------|------------------|  
+|<span data-ttu-id="fcc8c-149">-   <xref:System.Windows.Forms.Control.AutoSize%2A>支持的属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-149">-   <xref:System.Windows.Forms.Control.AutoSize%2A> property supported.</span></span><br /><span data-ttu-id="fcc8c-150">-不`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-150">-   No `AutoSizeMode` property.</span></span>|<xref:System.Windows.Forms.CheckBox><br /><br /> <xref:System.Windows.Forms.DomainUpDown><br /><br /> <xref:System.Windows.Forms.Label><br /><br /> <xref:System.Windows.Forms.LinkLabel><br /><br /> <span data-ttu-id="fcc8c-151"><xref:System.Windows.Forms.MaskedTextBox>(<xref:System.Windows.Forms.TextBox>基)</span><span class="sxs-lookup"><span data-stu-id="fcc8c-151"><xref:System.Windows.Forms.MaskedTextBox> (<xref:System.Windows.Forms.TextBox> base)</span></span><br /><br /> <xref:System.Windows.Forms.NumericUpDown><br /><br /> <xref:System.Windows.Forms.RadioButton><br /><br /> <xref:System.Windows.Forms.TextBox><br /><br /> <xref:System.Windows.Forms.TrackBar>|  
+|<span data-ttu-id="fcc8c-152">-   <xref:System.Windows.Forms.Control.AutoSize%2A>支持的属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-152">-   <xref:System.Windows.Forms.Control.AutoSize%2A> property supported.</span></span><br /><span data-ttu-id="fcc8c-153">-   `AutoSizeMode`支持的属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-153">-   `AutoSizeMode` property supported.</span></span>|<xref:System.Windows.Forms.Button><br /><br /> <xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.FlowLayoutPanel><br /><br /> <xref:System.Windows.Forms.Form><br /><br /> <xref:System.Windows.Forms.GroupBox><br /><br /> <xref:System.Windows.Forms.Panel><br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>|  
+|<span data-ttu-id="fcc8c-154">-不<xref:System.Windows.Forms.Control.AutoSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-154">-   No <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span>|<xref:System.Windows.Forms.CheckedListBox><br /><br /> <xref:System.Windows.Forms.ComboBox><br /><br /> <xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DateTimePicker><br /><br /> <xref:System.Windows.Forms.ListBox><br /><br /> <xref:System.Windows.Forms.ListView><br /><br /> <xref:System.Windows.Forms.MaskedTextBox><br /><br /> <xref:System.Windows.Forms.MonthCalendar><br /><br /> <xref:System.Windows.Forms.ProgressBar><br /><br /> <xref:System.Windows.Forms.PropertyGrid><br /><br /> <xref:System.Windows.Forms.RichTextBox><br /><br /> <xref:System.Windows.Forms.SplitContainer><br /><br /> <xref:System.Windows.Forms.TabControl><br /><br /> <xref:System.Windows.Forms.TabPage><br /><br /> <xref:System.Windows.Forms.TreeView><br /><br /> <xref:System.Windows.Forms.WebBrowser><br /><br /> <xref:System.Windows.Forms.ScrollBar>|  
   
-## 设计环境中的 AutoSize  
- 下表描述了控件在设计时基于其 <xref:System.Windows.Forms.Control.AutoSize%2A> 和 `AutoSizeMode` 属性的值的大小调整行为。  
+## <a name="autosize-in-the-design-environment"></a><span data-ttu-id="fcc8c-155">在设计环境中自动调整大小</span><span class="sxs-lookup"><span data-stu-id="fcc8c-155">AutoSize in the Design Environment</span></span>  
+ <span data-ttu-id="fcc8c-156">下表描述控件的大小调整行为在设计时，基于值其<xref:System.Windows.Forms.Control.AutoSize%2A>和`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-156">The following table describes the sizing behavior of a control at design time, based on the value of its <xref:System.Windows.Forms.Control.AutoSize%2A> and `AutoSizeMode` properties.</span></span>  
   
- 重写 <xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A> 属性可确定给定控件是否处于用户可调整大小的状态。  下表中，“不能”表示只有 <xref:System.Windows.Forms.Design.SelectionRules>，“能”表示 <xref:System.Windows.Forms.Design.SelectionRules> 和 <xref:System.Windows.Forms.Design.SelectionRules>。  
+ <span data-ttu-id="fcc8c-157">重写<xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A>属性来确定给定的控件是否处于用户可调整大小的状态。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-157">Override the <xref:System.Windows.Forms.Design.ControlDesigner.SelectionRules%2A> property to determine whether a given control is in a user-resizable state.</span></span> <span data-ttu-id="fcc8c-158">在以下表中，"不能"意味着<xref:System.Windows.Forms.Design.SelectionRules.Moveable>仅，"可以"意味着<xref:System.Windows.Forms.Design.SelectionRules.AllSizeable>和<xref:System.Windows.Forms.Design.SelectionRules.Moveable>。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-158">In the following table, "cannot" means <xref:System.Windows.Forms.Design.SelectionRules.Moveable> only, "can" means <xref:System.Windows.Forms.Design.SelectionRules.AllSizeable> and <xref:System.Windows.Forms.Design.SelectionRules.Moveable>.</span></span>  
   
-|AutoSize 设置|设计时调整大小操作|  
-|-----------------|---------------|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   没有 `AutoSizeMode` 属性。|除以下控件外，用户不能在设计时调整控件的大小：<br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|用户不能在设计时调整控件的大小。|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `true`<br />-   `AutoSizeMode` \= <xref:System.Windows.Forms.AutoSizeMode>|用户可以在设计时调整控件的大小。  当设置了 <xref:System.Windows.Forms.Control.Size%2A> 属性时，用户只能增加控件的大小。|  
-|-   <xref:System.Windows.Forms.Control.AutoSize%2A> \= `false`，或者 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性被隐藏。|用户可以在设计时调整控件的大小。|  
+|<span data-ttu-id="fcc8c-159">AutoSize 设置</span><span class="sxs-lookup"><span data-stu-id="fcc8c-159">AutoSize settings</span></span>|<span data-ttu-id="fcc8c-160">设计时调整大小操作</span><span class="sxs-lookup"><span data-stu-id="fcc8c-160">Design-time sizing gesture</span></span>|  
+|-----------------------|---------------------------------|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br /><span data-ttu-id="fcc8c-161">-不`AutoSizeMode`属性。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-161">-   No `AutoSizeMode` property.</span></span>|<span data-ttu-id="fcc8c-162">用户不能在设计时，除了以下控件调整控件的大小：</span><span class="sxs-lookup"><span data-stu-id="fcc8c-162">The user cannot resize the control at design time, except for the following controls:</span></span><br /><br /> -   <xref:System.Windows.Forms.TextBox><br />-   <xref:System.Windows.Forms.MaskedTextBox><br />-   <xref:System.Windows.Forms.RichTextBox><br />-   <xref:System.Windows.Forms.TrackBar>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>|<span data-ttu-id="fcc8c-163">用户不能在设计时调整控件的大小。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-163">The user cannot resize the control at design time.</span></span>|  
+|-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `true`<br />-   `AutoSizeMode` = <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>|<span data-ttu-id="fcc8c-164">用户可以在设计时调整控件的大小。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-164">The user can resize the control at design time.</span></span> <span data-ttu-id="fcc8c-165">当<xref:System.Windows.Forms.Control.Size%2A>属性设置，则用户可以仅增加该控件的大小。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-165">When the <xref:System.Windows.Forms.Control.Size%2A> property is set, the user can only increase the size of the control.</span></span>|  
+|<span data-ttu-id="fcc8c-166">-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `false`或<xref:System.Windows.Forms.Control.AutoSize%2A>属性被隐藏。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-166">-   <xref:System.Windows.Forms.Control.AutoSize%2A> = `false`, or <xref:System.Windows.Forms.Control.AutoSize%2A> property is hidden.</span></span>|<span data-ttu-id="fcc8c-167">用户可以在设计时调整控件的大小。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-167">User can resize the control at design time.</span></span>|  
   
 > [!NOTE]
->  为使工作效率最大化，Windows 窗体设计器隐藏了 <xref:System.Windows.Forms.Form> 类的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  设计时，无论窗体的实际设置如何，该窗体的行为都如同将 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性设置为 `false`。  运行时，不做任何特殊处理，并按属性设置的指定应用 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性。  
+>  <span data-ttu-id="fcc8c-168">若要最大程度提高工作效率，Windows 窗体设计器阴影<xref:System.Windows.Forms.Control.AutoSize%2A>属性<xref:System.Windows.Forms.Form>类。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-168">To maximize productivity, the Windows Forms Designer shadows the <xref:System.Windows.Forms.Control.AutoSize%2A> property for the <xref:System.Windows.Forms.Form> class.</span></span> <span data-ttu-id="fcc8c-169">在设计时，窗体行为就如同<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`false`，而不考虑其实际设置。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-169">At design time, the form behaves as though the <xref:System.Windows.Forms.Control.AutoSize%2A> property is set to `false`, regardless of its actual setting.</span></span> <span data-ttu-id="fcc8c-170">在运行时，进行任何特殊住宿和<xref:System.Windows.Forms.Control.AutoSize%2A>应用属性所指定的属性设置。</span><span class="sxs-lookup"><span data-stu-id="fcc8c-170">At runtime, no special accommodation is made, and the <xref:System.Windows.Forms.Control.AutoSize%2A> property is applied as specified by the property setting.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.Control.PreferredSize%2A>   
+## <a name="see-also"></a><span data-ttu-id="fcc8c-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fcc8c-171">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.Control.PreferredSize%2A>  
  <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -1,44 +1,45 @@
 ---
-title: "如何：使用设计器向选项卡页添加控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "选项卡控件, Tab 键次序"
-  - "选项卡页, 添加控件"
-  - "TabPage 控件"
+title: "如何：使用设计器向选项卡页添加控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TabPage control
+- tab controls [Windows Forms], tab order
+- tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5efe73f9d8ae2621cca075f77051cb9c7402e57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器向选项卡页添加控件
-使用 Windows 窗体 <xref:System.Windows.Forms.TabControl> 可以按有组织的方式显示其他控件。  您可以按照如下说明在选项卡页的主要部位显示图片。  有关向选项卡页的标签部分添加图标的信息，请参见[如何：更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。  
+# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a><span data-ttu-id="63b9b-102">如何：使用设计器向选项卡页添加控件</span><span class="sxs-lookup"><span data-stu-id="63b9b-102">How to: Add a Control to a Tab Page Using the Designer</span></span>
+<span data-ttu-id="63b9b-103">Windows 窗体使用<xref:System.Windows.Forms.TabControl>是组织方式显示其他控件。</span><span class="sxs-lookup"><span data-stu-id="63b9b-103">The use of the Windows Forms <xref:System.Windows.Forms.TabControl> is to display other controls in an organized fashion.</span></span> <span data-ttu-id="63b9b-104">可以使用这些说明要显示的图片上的选项卡页的主要部分。</span><span class="sxs-lookup"><span data-stu-id="63b9b-104">You can use these instructions to display a picture on the main part of a tab page.</span></span> <span data-ttu-id="63b9b-105">有关将图标添加到选项卡页的标签部分的信息，请参阅[如何： 更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="63b9b-105">For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
   
- 下面的过程需要一个**“Windows 应用程序”**项目，该项目拥有一个包含 <xref:System.Windows.Forms.TabControl> 控件的窗体。  有关设置此类项目的信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ <span data-ttu-id="63b9b-106">下面的过程需要**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.TabControl>控件。</span><span class="sxs-lookup"><span data-stu-id="63b9b-106">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TabControl> control.</span></span> <span data-ttu-id="63b9b-107">有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="63b9b-107">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="63b9b-108">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="63b9b-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="63b9b-109">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="63b9b-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="63b9b-110">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="63b9b-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 使用设计器添加控件  
+### <a name="to-add-a-control-using-the-designer"></a><span data-ttu-id="63b9b-111">若要添加使用设计器控件</span><span class="sxs-lookup"><span data-stu-id="63b9b-111">To add a control using the designer</span></span>  
   
-1.  单击适当的选项卡页以使其显示在最前面。  
+1.  <span data-ttu-id="63b9b-112">单击相应的选项卡页，以便显示于顶部。</span><span class="sxs-lookup"><span data-stu-id="63b9b-112">Click the appropriate tab page so that it appears on top.</span></span>  
   
-2.  在选项卡页上绘制控件。  
+2.  <span data-ttu-id="63b9b-113">绘制选项卡页上的控件。</span><span class="sxs-lookup"><span data-stu-id="63b9b-113">Draw the control on the tab page.</span></span>  
   
-## 请参阅  
- [TabControl 控件](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [TabControl 控件概述](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [如何：更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)   
- [如何：禁用选项卡页](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [如何：使用 Windows 窗体 TabControl 添加和移除选项卡](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="63b9b-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63b9b-114">See Also</span></span>  
+ [<span data-ttu-id="63b9b-115">TabControl 控件</span><span class="sxs-lookup"><span data-stu-id="63b9b-115">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [<span data-ttu-id="63b9b-116">TabControl 控件概述</span><span class="sxs-lookup"><span data-stu-id="63b9b-116">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="63b9b-117">如何：更改 Windows 窗体 TabControl 控件的外观</span><span class="sxs-lookup"><span data-stu-id="63b9b-117">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [<span data-ttu-id="63b9b-118">如何：禁用选项卡页</span><span class="sxs-lookup"><span data-stu-id="63b9b-118">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="63b9b-119">如何：使用 Windows 窗体 TabControl 控件添加和删除选项卡</span><span class="sxs-lookup"><span data-stu-id="63b9b-119">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

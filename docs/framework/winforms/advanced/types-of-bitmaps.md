@@ -1,102 +1,103 @@
 ---
-title: "位图类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".bmp 文件"
-  - ".gif 文件"
-  - ".jpeg 文件"
-  - "位图 [Windows 窗体], 文件格式"
-  - "可交换的图像文件"
-  - "EXIF 文件格式"
-  - "gif 文件"
-  - "图形 [Windows 窗体], 文件格式"
-  - "可交换的图形格式"
-  - "图像 [Windows 窗体], 文件格式"
-  - "联合摄影专家组"
-  - "jpeg 文件"
-  - "pictures, 文件格式"
-  - "PNG 文件"
-  - "可迁移网络图形"
-  - "Tag 图像文件格式"
-  - "TIFF 文件"
+title: "位图类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- jpeg files
+- TIFF files
+- gif files
+- Graphics Interchange Format
+- Joint Photographic Experts Group
+- .jpeg files
+- .gif files
+- graphics [Windows Forms], file formats
+- images [Windows Forms], file formats
+- Portable Network Graphics
+- .bmp files
+- EXIF file format
+- PNG files
+- pictures [Windows Forms], file formats
+- Tag Image File Format
+- bitmaps [Windows Forms], file format
+- Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 位图类型
-位图是位的数组，它指定了像素矩阵中各像素的颜色。  专用于单个像素的位数决定了可分配到该像素的颜色数。  例如，如果用 4 位来呈现每个像素，那么一个给定的像素就可以分配到 16 \(2^4 \= 16\) 种颜色中的一种。  下表中的几个示例显示了可分配到由给定位数代表的像素的颜色数量。  
+# <a name="types-of-bitmaps"></a><span data-ttu-id="7fb6d-102">位图类型</span><span class="sxs-lookup"><span data-stu-id="7fb6d-102">Types of Bitmaps</span></span>
+<span data-ttu-id="7fb6d-103">位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-103">A bitmap is an array of bits that specify the color of each pixel in a rectangular array of pixels.</span></span> <span data-ttu-id="7fb6d-104">专用于单个像素的比特数确定可以分配给该像素的颜色数。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-104">The number of bits devoted to an individual pixel determines the number of colors that can be assigned to that pixel.</span></span> <span data-ttu-id="7fb6d-105">例如，如果每个像素都由 4 位，然后给定的像素可以分配 16 种不同颜色之一 (2 ^4 = 16)。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-105">For example, if each pixel is represented by 4 bits, then a given pixel can be assigned one of 16 different colors (2^4 = 16).</span></span> <span data-ttu-id="7fb6d-106">下表显示可以指定数目的 bits 通过分配给表示像素的颜色数的几个示例。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-106">The following table shows a few examples of the number of colors that can be assigned to a pixel represented by a given number of bits.</span></span>  
   
-|每像素的位数|一个像素可分配到的颜色数量|  
-|------------|-------------------|  
-|1|2^1 \= 2|  
-|2|2^2 \= 4|  
-|4|2^4 \= 16|  
-|8|2^8 \= 256|  
-|16|2^16 \= 65,536|  
-|24|2^24 \= 16,777,216|  
+|<span data-ttu-id="7fb6d-107">每像素位数为</span><span class="sxs-lookup"><span data-stu-id="7fb6d-107">Bits per pixel</span></span>|<span data-ttu-id="7fb6d-108">可以分配给一个像素的颜色数</span><span class="sxs-lookup"><span data-stu-id="7fb6d-108">Number of colors that can be assigned to a pixel</span></span>|  
+|--------------------|------------------------------------------------------|  
+|<span data-ttu-id="7fb6d-109">1</span><span class="sxs-lookup"><span data-stu-id="7fb6d-109">1</span></span>|<span data-ttu-id="7fb6d-110">2^1 = 2</span><span class="sxs-lookup"><span data-stu-id="7fb6d-110">2^1 = 2</span></span>|  
+|<span data-ttu-id="7fb6d-111">2</span><span class="sxs-lookup"><span data-stu-id="7fb6d-111">2</span></span>|<span data-ttu-id="7fb6d-112">2^2 = 4</span><span class="sxs-lookup"><span data-stu-id="7fb6d-112">2^2 = 4</span></span>|  
+|<span data-ttu-id="7fb6d-113">4</span><span class="sxs-lookup"><span data-stu-id="7fb6d-113">4</span></span>|<span data-ttu-id="7fb6d-114">2^4 = 16</span><span class="sxs-lookup"><span data-stu-id="7fb6d-114">2^4 = 16</span></span>|  
+|<span data-ttu-id="7fb6d-115">8</span><span class="sxs-lookup"><span data-stu-id="7fb6d-115">8</span></span>|<span data-ttu-id="7fb6d-116">2^8 = 256</span><span class="sxs-lookup"><span data-stu-id="7fb6d-116">2^8 = 256</span></span>|  
+|<span data-ttu-id="7fb6d-117">16</span><span class="sxs-lookup"><span data-stu-id="7fb6d-117">16</span></span>|<span data-ttu-id="7fb6d-118">2^16 = 65,536</span><span class="sxs-lookup"><span data-stu-id="7fb6d-118">2^16 = 65,536</span></span>|  
+|<span data-ttu-id="7fb6d-119">24</span><span class="sxs-lookup"><span data-stu-id="7fb6d-119">24</span></span>|<span data-ttu-id="7fb6d-120">2^24 = 16,777,216</span><span class="sxs-lookup"><span data-stu-id="7fb6d-120">2^24 = 16,777,216</span></span>|  
   
- 存储位图的磁盘文件通常包含一个或多个信息块，信息块中存储了如每像素位数、每行的像素数以及数组中的行数等信息。  这样一个文件也可能包含颜色表（有时称为调色板）。  颜色表将位图中的数值映射到特定的颜色。  下面的插图显示了一幅放大的图像以及它的位图和颜色表。  每个像素用一个 4 位数表示，那么颜色表中有 2^4 \= 16 种颜色。  表中的每种颜色用一个 24 位数表示：8 位用于红色，8 位用于绿色，8 位用于蓝色。  数字以十六进制（基 16）形式显示：A \= 10，B \= 11，C \= 12，D \= 13，E \= 14，F \= 15。  
+ <span data-ttu-id="7fb6d-121">通常存储位图的磁盘文件包含一个或多个数组中存储信息，如每个像素，每个行中的像素数和行数的比特数的信息块。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-121">Disk files that store bitmaps usually contain one or more information blocks that store information such as the number of bits per pixel, number of pixels in each row, and number of rows in the array.</span></span> <span data-ttu-id="7fb6d-122">此类文件可能还包含颜色表 （有时称为颜色调色板）。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-122">Such a file might also contain a color table (sometimes called a color palette).</span></span> <span data-ttu-id="7fb6d-123">颜色表将位图中的数值映射到特定的颜色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-123">A color table maps numbers in the bitmap to specific colors.</span></span> <span data-ttu-id="7fb6d-124">下图显示以及其位图和颜色表的放大的图像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-124">The following illustration shows an enlarged image along with its bitmap and color table.</span></span> <span data-ttu-id="7fb6d-125">每个像素都由 4 位数字，因此没有 2 ^4 = 16 种颜色颜色表中。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-125">Each pixel is represented by a 4-bit number, so there are 2^4 = 16 colors in the color table.</span></span> <span data-ttu-id="7fb6d-126">表中的每个颜色表示为一个 24 位数字： 8 位用于红色、 绿色，8 位和蓝色的 8 位。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-126">Each color in the table is represented by a 24-bit number: 8 bits for red, 8 bits for green, and 8 bits for blue.</span></span> <span data-ttu-id="7fb6d-127">以十六进制 (以 16 为基数) 形式显示数字： A = 10，B = 11，C = 12，D = 13，E = 14，F = 15。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-127">The numbers are shown in hexadecimal (base 16) form: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.</span></span>  
   
- ![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.png "AboutGdip03\_Art01")  
+ <span data-ttu-id="7fb6d-128">![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")</span><span class="sxs-lookup"><span data-stu-id="7fb6d-128">![Bitmap sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")</span></span>  
   
- 请看位于该图像第 3 行、第 5 列的像素。  位图中对应的数字为 1。  颜色表告诉我们 1 表示红色，因此该像素是红色的。  该位图最上面一行中所有的项都是 3。  颜色表告知我们 3 表示蓝色，因此该图像最上面一行中的所有像素都是蓝色。  
+ <span data-ttu-id="7fb6d-129">查看行 3，5 列的映像中的像素。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-129">Look at the pixel in row 3, column 5 of the image.</span></span> <span data-ttu-id="7fb6d-130">在位图中对应的号为 1。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-130">The corresponding number in the bitmap is 1.</span></span> <span data-ttu-id="7fb6d-131">颜色表告诉我们 1 表示的颜色为红色，因此该像素是红色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-131">The color table tells us that 1 represents the color red so the pixel is red.</span></span> <span data-ttu-id="7fb6d-132">位图的顶行中的所有条目都都为 3。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-132">All the entries in the top row of the bitmap are 3.</span></span> <span data-ttu-id="7fb6d-133">颜色表告诉我们，3 表示蓝色，因此图像的第一行中的所有像素都是蓝色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-133">The color table tells us that 3 represents blue, so all the pixels in the top row of the image are blue.</span></span>  
   
 > [!NOTE]
->  一些位图是以上下颠倒的格式存储的；位图首行中的数值对应于图像末行中的像素。  
+>  <span data-ttu-id="7fb6d-134">有些位图存储在自下而上的格式;位图的第一行中的数字对应于映像的底部行中的像素。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-134">Some bitmaps are stored in bottom-up format; the numbers in the first row of the bitmap correspond to the pixels in the bottom row of the image.</span></span>  
   
- 在颜色表中存储索引的位图称为“调色板索引位图”。  有些位图不需要颜色表。  例如，如果位图使用每像素 24 位的格式，那么该位图就可以将颜色本身（而不是索引）存储到颜色表中。  下面的插图显示了一个直接存储颜色（24 位\/像素）而不使用颜色表的位图。  该插图也显示了相应图像的放大视图。  在位图中，FFFFFF 表示白色，FF0000 表示红色，00FF00 表示绿色，0000FF 表示蓝色。  
+ <span data-ttu-id="7fb6d-135">将索引存储到颜色表的位图称为调色板索引位图。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-135">A bitmap that stores indexes into a color table is called a palette-indexed bitmap.</span></span> <span data-ttu-id="7fb6d-136">有些位图具有颜色表不需要。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-136">Some bitmaps have no need for a color table.</span></span> <span data-ttu-id="7fb6d-137">例如，如果位图使用每个像素的 24 位，该位图可以存储在自己的颜色，而不是索引到颜色表。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-137">For example, if a bitmap uses 24 bits per pixel, that bitmap can store the colors themselves rather than indexes into a color table.</span></span> <span data-ttu-id="7fb6d-138">下图显示而不是使用颜色表存储直接颜色 （24 位 / 像素） 的位图。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-138">The following illustration shows a bitmap that stores colors directly (24 bits per pixel) rather than using a color table.</span></span> <span data-ttu-id="7fb6d-139">该插图还显示相应的映像的放大的视图。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-139">The illustration also shows an enlarged view of the corresponding image.</span></span> <span data-ttu-id="7fb6d-140">位图中, FFFFFF 表示空白、 FF0000 表示红色、 00FF00 表示绿色，和 0000ff> 表示蓝色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-140">In the bitmap, FFFFFF represents white, FF0000 represents red, 00FF00 represents green, and 0000FF represents blue.</span></span>  
   
- ![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.png "AboutGdip03\_Art02")  
+ <span data-ttu-id="7fb6d-141">![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")</span><span class="sxs-lookup"><span data-stu-id="7fb6d-141">![Bitmap sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")</span></span>  
   
-## 图形文件格式  
- 有许多将位图存储到磁盘文件的标准格式。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持下面段落中所描述的图形文件格式。  
+## <a name="graphics-file-formats"></a><span data-ttu-id="7fb6d-142">图形文件格式</span><span class="sxs-lookup"><span data-stu-id="7fb6d-142">Graphics File Formats</span></span>  
+ <span data-ttu-id="7fb6d-143">有许多磁盘文件中保存位图的标准格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-143">There are many standard formats for saving bitmaps in disk files.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="7fb6d-144">支持的图形文件以下各段中所述的格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-144"> supports the graphics file formats described in the following paragraphs.</span></span>  
   
-### BMP  
- BMP 是 Windows 使用的一种标准格式，用于存储设备无关和应用程序无关的图像。  一个给定 BMP 文件的每像素位数值（1、4、8、15、24、32 或 64）在文件头中指定。  每像素 24 位的 BMP 文件是通用的。  BMP 文件通常是不压缩的，因此，不太适合通过 Internet 传输。  
+### <a name="bmp"></a><span data-ttu-id="7fb6d-145">BMP</span><span class="sxs-lookup"><span data-stu-id="7fb6d-145">BMP</span></span>  
+ <span data-ttu-id="7fb6d-146">BMP 是标准 Windows 用来存储独立于设备的和独立于应用程序的图像的格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-146">BMP is a standard format used by Windows to store device-independent and application-independent images.</span></span> <span data-ttu-id="7fb6d-147">文件头中指定的每个像素 （1、 4、 8、 15、 24、 32 或 64） 对于给定的 BMP 文件的位数。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-147">The number of bits per pixel (1, 4, 8, 15, 24, 32, or 64) for a given BMP file is specified in a file header.</span></span> <span data-ttu-id="7fb6d-148">每个像素的 24 位 BMP 文件很常见。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-148">BMP files with 24 bits per pixel are common.</span></span> <span data-ttu-id="7fb6d-149">BMP 文件通常未压缩，并且因此，不是非常适合传输跨 Internet。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-149">BMP files are usually not compressed and, therefore, are not well suited for transfer across the Internet.</span></span>  
   
-### 可交换图像文件格式 \(GIF\)  
- GIF 是一种用于在网页中显示图像的通用格式。  GIF 文件适用于画线、有纯色块的图片和在颜色之间有清晰边界的图片。  GIF 文件是压缩的，但是在压缩过程中没有信息丢失；解压缩的图像与原始图像完全一样。  GIF 文件中的一种颜色可以被指定为透明，这样，图像将具有显示它的任何网页的背景色。  在单个文件中存储一系列 GIF 图像可以形成一个动画 GIF。  GIF 文件每像素最多能存储 8 位，所以它们只限于使用 256 种颜色。  
+### <a name="graphics-interchange-format-gif"></a><span data-ttu-id="7fb6d-150">图形交换格式 (GIF)</span><span class="sxs-lookup"><span data-stu-id="7fb6d-150">Graphics Interchange Format (GIF)</span></span>  
+ <span data-ttu-id="7fb6d-151">GIF 是用于在网页显示图像的通用格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-151">GIF is a common format for images that appear on Web pages.</span></span> <span data-ttu-id="7fb6d-152">Gif 适用于行绘图、 用纯色，块的图片和颜色之间有清晰边界的图片。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-152">GIFs work well for line drawings, pictures with blocks of solid color, and pictures with sharp boundaries between colors.</span></span> <span data-ttu-id="7fb6d-153">Gif 文件被压缩，但压缩进程; 在丢失任何信息解压缩的映像正是与原始对象相同。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-153">GIFs are compressed, but no information is lost in the compression process; a decompressed image is exactly the same as the original.</span></span> <span data-ttu-id="7fb6d-154">可为透明，指定 gif 文件中的一种颜色，以便映像都具有其显示任何 Web 页面的背景色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-154">One color in a GIF can be designated as transparent, so that the image will have the background color of any Web page that displays it.</span></span> <span data-ttu-id="7fb6d-155">可以在一个文件中以形成一个动画的 GIF 存储一系列 GIF 图像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-155">A sequence of GIF images can be stored in a single file to form an animated GIF.</span></span> <span data-ttu-id="7fb6d-156">Gif 存储最多 8 位 / 像素，因此它们限制为 256 种颜色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-156">GIFs store at most 8 bits per pixel, so they are limited to 256 colors.</span></span>  
   
-### 联合摄影专家组 \(JPEG\)  
- JPEG 是一种适应于自然景观（如扫描的照片）的压缩方案。  一些信息会在压缩过程中丢失，但是这些丢失人眼是察觉不到的。  JPEG 文件每像素存储 24 位，因此它们能够显示超过 16,000,000 种颜色。  JPEG 文件不支持透明或动画。  
+### <a name="joint-photographic-experts-group-jpeg"></a><span data-ttu-id="7fb6d-157">联合摄影专家组 (JPEG)</span><span class="sxs-lookup"><span data-stu-id="7fb6d-157">Joint Photographic Experts Group (JPEG)</span></span>  
+ <span data-ttu-id="7fb6d-158">JPEG 是一种非常适用于扫描的照片如自然场景压缩方案。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-158">JPEG is a compression scheme that works well for natural scenes such as scanned photographs.</span></span> <span data-ttu-id="7fb6d-159">某些信息会丢失在压缩过程中，但通常丢失是察觉不到人眼。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-159">Some information is lost in the compression process, but often the loss is imperceptible to the human eye.</span></span> <span data-ttu-id="7fb6d-160">Jpeg 存储 24 位 / 像素，这样便能够显示超过 16 个颜色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-160">JPEGs store 24 bits per pixel, so they are capable of displaying more than 16 million colors.</span></span> <span data-ttu-id="7fb6d-161">Jpeg 不支持透明度或动画。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-161">JPEGs do not support transparency or animation.</span></span>  
   
- JPEG 图像中的压缩级别是可以控制的，但是较高的压缩级别（较小的文件）会导致丢失更多的信息。  对于一幅以 20:1 压缩比生成的图像，人眼难以把它和原始图像区别开来。  下面的插图显示了一幅 BMP 图像和用这幅 BMP 图像压缩而得的两幅 JPEG 图像。  第一幅 JPEG 的压缩比是 4:1，第二幅 JPEG 的压缩比是 8:1。  
+ <span data-ttu-id="7fb6d-162">JPEG 图像中的压缩级别可配置，但更高的压缩级别 （较小的文件） 导致的信息的更多丢失。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-162">The level of compression in JPEG images is configurable, but higher compression levels (smaller files) result in more loss of information.</span></span> <span data-ttu-id="7fb6d-163">20:1 的压缩率通常生成了人眼查找难区分原始的图像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-163">A 20:1 compression ratio often produces an image that the human eye finds difficult to distinguish from the original.</span></span> <span data-ttu-id="7fb6d-164">下图显示 BMP 图像和两个 JPEG 图像压缩从该 BMP 图像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-164">The following illustration shows a BMP image and two JPEG images that were compressed from that BMP image.</span></span> <span data-ttu-id="7fb6d-165">第一个 JPEG 具有 4:1 的压缩率，第二个 JPEG 具有大约 8:1 的压缩率。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-165">The first JPEG has a compression ratio of 4:1 and the second JPEG has a compression ratio of about 8:1.</span></span>  
   
- ![Filetype 示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03\_Art03")  
+ <span data-ttu-id="7fb6d-166">![Filetype 示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")</span><span class="sxs-lookup"><span data-stu-id="7fb6d-166">![Filetype samples](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")</span></span>  
   
- JPEG 压缩不适用于线条图形、纯色块和清晰边界。  下面的插图显示了一幅 BMP 图像，以及两幅 JPEG 图像和一幅 GIF 图像。  JPEG 和 GIF 图像从 BMP 图像压缩而得。  GIF 的压缩比是 4:1，较小 JPEG 的压缩比是 4:1，较大 JPEG 的压缩比是 8:3。  请注意，GIF 图像沿线条保持着清晰的边界，而 JPEG 图像则趋向于模糊边界。  
+ <span data-ttu-id="7fb6d-167">不能 JPEG 压缩不适合于线条图形、 纯色，块和清晰边界。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-167">JPEG compression does not work well for line drawings, blocks of solid color, and sharp boundaries.</span></span> <span data-ttu-id="7fb6d-168">下图显示以及两个 Jpeg 和 GIF BMP。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-168">The following illustration shows a BMP along with two JPEGs and a GIF.</span></span> <span data-ttu-id="7fb6d-169">Jpeg 图像和 GIF 从 BMP 压缩。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-169">The JPEGs and the GIF were compressed from the BMP.</span></span> <span data-ttu-id="7fb6d-170">压缩率是 4:1 表示 GIF、 4:1 的较小的 JPEG，和较大的 JPEG 8:3。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-170">The compression ratio is 4:1 for the GIF, 4:1 for the smaller JPEG, and 8:3 for the larger JPEG.</span></span> <span data-ttu-id="7fb6d-171">请注意，GIF 维护着清晰的边界沿行，但 Jpeg 往往会变得模糊边界。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-171">Note that the GIF maintains the sharp boundaries along the lines, but the JPEGs tend to blur the boundaries.</span></span>  
   
- ![Filetype](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.png "AboutGdip03\_Art03A")  
+ <span data-ttu-id="7fb6d-172">![文件类型](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")</span><span class="sxs-lookup"><span data-stu-id="7fb6d-172">![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")</span></span>  
   
- JPEG 是一种压缩方案，不是一种文件格式。  “JPEG 文件交换格式 \(JFIF\)”是一种文件格式，常用于存储和传输已根据 JPEG 方案压缩的图像。  Web 浏览器显示的 JFIF 文件使用 .jpg 扩展名。  
+ <span data-ttu-id="7fb6d-173">JPEG 是压缩方案，而不是文件格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-173">JPEG is a compression scheme, not a file format.</span></span> <span data-ttu-id="7fb6d-174">JPEG 文件交换格式 (JFIF) 是通常用于存储和传输 JPEG 方案根据压缩的图像文件格式。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-174">JPEG File Interchange Format (JFIF) is a file format commonly used for storing and transferring images that have been compressed according to the JPEG scheme.</span></span> <span data-ttu-id="7fb6d-175">通过 Web 浏览器显示的 JFIF 文件使用.jpg 扩展名。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-175">JFIF files displayed by Web browsers use the .jpg extension.</span></span>  
   
-### 可交换图像文件 \(EXIF\)  
- EXIF 是一种适用于数码相机拍摄的照片的文件格式。  EXIF 文件中含有根据 JPEG 规格压缩的图像。  EXIF 文件中还包含了有关照片的信息（拍摄日期、快门速度、曝光时间，等等）和相机信息（制造商、型号，等等）。  
+### <a name="exchangeable-image-file-exif"></a><span data-ttu-id="7fb6d-176">可交换图像文件 (EXIF)</span><span class="sxs-lookup"><span data-stu-id="7fb6d-176">Exchangeable Image File (EXIF)</span></span>  
+ <span data-ttu-id="7fb6d-177">EXIF 是一种文件格式，用于捕获数字摄像头的照片。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-177">EXIF is a file format used for photographs captured by digital cameras.</span></span> <span data-ttu-id="7fb6d-178">EXIF 文件包含压缩根据 JPEG 规范的映像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-178">An EXIF file contains an image that is compressed according to the JPEG specification.</span></span> <span data-ttu-id="7fb6d-179">EXIF 文件还包含有关照片的信息 （拍摄日期、 停转速度、 暴露时间等） 和有关照相机 （制造商、 型号和等等） 的信息。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-179">An EXIF file also contains information about the photograph (date taken, shutter speed, exposure time, and so on) and information about the camera (manufacturer, model, and so on).</span></span>  
   
-### 可迁移网络图形 \(PNG\)  
- PNG 格式不但保留了许多 GIF 格式的优点，还提供了超出 GIF 的功能。  像 GIF 文件一样，PNG 文件在压缩时也不损失信息。  PNG 文件能以每像素 8、24 或 48 位来存储颜色，并以每像素 1、2、4、8 或 16 位来存储灰度。  相比之下，GIF 文件只能使用每像素 1、2、4 或 8 位。  PNG 文件还可为每个像素存储一个 alpha 值，该值指定了该像素颜色与背景颜色混合的程度。  
+### <a name="portable-network-graphics-png"></a><span data-ttu-id="7fb6d-180">可移植网络图形 (PNG)</span><span class="sxs-lookup"><span data-stu-id="7fb6d-180">Portable Network Graphics (PNG)</span></span>  
+ <span data-ttu-id="7fb6d-181">PNG 格式保留许多 GIF 格式的优点，但还提供除 GIF 之外的功能。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-181">The PNG format retains many of the advantages of the GIF format but also provides capabilities beyond those of GIF.</span></span> <span data-ttu-id="7fb6d-182">GIF 文件，如 PNG 文件被压缩且不会丢失的信息。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-182">Like GIF files, PNG files are compressed with no loss of information.</span></span> <span data-ttu-id="7fb6d-183">PNG 文件可以存储 8、 24 个，或 48 位 / 像素和灰度与 1、 2、 4、 8 或 16 位 / 像素的颜色。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-183">PNG files can store colors with 8, 24, or 48 bits per pixel and grayscales with 1, 2, 4, 8, or 16 bits per pixel.</span></span> <span data-ttu-id="7fb6d-184">与此相反，GIF 文件可以使用仅为 1、 2、 4 或 8 位 / 像素。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-184">In contrast, GIF files can use only 1, 2, 4, or 8 bits per pixel.</span></span> <span data-ttu-id="7fb6d-185">PNG 文件还可以存储每个像素，指定该像素的颜色混合使用背景色的程度的 alpha 值。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-185">A PNG file can also store an alpha value for each pixel, which specifies the degree to which the color of that pixel is blended with the background color.</span></span>  
   
- PNG 优于 GIF 之处在于，它能渐进地显示一幅图像（也就是说，在图像通过网络连接传递的过程中，显示的图像将越来越完整）。  PNG 文件可包含灰度校正和颜色校正信息，以便图像可在各种各样的显示设备上精确地呈现。  
+ <span data-ttu-id="7fb6d-186">PNG 优于 GIF 渐进式内显示图像的能力 （即，因为它显示的图像的更好并更好地近似值到达通过网络连接）。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-186">PNG improves on GIF in its ability to progressively display an image (that is, to display better and better approximations of the image as it arrives over a network connection).</span></span> <span data-ttu-id="7fb6d-187">PNG 文件可以包含伽玛校正和颜色更正信息，因此，可以显示设备的各种上精确地呈现图像。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-187">PNG files can contain gamma correction and color correction information so that the images can be accurately rendered on a variety of display devices.</span></span>  
   
-### 标签图像文件格式 \(TIFF\)  
- TIFF 是一种灵活的和可扩展的格式，各种各样的平台和图像处理应用程序都支持这种格式。  TIFF 文件能以每像素任意位来存储图像，并可以使用各种各样的压缩算法。  单个的多页 TIFF 文件可以存储数幅图像。  可以把与图像相关的信息（扫描仪制造商、主机、压缩类型、打印方向和每像素采样，等等）存储在文件中并使用标签来排列这些信息。  可以根据需要通过批准和添加新标签来扩展 TIFF 格式。  
+### <a name="tag-image-file-format-tiff"></a><span data-ttu-id="7fb6d-188">Tag 图像文件格式 (TIFF)</span><span class="sxs-lookup"><span data-stu-id="7fb6d-188">Tag Image File Format (TIFF)</span></span>  
+ <span data-ttu-id="7fb6d-189">TIFF 是一种灵活且可扩展的格式，支持通过各种平台和图像处理应用程序。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-189">TIFF is a flexible and extendable format that is supported by a wide variety of platforms and image-processing applications.</span></span> <span data-ttu-id="7fb6d-190">TIFF 文件可以存储使用任意数目的每像素位数为映像，可以使用各种压缩算法。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-190">TIFF files can store images with an arbitrary number of bits per pixel and can employ a variety of compression algorithms.</span></span> <span data-ttu-id="7fb6d-191">多个映像可以存储在单个，多个页的 TIFF 文件。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-191">Several images can be stored in a single, multiple-page TIFF file.</span></span> <span data-ttu-id="7fb6d-192">与映像 （扫描仪制造商、 主机、 压缩、 方向、 每个像素，等的样本的类型） 相关的信息可以存储在文件中，并使用标签来排列。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-192">Information related to the image (scanner make, host computer, type of compression, orientation, samples per pixel, and so on) can be stored in the file and arranged through the use of tags.</span></span> <span data-ttu-id="7fb6d-193">可以扩展 TIFF 格式，根据需要由批准和添加新标签。</span><span class="sxs-lookup"><span data-stu-id="7fb6d-193">The TIFF format can be extended as needed by the approval and addition of new tags.</span></span>  
   
-## 请参阅  
- <xref:System.Drawing.Image?displayProperty=fullName>   
- <xref:System.Drawing.Bitmap?displayProperty=fullName>   
- <xref:System.Drawing.Imaging.PixelFormat?displayProperty=fullName>   
- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="7fb6d-194">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7fb6d-194">See Also</span></span>  
+ <xref:System.Drawing.Image?displayProperty=nameWithType>  
+ <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
+ <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  
+ [<span data-ttu-id="7fb6d-195">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="7fb6d-195">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="7fb6d-196">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="7fb6d-196">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

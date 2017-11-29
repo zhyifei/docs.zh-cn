@@ -1,35 +1,34 @@
 ---
-title: "Group Join 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join 子句"
-  - "Group Join 语句"
-  - "查询 [Visual Basic], Group Join"
+title: "Group Join 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Group Join 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-将两个集合组合为单个分层集合。  联接运算基于匹配的键。  
+# <a name="group-join-clause-visual-basic"></a><span data-ttu-id="73206-102">Group Join 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73206-102">Group Join Clause (Visual Basic)</span></span>
+<span data-ttu-id="73206-103">将两个集合合并为单个分层集合。</span><span class="sxs-lookup"><span data-stu-id="73206-103">Combines two collections into a single hierarchical collection.</span></span> <span data-ttu-id="73206-104">联接操作基于匹配键对。</span><span class="sxs-lookup"><span data-stu-id="73206-104">The join operation is based on matching keys.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="73206-105">语法</span><span class="sxs-lookup"><span data-stu-id="73206-105">Syntax</span></span>  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="73206-106">部件</span><span class="sxs-lookup"><span data-stu-id="73206-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`element`|必选。  要联接的集合的控制变量。|  
-|`type`|可选。  `element` 的类型。  如果不指定 `type`，则从 `collection` 推断 `element` 的类型。|  
-|`collection`|必选。  要与 `Group Join` 运算符左侧的集合组合的集合。  `Group Join` 子句可以嵌套在 `Join` 子句或另一个 `Group Join` 子句中。|  
-|`key1` `Equals` `key2`|必选。  标识要联接的集合的键。  必须使用 `Equals` 运算符来比较要联接的集合的键。  您可以使用 `And` 运算符标识多个键，从而组合联接条件。  `key1` 参数必须来自于 `Join` 运算符左侧的集合。  `key2` 参数必须来自于 `Join` 运算符右侧的集合。<br /><br /> 在联接条件中使用的键可以是包含集合中的多个项的表达式。  不过，每个键表达式只能包含其各自集合中的项。|  
-|`expressionList`|必选。  一个或多个表达式，标识对集合中的元素组进行聚合的方式。  若要为分组结果标识一个成员名称，可使用 `Group` 关键字 \(`<alias> = Group`\)。  还可以包含要应用于组的聚合函数。|  
+|<span data-ttu-id="73206-107">术语</span><span class="sxs-lookup"><span data-stu-id="73206-107">Term</span></span>|<span data-ttu-id="73206-108">定义</span><span class="sxs-lookup"><span data-stu-id="73206-108">Definition</span></span>|  
+|---|---|  
+|`element`|<span data-ttu-id="73206-109">必需。</span><span class="sxs-lookup"><span data-stu-id="73206-109">Required.</span></span> <span data-ttu-id="73206-110">一个被联接集合控制变量。</span><span class="sxs-lookup"><span data-stu-id="73206-110">The control variable for the collection being joined.</span></span>|  
+|`type`|<span data-ttu-id="73206-111">可选。</span><span class="sxs-lookup"><span data-stu-id="73206-111">Optional.</span></span> <span data-ttu-id="73206-112">`element` 的类型。</span><span class="sxs-lookup"><span data-stu-id="73206-112">The type of `element`.</span></span> <span data-ttu-id="73206-113">如果没有`type`指定的一种`element`从推断`collection`。</span><span class="sxs-lookup"><span data-stu-id="73206-113">If no `type` is specified, the type of `element` is inferred from `collection`.</span></span>|  
+|`collection`|<span data-ttu-id="73206-114">必需。</span><span class="sxs-lookup"><span data-stu-id="73206-114">Required.</span></span> <span data-ttu-id="73206-115">集合以与位于左侧的内容的集合进行组合`Group Join`运算符。</span><span class="sxs-lookup"><span data-stu-id="73206-115">The collection to combine with the collection that is on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="73206-116">A`Group Join`子句可以嵌套在`Join`子句或另一个`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="73206-116">A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.</span></span>|  
+|<span data-ttu-id="73206-117">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="73206-117">`key1` `Equals` `key2`</span></span>|<span data-ttu-id="73206-118">必需。</span><span class="sxs-lookup"><span data-stu-id="73206-118">Required.</span></span> <span data-ttu-id="73206-119">标识被联接集合的键。</span><span class="sxs-lookup"><span data-stu-id="73206-119">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="73206-120">必须使用`Equals`运算符从被联接集合的键进行比较。</span><span class="sxs-lookup"><span data-stu-id="73206-120">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="73206-121">你可以通过使用组合联接条件`And`运算符来标识多个密钥。</span><span class="sxs-lookup"><span data-stu-id="73206-121">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="73206-122">`key1`参数必须是从左侧的内容的集合`Join`运算符。</span><span class="sxs-lookup"><span data-stu-id="73206-122">The `key1` parameter must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="73206-123">`key2`参数必须是从右侧的集合`Join`运算符。</span><span class="sxs-lookup"><span data-stu-id="73206-123">The `key2` parameter must be from the collection on the right side of the `Join` operator.</span></span><br /><br /> <span data-ttu-id="73206-124">联接条件中使用的密钥可以是包含集合中的多个项的表达式。</span><span class="sxs-lookup"><span data-stu-id="73206-124">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="73206-125">但是，每个键的表达式可以包含仅其各自的集合中的项。</span><span class="sxs-lookup"><span data-stu-id="73206-125">However, each key expression can contain only items from its respective collection.</span></span>|  
+|`expressionList`|<span data-ttu-id="73206-126">必需。</span><span class="sxs-lookup"><span data-stu-id="73206-126">Required.</span></span> <span data-ttu-id="73206-127">标识如何聚合该集合中元素的组的一个或多个表达式。</span><span class="sxs-lookup"><span data-stu-id="73206-127">One or more expressions that identify how the groups of elements from the collection are aggregated.</span></span> <span data-ttu-id="73206-128">若要标识分组结果的成员名称，使用`Group`关键字 (`<alias> = Group`)。</span><span class="sxs-lookup"><span data-stu-id="73206-128">To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`).</span></span> <span data-ttu-id="73206-129">还可以包含聚合函数以将其应用于该组。</span><span class="sxs-lookup"><span data-stu-id="73206-129">You can also include aggregate functions to apply to the group.</span></span>|  
   
-## 备注  
- `Group Join` 子句基于要联接的集合中的匹配键值组合两个集合。  产生的集合可以包含一个如下所述的成员：该成员引用由第二个集合中的元素组成的集合，这些元素与第一个集合中的键值相匹配。  您还可以指定要应用到第二个集合中的分组元素的聚合函数。  有关聚合函数的信息，请参见 [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
+## <a name="remarks"></a><span data-ttu-id="73206-130">备注</span><span class="sxs-lookup"><span data-stu-id="73206-130">Remarks</span></span>  
+ <span data-ttu-id="73206-131">`Group Join`子句将基于匹配被联接集合中的键值对的两个集合合并。</span><span class="sxs-lookup"><span data-stu-id="73206-131">The `Group Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="73206-132">生成的集合可以包含从第二个匹配从第一个集合的密钥值的集合引用的元素集合的成员。</span><span class="sxs-lookup"><span data-stu-id="73206-132">The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection.</span></span> <span data-ttu-id="73206-133">你还可以指定要应用到分组元素从第二个集合的聚合函数。</span><span class="sxs-lookup"><span data-stu-id="73206-133">You can also specify aggregate functions to apply to the grouped elements from the second collection.</span></span> <span data-ttu-id="73206-134">有关聚合函数的信息，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="73206-134">For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- 例如，请考虑一个经理集合和一个雇员集合。  这两个集合的元素都具有一个 ManagerID 属性，用于标识向特定经理汇报的雇员。  联接运算的结果将包含具有匹配 ManagerID 值的每个经理和雇员所对应的结果。  `Group Join` 运算的结果将包含完整的经理列表。  每个经理结果都将包含一个成员，该成员引用与特定经理匹配的雇员的列表。  
+ <span data-ttu-id="73206-135">例如，考虑，经理的集合和员工的集合。</span><span class="sxs-lookup"><span data-stu-id="73206-135">Consider, for example, a collection of managers and a collection of employees.</span></span> <span data-ttu-id="73206-136">从这两个集合的元素具有标识向特定的经理报告的员工的 ManagerID 属性。</span><span class="sxs-lookup"><span data-stu-id="73206-136">Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager.</span></span> <span data-ttu-id="73206-137">联接运算的结果将包含针对每个经理和员工具有匹配 ManagerID 值的结果。</span><span class="sxs-lookup"><span data-stu-id="73206-137">The results from a join operation would contain a result for each manager and employee with a matching ManagerID value.</span></span> <span data-ttu-id="73206-138">从结果`Group Join`操作将包含管理器的完整列表。</span><span class="sxs-lookup"><span data-stu-id="73206-138">The results from a `Group Join` operation would contain the complete list of managers.</span></span> <span data-ttu-id="73206-139">每个管理器结果都将包含引用的是特定的管理器的匹配项的员工列表的成员。</span><span class="sxs-lookup"><span data-stu-id="73206-139">Each manager result would have a member that referenced the list of employees that were a match for the specific manager.</span></span>  
   
- `Group Join` 运算产生的集合可以包含来自 `From` 子句中标识的集合以及 `Group Join` 子句的 `Into` 子句中标识的表达式的值的任意组合。  有关 `Into` 子句的有效表达式的更多信息，请参见 [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
+ <span data-ttu-id="73206-140">产生的集合`Group Join`操作可以包含值从集合中标识的任意组合`From`子句和中标识的表达式`Into`子句`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="73206-140">The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause.</span></span> <span data-ttu-id="73206-141">有关有效表达式的详细信息`Into`子句，请参阅[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="73206-141">For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- `Group Join` 运算将返回 `Group Join` 运算符左侧标识的集合中的所有结果。  即使要联接的集合中没有匹配项，也是如此。  这与 SQL 中的 `LEFT OUTER JOIN` 类似。  
+ <span data-ttu-id="73206-142">A`Group Join`操作将从左侧的标识的集合中返回所有结果`Group Join`运算符。</span><span class="sxs-lookup"><span data-stu-id="73206-142">A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="73206-143">即使有一个被联接集合中的没有匹配项，也是如此。</span><span class="sxs-lookup"><span data-stu-id="73206-143">This is true even if there are no matches in the collection being joined.</span></span> <span data-ttu-id="73206-144">这就像`LEFT OUTER JOIN`SQL 中。</span><span class="sxs-lookup"><span data-stu-id="73206-144">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
   
- 可以使用 `Join` 子句将两个集合组合为单个集合。  这等效于 SQL 中的 `INNER JOIN`。  
+ <span data-ttu-id="73206-145">你可以使用`Join`子句来组合成单个集合的集合。</span><span class="sxs-lookup"><span data-stu-id="73206-145">You can use the `Join` clause to combine collections into a single collection.</span></span> <span data-ttu-id="73206-146">这相当于`INNER JOIN`SQL 中。</span><span class="sxs-lookup"><span data-stu-id="73206-146">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
   
-## 示例  
- 下面的代码示例使用 `Group Join` 子句联接两个集合。  
+## <a name="example"></a><span data-ttu-id="73206-147">示例</span><span class="sxs-lookup"><span data-stu-id="73206-147">Example</span></span>  
+ <span data-ttu-id="73206-148">下面的代码示例通过使用联接两个集合`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="73206-148">The following code example joins two collections by using the `Group Join` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a><span data-ttu-id="73206-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="73206-149">See Also</span></span>  
+ [<span data-ttu-id="73206-150">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="73206-150">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="73206-151">查询</span><span class="sxs-lookup"><span data-stu-id="73206-151">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="73206-152">Select 子句</span><span class="sxs-lookup"><span data-stu-id="73206-152">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="73206-153">From 子句</span><span class="sxs-lookup"><span data-stu-id="73206-153">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="73206-154">Join 子句</span><span class="sxs-lookup"><span data-stu-id="73206-154">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="73206-155">Where 子句</span><span class="sxs-lookup"><span data-stu-id="73206-155">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="73206-156">Group By 子句</span><span class="sxs-lookup"><span data-stu-id="73206-156">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)

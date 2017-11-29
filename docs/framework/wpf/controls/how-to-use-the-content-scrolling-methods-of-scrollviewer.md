@@ -1,38 +1,44 @@
 ---
-title: "如何：使用 ScrollViewer 的内容滚动方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IScrollInfo 接口"
-  - "滚动方法"
-  - "ScrollViewer 控件, 滚动方法"
+title: "如何：使用 ScrollViewer 的内容滚动方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- IScrollInfo interface [WPF]
+- scrolling methods [WPF]
+- ScrollViewer control [WPF], scrolling methods
 ms.assetid: 4708cc65-6510-45f8-82e6-30b0d3e30045
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc9b79ae9b8078bbdc4c41fb0c952237f86fcac8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 ScrollViewer 的内容滚动方法
-本示例演示如何使用 <xref:System.Windows.Controls.ScrollViewer> 元素的滚动方法。  这些方法在 <xref:System.Windows.Controls.ScrollViewer> 中以行或页为单位提供内容的递增滚动。  
+# <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a><span data-ttu-id="585e8-102">如何：使用 ScrollViewer 的内容滚动方法</span><span class="sxs-lookup"><span data-stu-id="585e8-102">How to: Use the Content-Scrolling Methods of ScrollViewer</span></span>
+<span data-ttu-id="585e8-103">此示例演示如何使用的滚动方法<xref:System.Windows.Controls.ScrollViewer>元素。</span><span class="sxs-lookup"><span data-stu-id="585e8-103">This example shows how to use the scrolling methods of the <xref:System.Windows.Controls.ScrollViewer> element.</span></span> <span data-ttu-id="585e8-104">这些方法提供了增量滚动的内容，行或页上，在<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="585e8-104">These methods provide incremental scrolling of content, either by line or by page, in a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
-## 示例  
- 下面的示例创建名为 `sv1` 的 <xref:System.Windows.Controls.ScrollViewer>，用于承载子 <xref:System.Windows.Controls.TextBlock> 元素。  由于 <xref:System.Windows.Controls.TextBlock> 大于父 <xref:System.Windows.Controls.ScrollViewer>，因此将显示滚动条以启用滚动。  代表各种滚动方法的 <xref:System.Windows.Controls.Button> 元素停靠在一个单独的 <xref:System.Windows.Controls.StackPanel> 的左侧。  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件中的每个 <xref:System.Windows.Controls.Button> 调用一个相关的自定义方法，该方法控制 <xref:System.Windows.Controls.ScrollViewer> 中的滚动行为。  
+## <a name="example"></a><span data-ttu-id="585e8-105">示例</span><span class="sxs-lookup"><span data-stu-id="585e8-105">Example</span></span>  
+ <span data-ttu-id="585e8-106">下面的示例创建<xref:System.Windows.Controls.ScrollViewer>名为`sv1`，它承载子<xref:System.Windows.Controls.TextBlock>元素。</span><span class="sxs-lookup"><span data-stu-id="585e8-106">The following example creates a <xref:System.Windows.Controls.ScrollViewer> named `sv1`, which hosts a child <xref:System.Windows.Controls.TextBlock> element.</span></span> <span data-ttu-id="585e8-107">因为<xref:System.Windows.Controls.TextBlock>大于父级<xref:System.Windows.Controls.ScrollViewer>，为了能够滚动显示滚动条。</span><span class="sxs-lookup"><span data-stu-id="585e8-107">Because the <xref:System.Windows.Controls.TextBlock> is larger than the parent <xref:System.Windows.Controls.ScrollViewer>, scroll bars appear in order to enable scrolling.</span></span> <span data-ttu-id="585e8-108"><xref:System.Windows.Controls.Button>其元素表示各种滚动方法停靠在单独的左侧<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="585e8-108"><xref:System.Windows.Controls.Button> elements that represent the various scrolling methods are docked on the left in a separate <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="585e8-109">每个<xref:System.Windows.Controls.Button>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件调用控制滚动行为中的相关自定义方法<xref:System.Windows.Controls.ScrollViewer>。</span><span class="sxs-lookup"><span data-stu-id="585e8-109">Each <xref:System.Windows.Controls.Button> in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file calls a related custom method that controls scrolling behavior in <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
- [!code-xml[ScrollViewerMethods#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewerMethods/CSharp/Window1.xaml#1)]  
+ [!code-xaml[ScrollViewerMethods#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewerMethods/CSharp/Window1.xaml#1)]  
   
- 下面的示例使用 <xref:System.Windows.Controls.ScrollViewer.LineUp%2A> 和 <xref:System.Windows.Controls.ScrollViewer.LineDown%2A> 方法。  
+ <span data-ttu-id="585e8-110">下面的示例使用<xref:System.Windows.Controls.ScrollViewer.LineUp%2A>和<xref:System.Windows.Controls.ScrollViewer.LineDown%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="585e8-110">The following example uses the <xref:System.Windows.Controls.ScrollViewer.LineUp%2A> and <xref:System.Windows.Controls.ScrollViewer.LineDown%2A> methods.</span></span>  
   
  [!code-csharp[ScrollViewerMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewerMethods/CSharp/Window1.xaml.cs#2)]
  [!code-vb[ScrollViewerMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewerMethods/VisualBasic/Window1.xaml.vb#2)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.ScrollViewer>   
+## <a name="see-also"></a><span data-ttu-id="585e8-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="585e8-111">See Also</span></span>  
+ <xref:System.Windows.Controls.ScrollViewer>  
  <xref:System.Windows.Controls.StackPanel>

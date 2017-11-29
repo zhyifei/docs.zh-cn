@@ -1,45 +1,49 @@
 ---
-title: "114 - WorkflowInstanceRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 114 - WorkflowInstanceRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2bd8b4a1-b210-4c07-8156-f19392318c08
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 57eab386e8d0486caa98a6e2f3d2f72e9e89fab7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 114 - WorkflowInstanceRecordWithId
-## 属性  
+# <a name="114---workflowinstancerecordwithid"></a><span data-ttu-id="3a86f-102">114 - WorkflowInstanceRecordWithId</span><span class="sxs-lookup"><span data-stu-id="3a86f-102">114 - WorkflowInstanceRecordWithId</span></span>
+## <a name="properties"></a><span data-ttu-id="3a86f-103">属性</span><span class="sxs-lookup"><span data-stu-id="3a86f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|114|  
-|关键字|HealthMonitoring，WFTracking|  
-|级别|信息|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="3a86f-104">ID</span><span class="sxs-lookup"><span data-stu-id="3a86f-104">ID</span></span>|<span data-ttu-id="3a86f-105">114</span><span class="sxs-lookup"><span data-stu-id="3a86f-105">114</span></span>|  
+|<span data-ttu-id="3a86f-106">关键字</span><span class="sxs-lookup"><span data-stu-id="3a86f-106">Keywords</span></span>|<span data-ttu-id="3a86f-107">HealthMonitoring、WFTracking</span><span class="sxs-lookup"><span data-stu-id="3a86f-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="3a86f-108">级别</span><span class="sxs-lookup"><span data-stu-id="3a86f-108">Level</span></span>|<span data-ttu-id="3a86f-109">信息</span><span class="sxs-lookup"><span data-stu-id="3a86f-109">Information</span></span>|  
+|<span data-ttu-id="3a86f-110">通道</span><span class="sxs-lookup"><span data-stu-id="3a86f-110">Channel</span></span>|<span data-ttu-id="3a86f-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="3a86f-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 说明  
- 工作流实例发出以下工作流状态的 WorkflowInstanceRecord 时，ETW 跟踪参与者将发出此事件：已启动、已继续、已持久保存、空闲、已删除、已完成、已取消、已卸载和已取消挂起。  
+## <a name="description"></a><span data-ttu-id="3a86f-112">描述</span><span class="sxs-lookup"><span data-stu-id="3a86f-112">Description</span></span>  
+ <span data-ttu-id="3a86f-113">工作流实例发出以下工作流状态的 WorkflowInstanceRecord 时，ETW 跟踪参与者将发出此事件：已启动、已继续、已持久保存、空闲、已删除、已完成、已取消、已卸载和已取消挂起。</span><span class="sxs-lookup"><span data-stu-id="3a86f-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceRecord for workflow states : Started, Resumed, Persisted, Idle, Deleted, Completed, Canceled, Unloaded, Unsuspended.</span></span>  
   
-## 消息  
- TrackRecord\= WorkflowInstanceRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, State \= %5, Annotations \= %6, ProfileName \= %7, WorkflowDefinitionIdentity \= %8  
+## <a name="message"></a><span data-ttu-id="3a86f-114">消息</span><span class="sxs-lookup"><span data-stu-id="3a86f-114">Message</span></span>  
+ <span data-ttu-id="3a86f-115">TrackRecord= WorkflowInstanceRecord，InstanceID = %1，RecordNumber = %2，EventTime = %3，ActivityDefinitionId = %4，State = %5，Annotations = %6， ProfileName = %7，WorkflowDefinitionIdentity = %8</span><span class="sxs-lookup"><span data-stu-id="3a86f-115">TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8</span></span>  
   
-## 详细信息  
+## <a name="details"></a><span data-ttu-id="3a86f-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="3a86f-116">Details</span></span>  
   
-|数据项名称|数据项类型|说明|  
-|-----------|-----------|--------|  
-|InstanceId|xs:GUID|工作流的实例 ID|  
-|RecordNumber|xs:long|发出的记录的序列号|  
-|EventTime|xs:dateTime|发出该事件时的 UTC 时间|  
-|ActivityDefinitionId|xs:string|工作流中根活动的名称|  
-|State|xs:string|工作流的当前状态。|  
-|Annotations|xs:string|已添加到此事件中的批注。这些值存储在一个 xml 元素中，格式为 \<items\>\<\> item name \= "annotationName" type\="System.String"\<annotationValue\>\<\/item\>\/items。如果未指定任何批注，则该字符串包含 \<items\/\>。ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。如果事件的大小超出 ETW 限制，则通过丢弃批注并将批注值替换为 \<items\>...\<\/items\> 来截断事件。|  
-|ProfileName|xs:string|导致发出此事件的跟踪配置文件的名称|  
-|WorkflowDefinitionIdentity|xs:string|工作流定义 id。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|<span data-ttu-id="3a86f-117">数据项名称</span><span class="sxs-lookup"><span data-stu-id="3a86f-117">Data Item Name</span></span>|<span data-ttu-id="3a86f-118">数据项类型</span><span class="sxs-lookup"><span data-stu-id="3a86f-118">Data Item Type</span></span>|<span data-ttu-id="3a86f-119">描述</span><span class="sxs-lookup"><span data-stu-id="3a86f-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="3a86f-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="3a86f-120">InstanceId</span></span>|<span data-ttu-id="3a86f-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="3a86f-121">xs:GUID</span></span>|<span data-ttu-id="3a86f-122">工作流的实例 ID</span><span class="sxs-lookup"><span data-stu-id="3a86f-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="3a86f-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="3a86f-123">RecordNumber</span></span>|<span data-ttu-id="3a86f-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="3a86f-124">xs:long</span></span>|<span data-ttu-id="3a86f-125">发出的记录的序列号</span><span class="sxs-lookup"><span data-stu-id="3a86f-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="3a86f-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="3a86f-126">EventTime</span></span>|<span data-ttu-id="3a86f-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="3a86f-127">xs:dateTime</span></span>|<span data-ttu-id="3a86f-128">发出该事件时的 UTC 时间</span><span class="sxs-lookup"><span data-stu-id="3a86f-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="3a86f-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="3a86f-129">ActivityDefinitionId</span></span>|<span data-ttu-id="3a86f-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-130">xs:string</span></span>|<span data-ttu-id="3a86f-131">工作流中根活动的名称</span><span class="sxs-lookup"><span data-stu-id="3a86f-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="3a86f-132">状态</span><span class="sxs-lookup"><span data-stu-id="3a86f-132">State</span></span>|<span data-ttu-id="3a86f-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-133">xs:string</span></span>|<span data-ttu-id="3a86f-134">工作流的当前状态。</span><span class="sxs-lookup"><span data-stu-id="3a86f-134">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="3a86f-135">批注</span><span class="sxs-lookup"><span data-stu-id="3a86f-135">Annotations</span></span>|<span data-ttu-id="3a86f-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-136">xs:string</span></span>|<span data-ttu-id="3a86f-137">已添加到此事件中的批注。</span><span class="sxs-lookup"><span data-stu-id="3a86f-137">The annotations that were added to this event.</span></span> <span data-ttu-id="3a86f-138">这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="annotationName"type ="> annotationValue\</项 > \< /i >。</span><span class="sxs-lookup"><span data-stu-id="3a86f-138">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="3a86f-139">如果不指定任何批注，则该字符串包含\<项 / >。</span><span class="sxs-lookup"><span data-stu-id="3a86f-139">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="3a86f-140">ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。</span><span class="sxs-lookup"><span data-stu-id="3a86f-140">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="3a86f-141">如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。</span><span class="sxs-lookup"><span data-stu-id="3a86f-141">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="3a86f-142">ProfileName</span><span class="sxs-lookup"><span data-stu-id="3a86f-142">ProfileName</span></span>|<span data-ttu-id="3a86f-143">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-143">xs:string</span></span>|<span data-ttu-id="3a86f-144">导致发出此事件的跟踪配置文件的名称</span><span class="sxs-lookup"><span data-stu-id="3a86f-144">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="3a86f-145">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="3a86f-145">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="3a86f-146">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-146">xs:string</span></span>|<span data-ttu-id="3a86f-147">工作流定义 ID</span><span class="sxs-lookup"><span data-stu-id="3a86f-147">The workflow definition id</span></span>|  
+|<span data-ttu-id="3a86f-148">AppDomain</span><span class="sxs-lookup"><span data-stu-id="3a86f-148">AppDomain</span></span>|<span data-ttu-id="3a86f-149">xs:string</span><span class="sxs-lookup"><span data-stu-id="3a86f-149">xs:string</span></span>|<span data-ttu-id="3a86f-150">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="3a86f-150">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

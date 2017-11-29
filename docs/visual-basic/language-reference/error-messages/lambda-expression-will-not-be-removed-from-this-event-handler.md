@@ -1,47 +1,29 @@
 ---
-title: "不会从此事件处理程序移除 lambda 表达式 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "将不会从此事件处理程序中移除 Lambda 表达式"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42326
 - vbc42326
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC42326
+helpviewer_keywords: BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1a4c57d1f8f41d2d9ebb645d3f2628c32a2c4e4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>将不会从此事件处理程序中移除 Lambda 表达式
-Lambda 表达式将不会从此事件处理程序中删除。 将 lambda 表达式分配给一个变量，并使用该变量可以添加和删除该事件。  
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="05d79-102">将不会从此事件处理程序中移除 Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="05d79-102">Lambda expression will not be removed from this event handler</span></span>
+<span data-ttu-id="05d79-103">Lambda 表达式不会从此事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="05d79-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="05d79-104">将 lambda 表达式分配给变量并将该变量添加和删除事件。</span><span class="sxs-lookup"><span data-stu-id="05d79-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
   
- 当事件处理程序中使用 lambda 表达式时，可能无法看到所需的行为。 即使相同，则编译器将生成的每个 lambda 表达式定义，一个新方法。 因此，下面的代码显示`False`。  
+ <span data-ttu-id="05d79-105">当与事件处理程序使用 lambda 表达式时，你可能无法看到你预期的行为。</span><span class="sxs-lookup"><span data-stu-id="05d79-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="05d79-106">即使它们是相同，编译器将生成每个 lambda 表达式定义中，一个新方法。</span><span class="sxs-lookup"><span data-stu-id="05d79-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="05d79-107">因此，下面的代码显示`False`。</span><span class="sxs-lookup"><span data-stu-id="05d79-107">Therefore, the following code displays `False`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -57,7 +39,7 @@ Module Module1
 End Module  
 ```  
   
- 当事件处理程序中使用 lambda 表达式时，这可能导致意外的结果。 在下面的示例中，lambda 表达式添加`AddHandler`并不删除`RemoveHandler`语句。  
+ <span data-ttu-id="05d79-108">当与事件处理程序使用 lambda 表达式时，这可能导致意外的结果。</span><span class="sxs-lookup"><span data-stu-id="05d79-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="05d79-109">在下面的示例中，lambda 表达式添加`AddHandler`并不能消除`RemoveHandler`语句。</span><span class="sxs-lookup"><span data-stu-id="05d79-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
   
 ```vb  
 Module Module1  
@@ -78,13 +60,13 @@ Module Module1
 End Module  
 ```  
   
- 默认情况下，此消息是一个警告。 有关如何隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中配置警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ <span data-ttu-id="05d79-110">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="05d79-110">By default, this message is a warning.</span></span> <span data-ttu-id="05d79-111">有关如何隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="05d79-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **错误 ID:** BC42326  
+ <span data-ttu-id="05d79-112">**错误 ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="05d79-112">**Error ID:** BC42326</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="05d79-113">更正此错误</span><span class="sxs-lookup"><span data-stu-id="05d79-113">To correct this error</span></span>  
   
--   为了避免此警告，并移除 lambda 表达式，将 lambda 表达式分配给一个变量，并在使用该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。  
+-   <span data-ttu-id="05d79-114">若要避免此警告，并删除该 lambda 表达式，分配给一个变量的 lambda 表达式，并在将该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="05d79-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
   
 ```vb  
 Module Module1  
@@ -108,7 +90,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [宽松的委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="05d79-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="05d79-115">See Also</span></span>  
+ [<span data-ttu-id="05d79-116">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="05d79-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [<span data-ttu-id="05d79-117">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="05d79-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [<span data-ttu-id="05d79-118">事件</span><span class="sxs-lookup"><span data-stu-id="05d79-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

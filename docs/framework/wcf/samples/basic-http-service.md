@@ -1,54 +1,57 @@
 ---
-title: "基本 HTTP 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "基本 HTTP 服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cf4d40bce37dea65f2a27421de736779e467e728
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 基本 HTTP 服务
-此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 编程模型实现基于 HTTP 和基于 RPC 的服务，该服务一般称为“POX”（纯旧式 XML）服务。此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 \(Service.cs\) 和一个创建服务并对该服务进行调用的控制台应用程序 \(Program.cs\)。  
+# <a name="basic-http-service"></a><span data-ttu-id="d77a0-102">基本 HTTP 服务</span><span class="sxs-lookup"><span data-stu-id="d77a0-102">Basic HTTP Service</span></span>
+<span data-ttu-id="d77a0-103">此示例演示如何实现基于 HTTP 的、 基于 RPC 的服务 （一般称为"POX"(Plain Old XML) 服务） 使用[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]REST 编程模型。</span><span class="sxs-lookup"><span data-stu-id="d77a0-103">This sample demonstrates how to implement an HTTP-based, RPC-based service - popularly referred to as "POX" (Plain Old XML) service – using the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST Programming model.</span></span> <span data-ttu-id="d77a0-104">此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (Program.cs)。</span><span class="sxs-lookup"><span data-stu-id="d77a0-104">This sample consists of two components: a self-hosted [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP service (Service.cs) and a console application (Program.cs) that creates the service and makes calls to it.</span></span>  
   
-## 示例详细信息  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务公开 2 个操作：`EchoWithGet` 和 `EchoWithPost`，后者返回作为输入传递的字符串。  
+## <a name="sample-details"></a><span data-ttu-id="d77a0-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="d77a0-105">Sample Details</span></span>  
+ <span data-ttu-id="d77a0-106">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务公开 2 个操作：`EchoWithGet` 和 `EchoWithPost`，后者返回作为输入传递的字符串。</span><span class="sxs-lookup"><span data-stu-id="d77a0-106">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service exposes 2 operations, `EchoWithGet` and `EchoWithPost`, which returns the string that was passed as input.</span></span>  
   
- `EchoWithGet` 操作使用 <xref:System.ServiceModel.Web.WebGetAttribute> 添加批注，后者指示该操作处理 HTTP `GET` 请求。由于 <xref:System.ServiceModel.Web.WebGetAttribute> 不显式指定 <xref:System.UriTemplate>，因此该操作需要使用名称为 `s` 的查询字符串参数来传递输入字符串。请注意，可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> 属性来自定义服务所需的 URI 格式。  
+ <span data-ttu-id="d77a0-107">`EchoWithGet` 操作使用 <xref:System.ServiceModel.Web.WebGetAttribute> 添加批注，后者指示该操作处理 HTTP `GET` 请求。</span><span class="sxs-lookup"><span data-stu-id="d77a0-107">The `EchoWithGet` operation is annotated with <xref:System.ServiceModel.Web.WebGetAttribute>, which indicates that the operation processes HTTP `GET` requests.</span></span> <span data-ttu-id="d77a0-108">由于 <xref:System.ServiceModel.Web.WebGetAttribute> 不显式指定 <xref:System.UriTemplate>，因此该操作需要使用名称为 `s` 的查询字符串参数来传递输入字符串。</span><span class="sxs-lookup"><span data-stu-id="d77a0-108">Because the <xref:System.ServiceModel.Web.WebGetAttribute> does not explicitly specify a <xref:System.UriTemplate>, the operation expects the input string to be passed in using a query string parameter with name `s`.</span></span> <span data-ttu-id="d77a0-109">请注意，可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> 属性来自定义服务所需的 URI 格式。</span><span class="sxs-lookup"><span data-stu-id="d77a0-109">Note that the format of the URI that the service expects can be customized using the <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> property.</span></span>  
   
- `EchoWithPost` 操作使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 添加批注，后者指示该操作不是 `GET` 操作（它具有副作用）。由于 <xref:System.ServiceModel.Web.WebInvokeAttribute> 不显式指定 `Method`，因此该操作处理在请求正文中具有字符串（例如，以 XML 格式）的 HTTP `POST` 请求。请注意，可分别使用 <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> 属性来自定义该请求的 URI 的 HTTP 方法和格式。  
+ <span data-ttu-id="d77a0-110">`EchoWithPost` 操作使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 添加批注，后者指示该操作不是 `GET` 操作（它具有副作用）。</span><span class="sxs-lookup"><span data-stu-id="d77a0-110">The `EchoWithPost` operation is annotated with <xref:System.ServiceModel.Web.WebInvokeAttribute>, which indicates it is not a `GET` operation (it has side effects).</span></span> <span data-ttu-id="d77a0-111">由于 <xref:System.ServiceModel.Web.WebInvokeAttribute> 不显式指定 `Method`，因此该操作处理在请求正文中具有字符串（例如，以 XML 格式）的 HTTP `POST` 请求。</span><span class="sxs-lookup"><span data-stu-id="d77a0-111">Because the <xref:System.ServiceModel.Web.WebInvokeAttribute> does not explicitly specify a `Method`, the operation processes HTTP `POST` requests that have the string in the request body (in the XML format, for instance).</span></span> <span data-ttu-id="d77a0-112">请注意，可分别使用 <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> 属性来自定义该请求的 URI 的 HTTP 方法和格式。</span><span class="sxs-lookup"><span data-stu-id="d77a0-112">Note that the HTTP method and the format of the URI for the request can be customized using the <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> and <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> properties respectively.</span></span>  
   
- App.config 文件使用 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 属性设置为 `true` 的默认 <xref:System.ServiceModel.Description.WebHttpEndpoint> 来配置 WCF 服务。因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构在 `http://localhost:8000/Customers/help` 创建一个基于 HTML 的自动帮助页，该帮助页提供有关如何构造该服务的 HTTP 请求以及如何使用该服务的 HTTP 响应的信息。  
+ <span data-ttu-id="d77a0-113">App.config 文件使用 <xref:System.ServiceModel.Description.WebHttpEndpoint> 属性设置为 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 的默认 `true` 来配置 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="d77a0-113">The App.config file configures the WCF service with a default <xref:System.ServiceModel.Description.WebHttpEndpoint> that has the <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> property set to `true`.</span></span> <span data-ttu-id="d77a0-114">因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构在 `http://localhost:8000/Customers/help` 创建一个基于 HTML 的自动帮助页，该帮助页提供有关如何构造该服务的 HTTP 请求以及如何使用该服务的 HTTP 响应的信息。</span><span class="sxs-lookup"><span data-stu-id="d77a0-114">As a result, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure creates an automatic HTML based help page at `http://localhost:8000/Customers/help` that provides information about how to construct HTTP requests to the service and how to consume the service’s HTTP response.</span></span>  
   
- Program.cs 演示如何将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道工厂用于对服务和进程响应进行调用。请注意，这只是访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的一种方式。还可以使用其他 .NET Framework 类（如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>）来访问该服务。SDK 中的其他示例（如[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例和[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例）演示如何使用这些类与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行通信。  
+ <span data-ttu-id="d77a0-115">Program.cs 演示如何将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道工厂用于对服务和进程响应进行调用。</span><span class="sxs-lookup"><span data-stu-id="d77a0-115">Program.cs demonstrates how a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel factory can be used to make calls to the service and process responses.</span></span> <span data-ttu-id="d77a0-116">请注意，这只是访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的一种方式。</span><span class="sxs-lookup"><span data-stu-id="d77a0-116">Note that this is just one way to access a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="d77a0-117">还可以使用其他 .NET Framework 类（如 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.WebClient>）来访问该服务。</span><span class="sxs-lookup"><span data-stu-id="d77a0-117">It is also possible to access the service using other .NET Framework classes like <xref:System.Net.HttpWebRequest> and <xref:System.Net.WebClient>.</span></span> <span data-ttu-id="d77a0-118">SDK 中的其他示例 (如[自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)示例和[基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)示例) 演示如何使用这些类与通信[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。</span><span class="sxs-lookup"><span data-stu-id="d77a0-118">Other samples in the SDK (such as the [Automatic Format Selection](../../../../docs/framework/wcf/samples/automatic-format-selection.md) sample and [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample) show how to use these classes to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- 此示例包含一个自承载服务和一个客户端，它们都在一个控制台应用程序内运行。在控制台应用程序运行时，客户端会向该服务发出请求，并将响应中的相关信息写入控制台窗口。  
+ <span data-ttu-id="d77a0-119">此示例包含一个自承载服务和一个客户端，它们都在一个控制台应用程序内运行。</span><span class="sxs-lookup"><span data-stu-id="d77a0-119">The sample consists a self-hosted service and a client that both run within a console application.</span></span> <span data-ttu-id="d77a0-120">在控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。</span><span class="sxs-lookup"><span data-stu-id="d77a0-120">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="d77a0-121">使用此示例</span><span class="sxs-lookup"><span data-stu-id="d77a0-121">To use this sample</span></span>  
   
-1.  打开基本 HTTP 服务示例的解决方案。在启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 时，必须以管理员身份运行才能成功执行该示例。通过右击 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 图标并从上下文菜单选择**“以管理员身份运行”**来完成此操作。  
+1.  <span data-ttu-id="d77a0-122">打开基本 HTTP 服务示例的解决方案。</span><span class="sxs-lookup"><span data-stu-id="d77a0-122">Open the solution for the Basic Http Service Sample.</span></span> <span data-ttu-id="d77a0-123">在启动 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 时，必须以管理员身份运行才能成功执行该示例。</span><span class="sxs-lookup"><span data-stu-id="d77a0-123">When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator for the sample to execute successfully.</span></span> <span data-ttu-id="d77a0-124">执行此操作，请右键单击[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]图标并选择**以管理员身份运行**从上下文菜单。</span><span class="sxs-lookup"><span data-stu-id="d77a0-124">Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and selecting **Run as Administrator** from the context menu.</span></span>  
   
-2.  按 Ctrl\+Shilf\+B 生成解决方案，然后按 Ctrl\+F5 运行控制台应用程序而不进行调试。将出现控制台窗口，它提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。在示例运行时，客户端将写入当前活动的状态。  
+2.  <span data-ttu-id="d77a0-125">按 Ctrl+Shilf+B 生成解决方案，然后按 Ctrl+F5 运行控制台应用程序而不进行调试。</span><span class="sxs-lookup"><span data-stu-id="d77a0-125">Press CTRL+SHIFT+B to build the solution and then press Ctrl+F5 to run the console application without debugging.</span></span> <span data-ttu-id="d77a0-126">将出现控制台窗口，它提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。</span><span class="sxs-lookup"><span data-stu-id="d77a0-126">The console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span> <span data-ttu-id="d77a0-127">可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。</span><span class="sxs-lookup"><span data-stu-id="d77a0-127">At any point in time you can view the HTML help page by typing the URI of the help page in a browser.</span></span> <span data-ttu-id="d77a0-128">在示例运行时，客户端将写入当前活动的状态。</span><span class="sxs-lookup"><span data-stu-id="d77a0-128">As the sample runs, the client writes the status of the current activity.</span></span>  
   
-3.  按任意键可终止示例。  
+3.  <span data-ttu-id="d77a0-129">按任何键可终止示例。</span><span class="sxs-lookup"><span data-stu-id="d77a0-129">Press any key to terminate the sample.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="d77a0-130">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="d77a0-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d77a0-131">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="d77a0-131">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  <span data-ttu-id="d77a0-132">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="d77a0-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d77a0-133">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="d77a0-133">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   
-## 请参阅  
- [自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)   
- [基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)
+## <a name="see-also"></a><span data-ttu-id="d77a0-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d77a0-134">See Also</span></span>  
+ [<span data-ttu-id="d77a0-135">自动格式选择</span><span class="sxs-lookup"><span data-stu-id="d77a0-135">Automatic Format Selection</span></span>](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
+ [<span data-ttu-id="d77a0-136">基本资源服务</span><span class="sxs-lookup"><span data-stu-id="d77a0-136">Basic Resource Service</span></span>](../../../../docs/framework/wcf/samples/basic-resource-service.md)

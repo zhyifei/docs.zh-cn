@@ -1,124 +1,107 @@
 ---
-title: "Windows 窗体应用程序基础知识 (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Windows 窗体应用程序基础知识 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8275d3c06ebd89254a07127b4850d32ef0580830
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1c5355f10fba2d1d18bc514c93f31051781bed14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
-一个重要部分[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]是能够创建在用户的计算机本地运行的 Windows 窗体应用程序。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。</xref:System.Windows.Forms>  
+# <a name="windows-forms-application-basics-visual-basic"></a><span data-ttu-id="c706c-102">Windows 窗体应用程序基础知识 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c706c-102">Windows Forms Application Basics (Visual Basic)</span></span>
+<span data-ttu-id="c706c-103">一个重要部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。</span><span class="sxs-lookup"><span data-stu-id="c706c-103">An important part of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] is the ability to create Windows Forms applications that run locally on users' computers.</span></span> <span data-ttu-id="c706c-104">Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。</span><span class="sxs-lookup"><span data-stu-id="c706c-104">You can use Visual Studio to create the application and user interface using Windows Forms.</span></span> <span data-ttu-id="c706c-105">Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。</span><span class="sxs-lookup"><span data-stu-id="c706c-105">A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.</span></span>  
   
-## <a name="designing-windows-forms-applications"></a>设计 Windows 窗体应用程序  
- 您可以创建 Windows 窗体和 Windows 服务应用程序与[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]。 有关详细信息，请参阅下列主题：  
+## <a name="designing-windows-forms-applications"></a><span data-ttu-id="c706c-106">设计 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="c706c-106">Designing Windows Forms Applications</span></span>  
+ <span data-ttu-id="c706c-107">你可以创建 Windows 窗体和 Windows 服务应用程序与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c706c-107">You can create Windows Forms and Windows service applications with [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span> <span data-ttu-id="c706c-108">有关详细信息，请参阅下列主题：</span><span class="sxs-lookup"><span data-stu-id="c706c-108">For more information, see the following topics:</span></span>  
   
--   [Windows 窗体入门](https://msdn.microsoft.com/library/ms229601.aspx)。 提供有关如何创建和编写 Windows 窗体信息。  
+-   <span data-ttu-id="c706c-109">[Windows 窗体入门](https://msdn.microsoft.com/library/ms229601.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c706c-109">[Getting Started with Windows Forms](https://msdn.microsoft.com/library/ms229601.aspx).</span></span> <span data-ttu-id="c706c-110">提供有关如何创建和程序 Windows 窗体的信息。</span><span class="sxs-lookup"><span data-stu-id="c706c-110">Provides information on how to create and program Windows Forms.</span></span>  
    
--   [Windows 窗体控件](https://msdn.microsoft.com/library/ettb6e2a.aspx)。 主题详细介绍使用 Windows 窗体控件的集合。  
+-   <span data-ttu-id="c706c-111">[Windows 窗体控件](https://msdn.microsoft.com/library/ettb6e2a.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c706c-111">[Windows Forms Controls](https://msdn.microsoft.com/library/ettb6e2a.aspx).</span></span> <span data-ttu-id="c706c-112">主题详细说明使用 Windows 窗体控件的集合。</span><span class="sxs-lookup"><span data-stu-id="c706c-112">Collection of topics detailing the use of Windows Forms controls.</span></span>  
   
--   [Windows 服务应用程序](https://msdn.microsoft.com/library/y817hyb6.aspx)。 列出了这些主题介绍如何创建 Windows 服务。  
+-   <span data-ttu-id="c706c-113">[Windows 服务应用程序](https://msdn.microsoft.com/library/y817hyb6.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c706c-113">[Windows Service Applications](https://msdn.microsoft.com/library/y817hyb6.aspx).</span></span> <span data-ttu-id="c706c-114">说明如何创建 Windows 服务的主题列表。</span><span class="sxs-lookup"><span data-stu-id="c706c-114">Lists topics that explain how to create Windows services.</span></span>  
   
-## <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
- Windows 窗体是智能客户端的组件[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]，一组托管库，可用来读取和写入文件系统等常见应用程序任务。 使用类似的开发环境[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]，您可以通过网络与远程计算机创建 Windows 窗体应用程序显示信息、 请求来自用户的输入以及进行通信。  
+## <a name="building-rich-interactive-user-interfaces"></a><span data-ttu-id="c706c-115">构建丰富的交互式用户界面</span><span class="sxs-lookup"><span data-stu-id="c706c-115">Building Rich, Interactive User Interfaces</span></span>  
+ <span data-ttu-id="c706c-116">Windows 窗体是的智能客户端组件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一组的托管库，使读取和写入文件系统等常见应用程序任务。</span><span class="sxs-lookup"><span data-stu-id="c706c-116">Windows Forms is the smart-client component of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], a set of managed libraries that enable common application tasks such as reading and writing to the file system.</span></span> <span data-ttu-id="c706c-117">使用类似的开发环境[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，你可以通过网络与远程计算机创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和沟通。</span><span class="sxs-lookup"><span data-stu-id="c706c-117">Using a development environment like [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], you can create Windows Forms applications that display information, request input from users, and communicate with remote computers over a network.</span></span>  
   
- Windows 窗体在窗体是向用户的信息显示在其一个可视化图面。 您通常通过窗体上放置控件并开发对用户操作，如鼠标单击或按键响应来构建 Windows 窗体应用程序。 一个*控件*是用于显示数据或接受数据输入的分立的用户界面 (UI) 元素。  
+ <span data-ttu-id="c706c-118">在 Windows 窗体，窗体是向用户的信息显示在其一个可视化图面。</span><span class="sxs-lookup"><span data-stu-id="c706c-118">In Windows Forms, a form is a visual surface on which you display information to the user.</span></span> <span data-ttu-id="c706c-119">通常情况下，通过将窗体上的控件和开发对用户操作，如点击鼠标或按键响应需要构建 Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="c706c-119">You commonly build Windows Forms applications by placing controls on forms and developing responses to user actions, such as mouse clicks or key presses.</span></span> <span data-ttu-id="c706c-120">控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。</span><span class="sxs-lookup"><span data-stu-id="c706c-120">A *control* is a discrete user interface (UI) element that displays data or accepts data input.</span></span>  
   
-### <a name="events"></a>事件  
- 当用户对你的窗体或它的某个控件，则会生成一个事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)。  
+### <a name="events"></a><span data-ttu-id="c706c-121">事件</span><span class="sxs-lookup"><span data-stu-id="c706c-121">Events</span></span>  
+ <span data-ttu-id="c706c-122">当用户执行某些内容到你的窗体或其某个控件时，它会生成一个事件。</span><span class="sxs-lookup"><span data-stu-id="c706c-122">When a user does something to your form or one of its controls, it generates an event.</span></span> <span data-ttu-id="c706c-123">你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。</span><span class="sxs-lookup"><span data-stu-id="c706c-123">Your application reacts to these events by using code, and processes the events when they occur.</span></span> <span data-ttu-id="c706c-124">有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c706c-124">For more information, see [Creating Event Handlers in Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx).</span></span>  
   
-### <a name="controls"></a>控件  
- Windows 窗体包含各种可以放置在窗体的控件︰ 显示文本框、 按钮、 下拉列表框、 单选按钮和甚至网页的控件。 可以在窗体使用的所有控件的列表，请参阅[Windows 窗体上使用的控件](https://msdn.microsoft.com/library/3xdhey7w.aspx)。 如果现有控件不满足您的需要，Windows 窗体还支持创建自定义控件使用<xref:System.Windows.Forms.UserControl>类。</xref:System.Windows.Forms.UserControl>  
+### <a name="controls"></a><span data-ttu-id="c706c-125">控件</span><span class="sxs-lookup"><span data-stu-id="c706c-125">Controls</span></span>  
+ <span data-ttu-id="c706c-126">Windows 窗体包含各种可以将它们放置在窗体的控件： 显示文本框、 按钮、 下拉框、 单选按钮和甚至网页的控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-126">Windows Forms contains a variety of controls that you can place on forms: controls that display text boxes, buttons, drop-down boxes, radio buttons, and even Web pages.</span></span> <span data-ttu-id="c706c-127">有关可在窗体上使用的所有控件的列表，请参阅[在 Windows 窗体上使用的控件](https://msdn.microsoft.com/library/3xdhey7w.aspx)。</span><span class="sxs-lookup"><span data-stu-id="c706c-127">For a list of all the controls you can use on a form, see [Controls to Use on Windows Forms](https://msdn.microsoft.com/library/3xdhey7w.aspx).</span></span> <span data-ttu-id="c706c-128">如果某个现有控件不满足你的需要，Windows 窗体还支持使用 <xref:System.Windows.Forms.UserControl> 类创建自己的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-128">If an existing control does not meet your needs, Windows Forms also supports creating your own custom controls using the <xref:System.Windows.Forms.UserControl> class.</span></span>  
   
- Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控件，可以创建工具栏和菜单包含文本和图像、 显示子菜单和托管其他控件如文本框和组合框。</xref:System.Windows.Forms.MenuStrip> </xref:System.Windows.Forms.ToolStrip>  
+ <span data-ttu-id="c706c-129">Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。</span><span class="sxs-lookup"><span data-stu-id="c706c-129">Windows Forms has rich UI controls that emulate features in high-end applications like Microsoft Office.</span></span> <span data-ttu-id="c706c-130">使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控件，可以创建包含文本和图像、 显示子菜单和托管其他控件，如文本框和组合框的工具栏和菜单。</span><span class="sxs-lookup"><span data-stu-id="c706c-130">Using the <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.MenuStrip> control, you can create toolbars and menus that contain text and images, display submenus, and host other controls such as text boxes and combo boxes.</span></span>  
   
- 与[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]拖放窗体设计器中，可以轻松创建 Windows 窗体应用程序︰ 只需用光标选中控件，并将它们放置在要在窗体上。 设计器提供诸如网格线和"捕捉线"工具，以便简化对齐控件。 无论是使用[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]或编译在命令行中，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控件来创建高级窗体布局的最小时间和精力。</xref:System.Windows.Forms.SplitContainer> </xref:System.Windows.Forms.TableLayoutPanel> </xref:System.Windows.Forms.FlowLayoutPanel>  
+ <span data-ttu-id="c706c-131">与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]拖放窗体设计器中，可以轻松创建 Windows 窗体应用程序： 只需用光标选中控件并将它们放置在要在窗体上。</span><span class="sxs-lookup"><span data-stu-id="c706c-131">With the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] drag-and-drop forms designer, you can easily create Windows Forms applications: just select the controls with your cursor and place them where you want on the form.</span></span> <span data-ttu-id="c706c-132">设计器提供诸如网格线和"对齐线"等工具可简化对齐控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-132">The designer provides tools such as grid lines and "snap lines" to take the hassle out of aligning controls.</span></span> <span data-ttu-id="c706c-133">无论是使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]或编译命令行中，你可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控件，创建高级窗体布局的最小时间和精力。</span><span class="sxs-lookup"><span data-stu-id="c706c-133">And whether you use [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] or compile at the command line, you can use the <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> and <xref:System.Windows.Forms.SplitContainer> controls to create advanced form layouts with minimal time and effort.</span></span>  
   
-### <a name="custom-ui-elements"></a>自定义用户界面元素  
- 最后，如果必须创建自己的自定义用户界面元素，<xref:System.Drawing>命名空间包含的所有类需要呈现线条、 圆形和其他形状直接在窗体上的。</xref:System.Drawing>  
+### <a name="custom-ui-elements"></a><span data-ttu-id="c706c-134">自定义 UI 元素</span><span class="sxs-lookup"><span data-stu-id="c706c-134">Custom UI Elements</span></span>  
+ <span data-ttu-id="c706c-135">最后，如果必须创建自己的自定义用户界面元素，<xref:System.Drawing>命名空间包含的所有类需要呈现线条、 圆形和其他形状直接在窗体上的。</span><span class="sxs-lookup"><span data-stu-id="c706c-135">Finally, if you must create your own custom UI elements, the <xref:System.Drawing> namespace contains all of the classes you need to render lines, circles, and other shapes directly on a form.</span></span>  
   
- 有关使用这些功能的分步信息，请参阅以下帮助主题。  
+ <span data-ttu-id="c706c-136">有关使用这些功能的分步信息，请参阅下列帮助主题。</span><span class="sxs-lookup"><span data-stu-id="c706c-136">For step-by-step information about using these features, see the following Help topics.</span></span>  
   
-|到|请参阅|  
+|<span data-ttu-id="c706c-137">到</span><span class="sxs-lookup"><span data-stu-id="c706c-137">To</span></span>|<span data-ttu-id="c706c-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="c706c-138">See</span></span>|  
 |--------|---------|  
-|创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]|[演练︰ 创建简单的 Windows 窗体](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|使用窗体上控件|[如何︰ 向 Windows 窗体添加控件](https://msdn.microsoft.com/library/0h5y8567.aspx)|   
-|创建带有图形<xref:System.Drawing></xref:System.Drawing>|[图形编程入门](https://msdn.microsoft.com/library/da0f23z7.aspx)|  
-|创建自定义控件|[如何︰ 从 UserControl 类继承](https://msdn.microsoft.com/library/00ctb4z0.aspx)|  
+|<span data-ttu-id="c706c-139">创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c706c-139">Create a new Windows Forms application with [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]</span></span>|[<span data-ttu-id="c706c-140">演练： 创建简单的 Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="c706c-140">Walkthrough: Creating a Simple Windows Form</span></span>](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|<span data-ttu-id="c706c-141">使用窗体上控件</span><span class="sxs-lookup"><span data-stu-id="c706c-141">Use controls on forms</span></span>|[<span data-ttu-id="c706c-142">如何：向 Windows 窗体添加控件</span><span class="sxs-lookup"><span data-stu-id="c706c-142">How to: Add Controls to Windows Forms</span></span>](https://msdn.microsoft.com/library/0h5y8567.aspx)|   
+|<span data-ttu-id="c706c-143">创建与图形<xref:System.Drawing></span><span class="sxs-lookup"><span data-stu-id="c706c-143">Create graphics with <xref:System.Drawing></span></span>|[<span data-ttu-id="c706c-144">图形编程入门</span><span class="sxs-lookup"><span data-stu-id="c706c-144">Getting Started with Graphics Programming</span></span>](https://msdn.microsoft.com/library/da0f23z7.aspx)|  
+|<span data-ttu-id="c706c-145">创建自定义控件</span><span class="sxs-lookup"><span data-stu-id="c706c-145">Create custom controls</span></span>|[<span data-ttu-id="c706c-146">如何：从 UserControl 类继承</span><span class="sxs-lookup"><span data-stu-id="c706c-146">How to: Inherit from the UserControl Class</span></span>](https://msdn.microsoft.com/library/00ctb4z0.aspx)|  
   
-## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
- 许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件，调用<xref:System.Windows.Forms.DataGridView>用于呈现在传统的行和列的格式，此类表格数据，以便使每个数据块均占据其自己的单元格的控件。</xref:System.Windows.Forms.DataGridView> 使用<xref:System.Windows.Forms.DataGridView>可以自定义各个单元格的外观、 锁定任意行和列中的位置，并显示在单元格，此外还具有其他功能内的复杂控件。</xref:System.Windows.Forms.DataGridView>  
+## <a name="displaying-and-manipulating-data"></a><span data-ttu-id="c706c-147">显示和操作数据</span><span class="sxs-lookup"><span data-stu-id="c706c-147">Displaying and Manipulating Data</span></span>  
+ <span data-ttu-id="c706c-148">许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。</span><span class="sxs-lookup"><span data-stu-id="c706c-148">Many applications must display data from a database, XML file, XML Web service, or other data source.</span></span> <span data-ttu-id="c706c-149">Windows 窗体提供了一个灵活的控件，调用<xref:System.Windows.Forms.DataGridView>呈现在传统的行和列的格式，此类表格数据，以便每个数据块占据其自己的单元格的控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-149">Windows Forms provides a flexible control called the <xref:System.Windows.Forms.DataGridView> control for rendering such tabular data in a traditional row and column format, so that every piece of data occupies its own cell.</span></span> <span data-ttu-id="c706c-150">使用<xref:System.Windows.Forms.DataGridView>你可以自定义各个单元格的外观、 锁定的位置，在任意行和列和其他功能单元格内部显示复杂控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-150">Using <xref:System.Windows.Forms.DataGridView> you can customize the appearance of individual cells, lock arbitrary rows and columns in place, and display complex controls inside cells, among other features.</span></span>  
   
- 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，在 Windows Forms 的新增[!INCLUDE[vsprvslong](../../../csharp/misc/includes/vsprvslong_md.md)]和[!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]、 表示到数据源的连接和公开数据绑定到控件，导航到上一页和下一页记录，编辑记录并且将更改保存回原始数据源的方法。</xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator>控件提供了一个简单的界面，通过<xref:System.Windows.Forms.BindingSource>组件可以对用户在记录间导航。</xref:System.Windows.Forms.BindingSource> </xref:System.Windows.Forms.BindingNavigator>  
+ <span data-ttu-id="c706c-151">通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。</span><span class="sxs-lookup"><span data-stu-id="c706c-151">Connecting to data sources over a network is a simple task with Windows Forms smart clients.</span></span> <span data-ttu-id="c706c-152"><xref:System.Windows.Forms.BindingSource> 组件（对于 [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] 和 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 中的 Windows 窗体而言是全新内容）表示与数据源的连接，公开将数据绑定到控件的方法，导航到上一个和下一个记录，编辑记录并且将更改保存到原始源。</span><span class="sxs-lookup"><span data-stu-id="c706c-152">The <xref:System.Windows.Forms.BindingSource> component, new with Windows Forms in [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] and the [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], represents a connection to a data source, and exposes methods for binding data to controls, navigating to the previous and next records, editing records, and saving changes back to the original source.</span></span> <span data-ttu-id="c706c-153"><xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。</span><span class="sxs-lookup"><span data-stu-id="c706c-153">The <xref:System.Windows.Forms.BindingNavigator> control provides a simple interface over the <xref:System.Windows.Forms.BindingSource> component for users to navigate between records.</span></span>  
   
-### <a name="data-bound-controls"></a>数据绑定控件  
- 您可以创建数据绑定控件轻松地使用数据源窗口，其中显示您项目中的数据源，例如数据库、 Web 服务和对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  
+### <a name="data-bound-controls"></a><span data-ttu-id="c706c-154">数据绑定控件</span><span class="sxs-lookup"><span data-stu-id="c706c-154">Data-Bound Controls</span></span>  
+ <span data-ttu-id="c706c-155">你可以创建数据绑定控件轻松使用数据源窗口中，你的项目中显示数据源，如数据库、 Web 服务和对象。</span><span class="sxs-lookup"><span data-stu-id="c706c-155">You can create data-bound controls easily using the Data Sources window, which displays data sources such as databases, Web services, and objects in your project.</span></span> <span data-ttu-id="c706c-156">可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。</span><span class="sxs-lookup"><span data-stu-id="c706c-156">You can create data-bound controls by dragging items from this window onto forms in your project.</span></span> <span data-ttu-id="c706c-157">还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。</span><span class="sxs-lookup"><span data-stu-id="c706c-157">You can also data-bind existing controls to data by dragging objects from the Data Sources window onto existing controls.</span></span>  
   
-### <a name="settings"></a>设置  
- 您可以管理在 Windows 窗体数据绑定的另一种是设置。 大多数智能客户端应用程序必须保留有关其运行时状态，如窗体的最后已知大小的一些信息，并保留用户首选项数据，例如保存的文件的默认位置。 应用程序设置功能通过提供一种简单的方法来将这两种类型的设置存储在客户端计算机上满足这些要求。 一旦定义使用[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]或代码编辑器中，这些设置便作为 XML 保留并自动在运行时读取回内存。  
+### <a name="settings"></a><span data-ttu-id="c706c-158">设置</span><span class="sxs-lookup"><span data-stu-id="c706c-158">Settings</span></span>  
+ <span data-ttu-id="c706c-159">你可以管理 Windows 窗体中的数据绑定的另一种是设置。</span><span class="sxs-lookup"><span data-stu-id="c706c-159">Another type of data binding you can manage in Windows Forms is settings.</span></span> <span data-ttu-id="c706c-160">大多数智能客户端应用程序必须保留有关其运行时状态，例如窗体，最后一次大小的一些信息，并保留用户首选项数据，如保存文件的默认位置。</span><span class="sxs-lookup"><span data-stu-id="c706c-160">Most smart-client applications must retain some information about their run-time state, such as the last-known size of forms, and retain user-preference data, such as default locations for saved files.</span></span> <span data-ttu-id="c706c-161">应用程序设置功能通过提供一种简单的方法将这两种类型的设置存储客户端计算机上满足这些要求。</span><span class="sxs-lookup"><span data-stu-id="c706c-161">The application-settings feature addresses these requirements by providing an easy way to store both types of settings on the client computer.</span></span> <span data-ttu-id="c706c-162">一次定义使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]或代码编辑器中，这些设置便作为 XML 保留并自动在运行时读取回内存。</span><span class="sxs-lookup"><span data-stu-id="c706c-162">Once defined using either [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] or a code editor, these settings are persisted as XML and automatically read back into memory at run time.</span></span>  
   
- 有关使用这些功能的分步信息，请参阅以下帮助主题。  
+ <span data-ttu-id="c706c-163">有关使用这些功能的分步信息，请参阅下列帮助主题。</span><span class="sxs-lookup"><span data-stu-id="c706c-163">For step-by-step information about using these features, see the following Help topics.</span></span>  
   
-|到|请参阅|  
+|<span data-ttu-id="c706c-164">到</span><span class="sxs-lookup"><span data-stu-id="c706c-164">To</span></span>|<span data-ttu-id="c706c-165">请参阅</span><span class="sxs-lookup"><span data-stu-id="c706c-165">See</span></span>|  
 |--------|---------|  
-|使用<xref:System.Windows.Forms.BindingSource>组件</xref:System.Windows.Forms.BindingSource>|[如何︰ 将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](https://msdn.microsoft.com/library/801dxw2t.aspx)|  
-|使用[!INCLUDE[vstecado](../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)]数据源|[如何︰ 进行排序和筛选 ADO.NET 数据使用 Windows 窗体 BindingSource 组件](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
-|使用数据源窗口|[演练：在 Windows 窗体上显示数据](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)|  
+|<span data-ttu-id="c706c-166">使用<xref:System.Windows.Forms.BindingSource>组件</span><span class="sxs-lookup"><span data-stu-id="c706c-166">Use the <xref:System.Windows.Forms.BindingSource> component</span></span>|[<span data-ttu-id="c706c-167">如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定</span><span class="sxs-lookup"><span data-stu-id="c706c-167">How to: Bind Windows Forms Controls with the BindingSource Component Using the Designer</span></span>](https://msdn.microsoft.com/library/801dxw2t.aspx)|  
+|<span data-ttu-id="c706c-168">使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源</span><span class="sxs-lookup"><span data-stu-id="c706c-168">Work with [!INCLUDE[vstecado](~/includes/vstecado-md.md)] data sources</span></span>|[<span data-ttu-id="c706c-169">如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选</span><span class="sxs-lookup"><span data-stu-id="c706c-169">How to: Sort and Filter ADO.NET Data with the Windows Forms BindingSource Component</span></span>](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|<span data-ttu-id="c706c-170">使用数据源窗口</span><span class="sxs-lookup"><span data-stu-id="c706c-170">Use the Data Sources window</span></span>|[<span data-ttu-id="c706c-171">演练：在 Windows 窗体上显示数据</span><span class="sxs-lookup"><span data-stu-id="c706c-171">Walkthrough: Displaying Data on a Windows Form</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
-## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
- 一旦您已经编写您的应用程序，以便他们可以安装并在他们自己的客户端计算机上运行该必须将它发送给您的用户。 使用[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]技术，您可以部署应用程序内的[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]，只需进行几次点击并向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]管理的所有元素和您的应用程序中的依赖关系并确保客户端计算机上正确安装应用程序。  
+## <a name="deploying-applications-to-client-computers"></a><span data-ttu-id="c706c-172">将应用程序部署到客户端计算机</span><span class="sxs-lookup"><span data-stu-id="c706c-172">Deploying Applications to Client Computers</span></span>  
+ <span data-ttu-id="c706c-173">写入你的应用程序之后，以便他们可以安装和运行在其自己的客户端计算机上必须将它发送到你的用户。</span><span class="sxs-lookup"><span data-stu-id="c706c-173">Once you have written your application, you must send it to your users so that they can install and run it on their own client computers.</span></span> <span data-ttu-id="c706c-174">使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，你可以部署你的应用程序从内[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，只需几次点击并为用户提供指向 Web 上的应用程序的 URL。</span><span class="sxs-lookup"><span data-stu-id="c706c-174">Using the [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technology, you can deploy your applications from within [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] by using just a few clicks and provide users with a URL pointing to your application on the Web.</span></span> [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]<span data-ttu-id="c706c-175">管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装应用程序。</span><span class="sxs-lookup"><span data-stu-id="c706c-175"> manages all of the elements and dependencies in your application and ensures that the application is properly installed on the client computer.</span></span>  
   
- [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 如果指定应用程序应支持脱机操作，[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]将链接添加到您的应用程序在用户的**启动**菜单上，以便用户可以打开它而使用的 URL。  
+ [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]<span data-ttu-id="c706c-176"> 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。</span><span class="sxs-lookup"><span data-stu-id="c706c-176"> applications can be configured to run only when the user is connected to the network, or to run both online and offline.</span></span> <span data-ttu-id="c706c-177">指定应用程序应支持脱机操作时[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]将链接添加到你的应用程序在用户的**启动**菜单上，以便用户可以打开它而使用的 URL。</span><span class="sxs-lookup"><span data-stu-id="c706c-177">When you specify that an application should support offline operation, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] adds a link to your application in the user's **Start** menu, so that the user can open it without using the URL.</span></span>  
   
- 更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]检测到那里可用更新，并将升级用户的安装;无需任何自定义编程需要更新旧程序集。  
+ <span data-ttu-id="c706c-178">更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。</span><span class="sxs-lookup"><span data-stu-id="c706c-178">When you update your application, you publish a new deployment manifest and a new copy of your application to your Web server.</span></span> [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]<span data-ttu-id="c706c-179">检测到存在可用的更新和升级用户的安装;无需任何自定义编程需要更新旧程序集。</span><span class="sxs-lookup"><span data-stu-id="c706c-179"> detects that there is an update available and upgrades the user's installation; no custom programming is required to update old assemblies.</span></span>  
   
- 有关的完整介绍[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]，请参阅[ClickOnce 安全和部署](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment)。 有关使用这些功能的分步信息，请参阅以下帮助主题︰  
+ <span data-ttu-id="c706c-180">有关 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 的完整介绍，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。</span><span class="sxs-lookup"><span data-stu-id="c706c-180">For a full introduction to [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span> <span data-ttu-id="c706c-181">有关使用这些功能的分步信息，请参阅下列帮助主题：</span><span class="sxs-lookup"><span data-stu-id="c706c-181">For step-by-step information about using these features, see the following Help topics:</span></span>  
   
-|到|请参阅|  
+|<span data-ttu-id="c706c-182">到</span><span class="sxs-lookup"><span data-stu-id="c706c-182">To</span></span>|<span data-ttu-id="c706c-183">请参阅</span><span class="sxs-lookup"><span data-stu-id="c706c-183">See</span></span>|  
 |--------|---------|  
-|部署的应用程序[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]|[如何：使用发布向导发布 ClickOnce 应用程序](https://docs.microsoft.com/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](https://docs.microsoft.com/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|更新[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]部署|[如何：管理 ClickOnce 应用程序的更新](https://docs.microsoft.com/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|管理与安全[!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)]|[如何：启用 ClickOnce 安全设置](https://docs.microsoft.com/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|<span data-ttu-id="c706c-184">部署的应用程序[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c706c-184">Deploy an application with [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]</span></span>|[<span data-ttu-id="c706c-185">如何：使用发布向导发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="c706c-185">How to: Publish a ClickOnce Application using the Publish Wizard</span></span>](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [<span data-ttu-id="c706c-186">演练：手动部署 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="c706c-186">Walkthrough: Manually Deploying a ClickOnce Application</span></span>](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|<span data-ttu-id="c706c-187">更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署</span><span class="sxs-lookup"><span data-stu-id="c706c-187">Update a [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] deployment</span></span>|[<span data-ttu-id="c706c-188">如何：管理 ClickOnce 应用程序的更新</span><span class="sxs-lookup"><span data-stu-id="c706c-188">How to: Manage Updates for a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|<span data-ttu-id="c706c-189">管理与安全性[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c706c-189">Manage security with [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]</span></span>|[<span data-ttu-id="c706c-190">如何：启用 ClickOnce 安全设置</span><span class="sxs-lookup"><span data-stu-id="c706c-190">How to: Enable ClickOnce Security Settings</span></span>](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
-## <a name="other-controls-and-features"></a>其他控件和功能  
- Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖的可靠安全系统[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]，使您能够发布到您的客户更安全的应用程序。  
+## <a name="other-controls-and-features"></a><span data-ttu-id="c706c-191">其他控件和功能</span><span class="sxs-lookup"><span data-stu-id="c706c-191">Other Controls and Features</span></span>  
+ <span data-ttu-id="c706c-192">Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。</span><span class="sxs-lookup"><span data-stu-id="c706c-192">There are many other features in Windows Forms that make implementing common tasks fast and easy, such as support for creating dialog boxes, printing, adding Help and documentation, and localizing your application to multiple languages.</span></span> <span data-ttu-id="c706c-193">此外，Windows 窗体依赖于可靠的安全系统[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，使你能够更安全应用程序发布到你的客户。</span><span class="sxs-lookup"><span data-stu-id="c706c-193">In addition, Windows Forms relies on the robust security system of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], enabling you to release more secure applications to your customers.</span></span>  
   
- 有关使用这些功能的分步信息，请参阅以下帮助主题︰  
+ <span data-ttu-id="c706c-194">有关使用这些功能的分步信息，请参阅下列帮助主题：</span><span class="sxs-lookup"><span data-stu-id="c706c-194">For step-by-step information about using these features, see the following Help topics:</span></span>  
   
-|到|请参阅|  
+|<span data-ttu-id="c706c-195">到</span><span class="sxs-lookup"><span data-stu-id="c706c-195">To</span></span>|<span data-ttu-id="c706c-196">请参阅</span><span class="sxs-lookup"><span data-stu-id="c706c-196">See</span></span>|  
 |--------|---------|  
-|打印窗体的内容|[如何︰ 在 Windows 窗体中打印图形](https://msdn.microsoft.com/library/741a0ktc.aspx)<br /><br /> [如何︰ 打印 Windows 窗体中的多页文本文件](https://msdn.microsoft.com/library/cwbe712d.aspx)|   
-|了解有关 Windows 窗体安全的详细信息|[Windows 窗体概述中的安全性](https://msdn.microsoft.com/library/90k49ccb.aspx)|  
+|<span data-ttu-id="c706c-197">打印窗体的内容</span><span class="sxs-lookup"><span data-stu-id="c706c-197">Print the contents of a form</span></span>|[<span data-ttu-id="c706c-198">如何：在 Windows 窗体中打印图形</span><span class="sxs-lookup"><span data-stu-id="c706c-198">How to: Print Graphics in Windows Forms</span></span>](https://msdn.microsoft.com/library/741a0ktc.aspx)<br /><br /> [<span data-ttu-id="c706c-199">如何：打印 Windows 窗体中的多页文本文件</span><span class="sxs-lookup"><span data-stu-id="c706c-199">How to: Print a Multi-Page Text File in Windows Forms</span></span>](https://msdn.microsoft.com/library/cwbe712d.aspx)|   
+|<span data-ttu-id="c706c-200">了解有关 Windows 窗体安全的详细信息</span><span class="sxs-lookup"><span data-stu-id="c706c-200">Learn more about Windows Forms security</span></span>|[<span data-ttu-id="c706c-201">Windows 窗体中的安全性概述</span><span class="sxs-lookup"><span data-stu-id="c706c-201">Security in Windows Forms Overview</span></span>](https://msdn.microsoft.com/library/90k49ccb.aspx)|  
   
-## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- [Windows 窗体概述](https://msdn.microsoft.com/library/8bxxy49h.aspx)   
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a><span data-ttu-id="c706c-202">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c706c-202">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+ [<span data-ttu-id="c706c-203">Windows 窗体概述</span><span class="sxs-lookup"><span data-stu-id="c706c-203">Windows Forms Overview</span></span>](https://msdn.microsoft.com/library/8bxxy49h.aspx)  
+ [<span data-ttu-id="c706c-204">My.Forms 对象</span><span class="sxs-lookup"><span data-stu-id="c706c-204">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)

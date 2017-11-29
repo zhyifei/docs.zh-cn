@@ -1,88 +1,90 @@
 ---
-title: "数据协定名称 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "数据协定 [WCF], 命名"
+title: "数据协定名称"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 27
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 数据协定名称
-有时，客户端和服务不共享相同的类型。他们仍然可以将数据传递给对方，只要数据合同是双方等效。[数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) 基于数据协定和数据成员名称和映射类型和这些成员名称，提供了一个机制。本主题说明数据协定的命名规则以及创建名称时 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构的默认行为。  
+# <a name="data-contract-names"></a><span data-ttu-id="27240-102">数据协定名称</span><span class="sxs-lookup"><span data-stu-id="27240-102">Data Contract Names</span></span>
+<span data-ttu-id="27240-103">有时，客户端和服务不共享相同的类型。</span><span class="sxs-lookup"><span data-stu-id="27240-103">Sometimes a client and a service do not share the same types.</span></span> <span data-ttu-id="27240-104">它们仍然可以将数据传递给对方，只要数据协定是双方等效的。</span><span class="sxs-lookup"><span data-stu-id="27240-104">They can still pass data to each other as long as the data contracts are equivalent on both sides.</span></span> <span data-ttu-id="27240-105">[数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)基于数据协定和数据成员名称，并因此提供一种机制，以映射到这些名称的类型和成员。</span><span class="sxs-lookup"><span data-stu-id="27240-105">[Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) is based on data contract and data member names, and therefore a mechanism is provided to map types and members to those names.</span></span> <span data-ttu-id="27240-106">本主题说明数据协定的命名规则以及创建名称时 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构的默认行为。</span><span class="sxs-lookup"><span data-stu-id="27240-106">This topic explains the rules for naming data contracts as well as the default behavior of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure when creating names.</span></span>  
   
-## 基本规则  
- 有关数据协定命名的基本规则包括：  
+## <a name="basic-rules"></a><span data-ttu-id="27240-107">基本规则</span><span class="sxs-lookup"><span data-stu-id="27240-107">Basic Rules</span></span>  
+ <span data-ttu-id="27240-108">有关数据协定命名的基本规则包括：</span><span class="sxs-lookup"><span data-stu-id="27240-108">Basic rules regarding naming data contracts include:</span></span>  
   
--   完全限定的数据协定名称由命名空间和名称组成。  
+-   <span data-ttu-id="27240-109">完全限定的数据协定名称由命名空间和名称组成。</span><span class="sxs-lookup"><span data-stu-id="27240-109">A fully-qualified data contract name consists of a namespace and a name.</span></span>  
   
--   数据成员只有名称，而没有命名空间。  
+-   <span data-ttu-id="27240-110">数据成员只有名称，而没有命名空间。</span><span class="sxs-lookup"><span data-stu-id="27240-110">Data members have only names, but no namespaces.</span></span>  
   
--   处理数据协定时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构对于命名空间以及数据协定和数据成员的名称区分大小写。  
+-   <span data-ttu-id="27240-111">处理数据协定时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构对于命名空间以及数据协定和数据成员的名称区分大小写。</span><span class="sxs-lookup"><span data-stu-id="27240-111">When processing data contracts, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure is case-sensitive to both the namespaces and the names of data contracts and data members.</span></span>  
   
-## 数据协定命名空间  
- 数据协定命名空间采用统一资源标识符 \(URI\) 的形式。URI 可以是绝对的，也可以是相对的。默认情况下，会为特定类型的数据协定分配公共语言运行库 \(CLR\) 命名空间中该类型的命名空间。  
+## <a name="data-contract-namespaces"></a><span data-ttu-id="27240-112">数据协定命名空间</span><span class="sxs-lookup"><span data-stu-id="27240-112">Data Contract Namespaces</span></span>  
+ <span data-ttu-id="27240-113">数据协定命名空间采用统一资源标识符 (URI) 的形式。</span><span class="sxs-lookup"><span data-stu-id="27240-113">A data contract namespace takes the form of a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="27240-114">URI 可以是绝对的，也可以是相对的。</span><span class="sxs-lookup"><span data-stu-id="27240-114">The URI can be either absolute or relative.</span></span> <span data-ttu-id="27240-115">默认情况下，会为特定类型的数据协定分配公共语言运行库 (CLR) 命名空间中该类型的命名空间。</span><span class="sxs-lookup"><span data-stu-id="27240-115">By default, data contracts for a particular type are assigned a namespace that comes from the common language runtime (CLR) namespace of that type.</span></span>  
   
- 默认情况下，任何给定的 CLR 命名空间（采用 *Clr.Namespace* 格式）都会映射到“http:\/\/schemas.datacontract.org\/2004\/07\/Clr.Namespace”命名空间。若要重写此默认值，请对整个模块或程序集应用 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 属性。或者，若要控制每种类型的数据协定命名空间，请设置 <xref:System.Runtime.Serialization.DataContractAttribute> 的 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 属性。  
-  
-> [!NOTE]
->  “http:\/\/schemas.microsoft.com\/2003\/10\/Serialization”是保留的命名空间，不能用作数据协定命名空间。  
+ <span data-ttu-id="27240-116">默认情况下，任何给定的 CLR 命名空间 (采用格式*Clr.Namespace*) 映射到命名空间"http://schemas.datacontract.org/2004/07/Clr.Namespace"。</span><span class="sxs-lookup"><span data-stu-id="27240-116">By default, any given CLR namespace (in the format *Clr.Namespace*) is mapped to the namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace".</span></span> <span data-ttu-id="27240-117">若要重写此默认值，请对整个模块或程序集应用 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="27240-117">To override this default, apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to the entire module or assembly.</span></span> <span data-ttu-id="27240-118">或者，若要控制每种类型的数据协定命名空间，请设置 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="27240-118">Alternatively, to control the data contract namespace for each type, set the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.</span></span>  
   
 > [!NOTE]
->  不能重写包含 `delegate` 声明的数据协定类型中的默认命名空间。  
+>  <span data-ttu-id="27240-119">“http://schemas.microsoft.com/2003/10/Serialization”是保留的命名空间，不能用作数据协定命名空间。</span><span class="sxs-lookup"><span data-stu-id="27240-119">The "http://schemas.microsoft.com/2003/10/Serialization"namespace is reserved and cannot be used as a data contract namespace.</span></span>  
   
-## 数据协定名称  
- 给定类型的默认数据协定名称是该类型的名称。若要重写默认值，请将 <xref:System.Runtime.Serialization.DataContractAttribute> 的 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性设置为其他名称。本主题中后面的“泛型类型的数据协定名称”中说明了泛型类型的特殊规则。  
+> [!NOTE]
+>  <span data-ttu-id="27240-120">不能重写包含 `delegate` 声明的数据协定类型中的默认命名空间。</span><span class="sxs-lookup"><span data-stu-id="27240-120">You cannot override the default namespace in data contract types that contain `delegate` declarations.</span></span>  
   
-## 数据成员名称  
- 给定字段或属性的默认数据成员名称是该字段或属性的名称。若要重写默认值，请将 <xref:System.Runtime.Serialization.DataMemberAttribute> 的 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> 属性设置为其他值。  
+## <a name="data-contract-names"></a><span data-ttu-id="27240-121">数据协定名称</span><span class="sxs-lookup"><span data-stu-id="27240-121">Data Contract Names</span></span>  
+ <span data-ttu-id="27240-122">给定类型的默认数据协定名称是该类型的名称。</span><span class="sxs-lookup"><span data-stu-id="27240-122">The default name of a data contract for a given type is the name of that type.</span></span> <span data-ttu-id="27240-123">若要重写默认值，请将 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性设置为其他名称。</span><span class="sxs-lookup"><span data-stu-id="27240-123">To override the default, set the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute> to an alternative name.</span></span> <span data-ttu-id="27240-124">本主题中后面的“泛型类型的数据协定名称”中说明了泛型类型的特殊规则。</span><span class="sxs-lookup"><span data-stu-id="27240-124">Special rules for generic types are described in "Data Contract Names for Generic Types" later in this topic.</span></span>  
   
-### 示例  
- 下面的示例演示如何重写数据协定和数据成员的默认命名行为。  
+## <a name="data-member-names"></a><span data-ttu-id="27240-125">数据成员名称</span><span class="sxs-lookup"><span data-stu-id="27240-125">Data Member Names</span></span>  
+ <span data-ttu-id="27240-126">给定字段或属性的默认数据成员名称是该字段或属性的名称。</span><span class="sxs-lookup"><span data-stu-id="27240-126">The default name of a data member for a given field or property is the name of that field or property.</span></span> <span data-ttu-id="27240-127">若要重写默认值，请将 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性设置为其他值。</span><span class="sxs-lookup"><span data-stu-id="27240-127">To override the default, set the <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to an alternative value.</span></span>  
+  
+### <a name="examples"></a><span data-ttu-id="27240-128">示例</span><span class="sxs-lookup"><span data-stu-id="27240-128">Examples</span></span>  
+ <span data-ttu-id="27240-129">下面的示例演示如何重写数据协定和数据成员的默认命名行为。</span><span class="sxs-lookup"><span data-stu-id="27240-129">The following example shows how you can override the default naming behavior of data contracts and data members.</span></span>  
   
  [!code-csharp[C_DataContractNames#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
  [!code-vb[C_DataContractNames#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]  
   
-## 泛型类型的数据协定名称  
- 确定泛型类型的数据协定名称具有特殊的规则。这些规则有助于避免在同一泛型类型的两个封闭式泛型之间发生数据协定名称冲突。  
+## <a name="data-contract-names-for-generic-types"></a><span data-ttu-id="27240-130">泛型类型的数据协定名称</span><span class="sxs-lookup"><span data-stu-id="27240-130">Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="27240-131">确定泛型类型的数据协定名称具有特殊的规则。</span><span class="sxs-lookup"><span data-stu-id="27240-131">Special rules exist for determining data contract names for generic types.</span></span> <span data-ttu-id="27240-132">这些规则有助于避免在同一泛型类型的两个封闭式泛型之间发生数据协定名称冲突。</span><span class="sxs-lookup"><span data-stu-id="27240-132">These rules help avoid data contract name collisions between two closed generics of the same generic type.</span></span>  
   
- 默认情况下，泛型类型的数据协定名称是该类型的名称后跟随字符串“Of”，后面跟随泛型参数的数据协定名称，后面跟随使用泛型参数的数据协定命名空间计算的哈希值。哈希值是作为唯一标识数据片段的“指纹”的数学函数的计算结果。当所有的泛型参数都是基元类型时，将忽略哈希值。  
+ <span data-ttu-id="27240-133">默认情况下，数据协定名称对于泛型类型的类型，字符串"Of"后, 跟的名称后跟的泛型参数的数据协定名称接*哈希*使用的数据协定命名空间计算泛型参数。</span><span class="sxs-lookup"><span data-stu-id="27240-133">By default, the data contract name for a generic type is the name of the type, followed by the string "Of", followed by the data contract names of the generic parameters, followed by a *hash* computed using the data contract namespaces of the generic parameters.</span></span> <span data-ttu-id="27240-134">哈希值是作为唯一标识数据片段的“指纹”的数学函数的计算结果。</span><span class="sxs-lookup"><span data-stu-id="27240-134">A hash is the result of a mathematical function that acts as a "fingerprint" that uniquely identifies a piece of data.</span></span> <span data-ttu-id="27240-135">当所有的泛型参数都是基元类型时，将忽略哈希值。</span><span class="sxs-lookup"><span data-stu-id="27240-135">When all of the generic parameters are primitive types, the hash is omitted.</span></span>  
   
- 有关示例，请参见以下示例中的类型。  
+ <span data-ttu-id="27240-136">有关示例，请参见以下示例中的类型。</span><span class="sxs-lookup"><span data-stu-id="27240-136">For example, see the types in the following example.</span></span>  
   
  [!code-csharp[C_DataContractNames#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
  [!code-vb[C_DataContractNames#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]  
   
- 在此示例中，`Drawing<Square,RegularRedBrush>` 类型具有数据协定名称“DrawingOfSquareRedBrush5HWGAU6h”，其中“5HWGAU6h”是“urn:shapes”和“urn:default”命名空间的哈希值。`Drawing<Square,SpecialRedBrush>` 类型具有数据协定名称“DrawingOfSquareRedBrushjpB5LgQ\_S”，其中“jpB5LgQ\_S”是“urn:shapes”和“urn:special”命名空间的哈希值。请注意，如果不使用哈希值，则这两个名称将完全相同，因此会发生名称冲突。  
+ <span data-ttu-id="27240-137">在此示例中，`Drawing<Square,RegularRedBrush>` 类型具有数据协定名称“DrawingOfSquareRedBrush5HWGAU6h”，其中“5HWGAU6h”是“urn:shapes”和“urn:default”命名空间的哈希值。</span><span class="sxs-lookup"><span data-stu-id="27240-137">In this example, the type `Drawing<Square,RegularRedBrush>` has the data contract name "DrawingOfSquareRedBrush5HWGAU6h", where "5HWGAU6h" is a hash of the "urn:shapes" and "urn:default" namespaces.</span></span> <span data-ttu-id="27240-138">`Drawing<Square,SpecialRedBrush>` 类型具有数据协定名称“DrawingOfSquareRedBrushjpB5LgQ_S”，其中“jpB5LgQ_S”是“urn:shapes”和“urn:special”命名空间的哈希值。</span><span class="sxs-lookup"><span data-stu-id="27240-138">The type `Drawing<Square,SpecialRedBrush>` has the data contract name "DrawingOfSquareRedBrushjpB5LgQ_S", where "jpB5LgQ_S" is a hash of the "urn:shapes" and the "urn:special" namespaces.</span></span> <span data-ttu-id="27240-139">请注意，如果不使用哈希值，则这两个名称将完全相同，因此会发生名称冲突。</span><span class="sxs-lookup"><span data-stu-id="27240-139">Note that if the hash is not used, the two names are identical, and thus a name collision occurs.</span></span>  
   
-## 自定义泛型类型的数据协定名称  
- 有时不允许为泛型类型生成数据协定名称，如前面所述。例如，您可能事先知道不会遇到名称冲突并且想删除哈希值。在这种情况下，您可以使用 `DataContractAttribute` 属性 \(attribute\) 的 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性 \(property\) 指定另一种方式生成名称。您可以在 `Name` 属性内的大括号中使用数字来引用泛型参数的数据协定名称。（0 指第一个参数，1 指第二个参数，依此类推。）可以在大括号内使用数字符号 \(\#\) 来引用哈希值。您可以多次使用这些引用，也可以不使用引用。  
+## <a name="customizing-data-contract-names-for-generic-types"></a><span data-ttu-id="27240-140">自定义泛型类型的数据协定名称</span><span class="sxs-lookup"><span data-stu-id="27240-140">Customizing Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="27240-141">有时不允许为泛型类型生成数据协定名称，如前面所述。</span><span class="sxs-lookup"><span data-stu-id="27240-141">Sometimes, the data contract names generated for generic types, as described previously, are unacceptable.</span></span> <span data-ttu-id="27240-142">例如，您可能事先知道不会遇到名称冲突并且想删除哈希值。</span><span class="sxs-lookup"><span data-stu-id="27240-142">For example, you may know in advance that you will not run into name collisions and may want to remove the hash.</span></span> <span data-ttu-id="27240-143">在这种情况下，您可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性 (attribute) 的 `DataContractAttribute` 属性 (property) 指定另一种方式生成名称。</span><span class="sxs-lookup"><span data-stu-id="27240-143">In this case, you can use the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the `DataContractAttribute` attribute to specify a different way to generate names.</span></span> <span data-ttu-id="27240-144">您可以在 `Name` 属性内的大括号中使用数字来引用泛型参数的数据协定名称。</span><span class="sxs-lookup"><span data-stu-id="27240-144">You can use numbers in curly braces inside of the `Name` property to refer to data contract names of the generic parameters.</span></span> <span data-ttu-id="27240-145">（0 指第一个参数，1 指第二个参数，依此类推。）可以在大括号内使用数字符号 (#) 来引用哈希值。</span><span class="sxs-lookup"><span data-stu-id="27240-145">(0 refers to the first parameter, 1 refers to the second, and so on.) You can use a number (#) sign inside curly braces to refer to the hash.</span></span> <span data-ttu-id="27240-146">您可以多次使用这些引用，也可以不使用引用。</span><span class="sxs-lookup"><span data-stu-id="27240-146">You can use each of these references multiple times or not at all.</span></span>  
   
- 例如，可能对前面的泛型 `Drawing` 类型进行了声明，如以下示例所示。  
+ <span data-ttu-id="27240-147">例如，可能对前面的泛型 `Drawing` 类型进行了声明，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="27240-147">For example, the preceding generic `Drawing` type could have been declared as shown in the following example.</span></span>  
   
  [!code-csharp[c_DataContractNames#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
  [!code-vb[c_DataContractNames#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]  
   
- 在这种情况下，`Drawing<Square,RegularRedBrush>` 类型具有数据协定名称“Drawing\_using\_RedBrush\_brush\_and\_Square\_shape”。请注意，因为 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性中有一个“{\#}”，哈希值不是名称的一部分，因此该类型容易发生命名冲突；例如，`Drawing<Square,SpecialRedBrush>` 类型将具有完全相同的数据协定名称。  
+ <span data-ttu-id="27240-148">在这种情况下，`Drawing<Square,RegularRedBrush>` 类型具有数据协定名称“Drawing_using_RedBrush_brush_and_Square_shape”。</span><span class="sxs-lookup"><span data-stu-id="27240-148">In this case, the type `Drawing<Square,RegularRedBrush>` has the data contract name "Drawing_using_RedBrush_brush_and_Square_shape".</span></span> <span data-ttu-id="27240-149">请注意，因为 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 属性中有一个“{#}”，哈希值不是名称的一部分，因此该类型容易发生命名冲突；例如，`Drawing<Square,SpecialRedBrush>` 类型将具有完全相同的数据协定名称。</span><span class="sxs-lookup"><span data-stu-id="27240-149">Note that because there is a "{#}" in the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property, the hash is not a part of the name, and thus the type is susceptible to naming collisions; for example, the type `Drawing<Square,SpecialRedBrush>` would have exactly the same data contract name.</span></span>  
   
-## 请参阅  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.ContractNamespaceAttribute>   
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
- [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)   
- [数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+## <a name="see-also"></a><span data-ttu-id="27240-150">另请参阅</span><span class="sxs-lookup"><span data-stu-id="27240-150">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
+ [<span data-ttu-id="27240-151">使用数据协定</span><span class="sxs-lookup"><span data-stu-id="27240-151">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="27240-152">数据协定等效性</span><span class="sxs-lookup"><span data-stu-id="27240-152">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="27240-153">数据协定名称</span><span class="sxs-lookup"><span data-stu-id="27240-153">Data Contract Names</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [<span data-ttu-id="27240-154">数据协定版本管理</span><span class="sxs-lookup"><span data-stu-id="27240-154">Data Contract Versioning</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

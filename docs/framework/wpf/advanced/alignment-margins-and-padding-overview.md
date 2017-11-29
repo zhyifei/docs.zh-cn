@@ -1,157 +1,161 @@
 ---
-title: "Alignment、Margin 和 Padding 概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对齐"
-  - "类, FrameworkElement"
-  - "FrameworkElement 类"
-  - "边距"
-  - "填充"
+title: "Alignment、Margin 和 Padding 概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- margins [WPF]
+- padding [WPF]
+- aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Alignment、Margin 和 Padding 概述
-<xref:System.Windows.FrameworkElement> 类公开一些用于精确定位子元素的属性。  本主题论述其中四个最重要的属性：<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。  务必要了解这些属性的作用，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。  
+# <a name="alignment-margins-and-padding-overview"></a><span data-ttu-id="535ab-102">Alignment、Margin 和 Padding 概述</span><span class="sxs-lookup"><span data-stu-id="535ab-102">Alignment, Margins, and Padding Overview</span></span>
+<span data-ttu-id="535ab-103"><xref:System.Windows.FrameworkElement>类公开多个用于精确定位子元素的属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-103">The <xref:System.Windows.FrameworkElement> class exposes several properties that are used to precisely position child elements.</span></span> <span data-ttu-id="535ab-104">本主题讨论四个最重要的属性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="535ab-104">This topic discusses four of the most important properties: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.</span></span> <span data-ttu-id="535ab-105">了解这些属性的作用非常重要，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。</span><span class="sxs-lookup"><span data-stu-id="535ab-105">The effects of these properties are important to understand, because they provide the basis for controlling the position of elements in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
-## 元素定位简介  
- 可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过多种方式来定位元素。  但是，获得理想的布局不仅要选择正确的 <xref:System.Windows.Controls.Panel> 元素。  需要了解 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性才能实现精确的定位控制。  
+## <a name="introduction-to-element-positioning"></a><span data-ttu-id="535ab-106">元素定位简介</span><span class="sxs-lookup"><span data-stu-id="535ab-106">Introduction to Element Positioning</span></span>  
+ <span data-ttu-id="535ab-107">可使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过多种方式来定位元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-107">There are numerous ways to position elements using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="535ab-108">但是，获得理想的布局体现在只需选择合适<xref:System.Windows.Controls.Panel>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-108">However, achieving ideal layout goes beyond simply choosing the right <xref:System.Windows.Controls.Panel> element.</span></span> <span data-ttu-id="535ab-109">对定位进行精细控制需要了解<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-109">Fine control of positioning requires an understanding of the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> properties.</span></span>  
   
- 下图显示了一个采用若干定位属性的布局方案。  
+ <span data-ttu-id="535ab-110">下图显示了一个采用若干定位属性的布局方案。</span><span class="sxs-lookup"><span data-stu-id="535ab-110">The following illustration shows a layout scenario that utilizes several positioning properties.</span></span>  
   
- ![WPF 定位属性示例](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.png "layout\_margins\_padding\_alignment\_graphic1")  
+ <span data-ttu-id="535ab-111">![WPF 定位属性示例](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.PNG "layout_margins_padding_alignment_graphic1")</span><span class="sxs-lookup"><span data-stu-id="535ab-111">![WPF Positioning Properties Sample](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.PNG "layout_margins_padding_alignment_graphic1")</span></span>  
   
- 乍看上去，此图中的 <xref:System.Windows.Controls.Button> 元素可能似乎是随意放置的。  但是，它们的位置实际上是通过使用边距、对齐和空白的组合加以精确控制的。  
+ <span data-ttu-id="535ab-112">从表面看，<xref:System.Windows.Controls.Button>在此图中的元素可能看起来随意放置。</span><span class="sxs-lookup"><span data-stu-id="535ab-112">At first glance, the <xref:System.Windows.Controls.Button> elements in this illustration may appear to be placed randomly.</span></span> <span data-ttu-id="535ab-113">但是，其位置实际上是通过使用边距、对齐和填充加以精确控制的。</span><span class="sxs-lookup"><span data-stu-id="535ab-113">However, their positions are actually precisely controlled by using a combination of margins, alignments, and padding.</span></span>  
   
- 下面的示例描述如何创建上图中的布局。  <xref:System.Windows.Controls.Border> 元素封装了父 <xref:System.Windows.Controls.StackPanel>，<xref:System.Windows.Controls.Border.Padding%2A> 值为 15 个[与设备无关的像素](GTMT)。  这就是子 <xref:System.Windows.Controls.StackPanel> 周围会有 <xref:System.Windows.Media.Brushes.LightBlue%2A> 窄带的原因。  <xref:System.Windows.Controls.StackPanel> 的子元素用于举例说明本主题中详细论述的各个不同的定位属性。  将使用三个 <xref:System.Windows.Controls.Button> 元素来演示 <xref:System.Windows.FrameworkElement.Margin%2A> 和 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性。  
+ <span data-ttu-id="535ab-114">下面的示例描述如何创建上图中的布局。</span><span class="sxs-lookup"><span data-stu-id="535ab-114">The following example describes how to create the layout in the preceding illustration.</span></span> <span data-ttu-id="535ab-115">A<xref:System.Windows.Controls.Border>元素封装了父<xref:System.Windows.Controls.StackPanel>，与<xref:System.Windows.Controls.Border.Padding%2A>15 与设备无关的像素的值。</span><span class="sxs-lookup"><span data-stu-id="535ab-115">A <xref:System.Windows.Controls.Border> element encapsulates a parent <xref:System.Windows.Controls.StackPanel>, with a <xref:System.Windows.Controls.Border.Padding%2A> value of 15 device independent pixels.</span></span> <span data-ttu-id="535ab-116">此操作占窄的<xref:System.Windows.Media.Brushes.LightBlue%2A>带环绕子<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="535ab-116">This accounts for the narrow <xref:System.Windows.Media.Brushes.LightBlue%2A> band that surrounds the child <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="535ab-117">子元素的<xref:System.Windows.Controls.StackPanel>用于阐释每本主题中详述的各种定位属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-117">Child elements of the <xref:System.Windows.Controls.StackPanel> are used to illustrate each of the various positioning properties that are detailed in this topic.</span></span> <span data-ttu-id="535ab-118">三个<xref:System.Windows.Controls.Button>元素用于演示同时<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-118">Three <xref:System.Windows.Controls.Button> elements are used to demonstrate both the <xref:System.Windows.FrameworkElement.Margin%2A> and <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> properties.</span></span>  
   
  [!code-csharp[MPALayoutSampleIntro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutSampleIntro/CSharp/MPA_Layout_Sample_Intro.cs#1)]
  [!code-vb[MPALayoutSampleIntro#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutSampleIntro/VisualBasic/MPALayoutIntro.vb#1)]  
   
- 通过下图可以仔细查看前面的示例中使用的各个定位属性。  本主题中后面的各节将更详细地介绍如何使用各个定位属性。  
+ <span data-ttu-id="535ab-119">通过下图可以仔细查看上例中使用的各个定位属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-119">The following diagram provides a close-up view of the various positioning properties that are used in the preceding sample.</span></span> <span data-ttu-id="535ab-120">本主题的后面各节更详细地介绍了如何使用各个定位属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-120">Subsequent sections in this topic describe in greater detail how to use each positioning property.</span></span>  
   
- ![具有屏幕标注的定位属性](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.png "layout\_margins\_padding\_alignment\_graphic2")  
+ <span data-ttu-id="535ab-121">![具有屏幕标注的定位属性](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")</span><span class="sxs-lookup"><span data-stu-id="535ab-121">![Positioning Properties with Screen Call&#45;outs](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")</span></span>  
   
 <a name="wcpsdk_layout_amp_alignment_properties"></a>   
-## 了解 Alignment 属性  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性描述应如何在父元素的已分配布局空间中定位子元素。  通过将这些属性结合使用，您可以精确地定位子元素。  例如，<xref:System.Windows.Controls.DockPanel> 的子元素可以指定四种不同的水平对齐方式：<xref:System.Windows.HorizontalAlignment>、<xref:System.Windows.HorizontalAlignment> 或 <xref:System.Windows.HorizontalAlignment>，或者 <xref:System.Windows.HorizontalAlignment> 以填充可用空间。  类似的值可用于垂直定位。  
+## <a name="understanding-alignment-properties"></a><span data-ttu-id="535ab-122">了解 Alignment 属性</span><span class="sxs-lookup"><span data-stu-id="535ab-122">Understanding Alignment Properties</span></span>  
+ <span data-ttu-id="535ab-123"><xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性描述了如何子元素应放置在父元素的已分配的布局空间内。</span><span class="sxs-lookup"><span data-stu-id="535ab-123">The <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> properties describe how a child element should be positioned within a parent element's allocated layout space.</span></span> <span data-ttu-id="535ab-124">结合使用这些属性可精确定位子元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-124">By using these properties together, you can position child elements precisely.</span></span> <span data-ttu-id="535ab-125">例如，子元素的<xref:System.Windows.Controls.DockPanel>可以指定四个不同的水平对齐方式： <xref:System.Windows.HorizontalAlignment.Left>， <xref:System.Windows.HorizontalAlignment.Right>，或<xref:System.Windows.HorizontalAlignment.Center>，或<xref:System.Windows.HorizontalAlignment.Stretch>以填充可用空间。</span><span class="sxs-lookup"><span data-stu-id="535ab-125">For example, child elements of a <xref:System.Windows.Controls.DockPanel> can specify four different horizontal alignments: <xref:System.Windows.HorizontalAlignment.Left>, <xref:System.Windows.HorizontalAlignment.Right>, or <xref:System.Windows.HorizontalAlignment.Center>, or to <xref:System.Windows.HorizontalAlignment.Stretch> to fill available space.</span></span> <span data-ttu-id="535ab-126">类似的值可用于垂直定位。</span><span class="sxs-lookup"><span data-stu-id="535ab-126">Similar values are available for vertical positioning.</span></span>  
   
 > [!NOTE]
->  在一个元素上显式设置的 <xref:System.Windows.FrameworkElement.Height%2A> 和 <xref:System.Windows.FrameworkElement.Width%2A> 属性优先于 <xref:System.Windows.HorizontalAlignment> 属性值。  如果尝试设置 <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A> 以及 `Stretch` 的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 值，将会导致 `Stretch` 请求被忽略。  
+>  <span data-ttu-id="535ab-127">显式设置<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>上一个元素的属性优先于<xref:System.Windows.HorizontalAlignment.Stretch>属性值。</span><span class="sxs-lookup"><span data-stu-id="535ab-127">Explicitly-set <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties on an element take precedence over the <xref:System.Windows.HorizontalAlignment.Stretch> property value.</span></span> <span data-ttu-id="535ab-128">正在尝试设置<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>，和一个<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>值`Stretch`导致`Stretch`请求被忽略。</span><span class="sxs-lookup"><span data-stu-id="535ab-128">Attempting to set <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, and a <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> value of `Stretch` results in the `Stretch` request being ignored.</span></span>  
   
 <a name="wcpsdk_layout_amp_horizontalalignment_properties"></a>   
-### HorizontalAlignment 属性  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性声明要应用于子元素的水平对齐特性。  下表列出了 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性的每个可能的值。  
+### <a name="horizontalalignment-property"></a><span data-ttu-id="535ab-129">HorizontalAlignment 属性</span><span class="sxs-lookup"><span data-stu-id="535ab-129">HorizontalAlignment Property</span></span>  
+ <span data-ttu-id="535ab-130"><xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性声明要应用于子元素的水平对齐特征。</span><span class="sxs-lookup"><span data-stu-id="535ab-130">The <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property declares the horizontal alignment characteristics to apply to child elements.</span></span> <span data-ttu-id="535ab-131">下表显示了每个可能的值的<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-131">The following table shows each of the possible values of the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
   
-|成员|说明|  
-|--------|--------|  
-|<xref:System.Windows.HorizontalAlignment>|子元素与父元素的已分配布局空间的左端对齐。|  
-|<xref:System.Windows.HorizontalAlignment>|子元素与父元素的已分配布局空间的中心对齐。|  
-|<xref:System.Windows.HorizontalAlignment>|子元素与父元素的已分配布局空间的右端对齐。|  
-|<xref:System.Windows.HorizontalAlignment>（默认值）|拉伸子元素以填充父元素的已分配布局空间。  显式的 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 值优先。|  
+|<span data-ttu-id="535ab-132">成员</span><span class="sxs-lookup"><span data-stu-id="535ab-132">Member</span></span>|<span data-ttu-id="535ab-133">描述</span><span class="sxs-lookup"><span data-stu-id="535ab-133">Description</span></span>|  
+|------------|-----------------|  
+|<xref:System.Windows.HorizontalAlignment.Left>|<span data-ttu-id="535ab-134">子元素与父元素的已分配布局空间的左端对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-134">Child elements are aligned to the left of the parent element's allocated layout space.</span></span>|  
+|<xref:System.Windows.HorizontalAlignment.Center>|<span data-ttu-id="535ab-135">子元素与父元素的已分配布局空间的中心对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-135">Child elements are aligned to the center of the parent element's allocated layout space.</span></span>|  
+|<xref:System.Windows.HorizontalAlignment.Right>|<span data-ttu-id="535ab-136">子元素与父元素的已分配布局空间的右端对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-136">Child elements are aligned to the right of the parent element's allocated layout space.</span></span>|  
+|<span data-ttu-id="535ab-137"><xref:System.Windows.HorizontalAlignment.Stretch>（默认值）</span><span class="sxs-lookup"><span data-stu-id="535ab-137"><xref:System.Windows.HorizontalAlignment.Stretch> (Default)</span></span>|<span data-ttu-id="535ab-138">拉伸子元素以填充父元素的已分配布局空间。</span><span class="sxs-lookup"><span data-stu-id="535ab-138">Child elements are stretched to fill the parent element's allocated layout space.</span></span> <span data-ttu-id="535ab-139">显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。</span><span class="sxs-lookup"><span data-stu-id="535ab-139">Explicit <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> values take precedence.</span></span>|  
   
- 下面的示例演示如何将 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性应用于 <xref:System.Windows.Controls.Button> 元素。  将显示每个特性值，以便更好地阐释各种呈现行为。  
+ <span data-ttu-id="535ab-140">下面的示例演示如何将应用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性<xref:System.Windows.Controls.Button>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-140">The following example shows how to apply the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property to <xref:System.Windows.Controls.Button> elements.</span></span> <span data-ttu-id="535ab-141">显示每个特性值，以便更好地阐释各种呈现行为。</span><span class="sxs-lookup"><span data-stu-id="535ab-141">Each attribute value is shown, to better illustrate the various rendering behaviors.</span></span>  
   
  [!code-csharp[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/CSharp/MPA_Layout_HorizontalAlignment.cs#2)]
  [!code-vb[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/VisualBasic/MPA_Layout_HorizontalAlignment.vb#2)]  
   
- 以上代码将产生与下图类似的布局。  在图中可以看到每个 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 值的定位效果。  
+ <span data-ttu-id="535ab-142">以上代码将产生与下图类似的布局。</span><span class="sxs-lookup"><span data-stu-id="535ab-142">The preceding code yields a layout similar to the following image.</span></span> <span data-ttu-id="535ab-143">每个定位效果<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>值是在图中可见。</span><span class="sxs-lookup"><span data-stu-id="535ab-143">The positioning effects of each <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> value are visible in the illustration.</span></span>  
   
- ![HorizontalAlignment 示例](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.png "layout\_horizontal\_alignment\_graphic")  
+ <span data-ttu-id="535ab-144">![HorizontalAlignment 示例](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.PNG "layout_horizontal_alignment_graphic")</span><span class="sxs-lookup"><span data-stu-id="535ab-144">![HorizontalAlignment Sample](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.PNG "layout_horizontal_alignment_graphic")</span></span>  
   
 <a name="wcpsdk_layout_amp_verticalalignment_properties"></a>   
-### VerticalAlignment 属性  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性描述要应用于子元素的垂直对齐特性。  下表列出了 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性的每个可能的值。  
+### <a name="verticalalignment-property"></a><span data-ttu-id="535ab-145">VerticalAlignment 属性</span><span class="sxs-lookup"><span data-stu-id="535ab-145">VerticalAlignment Property</span></span>  
+ <span data-ttu-id="535ab-146"><xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性描述要应用于子元素的垂直对齐特征。</span><span class="sxs-lookup"><span data-stu-id="535ab-146">The <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property describes the vertical alignment characteristics to apply to child elements.</span></span> <span data-ttu-id="535ab-147">下表显示了每个的可能值<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="535ab-147">The following table shows each of the possible values for the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property.</span></span>  
   
-|成员|说明|  
-|--------|--------|  
-|<xref:System.Windows.VerticalAlignment>|子元素与父元素的已分配布局空间的顶端对齐。|  
-|<xref:System.Windows.VerticalAlignment>|子元素与父元素的已分配布局空间的中心对齐。|  
-|<xref:System.Windows.VerticalAlignment>|子元素与父元素的已分配布局空间的底端对齐。|  
-|<xref:System.Windows.VerticalAlignment>（默认值）|拉伸子元素以填充父元素的已分配布局空间。  显式的 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 值优先。|  
+|<span data-ttu-id="535ab-148">成员</span><span class="sxs-lookup"><span data-stu-id="535ab-148">Member</span></span>|<span data-ttu-id="535ab-149">描述</span><span class="sxs-lookup"><span data-stu-id="535ab-149">Description</span></span>|  
+|------------|-----------------|  
+|<xref:System.Windows.VerticalAlignment.Top>|<span data-ttu-id="535ab-150">子元素与父元素的已分配布局空间的顶端对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-150">Child elements are aligned to the top of the parent element's allocated layout space.</span></span>|  
+|<xref:System.Windows.VerticalAlignment.Center>|<span data-ttu-id="535ab-151">子元素与父元素的已分配布局空间的中心对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-151">Child elements are aligned to the center of the parent element's allocated layout space.</span></span>|  
+|<xref:System.Windows.VerticalAlignment.Bottom>|<span data-ttu-id="535ab-152">子元素与父元素的已分配布局空间的底端对齐。</span><span class="sxs-lookup"><span data-stu-id="535ab-152">Child elements are aligned to the bottom of the parent element's allocated layout space.</span></span>|  
+|<span data-ttu-id="535ab-153"><xref:System.Windows.VerticalAlignment.Stretch>（默认值）</span><span class="sxs-lookup"><span data-stu-id="535ab-153"><xref:System.Windows.VerticalAlignment.Stretch> (Default)</span></span>|<span data-ttu-id="535ab-154">拉伸子元素以填充父元素的已分配布局空间。</span><span class="sxs-lookup"><span data-stu-id="535ab-154">Child elements are stretched to fill the parent element's allocated layout space.</span></span> <span data-ttu-id="535ab-155">显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。</span><span class="sxs-lookup"><span data-stu-id="535ab-155">Explicit <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> values take precedence.</span></span>|  
   
- 下面的示例演示如何将 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 属性应用于 <xref:System.Windows.Controls.Button> 元素。  将显示每个特性值，以便更好地阐释各种呈现行为。  在此示例中，将使用带有可见网格线的 <xref:System.Windows.Controls.Grid> 元素作为父项，以便更好地阐释各个属性值的布局行为。  
+ <span data-ttu-id="535ab-156">下面的示例演示如何将应用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性<xref:System.Windows.Controls.Button>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-156">The following example shows how to apply the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property to <xref:System.Windows.Controls.Button> elements.</span></span> <span data-ttu-id="535ab-157">显示每个特性值，以便更好地阐释各种呈现行为。</span><span class="sxs-lookup"><span data-stu-id="535ab-157">Each attribute value is shown, to better illustrate the various rendering behaviors.</span></span> <span data-ttu-id="535ab-158">此示例的目的<xref:System.Windows.Controls.Grid>可见的网格线具有元素使用作为父项，以更好地说明每个属性值的布局行为。</span><span class="sxs-lookup"><span data-stu-id="535ab-158">For purposes of this sample, a <xref:System.Windows.Controls.Grid> element with visible gridlines is used as the parent, to better illustrate the layout behavior of each property value.</span></span>  
   
  [!code-csharp[MPALayoutVerticalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutVerticalAlignment/CSharp/MPA_Layout_VerticalAlignment.cs#2)]
  [!code-vb[MPALayoutVerticalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutVerticalAlignment/VisualBasic/MPA_Layout_VerticalAlignment.vb#2)]
- [!code-xml[MPALayoutVerticalAlignment#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
+ [!code-xaml[MPALayoutVerticalAlignment#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
   
- 以上代码将产生与下图类似的布局。  在图中可以看到每个 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 值的定位效果。  
+ <span data-ttu-id="535ab-159">以上代码将产生与下图类似的布局。</span><span class="sxs-lookup"><span data-stu-id="535ab-159">The preceding code yields a layout similar to the following image.</span></span> <span data-ttu-id="535ab-160">每个定位效果<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>值是在图中可见。</span><span class="sxs-lookup"><span data-stu-id="535ab-160">The positioning effects of each <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> value are visible in the illustration.</span></span>  
   
- ![VerticalAlignment 属性示例](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.png "layout\_vertical\_alignment\_graphic")  
+ <span data-ttu-id="535ab-161">![VerticalAlignment 属性示例](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.PNG "layout_vertical_alignment_graphic")</span><span class="sxs-lookup"><span data-stu-id="535ab-161">![VerticalAlignment property sample](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.PNG "layout_vertical_alignment_graphic")</span></span>  
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
-## 了解 Margin 属性  
- <xref:System.Windows.FrameworkElement.Margin%2A> 属性描述元素与其子级或同级之间的距离。  可通过使用 `Margin="20"` 这样的语法使 <xref:System.Windows.FrameworkElement.Margin%2A> 值统一。  利用此语法，将向元素应用 20 个[与设备无关的像素](GTMT)的统一 <xref:System.Windows.FrameworkElement.Margin%2A>。  <xref:System.Windows.FrameworkElement.Margin%2A> 值也可以采用四个不同值的形式，每个值描述应用于左端、顶端、右端和底端（按该顺序应用）的不同边距，比如 `Margin="0,10,5,25"`。  通过恰当地使用 <xref:System.Windows.FrameworkElement.Margin%2A> 属性，将可以非常精确地控制元素的呈现位置，以及元素的邻近元素和子项的呈现位置。  
+## <a name="understanding-margin-properties"></a><span data-ttu-id="535ab-162">了解 Margin 属性</span><span class="sxs-lookup"><span data-stu-id="535ab-162">Understanding Margin Properties</span></span>  
+ <span data-ttu-id="535ab-163"><xref:System.Windows.FrameworkElement.Margin%2A>属性描述元素及其子或对等方之间的距离。</span><span class="sxs-lookup"><span data-stu-id="535ab-163">The <xref:System.Windows.FrameworkElement.Margin%2A> property describes the distance between an element and its child or peers.</span></span> <span data-ttu-id="535ab-164"><xref:System.Windows.FrameworkElement.Margin%2A>值可以通过使用类似的语法统一， `Margin="20"`。</span><span class="sxs-lookup"><span data-stu-id="535ab-164"><xref:System.Windows.FrameworkElement.Margin%2A> values can be uniform, by using syntax like `Margin="20"`.</span></span> <span data-ttu-id="535ab-165">使用以下语法，一个统一的<xref:System.Windows.FrameworkElement.Margin%2A>的 20 设备无关的像素将应用于的元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-165">With this syntax, a uniform <xref:System.Windows.FrameworkElement.Margin%2A> of 20 device independent pixels would be applied to the element.</span></span> <span data-ttu-id="535ab-166"><xref:System.Windows.FrameworkElement.Margin%2A>值可以也采用以下形式的四个非重复值，每个值，描述要应用于左侧、 顶部、 右侧和 （按此顺序） 的底部的不同边距如`Margin="0,10,5,25"`。</span><span class="sxs-lookup"><span data-stu-id="535ab-166"><xref:System.Windows.FrameworkElement.Margin%2A> values can also take the form of four distinct values, each value describing a distinct margin to apply to the left, top, right, and bottom (in that order), like `Margin="0,10,5,25"`.</span></span> <span data-ttu-id="535ab-167">正确使用<xref:System.Windows.FrameworkElement.Margin%2A>属性使非常精确地控制元素的呈现位置，以及其邻居元素及其子级的呈现位置。</span><span class="sxs-lookup"><span data-stu-id="535ab-167">Proper use of the <xref:System.Windows.FrameworkElement.Margin%2A> property enables very fine control of an element's rendering position and the rendering position of its neighbor elements and children.</span></span>  
   
 > [!NOTE]
->  非零的边距会在元素的 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 和 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 外部产生空白。  
+>  <span data-ttu-id="535ab-168">非零边距适用的元素之外的空间<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>。</span><span class="sxs-lookup"><span data-stu-id="535ab-168">A non-zero margin applies space outside the element's <xref:System.Windows.FrameworkElement.ActualWidth%2A> and <xref:System.Windows.FrameworkElement.ActualHeight%2A>.</span></span>  
   
- 下面的示例演示如何在一组 <xref:System.Windows.Controls.Button> 元素的周围应用统一的边距。  <xref:System.Windows.Controls.Button> 元素各个方向的间距都相同，并带有 10 像素的边距缓冲区。  
+ <span data-ttu-id="535ab-169">下面的示例演示如何将应用的一组周围的统一边距<xref:System.Windows.Controls.Button>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-169">The following example shows how to apply uniform margins around a group of <xref:System.Windows.Controls.Button> elements.</span></span> <span data-ttu-id="535ab-170"><xref:System.Windows.Controls.Button>元素上使用每个方向一个 10 像素的边距的缓冲区均匀。</span><span class="sxs-lookup"><span data-stu-id="535ab-170">The <xref:System.Windows.Controls.Button> elements are spaced evenly with a ten-pixel margin buffer in each direction.</span></span>  
   
  [!code-cpp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#1)]
  [!code-csharp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#1)]
  [!code-vb[MarginPaddingAlignmentSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#1)]
- [!code-xml[MarginPaddingAlignmentSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
+ [!code-xaml[MarginPaddingAlignmentSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
   
- 在许多情况下，统一的边距并不适宜。  对于这些情况，可以应用非统一间距。  下面的示例演示如何将非统一边距间距应用于子元素。  按此顺序描述边距：左端、顶端、右端和底端。  
+ <span data-ttu-id="535ab-171">在许多情况下，不适合使用统一边距。</span><span class="sxs-lookup"><span data-stu-id="535ab-171">In many instances, a uniform margin is not appropriate.</span></span> <span data-ttu-id="535ab-172">对于这些情况，可应用非统一间距。</span><span class="sxs-lookup"><span data-stu-id="535ab-172">In these cases, non-uniform spacing can be applied.</span></span> <span data-ttu-id="535ab-173">下面的示例演示如何将非统一边距间距应用于子元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-173">The following example shows how to apply non-uniform margin spacing to child elements.</span></span> <span data-ttu-id="535ab-174">按此顺序描述边距：左端、顶端、右端和底端。</span><span class="sxs-lookup"><span data-stu-id="535ab-174">Margins are described in this order: left, top, right, bottom.</span></span>  
   
  [!code-cpp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#2)]
  [!code-csharp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#2)]
  [!code-vb[MarginPaddingAlignmentSample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#2)]
- [!code-xml[MarginPaddingAlignmentSample#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
+ [!code-xaml[MarginPaddingAlignmentSample#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
   
 <a name="wcpsdk_layout_amp_padding_properties"></a>   
-## 了解 Padding 属性  
- Padding 在大多数方面类似于 <xref:System.Windows.FrameworkElement.Margin%2A>。  Padding 属性只会在少数类上公开，主要是为了方便起见而公开：<xref:System.Windows.Documents.Block>、<xref:System.Windows.Controls.Border>、<xref:System.Windows.Controls.Control> 和 <xref:System.Windows.Controls.TextBlock> 是公开 Padding 属性的类的示例。  <xref:System.Windows.Controls.Border.Padding%2A> 属性可将子元素的有效大小增大指定的 <xref:System.Windows.Thickness> 值。  
+## <a name="understanding-the-padding-property"></a><span data-ttu-id="535ab-175">了解 Padding 属性</span><span class="sxs-lookup"><span data-stu-id="535ab-175">Understanding the Padding Property</span></span>  
+ <span data-ttu-id="535ab-176">填充状态是类似于<xref:System.Windows.FrameworkElement.Margin%2A>在大多数方面。</span><span class="sxs-lookup"><span data-stu-id="535ab-176">Padding is similar to <xref:System.Windows.FrameworkElement.Margin%2A> in most respects.</span></span> <span data-ttu-id="535ab-177">Padding 属性上仅上公开了一些类，主要是作为一种便于使用： <xref:System.Windows.Documents.Block>， <xref:System.Windows.Controls.Border>， <xref:System.Windows.Controls.Control>，和<xref:System.Windows.Controls.TextBlock>是公开一个填充的属性的类的示例。</span><span class="sxs-lookup"><span data-stu-id="535ab-177">The Padding property is exposed on only on a few classes, primarily as a convenience: <xref:System.Windows.Documents.Block>, <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Control>, and <xref:System.Windows.Controls.TextBlock> are samples of classes that expose a Padding property.</span></span> <span data-ttu-id="535ab-178"><xref:System.Windows.Controls.Border.Padding%2A>属性放大由指定的子元素的有效大小<xref:System.Windows.Thickness>值。</span><span class="sxs-lookup"><span data-stu-id="535ab-178">The <xref:System.Windows.Controls.Border.Padding%2A> property enlarges the effective size of a child element by the specified <xref:System.Windows.Thickness> value.</span></span>  
   
- 下面的示例演示如何将 <xref:System.Windows.Controls.Border.Padding%2A> 应用于父 <xref:System.Windows.Controls.Border> 元素。  
+ <span data-ttu-id="535ab-179">下面的示例演示如何将应用<xref:System.Windows.Controls.Border.Padding%2A>给父<xref:System.Windows.Controls.Border>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-179">The following example shows how to apply <xref:System.Windows.Controls.Border.Padding%2A> to a parent <xref:System.Windows.Controls.Border> element.</span></span>  
   
  [!code-cpp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#3)]
  [!code-csharp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#3)]
  [!code-vb[MarginPaddingAlignmentSample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#3)]
- [!code-xml[MarginPaddingAlignmentSample#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
+ [!code-xaml[MarginPaddingAlignmentSample#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
   
 <a name="wcpsdk_layout_amp_summary"></a>   
-## 在应用程序中使用 Alignment、Margins 和 Padding  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 提供了创建复杂的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 必不可少的定位控制。  您可以利用每个属性的作用来更改子元素定位，从而能够灵活地创建动态的应用程序和用户体验。  
+## <a name="using-alignment-margins-and-padding-in-an-application"></a><span data-ttu-id="535ab-180">在应用程序中使用 Alignment、Margins 和 Padding</span><span class="sxs-lookup"><span data-stu-id="535ab-180">Using Alignment, Margins, and Padding in an Application</span></span>  
+ <span data-ttu-id="535ab-181"><xref:System.Windows.FrameworkElement.HorizontalAlignment%2A><xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>提供创建复杂的所需的定位控制[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="535ab-181"><xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> provide the positioning control necessary to create a complex [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span> <span data-ttu-id="535ab-182">可利用每个属性的作用来更改子元素定位，以便能够灵活地创建动态应用程序和用户体验。</span><span class="sxs-lookup"><span data-stu-id="535ab-182">You can use the effects of each property to change child-element positioning, enabling flexibility in creating dynamic applications and user experiences.</span></span>  
   
- 下面的示例演示本主题中详细论述的各个概念。  此示例以本主题第一个示例中的基础结构为基础，添加了一个 <xref:System.Windows.Controls.Grid> 元素作为第一个示例中 <xref:System.Windows.Controls.Border> 的子项。  <xref:System.Windows.Controls.Border.Padding%2A> 应用于父 <xref:System.Windows.Controls.Border> 元素。  <xref:System.Windows.Controls.Grid> 用于划分三个子 <xref:System.Windows.Controls.StackPanel> 元素之间的空间。  将再次使用 <xref:System.Windows.Controls.Button> 元素显示 <xref:System.Windows.FrameworkElement.Margin%2A> 和 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 的不同效果。  将向每个 <xref:System.Windows.Controls.ColumnDefinition> 中添加 <xref:System.Windows.Controls.TextBlock> 元素，以便更好地定义应用于各列中 <xref:System.Windows.Controls.Button> 元素的不同属性。  
+ <span data-ttu-id="535ab-183">下面的示例演示本主题中详述的各个概念。</span><span class="sxs-lookup"><span data-stu-id="535ab-183">The following example demonstrates each of the concepts that are detailed in this topic.</span></span> <span data-ttu-id="535ab-184">在本主题中的第一个示例中找到的基础结构上生成，此示例将添加<xref:System.Windows.Controls.Grid>元素的子级作为<xref:System.Windows.Controls.Border>中第一个示例。</span><span class="sxs-lookup"><span data-stu-id="535ab-184">Building on the infrastructure found in the first sample in this topic, this example adds a <xref:System.Windows.Controls.Grid> element as a child of the <xref:System.Windows.Controls.Border> in the first sample.</span></span> <span data-ttu-id="535ab-185"><xref:System.Windows.Controls.Border.Padding%2A>应用于父<xref:System.Windows.Controls.Border>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-185"><xref:System.Windows.Controls.Border.Padding%2A> is applied to the parent <xref:System.Windows.Controls.Border> element.</span></span> <span data-ttu-id="535ab-186"><xref:System.Windows.Controls.Grid>用于分区三个子之间的空间<xref:System.Windows.Controls.StackPanel>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-186">The <xref:System.Windows.Controls.Grid> is used to partition space between three child <xref:System.Windows.Controls.StackPanel> elements.</span></span> <span data-ttu-id="535ab-187"><xref:System.Windows.Controls.Button>再次使用元素显示的各种效果<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="535ab-187"><xref:System.Windows.Controls.Button> elements are again used to show the various effects of <xref:System.Windows.FrameworkElement.Margin%2A> and <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>.</span></span> <span data-ttu-id="535ab-188"><xref:System.Windows.Controls.TextBlock>元素添加到每个<xref:System.Windows.Controls.ColumnDefinition>更好地定义应用于的各种属性<xref:System.Windows.Controls.Button>每列中的元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-188"><xref:System.Windows.Controls.TextBlock> elements are added to each <xref:System.Windows.Controls.ColumnDefinition> to better define the various properties applied to the <xref:System.Windows.Controls.Button> elements in each column.</span></span>  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]
  [!code-vb[MarginPaddingAlignmentSample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#4)]
- [!code-xml[MarginPaddingAlignmentSample#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
+ [!code-xaml[MarginPaddingAlignmentSample#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
   
- 编译之后，前面的应用程序将生成类似于下图的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  可以在元素之间的间距中一目了然地看到各个属性值的效果，并且各列中元素的重要属性值显示在 <xref:System.Windows.Controls.TextBlock> 元素内。  
+ <span data-ttu-id="535ab-189">编译后，前面的应用程序生成类似于下图的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="535ab-189">When compiled, the preceding application yields a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] that looks like the following illustration.</span></span> <span data-ttu-id="535ab-190">不同的属性值的效果元素之间的间距中并且每个列中的元素的重要属性值内显示<xref:System.Windows.Controls.TextBlock>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-190">The effects of the various property values are evident in the spacing between elements, and significant property values for elements in each column are shown within <xref:System.Windows.Controls.TextBlock> elements.</span></span>  
   
- ![一个应用程序中的几个定位属性](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.png "layout\_margins\_padding\_aligment\_graphic3")  
+ <span data-ttu-id="535ab-191">![一个应用程序中的多个定位属性](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.PNG "layout_margins_padding_aligment_graphic3")</span><span class="sxs-lookup"><span data-stu-id="535ab-191">![Several positioning properties in one application](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.PNG "layout_margins_padding_aligment_graphic3")</span></span>  
   
 <a name="wcpsdk_layout_amp_alignment_whatsnext"></a>   
-## 接下来的内容  
- 利用 <xref:System.Windows.FrameworkElement> 类定义的定位属性，可以精确地控制元素在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序内的位置。  您现在已了解了多种方法，可以使用这些方法更好地通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 来定位元素。  
+## <a name="whats-next"></a><span data-ttu-id="535ab-192">下一步</span><span class="sxs-lookup"><span data-stu-id="535ab-192">What's Next</span></span>  
+ <span data-ttu-id="535ab-193">定义的定位属性<xref:System.Windows.FrameworkElement>类可以精确地控制中的元素放置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="535ab-193">Positioning properties defined by the <xref:System.Windows.FrameworkElement> class enable fine control of element placement within [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="535ab-194">至此你已了解多种方法，可使用这些方法更好地通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 来定位元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-194">You now have several techniques you can use to better position elements using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- 还提供了一些附加资源，这些资源更加详细地介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局。  [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md) 主题包含有关各个 <xref:System.Windows.Controls.Panel> 元素的更多详细信息。  主题[演练：开始使用 WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)介绍使用布局元素来定位组件并将它们的操作绑定到数据源的高级方法。  
+ <span data-ttu-id="535ab-195">我们还提供了一些附加资源，这些资源更详细地介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局。</span><span class="sxs-lookup"><span data-stu-id="535ab-195">Additional resources are available that explain [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout in greater detail.</span></span> <span data-ttu-id="535ab-196">[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)主题包含更详细地介绍各种<xref:System.Windows.Controls.Panel>元素。</span><span class="sxs-lookup"><span data-stu-id="535ab-196">The [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md) topic contains more detail about the various <xref:System.Windows.Controls.Panel> elements.</span></span> <span data-ttu-id="535ab-197">主题[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)引入了使用布局元素来定位组件并将其操作绑定到数据源的高级的技术。</span><span class="sxs-lookup"><span data-stu-id="535ab-197">The topic [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) introduces advanced techniques that use layout elements to position components and bind their actions to data sources.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement>   
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>   
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>   
- <xref:System.Windows.FrameworkElement.Margin%2A>   
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [布局](../../../../docs/framework/wpf/advanced/layout.md)   
- [WPF Layout Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a><span data-ttu-id="535ab-198">另请参阅</span><span class="sxs-lookup"><span data-stu-id="535ab-198">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement>  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
+ <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
+ <xref:System.Windows.FrameworkElement.Margin%2A>  
+ [<span data-ttu-id="535ab-199">面板概述</span><span class="sxs-lookup"><span data-stu-id="535ab-199">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="535ab-200">布局</span><span class="sxs-lookup"><span data-stu-id="535ab-200">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+ [<span data-ttu-id="535ab-201">WPF 布局库示例</span><span class="sxs-lookup"><span data-stu-id="535ab-201">WPF Layout Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160054)

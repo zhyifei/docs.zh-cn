@@ -10,79 +10,76 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="classes"></a><span data-ttu-id="e8652-104">类</span><span class="sxs-lookup"><span data-stu-id="e8652-104">Classes</span></span>
+<span data-ttu-id="e8652-105">*类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。</span><span class="sxs-lookup"><span data-stu-id="e8652-105">A *class* is a construct that enables you to create your own custom types by grouping together variables of other types, methods and events.</span></span> <span data-ttu-id="e8652-106">类好比是蓝图。</span><span class="sxs-lookup"><span data-stu-id="e8652-106">A class is like a blueprint.</span></span> <span data-ttu-id="e8652-107">它定义类型的数据和行为。</span><span class="sxs-lookup"><span data-stu-id="e8652-107">It defines the data and behavior of a type.</span></span> <span data-ttu-id="e8652-108">如果类未声明为静态，客户端代码就可以通过创建分配给变量的*对象*或*实例*来使用该类。</span><span class="sxs-lookup"><span data-stu-id="e8652-108">If the class is not declared as static, client code can use it by creating *objects* or *instances* which are assigned to a variable.</span></span> <span data-ttu-id="e8652-109">变量会一直保留在内存中，直至对变量的所有引用超出范围为止。</span><span class="sxs-lookup"><span data-stu-id="e8652-109">The variable remains in memory until all references to it go out of scope.</span></span> <span data-ttu-id="e8652-110">超出范围时，CLR 将对其进行标记，以便用于垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="e8652-110">At that time, the CLR marks it as eligible for garbage collection.</span></span> <span data-ttu-id="e8652-111">如果类声明为[静态](language-reference/keywords/static.md)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是*实例变量*来访问它。</span><span class="sxs-lookup"><span data-stu-id="e8652-111">If the class is declared as [static](language-reference/keywords/static.md), then only one copy exists in memory and client code can only access it through the class itself, not an *instance variable*.</span></span> <span data-ttu-id="e8652-112">有关详细信息，请参阅[静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-112">For more information, see [Static classes and static class members](programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
 
-# <a name="classes"></a>类
-*类*属于构造，使用类，可以通过组合其他类型的变量、方法和事件创建自己的自定义类型。 类好比是蓝图。 它定义类型的数据和行为。 如果类未声明为静态，客户端代码就可以通过创建分配给变量的*对象*或*实例*来使用该类。 变量会一直保留在内存中，直至对变量的所有引用超出范围为止。 超出范围时，CLR 将对其进行标记，以便用于垃圾回收。 如果类声明为[静态](language-reference/keywords/static.md)，则内存中只有一个副本，且客户端代码只能通过类本身，而不是*实例变量*来访问它。 有关详细信息，请参阅[静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
-
-## <a name="reference-types"></a>引用类型  
-定义为[类](language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，当您声明引用类型的变量时，该变量会一直包含值 [null](language-reference/keywords/null.md)，直至您使用 [new](language-reference/keywords/new.md) 运算符显式创建对象的实例，或者为该变量分配已经在其他位置使用 [new](language-reference/keywords/new.md) 创建的对象，如下所示:  
+## <a name="reference-types"></a><span data-ttu-id="e8652-113">引用类型</span><span class="sxs-lookup"><span data-stu-id="e8652-113">Reference types</span></span>  
+<span data-ttu-id="e8652-114">定义为[类](language-reference/keywords/class.md)的一个类型是*引用类型*。</span><span class="sxs-lookup"><span data-stu-id="e8652-114">A type that is defined as a [class](language-reference/keywords/class.md) is a *reference type*.</span></span> <span data-ttu-id="e8652-115">在运行时，当您声明引用类型的变量时，该变量会一直包含值 [null](language-reference/keywords/null.md)，直至您使用 [new](language-reference/keywords/new.md) 运算符显式创建对象的实例，或者为该变量分配已经在其他位置使用 [new](language-reference/keywords/new.md) 创建的对象，如下所示:</span><span class="sxs-lookup"><span data-stu-id="e8652-115">At run time, when you declare a variable of a reference type, the variable contains the value [null](language-reference/keywords/null.md) until you explicitly create an instance of the object by using the [new](language-reference/keywords/new.md) operator, or assign it an object that has been created elsewhere by using [new](language-reference/keywords/new.md), as shown in the following example:</span></span>  
 
 [!code-csharp[Reference Types](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-创建对象后，内存位于托管堆上，并且变量只保留对对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../standard/garbage-collection/gc.md)。  
+<span data-ttu-id="e8652-116">创建对象后，内存位于托管堆上，并且变量只保留对对象位置的引用。</span><span class="sxs-lookup"><span data-stu-id="e8652-116">When the object is created, the memory is allocated on the managed heap, and the variable holds only a reference to the location of the object.</span></span> <span data-ttu-id="e8652-117">当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。</span><span class="sxs-lookup"><span data-stu-id="e8652-117">Types on the managed heap require overhead both when they are allocated and when they are reclaimed by the automatic memory management functionality of the CLR, which is known as *garbage collection*.</span></span> <span data-ttu-id="e8652-118">但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。</span><span class="sxs-lookup"><span data-stu-id="e8652-118">However, garbage collection is also highly optimized, and in most scenarios, it does not create a performance issue.</span></span> <span data-ttu-id="e8652-119">有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../standard/garbage-collection/gc.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-119">For more information about garbage collection, see [Automatic memory management and garbage collection](../standard/garbage-collection/gc.md).</span></span>  
   
-引用类型完全支持*继承*，这是面向对象的编程的一个基本特点。 创建类时，可以从其他任何未定义为 [sealed](language-reference/keywords/sealed.md)（密封）的接口或类继承，而其他类可以从你的类继承并重写虚拟方法。 有关详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。
+<span data-ttu-id="e8652-120">引用类型完全支持*继承*，这是面向对象的编程的一个基本特点。</span><span class="sxs-lookup"><span data-stu-id="e8652-120">Reference types fully support *inheritance*, a fundamental characteristic of object-oriented programming.</span></span> <span data-ttu-id="e8652-121">创建类时，可以从其他任何未定义为 [sealed](language-reference/keywords/sealed.md)（密封）的接口或类继承，而其他类可以从你的类继承并重写虚拟方法。</span><span class="sxs-lookup"><span data-stu-id="e8652-121">When you create a class, you can inherit from any other interface or class that is not defined as [sealed](language-reference/keywords/sealed.md), and other classes can inherit from your class and override your virtual methods.</span></span> <span data-ttu-id="e8652-122">有关详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-122">For more information, see [Inheritance](programming-guide/classes-and-structs/inheritance.md).</span></span>
 
-## <a name="declaring-classes"></a>声明类  
-使用 [class](language-reference/keywords/class.md) 关键字可以声明类，如下例所示：  
+## <a name="declaring-classes"></a><span data-ttu-id="e8652-123">声明类</span><span class="sxs-lookup"><span data-stu-id="e8652-123">Declaring classes</span></span>  
+<span data-ttu-id="e8652-124">使用 [class](language-reference/keywords/class.md) 关键字可以声明类，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="e8652-124">Classes are declared by using the [class](language-reference/keywords/class.md) keyword, as shown in the following example:</span></span>  
   
 [!code-csharp[Declaring Classes](../../samples/snippets/csharp/concepts/classes/declaring-classes.cs)]  
   
-**class** 关键字前面是访问修饰符。 由于在此例中使用 [public](language-reference/keywords/public.md)，因此任何人都可以从此类创建对象。 类的名称遵循 **class** 关键字。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为*类成员*。  
+<span data-ttu-id="e8652-125">**class** 关键字前面是访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="e8652-125">The **class** keyword is preceded by the access modifier.</span></span> <span data-ttu-id="e8652-126">由于在此例中使用 [public](language-reference/keywords/public.md)，因此任何人都可以从此类创建对象。</span><span class="sxs-lookup"><span data-stu-id="e8652-126">Because [public](language-reference/keywords/public.md) is used in this case, anyone can create objects from this class.</span></span> <span data-ttu-id="e8652-127">类的名称遵循 **class** 关键字。</span><span class="sxs-lookup"><span data-stu-id="e8652-127">The name of the class follows the **class** keyword.</span></span> <span data-ttu-id="e8652-128">定义的其余部分是类的主体，其中定义了行为和数据。</span><span class="sxs-lookup"><span data-stu-id="e8652-128">The remainder of the definition is the class body, where the behavior and data are defined.</span></span> <span data-ttu-id="e8652-129">类上的字段、属性、方法和事件统称为*类成员*。</span><span class="sxs-lookup"><span data-stu-id="e8652-129">Fields, properties, methods, and events on a class are collectively referred to as *class members*.</span></span>  
   
-## <a name="creating-objects"></a>创建对象  
-类定义对象类型，但不是对象本身。 对象是基于类的具体实体，有时称为类的实例。  
+## <a name="creating-objects"></a><span data-ttu-id="e8652-130">创建对象</span><span class="sxs-lookup"><span data-stu-id="e8652-130">Creating objects</span></span>  
+<span data-ttu-id="e8652-131">类定义对象类型，但不是对象本身。</span><span class="sxs-lookup"><span data-stu-id="e8652-131">A class defines a type of object, but it is not an object itself.</span></span> <span data-ttu-id="e8652-132">对象是基于类的具体实体，有时称为类的实例。</span><span class="sxs-lookup"><span data-stu-id="e8652-132">An object is a concrete entity based on a class, and is sometimes referred to as an instance of a class.</span></span>  
   
-可通过使用 [new](language-reference/keywords/new.md) 关键字，后跟对象要基于的类的名称，来创建对象，如：  
+<span data-ttu-id="e8652-133">可通过使用 [new](language-reference/keywords/new.md) 关键字，后跟对象要基于的类的名称，来创建对象，如：</span><span class="sxs-lookup"><span data-stu-id="e8652-133">Objects can be created by using the [new](language-reference/keywords/new.md) keyword followed by the name of the class that the object will be based on, like this:</span></span>  
   
 [!code-csharp[Creating Objects](../../samples/snippets/csharp/concepts/classes/creating-objects.cs)]   
   
-创建类的实例后，会将一个该对象的引用传递回程序员。 在上一示例中，`object1` 是对基于 `Customer` 的对象的引用。 该引用指向新对象，但不包含对象数据本身。 事实上，可以创建对象引用，而完全无需创建对象本身：  
+<span data-ttu-id="e8652-134">创建类的实例后，会将一个该对象的引用传递回程序员。</span><span class="sxs-lookup"><span data-stu-id="e8652-134">When an instance of a class is created, a reference to the object is passed back to the programmer.</span></span> <span data-ttu-id="e8652-135">在上一示例中，`object1` 是对基于 `Customer` 的对象的引用。</span><span class="sxs-lookup"><span data-stu-id="e8652-135">In the previous example, `object1` is a reference to an object that is based on `Customer`.</span></span> <span data-ttu-id="e8652-136">该引用指向新对象，但不包含对象数据本身。</span><span class="sxs-lookup"><span data-stu-id="e8652-136">This reference refers to the new object but does not contain the object data itself.</span></span> <span data-ttu-id="e8652-137">事实上，可以创建对象引用，而完全无需创建对象本身：</span><span class="sxs-lookup"><span data-stu-id="e8652-137">In fact, you can create an object reference without creating an object at all:</span></span>  
   
 [!code-csharp[Creating Objects](../../samples/snippets/csharp/concepts/classes/creating-objects2.cs)]  
   
-不建议创建这样一个不引用对象的对象引用，因为尝试通过这类引用访问对象会在运行时失败。 但实际上可以使用这类引用来引用某个对象，方法是创建新对象，或者将其分配给现有对象，例如：  
+<span data-ttu-id="e8652-138">不建议创建这样一个不引用对象的对象引用，因为尝试通过这类引用访问对象会在运行时失败。</span><span class="sxs-lookup"><span data-stu-id="e8652-138">We do not recommend creating object references such as this one that does not refer to an object because trying to access an object through such a reference will fail at run time.</span></span> <span data-ttu-id="e8652-139">但实际上可以使用这类引用来引用某个对象，方法是创建新对象，或者将其分配给现有对象，例如：</span><span class="sxs-lookup"><span data-stu-id="e8652-139">However, such a reference can be made to refer to an object, either by creating a new object, or by assigning it to an existing object, such as this:</span></span>  
   
 [!code-csharp[Creating Objects](../../samples/snippets/csharp/concepts/classes/creating-objects3.cs)]  
   
-此代码创建指向同一对象的两个对象引用。 因此，通过 `object3` 对对象所做的任何更改都将在以后使用 `object4` 时反映出来。 由于基于类的对象是通过引用来实现其引用的，因此类被称为引用类型。  
+<span data-ttu-id="e8652-140">此代码创建指向同一对象的两个对象引用。</span><span class="sxs-lookup"><span data-stu-id="e8652-140">This code creates two object references that both refer to the same object.</span></span> <span data-ttu-id="e8652-141">因此，通过 `object3` 对对象所做的任何更改都将在以后使用 `object4` 时反映出来。</span><span class="sxs-lookup"><span data-stu-id="e8652-141">Therefore, any changes to the object made through `object3` will be reflected in subsequent uses of `object4`.</span></span> <span data-ttu-id="e8652-142">由于基于类的对象是通过引用来实现其引用的，因此类被称为引用类型。</span><span class="sxs-lookup"><span data-stu-id="e8652-142">Because objects that are based on classes are referred to by reference, classes are known as reference types.</span></span>  
   
-## <a name="class-inheritance"></a>类继承  
-继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
+## <a name="class-inheritance"></a><span data-ttu-id="e8652-143">类继承</span><span class="sxs-lookup"><span data-stu-id="e8652-143">Class inheritance</span></span>  
+<span data-ttu-id="e8652-144">继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。</span><span class="sxs-lookup"><span data-stu-id="e8652-144">Inheritance is accomplished by using a *derivation*, which means a class is declared by using a *base class* from which it inherits data and behavior.</span></span> <span data-ttu-id="e8652-145">基类通过在派生的类名称后面追加冒号和基类名称来指定，如：</span><span class="sxs-lookup"><span data-stu-id="e8652-145">A base class is specified by appending a colon and the name of the base class following the derived class name, like this:</span></span>  
   
 [!code-csharp[Inheritance](../../samples/snippets/csharp/concepts/classes/inheritance.cs)]  
   
-类声明基类时，会继承基类除构造函数外的所有成员。  
+<span data-ttu-id="e8652-146">类声明基类时，会继承基类除构造函数外的所有成员。</span><span class="sxs-lookup"><span data-stu-id="e8652-146">When a class declares a base class, it inherits all the members of the base class except the constructors.</span></span>  
   
-与 C++ 不同，C# 中的类只能直接从基类继承。 但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。 此外，类还可以直接实现多个接口。 有关详细信息，请参阅[接口](programming-guide/interfaces/index.md)。  
+<span data-ttu-id="e8652-147">与 C++ 不同，C# 中的类只能直接从基类继承。</span><span class="sxs-lookup"><span data-stu-id="e8652-147">Unlike C++, a class in C# can only directly inherit from one base class.</span></span> <span data-ttu-id="e8652-148">但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。</span><span class="sxs-lookup"><span data-stu-id="e8652-148">However, because a base class may itself inherit from another class, a class may indirectly inherit multiple base classes.</span></span> <span data-ttu-id="e8652-149">此外，类还可以直接实现多个接口。</span><span class="sxs-lookup"><span data-stu-id="e8652-149">Furthermore, a class can directly implement more than one interface.</span></span> <span data-ttu-id="e8652-150">有关详细信息，请参阅[接口](programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-150">For more information, see [Interfaces](programming-guide/interfaces/index.md).</span></span>  
   
-类可以声明为 [abstract](language-reference/keywords/abstract.md)（抽象）。 抽象类包含抽象方法，抽象方法包含签名定义但不包含实现。 抽象类不能实例化。 只能通过可实现抽象方法的派生类来使用该类。 与此相反，[sealed](language-reference/keywords/sealed.md)（密封）类不允许其他类继承。 有关详细信息，请参阅[抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+<span data-ttu-id="e8652-151">类可以声明为 [abstract](language-reference/keywords/abstract.md)（抽象）。</span><span class="sxs-lookup"><span data-stu-id="e8652-151">A class can be declared [abstract](language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="e8652-152">抽象类包含抽象方法，抽象方法包含签名定义但不包含实现。</span><span class="sxs-lookup"><span data-stu-id="e8652-152">An abstract class contains abstract methods that have a signature definition but no implementation.</span></span> <span data-ttu-id="e8652-153">抽象类不能实例化。</span><span class="sxs-lookup"><span data-stu-id="e8652-153">Abstract classes cannot be instantiated.</span></span> <span data-ttu-id="e8652-154">只能通过可实现抽象方法的派生类来使用该类。</span><span class="sxs-lookup"><span data-stu-id="e8652-154">They can only be used through derived classes that implement the abstract methods.</span></span> <span data-ttu-id="e8652-155">与此相反，[sealed](language-reference/keywords/sealed.md)（密封）类不允许其他类继承。</span><span class="sxs-lookup"><span data-stu-id="e8652-155">By contrast, a [sealed](language-reference/keywords/sealed.md) class does not allow other classes to derive from it.</span></span> <span data-ttu-id="e8652-156">有关详细信息，请参阅[抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-156">For more information, see [Abstract and sealed classes and class members](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
-类定义可以在不同的源文件之间分割。 有关详细信息，请参阅[分部类定义](programming-guide/classes-and-structs/partial-classes-and-methods.md)。  
+<span data-ttu-id="e8652-157">类定义可以在不同的源文件之间分割。</span><span class="sxs-lookup"><span data-stu-id="e8652-157">Class definitions can be split between different source files.</span></span> <span data-ttu-id="e8652-158">有关详细信息，请参阅[分部类定义](programming-guide/classes-and-structs/partial-classes-and-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-158">For more information, see [Partial class definitions](programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
  
-## <a name="example"></a>示例
-下例定义了一个公共类，该类包含一个字段、一个方法和一个名为构造函数的特殊方法。 有关详细信息，请参阅[构造函数](programming-guide/classes-and-structs/constructors.md)。 然后使用 **new** 关键字实例化类。
+## <a name="example"></a><span data-ttu-id="e8652-159">示例</span><span class="sxs-lookup"><span data-stu-id="e8652-159">Example</span></span>
+<span data-ttu-id="e8652-160">下例定义了一个公共类，该类包含一个字段、一个方法和一个名为构造函数的特殊方法。</span><span class="sxs-lookup"><span data-stu-id="e8652-160">In the following example, a public class that contains a single field, a method, and a special method called a constructor is defined.</span></span> <span data-ttu-id="e8652-161">有关详细信息，请参阅[构造函数](programming-guide/classes-and-structs/constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-161">For more information, see [Constructors](programming-guide/classes-and-structs/constructors.md).</span></span> <span data-ttu-id="e8652-162">然后使用 **new** 关键字实例化类。</span><span class="sxs-lookup"><span data-stu-id="e8652-162">The class is then instantiated with the **new** keyword.</span></span>
 
 [!code-csharp[Class Example](../../samples/snippets/csharp/concepts/classes/class-example.cs)]  
   
-## <a name="c-language-specification"></a>C# 语言规范  
-有关详细信息，请参阅 [C# 语言规范](language-reference/language-specification/index.md)。 该语言规范是 C# 语法和用法的权威资料。
+## <a name="c-language-specification"></a><span data-ttu-id="e8652-163">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="e8652-163">C# language specification</span></span>  
+<span data-ttu-id="e8652-164">有关详细信息，请参阅 [C# 语言规范](language-reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e8652-164">For more information, see the [C# language specification](language-reference/language-specification/index.md).</span></span> <span data-ttu-id="e8652-165">该语言规范是 C# 语法和用法的权威资料。</span><span class="sxs-lookup"><span data-stu-id="e8652-165">The language specification is the definitive source for C# syntax and usage.</span></span>
   
-## <a name="see-also"></a>请参阅  
-[C# 编程指南](programming-guide/index.md)   
-[多形性](programming-guide/classes-and-structs/polymorphism.md)   
-[类和结构成员](programming-guide/classes-and-structs/members.md)   
-[类和结构方法](programming-guide/classes-and-structs/methods.md)   
-[构造函数](programming-guide/classes-and-structs/constructors.md)   
-[终结器](programming-guide/classes-and-structs/destructors.md)   
-[对象](programming-guide/classes-and-structs/objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="e8652-166">请参阅</span><span class="sxs-lookup"><span data-stu-id="e8652-166">See also</span></span>  
+<span data-ttu-id="e8652-167">[C# 编程指南](programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-167">[C# programming guide](programming-guide/index.md) </span></span>  
+<span data-ttu-id="e8652-168">[多形性](programming-guide/classes-and-structs/polymorphism.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-168">[Polymorphism](programming-guide/classes-and-structs/polymorphism.md) </span></span>  
+<span data-ttu-id="e8652-169">[类和结构成员](programming-guide/classes-and-structs/members.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-169">[Class and struct members](programming-guide/classes-and-structs/members.md) </span></span>  
+<span data-ttu-id="e8652-170">[类和结构方法](programming-guide/classes-and-structs/methods.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-170">[Class and struct methods](programming-guide/classes-and-structs/methods.md) </span></span>  
+<span data-ttu-id="e8652-171">[构造函数](programming-guide/classes-and-structs/constructors.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-171">[Constructors](programming-guide/classes-and-structs/constructors.md) </span></span>  
+<span data-ttu-id="e8652-172">[终结器](programming-guide/classes-and-structs/destructors.md) </span><span class="sxs-lookup"><span data-stu-id="e8652-172">[Finalizers](programming-guide/classes-and-structs/destructors.md) </span></span>  
+[<span data-ttu-id="e8652-173">对象</span><span class="sxs-lookup"><span data-stu-id="e8652-173">Objects</span></span>](programming-guide/classes-and-structs/objects.md)
 

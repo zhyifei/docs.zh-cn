@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 联接不同文件 (LINQ) (Visual Basic 中) 的内容 |Microsoft 文档"
+title: "如何： 联接不同文件 (LINQ) (Visual Basic) 的内容"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何︰ 联接不同文件 (LINQ) (Visual Basic 中) 的内容
-此示例演示如何将共享一个公共值，用作匹配的键的两个以逗号分隔文件中的数据。 如果必须组合来自两个电子表格数据或从电子表格，而是从文件具有另一种格式，为一个新文件，此技术很有用。 您可以修改该示例能工作与任何类型的结构化文本。  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="adf23-102">如何： 联接不同文件 (LINQ) (Visual Basic) 的内容</span><span class="sxs-lookup"><span data-stu-id="adf23-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="adf23-103">本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。</span><span class="sxs-lookup"><span data-stu-id="adf23-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="adf23-104">如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。</span><span class="sxs-lookup"><span data-stu-id="adf23-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="adf23-105">可以修改此示例以用于任何类型的结构化文本。</span><span class="sxs-lookup"><span data-stu-id="adf23-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>若要创建的数据文件  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="adf23-106">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="adf23-106">To create the data files</span></span>  
   
-1.  将以下行复制到名为 scores.csv 文件并将其保存到您的项目文件夹。 该文件表示电子表格数据。 第 1 列是学生的 ID，以及 2 至 5 列是测验分数。  
+1.  <span data-ttu-id="adf23-107">将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="adf23-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="adf23-108">此文件表示电子表格数据。</span><span class="sxs-lookup"><span data-stu-id="adf23-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="adf23-109">第 1 列是学生的 ID，第 2 至 5 列是测验分数。</span><span class="sxs-lookup"><span data-stu-id="adf23-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  将以下行复制到名为 names.csv 文件并将其保存到您的项目文件夹。 该文件表示电子表格，其中包含学生的姓氏、 名字和学生 id。  
+2.  <span data-ttu-id="adf23-110">将以下行复制到名为 names.csv 的文件，并将文件保存到项目文件夹。</span><span class="sxs-lookup"><span data-stu-id="adf23-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="adf23-111">此文件表示电子表格，其中包含学生的姓氏、名字和学生 ID。</span><span class="sxs-lookup"><span data-stu-id="adf23-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +57,7 @@ ms.lasthandoff: 03/13/2017
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="adf23-112">示例</span><span class="sxs-lookup"><span data-stu-id="adf23-112">Example</span></span>  
   
 ```vb  
 Class JoinStrings  
@@ -134,9 +126,9 @@ End Class
 '12 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="adf23-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="adf23-113">Compiling the Code</span></span>  
+ <span data-ttu-id="adf23-114">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="adf23-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="adf23-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="adf23-115">See Also</span></span>  
+ [<span data-ttu-id="adf23-116">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="adf23-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="adf23-117">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="adf23-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

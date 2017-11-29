@@ -1,44 +1,44 @@
 ---
-title: "ToolStripProgressBar 控件概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripProgressBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "进度控件"
-  - "工具栏 [Windows 窗体], 进度栏"
-  - "ToolStripProgressBar 控件 [Windows 窗体], 关于 ToolStripProgressBar 控件"
+title: "ToolStripProgressBar 控件概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripProgressBar
+helpviewer_keywords:
+- toolbars [Windows Forms], progress bars
+- progress controls [Windows Forms]
+- ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# ToolStripProgressBar 控件概述
-<xref:System.Windows.Forms.ToolStripProgressBar> 将所有 <xref:System.Windows.Forms.ToolStrip> 控件的漂浮和呈现功能与它的典型进程跟踪功能组合在一起。  <xref:System.Windows.Forms.ToolStripProgressBar> 在大多数情况下由 <xref:System.Windows.Forms.StatusStrip> 承载，在很少情况下由 <xref:System.Windows.Forms.ToolStrip> 承载。  
+# <a name="toolstripprogressbar-control-overview"></a><span data-ttu-id="c2f6d-102">ToolStripProgressBar 控件概述</span><span class="sxs-lookup"><span data-stu-id="c2f6d-102">ToolStripProgressBar Control Overview</span></span>
+<span data-ttu-id="c2f6d-103"><xref:System.Windows.Forms.ToolStripProgressBar>结合了漂浮和呈现功能的所有<xref:System.Windows.Forms.ToolStrip>具有其典型进程跟踪功能的控件。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines the rafting and rendering functionality of all <xref:System.Windows.Forms.ToolStrip> controls with its typical process-tracking functionality.</span></span> <span data-ttu-id="c2f6d-104">A<xref:System.Windows.Forms.ToolStripProgressBar>最通常由承载<xref:System.Windows.Forms.StatusStrip>，和少情况下由<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-104">A <xref:System.Windows.Forms.ToolStripProgressBar> is most usually hosted by <xref:System.Windows.Forms.StatusStrip>, and less frequently by a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
- 尽管 <xref:System.Windows.Forms.ToolStripProgressBar> 替换了早期版本的控件并添加了功能，但是仍可以在需要时选择保留 <xref:System.Windows.Forms.ToolStripProgressBar> 以备向后兼容和将来使用。  
+ <span data-ttu-id="c2f6d-105">尽管<xref:System.Windows.Forms.ToolStripProgressBar>替换，并将功能添加到在上一版本中，控件<xref:System.Windows.Forms.ToolStripProgressBar>如果需要保留用于向后兼容性和将来使用。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-105">Although <xref:System.Windows.Forms.ToolStripProgressBar> replaces and adds functionality to the control in previous versions, <xref:System.Windows.Forms.ToolStripProgressBar> is retained for both backward compatibility and future use if desired.</span></span>  
   
-### 重要的 ToolStripProgressBar 成员  
+### <a name="important-toolstripprogressbar-members"></a><span data-ttu-id="c2f6d-106">重要 ToolStripProgressBar 成员</span><span class="sxs-lookup"><span data-stu-id="c2f6d-106">Important ToolStripProgressBar Members</span></span>  
   
-|名称|说明|  
-|--------|--------|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|获取或设置一个值，该值表示每次 <xref:System.Windows.Forms.ProgressBarStyle> 显示更新之间的延迟（以毫秒为单位）。|  
-|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|获取或设置为此 <xref:System.Windows.Forms.ToolStripProgressBar> 定义的范围上限。|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|获取或设置为此 <xref:System.Windows.Forms.ToolStripProgressBar> 定义的范围下限。|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|获取或设置 <xref:System.Windows.Forms.ToolStripProgressBar> 用来显示操作进度的样式。|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|获取或设置 <xref:System.Windows.Forms.ToolStripProgressBar> 的当前值。|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|按照 <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> 属性的数量增加进度栏的当前位置。|  
+|<span data-ttu-id="c2f6d-107">名称</span><span class="sxs-lookup"><span data-stu-id="c2f6d-107">Name</span></span>|<span data-ttu-id="c2f6d-108">描述</span><span class="sxs-lookup"><span data-stu-id="c2f6d-108">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|<span data-ttu-id="c2f6d-109">获取或设置一个值，表示每个之间的延迟<xref:System.Windows.Forms.ProgressBarStyle.Marquee>显示更新，以毫秒为单位。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-109">Gets or sets a value representing the delay between each <xref:System.Windows.Forms.ProgressBarStyle.Marquee> display update, in milliseconds.</span></span>|  
+|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|<span data-ttu-id="c2f6d-110">获取或设置定义此范围的上限<xref:System.Windows.Forms.ToolStripProgressBar>。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-110">Gets or sets the upper bound of the range that is defined for this <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|<span data-ttu-id="c2f6d-111">获取或设置此定义的范围下限<xref:System.Windows.Forms.ToolStripProgressBar>。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-111">Gets or sets the lower bound of the range that is defined for this <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|<span data-ttu-id="c2f6d-112">获取或设置的样式<xref:System.Windows.Forms.ToolStripProgressBar>使用来显示操作的进度。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-112">Gets or sets the style that the <xref:System.Windows.Forms.ToolStripProgressBar> uses to display the progress of an operation.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|<span data-ttu-id="c2f6d-113">获取或设置的当前值<xref:System.Windows.Forms.ToolStripProgressBar>。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-113">Gets or sets the current value of the <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|<span data-ttu-id="c2f6d-114">进度栏的当前位置前移量<xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c2f6d-114">Advances the current position of the progress bar by the amount of the <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> property.</span></span>|  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="c2f6d-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c2f6d-115">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripProgressBar>

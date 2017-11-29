@@ -1,45 +1,43 @@
 ---
-title: "Ansi (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Ansi"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ANSI"
-  - "ANSI, Visual Basic"
-  - "Declare 语句, 封送处理字符串"
+title: Ansi (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Ansi
+helpviewer_keywords:
+- Declare statement [Visual Basic], marshaling strings [Visual Basic]
+- ANSI, Visual Basic
+- ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa5724eb9123b2776c3a579e4244c55b3129816b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Ansi (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定 Visual Basic 应将所有字符串封送到 American National Standards Institute \(ANSI\) 值，不管所声明的外部过程的名称是什么。  
+# <a name="ansi-visual-basic"></a><span data-ttu-id="625c9-102">Ansi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="625c9-102">Ansi (Visual Basic)</span></span>
+<span data-ttu-id="625c9-103">指定 Visual Basic 应封送到美国国家标准学会 (ANSI) 值，无论所声明的外部过程的名称的所有字符串。</span><span class="sxs-lookup"><span data-stu-id="625c9-103">Specifies that Visual Basic should marshal all strings to American National Standards Institute (ANSI) values regardless of the name of the external procedure being declared.</span></span>  
   
- 调用在项目外定义的过程时，Visual Basic 编译器不能访问正确调用过程所需的信息。  这些信息包括过程所在位置、标识方式、调用序列和返回类型以及它所使用的字符串字符集。  [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md) 创建一个对外部过程的引用并提供这些必需的信息。  
+ <span data-ttu-id="625c9-104">在调用在项目外部定义的过程时，Visual Basic 编译器没有正确调用该过程所需的信息的访问。</span><span class="sxs-lookup"><span data-stu-id="625c9-104">When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly.</span></span> <span data-ttu-id="625c9-105">此信息包括过程所在的位置、 标识的方式、 其调用的序列和返回类型和字符串字符将其设置使用。</span><span class="sxs-lookup"><span data-stu-id="625c9-105">This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses.</span></span> <span data-ttu-id="625c9-106">[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)创建对外部过程的引用，并提供这些必需的信息。</span><span class="sxs-lookup"><span data-stu-id="625c9-106">The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.</span></span>  
   
- `Declare` 语句中的 `charsetmodifier` 部分提供在调用外部过程期间封送字符串所需的字符集信息。  它还影响 Visual Basic 在外部文件中搜索外部过程名称的方式。  `Ansi` 修饰符指定 Visual Basic 应将所有字符串封送到 ANSI 值，并应查询该过程，同时在搜索期间不修改过程的名称。  
+ <span data-ttu-id="625c9-107">`charsetmodifier`部分`Declare`语句提供期间对外部过程的调用封送处理字符串的字符组信息。</span><span class="sxs-lookup"><span data-stu-id="625c9-107">The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure.</span></span> <span data-ttu-id="625c9-108">它还会影响 Visual Basic 会外部过程名称的外部文件的搜索。</span><span class="sxs-lookup"><span data-stu-id="625c9-108">It also affects how Visual Basic searches the external file for the external procedure name.</span></span> <span data-ttu-id="625c9-109">`Ansi`修饰符指定 Visual Basic 应封送的所有字符串转换为 ANSI 值和应查找而无需在搜索过程中修改其名称的过程。</span><span class="sxs-lookup"><span data-stu-id="625c9-109">The `Ansi` modifier specifies that Visual Basic should marshal all strings to ANSI values and should look up the procedure without modifying its name during the search.</span></span>  
   
- 如果没有指定字符集修饰符，则默认使用 `Ansi`。  
+ <span data-ttu-id="625c9-110">如果不指定任何字符集修饰符，则`Ansi`是默认设置。</span><span class="sxs-lookup"><span data-stu-id="625c9-110">If no character set modifier is specified, `Ansi` is the default.</span></span>  
   
-## 备注  
- `Ansi` 修饰符可用于下面的上下文中：  
+## <a name="remarks"></a><span data-ttu-id="625c9-111">备注</span><span class="sxs-lookup"><span data-stu-id="625c9-111">Remarks</span></span>  
+ <span data-ttu-id="625c9-112">`Ansi`修饰符可用于在此上下文中：</span><span class="sxs-lookup"><span data-stu-id="625c9-112">The `Ansi` modifier can be used in this context:</span></span>  
   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="625c9-113">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="625c9-113">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## 智能设备开发人员说明  
- 不支持此关键字。  
+## <a name="smart-device-developer-notes"></a><span data-ttu-id="625c9-114">智能设备的开发人员说明</span><span class="sxs-lookup"><span data-stu-id="625c9-114">Smart Device Developer Notes</span></span>  
+ <span data-ttu-id="625c9-115">此关键字不受支持。</span><span class="sxs-lookup"><span data-stu-id="625c9-115">This keyword is not supported.</span></span>  
   
-## 请参阅  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="625c9-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="625c9-116">See Also</span></span>  
+ [<span data-ttu-id="625c9-117">Auto</span><span class="sxs-lookup"><span data-stu-id="625c9-117">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [<span data-ttu-id="625c9-118">Unicode</span><span class="sxs-lookup"><span data-stu-id="625c9-118">Unicode</span></span>](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [<span data-ttu-id="625c9-119">关键字</span><span class="sxs-lookup"><span data-stu-id="625c9-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

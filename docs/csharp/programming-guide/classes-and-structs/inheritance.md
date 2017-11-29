@@ -1,12 +1,9 @@
 ---
 title: "继承（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,70 +12,54 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
+# <a name="inheritance-c-programming-guide"></a><span data-ttu-id="b8548-102">继承（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="b8548-102">Inheritance (C# Programming Guide)</span></span>
 
-继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。 通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 派生类只能有一个直接基类。 但是，继承是可传递的。 如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。  
+<span data-ttu-id="b8548-103">继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。</span><span class="sxs-lookup"><span data-stu-id="b8548-103">Inheritance, together with encapsulation and polymorphism, is one of the three primary characteristics of object-oriented programming.</span></span> <span data-ttu-id="b8548-104">通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。</span><span class="sxs-lookup"><span data-stu-id="b8548-104">Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.</span></span> <span data-ttu-id="b8548-105">其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。</span><span class="sxs-lookup"><span data-stu-id="b8548-105">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="b8548-106">派生类只能有一个直接基类。</span><span class="sxs-lookup"><span data-stu-id="b8548-106">A derived class can have only one direct base class.</span></span> <span data-ttu-id="b8548-107">但是，继承是可传递的。</span><span class="sxs-lookup"><span data-stu-id="b8548-107">However, inheritance is transitive.</span></span> <span data-ttu-id="b8548-108">如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。</span><span class="sxs-lookup"><span data-stu-id="b8548-108">If ClassC is derived from ClassB, and ClassB is derived from ClassA, ClassC inherits the members declared in ClassB and ClassA.</span></span>  
   
 > [!NOTE]
->  结构不支持继承，但它们可以实现接口。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
+>  <span data-ttu-id="b8548-109">结构不支持继承，但它们可以实现接口。</span><span class="sxs-lookup"><span data-stu-id="b8548-109">Structs do not support inheritance, but they can implement interfaces.</span></span> <span data-ttu-id="b8548-110">有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-110">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
- 从概念上讲，派生类是基类的专门化。 例如，如果有一个基类 `Animal`，则可以有一个名为 `Mammal` 的派生类，以及另一个名为 `Reptile` 的派生类。 `Mammal` 是 `Animal`，`Reptile` 也是 `Animal`，但每个派生类表示基类的不同专门化。  
+ <span data-ttu-id="b8548-111">从概念上讲，派生类是基类的专门化。</span><span class="sxs-lookup"><span data-stu-id="b8548-111">Conceptually, a derived class is a specialization of the base class.</span></span> <span data-ttu-id="b8548-112">例如，如果有一个基类 `Animal`，则可以有一个名为 `Mammal` 的派生类，以及另一个名为 `Reptile` 的派生类。</span><span class="sxs-lookup"><span data-stu-id="b8548-112">For example, if you have a base class `Animal`, you might have one derived class that is named `Mammal` and another derived class that is named `Reptile`.</span></span> <span data-ttu-id="b8548-113">`Mammal` 是 `Animal`，`Reptile` 也是 `Animal`，但每个派生类表示基类的不同专门化。</span><span class="sxs-lookup"><span data-stu-id="b8548-113">A `Mammal` is an `Animal`, and a `Reptile` is an `Animal`, but each derived class represents different specializations of the base class.</span></span>  
   
- 定义要从其他类派生的类时，派生类会隐式获得基类的所有成员（除了其构造函数和终结器）。 派生类因而可以重用基类中的代码，而无需重新实现。 在派生类中，可以添加更多成员。 通过这种方法，派生类可扩展基类的功能。  
+ <span data-ttu-id="b8548-114">定义要从其他类派生的类时，派生类会隐式获得基类的所有成员（除了其构造函数和终结器）。</span><span class="sxs-lookup"><span data-stu-id="b8548-114">When you define a class to derive from another class, the derived class implicitly gains all the members of the base class, except for its constructors and finalizers.</span></span> <span data-ttu-id="b8548-115">派生类因而可以重用基类中的代码，而无需重新实现。</span><span class="sxs-lookup"><span data-stu-id="b8548-115">The derived class can thereby reuse the code in the base class without having to re-implement it.</span></span> <span data-ttu-id="b8548-116">在派生类中，可以添加更多成员。</span><span class="sxs-lookup"><span data-stu-id="b8548-116">In the derived class, you can add more members.</span></span> <span data-ttu-id="b8548-117">通过这种方法，派生类可扩展基类的功能。</span><span class="sxs-lookup"><span data-stu-id="b8548-117">In this manner, the derived class extends the functionality of the base class.</span></span>  
   
- 下图显示一个类 `WorkItem`，它表示某个业务流程中的工作项。 像所有类一样，它派生自 <xref:System.Object?displayProperty=fullName> 且继承其所有方法。 `WorkItem` 添加了自己的五个成员。 其中包括一个构造函数，因为无法继承构造函数。 类 `ChangeRequest` 继承自 `WorkItem`，表示特定类型的工作项。 `ChangeRequest` 将另外两个成员添加到它从 `WorkItem` 和 <xref:System.Object> 继承的成员中。 它必须添加自己的构造函数，并且还添加了 `originalItemID`。 属性 `originalItemID` 使 `ChangeRequest` 实例可以与向其应用更改请求的原始 `WorkItem` 相关联。  
+ <span data-ttu-id="b8548-118">下图显示一个类 `WorkItem`，它表示某个业务流程中的工作项。</span><span class="sxs-lookup"><span data-stu-id="b8548-118">The following illustration shows a class `WorkItem` that represents an item of work in some business process.</span></span> <span data-ttu-id="b8548-119">像所有类一样，它派生自 <xref:System.Object?displayProperty=nameWithType> 且继承其所有方法。</span><span class="sxs-lookup"><span data-stu-id="b8548-119">Like all classes, it derives from <xref:System.Object?displayProperty=nameWithType> and inherits all its methods.</span></span> <span data-ttu-id="b8548-120">`WorkItem` 添加了自己的五个成员。</span><span class="sxs-lookup"><span data-stu-id="b8548-120">`WorkItem` adds five members of its own.</span></span> <span data-ttu-id="b8548-121">其中包括一个构造函数，因为无法继承构造函数。</span><span class="sxs-lookup"><span data-stu-id="b8548-121">These include a constructor, because constructors are not inherited.</span></span> <span data-ttu-id="b8548-122">类 `ChangeRequest` 继承自 `WorkItem`，表示特定类型的工作项。</span><span class="sxs-lookup"><span data-stu-id="b8548-122">Class `ChangeRequest` inherits from `WorkItem` and represents a particular kind of work item.</span></span> <span data-ttu-id="b8548-123">`ChangeRequest` 将另外两个成员添加到它从 `WorkItem` 和 <xref:System.Object> 继承的成员中。</span><span class="sxs-lookup"><span data-stu-id="b8548-123">`ChangeRequest` adds two more members to the members that it inherits from `WorkItem` and from <xref:System.Object>.</span></span> <span data-ttu-id="b8548-124">它必须添加自己的构造函数，并且还添加了 `originalItemID`。</span><span class="sxs-lookup"><span data-stu-id="b8548-124">It must add its own constructor, and it also adds `originalItemID`.</span></span> <span data-ttu-id="b8548-125">属性 `originalItemID` 使 `ChangeRequest` 实例可以与向其应用更改请求的原始 `WorkItem` 相关联。</span><span class="sxs-lookup"><span data-stu-id="b8548-125">Property `originalItemID` enables the `ChangeRequest` instance to be associated with the original `WorkItem` to which the change request applies.</span></span>  
   
- ![类继承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-类继承  
+ <span data-ttu-id="b8548-126">![类继承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")</span><span class="sxs-lookup"><span data-stu-id="b8548-126">![Class Inheritance](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")</span></span>  
+<span data-ttu-id="b8548-127">类继承</span><span class="sxs-lookup"><span data-stu-id="b8548-127">Class inheritance</span></span>  
   
- 下面的示例演示如何在 C# 中表示前面图中所示的类关系。 该示例还演示了 `WorkItem` 替代虚方法 <xref:System.Object.ToString%2A?displayProperty=fullName> 的方式，以及 `ChangeRequest` 类继承该方法的 `WorkItem` 的实现方式。  
+ <span data-ttu-id="b8548-128">下面的示例演示如何在 C# 中表示前面图中所示的类关系。</span><span class="sxs-lookup"><span data-stu-id="b8548-128">The following example shows how the class relationships demonstrated in the previous illustration are expressed in C#.</span></span> <span data-ttu-id="b8548-129">该示例还演示了 `WorkItem` 替代虚方法 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 的方式，以及 `ChangeRequest` 类继承该方法的 `WorkItem` 的实现方式。</span><span class="sxs-lookup"><span data-stu-id="b8548-129">The example also shows how `WorkItem` overrides the virtual method <xref:System.Object.ToString%2A?displayProperty=nameWithType>, and how the `ChangeRequest` class inherits the `WorkItem` implementation of the method.</span></span>  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
-## <a name="abstract-and-virtual-methods"></a>抽象方法和虚方法  
- 基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。 如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。 如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。 抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。 有关详细信息，请参阅[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+## <a name="abstract-and-virtual-methods"></a><span data-ttu-id="b8548-130">抽象方法和虚方法</span><span class="sxs-lookup"><span data-stu-id="b8548-130">Abstract and Virtual Methods</span></span>  
+ <span data-ttu-id="b8548-131">基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。</span><span class="sxs-lookup"><span data-stu-id="b8548-131">When a base class declares a method as [virtual](../../../csharp/language-reference/keywords/virtual.md), a derived class can [override](../../../csharp/language-reference/keywords/override.md) the method with its own implementation.</span></span> <span data-ttu-id="b8548-132">如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。</span><span class="sxs-lookup"><span data-stu-id="b8548-132">If a base class declares a member as [abstract](../../../csharp/language-reference/keywords/abstract.md), that method must be overridden in any non-abstract class that directly inherits from that class.</span></span> <span data-ttu-id="b8548-133">如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。</span><span class="sxs-lookup"><span data-stu-id="b8548-133">If a derived class is itself abstract, it inherits abstract members without implementing them.</span></span> <span data-ttu-id="b8548-134">抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。</span><span class="sxs-lookup"><span data-stu-id="b8548-134">Abstract and virtual members are the basis for polymorphism, which is the second primary characteristic of object-oriented programming.</span></span> <span data-ttu-id="b8548-135">有关详细信息，请参阅[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-135">For more information, see [Polymorphism](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).</span></span>  
   
-## <a name="abstract-base-classes"></a>抽象基类  
- 如果要使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字防止直接实例化，则可以将类声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果这样做，则仅当从该类派生新类时，才能使用该类。 抽象类可以包含一个或多个本身声明为抽象的方法签名。 这些签名指定参数和返回值，但没有任何实现（方法体）。 抽象类不必包含抽象成员；但是，如果类包含抽象成员，则类本身必须声明为抽象。 本身不抽象的派生类必须为来自抽象基类的任何抽象方法提供实现。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+## <a name="abstract-base-classes"></a><span data-ttu-id="b8548-136">抽象基类</span><span class="sxs-lookup"><span data-stu-id="b8548-136">Abstract Base Classes</span></span>  
+ <span data-ttu-id="b8548-137">如果要使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字防止直接实例化，则可以将类声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-137">You can declare a class as [abstract](../../../csharp/language-reference/keywords/abstract.md) if you want to prevent direct instantiation by using the [new](../../../csharp/language-reference/keywords/new.md) keyword.</span></span> <span data-ttu-id="b8548-138">如果这样做，则仅当从该类派生新类时，才能使用该类。</span><span class="sxs-lookup"><span data-stu-id="b8548-138">If you do this, the class can be used only if a new class is derived from it.</span></span> <span data-ttu-id="b8548-139">抽象类可以包含一个或多个本身声明为抽象的方法签名。</span><span class="sxs-lookup"><span data-stu-id="b8548-139">An abstract class can contain one or more method signatures that themselves are declared as abstract.</span></span> <span data-ttu-id="b8548-140">这些签名指定参数和返回值，但没有任何实现（方法体）。</span><span class="sxs-lookup"><span data-stu-id="b8548-140">These signatures specify the parameters and return value but have no implementation (method body).</span></span> <span data-ttu-id="b8548-141">抽象类不必包含抽象成员；但是，如果类包含抽象成员，则类本身必须声明为抽象。</span><span class="sxs-lookup"><span data-stu-id="b8548-141">An abstract class does not have to contain abstract members; however, if a class does contain an abstract member, the class itself must be declared as abstract.</span></span> <span data-ttu-id="b8548-142">本身不抽象的派生类必须为来自抽象基类的任何抽象方法提供实现。</span><span class="sxs-lookup"><span data-stu-id="b8548-142">Derived classes that are not abstract themselves must provide the implementation for any abstract methods from an abstract base class.</span></span> <span data-ttu-id="b8548-143">有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-143">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
-## <a name="interfaces"></a>接口  
- 接口是引用类型，有些类似于仅包含抽象成员的抽象基类。 类实现接口时，它必须为接口的所有成员提供实现。 类可以实现多个接口，即使它只能派生自单个直接基类。  
+## <a name="interfaces"></a><span data-ttu-id="b8548-144">接口</span><span class="sxs-lookup"><span data-stu-id="b8548-144">Interfaces</span></span>  
+ <span data-ttu-id="b8548-145">接口是引用类型，有些类似于仅包含抽象成员的抽象基类。</span><span class="sxs-lookup"><span data-stu-id="b8548-145">An *interface* is a reference type that is somewhat similar to an abstract base class that consists of only abstract members.</span></span> <span data-ttu-id="b8548-146">类实现接口时，它必须为接口的所有成员提供实现。</span><span class="sxs-lookup"><span data-stu-id="b8548-146">When a class implements an interface, it must provide an implementation for all the members of the interface.</span></span> <span data-ttu-id="b8548-147">类可以实现多个接口，即使它只能派生自单个直接基类。</span><span class="sxs-lookup"><span data-stu-id="b8548-147">A class can implement multiple interfaces even though it can derive from only a single direct base class.</span></span>  
   
- 接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=fullName> 接口可由任何类或结构实现，这些类或构造必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
+ <span data-ttu-id="b8548-148">接口用于为类定义特定功能，这些功能不一定具有“是”关系。</span><span class="sxs-lookup"><span data-stu-id="b8548-148">Interfaces are used to define specific capabilities for classes that do not necessarily have an "is a" relationship.</span></span> <span data-ttu-id="b8548-149">例如，<xref:System.IEquatable%601?displayProperty=nameWithType> 接口可由任何类或结构实现，这些类或构造必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。</span><span class="sxs-lookup"><span data-stu-id="b8548-149">For example, the <xref:System.IEquatable%601?displayProperty=nameWithType> interface can be implemented by any class or struct that has to enable client code to determine whether two objects of the type are equivalent (however the type defines equivalence).</span></span> <span data-ttu-id="b8548-150"><xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。</span><span class="sxs-lookup"><span data-stu-id="b8548-150"><xref:System.IEquatable%601> does not imply the same kind of "is a" relationship that exists between a base class and a derived class (for example, a `Mammal` is an `Animal`).</span></span> <span data-ttu-id="b8548-151">有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-151">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
-## <a name="preventing-further-derivation"></a>防止进一步派生  
- 类可以通过将自己或成员声明为[密封](../../../csharp/language-reference/keywords/sealed.md)，来防止其他类继承自它或继承自其任何成员。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+## <a name="preventing-further-derivation"></a><span data-ttu-id="b8548-152">防止进一步派生</span><span class="sxs-lookup"><span data-stu-id="b8548-152">Preventing Further Derivation</span></span>  
+ <span data-ttu-id="b8548-153">类可以通过将自己或成员声明为[密封](../../../csharp/language-reference/keywords/sealed.md)，来防止其他类继承自它或继承自其任何成员。</span><span class="sxs-lookup"><span data-stu-id="b8548-153">A class can prevent other classes from inheriting from it, or from any of its members, by declaring itself or the member as [sealed](../../../csharp/language-reference/keywords/sealed.md).</span></span> <span data-ttu-id="b8548-154">有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-154">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
-## <a name="derived-class-hiding-of-base-class-members"></a>基类成员的派生类隐藏  
- 派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。 [new](../../../csharp/language-reference/keywords/new.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。 使用 [new](../../../csharp/language-reference/keywords/new.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，则会生成编译器警告。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+## <a name="derived-class-hiding-of-base-class-members"></a><span data-ttu-id="b8548-155">基类成员的派生类隐藏</span><span class="sxs-lookup"><span data-stu-id="b8548-155">Derived Class Hiding of Base Class Members</span></span>  
+ <span data-ttu-id="b8548-156">派生类可以通过使用相同名称和签名声明成员来隐藏基类成员。</span><span class="sxs-lookup"><span data-stu-id="b8548-156">A derived class can hide base class members by declaring members with the same name and signature.</span></span> <span data-ttu-id="b8548-157">[new](../../../csharp/language-reference/keywords/new.md) 修饰符可以用于显式指示成员不应作为基类成员的重写。</span><span class="sxs-lookup"><span data-stu-id="b8548-157">The [new](../../../csharp/language-reference/keywords/new.md) modifier can be used to explicitly indicate that the member is not intended to be an override of the base member.</span></span> <span data-ttu-id="b8548-158">使用 [new](../../../csharp/language-reference/keywords/new.md) 不是必需的，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，则会生成编译器警告。</span><span class="sxs-lookup"><span data-stu-id="b8548-158">The use of [new](../../../csharp/language-reference/keywords/new.md) is not required, but a compiler warning will be generated if [new](../../../csharp/language-reference/keywords/new.md) is not used.</span></span> <span data-ttu-id="b8548-159">有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。</span><span class="sxs-lookup"><span data-stu-id="b8548-159">For more information, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [类](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)
-
+## <a name="see-also"></a><span data-ttu-id="b8548-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b8548-160">See Also</span></span>  
+ [<span data-ttu-id="b8548-161">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="b8548-161">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b8548-162">类和结构</span><span class="sxs-lookup"><span data-stu-id="b8548-162">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="b8548-163">类</span><span class="sxs-lookup"><span data-stu-id="b8548-163">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+ [<span data-ttu-id="b8548-164">struct</span><span class="sxs-lookup"><span data-stu-id="b8548-164">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)

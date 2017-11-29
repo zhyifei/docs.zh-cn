@@ -1,93 +1,97 @@
 ---
-title: "控件和组件创作疑难解答 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "组件 [Windows 窗体], 疑难解答"
-  - "控件 [Windows 窗体], 疑难解答"
-  - "组件疑难解答"
-  - "控件疑难解答"
-  - "Windows 窗体控件, 调试"
+title: "控件和组件创作疑难解答"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- troubleshooting components
+- troubleshooting controls [Windows Forms]
+- controls [Windows Forms], troubleshooting
+- components [Windows Forms], troubleshooting
+- Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 控件和组件创作疑难解答
-本主题列出了开发组件和控件时遇到的下列常见问题。  有关更多信息，请参见 [使用组件编程](../Topic/Programming%20with%20Components.md)。  
+# <a name="troubleshooting-control-and-component-authoring"></a><span data-ttu-id="f8d1b-102">控件和组件创作疑难解答</span><span class="sxs-lookup"><span data-stu-id="f8d1b-102">Troubleshooting Control and Component Authoring</span></span>
+<span data-ttu-id="f8d1b-103">本主题列出了开发组件和控件时遇到的常见问题。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-103">This topic lists the following common problems that arise when developing components and controls.</span></span> <span data-ttu-id="f8d1b-104">有关详细信息，请参阅[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-104">For more information, see [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  
   
--   无法将控件添加到工具箱  
+-   <span data-ttu-id="f8d1b-105">无法将控件添加到工具箱</span><span class="sxs-lookup"><span data-stu-id="f8d1b-105">Cannot Add Control to Toolbox</span></span>  
   
--   无法调试 Windows 窗体用户控件或组件  
+-   <span data-ttu-id="f8d1b-106">无法调试 Windows 窗体用户控件或组件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-106">Cannot Debug the Windows Forms User Control or Component</span></span>  
   
--   事件在继承的控件或组件中引发两次  
+-   <span data-ttu-id="f8d1b-107">在继承的控件或组件中引发了两次事件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-107">Event Is Raised Twice in Inherited Control or Component</span></span>  
   
--   设计时错误：“创建组件‘*组件名称*’失败”  
+-   <span data-ttu-id="f8d1b-108">设计时错误：“创建组件‘组件名称’失败”</span><span class="sxs-lookup"><span data-stu-id="f8d1b-108">Design-Time Error: "Failed to Create Component '*Component Name*'"</span></span>  
   
--   STAThreadAttribute  
+-   <span data-ttu-id="f8d1b-109">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="f8d1b-109">STAThreadAttribute</span></span>  
   
--   组件图标不出现在工具箱中  
+-   <span data-ttu-id="f8d1b-110">组件图标未出现在工具箱中</span><span class="sxs-lookup"><span data-stu-id="f8d1b-110">Component Icon Does Not Appear in Toolbox</span></span>  
   
-## 无法将控件添加到工具箱  
- 要将在另一项目中创建的自定义控件或第三方控件添加到**“工具箱”**中，必须手动操作。  如果当前项目中包含您的控件或组件，它应自动显示在**“工具箱”**中。  有关更多信息，请参见[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+## <a name="cannot-add-control-to-toolbox"></a><span data-ttu-id="f8d1b-111">无法将控件添加到工具箱</span><span class="sxs-lookup"><span data-stu-id="f8d1b-111">Cannot Add Control to Toolbox</span></span>  
+ <span data-ttu-id="f8d1b-112">如果要将在另一项目中创建的自定义控件或第三方控件添加到“工具箱”中，必须手动操作。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-112">If you want to add a custom control that you created in another project or a third-party control to the **Toolbox**, you must do so manually.</span></span> <span data-ttu-id="f8d1b-113">如果当前项目中包含控件或组件，它应自动显示在“工具箱”中。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-113">If the current project contains your control or component, it should appear in the **Toolbox** automatically.</span></span> <span data-ttu-id="f8d1b-114">有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-114">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
   
-#### 将控件添加到工具箱  
+#### <a name="to-add-a-control-to-the-toolbox"></a><span data-ttu-id="f8d1b-115">将控件添加到工具箱</span><span class="sxs-lookup"><span data-stu-id="f8d1b-115">To add a control to the Toolbox</span></span>  
   
-1.  右击**“工具箱”**，从快捷菜单中选择**“选择项”**。  
+1.  <span data-ttu-id="f8d1b-116">右键单击“工具箱”，并从快捷菜单中选择“选择项”。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-116">Right-click the **Toolbox** and from the shortcut menu, select **Choose Items**.</span></span>  
   
-2.  在**“选择工具箱项”**对话框中，添加以下组件：  
+2.  <span data-ttu-id="f8d1b-117">在“选择工具箱项”对话框中，添加组件：</span><span class="sxs-lookup"><span data-stu-id="f8d1b-117">In the **Choose Toolbox Items** dialog box, add the component:</span></span>  
   
-    -   如果要添加 .NET Framework 组件或控件，请单击**“.NET Framework 组件”**选项卡。  
+    -   <span data-ttu-id="f8d1b-118">如果要添加 .NET Framework 组件或控件，请单击“.NET Framework 组件”选项卡。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-118">If you want to add a .NET Framework component or control, click the **.NET Framework Components** tab.</span></span>  
   
-         – 或 –  
+         <span data-ttu-id="f8d1b-119">- 或 -</span><span class="sxs-lookup"><span data-stu-id="f8d1b-119">– or –</span></span>  
   
-    -   如果要添加 COM 组件或 ActiveX 控件，请单击**“COM 组件”**选项卡。  
+    -   <span data-ttu-id="f8d1b-120">如果要添加 COM 组件或 ActiveX 控件，请单击“COM 组件”选项卡。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-120">If you want to add a COM component or ActiveX control, click the **COM Components** tab.</span></span>  
   
-3.  如果对话框中列出了该控件，请务必将它选中，然后单击**“确定”**。  
+3.  <span data-ttu-id="f8d1b-121">如果对话框中列出了该控件，请务必将它选中，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-121">If your control is listed in the dialog box, confirm it is selected, and then click **OK**.</span></span>  
   
-     该控件即会添加到**“工具箱”**中。  
+     <span data-ttu-id="f8d1b-122">该控件即会添加到“工具箱”中。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-122">The control is added to the **Toolbox**.</span></span>  
   
-4.  如果对话框中未列出要添加的控件，请执行以下操作：  
+4.  <span data-ttu-id="f8d1b-123">如果对话框中未列出该控件，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="f8d1b-123">If your control is not listed in the dialog box, do the following:</span></span>  
   
-    1.  单击**“浏览”**按钮。  
+    1.  <span data-ttu-id="f8d1b-124">单击“浏览”按钮。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-124">Click the **Browse** button.</span></span>  
   
-    2.  浏览到包含 .dll 文件（它包含您的控件）的文件夹。  
+    2.  <span data-ttu-id="f8d1b-125">浏览到包含 .dll 文件（它包含控件）的文件夹。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-125">Browse to the folder that contains the .dll file that contains your control.</span></span>  
   
-    3.  选择 .dll 文件并单击**“打开”**。  
+    3.  <span data-ttu-id="f8d1b-126">选择 .dll 文件并单击“打开”。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-126">Select the .dll file and click **Open**.</span></span>  
   
-         控件即会出现在对话框中。  
+         <span data-ttu-id="f8d1b-127">控件即会出现在对话框中。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-127">Your control appears in the dialog box.</span></span>  
   
-    4.  确认您的控件已被选中，然后单击**“确定”**。  
+    4.  <span data-ttu-id="f8d1b-128">确认选中该控件，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-128">Confirm that your control is selected, and then click **OK**.</span></span>  
   
-         控件即会添加到**“工具箱”**中。  
+         <span data-ttu-id="f8d1b-129">控件即会添加到“工具箱”中。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-129">Your control is added to the **Toolbox**.</span></span>  
   
-## 无法调试 Windows 窗体用户控件或组件  
- 如果您的控件是从 <xref:System.Windows.Forms.UserControl> 类中派生出来的，在可以借助测试容器对它的运行时行为进行调试。  有关更多信息，请参见 [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a><span data-ttu-id="f8d1b-130">无法调试 Windows 窗体用户控件或组件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-130">Cannot Debug the Windows Forms User Control or Component</span></span>  
+ <span data-ttu-id="f8d1b-131">如果你的控件派生自<xref:System.Windows.Forms.UserControl>类，可以调试使用测试容器的运行时行为。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-131">If your control derives from the <xref:System.Windows.Forms.UserControl> class, you can debug its run-time behavior with the test container.</span></span> <span data-ttu-id="f8d1b-132">有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-132">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- 其他自定义控件和组件不是独立的项目。  它们必须由像 Windows 窗体项目这样的应用程序来承载。  若要调试控件或组件，您必须将其添加到 Windows 窗体项目中。  
+ <span data-ttu-id="f8d1b-133">其他自定义控件和组件不是独立的项目。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-133">Other custom controls and components are not stand-alone projects.</span></span> <span data-ttu-id="f8d1b-134">它们必须由 Windows 窗体项目这样的应用程序承载。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-134">They must be hosted by an application such as a Windows Forms project.</span></span> <span data-ttu-id="f8d1b-135">若要调试控件或组件，必须将其添加到 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-135">To debug a control or component, you must add it to a Windows Forms project.</span></span>  
   
-#### 调试控件或组件  
+#### <a name="to-debug-a-control-or-component"></a><span data-ttu-id="f8d1b-136">调试控件或组件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-136">To debug a control or component</span></span>  
   
-1.  在**“生成”**菜单中，单击**“生成解决方案”**以生成您的解决方案。  
+1.  <span data-ttu-id="f8d1b-137">在“生成”菜单中，单击“生成解决方案”来生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-137">From the **Build** menu, click **Build Solution** to build your solution.</span></span>  
   
-2.  在**“文件”**菜单中，选择**“添加”**，然后选择**“新建项目”**，将测试项目添加到您的应用程序中。  
+2.  <span data-ttu-id="f8d1b-138">在“文件”菜单中，选择“添加”，然后选择“新建项目”，将测试项目添加到应用程序中。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-138">From the **File** menu, choose **Add**, and then **New Project** to add a test project to your application.</span></span>  
   
-3.  在**“添加新项目”**对话框中选择**“Windows 应用程序”**作为项目类型。  
+3.  <span data-ttu-id="f8d1b-139">在“添加新项目”对话框中选择“Windows 应用程序”作为项目类型。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-139">In the **Add New Project** dialog box choose **Windows Application** for the type of project.</span></span>  
   
-4.  在**“解决方案资源管理器”**中，右击新项目的**“引用”**节点。  在快捷菜单上单击**“添加引用”**，为包含控件或组件的项目添加一个引用。  
+4.  <span data-ttu-id="f8d1b-140">在“解决方案资源管理器”中，右键单击新项目的“引用”节点。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-140">In **Solution Explorer**, right-click the **References** node for the new project.</span></span> <span data-ttu-id="f8d1b-141">在快捷菜单上单击“添加引用”，为包含控件或组件的项目添加引用。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-141">On the shortcut menu, click **Add Reference** to add a reference to the project containing the control or component.</span></span>  
   
-5.  在测试项目中创建控件或组件的实例。  如果组件在**“工具箱”**中，则可将其拖动到设计器图面，或者如下面的代码示例所示，以编程方式创建实例：  
+5.  <span data-ttu-id="f8d1b-142">在测试项目中创建控件或组件的实例。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-142">Create an instance of your control or component in the test project.</span></span> <span data-ttu-id="f8d1b-143">如果组件在“工具箱”中，则可将其拖动到设计器图面，或者以编程方式创建实例，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-143">If your component is in the **Toolbox**, you can drag it to your designer surface, or you can create the instance programmatically, as shown in the following code example.</span></span>  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
@@ -97,27 +101,27 @@ caps.handback.revision: 22
     MyNeatComponent Component1 = new MyNeatComponent();  
     ```  
   
-     现在您就可以像平常一样调试控件或组件了。  
+     <span data-ttu-id="f8d1b-144">现在即可像平常一样调试控件或组件。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-144">You can now debug your control or component as usual.</span></span>  
   
- 有关调试的更多信息，请参见[使用 Visual Studio 进行调试](../Topic/Debugging%20in%20Visual%20Studio.md)和[演练：设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
+ <span data-ttu-id="f8d1b-145">有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)和[演练：在设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-145">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) and [Walkthrough: Debugging Custom Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span></span>  
   
-## 事件在继承的控件或组件中引发两次  
- 这可能是由于重复的 `Handles` 子句引起的。  有关更多信息，请参见[有关 Visual Basic 中继承的事件处理程序的疑难解答](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)。  
+## <a name="event-is-raised-twice-in-inherited-control-or-component"></a><span data-ttu-id="f8d1b-146">在继承的控件或组件中引发了两次事件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-146">Event Is Raised Twice in Inherited Control or Component</span></span>  
+ <span data-ttu-id="f8d1b-147">这可能是由于重复的 `Handles` 子句引起的。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-147">This is likely due to a duplicated `Handles` clause.</span></span> <span data-ttu-id="f8d1b-148">有关详细信息，请参阅[有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-148">For more information, see [Troubleshooting Inherited Event Handlers in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).</span></span>  
   
-## 设计时错误：“创建组件‘Component Name’失败”  
- 您的组件或控件必须提供一个不带参数的默认构造函数。  当设计环境创建一个组件或控件的实例时，它不会尝试为使用参数的构造函数重载提供任何参数。  
+## <a name="design-time-error-failed-to-create-component-component-name"></a><span data-ttu-id="f8d1b-149">设计时错误：“创建组件‘组件名称’失败”</span><span class="sxs-lookup"><span data-stu-id="f8d1b-149">Design-Time Error: "Failed to Create Component 'Component Name'"</span></span>  
+ <span data-ttu-id="f8d1b-150">组件或控件必须提供一个不带参数的默认构造函数。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-150">Your component or control must provide a default constructor with no parameters.</span></span> <span data-ttu-id="f8d1b-151">设计环境创建组件或控件的实例时，不会尝试为使用参数的构造函数重载提供任何参数。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-151">When the design environment creates an instance of your component or control, it does not attempt to provide any parameters to constructor overloads that take parameters.</span></span>  
   
-## STAThreadAttribute  
- <xref:System.STAThreadAttribute> 会向公共语言运行时 \(CLR\) 发出通知，指出 Windows 窗体使用了单线程的单元模型。  如果您没有对 Windows 窗体应用程序的 `Main` 方法应用此特性，则可能会出现意外的行为。  例如，<xref:System.Windows.Forms.ListView> 等控件的背景图像可能无法显示。  某些控件也可能需要此特性才能正确地实现自动完成和拖放行为。  
+## <a name="stathreadattribute"></a><span data-ttu-id="f8d1b-152">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="f8d1b-152">STAThreadAttribute</span></span>  
+ <span data-ttu-id="f8d1b-153"><xref:System.STAThreadAttribute>通知公共语言运行时 (CLR) Windows 窗体使用单线程单元模式。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-153">The <xref:System.STAThreadAttribute> informs the common language runtime (CLR) that Windows Forms uses the single-threaded apartment model.</span></span> <span data-ttu-id="f8d1b-154">如果没有对 Windows 窗体应用程序的 `Main` 方法应用此特性，则可能会出现意外的行为。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-154">You may notice unintended behavior if you do not apply this attribute to your Windows Forms application's `Main` method.</span></span> <span data-ttu-id="f8d1b-155">例如，背景图像可能不会出现等控件<xref:System.Windows.Forms.ListView>。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-155">For example, background images may not appear for controls like <xref:System.Windows.Forms.ListView>.</span></span> <span data-ttu-id="f8d1b-156">某些控件也可能需要此属性才能正确地实现自动完成和拖放行为。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-156">Some controls may also require this attribute for correct AutoComplete and drag-and-drop behavior.</span></span>  
   
-## 组件图标不出现在工具箱中  
- 当您使用 <xref:System.Drawing.ToolboxBitmapAttribute> 将图标与自定义组件关联时，对于自动生成的组件，位图将不会出现在工具箱中。  若要查看位图，请使用**“选择工具箱项”**对话框重新加载控件。  有关更多信息，请参见[如何：为控件提供工具箱位图](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)。  
+## <a name="component-icon-does-not-appear-in-toolbox"></a><span data-ttu-id="f8d1b-157">组件图标未出现在工具箱中</span><span class="sxs-lookup"><span data-stu-id="f8d1b-157">Component Icon Does Not Appear in Toolbox</span></span>  
+ <span data-ttu-id="f8d1b-158">当你使用<xref:System.Drawing.ToolboxBitmapAttribute>将图标与你自定义组件相关联，位图将不会出现在工具箱中自动生成组件。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-158">When you use <xref:System.Drawing.ToolboxBitmapAttribute> to associate an icon with your custom component, the bitmap does not appear in the Toolbox for autogenerated components.</span></span> <span data-ttu-id="f8d1b-159">若要查看位图，请使用“选择工具箱项”对话框重载控件。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-159">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="f8d1b-160">有关详细信息，请参阅[如何：为控件提供工具箱位图](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)。</span><span class="sxs-lookup"><span data-stu-id="f8d1b-160">For more information, see [How to: Provide a Toolbox Bitmap for a Control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).</span></span>  
   
-## 请参阅  
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)   
- [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)   
- [演练：设计时调试自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)   
- [组件创作](../Topic/Component%20Authoring.md)   
- [Troubleshooting Design\-Time Development](../Topic/Troubleshooting%20Design-Time%20Development.md)   
- [使用组件编程](../Topic/Programming%20with%20Components.md)
+## <a name="see-also"></a><span data-ttu-id="f8d1b-161">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f8d1b-161">See Also</span></span>  
+ [<span data-ttu-id="f8d1b-162">设计时开发 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-162">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="f8d1b-163">演练：使用自定义组件自动填充工具箱</span><span class="sxs-lookup"><span data-stu-id="f8d1b-163">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [<span data-ttu-id="f8d1b-164">如何：测试 UserControl 的运行时行为</span><span class="sxs-lookup"><span data-stu-id="f8d1b-164">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [<span data-ttu-id="f8d1b-165">演练：设计时调试自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="f8d1b-165">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="f8d1b-166">组件创作</span><span class="sxs-lookup"><span data-stu-id="f8d1b-166">Component Authoring</span></span>](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ [<span data-ttu-id="f8d1b-167">设计时开发的疑难解答</span><span class="sxs-lookup"><span data-stu-id="f8d1b-167">Troubleshooting Design-Time Development</span></span>](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [<span data-ttu-id="f8d1b-168">使用组件编程</span><span class="sxs-lookup"><span data-stu-id="f8d1b-168">Programming with Components</span></span>](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

@@ -1,47 +1,49 @@
 ---
-title: "配置跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "跟踪 [WCF]"
+title: "配置跟踪"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 53
+caps.latest.revision: "53"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d516d20144b40aa52a5b11177c6794a6935ba989
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 配置跟踪
-本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
+# <a name="configuring-tracing"></a><span data-ttu-id="d6cc1-102">配置跟踪</span><span class="sxs-lookup"><span data-stu-id="d6cc1-102">Configuring Tracing</span></span>
+<span data-ttu-id="d6cc1-103">本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  
   
- 有关生产或调试环境中的跟踪设置建议，请参阅[跟踪和消息日志记录的推荐设置](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ <span data-ttu-id="d6cc1-104">有关生产或调试环境中的跟踪设置建议，请参阅[建议的设置进行跟踪和消息日志记录](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-104">For tracing settings recommendations in production or debugging environment, refer to [Recommended Settings for Tracing and Message Logging](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).</span></span>  
   
 > [!IMPORTANT]
->  在 Windows 8 中，您必须提升运行程序应用程序（作为管理员运行），以便为您的应用程序来生成跟踪日志。  
+>  <span data-ttu-id="d6cc1-105">在 Windows 8 上，您必须以提升的权限（以管理员身份运行）运行应用程序，应用程序才能生成跟踪日志。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-105">On Windows 8 you must run your application elevated (Run as Administrator) in order for your application to generate trace logs.</span></span>  
   
-## 启用跟踪  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 输出以下用于诊断跟踪的数据：  
+## <a name="enabling-tracing"></a><span data-ttu-id="d6cc1-106">启用跟踪</span><span class="sxs-lookup"><span data-stu-id="d6cc1-106">Enabling Tracing</span></span>  
+ [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="d6cc1-107"> 输出以下用于诊断跟踪的数据：</span><span class="sxs-lookup"><span data-stu-id="d6cc1-107"> outputs the following data for diagnostic tracing:</span></span>  
   
--   对进程里程碑的跟踪跨应用程序的所有组件，如操作调用、代码异常、警告及其他重大处理事件。  
+-   <span data-ttu-id="d6cc1-108">对进程里程碑的跟踪跨应用程序的所有组件，如操作调用、代码异常、警告及其他重大处理事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-108">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events.</span></span>  
   
--   跟踪功能出现故障时发生的 Windows 错误事件。请参见[事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
+-   <span data-ttu-id="d6cc1-109">跟踪功能出现故障时发生的 Windows 错误事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-109">Windows error events when the tracing feature malfunctions.</span></span> <span data-ttu-id="d6cc1-110">请参阅[事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-110">See [Event Logging](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪建立在 <xref:System.Diagnostics> 之上。若要使用跟踪，应在配置文件或代码中定义跟踪源。[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]定义每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 程序集的跟踪源。`System.ServiceModel` 跟踪源是最常见的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪源，它跨 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 通信堆栈（从进入\/离开传输到进入\/离开用户代码）记录处理里程碑。`System.ServiceModel.MessageLogging` 跟踪源记录流过系统的所有消息。  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="d6cc1-111"> 跟踪建立在 <xref:System.Diagnostics> 之上。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-111"> tracing is built on top of <xref:System.Diagnostics>.</span></span> <span data-ttu-id="d6cc1-112">若要使用跟踪，应在配置文件或代码中定义跟踪源。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-112">To use tracing, you should define trace sources in the configuration file or in code.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="d6cc1-113"> 为每个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 程序集定义一个跟踪源。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-113"> defines a trace source for each [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] assembly.</span></span> <span data-ttu-id="d6cc1-114">`System.ServiceModel` 跟踪源是最常见的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪源，它跨 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 通信堆栈（从进入/离开传输到进入/离开用户代码）记录处理里程碑。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-114">The `System.ServiceModel` trace source is the most general [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] trace source, and records processing milestones across the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] communication stack, from entering/leaving transport to entering/leaving user code.</span></span> <span data-ttu-id="d6cc1-115">`System.ServiceModel.MessageLogging` 跟踪源记录流过系统的所有消息。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-115">The `System.ServiceModel.MessageLogging` trace source records all messages that flow through the system.</span></span>  
   
- 默认情况下不启用跟踪。若要激活跟踪，必须创建一个跟踪侦听器并在配置中为选定的跟踪源设置除“Off”以外的跟踪级别；否则，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不会生成任何跟踪。如果不指定侦听器，则会自动禁用跟踪。如果定义侦听器，但不指定级别，则默认情况下级别将设置为“Off”，这意味着不会发出任何跟踪。  
+ <span data-ttu-id="d6cc1-116">默认情况下不启用跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-116">Tracing is not enabled by default.</span></span> <span data-ttu-id="d6cc1-117">若要激活跟踪，必须创建一个跟踪侦听器并在配置中为选定的跟踪源设置除“Off”以外的跟踪级别；否则，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不会生成任何跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-117">To activate tracing, you must create a trace listener and set a trace level other than "Off" for the selected trace source in configuration; otherwise, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] does not generate any traces.</span></span> <span data-ttu-id="d6cc1-118">如果不指定侦听器，则会自动禁用跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-118">If you do not specify a listener, tracing is automatically disabled.</span></span> <span data-ttu-id="d6cc1-119">如果定义侦听器，但不指定级别，则默认情况下级别将设置为“Off”，这意味着不会发出任何跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-119">If a listener is defined, but no level is specified, the level is set to "Off" by default, which means that no trace is emitted.</span></span>  
   
- 如果您使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 扩展点（如自定义操作调用程序），则应发出自己的跟踪。这是因为在实现了扩展点的情况下，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不再在默认路径中发出标准跟踪。如果未通过发出跟踪实现手动跟踪支持，则可能看不到预期跟踪。  
+ <span data-ttu-id="d6cc1-120">如果您使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 扩展点（如自定义操作调用程序），则应发出自己的跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-120">If you use [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] extensibility points such as custom operation invokers, you should emit your own traces.</span></span> <span data-ttu-id="d6cc1-121">这是因为在实现了扩展点的情况下，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不再在默认路径中发出标准跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-121">This is because if you implement an extensibility point, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] can no longer emit the standard traces in the default path.</span></span> <span data-ttu-id="d6cc1-122">如果未通过发出跟踪实现手动跟踪支持，则可能看不到预期跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-122">If you do not implement manual tracing support by emitting traces, you may not see the traces you expect.</span></span>  
   
- 可以通过编辑应用程序的配置文件（对于 Web 承载的应用程序，为 Web.config；对于自承载的应用程序，为 Appname.exe.config）来配置跟踪。下面的示例演示如何进行这样的编辑。有关这些设置的更多信息，请参见“配置要使用跟踪的跟踪侦听器”一节。  
+ <span data-ttu-id="d6cc1-123">可以通过编辑应用程序的配置文件（对于 Web 承载的应用程序，为 Web.config；对于自承载的应用程序，为 Appname.exe.config）来配置跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-123">You can configure tracing by editing the application’s configuration file—either Web.config for Web-hosted applications, or Appname.exe.config for self-hosted applications.</span></span> <span data-ttu-id="d6cc1-124">下面的示例演示如何进行这样的编辑。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-124">The following is an example of such edit.</span></span> <span data-ttu-id="d6cc1-125">有关这些设置的详细信息，请参阅"配置跟踪侦听器要使用跟踪的"部分。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-125">For more information on these settings, see the "Configuring Trace Listeners to Consume Traces" section.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
@@ -60,28 +62,28 @@ caps.handback.revision: 53
 ```  
   
 > [!NOTE]
->  若要在 [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)] 中编辑 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务项目的配置文件，请在**“解决方案资源管理器”**中右键单击应用程序的配置文件：对于 Web 承载的应用程序，为 Web.config 文件；对于自承载的应用程序，则为 Appname.exe.config 文件。然后选择**“编辑 WCF 配置”**上下文菜单项。这将启动 [配置编辑器工具 \(SvcConfigEditor.exe\)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，可以通过它使用图形用户界面来修改 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的配置设置。  
+>  <span data-ttu-id="d6cc1-126">若要编辑的配置文件[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]中的服务项目[!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)]，右键单击应用程序的配置文件-对于 Web 承载的应用程序，则为 Appname.exe.config 在中的自承载应用程序，为 Web.config **解决方案资源管理器**。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-126">To edit the configuration file of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service project in [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], right click the application’s configuration file—either Web.config for Web-hosted applications, or Appname.exe.config for self-hosted application in **Solution Explorer**.</span></span> <span data-ttu-id="d6cc1-127">然后选择**编辑 WCF 配置**上下文菜单项。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-127">Then choose the **Edit WCF Configuration** context menu item.</span></span> <span data-ttu-id="d6cc1-128">这将启动[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，从而使你可以修改配置设置[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务使用图形用户界面。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-128">This launches the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), which enables you to modify configuration settings for [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services using a graphical user interface.</span></span>  
   
-## 配置要发出跟踪的跟踪源  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为每个程序集定义一个跟踪源。在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。定义下列跟踪源：  
+## <a name="configuring-trace-sources-to-emit-traces"></a><span data-ttu-id="d6cc1-129">配置要发出跟踪的跟踪源</span><span class="sxs-lookup"><span data-stu-id="d6cc1-129">Configuring Trace Sources to Emit Traces</span></span>  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="d6cc1-130"> 为每个程序集定义一个跟踪源。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-130"> defines a trace source for each assembly.</span></span> <span data-ttu-id="d6cc1-131">在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-131">Traces generated within an assembly are accessed by the listeners defined for that source.</span></span> <span data-ttu-id="d6cc1-132">定义下列跟踪源：</span><span class="sxs-lookup"><span data-stu-id="d6cc1-132">The following trace sources are defined:</span></span>  
   
--   System.ServiceModel：每当读取配置、在传输或安全处理中处理消息、在用户代码中调度消息时，记录 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 处理的所有阶段。  
+-   <span data-ttu-id="d6cc1-133">System.ServiceModel：每当读取配置、在传输或安全处理中处理消息、在用户代码中调度消息时，记录 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 处理的所有阶段。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-133">System.ServiceModel: Logs all stages of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] processing, whenever configuration is read, a message is processed in transport, security processing, a message is dispatched in user code, and so on.</span></span>  
   
--   System.ServiceModel.MessageLogging：记录流过系统的所有消息。  
+-   <span data-ttu-id="d6cc1-134">System.ServiceModel.MessageLogging：记录流过系统的所有消息。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-134">System.ServiceModel.MessageLogging: Logs all messages that flow through the system.</span></span>  
   
--   System.IdentityModel。  
+-   <span data-ttu-id="d6cc1-135">System.IdentityModel。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-135">System.IdentityModel.</span></span>  
   
--   System.ServiceModel.Activation。  
+-   <span data-ttu-id="d6cc1-136">System.ServiceModel.Activation。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-136">System.ServiceModel.Activation.</span></span>  
   
--   System.IO.Log：记录公用日志文件系统 \(CLFS\) 的 .NET Framework 接口。  
+-   <span data-ttu-id="d6cc1-137">System.IO.Log：记录公用日志文件系统 (CLFS) 的 .NET Framework 接口。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-137">System.IO.Log: Logging for the .NET Framework interface to the Common Log File System (CLFS).</span></span>  
   
--   System.Runtime.Serialization：在读\/写对象时进行记录。  
+-   <span data-ttu-id="d6cc1-138">System.Runtime.Serialization：在读/写对象时进行记录。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-138">System.Runtime.Serialization: Logs when objects are read or written.</span></span>  
   
--   CardSpace。  
+-   <span data-ttu-id="d6cc1-139">CardSpace。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-139">CardSpace.</span></span>  
   
- 可以将每个跟踪源配置为使用相同（共享）的侦听器，如下面的配置示例中所示。  
+ <span data-ttu-id="d6cc1-140">可以将每个跟踪源配置为使用相同（共享）的侦听器，如下面的配置示例中所示。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-140">You can configure each trace source to use the same (shared) listener, as indicated in the following configuration example.</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.diagnostics>  
         <sources>  
@@ -123,9 +125,9 @@ caps.handback.revision: 53
 </configuration>  
 ```  
   
- 另外，还可以添加用户定义的跟踪源来发出用户代码跟踪，如下面的示例所示。  
+ <span data-ttu-id="d6cc1-141">另外，还可以添加用户定义的跟踪源来发出用户代码跟踪，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-141">In addition, you can add user-defined trace sources, as demonstrated by the following example, to emit user code traces.</span></span>  
   
-```  
+```xml  
 <system.diagnostics>  
    <sources>  
        <source name="UserTraceSource" switchValue="Warning, ActivityTracing" >  
@@ -140,55 +142,55 @@ caps.handback.revision: 53
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]创建用户定义的跟踪源的更多信息，请参见[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="d6cc1-142">创建用户定义跟踪源，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-142"> creating user-defined trace sources, see [Extending Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).</span></span>  
   
-## 配置要使用跟踪的跟踪侦听器  
- 在运行时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向处理数据的侦听器输送跟踪数据。[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为 <xref:System.Diagnostics> 提供多个预定义的侦听器，这些侦听器用于输出的格式有所不同。您也可以添加自定义侦听器类型。  
+## <a name="configuring-trace-listeners-to-consume-traces"></a><span data-ttu-id="d6cc1-143">配置要使用跟踪的跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="d6cc1-143">Configuring Trace Listeners to Consume Traces</span></span>  
+ <span data-ttu-id="d6cc1-144">在运行时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向处理数据的侦听器馈送跟踪数据。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-144">At runtime, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] feeds trace data to the listeners which process the data.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="d6cc1-145"> 为 <xref:System.Diagnostics> 提供多个预定义的侦听器，这些侦听器用于输出的格式有所不同。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-145"> provides several predefined listeners for <xref:System.Diagnostics>, which differ in the format they use for output.</span></span> <span data-ttu-id="d6cc1-146">您也可以添加自定义侦听器类型。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-146">You can also add custom listener types.</span></span>  
   
- 可以使用 `add` 指定要使用的跟踪侦听器的名称和类型。在示例配置中，将侦听器命名为 `traceListener` 并添加了标准 .NET Framework 跟踪侦听器 \(`System.Diagnostics.XmlWriterTraceListener`\) 作为要使用的类型。可以为每个源添加任意数目的跟踪侦听器。如果跟踪侦听器发出对文件的跟踪，则您必须在配置文件中指定输出文件的位置和名称。通过将 `initializeData` 设置为该侦听器的文件名称来完成此操作。如果不指定文件名，则会基于所用的侦听器类型生成一个随机文件名。如果使用 <xref:System.Diagnostics.XmlWriterTraceListener>，则会生成不带扩展名的文件名。如果实现自定义侦听器，则也可以使用此属性来接收除文件名以外的初始化数据。例如，可以为此属性指定数据库标识符。  
+ <span data-ttu-id="d6cc1-147">可以使用 `add` 指定要使用的跟踪侦听器的名称和类型。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-147">You can use `add` to specify the name and type of the trace listener you want to use.</span></span> <span data-ttu-id="d6cc1-148">在示例配置中，将侦听器命名为 `traceListener` 并添加了标准 .NET Framework 跟踪侦听器 (`System.Diagnostics.XmlWriterTraceListener`) 作为要使用的类型。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-148">In our example configuration, we named the Listener `traceListener` and added the standard .NET Framework trace listener (`System.Diagnostics.XmlWriterTraceListener`) as the type we want to use.</span></span> <span data-ttu-id="d6cc1-149">可以为每个源添加任意数目的跟踪侦听器。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-149">You can add any number of trace listeners for each source.</span></span> <span data-ttu-id="d6cc1-150">如果跟踪侦听器发出对文件的跟踪，则您必须在配置文件中指定输出文件的位置和名称。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-150">If the trace listener emits the trace to a file, you must specify the output file location and name in the configuration file.</span></span> <span data-ttu-id="d6cc1-151">通过将 `initializeData` 设置为该侦听器的文件名称来完成此操作。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-151">This is done by setting `initializeData` to the name of the file for that listener.</span></span> <span data-ttu-id="d6cc1-152">如果不指定文件名，则会基于所用的侦听器类型生成一个随机文件名。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-152">If you do not specify a file name, a random file name is generated based on the listener type used.</span></span> <span data-ttu-id="d6cc1-153">如果使用 <xref:System.Diagnostics.XmlWriterTraceListener>，则会生成不带扩展名的文件名。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-153">If <xref:System.Diagnostics.XmlWriterTraceListener> is used, a file name with no extension is generated.</span></span> <span data-ttu-id="d6cc1-154">如果实现自定义侦听器，则也可以使用此属性来接收除文件名以外的初始化数据。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-154">If you implement a custom listener, you can also use this attribute to receive initialization data other than a filename.</span></span> <span data-ttu-id="d6cc1-155">例如，可以为此属性指定数据库标识符。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-155">For example, you can specify a database identifier for this attribute.</span></span>  
   
- 可以将自定义跟踪侦听器配置为在网络上发送跟踪，例如，发送到远程数据库。作为应用程序部署人员，您应对远程计算机上的跟踪日志施加适当的访问控制。  
+ <span data-ttu-id="d6cc1-156">可以将自定义跟踪侦听器配置为在网络上发送跟踪，例如，发送到远程数据库。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-156">You can configure a custom trace listener to send traces on the wire, for example, to a remote database.</span></span> <span data-ttu-id="d6cc1-157">作为应用程序部署人员，您应对远程计算机上的跟踪日志施加适当的访问控制。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-157">As an application deployer, you should enforce proper access control on the trace logs in the remote machine.</span></span>  
   
- 您也可以通过编程方式配置跟踪侦听器。[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][如何：创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)（可能为英文网页）和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)（可能为英文网页）。  
-  
-> [!CAUTION]
->  由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。若要解决此问题，应实现一个线程安全的自定义侦听器。  
-  
-## 跟踪级别  
- 跟踪级别由跟踪源的 `switchValue` 设置控制。下表中描述了可用的跟踪级别。  
-  
-|跟踪级别|被跟踪事件的特性|被跟踪事件的内容|被跟踪事件|用户目标|  
-|----------|--------------|--------------|-----------|----------|  
-|Off|N\/A|N\/A|不发出任何跟踪。|不可用|  
-|Critical|“负”事件：表示意外处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> -   OutOfMemoryException<br />-   ThreadAbortException（CLR 调用任何 ThreadAbortExceptionHandler）<br />-   StackOverflowException（无法捕获）<br />-   ConfigurationErrorsException<br />-   SEHException<br />-   应用程序启动错误<br />-   故障快速报警事件<br />-   系统挂起<br />-   病毒消息：致使应用程序失败的消息跟踪。|管理员<br /><br /> 应用程序开发人员|  
-|错误|“负”事件：表示意外处理或错误条件的事件。|已发生意外处理。应用程序未能执行预期的任务。然而，应用程序仍处于开启状态并在运行。|记录所有异常。|Administrators<br /><br /> 应用程序开发人员|  
-|警告|“负”事件：表示意外处理或错误条件的事件。|可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。不过，该应用程序可能不会继续正常工作。|-   该应用程序正在接收的请求数比其遏制设置所允许的数目要多。<br />-   接收队列接近于为其配置的最大容量。<br />-   已经超时。<br />-   凭据被拒绝。|Administrators<br /><br /> 应用程序开发人员|  
-|信息|“正”事件：对成功里程碑进行标记的事件|应用程序执行的重要和成功里程碑，而不考虑该应用程序是否工作正常。|通常，生成对监视和诊断系统状态、测量性能或执行分析十分有用的消息。可以使用此类信息规划容量和管理性能：<br /><br /> -   创建通道。<br />-   创建终结点侦听器。<br />-   消息进入\/离开传输。<br />-   检索安全令牌。<br />-   读取配置设置。|Administrators<br /><br /> 应用程序开发人员<br /><br /> 产品开发人员。|  
-|详细|“正”事件：对成功里程碑进行标记的事件。|发出用户代码和服务的低级别事件。|通常，可以使用此级别进行调试或应用程序优化。<br /><br /> -   已理解消息头。|Administrators<br /><br /> 应用程序开发人员<br /><br /> 产品开发人员。|  
-|活动跟踪||处理活动与组件之间的流事件。|此级别允许管理员和开发人员关联同一应用程序域中的各应用程序：<br /><br /> -   活动边界跟踪，如启动\/停止。<br />-   传输跟踪。|全部|  
-|全部||应用程序可能工作正常。发出所有事件。|先前的所有事件。|全部|  
-  
- 从“详细”到“严重”的级别彼此堆叠，即每个跟踪级别都包括其上除“禁用”级别以外的所有级别。例如，在“警告”级别进行侦听的侦听器会接收到“严重”、“错误”和“警告”跟踪。“全部”级别包括从“详细”到“严重”的事件以及活动跟踪事件。  
+ <span data-ttu-id="d6cc1-158">您也可以通过编程方式配置跟踪侦听器。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-158">You can also configure a trace listener programmatically.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="d6cc1-159">[如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-159"> [How to: Create and Initialize Trace Listeners](http://go.microsoft.com/fwlink/?LinkId=94648) and [Creating a Custom TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).</span></span>  
   
 > [!CAUTION]
->  “信息”、“详细”和“ActivityTracing”级别会生成大量跟踪，这可能会对消息吞吐量产生不利影响（如果计算机上的所有可用资源均已用尽）。  
+>  <span data-ttu-id="d6cc1-160">由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-160">Because `System.Diagnostics.XmlWriterTraceListener` is not thread-safe, the trace source may lock resources exclusively when outputting traces.</span></span> <span data-ttu-id="d6cc1-161">当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-161">When many threads output traces to a trace source configured to use this listener, resource contention may occur, which results in a significant performance issue.</span></span> <span data-ttu-id="d6cc1-162">若要解决此问题，应实现一个线程安全的自定义侦听器。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-162">To resolve this problem, you should implement a custom listener that is thread-safe.</span></span>  
   
-## 配置用于关联的活动跟踪和传播  
- 为 `switchValue` 属性指定的 `activityTracing` 值用于启用活动跟踪，这会在终结点内发出活动边界跟踪和传输跟踪。  
+## <a name="trace-level"></a><span data-ttu-id="d6cc1-163">跟踪级别</span><span class="sxs-lookup"><span data-stu-id="d6cc1-163">Trace Level</span></span>  
+ <span data-ttu-id="d6cc1-164">跟踪级别由跟踪源的 `switchValue` 设置控制。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-164">The tracing level is controlled by the `switchValue` setting of the trace source.</span></span> <span data-ttu-id="d6cc1-165">下表中描述了可用的跟踪级别。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-165">The available tracing levels are described in the following table.</span></span>  
+  
+|<span data-ttu-id="d6cc1-166">跟踪级别</span><span class="sxs-lookup"><span data-stu-id="d6cc1-166">Trace Level</span></span>|<span data-ttu-id="d6cc1-167">被跟踪事件的特性</span><span class="sxs-lookup"><span data-stu-id="d6cc1-167">Nature of the Tracked Events</span></span>|<span data-ttu-id="d6cc1-168">被跟踪事件的内容</span><span class="sxs-lookup"><span data-stu-id="d6cc1-168">Content of the Tracked Events</span></span>|<span data-ttu-id="d6cc1-169">被跟踪事件</span><span class="sxs-lookup"><span data-stu-id="d6cc1-169">Tracked Events</span></span>|<span data-ttu-id="d6cc1-170">用户目标</span><span class="sxs-lookup"><span data-stu-id="d6cc1-170">User Target</span></span>|  
+|-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
+|<span data-ttu-id="d6cc1-171">Off</span><span class="sxs-lookup"><span data-stu-id="d6cc1-171">Off</span></span>|<span data-ttu-id="d6cc1-172">不可用</span><span class="sxs-lookup"><span data-stu-id="d6cc1-172">N/A</span></span>|<span data-ttu-id="d6cc1-173">不可用</span><span class="sxs-lookup"><span data-stu-id="d6cc1-173">N/A</span></span>|<span data-ttu-id="d6cc1-174">不发出任何跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-174">No traces are emitted.</span></span>|<span data-ttu-id="d6cc1-175">不可用</span><span class="sxs-lookup"><span data-stu-id="d6cc1-175">N/A</span></span>|  
+|<span data-ttu-id="d6cc1-176">严重</span><span class="sxs-lookup"><span data-stu-id="d6cc1-176">Critical</span></span>|<span data-ttu-id="d6cc1-177">"负"事件： 表示意外的处理或错误条件的事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-177">"Negative" events: events that indicate an unexpected processing or an error condition.</span></span>||<span data-ttu-id="d6cc1-178">将记录包括下列各项的未经处理的异常：</span><span class="sxs-lookup"><span data-stu-id="d6cc1-178">Unhandled exceptions including the following are logged:</span></span><br /><br /> <span data-ttu-id="d6cc1-179">-OutOfMemoryException</span><span class="sxs-lookup"><span data-stu-id="d6cc1-179">-   OutOfMemoryException</span></span><br /><span data-ttu-id="d6cc1-180">-ThreadAbortException （CLR 调用任何 ThreadAbortExceptionHandler）</span><span class="sxs-lookup"><span data-stu-id="d6cc1-180">-   ThreadAbortException (the CLR invokes any ThreadAbortExceptionHandler)</span></span><br /><span data-ttu-id="d6cc1-181">-StackOverflowException （无法捕获）</span><span class="sxs-lookup"><span data-stu-id="d6cc1-181">-   StackOverflowException (cannot be caught)</span></span><br /><span data-ttu-id="d6cc1-182">-ConfigurationErrorsException</span><span class="sxs-lookup"><span data-stu-id="d6cc1-182">-   ConfigurationErrorsException</span></span><br /><span data-ttu-id="d6cc1-183">-SEHException</span><span class="sxs-lookup"><span data-stu-id="d6cc1-183">-   SEHException</span></span><br /><span data-ttu-id="d6cc1-184">-应用程序启动错误</span><span class="sxs-lookup"><span data-stu-id="d6cc1-184">-   Application start errors</span></span><br /><span data-ttu-id="d6cc1-185">-故障快速报警事件</span><span class="sxs-lookup"><span data-stu-id="d6cc1-185">-   Failfast events</span></span><br /><span data-ttu-id="d6cc1-186">系统将挂起。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-186">-   System hangs</span></span><br /><span data-ttu-id="d6cc1-187">-病毒消息： 消息会导致应用程序失败的跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-187">-   Poison messages: message traces that cause the application to fail.</span></span>|<span data-ttu-id="d6cc1-188">管理员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-188">Administrators</span></span><br /><br /> <span data-ttu-id="d6cc1-189">应用程序开发人员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-189">Application developers</span></span>|  
+|<span data-ttu-id="d6cc1-190">错误</span><span class="sxs-lookup"><span data-stu-id="d6cc1-190">Error</span></span>|<span data-ttu-id="d6cc1-191">"负"事件： 表示意外的处理或错误条件的事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-191">"Negative" events: events that indicate an unexpected processing or an error condition.</span></span>|<span data-ttu-id="d6cc1-192">已发生意外处理。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-192">Unexpected processing has happened.</span></span> <span data-ttu-id="d6cc1-193">应用程序未能执行预期的任务。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-193">The application was not able to perform a task as expected.</span></span> <span data-ttu-id="d6cc1-194">然而，应用程序仍处于开启状态并在运行。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-194">However, the application is still up and running.</span></span>|<span data-ttu-id="d6cc1-195">记录所有异常。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-195">All exceptions are logged.</span></span>|<span data-ttu-id="d6cc1-196">管理员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-196">Administrators</span></span><br /><br /> <span data-ttu-id="d6cc1-197">应用程序开发人员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-197">Application developers</span></span>|  
+|<span data-ttu-id="d6cc1-198">警告</span><span class="sxs-lookup"><span data-stu-id="d6cc1-198">Warning</span></span>|<span data-ttu-id="d6cc1-199">"负"事件： 表示意外的处理或错误条件的事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-199">"Negative" events: events that indicate an unexpected processing or an error condition.</span></span>|<span data-ttu-id="d6cc1-200">可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-200">A possible problem has occurred or may occur, but the application still functions correctly.</span></span> <span data-ttu-id="d6cc1-201">不过，该应用程序可能不会继续正常工作。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-201">However, it may not continue to work properly.</span></span>|<span data-ttu-id="d6cc1-202">-应用程序正在接收比其遏制设置所允许的更多的请求。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-202">-   The application is receiving more requests than its throttling settings allow.</span></span><br /><span data-ttu-id="d6cc1-203">-接收队列已接近其最大的配置容量上限。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-203">-   The receiving queue is near its maximum configured capacity.</span></span><br /><span data-ttu-id="d6cc1-204">已超过超时。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-204">-   Timeout has exceeded.</span></span><br /><span data-ttu-id="d6cc1-205">-凭据被拒绝。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-205">-   Credentials are rejected.</span></span>|<span data-ttu-id="d6cc1-206">管理员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-206">Administrators</span></span><br /><br /> <span data-ttu-id="d6cc1-207">应用程序开发人员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-207">Application developers</span></span>|  
+|<span data-ttu-id="d6cc1-208">信息</span><span class="sxs-lookup"><span data-stu-id="d6cc1-208">Information</span></span>|<span data-ttu-id="d6cc1-209">"正"事件： 成功里程碑进行标记的事件</span><span class="sxs-lookup"><span data-stu-id="d6cc1-209">"Positive" events: events that mark successful milestones</span></span>|<span data-ttu-id="d6cc1-210">应用程序执行的重要和成功里程碑，而不考虑该应用程序是否工作正常。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-210">Important and successful milestones of application execution, regardless of whether the application is working properly or not.</span></span>|<span data-ttu-id="d6cc1-211">通常，生成对监视和诊断系统状态、测量性能或执行分析十分有用的消息。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-211">In general, messages helpful for monitoring and diagnosing system status, measuring performance or profiling are generated.</span></span> <span data-ttu-id="d6cc1-212">可以使用此类信息规划容量和管理性能：</span><span class="sxs-lookup"><span data-stu-id="d6cc1-212">You can use such information for capacity planning and performance management:</span></span><br /><br /> <span data-ttu-id="d6cc1-213">的创建通道。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-213">-   Channels are created.</span></span><br /><span data-ttu-id="d6cc1-214">创建终结点侦听器。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-214">-   Endpoint listeners are created.</span></span><br /><span data-ttu-id="d6cc1-215">消息进入/离开传输。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-215">-   Message enters/leaves transport.</span></span><br /><span data-ttu-id="d6cc1-216">检索安全令牌。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-216">-   Security token is retrieved.</span></span><br /><span data-ttu-id="d6cc1-217">读取配置设置。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-217">-   Configuration setting is read.</span></span>|<span data-ttu-id="d6cc1-218">管理员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-218">Administrators</span></span><br /><br /> <span data-ttu-id="d6cc1-219">应用程序开发人员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-219">Application developers</span></span><br /><br /> <span data-ttu-id="d6cc1-220">产品开发人员。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-220">Product developers.</span></span>|  
+|<span data-ttu-id="d6cc1-221">详细</span><span class="sxs-lookup"><span data-stu-id="d6cc1-221">Verbose</span></span>|<span data-ttu-id="d6cc1-222">"正"事件： 成功里程碑进行标记的事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-222">"Positive" events: events that mark successful milestones.</span></span>|<span data-ttu-id="d6cc1-223">发出用户代码和服务的低级别事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-223">Low level events for both user code and servicing are emitted.</span></span>|<span data-ttu-id="d6cc1-224">通常，可以使用此级别进行调试或应用程序优化。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-224">In general, you can use this level for debugging or application optimization.</span></span><br /><br /> <span data-ttu-id="d6cc1-225">-已理解消息头。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-225">-   Understood message header.</span></span>|<span data-ttu-id="d6cc1-226">管理员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-226">Administrators</span></span><br /><br /> <span data-ttu-id="d6cc1-227">应用程序开发人员</span><span class="sxs-lookup"><span data-stu-id="d6cc1-227">Application developers</span></span><br /><br /> <span data-ttu-id="d6cc1-228">产品开发人员。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-228">Product developers.</span></span>|  
+|<span data-ttu-id="d6cc1-229">活动跟踪</span><span class="sxs-lookup"><span data-stu-id="d6cc1-229">ActivityTracing</span></span>||<span data-ttu-id="d6cc1-230">处理活动与组件之间的流事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-230">Flow events between processing activities and components.</span></span>|<span data-ttu-id="d6cc1-231">此级别允许管理员和开发人员关联同一应用程序域中的各应用程序：</span><span class="sxs-lookup"><span data-stu-id="d6cc1-231">This level allows administrators and developers to correlate applications in the same application domain:</span></span><br /><br /> <span data-ttu-id="d6cc1-232">-活动边界，如启动/停止跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-232">-   Traces for activity boundaries, such as start/stop.</span></span><br /><span data-ttu-id="d6cc1-233">-传输跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-233">-   Traces for transfers.</span></span>|<span data-ttu-id="d6cc1-234">全部</span><span class="sxs-lookup"><span data-stu-id="d6cc1-234">All</span></span>|  
+|<span data-ttu-id="d6cc1-235">全部</span><span class="sxs-lookup"><span data-stu-id="d6cc1-235">All</span></span>||<span data-ttu-id="d6cc1-236">应用程序可能工作正常。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-236">Application may function properly.</span></span> <span data-ttu-id="d6cc1-237">发出所有事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-237">All events are emitted.</span></span>|<span data-ttu-id="d6cc1-238">先前的所有事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-238">All previous events.</span></span>|<span data-ttu-id="d6cc1-239">全部</span><span class="sxs-lookup"><span data-stu-id="d6cc1-239">All</span></span>|  
+  
+ <span data-ttu-id="d6cc1-240">从“详细”到“严重”的级别彼此堆叠，即每个跟踪级别都包括其上除“禁用”级别以外的所有级别。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-240">The levels from Verbose to Critical are stacked on top of each other, that is, each trace level includes all levels above it except the Off level.</span></span> <span data-ttu-id="d6cc1-241">例如，在“警告”级别进行侦听的侦听器会接收到“严重”、“错误”和“警告”跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-241">For example, a listener listening at the Warning level receives Critical, Error, and Warning traces.</span></span> <span data-ttu-id="d6cc1-242">“全部”级别包括从“详细”到“严重”的事件以及活动跟踪事件。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-242">The All level includes events from Verbose to Critical and Activity tracing events.</span></span>  
+  
+> [!CAUTION]
+>  <span data-ttu-id="d6cc1-243">“信息”、“详细”和“ActivityTracing”级别会生成大量跟踪，这可能会对消息吞吐量产生不利影响（如果计算机上的所有可用资源均已用尽）。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-243">The Information, Verbose, and ActivityTracing levels generate a lot of traces, which may negatively impact message throughput if you have used up all available resources on the machine.</span></span>  
+  
+## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a><span data-ttu-id="d6cc1-244">配置用于关联的活动跟踪和传播</span><span class="sxs-lookup"><span data-stu-id="d6cc1-244">Configuring Activity Tracing and Propagation for Correlation</span></span>  
+ <span data-ttu-id="d6cc1-245">为 `activityTracing` 属性指定的 `switchValue` 值用于启用活动跟踪，这会在终结点内发出活动边界跟踪和传输跟踪。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-245">The `activityTracing` value specified for the `switchValue` attribute is used to enable activity tracing, which emits traces for activity boundaries and transfers within endpoints.</span></span>  
   
 > [!NOTE]
->  如果启用了活动跟踪，则在使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的某些扩展功能时，可能会收到 <xref:System.NullReferenceException>。要解决此问题，请检查应用程序配置文件，并确保跟踪源的 `switchValue` 属性未设置为 `activityTracing`。  
+>  <span data-ttu-id="d6cc1-246">如果启用了活动跟踪，则在使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的某些扩展功能时，可能会收到 <xref:System.NullReferenceException>。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-246">When you use certain extensibility features in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], you might get a <xref:System.NullReferenceException> when activity tracing is enabled.</span></span> <span data-ttu-id="d6cc1-247">要解决此问题，请检查应用程序配置文件，并确保跟踪源的 `switchValue` 属性未设置为 `activityTracing`。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-247">To fix this problem, check your application's configuration file and ensure that the `switchValue` attribute for your trace source is not set to `activityTracing`.</span></span>  
   
- `propagateActivity` 属性指示是否应将活动传播到参与消息交换的其他终结点。将此值设置为 `true` 后，可以获取由任意两个终结点生成的跟踪文件，然后观察某一终结点上的一组跟踪是如何流向另一终结点上的一组跟踪的。  
+ <span data-ttu-id="d6cc1-248">`propagateActivity` 属性指示是否应将活动传播到参与消息交换的其他终结点。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-248">The `propagateActivity` attribute indicates whether the activity should be propagated to other endpoints that participate in the message exchange.</span></span> <span data-ttu-id="d6cc1-249">将此值设置为 `true` 后，可以获取由任意两个终结点生成的跟踪文件，然后观察某一终结点上的一组跟踪是如何流向另一终结点上的一组跟踪的。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-249">By setting this value to `true`, you can take trace files generated by any two endpoints and observe how a set of traces on one endpoint flowed to a set of traces on another endpoint.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]活动跟踪和传播的更多信息，请参见[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="d6cc1-250">活动跟踪和传播，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-250"> activity tracing and propagation, see [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).</span></span>  
   
- `propagateActivity` 和 `ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。`ActivityTracing`值还适用于任何跟踪源，包括 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 或用户定义的跟踪源。  
+ <span data-ttu-id="d6cc1-251">同时`propagateActivity`和`ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-251">Both `propagateActivity` and `ActivityTracing` Boolean values apply to the System.ServiceModel TraceSource.</span></span> <span data-ttu-id="d6cc1-252">`ActivityTracing`值也适用于任何跟踪源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或用户定义的。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-252">The `ActivityTracing` value also applies to any trace source, including [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] or user-defined ones.</span></span>  
   
- 不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
+ <span data-ttu-id="d6cc1-253">不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-253">You cannot use the `propagateActivity` attribute with user-defined trace sources.</span></span> <span data-ttu-id="d6cc1-254">对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="d6cc1-254">For user code activity ID propagation, make sure you do not set ServiceModel `ActivityTracing`, while still having ServiceModel `propagateActivity` attribute set to `true`.</span></span>  
   
-## 请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)   
- [How to: Create and Initialize Trace Listeners（如何：创建和初始化跟踪侦听器）](http://go.microsoft.com/fwlink/?LinkId=94648)   
- [Creating a Custom TraceListener（创建自定义 TraceListener）](http://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a><span data-ttu-id="d6cc1-255">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6cc1-255">See Also</span></span>  
+ [<span data-ttu-id="d6cc1-256">跟踪</span><span class="sxs-lookup"><span data-stu-id="d6cc1-256">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d6cc1-257">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="d6cc1-257">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [<span data-ttu-id="d6cc1-258">如何： 创建和初始化跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="d6cc1-258">How to: Create and Initialize Trace Listeners</span></span>](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [<span data-ttu-id="d6cc1-259">创建自定义 TraceListener</span><span class="sxs-lookup"><span data-stu-id="d6cc1-259">Creating a Custom TraceListener</span></span>](http://go.microsoft.com/fwlink/?LinkId=96239)

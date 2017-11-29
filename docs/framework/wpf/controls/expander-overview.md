@@ -1,70 +1,75 @@
 ---
-title: "Expander 概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件, Expander"
-  - "Expander 控件, 关于 Expander 控件"
+title: "Expander 概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], Expander
+- Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Expander 概述
-利用 <xref:System.Windows.Controls.Expander> 控件可以在类似于窗口并包括标题的可展开区域中提供内容。  
+# <a name="expander-overview"></a><span data-ttu-id="0f9d4-102">Expander 概述</span><span class="sxs-lookup"><span data-stu-id="0f9d4-102">Expander Overview</span></span>
+<span data-ttu-id="0f9d4-103"><xref:System.Windows.Controls.Expander>控件提供一种方法提供一个可展开的区域，它类似于一个窗口，并包含标头中的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-103">An <xref:System.Windows.Controls.Expander> control provides a way to provide content in an expandable area that resembles a window and includes a header.</span></span>  
   
-   
   
 <a name="CreatinganExpanderinXAML"></a>   
-## 创建简单的 Expander  
- 下面的示例演示如何创建一个简单的 <xref:System.Windows.Controls.Expander> 控件。  此示例将创建一个与上图类似的 <xref:System.Windows.Controls.Expander>。  
+## <a name="creating-a-simple-expander"></a><span data-ttu-id="0f9d4-104">创建简单的 Expander</span><span class="sxs-lookup"><span data-stu-id="0f9d4-104">Creating a Simple Expander</span></span>  
+ <span data-ttu-id="0f9d4-105">下面的示例演示如何创建一个简单<xref:System.Windows.Controls.Expander>控件。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-105">The following example shows how to create a simple <xref:System.Windows.Controls.Expander> control.</span></span> <span data-ttu-id="0f9d4-106">此示例将创建<xref:System.Windows.Controls.Expander>如上图所示。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-106">This example creates an <xref:System.Windows.Controls.Expander> that looks like the previous illustration.</span></span>  
   
- [!code-xml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
- <xref:System.Windows.Controls.Expander> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 和 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 也可以包含复杂内容，比如 <xref:System.Windows.Controls.RadioButton> 和 <xref:System.Windows.Controls.Image> 对象。  
+ <span data-ttu-id="0f9d4-107"><xref:System.Windows.Controls.ContentControl.Content%2A>和<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>的<xref:System.Windows.Controls.Expander>还可以包含复杂内容，如<xref:System.Windows.Controls.RadioButton>和<xref:System.Windows.Controls.Image>对象。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-107">The <xref:System.Windows.Controls.ContentControl.Content%2A> and <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> of an <xref:System.Windows.Controls.Expander> can also contain complex content, such as <xref:System.Windows.Controls.RadioButton> and <xref:System.Windows.Controls.Image> objects.</span></span>  
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
-## 设置展开内容区域的方向  
- 通过使用 <xref:System.Windows.Controls.ExpandDirection> 属性，您可以将 <xref:System.Windows.Controls.Expander> 控件的内容区域设置为在四个方向的其中一个方向上展开（<xref:System.Windows.Controls.ExpandDirection>、<xref:System.Windows.Controls.ExpandDirection>、<xref:System.Windows.Controls.ExpandDirection> 或 <xref:System.Windows.Controls.ExpandDirection>）。  内容区域处于折叠状态时，只会显示 <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 及其切换按钮。  将使用显示方向箭头的 <xref:System.Windows.Controls.Button> 控件作为展开或折叠内容区域的切换按钮。  在展开时，<xref:System.Windows.Controls.Expander> 将尝试在一个类似于窗口的区域中显示它的所有内容。  
+## <a name="setting-the-direction-of-the-expanding-content-area"></a><span data-ttu-id="0f9d4-108">设置展开内容区域的方向</span><span class="sxs-lookup"><span data-stu-id="0f9d4-108">Setting the Direction of the Expanding Content Area</span></span>  
+ <span data-ttu-id="0f9d4-109">你可以设置的内容区域的<xref:System.Windows.Controls.Expander>控件中的四个方向一个展开 (<xref:System.Windows.Controls.ExpandDirection.Down>， <xref:System.Windows.Controls.ExpandDirection.Up>， <xref:System.Windows.Controls.ExpandDirection.Left>，或<xref:System.Windows.Controls.ExpandDirection.Right>) 通过使用<xref:System.Windows.Controls.ExpandDirection>属性。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-109">You can set the content area of an <xref:System.Windows.Controls.Expander> control to expand in one of four directions (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, or <xref:System.Windows.Controls.ExpandDirection.Right>) by using the <xref:System.Windows.Controls.ExpandDirection> property.</span></span> <span data-ttu-id="0f9d4-110">当内容区域处于折叠状态，仅<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和其切换按钮显示。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-110">When the content area is collapsed, only the <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> and its toggle button appear.</span></span> <span data-ttu-id="0f9d4-111">A<xref:System.Windows.Controls.Button>控件都显示方向箭头用作切换按钮以展开或折叠内容区域。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-111">A <xref:System.Windows.Controls.Button> control that displays a directional arrow is used as a toggle button to expand or collapse the content area.</span></span> <span data-ttu-id="0f9d4-112">展开后，<xref:System.Windows.Controls.Expander>尝试在类似于窗口的区域中显示其所有的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-112">When expanded, the <xref:System.Windows.Controls.Expander> tries to display all of its content in a window-like area.</span></span>  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
-## 在面板中控制 Expander 的大小  
- 如果 <xref:System.Windows.Controls.Expander> 控件位于从 <xref:System.Windows.Controls.Panel>（如 <xref:System.Windows.Controls.StackPanel>）继承的布局控件的内部，当 <xref:System.Windows.Controls.Expander.ExpandDirection%2A> 属性设置为 <xref:System.Windows.Controls.ExpandDirection> 或 <xref:System.Windows.Controls.ExpandDirection> 时，不要在 <xref:System.Windows.Controls.Expander> 上指定 <xref:System.Windows.FrameworkElement.Height%2A>。  同样，当 <xref:System.Windows.Controls.Expander.ExpandDirection%2A> 属性设置为 <xref:System.Windows.Controls.ExpandDirection> 或 <xref:System.Windows.Controls.ExpandDirection> 时，不要在 <xref:System.Windows.Controls.Expander> 上指定 <xref:System.Windows.FrameworkElement.Width%2A>。  
+## <a name="controlling-the-size-of-an-expander-in-a-panel"></a><span data-ttu-id="0f9d4-113">在面板中控制 Expander 的大小</span><span class="sxs-lookup"><span data-stu-id="0f9d4-113">Controlling the Size of an Expander in a Panel</span></span>  
+ <span data-ttu-id="0f9d4-114">如果<xref:System.Windows.Controls.Expander>控件是继承自的布局控件内<xref:System.Windows.Controls.Panel>，如<xref:System.Windows.Controls.StackPanel>，未指定<xref:System.Windows.FrameworkElement.Height%2A>上<xref:System.Windows.Controls.Expander>时<xref:System.Windows.Controls.Expander.ExpandDirection%2A>属性设置为<xref:System.Windows.Controls.ExpandDirection.Down>或<xref:System.Windows.Controls.ExpandDirection.Up>。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-114">If an <xref:System.Windows.Controls.Expander> control is inside a layout control that inherits from <xref:System.Windows.Controls.Panel>, such as <xref:System.Windows.Controls.StackPanel>, do not specify a <xref:System.Windows.FrameworkElement.Height%2A> on the <xref:System.Windows.Controls.Expander> when the <xref:System.Windows.Controls.Expander.ExpandDirection%2A> property is set to <xref:System.Windows.Controls.ExpandDirection.Down> or <xref:System.Windows.Controls.ExpandDirection.Up>.</span></span> <span data-ttu-id="0f9d4-115">同样，未指定<xref:System.Windows.FrameworkElement.Width%2A>上<xref:System.Windows.Controls.Expander>时<xref:System.Windows.Controls.Expander.ExpandDirection%2A>属性设置为<xref:System.Windows.Controls.ExpandDirection.Left>或<xref:System.Windows.Controls.ExpandDirection.Right>。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-115">Similarly, do not specify a <xref:System.Windows.FrameworkElement.Width%2A> on the <xref:System.Windows.Controls.Expander> when the <xref:System.Windows.Controls.Expander.ExpandDirection%2A> property is set to <xref:System.Windows.Controls.ExpandDirection.Left> or <xref:System.Windows.Controls.ExpandDirection.Right>.</span></span>  
   
- 如果在 <xref:System.Windows.Controls.Expander> 控件显示展开内容的方向上设置大小维度，<xref:System.Windows.Controls.Expander> 将控制内容使用的区域，并在内容周围显示一个边框。  即使当内容处于折叠状态时，该边框也会显示。  若要设置展开内容区域的大小，请在 <xref:System.Windows.Controls.Expander> 的内容上设置大小维度，或者，如果需要滚动功能，请在封闭内容的 <xref:System.Windows.Controls.ScrollViewer> 上设置大小维度。  
+ <span data-ttu-id="0f9d4-116">当你将大小维度设置上<xref:System.Windows.Controls.Expander>方向，将显示的扩展的内容，控件<xref:System.Windows.Controls.Expander>控制可供内容并将显示在其周围边框的区域。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-116">When you set a size dimension on an <xref:System.Windows.Controls.Expander> control in the direction that the expanded content is displayed, the <xref:System.Windows.Controls.Expander> takes control of the area that is used by the content and displays a border around it.</span></span> <span data-ttu-id="0f9d4-117">即使内容已折叠，也会显示该边框。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-117">The border shows even when the content is collapsed.</span></span> <span data-ttu-id="0f9d4-118">若要设置的扩展的内容区域的大小，请将大小维度设置上的内容<xref:System.Windows.Controls.Expander>，或者如果你希望上滚动功能，<xref:System.Windows.Controls.ScrollViewer>包含的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-118">To set the size of the expanded content area, set size dimensions on the content of the <xref:System.Windows.Controls.Expander>, or if you want scrolling capability, on the <xref:System.Windows.Controls.ScrollViewer> that encloses the content.</span></span>  
   
- 如果 <xref:System.Windows.Controls.Expander> 控件是 <xref:System.Windows.Controls.DockPanel> 中的最后一个元素，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 会自动将 <xref:System.Windows.Controls.Expander> 维度设置为与 <xref:System.Windows.Controls.DockPanel> 的其余区域相等。  若要防止此默认行为，请将 <xref:System.Windows.Controls.DockPanel> 对象的 <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> 属性设置为 `false`，或者确保 <xref:System.Windows.Controls.Expander> 不是 <xref:System.Windows.Controls.DockPanel> 中的最后一个元素。  
+ <span data-ttu-id="0f9d4-119">当<xref:System.Windows.Controls.Expander>控件是中的最后一个元素<xref:System.Windows.Controls.DockPanel>，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]自动设置<xref:System.Windows.Controls.Expander>维度为相等的其余区域<xref:System.Windows.Controls.DockPanel>。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-119">When an <xref:System.Windows.Controls.Expander> control is the last element in a <xref:System.Windows.Controls.DockPanel>, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] automatically sets the <xref:System.Windows.Controls.Expander> dimensions to equal the remaining area of the <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="0f9d4-120">若要防止此默认行为，设置<xref:System.Windows.Controls.DockPanel.LastChildFill%2A>属性<xref:System.Windows.Controls.DockPanel>对象传递给`false`，或请确保<xref:System.Windows.Controls.Expander>不是中的最后一个元素<xref:System.Windows.Controls.DockPanel>。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-120">To prevent this default behavior, set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property on the <xref:System.Windows.Controls.DockPanel> object to `false`, or make sure that the <xref:System.Windows.Controls.Expander> is not the last element in a <xref:System.Windows.Controls.DockPanel>.</span></span>  
   
 <a name="CreatingScrollableContent"></a>   
-## 创建可滚动的内容  
- 如果内容对于内容区域的大小而言太大，您可以在 <xref:System.Windows.Controls.ScrollViewer> 中换行显示 <xref:System.Windows.Controls.Expander> 的内容，以便提供可滚动的内容。  <xref:System.Windows.Controls.Expander> 控件本身未自动提供滚动功能。  下图显示了一个包含 <xref:System.Windows.Controls.ScrollViewer> 控件的 <xref:System.Windows.Controls.Expander> 控件。  
+## <a name="creating-scrollable-content"></a><span data-ttu-id="0f9d4-121">创建可滚动内容</span><span class="sxs-lookup"><span data-stu-id="0f9d4-121">Creating Scrollable Content</span></span>  
+ <span data-ttu-id="0f9d4-122">如果内容的内容区域的大小太大，您可以将包装的内容<xref:System.Windows.Controls.Expander>中<xref:System.Windows.Controls.ScrollViewer>以便提供可滚动的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-122">If the content is too large for the size of the content area, you can wrap the content of an <xref:System.Windows.Controls.Expander> in a <xref:System.Windows.Controls.ScrollViewer> in order to provide scrollable content.</span></span> <span data-ttu-id="0f9d4-123"><xref:System.Windows.Controls.Expander>控件不会自动提供滚动功能。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-123">The <xref:System.Windows.Controls.Expander> control does not automatically provide scrolling capability.</span></span> <span data-ttu-id="0f9d4-124">下图显示<xref:System.Windows.Controls.Expander>包含控件<xref:System.Windows.Controls.ScrollViewer>控件。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-124">The following illustration shows an <xref:System.Windows.Controls.Expander> control that contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span>  
   
- **ScrollViewer 中的 Expander**  
+ <span data-ttu-id="0f9d4-125">**ScrollViewer 中的 Expander**</span><span class="sxs-lookup"><span data-stu-id="0f9d4-125">**Expander in a ScrollViewer**</span></span>  
   
- ![带有 ScrollBar 的 Expander](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ <span data-ttu-id="0f9d4-126">![带有 ScrollBar 的 Expander](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")</span><span class="sxs-lookup"><span data-stu-id="0f9d4-126">![Expander with ScrollBar](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")</span></span>  
   
- 如果将 <xref:System.Windows.Controls.Expander> 控件放在 <xref:System.Windows.Controls.ScrollViewer> 中，请将与 <xref:System.Windows.Controls.Expander> 内容展开方向对应的 <xref:System.Windows.Controls.ScrollViewer> 维度属性设置为 <xref:System.Windows.Controls.Expander> 内容区域的大小。  例如，如果将 <xref:System.Windows.Controls.Expander> 的 <xref:System.Windows.Controls.Expander.ExpandDirection%2A> 属性设置为 <xref:System.Windows.Controls.ExpandDirection>（内容区域向下展开），请将 <xref:System.Windows.Controls.ScrollViewer> 控件的 <xref:System.Windows.FrameworkElement.Height%2A> 属性设置为内容区域的必需高度。  如果您设置的是内容本身的高度维度，<xref:System.Windows.Controls.ScrollViewer> 将无法识别此设置，并因此无法提供可滚动的内容。  
+ <span data-ttu-id="0f9d4-127">当你将放置<xref:System.Windows.Controls.Expander>中控制<xref:System.Windows.Controls.ScrollViewer>，将其设置<xref:System.Windows.Controls.ScrollViewer>维度属性对应的方向<xref:System.Windows.Controls.Expander>内容的大小会打开<xref:System.Windows.Controls.Expander>内容区域。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-127">When you place an <xref:System.Windows.Controls.Expander> control in a <xref:System.Windows.Controls.ScrollViewer>, set the <xref:System.Windows.Controls.ScrollViewer> dimension property that corresponds to the direction in which the <xref:System.Windows.Controls.Expander> content opens to the size of the <xref:System.Windows.Controls.Expander> content area.</span></span> <span data-ttu-id="0f9d4-128">例如，如果你设置<xref:System.Windows.Controls.Expander.ExpandDirection%2A>属性<xref:System.Windows.Controls.Expander>到<xref:System.Windows.Controls.ExpandDirection.Down>（内容区域向下展开），设置<xref:System.Windows.FrameworkElement.Height%2A>属性<xref:System.Windows.Controls.ScrollViewer>控件添加到内容区域的所需高度。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-128">For example, if you set the <xref:System.Windows.Controls.Expander.ExpandDirection%2A> property on the <xref:System.Windows.Controls.Expander> to <xref:System.Windows.Controls.ExpandDirection.Down> (the content area opens down), set the <xref:System.Windows.FrameworkElement.Height%2A> property on the <xref:System.Windows.Controls.ScrollViewer> control to the required height for the content area.</span></span> <span data-ttu-id="0f9d4-129">如果在上内容本身，而是设置高度维度<xref:System.Windows.Controls.ScrollViewer>无法识别此设置，因此，不提供可滚动的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-129">If you instead set the height dimension on the content itself, <xref:System.Windows.Controls.ScrollViewer> does not recognize this setting and therefore, does not provide scrollable content.</span></span>  
   
- 下面的示例演示如何创建一个 <xref:System.Windows.Controls.Expander> 控件，该控件具有复杂内容并包含 <xref:System.Windows.Controls.ScrollViewer> 控件。  此示例将创建一个与本节开头的插图类似的 <xref:System.Windows.Controls.Expander>。  
+ <span data-ttu-id="0f9d4-130">下面的示例演示如何创建<xref:System.Windows.Controls.Expander>控件具有复杂内容且包含<xref:System.Windows.Controls.ScrollViewer>控件。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-130">The following example shows how to create an <xref:System.Windows.Controls.Expander> control that has complex content and that contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span> <span data-ttu-id="0f9d4-131">此示例将创建<xref:System.Windows.Controls.Expander>这是本部分开头图类似。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-131">This example creates an <xref:System.Windows.Controls.Expander> that is like the illustration at the beginning of this section.</span></span>  
   
  [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
-## 使用对齐方式属性  
- 可以通过在 <xref:System.Windows.Controls.Expander> 控件上设置 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 和 <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> 属性来对齐内容。  设置了这些属性后，对齐方式将应用于标题，并同时应用于展开的内容。  
+## <a name="using-the-alignment-properties"></a><span data-ttu-id="0f9d4-132">使用对齐属性</span><span class="sxs-lookup"><span data-stu-id="0f9d4-132">Using the Alignment Properties</span></span>  
+ <span data-ttu-id="0f9d4-133">你可以通过设置对齐内容<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>和<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>属性<xref:System.Windows.Controls.Expander>控件。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-133">You can align content by setting the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> and <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> properties on the <xref:System.Windows.Controls.Expander> control.</span></span> <span data-ttu-id="0f9d4-134">当设置这些属性时，对齐将同时应用于标头和展开的内容。</span><span class="sxs-lookup"><span data-stu-id="0f9d4-134">When you set these properties, the alignment applies to the header and also to the expanded content.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Controls.Expander>   
- <xref:System.Windows.Controls.ExpandDirection>   
- [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="0f9d4-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0f9d4-135">See Also</span></span>  
+ <xref:System.Windows.Controls.Expander>  
+ <xref:System.Windows.Controls.ExpandDirection>  
+ [<span data-ttu-id="0f9d4-136">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="0f9d4-136">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

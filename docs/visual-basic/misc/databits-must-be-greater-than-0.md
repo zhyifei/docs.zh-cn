@@ -1,22 +1,25 @@
 ---
-title: "DataBits 必须大于 0 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "DataBits 必须大于 0"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: b0e1d53f-ed19-47bf-b7ef-06479aa76338
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1de9f9fc11a2b17d84da9c04133f9a3c610ddf3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# DataBits 必须大于 0
-为 `My.Computer.Ports.OpenSerialPort` 方法指定的 `DataBits` 参数必须大于零。  
+# <a name="databits-must-be-greater-than-0"></a><span data-ttu-id="de268-102">DataBits 必须大于 0</span><span class="sxs-lookup"><span data-stu-id="de268-102">DataBits must be greater than 0</span></span>
+<span data-ttu-id="de268-103">为 `DataBits` 方法指定的 `My.Computer.Ports.OpenSerialPort` 参数必须大于零。</span><span class="sxs-lookup"><span data-stu-id="de268-103">The `DataBits` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="de268-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="de268-104">To correct this error</span></span>  
   
--   将 `DataBits` 参数的值更改为正数值。  
+-   <span data-ttu-id="de268-105">将 `DataBits` 参数的值更改为正数值。</span><span class="sxs-lookup"><span data-stu-id="de268-105">Change the value of the `DataBits` argument to a positive number.</span></span>  
   
-## 请参阅  
- [My.Computer.Ports.OpenSerialPort 方法](http://msdn.microsoft.com/zh-cn/ed1e75f0-635a-4229-8fe6-becea5d036c3)
+## <a name="see-also"></a><span data-ttu-id="de268-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="de268-106">See Also</span></span>  
+ [<span data-ttu-id="de268-107">My.Computer.Ports.OpenSerialPort 方法</span><span class="sxs-lookup"><span data-stu-id="de268-107">My.Computer.Ports.OpenSerialPort Method</span></span>](http://msdn.microsoft.com/en-us/ed1e75f0-635a-4229-8fe6-becea5d036c3)

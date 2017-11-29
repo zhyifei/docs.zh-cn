@@ -1,64 +1,57 @@
 ---
-title: "Implements 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ImplementsClause"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Implements 关键字"
-  - "Implements 语句, 关于 Implements"
-  - "接口实现, Implements 关键字"
-  - "接口实现, 重新实现"
-  - "接口成员"
-  - "接口成员, 实现"
-  - "接口成员, Implements 关键字"
-  - "接口成员, 重新实现"
-  - "成员, 实现"
-  - "成员, Implements 关键字"
-  - "成员, 重新实现"
-  - "重新实现"
+title: "Implements 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ImplementsClause
+helpviewer_keywords:
+- interface implementation [Visual Basic], reimplementation
+- interface members [Visual Basic], reimplementation
+- interface members [Visual Basic], Implements keyword
+- interface members
+- members [Visual Basic], reimplementation
+- interface implementation [Visual Basic], Implements keyword
+- interface members [Visual Basic], implementing
+- Implements keyword [Visual Basic]
+- Implements statement [Visual Basic], about Implements
+- members [Visual Basic], implementing
+- members [Visual Basic], Implements keyword
+- reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73f66eda29e37fda15b4c838da5a0458684131da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Implements 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="implements-clause-visual-basic"></a><span data-ttu-id="17741-102">Implements 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="17741-102">Implements Clause (Visual Basic)</span></span>
+<span data-ttu-id="17741-103">指示类或结构成员提供在接口中定义的成员的实现。</span><span class="sxs-lookup"><span data-stu-id="17741-103">Indicates that a class or structure member is providing the implementation for a member defined in an interface.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="17741-104">备注</span><span class="sxs-lookup"><span data-stu-id="17741-104">Remarks</span></span>  
+<span data-ttu-id="17741-105">`Implements`关键字不与相同[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="17741-105">The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span> <span data-ttu-id="17741-106">你使用`Implements`语句指定的类或结构实现一个或多个接口，证书，然后为每个成员你使用`Implements`关键字来指定哪个接口和哪个成员它实现。</span><span class="sxs-lookup"><span data-stu-id="17741-106">You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.</span></span>
 
-指示类或结构成员正在为接口中所定义的成员提供实现。  
+<span data-ttu-id="17741-107">如果类或结构实现接口时，它必须包含`Implements`语句后立即[类语句](../../../visual-basic/language-reference/statements/class-statement.md)或[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)，并且它必须实现的所有成员定义由接口。</span><span class="sxs-lookup"><span data-stu-id="17741-107">If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.</span></span>
+
+## <a name="reimplementation"></a><span data-ttu-id="17741-108">重新实现</span><span class="sxs-lookup"><span data-stu-id="17741-108">Reimplementation</span></span>  
+<span data-ttu-id="17741-109">在派生类中，你可以重新实现接口成员的基类实现。</span><span class="sxs-lookup"><span data-stu-id="17741-109">In a derived class, you can reimplement an interface member that the base class has already implemented.</span></span> <span data-ttu-id="17741-110">这是不同于重写基类成员在以下方面：</span><span class="sxs-lookup"><span data-stu-id="17741-110">This is different from overriding the base class member in the following respects:</span></span>
+
+- <span data-ttu-id="17741-111">基类成员不需要为[可重写](../../../visual-basic/language-reference/modifiers/overridable.md)若要将根据。</span><span class="sxs-lookup"><span data-stu-id="17741-111">The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.</span></span>
+- <span data-ttu-id="17741-112">你可以重新实现具有不同名称的成员。</span><span class="sxs-lookup"><span data-stu-id="17741-112">You can reimplement the member with a different name.</span></span>
+
+<span data-ttu-id="17741-113">`Implements`关键字可以在以下上下文中使用：</span><span class="sxs-lookup"><span data-stu-id="17741-113">The `Implements` keyword can be used in the following contexts:</span></span>
+- [<span data-ttu-id="17741-114">Event 语句</span><span class="sxs-lookup"><span data-stu-id="17741-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="17741-115">Function 语句</span><span class="sxs-lookup"><span data-stu-id="17741-115">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="17741-116">Property 语句</span><span class="sxs-lookup"><span data-stu-id="17741-116">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="17741-117">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="17741-117">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 备注  
- `Implements` 关键字与 [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md) 不同。  先使用 `Implements` 语句指定由类或结构实现一个或多个接口，然后再使用 `Implements` 关键字为每个成员指定该成员要实现哪个接口和成员。  
-  
- 如果类或结构实现了一个接口，那么它必须在 [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md) 或 [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md) 之后紧跟 `Implements` 语句，并且必须实现该接口所定义的所有成员。  
-  
-## 重新实现  
- 在派生类中，您可以重新实现基类已经实现的接口成员。  这一点在以下方面与重写基类成员有所不同：  
-  
--   若要被重新实现，基类成员不一定非得是 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)。  
-  
--   可以采用不同的名称重新实现该成员。  
-  
- `Implements` 关键字可用于下面的上下文中：  
-  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-## 请参阅  
- [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="17741-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17741-118">See Also</span></span>  
+ [<span data-ttu-id="17741-119">Implements 语句</span><span class="sxs-lookup"><span data-stu-id="17741-119">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [<span data-ttu-id="17741-120">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="17741-120">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="17741-121">Class 语句</span><span class="sxs-lookup"><span data-stu-id="17741-121">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="17741-122">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="17741-122">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)

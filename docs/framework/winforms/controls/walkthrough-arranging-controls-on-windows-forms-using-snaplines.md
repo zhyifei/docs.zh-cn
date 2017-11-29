@@ -1,256 +1,257 @@
 ---
-title: "演练：使用对齐线在 Windows 窗体上排列控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 使用对齐线排列"
-  - "SnapLine 类, 演练"
-  - "对齐线, 排列 Windows 窗体控件"
-  - "Windows 窗体控件, 排列"
+title: "演练：使用对齐线在 Windows 窗体上排列控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with snaplines
+- snaplines [Windows Forms], arranging Windows Forms controls
+- SnapLine class [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：使用对齐线在 Windows 窗体上排列控件
-对许多应用程序而言，在窗体上精确地放置控件是一项需要优先考虑的任务。  “Windows 窗体设计器”提供了很多用于完成此任务的工具。  在这些工具中，最重要的一个就是 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 功能。  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="42fc8-102">演练：使用对齐线在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
+<span data-ttu-id="42fc8-103">在窗体上精确地放置控件对于许多应用程序而言是高优先级。</span><span class="sxs-lookup"><span data-stu-id="42fc8-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="42fc8-104">Windows 窗体设计器为你提供许多布局工具实现此目的。</span><span class="sxs-lookup"><span data-stu-id="42fc8-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="42fc8-105">最重要之一是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。</span><span class="sxs-lookup"><span data-stu-id="42fc8-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  
   
- 对齐线为您精确地指示使控件相互对齐的位置。  它们还会根据 Windows 用户界面指南的规定，显示出建议在控件边缘之间留出的距离。  有关详细信息，请参见 [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878)（用户界面设计和开发）。  
+ <span data-ttu-id="42fc8-106">对齐线显示确切位置与其他控件的控件对齐。</span><span class="sxs-lookup"><span data-stu-id="42fc8-106">Snaplines show you precisely where to line up controls with other controls.</span></span> <span data-ttu-id="42fc8-107">它们还显示你的控件，为指定的 Windows 用户界面指南之间的边距的建议的距离。</span><span class="sxs-lookup"><span data-stu-id="42fc8-107">They also show you the recommended distances for margins between controls, as specified by the Windows User Interface Guidelines.</span></span> <span data-ttu-id="42fc8-108">有关详细信息，请参阅[用户界面设计和开发](http://go.microsoft.com/FWLink/?LinkId=83878)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-108">For details, see [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).</span></span>  
   
- 使用对齐线，您可以方便轻松地对齐控件，获得简洁、专业的外观和效果（视觉体验）。  
+ <span data-ttu-id="42fc8-109">对齐线可以方便轻松地对齐您控件，获得简洁、 专业外观和行为 （外观和感觉）。</span><span class="sxs-lookup"><span data-stu-id="42fc8-109">Snaplines make it easy to align your controls, for crisp, professional appearance and behavior (look and feel).</span></span>  
   
- 本演练涉及以下任务：  
+ <span data-ttu-id="42fc8-110">本演练涉及以下任务：</span><span class="sxs-lookup"><span data-stu-id="42fc8-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   创建 Windows 窗体项目  
+-   <span data-ttu-id="42fc8-111">创建 Windows 窗体项目</span><span class="sxs-lookup"><span data-stu-id="42fc8-111">Creating a Windows Forms project</span></span>  
   
--   使用对齐线调整间距并对齐控件  
+-   <span data-ttu-id="42fc8-112">间距和对齐控件使用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-112">Spacing and Aligning Controls Using Snaplines</span></span>  
   
--   与窗体和容器的边缘对齐  
+-   <span data-ttu-id="42fc8-113">到窗体和容器的边缘对齐</span><span class="sxs-lookup"><span data-stu-id="42fc8-113">Aligning to Form and Container Margins</span></span>  
   
--   对齐一组控件  
+-   <span data-ttu-id="42fc8-114">对齐到分组后的控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-114">Aligning to Grouped Controls</span></span>  
   
--   通过勾画控件轮廓来使用对齐线放置控件  
+-   <span data-ttu-id="42fc8-115">使用对齐线通过勾画放置控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-115">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
   
--   在从工具箱中拖动控件时使用对齐线  
+-   <span data-ttu-id="42fc8-116">从工具箱中拖动控件时使用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-116">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
   
--   使用对齐线调整控件大小  
+-   <span data-ttu-id="42fc8-117">使用对齐线的大小调整控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-117">Resizing Controls Using Snaplines</span></span>  
   
--   使标签与控件文本对齐  
+-   <span data-ttu-id="42fc8-118">对齐标签与控件的文本</span><span class="sxs-lookup"><span data-stu-id="42fc8-118">Aligning a Label to a Control's Text</span></span>  
   
--   配合键盘导航来使用对齐线  
+-   <span data-ttu-id="42fc8-119">使用键盘导航线对齐</span><span class="sxs-lookup"><span data-stu-id="42fc8-119">Using Snaplines with Keyboard Navigation</span></span>  
   
--   对齐线和布局面板  
+-   <span data-ttu-id="42fc8-120">对齐线和布局面板</span><span class="sxs-lookup"><span data-stu-id="42fc8-120">Snaplines and Layout Panels</span></span>  
   
--   禁用对齐线  
+-   <span data-ttu-id="42fc8-121">禁用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-121">Disabling Snaplines</span></span>  
   
- 完成上述任务之后，您将对对齐线所发挥的布局作用有所了解。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
-  
-## 创建项目  
- 第一步是创建项目并设置窗体。  
-  
-#### 创建项目  
-  
-1.  创建一个名为“SnaplineExample”的基于 Windows 的应用程序项目。  有关详细信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
-  
-2.  在“窗体设计器”中选择窗体。  
-  
-## 使用对齐线调整间距并对齐控件  
- 对齐线为在窗体上对齐控件创造了一种准确而直观的方式。  当您在一个需要与一个（或一组）控件对齐的位置附近移动另一个（或一组）选定控件时，对齐线就会出现。  当您将选定控件移过其他控件时，选定控件就会“贴合”到建议的位置。  
-  
-#### 使用对齐线排列控件  
-  
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到窗体上。  
-  
-2.  将 <xref:System.Windows.Forms.Button> 控件移动到窗体的右下角。  当 <xref:System.Windows.Forms.Button> 控件接近窗体的底部和右边框时，请注意随之出现的对齐线。  这些对齐线会显示控件边框和窗体边框之间的推荐距离。  
-  
-3.  在窗体边框附近移动 <xref:System.Windows.Forms.Button> 控件，留意对齐线出现的位置。  完成之后，将 <xref:System.Windows.Forms.Button> 控件移到窗体的中心附近。  
-  
-4.  从**“工具箱”**中将另一个 <xref:System.Windows.Forms.Button> 控件拖到窗体上。  
-  
-5.  移动第二个 <xref:System.Windows.Forms.Button> 控件，使之差不多与第一个控件平齐。  请留意出现在两个按钮的文本基线处的对齐线，您会发现所移动的控件会贴合到与另一个控件完全平齐的位置。  
-  
-6.  移动第二个 <xref:System.Windows.Forms.Button> 控件，使之位于第一个控件的正上方。  请留意出现在两个按钮左右两边的对齐线，您会发现所移动的控件会贴合到与另一个控件完全对齐的位置。  
-  
-7.  选择 <xref:System.Windows.Forms.Button> 控件之一并将其移近另一个，直到两个控件几乎接触为止。  留意它们之间的对齐线。  此距离就是控件边框之间的推荐距离。  另外，还请注意您所移动的控件会按此位置对齐。  
-  
-8.  从**“工具箱”**中将两个 <xref:System.Windows.Forms.Panel> 控件拖到窗体上。  
-  
-9. 移动一个 <xref:System.Windows.Forms.Panel> 控件，使之差不多与第一个控件平齐。  请留意出现在两个控件上下两边的对齐线，您会发现所移动的控件会贴合到与另一个控件完全平齐的位置。  
-  
-## 与窗体和容器的边缘对齐  
- 对齐线会帮助您以统一的风格将控件与窗体和容器的边缘对齐。  
-  
-#### 将控件沿窗体和容器边缘对齐  
-  
-1.  选择一个 <xref:System.Windows.Forms.Button> 控件，将其朝靠近窗体右边框的方向移动，直到出现对齐线。  对齐线与右边框之间的距离等于控件的 <xref:System.Windows.Forms.Control.Margin%2A> 属性和窗体的 <xref:System.Windows.Forms.Control.Padding%2A> 属性值之和。  
+ <span data-ttu-id="42fc8-122">完成后，将会对齐线功能所发挥的布局作用的了解。</span><span class="sxs-lookup"><span data-stu-id="42fc8-122">When you are finished, you will have an understanding of the layout role played by the snaplines feature.</span></span>  
   
 > [!NOTE]
->  如果窗体的 <xref:System.Windows.Forms.Control.Padding%2A> 属性设置为 0,0,0,0，则 Windows 窗体设计器将为窗体指定隐藏的 <xref:System.Windows.Forms.Control.Padding%2A> 值 9,9,9,9。  为避免此行为，请指定一个 0,0,0,0 以外的值。  
+>  <span data-ttu-id="42fc8-123">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="42fc8-123">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="42fc8-124">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="42fc8-124">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="42fc8-125">有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-125">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-1.  更改 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Margin%2A> 属性值，方法是在**“属性”**窗口中展开 <xref:System.Windows.Forms.Control.Margin%2A> 项，将 <xref:System.Windows.Forms.Padding.All%2A> 属性设置为 0。  有关详细信息，请参见[演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
+## <a name="creating-the-project"></a><span data-ttu-id="42fc8-126">创建项目</span><span class="sxs-lookup"><span data-stu-id="42fc8-126">Creating the Project</span></span>  
+ <span data-ttu-id="42fc8-127">第一步是创建项目并设置窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-127">The first step is to create the project and set up the form.</span></span>  
   
-2.  将 <xref:System.Windows.Forms.Button> 控件朝靠近窗体右边框的方向移动，直到出现对齐线。  现在，此距离与窗体的 <xref:System.Windows.Forms.Control.Padding%2A> 属性值相等。  
+#### <a name="to-create-the-project"></a><span data-ttu-id="42fc8-128">创建项目</span><span class="sxs-lookup"><span data-stu-id="42fc8-128">To create the project</span></span>  
   
-3.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.GroupBox> 控件拖到窗体上。  
+1.  <span data-ttu-id="42fc8-129">创建一个名为"SnaplineExample"的基于 Windows 的应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="42fc8-129">Create a Windows-based application project called "SnaplineExample".</span></span> <span data-ttu-id="42fc8-130">有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-130">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-4.  更改 <xref:System.Windows.Forms.GroupBox> 控件的 <xref:System.Windows.Forms.Control.Padding%2A> 属性值，方法是在**“属性”**窗口中展开 <xref:System.Windows.Forms.Control.Padding%2A> 项，将 <xref:System.Windows.Forms.Padding.All%2A> 属性设置为 10。  
+2.  <span data-ttu-id="42fc8-131">在窗体设计器中选择窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-131">Select the form in the Forms Designer.</span></span>  
   
-5.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到 <xref:System.Windows.Forms.GroupBox> 控件中。  
+## <a name="spacing-and-aligning-controls-using-snaplines"></a><span data-ttu-id="42fc8-132">间距和对齐控件使用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-132">Spacing and Aligning Controls Using Snaplines</span></span>  
+ <span data-ttu-id="42fc8-133">对齐线使您可以在你的窗体上对齐控件准确且直观的方式。</span><span class="sxs-lookup"><span data-stu-id="42fc8-133">Snaplines give you an accurate and intuitive way to align controls on your form.</span></span> <span data-ttu-id="42fc8-134">它们显示在与另一个控件或组控件将保持一致的位置附近移动选定的控件时。</span><span class="sxs-lookup"><span data-stu-id="42fc8-134">They appear when you are moving a selected control or controls near a position that would align with another control or set of controls.</span></span> <span data-ttu-id="42fc8-135">你的选择将"对齐"到建议的位置根据越过其他控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-135">Your selection will "snap" to the suggested position as you move it past the other controls.</span></span>  
   
-6.  将 <xref:System.Windows.Forms.Button> 控件朝靠近 <xref:System.Windows.Forms.GroupBox> 控件右边框的方向移动，直到出现对齐线。  在 <xref:System.Windows.Forms.GroupBox> 控件内移动 <xref:System.Windows.Forms.Button> 控件，留意对齐线出现的位置。  
+#### <a name="to-arrange-controls-using-snaplines"></a><span data-ttu-id="42fc8-136">使用对齐线排列控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-136">To arrange controls using snaplines</span></span>  
   
-## 对齐一组控件  
- 使用对齐线，您可以对齐一组控件，以及 <xref:System.Windows.Forms.GroupBox> 控件内部的控件。  
+1.  <span data-ttu-id="42fc8-137">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-137">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-#### 对齐一组控件  
+2.  <span data-ttu-id="42fc8-138">移动<xref:System.Windows.Forms.Button>在窗体右下角的控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-138">Move the <xref:System.Windows.Forms.Button> control to the lower-right corner of the form.</span></span> <span data-ttu-id="42fc8-139">请注意显示为对齐线<xref:System.Windows.Forms.Button>控件接近下边缘和右边框的窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-139">Note the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the form.</span></span> <span data-ttu-id="42fc8-140">这些对齐线显示控件的边框和窗体的建议的距离。</span><span class="sxs-lookup"><span data-stu-id="42fc8-140">These snaplines display the recommended distance between the borders of the control and the form.</span></span>  
   
-1.  从您的窗体上选择两个控件。  移动选定控件，同时留意在选定控件和其他控件之间出现的对齐线。  
+3.  <span data-ttu-id="42fc8-141">移动<xref:System.Windows.Forms.Button>控件周围的边框的窗体并注意对齐线的显示位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-141">Move the <xref:System.Windows.Forms.Button> control around the borders of the form and note where the snaplines appear.</span></span> <span data-ttu-id="42fc8-142">完成后，移动<xref:System.Windows.Forms.Button>附近窗体的中心。</span><span class="sxs-lookup"><span data-stu-id="42fc8-142">When you are finished, move the <xref:System.Windows.Forms.Button> control near the center of the form.</span></span>  
   
-2.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.GroupBox> 控件拖到窗体上。  
+4.  <span data-ttu-id="42fc8-143">将另一个<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-143">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-3.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到 <xref:System.Windows.Forms.GroupBox> 控件中。  
+5.  <span data-ttu-id="42fc8-144">移动第二个<xref:System.Windows.Forms.Button>控件，直到它是几乎与第一个级别。</span><span class="sxs-lookup"><span data-stu-id="42fc8-144">Move the second <xref:System.Windows.Forms.Button> control until it is nearly level with the first.</span></span> <span data-ttu-id="42fc8-145">请注意出现在两个按钮的文本基线对齐线，并记下你移动的控件对齐到的位置，则完全与另一个控件的级别。</span><span class="sxs-lookup"><span data-stu-id="42fc8-145">Note the snapline that appears at the text baseline of both buttons, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-4.  选择一个 <xref:System.Windows.Forms.Button> 控件，在 <xref:System.Windows.Forms.GroupBox> 控件附近移动。  留意 <xref:System.Windows.Forms.GroupBox> 控件边缘的对齐线。  同时留意位于 <xref:System.Windows.Forms.GroupBox> 控件内部的 <xref:System.Windows.Forms.Button> 控件边缘的对齐线。  容器控件的子控件也支持对齐线。  
+6.  <span data-ttu-id="42fc8-146">移动第二个<xref:System.Windows.Forms.Button>控制直到它位于第一个的正上方。</span><span class="sxs-lookup"><span data-stu-id="42fc8-146">Move the second <xref:System.Windows.Forms.Button> control until it is positioned directly above the first.</span></span> <span data-ttu-id="42fc8-147">请注意出现沿左边缘和右边缘的两个按钮，并记下该控件与准确对齐与另一个控件的位置的移动对齐的对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-147">Note the snaplines that appear along the left and right edges of both buttons, and note that the control you are moving snaps to a position that is exactly aligned with the other control.</span></span>  
   
-## 通过勾画控件轮廓来使用对齐线放置控件  
- 当您第一次在窗体上放置控件时，对齐线会帮助您使控件对齐。  
+7.  <span data-ttu-id="42fc8-148">选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近另一个，直到它们几乎接触。</span><span class="sxs-lookup"><span data-stu-id="42fc8-148">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span> <span data-ttu-id="42fc8-149">请注意它们之间的对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-149">Note the snapline that appears between them.</span></span> <span data-ttu-id="42fc8-150">此距离是控件的边框之间的建议的距离。</span><span class="sxs-lookup"><span data-stu-id="42fc8-150">This distance is the recommended distance between the borders of the controls.</span></span> <span data-ttu-id="42fc8-151">另请注意你移动的控件对齐到此位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-151">Also note that the control you are moving snaps to this position.</span></span>  
   
-#### 通过勾画控件轮廓来使用对齐线放置控件  
+8.  <span data-ttu-id="42fc8-152">将两个<xref:System.Windows.Forms.Panel>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-152">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto your form.</span></span>  
   
-1.  在**“工具箱”**中单击 <xref:System.Windows.Forms.Button> 控件图标。  不要将其拖到窗体上。  
+9. <span data-ttu-id="42fc8-153">将其中一个移动<xref:System.Windows.Forms.Panel>控件，直到它是几乎与第一个级别。</span><span class="sxs-lookup"><span data-stu-id="42fc8-153">Move one of the <xref:System.Windows.Forms.Panel> controls until it is nearly level with the first.</span></span> <span data-ttu-id="42fc8-154">请注意显示两个控件的边缘和下边缘沿并记下你移动的控件对齐到的位置，则完全级别与另一个控件的对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-154">Note the snaplines that appear along the top and bottom edges of both controls, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-2.  将鼠标指针移动到窗体的设计图面上方。  请留意附加了 <xref:System.Windows.Forms.Button> 控件图标的鼠标会变为十字线。  还请注意建议 <xref:System.Windows.Forms.Button> 控件的对齐位置的对齐线。  
+## <a name="aligning-to-form-and-container-margins"></a><span data-ttu-id="42fc8-155">到窗体和容器的边缘对齐</span><span class="sxs-lookup"><span data-stu-id="42fc8-155">Aligning to Form and Container Margins</span></span>  
+ <span data-ttu-id="42fc8-156">对齐线有助于以一致的方式对齐将控件与窗体和容器的边距。</span><span class="sxs-lookup"><span data-stu-id="42fc8-156">Snaplines help you to align your controls to form and container margins in a consistent manner.</span></span>  
   
-3.  单击并按住鼠标按钮。  
+#### <a name="to-align-controls-to-form-and-container-margins"></a><span data-ttu-id="42fc8-157">对齐控件添加到窗体和容器的边距</span><span class="sxs-lookup"><span data-stu-id="42fc8-157">To align controls to form and container margins</span></span>  
   
-4.  围绕窗体拖动鼠标指针。  此时会绘制出一条轮廓线，它指示控件的位置和大小。  
+1.  <span data-ttu-id="42fc8-158">选择其中一个<xref:System.Windows.Forms.Button>控制并将其移接近右边框的窗体中，直到显示对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-158">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="42fc8-159">从右边框对齐线的距离是控件的总和<xref:System.Windows.Forms.Control.Margin%2A>属性和窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性值。</span><span class="sxs-lookup"><span data-stu-id="42fc8-159">The snapline's distance from the right border is the sum of the control's <xref:System.Windows.Forms.Control.Margin%2A> property and the form's <xref:System.Windows.Forms.Control.Padding%2A> property values.</span></span>  
   
-5.  拖动指针，使之与窗体上的另一个控件对齐。  此时会出现一条对齐线来指示对齐位置。  
+> [!NOTE]
+>  <span data-ttu-id="42fc8-160">如果窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性设置为 0,0,0,0、 Windows 窗体设计器使该窗体指定隐藏<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 的值。</span><span class="sxs-lookup"><span data-stu-id="42fc8-160">If the form's <xref:System.Windows.Forms.Control.Padding%2A> property is set to 0,0,0,0, the Windows Forms Designer gives the form a shadowed <xref:System.Windows.Forms.Control.Padding%2A> value of 9,9,9,9.</span></span> <span data-ttu-id="42fc8-161">若要重写此行为，分配 0,0,0,0 以外的值。</span><span class="sxs-lookup"><span data-stu-id="42fc8-161">To override this behavior, assign a value other than 0,0,0,0.</span></span>  
   
-6.  释放鼠标按钮。  系统会按照轮廓线指示的位置和大小创建控件。  
+1.  <span data-ttu-id="42fc8-162">更改的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>属性通过展开<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设为 0。</span><span class="sxs-lookup"><span data-stu-id="42fc8-162">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 0.</span></span> <span data-ttu-id="42fc8-163">有关详细信息，请参阅[演练： 设计出 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-163">For details, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span>  
   
-## 在从工具箱中拖动控件时使用对齐线  
- 当您从**“工具箱”**中将控件拖到窗体上时，对齐线会帮助您对齐控件。  
+2.  <span data-ttu-id="42fc8-164">移动<xref:System.Windows.Forms.Button>接近右边框直到显示对齐线在窗体控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-164">Move the <xref:System.Windows.Forms.Button> control close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="42fc8-165">此距离现在由窗体的值指定<xref:System.Windows.Forms.Control.Padding%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="42fc8-165">This distance is now given by the value of the form's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-#### 在从工具箱中拖动控件时使用对齐线  
+3.  <span data-ttu-id="42fc8-166">拖动<xref:System.Windows.Forms.GroupBox>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-166">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到窗体上，但不要释放鼠标按钮。  
+4.  <span data-ttu-id="42fc8-167">更改的值<xref:System.Windows.Forms.GroupBox>控件的<xref:System.Windows.Forms.Control.Padding%2A>属性通过展开<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 10。</span><span class="sxs-lookup"><span data-stu-id="42fc8-167">Change the value of the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 10.</span></span>  
   
-2.  将鼠标指针移动到窗体的设计图面上方。  您会注意到指针会随即更改，以指示新的 <xref:System.Windows.Forms.Button> 控件将在哪个位置创建。  
+5.  <span data-ttu-id="42fc8-168">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-168">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  围绕窗体拖动鼠标指针。  请留意建议 <xref:System.Windows.Forms.Button> 控件的对齐位置的对齐线。  找到一个可以与其他控件对齐的位置。  
+6.  <span data-ttu-id="42fc8-169">移动<xref:System.Windows.Forms.Button>接近的右边框的控件<xref:System.Windows.Forms.GroupBox>控制直到显示对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-169">Move the <xref:System.Windows.Forms.Button> control close to the right border of the <xref:System.Windows.Forms.GroupBox> control until a snapline appears.</span></span> <span data-ttu-id="42fc8-170">移动<xref:System.Windows.Forms.Button>控件中<xref:System.Windows.Forms.GroupBox>控制和注意对齐线的显示位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-170">Move the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and note where the snaplines appear.</span></span>  
   
-4.  释放鼠标按钮。  系统会按照对齐线指示的位置创建控件。  
+## <a name="aligning-to-grouped-controls"></a><span data-ttu-id="42fc8-171">对齐到分组后的控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-171">Aligning to Grouped Controls</span></span>  
+ <span data-ttu-id="42fc8-172">你可以使用对齐线对齐分组后的控件以及为控件中<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-172">You can use snaplines to align grouped controls as well as controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-## 使用对齐线调整控件大小  
- 对齐线会帮助您在调整控件大小的同时使控件对齐。  
+#### <a name="to-align-to-grouped-controls"></a><span data-ttu-id="42fc8-173">对齐到一组控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-173">To align to grouped controls</span></span>  
   
-#### 使用对齐线调整控件大小  
+1.  <span data-ttu-id="42fc8-174">选择两个窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-174">Select two of the controls on your form.</span></span> <span data-ttu-id="42fc8-175">移动所选内容，并记下你的选择和其他控件之间显示的对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-175">Move the selection around and note the snaplines that appear between your selection and the other controls.</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到窗体上。  
+2.  <span data-ttu-id="42fc8-176">拖动<xref:System.Windows.Forms.GroupBox>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-176">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-2.  调整 <xref:System.Windows.Forms.Button> 控件的大小，方法是抓住某个角尺寸柄并拖动它。  有关详细信息，请参见 [如何：调整 Windows 窗体上控件的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+3.  <span data-ttu-id="42fc8-177">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-177">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  拖动尺寸柄，使 <xref:System.Windows.Forms.Button> 控件的某个边框与另一个控件对齐。  请留意此时出现的对齐线。  还请留意，尺寸柄会按照对齐线所提示的位置对齐。  
+4.  <span data-ttu-id="42fc8-178">选择其中一个<xref:System.Windows.Forms.Button>控制并移动文件<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-178">Select one of the <xref:System.Windows.Forms.Button> controls and move it around the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="42fc8-179">请注意显示的两端的对齐线<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-179">Note the snaplines that appear at the edges of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="42fc8-180">另请注意显示的两端的对齐线<xref:System.Windows.Forms.Button>所包含的控件<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-180">Also note the snaplines that appear at the edges of the <xref:System.Windows.Forms.Button> control that is contained by the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="42fc8-181">控件的子级的容器控件还支持对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-181">Controls that are children of a container control also support snaplines.</span></span>  
   
-4.  沿不同的方向调整 <xref:System.Windows.Forms.Button> 控件的大小，使尺寸柄与不同的控件对齐。  请注意，对齐线会在不同方向上的显示以指示对其位置。  
+## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="42fc8-182">使用对齐线通过勾画放置控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-182">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
+ <span data-ttu-id="42fc8-183">对齐线有助于控件对齐时你首先将其放在窗体上。</span><span class="sxs-lookup"><span data-stu-id="42fc8-183">Snaplines help you align controls when you first place them on a form.</span></span>  
   
-## 使标签与控件文本对齐  
- 某些控件会提供一条对齐线，以便其他控件与显示的文本对齐。  
+#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="42fc8-184">若要使用对齐线控件置于通过勾画</span><span class="sxs-lookup"><span data-stu-id="42fc8-184">To use snaplines to place a control by outlining its size</span></span>  
   
-#### 使标签与控件文本对齐  
+1.  <span data-ttu-id="42fc8-185">在“工具箱” 中，单击 <xref:System.Windows.Forms.Button> 控件图标。</span><span class="sxs-lookup"><span data-stu-id="42fc8-185">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="42fc8-186">请勿将其拖到窗体上。</span><span class="sxs-lookup"><span data-stu-id="42fc8-186">Do not drag it onto the form.</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.TextBox> 控件拖到窗体上。  当您将 <xref:System.Windows.Forms.TextBox> 控件放到窗体上时，单击智能标记标志符号并选择**“将文本设置为 textBox1”**选项。  有关详细信息，请参见[演练：使用 Windows 窗体控件上的智能标记执行常规任务](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
+2.  <span data-ttu-id="42fc8-187">将鼠标指针移窗体的设计图面。</span><span class="sxs-lookup"><span data-stu-id="42fc8-187">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="42fc8-188">请注意，指针会更改为十字形，同时会附上 <xref:System.Windows.Forms.Button> 控件图标。</span><span class="sxs-lookup"><span data-stu-id="42fc8-188">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span> <span data-ttu-id="42fc8-189">另请注意显示来建议对齐的位置的对齐线<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-189">Also note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
-2.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Label> 控件拖到窗体上。  
+3.  <span data-ttu-id="42fc8-190">单击并按住鼠标按钮。</span><span class="sxs-lookup"><span data-stu-id="42fc8-190">Click and hold the mouse button.</span></span>  
   
-3.  将 <xref:System.Windows.Forms.Label> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性的值更改为 `true`。  请注意控件的边框会为了适应显示文本而进行相应的调整。  
+4.  <span data-ttu-id="42fc8-191">拖动鼠标指针在窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-191">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="42fc8-192">请注意，绘制概述，指示的位置和控件的大小。</span><span class="sxs-lookup"><span data-stu-id="42fc8-192">Note that an outline is drawn, indicating the position and the size of the control.</span></span>  
   
-4.  将 <xref:System.Windows.Forms.Label> 控件移动到 <xref:System.Windows.Forms.TextBox> 控件的左侧，使之与 <xref:System.Windows.Forms.TextBox> 控件的底部边缘对齐。  留意两个控件底部边缘处的对齐线。  
+5.  <span data-ttu-id="42fc8-193">拖动指针，直到它与另一个控件在窗体上对齐。</span><span class="sxs-lookup"><span data-stu-id="42fc8-193">Drag the pointer until it aligns with another control on the form.</span></span> <span data-ttu-id="42fc8-194">请注意，显示对齐线，以指示对齐方式。</span><span class="sxs-lookup"><span data-stu-id="42fc8-194">Note that a snapline appears to indicate alignment.</span></span>  
   
-5.  将 <xref:System.Windows.Forms.Label>控件略微向上移动，使 <xref:System.Windows.Forms.Label>文本与 <xref:System.Windows.Forms.TextBox> 文本对齐。  您会发现，此时对齐线的样式有所不同，这表明正在将两个控件的文本字段对齐。  
+6.  <span data-ttu-id="42fc8-195">释放鼠标按钮。</span><span class="sxs-lookup"><span data-stu-id="42fc8-195">Release the mouse button.</span></span> <span data-ttu-id="42fc8-196">位置和大小轮廓线指示在创建滑块控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-196">The control is created at the position and size indicated by the outline.</span></span>  
   
-## 配合键盘导航来使用对齐线  
- 对齐线会帮助您借助键盘的箭头键来对齐控件。  
+## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="42fc8-197">从工具箱中拖动控件时使用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-197">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
+ <span data-ttu-id="42fc8-198">对齐线有助于控件对齐将它们从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-198">Snaplines help you align controls when you drag them from the **Toolbox** onto your form.</span></span>  
   
-#### 配合键盘导航来使用对齐线  
+#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="42fc8-199">若要从工具箱中拖动控件时使用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-199">To use snaplines when dragging a control from the Toolbox</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.Button> 控件拖到窗体上。  将其置于窗体的左上角。  
+1.  <span data-ttu-id="42fc8-200">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体，但不是释放鼠标按钮。</span><span class="sxs-lookup"><span data-stu-id="42fc8-200">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form, but do not release the mouse button.</span></span>  
   
-2.  按 Ctrl\+向下键。  注意，控件会沿窗体向下移动到第一个可用的水平对齐位置。  
+2.  <span data-ttu-id="42fc8-201">将鼠标指针移窗体的设计图面。</span><span class="sxs-lookup"><span data-stu-id="42fc8-201">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="42fc8-202">请注意，指针更改以指示的位置新<xref:System.Windows.Forms.Button>，都会创建控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-202">Note that the pointer changes to indicate the position at which the new <xref:System.Windows.Forms.Button> control will be created.</span></span>  
   
-3.  按 Ctrl\+向下键，将控件移到窗体的底部。  注意，控件在沿窗体向下移动的过程中所占用的位置。  
+3.  <span data-ttu-id="42fc8-203">拖动鼠标指针在窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-203">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="42fc8-204">请注意显示来建议对齐的位置的对齐线<xref:System.Windows.Forms.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-204">Note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="42fc8-205">查找与其他控件对齐的位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-205">Find a position that is aligned with other controls.</span></span>  
   
-4.  按 Ctrl\+向右键。  注意，控件会沿窗体水平移动到第一个可用的垂直对齐位置。  
+4.  <span data-ttu-id="42fc8-206">释放鼠标按钮。</span><span class="sxs-lookup"><span data-stu-id="42fc8-206">Release the mouse button.</span></span> <span data-ttu-id="42fc8-207">在指示对齐线的位置创建该控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-207">The control is created at the position indicated by the snaplines.</span></span>  
   
-5.  按 Ctrl\+向右键，将控件移到窗体的右侧。  注意，控件在沿窗体水平移动的过程中所占用的位置。  
+## <a name="resizing-controls-using-snaplines"></a><span data-ttu-id="42fc8-208">使用对齐线的大小调整控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-208">Resizing Controls Using Snaplines</span></span>  
+ <span data-ttu-id="42fc8-209">对齐线有助于对齐控件，如调整其大小。</span><span class="sxs-lookup"><span data-stu-id="42fc8-209">Snaplines help you align controls as you resize them.</span></span>  
   
-6.  借助组合箭头键在窗体中移动控件。  请留意控件占用的位置以及伴随它们出现的对齐线。  
+#### <a name="to-resize-a-control-using-snaplines"></a><span data-ttu-id="42fc8-210">若要调整大小使用对齐线的控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-210">To resize a control using snaplines</span></span>  
   
-7.  按 Shift\+任意箭头键，以一个像素为增量调整 <xref:System.Windows.Forms.Button> 控件的大小。  
+1.  <span data-ttu-id="42fc8-211">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-211">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-8.  按 Ctrl\+Shift\+任意箭头键，以对齐线为增量调整 <xref:System.Windows.Forms.Button> 控件的大小。  
+2.  <span data-ttu-id="42fc8-212">调整大小<xref:System.Windows.Forms.Button>抓住角大小调整控点和拖动某个控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-212">Resize the <xref:System.Windows.Forms.Button> control by grabbing one of the corner sizing handles and dragging.</span></span> <span data-ttu-id="42fc8-213">有关详细信息，请参阅[如何： 调整 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-213">For details, see [How to: Resize Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span></span>  
   
-## 对齐线和布局面板  
- 在布局面板内，对齐线是禁用的。  
+3.  <span data-ttu-id="42fc8-214">拖动直到其中一个尺寸控点<xref:System.Windows.Forms.Button>与另一个控件对齐控件的边框。</span><span class="sxs-lookup"><span data-stu-id="42fc8-214">Drag the sizing handle until one of the <xref:System.Windows.Forms.Button> control's borders is aligned with another control.</span></span> <span data-ttu-id="42fc8-215">请注意，显示对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-215">Note that a snapline appears.</span></span> <span data-ttu-id="42fc8-216">另请注意尺寸控点对齐到指示对齐线的位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-216">Also note that the sizing handle snaps to the position indicated by the snapline.</span></span>  
   
-#### 选择性地禁用对齐线  
+4.  <span data-ttu-id="42fc8-217">调整大小<xref:System.Windows.Forms.Button>在不同的方向中控制和对齐不同的控件的大小调整句柄。</span><span class="sxs-lookup"><span data-stu-id="42fc8-217">Resize the <xref:System.Windows.Forms.Button> control in different directions and align the sizing handle to different controls.</span></span> <span data-ttu-id="42fc8-218">请注意对齐线中不同的方向，以指示对齐方式的显示方式。</span><span class="sxs-lookup"><span data-stu-id="42fc8-218">Note how the snaplines appear in various orientations to indicate alignment.</span></span>  
   
-1.  从**“工具箱”**中将一个 <xref:System.Windows.Forms.TableLayoutPanel> 控件拖到窗体上。  
+## <a name="aligning-a-label-to-a-controls-text"></a><span data-ttu-id="42fc8-219">对齐标签与控件的文本</span><span class="sxs-lookup"><span data-stu-id="42fc8-219">Aligning a Label to a Control's Text</span></span>  
+ <span data-ttu-id="42fc8-220">某些控件提供对齐到显示的文本的其他控件对齐的线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-220">Some controls offer a snapline for aligning other controls to displayed text.</span></span>  
   
-2.  双击**“工具箱”**中的 <xref:System.Windows.Forms.Button> 控件图标。  请注意，一个新的按钮控件会出现在 <xref:System.Windows.Forms.TableLayoutPanel> 控件的第一个单元格中。  
+#### <a name="to-align-a-label-to-a-controls-text"></a><span data-ttu-id="42fc8-221">若要对齐标签与控件的文本</span><span class="sxs-lookup"><span data-stu-id="42fc8-221">To align a label to a control's text</span></span>  
   
-3.  再次双击**“工具箱”**中的 <xref:System.Windows.Forms.Button> 控件图标。  这样会在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中留下一个空单元格。  
+1.  <span data-ttu-id="42fc8-222">拖动<xref:System.Windows.Forms.TextBox>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-222">Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="42fc8-223">当删除<xref:System.Windows.Forms.TextBox>拖到窗体控件，请单击智能标记标志符号，选择**将文本设置为 textBox1**选项。</span><span class="sxs-lookup"><span data-stu-id="42fc8-223">When you drop the <xref:System.Windows.Forms.TextBox> control onto the form, click the smart-tag glyph and select the **Set text to textBox1** option.</span></span> <span data-ttu-id="42fc8-224">有关详细信息，请参阅[演练： 执行常见任务使用智能标记 Windows 窗体控件上](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-224">For details, see [Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span></span>  
   
-4.  从**“工具箱”**中，将一个 <xref:System.Windows.Forms.Button> 控件拖到 <xref:System.Windows.Forms.TableLayoutPanel> 控件的空单元格中。  请注意此时不会出现对齐线。  
+2.  <span data-ttu-id="42fc8-225">拖动<xref:System.Windows.Forms.Label>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-225">Drag a <xref:System.Windows.Forms.Label> control from the **Toolbox** onto your form.</span></span>  
   
-5.  将 <xref:System.Windows.Forms.Button> 控件从 <xref:System.Windows.Forms.TableLayoutPanel> 控件中拖动出来，然后在 <xref:System.Windows.Forms.TableLayoutPanel> 控件周围移动它。  请注意此时会再次出现对齐线。  
+3.  <span data-ttu-id="42fc8-226">将 <xref:System.Windows.Forms.Label> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。</span><span class="sxs-lookup"><span data-stu-id="42fc8-226">Change the value of the <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="42fc8-227">请注意，将该控件的边框调整以适合显示文本。</span><span class="sxs-lookup"><span data-stu-id="42fc8-227">Note that the control's borders are adjusted to fit the display text.</span></span>  
   
-## 禁用对齐线  
- 默认情况下，对齐线功能是打开的。  您可以选择性地禁用对齐线，也可以在设计环境中禁用它们。  
+4.  <span data-ttu-id="42fc8-228">移动<xref:System.Windows.Forms.Label>控件左侧<xref:System.Windows.Forms.TextBox>控件，以便它与下边缘对齐<xref:System.Windows.Forms.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-228">Move the <xref:System.Windows.Forms.Label> control to the left of the <xref:System.Windows.Forms.TextBox> control, so it is aligned with the bottom edge of the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="42fc8-229">请注意将沿两个控件的下边缘显示对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-229">Note the snapline that appears along the bottom edges of the two controls.</span></span>  
   
-#### 选择性地禁用对齐线  
+5.  <span data-ttu-id="42fc8-230">移动<xref:System.Windows.Forms.Label>控件略微向上，直到<xref:System.Windows.Forms.Label>文本和<xref:System.Windows.Forms.TextBox>对齐文本。</span><span class="sxs-lookup"><span data-stu-id="42fc8-230">Move the <xref:System.Windows.Forms.Label> control slightly upward, until the <xref:System.Windows.Forms.Label> text and the <xref:System.Windows.Forms.TextBox> text are aligned.</span></span> <span data-ttu-id="42fc8-231">请注意样式有所不同对齐线显示，该值指示当对齐两个控件的文本字段。</span><span class="sxs-lookup"><span data-stu-id="42fc8-231">Note the differently styled snapline that appears, indicating when the text fields of both controls are aligned.</span></span>  
   
--   按 Alt 键，同时在窗体上移动一个控件。  
+## <a name="using-snaplines-with-keyboard-navigation"></a><span data-ttu-id="42fc8-232">使用键盘导航线对齐</span><span class="sxs-lookup"><span data-stu-id="42fc8-232">Using Snaplines with Keyboard Navigation</span></span>  
+ <span data-ttu-id="42fc8-233">对齐线有助于控件对齐时排列它们使用键盘上的箭头键。</span><span class="sxs-lookup"><span data-stu-id="42fc8-233">Snaplines help you align controls when you are arranging them using the keyboard's arrow keys.</span></span>  
   
-     请注意此时不会出现对齐线，而且控件不会沿任何可能的对齐位置对齐。  
+#### <a name="to-use-snaplines-with-keyboard-navigation"></a><span data-ttu-id="42fc8-234">若要使用键盘导航线对齐</span><span class="sxs-lookup"><span data-stu-id="42fc8-234">To use snaplines with keyboard navigation</span></span>  
   
-#### 在设计环境中禁用对齐线  
+1.  <span data-ttu-id="42fc8-235">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-235">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="42fc8-236">将其放在窗体的左上角。</span><span class="sxs-lookup"><span data-stu-id="42fc8-236">Place it in the upper-left corner of the form.</span></span>  
   
-1.  从**“工具”**菜单中，打开**“选项”**对话框。  打开“Windows 窗体设计器”对话框。  有关详细信息，请参见 [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-cn/8dd170af-72f0-4212-b04b-034ceee92834)。  
+2.  <span data-ttu-id="42fc8-237">按 CTRL + 向下箭头。</span><span class="sxs-lookup"><span data-stu-id="42fc8-237">Press CTRL+DOWN ARROW.</span></span> <span data-ttu-id="42fc8-238">请注意，控件向窗体下移动到第一个可用的水平对齐位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-238">Note that the control moves down the form to the first available horizontal alignment position.</span></span>  
   
-2.  选择**“常规”**节点。  在**“布局模式”**区域中，将选项从**“对齐线”**改为**“网格线对齐”**。  
+3.  <span data-ttu-id="42fc8-239">按 CTRL + 向下箭头，直到控件到达窗体的底部。</span><span class="sxs-lookup"><span data-stu-id="42fc8-239">Press CTRL+DOWN ARROW until the control reaches the bottom of the form.</span></span> <span data-ttu-id="42fc8-240">注意，它占用下移窗体的位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-240">Note the positions it occupies as it moves down the form.</span></span>  
   
-3.  单击“确定”应用设置。  
+4.  <span data-ttu-id="42fc8-241">按 CTRL + 向右键。</span><span class="sxs-lookup"><span data-stu-id="42fc8-241">Press CTRL+RIGHT ARROW.</span></span> <span data-ttu-id="42fc8-242">请注意，该控件在窗体移动到第一个可用的垂直对齐位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-242">Note that the control moves across the form to the first available vertical alignment position.</span></span>  
   
-4.  在窗体上选择一个控件，在其他控件周围移动它。  请注意此时不会出现对齐线。  
+5.  <span data-ttu-id="42fc8-243">按 CTRL + 向右键，直到控件到达窗体的左侧。</span><span class="sxs-lookup"><span data-stu-id="42fc8-243">Press CTRL+RIGHT ARROW until the control reaches the side of the form.</span></span> <span data-ttu-id="42fc8-244">注意，它占用当它移到窗体的位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-244">Note the positions it occupies as it moves across the form.</span></span>  
   
-## 后续步骤  
- 对齐线为您在窗体上对齐控件提供了一种直观的方式。  建议研究的其他方面包括：  
+6.  <span data-ttu-id="42fc8-245">将在窗体控件移动使用箭头键的组合。</span><span class="sxs-lookup"><span data-stu-id="42fc8-245">Move the control around the form with a combination of arrow keys.</span></span> <span data-ttu-id="42fc8-246">请注意控件所占据的位置和伴随它们出现的对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-246">Note the positions the control occupies and the snaplines that accompany them.</span></span>  
   
--   尝试将一个 <xref:System.Windows.Forms.GroupBox> 控件嵌套在另一个 <xref:System.Windows.Forms.GroupBox> 控件中。  将一个 <xref:System.Windows.Forms.Button> 控件放置在子级 <xref:System.Windows.Forms.GroupBox> 控件中，将另一个控件放置在父级 <xref:System.Windows.Forms.GroupBox> 控件中。  四处移动 <xref:System.Windows.Forms.Button> 控件，观察对齐线跨越容器边界的方式。  
+7.  <span data-ttu-id="42fc8-247">按下 SHIFT + 任意箭头键调整大小<xref:System.Windows.Forms.Button>按一个像素的增量的控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-247">Press SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control by increments of one pixel.</span></span>  
   
--   创建一列 <xref:System.Windows.Forms.TextBox> 控件以及一列相应的 <xref:System.Windows.Forms.Label> 控件。  将 <xref:System.Windows.Forms.Label>控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性的值设置为 `true`。  使用对齐线移动 <xref:System.Windows.Forms.Label>控件，使它们的显示文本与 <xref:System.Windows.Forms.TextBox> 控件中的文本对齐。  
+8.  <span data-ttu-id="42fc8-248">按 CTRL + SHIFT + 任意箭头键调整大小<xref:System.Windows.Forms.Button>控件中对齐线的增量。</span><span class="sxs-lookup"><span data-stu-id="42fc8-248">Press CTRL+SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control in snapline increments.</span></span>  
   
- 有关 Windows 用户界面设计的信息，请参见 Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers Redmond, WA: Microsoft Press, 1999. \(USBN: 0\-7356\-0566\-1\)（《Microsoft Windows 用户体验：用户界面开发人员和设计人员官方指南》）  一书。  
+## <a name="snaplines-and-layout-panels"></a><span data-ttu-id="42fc8-249">对齐线和布局面板</span><span class="sxs-lookup"><span data-stu-id="42fc8-249">Snaplines and Layout Panels</span></span>  
+ <span data-ttu-id="42fc8-250">对齐线被禁用在布局面板内。</span><span class="sxs-lookup"><span data-stu-id="42fc8-250">Snaplines are disabled within layout panels.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>   
- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="42fc8-251">若要有选择性地禁用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-251">To selectively disable snaplines</span></span>  
+  
+1.  <span data-ttu-id="42fc8-252">拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。</span><span class="sxs-lookup"><span data-stu-id="42fc8-252">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+  
+2.  <span data-ttu-id="42fc8-253">在“工具箱” <xref:System.Windows.Forms.Button>**中，双击**控件图标。</span><span class="sxs-lookup"><span data-stu-id="42fc8-253">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="42fc8-254">请注意，在将出现一个新的按钮控件<xref:System.Windows.Forms.TableLayoutPanel>控件的第一个单元格。</span><span class="sxs-lookup"><span data-stu-id="42fc8-254">Note that a new button control appears in the <xref:System.Windows.Forms.TableLayoutPanel> control's first cell.</span></span>  
+  
+3.  <span data-ttu-id="42fc8-255">双击<xref:System.Windows.Forms.Button>中的控件图标**工具箱**两次。</span><span class="sxs-lookup"><span data-stu-id="42fc8-255">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox** twice more.</span></span> <span data-ttu-id="42fc8-256">这将使在一个空单元格<xref:System.Windows.Forms.TableLayoutPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-256">This leaves one empty cell in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+  
+4.  <span data-ttu-id="42fc8-257">拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的空单元格中<xref:System.Windows.Forms.TableLayoutPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-257">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the empty cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="42fc8-258">请注意，没有对齐线显示。</span><span class="sxs-lookup"><span data-stu-id="42fc8-258">Note that no snaplines appear.</span></span>  
+  
+5.  <span data-ttu-id="42fc8-259">拖动<xref:System.Windows.Forms.Button>外控制<xref:System.Windows.Forms.TableLayoutPanel>控制并移动文件<xref:System.Windows.Forms.TableLayoutPanel>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-259">Drag the <xref:System.Windows.Forms.Button> control out of the <xref:System.Windows.Forms.TableLayoutPanel> control and move it around the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="42fc8-260">请注意，对齐线会再次出现。</span><span class="sxs-lookup"><span data-stu-id="42fc8-260">Note that snaplines appear again.</span></span>  
+  
+## <a name="disabling-snaplines"></a><span data-ttu-id="42fc8-261">禁用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-261">Disabling Snaplines</span></span>  
+ <span data-ttu-id="42fc8-262">默认情况下，对齐线被开启。</span><span class="sxs-lookup"><span data-stu-id="42fc8-262">Snaplines are turned on by default.</span></span> <span data-ttu-id="42fc8-263">您可以有选择地，禁用对齐线，或者你可以在设计环境中禁用它们。</span><span class="sxs-lookup"><span data-stu-id="42fc8-263">You can disable snaplines selectively, or you can disable them in the design environment.</span></span>  
+  
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="42fc8-264">若要有选择性地禁用对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-264">To selectively disable snaplines</span></span>  
+  
+-   <span data-ttu-id="42fc8-265">按 ALT 键和而移动在窗体控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-265">Press the ALT key and while moving a control around the form.</span></span>  
+  
+     <span data-ttu-id="42fc8-266">请注意，没有对齐线显示该控件不会按任何可能的对齐位置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-266">Note that no snaplines appear and the control does not snap to any potential alignment positions.</span></span>  
+  
+#### <a name="to-disable-snaplines-in-the-design-environment"></a><span data-ttu-id="42fc8-267">若要禁用设计环境中的对齐线</span><span class="sxs-lookup"><span data-stu-id="42fc8-267">To disable snaplines in the design environment</span></span>  
+  
+1.  <span data-ttu-id="42fc8-268">从**工具**菜单上，打开**选项**对话框。</span><span class="sxs-lookup"><span data-stu-id="42fc8-268">From the **Tools** menu, open the **Options** dialog box.</span></span> <span data-ttu-id="42fc8-269">打开 Windows 窗体设计器对话框。</span><span class="sxs-lookup"><span data-stu-id="42fc8-269">Open the Windows Forms Designer dialog box.</span></span> <span data-ttu-id="42fc8-270">有关详细信息，请参阅[常规、 Windows 窗体设计器、 选项对话框](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-270">For details, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span>  
+  
+2.  <span data-ttu-id="42fc8-271">选择**常规**节点。</span><span class="sxs-lookup"><span data-stu-id="42fc8-271">Select the **General** node.</span></span> <span data-ttu-id="42fc8-272">在**布局模式**部分中，更改从选择**对齐线**到**网格线对齐**。</span><span class="sxs-lookup"><span data-stu-id="42fc8-272">In the **Layout Mode** section, change the selection from **SnapLines** to **SnapToGrid**.</span></span>  
+  
+3.  <span data-ttu-id="42fc8-273">单击确定以应用设置。</span><span class="sxs-lookup"><span data-stu-id="42fc8-273">Click OK to apply the setting.</span></span>  
+  
+4.  <span data-ttu-id="42fc8-274">选择你的窗体上的控件并将其移动的其他控件周围。</span><span class="sxs-lookup"><span data-stu-id="42fc8-274">Select a control on your form and move it around the other controls.</span></span> <span data-ttu-id="42fc8-275">请注意，不会显示对齐线。</span><span class="sxs-lookup"><span data-stu-id="42fc8-275">Note that snaplines do not appear.</span></span>  
+  
+## <a name="next-steps"></a><span data-ttu-id="42fc8-276">后续步骤</span><span class="sxs-lookup"><span data-stu-id="42fc8-276">Next Steps</span></span>  
+ <span data-ttu-id="42fc8-277">对齐线提供一种直观的方法来对齐窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-277">Snaplines offer an intuitive means of aligning controls on your form.</span></span> <span data-ttu-id="42fc8-278">有关进一步探索的建议包括：</span><span class="sxs-lookup"><span data-stu-id="42fc8-278">Suggestions for more exploration include:</span></span>  
+  
+-   <span data-ttu-id="42fc8-279">请尝试嵌套<xref:System.Windows.Forms.GroupBox>中另一个控件<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-279">Try nesting a <xref:System.Windows.Forms.GroupBox> control within another <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="42fc8-280">位置<xref:System.Windows.Forms.Button>内子控件<xref:System.Windows.Forms.GroupBox>控制和另一个父项中<xref:System.Windows.Forms.GroupBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-280">Place a <xref:System.Windows.Forms.Button> control within the child <xref:System.Windows.Forms.GroupBox> control, and another within the parent <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="42fc8-281">移动<xref:System.Windows.Forms.Button>控件以查看如何对齐线跨容器边界。</span><span class="sxs-lookup"><span data-stu-id="42fc8-281">Move the <xref:System.Windows.Forms.Button> controls around to see how the snaplines cross container boundaries.</span></span>  
+  
+-   <span data-ttu-id="42fc8-282">创建一列<xref:System.Windows.Forms.TextBox>控件与相应的列的<xref:System.Windows.Forms.Label>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-282">Create a column of <xref:System.Windows.Forms.TextBox> controls and a corresponding column of <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="42fc8-283">设置的值<xref:System.Windows.Forms.Label>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="42fc8-283">Set the value of the <xref:System.Windows.Forms.Label> controls' <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="42fc8-284">使用对齐线移动<xref:System.Windows.Forms.Label>控制以便与中的文本对齐其显示的文本<xref:System.Windows.Forms.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="42fc8-284">Use snaplines to move the <xref:System.Windows.Forms.Label> controls so their displayed text is aligned with the text in the <xref:System.Windows.Forms.TextBox> controls.</span></span>  
+  
+ <span data-ttu-id="42fc8-285">有关 Windows 用户界面设计的信息，请参阅图书*Microsoft Windows 用户体验、 用户界面开发人员和设计器的官方指南*Redmond，WA: Microsoft Press，1999年。</span><span class="sxs-lookup"><span data-stu-id="42fc8-285">For information about Windows user interface design, see the book *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.</span></span> <span data-ttu-id="42fc8-286">(USBN: 0-7356-0566年-1)。</span><span class="sxs-lookup"><span data-stu-id="42fc8-286">(USBN: 0-7356-0566-1).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="42fc8-287">另请参阅</span><span class="sxs-lookup"><span data-stu-id="42fc8-287">See Also</span></span>  
+ <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
+ [<span data-ttu-id="42fc8-288">演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-288">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="42fc8-289">演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-289">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="42fc8-290">演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局</span><span class="sxs-lookup"><span data-stu-id="42fc8-290">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ [<span data-ttu-id="42fc8-291">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="42fc8-291">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

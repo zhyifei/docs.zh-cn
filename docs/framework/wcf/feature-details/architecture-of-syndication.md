@@ -1,23 +1,26 @@
 ---
-title: "联合体系结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "联合体系结构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b7e0ef3b89b97c6d78e1919570db011ad7a90190
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 联合体系结构
-联合 API 是专为提供不限制格式编程模型而设计的，该编程模型允许将各种格式的联合内容写入网络中。  抽象数据模型由以下类组成：  
+# <a name="architecture-of-syndication"></a><span data-ttu-id="94dbc-102">联合体系结构</span><span class="sxs-lookup"><span data-stu-id="94dbc-102">Architecture of Syndication</span></span>
+<span data-ttu-id="94dbc-103">联合 API 是专为提供不限制格式编程模型而设计的，该编程模型允许将各种格式的联合内容写入网络中。</span><span class="sxs-lookup"><span data-stu-id="94dbc-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written on to the wire in a variety of formats.</span></span> <span data-ttu-id="94dbc-104">抽象数据模型由以下类组成：</span><span class="sxs-lookup"><span data-stu-id="94dbc-104">The abstract data model consists of the following classes:</span></span>  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
@@ -29,62 +32,62 @@ caps.handback.revision: 25
   
 -   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
- 这些类严格地映射到 Atom 1.0 规范中定义的构造，但有一些名称会不相同。  
+ <span data-ttu-id="94dbc-105">这些类严格地映射到 Atom 1.0 规范中定义的构造，但有一些名称会不相同。</span><span class="sxs-lookup"><span data-stu-id="94dbc-105">These classes map closely to the constructs defined in the Atom 1.0 specification, although some of the names are different.</span></span>  
   
- 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，联合源建模为另一种类型的服务操作，其中的返回类型是 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的派生类之一。  源的检索建模为请求\-响应消息交换。  客户端向服务发送请求，而服务进行响应。  请求消息是通过基础结构协议（例如，原始 HTTP）设置的，而响应消息包含由通常可以理解的联合格式（RSS 2.0 或 Atom 1.0）组成的负载。  实现这些消息交换的服务称为联合服务。  
+ <span data-ttu-id="94dbc-106">在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，联合源建模为另一种类型的服务操作，其中的返回类型是 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的派生类之一。</span><span class="sxs-lookup"><span data-stu-id="94dbc-106">In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], syndication feeds are modeled as another type of service operation, one where the return type is one of the derived classes of <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.</span></span> <span data-ttu-id="94dbc-107">源的检索建模为请求-响应消息交换。</span><span class="sxs-lookup"><span data-stu-id="94dbc-107">The retrieval of a feed is modeled as a request-response message exchange.</span></span> <span data-ttu-id="94dbc-108">客户端向服务发送请求，而服务进行响应。</span><span class="sxs-lookup"><span data-stu-id="94dbc-108">A client sends a request to the service and the service responds.</span></span> <span data-ttu-id="94dbc-109">请求消息是通过基础结构协议（例如，原始 HTTP）设置的，而响应消息包含由通常可以理解的联合格式（RSS 2.0 或 Atom 1.0）组成的负载。</span><span class="sxs-lookup"><span data-stu-id="94dbc-109">The request message is set over an infrastructure protocol (for example, raw HTTP) and the response message contains a payload that consists of a commonly understood syndication format (RSS 2.0 or Atom 1.0).</span></span> <span data-ttu-id="94dbc-110">实现这些消息交换的服务称为联合服务。</span><span class="sxs-lookup"><span data-stu-id="94dbc-110">Services that implement these message exchanges are referred to as syndication services.</span></span>  
   
- 联合服务的协定包含一组操作，这些操作返回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 类的实例。  下面的示例演示联合服务的接口声明。  
+ <span data-ttu-id="94dbc-111">联合服务的协定包含一组操作，这些操作返回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="94dbc-111">The contract for a syndication service consists of a set of operations that returns an instance of the <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> class.</span></span> <span data-ttu-id="94dbc-112">下面的示例演示联合服务的接口声明。</span><span class="sxs-lookup"><span data-stu-id="94dbc-112">The following example demonstrates an interface declaration for a syndication service.</span></span>  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 联合支持是基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型生成的，该模型定义了 <xref:System.ServiceModel.WebHttpBinding> 绑定，该绑定与 <xref:System.ServiceModel.Description.WebHttpBehavior> 一起用于使源可用作服务。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型的更多信息，请参见 [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ <span data-ttu-id="94dbc-113">联合支持是基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型生成的，该模型定义了 <xref:System.ServiceModel.WebHttpBinding> 绑定，该绑定与 <xref:System.ServiceModel.Description.WebHttpBehavior> 一起用于使源可用作服务。</span><span class="sxs-lookup"><span data-stu-id="94dbc-113">Syndication support is built on top of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST Programming Model that defines the <xref:System.ServiceModel.WebHttpBinding> binding, which is used in conjunction with <xref:System.ServiceModel.Description.WebHttpBehavior> to make feeds available as services.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="94dbc-114">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型，请参阅[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="94dbc-114"> the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST Programming Model, see [WCF Web HTTP Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).</span></span>  
   
 > [!NOTE]
->  Atom 1.0 规范允许在其任何日期构造中指定秒的小数部分。  在序列化和反序列化时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现会忽略秒的小数部分。  
+>  <span data-ttu-id="94dbc-115">Atom 1.0 规范允许在其任何日期构造中指定秒的小数部分。</span><span class="sxs-lookup"><span data-stu-id="94dbc-115">The Atom 1.0 specification allows for fractional seconds to be specified in any of its date constructs.</span></span> <span data-ttu-id="94dbc-116">在序列化和反序列化时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现会忽略秒的小数部分。</span><span class="sxs-lookup"><span data-stu-id="94dbc-116">When serializing and deserializing the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementation ignores the fractional seconds.</span></span>  
   
-## 对象模型  
- 联合的对象模型由下表中多个组中的类组成。  
+## <a name="object-model"></a><span data-ttu-id="94dbc-117">对象模型</span><span class="sxs-lookup"><span data-stu-id="94dbc-117">Object Model</span></span>  
+ <span data-ttu-id="94dbc-118">联合的对象模型由下表中多个组中的类组成。</span><span class="sxs-lookup"><span data-stu-id="94dbc-118">The object model for syndication consists of the groups of classes in the following tables.</span></span>  
   
- 格式设置类：  
+ <span data-ttu-id="94dbc-119">格式设置类：</span><span class="sxs-lookup"><span data-stu-id="94dbc-119">Formatting Classes:</span></span>  
   
-|类|描述|  
-|-------|--------|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 实例序列化为 Atom 1.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 派生类序列化为 Atom 1.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例序列化为 Atom 1.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 派生类序列化为 Atom 1.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 实例序列化为 RSS 2.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 派生类序列化为 RSS 2.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例序列化为 RSS 2.0 格式的类。|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 派生类序列化为 RSS 2.0 格式的类。|  
+|<span data-ttu-id="94dbc-120">类</span><span class="sxs-lookup"><span data-stu-id="94dbc-120">Class</span></span>|<span data-ttu-id="94dbc-121">描述</span><span class="sxs-lookup"><span data-stu-id="94dbc-121">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|<span data-ttu-id="94dbc-122">用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 实例序列化为 Atom 1.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-122">A class that serializes a <xref:System.ServiceModel.Syndication.SyndicationFeed> instance to Atom 1.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|<span data-ttu-id="94dbc-123">用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 派生类序列化为 Atom 1.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-123">A class that serializes <xref:System.ServiceModel.Syndication.SyndicationFeed> derived classes to Atom 1.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|<span data-ttu-id="94dbc-124">用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例序列化为 Atom 1.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-124">A class that serializes a <xref:System.ServiceModel.Syndication.SyndicationItem> instance to Atom 1.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|<span data-ttu-id="94dbc-125">用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 派生类序列化为 Atom 1.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-125">A class that serializes <xref:System.ServiceModel.Syndication.SyndicationItem> derived classes to Atom 1.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|<span data-ttu-id="94dbc-126">用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 实例序列化为 RSS 2.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-126">A class that serializes a <xref:System.ServiceModel.Syndication.SyndicationFeed> instance to RSS 2.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|<span data-ttu-id="94dbc-127">用于将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 派生类序列化为 RSS 2.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-127">A class that serializes <xref:System.ServiceModel.Syndication.SyndicationFeed> derived classes to RSS 2.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|<span data-ttu-id="94dbc-128">用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 实例序列化为 RSS 2.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-128">A class that serializes a <xref:System.ServiceModel.Syndication.SyndicationItem> instance to RSS 2.0 format.</span></span>|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|<span data-ttu-id="94dbc-129">用于将 <xref:System.ServiceModel.Syndication.SyndicationItem> 派生类序列化为 RSS 2.0 格式的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-129">A class that serializes <xref:System.ServiceModel.Syndication.SyndicationItem> derived classes to RSS 2.0 format.</span></span>|  
   
- 对象模型类：  
+ <span data-ttu-id="94dbc-130">对象模型类：</span><span class="sxs-lookup"><span data-stu-id="94dbc-130">Object Model Classes:</span></span>  
   
-|类|描述|  
-|-------|--------|  
-|<xref:System.ServiceModel.Syndication.SyndicationCategory>|一个表示联合源类别的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationContent>|一个表示联合内容的基类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|一个表示联合元素扩展的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|<xref:System.ServiceModel.Syndication.SyndicationElementExtension> 对象的集合。|  
-|<xref:System.ServiceModel.Syndication.SyndicationFeed>|一个表示顶级源对象的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationItem>|一个表示源项的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationLink>|一个表示联合源或联合项中的链接的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationPerson>|一个表示 Atom Person 构造的类。|  
-|<xref:System.ServiceModel.Syndication.SyndicationVersions>|一个表示所支持的联合协议版本的类。|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|一个表示要显示给最终用户的任何 <xref:System.ServiceModel.Syndication.SyndicationItem> 内容的类。|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|一个表示所支持的不同文本联合内容类型的枚举。|  
-|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|一个表示包含指向另一资源的 URL 的联合内容的类。|  
-|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|一个表示不显示在浏览器中的联合内容的类。|  
+|<span data-ttu-id="94dbc-131">类</span><span class="sxs-lookup"><span data-stu-id="94dbc-131">Class</span></span>|<span data-ttu-id="94dbc-132">描述</span><span class="sxs-lookup"><span data-stu-id="94dbc-132">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Syndication.SyndicationCategory>|<span data-ttu-id="94dbc-133">一个表示联合源类别的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-133">A class that represents the category of a syndication feed.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationContent>|<span data-ttu-id="94dbc-134">一个表示联合内容的基类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-134">A base class that represents syndication content.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|<span data-ttu-id="94dbc-135">一个表示联合元素扩展的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-135">A class that represents a syndication element extension.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|<span data-ttu-id="94dbc-136"><xref:System.ServiceModel.Syndication.SyndicationElementExtension> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="94dbc-136">A collection of <xref:System.ServiceModel.Syndication.SyndicationElementExtension> objects.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationFeed>|<span data-ttu-id="94dbc-137">一个表示顶级源对象的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-137">A class that represents a top-level feed object.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem>|<span data-ttu-id="94dbc-138">一个表示源项的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-138">A class that represents a feed item.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationLink>|<span data-ttu-id="94dbc-139">一个表示联合源或联合项中的链接的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-139">A class that represents a link within a syndication feed or item.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationPerson>|<span data-ttu-id="94dbc-140">一个表示 Atom Person 构造的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-140">A class that represents an Atom Person construct.</span></span>|  
+|<xref:System.ServiceModel.Syndication.SyndicationVersions>|<span data-ttu-id="94dbc-141">一个表示所支持的联合协议版本的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-141">A class that represents the supported syndication protocol versions.</span></span>|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|<span data-ttu-id="94dbc-142">一个表示要显示给最终用户的任何 <xref:System.ServiceModel.Syndication.SyndicationItem> 内容的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-142">A class that represents any <xref:System.ServiceModel.Syndication.SyndicationItem> content to be displayed to an end user.</span></span>|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|<span data-ttu-id="94dbc-143">一个表示所支持的不同文本联合内容类型的枚举。</span><span class="sxs-lookup"><span data-stu-id="94dbc-143">An enumeration that represents the different types of text syndication content supported.</span></span>|  
+|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|<span data-ttu-id="94dbc-144">一个表示包含指向另一资源的 URL 的联合内容的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-144">A class that represents syndication content that consists of a URL to another resource.</span></span>|  
+|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|<span data-ttu-id="94dbc-145">一个表示不显示在浏览器中的联合内容的类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-145">A class that represents syndication content that is not to be displayed in a browser.</span></span>|  
   
- 对象模型中的核心数据抽象是源和项，它们分别对应于 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 类。  源会公开一些源级别的元数据（例如，标题、说明和作者）、一个存储未知扩展的位置以及组成源的其余信息内容的一组项。  项可以提供一些项级别的元数据（例如，标题、摘要和发布日期）、一个存储未知扩展的位置以及一个包含项的其余信息内容的内容元素。  源和项这两个核心抽象由表示 Atom 1.0 和 RSS 规范中引用的常见数据构造的其他类提供支持。  
+ <span data-ttu-id="94dbc-146">对象模型中的核心数据抽象是源和项，它们分别对应于 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-146">The core data abstractions in the object model are Feed and Item, which correspond to the <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem> classes.</span></span> <span data-ttu-id="94dbc-147">源会公开一些源级别的元数据（例如，标题、说明和作者）、一个存储未知扩展的位置以及组成源的其余信息内容的一组项。</span><span class="sxs-lookup"><span data-stu-id="94dbc-147">A Feed exposes some feed-level metadata (for example, Title, Description, and Author), a location to store unknown extensions, and a set of items that make up the rest of the feed's information content.</span></span> <span data-ttu-id="94dbc-148">项可以提供一些项级别的元数据（例如，标题、摘要和发布日期）、一个存储未知扩展的位置以及一个包含项的其余信息内容的内容元素。</span><span class="sxs-lookup"><span data-stu-id="94dbc-148">An Item makes available some item-level metadata (for example, Title, Summary, and PublicationDate), a location to store unknown extensions, and a content element that contains the rest of the item's information content.</span></span> <span data-ttu-id="94dbc-149">源和项这两个核心抽象由表示 Atom 1.0 和 RSS 规范中引用的常见数据构造的其他类提供支持。</span><span class="sxs-lookup"><span data-stu-id="94dbc-149">The core abstractions of Feed and Item are supported by additional classes that represent common data constructs referenced in the Atom 1.0 and RSS specifications.</span></span>  
   
- 源实例中携带的信息可以转换成各种 XML 格式。  与 XML 的来回转换过程由 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 类管理。  此类是一个抽象类；为 Atom 1.0 和 RSS 2.0 提供的具体实现分别为 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  若要使用派生源类，应使用 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> 或 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>，您可以通过它们指定派生源类。  若要使用派生项类，应使用 <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> 或 <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>，您可以通过它们指定派生项类。第三方可以派生各自的 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 实现以支持不同的联合格式。  
+ <span data-ttu-id="94dbc-150">源实例中携带的信息可以转换成各种 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="94dbc-150">The information carried in a Feed instance can be converted to a variety of XML formats.</span></span> <span data-ttu-id="94dbc-151">与 XML 的来回转换过程由 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 类管理。</span><span class="sxs-lookup"><span data-stu-id="94dbc-151">The process of converting to and from XML is managed by the <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> class.</span></span> <span data-ttu-id="94dbc-152">此类是一个抽象类；为 Atom 1.0 和 RSS 2.0 提供的具体实现分别为 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。</span><span class="sxs-lookup"><span data-stu-id="94dbc-152">This class is abstract; concrete implementations are provided for Atom 1.0 and RSS 2.0, <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> and <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.</span></span> <span data-ttu-id="94dbc-153">若要使用派生源类，应使用 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> 或 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>，您可以通过它们指定派生源类。</span><span class="sxs-lookup"><span data-stu-id="94dbc-153">To use derived Feed classes, use either <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> or <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> as they allow you to specify a derived Feed class.</span></span> <span data-ttu-id="94dbc-154">若要使用派生项类，应使用 <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> 或 <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>，您可以通过它们指定派生项类。第三方可以派生各自的 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 实现以支持不同的联合格式。</span><span class="sxs-lookup"><span data-stu-id="94dbc-154">To use derived item classes use either <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> or <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> as they allow you to specify a derived item class Third parties can derive their own implementation of <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> to support different syndication formats.</span></span>  
   
-## 扩展性  
+## <a name="extensibility"></a><span data-ttu-id="94dbc-155">扩展性</span><span class="sxs-lookup"><span data-stu-id="94dbc-155">Extensibility</span></span>  
   
--   联合协议的一个主要功能是扩展性。  Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合编程模型提供了两种使用自定义属性和扩展的方法：派生新类和松散类型访问。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   <span data-ttu-id="94dbc-156">联合协议的一个主要功能是扩展性。</span><span class="sxs-lookup"><span data-stu-id="94dbc-156">A key feature of syndication protocols is extensibility.</span></span> <span data-ttu-id="94dbc-157">Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。</span><span class="sxs-lookup"><span data-stu-id="94dbc-157">Both Atom 1.0 and RSS 2.0 allow you to add attributes and elements to syndication feeds that are not defined in the specifications.</span></span> <span data-ttu-id="94dbc-158">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合编程模型提供了两种使用自定义属性和扩展的方法：派生新类和松散类型访问。</span><span class="sxs-lookup"><span data-stu-id="94dbc-158">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] syndication programming model provides two ways of working with custom attributes and extensions: deriving a new class and loosely-typed access.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="94dbc-159">[联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。</span><span class="sxs-lookup"><span data-stu-id="94dbc-159"> [Syndication Extensibility](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).</span></span>  
   
-## 请参阅  
- [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)   
- [WCF 联合对象模型如何映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)   
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="94dbc-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="94dbc-160">See Also</span></span>  
+ [<span data-ttu-id="94dbc-161">WCF 联合概述</span><span class="sxs-lookup"><span data-stu-id="94dbc-161">WCF Syndication Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [<span data-ttu-id="94dbc-162">WCF 联合对象模型如何映射到 Atom 和 RSS</span><span class="sxs-lookup"><span data-stu-id="94dbc-162">How the WCF Syndication Object Model Maps to Atom and RSS</span></span>](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ [<span data-ttu-id="94dbc-163">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="94dbc-163">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

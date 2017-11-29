@@ -1,56 +1,60 @@
 ---
-title: "使用 TryCatch 在 Flowchart 活动中进行错误处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 TryCatch 在 Flowchart 活动中进行错误处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 490647f8ea3662f046cadecf5a97761c43b357f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 TryCatch 在 Flowchart 活动中进行错误处理
-此示例演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。  
+# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a><span data-ttu-id="50b30-102">使用 TryCatch 在 Flowchart 活动中进行错误处理</span><span class="sxs-lookup"><span data-stu-id="50b30-102">Fault Handling in a Flowchart Activity Using TryCatch</span></span>
+<span data-ttu-id="50b30-103">此示例演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。</span><span class="sxs-lookup"><span data-stu-id="50b30-103">This sample shows how the <xref:System.Activities.Statements.TryCatch> activity can be used within a complex control flow activity.</span></span>  
   
- 在此示例中，将促销代码和孩子数量作为变量传递到 <xref:System.Activities.Statements.Flowchart> 活动，该活动将根据与促销代码相对应的公式计算折扣。此示例分为命令性代码版本和工作流设计器版本。  
+ <span data-ttu-id="50b30-104">在此示例中，将促销代码和孩子数量作为变量传递到 <xref:System.Activities.Statements.Flowchart> 活动，该活动将根据与促销代码相对应的公式计算折扣。</span><span class="sxs-lookup"><span data-stu-id="50b30-104">In this sample, a promotion code and number of children are passed as variables to a <xref:System.Activities.Statements.Flowchart> activity that calculates a discount based on formulae that correspond to the promotion code.</span></span> <span data-ttu-id="50b30-105">此示例分为命令性代码版本和工作流设计器版本。 </span><span class="sxs-lookup"><span data-stu-id="50b30-105">The sample includes imperative code and workflow designer versions of the sample.</span></span>  
   
- 下表详细描述了 `CreateFlowchartWithFaults` 活动的变量。  
+ <span data-ttu-id="50b30-106">下表详细描述了 `CreateFlowchartWithFaults` 活动的变量。</span><span class="sxs-lookup"><span data-stu-id="50b30-106">The following table details the variables for the `CreateFlowchartWithFaults` activity.</span></span>  
   
-|参数|说明|  
-|--------|--------|  
-|promoCode|促销代码。类型：String<br /><br /> 可能的值，括号中带有说明：<br /><br /> -   Single（单身）<br />-   MNK（已婚但没有孩子。）<br />-   MWK（已婚并且有孩子。）|  
-|numKids|孩子数量。类型：int|  
+|<span data-ttu-id="50b30-107">参数</span><span class="sxs-lookup"><span data-stu-id="50b30-107">Parameters</span></span>|<span data-ttu-id="50b30-108">描述</span><span class="sxs-lookup"><span data-stu-id="50b30-108">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="50b30-109">promoCode</span><span class="sxs-lookup"><span data-stu-id="50b30-109">promoCode</span></span>|<span data-ttu-id="50b30-110">促销代码。</span><span class="sxs-lookup"><span data-stu-id="50b30-110">The promotion code.</span></span> <span data-ttu-id="50b30-111">类型：String</span><span class="sxs-lookup"><span data-stu-id="50b30-111">Type: String</span></span><br /><br /> <span data-ttu-id="50b30-112">可能的值，括号中带有说明：</span><span class="sxs-lookup"><span data-stu-id="50b30-112">The possible values with description in parentheses:</span></span><br /><br /> <span data-ttu-id="50b30-113">-单 （单个）</span><span class="sxs-lookup"><span data-stu-id="50b30-113">-   Single (Single)</span></span><br /><span data-ttu-id="50b30-114">-MNK （已婚但没有孩子。）</span><span class="sxs-lookup"><span data-stu-id="50b30-114">-   MNK (Married with no kids.)</span></span><br /><span data-ttu-id="50b30-115">-MWK （已婚并且有孩子）。</span><span class="sxs-lookup"><span data-stu-id="50b30-115">-   MWK (Married with kids.)</span></span>|  
+|<span data-ttu-id="50b30-116">numKids</span><span class="sxs-lookup"><span data-stu-id="50b30-116">numKids</span></span>|<span data-ttu-id="50b30-117">孩子数量。</span><span class="sxs-lookup"><span data-stu-id="50b30-117">The number of children.</span></span> <span data-ttu-id="50b30-118">类型：int</span><span class="sxs-lookup"><span data-stu-id="50b30-118">Type: int</span></span>|  
   
- `CreateFlowchartWithFaults` 活动使用 <xref:System.Activities.Statements.FlowSwitch%601> 活动，后者根据 `promoCode` 参数进行切换并使用以下公式计算折扣。  
+ <span data-ttu-id="50b30-119">`CreateFlowchartWithFaults` 活动使用 <xref:System.Activities.Statements.FlowSwitch%601> 活动，后者根据 `promoCode` 参数进行切换并使用以下公式计算折扣。</span><span class="sxs-lookup"><span data-stu-id="50b30-119">The `CreateFlowchartWithFaults` activity uses a <xref:System.Activities.Statements.FlowSwitch%601> activity that switches on the `promoCode` argument and calculates the discount using the following formula.</span></span>  
   
-|`promoCode` 的值|折扣 \(%\)|  
-|--------------------|--------------|  
-|Single|10|  
-|MNK|15|  
-|MWK|15 \+ \(1 – 1\/`numberOfKids`\)\*10 **Note:**  此计算可能会引发 <xref:System.DivideByZeroException>。因此，将折扣计算包装在 <xref:System.Activities.Statements.TryCatch> 活动中，该活动可捕获 <xref:System.DivideByZeroException> 异常并将折扣设置为零。|  
+|<span data-ttu-id="50b30-120">`promoCode` 的值</span><span class="sxs-lookup"><span data-stu-id="50b30-120">Value of `promoCode`</span></span>|<span data-ttu-id="50b30-121">折扣 (%)</span><span class="sxs-lookup"><span data-stu-id="50b30-121">Discount (%)</span></span>|  
+|--------------------------|--------------------|  
+|<span data-ttu-id="50b30-122">Single</span><span class="sxs-lookup"><span data-stu-id="50b30-122">Single</span></span>|<span data-ttu-id="50b30-123">10</span><span class="sxs-lookup"><span data-stu-id="50b30-123">10</span></span>|  
+|<span data-ttu-id="50b30-124">MNK</span><span class="sxs-lookup"><span data-stu-id="50b30-124">MNK</span></span>|<span data-ttu-id="50b30-125">15</span><span class="sxs-lookup"><span data-stu-id="50b30-125">15</span></span>|  
+|<span data-ttu-id="50b30-126">MWK</span><span class="sxs-lookup"><span data-stu-id="50b30-126">MWK</span></span>|<span data-ttu-id="50b30-127">15 + (1-1 /`numberOfKids`)\*10**注意：**可能，此计算可能会引发<xref:System.DivideByZeroException>。</span><span class="sxs-lookup"><span data-stu-id="50b30-127">15 + (1 – 1/`numberOfKids`)\*10 **Note:**  Potentially, this calculation can throw a <xref:System.DivideByZeroException>.</span></span> <span data-ttu-id="50b30-128">因此，将折扣计算包装在 <xref:System.Activities.Statements.TryCatch> 活动中，该活动可捕获 <xref:System.DivideByZeroException> 异常并将折扣设置为零。</span><span class="sxs-lookup"><span data-stu-id="50b30-128">So, the discount calculation is wrapped in a <xref:System.Activities.Statements.TryCatch> activity that catches the <xref:System.DivideByZeroException> exception and sets the discount to zero.</span></span>|  
   
-#### 使用此示例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="50b30-129">使用此示例</span><span class="sxs-lookup"><span data-stu-id="50b30-129">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 FlowchartWithFaultHandling.sln 解决方案文件。  
+1.  <span data-ttu-id="50b30-130">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 FlowchartWithFaultHandling.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="50b30-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the FlowchartWithFaultHandling.sln solution file.</span></span>  
   
-2.  要生成解决方案，按 Ctrl\+Shift\+B。  
+2.  <span data-ttu-id="50b30-131">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="50b30-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  若要运行解决方案，请按 F5。  
+3.  <span data-ttu-id="50b30-132">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="50b30-132">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录。  
+>  <span data-ttu-id="50b30-133">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="50b30-133">The samples may already be installed on your computer.</span></span> <span data-ttu-id="50b30-134">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="50b30-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="50b30-135">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="50b30-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="50b30-136">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="50b30-136">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## 请参阅  
- [流程图工作流](../../../../docs/framework/windows-workflow-foundation//flowchart-workflows.md)   
- [异常](../../../../docs/framework/windows-workflow-foundation//exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="50b30-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="50b30-137">See Also</span></span>  
+ [<span data-ttu-id="50b30-138">流程图工作流</span><span class="sxs-lookup"><span data-stu-id="50b30-138">Flowchart Workflows</span></span>](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
+ [<span data-ttu-id="50b30-139">异常</span><span class="sxs-lookup"><span data-stu-id="50b30-139">Exceptions</span></span>](../../../../docs/framework/windows-workflow-foundation/exceptions.md)

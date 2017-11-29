@@ -1,56 +1,59 @@
 ---
-title: "From/To/By 动画概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, From/to/by"
-  - "From/to/by 动画"
+title: "From-到-By 动画概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], From/to/by
+- From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f5eba773a290f1100fcea411919c5c16558e01ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# From/To/By 动画概述
-本主题描述如何使用 From\/To\/By 动画对[依赖项属性](GTMT)进行动画处理。  From\/To\/By 动画创建两个值之间的过渡。  
+# <a name="fromtoby-animations-overview"></a><span data-ttu-id="86d27-102">From/To/By 动画概述</span><span class="sxs-lookup"><span data-stu-id="86d27-102">From/To/By Animations Overview</span></span>
+<span data-ttu-id="86d27-103">本主题介绍如何使用 From/To/By 动画对依赖属性进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="86d27-103">This topic describes how to use From/To/By animations to animate dependency properties.</span></span> <span data-ttu-id="86d27-104">From/To/By 动画创建两个值之间的转换。</span><span class="sxs-lookup"><span data-stu-id="86d27-104">A From/To/By animation creates a transition between two values.</span></span>  
   
- 本主题包括以下部分。  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prereq"></a>   
-## 必备组件  
- 若要了解本主题，您应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画功能。  有关动画功能的简介，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="86d27-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="86d27-105">Prerequisites</span></span>  
+ <span data-ttu-id="86d27-106">若要了解本主题，你应熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画功能。</span><span class="sxs-lookup"><span data-stu-id="86d27-106">To understand this topic, you should be familiar with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animations features.</span></span> <span data-ttu-id="86d27-107">动画功能的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-107">For an introduction to animation features, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
 <a name="whatisanimation"></a>   
-## 什么是 From\/To\/By 动画  
- From\/To\/By 动画是一种 <xref:System.Windows.Media.Animation.AnimationTimeline> 类型，它创建起始值和结束值之间的过渡。  完成过渡所需的时间由该动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 确定。  
+## <a name="what-is-a-fromtoby-animation"></a><span data-ttu-id="86d27-108">什么是 From/To/By 动画？</span><span class="sxs-lookup"><span data-stu-id="86d27-108">What Is a From/To/By Animation?</span></span>  
+ <span data-ttu-id="86d27-109">From/To/By 动画，则一种<xref:System.Windows.Media.Animation.AnimationTimeline>创建起始值和结束值之间的转换。</span><span class="sxs-lookup"><span data-stu-id="86d27-109">A From/To/By animation is a type of <xref:System.Windows.Media.Animation.AnimationTimeline> that creates a transition between a starting value and an ending value.</span></span> <span data-ttu-id="86d27-110">转换完成所需的时间量由<xref:System.Windows.Media.Animation.Timeline.Duration%2A>该动画。</span><span class="sxs-lookup"><span data-stu-id="86d27-110">The amount of time that the transition takes to complete is determined by the <xref:System.Windows.Media.Animation.Timeline.Duration%2A> of that animation.</span></span>  
   
- 可以通过在标记和代码中使用 <xref:System.Windows.Media.Animation.Storyboard>，或在代码中使用 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法，将 From\/To\/By 动画应用于属性。  还可以使用 From\/To\/By 动画创建 <xref:System.Windows.Media.Animation.AnimationClock>，并将其应用于一个或多个属性。  有关应用动画的各种方法的更多信息，请参见[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ <span data-ttu-id="86d27-111">你可以从/到/的应用到属性时使用动画<xref:System.Windows.Media.Animation.Storyboard>在标记和代码，或使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>代码中的方法。</span><span class="sxs-lookup"><span data-stu-id="86d27-111">You can apply a From/To/By animation to a property by using a <xref:System.Windows.Media.Animation.Storyboard> in markup and code, or by using the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method in code.</span></span> <span data-ttu-id="86d27-112">此外可以使用 From/To/By 动画来创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-112">You may also use a From/To/By Animation to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to one or more properties.</span></span> <span data-ttu-id="86d27-113">有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-113">For more information about the different methods for applying animations, see the [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
- From\/To\/By 动画的目标值不能超过两个。  如果需要具有两个以上目标值的动画，请使用关键帧动画。  [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中描述了关键帧动画。  
+ <span data-ttu-id="86d27-114">From/To/By 动画的目标值不能超过两个。</span><span class="sxs-lookup"><span data-stu-id="86d27-114">From/To/By animations can have no more than two target values.</span></span> <span data-ttu-id="86d27-115">如果需要具有两个以上目标值的动画，请使用关键帧。</span><span class="sxs-lookup"><span data-stu-id="86d27-115">If you require an animation that has more than two target values, use a key-frame animation.</span></span> <span data-ttu-id="86d27-116">关键帧动画进行了介绍[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-116">Key-frame animations are described in the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).</span></span>  
   
 <a name="animation_types"></a>   
-## From\/To\/By 动画类型  
- 由于动画生成属性值，因此对于不同的属性类型，会有不同的动画类型。  若要对采用 <xref:System.Double> 的属性（例如元素的 <xref:System.Windows.FrameworkElement.Width%2A> 属性）进行动画处理，请使用生成 <xref:System.Double> 值的动画。  若要对采用 <xref:System.Windows.Point> 的属性进行动画处理，请使用生成 <xref:System.Windows.Point> 值的动画，依此类推。  
+## <a name="fromtoby-animation-types"></a><span data-ttu-id="86d27-117">From/To/By 动画类型</span><span class="sxs-lookup"><span data-stu-id="86d27-117">From/To/By Animation Types</span></span>  
+ <span data-ttu-id="86d27-118">由于动画会生成属性值，因此不同的属性类型具有不同的动画类型。</span><span class="sxs-lookup"><span data-stu-id="86d27-118">Because animations generate property values, there are different animation types for different property types.</span></span> <span data-ttu-id="86d27-119">要进行动画处理的属性<xref:System.Double>，如<xref:System.Windows.FrameworkElement.Width%2A>属性的元素，使用动画生成<xref:System.Double>值。</span><span class="sxs-lookup"><span data-stu-id="86d27-119">To animate a property that takes a <xref:System.Double>, such as the <xref:System.Windows.FrameworkElement.Width%2A> property of an element, use an animation that produces <xref:System.Double> values.</span></span> <span data-ttu-id="86d27-120">要进行动画处理的属性<xref:System.Windows.Point>，使用动画生成<xref:System.Windows.Point>值，等等。</span><span class="sxs-lookup"><span data-stu-id="86d27-120">To animate a property that takes a <xref:System.Windows.Point>, use an animation that produces <xref:System.Windows.Point> values, and so on.</span></span>  
   
- From\/To\/By 动画类属于 <xref:System.Windows.Media.Animation> 命名空间，并使用下列命名约定：  
+ <span data-ttu-id="86d27-121">From/To/By 动画类属于<xref:System.Windows.Media.Animation>命名空间并使用以下命名约定：</span><span class="sxs-lookup"><span data-stu-id="86d27-121">From/To/By animation classes belong to the <xref:System.Windows.Media.Animation> namespace and use the following naming convention:</span></span>  
   
- *\<类型\>* `Animation`  
+ <span data-ttu-id="86d27-122">*\<Type>* `Animation`</span><span class="sxs-lookup"><span data-stu-id="86d27-122">*\<Type>* `Animation`</span></span>  
   
- 其中 *\<类型\>* 是该类进行动画处理的值的类型。  
+ <span data-ttu-id="86d27-123">其中 *\<Type>* 为该类进行动画处理的值的类型。</span><span class="sxs-lookup"><span data-stu-id="86d27-123">Where *\<Type>* is the type of value that the class animates.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供下列 From\/To\/By 动画类。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="86d27-124"> 提供以下 From/To/By 动画类。</span><span class="sxs-lookup"><span data-stu-id="86d27-124"> provides the following From/To/By animation classes.</span></span>  
   
-|属性类型|对应的 From\/To\/By 动画类|  
-|----------|--------------------------|  
+|<span data-ttu-id="86d27-125">属性类型</span><span class="sxs-lookup"><span data-stu-id="86d27-125">Property type</span></span>|<span data-ttu-id="86d27-126">对应的 From/To/By 动画类</span><span class="sxs-lookup"><span data-stu-id="86d27-126">Corresponding From/To/By animation class</span></span>|  
+|-------------------|------------------------------------------------|  
 |<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimation>|  
 |<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|  
 |<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimation>|  
@@ -69,90 +72,90 @@ caps.handback.revision: 13
 |<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimation>|  
   
 <a name="anim_values"></a>   
-## 目标值  
- From\/To\/By 动画创建两个目标值之间的过渡。  通常是指定一个起始值（使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性来设置）和一个结束值（使用 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性来设置）。  但是，也可以只指定起始值、目标值或偏移量值。  此时，动画从正在进行动画处理的属性获取缺少的目标值。  以下列表描述了指定动画目标值的各种方法。  
+## <a name="target-values"></a><span data-ttu-id="86d27-127">目标值</span><span class="sxs-lookup"><span data-stu-id="86d27-127">Target Values</span></span>  
+ <span data-ttu-id="86d27-128">From/To/By 动画创建两个目标值之间的转换。</span><span class="sxs-lookup"><span data-stu-id="86d27-128">A From/To/By animation creates a transition between two target values.</span></span> <span data-ttu-id="86d27-129">它是常见的是指定起始值 (通过设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性) 和结束值 (通过设置<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性)。</span><span class="sxs-lookup"><span data-stu-id="86d27-129">It is common to specify a starting value (set it by using the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property) and an ending value (set it by using the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property).</span></span> <span data-ttu-id="86d27-130">但是，还可以仅指定起始值、目标值或偏移值。</span><span class="sxs-lookup"><span data-stu-id="86d27-130">However, you can also specify only a starting value, a destination value, or an offset value.</span></span> <span data-ttu-id="86d27-131">在这些类中，动画从要进行动画处理的属性中获取缺少的目标值。</span><span class="sxs-lookup"><span data-stu-id="86d27-131">In these cases, the animation obtains the missing target value from the property that is being animated.</span></span> <span data-ttu-id="86d27-132">以下列表描述了指定动画目标值的各种方法。</span><span class="sxs-lookup"><span data-stu-id="86d27-132">The following list describes the different ways to specify the target values of an animation.</span></span>  
   
--   **起始值**  
+-   <span data-ttu-id="86d27-133">**起始值**</span><span class="sxs-lookup"><span data-stu-id="86d27-133">**Starting Value**</span></span>  
   
-     如果要显式指定动画的起始值，请使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性。  可以只使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性自身，也可以将该属性与 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 或 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性一起使用。  如果只指定 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性，则动画从该值过渡到进行动画处理的属性的基值。  
+     <span data-ttu-id="86d27-134">使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，当你想要显式指定动画的起始值。</span><span class="sxs-lookup"><span data-stu-id="86d27-134">Use the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property when you want to explicitly specify the starting value of an animation.</span></span> <span data-ttu-id="86d27-135">你可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性本身，或与<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>或<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-135">You can use the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property by itself, or with the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> or <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property.</span></span> <span data-ttu-id="86d27-136">如果只指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，在动画转换从该值到基础值的动画的属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-136">If you specify only the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property, the animation transitions from that value to the base value of the animated property.</span></span>  
   
--   **结束值**  
+-   <span data-ttu-id="86d27-137">**终止值**</span><span class="sxs-lookup"><span data-stu-id="86d27-137">**Ending Value**</span></span>  
   
-     若要指定动画的结束值，请使用其 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性。  如果只使用 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性自身，则动画从正在进行动画处理的属性获取其起始值，或者从应用于同一属性的另一个动画的输出获取其起始值。  可以将 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性与 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性一起使用，以显式指定动画的起始值和结束值。  
+     <span data-ttu-id="86d27-138">若要指定动画的结束值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-138">To specify an ending value of an animation, use its <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property.</span></span> <span data-ttu-id="86d27-139">如果你使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>本身的属性，从正在进行动画处理的属性或输出中将应用到相同的属性的另一个动画的动画获取其起始值。</span><span class="sxs-lookup"><span data-stu-id="86d27-139">If you use the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property by itself, the animation obtains its starting value from the property that is being animated or from the output of another animation that is applied to the same property.</span></span> <span data-ttu-id="86d27-140">你可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性连同<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性来显式指定开始和结束用于动画的值。</span><span class="sxs-lookup"><span data-stu-id="86d27-140">You can use the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property together with the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property to explicitly specify starting and ending values for the animation.</span></span>  
   
--   **偏移量值**  
+-   <span data-ttu-id="86d27-141">**偏移值**</span><span class="sxs-lookup"><span data-stu-id="86d27-141">**Offset Value**</span></span>  
   
-     可以使用 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性指定动画的偏移量，而不指定显式起始值或结束值。  动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性指定动画在其持续期间更改某值的程度。  可以只使用 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性自身，也可以将该属性与 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性一起使用。  如果只指定 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性，则动画将偏移量值添加到该属性的基值或另一个动画的输出。  
+     <span data-ttu-id="86d27-142"><xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性使您能够指定偏移量而不是显式启动或终止用于动画的值。</span><span class="sxs-lookup"><span data-stu-id="86d27-142">The <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property enables you to specify an offset instead of an explicit starting or ending value for the animation.</span></span> <span data-ttu-id="86d27-143"><xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>的动画的属性指定由多少动画更改其持续时间内的某个值。</span><span class="sxs-lookup"><span data-stu-id="86d27-143">The <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property of an animation specifies by how much the animation changes a value over its duration.</span></span> <span data-ttu-id="86d27-144">你可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性本身或与<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-144">You can use the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property by itself or with the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property.</span></span> <span data-ttu-id="86d27-145">如果只指定<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性，动画将偏移量的值添加到属性的基值或另一个动画的输出。</span><span class="sxs-lookup"><span data-stu-id="86d27-145">If you specify only the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property, the animation adds the offset value to the base value of the property or to the output of another animation.</span></span>  
   
 <a name="examples"></a>   
-## 使用 From\/To\/By 值  
- 下面的部分介绍如何一起或单独使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性。  
+## <a name="using-fromtoby-values"></a><span data-ttu-id="86d27-146">使用 From/To/By 值</span><span class="sxs-lookup"><span data-stu-id="86d27-146">Using From/To/By Values</span></span>  
+ <span data-ttu-id="86d27-147">下列各节描述如何使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性单独或一起。</span><span class="sxs-lookup"><span data-stu-id="86d27-147">The following sections describe how to use the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> properties together or separately.</span></span>  
   
- 本部分中的每个示例都使用 <xref:System.Windows.Media.Animation.DoubleAnimation>（From\/To\/By 动画的一种类型）对一个高度为 10 个[与设备无关的像素](GTMT)、宽度为 100 个[与设备无关的像素](GTMT) 的 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 属性进行动画处理。  
+ <span data-ttu-id="86d27-148">本节中的示例的每次使用<xref:System.Windows.Media.Animation.DoubleAnimation>，这是一种 From/To/By 动画，要进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>属性<xref:System.Windows.Shapes.Rectangle>即 10 设备无关的像素高和 100 设备独立像素宽。</span><span class="sxs-lookup"><span data-stu-id="86d27-148">The examples in this section each use a <xref:System.Windows.Media.Animation.DoubleAnimation>, which is a type of From/To/By animation, to animate the <xref:System.Windows.FrameworkElement.Width%2A> property of a <xref:System.Windows.Shapes.Rectangle> that is 10 device independent pixels high and 100 device independent pixels wide.</span></span>  
   
- 虽然每个示例都使用 <xref:System.Windows.Media.Animation.DoubleAnimation>，但所有 From\/To\/By 动画的 From、To 和 By 属性的行为都相同。  虽然每个示例都使用 <xref:System.Windows.Media.Animation.Storyboard>，不过也可以通过其他方式使用 From\/To\/By 动画。  有关更多信息，请参见[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ <span data-ttu-id="86d27-149">虽然每个示例使用<xref:System.Windows.Media.Animation.DoubleAnimation>，则从，，以及属性的所有 From/To/By 动画具有相同行为。</span><span class="sxs-lookup"><span data-stu-id="86d27-149">Although each example uses a <xref:System.Windows.Media.Animation.DoubleAnimation>, the From, To, and By properties of all From/To/By animations behave identically.</span></span> <span data-ttu-id="86d27-150">尽管上述每个示例使用<xref:System.Windows.Media.Animation.Storyboard>，你可以通过其他方式使用 From/To/By 动画。</span><span class="sxs-lookup"><span data-stu-id="86d27-150">Although each of these examples uses a <xref:System.Windows.Media.Animation.Storyboard>, you can use From/To/By animations in other ways.</span></span> <span data-ttu-id="86d27-151">有关详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-151">For more information, see [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
-### From\/To  
- 如果同时设置了 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 值，则动画从 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性指定的值继续到 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性指定的值。  
+### <a name="fromto"></a><span data-ttu-id="86d27-152">从/到</span><span class="sxs-lookup"><span data-stu-id="86d27-152">From/To</span></span>  
+ <span data-ttu-id="86d27-153">当你将设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>值一起使用，从指定的值的动画<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，通过指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-153">When you set the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> values together, the animation progresses from the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property, to the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property.</span></span>  
   
- 下面的示例将 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性设置为 50，并将其 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性设置为 300。  结果，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 以动画形式从 50 过渡到 300。  
+ <span data-ttu-id="86d27-154">下面的示例设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性<xref:System.Windows.Media.Animation.DoubleAnimation>为 50 及其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>和 300 之间的属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-154">The following example sets the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property of the <xref:System.Windows.Media.Animation.DoubleAnimation> to 50 and its <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property to 300.</span></span> <span data-ttu-id="86d27-155">因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>动画处理的来自 50 台和 300 之间。</span><span class="sxs-lookup"><span data-stu-id="86d27-155">As a result, the <xref:System.Windows.FrameworkElement.Width%2A> of the <xref:System.Windows.Shapes.Rectangle> is animated from 50 to 300.</span></span>  
   
  [!code-csharp[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
  [!code-vb[basicvalues_snip#FromToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
   
-### 若要  
- 如果只设置 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性，则动画从进行动画处理的属性的基值，或以前应用于同一属性的组合动画的输出，继续到 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性指定的值。  
+### <a name="to"></a><span data-ttu-id="86d27-156">到</span><span class="sxs-lookup"><span data-stu-id="86d27-156">To</span></span>  
+ <span data-ttu-id="86d27-157">如果只设置<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性，则从的动画的属性的基值或以前应用的同一属性，指定的值的组合动画的输出中的动画继续<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-157">When you set just the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property, the animation progresses from the base value of the animated property, or from the output of a composing animation that was previously applied to the same property, to the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property.</span></span>  
   
- （“组合动画”是指以前应用于同一属性、在使用 <xref:System.Windows.Media.Animation.HandoffBehavior> 提交行为应用当前动画时仍然有效的 <xref:System.Windows.Media.Animation.ClockState> 或 <xref:System.Windows.Media.Animation.ClockState> 动画）。  
+ <span data-ttu-id="86d27-158">("撰写动画"指<xref:System.Windows.Media.Animation.ClockState.Active>或<xref:System.Windows.Media.Animation.ClockState.Filling>之前应用于当前的动画应用通过使用时所做的更改的相同属性的动画<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>切换行为。)</span><span class="sxs-lookup"><span data-stu-id="86d27-158">("Composing animation" refers to an <xref:System.Windows.Media.Animation.ClockState.Active> or <xref:System.Windows.Media.Animation.ClockState.Filling> animation that previously applied to the same property that is still in effect when the current animation was applied by using the <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> handoff behavior.)</span></span>  
   
- 下面的示例只将 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 属性设置为 300。  由于未指定起始值，因此 <xref:System.Windows.Media.Animation.DoubleAnimation> 使用 <xref:System.Windows.FrameworkElement.Width%2A> 属性的基值 \(100\) 作为其起始值。  <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 以动画形式从 100 过渡到动画的目标值 300。  
+ <span data-ttu-id="86d27-159">下面的示例只需设置<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性<xref:System.Windows.Media.Animation.DoubleAnimation>和 300 之间。</span><span class="sxs-lookup"><span data-stu-id="86d27-159">The following example sets just the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> property of the <xref:System.Windows.Media.Animation.DoubleAnimation> to 300.</span></span> <span data-ttu-id="86d27-160">未不指定任何起始值，因为<xref:System.Windows.Media.Animation.DoubleAnimation>使用的是基本值 (100) 的<xref:System.Windows.FrameworkElement.Width%2A>属性作为其起始值。</span><span class="sxs-lookup"><span data-stu-id="86d27-160">Because no starting value was specified, the <xref:System.Windows.Media.Animation.DoubleAnimation> uses the base value (100) of the <xref:System.Windows.FrameworkElement.Width%2A> property as its starting value.</span></span> <span data-ttu-id="86d27-161"><xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>进行动画处理，从 100 到 300 动画的目标值。</span><span class="sxs-lookup"><span data-stu-id="86d27-161">The <xref:System.Windows.FrameworkElement.Width%2A> of the <xref:System.Windows.Shapes.Rectangle> is animated from 100 to the animation's target value of 300.</span></span>  
   
  [!code-csharp[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
  [!code-vb[basicvalues_snip#ToAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
-### By  
- 如果只设置动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性，则动画从正在进行动画处理的属性的基值，或组合动画的输出，继续到该值与 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性指定的值之和。  
+### <a name="by"></a><span data-ttu-id="86d27-162">间距</span><span class="sxs-lookup"><span data-stu-id="86d27-162">By</span></span>  
+ <span data-ttu-id="86d27-163">如果只设置<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>的动画的属性，则动画继续从正在进行动画处理，该属性的基值或来自于该值与由指定的值之和组合动画的输出<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-163">When you set just the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property of an animation, the animation progresses from the base value of the property that is being animated, or from the output of a composing animation to the sum of that value and the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property.</span></span>  
   
- 下面的示例只将 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性设置为 300。  由于该示例未指定起始值，因此 <xref:System.Windows.Media.Animation.DoubleAnimation> 使用 <xref:System.Windows.FrameworkElement.Width%2A> 属性的基值 100 作为其起始值。  结束值通过将动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 值 300 与其起始值 100 相加而得到 400。  因此，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 以动画形式从 100 过渡到 400。  
+ <span data-ttu-id="86d27-164">下面的示例只需设置<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性<xref:System.Windows.Media.Animation.DoubleAnimation>和 300 之间。</span><span class="sxs-lookup"><span data-stu-id="86d27-164">The following example sets just the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property of the <xref:System.Windows.Media.Animation.DoubleAnimation> to 300.</span></span> <span data-ttu-id="86d27-165">该示例并不指定一个起始值，因为<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基础价值<xref:System.Windows.FrameworkElement.Width%2A>属性，100，作为其起始值。</span><span class="sxs-lookup"><span data-stu-id="86d27-165">Because the example does not specify a starting value, the <xref:System.Windows.Media.Animation.DoubleAnimation> uses the base value of the <xref:System.Windows.FrameworkElement.Width%2A> property, 100, as its starting value.</span></span> <span data-ttu-id="86d27-166">结束值确定通过添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画 300，其起始值，100: 400 到值。</span><span class="sxs-lookup"><span data-stu-id="86d27-166">The ending value is determined by adding the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> value of the animation, 300, to its starting value, 100: 400.</span></span> <span data-ttu-id="86d27-167">因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>进行动画处理，从 100 到 400。</span><span class="sxs-lookup"><span data-stu-id="86d27-167">As a result, the <xref:System.Windows.FrameworkElement.Width%2A> of the <xref:System.Windows.Shapes.Rectangle> is animated from 100 to 400.</span></span>  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
   
-### From\/By  
- 如果设置了动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性，则动画从 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性指定的值，继续到由 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性之和指定的值。  
+### <a name="fromby"></a><span data-ttu-id="86d27-168">From/By</span><span class="sxs-lookup"><span data-stu-id="86d27-168">From/By</span></span>  
+ <span data-ttu-id="86d27-169">当你将设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画的属性，从指定的值则动画继续<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，指定的总和值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-169">When you set the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> properties of an animation, the animation progresses from the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property, to the value that is specified by the sum of the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> properties.</span></span>  
   
- 下面的示例将 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性设置为 50，并将其 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性设置为 300。  结束值通过将动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 值 300 与其起始值 50 相加而得到 350。  因此，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 以动画形式从 50 过渡到 350。  
+ <span data-ttu-id="86d27-170">下面的示例设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性<xref:System.Windows.Media.Animation.DoubleAnimation>为 50 及其<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>和 300 之间的属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-170">The following example sets the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property of the <xref:System.Windows.Media.Animation.DoubleAnimation> to 50 and its <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property to 300.</span></span> <span data-ttu-id="86d27-171">结束值确定通过添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画 300，其起始值，50: 350 到值。</span><span class="sxs-lookup"><span data-stu-id="86d27-171">The ending value is determined by adding the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> value of the animation, 300, to its starting value, 50: 350.</span></span> <span data-ttu-id="86d27-172">因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 50 到 350 动态显示。</span><span class="sxs-lookup"><span data-stu-id="86d27-172">As a result, the <xref:System.Windows.FrameworkElement.Width%2A> of the <xref:System.Windows.Shapes.Rectangle> is animated from 50 to 350.</span></span>  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
   
-### 发件人  
- 如果只指定动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 值，则动画从 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性指定的值，继续到正在进行动画处理的属性的基值，或组合动画的输出。  
+### <a name="from"></a><span data-ttu-id="86d27-173">From</span><span class="sxs-lookup"><span data-stu-id="86d27-173">From</span></span>  
+ <span data-ttu-id="86d27-174">如果只指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>动画的值、 动画由指定的值从<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，到正进行动画处理的属性的基值或组合动画的输出。</span><span class="sxs-lookup"><span data-stu-id="86d27-174">When you specify just the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> value of an animation, the animation progresses from the value that is specified by the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property, to the base value of the property that is being animated or to the output of a composing animation.</span></span>  
   
- 下面的示例只将 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 属性设置为 50。  由于未指定结束值，因此 <xref:System.Windows.Media.Animation.DoubleAnimation> 使用 <xref:System.Windows.FrameworkElement.Width%2A> 属性的基值 100 作为其结束值。  <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 以动画形式从 50 过渡到 <xref:System.Windows.FrameworkElement.Width%2A> 属性的基值 100。  
+ <span data-ttu-id="86d27-175">下面的示例只需设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性<xref:System.Windows.Media.Animation.DoubleAnimation>为 50。</span><span class="sxs-lookup"><span data-stu-id="86d27-175">The following example sets just the <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> property of the <xref:System.Windows.Media.Animation.DoubleAnimation> to 50.</span></span> <span data-ttu-id="86d27-176">未不指定任何结束值，因为<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基础价值<xref:System.Windows.FrameworkElement.Width%2A>属性，100，作为其结束的值。</span><span class="sxs-lookup"><span data-stu-id="86d27-176">Because no ending value was specified, the <xref:System.Windows.Media.Animation.DoubleAnimation> uses the base value of the <xref:System.Windows.FrameworkElement.Width%2A> property, 100, as its ending value.</span></span> <span data-ttu-id="86d27-177"><xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>动画形式从 50 到的基础价值<xref:System.Windows.FrameworkElement.Width%2A>属性，100。</span><span class="sxs-lookup"><span data-stu-id="86d27-177">The <xref:System.Windows.FrameworkElement.Width%2A> of the <xref:System.Windows.Shapes.Rectangle> is animated from 50 to the base value of the <xref:System.Windows.FrameworkElement.Width%2A> property, 100.</span></span>  
   
  [!code-csharp[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
  [!code-vb[basicvalues_snip#FromAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
   
-### To\/By  
- 如果同时设置了动画的 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性，则忽略 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 属性。  
+### <a name="toby"></a><span data-ttu-id="86d27-178">To/By</span><span class="sxs-lookup"><span data-stu-id="86d27-178">To/By</span></span>  
+ <span data-ttu-id="86d27-179">如果同时设置<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画，属性<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>忽略属性。</span><span class="sxs-lookup"><span data-stu-id="86d27-179">If you set both the <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> and the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> properties of an animation, the <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> property is ignored.</span></span>  
   
 <a name="otheranimationtypes"></a>   
-## 其他动画类型  
- From\/To\/By 动画不是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的唯一动画类型，它还提供了关键帧动画和路径动画。  
+## <a name="other-animation-types"></a><span data-ttu-id="86d27-180">其他动画类型</span><span class="sxs-lookup"><span data-stu-id="86d27-180">Other Animation Types</span></span>  
+ <span data-ttu-id="86d27-181">从/到/By 动画不是唯一的动画类型的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供： 它还提供了关键帧动画和路径动画。</span><span class="sxs-lookup"><span data-stu-id="86d27-181">From/To/By animations are not the only type of animations that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] provides: it also provides key-frame animations and path animations.</span></span>  
   
--   关键帧动画沿着用关键帧所描述的任意数量的目标值进行动画处理。  有关更多信息，请参见 [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
+-   <span data-ttu-id="86d27-182">关键帧动画沿使用关键帧描述的任意数量的目标值进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="86d27-182">A key-frame animation animates along any number of destination values, described using key frames.</span></span> <span data-ttu-id="86d27-183">有关详细信息，请参阅[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-183">For more information, see the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).</span></span>  
   
--   路径动画从 <xref:System.Windows.Media.PathGeometry> 生成输出值。  有关更多信息，请参见 [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
+-   <span data-ttu-id="86d27-184">路径动画生成输出值从<xref:System.Windows.Media.PathGeometry>。</span><span class="sxs-lookup"><span data-stu-id="86d27-184">A path animation generates output values from a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="86d27-185">有关详细信息，请参阅[路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-185">For more information, see the [Path Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还允许您创建自己的自定义动画类型。  有关更多信息，请参见 [自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="86d27-186"> 还支持创建自己的自定义动画类型。</span><span class="sxs-lookup"><span data-stu-id="86d27-186"> also enables you to create your own custom animation types.</span></span> <span data-ttu-id="86d27-187">有关详细信息，请参阅[自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="86d27-187">For more information, see the [Custom Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.Timeline>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)   
- [自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)   
- [From, To, and By Animation Target Values Sample](http://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a><span data-ttu-id="86d27-188">另请参阅</span><span class="sxs-lookup"><span data-stu-id="86d27-188">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.Timeline>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ [<span data-ttu-id="86d27-189">动画概述</span><span class="sxs-lookup"><span data-stu-id="86d27-189">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="86d27-190">演示图板概述</span><span class="sxs-lookup"><span data-stu-id="86d27-190">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [<span data-ttu-id="86d27-191">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="86d27-191">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="86d27-192">路径动画概述</span><span class="sxs-lookup"><span data-stu-id="86d27-192">Path Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [<span data-ttu-id="86d27-193">自定义动画概述</span><span class="sxs-lookup"><span data-stu-id="86d27-193">Custom Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
+ [<span data-ttu-id="86d27-194">From、To 和 By 动画目标值示例</span><span class="sxs-lookup"><span data-stu-id="86d27-194">From, To, and By Animation Target Values Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159988)

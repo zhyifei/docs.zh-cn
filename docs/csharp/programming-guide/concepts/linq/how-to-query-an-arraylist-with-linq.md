@@ -1,45 +1,36 @@
 ---
 title: "如何：使用 LINQ 查询 ArrayList (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fe1426bb77f4e958abda83814632e61ee9ce415c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
-ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查询 ArrayList (C#)
-如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 `Student` 对象的 <xref:System.Collections.ArrayList>，那么 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)应如下所示：  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="7791f-102">如何：使用 LINQ 查询 ArrayList (C#)</span><span class="sxs-lookup"><span data-stu-id="7791f-102">How to: Query an ArrayList with LINQ (C#)</span></span>
+<span data-ttu-id="7791f-103">如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。</span><span class="sxs-lookup"><span data-stu-id="7791f-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="7791f-104">例如，如果有 `Student` 对象的 <xref:System.Collections.ArrayList>，那么 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)应如下所示：</span><span class="sxs-lookup"><span data-stu-id="7791f-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../../csharp/language-reference/keywords/from-clause.md) should look like this:</span></span>  
   
 ```  
 var query = from Student s in arrList  
 ...  
 ```  
   
- 通过指定范围变量的类型，可将 <xref:System.Collections.ArrayList> 中的每项强制转换为 `Student`。  
+ <span data-ttu-id="7791f-105">通过指定范围变量的类型，可将 <xref:System.Collections.ArrayList> 中的每项强制转换为 `Student`。</span><span class="sxs-lookup"><span data-stu-id="7791f-105">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- 在查询表达式中使用显式类型范围变量等效于调用 <xref:System.Linq.Enumerable.Cast%2A> 方法。 如果无法执行指定的强制转换，<xref:System.Linq.Enumerable.Cast%2A> 将引发异常。 <xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是两个标准查询运算符方法，可对非泛型 <xref:System.Collections.IEnumerable> 类型执行操作。 有关详细信息，请参阅 [LINQ 查询操作中的类型关系](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。  
+ <span data-ttu-id="7791f-106">在查询表达式中使用显式类型范围变量等效于调用 <xref:System.Linq.Enumerable.Cast%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7791f-106">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="7791f-107">如果无法执行指定的强制转换，<xref:System.Linq.Enumerable.Cast%2A> 将引发异常。</span><span class="sxs-lookup"><span data-stu-id="7791f-107"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="7791f-108"><xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是两个标准查询运算符方法，可对非泛型 <xref:System.Collections.IEnumerable> 类型执行操作。</span><span class="sxs-lookup"><span data-stu-id="7791f-108"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="7791f-109">有关详细信息，请参阅 [LINQ 查询操作中的类型关系](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="7791f-109">For more information, see[Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例演示对 <xref:System.Collections.ArrayList> 的简单查询。 请注意，本示例在代码调用 <xref:System.Collections.ArrayList.Add%2A> 方法时使用对象初始值设定项，但这不是必需的。  
+## <a name="example"></a><span data-ttu-id="7791f-110">示例</span><span class="sxs-lookup"><span data-stu-id="7791f-110">Example</span></span>  
+ <span data-ttu-id="7791f-111">下面的示例演示对 <xref:System.Collections.ArrayList> 的简单查询。</span><span class="sxs-lookup"><span data-stu-id="7791f-111">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="7791f-112">请注意，本示例在代码调用 <xref:System.Collections.ArrayList.Add%2A> 方法时使用对象初始值设定项，但这不是必需的。</span><span class="sxs-lookup"><span data-stu-id="7791f-112">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```csharp  
 using System;  
@@ -100,6 +91,5 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="7791f-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7791f-113">See Also</span></span>  
+ [<span data-ttu-id="7791f-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="7791f-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

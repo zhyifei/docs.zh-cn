@@ -1,95 +1,98 @@
 ---
-title: "x:TypeArguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:TypeArguments"
-  - "xTypeArguments"
-  - "TypeArguments"
-helpviewer_keywords: 
-  - "x:TypeArguments attribute [XAML Services]"
-  - "TypeArguments attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:TypeArguments attribute"
+title: "x:TypeArguments 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:TypeArguments
+- xTypeArguments
+- TypeArguments
+helpviewer_keywords:
+- x:TypeArguments attribute [XAML Services]
+- TypeArguments attribute in XAML [XAML Services]
+- XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: 18
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:TypeArguments Directive
-将泛型的约束类型参数传递给泛型类型的构造函数。  
+# <a name="xtypearguments-directive"></a><span data-ttu-id="f097d-102">x:TypeArguments 指令</span><span class="sxs-lookup"><span data-stu-id="f097d-102">x:TypeArguments Directive</span></span>
+<span data-ttu-id="f097d-103">约束类型参数传递给泛型类型的构造函数的泛型。</span><span class="sxs-lookup"><span data-stu-id="f097d-103">Passes constraining type arguments of a generic to the constructor of the generic type.</span></span>  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="f097d-104">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="f097d-104">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object x:TypeArguments="typeString" .../>  
 ```  
-<object x:TypeArguments="typeString" .../>  
-```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="f097d-105">XAML 值</span><span class="sxs-lookup"><span data-stu-id="f097d-105">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`object`|由 CLR 泛型类型支持的 XAML 类型的对象元素声明。  如果 `object` 不是来自默认 XAML 命名空间的 XAML 类型，则  `object` 需要一个指示 XAML 命名空间的前缀，且该命名空间需有  `object`存在。|  
-|`typeString`|将一个或多个 XAML 类型名称声明为字符串的字符串，为 CLR 泛型类型提供类型参数。  有关其他语法说明，请参见备注。|  
+|`object`|<span data-ttu-id="f097d-106">由 CLR 泛型类型的 XAML 类型的对象元素声明。</span><span class="sxs-lookup"><span data-stu-id="f097d-106">An object element declaration of a XAML type, which is backed by a CLR generic type.</span></span> <span data-ttu-id="f097d-107">如果`object`不是来自默认 XAML 命名空间，将 XAML 类型是指`object`需要一个指示 XAML 命名空间前缀其中`object`存在。</span><span class="sxs-lookup"><span data-stu-id="f097d-107">If `object` refers to a XAML type that is not from the default XAML namespace, `object` requires a prefix to indicate the XAML namespace where `object` exists.</span></span>|  
+|`typeString`|<span data-ttu-id="f097d-108">一个字符串，声明一个或多个 XAML 类型名称作为字符串，其中提供 CLR 泛型类型的类型参数。</span><span class="sxs-lookup"><span data-stu-id="f097d-108">A string that declares one or more XAML type names as strings, which supplies the type arguments for the CLR generic type.</span></span> <span data-ttu-id="f097d-109">其他语法说明，请参阅备注。</span><span class="sxs-lookup"><span data-stu-id="f097d-109">See Remarks for additional syntax notes.</span></span>|  
   
-## 备注  
- 在大多数情况下，以用作 `typeString` 字符串中的信息项的 XAML 类型为前缀。  CLR 泛型约束的典型类型（例如 <xref:System.Int32> 和 <xref:System.String>）来自 CLR 基类库。  这些库未映射到典型的特定于框架的默认 XAML 命名空间，因此需要为 XAML 用法进行前缀映射。  
+## <a name="remarks"></a><span data-ttu-id="f097d-110">备注</span><span class="sxs-lookup"><span data-stu-id="f097d-110">Remarks</span></span>  
+ <span data-ttu-id="f097d-111">在大多数情况下，用作的信息项中的 XAML 类型`typeString`字符串作为前缀。</span><span class="sxs-lookup"><span data-stu-id="f097d-111">In most cases, the XAML types that are used as an information item in a `typeString` string are prefixed.</span></span> <span data-ttu-id="f097d-112">典型类型的 CLR 泛型约束 (例如，<xref:System.Int32>和<xref:System.String>) 来自 CLR 基类库。</span><span class="sxs-lookup"><span data-stu-id="f097d-112">Typical types of CLR generic constraints (for example, <xref:System.Int32> and <xref:System.String>) come from CLR base class libraries.</span></span> <span data-ttu-id="f097d-113">这些库不映射到典型的特定于框架的默认 XAML 命名空间，因此，XAML 用法中需要的前缀映射。</span><span class="sxs-lookup"><span data-stu-id="f097d-113">Those libraries are not mapped to typical framework-specific default XAML namespaces, and therefore, require a prefix mapping for XAML usage.</span></span>  
   
- 可通过使用命令分隔符指定多个 XAML 类型名称。  
+ <span data-ttu-id="f097d-114">可以使用逗号分隔符来指定多个 XAML 类型名称。</span><span class="sxs-lookup"><span data-stu-id="f097d-114">You can specify more than one XAML type name by using a comma delimiter.</span></span>  
   
- 泛型约束自身使用泛型类型，则嵌套的约束类型参数可以用括号 \(\) 括起来。  
+ <span data-ttu-id="f097d-115">如果泛型约束自身使用泛型类型，括号 （） 可以包含嵌套的约束类型参数。</span><span class="sxs-lookup"><span data-stu-id="f097d-115">If the generic constraints themselves use generic types, the nested constraint type arguments can be contained by parentheses ().</span></span>  
   
- 请注意，`x:TypeArguments` 的定义特定于 .NET Framework XAML 服务并使用 CLR 支持。  有关语言级别定义，请参见 [\[MS\-XAML\] Section 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525)（\[MS\-XAML\] 第 5.3.11 节）。  
+ <span data-ttu-id="f097d-116">请注意，此定义`x:TypeArguments`特定于.NET Framework XAML 服务和使用 CLR 支持。</span><span class="sxs-lookup"><span data-stu-id="f097d-116">Note that this definition of `x:TypeArguments` is specific to .NET Framework XAML Services and using CLR backing.</span></span> <span data-ttu-id="f097d-117">在找不到语言级别定义[ \[MS-XAML\]部分 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="f097d-117">A language-level definition can be found in [\[MS-XAML\] Section 5.3.11](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
-## 用法示例  
- 对于这些示例，假定声明了以下 XAML 命名空间定义：  
+## <a name="usage-examples"></a><span data-ttu-id="f097d-118">用法示例</span><span class="sxs-lookup"><span data-stu-id="f097d-118">Usage Examples</span></span>  
+ <span data-ttu-id="f097d-119">这些示例，假定，声明以下 XAML 命名空间定义：</span><span class="sxs-lookup"><span data-stu-id="f097d-119">For these examples, assume that the following XAML namespace definitions are declared:</span></span>  
   
 ```  
 xmlns:sys="clr-namespace:System;assembly=mscorlib"  
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
 ```  
   
-### List\<字符串\>  
- `<scg:List x:TypeArguments="sys:String" ...>` 实例化新的带有两个 <xref:System.String> 类型参数的 <xref:System.Collections.Generic.List%601>。  
+### <a name="liststring"></a><span data-ttu-id="f097d-120">列表\<字符串 ></span><span class="sxs-lookup"><span data-stu-id="f097d-120">List\<String></span></span>  
+ <span data-ttu-id="f097d-121">`<scg:List x:TypeArguments="sys:String" ...>`实例化一个新<xref:System.Collections.Generic.List%601>与<xref:System.String>的类型自变量。</span><span class="sxs-lookup"><span data-stu-id="f097d-121">`<scg:List x:TypeArguments="sys:String" ...>` instantiates a new <xref:System.Collections.Generic.List%601> with a <xref:System.String> type argument.</span></span>  
   
-### Dictionary\<字符串,字符串\>  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` 实例化新的带有两个 <xref:System.String> 类型参数的 <xref:System.Collections.Generic.Dictionary%602>。  
+### <a name="dictionarystringstring"></a><span data-ttu-id="f097d-122">字典\<字符串、 字符串 ></span><span class="sxs-lookup"><span data-stu-id="f097d-122">Dictionary\<String,String></span></span>  
+ <span data-ttu-id="f097d-123">`<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`实例化一个新<xref:System.Collections.Generic.Dictionary%602>包含两个<xref:System.String>类型参数。</span><span class="sxs-lookup"><span data-stu-id="f097d-123">`<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` instantiates a new <xref:System.Collections.Generic.Dictionary%602> with two <xref:System.String> type arguments.</span></span>  
   
-### Queue\<KeyValuePair\<字符串,字符串\>\>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` 实例化新的具有 <xref:System.Collections.Generic.KeyValuePair%602> 约束，带有内部约束类型参数 <xref:System.String> 和 <xref:System.String> 的 <xref:System.Collections.Generic.Queue%601>。  
+### <a name="queuekeyvaluepairstringstring"></a><span data-ttu-id="f097d-124">队列 < KeyValuePair\<String，String >></span><span class="sxs-lookup"><span data-stu-id="f097d-124">Queue<KeyValuePair\<String,String>></span></span>  
+ <span data-ttu-id="f097d-125">`<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`实例化一个新<xref:System.Collections.Generic.Queue%601>具有的约束<xref:System.Collections.Generic.KeyValuePair%602>为内部的约束的类型实参<xref:System.String>和<xref:System.String>。</span><span class="sxs-lookup"><span data-stu-id="f097d-125">`<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` instantiates a new <xref:System.Collections.Generic.Queue%601> that has a constraint of <xref:System.Collections.Generic.KeyValuePair%602> with the inner constraint type arguments <xref:System.String> and <xref:System.String>.</span></span>  
   
-## XAML 2006 和 WPF 泛型 XAML 用法  
- 对于 XAML 2006 用法和用于 WPF 应用程序的 XAML，针对 `x:TypeArguments` 和 XAML 的一般泛型类型用法存在以下限制：  
+## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a><span data-ttu-id="f097d-126">XAML 2006 和 WPF 泛型 XAML 用法</span><span class="sxs-lookup"><span data-stu-id="f097d-126">XAML 2006 and WPF Generic XAML Usages</span></span>  
+ <span data-ttu-id="f097d-127">有关 XAML 2006 使用情况和适用于 WPF 应用程序的 XAML，对于将存在以下限制`x:TypeArguments`和从 XAML 通常的泛型类型用法：</span><span class="sxs-lookup"><span data-stu-id="f097d-127">For XAML 2006 usage, and XAML that is used for WPF applications, the following restrictions exist for `x:TypeArguments` and generic type usages from XAML in general:</span></span>  
   
--   仅有 XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。  
+-   <span data-ttu-id="f097d-128">仅 XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。</span><span class="sxs-lookup"><span data-stu-id="f097d-128">Only the root element of a XAML file can support a generic XAML usage that references a generic type.</span></span>  
   
--   根元素必须映射到至少具有一个类型参数的泛型类型。  一个示例是 <xref:System.Windows.Navigation.PageFunction%601>。  这些页面函数是用于 WPF 中的 XAML 泛型用法支持的主要方案。  
+-   <span data-ttu-id="f097d-129">根元素必须映射到具有至少一个类型参数的泛型类型。</span><span class="sxs-lookup"><span data-stu-id="f097d-129">The root element must map to a generic type with at least one type argument.</span></span> <span data-ttu-id="f097d-130">一个示例是<xref:System.Windows.Navigation.PageFunction%601>。</span><span class="sxs-lookup"><span data-stu-id="f097d-130">An example is <xref:System.Windows.Navigation.PageFunction%601>.</span></span> <span data-ttu-id="f097d-131">页函数是在 WPF 中支持的 XAML 泛型用法的主要方案。</span><span class="sxs-lookup"><span data-stu-id="f097d-131">The page functions are the primary scenario for XAML generic usage support in WPF.</span></span>  
   
--   用于泛型的根元素 XAML 对象元素必须也使用 `x:Class`声明一个分部类。  即使定义了 WPF 生成操作，这也为 true。  
+-   <span data-ttu-id="f097d-132">泛型的根元素 XAML 对象元素还必须声明分部类使用`x:Class`。</span><span class="sxs-lookup"><span data-stu-id="f097d-132">The root element XAML object element for the generic must also declare a partial class using `x:Class`.</span></span> <span data-ttu-id="f097d-133">即使定义 WPF 生成操作，情况也是如此。</span><span class="sxs-lookup"><span data-stu-id="f097d-133">This is true even if defining a WPF build action.</span></span>  
   
--   `x:TypeArguments` 不能引用嵌套的泛型约束。  
+-   <span data-ttu-id="f097d-134">`x:TypeArguments`不能引用嵌套的泛型约束。</span><span class="sxs-lookup"><span data-stu-id="f097d-134">`x:TypeArguments` cannot reference nested generic constraints.</span></span>  
   
-## 无 WPF 3.0 或 WPF 3.5 依赖项的 XAML 2009 或 XAML 2006  
- 在 XAML 2006 或 XAML 2009 的 .NET Framework XAML 服务中，放宽了泛型 XAML 用法中的相关 WPF 限制。  您可以实例化泛型对象元素，可以支持后备类型系统和对象模型的 XAML 标记中的任何位置处。  
+## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a><span data-ttu-id="f097d-135">XAML 2009 或没有 WPF 3.0 或 3.5 WPF XAML 2006 依赖项</span><span class="sxs-lookup"><span data-stu-id="f097d-135">XAML 2009 or XAML 2006 with No WPF 3.0 or WPF 3.5 Dependency</span></span>  
+ <span data-ttu-id="f097d-136">在.NET Framework XAML 服务 XAML 2006 或 XAML 2009，放宽了对泛型的 XAML 用法的 WPF 相关限制。</span><span class="sxs-lookup"><span data-stu-id="f097d-136">In .NET Framework XAML Services for either XAML 2006 or XAML 2009, the WPF-related restrictions on generic XAML usage are relaxed.</span></span> <span data-ttu-id="f097d-137">可以实例化泛型对象元素，在后备类型系统和对象模型可支持的 XAML 标记中任何位置。</span><span class="sxs-lookup"><span data-stu-id="f097d-137">You can instantiate a generic object element at any position in XAML markup that the backing type system and object model can support.</span></span>  
   
- 如果使用 XAML 2009，而不是映射 CLR 基类来获取常用语言基元的 XAML 类型，则可以使用 [常用 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)作为 `typeString` 中的信息项。  例如，可以声明以下内容（不显示前缀映射，但 x 是用于 XAML 2009 的 XAML 语言 XAML 命名空间）：  
+ <span data-ttu-id="f097d-138">如果使用 XAML 2009 而不是将 CLR 映射基类型，用于获取的公共语言基元的 XAML 类型转换，则可以使用[常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)信息在中作为项`typeString`。</span><span class="sxs-lookup"><span data-stu-id="f097d-138">If you use XAML 2009 instead of mapping the CLR base types to obtain XAML types for common language primitives, you can use [Built-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) as information items in a `typeString`.</span></span> <span data-ttu-id="f097d-139">例如，可以声明以下 （前缀映射未显示，但 x 是 XAML 2009 的 XAML 语言 XAML 命名空间）：</span><span class="sxs-lookup"><span data-stu-id="f097d-139">For example, you could declare the following (prefix mappings not shown, but x is the XAML language XAML namespace for XAML 2009):</span></span>  
   
-```  
+```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- 在 WPF 中面向 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]时，您可将 XAML 2009 功能与 `x:TypeArguments` 结合在一起使用，但仅用于宽松 XAML（未进行标记编译的 XAML）。  WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  如果需要标记编译 XAML，则您必须在“XAML 2006 和 WPF 通用 XAML 用法”一节中说明的限制下进行操作。  
+ <span data-ttu-id="f097d-140">在 WPF 和面向[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，你可以使用 XAML 2009 功能以及`x:TypeArguments`但仅针对宽松 XAML (未标记编译的 XAML)。</span><span class="sxs-lookup"><span data-stu-id="f097d-140">In WPF and when targeting [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use XAML 2009 features together with `x:TypeArguments` but only for loose XAML (XAML that is not markup-compiled).</span></span> <span data-ttu-id="f097d-141">WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。</span><span class="sxs-lookup"><span data-stu-id="f097d-141">Markup-compiled XAML for WPF and the BAML form of XAML do not currently support the XAML 2009 keywords and features.</span></span> <span data-ttu-id="f097d-142">如果你需要为标记编译 XAML，你必须在"XAML 2006 and WPF 泛型 XAML 用法"节中所述的限制下进行操作。</span><span class="sxs-lookup"><span data-stu-id="f097d-142">If you need to markup compile the XAML, you must operate under the restrictions noted in the "XAML 2006 and WPF Generic XAML Usages" section.</span></span>  
   
-## 请参阅  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   
- [常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)   
- [Generics in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="f097d-143">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f097d-143">See Also</span></span>  
+ [<span data-ttu-id="f097d-144">x:Class 指令</span><span class="sxs-lookup"><span data-stu-id="f097d-144">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="f097d-145">x:Type 标记扩展</span><span class="sxs-lookup"><span data-stu-id="f097d-145">x:Type Markup Extension</span></span>](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [<span data-ttu-id="f097d-146">常见 XAML 语言基元的内置类型</span><span class="sxs-lookup"><span data-stu-id="f097d-146">Built-in Types for Common XAML Language Primitives</span></span>](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
+ [<span data-ttu-id="f097d-147">XAML 中的泛型</span><span class="sxs-lookup"><span data-stu-id="f097d-147">Generics in XAML</span></span>](../../../docs/framework/xaml-services/generics-in-xaml.md)

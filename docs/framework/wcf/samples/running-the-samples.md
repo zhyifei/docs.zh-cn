@@ -1,92 +1,95 @@
 ---
-title: "运行 Windows Communication Foundation 示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "运行 Windows Communication Foundation 示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3cc4417d1781975663b92b777ecff8789372848
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 运行 Windows Communication Foundation 示例
-可以用单机配置或跨计算机配置来运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例。  示例在提供时就可用于在单机上运行。  在跨计算机配置中，必须修改示例的配置文件设置。  下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。  请注意，Internet 信息服务 \(IIS\) 中承载的服务和自承载示例在步骤上有所不同。  大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
+# <a name="running-the-windows-communication-foundation-samples"></a><span data-ttu-id="63801-102">运行 Windows Communication Foundation 示例</span><span class="sxs-lookup"><span data-stu-id="63801-102">Running the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="63801-103">可以用单机配置或跨计算机配置来运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="63801-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples can be run in a single-machine or cross-machine configuration.</span></span> <span data-ttu-id="63801-104">示例在提供时就可用于在单机上运行。</span><span class="sxs-lookup"><span data-stu-id="63801-104">As supplied, the samples are ready for running on a single machine.</span></span> <span data-ttu-id="63801-105">在跨计算机配置中，必须修改示例的配置文件设置。</span><span class="sxs-lookup"><span data-stu-id="63801-105">In a cross-machine configuration, it is necessary to modify a sample's configuration file settings.</span></span> <span data-ttu-id="63801-106">下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。</span><span class="sxs-lookup"><span data-stu-id="63801-106">The following procedures explain how to run a sample in same-machine and cross-machine configurations.</span></span> <span data-ttu-id="63801-107">请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。</span><span class="sxs-lookup"><span data-stu-id="63801-107">Note that there are variations in the steps for services hosted in Internet Information Services (IIS) and the self-hosted samples.</span></span> <span data-ttu-id="63801-108">大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。</span><span class="sxs-lookup"><span data-stu-id="63801-108">Most samples are hosted in IIS; see the sample readme information to determine how it is hosted.</span></span>  
   
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，未在 IIS 中承载的示例需要提升的权限以使用 Http.sys 注册侦听器。  以服务运行所用的帐户使用 Httpcfg.exe 注册服务侦听地址，或从以管理员特权运行的命令提示符启动服务。  
+ <span data-ttu-id="63801-109">在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，未在 IIS 中承载的示例需要提升的权限以使用 Http.sys 注册侦听器。</span><span class="sxs-lookup"><span data-stu-id="63801-109">On [!INCLUDE[wv](../../../../includes/wv-md.md)], samples that are not hosted in IIS require elevated privileges to register a listener with Http.sys.</span></span> <span data-ttu-id="63801-110">以服务运行所用的帐户使用 Httpcfg.exe 注册服务侦听地址，或从以管理员特权运行的命令提示符启动服务。</span><span class="sxs-lookup"><span data-stu-id="63801-110">Use Httpcfg.exe to register the service's listening addresses with the account the service is running under, or launch the service from a command prompt running with administrator privileges.</span></span>  
   
 > [!NOTE]
->  在生成或运行任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例之前，请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+>  <span data-ttu-id="63801-111">在生成或运行任何之前[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]示例，请确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="63801-111">Before building or running any of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples, be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-### 在同一计算机上运行示例  
+### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="63801-112">在同一计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="63801-112">To run the sample on the same machine</span></span>  
   
-1.  如果服务由 IIS 承载，请确保您可以通过输入以下地址使用浏览器访问服务：http:\/\/localhost\/servicemodelsamples\/service.svc。  在响应中应显示确认页。  如果没有显示确认页，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  <span data-ttu-id="63801-113">如果服务由 IIS 承载，请确保您可以通过输入以下地址使用浏览器访问服务：http://localhost/servicemodelsamples/service.svc。</span><span class="sxs-lookup"><span data-stu-id="63801-113">If the service is hosted by IIS, ensure that you can access the service using a browser by entering the following address: http://localhost/servicemodelsamples/service.svc.</span></span> <span data-ttu-id="63801-114">在响应中应显示确认页。</span><span class="sxs-lookup"><span data-stu-id="63801-114">A confirmation page should be displayed in response.</span></span> <span data-ttu-id="63801-115">如果未显示确认页，请参阅[疑难解答提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="63801-115">If the confirmation page is not displayed, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-2.  如果服务是自承载的，请从 \\service\\bin（在语言特定文件夹内）中运行 Service.exe。  服务活动显示在服务控制台窗口上。  
+2.  <span data-ttu-id="63801-116">如果服务是自承载的，请从 \service\bin（在语言特定文件夹内）中运行 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="63801-116">If the service is self-hosted, run Service.exe from \service\bin, from under the language-specific folder.</span></span> <span data-ttu-id="63801-117">服务活动显示在服务控制台窗口上。</span><span class="sxs-lookup"><span data-stu-id="63801-117">Service activity is displayed on the service console window.</span></span>  
   
-3.  从 \\client\\bin\\（在语言特定文件夹内）中运行 Client.exe。  客户端活动将显示在客户端控制台窗口上。  
+3.  <span data-ttu-id="63801-118">从 \client\bin 运行 Client.exe\\，在语言特定文件夹。</span><span class="sxs-lookup"><span data-stu-id="63801-118">Run Client.exe from \client\bin\\, from under the language-specific folder.</span></span> <span data-ttu-id="63801-119">客户端活动将显示在客户端控制台窗口上。</span><span class="sxs-lookup"><span data-stu-id="63801-119">Client activity is displayed on the client console window.</span></span>  
   
-4.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  <span data-ttu-id="63801-120">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="63801-120">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### 跨计算机运行示例  
+### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="63801-121">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="63801-121">To run the sample across machines</span></span>  
   
-1.  如果服务在 IIS 中承载：  
+1.  <span data-ttu-id="63801-122">如果服务在 IIS 中承载：</span><span class="sxs-lookup"><span data-stu-id="63801-122">If the service is hosted in IIS:</span></span>  
   
-    1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。  [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)随附的批处理文件 Setupvroot.bat 可以用来创建磁盘目录和虚拟目录。  
+    1.  <span data-ttu-id="63801-123">在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="63801-123">On the service machine, create a virtual directory named ServiceModelSamples.</span></span> <span data-ttu-id="63801-124">Setupvroot.bat 随附的批处理文件[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用来创建磁盘目录和虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="63801-124">The batch file Setupvroot.bat included with [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) can be used to create the disk directory and virtual directory.</span></span>  
   
-    2.  从 %SystemDrive%\\Inetpub\\wwwroot\\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。  确保在 \\bin 目录中包括这些文件。  
+    2.  <span data-ttu-id="63801-125">从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="63801-125">Copy the service program files from %SystemDrive%\Inetpub\wwwroot\servicemodelsamples to the ServiceModelSamples virtual directory on the service machine.</span></span> <span data-ttu-id="63801-126">确保在 \bin 目录中包括这些文件。</span><span class="sxs-lookup"><span data-stu-id="63801-126">Ensure that you include the files in the \bin directory.</span></span>  
   
-    3.  测试是否可使用浏览器从客户端计算机访问服务。  
+    3.  <span data-ttu-id="63801-127">测试是否可使用浏览器从客户端计算机访问服务。</span><span class="sxs-lookup"><span data-stu-id="63801-127">Test that you can access the service from the client machine using a browser.</span></span>  
   
-     如果服务是自承载的：  
+     <span data-ttu-id="63801-128">如果服务是自承载的：</span><span class="sxs-lookup"><span data-stu-id="63801-128">If the service is self-hosted:</span></span>  
   
-    1.  在服务计算机上，创建一个保存服务文件的目录。  
+    1.  <span data-ttu-id="63801-129">在服务计算机上，创建一个保存服务文件的目录。</span><span class="sxs-lookup"><span data-stu-id="63801-129">On the service machine, create a directory to hold the service files.</span></span>  
   
-    2.  将 \\service\\bin\\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。  
+    2.  <span data-ttu-id="63801-130">将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="63801-130">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service machine.</span></span>  
   
-    3.  在服务配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。  在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
+    3.  <span data-ttu-id="63801-131">在服务配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="63801-131">In the service configuration file, change the address value of the endpoint definition to match the new address of your service.</span></span> <span data-ttu-id="63801-132">在地址中将任何对“localhost”的引用替换为一个完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="63801-132">Replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-    4.  在命令提示符处启动 Service.exe。  
+    4.  <span data-ttu-id="63801-133">在命令提示符处启动 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="63801-133">Launch Service.exe from a command prompt.</span></span>  
   
-2.  将 \\client\\bin\\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+2.  <span data-ttu-id="63801-134">将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。</span><span class="sxs-lookup"><span data-stu-id="63801-134">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client machine.</span></span>  
   
-3.  设置终结点地址。  
+3.  <span data-ttu-id="63801-135">设置终结点地址。</span><span class="sxs-lookup"><span data-stu-id="63801-135">Set the endpoint address.</span></span>  
   
-    1.  如果服务未在域帐户下运行，请打开客户端配置文件并更改终结点定义的地址值以与服务的新地址相匹配。  在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
+    1.  <span data-ttu-id="63801-136">如果服务未在域帐户下运行，请打开客户端配置文件并更改终结点定义的地址值以与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="63801-136">If the service is not running under a domain account, open the client configuration file and change the address value of the endpoint definition to match the new address of your service.</span></span> <span data-ttu-id="63801-137">在地址中将任何对“localhost”的引用替换为一个完全限定的域名。</span><span class="sxs-lookup"><span data-stu-id="63801-137">Replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-    2.  如果服务正在域帐户下运行，则通过针对服务运行 Svcutil.exe 来重新生成客户端配置。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]运行 Svcutil.exe 的更多信息，请参见[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  使用生成的文件来代替示例中的配置文件。  生成的配置文件有附加的标识信息，并包含连接到服务终结点所需的所有设置，即使这些设置是默认设置。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]标识信息的更多信息，请参见[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)和[\<标识\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)。  
+    2.  <span data-ttu-id="63801-138">如果服务正在域帐户下运行，则通过针对服务运行 Svcutil.exe 来重新生成客户端配置。</span><span class="sxs-lookup"><span data-stu-id="63801-138">If the service is running under a domain account, regenerate the client configuration by running Svcutil.exe against the service.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="63801-139">运行 Svcutil.exe，请参阅[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="63801-139"> running Svcutil.exe, see [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span> <span data-ttu-id="63801-140">使用生成的文件来代替示例中的配置文件。</span><span class="sxs-lookup"><span data-stu-id="63801-140">Use the generated file instead of the configuration file in the sample.</span></span> <span data-ttu-id="63801-141">生成的配置文件有附加的标识信息，并包含连接到服务终结点所需的所有设置，即使这些设置是默认设置。</span><span class="sxs-lookup"><span data-stu-id="63801-141">The generated configuration file has additional identity information, and contains all settings necessary to connect to the service endpoint even though they are the default settings.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="63801-142">标识信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)，和[\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)。</span><span class="sxs-lookup"><span data-stu-id="63801-142"> identity information, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), and [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).</span></span>  
   
-4.  在客户端计算机上，在命令提示符下启动 Client.exe。  
+4.  <span data-ttu-id="63801-143">在客户端计算机上，在命令提示符下启动 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="63801-143">On the client machine, launch Client.exe from a command prompt.</span></span>  
   
-### 调试服务  
+### <a name="to-debug-a-service"></a><span data-ttu-id="63801-144">调试服务</span><span class="sxs-lookup"><span data-stu-id="63801-144">To debug a service</span></span>  
   
-1.  使用**“生成”**菜单或 CTRL\+SHIFT\+B 生成解决方案（客户端和服务）。  
+1.  <span data-ttu-id="63801-145">生成解决方案 （客户端和服务） 使用**生成**菜单或 CTRL + SHIFT + B。</span><span class="sxs-lookup"><span data-stu-id="63801-145">Build the solution (both client and service) using the **Build** menu or CTRL+SHIFT+B.</span></span>  
   
-2.  如果服务在 IIS 中承载：  
+2.  <span data-ttu-id="63801-146">如果服务在 IIS 中承载：</span><span class="sxs-lookup"><span data-stu-id="63801-146">If the service is hosted in IIS:</span></span>  
   
-    1.  通过输入地址 http:\/\/localhost\/servicemodelsamples\/service.svc 使用浏览器来激活服务。  
+    1.  <span data-ttu-id="63801-147">通过输入地址 http://localhost/servicemodelsamples/service.svc 使用浏览器来激活服务。</span><span class="sxs-lookup"><span data-stu-id="63801-147">Activate the service using a browser by entering the address http://localhost/servicemodelsamples/service.svc.</span></span>  
   
-    2.  在解决方案中，选择**“调试”**菜单和**“附加到进程”**菜单项。  
+    2.  <span data-ttu-id="63801-148">在解决方案中，选择**调试**菜单和**附加到进程**菜单项。</span><span class="sxs-lookup"><span data-stu-id="63801-148">In the solution, choose the **Debug** menu and the **Attach to Process** menu item.</span></span>  
   
-    3.  选择**“显示所有用户的进程”**复选框。  
+    3.  <span data-ttu-id="63801-149">选择**显示来自所有用户的进程**复选框。</span><span class="sxs-lookup"><span data-stu-id="63801-149">Select the **Show processes from all users** check box.</span></span>  
   
-    4.  选择主机辅助进程 W3wp.exe 以进行调试（在 Windows XP 上选择 ASPNet\_wp.exe on）。  
+    4.  <span data-ttu-id="63801-150">选择主机辅助进程 W3wp.exe 以进行调试（在 Windows XP 上选择 ASPNet_wp.exe on）。</span><span class="sxs-lookup"><span data-stu-id="63801-150">Select the host worker process W3wp.exe to debug (select ASPNet_wp.exe on Windows XP).</span></span>  
   
-3.  现在可以在服务代码中设置断点并启用针对异常的断点。  
+3.  <span data-ttu-id="63801-151">现在可以在服务代码中设置断点并启用针对异常的断点。</span><span class="sxs-lookup"><span data-stu-id="63801-151">You can now set breakpoints in the service code and enable breakpoints on exceptions.</span></span>  
   
-4.  右击客户端项目项，然后选择**“调试”**、**“启动新实例”**。  
+4.  <span data-ttu-id="63801-152">右键单击客户端项目项并选择**调试**，**启动新实例**。</span><span class="sxs-lookup"><span data-stu-id="63801-152">Right-click the client project item and choose **Debug**, **Start new instance**.</span></span>  
   
-### 运行示例后进行清理  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="63801-153">运行示例后进行清理</span><span class="sxs-lookup"><span data-stu-id="63801-153">To clean up after the sample</span></span>  
   
--   出于安全目的，如果服务承载于 IIS 中，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  
+-   <span data-ttu-id="63801-154">出于安全目的，如果服务承载于 IIS 中，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。</span><span class="sxs-lookup"><span data-stu-id="63801-154">If the service is hosted in IIS for security purposes, remove the virtual directory definition and permissions granted in the setup steps when you are finished with the samples.</span></span>  
   
-## 请参阅  
- [生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)   
- [Running the Samples in a Workgroup and Across Machines](http://msdn.microsoft.com/zh-cn/a451a525-e7ce-452d-9da9-620221260113)   
- [Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a><span data-ttu-id="63801-155">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63801-155">See Also</span></span>  
+ [<span data-ttu-id="63801-156">生成 Windows Communication Foundation 示例</span><span class="sxs-lookup"><span data-stu-id="63801-156">Building the Windows Communication Foundation Samples</span></span>](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [<span data-ttu-id="63801-157">在工作组中和跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="63801-157">Running the Samples in a Workgroup and Across Machines</span></span>](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
+ [<span data-ttu-id="63801-158">故障排除提示</span><span class="sxs-lookup"><span data-stu-id="63801-158">Troubleshooting Tips</span></span>](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

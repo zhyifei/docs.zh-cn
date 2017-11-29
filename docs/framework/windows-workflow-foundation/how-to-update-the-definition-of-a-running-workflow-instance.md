@@ -1,71 +1,78 @@
 ---
-title: "如何：更新正在运行的工作流实例的定义 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：更新正在运行的工作流实例的定义"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73b36ca4dfd5ba61e99531df53a0e71dd4d32551
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：更新正在运行的工作流实例的定义
-动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。所需的更改可以实施 Bug 修复、新的要求以适应意外变化。本教程步骤演示如何使用动态更新修改 `v1` 猜数工作流的持久化实例以匹配[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)中引入的新功能。  
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="682f4-102">如何：更新正在运行的工作流实例的定义</span><span class="sxs-lookup"><span data-stu-id="682f4-102">How to: Update the Definition of a Running Workflow Instance</span></span>
+<span data-ttu-id="682f4-103">动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="682f4-104">所需的更改可以实施 Bug 修复、新的需求以适应意外变化。</span><span class="sxs-lookup"><span data-stu-id="682f4-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="682f4-105">此步骤在本教程演示如何使用动态更新来修改的持久化的实例`v1`数字猜测工作流以匹配在中引入的新功能[How to： 主机的工作流的并行安装多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="682f4-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
 > [!NOTE]
->  若要下载完整版本或观看教程视频演练，请参见 [Windows Workflow Foundation \(WF45\) \- 入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  <span data-ttu-id="682f4-106">若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="682f4-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## 主题内容  
+## <a name="in-this-topic"></a><span data-ttu-id="682f4-107">主题内容</span><span class="sxs-lookup"><span data-stu-id="682f4-107">In this topic</span></span>  
   
--   [创建 CreateUpdateMaps 项目](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
+-   [<span data-ttu-id="682f4-108">创建 CreateUpdateMaps 项目</span><span class="sxs-lookup"><span data-stu-id="682f4-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   
--   [更新 StateMachineNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
+-   [<span data-ttu-id="682f4-109">更新 StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
   
--   [更新 FlowchartNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
+-   [<span data-ttu-id="682f4-110">更新 FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
   
--   [更新 SequentialNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
+-   [<span data-ttu-id="682f4-111">更新 SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
   
--   [生成并运行 CreateUpdateMaps 应用程序](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
+-   [<span data-ttu-id="682f4-112">若要生成并运行 CreateUpdateMaps 应用程序</span><span class="sxs-lookup"><span data-stu-id="682f4-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [生成更新的工作流程序集](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [<span data-ttu-id="682f4-113">若要生成更新的工作流程序集</span><span class="sxs-lookup"><span data-stu-id="682f4-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
--   [使用新版本更新 WorkflowVersionMap](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="682f4-114">用新版本更新 WorkflowVersionMap</span><span class="sxs-lookup"><span data-stu-id="682f4-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [应用动态更新](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
+-   [<span data-ttu-id="682f4-115">若要应用动态更新</span><span class="sxs-lookup"><span data-stu-id="682f4-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [运行包含已更新工作流的应用程序](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="682f4-116">若要使用已更新的工作流中运行应用程序</span><span class="sxs-lookup"><span data-stu-id="682f4-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [允许启动以前版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [<span data-ttu-id="682f4-117">若要允许启动以前版本的工作流</span><span class="sxs-lookup"><span data-stu-id="682f4-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a> 创建 CreateUpdateMaps 项目  
+###  <span data-ttu-id="682f4-118"><a name="BKMK_CreateProject"></a>创建 CreateUpdateMaps 项目</span><span class="sxs-lookup"><span data-stu-id="682f4-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
   
-1.  在**解决方案资源管理器**中右键单击**“WF45GettingStartedTutorial”**，然后依次选择**“添加“**和**“新建项目”**。  
+1.  <span data-ttu-id="682f4-119">右键单击**WF45GettingStartedTutorial**中**解决方案资源管理器**选择**添加**，**新项目**。</span><span class="sxs-lookup"><span data-stu-id="682f4-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
-2.  在**“已安装”**节点中，选择**“Visual C\#”**、**“Windows”**（或**“Visual Basic”**、**“Windows”**）。  
+2.  <span data-ttu-id="682f4-120">在**已安装**节点中，选择**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="682f4-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
   
     > [!NOTE]
-    >  根据在 Visual Studio 中配置为主要语言的编程语言的不同，**“Visual C\#”**或**“Visual Basic”**节点可能位于**“已安装”**节点下的**“其他语言”**节点中。  
+    >  <span data-ttu-id="682f4-121">根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。</span><span class="sxs-lookup"><span data-stu-id="682f4-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>  
   
-     请确保在 .NET Framework 版本下拉列表中选择**“.NET Framework 4.5”**。从**“Windows”**列表中选择**“控制台应用程序”**。在**“名称”**框中键入 **CreateUpdateMaps**，然后单击**“确定”**。  
+     <span data-ttu-id="682f4-122">请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。</span><span class="sxs-lookup"><span data-stu-id="682f4-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="682f4-123">选择**控制台应用程序**从**Windows**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="682f4-124">类型**CreateUpdateMaps**到**名称**框中，单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="682f4-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>  
   
-3.  在**解决方案资源管理器**中，右键单击**“CreateUpdateMaps”**，然后选择**“添加引用”**。  
+3.  <span data-ttu-id="682f4-125">右键单击**CreateUpdateMaps**中**解决方案资源管理器**选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="682f4-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>  
   
-4.  在**“添加引用”**列表的**“程序集”**节点中选择**“框架”**。在**“搜索程序集”**框中键入 **System.Activities**，以便筛选程序集并更容易选择所需的引用。  
+4.  <span data-ttu-id="682f4-126">选择**Framework**从**程序集**中的节点**添加引用**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="682f4-127">类型**System.Activities**到**搜索程序集**框以筛选程序集并更容易选择所需的引用。</span><span class="sxs-lookup"><span data-stu-id="682f4-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>  
   
-5.  在**“搜索结果”**列表中选中**“System.Activities”**旁的复选框。  
+5.  <span data-ttu-id="682f4-128">旁边的复选框**System.Activities**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>  
   
-6.  在**“搜索程序集”**框中键入 **Serialization**，然后在**“搜索结果”**列表中选中**“System.Runtime.Serialization”**旁的复选框。  
+6.  <span data-ttu-id="682f4-129">类型**序列化**到**搜索程序集**框中，并检查旁边的复选框**System.Runtime.Serialization**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>  
   
-7.  在**“搜索程序集”**框中键入 **System.Xaml**，然后在**“搜索结果”**列表中选中**“System.Xaml”**旁的复选框。  
+7.  <span data-ttu-id="682f4-130">类型**System.Xaml**到**搜索程序集**框中，并检查旁边的复选框**System.Xaml**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>  
   
-8.  单击**“确定”**关闭**“引用管理器”**并添加引用。  
+8.  <span data-ttu-id="682f4-131">单击**确定**关闭**引用管理器**并添加引用。</span><span class="sxs-lookup"><span data-stu-id="682f4-131">Click **OK** to close **Reference Manager** and add the references.</span></span>  
   
-9. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
+9. <span data-ttu-id="682f4-132">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="682f4-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities  
@@ -91,7 +98,7 @@ caps.handback.revision: 6
     using Microsoft.CSharp.Activities;  
     ```  
   
-10. 将以下两个字符串成员添加到 `Program` 类（或 `Module1`）。  
+10. <span data-ttu-id="682f4-133">将以下两个字符串成员添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>  
   
     ```vb  
     Const mapPath = "..\..\..\PreviousVersions"  
@@ -103,7 +110,7 @@ caps.handback.revision: 6
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";  
     ```  
   
-11. 将以下 `StartUpdate` 方法添加到 `Program` 类（或 `Module1`）。此方法将指定的 xaml 工作流定义加载到 `ActivityBuilder`，然后调用 `DynamicUpdate.PrepareForUpdate`。`PrepareForUpdate` 为 `ActivityBuilder` 中的工作流定义创建副本。 修改工作流定义后，会将此副本与修改的工作流定义一起使用以创建更新映射。  
+11. <span data-ttu-id="682f4-134">将以下 `StartUpdate` 方法添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-135">此方法将指定的 xaml 工作流定义加载到 `ActivityBuilder`，然后调用 `DynamicUpdate.PrepareForUpdate`。</span><span class="sxs-lookup"><span data-stu-id="682f4-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="682f4-136">`PrepareForUpdate` 为 `ActivityBuilder` 中的工作流定义创建副本。 </span><span class="sxs-lookup"><span data-stu-id="682f4-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="682f4-137">修改工作流定义后，会将此副本与修改的工作流定义一起使用以创建更新映射。</span><span class="sxs-lookup"><span data-stu-id="682f4-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>  
   
     ```vb  
     Private Function StartUpdate(name As String) As ActivityBuilder  
@@ -167,7 +174,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-12. 接下来，将以下 `CreateUpdateMethod` 添加到 `Program` 类（或 `Module1`）。这会通过调用 DynamicUpdateServices.CreateUpdateMap 创建一个动态更新映射，然后使用指定名称保存该更新映射。此更新映射包含工作流运行时更新持久化工作流实例所需的信息（该实例是使用包含在 `ActivityBuilder` 中的原始工作流定义启动的），以便可以使用更新的工作流定义完成。  
+12. <span data-ttu-id="682f4-138">接下来，将以下 `CreateUpdateMethod` 添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-139">这会通过调用 DynamicUpdateServices.CreateUpdateMap 创建一个动态更新映射，然后使用指定名称保存该更新映射。</span><span class="sxs-lookup"><span data-stu-id="682f4-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="682f4-140">此更新映射包含工作流运行时更新持久化工作流实例所需的信息（该实例是使用包含在 `ActivityBuilder` 中的原始工作流定义启动的），以便可以使用更新的工作流定义完成。</span><span class="sxs-lookup"><span data-stu-id="682f4-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>  
   
     ```vb  
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)  
@@ -201,7 +208,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-13. 将以下 `SaveUpdatedDefinition` 方法添加到 `Program` 类（或 `Module1`）。此方法在创建更新映射后保存更新的工作流定义。  
+13. <span data-ttu-id="682f4-141">将以下 `SaveUpdatedDefinition` 方法添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-142">此方法在创建更新映射后保存更新的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-142">This method saves the updated workflow definition once the update map is created.</span></span>  
   
     ```vb  
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)  
@@ -226,9 +233,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a> 更新 StateMachineNumberGuessWorkflow  
+###  <span data-ttu-id="682f4-143"><a name="BKMK_StateMachine"></a>更新 StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
   
-1.  将 `CreateStateMachineUpdateMap` 添加到 `Program` 类（或 `Module1`）。  
+1.  <span data-ttu-id="682f4-144">将 `CreateStateMachineUpdateMap` 添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
     ```vb  
     Private Sub CreateStateMachineUpdateMap()  
@@ -242,7 +249,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-2.  调用 `StartUpdate`，然后获取对工作流的根 `StateMachine` 活动的引用。  
+2.  <span data-ttu-id="682f4-145">调用 `StartUpdate`，然后获取对工作流的根 `StateMachine` 活动的引用。</span><span class="sxs-lookup"><span data-stu-id="682f4-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>  
   
     ```vb  
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")  
@@ -258,7 +265,7 @@ caps.handback.revision: 6
     StateMachine sm = wf.Implementation as StateMachine;  
     ```  
   
-3.  接下来，更新两个 `WriteLine` 活动的表达式，这些活动显示用户的猜数是过高还是过低，以便与[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)中所做的更新匹配。  
+3.  <span data-ttu-id="682f4-146">接下来，更新这两个表达式`WriteLine`显示用户的猜测是否过高或过低，使其与中所做的更新的活动[How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。</span><span class="sxs-lookup"><span data-stu-id="682f4-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
     ```vb  
     'Update the Text of the two WriteLine activities that write the  
@@ -290,7 +297,7 @@ caps.handback.revision: 6
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");  
     ```  
   
-4.  接下来，添加显示关闭消息的新 `WriteLine` 活动。  
+4.  <span data-ttu-id="682f4-147">接下来，添加显示关闭消息的新 `WriteLine` 活动。</span><span class="sxs-lookup"><span data-stu-id="682f4-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>  
   
     ```vb  
     'Create the new WriteLine that displays the closing message.  
@@ -319,7 +326,7 @@ caps.handback.revision: 6
     sm.States[1].Transitions[0].Action = wl;  
     ```  
   
-5.  更新工作流后，调用 `CreateUpdateMaps` 和 `SaveUpdatedDefinition`。`CreateUpdateMaps` 创建并保存 `DynamicUpdateMap`，而 `SaveUpdatedDefinition` 保存更新的工作流定义。  
+5.  <span data-ttu-id="682f4-148">更新工作流后，调用 `CreateUpdateMaps` 和 `SaveUpdatedDefinition`。</span><span class="sxs-lookup"><span data-stu-id="682f4-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="682f4-149">`CreateUpdateMaps` 创建并保存 `DynamicUpdateMap`，而 `SaveUpdatedDefinition` 保存更新的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>  
   
     ```vb  
     'Create the update map.  
@@ -337,7 +344,7 @@ caps.handback.revision: 6
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");  
     ```  
   
-     以下示例是完成的 `CreateStateMachineUpdateMap` 方法。  
+     <span data-ttu-id="682f4-150">以下示例是完成的 `CreateStateMachineUpdateMap` 方法。</span><span class="sxs-lookup"><span data-stu-id="682f4-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>  
   
     ```vb  
     Private Sub CreateStateMachineUpdateMap()  
@@ -419,9 +426,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a> 更新 FlowchartNumberGuessWorkflow  
+###  <span data-ttu-id="682f4-151"><a name="BKMK_Flowchart"></a>更新 FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
   
-1.  将以下 `CreateFlowchartUpdateMethod` 添加到 `Program` 类（或 `Module1`）。此方法与 `CreateStateMachineUpdateMap` 类似。它最初调用 `StartUpdate`，然后更新流程图工作流定义，最后保存更新映射和更新的工作流定义。  
+1.  <span data-ttu-id="682f4-152">将以下 `CreateFlowchartUpdateMethod` 添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-153">此方法与 `CreateStateMachineUpdateMap` 类似。</span><span class="sxs-lookup"><span data-stu-id="682f4-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="682f4-154">它最初调用 `StartUpdate`，然后更新流程图工作流定义，最后保存更新映射和更新的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
     ```vb  
     Private Sub CreateFlowchartUpdateMap()  
@@ -533,9 +540,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a> 更新 SequentialNumberGuessWorkflow  
+###  <span data-ttu-id="682f4-155"><a name="BKMK_Sequential"></a>更新 SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="682f4-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
   
-1.  将以下 `CreateSequentialUpdateMethod` 添加到 `Program` 类（或 `Module1`）。此方法与其他两个方法类似。它最初调用 `StartUpdate`，然后更新顺序工作流定义，最后保存更新映射和更新的工作流定义。  
+1.  <span data-ttu-id="682f4-156">将以下 `CreateSequentialUpdateMethod` 添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-157">此方法与其他两个方法类似。</span><span class="sxs-lookup"><span data-stu-id="682f4-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="682f4-158">它最初调用 `StartUpdate`，然后更新顺序工作流定义，最后保存更新映射和更新的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
     ```vb  
     Private Sub CreateSequentialUpdateMap()  
@@ -613,9 +620,9 @@ caps.handback.revision: 6
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a> 生成并运行 CreateUpdateMaps 应用程序  
+###  <span data-ttu-id="682f4-159"><a name="BKMK_CreateUpdateMaps"></a>若要生成并运行 CreateUpdateMaps 应用程序</span><span class="sxs-lookup"><span data-stu-id="682f4-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
   
-1.  更新 `Main` 方法并添加以下三个方法调用。这些方法将添加到以下各节中。每个方法都更新对应的猜数工作流并创建一个描述这些更新的 `DynamicUpdateMap`。  
+1.  <span data-ttu-id="682f4-160">更新 `Main` 方法并添加以下三个方法调用。</span><span class="sxs-lookup"><span data-stu-id="682f4-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="682f4-161">这些方法将添加到以下各节中。</span><span class="sxs-lookup"><span data-stu-id="682f4-161">These methods are added in the following sections.</span></span> <span data-ttu-id="682f4-162">每个方法都更新对应的猜数工作流并创建一个描述这些更新的 `DynamicUpdateMap`。</span><span class="sxs-lookup"><span data-stu-id="682f4-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
     ```vb  
     Sub Main()  
@@ -638,53 +645,53 @@ caps.handback.revision: 6
     }  
     ```  
   
-2.  在**解决方案资源管理器**中右键单击**“CreateUpdateMaps”**，然后选择**“设为启动项目”**。  
+2.  <span data-ttu-id="682f4-163">右键单击**CreateUpdateMaps**中**解决方案资源管理器**选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="682f4-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
-3.  按 Ctrl\+Shift\+B 生成解决方案，然后按 Ctrl\+F5 运行 `CreateUpdateMaps` 应用程序。  
-  
-    > [!NOTE]
-    >  `CreateUpdateMaps` 应用程序在运行期间不显示任何状态信息，但如果在**“NumberGuessWorkflowActivities\_du”**文件夹和**“PreviousVersions”**文件夹中查找，可以看到更新的工作流定义文件和更新映射。  
-  
-     创建更新映射并更新工作流定义后，下一步是生成包含已更新定义的已更新工作流程序集。  
-  
-###  <a name="BKMK_BuildAssembly"></a> 生成更新的工作流程序集  
-  
-1.  打开 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的第二个实例。  
-  
-2.  从**“文件”**菜单中选择**“打开”**、**“项目\/解决方案”**。  
-  
-3.  导航到[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)中创建的**“NumberGuessWorkflowActivities\_du”**文件夹，选择**“NumberGuessWorkflowActivities.csproj”**（或**“vbproj”**），然后单击**“打开”**。  
-  
-4.  在**解决方案资源管理器**中，右键单击**“SequentialNumberGuessWorkflow.xaml”**，然后选择**“从项目中排除”**。对**“FlowchartNumberGuessWorkflow.xaml”**和**“StateMachineNumberGuessWorkflow.xaml”**执行相同的操作。此步骤从项目中删除以前版本的工作流定义。  
-  
-5.  从**“项目”**菜单中，选择**“添加现有项”**。  
-  
-6.  导航到[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)中创建的**“NumberGuessWorkflowActivities\_du”**文件夹。  
-  
-7.  从**“文件类型”**下拉列表中选择**“XAML 文件\(\*.xaml;\*.xoml\)”**。  
-  
-8.  选择**“SequentialNumberGuessWorkflow\_du.xaml”**、**“FlowchartNumberGuessWorkflow\_du.xaml”**和**“StateMachineNumberGuessWorkflow\_du.xaml”**，然后单击**“添加”**。  
+3.  <span data-ttu-id="682f4-164">按 Ctrl+Shift+B 生成解决方案，然后按 Ctrl+F5 运行 `CreateUpdateMaps` 应用程序。</span><span class="sxs-lookup"><span data-stu-id="682f4-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>  
   
     > [!NOTE]
-    >  按住 Ctrl 并单击可同时选择多个项。  
+    >  <span data-ttu-id="682f4-165">`CreateUpdateMaps`应用程序不显示任何状态信息，同时运行，但如果你查找**NumberGuessWorkflowActivities_du**文件夹和**PreviousVersions**你将看到的文件夹更新的工作流定义文件和更新映射。</span><span class="sxs-lookup"><span data-stu-id="682f4-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>  
   
-     此步骤将已更新版本的工作流定义添加到项目中。  
+     <span data-ttu-id="682f4-166">创建更新映射并更新工作流定义后，下一步是生成包含已更新定义的已更新工作流程序集。</span><span class="sxs-lookup"><span data-stu-id="682f4-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-9. 按 Ctrl\+Shift\+B 生成项目。  
+###  <span data-ttu-id="682f4-167"><a name="BKMK_BuildAssembly"></a>若要生成更新的工作流程序集</span><span class="sxs-lookup"><span data-stu-id="682f4-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
   
-10. 从**“文件”**菜单中选择**“关闭解决方案”**。无需项目的解决方案文件，因此单击**“否”**选择 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 而不保存解决方案文件。从**“文件”**菜单中选择**“退出”**关闭 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]。  
+1.  <span data-ttu-id="682f4-168">打开 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的第二个实例。</span><span class="sxs-lookup"><span data-stu-id="682f4-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
-11. 打开 Windows 资源管理器，然后导航到**“NumberGuessWorkflowActivities\_du\\bin\\Debug”**文件夹（或**“bin\\Release”**，具体取决于项目设置）。  
+2.  <span data-ttu-id="682f4-169">选择**打开**，**项目/解决方案**从**文件**菜单。</span><span class="sxs-lookup"><span data-stu-id="682f4-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>  
   
-12. 将**“NumberGuessWorkflowActivities.dll”**重命名为**“NumberGuessWorkflowActivities\_v15.dll”**，然后将其复制到[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)中创建的**“PreviousVersions”**文件夹。  
+3.  <span data-ttu-id="682f4-170">导航到**NumberGuessWorkflowActivities_du**中创建的文件夹[How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，选择**NumberGuessWorkflowActivities.csproj** (或**vbproj**)，然后单击**打开**。</span><span class="sxs-lookup"><span data-stu-id="682f4-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 使用新版本更新 WorkflowVersionMap  
+4.  <span data-ttu-id="682f4-171">在**解决方案资源管理器**，右键单击**SequentialNumberGuessWorkflow.xaml**选择**从项目中排除**。</span><span class="sxs-lookup"><span data-stu-id="682f4-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="682f4-172">执行相同的操作**FlowchartNumberGuessWorkflow.xaml**和**StateMachineNumberGuessWorkflow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="682f4-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="682f4-173">此步骤从项目中删除以前版本的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-173">This step removes the previous versions of the workflow definitions from the project.</span></span>  
   
-1.  切换回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始实例。  
+5.  <span data-ttu-id="682f4-174">选择**添加现有项**从**项目**菜单。</span><span class="sxs-lookup"><span data-stu-id="682f4-174">Choose **Add Existing Item** from the **Project** menu.</span></span>  
   
-2.  右键单击**“NumberGuessWorkflowHost”**项目下的**“WorkflowVersionMap.cs”**（或**“WorkflowVersionMap.vb”**），将其打开。  
+6.  <span data-ttu-id="682f4-175">导航到**NumberGuessWorkflowActivities_du**中创建的文件夹[How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。</span><span class="sxs-lookup"><span data-stu-id="682f4-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-3.  添加三个新工作流标识，紧接在现有的六个工作流标识声明下面。在本教程中，`1.5.0.0` 将用作动态更新标识的 `WorkflowIdentity.Version`。这些新 `v15` 工作流标识将用于为动态更新的持久化工作流实例提供正确的工作流定义。  
+7.  <span data-ttu-id="682f4-176">选择**XAML 文件 (\*.xaml;\*。xoml)**从**类型的文件**下拉列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>  
+  
+8.  <span data-ttu-id="682f4-177">选择**SequentialNumberGuessWorkflow_du.xaml**， **FlowchartNumberGuessWorkflow_du.xaml**，和**StateMachineNumberGuessWorkflow_du.xaml**单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="682f4-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="682f4-178">按住 Ctrl 并单击可同时选择多个项。</span><span class="sxs-lookup"><span data-stu-id="682f4-178">CTRL+Click to select multiple items at a time.</span></span>  
+  
+     <span data-ttu-id="682f4-179">此步骤将已更新版本的工作流定义添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="682f4-179">This step adds the updated versions of the workflow definitions to the project.</span></span>  
+  
+9. <span data-ttu-id="682f4-180">按 Ctrl+Shift+B 生成项目。</span><span class="sxs-lookup"><span data-stu-id="682f4-180">Press CTRL+SHIFT+B to build the project.</span></span>  
+  
+10. <span data-ttu-id="682f4-181">选择**关闭解决方案**从**文件**菜单。</span><span class="sxs-lookup"><span data-stu-id="682f4-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="682f4-182">解决方案文件的项目不是必需的因此单击**否**关闭[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]而不保存解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="682f4-182">A solution file for the project is not required, so click **No** to close [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] without saving a solution file.</span></span> <span data-ttu-id="682f4-183">选择**退出**从**文件**菜单关闭[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="682f4-183">Choose **Exit** from the **File** menu to close [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].</span></span>  
+  
+11. <span data-ttu-id="682f4-184">打开 Windows 资源管理器并导航到**NumberGuessWorkflowActivities_du\bin\Debug**文件夹 (或**bin\Release**具体取决于项目设置)。</span><span class="sxs-lookup"><span data-stu-id="682f4-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>  
+  
+12. <span data-ttu-id="682f4-185">重命名**NumberGuessWorkflowActivities.dll**到**NumberGuessWorkflowActivities_v15.dll**，并将其复制到**PreviousVersions** 中创建的文件夹[如何： 承载多个工作流的并行版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。</span><span class="sxs-lookup"><span data-stu-id="682f4-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
+  
+###  <span data-ttu-id="682f4-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>用新版本更新 WorkflowVersionMap</span><span class="sxs-lookup"><span data-stu-id="682f4-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+  
+1.  <span data-ttu-id="682f4-187">切换回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始实例。</span><span class="sxs-lookup"><span data-stu-id="682f4-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
+  
+2.  <span data-ttu-id="682f4-188">双击**WorkflowVersionMap.cs** (或**WorkflowVersionMap.vb**) 下**NumberGuessWorkflowHost**项目以打开它。</span><span class="sxs-lookup"><span data-stu-id="682f4-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
+  
+3.  <span data-ttu-id="682f4-189">添加三个新工作流标识，紧接在现有的六个工作流标识声明下面。</span><span class="sxs-lookup"><span data-stu-id="682f4-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="682f4-190">在本教程中，`1.5.0.0` 将用作动态更新标识的 `WorkflowIdentity.Version`。</span><span class="sxs-lookup"><span data-stu-id="682f4-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="682f4-191">这些新 `v15` 工作流标识将用于为动态更新的持久化工作流实例提供正确的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="682f4-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>  
   
     ```vb  
     'Current version identities.  
@@ -720,7 +727,7 @@ caps.handback.revision: 6
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;  
     ```  
   
-4.  在构造函数末尾，添加以下代码。此代码将初始化动态更新工作流标识，加载相应的工作流定义，并将其添加到工作流版本字典中。  
+4.  <span data-ttu-id="682f4-192">在构造函数末尾，添加以下代码。</span><span class="sxs-lookup"><span data-stu-id="682f4-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="682f4-193">此代码将初始化动态更新工作流标识，加载相应的工作流定义，并将其添加到工作流版本字典中。</span><span class="sxs-lookup"><span data-stu-id="682f4-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>  
   
     ```vb  
     'Initialize the dynamic update workflow identities.  
@@ -796,10 +803,9 @@ caps.handback.revision: 6
   
     map.Add(FlowchartNumberGuessIdentity_v15,  
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);  
-  
     ```  
   
-     以下示例是完成的 `WorkflowVersionMap` 类。  
+     <span data-ttu-id="682f4-194">以下示例是完成的 `WorkflowVersionMap` 类。</span><span class="sxs-lookup"><span data-stu-id="682f4-194">The following example is the completed `WorkflowVersionMap` class.</span></span>  
   
     ```vb  
     Public Module WorkflowVersionMap  
@@ -1064,36 +1070,36 @@ caps.handback.revision: 6
     }  
     ```  
   
-5.  按 Ctrl\+Shift\+B 生成项目。  
+5.  <span data-ttu-id="682f4-195">按 Ctrl+Shift+B 生成项目。</span><span class="sxs-lookup"><span data-stu-id="682f4-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <a name="BKMK_ApplyUpdate"></a> 应用动态更新  
+###  <span data-ttu-id="682f4-196"><a name="BKMK_ApplyUpdate"></a>若要应用动态更新</span><span class="sxs-lookup"><span data-stu-id="682f4-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
   
-1.  在**解决方案资源管理器**中右键单击**“WF45GettingStartedTutorial”**，然后依次选择**“添加”**和**“新建项目”**。  
+1.  <span data-ttu-id="682f4-197">右键单击**WF45GettingStartedTutorial**中**解决方案资源管理器**选择**添加**，**新项目**。</span><span class="sxs-lookup"><span data-stu-id="682f4-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
-2.  在**“已安装”**节点中，选择**“Visual C\#”**、**“Windows”**（或**“Visual Basic”**、**“Windows”**）。  
+2.  <span data-ttu-id="682f4-198">在**已安装**节点中，选择**Visual C#**， **Windows** (或**Visual Basic**， **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="682f4-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
   
     > [!NOTE]
-    >  根据在 Visual Studio 中配置为主要语言的编程语言的不同，**“Visual C\#”**或**“Visual Basic”**节点可能位于**“已安装”**节点下的**“其他语言”**节点中。  
+    >  <span data-ttu-id="682f4-199">根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。</span><span class="sxs-lookup"><span data-stu-id="682f4-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>  
   
-     请确保在 .NET Framework 版本下拉列表中选择**“.NET Framework 4.5”**。从**“Windows”**列表中选择**“控制台应用程序”**。在**“名称”**框中键入 **ApplyDynamicUpdate**，然后单击**“确定”**。  
+     <span data-ttu-id="682f4-200">请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。</span><span class="sxs-lookup"><span data-stu-id="682f4-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="682f4-201">选择**控制台应用程序**从**Windows**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="682f4-202">类型**ApplyDynamicUpdate**到**名称**框中，单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="682f4-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>  
   
-3.  在**解决方案资源管理器**中右键单击**“ApplyDynamicUpdate”**，然后选择**“添加引用”**。  
+3.  <span data-ttu-id="682f4-203">右键单击**ApplyDynamicUpdate**中**解决方案资源管理器**选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="682f4-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>  
   
-4.  单击**“解决方案”**，然后选中**“NumberGuessWorkflowHost”**旁的框。需要此引用是为了让 `ApplyDynamicUpdate` 可以使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 类。  
+4.  <span data-ttu-id="682f4-204">单击**解决方案**旁边的复选框和**NumberGuessWorkflowHost**。</span><span class="sxs-lookup"><span data-stu-id="682f4-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="682f4-205">需要此引用是为了让 `ApplyDynamicUpdate` 可以使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 类。</span><span class="sxs-lookup"><span data-stu-id="682f4-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>  
   
-5.  在**“添加引用”**列表的**“程序集”**节点中选择**“框架”**。在**“搜索程序集”**框中键入 **System.Activities**。这将筛选程序集，并更容易选择所需的引用。  
+5.  <span data-ttu-id="682f4-206">选择**Framework**从**程序集**中的节点**添加引用**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="682f4-207">类型**System.Activities**到**搜索程序集**框。</span><span class="sxs-lookup"><span data-stu-id="682f4-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="682f4-208">这将筛选程序集，并更容易选择所需的引用。</span><span class="sxs-lookup"><span data-stu-id="682f4-208">This will filter the assemblies and make the desired references easier to select.</span></span>  
   
-6.  在**“搜索结果”**列表中选中**“System.Activities”**旁的复选框。  
+6.  <span data-ttu-id="682f4-209">旁边的复选框**System.Activities**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>  
   
-7.  在**“搜索程序集”**框中键入 **Serialization**，然后在**“搜索结果”**列表中选中**“System.Runtime.Serialization”**旁的复选框。  
+7.  <span data-ttu-id="682f4-210">类型**序列化**到**搜索程序集**框中，并检查旁边的复选框**System.Runtime.Serialization**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>  
   
-8.  在**“搜索程序集”**框中键入 **DurableInstancing**，然后在**“搜索结果”**列表中选中**“System.Activities.DurableInstancing”**和**“System.Runtime.DurableInstancing”**旁的复选框。  
+8.  <span data-ttu-id="682f4-211">类型**DurableInstancing**到**搜索程序集**框中，并检查旁边的复选框**System.Activities.DurableInstancing**和**System.Runtime.DurableInstancing**从**搜索结果**列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>  
   
-9. 单击**“确定”**关闭**“引用管理器”**并添加引用。  
+9. <span data-ttu-id="682f4-212">单击**确定**关闭**引用管理器**并添加引用。</span><span class="sxs-lookup"><span data-stu-id="682f4-212">Click **OK** to close **Reference Manager** and add the references.</span></span>  
   
-10. 在解决方案资源管理器中右键单击**“ApplyDynamicUpdate”**，然后选择**“添加”**和**“类”**。在**“名称”**框中键入 `DynamicUpdateInfo`，然后单击**“添加”**。  
+10. <span data-ttu-id="682f4-213">右键单击**ApplyDynamicUpdate**在解决方案资源管理器，然后选择**添加**，**类**。</span><span class="sxs-lookup"><span data-stu-id="682f4-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="682f4-214">类型`DynamicUpdateInfo`到**名称**框中，单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="682f4-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>  
   
-11. 将以下两个成员添加到 `DynamicUpdateInfo` 类中。以下示例是完成的 `DynamicUpdateInfo` 类。此类包含有关更新工作流实例时使用的更新映射和新工作流标识的信息。  
+11. <span data-ttu-id="682f4-215">将以下两个成员添加到 `DynamicUpdateInfo` 类中。</span><span class="sxs-lookup"><span data-stu-id="682f4-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="682f4-216">以下示例是完成的 `DynamicUpdateInfo` 类。</span><span class="sxs-lookup"><span data-stu-id="682f4-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="682f4-217">此类包含有关更新工作流实例时使用的更新映射和新工作流标识的信息。</span><span class="sxs-lookup"><span data-stu-id="682f4-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>  
   
     ```vb  
     Public Class DynamicUpdateInfo  
@@ -1110,7 +1116,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-12. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
+12. <span data-ttu-id="682f4-218">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="682f4-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities  
@@ -1122,9 +1128,9 @@ caps.handback.revision: 6
     using System.Activities.DynamicUpdate;  
     ```  
   
-13. 在解决方案资源管理器中双击**“Program.cs”**（或**“Module1.vb”**）。  
+13. <span data-ttu-id="682f4-219">双击**Program.cs** (或**Module1.vb**) 在解决方案资源管理器。</span><span class="sxs-lookup"><span data-stu-id="682f4-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>  
   
-14. 在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。  
+14. <span data-ttu-id="682f4-220">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="682f4-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports NumberGuessWorkflowHost  
@@ -1147,7 +1153,7 @@ caps.handback.revision: 6
     using System.Activities.DurableInstancing;  
     ```  
   
-15. 将以下连接字符串成员添加到 `Program` 类（或 `Module1`）。  
+15. <span data-ttu-id="682f4-221">将以下连接字符串成员添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -1158,9 +1164,9 @@ caps.handback.revision: 6
     ```  
   
     > [!NOTE]
-    >  根据您的 SQL Server 版本，该连接字符串服务器的名称可能有所不同。  
+    >  <span data-ttu-id="682f4-222">根据您的 SQL Server 版本，该连接字符串服务器的名称可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="682f4-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>  
   
-16. 将以下 `GetIDs` 方法添加到 `Program` 类（或 `Module1`）。此方法返回持久化工作流实例 ID 的列表。  
+16. <span data-ttu-id="682f4-223">将以下 `GetIDs` 方法添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-224">此方法返回持久化工作流实例 ID 的列表。</span><span class="sxs-lookup"><span data-stu-id="682f4-224">This method returns a list of persisted workflow instance ids.</span></span>  
   
     ```vb  
     Function GetIds() As IList(Of Guid)  
@@ -1213,7 +1219,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-17. 将以下 `LoadMap` 方法添加到 `Program` 类（或 `Module1`）。此方法创建一个字典，该字典将 `v1` 工作流标识映射到用于更新相应持久化工作流实例的更新映射和新工作流标识。  
+17. <span data-ttu-id="682f4-225">将以下 `LoadMap` 方法添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-226">此方法创建一个字典，该字典将 `v1` 工作流标识映射到用于更新相应持久化工作流实例的更新映射和新工作流标识。</span><span class="sxs-lookup"><span data-stu-id="682f4-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>  
   
     ```vb  
     Function LoadMap(mapName As String) As DynamicUpdateMap  
@@ -1256,7 +1262,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-18. 将以下 `LoadMaps` 方法添加到 `Program` 类（或 `Module1`）。此方法加载三个更新映射，并创建一个将 `v1` 工作流标识映射到这些更新映射的字典。  
+18. <span data-ttu-id="682f4-227">将以下 `LoadMaps` 方法添加到 `Program` 类（或 `Module1`）。</span><span class="sxs-lookup"><span data-stu-id="682f4-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="682f4-228">此方法加载三个更新映射，并创建一个将 `v1` 工作流标识映射到这些更新映射的字典。</span><span class="sxs-lookup"><span data-stu-id="682f4-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>  
   
     ```vb  
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)  
@@ -1328,7 +1334,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-19. 将下列代码添加到 `Main`。此代码循环访问持久化工作流实例并检查每个 `WorkflowIdentity`。如果 `WorkflowIdentity` 映射到 `v1` 工作流实例，则将使用更新的工作流定义和更新的工作流标识配置 `WorkflowApplication`。接下来，使用该实例和更新映射调用 `WorkflowApplication.Load`，这将应用动态更新映射。应用更新后，将通过调用 `Unload` 来持久化更新的实例。  
+19. <span data-ttu-id="682f4-229">将下列代码添加到 `Main`。</span><span class="sxs-lookup"><span data-stu-id="682f4-229">Add the following code to `Main`.</span></span> <span data-ttu-id="682f4-230">此代码循环访问持久化工作流实例并检查每个 `WorkflowIdentity`。</span><span class="sxs-lookup"><span data-stu-id="682f4-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="682f4-231">如果 `WorkflowIdentity` 映射到 `v1` 工作流实例，则将使用更新的工作流定义和更新的工作流标识配置 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="682f4-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="682f4-232">接下来，使用该实例和更新映射调用 `WorkflowApplication.Load`，这将应用动态更新映射。</span><span class="sxs-lookup"><span data-stu-id="682f4-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="682f4-233">应用更新后，将通过调用 `Unload` 来持久化更新的实例。</span><span class="sxs-lookup"><span data-stu-id="682f4-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>  
   
     ```vb  
     Dim store = New SqlWorkflowInstanceStore(connectionString)  
@@ -1366,7 +1372,6 @@ caps.handback.revision: 6
             instance.Abandon()  
         End If  
     Next  
-  
     ```  
   
     ```csharp  
@@ -1412,89 +1417,89 @@ caps.handback.revision: 6
     }  
     ```  
   
-20. 在**解决方案资源管理器**中右键单击**“ApplyDynamicUpdate”**，然后选择**“设为启动项目”**。  
+20. <span data-ttu-id="682f4-234">右键单击**ApplyDynamicUpdate**中**解决方案资源管理器**选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="682f4-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
-21. 按 Ctrl\+Shift\+B 生成解决方案，然后按 Ctrl\+F5 运行 `ApplyDynamicUpdate` 应用程序并更新持久化工作流实例。可以看到类似下面的输出。The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.  
+21. <span data-ttu-id="682f4-235">按 Ctrl+Shift+B 生成解决方案，然后按 Ctrl+F5 运行 `ApplyDynamicUpdate` 应用程序并更新持久化工作流实例。</span><span class="sxs-lookup"><span data-stu-id="682f4-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="682f4-236">可以看到类似下面的输出。</span><span class="sxs-lookup"><span data-stu-id="682f4-236">You should see output similar to the following.</span></span> <span data-ttu-id="682f4-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span><span class="sxs-lookup"><span data-stu-id="682f4-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>  
   
- **Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: SequentialNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: StateMachineNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=1.0.0.0**   
-**Updated to: FlowchartNumberGuessWorkflow; Version\=1.5.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: StateMachineNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: FlowchartNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=2.0.0.0**   
-**Inspecting: SequentialNumberGuessWorkflow; Version\=2.0.0.0**   
-**Press any key to continue ...**  
+ <span data-ttu-id="682f4-238">**检查： StateMachineNumberGuessWorkflow;版本 = 1.0.0.0**</span><span class="sxs-lookup"><span data-stu-id="682f4-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**</span></span>  
+<span data-ttu-id="682f4-239">**更新为： StateMachineNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-239">**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-240">**检查： StateMachineNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-240">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-241">**更新为： StateMachineNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-241">**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-242">**检查： FlowchartNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-242">**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-243">**更新为： FlowchartNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-243">**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-244">**检查： FlowchartNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-244">**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-245">**更新为： FlowchartNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-245">**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-246">**检查： SequentialNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-246">**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-247">**更新为： SequentialNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-247">**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-248">**检查： SequentialNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-248">**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-249">**更新为： SequentialNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-249">**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-250">**检查： SequentialNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-250">**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-251">**更新为： SequentialNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-251">**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-252">**检查： StateMachineNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-252">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-253">**更新为： StateMachineNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-253">**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-254">**检查： FlowchartNumberGuessWorkflow;版本 = 1.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-254">**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0** </span></span>  
+<span data-ttu-id="682f4-255">**更新为： FlowchartNumberGuessWorkflow;版本 = 1.5.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-255">**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0** </span></span>  
+<span data-ttu-id="682f4-256">**检查： StateMachineNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-256">**Inspecting: StateMachineNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-257">**检查： StateMachineNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-257">**Inspecting: StateMachineNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-258">**检查： FlowchartNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-258">**Inspecting: FlowchartNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-259">**检查： FlowchartNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-259">**Inspecting: FlowchartNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-260">**检查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-260">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-261">**检查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="682f4-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
+<span data-ttu-id="682f4-262">**按任意键继续...**</span><span class="sxs-lookup"><span data-stu-id="682f4-262">**Press any key to continue . . .**</span></span>  
   
-###  <a name="BKMK_BuildAndRun"></a> 运行包含已更新工作流的应用程序  
+###  <span data-ttu-id="682f4-263"><a name="BKMK_BuildAndRun"></a>若要使用已更新的工作流中运行应用程序</span><span class="sxs-lookup"><span data-stu-id="682f4-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
   
-1.  在**解决方案资源管理器**中右键单击**“NumberGuessWorkflowHost”**，然后选择**“设为启动项目”**。  
+1.  <span data-ttu-id="682f4-264">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**设为启动项目**。</span><span class="sxs-lookup"><span data-stu-id="682f4-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
-2.  按 Ctrl\+F5 运行应用程序。  
+2.  <span data-ttu-id="682f4-265">按 Ctrl+F5 运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="682f4-265">Press CTRL+F5 to run the application.</span></span>  
   
-3.  单击**“New Game”**启动一个新工作流，并记下状态窗口下的版本信息，该信息指出该工作流是 `v2` 工作流。  
+3.  <span data-ttu-id="682f4-266">单击**新游戏**启动新工作流，并记下的版本信息下面状态窗口，该值指示工作流是`v2`工作流。</span><span class="sxs-lookup"><span data-stu-id="682f4-266">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>  
   
-4.  选择在[如何：并行承载多个版本的工作流](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主题开头启动的某一 `v1` 工作流。记下状态窗口下的版本信息，该信息指出该工作流是 **1.5.0.0** 版工作流。可以看到，除了指出猜数过高或过低的信息以外，没有有关猜数的其他信息。  
+4.  <span data-ttu-id="682f4-267">选择其中一个`v1`工作流的开始处启动[How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主题。</span><span class="sxs-lookup"><span data-stu-id="682f4-267">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="682f4-268">请注意，状态窗口下的版本信息指示工作流是版本**1.5.0.0**工作流。</span><span class="sxs-lookup"><span data-stu-id="682f4-268">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="682f4-269">可以看到，除了指出猜数过高或过低的信息以外，没有有关猜数的其他信息。</span><span class="sxs-lookup"><span data-stu-id="682f4-269">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**  
+ <span data-ttu-id="682f4-270">**请输入介于 1 和 10 之间的数字**</span><span class="sxs-lookup"><span data-stu-id="682f4-270">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="682f4-271">**您的预计就太小。**</span><span class="sxs-lookup"><span data-stu-id="682f4-271">**Your guess is too low.**</span></span>  
   
-5.  记下 `InstanceId`，然后输入猜数，直到工作流完成。状态窗口会有关猜数内容的信息，因为 `WriteLine` 活动已由动态更新进行了更新。  
+5.  <span data-ttu-id="682f4-272">记下 `InstanceId`，然后输入猜数，直到工作流完成。</span><span class="sxs-lookup"><span data-stu-id="682f4-272">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="682f4-273">状态窗口会有关猜数内容的信息，因为 `WriteLine` 活动已由动态更新进行了更新。</span><span class="sxs-lookup"><span data-stu-id="682f4-273">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**   
-**Please enter a number between 1 and 10**   
-**5 is too low.**   
-**Please enter a number between 1 and 10**   
-**7 is too high.**   
-**Please enter a number between 1 and 10**   
-**Congratulations, you guessed the number in 4 turns.**  
+ <span data-ttu-id="682f4-274">**请输入介于 1 和 10 之间的数字**</span><span class="sxs-lookup"><span data-stu-id="682f4-274">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="682f4-275">**您的预计就太小。** </span><span class="sxs-lookup"><span data-stu-id="682f4-275">**Your guess is too low.** </span></span>  
+<span data-ttu-id="682f4-276">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-276">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-277">**5 就太小。** </span><span class="sxs-lookup"><span data-stu-id="682f4-277">**5 is too low.** </span></span>  
+<span data-ttu-id="682f4-278">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-278">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-279">**7 值太高。** </span><span class="sxs-lookup"><span data-stu-id="682f4-279">**7 is too high.** </span></span>  
+<span data-ttu-id="682f4-280">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-280">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-281">**祝贺你，4 轮流猜数。**</span><span class="sxs-lookup"><span data-stu-id="682f4-281">**Congratulations, you guessed the number in 4 turns.**</span></span>  
   
-6.  打开 Windows 资源管理器，导航到**“NumberGuessWorkflowHost\\bin\\debug”**文件夹（或**“bin\\release”**，具体取决于项目设置），然后使用记事本打开已完成工作流的对应跟踪文件。如果未记下 `InstanceId`，可能无法使用 Windows 资源管理器中的**“修改日期”**信息标识正确的跟踪文件。跟踪信息的最后一行包含新添加的 `WriteLine` 活动的输出。  
+6.  <span data-ttu-id="682f4-282">打开 Windows 资源管理器并导航到**NumberGuessWorkflowHost\bin\debug**文件夹 (或**bin\release**具体取决于项目设置)，然后打开跟踪文件使用相对应的记事本为完成的工作流。</span><span class="sxs-lookup"><span data-stu-id="682f4-282">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="682f4-283">如果您不未记下`InstanceId`你可能能够通过使用识别正确的跟踪文件**修改日期**Windows 资源管理器中的信息。</span><span class="sxs-lookup"><span data-stu-id="682f4-283">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="682f4-284">跟踪信息的最后一行包含新添加的 `WriteLine` 活动的输出。</span><span class="sxs-lookup"><span data-stu-id="682f4-284">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too low.**   
-**Please enter a number between 1 and 10**   
-**5 is too low.**   
-**Please enter a number between 1 and 10**   
-**7 is too high.**   
-**Please enter a number between 1 and 10**   
-**6 is correct.You guessed it in 4 turns.**  
+ <span data-ttu-id="682f4-285">**请输入介于 1 和 10 之间的数字**</span><span class="sxs-lookup"><span data-stu-id="682f4-285">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="682f4-286">**您的预计就太小。** </span><span class="sxs-lookup"><span data-stu-id="682f4-286">**Your guess is too low.** </span></span>  
+<span data-ttu-id="682f4-287">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-287">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-288">**5 就太小。** </span><span class="sxs-lookup"><span data-stu-id="682f4-288">**5 is too low.** </span></span>  
+<span data-ttu-id="682f4-289">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-289">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-290">**7 值太高。** </span><span class="sxs-lookup"><span data-stu-id="682f4-290">**7 is too high.** </span></span>  
+<span data-ttu-id="682f4-291">**请输入介于 1 和 10 之间的数字** </span><span class="sxs-lookup"><span data-stu-id="682f4-291">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="682f4-292">**6 是正确的。4 轮流猜测了它。**</span><span class="sxs-lookup"><span data-stu-id="682f4-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <a name="BKMK_StartPreviousVersions"></a> 允许启动以前版本的工作流  
- 如果已用完工作流而无法更新，可以修改 `NumberGuessWorkflowHost` 以允许启动以前版本的工作流。  
+###  <span data-ttu-id="682f4-293"><a name="BKMK_StartPreviousVersions"></a>若要允许启动以前版本的工作流</span><span class="sxs-lookup"><span data-stu-id="682f4-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+ <span data-ttu-id="682f4-294">如果已用完工作流而无法更新，可以修改 `NumberGuessWorkflowHost` 以允许启动以前版本的工作流。</span><span class="sxs-lookup"><span data-stu-id="682f4-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
-1.  在**解决方案资源管理器**中双击**“WorkflowHostForm”**，然后选择**“WorkflowType”**组合框。  
+1.  <span data-ttu-id="682f4-295">双击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**WorkflowType**组合框。</span><span class="sxs-lookup"><span data-stu-id="682f4-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  
   
-2.  在**“属性”**窗口中，选择**“项”**属性，然后单击省略号按钮以编辑**“项”**集合。  
+2.  <span data-ttu-id="682f4-296">在**属性**窗口中，选择**项**属性，然后单击省略号按钮以编辑**项**集合。</span><span class="sxs-lookup"><span data-stu-id="682f4-296">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>  
   
-3.  将以下三个项添加到集合中。  
+3.  <span data-ttu-id="682f4-297">将以下三个项添加到集合中。</span><span class="sxs-lookup"><span data-stu-id="682f4-297">Add the following three items to the collection.</span></span>  
   
-    ```vb-c#  
+    ```
     StateMachineNumberGuessWorkflow v1  
     FlowchartNumberGuessWorkflow v1  
     SequentialNumberGuessWorkflow v1  
     ```  
   
-     完成的 `Items` 集合将有六个项。  
+     <span data-ttu-id="682f4-298">完成的 `Items` 集合将有六个项。</span><span class="sxs-lookup"><span data-stu-id="682f4-298">The completed `Items` collection will have six items.</span></span>  
   
-    ```vb-c#  
+    ```
     StateMachineNumberGuessWorkflow  
     FlowchartNumberGuessWorkflow  
     SequentialNumberGuessWorkflow  
@@ -1503,9 +1508,9 @@ caps.handback.revision: 6
     SequentialNumberGuessWorkflow v1  
     ```  
   
-4.  在**解决方案资源管理器**中双击**“WorkflowHostForm”**，然后选择**“查看代码”**。  
+4.  <span data-ttu-id="682f4-299">双击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="682f4-299">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>  
   
-5.  将三个新事例添加到 `NewGame_Click` 处理程序中的 `switch`（或 `Select Case`）语句，以将**“WorkflowType”**组合框中的新项映射到匹配的工作流标识。  
+5.  <span data-ttu-id="682f4-300">添加三个新用例链接到`switch`(或`Select Case`) 中的语句`NewGame_Click`处理程序映射中的新项**WorkflowType**到匹配的工作流标识的组合框。</span><span class="sxs-lookup"><span data-stu-id="682f4-300">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>  
   
     ```vb  
     Case "SequentialNumberGuessWorkflow v1"  
@@ -1532,7 +1537,7 @@ caps.handback.revision: 6
         break;  
     ```  
   
-     以下示例包含完整的 `switch`（或 `Select Case`）语句。  
+     <span data-ttu-id="682f4-301">以下示例包含完整的 `switch`（或 `Select Case`）语句。</span><span class="sxs-lookup"><span data-stu-id="682f4-301">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>  
   
     ```vb  
     Select Case WorkflowType.SelectedItem.ToString()  
@@ -1585,4 +1590,4 @@ caps.handback.revision: 6
     };  
     ```  
   
-6.  按 Ctrl\+F5 生成并运行应用程序。现在可以启动工作流的 `v1` 版本以及当前版本。若要动态更新这些新实例，请运行**“ApplyDynamicUpdate”**应用程序。
+6.  <span data-ttu-id="682f4-302">按 Ctrl+F5 生成并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="682f4-302">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="682f4-303">现在可以启动工作流的 `v1` 版本以及当前版本。</span><span class="sxs-lookup"><span data-stu-id="682f4-303">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="682f4-304">若要动态更新这些新实例，运行**ApplyDynamicUpdate**应用程序。</span><span class="sxs-lookup"><span data-stu-id="682f4-304">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>

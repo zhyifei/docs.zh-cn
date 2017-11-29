@@ -1,72 +1,73 @@
 ---
-title: "如何：在 Windows 窗体上锚定控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anchor 属性, 启用可调整大小的窗体"
-  - "控件 [Windows 窗体], 锚定"
-  - "控件 [Windows 窗体], 定位"
-  - "窗体, 调整大小"
-  - "调整窗体的大小"
-  - "屏幕分辨率和控件显示"
-  - "Windows 窗体控件, 屏幕分辨率"
-  - "Windows 窗体控件, 大小"
-  - "Windows 窗体, 调整大小"
+title: "如何：在 Windows 窗体上锚定控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Anchor property [Windows Forms], enabling resizable forms
+- Windows Forms controls, screen resolutions
+- resizing forms [Windows Forms]
+- Windows Forms controls, size
+- screen resolution and control display
+- controls [Windows Forms], anchoring
+- forms [Windows Forms], resizing
+- Windows Forms, resizing
+- controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体上锚定控件
-如果要设计用户可在运行时调整其大小的窗体，则该窗体上的控件应能正确地调整大小及重新定位。  若要与窗体一起动态调整控件的大小，可使用 Windows 窗体控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性。  <xref:System.Windows.Forms.Control.Anchor%2A> 属性定义控件的定位点位置。  当控件锚定到某个窗体时，如果该窗体的大小被调整，该控件维持它与定位点位置之间的距离不变。  例如，如果一个 <xref:System.Windows.Forms.TextBox> 控件锚定于窗体的左、右和底边缘，那么当调整该窗体的大小时，该 <xref:System.Windows.Forms.TextBox> 控件将在水平方向上调整大小，以便维持与该窗体右边和左边的距离不变。  另外，控件垂直定位其自身，以便其到窗体底边的距离始终不变。  如果控件未锚定而窗体的大小被调整，则该控件相对于窗体边缘的位置将发生变化。  
+# <a name="how-to-anchor-controls-on-windows-forms"></a><span data-ttu-id="62620-102">如何：在 Windows 窗体上锚定控件</span><span class="sxs-lookup"><span data-stu-id="62620-102">How to: Anchor Controls on Windows Forms</span></span>
+<span data-ttu-id="62620-103">如果您正在设计用户可以在运行时调整大小的窗体，你的窗体上的控件应调整大小和重新定位正确。</span><span class="sxs-lookup"><span data-stu-id="62620-103">If you are designing a form that the user can resize at run time, the controls on your form should resize and reposition properly.</span></span> <span data-ttu-id="62620-104">若要调整动态处理该窗体控件的大小，可以使用<xref:System.Windows.Forms.Control.Anchor%2A>Windows 窗体控件的属性。</span><span class="sxs-lookup"><span data-stu-id="62620-104">To resize controls dynamically with the form, you can use the <xref:System.Windows.Forms.Control.Anchor%2A> property of Windows Forms controls.</span></span> <span data-ttu-id="62620-105"><xref:System.Windows.Forms.Control.Anchor%2A>属性定义控件的定位点位置。</span><span class="sxs-lookup"><span data-stu-id="62620-105">The <xref:System.Windows.Forms.Control.Anchor%2A> property defines an anchor position for the control.</span></span> <span data-ttu-id="62620-106">当控件定位到窗体和窗体调整时，控件将保持该控件的定位点位置之间的距离。</span><span class="sxs-lookup"><span data-stu-id="62620-106">When a control is anchored to a form and the form is resized, the control maintains the distance between the control and the anchor positions.</span></span> <span data-ttu-id="62620-107">例如，如果你有<xref:System.Windows.Forms.TextBox>调整窗体的大小时，定位到的左侧、 右侧和底部边缘该窗体的控件<xref:System.Windows.Forms.TextBox>水平控件调整，以便它维护窗体左右两侧距离相同。</span><span class="sxs-lookup"><span data-stu-id="62620-107">For example, if you have a <xref:System.Windows.Forms.TextBox> control that is anchored to the left, right, and bottom edges of the form, as the form is resized, the <xref:System.Windows.Forms.TextBox> control resizes horizontally so that it maintains the same distance from the right and left sides of the form.</span></span> <span data-ttu-id="62620-108">此外，该控件垂直定位其自身，以便其位置总是与窗体的下边缘的距离相同。</span><span class="sxs-lookup"><span data-stu-id="62620-108">In addition, the control positions itself vertically so that its location is always the same distance from the bottom edge of the form.</span></span> <span data-ttu-id="62620-109">如果控件不锚定和窗体调整，则更改相对于边缘的窗体控件的位置。</span><span class="sxs-lookup"><span data-stu-id="62620-109">If a control is not anchored and the form is resized, the position of the control relative to the edges of the form is changed.</span></span>  
   
- <xref:System.Windows.Forms.Control.Anchor%2A> 属性与 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性进行交互。  有关更多信息，请参见 [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。  
+ <span data-ttu-id="62620-110"><xref:System.Windows.Forms.Control.Anchor%2A>属性与交互<xref:System.Windows.Forms.Control.AutoSize%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="62620-110">The <xref:System.Windows.Forms.Control.Anchor%2A> property interacts with the <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span> <span data-ttu-id="62620-111">有关详细信息，请参阅[AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62620-111">For more information, see [AutoSize Property Overview](../../../../docs/framework/winforms/controls/autosize-property-overview.md).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="62620-112">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="62620-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="62620-113">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="62620-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="62620-114">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="62620-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 在窗体上锚定控件  
+### <a name="to-anchor-a-control-on-a-form"></a><span data-ttu-id="62620-115">若要锚定窗体上控件</span><span class="sxs-lookup"><span data-stu-id="62620-115">To anchor a control on a form</span></span>  
   
-1.  选择要锚定的控件。  
+1.  <span data-ttu-id="62620-116">选择你想要定位的控件。</span><span class="sxs-lookup"><span data-stu-id="62620-116">Select the control you want to anchor.</span></span>  
   
     > [!NOTE]
-    >  可以按照如下方法同时锚定多个控件：按下 Ctrl 键，单击各个控件以进行选择，然后按照上面过程中的其余步骤操作。  
+    >  <span data-ttu-id="62620-117">您可以通过按住 CTRL 键，单击以选中它，每个控件，然后按照此过程的其余部分同时定位多个控件。</span><span class="sxs-lookup"><span data-stu-id="62620-117">You can anchor multiple controls simultaneously by pressing the CTRL key, clicking each control to select it, and then following the rest of this procedure.</span></span>  
   
-2.  在**“属性”**窗口中，单击 <xref:System.Windows.Forms.Control.Anchor%2A> 属性右边的箭头。  
+2.  <span data-ttu-id="62620-118">在**属性**窗口中，单击右侧的箭头<xref:System.Windows.Forms.Control.Anchor%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="62620-118">In the **Properties** window, click the arrow to the right of the <xref:System.Windows.Forms.Control.Anchor%2A> property.</span></span>  
   
-     显示一个编辑器，该编辑器显示一个十字线。  
+     <span data-ttu-id="62620-119">编辑器，显示一个十字线显示。</span><span class="sxs-lookup"><span data-stu-id="62620-119">An editor is displayed that shows a cross.</span></span>  
   
-3.  若要设置定位点，单击该十字线的上、左、右或下部分。  
+3.  <span data-ttu-id="62620-120">若要设置定位点，请单击上、 左、 右或该十字线的下半部分。</span><span class="sxs-lookup"><span data-stu-id="62620-120">To set an anchor, click the top, left, right, or bottom section of the cross.</span></span>  
   
-     默认情况下，控件锚定到左边和上边。  
+     <span data-ttu-id="62620-121">控件定位到顶部，并且默认情况下保留。</span><span class="sxs-lookup"><span data-stu-id="62620-121">Controls are anchored to the top and left by default.</span></span>  
   
-4.  若要清除已锚定的控件的边，请单击该十字线的相应臂。  
+4.  <span data-ttu-id="62620-122">若要清除已锚定的控件的一侧，请单击跨该 arm。</span><span class="sxs-lookup"><span data-stu-id="62620-122">To clear a side of the control that has been anchored, click that arm of the cross.</span></span>  
   
-5.  要关闭 <xref:System.Windows.Forms.Control.Anchor%2A> 属性编辑器，可以再次单击 <xref:System.Windows.Forms.Control.Anchor%2A> 属性名。  
+5.  <span data-ttu-id="62620-123">若要关闭<xref:System.Windows.Forms.Control.Anchor%2A>属性编辑器中，单击<xref:System.Windows.Forms.Control.Anchor%2A>再次属性名称。</span><span class="sxs-lookup"><span data-stu-id="62620-123">To close the <xref:System.Windows.Forms.Control.Anchor%2A> property editor, click the <xref:System.Windows.Forms.Control.Anchor%2A> property name again.</span></span>  
   
- 当窗体在运行时显示时，该控件调整大小以保持与该窗体边缘的距离不变。  到锚定边缘的距离始终保持在 Windows 窗体设计器中定位该控件时所定义的距离。  
+ <span data-ttu-id="62620-124">当在运行时显示窗体时，控件将调整大小以保持与窗体的边缘的距离相同不变。</span><span class="sxs-lookup"><span data-stu-id="62620-124">When your form is displayed at run time, the control resizes to remain positioned at the same distance from the edge of the form.</span></span> <span data-ttu-id="62620-125">锚定的边缘的距离一直保持所定义时在 Windows 窗体设计器中放置控件的距离。</span><span class="sxs-lookup"><span data-stu-id="62620-125">The distance from the anchored edge always remains the same as the distance defined when the control is positioned in the Windows Forms Designer.</span></span>  
   
 > [!NOTE]
->  某些控件（如 <xref:System.Windows.Forms.ComboBox> 控件）有高度限制。  将控件锚定到其窗体或容器的底部无法强制该控件超过其高度限制。  
+>  <span data-ttu-id="62620-126">某些控件，如<xref:System.Windows.Forms.ComboBox>控件中，具有其高度的限制。</span><span class="sxs-lookup"><span data-stu-id="62620-126">Certain controls, such as the <xref:System.Windows.Forms.ComboBox> control, have a limit to their height.</span></span> <span data-ttu-id="62620-127">锚定到底部其窗体或容器的控件不能强制该控件超过其高度限制。</span><span class="sxs-lookup"><span data-stu-id="62620-127">Anchoring the control to the bottom of its form or container cannot force the control to exceed its height limit.</span></span>  
   
- 继承的控件只有处于 `Protected` 状态才能够被锚定。  若要更改控件的访问级别，请在**“属性”**窗口中设置其 `Modifiers` 属性。  
+ <span data-ttu-id="62620-128">继承的控件必须`Protected`能够进行定位。</span><span class="sxs-lookup"><span data-stu-id="62620-128">Inherited controls must be `Protected` to be able to be anchored.</span></span> <span data-ttu-id="62620-129">若要更改控件的访问级别，设置其`Modifiers`中的属性**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="62620-129">To change the access level of a control, set its `Modifiers` property in the **Properties** window.</span></span>  
   
-## 请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a><span data-ttu-id="62620-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="62620-130">See Also</span></span>  
+ [<span data-ttu-id="62620-131">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="62620-131">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="62620-132">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="62620-132">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="62620-133">AutoSize 属性概述</span><span class="sxs-lookup"><span data-stu-id="62620-133">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [<span data-ttu-id="62620-134">如何：在 Windows 窗体上停靠控件</span><span class="sxs-lookup"><span data-stu-id="62620-134">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [<span data-ttu-id="62620-135">演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="62620-135">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="62620-136">演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="62620-136">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="62620-137">演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局</span><span class="sxs-lookup"><span data-stu-id="62620-137">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

@@ -1,28 +1,31 @@
 ---
-title: "存储扩展性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "存储扩展性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6700fe67d151e78c8b216d93a4cd7098ed6401d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 存储扩展性
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 允许用户提升自定义的特定于应用程序的属性，这些属性可用于查询持久性数据库中的实例。提升属性的操作将使属性值可用在数据库的特殊视图中。这些提升的属性（可用于用户查询的属性）可以是简单的类型，如 Int64、Guid、String 和 DateTime，也可以是序列化的二进制类型 \(byte\[\]\)。  
+# <a name="store-extensibility"></a><span data-ttu-id="17787-102">存储扩展性</span><span class="sxs-lookup"><span data-stu-id="17787-102">Store Extensibility</span></span>
+<span data-ttu-id="17787-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 允许用户提升自定义的特定于应用程序的属性，这些属性可用于查询持久性数据库中的实例。</span><span class="sxs-lookup"><span data-stu-id="17787-103"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> allows users to promote custom, application-specific properties that can be used to query for instances in the persistence database.</span></span> <span data-ttu-id="17787-104">提升属性的操作将使属性值可用在数据库的特殊视图中。</span><span class="sxs-lookup"><span data-stu-id="17787-104">The act of promoting a property causes the value to be available within a special view in the database.</span></span> <span data-ttu-id="17787-105">这些提升的属性（可用于用户查询的属性）可以是简单的类型，如 Int64、Guid、String 和 DateTime，也可以是序列化的二进制类型 (byte[])。</span><span class="sxs-lookup"><span data-stu-id="17787-105">These promoted properties (properties that can be used in user queries) can be of simple types such as Int64, Guid, String, and DateTime or of a serialized binary type (byte[]).</span></span>  
   
- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 类具有 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> 方法，可以使用该方法将某个属性提升为可以在查询中使用的属性。以下示例是存储扩展性的一个端对端示例。  
+ <span data-ttu-id="17787-106"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 类具有 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> 方法，可以使用该方法将某个属性提升为可以在查询中使用的属性。</span><span class="sxs-lookup"><span data-stu-id="17787-106">The <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class has the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> method that you can use to promote a property as a property that can be used in queries.</span></span> <span data-ttu-id="17787-107">以下示例是存储扩展性的一个端对端示例。</span><span class="sxs-lookup"><span data-stu-id="17787-107">The following example is an end-to-end example of store extensibility.</span></span>  
   
-1.  在此示例方案中，文档处理 \(DP\) 应用程序具有多个工作流，每个工作流都使用自定义的活动进行文档处理。这些工作流具有一组状态变量，最终用户需要看到这些变量。为了实现此目的，DP 应用程序提供了一个类型为 <xref:System.Activities.Persistence.PersistenceParticipant> 的实例扩展，活动使用该实例扩展来提供状态变量。  
+1.  <span data-ttu-id="17787-108">在此示例方案中，文档处理 (DP) 应用程序具有多个工作流，每个工作流都使用自定义的活动进行文档处理。</span><span class="sxs-lookup"><span data-stu-id="17787-108">In this example scenario, a document processing (DP) application has workflows, each of which uses custom activities for document processing.</span></span> <span data-ttu-id="17787-109">这些工作流具有一组状态变量，最终用户需要看到这些变量。</span><span class="sxs-lookup"><span data-stu-id="17787-109">These workflows have a set of state variables that need to be made visible to the end user.</span></span> <span data-ttu-id="17787-110">为了实现此目的，DP 应用程序提供了一个类型为 <xref:System.Activities.Persistence.PersistenceParticipant> 的实例扩展，活动使用该实例扩展来提供状态变量。</span><span class="sxs-lookup"><span data-stu-id="17787-110">To achieve this, the DP application provides an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span>  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         public string DocumentId;  
@@ -30,41 +33,36 @@ caps.handback.revision: 15
         public string UserName;  
         public DateTime LastUpdateTime;  
     }  
-  
     ```  
   
-2.  然后，将新的扩展添加到主机。  
+2.  <span data-ttu-id="17787-111">然后，将新的扩展添加到主机。</span><span class="sxs-lookup"><span data-stu-id="17787-111">The new extension is then added to the host.</span></span>  
   
     ```  
     static Activity workflow = CreateWorkflow();  
     WorkflowApplication application = new WorkflowApplication(workflow);  
     DocumentStatusExtension documentStatusExtension = new DocumentStatusExtension ();  
     application.Extensions.Add(documentStatusExtension);  
-  
     ```  
   
-     有关添加自定义持久性参与者的更多详细信息，请参见[持久性参与者](../../../docs/framework/windows-workflow-foundation//persistence-participants.md)示例。  
+     <span data-ttu-id="17787-112">有关添加自定义持久性参与者的更多详细信息，请参阅[持久性参与者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)示例。</span><span class="sxs-lookup"><span data-stu-id="17787-112">For more details about adding a custom persistence participant, see the [Persistence Participants](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) sample.</span></span>  
   
-3.  DP 应用程序中的自定义活动填充 **Execute** 方法中的各种状态字段。  
+3.  <span data-ttu-id="17787-113">DP 应用程序中的自定义活动填充中的各种状态字段**执行**方法。</span><span class="sxs-lookup"><span data-stu-id="17787-113">The custom activities in the DP application populate various status fields in the **Execute** method.</span></span>  
   
     ```  
-  
     public override void Execute(CodeActivityContext context)  
     {  
         // ...  
         context.GetExtension<DocumentStatusExtension>().DocumentId = Guid.NewGuid();  
         context.GetExtension<DocumentStatusExtension>().UserName = "John Smith";  
-        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = “Approved”;  
+        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = "Approved";  
         context.GetExtension<DocumentStatusExtension>().LastUpdateTime = DateTime.Now();  
         // ...  
     }  
-  
     ```  
   
-4.  当工作流实例达到某个持久点时，**DocumentStatusExtension** 持久性参与者的 **CollectValues** 方法会将这些属性保存到持久性数据集合中。  
+4.  <span data-ttu-id="17787-114">当工作流实例达到某个持久点时， **CollectValues**方法**DocumentStatusExtension**持久性参与者将这些属性保存到持久性数据集合。</span><span class="sxs-lookup"><span data-stu-id="17787-114">When a workflow instance reaches a persistence point, the **CollectValues** method of the **DocumentStatusExtension** persistence participant saves these properties into the persistence data collection.</span></span>  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         const XNamespace xNS = XNamespace.Get("http://contoso.com/DocumentStatus");  
@@ -81,13 +79,12 @@ caps.handback.revision: 15
         }  
         // ...  
     }  
-  
     ```  
   
     > [!NOTE]
-    >  所有这些属性由持久性框架通过 **SaveWorkflowCommand.InstanceData** 集合传递给 **SqlWorkflowInstanceStore**。  
+    >  <span data-ttu-id="17787-115">所有这些属性传递给**SqlWorkflowInstanceStore**由持久性框架通过**SaveWorkflowCommand.InstanceData**集合。</span><span class="sxs-lookup"><span data-stu-id="17787-115">All these properties are passed to **SqlWorkflowInstanceStore** by the persistence framework through the **SaveWorkflowCommand.InstanceData** collection.</span></span>  
   
-5.  DP 应用程序初始化 SQL 工作流实例存储并调用 **Promote** 方法来提升此数据。  
+5.  <span data-ttu-id="17787-116">DP 应用程序初始化 SQL 工作流实例存储，并调用**Promote**方法来提升此数据。</span><span class="sxs-lookup"><span data-stu-id="17787-116">The DP application initializes the SQL Workflow Instance Store and invokes the **Promote** method to promote this data.</span></span>  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -103,30 +100,28 @@ caps.handback.revision: 15
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     根据此提升信息，**SqlWorkflowInstanceStore** 将数据属性放置在 [[System.Activities.DurableInstancing.InstancePromotedProperties] 视图](../Topic/Store%20Extensibility.md#InstancePromotedProperties) 的各个列中。  
+     <span data-ttu-id="17787-117">根据此提升信息， **SqlWorkflowInstanceStore**放置的列中的数据属性[InstancePromotedProperties](#InstancePromotedProperties)视图。</span><span class="sxs-lookup"><span data-stu-id="17787-117">Based on this promotion information, **SqlWorkflowInstanceStore** places the data properties in the columns of the [InstancePromotedProperties](#InstancePromotedProperties) view.</span></span>
   
-6.  为了从提升表中查询某个数据子集，DP 应用程序在提升视图之上添加一个自定义视图。  
+6.  <span data-ttu-id="17787-118">为了从提升表中查询某个数据子集，DP 应用程序在提升视图之上添加一个自定义视图。</span><span class="sxs-lookup"><span data-stu-id="17787-118">To query a subset of the data from the promotion table, the DP application adds a customized view on top of the promotion view.</span></span>  
   
     ```  
-  
     create view [dbo].[DocumentStatus] with schemabinding  
     as  
-        select  P.[InstanceId] as [InstanceId],  
-            P.Value1 as [UserName],  
-            P.Value2 as [ApprovalStatus],  
-            P.Value3 as [DocumentId],  
-            P.Value4 as [LastUpdatedTime]  
+        select  P.[InstanceId] as [InstanceId],  
+            P.Value1 as [UserName],  
+            P.Value2 as [ApprovalStatus],  
+            P.Value3 as [DocumentId],  
+            P.Value4 as [LastUpdatedTime]  
     from [System.Activities.DurableInstancing].[InstancePromotedProperties] as P  
     where P.PromotionName = N'DocumentStatus'  
     go  
-  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> \[System.Activities.DurableInstancing.InstancePromotedProperties\] 视图  
+##  <span data-ttu-id="17787-119"><a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] 视图</span><span class="sxs-lookup"><span data-stu-id="17787-119"><a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
-|列名|列类型|说明|  
-|--------|---------|--------|  
-|InstanceId|GUID|此提升所属的工作流实例。|  
-|PromotionName|nvarchar\(400\)|提升本身的名称。|  
-|Value1、Value2、Value3、..、Value32|sql\_variant|已提升属性本身的值。除了长度超过 8000 个字节的二进制 Blob 和字符串之外，多数 SQL 基元数据类型都可适合 sql\_variant。|  
-|Value33、Value34、Value35、…、Value64|varbinary\(max\)|显式声明为 varbinary\(max\) 的已提升属性的值。|
+|<span data-ttu-id="17787-120">列名</span><span class="sxs-lookup"><span data-stu-id="17787-120">Column Name</span></span>|<span data-ttu-id="17787-121">列名称</span><span class="sxs-lookup"><span data-stu-id="17787-121">Column Type</span></span>|<span data-ttu-id="17787-122">描述</span><span class="sxs-lookup"><span data-stu-id="17787-122">Description</span></span>|  
+|-----------------|-----------------|-----------------|  
+|<span data-ttu-id="17787-123">InstanceId</span><span class="sxs-lookup"><span data-stu-id="17787-123">InstanceId</span></span>|<span data-ttu-id="17787-124">GUID</span><span class="sxs-lookup"><span data-stu-id="17787-124">GUID</span></span>|<span data-ttu-id="17787-125">此提升所属的工作流实例。</span><span class="sxs-lookup"><span data-stu-id="17787-125">The workflow instance that this promotion belongs to.</span></span>|  
+|<span data-ttu-id="17787-126">PromotionName</span><span class="sxs-lookup"><span data-stu-id="17787-126">PromotionName</span></span>|<span data-ttu-id="17787-127">nvarchar(400)</span><span class="sxs-lookup"><span data-stu-id="17787-127">nvarchar(400)</span></span>|<span data-ttu-id="17787-128">提升本身的名称。</span><span class="sxs-lookup"><span data-stu-id="17787-128">The name of the promotion itself.</span></span>|  
+|<span data-ttu-id="17787-129">Value1、Value2、Value3、..、Value32</span><span class="sxs-lookup"><span data-stu-id="17787-129">Value1, Value2, Value3,..,Value32</span></span>|<span data-ttu-id="17787-130">sql_variant</span><span class="sxs-lookup"><span data-stu-id="17787-130">sql_variant</span></span>|<span data-ttu-id="17787-131">已提升属性本身的值。</span><span class="sxs-lookup"><span data-stu-id="17787-131">The value of the promoted property itself.</span></span> <span data-ttu-id="17787-132">除了长度超过 8000 个字节的二进制 Blob 和字符串之外，多数 SQL 基元数据类型都可适合 sql_variant。</span><span class="sxs-lookup"><span data-stu-id="17787-132">Most SQL primitive data types except binary blobs and strings over 8000 bytes in length can fit in sql_variant.</span></span>|  
+|<span data-ttu-id="17787-133">Value33、Value34、Value35、…、Value64</span><span class="sxs-lookup"><span data-stu-id="17787-133">Value33, Value34, Value35, …, Value64</span></span>|<span data-ttu-id="17787-134">varbinary(max)</span><span class="sxs-lookup"><span data-stu-id="17787-134">varbinary(max)</span></span>|<span data-ttu-id="17787-135">显式声明为 varbinary(max) 的已提升属性的值。</span><span class="sxs-lookup"><span data-stu-id="17787-135">The value of promoted properties that are explicitly declared as varbinary(max).</span></span>|

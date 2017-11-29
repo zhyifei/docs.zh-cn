@@ -1,77 +1,81 @@
 ---
-title: "如何：在后台下载文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "异步模式"
-  - "后台操作"
-  - "背景任务"
-  - "BackgroundWorker 组件"
-  - "组件 [Windows 窗体], 异步"
-  - "窗体, 后台操作"
-  - "窗体, 多线程处理"
-  - "线程处理 [Windows 窗体], 后台操作"
+title: "如何：在后台下载文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- BackgroundWorker component
+- background tasks
+- Asynchronous Pattern
+- forms [Windows Forms], multithreading
+- components [Windows Forms], asynchronous
+- forms [Windows Forms], background operations
+- threading [Windows Forms], background operations
+- background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b83f5ae935ed9ba6c5351d48175ee7747e7b01b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在后台下载文件
-下载文件是一项常见任务，在单独线程上运行这个可能很耗时的操作通常很有用。  使用 <xref:System.ComponentModel.BackgroundWorker> 组件来完成此任务，几乎不使用任何代码。  
+# <a name="how-to-download-a-file-in-the-background"></a><span data-ttu-id="43877-102">如何：在后台下载文件</span><span class="sxs-lookup"><span data-stu-id="43877-102">How to: Download a File in the Background</span></span>
+<span data-ttu-id="43877-103">下载文件是一项常见任务，在单独线程上运行这个可能很耗时的操作通常很有用。</span><span class="sxs-lookup"><span data-stu-id="43877-103">Downloading a file is a common task, and it is often useful to run this potentially time-consuming operation on a separate thread.</span></span> <span data-ttu-id="43877-104">使用 <xref:System.ComponentModel.BackgroundWorker> 组件来完成此任务，几乎不使用任何代码。</span><span class="sxs-lookup"><span data-stu-id="43877-104">Use the <xref:System.ComponentModel.BackgroundWorker> component to accomplish this task with very little code.</span></span>  
   
-## 示例  
- 以下代码示例演示如何使用 <xref:System.ComponentModel.BackgroundWorker> 组件从 URL 加载 XML 文件。  当用户单击“下载”按钮时，<xref:System.Windows.Forms.Control.Click> 事件处理程序将调用<xref:System.ComponentModel.BackgroundWorker> 组件的 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 方法以开始下载操作。  按钮在下载期间处于禁用状态，下载完毕后处于启用状态。  <xref:System.Windows.Forms.MessageBox> 显示文件的内容。  
+## <a name="example"></a><span data-ttu-id="43877-105">示例</span><span class="sxs-lookup"><span data-stu-id="43877-105">Example</span></span>  
+ <span data-ttu-id="43877-106">以下代码示例演示如何使用 <xref:System.ComponentModel.BackgroundWorker> 组件从 URL 加载 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="43877-106">The following code example demonstrates how to use a <xref:System.ComponentModel.BackgroundWorker> component to load an XML file from a URL.</span></span> <span data-ttu-id="43877-107">当用户单击**下载**按钮，<xref:System.Windows.Forms.Control.Click>事件处理程序调用<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>方法<xref:System.ComponentModel.BackgroundWorker>组件以开始下载操作。</span><span class="sxs-lookup"><span data-stu-id="43877-107">When the user clicks the **Download** button, the <xref:System.Windows.Forms.Control.Click> event handler calls the <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> method of a <xref:System.ComponentModel.BackgroundWorker> component to start the download operation.</span></span> <span data-ttu-id="43877-108">按钮在下载期间处于禁用状态，下载完毕后处于启用状态。</span><span class="sxs-lookup"><span data-stu-id="43877-108">The button is disabled for the duration of the download, and then enabled when the download is complete.</span></span> <span data-ttu-id="43877-109"><xref:System.Windows.Forms.MessageBox> 显示文件的内容。</span><span class="sxs-lookup"><span data-stu-id="43877-109">A <xref:System.Windows.Forms.MessageBox> displays the contents of the file.</span></span>  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#1)]  
   
- **下载文件**  
+ <span data-ttu-id="43877-110">**下载文件**</span><span class="sxs-lookup"><span data-stu-id="43877-110">**Downloading the file**</span></span>  
   
- 文件被下载到 <xref:System.ComponentModel.BackgroundWorker> 组件的工作线程上，该线程运行 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件处理程序。  当代码调用 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 方法时，将启动此线程。  
+ <span data-ttu-id="43877-111">文件被下载到 <xref:System.ComponentModel.BackgroundWorker> 组件的工作线程上，该线程运行 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="43877-111">The file is downloaded on the <xref:System.ComponentModel.BackgroundWorker> component's worker thread, which runs the <xref:System.ComponentModel.BackgroundWorker.DoWork> event handler.</span></span> <span data-ttu-id="43877-112">当代码调用 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 方法时，将启动此线程。</span><span class="sxs-lookup"><span data-stu-id="43877-112">This thread starts when your code calls the <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> method.</span></span>  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
- **等待 BackgroundWorker 完成**  
+ <span data-ttu-id="43877-113">**等待 BackgroundWorker 完成**</span><span class="sxs-lookup"><span data-stu-id="43877-113">**Waiting for a BackgroundWorker to finish**</span></span>  
   
- `downloadButton_Click` 事件处理程序演示如何等待 <xref:System.ComponentModel.BackgroundWorker> 组件完成其异步任务。  
+ <span data-ttu-id="43877-114">`downloadButton_Click` 事件处理程序演示如何等待 <xref:System.ComponentModel.BackgroundWorker> 组件完成其异步任务。</span><span class="sxs-lookup"><span data-stu-id="43877-114">The `downloadButton_Click` event handler demonstrates how to wait for a <xref:System.ComponentModel.BackgroundWorker> component to finish its asynchronous task.</span></span>  
   
- 在等待后台线程完成时，如果你只希望应用程序响应事件，而不希望在主线程中执行任何操作，直接退出处理程序即可。  
+ <span data-ttu-id="43877-115">在等待后台线程完成时，如果你只希望应用程序响应事件，而不希望在主线程中执行任何操作，直接退出处理程序即可。</span><span class="sxs-lookup"><span data-stu-id="43877-115">If you only want the application to respond to events and do not want to do any work in the main thread while you wait for the background thread to complete, just exit the handler.</span></span>  
   
- 如果想要继续在主线程中执行操作，可使用 <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> 属性来确定 <xref:System.ComponentModel.BackgroundWorker> 线程是否仍在运行。  在示例中，进度条随下载进行而更新。  请确保调用 <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=fullName> 方法以保持 UI 响应能力。  
+ <span data-ttu-id="43877-116">如果想要继续在主线程中执行操作，可使用 <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> 属性来确定 <xref:System.ComponentModel.BackgroundWorker> 线程是否仍在运行。</span><span class="sxs-lookup"><span data-stu-id="43877-116">If you want to continue doing work in the main thread, use the <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> property to determine whether the <xref:System.ComponentModel.BackgroundWorker> thread is still running.</span></span> <span data-ttu-id="43877-117">在示例中，进度条随下载进行而更新。</span><span class="sxs-lookup"><span data-stu-id="43877-117">In the example, a progress bar is updated while the download is processing.</span></span> <span data-ttu-id="43877-118">请确保调用 <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> 方法以保持 UI 响应能力。</span><span class="sxs-lookup"><span data-stu-id="43877-118">Be sure to call the <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> method to keep the UI responsive.</span></span>  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#2)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#2)]  
   
- **显示结果**  
+ <span data-ttu-id="43877-119">**显示结果**</span><span class="sxs-lookup"><span data-stu-id="43877-119">**Displaying the result**</span></span>  
   
- `backgroundWorker1_RunWorkerCompleted` 方法处理 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件，并在后台操作完成时被调用。  此方法首先检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=fullName> 属性。  如果 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=fullName> 为 `null`，则此方法显示文件的内容。  然后它启用在下载开始后被禁用的下载按钮，并重置进度栏。  
+ <span data-ttu-id="43877-120">`backgroundWorker1_RunWorkerCompleted` 方法处理 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件，并在后台操作完成时被调用。</span><span class="sxs-lookup"><span data-stu-id="43877-120">The `backgroundWorker1_RunWorkerCompleted` method handles the <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> event and is called when the background operation is completed.</span></span> <span data-ttu-id="43877-121">此方法首先检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 属性。</span><span class="sxs-lookup"><span data-stu-id="43877-121">This method first checks the <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="43877-122">如果 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 为 `null`，则此方法显示文件的内容。</span><span class="sxs-lookup"><span data-stu-id="43877-122">If <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> is `null`, then this method displays the contents of the file.</span></span> <span data-ttu-id="43877-123">然后它启用在下载开始后被禁用的下载按钮，并重置进度栏。</span><span class="sxs-lookup"><span data-stu-id="43877-123">It then enables the download button, which was disabled when the download began, and it resets the progress bar.</span></span>  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#4)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#4)]  
   
-## 编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="43877-124">编译代码</span><span class="sxs-lookup"><span data-stu-id="43877-124">Compiling the Code</span></span>  
+ <span data-ttu-id="43877-125">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="43877-125">This example requires:</span></span>  
   
--   引用 System.Drawing、System.Windows.Forms 和 System.Xml 程序集。  
+-   <span data-ttu-id="43877-126">引用 System.Drawing、System.Windows.Forms 和 System.Xml 程序集。</span><span class="sxs-lookup"><span data-stu-id="43877-126">References to the System.Drawing, System.Windows.Forms, and System.Xml assemblies.</span></span>  
   
- 有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 命令行生成此示例的信息，请参阅[从命令行生成](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 或[在命令行上使用 csc.exe 生成](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ <span data-ttu-id="43877-127">有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="43877-127">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="43877-128">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="43877-128">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="43877-129">另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="43877-129">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 可靠编程  
- 始终先检查 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件处理程序中的 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=fullName> 属性，然后再尝试访问 <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=fullName> 属性或可能受 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件处理程序影响的任何其他对象。  
+## <a name="robust-programming"></a><span data-ttu-id="43877-130">可靠编程</span><span class="sxs-lookup"><span data-stu-id="43877-130">Robust Programming</span></span>  
+ <span data-ttu-id="43877-131">始终先检查 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件处理程序中的 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 属性，然后再尝试访问 <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> 属性或可能受 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件处理程序影响的任何其他对象。</span><span class="sxs-lookup"><span data-stu-id="43877-131">Always check the <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> property in your <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> event handler before attempting to access the <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> property or any other object that may have been affected by the <xref:System.ComponentModel.BackgroundWorker.DoWork> event handler.</span></span>  
   
-## 请参阅  
- <xref:System.ComponentModel.BackgroundWorker>   
- [如何：在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a><span data-ttu-id="43877-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43877-132">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="43877-133">如何：在后台运行操作</span><span class="sxs-lookup"><span data-stu-id="43877-133">How to: Run an Operation in the Background</span></span>](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="43877-134">如何：实现使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="43877-134">How to: Implement a Form That Uses a Background Operation</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

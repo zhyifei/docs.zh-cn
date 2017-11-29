@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,125 +14,123 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 62f39bb54fab247e7a9291026d3dcebd6e390ab5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="clr-etw-keywords-and-levels"></a>CLR ETW 关键字和级别
-<a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。 事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。 [事件级别](#levels) 由标志来标识。  
+# <a name="clr-etw-keywords-and-levels"></a><span data-ttu-id="19731-102">CLR ETW 关键字和级别</span><span class="sxs-lookup"><span data-stu-id="19731-102">CLR ETW Keywords and Levels</span></span>
+<span data-ttu-id="19731-103"><a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。</span><span class="sxs-lookup"><span data-stu-id="19731-103"><a name="top"></a> Event tracing for Windows (ETW) events can be filtered by category and level.</span></span> <span data-ttu-id="19731-104">事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。</span><span class="sxs-lookup"><span data-stu-id="19731-104">Event [CLR ETW Keywords](#keywords) enable the filtering of events by category; they are used in combinations for the runtime and rundown providers.</span></span> <span data-ttu-id="19731-105">[事件级别](#levels) 由标志来标识。</span><span class="sxs-lookup"><span data-stu-id="19731-105">The [event levels](#levels) are identified by flags.</span></span>  
   
 <a name="keywords"></a>   
-## <a name="clr-etw-keywords"></a>CLR ETW 关键字  
- 关键字是可以组合以生成值的标志。 在实践中，当调用命令行实用程序时，使用关键字的十六进制值而非关键字名称。  
+## <a name="clr-etw-keywords"></a><span data-ttu-id="19731-106">CLR ETW 关键字</span><span class="sxs-lookup"><span data-stu-id="19731-106">CLR ETW Keywords</span></span>  
+ <span data-ttu-id="19731-107">关键字是可以组合以生成值的标志。</span><span class="sxs-lookup"><span data-stu-id="19731-107">The keywords are flags that can be combined to generate values.</span></span> <span data-ttu-id="19731-108">在实践中，当调用命令行实用程序时，使用关键字的十六进制值而非关键字名称。</span><span class="sxs-lookup"><span data-stu-id="19731-108">In practice, you use the hexadecimal values of the keywords instead of the keyword names when you call the command-line utilities.</span></span>  
   
- 下表描述了这些关键字：  
+ <span data-ttu-id="19731-109">下表描述了这些关键字：</span><span class="sxs-lookup"><span data-stu-id="19731-109">The keywords are described in the following tables:</span></span>  
   
--   [CLR ETW 运行时关键字](#runtime)  
+-   [<span data-ttu-id="19731-110">CLR ETW 运行时关键字</span><span class="sxs-lookup"><span data-stu-id="19731-110">CLR ETW runtime keywords</span></span>](#runtime)  
   
--   [CLR ETW 断开关键字](#rundown)  
+-   [<span data-ttu-id="19731-111">CLR ETW 断开关键字</span><span class="sxs-lookup"><span data-stu-id="19731-111">CLR ETW rundown keywords</span></span>](#rundown)  
   
--   [用于运行时提供程序的符号解析的关键字组合](#runtime_combo)  
+-   [<span data-ttu-id="19731-112">用于运行时提供程序的符号解析的关键字组合</span><span class="sxs-lookup"><span data-stu-id="19731-112">Keyword combinations for symbol resolution for the runtime provider</span></span>](#runtime_combo)  
   
--   [用于断开提供程序的符号解析的关键字组合](#rundown_combo)  
+-   [<span data-ttu-id="19731-113">用于断开提供程序的符号解析的关键字组合</span><span class="sxs-lookup"><span data-stu-id="19731-113">Keyword combinations for symbol resolution for the rundown provider</span></span>](#rundown_combo)  
   
 <a name="runtime"></a>   
-### <a name="clr-etw-runtime-keywords"></a>CLR ETW 运行时关键字  
- 下表列出了 CLR ETW 运行时关键字、它们的值以及它们的用途。  
+### <a name="clr-etw-runtime-keywords"></a><span data-ttu-id="19731-114">CLR ETW 运行时关键字</span><span class="sxs-lookup"><span data-stu-id="19731-114">CLR ETW Runtime Keywords</span></span>  
+ <span data-ttu-id="19731-115">下表列出了 CLR ETW 运行时关键字、它们的值以及它们的用途。</span><span class="sxs-lookup"><span data-stu-id="19731-115">The following table lists the CLR ETW runtime keywords, their values, and what they are used for.</span></span>  
   
-|运行时关键字名称|值|目标|  
+|<span data-ttu-id="19731-116">运行时关键字名称</span><span class="sxs-lookup"><span data-stu-id="19731-116">Runtime keyword name</span></span>|<span data-ttu-id="19731-117">值</span><span class="sxs-lookup"><span data-stu-id="19731-117">Value</span></span>|<span data-ttu-id="19731-118">目标</span><span class="sxs-lookup"><span data-stu-id="19731-118">Purpose</span></span>|  
 |--------------------------|-----------|-------------|  
-|`GCKeyword`|0x00000001|启用 [垃圾回收事件](../../../docs/framework/performance/garbage-collection-etw-events.md)的回收。|  
-|`LoaderKeyword`|0x00000008|启用 [加载程序事件](../../../docs/framework/performance/loader-etw-events.md)的回收。|  
-|`JITKeyword`|0x00000010|启用 [实时 (JIT) 事件](../../../docs/framework/performance/jit-tracing-etw-events.md)的回收。|  
-|`NGenKeyword`|0x00000020|启用本机映像方法（由本机映像生成器 Ngen.exe 处理的方法）的事件的收集；与 `StartEnumerationKeyword` 和 `EndEnumerationKeyword`一起使用。 此关键字具有高开销。 它将在每个加载的 NGen 模块内生成每个方法的事件。 只要有可能，我们建议使用由分析工具生成的程序数据库 (PDB) 从 NGen 模块检索有关方法的信息，而不是使用此关键字。 另请参阅此表后面的 `OverrideAndSuppressNGenEventsKeyword` 。|  
-|`StartEnumerationKeyword`|0x00000040|启用运行时中所有方法的枚举；与 `NGenKeyword`配合使用。|  
-|`EndEnumerationKeyword`|0x00000080|启用运行时中销毁的所有方法的枚举；与 `JITKeyword` 和 `NGenKeyword`配合使用。|  
-|`SecurityKeyword`|0x00000400|启用 [安全事件](../../../docs/framework/performance/security-etw-events.md)的回收。|  
-|`AppDomainResourceManagementKeyword`|0x00000800|启用应用程序域级别的资源监视事件的回收。|  
-|`JITTracingKeyword`|0x00001000|启用 [JIT 跟踪事件](../../../docs/framework/performance/jit-tracing-etw-events.md)的回收。|  
-|`InteropKeyword`|0x00002000|启用 [互操作事件](../../../docs/framework/performance/interop-etw-events.md)的回收。|  
-|`ContentionKeyword`|0x00004000|启用 [争用事件](../../../docs/framework/performance/contention-etw-events.md)的回收。|  
-|`ExceptionKeyword`|0x00008000|启用 [异常事件](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)的回收。|  
-|`ThreadingKeyword`|0x00010000|启用 [线程池事件](../../../docs/framework/performance/thread-pool-etw-events.md)的回收。|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|（[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsKeyword` 和 `NGenKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsKeyword` 并将处理 `NGenKeyword` 以生成 NGen 模块内方法的事件。|  
-|`PerfTrackKeyWord`|0x2000000|启用 `ModuleLoad` 和 `ModuleRange` 事件的回收。|  
-|`StackKeyword`|0x40000000|启用 CLR [堆栈跟踪事件](../../../docs/framework/performance/stack-etw-event.md)的回收。|  
+|`GCKeyword`|<span data-ttu-id="19731-119">0x00000001</span><span class="sxs-lookup"><span data-stu-id="19731-119">0x00000001</span></span>|<span data-ttu-id="19731-120">启用 [垃圾回收事件](../../../docs/framework/performance/garbage-collection-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-120">Enables the collection of [garbage collection events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span>|  
+|`LoaderKeyword`|<span data-ttu-id="19731-121">0x00000008</span><span class="sxs-lookup"><span data-stu-id="19731-121">0x00000008</span></span>|<span data-ttu-id="19731-122">启用 [加载程序事件](../../../docs/framework/performance/loader-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-122">Enables the collection of [loader events](../../../docs/framework/performance/loader-etw-events.md).</span></span>|  
+|`JITKeyword`|<span data-ttu-id="19731-123">0x00000010</span><span class="sxs-lookup"><span data-stu-id="19731-123">0x00000010</span></span>|<span data-ttu-id="19731-124">启用 [实时 (JIT) 事件](../../../docs/framework/performance/jit-tracing-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-124">Enables the collection of [just-in-time (JIT) events](../../../docs/framework/performance/jit-tracing-etw-events.md).</span></span>|  
+|`NGenKeyword`|<span data-ttu-id="19731-125">0x00000020</span><span class="sxs-lookup"><span data-stu-id="19731-125">0x00000020</span></span>|<span data-ttu-id="19731-126">启用本机映像方法（由本机映像生成器 Ngen.exe 处理的方法）的事件的收集；与 `StartEnumerationKeyword` 和 `EndEnumerationKeyword`一起使用。</span><span class="sxs-lookup"><span data-stu-id="19731-126">Enables the collection of events for native image methods (methods processed by the Native Image Generator, Ngen.exe); used with `StartEnumerationKeyword` and `EndEnumerationKeyword`.</span></span> <span data-ttu-id="19731-127">此关键字具有高开销。</span><span class="sxs-lookup"><span data-stu-id="19731-127">This keyword has high overhead.</span></span> <span data-ttu-id="19731-128">它将在每个加载的 NGen 模块内生成每个方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-128">It generates events for every method inside every loaded NGen module.</span></span> <span data-ttu-id="19731-129">只要有可能，我们建议使用由分析工具生成的程序数据库 (PDB) 从 NGen 模块检索有关方法的信息，而不是使用此关键字。</span><span class="sxs-lookup"><span data-stu-id="19731-129">Whenever possible, instead of using this keyword, we recommend that you use the program databases (PDBs) generated by profiling tools to retrieve information about methods from NGen modules.</span></span> <span data-ttu-id="19731-130">另请参阅此表后面的 `OverrideAndSuppressNGenEventsKeyword` 。</span><span class="sxs-lookup"><span data-stu-id="19731-130">See also `OverrideAndSuppressNGenEventsKeyword` later in this table.</span></span>|  
+|`StartEnumerationKeyword`|<span data-ttu-id="19731-131">0x00000040</span><span class="sxs-lookup"><span data-stu-id="19731-131">0x00000040</span></span>|<span data-ttu-id="19731-132">启用运行时中所有方法的枚举；与 `NGenKeyword`配合使用。</span><span class="sxs-lookup"><span data-stu-id="19731-132">Enables the enumeration of all the methods in the runtime; used in conjunction with `NGenKeyword`.</span></span>|  
+|`EndEnumerationKeyword`|<span data-ttu-id="19731-133">0x00000080</span><span class="sxs-lookup"><span data-stu-id="19731-133">0x00000080</span></span>|<span data-ttu-id="19731-134">启用运行时中销毁的所有方法的枚举；与 `JITKeyword` 和 `NGenKeyword`配合使用。</span><span class="sxs-lookup"><span data-stu-id="19731-134">Enables the enumeration of all the methods destroyed in the runtime; used in conjunction with `JITKeyword` and `NGenKeyword`.</span></span>|  
+|`SecurityKeyword`|<span data-ttu-id="19731-135">0x00000400</span><span class="sxs-lookup"><span data-stu-id="19731-135">0x00000400</span></span>|<span data-ttu-id="19731-136">启用 [安全事件](../../../docs/framework/performance/security-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-136">Enables the collection of [security events](../../../docs/framework/performance/security-etw-events.md).</span></span>|  
+|`AppDomainResourceManagementKeyword`|<span data-ttu-id="19731-137">0x00000800</span><span class="sxs-lookup"><span data-stu-id="19731-137">0x00000800</span></span>|<span data-ttu-id="19731-138">启用应用程序域级别的资源监视事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-138">Enables the collection of resource monitoring events at an application domain level.</span></span>|  
+|`JITTracingKeyword`|<span data-ttu-id="19731-139">0x00001000</span><span class="sxs-lookup"><span data-stu-id="19731-139">0x00001000</span></span>|<span data-ttu-id="19731-140">启用 [JIT 跟踪事件](../../../docs/framework/performance/jit-tracing-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-140">Enables the collection of [JIT tracing events](../../../docs/framework/performance/jit-tracing-etw-events.md).</span></span>|  
+|`InteropKeyword`|<span data-ttu-id="19731-141">0x00002000</span><span class="sxs-lookup"><span data-stu-id="19731-141">0x00002000</span></span>|<span data-ttu-id="19731-142">启用 [互操作事件](../../../docs/framework/performance/interop-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-142">Enables the collection of [interop events](../../../docs/framework/performance/interop-etw-events.md).</span></span>|  
+|`ContentionKeyword`|<span data-ttu-id="19731-143">0x00004000</span><span class="sxs-lookup"><span data-stu-id="19731-143">0x00004000</span></span>|<span data-ttu-id="19731-144">启用 [争用事件](../../../docs/framework/performance/contention-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-144">Enables the collection of [contention events](../../../docs/framework/performance/contention-etw-events.md).</span></span>|  
+|`ExceptionKeyword`|<span data-ttu-id="19731-145">0x00008000</span><span class="sxs-lookup"><span data-stu-id="19731-145">0x00008000</span></span>|<span data-ttu-id="19731-146">启用 [异常事件](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-146">Enables the collection of [exception events](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).</span></span>|  
+|`ThreadingKeyword`|<span data-ttu-id="19731-147">0x00010000</span><span class="sxs-lookup"><span data-stu-id="19731-147">0x00010000</span></span>|<span data-ttu-id="19731-148">启用 [线程池事件](../../../docs/framework/performance/thread-pool-etw-events.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-148">Enables the collection of [thread pool events](../../../docs/framework/performance/thread-pool-etw-events.md).</span></span>|  
+|`OverrideAndSuppressNGenEventsKeyword`|<span data-ttu-id="19731-149">0x00040000</span><span class="sxs-lookup"><span data-stu-id="19731-149">0x00040000</span></span>|<span data-ttu-id="19731-150">（[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenKeyword` 关键字，并防止生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-150">(Available in the  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] and later.) Suppresses the high-overhead `NGenKeyword` keyword and prevents the generation of events for methods that are inside NGen modules.</span></span> <span data-ttu-id="19731-151">从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsKeyword` 和 `NGenKeyword` 以取消生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-151">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], profiling tools should use `OverrideAndSuppressNGenEventsKeyword` and `NGenKeyword` together to suppress the generation of events for methods in NGen modules.</span></span> <span data-ttu-id="19731-152">这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。</span><span class="sxs-lookup"><span data-stu-id="19731-152">This enables the profiling tool to use the more efficient NGen PDBs to get information about methods in NGen modules.</span></span> <span data-ttu-id="19731-153">.NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。</span><span class="sxs-lookup"><span data-stu-id="19731-153">The CLR in the .NET Framework 4 and earlier versions does not support the creation of NGen PDBs.</span></span> <span data-ttu-id="19731-154">在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsKeyword` 并将处理 `NGenKeyword` 以生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-154">In these earlier versions, the CLR will not recognize `OverrideAndSuppressNGenEventsKeyword` and will process `NGenKeyword` to generate events for methods in NGen modules.</span></span>|  
+|`PerfTrackKeyWord`|<span data-ttu-id="19731-155">0x2000000</span><span class="sxs-lookup"><span data-stu-id="19731-155">0x2000000</span></span>|<span data-ttu-id="19731-156">启用 `ModuleLoad` 和 `ModuleRange` 事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-156">Enables the collection of the `ModuleLoad` and `ModuleRange` events.</span></span>|  
+|`StackKeyword`|<span data-ttu-id="19731-157">0x40000000</span><span class="sxs-lookup"><span data-stu-id="19731-157">0x40000000</span></span>|<span data-ttu-id="19731-158">启用 CLR [堆栈跟踪事件](../../../docs/framework/performance/stack-etw-event.md)的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-158">Enables the collection of CLR [stack trace events](../../../docs/framework/performance/stack-etw-event.md).</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="19731-159">返回页首</span><span class="sxs-lookup"><span data-stu-id="19731-159">Back to top</span></span>](#top)  
   
 <a name="rundown"></a>   
-### <a name="clr-etw-rundown-keywords"></a>CLR ETW 断开关键字  
- 下表列出了 CLR ETW 断开关键字、它们的值以及它们的用途。  
+### <a name="clr-etw-rundown-keywords"></a><span data-ttu-id="19731-160">CLR ETW 断开关键字</span><span class="sxs-lookup"><span data-stu-id="19731-160">CLR ETW Rundown Keywords</span></span>  
+ <span data-ttu-id="19731-161">下表列出了 CLR ETW 断开关键字、它们的值以及它们的用途。</span><span class="sxs-lookup"><span data-stu-id="19731-161">The following table lists the CLR ETW rundown keywords, their values, and what they are used for.</span></span>  
   
-|断开关键字名称|值|目标|  
+|<span data-ttu-id="19731-162">断开关键字名称</span><span class="sxs-lookup"><span data-stu-id="19731-162">Rundown keyword name</span></span>|<span data-ttu-id="19731-163">值</span><span class="sxs-lookup"><span data-stu-id="19731-163">Value</span></span>|<span data-ttu-id="19731-164">目标</span><span class="sxs-lookup"><span data-stu-id="19731-164">Purpose</span></span>|  
 |--------------------------|-----------|-------------|  
-|`LoaderRundownKeyword`|0x00000008|当与 `StartRundownKeyword` 和 `EndRundownKeyword`一起使用时启用加载程序事件的回收。|  
-|`JitRundownKeyword`|0x00000010|当与 `DCStart` 和 `DCEnd` 一起使用时启用 JIT 编译的方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。|  
-|`NGenRundownKeyword`|0x00000020|当与 `DCStart` 和 `DCEnd` 一起使用时启用 NGen 本机映像方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。 此关键字具有高开销。 它将在每个加载的 NGen 模块内生成每个方法的事件。 只要有可能，我们建议使用由分析工具生成的程序数据库 (PDB) 从 NGen 模块检索有关方法的信息，而不是使用此关键字。 另请参阅此表后面的 `OverrideAndSuppressNGenEventsRundownKeyword` 。|  
-|`StartRundownKeyword`|0x00000040|在开始断开期间启用系统状态的枚举。|  
-|`EndRundownKeyword`|0x00000100|在结束断开期间启用系统状态的枚举。|  
-|`AppDomainResourceManagementRundownKeyword`|0x00000800|当与 <xref:System.AppDomain> 或 `StartRundownKeyword` 一起使用时启用 `EndRundownKeyword`级别的资源监视的事件的回收。|  
-|`ThreadingKeyword`|0x00010000|启用线程池事件的回收。|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|（在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenRundownKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsRundownKeyword` 和 `NGenRundownKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsRundownKeyword` 并将处理 `NGenRundownKeyword` 以生成 NGen 模块内方法的事件。|  
-|`PerfTrackKeyWord`|0x2000000|启用 `ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`和 `ModuleRangeDCEnd` 事件的回收。|  
+|`LoaderRundownKeyword`|<span data-ttu-id="19731-165">0x00000008</span><span class="sxs-lookup"><span data-stu-id="19731-165">0x00000008</span></span>|<span data-ttu-id="19731-166">当与 `StartRundownKeyword` 和 `EndRundownKeyword`一起使用时启用加载程序事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-166">Enables the collection of loader events when used with `StartRundownKeyword` and `EndRundownKeyword`.</span></span>|  
+|`JitRundownKeyword`|<span data-ttu-id="19731-167">0x00000010</span><span class="sxs-lookup"><span data-stu-id="19731-167">0x00000010</span></span>|<span data-ttu-id="19731-168">当与 `DCStart` 和 `DCEnd` 一起使用时启用 JIT 编译的方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-168">Enables the collection of method `DCStart` and `DCEnd` events for JIT-compiled methods when used with `StartRundownKeyword` and `EndRundownKeyword`.</span></span>|  
+|`NGenRundownKeyword`|<span data-ttu-id="19731-169">0x00000020</span><span class="sxs-lookup"><span data-stu-id="19731-169">0x00000020</span></span>|<span data-ttu-id="19731-170">当与 `DCStart` 和 `DCEnd` 一起使用时启用 NGen 本机映像方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-170">Enables the collection of method `DCStart` and `DCEnd` events for NGen native image methods when used with `StartRundownKeyword` and `EndRundownKeyword`.</span></span> <span data-ttu-id="19731-171">此关键字具有高开销。</span><span class="sxs-lookup"><span data-stu-id="19731-171">This keyword has high overhead.</span></span> <span data-ttu-id="19731-172">它将在每个加载的 NGen 模块内生成每个方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-172">It generates events for every method inside every loaded NGen module.</span></span> <span data-ttu-id="19731-173">只要有可能，我们建议使用由分析工具生成的程序数据库 (PDB) 从 NGen 模块检索有关方法的信息，而不是使用此关键字。</span><span class="sxs-lookup"><span data-stu-id="19731-173">Whenever possible, instead of using this keyword, we recommend that you use the program databases (PDBs) generated by profiling tools to retrieve information about methods from NGen modules.</span></span> <span data-ttu-id="19731-174">另请参阅此表后面的 `OverrideAndSuppressNGenEventsRundownKeyword` 。</span><span class="sxs-lookup"><span data-stu-id="19731-174">See also `OverrideAndSuppressNGenEventsRundownKeyword` later in this table.</span></span>|  
+|`StartRundownKeyword`|<span data-ttu-id="19731-175">0x00000040</span><span class="sxs-lookup"><span data-stu-id="19731-175">0x00000040</span></span>|<span data-ttu-id="19731-176">在开始断开期间启用系统状态的枚举。</span><span class="sxs-lookup"><span data-stu-id="19731-176">Enables the enumeration of system state during a start rundown.</span></span>|  
+|`EndRundownKeyword`|<span data-ttu-id="19731-177">0x00000100</span><span class="sxs-lookup"><span data-stu-id="19731-177">0x00000100</span></span>|<span data-ttu-id="19731-178">在结束断开期间启用系统状态的枚举。</span><span class="sxs-lookup"><span data-stu-id="19731-178">Enables the enumeration of system state during an end rundown.</span></span>|  
+|`AppDomainResourceManagementRundownKeyword`|<span data-ttu-id="19731-179">0x00000800</span><span class="sxs-lookup"><span data-stu-id="19731-179">0x00000800</span></span>|<span data-ttu-id="19731-180">当与 <xref:System.AppDomain> 或 `StartRundownKeyword` 一起使用时启用 `EndRundownKeyword`级别的资源监视的事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-180">Enables the collection of events for resource monitoring at an <xref:System.AppDomain> level when used with `StartRundownKeyword` or `EndRundownKeyword`.</span></span>|  
+|`ThreadingKeyword`|<span data-ttu-id="19731-181">0x00010000</span><span class="sxs-lookup"><span data-stu-id="19731-181">0x00010000</span></span>|<span data-ttu-id="19731-182">启用线程池事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-182">Enables the collection of thread pool events.</span></span>|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|<span data-ttu-id="19731-183">0x00040000</span><span class="sxs-lookup"><span data-stu-id="19731-183">0x00040000</span></span>|<span data-ttu-id="19731-184">（在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenRundownKeyword` 关键字，并防止生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-184">(Available in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] and later.) Suppresses the high-overhead `NGenRundownKeyword` keyword and prevents the generation of events for methods that are inside NGen modules.</span></span> <span data-ttu-id="19731-185">从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsRundownKeyword` 和 `NGenRundownKeyword` 以取消生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-185">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], profiling tools should use `OverrideAndSuppressNGenEventsRundownKeyword` and `NGenRundownKeyword` together to suppress the generation of events for methods in NGen modules.</span></span> <span data-ttu-id="19731-186">这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。</span><span class="sxs-lookup"><span data-stu-id="19731-186">This enables the profiling tool to use the more efficient NGen PDBs to get information about methods in NGen modules.</span></span> <span data-ttu-id="19731-187">.NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。</span><span class="sxs-lookup"><span data-stu-id="19731-187">The CLR in the .NET Framework 4 and earlier versions does not support the creation of NGen PDBs.</span></span> <span data-ttu-id="19731-188">在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsRundownKeyword` 并将处理 `NGenRundownKeyword` 以生成 NGen 模块内方法的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-188">In these earlier versions, the CLR will not recognize `OverrideAndSuppressNGenEventsRundownKeyword` and will process `NGenRundownKeyword` to generate events for methods in NGen modules.</span></span>|  
+|`PerfTrackKeyWord`|<span data-ttu-id="19731-189">0x2000000</span><span class="sxs-lookup"><span data-stu-id="19731-189">0x2000000</span></span>|<span data-ttu-id="19731-190">启用 `ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`和 `ModuleRangeDCEnd` 事件的回收。</span><span class="sxs-lookup"><span data-stu-id="19731-190">Enables the collection of the `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`, and `ModuleRangeDCEnd` events.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="19731-191">返回页首</span><span class="sxs-lookup"><span data-stu-id="19731-191">Back to top</span></span>](#top)  
   
 <a name="runtime_combo"></a>   
-### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>用于运行时提供程序的符号解析的关键字组合  
+### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a><span data-ttu-id="19731-192">用于运行时提供程序的符号解析的关键字组合</span><span class="sxs-lookup"><span data-stu-id="19731-192">Keyword Combinations for Symbol Resolution for the Runtime Provider</span></span>  
   
-|关键字和标志|应用程序域、程序集、模块加载/卸载事件|方法加载/卸载事件（动态事件除外）|动态方法加载/销毁事件|  
+|<span data-ttu-id="19731-193">关键字和标志</span><span class="sxs-lookup"><span data-stu-id="19731-193">Keywords and flags</span></span>|<span data-ttu-id="19731-194">应用程序域、程序集、模块加载/卸载事件</span><span class="sxs-lookup"><span data-stu-id="19731-194">Application domain, assembly, module load/unload events</span></span>|<span data-ttu-id="19731-195">方法加载/卸载事件（动态事件除外）</span><span class="sxs-lookup"><span data-stu-id="19731-195">Method load/unload events (except dynamic events)</span></span>|<span data-ttu-id="19731-196">动态方法加载/销毁事件</span><span class="sxs-lookup"><span data-stu-id="19731-196">Dynamic method load/destroy events</span></span>|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|加载和卸载事件。|无。|无。|  
-|`JITKeyword`<br /><br /> （+ `StartEnumerationKeyword` 不添加任何内容）|无。|加载事件。|加载和卸载事件。|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|无。|加载和卸载事件。|加载和卸载事件。|  
-|`NGenKeyword`|无。|无。|不适用。|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|无。|加载事件。|不适用。|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|无。|卸载事件。|不适用。|  
+|`LoaderKeyword`|<span data-ttu-id="19731-197">加载和卸载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-197">Load and unload events.</span></span>|<span data-ttu-id="19731-198">无。</span><span class="sxs-lookup"><span data-stu-id="19731-198">None.</span></span>|<span data-ttu-id="19731-199">无。</span><span class="sxs-lookup"><span data-stu-id="19731-199">None.</span></span>|  
+|`JITKeyword`<br /><br /> <span data-ttu-id="19731-200">（+ `StartEnumerationKeyword` 不添加任何内容）</span><span class="sxs-lookup"><span data-stu-id="19731-200">(+ `StartEnumerationKeyword` does not add anything)</span></span>|<span data-ttu-id="19731-201">无。</span><span class="sxs-lookup"><span data-stu-id="19731-201">None.</span></span>|<span data-ttu-id="19731-202">加载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-202">Load events.</span></span>|<span data-ttu-id="19731-203">加载和卸载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-203">Load and unload events.</span></span>|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|<span data-ttu-id="19731-204">无。</span><span class="sxs-lookup"><span data-stu-id="19731-204">None.</span></span>|<span data-ttu-id="19731-205">加载和卸载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-205">Load and unload events.</span></span>|<span data-ttu-id="19731-206">加载和卸载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-206">Load and unload events.</span></span>|  
+|`NGenKeyword`|<span data-ttu-id="19731-207">无。</span><span class="sxs-lookup"><span data-stu-id="19731-207">None.</span></span>|<span data-ttu-id="19731-208">无。</span><span class="sxs-lookup"><span data-stu-id="19731-208">None.</span></span>|<span data-ttu-id="19731-209">不适用。</span><span class="sxs-lookup"><span data-stu-id="19731-209">Not applicable.</span></span>|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|<span data-ttu-id="19731-210">无。</span><span class="sxs-lookup"><span data-stu-id="19731-210">None.</span></span>|<span data-ttu-id="19731-211">加载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-211">Load events.</span></span>|<span data-ttu-id="19731-212">不适用。</span><span class="sxs-lookup"><span data-stu-id="19731-212">Not applicable.</span></span>|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|<span data-ttu-id="19731-213">无。</span><span class="sxs-lookup"><span data-stu-id="19731-213">None.</span></span>|<span data-ttu-id="19731-214">卸载事件。</span><span class="sxs-lookup"><span data-stu-id="19731-214">Unload events.</span></span>|<span data-ttu-id="19731-215">不适用。</span><span class="sxs-lookup"><span data-stu-id="19731-215">Not applicable.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="19731-216">返回页首</span><span class="sxs-lookup"><span data-stu-id="19731-216">Back to top</span></span>](#top)  
   
 <a name="rundown_combo"></a>   
-### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>用于断开提供程序的符号解析的关键字组合  
+### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a><span data-ttu-id="19731-217">用于断开提供程序的符号解析的关键字组合</span><span class="sxs-lookup"><span data-stu-id="19731-217">Keyword Combinations for Symbol Resolution for the Rundown Provider</span></span>  
   
-|关键字和标志|应用程序域、程序集、模块 DCStart/DCEnd 事件|方法 DCStart/DCEnd 事件（包括动态方法事件）|  
+|<span data-ttu-id="19731-218">关键字和标志</span><span class="sxs-lookup"><span data-stu-id="19731-218">Keywords and flags</span></span>|<span data-ttu-id="19731-219">应用程序域、程序集、模块 DCStart/DCEnd 事件</span><span class="sxs-lookup"><span data-stu-id="19731-219">Application domain, assembly, module DCStart/DCEnd events</span></span>|<span data-ttu-id="19731-220">方法 DCStart/DCEnd 事件（包括动态方法事件）</span><span class="sxs-lookup"><span data-stu-id="19731-220">Method DCStart/DCEnd events (including dynamic method events)</span></span>|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 事件。|无。|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 事件。|无。|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|无。|`DCStart` 事件。|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|无。|`DCEnd` 事件。|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|无。|`DCStart` 事件。|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|无。|`DCEnd` 事件。|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|<span data-ttu-id="19731-221">`DCStart` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-221">`DCStart` events.</span></span>|<span data-ttu-id="19731-222">无。</span><span class="sxs-lookup"><span data-stu-id="19731-222">None.</span></span>|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|<span data-ttu-id="19731-223">`DCEnd` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-223">`DCEnd` events.</span></span>|<span data-ttu-id="19731-224">无。</span><span class="sxs-lookup"><span data-stu-id="19731-224">None.</span></span>|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|<span data-ttu-id="19731-225">无。</span><span class="sxs-lookup"><span data-stu-id="19731-225">None.</span></span>|<span data-ttu-id="19731-226">`DCStart` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-226">`DCStart` events.</span></span>|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|<span data-ttu-id="19731-227">无。</span><span class="sxs-lookup"><span data-stu-id="19731-227">None.</span></span>|<span data-ttu-id="19731-228">`DCEnd` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-228">`DCEnd` events.</span></span>|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|<span data-ttu-id="19731-229">无。</span><span class="sxs-lookup"><span data-stu-id="19731-229">None.</span></span>|<span data-ttu-id="19731-230">`DCStart` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-230">`DCStart` events.</span></span>|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|<span data-ttu-id="19731-231">无。</span><span class="sxs-lookup"><span data-stu-id="19731-231">None.</span></span>|<span data-ttu-id="19731-232">`DCEnd` 事件。</span><span class="sxs-lookup"><span data-stu-id="19731-232">`DCEnd` events.</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="19731-233">返回页首</span><span class="sxs-lookup"><span data-stu-id="19731-233">Back to top</span></span>](#top)  
   
 <a name="levels"></a>   
-## <a name="etw-event-levels"></a>ETW 事件级别  
- ETW 事件还可按级别进行筛选。 如果级别设置为 0x5，则会引发包括 0x5 及以下级别的事件（这些事件属于通过关键字启用的类别）。 如果级别设置为 0x2，则只会引发 0x2 及以下级别的事件。  
+## <a name="etw-event-levels"></a><span data-ttu-id="19731-234">ETW 事件级别</span><span class="sxs-lookup"><span data-stu-id="19731-234">ETW Event Levels</span></span>  
+ <span data-ttu-id="19731-235">ETW 事件还可按级别进行筛选。</span><span class="sxs-lookup"><span data-stu-id="19731-235">ETW events can also be filtered by level.</span></span> <span data-ttu-id="19731-236">如果级别设置为 0x5，则会引发包括 0x5 及以下级别的事件（这些事件属于通过关键字启用的类别）。</span><span class="sxs-lookup"><span data-stu-id="19731-236">If the level is set at 0x5, events of all levels, including 0x5 and below (which are events that belong to categories enabled through keywords) are raised.</span></span> <span data-ttu-id="19731-237">如果级别设置为 0x2，则只会引发 0x2 及以下级别的事件。</span><span class="sxs-lookup"><span data-stu-id="19731-237">If the level is set at 0x2, only events that belong to level 0x2 and below are raised.</span></span>  
   
- 级别具有以下含义：  
+ <span data-ttu-id="19731-238">级别具有以下含义：</span><span class="sxs-lookup"><span data-stu-id="19731-238">The levels have the following meanings:</span></span>  
   
- 0x5 - 详细  
+ <span data-ttu-id="19731-239">0x5 - 详细</span><span class="sxs-lookup"><span data-stu-id="19731-239">0x5 - Verbose</span></span>  
   
- 0x4 - 信息性  
+ <span data-ttu-id="19731-240">0x4 - 信息性</span><span class="sxs-lookup"><span data-stu-id="19731-240">0x4 - Informational</span></span>  
   
- 0x3 - 警告  
+ <span data-ttu-id="19731-241">0x3 - 警告</span><span class="sxs-lookup"><span data-stu-id="19731-241">0x3 - Warning</span></span>  
   
- 0x2 - 错误  
+ <span data-ttu-id="19731-242">0x2 - 错误</span><span class="sxs-lookup"><span data-stu-id="19731-242">0x2 - Error</span></span>  
   
- 0x1 - 严重  
+ <span data-ttu-id="19731-243">0x1 - 严重</span><span class="sxs-lookup"><span data-stu-id="19731-243">0x1 - Critical</span></span>  
   
- 0x0 - LogAlways  
+ <span data-ttu-id="19731-244">0x0 - LogAlways</span><span class="sxs-lookup"><span data-stu-id="19731-244">0x0 - LogAlways</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [CLR ETW 提供程序](../../../docs/framework/performance/clr-etw-providers.md)   
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)   
- [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
-
+## <a name="see-also"></a><span data-ttu-id="19731-245">另请参阅</span><span class="sxs-lookup"><span data-stu-id="19731-245">See Also</span></span>  
+ [<span data-ttu-id="19731-246">CLR ETW 提供程序</span><span class="sxs-lookup"><span data-stu-id="19731-246">CLR ETW Providers</span></span>](../../../docs/framework/performance/clr-etw-providers.md)  
+ [<span data-ttu-id="19731-247">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="19731-247">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)  
+ [<span data-ttu-id="19731-248">公共语言运行时中的 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="19731-248">ETW Events in the Common Language Runtime</span></span>](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

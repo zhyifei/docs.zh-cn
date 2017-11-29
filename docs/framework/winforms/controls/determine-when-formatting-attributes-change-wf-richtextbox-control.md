@@ -1,37 +1,41 @@
 ---
-title: "如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], 文本框"
-  - "RichTextBox 控件 [Windows 窗体], 确定字体更改"
-  - "SelBold 属性"
-  - "SelChange 事件"
-  - "文本框, 确定字体更改"
+title: "如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], determining font changes
+- text boxes [Windows Forms], determining font changes
+- SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改
-Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的通常用途是使用字体选项或段落样式等特性来格式化文本。  如许多字处理应用程序一样，您的应用程序可能需要跟踪文本格式设置的任何更改，以便显示工具栏。  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="01dc1-102">如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改</span><span class="sxs-lookup"><span data-stu-id="01dc1-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="01dc1-103">一种常用的 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件格式化文本属性例如字体选项或段落样式。</span><span class="sxs-lookup"><span data-stu-id="01dc1-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="01dc1-104">你的应用程序可能需要跟踪的文本格式用于显示一个工具栏，如下所示许多字处理应用程序中的任何更改。</span><span class="sxs-lookup"><span data-stu-id="01dc1-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
   
-### 响应格式特性的更改  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="01dc1-105">若要响应的格式设置特性的更改</span><span class="sxs-lookup"><span data-stu-id="01dc1-105">To respond to changes in formatting attributes</span></span>  
   
-1.  在 <xref:System.Windows.Forms.RichTextBox.SelectionChanged> 事件处理程序中编写代码以根据特性值来执行合适的操作。  下面的示例根据 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 属性的值来更改工具栏按钮的外观。  只有当插入点在控件中移动时，才会更新工具栏按钮。  
+1.  <span data-ttu-id="01dc1-106">在中编写代码<xref:System.Windows.Forms.RichTextBox.SelectionChanged>事件处理程序来执行相应的措施具体取决于值的属性。</span><span class="sxs-lookup"><span data-stu-id="01dc1-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="01dc1-107">下面的示例更改的值根据工具栏按钮的外观<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="01dc1-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="01dc1-108">插入点移动控件中时，将仅更新工具栏按钮。</span><span class="sxs-lookup"><span data-stu-id="01dc1-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
   
-     下面的示例假定窗体具有一个 <xref:System.Windows.Forms.RichTextBox> 控件和一个包含工具栏按钮的 <xref:System.Windows.Forms.ToolBar> 控件。  有关工具栏以及工具栏按钮的更多信息，请参见 [如何：向 ToolBar 控件添加按钮](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)。  
+     <span data-ttu-id="01dc1-109">下面的示例假定的窗体具有<xref:System.Windows.Forms.RichTextBox>控件和<xref:System.Windows.Forms.ToolBar>包含一个工具栏按钮控件。</span><span class="sxs-lookup"><span data-stu-id="01dc1-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="01dc1-110">工具栏和工具栏按钮有关的详细信息，请参阅[如何： 向 ToolBar 控件添加按钮](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)。</span><span class="sxs-lookup"><span data-stu-id="01dc1-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -45,7 +49,6 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的通常用途是�
            ToolBarButton1.Pushed = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,7 +68,6 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的通常用途是�
           toolBarButton1.Pushed = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -88,8 +90,8 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件的通常用途是�
        }  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.RichTextBox.SelectionChanged>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="01dc1-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="01dc1-111">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="01dc1-112">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="01dc1-112">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="01dc1-113">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="01dc1-113">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

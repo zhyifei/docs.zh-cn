@@ -1,33 +1,38 @@
 ---
-title: "如何：使用 BitmapImage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "位图图像"
-  - "BitmapImage 类"
-  - "XAML, 使用 BitmapImage"
+title: "如何：使用 BitmapImage"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmap images [WPF]
+- XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02de0c3ce1d24b44a9ab3780af9832ca4a6aff68
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：使用 BitmapImage
-本示例演示如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中将 <xref:System.Windows.Media.Imaging.BitmapImage> 作为 <xref:System.Windows.Controls.Image> 控件的源使用。  
+# <a name="how-to-use-a-bitmapimage"></a><span data-ttu-id="2cec2-102">如何：使用 BitmapImage</span><span class="sxs-lookup"><span data-stu-id="2cec2-102">How to: Use a BitmapImage</span></span>
+<span data-ttu-id="2cec2-103">此示例演示如何使用<xref:System.Windows.Media.Imaging.BitmapImage>作为源的<xref:System.Windows.Controls.Image>中控制[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2cec2-103">This example shows how to use a <xref:System.Windows.Media.Imaging.BitmapImage> as the source of an <xref:System.Windows.Controls.Image> control in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## 示例  
- [!code-xml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+## <a name="example"></a><span data-ttu-id="2cec2-104">示例</span><span class="sxs-lookup"><span data-stu-id="2cec2-104">Example</span></span>  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-## 请参阅  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2cec2-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2cec2-105">See Also</span></span>  
+ [<span data-ttu-id="2cec2-106">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="2cec2-106">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

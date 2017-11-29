@@ -1,58 +1,59 @@
 ---
-title: "如何：将非对称密钥存储在密钥容器中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "非对称密钥 [.NET Framework]"
-  - "密码系统 [.NET Framework], 非对称密钥"
-  - "解密密钥"
-  - "加密 [.NET Framework], 非对称密钥"
-  - "加密密钥"
-  - "键, 不对称"
-  - "键, 存储在密钥容器中"
-  - "存储非对称密钥"
+title: "如何：将非对称密钥存储在密钥容器中"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [.NET Framework], asymmetric keys
+- storing asymmetric keys
+- keys, asymmetric
+- encryption keys
+- keys, storing in key containers
+- asymmetric keys [.NET Framework]
+- encryption [.NET Framework], asymmetric keys
+- decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：将非对称密钥存储在密钥容器中
-非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。  如果需要存储私钥，则应使用密钥容器。  有关密钥容器的详细信息，请参阅[Understanding Machine\-Level and User\-Level RSA Key Containers](../Topic/Understanding%20Machine-Level%20and%20User-Level%20RSA%20Key%20Containers.md)。  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="fe755-102">如何：将非对称密钥存储在密钥容器中</span><span class="sxs-lookup"><span data-stu-id="fe755-102">How to: Store Asymmetric Keys in a Key Container</span></span>
+<span data-ttu-id="fe755-103">非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。</span><span class="sxs-lookup"><span data-stu-id="fe755-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="fe755-104">如果需要存储私钥，则应使用密钥容器。</span><span class="sxs-lookup"><span data-stu-id="fe755-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="fe755-105">有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。</span><span class="sxs-lookup"><span data-stu-id="fe755-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).</span></span>  
   
-### 创建非对称密钥并且将它保存在密钥容器中  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="fe755-106">创建非对称密钥并且将它保存在密钥容器中</span><span class="sxs-lookup"><span data-stu-id="fe755-106">To create an asymmetric key and save it in a key container</span></span>  
   
-1.  创建 <xref:System.Security.Cryptography.CspParameters> 类的一个新实例，并将你想让密钥容器使用的名称传递给 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=fullName> 字段。  
+1.  <span data-ttu-id="fe755-107">创建的新实例<xref:System.Security.Cryptography.CspParameters>类并将你想要调用到密钥容器的名称传递<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>字段。</span><span class="sxs-lookup"><span data-stu-id="fe755-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
   
-2.  为从 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 类派生的一个类（通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**）创建一个新实例，并将先前创建的 **CspParameters** 对象传递给其构造函数。  
+2.  <span data-ttu-id="fe755-108">创建派生自的类的新实例<xref:System.Security.Cryptography.AsymmetricAlgorithm>类 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**) 和传递先前创建**CspParameters**给其构造函数的对象。</span><span class="sxs-lookup"><span data-stu-id="fe755-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-### 从密钥容器删除密钥  
+### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="fe755-109">从密钥容器删除密钥</span><span class="sxs-lookup"><span data-stu-id="fe755-109">To delete the key from a key container</span></span>  
   
-1.  创建 **CspParameters** 类的一个新实例，并将你想让密钥容器使用的名称传递给 **CspParameters.KeyContainerName** 字段。  
+1.  <span data-ttu-id="fe755-110">创建 **CspParameters** 类的一个新实例，并将想让密钥容器使用的名称传递给 **CspParameters.KeyContainerName** 字段。</span><span class="sxs-lookup"><span data-stu-id="fe755-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
   
-2.  为从 **AsymmetricAlgorithm** 类派生的一个类（通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**）创建一个新实例，并将先前创建的 **CspParameters** 对象传递给其构造函数。  
+2.  <span data-ttu-id="fe755-111">为从 **AsymmetricAlgorithm** 类派生的一个类（通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**）创建一个新实例，并将先前创建的 **CspParameters** 对象传递给其构造函数。</span><span class="sxs-lookup"><span data-stu-id="fe755-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-3.  将从 **AsymmetricAlgorithm** 中派生的类的 **PersistKeyInCSP** 属性设置为 **false**（在 Visual Basic 中为 **False**）。  
+3.  <span data-ttu-id="fe755-112">将从 **AsymmetricAlgorithm** 派生的类的 **PersistKeyInCSP** 属性设置为 **false**（在 Visual Basic 中为 **False**）。</span><span class="sxs-lookup"><span data-stu-id="fe755-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
   
-4.  调用从 **AsymmetricAlgorithm** 派生的类的 **Clear** 方法。  该方法释放该类所有的资源并清除密钥容器。  
+4.  <span data-ttu-id="fe755-113">调用从 **AsymmetricAlgorithm** 派生的类的 **Clear** 方法。</span><span class="sxs-lookup"><span data-stu-id="fe755-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="fe755-114">该方法释放该类所有的资源并清除密钥容器。</span><span class="sxs-lookup"><span data-stu-id="fe755-114">This method releases all resources of the class and clears the key container.</span></span>  
   
-## 示例  
- 下面的示例说明下面这一过程：创建一个非对称密钥，将其保存在密钥容器中，以后检索此密钥，最后从该容器中删除此密钥。  
+## <a name="example"></a><span data-ttu-id="fe755-115">示例</span><span class="sxs-lookup"><span data-stu-id="fe755-115">Example</span></span>  
+ <span data-ttu-id="fe755-116">下面的示例说明下面这一过程：创建一个非对称密钥，将其保存在密钥容器中，以后检索此密钥，最后从该容器中删除此密钥。</span><span class="sxs-lookup"><span data-stu-id="fe755-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
   
- 请注意，`GenKey_SaveInContainer` 方法和 `GetKeyFromContainer` 方法的代码相似。  当为 <xref:System.Security.Cryptography.CspParameters> 对象指定密钥容器名称并将其传递给 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 属性或 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> 属性设置为 true 的 <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> 对象时，将会发生以下情况。  如果附带指定名称的密钥容器不存在，那么将创建一个并且该密钥保持不变。  如果确实存在具有指定名称的密钥容器，则将此容器中的密钥自动加载到当前 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 对象中。  因此，`GenKey_SaveInContainer` 方法中的代码保持密钥不变，因为它首先运行；而 `GetKeyFromContainer` 方法中的代码加载此密钥，因为它随后运行。  
+ <span data-ttu-id="fe755-117">请注意，`GenKey_SaveInContainer` 方法和 `GetKeyFromContainer` 方法的代码相似。</span><span class="sxs-lookup"><span data-stu-id="fe755-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="fe755-118">当为 <xref:System.Security.Cryptography.CspParameters> 对象指定密钥容器名称并将其传递给 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 属性或 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> 属性设置为 true 的 <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> 对象时，将会发生以下情况。</span><span class="sxs-lookup"><span data-stu-id="fe755-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="fe755-119">如果附带指定名称的密钥容器不存在，那么将创建一个并且该密钥保持不变。</span><span class="sxs-lookup"><span data-stu-id="fe755-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="fe755-120">如果确实存在具有指定名称的密钥容器，则将此容器中的密钥自动加载到当前 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 对象中。</span><span class="sxs-lookup"><span data-stu-id="fe755-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="fe755-121">因此，`GenKey_SaveInContainer` 方法中的代码保持密钥不变，因为它首先运行；而 `GetKeyFromContainer` 方法中的代码加载此密钥，因为它随后运行。</span><span class="sxs-lookup"><span data-stu-id="fe755-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
   
 ```vb  
 Imports System  
@@ -130,7 +131,6 @@ Public Class StoreKey
         Console.WriteLine("Key deleted.")  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -220,18 +220,18 @@ public class StoreKey
 ```  
   
 ```Output  
-  
-            已添加到容器中的密钥：  
-<RSAKeyValue>密钥信息 A</RSAKeyValue>  
-从容器中检索到的密钥：  
-<RSAKeyValue>密钥信息 A</RSAKeyValue>  
-已删除的密钥。  已添加到容器中的密钥：  
-<RSAKeyValue>密钥信息 B</RSAKeyValue>  
-已删除的密钥。    
+Key added to container:  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key retrieved from container :  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key deleted.  
+Key added to container:  
+<RSAKeyValue> Key Information B</RSAKeyValue>  
+Key deleted.  
 ```  
   
-## 请参阅  
- [生成加密和解密的密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)   
- [加密数据](../../../docs/standard/security/encrypting-data.md)   
- [解密数据](../../../docs/standard/security/decrypting-data.md)   
- [加密服务](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="fe755-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fe755-122">See Also</span></span>  
+ [<span data-ttu-id="fe755-123">生成加密和解密密钥</span><span class="sxs-lookup"><span data-stu-id="fe755-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [<span data-ttu-id="fe755-124">加密数据</span><span class="sxs-lookup"><span data-stu-id="fe755-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)  
+ [<span data-ttu-id="fe755-125">解密数据</span><span class="sxs-lookup"><span data-stu-id="fe755-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)  
+ [<span data-ttu-id="fe755-126">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="fe755-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

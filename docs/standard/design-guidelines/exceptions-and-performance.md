@@ -1,48 +1,46 @@
 ---
-title: "异常和性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "tester-doer 模式"
-  - "Tryparse"
-  - "引发的异常"
-  - "例外情况之外性能"
-  - "引发异常，性能"
+title: "异常和性能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tester-doer pattern
+- TryParse pattern
+- exceptions, throwing
+- exceptions, performance
+- throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 异常和性能
-与异常相关的一个常见的问题都是这样如果经常性执行失败的代码使用了异常，该实现的性能不可接受。 这是值得关注的问题。 当成员引发了异常时，其性能，可以是数量级的速度较慢。 但是，就可以实现很好的性能，同时严格符合不允许使用错误代码的异常指导原则。 本部分中所述的两个模式建议执行此操作的方法。  
+# <a name="exceptions-and-performance"></a><span data-ttu-id="1b497-102">异常和性能</span><span class="sxs-lookup"><span data-stu-id="1b497-102">Exceptions and Performance</span></span>
+<span data-ttu-id="1b497-103">与异常相关的一个常见问题是，如果使用异常来进行例行失败的代码，实现的性能将无法接受。</span><span class="sxs-lookup"><span data-stu-id="1b497-103">One common concern related to exceptions is that if exceptions are used for code that routinely fails, the performance of the implementation will be unacceptable.</span></span> <span data-ttu-id="1b497-104">这是一个有效的问题。</span><span class="sxs-lookup"><span data-stu-id="1b497-104">This is a valid concern.</span></span> <span data-ttu-id="1b497-105">在成员引发了异常，其性能可能会极大地速度较慢。</span><span class="sxs-lookup"><span data-stu-id="1b497-105">When a member throws an exception, its performance can be orders of magnitude slower.</span></span> <span data-ttu-id="1b497-106">但是，很可能来实现良好性能时严格符合禁止使用错误代码的异常指导原则。</span><span class="sxs-lookup"><span data-stu-id="1b497-106">However, it is possible to achieve good performance while strictly adhering to the exception guidelines that disallow using error codes.</span></span> <span data-ttu-id="1b497-107">本节中所述的两种模式建议执行此操作的方法。</span><span class="sxs-lookup"><span data-stu-id="1b497-107">Two patterns described in this section suggest ways to do this.</span></span>  
   
- **X 不** 由于异常可能会对性能产生负面影响的问题而使用错误代码。  
+ <span data-ttu-id="1b497-108">**X 不**由于异常可能会对性能产生负面影响的问题，因此使用错误代码。</span><span class="sxs-lookup"><span data-stu-id="1b497-108">**X DO NOT** use error codes because of concerns that exceptions might affect performance negatively.</span></span>  
   
- 为了提高性能，则可以使用 Tester\-doer 模式或尝试分析模式中，接下来的两部分中所述。  
+ <span data-ttu-id="1b497-109">若要提高性能，它是可以使用 Tester-doer 模式或尝试分析模式，接下来的两部分中所述。</span><span class="sxs-lookup"><span data-stu-id="1b497-109">To improve performance, it is possible to use either the Tester-Doer Pattern or the Try-Parse Pattern, described in the next two sections.</span></span>  
   
-## Tester\-doer 模式  
- 有时可通过成员分为两部分提高性能的引发异常的成员。 让我们看一下 <xref:System.Collections.Generic.ICollection%601.Add%2A> 方法 <xref:System.Collections.Generic.ICollection%601> 接口。  
+## <a name="tester-doer-pattern"></a><span data-ttu-id="1b497-110">Tester-doer 模式</span><span class="sxs-lookup"><span data-stu-id="1b497-110">Tester-Doer Pattern</span></span>  
+ <span data-ttu-id="1b497-111">有时可通过成员拆分为两个改善性能的异常引发的成员。</span><span class="sxs-lookup"><span data-stu-id="1b497-111">Sometimes performance of an exception-throwing member can be improved by breaking the member into two.</span></span> <span data-ttu-id="1b497-112">让我们看一下<xref:System.Collections.Generic.ICollection%601.Add%2A>方法<xref:System.Collections.Generic.ICollection%601>接口。</span><span class="sxs-lookup"><span data-stu-id="1b497-112">Let’s look at the <xref:System.Collections.Generic.ICollection%601.Add%2A> method of the <xref:System.Collections.Generic.ICollection%601> interface.</span></span>  
   
 ```  
 ICollection<int> numbers = ...   
 numbers.Add(1);  
 ```  
   
- 该方法 `Add` 集合为只读时引发。 这可能会在方法调用的地方经常失败的情况下的性能问题。 若要缓解这一问题的方法之一是测试集合是否是可写然后再尝试添加一个值。  
+ <span data-ttu-id="1b497-113">该方法`Add`引发如果该集合为只读的。</span><span class="sxs-lookup"><span data-stu-id="1b497-113">The method `Add` throws if the collection is read-only.</span></span> <span data-ttu-id="1b497-114">这可能会在方法调用的地方通常失败的情况下造成性能问题。</span><span class="sxs-lookup"><span data-stu-id="1b497-114">This can be a performance problem in scenarios where the method call is expected to fail often.</span></span> <span data-ttu-id="1b497-115">一种以缓解问题的是测试集合是否是可写之前尝试添加一个值。</span><span class="sxs-lookup"><span data-stu-id="1b497-115">One of the ways to mitigate the problem is to test whether the collection is writable before trying to add a value.</span></span>  
   
 ```  
 ICollection<int> numbers = ...   
@@ -52,12 +50,12 @@ if(!numbers.IsReadOnly){
 }  
 ```  
   
- 用于测试条件，它在我们的示例中为该属性的成员 `IsReadOnly`, ，称为测试人员。 用于执行可能引发的操作，该成员 `Add` 方法在示例中，被称为 doer。  
+ <span data-ttu-id="1b497-116">用于测试条件，它在我们的示例中为该属性的成员`IsReadOnly`，简称为测试人员。</span><span class="sxs-lookup"><span data-stu-id="1b497-116">The member used to test a condition, which in our example is the property `IsReadOnly`, is referred to as the tester.</span></span> <span data-ttu-id="1b497-117">用于执行可能引发的操作，该成员`Add`方法在本示例中，称为 doer。</span><span class="sxs-lookup"><span data-stu-id="1b497-117">The member used to perform a potentially throwing operation, the `Add` method in our example, is referred to as the doer.</span></span>  
   
- **✓ 请考虑** 可能引发异常的成员 Tester\-doer 模式在常见方案以避免性能问题与异常相关。  
+ <span data-ttu-id="1b497-118">**请考虑 ✓**可能会引发异常的成员 Tester-doer 模式在常见方案以避免性能问题与异常相关。</span><span class="sxs-lookup"><span data-stu-id="1b497-118">**✓ CONSIDER** the Tester-Doer Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>  
   
-## 尝试分析模式  
- 对于极性能敏感的 Api，应使用更快的运行模式比上一节中所述的 Tester\-doer 模式。 该模式需要调整要进行明确定义测试案例的成员语义的一部分的成员名称。 例如， <xref:System.DateTime> 定义 <xref:System.DateTime.Parse%2A> 字符串的分析失败时引发异常的方法。 它还定义了相应 <xref:System.DateTime.TryParse%2A> ，尝试进行分析，但如果方法返回 false 分析失败并返回成功分析使用结果 `out` 参数。  
+## <a name="try-parse-pattern"></a><span data-ttu-id="1b497-119">尝试分析模式</span><span class="sxs-lookup"><span data-stu-id="1b497-119">Try-Parse Pattern</span></span>  
+ <span data-ttu-id="1b497-120">对于极性能敏感的 Api，应使用一种更快的运行模式，比上一节中所述的 Tester-doer 模式。</span><span class="sxs-lookup"><span data-stu-id="1b497-120">For extremely performance-sensitive APIs, an even faster pattern than the Tester-Doer Pattern described in the previous section should be used.</span></span> <span data-ttu-id="1b497-121">模式需要调整定义完善的测试案例成员语义的一部分的成员名称。</span><span class="sxs-lookup"><span data-stu-id="1b497-121">The pattern calls for adjusting the member name to make a well-defined test case a part of the member semantics.</span></span> <span data-ttu-id="1b497-122">例如，<xref:System.DateTime>定义<xref:System.DateTime.Parse%2A>字符串的分析失败时引发异常的方法。</span><span class="sxs-lookup"><span data-stu-id="1b497-122">For example, <xref:System.DateTime> defines a <xref:System.DateTime.Parse%2A> method that throws an exception if parsing of a string fails.</span></span> <span data-ttu-id="1b497-123">它还定义相应<xref:System.DateTime.TryParse%2A>，尝试进行分析，但如果方法返回 false 分析失败并返回成功分析使用结果`out`参数。</span><span class="sxs-lookup"><span data-stu-id="1b497-123">It also defines a corresponding <xref:System.DateTime.TryParse%2A> method that attempts to parse, but returns false if parsing is unsuccessful and returns the result of a successful parsing using an `out` parameter.</span></span>  
   
 ```  
 public struct DateTime {  
@@ -70,18 +68,18 @@ public struct DateTime {
 }  
 ```  
   
- 使用此模式时，务必在严格的术语定义的重试功能。 如果该成员定义完善的重试以外的任何原因失败，该成员仍必须引发相应异常。  
+ <span data-ttu-id="1b497-124">在使用此模式时，务必在术语中严格定义的重试功能。</span><span class="sxs-lookup"><span data-stu-id="1b497-124">When using this pattern, it is important to define the try functionality in strict terms.</span></span> <span data-ttu-id="1b497-125">如果成员的定义完善的重试任何原因失败，该成员必须仍会引发相应异常。</span><span class="sxs-lookup"><span data-stu-id="1b497-125">If the member fails for any reason other than the well-defined try, the member must still throw a corresponding exception.</span></span>  
   
- **✓ 请考虑** 可能引发异常的成员尝试分析模式在常见方案以避免性能问题与异常相关。  
+ <span data-ttu-id="1b497-126">**请考虑 ✓**可能会引发异常的成员尝试分析模式在常见方案以避免性能问题与异常相关。</span><span class="sxs-lookup"><span data-stu-id="1b497-126">**✓ CONSIDER** the Try-Parse Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>  
   
- **✓ 执行** 方法实现此模式对使用该前缀"Try"和一个布尔值返回的类型。  
+ <span data-ttu-id="1b497-127">**✓ 执行**方法实现此模式中使用前缀"Try"和布尔值返回的类型。</span><span class="sxs-lookup"><span data-stu-id="1b497-127">**✓ DO** use the prefix "Try" and Boolean return type for methods implementing this pattern.</span></span>  
   
- **✓ 执行** 提供了用于使用 Try 分析模式每个成员引发异常的成员。  
+ <span data-ttu-id="1b497-128">**✓ 执行**每个成员使用 Try 分析模式提供的异常引发的成员。</span><span class="sxs-lookup"><span data-stu-id="1b497-128">**✓ DO** provide an exception-throwing member for each member using the Try-Parse Pattern.</span></span>  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ <span data-ttu-id="1b497-129">*部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*</span><span class="sxs-lookup"><span data-stu-id="1b497-129">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ <span data-ttu-id="1b497-130">*通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*</span><span class="sxs-lookup"><span data-stu-id="1b497-130">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 请参阅  
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)   
- [异常设计准则](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="1b497-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1b497-131">See Also</span></span>  
+ [<span data-ttu-id="1b497-132">框架设计指南</span><span class="sxs-lookup"><span data-stu-id="1b497-132">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="1b497-133">异常设计准则</span><span class="sxs-lookup"><span data-stu-id="1b497-133">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)

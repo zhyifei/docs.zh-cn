@@ -1,81 +1,87 @@
 ---
-title: "如何：以编程方式编写服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "服务, 创建"
-  - "Windows 服务应用程序, 创建"
+title: "如何：以编程方式编写服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- services, creating
+- Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: 21
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：以编程方式编写服务
-如果选择不使用 Windows 服务项目模板，可以通过自行设置继承和其他基础结构元素来编写自己的服务。  当以编程方式创建服务时，必须执行模板原本可以会为您处理的几个步骤：  
+# <a name="how-to-write-services-programmatically"></a><span data-ttu-id="5bbfe-102">如何：以编程方式编写服务</span><span class="sxs-lookup"><span data-stu-id="5bbfe-102">How to: Write Services Programmatically</span></span>
+<span data-ttu-id="5bbfe-103">如果你选择不使用 Windows 服务项目模板，你可以通过设置继承和其他基础结构元素自己编写你自己的服务。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-103">If you choose not to use the Windows Service project template, you can write your own services by setting up the inheritance and other infrastructure elements yourself.</span></span> <span data-ttu-id="5bbfe-104">当以编程方式创建服务时，你必须执行该模板将为您处理的几个步骤：</span><span class="sxs-lookup"><span data-stu-id="5bbfe-104">When you create a service programmatically, you must perform several steps that the template would otherwise handle for you:</span></span>  
   
--   必须将服务类设置为从 <xref:System.ServiceProcess.ServiceBase> 类继承。  
+-   <span data-ttu-id="5bbfe-105">必须设置服务类继承自<xref:System.ServiceProcess.ServiceBase>类。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-105">You must set up your service class to inherit from the <xref:System.ServiceProcess.ServiceBase> class.</span></span>  
   
--   必须为服务项目创建一个 `Main` 方法，定义要运行的服务并对这些服务调用 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。  
+-   <span data-ttu-id="5bbfe-106">你必须创建`Main`用于定义要运行的服务的服务项目和调用方法<xref:System.ServiceProcess.ServiceBase.Run%2A>对它们的方法。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-106">You must create a `Main` method for your service project that defines the services to run and calls the <xref:System.ServiceProcess.ServiceBase.Run%2A> method on them.</span></span>  
   
--   必须重写 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程，并填写希望它们运行的任何代码。  
+-   <span data-ttu-id="5bbfe-107">必须重写<xref:System.ServiceProcess.ServiceBase.OnStart%2A>和<xref:System.ServiceProcess.ServiceBase.OnStop%2A>过程和任何代码填写你想要运行。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-107">You must override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedures and fill in any code you want them to run.</span></span>  
   
-### 以编程方式编写服务  
+### <a name="to-write-a-service-programmatically"></a><span data-ttu-id="5bbfe-108">若要以编程方式编写服务</span><span class="sxs-lookup"><span data-stu-id="5bbfe-108">To write a service programmatically</span></span>  
   
-1.  创建一个空项目，然后按下列这些步骤创建到所需命名空间的引用：  
+1.  <span data-ttu-id="5bbfe-109">按照这些步骤创建必要的命名空间的引用并创建一个空项目：</span><span class="sxs-lookup"><span data-stu-id="5bbfe-109">Create an empty project and create a reference to the necessary namespaces by following these steps:</span></span>  
   
-    1.  在**“解决方案资源管理器”**中右击**“引用”**节点，再单击**“添加引用”**。  
+    1.  <span data-ttu-id="5bbfe-110">在**解决方案资源管理器**，右键单击**引用**节点，然后单击**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-110">In **Solution Explorer**, right-click the **References** node and click **Add Reference**.</span></span>  
   
-    2.  在**“.NET Framework”**选项卡中，滚动到**“System.dll”**并单击**“选择”**。  
+    2.  <span data-ttu-id="5bbfe-111">上**.NET Framework**选项卡上，向下滚动到**System.dll**单击**选择**。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-111">On the **.NET Framework** tab, scroll to **System.dll** and click **Select**.</span></span>  
   
-    3.  滚动到**“System.ServiceProcess.dll”**并单击**“选择”**。  
+    3.  <span data-ttu-id="5bbfe-112">滚动到**System.ServiceProcess.dll**单击**选择**。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-112">Scroll to **System.ServiceProcess.dll** and click **Select**.</span></span>  
   
-    4.  单击“确定”。  
+    4.  <span data-ttu-id="5bbfe-113">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-113">Click **OK**.</span></span>  
   
-2.  添加一个类并将其配置为从 <xref:System.ServiceProcess.ServiceBase> 继承：  
+2.  <span data-ttu-id="5bbfe-114">添加类并将其配置为从继承<xref:System.ServiceProcess.ServiceBase>:</span><span class="sxs-lookup"><span data-stu-id="5bbfe-114">Add a class and configure it to inherit from <xref:System.ServiceProcess.ServiceBase>:</span></span>  
   
      [!code-csharp[VbRadconService#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#7)]
      [!code-vb[VbRadconService#7](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#7)]  
   
-3.  添加下列代码来配置服务类：  
+3.  <span data-ttu-id="5bbfe-115">添加以下代码来配置你的服务类：</span><span class="sxs-lookup"><span data-stu-id="5bbfe-115">Add the following code to configure your service class:</span></span>  
   
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4.  为类创建 `Main` 方法，并使用它来定义类将包含的服务；`userService1` 是类的名称：  
+4.  <span data-ttu-id="5bbfe-116">创建`Main`方法为您的类，并用它来定义你的类将包含; 的服务`userService1`是类的名称：</span><span class="sxs-lookup"><span data-stu-id="5bbfe-116">Create a `Main` method for your class, and use it to define the service your class will contain; `userService1` is the name of the class:</span></span>  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
   
-5.  重写 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法，并定义希望在服务启动时发生的任何处理。  
+5.  <span data-ttu-id="5bbfe-117">重写<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法，并定义你希望你的服务启动时执行任何的处理。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-117">Override the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and define any processing you want to occur when your service is started.</span></span>  
   
      [!code-csharp[VbRadconService#10](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#10)]
      [!code-vb[VbRadconService#10](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#10)]  
   
-6.  重写要为其定义自定义处理的其他任何方法，并编写代码以确定服务在各种情况中应采取的操作。  
+6.  <span data-ttu-id="5bbfe-118">替代你想要定义自定义，处理的任何其他方法，并编写代码来确定服务中每种情况下应采取的操作。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-118">Override any other methods you want to define custom processing for, and write code to determine the actions the service should take in each case.</span></span>  
   
-7.  添加服务应用程序所必需的安装程序。  有关详细信息，请参阅 [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+7.  <span data-ttu-id="5bbfe-119">添加服务应用程序所必需的安装程序。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-119">Add the necessary installers for your service application.</span></span> <span data-ttu-id="5bbfe-120">有关详细信息，请参阅[如何： 添加到你的服务应用程序的安装程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-120">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
   
-8.  通过从**“生成”**菜单中选择**“生成解决方案”**来生成项目。  
+8.  <span data-ttu-id="5bbfe-121">通过选择生成你的项目**生成解决方案**从**生成**菜单。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-121">Build your project by selecting **Build Solution** from the **Build** menu.</span></span>  
   
     > [!NOTE]
-    >  不要通过按 F5 来运行项目，不能以这种方式运行服务项目。  
+    >  <span data-ttu-id="5bbfe-122">不要通过按 F5 来运行你的项目 — 你无法通过这种方式运行服务项目。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-122">Do not press F5 to run your project — you cannot run a service project in this way.</span></span>  
   
-9. 创建一个安装项目和自定义操作来安装服务。  有关示例，请参见[演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)。  
+9. <span data-ttu-id="5bbfe-123">创建安装项目和安装你的服务的自定义操作。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-123">Create a setup project and the custom actions to install your service.</span></span> <span data-ttu-id="5bbfe-124">有关示例，请参阅[演练： 在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-124">For an example, see [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).</span></span>  
   
-10. 安装服务。  有关详细信息，请参阅 [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
+10. <span data-ttu-id="5bbfe-125">安装服务。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-125">Install the service.</span></span> <span data-ttu-id="5bbfe-126">有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。</span><span class="sxs-lookup"><span data-stu-id="5bbfe-126">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
   
-## 请参阅  
- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)   
- [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)   
- [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a><span data-ttu-id="5bbfe-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5bbfe-127">See Also</span></span>  
+ [<span data-ttu-id="5bbfe-128">Windows 服务应用程序简介</span><span class="sxs-lookup"><span data-stu-id="5bbfe-128">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="5bbfe-129">如何： 创建 Windows 服务</span><span class="sxs-lookup"><span data-stu-id="5bbfe-129">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [<span data-ttu-id="5bbfe-130">如何： 将安装程序添加到服务应用程序</span><span class="sxs-lookup"><span data-stu-id="5bbfe-130">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [<span data-ttu-id="5bbfe-131">如何： 记录关于服务的信息</span><span class="sxs-lookup"><span data-stu-id="5bbfe-131">How to: Log Information About Services</span></span>](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [<span data-ttu-id="5bbfe-132">演练： 在组件设计器中创建 Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="5bbfe-132">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

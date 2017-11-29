@@ -1,105 +1,112 @@
 ---
-title: "&lt;wsFederation&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;wsFederation&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsFederation&gt;
-提供了有关配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> （WSFAM）。  
+# <a name="ltwsfederationgt"></a><span data-ttu-id="fef2d-102">&lt;wsFederation&gt;</span><span class="sxs-lookup"><span data-stu-id="fef2d-102">&lt;wsFederation&gt;</span></span>
+<span data-ttu-id="fef2d-103">提供有关配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。</span><span class="sxs-lookup"><span data-stu-id="fef2d-103">Provides configuration for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).</span></span>  
   
-## 语法  
+<span data-ttu-id="fef2d-104">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="fef2d-104">\<system.identityModel.services></span></span>  
+<span data-ttu-id="fef2d-105">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="fef2d-105">\<federationConfiguration></span></span>  
+<span data-ttu-id="fef2d-106">\<wsFederation ></span><span class="sxs-lookup"><span data-stu-id="fef2d-106">\<wsFederation></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fef2d-107">语法</span><span class="sxs-lookup"><span data-stu-id="fef2d-107">Syntax</span></span>  
+  
+```xml
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <wsFederation authenticationType=xs:string (URI)  
-        freshness=xs:decimal  
-        homerealm=xs:string (URI)  
-        issuer=xs:string (URI)  
-        persistentCookiesOnPassiveRedirects=xs:boolean  
-        passiveRedirectEnabled=xs:boolean  
-        policy=xs:string (URI)  
-        realm=xs:string (URI)  
-        reply=xs:string (URI)  
-        request=xs:string (URI)  
-        requestPtr=xs:string (URI)  
-        requireHttps=xs:boolean  
-        resource=xs:string (URI)  
-        signInQueryString=xs:string  
-        signOutQueryString=xs:string  
-        signOutReply=xs:string (URL)  
-    </wsFederation>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <wsFederation authenticationType=xs:string (URI)  
+                  freshness=xs:decimal  
+                  homerealm=xs:string (URI)  
+                  issuer=xs:string (URI)  
+                  persistentCookiesOnPassiveRedirects=xs:boolean  
+                  passiveRedirectEnabled=xs:boolean  
+                  policy=xs:string (URI)  
+                  realm=xs:string (URI)  
+                  reply=xs:string (URI)  
+                  request=xs:string (URI)  
+                  requestPtr=xs:string (URI)  
+                  requireHttps=xs:boolean  
+                  resource=xs:string (URI)  
+                  signInQueryString=xs:string  
+                  signOutQueryString=xs:string  
+                  signOutReply=xs:string (URL)  
+    </wsFederation>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## 特性和元素  
- 以下几节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fef2d-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="fef2d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="fef2d-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="fef2d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
+### <a name="attributes"></a><span data-ttu-id="fef2d-110">特性</span><span class="sxs-lookup"><span data-stu-id="fef2d-110">Attributes</span></span>  
   
-|特性|说明|  
-|--------|--------|  
-|authenticationType|指定的身份验证类型的 URI。  设置的 WS 联合身份验证登录请求 wauth 参数。  可选。  默认值为一个空字符串，指定在请求中未包含的 wauth 参数。|  
-|刷新|所需的最长时间的身份验证请求，以分钟为单位。  设置的 WS 联合身份验证登录请求 wfresh 参数。  可选。  默认值为零。  可选。 **Warning:**  在下一版。NET 框架 4.5， `freshness`属性的类型将为`xs:string` ，其默认值将`null`。|  
-|homeRealm|要用于身份验证的身份提供程序 \(IP\) 家庭的领域。  设置的 WS 联合身份验证登录请求瓦时参数。  可选。  默认值为一个空字符串，指定在请求中不包含 whr 参数。|  
-|issuer|预期的令牌颁发者的 URI。  设置基本请求 URL 的 WS\-联合身份验证登录和注销请求所需。|  
-|persistentCookiesOnPassiveRedirects|指定是否颁发永久性 cookie 身份验证。  可选。  默认值为"false"，不颁发的 cookie。|  
-|passiveRedirectEnabled|指定是否自动进行未经授权的请求重定向到 STS 启用 WSFAM。  可选。  默认值为"true"，未经授权的请求会自动重定向。|  
-|policy|指定要使用的登录请求的相关策略的位置的 URL。  默认值为空字符串。  设置的 WS 联合身份验证登录请求白皮书参数。  可选。  默认值为一个空字符串，指定在请求中不包含该白皮书参数。|  
-|realm|请求的领域的 URI。  （安全令牌服务 \(STS\) 来标识依赖方 \(RP\) 的 URI。）设置请求 wtrealm WS 联合身份验证登录请求参数。  必选。|  
-|答复|用于标识的依赖方 \(RP\) 应用程序希望接收答复安全令牌服务 \(STS\) 从地址的 URL。  设置的 WS 联合身份验证登录请求 wreply 参数。  可选。  默认值为一个空字符串，指定在请求中未包含的 wreply 参数。|  
-|请求|该令牌颁发请求。  设置的 WS 联合身份验证登录请求 wreq 参数。  可选。  默认值为一个空字符串，指定在请求中未包含的 wreq 参数。  不包括在请求中的 wreq 或 wreqptr 参数意味着 STS 知道哪种类型的颁发令牌。|  
-|requestPtr|指定颁发令牌请求的位置的 URL。  设置请求 wreqptr 参数。  可选。  默认值为一个空字符串，指定在请求中未包含的 wreqptr 参数。  不包括在请求中的 wreq 或 wreqptr 参数意味着 STS 知道哪种类型的颁发令牌。|  
-|requireHttps|指定与安全令牌服务 \(STS\) 的通信是否必须使用 HTTPS 协议。  可选。  默认值为"true"，则必须使用 HTTPS。|  
-|Resource — 资源|URI 标识的资源访问，依赖方 \(RP\)，为安全令牌服务 \(STS\)。  可选。  设置的 WS 联合身份验证登录请求 wres 参数。  可选。  默认值为一个空字符串，指定在请求中未包含的 wres 参数。 **Note:**  wres 是一个传统的参数。  指定`realm`改为使用 wtrealm 参数的属性。|  
-|signInQueryString|提供了一个可扩展性点，以指定应用程序定义查询参数的 WS 联合身份验证登录请求的 URL 中。  可选。  默认值为空字符串，它指定任何其他参数应包含在请求中。  参数指定为查询字符串片段使用以下格式： `“param1=value1&param2=value2&param3=value3”` ，依此类推。 **Note:**  在配置文件中 &"的查询字符串中的字符，必须使用其实体引用，指定`&`。|  
-|signOutQueryString|提供了一个可扩展性点，以指定应用程序定义查询参数的 WS 联合身份验证登录请求的 URL 中。  可选。  默认值为空字符串，它指定任何其他参数应包含在请求中。  参数指定为查询字符串片段使用以下格式： `“param1=value1&param2=value2&param3=value3”` ，依此类推。 **Note:**  在配置文件中 &"的查询字符串中的字符，必须使用其实体引用，指定`&`。|  
-|signOutReply|在被动的 WS 联合身份验证协议通过注销过程中指定的 URL 的客户端应被重定向到安全令牌服务 \(STS\)。  将 wreply 参数设置的 WS 联合身份验证的注销请求。  可选。  默认值为空字符串，它指定任何其他参数应包含在请求中。|  
+|<span data-ttu-id="fef2d-111">特性</span><span class="sxs-lookup"><span data-stu-id="fef2d-111">Attribute</span></span>|<span data-ttu-id="fef2d-112">描述</span><span class="sxs-lookup"><span data-stu-id="fef2d-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="fef2d-113">AuthenticationType</span><span class="sxs-lookup"><span data-stu-id="fef2d-113">authenticationType</span></span>|<span data-ttu-id="fef2d-114">一个 URI，指定身份验证类型。</span><span class="sxs-lookup"><span data-stu-id="fef2d-114">A URI that specifies the authentication type.</span></span> <span data-ttu-id="fef2d-115">设置的 WS 联合身份验证登录请求 wauth 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-115">Sets the WS-Federation sign-in request wauth parameter.</span></span> <span data-ttu-id="fef2d-116">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-116">Optional.</span></span> <span data-ttu-id="fef2d-117">默认值为空字符串，它指定 wauth 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-117">The default is an empty string, which specifies that the wauth parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="fef2d-118">新鲜度</span><span class="sxs-lookup"><span data-stu-id="fef2d-118">freshness</span></span>|<span data-ttu-id="fef2d-119">所需的最长时间身份验证请求，以分钟为单位。</span><span class="sxs-lookup"><span data-stu-id="fef2d-119">The desired maximum age of authentication requests, in minutes.</span></span> <span data-ttu-id="fef2d-120">设置的 WS 联合身份验证登录请求 wfresh 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-120">Sets the WS-Federation sign-in request wfresh parameter.</span></span> <span data-ttu-id="fef2d-121">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-121">Optional.</span></span> <span data-ttu-id="fef2d-122">默认值为零。</span><span class="sxs-lookup"><span data-stu-id="fef2d-122">The default is zero.</span></span> <span data-ttu-id="fef2d-123">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-123">Optional.</span></span> <span data-ttu-id="fef2d-124">**警告：**中下一个版本的.NET Framework 4.5、`freshness`属性的类型将为`xs:string`，其默认值将为`null`。</span><span class="sxs-lookup"><span data-stu-id="fef2d-124">**Warning:**  In the next release of .NET Framework 4.5, the `freshness` attribute will be of type `xs:string` and its default value will be `null`.</span></span>|  
+|<span data-ttu-id="fef2d-125">homeRealm</span><span class="sxs-lookup"><span data-stu-id="fef2d-125">homeRealm</span></span>|<span data-ttu-id="fef2d-126">要用于身份验证标识提供程序 (IP) 主领域。</span><span class="sxs-lookup"><span data-stu-id="fef2d-126">The home realm of the identity provider (IP) to use for authentication.</span></span> <span data-ttu-id="fef2d-127">设置的 WS 联合身份验证登录请求 whr 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-127">Sets the WS-Federation sign-in request whr parameter.</span></span> <span data-ttu-id="fef2d-128">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-128">Optional.</span></span> <span data-ttu-id="fef2d-129">默认值为空字符串，它指定 whr 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-129">The default is an empty string, which specifies that the whr parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="fef2d-130">issuer</span><span class="sxs-lookup"><span data-stu-id="fef2d-130">issuer</span></span>|<span data-ttu-id="fef2d-131">预期的令牌颁发者的 URI。</span><span class="sxs-lookup"><span data-stu-id="fef2d-131">The URI of the intended token issuer.</span></span> <span data-ttu-id="fef2d-132">设置登录请求的基 URL 的 WS 联合身份验证和所需的注销请求。</span><span class="sxs-lookup"><span data-stu-id="fef2d-132">Sets the base URL of WS-Federation sign-in requests and sign-out requests Required.</span></span>|  
+|<span data-ttu-id="fef2d-133">persistentCookiesOnPassiveRedirects</span><span class="sxs-lookup"><span data-stu-id="fef2d-133">persistentCookiesOnPassiveRedirects</span></span>|<span data-ttu-id="fef2d-134">指定是否在身份验证颁发了永久 cookie。</span><span class="sxs-lookup"><span data-stu-id="fef2d-134">Specifies whether persistent cookies are issued on authentication.</span></span> <span data-ttu-id="fef2d-135">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-135">Optional.</span></span> <span data-ttu-id="fef2d-136">默认值为"false"，不发送 cookie。</span><span class="sxs-lookup"><span data-stu-id="fef2d-136">The default is "false", cookies are not issued.</span></span>|  
+|<span data-ttu-id="fef2d-137">passiveRedirectEnabled</span><span class="sxs-lookup"><span data-stu-id="fef2d-137">passiveRedirectEnabled</span></span>|<span data-ttu-id="fef2d-138">指定是否启用 WSFAM 自动将未经授权的请求重定向到 STS。</span><span class="sxs-lookup"><span data-stu-id="fef2d-138">Specifies whether the WSFAM is enabled to automatically redirect unauthorized requests to an STS.</span></span> <span data-ttu-id="fef2d-139">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-139">Optional.</span></span> <span data-ttu-id="fef2d-140">默认值为"true"，未经授权的请求自动重定向。</span><span class="sxs-lookup"><span data-stu-id="fef2d-140">The default is "true", unauthorized requests are automatically redirected.</span></span>|  
+|<span data-ttu-id="fef2d-141">策略</span><span class="sxs-lookup"><span data-stu-id="fef2d-141">policy</span></span>|<span data-ttu-id="fef2d-142">指定的位置相关的策略用于登录请求的 URL。</span><span class="sxs-lookup"><span data-stu-id="fef2d-142">A URL that specifies the location of the relevant policy to use on sign-in requests.</span></span> <span data-ttu-id="fef2d-143">默认值为一个空字符串。</span><span class="sxs-lookup"><span data-stu-id="fef2d-143">The default is an empty string.</span></span> <span data-ttu-id="fef2d-144">设置的 WS 联合身份验证登录请求 wp 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-144">Sets the WS-Federation sign-in request wp parameter.</span></span> <span data-ttu-id="fef2d-145">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-145">Optional.</span></span> <span data-ttu-id="fef2d-146">默认值为空字符串，它指定 wp 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-146">The default is an empty string, which specifies that the wp parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="fef2d-147">realm</span><span class="sxs-lookup"><span data-stu-id="fef2d-147">realm</span></span>|<span data-ttu-id="fef2d-148">请求的领域的 URI。</span><span class="sxs-lookup"><span data-stu-id="fef2d-148">The URI of the requesting realm.</span></span> <span data-ttu-id="fef2d-149">(一个 URI，为安全令牌服务 (STS) 中标识信赖方 (RP)。)设置请求 wtrealm WS 联合身份验证登录请求参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-149">(A URI that identifies the relying party (RP) to the security token service (STS).) Sets the request wtrealm WS-Federation sign-in request parameter.</span></span> <span data-ttu-id="fef2d-150">必需。</span><span class="sxs-lookup"><span data-stu-id="fef2d-150">Required.</span></span>|  
+|<span data-ttu-id="fef2d-151">答复</span><span class="sxs-lookup"><span data-stu-id="fef2d-151">reply</span></span>|<span data-ttu-id="fef2d-152">标识从该处信赖方 (RP) 应用程序希望接收安全令牌服务 (STS) 从的答复地址 URL。</span><span class="sxs-lookup"><span data-stu-id="fef2d-152">A URL that identifies the address at which the relying party (RP) application would like to receive replies from the Security Token Service (STS).</span></span> <span data-ttu-id="fef2d-153">设置的 WS 联合身份验证登录请求 wreply 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-153">Sets the WS-Federation sign-in request wreply parameter.</span></span> <span data-ttu-id="fef2d-154">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-154">Optional.</span></span> <span data-ttu-id="fef2d-155">默认值为空字符串，它指定 wreply 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-155">The default is an empty string, which specifies that the wreply parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="fef2d-156">请求</span><span class="sxs-lookup"><span data-stu-id="fef2d-156">request</span></span>|<span data-ttu-id="fef2d-157">令牌颁发请求。</span><span class="sxs-lookup"><span data-stu-id="fef2d-157">The token issuance request.</span></span> <span data-ttu-id="fef2d-158">设置的 WS 联合身份验证登录请求 wreq 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-158">Sets the WS-Federation sign-in request wreq parameter.</span></span> <span data-ttu-id="fef2d-159">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-159">Optional.</span></span> <span data-ttu-id="fef2d-160">默认值为空字符串，它指定 wreq 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-160">The default is an empty string, which specifies that the wreq parameter is not included in the request.</span></span> <span data-ttu-id="fef2d-161">不在请求中包括 wreq 或 wreqptr 参数意味着 STS，了解哪种类型的令牌颁发。</span><span class="sxs-lookup"><span data-stu-id="fef2d-161">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="fef2d-162">requestPtr</span><span class="sxs-lookup"><span data-stu-id="fef2d-162">requestPtr</span></span>|<span data-ttu-id="fef2d-163">指定令牌颁发请求的位置的 URL。</span><span class="sxs-lookup"><span data-stu-id="fef2d-163">A URL that specifies the location of the token issuance request.</span></span> <span data-ttu-id="fef2d-164">设置请求 wreqptr 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-164">Sets the request wreqptr parameter.</span></span> <span data-ttu-id="fef2d-165">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-165">Optional.</span></span> <span data-ttu-id="fef2d-166">默认值为空字符串，它指定 wreqptr 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-166">The default is an empty string, which specifies that the wreqptr parameter is not included in the request.</span></span> <span data-ttu-id="fef2d-167">不在请求中包括 wreq 或 wreqptr 参数意味着 STS，了解哪种类型的令牌颁发。</span><span class="sxs-lookup"><span data-stu-id="fef2d-167">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="fef2d-168">requireHttps</span><span class="sxs-lookup"><span data-stu-id="fef2d-168">requireHttps</span></span>|<span data-ttu-id="fef2d-169">指定与安全令牌服务 (STS) 的通信是否必须使用 HTTPS 协议。</span><span class="sxs-lookup"><span data-stu-id="fef2d-169">Specifies whether communication with the security token service (STS) must use HTTPS protocol.</span></span> <span data-ttu-id="fef2d-170">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-170">Optional.</span></span> <span data-ttu-id="fef2d-171">默认值为"true"时，必须使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="fef2d-171">The default is "true", HTTPS must be used.</span></span>|  
+|<span data-ttu-id="fef2d-172">Resource — 资源</span><span class="sxs-lookup"><span data-stu-id="fef2d-172">resource</span></span>|<span data-ttu-id="fef2d-173">一个 URI，标识要访问的资源的信赖方 (RP) 到到安全令牌服务 (STS)。</span><span class="sxs-lookup"><span data-stu-id="fef2d-173">A URI that identifies the resource being accessed, the relying party (RP), to the to the security token service (STS).</span></span> <span data-ttu-id="fef2d-174">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-174">Optional.</span></span> <span data-ttu-id="fef2d-175">设置的 WS 联合身份验证登录请求 wres 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-175">Sets the WS-Federation sign-in request wres parameter.</span></span> <span data-ttu-id="fef2d-176">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-176">Optional.</span></span> <span data-ttu-id="fef2d-177">默认值为空字符串，它指定 wres 参数未包含在请求中。</span><span class="sxs-lookup"><span data-stu-id="fef2d-177">The default is an empty string, which specifies that the wres parameter is not included in the request.</span></span> <span data-ttu-id="fef2d-178">**注意：** wres 是旧的参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-178">**Note:**  wres is a legacy parameter.</span></span> <span data-ttu-id="fef2d-179">指定`realm`属性以改为使用 wtrealm 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-179">Specify the `realm` attribute to use the wtrealm parameter instead.</span></span>|  
+|<span data-ttu-id="fef2d-180">signInQueryString</span><span class="sxs-lookup"><span data-stu-id="fef2d-180">signInQueryString</span></span>|<span data-ttu-id="fef2d-181">提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-181">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="fef2d-182">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-182">Optional.</span></span> <span data-ttu-id="fef2d-183">默认值为空字符串，指定应在请求中包含任何其他参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-183">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="fef2d-184">参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。</span><span class="sxs-lookup"><span data-stu-id="fef2d-184">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="fef2d-185">**注意：**配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。</span><span class="sxs-lookup"><span data-stu-id="fef2d-185">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="fef2d-186">signOutQueryString</span><span class="sxs-lookup"><span data-stu-id="fef2d-186">signOutQueryString</span></span>|<span data-ttu-id="fef2d-187">提供一个扩展性点，以便在 WS 联合身份验证登录请求 URL 中指定应用程序定义查询参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-187">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="fef2d-188">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-188">Optional.</span></span> <span data-ttu-id="fef2d-189">默认值为空字符串，指定应在请求中包含任何其他参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-189">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="fef2d-190">参数指定为使用以下形式的查询字符串片段： `"param1=value1&param2=value2&param3=value3"` ，依此类推。</span><span class="sxs-lookup"><span data-stu-id="fef2d-190">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="fef2d-191">**注意：**配置文件中 &"必须使用其实体引用，指定查询字符串中的字符`&`。</span><span class="sxs-lookup"><span data-stu-id="fef2d-191">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="fef2d-192">signOutReply</span><span class="sxs-lookup"><span data-stu-id="fef2d-192">signOutReply</span></span>|<span data-ttu-id="fef2d-193">在被动注销通过 WS 联合身份验证协议期间指定的客户端应被重定向到由安全令牌服务 (STS) 的 URL。</span><span class="sxs-lookup"><span data-stu-id="fef2d-193">Specifies the URL to which the client should be redirected by the security token service (STS) during passive sign-out through the WS-Federation protocol.</span></span> <span data-ttu-id="fef2d-194">WS 联合身份验证的注销请求上设置 wreply 参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-194">Sets the wreply parameter on a WS-Federation sign-out request.</span></span> <span data-ttu-id="fef2d-195">可选。</span><span class="sxs-lookup"><span data-stu-id="fef2d-195">Optional.</span></span> <span data-ttu-id="fef2d-196">默认值为空字符串，指定应在请求中包含任何其他参数。</span><span class="sxs-lookup"><span data-stu-id="fef2d-196">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span>|  
   
-### 子元素  
- 无  
+### <a name="child-elements"></a><span data-ttu-id="fef2d-197">子元素</span><span class="sxs-lookup"><span data-stu-id="fef2d-197">Child Elements</span></span>  
+ <span data-ttu-id="fef2d-198">无</span><span class="sxs-lookup"><span data-stu-id="fef2d-198">None</span></span>  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="fef2d-199">父元素</span><span class="sxs-lookup"><span data-stu-id="fef2d-199">Parent Elements</span></span>  
   
-|元素|说明|  
-|--------|--------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含配置的设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\)。|  
+|<span data-ttu-id="fef2d-200">元素</span><span class="sxs-lookup"><span data-stu-id="fef2d-200">Element</span></span>|<span data-ttu-id="fef2d-201">描述</span><span class="sxs-lookup"><span data-stu-id="fef2d-201">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="fef2d-202">\<federationConfiguration></span><span class="sxs-lookup"><span data-stu-id="fef2d-202">\<federationConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|<span data-ttu-id="fef2d-203">包含配置的设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。</span><span class="sxs-lookup"><span data-stu-id="fef2d-203">Contains the settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span></span>|  
   
-## 备注  
- 您可以使用`<wsFederation>` WSFAM 配置 WS 联合身份验证参数的默认设置和默认行为的元素。  WS 联合身份验证参数设置下定义`<wsFederation>`元素集公开的等效属性<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>类。  这些属性保持不变发出 WSFAM 的每个请求。  可通过添加 WSFAM ； 提供的事件的事件处理程序处理请求过程中动态变化的 WS 联合身份验证参数 例如， <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>事件。  有关更多信息，请参见 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类的文档。  
+## <a name="remarks"></a><span data-ttu-id="fef2d-204">备注</span><span class="sxs-lookup"><span data-stu-id="fef2d-204">Remarks</span></span>  
+ <span data-ttu-id="fef2d-205">你可以使用`<wsFederation>`元素为 WSFAM 配置默认 WS 联合身份验证参数设置和默认行为。</span><span class="sxs-lookup"><span data-stu-id="fef2d-205">You can use the `<wsFederation>` element to configure default WS-Federation parameter settings and default behavior for the WSFAM.</span></span> <span data-ttu-id="fef2d-206">WS 联合身份验证参数设置下定义`<wsFederation>`元素设置公开的等效属性<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>类。</span><span class="sxs-lookup"><span data-stu-id="fef2d-206">WS-Federation parameter settings defined under the `<wsFederation>` element set equivalent properties exposed by the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span> <span data-ttu-id="fef2d-207">这些属性中保持不变由 WSFAM 颁发的每个请求。</span><span class="sxs-lookup"><span data-stu-id="fef2d-207">These properties remain the same for every request issued by the WSFAM.</span></span> <span data-ttu-id="fef2d-208">你可以添加由 WSFAM; 公开的事件的事件处理程序处理请求的过程动态更改的 WS 联合身份验证参数例如，<xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>事件。</span><span class="sxs-lookup"><span data-stu-id="fef2d-208">You can change the WS-Federation parameters dynamically during request processing by adding event handlers for the events exposed by WSFAM; for example, the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> event.</span></span> <span data-ttu-id="fef2d-209">有关详细信息，请参阅的文档<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>类。</span><span class="sxs-lookup"><span data-stu-id="fef2d-209">For more information, see the documentation for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span>  
   
- `<wsFederation>`元素都由<xref:System.IdentityModel.Services.Configuration.WSFederationElement>类。  配置对象本身由<xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration>类。  一个<xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration>实例上设置<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>对象，它通过访问<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>属性，并提供 WSFAM 的配置。  
+ <span data-ttu-id="fef2d-210">`<wsFederation>`元素表示由<xref:System.IdentityModel.Services.Configuration.WSFederationElement>类。</span><span class="sxs-lookup"><span data-stu-id="fef2d-210">The `<wsFederation>` element is represented by the <xref:System.IdentityModel.Services.Configuration.WSFederationElement> class.</span></span> <span data-ttu-id="fef2d-211">配置对象本身由<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>类。</span><span class="sxs-lookup"><span data-stu-id="fef2d-211">The configuration object itself is represented by the <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> class.</span></span> <span data-ttu-id="fef2d-212">单个<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>实例上设置<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>通过访问的对象<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>属性并为 WSFAM 提供配置。</span><span class="sxs-lookup"><span data-stu-id="fef2d-212">A single <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> instance is set on the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> object that is accessed through the <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> property and provides configuration for the WSFAM.</span></span>  
   
-## 示例  
- 所示的 XML `<wsFederation>`指定的 WSFAM 设置的元素。  
+## <a name="example"></a><span data-ttu-id="fef2d-213">示例</span><span class="sxs-lookup"><span data-stu-id="fef2d-213">Example</span></span>  
+ <span data-ttu-id="fef2d-214">下面的 XML 演示`<wsFederation>`指定 WSFAM 设置的元素。</span><span class="sxs-lookup"><span data-stu-id="fef2d-214">The following XML shows a `<wsFederation>` element that specifies settings for the WSFAM.</span></span>  
   
 > [!WARNING]
->  在此示例中，WSFAM 不是需要使用 HTTPS。  这是因为`requireHttps`属性上`<wsFederation>`元素设置`false`。  此设置不建议对于大多数生产环境，其可能存在安全风险。  
+>  <span data-ttu-id="fef2d-215">在此示例中，WSFAM 不需要使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="fef2d-215">In this example, the WSFAM is not required to use HTTPS.</span></span> <span data-ttu-id="fef2d-216">这是因为`requireHttps`属性`<wsFederation>`元素设置`false`。</span><span class="sxs-lookup"><span data-stu-id="fef2d-216">This is because the `requireHttps` attribute on the `<wsFederation>` element is set `false`.</span></span> <span data-ttu-id="fef2d-217">对于大多数生产环境不被建议此设置，因为它可能存在安全风险。</span><span class="sxs-lookup"><span data-stu-id="fef2d-217">This setting is not recommended for most production environments as it may present a security risk.</span></span>  
   
-```  
+```xml
 <wsFederation passiveRedirectEnabled="true"   
-  issuer="http://localhost:15839/wsFederationSTS/Issue"   
-  realm="http://localhost:50969/"   
-  reply="http://localhost:50969/"   
-  requireHttps="false"   
-  signOutReply="http://localhost:50969/SignedOutPage.html"   
-  signOutQueryString="Param1=value2&Param2=value2"   
-  persistentCookiesOnPassiveRedirects="true" />  
-  
+              issuer="http://localhost:15839/wsFederationSTS/Issue"   
+              realm="http://localhost:50969/"   
+              reply="http://localhost:50969/"   
+              requireHttps="false"   
+              signOutReply="http://localhost:50969/SignedOutPage.html"   
+              signOutQueryString="Param1=value2&Param2=value2"   
+              persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## 请参阅  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>
+## <a name="see-also"></a><span data-ttu-id="fef2d-218">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fef2d-218">See Also</span></span>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
+ <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

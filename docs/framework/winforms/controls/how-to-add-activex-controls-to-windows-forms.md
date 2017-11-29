@@ -1,52 +1,53 @@
 ---
-title: "如何：向 Windows 窗体添加 ActiveX 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ActiveX 控件 [Windows 窗体], 添加"
-  - "窗体, 添加 ActiveX 控件"
-  - "Windows 窗体控件, ActiveX 控件"
+title: "如何：向 Windows 窗体添加 ActiveX 控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- forms [Windows Forms], adding ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：向 Windows 窗体添加 ActiveX 控件
-虽然 Windows 窗体设计器是为了承载 Windows 窗体控件而优化，但您也可以将 ActiveX 控件放在 Windows 窗体上。  
+# <a name="how-to-add-activex-controls-to-windows-forms"></a><span data-ttu-id="40e90-102">如何：向 Windows 窗体添加 ActiveX 控件</span><span class="sxs-lookup"><span data-stu-id="40e90-102">How to: Add ActiveX Controls to Windows Forms</span></span>
+<span data-ttu-id="40e90-103">虽然 Windows 窗体设计器已经过优化，主机 Windows 窗体控件，您还可将 Windows 窗体上的 ActiveX 控件。</span><span class="sxs-lookup"><span data-stu-id="40e90-103">While the Windows Forms Designer is optimized to host Windows Forms controls, you can also put ActiveX controls on Windows Forms.</span></span>  
   
 > [!CAUTION]
->  将 ActiveX 控件添加到 Windows 窗体时，对于 Windows 窗体有一些性能限制。  
+>  <span data-ttu-id="40e90-104">ActiveX 控件添加到它们时，有一些 Windows 窗体的性能限制。</span><span class="sxs-lookup"><span data-stu-id="40e90-104">There are performance limitations for Windows Forms when ActiveX controls are added to them.</span></span>  
   
- 在将 ActiveX 控件添加到窗体之前，必须将其添加到“工具箱”中。  有关更多信息，请参见[“自定义工具箱”对话框 \-\>“COM 组件”](http://msdn.microsoft.com/zh-cn/171333f3-f207-4e02-bbdc-17862556212c)。  
+ <span data-ttu-id="40e90-105">在向窗体添加 ActiveX 控件之前，必须将它们添加到工具箱中。</span><span class="sxs-lookup"><span data-stu-id="40e90-105">Before you add ActiveX controls to your form, you must add them to the Toolbox.</span></span> <span data-ttu-id="40e90-106">有关详细信息，请参阅[COM 组件、 自定义工具箱对话框](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c)。</span><span class="sxs-lookup"><span data-stu-id="40e90-106">For more information, see [COM Components, Customize Toolbox Dialog Box](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请单击**“工具”**菜单上的**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="40e90-107">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="40e90-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="40e90-108">若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="40e90-108">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="40e90-109">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="40e90-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 向 Windows 窗体添加 ActiveX 控件  
+### <a name="to-add-an-activex-control-to-your-windows-form"></a><span data-ttu-id="40e90-110">若要向 Windows 窗体添加 ActiveX 控件</span><span class="sxs-lookup"><span data-stu-id="40e90-110">To add an ActiveX control to your Windows Form</span></span>  
   
--   在“工具箱”上双击该控件。  
+-   <span data-ttu-id="40e90-111">双击工具箱上的控件。</span><span class="sxs-lookup"><span data-stu-id="40e90-111">Double-click the control on the Toolbox.</span></span>  
   
-     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 将对该控件的所有引用都添加到项目中。  有关使用 Windows 窗体上的 ActiveX 控件时需要注意的事项的更多信息，请参见[在 Windows 窗体上承载 ActiveX 控件时的注意事项](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)。  
+     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="40e90-112">在你的项目中添加到控件的所有引用。</span><span class="sxs-lookup"><span data-stu-id="40e90-112"> adds all references to the control in your project.</span></span> <span data-ttu-id="40e90-113">使用 Windows 窗体上的 ActiveX 控件时，需要注意的事项的详细信息，请参阅[承载 Windows 窗体上的 ActiveX 控件时的注意事项](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)。</span><span class="sxs-lookup"><span data-stu-id="40e90-113">For more information about things to keep in mind when using ActiveX controls on Windows Forms, see [Considerations When Hosting an ActiveX Control on a Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span></span>  
   
     > [!NOTE]
-    >  Windows 窗体 ActiveX 控件导入程序 \(AxImp.exe\) 创建的事件参数的类型不同于导入 ActiveX 动态链接库时所需的事件参数类型。  AxImp.exe 创建的参数类似于：`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，而所需参数为 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`。  注意，这种不正常情况并不影响代码的正常使用。  有关详细信息，请参见 [Windows 窗体 ActiveX 控件导入程序 \(Aximp.exe\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
+    >  <span data-ttu-id="40e90-114">Windows 窗体 ActiveX 控件导入程序 (AxImp.exe) 创建不同类型的事件自变量比预期时 ActiveX 动态链接库中导入。</span><span class="sxs-lookup"><span data-stu-id="40e90-114">The Windows Forms ActiveX Control Importer (AxImp.exe) creates event arguments of a different type than expected upon importation of ActiveX dynamic link libraries.</span></span> <span data-ttu-id="40e90-115">AxImp.exe 所创建的自变量是类似于以下： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，当`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`预期。</span><span class="sxs-lookup"><span data-stu-id="40e90-115">The arguments created by AxImp.exe are similar to the following: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, when `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` is expected.</span></span> <span data-ttu-id="40e90-116">请注意，此不一致情况不会阻止代码工作正常。</span><span class="sxs-lookup"><span data-stu-id="40e90-116">Be aware that this irregularity does not prevent code from functioning normally.</span></span> <span data-ttu-id="40e90-117">有关详细信息，请参阅[Windows 窗体 ActiveX 控件导入程序 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。</span><span class="sxs-lookup"><span data-stu-id="40e90-117">For details, see [Windows Forms ActiveX Control Importer (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## 请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/zh-cn/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [标记单个 Windows 窗体控件并提供它们的快捷方式](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [根据功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="40e90-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="40e90-118">See Also</span></span>  
+ [<span data-ttu-id="40e90-119">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="40e90-119">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="40e90-120">不同语言和库中的控件和可编程对象的比较</span><span class="sxs-lookup"><span data-stu-id="40e90-120">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="40e90-121">如何：向 Windows 窗体添加控件</span><span class="sxs-lookup"><span data-stu-id="40e90-121">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="40e90-122">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="40e90-122">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="40e90-123">标记各个 Windows 窗体控件并创建它们的快捷键</span><span class="sxs-lookup"><span data-stu-id="40e90-123">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="40e90-124">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="40e90-124">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="40e90-125">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="40e90-125">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

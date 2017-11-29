@@ -1,46 +1,37 @@
 ---
 title: "如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4ab52cc46a7d735ebe60f1d3822d5ae39c2a1234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22bb97865e13722f35aa716ca2bd829989330ab6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)
-此示例演示与文件大小（以字节为单位）相关的五个查询：  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="caf80-102">如何：查询目录树中的一个或多个最大的文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="caf80-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>
+<span data-ttu-id="caf80-103">此示例演示与文件大小（以字节为单位）相关的五个查询：</span><span class="sxs-lookup"><span data-stu-id="caf80-103">This example shows five queries related to file size in bytes:</span></span>  
   
--   如何检索最大文件的大小（以字节为单位）。  
+-   <span data-ttu-id="caf80-104">如何检索最大文件的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="caf80-104">How to retrieve the size in bytes of the largest file.</span></span>  
   
--   如何检索最小文件的大小（以字节为单位）。  
+-   <span data-ttu-id="caf80-105">如何检索最小文件的大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="caf80-105">How to retrieve the size in bytes of the smallest file.</span></span>  
   
--   如何从指定根文件夹下的一个或多个文件夹检索 <xref:System.IO.FileInfo> 对象最大或最小文件。  
+-   <span data-ttu-id="caf80-106">如何从指定根文件夹下的一个或多个文件夹检索 <xref:System.IO.FileInfo> 对象最大或最小文件。</span><span class="sxs-lookup"><span data-stu-id="caf80-106">How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.</span></span>  
   
--   如何检索序列（如 10 个最大文件）。  
+-   <span data-ttu-id="caf80-107">如何检索序列（如 10 个最大文件）。</span><span class="sxs-lookup"><span data-stu-id="caf80-107">How to retrieve a sequence such as the 10 largest files.</span></span>  
   
--   如何基于文件大小（以字节为单位）按组对文件进行排序（忽略小于指定大小的文件）。  
+-   <span data-ttu-id="caf80-108">如何基于文件大小（以字节为单位）按组对文件进行排序（忽略小于指定大小的文件）。</span><span class="sxs-lookup"><span data-stu-id="caf80-108">How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例包含五个单独的查询，它们演示如何根据文件大小（以字节为单位）对文件进行查询和分组。 可以轻松地修改这些示例，以便使查询基于 <xref:System.IO.FileInfo> 对象的其他某个属性。  
+## <a name="example"></a><span data-ttu-id="caf80-109">示例</span><span class="sxs-lookup"><span data-stu-id="caf80-109">Example</span></span>  
+ <span data-ttu-id="caf80-110">下面的示例包含五个单独的查询，它们演示如何根据文件大小（以字节为单位）对文件进行查询和分组。</span><span class="sxs-lookup"><span data-stu-id="caf80-110">The following example contains five separate queries that show how to query and group files, depending on their file size in bytes.</span></span> <span data-ttu-id="caf80-111">可以轻松地修改这些示例，以便使查询基于 <xref:System.IO.FileInfo> 对象的其他某个属性。</span><span class="sxs-lookup"><span data-stu-id="caf80-111">You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.</span></span>  
   
 ```csharp  
 class QueryBySize  
@@ -155,14 +146,13 @@ class QueryBySize
 }  
 ```  
   
- 若要返回一个或多个完整的 <xref:System.IO.FileInfo> 对象，查询必须首先检查数据中的每个对象，然后按其 Length 属性值对它们进行排序。 随后它便可以返回具有最大长度的单个对象或对象序列。 使用 <xref:System.Linq.Enumerable.First%2A> 返回列表中的第一个元素。 使用 <xref:System.Linq.Enumerable.Take%2A> 返回前 n 个元素。 指定降序排序顺序可将最小元素置于列表开头。  
+ <span data-ttu-id="caf80-112">若要返回一个或多个完整的 <xref:System.IO.FileInfo> 对象，查询必须首先检查数据中的每个对象，然后按其 Length 属性值对它们进行排序。</span><span class="sxs-lookup"><span data-stu-id="caf80-112">To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property.</span></span> <span data-ttu-id="caf80-113">随后它便可以返回具有最大长度的单个对象或对象序列。</span><span class="sxs-lookup"><span data-stu-id="caf80-113">Then it can return the single one or the sequence with the greatest lengths.</span></span> <span data-ttu-id="caf80-114">使用 <xref:System.Linq.Enumerable.First%2A> 返回列表中的第一个元素。</span><span class="sxs-lookup"><span data-stu-id="caf80-114">Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list.</span></span> <span data-ttu-id="caf80-115">使用 <xref:System.Linq.Enumerable.Take%2A> 返回前 n 个元素。</span><span class="sxs-lookup"><span data-stu-id="caf80-115">Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements.</span></span> <span data-ttu-id="caf80-116">指定降序排序顺序可将最小元素置于列表开头。</span><span class="sxs-lookup"><span data-stu-id="caf80-116">Specify a descending sort order to put the smallest elements at the start of the list.</span></span>  
   
- 查询调用单独的方法来获取文件大小（以字节为单位），以便使用在以下情况下会引发的可能异常：自在 `GetFiles` 调用中创建了 <xref:System.IO.FileInfo> 对象以来的时间段内，在其他线程中删除了文件。 即使创建了 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最新大小（以字节为单位）刷新该属性。 通过将此操作置于查询外部的 try-catch 块中，我们可遵循在查询中避免可能导致副作用的操作这一规则。 一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。  
+ <span data-ttu-id="caf80-117">查询调用单独的方法来获取文件大小（以字节为单位），以便使用在以下情况下会引发的可能异常：自在 `GetFiles` 调用中创建了 <xref:System.IO.FileInfo> 对象以来的时间段内，在其他线程中删除了文件。</span><span class="sxs-lookup"><span data-stu-id="caf80-117">The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="caf80-118">即使创建了 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最新大小（以字节为单位）刷新该属性。</span><span class="sxs-lookup"><span data-stu-id="caf80-118">Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed.</span></span> <span data-ttu-id="caf80-119">通过将此操作置于查询外部的 try-catch 块中，我们可遵循在查询中避免可能导致副作用的操作这一规则。</span><span class="sxs-lookup"><span data-stu-id="caf80-119">By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="caf80-120">一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。</span><span class="sxs-lookup"><span data-stu-id="caf80-120">In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="caf80-121">编译代码</span><span class="sxs-lookup"><span data-stu-id="caf80-121">Compiling the Code</span></span>  
+ <span data-ttu-id="caf80-122">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="caf80-122">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="caf80-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="caf80-123">See Also</span></span>  
+ [<span data-ttu-id="caf80-124">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="caf80-124">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="caf80-125">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="caf80-125">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

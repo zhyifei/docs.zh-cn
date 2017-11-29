@@ -1,36 +1,40 @@
 ---
-title: "使用回调的 Windows 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用回调的 Windows 应用程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用回调的 Windows 应用程序
-在大多数异步处理方案中，需要开始一个数据库操作并继续运行其他进程，而不必等待数据库操作完成。  但是，许多方案在数据库操作结束后需要执行某些操作。  例如，在 Windows 应用程序中，可能需要将长时间运行的操作委托给后台线程，同时允许用户界面线程保持响应状态。  但是，在数据库操作完成后，需要使用结果填充窗体。  此类方案最适合使用回调实现。  
+# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="f17ef-102">使用回调的 Windows 应用程序</span><span class="sxs-lookup"><span data-stu-id="f17ef-102">Windows Applications Using Callbacks</span></span>
+<span data-ttu-id="f17ef-103">在大多数异步处理方案中，需要开始一个数据库操作并继续运行其他进程，而不必等待数据库操作完成。</span><span class="sxs-lookup"><span data-stu-id="f17ef-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="f17ef-104">但是，许多方案在数据库操作结束后需要执行某些操作。</span><span class="sxs-lookup"><span data-stu-id="f17ef-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="f17ef-105">例如，在 Windows 应用程序中，可能需要将长时间运行的操作委托给后台线程，同时允许用户界面线程保持响应状态。</span><span class="sxs-lookup"><span data-stu-id="f17ef-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="f17ef-106">但是，在数据库操作完成后，需要使用结果填充窗体。</span><span class="sxs-lookup"><span data-stu-id="f17ef-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="f17ef-107">此类方案最适合使用回调实现。</span><span class="sxs-lookup"><span data-stu-id="f17ef-107">This type of scenario is best implemented with a callback.</span></span>  
   
- 通过在 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法中指定 <xref:System.AsyncCallback> 委托来定义回调。  操作完成时调用该委托。  可以将对 <xref:System.Data.SqlClient.SqlCommand> 本身的引用传递给该委托，这样很容易访问 <xref:System.Data.SqlClient.SqlCommand> 对象并调用相应的 `End` 方法，而不必使用全局变量。  
+ <span data-ttu-id="f17ef-108">通过在 <xref:System.AsyncCallback>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 方法中指定 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 委托来定义回调。</span><span class="sxs-lookup"><span data-stu-id="f17ef-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="f17ef-109">操作完成时调用该委托。</span><span class="sxs-lookup"><span data-stu-id="f17ef-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="f17ef-110">可以将对 <xref:System.Data.SqlClient.SqlCommand> 本身的引用传递给该委托，这样很容易访问 <xref:System.Data.SqlClient.SqlCommand> 对象并调用相应的 `End` 方法，而不必使用全局变量。</span><span class="sxs-lookup"><span data-stu-id="f17ef-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
   
-## 示例  
- 以下 Windows 应用程序演示如何使用 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法，执行包含几秒钟延迟的 Transact\-SQL 语句（模拟长时间运行的命令）。  
+## <a name="example"></a><span data-ttu-id="f17ef-111">示例</span><span class="sxs-lookup"><span data-stu-id="f17ef-111">Example</span></span>  
+ <span data-ttu-id="f17ef-112">以下 Windows 应用程序演示如何使用 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法，执行包含几秒钟延迟的 Transact-SQL 语句（模拟长时间运行的命令）。</span><span class="sxs-lookup"><span data-stu-id="f17ef-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
   
- 此示例演示了许多重要的方法，包括从独立的线程调用与窗体交互的方法。  此外，此示例演示如何必须阻止用户多次并发执行某个命令，以及如何必须确保窗体在调用回调过程之前不会关闭。  
+ <span data-ttu-id="f17ef-113">此示例演示了许多重要的方法，包括从独立的线程调用与窗体交互的方法。</span><span class="sxs-lookup"><span data-stu-id="f17ef-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="f17ef-114">此外，此示例演示如何必须阻止用户多次并发执行某个命令，以及如何必须确保窗体在调用回调过程之前不会关闭。</span><span class="sxs-lookup"><span data-stu-id="f17ef-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
   
- 要设置此示例，应新建一个 Windows 应用程序。  将一个 <xref:System.Windows.Forms.Button> 控件和两个 <xref:System.Windows.Forms.Label> 控件放在窗体上（接受每个控件的默认名称）。  在窗体的类中添加以下代码，根据环境的需要修改连接字符串。  
+ <span data-ttu-id="f17ef-115">要设置此示例，应新建一个 Windows 应用程序。</span><span class="sxs-lookup"><span data-stu-id="f17ef-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="f17ef-116">将一个 <xref:System.Windows.Forms.Button> 控件和两个 <xref:System.Windows.Forms.Label> 控件放在窗体上（接受每个控件的默认名称）。</span><span class="sxs-lookup"><span data-stu-id="f17ef-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="f17ef-117">在窗体的类中添加以下代码，根据环境的需要修改连接字符串。</span><span class="sxs-lookup"><span data-stu-id="f17ef-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## 请参阅  
- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f17ef-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f17ef-118">See Also</span></span>  
+ [<span data-ttu-id="f17ef-119">异步操作</span><span class="sxs-lookup"><span data-stu-id="f17ef-119">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="f17ef-120">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="f17ef-120">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

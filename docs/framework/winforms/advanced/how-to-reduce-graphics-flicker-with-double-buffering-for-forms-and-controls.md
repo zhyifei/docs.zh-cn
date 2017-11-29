@@ -1,48 +1,51 @@
 ---
-title: "如何：通过对窗体和控件使用双缓冲来减少图形闪烁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DoubleBuffered 属性"
-  - "闪烁, 在 Windows 窗体中减少"
-  - "图形, 减少双缓冲闪烁"
+title: "如何：通过对窗体和控件使用双缓冲来减少图形闪烁"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing in Windows Forms
+- graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：通过对窗体和控件使用双缓冲来减少图形闪烁
-双缓冲使用内存缓冲区来解决由多重绘制操作造成的闪烁问题。  当启用双缓冲时，所有绘制操作首先呈现到内存缓冲区，而不是屏幕上的绘图图面。  所有绘制操作完成后，内存缓冲区直接复制到与其关联的绘图图面。  因为只在屏幕上执行一项图形操作，所以消除了与复杂绘图操作关联的图形闪烁。对于大多数应用程序而言，由 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供的默认双缓冲将提供最佳结果。  默认情况下，标准 Windows 窗体控件是双缓冲的。  可以通过两种方法对窗体和所创作的控件启用默认双缓冲。  一种方法是将 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 属性设置为 `true`，另一种方法是通过调用 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法将 <xref:System.Windows.Forms.ControlStyles> 标志设置为 `true`。  两种方法都将为窗体或控件启用默认双缓冲并提供无闪烁的图形呈现。  建议仅对已为其编写所有呈现代码的自定义控件调用 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。  
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a><span data-ttu-id="4e61a-102">如何：通过对窗体和控件使用双缓冲来减少图形闪烁</span><span class="sxs-lookup"><span data-stu-id="4e61a-102">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>
+<span data-ttu-id="4e61a-103">双缓冲使用内容缓冲来解决与多个画图操作相关的闪烁问题。</span><span class="sxs-lookup"><span data-stu-id="4e61a-103">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="4e61a-104">启用双缓冲后，所有画图操作会首先呈现到内存缓冲而不是屏幕上的绘图图面。</span><span class="sxs-lookup"><span data-stu-id="4e61a-104">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="4e61a-105">所有画图操作完成后，内存缓冲会直接复制到与之关联的绘图图面。</span><span class="sxs-lookup"><span data-stu-id="4e61a-105">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="4e61a-106">由于在屏幕上，执行只有一个图形操作消除了复杂的绘制操作相关联的图形闪烁。对于大多数应用程序，默认双缓冲提供的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]将提供最佳结果。</span><span class="sxs-lookup"><span data-stu-id="4e61a-106">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.For most applications, the default double buffering provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] will provide the best results.</span></span> <span data-ttu-id="4e61a-107">标准 Windows 窗体控件都是双缓冲默认情况下。</span><span class="sxs-lookup"><span data-stu-id="4e61a-107">Standard Windows Forms controls are double buffered by default.</span></span> <span data-ttu-id="4e61a-108">你可以启用默认双缓冲你窗体中并编写两种方式的控件。</span><span class="sxs-lookup"><span data-stu-id="4e61a-108">You can enable default double buffering in your forms and authored controls in two ways.</span></span> <span data-ttu-id="4e61a-109">你可以设置<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性`true`，也可以调用<xref:System.Windows.Forms.Control.SetStyle%2A>方法以设置<xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer>标志切换为`true`。</span><span class="sxs-lookup"><span data-stu-id="4e61a-109">You can either set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`, or you can call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span> <span data-ttu-id="4e61a-110">这两种方法将启用默认双缓冲窗体或控件，并提供无闪烁的图形呈现。</span><span class="sxs-lookup"><span data-stu-id="4e61a-110">Both methods will enable default double buffering for your form or control and provide flicker-free graphics rendering.</span></span> <span data-ttu-id="4e61a-111">调用<xref:System.Windows.Forms.Control.SetStyle%2A>方法建议仅对具有为其编写呈现的所有代码的自定义控件。</span><span class="sxs-lookup"><span data-stu-id="4e61a-111">Calling the <xref:System.Windows.Forms.Control.SetStyle%2A> method is recommended only for custom controls for which you have written all the rendering code.</span></span>  
   
- 对于更多的高级双缓冲情形（如动画或高级内存管理），可以实现自己的双缓冲逻辑。  有关更多信息，请参见[如何：手动管理缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)。  
+ <span data-ttu-id="4e61a-112">对于更高级的双缓冲方案，例如动画或高级的内存管理，你可以实现你自己的双缓冲逻辑。</span><span class="sxs-lookup"><span data-stu-id="4e61a-112">For more advanced double buffering scenarios, such as animation or advanced memory management, you can implement your own double buffering logic.</span></span> <span data-ttu-id="4e61a-113">有关详细信息，请参阅[如何： 手动管理缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)。</span><span class="sxs-lookup"><span data-stu-id="4e61a-113">For more information, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-### 减少闪烁  
+### <a name="to-reduce-flicker"></a><span data-ttu-id="4e61a-114">若要减少闪烁</span><span class="sxs-lookup"><span data-stu-id="4e61a-114">To reduce flicker</span></span>  
   
--   将 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 属性设置为 `true`。  
+-   <span data-ttu-id="4e61a-115">将 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="4e61a-115">Set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- 或 \-  
+ <span data-ttu-id="4e61a-116">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="4e61a-116">\- or -</span></span>  
   
--   调用 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法将 <xref:System.Windows.Forms.ControlStyles> 标志设置为 `true`。  
+-   <span data-ttu-id="4e61a-117">调用<xref:System.Windows.Forms.Control.SetStyle%2A>方法以设置<xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer>标志切换为`true`。</span><span class="sxs-lookup"><span data-stu-id="4e61a-117">Call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## 请参阅  
- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>   
- <xref:System.Windows.Forms.Control.SetStyle%2A>   
- [双缓冲图形](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="4e61a-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4e61a-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
+ <xref:System.Windows.Forms.Control.SetStyle%2A>  
+ [<span data-ttu-id="4e61a-119">双缓冲的图形</span><span class="sxs-lookup"><span data-stu-id="4e61a-119">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="4e61a-120">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="4e61a-120">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

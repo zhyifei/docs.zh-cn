@@ -1,94 +1,97 @@
 ---
-title: "WCF Visual Studio 模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF Visual Studio 模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a659fa3801d52da4fa4837b7df4fea9e4ac6cf5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF Visual Studio 模板
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板是预定义的项目和项模板，可在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中用于快速生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和周边应用程序。  
+# <a name="wcf-visual-studio-templates"></a><span data-ttu-id="caa47-102">WCF Visual Studio 模板</span><span class="sxs-lookup"><span data-stu-id="caa47-102">WCF Visual Studio Templates</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="caa47-103"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板是预定义的项目和项模板，可在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中用于快速生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和周边应用程序。</span><span class="sxs-lookup"><span data-stu-id="caa47-103"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates are predefined project and item templates you can use in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] to quickly build [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services and surrounding applications.</span></span>  
   
-## <a name="using-the-wcf-templates"></a>使用 WCF 模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  
+## <a name="using-the-wcf-templates"></a><span data-ttu-id="caa47-104">使用 WCF 模板</span><span class="sxs-lookup"><span data-stu-id="caa47-104">Using the WCF Templates</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="caa47-105"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板为服务开发提供基本的类结构。</span><span class="sxs-lookup"><span data-stu-id="caa47-105"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates provide a basic class structure for service development.</span></span> <span data-ttu-id="caa47-106">具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。</span><span class="sxs-lookup"><span data-stu-id="caa47-106">Specifically, these templates provide the basic definitions for service contract, data contract, service implementation, and configuration.</span></span> <span data-ttu-id="caa47-107">可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。</span><span class="sxs-lookup"><span data-stu-id="caa47-107">You can use these templates to create a simple service with minimal code interaction, as well as a building block for more advanced services.</span></span>  
   
-### <a name="wcf-service-library-project-template"></a>WCF 服务库项目模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务库项目模板将显示在新项目对话框下**Visual C# \WCF**和**Visual Basic\WCF**。  
+### <a name="wcf-service-library-project-template"></a><span data-ttu-id="caa47-108">WCF 服务库项目模板</span><span class="sxs-lookup"><span data-stu-id="caa47-108">WCF Service Library Project Template</span></span>  
+ <span data-ttu-id="caa47-109">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务库项目模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。</span><span class="sxs-lookup"><span data-stu-id="caa47-109">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library project template is available in the new project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
   
- 当您创建一个新项目使用**WCF 服务**模板，将新项目自动包括以下三个文件︰  
+ <span data-ttu-id="caa47-110">当你创建新项目使用**WCF 服务**模板，新项目将自动包括以下三个文件：</span><span class="sxs-lookup"><span data-stu-id="caa47-110">When you create a new project using the **WCF Service** template, the new project automatically includes the following three files:</span></span>  
   
--   服务协定文件（IService1.cs 或 IService1.vb）。 服务协定文件是一个应用了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务属性的接口。 此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。 这是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目之后在代码编辑器中显示的默认文件。  
+-   <span data-ttu-id="caa47-111">服务协定文件（IService1.cs 或 IService1.vb）。</span><span class="sxs-lookup"><span data-stu-id="caa47-111">Service contract file (IService1.cs or IService1.vb).</span></span> <span data-ttu-id="caa47-112">服务协定文件是一个应用了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务属性的接口。</span><span class="sxs-lookup"><span data-stu-id="caa47-112">The service contract file is an interface that has [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service attributes applied.</span></span> <span data-ttu-id="caa47-113">此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。</span><span class="sxs-lookup"><span data-stu-id="caa47-113">This file provides a definition of a simple service to show you how to define your services, and includes parameter-based operations and a simple data contract sample.</span></span> <span data-ttu-id="caa47-114">这是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目之后在代码编辑器中显示的默认文件。</span><span class="sxs-lookup"><span data-stu-id="caa47-114">This is the default file displayed in the code editor after creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service project.</span></span>  
   
--   服务实现文件（Service1.cs 或 Service1.vb）。 服务实现文件实现服务协定文件中定义的协定。  
+-   <span data-ttu-id="caa47-115">服务实现文件（Service1.cs 或 Service1.vb）。</span><span class="sxs-lookup"><span data-stu-id="caa47-115">Service implementation file (Service1.cs or Service1.vb).</span></span> <span data-ttu-id="caa47-116">服务实现文件实现服务协定文件中定义的协定。</span><span class="sxs-lookup"><span data-stu-id="caa47-116">The service implementation file implements the contract defined in the service contract file.</span></span>  
   
--   应用程序配置文件 (App.config)。 该配置文件为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务模型的基本元素提供安全的 HTTP 绑定。 它还包括一个服务终结点，并启用了元数据交换。  
-  
-> [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]配置为使用运行时将 App.config 文件识别为该项目的配置文件[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。 如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。  
-  
-### <a name="wcf-service-application-template"></a>WCF 服务应用程序模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务应用程序模板将显示在新建项目对话框下**Visual C# \WCF**和**Visual Basic\WCF**。  
-  
- 当您创建一个新项目使用**WCF Web 应用程序服务**模板，该项目包括以下四个文件︰  
-  
--   服务主机文件 (service1.svc)。  
-  
--   服务协定文件（IService1.cs 或 IService1.vb）。  
-  
--   服务实现文件（Service1.svc.cs 或 Service1.svc.vb）。  
-  
--   Web 配置文件 (Web.config)。  
-  
- 此模板将自动创建一个网站（该网站将要部署到虚拟目录），并在该网站中承载服务。  
-  
-### <a name="wcf-web-site-template"></a>WCF 网站模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]网站模板将显示在新建项目对话框下**Visual C# \Web Site\WCF 服务**和**Visual Basic\Web \wcf Service**。 这将创建与 WCF 服务应用程序模板相同的文件，但按照它是 ASP.NET 网站来进行组织。 创建 App_Code 和 App_Data 文件夹。  
-  
-### <a name="wcf-service-item-template"></a>WCF 服务项模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项模板是一个自定义模板，通过该模板可以快速将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务添加到现有的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目。  
-  
- 若要使用此模板，请转到**解决方案资源管理器**窗格中，右键单击项目名称，指向**添加**，然后单击**新项**启动**添加新项**对话框。  
-  
- 服务接口和实现文件放在根项目文件夹中。  
-  
- 该模板尝试将新服务的配置节合并到兼容类型的现有配置文件中。  
-  
- 如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。  
-  
-### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服务项目和项模板。  
- 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/zh-cn/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建工作流项目，请参阅[创建旧版工作流项目](../Topic/Creating%20Legacy%20Workflow%20Projects.md)。  
-  
- 当使用 XOML 类型的工作流来代替基于代码的工作流时，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 设计器的响应能力较强。 XOML 工作流是要创建的默认工作流类型。  
-  
-### <a name="wcf-syndication-service-library-template"></a>WCF 联合服务库模板  
- 通过使用此模板，可以将 RSS 或 ATOM 格式的源作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。 有关详细信息，请参阅[WCF 联合](../../../docs/framework/wcf/feature-details/wcf-syndication.md)。  
-  
-#### <a name="changing-the-address-of-the-feed"></a>更改源的地址  
- 在执行期间，联合模板使用 Internet Explorer。 右键单击你的项目中时**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，则可以选择**调试**选项卡，您可以看到该模板的默认地址。 Internet Explorer 尝试在此地址打开源。  
-  
- 如果更改源地址，则必须更改中的地址**调试**选项卡。 如果不这样做，Internet Explorer 将尝试在默认地址打开源，从而失败。  
-  
-### <a name="ajax-enabled-wcf-service-item-template"></a>支持 AJAX 的 WCF 服务项模板  
- 此模板将 AJAX 控件作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。 AJAX 控件的详细信息，请参阅[AJAX 控件文档](http://go.microsoft.com/fwlink/?LinkId=96717)。  
-  
-### <a name="silverlight-enabled-wcf-service-item-template"></a>启用了 Silverlight 的 WCF 服务项模板  
- 该模板创建提供数据给 Silverlight 客户端或前端的 Web 服务。 可以将该模板添加到网站或 Web 应用程序项目中，以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，其中包括支持与 Silverlight 客户端进行通信的服务代码和配置。 然后，可以使用**添加服务引用**将该服务的客户端代理添加到客户端上，并在 Silverlight 客户端与启用了 Silverlight 的 WCF 服务之间交换数据。  
-  
- 若要访问此模板，用鼠标右键单击中的网站或 Web 应用程序项目**解决方案资源管理器**，单击**添加新项**，然后单击**启用 Silverlight 的 WCF 服务**。  
+-   <span data-ttu-id="caa47-117">应用程序配置文件 (App.config)。</span><span class="sxs-lookup"><span data-stu-id="caa47-117">Application configuration file (App.config).</span></span> <span data-ttu-id="caa47-118">该配置文件为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务模型的基本元素提供安全的 HTTP 绑定。</span><span class="sxs-lookup"><span data-stu-id="caa47-118">The configuration file provides the basic elements of a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service model with a secure HTTP binding.</span></span> <span data-ttu-id="caa47-119">它还包括一个服务终结点，并启用了元数据交换。</span><span class="sxs-lookup"><span data-stu-id="caa47-119">It also includes an endpoint for the service and enables metadata exchange.</span></span>  
   
 > [!NOTE]
->  启用了 Silverlight 的 WCF 服务公开 `basicHttpBinding` 终结点，不启用任何安全设置。 因此，连接到此服务的任何客户端都可以获取有关此服务的信息。 此外，在该服务与客户端之间交换的消息也未经过签名和加密处理。 若要正确保护该终结点，应使用 ASP.NET 身份验证、HTTPS 或其他机制。  
+>  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]<span data-ttu-id="caa47-120">被配置为使用运行时为该项目的配置文件中识别 App.config 文件[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。</span><span class="sxs-lookup"><span data-stu-id="caa47-120"> is configured to recognize the App.config file as the configuration file for the project when it is run using the [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), which is the default configuration.</span></span> <span data-ttu-id="caa47-121">如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。</span><span class="sxs-lookup"><span data-stu-id="caa47-121">If you host the service library in an executable, you have to move the configuration code to the configuration file of the executable, as configuration files for DLLs are not valid.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [WCF 测试客户端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+### <a name="wcf-service-application-template"></a><span data-ttu-id="caa47-122">WCF 服务应用程序模板</span><span class="sxs-lookup"><span data-stu-id="caa47-122">WCF Service Application Template</span></span>  
+ <span data-ttu-id="caa47-123">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务应用程序模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。</span><span class="sxs-lookup"><span data-stu-id="caa47-123">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Application template is available in the New Project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
+  
+ <span data-ttu-id="caa47-124">当你创建新项目使用**WCF Web 应用程序服务**模板，该项目包括以下四个文件：</span><span class="sxs-lookup"><span data-stu-id="caa47-124">When you create a new project using the **WCF Web Application Service** template, the project includes the following four files:</span></span>  
+  
+-   <span data-ttu-id="caa47-125">服务主机文件 (service1.svc)。</span><span class="sxs-lookup"><span data-stu-id="caa47-125">Service host file (service1.svc).</span></span>  
+  
+-   <span data-ttu-id="caa47-126">服务协定文件（IService1.cs 或 IService1.vb）。</span><span class="sxs-lookup"><span data-stu-id="caa47-126">Service contract file (IService1.cs or IService1.vb).</span></span>  
+  
+-   <span data-ttu-id="caa47-127">服务实现文件（Service1.svc.cs 或 Service1.svc.vb）。</span><span class="sxs-lookup"><span data-stu-id="caa47-127">Service implementation file (Service1.svc.cs or Service1.svc.vb).</span></span>  
+  
+-   <span data-ttu-id="caa47-128">Web 配置文件 (Web.config)。</span><span class="sxs-lookup"><span data-stu-id="caa47-128">Web configuration file (Web.config).</span></span>  
+  
+ <span data-ttu-id="caa47-129">此模板将自动创建一个网站（该网站将要部署到虚拟目录），并在该网站中承载服务。</span><span class="sxs-lookup"><span data-stu-id="caa47-129">The template automatically creates a Web site (to be deployed to a virtual directory) and hosts a service in it.</span></span>  
+  
+### <a name="wcf-web-site-template"></a><span data-ttu-id="caa47-130">WCF 网站模板</span><span class="sxs-lookup"><span data-stu-id="caa47-130">WCF Web Site Template</span></span>  
+ <span data-ttu-id="caa47-131">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]网站模板将显示在新项目对话框在下**Visual C# \Web Site\WCF 服务**和**Visual Basic\Web Site\WCF 服务**。</span><span class="sxs-lookup"><span data-stu-id="caa47-131">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web Site template is available in the New Project dialog box under **Visual C#\Web Site\WCF Service** and **Visual Basic\Web Site\WCF Service**.</span></span> <span data-ttu-id="caa47-132">这将创建与 WCF 服务应用程序模板相同的文件，但按照它是 ASP.NET 网站来进行组织。</span><span class="sxs-lookup"><span data-stu-id="caa47-132">This creates the same files as the WCF Service Application template but organizes it as if it were a ASP.NET web site.</span></span> <span data-ttu-id="caa47-133">创建 App_Code 和 App_Data 文件夹。</span><span class="sxs-lookup"><span data-stu-id="caa47-133">App_Code and App_Data folders are created.</span></span>  
+  
+### <a name="wcf-service-item-template"></a><span data-ttu-id="caa47-134">WCF 服务项模板</span><span class="sxs-lookup"><span data-stu-id="caa47-134">WCF Service Item Template</span></span>  
+ <span data-ttu-id="caa47-135">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项模板是一个自定义模板，通过该模板可以快速将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务添加到现有的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目。</span><span class="sxs-lookup"><span data-stu-id="caa47-135">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Item template is a custom template that provides a quick way to add [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services to your existing [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projects.</span></span>  
+  
+ <span data-ttu-id="caa47-136">若要使用此模板，请转到**解决方案资源管理器**窗格中，右键单击你的项目名称，指向**添加**，然后单击**新项**以启动**添加新项**对话框。</span><span class="sxs-lookup"><span data-stu-id="caa47-136">To use this template, go to the **Solution Explorer** pane, right-click your project name, point to **Add**, and then click **New Item** to launch the **Add New Item** dialog box.</span></span>  
+  
+ <span data-ttu-id="caa47-137">服务接口和实现文件放在根项目文件夹中。</span><span class="sxs-lookup"><span data-stu-id="caa47-137">The service interface and implementation files are placed in the root project folder.</span></span>  
+  
+ <span data-ttu-id="caa47-138">该模板尝试将新服务的配置节合并到兼容类型的现有配置文件中。</span><span class="sxs-lookup"><span data-stu-id="caa47-138">The template attempts to merge the configuration section of the new service to the existing configuration file, if they are compatible types.</span></span>  
+  
+ <span data-ttu-id="caa47-139">如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。</span><span class="sxs-lookup"><span data-stu-id="caa47-139">A service host file (service1.svc) is also created if the existing project is a Web project.</span></span>  
+  
+### <a name="wcf-wf-service-project-and-item-template"></a><span data-ttu-id="caa47-140">WCF WF 服务项目和项模板。</span><span class="sxs-lookup"><span data-stu-id="caa47-140">WCF WF Service Project and Item Template.</span></span>  
+ <span data-ttu-id="caa47-141">这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。</span><span class="sxs-lookup"><span data-stu-id="caa47-141">These templates create [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services that host a Workflow Service, which is a workflow that can be accessed like a web service.</span></span> <span data-ttu-id="caa47-142">XAML 或命令式编程模型具有单独的模板。</span><span class="sxs-lookup"><span data-stu-id="caa47-142">Separate templates exist for XAML or imperative programming models.</span></span> <span data-ttu-id="caa47-143">通过使用模板，可以创建顺序工作流或状态机工作流。</span><span class="sxs-lookup"><span data-stu-id="caa47-143">Using the templates, you can create sequential or state machine workflow.</span></span> <span data-ttu-id="caa47-144">有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97)。</span><span class="sxs-lookup"><span data-stu-id="caa47-144">For more information on these types of workflow, see [Windows Workflow Foundation Tutorials](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="caa47-145">创建工作流项目，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。</span><span class="sxs-lookup"><span data-stu-id="caa47-145"> creating workflow projects, see [Creating Legacy Workflow Projects](/visualstudio/workflow-designer/creating-legacy-workflow-projects).</span></span>  
+  
+ <span data-ttu-id="caa47-146">当使用 XOML 类型的工作流来代替基于代码的工作流时，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 设计器的响应能力较强。</span><span class="sxs-lookup"><span data-stu-id="caa47-146">[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] designer is more responsive when XOML type workflows are used instead of code based ones.</span></span> <span data-ttu-id="caa47-147">XOML 工作流是要创建的默认工作流类型。</span><span class="sxs-lookup"><span data-stu-id="caa47-147">XOML workflow is the default workflow type to be created.</span></span>  
+  
+### <a name="wcf-syndication-service-library-template"></a><span data-ttu-id="caa47-148">WCF 联合服务库模板</span><span class="sxs-lookup"><span data-stu-id="caa47-148">WCF Syndication Service Library Template</span></span>  
+ <span data-ttu-id="caa47-149">通过使用此模板，可以将 RSS 或 ATOM 格式的源作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。</span><span class="sxs-lookup"><span data-stu-id="caa47-149">This template enables you to expose your feed in the RSS or ATOM format as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="caa47-150">有关详细信息，请参阅[WCF 联合](../../../docs/framework/wcf/feature-details/wcf-syndication.md)。</span><span class="sxs-lookup"><span data-stu-id="caa47-150">For more information, see [WCF Syndication](../../../docs/framework/wcf/feature-details/wcf-syndication.md).</span></span>  
+  
+#### <a name="changing-the-address-of-the-feed"></a><span data-ttu-id="caa47-151">更改源的地址</span><span class="sxs-lookup"><span data-stu-id="caa47-151">Changing the Address of the Feed</span></span>  
+ <span data-ttu-id="caa47-152">在执行期间，联合模板使用 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="caa47-152">The syndication template uses Internet Explorer during execution.</span></span> <span data-ttu-id="caa47-153">当您右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡上，你可以查看的默认地址模板。</span><span class="sxs-lookup"><span data-stu-id="caa47-153">When you right-click your project in **Solutions Explorer** in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], select **Properties**, then select the **Debug** tab and you can see the default address of the template.</span></span> <span data-ttu-id="caa47-154">Internet Explorer 尝试在此地址打开源。</span><span class="sxs-lookup"><span data-stu-id="caa47-154">Internet Explorer attempts to open the feed at this address.</span></span>  
+  
+ <span data-ttu-id="caa47-155">如果你更改你的源的地址，你还必须更改中的地址**调试**选项卡。如果不这样做，Internet Explorer 将尝试在默认地址打开源，从而失败。</span><span class="sxs-lookup"><span data-stu-id="caa47-155">If you change the address of your feed, you must also change the address in the **Debug** tab. If you do not do this, Internet Explorer attempts to open the feed at the default address and fail.</span></span>  
+  
+### <a name="ajax-enabled-wcf-service-item-template"></a><span data-ttu-id="caa47-156">支持 AJAX 的 WCF 服务项模板</span><span class="sxs-lookup"><span data-stu-id="caa47-156">AJAX enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="caa47-157">此模板将 AJAX 控件作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。</span><span class="sxs-lookup"><span data-stu-id="caa47-157">This template exposes an AJAX control as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="caa47-158">AJAX 控件的详细信息，请参阅[AJAX 控件文档](http://go.microsoft.com/fwlink/?LinkId=96717)。</span><span class="sxs-lookup"><span data-stu-id="caa47-158">For more information on AJAX controls, see the [AJAX control documentation](http://go.microsoft.com/fwlink/?LinkId=96717).</span></span>  
+  
+### <a name="silverlight-enabled-wcf-service-item-template"></a><span data-ttu-id="caa47-159">启用了 Silverlight 的 WCF 服务项模板</span><span class="sxs-lookup"><span data-stu-id="caa47-159">Silverlight-enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="caa47-160">该模板创建提供数据给 Silverlight 客户端或前端的 Web 服务。</span><span class="sxs-lookup"><span data-stu-id="caa47-160">This template creates a Web service that provides data to a Silverlight client or front-end.</span></span> <span data-ttu-id="caa47-161">可以将该模板添加到网站或 Web 应用程序项目中，以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，其中包括支持与 Silverlight 客户端进行通信的服务代码和配置。</span><span class="sxs-lookup"><span data-stu-id="caa47-161">The template can be added to a Web site or Web application project to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, which includes service code and configuration that support communicating with a Silverlight client.</span></span> <span data-ttu-id="caa47-162">然后，可以使用**添加服务引用**将服务的客户端代理添加到客户端，并在 Silverlight 客户端和启用了 Silverlight 的 WCF 服务之间交换数据。</span><span class="sxs-lookup"><span data-stu-id="caa47-162">You can then use **Add Service Reference** to add a client proxy of the service to the client, and exchange data between the Silverlight client and the Silverlight-enabled WCF service.</span></span>  
+  
+ <span data-ttu-id="caa47-163">若要访问此模板，右键单击中的网站或 Web 应用程序项目**解决方案资源管理器**，单击**添加新项**，然后单击**启用了 Silverlight 的 WCF 服务**。</span><span class="sxs-lookup"><span data-stu-id="caa47-163">To access this template, right-click a Web site or Web application project in **Solution Explorer**, click **Add a new item**, and click **Silverlight-enabled WCF Service**.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="caa47-164">启用了 Silverlight 的 WCF 服务公开 `basicHttpBinding` 终结点，不启用任何安全设置。</span><span class="sxs-lookup"><span data-stu-id="caa47-164">The Silverlight-enabled WCF Service exposes a `basicHttpBinding` endpoint without enabling any security settings.</span></span> <span data-ttu-id="caa47-165">因此，连接到此服务的任何客户端都可以获取有关此服务的信息。</span><span class="sxs-lookup"><span data-stu-id="caa47-165">Therefore, information about the service can be obtained by all clients that connect to this service.</span></span> <span data-ttu-id="caa47-166">此外，在该服务与客户端之间交换的消息也未经过签名和加密处理。</span><span class="sxs-lookup"><span data-stu-id="caa47-166">Messages exchanged between the service and the client are also not signed or encrypted.</span></span> <span data-ttu-id="caa47-167">若要正确保护该终结点，应使用 ASP.NET 身份验证、HTTPS 或其他机制。</span><span class="sxs-lookup"><span data-stu-id="caa47-167">To secure the endpoint properly, you should use ASP.NET authentication, HTTPS or other mechanisms.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="caa47-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="caa47-168">See Also</span></span>  
+ [<span data-ttu-id="caa47-169">WCF 服务主机 (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="caa47-169">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="caa47-170">WCF 测试客户端 (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="caa47-170">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

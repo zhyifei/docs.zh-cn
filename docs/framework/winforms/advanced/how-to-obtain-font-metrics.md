@@ -1,66 +1,70 @@
 ---
-title: "如何：获取字体规格 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "字体规格, 获取"
-  - "字体, 获取规格"
+title: "如何：获取字体规格"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], obtaining metrics
+- font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b45f3f903c02d056fc457b652b01fb7b59413a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：获取字体规格
-<xref:System.Drawing.FontFamily> 类提供了下列方法来检索特定字体\/字形组合的各种规格：  
+# <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="41268-102">如何：获取字体规格</span><span class="sxs-lookup"><span data-stu-id="41268-102">How to: Obtain Font Metrics</span></span>
+<span data-ttu-id="41268-103"><xref:System.Drawing.FontFamily>类提供下列方法来检索特定的系列样式组合的各种指标：</span><span class="sxs-lookup"><span data-stu-id="41268-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>\(FontStyle\)  
+-   <span data-ttu-id="41268-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>（要）</span><span class="sxs-lookup"><span data-stu-id="41268-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>\(FontStyle\)  
+-   <span data-ttu-id="41268-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>（要）</span><span class="sxs-lookup"><span data-stu-id="41268-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>\(FontStyle\)  
+-   <span data-ttu-id="41268-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>（要）</span><span class="sxs-lookup"><span data-stu-id="41268-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>\(FontStyle\)  
+-   <span data-ttu-id="41268-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>（要）</span><span class="sxs-lookup"><span data-stu-id="41268-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)</span></span>  
   
- 这些方法返回的数字使用的是字体设计单位，因此，它们与特定的 <xref:System.Drawing.Font> 对象的大小和单位无关。  
+ <span data-ttu-id="41268-108">由这些方法返回的数字是采用字体设计单位，因此它们是独立的大小和单位特定于<xref:System.Drawing.Font>对象。</span><span class="sxs-lookup"><span data-stu-id="41268-108">The numbers returned by these methods are in font design units, so they are independent of the size and units of a particular <xref:System.Drawing.Font> object.</span></span>  
   
- 下面的插图显示了各种规格。  
+ <span data-ttu-id="41268-109">下图显示的各种度量值。</span><span class="sxs-lookup"><span data-stu-id="41268-109">The following illustration shows the various metrics.</span></span>  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
+ <span data-ttu-id="41268-110">![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span><span class="sxs-lookup"><span data-stu-id="41268-110">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span></span>  
   
-## 示例  
- 下面的示例显示 Arial 字体系列常规字形的规格。  该代码还创建一个大小为 16 像素的 <xref:System.Drawing.Font> 对象（基于 Arial 系列），并显示该特定 <xref:System.Drawing.Font> 对象的规格（以像素为单位）。  
+## <a name="example"></a><span data-ttu-id="41268-111">示例</span><span class="sxs-lookup"><span data-stu-id="41268-111">Example</span></span>  
+ <span data-ttu-id="41268-112">下面的示例显示 Arial 字体系列的正则样式的度量值。</span><span class="sxs-lookup"><span data-stu-id="41268-112">The following example displays the metrics for the regular style of the Arial font family.</span></span> <span data-ttu-id="41268-113">该代码还创建<xref:System.Drawing.Font>具有大小为 16 像素和显示的度量值 （以像素为单位） 对该特定对象 （基于 Arial 系列）<xref:System.Drawing.Font>对象。</span><span class="sxs-lookup"><span data-stu-id="41268-113">The code also creates a <xref:System.Drawing.Font> object (based on the Arial family) with size 16 pixels and displays the metrics (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span>  
   
- 下面的插图显示代码示例的输出。  
+ <span data-ttu-id="41268-114">下图显示示例代码的输出。</span><span class="sxs-lookup"><span data-stu-id="41268-114">The following illustration shows the output of the example code.</span></span>  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")  
+ <span data-ttu-id="41268-115">![字体文本](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span><span class="sxs-lookup"><span data-stu-id="41268-115">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span></span>  
   
- 请注意上面的插图中的前两行输出。  <xref:System.Drawing.Font> 对象返回的大小为 16，<xref:System.Drawing.FontFamily> 对象返回的 em 高度为 2,048。  这两个数字（16 和 2,048）对于在字体设计单位和 <xref:System.Drawing.Font> 对象的单位（在本例中为像素）之间进行转换很关键。  
+ <span data-ttu-id="41268-116">请注意在上图中的前两个行。</span><span class="sxs-lookup"><span data-stu-id="41268-116">Note the first two lines of output in the preceding illustration.</span></span> <span data-ttu-id="41268-117"><xref:System.Drawing.Font>对象返回的大小为 16，和<xref:System.Drawing.FontFamily>对象返回的 em 高度为 2048。</span><span class="sxs-lookup"><span data-stu-id="41268-117">The <xref:System.Drawing.Font> object returns a size of 16, and the <xref:System.Drawing.FontFamily> object returns an em height of 2,048.</span></span> <span data-ttu-id="41268-118">这两个数字 （16 和 2048） 是字体设计单位和单位 （在本例中为像素） 之间进行转换的关键<xref:System.Drawing.Font>对象。</span><span class="sxs-lookup"><span data-stu-id="41268-118">These two numbers (16 and 2,048) are the key to converting between font design units and the units (in this case pixels) of the <xref:System.Drawing.Font> object.</span></span>  
   
- 例如，您可按照以下方法将升高值从设计单位转换为像素：  
+ <span data-ttu-id="41268-119">例如，你可以将转换上升从设计单位为像素，如下所示：</span><span class="sxs-lookup"><span data-stu-id="41268-119">For example, you can convert the ascent from design units to pixels as follows:</span></span>  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")  
+ <span data-ttu-id="41268-120">![字体文本](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span><span class="sxs-lookup"><span data-stu-id="41268-120">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span></span>  
   
- 下面的代码通过设置 <xref:System.Drawing.PointF> 对象的 <xref:System.Drawing.PointF.Y%2A> 数据成员来在垂直方向上定位文本。  每新增加一行文本，y 坐标就增加 `font.Height`。  <xref:System.Drawing.Font> 对象的 <xref:System.Drawing.Font.Height%2A> 属性返回该特定 <xref:System.Drawing.Font> 对象的行距（以像素为单位）。  在此示例中，<xref:System.Drawing.Font.Height%2A> 返回的数值是 19。  请注意，这与通过将行距单位转换为像素而得到的数字（向上舍入为一个整数）是相同的。  
+ <span data-ttu-id="41268-121">下面的代码放置文本垂直通过设置<xref:System.Drawing.PointF.Y%2A>数据成员的<xref:System.Drawing.PointF>对象。</span><span class="sxs-lookup"><span data-stu-id="41268-121">The following code positions text vertically by setting the <xref:System.Drawing.PointF.Y%2A> data member of a <xref:System.Drawing.PointF> object.</span></span> <span data-ttu-id="41268-122">通过增加 y 坐标`font.Height`每个新行的文本。</span><span class="sxs-lookup"><span data-stu-id="41268-122">The y-coordinate is increased by `font.Height` for each new line of text.</span></span> <span data-ttu-id="41268-123"><xref:System.Drawing.Font.Height%2A>属性<xref:System.Drawing.Font>对象返回的行间距 （以像素为单位） 对该特定<xref:System.Drawing.Font>对象。</span><span class="sxs-lookup"><span data-stu-id="41268-123">The <xref:System.Drawing.Font.Height%2A> property of a <xref:System.Drawing.Font> object returns the line spacing (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="41268-124">在此示例中，数由<xref:System.Drawing.Font.Height%2A>为 19。</span><span class="sxs-lookup"><span data-stu-id="41268-124">In this example, the number returned by <xref:System.Drawing.Font.Height%2A> is 19.</span></span> <span data-ttu-id="41268-125">请注意，这是通过将行间距度量值转换为像素得到数字 （向上舍入为整数） 相同。</span><span class="sxs-lookup"><span data-stu-id="41268-125">Note that this is the same as the number (rounded up to an integer) obtained by converting the line-spacing metric to pixels.</span></span>  
   
- 注意 em 高度（也叫大小或 em 大小）不是升高值与降低值之和。  升高值与降低值之和称为单元格高度。  单元格高度减去内部间隙等于 em 高度。  单元格高度加外部间隙等于行距。  
+ <span data-ttu-id="41268-126">请注意，全身高度 （也称为大小或 em 大小） 不是上升和下降的总和。</span><span class="sxs-lookup"><span data-stu-id="41268-126">Note that the em height (also called size or em size) is not the sum of the ascent and the descent.</span></span> <span data-ttu-id="41268-127">上升和下降的总和称为单元格的高度。</span><span class="sxs-lookup"><span data-stu-id="41268-127">The sum of the ascent and the descent is called the cell height.</span></span> <span data-ttu-id="41268-128">减去内部间隙的单元格高度等于全身高度。</span><span class="sxs-lookup"><span data-stu-id="41268-128">The cell height minus the internal leading is equal to the em height.</span></span> <span data-ttu-id="41268-129">单元格高度加外部间隙等于行间距。</span><span class="sxs-lookup"><span data-stu-id="41268-129">The cell height plus the external leading is equal to the line spacing.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.FontsAndText#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="41268-130">编译代码</span><span class="sxs-lookup"><span data-stu-id="41268-130">Compiling the Code</span></span>  
+ <span data-ttu-id="41268-131">前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。</span><span class="sxs-lookup"><span data-stu-id="41268-131">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 请参阅  
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="41268-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="41268-132">See Also</span></span>  
+ [<span data-ttu-id="41268-133">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="41268-133">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="41268-134">使用字体和文本</span><span class="sxs-lookup"><span data-stu-id="41268-134">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

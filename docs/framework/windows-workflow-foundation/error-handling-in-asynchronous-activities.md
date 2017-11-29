@@ -1,32 +1,36 @@
 ---
-title: "异步活动中的错误处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "异步活动中的错误处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7606aeeeb3e2e583f9a217b78bcae4aebc6d8662
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 异步活动中的错误处理
-通过活动的回调系统提供错误处理在 <xref:System.Activities.AsyncCodeActivity> 涉及路由错误。本主题描述如何获取 SendMail 活动示例回到主机引发的异步操作错误。  
+# <a name="error-handling-in-asynchronous-activities"></a><span data-ttu-id="d36af-102">异步活动中的错误处理</span><span class="sxs-lookup"><span data-stu-id="d36af-102">Error handling in asynchronous activities</span></span>
+<span data-ttu-id="d36af-103">在 <xref:System.Activities.AsyncCodeActivity> 中提供错误处理涉及通过活动的回调系统传输错误。</span><span class="sxs-lookup"><span data-stu-id="d36af-103">Providing error handling in an <xref:System.Activities.AsyncCodeActivity> involves routing the error through the activity’s callback system.</span></span> <span data-ttu-id="d36af-104">本主题介绍如何使用 SendMail 活动示例，使在异步操作中引发的错误返回到主机。</span><span class="sxs-lookup"><span data-stu-id="d36af-104">This topic describes how to get an error that is thrown in an asynchronous operation back to the host, using the SendMail activity sample.</span></span>  
   
-## 返回异步活动回主机引发的错误  
- 在异步操作回到 SendMail 活动示例中的主机路由错误涉及以下步骤：  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a><span data-ttu-id="d36af-105">将在异步活动中引发的错误返回到主机</span><span class="sxs-lookup"><span data-stu-id="d36af-105">Returning an error thrown in an asynchronous activity back to the host</span></span>  
+ <span data-ttu-id="d36af-106">在 SendMail 活动示例中将异步操作中的错误传输回主机涉及以下步骤：</span><span class="sxs-lookup"><span data-stu-id="d36af-106">Routing an error in an asynchronous operation back to the host in the SendMail activity sample involves the following steps:</span></span>  
   
--   将 Exception 属性添加到 `SendMailAsyncResult` 类。  
+-   <span data-ttu-id="d36af-107">将 Exception 属性添加到 `SendMailAsyncResult` 类。</span><span class="sxs-lookup"><span data-stu-id="d36af-107">Add an Exception property to the `SendMailAsyncResult` class.</span></span>  
   
--   该属性在 `SendCompleted` 事件处理程序中复制引发的错误。  
+-   <span data-ttu-id="d36af-108">将引发的错误复制到 `SendCompleted` 事件处理程序中的该属性。</span><span class="sxs-lookup"><span data-stu-id="d36af-108">Copy the thrown error to that property in the `SendCompleted` event handler.</span></span>  
   
--   事件处理程序中 `EndExecute` 引发的异常。  
+-   <span data-ttu-id="d36af-109">在 `EndExecute` 事件处理程序中引发异常。</span><span class="sxs-lookup"><span data-stu-id="d36af-109">Throw the exception in the `EndExecute` event handler.</span></span>  
   
- 生成代码如下所示。  
+ <span data-ttu-id="d36af-110">最终生成的代码如下所示。</span><span class="sxs-lookup"><span data-stu-id="d36af-110">The resulting code is as follows.</span></span>  
   
 ```csharp  
 class SendMailAsyncResult : IAsyncResult  
@@ -52,5 +56,4 @@ class SendMailAsyncResult : IAsyncResult
                 throw sendMailResult.Error;   
         }  
     }  
-  
 ```

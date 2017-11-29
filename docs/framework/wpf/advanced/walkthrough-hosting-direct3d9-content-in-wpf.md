@@ -1,83 +1,86 @@
 ---
-title: "演练：在 WPF 中承载 Direct3D9 内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9 [WPF 互操作性], 承载 Direct3D9 内容"
-  - "WPF, 承载 Direct3D9 内容"
+title: "演练：在 WPF 中承载 Direct3D9 内容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Direct3D9 [WPF interoperability], hosting Direct3D9 content
+- WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec80eed37777fc7b17b435e1bef63ecbb94bdf46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：在 WPF 中承载 Direct3D9 内容
-本演练演示如何在 Windows Presentation Foundation \(WPF\) 应用程序中承载 Direct3D9 内容。  
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a><span data-ttu-id="41d7b-102">演练：在 WPF 中承载 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="41d7b-102">Walkthrough: Hosting Direct3D9 Content in WPF</span></span>
+<span data-ttu-id="41d7b-103">本演练演示如何承载 Direct3D9 Windows Presentation Foundation (WPF) 应用程序中的内容。</span><span class="sxs-lookup"><span data-stu-id="41d7b-103">This walkthrough shows how to host Direct3D9 content in a Windows Presentation Foundation (WPF) application.</span></span>  
   
- 在本演练中，您将执行下列任务：  
+ <span data-ttu-id="41d7b-104">在本演练中，你将要执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="41d7b-104">In this walkthrough, you perform the following tasks:</span></span>  
   
--   创建 WPF 项目以承载 Direct3D9 内容。  
+-   <span data-ttu-id="41d7b-105">创建用于承载 Direct3D9 内容的 WPF 项目。</span><span class="sxs-lookup"><span data-stu-id="41d7b-105">Create a WPF project to host the Direct3D9 content.</span></span>  
   
--   导入 Direct3D9 内容。  
+-   <span data-ttu-id="41d7b-106">导入 Direct3D9 内容。</span><span class="sxs-lookup"><span data-stu-id="41d7b-106">Import the Direct3D9 content.</span></span>  
   
--   使用 <xref:System.Windows.Interop.D3DImage> 类显示 Direct3D9 内容。  
+-   <span data-ttu-id="41d7b-107">通过使用显示 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。</span><span class="sxs-lookup"><span data-stu-id="41d7b-107">Display the Direct3D9 content by using the <xref:System.Windows.Interop.D3DImage> class.</span></span>  
   
- 完成后，您将了解如何在 WPF 应用程序中承载 Direct3D9 内容。  
+ <span data-ttu-id="41d7b-108">当完成后时，你将知道如何承载 Direct3D9 内容在 WPF 应用程序。</span><span class="sxs-lookup"><span data-stu-id="41d7b-108">When you are finished, you will know how to host Direct3D9 content in a WPF application.</span></span>  
   
-## 系统必备  
- 您需要以下组件来完成本演练：  
+## <a name="prerequisites"></a><span data-ttu-id="41d7b-109">先决条件</span><span class="sxs-lookup"><span data-stu-id="41d7b-109">Prerequisites</span></span>  
+ <span data-ttu-id="41d7b-110">你需要以下组件来完成本演练：</span><span class="sxs-lookup"><span data-stu-id="41d7b-110">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="41d7b-111">。</span><span class="sxs-lookup"><span data-stu-id="41d7b-111">.</span></span>  
   
--   DirectX SDK 9 或更高版本。  
+-   <span data-ttu-id="41d7b-112">DirectX 9 或更高版本的 SDK。</span><span class="sxs-lookup"><span data-stu-id="41d7b-112">DirectX SDK 9 or later.</span></span>  
   
--   包含 WPF 兼容格式的 Direct3D9 内容的 DLL。  有关更多信息，请参见[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)和[演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+-   <span data-ttu-id="41d7b-113">包含 Direct3D9 内容中的 WPF 兼容格式的 DLL。</span><span class="sxs-lookup"><span data-stu-id="41d7b-113">A DLL that contains Direct3D9 content in a WPF-compatible format.</span></span> <span data-ttu-id="41d7b-114">有关详细信息，请参阅[WPF 和 Direct3D9 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)和[演练： 创建内容的 WPF 中的托管的 Direct3D9](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="41d7b-114">For more information, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md) and [Walkthrough: Creating Direct3D9 Content for Hosting in WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).</span></span>  
   
-## 创建 WPF 项目  
- 第一步是创建 WPF 应用程序的项目。  
+## <a name="creating-the-wpf-project"></a><span data-ttu-id="41d7b-115">创建 WPF 项目</span><span class="sxs-lookup"><span data-stu-id="41d7b-115">Creating the WPF Project</span></span>  
+ <span data-ttu-id="41d7b-116">第一步是创建 WPF 应用程序的项目。</span><span class="sxs-lookup"><span data-stu-id="41d7b-116">The first step is to create the project for the WPF application.</span></span>  
   
-#### 创建 WPF 项目  
+#### <a name="to-create-the-wpf-project"></a><span data-ttu-id="41d7b-117">创建 WPF 项目</span><span class="sxs-lookup"><span data-stu-id="41d7b-117">To create the WPF project</span></span>  
   
--   使用 Visual C\# 新建一个名为 `D3DHost` 的 WPF 应用程序项目。  有关更多信息，请参见[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/zh-cn/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
+-   <span data-ttu-id="41d7b-118">新的 WPF 应用程序项目中 Visual C# 创建名为`D3DHost`。</span><span class="sxs-lookup"><span data-stu-id="41d7b-118">Create a new WPF Application project in Visual C# named `D3DHost`.</span></span> <span data-ttu-id="41d7b-119">有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。</span><span class="sxs-lookup"><span data-stu-id="41d7b-119">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
   
-     MainWindow.xaml 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]中打开。  
+     <span data-ttu-id="41d7b-120">在中，打开 MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="41d7b-120">MainWindow.xaml opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-## 导入 Direct3D9 内容  
- 可以使用 `DllImport` 特性从非托管 DLL 中导入 Direct3D9 内容。  
+## <a name="importing-the-direct3d9-content"></a><span data-ttu-id="41d7b-121">导入 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="41d7b-121">Importing the Direct3D9 Content</span></span>  
+ <span data-ttu-id="41d7b-122">使用导入 Direct3D9 内容从非托管 DLL`DllImport`属性。</span><span class="sxs-lookup"><span data-stu-id="41d7b-122">You import the Direct3D9 content from an unmanaged DLL by using the `DllImport` attribute.</span></span>  
   
-#### 导入 Direct3D9 内容  
+#### <a name="to-import-direct3d9-content"></a><span data-ttu-id="41d7b-123">若要导入 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="41d7b-123">To import Direct3D9 content</span></span>  
   
-1.  在代码编辑器中打开 MainWindow.xaml.cs。  
+1.  <span data-ttu-id="41d7b-124">在代码编辑器中打开 MainWindow.xaml.cs。</span><span class="sxs-lookup"><span data-stu-id="41d7b-124">Open MainWindow.xaml.cs in the Code Editor.</span></span>  
   
-2.  用下面的代码替换自动生成的代码。  
+2.  <span data-ttu-id="41d7b-125">自动生成的代码替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="41d7b-125">Replace the automatically generated code with the following code.</span></span>  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
-## 承载 Direct3D9 内容  
- 最后，使用 <xref:System.Windows.Interop.D3DImage> 类承载 Direct3D9 内容。  
+## <a name="hosting-the-direct3d9-content"></a><span data-ttu-id="41d7b-126">承载 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="41d7b-126">Hosting the Direct3D9 Content</span></span>  
+ <span data-ttu-id="41d7b-127">最后，使用<xref:System.Windows.Interop.D3DImage>类来承载 Direct3D9 的内容。</span><span class="sxs-lookup"><span data-stu-id="41d7b-127">Finally, use the <xref:System.Windows.Interop.D3DImage> class to host the Direct3D9 content.</span></span>  
   
-#### 承载 Direct3D9 内容  
+#### <a name="to-host-the-direct3d9-content"></a><span data-ttu-id="41d7b-128">要承载 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="41d7b-128">To host the Direct3D9 content</span></span>  
   
-1.  在 MainWindow.xaml 中，用以下 XAML 替换自动生成的 XAML。  
+1.  <span data-ttu-id="41d7b-129">在 MainWindow.xaml 中，替换下面的 XAML 自动生成的 XAML。</span><span class="sxs-lookup"><span data-stu-id="41d7b-129">In MainWindow.xaml, replace the automatically generated XAML with the following XAML.</span></span>  
   
-     [!code-xml[System.Windows.Interop.D3DImage#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
+     [!code-xaml[System.Windows.Interop.D3DImage#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  生成项目。  
+2.  <span data-ttu-id="41d7b-130">生成项目。</span><span class="sxs-lookup"><span data-stu-id="41d7b-130">Build the project.</span></span>  
   
-3.  将包含 Direct3D9 内容的 DLL 复制到 bin\/Debug 文件夹。  
+3.  <span data-ttu-id="41d7b-131">将复制包含 bin/Debug 文件夹将 Direct3D9 内容的 DLL。</span><span class="sxs-lookup"><span data-stu-id="41d7b-131">Copy the DLL that contains the Direct3D9 content to the bin/Debug folder.</span></span>  
   
-4.  按 F5 运行项目。  
+4.  <span data-ttu-id="41d7b-132">按 F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="41d7b-132">Press F5 to run the project.</span></span>  
   
-     Direct3D9 内容显示在 WPF 应用程序中。  
+     <span data-ttu-id="41d7b-133">Direct3D9 内容出现在 WPF 应用程序。</span><span class="sxs-lookup"><span data-stu-id="41d7b-133">The Direct3D9 content appears within the WPF application.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Interop.D3DImage>   
- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+## <a name="see-also"></a><span data-ttu-id="41d7b-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="41d7b-134">See Also</span></span>  
+ <xref:System.Windows.Interop.D3DImage>  
+ [<span data-ttu-id="41d7b-135">Direct3D9 和 WPF 互操作性的性能注意事项</span><span class="sxs-lookup"><span data-stu-id="41d7b-135">Performance Considerations for Direct3D9 and WPF Interoperability</span></span>](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

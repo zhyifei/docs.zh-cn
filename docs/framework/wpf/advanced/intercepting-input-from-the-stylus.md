@@ -1,56 +1,61 @@
 ---
-title: "截获触笔输入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "体系结构, System.Windows.Input.StylusPlugIns"
-  - "InkCanvas, 添加插件到"
-  - "插件, 触笔"
-  - "StylusPlugIns 体系结构"
-  - "System.Windows.Input.StylusPlugIns 体系结构"
+title: "截获触笔输入"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- 'architecture [WPF], '
+- ', '
+- ', '
+- ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 截获触笔输入
-<xref:System.Windows.Input.StylusPlugIns> 体系结构提供了一种机制，用于对 <xref:System.Windows.Input.Stylus> 输入和数字墨迹 <xref:System.Windows.Ink.Stroke> 对象的创建实现低级别控制。  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 类提供了一种机制，用于实现自定义行为并将其应用于来自触笔设备的数据流以获得最佳性能。  
+# <a name="intercepting-input-from-the-stylus"></a><span data-ttu-id="b45b6-102">截获触笔输入</span><span class="sxs-lookup"><span data-stu-id="b45b6-102">Intercepting Input from the Stylus</span></span>
+<span data-ttu-id="b45b6-103"><xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别的控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。</span><span class="sxs-lookup"><span data-stu-id="b45b6-103">The <xref:System.Windows.Input.StylusPlugIns> architecture provides a mechanism for implementing low-level control over <xref:System.Windows.Input.Stylus> input and the creation of digital ink <xref:System.Windows.Ink.Stroke> objects.</span></span> <span data-ttu-id="b45b6-104"><xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供机制来实现自定义行为，并将其应用到来自触笔设备以获得最佳性能的数据的流。</span><span class="sxs-lookup"><span data-stu-id="b45b6-104">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> class provides a mechanism for you to implement custom behavior and apply it to the stream of data coming from the stylus device for the optimal performance.</span></span>  
   
- 本主题包含以下小节：  
+ <span data-ttu-id="b45b6-105">本主题包含以下小节：</span><span class="sxs-lookup"><span data-stu-id="b45b6-105">This topic contains the following subsections:</span></span>  
   
--   [体系结构](#Architecture)  
+-   [<span data-ttu-id="b45b6-106">体系结构</span><span class="sxs-lookup"><span data-stu-id="b45b6-106">Architecture</span></span>](#Architecture)  
   
--   [实现触笔插件](#ImplementingStylusPlugins)  
+-   [<span data-ttu-id="b45b6-107">实现触笔插件</span><span class="sxs-lookup"><span data-stu-id="b45b6-107">Implementing Stylus Plug-ins</span></span>](#ImplementingStylusPlugins)  
   
--   [将插件添加到 InkCanvas](#AddingYourPluginToAnInkCanvas)  
+-   [<span data-ttu-id="b45b6-108">将插件添加到 InkCanvas</span><span class="sxs-lookup"><span data-stu-id="b45b6-108">Adding Your Plug-in to an InkCanvas</span></span>](#AddingYourPluginToAnInkCanvas)  
   
--   [结束语](#Conclusion)  
+-   [<span data-ttu-id="b45b6-109">结束语</span><span class="sxs-lookup"><span data-stu-id="b45b6-109">Conclusion</span></span>](#Conclusion)  
   
 <a name="Architecture"></a>   
-## 体系结构  
- <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 是在 [Microsoft Windows XP Tablet PC Edition Software Development Kit 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)（Microsoft Windows XP Tablet PC Edition 软件开发工具包 1.7）中的 [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) API 的基础上发展而来，[Accessing and Manipulating Pen Input](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)（访问和处理笔输入）中对此 API 进行了描述。  
+## <a name="architecture"></a><span data-ttu-id="b45b6-110">体系结构</span><span class="sxs-lookup"><span data-stu-id="b45b6-110">Architecture</span></span>  
+ <span data-ttu-id="b45b6-111"><xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的演进[StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409)中所述的 Api[访问和操作笔输入](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)中[Microsoft Windows XP Tablet PC Edition 软件开发工具包 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409)。</span><span class="sxs-lookup"><span data-stu-id="b45b6-111">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> is the evolution of the [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) APIs, described in [Accessing and Manipulating Pen Input](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409), in the [Microsoft Windows XP Tablet PC Edition Software Development Kit 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).</span></span>  
   
- 每个 <xref:System.Windows.UIElement> 都有一个属于 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> 的 <xref:System.Windows.UIElement.StylusPlugIns%2A> 属性。  可以将 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 添加到元素的 <xref:System.Windows.UIElement.StylusPlugIns%2A> 属性中，以在生成 <xref:System.Windows.Input.StylusPoint> 数据时对其进行处理。  <xref:System.Windows.Input.StylusPoint> 数据由系统数字化器支持的所有属性组成，其中包括 <xref:System.Windows.Input.StylusPoint.X%2A> 和 <xref:System.Windows.Input.StylusPoint.Y%2A> 点数据以及 <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> 数据。  
+ <span data-ttu-id="b45b6-112">每个<xref:System.Windows.UIElement>具有<xref:System.Windows.UIElement.StylusPlugIns%2A>属性都<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>。</span><span class="sxs-lookup"><span data-stu-id="b45b6-112">Each <xref:System.Windows.UIElement> has a <xref:System.Windows.UIElement.StylusPlugIns%2A> property that is a <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span> <span data-ttu-id="b45b6-113">你可以添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到元素的<xref:System.Windows.UIElement.StylusPlugIns%2A>属性可操作<xref:System.Windows.Input.StylusPoint>生成作为它的数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-113">You can add a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to an element's <xref:System.Windows.UIElement.StylusPlugIns%2A> property to manipulate <xref:System.Windows.Input.StylusPoint> data as it is generated.</span></span> <span data-ttu-id="b45b6-114"><xref:System.Windows.Input.StylusPoint>数据包含系统数字化器，包括支持的所有属性<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>点数据，以及<xref:System.Windows.Input.StylusPoint.PressureFactor%2A>数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-114"><xref:System.Windows.Input.StylusPoint> data consists of all the properties supported by the system digitizer, including the <xref:System.Windows.Input.StylusPoint.X%2A> and <xref:System.Windows.Input.StylusPoint.Y%2A> point data, as well as <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> data.</span></span>  
   
- 将 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 添加到 <xref:System.Windows.UIElement.StylusPlugIns%2A> 属性时，会将 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 对象直接插入到来自 <xref:System.Windows.Input.Stylus> 设备的数据流中。  将插件添加到 <xref:System.Windows.UIElement.StylusPlugIns%2A> 集合的顺序指定了这些插件接收 <xref:System.Windows.Input.StylusPoint> 数据的顺序。  例如，如果添加一个对特定区域的输入加以限制的筛选器插件，然后添加一个识别书写笔势的插件，则识别笔势的插件将接收经过筛选的 <xref:System.Windows.Input.StylusPoint> 数据。  
+ <span data-ttu-id="b45b6-115">你<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>对象直接插入的数据来自流<xref:System.Windows.Input.Stylus>设备时你将添加<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="b45b6-115">Your <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects are inserted directly into the stream of data coming from the <xref:System.Windows.Input.Stylus> device when you add the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span> <span data-ttu-id="b45b6-116">插件添加至顺序<xref:System.Windows.UIElement.StylusPlugIns%2A>集合决定将接收的顺序<xref:System.Windows.Input.StylusPoint>数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-116">The order in which plug-ins are added to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection dictates the order in which they will receive <xref:System.Windows.Input.StylusPoint> data.</span></span> <span data-ttu-id="b45b6-117">例如，如果添加筛选器插件，用于限制到特定区域中，输入，然后添加一个插件，写入识别笔势，识别手势插件将接收筛选<xref:System.Windows.Input.StylusPoint>数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-117">For example, if you add a filter plug-in that restricts input to a particular region, and then add a plug-in that recognizes gestures as they are written, the plug-in that recognizes gestures will receive filtered <xref:System.Windows.Input.StylusPoint> data.</span></span>  
   
 <a name="ImplementingStylusPlugins"></a>   
-## 实现触笔插件  
- 若要实现插件，请从 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 中派生一个类。  该类在数据流从 <xref:System.Windows.Input.Stylus> 进入时应用于数据流。  在这个类中，您可以修改 <xref:System.Windows.Input.StylusPoint> 数据的值。  
+## <a name="implementing-stylus-plug-ins"></a><span data-ttu-id="b45b6-118">实现触笔插件</span><span class="sxs-lookup"><span data-stu-id="b45b6-118">Implementing Stylus Plug-ins</span></span>  
+ <span data-ttu-id="b45b6-119">若要实现的插件，从派生类<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。</span><span class="sxs-lookup"><span data-stu-id="b45b6-119">To implement a plug-in, derive a class from <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span></span> <span data-ttu-id="b45b6-120">此类为应用的 o 数据的流，因为它是来自<xref:System.Windows.Input.Stylus>。</span><span class="sxs-lookup"><span data-stu-id="b45b6-120">This class is applied o the stream of data as it comes in from the <xref:System.Windows.Input.Stylus>.</span></span> <span data-ttu-id="b45b6-121">您可以在此类修改的值<xref:System.Windows.Input.StylusPoint>数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-121">In this class you can modify the values of the <xref:System.Windows.Input.StylusPoint> data.</span></span>  
   
 > [!CAUTION]
->  如果 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 引发或导致异常，应用程序将关闭。  您应对使用 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 的控件进行全面测试，并且仅在确信 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 将不会引发异常时才使用控件。  
+>  <span data-ttu-id="b45b6-122">如果<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>会引发或导致异常，该应用程序将关闭。</span><span class="sxs-lookup"><span data-stu-id="b45b6-122">If a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> throws or causes an exception, the application will close.</span></span> <span data-ttu-id="b45b6-123">你应在使用的控件进行全面测试<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>并仅使用的控件，如果您确信<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>将不会引发异常。</span><span class="sxs-lookup"><span data-stu-id="b45b6-123">You should thoroughly test controls that consume a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and only use a control if you are certain the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> will not throw an exception.</span></span>  
   
- 下面的示例演示一个对触笔输入加以限制的插件，该示例在 <xref:System.Windows.Input.StylusPoint> 数据从 <xref:System.Windows.Input.Stylus> 设备进入时修改数据中的 <xref:System.Windows.Input.StylusPoint.X%2A> 和 <xref:System.Windows.Input.StylusPoint.Y%2A> 值。  
+ <span data-ttu-id="b45b6-124">下面的示例演示一个插件，来修改限制触笔输入<xref:System.Windows.Input.StylusPoint.X%2A>和<xref:System.Windows.Input.StylusPoint.Y%2A>中值<xref:System.Windows.Input.StylusPoint>作为它的数据来自<xref:System.Windows.Input.Stylus>设备。</span><span class="sxs-lookup"><span data-stu-id="b45b6-124">The following example demonstrates a plug-in that restricts the stylus input by modifying the <xref:System.Windows.Input.StylusPoint.X%2A> and <xref:System.Windows.Input.StylusPoint.Y%2A> values in the <xref:System.Windows.Input.StylusPoint> data as it comes in from the <xref:System.Windows.Input.Stylus> device.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -58,23 +63,23 @@ caps.handback.revision: 11
 [!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
-## 将插件添加到 InkCanvas  
- 使用自定义插件的最简单途径是实现一个从 InkCanvas 中派生的类，并将其添加到 <xref:System.Windows.UIElement.StylusPlugIns%2A> 属性。  
+## <a name="adding-your-plug-in-to-an-inkcanvas"></a><span data-ttu-id="b45b6-125">将插件添加到 InkCanvas</span><span class="sxs-lookup"><span data-stu-id="b45b6-125">Adding Your Plug-in to an InkCanvas</span></span>  
+ <span data-ttu-id="b45b6-126">使用你的自定义插件的最简单方法是实现从 InkCanvas 派生的类并将其添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="b45b6-126">The easiest way to use your custom plug-in is to implement a class that derives from InkCanvas and add it to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span>  
   
- 下面的示例演示一个对墨迹进行筛选的自定义 <xref:System.Windows.Controls.InkCanvas>。  
+ <span data-ttu-id="b45b6-127">下面的示例演示自定义<xref:System.Windows.Controls.InkCanvas>对墨迹进行筛选。</span><span class="sxs-lookup"><span data-stu-id="b45b6-127">The following example demonstrates a custom <xref:System.Windows.Controls.InkCanvas> that filters the ink.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
- 如果将 `FilterInkCanvas` 添加到应用程序并运行，您将注意到在用户写完笔划之前，墨迹不会被限制在某个区域中。  这是因为 <xref:System.Windows.Controls.InkCanvas> 具有 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 属性，该属性是 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>，并且已经是 <xref:System.Windows.UIElement.StylusPlugIns%2A> 集合的成员。  您添加到 <xref:System.Windows.UIElement.StylusPlugIns%2A> 集合的自定义 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 在 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收数据后接收 <xref:System.Windows.Input.StylusPoint> 数据。  因此，在用户提起笔结束笔画之前，将不会对 <xref:System.Windows.Input.StylusPoint> 数据进行筛选。  若要在用户写出墨迹时对墨迹进行筛选，您必须在 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 之前插入 `FilterPlugin`。  
+ <span data-ttu-id="b45b6-128">如果你添加`FilterInkCanvas`到你的应用程序并运行它，你将注意到墨迹不限于直到区域后用户完成笔画。</span><span class="sxs-lookup"><span data-stu-id="b45b6-128">If you add a `FilterInkCanvas` to your application and run it, you will notice that the ink isn't restricted to a region until after the user completes a stroke.</span></span> <span data-ttu-id="b45b6-129">这是因为<xref:System.Windows.Controls.InkCanvas>具有<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性，它是<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>和已经是成员的<xref:System.Windows.UIElement.StylusPlugIns%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="b45b6-129">This is because the <xref:System.Windows.Controls.InkCanvas> has a <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property, which is a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and is already a member of the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="b45b6-130">自定义<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>你添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>集合接收<xref:System.Windows.Input.StylusPoint>之后，数据<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收数据。</span><span class="sxs-lookup"><span data-stu-id="b45b6-130">The custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> you added to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection receives the <xref:System.Windows.Input.StylusPoint> data after <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives data.</span></span> <span data-ttu-id="b45b6-131">因此，<xref:System.Windows.Input.StylusPoint>数据在用户抬起笔结束笔画后不会直到筛选。</span><span class="sxs-lookup"><span data-stu-id="b45b6-131">As a result, the <xref:System.Windows.Input.StylusPoint> data will not be filtered until after the user lifts the pen to end a stroke.</span></span> <span data-ttu-id="b45b6-132">若要为用户将其绘制筛选墨迹，必须将插入`FilterPlugin`之前<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。</span><span class="sxs-lookup"><span data-stu-id="b45b6-132">To filter the ink as the user draws it, you must insert the `FilterPlugin` before the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span>  
   
- 下面的 C\# 代码演示一个在写出墨迹时对墨迹进行筛选的自定义 <xref:System.Windows.Controls.InkCanvas>。  
+ <span data-ttu-id="b45b6-133">下面的 C# 代码演示自定义<xref:System.Windows.Controls.InkCanvas>，筛选墨迹进行绘制。</span><span class="sxs-lookup"><span data-stu-id="b45b6-133">The following C# code demonstrates a custom <xref:System.Windows.Controls.InkCanvas> that filters the ink as it is drawn.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
-## 结束语  
- 通过派生您自己的 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 类并将这些类插入 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> 集合，您可以极大改进数字墨迹的行为。  您可以在 <xref:System.Windows.Input.StylusPoint> 数据生成时对其进行访问，从而能够自定义 <xref:System.Windows.Input.Stylus> 输入。  由于能够对 <xref:System.Windows.Input.StylusPoint> 数据进行这种低级别访问，因此，您可以实现墨迹收集和呈现的同时获得应用程序的最佳性能。  
+## <a name="conclusion"></a><span data-ttu-id="b45b6-134">结束语</span><span class="sxs-lookup"><span data-stu-id="b45b6-134">Conclusion</span></span>  
+ <span data-ttu-id="b45b6-135">通过派生你自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类并将它们到插入<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>集合，你可以极大地提高你数字墨迹的行为。</span><span class="sxs-lookup"><span data-stu-id="b45b6-135">By deriving your own <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes and inserting them into <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> collections, you can greatly enhance the behavior of your digital ink.</span></span> <span data-ttu-id="b45b6-136">你有权<xref:System.Windows.Input.StylusPoint>作为它的数据生成，为你提供机会自定义<xref:System.Windows.Input.Stylus>输入。</span><span class="sxs-lookup"><span data-stu-id="b45b6-136">You have access to the <xref:System.Windows.Input.StylusPoint> data as it is generated, giving you the opportunity to customize the <xref:System.Windows.Input.Stylus> input.</span></span> <span data-ttu-id="b45b6-137">由于这种低级别访问<xref:System.Windows.Input.StylusPoint>数据，你可以为你的应用程序实现墨迹收集和呈现以最佳性能。</span><span class="sxs-lookup"><span data-stu-id="b45b6-137">Because you have such low-level access to the <xref:System.Windows.Input.StylusPoint> data, you can implement ink collection and rendering with optimal performance for your application.</span></span>  
   
-## 请参阅  
- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)   
- [Accessing and Manipulating Pen Input](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="b45b6-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b45b6-138">See Also</span></span>  
+ [<span data-ttu-id="b45b6-139">高级墨迹处理</span><span class="sxs-lookup"><span data-stu-id="b45b6-139">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [<span data-ttu-id="b45b6-140">访问和操作笔输入</span><span class="sxs-lookup"><span data-stu-id="b45b6-140">Accessing and Manipulating Pen Input</span></span>](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

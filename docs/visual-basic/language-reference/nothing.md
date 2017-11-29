@@ -1,65 +1,64 @@
 ---
-title: "Nothing (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Nothing"
-  - "vb.Nothing"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing 关键字"
-  - "Nothing 关键字, 语法"
+title: Nothing (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Nothing
+- vb.Nothing
+helpviewer_keywords:
+- Nothing keyword [Visual Basic]
+- Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: 31
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Nothing (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-表示任意数据类型的默认值。  对于引用类型，默认值为 `null` 引用。  对于值类型，默认值取决于值类型是否可以为 null 的。  
+# <a name="nothing-visual-basic"></a><span data-ttu-id="b3675-102">Nothing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3675-102">Nothing (Visual Basic)</span></span>
+<span data-ttu-id="b3675-103">表示任何数据类型的默认的值。</span><span class="sxs-lookup"><span data-stu-id="b3675-103">Represents the default value of any data type.</span></span> <span data-ttu-id="b3675-104">对于引用类型，默认值是`null`引用。</span><span class="sxs-lookup"><span data-stu-id="b3675-104">For reference types, the default value is the `null` reference.</span></span> <span data-ttu-id="b3675-105">对于值类型，默认值取决于是否可以为 null 的值类型。</span><span class="sxs-lookup"><span data-stu-id="b3675-105">For value types, the default value depends on whether the value type is nullable.</span></span>  
   
 > [!NOTE]
->  对非可以为 null 的类型，在 Visual Basic 中 `Nothing` 与 c\# 的 `null` 不同。  在 Visual Basic 中，因此，如果您设置了不可为 null 的值类型的变量。 `Nothing`，变量设置为其声明类型的默认值。  在 c\# 中，，如果将一个非 null 值类型的变量赋给 `null`，将产生编译时错误。  
+>  <span data-ttu-id="b3675-106">对于不可为 null 的值类型，`Nothing`在 Visual Basic 中区别`null`C# 中。</span><span class="sxs-lookup"><span data-stu-id="b3675-106">For non-nullable value types, `Nothing` in Visual Basic differs from `null` in C#.</span></span> <span data-ttu-id="b3675-107">在 Visual Basic 中，如果设置为不可为 null 的值类型的变量`Nothing`，则变量设置为其声明的类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="b3675-107">In Visual Basic, if you set a variable of a non-nullable value type to `Nothing`, the variable is set to the default value for its declared type.</span></span> <span data-ttu-id="b3675-108">在 C# 中，如果将分配到的不可为 null 的值类型的变量`null`，则发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="b3675-108">In C#, if you assign a variable of a non-nullable value type to `null`, a compile-time error occurs.</span></span>  
   
-## 备注  
- `Nothing` 表示数据类型的默认值。  默认取决于该变量是否为值类型或引用类型。  
+## <a name="remarks"></a><span data-ttu-id="b3675-109">备注</span><span class="sxs-lookup"><span data-stu-id="b3675-109">Remarks</span></span>  
+ <span data-ttu-id="b3675-110">`Nothing`表示一种数据类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="b3675-110">`Nothing` represents the default value of a data type.</span></span> <span data-ttu-id="b3675-111">默认值取决于变量是值类型或引用类型。</span><span class="sxs-lookup"><span data-stu-id="b3675-111">The default value depends on whether the variable is of a value type or of a reference type.</span></span>  
   
- *值类型的* 变量直接包含它的值。  值类型包括所有数值数据类型、 `Boolean`、 `Char`、 `Date`、所有结构以及所有枚举。  *引用类型的* 变量存储对对象的实例在内存中。  引用类型包括类、数组、委托和字符串。  有关更多信息，请参见 [值类型和引用类型](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+ <span data-ttu-id="b3675-112">变量*值类型*直接包含其值。</span><span class="sxs-lookup"><span data-stu-id="b3675-112">A variable of a *value type* directly contains its value.</span></span> <span data-ttu-id="b3675-113">值类型包括所有数值数据类型， `Boolean`， `Char`， `Date`，所有的结构和所有枚举。</span><span class="sxs-lookup"><span data-stu-id="b3675-113">Value types include all numeric data types, `Boolean`, `Char`, `Date`, all structures, and all enumerations.</span></span> <span data-ttu-id="b3675-114">变量*引用类型*在内存中存储对对象的实例的引用。</span><span class="sxs-lookup"><span data-stu-id="b3675-114">A variable of a *reference type* stores a reference to an instance of the object in memory.</span></span> <span data-ttu-id="b3675-115">引用类型包括类、 数组、 委托和字符串。</span><span class="sxs-lookup"><span data-stu-id="b3675-115">Reference types include classes, arrays, delegates, and strings.</span></span> <span data-ttu-id="b3675-116">有关更多信息，请参见 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。</span><span class="sxs-lookup"><span data-stu-id="b3675-116">For more information, see [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span></span>  
   
- 如果变量是值类型， `Nothing` 行为取决于该变量是否是可以为 null 的数据类型。  若要表示可以为 null 值的类型，添加一个 `?` 修饰符到类型名称。  分配 `Nothing` 到一个可以为 null 的变量将值设置为 `null`。  有关更多信息和示例，请参见[可以为 Null 的值类型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。  
+ <span data-ttu-id="b3675-117">如果变量是值类型、 的行为`Nothing`取决于变量是否是可以为 null 的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b3675-117">If a variable is of a value type, the behavior of `Nothing` depends on whether the variable is of a nullable data type.</span></span> <span data-ttu-id="b3675-118">若要表示为 null 的值类型，添加`?`修饰符向类型名称。</span><span class="sxs-lookup"><span data-stu-id="b3675-118">To represent a nullable value type, add a `?` modifier to the type name.</span></span> <span data-ttu-id="b3675-119">分配`Nothing`为可为 null 的变量将值设置为`null`。</span><span class="sxs-lookup"><span data-stu-id="b3675-119">Assigning `Nothing` to a nullable variable sets the value to `null`.</span></span> <span data-ttu-id="b3675-120">有关详细信息和示例，请参阅[可以为 Null 的值类型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。</span><span class="sxs-lookup"><span data-stu-id="b3675-120">For more information and examples, see [Nullable Value Types](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).</span></span>  
   
- 如果变量不可为 null 的是值类型，分配 `Nothing` 为其设置为其声明类型的默认值。  如果该类型包含变量成员，则这些成员都会设置为其默认值。  下面的示例就标量类型对此进行了说明。  
+ <span data-ttu-id="b3675-121">如果不可以为 null 的值类型的变量，将分配`Nothing`到它将其设置为默认值为其声明的类型。</span><span class="sxs-lookup"><span data-stu-id="b3675-121">If a variable is of a value type that is not nullable, assigning `Nothing` to it sets it to the default value for its declared type.</span></span> <span data-ttu-id="b3675-122">如果该类型包含变量的成员，它们都设置为其默认值。</span><span class="sxs-lookup"><span data-stu-id="b3675-122">If that type contains variable members, they are all set to their default values.</span></span> <span data-ttu-id="b3675-123">下面的示例阐释了这一点的标量类型。</span><span class="sxs-lookup"><span data-stu-id="b3675-123">The following example illustrates this for scalar types.</span></span>  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- 如果变量是引用类型， `Nothing` 分配给变量设置为 `null` 引用变量的类型。  设置为 `null` 的变量引用不与任何对象。  下面的示例说明了这一点。  
+ <span data-ttu-id="b3675-124">如果变量为引用类型，分配给`Nothing`给该变量请将其设置为`null`变量的类型的引用。</span><span class="sxs-lookup"><span data-stu-id="b3675-124">If a variable is of a reference type, assigning `Nothing` to the variable sets it to a `null` reference of the variable's type.</span></span> <span data-ttu-id="b3675-125">设置为变量`null`引用不与任何对象相关联。</span><span class="sxs-lookup"><span data-stu-id="b3675-125">A variable that is set to a `null` reference is not associated with any object.</span></span> <span data-ttu-id="b3675-126">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="b3675-126">The following example demonstrates this.</span></span>  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- 当检查引用 \(或可以为 null 的值类型\) 时变量是否 `null`，不要使用 `= Nothing` 或 `<> Nothing`。  始终使用 `Is Nothing` 或 `IsNot Nothing`。  
+ <span data-ttu-id="b3675-127">检查是否引用 （或可以为 null 的值类型） 变量时`null`，不要使用`= Nothing`或`<> Nothing`。</span><span class="sxs-lookup"><span data-stu-id="b3675-127">When checking whether a reference (or nullable value type) variable is `null`, do not use `= Nothing` or `<> Nothing`.</span></span> <span data-ttu-id="b3675-128">始终使用`Is Nothing`或`IsNot Nothing`。</span><span class="sxs-lookup"><span data-stu-id="b3675-128">Always use `Is Nothing` or `IsNot Nothing`.</span></span>  
   
- 若要在 Visual Basic 的字符串，该空字符串相等 `Nothing`。  因此， `"" = Nothing` 为 true。  
+ <span data-ttu-id="b3675-129">在 Visual Basic 中的字符串，等于空字符串`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="b3675-129">For strings in Visual Basic, the empty string equals `Nothing`.</span></span> <span data-ttu-id="b3675-130">因此，`"" = Nothing`为 true。</span><span class="sxs-lookup"><span data-stu-id="b3675-130">Therefore, `"" = Nothing` is true.</span></span>  
   
- 下面的示例演示使用 `Is` 和 `IsNot` 运算符的比较。  
+ <span data-ttu-id="b3675-131">下面的示例演示使用的比较`Is`和`IsNot`运算符。</span><span class="sxs-lookup"><span data-stu-id="b3675-131">The following example shows comparisons that use the `Is` and `IsNot` operators.</span></span>  
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- 如果您在不使用 `As` 子句的情况下声明一个变量，并将其设置为 `Nothing`，则变量将具有 `Object` 类型。  其示例为 `Dim something = Nothing`。  编译时错误发生在这种情况下，当 `Option Strict` 打开，而 `Option Infer` 关闭。  
+ <span data-ttu-id="b3675-132">如果您声明一个变量而无需使用`As`子句将其设置为`Nothing`，该变量具有一种`Object`。</span><span class="sxs-lookup"><span data-stu-id="b3675-132">If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`.</span></span> <span data-ttu-id="b3675-133">此示例是`Dim something = Nothing`。</span><span class="sxs-lookup"><span data-stu-id="b3675-133">An example of this is `Dim something = Nothing`.</span></span> <span data-ttu-id="b3675-134">在这种情况下发生编译时错误时`Option Strict`位于和`Option Infer`处于关闭状态。</span><span class="sxs-lookup"><span data-stu-id="b3675-134">A compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is off.</span></span>  
   
- 将 `Nothing` 赋给对象变量时，该变量将不再引用任何对象实例。  如果对象以前引用了一个实例，那么将其设置为 `Nothing` 不会终止该实例本身。  只有在垃圾回收器 \(GC\) 检测到没有任何剩余的活动的引用时，才会终止该实例，并释放与其关联的内存和系统资源。  
+ <span data-ttu-id="b3675-135">当分配`Nothing`给对象变量，它不再引用任何对象实例。</span><span class="sxs-lookup"><span data-stu-id="b3675-135">When you assign `Nothing` to an object variable, it no longer refers to any object instance.</span></span> <span data-ttu-id="b3675-136">如果变量具有以前引用了一个实例，则将其设置为`Nothing`不会终止该实例本身。</span><span class="sxs-lookup"><span data-stu-id="b3675-136">If the variable had previously referred to an instance, setting it to `Nothing` does not terminate the instance itself.</span></span> <span data-ttu-id="b3675-137">终止该实例，并释放与之关联的内存和系统资源，仅后垃圾回收器 (GC) 检测到没有任何活动的引用。</span><span class="sxs-lookup"><span data-stu-id="b3675-137">The instance is terminated, and the memory and system resources associated with it are released, only after the garbage collector (GC) detects that there are no active references remaining.</span></span>  
   
- `Nothing` 与 <xref:System.DBNull> 对象不同，表示一个未初始化的变量或不存在的数据库列。  
+ <span data-ttu-id="b3675-138">`Nothing`不同于<xref:System.DBNull>对象，用于表示未初始化的变量或不存在的数据库列。</span><span class="sxs-lookup"><span data-stu-id="b3675-138">`Nothing` differs from the <xref:System.DBNull> object, which represents an uninitialized variant or a nonexistent database column.</span></span>  
   
-## 请参阅  
- [Dim 语句](../../visual-basic/language-reference/statements/dim-statement.md)   
- [对象生存期：如何创建和销毁对象](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Visual Basic 中的生存期](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Is 运算符](../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot 运算符](../../visual-basic/language-reference/operators/isnot-operator.md)   
- [可以为 Null 的值类型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="b3675-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b3675-139">See Also</span></span>  
+ [<span data-ttu-id="b3675-140">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="b3675-140">Dim Statement</span></span>](../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="b3675-141">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="b3675-141">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [<span data-ttu-id="b3675-142">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="b3675-142">Lifetime in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="b3675-143">Is 运算符</span><span class="sxs-lookup"><span data-stu-id="b3675-143">Is Operator</span></span>](../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="b3675-144">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="b3675-144">IsNot Operator</span></span>](../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="b3675-145">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="b3675-145">Nullable Value Types</span></span>](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

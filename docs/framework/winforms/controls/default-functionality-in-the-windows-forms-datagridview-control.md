@@ -1,60 +1,61 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的默认功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据网格, DataGridView 控件中的默认功能"
-  - "DataGridView 控件 [Windows 窗体], 默认功能"
+title: "Windows 窗体 DataGridView 控件中的默认功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体 DataGridView 控件中的默认功能
-Windows 窗体控件 <xref:System.Windows.Forms.DataGridView> 为用户提供大量的默认功能。  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8e8f1-102">Windows 窗体 DataGridView 控件中的默认功能</span><span class="sxs-lookup"><span data-stu-id="8e8f1-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="8e8f1-103">Windows 窗体<xref:System.Windows.Forms.DataGridView>控件向用户提供大量的默认功能。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  
   
-## 默认功能  
- 默认情况下，<xref:System.Windows.Forms.DataGridView> 控件具有下列特点：  
+## <a name="default-functionality"></a><span data-ttu-id="8e8f1-104">默认功能</span><span class="sxs-lookup"><span data-stu-id="8e8f1-104">Default Functionality</span></span>  
+ <span data-ttu-id="8e8f1-105">默认情况下，<xref:System.Windows.Forms.DataGridView>控件：</span><span class="sxs-lookup"><span data-stu-id="8e8f1-105">By default, a <xref:System.Windows.Forms.DataGridView> control:</span></span>  
   
--   自动显示垂直滚动表时保持可见的列标头和行标头。  
+-   <span data-ttu-id="8e8f1-106">自动显示列标题和垂直滚动表时保持可见的行标题。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-106">Automatically displays column headers and row headers that remain visible as the table scrolls vertically.</span></span>  
   
--   拥有行标头，其中包含当前行的选中指示符。  
+-   <span data-ttu-id="8e8f1-107">具有行标头，其中包含当前行的选择指示器。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-107">Has a row header that contains a selection indicator for the current row.</span></span>  
   
--   在第一个单元格中拥有选择矩形。  
+-   <span data-ttu-id="8e8f1-108">已选择矩形中的第一个单元。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-108">Has a selection rectangle in the first cell.</span></span>  
   
--   拥有列，当用户双击列分隔符时可自动调整大小。  
+-   <span data-ttu-id="8e8f1-109">具有当用户双击列分隔线可以自动调整的列。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-109">Has columns that can be automatically resized when the user double-clicks the column dividers.</span></span>  
   
--   通过应用程序的 `Main` 方法调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法时，自动支持 Windows XP 和 Windows Server 2003 系列中的视觉样式。  
+-   <span data-ttu-id="8e8f1-110">自动支持在 Windows XP 和 Windows Server 2003 系列上的视觉样式时<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>从应用程序的调用方法`Main`方法。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-110">Automatically supports visual styles on Windows XP and the Windows Server 2003 family when the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method is called from the application's `Main` method.</span></span>  
   
- 此外，默认情况下可以编辑 <xref:System.Windows.Forms.DataGridView> 控件的内容：  
+ <span data-ttu-id="8e8f1-111">此外，内容<xref:System.Windows.Forms.DataGridView>控件可以编辑默认情况下：</span><span class="sxs-lookup"><span data-stu-id="8e8f1-111">Additionally, the contents of a <xref:System.Windows.Forms.DataGridView> control can be edited by default:</span></span>  
   
--   用户在某个单元格中双击或按 F2 时，此控件将自动使该单元格自动进入编辑模式，并在用户键入时自动更新单元格的内容。  
+-   <span data-ttu-id="8e8f1-112">如果用户双击或按下 F2 在单元格中，该控件将自动将单元格置于编辑模式，并更新的用户类型作为单元格的内容。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-112">If the user double-clicks or presses F2 in a cell, the control automatically puts the cell into edit mode and updates the contents of the cell as the user types.</span></span>  
   
--   如果用户滚动至网格的结尾，将会看到用于添加新记录的行。  用户单击此行时，会向 <xref:System.Windows.Forms.DataGridView> 控件添加使用默认值的新行。  用户按 Esc 时，此新行将消失。  
+-   <span data-ttu-id="8e8f1-113">如果用户滚动到网格的结尾时，用户将看到用于添加新记录行是否存在。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-113">If the user scrolls to the end of the grid, the user will see that a row for adding new records is present.</span></span> <span data-ttu-id="8e8f1-114">当用户单击此行时，将新行添加到<xref:System.Windows.Forms.DataGridView>控件，使用默认值。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-114">When the user clicks this row, a new row is added to the <xref:System.Windows.Forms.DataGridView> control, with default values.</span></span> <span data-ttu-id="8e8f1-115">当用户按 ESC 时，此新行将会消失。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-115">When the user presses ESC, this new row disappears.</span></span>  
   
--   如果用户单击行标头，将会选中整行。  
+-   <span data-ttu-id="8e8f1-116">如果用户单击行标题，则选择整个行。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-116">If the user clicks a row header, the whole row is selected.</span></span>  
   
- 通过设置 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 属性将其绑定到数据源时，该控件可以：  
+ <span data-ttu-id="8e8f1-117">当绑定<xref:System.Windows.Forms.DataGridView>控件添加到数据源通过设置其<xref:System.Windows.Forms.DataGridView.DataSource%2A>属性、 控件：</span><span class="sxs-lookup"><span data-stu-id="8e8f1-117">When you bind a <xref:System.Windows.Forms.DataGridView> control to a data source by setting its <xref:System.Windows.Forms.DataGridView.DataSource%2A> property, the control:</span></span>  
   
--   将数据源列的名称自动用作列标头文本。  
+-   <span data-ttu-id="8e8f1-118">自动使用数据源的列的名称作为列标题文本。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-118">Automatically uses the names of the data source's columns as the column header text.</span></span>  
   
--   用数据源的内容进行填充。  <xref:System.Windows.Forms.DataGridView> 列是为数据源中的每个列自动创建的。  
+-   <span data-ttu-id="8e8f1-119">使用数据源的内容填充。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-119">Is populated with the contents of the data source.</span></span> <span data-ttu-id="8e8f1-120"><xref:System.Windows.Forms.DataGridView>为数据源中的每一列自动创建列。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-120"><xref:System.Windows.Forms.DataGridView> columns are automatically created for each column in the data source.</span></span>  
   
--   为表中的每个可见行创建一行。  
+-   <span data-ttu-id="8e8f1-121">表中创建每个可见行的行。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-121">Creates a row for each visible row in the table.</span></span>  
   
--   用户单击列标头时，将根据基础数据自动对行进行排序。  
+-   <span data-ttu-id="8e8f1-122">自动对基于基础数据，当用户单击列标题行进行排序。</span><span class="sxs-lookup"><span data-stu-id="8e8f1-122">Automatically sorts the rows based on the underlying data when the user clicks a column header.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8e8f1-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8e8f1-123">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="8e8f1-124">DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="8e8f1-124">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

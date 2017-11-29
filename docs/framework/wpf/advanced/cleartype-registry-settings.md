@@ -1,127 +1,129 @@
 ---
-title: "ClearType 注册表设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ClearType, 注册表设置"
-  - "版式, ClearType 注册表设置"
+title: "ClearType 注册表设置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ClearType [WPF], registry settings
+- typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc4411c8141579150cde1bda2e46d7d2abe42e9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ClearType 注册表设置
-本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序所使用的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 注册表设置。  
+# <a name="cleartype-registry-settings"></a><span data-ttu-id="ac3ac-102">ClearType 注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-102">ClearType Registry Settings</span></span>
+<span data-ttu-id="ac3ac-103">本主题提供的概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的注册表设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] registry settings that are used by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="overview"></a>   
-## 技术概述  
- 在显示设备上呈现文本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序采用 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能来增强您的阅读体验。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 开发的一种软件技术，可以改善文字在现有 LCD（液晶显示器，如便携式计算机屏幕、Pocket PC 屏幕和平板显示器）上的可读性。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 通过访问 LCD 屏幕的每个像素中的单个垂直色带元素来工作。  有关 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的更多信息，请参见 [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
+## <a name="technology-overview"></a><span data-ttu-id="ac3ac-104">技术概述</span><span class="sxs-lookup"><span data-stu-id="ac3ac-104">Technology Overview</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ac3ac-105">应用程序呈现文本的显示设备使用[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能以提供增强的阅读体验。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-105"> applications that render text to a display device use [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features to provide an enhanced reading experience.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-106"> 是一种由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 开发的软件技术，可提高现有 LCD（液晶显示器，如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器）上文本的可读性。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-106"> is a software technology developed by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] that improves the readability of text on existing LCDs (Liquid Crystal Displays), such as laptop screens, Pocket PC screens and flat panel monitors.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-107"> 在工作时访问 LCD 屏幕中每个像素的各个垂直色条元素。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-107"> works by accessing the individual vertical color stripe elements in every pixel of an LCD screen.</span></span> <span data-ttu-id="ac3ac-108">有关详细信息[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，请参阅[ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-108">For more information on [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], see [ClearType Overview](../../../../docs/framework/wpf/advanced/cleartype-overview.md).</span></span>  
   
- 在不同的显示设备上查看使用 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 呈现的文本时，显示效果会大大不同。  例如，一小部分监视器按照蓝、绿、红的顺序实现色带元素，而不是按照更为常见的红、绿、蓝 \([!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]\) 的顺序实现。  
+ <span data-ttu-id="ac3ac-109">呈现所使用的文本[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可以出现在不同的显示设备上查看时明显不同。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-109">Text that is rendered with [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] can appear significantly different when viewed on various display devices.</span></span> <span data-ttu-id="ac3ac-110">例如，监视器的少量实现蓝色、 绿色、 红色顺序中的颜色条带元素而不是更常见的红色、 绿色、 蓝色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 顺序。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-110">For example, a small number of monitors implement the color stripe elements in blue, green, red order rather than the more common red, green, blue (    [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) order.</span></span>  
   
- 使用 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 呈现的文本由具有不同级别的颜色敏感度的各个设备进行查看时，显示效果也会大大不同。  某些设备可以更好地检测到细微的颜色差别。  
+ <span data-ttu-id="ac3ac-111">呈现所使用的文本[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，也会出现明显不同查看由具有不同的颜色敏感度级别时。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-111">Text that is rendered with [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] can also appear significantly different when viewed by individuals with varying levels of color sensitivity.</span></span> <span data-ttu-id="ac3ac-112">某些人能够比别人更擅长发觉颜色的微小差异。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-112">Some individuals can detect slight differences in color better than others.</span></span>  
   
- 在上述各种情况下，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能需要进行修改以针对各种情况提供最佳阅读体验。  
+ <span data-ttu-id="ac3ac-113">在每个这些情况下，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能需要进行修改以提供最佳的每个人阅读体验。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-113">In each of these cases, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features need to be modified in order to provide the best reading experience for each individual.</span></span>  
   
 <a name="registry_settings"></a>   
-## 注册表设置  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 指定了四种用于控制 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的注册表设置：  
+## <a name="registry-settings"></a><span data-ttu-id="ac3ac-114">注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-114">Registry Settings</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ac3ac-115">指定四个注册表设置控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-115"> specifies four registry settings for controlling [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] features:</span></span>  
   
-|设置|说明|  
-|--------|--------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别|描述 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 色彩清晰度的级别。|  
-|伽马级别|描述显示设备的像素颜色分量的级别。|  
-|像素结构|描述显示设备的像素的排列。|  
-|文本对比度级别|描述已显示文本的对比度的级别。|  
+|<span data-ttu-id="ac3ac-116">设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-116">Setting</span></span>|<span data-ttu-id="ac3ac-117">描述</span><span class="sxs-lookup"><span data-stu-id="ac3ac-117">Description</span></span>|  
+|-------------|-----------------|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-118"> 级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-118"> level</span></span>|<span data-ttu-id="ac3ac-119">描述的级别[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-119">Describes the level of [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] color clarity.</span></span>|  
+|<span data-ttu-id="ac3ac-120">伽马级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-120">Gamma level</span></span>|<span data-ttu-id="ac3ac-121">描述显示设备的像素颜色组件的级别。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-121">Describes the level of the pixel color component for a display device.</span></span>|  
+|<span data-ttu-id="ac3ac-122">像素结构</span><span class="sxs-lookup"><span data-stu-id="ac3ac-122">Pixel structure</span></span>|<span data-ttu-id="ac3ac-123">描述显示设备的像素排列。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-123">Describes the arrangement of pixels for a display device.</span></span>|  
+|<span data-ttu-id="ac3ac-124">文本对比度级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-124">Text contrast level</span></span>|<span data-ttu-id="ac3ac-125">描述显示文本的对比度级别。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-125">Describes the level of contrast for displayed text.</span></span>|  
   
- 知道如何引用已标识的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 注册表设置的外部配置实用工具可以访问这些设置。  还可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来直接访问这些值，从而创建或修改这些设置。  
+ <span data-ttu-id="ac3ac-126">这些设置，可以访问由知道如何引用标识外部配置实用工具[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]注册表设置。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-126">These settings can be accessed by an external configuration utility that knows how to reference the identified [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registry settings.</span></span> <span data-ttu-id="ac3ac-127">还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-127">These settings can also be created or modified by accessing the values directly by using the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Registry Editor.</span></span>  
   
- 如果未设置 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 注册表设置（这是默认状态），则 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序会查询 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 系统参数信息以获取字体平滑设置。  
+ <span data-ttu-id="ac3ac-128">如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]注册表设置未设置 （这是默认状态），[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序查询[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]系统字体平滑显示设置的参数信息。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-128">If the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registry settings are not set (which is the default state), the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application queries the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] system parameters information for font smoothing settings.</span></span>  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息，请参见 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函数。  
+>  <span data-ttu-id="ac3ac-129">有关枚举显示设备名称的信息，请参阅`SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-129">For information on enumerating display device names, see the `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function.</span></span>  
   
 <a name="ClearType_level"></a>   
-## ClearType 级别  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别使您可以根据个人的颜色敏感度和感知力调整文本的呈现效果。对于某些人而言，使用最高级别的 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 呈现文本并不会得到最佳阅读体验。  
+## <a name="cleartype-level"></a><span data-ttu-id="ac3ac-130">ClearType 级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-130">ClearType Level</span></span>  
+ <span data-ttu-id="ac3ac-131">[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]级别允许你调整颜色敏感度和感知的单个基于文本的呈现。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-131">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level allows you to adjust the rendering of text based on the color sensitivity and perception of an individual.</span></span> <span data-ttu-id="ac3ac-132">对于某些人的文本呈现，它使用[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]在其最高级别不会产生最佳的阅读体验。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-132">For some individuals, the rendering of text that uses [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] at its highest level does not produce the best reading experience.</span></span>  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别是一个介于 0 到 100 之间的整数值。  默认级别为 100，这意味着 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 使用显示设备色带元素的最大能力。  而 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别 0 则将文本呈现为灰度状态。  通过将 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别设置为介于 0 和 100 之间的值，可以创建适用于各设备颜色敏感度的中间级别。  
+ <span data-ttu-id="ac3ac-133">[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]级别是范围从 0 到 100 的整数值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-133">The [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level is an integer value that ranges from 0 to 100.</span></span> <span data-ttu-id="ac3ac-134">默认级别为 100，这意味着[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]使用颜色条带元素的显示设备的最大能力。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-134">The default level is 100, which means [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uses the maximum capability of the color stripe elements of the display device.</span></span> <span data-ttu-id="ac3ac-135">但是，[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]级别为 0 将呈现为灰度状态文本。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-135">However, a [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level of 0 renders text as gray scale.</span></span> <span data-ttu-id="ac3ac-136">通过设置[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]介于 0 和 100 级别，你可以创建适用于个人的颜色敏感度中间级别。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-136">By setting the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level somewhere between 0 and 100, you can create an intermediate level that is suitable to an individual's color sensitivity.</span></span>  
   
-### 注册表设置  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别的注册表设置位置为对应于特定的显示设备名称的单个用户设置：  
+### <a name="registry-setting"></a><span data-ttu-id="ac3ac-137">注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-137">Registry Setting</span></span>  
+ <span data-ttu-id="ac3ac-138">注册表设置位置[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]级别是对应于特定显示设备名称的单个用户设置：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-138">The registry setting location for the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level is an individual user setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 对于用户的每个显示设备名称，都定义了一个 `ClearTypeLevel` DWORD 值。  下面的屏幕快照演示 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别的注册表编辑器设置。  
+ <span data-ttu-id="ac3ac-139">对于用户，每个显示设备名称`ClearTypeLevel`定义 DWORD 值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-139">For each display device name for a user, a `ClearTypeLevel` DWORD value is defined.</span></span> <span data-ttu-id="ac3ac-140">以下屏幕截图显示的注册表编辑器设置[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]级别。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-140">The following screenshot shows the Registry Editor setting for the [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level.</span></span>  
   
- ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ <span data-ttu-id="ac3ac-141">![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span><span class="sxs-lookup"><span data-stu-id="ac3ac-141">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序以两种模式（即：使用和不使用 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]）中的一种来呈现文本。  不使用 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 呈现文本时，称为灰度呈现。  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ac3ac-142">应用程序呈现文本中使用和不使用任一两种模式之一[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-142"> applications render text in one of either two modes, with and without [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].</span></span> <span data-ttu-id="ac3ac-143">情况下呈现文本时[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它称为灰度呈现。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-143">When text is rendered without [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], it is referred to as gray scale rendering.</span></span>  
   
 <a name="gamma_level"></a>   
-## 伽马级别  
- 伽马级别指像素值和亮度之间的非线性关系。  伽马级别设置应与显示设备的物理特性对应；否则，呈现输出中会出现失真。  例如，测试可能看上去太宽或太窄，或者颜色边缘可能显示在标志符号的垂直主体边缘上。  
+## <a name="gamma-level"></a><span data-ttu-id="ac3ac-144">伽马级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-144">Gamma Level</span></span>  
+ <span data-ttu-id="ac3ac-145">伽玛级别指的是像素值和亮度之间的非线性关系。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-145">The gamma level refers to the nonlinear relationship between a pixel value and luminance.</span></span> <span data-ttu-id="ac3ac-146">伽玛级别设置应对应于显示设备的物理特性；否则呈现的输出中可能会出现失真。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-146">The gamma level setting should correspond to the physical characteristics of the display device; otherwise, distortions in rendered output may occur.</span></span> <span data-ttu-id="ac3ac-147">例如，测试可能显得太宽或太窄，或者字形的垂直主体的边缘上可能会出现彩色条纹。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-147">For example, test may appear too wide or too narrow, or color fringes may appear on the edges of vertical stems of glyphs.</span></span>  
   
- 伽马级别是一个介于 1000 和 2200 之间的整数值。  默认级别为 1900。  
+ <span data-ttu-id="ac3ac-148">伽马级别是一个介于 1000 到 2200 之间的整数值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-148">The gamma level is an integer value that ranges from 1000 to 2200.</span></span> <span data-ttu-id="ac3ac-149">默认级别为 1900。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-149">The default level is 1900.</span></span>  
   
-### 注册表设置  
- 伽马级别的注册表设置位置为对应于特定的显示设备名称的本地计算机设置：  
+### <a name="registry-setting"></a><span data-ttu-id="ac3ac-150">注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-150">Registry Setting</span></span>  
+ <span data-ttu-id="ac3ac-151">伽马级别的注册表设置位置是对应于特定显示设备名称的本地计算机设置：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-151">The registry setting location for the gamma level is a local machine setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 对于用户的每个显示设备名称，都定义了一个 `GammaLevel` DWORD 值。  下面的屏幕快照演示伽马级别的注册表编辑器设置。  
+ <span data-ttu-id="ac3ac-152">对于用户，每个显示设备名称`GammaLevel`定义 DWORD 值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-152">For each display device name for a user, a `GammaLevel` DWORD value is defined.</span></span> <span data-ttu-id="ac3ac-153">以下屏幕快照显示了伽马级别的注册表编辑器设置。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-153">The following screenshot shows the Registry Editor setting for the gamma level.</span></span>  
   
- ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ <span data-ttu-id="ac3ac-154">![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span><span class="sxs-lookup"><span data-stu-id="ac3ac-154">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span></span>  
   
 <a name="pixel_structure"></a>   
-## 像素结构  
- 像素结构描述构成显示设备的像素的类型。  像素结构定义为以下三种类型中的一种：  
+## <a name="pixel-structure"></a><span data-ttu-id="ac3ac-155">像素结构</span><span class="sxs-lookup"><span data-stu-id="ac3ac-155">Pixel Structure</span></span>  
+ <span data-ttu-id="ac3ac-156">像素结构描述构成显示设备的像素的类型。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-156">The pixel structure describes the type of pixels that make up a display device.</span></span> <span data-ttu-id="ac3ac-157">像素结构定义为三种类型之一：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-157">The pixel structure is defined as one of three types:</span></span>  
   
-|类型|值|说明|  
-|--------|-------|--------|  
-|简单|0|显示设备不存在像素结构。  这意味着每种颜色的光源都均匀分布在像素区域内，这称为灰度呈现。  标准的显示设备就是这样工作的。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 从不会应用到呈现的文本。|  
-|RGB|1|显示设备具有由三条色带按照红、绿、蓝的顺序构成的像素。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 会应用到呈现的文本。|  
-|BGR|2|显示设备具有由三条色带按照蓝、绿、红的顺序构成的像素。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 会应用到呈现的文本。  请注意，此处的顺序与 RGB 类型的顺序相反。|  
+|<span data-ttu-id="ac3ac-158">类型</span><span class="sxs-lookup"><span data-stu-id="ac3ac-158">Type</span></span>|<span data-ttu-id="ac3ac-159">值</span><span class="sxs-lookup"><span data-stu-id="ac3ac-159">Value</span></span>|<span data-ttu-id="ac3ac-160">说明</span><span class="sxs-lookup"><span data-stu-id="ac3ac-160">Description</span></span>|  
+|----------|-----------|-----------------|  
+|<span data-ttu-id="ac3ac-161">平面</span><span class="sxs-lookup"><span data-stu-id="ac3ac-161">Flat</span></span>|<span data-ttu-id="ac3ac-162">0</span><span class="sxs-lookup"><span data-stu-id="ac3ac-162">0</span></span>|<span data-ttu-id="ac3ac-163">显示设备没有像素结构。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-163">The display device has no pixel structure.</span></span> <span data-ttu-id="ac3ac-164">这意味着每种颜色的光源均匀分布在像素区域上，称为灰度呈现。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-164">This means that light sources for each color are spread equally on the pixel area—this is referred to as gray scale rendering.</span></span> <span data-ttu-id="ac3ac-165">这是标准显示设备的工作方式。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-165">This is how a standard display device works.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-166"> 从不应用于呈现的文本。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-166"> is never applied to the rendered text.</span></span>|  
+|<span data-ttu-id="ac3ac-167">RGB</span><span class="sxs-lookup"><span data-stu-id="ac3ac-167">RGB</span></span>|<span data-ttu-id="ac3ac-168">1</span><span class="sxs-lookup"><span data-stu-id="ac3ac-168">1</span></span>|<span data-ttu-id="ac3ac-169">显示设备的像素由三种色条按以下顺序构成：红色、绿色和蓝色。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-169">The display device has pixels that consist of three stripes in the following order: red, green, and blue.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-170"> 应用于呈现的文本。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-170"> is applied to the rendered text.</span></span>|  
+|<span data-ttu-id="ac3ac-171">BGR</span><span class="sxs-lookup"><span data-stu-id="ac3ac-171">BGR</span></span>|<span data-ttu-id="ac3ac-172">2</span><span class="sxs-lookup"><span data-stu-id="ac3ac-172">2</span></span>|<span data-ttu-id="ac3ac-173">显示设备的像素由三种色条按以下顺序构成：蓝色、绿色和红色。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-173">The display device has pixels that consist of three stripes in the following order: blue, green, and red.</span></span> [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]<span data-ttu-id="ac3ac-174"> 应用于呈现的文本。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-174"> is applied to the rendered text.</span></span> <span data-ttu-id="ac3ac-175">注意该顺序与 RGB 类型相反。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-175">Notice how the order is inverted from the RGB type.</span></span>|  
   
- 像素结构对应于 0 到 2 之间的整数值。  默认级别为 0，表示平面像素结构。  
+ <span data-ttu-id="ac3ac-176">像素结构对应于 0 到 2 之间的一个整数值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-176">The pixel structure corresponds to an integer value that ranges from 0 to 2.</span></span> <span data-ttu-id="ac3ac-177">默认级别为 0，表示平面像素结构。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-177">The default level is 0, which represents a flat pixel structure.</span></span>  
   
 > [!NOTE]
->  有关枚举显示设备名称的信息，请参见 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函数。  
+>  <span data-ttu-id="ac3ac-178">有关枚举显示设备名称的信息，请参阅`EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函数。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-178">For information on enumerating display device names, see the `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function.</span></span>  
   
-### 注册表设置  
- 像素结构的注册表设置位置为对应于特定的显示设备名称的本地计算机设置：  
+### <a name="registry-setting"></a><span data-ttu-id="ac3ac-179">注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-179">Registry Setting</span></span>  
+ <span data-ttu-id="ac3ac-180">像素结构的注册表设置位置是对应于特定显示设备名称的本地计算机设置：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-180">The registry setting location for the pixel structure is a local machine setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- 对于用户的每个显示设备名称，都定义了一个 `PixelStructure` DWORD 值。  下面的屏幕快照演示像素结构的注册表编辑器设置。  
+ <span data-ttu-id="ac3ac-181">对于用户，每个显示设备名称`PixelStructure`定义 DWORD 值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-181">For each display device name for a user, a `PixelStructure` DWORD value is defined.</span></span> <span data-ttu-id="ac3ac-182">以下屏幕快照显示了像素结构的注册表编辑器设置。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-182">The following screenshot shows the Registry Editor setting for the pixel structure.</span></span>  
   
- ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ <span data-ttu-id="ac3ac-183">![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span><span class="sxs-lookup"><span data-stu-id="ac3ac-183">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")</span></span>  
   
 <a name="text_contrast_level"></a>   
-## 文本对比度级别  
- 文本对比度级别使您可以根据标志符号的主体宽度调整文本的呈现效果。  文本对比度级别为介于 0 到 6 之间的整数值，整数值越大，主体越宽。  默认级别为 1。  
+## <a name="text-contrast-level"></a><span data-ttu-id="ac3ac-184">文本对比度级别</span><span class="sxs-lookup"><span data-stu-id="ac3ac-184">Text Contrast Level</span></span>  
+ <span data-ttu-id="ac3ac-185">通过文本对比度级别可以根据字形的主体宽度来调整文本的呈现。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-185">The text contrast level allows you to adjust the rendering of text based on the stem widths of glyphs.</span></span> <span data-ttu-id="ac3ac-186">文本对比度级别是一个 0 到 6 之间的整数值 - 整数值越大，主体就越宽。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-186">The text contrast level is an integer value that ranges from 0 to 6—the larger the integer value, the wider the stem.</span></span> <span data-ttu-id="ac3ac-187">默认级别为 1。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-187">The default level is 1.</span></span>  
   
-### 注册表设置  
- 文本对比度级别的注册表设置位置为对应于特定的显示设备名称的单个用户设置：  
+### <a name="registry-setting"></a><span data-ttu-id="ac3ac-188">注册表设置</span><span class="sxs-lookup"><span data-stu-id="ac3ac-188">Registry Setting</span></span>  
+ <span data-ttu-id="ac3ac-189">文本对比度级别的注册表设置位置是对应于特定显示设备名称的单个用户设置：</span><span class="sxs-lookup"><span data-stu-id="ac3ac-189">The registry setting location for the text contrast level is an individual user setting that corresponds to a specific display device name:</span></span>  
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- 对于用户的每个显示设备名称，都定义了一个 `TextContrastLevel` DWORD 值。  下面的屏幕快照演示文本对比度级别的注册表编辑器设置。  
+ <span data-ttu-id="ac3ac-190">对于用户，每个显示设备名称`TextContrastLevel`定义 DWORD 值。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-190">For each display device name for a user, a `TextContrastLevel` DWORD value is defined.</span></span> <span data-ttu-id="ac3ac-191">以下屏幕快照显示了文本对比度级别的注册表编辑器设置。</span><span class="sxs-lookup"><span data-stu-id="ac3ac-191">The following screenshot shows the Registry Editor setting for the text contrast level.</span></span>  
   
- ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ <span data-ttu-id="ac3ac-192">![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span><span class="sxs-lookup"><span data-stu-id="ac3ac-192">![ClearType settings in the Registry Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")</span></span>  
   
-## 请参阅  
- [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)   
- [ClearType 抗锯齿](_win32_ClearType_Antialiasing)
+## <a name="see-also"></a><span data-ttu-id="ac3ac-193">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ac3ac-193">See Also</span></span>  
+ [<span data-ttu-id="ac3ac-194">ClearType 概述</span><span class="sxs-lookup"><span data-stu-id="ac3ac-194">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ <span data-ttu-id="ac3ac-195">[ClearType 抗锯齿](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)</span><span class="sxs-lookup"><span data-stu-id="ac3ac-195">[ClearType Antialiasing](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)</span></span>

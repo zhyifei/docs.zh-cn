@@ -1,139 +1,136 @@
 ---
-title: "On Error 语句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.OnError"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "分支, on error"
-  - "条件语句, On Error"
-  - "控制流, 分支"
-  - "错误处理, On Error 语句"
-  - "Error 关键字"
-  - "Error 语句, 和 On Error 语句"
-  - "错误 [Visual Basic], 捕获"
-  - "执行, conditional"
-  - "GoTo 语句, 和 On Error 语句"
-  - "Next 语句, On Error"
-  - "On Error 语句"
-  - "On Error 语句, 语法"
-  - "On 关键字"
-  - "Resume Next 语句"
-  - "Resume 语句, 和 On Error 语句"
-  - "运行时错误, 处理"
-  - "Visual Basic 代码, 控制流"
+title: "On Error 语句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.OnError
+helpviewer_keywords:
+- Visual Basic code, control flow
+- Resume Next statement [Visual Basic]
+- errors [Visual Basic], trapping
+- error handling, On Error statement
+- Next statement [Visual Basic], On Error
+- control flow [Visual Basic], branching
+- Error keyword [Visual Basic]
+- execution [Visual Basic], conditional
+- Resume statement [Visual Basic], and On Error statement
+- Error statement [Visual Basic], and On Error statement
+- GoTo statement [Visual Basic], and On Error statement
+- branching [Visual Basic], on error
+- conditional statements [Visual Basic], On Error
+- On Error statement [Visual Basic], syntax
+- On keyword [Visual Basic]
+- run-time errors [Visual Basic], handling
+- On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# On Error 语句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-该语句启用错误处理例程，并指定该例程在过程中的位置；也可以用来禁用错误处理例程。  
+# <a name="on-error-statement-visual-basic"></a><span data-ttu-id="51331-102">On Error 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51331-102">On Error Statement (Visual Basic)</span></span>
+<span data-ttu-id="51331-103">启用错误处理例程，并指定过程; 中的例程的位置此外可以用于禁用错误处理例程。</span><span class="sxs-lookup"><span data-stu-id="51331-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  
   
- 如果不使用 `On Error` 语句，所发生的任何运行时错误都会是致命的：显示错误信息，并且停止执行。  
+ <span data-ttu-id="51331-104">而无需`On Error`语句，则会发生任何运行时错误是致命： 显示错误消息，并且停止执行。</span><span class="sxs-lookup"><span data-stu-id="51331-104">Without an `On Error` statement, any run-time error that occurs is fatal: an error message is displayed, and execution stops.</span></span>  
   
- 只要有可能，建议您使用结构化异常处理在代码中，使用非结构化异常处理和 `On Error` 语句，而不是。  有关更多信息，请参见 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ <span data-ttu-id="51331-105">只要有可能，我们建议你使用结构化的异常处理在代码中，而不是使用非结构化的异常处理和`On Error`语句。</span><span class="sxs-lookup"><span data-stu-id="51331-105">Whenever possible, we suggest you use structured exception handling in your code, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="51331-106">有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="51331-106">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
 > [!NOTE]
->  `Error` 关键字也在 [Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)中使用，以便能够向后兼容。  
+>  <span data-ttu-id="51331-107">`Error`关键字还用于[Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)，这为了向后兼容受支持。</span><span class="sxs-lookup"><span data-stu-id="51331-107">The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="51331-108">语法</span><span class="sxs-lookup"><span data-stu-id="51331-108">Syntax</span></span>  
   
 ```  
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="51331-109">部件</span><span class="sxs-lookup"><span data-stu-id="51331-109">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`GoTo` `line`|该语句启用从必选参数 `line` 指定的行开始的错误处理例程。  参数 `line` 可以是任意的行标签或行号。  如果发生了运行时错误，控制将跳转至指定行，以激活错误处理程序。  指定的行必须和 `On Error` 语句处在同一个过程中，否则会产生编译时错误。|  
-|`GoTo` 0|该语句禁用当前过程中已启用的错误处理程序，并将其重置为 `Nothing`。|  
-|`GoTo` \-1|该语句禁用当前过程中已启用的异常，并将其重置为 `Nothing`。|  
-|`Resume Next`|该语句指定当发生运行时错误时，控制由错误语句跳转到紧随发生错误语句之后的语句，并从该位置继续执行。  在访问对象时，使用此形式而不是 `On Error GoTo`。|  
+|<span data-ttu-id="51331-110">术语</span><span class="sxs-lookup"><span data-stu-id="51331-110">Term</span></span>|<span data-ttu-id="51331-111">定义</span><span class="sxs-lookup"><span data-stu-id="51331-111">Definition</span></span>|  
+|---|---|  
+|<span data-ttu-id="51331-112">`GoTo` `line`</span><span class="sxs-lookup"><span data-stu-id="51331-112">`GoTo` `line`</span></span>|<span data-ttu-id="51331-113">启用开始指定所需的代码行的错误处理例程`line`自变量。</span><span class="sxs-lookup"><span data-stu-id="51331-113">Enables the error-handling routine that starts at the line specified in the required `line` argument.</span></span> <span data-ttu-id="51331-114">`line`自变量可以是任何行标签或行号。</span><span class="sxs-lookup"><span data-stu-id="51331-114">The `line` argument is any line label or line number.</span></span> <span data-ttu-id="51331-115">如果发生运行时错误，则控制分支到指定的行，以激活错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="51331-115">If a run-time error occurs, control branches to the specified line, making the error handler active.</span></span> <span data-ttu-id="51331-116">指定的行必须是相同的过程中`On Error`语句或编译时错误会发生。</span><span class="sxs-lookup"><span data-stu-id="51331-116">The specified line must be in the same procedure as the `On Error` statement, or a compile-time error will occur.</span></span>|  
+|<span data-ttu-id="51331-117">`GoTo` 0</span><span class="sxs-lookup"><span data-stu-id="51331-117">`GoTo` 0</span></span>|<span data-ttu-id="51331-118">禁用当前的过程中启用的错误处理和重置为`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="51331-118">Disables enabled error handler in the current procedure and resets it to `Nothing`.</span></span>|  
+|<span data-ttu-id="51331-119">`GoTo` -1</span><span class="sxs-lookup"><span data-stu-id="51331-119">`GoTo` -1</span></span>|<span data-ttu-id="51331-120">禁用当前的过程中已启用的异常和重置为`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="51331-120">Disables enabled exception in the current procedure and resets it to `Nothing`.</span></span>|  
+|`Resume Next`|<span data-ttu-id="51331-121">指定的运行时错误时，控件跳转到紧跟其中发生错误，并从该点继续执行该语句的语句。</span><span class="sxs-lookup"><span data-stu-id="51331-121">Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point.</span></span> <span data-ttu-id="51331-122">使用此窗体而非`On Error GoTo`时访问的对象。</span><span class="sxs-lookup"><span data-stu-id="51331-122">Use this form rather than `On Error GoTo` when accessing objects.</span></span>|  
   
-## 备注  
-  
-> [!NOTE]
->  建议使用非结构化异常处理和 `On Error` 语句，您可以在代码使用结构化异常处理只要有可能，而不是。  有关更多信息，请参见 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
-  
- “enabled”错误处理程序是由 `On Error` 语句打开的一个错误处理程序。  “active”错误处理程序是处理错误过程中的已启用处理程序。  
-  
- 如果在错误处理程序处于活动状态期间发生错误（介于错误发生位置和 `Resume`、`Exit Sub`、`Exit Function` 或 `Exit Property` 语句之间），则当前过程的错误处理程序将无法处理该错误。  控制返回到调用过程。  
-  
- 如果调用过程有一个已启用的错误处理程序，该程序将被激活以处理错误。  如果调用过程的错误处理程序也处于活动状态，控制将继续返回到前一个调用过程，直到发现一个已启用的并且非活动的错误处理程序。  如果没有发现任何这样的错误处理程序，该错误就成为在其实际发生的位置处的致命错误。  
-  
- 每次错误处理程序将控制返回给调用过程时，那个过程就成为当前过程。  一旦错误由某一过程的错误处理程序进行了处理，程序的执行将在当前过程中由 `Resume` 语句指定的位置继续。  
+## <a name="remarks"></a><span data-ttu-id="51331-123">备注</span><span class="sxs-lookup"><span data-stu-id="51331-123">Remarks</span></span>  
   
 > [!NOTE]
->  错误处理例程不是 `Sub` 过程或 `Function` 过程，  而是指由行标签或行号标识的一段代码。  
+>  <span data-ttu-id="51331-124">我们建议你使用结构化的异常处理，只要有可能，在代码中，而不是无需使用非结构化的异常处理和`On Error`语句。</span><span class="sxs-lookup"><span data-stu-id="51331-124">We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="51331-125">有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="51331-125">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## Number 属性  
- 错误处理例程根据 `Err` 对象的 `Number` 属性值来确定引起错误的原因。  在任何其他错误可能发生或者调用可能引发错误的过程之前，该例程应该测试或者保存 `Err` 对象的相关属性值。  `Err` 对象的属性值只反映最近的错误。  与 `Err.Number` 相关联的错误信息包含在 `Err.Description` 中。  
+ <span data-ttu-id="51331-126">"Enabled"错误处理程序是指通过开启`On Error`语句。</span><span class="sxs-lookup"><span data-stu-id="51331-126">An "enabled" error handler is one that is turned on by an `On Error` statement.</span></span> <span data-ttu-id="51331-127">"活动"的错误处理程序是已启用的处理程序正在处理错误。</span><span class="sxs-lookup"><span data-stu-id="51331-127">An "active" error handler is an enabled handler that is in the process of handling an error.</span></span>  
   
-## Throw 语句  
- 用 `Err.Raise` 方法引发的错误将 `Exception` 属性设置为 <xref:System.Exception> 类的新建实例。  为支持引发派生的异常类型的异常，本语言支持 `Throw` 语句。  该语句只带单个参数，代表将被引发的异常实例。  下面的示例显示了如何在现有的异常处理支持中使用这些特性：  
+ <span data-ttu-id="51331-128">错误处理程序处于活动状态时如果发生错误 (之间发生错误的和`Resume`， `Exit Sub`， `Exit Function`，或`Exit Property`语句)，则当前过程的错误处理程序无法处理该错误。</span><span class="sxs-lookup"><span data-stu-id="51331-128">If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error.</span></span> <span data-ttu-id="51331-129">控制权返回给调用的过程。</span><span class="sxs-lookup"><span data-stu-id="51331-129">Control returns to the calling procedure.</span></span>  
+  
+ <span data-ttu-id="51331-130">如果调用过程有一个已启用的错误处理程序，它将激活地处理错误。</span><span class="sxs-lookup"><span data-stu-id="51331-130">If the calling procedure has an enabled error handler, it is activated to handle the error.</span></span> <span data-ttu-id="51331-131">如果调用过程的错误处理程序还处于活动状态的控制权将传递回通过前一个调用过程中，直到找到已启用，但非活动状态、 错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="51331-131">If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found.</span></span> <span data-ttu-id="51331-132">如果不找到任何此类错误处理程序，这个错误是致命它实际发生的时候。</span><span class="sxs-lookup"><span data-stu-id="51331-132">If no such error handler is found, the error is fatal at the point at which it actually occurred.</span></span>  
+  
+ <span data-ttu-id="51331-133">错误处理程序将控制权返回给调用过程时，每次该过程将成为当前过程。</span><span class="sxs-lookup"><span data-stu-id="51331-133">Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure.</span></span> <span data-ttu-id="51331-134">在当前过程中由指定的位置后通过错误处理程序的任何程序中处理错误，继续执行`Resume`语句。</span><span class="sxs-lookup"><span data-stu-id="51331-134">Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="51331-135">错误处理例程不`Sub`过程或`Function`过程。</span><span class="sxs-lookup"><span data-stu-id="51331-135">An error-handling routine is not a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="51331-136">它是一段代码标记的行标签或行号。</span><span class="sxs-lookup"><span data-stu-id="51331-136">It is a section of code marked by a line label or a line number.</span></span>  
+  
+## <a name="number-property"></a><span data-ttu-id="51331-137">Number 属性</span><span class="sxs-lookup"><span data-stu-id="51331-137">Number Property</span></span>  
+ <span data-ttu-id="51331-138">错误处理例程依赖于中的值`Number`属性`Err`对象以确定错误的原因。</span><span class="sxs-lookup"><span data-stu-id="51331-138">Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error.</span></span> <span data-ttu-id="51331-139">例程应测试或保存中相关的属性值`Err`对象之前可能出现其他错误或错误调用之前可能会导致的过程。</span><span class="sxs-lookup"><span data-stu-id="51331-139">The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called.</span></span> <span data-ttu-id="51331-140">属性值将在`Err`对象只反映最新的错误。</span><span class="sxs-lookup"><span data-stu-id="51331-140">The property values in the `Err` object reflect only the most recent error.</span></span> <span data-ttu-id="51331-141">与关联的错误消息`Err.Number`中包含`Err.Description`。</span><span class="sxs-lookup"><span data-stu-id="51331-141">The error message associated with `Err.Number` is contained in `Err.Description`.</span></span>  
+  
+## <a name="throw-statement"></a><span data-ttu-id="51331-142">Throw 语句</span><span class="sxs-lookup"><span data-stu-id="51331-142">Throw Statement</span></span>  
+ <span data-ttu-id="51331-143">引发错误`Err.Raise`方法设置`Exception`属性的新创建的实例<xref:System.Exception>类。</span><span class="sxs-lookup"><span data-stu-id="51331-143">An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class.</span></span> <span data-ttu-id="51331-144">为了支持派生的异常类型的异常引发`Throw`语句支持的语言。</span><span class="sxs-lookup"><span data-stu-id="51331-144">In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language.</span></span> <span data-ttu-id="51331-145">这将是要引发的异常实例的单个参数。</span><span class="sxs-lookup"><span data-stu-id="51331-145">This takes a single parameter that is the exception instance to be thrown.</span></span> <span data-ttu-id="51331-146">下面的示例演示如何与现有异常处理支持使用这些功能：</span><span class="sxs-lookup"><span data-stu-id="51331-146">The following example shows how these features can be used with the existing exception handling support:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
- 请注意，`On Error GoTo` 语句捕获所有错误，与异常类无关。  
+ <span data-ttu-id="51331-147">请注意，`On Error GoTo`语句捕获所有错误，而不考虑异常类。</span><span class="sxs-lookup"><span data-stu-id="51331-147">Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.</span></span>  
   
-## On Error Resume Next  
- `On Error Resume Next` 会使程序从紧随产生错误的语句之后的语句继续执行，或是由紧随最近一次过程调用（该过程含有 `On Error Resume Next` 语句）之后的语句继续运行。  该语句允许即使发生了运行时错误时，仍继续执行。  可以在可能发生错误的位置放置错误处理例程，而不必将控制移交给过程中的另一位置。  在调用另一个过程时，`On Error Resume Next` 语句变为非活动状态。因此，如果希望在每一个调用的例程中进行内联错误处理，则应在例程中执行 `On Error Resume Next` 语句。  
+## <a name="on-error-resume-next"></a><span data-ttu-id="51331-148">On Error Resume Next</span><span class="sxs-lookup"><span data-stu-id="51331-148">On Error Resume Next</span></span>  
+ <span data-ttu-id="51331-149">`On Error Resume Next`会导致执行继续紧跟导致运行时错误的语句的语句或使用紧随最新的语句调用外过程包含`On Error Resume Next`语句。</span><span class="sxs-lookup"><span data-stu-id="51331-149">`On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement.</span></span> <span data-ttu-id="51331-150">此语句允许执行运行时错误时仍继续。</span><span class="sxs-lookup"><span data-stu-id="51331-150">This statement allows execution to continue despite a run-time error.</span></span> <span data-ttu-id="51331-151">你可以将会出现错误的错误处理例程，而不是将控制转移到过程内的另一个位置。</span><span class="sxs-lookup"><span data-stu-id="51331-151">You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure.</span></span> <span data-ttu-id="51331-152">`On Error Resume Next`语句变为非活动状态时调用另一个过程，因此应执行`On Error Resume Next`中每个语句调用例程，如果你想内联错误处理中该例程。</span><span class="sxs-lookup"><span data-stu-id="51331-152">An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.</span></span>  
   
 > [!NOTE]
->  在处理访问其他对象期间生成的错误时，`On Error Resume Next` 构造可能比 `On Error GoTo` 更合适。  在每次与对象进行交互之后检查 `Err` 可以清楚地了解代码所访问的对象的情况。  由此，可以确定哪个对象在 `Err.Number` 中设置了错误代码，哪个对象导致了该错误（`Err.Source` 中指定的对象）。  
+>  <span data-ttu-id="51331-153">`On Error Resume Next`构造可能优于`On Error GoTo`时处理期间对其他对象的访问生成的错误。</span><span class="sxs-lookup"><span data-stu-id="51331-153">The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects.</span></span> <span data-ttu-id="51331-154">检查`Err`与对象的每个交互清楚地了解对象所访问的代码后。</span><span class="sxs-lookup"><span data-stu-id="51331-154">Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code.</span></span> <span data-ttu-id="51331-155">你可以将确定哪些对象放置中的错误代码`Err.Number`，以及哪些对象最初生成错误 (中指定的对象`Err.Source`)。</span><span class="sxs-lookup"><span data-stu-id="51331-155">You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).</span></span>  
   
-## On Error GoTo 0  
- `On Error GoTo 0` 禁止在当前过程中进行错误处理。  它不将行 0 指定为错误处理程序代码的开始，即使过程包含编号为 0 的行。  如果没有 `On Error GoTo 0` 语句，则在退出过程时会自动禁用错误处理程序。  
+## <a name="on-error-goto-0"></a><span data-ttu-id="51331-156">On Error GoTo 0</span><span class="sxs-lookup"><span data-stu-id="51331-156">On Error GoTo 0</span></span>  
+ <span data-ttu-id="51331-157">`On Error GoTo 0`禁用当前的过程中的错误处理。</span><span class="sxs-lookup"><span data-stu-id="51331-157">`On Error GoTo 0` disables error handling in the current procedure.</span></span> <span data-ttu-id="51331-158">它不会作为错误处理代码中，开始指定 0 行，即使过程包含编号为 0 的行。</span><span class="sxs-lookup"><span data-stu-id="51331-158">It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0.</span></span> <span data-ttu-id="51331-159">而无需`On Error GoTo 0`过程退出时，会自动禁用语句，错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="51331-159">Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.</span></span>  
   
-## On Error GoTo \-1  
- `On Error GoTo -1` 禁用当前过程中的异常。  它不将行 \-1 指定为错误处理程序代码的开始，即使过程包含编号为 \-1 的行。  如果没有 `On Error GoTo -1` 语句，则在退出过程时自动禁用异常。  
+## <a name="on-error-goto--1"></a><span data-ttu-id="51331-160">On Error GoTo-1</span><span class="sxs-lookup"><span data-stu-id="51331-160">On Error GoTo -1</span></span>  
+ <span data-ttu-id="51331-161">`On Error GoTo -1`禁用当前的过程中的异常。</span><span class="sxs-lookup"><span data-stu-id="51331-161">`On Error GoTo -1` disables the exception in the current procedure.</span></span> <span data-ttu-id="51331-162">即使过程包含编号为-1 的行，它不作为错误处理代码中，开始指定行-1。</span><span class="sxs-lookup"><span data-stu-id="51331-162">It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1.</span></span> <span data-ttu-id="51331-163">而无需`On Error GoTo -1`过程退出时，会自动禁用语句，异常。</span><span class="sxs-lookup"><span data-stu-id="51331-163">Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.</span></span>  
   
- 若要防止错误处理代码在没有错误的情况下运行，请将 `Exit Sub`、`Exit Function` 或 `Exit Property` 语句放在紧靠错误处理例程之前，如以下片段所示：  
+ <span data-ttu-id="51331-164">若要防止错误处理代码运行时未发生错误，将放置`Exit Sub`， `Exit Function`，或`Exit Property`语句之前的错误处理例程，如以下片段中所示：</span><span class="sxs-lookup"><span data-stu-id="51331-164">To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
- 此处，错误处理代码紧跟在 `Exit Sub` 语句之后，位于 `End Sub` 语句之前，这样就使其与过程流分离开。  当然，错误处理代码可以放在过程的任何位置。  
+ <span data-ttu-id="51331-165">在这里，错误处理代码遵循`Exit Sub`语句位于`End Sub`语句以将其与过程流。</span><span class="sxs-lookup"><span data-stu-id="51331-165">Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow.</span></span> <span data-ttu-id="51331-166">可以将错误处理代码放置在过程中的任意位置。</span><span class="sxs-lookup"><span data-stu-id="51331-166">You can place error-handling code anywhere in a procedure.</span></span>  
   
-## 无法捕获的错误  
- 当对象以可执行文件的方式运行时，对象中无法捕获的错误将返回给控制程序。  在开发环境中，只有进行了正确的选项设置，无法捕获的错误才被返回给控制程序。  请参见您的宿主应用程序文档，了解在调试过程中应该设置哪些选项，如何设置，以及宿主应用程序是否可以创建类。  
+## <a name="untrapped-errors"></a><span data-ttu-id="51331-167">无法捕获的错误</span><span class="sxs-lookup"><span data-stu-id="51331-167">Untrapped Errors</span></span>  
+ <span data-ttu-id="51331-168">当对象的可执行文件以运行时无法捕获的错误，在对象中返回给控制应用程序。</span><span class="sxs-lookup"><span data-stu-id="51331-168">Untrapped errors in objects are returned to the controlling application when the object is running as an executable file.</span></span> <span data-ttu-id="51331-169">在开发环境中，无法捕获的错误返回到控制应用程序仅当设置了正确的选项。</span><span class="sxs-lookup"><span data-stu-id="51331-169">Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set.</span></span> <span data-ttu-id="51331-170">请参阅有关种选项应为在调试过程中的集、 如何进行设置，和主机是否可以创建类的说明的主机应用程序的文档。</span><span class="sxs-lookup"><span data-stu-id="51331-170">See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.</span></span>  
   
- 如果创建了访问其他对象的对象，则应对任何它们可能传回的未处理错误进行处理。  如果无法处理，请将 `Err.Number` 中的错误代码映射到您自己的某个错误，并将其传回给对象的调用方。  应通过将错误代码添加到 `VbObjectError` 常数中来指定您的错误。  例如，如果您的错误代码是 1052，按照以下方式进行赋值：  
+ <span data-ttu-id="51331-171">如果创建了访问其他对象的对象，你应尝试处理它们可能传回任何未处理的错误。</span><span class="sxs-lookup"><span data-stu-id="51331-171">If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back.</span></span> <span data-ttu-id="51331-172">如果你不能映射中的错误代码`Err.Number`到其中一个你自己的错误，然后将传递它们重新添加到你的对象的调用方。</span><span class="sxs-lookup"><span data-stu-id="51331-172">If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object.</span></span> <span data-ttu-id="51331-173">你应通过添加你的错误代码来指定错误`VbObjectError`常量。</span><span class="sxs-lookup"><span data-stu-id="51331-173">You should specify your error by adding your error code to the `VbObjectError` constant.</span></span> <span data-ttu-id="51331-174">例如，如果你的错误代码是 1052年，将其分配，如下所示：</span><span class="sxs-lookup"><span data-stu-id="51331-174">For example, if your error code is 1052, assign it as follows:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
->  调用 Windows 动态链接库 \(DLL\) 时产生的系统错误并不引发异常，因而无法使用 Visual Basic 错误捕获机制进行捕获。  在调用 DLL 函数时，应该检查返回值以判断是否调用成功（根据 API 规范）；如果发生错误，则检查 `Err` 对象的 `LastDLLError` 属性值。  
+>  <span data-ttu-id="51331-175">对 Windows 动态链接库 (Dll) 的调用期间的系统错误不会引发异常和无法困在 Visual Basic 错误捕获。</span><span class="sxs-lookup"><span data-stu-id="51331-175">System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping.</span></span> <span data-ttu-id="51331-176">当调用 DLL 函数，应检查成功或失败 （根据 API 规范），每个返回值和出现故障，请检查此值`Err`对象的`LastDLLError`属性。</span><span class="sxs-lookup"><span data-stu-id="51331-176">When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.</span></span>  
   
-## 示例  
- 此示例首先使用 `On Error GoTo` 语句指定错误处理例程在过程中的位置。  在该示例中，被 0 除的尝试将生成错误号 6。  该错误将在错误处理例程中得到处理，然后控制权将返回到导致错误的语句。  `On Error GoTo 0` 语句关闭错误捕获。  然后 `On Error Resume Next` 语句将被用于推迟错误捕获，以确保能够肯定知道下一条语句所生成的错误所处的环境。  请注意，错误被处理后，将使用 `Err.Clear` 清除 `Err` 对象的属性。  
+## <a name="example"></a><span data-ttu-id="51331-177">示例</span><span class="sxs-lookup"><span data-stu-id="51331-177">Example</span></span>  
+ <span data-ttu-id="51331-178">此示例首先使用`On Error GoTo`语句指定的过程中的错误处理例程的位置。</span><span class="sxs-lookup"><span data-stu-id="51331-178">This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure.</span></span> <span data-ttu-id="51331-179">在示例中，尝试除以零会生成错误编号为 6。</span><span class="sxs-lookup"><span data-stu-id="51331-179">In the example, an attempt to divide by zero generates error number 6.</span></span> <span data-ttu-id="51331-180">错误处理中的错误处理例程，并且控件然后返回到导致错误的语句。</span><span class="sxs-lookup"><span data-stu-id="51331-180">The error is handled in the error-handling routine, and control is then returned to the statement that caused the error.</span></span> <span data-ttu-id="51331-181">`On Error GoTo 0`语句关闭错误捕获。</span><span class="sxs-lookup"><span data-stu-id="51331-181">The `On Error GoTo 0` statement turns off error trapping.</span></span> <span data-ttu-id="51331-182">则`On Error Resume Next`语句用于推迟错误捕获，以便可以为某些已知所生成错误的下一个语句的上下文。</span><span class="sxs-lookup"><span data-stu-id="51331-182">Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain.</span></span> <span data-ttu-id="51331-183">请注意，`Err.Clear`用于清除`Err`处理该错误后的对象的属性。</span><span class="sxs-lookup"><span data-stu-id="51331-183">Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## 要求  
- **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="51331-184">要求</span><span class="sxs-lookup"><span data-stu-id="51331-184">Requirements</span></span>  
+ <span data-ttu-id="51331-185">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="51331-185">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **程序集：**Visual Basic 运行库（位于 Microsoft.VisualBasic.dll 中）  
+ <span data-ttu-id="51331-186">**程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)</span><span class="sxs-lookup"><span data-stu-id="51331-186">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.Information.Err%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Number%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Description%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [End 语句](../../../visual-basic/language-reference/statements/end-statement.md)   
- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Resume 语句](../../../visual-basic/language-reference/statements/resume-statement.md)   
- [错误消息](../../../visual-basic/language-reference/error-messages/index.md)   
- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="51331-187">另请参阅</span><span class="sxs-lookup"><span data-stu-id="51331-187">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Information.Err%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [<span data-ttu-id="51331-188">End 语句</span><span class="sxs-lookup"><span data-stu-id="51331-188">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [<span data-ttu-id="51331-189">Exit 语句</span><span class="sxs-lookup"><span data-stu-id="51331-189">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="51331-190">Resume 语句</span><span class="sxs-lookup"><span data-stu-id="51331-190">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [<span data-ttu-id="51331-191">错误消息</span><span class="sxs-lookup"><span data-stu-id="51331-191">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)  
+ [<span data-ttu-id="51331-192">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="51331-192">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

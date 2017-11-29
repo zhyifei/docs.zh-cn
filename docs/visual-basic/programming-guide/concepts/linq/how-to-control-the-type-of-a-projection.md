@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 控制投影 (Visual Basic 中) 的类型 |Microsoft 文档"
+title: "如何： 控制投影 (Visual Basic) 的类型"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32c2c747fd2f1137fbf2ead28886669c041d065c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>如何︰ 控制投影 (Visual Basic 中) 的类型
-投影是一个过程，这一过程包括：获取一组数据，筛选这些数据，更改数据形状，甚至更改数据的类型。 大多数查询表达式都可执行投影。 大部分此节中所示的查询表达式的计算结果为<xref:System.Collections.Generic.IEnumerable%601>的<xref:System.Xml.Linq.XElement>，但您可以控制投影来创建其他类型的集合的类型。</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> 本主题演示如何执行此操作。  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a><span data-ttu-id="ff817-102">如何： 控制投影 (Visual Basic) 的类型</span><span class="sxs-lookup"><span data-stu-id="ff817-102">How to: Control the Type of a Projection (Visual Basic)</span></span>
+<span data-ttu-id="ff817-103">投影是一个过程，这一过程包括：获取一组数据，筛选这些数据，更改数据形状，甚至更改数据的类型。</span><span class="sxs-lookup"><span data-stu-id="ff817-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="ff817-104">大多数查询表达式都可执行投影。</span><span class="sxs-lookup"><span data-stu-id="ff817-104">Most query expressions perform projections.</span></span> <span data-ttu-id="ff817-105">本节中介绍的大多数查询表达式的计算结果都是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，不过，可以控制投影的类型从而创建其他类型的集合。</span><span class="sxs-lookup"><span data-stu-id="ff817-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="ff817-106">本主题演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="ff817-106">This topic shows how to do this.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例定义一个新类型 `Customer`。 然后，查询表达式在 `Customer` 子句中实例化新的 `Select` 对象。 这将导致要的查询表达式的类型<xref:System.Collections.Generic.IEnumerable%601>的`Customer`。</xref:System.Collections.Generic.IEnumerable%601>  
+## <a name="example"></a><span data-ttu-id="ff817-107">示例</span><span class="sxs-lookup"><span data-stu-id="ff817-107">Example</span></span>  
+ <span data-ttu-id="ff817-108">下面的示例定义一个新类型 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="ff817-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="ff817-109">然后，查询表达式在 `Customer` 子句中实例化新的 `Select` 对象。</span><span class="sxs-lookup"><span data-stu-id="ff817-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="ff817-110">这样，查询表达式的类型就是 <xref:System.Collections.Generic.IEnumerable%601> 的 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="ff817-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ <span data-ttu-id="ff817-111">本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="ff817-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Public Class Customer  
@@ -88,10 +84,9 @@ Sub Main()
         Console.WriteLine(cust)  
     Next  
 End Sub  
-  
 ```  
   
- 此代码生成以下输出：  
+ <span data-ttu-id="ff817-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="ff817-112">This code produces the following output:</span></span>  
   
 ```  
 GREAL:Great Lakes Food Market:Howard Snyder  
@@ -100,6 +95,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ff817-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ff817-113">See Also</span></span>  
+ <xref:System.Linq.Enumerable.Select%2A>  
+ [<span data-ttu-id="ff817-114">投影和转换 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff817-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

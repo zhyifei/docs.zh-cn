@@ -1,69 +1,73 @@
 ---
-title: "如何：创建显示进度的 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 创建"
-  - "控件 [Windows 窗体], 进度跟踪"
-  - "FlashTrackBar 自定义控件"
-  - "进度, 报告 [Windows 窗体]"
+title: "如何：创建显示进度的 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], progress tracking
+- controls [Windows Forms], creating
+- progress [Windows Forms], reporting [Windows Forms]
+- FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 55b3879b894658c9a649004348a198d004040af3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建显示进度的 Windows 窗体控件
-下面的代码示例演示一个名为 `FlashTrackBar` 的自定义控件，该控件可用于向用户显示应用程序的级别或进度。  它使用渐变以直观的方式表示进度。  
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="3a093-102">如何：创建显示进度的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="3a093-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
+<span data-ttu-id="3a093-103">以下代码示例显示了一个名为 `FlashTrackBar` 的自定义控件，可用于向用户显示应用程序的级别或进度。</span><span class="sxs-lookup"><span data-stu-id="3a093-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="3a093-104">它使用渐变来直观地表示进度。</span><span class="sxs-lookup"><span data-stu-id="3a093-104">It uses a gradient to visually represent progress.</span></span>  
   
- `FlashTrackBar` 控件阐释了以下概念：  
+ <span data-ttu-id="3a093-105">`FlashTrackBar` 控件阐释了以下概念：</span><span class="sxs-lookup"><span data-stu-id="3a093-105">The `FlashTrackBar` control illustrates the following concepts:</span></span>  
   
--   定义自定义属性。  
+-   <span data-ttu-id="3a093-106">定义自定义属性。</span><span class="sxs-lookup"><span data-stu-id="3a093-106">Defining custom properties.</span></span>  
   
--   定义自定义事件。  （`FlashTrackBar` 定义 `ValueChanged` 事件。）  
+-   <span data-ttu-id="3a093-107">定义自定义事件。</span><span class="sxs-lookup"><span data-stu-id="3a093-107">Defining custom events.</span></span> <span data-ttu-id="3a093-108">（`FlashTrackBar` 定义 `ValueChanged` 事件。）</span><span class="sxs-lookup"><span data-stu-id="3a093-108">(`FlashTrackBar` defines the `ValueChanged` event.)</span></span>  
   
--   重写 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法以提供绘制控件的逻辑。  
+-   <span data-ttu-id="3a093-109">重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供逻辑来绘制控件。</span><span class="sxs-lookup"><span data-stu-id="3a093-109">Overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method to provide logic to draw the control.</span></span>  
   
--   通过使用其 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 属性计算可用于绘制控件的区域。  `FlashTrackBar` 在其 `OptimizedInvalidate` 方法中执行此计算。  
+-   <span data-ttu-id="3a093-110">计算可用于通过绘制控件的区域其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="3a093-110">Computing the area available for drawing the control by using its <xref:System.Windows.Forms.Control.ClientRectangle%2A> property.</span></span> <span data-ttu-id="3a093-111">`FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。</span><span class="sxs-lookup"><span data-stu-id="3a093-111">`FlashTrackBar` does this in its `OptimizedInvalidate` method.</span></span>  
   
--   当在 Windows 窗体设计器中更改属性时实现属性的序列化或持久性。  `FlashTrackBar` 定义 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法，以序列化其 `StartColor` 和 `EndColor` 属性。  
+-   <span data-ttu-id="3a093-112">在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。</span><span class="sxs-lookup"><span data-stu-id="3a093-112">Implementing serialization or persistence for a property when it is changed in the Windows Forms Designer.</span></span> <span data-ttu-id="3a093-113">`FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。</span><span class="sxs-lookup"><span data-stu-id="3a093-113">`FlashTrackBar` defines the `ShouldSerializeStartColor` and `ShouldSerializeEndColor` methods for serializing its `StartColor` and `EndColor` properties.</span></span>  
   
- 下表显示由 `FlashTrackBar` 定义的自定义属性。  
+ <span data-ttu-id="3a093-114">下表显示了由 `FlashTrackBar` 定义的自定义属性。</span><span class="sxs-lookup"><span data-stu-id="3a093-114">The following table shows the custom properties defined by `FlashTrackBar`.</span></span>  
   
-|属性|说明|  
-|--------|--------|  
-|`AllowUserEdit`|指示用户是否可以通过单击和拖动来更改闪烁跟踪条的值。|  
-|`EndColor`|指定跟踪条的结束颜色。|  
-|`DarkenBy`|指定根据前景渐变加深背景颜色的程度。|  
-|`Max`|指定跟踪条的最大值。|  
-|`Min`|指定跟踪条的最小值。|  
-|`StartColor`|指定渐变的开始颜色。|  
-|`ShowPercentage`|指示是否在渐变之上显示百分比。|  
-|`ShowValue`|指示是否在渐变之上显示当前值。|  
-|`ShowGradient`|指示跟踪条是否应显示表明当前值的颜色渐变。|  
-|-   `Value`|指定跟踪条的当前值。|  
+|<span data-ttu-id="3a093-115">属性</span><span class="sxs-lookup"><span data-stu-id="3a093-115">Property</span></span>|<span data-ttu-id="3a093-116">描述</span><span class="sxs-lookup"><span data-stu-id="3a093-116">Description</span></span>|  
+|--------------|-----------------|  
+|`AllowUserEdit`|<span data-ttu-id="3a093-117">指示用户是否可以通过单击和拖动来更改闪存跟踪条的值。</span><span class="sxs-lookup"><span data-stu-id="3a093-117">Indicates whether the user can change the value of the flash track bar by clicking and dragging it.</span></span>|  
+|`EndColor`|<span data-ttu-id="3a093-118">指定跟踪条的结束颜色。</span><span class="sxs-lookup"><span data-stu-id="3a093-118">Specifies the ending color of the track bar.</span></span>|  
+|`DarkenBy`|<span data-ttu-id="3a093-119">指定相对于前景渐变加深背景颜色的程度。</span><span class="sxs-lookup"><span data-stu-id="3a093-119">Specifies how much to darken the background with respect to the foreground gradient.</span></span>|  
+|`Max`|<span data-ttu-id="3a093-120">指定跟踪条的最大值。</span><span class="sxs-lookup"><span data-stu-id="3a093-120">Specifies the maximum value of the track bar.</span></span>|  
+|`Min`|<span data-ttu-id="3a093-121">指定跟踪条的最小值。</span><span class="sxs-lookup"><span data-stu-id="3a093-121">Specifies the minimum value of the track bar.</span></span>|  
+|`StartColor`|<span data-ttu-id="3a093-122">指定渐变的开始颜色。</span><span class="sxs-lookup"><span data-stu-id="3a093-122">Specifies the starting color of the gradient.</span></span>|  
+|`ShowPercentage`|<span data-ttu-id="3a093-123">指示是否在渐变上显示百分比。</span><span class="sxs-lookup"><span data-stu-id="3a093-123">Indicates whether to display a percentage over the gradient.</span></span>|  
+|`ShowValue`|<span data-ttu-id="3a093-124">指示是否在渐变上显示当前值。</span><span class="sxs-lookup"><span data-stu-id="3a093-124">Indicates whether to display the current value over the gradient.</span></span>|  
+|`ShowGradient`|<span data-ttu-id="3a093-125">指示跟踪条是否应显示有当前值的颜色渐变。</span><span class="sxs-lookup"><span data-stu-id="3a093-125">Indicates whether the track bar should display a color gradient showing the current value.</span></span>|  
+|-   `Value`|<span data-ttu-id="3a093-126">指定跟踪条的当前值。</span><span class="sxs-lookup"><span data-stu-id="3a093-126">Specifies the current value of the track bar.</span></span>|  
   
- 下表显示由 `FlashTrackBar:` 定义的附加成员：property\-changed 事件以及引发该事件的方法。  
+ <span data-ttu-id="3a093-127">下表显示了 `FlashTrackBar:` 定义的其他成员：property-changed 事件和引发该事件的方法。</span><span class="sxs-lookup"><span data-stu-id="3a093-127">The following table shows additional members defined by `FlashTrackBar:` the property-changed event and the method that raises the event.</span></span>  
   
-|成员|说明|  
-|--------|--------|  
-|`ValueChanged`|当跟踪条的 `Value` 属性改变时引发的事件。|  
-|`OnValueChanged`|引发 `ValueChanged` 事件的方法。|  
+|<span data-ttu-id="3a093-128">成员</span><span class="sxs-lookup"><span data-stu-id="3a093-128">Member</span></span>|<span data-ttu-id="3a093-129">描述</span><span class="sxs-lookup"><span data-stu-id="3a093-129">Description</span></span>|  
+|------------|-----------------|  
+|`ValueChanged`|<span data-ttu-id="3a093-130">当跟踪条的 `Value` 属性更改时引发的事件。</span><span class="sxs-lookup"><span data-stu-id="3a093-130">The event that is raised when the `Value` property of the track bar changes.</span></span>|  
+|`OnValueChanged`|<span data-ttu-id="3a093-131">引发 `ValueChanged` 事件的方法。</span><span class="sxs-lookup"><span data-stu-id="3a093-131">The method that raises the `ValueChanged` event.</span></span>|  
   
 > [!NOTE]
->  `FlashTrackBar` 将 <xref:System.EventArgs> 类用于事件数据，将 <xref:System.EventHandler> 用于事件委托。  
+>  <span data-ttu-id="3a093-132">`FlashTrackBar`使用<xref:System.EventArgs>事件数据的类和<xref:System.EventHandler>事件委托。</span><span class="sxs-lookup"><span data-stu-id="3a093-132">`FlashTrackBar` uses the <xref:System.EventArgs> class for event data and <xref:System.EventHandler> for the event delegate.</span></span>  
   
- 为了处理相应的*事件名称* 事件，`FlashTrackBar` 重写它从 <xref:System.Windows.Forms.Control?displayProperty=fullName> 继承的以下方法：  
+ <span data-ttu-id="3a093-133">若要处理相应*EventName*事件，`FlashTrackBar`重写以下方法，它继承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="3a093-133">To handle the corresponding *EventName* events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- 为了处理相应的 property\-changed 事件，`FlashTrackBar` 重写它从 <xref:System.Windows.Forms.Control?displayProperty=fullName> 继承的以下方法：  
+ <span data-ttu-id="3a093-134">若要处理相应的属性更改事件，`FlashTrackBar`重写以下方法，它继承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="3a093-134">To handle the corresponding property-changed events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -83,8 +87,8 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## 示例  
- `FlashTrackBar` 控件定义两种用户界面类型编辑器：`FlashTrackBarValueEditor` 和 `FlashTrackBarDarkenByEditor`，如下面的代码清单所示。  `HostApp` 类在 Windows 窗体上使用 `FlashTrackBar` 控件。  
+## <a name="example"></a><span data-ttu-id="3a093-135">示例</span><span class="sxs-lookup"><span data-stu-id="3a093-135">Example</span></span>  
+ <span data-ttu-id="3a093-136">`FlashTrackBar` 控件定义了两个 UI 类型编辑器（`FlashTrackBarValueEditor` 和 `FlashTrackBarDarkenByEditor`），它们显示在以下代码列表中。</span><span class="sxs-lookup"><span data-stu-id="3a093-136">The `FlashTrackBar` control defines two UI type editors, `FlashTrackBarValueEditor` and `FlashTrackBarDarkenByEditor`, which are shown in the following code listings.</span></span> <span data-ttu-id="3a093-137">`HostApp` 类在 Windows 窗体上使用 `FlashTrackBar` 控件。</span><span class="sxs-lookup"><span data-stu-id="3a093-137">The `HostApp` class uses the `FlashTrackBar` control on a Windows Form.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
@@ -98,6 +102,6 @@ caps.handback.revision: 6
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## 请参阅  
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [Windows 窗体控件开发基础知识](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="3a093-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3a093-138">See Also</span></span>  
+ [<span data-ttu-id="3a093-139">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="3a093-139">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="3a093-140">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="3a093-140">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

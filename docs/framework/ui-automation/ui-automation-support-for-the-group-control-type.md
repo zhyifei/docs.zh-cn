@@ -1,85 +1,88 @@
 ---
-title: "UI Automation Support for the Group Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Group control type"
-  - "Group control type"
-  - "control types, Group"
+title: "UI 自动化对 Group 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Group control type
+- Group control type
+- control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-caps.latest.revision: 27
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: eab1941f619aca60870686b189e124de4c18a921
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Group Control Type
+# <a name="ui-automation-support-for-the-group-control-type"></a><span data-ttu-id="a7970-102">UI 自动化对 Group 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="a7970-102">UI Automation Support for the Group Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="a7970-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="a7970-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a7970-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="a7970-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供有关 Group 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式的特定准则。  
+ <span data-ttu-id="a7970-105">本主题提供有关 Group 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。</span><span class="sxs-lookup"><span data-stu-id="a7970-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Group control type.</span></span> <span data-ttu-id="a7970-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。</span><span class="sxs-lookup"><span data-stu-id="a7970-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="a7970-107">这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式的特定准则。</span><span class="sxs-lookup"><span data-stu-id="a7970-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values, and [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns.</span></span>  
   
- 组控件表示层次结构中的节点。 Group 控件类型在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中创建分离，以便组合在一起的项在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内具有逻辑划分。  
+ <span data-ttu-id="a7970-108">组控件表示层次结构中的节点。</span><span class="sxs-lookup"><span data-stu-id="a7970-108">The group control represents a node within a hierarchy.</span></span> <span data-ttu-id="a7970-109">Group 控件类型在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中创建分离，以便组合在一起的项在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内具有逻辑划分。</span><span class="sxs-lookup"><span data-stu-id="a7970-109">The Group control type creates a separation in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree so items that are grouped together have a logical division within the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>  
   
- 以下几节定义了 Group 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有组控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="a7970-110">以下几节定义了 Group 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-110">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Group control type.</span></span> <span data-ttu-id="a7970-111">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有组控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a7970-111">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all group controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述了与组控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="a7970-112">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="a7970-112">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="a7970-113">下表描述了与组控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="a7970-113">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to group controls and describes what can be contained in each view.</span></span> <span data-ttu-id="a7970-114">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a7970-114">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|Group<br /><br /> -   0 个或多个控件|Group<br /><br /> -   0 个或多个控件|  
+|<span data-ttu-id="a7970-115">控件视图</span><span class="sxs-lookup"><span data-stu-id="a7970-115">Control View</span></span>|<span data-ttu-id="a7970-116">内容视图</span><span class="sxs-lookup"><span data-stu-id="a7970-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="a7970-117">Group</span><span class="sxs-lookup"><span data-stu-id="a7970-117">Group</span></span><br /><br /> <span data-ttu-id="a7970-118">-0 或多个控件</span><span class="sxs-lookup"><span data-stu-id="a7970-118">-   0 or many controls</span></span>|<span data-ttu-id="a7970-119">Group</span><span class="sxs-lookup"><span data-stu-id="a7970-119">Group</span></span><br /><br /> <span data-ttu-id="a7970-120">-0 或多个控件</span><span class="sxs-lookup"><span data-stu-id="a7970-120">-   0 or many controls</span></span>|  
   
- 通常，会在组控件下面的子树中找到 [UI Automation Support for the ListItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)、[UI Automation Support for the TreeItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md) 或 [UI Automation Support for the DataItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) 控件类型。 因为“Group”是泛型容器，因此任何类型的控件都有可能在 Group 控件下面的树中。  
+ <span data-ttu-id="a7970-121">组控件通常将具有[ListItem 控件类型的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)， [TreeItem 控件类型的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)，或[UI 自动化支持DataItem 控件类型](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)控制在其下的子树中找到的类型。</span><span class="sxs-lookup"><span data-stu-id="a7970-121">Typically group controls will have the [UI Automation Support for the ListItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [UI Automation Support for the TreeItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md), or [UI Automation Support for the DataItem Control Type](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) control types found underneath them in the subtree.</span></span> <span data-ttu-id="a7970-122">因为“Group”是泛型容器，因此任何类型的控件都有可能在 Group 控件下面的树中。</span><span class="sxs-lookup"><span data-stu-id="a7970-122">Because 'Group' is a generic container, it is possible for any type of control to be under the Group control in the tree.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与组控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="a7970-123">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="a7970-123">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="a7970-124">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与组控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="a7970-124">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to group controls.</span></span> <span data-ttu-id="a7970-125">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="a7970-125">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|组控件通常从标记控件的文本获取其名称。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|组控件通常自行进行标记。 在这些情况下，在此处返回 `null`。 如果存在组的静态文本标签，则必须将其返回作为 LabeledBy 属性的值。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Group|此值对于所有 UI 框架均相同。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“Group”|与 Group 控件类型相对应的本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|组控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|日历组始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="a7970-126"> 属性</span><span class="sxs-lookup"><span data-stu-id="a7970-126"> Property</span></span>|<span data-ttu-id="a7970-127">值</span><span class="sxs-lookup"><span data-stu-id="a7970-127">Value</span></span>|<span data-ttu-id="a7970-128">备注</span><span class="sxs-lookup"><span data-stu-id="a7970-128">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="a7970-129">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-129">See notes.</span></span>|<span data-ttu-id="a7970-130">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="a7970-130">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="a7970-131">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-131">See notes.</span></span>|<span data-ttu-id="a7970-132">包含整个控件的最外层矩形。</span><span class="sxs-lookup"><span data-stu-id="a7970-132">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="a7970-133">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-133">See notes.</span></span>|<span data-ttu-id="a7970-134">如果存在边界矩形，则受支持。</span><span class="sxs-lookup"><span data-stu-id="a7970-134">Supported if there is a bounding rectangle.</span></span> <span data-ttu-id="a7970-135">如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。</span><span class="sxs-lookup"><span data-stu-id="a7970-135">If not every point within the bounding rectangle is clickable, and you perform specialized hit testing, then override and provide a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="a7970-136">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-136">See notes.</span></span>|<span data-ttu-id="a7970-137">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="a7970-137">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="a7970-138">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-138">See notes.</span></span>|<span data-ttu-id="a7970-139">组控件通常从标记控件的文本获取其名称。</span><span class="sxs-lookup"><span data-stu-id="a7970-139">The group control typically gets its name from the text that labels the control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="a7970-140">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="a7970-140">See notes.</span></span>|<span data-ttu-id="a7970-141">组控件通常自行进行标记。</span><span class="sxs-lookup"><span data-stu-id="a7970-141">Group controls are typically self-labeling.</span></span> <span data-ttu-id="a7970-142">在这些情况下，在此处返回 `null` 。</span><span class="sxs-lookup"><span data-stu-id="a7970-142">In these cases return `null` here.</span></span> <span data-ttu-id="a7970-143">如果存在组的静态文本标签，则必须将其返回作为 LabeledBy 属性的值。</span><span class="sxs-lookup"><span data-stu-id="a7970-143">If there is a static text label for the group then that must be returned as the value of the LabeledBy property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="a7970-144">Group</span><span class="sxs-lookup"><span data-stu-id="a7970-144">Group</span></span>|<span data-ttu-id="a7970-145">此值对于所有 UI 框架均相同。</span><span class="sxs-lookup"><span data-stu-id="a7970-145">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="a7970-146">“Group”</span><span class="sxs-lookup"><span data-stu-id="a7970-146">"group"</span></span>|<span data-ttu-id="a7970-147">与 Group 控件类型相对应的本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="a7970-147">Localized string corresponding to the Group control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="a7970-148">True</span><span class="sxs-lookup"><span data-stu-id="a7970-148">True</span></span>|<span data-ttu-id="a7970-149">组控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。</span><span class="sxs-lookup"><span data-stu-id="a7970-149">The group control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="a7970-150">True</span><span class="sxs-lookup"><span data-stu-id="a7970-150">True</span></span>|<span data-ttu-id="a7970-151">日历组始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。</span><span class="sxs-lookup"><span data-stu-id="a7970-151">The calendar group is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必需的 UI 自动化控件模式  
- 下表列出需要对 Group 控件类型支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="a7970-152">必需的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="a7970-152">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="a7970-153">下表列出需要对 Group 控件类型支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="a7970-153">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported for the Group control type.</span></span> <span data-ttu-id="a7970-154">有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a7970-154">For more information about control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|控件模式|支持|备注|  
-|----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|视情况而定|可用于显示或隐藏信息的组控件必须支持展开折叠模式。|  
+|<span data-ttu-id="a7970-155">控件模式</span><span class="sxs-lookup"><span data-stu-id="a7970-155">Control Pattern</span></span>|<span data-ttu-id="a7970-156">支持</span><span class="sxs-lookup"><span data-stu-id="a7970-156">Support</span></span>|<span data-ttu-id="a7970-157">备注</span><span class="sxs-lookup"><span data-stu-id="a7970-157">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|<span data-ttu-id="a7970-158">视情况而定</span><span class="sxs-lookup"><span data-stu-id="a7970-158">Depends</span></span>|<span data-ttu-id="a7970-159">可用于显示或隐藏信息的组控件必须支持展开折叠模式。</span><span class="sxs-lookup"><span data-stu-id="a7970-159">Group controls that can be used to show or hide information must support the Expand Collapse pattern.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出需要由所有组控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="a7970-160">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="a7970-160">Required UI Automation Events</span></span>  
+ <span data-ttu-id="a7970-161">下表列出需要由所有组控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-161">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all group controls.</span></span> <span data-ttu-id="a7970-162">有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a7970-162">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
-|------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="a7970-163"> 事件</span><span class="sxs-lookup"><span data-stu-id="a7970-163"> Event</span></span>|<span data-ttu-id="a7970-164">支持</span><span class="sxs-lookup"><span data-stu-id="a7970-164">Support</span></span>|<span data-ttu-id="a7970-165">备注</span><span class="sxs-lookup"><span data-stu-id="a7970-165">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<span data-ttu-id="a7970-166"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-166"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="a7970-167">必需</span><span class="sxs-lookup"><span data-stu-id="a7970-167">Required</span></span>|<span data-ttu-id="a7970-168">无</span><span class="sxs-lookup"><span data-stu-id="a7970-168">None</span></span>|  
+|<span data-ttu-id="a7970-169"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-169"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="a7970-170">必需</span><span class="sxs-lookup"><span data-stu-id="a7970-170">Required</span></span>|<span data-ttu-id="a7970-171">无</span><span class="sxs-lookup"><span data-stu-id="a7970-171">None</span></span>|  
+|<span data-ttu-id="a7970-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="a7970-173">必需</span><span class="sxs-lookup"><span data-stu-id="a7970-173">Required</span></span>|<span data-ttu-id="a7970-174">无</span><span class="sxs-lookup"><span data-stu-id="a7970-174">None</span></span>|  
+|<span data-ttu-id="a7970-175"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-175"><xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> property-changed event.</span></span>|<span data-ttu-id="a7970-176">视情况而定</span><span class="sxs-lookup"><span data-stu-id="a7970-176">Depends</span></span>|<span data-ttu-id="a7970-177">无</span><span class="sxs-lookup"><span data-stu-id="a7970-177">None</span></span>|  
+|<span data-ttu-id="a7970-178"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="a7970-178"><xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> property-changed event.</span></span>|<span data-ttu-id="a7970-179">视情况而定</span><span class="sxs-lookup"><span data-stu-id="a7970-179">Depends</span></span>|<span data-ttu-id="a7970-180">无</span><span class="sxs-lookup"><span data-stu-id="a7970-180">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="a7970-181">必需</span><span class="sxs-lookup"><span data-stu-id="a7970-181">Required</span></span>|<span data-ttu-id="a7970-182">无</span><span class="sxs-lookup"><span data-stu-id="a7970-182">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="a7970-183">必需</span><span class="sxs-lookup"><span data-stu-id="a7970-183">Required</span></span>|<span data-ttu-id="a7970-184">无</span><span class="sxs-lookup"><span data-stu-id="a7970-184">None</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.Group>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a7970-185">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a7970-185">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Group>  
+ [<span data-ttu-id="a7970-186">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="a7970-186">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="a7970-187">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="a7970-187">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

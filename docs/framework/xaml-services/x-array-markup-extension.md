@@ -1,68 +1,71 @@
 ---
-title: "x:Array Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Array"
-  - "xArray"
-helpviewer_keywords: 
-  - "x:Array [XAML Services]"
-  - "XAML [XAML Services], x:Array markup extension"
+title: "x:Array 标记扩展"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Array
+- xArray
+helpviewer_keywords:
+- x:Array [XAML Services]
+- XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Array Markup Extension
-通过标记扩展，对 XAML 中的对象组提供一般支持。  这对应于 \[MS\-XAML\] 中的 `x:ArrayExtension` XAML 类型。  
+# <a name="xarray-markup-extension"></a><span data-ttu-id="16f05-102">x:Array 标记扩展</span><span class="sxs-lookup"><span data-stu-id="16f05-102">x:Array Markup Extension</span></span>
+<span data-ttu-id="16f05-103">提供对 XAML 中通过标记扩展的对象数组的常规支持。</span><span class="sxs-lookup"><span data-stu-id="16f05-103">Provides general support for arrays of objects in XAML through a markup extension.</span></span> <span data-ttu-id="16f05-104">这对应于`x:ArrayExtension`[MS-XAML] 中的 XAML 类型。</span><span class="sxs-lookup"><span data-stu-id="16f05-104">This corresponds to the `x:ArrayExtension` XAML type in [MS-XAML].</span></span>  
   
-## XAML 对象元素用法  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="16f05-105">XAML 对象元素用法</span><span class="sxs-lookup"><span data-stu-id="16f05-105">XAML Object Element Usage</span></span>  
   
 ```  
-<x:Array Type="typeName">  
+<x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="16f05-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="16f05-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`typeName`|您的 `x:Array` 将要包含的类型的名称。  `typeName` 可能（而且通常）为包含 XAML 类型定义的 XAML 命名空间带前缀。|  
-|`arrayContents`|分配给内在 `ArrayExtension.Items` 属性的项内容。  通常，这些项被指定为包含在 `x:Array` 开始标记和结束标记内的一个或多个对象元素。  此处指定的对象应可以分配给 `typeName` 中指定的 XAML 类型。|  
+|`typeName`|<span data-ttu-id="16f05-107">类型的名称，你`x:Array`将包含。</span><span class="sxs-lookup"><span data-stu-id="16f05-107">The name of the type that your `x:Array` will contain.</span></span> <span data-ttu-id="16f05-108">`typeName`可能会 （并且通常为） 前缀的 XAML 命名空间包含的 XAML 类型定义。</span><span class="sxs-lookup"><span data-stu-id="16f05-108">`typeName` may be (and often is) prefixed for a XAML namespace that contains the XAML type definitions.</span></span>|  
+|`arrayContents`|<span data-ttu-id="16f05-109">分配给内部函数的项内容`ArrayExtension.Items`属性。</span><span class="sxs-lookup"><span data-stu-id="16f05-109">The items content that is assigned to the intrinsic `ArrayExtension.Items` property.</span></span> <span data-ttu-id="16f05-110">通常情况下，这些项被指定为中包含的一个或多个对象元素`x:Array`开始和结束标记。</span><span class="sxs-lookup"><span data-stu-id="16f05-110">Typically, these items are specified as one or more object elements contained within the `x:Array` opening and closing tags.</span></span> <span data-ttu-id="16f05-111">此处需要可赋给中指定的 XAML 类型的指定对象`typeName`。</span><span class="sxs-lookup"><span data-stu-id="16f05-111">Objects specified here are expected to be assignable to the XAML type specified in `typeName`.</span></span>|  
   
-## 备注  
- `Type` 对于所有 `x:Array` 对象元素是必需的特性。  `Type` 参数值不需要使用 `x:Type` 标记扩展；该类型的短名称为 XAML 类型，可将其指定为字符串。  
+## <a name="remarks"></a><span data-ttu-id="16f05-112">备注</span><span class="sxs-lookup"><span data-stu-id="16f05-112">Remarks</span></span>  
+ <span data-ttu-id="16f05-113">`Type`是所有的必需的属性`x:Array`对象元素。</span><span class="sxs-lookup"><span data-stu-id="16f05-113">`Type` is a required attribute for all `x:Array` object elements.</span></span> <span data-ttu-id="16f05-114">A`Type`参数值不需要使用`x:Type`标记扩展; 短暂的类型名称都是 XAML 类型，这可以指定为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="16f05-114">A `Type` parameter value does not need to use an `x:Type` markup extension; the short name of the type is   a XAML type, which can be specified as a string.</span></span>  
   
- 在 .NET Framework XAML 服务实现中，已创建数组的输入 XAML 类型与输出 CLR <xref:System.Type> 之间的关系受标记扩展名的影响。  根据 XAML 架构上下文查找必需的 <xref:System.Xaml.XamlType> 和上下文提供的 <xref:System.Windows.Markup.IXamlTypeResolver> 服务后，输出 <xref:System.Type> 是输入 XAML 类型的 <xref:System.Xaml.XamlType.UnderlyingType%2A>。  
+ <span data-ttu-id="16f05-115">在.NET Framework XAML 服务实现中，输入的 XAML 类型和输出 CLR 之间的关系<xref:System.Type>的创建的数组会影响的标记扩展的服务上下文。</span><span class="sxs-lookup"><span data-stu-id="16f05-115">In the .NET Framework XAML Services implementation, the relationship between the input XAML type and the output CLR <xref:System.Type> of the created array is influenced by service context for markup extensions.</span></span> <span data-ttu-id="16f05-116">输出<xref:System.Type>是<xref:System.Xaml.XamlType.UnderlyingType%2A>后查找所需的输入的 XAML 类型<xref:System.Xaml.XamlType>基于 XAML 架构上下文和<xref:System.Windows.Markup.IXamlTypeResolver>的上下文提供的服务。</span><span class="sxs-lookup"><span data-stu-id="16f05-116">The output <xref:System.Type> is the <xref:System.Xaml.XamlType.UnderlyingType%2A> of the input XAML type, after looking up the necessary <xref:System.Xaml.XamlType> based on XAML schema context and the <xref:System.Windows.Markup.IXamlTypeResolver> service the context provides.</span></span>  
   
- 当处理时，数组内容被分配给 `ArrayExtension.Items` 内部属性。  在 <xref:System.Windows.Markup.ArrayExtension> 实现中，这由 <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=fullName> 表示。  
+ <span data-ttu-id="16f05-117">处理时，将数组内容分配给`ArrayExtension.Items`内部属性。</span><span class="sxs-lookup"><span data-stu-id="16f05-117">When processed, the array contents are assigned to the `ArrayExtension.Items` intrinsic property.</span></span> <span data-ttu-id="16f05-118">在<xref:System.Windows.Markup.ArrayExtension>实现，它通过表示<xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="16f05-118">In the <xref:System.Windows.Markup.ArrayExtension> implementation, this is represented by <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType>.</span></span>  
   
- 在 .NET Framework XAML 服务实现中，对此标记扩展的处理由 <xref:System.Windows.Markup.ArrayExtension> 类定义。  <xref:System.Windows.Markup.ArrayExtension> 未密封，可用作自定义数组类型的标记扩展实现的基础。  
+ <span data-ttu-id="16f05-119">在.NET Framework XAML 服务实现中，对此标记扩展的处理由定义<xref:System.Windows.Markup.ArrayExtension>类。</span><span class="sxs-lookup"><span data-stu-id="16f05-119">In the .NET Framework XAML Services implementation, the handling for this markup extension is defined by the <xref:System.Windows.Markup.ArrayExtension> class.</span></span> <span data-ttu-id="16f05-120"><xref:System.Windows.Markup.ArrayExtension>未密封，并且无法用作自定义数组类型的标记扩展实现的基础。</span><span class="sxs-lookup"><span data-stu-id="16f05-120"><xref:System.Windows.Markup.ArrayExtension> is not sealed, and could be used as the basis for a markup extension implementation for a custom array type.</span></span>  
   
- `x:Array` 更主要的用途是用于 XAML 中的通用语言扩展性。  但是 `x:Array` 还可以用于使用指定某些属性的 XAML 值，这些属性将 XAML 支持的集合用作结构化属性内容。  例如，您可以通过 `x:Array` 用法指定 <xref:System.Collections.IEnumerable> 属性的内容。  
+ <span data-ttu-id="16f05-121">`x:Array`是的详细信息适用于常规 XAML 语言的可扩展性。</span><span class="sxs-lookup"><span data-stu-id="16f05-121">`x:Array` is more intended for general language extensibility in XAML.</span></span> <span data-ttu-id="16f05-122">但`x:Array`也可以是适用于指定的某些属性是作为其结构化的属性内容中使支持 XAML 的集合的 XAML 值。</span><span class="sxs-lookup"><span data-stu-id="16f05-122">But `x:Array` can also be useful for specifying XAML values of certain properties that take XAML-supported collections as their structured property content.</span></span> <span data-ttu-id="16f05-123">例如，可以指定的内容<xref:System.Collections.IEnumerable>具有属性`x:Array`使用情况。</span><span class="sxs-lookup"><span data-stu-id="16f05-123">For example, you could specify the contents of an <xref:System.Collections.IEnumerable> property with an `x:Array` usage.</span></span>  
   
- `x:Array` 是标记扩展。  当要求转义属性 \(Attribute\) 值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性 \(Property\) 上放置类型转换器而言，此要求更具有全局性。  `x:Array` 在是部分规则的例外，因为 `x:Array` 没有提供另类特性值处理，而是提供其内部文本内容的另类处理。  此行为启用可能不受将归组到数组的现有上下文模型支持及稍后通过访问命名数组在代码后置中加以引用的类型；您可以调用 <xref:System.Array> 方法来获取单独的数组项。  
+ <span data-ttu-id="16f05-124">`x:Array` 是标记扩展。</span><span class="sxs-lookup"><span data-stu-id="16f05-124">`x:Array` is a markup extension.</span></span> <span data-ttu-id="16f05-125">当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此要求更具有全局性。</span><span class="sxs-lookup"><span data-stu-id="16f05-125">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="16f05-126">`x:Array`部分是该规则的例外，因为而不是提供替代属性值处理`x:Array`提供其内部文本内容的其他处理。</span><span class="sxs-lookup"><span data-stu-id="16f05-126">`x:Array` is partially an exception to that rule because instead of providing alternative attribute value handling, `x:Array` provides alternative handling of its inner text content.</span></span> <span data-ttu-id="16f05-127">此行为使现有的内容模型，来分组到一个数组和更高版本的代码隐藏文件中引用的访问已命名的数组; 可能不支持的类型你可以调用<xref:System.Array>方法来获取各个数组项。</span><span class="sxs-lookup"><span data-stu-id="16f05-127">This behavior enables types that might not be supported by an existing content model to be grouped into an array and referenced later in code-behind by accessing the named array; you can call <xref:System.Array> methods to get individual array items.</span></span>  
   
- XAML 中的所有标记扩展在其属性语法中都使用大括号 \({,}`)`，XAML 处理器通过这一约定识别出该属性值必须由标记扩展处理。  有关标记扩展的更多一般信息，请参见 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ <span data-ttu-id="16f05-128">在 XAML 中的所有标记扩展都使用大括号 ({，}`)`在其属性语法中，该命令是 XAML 处理器识别标记扩展必须处理的属性值所依据的约定。</span><span class="sxs-lookup"><span data-stu-id="16f05-128">All markup extensions in XAML use the braces ({,}`)` in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must process the attribute value.</span></span> <span data-ttu-id="16f05-129">有关常规中的标记扩展的详细信息，请参阅[类型转换器和 XAML 的标记扩展](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="16f05-129">For more information about markup extensions in general, see [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).</span></span>  
   
- 在 XAML 2009 `x:Array` 被定义为一种语言基元，而不是标记扩展。  有关更多信息，请参见 [Built\-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)。  
+ <span data-ttu-id="16f05-130">在 XAML 2009`x:Array`定义为一种语言基元而不是标记扩展。</span><span class="sxs-lookup"><span data-stu-id="16f05-130">In XAML 2009, `x:Array` is defined as a language primitive instead of a markup extension.</span></span> <span data-ttu-id="16f05-131">有关详细信息，请参阅[常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)。</span><span class="sxs-lookup"><span data-stu-id="16f05-131">For more information, see [Built-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).</span></span>  
   
-## WPF 用法说明  
- 通常情况下，填充 `x:Array` 的对象元素不是存在于 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML 命名空间中的元素，需要一个到非默认 XAML 命名空间的前缀映射。  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="16f05-132">WPF 用法说明</span><span class="sxs-lookup"><span data-stu-id="16f05-132">WPF Usage Notes</span></span>  
+ <span data-ttu-id="16f05-133">通常情况下，填充的对象元素`x:Array`不中存在的元素[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]XAML 命名空间，并且需要到非默认 XAML 命名空间的前缀映射。</span><span class="sxs-lookup"><span data-stu-id="16f05-133">Typically, the object elements that populate an `x:Array` are not elements that exist in the [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML namespace, and require a prefix mapping to a non-default XAML namespace.</span></span>  
   
- 例如，下面是由两个字符串组成的简单数组，并在数组级别定义了 `sys` 前缀（以及 `x`）。  
+ <span data-ttu-id="16f05-134">例如，下面是两个字符串的简单数组与`sys`前缀 (以及`x`) 数组级别定义。</span><span class="sxs-lookup"><span data-stu-id="16f05-134">For example, the following is a simple array of two strings, with the `sys` prefix (and also `x`) defined at the level of the array.</span></span>  
   
- \[xaml\]  
+ <span data-ttu-id="16f05-135">[xaml]</span><span class="sxs-lookup"><span data-stu-id="16f05-135">[xaml]</span></span>  
   
  `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
   
@@ -74,8 +77,8 @@ caps.handback.revision: 20
   
  `</x:Array>`  
   
- 对于用作数组元素的自定义类型，类还必须支持在 XAML 中作为对象元素实例化的要求。  有关更多信息，请参见 [XAML 及 WPF 的自定义类](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
+ <span data-ttu-id="16f05-136">对于用作数组元素的自定义类型，此类还必须支持在 XAML 中作为对象元素实例化的要求。</span><span class="sxs-lookup"><span data-stu-id="16f05-136">For custom types that are used as array elements, the class must also support the requirements for being instantiated in XAML as object elements.</span></span> <span data-ttu-id="16f05-137">有关详细信息，请参阅[XAML 和 wpf 自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="16f05-137">For more information, see [XAML and Custom Classes for WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).</span></span>  
   
-## 请参阅  
- [标记扩展和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="16f05-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="16f05-138">See Also</span></span>  
+ [<span data-ttu-id="16f05-139">标记扩展和 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="16f05-139">Markup Extensions and WPF XAML</span></span>](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="16f05-140">从 WPF 迁移到 System.Xaml 的类型</span><span class="sxs-lookup"><span data-stu-id="16f05-140">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

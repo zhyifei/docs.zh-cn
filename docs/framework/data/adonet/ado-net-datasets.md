@@ -1,59 +1,62 @@
 ---
-title: "ADO.NET 数据集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO.NET 数据集"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: dce5f5ae2d672349c21a89bb35a56da0b11f864a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET 数据集
-<xref:System.Data.DataSet>对象是支持的核心断开连接，分布式数据方案[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。 **数据集**是提供一致的关系编程模型，而不考虑数据源的数据的内存驻留表示。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示一组完整的数据，包括相关的表、 约束和表之间的关系。 如下图所示**数据集**对象模型。  
+# <a name="adonet-datasets"></a><span data-ttu-id="8e267-102">ADO.NET 数据集</span><span class="sxs-lookup"><span data-stu-id="8e267-102">ADO.NET DataSets</span></span>
+<span data-ttu-id="8e267-103"><xref:System.Data.DataSet> 对象对于支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的断开连接的分布式数据方案起到至关重要的作用。</span><span class="sxs-lookup"><span data-stu-id="8e267-103">The <xref:System.Data.DataSet> object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="8e267-104">**数据集**是的内存驻留表示形式提供一致的关系编程模型，而不考虑数据源的数据。</span><span class="sxs-lookup"><span data-stu-id="8e267-104">The **DataSet** is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source.</span></span> <span data-ttu-id="8e267-105">它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。</span><span class="sxs-lookup"><span data-stu-id="8e267-105">It can be used with multiple and differing data sources, with XML data, or to manage data local to the application.</span></span> <span data-ttu-id="8e267-106">**数据集**表示一组完整的数据，包括相关的表、 约束和表之间的关系。</span><span class="sxs-lookup"><span data-stu-id="8e267-106">The **DataSet** represents a complete set of data, including related tables, constraints, and relationships among the tables.</span></span> <span data-ttu-id="8e267-107">下图显示**数据集**对象模型。</span><span class="sxs-lookup"><span data-stu-id="8e267-107">The following illustration shows the **DataSet** object model.</span></span>  
   
- ![ADO.Net 图](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
-DataSet 对象模型  
+ <span data-ttu-id="8e267-108">![ADO.Net 图](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")</span><span class="sxs-lookup"><span data-stu-id="8e267-108">![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")</span></span>  
+<span data-ttu-id="8e267-109">DataSet 对象模型</span><span class="sxs-lookup"><span data-stu-id="8e267-109">DataSet Object Model</span></span>  
   
- 方法和中的对象**数据集**与关系数据库模型保持一致。  
+ <span data-ttu-id="8e267-110">方法和中的对象**数据集**与关系数据库模型中保持一致。</span><span class="sxs-lookup"><span data-stu-id="8e267-110">The methods and objects in a **DataSet** are consistent with those in the relational database model.</span></span>  
   
- **数据集**还可以保留并重新加载其内容为 XML，且其架构作为 XML 架构定义语言 (XSD) 架构。 有关详细信息，请参阅[数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
+ <span data-ttu-id="8e267-111">**数据集**还可以保存并重新加载其内容作为 XML 使用，且其架构作为 XML 架构定义语言 (XSD) 架构。</span><span class="sxs-lookup"><span data-stu-id="8e267-111">The **DataSet** can also persist and reload its contents as XML, and its schema as XML schema definition language (XSD) schema.</span></span> <span data-ttu-id="8e267-112">有关详细信息，请参阅[在数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="8e267-112">For more information, see [Using XML in a DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).</span></span>  
   
-## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **数据集**包含所表示的零个或多个表的集合<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTableCollection>包含所有**DataTable**中的对象**数据集**。  
+## <a name="the-datatablecollection"></a><span data-ttu-id="8e267-113">DataTableCollection</span><span class="sxs-lookup"><span data-stu-id="8e267-113">The DataTableCollection</span></span>  
+ <span data-ttu-id="8e267-114">[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **数据集**包含一套所表示的零个或多个表<xref:System.Data.DataTable>对象。</span><span class="sxs-lookup"><span data-stu-id="8e267-114">An [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **DataSet** contains a collection of zero or more tables represented by <xref:System.Data.DataTable> objects.</span></span> <span data-ttu-id="8e267-115"><xref:System.Data.DataTableCollection>包含所有**DataTable**中的对象**数据集**。</span><span class="sxs-lookup"><span data-stu-id="8e267-115">The <xref:System.Data.DataTableCollection> contains all the **DataTable** objects in a **DataSet**.</span></span>  
   
- 一个**DataTable**中定义<xref:System.Data>命名空间并表示内存驻留数据的单个表。 它包含的列所表示的集合<xref:System.Data.DataColumnCollection>，和约束由<xref:System.Data.ConstraintCollection>，这在一起定义表的架构。 一个**DataTable**还包含一个由行集合<xref:System.Data.DataRowCollection>，其中包含表中的数据。 除了其当前状态<xref:System.Data.DataRow>保留其当前和原始版本版本，以标识更改的行中存储的值。  
+ <span data-ttu-id="8e267-116">A **DataTable**中定义<xref:System.Data>命名空间和表示内存驻留数据的单个表。</span><span class="sxs-lookup"><span data-stu-id="8e267-116">A **DataTable** is defined in the <xref:System.Data> namespace and represents a single table of memory-resident data.</span></span> <span data-ttu-id="8e267-117">其中包含由 <xref:System.Data.DataColumnCollection> 表示的列集合以及由 <xref:System.Data.ConstraintCollection> 表示的约束集合，这两个集合共同定义表的架构。</span><span class="sxs-lookup"><span data-stu-id="8e267-117">It contains a collection of columns represented by a <xref:System.Data.DataColumnCollection>, and constraints represented by a <xref:System.Data.ConstraintCollection>, which together define the schema of the table.</span></span> <span data-ttu-id="8e267-118">A **DataTable**还包含一个所表示的行集合<xref:System.Data.DataRowCollection>，其中包含表中的数据。</span><span class="sxs-lookup"><span data-stu-id="8e267-118">A **DataTable** also contains a collection of rows represented by the <xref:System.Data.DataRowCollection>, which contains the data in the table.</span></span> <span data-ttu-id="8e267-119">除了其当前状态之前，<xref:System.Data.DataRow> 还会保留其当前版本和初始版本，以标识对行中存储的值的更改。</span><span class="sxs-lookup"><span data-stu-id="8e267-119">Along with its current state, a <xref:System.Data.DataRow> retains both its current and original versions to identify changes to the values stored in the row.</span></span>  
   
-## <a name="the-dataview-class"></a>DataView 类  
- 一个<xref:System.Data.DataView>使您能够创建中存储的数据的不同视图<xref:System.Data.DataTable>，通常在数据绑定应用程序中使用的功能。 使用<xref:System.Data.DataView>，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。 有关详细信息，请参阅[Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
+## <a name="the-dataview-class"></a><span data-ttu-id="8e267-120">DataView 类</span><span class="sxs-lookup"><span data-stu-id="8e267-120">The DataView Class</span></span>  
+ <span data-ttu-id="8e267-121">您可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。</span><span class="sxs-lookup"><span data-stu-id="8e267-121">A <xref:System.Data.DataView> enables you to create different views of the data stored in a <xref:System.Data.DataTable>, a capability that is often used in data-binding applications.</span></span> <span data-ttu-id="8e267-122">通过使用 <xref:System.Data.DataView>，您可以使用不同的排序顺序公开表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。</span><span class="sxs-lookup"><span data-stu-id="8e267-122">Using a <xref:System.Data.DataView>, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span> <span data-ttu-id="8e267-123">有关详细信息，请参阅[Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。</span><span class="sxs-lookup"><span data-stu-id="8e267-123">For more information, see [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>  
   
-## <a name="the-datarelationcollection"></a>DataRelationCollection  
- 一个**数据集**包含中的关系及其<xref:System.Data.DataRelationCollection>对象。 一种关系，由表示<xref:System.Data.DataRelation>对象，其中一个中的行相关联**DataTable**另一个中的行与**DataTable**。 关系类似于可能存在于关系数据库中的主键列和外键列之间的联接路径。 一个**DataRelation**标识两个数据表中的匹配列**数据集**。  
+## <a name="the-datarelationcollection"></a><span data-ttu-id="8e267-124">DataRelationCollection</span><span class="sxs-lookup"><span data-stu-id="8e267-124">The DataRelationCollection</span></span>  
+ <span data-ttu-id="8e267-125">A**数据集**包含中的关系及其<xref:System.Data.DataRelationCollection>对象。</span><span class="sxs-lookup"><span data-stu-id="8e267-125">A **DataSet** contains relationships in its <xref:System.Data.DataRelationCollection> object.</span></span> <span data-ttu-id="8e267-126">一种关系，由表示<xref:System.Data.DataRelation>对象，其中一个中的行相关联**DataTable**与另一个中的行**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="8e267-126">A relationship, represented by the <xref:System.Data.DataRelation> object, associates rows in one **DataTable** with rows in another **DataTable**.</span></span> <span data-ttu-id="8e267-127">关系类似于可能存在于关系数据库中的主键列和外键列之间的联接路径。</span><span class="sxs-lookup"><span data-stu-id="8e267-127">A relationship is analogous to a join path that might exist between primary and foreign key columns in a relational database.</span></span> <span data-ttu-id="8e267-128">A **DataRelation**标识的两个表中的匹配列**数据集**。</span><span class="sxs-lookup"><span data-stu-id="8e267-128">A **DataRelation** identifies matching columns in two tables of a **DataSet**.</span></span>  
   
- 关系可以从一个表导航到另一个在**数据集**。 基本元素**DataRelation**是关系的名称、 其相关的表的名称和每个表中的相关的列。 关系可以通过指定一个字符串数组的每个表的多个列生成<xref:System.Data.DataColumn>对象作为键列。 当添加到关系<xref:System.Data.DataRelationCollection>，您可以选择添加**UniqueKeyConstraint**和**ForeignKeyConstraint**相关的列的值发生更改时强制执行完整性约束。  
+ <span data-ttu-id="8e267-129">关系可以从一个表导航到另一种**数据集**。</span><span class="sxs-lookup"><span data-stu-id="8e267-129">Relationships enable navigation from one table to another in a **DataSet**.</span></span> <span data-ttu-id="8e267-130">重要元素**DataRelation**是关系的名称、 相关表的名称和每个表中的相关的列。</span><span class="sxs-lookup"><span data-stu-id="8e267-130">The essential elements of a **DataRelation** are the name of the relationship, the name of the tables being related, and the related columns in each table.</span></span> <span data-ttu-id="8e267-131">关系可以通过一个表的多个列来生成，方法是将一组 <xref:System.Data.DataColumn> 对象指定为键列。</span><span class="sxs-lookup"><span data-stu-id="8e267-131">Relationships can be built with more than one column per table by specifying an array of <xref:System.Data.DataColumn> objects as the key columns.</span></span> <span data-ttu-id="8e267-132">当你添加到关系<xref:System.Data.DataRelationCollection>，你可以选择添加**UniqueKeyConstraint**和**ForeignKeyConstraint**相关列发生更改时强制执行完整性约束值。</span><span class="sxs-lookup"><span data-stu-id="8e267-132">When you add a relationship to the <xref:System.Data.DataRelationCollection>, you can optionally add a **UniqueKeyConstraint** and a **ForeignKeyConstraint** to enforce integrity constraints when changes are made to related column values.</span></span>  
   
- 有关详细信息，请参阅[添加 Datarelation](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)。  
+ <span data-ttu-id="8e267-133">有关详细信息，请参阅[添加 Datarelation](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)。</span><span class="sxs-lookup"><span data-stu-id="8e267-133">For more information, see [Adding DataRelations](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span></span>  
   
-## <a name="xml"></a>XML  
- 你可以填写**数据集**从 XML 流或文档。 可以使用 XML 流或文档要提供给**数据集**数据、 架构信息，或两者。 从 XML 流或文档中提供的信息可以与现有数据或架构信息已存在于组合**数据集**。 有关详细信息，请参阅[数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
+## <a name="xml"></a><span data-ttu-id="8e267-134">XML</span><span class="sxs-lookup"><span data-stu-id="8e267-134">XML</span></span>  
+ <span data-ttu-id="8e267-135">你可以填写**数据集**从 XML 流或文档。</span><span class="sxs-lookup"><span data-stu-id="8e267-135">You can fill a **DataSet** from an XML stream or document.</span></span> <span data-ttu-id="8e267-136">你可以使用 XML 流或文档要提供给**数据集**数据、 架构信息或两者。</span><span class="sxs-lookup"><span data-stu-id="8e267-136">You can use the XML stream or document to supply to the **DataSet** either data, schema information, or both.</span></span> <span data-ttu-id="8e267-137">从 XML 流或文档中提供的信息可以与现有数据或架构信息已存在于组合**数据集**。</span><span class="sxs-lookup"><span data-stu-id="8e267-137">The information supplied from the XML stream or document can be combined with existing data or schema information already present in the **DataSet**.</span></span> <span data-ttu-id="8e267-138">有关详细信息，请参阅[在数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="8e267-138">For more information, see [Using XML in a DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).</span></span>  
   
-## <a name="extendedproperties"></a>ExtendedProperties  
- **数据集**， **DataTable**，和**DataColumn**都**ExtendedProperties**属性。 **ExtendedProperties**是**PropertyCollection**可用来放置自定义的信息，例如用于生成结果集的 SELECT 语句或生成数据的时间。 **ExtendedProperties**集合的架构信息一起持久化**数据集**。  
+## <a name="extendedproperties"></a><span data-ttu-id="8e267-139">ExtendedProperties</span><span class="sxs-lookup"><span data-stu-id="8e267-139">ExtendedProperties</span></span>  
+ <span data-ttu-id="8e267-140">**数据集**， **DataTable**，和**DataColumn**所有具有**ExtendedProperties**属性。</span><span class="sxs-lookup"><span data-stu-id="8e267-140">The **DataSet**, **DataTable**, and **DataColumn** all have an **ExtendedProperties** property.</span></span> <span data-ttu-id="8e267-141">**ExtendedProperties**是**PropertyCollection**可以放置自定义的信息，如 SELECT 语句用于生成结果集或生成数据的时间。</span><span class="sxs-lookup"><span data-stu-id="8e267-141">**ExtendedProperties** is a **PropertyCollection** where you can place custom information, such as the SELECT statement that was used to generate the result set, or the time when the data was generated.</span></span> <span data-ttu-id="8e267-142">**ExtendedProperties**架构信息一起持久化集合**数据集**。</span><span class="sxs-lookup"><span data-stu-id="8e267-142">The **ExtendedProperties** collection is persisted with the schema information for the **DataSet**.</span></span>  
   
-## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]为数据集中存储的已断开连接的数据提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并且提供编译时语法检查、 静态类型和 IntelliSense 支持，在您使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]IDE。  
+## <a name="linq-to-dataset"></a><span data-ttu-id="8e267-143">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="8e267-143">LINQ to DataSet</span></span>  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="8e267-144">为数据集中存储的已断开连接的数据提供语言集成查询功能。</span><span class="sxs-lookup"><span data-stu-id="8e267-144"> provides language-integrated querying capabilities for disconnected data stored in a DataSet.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="8e267-145">使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并提供编译时语法检查、 静态类型和 IntelliSense 支持，当你使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]IDE。</span><span class="sxs-lookup"><span data-stu-id="8e267-145"> uses standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] syntax and provides compile-time syntax checking, static typing, and IntelliSense support when you are using the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.</span></span>  
   
- 有关详细信息，请参阅[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+ <span data-ttu-id="8e267-146">有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="8e267-146">For more information, see [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)   
- [数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [检索和修改 ADO.NET 中的数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8e267-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8e267-147">See Also</span></span>  
+ [<span data-ttu-id="8e267-148">ADO.NET 概述</span><span class="sxs-lookup"><span data-stu-id="8e267-148">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [<span data-ttu-id="8e267-149">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="8e267-149">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="8e267-150">在 ADO.NET 中检索和修改数据</span><span class="sxs-lookup"><span data-stu-id="8e267-150">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="8e267-151">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="8e267-151">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

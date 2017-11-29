@@ -1,30 +1,36 @@
 ---
-title: "检索二进制数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "检索二进制数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd524ed605f1fe125480bae0949745f4f045f03a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 检索二进制数据
-默认情况下，**DataReader** 在整个数据行可用时立即以行的形式加载传入数据。  但是，对于二进制大对象 \(BLOB\) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。  **Command.ExecuteReader** 方法具有一个重载，它将采用 <xref:System.Data.CommandBehavior> 参数来修改 **DataReader** 的默认行为。  您可以将 <xref:System.Data.CommandBehavior> 传递到 **ExecuteReader** 方法来修改 **DataReader** 的默认行为，使其按照顺序在接收到数据时立即将其加载，而不是加载数据行。  这是加载 BLOB 或其他大数据结构的理想方案。  请注意，该行为可能会因数据源的不同而不同。  例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。  
+# <a name="retrieving-binary-data"></a><span data-ttu-id="80a8f-102">检索二进制数据</span><span class="sxs-lookup"><span data-stu-id="80a8f-102">Retrieving Binary Data</span></span>
+<span data-ttu-id="80a8f-103">默认情况下， **DataReader**作为行加载传入数据，只要整个行的数据是可用。</span><span class="sxs-lookup"><span data-stu-id="80a8f-103">By default, the **DataReader** loads incoming data as a row as soon as an entire row of data is available.</span></span> <span data-ttu-id="80a8f-104">但是，对于二进制大对象 (BLOB) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。</span><span class="sxs-lookup"><span data-stu-id="80a8f-104">Binary large objects (BLOBs) need different treatment, however, because they can contain gigabytes of data that cannot be contained in a single row.</span></span> <span data-ttu-id="80a8f-105">**Command.ExecuteReader**方法具有一个重载需要较长的<xref:System.Data.CommandBehavior>自变量来修改的默认行为**DataReader**。</span><span class="sxs-lookup"><span data-stu-id="80a8f-105">The **Command.ExecuteReader** method has an overload that will take a <xref:System.Data.CommandBehavior> argument to modify the default behavior of the **DataReader**.</span></span> <span data-ttu-id="80a8f-106">你可以将传递<xref:System.Data.CommandBehavior.SequentialAccess>到**ExecuteReader**方法可以修改的默认行为**DataReader**以便而不是加载的数据行，它将加载数据按顺序接收。</span><span class="sxs-lookup"><span data-stu-id="80a8f-106">You can pass <xref:System.Data.CommandBehavior.SequentialAccess> to the **ExecuteReader** method to modify the default behavior of the **DataReader** so that instead of loading rows of data, it will load data sequentially as it is received.</span></span> <span data-ttu-id="80a8f-107">这是加载 BLOB 或其他大数据结构的理想方案。</span><span class="sxs-lookup"><span data-stu-id="80a8f-107">This is ideal for loading BLOBs or other large data structures.</span></span> <span data-ttu-id="80a8f-108">请注意，该行为可能会因数据源的不同而不同。</span><span class="sxs-lookup"><span data-stu-id="80a8f-108">Note that this behavior may depend on your data source.</span></span> <span data-ttu-id="80a8f-109">例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。</span><span class="sxs-lookup"><span data-stu-id="80a8f-109">For example, returning a BLOB from Microsoft Access will load the entire BLOB being loaded into memory, rather than sequentially as it is received.</span></span>  
   
- 在将 **DataReader** 设置为使用 **SequentialAccess** 时，务必要注意访问所返回字段的顺序。  **DataReader** 的默认行为是在整个行可用时立即加载该行，这样可以在读取下一行之前按任何顺序访问所返回的字段。  但是，当使用 **SequentialAccess** 时，必须按顺序访问由 **DataReader** 返回的字段。  例如，如果查询返回三个列，其中第三列是 BLOB，则必须在访问第三个字段中的 BLOB 数据之前返回第一个和第二个字段的值。  如果在访问第一个或第二个字段之前访问第三个字段，则第一个和第二个字段值将不再可用。  这是因为 **SequentialAccess** 已修改 **DataReader**，使其按顺序返回数据，当 **DataReader** 已经读取超过特定数据时，该数据将不可用。  
+ <span data-ttu-id="80a8f-110">设置时**DataReader**使用**SequentialAccess**，务必要注意访问返回的字段的序列。</span><span class="sxs-lookup"><span data-stu-id="80a8f-110">When setting the **DataReader** to use **SequentialAccess**, it is important to note the sequence in which you access the fields returned.</span></span> <span data-ttu-id="80a8f-111">默认行为**DataReader**，这会将加载整个行后立即按原样提供，允许你访问读取下一行之前按任何顺序返回的字段。</span><span class="sxs-lookup"><span data-stu-id="80a8f-111">The default behavior of the **DataReader**, which loads an entire row as soon as it is available, allows you to access the fields returned in any order until the next row is read.</span></span> <span data-ttu-id="80a8f-112">使用时**SequentialAccess**但是，你必须访问返回的字段**DataReader**顺序。</span><span class="sxs-lookup"><span data-stu-id="80a8f-112">When using **SequentialAccess** however, you must access the fields returned by the **DataReader** in order.</span></span> <span data-ttu-id="80a8f-113">例如，如果查询返回三个列，其中第三列是 BLOB，则必须在访问第三个字段中的 BLOB 数据之前返回第一个和第二个字段的值。</span><span class="sxs-lookup"><span data-stu-id="80a8f-113">For example, if your query returns three columns, the third of which is a BLOB, you must return the values of the first and second fields before accessing the BLOB data in the third field.</span></span> <span data-ttu-id="80a8f-114">如果在访问第一个或第二个字段之前访问第三个字段，则第一个和第二个字段值将不再可用。</span><span class="sxs-lookup"><span data-stu-id="80a8f-114">If you access the third field before the first or second fields, the first and second field values are no longer available.</span></span> <span data-ttu-id="80a8f-115">这是因为**SequentialAccess**进行了修改**DataReader**返回数据序列和数据将不可用**DataReader**已经读取超过它。</span><span class="sxs-lookup"><span data-stu-id="80a8f-115">This is because **SequentialAccess** has modified the **DataReader** to return data in sequence and the data is not available after the **DataReader** has read past it.</span></span>  
   
- 在访问 BLOB 字段中的数据时，请使用 **DataReader** 的 **GetBytes** 或 **GetChars** 类型化访问器，它们将用数据来填充数组。  还可以对字符数据使用 **GetString**；但是  为了节省系统资源，您可能不希望将整个 BLOB 值加载到单个字符串变量中。  您可以指定要返回的特定数据缓冲区大小，以及从返回的数据中读取的第一个字节或字符的起始位置。  **GetBytes** 和 **GetChars** 将返回一个 `long` 值，它表示返回的字节或字符数。  如果将一个空数组传递给 **GetBytes** 或 **GetChars**，则返回的长值将是 BLOB 中字节或字符的总数。  您可以选择将数组中的某个索引指定为所读取数据的起始位置。  
+ <span data-ttu-id="80a8f-116">在访问 BLOB 字段中的数据，使用**GetBytes**或**GetChars**类型化访问器的**DataReader**，它们将用数据填充数组。</span><span class="sxs-lookup"><span data-stu-id="80a8f-116">When accessing the data in the BLOB field, use the **GetBytes** or **GetChars** typed accessors of the **DataReader**, which fill an array with data.</span></span> <span data-ttu-id="80a8f-117">你还可以使用**GetString**为字符数据; 但是。</span><span class="sxs-lookup"><span data-stu-id="80a8f-117">You can also use **GetString** for character data; however.</span></span> <span data-ttu-id="80a8f-118">为了节省系统资源，您可能不希望将整个 BLOB 值加载到单个字符串变量中。</span><span class="sxs-lookup"><span data-stu-id="80a8f-118">to conserve system resources you might not want to load an entire BLOB value into a single string variable.</span></span> <span data-ttu-id="80a8f-119">您可以指定要返回的特定数据缓冲区大小，以及从返回的数据中读取的第一个字节或字符的起始位置。</span><span class="sxs-lookup"><span data-stu-id="80a8f-119">You can instead specify a specific buffer size of data to be returned, and a starting location for the first byte or character to be read from the returned data.</span></span> <span data-ttu-id="80a8f-120">**GetBytes**和**GetChars**将返回`long`值，它表示返回的字节或字符数。</span><span class="sxs-lookup"><span data-stu-id="80a8f-120">**GetBytes** and **GetChars** will return a `long` value, which represents the number of bytes or characters returned.</span></span> <span data-ttu-id="80a8f-121">如果传递到一个空数组**GetBytes**或**GetChars**，返回长值将是 BLOB 中字节或字符的总数。</span><span class="sxs-lookup"><span data-stu-id="80a8f-121">If you pass a null array to **GetBytes** or **GetChars**, the long value returned will be the total number of bytes or characters in the BLOB.</span></span> <span data-ttu-id="80a8f-122">您可以选择将数组中的某个索引指定为所读取数据的起始位置。</span><span class="sxs-lookup"><span data-stu-id="80a8f-122">You can optionally specify an index in the array as a starting position for the data being read.</span></span>  
   
-## 示例  
- 下面的示例从 Microsoft SQL Server 中的 **pubs** 示例数据库返回发行者 ID 和徽标。  发行者 ID \(`pub_id`\) 是字符字段，而徽标则是图像，属于 BLOB。  由于 **logo** 字段是位图，因此该示例使用 **GetBytes** 返回二进制数据。  请注意，由于必须按顺序访问字段，所以将在访问徽标之前访问当前数据行的发行者 ID。  
+## <a name="example"></a><span data-ttu-id="80a8f-123">示例</span><span class="sxs-lookup"><span data-stu-id="80a8f-123">Example</span></span>  
+ <span data-ttu-id="80a8f-124">下面的示例返回的发布者 ID 和徽标从**pubs**中 Microsoft SQL Server 示例数据库。</span><span class="sxs-lookup"><span data-stu-id="80a8f-124">The following example returns the publisher ID and logo from the **pubs** sample database in Microsoft SQL Server.</span></span> <span data-ttu-id="80a8f-125">发行者 ID (`pub_id`) 是字符字段，而徽标则是图像，属于 BLOB。</span><span class="sxs-lookup"><span data-stu-id="80a8f-125">The publisher ID (`pub_id`) is a character field, and the logo is an image, which is a BLOB.</span></span> <span data-ttu-id="80a8f-126">因为**徽标**字段是位图，此示例将返回二进制数据使用**GetBytes**。</span><span class="sxs-lookup"><span data-stu-id="80a8f-126">Because the **logo** field is a bitmap, the example returns binary data using **GetBytes**.</span></span> <span data-ttu-id="80a8f-127">请注意，由于必须按顺序访问字段，所以将在访问徽标之前访问当前数据行的发行者 ID。</span><span class="sxs-lookup"><span data-stu-id="80a8f-127">Notice that the publisher ID is accessed for the current row of data before the logo, because the fields must be accessed sequentially.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -88,7 +94,6 @@ Loop
 ' Close the reader and the connection.  
 reader.Close()  
 connection.Close()  
-  
 ```  
   
 ```csharp  
@@ -145,7 +150,7 @@ while (reader.Read())
   }  
   
   // Write the remaining buffer.  
-  writer.Write(outByte, 0, (int)retval - 1);  
+  writer.Write(outByte, 0, (int)retval);  
   writer.Flush();  
   
   // Close the output file.  
@@ -158,7 +163,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## 请参阅  
- [Working with DataReaders](http://msdn.microsoft.com/zh-cn/126a966a-d08d-4d22-a19f-f432908b2b54)   
- [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="80a8f-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="80a8f-128">See Also</span></span>  
+ [<span data-ttu-id="80a8f-129">使用 Datareader</span><span class="sxs-lookup"><span data-stu-id="80a8f-129">Working with DataReaders</span></span>](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [<span data-ttu-id="80a8f-130">SQL Server 二进制和大值数据</span><span class="sxs-lookup"><span data-stu-id="80a8f-130">SQL Server Binary and Large-Value Data</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="80a8f-131">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="80a8f-131">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

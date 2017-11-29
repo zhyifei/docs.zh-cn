@@ -1,47 +1,43 @@
 ---
-title: "基本查询 (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "基本查询 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72fdb8ecf0cc593dfbf23bc42872c396220ea4a4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a6611d4aeba39dd96ea7ea92bbaef9630bb6d870
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="basic-queries-linq-to-xml-visual-basic"></a>基本查询 (LINQ to XML) (Visual Basic)
-本节提供基本 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询的示例。  
+# <a name="basic-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="b9432-102">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-102">Basic Queries (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="b9432-103">本节提供基本 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的示例。</span><span class="sxs-lookup"><span data-stu-id="b9432-103">This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="b9432-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="b9432-104">In This Section</span></span>  
   
-|主题|说明|  
+|<span data-ttu-id="b9432-105">主题</span><span class="sxs-lookup"><span data-stu-id="b9432-105">Topic</span></span>|<span data-ttu-id="b9432-106">描述</span><span class="sxs-lookup"><span data-stu-id="b9432-106">Description</span></span>|  
 |-----------|-----------------|  
-|[如何︰ 查找具有特定属性 (Visual Basic 中) 的元素](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|演示如何查找特定的元素，该元素包含具有特定值的属性。|  
-|[如何︰ 查找具有特定子元素 (Visual Basic 中) 的元素](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|演示如何查找特定的元素，该元素包含具有特定值的子元素。|  
-|[查询 XDocument 与查询 XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|说明和<xref:System.Xml.Linq.XElement>编写查询 XML 树的根部位于<xref:System.Xml.Linq.XDocument>。</xref:System.Xml.Linq.XDocument>上</xref:System.Xml.Linq.XElement>取得 root 权限的 XML 树上编写查询之间的差异|  
-|[如何︰ 查找具有特定元素名称 (Visual Basic 中) 的子代](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|演示如何查找元素的具有特定名称的所有子代。 此示例使用<xref:System.Xml.Linq.XContainer.Descendants%2A>轴。</xref:System.Xml.Linq.XContainer.Descendants%2A>|  
-|[如何︰ 查找单个子代使用 Descendants 方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|演示如何使用<xref:System.Xml.Linq.XContainer.Descendants%2A>轴方法来查找单个具有唯一名称的元素。</xref:System.Xml.Linq.XContainer.Descendants%2A>|  
-|[如何︰ 使用复杂筛选 (Visual Basic) 编写查询](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|演示如何编写具有更复杂的筛选器的查询。|  
-|[如何︰ 筛选可选元素 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|演示如何在形状不规则的树中查找节点。|  
-|[如何︰ 查找 Namespace (Visual Basic 中) 中的所有节点](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|演示如何查找特定命名空间中的所有节点。|  
-|[如何︰ 对元素 (Visual Basic 中) 进行排序](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|演示如何编写对查询结果进行排序的查询。|  
-|[如何︰ 对多个键 (Visual Basic 中) 上的元素进行排序](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|演示如何对多个键进行排序。|  
-|[如何︰ 计算中间值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|演示如何使用 `Let` 子句在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询中计算中间值。|  
-|[如何︰ 编写基于上下文 (Visual Basic 中) 查找元素的查询](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|演示如何根据树中的其他元素来选择元素。|  
-|[如何︰ 调试空查询结果集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|显示在对针对默认命名空间中 XML 的查询进行调试时相应的修补程序。|  
+|[<span data-ttu-id="b9432-107">如何： 查找具有特定属性 (Visual Basic) 的元素</span><span class="sxs-lookup"><span data-stu-id="b9432-107">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|<span data-ttu-id="b9432-108">演示如何查找特定的元素，该元素包含具有特定值的属性。</span><span class="sxs-lookup"><span data-stu-id="b9432-108">Shows how to find a particular element that has an attribute that has a specific value.</span></span>|  
+|[<span data-ttu-id="b9432-109">如何： 查找具有特定的子元素的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-109">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|<span data-ttu-id="b9432-110">演示如何查找特定的元素，该元素包含具有特定值的子元素。</span><span class="sxs-lookup"><span data-stu-id="b9432-110">Shows how to find a particular element that has a child element that has a specific value.</span></span>|  
+|[<span data-ttu-id="b9432-111">查询 XDocument 与查询 XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-111">Querying an XDocument vs. Querying an XElement (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|<span data-ttu-id="b9432-112">解释针对根部位于 <xref:System.Xml.Linq.XElement> 中的 XML 树编写查询与针对根部位于 <xref:System.Xml.Linq.XDocument> 中的 XML 树编写查询有何差异。</span><span class="sxs-lookup"><span data-stu-id="b9432-112">Explains the differences between writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XElement> and writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|[<span data-ttu-id="b9432-113">如何： 查找具有特定元素名称 (Visual Basic) 的子代</span><span class="sxs-lookup"><span data-stu-id="b9432-113">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|<span data-ttu-id="b9432-114">演示如何查找元素的具有特定名称的所有子代。</span><span class="sxs-lookup"><span data-stu-id="b9432-114">Shows how to find all the descendants of an element that have a specific name.</span></span> <span data-ttu-id="b9432-115">该示例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴。</span><span class="sxs-lookup"><span data-stu-id="b9432-115">This example uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>|  
+|[<span data-ttu-id="b9432-116">如何： 查找单个子代使用 Descendants 方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-116">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|<span data-ttu-id="b9432-117">演示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法来查找单个具有唯一名称的元素。</span><span class="sxs-lookup"><span data-stu-id="b9432-117">Shows how to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to find a single uniquely named element.</span></span>|  
+|[<span data-ttu-id="b9432-118">如何： 使用复杂筛选 (Visual Basic) 编写查询</span><span class="sxs-lookup"><span data-stu-id="b9432-118">How to: Write Queries with Complex Filtering (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|<span data-ttu-id="b9432-119">演示如何编写具有更复杂的筛选器的查询。</span><span class="sxs-lookup"><span data-stu-id="b9432-119">Shows how to write a query with a more complex filter.</span></span>|  
+|[<span data-ttu-id="b9432-120">如何： 筛选可选元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-120">How to: Filter on an Optional Element (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|<span data-ttu-id="b9432-121">演示如何在形状不规则的树中查找节点。</span><span class="sxs-lookup"><span data-stu-id="b9432-121">Shows how to find nodes in an irregularly shaped tree.</span></span>|  
+|[<span data-ttu-id="b9432-122">如何： 查找 Namespace (Visual Basic 中) 中的所有节点</span><span class="sxs-lookup"><span data-stu-id="b9432-122">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|<span data-ttu-id="b9432-123">演示如何查找特定命名空间中的所有节点。</span><span class="sxs-lookup"><span data-stu-id="b9432-123">Shows how to find all nodes that are in a specific namespace.</span></span>|  
+|[<span data-ttu-id="b9432-124">如何： 对元素 (Visual Basic) 进行排序</span><span class="sxs-lookup"><span data-stu-id="b9432-124">How to: Sort Elements (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|<span data-ttu-id="b9432-125">演示如何编写对查询结果进行排序的查询。</span><span class="sxs-lookup"><span data-stu-id="b9432-125">Shows how to write a query that sorts its results.</span></span>|  
+|[<span data-ttu-id="b9432-126">如何： 对多个键 (Visual Basic) 的元素进行排序</span><span class="sxs-lookup"><span data-stu-id="b9432-126">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|<span data-ttu-id="b9432-127">演示如何对多个键进行排序。</span><span class="sxs-lookup"><span data-stu-id="b9432-127">Shows how to sort on multiple keys.</span></span>|  
+|[<span data-ttu-id="b9432-128">如何： 计算中间值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-128">How to: Calculate Intermediate Values (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|<span data-ttu-id="b9432-129">演示如何使用 `Let` 子句在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询中计算中间值。</span><span class="sxs-lookup"><span data-stu-id="b9432-129">Shows how to use the `Let` clause to calculate intermediate values in a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query.</span></span>|  
+|[<span data-ttu-id="b9432-130">如何： 编写一个查询，查找元素根据上下文 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-130">How to: Write a Query that Finds Elements Based on Context (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|<span data-ttu-id="b9432-131">演示如何根据树中的其他元素来选择元素。</span><span class="sxs-lookup"><span data-stu-id="b9432-131">Shows how to select elements based on other elements in the tree.</span></span>|  
+|[<span data-ttu-id="b9432-132">如何： 调试空查询结果集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-132">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|<span data-ttu-id="b9432-133">显示在对针对默认命名空间中 XML 的查询进行调试时相应的修补程序。</span><span class="sxs-lookup"><span data-stu-id="b9432-133">Shows the appropriate fix when debugging queries on XML that is in a default namespace.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="b9432-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b9432-134">See Also</span></span>  
+ [<span data-ttu-id="b9432-135">查询 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9432-135">Querying XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

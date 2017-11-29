@@ -1,57 +1,61 @@
 ---
-title: "在 GDI+ 中裁切和缩放图像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "压缩数据, 图像"
-  - "GDI+, 裁剪图像"
-  - "GDI+, 缩放图像"
-  - "图像 [Windows 窗体], 压缩"
-  - "图像 [Windows 窗体], 裁剪"
-  - "图像 [Windows 窗体], 展开"
-  - "图像 [Windows 窗体], 缩放"
-  - "矩形, 目标"
-  - "矩形, source"
+title: "在 GDI+ 中裁切和缩放图像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI+, scaling images
+- GDI+, cropping images
+- images [Windows Forms], cropping
+- compressing data [Windows Forms], images
+- images [Windows Forms], expansion
+- images [Windows Forms], scaling
+- rectangles [Windows Forms], source
+- rectangles [Windows Forms], destination
+- images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63e1e55e57d586cbbca87361b95c18f0f53b8c75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 GDI+ 中裁切和缩放图像
-可使用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawImage%2A> 方法绘制和定位矢量图像和光栅图像。  <xref:System.Drawing.Graphics.DrawImage%2A> 是一个重载的方法，因此，可以有多种方式为该方法提供参数。  
+# <a name="cropping-and-scaling-images-in-gdi"></a><span data-ttu-id="9b5aa-102">在 GDI+ 中裁切和缩放图像</span><span class="sxs-lookup"><span data-stu-id="9b5aa-102">Cropping and Scaling Images in GDI+</span></span>
+<span data-ttu-id="9b5aa-103">你可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>类可以绘制和位置矢量图像和光栅图像。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-103">You can use the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> class to draw and position vector images and raster images.</span></span> <span data-ttu-id="9b5aa-104"><xref:System.Drawing.Graphics.DrawImage%2A>是重载的方法，因此有几种方法，你可以向其提供自变量。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-104"><xref:System.Drawing.Graphics.DrawImage%2A> is an overloaded method, so there are several ways you can supply it with arguments.</span></span>  
   
-## DrawImage 的变体  
- <xref:System.Drawing.Graphics.DrawImage%2A> 方法的一个变体接收一个 <xref:System.Drawing.Bitmap> 和一个 <xref:System.Drawing.Rectangle>。  该矩形指定了绘图操作的目标，即它指定了将要在其内绘图的矩形。  如果目标矩形的大小与原始图像的大小不同，原始图像将进行缩放，以适应目标矩形。  下面的代码示例演示如何将同一图像绘制三次：一次没有缩放，一次使用扩展，一次使用压缩：  
+## <a name="drawimage-variations"></a><span data-ttu-id="9b5aa-105">DrawImage 变体</span><span class="sxs-lookup"><span data-stu-id="9b5aa-105">DrawImage Variations</span></span>  
+ <span data-ttu-id="9b5aa-106">一个变体<xref:System.Drawing.Graphics.DrawImage%2A>方法接收<xref:System.Drawing.Bitmap>和<xref:System.Drawing.Rectangle>。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-106">One variation of the <xref:System.Drawing.Graphics.DrawImage%2A> method receives a <xref:System.Drawing.Bitmap> and a <xref:System.Drawing.Rectangle>.</span></span> <span data-ttu-id="9b5aa-107">矩形指定绘制操作; 的目标也就是说，它指定在其中绘制图像的矩形。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-107">The rectangle specifies the destination for the drawing operation; that is, it specifies the rectangle in which to draw the image.</span></span> <span data-ttu-id="9b5aa-108">如果目标矩形的大小不同于原始图像的大小，缩放图像以适合目标矩形。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-108">If the size of the destination rectangle is different from the size of the original image, the image is scaled to fit the destination rectangle.</span></span> <span data-ttu-id="9b5aa-109">下面的代码示例演示如何将同一图像绘制三次： 一次没有缩放、 使用扩展，一次，并且一次使用压缩：</span><span class="sxs-lookup"><span data-stu-id="9b5aa-109">The following code example shows how to draw the same image three times: once with no scaling, once with an expansion, and once with a compression:</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
- 下面的插图显示了这三张图片。  
+ <span data-ttu-id="9b5aa-110">下图显示三个图片。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-110">The following illustration shows the three pictures.</span></span>  
   
- ![缩放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.png "AboutGdip03\_Art06")  
+ <span data-ttu-id="9b5aa-111">![缩放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")</span><span class="sxs-lookup"><span data-stu-id="9b5aa-111">![Scaling](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")</span></span>  
   
- <xref:System.Drawing.Graphics.DrawImage%2A> 方法的一些变体带有源矩形参数和目标矩形参数。  源矩形参数指定原始图像要绘制的部分。  目标矩形参数指定将要在其内绘制该图像指定部分的矩形。  如果目标矩形的大小与源矩形的大小不同，图片将会缩放，以适应目标矩形。  
+ <span data-ttu-id="9b5aa-112">某些变体<xref:System.Drawing.Graphics.DrawImage%2A>方法有源矩形参数，以及目标矩形参数。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-112">Some variations of the <xref:System.Drawing.Graphics.DrawImage%2A> method have a source-rectangle parameter as well as a destination-rectangle parameter.</span></span> <span data-ttu-id="9b5aa-113">源矩形参数指定要绘制的原始图像的部分。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-113">The source-rectangle parameter specifies the portion of the original image to draw.</span></span> <span data-ttu-id="9b5aa-114">目标矩形指定要在其中绘制图像的该部分的矩形。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-114">The destination rectangle specifies the rectangle in which to draw that portion of the image.</span></span> <span data-ttu-id="9b5aa-115">如果目标矩形的大小不同于源矩形的大小，图进行缩放以适合目标矩形。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-115">If the size of the destination rectangle is different from the size of the source rectangle, the picture is scaled to fit the destination rectangle.</span></span>  
   
- 下面的代码示例演示如何用文件 Runner.jpg 构造 <xref:System.Drawing.Bitmap>。  整个图像在 \(0，0\) 处开始绘制，无缩放。  然后将该图像的一小部分绘制两次：一次使用压缩，一次使用扩展。  
+ <span data-ttu-id="9b5aa-116">下面的代码示例显示如何构造<xref:System.Drawing.Bitmap>从 Runner.jpg 的文件。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-116">The following code example shows how to construct a <xref:System.Drawing.Bitmap> from the file Runner.jpg.</span></span> <span data-ttu-id="9b5aa-117">在无缩放绘制整个图像 （0，0）。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-117">The entire image is drawn with no scaling at (0, 0).</span></span> <span data-ttu-id="9b5aa-118">然后两次绘制图像的一小部分： 一次使用压缩，一次使用扩展。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-118">Then a small portion of the image is drawn twice: once with a compression and once with an expansion.</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
- 下面的插图显示了未缩放的图像，以及压缩的和扩展的图像部分。  
+ <span data-ttu-id="9b5aa-119">下图显示未缩放的图像和压缩和扩展的图像部分。</span><span class="sxs-lookup"><span data-stu-id="9b5aa-119">The following illustration shows the unscaled image, and the compressed and expanded image portions.</span></span>  
   
- ![裁剪和缩放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.png "AboutGdip03\_Art07")  
+ <span data-ttu-id="9b5aa-120">![剪切和缩放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")</span><span class="sxs-lookup"><span data-stu-id="9b5aa-120">![Cropping and Scaling](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")</span></span>  
   
-## 请参阅  
- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="9b5aa-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9b5aa-121">See Also</span></span>  
+ [<span data-ttu-id="9b5aa-122">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="9b5aa-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="9b5aa-123">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="9b5aa-123">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

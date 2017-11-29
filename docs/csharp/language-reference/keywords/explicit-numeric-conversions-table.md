@@ -1,12 +1,9 @@
 ---
 title: "显式数值转换表（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -15,76 +12,60 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
-显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。 下表显示了这些转换。  
+# <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="c50d5-102">显式数值转换表（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c50d5-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
+<span data-ttu-id="c50d5-103">显式数值转换用于使用强制转换表达式将任何数值类型转换为任何其他数值类型，其中不存在任何隐式转换。</span><span class="sxs-lookup"><span data-stu-id="c50d5-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="c50d5-104">下表显示了这些转换。</span><span class="sxs-lookup"><span data-stu-id="c50d5-104">The following table shows these conversions.</span></span>  
   
- 有关转换的详细信息，请参阅[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
+ <span data-ttu-id="c50d5-105">有关转换的详细信息，请参阅[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="c50d5-105">For more information about conversions, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
   
-|From|到|  
+|<span data-ttu-id="c50d5-106">From</span><span class="sxs-lookup"><span data-stu-id="c50d5-106">From</span></span>|<span data-ttu-id="c50d5-107">到</span><span class="sxs-lookup"><span data-stu-id="c50d5-107">To</span></span>|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` 或 `char`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`、`byte`、`short` 或 `char`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`、`byte`、`short`、`ushort`、`int` 或 `char`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`、`byte` 或 `short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`|  
-|[小数](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `double`|  
+|[<span data-ttu-id="c50d5-108">sbyte</span><span class="sxs-lookup"><span data-stu-id="c50d5-108">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|<span data-ttu-id="c50d5-109">`byte`、`ushort`、`uint`、`ulong` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-109">`byte`, `ushort`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-110">byte</span><span class="sxs-lookup"><span data-stu-id="c50d5-110">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|<span data-ttu-id="c50d5-111">`Sbyte` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-111">`Sbyte` or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-112">short</span><span class="sxs-lookup"><span data-stu-id="c50d5-112">short</span></span>](../../../csharp/language-reference/keywords/short.md)|<span data-ttu-id="c50d5-113">`sbyte`、`byte`、`ushort`、`uint`、`ulong` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-113">`sbyte`, `byte`, `ushort`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-114">ushort</span><span class="sxs-lookup"><span data-stu-id="c50d5-114">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|<span data-ttu-id="c50d5-115">`sbyte`、`byte`、`short` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-115">`sbyte`, `byte`, `short`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-116">int</span><span class="sxs-lookup"><span data-stu-id="c50d5-116">int</span></span>](../../../csharp/language-reference/keywords/int.md)|<span data-ttu-id="c50d5-117">`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-117">`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`,or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-118">uint</span><span class="sxs-lookup"><span data-stu-id="c50d5-118">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|<span data-ttu-id="c50d5-119">`sbyte`、`byte`、`short`、`ushort`、`int` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-119">`sbyte`, `byte`, `short`, `ushort`, `int`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-120">long</span><span class="sxs-lookup"><span data-stu-id="c50d5-120">long</span></span>](../../../csharp/language-reference/keywords/long.md)|<span data-ttu-id="c50d5-121">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-121">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-122">ulong</span><span class="sxs-lookup"><span data-stu-id="c50d5-122">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|<span data-ttu-id="c50d5-123">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`</span><span class="sxs-lookup"><span data-stu-id="c50d5-123">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, or `char`</span></span>|  
+|[<span data-ttu-id="c50d5-124">char</span><span class="sxs-lookup"><span data-stu-id="c50d5-124">char</span></span>](../../../csharp/language-reference/keywords/char.md)|<span data-ttu-id="c50d5-125">`sbyte`、`byte` 或 `short`</span><span class="sxs-lookup"><span data-stu-id="c50d5-125">`sbyte`, `byte`, or `short`</span></span>|  
+|[<span data-ttu-id="c50d5-126">float</span><span class="sxs-lookup"><span data-stu-id="c50d5-126">float</span></span>](../../../csharp/language-reference/keywords/float.md)|<span data-ttu-id="c50d5-127">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`</span><span class="sxs-lookup"><span data-stu-id="c50d5-127">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`,or `decimal`</span></span>|  
+|[<span data-ttu-id="c50d5-128">double</span><span class="sxs-lookup"><span data-stu-id="c50d5-128">double</span></span>](../../../csharp/language-reference/keywords/double.md)|<span data-ttu-id="c50d5-129">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`</span><span class="sxs-lookup"><span data-stu-id="c50d5-129">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`,or `decimal`</span></span>|  
+|[<span data-ttu-id="c50d5-130">小数</span><span class="sxs-lookup"><span data-stu-id="c50d5-130">decimal</span></span>](../../../csharp/language-reference/keywords/decimal.md)|<span data-ttu-id="c50d5-131">`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `double`</span><span class="sxs-lookup"><span data-stu-id="c50d5-131">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, or `double`</span></span>|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a><span data-ttu-id="c50d5-132">备注</span><span class="sxs-lookup"><span data-stu-id="c50d5-132">Remarks</span></span>  
   
--   显式数值转换可能会导致精度降低或导致引发异常。  
+-   <span data-ttu-id="c50d5-133">显式数值转换可能会导致精度降低或导致引发异常。</span><span class="sxs-lookup"><span data-stu-id="c50d5-133">The explicit numeric conversion may cause loss of precision or result in throwing exceptions.</span></span>  
   
--   将 `decimal` 值转换为整型类型时，此值会向零舍入到最接近的整数值。 如果生成的整数值处于目标类型的范围之外，则会引发 <xref:System.OverflowException>。  
+-   <span data-ttu-id="c50d5-134">将 `decimal` 值转换为整型类型时，此值会向零舍入到最接近的整数值。</span><span class="sxs-lookup"><span data-stu-id="c50d5-134">When you convert a `decimal` value to an integral type, this value is rounded towards zero to the nearest integral value.</span></span> <span data-ttu-id="c50d5-135">如果生成的整数值处于目标类型的范围之外，则会引发 <xref:System.OverflowException>。</span><span class="sxs-lookup"><span data-stu-id="c50d5-135">If the resulting integral value is outside the range of the destination type, an <xref:System.OverflowException> is thrown.</span></span>  
   
--   从 `double` 或 `float` 值转换为整型类型时，会截断该值。 如果生成的整数值处于目标值范围之外，则结果会取决于溢出检查上下文。 在已检查的上下文中，引发 `OverflowException`；而在未检查的上下文中，结果是目标类型的未指定值。  
+-   <span data-ttu-id="c50d5-136">从 `double` 或 `float` 值转换为整型类型时，会截断该值。</span><span class="sxs-lookup"><span data-stu-id="c50d5-136">When you convert from a `double` or `float` value to an integral type, the value is truncated.</span></span> <span data-ttu-id="c50d5-137">如果生成的整数值处于目标值范围之外，则结果会取决于溢出检查上下文。</span><span class="sxs-lookup"><span data-stu-id="c50d5-137">If the resulting integral value is outside the range of the destination value, the result depends on the overflow checking context.</span></span> <span data-ttu-id="c50d5-138">在已检查的上下文中，引发 `OverflowException`；而在未检查的上下文中，结果是目标类型的未指定值。</span><span class="sxs-lookup"><span data-stu-id="c50d5-138">In a checked context, an `OverflowException` is thrown, while in an unchecked context, the result is an unspecified value of the destination type.</span></span>  
   
--   将 `double` 转换为 `float` 时，`double` 值舍入为最接近的 `float` 值。 如果 `double` 值太小或太大，无法匹配目标类型，结果将为零或无穷大。  
+-   <span data-ttu-id="c50d5-139">将 `double` 转换为 `float` 时，`double` 值舍入为最接近的 `float` 值。</span><span class="sxs-lookup"><span data-stu-id="c50d5-139">When you convert `double` to `float`, the `double` value is rounded to the nearest `float` value.</span></span> <span data-ttu-id="c50d5-140">如果 `double` 值太小或太大，无法匹配目标类型，结果将为零或无穷大。</span><span class="sxs-lookup"><span data-stu-id="c50d5-140">If the `double` value is too small or too large to fit into the destination type, the result will be zero or infinity.</span></span>  
   
--   将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并并五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：  
+-   <span data-ttu-id="c50d5-141">将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并并五入到第 28 位小数后最接近的数（如果需要）。</span><span class="sxs-lookup"><span data-stu-id="c50d5-141">When you convert `float` or `double` to `decimal`, the source value is converted to `decimal` representation and rounded to the nearest number after the 28th decimal place if required.</span></span> <span data-ttu-id="c50d5-142">根据源值的值，可能出现以下结果之一：</span><span class="sxs-lookup"><span data-stu-id="c50d5-142">Depending on the value of the source value, one of the following results may occur:</span></span>  
   
-    -   如果源值太小，无法表示为 `decimal`，结果则为零。  
+    -   <span data-ttu-id="c50d5-143">如果源值太小，无法表示为 `decimal`，结果则为零。</span><span class="sxs-lookup"><span data-stu-id="c50d5-143">If the source value is too small to be represented as a `decimal`, the result becomes zero.</span></span>  
   
-    -   如果源值为 NaN（非数值）、无穷大或太大而无法表示为 `decimal`，则引发 `OverflowException`。  
+    -   <span data-ttu-id="c50d5-144">如果源值为 NaN（非数值）、无穷大或太大而无法表示为 `decimal`，则引发 `OverflowException`。</span><span class="sxs-lookup"><span data-stu-id="c50d5-144">If the source value is NaN (not a number), infinity, or too large to be represented as a `decimal`, an `OverflowException` is thrown.</span></span>  
   
--   将 `decimal` 转换为 `float` 或 `double` 时，`decimal` 值舍入到最接近的 `double` 或 `float` 值。  
+-   <span data-ttu-id="c50d5-145">将 `decimal` 转换为 `float` 或 `double` 时，`decimal` 值舍入到最接近的 `double` 或 `float` 值。</span><span class="sxs-lookup"><span data-stu-id="c50d5-145">When you convert `decimal` to `float` or `double`, the `decimal` value is rounded to the nearest `double` or `float` value.</span></span>  
   
- 有关显式转换的详细信息，请参阅 C# 语言规范中的显式。 有关如何访问此规范的详细信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。  
+ <span data-ttu-id="c50d5-146">有关显式转换的详细信息，请参阅 C# 语言规范中的显式。</span><span class="sxs-lookup"><span data-stu-id="c50d5-146">For more information on explicit conversion, see Explicit in the C# Language Specification.</span></span> <span data-ttu-id="c50d5-147">有关如何访问此规范的详细信息，请参阅 [C# 语言规范](../../../csharp/language-reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="c50d5-147">For more information on how to access the spec, see [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-
+## <a name="see-also"></a><span data-ttu-id="c50d5-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c50d5-148">See Also</span></span>  
+ [<span data-ttu-id="c50d5-149">C# 参考</span><span class="sxs-lookup"><span data-stu-id="c50d5-149">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c50d5-150">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="c50d5-150">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c50d5-151">强制转换和类型转换</span><span class="sxs-lookup"><span data-stu-id="c50d5-151">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [<span data-ttu-id="c50d5-152">() 运算符</span><span class="sxs-lookup"><span data-stu-id="c50d5-152">() Operator</span></span>](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [<span data-ttu-id="c50d5-153">整型表</span><span class="sxs-lookup"><span data-stu-id="c50d5-153">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="c50d5-154">内置类型表</span><span class="sxs-lookup"><span data-stu-id="c50d5-154">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="c50d5-155">隐式数值转换表</span><span class="sxs-lookup"><span data-stu-id="c50d5-155">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

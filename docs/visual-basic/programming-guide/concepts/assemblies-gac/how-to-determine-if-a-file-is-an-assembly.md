@@ -1,50 +1,42 @@
 ---
-title: "如何︰ 确定文件是否为程序集 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 确定文件是否为程序集 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e58363369ae4420879310bf09ed89cdd4f5b5cc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9b69a40bd11425b7e481dc28fddc560c41df3962
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何︰ 确定文件是否为程序集 (Visual Basic)
-当且仅当它处于托管状态，并包含其元数据中的程序集条目，则文件是程序集。 程序集和元数据的详细信息，请参阅主题[程序集清单](https://msdn.microsoft.com/library/1w45z383)。  
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="b3fa8-102">如何： 确定文件是否为程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3fa8-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
+<span data-ttu-id="b3fa8-103">当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="b3fa8-104">有关程序集和元数据的详细信息，请参阅主题[程序集清单](https://msdn.microsoft.com/library/1w45z383)。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](https://msdn.microsoft.com/library/1w45z383).</span></span>  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何手动确定文件是否为程序集  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="b3fa8-105">如何手动确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="b3fa8-105">How to manually determine if a file is an assembly</span></span>  
   
-1.  启动[Ildasm.exe （IL 反汇编程序）](https://msdn.microsoft.com/library/f7dy01k1)。  
+1.  <span data-ttu-id="b3fa8-106">启动 [Ildasm.exe（IL 反汇编程序）](https://msdn.microsoft.com/library/f7dy01k1)。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-106">Start the [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1).</span></span>  
   
-2.  加载你要测试的文件。  
+2.  <span data-ttu-id="b3fa8-107">加载要测试的文件。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-107">Load the file you wish to test.</span></span>  
   
-3.  如果**ILDASM**报表文件不是一个可移植可执行 (PE) 文件，则它不是程序集。 有关详细信息，请参阅主题[如何︰ 查看程序集内容](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709)。  
+3.  <span data-ttu-id="b3fa8-108">如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="b3fa8-109">有关详细信息，请参阅主题 [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md)（如何：查看程序集内容）。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以编程方式确定文件是否为程序集  
+## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="b3fa8-110">如何以编程方式确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="b3fa8-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1.  调用<xref:System.Reflection.AssemblyName.GetAssemblyName%2A>方法，并传递的完整文件路径和要测试的文件的名称。</xref:System.Reflection.AssemblyName.GetAssemblyName%2A>  
+1.  <span data-ttu-id="b3fa8-111">调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2.  如果<xref:System.BadImageFormatException>引发异常，该文件不是程序集。</xref:System.BadImageFormatException>  
+2.  <span data-ttu-id="b3fa8-112">如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a>示例  
- 此示例测试以查看它是否为程序集 DLL。  
+## <a name="example"></a><span data-ttu-id="b3fa8-113">示例</span><span class="sxs-lookup"><span data-stu-id="b3fa8-113">Example</span></span>  
+ <span data-ttu-id="b3fa8-114">此示例测试 DLL 以查看其是否为程序集。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```vb  
 Module Module1  
@@ -67,9 +59,9 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
   
- <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>方法加载测试文件，并将读取的信息之后，然后释放它。</xref:System.Reflection.AssemblyName.GetAssemblyName%2A>  
+ <span data-ttu-id="b3fa8-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息之后释放它。</span><span class="sxs-lookup"><span data-stu-id="b3fa8-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Reflection.AssemblyName></xref:System.Reflection.AssemblyName>   
- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)   
- [程序集和全局程序集缓存 (Visual Basic)](index.md)
+## <a name="see-also"></a><span data-ttu-id="b3fa8-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b3fa8-116">See Also</span></span>  
+ <xref:System.Reflection.AssemblyName>  
+ [<span data-ttu-id="b3fa8-117">编程概念</span><span class="sxs-lookup"><span data-stu-id="b3fa8-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="b3fa8-118">程序集和全局程序集缓存 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3fa8-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](index.md)

@@ -1,75 +1,55 @@
 ---
 title: "break（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - break
 - break_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- break keyword [C#]
+helpviewer_keywords: break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b533d325be41683ed6f56e9e63b3c11ddde9cb17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73f6b6a37513b3aed796d811672fa43fa9e1c0b1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="break-c-reference"></a>break（C# 参考）
-`break` 语句将终止其所在位置的最接近封闭循环或 [switch](../../../csharp/language-reference/keywords/switch.md) 语句。 控制权将传递给已终止语句后面的语句（若有）。  
+# <a name="break-c-reference"></a><span data-ttu-id="61a59-102">break（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="61a59-102">break (C# Reference)</span></span>
+<span data-ttu-id="61a59-103">`break` 语句将终止其所在位置的最接近封闭循环或 [switch](../../../csharp/language-reference/keywords/switch.md) 语句。</span><span class="sxs-lookup"><span data-stu-id="61a59-103">The `break` statement terminates the closest enclosing loop or [switch](../../../csharp/language-reference/keywords/switch.md) statement in which it appears.</span></span> <span data-ttu-id="61a59-104">控制权将传递给已终止语句后面的语句（若有）。</span><span class="sxs-lookup"><span data-stu-id="61a59-104">Control is passed to the statement that follows the terminated statement, if any.</span></span>  
   
-## <a name="example"></a>示例  
- 在此示例中，条件语句包含一个应从 1 计数到 100 的计数器；但 `break` 语句在计数器计数到 4 后终止了循环。  
+## <a name="example"></a><span data-ttu-id="61a59-105">示例</span><span class="sxs-lookup"><span data-stu-id="61a59-105">Example</span></span>  
+ <span data-ttu-id="61a59-106">在此示例中，条件语句包含一个应从 1 计数到 100 的计数器；但 `break` 语句在计数器计数到 4 后终止了循环。</span><span class="sxs-lookup"><span data-stu-id="61a59-106">In this example, the conditional statement contains a counter that is supposed to count from 1 to 100; however, the `break` statement terminates the loop after 4 counts.</span></span>  
   
- [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
+ [!code-csharp[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
   
-## <a name="example"></a>示例  
- 在此示例中，`break` 语句用于中断内层嵌套循环，并将控制权返回给外层循环。  
+## <a name="example"></a><span data-ttu-id="61a59-107">示例</span><span class="sxs-lookup"><span data-stu-id="61a59-107">Example</span></span>  
+ <span data-ttu-id="61a59-108">在此示例中，`break` 语句用于中断内层嵌套循环，并将控制权返回给外层循环。</span><span class="sxs-lookup"><span data-stu-id="61a59-108">In this example, the `break` statement is used to break out of an inner nested loop, and return control to the outer loop.</span></span>  
   
- [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
+ [!code-csharp[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
   
-## <a name="example"></a>示例  
- 本示例演示 `break` 在 [switch](../../../csharp/language-reference/keywords/switch.md) 语句中的用法。  
+## <a name="example"></a><span data-ttu-id="61a59-109">示例</span><span class="sxs-lookup"><span data-stu-id="61a59-109">Example</span></span>  
+ <span data-ttu-id="61a59-110">本示例演示 `break` 在 [switch](../../../csharp/language-reference/keywords/switch.md) 语句中的用法。</span><span class="sxs-lookup"><span data-stu-id="61a59-110">This example demonstrates the use of `break` in a [switch](../../../csharp/language-reference/keywords/switch.md) statement.</span></span>  
   
- [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
+ [!code-csharp[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
   
- 如果输入 `4`，则输出为：  
+ <span data-ttu-id="61a59-111">如果输入 `4`，则输出为：</span><span class="sxs-lookup"><span data-stu-id="61a59-111">If you entered `4`, the output would be:</span></span>  
   
 ```  
 Enter your selection (1, 2, or 3): 4  
 Sorry, invalid selection.  
 ```  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="61a59-112">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="61a59-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [switch](../../../csharp/language-reference/keywords/switch.md)   
- [跳转语句](../../../csharp/language-reference/keywords/jump-statements.md)   
- [迭代语句](../../../csharp/language-reference/keywords/iteration-statements.md)
-
+## <a name="see-also"></a><span data-ttu-id="61a59-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="61a59-113">See Also</span></span>  
+ [<span data-ttu-id="61a59-114">C# 参考</span><span class="sxs-lookup"><span data-stu-id="61a59-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="61a59-115">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="61a59-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="61a59-116">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="61a59-116">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="61a59-117">switch</span><span class="sxs-lookup"><span data-stu-id="61a59-117">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+ [<span data-ttu-id="61a59-118">跳转语句</span><span class="sxs-lookup"><span data-stu-id="61a59-118">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)  
+ [<span data-ttu-id="61a59-119">迭代语句</span><span class="sxs-lookup"><span data-stu-id="61a59-119">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)

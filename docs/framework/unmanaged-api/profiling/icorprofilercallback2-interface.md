@@ -1,0 +1,70 @@
+---
+title: "ICorProfilerCallback2 接口"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorProfilerCallback2
+api_location: mscorwks.dll
+api_type: COM
+f1_keywords: ICorProfilerCallback2
+helpviewer_keywords: ICorProfilerCallback2 interface [.NET Framework profiling]
+ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
+topic_type: apiref
+caps.latest.revision: "21"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 4d1afed1aefbdd8a2733697c342fcf7aafabd8f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="icorprofilercallback2-interface"></a><span data-ttu-id="355be-102">ICorProfilerCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="355be-102">ICorProfilerCallback2 Interface</span></span>
+<span data-ttu-id="355be-103">提供公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。</span><span class="sxs-lookup"><span data-stu-id="355be-103">Provides methods that are used by the common language runtime (CLR) to notify a code profiler when the events to which the profiler has subscribed occur.</span></span> <span data-ttu-id="355be-104">`ICorProfilerCallback2`接口是的扩展[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="355be-104">The `ICorProfilerCallback2` interface is an extension of the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interface.</span></span> <span data-ttu-id="355be-105">也就是说，它提供了.NET Framework 2.0 版中引入的新回调。</span><span class="sxs-lookup"><span data-stu-id="355be-105">That is, it provides new callbacks introduced in the .NET Framework version 2.0.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="355be-106">每个方法实现必须返回一个 HRESULT，则为 S_OK 成功则 E_FAIL 失败的值。</span><span class="sxs-lookup"><span data-stu-id="355be-106">Each method implementation must return an HRESULT having a value of S_OK on success or E_FAIL on failure.</span></span> <span data-ttu-id="355be-107">目前，CLR 将忽略除每个回调返回的 HRESULT [icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)。</span><span class="sxs-lookup"><span data-stu-id="355be-107">Currently, the CLR ignores the HRESULT that is returned by each callback except [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="355be-108">方法</span><span class="sxs-lookup"><span data-stu-id="355be-108">Methods</span></span>  
+  
+|<span data-ttu-id="355be-109">方法</span><span class="sxs-lookup"><span data-stu-id="355be-109">Method</span></span>|<span data-ttu-id="355be-110">描述</span><span class="sxs-lookup"><span data-stu-id="355be-110">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="355be-111">FinalizeableObjectQueued 方法</span><span class="sxs-lookup"><span data-stu-id="355be-111">FinalizeableObjectQueued Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|<span data-ttu-id="355be-112">通知代码探查器已排队具有终结器的对象发送至终结器线程的执行其`Finalize`方法。</span><span class="sxs-lookup"><span data-stu-id="355be-112">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>|  
+|[<span data-ttu-id="355be-113">GarbageCollectionFinished 方法</span><span class="sxs-lookup"><span data-stu-id="355be-113">GarbageCollectionFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|<span data-ttu-id="355be-114">通知探查器，垃圾回收已完成，并为其颁发的所有垃圾回收回调。</span><span class="sxs-lookup"><span data-stu-id="355be-114">Notifies the profiler that a garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>|  
+|[<span data-ttu-id="355be-115">GarbageCollectionStarted 方法</span><span class="sxs-lookup"><span data-stu-id="355be-115">GarbageCollectionStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|<span data-ttu-id="355be-116">通知代码探查器垃圾回收已启动。</span><span class="sxs-lookup"><span data-stu-id="355be-116">Notifies the code profiler that a garbage collection has started.</span></span>|  
+|[<span data-ttu-id="355be-117">HandleCreated 方法</span><span class="sxs-lookup"><span data-stu-id="355be-117">HandleCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|<span data-ttu-id="355be-118">通知代码探查器已创建了垃圾回收句柄。</span><span class="sxs-lookup"><span data-stu-id="355be-118">Notifies the code profiler that a garbage collection handle has been created.</span></span>|  
+|[<span data-ttu-id="355be-119">HandleDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="355be-119">HandleDestroyed Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|<span data-ttu-id="355be-120">通知垃圾回收句柄已销毁代码探查器。</span><span class="sxs-lookup"><span data-stu-id="355be-120">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>|  
+|[<span data-ttu-id="355be-121">RootReferences2 方法</span><span class="sxs-lookup"><span data-stu-id="355be-121">RootReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|<span data-ttu-id="355be-122">垃圾回收发生后，请通知有关根引用探查器。</span><span class="sxs-lookup"><span data-stu-id="355be-122">Notifies the profiler about root references after a garbage collection has occurred.</span></span> <span data-ttu-id="355be-123">此方法是扩展的[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="355be-123">This method is an extension of the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) method.</span></span>|  
+|[<span data-ttu-id="355be-124">SurvivingReferences 方法</span><span class="sxs-lookup"><span data-stu-id="355be-124">SurvivingReferences Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|<span data-ttu-id="355be-125">通知探查器有关垃圾回收中幸存的对象引用。</span><span class="sxs-lookup"><span data-stu-id="355be-125">Notifies the profiler about object references that have survived a garbage collection.</span></span>|  
+|[<span data-ttu-id="355be-126">ThreadNameChanged 方法</span><span class="sxs-lookup"><span data-stu-id="355be-126">ThreadNameChanged Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|<span data-ttu-id="355be-127">通知代码探查器线程的名称已更改。</span><span class="sxs-lookup"><span data-stu-id="355be-127">Notifies the code profiler that the name of a thread has changed.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="355be-128">备注</span><span class="sxs-lookup"><span data-stu-id="355be-128">Remarks</span></span>  
+ <span data-ttu-id="355be-129">CLR 中调用一个方法`ICorProfilerCallback`(或`ICorProfilerCallback2`) 通知探查器必须订阅该事件时探查器接口时发生。</span><span class="sxs-lookup"><span data-stu-id="355be-129">The CLR calls a method in the `ICorProfilerCallback` (or `ICorProfilerCallback2`) interface to notify the profiler when an event, to which the profiler had subscribed, occurs.</span></span> <span data-ttu-id="355be-130">这是通过该 CLR 代码探查器与进行通信的主回调接口。</span><span class="sxs-lookup"><span data-stu-id="355be-130">This is the primary callback interface through which the CLR communicates with the code profiler.</span></span>  
+  
+ <span data-ttu-id="355be-131">代码探查器必须实现的方法`ICorProfilerCallback`接口。</span><span class="sxs-lookup"><span data-stu-id="355be-131">A code profiler must implement the methods of the `ICorProfilerCallback` interface.</span></span> <span data-ttu-id="355be-132">对于.NET Framework 2.0 和更高版本，探查器还必须实现`ICorProfilerCallback2`方法。</span><span class="sxs-lookup"><span data-stu-id="355be-132">For the .NET Framework 2.0 and later versions, the profiler must also implement the `ICorProfilerCallback2` methods.</span></span> <span data-ttu-id="355be-133">每个方法实现必须返回一个 HRESULT，则为 S_OK 成功则 E_FAIL 失败的值。</span><span class="sxs-lookup"><span data-stu-id="355be-133">Each method implementation must return an HRESULT having a value of S_OK on success or E_FAIL on failure.</span></span> <span data-ttu-id="355be-134">目前，CLR 将忽略除每个回调返回的 HRESULT [icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)。</span><span class="sxs-lookup"><span data-stu-id="355be-134">Currently, the CLR ignores the HRESULT that is returned by each callback except [ICorProfilerCallback::ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).</span></span>  
+  
+ <span data-ttu-id="355be-135">代码探查器必须注册在 Microsoft Windows 注册表中，其实现的 COM 对象`ICorProfilerCallback`和`ICorProfilerCallback2`接口。</span><span class="sxs-lookup"><span data-stu-id="355be-135">A code profiler must register in the Microsoft Windows registry, its COM object that implements the `ICorProfilerCallback` and `ICorProfilerCallback2` interfaces.</span></span> <span data-ttu-id="355be-136">代码探查器订阅它想要通过调用接收通知的事件[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)。</span><span class="sxs-lookup"><span data-stu-id="355be-136">A code profiler subscribes to the events for which it wants to receive notification by calling [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md).</span></span> <span data-ttu-id="355be-137">这通常是在探查器的实现中的[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)。</span><span class="sxs-lookup"><span data-stu-id="355be-137">This is usually done in the profiler's implementation of [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md).</span></span> <span data-ttu-id="355be-138">探查器然后就能够从运行时接收通知，事件即将发生或正在执行的运行时进程中只出现时。</span><span class="sxs-lookup"><span data-stu-id="355be-138">The profiler is then able to receive notification from the runtime when an event is about to occur or has just occurred in an executing runtime process.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="355be-139">探查器注册的单个 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="355be-139">The profiler registers a single COM object.</span></span> <span data-ttu-id="355be-140">如果探查器面向.NET Framework 版本 1.0 或 1.1，该 COM 对象仅需要实现的方法`ICorProfilerCallback`。</span><span class="sxs-lookup"><span data-stu-id="355be-140">If the profiler is targeting .NET Framework version 1.0 or 1.1, that COM object need only implement the methods of `ICorProfilerCallback`.</span></span> <span data-ttu-id="355be-141">如果针对.NET Framework 2.0 版和更高版本，COM 对象还必须实现的方法`ICorProfilerCallback2`。</span><span class="sxs-lookup"><span data-stu-id="355be-141">If it is targeting .NET Framework version 2.0 and later, the COM object must also implement the methods of `ICorProfilerCallback2`.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="355be-142">要求</span><span class="sxs-lookup"><span data-stu-id="355be-142">Requirements</span></span>  
+ <span data-ttu-id="355be-143">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="355be-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="355be-144">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="355be-144">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="355be-145">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="355be-145">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="355be-146">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="355be-146">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="355be-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="355be-147">See Also</span></span>  
+ [<span data-ttu-id="355be-148">分析接口</span><span class="sxs-lookup"><span data-stu-id="355be-148">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="355be-149">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="355be-149">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="355be-150">ICorProfilerCallback3 接口</span><span class="sxs-lookup"><span data-stu-id="355be-150">ICorProfilerCallback3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
+ [<span data-ttu-id="355be-151">ICorProfilerCallback4 接口</span><span class="sxs-lookup"><span data-stu-id="355be-151">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

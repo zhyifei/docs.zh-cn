@@ -1,87 +1,68 @@
 ---
 title: "如何：在 Visual Basic 中向文件内写入文本"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, writing to
+- files [Visual Basic], writing to
 - text, writing to files
-- writing to files
+- writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cfdae490a7d78e44f230e22f8431d5ee91461c22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dc6f02d6092a30113b8cb973be225e140eca19ad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中向文件内写入文本
-可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文件写入文本。 如果指定的文件不存在，则会创建一个。  
+# <a name="how-to-write-text-to-files-in-visual-basic"></a><span data-ttu-id="d73cd-102">如何：在 Visual Basic 中向文件内写入文本</span><span class="sxs-lookup"><span data-stu-id="d73cd-102">How to: Write Text to Files in Visual Basic</span></span>
+<span data-ttu-id="d73cd-103">可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文件写入文本。</span><span class="sxs-lookup"><span data-stu-id="d73cd-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method can be used to write text to files.</span></span> <span data-ttu-id="d73cd-104">如果指定的文件不存在，则会创建一个。</span><span class="sxs-lookup"><span data-stu-id="d73cd-104">If the specified file does not exist, it is created.</span></span>  
   
-## <a name="procedure"></a>过程  
+## <a name="procedure"></a><span data-ttu-id="d73cd-105">过程</span><span class="sxs-lookup"><span data-stu-id="d73cd-105">Procedure</span></span>  
   
-#### <a name="to-write-text-to-a-file"></a>向文件写入文本  
+#### <a name="to-write-text-to-a-file"></a><span data-ttu-id="d73cd-106">向文件写入文本</span><span class="sxs-lookup"><span data-stu-id="d73cd-106">To write text to a file</span></span>  
   
--   可以使用 `WriteAllText` 方法向文件写入文本，并指定要写入的文件和文本。 此示例将行 `"This is new text."` 写入名为 `test.txt` 的文件，同时将文本追加到文件中的任何现有文本。  
+-   <span data-ttu-id="d73cd-107">可以使用 `WriteAllText` 方法向文件写入文本，并指定要写入的文件和文本。</span><span class="sxs-lookup"><span data-stu-id="d73cd-107">Use the `WriteAllText` method to write text to a file, specifying the file and text to be written.</span></span> <span data-ttu-id="d73cd-108">此示例将行 `"This is new text."` 写入名为 `test.txt` 的文件，同时将文本追加到文件中的任何现有文本。</span><span class="sxs-lookup"><span data-stu-id="d73cd-108">This example writes the line `"This is new text."` to the file named `test.txt`, appending the text to any existing text in the file.</span></span>  
   
      [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
-#### <a name="to-write-a-series-of-strings-to-a-file"></a>向文件写入一系列字符串  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a><span data-ttu-id="d73cd-109">向文件写入一系列字符串</span><span class="sxs-lookup"><span data-stu-id="d73cd-109">To write a series of strings to a file</span></span>  
   
--   通过字符串集合循环。 可以使用 `WriteAllText` 方法向文件写入文本，同时指定目标文件以及要添加的字符串，并将 `append` 设置为 `True`。  
+-   <span data-ttu-id="d73cd-110">通过字符串集合循环。</span><span class="sxs-lookup"><span data-stu-id="d73cd-110">Loop through the string collection.</span></span> <span data-ttu-id="d73cd-111">可以使用 `WriteAllText` 方法向文件写入文本，同时指定目标文件以及要添加的字符串，并将 `append` 设置为 `True`。</span><span class="sxs-lookup"><span data-stu-id="d73cd-111">Use the `WriteAllText` method to write text to a file, specifying the target file and string to be added and setting `append` to `True`.</span></span>  
   
-     此示例将 `Documents and Settings` 目录中的文件名写入 `FileList.txt`，并在每个文件之间插入回车符，以增强可读性。  
+     <span data-ttu-id="d73cd-112">此示例将 `Documents and Settings` 目录中的文件名写入 `FileList.txt`，并在每个文件之间插入回车符，以增强可读性。</span><span class="sxs-lookup"><span data-stu-id="d73cd-112">This example writes the names of the files in the `Documents and Settings` directory to `FileList.txt`, inserting a carriage return between each for better readability.</span></span>  
   
      [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
-## <a name="robust-programming"></a>可靠编程  
- 以下情况可能会导致异常：  
+## <a name="robust-programming"></a><span data-ttu-id="d73cd-113">可靠编程</span><span class="sxs-lookup"><span data-stu-id="d73cd-113">Robust Programming</span></span>  
+ <span data-ttu-id="d73cd-114">以下情况可能会导致异常：</span><span class="sxs-lookup"><span data-stu-id="d73cd-114">The following conditions may cause an exception:</span></span>  
   
--   路径由于以下原因之一无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
+-   <span data-ttu-id="d73cd-115">路径由于以下原因之一无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-115">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   <span data-ttu-id="d73cd-116">路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   `File` 指向不存在的路径（<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>）。  
+-   <span data-ttu-id="d73cd-117">`File` 指向不存在的路径（<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>）。</span><span class="sxs-lookup"><span data-stu-id="d73cd-117">`File` points to a path that does not exist (<xref:System.IO.FileNotFoundException> or <xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。  
+-   <span data-ttu-id="d73cd-118">文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-118">The file is in use by another process, or an I/O error occurs (<xref:System.IO.IOException>).</span></span>  
   
--   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+-   <span data-ttu-id="d73cd-119">路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-119">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
+-   <span data-ttu-id="d73cd-120">路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-120">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
+-   <span data-ttu-id="d73cd-121">该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-121">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   磁盘已满，且对 `WriteAllText` 的调用失败 (<xref:System.IO.IOException>)。  
+-   <span data-ttu-id="d73cd-122">磁盘已满，且对 `WriteAllText` 的调用失败 (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-122">The disk is full, and the call to `WriteAllText` fails (<xref:System.IO.IOException>).</span></span>  
   
- 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
+ <span data-ttu-id="d73cd-123">如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。</span><span class="sxs-lookup"><span data-stu-id="d73cd-123">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="d73cd-124">有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。</span><span class="sxs-lookup"><span data-stu-id="d73cd-124">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- [如何：读取文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
-
+## <a name="see-also"></a><span data-ttu-id="d73cd-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d73cd-125">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
+ [<span data-ttu-id="d73cd-126">如何：读取文本文件</span><span class="sxs-lookup"><span data-stu-id="d73cd-126">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

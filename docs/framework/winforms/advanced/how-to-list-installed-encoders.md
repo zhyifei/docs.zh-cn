@@ -1,42 +1,46 @@
 ---
-title: "如何：列出已安装的解码器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "图像编解码器, 列出"
-  - "图像编码器, 列出"
+title: "如何：列出已安装的解码器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image codecs [Windows Forms], listing
+- image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 70f913acb2620b5c01e1aec1f1eb98b041b82a59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：列出已安装的解码器
-可能需要列出计算机上可用的图像编码器，以确定应用程序是否可以保存某种特定的图像文件格式。  <xref:System.Drawing.Imaging.ImageCodecInfo> 类提供了 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 静态方法，以便您可以确定有哪些图像编码器可供使用。  <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 返回 <xref:System.Drawing.Imaging.ImageCodecInfo> 对象的数组。  
+# <a name="how-to-list-installed-encoders"></a><span data-ttu-id="ab530-102">如何：列出已安装的解码器</span><span class="sxs-lookup"><span data-stu-id="ab530-102">How to: List Installed Encoders</span></span>
+<span data-ttu-id="ab530-103">你可能想要列出可用的计算机上的图像编码器，以确定是否可以将你的应用程序保存到特定的图像文件格式。</span><span class="sxs-lookup"><span data-stu-id="ab530-103">You may want to list the image encoders available on a computer, to determine whether your application can save to a particular image file format.</span></span> <span data-ttu-id="ab530-104"><xref:System.Drawing.Imaging.ImageCodecInfo>类提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>静态方法，以便你能够确定哪些图像编码器可供使用。</span><span class="sxs-lookup"><span data-stu-id="ab530-104">The <xref:System.Drawing.Imaging.ImageCodecInfo> class provides the <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> static methods so that you can determine which image encoders are available.</span></span> <span data-ttu-id="ab530-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>返回的数组<xref:System.Drawing.Imaging.ImageCodecInfo>对象。</span><span class="sxs-lookup"><span data-stu-id="ab530-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> returns an array of <xref:System.Drawing.Imaging.ImageCodecInfo> objects.</span></span>  
   
-## 示例  
- 下面的代码示例输出已安装的编码器及其属性值的列表。  
+## <a name="example"></a><span data-ttu-id="ab530-106">示例</span><span class="sxs-lookup"><span data-stu-id="ab530-106">Example</span></span>  
+ <span data-ttu-id="ab530-107">下面的代码示例将输出的已安装的编码器列表和其属性值。</span><span class="sxs-lookup"><span data-stu-id="ab530-107">The following code example outputs the list of installed encoders and their property values.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#1)]
  [!code-vb[UsingImageEncodersDecoders#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#1)]  
   
-## 编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="ab530-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="ab530-108">Compiling the Code</span></span>  
+ <span data-ttu-id="ab530-109">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="ab530-109">This example requires:</span></span>  
   
--   Windows 窗体应用程序。  
+-   <span data-ttu-id="ab530-110">Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="ab530-110">A Windows Forms application.</span></span>  
   
--   <xref:System.Windows.Forms.PaintEventArgs>，它是 <xref:System.Windows.Forms.PaintEventHandler> 的一个参数。  
+-   <span data-ttu-id="ab530-111">A <xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="ab530-111">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 请参阅  
- [如何：列出已安装的解码器](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)   
- [在托管 GDI\+ 中使用图像编码器和解码器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="ab530-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ab530-112">See Also</span></span>  
+ [<span data-ttu-id="ab530-113">如何：列出已安装的解码器</span><span class="sxs-lookup"><span data-stu-id="ab530-113">How to: List Installed Decoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
+ [<span data-ttu-id="ab530-114">在托管 GDI+ 中使用图像编码器和解码器</span><span class="sxs-lookup"><span data-stu-id="ab530-114">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

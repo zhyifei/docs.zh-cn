@@ -1,42 +1,46 @@
 ---
-title: "利用证书身份验证的传输安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "利用证书身份验证的传输安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 利用证书身份验证的传输安全
-本主题探讨使用传输安全性时如何使用 X.509 证书进行服务器和客户端身份验证。有关 X.509 证书的更多信息，请参见 [X.509 公钥证书](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。证书必须由证书颁发机构（通常是第三方证书颁发机构）颁发。在 Windows Server 域中，可以使用 Active Directory 证书服务向域中的客户端计算机颁发证书。有关更多信息，请参见 [Windows 2008 R2 证书服务](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x804)。在此方案中，该服务承载在使用安全套接字层 \(SSL\) 配置的 Internet Information Services \(IIS\) 之下。该服务使用 SSL \(X.509\) 证书进行配置，以允许客户端验证服务器的身份。客户端也使用 X.509 证书进行配置，以允许服务验证客户端的身份。客户端必须信任服务器的证书，服务器也必须信任客户端的证书。服务和客户端如何验证彼此身份的实际机制不在本主题讨论范围之内。有关更多信息，请参见[维基百科上的“数字签名”](http://go.microsoft.com/fwlink/?LinkId=253157)。  
+# <a name="transport-security-with-certificate-authentication"></a><span data-ttu-id="a15b0-102">利用证书身份验证的传输安全</span><span class="sxs-lookup"><span data-stu-id="a15b0-102">Transport Security with Certificate Authentication</span></span>
+<span data-ttu-id="a15b0-103">本主题探讨使用传输安全性时如何使用 X.509 证书进行服务器和客户端身份验证。</span><span class="sxs-lookup"><span data-stu-id="a15b0-103">This topic discusses using X.509 certificates for server and client authentication when using transport security.</span></span> <span data-ttu-id="a15b0-104">有关 X.509 证书，请查看[X.509 公钥证书](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx)。</span><span class="sxs-lookup"><span data-stu-id="a15b0-104">For more information about X.509 certificates see [X.509 Public Key Certificates](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).</span></span> <span data-ttu-id="a15b0-105">必须由证书颁发机构，这通常是证书的第三方颁发者颁发证书。</span><span class="sxs-lookup"><span data-stu-id="a15b0-105">Certificates must be issued by a certification authority, which is often a third-party issuer of certificates.</span></span> <span data-ttu-id="a15b0-106">在 Windows Server 域中，可以使用 Active Directory 证书服务向域中的客户端计算机颁发证书。</span><span class="sxs-lookup"><span data-stu-id="a15b0-106">On a Windows Server domain, Active Directory Certificate Services can be used to issue certificates to client computers on the domain.</span></span> <span data-ttu-id="a15b0-107">有关详细信息请参阅[Windows 2008 R2 证书服务](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。</span><span class="sxs-lookup"><span data-stu-id="a15b0-107">For more information see [Windows 2008 R2 Certificate Services](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409).</span></span> <span data-ttu-id="a15b0-108">在此方案中，该服务承载在使用安全套接字层 (SSL) 配置的 Internet Information Services (IIS) 之下。</span><span class="sxs-lookup"><span data-stu-id="a15b0-108">In this scenario, the service is hosted under Internet Information Services (IIS) which is configured with Secure Sockets Layer (SSL).</span></span> <span data-ttu-id="a15b0-109">该服务使用 SSL (X.509) 证书进行配置，以允许客户端验证服务器的身份。</span><span class="sxs-lookup"><span data-stu-id="a15b0-109">The service is configured with an SSL (X.509) certificate to allow clients to verify the identity of the server.</span></span> <span data-ttu-id="a15b0-110">客户端也使用 X.509 证书进行配置，以允许服务验证客户端的身份。</span><span class="sxs-lookup"><span data-stu-id="a15b0-110">The client is also configured with an X.509 certificate that allows the service to verify the identity of the client.</span></span> <span data-ttu-id="a15b0-111">客户端必须信任服务器的证书，服务器也必须信任客户端的证书。</span><span class="sxs-lookup"><span data-stu-id="a15b0-111">The server’s certificate must be trusted by the client and the client’s certificate must be trusted by the server.</span></span> <span data-ttu-id="a15b0-112">服务和客户端如何验证彼此身份的实际机制不在本主题讨论范围之内。</span><span class="sxs-lookup"><span data-stu-id="a15b0-112">The actual mechanics of how the service and client verifies each other’s identity is beyond the scope of this topic.</span></span> <span data-ttu-id="a15b0-113">有关详细信息请参阅[Wikipedia 上的数字签名](http://go.microsoft.com/fwlink/?LinkId=253157)。</span><span class="sxs-lookup"><span data-stu-id="a15b0-113">For more information see [Digital Signature on Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).</span></span>  
   
- 该方案实现一个请求\/回复消息模式，如下图所示。  
+ <span data-ttu-id="a15b0-114">该方案实现一个请求/回复消息模式，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="a15b0-114">This scenario implements a request/reply message pattern as illustrated by the following diagram.</span></span>  
   
- ![使用证书保护传输安全](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968\-899f\-4538\-a9e8\-0eaa872a291c")  
+ <span data-ttu-id="a15b0-115">![使用证书确保传输安全](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span><span class="sxs-lookup"><span data-stu-id="a15b0-115">![Secure transfer using certificates](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]将证书用于服务的更多信息，请参见[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。下表描述了该方案的各项特征。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a15b0-116">使用证书与服务，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。</span><span class="sxs-lookup"><span data-stu-id="a15b0-116"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span> <span data-ttu-id="a15b0-117">下表描述了该方案的各项特征。</span><span class="sxs-lookup"><span data-stu-id="a15b0-117">The following table describes the various characteristics of the scenario.</span></span>  
   
-|特征|说明|  
-|--------|--------|  
-|安全模式|传输|  
-|互操作性|与现有 Web 服务客户端和服务。|  
-|身份验证（服务器）<br /><br /> 身份验证（客户端）|是（使用 SSL 证书）<br /><br /> 是（使用 X.509 证书）|  
-|数据完整性|是|  
-|数据保密性|是|  
-|传输|HTTPS|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="a15b0-118">特征</span><span class="sxs-lookup"><span data-stu-id="a15b0-118">Characteristic</span></span>|<span data-ttu-id="a15b0-119">描述</span><span class="sxs-lookup"><span data-stu-id="a15b0-119">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="a15b0-120">安全模式</span><span class="sxs-lookup"><span data-stu-id="a15b0-120">Security Mode</span></span>|<span data-ttu-id="a15b0-121">传输</span><span class="sxs-lookup"><span data-stu-id="a15b0-121">Transport</span></span>|  
+|<span data-ttu-id="a15b0-122">互操作性</span><span class="sxs-lookup"><span data-stu-id="a15b0-122">Interoperability</span></span>|<span data-ttu-id="a15b0-123">与现有 Web 服务客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="a15b0-123">With existing Web service clients and services.</span></span>|  
+|<span data-ttu-id="a15b0-124">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="a15b0-124">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="a15b0-125">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="a15b0-125">Authentication (Client)</span></span>|<span data-ttu-id="a15b0-126">是（使用 SSL 证书）</span><span class="sxs-lookup"><span data-stu-id="a15b0-126">Yes (using an SSL certificate)</span></span><br /><br /> <span data-ttu-id="a15b0-127">是（使用 X.509 证书）</span><span class="sxs-lookup"><span data-stu-id="a15b0-127">Yes (using an X.509 certificate)</span></span>|  
+|<span data-ttu-id="a15b0-128">数据完整性</span><span class="sxs-lookup"><span data-stu-id="a15b0-128">Data Integrity</span></span>|<span data-ttu-id="a15b0-129">是</span><span class="sxs-lookup"><span data-stu-id="a15b0-129">Yes</span></span>|  
+|<span data-ttu-id="a15b0-130">数据保密性</span><span class="sxs-lookup"><span data-stu-id="a15b0-130">Data Confidentiality</span></span>|<span data-ttu-id="a15b0-131">是</span><span class="sxs-lookup"><span data-stu-id="a15b0-131">Yes</span></span>|  
+|<span data-ttu-id="a15b0-132">传输</span><span class="sxs-lookup"><span data-stu-id="a15b0-132">Transport</span></span>|<span data-ttu-id="a15b0-133">HTTPS</span><span class="sxs-lookup"><span data-stu-id="a15b0-133">HTTPS</span></span>|  
+|<span data-ttu-id="a15b0-134">绑定</span><span class="sxs-lookup"><span data-stu-id="a15b0-134">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## 配置服务  
- 由于该方案中的服务承载于 IIS 之下，因此它是使用 web.config 文件配置的。以下 web.config 揭示了如何配置  <xref:System.ServiceModel.WSHttpBinding> 以使用传输安全性和 X.509 客户端凭据。  
+## <a name="configure-the-service"></a><span data-ttu-id="a15b0-135">配置服务</span><span class="sxs-lookup"><span data-stu-id="a15b0-135">Configure the Service</span></span>  
+ <span data-ttu-id="a15b0-136">由于该方案中的服务承载于 IIS 之下，因此它是使用 web.config 文件配置的。</span><span class="sxs-lookup"><span data-stu-id="a15b0-136">Since the service in this scenario is hosted under IIS, it is configured with a web.config file.</span></span> <span data-ttu-id="a15b0-137">以下 web.config 揭示了如何配置  <xref:System.ServiceModel.WSHttpBinding> 以使用传输安全性和 X.509 客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="a15b0-137">The following web.config shows how to configure the <xref:System.ServiceModel.WSHttpBinding> to use transport security and X.509 client credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -64,11 +68,10 @@ caps.handback.revision: 20
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 配置客户端  
- 可以在代码中或在 app.config 文件中配置客户端。下例揭示了如何在代码中配置客户端。  
+## <a name="configure-the-client"></a><span data-ttu-id="a15b0-138">配置客户端</span><span class="sxs-lookup"><span data-stu-id="a15b0-138">Configure the Client</span></span>  
+ <span data-ttu-id="a15b0-139">可以在代码中或在 app.config 文件中配置客户端。</span><span class="sxs-lookup"><span data-stu-id="a15b0-139">The client can be configured in code or in an app.config file.</span></span> <span data-ttu-id="a15b0-140">下例揭示了如何在代码中配置客户端。</span><span class="sxs-lookup"><span data-stu-id="a15b0-140">The following example shows how to configure the client in code.</span></span>  
   
 ```vb  
 // Create the binding.  
@@ -100,10 +103,9 @@ cc.ClientCredentials.ClientCertificate.SetCertificate(
 Console.WriteLine(cc.Add(100, 1111));  
 //...  
 cc.Close();  
-  
 ```  
   
- 也可以在 app.config 文件中配置客户端，如下例所示：  
+ <span data-ttu-id="a15b0-141">也可以在 app.config 文件中配置客户端，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="a15b0-141">Alternatively you can configure the client in an App.config file as shown in the following example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -142,9 +144,8 @@ cc.Close();
   </system.serviceModel>  
   
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
-  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="a15b0-142">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a15b0-142">See Also</span></span>  
+ [<span data-ttu-id="a15b0-143">安全性概述</span><span class="sxs-lookup"><span data-stu-id="a15b0-143">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="a15b0-144">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="a15b0-144">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
