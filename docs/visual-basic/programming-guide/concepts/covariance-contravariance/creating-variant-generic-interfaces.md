@@ -1,46 +1,38 @@
 ---
-title: "创建变体泛型接口 (Visual Basic 中) |Microsoft 文档"
+title: "创建变体泛型接口 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 324e2a906e84950aa9019bbf68a524458492646e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>创建变体泛型接口 (Visual Basic)
-您可以声明为协变的接口中的泛型类型参数或逆变。 *协变*允许接口方法更派生了比定义的泛型类型参数的返回类型。 *逆变*允许接口方法具有比指定的泛型参数的派生程度更小的参数类型。 泛型接口具有协变或逆变的泛型类型参数称为*变体*。  
+# <a name="creating-variant-generic-interfaces-visual-basic"></a><span data-ttu-id="e7b84-102">创建变体泛型接口 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7b84-102">Creating Variant Generic Interfaces (Visual Basic)</span></span>
+<span data-ttu-id="e7b84-103">接口中的泛型类型参数可以声明为协变或逆变。</span><span class="sxs-lookup"><span data-stu-id="e7b84-103">You can declare generic type parameters in interfaces as covariant or contravariant.</span></span> <span data-ttu-id="e7b84-104">协变允许接口方法具有与泛型类型参数定义的返回类型相比，派生程度更大的返回类型。</span><span class="sxs-lookup"><span data-stu-id="e7b84-104">*Covariance* allows interface methods to have more derived return types than that defined by the generic type parameters.</span></span> <span data-ttu-id="e7b84-105">逆变允许接口方法具有与泛型形参指定的实参类型相比，派生程度更小的实参类型。</span><span class="sxs-lookup"><span data-stu-id="e7b84-105">*Contravariance* allows interface methods to have argument types that are less derived than that specified by the generic parameters.</span></span> <span data-ttu-id="e7b84-106">具有协变或逆变泛型类型参数的泛型接口称为“变体”。</span><span class="sxs-lookup"><span data-stu-id="e7b84-106">A generic interface that has covariant or contravariant generic type parameters is called *variant*.</span></span>  
   
 > [!NOTE]
->  .NET framework 4 中引入了多个现有的泛型接口的变体支持。 .NET Framework 中的变体接口的列表，请参阅[泛型接口 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+>  <span data-ttu-id="e7b84-107">.NET Framework 4 引入了对多个现有泛型接口的变体支持。</span><span class="sxs-lookup"><span data-stu-id="e7b84-107">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="e7b84-108">.NET Framework 中的变体接口的列表，请参阅[泛型接口 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="e7b84-108">For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
   
-## <a name="declaring-variant-generic-interfaces"></a>声明的变体泛型接口  
- 你可以使用声明变体泛型接口`in`和`out`对于泛型类型参数的关键字。  
+## <a name="declaring-variant-generic-interfaces"></a><span data-ttu-id="e7b84-109">声明变体泛型接口</span><span class="sxs-lookup"><span data-stu-id="e7b84-109">Declaring Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="e7b84-110">可通过对泛型类型参数使用 `in` 和 `out` 关键字来声明变体泛型接口。</span><span class="sxs-lookup"><span data-stu-id="e7b84-110">You can declare variant generic interfaces by using the `in` and `out` keywords for generic type parameters.</span></span>  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的参数不能为 variant 类型的值。 值类型也不支持差异。  
+>  <span data-ttu-id="e7b84-111">`ByRef`在 Visual Basic 中的参数不能为变体。</span><span class="sxs-lookup"><span data-stu-id="e7b84-111">`ByRef` parameters in Visual Basic cannot be variant.</span></span> <span data-ttu-id="e7b84-112">值类型也不支持变体。</span><span class="sxs-lookup"><span data-stu-id="e7b84-112">Value types also do not support variance.</span></span>  
   
- 可以将泛型类型参数协变声明使用`out`关键字。 协变类型必须满足以下条件︰  
+ <span data-ttu-id="e7b84-113">可以使用 `out` 关键字将泛型类型参数声明为协变。</span><span class="sxs-lookup"><span data-stu-id="e7b84-113">You can declare a generic type parameter covariant by using the `out` keyword.</span></span> <span data-ttu-id="e7b84-114">协变类型必须满足以下条件：</span><span class="sxs-lookup"><span data-stu-id="e7b84-114">The covariant type must satisfy the following conditions:</span></span>  
   
--   类型是只用作接口方法的返回类型，不用作方法参数的类型。 在下面的示例中，在其中阐释了这类型`R`声明为协变。  
+-   <span data-ttu-id="e7b84-115">类型仅用作接口方法的返回类型，不用作方法参数的类型。</span><span class="sxs-lookup"><span data-stu-id="e7b84-115">The type is used only as a return type of interface methods and not used as a type of method arguments.</span></span> <span data-ttu-id="e7b84-116">下例演示了此要求，其中类型 `R` 为声明的协变。</span><span class="sxs-lookup"><span data-stu-id="e7b84-116">This is illustrated in the following example, in which the type `R` is declared covariant.</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -50,7 +42,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
-     此规则有一个例外。 如果您具有作为方法参数的逆变泛型委托，可以为委托作为泛型类型参数使用类型。 阐释了这一点由类型`R`在下面的示例。 有关详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[对 Func 和 Action 泛型委托 (Visual Basic 中) 的使用方差](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+     <span data-ttu-id="e7b84-117">此规则有一个例外。</span><span class="sxs-lookup"><span data-stu-id="e7b84-117">There is one exception to this rule.</span></span> <span data-ttu-id="e7b84-118">如果具有用作方法参数的逆变泛型委托，则可将类型用作该委托的泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="e7b84-118">If you have a contravariant generic delegate as a method parameter, you can use the type as a generic type parameter for the delegate.</span></span> <span data-ttu-id="e7b84-119">下例中的类型 `R` 演示了此情形。</span><span class="sxs-lookup"><span data-stu-id="e7b84-119">This is illustrated by the type `R` in the following example.</span></span> <span data-ttu-id="e7b84-120">有关详细信息，请参阅[委托 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[使用对 Func 和 Action 泛型委托 (Visual Basic 中) 的方差](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="e7b84-120">For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -58,7 +50,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
--   类型不用作接口方法的泛型约束。 下面的代码所示。  
+-   <span data-ttu-id="e7b84-121">类型不用作接口方法的泛型约束。</span><span class="sxs-lookup"><span data-stu-id="e7b84-121">The type is not used as a generic constraint for the interface methods.</span></span> <span data-ttu-id="e7b84-122">下面的代码阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="e7b84-122">This is illustrated in the following code.</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -69,7 +61,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
- 你可以使用声明为泛型类型参数逆变`in`关键字。 可以使用逆变类型，只能用作方法参数的类型，不能用作接口方法的返回类型。 逆变类型还可用于泛型约束。 下面的代码演示如何声明逆变接口和泛型约束用于其方法之一。  
+ <span data-ttu-id="e7b84-123">可以使用 `in` 关键字将泛型类型参数声明为逆变。</span><span class="sxs-lookup"><span data-stu-id="e7b84-123">You can declare a generic type parameter contravariant by using the `in` keyword.</span></span> <span data-ttu-id="e7b84-124">逆变类型只能用作方法参数的类型，不能用作接口方法的返回类型。</span><span class="sxs-lookup"><span data-stu-id="e7b84-124">The contravariant type can be used only as a type of method arguments and not as a return type of interface methods.</span></span> <span data-ttu-id="e7b84-125">逆变类型还可用于泛型约束。</span><span class="sxs-lookup"><span data-stu-id="e7b84-125">The contravariant type can also be used for generic constraints.</span></span> <span data-ttu-id="e7b84-126">以下代码演示如何声明逆变接口，以及如何将泛型约束用于其方法之一。</span><span class="sxs-lookup"><span data-stu-id="e7b84-126">The following code shows how to declare a contravariant interface and use a generic constraint for one of its methods.</span></span>  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -80,7 +72,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- 它还有可能以中相同的接口，但对于不同的类型参数支持协变和逆变，如下面的代码示例中所示。  
+ <span data-ttu-id="e7b84-127">此外，还可以在同一接口中同时支持协变和逆变，但需应用于不同的类型参数，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="e7b84-127">It is also possible to support both covariance and contravariance in the same interface, but for different type parameters, as shown in the following code example.</span></span>  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -90,7 +82,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- 在 Visual Basic 中不能声明变体接口中的事件，而不指定委托类型。 此外，不能包含嵌套变体接口，类、 枚举或结构，但它可以有嵌套接口。 下面的代码所示。  
+ <span data-ttu-id="e7b84-128">在 Visual Basic 中，不能声明变体接口中的事件，而不指定委托类型。</span><span class="sxs-lookup"><span data-stu-id="e7b84-128">In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type.</span></span> <span data-ttu-id="e7b84-129">此外，变体接口不能有嵌套类、 枚举或结构，但它可以有嵌套接口。</span><span class="sxs-lookup"><span data-stu-id="e7b84-129">Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces.</span></span> <span data-ttu-id="e7b84-130">下面的代码阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="e7b84-130">This is illustrated in the following code.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -113,8 +105,8 @@ Interface ICovariant(Of Out R)
 End Interface  
 ```  
   
-## <a name="implementing-variant-generic-interfaces"></a>实现的变体泛型接口  
- 通过使用相同的语法，用于固定接口，可以在类中实现变体泛型接口。 下面的代码示例演示如何实现泛型类中的协变的接口。  
+## <a name="implementing-variant-generic-interfaces"></a><span data-ttu-id="e7b84-131">实现变体泛型接口</span><span class="sxs-lookup"><span data-stu-id="e7b84-131">Implementing Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="e7b84-132">在类中实现变体泛型接口时，所用语法和用于固定接口的语法相同。</span><span class="sxs-lookup"><span data-stu-id="e7b84-132">You implement variant generic interfaces in classes by using the same syntax that is used for invariant interfaces.</span></span> <span data-ttu-id="e7b84-133">以下代码示例演示如何在泛型类中实现协变接口。</span><span class="sxs-lookup"><span data-stu-id="e7b84-133">The following code example shows how to implement a covariant interface in a generic class.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -130,7 +122,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- 实现变体接口的类是不变。 例如，考虑下面的代码。  
+ <span data-ttu-id="e7b84-134">实现变体接口的类是固定类。</span><span class="sxs-lookup"><span data-stu-id="e7b84-134">Classes that implement variant interfaces are invariant.</span></span> <span data-ttu-id="e7b84-135">例如，考虑下面的代码。</span><span class="sxs-lookup"><span data-stu-id="e7b84-135">For example, consider the following code.</span></span>  
   
 ```vb  
  The interface is covariant.  
@@ -146,8 +138,8 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button  
 ```  
   
-## <a name="extending-variant-generic-interfaces"></a>扩展的变体泛型接口  
- 在扩展变体泛型接口时，您必须使用`in`和`out`关键字来显式指定派生的接口是否支持变体。 编译器无法推断从正在扩展的接口的方差。 例如，考虑下面的接口。  
+## <a name="extending-variant-generic-interfaces"></a><span data-ttu-id="e7b84-136">扩展变体泛型接口</span><span class="sxs-lookup"><span data-stu-id="e7b84-136">Extending Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="e7b84-137">扩展变体泛型接口时，必须使用 `in` 和 `out` 关键字来显式指定派生接口是否支持变体。</span><span class="sxs-lookup"><span data-stu-id="e7b84-137">When you extend a variant generic interface, you have to use the `in` and `out` keywords to explicitly specify whether the derived interface supports variance.</span></span> <span data-ttu-id="e7b84-138">编译器不会根据正在扩展的接口来推断变体。</span><span class="sxs-lookup"><span data-stu-id="e7b84-138">The compiler does not infer the variance from the interface that is being extended.</span></span> <span data-ttu-id="e7b84-139">例如，考虑以下接口。</span><span class="sxs-lookup"><span data-stu-id="e7b84-139">For example, consider the following interfaces.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -162,9 +154,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- 在`Invariant(Of T)`接口的泛型类型参数`T`固定不变，而在`IExtCovariant (Of Out T)`该类型参数是协变的虽然这两个界面扩展相同的接口。 相同的规则应用于逆变泛型类型参数。  
+ <span data-ttu-id="e7b84-140">在`Invariant(Of T)`接口，泛型类型参数`T`不变，而在`IExtCovariant (Of Out T)`该类型参数是协变，尽管这两个接口扩展相同的接口。</span><span class="sxs-lookup"><span data-stu-id="e7b84-140">In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface.</span></span> <span data-ttu-id="e7b84-141">此规则也适用于逆变泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="e7b84-141">The same rule is applied to contravariant generic type parameters.</span></span>  
   
- 您可以创建可同时扩展接口的泛型类型参数的其中一个接口`T`是协变和其中如果处于扩展是逆变的接口的接口的泛型类型参数`T`是固定不变。 下面的代码示例所示。  
+ <span data-ttu-id="e7b84-142">无论泛型类型参数 `T` 在接口中是协变还是逆变，都可以创建一个接口来扩展这两类接口，只要在扩展接口中，该 `T` 泛型类型参数为固定参数。</span><span class="sxs-lookup"><span data-stu-id="e7b84-142">You can create an interface that extends both the interface where the generic type parameter `T` is covariant and the interface where it is contravariant if in the extending interface the generic type parameter `T` is invariant.</span></span> <span data-ttu-id="e7b84-143">以下代码示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="e7b84-143">This is illustrated in the following code example.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -178,7 +170,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- 但是，如果泛型类型参数`T`是声明为协变在一个界面，您不能将其声明逆变中扩展接口，反之亦然。 下面的代码示例所示。  
+ <span data-ttu-id="e7b84-144">但是，如果泛型类型参数 `T` 在一个接口中声明为协变，则无法在扩展接口中将其声明为逆变，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="e7b84-144">However, if a generic type parameter `T` is declared covariant in one interface, you cannot declare it contravariant in the extending interface, or vice versa.</span></span> <span data-ttu-id="e7b84-145">以下代码示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="e7b84-145">This is illustrated in the following code example.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -190,13 +182,13 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>避免不明确性  
- 当您实现变体泛型接口时，方差有时可能导致不明确。 应避免这种情况。  
+### <a name="avoiding-ambiguity"></a><span data-ttu-id="e7b84-146">避免多义性</span><span class="sxs-lookup"><span data-stu-id="e7b84-146">Avoiding Ambiguity</span></span>  
+ <span data-ttu-id="e7b84-147">实现变体泛型接口时，变体有时可能会导致多义性。</span><span class="sxs-lookup"><span data-stu-id="e7b84-147">When you implement variant generic interfaces, variance can sometimes lead to ambiguity.</span></span> <span data-ttu-id="e7b84-148">应避免这种情况。</span><span class="sxs-lookup"><span data-stu-id="e7b84-148">This should be avoided.</span></span>  
   
- 例如，如果在一个类显式实现相同的变体泛型接口，使用不同的泛型类型参数，它可以创建二义性。 在这种情况下，编译器不会产生一个错误，但未指定将在运行时选择的接口的实现。 这可能导致您的代码中出现细微错误。 请考虑下面的代码示例。  
+ <span data-ttu-id="e7b84-149">例如，如果在一个类中使用不同的泛型类型参数来显式实现同一变体泛型接口，便会产生多义性。</span><span class="sxs-lookup"><span data-stu-id="e7b84-149">For example, if you explicitly implement the same variant generic interface with different generic type parameters in one class, it can create ambiguity.</span></span> <span data-ttu-id="e7b84-150">在这种情况下，编译器不会产生错误，但未指定将在运行时选择哪个接口实现。</span><span class="sxs-lookup"><span data-stu-id="e7b84-150">The compiler does not produce an error in this case, but it is not specified which interface implementation will be chosen at runtime.</span></span> <span data-ttu-id="e7b84-151">这可能导致代码中出现微妙的 bug。</span><span class="sxs-lookup"><span data-stu-id="e7b84-151">This could lead to subtle bugs in your code.</span></span> <span data-ttu-id="e7b84-152">请考虑以下代码示例。</span><span class="sxs-lookup"><span data-stu-id="e7b84-152">Consider the following code example.</span></span>  
   
 > [!NOTE]
->  与`Option Strict Off`，Visual Basic 会生成编译器警告，当不明确的接口的实现。 与`Option Strict On`，Visual Basic 生成一个编译器错误。  
+>  <span data-ttu-id="e7b84-153">与`Option Strict Off`，Visual Basic 会生成编译器警告，当存在是不明确的接口的实现。</span><span class="sxs-lookup"><span data-stu-id="e7b84-153">With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation.</span></span> <span data-ttu-id="e7b84-154">与`Option Strict On`，Visual Basic 生成一个编译器错误。</span><span class="sxs-lookup"><span data-stu-id="e7b84-154">With `Option Strict On`, Visual Basic generates a compiler error.</span></span>  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -240,8 +232,8 @@ Sub Main()
 End Sub  
 ```  
   
- 在此示例中，它是未指定如何`pets.GetEnumerator`方法选择之间`Cat`和`Dog`。 在代码中，这可能导致问题。  
+ <span data-ttu-id="e7b84-155">在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。</span><span class="sxs-lookup"><span data-stu-id="e7b84-155">In this example, it is unspecified how the `pets.GetEnumerator` method chooses between `Cat` and `Dog`.</span></span> <span data-ttu-id="e7b84-156">这可能导致代码中出现问题。</span><span class="sxs-lookup"><span data-stu-id="e7b84-156">This could cause problems in your code.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [泛型接口 (Visual Basic 中) 中的变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [对 Func 和 Action 泛型委托 (Visual Basic 中) 中使用变体](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="e7b84-157">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e7b84-157">See Also</span></span>  
+ [<span data-ttu-id="e7b84-158">泛型接口中的变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7b84-158">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [<span data-ttu-id="e7b84-159">对 Func 和 Action 泛型委托使用变体 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7b84-159">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

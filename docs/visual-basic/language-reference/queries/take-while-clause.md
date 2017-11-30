@@ -1,59 +1,56 @@
 ---
-title: "Take While 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryTakeWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "查询 [Visual Basic], Take While"
-  - "Take While 子句"
-  - "Take While 语句"
+title: "Take While 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryTakeWhile
+helpviewer_keywords:
+- queries [Visual Basic], Take While
+- Take While clause [Visual Basic]
+- Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c8add6c55bb9353bac3489e68f497cb32785aad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Take While 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-只要指定的条件为 `true`，就包含集合中相应的元素，并跳过剩余的元素。  
+# <a name="take-while-clause-visual-basic"></a><span data-ttu-id="97b36-102">Take While 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97b36-102">Take While Clause (Visual Basic)</span></span>
+<span data-ttu-id="97b36-103">包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。</span><span class="sxs-lookup"><span data-stu-id="97b36-103">Includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="97b36-104">语法</span><span class="sxs-lookup"><span data-stu-id="97b36-104">Syntax</span></span>  
   
 ```  
 Take While expression  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="97b36-105">部件</span><span class="sxs-lookup"><span data-stu-id="97b36-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`expression`|必选。  表示元素测试条件的表达式。  该表达式必须返回 `Boolean` 值或功能上等效的值，例如计算结果为 `Boolean` 的 `Integer`。|  
+|<span data-ttu-id="97b36-106">术语</span><span class="sxs-lookup"><span data-stu-id="97b36-106">Term</span></span>|<span data-ttu-id="97b36-107">定义</span><span class="sxs-lookup"><span data-stu-id="97b36-107">Definition</span></span>|  
+|---|---|  
+|`expression`|<span data-ttu-id="97b36-108">必需。</span><span class="sxs-lookup"><span data-stu-id="97b36-108">Required.</span></span> <span data-ttu-id="97b36-109">一个表示要测试的元素的条件的表达式。</span><span class="sxs-lookup"><span data-stu-id="97b36-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="97b36-110">该表达式必须返回`Boolean`值或等效的功能，如`Integer`作为计算`Boolean`。</span><span class="sxs-lookup"><span data-stu-id="97b36-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
   
-## 备注  
- `Take While` 子句从查询结果的开头包含元素，直到提供的 `expression` 返回 `false` 为止。  在 `expression` 返回 `false` 后，查询会跳过所有剩余元素。  对于剩余结果，将忽略 `expression`。  
+## <a name="remarks"></a><span data-ttu-id="97b36-111">备注</span><span class="sxs-lookup"><span data-stu-id="97b36-111">Remarks</span></span>  
+ <span data-ttu-id="97b36-112">`Take While`子句之前提供包括从查询结果的开始元素`expression`返回`false`。</span><span class="sxs-lookup"><span data-stu-id="97b36-112">The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="97b36-113">后`expression`返回`false`，查询将跳过所有剩余元素。</span><span class="sxs-lookup"><span data-stu-id="97b36-113">After the `expression` returns `false`, the query will bypass all remaining elements.</span></span> <span data-ttu-id="97b36-114">`expression`对于剩余的结果，将忽略。</span><span class="sxs-lookup"><span data-stu-id="97b36-114">The `expression` is ignored for the remaining results.</span></span>  
   
- `Take While` 子句与 `Where` 子句的不同之处在于，`Where` 子句可以用于包含查询中所有满足特定条件的元素。  `Take While` 子句仅包含第一次不满足条件之前的元素。  在处理经过排序的查询结果时，`Take While` 子句最有用。  
+ <span data-ttu-id="97b36-115">`Take While`子句不同于`Where`中的子句`Where`子句可用来进行包括从查询满足特定条件的所有元素。</span><span class="sxs-lookup"><span data-stu-id="97b36-115">The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition.</span></span> <span data-ttu-id="97b36-116">`Take While`子句之前未满足的条件的第一个时间仅包括元素。</span><span class="sxs-lookup"><span data-stu-id="97b36-116">The `Take While` clause includes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="97b36-117">`Take While`子句在你正在使用排序的查询结果时最有用。</span><span class="sxs-lookup"><span data-stu-id="97b36-117">The `Take While` clause is most useful when you are working with an ordered query result.</span></span>  
   
-## 示例  
- 下面的代码示例使用 `Take While` 子句检索结果，直到找到第一个没有任何订单的客户为止。  
+## <a name="example"></a><span data-ttu-id="97b36-118">示例</span><span class="sxs-lookup"><span data-stu-id="97b36-118">Example</span></span>  
+ <span data-ttu-id="97b36-119">下面的代码示例使用`Take While`子句来检索结果，直到找到第一个客户没有任何订单。</span><span class="sxs-lookup"><span data-stu-id="97b36-119">The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)   
- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="97b36-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="97b36-120">See Also</span></span>  
+ [<span data-ttu-id="97b36-121">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="97b36-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="97b36-122">查询</span><span class="sxs-lookup"><span data-stu-id="97b36-122">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="97b36-123">Select 子句</span><span class="sxs-lookup"><span data-stu-id="97b36-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="97b36-124">From 子句</span><span class="sxs-lookup"><span data-stu-id="97b36-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="97b36-125">Take 子句</span><span class="sxs-lookup"><span data-stu-id="97b36-125">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [<span data-ttu-id="97b36-126">Skip While 子句</span><span class="sxs-lookup"><span data-stu-id="97b36-126">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [<span data-ttu-id="97b36-127">Where 子句</span><span class="sxs-lookup"><span data-stu-id="97b36-127">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

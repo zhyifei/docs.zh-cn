@@ -1,79 +1,82 @@
 ---
-title: "x:Name Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Name"
-  - "xName"
-  - "Name"
-helpviewer_keywords: 
-  - "x:Name attribute [XAML Services]"
-  - "XAML [XAML Services], x:Name attribute"
-  - "Name attribute in XAML [XAML Services]"
+title: "x:Name 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Name
+- xName
+- Name
+helpviewer_keywords:
+- x:Name attribute [XAML Services]
+- XAML [XAML Services], x:Name attribute
+- Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Name Directive
-唯一标识 XAML 名称范围中的 XAML 定义元素。  XAML 名称范围及其唯一性模型可应用于实例化的对象，当框架提供 API 或实现在运行时访问 XAML 创建的对象图的行为。  
+# <a name="xname-directive"></a><span data-ttu-id="255c4-102">x:Name 指令</span><span class="sxs-lookup"><span data-stu-id="255c4-102">x:Name Directive</span></span>
+<span data-ttu-id="255c4-103">唯一标识 XAML 定义 XAML 名称范围中的元素。</span><span class="sxs-lookup"><span data-stu-id="255c4-103">Uniquely identifies XAML-defined elements in a XAML namescope.</span></span> <span data-ttu-id="255c4-104">XAML 名称范围和其唯一性模型可以应用于实例化的对象，框架提供的 Api 或实现在运行时访问 XAML 创建的对象图的行为。</span><span class="sxs-lookup"><span data-stu-id="255c4-104">XAML namescopes and their uniqueness models can be applied to the instantiated objects, when frameworks provide APIs or implement behaviors that access the XAML-created object graph at run time.</span></span>  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="255c4-105">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="255c4-105">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object x:Name="XAMLNameValue".../>  
 ```  
-<object x:Name="XAMLNameValue".../>  
-```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="255c4-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="255c4-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`XAMLNameValue`|遵守 [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)限制的字符串。|  
+|`XAMLNameValue`|<span data-ttu-id="255c4-107">符合的限制的字符串[XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)。</span><span class="sxs-lookup"><span data-stu-id="255c4-107">A string that conforms to the restrictions of the [XamlName Grammar](../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span>|  
   
-## 备注  
- 一旦将 `x:Name` 应用于框架的支持编程模型，该名称就会与由构造函数返回的用于保存对象引用或实例的变量等效。  
+## <a name="remarks"></a><span data-ttu-id="255c4-108">备注</span><span class="sxs-lookup"><span data-stu-id="255c4-108">Remarks</span></span>  
+ <span data-ttu-id="255c4-109">后`x:Name`应用于一个框架的支持的编程模型中，名称为等效于用于保存对象引用或实例返回由构造函数的变量。</span><span class="sxs-lookup"><span data-stu-id="255c4-109">After `x:Name` is applied to a framework's backing programming model, the name is equivalent to the variable that holds an object reference or an instance as returned by a constructor.</span></span>  
   
- `x:Name` 指令用法的值必须在 XAML 名称范围内唯一。  默认情况下，在 .NET Framework XAML Services API 使用主 XAML 名称范围时，会在单个 XAML 生产的 XAML 根元素中定义它，并包括该 XAML 生产中包含的元素。  框架可定义单个 XAML 生产中可能发生的其他离散 XAML 名称范围以解决特定方案。  例如，在 WPF 中，由任意模板定义和创建的新 XAML 名称范围也在该 XAML 生产上定义。  有关 XAML 名称范围（针对 WPF 编写，但与 XAML 名称范围概念相关）的更多信息，请参见 [WPF XAML 名称范围](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ <span data-ttu-id="255c4-110">值`x:Name`必须是唯一 XAML 名称范围内的指令的使用情况。</span><span class="sxs-lookup"><span data-stu-id="255c4-110">The value of an `x:Name` directive usage must be unique within a XAML namescope.</span></span> <span data-ttu-id="255c4-111">默认情况下时使用的.NET Framework XAML 服务 API，主 XAML 名称范围在 XAML 根元素的单个 XAML 生产型的定义中，并包含在该 XAML 生产环境中包含的元素。</span><span class="sxs-lookup"><span data-stu-id="255c4-111">By default when used by .NET Framework XAML Services API, the primary XAML namescope is defined at the XAML root element of a single XAML production, and encompasses the elements that are contained in that XAML production.</span></span> <span data-ttu-id="255c4-112">由框架来实现特定方案，可以定义其他离散 XAML 名称范围中单个 XAML 生成可能发生的。</span><span class="sxs-lookup"><span data-stu-id="255c4-112">Additional discrete XAML namescopes that might occur within a single XAML production can be defined by frameworks to address specific scenarios.</span></span> <span data-ttu-id="255c4-113">例如，在 WPF 中，新 XAML 名称范围定义并在该 XAML 生产也定义任何模板创建的。</span><span class="sxs-lookup"><span data-stu-id="255c4-113">For example, in WPF, new XAML namescopes are defined and created by any template that is also defined on that XAML production.</span></span> <span data-ttu-id="255c4-114">有关 XAML 名称范围 （但适用于很多 XAML 名称范围概念编写为 WPF） 的详细信息，请参阅[WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。</span><span class="sxs-lookup"><span data-stu-id="255c4-114">For more information about XAML namescopes (written for WPF but relevant for many XAML namescope concepts), see [WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).</span></span>  
   
- 通常情况下 `x:Name` 不应该应用于也使用 `x:Key` 的情况。  特定现有框架的 XAML 实现引入了 `x:Key` 和 `x:Name` 之间的替换概念，但这不是建议的做法。  处理名称\/键的信息时，.NET Framework XAML 服务不支持此类替换概念，如 <xref:System.Windows.Markup.INameScope> 或 <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。  
+ <span data-ttu-id="255c4-115">一般情况下，`x:Name`不应在也使用的情况下应用`x:Key`。</span><span class="sxs-lookup"><span data-stu-id="255c4-115">In general, `x:Name` should not be applied in situations that also use `x:Key`.</span></span> <span data-ttu-id="255c4-116">由特定的现有框架的 XAML 实现在引入之间的替换概念`x:Key`和`x:Name`，尽管这不是建议的做法。</span><span class="sxs-lookup"><span data-stu-id="255c4-116">XAML implementations by specific existing frameworks have introduced substitution concepts between `x:Key` and `x:Name`, but that is not a recommended practice.</span></span> <span data-ttu-id="255c4-117">.NET framework XAML 服务不支持此类替换概念，如处理的名称/密钥信息时<xref:System.Windows.Markup.INameScope>或<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。</span><span class="sxs-lookup"><span data-stu-id="255c4-117">.NET Framework XAML Services does not support such substitution concepts when handling name/key information such as <xref:System.Windows.Markup.INameScope> or <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.</span></span>  
   
- `x:Name` 许可和名称强制唯一性的规则可能由特定实现框架定义。  但是，要能与 .NET Framework XAML 服务一起使用，XAML 命名空间惟一性应和该文档中的 <xref:System.Windows.Markup.INameScope> 定义信息一致，并且信息使用位置应遵循相同规则。  例如，[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 实现将各种标记元素分成单独的 <xref:System.Windows.NameScope> 范围，如资源字典、由页级别 XAML 创建的逻辑树、模板及其他延迟内容，然后强制其中每个 XAML 名称范围内的 XAML 名称的唯一性。  
+ <span data-ttu-id="255c4-118">规则的许可`x:Name`由特定实现框架可能定义以及名称强制唯一性。</span><span class="sxs-lookup"><span data-stu-id="255c4-118">Rules for permittance of `x:Name` as well as the name uniqueness enforcement are potentially defined by specific implementing frameworks.</span></span> <span data-ttu-id="255c4-119">但是，若要能够使用.NET Framework XAML 服务，框架的 XAML 名称范围唯一性应定义与的定义一致<xref:System.Windows.Markup.INameScope>本文档中的信息和有关在何处应使用相同的规则应用的信息。</span><span class="sxs-lookup"><span data-stu-id="255c4-119">However, to be usable with .NET Framework XAML Services, the framework definitions of XAML namescope uniqueness should be consistent with the definition of <xref:System.Windows.Markup.INameScope> information in this documentation, and should use the same rules regarding where the information is applied.</span></span> <span data-ttu-id="255c4-120">例如，[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]实现将各种标记元素分割成单独<xref:System.Windows.NameScope>范围，例如资源字典逻辑树中创建的页级别 XAML、 模板和其他延迟的内容，然后强制执行 XAML名称在每个这些 XAML 名称范围内的唯一性。</span><span class="sxs-lookup"><span data-stu-id="255c4-120">For example, the [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementation divides various markup elements into separate <xref:System.Windows.NameScope> ranges, such as resource dictionaries, the logical tree created by the page-level XAML, templates, and other deferred content, and then enforces XAML name uniqueness within each of those XAML namescopes.</span></span>  
   
- 对于使用 .NET Framework XAML 服务 XAML 对象编写器的自定义类型，可以建立或更改映射到类型中 `x:Name` 的属性。  通过引用属性名称来映射类型定义代码中的 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 定义此行为。  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 是一个类级属性。  
+ <span data-ttu-id="255c4-121">对于使用.NET Framework XAML 服务 XAML 对象编写器的自定义类型，属性映射到`x:Name`上可以建立一种类型，或者将其更改。</span><span class="sxs-lookup"><span data-stu-id="255c4-121">For custom types that use .NET Framework XAML Services XAML object writers, a property that maps to `x:Name` on a type can be established or changed.</span></span> <span data-ttu-id="255c4-122">通过引用要使用映射的属性的名称定义此行为<xref:System.Windows.Markup.RuntimeNamePropertyAttribute>中的类型定义代码。</span><span class="sxs-lookup"><span data-stu-id="255c4-122">You define this behavior by referencing the name of the property to map with the <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> in the type definition code.</span></span>  <span data-ttu-id="255c4-123"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute>是一个类型级别属性。</span><span class="sxs-lookup"><span data-stu-id="255c4-123"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute> is a type-level attribute.</span></span>  
   
- 使用 .NET Framework XAML 服务，用于 XAML 名称范围支持的后备逻辑可以通过 <xref:System.Windows.Markup.INameScope> 接口，以对框架中立的方式定义。  
+ <span data-ttu-id="255c4-124">可以通过实现特定于框架的方式定义 Using.NET Framework XAML 服务 XAML 命名空间支持的后备逻辑<xref:System.Windows.Markup.INameScope>接口。</span><span class="sxs-lookup"><span data-stu-id="255c4-124">Using.NET Framework XAML Services, the backing logic for XAML namescope support can be defined in a framework-neutral way by implementing the <xref:System.Windows.Markup.INameScope> interface.</span></span>  
   
-## WPF 用法说明  
- 在使用 XAML、分部类和代码隐藏的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 应用程序项目的标准生成配置下，指定的 `x:Name` 成为标记编译生成任务处理 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 时在基础代码中创建的字段的名称，并且该字段保留对对象的引用。默认情况下，创建的字段为内部字段。  您可以通过指定 [x:FieldModifier 特性](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)来更改字段访问。  在 WPF 和 Silverlight 中，序列为标记编译定义和命名特定类中字段的顺序，但初始值为空。  然后，生成名为 `InitializeComponent` 的方法将从类构造函数进行调用。  `InitializeComponent` 包括使用每个 `x:Name` 值的 `FindName` 调用，这些值存在于 XAML 定义为输入字符串的部分局部类中。  然后将返回值分配给类似名称的字段引用，用 XAML 分析中创建的对象来填补字段。  执行 `InitializeComponent` 使通过 `x:Name` \/字段名称直接而非必须显式地调用`FindName` 在任何需要引用 XAML 定义对象的时候可以引用运行时对象图。  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="255c4-125">WPF 用法说明</span><span class="sxs-lookup"><span data-stu-id="255c4-125">WPF Usage Notes</span></span>  
+ <span data-ttu-id="255c4-126">下的标准生成配置[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]使用 XAML，分部类和代码隐藏，指定的应用程序`x:Name`将成为在基础中创建的字段的名称的代码时[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]由标记处理编译生成任务，并该字段包含对对象的引用。</span><span class="sxs-lookup"><span data-stu-id="255c4-126">Under the standard build configuration for a [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] application that uses XAML, partial classes, and code-behind, the specified `x:Name` becomes the name of a field that is created in the underlying code when [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] is processed by a markup compilation build task, and that field holds a reference to the object.</span></span> <span data-ttu-id="255c4-127">默认情况下，创建的字段是内部的。</span><span class="sxs-lookup"><span data-stu-id="255c4-127">By default, the created field is internal.</span></span> <span data-ttu-id="255c4-128">你可以通过指定更改字段访问[X:fieldmodifier 特性](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="255c4-128">You can change field access by specifying the [x:FieldModifier attribute](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md).</span></span> <span data-ttu-id="255c4-129">在 WPF 和 Silverlight，序列是标记编译定义，并且名称中的分部类，但值的字段是最初为空。</span><span class="sxs-lookup"><span data-stu-id="255c4-129">In WPF and Silverlight, the sequence is that the markup compile defines and names the field in a partial class, but the value is initially empty.</span></span> <span data-ttu-id="255c4-130">然后，一个名为的生成的方法`InitializeComponent`从类构造函数中调用。</span><span class="sxs-lookup"><span data-stu-id="255c4-130">Then, a generated method named `InitializeComponent` is called from within the class constructor.</span></span> <span data-ttu-id="255c4-131">`InitializeComponent`组成`FindName`使用每个调用`x:Name`存在于作为分部类的 XAML 定义部分的值输入字符串。</span><span class="sxs-lookup"><span data-stu-id="255c4-131">`InitializeComponent` consists of `FindName` calls using each of the `x:Name` values that exist in the XAML-defined part of the partial class as input strings.</span></span> <span data-ttu-id="255c4-132">返回值然后分配给名称类似的字段引用以填充分析使用从 XAML 创建的对象的字段值。</span><span class="sxs-lookup"><span data-stu-id="255c4-132">The return values are then assigned to the like-named field reference to fill the field values with objects that were created from XAML parsing.</span></span> <span data-ttu-id="255c4-133">执行`InitializeComponent`使运行的时对象图使用的引用可能`x:Name`/ 直接，字段名称，而不是无需调用`FindName`随时显式你需要向 XAML 定义的对象的引用。</span><span class="sxs-lookup"><span data-stu-id="255c4-133">The execution of `InitializeComponent` make it possible to reference the run time object graph using the `x:Name` / field name directly, rather than having to call `FindName` explicitly any time you need a reference to a XAML-defined object.</span></span>  
   
- 对于使用  [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] 目标并包括带 `Page` XAML 文件生成操作的 WPF 文件的应用程序，会在编译期间创建一个单独的引用属性，该属性将  `WithEvents` 关键字添加到所有具有 `x:Name` 的元素，以支持事件处理程序委托的 `Handles` 语法。  该属性始终是公共的。  有关更多信息，请参见 [Visual Basic 和 WPF 事件处理](../../../ocs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ <span data-ttu-id="255c4-134">有关的 WPF 应用程序使用[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]目标并包括与 XAML 文件`Page`添加的编译期间创建生成操作，单独的参考属性`WithEvents`关键字具有的所有元素`x:Name`到支持`Handles`事件处理程序委托的语法。</span><span class="sxs-lookup"><span data-stu-id="255c4-134">For a WPF application that uses the [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] targets and includes XAML files with `Page` build action, a separate reference property is created during compilation that adds the `WithEvents` keyword to all elements that have an `x:Name`, to support `Handles` syntax for event handler delegates.</span></span> <span data-ttu-id="255c4-135">此属性始终是公共的。</span><span class="sxs-lookup"><span data-stu-id="255c4-135">This property is always public.</span></span> <span data-ttu-id="255c4-136">有关详细信息，请参阅 [Visual Basic 和 WPF 事件处理](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。</span><span class="sxs-lookup"><span data-stu-id="255c4-136">For more information, see [Visual Basic and WPF Event Handling](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span></span>  
   
- `x:Name` 由 WPF XAML 处理器用于在加载时将名称注册到 XAML 名称范围，即使在生成操作为对页面进行标记编译的情况下（例如，资源字典的宽松 XAML）也是如此。  此行为的一个原因是因为 <xref:System.Windows.Data.Binding.ElementName%2A> 绑定可能需要 `x:Name`。  有关详细信息，请参见[数据绑定概述](../../../ocs/framework/wpf/data/data-binding-overview.md)。  
+ <span data-ttu-id="255c4-137">`x:Name`用于通过 WPF XAML 处理器在加载时，即使对于其中的页面不是生成操作 (例如，资源字典中的宽松型 XAML) 进行标记编译的情况下注册到 XAML 名称范围的名称。</span><span class="sxs-lookup"><span data-stu-id="255c4-137">`x:Name` is used by the WPF XAML processor to register a name into a XAML namescope at load time, even for cases where the page is not markup-compiled by build actions (for example, loose XAML of a resource dictionary).</span></span> <span data-ttu-id="255c4-138">此行为的原因之一是因为`x:Name`可能需要为<xref:System.Windows.Data.Binding.ElementName%2A>绑定。</span><span class="sxs-lookup"><span data-stu-id="255c4-138">One reason for this behavior is because the `x:Name` is potentially needed for <xref:System.Windows.Data.Binding.ElementName%2A> binding.</span></span> <span data-ttu-id="255c4-139">有关详细信息，请参阅[数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="255c4-139">For details, see [Data Binding Overview](../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
- 如前所述，`x:Name`（或 `Name`）不应用于使用 `x:Key` 的情况。  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> 具有特别行为，即将其自身定义为 XAML 名称范围，但对 <xref:System.Windows.Markup.INameScope> API 返回“未实现”或 null 值来作为一种强制执行该行为的方法。  如果 WPF XAML 分析程序遇到 XAML 定义的 <xref:System.Windows.ResourceDictionary> 中的 `Name` 或 `x:Name`，则不会将名称添加到任何 XAML 命名空间中。  尝试从任何 XAML 名称范围和 `FindName` 方法中查找该名称将不会返回有效结果。  
+ <span data-ttu-id="255c4-140">如前所述， `x:Name` (或`Name`) 不应在也使用的情况下应用`x:Key`。</span><span class="sxs-lookup"><span data-stu-id="255c4-140">As mentioned previously, `x:Name` (or `Name`) should not be applied in situations that also use `x:Key`.</span></span> <span data-ttu-id="255c4-141">[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary>具有特殊的行为定义本身为 XAML 名称范围，但返回未实现或为 null 值的<xref:System.Windows.Markup.INameScope>作为一种方式强制执行此行为的 Api。</span><span class="sxs-lookup"><span data-stu-id="255c4-141">The [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> has a special behavior of defining itself as a XAML namescope but returning Not Implemented or null values for <xref:System.Windows.Markup.INameScope> APIs as a way to enforce this behavior.</span></span> <span data-ttu-id="255c4-142">如果 WPF XAML 分析器遇到`Name`或`x:Name`中的 XAML 定义<xref:System.Windows.ResourceDictionary>，名称不会添加到任何 XAML 名称范围。</span><span class="sxs-lookup"><span data-stu-id="255c4-142">If the WPF XAML parser encounters `Name` or `x:Name` in a XAML-defined <xref:System.Windows.ResourceDictionary>, the name is not added to any XAML namescope.</span></span> <span data-ttu-id="255c4-143">尝试查找任何 XAML 名称范围从该名称与`FindName`方法不会返回有效的结果。</span><span class="sxs-lookup"><span data-stu-id="255c4-143">Attempting to find that name from any XAML namescope and the `FindName` methods will not return valid results.</span></span>  
   
-### x:Name 和 Name  
- 许多 WPF 应用程序方案都可以完全避免使用 `x:Name` 特性，因为在默认 XAML 命名空间内为几个重要基类（如 <xref:System.Windows.FrameworkElement> 和 <xref:System.Windows.FrameworkContentElement>）指定的 `Name` 依赖项属性也具有此用途。  当代码在框架级访问具有非 `Name` 属性的元素时，仍存在一些常见的 XAML 和 WPF 方案。  例如，某些动画和演示图板支持类不支持 `Name` 属性，但为了控制动画经常需要引用代码。  应当在时间线以及在 XAML 中创建的变换上将 `x:Name` 指定为属性，前提是您计划以后在代码中引用它们。  
+### <a name="xname-and-name"></a><span data-ttu-id="255c4-144">X:name 和名称</span><span class="sxs-lookup"><span data-stu-id="255c4-144">x:Name and Name</span></span>  
+ <span data-ttu-id="255c4-145">许多 WPF 应用程序方案可以避免任何使用`x:Name`属性，所以`Name`作为依赖项属性中指定默认 XAML 命名空间为多个重要基类如<xref:System.Windows.FrameworkElement>和<xref:System.Windows.FrameworkContentElement>满足此同一目的。</span><span class="sxs-lookup"><span data-stu-id="255c4-145">Many WPF application scenarios can avoid any use of the `x:Name` attribute, because the `Name` dependency property as specified in the default XAML namespace for several of the important base classes such as <xref:System.Windows.FrameworkElement> and <xref:System.Windows.FrameworkContentElement> satisfies this same purpose.</span></span> <span data-ttu-id="255c4-146">仍有一些常见的 XAML 和 WPF 方案其中的代码没有的元素的访问`Name`framework 级别的属性很重要。</span><span class="sxs-lookup"><span data-stu-id="255c4-146">There are still some common XAML and WPF scenarios where code access to an element with no `Name` property at the framework level is important.</span></span> <span data-ttu-id="255c4-147">例如，不支持某些动画和情节提要的支持类`Name`属性，但它们通常需要在代码中引用以便控制动画。</span><span class="sxs-lookup"><span data-stu-id="255c4-147">For example, certain animation and storyboard support classes do not support a `Name` property, but they often need to be referenced in code in order to control the animation.</span></span> <span data-ttu-id="255c4-148">应指定`x:Name`作为在时间线和创建在 XAML 中，如果你想要从代码中供以后参考的转换的属性。</span><span class="sxs-lookup"><span data-stu-id="255c4-148">You should specify `x:Name` as an attribute on timelines and transforms that are created in XAML, if you intend to reference them from code later.</span></span>  
   
- 如果 <xref:System.Windows.FrameworkElement.Name%2A> 可用作类的一个属性，则 <xref:System.Windows.FrameworkElement.Name%2A> 和 `x:Name` 可作为特性互换使用，但如果在同一元素上同时指定了这两者，则将分析异常。  如果对 XAML 进行标记编译，则将在标记编译时发生异常，否则将在加载时发生异常。  
+ <span data-ttu-id="255c4-149">如果<xref:System.Windows.FrameworkElement.Name%2A>为属性类，可用<xref:System.Windows.FrameworkElement.Name%2A>和`x:Name`可以互换使用作为属性，但如果两者都在同一元素上指定将分析异常。</span><span class="sxs-lookup"><span data-stu-id="255c4-149">If <xref:System.Windows.FrameworkElement.Name%2A> is available as a property on the class, <xref:System.Windows.FrameworkElement.Name%2A> and `x:Name` can be used interchangeably as attributes, but a parse exception will result if both are specified on the same element.</span></span> <span data-ttu-id="255c4-150">如果 XAML 进行标记编译，异常将在发生标记编译，否则将在加载时发生。</span><span class="sxs-lookup"><span data-stu-id="255c4-150">If the XAML is markup compiled, the exception will occur on the markup compile, otherwise it occurs on load.</span></span>  
   
- <xref:System.Windows.FrameworkElement.Name%2A> 可以使用 XAML 特性语法设置，而且在代码中使用 <xref:System.Windows.DependencyObject.SetValue%2A> 也可以设置；请注意无论在代码中如何设置 <xref:System.Windows.FrameworkElement.Name%2A> 属性，也不会在 XAML 已载入的大多数情况下在 XAML 名称范围内创建代表性字段引用。  不要尝试在代码中设置 <xref:System.Windows.FrameworkElement.Name%2A>，而应从代码中根据相应的名称范围来使用 <xref:System.Windows.NameScope> 方法。  
+ <span data-ttu-id="255c4-151"><xref:System.Windows.FrameworkElement.Name%2A>可以使用 XAML 特性语法中，设置和在代码中使用<xref:System.Windows.DependencyObject.SetValue%2A>; 但是请注意该设置<xref:System.Windows.FrameworkElement.Name%2A>在代码中的属性不会在大多数情况下，XAML 已创建 XAML 名称范围内的代表性字段引用加载。</span><span class="sxs-lookup"><span data-stu-id="255c4-151"><xref:System.Windows.FrameworkElement.Name%2A> can be set using XAML attribute syntax, and in code using <xref:System.Windows.DependencyObject.SetValue%2A>; note however that setting the <xref:System.Windows.FrameworkElement.Name%2A> property in code does not create the representative field reference within the XAML namescope in most circumstances where the XAML is already loaded.</span></span> <span data-ttu-id="255c4-152">而不是正在尝试设置<xref:System.Windows.FrameworkElement.Name%2A>在代码中，使用<xref:System.Windows.NameScope>从代码中根据相应的名称范围的方法。</span><span class="sxs-lookup"><span data-stu-id="255c4-152">Instead of attempting to set <xref:System.Windows.FrameworkElement.Name%2A> in code, use <xref:System.Windows.NameScope> methods from code, against the appropriate namescope.</span></span>  
   
- 使用带有内部文本的属性元素语法也可以设置 <xref:System.Windows.FrameworkElement.Name%2A>，但这不常见。  相反，`x:Name` 不能在 XAML 属性元素语法中设置，也不能在代码中使用 <xref:System.Windows.DependencyObject.SetValue%2A> 来设置；它只能使用特性语法在对象上设置，因为它是一条指令。  
+ <span data-ttu-id="255c4-153"><xref:System.Windows.FrameworkElement.Name%2A>此外可以通过使用内部文本的属性元素语法设置，但这不常见。</span><span class="sxs-lookup"><span data-stu-id="255c4-153"><xref:System.Windows.FrameworkElement.Name%2A> can also be set using property element syntax with inner text, but that is uncommon.</span></span> <span data-ttu-id="255c4-154">与此相反，`x:Name`不能在 XAML 属性元素语法中，或在代码中使用设置<xref:System.Windows.DependencyObject.SetValue%2A>; 它仅可设置对象上使用的特性语法，因为它是一个指令。</span><span class="sxs-lookup"><span data-stu-id="255c4-154">In contrast, `x:Name` cannot be set in XAML property element syntax, or in code using <xref:System.Windows.DependencyObject.SetValue%2A>; it can only be set using attribute syntax on objects because it is a directive.</span></span>  
   
-## Silverlight Usage 备注。  
- 单独说明了 `x:Name` for Silverlight。  更多信息，请参见 [XAML Namespace \(x:\) Language Features \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=199081) 。  
+## <a name="silverlight-usage-notes"></a><span data-ttu-id="255c4-155">Silverlight 用法说明</span><span class="sxs-lookup"><span data-stu-id="255c4-155">Silverlight Usage Notes</span></span>  
+ <span data-ttu-id="255c4-156">`x:Name`适用于 Silverlight 是分开记录。</span><span class="sxs-lookup"><span data-stu-id="255c4-156">`x:Name` for Silverlight is documented separately.</span></span> <span data-ttu-id="255c4-157">有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。</span><span class="sxs-lookup"><span data-stu-id="255c4-157">For more information, see [XAML Namespace (x:) Language Features (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=fullName>   
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=fullName>   
- [WPF 中的树](../../../ocs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="255c4-158">另请参阅</span><span class="sxs-lookup"><span data-stu-id="255c4-158">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="255c4-159">WPF 中的树</span><span class="sxs-lookup"><span data-stu-id="255c4-159">Trees in WPF</span></span>](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

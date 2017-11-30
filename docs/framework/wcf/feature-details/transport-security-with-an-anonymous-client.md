@@ -1,57 +1,63 @@
 ---
-title: "匿名客户端的传输安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匿名客户端的传输安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 匿名客户端的传输安全
-此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案使用传输安全 \(HTTPS\) 确保保密性和完整性。必须使用安全套接字层 \(SSL\) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。客户端不通过任何机制进行身份验证，因此是匿名的。  
+# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="b0224-102">匿名客户端的传输安全</span><span class="sxs-lookup"><span data-stu-id="b0224-102">Transport Security with an Anonymous Client</span></span>
+<span data-ttu-id="b0224-103">此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案使用传输安全 (HTTPS) 确保保密性和完整性。</span><span class="sxs-lookup"><span data-stu-id="b0224-103">This [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="b0224-104">必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。</span><span class="sxs-lookup"><span data-stu-id="b0224-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="b0224-105">客户端不通过任何机制进行身份验证，因此是匿名的。</span><span class="sxs-lookup"><span data-stu-id="b0224-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  
   
- 有关示例应用程序，请参见 [WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]传输安全的更多信息，请参见[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+ <span data-ttu-id="b0224-106">有关示例应用程序，请参阅[WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)。</span><span class="sxs-lookup"><span data-stu-id="b0224-106">For a sample application, see [WS Transport Security](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b0224-107">传输安全，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="b0224-107"> transport security, see [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]将证书用于服务的更多信息，请参见[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b0224-108">使用证书与服务，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。</span><span class="sxs-lookup"><span data-stu-id="b0224-108"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
- ![对匿名客户端使用传输安全性](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931\-0cfb\-4aaa\-9272\-91d652b85d8d")  
+ <span data-ttu-id="b0224-109">![与匿名客户端使用传输安全](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span><span class="sxs-lookup"><span data-stu-id="b0224-109">![Using transport security with an anonymous client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span></span>  
   
-|特征|说明|  
-|--------|--------|  
-|安全模式|传输|  
-|互操作性|与现有 Web 服务和客户端|  
-|身份验证（服务器）<br /><br /> 身份验证（客户端）|是<br /><br /> 应用程序级（无 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持）|  
-|完整性|是|  
-|保密性|是|  
-|Transport|HTTPS|  
-|绑定|<xref:System.ServiceModel.WsHttpBinding>|  
+|<span data-ttu-id="b0224-110">特征</span><span class="sxs-lookup"><span data-stu-id="b0224-110">Characteristic</span></span>|<span data-ttu-id="b0224-111">描述</span><span class="sxs-lookup"><span data-stu-id="b0224-111">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="b0224-112">安全模式</span><span class="sxs-lookup"><span data-stu-id="b0224-112">Security Mode</span></span>|<span data-ttu-id="b0224-113">传输</span><span class="sxs-lookup"><span data-stu-id="b0224-113">Transport</span></span>|  
+|<span data-ttu-id="b0224-114">互操作性</span><span class="sxs-lookup"><span data-stu-id="b0224-114">Interoperability</span></span>|<span data-ttu-id="b0224-115">与现有 Web 服务和客户端</span><span class="sxs-lookup"><span data-stu-id="b0224-115">With existing Web services and clients</span></span>|  
+|<span data-ttu-id="b0224-116">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="b0224-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="b0224-117">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="b0224-117">Authentication (Client)</span></span>|<span data-ttu-id="b0224-118">是</span><span class="sxs-lookup"><span data-stu-id="b0224-118">Yes</span></span><br /><br /> <span data-ttu-id="b0224-119">应用程序级（无 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持）</span><span class="sxs-lookup"><span data-stu-id="b0224-119">Application level (no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] support)</span></span>|  
+|<span data-ttu-id="b0224-120">完整性</span><span class="sxs-lookup"><span data-stu-id="b0224-120">Integrity</span></span>|<span data-ttu-id="b0224-121">是</span><span class="sxs-lookup"><span data-stu-id="b0224-121">Yes</span></span>|  
+|<span data-ttu-id="b0224-122">保密性</span><span class="sxs-lookup"><span data-stu-id="b0224-122">Confidentiality</span></span>|<span data-ttu-id="b0224-123">是</span><span class="sxs-lookup"><span data-stu-id="b0224-123">Yes</span></span>|  
+|<span data-ttu-id="b0224-124">传输</span><span class="sxs-lookup"><span data-stu-id="b0224-124">Transport</span></span>|<span data-ttu-id="b0224-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="b0224-125">HTTPS</span></span>|  
+|<span data-ttu-id="b0224-126">绑定</span><span class="sxs-lookup"><span data-stu-id="b0224-126">Binding</span></span>|<span data-ttu-id="b0224-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span><span class="sxs-lookup"><span data-stu-id="b0224-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span></span>|  
   
-## 服务  
- 下面的代码和配置应独立运行。执行下列操作之一：  
+## <a name="service"></a><span data-ttu-id="b0224-128">服务</span><span class="sxs-lookup"><span data-stu-id="b0224-128">Service</span></span>  
+ <span data-ttu-id="b0224-129">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="b0224-129">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b0224-130">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="b0224-130">Do one of the following:</span></span>  
   
--   使用代码（而不使用配置）创建独立服务。  
+-   <span data-ttu-id="b0224-131">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="b0224-131">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   使用提供的配置创建服务，但不定义任何终结点。  
+-   <span data-ttu-id="b0224-132">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="b0224-132">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### 代码  
- 下面的代码演示如何使用传输安全创建终结点：  
+### <a name="code"></a><span data-ttu-id="b0224-133">代码</span><span class="sxs-lookup"><span data-stu-id="b0224-133">Code</span></span>  
+ <span data-ttu-id="b0224-134">下面的代码演示如何使用传输安全创建终结点：</span><span class="sxs-lookup"><span data-stu-id="b0224-134">The following code shows how to create an endpoint using transport security:</span></span>  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
-### 配置  
- 下面的代码使用配置设置相同的终结点。客户端不通过任何机制进行身份验证，因此是匿名的。  
+### <a name="configuration"></a><span data-ttu-id="b0224-135">配置</span><span class="sxs-lookup"><span data-stu-id="b0224-135">Configuration</span></span>  
+ <span data-ttu-id="b0224-136">下面的代码使用配置设置相同的终结点。</span><span class="sxs-lookup"><span data-stu-id="b0224-136">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="b0224-137">客户端不通过任何机制进行身份验证，因此是匿名的。</span><span class="sxs-lookup"><span data-stu-id="b0224-137">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -78,24 +84,24 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## 客户端  
- 下面的代码和配置将独立运行。执行下列操作之一：  
+## <a name="client"></a><span data-ttu-id="b0224-138">客户端</span><span class="sxs-lookup"><span data-stu-id="b0224-138">Client</span></span>  
+ <span data-ttu-id="b0224-139">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="b0224-139">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b0224-140">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="b0224-140">Do one of the following:</span></span>  
   
--   使用代码（和客户端代码）创建独立客户端。  
+-   <span data-ttu-id="b0224-141">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="b0224-141">Create a stand-alone client using the code (and client code).</span></span>  
   
--   创建不定义任何终结点地址的客户端。而使用将配置名称作为参数的客户端构造函数。例如：  
+-   <span data-ttu-id="b0224-142">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="b0224-142">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="b0224-143">而使用将配置名称作为参数的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="b0224-143">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="b0224-144">例如：</span><span class="sxs-lookup"><span data-stu-id="b0224-144">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### 代码  
+### <a name="code"></a><span data-ttu-id="b0224-145">代码</span><span class="sxs-lookup"><span data-stu-id="b0224-145">Code</span></span>  
  [!code-csharp[c_SecurityScenarios#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
-### 配置  
- 下面的配置可代替代码用于设置服务。  
+### <a name="configuration"></a><span data-ttu-id="b0224-146">配置</span><span class="sxs-lookup"><span data-stu-id="b0224-146">Configuration</span></span>  
+ <span data-ttu-id="b0224-147">下面的配置可代替代码用于设置服务。</span><span class="sxs-lookup"><span data-stu-id="b0224-147">The following configuration can be used instead of the code to set up the service.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -118,8 +124,8 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)   
- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="b0224-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b0224-148">See Also</span></span>  
+ [<span data-ttu-id="b0224-149">安全性概述</span><span class="sxs-lookup"><span data-stu-id="b0224-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="b0224-150">WS 传输安全</span><span class="sxs-lookup"><span data-stu-id="b0224-150">WS Transport Security</span></span>](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [<span data-ttu-id="b0224-151">传输安全概述</span><span class="sxs-lookup"><span data-stu-id="b0224-151">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [<span data-ttu-id="b0224-152">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="b0224-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,127 +1,124 @@
 ---
-title: "Class 语句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Class"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "类模块"
-  - "Class 语句"
-  - "类类型, class 语句"
-  - "类 [Visual Basic], 创建"
-  - "类 [Visual Basic], 数据成员"
-  - "类 [Visual Basic], 字段"
-  - "数据成员, 类"
-  - "字段, 类"
+title: "Class 语句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Class
+helpviewer_keywords:
+- class modules
+- Class statement [Visual Basic]
+- classes [Visual Basic], fields
+- fields [Visual Basic], of classes
+- class types [Visual Basic], class statements
+- classes [Visual Basic], creating
+- classes [Visual Basic], data members
+- data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Class 语句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-声明类的名称，并引入构成该类的变量、属性、事件和过程的定义。  
+# <a name="class-statement-visual-basic"></a><span data-ttu-id="b73e2-102">Class 语句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b73e2-102">Class Statement (Visual Basic)</span></span>
+<span data-ttu-id="b73e2-103">声明类的名称，并引入的变量、 属性、 事件和类包含的过程的定义。</span><span class="sxs-lookup"><span data-stu-id="b73e2-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="b73e2-104">语法</span><span class="sxs-lookup"><span data-stu-id="b73e2-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
-Class name [ ( Of typelist ) ]  
-    [ Inherits classname ]  
-    [ Implements interfacenames ]  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
+Class name [ ( Of typelist ) ]  
+    [ Inherits classname ]  
+    [ Implements interfacenames ]  
+    [ statements ]  
 End Class  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="b73e2-105">部件</span><span class="sxs-lookup"><span data-stu-id="b73e2-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`attributelist`|可选。  请参见[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|可选。  可以是如下内容之一：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|可选。  请参见 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`MustInherit`|可选。  请参见 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
-|`NotInheritable`|可选。  请参见 [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`Partial`|可选。  指示该类的分部定义。  请参见 [分部](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必选。  此类的名称。  请参见 [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|可选。  指定这是一个泛型类。|  
-|`typelist`|如果使用 [Of](../../../visual-basic/language-reference/statements/of-clause.md) 关键字，则为必选项。  此类的类型参数列表。  请参见[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|可选。  指示该类继承了另一个类的成员。  请参见 [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
-|`classname`|如果使用 `Inherits` 语句，则为必选项。  派生此类的类的名称。|  
-|`Implements`|可选。  指示此类实现一个或多个接口的成员。  请参见 [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
-|`interfacenames`|如果使用 `Implements` 语句，则为必选项。  此类实现的接口的名称。|  
-|`statements`|可选。  定义此类的成员的语句。|  
-|`End Class`|必选。  终止 `Class` 定义。|  
+|<span data-ttu-id="b73e2-106">术语</span><span class="sxs-lookup"><span data-stu-id="b73e2-106">Term</span></span>|<span data-ttu-id="b73e2-107">定义</span><span class="sxs-lookup"><span data-stu-id="b73e2-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="b73e2-108">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-108">Optional.</span></span> <span data-ttu-id="b73e2-109">请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="b73e2-110">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-110">Optional.</span></span> <span data-ttu-id="b73e2-111">可以是以下各项之一：</span><span class="sxs-lookup"><span data-stu-id="b73e2-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="b73e2-112">-   [公共](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="b73e2-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="b73e2-113">-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="b73e2-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="b73e2-114">-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="b73e2-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="b73e2-115">-   [私有](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="b73e2-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="b73e2-116">请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="b73e2-117">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-117">Optional.</span></span> <span data-ttu-id="b73e2-118">请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`MustInherit`|<span data-ttu-id="b73e2-119">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-119">Optional.</span></span> <span data-ttu-id="b73e2-120">请参阅[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-120">See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>|  
+|`NotInheritable`|<span data-ttu-id="b73e2-121">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-121">Optional.</span></span> <span data-ttu-id="b73e2-122">请参阅[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-122">See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).</span></span>|  
+|`Partial`|<span data-ttu-id="b73e2-123">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-123">Optional.</span></span> <span data-ttu-id="b73e2-124">指示类的分部定义。</span><span class="sxs-lookup"><span data-stu-id="b73e2-124">Indicates a partial definition of the class.</span></span> <span data-ttu-id="b73e2-125">请参阅[部分](../../../visual-basic/language-reference/modifiers/partial.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-125">See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).</span></span>|  
+|`name`|<span data-ttu-id="b73e2-126">必需。</span><span class="sxs-lookup"><span data-stu-id="b73e2-126">Required.</span></span> <span data-ttu-id="b73e2-127">此类的名称。</span><span class="sxs-lookup"><span data-stu-id="b73e2-127">Name of this class.</span></span> <span data-ttu-id="b73e2-128">请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-128">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="b73e2-129">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-129">Optional.</span></span> <span data-ttu-id="b73e2-130">指定这是一个泛型类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-130">Specifies that this is a generic class.</span></span>|  
+|`typelist`|<span data-ttu-id="b73e2-131">如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="b73e2-131">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="b73e2-132">此类的类型参数的列表。</span><span class="sxs-lookup"><span data-stu-id="b73e2-132">List of type parameters for this class.</span></span> <span data-ttu-id="b73e2-133">请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-133">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Inherits`|<span data-ttu-id="b73e2-134">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-134">Optional.</span></span> <span data-ttu-id="b73e2-135">指示此类继承另一个类的成员。</span><span class="sxs-lookup"><span data-stu-id="b73e2-135">Indicates that this class inherits the members of another class.</span></span> <span data-ttu-id="b73e2-136">请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-136">See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).</span></span>|  
+|`classname`|<span data-ttu-id="b73e2-137">如果你使用是必需的`Inherits`语句。</span><span class="sxs-lookup"><span data-stu-id="b73e2-137">Required if you use the `Inherits` statement.</span></span> <span data-ttu-id="b73e2-138">此类派生自的类名称。</span><span class="sxs-lookup"><span data-stu-id="b73e2-138">The name of the class from which this class derives.</span></span>|  
+|`Implements`|<span data-ttu-id="b73e2-139">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-139">Optional.</span></span> <span data-ttu-id="b73e2-140">指示此类实现一个或多个接口的成员。</span><span class="sxs-lookup"><span data-stu-id="b73e2-140">Indicates that this class implements the members of one or more interfaces.</span></span> <span data-ttu-id="b73e2-141">请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-141">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="b73e2-142">如果你使用是必需的`Implements`语句。</span><span class="sxs-lookup"><span data-stu-id="b73e2-142">Required if you use the `Implements` statement.</span></span> <span data-ttu-id="b73e2-143">此类实现的接口名称。</span><span class="sxs-lookup"><span data-stu-id="b73e2-143">The names of the interfaces this class implements.</span></span>|  
+|`statements`|<span data-ttu-id="b73e2-144">可选。</span><span class="sxs-lookup"><span data-stu-id="b73e2-144">Optional.</span></span> <span data-ttu-id="b73e2-145">定义此类的成员的语句。</span><span class="sxs-lookup"><span data-stu-id="b73e2-145">Statements which define the members of this class.</span></span>|  
+|`End Class`|<span data-ttu-id="b73e2-146">必需。</span><span class="sxs-lookup"><span data-stu-id="b73e2-146">Required.</span></span> <span data-ttu-id="b73e2-147">终止`Class`定义。</span><span class="sxs-lookup"><span data-stu-id="b73e2-147">Terminates the `Class` definition.</span></span>|  
   
-## 备注  
- 一条 `Class` 语句定义一个新数据类型。  “类”是面向对象编程 \(OOP\) 的基本构造块。  有关更多信息，请参见 [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+## <a name="remarks"></a><span data-ttu-id="b73e2-148">备注</span><span class="sxs-lookup"><span data-stu-id="b73e2-148">Remarks</span></span>  
+ <span data-ttu-id="b73e2-149">A`Class`语句定义新的数据类型。</span><span class="sxs-lookup"><span data-stu-id="b73e2-149">A `Class` statement defines a new data type.</span></span> <span data-ttu-id="b73e2-150">A*类*是面向对象的编程 (OOP) 的基本构建块。</span><span class="sxs-lookup"><span data-stu-id="b73e2-150">A *class* is a fundamental building block of object-oriented programming (OOP).</span></span> <span data-ttu-id="b73e2-151">有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-151">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
- 您只能在命名空间或模块级别使用 `Class`。  这意味着类的声明上下文必须是源文件、命名空间、类、结构、模块或接口，而且不能是过程或块。  有关更多信息，请参见[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ <span data-ttu-id="b73e2-152">你可以使用`Class`只能在命名空间或模块级别。</span><span class="sxs-lookup"><span data-stu-id="b73e2-152">You can use `Class` only at namespace or module level.</span></span> <span data-ttu-id="b73e2-153">这意味着*声明上下文*类必须为源文件、 命名空间、 类、 结构、 模块或接口，并且不能为过程或块。</span><span class="sxs-lookup"><span data-stu-id="b73e2-153">This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="b73e2-154">有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-154">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 类的每个实例都拥有一个独立于所有其他实例的生存期。  此生存期开始于 [New 运算符](../../../visual-basic/language-reference/operators/new-operator.md) 子句或函数（如 <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>）创建实例时，  结束于指向实例的所有变量都已设置为 [Nothing](../../../visual-basic/language-reference/nothing.md) 或其他类的实例时。  
+ <span data-ttu-id="b73e2-155">类的每个实例都拥有独立于所有其他实例的生存期。</span><span class="sxs-lookup"><span data-stu-id="b73e2-155">Each instance of a class has a lifetime independent of all other instances.</span></span> <span data-ttu-id="b73e2-156">此生存期开始通过创建时[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)子句或如函数<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>。</span><span class="sxs-lookup"><span data-stu-id="b73e2-156">This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</span></span> <span data-ttu-id="b73e2-157">结束时指向该实例的所有变量已都设置为[执行任何操作](../../../visual-basic/language-reference/nothing.md)或其他类的实例。</span><span class="sxs-lookup"><span data-stu-id="b73e2-157">It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.</span></span>  
   
- 类默认为 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 访问。  可以使用访问修饰符来调整它们的访问级别。  有关更多信息，请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="b73e2-158">类默认为[友元](../../../visual-basic/language-reference/modifiers/friend.md)访问。</span><span class="sxs-lookup"><span data-stu-id="b73e2-158">Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="b73e2-159">你可以调整其访问级别有访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="b73e2-159">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="b73e2-160">有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-160">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="b73e2-161">规则</span><span class="sxs-lookup"><span data-stu-id="b73e2-161">Rules</span></span>  
   
--   **嵌套。**可以在一个类中定义另一个类。  外部类称为“包含类”，而内部类称为“嵌套类”。  
+-   <span data-ttu-id="b73e2-162">**嵌套。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-162">**Nesting.**</span></span> <span data-ttu-id="b73e2-163">你可以定义在另一个类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-163">You can define one class within another.</span></span> <span data-ttu-id="b73e2-164">外部的类称为*包含类*，内部的类称为*嵌套类*。</span><span class="sxs-lookup"><span data-stu-id="b73e2-164">The outer class is called the *containing class*, and the inner class is called a *nested class*.</span></span>  
   
--   **继承。**如果类使用 [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，则只能指定一个基类或接口。  一个类不能从多个元素中继承。  
+-   <span data-ttu-id="b73e2-165">**继承。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-165">**Inheritance.**</span></span> <span data-ttu-id="b73e2-166">如果类使用[继承语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，你可以指定只有一个基类或接口。</span><span class="sxs-lookup"><span data-stu-id="b73e2-166">If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface.</span></span> <span data-ttu-id="b73e2-167">类不能从多个元素继承。</span><span class="sxs-lookup"><span data-stu-id="b73e2-167">A class cannot inherit from more than one element.</span></span>  
   
-     一个类不能从访问级别的限制性较强的另一个类中继承。  例如，`Public` 类不能从 `Friend` 类继承。  
+     <span data-ttu-id="b73e2-168">类不能从具有限制性更强的访问级别的另一个类继承。</span><span class="sxs-lookup"><span data-stu-id="b73e2-168">A class cannot inherit from another class with a more restrictive access level.</span></span> <span data-ttu-id="b73e2-169">例如，`Public`类不能继承自`Friend`类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-169">For example, a `Public` class cannot inherit from a `Friend` class.</span></span>  
   
-     类不能从嵌套在该类中的类继承。  
+     <span data-ttu-id="b73e2-170">类不能从嵌套在它里面的类继承。</span><span class="sxs-lookup"><span data-stu-id="b73e2-170">A class cannot inherit from a class nested within it.</span></span>  
   
--   **实现。**如果类使用 [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现由 `interfacenames` 中指定的每个接口定义的每个成员。  此情况的例外是基类成员的重新实现。  有关更多信息，请参见 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) 中的“重新实现”。  
+-   <span data-ttu-id="b73e2-171">**实现。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-171">**Implementation.**</span></span> <span data-ttu-id="b73e2-172">如果类使用[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现每个成员由指定在每个接口定义`interfacenames`。</span><span class="sxs-lookup"><span data-stu-id="b73e2-172">If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.</span></span> <span data-ttu-id="b73e2-173">与此异常是重新实现的基类成员。</span><span class="sxs-lookup"><span data-stu-id="b73e2-173">An exception to this is reimplementation of a base class member.</span></span> <span data-ttu-id="b73e2-174">有关详细信息，请参阅"重新实现"[实现](../../../visual-basic/language-reference/statements/implements-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-174">For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
--   **默认属性。**一个类最多只能指定一个属性作为其默认属性。  有关更多信息，请参见[Default](../../../visual-basic/language-reference/modifiers/default.md)。  
+-   <span data-ttu-id="b73e2-175">**默认属性。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-175">**Default Property.**</span></span> <span data-ttu-id="b73e2-176">一个类只能指定最多一个属性作为其*默认属性*。</span><span class="sxs-lookup"><span data-stu-id="b73e2-176">A class can specify at most one property as its *default property*.</span></span> <span data-ttu-id="b73e2-177">有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-177">For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-## 行为  
+## <a name="behavior"></a><span data-ttu-id="b73e2-178">行为</span><span class="sxs-lookup"><span data-stu-id="b73e2-178">Behavior</span></span>  
   
--   **访问级别。**在类中，可以使用其自身的访问级别声明每个成员。  类成员默认为 [Public](../../../visual-basic/language-reference/modifiers/public.md) 访问，但变量和常数除外，它们默认为 [Private](../../../visual-basic/language-reference/modifiers/private.md) 访问。  当某个类比其成员之一具有限制性更强的访问时，类访问级别将优先。  
+-   <span data-ttu-id="b73e2-179">**访问级别。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-179">**Access Level.**</span></span> <span data-ttu-id="b73e2-180">在类中，你可以声明每个成员使用其自己的访问级别。</span><span class="sxs-lookup"><span data-stu-id="b73e2-180">Within a class, you can declare each member with its own access level.</span></span> <span data-ttu-id="b73e2-181">类成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量，哪些默认为[私有](../../../visual-basic/language-reference/modifiers/private.md)访问。</span><span class="sxs-lookup"><span data-stu-id="b73e2-181">Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access.</span></span> <span data-ttu-id="b73e2-182">如果类具有限制性更强的访问其成员之一不同，类访问级别优先。</span><span class="sxs-lookup"><span data-stu-id="b73e2-182">When a class has more restricted access than one of its members, the class access level takes precedence.</span></span>  
   
--   **范围。**类的范围遍及包含它的命名空间、类、结构或模块。  
+-   <span data-ttu-id="b73e2-183">**作用域。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-183">**Scope.**</span></span> <span data-ttu-id="b73e2-184">类是在其包含的命名空间、 类、 结构或模块整个范围内。</span><span class="sxs-lookup"><span data-stu-id="b73e2-184">A class is in scope throughout its containing namespace, class, structure, or module.</span></span>  
   
-     每个类成员的范围是整个类。  
+     <span data-ttu-id="b73e2-185">每个类成员的作用域是整个类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-185">The scope of every class member is the entire class.</span></span>  
   
-     **生存期。**Visual Basic 不支持静态类。  模块提供了与静态类等效的功能。  有关更多信息，请参见 [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)。  
+     <span data-ttu-id="b73e2-186">**生存期。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-186">**Lifetime.**</span></span> <span data-ttu-id="b73e2-187">Visual Basic 不支持静态的类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-187">Visual Basic does not support static classes.</span></span> <span data-ttu-id="b73e2-188">模块提供了在功能上等效的静态类。</span><span class="sxs-lookup"><span data-stu-id="b73e2-188">The functional equivalent of a static class is provided by a module.</span></span> <span data-ttu-id="b73e2-189">有关详细信息，请参阅[模块语句](../../../visual-basic/language-reference/statements/module-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-189">For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-     类成员根据其声明的方式和位置而具有不同的生存期。  有关更多信息，请参见 [Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+     <span data-ttu-id="b73e2-190">类成员具有具体取决于如何以及在何处声明它们的生存期。</span><span class="sxs-lookup"><span data-stu-id="b73e2-190">Class members have lifetimes depending on how and where they are declared.</span></span> <span data-ttu-id="b73e2-191">有关详细信息，请参阅[Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-191">For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   **限定。**类外部的代码必须使用该类的名称限定成员的名称。  
+-   <span data-ttu-id="b73e2-192">**限定。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-192">**Qualification.**</span></span> <span data-ttu-id="b73e2-193">类外部的代码必须限定该类同名的成员的名称。</span><span class="sxs-lookup"><span data-stu-id="b73e2-193">Code outside a class must qualify a member's name with the name of that class.</span></span>  
   
-     如果嵌套类内部的代码建立了对编程元素的非限定性引用，Visual Basic 将首先在该嵌套类中搜索该元素，然后在其包含类中搜索，一直向外直到最外层的包含元素。  
+     <span data-ttu-id="b73e2-194">如果嵌套类中的代码进行到编程元素中的非限定的引用，Visual Basic 首先搜索搜索元素在嵌套类中，然后在它的包含类，依次类推到最外层包含元素。</span><span class="sxs-lookup"><span data-stu-id="b73e2-194">If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.</span></span>  
   
-## 类和模块  
- 这些元素具有许多相似性，但是也存在一些重要的差异。  
+## <a name="classes-and-modules"></a><span data-ttu-id="b73e2-195">类和模块</span><span class="sxs-lookup"><span data-stu-id="b73e2-195">Classes and Modules</span></span>  
+ <span data-ttu-id="b73e2-196">这些元素包含的许多相似之处，但有一些重要的区别。</span><span class="sxs-lookup"><span data-stu-id="b73e2-196">These elements have many similarities, but there are some important differences as well.</span></span>  
   
--   **术语。**以前的 Visual Basic 版本识别两种类型的模块：类模块（.cls 文件）和标准模块（.bas 文件）。  当前版本会分别调用这些类和模块。  
+-   <span data-ttu-id="b73e2-197">**术语。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-197">**Terminology.**</span></span> <span data-ttu-id="b73e2-198">Visual Basic 早期版本识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。</span><span class="sxs-lookup"><span data-stu-id="b73e2-198">Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files).</span></span> <span data-ttu-id="b73e2-199">当前版本调用这些*类*和*模块*分别。</span><span class="sxs-lookup"><span data-stu-id="b73e2-199">The current version calls these *classes* and *modules*, respectively.</span></span>  
   
--   **共享成员。**可以控制类的成员是共享成员还是实例成员。  
+-   <span data-ttu-id="b73e2-200">**共享的成员。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-200">**Shared Members.**</span></span> <span data-ttu-id="b73e2-201">你可以控制类的成员是共享成员还是实例成员。</span><span class="sxs-lookup"><span data-stu-id="b73e2-201">You can control whether a member of a class is a shared or instance member.</span></span>  
   
--   **面向对象。**类是面向对象的，但模块不是。  您可以创建类的一个或多个实例。  有关更多信息，请参见 [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+-   <span data-ttu-id="b73e2-202">**面向对象。**</span><span class="sxs-lookup"><span data-stu-id="b73e2-202">**Object Orientation.**</span></span> <span data-ttu-id="b73e2-203">类是面向对象的但模块不是。</span><span class="sxs-lookup"><span data-stu-id="b73e2-203">Classes are object-oriented, but modules are not.</span></span> <span data-ttu-id="b73e2-204">你可以创建一个或多个类的实例。</span><span class="sxs-lookup"><span data-stu-id="b73e2-204">You can create one or more instances of a class.</span></span> <span data-ttu-id="b73e2-205">有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b73e2-205">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
-## 示例  
- 下面的示例使用 `Class` 语句定义一个类和几个成员。  
+## <a name="example"></a><span data-ttu-id="b73e2-206">示例</span><span class="sxs-lookup"><span data-stu-id="b73e2-206">Example</span></span>  
+ <span data-ttu-id="b73e2-207">下面的示例使用`Class`语句以定义一个类和多个成员。</span><span class="sxs-lookup"><span data-stu-id="b73e2-207">The following example uses a `Class` statement to define a class and several members.</span></span>  
   
  [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
-## 请参阅  
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)   
- [对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+## <a name="see-also"></a><span data-ttu-id="b73e2-208">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b73e2-208">See Also</span></span>  
+ [<span data-ttu-id="b73e2-209">对象和类</span><span class="sxs-lookup"><span data-stu-id="b73e2-209">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="b73e2-210">结构和类</span><span class="sxs-lookup"><span data-stu-id="b73e2-210">Structures and Classes</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="b73e2-211">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="b73e2-211">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="b73e2-212">Module 语句</span><span class="sxs-lookup"><span data-stu-id="b73e2-212">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="b73e2-213">Property 语句</span><span class="sxs-lookup"><span data-stu-id="b73e2-213">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="b73e2-214">对象生存期：如何创建和销毁对象</span><span class="sxs-lookup"><span data-stu-id="b73e2-214">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [<span data-ttu-id="b73e2-215">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="b73e2-215">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="b73e2-216">如何：使用泛型类</span><span class="sxs-lookup"><span data-stu-id="b73e2-216">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

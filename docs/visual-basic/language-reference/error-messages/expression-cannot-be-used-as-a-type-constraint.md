@@ -1,58 +1,56 @@
 ---
-title: "“&lt;表达式&gt;”不能用作类型约束 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc32061"
-  - "vbc32061"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32061"
+title: "&#39;&lt;表达式&gt;&#39; 不能用作类型约束"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc32061
+- vbc32061
+helpviewer_keywords: BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 054c05747491afb02601df00225a703560cbe91c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# “&lt;表达式&gt;”不能用作类型约束
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-约束列表包括了无法对类型形参进行有效约束的表达式。  
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="cff6c-102">&#39;&lt;表达式&gt;&#39; 不能用作类型约束</span><span class="sxs-lookup"><span data-stu-id="cff6c-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
+<span data-ttu-id="cff6c-103">约束列表包含的表达式不表示对类型形参的有效约束。</span><span class="sxs-lookup"><span data-stu-id="cff6c-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- 约束列表对传递给类型形参的类型实参有一定要求。  您可以以任何组合指定下列要求：  
+ <span data-ttu-id="cff6c-104">约束列表对传递给类型形参的类型实参有一定要求。</span><span class="sxs-lookup"><span data-stu-id="cff6c-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="cff6c-105">你可以采用任意组合指定以下要求：</span><span class="sxs-lookup"><span data-stu-id="cff6c-105">You can specify the following requirements in any combination:</span></span>  
   
--   类型实参必须实现一个或多个接口  
+-   <span data-ttu-id="cff6c-106">该类型实参必须实现一个或多个接口</span><span class="sxs-lookup"><span data-stu-id="cff6c-106">The type argument must implement one or more interfaces</span></span>  
   
--   类型实参必须从最多一个类中继承  
+-   <span data-ttu-id="cff6c-107">该类型实参最多从一个类继承</span><span class="sxs-lookup"><span data-stu-id="cff6c-107">The type argument must inherit from at most one class</span></span>  
   
--   类型实参必须公开创建的代码可访问的无形参构造函数（包括 `New` 约束）  
+-   <span data-ttu-id="cff6c-108">类型实参必须公开一个创建代码可以访问的无形参构造函数（包括 `New` 约束）</span><span class="sxs-lookup"><span data-stu-id="cff6c-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- 如果您在约束列表中未包括任何特定的类或接口，则可以通过指定以下条件之一提出更一般的要求：  
+ <span data-ttu-id="cff6c-109">如果不在约束列表中包括任何特定类或接口，则可以通过指定以下内容之一来施加更常规的要求：</span><span class="sxs-lookup"><span data-stu-id="cff6c-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
--   类型实参必须是值类型（包括 `Structure` 约束）  
+-   <span data-ttu-id="cff6c-110">类型参数必须是值类型（包括 `Structure` 约束）</span><span class="sxs-lookup"><span data-stu-id="cff6c-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
--   类型实参必须是引用类型（包括 `Class` 约束）  
+-   <span data-ttu-id="cff6c-111">类型参数必须是引用类型（包括 `Class` 约束）</span><span class="sxs-lookup"><span data-stu-id="cff6c-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- 不能为同一类型形参同时指定 `Structure` 和 `Class`，并且它们两个都只能指定一次。  
+ <span data-ttu-id="cff6c-112">不能为同一类型参数同时指定 `Structure` 和 `Class` ，并且它们两个都只能指定一次。</span><span class="sxs-lookup"><span data-stu-id="cff6c-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- **错误 ID：**BC32061  
+ <span data-ttu-id="cff6c-113">**错误 ID:** BC32061</span><span class="sxs-lookup"><span data-stu-id="cff6c-113">**Error ID:** BC32061</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cff6c-114">更正此错误</span><span class="sxs-lookup"><span data-stu-id="cff6c-114">To correct this error</span></span>  
   
--   验证表达式及其元素的拼写是否正确无误。  
+-   <span data-ttu-id="cff6c-115">验证表达式及其元素是否拼写正确。</span><span class="sxs-lookup"><span data-stu-id="cff6c-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
--   如果表达式不符合前面列出的各项要求，请将其从约束列表中移除。  
+-   <span data-ttu-id="cff6c-116">如果表达式不符合前面列出的要求，请从约束列表中将其删除。</span><span class="sxs-lookup"><span data-stu-id="cff6c-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
--   如果表达式引用接口或类，请验证编译器是否有访问该接口或类的权限。  您可能需要限定其名称，并且，可能需要添加对项目的引用。  有关更多信息，请参见 [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) 中的“项目引用”。  
+-   <span data-ttu-id="cff6c-117">如果表达式引用接口或类，请验证编译器是否有权访问该接口或类。</span><span class="sxs-lookup"><span data-stu-id="cff6c-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="cff6c-118">可能需要限定其名称，并可能需要添加一个项目引用。</span><span class="sxs-lookup"><span data-stu-id="cff6c-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="cff6c-119">有关详细信息，请参阅"项目引用"[对声明的元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="cff6c-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## 请参阅  
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [值类型和引用类型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [如何：使用“添加引用”对话框添加或移除引用](http://msdn.microsoft.com/zh-cn/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a><span data-ttu-id="cff6c-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cff6c-120">See Also</span></span>  
+ [<span data-ttu-id="cff6c-121">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="cff6c-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="cff6c-122">值类型和引用类型</span><span class="sxs-lookup"><span data-stu-id="cff6c-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="cff6c-123">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="cff6c-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="cff6c-124">NIB 如何：使用“添加引用”对话框添加或删除引用</span><span class="sxs-lookup"><span data-stu-id="cff6c-124">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

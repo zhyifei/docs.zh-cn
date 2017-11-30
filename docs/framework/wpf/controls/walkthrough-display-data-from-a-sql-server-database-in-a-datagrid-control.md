@@ -1,110 +1,116 @@
 ---
-title: "演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件 [WPF], DataGrid"
-  - "DataGrid [WPF], 显示 SQL Server 中的数据"
+title: "演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGrid [WPF], displaying data from SQL Server
+- controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c89ed9425920602f80a2407b7529b3eb215a2e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据
-在本演练中，将从 SQL Server 数据库检索数据并在 <xref:System.Windows.Controls.DataGrid> 控件的该数据。  您可以使用 ADO.NET entity framework 创建代表数据的实体类，并使用 LINQ 编写从实体类检索指定数据的查询。  
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a><span data-ttu-id="5c144-102">演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据</span><span class="sxs-lookup"><span data-stu-id="5c144-102">Walkthrough: Display Data from a SQL Server Database in a DataGrid Control</span></span>
+<span data-ttu-id="5c144-103">在本演练中，可以从 SQL Server 数据库中检索数据和显示中的这些数据<xref:System.Windows.Controls.DataGrid>控件。</span><span class="sxs-lookup"><span data-stu-id="5c144-103">In this walkthrough, you retrieve data from a SQL Server database and display that data in a <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="5c144-104">ADO.NET 实体框架用于创建表示数据，并使用 LINQ 编写从实体类检索指定的数据的查询的实体类。</span><span class="sxs-lookup"><span data-stu-id="5c144-104">You use the ADO.NET Entity Framework to create the entity classes that represent the data, and use LINQ to write a query that retrieves the specified data from an entity class.</span></span>  
   
-## 系统必备  
- 您需要以下组件来完成本演练:  
+## <a name="prerequisites"></a><span data-ttu-id="5c144-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="5c144-105">Prerequisites</span></span>  
+ <span data-ttu-id="5c144-106">你需要以下组件来完成本演练：</span><span class="sxs-lookup"><span data-stu-id="5c144-106">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]<span data-ttu-id="5c144-107">。</span><span class="sxs-lookup"><span data-stu-id="5c144-107">.</span></span>  
   
--   对 AdventureWorksLT2008 示例数据库的 SQL Server 或 SQL Server express 的正在运行的实例。  您可以从的 [CodePlex 网站](http://go.microsoft.com/fwlink/?LinkId=159848)AdventureWorksLT2008 数据库。  
+-   <span data-ttu-id="5c144-108">对运行中实例的 SQL Server 或 SQL Server Express 包含附加到它的 AdventureWorks 示例数据库的访问。</span><span class="sxs-lookup"><span data-stu-id="5c144-108">Access to a running instance of SQL Server or SQL Server Express that has the AdventureWorks sample database attached to it.</span></span> <span data-ttu-id="5c144-109">你可以下载 AdventureWorks 数据库从[GitHub](https://github.com/Microsoft/sql-server-samples/releases)。</span><span class="sxs-lookup"><span data-stu-id="5c144-109">You can download the AdventureWorks database from the [GitHub](https://github.com/Microsoft/sql-server-samples/releases).</span></span>  
   
-### 创建实体类  
+### <a name="to-create-entity-classes"></a><span data-ttu-id="5c144-110">若要创建的实体类</span><span class="sxs-lookup"><span data-stu-id="5c144-110">To create entity classes</span></span>  
   
-1.  创建新 WPF 应用程序项目在 Visual Basic 或 C\#，并将其命名为 `DataGridSQLExample`。  
+1.  <span data-ttu-id="5c144-111">在 Visual Basic 或 C# 中，创建一个新的 WPF 应用程序项目并将其命名`DataGridSQLExample`。</span><span class="sxs-lookup"><span data-stu-id="5c144-111">Create a new WPF Application project in Visual Basic or C#, and name it `DataGridSQLExample`.</span></span>  
   
-2.  在解决方案资源管理器中，右击您的项目，指向 **add**，然后选择 **新建项**。  
+2.  <span data-ttu-id="5c144-112">在解决方案资源管理器，右键单击你的项目，指向**添加**，然后选择**新项**。</span><span class="sxs-lookup"><span data-stu-id="5c144-112">In Solution Explorer, right-click your project, point to **Add**, and then select **New Item**.</span></span>  
   
-     显示 " 添加新项 " 对话框  
+     <span data-ttu-id="5c144-113">添加新项对话框。</span><span class="sxs-lookup"><span data-stu-id="5c144-113">The Add New Item dialog box appears.</span></span>  
   
-3.  在已安装的模板 " 窗格中，选择 " **数据** 并在模板列表中，选择 **ADO.NET 实体数据模型 \(edm\)**l。  
+3.  <span data-ttu-id="5c144-114">在已安装的模板窗格中，选择**数据**并在模板列表中，选择**ADO.NET 实体数据模型**l。</span><span class="sxs-lookup"><span data-stu-id="5c144-114">In the Installed Templates pane, select **Data** and in the list of templates, select **ADO.NET Entity Data Mode**l.</span></span>  
   
-     ![选择 ADO.NET 实体数据模型](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid\_SQL\_EF\_Step1")  
+     <span data-ttu-id="5c144-115">![选择 ADO.NET 实体数据模型](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")</span><span class="sxs-lookup"><span data-stu-id="5c144-115">![Select ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")</span></span>  
   
-4.  将文件命名为 `AdventureWorksModel.edmx` 然后单击 **add**。  
+4.  <span data-ttu-id="5c144-116">命名该文件`AdventureWorksModel.edmx`，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="5c144-116">Name the file `AdventureWorksModel.edmx` and then click **Add**.</span></span>  
   
-     实体数据模型向导显示。  
+     <span data-ttu-id="5c144-117">此时将显示实体数据模型向导。</span><span class="sxs-lookup"><span data-stu-id="5c144-117">The Entity Data Model Wizard appears.</span></span>  
   
-5.  在选择模型内容屏幕，选择 " **从数据库生成** 然后单击 **下一步**。  
+5.  <span data-ttu-id="5c144-118">在选择模型内容屏幕中，选择**从数据库生成**，然后单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="5c144-118">In the Choose Model Contents screen, select **Generate from database** and then click **Next**.</span></span>  
   
-     ![选择“从数据库生成”选项](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid\_SQL\_EF\_Step2")  
+     <span data-ttu-id="5c144-119">![从数据库选项中选择生成](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")</span><span class="sxs-lookup"><span data-stu-id="5c144-119">![Select Generate from database option](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")</span></span>  
   
-6.  在 " 选择您的数据连接 " 屏幕上，提供与 AdventureWorksLT2008 数据库的连接。  有关更多信息，请参见 [选择您的数据连接 " 对话框](http://go.microsoft.com/fwlink/?LinkId=160190)。  
+6.  <span data-ttu-id="5c144-120">在选择你的数据连接屏幕中，提供你 AdventureWorksLT2008 数据库的连接。</span><span class="sxs-lookup"><span data-stu-id="5c144-120">In the Choose Your Data Connection screen, provide the connection to your AdventureWorksLT2008 database.</span></span> <span data-ttu-id="5c144-121">有关详细信息，请参阅[选择数据连接对话框中](http://go.microsoft.com/fwlink/?LinkId=160190)。</span><span class="sxs-lookup"><span data-stu-id="5c144-121">For more information, see [Choose Your Data Connection Dialog Box](http://go.microsoft.com/fwlink/?LinkId=160190).</span></span>  
   
-     ![提供与数据库的连接](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step3.png "DataGrid\_SQL\_EF\_Step3")  
+     <span data-ttu-id="5c144-122">![提供到数据库的连接](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step3.png "DataGrid_SQL_EF_Step3")</span><span class="sxs-lookup"><span data-stu-id="5c144-122">![Provide connection to database](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step3.png "DataGrid_SQL_EF_Step3")</span></span>  
   
-7.  确保名称是 `AdventureWorksLT2008Entities` ，并 **保存实体在 App.Config 的连接设置** 复选框，然后单击 **下一步**。  
+7.  <span data-ttu-id="5c144-123">请确保名称是`AdventureWorksLT2008Entities`且**将实体连接设置保存在 App.Config 作为**复选框被选中，并且然后单击**下一步**。</span><span class="sxs-lookup"><span data-stu-id="5c144-123">Make sure that the name is `AdventureWorksLT2008Entities` and that the **Save entity connection settings in App.Config as** check box is selected, and then click **Next**.</span></span>  
   
-8.  在 " 选择数据库对象 " 屏幕中，展开 " 表 " 节点，然后选择 **产品** 和 **ProductCategory** 表。  
+8.  <span data-ttu-id="5c144-124">在选择数据库对象屏幕中，展开表节点中，然后选择**产品**和**ProductCategory**表。</span><span class="sxs-lookup"><span data-stu-id="5c144-124">In the Choose Your Database Objects screen, expand the Tables node, and select the **Product** and **ProductCategory** tables.</span></span>  
   
-     可以为所有的实体类表;但是，在此示例中只从这两个表检索数据。  
+     <span data-ttu-id="5c144-125">你可以为生成实体类的所有表;但是，在此示例中你只能检索数据这些两个表中。</span><span class="sxs-lookup"><span data-stu-id="5c144-125">You can generate entity classes for all of the tables; however, in this example you only retrieve data from those two tables.</span></span>  
   
-     ![从表中选择 Product 和 ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid\_SQL\_EF\_Step4")  
+     <span data-ttu-id="5c144-126">![从表中选择 Product 和 ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")</span><span class="sxs-lookup"><span data-stu-id="5c144-126">![Select Product and ProductCategory from tables](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")</span></span>  
   
-9. 单击 **完成**。  
+9. <span data-ttu-id="5c144-127">单击 **“完成”**。</span><span class="sxs-lookup"><span data-stu-id="5c144-127">Click **Finish**.</span></span>  
   
-     产品和 ProductCategory 实体显示在实体设计器中。  
+     <span data-ttu-id="5c144-128">在实体设计器中显示 Product 和 ProductCategory 实体。</span><span class="sxs-lookup"><span data-stu-id="5c144-128">The Product and ProductCategory entities are displayed in the Entity Designer.</span></span>  
   
-     ![Product 和 ProductCategory 实体模型](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid\_SQL\_EF\_Step5")  
+     <span data-ttu-id="5c144-129">![Product 和 ProductCategory 实体模型](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")</span><span class="sxs-lookup"><span data-stu-id="5c144-129">![Product and ProductCategory entity models](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")</span></span>  
   
-### 检索并显示数据  
+### <a name="to-retrieve-and-present-the-data"></a><span data-ttu-id="5c144-130">用于检索和呈现数据</span><span class="sxs-lookup"><span data-stu-id="5c144-130">To retrieve and present the data</span></span>  
   
-1.  打开 MainWindow.xaml 文件。  
+1.  <span data-ttu-id="5c144-131">打开 MainWindow.xaml 文件。</span><span class="sxs-lookup"><span data-stu-id="5c144-131">Open the MainWindow.xaml file.</span></span>  
   
-2.  将 <xref:System.Windows.Window> 的 <xref:System.Windows.FrameworkElement.Width%2A> 属性设置为 450。  
+2.  <span data-ttu-id="5c144-132">设置<xref:System.Windows.FrameworkElement.Width%2A>属性<xref:System.Windows.Window>为 450。</span><span class="sxs-lookup"><span data-stu-id="5c144-132">Set the <xref:System.Windows.FrameworkElement.Width%2A> property on the <xref:System.Windows.Window> to 450.</span></span>  
   
-3.  在 XAML 编辑器中，添加对于 `<Grid>` 和 `</Grid>` 标记之间添加以下 <xref:System.Windows.Controls.DataGrid> 标记将名为 `dataGrid1`的 <xref:System.Windows.Controls.DataGrid> 。  
+3.  <span data-ttu-id="5c144-133">在 XAML 编辑器中，添加以下<xref:System.Windows.Controls.DataGrid>标记之间`<Grid>`和`</Grid>`标记，以添加<xref:System.Windows.Controls.DataGrid>名为`dataGrid1`。</span><span class="sxs-lookup"><span data-stu-id="5c144-133">In the XAML editor, add the following <xref:System.Windows.Controls.DataGrid> tag between the `<Grid>` and `</Grid>` tags to add a <xref:System.Windows.Controls.DataGrid> named `dataGrid1`.</span></span>  
   
-     [!code-xml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]  
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]  
   
-     ![含 DataGrid 的窗口](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid\_SQL\_EF\_Step6")  
+     <span data-ttu-id="5c144-134">![含 DataGrid 的窗口](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")</span><span class="sxs-lookup"><span data-stu-id="5c144-134">![Window with DataGrid](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")</span></span>  
   
-4.  选择 <xref:System.Windows.Window>。  
+4.  <span data-ttu-id="5c144-135">选择 <xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5c144-135">Select the <xref:System.Windows.Window>.</span></span>  
   
-5.  使用 " 属性 " 窗口或 XAML 编辑器中，创建名为 <xref:System.Windows.FrameworkElement.Loaded> 事件的 `Window_Loaded` 的 <xref:System.Windows.Window> 的事件处理程序。  有关更多信息，请参见 [如何：创建简单的事件处理程序](http://msdn.microsoft.com/zh-cn/b1456e07-9dec-4354-99cf-18666b64f480)。  
+5.  <span data-ttu-id="5c144-136">使用属性窗口或 XAML 编辑器，创建的事件处理程序<xref:System.Windows.Window>名为`Window_Loaded`为<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="5c144-136">Using the Properties window or XAML editor, create an event handler for the <xref:System.Windows.Window> named `Window_Loaded` for the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span> <span data-ttu-id="5c144-137">有关详细信息，请参阅[如何： 创建一个简单的事件处理程序](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480)。</span><span class="sxs-lookup"><span data-stu-id="5c144-137">For more information, see [How to: Create a Simple Event Handler](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).</span></span>  
   
-     下面显示了 MainWindow.xaml 的 XAML。  
+     <span data-ttu-id="5c144-138">以下显示 MainWindow.xaml XAML。</span><span class="sxs-lookup"><span data-stu-id="5c144-138">The following shows the XAML for MainWindow.xaml.</span></span>  
   
     > [!NOTE]
-    >  如果在 MainWindow.xaml 的第一行使用的是 Visual Basic，，请在 `x:Class="MainWindow"`替换 `x:Class="DataGridSQLExample.MainWindow"` 。  
+    >  <span data-ttu-id="5c144-139">如果使用的 Visual Basic 中，在 MainWindow.xaml 的第一行中，将`x:Class="DataGridSQLExample.MainWindow"`与`x:Class="MainWindow"`。</span><span class="sxs-lookup"><span data-stu-id="5c144-139">If you are using Visual Basic, in the first line of MainWindow.xaml, replace `x:Class="DataGridSQLExample.MainWindow"` with `x:Class="MainWindow"`.</span></span>  
   
-     [!code-xml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]  
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]  
   
-6.  打开代码隐藏文件 \(MainWindow.xaml.vb 或 MainWindow.xaml.cs\) <xref:System.Windows.Window>的。  
+6.  <span data-ttu-id="5c144-140">打开代码隐藏文件 （MainWindow.xaml.vb 或 MainWindow.xaml.cs） <xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="5c144-140">Open the code-behind file (MainWindow.xaml.vb or MainWindow.xaml.cs) for the <xref:System.Windows.Window>.</span></span>  
   
-7.  添加下面的代码联接表仅检索特定的值和设置 <xref:System.Windows.Controls.DataGrid> 的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 特性添加到查询的结果。  
+7.  <span data-ttu-id="5c144-141">添加以下代码来联接表中检索只有特定的值和设置<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性<xref:System.Windows.Controls.DataGrid>到查询的结果。</span><span class="sxs-lookup"><span data-stu-id="5c144-141">Add the following code to retrieve only specific values from the joined tables and set the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property of the <xref:System.Windows.Controls.DataGrid> to the results of the query.</span></span>  
   
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]  
   
-8.  运行此示例。  
+8.  <span data-ttu-id="5c144-142">运行示例。</span><span class="sxs-lookup"><span data-stu-id="5c144-142">Run the example.</span></span>  
   
-     显示数据的应该看到 <xref:System.Windows.Controls.DataGrid> 。  
+     <span data-ttu-id="5c144-143">你应该会看到<xref:System.Windows.Controls.DataGrid>显示数据。</span><span class="sxs-lookup"><span data-stu-id="5c144-143">You should see a <xref:System.Windows.Controls.DataGrid> that displays data.</span></span>  
   
-     ![带有来自 SQL 数据库的数据的 DataGrid](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid\_SQL\_EF\_Step7")  
+     <span data-ttu-id="5c144-144">![SQL 数据库中的数据的 DataGrid](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")</span><span class="sxs-lookup"><span data-stu-id="5c144-144">![DataGrid with data from SQL database](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")</span></span>  
   
-## 后续步骤  
+## <a name="next-steps"></a><span data-ttu-id="5c144-145">后续步骤</span><span class="sxs-lookup"><span data-stu-id="5c144-145">Next Steps</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Controls.DataGrid>   
- [如何:我开始使用在 WPF 应用程序中 entity framework?](http://go.microsoft.com/fwlink/?LinkId=159868)
+## <a name="see-also"></a><span data-ttu-id="5c144-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5c144-146">See Also</span></span>  
+ <xref:System.Windows.Controls.DataGrid>  
+ [<span data-ttu-id="5c144-147">如何 i： 开始使用 WPF 应用程序中的实体框架？</span><span class="sxs-lookup"><span data-stu-id="5c144-147">How Do I: Get Started with Entity Framework in WPF Applications?</span></span>](http://go.microsoft.com/fwlink/?LinkId=159868)

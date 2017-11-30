@@ -1,322 +1,305 @@
 ---
-title: "关键帧动画概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 关键帧"
-  - "关键帧 [WPF], 关于关键帧动画"
-  - "多个动画目标值"
+title: "关键帧动画概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], key-frame
+- key frames [WPF], about key-frame animations
+- multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 关键帧动画概述
-本主题将向您介绍关键帧动画。  通过关键帧动画，您可以使用两个以上的目标值制作动画，并控制动画的内插方法。  
-  
- 本主题包括以下部分。  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [必备组件](#prerequisites)  
-  
--   [使用关键帧动画](#keyframeanimations)  
-  
--   [相关主题](#seeAlsoToggle)  
+# <a name="key-frame-animations-overview"></a><span data-ttu-id="ccd62-102">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="ccd62-102">Key-Frame Animations Overview</span></span>
+<span data-ttu-id="ccd62-103">本主题介绍关键帧动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-103">This topic introduces you to key-frame animations.</span></span> <span data-ttu-id="ccd62-104">通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。</span><span class="sxs-lookup"><span data-stu-id="ccd62-104">Key-frame animations enable you to animate using more than two target values, and control an animation's interpolation method.</span></span>  
   
 <a name="prerequisites"></a>   
-## 必备组件  
- 若要理解本概述，您应熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 动画和时间线。  有关动画的简介，请参见[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。它还有助于您熟悉 From\/To\/By 动画。  有关更多信息，请参见 [From\/To\/By 动画概述](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="ccd62-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="ccd62-105">Prerequisites</span></span>  
+ <span data-ttu-id="ccd62-106">若要理解本概述，用户应熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 动画和时间线。</span><span class="sxs-lookup"><span data-stu-id="ccd62-106">To understand this overview, you should be familiar with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animations and timelines.</span></span> <span data-ttu-id="ccd62-107">有关动画的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-107">For an introduction to animations, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span> <span data-ttu-id="ccd62-108">它还有助于熟悉 From/To/By 动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-108">It also helps to be familiar with From/To/By animations.</span></span> <span data-ttu-id="ccd62-109">有关详细信息，请参阅“From/To/By 动画概述”。</span><span class="sxs-lookup"><span data-stu-id="ccd62-109">For more information, see the From/To/By Animations Overview.</span></span>  
   
 <a name="whatisakeyframeanimation"></a>   
-## 什么是关键帧动画？  
- 与 From\/To\/By 动画类似，关键帧动画以动画形式显示了目标属性的值。  它通过其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 创建其目标值之间的过渡。  但是，From\/To\/By 动画可以创建两个值之间的过渡，而单个关键帧动画则可以创建任意数量的目标值之间的过渡。  与 From\/To\/By 动画不同的是，关键帧动画没有设置其目标值所需的 From、To 或 By 属性。  关键帧动画的目标值是使用关键帧对象进行描述的，因此称作“关键帧动画”。  若要指定动画的目标值，您可以创建关键帧对象并将其添加到动画的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 集合内。  动画运行时，将在您指定的帧之间过渡。  
+## <a name="what-is-a-key-frame-animation"></a><span data-ttu-id="ccd62-110">什么是关键帧动画？</span><span class="sxs-lookup"><span data-stu-id="ccd62-110">What is a Key-Frame Animation?</span></span>  
+ <span data-ttu-id="ccd62-111">与 From/To/By 动画类似，关键帧动画对目标属性的值进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-111">Like a From/To/By animation, a key-frame animation animates the value of a target property.</span></span> <span data-ttu-id="ccd62-112">它通过创建其目标值之间的转换其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-112">It creates a transition among its target values over its <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span> <span data-ttu-id="ccd62-113">但是，From/To/By 动画可以在两个值之间创建过渡，而单个关键帧动画可以在任意数量的目标值之间创建过渡。</span><span class="sxs-lookup"><span data-stu-id="ccd62-113">However, while a From/To/By animation creates a transition between two values, a single key-frame animation can create transitions among any number of target values.</span></span> <span data-ttu-id="ccd62-114">不同于 From/To/By 动画，关键帧动画没有设置其目标值所需的 From、To 或 By 属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-114">Unlike a From/To/By animation, a key frame animation has no From, To, or By properties with which to set its target values.</span></span> <span data-ttu-id="ccd62-115">关键帧动画的目标值使用关键帧对象进行描述，因此称作“关键帧动画”。</span><span class="sxs-lookup"><span data-stu-id="ccd62-115">A key-frame animation's target values are described using key frames objects (hence the term, "key-frame animation").</span></span> <span data-ttu-id="ccd62-116">若要指定动画的目标值，您可以创建关键帧对象并将它们添加到动画的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="ccd62-116">To specify the animation's target values, you create key frame objects and add them to the animation's <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.</span></span> <span data-ttu-id="ccd62-117">动画运行时，将在指定的帧之间过渡。</span><span class="sxs-lookup"><span data-stu-id="ccd62-117">When the animation runs, it transitions between the frames you specified.</span></span>  
   
- 某些关键帧方法除支持多个目标值外，还支持多个内插方法。  动画的内插方法定义了从某个值过渡到下一个值的方式。  有三种内插类型：[离散](GTMT)、[线性](GTMT)和[样条](GTMT)。  
+ <span data-ttu-id="ccd62-118">某些关键帧方法除支持多个目标值外，甚至还支持多个内插方法。</span><span class="sxs-lookup"><span data-stu-id="ccd62-118">In addition to supporting multiple target values, some key-frame methods even support multiple interpolation methods.</span></span> <span data-ttu-id="ccd62-119">动画的内插方法定义了从一个值过渡到下一个值的方式。</span><span class="sxs-lookup"><span data-stu-id="ccd62-119">An animation's interpolation method defines how it transitions from one value to the next.</span></span> <span data-ttu-id="ccd62-120">有三种内插类型：离散、线性和曲线。</span><span class="sxs-lookup"><span data-stu-id="ccd62-120">There are three types of interpolations: discrete, linear, and splined.</span></span>  
   
- 若要对关键帧动画进行动画处理，需要完成下列步骤。  
+ <span data-ttu-id="ccd62-121">若要使用关键帧动画进行动画处理，需要完成下列步骤。</span><span class="sxs-lookup"><span data-stu-id="ccd62-121">To animate with a key-frame animation, you complete the following steps.</span></span>  
   
--   声明动画并以针对 From\/To\/By 动画的方式指定其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
+-   <span data-ttu-id="ccd62-122">声明动画并指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像 from/to/by 动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-122">Declare the animation and specify its <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, just like you would for a from/to/by animation.</span></span>  
   
--   对于每一个目标值，创建相应类型的关键帧，设置其值和 <xref:System.Windows.Media.Animation.KeyTime>，并将其添加到动画的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 集合内。  
+-   <span data-ttu-id="ccd62-123">对于每个目标值，请创建适当类型的一个关键帧，将其值设置和<xref:System.Windows.Media.Animation.KeyTime>，并将其添加到动画的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="ccd62-123">For each target value, create a key frame of the appropriate type, set its value and <xref:System.Windows.Media.Animation.KeyTime>, and add it to the animation's <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.</span></span>  
   
--   以针对 From\/To\/By 动画的方式将动画与属性相关联。  有关使用演示图板将动画应用到属性的更多信息，请参见[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+-   <span data-ttu-id="ccd62-124">以针对 From/To/By 动画的方式将该动画与属性相关联。</span><span class="sxs-lookup"><span data-stu-id="ccd62-124">Associate the animation with a property, just like you would with a From/To/By animation.</span></span> <span data-ttu-id="ccd62-125">有关使用演示图板将动画应用到属性的详细信息，请参阅[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-125">For more information about applying an animation to a property using a storyboard, see [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 对 <xref:System.Windows.Shapes.Rectangle> 元素在四个不同的位置进行动画处理。  
+ <span data-ttu-id="ccd62-126">下面的示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>要进行动画处理<xref:System.Windows.Shapes.Rectangle>到四个不同的位置的元素。</span><span class="sxs-lookup"><span data-stu-id="ccd62-126">The following example uses a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> to animate a <xref:System.Windows.Shapes.Rectangle> element to four different locations.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- 您可以通过在标记和代码中使用 <xref:System.Windows.Media.Animation.Storyboard>，或者通过在代码中使用 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法以类似于针对 From\/To\/By 动画的方式将关键帧动画应用于属性。  还可以使用关键帧动画创建 <xref:System.Windows.Media.Animation.AnimationClock>，并将其应用于一个或多个属性。  有关应用动画的各种方法的更多信息，请参见[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ <span data-ttu-id="ccd62-127">如 From/To/By 动画关键帧动画可以通过使用应用于属性<xref:System.Windows.Media.Animation.Storyboard>标记和代码中或通过使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>代码中的方法。</span><span class="sxs-lookup"><span data-stu-id="ccd62-127">Like a From/To/By animation, a key-frame animation can be applied to a property by using a <xref:System.Windows.Media.Animation.Storyboard> in markup and code or by using the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method in code.</span></span> <span data-ttu-id="ccd62-128">此外可以使用关键帧动画来创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-128">You may also use a key-frame animation to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to one or more properties.</span></span> <span data-ttu-id="ccd62-129">有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-129">For more information about the different methods for applying animations, see the [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
 <a name="animation_types"></a>   
-## 关键帧动画类型  
- 由于动画生成属性值，因此对于不同的属性类型，会有不同的动画类型。  若要对采用 <xref:System.Double> 的属性（例如元素的 <xref:System.Windows.FrameworkElement.Width%2A> 属性）进行动画处理，请使用生成 <xref:System.Double> 值的动画。  若要对采用 <xref:System.Windows.Point> 的属性进行动画处理，请使用生成 <xref:System.Windows.Point> 值的动画，依此类推。  
+## <a name="key-frame-animation-types"></a><span data-ttu-id="ccd62-130">关键帧动画类型</span><span class="sxs-lookup"><span data-stu-id="ccd62-130">Key-Frame Animation Types</span></span>  
+ <span data-ttu-id="ccd62-131">由于动画会生成属性值，因此不同的属性类型具有不同的动画类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-131">Because animations generate property values, there are different animation types for different property types.</span></span> <span data-ttu-id="ccd62-132">要进行动画处理的属性<xref:System.Double>(例如元素<xref:System.Windows.FrameworkElement.Width%2A>属性)，使用动画生成<xref:System.Double>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-132">To animate a property that takes a <xref:System.Double> (such as an element's <xref:System.Windows.FrameworkElement.Width%2A> property), you use an animation that produces <xref:System.Double> values.</span></span> <span data-ttu-id="ccd62-133">要进行动画处理的属性<xref:System.Windows.Point>，使用动画生成<xref:System.Windows.Point>值，等等。</span><span class="sxs-lookup"><span data-stu-id="ccd62-133">To animate a property that takes a <xref:System.Windows.Point>, you use an animation that produces <xref:System.Windows.Point> values, and so on.</span></span>  
   
- 关键帧动画类属于 <xref:System.Windows.Media.Animation> 命名空间，并遵守下列命名约定：  
+ <span data-ttu-id="ccd62-134">关键帧动画类属于<xref:System.Windows.Media.Animation>命名空间和遵守以下命名约定：</span><span class="sxs-lookup"><span data-stu-id="ccd62-134">The key-frame animation classes belong to the <xref:System.Windows.Media.Animation> namespace and adhere to the following naming convention:</span></span>  
   
- *\<类型\>* `AnimationUsingKeyFrames`  
+ <span data-ttu-id="ccd62-135">*\<Type>* `AnimationUsingKeyFrames`</span><span class="sxs-lookup"><span data-stu-id="ccd62-135">*\<Type>* `AnimationUsingKeyFrames`</span></span>  
   
- 其中 *\<类型\>* 是该类进行动画处理的值的类型。  
+ <span data-ttu-id="ccd62-136">其中 *\<Type>* 为该类进行动画处理的值的类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-136">Where *\<Type>* is the type of value that the class animates.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了以下关键帧动画类。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="ccd62-137"> 提供了以下关键帧动画类。</span><span class="sxs-lookup"><span data-stu-id="ccd62-137"> provides the following key-frame animation classes.</span></span>  
   
-|属性类型|对应的 From\/To\/By 动画类|支持的内插方法|  
-|----------|--------------------------|-------------|  
-|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|离散|  
-|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|离散|  
-|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|离散|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|离散|  
-|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|离散、线性、样条|  
-|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|离散、线性、样条|  
+|<span data-ttu-id="ccd62-138">属性类型</span><span class="sxs-lookup"><span data-stu-id="ccd62-138">Property type</span></span>|<span data-ttu-id="ccd62-139">对应的 From/To/By 动画类</span><span class="sxs-lookup"><span data-stu-id="ccd62-139">Corresponding from/to/by animation class</span></span>|<span data-ttu-id="ccd62-140">支持的内插方法</span><span class="sxs-lookup"><span data-stu-id="ccd62-140">Interpolation methods supported</span></span>|  
+|-------------------|------------------------------------------------|-------------------------------------|  
+|<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-141">离散</span><span class="sxs-lookup"><span data-stu-id="ccd62-141">Discrete</span></span>|  
+|<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-142">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-142">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-143">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-143">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Decimal>|<xref:System.Windows.Media.Animation.DecimalAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-144">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-144">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-145">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-145">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int16>|<xref:System.Windows.Media.Animation.Int16AnimationUsingKeyFrames>|<span data-ttu-id="ccd62-146">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-146">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int32>|<xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames>|<span data-ttu-id="ccd62-147">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-147">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Int64>|<xref:System.Windows.Media.Animation.Int64AnimationUsingKeyFrames>|<span data-ttu-id="ccd62-148">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-148">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-149">离散</span><span class="sxs-lookup"><span data-stu-id="ccd62-149">Discrete</span></span>|  
+|<xref:System.Object>|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-150">离散</span><span class="sxs-lookup"><span data-stu-id="ccd62-150">Discrete</span></span>|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-151">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-151">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Quaternion>|<xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-152">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-152">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Rect>|<xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-153">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-153">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Rotation3D>|<xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-154">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-154">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Single>|<xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-155">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-155">Discrete, Linear, Splined</span></span>|  
+|<xref:System.String>|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-156">离散</span><span class="sxs-lookup"><span data-stu-id="ccd62-156">Discrete</span></span>|  
+|<xref:System.Windows.Size>|<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-157">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-157">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Thickness>|<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-158">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-158">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Media.Media3D.Vector3D>|<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-159">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-159">Discrete, Linear, Splined</span></span>|  
+|<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|<span data-ttu-id="ccd62-160">离散、线性、曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-160">Discrete, Linear, Splined</span></span>|  
   
 <a name="animation_target_values"></a>   
-## 目标值（关键帧）和关键时间  
- 就像在对不同属性类型进行动画处理时有不同类型的关键帧动画一样，关键帧对象的类型也各不相同：对于每种进行动画处理的值和所支持的内插方法，都有一个对象类型。  关键帧类型遵守以下命名约定：  
+## <a name="target-values-key-frames-and-key-times"></a><span data-ttu-id="ccd62-161">目标值（关键帧）和关键时间</span><span class="sxs-lookup"><span data-stu-id="ccd62-161">Target Values (key frames) and Key Times</span></span>  
+ <span data-ttu-id="ccd62-162">就像在对不同属性类型进行动画处理时有不同类型的关键帧动画一样，关键帧对象的类型也各不相同：对于每种进行动画处理的值和所支持的内插方法，都有一个对象类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-162">Just as there are different types of key-frame animations for animating different property types, there are also different types of key frame objects: one for each type of value animated and interpolation method supported.</span></span> <span data-ttu-id="ccd62-163">关键帧类型遵循以下命名约定：</span><span class="sxs-lookup"><span data-stu-id="ccd62-163">Key frame types adhere to the following naming convention:</span></span>  
   
- *\<内插方法\>\<类型\>* `KeyFrame`  
+ <span data-ttu-id="ccd62-164">*\<InterpolationMethod>\<Type>* `KeyFrame`</span><span class="sxs-lookup"><span data-stu-id="ccd62-164">*\<InterpolationMethod>\<Type>* `KeyFrame`</span></span>  
   
- 其中 *\<内插方法\>* 是关键帧使用的内插方法，*\<类型\>* 是类进行动画处理的值的类型。  支持所有三种内插方法的关键帧动画有三种关键帧类型可供您使用。  例如，您可以使用以下三种具有 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 的关键帧类型：<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>、<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 和 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> （后面部分将对内插方法进行详细说明）。  
+ <span data-ttu-id="ccd62-165">其中 *\<InterpolationMethod>* 是关键帧使用的内插方法，*\<Type>* 是类进行动画处理的值的类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-165">Where *\<InterpolationMethod>* is the interpolation method the key frame uses and *\<Type>* is the type of value that the class animates.</span></span> <span data-ttu-id="ccd62-166">支持所有三种内插方法的关键帧动画有三种关键帧类型可供使用。</span><span class="sxs-lookup"><span data-stu-id="ccd62-166">A key-frame animation that supports all three interpolation methods will have three key frame types that you can use.</span></span> <span data-ttu-id="ccd62-167">例如，你可以使用具有三个关键帧类型<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>， <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>，和<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-167">For example, you can use three key frame types with a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, and <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>.</span></span> <span data-ttu-id="ccd62-168">（后面部分将对内插方法进行详细说明。）</span><span class="sxs-lookup"><span data-stu-id="ccd62-168">(Interpolation methods are described in detail in a later section.)</span></span>  
   
- 关键帧的主要用途是指定 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。  每个关键帧类型都可提供这两种属性。  
+ <span data-ttu-id="ccd62-169">关键帧的主要目的是指定<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-169">The primary purpose of a key frame is to specify a <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> and a <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>.</span></span> <span data-ttu-id="ccd62-170">每个关键帧类型都可提供这两种属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-170">Every key frame type provides these two properties.</span></span>  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 属性指定该关键帧的目标值。  
+-   <span data-ttu-id="ccd62-171"><xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性指定该关键帧的目标值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-171">The <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property specifies the target value for that key-frame.</span></span>  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 属性指定到达关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 的时间（在动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 之内）。  
+-   <span data-ttu-id="ccd62-172"><xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性指定当 (在动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>为止。</span><span class="sxs-lookup"><span data-stu-id="ccd62-172">The <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property specifies when (within the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) a key frame's <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> is reached.</span></span>  
   
- 关键帧动画开始后，会按照由关键帧 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 属性定义的顺序来循环访问其关键帧。  
+ <span data-ttu-id="ccd62-173">关键帧动画开始后，循环访问其关键帧中定义的顺序按其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-173">When a key frame animation begins, iterates through its key frames in the order defined by their <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> properties.</span></span>  
   
--   如果时间 0 上没有关键帧，动画将在目标属性当前值和第一个关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 之间创建一个过渡；否则，动画的输出值将成为第一个关键帧的值。  
+-   <span data-ttu-id="ccd62-174">如果时间 0 上没有任何关键帧，动画将创建目标属性的当前值之间的转换和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一个关键帧; 否则，该动画的输出值将成为第一个关键帧的值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-174">If there is no key frame at time 0, the animation creates a transition between the target property's current value and the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> of the first key frame; otherwise, the animation's output value becomes the value of the first key frame.</span></span>  
   
--   动画将使用由第二个关键帧指定的内插方法来创建第一个和第二个关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 之间的过渡。  过渡起始自第一个关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>，在到达第二个关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 时结束。  
+-   <span data-ttu-id="ccd62-175">动画创建之间的转换<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>使用指定的第二个关键帧的内插方法的第一个和第二个关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-175">The animation creates a transition between the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> of the first and second key frames using the interpolation method specified by the second key frame.</span></span> <span data-ttu-id="ccd62-176">转换开始第一个关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>时结束和第二个关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>为止。</span><span class="sxs-lookup"><span data-stu-id="ccd62-176">The transition starts at the first key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> and ends when the second key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> is reached.</span></span>  
   
--   动画将继续，并创建每个后续关键帧及其前面的关键帧之间的过渡。  
+-   <span data-ttu-id="ccd62-177">动画将继续，这会创建每个后续关键帧和其前面的关键帧之间的过渡。</span><span class="sxs-lookup"><span data-stu-id="ccd62-177">The animation continues, creating transitions between each subsequent key frame and its preceding key frame.</span></span>  
   
--   最终，动画过渡到关键时间最大（等于或小于动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>）的关键帧值。  
+-   <span data-ttu-id="ccd62-178">最后，为值的最大键时间的关键帧的动画转换即等于或小于该动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-178">Finally, the animation transitions to the value of the key frame with the greatest key time that is equal to or smaller than the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span>  
   
- 如果动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 为 <xref:System.Windows.Duration.Automatic%2A>，或其 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 等于最后一个关键帧的时间，则动画将结束。  否则，如果动画的 <xref:System.Windows.Duration> 大于最后一个关键帧的关键时间，则动画的关键帧值将一直保留，直到到达其 <xref:System.Windows.Duration> 的末尾为止。  与所有动画类似，关键帧动画使用其 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 属性确定在到达其活动周期末尾时是否保留最终值。  有关更多信息，请参见 [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)。  
+ <span data-ttu-id="ccd62-179">如果该动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>是<xref:System.Windows.Duration.Automatic%2A>或其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>等于最后一个关键帧动画结束的时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-179">If the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is <xref:System.Windows.Duration.Automatic%2A> or its <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is equal to the time of the last key frame, the animation ends.</span></span> <span data-ttu-id="ccd62-180">否则为如果该动画的<xref:System.Windows.Duration>大于最后一个关键帧的关键帧值，直至到达末尾的动画保留的关键时间其<xref:System.Windows.Duration>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-180">Otherwise, if the animation's <xref:System.Windows.Duration> is greater than the key time of the last key frame, the animation holds the key frame value until it reaches the end of its <xref:System.Windows.Duration>.</span></span> <span data-ttu-id="ccd62-181">如所有动画关键帧动画使用其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性来确定是否为其最终值在到达其有效期末尾时。</span><span class="sxs-lookup"><span data-stu-id="ccd62-181">Like all animations, a key-frame animation uses its <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property to determine whether it holds it final value when it reaches the end of its active period.</span></span> <span data-ttu-id="ccd62-182">有关详细信息，请参阅[计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-182">For more information, see the [Timing Behaviors Overview](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).</span></span>  
   
- 下面的示例使用在前面的示例中定义的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 对象来演示 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 属性的工作方式。  
+ <span data-ttu-id="ccd62-183">下面的示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>对象定义在前面的示例演示如何<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性的工作。</span><span class="sxs-lookup"><span data-stu-id="ccd62-183">The following example uses the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> object defined in the preceding example to demonstrate how the <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> and <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> properties work.</span></span>  
   
--   第一个关键帧立即将动画的输出值设置为 0。  
+-   <span data-ttu-id="ccd62-184">第一个关键帧立即将动画的输出值设置为 0。</span><span class="sxs-lookup"><span data-stu-id="ccd62-184">The first key frame immediately sets the animation's output value to 0.</span></span>  
   
--   第二个关键帧在 0 和 350 之间进行动画移动。  它的起始位置是第一个关键帧的结束位置（时间 \= 0 秒），播放 2 秒钟，结束位置为时间 \= 0:0:2。  
+-   <span data-ttu-id="ccd62-185">第二个关键帧在 0 和 350 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-185">The second key frame animates from 0 to 350.</span></span> <span data-ttu-id="ccd62-186">它在第一个关键帧结束后开始（开始时间 = 0 秒），播放 2 秒钟，结束时间 = 0:0:2。</span><span class="sxs-lookup"><span data-stu-id="ccd62-186">It starts after the first key frame ends (at time = 0 seconds) and plays for 2 seconds, ending at time = 0:0:2.</span></span>  
   
--   第三个关键帧在 350 和 50 之间进行动画移动。  它的起始位置是第二个关键帧的结束位置（时间 \= 2 秒），播放 5 秒钟，结束位置为时间 \= 0:0:7。  
+-   <span data-ttu-id="ccd62-187">第三个关键帧在 350 和 50 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-187">The third key frame animates from 350 to 50.</span></span> <span data-ttu-id="ccd62-188">它在第二个关键帧结束时开始（开始时间 = 2 秒），播放 5 秒钟，结束时间 = 0:0:7。</span><span class="sxs-lookup"><span data-stu-id="ccd62-188">It starts when the second key frame ends (at time = 2 seconds) and plays for 5 seconds, ending at time = 0:0:7.</span></span>  
   
--   第四个关键帧在 50 和 200 之间进行动画移动。  它的起始位置是第三个关键帧的结束位置（时间 \= 7 秒），播放 1 秒钟，结束位置为时间 \= 0:0:8。  
+-   <span data-ttu-id="ccd62-189">第四个关键帧在 50 和 200 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-189">The fourth key frame animates from 50 to 200.</span></span> <span data-ttu-id="ccd62-190">它在第三个关键帧结束时开始（开始时间 = 7 秒），播放 1 秒钟，结束时间 = 0:0:8。</span><span class="sxs-lookup"><span data-stu-id="ccd62-190">It starts when the third key frame ends (at time = 7 seconds) and plays for 1 second, ending at time = 0:0:8.</span></span>  
   
--   由于动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性设置为 10 秒，该动画将其最终值保留两秒钟，并将在时间 \= 0:0:10 时结束。  
+-   <span data-ttu-id="ccd62-191">因为<xref:System.Windows.Media.Animation.Timeline.Duration%2A>动画的属性已设置为 10 秒，动画在结束之前的两秒钟为其最终值在时间 = 0:0:10。</span><span class="sxs-lookup"><span data-stu-id="ccd62-191">Because the <xref:System.Windows.Media.Animation.Timeline.Duration%2A> property of the animation was set to 10 seconds, the animation holds its final value for two seconds before ending at time = 0:0:10.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
 <a name="interpolationmethods"></a>   
-## 内插方法  
- 前面部分提到了某些关键帧动画支持多种内插方法。  动画的内插对动画在其持续时间内在值之间进行过渡的方式进行了描述。  通过选择您的动画将要使用哪种关键帧类型，您可以定义该关键帧段的内插方法。  有三种类型的内插方法：线性、离散和样条。  
+## <a name="interpolation-methods"></a><span data-ttu-id="ccd62-192">内插方法</span><span class="sxs-lookup"><span data-stu-id="ccd62-192">Interpolation Methods</span></span>  
+ <span data-ttu-id="ccd62-193">前面部分提到了某些关键帧动画支持多种内插方法。</span><span class="sxs-lookup"><span data-stu-id="ccd62-193">The preceding sections mentioned that some key-frame animations support multiple interpolation methods.</span></span> <span data-ttu-id="ccd62-194">动画的内插对动画在其持续时间内在值之间进行过渡的方式进行了描述。</span><span class="sxs-lookup"><span data-stu-id="ccd62-194">An animation's interpolation describes how an animation transitions between values over its duration.</span></span> <span data-ttu-id="ccd62-195">通过选择动画要使用哪种关键帧类型，可以定义该关键帧段的内插方法。</span><span class="sxs-lookup"><span data-stu-id="ccd62-195">By selecting which key frame type you use with your animation, you can define the interpolation method for that key frame segment.</span></span> <span data-ttu-id="ccd62-196">有三种不同类型的内插方法：线性、离散和曲线。</span><span class="sxs-lookup"><span data-stu-id="ccd62-196">There are three different types of interpolation methods: linear, discrete, and splined.</span></span>  
   
-### 线性内插  
- 使用[线性内插](GTMT)，动画将以段持续期间内的固定速度来播放。  例如，如果关键帧段从 0 过渡到 10，持续期间为 5 秒，则动画会在指定时间输出以下值：  
+### <a name="linear-interpolation"></a><span data-ttu-id="ccd62-197">线性内插</span><span class="sxs-lookup"><span data-stu-id="ccd62-197">Linear Interpolation</span></span>  
+ <span data-ttu-id="ccd62-198">使用线性内插，动画将以段持续时间的固定速度进行播放。</span><span class="sxs-lookup"><span data-stu-id="ccd62-198">With linear interpolation, the animation progresses at a constant rate of the segment duration.</span></span> <span data-ttu-id="ccd62-199">例如，如果关键帧段从 0 过渡到 10，持续时间为 5 秒，则动画会在指定时间输出以下值：</span><span class="sxs-lookup"><span data-stu-id="ccd62-199">For example, if a key frame segment transitions from 0 to 10 over a duration of 5 seconds, the animation will output the following values at the specified times:</span></span>  
   
-|时间|输出值|  
-|--------|---------|  
-|0|0|  
-|1|2|  
-|2|4|  
-|3|6|  
-|4|8|  
-|4.25|8.5|  
-|4.5|9|  
-|5|10|  
+|<span data-ttu-id="ccd62-200">时间</span><span class="sxs-lookup"><span data-stu-id="ccd62-200">Time</span></span>|<span data-ttu-id="ccd62-201">输出值</span><span class="sxs-lookup"><span data-stu-id="ccd62-201">Output value</span></span>|  
+|----------|------------------|  
+|<span data-ttu-id="ccd62-202">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-202">0</span></span>|<span data-ttu-id="ccd62-203">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-203">0</span></span>|  
+|<span data-ttu-id="ccd62-204">1</span><span class="sxs-lookup"><span data-stu-id="ccd62-204">1</span></span>|<span data-ttu-id="ccd62-205">2</span><span class="sxs-lookup"><span data-stu-id="ccd62-205">2</span></span>|  
+|<span data-ttu-id="ccd62-206">2</span><span class="sxs-lookup"><span data-stu-id="ccd62-206">2</span></span>|<span data-ttu-id="ccd62-207">4</span><span class="sxs-lookup"><span data-stu-id="ccd62-207">4</span></span>|  
+|<span data-ttu-id="ccd62-208">3</span><span class="sxs-lookup"><span data-stu-id="ccd62-208">3</span></span>|<span data-ttu-id="ccd62-209">6</span><span class="sxs-lookup"><span data-stu-id="ccd62-209">6</span></span>|  
+|<span data-ttu-id="ccd62-210">4</span><span class="sxs-lookup"><span data-stu-id="ccd62-210">4</span></span>|<span data-ttu-id="ccd62-211">8</span><span class="sxs-lookup"><span data-stu-id="ccd62-211">8</span></span>|  
+|<span data-ttu-id="ccd62-212">4.25</span><span class="sxs-lookup"><span data-stu-id="ccd62-212">4.25</span></span>|<span data-ttu-id="ccd62-213">8.5</span><span class="sxs-lookup"><span data-stu-id="ccd62-213">8.5</span></span>|  
+|<span data-ttu-id="ccd62-214">4.5</span><span class="sxs-lookup"><span data-stu-id="ccd62-214">4.5</span></span>|<span data-ttu-id="ccd62-215">9</span><span class="sxs-lookup"><span data-stu-id="ccd62-215">9</span></span>|  
+|<span data-ttu-id="ccd62-216">5</span><span class="sxs-lookup"><span data-stu-id="ccd62-216">5</span></span>|<span data-ttu-id="ccd62-217">10</span><span class="sxs-lookup"><span data-stu-id="ccd62-217">10</span></span>|  
   
-### 离散内插  
- 使用[离散内插](GTMT)，动画函数将从一个值跳到下一个没有内插的值。  如果关键帧段从 0 过渡到 10，持续期间为 5 秒，则动画会在指定时间输出以下值：  
+### <a name="discrete-interpolation"></a><span data-ttu-id="ccd62-218">离散内插</span><span class="sxs-lookup"><span data-stu-id="ccd62-218">Discrete Interpolation</span></span>  
+ <span data-ttu-id="ccd62-219">使用离散内插，动画函数将从一个值跳到下一个值，没有内插。</span><span class="sxs-lookup"><span data-stu-id="ccd62-219">With discrete interpolation, the animation function jumps from one value to the next without interpolation.</span></span> <span data-ttu-id="ccd62-220">如果关键帧段从 0 过渡到 10，持续时间为 5 秒，则动画会在指定时间输出以下值：</span><span class="sxs-lookup"><span data-stu-id="ccd62-220">If a key frame segment transitions from 0 to 10 over a duration of 5 seconds, the animation will output the following values at the specified times:</span></span>  
   
-|时间|输出值|  
-|--------|---------|  
-|0|0|  
-|1|0|  
-|2|0|  
-|3|0|  
-|4|0|  
-|4.25|0|  
-|4.5|0|  
-|5|10|  
+|<span data-ttu-id="ccd62-221">时间</span><span class="sxs-lookup"><span data-stu-id="ccd62-221">Time</span></span>|<span data-ttu-id="ccd62-222">输出值</span><span class="sxs-lookup"><span data-stu-id="ccd62-222">Output value</span></span>|  
+|----------|------------------|  
+|<span data-ttu-id="ccd62-223">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-223">0</span></span>|<span data-ttu-id="ccd62-224">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-224">0</span></span>|  
+|<span data-ttu-id="ccd62-225">1</span><span class="sxs-lookup"><span data-stu-id="ccd62-225">1</span></span>|<span data-ttu-id="ccd62-226">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-226">0</span></span>|  
+|<span data-ttu-id="ccd62-227">2</span><span class="sxs-lookup"><span data-stu-id="ccd62-227">2</span></span>|<span data-ttu-id="ccd62-228">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-228">0</span></span>|  
+|<span data-ttu-id="ccd62-229">3</span><span class="sxs-lookup"><span data-stu-id="ccd62-229">3</span></span>|<span data-ttu-id="ccd62-230">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-230">0</span></span>|  
+|<span data-ttu-id="ccd62-231">4</span><span class="sxs-lookup"><span data-stu-id="ccd62-231">4</span></span>|<span data-ttu-id="ccd62-232">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-232">0</span></span>|  
+|<span data-ttu-id="ccd62-233">4.25</span><span class="sxs-lookup"><span data-stu-id="ccd62-233">4.25</span></span>|<span data-ttu-id="ccd62-234">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-234">0</span></span>|  
+|<span data-ttu-id="ccd62-235">4.5</span><span class="sxs-lookup"><span data-stu-id="ccd62-235">4.5</span></span>|<span data-ttu-id="ccd62-236">0</span><span class="sxs-lookup"><span data-stu-id="ccd62-236">0</span></span>|  
+|<span data-ttu-id="ccd62-237">5</span><span class="sxs-lookup"><span data-stu-id="ccd62-237">5</span></span>|<span data-ttu-id="ccd62-238">10</span><span class="sxs-lookup"><span data-stu-id="ccd62-238">10</span></span>|  
   
- 请注意，动画在段持续期间恰好结束之前不会更改其输出值。  
+ <span data-ttu-id="ccd62-239">注意动画在段持续时间恰好结束之前不会更改其输出值的方式。</span><span class="sxs-lookup"><span data-stu-id="ccd62-239">Notice how the animation does not change its output value until the very end of the segment duration.</span></span>  
   
- [样条内插](GTMT)更为复杂。  有关内容将在下一部分介绍。  
+ <span data-ttu-id="ccd62-240">曲线内插更为复杂。</span><span class="sxs-lookup"><span data-stu-id="ccd62-240">Splined interpolation is more complex.</span></span> <span data-ttu-id="ccd62-241">相关内容将在下一节介绍。</span><span class="sxs-lookup"><span data-stu-id="ccd62-241">It is described in the next section.</span></span>  
   
 <a name="anim_spline"></a>   
-### 样条内插  
- 样条内插可用于达到更现实的计时效果。  由于动画通常用于模拟现实世界中发生的效果，因此开发人员可能需要精确地控制对象的加速和减速，并需要严格地对计时段进行操作。  通过样条关键帧，您可以使用样条内插进行动画处理。  使用其他关键帧，您可以指定一个 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。  使用样条关键帧，您还可以指定一个 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>。  下面的示例演示 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 的单个样条关键帧。  请注意 <xref:System.Windows.Media.Animation.KeySpline> 属性，它正是样条关键帧与其他类型的关键帧的不同之处。  
+### <a name="splined-interpolation"></a><span data-ttu-id="ccd62-242">曲线内插</span><span class="sxs-lookup"><span data-stu-id="ccd62-242">Splined Interpolation</span></span>  
+ <span data-ttu-id="ccd62-243">曲线内插可用于达到更现实的计时效果。</span><span class="sxs-lookup"><span data-stu-id="ccd62-243">Splined interpolation can be used to achieve more realistic timing effects.</span></span> <span data-ttu-id="ccd62-244">由于动画通常用于模拟现实世界中出现的效果，因此开发人员可能需要精确地控制对象的加速和减速，并需要严格地对计时段进行操作。</span><span class="sxs-lookup"><span data-stu-id="ccd62-244">Because animations are so often used to imitate effects that occur in the real world, developers might need fine control of the acceleration and deceleration of objects, and close manipulation of timing segments.</span></span> <span data-ttu-id="ccd62-245">通过自由绘制曲线关键帧，可以使用曲线内插进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-245">Spline key frames enable you to animate with splined interpolation.</span></span> <span data-ttu-id="ccd62-246">您指定其他关键帧，<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-246">With other key frames, you specify a <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> and <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>.</span></span> <span data-ttu-id="ccd62-247">使用样条关键帧中，你还指定<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-247">With a spline key frame, you also specify a <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>.</span></span> <span data-ttu-id="ccd62-248">下面的示例演示为单个样条关键帧<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-248">The following example shows a single spline key frame for a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="ccd62-249">请注意<xref:System.Windows.Media.Animation.KeySpline>属性; 使变得样条关键帧不同于其他类型的关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-249">Notice the <xref:System.Windows.Media.Animation.KeySpline> property; that's what makes a spline key frame different from the other types of key frames.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- 一条[三次方贝塞尔曲线](GTMT)由一个起点、一个终点和两个控制点来定义。  样条关键帧的 <xref:System.Windows.Media.Animation.KeySpline> 属性定义从 \(0,0\) 延伸到 \(1,1\) 的贝塞尔曲线的两个控制点。  第一个控制点控制贝塞尔曲线前半部分的曲线因子，第二个控制点控制贝塞尔线段后半部分的曲线因子。  所得到的曲线是对该样条关键帧的更改速率所进行的描述。  曲线陡度越大，关键帧更改其值的速度越快。  曲线趋于平缓时，关键帧更改其值的速度也趋于缓慢。  
+ <span data-ttu-id="ccd62-250">一条三次方贝塞尔曲线由一个起点、一个终点和两个控制点定义。</span><span class="sxs-lookup"><span data-stu-id="ccd62-250">A cubic Bezier curve is defined by a start point, an end point, and two control points.</span></span> <span data-ttu-id="ccd62-251"><xref:System.Windows.Media.Animation.KeySpline>样条关键帧属性定义的贝塞尔曲线中从 (0，0) 到 (1，1) 的两个控制点。</span><span class="sxs-lookup"><span data-stu-id="ccd62-251">The <xref:System.Windows.Media.Animation.KeySpline> property of a spline key frame defines the two control point of a Bezier curve that extends from (0,0) to (1,1).</span></span> <span data-ttu-id="ccd62-252">第一个控制点控制贝塞尔曲线前半部分的曲线因子，第二个控制点控制贝塞尔线段后半部分的曲线因子。</span><span class="sxs-lookup"><span data-stu-id="ccd62-252">The first control point controls the curve factor of the first half of the Bezier curve, and the second control point controls the curve factor of the second half of the Bezier segment.</span></span> <span data-ttu-id="ccd62-253">生成的曲线描述了该自由绘制曲线关键帧的变化率。</span><span class="sxs-lookup"><span data-stu-id="ccd62-253">The resulting curve describes the rate of change for that spline key frame.</span></span> <span data-ttu-id="ccd62-254">曲线陡度越大，关键帧更改其值的速度越快。</span><span class="sxs-lookup"><span data-stu-id="ccd62-254">The steeper the curve, the faster the key frame changes its values.</span></span> <span data-ttu-id="ccd62-255">曲线趋于平缓时，关键帧更改其值的速度也趋于缓慢。</span><span class="sxs-lookup"><span data-stu-id="ccd62-255">As the curve gets flatter, the key frame changes its values more slowly.</span></span>  
   
- 您可以使用 <xref:System.Windows.Media.Animation.KeySpline> 来模拟下落的水滴或跳动的球等的物理轨迹，或者应用动画的其他“潜入”和“潜出”效果。  对于用户交互效果，例如背景淡入\/淡出或控制按钮弹跳等，您可能要应用样条内插，以便以特定方式提高或降低动画的更改速率。  
+ <span data-ttu-id="ccd62-256">你可以使用<xref:System.Windows.Media.Animation.KeySpline>模拟升降水位或会传来传去球，等的物理轨迹或将其他"缓入"和"缓慢缩小"效果应用于动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-256">You might use <xref:System.Windows.Media.Animation.KeySpline> to simulate physical trajectories like falling water or bouncing balls, or apply other "ease in" and "ease out" effects to motion animations.</span></span> <span data-ttu-id="ccd62-257">对于用户交互效果（例如背景淡入/淡出或控制按钮弹跳等），可能要应用曲线内插，以便以特定方式提高或降低动画的变化率。</span><span class="sxs-lookup"><span data-stu-id="ccd62-257">For user interaction effects like background fades or control button rebound, you might apply splined interpolation to speed up or slow down the rate of change for an animation in a specific way.</span></span>  
   
- 以下示例将 <xref:System.Windows.Media.Animation.KeySpline> 指定为 0、1、1、0，可产生如下贝塞尔曲线。  
+ <span data-ttu-id="ccd62-258">下面的示例指定<xref:System.Windows.Media.Animation.KeySpline>的 0，1 1，这将创建以下的贝塞尔曲线，0。</span><span class="sxs-lookup"><span data-stu-id="ccd62-258">The following example specifies a <xref:System.Windows.Media.Animation.KeySpline> of 0,1 1,0, which creates the following Bezier curve.</span></span>  
   
- ![贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
-控制点为 \(0.0, 1.0\) 和 \(1.0, 0.0\) 的关键样条  
+ <span data-ttu-id="ccd62-259">![贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")</span><span class="sxs-lookup"><span data-stu-id="ccd62-259">![A Bezier curve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")</span></span>  
+<span data-ttu-id="ccd62-260">控制点为 (0.0, 1.0) 和 (1.0, 0.0) 的主曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-260">A key spline with control points (0.0, 1.0) and (1.0, 0.0)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- 此关键帧将在开始时快速运动，减速，然后再次加速，直到结束。  
+ <span data-ttu-id="ccd62-261">此关键帧的动画处理在开始时快速进行，减速，然后再次加速，直到结束。</span><span class="sxs-lookup"><span data-stu-id="ccd62-261">This key frame animates rapidly when it begins, slows down, and then speeds up again before it ends.</span></span>  
   
- 以下示例将 <xref:System.Windows.Media.Animation.KeySpline> 指定为 0.5、0.25、0.75、1.0，可产生如下贝塞尔曲线。  
+ <span data-ttu-id="ccd62-262">下面的示例指定<xref:System.Windows.Media.Animation.KeySpline>0.5,0.25 0.75,1.0，创建以下的贝塞尔曲线。</span><span class="sxs-lookup"><span data-stu-id="ccd62-262">The following example specifies a <xref:System.Windows.Media.Animation.KeySpline> of 0.5,0.25 0.75,1.0, which creates the following Bezier curve.</span></span>  
   
- ![贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
-控制点为 \(0.25, 0.5\) 和 \(0.75, 1.0\) 的关键样条  
+ <span data-ttu-id="ccd62-263">![贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")</span><span class="sxs-lookup"><span data-stu-id="ccd62-263">![A Bezier curve](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")</span></span>  
+<span data-ttu-id="ccd62-264">控制点为 (0.25, 0.5) 和 (0.75, 1.0) 的主曲线</span><span class="sxs-lookup"><span data-stu-id="ccd62-264">A key spline with control points (0.25, 0.5) and (0.75, 1.0)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
- 由于贝塞尔曲线的曲度变化幅度很小，此关键帧的运动速率几乎固定不变；只在将近接近结束时才开始减速。  
+ <span data-ttu-id="ccd62-265">由于贝塞尔曲线的曲度变化幅度很小，因此该关键帧的动画处理速率几乎固定不变；只在接近结束时才开始减速。</span><span class="sxs-lookup"><span data-stu-id="ccd62-265">Because the curvature of the Bezier curve changes very little, this key frame animates at an almost constant rate; it slows down somewhat toward its very end.</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 对矩形的位置进行动画处理。  由于 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 使用 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> 对象，每个关键帧值之间的过渡都将使用样条内插。  
+ <span data-ttu-id="ccd62-266">下面的示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>要进行动画处理的矩形的位置。</span><span class="sxs-lookup"><span data-stu-id="ccd62-266">The following example uses a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> to animate the position of rectangle.</span></span> <span data-ttu-id="ccd62-267">因为<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>使用<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>对象，每个关键帧值之间的转换使用样条内插。</span><span class="sxs-lookup"><span data-stu-id="ccd62-267">Because the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> uses <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> objects, the transition between each key frame value uses splined interpolation.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- 样条内插可能很难理解；请使用不同的设置进行体验，这会有助于理解。  通过 [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011)（关键样条动画示例），可以更改关键样条值，并可查看由此所产生的动画结果。  
+ <span data-ttu-id="ccd62-268">曲线内插可能很难理解；使用不同的设置进行体验有助于理解。</span><span class="sxs-lookup"><span data-stu-id="ccd62-268">Splined interpolation can be difficult to understand; experimenting with different settings can help.</span></span> <span data-ttu-id="ccd62-269">通过[主曲线动画示例](http://go.microsoft.com/fwlink/?LinkID=160011)，可以更改主曲线值，并查看由此所产生的动画结果。</span><span class="sxs-lookup"><span data-stu-id="ccd62-269">The [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011) enables you to change key spline values and see the result it has on an animation.</span></span>  
   
 <a name="combininginterpolationmethods"></a>   
-### 组合内插方法  
- 您可在一个关键帧动画中使用具有不同内插类型的关键帧。  如果两个具有不同内插的关键帧动画彼此跟随，第二个关键帧的内插方法将用于创建从第一个值到第二个值的过渡。  
+### <a name="combining-interpolation-methods"></a><span data-ttu-id="ccd62-270">组合内插方法</span><span class="sxs-lookup"><span data-stu-id="ccd62-270">Combining Interpolation Methods</span></span>  
+ <span data-ttu-id="ccd62-271">可在一个关键帧动画中使用具有不同内插类型的关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-271">You can use key frames with different interpolation types in a single key frame animation.</span></span> <span data-ttu-id="ccd62-272">如果两个具有不同内插的关键帧动画彼此跟随，第二个关键帧的内插方法将用于创建从第一个值到第二个值的过渡。</span><span class="sxs-lookup"><span data-stu-id="ccd62-272">When two key frame animations with different interpolations follow each other, the interpolation method of the second key frame is used to create the transition from the first value to the second.</span></span>  
   
- 以下示例将创建一个使用线性、样条和离散内插的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。  
+ <span data-ttu-id="ccd62-273">在下面的示例中，<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>创建该使用线性、 样条，和离散内插。</span><span class="sxs-lookup"><span data-stu-id="ccd62-273">In the following example, a <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> is created that uses linear, splined, and discrete interpolation.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
 <a name="keytimes"></a>   
-## 有关持续时间和关键时间的更多信息  
- 像其他动画一样，关键帧动画具有 <xref:System.Windows.Duration> 属性。  除了指定动画的 <xref:System.Windows.Duration> 外，您还需要指定向每个关键帧分配持续时间内的多长一段时间。  您可以为动画的每个关键帧描述其 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 来实现此目的。  每个关键帧的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 都指定了该关键帧的结束时间。  
+## <a name="more-about-duration-and-key-times"></a><span data-ttu-id="ccd62-274">有关持续时间和关键时间的更多信息</span><span class="sxs-lookup"><span data-stu-id="ccd62-274">More about Duration and Key Times</span></span>  
+ <span data-ttu-id="ccd62-275">像其他动画关键帧动画具有<xref:System.Windows.Duration>属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-275">Like other animations, key-frame animations have a <xref:System.Windows.Duration> property.</span></span> <span data-ttu-id="ccd62-276">除了指定动画的<xref:System.Windows.Duration>，你需要指定该持续时间的哪些部分提供给每个关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-276">In addition to specifying the animation's <xref:System.Windows.Duration>, you need to specify what portion of that duration is given to each key frame.</span></span> <span data-ttu-id="ccd62-277">这样做通过描述<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>为每个动画的关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-277">You do so by describing a   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> for each of the animation's key frames.</span></span> <span data-ttu-id="ccd62-278">每个关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>指定该关键帧的结束时。</span><span class="sxs-lookup"><span data-stu-id="ccd62-278">Each key frame's <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> specifies when that key frame ends.</span></span>  
   
- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 属性并不指定关键时间播放的长度。  关键帧播放时间长度由关键帧的结束时间、前一个关键帧的结束时间以及动画的持续时间来确定。  可以以时间值、百分比的形式来指定关键时间，或者将其指定为特殊值 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>。  
+ <span data-ttu-id="ccd62-279"><xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性并不指定多长时间的关键时间播放。</span><span class="sxs-lookup"><span data-stu-id="ccd62-279">The <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property does not specify how long the key time plays.</span></span> <span data-ttu-id="ccd62-280">关键帧的播放时长由关键帧的结束时间、前一个关键帧的结束时间以及动画的持续时间确定。</span><span class="sxs-lookup"><span data-stu-id="ccd62-280">The amount of time a key frame plays is determined by when the key frame ends, when the previous key frame ended, and the animation's duration.</span></span> <span data-ttu-id="ccd62-281">关键时间可指定为时间值，一个百分比，或特殊值<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-281">Key times may be specified as a time value, a percentage, or as the special values <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> or <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.</span></span>  
   
- 以下列表描述了指定关键时间的不同方式。  
+ <span data-ttu-id="ccd62-282">下表描述了指定关键时间的不同方式。</span><span class="sxs-lookup"><span data-stu-id="ccd62-282">The following list describes the different ways of specifying key times.</span></span>  
   
-### TimeSpan 值  
- 您可以使用 <xref:System.TimeSpan> 值来指定 <xref:System.Windows.Media.Animation.KeyTime>。  该值应大于或等于 0 并且小于或等于动画的持续时间。  下面的示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间被指定为时间值）的动画。  
+### <a name="timespan-values"></a><span data-ttu-id="ccd62-283">TimeSpan 值</span><span class="sxs-lookup"><span data-stu-id="ccd62-283">TimeSpan Values</span></span>  
+ <span data-ttu-id="ccd62-284">你可以使用<xref:System.TimeSpan>值，以指定<xref:System.Windows.Media.Animation.KeyTime>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-284">You may use <xref:System.TimeSpan> values to specify a <xref:System.Windows.Media.Animation.KeyTime>.</span></span> <span data-ttu-id="ccd62-285">该值应大于或等于 0 并且小于或等于动画的持续时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-285">The value should be greater than or equal to 0 and less than or equal to the animation's duration.</span></span> <span data-ttu-id="ccd62-286">以下示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间指定为时间值）的动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-286">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as time values.</span></span>  
   
--   在前 3 秒钟内，第一个关键帧将在基值和 100 之间进行动画移动。结束位置为时间 \= 0:0:03。  
+-   <span data-ttu-id="ccd62-287">在前 3 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:03。</span><span class="sxs-lookup"><span data-stu-id="ccd62-287">The first key frame animates from the base value to 100 over the first 3 seconds, ending at time = 0:0:03.</span></span>  
   
--   第二个关键帧在 100 和 200 之间进行动画移动。  它的起始位置是第一个关键帧的结束位置（时间 \= 3 秒），播放 5 秒钟，结束位置为时间 \= 0:0:8。  
+-   <span data-ttu-id="ccd62-288">第二个关键帧在 100 和 200 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-288">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="ccd62-289">它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8。</span><span class="sxs-lookup"><span data-stu-id="ccd62-289">It starts after the first key frame ends (at time = 3 seconds) and plays for 5 seconds, ending at time = 0:0:8.</span></span>  
   
--   第三个关键帧在 200 和 500 之间进行动画移动。  它的起始位置是第二个关键帧的结束位置（时间 \= 8 秒），播放 1 秒钟，结束位置为时间 \= 0:0:9。  
+-   <span data-ttu-id="ccd62-290">第三个关键帧在 200 和 500 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-290">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="ccd62-291">它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9。</span><span class="sxs-lookup"><span data-stu-id="ccd62-291">It starts when the second key frame ends (at time = 8 seconds) and plays for 1 second, ending at time = 0:0:9.</span></span>  
   
--   第四个关键帧在 500 和 600 之间进行动画移动。  它的起始位置是第三个关键帧的结束位置（时间 \= 9 秒），播放 1 秒钟，结束位置为时间 \= 0:0:10。  
+-   <span data-ttu-id="ccd62-292">第四个关键帧在 500 和 600 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-292">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="ccd62-293">它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10。</span><span class="sxs-lookup"><span data-stu-id="ccd62-293">It starts when the third key frame ends (at time = 9 seconds) and plays for 1 second, ending at time = 0:0:10.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
-### 百分比值  
- 百分比值指定关键帧在动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 内的某百分比处结束。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，将百分比指定为一个数字，后面跟随 `%` 符号。  在代码中，使用 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 方法并向其传递一个 <xref:System.Double>，以表示百分比。  该值必须大于或等于 0 并且小于或等于 100%。  下面的示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间被指定为百分比）的动画。  
+### <a name="percentage-values"></a><span data-ttu-id="ccd62-294">百分比值</span><span class="sxs-lookup"><span data-stu-id="ccd62-294">Percentage Values</span></span>  
+ <span data-ttu-id="ccd62-295">百分比值指定的关键帧结束的动画的百分比处<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-295">A percentage value specifies that the key frame ends at some percentage of the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.</span></span> <span data-ttu-id="ccd62-296">在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，指定百分比作为 `%` 符号后的数字。</span><span class="sxs-lookup"><span data-stu-id="ccd62-296">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you specify the percentage as a number followed by the `%` symbol.</span></span> <span data-ttu-id="ccd62-297">在代码中，你使用<xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>方法并将其传递<xref:System.Double>，该值指示所占百分比。</span><span class="sxs-lookup"><span data-stu-id="ccd62-297">In code, you use the <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> method and pass it a <xref:System.Double> indicating the percentage.</span></span> <span data-ttu-id="ccd62-298">该值必须大于或等于 0 并且小于或等于 100%。</span><span class="sxs-lookup"><span data-stu-id="ccd62-298">The value must be greater than or equal to 0 and less than or equal to 100 percent.</span></span> <span data-ttu-id="ccd62-299">以下示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间指定为百分比）的动画。</span><span class="sxs-lookup"><span data-stu-id="ccd62-299">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as percentages.</span></span>  
   
--   在前 3 秒钟内，第一个关键帧将在基值和 100 之间进行动画移动，结束位置为时间 \= 0:0:3。  
+-   <span data-ttu-id="ccd62-300">在前 3 秒钟内，第一个关键帧将在基值和 100 之间进行动画处理，结束时间 = 0:0:3。</span><span class="sxs-lookup"><span data-stu-id="ccd62-300">The first key frame animates from the base value to 100 over the first 3 seconds, ending at time = 0:0:3.</span></span>  
   
--   第二个关键帧在 100 和 200 之间进行动画移动。  它的起始位置是第一个关键帧的结束位置（时间 \= 3 秒），播放 5 秒钟，结束位置为时间 \= 0:0:8 \(0.8 \* 10 \= 8\)。  
+-   <span data-ttu-id="ccd62-301">第二个关键帧在 100 和 200 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-301">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="ccd62-302">它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8 (0.8 * 10 = 8)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-302">It starts after the first key frame ends (at time = 3 seconds) and plays for 5 seconds, ending at time = 0:0:8 (0.8 * 10 = 8).</span></span>  
   
--   第三个关键帧在 200 和 500 之间进行动画移动。  它的起始位置是第二个关键帧的结束位置（时间 \= 8 秒），播放 1 秒钟，结束位置为时间 \= 0:0:9 \(0.9 \* 10 \= 9\)。  
+-   <span data-ttu-id="ccd62-303">第三个关键帧在 200 和 500 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-303">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="ccd62-304">它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9 (0.9 * 10 = 9)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-304">It starts when the second key frame ends (at time = 8 seconds) and plays for 1 second, ending at time = 0:0:9 (0.9 * 10 = 9).</span></span>  
   
--   第四个关键帧在 500 和 600 之间进行动画移动。  它的起始位置是第三个关键帧的结束位置（时间 \= 9 秒），播放 1 秒钟，结束位置为时间 \= 0:0:10 \(1 \* 10 \= 10\)。  
+-   <span data-ttu-id="ccd62-305">第四个关键帧在 500 和 600 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-305">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="ccd62-306">它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10 (1 * 10 = 10)。</span><span class="sxs-lookup"><span data-stu-id="ccd62-306">It starts when the third key frame ends (at time = 9 seconds) and plays for 1 second, ending at time = 0:0:10 (1 * 10 = 10).</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
-### 特殊值 Uniform  
- 如果希望每个关键帧的持续时间都相同，请使用 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 计时。  
+### <a name="special-value-uniform"></a><span data-ttu-id="ccd62-307">特殊值 Uniform</span><span class="sxs-lookup"><span data-stu-id="ccd62-307">Special Value, Uniform</span></span>  
+ <span data-ttu-id="ccd62-308">使用<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>计时当你想要用相同的时间每个关键帧时。</span><span class="sxs-lookup"><span data-stu-id="ccd62-308">Use <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> timing when you want each key frame to take the same amount of time.</span></span>  
   
- <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 关键时间按关键帧的数量平均分配可用时间，以确定每个关键帧的结束时间。  下面的示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间被指定为 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>）的动画。  
+ <span data-ttu-id="ccd62-309">A<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>关键时间除以可用时间同样的以确定每个关键帧的结束时间的关键帧的数目。</span><span class="sxs-lookup"><span data-stu-id="ccd62-309">A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> key time divides the available time equally by the number of key frames to determine the end time of each key frame.</span></span> <span data-ttu-id="ccd62-310">下面的示例演示持续时间为 10 秒的动画和四个关键帧的关键时间指定为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-310">The following example shows an animation with a duration of 10 seconds and four key frames whose key times are specified as <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.</span></span>  
   
--   在前 2.5 秒钟内，第一个关键帧将在基值和 100 之间进行动画移动，结束位置为时间 \= 0:0:2.5。  
+-   <span data-ttu-id="ccd62-311">在前 2.5 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:2.5。</span><span class="sxs-lookup"><span data-stu-id="ccd62-311">The first key frame animates from the base value to 100 over the first 2.5 seconds, ending at time = 0:0:2.5.</span></span>  
   
--   第二个关键帧在 100 和 200 之间进行动画移动。  它的起始位置是第一个关键帧的结束位置（时间 \= 2.5 秒），播放大约 2.5 秒钟，结束位置为时间 \= 0:0:5。  
+-   <span data-ttu-id="ccd62-312">第二个关键帧在 100 和 200 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-312">The second key frame animates from 100 to 200.</span></span> <span data-ttu-id="ccd62-313">它在第一个关键帧结束后开始（开始时间 = 2.5 秒），播放大约 2.5 秒钟，结束时间 = 0:0:5。</span><span class="sxs-lookup"><span data-stu-id="ccd62-313">It starts after the first key frame ends (at time = 2.5 seconds) and plays for approximately 2.5 seconds, ending at time = 0:0:5.</span></span>  
   
--   第三个关键帧在 200 和 500 之间进行动画移动。  它的起始位置是第二个关键帧的结束位置（时间 \= 5 秒），播放 2.5 秒钟，结束位置为时间 \= 0:0:7.5。  
+-   <span data-ttu-id="ccd62-314">第三个关键帧在 200 和 500 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-314">The third key frame animates from 200 to 500.</span></span> <span data-ttu-id="ccd62-315">它在第二个关键帧结束时开始（开始时间 = 5 秒），播放 2.5 秒钟，结束时间 = 0:0:7.5。</span><span class="sxs-lookup"><span data-stu-id="ccd62-315">It starts when the second key frame ends (at time = 5 seconds) and plays for 2.5 seconds, ending at time = 0:0:7.5.</span></span>  
   
--   第四个关键帧在 500 和 600 之间进行动画移动。  它的起始位置是第二个关键帧的结束位置（时间 \= 7.5 秒），播放 2.5 秒钟，结束位置为时间 \= 0:0:1。  
+-   <span data-ttu-id="ccd62-316">第四个关键帧在 500 和 600 之间进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-316">The fourth key frame animates from 500 to 600.</span></span> <span data-ttu-id="ccd62-317">它在第二个关键帧结束时开始（开始时间 = 7.5 秒），播放 2.5 秒钟，结束时间 = 0:0:1。</span><span class="sxs-lookup"><span data-stu-id="ccd62-317">It starts when the second key frame ends (at time = 7.5 seconds) and plays for 2.5 seconds, ending at time = 0:0:1.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
-### 特殊值 Paced  
- 如果希望以固定速率显示动画，请使用 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 计时。  
+### <a name="special-value-paced"></a><span data-ttu-id="ccd62-318">特殊值 Paced</span><span class="sxs-lookup"><span data-stu-id="ccd62-318">Special Value, Paced</span></span>  
+ <span data-ttu-id="ccd62-319">使用<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>计时当你想要以恒定速率进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="ccd62-319">Use <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> timing when you want to animate at a constant rate.</span></span>  
   
- <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 关键时间根据每一关键帧的长度来分配可用时间，以确定每帧的持续时间。  这样，动画的速度或速率将保持不变。  下面的示例演示一个持续时间为 10 秒钟、有三个关键帧（这些关键帧的关键时间被指定为 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>）的动画。  
+ <span data-ttu-id="ccd62-320">A<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>关键时间分配根据每个关键帧，以确定每个帧的持续时间的长度的可用时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-320">A <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> key time allocates the available time according to the length of each of the key frames to determine the duration of each frame.</span></span>  <span data-ttu-id="ccd62-321">这样，动画的速度或速率将保持不变。</span><span class="sxs-lookup"><span data-stu-id="ccd62-321">This will provide the behavior that the velocity or pace of the animation remains constant.</span></span>  <span data-ttu-id="ccd62-322">下面的示例演示持续时间为 10 秒的动画和三个关键帧的关键时间指定为<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>。</span><span class="sxs-lookup"><span data-stu-id="ccd62-322">The following example shows an animation with a duration of 10 seconds and three key frames whose key times are specified as <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- 请注意，如果最后一个关键帧的关键时间为 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>，其解析的关键时间将设置为 100%。  如果多帧动画中的第一个关键帧为固定速度，则其解析的关键时间将设置为 0。  如果关键帧集合仅包含单个关键帧，并且是一个固定速度的关键帧，则其解析的关键时间将设置为 100%。  
+ <span data-ttu-id="ccd62-323">请注意，如果最后一个关键帧的关键时间是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>或<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>，其解析的关键时间将设置为 100%。</span><span class="sxs-lookup"><span data-stu-id="ccd62-323">Note that, if the last key frame's key time is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> or <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, its resolved key time will be set to 100 percent.</span></span> <span data-ttu-id="ccd62-324">如果多帧动画中的第一个关键帧为固定速度，其解析的关键时间将设置为 0。</span><span class="sxs-lookup"><span data-stu-id="ccd62-324">If the first key frame in a multiframe animation is paced, its resolved key time will be set to 0.</span></span> <span data-ttu-id="ccd62-325">（如果关键帧集合仅包含一个关键帧，并且是一个固定速度的关键帧，其解析的关键时间将设置为 100%。）</span><span class="sxs-lookup"><span data-stu-id="ccd62-325">(If the key frame collection contains only a single key frame and it is a paced key frame, its resolved key time will be set to 100 percent.)</span></span>  
   
- 一个关键帧动画中的不同关键帧可使用不同的关键时间类型。  
+ <span data-ttu-id="ccd62-326">一个关键帧动画中的不同关键帧可使用不同的关键时间类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-326">Different key frames within a single key frame animation may use different key time types.</span></span>  
   
 <a name="combiningkeytimes"></a>   
-## 组合关键时间，顺序紊乱的关键帧  
- 您可在同一动画中使用具有不同 <xref:System.Windows.Media.Animation.KeyTime> 值类型的关键帧。  此外，我们建议您以关键帧的预期播放顺序来添加关键帧，但也可不必这么操作。  动画和计时系统能够处理顺序紊乱的关键帧。  将忽略具有无效关键时间的关键帧。  
+## <a name="combining-key-times-out-of-order-key-frames"></a><span data-ttu-id="ccd62-327">组合关键时间，顺序紊乱的关键帧</span><span class="sxs-lookup"><span data-stu-id="ccd62-327">Combining Key Times, Out-Of-Order Key Frames</span></span>  
+ <span data-ttu-id="ccd62-328">你可以使用关键帧具有不同<xref:System.Windows.Media.Animation.KeyTime>中相同的动画的值类型。</span><span class="sxs-lookup"><span data-stu-id="ccd62-328">You can use key frames with different <xref:System.Windows.Media.Animation.KeyTime> value types in the same animation.</span></span> <span data-ttu-id="ccd62-329">尽管建议以关键帧的实际播放顺序来添加关键帧，但此操作不是必需的。</span><span class="sxs-lookup"><span data-stu-id="ccd62-329">And, although it's recommended that you add key frames in the order in which they should play, it's not necessary.</span></span> <span data-ttu-id="ccd62-330">动画和计时系统能够处理顺序紊乱的关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-330">The animation and timing system is capable of resolving out of order key frames.</span></span> <span data-ttu-id="ccd62-331">将忽略关键时间无效的关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-331">Key frames with invalid key times are ignored.</span></span>  
   
- 以下列表描述了为关键帧动画的关键帧解析关键时间的过程。  
+ <span data-ttu-id="ccd62-332">下表描述了为关键帧动画的关键帧解析关键时间的过程。</span><span class="sxs-lookup"><span data-stu-id="ccd62-332">The following list describes the procedure by which key times are resolved for a key-frame animation's key frames.</span></span>  
   
-1.  解析 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 值。  
+1.  <span data-ttu-id="ccd62-333">解决<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-333">Resolve <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-2.  确定动画的*总内插时间*，即关键帧动画完成向前迭代所需的全部时间。  
+2.  <span data-ttu-id="ccd62-334">确定动画的*总内插时间*，即关键帧动画完成向前迭代所需的全部时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-334">Determine the animation’s *total interpolation time*, the total time it takes the key-frame animation to complete a forward iteration.</span></span>  
   
-    1.  如果动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 不是 <xref:System.Windows.Duration.Automatic%2A> 或 <xref:System.Windows.Duration.Forever%2A>，则总内插时间为动画的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 属性的值。  
+    1.  <span data-ttu-id="ccd62-335">如果该动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不<xref:System.Windows.Duration.Automatic%2A>或<xref:System.Windows.Duration.Forever%2A>，总内插时间是动画的值<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="ccd62-335">If the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> is not <xref:System.Windows.Duration.Automatic%2A> or <xref:System.Windows.Duration.Forever%2A>, the total interpolation time is the value of the animation's <xref:System.Windows.Media.Animation.Timeline.Duration%2A> property.</span></span>  
   
-    2.  否则，总内插时间是其关键帧中所指定的最大 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 值（如果存在这样的值）。  
+    2.  <span data-ttu-id="ccd62-336">否则，总内插时间是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>指定其关键帧中，如果存在任何值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-336">Otherwise, the total interpolation time is the largest <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> value specified among its key frames, if any exist.</span></span>  
   
-    3.  否则，总内插时间为 1 秒。  
+    3.  <span data-ttu-id="ccd62-337">否则，总内插时间为 1 秒。</span><span class="sxs-lookup"><span data-stu-id="ccd62-337">Otherwise, the total interpolation time is 1 second.</span></span>  
   
-3.  使用总内插时间值解析 <xref:System.Windows.Media.Animation.KeyTimeType> <xref:System.Windows.Media.Animation.KeyTime> 值。  
+3.  <span data-ttu-id="ccd62-338">使用的总的内插时间值来解决<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-338">Use the total interpolation time value to resolve <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-4.  如果最后一个关键帧尚未在前面的步骤中解析，则将解析该关键帧。  如果最后一个关键帧的 <xref:System.Windows.Media.Animation.KeyTime> 为 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析的时间将等于总内插时间。  
+4.  <span data-ttu-id="ccd62-339">如果最后一个关键帧尚未在之前步骤中解析，则将解析该关键帧。</span><span class="sxs-lookup"><span data-stu-id="ccd62-339">Resolve last key frame, if it wasn't already resolved in the previous steps.</span></span> <span data-ttu-id="ccd62-340">如果<xref:System.Windows.Media.Animation.KeyTime>的最后一个关键帧为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析的时间将减至总的内插时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-340">If the <xref:System.Windows.Media.Animation.KeyTime> of the last key frame is <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> or <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, its resolved time will be equal to the total interpolation time.</span></span>  
   
-     如果第一个关键帧的 <xref:System.Windows.Media.Animation.KeyTime> 为 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，并且此动画具有多个关键帧，则将其 <xref:System.Windows.Media.Animation.KeyTime> 值解析为零；如果只有一个关键帧，并且其 <xref:System.Windows.Media.Animation.KeyTime> 值为 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，则该值将解析为总内插时间，如前面的步骤所述。  
+     <span data-ttu-id="ccd62-341">如果<xref:System.Windows.Media.Animation.KeyTime>第一个关键帧的是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>和此动画具有多个关键帧，解决其<xref:System.Windows.Media.Animation.KeyTime>值为零; 如果只有一个关键帧并将其<xref:System.Windows.Media.Animation.KeyTime>值是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，它是解析到的总数内插时间，与前面步骤中所述。</span><span class="sxs-lookup"><span data-stu-id="ccd62-341">If the <xref:System.Windows.Media.Animation.KeyTime> of the first key frame is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> and this animation has more than on key frames, resolve its <xref:System.Windows.Media.Animation.KeyTime> value to zero; if there is only one key frame and its <xref:System.Windows.Media.Animation.KeyTime> value is <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, it is resolved to the total interpolation time, as described in the preceding step.</span></span>  
   
-5.  解析其余的 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 值：它们将平均分配可用时间。  在此过程中，未解析的 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 值将被临时视为 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 值，并将获得临时解析时间。  
+5.  <span data-ttu-id="ccd62-342">解决剩余<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 每个提供的可用时间的相等共享它们。</span><span class="sxs-lookup"><span data-stu-id="ccd62-342">Resolve remaining <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> values: they are each given an equal share of the available time.</span></span>  <span data-ttu-id="ccd62-343">在此过程中，未解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值暂时视为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，并获取临时的解决时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-343">During this process, unresolved <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> values  are temporarily treated as <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> values, and get a temporary resolved time.</span></span>  
   
-6.  解析具有未指定关键时间的关键帧的 <xref:System.Windows.Media.Animation.KeyTime> 值，具体做法是使用距离它们最近的、已解析 <xref:System.Windows.Media.Animation.KeyTime> 值的声明关键帧。  
+6.  <span data-ttu-id="ccd62-344">解决<xref:System.Windows.Media.Animation.KeyTime>的使用的关键帧的值未指定通过使用声明离其最近已解决的关键帧的关键时间<xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-344">Resolve the <xref:System.Windows.Media.Animation.KeyTime> values of key frames with unspecified key times by using the key frames declared nearest them that have resolved <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-7.  解析其余的 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 值。  <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用临近关键帧的 <xref:System.Windows.Media.Animation.KeyTime> 值确定其解析时间。  目标是确保动画速度在此关键帧的解析时间内保持固定不变。  
+7.  <span data-ttu-id="ccd62-345">解决剩余<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-345">Resolve remaining <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> values.</span></span> <span data-ttu-id="ccd62-346"><xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>使用<xref:System.Windows.Media.Animation.KeyTime>值的相邻的关键帧来确定其解决的时间。</span><span class="sxs-lookup"><span data-stu-id="ccd62-346"><xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> use the <xref:System.Windows.Media.Animation.KeyTime> values of the neighboring key frames to determine their resolved time.</span></span>  <span data-ttu-id="ccd62-347">目的是确保动画速度在此关键帧的解析时间内保持固定不变。</span><span class="sxs-lookup"><span data-stu-id="ccd62-347">The goal is to ensure that the velocity of the animation is constant around this key frame's resolved time.</span></span>  
   
-8.  将关键帧按解析时间（主键）以及声明顺序（次键）进行排序，换言之，根据解析关键帧 <xref:System.Windows.Media.Animation.KeyTime> 值按固定顺序进行排序。  
+8.  <span data-ttu-id="ccd62-348">即排序顺序的解决时间 （主键） 和声明 （辅助密钥），顺序中的关键帧，请使用一个稳定排序基于解决的关键帧<xref:System.Windows.Media.Animation.KeyTime>值。</span><span class="sxs-lookup"><span data-stu-id="ccd62-348">Sort key frames in order of resolved time (primary key), and order of declaration (secondary key), i.e., use a stable sort based on the resolved key frame <xref:System.Windows.Media.Animation.KeyTime> values.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.KeyTime>   
- <xref:System.Windows.Media.Animation.KeySpline>   
- <xref:System.Windows.Media.Animation.Timeline>   
- [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011)   
- [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012)   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [关键帧动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)   
- [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ccd62-349">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ccd62-349">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.KeyTime>  
+ <xref:System.Windows.Media.Animation.KeySpline>  
+ <xref:System.Windows.Media.Animation.Timeline>  
+ [<span data-ttu-id="ccd62-350">密钥样条动画示例</span><span class="sxs-lookup"><span data-stu-id="ccd62-350">Key Spline Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160011)  
+ [<span data-ttu-id="ccd62-351">关键帧动画示例</span><span class="sxs-lookup"><span data-stu-id="ccd62-351">KeyFrame Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160012)  
+ [<span data-ttu-id="ccd62-352">动画概述</span><span class="sxs-lookup"><span data-stu-id="ccd62-352">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="ccd62-353">演示图板概述</span><span class="sxs-lookup"><span data-stu-id="ccd62-353">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [<span data-ttu-id="ccd62-354">关键帧操作说明主题</span><span class="sxs-lookup"><span data-stu-id="ccd62-354">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
+ [<span data-ttu-id="ccd62-355">计时行为概述</span><span class="sxs-lookup"><span data-stu-id="ccd62-355">Timing Behaviors Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

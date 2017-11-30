@@ -1,104 +1,101 @@
 ---
-title: "&gt;&gt; 运算符 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.>>"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - ">> 运算符 [Visual Basic]"
-  - "移位运算符"
-  - "运算符 >>"
-  - "运算符 >>"
-  - "右移位运算符"
+title: "&gt;&gt;运算符 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.>>
+helpviewer_keywords:
+- operator>>
+- '>> operator [Visual Basic]'
+- bit shift operators [Visual Basic]
+- operator >>
+- right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4eb0ed817c95905a679de5026bf6494eb72df078
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &gt;&gt; 运算符 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-对位模式执行数学右移位。  
+# <a name="gtgt-operator-visual-basic"></a><span data-ttu-id="43293-102">&gt;&gt;运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43293-102">&gt;&gt; Operator (Visual Basic)</span></span>
+<span data-ttu-id="43293-103">对位模式执行算术右移位运算。</span><span class="sxs-lookup"><span data-stu-id="43293-103">Performs an arithmetic right shift on a bit pattern.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="43293-104">语法</span><span class="sxs-lookup"><span data-stu-id="43293-104">Syntax</span></span>  
   
 ```  
-  
 result = pattern >> amount  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="43293-105">部件</span><span class="sxs-lookup"><span data-stu-id="43293-105">Parts</span></span>  
  `result`  
- 必选。  整型数值。  对该位模式进行移位的结果。  数据类型与 `pattern` 的数据类型相同。  
+ <span data-ttu-id="43293-106">必需。</span><span class="sxs-lookup"><span data-stu-id="43293-106">Required.</span></span> <span data-ttu-id="43293-107">整型数值。</span><span class="sxs-lookup"><span data-stu-id="43293-107">Integral numeric value.</span></span> <span data-ttu-id="43293-108">移位位模式的结果。</span><span class="sxs-lookup"><span data-stu-id="43293-108">The result of shifting the bit pattern.</span></span> <span data-ttu-id="43293-109">数据类型是相同的`pattern`。</span><span class="sxs-lookup"><span data-stu-id="43293-109">The data type is the same as that of `pattern`.</span></span>  
   
  `pattern`  
- 必选。  整型数值表达式。  要进行移位的位模式。  数据类型必须为整型（`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long` 或 `ULong`）。  
+ <span data-ttu-id="43293-110">必需。</span><span class="sxs-lookup"><span data-stu-id="43293-110">Required.</span></span> <span data-ttu-id="43293-111">整型数值表达式。</span><span class="sxs-lookup"><span data-stu-id="43293-111">Integral numeric expression.</span></span> <span data-ttu-id="43293-112">要移动的位模式。</span><span class="sxs-lookup"><span data-stu-id="43293-112">The bit pattern to be shifted.</span></span> <span data-ttu-id="43293-113">数据类型必须为整数类型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。</span><span class="sxs-lookup"><span data-stu-id="43293-113">The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
   
  `amount`  
- 必选。  数值表达式。  要将该位模式移位的位数。  数据类型必须为 `Integer` 或扩展到 `Integer`。  
+ <span data-ttu-id="43293-114">必需。</span><span class="sxs-lookup"><span data-stu-id="43293-114">Required.</span></span> <span data-ttu-id="43293-115">数值表达式。</span><span class="sxs-lookup"><span data-stu-id="43293-115">Numeric expression.</span></span> <span data-ttu-id="43293-116">要位移位模式的位数数。</span><span class="sxs-lookup"><span data-stu-id="43293-116">The number of bits to shift the bit pattern.</span></span> <span data-ttu-id="43293-117">数据类型必须为`Integer`或扩大到`Integer`。</span><span class="sxs-lookup"><span data-stu-id="43293-117">The data type must be `Integer` or widen to `Integer`.</span></span>  
   
-## 备注  
- 数学移位不是循环的，即不会将在结果的一端移出的数位从另一端重新移入。  在数学右移位运算中，将丢弃移出最右侧数位位置的数位，并将最左侧的（符号）数位传播到左端空出的数位位置。  这意味着如果 `pattern` 为负值，空出的位置将设置为一；否则，将设置为零。  
+## <a name="remarks"></a><span data-ttu-id="43293-118">备注</span><span class="sxs-lookup"><span data-stu-id="43293-118">Remarks</span></span>  
+ <span data-ttu-id="43293-119">算术移位不是循环，这意味着移出结果的一个 end 的数位另一端不重新移入。</span><span class="sxs-lookup"><span data-stu-id="43293-119">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="43293-120">在算术右移位运算移出最右边的位位置的位将被丢弃，并最左侧 （符号） 位传播到左侧空出的位位置。</span><span class="sxs-lookup"><span data-stu-id="43293-120">In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost (sign) bit is propagated into the bit positions vacated at the left.</span></span> <span data-ttu-id="43293-121">这意味着，如果`pattern`具有负值，空出的位置将设置为一个; 否则设置为零。</span><span class="sxs-lookup"><span data-stu-id="43293-121">This means that if `pattern` has a negative value, the vacated positions are set to one; otherwise they are set to zero.</span></span>  
   
- 请注意，数据类型 `Byte`、`UShort`、`UInteger` 和 `ULong` 是无符号的，所以没有符号位需要传递。  如果 `pattern` 的类型是任一种无符号类型，空出的位置将始终设置为零。  
+ <span data-ttu-id="43293-122">请注意，数据类型`Byte`， `UShort`， `UInteger`，和`ULong`是无符号整数，因此没有任何符号位传播。</span><span class="sxs-lookup"><span data-stu-id="43293-122">Note that the data types `Byte`, `UShort`, `UInteger`, and `ULong` are unsigned, so there is no sign bit to propagate.</span></span> <span data-ttu-id="43293-123">如果`pattern`的任何无符号类型，空出的位置将始终设置为零。</span><span class="sxs-lookup"><span data-stu-id="43293-123">If `pattern` is of any unsigned type, the vacated positions are always set to zero.</span></span>  
   
- 为防止移位的结果超出它所支持的位数，Visual Basic 使用与 `pattern` 的数据类型相对应的大小掩码来屏蔽 `amount` 的值。  可使用这些值的二进制与运算结果作为移位量。  大小掩码如下所示：  
+ <span data-ttu-id="43293-124">若要防止移位的更多位数超过结果所能容纳，Visual Basic 使用的值`amount`使用对应的数据类型的大小掩码`pattern`。</span><span class="sxs-lookup"><span data-stu-id="43293-124">To prevent shifting by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask corresponding to the data type of `pattern`.</span></span> <span data-ttu-id="43293-125">这些值的二进制 AND 用于位移量。</span><span class="sxs-lookup"><span data-stu-id="43293-125">The binary AND of these values is used for the shift amount.</span></span> <span data-ttu-id="43293-126">大小掩码如下所示：</span><span class="sxs-lookup"><span data-stu-id="43293-126">The size masks are as follows:</span></span>  
   
-|`pattern` 的数据类型。|大小掩码（十进制）|大小掩码（十六进制）|  
-|----------------------|---------------|----------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|<span data-ttu-id="43293-127">数据类型`pattern`</span><span class="sxs-lookup"><span data-stu-id="43293-127">Data type of `pattern`</span></span>|<span data-ttu-id="43293-128">大小掩码 （十进制）</span><span class="sxs-lookup"><span data-stu-id="43293-128">Size mask (decimal)</span></span>|<span data-ttu-id="43293-129">大小掩码 （十六进制）</span><span class="sxs-lookup"><span data-stu-id="43293-129">Size mask (hexadecimal)</span></span>|  
+|----------------------------|---------------------------|-------------------------------|  
+|<span data-ttu-id="43293-130">`SByte`, `Byte`</span><span class="sxs-lookup"><span data-stu-id="43293-130">`SByte`, `Byte`</span></span>|<span data-ttu-id="43293-131">7</span><span class="sxs-lookup"><span data-stu-id="43293-131">7</span></span>|<span data-ttu-id="43293-132">& H00000007</span><span class="sxs-lookup"><span data-stu-id="43293-132">&H00000007</span></span>|  
+|<span data-ttu-id="43293-133">`Short`, `UShort`</span><span class="sxs-lookup"><span data-stu-id="43293-133">`Short`, `UShort`</span></span>|<span data-ttu-id="43293-134">15</span><span class="sxs-lookup"><span data-stu-id="43293-134">15</span></span>|<span data-ttu-id="43293-135">& H0000000F</span><span class="sxs-lookup"><span data-stu-id="43293-135">&H0000000F</span></span>|  
+|<span data-ttu-id="43293-136">`Integer`, `UInteger`</span><span class="sxs-lookup"><span data-stu-id="43293-136">`Integer`, `UInteger`</span></span>|<span data-ttu-id="43293-137">31</span><span class="sxs-lookup"><span data-stu-id="43293-137">31</span></span>|<span data-ttu-id="43293-138">& H0000001F</span><span class="sxs-lookup"><span data-stu-id="43293-138">&H0000001F</span></span>|  
+|<span data-ttu-id="43293-139">`Long`, `ULong`</span><span class="sxs-lookup"><span data-stu-id="43293-139">`Long`, `ULong`</span></span>|<span data-ttu-id="43293-140">63</span><span class="sxs-lookup"><span data-stu-id="43293-140">63</span></span>|<span data-ttu-id="43293-141">& H0000003F</span><span class="sxs-lookup"><span data-stu-id="43293-141">&H0000003F</span></span>|  
   
- 如果 `amount` 为零，则 `result` 的值与 `pattern` 的值相同。  如果 `amount` 为负值，则将把它作为无符号的值，并使用相应的大小掩码进行屏蔽。  
+ <span data-ttu-id="43293-142">如果`amount`为零的值`result`的值是否相同`pattern`。</span><span class="sxs-lookup"><span data-stu-id="43293-142">If `amount` is zero, the value of `result` is identical to the value of `pattern`.</span></span> <span data-ttu-id="43293-143">如果`amount`是负数，它采用无符号值并使用适当的大小掩码进行屏蔽。</span><span class="sxs-lookup"><span data-stu-id="43293-143">If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.</span></span>  
   
- 数学移位绝不会产生溢出异常。  
+ <span data-ttu-id="43293-144">算术移位永远不会生成溢出异常。</span><span class="sxs-lookup"><span data-stu-id="43293-144">Arithmetic shifts never generate overflow exceptions.</span></span>  
   
-## 重载  
- `>>` 运算符可以被重载，这意味着当操作数具有某个类或结构的类型时，该类或结构可以重新定义其行为。  如果代码在这样的类或结构上使用此运算符，那么您一定要了解其重新定义的行为。  有关更多信息，请参见 [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a><span data-ttu-id="43293-145">重载</span><span class="sxs-lookup"><span data-stu-id="43293-145">Overloading</span></span>  
+ <span data-ttu-id="43293-146">`>>`运算符可以被*重载*，这意味着，一个类或结构可以重新定义其行为时，操作数的类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="43293-146">The `>>` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="43293-147">如果你的代码使用此运算符对这样的类或结构，请确保你了解其重新定义的行为。</span><span class="sxs-lookup"><span data-stu-id="43293-147">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="43293-148">有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="43293-148">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 示例  
- 下面的示例使用 `>>` 运算符对整数值执行算术右移位。  结果的数据类型始终与被移位的表达式相同。  
+## <a name="example"></a><span data-ttu-id="43293-149">示例</span><span class="sxs-lookup"><span data-stu-id="43293-149">Example</span></span>  
+ <span data-ttu-id="43293-150">下面的示例使用`>>`运算符对整型值执行算术右移位。</span><span class="sxs-lookup"><span data-stu-id="43293-150">The following example uses the `>>` operator to perform arithmetic right shifts on integral values.</span></span> <span data-ttu-id="43293-151">结果始终具有相同的数据被移位的表达式的类型。</span><span class="sxs-lookup"><span data-stu-id="43293-151">The result always has the same data type as that of the expression being shifted.</span></span>  
   
  [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
- 上面的示例的结果如下：  
+ <span data-ttu-id="43293-152">上述示例的结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="43293-152">The results of the preceding example are as follows:</span></span>  
   
--   `result1` 为 2560 \(0000 1010 0000 0000\)。  
+-   <span data-ttu-id="43293-153">`result1`为 2560 (0000 1010年 0000 0000)。</span><span class="sxs-lookup"><span data-stu-id="43293-153">`result1` is 2560 (0000 1010 0000 0000).</span></span>  
   
--   `result2` 为 160 \(0000 0000 1010 0000\)。  
+-   <span data-ttu-id="43293-154">`result2`为 160 (0000 0000 1010年 0000)。</span><span class="sxs-lookup"><span data-stu-id="43293-154">`result2` is 160 (0000 0000 1010 0000).</span></span>  
   
--   `result3` 为 2 \(0000 0000 0000 0010\)。  
+-   <span data-ttu-id="43293-155">`result3`为 2 (0000 0000 0000 0010)。</span><span class="sxs-lookup"><span data-stu-id="43293-155">`result3` is 2 (0000 0000 0000 0010).</span></span>  
   
--   `result4` 为 640 \(0000 0010 1000 0000\)。  
+-   <span data-ttu-id="43293-156">`result4`为 640 (0000 0010 1000年 0000)。</span><span class="sxs-lookup"><span data-stu-id="43293-156">`result4` is 640 (0000 0010 1000 0000).</span></span>  
   
--   `result5` 为 0（向右移了 15 位）。  
+-   <span data-ttu-id="43293-157">`result5`为 0 （向右移位 15 位数）。</span><span class="sxs-lookup"><span data-stu-id="43293-157">`result5` is 0 (shifted 15 places to the right).</span></span>  
   
- `result4` 的移位量按 18 AND 15 计算，结果等于 2。  
+ <span data-ttu-id="43293-158">移位量`result4`的计算方法为 18 和 15，等于 2。</span><span class="sxs-lookup"><span data-stu-id="43293-158">The shift amount for `result4` is calculated as 18 AND 15, which equals 2.</span></span>  
   
- 下面的示例演示对负值进行算术移位。  
+ <span data-ttu-id="43293-159">下面的示例演示上一个负数值的算术移位。</span><span class="sxs-lookup"><span data-stu-id="43293-159">The following example shows arithmetic shifts on a negative value.</span></span>  
   
  [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
- 上面的示例的结果如下：  
+ <span data-ttu-id="43293-160">上述示例的结果如下所示：</span><span class="sxs-lookup"><span data-stu-id="43293-160">The results of the preceding example are as follows:</span></span>  
   
--   `negresult1` 为 \-512 \(1111 1110 0000 0000\)。  
+-   <span data-ttu-id="43293-161">`negresult1`是-512 (1111年 1110年 0000 0000)。</span><span class="sxs-lookup"><span data-stu-id="43293-161">`negresult1` is -512 (1111 1110 0000 0000).</span></span>  
   
--   `negresult2` 为 \-1（传递了符号位）。  
+-   <span data-ttu-id="43293-162">`negresult2`为-1 （传播符号位）。</span><span class="sxs-lookup"><span data-stu-id="43293-162">`negresult2` is -1 (the sign bit is propagated).</span></span>  
   
-## 请参阅  
- [移位运算符](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [\>\>\= 运算符](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)   
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [算术运算符 \(Visual Basic\)](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="43293-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43293-163">See Also</span></span>  
+ [<span data-ttu-id="43293-164">移位运算符</span><span class="sxs-lookup"><span data-stu-id="43293-164">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="43293-165">赋值运算符</span><span class="sxs-lookup"><span data-stu-id="43293-165">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [<span data-ttu-id="43293-166">>>= 运算符</span><span class="sxs-lookup"><span data-stu-id="43293-166">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [<span data-ttu-id="43293-167">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="43293-167">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="43293-168">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="43293-168">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="43293-169">在 Visual Basic 中的算术运算符</span><span class="sxs-lookup"><span data-stu-id="43293-169">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

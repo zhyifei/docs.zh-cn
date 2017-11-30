@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 使用分组 (LINQ) (Visual Basic 中) 将一个文件拆分成多个文件 |Microsoft 文档"
+title: "如何： 将一个文件拆分成多个文件，方法是使用组 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00fbffa99ade302db536f7e56a4d004071efb2c6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76fb89136e05ee803c1bb2c91674e6b216e4ed2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>如何︰ 将一个文件拆分成多个文件，通过使用组 (LINQ) (Visual Basic)
-此示例演示一种方法合并两个文件的内容，然后创建一组全新的方式组织数据的新文件。  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="dbbc4-102">如何： 将一个文件拆分成多个文件，方法是使用组 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dbbc4-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="dbbc4-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="dbbc4-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a>若要创建的数据文件  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="dbbc4-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="dbbc4-104">To create the data files</span></span>  
   
-1.  将这些名称复制到名为 names1.txt 的文本文件，并将其保存在项目文件夹中︰  
+1.  <span data-ttu-id="dbbc4-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="dbbc4-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  在项目文件夹复制到名为 names2.txt 一个文本文件，然后将它保存这些名称︰ 请注意，这两个文件有一些通用名称。  
+2.  <span data-ttu-id="dbbc4-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：注意这两个文件有一些共同的姓名。</span><span class="sxs-lookup"><span data-stu-id="dbbc4-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +53,7 @@ ms.lasthandoff: 03/13/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="dbbc4-107">示例</span><span class="sxs-lookup"><span data-stu-id="dbbc4-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -130,11 +122,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- 程序为每个组中的数据文件所在的文件夹写入一个单独的文件。  
+ <span data-ttu-id="dbbc4-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="dbbc4-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="dbbc4-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="dbbc4-109">Compiling the Code</span></span>  
+ <span data-ttu-id="dbbc4-110">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="dbbc4-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="dbbc4-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dbbc4-111">See Also</span></span>  
+ [<span data-ttu-id="dbbc4-112">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dbbc4-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="dbbc4-113">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dbbc4-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
