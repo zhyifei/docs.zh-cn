@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
-继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。 通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 派生类只能有一个直接基类。 但是，继承是可传递的。 如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。  
+继承（以及封装和多形性）是面向对象的编程的三个主要特征之一。 通过继承，可以创建重用、扩展和修改在其他类中定义的行为的新类。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 派生类只能有一个直接基类。 但是，继承是可传递的。 如果 ClassC 派生自 ClassB，并且 ClassB 派生自 ClassA，则 ClassC 会继承在 ClassB 和 ClassA 中声明的成员。 
   
 > [!NOTE]
 >  结构不支持继承，但它们可以实现接口。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/28/2017
  [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>抽象方法和虚方法  
- 基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。 如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。 如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。 抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。 有关详细信息，请参阅[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。 如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。 如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。 抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。 有关详细信息，请参阅[多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。 
   
 ## <a name="abstract-base-classes"></a>抽象基类  
  如果要使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字防止直接实例化，则可以将类声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果这样做，则仅当从该类派生新类时，才能使用该类。 抽象类可以包含一个或多个本身声明为抽象的方法签名。 这些签名指定参数和返回值，但没有任何实现（方法体）。 抽象类不必包含抽象成员；但是，如果类包含抽象成员，则类本身必须声明为抽象。 本身不抽象的派生类必须为来自抽象基类的任何抽象方法提供实现。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="interfaces"></a>接口  
  接口是引用类型，有些类似于仅包含抽象成员的抽象基类。 类实现接口时，它必须为接口的所有成员提供实现。 类可以实现多个接口，即使它只能派生自单个直接基类。  
   
- 接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=fullName> 接口可由任何类或结构实现，这些类或构造必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
+ 接口用于为类定义特定功能，这些功能不一定具有“是”关系。 例如，<xref:System.IEquatable%601?displayProperty=fullName> 接口可由任何类或结构实现，这些类或结构必须启用客户端代码来确定该类型的两个对象是否等效（但是由该类型定义等效性）。 <xref:System.IEquatable%601> 不表示基类和派生类之间存在的同一种“是”关系（例如，`Mammal` 是 `Animal`）。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ## <a name="preventing-further-derivation"></a>防止进一步派生  
  类可以通过将自己或成员声明为[密封](../../../csharp/language-reference/keywords/sealed.md)，来防止其他类继承自它或继承自其任何成员。 有关详细信息，请参阅[抽象类、密封类和类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
