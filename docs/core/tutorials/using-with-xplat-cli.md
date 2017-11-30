@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
+ms.openlocfilehash: 19622cca1dd28d4d2248d69f1b4081c352a0c4f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令行在 Windows/Linux/macOS 上入门 .NET Core
 
 本主题将演示如何使用 .NET Core CLI 工具开始在计算机上开发跨平台应用。
@@ -64,11 +62,13 @@ $ dotnet run
 
    接着定义一个名为 `Hello` 的命名空间。 你可以将其更改为任何你喜欢的名称。 在该命名空间中定义了一个名为 `Program` 的类，其中 `Main` 方法将字符串数组作为其参数。 此数组包含在调用编译的程序时所传递的参数列表。 按照这样，不使用此数组：程序所进行的全部操作就是编写“Hello World!” “Hello World!”。 稍后将对使用此参数的代码进行更改。
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md) 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 *Hello.csproj* 文件、下载文件中所述的依赖项（或从计算机缓存中获取）并编写 *obj/project.assets.json* 文件。  需要 *project.assets.json* 文件才可进行编译和运行。
    
-   *project.assets.json* 文件是 NuGet 依赖项和其他描述应用的信息的持久化完整图片集。  此文件由其他工具（如 [](../tools/dotnet-build.md)[ 和 `dotnet build``dotnet run`](../tools/dotnet-run.md)）读取，让它们可以使用正确的 NuGet 依赖项和绑定解决方法集处理源代码。
+   *project.assets.json* 文件是 NuGet 依赖项和其他描述应用的信息的持久化完整图片集。  此文件由其他工具（如 [`dotnet build`](../tools/dotnet-build.md) 和 [`dotnet run`](../tools/dotnet-run.md)）读取，让它们可以使用正确的 NuGet 依赖项和绑定解决方法集处理源代码。
    
 3. `$ dotnet run`
 
@@ -129,11 +129,11 @@ $ dotnet run
 
 1. 使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：
 
-   [!code-csharp[Fibonacci 生成器](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. 更改 *Program.cs* 文件中的 `Main` 方法，以实例化新的类并调用其方法，如下例所示：
 
-   [!code-csharp[新的 Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. 执行 [`dotnet build`](../tools/dotnet-build.md) 以编译更改。
 
@@ -164,4 +164,3 @@ $ dotnet run
 ## <a name="see-also"></a>另请参阅
 
 [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)
-
