@@ -1,38 +1,20 @@
 ---
-title: "因为无法获得单个实例启动所需的操作系统资源出现意外的错误 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "发生错误，因为无法获得单个实例启动所需的操作系统资源"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAppModel_CantGetMemoryMappedFile
-dev_langs:
-- VB
+f1_keywords: vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
 应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
@@ -54,6 +36,6 @@ ms.lasthandoff: 03/13/2017
 4.  记录发生错误的环境，并与 Microsoft 产品支持服务联系  
   
 ## <a name="see-also"></a>另请参阅  
- [应用程序页、项目设计器 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [调试器基础知识](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [调试器基础知识](/visualstudio/debugger/debugger-basics)  
+ [与我们交流](/visualstudio/ide/talk-to-us)

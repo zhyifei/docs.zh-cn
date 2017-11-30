@@ -16,14 +16,14 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31406d7ed98b462a39e0b57bf66988b1c440a33f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="creating-a-new-windows-form"></a>创建新的 Windows 窗体
-本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 。 若要了解更多有关 Windows 窗体应用程序、可以对这些应用程序使用的控件、事件和处理事件以及如何处理来自用户的输入的信息，请参阅相关的主题列表。  
+本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows 窗体坐标](../../../docs/framework/winforms/windows-forms-coordinates.md)。  

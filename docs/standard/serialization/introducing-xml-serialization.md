@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, about XML serialization
 - ICollection interface, serializing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 858d973ae48ee217f73f293c1ed30c4c3f91cb29
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 13afeecc979cab9719ffa063f78ff91c866262d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 序列化是将对象转换成易于传输的形式的过程。 例如，可以序列化对象，并使用 HTTP 通过 Internet 在客户端和服务器之间进行传输。 另一方面，反序列化在流中重新构建对象。  
@@ -181,14 +178,13 @@ public string MyToken;
 -   <xref:System.Xml.Serialization.XmlRootAttribute>  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.IO.FileStream>   
- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)   
- [序列化](../../../docs/standard/serialization/index.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.IO.FileStream>  
+ [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)  
+ [序列化](../../../docs/standard/serialization/index.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [XML 序列化示例](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

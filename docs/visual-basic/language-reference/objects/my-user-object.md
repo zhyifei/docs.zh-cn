@@ -1,37 +1,36 @@
 ---
-title: "My.User 对象 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.User 对象"
-  - "My.User 属性"
+title: "My.User 对象"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.User property
+- My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c905ad1f0f9efcfbf4341b96d057af4dc16d6b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# My.User 对象
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供对有关当前用户的信息的访问。  
+# <a name="myuser-object"></a>My.User 对象
+提供了对当前用户信息的访问权限。  
   
-## 备注  
- 有关 `My.User` 对象的方法和属性的信息，请参见 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=fullName>。  
+## <a name="remarks"></a>备注  
+ 有关的方法和属性的信息`My.User`对象，请参阅<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>。  
   
- 有关更多信息，请参见 [访问用户数据](../../../visual-basic/developing-apps/programming/accessing-user-data.md)。  
+ 有关详细信息，请参阅[访问用户数据](../../../visual-basic/developing-apps/programming/accessing-user-data.md)。  
   
-## 要求  
- **程序集：**Visual Basic 运行库（位于 Microsoft.VisualBasic.dll 中）  
+## <a name="requirements"></a>要求  
+ **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## 请参阅  
- <xref:System.Security.Principal.IPrincipal>   
- <xref:System.Threading.Thread.CurrentPrincipal%2A>   
- <xref:System.Web.HttpContext.User%2A>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Security.Principal.IPrincipal>  
+ <xref:System.Threading.Thread.CurrentPrincipal%2A>  
+ <xref:System.Web.HttpContext.User%2A>  
  <xref:System.Web.HttpContext.Current%2A>

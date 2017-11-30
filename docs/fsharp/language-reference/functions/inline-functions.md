@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 3fa31178-08f8-463d-9d41-d29220a90027
-ms.openlocfilehash: 8293a73e9468d3bc3eb51cd99860e52c48121ae3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 0489d411e2754eaab6a10ff0feb4405491b3b511
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="inline-functions"></a>内联函数
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/18/2017
 
 
 ## <a name="using-inline-functions"></a>使用内联函数
-当使用静态类型参数时，由类型参数化任何函数必须进行内联。 这可保证编译器可以解析这些类型参数。 当使用普通的泛型类型参数时，没有这样的限制。
+当使用静态类型参数时，由类型参数化任何函数必须进行内联。 这可保证编译器可以解决这些类型参数。 当使用普通的泛型类型参数时，没有这样的限制。
 
 以外启用将成员约束，内联函数可以帮助优化代码。 但是，内联函数的过度使用可能导致代码不太抵抗编译器优化和库函数的实现中的更改。 为此，应避免使用内联函数进行优化，除非你已尝试所有其他优化技术。 使函数或方法内联有时可以提高性能，但是，并非总是这种情况。 因此，你还应使用性能度量值以确定进行任何给定的函数内联实际上具有积极的影响。
 

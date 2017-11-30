@@ -1,101 +1,103 @@
 ---
-title: "异步编程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "异步编程"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-ado
+ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fb500b203555c9174727cd4e9f69eeb5f1df87db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 异步编程
-本主题讨论对用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] \(SqlClient\) 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据提供程序中的异步编程的支持，包括为支持 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能而进行的增强。  
+# <a name="asynchronous-programming"></a>异步编程
+
+本主题讨论对用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (SqlClient) 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据提供程序中的异步编程的支持，包括为支持 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能而进行的增强。  
   
-## 旧版异步编程  
+## <a name="legacy-asynchronous-programming"></a>旧版异步编程  
  在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：  
   
-1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=fullName>  
+1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=fullName>  
+3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 中仍保留了此功能。  
   
  从 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 开始，这些方法不再需要连接字符串中的 `Asynchronous Processing=true`。  
   
-## [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能  
  该新的异步编程功能提供了一种用于使代码异步的简单技术。  
   
  有关 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能的更多信息，请参见：  
   
--   [Visual Studio 异步编程](http://go.microsoft.com/fwlink/?LinkId=220765)  
-  
--   [使用 .Net 4.5（第 1 部分） 中 SqlDataReader 的新异步方法](http://blogs.msdn.com/b/adonet/archive/2012/04/20/using-sqldatareader-s-new-async-methods-in-net-4-5-beta.aspx)  
-  
--   [使用 .Net 4.5（第 2 部分） 中 SqlDataReader 的新异步方法](http://blogs.msdn.com/b/adonet/archive/2012/07/15/using-sqldatareader-s-new-async-methods-in-net-4-5-beta-part-2-examples.aspx)  
-  
- 当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。  以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。  这将增加异步代码结构的复杂性（与同步代码相比）。  
+- [在 C# 中的异步编程](../../../csharp/async.md)
+
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
+
+- [使用.Net 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+
+- [使用.Net 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+ 
+ 当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。  以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。 这将增加异步代码结构的复杂性（与同步代码相比）。  
   
  现在，您可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。  
   
- `async` 修饰符用于指定异步方法。  调用 `async` 方法时，将返回一个任务。  针对该任务调用 `await` 语句时，当前方法立即退出。  在该任务完成时，执行会在同一方法中恢复。  
+ `async` 修饰符用于指定异步方法。 调用 `async` 方法时，将返回一个任务。 当`await`运算符应用于一项任务时，当前方法立即退出。 在该任务完成时，执行会在同一方法中恢复。
   
 > [!WARNING]
 >  如果应用程序还使用 `Context Connection` 连接字符串关键字，则不支持异步调用。  
   
- 调用 `async` 方法不会分配任何附加线程。  结束时，它可以简单地使用现有 I\/O 完成线程。  
+ 调用 `async` 方法不会分配任何附加线程。 结束时，它可以简单地使用现有 I/O 完成线程。  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了用于支持异步编程以下方法：  
   
--   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteNonQueryAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteNonQueryAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteScalarAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteScalarAsync%2A?displayProperty=nameWithType>  
   
 -   <xref:System.Data.Common.DbDataReader.GetFieldValueAsync%2A>  
   
 -   <xref:System.Data.Common.DbDataReader.IsDBNullAsync%2A>  
   
--   <xref:System.Data.Common.DbDataReader.NextResultAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbDataReader.NextResultAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbDataReader.ReadAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbDataReader.ReadAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlConnection.OpenAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteScalarAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteScalarAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteXmlReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteXmlReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.NextResultAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlDataReader.NextResultAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.ReadAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlDataReader.ReadAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  添加了其他异步成员以支持[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
   
-### 同步到异步连接打开  
- 您可以将现有应用程序升级以使用新的异步功能。  例如，假设应用程序具有同步连接算法，并在每次 UI 线程连接到数据库时加以阻止，连接后，该应用程序将调用向刚登录的用户之外的其他用户发送信号的存储过程。  
+### <a name="synchronous-to-asynchronous-connection-open"></a>同步到异步连接打开  
+ 您可以将现有应用程序升级以使用新的异步功能。 例如，假设应用程序具有同步连接算法，并在每次 UI 线程连接到数据库时加以阻止，连接后，该应用程序将调用向刚登录的用户之外的其他用户发送信号的存储过程。  
   
-```  
+```csharp
 using SqlConnection conn = new SqlConnection("…");  
 {  
    conn.Open();  
@@ -104,42 +106,41 @@ using SqlConnection conn = new SqlConnection("…");
       cmd.ExecuteNonQuery();  
    }  
 }  
-  
 ```  
   
  转换为使用新异步功能时，该程序看起来与下面类似：  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
   
 class A {  
   
-   static async Task<int> Method(SqlConnection conn, SqlCommand cmd) {  
-      await conn.OpenAsync();  
-      await cmd.ExecuteNonQueryAsync();  
-      return 1;  
-   }  
+   static async Task<int> Method(SqlConnection conn, SqlCommand cmd) {  
+      await conn.OpenAsync();  
+      await cmd.ExecuteNonQueryAsync();  
+      return 1;  
+   }  
   
-   public static void Main() {  
-      using (SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI")) {  
-         SqlCommand command = new SqlCommand("select top 2 * from orders", conn);  
+   public static void Main() {  
+      using (SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI")) {  
+         SqlCommand command = new SqlCommand("select top 2 * from orders", conn);  
   
-         int result = A.Method(conn, command).Result;  
+         int result = A.Method(conn, command).Result;  
   
-         SqlDataReader reader = command.ExecuteReader();  
+         SqlDataReader reader = command.ExecuteReader();  
          while (reader.Read())  
             Console.WriteLine(String.Format("{0}", reader[0]));  
-      }  
-   }  
+      }  
+   }  
 }  
 ```  
   
-### 在现有应用程序中添加新的异步功能（将旧模式与新模式混合）  
- 也可以在不更改现有异步逻辑的情况下添加新的异步功能 \(SqlConnection::OpenAsync\)。  例如，如果应用程序当前使用：  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>在现有应用程序中添加新的异步功能（将旧模式与新模式混合）  
+ 也可以在不更改现有异步逻辑的情况下添加新的异步功能 (SqlConnection::OpenAsync)。 例如，如果应用程序当前使用：  
   
-```  
+```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
 SqlConnection conn = new SqlConnection("…");  
 conn.Open();  
@@ -149,37 +150,37 @@ IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);
   
  您可以开始使用新异步模式而不会显著改变现有算法。  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
   
 class A {  
-   static void ProductList(IAsyncResult result) { }  
+   static void ProductList(IAsyncResult result) { }  
   
-   public static void Main() {  
-      // AsyncCallback productList = new AsyncCallback(ProductList);  
-      // SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
-      // conn.Open();  
-      // SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
-      // IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
+   public static void Main() {  
+      // AsyncCallback productList = new AsyncCallback(ProductList);  
+      // SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
+      // conn.Open();  
+      // SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
+      // IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
   
-      AsyncCallback productList = new AsyncCallback(ProductList);  
-      SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
-      conn.OpenAsync().ContinueWith((task) => {  
-         SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
-         IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
-      }, TaskContinuationOptions.OnlyOnRanToCompletion);  
-   }  
+      AsyncCallback productList = new AsyncCallback(ProductList);  
+      SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
+      conn.OpenAsync().ContinueWith((task) => {  
+         SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
+         IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
+      }, TaskContinuationOptions.OnlyOnRanToCompletion);  
+   }  
 }  
 ```  
   
-### 使用基本提供程序模型和新的异步功能  
- 您可能需要创建一个能够连接到不同数据库并执行查询的工具。  您可以使用基本提供程序模型和新的异步功能。  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>使用基本提供程序模型和新的异步功能  
+ 您可能需要创建一个能够连接到不同数据库并执行查询的工具。 您可以使用基本提供程序模型和新的异步功能。  
   
- 必须在服务器上启用 Microsoft 分布式事务处理控制器 \(MSDTC\) 以使用分布式事务。  有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。  
+ 必须在服务器上启用 Microsoft 分布式事务处理控制器 (MSDTC) 以使用分布式事务。 有关如何启用 MSDTC 的信息，请参阅[如何在 Web 服务器上启用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。  
   
-```  
+```csharp
 using System;  
 using System.Data.Common;  
 using System.Data.SqlClient;  
@@ -222,9 +223,9 @@ class A {
 }  
 ```  
   
-### 使用 SQL 事务和新的异步功能  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>使用 SQL 事务和新的异步功能  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
@@ -286,13 +287,12 @@ class Program {
       }  
    }  
 }  
-  
 ```  
   
-### 使用 SQL 事务和新的异步功能  
- 在企业应用程序中，某些情况下，您可能需要添加分布式事务以启用多个数据库服务器之间的事务。  您可以使用 System.Transactions 命名空间并登记分布式事务，如下所示：  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>使用 SQL 事务和新的异步功能  
+ 在企业应用程序中，某些情况下，您可能需要添加分布式事务以启用多个数据库服务器之间的事务。 您可以使用 System.Transactions 命名空间并登记分布式事务，如下所示：  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
@@ -348,13 +348,12 @@ class Program {
       }  
    }  
 }  
-  
 ```  
   
-### 取消异步操作  
+### <a name="cancelling-an-asynchronous-operation"></a>取消异步操作  
  可通过使用 <xref:System.Threading.CancellationToken> 来取消异步请求。  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading;  
@@ -391,10 +390,10 @@ namespace Samples {
 }  
 ```  
   
-### 使用 SqlBulkCopy 的异步操作  
- 异步功能也添加到了带有 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=fullName> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=fullName>。  
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a>使用 SqlBulkCopy 的异步操作  
+ 异步功能也添加到了带有 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Data;  
@@ -633,13 +632,13 @@ namespace SqlBulkCopyAsyncCodeSample {
 }  
 ```  
   
-## 异步使用多个命令与 MARS  
- 该示例打开单个与 **AdventureWorks** 数据库的连接。  使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。  在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
+## <a name="asynchronously-using-multiple-commands-with-mars"></a>异步使用多个命令与 MARS  
+ 该示例打开一个连接到**AdventureWorks**数据库。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
   
 > [!NOTE]
->  下面的示例使用随  **提供的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]AdventureWorks** 示例数据库。  示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。  根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -703,15 +702,15 @@ class Class1 {
 }  
 ```  
   
-## 使用 MARS 异步读取和更新数据  
- MARS 允许连接供读取操作以及数据操作语言 \(DML\) 操作使用，包含多个挂起操作。  通过此功能，应用程序不需要处理连接忙的错误。  此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。  最后，因为可以在单个连接上执行多个操作，所以，可以共享相同的事务上下文，不需要使用 **sp\_getbindtoken** 和 **sp\_bindsession** 系统存储过程。  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 异步读取和更新数据  
+ MARS 允许连接供读取操作以及数据操作语言 (DML) 操作使用，包含多个挂起操作。 通过此功能，应用程序不需要处理连接忙的错误。 此外，MARS 可以取代服务器端游标的用户，后者通常会占用更多资源。 最后，可以在单个连接上执行多个操作，因为它们可以共享相同的事务上下文，不需要使用**sp_getbindtoken**和**sp_bindsession**系统存储过程。  
   
- 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。  第一个命令对象检索信用评级为 5 的供应商列表。  第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。  每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。  通过执行计算来确定新的 **OnOrderQty**。  然后，通过第三个命令对象来使用新值更新 **ProductVendor** 表。  整个过程在单个事务中进行，在结束时回滚。  
+ 以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算来确定新**OnOrderQty**应为。 第三个命令对象然后用于更新**ProductVendor**使用新值的表。 整个过程在单个事务中进行，在结束时回滚。  
   
 > [!NOTE]
->  下面的示例使用随  **提供的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]AdventureWorks** 示例数据库。  示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。  根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -819,5 +818,5 @@ class Program {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

@@ -13,11 +13,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: bcfb6476d6ae1e9c01458c7ec12dc0cd3c34e995
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 73b7fd7564fea065167978deaad21bb533dbef0c
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="service-versioning"></a>服务版本控制
 服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本管理。  
@@ -167,14 +167,15 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  
-}  
+}
+
 [DataContract(   
-Name = "PurchaseOrder ",  
+Name = "PurchaseOrder",  
 Namespace = "http://examples.microsoft.com/WCF/2006/02/PurchaseOrder")]  
 public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2  
 {  
     [DataMember(...)]  
-    public DateTime OrderId {...}  
+    public string OrderId {...}  
     [DataMember(...)]  
     public string CustomerId {...}  
     [DataMember(...)]  
