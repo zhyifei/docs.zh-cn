@@ -1,45 +1,48 @@
 ---
-title: "如何：使用关键帧对边框的粗细进行动画处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 使用关键帧对边框的粗细进行动画处理"
-  - "边框粗细, 使用关键帧进行动画处理"
-  - "关键帧, 对边框的粗细进行动画处理"
+title: "如何：使用关键帧对边框的粗细进行动画处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], border thickness with key frames
+- key frames [WPF], animating border thickness with
+- border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08950b2b92bfcbd28472327f12a2ee49abfd9fed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用关键帧对边框的粗细进行动画处理
-此示例演示如何对 <xref:System.Windows.Controls.Border> 的 <xref:System.Windows.Controls.Control.BorderThickness%2A> 属性进行动画处理。  
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>如何：使用关键帧对边框的粗细进行动画处理
+此示例演示如何进行动画处理<xref:System.Windows.Controls.Control.BorderThickness%2A>属性<xref:System.Windows.Controls.Border>。  
   
-## 示例  
- 下面的示例使用 <xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> 类对 <xref:System.Windows.Controls.Border> 的 <xref:System.Windows.Controls.Control.BorderThickness%2A> 属性进行动画处理。  此动画按下列方式使用三个关键帧：  
+## <a name="example"></a>示例  
+ 下面的示例使用<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Controls.Control.BorderThickness%2A>属性<xref:System.Windows.Controls.Border>。 此动画按以下方式使用三个关键帧：  
   
-1.  在最初的半秒内，将使用 <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> 类的实例逐渐增加边框的粗细。  此示例使用 <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> 在值之间创建平滑的线性递增。  
+1.  第一个半秒内使用的是实例<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>类，以逐渐增加边框的粗细。 该示例使用<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>创建值之间平滑线性增加。  
   
-2.  在接下来的半秒结束时，将使用 <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> 类的实例突然增加边框的粗细。  离散关键帧（如从 <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> 派生的那些关键帧）将在值之间创建突然跳转，使动画出现跳帧效果。  
+2.  在下一步的末尾半秒，将使用的实例<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>类突然增加边框的粗细。 如离散关键帧派生自<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>突变值，即，动画的移动是不平稳。  
   
-3.  在最后两秒内，将使用 <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> 类的实例减小边框的粗细。  [样条](GTMT)关键帧与从 <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> 派生的关键帧一样，根据 <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> 属性的值在各个值之间创建可变过渡。  在此关键帧中，动画一开始较慢，然后以指数级加速，直至时间段结束。  
+3.  在最终的两秒内，使用的是实例<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>类以减少边框的粗细。 如样条关键帧派生自<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>创建变量的值根据值之间转换<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A>属性。 在此关键帧中，动画开始时缓慢，然后以指数方式加速，直到时间段结束。  
   
- [!code-xml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
- 有关完整示例，请参见 [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012)（KeyFrame 动画示例）。  
+ 有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>   
- <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>   
- <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [关键帧动画帮助主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
+ <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
+ <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  
+ [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
  [对 BorderThickness 值进行动画处理](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)

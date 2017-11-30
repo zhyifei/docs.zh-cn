@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 使用线程池 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 使用线程池 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60bceea0ed956075233f5f045131ffb2eb37eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a>如何︰ 使用线程池 (Visual Basic)
-*线程池*是一种多线程处理中将任务添加到队列，然后在创建线程后自动启动。 有关详细信息，请参阅[线程池 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a>如何： 使用线程池 (Visual Basic)
+*线程池*是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务。 有关详细信息，请参阅[线程池 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)。  
   
- 下面的示例使用.NET Framework 线程池来计算`Fibonacci`20%到 40 之间的十个数字的结果。 每个`Fibonacci`结果都由`Fibonacci`类，该类提供了一个名为方法`ThreadPoolCallback`用于执行计算。 一个对象，表示每个`Fibonacci`创建值时，与`ThreadPoolCallback`方法传递给<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，分配一个可用的线程池中要执行方法。</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ 下面的示例使用 .NET Framework 线程池为介于 20 和 40 之间的十个数字计算 `Fibonacci` 结果。 每个 `Fibonacci` 结果都由 `Fibonacci` 类表示，该类提供一个名为 `ThreadPoolCallback` 的方法，用于执行计算。 创建表示每个 `Fibonacci` 值的对象，并将 `ThreadPoolCallback` 方法传递给 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，它分配池中的一个可用线程来执行此方法。  
   
- 因为每个`Fibonacci`对象指定一个半随机的值来计算，以及每个线程都将争用处理器时间，因为您无法知道提前需要多长时间它将所有要计算的十个结果。 这就是为什么每个`Fibonacci`对象将传递的实例<xref:System.Threading.ManualResetEvent>类在构造期间。</xref:System.Threading.ManualResetEvent> 每个对象指示提供的事件对象其计算过程何时完成，这将允许主线程来阻止执行，与<xref:System.Threading.WaitHandle.WaitAll%2A>直到全部十`Fibonacci`对象具有计算出了结果。</xref:System.Threading.WaitHandle.WaitAll%2A> `Main`方法然后显示每个`Fibonacci`结果。  
+ 由于为每个 `Fibonacci` 对象都提供了一个半随机值来进行计算，而且每个线程都将争用处理器时间，因此无法提前知道十个结果全部计算出来所需的时间。 这就是在构造期间为每个 `Fibonacci` 对象传递 <xref:System.Threading.ManualResetEvent> 类的一个实例的原因。 当计算完成时，每个对象都通知提供的事件对象，从而使主线程使用 <xref:System.Threading.WaitHandle.WaitAll%2A> 阻止执行，直到十个 `Fibonacci` 对象全部计算出结果为止。 然后 `Main` 方法会显示每个 `Fibonacci` 结果。  
   
 ## <a name="example"></a>示例  
   
@@ -113,7 +105,7 @@ Module Module1
 End Module  
 ```  
   
- 下面是输出的示例。  
+ 下面是一个输出示例。  
   
 ```  
 launching 10 tasks...  
@@ -151,14 +143,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- [线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [线程处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
- [安全性](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [线程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [安全性](../../../../standard/security/index.md)

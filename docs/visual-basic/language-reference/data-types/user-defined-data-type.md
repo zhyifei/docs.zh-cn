@@ -1,74 +1,73 @@
 ---
-title: "用户定义的数据类型 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "UserDefined"
-  - "UDT"
-  - "vb.UDT"
-  - "User-Defined"
-  - "vb.UserDefined"
-  - "vb.User-Defined"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "数据类型 [Visual Basic], 分配"
-  - "数据类型 [Visual Basic], 用户定义的"
-  - "Structure 语句"
-  - "结构, 作为用户定义的数据类型"
-  - "类型 [Visual Basic], 用户定义的"
-  - "用户定义的数据类型"
-  - "用户定义的数据类型, 结构声明"
-  - "用户定义的数据类型, Visual Basic 中的结构"
-  - "用户定义的数据类型, Visual Basic"
-  - "用户定义的类型"
-  - "用户定义的类型, 结构声明"
-  - "用户定义的类型, Visual Basic 中的结构"
-  - "用户定义的类型, Visual Basic"
+title: "用户定义的数据类型"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- UserDefined
+- UDT
+- vb.UDT
+- User-Defined
+- vb.UserDefined
+- vb.User-Defined
+helpviewer_keywords:
+- user-defined data types [Visual Basic], Visual Basic
+- user-defined types
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
+- data types [Visual Basic], assigning
+- Structure statement [Visual Basic]
+- data types [Visual Basic], user-defined
+- user-defined data types [Visual Basic], structures in Visual Basic
+- user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 用户定义的数据类型
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-以您定义的格式保存数据。  `Structure` 语句将定义此格式。  
+# <a name="user-defined-data-type"></a>用户定义的数据类型
+在您定义的格式中包含数据。 `Structure`语句定义的格式。  
   
- Visual Basic 的以前版本支持用户定义的类型 \(UDT\)。  当前版本则将用户定义的类型扩展为结构。  结构是一个或多个不同数据类型的成员的串联。  Visual Basic 将一个结构视为一个单元，尽管如此，您仍然可以单独访问其成员。  
+ 以前版本的 Visual Basic 支持用户定义类型 (UDT)。 当前版本则将扩展到 UDT*结构*。 结构是一个或多个串联*成员*的各种数据类型。 虽然你也可以单独访问其成员，Visual Basic 将视为单个单元，一种结构。  
   
-## 备注  
- 当您需要将不同的数据类型组合为一个单元时，或者当所有基本数据类型都无法满足您的需求时，可以定义和使用结构数据类型。  
+## <a name="remarks"></a>备注  
+ 定义和使用结构数据类型，当你需要将各种数据类型组合到单个单元，或者当没有一个基本数据类型满足您的需要。  
   
- 结构数据类型的默认值由它的每个成员的默认值组合而成。  
+ 结构数据类型的默认值由其每个成员的默认值的组合组成。  
   
-## 声明格式  
- 结构声明以 [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md) 开始，以 `End` `Structure` 语句结束。  `Structure` 语句提供结构的名称，即结构所定义的数据类型的标识符。  代码中的其他部分可以使用此标识符声明变量、参数以及函数返回值（其数据类型为此结构的数据类型）。  
+## <a name="declaration-format"></a>声明格式  
+ 结构声明开头[Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)和结束的`End``Structure`语句。 `Structure`语句提供结构，它也是在定义结构的数据类型的标识符的名称。 代码的其他部分可以使用此标识符声明变量、 参数和函数的返回值是此结构的数据类型。  
   
- `Structure` 和 `End` `Structure` 语句之间的声明定义结构的成员。  
+ 之间的声明`Structure`和`End``Structure`语句定义结构的成员。  
   
-## 成员访问级别  
- 您必须使用 [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md) 或一个指定访问级别的语句（如 [Public](../../../visual-basic/language-reference/modifiers/public.md)、[Friend](../../../visual-basic/language-reference/modifiers/friend.md) 或 [Private](../../../visual-basic/language-reference/modifiers/private.md)）声明每个成员。  如果使用 `Dim` 语句，则访问级别默认为 Public。  
+## <a name="member-access-levels"></a>成员访问级别  
+ 必须声明使用每个成员[Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)或指定访问级别，例如语句[公共](../../../visual-basic/language-reference/modifiers/public.md)，[友元](../../../visual-basic/language-reference/modifiers/friend.md)，或[私有](../../../visual-basic/language-reference/modifiers/private.md). 如果你使用`Dim`语句，为公共的访问级别默认值。  
   
-## 编程提示  
+## <a name="programming-tips"></a>编程提示  
   
--   **内存消耗。**与所有的复合数据类型一样，您无法通过将结构成员的名义存储分配相加来得到确切的总内存消耗。  此外，不能完全假定成员在内存中的存储顺序与声明的顺序相同。  如果需要控制结构的存储布局，可以对 `Structure` 语句应用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性。  
+-   **内存消耗。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的总内存消耗。 此外，不能安全地假设存储在内存中的顺序是声明的顺序相同。 如果你需要控制结构的存储布局，则可以应用<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性设为`Structure`语句。  
   
--   **互操作注意事项。**如果您使用的组件不是为 .NET Framework 编写的组件（如自动化对象或 COM 对象），请记住，其他环境中的用户定义类型与 Visual Basic 结构类型不兼容。  
+-   **互操作注意事项。** 如果你与不是为.NET Framework 编写的组件交互，例如自动化或 COM 对象，请记住在其他环境中的用户定义的类型不兼容使用 Visual Basic 的结构类型。  
   
--   **扩大。**其他数据类型与任何结构数据类型之间不会进行任何自动转换。  您可以使用 [Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md) 在结构中定义转换运算符，也可以将每个转换运算符声明为 `Widening` 或 `Narrowing`。  
+-   **扩大转换。** 没有自动转换到或从任何结构数据类型。 你可以定义转换运算符对你结构使用[Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)，你可以声明为每个转换运算符`Widening`或`Narrowing`。  
   
--   **类型字符。**结构数据类型没有文本类型字符或标识符类型字符。  
+-   **类型字符。** 结构数据类型的任何文本类型字符或标识符类型字符。  
   
--   **Framework 类型。**.NET Framework 中没有相应的类型。  所有结构均继承自 .NET Framework 的 <xref:System.ValueType?displayProperty=fullName> 类，但是没有哪个结构与 <xref:System.ValueType?displayProperty=fullName> 相对应。  
+-   **Framework 类型。** .NET Framework 中不存在相应的类型。 从.NET Framework 类继承的所有结构<xref:System.ValueType?displayProperty=nameWithType>，但没有单独的结构对应<xref:System.ValueType?displayProperty=nameWithType>。  
   
-## 示例  
- 下面的示例演示结构声明的大致形式。  
+## <a name="example"></a>示例  
+ 下面的示例演示了结构声明的轮廓。  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -78,14 +77,14 @@ caps.handback.revision: 12
 End Structure  
 ```  
   
-## 请参阅  
- <xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。  
@@ -62,7 +55,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |选项|描述|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> - 或 -<br /><br /> `/?`|显示该工具的命令语法和选项。|  
-|`/help` *assembly*<br /><br /> - 或 -<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|  
+|`/help` *assembly*<br /><br /> - 或 -<br /><br /> `/?` *assembly*|显示由指定的程序集中的个别安装程序识别的其他选项，以及 InstallUtil.exe 的命令语法和选项。 此选项将各安装程序组件的 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回的文本添加到 InstallUtil.exe 的帮助文本。|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|指定必须在全局程序集缓存中注册的程序集的强名称。 必须使用程序集的版本、区域性和公钥标记完全限定程序集名称。 完全限定名必须用引号括起。<br /><br /> 例如，“myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0”是完全限定的程序集名称。|  
 |`/InstallStateDir=[` *directoryName* `]`|指定 .InstallState 文件的目录，其中包含用来卸载程序集的数据。 默认为包含程序集的目录。|  
 |`/LogFile=`[*filename*]|指定在其中记录安装进度的日志文件的名称。 默认情况下，如果省略 `/LogFile` 选项，则会创建名为 *assemblyname*.InstallLog 的日志文件。 如果省略 *filename*，则不生成任何日志文件。|  
@@ -72,10 +65,10 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 <a name="cmdline"></a>   
 ## <a name="additional-installer-options"></a>其他安装程序选项  
- 程序集中使用的独立安装程序可识别除“选项”[](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
+ 程序集中使用的独立安装程序可识别除[选项](#options)部分列出的选项之外的选项。 要了解有关这些选项的信息，可以在命令行中运行带有程序集路径的 InstallUtil.exe 以及 `/?` 或 `/help` 选项。 要指定这些选项，请将它们与 InstallUtil.exe 可识别的选项一起包含在命令行中。  
   
 > [!NOTE]
->  由单独的安装程序组件所支持的选项的帮助文本由 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 属性返回。 已经在命令行中输入的单个选项可通过编程方式从 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=fullName> 属性进行访问。  
+>  由单独的安装程序组件所支持的选项的帮助文本由 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 属性返回。 已经在命令行中输入的单个选项可通过编程方式从 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> 属性进行访问。  
   
  所有选项和命令行参数都将写入到安装日志文件中。 但是，如果你使用 `/Password` 参数（某些安装程序组件可识别这些参数），密码信息将被替换为八个星号 (*)，且不会出现在日志文件中。  
   
@@ -95,7 +88,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 -   *assemblyname*.InstallState - 包含用于卸载该程序集的数据。  
   
- Installutil.exe 使用反射检查指定的程序集以及查找将 <xref:System.Configuration.Install.Installer> 特性设置为 <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=fullName> 的所有 `true` 类型。 该工具然后对 <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=fullName> 类型的每个实例执行 <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=fullName> 或 <xref:System.Configuration.Install.Installer> 方法。 Installutil.exe 以事务性方式执行安装；也就是说，如果有一个程序集未能安装，则 Installutil.exe 会回滚其他所有程序集的安装。 卸载不是事务性的。  
+ Installutil.exe 使用反射检查指定的程序集以及查找将 <xref:System.Configuration.Install.Installer> 特性设置为 <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=nameWithType> 的所有 `true` 类型。 该工具然后对 <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> 类型的每个实例执行 <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=nameWithType> 或 <xref:System.Configuration.Install.Installer> 方法。 Installutil.exe 以事务性方式执行安装；也就是说，如果有一个程序集未能安装，则 Installutil.exe 会回滚其他所有程序集的安装。 卸载不是事务性的。  
   
  Installutil.exe 无法安装或卸载延迟签名的程序集，但可以安装或卸载具有强名称的程序集。  
   
@@ -110,7 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 installutil /?  
 ```  
   
- 下列命令显示了 InstallUtil.exe 的命令语法和选项的说明。 如果已向安装程序的 `myAssembly.exe` 属性分配了帮助文本，则它还会在 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 中显示安装程序组件支持的选项的说明的列表。  
+ 下列命令显示了 InstallUtil.exe 的命令语法和选项的说明。 如果已向安装程序的 `myAssembly.exe` 属性分配了帮助文本，则它还会在 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 中显示安装程序组件支持的选项的说明的列表。  
   
 ```  
 installutil /? myAssembly.exe  
@@ -177,7 +170,6 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Configuration.Install>   
- [工具](../../../docs/framework/tools/index.md)   
+ <xref:System.Configuration.Install>  
+ [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

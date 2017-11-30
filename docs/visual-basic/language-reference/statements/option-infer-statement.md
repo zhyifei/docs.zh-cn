@@ -1,46 +1,29 @@
 ---
-title: "Option Infer 语句 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Option Infer 语句"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
 - vb.Infer
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- Option Infer statement
-- Infer keyword
-- declaring variables, inferred
+- Option Infer statement [Visual Basic]
+- Infer keyword [Visual Basic]
+- declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6074ad44b94c80f275af562edef2dcd1173c0c3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -65,33 +48,33 @@ Option Infer { On | Off }
   
  在下图中，`Option Infer` 处于打开状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为整数。  
   
- ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 Option Infer 处于打开状态时的 IntelliSense  
   
- 在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中， **Option Strict**设置设为**关闭**上[编译页，项目设计器 (Visual Basic 中)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
+ 在下图中，`Option Infer` 处于关闭状态。 声明 `Dim someVar = 2` 中的变量由类型推理声明为 `Object`。 在此示例中， **Option Strict**设置设为**关闭**上[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
- ![声明的 IntelliSense 视图。](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![声明的 IntelliSense 视图。] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 Option Infer 处于关闭状态时的 IntelliSense  
   
 > [!NOTE]
->  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]执行调用的操作*装箱*和*取消装箱*之间进行转换`Object`和值类型，这减缓了执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification.md)。  
+>  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]执行操作调用*装箱*和*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
   
  类型推理适用于过程级，且在类、结构、模块或接口中的过程之外不适用。  
   
  有关其他信息，请参阅[本地类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>当 Option Infer 语句不存在时  
- 如果源代码不包含`Option Infer`语句， **Option Infer**上设置[编译页，项目设计器 (Visual Basic 中)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果使用命令行编译器， [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)使用编译器选项。  
+ 如果源代码不包含`Option Infer`语句， **Option Infer**上设置[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用。 如果使用命令行编译器， [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)使用编译器选项。  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer  
   
-1.  在**解决方案资源管理器**，选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[NIB︰ 使用项目设计器管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
   
-2.  单击“编译”****选项卡。  
+2.  单击“编译”选项卡。  
   
-3.  中的值设置**Option infer**框。  
+3.  设置中的值**Option infer**框。  
   
- 当您创建一个新项目， **Option Infer**上设置**编译**选项卡上设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是`On`。  
+ 当创建新项目， **Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是`On`。  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer  
   
@@ -110,19 +93,19 @@ Option Infer 处于关闭状态时的 IntelliSense
 ## <a name="example"></a>示例  
  下例演示了 `Option Infer` 语句启用局部类型推理的方式。  
   
- [!code-vb[VbVbalrTypeInference #&6;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## <a name="example"></a>示例  
  下例演示了变量被标识为 `Object` 时运行时类型可以改变的情况。  
   
- [!code-vb[VbVbalrTypeInference #&11;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## <a name="see-also"></a>另请参阅  
- [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Visual Basic 项目中，默认值选项对话框](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)   
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
+ [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
+ [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

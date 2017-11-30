@@ -1,24 +1,27 @@
 ---
-title: "指定的路径不存在 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "指定的路径不存在"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: db81d065389c542263d78502b37e92ab7b621967
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 指定的路径不存在
+# <a name="the-specified-path-does-not-exist"></a>指定的路径不存在
 指定的路径不存在，可能是由于组合字符串时发生了错误。  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
 -   请确保路径正确无误。  
   
-## 请参阅  
- [如何：分析文件路径](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)   
- [字符串和其他类型之间的转换](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [分析字符串 \(Visual Basic\)](http://msdn.microsoft.com/zh-cn/927a4b26-5388-458c-85d8-aaf0851457e3)
+## <a name="see-also"></a>另请参阅  
+ [如何：分析文件路径](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [字符串和其他类型之间的转换](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [在 Visual Basic 中分析字符串](http://msdn.microsoft.com/en-us/927a4b26-5388-458c-85d8-aaf0851457e3)

@@ -5,32 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-objects"></a>对象的默认封送处理
-可将类型化为 <xref:System.Object?displayProperty=fullName> 的参数和字段作为下列任一类型向非托管代码公开：  
+可将类型化为 <xref:System.Object?displayProperty=nameWithType> 的参数和字段作为下列任一类型向非托管代码公开：  
   
 -   对象为参数时，作为变体。  
   
@@ -151,37 +147,37 @@ struct ObjectHolder {
   
 -   如果对象是下表中列出的任何类型的实例，则得到的变体类型由封送拆收器内置的规则确定，并且显示在下表中。  
   
--   需要显式控制封送行为的其他对象可实现 <xref:System.IConvertible> 接口。 在这种情况下，变体类型由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的类型代码确定。 否则，将对象作为 VT_UNKNOWN 类型的变体封送。  
+-   需要显式控制封送行为的其他对象可实现 <xref:System.IConvertible> 接口。 在这种情况下，变体类型由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 方法返回的类型代码确定。 否则，将对象作为 VT_UNKNOWN 类型的变体封送。  
   
 ### <a name="marshaling-system-types-to-variant"></a>将系统类型封送到变体  
- 下表显示托管对象类型及其相应的 COM 变体类型。 仅当所调用方法的签名属于 <xref:System.Object?displayProperty=fullName> 类型时，才转换这些类型。  
+ 下表显示托管对象类型及其相应的 COM 变体类型。 仅当所调用方法的签名属于 <xref:System.Object?displayProperty=nameWithType> 类型时，才转换这些类型。  
   
 |对象类型|COM 变体类型|  
 |-----------------|----------------------|  
 |Null 对象引用（在 Visual Basic 中为 Nothing）。|VT_EMPTY|  
-|<xref:System.DBNull?displayProperty=fullName>|VT_NULL|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|VT_ERROR|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|带 E_PARAMNOTFOUND 的 VT_ERROR|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|VT_DISPATCH|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|VT_UNKNOWN|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|VT_CY|  
-|<xref:System.Boolean?displayProperty=fullName>|VT_BOOL|  
-|<xref:System.SByte?displayProperty=fullName>|VT_I1|  
-|<xref:System.Byte?displayProperty=fullName>|VT_UI1|  
-|<xref:System.Int16?displayProperty=fullName>|VT_I2|  
-|<xref:System.UInt16?displayProperty=fullName>|VT_UI2|  
-|<xref:System.Int32?displayProperty=fullName>|VT_I4|  
-|<xref:System.UInt32?displayProperty=fullName>|VT_UI4|  
-|<xref:System.Int64?displayProperty=fullName>|VT_I8|  
-|<xref:System.UInt64?displayProperty=fullName>|VT_UI8|  
-|<xref:System.Single?displayProperty=fullName>|VT_R4|  
-|<xref:System.Double?displayProperty=fullName>|VT_R8|  
-|<xref:System.Decimal?displayProperty=fullName>|VT_DECIMAL|  
-|<xref:System.DateTime?displayProperty=fullName>|VT_DATE|  
-|<xref:System.String?displayProperty=fullName>|VT_BSTR|  
-|<xref:System.IntPtr?displayProperty=fullName>|VT_INT|  
-|<xref:System.UIntPtr?displayProperty=fullName>|VT_UINT|  
-|<xref:System.Array?displayProperty=fullName>|VT_ARRAY|  
+|<xref:System.DBNull?displayProperty=nameWithType>|VT_NULL|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|VT_ERROR|  
+|<xref:System.Reflection.Missing?displayProperty=nameWithType>|带 E_PARAMNOTFOUND 的 VT_ERROR|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|VT_DISPATCH|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|VT_UNKNOWN|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|VT_CY|  
+|<xref:System.Boolean?displayProperty=nameWithType>|VT_BOOL|  
+|<xref:System.SByte?displayProperty=nameWithType>|VT_I1|  
+|<xref:System.Byte?displayProperty=nameWithType>|VT_UI1|  
+|<xref:System.Int16?displayProperty=nameWithType>|VT_I2|  
+|<xref:System.UInt16?displayProperty=nameWithType>|VT_UI2|  
+|<xref:System.Int32?displayProperty=nameWithType>|VT_I4|  
+|<xref:System.UInt32?displayProperty=nameWithType>|VT_UI4|  
+|<xref:System.Int64?displayProperty=nameWithType>|VT_I8|  
+|<xref:System.UInt64?displayProperty=nameWithType>|VT_UI8|  
+|<xref:System.Single?displayProperty=nameWithType>|VT_R4|  
+|<xref:System.Double?displayProperty=nameWithType>|VT_R8|  
+|<xref:System.Decimal?displayProperty=nameWithType>|VT_DECIMAL|  
+|<xref:System.DateTime?displayProperty=nameWithType>|VT_DATE|  
+|<xref:System.String?displayProperty=nameWithType>|VT_BSTR|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|VT_INT|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|VT_UINT|  
+|<xref:System.Array?displayProperty=nameWithType>|VT_ARRAY|  
   
  以下代码示例使用前一示例中定义的 `MarshalObject` 接口，演示如何将各种类型的变体传递给 COM 服务器。  
   
@@ -234,7 +230,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
  包装类在 <xref:System.Runtime.InteropServices> 命名空间中定义。  
   
 ### <a name="marshaling-the-iconvertible-interface-to-variant"></a>将 IConvertible 接口封送到变体  
- 类型（上一节中列出的类型除外）可通过实现 <xref:System.IConvertible> 接口来控制封送处理它们的方式。 如果对象实现 IConvertible 接口，则 COM 变体类型将在运行时由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 方法返回的 <xref:System.TypeCode> 枚举值确定。  
+ 类型（上一节中列出的类型除外）可通过实现 <xref:System.IConvertible> 接口来控制封送处理它们的方式。 如果对象实现 IConvertible 接口，则 COM 变体类型将在运行时由从 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 方法返回的 <xref:System.TypeCode> 枚举值确定。  
   
  下表显示 TypeCode 枚举可能的值以及每个值相应的 COM 变体类型。  
   
@@ -274,32 +270,32 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |COM 变体类型|对象类型|  
 |----------------------|-----------------|  
 |VT_EMPTY|Null 对象引用（在 Visual Basic 中为 Nothing）。|  
-|VT_NULL|<xref:System.DBNull?displayProperty=fullName>|  
+|VT_NULL|<xref:System.DBNull?displayProperty=nameWithType>|  
 |VT_DISPATCH|System.__ComObject；如果 (pdispVal == null)，则为 null|  
 |VT_UNKNOWN|System.__ComObject；如果 (punkVal == null)，则为 null|  
-|VT_ERROR|<xref:System.UInt32?displayProperty=fullName>|  
-|VT_BOOL|<xref:System.Boolean?displayProperty=fullName>|  
-|VT_I1|<xref:System.SByte?displayProperty=fullName>|  
-|VT_UI1|<xref:System.Byte?displayProperty=fullName>|  
-|VT_I2|<xref:System.Int16?displayProperty=fullName>|  
-|VT_UI2|<xref:System.UInt16?displayProperty=fullName>|  
-|VT_I4|<xref:System.Int32?displayProperty=fullName>|  
-|VT_UI4|<xref:System.UInt32?displayProperty=fullName>|  
-|VT_I8|<xref:System.Int64?displayProperty=fullName>|  
-|VT_UI8|<xref:System.UInt64?displayProperty=fullName>|  
-|VT_R4|<xref:System.Single?displayProperty=fullName>|  
-|VT_R8|<xref:System.Double?displayProperty=fullName>|  
-|VT_DECIMAL|<xref:System.Decimal?displayProperty=fullName>|  
-|VT_DATE|<xref:System.DateTime?displayProperty=fullName>|  
-|VT_BSTR|<xref:System.String?displayProperty=fullName>|  
-|VT_INT|<xref:System.Int32?displayProperty=fullName>|  
-|VT_UINT|<xref:System.UInt32?displayProperty=fullName>|  
-|VT_ARRAY | VT_\*|<xref:System.Array?displayProperty=fullName>|  
-|VT_CY|<xref:System.Decimal?displayProperty=fullName>|  
+|VT_ERROR|<xref:System.UInt32?displayProperty=nameWithType>|  
+|VT_BOOL|<xref:System.Boolean?displayProperty=nameWithType>|  
+|VT_I1|<xref:System.SByte?displayProperty=nameWithType>|  
+|VT_UI1|<xref:System.Byte?displayProperty=nameWithType>|  
+|VT_I2|<xref:System.Int16?displayProperty=nameWithType>|  
+|VT_UI2|<xref:System.UInt16?displayProperty=nameWithType>|  
+|VT_I4|<xref:System.Int32?displayProperty=nameWithType>|  
+|VT_UI4|<xref:System.UInt32?displayProperty=nameWithType>|  
+|VT_I8|<xref:System.Int64?displayProperty=nameWithType>|  
+|VT_UI8|<xref:System.UInt64?displayProperty=nameWithType>|  
+|VT_R4|<xref:System.Single?displayProperty=nameWithType>|  
+|VT_R8|<xref:System.Double?displayProperty=nameWithType>|  
+|VT_DECIMAL|<xref:System.Decimal?displayProperty=nameWithType>|  
+|VT_DATE|<xref:System.DateTime?displayProperty=nameWithType>|  
+|VT_BSTR|<xref:System.String?displayProperty=nameWithType>|  
+|VT_INT|<xref:System.Int32?displayProperty=nameWithType>|  
+|VT_UINT|<xref:System.UInt32?displayProperty=nameWithType>|  
+|VT_ARRAY | VT_\*|<xref:System.Array?displayProperty=nameWithType>|  
+|VT_CY|<xref:System.Decimal?displayProperty=nameWithType>|  
 |VT_RECORD|对应装箱的值类型。|  
 |VT_VARIANT|不支持。|  
   
- 变体类型从 COM 传递给托管代码、再传回 COM，这样的变体类型在调用期间可能不会保留同一变体类型。 请考虑将 VT_DISPATCH 类型的变体从 COM 传递到 .NET Framework 时会发生的情况。 在封送处理期间，变体转换为 <xref:System.Object?displayProperty=fullName>。 如果随后对象传回 COM，则将它封送回 VT_UNKNOWN 类型的变体。 将对象从托管代码封送到 COM 时，无法保证产生的变体与最初用于产生该对象的变体为同一类型。  
+ 变体类型从 COM 传递给托管代码、再传回 COM，这样的变体类型在调用期间可能不会保留同一变体类型。 请考虑将 VT_DISPATCH 类型的变体从 COM 传递到 .NET Framework 时会发生的情况。 在封送处理期间，变体转换为 <xref:System.Object?displayProperty=nameWithType>。 如果随后对象传回 COM，则将它封送回 VT_UNKNOWN 类型的变体。 将对象从托管代码封送到 COM 时，无法保证产生的变体与最初用于产生该对象的变体为同一类型。  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>封送 ByRef 变体  
@@ -343,8 +339,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |变体 v (VT_BYREF | VT_)|Ref 对象 o|仅类型未发生更改时。|  
   
 ## <a name="see-also"></a>另请参阅  
- [默认的封送行为](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable 和非 Blittable 类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)
-

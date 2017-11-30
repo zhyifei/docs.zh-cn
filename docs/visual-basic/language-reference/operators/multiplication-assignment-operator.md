@@ -1,64 +1,61 @@
 ---
-title: "*= 运算符 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.*="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "*= 运算符 [Visual Basic]"
-  - "赋值语句, 复合"
-  - "复合赋值语句"
-  - "运算符 *="
-  - "语句 [Visual Basic], 复合赋值"
+title: "*= 运算符 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.*=
+helpviewer_keywords:
+- operator *=
+- assignment statements [Visual Basic], compound
+- statements [Visual Basic], compound assignment
+- '*= operator [Visual Basic]'
+- compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d0a2c638f3faaf20fadb745ef437941ee29d4f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# *= 运算符 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-变量或属性值乘以表达式值，并将结果赋给该变量或属性。  
+# <a name="-operator-visual-basic"></a>*= 运算符 (Visual Basic)
+将相乘的表达式值的变量或属性的值并将结果赋给该变量或属性。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 variableorproperty *= expression  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `variableorproperty`  
- 必选。  任何数值变量或属性。  
+ 必需。 任何数值变量或属性。  
   
  `expression`  
- 必选。  任何数值表达式。  
+ 必需。 任何数值表达式。  
   
-## 备注  
- `*=` 运算符左边的元素可以是简单的标量变量，也可以是属性或数组元素。  变量或属性不能为 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+## <a name="remarks"></a>备注  
+ 在左侧的元素`*=`运算符可以是简单的标量变量、 属性或数组的元素。 变量或属性不能为[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
- `*=` 运算符首先使用该表达式的值 \(在运算符的右侧\) 和变量或属性的值 \(在运算符的左边\)。  运算符然后将该操作的结果赋给变量或属性。  
+ `*=`运算符首先 （运算符右侧） 表达式的值将与相乘的变量或属性 （该运算符左侧） 的值。 然后，运算符将该操作的结果分配给该变量或属性。  
   
-## 重载  
- [\* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md) 可以被“重载”，这意味着当操作数具有某个类或结构的类型时，该类或结构可以重新定义其行为。  重载 `*` 运算符会影响 `*=` 运算符的行为。  如果代码在重载了 `*` 的类或结构上使用 `*=`，那么您一定要了解其重新定义的行为。  有关更多信息，请参见 [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a>重载  
+ [* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md)可以是*重载*，这意味着，一个类或结构可以重新定义其行为时，操作数的类或结构的类型。 重载`*`运算符会影响的行为`*=`运算符。 如果你的代码使用`*=`对类或重载的结构`*`，确保你理解其重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 示例  
- 下面的示例使用 `*=` 运算符，将一个 `Integer` 变量与第二个该变量相乘，并将结果赋给第一个变量。  
+## <a name="example"></a>示例  
+ 下面的示例使用`*=`运算符将相乘一个`Integer`变量中的第二个和将结果赋给第一个变量。  
   
  [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
-## 请参阅  
- [\* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md)   
- [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+## <a name="see-also"></a>另请参阅  
+ [* 运算符](../../../visual-basic/language-reference/operators/multiplication-operator.md)  
+ [赋值运算符](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [语句](../../../visual-basic/programming-guide/language-features/statements.md)

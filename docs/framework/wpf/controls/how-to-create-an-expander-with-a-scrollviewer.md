@@ -1,39 +1,42 @@
 ---
-title: "如何：使用 ScrollViewer 创建 Expander | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件 [WPF], Expander"
-  - "控件 [WPF], ScrollViewer"
-  - "Expander 控件, 创建"
-  - "ScrollViewer 控件, 使用 Expander 控件"
+title: "如何：使用 ScrollViewer 创建 Expander"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Expander
+- ScrollViewer control [WPF], with Expander control
+- Expander control [WPF], creating
+- controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 817fb8d04e680335aff726db84cdfb9630b4cdf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 ScrollViewer 创建 Expander
-下面的示例演示如何创建包含图像和文本等复杂内容的 <xref:System.Windows.Controls.Expander> 控件。  此示例还在 <xref:System.Windows.Controls.ScrollViewer> 控件中包括 <xref:System.Windows.Controls.Expander> 的内容。  
+# <a name="how-to-create-an-expander-with-a-scrollviewer"></a>如何：使用 ScrollViewer 创建 Expander
+此示例演示如何创建<xref:System.Windows.Controls.Expander>包含复杂内容，如图像和文本的控件。 该示例还包含的内容<xref:System.Windows.Controls.Expander>中<xref:System.Windows.Controls.ScrollViewer>控件。  
   
-## 示例  
- 下面的示例演示如何创建 <xref:System.Windows.Controls.Expander>。  此示例使用包含图像和文本的 <xref:System.Windows.Controls.Primitives.BulletDecorator> 控件，以便对 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 进行定义。  <xref:System.Windows.Controls.ScrollViewer> 控件提供滚动已展开内容的方法。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何创建<xref:System.Windows.Controls.Expander>。 该示例使用<xref:System.Windows.Controls.Primitives.BulletDecorator>控件，它包含的图像和文本，为了定义<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>。 A<xref:System.Windows.Controls.ScrollViewer>控件提供了滚动扩展的内容的方法。  
   
- 请注意，此示例设置的是 <xref:System.Windows.Controls.ScrollViewer>（而不是内容）的 <xref:System.Windows.FrameworkElement.Height%2A> 属性。  如果设置的是内容的 <xref:System.Windows.FrameworkElement.Height%2A>，则 <xref:System.Windows.Controls.ScrollViewer> 不允许用户滚动内容。  <xref:System.Windows.FrameworkElement.Width%2A> 属性是针对 <xref:System.Windows.Controls.Expander> 控件设置的，并且此设置适用于 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 和已展开的内容。  
+ 请注意，该示例将<xref:System.Windows.FrameworkElement.Height%2A>属性<xref:System.Windows.Controls.ScrollViewer>而不是对内容。 如果<xref:System.Windows.FrameworkElement.Height%2A>于内容而设置<xref:System.Windows.Controls.ScrollViewer>不允许用户滚动内容。 <xref:System.Windows.FrameworkElement.Width%2A>上设置属性<xref:System.Windows.Controls.Expander>控件和此设置也适用于<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和扩展的内容。  
   
- [!code-xml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
+ [!code-xaml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
   
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.Expander>   
- [Expander 概述](../../../../docs/framework/wpf/controls/expander-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Controls.Expander>  
+ [扩展器概述](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [操作说明主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

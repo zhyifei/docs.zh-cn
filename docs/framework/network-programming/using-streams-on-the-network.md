@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>在网络上使用流
 网络资源在 .NET Framework 中表示为流。 通过对流进行一般处理，.NET Framework 提供下列功能：  
   
--   发送和接收 Web 数据的通用方法。 无论文件的实际内容是什么（HTML、XML 或任何其他内容），应用程序都将使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 发送和接收数据。  
+-   发送和接收 Web 数据的通用方法。 无论文件的实际内容是什么（HTML、XML 或任何其他内容），应用程序都将使用 <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> 发送和接收数据。  
   
 -   跨 .NET Framework 的流兼容性。 流在 .NET Framework 中遍及使用，其具有丰富的基础结构来处理流。 例如，通过仅更改初始化流的几行代码，便可修改从 <xref:System.IO.FileStream> 中读取 XML 数据的应用程序而使其改为从 <xref:System.Net.Sockets.NetworkStream> 中读取数据。 NetworkStream 类和其他流之间的主要区别在于：NetworkStream 是不可查找的，<xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 属性始终返回 false，且 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法将引发 <xref:System.NotSupportedException>。  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [请求数据](../../../docs/framework/network-programming/requesting-data.md)
-

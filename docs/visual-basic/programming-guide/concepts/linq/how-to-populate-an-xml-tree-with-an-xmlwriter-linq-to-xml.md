@@ -1,38 +1,30 @@
 ---
-title: "如何︰ 填充 XML 树使用 XmlWriter (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "如何： 填充 XML 树使用 XmlWriter (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dfd10ec04e7293d90929d6f629201868028819ad
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 548e931a120a319bbd45885e6d1b60685d983c01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>如何︰ 填充 XML 树使用 XmlWriter (LINQ to XML) (Visual Basic)
-填充 XML 树的一种方法是使用<xref:System.Xml.Linq.XContainer.CreateWriter%2A>创建<xref:System.Xml.XmlWriter>，然后将写入到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> 使用写入到<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter>的所有节点，填充 XML 树  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>如何： 填充 XML 树使用 XmlWriter (LINQ to XML) (Visual Basic)
+填充 XML 树的一种方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 创建一个 <xref:System.Xml.XmlWriter>，然后写入 <xref:System.Xml.XmlWriter>。 XML 树将用写入到 <xref:System.Xml.XmlWriter> 的所有节点进行填充。  
   
- 当您使用时，通常应使用此方法[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]期望将写入到另一个类替换<xref:System.Xml.XmlWriter>，如<xref:System.Xml.Xsl.XslCompiledTransform>。</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter>  
+ 在与预期会向 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 写入数据的另一个类（如 <xref:System.Xml.XmlWriter>）一起使用 <xref:System.Xml.Xsl.XslCompiledTransform> 时，通常应使用此方法。  
   
 ## <a name="example"></a>示例  
- 一个可能的用途<xref:System.Xml.Linq.XContainer.CreateWriter%2A>时，可以调用 XSLT 转换。</xref:System.Xml.Linq.XContainer.CreateWriter%2A> 此示例中创建 XML 树，创建<xref:System.Xml.XmlReader>从 XML 树中，创建一个新文档，然后创建<xref:System.Xml.XmlWriter>要写入到新文档。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 示例然后调用 XSLT 转换，传入<xref:System.Xml.XmlReader>和<xref:System.Xml.XmlWriter>。</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 在转换成功完成后，使用转换的结果，填充新的 XML 树。  
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 可能在调用 XSLT 转换时使用。 本示例创建一个 XML 树，从该 XML 树创建一个 <xref:System.Xml.XmlReader>，创建一个新文档，然后创建要写入到新文档的 <xref:System.Xml.XmlWriter>。 示例然后调用 XSLT 转换，传入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。 在转换成功完成后，使用转换的结果，填充新的 XML 树。  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -80,7 +72,7 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A></xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter></xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform></xref:System.Xml.Xsl.XslCompiledTransform>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
+ <xref:System.Xml.XmlWriter>  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
  [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -1,34 +1,30 @@
 ---
-title: "查询 XDocument 与查询 XElement (Visual Basic 中) |Microsoft 文档"
+title: "查询 XDocument 与查询 XElement (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29044cd118bfd8ecc12bddca722ee3656d455e0f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>查询 XDocument 与查询 XElement (Visual Basic)
-通过<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>，您将注意到，您需要编写查询稍有不同于通过<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>。</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>负载时，</xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>将文档加载时  
+通过 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 加载文档时，您会注意到，您要编写的查询与通过 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 加载文档时稍有不同。  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load 与 XElement.Load 的比较  
- 当您将 XML 文档加载到<xref:System.Xml.Linq.XElement>通过<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>、<xref:System.Xml.Linq.XElement>根目录下的 XML 树包含所加载文档的根元素。</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement> 但是，当您加载同一个 XML 文档<xref:System.Xml.Linq.XDocument><xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>树的根<xref:System.Xml.Linq.XDocument>节点，然后加载文档的根元素是一个允许的子<xref:System.Xml.Linq.XElement>节点的<xref:System.Xml.Linq.XDocument>。</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> ，</xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>通过</xref:System.Xml.Linq.XDocument> [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 轴相对于根节点进行操作。  
+ 通过 <xref:System.Xml.Linq.XElement> 将 XML 文档加载到 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 中时，位于 XML 树根部的 <xref:System.Xml.Linq.XElement> 包含所加载文档的根元素。 然而，通过 <xref:System.Xml.Linq.XDocument> 将同一个 XML 文档加载到 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 中时，树根部为 <xref:System.Xml.Linq.XDocument> 节点，所加载文档的根元素为 <xref:System.Xml.Linq.XElement> 所允许的一个子 <xref:System.Xml.Linq.XDocument> 节点。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴相对于根节点进行操作。  
   
- 第一个示例加载使用<xref:System.Xml.Linq.XElement.Load%2A>。</xref:System.Xml.Linq.XElement.Load%2A> XML 树 然后它查询树根部的子元素。  
+ 第一个示例使用 <xref:System.Xml.Linq.XElement.Load%2A> 加载 XML 树。 然后它查询树根部的子元素。  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -59,7 +55,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- 下面的示例是一个相同更高版本，与 XML 树加载到<xref:System.Xml.Linq.XDocument>而不是<xref:System.Xml.Linq.XElement>。</xref:System.Xml.Linq.XElement></xref:System.Xml.Linq.XDocument>异常  
+ 下面的示例与上面的基本相同，不同之处在于 XML 树是加载到 <xref:System.Xml.Linq.XDocument>，而不是加载到 <xref:System.Xml.Linq.XElement>。  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -94,7 +90,7 @@ Querying tree loaded with XDocument.Load
   
  请注意，同样的查询返回一个 `Root` 节点，而不是返回三个子节点。  
   
- 处理这一种方法是使用<xref:System.Xml.Linq.XDocument.Root%2A>属性之前访问轴方法，如下所示︰</xref:System.Xml.Linq.XDocument.Root%2A>  
+ 处理这一问题的一种方法是在访问轴方法之前使用 <xref:System.Xml.Linq.XDocument.Root%2A> 属性，如下所示：  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -115,7 +111,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- 此查询现在在相同的执行方式与在树上查询来源于<xref:System.Xml.Linq.XElement>。</xref:System.Xml.Linq.XElement> 此示例产生以下输出：  
+ 此查询现在的执行方式与根部位于 <xref:System.Xml.Linq.XElement> 中的树中的查询相同。 此示例产生以下输出：  
   
 ```  
 Querying tree loaded with XDocument.Load  

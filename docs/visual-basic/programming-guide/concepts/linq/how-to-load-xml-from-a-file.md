@@ -1,38 +1,30 @@
 ---
-title: "如何︰ 从文件 (Visual Basic 中) 加载 XML |Microsoft 文档"
+title: "如何： 从文件 (Visual Basic) 加载 XML"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54755384eaf74fa008f93198f3de5e44fb095bda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7babad6b08b2aa486c2ae92e7ad2485d62ac5d47
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>如何︰ 从文件 (Visual Basic 中) 加载 XML
-本主题演示如何通过使用从 URI 加载 XML<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>方法。</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>如何： 从文件 (Visual Basic) 加载 XML
+本主题演示如何通过使用 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 方法从 URI 加载 XML。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何从文件加载 XML 文档。 下面的示例加载 books.xml 并将 XML 树输出到控制台。  
   
- 此示例使用下面的 XML 文档︰[示例 XML 文件︰ 书籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  

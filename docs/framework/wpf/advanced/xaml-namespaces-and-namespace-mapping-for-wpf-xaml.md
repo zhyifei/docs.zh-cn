@@ -1,66 +1,71 @@
 ---
-title: "WPF XAML 的 XAML 命名空间和命名空间映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程序集, 映射命名空间到"
-  - "类, 映射命名空间到"
-  - "自定义类, 映射命名空间到"
-  - "映射命名空间"
-  - "命名空间映射"
-  - "命名空间"
-  - "XAML, 命名空间映射"
-  - "XAML, 命名空间"
+title: "WPF XAML 的 XAML 命名空间和命名空间映射"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom classes [WPF], mapping namespaces to
+- XAML [WPF], namespaces
+- namespace mapping [WPF]
+- assemblies [WPF], mapping namespaces to
+- mapping namespaces [WPF]
+- XAML [WPF], namespace mapping
+- classes [WPF], mapping namespaces to
+- namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2798659d3b53cb32af8e5976d4fee69780266633
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WPF XAML 的 XAML 命名空间和命名空间映射
-本主题进一步介绍 WPF XAML 文件的根标记中通常存在的两个 XAML 命名空间映射及其用途。  同时还介绍如何生成类似的映射，以便使用在您自己的代码中和\/或单独的程序集中定义的元素。  
+# <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空间和命名空间映射
+本主题进一步解释通常在 WPF XAML 文件的根标记中出现的两个 XAML 命名空间映射的存在性和用途。 此外，还介绍如何生成相似映射以使用代码中和/或单独程序集内定义的元素。  
   
-   
   
-## 什么是 XAML 命名空间？  
- XAML 命名空间实际上是 XML 命名空间概念的扩展。  指定 XAML 命名空间的技术依赖于 XML 命名空间语法、使用 URI 作为命名空间标识符的约定、使用前缀提供从同一标记源中引用多个命名空间的方法，诸如此类。  XML 命名空间的 XAML 定义中增加的主要概念是：XAML 命名空间既暗指标记用法的唯一性范围，也影响特定 CLR 命名空间和引用的程序集对标记实体的潜在支持方式。  后一种考虑因素也受到 XAML 架构上下文的概念的影响。  但对于 WPF 使用 XAML 命名空间的方式而言，您通常可以将 XAML 命名空间认为是默认 XAML 命名空间、XAML 语言命名空间，以及 XAML 标记直接映射到特定支持 CLR 命名空间和引用程序集的任何进一步的 XAML 命名空间。  
+## <a name="what-is-a-xaml-namespace"></a>什么是 XAML 命名空间？  
+ XAML 命名空间实际上是 XML 命名空间概念的扩展。 指定 XAML 命名空间的方法依赖于 XML 命名空间语法、将 URI 用作命名空间标识符以及使用前缀提供从相同标记源引用多个命名空间等约定。 XML 命名空间的 XAML 定义增添的主要概念是，XAML 命名空间表示标记用法唯一性范围，还影响标记实体可如何受特定 CLR 命名空间和引用程序集支持。 后者也会受 XAML 架构上下文概念影响。 但是出于 WPF 如何处理 XAML 命名空间的目的，对于默认 XAML 命名空间、XAML 语言命名空间以及任何其他由 XAML 标记直接映射到特定支持 CLR 命名空间和引用程序集的 XAML 命名空间，可通常考虑为 XAML 命名空间。  
   
 <a name="The_WPF_and_XAML_Namespace_Declarations"></a>   
-## WPF 和 XAML 命名空间声明  
- 在许多 XAML 文件的根标记中的命名空间声明内，您都会发现通常有两个 XML 命名空间声明。  第一个声明将整个 WPF 客户端\/框架 XAML 命名空间映射为默认命名空间：  
+## <a name="the-wpf-and-xaml-namespace-declarations"></a>WPF 和 XAML 命名空间声明  
+ 在许多 XAML 文件的根标记中的命名空间声明内，通常可看到两个 XML 命名空间声明。 第一个声明默认映射整个 WPF 客户端/框架 XAML 命名空间：  
   
  `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`  
   
- 第二个声明映射一个单独的 XAML 命名空间，通常将其映射到 `x:` 前缀。  
+ 第二个声明映射单独的 XAML 命名空间，（通常）将其映射到 `x:` 前缀。  
   
  `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
   
- 这些声明之间的关系是：`x:` 前缀映射支持作为 XAML 语言定义一部分的内部，而 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是一个实现，它使用 XAML 作为语言，并为 XAML 定义其对象的词汇。  由于 WPF 词汇的使用将远比 XAML 内部的使用常见得多，因此将 WPF 词汇映射为默认。  
+ 这些声明之间的关系是 `x:` 前缀映射支持 XAML 语言定义中的内部函数，并且 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是将 XAML 用作语言并为 XAML 定义对象词汇的一种实现。 因为 WPF 词汇用法远比 XAML 内部函数用法常见，因此默认映射 WPF 词汇。  
   
- 用于映射 XAML 语言内部支持的 `x:` 前缀约定后跟有项目模板、代码示例以及此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 内的语言功能文档之后。  XAML 命名空间定义了许多常用功能，这些功能即使对于基本的 WPF 应用程序也是必需的。  例如，若要通过分部类将任何代码隐藏加入到 XAML 文件中，必须将该类命名为相关 XAML 文件的根元素中的 `x:Class` 特性。  或者，对于在 XAML 页中定义的希望作为键控资源访问的任何元素都应在相关元素上设置 `x:Key` 特性。  有关 XAML 的这些方面和其他方面的更多信息，请参见 [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)或 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 内，映射 XAML 语言内部函数支持的 `x:` 前缀约定后跟项目模板、示例代码和语言功能文档。 XAML 命名空间定义许多常用功能，即使对于基本 WPF 应用程序而言，这些功能也是必需的。 例如，若要通过分部类将任何代码隐藏加入到 XAML 文件，必须将该类命名为相关 XAML 文件根元素中的 `x:Class` 属性。 或者，XAML 页面中定义的任何要作为键控资源访问的元素都应在当前元素上设置 `x:Key` 属性。 有关 XAML 的这些方面和其他方面的详细信息，请参阅 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 或 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
-## 映射到自定义类和程序集  
- 可以使用 `xmlns` 前缀声明中的一系列令牌将 XML 命名空间映射到程序集，这与将标准 WPF 和 XAML 内部 XAML 命名空间映射到前缀类似。  
+## <a name="mapping-to-custom-classes-and-assemblies"></a>映射到自定义类和程序集  
+ 在 `xmlns` 前缀声明内使用一系列标记可将 XML 命名空间映射到程序集，方法类似于将标准 WPF 和 XAML 内部函数 XAML 命名空间映射到前缀。  
   
- 语法使用下列可能的命名标记和值：  
+ 此语法采用以下可能的已命名标记和以下值：  
   
- `clr-namespace:` 在包含要作为元素公开的公共类型的程序集中声明的 CLR 命名空间。  
+ `clr-namespace:` 在程序集中声明的 CLR 命名空间，此程序集包含要作为元素公开的公共类型。  
   
- `assembly=` 是指包含部分或全部引用的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间的程序集。  此值通常只是程序集的名称，而不是路径，并且不包含扩展名（如 .exe 或 .dll）。  必须在包含要映射的 XAML 的项目文件中以项目引用形式建立该程序集的路径。  为了加入版本控制和强名称签名，`assembly` 值可以是由 <xref:System.Reflection.AssemblyName> 定义的字符串，而非简单字符串名称。  
+ `assembly=` 包含部分或全部引用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间的程序集。 此值通常为程序集的名称而不是路径，且不包含扩展名（例如 .dll 或 .exe）。 程序集路径必须创建为包含要映射的 XAML 的项目文件中的项目引用。 若要加入版本控制和强名称签名，`assembly`该值可以是一个字符串，由定义<xref:System.Reflection.AssemblyName>，而不是简单的字符串名称。  
   
- 请注意，分隔 `clr-namespace` 标记和其值的字符是冒号 \(:\)，而分隔 `assembly` 标记和其值的字符是等号 \(\=\)。  这两个标记之间使用的字符是分号。  另外，不要在声明中的任何位置包含任何空白。  
+ 请注意，分隔 `clr-namespace` 标记和其值的字符是冒号 (:)，而分隔 `assembly` 标记和其值的字符为等号 (=)。 这两个标记之间应使用的字符是分号。 此外，声明中任何位置不应含有空白。  
   
-### 基本自定义映射示例  
- 以下代码定义了一个自定义类的示例：  
+### <a name="a-basic-custom-mapping-example"></a>基本自定义映射示例  
+ 如下代码定义一个示例自定义类：  
   
 ```csharp  
 namespace SDKSample {  
@@ -83,15 +88,15 @@ Namespace SDKSample
 End Namespace  
 ```  
   
- 随后此自定义类将编译为一个库，根据项目设置（未显示）该库命名为 `SDKSampleLibrary`。  
+ 此自定义类随后编译到库，库按项目设置（未显示）命名为 `SDKSampleLibrary`。  
   
- 为了引用此自定义类，还需要包括此类作为当前项目的一个引用，此操作通常在 Visual Studio 中使用解决方案资源管理器 UI 完成。  
+ 为引用此自定义类，还需将其添加为当前项目的引用（通常可使用 Visual Studio 中的解决方案资源管理器 UI 完成此操作）。  
   
- 现在已经有了包含类的库以及对项目设置中该库的引用，可以添加以下前缀映射作为 XAML 中根元素的一部分：  
+ 具有包含类的库并在项目设置中对其进行引用后，可将如下前缀映射到 XAML 中的根元素中：  
   
  `xmlns:custom="clr-namespace:SDKSample;assembly=SDKSampleLibrary"`  
   
- 综上所述，下面的 XAML 在根标记中包括自定义映射以及典型的默认映射和 x: 映射，然后使用带有前缀的引用将该 UI 中的 `ExampleClass` 实例化：  
+ 综合而言，以下为根标记中包含自定义映射、典型默认值和 x: 映射的 XAML，然后使用前缀引用实例化此 UI 中的 `ExampleClass`：  
   
 ```xaml  
 <Page x:Class="WPFApplication1.MainPage"  
@@ -104,43 +109,43 @@ End Namespace
 </Page>  
 ```  
   
-### 映射到当前程序集  
- 如果引用的 `clr-namespace` 是在引用自定义类的应用程序代码所在的程序集中定义的，则可以省略 `assembly`。  这种情况的等效语法是指定 `assembly=`，等号后不需要任何字符串标记。  
+### <a name="mapping-to-current-assemblies"></a>映射到当前程序集  
+ 如果要在与引用自定义类的应用程序代码相同的程序集内定义引用的 `clr-namespace`，则可省略 `assembly`。 或者，这种情况的等效语法是指定 `assembly=` 且等号后不含任何字符串标记。  
   
- 如果自定义类是在同一程序集中定义的，则不能将其用作页的根元素。  不需要映射分部类；如果要在 XAML 中以元素形式引用自定义类，则只需要映射应用程序中页面的非分部类。  
+ 如果在同一程序集中定义，则自定义类无法用作页面的根元素。 分部类无需映射；仅需映射应用程序中不是页面分部类的类（若要将其引用为 XAML 中的元素）。  
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
-## 在程序集中将 CLR 命名空间映射为 XML 命名空间  
- WPF 定义一个 CLR 特性，XAML 处理器使用该特性将多个 CLR 命名空间映射到一个 XAML 命名空间。  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 特性放置在生成程序集的源代码中的程序集级别。  WPF 程序集源代码使用此特性将多种常见的命名空间（如 <xref:System.Windows> 和 <xref:System.Windows.Controls>）映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间。  
+## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>将 CLR 命名空间映射到程序集中的 XML 命名空间  
+ WPF 定义 XAML 处理器使用的 CLR 属性，以便将多个 CLR 命名空间映射到单个 XAML 命名空间。 此属性， <xref:System.Windows.Markup.XmlnsDefinitionAttribute>，放置在生成程序集的源代码中的程序集级别。 WPF 程序集源代码使用此属性映射不同的常见命名空间，如<xref:System.Windows>和<xref:System.Windows.Controls>到[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]命名空间。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 采用两个参数：XML\/XAML 命名空间名称和 CLR 命名空间名称。  可以存在多个 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>，以便将多个 CLR 命名空间映射到同一个 XML 命名空间。  映射后，如果需要，还可以通过在分部类代码隐藏页中提供相应的 `using` 语句来引用这些命名空间的成员，而无需完全限定。  有关更多详细信息，请参见 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute>采用两个参数： XML/XAML 命名空间名称和 CLR 命名空间名称。 多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以存在映射到相同的 XML 命名空间的多个 CLR 命名空间。 映射后，通过在分部类代码隐藏页中提供相应 `using` 语句，可在无完全限定的情况下引用这些命名空间的成员（如果需要）。 有关更多详细信息，请参阅 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
   
-## XAML 模板中的设计器命名空间和其他前缀  
- 如果正在使用 WPF XAML 的开发环境和\/或设计工具，您可能会注意到 XAML 标记内有其他定义的 XAML 命名空间\/前缀。  
+## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>设计器命名空间和 XAML 模板中的其他前缀  
+ 如果使用 WPF XAML 的开发环境和/或设计工具，你可能会注意到 XAML 标记内存在其他定义的 XAML 命名空间/前缀。  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用通常映射到前缀 `d:` 的设计器命名空间。  WPF 的最新项目模板可能会预先映射此 XAML 命名空间，以支持 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他设计环境之间的 XAML 交换。  此设计 XAML 命名空间用于在遍历设计器中基于 XAML 的 UI 的同时保留设计状态。  它还用于诸如 `d:IsDataSource` 等功能，这些功能在设计器中启用运行时数据源。  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用通常映射到前缀 `d:` 的设计器命名空间。 WPF 的较新项目模板可能会预映射此 XAML 命名空间，以支持 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他设计环境之间的交换。 此设计 XAML 命名空间用于在设计器中往返基于 XAML 的 UI 时保持设计状态。 它也用于 `d:IsDataSource`（在设计器中启用运行时数据源）等功能。  
   
- 可能会显示为已映射的另一个前缀是 `mc:`。  `mc:` 用于保持标记兼容性，并利用不一定特定于 XAML 的标记兼容性模式。  在某种程度上，可以使用标记兼容性功能在框架之间或跨支持实现的其他边界交换 XAML、在 XAML 架构上下文之间工作、为设计器中的受限模式提供兼容性，诸如此类。  有关标记兼容性概念以及这些概念如何与 WPF 相关的更多信息，请参见[标记兼容性 \(mc:\) 语言功能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)。  
+ 可能看到的另一个映射前缀是 `mc:`。 `mc:` 用于标记兼容，使用一种并不一定特定于 XAML 的标记兼容模式。 某种程度上，标记兼容功能可用于在框架之间或跨后备实现的其他边界交换 XAML、在 XAML 架构上下文之间运行、为设计器中限制模式提供兼容性等。 有关标记兼容概念及其与 WPF 的关系的详细信息，请参阅[标记兼容 (mc:) 语言功能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)。  
   
-## WPF 和程序集加载  
- WPF 的 XAML 架构内容与 WPF 应用程序模型集成，而后者使用又使用 CLR 定义的 <xref:System.AppDomain> 概念。  下面的序列描述 XAML 架构上下文如何基于 <xref:System.AppDomain> 的 WPF 使用和其他因素，在运行时或设计时加载程序集或查找类型。  
+## <a name="wpf-and-assembly-loading"></a>WPF 和程序集加载  
+ 与 WPF 应用程序模型，这反过来使用的 CLR 定义概念集成，WPF XAML 架构上下文<xref:System.AppDomain>。 以下序列描述的 XAML 架构上下文是如何解释如何加载程序集或类型查找在运行的时或设计时，基于 WPF 使用<xref:System.AppDomain>和其他因素。  
   
-1.  循环访问 <xref:System.AppDomain>，并从最新加载的程序集开始，查找与该名称的所有方面匹配的已加载程序集。  
+1.  循环访问<xref:System.AppDomain>，寻找匹配名称的所有方面的已加载程序集，从最近开始加载的程序集。  
   
-2.  如果该名称是限定名称，则对该限定名称调用 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+2.  如果限定的名称，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>的限定名称。  
   
-3.  如果限定名称的短名称 \+ 公钥令牌与从其加载标记的程序集匹配，则返回该程序集。  
+3.  如果限定名称的短名称和公钥标记匹配从中加载标记的程序集，则返回此程序集。  
   
-4.  使用短名称 \+ 公钥令牌调用 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=fullName>。  
+4.  使用短名称 + 公钥令牌来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
-5.  如果该名称是非限定名称，则调用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>。  
+5.  如果非限定名称，则调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
- 宽松 XAML 不使用步骤 3；没有从其加载的程序集。  
+ 宽松型 XAML 不使用步骤 3；不存在从中加载标记的程序集。  
   
- 针对 WPF 的已编译 XAML（通过 XamlBuildTask 生成）不使用来自 <xref:System.AppDomain>（步骤 1）的已加载程序集。  此外，名称在 XamlBuildTask 输出中绝不应是非限定的，因此步骤 5 不适用。  
+ （通过 XamlBuildTask 生成） 的 wpf 的已编译的 XAML 不使用将已加载的程序集<xref:System.AppDomain>(步骤 1)。 此外，名称应不会从 XamlBuildTask 输出进行限定，因此步骤 5 不适用。  
   
- 已编译 BAML（通过 PresentationBuildTask 生成）使用所有步骤，尽管 BAML 也不应包含非限定程序集名称。  
+ 虽然 BAML 也不应包含非限定程序集名称，但是已编译 BAML（通过 PresentationBuildTask 生成）会使用所有步骤。  
   
-## 请参阅  
- [Understanding XML Namespaces](http://go.microsoft.com/fwlink/?LinkId=98069)   
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>另请参阅  
+ [理解 XML 命名空间](http://go.microsoft.com/fwlink/?LinkId=98069)  
+ [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

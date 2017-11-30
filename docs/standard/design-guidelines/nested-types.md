@@ -1,60 +1,58 @@
 ---
-title: "嵌套类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "嵌套类型"
-  - "公共嵌套的类型"
-  - "类型设计准则，嵌套类型"
-  - "嵌套类型"
-  - "类型的成员 [.NET Framework]"
-  - "类库设计准则 [.NET Framework]，嵌套类型"
+title: "嵌套类型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- types, nested
+- public nested types
+- type design guidelines, nested types
+- nested types
+- members [.NET Framework], type
+- class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 嵌套类型
-嵌套的类型是在另一个类型，称为封闭类型的作用域内定义的类型。 嵌套的类型都有其封闭类型的所有成员访问权限。 例如，它有权访问在封闭的类型，以及以受保护的所有祖先的封闭类型中定义的字段定义的私有字段。  
+# <a name="nested-types"></a>嵌套类型
+嵌套的类型是在另一个类型，这称为封闭类型的范围内定义的类型。 嵌套的类型有权访问其封闭类型的所有成员。 例如，它有权访问在封闭类型和保护的封闭类型的所有祖先中定义的字段定义的私有字段。  
   
- 一般情况下，应谨慎使用嵌套的类型。 其原因有若干： 有些开发人员不完全熟悉的概念。 这些开发人员可能，例如，具有与声明的嵌套类型的变量的语法问题。 嵌套的类型与其封闭类型还非常紧密耦合，并且因此是一般用途的类型不适合。  
+ 一般情况下，应尽量少使用嵌套的类型。 其原因有若干： 一些开发人员不完全熟悉这一概念。 这些开发人员例如，可能会有问题的声明的嵌套类型的变量的语法。 嵌套的类型与其封闭类型，也非常紧密耦合，并且这种情况下为通用类型不适合。  
   
- 嵌套的类型很适合于建模其封闭类型的实现详细信息。 最终用户应几乎不需要声明嵌套类型的变量，并几乎永远不能进行显式实例化嵌套的类型。 例如，集合的枚举器可以为该集合中的嵌套的类型。 枚举器通常由其封闭类型实例化，由于许多语言支持 foreach 语句，因此枚举器变量几乎不需要由最终用户声明。  
+ 嵌套的类型很适合于建模其封闭类型的实现详细信息。 最终用户应几乎不需要声明的嵌套类型的变量，并且几乎从未必须具有显式实例化嵌套的类型。 例如，集合的枚举器可以是该集合的嵌套的类型。 枚举器通常由其封闭类型实例化和枚举器变量许多语言都支持 foreach 语句，因为几乎无需最终用户声明。  
   
- **✓ 执行** 成员可访问性语义是理想的嵌套的类型和其外部类型之间的关系时使用嵌套的类型。  
+ **✓ 执行**使用嵌套的类型，从而使成员可访问性语义都需要的嵌套的类型和其外部类型之间的关系时。  
   
- **X 不** 使用公共嵌套的类型作为自己的逻辑分组构造; 使用此命名空间。  
+ **X 不**使用公共嵌套的类型作为自己的逻辑分组构造; 为此使用命名空间。  
   
- **X 避免** 公开嵌套的类型。 唯一的例外是如果需要仅在极少数情况下，如生成子类或其他高级自定义应用场景中声明的嵌套类型的变量。  
+ **请避免 x**公共公开嵌套的类型。 唯一的例外是如果需要仅在极少数情况下，例如生成子类或其他高级自定义应用场景中声明的嵌套类型的变量。  
   
- **X 不** 使用嵌套的类型，如果类型为可能包含类型的外部引用。  
+ **X 不**使用嵌套的类型，如果类型为可能包含类型的外部引用。  
   
- 例如，传递到方法的类上定义的枚举应不定义为类中的嵌套类型。  
+ 例如，不应为类中的嵌套类型定义枚举传递给在类上定义的方法。  
   
- **X 不** 使用嵌套的类型，如果他们需要由客户端代码实例化。  如果类型具有公共构造函数，它可能不应进行嵌套。  
+ **X 不**使用嵌套的类型，如果他们需要通过客户端代码来实例化。  某个类型是否具有公共构造函数，它可能不应进行嵌套。  
   
- 如果可实例化一个类型，这种方法似乎以指示该类型具有自己的框架中的位置 （可以创建、 使用它，并将其销毁而完全不必使用外部类型），并因此不应进行嵌套。 在没有任何关系的外部类型之外，内部类型应不广泛重用为外部类型的技术。  
+ 如果可实例化类型，这看起来以指示该类型具有其自身上的框架中的一个位置 （你可以创建、 使用它，以及销毁而完全不必使用外部类型），并因此不应进行嵌套。 在没有任何关系的外部类型之外，内部类型应不广泛重用承担到外部类型。  
   
- **X 不** 嵌套的类型定义为接口的成员。 许多语言不支持此类构造。  
+ **X 不**定义为接口成员的嵌套的类型。 许多语言不支持这样的构造。  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [类型设计准则](../../../docs/standard/design-guidelines/type.md)   
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另请参阅  
+ [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)

@@ -1,69 +1,70 @@
 ---
-title: "PasswordBox 样式和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], PasswordBox"
-  - "部件 [WPF], PasswordBox"
-  - "PasswordBox [WPF], 样式和模板"
-  - "状态 [WPF], PasswordBox"
-  - "样式 [WPF], PasswordBox"
-  - "模板 [WPF], PasswordBox"
+title: "PasswordBox 样式和模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], PasswordBox
+- templates [WPF], PasswordBox
+- ControlTemplate [WPF], PasswordBox
+- states [WPF], PasswordBox
+- PasswordBox [WPF], styles and templates
+- parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17a9292ef6aeba157780be5ec87d67725eb833a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# PasswordBox 样式和模板
-本主题介绍 <xref:System.Windows.Controls.PasswordBox> 控件的样式和模板。  您可以修改默认的 <xref:System.Windows.Controls.ControlTemplate>，以便为控件提供一个独特的外观。  有关更多信息，请参见[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="passwordbox-syles-and-templates"></a>PasswordBox 样式和模板
+本主题介绍的样式和模板的<xref:System.Windows.Controls.PasswordBox>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
-## PasswordBox 部件  
- 下表列出了 <xref:System.Windows.Controls.PasswordBox> 控件的命名部件。  
+## <a name="passwordbox-parts"></a>PasswordBox 部件  
+ 下表列出的命名的部件<xref:System.Windows.Controls.PasswordBox>控件。  
   
-||||  
+|部件|类型|描述|  
 |-|-|-|  
-|组成部分|类型|说明|  
-|PART\_ContentHost|<xref:System.Windows.FrameworkElement>|可以包含 <xref:System.Windows.FrameworkElement> 的可见元素。  在此元素中显示 <xref:System.Windows.Controls.PasswordBox> 的文本。|  
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|可以包含一个可见元素<xref:System.Windows.FrameworkElement>。 文本<xref:System.Windows.Controls.PasswordBox>显示在此元素。|  
   
-## PasswordBox 状态  
- 下表列出了 <xref:System.Windows.Controls.PasswordBox> 控件的可视状态。  
+## <a name="passwordbox-states"></a>PasswordBox 状态  
+ 下表列出的可视状态<xref:System.Windows.Controls.PasswordBox>控件。  
   
-||||  
+|VisualState 名称|VisualStateGroup 名称|描述|  
 |-|-|-|  
-|VisualState 名称|VisualStateGroup 名称|说明|  
-|Normal|CommonStates|默认状态。|  
+|普通|CommonStates|默认状态。|  
 |MouseOver|CommonStates|鼠标指针悬停在控件上。|  
-|禁用|CommonStates|控件被禁用。|  
-|Focused|FocusStates|控件具有焦点。|  
-|Unfocused|FocusStates|控件不具有焦点。|  
-|Valid|ValidationStates|该控件使用 <xref:System.Windows.Controls.Validation> 类，<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `false`。|  
-|InvalidFocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件具有焦点。|  
-|InvalidUnfocused|ValidationStates|当 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加属性为 `true` 时，控件没有焦点。|  
+|已禁用|CommonStates|已禁用控件。|  
+|已设定焦点|FocusStates|控件有焦点。|  
+|失去焦点|FocusStates|控件没有焦点。|  
+|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`具有该控件没有焦点。|  
   
-## PasswordBox ControlTemplate 示例  
- 下面的示例演示如何为 <xref:System.Windows.Controls.PasswordBox> 控件定义 <xref:System.Windows.Controls.ControlTemplate>。  
+## <a name="passwordbox-controltemplate-example"></a>PasswordBox ControlTemplate 示例  
+ 下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.PasswordBox>控件。  
   
- [!code-xml[ControlTemplateExamples#PasswordBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]  
+ [!code-xaml[ControlTemplateExamples#PasswordBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]  
   
- 上面的示例使用下面的一个或多个资源。  
+ 上一示例使用了一个或多个以下资源。  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 有关完整示例，请参见         [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)（使用 ControlTemplates 设置样式的示例）.  
+ 有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## 请参阅  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -1,60 +1,52 @@
 ---
-title: "多线程处理 BackgroundWorker 组件 (Visual Basic 中) |Microsoft 文档"
+title: "多线程处理 BackgroundWorker 组件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>演练︰ 利用 BackgroundWorker 组件 (Visual Basic 中) 的多线程处理
-本演练演示如何创建一个词的匹配项的文本文件中搜索的多线程的 Windows 窗体应用程序。 演示︰  
+# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>演练： 利用 BackgroundWorker 组件 (Visual Basic) 的多线程处理
+本演练演示如何创建在文本文件中搜索单词出现次数的多线程 Windows 窗体应用程序。 演示内容包括：  
   
--   使用可由调用的方法定义一个类<xref:System.ComponentModel.BackgroundWorker>组件。</xref:System.ComponentModel.BackgroundWorker>  
+-   使用可由 <xref:System.ComponentModel.BackgroundWorker> 组件调用的方法定义类。  
   
--   处理所引发的事件<xref:System.ComponentModel.BackgroundWorker>组件。</xref:System.ComponentModel.BackgroundWorker>  
+-   处理 <xref:System.ComponentModel.BackgroundWorker> 组件引发的事件。  
   
--   启动<xref:System.ComponentModel.BackgroundWorker>组件来运行一种方法。</xref:System.ComponentModel.BackgroundWorker>  
+-   启动 <xref:System.ComponentModel.BackgroundWorker> 组件运行方法。  
   
--   实现`Cancel`停止按钮<xref:System.ComponentModel.BackgroundWorker>组件。</xref:System.ComponentModel.BackgroundWorker>  
+-   实现停止 <xref:System.ComponentModel.BackgroundWorker> 组件的 `Cancel` 按钮。  
   
 ### <a name="to-create-the-user-interface"></a>创建用户界面  
   
-1.  打开新的 Visual Basic Windows 窗体应用程序项目，并创建名为的`Form1`。  
+1.  打开新的 Visual Basic Windows 窗体应用程序项目，并创建名为窗体`Form1`。  
   
-2.  添加两个按钮和四个文本框到`Form1`。  
+2.  向 `Form1` 中添加两个按钮和四个文本框。  
   
-3.  下表中所示命名对象。  
+3.  按下表所示命名对象。  
   
     |对象|属性|设置|  
     |------------|--------------|-------------|  
-    |第一个按钮|`Name`, `Text`|开始时开始|  
-    |第二个按钮|`Name`, `Text`|取消，取消按钮|  
-    |第一个文本框中|`Name`, `Text`|SourceFile、""|  
+    |第一个按钮|`Name`, `Text`|启动，启动|  
+    |第二个按钮|`Name`, `Text`|取消，取消|  
+    |第一个文本框|`Name`, `Text`|SourceFile，""|  
     |第二个文本框|`Name`, `Text`|CompareString，""|  
     |第三个文本框|`Name`, `Text`|WordsCounted，"0"|  
     |第四个文本框|`Name`, `Text`|LinesCounted，"0"|  
   
-4.  添加每个文本框旁边的标签。 设置`Text`为下表中所示的每个标签的属性。  
+4.  在每个文本框旁添加一个标签。 为每个标签设置 `Text` 属性，如下表所示。  
   
     |对象|属性|设置|  
     |------------|--------------|-------------|  
@@ -63,9 +55,9 @@ ms.lasthandoff: 03/13/2017
     |第三个标签|`Text`|匹配的单词|  
     |第四个标签|`Text`|行计数|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>若要创建 BackgroundWorker 组件并对其事件订阅  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>创建 BackgroundWorker 组件并订阅其事件  
   
-1.  添加<xref:System.ComponentModel.BackgroundWorker>组件从**组件**部分**工具箱**到窗体。</xref:System.ComponentModel.BackgroundWorker> 它将出现在窗体的组件栏。  
+1.  从“工具箱”的“组件”部分，将 <xref:System.ComponentModel.BackgroundWorker> 组件添加到窗体。 它将出现在窗体的组件栏中。  
   
 2.  设置 BackgroundWorker1 对象的以下属性。  
   
@@ -74,13 +66,13 @@ ms.lasthandoff: 03/13/2017
     |`WorkerReportsProgress`|True|  
     |`WorkerSupportsCancellation`|True|  
   
-### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>若要定义将在单独的线程运行的方法  
+### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>定义将在单独线程上运行的方法  
   
-1.  从**项目**菜单上，选择**添加类**将类添加到项目。 **添加新项**中会显示对话框。  
+1.  在“项目”菜单中，选择“添加类”以将类添加到项目。 随即出现“添加新项”对话框。  
   
-2.  选择**类**从模板窗口，然后输入`Words.vb`在名称字段中。  
+2.  从模板窗口选择“类”，然后在名称字段中输入 `Words.vb`。  
   
-3.  单击 **“添加”**。 `Words`显示类。  
+3.  单击 **“添加”**。 随即出现 `Words` 类。  
   
 4.  将下面的代码添加到 `Words` 类中:  
   
@@ -171,9 +163,9 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>若要处理线程中的事件  
+### <a name="to-handle-events-from-the-thread"></a>处理线程中的事件  
   
--   将以下事件处理程序添加到主窗体︰  
+-   将以下事件处理程序添加到主窗体：  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>若要开始和调用新的线程运行 WordCount 方法  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>启动和调用运行 WordCount 方法的新线程  
   
-1.  将以下过程添加到您的程序︰  
+1.  将下面的过程添加到程序中：  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-2.  调用`StartThread`方法从`Start`窗体上的按钮︰  
+2.  通过窗体上的 `Start` 按钮调用 `StartThread` 方法：  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>若要实现停止该线程的取消按钮  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>实现停止线程的“取消”按钮  
   
--   调用`StopThread`过程从`Click`事件处理程序`Cancel`按钮。  
+-   从 `Cancel` 按钮的 `Click` 事件处理程序中调用 `StopThread` 过程。  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -267,24 +259,24 @@ ms.lasthandoff: 03/13/2017
   
 1.  按 F5 运行该应用程序。  
   
-2.  当显示窗体时，输入你想要在测试的文件的文件路径`sourceFile`框。 例如，假设您的测试文件名为 Test.txt 中，输入 C:\Test.txt。  
+2.  显示窗体时，在 `sourceFile` 框中输入想测试的文件的文件路径。 例如，假设测试文件的名称为 Test.txt，则输入 C:\Test.txt。  
   
-3.  在第二个文本框中，输入一个单词或短语要搜索的文本中的应用程序。  
+3.  在第二个文本框中，输入要让该应用程序在文本文件中搜索的字词或短语。  
   
-4.  单击 `Start` 按钮。 `LinesCounted`按钮应当立即开始递增。 完成操作后，应用程序将显示"完成统计"的消息。  
+4.  单击 `Start` 按钮。 `LinesCounted` 按钮应立即开始递增。 完成后，应用程序将显示“计数完成”消息。  
   
-#### <a name="to-test-the-cancel-button"></a>若要测试取消按钮  
+#### <a name="to-test-the-cancel-button"></a>测试“取消”按钮  
   
-1.  按 F5 以启动该应用程序，并输入在前面过程中所述的的文件名和搜索字词。 请确保所选择的文件足够大，以确保将有时间完成之前将其取消此过程。  
+1.  按 F5 启动该应用程序，按照前面过程所述输入文件名和搜索字词。 请确保所选择的文件足够大，以确保在搜索结束之前有时间取消该过程。  
   
-2.  单击`Start`按钮以启动应用程序。  
+2.  单击 `Start` 按钮启动应用程序。  
   
 3.  单击 `Cancel` 按钮。 应用程序应立即停止计数。  
   
 ## <a name="next-steps"></a>后续步骤  
- 此应用程序包含一些基本错误处理。 它会检测空白搜索字符串。 可以通过处理其他错误，如超出最大次数的单词或进行计数的行，使此程序更加可靠。  
+ 此应用程序包含一些基本错误处理。 它可检测空白搜索字符串。 可以通过处理其他错误（如超过可以计数的最大字词数或行数）使该程序更加可靠。  
   
 ## <a name="see-also"></a>另请参阅  
- [线程处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [演练︰ 创建使用 Visual Basic 的一个简单的多线程的组件](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [线程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [演练： 创作使用 Visual Basic 的一个简单的多线程的组件](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [如何：订阅和取消订阅事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

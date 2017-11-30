@@ -1,41 +1,39 @@
 ---
-title: "无法推断“&lt;变量名&gt;”的类型，因为循环边界和步骤变量未扩大到同一类型 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30982"
-  - "vbc30982"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30982"
+title: "类型的 &#39;&lt;variablename&gt;&#39; 无法推断，因为循环边界和步骤变量未扩大到同一类型"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30982
+- vbc30982
+helpviewer_keywords: BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 无法推断“&lt;变量名&gt;”的类型，因为循环边界和步骤变量未扩大到同一类型
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-已经编写 `For...Next` 循环，由于存在以下情况，在该循环中编译器无法推断循环控制变量的数据类型：  
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>类型的 &#39;&lt;variablename&gt;&#39; 无法推断，因为循环边界和步骤变量未扩大到同一类型
+在编写完`For...Next`循环在其中编译器无法推断 for 循环控制变量的数据类型因为满足以下条件：  
   
--   没有用 `As` 子句指定循环控制变量的数据类型。  
+-   未在 `As` 子句中指定循环控制变量的数据类型。  
   
--   循环边界和步骤变量至少包含两种数据类型。  
+-   循环边界和步骤变量包含至少两种数据类型。  
   
--   数据类型之间不存在标准转换。  
+-   数据类型之间不存在任何标准转换。  
   
- 因此，编译器无法推断循环的控制变量的数据类型。  
+ 因此，编译器无法推断的循环控制变量的数据类型。  
   
- 在下面的示例中，步骤变量是一个字符，循环边界都是整数。  因为字符与整数之间不存在标准转换，所以会报告此错误。  
+ 在下面的示例中，步骤变量是一个字符和循环边界都是整数。 由于没有任何标准字符和整数之间转换，将报告此错误。  
   
-```vb#  
+```vb  
 Dim stepVar = "1"c  
 Dim m = 0  
 Dim n = 20  
@@ -46,23 +44,23 @@ Dim n = 20
 ' Next  
 ```  
   
- **错误 ID：**BC30982  
+ **错误 ID:** BC30982  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
--   根据需要更改循环边界和步骤变量的类型，至少使其中之一为其他项所扩大成的类型。  在前面的示例中，将 `stepVar` 的类型更改为 `Integer`。  
+-   更改类型的循环边界和步骤变量，根据需要，以便至少一个是其他扩大到的类型。 在前面的示例中，更改的类型`stepVar`到`Integer`。  
   
     ```  
     Dim stepVar = 1  
     ```  
   
-     \- 或 \-  
+     - 或 -  
   
     ```  
     Dim stepVar As Integer = 1  
     ```  
   
--   使用显式转换函数以将循环边界和步骤变量转换为相应的类型。  在前面的示例中，将 `Val` 函数应用于 `stepVar`。  
+-   使用显式转换函数将循环边界和步骤变量转换为相应的类型。 在前面的示例中，应用`Val`函数来`stepVar`。  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  
@@ -70,11 +68,11 @@ Dim n = 20
     Next  
     ```  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>   
- [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
+ [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

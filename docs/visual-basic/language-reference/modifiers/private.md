@@ -1,41 +1,39 @@
 ---
-title: "Private (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Private"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Private 关键字"
-  - "Private 关键字, 语法"
+title: Private (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Private
+helpviewer_keywords:
+- Private keyword [Visual Basic]
+- Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 07450c2a5443bf6bc147cad2cfc779072bfc363b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Private (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一个或多个已声明的编程元素只能从其声明上下文中进行访问（包括从所包含的任何类型中进行访问）。  
+# <a name="private-visual-basic"></a>Private (Visual Basic)
+指定的一个或多个已声明的编程元素都可以访问只能从在其声明上下文中，包括从文件内包含的任何类型。  
   
-## 备注  
- 如果编程元素表示专有功能或包含机密数据，则通常需要尽最大可能严格限制对它的访问。  最严格的限制是仅允许定义该编程元素的模块、类或结构对其进行访问。  若要依此方法限制对某个元素的访问，可以使用 `Private` 声明此元素。  
+## <a name="remarks"></a>备注  
+ 如果编程元素表示专有的功能，或包含机密数据，你通常想要尽可能严格限制对其的访问。 允许模块、 类或结构，它定义其进行访问，从而实现的最大限制。 若要限制到这种方式中的元素的访问，可将其与声明`Private`。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **声明上下文。**仅可以在模块级别使用 `Private`。  这意味着 `Private` 元素的声明上下文必须为模块、类或结构，而不能是源文件、命名空间、接口或过程。  
+-   **声明上下文。** 只能在模块级别使用 `Private`。 这意味着的声明上下文`Private`元素必须是模块、 类或结构，并且不能是源文件、 命名空间、 接口或过程。  
   
-## 行为  
+## <a name="behavior"></a>行为  
   
--   **访问级别。**声明上下文中的所有代码均可访问声明上下文中的 `Private` 元素。  这些代码包括所包含的类型中的代码，如嵌套类或枚举中的赋值表达式。  声明上下文之外的代码不能访问声明上下文中的 `Private` 元素。  
+-   **访问级别。** 声明上下文中的所有代码可以都访问其`Private`元素。 这包括所包含的类型，例如嵌套的类或枚举中的赋值表达式中的代码。 外部声明上下文没有代码可以访问其`Private`元素。  
   
--   **访问修饰符。**指定访问级别的关键字称为*“访问修饰符”*。  有关访问修饰符的比较，请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+-   **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Private` 修饰符可用于下面的上下文中：  
   
@@ -59,15 +57,15 @@ caps.handback.revision: 13
   
  [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+## <a name="see-also"></a>另请参阅  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

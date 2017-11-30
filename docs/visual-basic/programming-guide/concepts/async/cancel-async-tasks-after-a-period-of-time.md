@@ -1,64 +1,56 @@
 ---
-title: "在一段时间 (Visual Basic 中) 后取消异步任务 |Microsoft 文档"
+title: "一段时间 (Visual Basic) 后取消异步任务"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6708bd92d8dc2455b9dcb8e02dcc0a4455e00cda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f479a0b8897ba86c4bd750c87afe15600e1df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>在一段时间 (Visual Basic 中) 后取消异步任务
-可以通过使用取消异步操作的时间段之后<xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName>方法如果您不想等待操作完成。</xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName> 此方法会安排在由指定的时间段内未完成任何关联任务的取消`CancelAfter`表达式。  
+# <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>一段时间 (Visual Basic) 后取消异步任务
+如果不希望等待操作结束，可使用 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 方法在一段时间后取消异步操作。 此方法会计划取消未在 `CancelAfter` 表达式指定的时间段内完成的任何关联任务。  
   
- 此示例将添加到代码中开发的[取消一个异步任务或列表任务 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)以下载网站的列表并显示每个内容的长度。  
+ 此示例将添加到中开发的代码[取消一个异步任务或列表任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)下载网站的列表并显示每个内容的长度。  
   
 > [!NOTE]
->  若要运行的示例，您必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在您的计算机上。  
+>  若要运行这些示例，你必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在计算机上。  
   
 ## <a name="downloading-the-example"></a>下载示例  
- 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)，然后按照这些步骤。  
+ 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序），然后遵循以下步骤。  
   
 1.  解压缩下载的文件，然后启动 Visual Studio。  
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
   
-3.  在**打开项目**对话框中，打开保存的示例代码中您解压缩的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
+3.  在**打开项目**对话框中，打开保存解压缩，示例代码的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
   
-4.  在**解决方案资源管理器**，打开快捷菜单**CancelAfterTime**项目，，然后选择**设为启动项目**。  
+4.  在“解决方案资源管理器”中，打开“CancelAfterTime”项目的快捷菜单，然后选择“设为启动项目”。  
   
-5.  选择 F5 键以运行该项目。  
+5.  选择 F5 键运行该项目。  
   
-     按 Ctrl + F5 键以运行该项目，不对其进行调试。  
+     选择 Ctrl+F5 键运行该项目，而不进行调试。  
   
-6.  运行程序多次以验证输出可能显示为所有网站、 任何网站或某些网站的输出。  
+6.  多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。  
   
- 如果您不想要下载的项目，你可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
+ 如果你不想要下载的项目，你可以查看本主题末尾的 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 本主题中的示例将添加到项目中开发的[取消一个异步任务或列表任务 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)若要取消的任务的列表。 该示例使用相同的 UI，尽管**取消**不显式使用按钮。  
+ 本主题中的示例将添加到项目中开发[取消一个异步任务或列表任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
   
- 若要生成示例自己执行的步骤，请按照"下载示例"部分中的说明进行操作，但选择**CancelAListOfTasks**作为**启动项目**。 向该项目添加本主题中的所做的更改。  
+ 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。  
   
- 若要指定的最长时间才会任务都标记为已取消，添加对的调用`CancelAfter`到`startButton_Click`，如下面的示例所示。 添加带有星号标记。  
+ 若要指定将任务标记为取消之前的最长时间，请将对 `CancelAfter` 的调用添加到 `startButton_Click`，如以下示例所示。 新增内容标有星号。  
   
 ```vb  
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -88,7 +80,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- 运行程序多次以验证输出可能显示为所有网站、 任何网站或某些网站的输出。 下面的输出是一个示例。  
+ 多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。 以下输出为示例。  
   
 ```  
 Length of the downloaded string: 35990.  
@@ -101,11 +93,11 @@ Downloads canceled.
 ```  
   
 ## <a name="complete-example"></a>完整的示例  
- 下面的代码是该示例的 MainWindow.xaml.vb 文件的完整文本。 星号标记已针对此示例添加的元素。  
+ 下面的代码是此示例 MainWindow.xaml.vb 文件的完整文本。 对添加到此示例的元素进行了星号标记。  
   
- 请注意，您必须添加<xref:System.Net.Http>。</xref:System.Net.Http>的引用  
+ 请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
- 您可以下载的项目[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)。  
+ 可以从 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）下载这些项目。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -207,8 +199,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [异步编程使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [演练︰ 访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [取消一个异步任务或一组任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)   
- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [异步示例︰ 微调应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [取消一个异步任务或一组任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）

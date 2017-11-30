@@ -1,34 +1,33 @@
 ---
-title: "Join 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryJoinIn"
-  - "vb.QueryJoin"
-  - "vb.QueryJoinOn"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Join 子句"
-  - "Join 语句"
-  - "查询 [Visual Basic], 联接"
+title: "Join 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryJoinIn
+- vb.QueryJoin
+- vb.QueryJoinOn
+helpviewer_keywords:
+- queries [Visual Basic], Join
+- Join statement [Visual Basic]
+- Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Join 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-将两个集合组合为单个集合。  联接操作基于匹配键，使用 `Equals` 运算符。  
+# <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
+将两个集合合并为单个集合。 联接操作基于匹配键对，使用`Equals`运算符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 Join element In collection _  
@@ -37,44 +36,44 @@ Join element In collection _
 On key1 Equals key2 [ And key3 Equals key4 [... ]  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `element`  
- 必需。  要联接的集合的控制变量。  
+ 必需。 一个被联接集合控制变量。  
   
  `collection`  
- 必需。  要与 `Join` 运算符左侧的集合组合的集合。  `Join` 子句可以嵌套在另一个 `Join` 子句中，也可以嵌套在 `Group Join` 子句中。  
+ 必需。 集合以与在左侧的标识的集合进行组合`Join`运算符。 A`Join`子句可以嵌套在另一个`Join`子句，或在`Group Join`子句。  
   
  `joinClause`  
- 可选。  用于进一步限制查询的一个或多个其他 `Join` 子句。  
+ 可选。 一个或多个其他`Join`进一步限制查询。  
   
  `groupJoinClause`  
- 可选。  用于进一步限制查询的一个或多个其他 `Group Join` 子句。  
+ 可选。 一个或多个其他`Group Join`进一步限制查询。  
   
  `key1` `Equals` `key2`  
- 必需。  标识要联接的集合的键。  必须使用 `Equals` 运算符来比较要联接的集合的键。  您可以使用 `And` 运算符标识多个键，从而组合联接条件。  `key1` 必须来自于 `Join` 运算符左侧的集合。  `key2` 必须来自于 `Join` 运算符右侧的集合。  
+ 必需。 标识被联接集合的键。 必须使用`Equals`运算符从被联接集合的键进行比较。 你可以通过使用组合联接条件`And`运算符来标识多个密钥。 `key1`必须从左侧的内容的集合`Join`运算符。 `key2`必须从右侧的集合`Join`运算符。  
   
- 在联接条件中使用的键可以是包含集合中的多个项的表达式。  不过，每个键表达式只能包含其各自集合中的项。  
+ 联接条件中使用的密钥可以是包含集合中的多个项的表达式。 但是，每个键的表达式可以包含仅其各自的集合中的项。  
   
-## 备注  
- `Join` 子句基于要联接的集合中的匹配键值组合两个集合。  所得集合可以包含 `Join` 运算符左侧标识的集合和 `Join` 子句中标识的集合的值的任何组合。  查询将只返回满足 `Equals` 运算符所指定的条件的结果。  这等效于 SQL 中的 `INNER JOIN`。  
+## <a name="remarks"></a>备注  
+ `Join`子句将基于匹配被联接集合中的键值对的两个集合合并。 生成的集合可以包含标识的左侧的集合中的值的任意组合`Join`运算符和中标识的集合`Join`子句。 该查询将返回仅为其指定的条件的结果`Equals`满足运算符。 这相当于`INNER JOIN`SQL 中。  
   
- 可以在查询中使用多个 `Join` 子句，以便将两个或更多集合联接为单个集合。  
+ 你可以使用多个`Join`中要联接成单个集合的两个或多个集合的查询子句。  
   
- 在不使用 `Join` 子句的情况下，可以执行隐式联接来组合集合。  为此，应在 `From` 子句中包括多个 `In` 子句，并指定标识要用于联接的键的 `Where` 子句。  
+ 你可以执行隐式联接来组合而无需集合`Join`子句。 若要执行此操作，包括多个`In`中的子句你`From`子句并指定`Where`子句，它标识你想要用于联接的键。  
   
- 使用 `Group Join` 子句可以将多个集合组合为单个分层集合。  这与 SQL 中的 `LEFT OUTER JOIN` 类似。  
+ 你可以使用`Group Join`子句来组合为单个分层集合的集合。 这就像`LEFT OUTER JOIN`SQL 中。  
   
-## 示例  
- 下面的代码示例执行隐式联接将客户列表与其订单组合在一起。  
+## <a name="example"></a>示例  
+ 下面的代码示例执行隐式联接与其订单与合并的客户的列表。  
   
  [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
-## 示例  
- 下面的代码示例使用 `Join` 子句联接两个集合。  
+## <a name="example"></a>示例  
+ 下面的代码示例通过使用联接两个集合`Join`子句。  
   
  [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
- 此示例将生成类似下面的输出：  
+ 此示例将生成类似于下面的输出：  
   
  `winlogon (968), Windows Logon`  
   
@@ -82,12 +81,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `cmd (5136), Command Window`  
   
-## 示例  
- 下面的代码示例通过使用包含两个键列的 `Join` 子句来联接两个集合。  
+## <a name="example"></a>示例  
+ 下面的代码示例通过使用联接两个集合`Join`子句的两个键列。  
   
  [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
- 此示例将生成类似下面的输出：  
+ 此示例将生成类似于下面的输出：  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -95,10 +94,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
  [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

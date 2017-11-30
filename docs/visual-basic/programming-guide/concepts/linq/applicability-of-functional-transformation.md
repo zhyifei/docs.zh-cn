@@ -1,28 +1,24 @@
 ---
-title: "功能转换 (Visual Basic 中) 的适用性 |Microsoft 文档"
+title: "功能转换 (Visual Basic) 的适用性"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20195c2bb528a5ca295b3bff6e9bb8401211e5b7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 184f40aa5752a620a5a9af1f27efc598251a96c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="applicability-of-functional-transformation-visual-basic"></a>功能转换 (Visual Basic 中) 的适用性
+# <a name="applicability-of-functional-transformation-visual-basic"></a>功能转换 (Visual Basic) 的适用性
 纯函数转换适用于多种情况。  
   
  函数转换方法最适合查询和操作结构化数据，因此它非常适合 LINQ 技术。 但函数转换比使用 LINQ 具有更广泛的适用性。 任何侧重于将数据从一种形式转换为另一种形式的进程都可以考虑作为函数转换的候选项。  
@@ -39,13 +35,13 @@ ms.lasthandoff: 03/13/2017
   
 -   数学、统计和科学解决方案。 这些字段适用于操作大型数据集，以帮助用户处理可视化、评估或实际解决重要问题。  
   
- 如中所述[重构到纯函数 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)，使用纯函数是函数式编程的一个示例。 除了直接好处外，使用纯函数还可对从函数转换角度考虑问题提供宝贵的经验。 这种方法也可能对程序和类设计产生重要影响。 当问题本身适于数据转换解决方案（如上所述）时更是如此。  
+ 中所述[重构到纯函数 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)，使用纯函数是函数编程的示例。 除了直接好处外，使用纯函数还可对从函数转换角度考虑问题提供宝贵的经验。 这种方法也可能对程序和类设计产生重要影响。 当问题本身适于数据转换解决方案（如上所述）时更是如此。  
   
  虽然受函数转换透视影响的设计不在本教程的范围内，但在以进程为中心作为操作者和以对象为中心作为操作者之间，他们更倾向于前者，生成的解决方案倾向于以一系列大规模转换而不是单独的对象状态更改的形式实现。  
   
- 同样请注意 Visual Basic 支持命令性和功能性方法，因此您的应用程序的最佳设计可能需要合并这两个元素。  
+ 再次强调，请记住 Visual Basic 支持命令性和功能的方法，因此你的应用程序的最佳设计可能需要合并使用这两个元素。  
   
 ## <a name="see-also"></a>另请参阅  
- [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XML (Visual Basic 中) 的功能转换](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)   
- [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+ [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [XML 的功能转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+ [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

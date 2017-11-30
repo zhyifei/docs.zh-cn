@@ -1,54 +1,57 @@
 ---
-title: "x:Uid Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], localizable content attribute"
-  - "XAML [XAML Services], x:Uid attribute"
-  - "x:Uid attribute [XAML Services]"
-  - "Uid attribute [XAML Services]"
+title: "x:Uid 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], localizable content attribute
+- XAML [XAML Services], x:Uid attribute
+- x:Uid attribute [XAML Services]
+- Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4d49e9630b481b2daf103feabd225dd5ef0c8ca2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Uid Directive
-为标记元素提供唯一的标识符。  在许多情况下，此唯一标识符由 XAML 本地化过程和工具使用。  
+# <a name="xuid-directive"></a>x:Uid 指令
+为标记元素提供的唯一标识符。 在许多情况下，由 XAML 本地化过程和工具使用此唯一标识符。  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
+```xaml  
+<object x:Uid="identifier"... />  
 ```  
-<object x:Uid="identifier"... />  
-```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`identifier`|一个手动创建的或自动生成的字符串，当 `x:Uid` 使用者解释该字符串，它在文件中应是唯一的。|  
+|`identifier`|手动创建或自动生成的字符串，它们应是唯一的文件中时它由解释`x:Uid`使用者。|  
   
-## 备注  
- 在 \[MS\-XAML\]，`x:Uid` 被定义为指令。  有关更多信息，请参见 [\[MS\-XAML\] Section 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525)（\[MS\-XAML\] 第 5.3.6 节）。  
+## <a name="remarks"></a>备注  
+ 在 [MS-XAML]，`x:Uid`为指令定义。 有关详细信息，请参阅[ \[MS-XAML\]部分 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
- `x:Uid` 是从 `x:Name` 分离出来的，原因有两个，一是启动的 XAML 本地化方案；另外一个是：因此用于本地化的标识符没有对 `x:Name` 的编程模型含义的依赖性。  此外，`x:Name` 受 XAML 名称范围控制，而 `x:Uid` 不受任何 XAML 语言定义的唯一性强制概念控制。  广义上的 XAML 处理器（不是本地化进程的一部分的处理器）不会强制保证 `x:Uid` 值的唯一性。  从概念上讲，该责任在于该值的发信方。  单一 XAML 源中的 `x:Uid` 值的唯一性的预期对于值的使用方（如专门的全球化进程或工具）是合理的。  典型的唯一性模型是：`x:Uid` 值是代表 XAML 的 XML 编码的文件中的唯一值。  
+ `x:Uid`是从离散`x:Name`同时由于规定的 XAML 本地化方案和以便用于本地化的标识符没有任何依赖关系的编程模型含义`x:Name`。 此外，`x:Name`受 XAML 名称范围; 但是，`x:Uid`不受强制唯一性的任何 XAML 语言定义概念。 广义上讲 （不是在本地化过程的一部分的处理器） 的 XAML 处理器不会强制实现唯一性的`x:Uid`值。 该责任从概念上讲是发起方的值上。 唯一性的假定条件下`x:Uid`单一 XAML 源中的值是合理的值，如专门的全球化过程或工具的使用者。 典型的唯一性模型是：`x:Uid`值都是唯一 XML 编码文件，它表示 XAML 中。  
   
- 具有特定 XAML 架构的重要知识的工具可以只对确实可以本地化的字符串，而不是为所有在标记中遇到文本字符串值的情况选择应用 `x:Uid`。  
+ 具有重要知识的特定 XAML 架构的工具可以选择将应用`x:Uid`仅为 true 可本地化的字符串，而不是所有情况下，在标记中遇到一个文本字符串值。  
   
- 通过对定义类型应用特性 <xref:System.Windows.Markup.UidPropertyAttribute>，Frameworks 可以将其对象模型中的特定属性指定为 `x:Uid` 的别名。  如果框架指定了一个特定属性，则在同一对象上指定 `x:Uid` 和具有别名的成员是非法的。  如果指定 `x:Uid` 和别名，则该用例的 .NET 框架 XAML 服务 API 通常会引发 <xref:System.Xaml.XamlDuplicateMemberException>。  
+ 框架可以在其对象模型，以便为的别名中指定的特定属性`x:Uid`通过在应用特性<xref:System.Windows.Markup.UidPropertyAttribute>到定义的类型。 如果一个框架，指定的特定属性，所以不能同时指定`x:Uid`和对同一对象的别名成员。 如果这两个`x:Uid`和指定的别名成员，.NET Framework XAML 服务 API 通常会引发<xref:System.Xaml.XamlDuplicateMemberException>这种情况下。  
   
-## WPF 用法说明  
- 有关 WPF 本地化过程和 XAML 的 BAML 窗体中 `x:Uid` 的角色的更多信息，请参见 [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+## <a name="wpf-usage-notes"></a>WPF 用法说明  
+ 有关详细信息的角色有关的`x:Uid`WPF 本地化过程中和 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## 请参阅  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
- <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ <xref:Microsoft.Build.Tasks.Windows.UidManager>  
+ [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

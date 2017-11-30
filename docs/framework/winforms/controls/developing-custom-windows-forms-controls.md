@@ -1,36 +1,36 @@
 ---
-title: "使用 .NET Framework 开发自定义 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Component 类"
-  - "Control 类, Windows 窗体"
-  - "自定义控件 [Windows 窗体], 使用代码开发"
+title: "使用 .NET Framework 开发自定义 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], developing using code
+- Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 使用 .NET Framework 开发自定义 Windows 窗体控件
-Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。  Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。  你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。  本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。  
+# <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 开发自定义 Windows 窗体控件
+Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。 Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。 你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。 本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。  
   
-## 本节内容  
- [在“Windows 窗体”中使用控件的概述](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+## <a name="in-this-section"></a>本节内容  
+ [在 Windows 窗体中使用控件的概述](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  突出显示使用 Windows 窗体应用程序中的控件的重要元素。  
   
  [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- 描述你可以使用 <xref:System.Windows.Forms?displayProperty=fullName> 命名空间创作的不同类型的自定义控件。  
+ 描述你可以使用 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间创作的不同类型的自定义控件。  
   
  [Windows 窗体控件开发基础知识](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
  讨论开发 Windows 窗体控件的前几个步骤。  
@@ -53,21 +53,21 @@ Windows 窗体控件是可以重用的组件，可以封装用户界面功能并
  [Windows 窗体控件中的多线程处理](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
  演示如何实现多线程控件。  
   
-## 参考  
- <xref:System.Windows.Forms.Control?displayProperty=fullName>  
+## <a name="reference"></a>参考  
+ <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  对此类进行描述，并提供指向其所有成员的链接。  
   
- <xref:System.Windows.Forms.UserControl?displayProperty=fullName>  
+ <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
  对此类进行描述，并提供指向其所有成员的链接。  
   
-## 相关章节  
- [组件的设计时特性\)](../Topic/Design-Time%20Attributes%20for%20Components.md)  
+## <a name="related-sections"></a>相关章节  
+ [组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  将列出的元数据特性应用到组件和控件，以便在设计时正确显示在可视化设计器中。  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
+ [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  描述如何实现提供设计时支持的类，例如编辑器和设计器。  
   
- [如何：授予组件和控件许可权限](../Topic/How%20to:%20License%20Components%20and%20Controls.md)  
+ [如何：授予组件和控件许可权限](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  描述如何实现授予控件或组件许可权限。  
   
- 另请参阅[在设计时开发 Windows 窗体控件](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。
+ 另请参阅[设计时开发 Windows 窗体控件](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\))。

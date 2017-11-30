@@ -1,31 +1,22 @@
 ---
-title: "在 Visual Studio 中暂留对象 (Visual Basic) | Microsoft 文档"
+title: "保持 Visual Studio (Visual Basic 中) 中对象"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：在 Visual Studio 中暂留对象 (Visual Basic)
 虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
@@ -234,5 +225,5 @@ ms.lasthandoff: 05/22/2017
  此时可再次生成并运行应用程序。 最初，默认值在文本框中显示。 尝试更改这些值并在第四个文本框中输入名称。 关闭该应用程序，然后重新运行。 请注意，现在文本框中将显示新值。  
   
 ## <a name="see-also"></a>另请参阅  
- 序列化 (Visual Basic)[](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
+ [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)

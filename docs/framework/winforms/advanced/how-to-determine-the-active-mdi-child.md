@@ -1,42 +1,46 @@
 ---
-title: "如何：确定活动的 MDI 子窗体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "子窗体"
-  - "剪贴板, 将数据复制到"
-  - "MDI, 激活窗体"
-  - "MDI, 子窗口"
-  - "MDI, 查找焦点"
+title: "如何：确定活动的 MDI 子窗体"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- MDI [Windows Forms], child windows
+- child forms
+- MDI [Windows Forms], activating forms
+- MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：确定活动的 MDI 子窗体
-有时需要提供一个在控件上操作的命令，而该控件在当前活动的子窗体上具有焦点。  例如，假设要将子窗体文本框中的选定文本复制到剪贴板。  可以创建这样一个过程：使用标准“编辑”菜单上“复制”菜单项的 <xref:System.Windows.Forms.Control.Click> 事件将选定的文本复制到剪贴板。  
+# <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
+有时，你将想要在当前处于活动状态的子窗体具有焦点的控件上提供的命令。 例如，假设你想要将子窗体的文本框中的选定的文本复制到剪贴板。 将创建一个过程，它将选定的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>标准的编辑菜单上的复制菜单项的事件。  
   
- 因为一个 MDI 应用程序可以有同一个子窗体的多个实例，因此该过程需要知道使用哪个窗体。  若要指定正确的窗体，请使用 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> 属性，该属性返回具有焦点的或最近活动的子窗体。  
+ 因为 MDI 应用程序可以有相同的子窗体的多个实例，该过程将需要知道要使用哪个窗体。 若要指定正确的窗体，使用<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>属性，它返回的子窗体中具有焦点的或最近的活动。  
   
- 当窗体上有数个控件时，还需要指定哪个控件是活动的。  与 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> 属性一样，<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> 属性返回活动子窗体中具有焦点的控件。  下面的过程阐释了可以从子窗体菜单、MDI 窗体菜单或工具栏按钮调用的复制过程。  
+ 如果必须在窗体上的多个控件，你还需要指定哪些控件处于活动状态。 如<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>属性，<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>属性在活动子窗体上返回具有焦点的控件。 下面的过程阐释了可从子窗体菜单上，MDI 窗体或工具栏按钮的菜单中调用的复制过程。  
   
-### 确定活动的 MDI 子窗体（将它的文本复制到剪贴板）  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>若要确定活动 MDI 子窗体 （若要将其文本复制到剪贴板）  
   
 1.  在方法中，将活动子窗体的活动控件的文本复制到剪贴板。  
   
     > [!NOTE]
-    >  此示例假定有一个 MDI 父窗体 \(`Form1`\)，其中包含一个或多个含有 <xref:System.Windows.Forms.RichTextBox> 控件的 MDI 子窗口。  有关更多信息，请参见[创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  此示例假定有一个 MDI 父窗体 (`Form1`)，其包含一个或多个 MDI 子窗口<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -59,7 +63,6 @@ caps.handback.revision: 12
           End If  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -88,12 +91,11 @@ caps.handback.revision: 12
           }  
        }  
     }  
-  
     ```  
   
-## 请参阅  
- [多文档界面 \(MDI\) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [如何：将数据发送到活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)   
+## <a name="see-also"></a>另请参阅  
+ [多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [如何：将数据发送到活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
  [如何：排列 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

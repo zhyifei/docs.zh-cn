@@ -1,82 +1,86 @@
 ---
-title: "GDI+ 中的笔、直线和矩形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绘图, 文本行"
-  - "绘图, 矩形"
-  - "示例 [Windows 窗体], 绘制线条和形状"
-  - "示例 [Windows 窗体], GDI+"
-  - "示例 [Windows 窗体], 钢笔"
-  - "GDI+, 文本行"
-  - "GDI+, 钢笔"
-  - "GDI+, 矩形"
-  - "文本行"
-  - "文本行, 虚线"
-  - "矩形"
+title: "GDI+ 中的笔、直线和矩形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lines
+- GDI+, lines
+- drawing [Windows Forms], rectangles
+- rectangles
+- drawing [Windows Forms], lines
+- GDI+, pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- GDI+, rectangles
+- examples [Windows Forms], GDI+
+- lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# GDI+ 中的笔、直线和矩形
-若要用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 绘制直线，需要创建 <xref:System.Drawing.Graphics> 对象和 <xref:System.Drawing.Pen> 对象。  <xref:System.Drawing.Graphics> 对象提供进行实际绘制的方法，<xref:System.Drawing.Pen> 对象存储特性，如直线的颜色、宽度和线型。  
+# <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的笔、直线和矩形
+若要使用绘制直线[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]你需要创建<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供实际完成绘图，方法与<xref:System.Drawing.Pen>对象存储属性，例如线条颜色、 宽度和样式。  
   
-## 绘制直线  
- 若要绘制直线，请调用 <xref:System.Drawing.Graphics> 对象的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。  将 <xref:System.Drawing.Pen> 对象作为参数之一传递给 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。  下面的示例绘制了一条从点 \(4, 2\) 到点 \(12, 6\) 的直线：  
+## <a name="drawing-a-line"></a>绘制线条  
+ 若要绘制线条，调用<xref:System.Drawing.Graphics.DrawLine%2A>方法<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawLine%2A>方法。 下面的示例绘制 （4，2） 的点到点 （12、 6） 的行：  
   
  [!code-csharp[LinesCurvesAndShapes#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#41)]
  [!code-vb[LinesCurvesAndShapes#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#41)]  
   
- <xref:System.Drawing.Graphics.DrawLine%2A> 是 <xref:System.Drawing.Graphics> 类的一个重载方法，因此，有数种为其提供参数的方式。  例如，可构造两个 <xref:System.Drawing.Point> 对象并将 <xref:System.Drawing.Point> 对象作为参数传递给 <xref:System.Drawing.Graphics.DrawLine%2A> 方法：  
+ <xref:System.Drawing.Graphics.DrawLine%2A>属于重载的方法的<xref:System.Drawing.Graphics>类，因此有几种方法，你可以向其提供自变量。 例如，构造两个<xref:System.Drawing.Point>对象并传入<xref:System.Drawing.Point>对象作为自变量<xref:System.Drawing.Graphics.DrawLine%2A>方法：  
   
  [!code-csharp[LinesCurvesAndShapes#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#42)]
  [!code-vb[LinesCurvesAndShapes#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#42)]  
   
-## 构造钢笔  
- 可以在构造 <xref:System.Drawing.Pen> 对象时指定某些特性。  例如，有一种 `Pen` 构造函数允许您指定颜色和宽度。  下面的示例绘制了一条从 \(0, 0\) 到 \(60, 30\) 宽度为 2 的蓝线：  
+## <a name="constructing-a-pen"></a>构造笔  
+ 在构造时，可以指定某些属性<xref:System.Drawing.Pen>对象。 例如，一个`Pen`构造函数，可指定颜色和宽度。 下面的示例绘制一条蓝线的宽度 2 从 （0，0） 到 （60，30）：  
   
  [!code-csharp[LinesCurvesAndShapes#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#43)]
  [!code-vb[LinesCurvesAndShapes#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#43)]  
   
-## 虚线和线帽  
- <xref:System.Drawing.Pen> 对象也公开属性（如 <xref:System.Drawing.Pen.DashStyle%2A>），这些属性可用于指定直线的特性。  下面的示例绘制了一条从 \(100, 50\) 到 \(300, 80\) 的虚线：  
+## <a name="dashed-lines-and-line-caps"></a>虚线和线帽  
+ <xref:System.Drawing.Pen>对象还公开属性，如<xref:System.Drawing.Pen.DashStyle%2A>，可用于指定的行的功能。 下面的示例绘制的虚线从 （100，50） 到 （300，80）：  
   
  [!code-csharp[LinesCurvesAndShapes#44](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#44)]
  [!code-vb[LinesCurvesAndShapes#44](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#44)]  
   
- 可以使用 <xref:System.Drawing.Pen> 对象的属性为直线设置更多特性。  <xref:System.Drawing.Pen.StartCap%2A> 属性和 <xref:System.Drawing.Pen.EndCap%2A> 属性指定直线端点的外观；端点可以是平的、方形的、圆形的、三角形的或自定义的形状。  <xref:System.Drawing.Pen.LineJoin%2A> 属性用于指定连接的线相互间是斜接的（联接时形成锐角）、斜切的、圆形的还是截断的。  下面的插图显示了具有不同的线帽和联接类型的直线。  
+ 你可以使用的属性<xref:System.Drawing.Pen>对象以设置更多特性的行。 <xref:System.Drawing.Pen.StartCap%2A>和<xref:System.Drawing.Pen.EndCap%2A>属性指定的行末尾的外观; 在结束可以平面、 正方形、 圆角、 三角形，或自定义形状。 <xref:System.Drawing.Pen.LineJoin%2A>属性，可以指定是否连接的直线斜接 （具有尖锐角联接）、 倾斜、 舍入，或剪切。 下图显示了各种的线帽和联接样式的行。  
   
- ![直线](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.png "Aboutgdip02\_art04")  
+ ![行](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
-## 绘制矩形  
- 用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 绘制矩形与绘制直线类似。  若要绘制矩形，需要 <xref:System.Drawing.Graphics> 对象和 <xref:System.Drawing.Pen> 对象。  <xref:System.Drawing.Graphics> 对象提供 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法，<xref:System.Drawing.Pen> 对象存储特性（例如线宽和颜色）。  将 <xref:System.Drawing.Pen> 对象作为参数之一传递给 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法。  下面的示例绘制了一个矩形，其左上角位于 \(100, 50\)，宽度为 80，高度为 40：  
+## <a name="drawing-a-rectangle"></a>绘制矩形  
+ 绘制矩形与[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]类似于绘制线条。 若要绘制一个矩形，你需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，与<xref:System.Drawing.Pen>对象存储特性，如线条宽度和颜色。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawRectangle%2A>方法。 下面的示例绘制一个具有在其左上角的矩形 （100，50），宽度为 80，和高度为 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
   
- <xref:System.Drawing.Graphics.DrawRectangle%2A> 是 <xref:System.Drawing.Graphics> 类的一个重载方法，因此，有数种为其提供参数的方式。  例如，可构造 <xref:System.Drawing.Rectangle> 对象并将 <xref:System.Drawing.Rectangle> 对象作为参数传递给 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法：  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A>属于重载的方法的<xref:System.Drawing.Graphics>类，因此有几种方法，你可以向其提供自变量。 例如，可以构造<xref:System.Drawing.Rectangle>对象并将传递<xref:System.Drawing.Rectangle>对象传递给<xref:System.Drawing.Graphics.DrawRectangle%2A>作为自变量的方法：  
   
  [!code-csharp[LinesCurvesAndShapes#46](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#46)]
  [!code-vb[LinesCurvesAndShapes#46](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#46)]  
   
- <xref:System.Drawing.Rectangle> 对象具有用于处理和收集矩形相关信息的方法和属性。  例如，<xref:System.Drawing.Rectangle.Inflate%2A> 和 <xref:System.Drawing.Rectangle.Offset%2A> 方法可更改矩形的大小和位置。  <xref:System.Drawing.Rectangle.IntersectsWith%2A> 方法判断矩形是否与另一给定矩形相交，<xref:System.Drawing.Rectangle.Contains%2A> 方法判断一个给定点是否在该矩形内。  
+ A<xref:System.Drawing.Rectangle>对象具有方法和属性用于操作和收集有关该矩形的信息。 例如，<xref:System.Drawing.Rectangle.Inflate%2A>和<xref:System.Drawing.Rectangle.Offset%2A>方法更改的大小和位置的矩形。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>方法告诉你该矩形是否与另一个给定矩形，和<xref:System.Drawing.Rectangle.Contains%2A>方法告诉你给定的点是否在该矩形内。  
   
-## 请参阅  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Rectangle?displayProperty=fullName>   
- [如何：创建钢笔](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [如何：在 Windows 窗体上绘制线条](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)   
- [如何：绘制空心形状](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  
+ [如何：创建笔](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [如何：在 Windows 窗体上绘制直线](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [如何：绘制显示边框的形状](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

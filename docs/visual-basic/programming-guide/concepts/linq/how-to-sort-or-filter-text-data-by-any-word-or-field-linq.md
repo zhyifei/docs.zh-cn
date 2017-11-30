@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 进行排序或筛选器按任意词或字段 (LINQ) (Visual Basic 中) 的文本数据 |Microsoft 文档"
+title: "如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 541da47893217e2915a6b001d1141eaadfa9e9e8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19224bf51c95acdccbeb019631fdc884231610b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>如何：按任意词或字段对文本数据进行排序或筛选 (LINQ) (Visual Basic)
-下面的示例演示如何进行排序行的结构化文本，如以逗号分隔的值，通过在行中的任何字段。 可能会在运行时动态指定的字段值。 假定有 scores.csv 中的字段代表学生的 ID 号后, 跟一系列的四个测试分数。  
+下面的示例演示如何按行中的任何字段对结构化文本（如以逗号分隔的值）行进行排序。 可以在运行时动态指定字段。 假定 scores.csv 中的字段表示学生的 ID 号，后跟一系列四个测试分数。  
   
-### <a name="to-create-a-file-that-contains-data"></a>若要创建一个包含数据文件  
+### <a name="to-create-a-file-that-contains-data"></a>创建包含数据的文件  
   
-1.  从主题中复制 scores.csv 数据[How to︰ 内容加入从不同的文件 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)并将其保存到您的解决方案文件夹。  
+1.  从主题中复制 scores.csv 数据[How to： 内容加入从不同文件 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)并将其保存到你的解决方案文件夹。  
   
 ## <a name="example"></a>示例  
   
@@ -86,10 +78,10 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- 此示例还演示如何从函数返回该查询变量。  
+ 此示例还演示如何从函数返回查询变量。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
  [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

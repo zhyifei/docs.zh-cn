@@ -1,43 +1,44 @@
 ---
-title: "如何：在“选择工具箱项”对话框中显示控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "全局程序集缓存，“选择工具箱项”对话框"
-  - "AssemblyFoldersEx，“选择工具箱项”对话框"
-  - "控件，在“选择工具箱项”对话框中显示"
-  - "程序集文件夹注册，“选择工具箱项”对话框"
-  - "“选择工具箱项”对话框，显示控件"
+title: "如何：在“选择工具箱项”对话框中显示控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global assembly cache [Windows Forms], Choose Toolbox Items dialog box
+- AssemblyFoldersEx [Windows Forms], Choose Toolbox Items dialog box
+- controls [Windows Forms], display in Choose Toolbox Items dialog box
+- assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
+- Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f7bbb13e8a2b877d0f503e091b5bb8b1e7e89d00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在“选择工具箱项”对话框中显示控件
-在开发和分发控件时，您可能希望这些控件显示在**“选择工具箱项”**对话框中，该对话框会在您右击**“工具箱”**并选择**“选择项”**时显示。  通过使用 AssemblyFoldersEx 注册过程，可以使控件显示在此对话框中。  
+# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>如何：在“选择工具箱项”对话框中显示控件
+在开发和分发控件，您可能希望显示在这些控件**选择工具箱项**对话框中，右键单击时显示**工具箱**和选择**选择项**。 你可以启用控件，以显示在此对话框中，通过使用 AssemblyFoldersEx 注册过程。  
   
-### 在“选择工具箱项”对话框中显示控件  
+### <a name="to-display-your-control-in-the-choose-toolbox-items-dialog-box"></a>若要在选择工具箱项对话框中显示控件  
   
--   将控件程序集安装到全局程序集缓存中。  有关更多信息，请参见[如何：将程序集安装到全局程序集缓存](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   控件程序集安装到全局程序集缓存中。 有关详细信息，请参阅[如何： 将程序集安装到全局程序集缓存](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
-     \- 或 \-  
+     - 或 -  
   
--   通过使用 AssemblyFoldersEx 注册过程来注册控件及其相关设计时程序集。  AssemblyFoldersEx 是注册表中的一个位置，供第三方供应商存储他们所支持的每个框架版本的路径。  设计时解决方案可以在该注册表位置中查找引用程序集。  注册表脚本可以指定要显示在工具箱中的控件。  有关更多信息，请参见[部署自定义控件和设计时程序集](http://msdn.microsoft.com/zh-cn/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)。  
+-   通过使用 AssemblyFoldersEx 注册过程中注册你的控件和其关联的设计时程序集。 AssemblyFoldersEx 是框架的第三方供应商在其中存储每个版本，它们支持的路径的注册表位置。 设计时解析可以查看在此注册表位置来查找引用程序集。 注册表脚本可以指定你想要显示在工具箱中的控件。 有关详细信息，请参阅[部署自定义控件和设计时程序集 (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)。  
   
-## 请参阅  
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/zh-cn/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [部署自定义控件和设计时程序集](http://msdn.microsoft.com/zh-cn/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)   
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [如何：将程序集安装到全局程序集缓存](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
+## <a name="see-also"></a>另请参阅  
+ [“选择工具箱项”对话框 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [部署自定义控件和设计时程序集 (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)  
+ [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [如何：将程序集安装到全局程序集缓存](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
