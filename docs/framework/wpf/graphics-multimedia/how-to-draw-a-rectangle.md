@@ -1,43 +1,46 @@
 ---
-title: "如何：绘制矩形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "绘图, 矩形"
-  - "图形 [WPF], 矩形"
-  - "矩形, 绘图"
+title: "如何：绘制矩形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], rectangles
+- graphics [WPF], rectangles
+- rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c163897af27c9b34c8cd87a3b197047f86d21ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：绘制矩形
-下面的示例演示如何使用 <xref:System.Windows.Shapes.Rectangle> 元素来绘制矩形。  
+# <a name="how-to-draw-a-rectangle"></a><span data-ttu-id="c3ff9-102">如何：绘制矩形</span><span class="sxs-lookup"><span data-stu-id="c3ff9-102">How to: Draw a Rectangle</span></span>
+<span data-ttu-id="c3ff9-103">此示例演示如何使用绘制矩形<xref:System.Windows.Shapes.Rectangle>元素。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-103">This example shows how to draw a rectangle by using the <xref:System.Windows.Shapes.Rectangle> element.</span></span>  
   
- 若要绘制矩形，请创建一个 <xref:System.Windows.Shapes.Rectangle> 元素并指定其 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A>。  若要在矩形内部进行绘制，请设置其 <xref:System.Windows.Shapes.Shape.Fill%2A>。  若要绘制矩形轮廓，请使用其 <xref:System.Windows.Shapes.Shape.Stroke%2A> 和 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 属性。  
+ <span data-ttu-id="c3ff9-104">若要绘制一个矩形，创建<xref:System.Windows.Shapes.Rectangle>元素并指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-104">To draw a rectangle, create a <xref:System.Windows.Shapes.Rectangle> element and specify its <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A>.</span></span> <span data-ttu-id="c3ff9-105">若要绘制的矩形的内部，将设置其<xref:System.Windows.Shapes.Shape.Fill%2A>。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-105">To paint the inside of the rectangle, set its <xref:System.Windows.Shapes.Shape.Fill%2A>.</span></span> <span data-ttu-id="c3ff9-106">若要为矩形提供概述，请使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-106">To give the rectangle an outline, use its <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> properties.</span></span>  
   
- 若要绘制矩形圆角，请指定可选的 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 属性。  <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 属性设置用于使矩形的角变圆的椭圆的 x 轴和 y 轴半径。  
+ <span data-ttu-id="c3ff9-107">若要绘制矩形圆角中，指定可选<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-107">To give the rectangle rounded corners, specify the optional <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties.</span></span> <span data-ttu-id="c3ff9-108"><xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>属性设置用于圆角化矩形角的椭圆的 x 轴和 y 轴半径。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-108">The <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> and <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> properties set the x-axis and y-axis radii of the ellipse that is used to round the corners of the rectangle.</span></span>  
   
- 以下示例在 <xref:System.Windows.Controls.Canvas> 中绘制了两个 <xref:System.Windows.Shapes.Rectangle> 元素。  第一个矩形内部为 <xref:System.Windows.Media.Brushes.Blue%2A>。  第二个矩形内部为 <xref:System.Windows.Media.Brushes.Blue%2A>、并且具有 <xref:System.Windows.Media.Brushes.Black%2A> 轮廓和圆角。  
+ <span data-ttu-id="c3ff9-109">在下面的示例中，两个<xref:System.Windows.Shapes.Rectangle>中绘制元素<xref:System.Windows.Controls.Canvas>。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-109">In the following example, two <xref:System.Windows.Shapes.Rectangle> elements are drawn in a <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="c3ff9-110">第一个矩形<xref:System.Windows.Media.Brushes.Blue%2A>内部。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-110">The first rectangle has a <xref:System.Windows.Media.Brushes.Blue%2A> interior.</span></span> <span data-ttu-id="c3ff9-111">第二个矩形具有<xref:System.Windows.Media.Brushes.Blue%2A>内部，<xref:System.Windows.Media.Brushes.Black%2A>大纲，和圆的角。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-111">The second rectangle has a <xref:System.Windows.Media.Brushes.Blue%2A> interior, a <xref:System.Windows.Media.Brushes.Black%2A> outline, and rounded corners.</span></span>  
   
-## 示例  
- [!code-xml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+## <a name="example"></a><span data-ttu-id="c3ff9-112">示例</span><span class="sxs-lookup"><span data-stu-id="c3ff9-112">Example</span></span>  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- 虽然此示例使用 <xref:System.Windows.Controls.Canvas> 来包含矩形，但是您可以使用矩形元素（和所有其他形状元素）以及任何支持非文本内容的 <xref:System.Windows.Controls.Panel> 或 <xref:System.Windows.Controls.Control>。  事实上，在为 <xref:System.Windows.Controls.Grid> 面板的某些部分提供背景时矩形特别有用。  有关示例，请参见 [表概述](../../../../docs/framework/wpf/advanced/table-overview.md)。  
+ <span data-ttu-id="c3ff9-113">虽然此示例使用<xref:System.Windows.Controls.Canvas>来包含矩形，但是您可以使用矩形元素 （以及所有其他形状元素） 以及任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支持非文本内容。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-113">Although this example uses a <xref:System.Windows.Controls.Canvas> to contain the rectangles, you can use rectangle elements (and all the other shape elements) with any <xref:System.Windows.Controls.Panel> or <xref:System.Windows.Controls.Control> that supports non-text content.</span></span> <span data-ttu-id="c3ff9-114">事实上，矩形的用处尤其显著提供的某些部分的背景<xref:System.Windows.Controls.Grid>面板。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-114">In fact, rectangles are particularly useful for providing backgrounds for portions of <xref:System.Windows.Controls.Grid> panels.</span></span> <span data-ttu-id="c3ff9-115">有关示例，请参阅[表概述](../../../../docs/framework/wpf/advanced/table-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-115">For an example, see the [Table Overview](../../../../docs/framework/wpf/advanced/table-overview.md).</span></span>  
   
- 此示例摘自一个更大的示例；有关完整示例，请参见 [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037)（Shape 元素示例）。  
+ <span data-ttu-id="c3ff9-116">此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。</span><span class="sxs-lookup"><span data-stu-id="c3ff9-116">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Shapes.Rectangle>   
- [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037)   
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
- [表概述](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c3ff9-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3ff9-117">See Also</span></span>  
+ <xref:System.Windows.Shapes.Rectangle>  
+ [<span data-ttu-id="c3ff9-118">形状元素示例</span><span class="sxs-lookup"><span data-stu-id="c3ff9-118">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [<span data-ttu-id="c3ff9-119">WPF 中的形状和基本绘图概述</span><span class="sxs-lookup"><span data-stu-id="c3ff9-119">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="c3ff9-120">表概述</span><span class="sxs-lookup"><span data-stu-id="c3ff9-120">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)

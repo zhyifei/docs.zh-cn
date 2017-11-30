@@ -1,14 +1,11 @@
 ---
-title: "/reference (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: /reference (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
 - r compiler option [Visual Basic]
@@ -17,33 +14,19 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12344dba82131d6be2c32127de287a6e9e3efa39
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reference-visual-basic"></a>/reference (Visual Basic)
-使编译器将在指定的程序集的类型信息提供给当前正在编译项目。  
+# <a name="reference-visual-basic"></a><span data-ttu-id="66bd9-102">/reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66bd9-102">/reference (Visual Basic)</span></span>
+<span data-ttu-id="66bd9-103">使编译器将在指定的程序集的类型信息提供给当前正在编译项目。</span><span class="sxs-lookup"><span data-stu-id="66bd9-103">Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="66bd9-104">语法</span><span class="sxs-lookup"><span data-stu-id="66bd9-104">Syntax</span></span>  
   
 ```  
 /reference:fileList  
@@ -51,39 +34,39 @@ ms.lasthandoff: 03/13/2017
 /r:fileList  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="66bd9-105">参数</span><span class="sxs-lookup"><span data-stu-id="66bd9-105">Arguments</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="66bd9-106">术语</span><span class="sxs-lookup"><span data-stu-id="66bd9-106">Term</span></span>|<span data-ttu-id="66bd9-107">定义</span><span class="sxs-lookup"><span data-stu-id="66bd9-107">Definition</span></span>|  
 |---|---|  
-|`fileList`|必需。 程序集文件名称的以逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
+|`fileList`|<span data-ttu-id="66bd9-108">必需。</span><span class="sxs-lookup"><span data-stu-id="66bd9-108">Required.</span></span> <span data-ttu-id="66bd9-109">程序集文件名的逗号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="66bd9-109">Comma-delimited list of assembly file names.</span></span> <span data-ttu-id="66bd9-110">如果文件名包含空格，则将名称括在引号内。</span><span class="sxs-lookup"><span data-stu-id="66bd9-110">If the file name contains a space, enclose the name in quotation marks.</span></span>|  
   
-## <a name="remarks"></a>备注  
- 在导入的文件必须包含程序集元数据。 仅将公共类型是在程序集外部可见的。 [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。  
+## <a name="remarks"></a><span data-ttu-id="66bd9-111">备注</span><span class="sxs-lookup"><span data-stu-id="66bd9-111">Remarks</span></span>  
+ <span data-ttu-id="66bd9-112">你导入的文件必须包含程序集元数据。</span><span class="sxs-lookup"><span data-stu-id="66bd9-112">The file(s) you import must contain assembly metadata.</span></span> <span data-ttu-id="66bd9-113">仅公共类型都是程序集外部可见的。</span><span class="sxs-lookup"><span data-stu-id="66bd9-113">Only public types are visible outside the assembly.</span></span> <span data-ttu-id="66bd9-114">[/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)选项从模块导入元数据。</span><span class="sxs-lookup"><span data-stu-id="66bd9-114">The [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.</span></span>  
   
- 如果引用的程序集 （程序集 A） 其本身引用另一个程序集 (程序集 B)，如果需要引用程序集 B:  
+ <span data-ttu-id="66bd9-115">如果引用的程序集 （程序集 A） 其本身引用了另一个程序集 (程序集 B)，你在下列情况下需要引用程序集 B:</span><span class="sxs-lookup"><span data-stu-id="66bd9-115">If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:</span></span>  
   
--   程序集 A 中的类型继承自的类型或实现程序集 B 中的接口  
+-   <span data-ttu-id="66bd9-116">程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。</span><span class="sxs-lookup"><span data-stu-id="66bd9-116">A type from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
   
--   字段、 属性、 事件或程序集 B 中的返回类型或形参类型的方法被调用。  
+-   <span data-ttu-id="66bd9-117">调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。</span><span class="sxs-lookup"><span data-stu-id="66bd9-117">A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.</span></span>  
   
- 使用[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)若要指定一个或多个程序集引用所在的目录。  
+ <span data-ttu-id="66bd9-118">使用[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。</span><span class="sxs-lookup"><span data-stu-id="66bd9-118">Use [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.</span></span>  
   
- 编译器无法识别出的程序集 （而不是模块） 的类型，必须将它强制要解析的类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法是可用于解析编译器的程序集中的类型名称。 例如，如果您从程序集中的类型继承，类型名称则将成为已知给编译器。  
+ <span data-ttu-id="66bd9-119">编译器识别出的程序集 （而不是模块） 的类型，必须将它强制解析类型。</span><span class="sxs-lookup"><span data-stu-id="66bd9-119">For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type.</span></span> <span data-ttu-id="66bd9-120">如何执行此操作的一个示例是定义类型的实例。</span><span class="sxs-lookup"><span data-stu-id="66bd9-120">One example of how you can do this is to define an instance of the type.</span></span> <span data-ttu-id="66bd9-121">其他方法是可用于解析在编译器的程序集中的类型名称。</span><span class="sxs-lookup"><span data-stu-id="66bd9-121">Other ways are available to resolve type names in an assembly for the compiler.</span></span> <span data-ttu-id="66bd9-122">例如，如果你从程序集中的类型继承，类型名称然后变得与编译器已知的。</span><span class="sxs-lookup"><span data-stu-id="66bd9-122">For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.</span></span>  
   
- Vbc.rsp 响应文件引用常用[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]程序集，默认情况下使用。 使用`/noconfig`如果不希望使用 Vbc.rsp 的编译器。  
+ <span data-ttu-id="66bd9-123">Vbc.rsp 响应文件，该引用常用文件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集，默认情况下使用。</span><span class="sxs-lookup"><span data-stu-id="66bd9-123">The Vbc.rsp response file, which references commonly used [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies, is used by default.</span></span> <span data-ttu-id="66bd9-124">使用`/noconfig`如果您不希望编译器使用 Vbc.rsp。</span><span class="sxs-lookup"><span data-stu-id="66bd9-124">Use `/noconfig` if you do not want the compiler to use Vbc.rsp.</span></span>  
   
- 缩写形式`/reference`是`/r`。  
+ <span data-ttu-id="66bd9-125">`/reference` 的缩写形式是 `/r`。</span><span class="sxs-lookup"><span data-stu-id="66bd9-125">The short form of `/reference` is `/r`.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译源代码文件我`nput.vb`和引用程序集从 M`etad1.dll`和 M`etad2.dll`以生成 O`ut.exe`。  
+## <a name="example"></a><span data-ttu-id="66bd9-126">示例</span><span class="sxs-lookup"><span data-stu-id="66bd9-126">Example</span></span>  
+ <span data-ttu-id="66bd9-127">下面的代码编译源文件 `Input.vb` 并引用来自 `Metad1.dll` 和 `Metad2.dll` 的程序集以生成 `Out.exe`。</span><span class="sxs-lookup"><span data-stu-id="66bd9-127">The following code compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.</span></span>  
   
 ```  
 vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [公共](../../../visual-basic/language-reference/modifiers/public.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="66bd9-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="66bd9-128">See Also</span></span>  
+ [<span data-ttu-id="66bd9-129">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="66bd9-129">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="66bd9-130">/noconfig</span><span class="sxs-lookup"><span data-stu-id="66bd9-130">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [<span data-ttu-id="66bd9-131">/target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66bd9-131">/target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="66bd9-132">Public</span><span class="sxs-lookup"><span data-stu-id="66bd9-132">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
+ [<span data-ttu-id="66bd9-133">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="66bd9-133">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

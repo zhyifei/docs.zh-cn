@@ -1,1 +1,1 @@
-Windows 工作流设计器
+<span data-ttu-id="93173-101">Windows 工作流设计器</span><span class="sxs-lookup"><span data-stu-id="93173-101">Windows Workflow Designer</span></span>

@@ -1,1 +1,1 @@
-标识符 (ID)
+<span data-ttu-id="a5cdb-101">标识符 (ID)</span><span class="sxs-lookup"><span data-stu-id="a5cdb-101">identifiers (IDs)</span></span>

@@ -1,25 +1,28 @@
 ---
-title: "TargetFilePath 指定现有文件夹 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "TargetFilePath 指定现有文件夹"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c244dbd914845f579474bef2ae590a45a59c7afc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# TargetFilePath 指定现有文件夹
-参数 `TargetFilePath` 指定现有的目录，但必须指定新目录的名称。  
+# <a name="targetfilepath-specifies-an-existing-folder"></a><span data-ttu-id="66876-102">TargetFilePath 指定现有文件夹</span><span class="sxs-lookup"><span data-stu-id="66876-102">TargetFilePath specifies an existing folder</span></span>
+<span data-ttu-id="66876-103">参数 `TargetFilePath` 指定现有的目录，但必须指定新目录的名称。</span><span class="sxs-lookup"><span data-stu-id="66876-103">The parameter `TargetFilePath` specifies an existing directory but must specify the new directory's name.</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="66876-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="66876-104">To correct this error</span></span>  
   
--   更改 `TargetFilePath` 以指定新的而不是现有的目录。  
+-   <span data-ttu-id="66876-105">更改 `TargetFilePath` 以指定新的而不是现有的目录。</span><span class="sxs-lookup"><span data-stu-id="66876-105">Change `TargetFilePath` to specify a new, rather than existing, directory.</span></span>  
   
-## 请参阅  
- [如何：移动文件](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)   
- [如何：在 Visual Basic 中移动目录](http://msdn.microsoft.com/zh-cn/0f26d1ef-c0a0-4445-8eb0-9b7d0490411c)   
- [如何：重命名文件](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
- [如何：在 Visual Basic 中重命名目录](http://msdn.microsoft.com/zh-cn/780c7afc-a03c-4b01-865a-510fe331b1cc)
+## <a name="see-also"></a><span data-ttu-id="66876-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="66876-106">See Also</span></span>  
+ [<span data-ttu-id="66876-107">如何：移动文件</span><span class="sxs-lookup"><span data-stu-id="66876-107">How to: Move a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [<span data-ttu-id="66876-108">如何： 在 Visual Basic 中移动目录</span><span class="sxs-lookup"><span data-stu-id="66876-108">How to: Move a Directory in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/0f26d1ef-c0a0-4445-8eb0-9b7d0490411c)  
+ [<span data-ttu-id="66876-109">如何：重命名文件</span><span class="sxs-lookup"><span data-stu-id="66876-109">How to: Rename a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [<span data-ttu-id="66876-110">如何： 重命名 Visual Basic 中的目录</span><span class="sxs-lookup"><span data-stu-id="66876-110">How to: Rename a Directory in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/780c7afc-a03c-4b01-865a-510fe331b1cc)

@@ -1,31 +1,34 @@
 ---
-title: "工作流的 &lt;system.serviceModel&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "工作流的 &lt;system.serviceModel&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97247abe629d12b6c60d8157786b9b82e9e14f4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 工作流的 &lt;system.serviceModel&gt;
-此配置节包含所有工作流配置元素。  
+# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="f01b5-102">工作流的 &lt;system.serviceModel&gt;</span><span class="sxs-lookup"><span data-stu-id="f01b5-102">&lt;system.serviceModel&gt; of workflow</span></span>
+<span data-ttu-id="f01b5-103">此配置节包含所有工作流配置元素。</span><span class="sxs-lookup"><span data-stu-id="f01b5-103">This configuration section contains all the workflow configuration elements.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="f01b5-104">语法</span><span class="sxs-lookup"><span data-stu-id="f01b5-104">Syntax</span></span>  
   
-```  
-  
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
     <behavior name="String">  
-      <bufferReceive maxPendingMessagesPerChannel=”Integer” />  
+      <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
      <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
@@ -44,14 +47,14 @@ caps.handback.revision: 4
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
+  <tracking>    
      <participants>   
       <add name="String"   
            profileName="String"  
            type="String" />   
      </participants>   
-    <trackingProfile name="String">  
-      <workflow activityDefinitionId="String">  
+    <trackingProfile name="String">  
+      <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
              <activityScheduledQuery activityName="String"  
                  childActivityName="String"/>  
@@ -83,34 +86,34 @@ caps.handback.revision: 4
                  faultHandlerActivityName="String"/>  
           </faultPropagationQueries>  
          <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                 <state name="String"/>  
-              </states>  
-          </workflowInstanceQuery>  
+            <workflowInstanceQuery>  
+              <states>  
+                 <state name="String"/>  
+              </states>  
+          </workflowInstanceQuery>  
         </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
+      </workflow>  
+    </trackingProfile>          
+   </profiles>  
   </tracking>  
 </system.ServiceModel>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f01b5-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f01b5-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="f01b5-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f01b5-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无  
+### <a name="attributes"></a><span data-ttu-id="f01b5-107">特性</span><span class="sxs-lookup"><span data-stu-id="f01b5-107">Attributes</span></span>  
+ <span data-ttu-id="f01b5-108">无</span><span class="sxs-lookup"><span data-stu-id="f01b5-108">None</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="f01b5-109">子元素</span><span class="sxs-lookup"><span data-stu-id="f01b5-109">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<behaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|此节定义 **serviceBehaviors** 集合。  集合中的每个元素定义服务所使用的行为元素。  每个行为元素由其唯一的 **name** 属性标识。|  
-|[\<tracking\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 有关工作流跟踪及其配置的更多信息，请参见[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)和[为工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md)。|  
+|<span data-ttu-id="f01b5-110">元素</span><span class="sxs-lookup"><span data-stu-id="f01b5-110">Element</span></span>|<span data-ttu-id="f01b5-111">描述</span><span class="sxs-lookup"><span data-stu-id="f01b5-111">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="f01b5-112">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="f01b5-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="f01b5-113">本部分定义**serviceBehaviors**集合。</span><span class="sxs-lookup"><span data-stu-id="f01b5-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="f01b5-114">集合中的每个元素定义服务所使用的行为元素。</span><span class="sxs-lookup"><span data-stu-id="f01b5-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="f01b5-115">每个行为元素由其唯一标识**名称**属性。</span><span class="sxs-lookup"><span data-stu-id="f01b5-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="f01b5-116">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="f01b5-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="f01b5-117">表示一个配置节，用于定义工作流服务的跟踪设置。</span><span class="sxs-lookup"><span data-stu-id="f01b5-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="f01b5-118">在工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="f01b5-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="f01b5-119">父元素</span><span class="sxs-lookup"><span data-stu-id="f01b5-119">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|\<configuration\>|.NET 配置文件中的所有配置元素的根元素。|
+|<span data-ttu-id="f01b5-120">元素</span><span class="sxs-lookup"><span data-stu-id="f01b5-120">Element</span></span>|<span data-ttu-id="f01b5-121">描述</span><span class="sxs-lookup"><span data-stu-id="f01b5-121">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="f01b5-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f01b5-122">\<configuration></span></span>|<span data-ttu-id="f01b5-123">.NET 配置文件中的所有配置元素的根元素。</span><span class="sxs-lookup"><span data-stu-id="f01b5-123">The root element for all configuration elements in a .NET configuration file.</span></span>|

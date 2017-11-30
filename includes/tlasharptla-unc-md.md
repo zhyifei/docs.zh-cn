@@ -1,1 +1,1 @@
-通用命名约定 (UNC)
+<span data-ttu-id="833bf-101">通用命名约定 (UNC)</span><span class="sxs-lookup"><span data-stu-id="833bf-101">Universal Naming Convention (UNC)</span></span>

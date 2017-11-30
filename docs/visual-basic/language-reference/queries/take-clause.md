@@ -1,60 +1,58 @@
 ---
-title: "Take 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryTake"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "查询 [Visual Basic], Take"
-  - "Take 子句"
-  - "Take 语句"
+title: "Take 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryTake
+helpviewer_keywords:
+- Take statement [Visual Basic]
+- queries [Visual Basic], Take
+- Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Take 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-从集合开始处起，返回指定数量的连续元素。  
+# <a name="take-clause-visual-basic"></a><span data-ttu-id="b947b-102">Take 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b947b-102">Take Clause (Visual Basic)</span></span>
+<span data-ttu-id="b947b-103">从集合的开头返回指定数量的连续元素。</span><span class="sxs-lookup"><span data-stu-id="b947b-103">Returns a specified number of contiguous elements from the start of a collection.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="b947b-104">语法</span><span class="sxs-lookup"><span data-stu-id="b947b-104">Syntax</span></span>  
   
 ```  
 Take count  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="b947b-105">部件</span><span class="sxs-lookup"><span data-stu-id="b947b-105">Parts</span></span>  
  `count`  
- 必选。  一个值或一个表达式，等于要返回的序列的元素个数。  
+ <span data-ttu-id="b947b-106">必需。</span><span class="sxs-lookup"><span data-stu-id="b947b-106">Required.</span></span> <span data-ttu-id="b947b-107">一个值或表达式计算结果为要返回的序列的元素的数目。</span><span class="sxs-lookup"><span data-stu-id="b947b-107">A value or an expression that evaluates to the number of elements of the sequence to return.</span></span>  
   
-## 备注  
- 如果使用 `Take` 子句，则查询包括从结果列表开始处起的指定数量的连续元素。  要包括的元素个数是由 `count` 参数指定的。  
+## <a name="remarks"></a><span data-ttu-id="b947b-108">备注</span><span class="sxs-lookup"><span data-stu-id="b947b-108">Remarks</span></span>  
+ <span data-ttu-id="b947b-109">`Take`子句将使查询以包含指定的数量的结果列表的开始的连续元素。</span><span class="sxs-lookup"><span data-stu-id="b947b-109">The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list.</span></span> <span data-ttu-id="b947b-110">指定要包括的元素数`count`参数。</span><span class="sxs-lookup"><span data-stu-id="b947b-110">The number of elements to include is specified by the `count` parameter.</span></span>  
   
- 同时使用 `Take` 子句和 `Skip` 子句可以从查询的任何位置起返回一定范围的数据。  为此，请该范围的第一个元素的索引传递给 `Skip` 子句，将该范围的大小传递给 `Take` 子句。  这种情况下，必须在 `Skip` 子句之后指定 `Take` 子句。  
+ <span data-ttu-id="b947b-111">你可以使用`Take`子句`Skip`子句从查询的任何段返回的数据范围。</span><span class="sxs-lookup"><span data-stu-id="b947b-111">You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query.</span></span> <span data-ttu-id="b947b-112">若要执行此操作，将传递到范围的第一个元素的索引`Skip`子句和的范围的大小`Take`子句。</span><span class="sxs-lookup"><span data-stu-id="b947b-112">To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.</span></span> <span data-ttu-id="b947b-113">在这种情况下，`Take`子句必须指定后`Skip`子句。</span><span class="sxs-lookup"><span data-stu-id="b947b-113">In this case, the `Take` clause must be specified after the `Skip` clause.</span></span>  
   
- 如果在查询中使用 `Take` 子句，还需要确保按顺序返回结果，这样 `Take` 子句才能包括预期的结果。  有关对查询结果进行排序的更多信息，请参见 [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ <span data-ttu-id="b947b-114">当你使用`Take`子句在查询中的，你可能还需要确保，将启用顺序返回的结果`Take`子句，以包括预期的结果。</span><span class="sxs-lookup"><span data-stu-id="b947b-114">When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results.</span></span> <span data-ttu-id="b947b-115">有关对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="b947b-115">For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).</span></span>  
   
- 使用 `TakeWhile` 子句可以指定，根据提供的条件仅返回某些元素。  
+ <span data-ttu-id="b947b-116">你可以使用`TakeWhile`子句，以指定只有某些元素可返回，具体取决于提供的条件。</span><span class="sxs-lookup"><span data-stu-id="b947b-116">You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.</span></span>  
   
-## 示例  
- 下面的代码示例同时使用 `Take` 子句和 `Skip` 子句在页面中返回查询数据。  GetCustomers 函数使用 `Skip` 子句跳过列表中的客户，直至到达提供的起始索引值为止，并使用 `Take` 子句返回从该索引值开始的客户页。  
+## <a name="example"></a><span data-ttu-id="b947b-117">示例</span><span class="sxs-lookup"><span data-stu-id="b947b-117">Example</span></span>  
+ <span data-ttu-id="b947b-118">下面的代码示例使用`Take`连同子句`Skip`子句，以从页中的某个查询返回数据。</span><span class="sxs-lookup"><span data-stu-id="b947b-118">The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages.</span></span> <span data-ttu-id="b947b-119">GetCustomers 函数使用`Skip`子句以跳过列表中的客户，直到提供的起始索引值，并使用`Take`子句返回客户从该索引值开始页。</span><span class="sxs-lookup"><span data-stu-id="b947b-119">The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a><span data-ttu-id="b947b-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b947b-120">See Also</span></span>  
+ [<span data-ttu-id="b947b-121">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="b947b-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="b947b-122">查询</span><span class="sxs-lookup"><span data-stu-id="b947b-122">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="b947b-123">Select 子句</span><span class="sxs-lookup"><span data-stu-id="b947b-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="b947b-124">From 子句</span><span class="sxs-lookup"><span data-stu-id="b947b-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="b947b-125">Order By 子句</span><span class="sxs-lookup"><span data-stu-id="b947b-125">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="b947b-126">Take While 子句</span><span class="sxs-lookup"><span data-stu-id="b947b-126">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [<span data-ttu-id="b947b-127">Skip 子句</span><span class="sxs-lookup"><span data-stu-id="b947b-127">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)

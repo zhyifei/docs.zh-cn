@@ -1,144 +1,145 @@
 ---
-title: "自定义动画概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "动画, 自定义类"
-  - "自定义动画类"
-  - "自定义类, 动画"
-  - "自定义关键帧"
-  - "关键帧, 自定义"
+title: "自定义动画概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom classes [WPF], animation
+- key frames [WPF], custom
+- custom key frames [WPF]
+- animation [WPF], custom classes
+- custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 自定义动画概述
-本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用逐帧回调来绕过该系统。  
+# <a name="custom-animations-overview"></a><span data-ttu-id="69d00-102">自定义动画概述</span><span class="sxs-lookup"><span data-stu-id="69d00-102">Custom Animations Overview</span></span>
+<span data-ttu-id="69d00-103">本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。</span><span class="sxs-lookup"><span data-stu-id="69d00-103">This topic describes how and when to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system by creating custom key frames, animation classes, or by using per-frame callback to bypass it.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 必备组件  
- 要了解本主题，您应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的不同类型的动画。  有关更多信息，请参见 [From\/To\/By 动画概述](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)、[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="69d00-104">先决条件</span><span class="sxs-lookup"><span data-stu-id="69d00-104">Prerequisites</span></span>  
+ <span data-ttu-id="69d00-105">若要了解本主题，用户应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的不同动画类型。</span><span class="sxs-lookup"><span data-stu-id="69d00-105">To understand this topic, you should be familiar with the different types of animations provided by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="69d00-106">有关详细信息，请参阅 From/To/By 动画概述、[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="69d00-106">For more information, see the From/To/By Animations Overview, the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), and the [Path Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).</span></span>  
   
- 因为动画类继承自 <xref:System.Windows.Freezable> 类，所以您应当熟悉 <xref:System.Windows.Freezable> 对象以及如何继承 <xref:System.Windows.Freezable>。  有关更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="69d00-107">因为动画类都继承自<xref:System.Windows.Freezable>类，你应该熟悉<xref:System.Windows.Freezable>对象以及如何从继承<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="69d00-107">Because the animation classes inherit from the <xref:System.Windows.Freezable> class, you should be familiar with <xref:System.Windows.Freezable> objects and how to inherit from <xref:System.Windows.Freezable>.</span></span> <span data-ttu-id="69d00-108">有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="69d00-108">For more information, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
 <a name="extendingtheanimationsystem"></a>   
-## 扩展动画系统  
- 有多种方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统，具体取决于您要使用的内置功能的级别。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎中有三个主要的扩展性点：  
+## <a name="extending-the-animation-system"></a><span data-ttu-id="69d00-109">扩展动画系统</span><span class="sxs-lookup"><span data-stu-id="69d00-109">Extending the Animation System</span></span>  
+ <span data-ttu-id="69d00-110">扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统有多种方法，具体取决于要使用的内置功能的级别。</span><span class="sxs-lookup"><span data-stu-id="69d00-110">There are a number of ways to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system, depending on the level of built-in functionality you want to use.</span></span>  <span data-ttu-id="69d00-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎中有三个主要的扩展点：</span><span class="sxs-lookup"><span data-stu-id="69d00-111">There are three primary extensibility points in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine:</span></span>  
   
--   通过继承某个 *\<类型\>*KeyFrame 类（如 <xref:System.Windows.Media.Animation.DoubleKeyFrame>）来创建一个自定义关键帧对象。  此方法使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎的大部分内置功能。  
+-   <span data-ttu-id="69d00-112">通过继承之一创建自定义关键帧对象*\<类型 >*关键帧类，如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。</span><span class="sxs-lookup"><span data-stu-id="69d00-112">Create a custom key frame object by inheriting from one of the *\<Type>*KeyFrame classes, such as <xref:System.Windows.Media.Animation.DoubleKeyFrame>.</span></span> <span data-ttu-id="69d00-113">此方法使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎的大部分内置功能。</span><span class="sxs-lookup"><span data-stu-id="69d00-113">This approach uses most of the built-in functionality of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine.</span></span>  
   
--   通过继承 <xref:System.Windows.Media.Animation.AnimationTimeline> 或某个 *\<类型\>*AnimationBase 类来创建您自己的动画类。  
+-   <span data-ttu-id="69d00-114">通过继承创建您自己的动画类<xref:System.Windows.Media.Animation.AnimationTimeline>或之一*\<类型 >*AnimationBase 类。</span><span class="sxs-lookup"><span data-stu-id="69d00-114">Create your own animation class by inheriting from <xref:System.Windows.Media.Animation.AnimationTimeline> or one of the *\<Type>*AnimationBase classes.</span></span>  
   
--   使用逐帧回调来逐帧生成动画。  此方法完全绕过动画和计时系统。  
+-   <span data-ttu-id="69d00-115">使用每帧回叫针对每个帧生成动画。</span><span class="sxs-lookup"><span data-stu-id="69d00-115">Use per-frame callback to generate animations on a per-frame basis.</span></span> <span data-ttu-id="69d00-116">此方法完全绕过动画和计时系统。</span><span class="sxs-lookup"><span data-stu-id="69d00-116">This approach completely bypasses the animation and timing system.</span></span>  
   
- 下表介绍了扩展动画系统的一些方案。  
+ <span data-ttu-id="69d00-117">下表介绍了扩展动画系统的一些方案。</span><span class="sxs-lookup"><span data-stu-id="69d00-117">The following table describes some the scenarios for extending the animation system.</span></span>  
   
-|要执行此操作...|请使用此方法|  
-|---------------|------------|  
-|自定义具有对应 *\<类型\>*AnimationUsingKeyFrames 的类型的值之间的内插。|创建自定义关键帧。  有关更多信息，请参见[创建自定义关键帧](#createacustomkeyframe)部分。|  
-|除了自定义具有对应 *\<类型\>*Animation 的类型的值之间的内插外，还要自定义其他内容。|创建继承自 *\<类型\>*AnimationBase 类的自定义动画类，该类对应于您要进行动画处理的类型。  有关更多信息，请参见[创建自定义动画类](#createcustomanimationtype)部分。|  
-|对没有对应 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画的类型进行动画处理|使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 或创建继承自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的类。  有关更多信息，请参见[创建自定义动画类](#createcustomanimationtype)部分。|  
-|使用按每个帧计算并基于最后一组对象交互的值对多个对象进行动画处理|使用逐帧回调。  有关更多信息，请参见[创建并使用逐帧回调](#useperframecallback)部分。|  
+|<span data-ttu-id="69d00-118">要执行此操作...</span><span class="sxs-lookup"><span data-stu-id="69d00-118">When you want to...</span></span>|<span data-ttu-id="69d00-119">使用此方法</span><span class="sxs-lookup"><span data-stu-id="69d00-119">Use this approach</span></span>|  
+|-------------------------|-----------------------|  
+|<span data-ttu-id="69d00-120">自定义具有对应 *\<Type>*AnimationUsingKeyFrames 的类型值之间的内插</span><span class="sxs-lookup"><span data-stu-id="69d00-120">Customize the interpolation between values of a type that has a corresponding *\<Type>*AnimationUsingKeyFrames</span></span>|<span data-ttu-id="69d00-121">创建自定义关键帧。</span><span class="sxs-lookup"><span data-stu-id="69d00-121">Create a custom key frame.</span></span> <span data-ttu-id="69d00-122">有关详细信息，请参阅[创建自定义关键帧](#createacustomkeyframe)部分。</span><span class="sxs-lookup"><span data-stu-id="69d00-122">For more information, see the [Create a Custom Key Frame](#createacustomkeyframe) section.</span></span>|  
+|<span data-ttu-id="69d00-123">除了自定义具有对应 *\<Type>*Animation 的类型值之间的内插外，还要自定义其他内容。</span><span class="sxs-lookup"><span data-stu-id="69d00-123">Customize more than just the interpolation between values of a type that has a corresponding *\<Type>*Animation.</span></span>|<span data-ttu-id="69d00-124">创建自定义动画类，该类继承自对应于要进行动画处理的类型的 *\<Type>*AnimationBase 类。</span><span class="sxs-lookup"><span data-stu-id="69d00-124">Create a custom animation class that inherits from the *\<Type>*AnimationBase class that corresponds to the type you want to animate.</span></span> <span data-ttu-id="69d00-125">有关详细信息，请参阅[创建自定义动画类](#createacustomanimationtype)部分。</span><span class="sxs-lookup"><span data-stu-id="69d00-125">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="69d00-126">对没有对应 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画的类型进行动画处理</span><span class="sxs-lookup"><span data-stu-id="69d00-126">Animate a type that has no corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation</span></span>|<span data-ttu-id="69d00-127">使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>或创建一个继承自的类<xref:System.Windows.Media.Animation.AnimationTimeline>。</span><span class="sxs-lookup"><span data-stu-id="69d00-127">Use an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> or create a class that inherits from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="69d00-128">有关详细信息，请参阅[创建自定义动画类](#createacustomanimationtype)部分。</span><span class="sxs-lookup"><span data-stu-id="69d00-128">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="69d00-129">对多个对象进行动画处理，这些对象带有按每个帧进行计算并基于最后一组对象交互的值</span><span class="sxs-lookup"><span data-stu-id="69d00-129">Animate multiple objects with values that are computed each frame and are based on the last set of object interactions</span></span>|<span data-ttu-id="69d00-130">使用每帧回叫。</span><span class="sxs-lookup"><span data-stu-id="69d00-130">Use per-frame callback.</span></span> <span data-ttu-id="69d00-131">有关详细信息，请参阅[使用每帧回叫](#useperframecallback)部分。</span><span class="sxs-lookup"><span data-stu-id="69d00-131">For more information, see the [Create a Use Per-Frame Callback](#useperframecallback) section.</span></span>|  
   
 <a name="createacustomkeyframe"></a>   
-## 创建一个自定义关键帧  
- 创建自定义关键帧类是扩展动画系统的最简单的方法。  当您需要对关键帧动画使用一种不同的内插方法时，可使用此方法。  如[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中所述，关键帧动画使用关键帧对象来生成它的输出值。  每个关键帧对象都执行三个功能：  
+## <a name="create-a-custom-key-frame"></a><span data-ttu-id="69d00-132">创建自定义关键帧</span><span class="sxs-lookup"><span data-stu-id="69d00-132">Create a Custom Key Frame</span></span>  
+ <span data-ttu-id="69d00-133">创建自定义关键帧类是扩展动画系统的最简单方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-133">Creating a custom key frame class is the simplest way to extend the animation system.</span></span> <span data-ttu-id="69d00-134">当希望为关键帧动画使用不同的内插方法时，请使用此方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-134">Use this approach when you want to a different interpolation method for a key-frame animation.</span></span>  <span data-ttu-id="69d00-135">如[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中所述，关键帧动画使用关键帧对象生成器输出值。</span><span class="sxs-lookup"><span data-stu-id="69d00-135">As described in the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), a key-frame animation uses key frame objects to generate its output values.</span></span> <span data-ttu-id="69d00-136">每个关键帧对象都执行三个功能：</span><span class="sxs-lookup"><span data-stu-id="69d00-136">Each key frame object performs three functions:</span></span>  
   
--   使用它的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 属性指定一个目标值。  
+-   <span data-ttu-id="69d00-137">指定目标值使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="69d00-137">Specifies a target value using its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
--   使用它的 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 属性指定达到该值的时间。  
+-   <span data-ttu-id="69d00-138">指定从该处该值应使用取得联系的时间其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="69d00-138">Specifies the time at which that value should be reached using its <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property.</span></span>  
   
--   通过实现 InterpolateValueCore 方法在前一关键帧的值与它自己的值之间进行内插。  
+-   <span data-ttu-id="69d00-139">通过实现 InterpolateValueCore 方法在上一个关键帧的值和它自己的值之间内插。</span><span class="sxs-lookup"><span data-stu-id="69d00-139">Interpolates between the value of the previous key frame and its own value by implementing the InterpolateValueCore method.</span></span>  
   
- **实现说明**  
+ <span data-ttu-id="69d00-140">**实现说明**</span><span class="sxs-lookup"><span data-stu-id="69d00-140">**Implementation Instructions**</span></span>  
   
- 派生自 *\<类型\>*KeyFrame 抽象类并实现 InterpolateValueCore 方法。  InterpolateValueCore 方法返回关键帧的当前值。  它采用两个参数：前一个关键帧的值以及 0 到 1 之间的进度值。  进度值为 0 表示关键帧刚刚启动，值为 1 表示关键帧刚刚完成，应返回它的 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 属性所指定的值。  
+ <span data-ttu-id="69d00-141">从 *\<Type>*KeyFrame 抽象类派生，并实现 InterpolateValueCore 方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-141">Derive from the *\<Type>*KeyFrame abstract class and implement the InterpolateValueCore method.</span></span> <span data-ttu-id="69d00-142">InterpolateValueCore 方法返回关键帧的当前值。</span><span class="sxs-lookup"><span data-stu-id="69d00-142">The InterpolateValueCore method returns the current value of the key frame.</span></span> <span data-ttu-id="69d00-143">它采用两个参数：上一个关键帧的值和范围是从 0 到 1 的进度值。</span><span class="sxs-lookup"><span data-stu-id="69d00-143">It takes two parameters: the value of the previous key frame and a progress value that ranges from 0 to 1.</span></span> <span data-ttu-id="69d00-144">刚刚启动关键帧，和的值为 1 指示关键帧刚刚完成，应返回指定的值，该值指示 0 的进度其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="69d00-144">A progress of 0 indicates the key frame has just started, and a value of 1 indicates that the key frame has just completed and should return the value specified by its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
- 因为 *\<类型\>*KeyFrame 类继承自 <xref:System.Windows.Freezable> 类，所以您还必须重写 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心来返回类的新实例。  如果该类未使用[依赖项属性](GTMT)来存储其数据或者在创建后需要额外的初始化，则您可能还需要重写其他方法；有关更多信息，请参见[Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="69d00-145">因为*\<类型 >*关键帧类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。</span><span class="sxs-lookup"><span data-stu-id="69d00-145">Because the *\<Type>*KeyFrame classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="69d00-146">如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="69d00-146">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 在创建自定义 *\<类型\>*KeyFrame 动画后，您可以将它与该类型的 *\<类型\>*AnimationUsingKeyFrames 一起使用。  
+ <span data-ttu-id="69d00-147">创建自定义 *\<Type>*KeyFrame 动画后，可以将其与该类型的 *\<Type>*AnimationUsingKeyFrames 结合使用。</span><span class="sxs-lookup"><span data-stu-id="69d00-147">After you've created your custom *\<Type>*KeyFrame animation, you can use it with the *\<Type>*AnimationUsingKeyFrames for that type.</span></span>  
   
 <a name="createacustomanimationtype"></a>   
-## 创建自定义动画类  
- 通过创建自己的动画类型，您可以更好地控制对象的动画方式。  有两种推荐方法来创建自己的动画类型：从 <xref:System.Windows.Media.Animation.AnimationTimeline> 类或 *\<类型\>*AnimationBase 类派生。  不推荐从 *\<类型\>*Animation 或 *\<类型\>*AnimationUsingKeyFrames 类派生。  
+## <a name="create-a-custom-animation-class"></a><span data-ttu-id="69d00-148">创建自定义动画类</span><span class="sxs-lookup"><span data-stu-id="69d00-148">Create a Custom Animation Class</span></span>  
+ <span data-ttu-id="69d00-149">创建自己的动画类型可以更好地控制对某个对象进行动画处理的方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-149">Creating your own animation type gives you more control over how an object in animated.</span></span> <span data-ttu-id="69d00-150">有两种建议的方法来创建你自己动画类型： 你可以从派生<xref:System.Windows.Media.Animation.AnimationTimeline>类或*\<类型 >*AnimationBase 类。</span><span class="sxs-lookup"><span data-stu-id="69d00-150">There are two recommended ways to create your own animation type: you can derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class or the *\<Type>*AnimationBase class.</span></span> <span data-ttu-id="69d00-151">不建议从 *\<Type>*Animation 或 *\<Type>*AnimationUsingKeyFrames 类派生。</span><span class="sxs-lookup"><span data-stu-id="69d00-151">Deriving from the *\<Type>*Animation or *\<Type>*AnimationUsingKeyFrames classes is not recommended.</span></span>  
   
-### 从 \<类型\>AnimationBase 派生  
- 从 *\<类型\>*AnimationBase 类派生是创建新的动画类型的最简单方法。  当您希望为已有对应 *\<类型\>*AnimationBase 类的类型创建新的动画时，可使用此方法。  
+### <a name="derive-from-typeanimationbase"></a><span data-ttu-id="69d00-152">从 \<Type>AnimationBase 派生</span><span class="sxs-lookup"><span data-stu-id="69d00-152">Derive from \<Type>AnimationBase</span></span>  
+ <span data-ttu-id="69d00-153">从 *\<Type>*AnimationBase 类派生是创建新动画类型的最简单方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-153">Deriving from a *\<Type>*AnimationBase class is the simplest way to create a new animation type.</span></span> <span data-ttu-id="69d00-154">要为已经具有对应 *\<Type>*AnimationBase 类的类型创建新动画时，请使用此方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-154">Use this approach when you want to create a new animation for type that already has a corresponding *\<Type>*AnimationBase class.</span></span>  
   
- **实现说明**  
+ <span data-ttu-id="69d00-155">**实现说明**</span><span class="sxs-lookup"><span data-stu-id="69d00-155">**Implementation Instructions**</span></span>  
   
- 派生自 *\<类型\>*Animation 类并实现 GetCurrentValueCore 方法。  GetCurrentValueCore 方法返回动画的当前值。  它采用三个参数：建议的起始值、建议的结束值以及您用于确定动画进度的 <xref:System.Windows.Media.Animation.AnimationClock>。  
+ <span data-ttu-id="69d00-156">从 *\<Type>*Animation 类派生并实现 GetCurrentValueCore 方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-156">Derive from a *\<Type>*Animation class and implement the GetCurrentValueCore method.</span></span> <span data-ttu-id="69d00-157">GetCurrentValueCore 方法返回动画的当前值。</span><span class="sxs-lookup"><span data-stu-id="69d00-157">The GetCurrentValueCore method returns the current value of the animation.</span></span> <span data-ttu-id="69d00-158">它采用三个参数： 建议的起始值、 建议的结束值和<xref:System.Windows.Media.Animation.AnimationClock>，用于确定的动画进度。</span><span class="sxs-lookup"><span data-stu-id="69d00-158">It takes three parameters: a suggested starting value, a suggested ending value, and an <xref:System.Windows.Media.Animation.AnimationClock>, which you use to determine the progress of the animation.</span></span>  
   
- 因为 *\<类型\>*AnimationBase 类继承自 <xref:System.Windows.Freezable> 类，所以您还必须重写 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 核心来返回类的新实例。  如果该类未使用[依赖项属性](GTMT)来存储其数据或者在创建后需要额外的初始化，则您可能还需要重写其他方法；有关更多信息，请参见[Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="69d00-159">因为*\<类型 >*AnimationBase 类都继承自<xref:System.Windows.Freezable>类，你还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。</span><span class="sxs-lookup"><span data-stu-id="69d00-159">Because the *\<Type>*AnimationBase classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="69d00-160">如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="69d00-160">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 有关更多信息，请参见您要对其进行动画处理的类型的 *\<类型\>*AnimationBase 类的 GetCurrentValueCore 方法文档。  有关示例，请参见 [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)（自定义动画示例）  
+ <span data-ttu-id="69d00-161">有关详细信息，请参阅要进行动画处理的类型的 *\<Type>*AnimationBase 类的 GetCurrentValueCore 方法文档。</span><span class="sxs-lookup"><span data-stu-id="69d00-161">For more information, see the GetCurrentValueCore method documentation for the *\<Type>*AnimationBase class for the type that you want to animate.</span></span> <span data-ttu-id="69d00-162">有关示例，请参阅[自定义动画示例](http://go.microsoft.com/fwlink/?LinkID=159981)</span><span class="sxs-lookup"><span data-stu-id="69d00-162">For an example, see the [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)</span></span>  
   
- **其他方法**  
+ <span data-ttu-id="69d00-163">**替代方法**</span><span class="sxs-lookup"><span data-stu-id="69d00-163">**Alternative Approaches**</span></span>  
   
- 如果您仅仅希望更改动画值的内插方式，则应考虑从某个 *\<类型\>*KeyFrame 类派生。  您创建的关键帧可以与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的对应 *\<类型\>*AnimationUsingKeyFrames 一起使用。  
+ <span data-ttu-id="69d00-164">如果只需更改动画值的内插方式，请考虑从某个 *\<Type>*KeyFrame 类派生。</span><span class="sxs-lookup"><span data-stu-id="69d00-164">If you simply want to change how animation values are interpolated, considering deriving from one of the *\<Type>*KeyFrame classes.</span></span> <span data-ttu-id="69d00-165">可以将所创建的关键帧与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的对应 *\<Type>*AnimationUsingKeyFrames 结合使用。</span><span class="sxs-lookup"><span data-stu-id="69d00-165">The key frame you create can be used with the corresponding *\<Type>*AnimationUsingKeyFrames provided by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
-### 从 AnimationTimeline 派生  
- 当您希望为还没有匹配的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画的类型创建动画，或者希望创建非强类型的动画时，应当从 <xref:System.Windows.Media.Animation.AnimationTimeline> 类派生。  
+### <a name="derive-from-animationtimeline"></a><span data-ttu-id="69d00-166">从 AnimationTimeline 派生</span><span class="sxs-lookup"><span data-stu-id="69d00-166">Derive from AnimationTimeline</span></span>  
+ <span data-ttu-id="69d00-167">派生自<xref:System.Windows.Media.Animation.AnimationTimeline>类在你想要创建已没有匹配的一种动画[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画，或者你想要创建一个不强类型的动画。</span><span class="sxs-lookup"><span data-stu-id="69d00-167">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class when you want to create an animation for a type that doesn't already have a matching [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation, or you want to create an animation that is not strongly typed.</span></span>  
   
- **实现说明**  
+ <span data-ttu-id="69d00-168">**实现说明**</span><span class="sxs-lookup"><span data-stu-id="69d00-168">**Implementation Instructions**</span></span>  
   
- 从 <xref:System.Windows.Media.Animation.AnimationTimeline> 类派生并重写以下成员：  
+ <span data-ttu-id="69d00-169">派生自<xref:System.Windows.Media.Animation.AnimationTimeline>类并重写以下成员：</span><span class="sxs-lookup"><span data-stu-id="69d00-169">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class and override the following members:</span></span>  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果新类是具体的，则必须重写 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 来返回类的新实例。  
+-   <span data-ttu-id="69d00-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A>– 如果你的新类是具体的则必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>以返回你的类的新实例。</span><span class="sxs-lookup"><span data-stu-id="69d00-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A> – If your new class is concrete, you must override <xref:System.Windows.Freezable.CreateInstanceCore%2A> to return a new instance of your class.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 重写此方法以返回动画的当前值。  它采用三个参数：默认初始值、默认目标值以及 <xref:System.Windows.Media.Animation.AnimationClock>。  使用 <xref:System.Windows.Media.Animation.AnimationClock> 来获取动画的当前时间或进度。  您可以选择是否使用默认初始值和目标值。  
+-   <span data-ttu-id="69d00-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>– 重写此方法以返回你动画的当前值。</span><span class="sxs-lookup"><span data-stu-id="69d00-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Override this method to return the current value of your animation.</span></span> <span data-ttu-id="69d00-172">它采用三个参数： 默认的原始值、 默认目标值和<xref:System.Windows.Media.Animation.AnimationClock>。</span><span class="sxs-lookup"><span data-stu-id="69d00-172">It takes three parameters: a default origin value, a default destination value, and an <xref:System.Windows.Media.Animation.AnimationClock>.</span></span> <span data-ttu-id="69d00-173">使用<xref:System.Windows.Media.Animation.AnimationClock>以便获取当前时间或的动画进度。</span><span class="sxs-lookup"><span data-stu-id="69d00-173">Use the <xref:System.Windows.Media.Animation.AnimationClock> to obtain the current time or progress for the animation.</span></span> <span data-ttu-id="69d00-174">可以选择是否使用默认的原始和目标值。</span><span class="sxs-lookup"><span data-stu-id="69d00-174">You can choose whether to use the default origin and destination values.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – 重写此属性来指示您的动画是否使用 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 方法指定的默认目标值。  
+-   <span data-ttu-id="69d00-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>– 重写此属性以指示是否动画使用指定的默认目标值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Override this property to indicate whether your animation uses the default destination value specified by the <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> method.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 重写此属性来指示动画产生的输出的 <xref:System.Type>。  
+-   <span data-ttu-id="69d00-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>– 重写此属性以指示<xref:System.Type>动画产生的输出。</span><span class="sxs-lookup"><span data-stu-id="69d00-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Override this property to indicate the <xref:System.Type> of output your animation produces.</span></span>  
   
- 如果该类未使用[依赖项属性](GTMT)来存储其数据或者在创建后需要额外的初始化，则您可能还需要重写其他方法；有关更多信息，请参见[Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="69d00-177">如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="69d00-177">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）将使用两个继承级别：  
+ <span data-ttu-id="69d00-178">推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）是使用两个继承级别：</span><span class="sxs-lookup"><span data-stu-id="69d00-178">The recommended paradigm (used by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animations) is to use two inheritance levels:</span></span>  
   
-1.  创建一个派生自 <xref:System.Windows.Media.Animation.AnimationTimeline> 的抽象 *\<类型\>*AnimationBase 类。  此类应重写 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 方法。  它还应引入一个新的抽象方法 GetCurrentValueCore 并重写 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便验证默认初始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
+1.  <span data-ttu-id="69d00-179">创建一个抽象*\<类型 >*AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。</span><span class="sxs-lookup"><span data-stu-id="69d00-179">Create an abstract *\<Type>*AnimationBase class that derives from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="69d00-180">此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-180">This class should override the <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> method.</span></span> <span data-ttu-id="69d00-181">它还应引入新的抽象方法，GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它会验证默认的原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。</span><span class="sxs-lookup"><span data-stu-id="69d00-181">It should also introduce a new abstract method, GetCurrentValueCore, and override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> so that it validates the types of the default origin value and default destination value parameters, then calls GetCurrentValueCore.</span></span>  
   
-2.  创建另一个类，该类继承自新的 *\<类型\>*AnimationBase 类并重写 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 方法、您引入的 GetCurrentValueCore 方法以及 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 属性。  
+2.  <span data-ttu-id="69d00-182">创建另一个类继承从新*\<类型 >*AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法，你引入 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="69d00-182">Create another class that inherits from your new *\<Type>*AnimationBase class and overrides the <xref:System.Windows.Freezable.CreateInstanceCore%2A> method, the GetCurrentValueCore method that you introduced, and the <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> property.</span></span>  
   
- **其他方法**  
+ <span data-ttu-id="69d00-183">**替代方法**</span><span class="sxs-lookup"><span data-stu-id="69d00-183">**Alternative Approaches**</span></span>  
   
- 如果您希望对没有对应 From\/To\/By 动画或关键帧动画的类型进行动画处理，应考虑使用 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。  因为它是弱类型，所以 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 可以对任何类型的值进行动画处理。  此方法的弱点是 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 仅支持[离散内插](GTMT)。  
+ <span data-ttu-id="69d00-184">如果你想要进行动画处理没有相应 From/To/By 动画或关键帧动画的类型，请考虑使用<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>。</span><span class="sxs-lookup"><span data-stu-id="69d00-184">If you want to animate a type that has no corresponding From/To/By animation or key-frame animation, consider using an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="69d00-185">因为它属于弱类型，<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>可以对任何类型的值进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="69d00-185">Because it is weakly typed, an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> can animate any type of value.</span></span> <span data-ttu-id="69d00-186">此方法的缺点在于<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>仅支持离散内插。</span><span class="sxs-lookup"><span data-stu-id="69d00-186">The drawback to this approach is that <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> only supports discrete interpolation.</span></span>  
   
 <a name="useperframecallback"></a>   
-## 使用逐帧回调  
- 当需要完全绕过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统时使用此方法。  此方法的一种方案是物理动画，在其中的每一个动画步骤，都需要基于最后一组对象交互重新计算动画对象的新方向或位置。  
+## <a name="use-per-frame-callback"></a><span data-ttu-id="69d00-187">使用每帧回叫</span><span class="sxs-lookup"><span data-stu-id="69d00-187">Use Per-Frame Callback</span></span>  
+ <span data-ttu-id="69d00-188">在需要完全绕过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统时使用此方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-188">Use this approach when you need to completely bypass the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system.</span></span> <span data-ttu-id="69d00-189">此方法的一个方案是物理动画，其中的每个动画步都需要基于最后一组对象交互重新计算动画处理对象的新方向或位置。</span><span class="sxs-lookup"><span data-stu-id="69d00-189">One scenario for this approach is physics animations, where at each animation step a new direction or position of animated objects needs to be recomputed based on the  last set of object interactions.</span></span>  
   
- **实现说明**  
+ <span data-ttu-id="69d00-190">**实现说明**</span><span class="sxs-lookup"><span data-stu-id="69d00-190">**Implementation Instructions**</span></span>  
   
- 与本概述中介绍的其他方法不同，要使用逐帧回调，不需要创建自定义动画或关键帧类，  
+ <span data-ttu-id="69d00-191">和本概述中所述的其他方法不同，要使用每帧回叫，无需创建自定义动画或关键帧类。</span><span class="sxs-lookup"><span data-stu-id="69d00-191">Unlike the other approaches described in this overview, to use per-frame callback you don't need to create a custom animation or key frame class.</span></span>  
   
- 而应注册需要进行动画处理的对象所在对象的 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件。  每帧调用一次此事件处理程序方法。  每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将[可视化树](GTMT)中持久呈现的数据封送到组合树中时，都将调用事件处理程序方法。  
+ <span data-ttu-id="69d00-192">相反，你注册<xref:System.Windows.Media.CompositionTarget.Rendering>包含你想要进行动画处理的对象的对象的事件。</span><span class="sxs-lookup"><span data-stu-id="69d00-192">Instead, you register for the <xref:System.Windows.Media.CompositionTarget.Rendering> event of the object that contains the objects you want to animate.</span></span> <span data-ttu-id="69d00-193">每帧会调用一次此事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-193">This event handler method gets called once per frame.</span></span> <span data-ttu-id="69d00-194">每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将可视化树中的持久呈现数据封送到复合树时，都将调用事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="69d00-194">Each time that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals the persisted rendering data in the visual tree across to the composition tree, your event handler method is called.</span></span>  
   
- 在事件处理程序中，执行动画效果所需的任意计算，并设置需要使用这些值进行动画处理的对象的属性。  
+ <span data-ttu-id="69d00-195">在事件处理程序中，执行动画效果所需的任何计算，并设置要使用这些值进行动画处理的对象的属性。</span><span class="sxs-lookup"><span data-stu-id="69d00-195">In your event handler, perform your whatever calculations necessary for your animation effect and set the properties of the objects you want to animate with these values.</span></span>  
   
- 要获取当前帧的显示时间，可以将与此事件关联的 <xref:System.EventArgs> 强制转换为 <xref:System.Windows.Media.RenderingEventArgs>，从而提供可用于获取当前帧呈现时间的 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 属性。  
+ <span data-ttu-id="69d00-196">若要获取当前帧，表示时间<xref:System.EventArgs>关联与此事件可以转换为<xref:System.Windows.Media.RenderingEventArgs>，它提供的信息<xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A>属性，可用于获取当前帧的呈现时间。</span><span class="sxs-lookup"><span data-stu-id="69d00-196">To obtain the presentation time of the current frame, the <xref:System.EventArgs> associated with this event can be cast as <xref:System.Windows.Media.RenderingEventArgs>, which provide a <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> property that you can use to obtain the current frame's rendering time.</span></span>  
   
- 有关更多信息，请参见 <xref:System.Windows.Media.CompositionTarget.Rendering> 页。  
+ <span data-ttu-id="69d00-197">有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。</span><span class="sxs-lookup"><span data-stu-id="69d00-197">For more information, see the <xref:System.Windows.Media.CompositionTarget.Rendering> page.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.IKeyFrame>   
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [From\/To\/By 动画概述](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)   
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)   
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a><span data-ttu-id="69d00-198">另请参阅</span><span class="sxs-lookup"><span data-stu-id="69d00-198">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.IKeyFrame>  
+ [<span data-ttu-id="69d00-199">属性动画技术概述</span><span class="sxs-lookup"><span data-stu-id="69d00-199">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [<span data-ttu-id="69d00-200">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="69d00-200">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="69d00-201">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="69d00-201">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="69d00-202">路径动画概述</span><span class="sxs-lookup"><span data-stu-id="69d00-202">Path Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [<span data-ttu-id="69d00-203">动画概述</span><span class="sxs-lookup"><span data-stu-id="69d00-203">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="69d00-204">动画和计时系统概述</span><span class="sxs-lookup"><span data-stu-id="69d00-204">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="69d00-205">自定义动画示例</span><span class="sxs-lookup"><span data-stu-id="69d00-205">Custom Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159981)

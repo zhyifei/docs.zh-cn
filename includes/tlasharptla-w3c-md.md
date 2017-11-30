@@ -1,1 +1,1 @@
-万维网联合会 (W3C)
+<span data-ttu-id="b7110-101">万维网联合会 (W3C)</span><span class="sxs-lookup"><span data-stu-id="b7110-101">World Wide Web Consortium (W3C)</span></span>

@@ -1,52 +1,55 @@
 ---
-title: "XamlWriter.Save 的序列化限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XamlWriter.Save 的限制"
-  - "XamlWriter.Save 的序列化限制"
-  - "XamlWriter.Save, 序列化限制"
+title: "XamlWriter.Save 的序列化限制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XamlWriter.Save [WPF], serialization limitations of
+- limitations of XamlWriter.Save
+- serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06033c6a753dd567f613f0b848e806dfa14ee77d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# XamlWriter.Save 的序列化限制
-[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> 可用于将 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的内容序列化为一个[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件。  但是，对于明确序列化的内容还有一些显著的限制。  本主题论述了这些限制和某些一般注意事项。  
+# <a name="serialization-limitations-of-xamlwritersave"></a><span data-ttu-id="919d3-102">XamlWriter.Save 的序列化限制</span><span class="sxs-lookup"><span data-stu-id="919d3-102">Serialization Limitations of XamlWriter.Save</span></span>
+<span data-ttu-id="919d3-103">[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A>可以用于序列化的内容[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]作为应用程序[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。</span><span class="sxs-lookup"><span data-stu-id="919d3-103">The [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> can be used to serialize the contents of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application as a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file.</span></span> <span data-ttu-id="919d3-104">但是，对于所序列化的内容有一些显著限制。</span><span class="sxs-lookup"><span data-stu-id="919d3-104">However, there are some notable limitations in exactly what is serialized.</span></span> <span data-ttu-id="919d3-105">本主题对这些限制和某些一般注意事项进行了介绍。</span><span class="sxs-lookup"><span data-stu-id="919d3-105">These limitations and some general considerations are documented in this topic.</span></span>  
   
-   
+ 
   
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
-## 运行时表示形式而非设计时表示形式  
- 通过调用 <xref:System.Windows.Markup.XamlWriter.Save%2A> 对内容进行序列化的基本原理是：在运行时会生成序列化对象的表示形式。  在将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 作为内存中的对象进行加载时，原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件的许多设计时属性可能已经优化或丢失，而且在调用 <xref:System.Windows.Markup.XamlWriter.Save%2A> 进行序列化时未保留这些属性。  序列化的结果是应用程序的结构化逻辑树的有效表示形式，但并不一定是生成该树的原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  这些问题使得将 <xref:System.Windows.Markup.XamlWriter.Save%2A> 序列化用作大型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 设计图面的一部分变得极为困难。  
+## <a name="run-time-not-design-time-representation"></a><span data-ttu-id="919d3-106">运行时、非设计时表示形式</span><span class="sxs-lookup"><span data-stu-id="919d3-106">Run-Time, Not Design-Time Representation</span></span>  
+ <span data-ttu-id="919d3-107">通过调用序列化的内容的基本原理<xref:System.Windows.Markup.XamlWriter.Save%2A>是结果将是正在序列化，在运行时对象的表示形式。</span><span class="sxs-lookup"><span data-stu-id="919d3-107">The basic philosophy of what is serialized by a call to <xref:System.Windows.Markup.XamlWriter.Save%2A> is that the result will be a representation of the object being serialized, at run-time.</span></span> <span data-ttu-id="919d3-108">许多设计时属性的原始[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件可能已优化或丢失时，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载为内存中对象，并在调用时不保留<xref:System.Windows.Markup.XamlWriter.Save%2A>要序列化。</span><span class="sxs-lookup"><span data-stu-id="919d3-108">Many design-time properties of the original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file may already be optimized or lost by the time that the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is loaded as in-memory objects, and are not preserved when you call <xref:System.Windows.Markup.XamlWriter.Save%2A> to serialize.</span></span> <span data-ttu-id="919d3-109">序列化的结果是应用程序的结构化逻辑树的有效表示形式，但并不一定是生成该树的原始 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的有效表示形式。</span><span class="sxs-lookup"><span data-stu-id="919d3-109">The serialized result is an effective representation of the constructed logical tree of the application, but not necessarily of the original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that produced it.</span></span> <span data-ttu-id="919d3-110">这些问题导致非常难以使用<xref:System.Windows.Markup.XamlWriter.Save%2A>一部分的一个全面的序列化[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设计图面。</span><span class="sxs-lookup"><span data-stu-id="919d3-110">These issues make it extremely difficult to use the <xref:System.Windows.Markup.XamlWriter.Save%2A> serialization as part of an extensive [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] design surface.</span></span>  
   
 <a name="Serialization_is_Self_Contained"></a>   
-## 序列化是独立的  
- <xref:System.Windows.Markup.XamlWriter.Save%2A> 的序列化输出是独立的；序列化的所有内容都包含在单个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面中，该页面具有单个根元素而且没有除 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 以外的外部引用。  例如，如果您的页面从应用程序资源引用了资源，则这些资源看上去如同正在进行序列化的页面的一个组件。  
+## <a name="serialization-is-self-contained"></a><span data-ttu-id="919d3-111">序列化是自包含的</span><span class="sxs-lookup"><span data-stu-id="919d3-111">Serialization is Self-Contained</span></span>  
+ <span data-ttu-id="919d3-112">序列化的输出<xref:System.Windows.Markup.XamlWriter.Save%2A>是自包含; 序列化的所有内容包含在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]单个页，其中一个根元素，并且不包含外部引用以外的其他[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="919d3-112">The serialized output of <xref:System.Windows.Markup.XamlWriter.Save%2A> is self-contained; everything that is serialized is contained inside a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] single page, with a single root element, and no external references other than [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)].</span></span> <span data-ttu-id="919d3-113">例如，如果页面从应用程序资源引用了资源，则这些资源看上去如同正在进行序列化的页面的一个组件。</span><span class="sxs-lookup"><span data-stu-id="919d3-113">For instance, if your page referenced resources from application resources, these will appear as if they were a component of the page being serialized.</span></span>  
   
 <a name="Extension_References_are_Dereferenced"></a>   
-## 取消引用扩展引用  
- 由各种标记扩展格式（如 `StaticResource` 或 `Binding`）对对象进行的公共引用将会由序列化过程取消引用。  当应用程序运行时创建内存中的对象时，已经将这些公共引用取消引用，而且 <xref:System.Windows.Markup.XamlWriter.Save%2A> 逻辑不会重新访问原始的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 来将这些引用还原到序列化的输出。  这样可能会将任何数据绑定或资源获得的值冻结为运行时表示形式最后使用的值，并且只能有限地或间接地区别这样的值与任何其他在本地设置的值。  由于图像存在于项目中，因此图像也会序列化为图像的对象引用（而不是原始的源引用），从而会丢失原来引用的文件名或 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  即使在同一页面内声明的资源也会序列化到引用点处，而不是作为资源集合的键进行保留。  
+## <a name="extension-references-are-dereferenced"></a><span data-ttu-id="919d3-114">取消引用扩展引用</span><span class="sxs-lookup"><span data-stu-id="919d3-114">Extension References are Dereferenced</span></span>  
+ <span data-ttu-id="919d3-115">由各种标记扩展格式（如 `StaticResource` 或 `Binding`）对对象进行的公共引用将会由序列化进程取消引用。</span><span class="sxs-lookup"><span data-stu-id="919d3-115">Common references to objects made by various markup extension formats, such as `StaticResource` or `Binding`, will be dereferenced by the serialization process.</span></span> <span data-ttu-id="919d3-116">已由应用程序运行时，创建了内存中对象时将这些取消引用和<xref:System.Windows.Markup.XamlWriter.Save%2A>逻辑重新原始不访问[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]以还原对序列化输出此类引用。</span><span class="sxs-lookup"><span data-stu-id="919d3-116">These were already dereferenced at the time that in-memory objects were created by the application runtime, and the <xref:System.Windows.Markup.XamlWriter.Save%2A> logic does not revisit the original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to restore such references to the serialized output.</span></span> <span data-ttu-id="919d3-117">这样可能会将任何数据绑定的或资源获得的值冻结为运行时表示形式最后使用的值，并且只能有限地或间接地区别这样的值与任何其他在本地设置的值。</span><span class="sxs-lookup"><span data-stu-id="919d3-117">This potentially freezes any databound or resource obtained value to be the value last used by the run-time representation, with only limited or indirect ability to distinguish such a value from any other value set locally.</span></span> <span data-ttu-id="919d3-118">由于图像存在于项目中，因此图像也会序列化为图像的对象引用（而不是原始的源引用），从而会丢失最初引用的文件名或 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="919d3-118">Images are also serialized as object references to images as they exist in the project, rather than as original source references, losing whatever filename or [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] was originally referenced.</span></span> <span data-ttu-id="919d3-119">即使是在同一页面内声明的资源，也会序列化到引用点内，而不是保留为资源集合的键。</span><span class="sxs-lookup"><span data-stu-id="919d3-119">Even resources declared within the same page are seen serialized into the point where they were referenced, rather than being preserved as a key of a resource collection.</span></span>  
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
-## 不保留事件处理  
- 当对通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 添加的事件处理程序进行序列化后，不会保留这些事件处理程序。  没有代码隐藏功能（而且也没有相关的 x:Code 机制）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法对运行时的过程逻辑进行序列化。  因为序列化是独立的并局限于逻辑树，所以没有工具可用于存储事件处理程序。  因此，事件处理程序特性（即特性本身和命名处理程序的字符串值）都会从输出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中移除。  
+## <a name="event-handling-is-not-preserved"></a><span data-ttu-id="919d3-120">不保留事件处理</span><span class="sxs-lookup"><span data-stu-id="919d3-120">Event Handling is Not Preserved</span></span>  
+ <span data-ttu-id="919d3-121">当对通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 添加的事件处理程序进行序列化后，不会保留这些事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="919d3-121">When event handlers that are added through [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] are serialized, they are not preserved.</span></span> <span data-ttu-id="919d3-122">不具有代码隐藏功能（并且也不具有相关的 x:Code 机制）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法对运行时过程逻辑进行序列化。</span><span class="sxs-lookup"><span data-stu-id="919d3-122">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] without code-behind (and also without the related x:Code mechanism) has no way of serializing runtime procedural logic.</span></span> <span data-ttu-id="919d3-123">因为序列化是自包含的且限于逻辑树，所以不存在用于存储事件处理程序的设施。</span><span class="sxs-lookup"><span data-stu-id="919d3-123">Because serialization is self-contained and limited to the logical tree, there is no facility for storing the event handlers.</span></span> <span data-ttu-id="919d3-124">因此，会从输出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中删除事件处理程序特性（特性本身和用于命名处理程序的字符串值）。</span><span class="sxs-lookup"><span data-stu-id="919d3-124">As a result, event handler attributes, both the attribute itself and the string value that names the handler, are removed from the output [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
-## 使用 XAMLWriter.Save 的真实方案  
- 虽然这里列出的限制相当多，但仍然有几种适当的方案适合使用 <xref:System.Windows.Markup.XamlWriter.Save%2A> 进行序列化。  
+## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a><span data-ttu-id="919d3-125">XAMLWriter.Save 实用方案</span><span class="sxs-lookup"><span data-stu-id="919d3-125">Realistic Scenarios for Use of XAMLWriter.Save</span></span>  
+ <span data-ttu-id="919d3-126">虽然限制列出如下相当大，仍有几种使用的相应方案<xref:System.Windows.Markup.XamlWriter.Save%2A>序列化。</span><span class="sxs-lookup"><span data-stu-id="919d3-126">While the limitations listed here are fairly substantial, there are still several appropriate scenarios for using <xref:System.Windows.Markup.XamlWriter.Save%2A> for serialization.</span></span>  
   
--   向量或图形输出：呈现的区域的输出可用于在重新加载时重新生成相同的向量或图形。  
+-   <span data-ttu-id="919d3-127">向量或图形输出：所呈现的区域的输出可用于在重新加载时重新生成相同的向量或图形。</span><span class="sxs-lookup"><span data-stu-id="919d3-127">Vector or graphical output: The output of the rendered area can be used to reproduce the same vector or graphics when reloaded.</span></span>  
   
--   多格式文本和流文档：输出中会保留文本以及文本内的所有元素格式和元素包容。  这对类似于剪贴板功能的机制可能非常有用。  
+-   <span data-ttu-id="919d3-128">格式文本和流文档：输出中会保留文本以及文本内的所有元素格式和元素所含内容。</span><span class="sxs-lookup"><span data-stu-id="919d3-128">Rich text and flow documents: Text and all element formatting and element containment within it is preserved in the output.</span></span> <span data-ttu-id="919d3-129">这对类似于剪贴板功能的机制可能非常有用。</span><span class="sxs-lookup"><span data-stu-id="919d3-129">This can be useful for mechanisms that approximate a clipboard functionality.</span></span>  
   
--   保留业务对象数据：如果您已经在自定义元素中存储了数据（如 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据），则只要您的业务对象遵循基本的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 规则（如提供自定义构造函数和按引用属性值转换），这些业务对象就可以通过序列化永久保留。
+-   <span data-ttu-id="919d3-130">保留业务对象数据：如果已在自定义元素中存储数据（如 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据），只要业务对象遵循基本 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 规则（如为按引用属性值提供自定义构造函数和转换），这些业务对象就可以通过序列化永久保留。</span><span class="sxs-lookup"><span data-stu-id="919d3-130">Preserving business object data: If you have stored data in custom elements, such as [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data, so long as your business objects follow basic [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] rules such as providing custom constructors and conversion for by-reference property values, these business objects can be perpetuated through serialization.</span></span>

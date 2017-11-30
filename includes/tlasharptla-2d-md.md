@@ -1,1 +1,1 @@
-二维
+<span data-ttu-id="a8585-101">二维</span><span class="sxs-lookup"><span data-stu-id="a8585-101">2-D</span></span>

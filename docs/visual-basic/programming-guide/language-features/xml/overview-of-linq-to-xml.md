@@ -1,94 +1,77 @@
 ---
-title: "LINQ to XML 在 Visual Basic 中的概述 |Microsoft 文档"
+title: "Visual Basic 中的 LINQ to XML 概述"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 508d4a97b0636f10607326eb35c4c5d8c7860873
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: baa60939654857f40d323b6412978ed4ff918177
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概述
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供了对支持[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]通过 XML 文本和 XML 轴属性。 这使您可以使用熟悉、 便利的语法，在中使用 XML 您[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]代码。 *XML 文本*使您能够在您的代码中直接包含 XML。 *XML 轴属性*使您能够访问子节点、 子代节点和属性的 XML 文本。 有关详细信息，请参阅[XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)和[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
+# <a name="overview-of-linq-to-xml-in-visual-basic"></a><span data-ttu-id="d3453-102">Visual Basic 中的 LINQ to XML 概述</span><span class="sxs-lookup"><span data-stu-id="d3453-102">Overview of LINQ to XML in Visual Basic</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="d3453-103">提供对支持[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]通过 XML 文本和 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-103"> provides support for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] through XML literals and XML axis properties.</span></span> <span data-ttu-id="d3453-104">这使你可以使用熟悉的、 方便语法来处理 XML 中你[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]代码。</span><span class="sxs-lookup"><span data-stu-id="d3453-104">This enables you to use a familiar, convenient syntax for working with XML in your [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] code.</span></span> <span data-ttu-id="d3453-105">*XML 文本*使您能够在你的代码中直接包含 XML。</span><span class="sxs-lookup"><span data-stu-id="d3453-105">*XML literals* enable you to include XML directly in your code.</span></span> <span data-ttu-id="d3453-106">*XML 轴属性*使您能够访问子节点、 子代节点和属性的 XML 文本。</span><span class="sxs-lookup"><span data-stu-id="d3453-106">*XML axis properties* enable you to access child nodes, descendant nodes, and attributes of an XML literal.</span></span> <span data-ttu-id="d3453-107">有关详细信息，请参阅[XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)和[访问 Visual Basic 中的 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d3453-107">For more information, see [XML Literals Overview](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) and [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]内存中 XML 编程 API，专门用于充分利用[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]。 尽管可以调用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]Api 直接，只[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]可用于声明 XML 文本和直接访问 XML 轴属性。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="d3453-108">内存中 XML 编程 API 专门用于充分利用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d3453-108"> is an in-memory XML programming API designed specifically to take advantage of [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="d3453-109">尽管你可以调用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Api 直接，仅[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可用于声明 XML 文本和直接访问 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-109">Although you can call the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs directly, only [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] enables you to declare XML literals and directly access XML axis properties.</span></span>  
   
 > [!NOTE]
->  在 ASP.NET 页中的声明性代码中不支持 XML 文本和 XML 轴属性。 若要使用 Visual Basic XML 功能，请将代码放在 ASP.NET 应用程序中的代码隐藏页。  
+>  <span data-ttu-id="d3453-110">在 ASP.NET 页中的声明性代码中不支持 XML 文本和 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-110">XML literals and XML axis properties are not supported in declarative code in an ASP.NET page.</span></span> <span data-ttu-id="d3453-111">若要使用 Visual Basic XML 功能，请将代码放在 ASP.NET 应用程序中的代码隐藏页。</span><span class="sxs-lookup"><span data-stu-id="d3453-111">To use Visual Basic XML features, put your code in a code-behind page in your ASP.NET application.</span></span>  
   
- ![视频链接](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo")相关的视频演示，请参阅[如何开始使用 LINQ to XML？](http://go.microsoft.com/fwlink/?LinkId=143034)和[如何实现创建 Excel 电子表格使用 LINQ to XML？](http://go.microsoft.com/fwlink/?LinkId=143536)。  
+ <span data-ttu-id="d3453-112">![视频链接](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo")相关视频演示，请参阅[如何开始使用 LINQ to XML？](http://go.microsoft.com/fwlink/?LinkId=143034)和[如何创建 Excel 电子表格使用 LINQ to XML？](http://go.microsoft.com/fwlink/?LinkId=143536)。</span><span class="sxs-lookup"><span data-stu-id="d3453-112">![link to video](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") For related video demonstrations, see [How Do I Get Started with LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143034) and [How Do I Create Excel Spreadsheets using LINQ to XML?](http://go.microsoft.com/fwlink/?LinkId=143536).</span></span>  
   
-## <a name="creating-xml"></a>创建 XML  
- 有两种方法来创建 XML 树的[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。 您可以声明 XML 文本直接在代码中，也可以使用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]Api 以创建树。 这两个进程都使代码能够反映最终 XML 树的结构。 例如，下面的代码示例创建一个 XML 元素︰  
+## <a name="creating-xml"></a><span data-ttu-id="d3453-113">创建 XML</span><span class="sxs-lookup"><span data-stu-id="d3453-113">Creating XML</span></span>  
+ <span data-ttu-id="d3453-114">有两种方法来创建 XML 树的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d3453-114">There are two ways to create XML trees in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="d3453-115">您可以声明 XML 文本直接在代码中，也可以使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Api 来创建树。</span><span class="sxs-lookup"><span data-stu-id="d3453-115">You can declare an XML literal directly in code, or you can use the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs to create the tree.</span></span> <span data-ttu-id="d3453-116">这两个进程都使代码能够反映最终 XML 树的结构。</span><span class="sxs-lookup"><span data-stu-id="d3453-116">Both processes enable the code to reflect the final structure of the XML tree.</span></span> <span data-ttu-id="d3453-117">例如，下面的代码示例创建一个 XML 元素：</span><span class="sxs-lookup"><span data-stu-id="d3453-117">For example, the following code example creates an XML element:</span></span>  
   
- [!code-vb[VbXmlSamples #&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
+ [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
   
- 有关详细信息，请参阅[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)。  
+ <span data-ttu-id="d3453-118">有关详细信息，请参阅[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d3453-118">For more information, see [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).</span></span>  
   
-## <a name="accessing-and-navigating-xml"></a>访问和导航 XML  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供用于访问和导航 XML 结构的 XML 轴属性。 这些属性，您可以通过指定的 XML 子元素名称来访问 XML 元素和属性。 或者，您可以显式调用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]用于导航和查找元素和属性的方法。 例如，下面的代码示例使用 XML 轴属性来引用的属性和 XML 元素的子元素。 此代码示例使用[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查询以检索子元素并输出为 XML 元素，从而有效地执行转换。  
+## <a name="accessing-and-navigating-xml"></a><span data-ttu-id="d3453-119">访问和导航 XML</span><span class="sxs-lookup"><span data-stu-id="d3453-119">Accessing and Navigating XML</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="d3453-120">提供用于访问和导航 XML 结构 XML 轴属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-120"> provides XML axis properties for accessing and navigating XML structures.</span></span> <span data-ttu-id="d3453-121">这些属性，可以通过指定的 XML 子元素名称来访问 XML 元素和属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-121">These properties enable you to access XML elements and attributes by specifying the XML child element names.</span></span> <span data-ttu-id="d3453-122">或者，你可以明确地调用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]来导航和查找元素和属性的方法。</span><span class="sxs-lookup"><span data-stu-id="d3453-122">Alternatively, you can explicitly call the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] methods for navigating and locating elements and attributes.</span></span> <span data-ttu-id="d3453-123">例如，下面的代码示例使用 XML 轴属性的属性和子元素的 XML 元素引用。</span><span class="sxs-lookup"><span data-stu-id="d3453-123">For example, the following code example uses XML axis properties to refer to the attributes and child elements of an XML element.</span></span> <span data-ttu-id="d3453-124">此代码示例使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询以检索子元素，并输出为 XML 元素，从而有效地执行转换。</span><span class="sxs-lookup"><span data-stu-id="d3453-124">The code example uses a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to retrieve child elements and output them as XML elements, effectively performing a transform.</span></span>  
   
- [!code-vb[VbXmlSamples #&8;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
   
- 有关详细信息，请参阅[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
+ <span data-ttu-id="d3453-125">有关详细信息，请参阅[访问 Visual Basic 中的 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="d3453-125">For more information, see [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).</span></span>  
   
-## <a name="xml-namespaces"></a>XML 命名空间  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]使您能够通过使用指定为全局的 XML 命名空间别名`Imports`语句。 下面的示例演示如何使用`Imports`语句导入的 XML 命名空间︰  
+## <a name="xml-namespaces"></a><span data-ttu-id="d3453-126">XML 命名空间</span><span class="sxs-lookup"><span data-stu-id="d3453-126">XML Namespaces</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="d3453-127">使您能够通过使用指定为全局 XML 命名空间别名`Imports`语句。</span><span class="sxs-lookup"><span data-stu-id="d3453-127"> enables you to specify an alias to a global XML namespace by using the `Imports` statement.</span></span> <span data-ttu-id="d3453-128">下面的示例演示如何使用`Imports`要导入的 XML 命名空间声明：</span><span class="sxs-lookup"><span data-stu-id="d3453-128">The following example shows how to use the `Imports` statement to import an XML namespace:</span></span>  
   
- [!code-vb[VbXMLSamples #&1;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
+ [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
   
- 访问 XML 轴属性和声明的 XML 文档和元素的 XML 文本时，可以使用 XML 命名空间别名。  
+ <span data-ttu-id="d3453-129">访问 XML 轴属性和声明的 XML 文档和元素的 XML 文本时，你可以使用 XML 命名空间别名。</span><span class="sxs-lookup"><span data-stu-id="d3453-129">You can use an XML namespace alias when you access XML axis properties and declare XML literals for XML documents and elements.</span></span>  
   
- 您可以检索<xref:System.Xml.Linq.XNamespace>对象使用的特定命名空间前缀[GetXmlNamespace 运算符](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)。</xref:System.Xml.Linq.XNamespace>  
+ <span data-ttu-id="d3453-130">你可以检索<xref:System.Xml.Linq.XNamespace>对象使用的特定命名空间前缀[GetXmlNamespace 运算符](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="d3453-130">You can retrieve an <xref:System.Xml.Linq.XNamespace> object for a particular namespace prefix by using the [GetXmlNamespace Operator](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md).</span></span>  
   
- 有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
+ <span data-ttu-id="d3453-131">有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="d3453-131">For more information, see [Imports Statement (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-### <a name="using-xml-namespaces-in-xml-literals"></a>在 XML 文本中使用 XML 命名空间  
- 下面的示例演示如何创建<xref:System.Xml.Linq.XElement>使用全局命名空间的对象`ns`:</xref:System.Xml.Linq.XElement>  
+### <a name="using-xml-namespaces-in-xml-literals"></a><span data-ttu-id="d3453-132">在 XML 文本中使用 XML 命名空间</span><span class="sxs-lookup"><span data-stu-id="d3453-132">Using XML Namespaces in XML Literals</span></span>  
+ <span data-ttu-id="d3453-133">下面的示例演示如何创建<xref:System.Xml.Linq.XElement>使用全局命名空间的对象`ns`:</span><span class="sxs-lookup"><span data-stu-id="d3453-133">The following example shows how to create an <xref:System.Xml.Linq.XElement> object that uses the global namespace `ns`:</span></span>  
   
- [!code-vb[VbXMLSamples #&2;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
+ [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]编译器将转换成等效的代码，用于使用 XML 命名空间的 XML 表示法包含 XML 命名空间别名的 XML 文本`xmlns`属性。 在编译时上, 一节示例中的代码将产生与下面的示例实质上是相同的可执行代码︰  
+ <span data-ttu-id="d3453-134">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将转换到 XML 命名空间中使用的使用的 XML 表示法的等效代码包含 XML 命名空间别名的 XML 文本`xmlns`属性。</span><span class="sxs-lookup"><span data-stu-id="d3453-134">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler translates XML literals that contain XML namespace aliases into equivalent code that uses the XML notation for using XML namespaces, with the `xmlns` attribute.</span></span> <span data-ttu-id="d3453-135">在编译时上, 一节的示例中的代码将产生与下面的示例实质上是相同的可执行代码：</span><span class="sxs-lookup"><span data-stu-id="d3453-135">When compiled, the code in the previous section's example produces essentially the same executable code as the following example:</span></span>  
   
- [!code-vb[VbXMLSamples #&3;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
+ [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
   
-### <a name="using-xml-namespaces-in-xml-axis-properties"></a>使用 XML 命名空间中 XML 轴属性  
- XML 文本声明的 XML 命名空间不可用于在 XML 轴属性中使用。 但是，全局命名空间可以用于 XML 轴属性。 使用冒号分隔 XML 命名空间前缀和本地元素名称。 下面是一个示例：  
+### <a name="using-xml-namespaces-in-xml-axis-properties"></a><span data-ttu-id="d3453-136">在 XML 轴属性中使用 XML 命名空间</span><span class="sxs-lookup"><span data-stu-id="d3453-136">Using XML Namespaces in XML Axis Properties</span></span>  
+ <span data-ttu-id="d3453-137">XML 文本声明的 XML 命名空间不在 XML 轴属性中使用。</span><span class="sxs-lookup"><span data-stu-id="d3453-137">XML namespaces declared in XML literals are not available for use in XML axis properties.</span></span> <span data-ttu-id="d3453-138">但是，可以与 XML 轴属性一起使用全局命名空间。</span><span class="sxs-lookup"><span data-stu-id="d3453-138">However, global namespaces can be used with the XML axis properties.</span></span> <span data-ttu-id="d3453-139">使用冒号分隔的 XML 命名空间前缀和本地元素名称。</span><span class="sxs-lookup"><span data-stu-id="d3453-139">Use a colon to separate the XML namespace prefix from the local element name.</span></span> <span data-ttu-id="d3453-140">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="d3453-140">Following is an example:</span></span>  
   
- [!code-vb[VbXMLSamples #&4;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
+ [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
-## <a name="see-also"></a>另请参阅  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)   
- [在 Visual Basic 中操作 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d3453-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d3453-141">See Also</span></span>  
+ [<span data-ttu-id="d3453-142">XML</span><span class="sxs-lookup"><span data-stu-id="d3453-142">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [<span data-ttu-id="d3453-143">在 Visual Basic 中创建 XML</span><span class="sxs-lookup"><span data-stu-id="d3453-143">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="d3453-144">在 Visual Basic 中访问 XML</span><span class="sxs-lookup"><span data-stu-id="d3453-144">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
+ [<span data-ttu-id="d3453-145">在 Visual Basic 中操控 XML</span><span class="sxs-lookup"><span data-stu-id="d3453-145">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

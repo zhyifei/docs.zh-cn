@@ -1,35 +1,37 @@
 ---
-title: "自定义安全元数据终结点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义安全元数据终结点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 78fbde5f83d4a24594e06b787756c7ab3762d75a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 自定义安全元数据终结点
-本示例演示如何实现一个具有安全元数据终结点（使用一个非元数据交换绑定）的服务，以及如何配置 [ServiceModel 元数据实用工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 或客户端以从此类元数据终结点中获取元数据。有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。mexHttpBinding 用于非安全的方式，通过 HTTP 公开元数据终结点。mexHttpsBinding 以安全的方式，通过 HTTP 公开元数据终结点。本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
+# <a name="custom-secure-metadata-endpoint"></a><span data-ttu-id="b7684-102">自定义安全元数据终结点</span><span class="sxs-lookup"><span data-stu-id="b7684-102">Custom Secure Metadata Endpoint</span></span>
+<span data-ttu-id="b7684-103">此示例演示如何实现使用安全的元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端进行提取此类的元数据终结点从元数据。</span><span class="sxs-lookup"><span data-stu-id="b7684-103">This sample demonstrates how to implement a service with a secure metadata endpoint that uses one of the non-metadata exchange bindings, and how to configure [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) or clients to fetch the metadata from such a metadata endpoint.</span></span> <span data-ttu-id="b7684-104">有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。</span><span class="sxs-lookup"><span data-stu-id="b7684-104">There are two system-provided bindings available for exposing metadata endpoints: mexHttpBinding and mexHttpsBinding.</span></span> <span data-ttu-id="b7684-105">mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。</span><span class="sxs-lookup"><span data-stu-id="b7684-105">mexHttpBinding is used to expose a metadata endpoint over HTTP in a non-secure manner.</span></span> <span data-ttu-id="b7684-106">mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。</span><span class="sxs-lookup"><span data-stu-id="b7684-106">mexHttpsBinding is used to expose a metadata endpoint over HTTPS in a secure manner.</span></span> <span data-ttu-id="b7684-107">本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。</span><span class="sxs-lookup"><span data-stu-id="b7684-107">This sample illustrates how to expose a secure metadata endpoint using the <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="b7684-108">要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。</span><span class="sxs-lookup"><span data-stu-id="b7684-108">You would want to do this when you want to change the security settings on the binding, but you do not want to use HTTPS.</span></span> <span data-ttu-id="b7684-109">如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。</span><span class="sxs-lookup"><span data-stu-id="b7684-109">If you use the mexHttpsBinding your metadata endpoint will be secure, but there is no way to modify the binding settings.</span></span>  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  <span data-ttu-id="b7684-110">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="b7684-110">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## 服务  
- 本示例中的服务有两个终结点。应用程序终结点可用于 `WSHttpBinding` 上的 `ICalculator` 协定，其中启用了 `ReliableSession` 并且 `Message` 安全性为使用证书。元数据终结点还使用具有相同安全设置但没有 `ReliableSession` 的 `WSHttpBinding`。下面是相关的配置：  
+## <a name="service"></a><span data-ttu-id="b7684-111">服务</span><span class="sxs-lookup"><span data-stu-id="b7684-111">Service</span></span>  
+ <span data-ttu-id="b7684-112">本示例中的服务有两个终结点。</span><span class="sxs-lookup"><span data-stu-id="b7684-112">The service in this sample has two endpoints.</span></span> <span data-ttu-id="b7684-113">应用程序终结点可用于 `ICalculator` 上的 `WSHttpBinding` 协定，其中启用了 `ReliableSession` 并且 `Message` 安全性为使用证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-113">The application endpoint serves the `ICalculator` contract on a `WSHttpBinding` with `ReliableSession` enabled and `Message` security using certificates.</span></span> <span data-ttu-id="b7684-114">元数据终结点还使用具有相同安全设置但没有 `WSHttpBinding` 的 `ReliableSession`。</span><span class="sxs-lookup"><span data-stu-id="b7684-114">The metadata endpoint also uses `WSHttpBinding`, with the same security settings but with no `ReliableSession`.</span></span> <span data-ttu-id="b7684-115">下面是相关的配置：</span><span class="sxs-lookup"><span data-stu-id="b7684-115">Here is the relevant configuration:</span></span>  
   
-```  
-<services>  
-    …  
+```xml  
+<services>   
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-            behaviorConfiguration="CalculatorServiceBehavior">  
+             behaviorConfiguration="CalculatorServiceBehavior">  
      <!-- use base address provided by host -->  
      <endpoint address=""  
        binding="wsHttpBinding"  
@@ -58,24 +60,24 @@ caps.handback.revision: 19
  </bindings>  
 ```  
   
- 在很多其他示例中，元数据终结点使用默认 `mexHttpBinding`，这样会不安全。下面是使用具有 `Message` 安全性的 `WSHttpBinding` 来保护的元数据。为了使元数据客户端能够检索此元数据，必须用匹配的绑定来配置这些客户端。本示例演示两个此类客户端。  
+ <span data-ttu-id="b7684-116">在很多其他示例中，元数据终结点使用默认 `mexHttpBinding`，这样会不安全。</span><span class="sxs-lookup"><span data-stu-id="b7684-116">In many of the other samples, the metadata endpoint uses the default `mexHttpBinding`, which is not secure.</span></span> <span data-ttu-id="b7684-117">下面是使用具有 `WSHttpBinding` 安全性的 `Message` 来保护的元数据。</span><span class="sxs-lookup"><span data-stu-id="b7684-117">Here the metadata is secured using `WSHttpBinding` with `Message` security.</span></span> <span data-ttu-id="b7684-118">为了使元数据客户端能够检索此元数据，必须用匹配的绑定来配置这些客户端。</span><span class="sxs-lookup"><span data-stu-id="b7684-118">In order for metadata clients to retrieve this metadata, they must be configured with a matching binding.</span></span> <span data-ttu-id="b7684-119">本示例演示两个此类客户端。</span><span class="sxs-lookup"><span data-stu-id="b7684-119">This sample demonstrates two such clients.</span></span>  
   
- 第一个客户端使用 Svcutil.exe 获取元数据并在设计时生成客户端代码和配置。由于服务针对元数据使用非默认绑定，因此必须专门配置 Svcutil.exe 工具，以便此工具能够使用该绑定从服务中获取元数据。  
+ <span data-ttu-id="b7684-120">第一个客户端使用 Svcutil.exe 获取元数据并在设计时生成客户端代码和配置。</span><span class="sxs-lookup"><span data-stu-id="b7684-120">The first client uses Svcutil.exe to fetch the metadata and generate client code and configuration at design time.</span></span> <span data-ttu-id="b7684-121">由于服务针对元数据使用非默认绑定，因此必须专门配置 Svcutil.exe 工具，以便此工具能够使用该绑定从服务中获取元数据。</span><span class="sxs-lookup"><span data-stu-id="b7684-121">Because the service uses a non-default binding for the metadata, the Svcutil.exe tool must be specifically configured so that it can get the metadata from the service using that binding.</span></span>  
   
- 第二个客户端使用 `MetadataResolver` 动态获取已知协定的元数据，然后在动态生成的客户端上调用操作。  
+ <span data-ttu-id="b7684-122">第二个客户端使用 `MetadataResolver` 动态获取已知协定的元数据，然后在动态生成的客户端上调用操作。</span><span class="sxs-lookup"><span data-stu-id="b7684-122">The second client uses the `MetadataResolver` to dynamically fetch the metadata for a known contract and then invoke operations on the dynamically generated client.</span></span>  
   
-## Svcutil 客户端  
- 当使用默认绑定承载您的 `IMetadataExchange` 终结点时，可以使用该终结点的地址运行 Svcutil.exe：  
+## <a name="svcutil-client"></a><span data-ttu-id="b7684-123">Svcutil 客户端</span><span class="sxs-lookup"><span data-stu-id="b7684-123">Svcutil client</span></span>  
+ <span data-ttu-id="b7684-124">当使用默认绑定承载您的 `IMetadataExchange` 终结点时，可以使用该终结点的地址运行 Svcutil.exe：</span><span class="sxs-lookup"><span data-stu-id="b7684-124">When using the default binding to host your `IMetadataExchange` endpoint, you can run Svcutil.exe with the address of that endpoint:</span></span>  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 它正常工作。但在本示例中，服务器使用非默认终结点承载元数据。因此，必须指示 Svcutil.exe 使用正确的绑定。使用 Svcutil.exe.config 文件可以实现此目标。  
+ <span data-ttu-id="b7684-125">它正常工作。</span><span class="sxs-lookup"><span data-stu-id="b7684-125">and it works.</span></span> <span data-ttu-id="b7684-126">但在本示例中，服务器使用非默认终结点承载元数据。</span><span class="sxs-lookup"><span data-stu-id="b7684-126">But in this sample, the server uses a non-default endpoint to host the metadata.</span></span> <span data-ttu-id="b7684-127">因此，必须指示 Svcutil.exe 使用正确的绑定。</span><span class="sxs-lookup"><span data-stu-id="b7684-127">So Svcutil.exe must be instructed to use the correct binding.</span></span> <span data-ttu-id="b7684-128">使用 Svcutil.exe.config 文件可以实现此目标。</span><span class="sxs-lookup"><span data-stu-id="b7684-128">This can be done using a Svcutil.exe.config file.</span></span>  
   
- Svcutil.exe.config 文件类似于普通的客户端配置文件。唯一不同之处是客户端终结点名称和协定：  
+ <span data-ttu-id="b7684-129">Svcutil.exe.config 文件类似于普通的客户端配置文件。</span><span class="sxs-lookup"><span data-stu-id="b7684-129">The Svcutil.exe.config file looks like a normal client configuration file.</span></span> <span data-ttu-id="b7684-130">唯一不同之处是客户端终结点名称和协定：</span><span class="sxs-lookup"><span data-stu-id="b7684-130">The only unusual aspects are the client endpoint name and contract:</span></span>  
   
-```  
+```xml  
 <endpoint name="http"  
           binding="wsHttpBinding"  
           bindingConfiguration="Binding1"  
@@ -83,26 +85,26 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
           contract="IMetadataExchange" />  
 ```  
   
- 终结点名称必须是承载该元数据的地址的方案名称，终结点协定必须为 `IMetadataExchange`。因此，当使用如下所示的命令行运行 Svcutil.exe 时：  
+ <span data-ttu-id="b7684-131">终结点名称必须是承载该元数据的地址的方案名称，终结点协定必须为 `IMetadataExchange`。</span><span class="sxs-lookup"><span data-stu-id="b7684-131">The endpoint name must be the name of the scheme of the address where the metadata is hosted and the endpoint contract must be `IMetadataExchange`.</span></span> <span data-ttu-id="b7684-132">因此，当使用如下所示的命令行运行 Svcutil.exe 时：</span><span class="sxs-lookup"><span data-stu-id="b7684-132">Thus, when Svcutil.exe is run with a command-line such as the following:</span></span>  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 它查找名为“http”的终结点和 `IMetadataExchange` 协定，以使用元数据终结点配置通信交换的绑定和行为。示例中的 Svcutil.exe.config 文件的其余部分指定绑定配置和行为凭据以与元数据终结点的服务器配置相匹配。  
+ <span data-ttu-id="b7684-133">它查找名为“http”的终结点和 `IMetadataExchange` 协定，以使用元数据终结点配置通信交换的绑定和行为。</span><span class="sxs-lookup"><span data-stu-id="b7684-133">it looks for the endpoint named "http" and contract `IMetadataExchange` to configure the binding and behavior of the communication exchange with the metadata endpoint.</span></span> <span data-ttu-id="b7684-134">示例中的 Svcutil.exe.config 文件的其余部分指定绑定配置和行为凭据以与元数据终结点的服务器配置相匹配。</span><span class="sxs-lookup"><span data-stu-id="b7684-134">The rest of the Svcutil.exe.config file in the sample specifies the binding configuration and behavior credentials to match the server's configuration of the metadata endpoint.</span></span>  
   
- 为了使 Svcutil.exe 能够在 Svcutil.exe.config 中选取配置，Svcutil.exe 必须与该配置文件位于同一目录中。因此，您必须将 Svcutil.exe 从其安装位置复制到包含 Svcutil.exe.config 文件的目录中。然后，从该目录中运行以下命令：  
+ <span data-ttu-id="b7684-135">为了使 Svcutil.exe 能够在 Svcutil.exe.config 中选取配置，Svcutil.exe 必须与该配置文件位于同一目录中。</span><span class="sxs-lookup"><span data-stu-id="b7684-135">In order for Svcutil.exe to pick up the configuration in Svcutil.exe.config, Svcutil.exe must be in the same directory as the configuration file.</span></span> <span data-ttu-id="b7684-136">因此，您必须将 Svcutil.exe 从其安装位置复制到包含 Svcutil.exe.config 文件的目录中。</span><span class="sxs-lookup"><span data-stu-id="b7684-136">As a result, you must copy Svcutil.exe from its install location to the directory that contains the Svcutil.exe.config file.</span></span> <span data-ttu-id="b7684-137">然后，从该目录中运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="b7684-137">Then from that directory, run the following command:</span></span>  
   
 ```  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 领先"。\\" 确保运行此目录（具有相应的 Svcutil.exe.config 的目录）中的 Svcutil.exe 副本。  
+ <span data-ttu-id="b7684-138">前导"。\\"可确保运行此目录 （其中一个拥有相应的 Svcutil.exe.config） 中的 Svcutil.exe 副本。</span><span class="sxs-lookup"><span data-stu-id="b7684-138">The leading ".\\" ensures that the copy of Svcutil.exe in this directory (the one which has a corresponding Svcutil.exe.config) is run.</span></span>  
   
-## MetadataResolver 客户端  
- 如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataExchangeClient` 来配置 `MetadataResolver` 使用的绑定和凭据。  
+## <a name="metadataresolver-client"></a><span data-ttu-id="b7684-139">MetadataResolver 客户端</span><span class="sxs-lookup"><span data-stu-id="b7684-139">MetadataResolver client</span></span>  
+ <span data-ttu-id="b7684-140">如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。</span><span class="sxs-lookup"><span data-stu-id="b7684-140">If the client knows the contract and how to talk to the metadata at design time, the client can dynamically find out the binding and address of application endpoints using the `MetadataResolver`.</span></span> <span data-ttu-id="b7684-141">本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataResolver` 来配置 `MetadataExchangeClient` 使用的绑定和凭据。</span><span class="sxs-lookup"><span data-stu-id="b7684-141">This sample client demonstrates this, showing how to configure the binding and credentials used by `MetadataResolver` by creating and configuring a `MetadataExchangeClient`.</span></span>  
   
- 可以在 `MetadataExchangeClient` 上强制指定 Svcutil.exe.config 中出现的相同绑定和证书信息：  
+ <span data-ttu-id="b7684-142">可以在 `MetadataExchangeClient` 上强制指定 Svcutil.exe.config 中出现的相同绑定和证书信息：</span><span class="sxs-lookup"><span data-stu-id="b7684-142">The same binding and certificate information that appeared in Svcutil.exe.config can be specified imperatively on the `MetadataExchangeClient`:</span></span>  
   
 ```  
 // Specify the Metadata Exchange binding and its security mode  
@@ -118,7 +120,7 @@ mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLoca
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
- 配置完 `mexClient`，我们可以枚举感兴趣的协定并使用 `MetadataResolver` 获取使用这些协定的终结点的列表：  
+ <span data-ttu-id="b7684-143">配置完 `mexClient`，我们可以枚举感兴趣的协定并使用 `MetadataResolver` 获取使用这些协定的终结点的列表：</span><span class="sxs-lookup"><span data-stu-id="b7684-143">With the `mexClient` configured, we can enumerate the contracts we are interested in, and use `MetadataResolver` to fetch a list of endpoints with those contracts:</span></span>  
   
 ```  
 // The contract we want to fetch metadata for  
@@ -130,68 +132,68 @@ EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSett
 ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
- 最后，我们可以使用这些终结点中的信息初始化 `ChannelFactory`（用于创建与应用程序终结点通信的通道）的绑定和地址。  
+ <span data-ttu-id="b7684-144">最后，我们可以使用这些终结点中的信息初始化 `ChannelFactory`（用于创建与应用程序终结点通信的通道）的绑定和地址。</span><span class="sxs-lookup"><span data-stu-id="b7684-144">Finally we can use the information from those endpoints to initialize the binding and address of a `ChannelFactory` used to create channels to communicate with the application endpoints.</span></span>  
   
 ```  
 ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
- 本示例的关键之处在于演示：如果您要使用 `MetadataResolver`，则必须指定用于元数据交换通信的自定义绑定或行为，您可以使用 `MetadataExchangeClient` 指定这些自定义设置。  
+ <span data-ttu-id="b7684-145">本示例的关键之处在于演示：如果您要使用 `MetadataResolver`，则必须指定用于元数据交换通信的自定义绑定或行为，您可以使用 `MetadataExchangeClient` 指定这些自定义设置。</span><span class="sxs-lookup"><span data-stu-id="b7684-145">The key point of this sample client is to demonstrate that, if you are using `MetadataResolver`, and you must specify custom bindings or behaviors for the metadata exchange communication, you can use a `MetadataExchangeClient` to specify those custom settings.</span></span>  
   
-#### 设置和生成示例  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="b7684-146">设置和生成示例</span><span class="sxs-lookup"><span data-stu-id="b7684-146">To set up and build the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="b7684-147">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="b7684-147">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="b7684-148">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="b7684-148">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="b7684-149">在同一计算机上运行示例</span><span class="sxs-lookup"><span data-stu-id="b7684-149">To run the sample on the same machine</span></span>  
   
-1.  运行示例安装文件夹中的 Setup.bat。这将安装运行示例所需的所有证书。请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)中的 setupCertTool.bat 可安装此工具。  
+1.  <span data-ttu-id="b7684-150">运行示例安装文件夹中的 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="b7684-150">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="b7684-151">这将安装运行示例所需的所有证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-151">This installs all the certificates required for running the sample.</span></span> <span data-ttu-id="b7684-152">请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行 setupCertTool.bat 从安装[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="b7684-152">Note that Setup.bat uses the FindPrivateKey.exe tool, which is installed by running setupCertTool.bat from [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  运行 \\MetadataResolverClient\\bin 或 \\SvcutilClient\\bin 中的客户端应用程序。客户端活动将显示在客户端控制台应用程序上。  
+2.  <span data-ttu-id="b7684-153">运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="b7684-153">Run the client application from \MetadataResolverClient\bin or \SvcutilClient\bin.</span></span> <span data-ttu-id="b7684-154">客户端活动将显示在客户端控制台应用程序上。</span><span class="sxs-lookup"><span data-stu-id="b7684-154">Client activity is displayed on the client console application.</span></span>  
   
-3.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  <span data-ttu-id="b7684-155">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="b7684-155">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-4.  在运行完该示例后运行 Cleanup.bat 移除证书。其他安全示例使用相同的证书。  
+4.  <span data-ttu-id="b7684-156">在运行完该示例后运行 Cleanup.bat 移除证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-156">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="b7684-157">其他安全示例使用相同的证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-157">Other security samples use the same certificates.</span></span>  
   
-#### 跨计算机运行示例  
+#### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="b7684-158">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="b7684-158">To run the sample across machines</span></span>  
   
-1.  在服务器上运行 `setup.bat service`。如果采用 `service` 参数运行 `setup.bat` ，则使用计算机的完全限定域名创建一个服务证书，并将此服务证书导出到名为 Service.cer 的文件中。  
+1.  <span data-ttu-id="b7684-159">在服务器上运行 `setup.bat service`。</span><span class="sxs-lookup"><span data-stu-id="b7684-159">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="b7684-160">运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。</span><span class="sxs-lookup"><span data-stu-id="b7684-160">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
   
-2.  在服务器上，编辑 Web.config 以反映新证书名称。也就是说，将 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) 元素中的 `findValue` 属性更改为计算机的完全限定域名。  
+2.  <span data-ttu-id="b7684-161">在服务器上，编辑 Web.config 以反映新证书名称。</span><span class="sxs-lookup"><span data-stu-id="b7684-161">On the server, edit Web.config to reflect the new certificate name.</span></span> <span data-ttu-id="b7684-162">也就是说，将更改`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)到的计算机的完全限定域名的元素。</span><span class="sxs-lookup"><span data-stu-id="b7684-162">That is, change the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) element to the fully-qualified domain name of the machine.</span></span>  
   
-3.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
+3.  <span data-ttu-id="b7684-163">将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。</span><span class="sxs-lookup"><span data-stu-id="b7684-163">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
   
-4.  在客户端上，运行 `setup.bat client`。如果使用 `client` 参数运行 `setup.bat` ，则会创建一个名为 Client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
+4.  <span data-ttu-id="b7684-164">在客户端上，运行 `setup.bat client`。</span><span class="sxs-lookup"><span data-stu-id="b7684-164">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="b7684-165">运行`setup.bat`与`client`参数创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。</span><span class="sxs-lookup"><span data-stu-id="b7684-165">Running `setup.bat` with the `client` argument creates a client certificate named Client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-5.  在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。通过使用服务器的完全限定域名替换 localhost 来执行此操作。还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。对 SvcutilClient 项目的 App.config 执行相同的操作。  
+5.  <span data-ttu-id="b7684-166">在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。</span><span class="sxs-lookup"><span data-stu-id="b7684-166">In the App.config file of the `MetadataResolverClient` on the client machine, change the address value of the mex endpoint to match the new address of your service.</span></span> <span data-ttu-id="b7684-167">通过使用服务器的完全限定域名替换 localhost 来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="b7684-167">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="b7684-168">还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。</span><span class="sxs-lookup"><span data-stu-id="b7684-168">Also change the occurrence of "localhost" in the metadataResolverClient.cs file to the new service certificate name (the fully-qualified domain name of the server).</span></span> <span data-ttu-id="b7684-169">对 SvcutilClient 项目的 App.config 执行相同的操作。</span><span class="sxs-lookup"><span data-stu-id="b7684-169">Do the same thing for the App.config of the SvcutilClient project.</span></span>  
   
-6.  将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
+6.  <span data-ttu-id="b7684-170">将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。</span><span class="sxs-lookup"><span data-stu-id="b7684-170">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-7.  在客户端上，运行 `ImportServiceCert.bat`。这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+7.  <span data-ttu-id="b7684-171">在客户端上，运行 `ImportServiceCert.bat`。</span><span class="sxs-lookup"><span data-stu-id="b7684-171">On the client, run `ImportServiceCert.bat`.</span></span> <span data-ttu-id="b7684-172">这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="b7684-172">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-8.  在服务器上，运行 `ImportClientCert.bat`，这会将 Client.cer 文件中的客户端证书导入 LocalMachine \- TrustedPeople 存储区。  
+8.  <span data-ttu-id="b7684-173">在服务器上，运行 `ImportClientCert.bat`，这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。</span><span class="sxs-lookup"><span data-stu-id="b7684-173">On the server, run `ImportClientCert.bat`, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-9. 在服务计算机上，在 Visual Studio 中生成服务项目，在 Web 浏览器中选择帮助页可验证该项目是否在运行。  
+9. <span data-ttu-id="b7684-174">在服务计算机上，在 Visual Studio 中生成服务项目，在 Web 浏览器中选择帮助页可验证该项目是否在运行。</span><span class="sxs-lookup"><span data-stu-id="b7684-174">On the service machine, build the service project in Visual Studio and select the help page in a web browser to verify that it is running.</span></span>  
   
-10. 在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。  
+10. <span data-ttu-id="b7684-175">在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。</span><span class="sxs-lookup"><span data-stu-id="b7684-175">On the client machine, run the MetadataResolverClient or the SvcutilClient from VS.</span></span>  
   
-    1.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  <span data-ttu-id="b7684-176">如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。</span><span class="sxs-lookup"><span data-stu-id="b7684-176">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="b7684-177">运行示例后进行清理</span><span class="sxs-lookup"><span data-stu-id="b7684-177">To clean up after the sample</span></span>  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+-   <span data-ttu-id="b7684-178">运行完示例后运行示例文件夹中的 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="b7684-178">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser \- TrustedPeople 存储中的服务证书。为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  <span data-ttu-id="b7684-179">此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-179">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="b7684-180">如果已跨计算机运行使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储区中的服务证书。</span><span class="sxs-lookup"><span data-stu-id="b7684-180">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="b7684-181">为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。</span><span class="sxs-lookup"><span data-stu-id="b7684-181">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`.</span></span> <span data-ttu-id="b7684-182">例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。</span><span class="sxs-lookup"><span data-stu-id="b7684-182">For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录。  
+>  <span data-ttu-id="b7684-183">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="b7684-183">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b7684-184">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="b7684-184">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录：  
+>  <span data-ttu-id="b7684-185">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="b7684-185">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b7684-186">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="b7684-186">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="b7684-187">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b7684-187">See Also</span></span>

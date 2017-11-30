@@ -1,64 +1,56 @@
 ---
-title: "异步任务取消剩余一个后完成 (Visual Basic 中) |Microsoft 文档"
+title: "异步任务取消剩余一个后完成 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1b70822edd972ac33614ab49faad6ff50b0e80b7
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 698ccf5901a77438368b9bf768b88ca6f90fdcbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>异步任务取消剩余一个后完成 (Visual Basic)
-通过使用<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>方法和<xref:System.Threading.CancellationToken>，您可以在一个任务完成后取消所有剩余任务。</xref:System.Threading.CancellationToken> </xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> `WhenAny`方法采用的参数是任务的集合。 该方法开始的所有任务，并返回单个任务。 在集合中的任何任务完成后，单个任务已完成。  
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a><span data-ttu-id="93184-102">异步任务取消剩余一个后完成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93184-102">Cancel Remaining Async Tasks after One Is Complete (Visual Basic)</span></span>
+<span data-ttu-id="93184-103">通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。</span><span class="sxs-lookup"><span data-stu-id="93184-103">By using the <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> method together with a <xref:System.Threading.CancellationToken>, you can cancel all remaining tasks when one task is complete.</span></span> <span data-ttu-id="93184-104">`WhenAny` 方法采用任务集合中的一个参数。</span><span class="sxs-lookup"><span data-stu-id="93184-104">The `WhenAny` method takes an argument that’s a collection of tasks.</span></span> <span data-ttu-id="93184-105">该方法启动所有任务，并返回单个任务。</span><span class="sxs-lookup"><span data-stu-id="93184-105">The method starts all the tasks and returns a single task.</span></span> <span data-ttu-id="93184-106">当集合中任意任务完成时，完成单个任务。</span><span class="sxs-lookup"><span data-stu-id="93184-106">The single task is complete when any task in the collection is complete.</span></span>  
   
- 此示例演示如何结合使用取消标记`WhenAny`来占用的第一个任务完成的任务的集合，并用于取消剩余任务。 每个任务的形式下载网站的内容。 本示例显示的第一个下载完成的内容的长度，并取消其他下载内容。  
+ <span data-ttu-id="93184-107">此示例演示如何结合使用取消标记与 `WhenAny` 保留任务集合中第一个要完成的任务，并取消剩余任务。</span><span class="sxs-lookup"><span data-stu-id="93184-107">This example demonstrates how to use a cancellation token in conjunction with `WhenAny` to hold onto the first task to finish from the collection of tasks and to cancel the remaining tasks.</span></span> <span data-ttu-id="93184-108">每个任务都下载网站内容。</span><span class="sxs-lookup"><span data-stu-id="93184-108">Each task downloads the contents of a website.</span></span> <span data-ttu-id="93184-109">本示例显示第一个完成的下载的内容长度，并取消其他下载。</span><span class="sxs-lookup"><span data-stu-id="93184-109">The example displays the length of the contents of the first download to complete and cancels the other downloads.</span></span>  
   
 > [!NOTE]
->  若要运行的示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在您的计算机上。  
+>  <span data-ttu-id="93184-110">若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="93184-110">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-## <a name="downloading-the-example"></a>下载示例  
- 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)，然后按照这些步骤。  
+## <a name="downloading-the-example"></a><span data-ttu-id="93184-111">下载示例</span><span class="sxs-lookup"><span data-stu-id="93184-111">Downloading the Example</span></span>  
+ <span data-ttu-id="93184-112">若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序），然后遵循以下步骤。</span><span class="sxs-lookup"><span data-stu-id="93184-112">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) and then follow these steps.</span></span>  
   
-1.  解压缩下载的文件，然后启动 Visual Studio。  
+1.  <span data-ttu-id="93184-113">解压缩下载的文件，然后启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="93184-113">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
+2.  <span data-ttu-id="93184-114">在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。</span><span class="sxs-lookup"><span data-stu-id="93184-114">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3.  在**打开项目**对话框中，打开保存的示例代码中您解压缩的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
+3.  <span data-ttu-id="93184-115">在**打开项目**对话框中，打开保存解压缩，示例代码的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。</span><span class="sxs-lookup"><span data-stu-id="93184-115">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4.  在**解决方案资源管理器**，打开快捷菜单**CancelAfterOneTask**项目，，然后选择**设为启动项目**。  
+4.  <span data-ttu-id="93184-116">在“解决方案资源管理器”中，打开“CancelAfterOneTask”项目的快捷菜单，然后选择“设为启动项目”。</span><span class="sxs-lookup"><span data-stu-id="93184-116">In **Solution Explorer**, open the shortcut menu for the **CancelAfterOneTask** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5.  选择 F5 键以运行该项目。  
+5.  <span data-ttu-id="93184-117">选择 F5 键运行该项目。</span><span class="sxs-lookup"><span data-stu-id="93184-117">Choose the F5 key to run the project.</span></span>  
   
-     按 Ctrl + F5 键以运行该项目，不对其进行调试。  
+     <span data-ttu-id="93184-118">选择 Ctrl+F5 键运行该项目，而不进行调试。</span><span class="sxs-lookup"><span data-stu-id="93184-118">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
-6.  运行程序多次以验证其他的下载完成第一次。  
+6.  <span data-ttu-id="93184-119">运行程序若干次，以验证首先完成的下载是不同的。</span><span class="sxs-lookup"><span data-stu-id="93184-119">Run the program several times to verify that different downloads finish first.</span></span>  
   
- 如果您不想要下载的项目，你可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
+ <span data-ttu-id="93184-120">如果你不想要下载的项目，你可以查看本主题末尾的 MainWindow.xaml.vb 文件。</span><span class="sxs-lookup"><span data-stu-id="93184-120">If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.</span></span>  
   
-## <a name="building-the-example"></a>生成示例  
- 本主题中的示例将添加到项目中开发的[取消一个异步任务或列表任务](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)若要取消的任务的列表。 该示例使用相同的 UI，尽管**取消**不显式使用按钮。  
+## <a name="building-the-example"></a><span data-ttu-id="93184-121">生成示例</span><span class="sxs-lookup"><span data-stu-id="93184-121">Building the Example</span></span>  
+ <span data-ttu-id="93184-122">本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消的任务的列表。</span><span class="sxs-lookup"><span data-stu-id="93184-122">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) to cancel a list of tasks.</span></span> <span data-ttu-id="93184-123">该示例使用相同的 UI，但未显示使用“取消”按钮。</span><span class="sxs-lookup"><span data-stu-id="93184-123">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>  
   
- 若要生成示例自己执行的步骤，请按照"下载示例"部分中的说明进行操作，但选择**CancelAListOfTasks**作为**启动项目**。 向该项目添加本主题中的所做的更改。  
+ <span data-ttu-id="93184-124">若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。</span><span class="sxs-lookup"><span data-stu-id="93184-124">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="93184-125">将此主题中的更改添加到该项目。</span><span class="sxs-lookup"><span data-stu-id="93184-125">Add the changes in this topic to that project.</span></span>  
   
- MainWindow.xaml.vb 文件中的**CancelAListOfTasks**项目中，通过将每个网站的处理步骤从中的循环移动开始转换`AccessTheWebAsync`与下面的异步方法。  
+ <span data-ttu-id="93184-126">在 MainWindow.xaml.vb 文件的**CancelAListOfTasks**项目中，通过将每个网站的处理步骤移从中的循环开始转换`AccessTheWebAsync`与以下的异步方法。</span><span class="sxs-lookup"><span data-stu-id="93184-126">In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.</span></span>  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -74,19 +66,28 @@ Async Function ProcessURLAsync(url As String, client As HttpClient, ct As Cancel
 End Function  
 ```  
   
- 在`AccessTheWebAsync`，此示例使用一个查询，<xref:System.Linq.Enumerable.ToArray%2A>方法，与`WhenAny`方法创建并启动任务的数组。</xref:System.Linq.Enumerable.ToArray%2A> 应用程序的`WhenAny`数组时将返回到一项任务，处于等待状态，计算结果为第一项任务来访问数组中完成的任务。  
+ <span data-ttu-id="93184-127">在 `AccessTheWebAsync` 中，此示例使用查询、<xref:System.Linq.Enumerable.ToArray%2A> 方法和 `WhenAny` 方法创建并启动任务数组。</span><span class="sxs-lookup"><span data-stu-id="93184-127">In `AccessTheWebAsync`, this example uses a query, the  <xref:System.Linq.Enumerable.ToArray%2A> method, and the `WhenAny` method to create and start an array of tasks.</span></span> <span data-ttu-id="93184-128">将 `WhenAny` 应用到数组将返回单个任务，该任务在等待时对任务数组中首先完成的任务进行评估。</span><span class="sxs-lookup"><span data-stu-id="93184-128">The application of `WhenAny` to the array returns a single task that, when awaited, evaluates to the first task to reach completion in the array of tasks.</span></span>  
   
- 进行中的以下更改`AccessTheWebAsync`。 星号标记的代码文件中的更改。  
+ <span data-ttu-id="93184-129">在 `AccessTheWebAsync` 中，进行下列更改。</span><span class="sxs-lookup"><span data-stu-id="93184-129">Make the following changes in `AccessTheWebAsync`.</span></span> <span data-ttu-id="93184-130">星号标记了代码文件中的更改。</span><span class="sxs-lookup"><span data-stu-id="93184-130">Asterisks mark the changes in the code file.</span></span>  
   
-1.  注释掉或删除该循环。  
+1.  <span data-ttu-id="93184-131">注释禁止或删除循环。</span><span class="sxs-lookup"><span data-stu-id="93184-131">Comment out or delete the loop.</span></span>  
   
-2.  创建一个查询，在执行时，生成的常规任务的集合。 每次调用`ProcessURLAsync`返回<xref:System.Threading.Tasks.Task%601>其中`TResult`是一个整数。</xref:System.Threading.Tasks.Task%601>  
+2.  <span data-ttu-id="93184-132">创建一个查询，它在执行时将生成常规任务的集合。</span><span class="sxs-lookup"><span data-stu-id="93184-132">Create a query that, when executed, produces a collection of generic tasks.</span></span> <span data-ttu-id="93184-133">每次调用 `ProcessURLAsync` 均在 `TResult` 为整数时返回 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="93184-133">Each call to `ProcessURLAsync` returns a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-3.  调用`ToArray`执行查询并启动任务。 应用程序的`WhenAny`方法在下一步将执行查询，并启动任务，而无需使用`ToArray`，但其他方法可能不会。 最安全的做法是明确强制执行查询。  
+    ```vb  
+    ' ***Create a query that, when executed, returns a collection of tasks.  
+    Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
+        From url In urlList Select ProcessURLAsync(url, client, ct)  
+    ```  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-4.  调用`WhenAny`上的任务的集合。 `WhenAny`返回`Task(Of Task(Of Integer))`或`Task<Task<int>>`。  也就是说，`WhenAny`评估的任务返回单个`Task(Of Integer)`或`Task<int>`时等待。 该单个任务将集合中要完成的第一个任务。 第一次已完成的任务分配给`firstFinishedTask`。 一种`firstFinishedTask`是<xref:System.Threading.Tasks.Task%601>其中`TResult`是一个整数，因为这是返回类型的`ProcessURLAsync`。</xref:System.Threading.Tasks.Task%601>  
+3.  <span data-ttu-id="93184-134">通过调用 `ToArray` 来执行查询并启动任务。</span><span class="sxs-lookup"><span data-stu-id="93184-134">Call `ToArray` to execute the query and start the tasks.</span></span> <span data-ttu-id="93184-135">下一步中应用 `WhenAny` 方法将在不使用 `ToArray` 的情况下执行查询并启动任务，但其他方法可能无法执行此操作。</span><span class="sxs-lookup"><span data-stu-id="93184-135">The application of the `WhenAny` method in the next step would execute the query and start the tasks without using `ToArray`, but other methods might not.</span></span> <span data-ttu-id="93184-136">最安全的做法是显式强制执行查询。</span><span class="sxs-lookup"><span data-stu-id="93184-136">The safest practice is to force execution of the query explicitly.</span></span>  
+  
+    ```vb  
+    ' ***Use ToArray to execute the query and start the download tasks.   
+    Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
+    ```  
+  
+4.  <span data-ttu-id="93184-137">在任务集合上调用 `WhenAny`。</span><span class="sxs-lookup"><span data-stu-id="93184-137">Call `WhenAny` on the collection of tasks.</span></span> <span data-ttu-id="93184-138">`WhenAny` 返回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。</span><span class="sxs-lookup"><span data-stu-id="93184-138">`WhenAny` returns a `Task(Of Task(Of Integer))` or `Task<Task<int>>`.</span></span>  <span data-ttu-id="93184-139">也就是说，在等待时 `WhenAny` 将返回一个任务，它将评估单个的 `Task(Of Integer)` 或 `Task<int>`。</span><span class="sxs-lookup"><span data-stu-id="93184-139">That is, `WhenAny` returns a task that evaluates to a single `Task(Of Integer)` or `Task<int>` when it’s awaited.</span></span> <span data-ttu-id="93184-140">该单个任务是集合中首先完成的任务。</span><span class="sxs-lookup"><span data-stu-id="93184-140">That single task is the first task in the collection to finish.</span></span> <span data-ttu-id="93184-141">首先完成的任务被分配给 `firstFinishedTask`。</span><span class="sxs-lookup"><span data-stu-id="93184-141">The task that finished first is assigned to `firstFinishedTask`.</span></span> <span data-ttu-id="93184-142">`firstFinishedTask` 的类型为 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 是整数，这是因为它是 `ProcessURLAsync` 的返回类型。</span><span class="sxs-lookup"><span data-stu-id="93184-142">The type of `firstFinishedTask` is <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer because that's the return type of `ProcessURLAsync`.</span></span>  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -94,28 +95,28 @@ End Function
 Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
 ```  
   
-5.  在此示例中，您只的感兴趣先完成的任务。 因此，使用<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>若要取消剩余任务。</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+5.  <span data-ttu-id="93184-143">在此示例中，你只对首先完成的任务感兴趣。</span><span class="sxs-lookup"><span data-stu-id="93184-143">In this example, you’re interested only in the task that finishes first.</span></span> <span data-ttu-id="93184-144">因此，使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 取消剩余任务。</span><span class="sxs-lookup"><span data-stu-id="93184-144">Therefore, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> to cancel the remaining tasks.</span></span>  
   
 ```vb  
 ' ***Cancel the rest of the downloads. You just want the first one.  
 cts.Cancel()  
 ```  
   
-6.  最后，await`firstFinishedTask`要检索的下载内容的长度。  
+6.  <span data-ttu-id="93184-145">最后，等待 `firstFinishedTask` 检索下载内容的长度。</span><span class="sxs-lookup"><span data-stu-id="93184-145">Finally, await `firstFinishedTask` to retrieve the length of the downloaded content.</span></span>  
   
 ```vb  
 Dim length = Await firstFinishedTask  
 resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
 ```  
   
- 运行程序多次以验证其他的下载完成第一次。  
+ <span data-ttu-id="93184-146">运行程序若干次，以验证首先完成的下载是不同的。</span><span class="sxs-lookup"><span data-stu-id="93184-146">Run the program several times to verify that different downloads finish first.</span></span>  
   
-## <a name="complete-example"></a>完整的示例  
- 下面的代码是该示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。 星号标记已针对此示例添加的元素。  
+## <a name="complete-example"></a><span data-ttu-id="93184-147">完整的示例</span><span class="sxs-lookup"><span data-stu-id="93184-147">Complete Example</span></span>  
+ <span data-ttu-id="93184-148">下面的代码是此示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="93184-148">The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="93184-149">对添加到此示例的元素进行了星号标记。</span><span class="sxs-lookup"><span data-stu-id="93184-149">Asterisks mark the elements that were added for this example.</span></span>  
   
- 请注意，您必须添加<xref:System.Net.Http>。</xref:System.Net.Http>的引用  
+ <span data-ttu-id="93184-150">请注意，必须为 <xref:System.Net.Http> 添加引用。</span><span class="sxs-lookup"><span data-stu-id="93184-150">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
- 您可以下载的项目[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)。  
+ <span data-ttu-id="93184-151">可以从 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）下载这些项目。</span><span class="sxs-lookup"><span data-stu-id="93184-151">You can download the project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -240,8 +241,8 @@ End Class
 ' Download complete.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [异步编程使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [异步示例︰ 微调应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)
+## <a name="see-also"></a><span data-ttu-id="93184-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="93184-152">See Also</span></span>  
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [<span data-ttu-id="93184-153">微调异步应用程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93184-153">Fine-Tuning Your Async Application (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [<span data-ttu-id="93184-154">使用 Async 和 Await 的异步编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="93184-154">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ <span data-ttu-id="93184-155">[Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）</span><span class="sxs-lookup"><span data-stu-id="93184-155">[Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)</span></span>

@@ -1,55 +1,55 @@
 ---
-title: "如何：在 Windows 窗体中使用对齐线和网格排列控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GridSize"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 对齐"
-  - "网格线对齐, Windows 窗体设计器"
-  - "Windows 窗体, 设计器中的网格选项"
+title: "如何：在 Windows 窗体中使用对齐线和网格排列控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GridSize
+helpviewer_keywords:
+- snap to grid [Windows Forms], Windows Forms Designer
+- Windows Forms, grid options in designer
+- controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体中使用对齐线和网格排列控件
-使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 的布局特性，可以精确指导控件在窗体上的放置位置。  添加到窗体上或在窗体上移动的控件可以自动与 Windows 窗体设计器网格的行和列对齐，还可以通过使用对齐线特性来对齐控件。  
+# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a><span data-ttu-id="996c5-102">如何：在 Windows 窗体中使用对齐线和网格排列控件</span><span class="sxs-lookup"><span data-stu-id="996c5-102">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>
+<span data-ttu-id="996c5-103">使用的布局特性的[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，您可以精确指导控件在窗体上的放置位置。</span><span class="sxs-lookup"><span data-stu-id="996c5-103">Using the layout features of [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], you can precisely direct where controls are placed on a form.</span></span> <span data-ttu-id="996c5-104">添加到窗体或窗体上移动的控件可以自动对齐到的行和列的 Windows 窗体设计器的网格中，或可以通过使用对齐线功能对齐控件。</span><span class="sxs-lookup"><span data-stu-id="996c5-104">Controls added to a form or moved on a form can be automatically aligned to the rows and columns of the Windows Forms Designer's grid, or you can align controls by using the snaplines feature.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="996c5-105">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="996c5-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="996c5-106">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="996c5-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="996c5-107">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="996c5-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 将所有控件与网格线对齐  
+### <a name="to-snap-all-controls-to-the-grid"></a><span data-ttu-id="996c5-108">若要对齐到网格的所有控件</span><span class="sxs-lookup"><span data-stu-id="996c5-108">To snap all controls to the grid</span></span>  
   
--   在 Windows 窗体设计器的**“选项”**对话框中选择**“网格线对齐”**布局模式。  
+-   <span data-ttu-id="996c5-109">选择**网格线对齐**Windows 窗体设计器中的布局模式**选项**对话框。</span><span class="sxs-lookup"><span data-stu-id="996c5-109">Select the **SnapToGrid** layout mode in the Windows Forms Designer **Options** dialog box.</span></span>  
   
-     有关更多信息，请参见 [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-cn/8dd170af-72f0-4212-b04b-034ceee92834)。  现在所有控件都将自身与网格线上的点对齐。  
+     <span data-ttu-id="996c5-110">有关详细信息，请参阅[常规、 Windows 窗体设计器、 选项对话框](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)。</span><span class="sxs-lookup"><span data-stu-id="996c5-110">For more information, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span> <span data-ttu-id="996c5-111">所有控件现在使它们都对齐沿在网格上的点。</span><span class="sxs-lookup"><span data-stu-id="996c5-111">All controls now align themselves along the points on the grid.</span></span>  
   
-     可通过就地锁定控件，将单个控件与网格线对齐。  但锁定后，将无法移动它们或调整其大小。  有关锁定控件的更多信息，请参见 [如何：将控件锁定到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)。  
+     <span data-ttu-id="996c5-112">你可以通过就地锁定线对齐到网格的单个控件。</span><span class="sxs-lookup"><span data-stu-id="996c5-112">You can snap individual controls to the grid by locking them in place.</span></span> <span data-ttu-id="996c5-113">但是，锁定后，它们不能移动或调整大小。</span><span class="sxs-lookup"><span data-stu-id="996c5-113">However, while they are locked, they cannot be moved or resized.</span></span> <span data-ttu-id="996c5-114">锁定控件有关的详细信息，请参阅[如何： 向 Windows 窗体的锁定控件](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="996c5-114">For more information about locking controls, see [How to: Lock Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).</span></span>  
   
-### 使用对齐线对齐控件  
+### <a name="to-align-controls-using-snaplines"></a><span data-ttu-id="996c5-115">若要使用对齐线对齐控件</span><span class="sxs-lookup"><span data-stu-id="996c5-115">To align controls using snaplines</span></span>  
   
--   在 Windows 窗体设计器的**“选项”**对话框中选择**“对齐线”**布局模式。  
+-   <span data-ttu-id="996c5-116">选择**对齐线**Windows 窗体设计器中的布局模式**选项**对话框。</span><span class="sxs-lookup"><span data-stu-id="996c5-116">Select the **SnapLines** layout mode in the Windows Forms Designer **Options** dialog box.</span></span>  
   
-     有关更多信息，请参见[演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  现在您可以使用对齐线在窗体上对齐和排列控件。  
+     <span data-ttu-id="996c5-117">有关详细信息，请参阅[演练： 在 Windows 窗体使用对齐线上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。</span><span class="sxs-lookup"><span data-stu-id="996c5-117">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span> <span data-ttu-id="996c5-118">你现在可以使用对齐线对齐并排列窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="996c5-118">You can now use snaplines to align and arrange controls on your form.</span></span>  
   
-## 请参阅  
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-cn/8dd170af-72f0-4212-b04b-034ceee92834)   
- [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)   
- [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [标记单个 Windows 窗体控件并提供它们的快捷方式](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [根据功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="996c5-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="996c5-119">See Also</span></span>  
+ [<span data-ttu-id="996c5-120">通常，Windows 窗体设计器中，选项对话框</span><span class="sxs-lookup"><span data-stu-id="996c5-120">General, Windows Forms Designer, Options Dialog Box</span></span>](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [<span data-ttu-id="996c5-121">演练：使用对齐线在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="996c5-121">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="996c5-122">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="996c5-122">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="996c5-123">如何：向 Windows 窗体添加控件</span><span class="sxs-lookup"><span data-stu-id="996c5-123">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="996c5-124">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="996c5-124">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="996c5-125">标记各个 Windows 窗体控件并创建它们的快捷键</span><span class="sxs-lookup"><span data-stu-id="996c5-125">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="996c5-126">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="996c5-126">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="996c5-127">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="996c5-127">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

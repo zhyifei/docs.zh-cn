@@ -1,1 +1,1 @@
-Windows SDK
+<span data-ttu-id="59b36-101">Windows SDK</span><span class="sxs-lookup"><span data-stu-id="59b36-101">Windows SDK</span></span>

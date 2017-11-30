@@ -1,1 +1,1 @@
-WPF 设计器
+<span data-ttu-id="a765c-101">WPF 设计器</span><span class="sxs-lookup"><span data-stu-id="a765c-101">WPF Designer</span></span>

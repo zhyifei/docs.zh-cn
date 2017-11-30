@@ -1,1 +1,1 @@
-UNC
+<span data-ttu-id="72a03-101">UNC</span><span class="sxs-lookup"><span data-stu-id="72a03-101">UNC</span></span>

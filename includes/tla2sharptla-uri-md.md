@@ -1,1 +1,1 @@
-URI
+<span data-ttu-id="ad16d-101">URI</span><span class="sxs-lookup"><span data-stu-id="ad16d-101">URI</span></span>

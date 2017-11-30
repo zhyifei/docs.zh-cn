@@ -1,55 +1,58 @@
 ---
-title: "扩展保护身份验证示例自述文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "扩展保护身份验证示例自述文件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3981a0d0c82b8bc35536a9afd702e753fcf07db5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 扩展保护身份验证示例自述文件
-扩展保护是一种用于抵御中间人 \(MITM\) 攻击的安全计划，在此类攻击中，攻击者（称为“中间人”）截获客户端凭据并使用这些凭据访问客户端目标服务器上的安全资源。  
+# <a name="readme-for-extended-protection-authentication-sample"></a><span data-ttu-id="a99ed-102">扩展保护身份验证示例自述文件</span><span class="sxs-lookup"><span data-stu-id="a99ed-102">ReadMe for Extended Protection Authentication Sample</span></span>
+<span data-ttu-id="a99ed-103">扩展的保护是一种安全计划以防止拦截中 (MITM) 攻击，攻击者 （"--拦截"） 会截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。</span><span class="sxs-lookup"><span data-stu-id="a99ed-103">Extended Protection is a security initiative to protect against man-in-the-middle (MITM) attacks, in which an attacker (the "man-in-the-middle") intercepts a client’s credentials and uses them to access secure resources on the client’s intended server.</span></span>  
   
- 有关更多信息，请参见[身份验证的扩展保护概述](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。  
+ <span data-ttu-id="a99ed-104">有关详细信息，请参阅[扩展保护身份验证概述](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a99ed-104">For more information, see [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).</span></span>  
   
 > [!NOTE]
->  仅当承载于 IIS 上时，此示例才有效。它不适用于 Visual Studio 开发服务器，原因是此服务器不支持 HTTPS。  
+>  <span data-ttu-id="a99ed-105">仅当承载于 IIS 上时，此示例才有效。</span><span class="sxs-lookup"><span data-stu-id="a99ed-105">This sample only works when hosted on IIS.</span></span> <span data-ttu-id="a99ed-106">它不适用于 Visual Studio 开发服务器，原因是此服务器不支持 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="a99ed-106">It does not work on Visual Studio Development Server because that does not support HTTPS.</span></span>  
   
-## 设置、生成和运行示例  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a99ed-107">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="a99ed-107">To Set Up, Build, and Run the Sample</span></span>  
   
-1.  在计算机上，从“添加\/删除程序”\-\>“Windows 功能”安装 IIS。  
+1.  <span data-ttu-id="a99ed-108">在计算机上，从“添加/删除程序”->“Windows 功能”安装 IIS。</span><span class="sxs-lookup"><span data-stu-id="a99ed-108">Install IIS on the machine from Add/Remove Programs -> Windows Features.</span></span>  
   
-2.  在 Windows 功能中打开“Windows 身份验证”：“Internet 信息服务”\-\>“万维网服务”\-\>“安全”\-\>“Windows 身份验证”。  
+2.  <span data-ttu-id="a99ed-109">在 Windows 功能中打开“Windows 身份验证”：“Internet 信息服务”->“万维网服务”->“安全”->“Windows 身份验证”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-109">Turn on Windows Authentication in Windows features: Internet Information Services -> World Wide Web Services -> Security -> Windows Authentication.</span></span>  
   
-3.  在 Windows 功能中打开“HTTP 激活”：“Microsoft .NET Framework 3.5.1”\-\>“Windows Communication Foundation HTTP 激活”。  
+3.  <span data-ttu-id="a99ed-110">在 Windows 功能中打开“HTTP 激活”：“Microsoft .NET Framework 3.5.1”->“Windows Communication Foundation HTTP 激活”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-110">Turn on HTTP Activation in Windows features: Microsoft .NET Framework 3.5.1 -> Windows Communication Foundation HTTP Activation.</span></span>  
   
-4.  此示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 \(IIS\) 管理器进行安装。  
+4.  <span data-ttu-id="a99ed-111">此示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。</span><span class="sxs-lookup"><span data-stu-id="a99ed-111">This sample requires the client to establish a secure channel with the server and so it requires the presence of a server certificate which can be installed from Internet Information Services (IIS) Manager.</span></span>  
   
-    1.  打开“IIS 管理器”\-\>“服务器证书”（从“功能视图”选项卡）。  
+    1.  <span data-ttu-id="a99ed-112">打开“IIS 管理器”->“服务器证书”（从“功能视图”选项卡）。</span><span class="sxs-lookup"><span data-stu-id="a99ed-112">Open the IIS manager -> Server certificates (from the feature view tab).</span></span>  
   
-    2.  为了测试此示例，您可以创建一个自签名证书。（如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中）。  
+    2.  <span data-ttu-id="a99ed-113">为了测试此示例，您可以创建一个自签名证书。</span><span class="sxs-lookup"><span data-stu-id="a99ed-113">For the purpose of testing this sample, you can create a self-signed certificate.</span></span> <span data-ttu-id="a99ed-114">（如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中）。</span><span class="sxs-lookup"><span data-stu-id="a99ed-114">(If you don’t want Internet Explorer to prompt you about the certificate not being secure, you can install it in the Trusted Certificate Root authority store).</span></span>  
   
-5.  转至默认网站的“操作”窗格。单击“编辑站点”\-\>“绑定”。如果 HTTPS 不存在，则将其作为一种类型添加，端口号为 443，并分配在上一步中创建的 SSL 证书。  
+5.  <span data-ttu-id="a99ed-115">转至默认网站的“操作”窗格。</span><span class="sxs-lookup"><span data-stu-id="a99ed-115">Go to the Actions pane for the Default Web site.</span></span> <span data-ttu-id="a99ed-116">单击“编辑站点”->“绑定”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-116">Click Edit Site -> Bindings.</span></span> <span data-ttu-id="a99ed-117">如果 HTTPS 不存在，则将其作为一种类型添加，端口号为 443，并分配在上一步中创建的 SSL 证书。</span><span class="sxs-lookup"><span data-stu-id="a99ed-117">Add HTTPS as a type if it is not already present, with port number 443, and assign the SSL certificate created in the above step.</span></span>  
   
-6.  生成服务。这会在 IIS 中为您创建一个虚拟目录（从在项目属性中指定的生成后操作），并根据需要为要进行 Web 承载的服务复制 dll、.svc 和配置文件。  
+6.  <span data-ttu-id="a99ed-118">生成服务。</span><span class="sxs-lookup"><span data-stu-id="a99ed-118">Build the service.</span></span> <span data-ttu-id="a99ed-119">这会在 IIS 中为您创建一个虚拟目录（从在项目属性中指定的生成后操作），并根据需要为要进行 Web 承载的服务复制 dll、.svc 和配置文件。</span><span class="sxs-lookup"><span data-stu-id="a99ed-119">This creates a virtual directory in IIS for you (from the post build action specified in the project properties) and copies the dll, .svc and config files as needed for a service to be Web hosted.</span></span>  
   
-7.  打开 IIS 管理器。右击在上一步中创建的虚拟目录 \(ExtendedProtection\)，然后选择“转换为应用程序”。  
+7.  <span data-ttu-id="a99ed-120">打开 IIS 管理器。</span><span class="sxs-lookup"><span data-stu-id="a99ed-120">Open the IIS Manager.</span></span> <span data-ttu-id="a99ed-121">右击在上一步中创建的虚拟目录 (ExtendedProtection)，然后选择“转换为应用程序”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-121">Right-click the virtual directory (ExtendedProtection) that you created in the previous step and select Convert to Application.</span></span>  
   
-8.  在 IIS 管理器中为此虚拟目录打开“身份验证”模块，并启用“Windows 身份验证”。  
+8.  <span data-ttu-id="a99ed-122">在 IIS 管理器中为此虚拟目录打开“身份验证”模块，并启用“Windows 身份验证”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-122">Open the Authentication module in IIS Manager for this virtual directory and enable Windows Authentication.</span></span>  
   
-9. 为此虚拟目录打开“Windows 身份验证”的“高级设置”，然后将其设置为“必选”，因为在此示例中，相应的 ExtendedProtection 设置已设置为“始终”。  
+9. <span data-ttu-id="a99ed-123">为此虚拟目录打开“Windows 身份验证”的“高级设置”，然后将其设置为“必选”，因为在此示例中，相应的 ExtendedProtection 设置已设置为“始终”。</span><span class="sxs-lookup"><span data-stu-id="a99ed-123">Open the Advanced Settings for Windows Authentication for this virtual directory and set it to Required, since, in the sample, the corresponding ExtendedProtection setting is set to Always.</span></span>  
   
-10. 通过从浏览器窗口访问 URL 可测试此服务。如果想要跨计算机访问此 URL，请确保为所有传入 HTTP 和 HTTPS 连接打开了防火墙。  
+10. <span data-ttu-id="a99ed-124">通过从浏览器窗口访问 URL 可测试此服务。</span><span class="sxs-lookup"><span data-stu-id="a99ed-124">You can test the service by accessing the URL from a browser window.</span></span> <span data-ttu-id="a99ed-125">如果想要跨计算机访问此 URL，请确保为所有传入 HTTP 和 HTTPS 连接打开了防火墙。</span><span class="sxs-lookup"><span data-stu-id="a99ed-125">If you want to access this URL from a cross machine, make sure that the firewall is opened for all incoming HTTP and HTTPS connections.</span></span>  
   
-11. 打开客户端配置文件，并为 \<client\> \- \<endpoint\> \- address 特性提供完整的计算机名称，取代“\<\<\>\>full\_machine\_name”。  
+11. <span data-ttu-id="a99ed-126">打开客户端配置文件，并提供完整的计算机名称为\<客户端 >-\<终结点 >-address 属性，替换 << full_machine_name >>。</span><span class="sxs-lookup"><span data-stu-id="a99ed-126">Open the client config file and provide a full machine name for the \<client> - \<endpoint> - address attribute, replacing <<full_machine_name>>.</span></span>  
   
-12. 运行客户端。客户端通过建立安全通道并使用扩展保护与服务进行通信。
+12. <span data-ttu-id="a99ed-127">运行客户端。</span><span class="sxs-lookup"><span data-stu-id="a99ed-127">Run the client.</span></span> <span data-ttu-id="a99ed-128">客户端通过建立安全通道并使用扩展保护与服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="a99ed-128">The client communicates to the service by establishing a secure channel and using extended protection under the covers.</span></span>

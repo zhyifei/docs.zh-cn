@@ -1,55 +1,59 @@
 ---
-title: "设计和实现自定义活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "设计和实现自定义活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9243761803bc8b68ce37b3d3ad310e8bb7f93d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 设计和实现自定义活动
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中自定义活动的创建途径有二：或是将系统提供的活动组装成组合活动，或是创建派生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新类型。  本节介绍如何使用任一方法来创建自定义活动。  
+# <a name="designing-and-implementing-custom-activities"></a><span data-ttu-id="ba233-102">设计和实现自定义活动</span><span class="sxs-lookup"><span data-stu-id="ba233-102">Designing and Implementing Custom Activities</span></span>
+<span data-ttu-id="ba233-103">[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中自定义活动的创建途径有二：或是将系统提供的活动组装成组合活动，或是创建派生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新类型。</span><span class="sxs-lookup"><span data-stu-id="ba233-103">Custom activities in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] are created by either assembling system-provided activities into composite activities or by creating new types that derive from <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, or <xref:System.Activities.NativeActivity>.</span></span> <span data-ttu-id="ba233-104">本节介绍如何使用任一方法来创建自定义活动。</span><span class="sxs-lookup"><span data-stu-id="ba233-104">This section describes how to create custom activities with either method.</span></span>  
   
 > [!IMPORTANT]
->  自定义活动在工作流设计器中默认显示为一个包含活动名称的简单矩形。  若要在工作流设计器中为您的活动提供自定义可视化表示形式，还必须创建自定义设计器。  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用自定义活动设计器和模板](../../../docs/framework/windows-workflow-foundation//using-custom-activity-designers-and-templates.md)。  
+>  <span data-ttu-id="ba233-105">自定义活动在工作流设计器中默认显示为一个包含活动名称的简单矩形。</span><span class="sxs-lookup"><span data-stu-id="ba233-105">Custom activities by default display within the workflow designer as a simple rectangle with the activity’s name.</span></span> <span data-ttu-id="ba233-106">若要在工作流设计器中为您的活动提供自定义可视化表示形式，还必须创建自定义设计器。</span><span class="sxs-lookup"><span data-stu-id="ba233-106">To provide a custom visual representation of your activity in the workflow designer you must also create a custom designer.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="ba233-107">[使用自定义活动设计器和模板](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)。</span><span class="sxs-lookup"><span data-stu-id="ba233-107"> [Using Custom Activity Designers and Templates](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).</span></span>  
   
-## 本节内容  
- [活动创作选项](../../../docs/framework/windows-workflow-foundation//activity-authoring-options-in-wf.md)  
- 讨论可在 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]中使用的创作样式。  
+## <a name="in-this-section"></a><span data-ttu-id="ba233-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="ba233-108">In This Section</span></span>  
+ [<span data-ttu-id="ba233-109">活动创建选项</span><span class="sxs-lookup"><span data-stu-id="ba233-109">Activity Authoring Options</span></span>](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  
+ <span data-ttu-id="ba233-110">讨论可在 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]中使用的创作样式。</span><span class="sxs-lookup"><span data-stu-id="ba233-110">Discusses the authoring styles available in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].</span></span>  
   
- [使用自定义活动](../../../docs/framework/windows-workflow-foundation//using-a-custom-activity.md)  
- 描述如何将自定义活动添加到工作流项目。  
+ [<span data-ttu-id="ba233-111">使用自定义活动</span><span class="sxs-lookup"><span data-stu-id="ba233-111">Using a custom activity</span></span>](../../../docs/framework/windows-workflow-foundation/using-a-custom-activity.md)  
+ <span data-ttu-id="ba233-112">描述如何将自定义活动添加到工作流项目。</span><span class="sxs-lookup"><span data-stu-id="ba233-112">Describes how to add a custom activity to a workflow project.</span></span>  
   
- [创建异步活动](../../../docs/framework/windows-workflow-foundation//creating-asynchronous-activities-in-wf.md)  
- 描述如何创建异步活动。  
+  [<span data-ttu-id="ba233-113">创建异步活动</span><span class="sxs-lookup"><span data-stu-id="ba233-113">Creating Asynchronous Activities</span></span>](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)  
+ <span data-ttu-id="ba233-114">描述如何创建异步活动。</span><span class="sxs-lookup"><span data-stu-id="ba233-114">Describes how to create asynchronous activities.</span></span>  
   
- [配置活动验证](../../../docs/framework/windows-workflow-foundation//configuring-activity-validation.md)  
- 描述如何使用活动验证在执行活动之前发现并报告活动配置中的错误。  
+ [<span data-ttu-id="ba233-115">配置活动验证</span><span class="sxs-lookup"><span data-stu-id="ba233-115">Configuring Activity Validation</span></span>](../../../docs/framework/windows-workflow-foundation/configuring-activity-validation.md)  
+ <span data-ttu-id="ba233-116">描述如何使用活动验证在执行活动之前发现并报告活动配置中的错误。</span><span class="sxs-lookup"><span data-stu-id="ba233-116">Describes how activity validation can be used to identify and report errors in an activity’s configuration prior to its execution.</span></span>  
   
- [在运行时创建活动](../../../docs/framework/windows-workflow-foundation//creating-an-activity-at-runtime-with-dynamicactivity.md)  
- 讨论如何使用 <xref:System.Activities.DynamicActivity> 在运行时创建活动。  
+ [<span data-ttu-id="ba233-117">在运行时创建活动</span><span class="sxs-lookup"><span data-stu-id="ba233-117">Creating an Activity at Runtime</span></span>](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md)  
+ <span data-ttu-id="ba233-118">讨论如何使用 <xref:System.Activities.DynamicActivity> 在运行时创建活动。</span><span class="sxs-lookup"><span data-stu-id="ba233-118">Discusses how to create activities at runtime using <xref:System.Activities.DynamicActivity>.</span></span>  
   
- [工作流执行属性](../../../docs/framework/windows-workflow-foundation//workflow-execution-properties.md)  
- 描述如何使用工作流执行属性将上下文特定属性添加到活动的环境中。  
+ [<span data-ttu-id="ba233-119">工作流执行属性</span><span class="sxs-lookup"><span data-stu-id="ba233-119">Workflow Execution Properties</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md)  
+ <span data-ttu-id="ba233-120">描述如何使用工作流执行属性将上下文特定属性添加到活动的环境中。</span><span class="sxs-lookup"><span data-stu-id="ba233-120">Describes how to use workflow execution properties to add context specific properties to an activity’s environment</span></span>  
   
- [使用活动委托](../../../docs/framework/windows-workflow-foundation//using-activity-delegates.md)  
- 讨论如何编写和使用包含活动代理的活动。  
+ [<span data-ttu-id="ba233-121">使用活动委托</span><span class="sxs-lookup"><span data-stu-id="ba233-121">Using Activity Delegates</span></span>](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
+ <span data-ttu-id="ba233-122">讨论如何编写和使用包含活动代理的活动。</span><span class="sxs-lookup"><span data-stu-id="ba233-122">Discusses how to author and use activities that contain activity delegates.</span></span>  
   
- [活动本地化](../../../docs/framework/windows-workflow-foundation//activity-localization.md)  
- 描述如何在活动中使用本地化的字符串资源。  
+ [<span data-ttu-id="ba233-123">活动本地化</span><span class="sxs-lookup"><span data-stu-id="ba233-123">Activity Localization</span></span>](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
+ <span data-ttu-id="ba233-124">描述如何在活动中使用本地化的字符串资源。</span><span class="sxs-lookup"><span data-stu-id="ba233-124">Describes how to use localization of string resources in activities.</span></span>  
   
- [使用活动扩展](../../../docs/framework/windows-workflow-foundation//using-activity-extensions.md)  
- 描述如何编写和使用活动扩展。  
+ [<span data-ttu-id="ba233-125">使用活动扩展</span><span class="sxs-lookup"><span data-stu-id="ba233-125">Using Activity Extensions</span></span>](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
+ <span data-ttu-id="ba233-126">描述如何编写和使用活动扩展。</span><span class="sxs-lookup"><span data-stu-id="ba233-126">Describes how to author and use activity extensions.</span></span>  
   
- [使用工作流中的 OData 源](../../../docs/framework/windows-workflow-foundation//consuming-odata-feeds-from-a-workflow.md)  
- 描述从工作流中调用 WCF 数据服务的几种方法。  
+ [<span data-ttu-id="ba233-127">使用工作流中的 OData 源</span><span class="sxs-lookup"><span data-stu-id="ba233-127">Consuming OData Feeds from a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/consuming-odata-feeds-from-a-workflow.md)  
+ <span data-ttu-id="ba233-128">描述从工作流中调用 WCF 数据服务的几种方法。</span><span class="sxs-lookup"><span data-stu-id="ba233-128">Describes several methods for calling a WCF Data Service from a workflow.</span></span>  
   
- [活动定义范围和可见性](../../../docs/framework/windows-workflow-foundation//activity-definition-scoping-and-visibility.md)  
- 描述用于定义数据范围和活动成员可见性的选项和规则。
+ [<span data-ttu-id="ba233-129">活动定义范围和可见性</span><span class="sxs-lookup"><span data-stu-id="ba233-129">Activity Definition Scoping and Visibility</span></span>](../../../docs/framework/windows-workflow-foundation/activity-definition-scoping-and-visibility.md)  
+ <span data-ttu-id="ba233-130">描述用于定义数据范围和活动成员可见性的选项和规则。</span><span class="sxs-lookup"><span data-stu-id="ba233-130">Describes the options and rules for defining data scoping and member visibility for activities.</span></span>

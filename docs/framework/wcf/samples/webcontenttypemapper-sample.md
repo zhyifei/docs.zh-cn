@@ -1,29 +1,32 @@
 ---
-title: "WebContentTypeMapper 示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WebContentTypeMapper 示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 994742d0c0d60b9fbe2dd7ed1ea252d1074140f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WebContentTypeMapper 示例
-本示例演示如何将新内容类型映射到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息正文格式。  
+# <a name="webcontenttypemapper-sample"></a><span data-ttu-id="c036b-102">WebContentTypeMapper 示例</span><span class="sxs-lookup"><span data-stu-id="c036b-102">WebContentTypeMapper Sample</span></span>
+<span data-ttu-id="c036b-103">本示例演示如何将新内容类型映射到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息正文格式。</span><span class="sxs-lookup"><span data-stu-id="c036b-103">This sample demonstrates how to map new content types to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] message body formats.</span></span>  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> 元素可插入 Web 消息编码器，它允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在同一个终结点接收 JSON、XML 或原始二进制消息。编码器通过查看请求的 HTTP 内容类型来确定消息的正文格式。本示例介绍 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 类，该类允许用户控制内容类型和正文格式之间的映射。  
+ <span data-ttu-id="c036b-104"><xref:System.ServiceModel.Description.WebHttpEndpoint> 元素可插入 Web 消息编码器，它允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在同一个终结点接收 JSON、XML 或原始二进制消息。</span><span class="sxs-lookup"><span data-stu-id="c036b-104">The <xref:System.ServiceModel.Description.WebHttpEndpoint> element plugs in the Web message encoder, which allows [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to receive JSON, XML, or raw binary messages at the same endpoint.</span></span> <span data-ttu-id="c036b-105">编码器通过查看请求的 HTTP 内容类型来确定消息的正文格式。</span><span class="sxs-lookup"><span data-stu-id="c036b-105">The encoder determines the body format of the message by looking at the HTTP content-type of the request.</span></span> <span data-ttu-id="c036b-106">本示例介绍 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 类，该类允许用户控制内容类型和正文格式之间的映射。</span><span class="sxs-lookup"><span data-stu-id="c036b-106">This sample introduces the <xref:System.ServiceModel.Channels.WebContentTypeMapper> class, which allows the user to control the mapping between content type and body format.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为内容类型提供一组默认的映射。例如，`application/json` 映射到 JSON，`text/xml` 映射到 XML。未映射到 JSON 或 XML 的任何内容类型都将映射到原始二进制格式。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c036b-107"> 为内容类型提供一组默认的映射。</span><span class="sxs-lookup"><span data-stu-id="c036b-107"> provides a set of default mappings for content types.</span></span> <span data-ttu-id="c036b-108">例如，`application/json` 映射到 JSON，`text/xml` 映射到 XML。</span><span class="sxs-lookup"><span data-stu-id="c036b-108">For example, `application/json` maps to JSON and `text/xml` maps to XML.</span></span> <span data-ttu-id="c036b-109">未映射到 JSON 或 XML 的任何内容类型都将映射到原始二进制格式。</span><span class="sxs-lookup"><span data-stu-id="c036b-109">Any content type that is not mapped to JSON or XML is mapped to raw binary format.</span></span>  
   
- 在某些方案（例如推送式 API）中，服务开发人员不控制由客户端返回的内容类型。例如，客户端可以将 JSON 作为 `text/javascript` 而不是 `application/json` 返回。在这种情况下，服务开发人员必须提供从 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 派生的类型以正确处理给定的内容类型，如下面的示例代码所示。  
+ <span data-ttu-id="c036b-110">在某些方案（例如推送式 API）中，服务开发人员不控制由客户端返回的内容类型。</span><span class="sxs-lookup"><span data-stu-id="c036b-110">In some scenarios (for example, push-style APIs), the service developer does not control the content type returned by the client.</span></span> <span data-ttu-id="c036b-111">例如，客户端可以将 JSON 作为 `text/javascript` 而不是 `application/json` 返回。</span><span class="sxs-lookup"><span data-stu-id="c036b-111">For example, clients might return JSON as `text/javascript` instead of `application/json`.</span></span> <span data-ttu-id="c036b-112">在这种情况下，服务开发人员必须提供从 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 派生的类型以正确处理给定的内容类型，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="c036b-112">In this case, the service developer must provide a type that derives from <xref:System.ServiceModel.Channels.WebContentTypeMapper> to handle the given content type correctly, as shown in the following sample code.</span></span>  
   
 ```  
 public class JsonContentTypeMapper : WebContentTypeMapper  
@@ -41,14 +44,13 @@ public class JsonContentTypeMapper : WebContentTypeMapper
         }  
     }  
 }  
-  
 ```  
   
- 该类型必须重写 <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> 方法。该方法必须计算 `contentType` 参数并返回下列值之一：<xref:System.ServiceModel.Channels.WebContentFormat>、<xref:System.ServiceModel.Channels.WebContentFormat>、<xref:System.ServiceModel.Channels.WebContentFormat> 或 <xref:System.ServiceModel.Channels.WebContentFormat>。返回 <xref:System.ServiceModel.Channels.WebContentFormat> 时将遵从默认的 Web 消息编码器映射。在前面的示例代码中，`text/javascript` 内容类型映射到 JSON，所有其他映射保持不变。  
+ <span data-ttu-id="c036b-113">该类型必须重写 <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> 方法。</span><span class="sxs-lookup"><span data-stu-id="c036b-113">The type must override the <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> method.</span></span> <span data-ttu-id="c036b-114">该方法必须计算 `contentType` 参数并返回下列值之一：<xref:System.ServiceModel.Channels.WebContentFormat.Json>、<xref:System.ServiceModel.Channels.WebContentFormat.Xml>、<xref:System.ServiceModel.Channels.WebContentFormat.Raw> 或 <xref:System.ServiceModel.Channels.WebContentFormat.Default>。</span><span class="sxs-lookup"><span data-stu-id="c036b-114">The method must evaluate the `contentType` argument and return one of the following values: <xref:System.ServiceModel.Channels.WebContentFormat.Json>, <xref:System.ServiceModel.Channels.WebContentFormat.Xml>, <xref:System.ServiceModel.Channels.WebContentFormat.Raw>, or <xref:System.ServiceModel.Channels.WebContentFormat.Default>.</span></span> <span data-ttu-id="c036b-115">返回 <xref:System.ServiceModel.Channels.WebContentFormat.Default> 时将遵从默认的 Web 消息编码器映射。</span><span class="sxs-lookup"><span data-stu-id="c036b-115">Returning <xref:System.ServiceModel.Channels.WebContentFormat.Default> defers to the default Web message encoder mappings.</span></span> <span data-ttu-id="c036b-116">在前面的示例代码中，`text/javascript` 内容类型映射到 JSON，所有其他映射保持不变。</span><span class="sxs-lookup"><span data-stu-id="c036b-116">In the previous sample code, the `text/javascript` content type is mapped to JSON, and all other mappings remain unchanged.</span></span>  
   
- 若要使用 `JsonContentTypeMapper` 类，请在您的 Web.config 中使用以下设置：  
+ <span data-ttu-id="c036b-117">若要使用 `JsonContentTypeMapper` 类，请在您的 Web.config 中使用以下设置：</span><span class="sxs-lookup"><span data-stu-id="c036b-117">To use the `JsonContentTypeMapper` class, use the following in your Web.config:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <standardEndpoints>  
     <webHttpEndpoint>  
@@ -58,23 +60,23 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 </system.serviceModel>  
 ```  
   
- 若要验证使用 JsonContentTypeMapper 的要求，请从上面的配置文件中移除 contentTypeMapper 特性。在尝试使用 `text/javascript` 来发送 JSON 内容时，客户端页加载将失败。  
+ <span data-ttu-id="c036b-118">若要验证使用 JsonContentTypeMapper 的要求，请从上面的配置文件中移除 contentTypeMapper 特性。</span><span class="sxs-lookup"><span data-stu-id="c036b-118">To verify the requirement for using the JsonContentTypeMapper, remove the contentTypeMapper attribute from the above configuration file.</span></span> <span data-ttu-id="c036b-119">在尝试使用 `text/javascript` 来发送 JSON 内容时，客户端页加载将失败。</span><span class="sxs-lookup"><span data-stu-id="c036b-119">The client page fails to load when attempting to use `text/javascript` to send JSON content.</span></span>  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c036b-120">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="c036b-120">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="c036b-121">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c036b-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明生成解决方案 WebContentTypeMapperSample.sln。  
+2.  <span data-ttu-id="c036b-122">生成解决方案 WebContentTypeMapperSample.sln 中所述[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c036b-122">Build the solution WebContentTypeMapperSample.sln as described in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  定位到 http:\/\/localhost\/ServiceModelSamples\/JCTMClientPage.htm（不要在浏览器中从项目目录中打开 JCTMClientPage.htm）。  
+3.  <span data-ttu-id="c036b-123">定位到 http://localhost/ServiceModelSamples/JCTMClientPage.htm（不要在浏览器中从项目目录中打开 JCTMClientPage.htm）。</span><span class="sxs-lookup"><span data-stu-id="c036b-123">Navigate to http://localhost/ServiceModelSamples/JCTMClientPage.htm (do not open JCTMClientPage.htm in the browser from within the project directory).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录。  
+>  <span data-ttu-id="c036b-124">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="c036b-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c036b-125">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="c036b-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  <span data-ttu-id="c036b-126">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="c036b-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c036b-127">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="c036b-127">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   
-## 请参阅
+## <a name="see-also"></a><span data-ttu-id="c036b-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c036b-128">See Also</span></span>

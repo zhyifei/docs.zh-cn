@@ -1,53 +1,57 @@
 ---
-title: "使用世界变换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "图形, 全局转换"
-  - "全局转换, 示例"
+title: "使用世界转换"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], world transformation
+- world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用世界变换
-世界变换是 <xref:System.Drawing.Graphics> 类的一个属性。  指定世界变换的数字存储在表示一个 3×3 矩阵的 <xref:System.Drawing.Drawing2D.Matrix> 对象中。  <xref:System.Drawing.Drawing2D.Matrix> 和 <xref:System.Drawing.Graphics> 类有几种方法用于设置世界变换矩阵中的数字。  
+# <a name="using-the-world-transformation"></a><span data-ttu-id="e6188-102">使用世界转换</span><span class="sxs-lookup"><span data-stu-id="e6188-102">Using the World Transformation</span></span>
+<span data-ttu-id="e6188-103">世界转换是的一个属性<xref:System.Drawing.Graphics>类。</span><span class="sxs-lookup"><span data-stu-id="e6188-103">The world transformation is a property of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="e6188-104">指定的世界转换的数字以存储<xref:System.Drawing.Drawing2D.Matrix>对象，用于表示 3 × 3 矩阵。</span><span class="sxs-lookup"><span data-stu-id="e6188-104">The numbers that specify the world transformation are stored in a <xref:System.Drawing.Drawing2D.Matrix> object, which represents a 3×3 matrix.</span></span> <span data-ttu-id="e6188-105"><xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>类可以用多种方法用于设置数字的世界变换矩阵。</span><span class="sxs-lookup"><span data-stu-id="e6188-105">The <xref:System.Drawing.Drawing2D.Matrix> and <xref:System.Drawing.Graphics> classes have several methods for setting the numbers in the world transformation matrix.</span></span>  
   
-## 不同类型的变换  
- 在下面的示例中，该代码先创建 50×50 的矩形，然后将其定位到原点 \(0, 0\)。  原点位于工作区的左上角。  
+## <a name="different-types-of-transformations"></a><span data-ttu-id="e6188-106">不同类型的转换</span><span class="sxs-lookup"><span data-stu-id="e6188-106">Different Types of Transformations</span></span>  
+ <span data-ttu-id="e6188-107">在下面的示例中，代码将首先创建 50 × 50 矩形并将其定位在原点 （0，0）。</span><span class="sxs-lookup"><span data-stu-id="e6188-107">In the following example, the code first creates a 50×50 rectangle and locates it at the origin (0, 0).</span></span> <span data-ttu-id="e6188-108">原点位于客户端区域的左上角。</span><span class="sxs-lookup"><span data-stu-id="e6188-108">The origin is at the upper-left corner of the client area.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- 下面的代码应用缩放变换，将矩形的 x 方向放大到 1.75 倍；将 y 方向缩小到 0.5 倍：  
+ <span data-ttu-id="e6188-109">下面的代码应用通过 1.75 英寸 x 方向的因素，扩展矩形，并将该矩形收缩的 y 方向的 0.5 倍的缩放转换：</span><span class="sxs-lookup"><span data-stu-id="e6188-109">The following code applies a scaling transformation that expands the rectangle by a factor of 1.75 in the x direction and shrinks the rectangle by a factor of 0.5 in the y direction:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- 其结果是一个比原矩形在 x 方向上变长、在 y 方向上变短的矩形。  
+ <span data-ttu-id="e6188-110">结果是一个矩形，即在 x 方向较长和短于原始 y 方向。</span><span class="sxs-lookup"><span data-stu-id="e6188-110">The result is a rectangle that is longer in the x direction and shorter in the y direction than the original.</span></span>  
   
- 若要旋转而非缩放矩形，请使用下面的代码：  
+ <span data-ttu-id="e6188-111">要旋转而不是扩展的矩形，请使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="e6188-111">To rotate the rectangle instead of scaling it, use the following code:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
- 若要平移矩形，请使用下面的代码：  
+ <span data-ttu-id="e6188-112">若要翻译矩形，请使用以下代码：</span><span class="sxs-lookup"><span data-stu-id="e6188-112">To translate the rectangle, use the following code:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## 请参阅  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [坐标系和坐标变换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [在托管 GDI\+ 中使用变换](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="e6188-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e6188-113">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [<span data-ttu-id="e6188-114">坐标系统和转换</span><span class="sxs-lookup"><span data-stu-id="e6188-114">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="e6188-115">在托管 GDI+ 中使用转换</span><span class="sxs-lookup"><span data-stu-id="e6188-115">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
