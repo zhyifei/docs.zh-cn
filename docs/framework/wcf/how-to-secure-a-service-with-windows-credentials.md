@@ -1,25 +1,30 @@
 ---
-title: "如何：使用 Windows 凭据保护服务的安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, 安全"
+title: "如何：使用 Windows 凭据保护服务的安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows 凭据保护服务的安全
-本主题演示如何在驻留于 Windows 域中并由同一域中的客户端调用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务上启用传输安全。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此方案中，请参阅[使用 Windows 身份验证的传输安全](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
+本主题说明如何在上启用传输安全[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]驻留在 Windows 域，并且由同一个域中的客户端调用的服务。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此方案中，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
   
  本主题假定您已定义一个现有的协定接口和实现及其加载项。 您还可以修改一个现有的服务和客户端。  
   
@@ -30,17 +35,17 @@ caps.handback.revision: 26
 ## <a name="using-code"></a>使用代码  
  服务和客户端的完整代码位于本主题末尾的“示例”一节中。  
   
- 第一个过程演练创建和配置<xref:System.ServiceModel.WSHttpBinding>在代码中的类。 该绑定使用 HTTP 传输。 在客户端上使用了同一绑定。  
+ 第一个过程演练如何在代码中创建和配置 <xref:System.ServiceModel.WSHttpBinding> 类。 该绑定使用 HTTP 传输。 在客户端上使用了同一绑定。  
   
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>创建使用 Windows 凭据和消息安全的 WSHttpBinding  
   
 1.  在“示例”一节的服务代码中，将此过程的代码插入到 `Run` 类的 `Test` 方法开头。  
   
-2.  创建的实例<xref:System.ServiceModel.WSHttpBinding>类。  
+2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例。  
   
-3.  设置<xref:System.ServiceModel.WsHttpSecurity.Mode%2A>属性<xref:System.ServiceModel.WsHttpSecurity>类<xref:System.ServiceModel.SecurityMode>。  
+3.  将 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 类的 <xref:System.ServiceModel.WSHttpSecurity> 属性设置为 <xref:System.ServiceModel.SecurityMode.Message>。  
   
-4.  设置<xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>属性<xref:System.ServiceModel.MessageSecurityOverHttp>类<xref:System.ServiceModel.MessageCredentialType>。  
+4.  将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 类的 <xref:System.ServiceModel.MessageSecurityOverHttp> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.Windows>。  
   
 5.  此过程的代码如下：  
   
@@ -54,41 +59,41 @@ caps.handback.revision: 26
   
 1.  在上一过程的代码之后插入此过程的代码。  
   
-2.  创建<xref:System.Type>变量名为`contractType`并将其分配接口类型 (`ICalculator`)。 在使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 时，请使用 `GetType` 运算符；在使用 C# 时，请使用 `typeof` 关键字。  
+2.  创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 在使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 时，请使用 `GetType` 运算符；在使用 C# 时，请使用 `typeof` 关键字。  
   
 3.  创建另一个名为 `Type` 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
   
-4.  创建的实例<xref:System.Uri>类名为`baseAddress`与该服务的基址。 基址必须具有与传输匹配的方案。 在本示例中，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)“localhost”和端口号 (8036)，以及一个终结点基址（“serviceModelSamples/”）：http://localhost:8036/serviceModelSamples/。  
+4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在本示例中，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)“localhost”和端口号 (8036)，以及一个终结点基址（“serviceModelSamples/”）：http://localhost:8036/serviceModelSamples/。  
   
-5.  创建的实例<xref:System.ServiceModel.ServiceHost>类`serviceType`和`baseAddress`变量。  
+5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 变量创建 `baseAddress` 类的一个实例。  
   
 6.  使用 `contractType`、绑定和终结点名称 (secureCalculator) 将一个终结点添加到服务中。 在启动对服务的调用时，客户端必须将基址和终结点名称连接起来。  
   
-7.  调用<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>方法以启动服务。 此过程的代码如下所示：  
+7.  调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法以启动该服务。 此过程的代码如下所示：  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
   
 ### <a name="using-the-binding-in-a-client"></a>在客户端中使用该绑定  
- 此过程演示如何生成与服务进行通信的代理。 使用生成代理[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)它使用服务元数据创建代理。  
+ 此过程演示如何生成与服务进行通信的代理。 使用生成代理[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)它用服务元数据来创建代理。  
   
- 此过程还创建的实例<xref:System.ServiceModel.WSHttpBinding>类与服务通信，然后再调用该服务。  
+ 此过程还创建 <xref:System.ServiceModel.WSHttpBinding> 类的实例以便与服务进行通信，然后调用服务。  
   
  本示例仅使用代码来创建客户端。 另一种方法是使用配置文件，如此过程之后的一节所示。  
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何︰ 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自<xref:System.ServiceModel.ClientBase%601>类，这确保每个客户端具有必要的构造函数、 方法和属性，以与通信[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
-3.  创建的实例<xref:System.ServiceModel.WSHttpBinding>类并将其安全模式设置为`Message`和其客户端凭据类型设置为`Windows`。 本示例将变量命名为 `clientBinding`。  
+3.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并且将其安全模式设置为 `Message`，将其客户端凭据类型设置为 `Windows`。 本示例将变量命名为 `clientBinding`。  
   
-4.  创建的实例<xref:System.ServiceModel.EndpointAddress>类名为`serviceAddress`。 将基址与终结点名称连接起来以初始化该实例。  
+4.  创建 <xref:System.ServiceModel.EndpointAddress> 类的一个实例，该实例名为 `serviceAddress`。 将基址与终结点名称连接起来以初始化该实例。  
   
 5.  使用 `serviceAddress` 和 `clientBinding` 变量创建所生成的客户端类的一个实例。  
   
-6.  调用<xref:System.ServiceModel.ClientBase%601.Open%2A>方法，如下面的代码中所示。  
+6.  调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
   
 7.  调用服务并显示结果。  
   
@@ -98,13 +103,13 @@ caps.handback.revision: 26
 ## <a name="using-the-configuration-file"></a>使用配置文件  
  如果不用程序代码创建绑定，还可以使用下面所示的配置文件绑定节的代码。  
   
- 如果没有定义的服务，请参阅[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)，和[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
+ 如果你还没有定义的某个服务，请参阅[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)，和[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
   
- **请注意**服务和客户端配置文件中使用此配置代码。  
+ **请注意**在服务和客户端配置文件中使用此配置代码。  
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用配置在 Windows 域中的服务上启用传输安全  
   
-1.  添加[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置的配置文件。  
+1.  添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置文件。  
   
 2.  将一个 <`binding`> 元素添加到 <`WSHttpBinding`> 元素中，并将 `configurationName` 属性设置为适合于应用程序的值。  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 26
   
 4.  添加一个 <`message`> 元素，并将 `clientCredentialType` 属性设置为 Windows。  
   
-5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果没有服务配置文件，请参阅[使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置的服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
-    ```  
+    ```xml  
     <bindings>  
       <wsHttpBinding>  
        <binding name = "wsHttpBinding_Calculator">  
@@ -131,15 +136,15 @@ caps.handback.revision: 26
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>通过配置在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何︰ 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-2.  替换[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)与上一节中的配置代码生成的配置文件部分。  
+2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)包含上一节中的配置代码的生成的配置文件的部分。  
   
 3.  在客户端程序的 `Main` 方法的开头插入程序代码。  
   
 4.  通过将配置文件中的绑定名称作为输入参数进行传递，创建所生成的客户端类的实例。  
   
-5.  调用<xref:System.ServiceModel.ClientBase%601.Open%2A>方法，如下面的代码中所示。  
+5.  调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
   
 6.  调用服务并显示结果。  
   
@@ -148,12 +153,12 @@ caps.handback.revision: 26
 ## <a name="example"></a>示例  
  [!code-csharp[c_SecureWindowsService#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#0)]  
   
- [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
- <!-- TODO: review snippet reference [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]  -->  
+ [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
+ [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.WSHttpBinding>   
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [如何︰ 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)   
+ <xref:System.ServiceModel.WSHttpBinding>  
+ [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [保护服务](../../../docs/framework/wcf/securing-services.md)  
  [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)

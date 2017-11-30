@@ -1,65 +1,64 @@
 ---
-title: "Order By 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryOrderBy"
-  - "vb.QueryAscending"
-  - "vb.QueryDescending"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Order By 子句"
-  - "Order By 语句"
-  - "查询 [Visual Basic], Order By"
+title: "Order By 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryOrderBy
+- vb.QueryAscending
+- vb.QueryDescending
+helpviewer_keywords:
+- queries [Visual Basic], Order By
+- Order By clause [Visual Basic]
+- Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Order By 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查询结果的排序顺序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `orderExp1`  
- 必选。  当前查询结果中的一个或多个字段，用于标识对返回值进行排序的方式。  字段名称必须以逗号 \(,\) 分隔。  使用 `Ascending` 或 `Descending` 关键字可以指定对每个字段进行升序或降序排序。  如果未指定 `Ascending` 和 `Descending` 关键字，则默认排序顺序为升序。  排序顺序字段的优先级从左到右依次降低。  
+ 必需。 一个或多个当前的查询结果中标识字段进行排序的返回的值的方式。 字段名称必须用逗号 （，） 分隔。 你可以标识每个字段，如按升序或降序使用`Ascending`或`Descending`关键字。 如果没有`Ascending`或`Descending`指定关键字，默认的排序顺序为升序。 排序顺序字段优先从左到右。  
   
-## 备注  
- 使用 `Order By` 子句可以对查询结果进行排序。  `Order By` 子句只能根据当前范围的范围变量对结果进行排序。  例如，`Select` 子句会在查询表达式中引入新范围以及用于该范围的新迭代变量。  在查询中的 `Select` 子句之前定义的范围变量不能在 `Select` 子句之后使用。  因此，如果要按照不可用于 `Select` 子句的字段对结果进行排序，则必须将 `Order By` 子句放在 `Select` 子句之前。  例如，当您希望按照没有在结果中返回的字段对查询结果进行排序时，必须这样做。  
+## <a name="remarks"></a>备注  
+ 你可以使用`Order By`子句的查询结果进行排序。 `Order By`子句可以仅对结果进行排序基于当前作用域的范围变量。 例如，`Select`子句引入该作用域在查询表达式中使用新的迭代变量的新作用域。 之前定义的范围变量`Select`在查询中的子句之后不可`Select`子句。 因此，如果你想要按字段不是位于你结果进行排序`Select`子句中，你必须放置`Order By`子句之前`Select`子句。 一个你将需要执行此操作的示例是当你想要对你通过不作为结果的一部分返回的字段的查询进行排序。  
   
- 字段的升序和降序顺序由该字段的数据类型的 <xref:System.IComparable> 接口实现确定。  如果数据类型未实现 <xref:System.IComparable> 接口，则会忽略排序顺序。  
+ 升序和降序顺序字段的实现决定<xref:System.IComparable>字段的数据类型的接口。 如果数据类型不实现<xref:System.IComparable>接口，排序顺序将被忽略。  
   
-## 示例  
- 下面的查询表达式使用 `From` 子句为 `books` 集合声明了范围变量 `book`。  `Order By` 子句按照价格以升序（默认值）对查询结果进行排序。  价格相同的书籍按书名进行升序排序。  `Select` 子句选择 `Title` 和 `Price` 属性作为查询返的回值。  
+## <a name="example"></a>示例  
+ 下面的查询表达式使用`From`子句来声明范围变量`book`为`books`集合。 `Order By`子句按价格按升序 （默认值） 对查询结果进行排序。 按标题以升序排序相同价格的书籍。 `Select`子句选择`Title`和`Price`用作由查询返回的值的属性。  
   
  [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
-## 示例  
- 下面的查询表达式使用 `Order By` 子句按照价格以降序对查询结果进行排序。  价格相同的书籍按书名进行升序排序。  
+## <a name="example"></a>示例  
+ 下面的查询表达式使用`Order By`子句对查询结果按价格按降序进行排序。 按标题以升序排序相同价格的书籍。  
   
  [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
-## 示例  
- 下面的查询表达式使用 `Select` 子句选择书名、价格、出版日期和作者。  然后，该表达式填充新范围的范围变量的 `Title`、`Price`、`PublishDate` 和 `Author` 字段。  `Order By` 子句依次按照作者姓名、书名和价格对新的范围变量进行排序。  每个列以默认顺序（升序）进行排序。  
+## <a name="example"></a>示例  
+ 下面的查询表达式使用`Select`子句来选择书名、 价格、 发布日期，和创作。 然后填充`Title`， `Price`， `PublishDate`，和`Author`为新作用域的范围变量的字段。 `Order By`子句顺序由作者姓名、 书名和价格的新范围变量。 每个列进行排序 （升序） 的默认顺序。  
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)

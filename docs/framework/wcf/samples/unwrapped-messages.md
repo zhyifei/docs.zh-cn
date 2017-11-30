@@ -1,25 +1,28 @@
 ---
-title: "未包装的消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "未包装的消息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 99aa1d00c2992842a7019d4f4fc4aa98c25f644a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 未包装的消息
-此示例演示未包装的消息。默认情况下，消息正文的格式设置为对服务操作的参数进行包装。下面的示例演示一个包装模式下的对 `ICalculator` 服务的 `Add` 请求消息。  
+# <a name="unwrapped-messages"></a>未包装的消息
+此示例演示未包装的消息。 默认情况下，消息正文的格式设置为对服务操作的参数进行包装。 下面的示例演示一个包装模式下的对 `Add` 服务的 `ICalculator` 请求消息。  
   
-```  
+```xml  
 <s:Envelope   
     xmlns:s=http://www.w3.org/2003/05/soap-envelope  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
@@ -33,12 +36,11 @@ caps.handback.revision: 22
       </Add>  
     </s:Body>  
 </s:Envelope>  
-  
 ```  
   
- 消息正文中的 `<Add>` 元素包装 `n1` 和 `n2` 参数。相反，下面的示例则显示未包装模式下的等效消息。  
+ 消息正文中的 `<Add>` 元素包装 `n1` 和 `n2` 参数。 相反，下面的示例则显示未包装模式下的等效消息。  
   
-```  
+```xml  
 <s:Envelope   
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
@@ -51,13 +53,12 @@ caps.handback.revision: 22
     </s:Body>  
   </s:Envelope>  
 </MessageLogTraceRecord>  
-  
 ```  
   
  未包装的消息不会包装包含元素中的 `n1` 和 `n2` 参数，这些参数是 SOAP 正文元素的直接子级。  
   
 > [!NOTE]
->  本主题的末尾介绍了此示例的设置过程和生成说明。  
+>  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  在此示例中，通过向服务操作参数类型和返回值类型应用 <xref:System.ServiceModel.MessageContractAttribute> 来创建未包装的消息，如下面的示例代码所示。  
   
@@ -98,27 +99,27 @@ public class ResponseMessage
 }  
 ```  
   
- 为了让您看到正在发送和接收的消息，此示例使用了跟踪。此外，配置 <xref:System.ServiceModel.WSHttpBinding> 时没有使用安全性，以减少它记录的消息数。  
+ 为了让您看到正在发送和接收的消息，此示例使用了跟踪。 此外，配置 <xref:System.ServiceModel.WSHttpBinding> 时没有使用安全性，以减少它记录的消息数。  
   
- 可以使用[服务跟踪查看器工具 \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)来查看生成的跟踪日志 \(c:\\logs\\Message.log\)。若要查看消息内容，请选择服务跟踪查看器工具的左窗格和右窗格中的**“消息”**。此示例中的跟踪日志配置为生成到 C:\\LOGS 文件夹。请在运行此示例之前创建该文件夹，并为用户赋予对该目录的“网络服务”写权限。  
+ 可通过查看生成的跟踪日志 (c:\logs\Message.log)[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 若要查看消息内容，请选择**消息**左窗格和服务跟踪查看器工具的右窗格中。 此示例中的跟踪日志配置为生成到 C:\LOGS 文件夹。 请在运行此示例之前创建该文件夹，并为用户赋予对该目录的“网络服务”写权限。  
   
-### 设置、生成和运行示例  
+### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  创建一个 C:\\LOGS 目录，用于记录消息。向用户授予对该目录的“网络服务”写权限。  
+2.  创建一个 C:\LOGS 目录，用于记录消息。 向用户授予对该目录的“网络服务”写权限。  
   
-3.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

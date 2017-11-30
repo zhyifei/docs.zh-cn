@@ -1,65 +1,48 @@
 ---
-title: "如何︰ 调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数 |Microsoft 文档"
+title: "如何：调用采用无符号类型的 Windows 函数 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Windows functions, calling
-- unsigned data types
-- UShort data type, using
+- Windows functions [Visual Basic], calling
+- unsigned data types [Visual Basic]
+- UShort data type [Visual Basic], using
 - functions [Visual Basic], calling Windows functions
-- ULong data type, using
-- UInteger data type, using
+- ULong data type [Visual Basic], using
+- UInteger data type [Visual Basic], using
 - data types [Visual Basic], using
-- unsigned types
+- unsigned types [Visual Basic]
 - data types [Visual Basic], unsigned
 - data types [Visual Basic], numeric
-- unsigned types, using
+- unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbff07f4923b0633a2bc9b4fd558d9d51f64370a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d1d59c29a83ede97d90926c8e499788676e2c235
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
-如果您正在使用类、 模块或具有无符号的整数类型的成员的结构，您可以访问这些成员与[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+如果你使用的类、 模块或结构，它具有无符号的整数类型的成员，则可以访问与这些成员[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要调用采用无符号的类型的 Windows 函数  
   
-1.  使用[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)告诉[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]的库包含函数、 什么其名称是在库中、 其调用的顺序是什么，和如何将字符串转换调用时。  
+1.  使用[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)告诉[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]哪些库包含函数、 什么其名称是在库中，其调用的序列是什么，和如何将字符串转换调用它时。  
   
-2.  在`Declare`语句中，使用`UInteger`， `ULong`， `UShort`，或`Byte`为适合于无符号类型的每个参数。  
+2.  在`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`为适合于与无符号类型的每个参数。  
   
-3.  查阅文档以获取要调用要查找的名称和值的常量，它使用的 Windows 函数。 其中许多 WinUser.h 文件中定义。  
+3.  查阅文档以获取要调用若要查找的名称和它所使用的常量值的 Windows 函数。 其中许多参见 WinUser.h 文件中定义。  
   
-4.  声明在代码中必要的常数。 许多 Windows 常量是 32 位无符号的值，并应将这些声明`As``UInteger`。  
+4.  声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应将这些声明`As``UInteger`。  
   
-5.  以正常方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，它将采用一个无符号的整数参数。  
+5.  以常规方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，它将采用一个无符号的整数自变量。  
   
     ```  
     Public Class windowsMessage  
@@ -84,7 +67,7 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-     您可以测试该函数`messageThroughWindows`替换为以下代码。  
+     你可以测试函数`messageThroughWindows`替换为以下代码。  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -94,17 +77,17 @@ ms.lasthandoff: 03/13/2017
     ```  
   
     > [!CAUTION]
-    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，因此符合 cls 的代码不能使用它们使用的组件。  
+    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和独立于语言的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。  
   
     > [!IMPORTANT]
-    >  Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。  
+    >  Windows 应用程序编程接口 (API)，例如在调用非托管代码，公开将代码移植到潜在的安全风险。  
   
     > [!IMPORTANT]
-    >  调用 Windows API 要求非托管的代码的权限，这可能会影响它在部分信任的情况下执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>和[代码访问权限](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675)。</xref:System.Security.Permissions.SecurityPermission>  
+    >  调用 Windows API 需要非托管的代码的权限，这可能会影响在部分信任情况下其执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>和[代码访问权限](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [整数数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)   
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)   
+ [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+ [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
  [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

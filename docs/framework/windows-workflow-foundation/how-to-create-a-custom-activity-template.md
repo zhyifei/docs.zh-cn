@@ -1,68 +1,69 @@
 ---
-title: "如何：创建自定义活动模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：创建自定义活动模板"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90c92295bbccc7cf7e50a9da5bd52110d9d26a3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：创建自定义活动模板
-可使用自定义活动模板来自定义活动（包括自定义复合活动）的配置，使用户无需单独创建每个活动并手动配置其属性和其他设置。可在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 的**“工具箱”**中或从重新承载的设计器访问这些自定义模板，用户可将自定义模板从工具箱或该设计器中拖到预配置的设计图面上。[!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 附带此类模板的好例子：[消息传递活动设计器](../Topic/Messaging%20Activity%20Designers.md) 类别中的 [SendAndReceiveReply 模板设计器](../Topic/SendAndReceiveReply%20Template%20Designer.md) 和  [ReceiveAndSendReply 模板设计器](../Topic/ReceiveAndSendReply%20Template%20Designer.md)。  
+# <a name="how-to-create-a-custom-activity-template"></a>如何：创建自定义活动模板
+可使用自定义活动模板来自定义活动（包括自定义复合活动）的配置，使用户无需单独创建每个活动并手动配置其属性和其他设置。 这些自定义模板可以使其可在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或从重新承载设计器中，从该用户可以将它们拖到预配置的设计图面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]附带了很好此类模板的示例： [SendAndReceiveReply 模板设计器](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 模板设计器](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[消息传递活动设计器](/visualstudio/workflow-designer/messaging-activity-designers)类别。  
   
- 本主题中的第一个过程描述如何为 **Delay** 活动创建一个自定义活动模板，而第二个过程则简要描述如何使该活动可供在 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 中用来验证此自定义模板是否正常工作。  
+ 本主题中的第一个过程描述如何创建自定义活动模板**延迟**活动和第二个过程简要介绍如何在中提供[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]验证该自定义模板是否有效。  
   
- 自定义活动模板必须实现 <xref:System.Activities.Presentation.IActivityTemplateFactory>。此接口具有一个 <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> 方法，可利用此方法创建和配置模板中使用的活动实例。  
+ 自定义活动模板必须实现 <xref:System.Activities.Presentation.IActivityTemplateFactory>。 此接口具有一个 <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> 方法，可利用此方法创建和配置模板中使用的活动实例。  
   
-### 为 Delay 活动创建模板  
+### <a name="to-create-a-template-for-the-delay-activity"></a>为 Delay 活动创建模板  
   
 1.  启动 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  在**“文件”**菜单上，指向**“新建”**，然后选择**“项目”**。  
+2.  上**文件**菜单上，指向**新建**，然后选择**项目**。  
   
-     此时将打开**“新建项目”**对话框。  
+     **“新建项目”** 对话框随即打开。  
   
-3.  在**“项目类型”**窗格中，根据您的首选语言从**“Visual C\#”**项目或**“Visual Basic”**组选择**“工作流”**。  
+3.  在**项目类型**窗格中，选择**工作流**从**Visual C#**项目或**Visual Basic**分组，具体取决于你语言首选项。  
   
-4.  在**“模板”**窗格中选择**“活动库”**。  
+4.  在**模板**窗格中，选择**活动库**。  
   
-5.  在**“名称”**框中，输入 `DelayActivityTemplate`。  
+5.  在**名称**框中，输入`DelayActivityTemplate`。  
   
-6.  接受**“位置”**和**“解决方案名称”**文本框中的默认值，然后单击**“确定”**。  
+6.  接受中的默认值**位置**和**解决方案名称**文本框中，然后单击**确定**。  
   
-7.  在**“解决方案资源管理器”**中，右击 DelayActivityTemplate 项目的“引用”目录，并选择**“添加引用”**以打开**“添加引用”**对话框。  
+7.  右击 DelayActivityTemplate 项目中的引用目录**解决方案资源管理器**选择**添加引用**以打开**添加引用**对话框。  
   
-8.  转到**“.NET”**选项卡，从左侧的**“组件名称”**列中选择**“PresentationFramework”**，然后单击**“确定”**添加对 PresentationFramework.dll 文件的引用。  
+8.  转到**.NET**选项卡并选择**PresentationFramework**从**组件名称**列在左侧和单击**确定**添加的引用对 PresentationFramework.dll 文件中。  
   
 9. 重复此过程以添加对 System.Activities.Presentation.dll 文件和 WindowsBase.dll 文件的引用。  
   
-10. 在**“解决方案资源管理器”**中，右击 DelayActivityTemplate 项目，然后依次选择**“添加”**和**“新建项”**以打开**“添加新项”**对话框。  
+10. 在右击 DelayActivityTemplate 项目**解决方案资源管理器**选择**添加**然后**新项**以打开**添加新项**对话框。  
   
-11. 选择**“类”**模板，将其命名为 MyDelayTemplate，然后单击**“确定”**。  
+11. 选择**类**模板，将其命名为 MyDelayTemplate，，然后单击**确定**。  
   
 12. 打开 MyDelayTemplate.cs 文件并添加下面的语句。  
   
     ```  
-  
     //Namespaces added  
     using System.Activities;  
     using System.Activities.Statements;  
     using System.Activities.Presentation;  
     using System.Windows;  
-  
     ```  
   
-13. 使用带有以下代码的 `MyDelayActivity` 类来实现 <xref:System.Activities.Presentation.IActivityTemplateFactory>。这会将延迟时间配置为 10 秒。  
+13. 使用带有以下代码的 <xref:System.Activities.Presentation.IActivityTemplateFactory> 类来实现 `MyDelayActivity`。 这会将延迟时间配置为 10 秒。  
   
     ```  
-  
     public sealed class MyDelayActivity : IActivityTemplateFactory  
     {  
         public Activity Create(System.Windows.DependencyObject target)  
@@ -75,36 +76,34 @@ caps.handback.revision: 4
             };  
         }  
     }  
-  
     ```  
   
-14. 从**“生成”**菜单中选择**“生成解决方案”**以生成 DelayActivityTemplate.dll 文件。  
+14. 选择**生成解决方案**从**生成**菜单以生成 DelayActivityTemplate.dll 文件。  
   
-### 使模板在工作流设计器中可用  
+### <a name="to-make-the-template-available-in-a-workflow-designer"></a>使模板在工作流设计器中可用  
   
-1.  在**“解决方案资源管理器”**中，右击 DelayActivityTemplate 解决方案，然后依次选择**“添加”**和**“新建项目”**以打开**“添加新项目”**对话框。  
+1.  右击 DelayActivityTemplate 解决方案中的**解决方案资源管理器**选择**添加**然后**新项目**以打开**添加新项目**对话框。  
   
-2.  选择**“工作流控制台应用程序”**模板，将其命名为 `CustomActivityTemplateApp`，然后单击**“确定”**。  
+2.  选择**工作流控制台应用程序**模板，将其命名为`CustomActivityTemplateApp`，然后单击**确定**。  
   
-3.  在**“解决方案资源管理器”**中，右击 CustomActivityTemplateApp 项目的“引用”目录，然后选择**“添加引用”**以打开**“添加引用”**对话框。  
+3.  右击 CustomActivityTemplateApp 项目中的引用目录**解决方案资源管理器**选择**添加引用**以打开**添加引用**对话框框。  
   
-4.  转到**“项目”**选项卡，从左侧的**“项目名称”**列中选择**“DelayActivityTemplate”**，然后单击**“确定”**以添加对第一个过程中创建的 DelayActivityTemplate.dll 文件的引用。  
+4.  转到**项目**选项卡并选择**DelayActivityTemplate**从**项目名称**列在左侧和单击**确定**添加引用到第一个过程中创建的 DelayActivityTemplate.dll 文件。  
   
-5.  在**“解决方案资源管理器”**中，右击 CustomActivityTemplateApp 项目，然后选择**“生成”**以编译应用程序。  
+5.  右击 CustomActivityTemplateApp 项目中的**解决方案资源管理器**选择**生成**编译应用程序。  
   
-6.  在**“解决方案资源管理器”**中，右击 CustomActivityTemplateApp 项目，然后选择**“设为启动项目”**。  
+6.  右击 CustomActivityTemplateApp 项目中的**解决方案资源管理器**选择**设为启动项目**。  
   
-7.  从**“调试”**菜单中选择**“开始执行\(不调试\)”**，然后在 cmd.exe 窗口中提供提示时按任意键以继续。  
+7.  选择**启动但不调试**从**调试**菜单，然后按任意键以继续出现提示时，在 cmd.exe 窗口中。  
   
-8.  打开 Workflow1.xaml 文件，再打开**“工具箱”**。  
+8.  打开 Workflow1.xaml 文件并打开**工具箱**。  
   
-9. 在**“DelayActivityTemplate”**类别中找到**“MyDelayActivity”**模板。将此模板拖动到设计图面上。在**“属性”**窗口中确认已将 `Duration` 属性设置为 10 秒。  
+9. 找到**MyDelayActivity**中的模板**DelayActivityTemplate**类别。 将此模板拖动到设计图面上。 在确认**属性**窗口，`Duration`属性设置为 10 秒。  
   
-## 示例  
+## <a name="example"></a>示例  
  MyDelayActivity.cs 文件应包含以下代码。  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -131,9 +130,8 @@ namespace DelayActivityTemplate
         }  
     }  
 }  
-  
 ```  
   
-## 请参阅  
- <xref:System.Activities.Presentation.IActivityTemplateFactory>   
- [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation//customizing-the-workflow-design-experience.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Activities.Presentation.IActivityTemplateFactory>  
+ [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

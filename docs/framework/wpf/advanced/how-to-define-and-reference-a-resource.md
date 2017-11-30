@@ -1,36 +1,39 @@
 ---
-title: "如何：定义和引用资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "定义资源"
-  - "引用资源"
-  - "资源, 定义"
-  - "资源, 引用"
+title: "如何：定义和引用资源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resources [WPF], defining
+- defining resources [WPF]
+- resources [WPF], referencing
+- referencing resources [WPF]
 ms.assetid: b86b876b-0a10-489b-9a5d-581ea9b32406
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 322ac3e5ebfe2d820a4711d877396b9a1a2759a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定义和引用资源
-本示例演示如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中的一个特性来定义和引用资源。  
+# <a name="how-to-define-and-reference-a-resource"></a>如何：定义和引用资源
+此示例演示如何定义资源，通过使用中的属性引用该[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
-## 示例  
- 下面的示例定义两种类型的资源：一个 <xref:System.Windows.Media.SolidColorBrush> 资源和多个 <xref:System.Windows.Style> 资源。  <xref:System.Windows.Media.SolidColorBrush> 资源 `MyBrush` 用于提供多个属性的值，其中每个属性都有一个 <xref:System.Windows.Media.Brush> 类型值。  <xref:System.Windows.Style> 资源 `PageBackground`、`TitleText` 和 `Label` 均针对一种特定的控件类型。  当该样式资源由资源键引用并用于设置 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定义的多个特定控件元素的 <xref:System.Windows.FrameworkElement.Style%2A> 属性时，这些样式即设置目标控件的多个不同属性。  
+## <a name="example"></a>示例  
+ 下面的示例定义两种类型的资源：<xref:System.Windows.Media.SolidColorBrush>资源，并在几个<xref:System.Windows.Style>资源。 <xref:System.Windows.Media.SolidColorBrush>资源`MyBrush`用来提供多个属性的值在每个都采用<xref:System.Windows.Media.Brush>键入值。 <xref:System.Windows.Style>资源`PageBackground`，`TitleText`和`Label`每面向特定控件类型。 样式目标控件上设置多个不同的属性，该样式资源由资源键引用，以及用于设置<xref:System.Windows.FrameworkElement.Style%2A>属性中定义的几个特定的控件元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
- 请注意，`Label` 样式的 setter 中的某个属性还引用前面定义的 `MyBrush` 资源。  这是一种很常见的技术，但是一定要记住资源是按照它们的给出顺序进行分析并输入到资源字典中的，这一点非常重要。  如果您使用 [StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)从其他资源引用这些资源，则也是按照它们在字典中的顺序来请求它们的。  确保在请求资源之前已在资源集合中对该资源进行了定义。  如有必要，您可以使用 [DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)在运行时引用资源，这样可以绕过严格的资源引用创建顺序，但应注意这种 DynamicResource 技术会对性能产生一定的负面影响。  有关详细信息，请参见[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 第一个属性的 setter 中注意`Label`样式也引用`MyBrush`前面定义的资源。 这是一种常用技术，但务必记住，资源是分析，并输入到的资源字典中，系统会提供的顺序。 如果你使用在字典中找到的顺序也所请求资源[否则标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)引用它们从另一个资源中。 请确保你引用任何资源比然后请求该资源时资源集合中之前定义。 如果有必要，你可以解决资源这样的严格的创建顺序使用[DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)可以引用在运行时该资源，相反，但你应注意，此 DynamicResource技术对性能产生影响。 有关详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
- [!code-xml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
+ [!code-xaml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
   
-## 请参阅  
- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
+## <a name="see-also"></a>另请参阅  
+ [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

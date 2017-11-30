@@ -1,64 +1,56 @@
 ---
-title: "异步任务取消剩余一个后完成 (Visual Basic 中) |Microsoft 文档"
+title: "异步任务取消剩余一个后完成 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1b70822edd972ac33614ab49faad6ff50b0e80b7
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 698ccf5901a77438368b9bf768b88ca6f90fdcbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>异步任务取消剩余一个后完成 (Visual Basic)
-通过使用<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>方法和<xref:System.Threading.CancellationToken>，您可以在一个任务完成后取消所有剩余任务。</xref:System.Threading.CancellationToken> </xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> `WhenAny`方法采用的参数是任务的集合。 该方法开始的所有任务，并返回单个任务。 在集合中的任何任务完成后，单个任务已完成。  
+通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
   
- 此示例演示如何结合使用取消标记`WhenAny`来占用的第一个任务完成的任务的集合，并用于取消剩余任务。 每个任务的形式下载网站的内容。 本示例显示的第一个下载完成的内容的长度，并取消其他下载内容。  
+ 此示例演示如何结合使用取消标记与 `WhenAny` 保留任务集合中第一个要完成的任务，并取消剩余任务。 每个任务都下载网站内容。 本示例显示第一个完成的下载的内容长度，并取消其他下载。  
   
 > [!NOTE]
->  若要运行的示例，必须具有 Visual Studio 2012 或更高版本和.NET Framework 4.5 或更高版本安装在您的计算机上。  
+>  若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
 ## <a name="downloading-the-example"></a>下载示例  
- 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)，然后按照这些步骤。  
+ 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序），然后遵循以下步骤。  
   
 1.  解压缩下载的文件，然后启动 Visual Studio。  
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”**和 **“项目/解决方案”**。  
   
-3.  在**打开项目**对话框中，打开保存的示例代码中您解压缩的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
+3.  在**打开项目**对话框中，打开保存解压缩，示例代码的文件夹，然后为 AsyncFineTuningVB 打开解决方案 (.sln) 文件。  
   
-4.  在**解决方案资源管理器**，打开快捷菜单**CancelAfterOneTask**项目，，然后选择**设为启动项目**。  
+4.  在“解决方案资源管理器”中，打开“CancelAfterOneTask”项目的快捷菜单，然后选择“设为启动项目”。  
   
-5.  选择 F5 键以运行该项目。  
+5.  选择 F5 键运行该项目。  
   
-     按 Ctrl + F5 键以运行该项目，不对其进行调试。  
+     选择 Ctrl+F5 键运行该项目，而不进行调试。  
   
-6.  运行程序多次以验证其他的下载完成第一次。  
+6.  运行程序若干次，以验证首先完成的下载是不同的。  
   
- 如果您不想要下载的项目，你可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
+ 如果你不想要下载的项目，你可以查看本主题末尾的 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
- 本主题中的示例将添加到项目中开发的[取消一个异步任务或列表任务](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)若要取消的任务的列表。 该示例使用相同的 UI，尽管**取消**不显式使用按钮。  
+ 本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
   
- 若要生成示例自己执行的步骤，请按照"下载示例"部分中的说明进行操作，但选择**CancelAListOfTasks**作为**启动项目**。 向该项目添加本主题中的所做的更改。  
+ 若要自行生成示例，请按“下载示例”部分的说明逐步操作，选择“CancelAListOfTasks”作为“启动项目”。 将此主题中的更改添加到该项目。  
   
- MainWindow.xaml.vb 文件中的**CancelAListOfTasks**项目中，通过将每个网站的处理步骤从中的循环移动开始转换`AccessTheWebAsync`与下面的异步方法。  
+ 在 MainWindow.xaml.vb 文件的**CancelAListOfTasks**项目中，通过将每个网站的处理步骤移从中的循环开始转换`AccessTheWebAsync`与以下的异步方法。  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -74,19 +66,28 @@ Async Function ProcessURLAsync(url As String, client As HttpClient, ct As Cancel
 End Function  
 ```  
   
- 在`AccessTheWebAsync`，此示例使用一个查询，<xref:System.Linq.Enumerable.ToArray%2A>方法，与`WhenAny`方法创建并启动任务的数组。</xref:System.Linq.Enumerable.ToArray%2A> 应用程序的`WhenAny`数组时将返回到一项任务，处于等待状态，计算结果为第一项任务来访问数组中完成的任务。  
+ 在 `AccessTheWebAsync` 中，此示例使用查询、<xref:System.Linq.Enumerable.ToArray%2A> 方法和 `WhenAny` 方法创建并启动任务数组。 将 `WhenAny` 应用到数组将返回单个任务，该任务在等待时对任务数组中首先完成的任务进行评估。  
   
- 进行中的以下更改`AccessTheWebAsync`。 星号标记的代码文件中的更改。  
+ 在 `AccessTheWebAsync` 中，进行下列更改。 星号标记了代码文件中的更改。  
   
-1.  注释掉或删除该循环。  
+1.  注释禁止或删除循环。  
   
-2.  创建一个查询，在执行时，生成的常规任务的集合。 每次调用`ProcessURLAsync`返回<xref:System.Threading.Tasks.Task%601>其中`TResult`是一个整数。</xref:System.Threading.Tasks.Task%601>  
+2.  创建一个查询，它在执行时将生成常规任务的集合。 每次调用 `ProcessURLAsync` 均在 `TResult` 为整数时返回 <xref:System.Threading.Tasks.Task%601>。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-3.  调用`ToArray`执行查询并启动任务。 应用程序的`WhenAny`方法在下一步将执行查询，并启动任务，而无需使用`ToArray`，但其他方法可能不会。 最安全的做法是明确强制执行查询。  
+    ```vb  
+    ' ***Create a query that, when executed, returns a collection of tasks.  
+    Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
+        From url In urlList Select ProcessURLAsync(url, client, ct)  
+    ```  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-4.  调用`WhenAny`上的任务的集合。 `WhenAny`返回`Task(Of Task(Of Integer))`或`Task<Task<int>>`。  也就是说，`WhenAny`评估的任务返回单个`Task(Of Integer)`或`Task<int>`时等待。 该单个任务将集合中要完成的第一个任务。 第一次已完成的任务分配给`firstFinishedTask`。 一种`firstFinishedTask`是<xref:System.Threading.Tasks.Task%601>其中`TResult`是一个整数，因为这是返回类型的`ProcessURLAsync`。</xref:System.Threading.Tasks.Task%601>  
+3.  通过调用 `ToArray` 来执行查询并启动任务。 下一步中应用 `WhenAny` 方法将在不使用 `ToArray` 的情况下执行查询并启动任务，但其他方法可能无法执行此操作。 最安全的做法是显式强制执行查询。  
+  
+    ```vb  
+    ' ***Use ToArray to execute the query and start the download tasks.   
+    Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
+    ```  
+  
+4.  在任务集合上调用 `WhenAny`。 `WhenAny` 返回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。  也就是说，在等待时 `WhenAny` 将返回一个任务，它将评估单个的 `Task(Of Integer)` 或 `Task<int>`。 该单个任务是集合中首先完成的任务。 首先完成的任务被分配给 `firstFinishedTask`。 `firstFinishedTask` 的类型为 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 是整数，这是因为它是 `ProcessURLAsync` 的返回类型。  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -94,28 +95,28 @@ End Function
 Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
 ```  
   
-5.  在此示例中，您只的感兴趣先完成的任务。 因此，使用<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>若要取消剩余任务。</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+5.  在此示例中，你只对首先完成的任务感兴趣。 因此，使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 取消剩余任务。  
   
 ```vb  
 ' ***Cancel the rest of the downloads. You just want the first one.  
 cts.Cancel()  
 ```  
   
-6.  最后，await`firstFinishedTask`要检索的下载内容的长度。  
+6.  最后，等待 `firstFinishedTask` 检索下载内容的长度。  
   
 ```vb  
 Dim length = Await firstFinishedTask  
 resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
 ```  
   
- 运行程序多次以验证其他的下载完成第一次。  
+ 运行程序若干次，以验证首先完成的下载是不同的。  
   
 ## <a name="complete-example"></a>完整的示例  
- 下面的代码是该示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。 星号标记已针对此示例添加的元素。  
+ 下面的代码是此示例的完整 MainWindow.xaml.vb 或 MainWindow.xaml.cs 文件。 对添加到此示例的元素进行了星号标记。  
   
- 请注意，您必须添加<xref:System.Net.Http>。</xref:System.Net.Http>的引用  
+ 请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
- 您可以下载的项目[异步示例︰ 精细优化您的应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)。  
+ 可以从 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）下载这些项目。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -241,7 +242,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [异步编程使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [异步示例︰ 微调应用程序](http://go.microsoft.com/fwlink/?LinkId=255046)
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）

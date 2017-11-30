@@ -1,29 +1,35 @@
 ---
-title: "如何：与 WCF 终结点和消息队列应用程序交换消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：与 WCF 终结点和消息队列应用程序交换消息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：与 WCF 终结点和消息队列应用程序交换消息
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>如何：与 WCF 终结点和消息队列应用程序交换消息
 通过使用 MSMQ 集成绑定，可以将现有消息队列 (MSMQ) 应用程序与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序进行集成，从而在 MSMQ 消息与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息之间进行转换。 利用这一功能，可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 MSMQ 接收方应用程序，也可以在 MSMQ 发送方应用程序中调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
   
- 在此部分中，我们将介绍如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>之间的排队通信 （1)[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端和使用 System.Messaging 以及 （2） MSMQ 应用程序客户端编写的 MSMQ 应用程序服务和一个[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。  
+ 本节中，将说明如何将 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 用于 (1) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和使用 System.Messaging 编写的 MSMQ 应用程序服务之间的排队通信，以及 (2) MSMQ 应用程序客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间的排队通信。  
   
- 有关演示如何调用中的 MSMQ 接收方应用程序的完整示例[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
+ 有关完整示例，演示如何调用 MSMQ 接收方应用程序从[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端，请参阅[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
   
- 有关完整示例，演示如何调用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]负责将服务从 MSMQ 客户端，请参阅[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)示例。  
+ 有关完整示例，演示如何调用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务从 MSMQ 客户端，请参阅[消息队列 Windows Communication foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)示例。  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>创建从 MSMQ 客户端接收消息的 WCF 服务  
   
@@ -32,16 +38,16 @@ caps.handback.revision: 18
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2.  实现接口，并且应用<xref:System.ServiceModel.ServiceBehaviorAttribute>属性类，如下面的代码示例中所示。  
+2.  实现该接口，将 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性应用于该类，如下面示例代码所示。  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3.  创建指定一个配置文件<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。  
+3.  创建一个配置文件，在该配置文件中指定 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。  
   
   
   
-4.  实例化<xref:System.ServiceModel.ServiceHost>使用配置的绑定的对象。  
+4.  实例化一个 <xref:System.ServiceModel.ServiceHost> 对象，该对象使用所配置的绑定。  
   
   
   
@@ -67,9 +73,9 @@ caps.handback.revision: 18
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>另请参阅  
- [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [如何︰ 使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)   
- [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)   
- [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)   
- [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)   
- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [消息队列到 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [通过消息队列的消息安全](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -1,33 +1,37 @@
 ---
-title: "如何：开发简单的 Windows 窗体控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Control 类, Windows 窗体"
-  - "控件 [Windows 窗体]"
-  - "自定义控件 [Windows 窗体], 使用代码创建简单控件"
+title: "如何：开发简单的 Windows 窗体控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms]
+- custom controls [Windows Forms], creating simple controls using code
+- Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：开发简单的 Windows 窗体控件
-本节将带您步入创作自定义 Windows 窗体控件的关键步骤。  在此演练中开发的简单控件允许更改其 <xref:System.Windows.Forms.Control.Text%2A> 属性的对齐方式。  它不会引发或处理事件。  
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发简单的 Windows 窗体控件
+本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  
   
-### 创建简单的自定义控件  
+### <a name="to-create-a-simple-custom-control"></a>创建简单的自定义控件  
   
-1.  定义一个从 <xref:System.Windows.Forms.Control?displayProperty=fullName> 派生的类。  
+1.  定义一个从 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 派生的类。  
   
     ```vb  
     Public Class FirstControl  
@@ -40,30 +44,30 @@ caps.handback.revision: 17
     public class FirstControl:Control{}  
     ```  
   
-2.  定义属性。  （不要求您定义属性，因为控件从 <xref:System.Windows.Forms.Control> 类继承了许多属性，但大多数自定义控件通常需要定义附加属性。）以下代码片段定义名为 `TextAlignment`  的属性，`FirstControl`  使用该属性来设置从 <xref:System.Windows.Forms.Control> 继承的 <xref:System.Windows.Forms.Control.Text%2A> 属性的显示格式。  有关定义属性的更多信息，请参见 [属性概述](../Topic/Properties%20Overview.md)。  
+2.  定义属性。 (你无需定义属性，因为控件将继承从许多属性<xref:System.Windows.Forms.Control>类，但大多数自定义控件通常需要定义其他属性。)下面的代码段定义名为的属性`TextAlignment`，`FirstControl`用于设置显示的格式<xref:System.Windows.Forms.Control.Text%2A>属性从继承<xref:System.Windows.Forms.Control>。 有关定义属性的详细信息，请参阅[属性概述](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     在设置更改控件的视觉显示的属性时，必须调用 <xref:System.Windows.Forms.Control.Invalidate%2A> 方法来重新绘制该控件。  <xref:System.Windows.Forms.Control.Invalidate%2A> 是在基类 <xref:System.Windows.Forms.Control> 中定义的。  
+     当设置属性，可更改控件的可视显示时，必须调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法进行重绘控件。 <xref:System.Windows.Forms.Control.Invalidate%2A>在基类中定义<xref:System.Windows.Forms.Control>。  
   
-3.  重写从 <xref:System.Windows.Forms.Control> 继承的受保护的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，以便为控件提供呈现逻辑。  如果不改写 <xref:System.Windows.Forms.Control.OnPaint%2A>，您的控件将无法自行绘制。  在下面的代码片段中，<xref:System.Windows.Forms.Control.OnPaint%2A> 方法显示从 <xref:System.Windows.Forms.Control> 继承的 <xref:System.Windows.Forms.Control.Text%2A> 属性，并使用 `alignmentValue` 字段指定的对齐方式。  
+3.  重写受保护<xref:System.Windows.Forms.Control.OnPaint%2A>方法继承自<xref:System.Windows.Forms.Control>提供到您的控件的呈现逻辑。 如果你不重写<xref:System.Windows.Forms.Control.OnPaint%2A>，控件将不能自行绘制。 在下面的代码片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法显示<xref:System.Windows.Forms.Control.Text%2A>属性从继承<xref:System.Windows.Forms.Control>与由指定的对齐方式`alignmentValue`字段。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  提供控件特性。  特性可使可视化设计器在设计时适当地显示控件及其属性和事件。  以下代码片段将特性应用于 `TextAlignment` 属性。  在 Visual Studio 这样的设计器中，<xref:System.ComponentModel.CategoryAttribute.Category%2A> 特性（如代码片段所示）使该属性显示在逻辑类别中。  在选择 `TextAlignment` 属性时，<xref:System.ComponentModel.DescriptionAttribute.Description%2A> 特性使说明字符串显示在**“属性”**窗口的底部。  有关特性的更多信息，请参见 [组件的设计时特性\)](../Topic/Design-Time%20Attributes%20for%20Components.md)。  
+4.  为控件提供属性。 特性让视觉设计器能够在设计时适当显示控件及其属性和事件。 以下代码片段将特性应用于 `TextAlignment` 属性。 在 Visual Studio 中，如设计器<xref:System.ComponentModel.CategoryAttribute.Category%2A>属性 （如代码片段所示） 将导致要逻辑类别下显示的属性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性将导致在底部显示的描述性字符串**属性**窗口时`TextAlignment`选择属性。 有关属性的详细信息，请参阅[组件的设计时属性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  （可选）提供控件资源。  通过使用编辑器选项（C\# 中为 `/res`），可以为控件提供诸如位图之类的资源，从而将资源与控件打包。  运行时，可以使用 <xref:System.Resources.ResourceManager> 类的方法检索资源。  有关创建和使用资源的更多信息，请参见 [桌面应用程序中的资源](../../../../docs/framework/resources/index.md)。  
+5.  （可选）为控件提供资源。 可通过使用编译器选项（对于 C#，为 `/res`）将资源和控件进行打包，从而为控件提供资源（如位图）。 在运行时，资源可以使用检索的方法<xref:System.Resources.ResourceManager>类。 有关创建和使用资源的详细信息，请参阅[桌面应用中的资源](../../../../docs/framework/resources/index.md)。  
   
-6.  编译和部署控件。  要编译和部署 `FirstControl,`，请执行以下步骤：  
+6.  编译和部署控件。 要编译和部署 `FirstControl,`，请执行以下步骤：  
   
-    1.  将下列示例中的代码保存到源文件（如 FirstControl.cs 或 FirstControl.vb）。  
+    1.  将以下示例中的代码保存到源文件（如 FirstControl.cs 或 FirstControl.vb）。  
   
-    2.  将源代码编译成程序集，并将其保存到应用程序的目录中。  为了实现这一目的，需在包含源文件的目录中执行以下命令。  
+    2.  将源代码编译成程序集并将其保存在应用程序的目录中。 要完成此操作，请从包含源文件的目录执行以下命令。  
   
         ```vb  
         vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
@@ -73,21 +77,21 @@ caps.handback.revision: 17
         csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
         ```  
   
-         `/t:library` 编译器选项告诉编译器正在创建的程序集是一个库（而不是一个可执行文件）。  `/out` 选项用来指定程序集的路径和名称。  `/r` 选项提供代码所引用的程序集的名称。  在本示例中，创建了一个仅供您自己的应用程序使用的专用程序集。  因此，您必须将其保存到您的应用程序的目录中。  有关打包和部署控件以进行分发的更多信息，请参见 [部署](../../../../docs/framework/deployment/net-framework-and-applications.md)。  
+         `/t:library` 编译器选项会告知编译器正在创建的程序集是库（而不是可执行文件）。 `/out` 选项指定程序集的路径和名称。 `/r` 选项提供代码引用的程序集的名称。 在此示例中，将创建只有你的应用程序可以使用的私有程序集。 因此，必须将其保存在应用程序的目录中。 有关打包和部署控件以进行分发的详细信息，请参阅[部署](../../../../docs/framework/deployment/index.md)。  
   
- 下面的示例显示了 `FirstControl` 的代码。  该控件包含在命名空间 `CustomWinControls` 中。  命名空间提供了相关类型的逻辑分组。  可以在新命名空间或现有的命名空间中创建控件。  在 C\# 中，`using` 声明（在 Visual Basic 中，`Imports`）允许从命名空间访问类型，而无须使用完全限定的类型名称。  在下面的示例中，`using` 声明允许代码仅以 <xref:System.Windows.Forms.Control> 来访问 <xref:System.Windows.Forms?displayProperty=fullName> 中的 <xref:System.Windows.Forms.Control> 类，而无需使用完全限定名称 <xref:System.Windows.Forms.Control?displayProperty=fullName>。  
+ 此示例演示了 `FirstControl` 的代码。 控件包含在命名空间 `CustomWinControls` 中。 命名空间提供相关类型的逻辑分组。 可在新的或现有命名空间中创建控件。 在 C# 中，`using` 声明（在 Visual Basic 中，为 `Imports`）允许从命名空间访问类型，而无需使用类型的完全限定名称。 在下面的示例中，`using`声明允许代码访问类<xref:System.Windows.Forms.Control>从<xref:System.Windows.Forms?displayProperty=nameWithType>简单地<xref:System.Windows.Forms.Control>而无需使用完全限定的名称<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  
   
-## 在窗体上使用自定义控件  
- 下面的示例说明了一个使用 `FirstControl` 的简单窗体。  它创建了三个 `FirstControl` 实例，每个实例都有不同的 `TextAlignment` 属性值。  
+## <a name="using-the-custom-control-on-a-form"></a>在窗体上使用自定义控件  
+ 以下示例显示使用 `FirstControl` 的简单窗体。 它会创建 `FirstControl` 的三个实例，每个实例具有一个不同的 `TextAlignment` 属性值。  
   
-#### 编译和运行该示例  
+#### <a name="to-compile-and-run-this-sample"></a>编译和运行此示例  
   
-1.  将下列示例中的代码保存到源文件（SimpleForm.cs 或 SimpleForms.vb）。  
+1.  将以下示例中的代码保存到源文件（SimpleForm.cs 或 SimpleForms.vb）。  
   
-2.  通过从包含该源文件的目录中执行以下命令，将源代码编译成可执行的程序集。  
+2.  通过从包含源文件的目录执行以下命令，将源代码编译成可执行程序集。  
   
     ```vb  
     vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
@@ -97,9 +101,9 @@ caps.handback.revision: 17
     csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
     ```  
   
-     CustomWinControls.dll 是包含类 `FirstControl` 的程序集。  该程序集必须与存取它的窗体源文件位于同一目录中（SimpleForm.cs 或 SimpleForms.vb）。  
+     CustomWinControls.dll 是包含的类的程序集`FirstControl`。 此程序集必须与访问程序集的窗体的源文件（SimpleForm.cs或SimpleForms.vb）位于同一目录中。  
   
-3.  使用下列命令执行 SimpleForm.exe。  
+3.  使用以下命令执行 SimpleForm.exe。  
   
     ```  
     SimpleForm  
@@ -108,6 +112,6 @@ caps.handback.revision: 17
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## 请参阅  
- [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
+## <a name="see-also"></a>另请参阅  
+ [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  [Windows 窗体控件中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

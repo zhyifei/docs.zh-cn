@@ -1,26 +1,29 @@
 ---
-title: "创建已签名和/或已加密的自定义标头 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建自定义标头进行签名和-或加密"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ac43be1978a2a6e80b08e0c4bcd5e0e92043719e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 创建已签名和/或已加密的自定义标头
-在使用 WCF 客户端调用非 WCF 服务时，有时需要使用自定义 SOAP 标头。  WCF 中有一个规范化 bug，该 bug 将阻止已签名和已加密的自定义标头使用非 WCF 服务。  此问题是因默认 XML 命名空间的规范化错误导致的。  此问题仅在使用已签名和\/或已加密的自定义标头调用非 WCF 服务时发生。  当服务收到包含已签名和\/或已加密的自定义标头的消息时，无法验证该签名。  此解决方法可避免出现规范化 bug，它允许与非 WCF 服务进行互操作，但不阻止与 WCF 服务进行互操作。  
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>创建自定义标头进行签名和-或加密
+在使用 WCF 客户端调用非 WCF 服务时，有时需要使用自定义 SOAP 标头。 WCF 中有一个规范化 bug，该 bug 将阻止已签名和已加密的自定义标头使用非 WCF 服务。 此问题是因默认 XML 命名空间的规范化错误导致的。 此问题仅在使用已签名和/或已加密的自定义标头调用非 WCF 服务时发生。  当服务收到包含已签名和/或已加密的自定义标头的消息时，无法验证该签名。 此解决方法可避免出现规范化 bug，它允许与非 WCF 服务进行互操作，但不阻止与 WCF 服务进行互操作。  
   
-## 定义自定义标头  
- 自定义标头通过以下方式定义：定义消息协定并标记希望作为具有 <xref:System.ServiceModel.MessageHeaderAttribute> 属性的标头发送的成员。  若要修复规范化 bug，您必须确保 XML 序列化程序声明的是带前缀的自定义标头的命名空间而不是默认命名空间声明。  下面的代码演示如何定义将用作带正确的命名空间声明的消息标头的数据类型。  
+## <a name="defining-the-custom-header"></a>定义自定义标头  
+ 自定义标头通过以下方式定义：定义消息协定并标记希望作为具有 <xref:System.ServiceModel.MessageHeaderAttribute> 属性的标头发送的成员。 若要修复规范化 bug，您必须确保 XML 序列化程序声明的是带前缀的自定义标头的命名空间而不是默认命名空间声明。 下面的代码演示如何定义将用作带正确的命名空间声明的消息标头的数据类型。  
   
 ```  
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
@@ -50,7 +53,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- 此代码声明一个将用 XML 序列化程序进行序列化的名为 `msgHeaderElement` 的新类型。  当序列化此类型的实例时，它将定义一个带前缀“h”的命名空间，从而修复规范化 bug。  然后，消息协定将定义 `msgHeaderElement` 的实例并用 <xref:System.ServiceModel.MessageHeaderAttribute> 属性标记它，如下面的示例所示。  
+ 此代码声明一个将用 XML 序列化程序进行序列化的名为 `msgHeaderElement` 的新类型。 当序列化此类型的实例时，它将定义一个带前缀“h”的命名空间，从而修复规范化 bug。  然后，消息协定将定义 `msgHeaderElement` 的实例并用 <xref:System.ServiceModel.MessageHeaderAttribute> 属性标记它，如下面的示例所示。  
   
 ```  
 [MessageContract]  
@@ -61,10 +64,9 @@ public  class MyMessageContract
    public msgHeaderElement;  
    // other message contents...  
 }  
-  
 ```  
   
-## 请参阅  
- [默认消息协定](../../../../docs/framework/wcf/samples/default-message-contract.md)   
- [消息协定](../../../../docs/framework/wcf/samples/message-contracts.md)   
- [使用消息约定](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>另请参阅  
+ [默认消息协定](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [消息协定](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [使用消息协定](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
