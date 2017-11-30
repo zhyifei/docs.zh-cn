@@ -1,46 +1,38 @@
 ---
-title: "如何︰ 查询多个最大文件或目录树 (LINQ) (Visual Basic 中) 中的文件 |Microsoft 文档"
+title: "如何：查询目录树中的一个或多个最大的文件 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：查询目录树中的一个或多个最大的文件 (LINQ) (Visual Basic)
-此示例演示与文件大小 （字节） 相关的五个查询︰  
+此示例演示与文件大小（以字节为单位）相关的五个查询：  
   
--   如何检索以字节为单位的最大文件大小。  
+-   如何检索最大文件的大小（以字节为单位）。  
   
--   如何检索以字节为单位的最小文件大小。  
+-   如何检索最小文件的大小（以字节为单位）。  
   
--   如何检索<xref:System.IO.FileInfo>从指定的根文件夹下的一个或多个文件夹的对象大或最小文件。</xref:System.IO.FileInfo>  
+-   如何从指定根文件夹下的一个或多个文件夹检索 <xref:System.IO.FileInfo> 对象最大或最小文件。  
   
--   如何检索一个序列，如 10 个最大文件。  
+-   如何检索序列（如 10 个最大文件）。  
   
--   如何为基于其文件大小 （字节），忽略小于指定大小的文件的组的顺序文件。  
+-   如何基于文件大小（以字节为单位）按组对文件进行排序（忽略小于指定大小的文件）。  
   
 ## <a name="example"></a>示例  
- 下面的示例包含五个单独的查询显示如何查询和组文件，具体取决于其文件大小 （字节）。 您可以轻松地修改这些示例查询所基于的其他某些属性<xref:System.IO.FileInfo>对象。</xref:System.IO.FileInfo>  
+ 下面的示例包含五个单独的查询，它们演示如何根据文件大小（以字节为单位）对文件进行查询和分组。 可以轻松地修改这些示例，以便使查询基于 <xref:System.IO.FileInfo> 对象的其他某个属性。  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- 返回一个或多个完成<xref:System.IO.FileInfo>对象，该查询必须首先检查数据中的每个源，然后对它们进行分类的 Length 属性的值。</xref:System.IO.FileInfo> 然后，它可返回单个对象或序列具有最大长度。 使用<xref:System.Linq.Enumerable.First%2A>来返回列表中的第一个元素。</xref:System.Linq.Enumerable.First%2A> 使用<xref:System.Linq.Enumerable.Take%2A>返回前的 n 个元素。</xref:System.Linq.Enumerable.Take%2A> 指定降序排序顺序，可将最小元素放在列表的开头。  
+ 若要返回一个或多个完整的 <xref:System.IO.FileInfo> 对象，查询必须首先检查数据中的每个对象，然后按其 Length 属性值对它们进行排序。 随后它便可以返回具有最大长度的单个对象或对象序列。 使用 <xref:System.Linq.Enumerable.First%2A> 返回列表中的第一个元素。 使用 <xref:System.Linq.Enumerable.Take%2A> 返回前 n 个元素。 指定降序排序顺序可将最小元素置于列表开头。  
   
- 查询调用到单独的方法来获取文件大小 （字节），以便使用可能将在其中删除了某个文件在另一个线程自以来的时间段中的情况下引发的异常<xref:System.IO.FileInfo>对的调用中创建对象`GetFiles`。</xref:System.IO.FileInfo> 即使完成<xref:System.IO.FileInfo>对象已创建，会发生异常因为<xref:System.IO.FileInfo>对象将尝试刷新其<xref:System.IO.FileInfo.Length%2A>使用最新的大小，以字节为单位第一次访问此属性的属性。</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> 通过将此操作放在查询外的一个 try catch 块中，我们遵守规则，避免可能会导致的副作用的查询中的操作。 一般情况下，必须要格外谨慎使用例外情况之外时, 若要确保应用程序不会保留处于未知状态。  
+ 查询调用单独的方法来获取文件大小（以字节为单位），以便使用在以下情况下会引发的可能异常：自在 `GetFiles` 调用中创建了 <xref:System.IO.FileInfo> 对象以来的时间段内，在其他线程中删除了文件。 即使创建了 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最新大小（以字节为单位）刷新该属性。 通过将此操作置于查询外部的 try-catch 块中，我们可遵循在查询中避免可能导致副作用的操作这一规则。 一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+ 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
 ## <a name="see-also"></a>另请参阅  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

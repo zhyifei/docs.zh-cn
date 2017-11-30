@@ -1,42 +1,43 @@
 ---
-title: "如何：使用数字签名为 XML 文档签名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "数字签名, XML 签名"
-  - "签名, XML 签名"
-  - "签名 XML"
-  - "System.Security.Cryptography.RSACryptoServiceProvider 类"
-  - "System.Security.Cryptography.SignedXml 类"
-  - "XML 数字签名"
-  - "XML 签名"
+title: "如何：使用数字签名为 XML 文档签名"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- signatures, XML signing
+- System.Security.Cryptography.SignedXml class
+- digital signatures, XML signing
+- System.Security.Cryptography.RSACryptoServiceProvider class
+- XML digital signatures
+- XML signing
+- signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 68d5c4149dfacacfe366ac5b2f49a66f2c986873
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用数字签名为 XML 文档签名
-可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类通过数字签名对 XML 文档或部分 XML 文档进行签名。  使用 XML 数字签名 \(XMLDSIG\)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅万维网联合会 \(W3C\) 建议 [XML 签名语法和处理](http://go.microsoft.com/fwlink/?LinkID=136777)。  
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用数字签名为 XML 文档签名
+可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类通过数字签名对 XML 文档或部分 XML 文档进行签名。  使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅万维网联合会 (W3C) 建议[XML 签名语法和处理](http://go.microsoft.com/fwlink/?LinkID=136777)。  
   
- 此过程中的代码示例演示了如何对整个 XML 文档进行数字签名，以及如何将签名附加到文档中的 \<`Signature`\> 元素中。  该示例创建一个 RSA 签名密钥，并将该密钥添加到安全密钥容器，然后使用该密钥对 XML 文档进行数字签名。  然后可以检索该密码来验证 XML 数字签名，或使用它对另一个 XML 文档进行签名。  
+ 此过程中的代码示例演示了如何对整个 XML 文档进行数字签名，以及如何将签名附加到文档中的 <`Signature`> 元素中。  该示例创建一个 RSA 签名密钥，并将该密钥添加到安全密钥容器，然后使用该密钥对 XML 文档进行数字签名。  然后可以检索该密码来验证 XML 数字签名，或使用它对另一个 XML 文档进行签名。  
   
- 有关如何使用此过程验证创建的 XML 数字签名的信息，请参阅[如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
+ 有关如何验证使用此过程创建的 XML 数字签名的信息，请参阅[如何： 验证 XML 文档数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
   
-### 对 XML 文档进行数字签名  
+### <a name="to-digitally-sign-an-xml-document"></a>对 XML 文档进行数字签名  
   
 1.  创建 <xref:System.Security.Cryptography.CspParameters> 对象，并指定密钥容器的名称。  
   
@@ -83,7 +84,7 @@ caps.handback.revision: 13
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. 检索签名（一个 \<`Signature`\> 元素）的 XML 表示形式，并将其保存到一个新的 <xref:System.Xml.XmlElement> 对象中。  
+10. 检索签名（一个 <`Signature`> 元素）的 XML 表示形式，并将其保存到一个新的 <xref:System.Xml.XmlElement> 对象中。  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
@@ -98,10 +99,10 @@ caps.handback.revision: 13
      [!code-csharp[HowToSignXMLDocumentRSA#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#13)]
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
-## 示例  
+## <a name="example"></a>示例  
  此示例假定名为 `test.xml` 的文件与已编译程序存在于同一目录中。  可以将以下 XML 放在名为 `test.xml` 的文件，并将其用于以下示例。  
   
-```  
+```xml  
 <root>  
     <creditcard>  
         <number>19834209</number>  
@@ -113,17 +114,17 @@ caps.handback.revision: 13
  [!code-csharp[HowToSignXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToSignXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#1)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a>编译代码  
   
 -   若要编译此示例，需要包含对 `System.Security.dll` 的引用。  
   
 -   包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
-## .NET Framework 安全性  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
  切勿用纯文本存储或传输非对称密钥对的私钥。  有关对称和非对称加密密钥的详细信息，请参阅[生成加密和解密的密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
   
- 切勿将私钥直接嵌入到源代码中。  可通过使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 或在文本编辑器（如记事本）中打开程序集的方式轻松从程序集中读取嵌入的密钥。  
+ 切勿将私钥直接嵌入到源代码中。  嵌入的密钥可以轻松从程序集使用读取[Ildasm.exe （IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或通过在诸如记事本之类的文本编辑器中打开程序集。  
   
-## 请参阅  
- <xref:System.Security.Cryptography.Xml>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Security.Cryptography.Xml>  
  [如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

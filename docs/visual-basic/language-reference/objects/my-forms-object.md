@@ -1,85 +1,82 @@
 ---
-title: "My.Forms 对象 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "My.Forms"
-  - "My.MyProject.Forms"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Forms 对象"
+title: "My.Forms 对象"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- My.Forms
+- My.MyProject.Forms
+helpviewer_keywords: My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# My.Forms 对象
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供属性，用于访问在当前项目中声明的每个 Windows 窗体的实例。  
+# <a name="myforms-object"></a>My.Forms 对象
+提供用于访问在当前项目中声明每个 Windows 窗体的实例的属性。  
   
-## 备注  
- `My.Forms` 对象提供了当前项目中每个窗体的实例。  属性与它所访问的窗体同名。  有关向项目添加窗体的信息，请参见 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-cn/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+## <a name="remarks"></a>备注  
+ `My.Forms`对象提供当前项目中的每个窗体的实例。 属性访问的表单的名称相同的属性名称。 有关向项目添加窗体的信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
   
- 您可以通过使用窗体名称（无需限定）访问由 `My.Forms` 对象提供的窗体。  由于属性名称与窗体的类型名称相同，这将允许您如同窗体具有默认实例那样来访问窗体。  例如，`My.Forms.Form1.Show` 等效于 `Form1.Show`。  
+ 你可以访问提供的表单`My.Forms`对象使用窗体上，而无需限定的名称。 属性名称为与窗体的类型名称相同，因为这允许你访问窗体，就像它在默认实例。 例如，`My.Forms.Form1.Show` 与 `Form1.Show` 等效。  
   
- `My.Forms` 对象仅公开与当前项目关联的窗体。  它不会提供对在引用 DLL 中声明的窗体的访问。  若要访问 DLL 提供的窗体，必须使用窗体的限定名，书写格式为 *Dll 名称*.*窗体名称*。  
+ `My.Forms`对象公开仅与当前项目关联的窗体。 它不提供对在被引用的 Dll 中声明的表单的访问。 若要访问 DLL 提供窗体，你必须使用窗体中，编写为的限定的名称*dll 名称*。*窗体名称*。  
   
- 可以使用 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> 属性获取所有应用程序的打开窗体的集合。  
+ 你可以使用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>属性来获取应用程序的所有打开窗体的集合。  
   
- 此对象及其属性仅可用于 Windows 应用程序。  
+ 对象和其属性是仅适用于 Windows 应用程序。  
   
-## 属性  
- `My.Forms` 对象的每个属性提供了对当前项目中某个窗体实例的访问。  属性与此属性所访问的窗体同名，且属性类型与窗体类型相同。  
+## <a name="properties"></a>属性  
+ 每个属性`My.Forms`对象提供对在当前项目的窗体的实例访问。 属性的名称属性访问时，表单的名称相同，因此该属性类型是窗体的类型相同。  
   
 > [!NOTE]
->  如果发生名称冲突，则用于访问窗体的属性名称将为*根命名空间*\_*命名空间*\_*窗体名称*。  例如，假设有两个名为 `Form1.` 的窗体。如果其中一个窗体在根命名空间 `WindowsApplication1` 和命名空间 `Namespace1` 中，则您可以通过 `My.Forms.WindowsApplication1_Namespace1_Form1` 访问该窗体。  
+>  如果没有名称冲突，属性名称来访问窗体是*RootNamespace*_*Namespace*\_*窗体名称*。 例如，考虑名为的两种形式`Form1.`这些窗体的其中一个是否根命名空间中`WindowsApplication1`和命名空间中`Namespace1`，你将访问该窗体通过`My.Forms.WindowsApplication1_Namespace1_Form1`。  
   
- `My.Forms` 对象提供了对在启动时创建的应用程序主窗体实例的访问。  对于所有其他窗体，`My.Forms` 对象创建一个新的窗体实例（在它被访问时），并存储该实例。  访问该属性的后续尝试将返回此窗体实例。  
+ `My.Forms`对象提供对在启动时创建的应用程序的主窗体实例访问。 对于所有其他窗体，`My.Forms`对象时它访问，并将其存储创建的窗体的新实例。 若要访问该属性的后续尝试返回该实例的窗体。  
   
- 您可以通过将 `Nothing` 赋予该窗体的属性来释放窗体。  属性 setter 调用窗体的 <xref:System.Windows.Forms.Form.Close%2A> 方法，然后将 `Nothing` 赋予存储的值。  如果向属性赋予 `Nothing` 以外的任何值，setter 将引发 <xref:System.ArgumentException> 异常。  
+ 您可以通过分配释放窗体的`Nothing`到该窗体的属性。 属性 setter 调用<xref:System.Windows.Forms.Form.Close%2A>方法的窗体，然后将分配`Nothing`与存储的值。 如果不将任何值赋`Nothing`setter 的属性，将引发<xref:System.ArgumentException>异常。  
   
- 您可以通过使用 `Is` 或 `IsNot` 运算符来测试 `My.Forms` 对象的属性是否存储了窗体的实例，  并可以使用这些运算符来检查此属性的值是否为 `Nothing`。  
+ 你可以测试的属性是否`My.Forms`对象通过使用存储的窗体实例`Is`或`IsNot`运算符。 你可以使用这些运算符检查属性的值是否为`Nothing`。  
   
 > [!NOTE]
->  通常，`Is` 或 `IsNot` 运算符必须读取此属性的值以执行比较。  但是，如果属性当前存储的值为 `Nothing`，该属性将创建窗体的一个新实例，然后返回该实例。  不过，Visual Basic 编译器将特殊对待 `My.Forms` 对象的属性，并且允许 `Is` 或 `IsNot` 运算符检查属性的状态而不改变其值。  
+>  通常情况下，`Is`或`IsNot`运算符具有要读取的属性进行比较的值。 但是，如果该属性当前存储`Nothing`，属性创建窗体的新实例，然后返回该实例。 但是，Visual Basic 编译器处理的属性`My.Forms`对象以不同的方式，并允许`Is`或`IsNot`运算符检查而不改变其值的属性的状态。  
   
-## 示例  
- 此示例更改默认 `SidebarMenu` 窗体的标题。  
+## <a name="example"></a>示例  
+ 此示例将更改的默认标题`SidebarMenu`窗体。  
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- 若要使此示例正常工作，项目必须具有名为 `SidebarMenu` 的窗体。  有关更多信息，请参见 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-cn/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+ 对于此示例正常工作，你的项目必须具有名为窗体`SidebarMenu`。 有关详细信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
   
- 这些代码将只能在 Windows 应用程序项目中正常运行。  
+ 此代码将仅适用于 Windows 应用程序项目。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 按项目类型列出的可用性  
+### <a name="availability-by-project-type"></a>项目类型的可用性  
   
-|||  
-|-|-|  
-|项目类型|是否可用|  
+|项目类型|可用|  
+|---|---|  
 |Windows 应用程序|**是**|  
-|类库|否|  
-|控制台应用程序|否|  
-|Windows 控件库|否|  
-|Web 控件库|否|  
-|Windows 服务|否|  
-|网站|否|  
+|类库|No|  
+|控制台应用程序|No|  
+|Windows 控件库|No|  
+|Web 控件库|No|  
+|Windows 服务|No|  
+|网站|No|  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>   
- <xref:System.Windows.Forms.Form>   
- <xref:System.Windows.Forms.Form.Close%2A>   
- [对象](../../../visual-basic/language-reference/objects/index.md)   
- [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-cn/3d7bb25f-fd90-47cf-9378-fa0d764686c1)   
- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
+ <xref:System.Windows.Forms.Form>  
+ <xref:System.Windows.Forms.Form.Close%2A>  
+ [对象](../../../visual-basic/language-reference/objects/index.md)  
+ [如何： 向项目中添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
+ [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

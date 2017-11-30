@@ -1,123 +1,126 @@
 ---
-title: "x:Key Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xKey"
-  - "Key"
-  - "x:Key"
-helpviewer_keywords: 
-  - "x:Key attribute [XAML Services]"
-  - "Key attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Key attribute"
+title: "x:Key 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xKey
+- Key
+- x:Key
+helpviewer_keywords:
+- x:Key attribute [XAML Services]
+- Key attribute in XAML [XAML Services]
+- XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-caps.latest.revision: 25
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 5e2ad03fcb52db1ffdd01849381a392187082991
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Key Directive
-唯一地标识在 XAML 定义的字典中创建和引用的元素。  将 `x:Key` 值添加到 XAML 对象元素是标识资源字典（如 WPF <xref:System.Windows.ResourceDictionary>）中资源的最常用的方法。  
+# <a name="xkey-directive"></a>x:Key 指令
+唯一标识元素创建和引用 XAML 定义的字典中。 添加`x:Key`到 XAML 对象元素的值是标识资源字典中，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
 ```  
-<object x:Key="stringKeyValue".../>  
+<object x:Key="stringKeyValue".../>  
 -or-  
-<object x:Key="{markupExtensionUsage}".../>  
+<object x:Key="{markupExtensionUsage}".../>  
 ```  
   
-## XAML 特性用法（特定于 WPF）  
+## <a name="xaml-attribute-usage-wpf-specific"></a>XAML 属性用法 （特定于 WPF）  
   
 ```  
 <object.Resources>  
-  <object x:Key="stringKeyValue".../>  
+  <object x:Key="stringKeyValue".../>  
 </object.Resources>  
 -or-  
 <object.Resources>  
-  <object x:Key="{markupExtensionUsage}".../>  
+  <object x:Key="{markupExtensionUsage}".../>  
 </object.Resources>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`stringKeyValue`|要用作键的文本字符串。  文本字符串必须符合 [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)。|  
-|`markupExtensionUsage`|在标记扩展分隔符 {} 中，标记扩展用法提供对象以用作键。  请参见“备注”。|  
+|`stringKeyValue`|要用作键的文本字符串。 文本字符串必须符合[XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)。|  
+|`markupExtensionUsage`|在标记扩展的分隔符 {} 中，标记扩展用法，提供要使用作为键的对象。 请参阅“备注”。|  
   
-## 备注  
- `x:Key` 支持 XAML 资源字典概念。  作为语言的 XAML 不定义资源字典实现，而是由具体的 UI 框架定义。  若要了解有关 XAML 资源字典如何在 WPF 中实现的更多信息，请参见 [XAML 资源](../../../ocs/framework/wpf/advanced/xaml-resources.md)。  
+## <a name="remarks"></a>备注  
+ `x:Key`支持 XAML 资源字典概念。 作为一种语言的 XAML 未定义的资源字典实现，从左到特定的 UI 框架。 若要了解有关如何在 WPF 中实现 XAML 资源字典的详细信息，请参阅[XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
- 在 XAML 2006 和 WPF 中，必须以特性形式提供 `x:Key`。  您仍可以使用非字符串键，但这需要标记扩展用法来提供特性窗体中的非字符串值。  如果使用 XAML 2009，则 `x:Key` 可以被指定为显式支持以对象类型而不是字符串为键的词典而不需要标记扩展中间语言。  请参见本主题中的“XAML 2009”一节。  备注部分的剩余部分专门应用于 XAML 2006 实现。  
+ 在 XAML 2006 和 WPF，`x:Key`必须作为属性提供。 你仍然可以使用非字符串键，但这要求以便提供属性窗体中的非字符串值的标记扩展用法。 如果你使用 XAML 2009`x:Key`可以被指定为元素，以显式支持键控的对象类型以外的字典字符串而无需中间的标记扩展。 请参阅本主题中的"XAML 2009"一节。 备注部分的其余部分特别适用于 XAML 2006 实现。  
   
- `x:Key` 的特性值可以是在 [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)中定义的任何字符串，也可以是通过标记扩展计算的对象。  有关来自 WPF 的示例，请参见“WPF 用法说明”。  
+ 属性值的`x:Key`可以中定义的任何字符串[XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)也可以是计算通过标记扩展的对象。 有关从 WPF 示例，请参阅"WPF 用法注释"。  
   
- 作为 <xref:System.Collections.IDictionary> 实现的父元素的子元素通常必须包括一个 `x:Key` 特性，用来指定该字典中的唯一键值。  Frameworks 可以实现具有别名的键属性，以替换特定类型中的 `x:Key`；定义此类属性的类型应使用 <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> 进行特性化。  
+ 是一个父元素的子元素<xref:System.Collections.IDictionary>实现通常必须包括`x:Key`指定唯一的键值，该字典中的属性。 框架可能实现使用别名键属性，用于替换`x:Key`对特定类型; 定义此类属性的类型应使用进行特性化<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。  
   
- 与指定 `x:Key` 等效的代码是用于基础 <xref:System.Collections.IDictionary> 的键。  例如，当您向代码中的 WPF <xref:System.Windows.ResourceDictionary> 添加资源时，应用于 WPF 中的资源的标记中的 `x:Key` 等效于 <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=fullName> 的 `key` 参数值。  
+ 指定的代码等效项`x:Key`是适用于基础的关键<xref:System.Collections.IDictionary>。 例如， `x:Key` ，在应用中标记的值等效 WPF 中的资源为`key`参数<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>时将资源添加到 WPF<xref:System.Windows.ResourceDictionary>在代码中。  
   
-## WPF 用法说明  
- 作为 <xref:System.Collections.IDictionary> 实现（如 WPF <xref:System.Windows.ResourceDictionary>）的父对象的子对象通常必须包括一个 `x:Key` 特性，并且该字典中的键值必须唯一。  有两种值得注意的例外情况：  
+## <a name="wpf-usage-notes"></a>WPF 用法说明  
+ 子对象的父对象，该对象<xref:System.Collections.IDictionary>实现，如 WPF <xref:System.Windows.ResourceDictionary>，通常必须包括`x:Key`属性和密钥值内必须是唯一的字典。 有两个值得注意的例外情况：  
   
--   某些 WPF 类型声明一个隐式的字典使用键。  例如，具有 <xref:System.Windows.Style.TargetType%2A> 的 <xref:System.Windows.Style> 或具有 <xref:System.Windows.DataTemplate.DataType%2A> 的 <xref:System.Windows.DataTemplate> 可以放置在 <xref:System.Windows.ResourceDictionary> 中，并使用隐式键。  
+-   一些 WPF 类型声明用于字典使用情况的隐式密钥。 例如，<xref:System.Windows.Style>与<xref:System.Windows.Style.TargetType%2A>，或<xref:System.Windows.DataTemplate>与<xref:System.Windows.DataTemplate.DataType%2A>，可能处于<xref:System.Windows.ResourceDictionary>并使用隐式密钥。  
   
--   WPF 支持一个合并的资源字典概念。  键可在合并的字典之间共享，并且共享的键行为可以使用 <xref:System.Windows.FrameworkContentElement.FindResource%2A> 进行访问。  有关详细信息，请参阅 [合并资源字典](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+-   WPF 支持合并的资源字典概念。 密钥可以共享之间合并的字典，并且可以使用访问的共享密钥行为<xref:System.Windows.FrameworkContentElement.FindResource%2A>。 有关详细信息，请参阅[合并资源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
   
- 在整个 WPF XAML 实现和应用程序模型中，XAML 标记编译器不会检测密钥的唯一性。  相反，丢失或非唯一的 `x:Key` 值导致加载时 XAML 分析程序错误。  但是，WPF 的 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 词典处理常常可以在设计阶段记下那些错误。  
+ 总体 WPF XAML 实现和应用程序模型中，由 XAML 标记编译器进行不检查唯一性。 相反，丢失或非唯一`x:Key`值会导致加载时间 XAML 分析器错误。 但是，[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]处理的字典中的 WPF 通常可以在设计阶段注意此类错误。  
   
- 请注意，在所显示的语法中，<xref:System.Windows.ResourceDictionary> 对象在 WPF XAML 处理器生成一个集合来填充 <xref:System.Windows.FrameworkElement.Resources%2A> 集合的方式上是隐式的。  <xref:System.Windows.ResourceDictionary> 在标记中通常不以显式方式作为元素提供，尽管在某些情况下为了清楚起见希望这样做（此时它将充当 <xref:System.Windows.FrameworkElement.Resources%2A> 属性元素和其中填充字典的项之间的集合对象元素）。  关于集合对象在标记中几乎始终为隐式元素的原因的信息，请参见 [XAML 语法详述](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 请注意，在语法中所示，<xref:System.Windows.ResourceDictionary>对象是隐式的 WPF XAML 处理器如何生成一个集合来填充<xref:System.Windows.FrameworkElement.Resources%2A>集合。 A<xref:System.Windows.ResourceDictionary>不通常用作显式的元素在标记中，但也可以是在某些情况下，如果想为清楚起见 (它将集合对象元素之间<xref:System.Windows.FrameworkElement.Resources%2A>属性元素，并在其中的项填充字典）。 有关为什么集合对象几乎始终是隐式元素标记中的信息，请参阅[在详细信息的 XAML 语法](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
- 在 WPF XAML 实现中，资源字典键的处理由 <xref:System.Windows.ResourceKey> 抽象类定义。  但是，WPF XAML 处理器会基于键的用法为键生成不同的基础扩展类型。  例如，<xref:System.Windows.DataTemplate> 或任何派生类的键是单独处理的，并生成一个不同的 <xref:System.Windows.DataTemplateKey> 对象。  
+ 在 WPF XAML 实现中，资源字典键的处理由定义<xref:System.Windows.ResourceKey>抽象类。 但是，WPF XAML 处理器生成不同基础的扩展类型，密钥基于它们的用法。 例如，为项<xref:System.Windows.DataTemplate>或任何派生的类分别进行处理，并且生成一个不同<xref:System.Windows.DataTemplateKey>对象。  
   
- 键和名称在基本 XAML 定义中使用不同的指令和语言元素（`x:Key` 与 `x:Name`）。  键和名称还可通过 WPF 定义和应用这些概念在不同的情况中使用。  有关详细信息，请参见[WPF XAML 名称范围](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ 键和名称使用不同的指令和语言元素 (`x:Key`与`x:Name`) 中的基本的 XAML 定义。 键和名称也使用不同的情况下的 WPF 定义和应用程序的这些概念。 有关详细信息，请参阅[WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
   
- 如前所述，键值可以是通过标记扩展提供的值，也可以是字符串值以外的值。  WPF 方案的一个示例为 `x:Key` 的值可以是 [ComponentResourceKey](../../../ocs/framework/wpf/advanced/componentresourcekey-markup-extension.md)。  某些控件公开该类型的自定义样式资源的样式键，这些资源会影响该控件的外观和行为，而不是替换整个控件的样式。  <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A> 就是这样的一个键。  
+ 如前面所述，键的值可以通过标记扩展提供，并且可以字符串值以外。 示例 WPF 方案是的值`x:Key`可能[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)。 某些控件公开样式的键的该类型的自定义样式资源的影响而不替换样式的外观的一部分，该控件的行为。 此密钥的一个示例是<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>。  
   
- WPF 合并的词典功能引入了关于键唯一性和键查找行为的其他注意事项。  有关详细信息，请参阅 [合并资源字典](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+ WPF 合并的字典功能引入了键唯一性和键查找行为的其他注意事项。 有关详细信息，请参阅[合并资源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
   
-## XAML 2009  
- XAML 2009 解除 `x:Key` 始终以特性形式提供的限制。  
+## <a name="xaml-2009"></a>XAML 2009  
+ XAML 2009 解除此限制，`x:Key`始终以属性形式提供。  
   
- 在 WPF 中，可以使用 XAML 2009 功能，但仅针对未进行标记编译的 XAML。  WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
+ 在 WPF 中，你可以使用 XAML 2009 功能，但只针对未标记编译的 XAML。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
- 在 XAML 2009 下，您可以通过下面的用法指定 `x:Key` 元素：  
+ 在 XAML 2009 中可以指定`x:Key`通过以下使用情况的元素：  
   
-### XAML 元素使用情况（仅限于 XAML 2009）  
+### <a name="xaml-element-usage-xaml-2009-only"></a>XAML 元素用法 （仅 XAML 2009 年）  
   
 ```  
 <object>  
   <x:Key>  
-     keyObject  
+keyObject  
   </x:Key>  
 ...  
 </object>  
 ```  
   
-### XAML 值  
+### <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`keyObject`|在专用字典中用作给定 `object` 的键的对象的对象元素。|  
+|`keyObject`|用作键的对象的对象元素给定`object`专用字典中。|  
   
--   这种类型的用法的容器\/父级不会在此处显示。  `object` 应为某种表示专用的词典实现的对象元素的子级。  `keyObject` 应为对象实例（或值类型的值），适合用作该特定专用的词典实现的关键字。  
+-   使用这种容器/父级不在此处显示。 `object`应为表示一种专用的字典实现对象元素的子元素。 `keyObject`应为对象实例 （或值类型的值），适合作为该特定的专用的字典实现的密钥。  
   
--   WPF 不实现要求此用法的词典。  对象键是 XAML 语言的常规功能。对于某些要在 XAML 中创建词典的自定义词典方案而言，该功能很有用。  隐式样式等 WPF 功能会将非字符串键用于资源，将其他技术用于建立或指定键存在性，所以没必要使用对象键。  
+-   WPF 未实现需要这种用法的字典。 对象键是更可能有用的某些自定义词典方案在 XAML 中创建字典所需的 XAML 语言的常规功能。 WPF 功能，如对资源使用非字符串键的隐式样式，用于建立或指定键的其他方法存在，因此不需要使用对象键。  
   
--   在对象元素窗体中，*keyObject* 还可以是标记扩展用法，而不是直接对象实例。  
+-   *keyObject*也可能是在对象元素窗体，而不是直接对象实例的标记扩展用法。  
   
-## Silverlight Usage 备注。  
- 单独说明了 `x:Key` for Silverlight。  有关详情，请参阅 [XAML 命名空间 \(x:\) 语言功能 \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
+## <a name="silverlight-usage-notes"></a>Silverlight 用法说明  
+ `x:Key`适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## 请参阅  
- [XAML 资源](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
- [资源和代码](../../../ocs/framework/wpf/advanced/resources-and-code.md)   
- [StaticResource 标记扩展](../../../ocs/framework/wpf/advanced/staticresource-markup-extension.md)
+## <a name="see-also"></a>另请参阅  
+ [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [资源和代码](../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [StaticResource 标记扩展](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

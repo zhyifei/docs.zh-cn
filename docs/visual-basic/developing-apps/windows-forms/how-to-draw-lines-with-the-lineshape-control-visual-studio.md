@@ -1,61 +1,63 @@
 ---
-title: "如何：使用 LineShape 控件绘制直线 (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "文本行, 绘图"
-  - "LineShape 控件"
+title: "如何：使用 LineShape 控件绘制直线 (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- LineShape control [Visual Basic]
+- lines, drawing
 ms.assetid: 83e71b4e-aa76-4f9b-b547-8704309fd1e5
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f170250dde2f6db31ed68908936c0e9714a7e846
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 LineShape 控件绘制直线 (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-您可以使用 <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 控件在设计时和运行时在窗体或容器上绘制水平线、垂直线或对角线。  
+# <a name="how-to-draw-lines-with-the-lineshape-control-visual-studio"></a>如何：使用 LineShape 控件绘制直线 (Visual Studio)
+你可以使用<xref:Microsoft.VisualBasic.PowerPacks.LineShape>控件在设计时和运行时窗体或容器上绘制水平线、 垂直线或对角线行。  
   
- **说明** 在下面的说明中，您的计算机可能会对 Visual Studio 的某些用户界面元素显示不同的名称或位置。  您安装的 Visual Studio 版本以及使用的设置决定了这些元素。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+ **请注意**你的计算机中出现可能会不同名称或位置的某些 Visual Studio 用户界面元素下面的说明。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 在设计时绘制直线  
+### <a name="to-draw-a-line-at-design-time"></a>若要在设计时绘制线条  
   
-1.  从**“工具箱”**的**“Visual Basic PowerPacks”**选项卡中将 <xref:Microsoft.VisualBasic.PowerPacks.LineShape> 控件拖到窗体或容器控件中。  
+1.  拖动<xref:Microsoft.VisualBasic.PowerPacks.LineShape>控件从**Visual Basic PowerPacks**选项卡中**工具箱**将拖动到窗体或容器的控件。  
   
-2.  拖动大小调整控点和移动控点来调整直线的大小以及定位直线。  
+2.  拖动调整大小并移动图柄大小和位置的行。  
   
-     还可以通过在**“属性”**窗口中更改 `X1`、`X2`、`Y1` 和 `Y2` 属性来调整直线的大小以及定位直线。  
+     您还可以调整大小和通过更改定位直线`X1`， `X2`， `Y1`，和`Y2`中的属性**属性**窗口。  
   
-3.  还可以选择在**“属性”**窗口中设置其他属性（如 `BorderStyle` 或 `BorderColor`）来更改直线的外观。  
+3.  在**属性**窗口中，根据需要设置其他属性如`BorderStyle`或`BorderColor`若要更改的行的外观。  
   
-### 在运行时绘制直线  
+### <a name="to-draw-a-line-at-run-time"></a>若要在运行时绘制线条  
   
-1.  在**“项目”**菜单上，单击**“添加引用”**。  
+1.  在“项目”菜单上，单击“添加引用”。  
   
-2.  在**“添加引用”**对话框中选择**“Microsoft.VisualBasic.PowerPacks.VS”**，然后单击**“确定”**。  
+2.  在**添加引用**对话框中，选择**Microsoft.VisualBasic.PowerPacks.VS**，然后单击**确定**。  
   
-3.  在**“代码编辑器”**中，将 `Imports` 或 `using` 语句添加到模块的顶部：  
+3.  在**代码编辑器**，添加`Imports`或`using`语句模块的顶部：  
   
-    ```vb#  
-    Imports Microsoft.VisualBasic.PowerPacks  
-    ```  
+```vb  
+Imports Microsoft.VisualBasic.PowerPacks  
+```  
   
-    ```c#  
-    using Microsoft.VisualBasic.PowerPacks;  
-    ```  
+```csharp  
+using Microsoft.VisualBasic.PowerPacks;  
+```  
   
-4.  将下面的代码添加到 `Event` 过程中：  
+4.  在 `Event` 过程中添加以下代码：  
   
-     [!code-cs[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.vb)]  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.PowerPacks.LineShape>   
- [Line 和 Shape 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.PowerPacks.LineShape>  
+ [Line 和 Shape 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
  [如何：使用 OvalShape 和 RectangleShape 控件绘制形状](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)

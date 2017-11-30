@@ -1,75 +1,74 @@
 ---
-title: "如何：在 DataRepeater 控件中显示项标题 (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, 项标头"
-  - "DataRepeater, 选择指示器"
+title: "如何：在 DataRepeater 控件中显示项标题 (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- DataRepeater, item headers
+- DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 DataRepeater 控件中显示项标题 (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中的项标头会在选定了某个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 时提供直观的指示。  当 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 属性设置为 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>（默认值）时，项标头会显示在每个项的左侧。  当 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 属性设置为 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> 时，项标头会显示在每个项的顶部。  
+# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>如何：在 DataRepeater 控件中显示项标题 (Visual Studio)
+项标头中的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件提供可视指示器时<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>选择。 当<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>属性设置为<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical>（默认值），每个项的左侧是否显示项标头。 当<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>属性设置为<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>，每个项顶部显示项标头。  
   
- 首次选定项标头时，它将以 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 属性指定的颜色显示，并且还将显示一个白色箭头图标。  
+ 首先选择它后，在由指定的颜色显示项标头<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>显示属性，并有一个白色箭头图标。  
   
 > [!NOTE]
->  如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 设置为 <xref:System.Drawing.Color.White%2A>，当首次选定项时您将看不到选择符号。  
+>  如果你设置<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>到<xref:System.Drawing.Color.White%2A>，选择符号首先选择项目时将不可见。  
   
- 当 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 中的某个字段具有焦点时，项标头的颜色将变为 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> 背景颜色并且箭头图标将变为黑色。  如果数据发生更改，项标头中会显示一个铅笔符号。  
+ 中的字段时<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>具有焦点的项标头更改颜色<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>背景颜色和箭头图标变为黑色。 如果更改数据，铅笔符号被显示项标头中。  
   
- 项标头的默认宽度（如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> 属性设置为 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>，则为高度）为 15 像素。  可以通过设置 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 属性来更改此宽度。  
-  
-> [!NOTE]
->  如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 属性设置为小于 11 的值，项标头中将不会显示指示符。  
-  
- 可以通过将 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> 属性设置为**“False”**来隐藏项标头。  当 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> 设置为**“False”**时，表示选定了某个项的唯一指示是该 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 周围的虚线。  
+ 默认宽度 (或高度时<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>属性设置为<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) 的项标头为 15 像素。 你可以通过设置更改宽度<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>属性。  
   
 > [!NOTE]
->  您还可以通过在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 事件中监视 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> 属性来提供自己的选择指示符。  有关更多信息，请参见 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>。  
+>  如果<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>属性设置为小于 11 一个值，将不会显示项标头中的指示器符号。  
   
-### 更改项标头的外观  
+ 你可以通过设置隐藏项标头<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A>属性**False**。 当<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A>设置为**False**，选择项的唯一指示是周围的虚线<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>。  
   
-1.  在 Windows 窗体设计器中，选择 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件的下半部分区域。  
+> [!NOTE]
+>  你还可以通过监视提供你自己选择指示器<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>属性<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>中<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>。  
   
-    > [!NOTE]
-    >  必须选择控件的下半部分区域。  如果选择项模板部分，“属性”窗口中将显示一组不同的属性。  
+### <a name="to-change-the-appearance-of-item-headers"></a>若要更改项标题的外观  
   
-2.  在“属性”窗口中使用 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 属性来更改项标头的颜色。  
-  
-    > [!NOTE]
-    >  如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 设置为 <xref:System.Drawing.Color.White%2A>，当首次选定项时您将看不到选择符号。  
-  
-3.  使用 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 属性来更改项标头的宽度（或高度）。  
+1.  在 Windows 窗体设计器中，选择的下半部分区域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
   
     > [!NOTE]
-    >  如果 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 属性设置为小于 11 的值，项标头中将不会显示指示符。  
+    >  必须选择控件的下半部分区域。 如果选择项模板部分中，一组不同的属性将显示在属性窗口中。  
   
-### 隐藏项标头  
-  
-1.  在 Windows 窗体设计器中，选择 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件的下半部分区域。  
+2.  在属性窗口中，使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>属性可以更改项标题的颜色。  
   
     > [!NOTE]
-    >  必须选择控件的下半部分区域。  如果选择项模板部分，“属性”窗口中将显示一组不同的属性。  
+    >  如果你设置<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>到<xref:System.Drawing.Color.White%2A>，选择符号首先选择项目时将不可见。  
   
-2.  在“属性”窗口中，将 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> 属性设置为**“False”**。  
+3.  使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>属性可以更改项标题的宽度 （或高度）。  
   
-     当选定了 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 中的某个项时，唯一的指示将是该 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 周围的虚线。  
+    > [!NOTE]
+    >  如果<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>属性设置为小于 11 一个值，将不会显示项标头中的指示器符号。  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [如何：更改 DataRepeater 控件的外观](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [如何：更改 DataRepeater 控件的布局](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
+### <a name="to-hide-item-headers"></a>若要隐藏项标头  
+  
+1.  在 Windows 窗体设计器中，选择的下半部分区域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
+  
+    > [!NOTE]
+    >  必须选择控件的下半部分区域。 如果选择项模板部分中，一组不同的属性将显示在属性窗口中。  
+  
+2.  在属性窗口中，设置<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A>属性**False**。  
+  
+     中的项<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>是选择，唯一的指示将周围的虚线<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>。  
+  
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [如何：更改 DataRepeater 控件的外观](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [如何：更改 DataRepeater 控件的布局](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
  [DataRepeater 控件疑难解答](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
