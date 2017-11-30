@@ -1,1 +1,1 @@
-公共语言运行时 (CLR)
+<span data-ttu-id="97de4-101">公共语言运行时 (CLR)</span><span class="sxs-lookup"><span data-stu-id="97de4-101">common language runtime (CLR)</span></span>

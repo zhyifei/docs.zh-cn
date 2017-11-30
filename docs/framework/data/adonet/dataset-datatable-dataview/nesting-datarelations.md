@@ -1,27 +1,33 @@
 ---
-title: "嵌套 DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "嵌套 DataRelation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 嵌套 DataRelation
-在数据的关系表示形式中，各个表都包含使用一个列或一组列来相互关联的行。  在 ADO.NET <xref:System.Data.DataSet> 中，表之间的关系使用 <xref:System.Data.DataRelation> 来实现。  当创建 **DataRelation** 时，列的父子关系仅通过关系来管理。  表和列是独立的实体。  在 XML 提供的数据的分层表示形式中，父子关系通过包含嵌套子元素的父元素来表示。  
+# <a name="nesting-datarelations"></a><span data-ttu-id="1077f-102">嵌套 DataRelation</span><span class="sxs-lookup"><span data-stu-id="1077f-102">Nesting DataRelations</span></span>
+<span data-ttu-id="1077f-103">在数据的关系表示形式中，各个表都包含使用一个列或一组列来相互关联的行。</span><span class="sxs-lookup"><span data-stu-id="1077f-103">In a relational representation of data, individual tables contain rows that are related to one another using a column or set of columns.</span></span> <span data-ttu-id="1077f-104">在 ADO.NET <xref:System.Data.DataSet> 中，表之间的关系使用 <xref:System.Data.DataRelation> 来实现。</span><span class="sxs-lookup"><span data-stu-id="1077f-104">In the ADO.NET <xref:System.Data.DataSet>, the relationship between tables is implemented using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="1077f-105">当你创建**DataRelation**，仅通过关系管理列的父-子关系。</span><span class="sxs-lookup"><span data-stu-id="1077f-105">When you create a **DataRelation**, the parent-child relationships of the columns are managed only through the relation.</span></span> <span data-ttu-id="1077f-106">表和列是独立的实体。</span><span class="sxs-lookup"><span data-stu-id="1077f-106">The tables and columns are separate entities.</span></span> <span data-ttu-id="1077f-107">在 XML 提供的数据的分层表示形式中，父子关系通过包含嵌套子元素的父元素来表示。</span><span class="sxs-lookup"><span data-stu-id="1077f-107">In the hierarchical representation of data that XML provides, the parent-child relationships are represented by parent elements that contain nested child elements.</span></span>  
   
- 为了方便子对象在 **DataSet** 与 <xref:System.Xml.XmlDataDocument> 同步或使用 **WriteXml** 以 XML 数据形式来编写时进行嵌套，**DataRelation** 会公开 **Nested** 属性。  如果将 **DataRelation** 的 **Nested** 属性设置为 **true**，将使关系的子行在以 XML 数据形式编写或与 **XmlDataDocument** 同步时嵌套在父列中。  默认情况下，**DataRelation** 的 **Nested** 属性为 **false**。  
+ <span data-ttu-id="1077f-108">为了便于子对象的嵌套时**数据集**与同步<xref:System.Xml.XmlDataDocument>或以 XML 数据写入**WriteXml**、 **DataRelation**公开**嵌套**属性。</span><span class="sxs-lookup"><span data-stu-id="1077f-108">To facilitate the nesting of child objects when a **DataSet** is synchronized with an <xref:System.Xml.XmlDataDocument> or written as XML data using **WriteXml**, the **DataRelation** exposes a **Nested** property.</span></span> <span data-ttu-id="1077f-109">设置**嵌套**属性**DataRelation**到**true**使的子行嵌套在父列以 XML 数据形式编写时的关系或与同步**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="1077f-109">Setting the **Nested** property of a **DataRelation** to **true** causes the child rows of the relation to be nested within the parent column when written as XML data or synchronized with an **XmlDataDocument**.</span></span> <span data-ttu-id="1077f-110">**嵌套**属性**DataRelation**是**false**，默认情况下。</span><span class="sxs-lookup"><span data-stu-id="1077f-110">The **Nested** property of the **DataRelation** is **false**, by default.</span></span>  
   
- 例如，考虑以下 **DataSet**。  
+ <span data-ttu-id="1077f-111">例如，考虑以下**数据集**。</span><span class="sxs-lookup"><span data-stu-id="1077f-111">For example, consider the following **DataSet**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- 因为对于该 **DataSet**，**DataRelation** 的 **Nested** 属性未设置为 **true**，所以当该 **DataSet** 表示为 XML 数据时，子对象将不会嵌套在父元素中。  如果 **DataSet** 包含具有非嵌套数据关系的相关 **DataSet**，则转换其 XML 表示形式可能导致性能降低。  建议您嵌套数据关系。  为此，请将 **Nested** 属性设置为 **true**。  然后在使用上下分层 XPath 查询表达式的 XSLT 样式表中编写代码以定位和转换数据。  
+ <span data-ttu-id="1077f-112">因为**嵌套**属性**DataRelation**对象未设置为**true**此**数据集**，不嵌套的子对象父元素中时这**数据集**表示为 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="1077f-112">Because the **Nested** property of the **DataRelation** object is not set to **true** for this **DataSet**, the child objects are not nested within the parent elements when this **DataSet** is represented as XML data.</span></span> <span data-ttu-id="1077f-113">转换其 XML 表示形式**数据集**包含相关**数据集**具有非嵌套数据关系可能导致性能降低。</span><span class="sxs-lookup"><span data-stu-id="1077f-113">Transforming the XML representation of a **DataSet** that contains related **DataSet**s with non-nested data relations can cause slow performance.</span></span> <span data-ttu-id="1077f-114">建议您嵌套数据关系。</span><span class="sxs-lookup"><span data-stu-id="1077f-114">We recommend that you nest the data relations.</span></span> <span data-ttu-id="1077f-115">若要执行此操作，将设置**嵌套**属性**true**。</span><span class="sxs-lookup"><span data-stu-id="1077f-115">To do this, set the **Nested** property to **true**.</span></span> <span data-ttu-id="1077f-116">然后在使用上下分层 XPath 查询表达式的 XSLT 样式表中编写代码以定位和转换数据。</span><span class="sxs-lookup"><span data-stu-id="1077f-116">Then write code in the XSLT style sheet that uses top-down hierarchical XPath query expressions to locate and transform the data.</span></span>  
   
- 以下代码示例显示对 **DataSet** 调用 **WriteXml** 的结果。  
+ <span data-ttu-id="1077f-117">下面的代码示例演示调用的结果**WriteXml**上**数据集**。</span><span class="sxs-lookup"><span data-stu-id="1077f-117">The following code example shows the result from calling **WriteXml** on the **DataSet**.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- 请注意，**Customers** 元素和 **Orders** 元素显示为同级元素。  如果您要让 **Orders** 元素显示为它们各自父元素的子元素，则需要将 **DataRelation** 的 **Nested** 属性设置为 **true**，为此将添加以下代码：  
+ <span data-ttu-id="1077f-118">请注意，**客户**元素和**订单**元素显示为同级元素。</span><span class="sxs-lookup"><span data-stu-id="1077f-118">Note that the **Customers** element and the **Orders** elements are shown as sibling elements.</span></span> <span data-ttu-id="1077f-119">如果你想**订单**元素才会显示为其各自的父元素的子级**嵌套**属性**DataRelation**需要设置为**true**并将添加以下：</span><span class="sxs-lookup"><span data-stu-id="1077f-119">If you wanted the **Orders** elements to show up as children of their respective parent elements, the **Nested** property of the **DataRelation** would need to be set to **true** and you would add the following:</span></span>  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- 以下代码显示当 **Orders** 元素嵌套在它们各自的父元素中时所生成的输出的可能形式。  
+ <span data-ttu-id="1077f-120">下面的代码演示生成的输出将如下所示，使用**订单**元素嵌套在它们各自的父元素。</span><span class="sxs-lookup"><span data-stu-id="1077f-120">The following code shows what the resulting output would look like, with the **Orders** elements nested within their respective parent elements.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## 请参阅  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [添加 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1077f-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1077f-121">See Also</span></span>  
+ [<span data-ttu-id="1077f-122">在数据集中使用 XML</span><span class="sxs-lookup"><span data-stu-id="1077f-122">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="1077f-123">添加数据关系</span><span class="sxs-lookup"><span data-stu-id="1077f-123">Adding DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [<span data-ttu-id="1077f-124">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="1077f-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="1077f-125">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="1077f-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

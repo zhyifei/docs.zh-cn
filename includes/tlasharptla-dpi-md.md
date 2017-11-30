@@ -1,1 +1,1 @@
-每英寸点数 (dpi)
+<span data-ttu-id="e0baa-101">每英寸点数 (dpi)</span><span class="sxs-lookup"><span data-stu-id="e0baa-101">dots per inch (dpi)</span></span>

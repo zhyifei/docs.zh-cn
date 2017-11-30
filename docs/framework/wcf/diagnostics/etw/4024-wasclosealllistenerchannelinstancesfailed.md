@@ -1,35 +1,38 @@
 ---
-title: "4024 - WasCloseAllListenerChannelInstancesFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4024 - WasCloseAllListenerChannelInstancesFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73f0dc73-f0b7-4c13-8328-9fdc262009ec
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce63dfd3ce7309cb63158656513cac613d2dab76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 4024 - WasCloseAllListenerChannelInstancesFailed
-## 属性  
+# <a name="4024---wasclosealllistenerchannelinstancesfailed"></a><span data-ttu-id="08802-102">4024 - WasCloseAllListenerChannelInstancesFailed</span><span class="sxs-lookup"><span data-stu-id="08802-102">4024 - WasCloseAllListenerChannelInstancesFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="08802-103">属性</span><span class="sxs-lookup"><span data-stu-id="08802-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|4024|  
-|关键字|ActivationServices|  
-|级别|错误|  
-|通道|Microsoft\-Windows\-应用程序服务器\-应用程序\/分析|  
+|<span data-ttu-id="08802-104">ID</span><span class="sxs-lookup"><span data-stu-id="08802-104">ID</span></span>|<span data-ttu-id="08802-105">4024</span><span class="sxs-lookup"><span data-stu-id="08802-105">4024</span></span>|  
+|<span data-ttu-id="08802-106">关键字</span><span class="sxs-lookup"><span data-stu-id="08802-106">Keywords</span></span>|<span data-ttu-id="08802-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="08802-107">ActivationServices</span></span>|  
+|<span data-ttu-id="08802-108">级别</span><span class="sxs-lookup"><span data-stu-id="08802-108">Level</span></span>|<span data-ttu-id="08802-109">错误</span><span class="sxs-lookup"><span data-stu-id="08802-109">Error</span></span>|  
+|<span data-ttu-id="08802-110">通道</span><span class="sxs-lookup"><span data-stu-id="08802-110">Channel</span></span>|<span data-ttu-id="08802-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="08802-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 描述  
- 当所有侦听器通道实例关闭失败时，发出此事件。  
+## <a name="description"></a><span data-ttu-id="08802-112">描述</span><span class="sxs-lookup"><span data-stu-id="08802-112">Description</span></span>  
+ <span data-ttu-id="08802-113">当所有侦听器通道实例关闭失败时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="08802-113">This event is emitted when the closing of all listener channel instances has failed.</span></span>  
   
-## 消息  
- 错误代码：%1  
+## <a name="message"></a><span data-ttu-id="08802-114">消息</span><span class="sxs-lookup"><span data-stu-id="08802-114">Message</span></span>  
+ <span data-ttu-id="08802-115">错误代码：%1</span><span class="sxs-lookup"><span data-stu-id="08802-115">Error Code:%1</span></span>  
   
-## 详细信息
+## <a name="details"></a><span data-ttu-id="08802-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="08802-116">Details</span></span>
