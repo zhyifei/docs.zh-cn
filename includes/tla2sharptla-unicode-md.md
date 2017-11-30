@@ -1,1 +1,1 @@
-Unicode
+<span data-ttu-id="45a69-101">Unicode</span><span class="sxs-lookup"><span data-stu-id="45a69-101">Unicode</span></span>

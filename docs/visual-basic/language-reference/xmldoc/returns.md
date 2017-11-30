@@ -1,48 +1,47 @@
 ---
-title: "&lt;returns&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<returns> XML 标记"
-  - "returns XML 标记"
+title: "&lt;返回&gt;(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- returns XML tag
+- <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b6130a6fabe450900fe19ef4d361654508f907ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;returns&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定属性或函数的返回值。  
+# <a name="ltreturnsgt-visual-basic"></a><span data-ttu-id="b4676-102">&lt;返回&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4676-102">&lt;returns&gt; (Visual Basic)</span></span>
+<span data-ttu-id="b4676-103">指定的属性或函数的返回值。</span><span class="sxs-lookup"><span data-stu-id="b4676-103">Specifies the return value of the property or function.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="b4676-104">语法</span><span class="sxs-lookup"><span data-stu-id="b4676-104">Syntax</span></span>  
   
-```  
+```xml  
 <returns>description</returns>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a><span data-ttu-id="b4676-105">参数</span><span class="sxs-lookup"><span data-stu-id="b4676-105">Parameters</span></span>  
  `description`  
- 返回值的说明。  
+ <span data-ttu-id="b4676-106">返回值的说明。</span><span class="sxs-lookup"><span data-stu-id="b4676-106">A description of the return value.</span></span>  
   
-## 备注  
- 在方法声明的注释中使用 `<returns>` 标记以描述返回值。  
+## <a name="remarks"></a><span data-ttu-id="b4676-107">备注</span><span class="sxs-lookup"><span data-stu-id="b4676-107">Remarks</span></span>  
+ <span data-ttu-id="b4676-108">使用`<returns>`方法声明来描述返回的值的注释中的标记。</span><span class="sxs-lookup"><span data-stu-id="b4676-108">Use the `<returns>` tag in the comment for a method declaration to describe the return value.</span></span>  
   
- 使用 [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
+ <span data-ttu-id="b4676-109">使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。</span><span class="sxs-lookup"><span data-stu-id="b4676-109">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## 示例  
- 此示例使用 `<returns>` 标记解释 `DoesRecordExist` 函数返回的内容。  
+## <a name="example"></a><span data-ttu-id="b4676-110">示例</span><span class="sxs-lookup"><span data-stu-id="b4676-110">Example</span></span>  
+ <span data-ttu-id="b4676-111">此示例使用`<returns>`标记解释`DoesRecordExist`函数返回。</span><span class="sxs-lookup"><span data-stu-id="b4676-111">This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
   
-## 请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="b4676-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b4676-112">See Also</span></span>  
+ [<span data-ttu-id="b4676-113">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="b4676-113">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

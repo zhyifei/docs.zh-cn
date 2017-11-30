@@ -1,1 +1,1 @@
-多用途 Internet 邮件扩展 (MIME)
+<span data-ttu-id="0d596-101">多用途 Internet 邮件扩展 (MIME)</span><span class="sxs-lookup"><span data-stu-id="0d596-101">Multipurpose Internet Mail Extensions (MIME)</span></span>

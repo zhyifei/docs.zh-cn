@@ -1,62 +1,63 @@
 ---
-title: "&lt;standardEndpoints&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;standardEndpoints&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cd4de65da3dcce6360fef6e404b0951dbbd26336
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;standardEndpoints&gt;
-此配置节用于定义一个标准终结点集合，这些终结点是预配置的可重用终结点。  标准终结点具有一个或多个设置为固定值的地址、绑定和协定特性。  例如，发现终结点具有固定的协定。  此外，还可以使用标准终结点用新属性扩展服务终结点，这与定义自定义绑定相似。  
+# <a name="ltstandardendpointsgt"></a><span data-ttu-id="1da1d-102">&lt;standardEndpoints&gt;</span><span class="sxs-lookup"><span data-stu-id="1da1d-102">&lt;standardEndpoints&gt;</span></span>
+<span data-ttu-id="1da1d-103">此配置节用于定义一个标准终结点集合，这些终结点是预配置的可重用终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-103">This configuration section allows you to define a collection of standard endpoints, which are reusable preconfigured endpoints.</span></span> <span data-ttu-id="1da1d-104">标准终结点具有一个或多个设置为固定值的地址、绑定和协定特性。</span><span class="sxs-lookup"><span data-stu-id="1da1d-104">A standard endpoint will have one or more of the address, binding and contract attributes set to a fixed value.</span></span> <span data-ttu-id="1da1d-105">例如，发现终结点具有固定的协定。</span><span class="sxs-lookup"><span data-stu-id="1da1d-105">For example, in the discovery endpoint the contract is fixed.</span></span> <span data-ttu-id="1da1d-106">此外，还可以使用标准终结点用新属性扩展服务终结点，这与定义自定义绑定相似。</span><span class="sxs-lookup"><span data-stu-id="1da1d-106">You can also use standard endpoints to extend service endpoint with new properties similar to defining custom bindings.</span></span>  
   
- \<system.ServiceModel\>  
+ <span data-ttu-id="1da1d-107">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1da1d-107">\<system.ServiceModel></span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="1da1d-108">语法</span><span class="sxs-lookup"><span data-stu-id="1da1d-108">Syntax</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
     <standardEndpoints>  
-  
     </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## 特性和元素  
- 下列各节描述了特性、子元素和父元素。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1da1d-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1da1d-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="1da1d-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1da1d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 特性  
- 无。  
+### <a name="attributes"></a><span data-ttu-id="1da1d-111">特性</span><span class="sxs-lookup"><span data-stu-id="1da1d-111">Attributes</span></span>  
+ <span data-ttu-id="1da1d-112">无。</span><span class="sxs-lookup"><span data-stu-id="1da1d-112">None.</span></span>  
   
-### 子元素  
+### <a name="child-elements"></a><span data-ttu-id="1da1d-113">子元素</span><span class="sxs-lookup"><span data-stu-id="1da1d-113">Child Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|[\<announcementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|定义具有固定公告协定的标准终结点。  当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。  [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务在 [\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) 元素中指定公告终结点，并使用 AnnouncementClient 执行公告。  如果客户端希望侦听来自其他服务的公告，它实际充当的是 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务；因此，必须在 [\<服务\>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) 节中为该客户端配置公告终结点。|  
-|[\<discoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|定义具有固定发现协定的标准终结点。  将此元素添加到服务配置后，该元素将指定侦听发现消息的位置。  将此元素添加到客户端配置后，该元素将指定发送发现查询的位置。|  
-|[\<dynamicEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/dynamicendpoint.md)|此配置元素定义一个标准终结点，应用程序通过利用该终结点包含的信息，能够充当可在运行时动态查找终结点地址的客户端程序。|  
-|[\<mexEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/mexendpoint.md)|定义具有固定 IMetadataExchange 协定的标准终结点。  由于所有元数据交换终结点都指定 IMetadataExchange 作为其协定，因此可以使用此标准终结点，而不必定义您自己的终结点。|  
-|[\<udpAnnoucementEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|定义由服务用于通过 UDP 绑定发送公告消息的标准终结点。  它具有固定协定并支持两个发现版本。  此外，根据 WS\-Discovery 规范（WS\-Discovery 2005 年 4 月版或 WS\-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。  您可以指定用于发送和接收公告消息的多播地址。|  
-|[\<udpDiscoveryEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|定义通过 UDP 多播绑定为发现操作预先配置的标准终结点。  此终结点具有固定协定并支持两个 WS\-Discovery 协议版本。  此外，根据 WS\-Discovery 规范（WS\-Discovery 2005 年 4 月版或 WS\-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址。|  
-|[\<webHttpEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpendpoint.md)|定义带有自动添加 [\<webHttp\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 行为的固定 [\<webHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 绑定的标准终结点。  在编写 REST 服务时，请使用此终结点。|  
-|[\<webScriptEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webscriptendpoint.md)|定义带有自动添加 [\<enableWebScript\>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 行为的固定 [\<webHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 绑定的标准终结点。  在编写从 ASP.NET AJAX 应用程序中调用的服务时，请使用此终结点。|  
-|[\<workflowControlEndpoint\>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowcontrolendpoint.md)|定义用于控制工作流实例的执行（创建、运行、挂起、终止等）的标准终结点。|  
+|<span data-ttu-id="1da1d-114">元素</span><span class="sxs-lookup"><span data-stu-id="1da1d-114">Element</span></span>|<span data-ttu-id="1da1d-115">描述</span><span class="sxs-lookup"><span data-stu-id="1da1d-115">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="1da1d-116">\<announcementEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-116">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="1da1d-117">定义具有固定公告协定的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-117">Defines a standard endpoint with a fixed announcement contract.</span></span> <span data-ttu-id="1da1d-118">当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。</span><span class="sxs-lookup"><span data-stu-id="1da1d-118">A service can optionally announce its availability by sending an online and offline announcement message when it is opened or closed respectively.</span></span> <span data-ttu-id="1da1d-119">A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服务指定公告终结点中的[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。</span><span class="sxs-lookup"><span data-stu-id="1da1d-119">A [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service specifies the announcement endpoints in the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element and uses the AnnouncementClient to perform the announcements.</span></span> <span data-ttu-id="1da1d-120">客户端希望侦听从其他服务公告实际充当[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务; 因此，你需要将公告终结点配置为在该客户端[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。</span><span class="sxs-lookup"><span data-stu-id="1da1d-120">A client wishing to listen for the announcement from other service is actually acting as a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service; thus you have to configure the announcement endpoints for that client in the [\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.</span></span>|  
+|[<span data-ttu-id="1da1d-121">\<discoveryEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-121">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="1da1d-122">定义具有固定发现协定的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-122">Defines a standard endpoint with a fixed discovery contract.</span></span> <span data-ttu-id="1da1d-123">将此元素添加到服务配置后，该元素将指定侦听发现消息的位置。</span><span class="sxs-lookup"><span data-stu-id="1da1d-123">When added to the service configuration, it specifies where to listen for the discovery messages.</span></span> <span data-ttu-id="1da1d-124">将此元素添加到客户端配置后，该元素将指定发送发现查询的位置。</span><span class="sxs-lookup"><span data-stu-id="1da1d-124">When added to the client configuration it specifies where to send the discovery queries.</span></span>|  
+|[<span data-ttu-id="1da1d-125">\<dynamicEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-125">\<dynamicEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/dynamicendpoint.md)|<span data-ttu-id="1da1d-126">此配置元素定义一个标准终结点，应用程序通过利用该终结点包含的信息，能够充当可在运行时动态查找终结点地址的客户端程序。</span><span class="sxs-lookup"><span data-stu-id="1da1d-126">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>|  
+|[<span data-ttu-id="1da1d-127">\<mexEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-127">\<mexEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/mexendpoint.md)|<span data-ttu-id="1da1d-128">定义具有固定 IMetadataExchange 协定的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-128">Defines a standard endpoint with a fixed IMetadataExchange contract.</span></span> <span data-ttu-id="1da1d-129">由于所有元数据交换终结点都指定 IMetadataExchange 作为其协定，因此可以使用此标准终结点，而不必定义您自己的终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-129">Since all metadata exchange endpoints specify IMetadataExchange as their contract, you can use this standard point instead of defining one for yourself.</span></span>|  
+|[<span data-ttu-id="1da1d-130">\<udpAnnoucementEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-130">\<udpAnnoucementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|<span data-ttu-id="1da1d-131">定义由服务用于通过 UDP 绑定发送公告消息的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-131">Defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="1da1d-132">它具有固定协定并支持两个发现版本。</span><span class="sxs-lookup"><span data-stu-id="1da1d-132">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="1da1d-133">此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。</span><span class="sxs-lookup"><span data-stu-id="1da1d-133">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="1da1d-134">您可以指定用于发送和接收公告消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="1da1d-134">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>|  
+|[<span data-ttu-id="1da1d-135">\<udpDiscoveryEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-135">\<udpDiscoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|<span data-ttu-id="1da1d-136">定义通过 UDP 多播绑定为发现操作预先配置的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-136">Defines a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="1da1d-137">此终结点具有固定协定并支持两个 WS-Discovery 协议版本。</span><span class="sxs-lookup"><span data-stu-id="1da1d-137">This endpoint has a fixed contract and supports two WS-Discovery protocol versions.</span></span> <span data-ttu-id="1da1d-138">此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址。</span><span class="sxs-lookup"><span data-stu-id="1da1d-138">In addition, it has a fixed UDP binding and a default address as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery V1.1).</span></span>|  
+|[<span data-ttu-id="1da1d-139">\<webHttpEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-139">\<webHttpEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpendpoint.md)|<span data-ttu-id="1da1d-140">定义具有固定的标准终结点[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)绑定，它自动添加[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行为。</span><span class="sxs-lookup"><span data-stu-id="1da1d-140">Defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="1da1d-141">在编写 REST 服务时，请使用此终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-141">Use this endpoint when writing a REST service.</span></span>|  
+|[<span data-ttu-id="1da1d-142">\<webScriptEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-142">\<webScriptEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webscriptendpoint.md)|<span data-ttu-id="1da1d-143">定义具有固定的标准终结点[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)绑定，它自动添加[ \<enableWebScript >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)行为。</span><span class="sxs-lookup"><span data-stu-id="1da1d-143">Defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<enableWebScript>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) behavior.</span></span> <span data-ttu-id="1da1d-144">在编写从 ASP.NET AJAX 应用程序中调用的服务时，请使用此终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-144">Use this endpoint when you are writing a service that is called from an ASP.NET AJAX application.</span></span>|  
+|[<span data-ttu-id="1da1d-145">\<workflowControlEndpoint ></span><span class="sxs-lookup"><span data-stu-id="1da1d-145">\<workflowControlEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowcontrolendpoint.md)|<span data-ttu-id="1da1d-146">定义用于控制工作流实例的执行（创建、运行、挂起、终止等）的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="1da1d-146">Defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>|  
   
-### 父元素  
+### <a name="parent-elements"></a><span data-ttu-id="1da1d-147">父元素</span><span class="sxs-lookup"><span data-stu-id="1da1d-147">Parent Elements</span></span>  
   
-|元素|描述|  
-|--------|--------|  
-|\<system.ServiceModel\>|所有 WCF 配置元素的根元素。|  
+|<span data-ttu-id="1da1d-148">元素</span><span class="sxs-lookup"><span data-stu-id="1da1d-148">Element</span></span>|<span data-ttu-id="1da1d-149">描述</span><span class="sxs-lookup"><span data-stu-id="1da1d-149">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="1da1d-150">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1da1d-150">\<system.ServiceModel></span></span>|<span data-ttu-id="1da1d-151">所有 WCF 配置元素的根元素。</span><span class="sxs-lookup"><span data-stu-id="1da1d-151">The root element of all WCF configuration elements.</span></span>|  
   
-## 请参阅  
- [标准终结点](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+## <a name="see-also"></a><span data-ttu-id="1da1d-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1da1d-152">See Also</span></span>  
+ [<span data-ttu-id="1da1d-153">标准终结点</span><span class="sxs-lookup"><span data-stu-id="1da1d-153">Standard Endpoints</span></span>](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

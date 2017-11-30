@@ -1,46 +1,51 @@
 ---
-title: "如何：在运行时修改图片的大小或位置（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "示例 [Windows 窗体], PictureBox 控件"
-  - "图像 [Windows 窗体], 控制 PictureBox 控件中的放置操作 [Windows 窗体]"
-  - "PictureBox 控件 [Windows 窗体], 图片大小和对齐方式"
-  - "pictures, 控制 PictureBox 控件中的放置操作 [Windows 窗体]"
+title: "如何：在运行时修改图片的大小或位置（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], controlling placement in PictureBox control [Windows Forms]
+- examples [Windows Forms], PictureBox control
+- PictureBox control [Windows Forms], picture size and alignment
+- pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在运行时修改图片的大小或位置（Windows 窗体）
-如果您在窗体上使用 Windows 窗体 <xref:System.Windows.Forms.PictureBox> 控件，则可将其 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 属性设置为：  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a><span data-ttu-id="525df-102">如何：在运行时修改图片的大小或位置（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="525df-102">How to: Modify the Size or Placement of a Picture at Run Time (Windows Forms)</span></span>
+<span data-ttu-id="525df-103">如果你使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件在窗体中，可以设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到属性：</span><span class="sxs-lookup"><span data-stu-id="525df-103">If you use the Windows Forms <xref:System.Windows.Forms.PictureBox> control on a form, you can set the <xref:System.Windows.Forms.PictureBox.SizeMode%2A> property on it to:</span></span>  
   
--   将图片的左上角与控件的左上角对齐  
+-   <span data-ttu-id="525df-104">将图片的左上的角的控件的左上角对齐</span><span class="sxs-lookup"><span data-stu-id="525df-104">Align the picture's upper left corner with the control's upper left corner</span></span>  
   
--   使图片在控件内居中  
+-   <span data-ttu-id="525df-105">使控件内的图片居中</span><span class="sxs-lookup"><span data-stu-id="525df-105">Center the picture within the control</span></span>  
   
--   调整控件的大小以适合其显示的图片  
+-   <span data-ttu-id="525df-106">调整控件以适应其显示的图片的大小</span><span class="sxs-lookup"><span data-stu-id="525df-106">Adjust the size of the control to fit the picture it displays</span></span>  
   
--   拉伸所显示的任何图片以适合控件  
+-   <span data-ttu-id="525df-107">拉伸以适合控件显示的任何图片</span><span class="sxs-lookup"><span data-stu-id="525df-107">Stretch any picture it displays to fit the control</span></span>  
   
- 拉伸图片（尤其是位图格式的图片）可能导致图像质量受损。  图元文件（运行时绘制图像的图形指令列表）比位图更适合于拉伸图片。  
+ <span data-ttu-id="525df-108">拉伸图片 （尤其是一个位图格式） 可能导致图像质量丢失。</span><span class="sxs-lookup"><span data-stu-id="525df-108">Stretching a picture (especially one in bitmap format) can produce a loss in image quality.</span></span> <span data-ttu-id="525df-109">图元文件，它们是在运行时绘制图像的图形说明的列表，可更好适用于拉伸比位图。</span><span class="sxs-lookup"><span data-stu-id="525df-109">Metafiles, which are lists of graphics instructions for drawing images at run time, are better suited for stretching than bitmaps are.</span></span>  
   
-### 在运行时设置 SizeMode 属性  
+### <a name="to-set-the-sizemode-property-at-run-time"></a><span data-ttu-id="525df-110">若要在运行时设置的缩放模式属性</span><span class="sxs-lookup"><span data-stu-id="525df-110">To set the SizeMode property at run time</span></span>  
   
-1.  将 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 设置为 <xref:System.Windows.Forms.PictureBoxSizeMode>（默认值）、<xref:System.Windows.Forms.PictureBoxSizeMode>、<xref:System.Windows.Forms.PictureBoxSizeMode> 或 <xref:System.Windows.Forms.PictureBoxSizeMode>。  <xref:System.Windows.Forms.PictureBoxSizeMode> 表示将图像放置在控件的左上角；如果图像比控件大，则会对其下边缘和右边缘进行剪裁。  <xref:System.Windows.Forms.PictureBoxSizeMode> 表示图像将在控件中居中放置；如果图像比控件大，则会对图像超出控件的边缘进行剪裁。  <xref:System.Windows.Forms.PictureBoxSizeMode> 表示将控件的大小调整为图像的大小。  <xref:System.Windows.Forms.PictureBoxSizeMode> 则与之相反，它表示将图像的大小调整为控件的大小。  
+1.  <span data-ttu-id="525df-111">设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到<xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（默认值）、 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>， <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>，或<xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。</span><span class="sxs-lookup"><span data-stu-id="525df-111">Set <xref:System.Windows.Forms.PictureBox.SizeMode%2A> to <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (the default), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, or <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>.</span></span> <span data-ttu-id="525df-112"><xref:System.Windows.Forms.PictureBoxSizeMode.Normal>意味着图像应置于控件的左上角;如果图像大于控件，其下限和右边缘被剪切。</span><span class="sxs-lookup"><span data-stu-id="525df-112"><xref:System.Windows.Forms.PictureBoxSizeMode.Normal> means that the image is placed in the control's upper-left corner; if the image is larger than the control, its lower and right edges are clipped.</span></span> <span data-ttu-id="525df-113"><xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>意味着映像控件; 内居中如果图像大于控件，图片的外边缘被剪切。</span><span class="sxs-lookup"><span data-stu-id="525df-113"><xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> means that the image is centered within the control; if the image is larger than the control, the picture's outside edges are clipped.</span></span> <span data-ttu-id="525df-114"><xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>表示控件的大小调整为图像的大小。</span><span class="sxs-lookup"><span data-stu-id="525df-114"><xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> means that the size of the control is adjusted to the size of the image.</span></span> <span data-ttu-id="525df-115"><xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>相反，并表示图像的大小调整到控件的大小。</span><span class="sxs-lookup"><span data-stu-id="525df-115"><xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> is the reverse, and means that the size of the image is adjusted to the size of the control.</span></span>  
   
-     在下面的示例中，图像位置的路径设置是 My Documents 文件夹。  这样做是因为可假定大多数运行 Windows 操作系统的计算机都包含此目录。  这还将允许具有最低系统访问级别的用户安全地运行应用程序。  下面的示例假定一个已添加了 <xref:System.Windows.Forms.PictureBox> 控件的窗体。  
+     <span data-ttu-id="525df-116">在下面的示例中，设置为的位置的路径是映像的我的文档文件夹。</span><span class="sxs-lookup"><span data-stu-id="525df-116">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="525df-117">此操作后，因为你可以采用大多数计算机运行 Windows 操作系统，将包含此目录。</span><span class="sxs-lookup"><span data-stu-id="525df-117">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="525df-118">这还使得具有最低系统访问级别的用户能够安全运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="525df-118">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="525df-119">下面的示例假定的窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。</span><span class="sxs-lookup"><span data-stu-id="525df-119">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
     ```vb  
     Private Sub StretchPic()  
@@ -54,7 +59,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Image.gif")  
     }  
-  
     ```  
   
     ```cpp  
@@ -89,9 +92,9 @@ caps.handback.revision: 12
        }  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.PictureBox>   
- [如何：使用设计器加载图片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [PictureBox 控件概述](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [如何：在运行时设置图片](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
- [PictureBox 控件](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="525df-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="525df-120">See Also</span></span>  
+ <xref:System.Windows.Forms.PictureBox>  
+ [<span data-ttu-id="525df-121">如何：使用设计器加载图片</span><span class="sxs-lookup"><span data-stu-id="525df-121">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [<span data-ttu-id="525df-122">PictureBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="525df-122">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="525df-123">如何：在运行时设置图片</span><span class="sxs-lookup"><span data-stu-id="525df-123">How to: Set Pictures at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="525df-124">PictureBox 控件</span><span class="sxs-lookup"><span data-stu-id="525df-124">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

@@ -1,1 +1,1 @@
-公共语言规范 (CLS)
+<span data-ttu-id="1f71f-101">公共语言规范 (CLS)</span><span class="sxs-lookup"><span data-stu-id="1f71f-101">Common Language Specification (CLS)</span></span>

@@ -1,1 +1,1 @@
-WPF 图像处理
+<span data-ttu-id="16466-101">WPF 图像处理</span><span class="sxs-lookup"><span data-stu-id="16466-101">WPF Imaging</span></span>

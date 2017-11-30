@@ -1,30 +1,28 @@
 ---
-title: "声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc32039"
-  - "bc32039"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32039"
+title: "声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc32039
+- bc32039
+helpviewer_keywords: BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0635e1b18b24a241fabad6d67da34f8dde9530db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-`For Each` 循环使用一个数组作为其*元素* 迭代变量，但会初始化该数组。  
+# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="dd3f7-102">声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值</span><span class="sxs-lookup"><span data-stu-id="dd3f7-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
+<span data-ttu-id="dd3f7-103">A`For Each`循环使用数组作为其*元素*迭代变量但初始化该数组。</span><span class="sxs-lookup"><span data-stu-id="dd3f7-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
   
- 下面的语句演示此错误是如何生成的。  
+ <span data-ttu-id="dd3f7-104">以下语句显示可以如何生成此错误。</span><span class="sxs-lookup"><span data-stu-id="dd3f7-104">The following statements show how this error can be generated.</span></span>  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -32,15 +30,15 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- 第一条 `For Each` 语句是访问 `arrayList` 的元素的正确方法。  第二条 `For Each` 语句生成此错误。  
+ <span data-ttu-id="dd3f7-105">第一个`For Each`语句访问的元素的正确方法是`arrayList`。</span><span class="sxs-lookup"><span data-stu-id="dd3f7-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="dd3f7-106">第二个`For Each`语句会生成此错误。</span><span class="sxs-lookup"><span data-stu-id="dd3f7-106">The second `For Each` statement generates this error.</span></span>  
   
- **错误 ID：**BC32039  
+ <span data-ttu-id="dd3f7-107">**错误 ID:** BC32039</span><span class="sxs-lookup"><span data-stu-id="dd3f7-107">**Error ID:** BC32039</span></span>  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dd3f7-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="dd3f7-108">To correct this error</span></span>  
   
--   从*元素* 迭代变量的声明中移除该初始化。  
+-   <span data-ttu-id="dd3f7-109">从的声明中删除初始化*元素*迭代变量。</span><span class="sxs-lookup"><span data-stu-id="dd3f7-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
   
-## 请参阅  
- [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [集合](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="dd3f7-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dd3f7-110">See Also</span></span>  
+ [<span data-ttu-id="dd3f7-111">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="dd3f7-111">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="dd3f7-112">阵列</span><span class="sxs-lookup"><span data-stu-id="dd3f7-112">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="dd3f7-113">集合</span><span class="sxs-lookup"><span data-stu-id="dd3f7-113">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)

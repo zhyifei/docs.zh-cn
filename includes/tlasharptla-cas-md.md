@@ -1,1 +1,1 @@
-代码访问安全性 (CAS)
+<span data-ttu-id="94577-101">代码访问安全性 (CAS)</span><span class="sxs-lookup"><span data-stu-id="94577-101">Code Access Security (CAS)</span></span>

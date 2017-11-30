@@ -1,54 +1,57 @@
 ---
-title: "将 XML 架构 (XSD) 约束映射到 DataSet 约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将关键 XML 架构 (XSD) 约束映射到数据集约束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9ac8e64c02d96450d41233cfbe65e1db839df9e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 将 XML 架构 (XSD) 约束映射到 DataSet 约束
-XML 架构定义语言 \(XSD\) 允许对它所定义的元素和属性指定约束。  在将 XML 架构映射到 <xref:System.Data.DataSet> 中的关系架构时，XML 架构约束将映射到 **DataSet** 中表和列上的相应关系约束。  
+# <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="6bff5-102">将关键 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="6bff5-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="6bff5-103">XML 架构定义语言 (XSD) 允许对它所定义的元素和属性指定约束。</span><span class="sxs-lookup"><span data-stu-id="6bff5-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="6bff5-104">映射到关系架构中的 XML 架构时<xref:System.Data.DataSet>，XML 架构约束将映射到上的表和列中的相应关系约束**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  
   
- 本节讨论以下 XML 架构约束的映射：  
+ <span data-ttu-id="6bff5-105">本节讨论以下 XML 架构约束的映射：</span><span class="sxs-lookup"><span data-stu-id="6bff5-105">This section discusses the mapping of the following XML Schema constraints:</span></span>  
   
--   使用 **unique** 元素指定的唯一约束。  
+-   <span data-ttu-id="6bff5-106">使用指定的唯一性约束**唯一**元素。</span><span class="sxs-lookup"><span data-stu-id="6bff5-106">The uniqueness constraint specified using the **unique** element.</span></span>  
   
--   使用 **key** 元素指定的键约束。  
+-   <span data-ttu-id="6bff5-107">使用指定的键约束**密钥**元素。</span><span class="sxs-lookup"><span data-stu-id="6bff5-107">The key constraint specified using the **key** element.</span></span>  
   
--   使用 **keyref** 元素指定的 keyref 约束。  
+-   <span data-ttu-id="6bff5-108">使用指定的 keyref 约束**keyref**元素。</span><span class="sxs-lookup"><span data-stu-id="6bff5-108">The keyref constraint specified using the **keyref** element.</span></span>  
   
- 使用对元素或属性的约束，可以对任何文档实例中元素的值指定特定的限制。  例如，对架构中 **Customer** 元素的 **CustomerID** 子元素的某一键约束指示 **CustomerID** 子元素的值必须在任何文档实例中都是唯一的，并且不允许空值。  
+ <span data-ttu-id="6bff5-109">使用对元素或属性的约束，可以对任何文档实例中元素的值指定特定的限制。</span><span class="sxs-lookup"><span data-stu-id="6bff5-109">By using a constraint on an element or attribute, you specify certain restrictions on the values of the element in any instance of the document.</span></span> <span data-ttu-id="6bff5-110">例如上的键约束**CustomerID**的子元素**客户**架构中的元素指示的值**CustomerID**子元素必须是在任何文档实例中，唯一且不允许 null 值。</span><span class="sxs-lookup"><span data-stu-id="6bff5-110">For example, a key constraint on a **CustomerID** child element of a **Customer** element in the schema indicates that the values of the **CustomerID** child element must be unique in any document instance, and that null values are not allowed.</span></span>  
   
- 为了在文档中建立关系，也可以在文档中的元素和属性之间指定约束。  key 和 keyref 约束用于在架构中指定文档中的约束，从而生成文档元素和属性之间的关系。  
+ <span data-ttu-id="6bff5-111">为了在文档中建立关系，也可以在文档中的元素和属性之间指定约束。</span><span class="sxs-lookup"><span data-stu-id="6bff5-111">Constraints can also be specified between elements and attributes in a document, in order to establish a relationship within the document.</span></span> <span data-ttu-id="6bff5-112">key 和 keyref 约束用于在架构中指定文档中的约束，从而生成文档元素和属性之间的关系。</span><span class="sxs-lookup"><span data-stu-id="6bff5-112">The key and keyref constraints are used in the schema to specify the constraints within the document, resulting in a relationship between document elements and attributes.</span></span>  
   
- 映射进程将这些架构约束转换为在 **DataSet** 中创建的表上的相应约束。  
+ <span data-ttu-id="6bff5-113">映射过程将这些架构约束转换内创建的表上的相应约束为**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-113">The mapping process converts these schema constraints into appropriate constraints on the tables created within the **DataSet**.</span></span>  
   
-## 本节内容  
- [将唯一 XML 架构 \(XSD\) 约束映射为数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 描述用于在 **DataSet** 中创建唯一约束的 XML 架构元素。  
+## <a name="in-this-section"></a><span data-ttu-id="6bff5-114">本节内容</span><span class="sxs-lookup"><span data-stu-id="6bff5-114">In This Section</span></span>  
+ [<span data-ttu-id="6bff5-115">将唯一 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="6bff5-115">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="6bff5-116">描述用于创建唯一约束中的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-116">Describes the XML Schema elements used to create unique constraints in a **DataSet**.</span></span>  
   
- [将键 XML 架构 \(XSD\) 约束映射为数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 描述用于在 **DataSet** 中创建键约束（不允许空值的唯一约束）的 XML 架构元素。  
+ [<span data-ttu-id="6bff5-117">将密钥 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="6bff5-117">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="6bff5-118">介绍用于创建键约束 （唯一约束不允许空值） 的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-118">Describes the XML Schema elements used to create key constraints (unique constraints where null values are not allowed) in a **DataSet**.</span></span>  
   
- [将 keyref XML 架构 \(XSD\) 约束映射为数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- 描述用于在 **DataSet** 中创建 keyref（外键）约束的 XML 架构元素。  
+ [<span data-ttu-id="6bff5-119">将 keyref XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="6bff5-119">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="6bff5-120">描述用于创建 keyref （外键） 约束中的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-120">Describes the XML Schema elements used to create keyref (foreign key) constraints in a **DataSet**.</span></span>  
   
-## 相关章节  
- [从 XML 架构 \(XSD\) 派生数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- 描述从 XSD 架构创建的 **DataSet** 的关系结构（即架构）。  
+## <a name="related-sections"></a><span data-ttu-id="6bff5-121">相关章节</span><span class="sxs-lookup"><span data-stu-id="6bff5-121">Related Sections</span></span>  
+ [<span data-ttu-id="6bff5-122">从 XML 架构 (XSD) 派生数据集关系结构</span><span class="sxs-lookup"><span data-stu-id="6bff5-122">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="6bff5-123">描述的关系结构，即架构，**数据集**从 XSD 架构创建。</span><span class="sxs-lookup"><span data-stu-id="6bff5-123">Describes the relational structure, or schema, of a **DataSet** that is created from XSD schema.</span></span>  
   
- [从 XML 架构 \(XSD\) 生成 DataSet 关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- 描述用于在 **DataSet** 中各表列间创建关系的 XML 架构元素。  
+ [<span data-ttu-id="6bff5-124">从 XML 架构 (XSD) 生成数据集关系</span><span class="sxs-lookup"><span data-stu-id="6bff5-124">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ <span data-ttu-id="6bff5-125">描述用于创建表中各列之间的关系的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="6bff5-125">Describes the XML Schema elements used to create relations between table columns in a **DataSet**.</span></span>  
   
-## 请参阅  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6bff5-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6bff5-126">See Also</span></span>  
+ [<span data-ttu-id="6bff5-127">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="6bff5-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

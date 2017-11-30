@@ -1,1 +1,1 @@
-三维
+<span data-ttu-id="5ec08-101">三维</span><span class="sxs-lookup"><span data-stu-id="5ec08-101">3-D</span></span>

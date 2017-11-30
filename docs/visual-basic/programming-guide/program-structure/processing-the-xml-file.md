@@ -1,71 +1,53 @@
 ---
-title: "处理 XML 文件 (Visual Basic 中) |Microsoft 文档"
+title: "处理 XML 文件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- XML comments, parsing [Visual Basic]
+helpviewer_keywords: XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72b2832d0131adf39a37ebd9297b43fb34ea49ba
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d44f58951d99f1b4b551af75dc0a0e895e337e2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="processing-the-xml-file-visual-basic"></a>处理 XML 文件 (Visual Basic)
-编译器在代码中被标记为生成文档中将生成每个构造一个 ID 字符串。 (有关如何标记您的代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)。)ID 字符串唯一标识指定的构造。 处理 XML 文件的程序可以使用 ID 字符串标识对应[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]元数据/反射项。  
+# <a name="processing-the-xml-file-visual-basic"></a><span data-ttu-id="373dc-102">处理 XML 文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="373dc-102">Processing the XML File (Visual Basic)</span></span>
+<span data-ttu-id="373dc-103">编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。</span><span class="sxs-lookup"><span data-stu-id="373dc-103">The compiler generates an ID string for each construct in your code that is tagged to generate documentation.</span></span> <span data-ttu-id="373dc-104">(有关如何标记代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)。)ID 字符串唯一标识构造。</span><span class="sxs-lookup"><span data-stu-id="373dc-104">(For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) The ID string uniquely identifies the construct.</span></span> <span data-ttu-id="373dc-105">处理 XML 文件的程序可以使用的 ID 字符串以标识相应[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]元数据/反射项。</span><span class="sxs-lookup"><span data-stu-id="373dc-105">Programs that process the XML file can use the ID string to identify the corresponding [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metadata/reflection item.</span></span>  
   
- XML 文件不是代码的分层表示形式中;它是与每个元素生成的 ID 的平面列表。  
+ <span data-ttu-id="373dc-106">XML 文件不是代码的你; 分层表示形式它是与每个元素的生成 ID 的平面列表。</span><span class="sxs-lookup"><span data-stu-id="373dc-106">The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.</span></span>  
   
- 在生成 ID 字符串时，编译器将遵循以下规则︰  
+ <span data-ttu-id="373dc-107">编译器在生成 ID 字符串时应遵循以下规则：</span><span class="sxs-lookup"><span data-stu-id="373dc-107">The compiler observes the following rules when it generates the ID strings:</span></span>  
   
--   在字符串中不放置任何空白。  
+-   <span data-ttu-id="373dc-108">在字符串中不放置任何空格。</span><span class="sxs-lookup"><span data-stu-id="373dc-108">No white space is placed in the string.</span></span>  
   
--   ID 字符串的第一部分标识的那类成员标识，与单个字符后跟冒号。 使用下面的成员类型。  
+-   <span data-ttu-id="373dc-109">ID 字符串的第一部分标识的标识，与单个字符跟一个冒号的成员的类型。</span><span class="sxs-lookup"><span data-stu-id="373dc-109">The first part of the ID string identifies the kind of member being identified, with a single character followed by a colon.</span></span> <span data-ttu-id="373dc-110">使用以下成员类型。</span><span class="sxs-lookup"><span data-stu-id="373dc-110">The following member types are used.</span></span>  
   
-|字符|描述|  
+|<span data-ttu-id="373dc-111">字符</span><span class="sxs-lookup"><span data-stu-id="373dc-111">Character</span></span>|<span data-ttu-id="373dc-112">描述</span><span class="sxs-lookup"><span data-stu-id="373dc-112">Description</span></span>|  
 |---|---|  
-|N|namespace<br /><br /> 无法将文档注释添加到命名空间中，但您可以使 CREF 引用到它们，在支持的情况。|  
-|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`,`Delegate`|  
-|F|字段︰`Dim`|  
-|P|属性︰ `Property` （包括默认属性）|  
-|M|method: `Sub`, `Function`, `Declare`,`Operator`|  
-|E|事件︰`Event`|  
-|!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]编译器将生成链接不能解决的错误信息。|  
+|<span data-ttu-id="373dc-113">N</span><span class="sxs-lookup"><span data-stu-id="373dc-113">N</span></span>|<span data-ttu-id="373dc-114">namespace</span><span class="sxs-lookup"><span data-stu-id="373dc-114">namespace</span></span><br /><br /> <span data-ttu-id="373dc-115">无法将文档注释添加到命名空间中，但可以对它们的 CREF 引用支持的位置。</span><span class="sxs-lookup"><span data-stu-id="373dc-115">You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.</span></span>|  
+|<span data-ttu-id="373dc-116">T</span><span class="sxs-lookup"><span data-stu-id="373dc-116">T</span></span>|<span data-ttu-id="373dc-117">类型： `Class`， `Module`， `Interface`， `Structure`， `Enum`，`Delegate`</span><span class="sxs-lookup"><span data-stu-id="373dc-117">type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`</span></span>|  
+|<span data-ttu-id="373dc-118">F</span><span class="sxs-lookup"><span data-stu-id="373dc-118">F</span></span>|<span data-ttu-id="373dc-119">字段：`Dim`</span><span class="sxs-lookup"><span data-stu-id="373dc-119">field: `Dim`</span></span>|  
+|<span data-ttu-id="373dc-120">P</span><span class="sxs-lookup"><span data-stu-id="373dc-120">P</span></span>|<span data-ttu-id="373dc-121">属性： `Property` （包括默认属性）</span><span class="sxs-lookup"><span data-stu-id="373dc-121">property: `Property` (including default properties)</span></span>|  
+|<span data-ttu-id="373dc-122">M</span><span class="sxs-lookup"><span data-stu-id="373dc-122">M</span></span>|<span data-ttu-id="373dc-123">方法： `Sub`， `Function`， `Declare`，`Operator`</span><span class="sxs-lookup"><span data-stu-id="373dc-123">method: `Sub`, `Function`, `Declare`, `Operator`</span></span>|  
+|<span data-ttu-id="373dc-124">E</span><span class="sxs-lookup"><span data-stu-id="373dc-124">E</span></span>|<span data-ttu-id="373dc-125">事件：`Event`</span><span class="sxs-lookup"><span data-stu-id="373dc-125">event: `Event`</span></span>|  
+|<span data-ttu-id="373dc-126">!</span><span class="sxs-lookup"><span data-stu-id="373dc-126">!</span></span>|<span data-ttu-id="373dc-127">错误字符串</span><span class="sxs-lookup"><span data-stu-id="373dc-127">error string</span></span><br /><br /> <span data-ttu-id="373dc-128">字符串的其余部分提供有关错误的信息。</span><span class="sxs-lookup"><span data-stu-id="373dc-128">The rest of the string provides information about the error.</span></span> <span data-ttu-id="373dc-129">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将生成错误无法解析的链接的信息。</span><span class="sxs-lookup"><span data-stu-id="373dc-129">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler generates error information for links that cannot be resolved.</span></span>|  
   
--   第二部分`String`开始命名空间根处的项的完全限定名称。 用句点分隔的项、 其封闭类型和命名空间的名称。 如果项本身的名称包含句点，它们将取代通过数字符号 （#）。 假定没有项直接在其名称中包含数字符号。 例如的完全限定的名的`String`构造函数将`System.String.#ctor`。  
+-   <span data-ttu-id="373dc-130">第二部分`String`是项，在命名空间的根目录的完全限定的名称。</span><span class="sxs-lookup"><span data-stu-id="373dc-130">The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace.</span></span> <span data-ttu-id="373dc-131">用句点分隔的项、 其封闭类型和命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="373dc-131">The name of the item, its enclosing type(s), and the namespace are separated by periods.</span></span> <span data-ttu-id="373dc-132">如果项本身的名称包含句点，因为它们被替代数字符号 （#）。</span><span class="sxs-lookup"><span data-stu-id="373dc-132">If the name of the item itself contains periods, they are replaced by the number sign (#).</span></span> <span data-ttu-id="373dc-133">假定任何项，直接在其名称中有数字符号。</span><span class="sxs-lookup"><span data-stu-id="373dc-133">It is assumed that no item has a number sign directly in its name.</span></span> <span data-ttu-id="373dc-134">例如，完全限定的名称的`String`构造函数将`System.String.#ctor`。</span><span class="sxs-lookup"><span data-stu-id="373dc-134">For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.</span></span>  
   
--   对于属性和方法，如果该方法的参数括在括号中的参数列表将遵循。 如果不有任何参数，则没有括号。 参数由逗号分隔。 编码的每个参数都直接遵循如何编码中[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]签名。  
+-   <span data-ttu-id="373dc-135">对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。</span><span class="sxs-lookup"><span data-stu-id="373dc-135">For properties and methods, if there are arguments to the method, the argument list enclosed in parentheses follows.</span></span> <span data-ttu-id="373dc-136">如果没有任何自变量，则不会出现括号。</span><span class="sxs-lookup"><span data-stu-id="373dc-136">If there are no arguments, no parentheses are present.</span></span> <span data-ttu-id="373dc-137">确保自变量之间用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="373dc-137">The arguments are separated by commas.</span></span> <span data-ttu-id="373dc-138">编码的每个自变量都直接遵循中的编码方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]签名。</span><span class="sxs-lookup"><span data-stu-id="373dc-138">The encoding of each argument follows directly how it is encoded in a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] signature.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码演示的 ID 为类的字符串，并生成它的成员。  
+## <a name="example"></a><span data-ttu-id="373dc-139">示例</span><span class="sxs-lookup"><span data-stu-id="373dc-139">Example</span></span>  
+ <span data-ttu-id="373dc-140">下面的代码演示如何的 ID 字符串的类，并生成其成员。</span><span class="sxs-lookup"><span data-stu-id="373dc-140">The following code shows how the ID strings for a class and its members are generated.</span></span>  
   
- [!code-vb[VbVbcnXmlDocComments #&10;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   
- [如何：创建 XML 文档](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+## <a name="see-also"></a><span data-ttu-id="373dc-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="373dc-141">See Also</span></span>  
+ [<span data-ttu-id="373dc-142">/doc</span><span class="sxs-lookup"><span data-stu-id="373dc-142">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)  
+ [<span data-ttu-id="373dc-143">如何：创建 XML 文档</span><span class="sxs-lookup"><span data-stu-id="373dc-143">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

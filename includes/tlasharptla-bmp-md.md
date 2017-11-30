@@ -1,1 +1,1 @@
-位图 (BMP)
+<span data-ttu-id="3f002-101">位图 (BMP)</span><span class="sxs-lookup"><span data-stu-id="3f002-101">bitmap (BMP)</span></span>

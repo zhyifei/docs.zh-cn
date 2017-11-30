@@ -1,1 +1,1 @@
-联合图像专家组 (JPEG)
+<span data-ttu-id="94f1a-101">联合图像专家组 (JPEG)</span><span class="sxs-lookup"><span data-stu-id="94f1a-101">Joint Photographics Experts Group (JPEG)</span></span>

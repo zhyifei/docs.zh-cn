@@ -1,1 +1,1 @@
-图形处理单元 (GPU)
+<span data-ttu-id="31128-101">图形处理单元 (GPU)</span><span class="sxs-lookup"><span data-stu-id="31128-101">graphics processing unit (GPU)</span></span>

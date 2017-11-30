@@ -1,1 +1,1 @@
-可交换图像文件 (Exif)
+<span data-ttu-id="a2686-101">可交换图像文件 (Exif)</span><span class="sxs-lookup"><span data-stu-id="a2686-101">Exchangeable image file (Exif)</span></span>

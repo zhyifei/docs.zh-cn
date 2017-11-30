@@ -1,51 +1,43 @@
 ---
-title: "LINQ to XML 轴 (Visual Basic 中) |Microsoft 文档"
+title: "LINQ to XML 轴 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4d6466a78c3a8e9d21e30f2d3cf8a49ed89dafbf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 119c4808b6d436c2227331dbb3ab9c4077ff56f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-axes-visual-basic"></a>LINQ to XML 轴 (Visual Basic)
-创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。  
+# <a name="linq-to-xml-axes-visual-basic"></a><span data-ttu-id="c0108-102">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-102">LINQ to XML Axes (Visual Basic)</span></span>
+<span data-ttu-id="c0108-103">创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。</span><span class="sxs-lookup"><span data-stu-id="c0108-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  
   
- 在编写查询之前，必须了解 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 轴。 有两类轴方法︰ 第一类，是调用单个方法<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象，或<xref:System.Xml.Linq.XNode>对象。</xref:System.Xml.Linq.XNode> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> 这些方法对单个对象操作，返回的集合<xref:System.Xml.Linq.XElement>， <xref:System.Xml.Linq.XAttribute>，或<xref:System.Xml.Linq.XNode>对象。</xref:System.Xml.Linq.XNode> </xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> 第二类，是对集合操作并返回集合的扩展方法。 这些扩展方法可以：枚举源集合，在集合的每一项上调用适当的轴方法，将结果串联起来。  
+ <span data-ttu-id="c0108-104">在编写查询之前，必须了解 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴。</span><span class="sxs-lookup"><span data-stu-id="c0108-104">Before you can write any queries, you must understand the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes.</span></span> <span data-ttu-id="c0108-105">有两类轴方法：第一类，是调用单个 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象或 <xref:System.Xml.Linq.XNode> 对象的方法。</span><span class="sxs-lookup"><span data-stu-id="c0108-105">There are two kinds of axis methods: First, there are the methods that you call on a single <xref:System.Xml.Linq.XElement> object, <xref:System.Xml.Linq.XDocument> object, or <xref:System.Xml.Linq.XNode> object.</span></span> <span data-ttu-id="c0108-106">这些方法对单个对象操作，返回 <xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 或 <xref:System.Xml.Linq.XNode> 对象的集合。</span><span class="sxs-lookup"><span data-stu-id="c0108-106">These methods operate on a single object and return a collection of <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, or <xref:System.Xml.Linq.XNode> objects.</span></span> <span data-ttu-id="c0108-107">第二类，是对集合操作并返回集合的扩展方法。</span><span class="sxs-lookup"><span data-stu-id="c0108-107">Second, there are extension methods that operate on collections and return collections.</span></span> <span data-ttu-id="c0108-108">这些扩展方法可以：枚举源集合，在集合的每一项上调用适当的轴方法，将结果串联起来。</span><span class="sxs-lookup"><span data-stu-id="c0108-108">The extension methods enumerate the source collection, call the appropriate axis method on each item in the collection, and concatenate the results.</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="c0108-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="c0108-109">In This Section</span></span>  
   
-|主题|描述|  
+|<span data-ttu-id="c0108-110">主题</span><span class="sxs-lookup"><span data-stu-id="c0108-110">Topic</span></span>|<span data-ttu-id="c0108-111">描述</span><span class="sxs-lookup"><span data-stu-id="c0108-111">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 轴概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|介绍轴的定义，并说明如何在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询的上下文中使用轴。|  
-|[如何︰ 检索元素 (LINQ to XML) 的集合 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|引入了<xref:System.Xml.Linq.XContainer.Elements%2A>方法。</xref:System.Xml.Linq.XContainer.Elements%2A> 此方法检索元素的子元素集合。|  
-|[如何︰ 检索元素 (LINQ to XML) 的值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|演示如何获取元素的值。|  
-|[如何︰ 筛选元素名称 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|演示如何在使用轴时筛选元素名称。|  
-|[如何︰ 链接轴方法调用 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|演示如何将调用链接到轴方法。|  
-|[如何︰ 检索单个子元素 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|演示在给定子元素标记名的情况下，如何检索元素的单个子元素。|  
-|[如何︰ 检索特性 (LINQ to XML) 的集合 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|引入了<xref:System.Xml.Linq.XElement.Attributes%2A>方法。</xref:System.Xml.Linq.XElement.Attributes%2A> 此方法检索元素的属性。|  
-|[如何︰ 检索单个特性 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|演示在给定属性名称的情况下，如何检索元素的单个属性。|  
-|[如何︰ 检索特性 (LINQ to XML) 的值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|演示如何获取属性的值。|  
-|[如何︰ 检索浅值的元素 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|演示如何检索元素的浅值。|  
-|[在 Visual Basic (LINQ to XML) 中语言集成的轴](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|总结了[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]集成轴。|  
+|[<span data-ttu-id="c0108-112">LINQ to XML 轴概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-112">LINQ to XML Axes Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|<span data-ttu-id="c0108-113">介绍轴的定义，并说明如何在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询的上下文中使用轴。</span><span class="sxs-lookup"><span data-stu-id="c0108-113">Defines axes, and explains how they are used in the context of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="c0108-114">如何： 检索元素 (LINQ to XML) 的集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-114">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|<span data-ttu-id="c0108-115">介绍 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="c0108-115">Introduces the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="c0108-116">此方法检索元素的子元素集合。</span><span class="sxs-lookup"><span data-stu-id="c0108-116">This method retrieves a collection of the child elements of an element.</span></span>|  
+|[<span data-ttu-id="c0108-117">如何： 检索元素 (LINQ to XML) 的值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-117">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|<span data-ttu-id="c0108-118">演示如何获取元素的值。</span><span class="sxs-lookup"><span data-stu-id="c0108-118">Shows how to get the values of elements.</span></span>|  
+|[<span data-ttu-id="c0108-119">如何： 筛选元素名称 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-119">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|<span data-ttu-id="c0108-120">演示如何在使用轴时筛选元素名称。</span><span class="sxs-lookup"><span data-stu-id="c0108-120">Shows how to filter on element names when using axes.</span></span>|  
+|[<span data-ttu-id="c0108-121">如何： 链接轴方法调用 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-121">How to: Chain Axis Method Calls (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|<span data-ttu-id="c0108-122">演示如何将调用链接到轴方法。</span><span class="sxs-lookup"><span data-stu-id="c0108-122">Shows how to chain calls to axes methods.</span></span>|  
+|[<span data-ttu-id="c0108-123">如何： 检索单个子元素 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-123">How to: Retrieve a Single Child Element (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|<span data-ttu-id="c0108-124">演示在给定子元素标记名的情况下，如何检索元素的单个子元素。</span><span class="sxs-lookup"><span data-stu-id="c0108-124">Shows how to retrieve a single child element of an element, given the tag name of the child element.</span></span>|  
+|[<span data-ttu-id="c0108-125">如何： 检索特性 (LINQ to XML) 的集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-125">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|<span data-ttu-id="c0108-126">介绍 <xref:System.Xml.Linq.XElement.Attributes%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="c0108-126">Introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="c0108-127">此方法检索元素的属性。</span><span class="sxs-lookup"><span data-stu-id="c0108-127">This method retrieves the attributes of an element.</span></span>|  
+|[<span data-ttu-id="c0108-128">如何： 检索单个属性 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-128">How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|<span data-ttu-id="c0108-129">演示在给定属性名称的情况下，如何检索元素的单个属性。</span><span class="sxs-lookup"><span data-stu-id="c0108-129">Shows how to retrieve a single attribute of an element, given the attribute name.</span></span>|  
+|[<span data-ttu-id="c0108-130">如何： 检索特性 (LINQ to XML) 的值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-130">How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|<span data-ttu-id="c0108-131">演示如何获取属性的值。</span><span class="sxs-lookup"><span data-stu-id="c0108-131">Shows how to get the values of attributes.</span></span>|  
+|[<span data-ttu-id="c0108-132">如何： 检索浅值的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-132">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|<span data-ttu-id="c0108-133">演示如何检索元素的浅值。</span><span class="sxs-lookup"><span data-stu-id="c0108-133">Shows how to retrieve the shallow value of an element.</span></span>|  
+|[<span data-ttu-id="c0108-134">语言集成的轴，在 Visual Basic (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c0108-134">Language-Integrated Axes in Visual Basic (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|<span data-ttu-id="c0108-135">总结了[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]集成轴。</span><span class="sxs-lookup"><span data-stu-id="c0108-135">Summarizes the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] integrated axes.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c0108-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c0108-136">See Also</span></span>  
+ [<span data-ttu-id="c0108-137">编程指南 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0108-137">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

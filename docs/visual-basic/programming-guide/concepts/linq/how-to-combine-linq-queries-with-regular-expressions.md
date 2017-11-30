@@ -1,36 +1,27 @@
 ---
-title: "如何：将 LINQ 查询与正则表达式合并 (Visual Basic) | Microsoft Docs"
+title: "如何：将 LINQ 查询与正则表达式合并 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6cf6ee296f142ce50a9448d80ab961dafe86ab4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: MT
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>如何：将 LINQ 查询与正则表达式合并 (Visual Basic)
-此示例演示如何使用 <xref:System.Text.RegularExpressions.Regex> 类在文本字符串中为更复杂的匹配创建正则表达式。 通过 LINQ 查询可以轻松地准确筛选要用正则表达式搜索的文件，并对结果进行改良。  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="c2fed-102">如何：将 LINQ 查询与正则表达式合并 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2fed-102">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>
+<span data-ttu-id="c2fed-103">此示例演示如何使用 <xref:System.Text.RegularExpressions.Regex> 类在文本字符串中为更复杂的匹配创建正则表达式。</span><span class="sxs-lookup"><span data-stu-id="c2fed-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="c2fed-104">通过 LINQ 查询可以轻松地准确筛选要用正则表达式搜索的文件，并对结果进行改良。</span><span class="sxs-lookup"><span data-stu-id="c2fed-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="c2fed-105">示例</span><span class="sxs-lookup"><span data-stu-id="c2fed-105">Example</span></span>  
   
 ```vb  
 Class LinqRegExVB  
@@ -97,12 +88,11 @@ Class LinqRegExVB
 End Class  
 ```  
   
- 请注意，还可以查询 `RegEx` 搜索返回的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 在本例中，只在结果中生成每个匹配项的值。 但是，也可以使用 LINQ 对集合执行筛选、排序和分组等各种操作。 由于 <xref:System.Text.RegularExpressions.MatchCollection> 为非泛型 <xref:System.Collections.IEnumerable> 集合，所以必须显式声明查询中范围变量的类型。  
+ <span data-ttu-id="c2fed-106">请注意，还可以查询 `RegEx` 搜索返回的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。</span><span class="sxs-lookup"><span data-stu-id="c2fed-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="c2fed-107">在本例中，只在结果中生成每个匹配项的值。</span><span class="sxs-lookup"><span data-stu-id="c2fed-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="c2fed-108">但是，也可以使用 LINQ 对集合执行筛选、排序和分组等各种操作。</span><span class="sxs-lookup"><span data-stu-id="c2fed-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="c2fed-109">由于 <xref:System.Text.RegularExpressions.MatchCollection> 为非泛型 <xref:System.Collections.IEnumerable> 集合，所以必须显式声明查询中范围变量的类型。</span><span class="sxs-lookup"><span data-stu-id="c2fed-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="c2fed-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="c2fed-110">Compiling the Code</span></span>  
+ <span data-ttu-id="c2fed-111">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="c2fed-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="c2fed-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c2fed-112">See Also</span></span>  
+ [<span data-ttu-id="c2fed-113">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2fed-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="c2fed-114">LINQ 和文件目录 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2fed-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

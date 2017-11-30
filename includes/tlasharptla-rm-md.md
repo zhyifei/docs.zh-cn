@@ -1,1 +1,1 @@
-Microsoft Windows 权限管理 (RM)
+<span data-ttu-id="7986c-101">Microsoft Windows 权限管理 (RM)</span><span class="sxs-lookup"><span data-stu-id="7986c-101">Microsoft Windows Rights Management (RM)</span></span>

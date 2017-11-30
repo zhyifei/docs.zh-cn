@@ -1,88 +1,71 @@
 ---
-title: "Visual Basic 应用程序模型概述 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Visual Basic 应用程序模型概述"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My.Application object, Visual Basic application model
+- My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0925bb102c148480d82128b91cbf1762de24e7ec
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33b0e01317a6dab18ea03047c146def32b5675ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 应用程序模型概述
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供用于控制 Windows 窗体应用程序的行为的定义完善的模型︰[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]应用程序模型。 此模型包含用于处理应用程序的启动和关闭，以及用于捕获的未经处理异常的事件。 它还提供用于开发单实例应用程序的支持。 应用程序模型是可扩展的，因此需要更多控制的开发人员可以自定义其可重写方法。  
+# <a name="overview-of-the-visual-basic-application-model"></a><span data-ttu-id="4ff9d-102">Visual Basic 应用程序模型概述</span><span class="sxs-lookup"><span data-stu-id="4ff9d-102">Overview of the Visual Basic Application Model</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="4ff9d-103">提供用于控制 Windows 窗体应用程序的行为定义完善的模型：[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]应用程序模型。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-103"> provides a well-defined model for controlling the behavior of Windows Forms applications: the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model.</span></span> <span data-ttu-id="4ff9d-104">此模型包括事件，以处理应用程序的启动和关闭，以及用于捕获未经处理的异常事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-104">This model includes events for handling the application's startup and shutdown, as well as events for catching unhandled exceptions.</span></span> <span data-ttu-id="4ff9d-105">它还提供有关在开发单实例应用程序的支持。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-105">It also provides support for developing single-instance applications.</span></span> <span data-ttu-id="4ff9d-106">应用程序模型是可扩展的，因此需要更多控制权的开发人员可以自定义其可重写的方法。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-106">The application model is extensible, so developers that need more control can customize its overridable methods.</span></span>  
   
-## <a name="uses-for-the-application-model"></a>使用应用程序模型  
- 典型的应用程序需要在启动和关闭时执行任务。 例如，当它启动时，应用程序可以显示初始屏幕、 建立数据库连接、 加载已保存的状态，等等。 应用程序关闭时，它可以关闭数据库连接、 保存的当前状态，等等。 此外，应用程序可以执行特定的代码，该应用程序关闭时的情况下，例如在有未经处理的异常。  
+## <a name="uses-for-the-application-model"></a><span data-ttu-id="4ff9d-107">使用应用程序模型</span><span class="sxs-lookup"><span data-stu-id="4ff9d-107">Uses for the Application Model</span></span>  
+ <span data-ttu-id="4ff9d-108">典型的应用程序需要对它启动和关闭时执行任务。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-108">A typical application needs to perform tasks when it starts up and shuts down.</span></span> <span data-ttu-id="4ff9d-109">例如，当它启动时，应用程序可以显示初始屏幕、 建立数据库连接、 加载已保存的状态，依次类推。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-109">For example, when it starts up, the application can display a splash screen, make database connections, load a saved state, and so on.</span></span> <span data-ttu-id="4ff9d-110">当应用程序关闭时，它可以关闭数据库连接、 保存的当前状态，依次类推。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-110">When the application shuts down, it can close database connections, save the current state, and so on.</span></span> <span data-ttu-id="4ff9d-111">此外，应用程序可以执行特定的代码，应用程序关闭时意外，例如在下未经处理的异常。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-111">In addition, the application can execute specific code when the application shuts down unexpectedly, such as during an unhandled exception.</span></span>  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]应用程序模型，可以轻松创建*单实例*应用程序。 单实例应用程序不同一次可以正常的应用程序中，运行该应用程序只有一个实例。 尝试启动单实例应用程序的另一个实例，将收到通知的原始实例 — 通过`StartupNextInstance`事件，另一次启动尝试所做的。 此通知包括后续实例的命令行参数。 在可以进行的任何初始化之前，应用程序的后续实例之后将关闭。  
+ <span data-ttu-id="4ff9d-112">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]应用程序模型，更加轻松地创建*单实例*应用程序。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-112">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model makes it easy to create a *single-instance* application.</span></span> <span data-ttu-id="4ff9d-113">单实例应用程序不同正常应用程序中，只有一个实例应用程序可以运行一次。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-113">A single-instance application differs from a normal application in that only one instance of the application can be running at a time.</span></span> <span data-ttu-id="4ff9d-114">尝试启动单实例应用程序的另一个实例会导致在收到通知的原始实例 — 通过`StartupNextInstance`事件-另一次启动尝试所做的。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-114">An attempt to launch another instance of a single-instance application results in the original instance being notified—by means of the `StartupNextInstance` event—that another launch attempt was made.</span></span> <span data-ttu-id="4ff9d-115">此通知包括后续实例的命令行自变量。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-115">The notification includes the subsequent instance's command-line arguments.</span></span> <span data-ttu-id="4ff9d-116">然后才能进行任何初始化，然后关闭应用程序的后续实例。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-116">The subsequent instance of the application is then closed before any initialization can occur.</span></span>  
   
- 单实例应用程序启动并检查它是否为第一个实例或该应用程序的后续实例︰  
+ <span data-ttu-id="4ff9d-117">单实例应用程序启动，并且检查它是否为第一个实例或应用程序的后续实例：</span><span class="sxs-lookup"><span data-stu-id="4ff9d-117">A single-instance application starts and checks whether it is the first instance or a subsequent instance of the application:</span></span>  
   
--   如果是第一个实例，它将正常启动。  
+-   <span data-ttu-id="4ff9d-118">如果它是第一个实例，它将正常启动。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-118">If it is the first instance, it starts as usual.</span></span>  
   
--   每个后续尝试启动该应用程序，第一个实例运行时，会导致非常不同的行为。 后续尝试将通知有关命令行参数，第一个实例，并且随后立即退出。 第一个实例句柄`StartupNextInstance`事件，以确定后续实例的命令行参数，然后继续运行。  
+-   <span data-ttu-id="4ff9d-119">每个后续尝试启动该应用程序，当运行时的第一个实例，将导致非常不同的行为。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-119">Each subsequent attempt to start the application, while the first instance runs, results in very different behavior.</span></span> <span data-ttu-id="4ff9d-120">后续尝试通知有关命令行自变量，第一个实例，并立即退出。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-120">The subsequent attempt notifies the first instance about the command-line arguments, and then immediately exits.</span></span> <span data-ttu-id="4ff9d-121">第一个实例句柄`StartupNextInstance`事件，以确定后续实例的命令行自变量，然后继续运行。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-121">The first instance handles the `StartupNextInstance` event to determine what the subsequent instance's command-line arguments were, and continues to run.</span></span>  
   
-     下图显示的后续实例发出的第一个实例的信号。  
+     <span data-ttu-id="4ff9d-122">下图显示的后续实例发出的第一个实例的信号。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-122">This diagram shows how a subsequent instance signals the first instance.</span></span>  
   
-     ![单实例应用程序图像](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     <span data-ttu-id="4ff9d-123">![单实例应用程序映像](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")</span><span class="sxs-lookup"><span data-stu-id="4ff9d-123">![Single Instance Application Image](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")</span></span>  
   
- 通过处理`StartupNextInstance`事件，您可以控制单实例应用程序的行为方式。 例如，Microsoft Outlook 通常运行作为单实例应用程序;当 Outlook 正在运行并且您尝试启动 Outlook 时同样，焦点转移到原始实例，但不会打开另一个实例。  
+ <span data-ttu-id="4ff9d-124">通过处理`StartupNextInstance`事件，您可以控制单实例应用程序的行为方式。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-124">By handling the `StartupNextInstance` event, you can control how your single-instance application behaves.</span></span> <span data-ttu-id="4ff9d-125">例如，Microsoft Outlook 通常运行作为单实例应用程序;当 Outlook 正在运行而您尝试启动 Outlook 同样，焦点切换到原始实例，但不会打开另一个实例。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-125">For example, Microsoft Outlook typically runs as a single-instance application; when Outlook is running and you attempt to start Outlook again, focus shifts to the original instance but another instance does not open.</span></span>  
   
-## <a name="events-in-the-application-model"></a>应用程序模型中的事件  
- 应用程序模型中发现下列事件︰  
+## <a name="events-in-the-application-model"></a><span data-ttu-id="4ff9d-126">应用程序模型中的事件</span><span class="sxs-lookup"><span data-stu-id="4ff9d-126">Events in the Application Model</span></span>  
+ <span data-ttu-id="4ff9d-127">应用程序模型中找到以下事件：</span><span class="sxs-lookup"><span data-stu-id="4ff9d-127">The following events are found in the application model:</span></span>  
   
--   **应用程序启动**。 应用程序将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>事件启动时。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 通过处理此事件，您可以添加在加载主窗体之前初始化应用程序的代码。 `Startup`事件还提供了取消执行的应用程序在该阶段的启动过程中，如果所需的。  
+-   <span data-ttu-id="4ff9d-128">**应用程序启动**。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-128">**Application startup**.</span></span> <span data-ttu-id="4ff9d-129">应用程序将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>事件启动时。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-129">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> event when it starts.</span></span> <span data-ttu-id="4ff9d-130">通过处理此事件，你可以添加初始化应用程序，然后再加载主窗体的代码。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-130">By handling this event, you can add code that initializes the application before the main form is loaded.</span></span> <span data-ttu-id="4ff9d-131">`Startup`事件还提供了取消执行的应用程序在该阶段的启动过程中，如果需要。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-131">The `Startup` event also provides for canceling execution of the application during that phase of the startup process, if desired.</span></span>  
   
-     您可以配置要显示初始屏幕，而应用程序启动代码运行的应用程序。 默认情况下，应用程序模型将取消显示初始屏幕时是`/nosplash`或`-nosplash`使用命令行参数。  
+     <span data-ttu-id="4ff9d-132">你可以配置要显示的初始屏幕，应用程序启动代码运行时的应用程序。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-132">You can configure the application to show a splash screen while the application startup code runs.</span></span> <span data-ttu-id="4ff9d-133">默认情况下，应用程序模型将取消显示初始屏幕时请`/nosplash`或`-nosplash`使用命令行参数。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-133">By default, the application model suppresses the splash screen when either the `/nosplash` or `-nosplash` command-line argument is used.</span></span>  
   
--   **单实例应用程序**。 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>单实例应用程序的后续实例启动时引发事件。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> 该事件传递后续实例的命令行参数。  
+-   <span data-ttu-id="4ff9d-134">**单实例应用程序**。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-134">**Single-instance applications**.</span></span> <span data-ttu-id="4ff9d-135"><xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>单实例应用程序的后续实例启动时引发事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-135">The <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> event is raised when a subsequent instance of a single-instance application starts.</span></span> <span data-ttu-id="4ff9d-136">该事件传递后续的实例的命令行参数。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-136">The event passes the command-line arguments of the subsequent instance.</span></span>  
   
--   **未经处理的异常**。 如果应用程序时遇到未经处理的异常，它会发出<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 您为该事件的处理程序可以检查该异常，并确定是否要继续执行。  
+-   <span data-ttu-id="4ff9d-137">**未经处理的异常**。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-137">**Unhandled exceptions**.</span></span> <span data-ttu-id="4ff9d-138">如果应用程序遇到未经处理的异常，它会发出<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-138">If the application encounters an unhandled exception, it raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event.</span></span> <span data-ttu-id="4ff9d-139">你为该事件的处理程序可以检查异常，并确定是否要继续执行。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-139">Your handler for that event can examine the exception and determine whether to continue execution.</span></span>  
   
-     `UnhandledException`在某些情况下，不会引发事件。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
+     <span data-ttu-id="4ff9d-140">`UnhandledException`在某些情况下，不会引发事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-140">The `UnhandledException` event is not raised in some circumstances.</span></span> <span data-ttu-id="4ff9d-141">有关更多信息，请参见<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-141">For more information, see <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.</span></span>  
   
--   **网络连接更改**。 如果计算机的网络可用性发生变化，在应用程序引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>事件。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
+-   <span data-ttu-id="4ff9d-142">**网络连接更改**。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-142">**Network-connectivity changes**.</span></span> <span data-ttu-id="4ff9d-143">如果计算机的网络可用性发生变化，应用程序将引发<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-143">If the computer's network availability changes, the application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> event.</span></span>  
   
-     `NetworkAvailabilityChanged`在某些情况下，不会引发事件。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
+     <span data-ttu-id="4ff9d-144">`NetworkAvailabilityChanged`在某些情况下，不会引发事件。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-144">The `NetworkAvailabilityChanged` event is not raised in some circumstances.</span></span> <span data-ttu-id="4ff9d-145">有关更多信息，请参见<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-145">For more information, see <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.</span></span>  
   
--   **应用程序关闭**。 该应用程序提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件以发出信号时它即将关闭。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 该事件处理程序中，您可以确保，操作您的应用程序需要用来执行 — 关闭并保存，例如 — 都已完成。 您可以配置您的应用程序时将关闭主窗体，将其关闭，或若要关闭的情况下仅当所有窗体关闭。  
+-   <span data-ttu-id="4ff9d-146">**应用程序关闭**。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-146">**Application shut down**.</span></span> <span data-ttu-id="4ff9d-147">该应用程序提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件以发出信号时可以关闭它。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-147">The application provides the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> event to signal when it is about to shut down.</span></span> <span data-ttu-id="4ff9d-148">这种情况下处理程序中，你可以确保，操作你的应用程序需要执行-关闭并保存，例如-完成。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-148">In that event handler, you can make sure that the operations your application needs to perform—closing and saving, for example—are completed.</span></span> <span data-ttu-id="4ff9d-149">你可以配置你的应用程序关闭时关闭主窗体，或关闭仅当所有窗体关闭。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-149">You can configure your application to shut down when the main form closes, or to shut down only when all forms close.</span></span>  
   
-## <a name="availability"></a>可用性  
- 默认情况下，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]应用程序模型是适用于 Windows 窗体项目。 如果应用程序配置为使用不同的启动对象，或者具有自定义启动应用程序代码`Sub Main`，则该对象或类可能需要提供的实现<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类以使用应用程序模型。</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 有关更改的启动对象的信息，请参阅[应用程序页，项目设计器 (Visual Basic 中)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
+## <a name="availability"></a><span data-ttu-id="4ff9d-150">可用性</span><span class="sxs-lookup"><span data-stu-id="4ff9d-150">Availability</span></span>  
+ <span data-ttu-id="4ff9d-151">默认情况下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]应用程序模型是适用于 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-151">By default, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model is available for Windows Forms projects.</span></span> <span data-ttu-id="4ff9d-152">如果应用程序配置为使用不同的启动对象，或使用自定义启动应用程序代码`Sub Main`，则该对象或类可能需要提供的实现<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类以使用应用程序模型。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-152">If you configure the application to use a different startup object, or start the application code with a custom `Sub Main`, then that object or class may need to provide an implementation of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class to use the application model.</span></span> <span data-ttu-id="4ff9d-153">有关更改的启动对象的信息，请参阅[应用程序页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="4ff9d-153">For information about changing the startup object, see [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- [扩展 Visual Basic 应用程序模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+## <a name="see-also"></a><span data-ttu-id="4ff9d-154">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4ff9d-154">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+ [<span data-ttu-id="4ff9d-155">扩展 Visual Basic 应用程序模型</span><span class="sxs-lookup"><span data-stu-id="4ff9d-155">Extending the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)

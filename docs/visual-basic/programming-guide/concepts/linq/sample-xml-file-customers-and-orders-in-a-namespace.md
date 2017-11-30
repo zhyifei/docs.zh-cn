@@ -1,35 +1,27 @@
 ---
-title: "示例 XML 文件︰ 客户和订单中&1;> |Microsoft 文档"
+title: "示例 XML 文件： 客户和订单中 1>"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 49d93f475406ee2e248b4cac37bda562ad98b362
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8b61c9dde25a55f9188bd6d4ceaad958c42a552
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>示例 XML 文件：命名空间中的客户和订单
-下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文档的很多示例中。 此文件包含客户和订单。 该 XML 在某个命名空间中。  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="0c418-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="0c418-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="0c418-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="0c418-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="0c418-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="0c418-104">This file contains customers and orders.</span></span> <span data-ttu-id="0c418-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="0c418-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="0c418-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="0c418-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -447,5 +439,5 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0c418-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c418-107">See Also</span></span>  
+ [<span data-ttu-id="0c418-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0c418-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

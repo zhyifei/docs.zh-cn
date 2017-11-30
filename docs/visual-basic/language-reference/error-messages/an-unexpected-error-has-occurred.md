@@ -1,59 +1,41 @@
 ---
-title: "因为无法获得单个实例启动所需的操作系统资源出现意外的错误 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "发生错误，因为无法获得单个实例启动所需的操作系统资源"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAppModel_CantGetMemoryMappedFile
-dev_langs:
-- VB
+f1_keywords: vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
-应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
+# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="3d50a-102">发生错误，因为无法获得单个实例启动所需的操作系统资源</span><span class="sxs-lookup"><span data-stu-id="3d50a-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
+<span data-ttu-id="3d50a-103">应用程序未能获取所需的操作系统资源。</span><span class="sxs-lookup"><span data-stu-id="3d50a-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="3d50a-104">一些可能导致此问题的原因是：</span><span class="sxs-lookup"><span data-stu-id="3d50a-104">Some of the possible causes for this problem are:</span></span>  
   
--   应用程序不具备创建命名操作系统对象的权限。  
+-   <span data-ttu-id="3d50a-105">应用程序不具备创建命名操作系统对象的权限。</span><span class="sxs-lookup"><span data-stu-id="3d50a-105">The application does not have permissions to create named operating-system objects.</span></span>  
   
--   公共语言运行时不具备创建内存映射文件的权限。  
+-   <span data-ttu-id="3d50a-106">公共语言运行时不具备创建内存映射文件的权限。</span><span class="sxs-lookup"><span data-stu-id="3d50a-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
   
--   应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。  
+-   <span data-ttu-id="3d50a-107">应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。</span><span class="sxs-lookup"><span data-stu-id="3d50a-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3d50a-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="3d50a-108">To correct this error</span></span>  
   
-1.  检查该应用程序具有创建命名操作系统对象的足够权限。  
+1.  <span data-ttu-id="3d50a-109">检查该应用程序具有创建命名操作系统对象的足够权限。</span><span class="sxs-lookup"><span data-stu-id="3d50a-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
   
-2.  检查公共语言运行时具有创建内存映射文件的足够权限。  
+2.  <span data-ttu-id="3d50a-110">检查公共语言运行时具有创建内存映射文件的足够权限。</span><span class="sxs-lookup"><span data-stu-id="3d50a-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
   
-3.  重新启动计算机以清除可能正使用连接到原始实例应用程序所需的资源的任何进程。  
+3.  <span data-ttu-id="3d50a-111">重新启动计算机以清除可能正使用连接到原始实例应用程序所需的资源的任何进程。</span><span class="sxs-lookup"><span data-stu-id="3d50a-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
   
-4.  记录发生错误的环境，并与 Microsoft 产品支持服务联系  
+4.  <span data-ttu-id="3d50a-112">记录发生错误的环境，并与 Microsoft 产品支持服务联系</span><span class="sxs-lookup"><span data-stu-id="3d50a-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [应用程序页、项目设计器 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [调试器基础知识](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="3d50a-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d50a-113">See Also</span></span>  
+ [<span data-ttu-id="3d50a-114">“项目设计器”->“应用程序”页 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d50a-114">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [<span data-ttu-id="3d50a-115">调试器基础知识</span><span class="sxs-lookup"><span data-stu-id="3d50a-115">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)  
+ [<span data-ttu-id="3d50a-116">与我们交流</span><span class="sxs-lookup"><span data-stu-id="3d50a-116">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
