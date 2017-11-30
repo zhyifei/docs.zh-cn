@@ -1,76 +1,75 @@
 ---
-title: "Resume 语句 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Resume"
-  - "vb.ResumeNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Error 语句, 和 Resume 语句"
-  - "错误 [Visual Basic], 继续"
-  - "执行"
-  - "执行, 继续"
-  - "Next 语句, Resume"
-  - "Resume Next 语句"
-  - "Resume 语句"
-  - "Resume 语句, 语法"
-  - "运行时错误, 继续"
+title: "Resume 语句"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Resume
+- vb.ResumeNext
+helpviewer_keywords:
+- Next statement [Visual Basic], Resume
+- Resume Next statement [Visual Basic]
+- execution [Visual Basic], resuming
+- run-time errors [Visual Basic], resuming after
+- Resume statement [Visual Basic], syntax
+- errors [Visual Basic], resuming after
+- Error statement [Visual Basic], and Resume statement
+- execution
+- Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Resume 语句
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-在错误处理例程完成之后继续程序执行。  
+# <a name="resume-statement"></a><span data-ttu-id="14788-102">Resume 语句</span><span class="sxs-lookup"><span data-stu-id="14788-102">Resume Statement</span></span>
+<span data-ttu-id="14788-103">错误处理例程完毕后恢复执行。</span><span class="sxs-lookup"><span data-stu-id="14788-103">Resumes execution after an error-handling routine is finished.</span></span>  
   
- 建议使用非结构化异常处理和 `On Error` 和 `Resume` 语句，您可以在代码使用结构化异常处理只要有可能，而不是。  有关更多信息，请参见 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+ <span data-ttu-id="14788-104">我们建议你使用结构化的异常处理，只要有可能，在代码中，而不是无需使用非结构化的异常处理和`On Error`和`Resume`语句。</span><span class="sxs-lookup"><span data-stu-id="14788-104">We suggest that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` and `Resume` statements.</span></span> <span data-ttu-id="14788-105">有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="14788-105">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="14788-106">语法</span><span class="sxs-lookup"><span data-stu-id="14788-106">Syntax</span></span>  
   
 ```  
 Resume [ Next | line ]  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="14788-107">部件</span><span class="sxs-lookup"><span data-stu-id="14788-107">Parts</span></span>  
  `Resume`  
- 必选。  如果错误发生在错误处理程序所在的同一过程中，程序将由产生错误的语句处继续执行。  如果错误发生在被调用的过程中，程序将从最近过程（该过程含有错误处理例程）调用的语句处继续执行。  
+ <span data-ttu-id="14788-108">必需。</span><span class="sxs-lookup"><span data-stu-id="14788-108">Required.</span></span> <span data-ttu-id="14788-109">如果错误发生的错误处理程序相同的过程中，将导致错误的语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="14788-109">If the error occurred in the same procedure as the error handler, execution resumes with the statement that caused the error.</span></span> <span data-ttu-id="14788-110">如果在调用过程中出错，请在上一次调用不包含错误处理例程的过程的语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="14788-110">If the error occurred in a called procedure, execution resumes at the statement that last called out of the procedure containing the error-handling routine.</span></span>  
   
  `Next`  
- 可选。  如果错误发生在错误处理程序所在的同一过程中，程序由紧随引发错误的语句的下一条语句处继续执行。  如果错误发生在被调用的过程中，程序由紧随最近过程（该过程含有错误处理例程）调用的语句的下一条语句继续执行（或者 `On Error Resume Next` 语句）。  
+ <span data-ttu-id="14788-111">可选。</span><span class="sxs-lookup"><span data-stu-id="14788-111">Optional.</span></span> <span data-ttu-id="14788-112">如果在错误处理程序相同的过程中出错，请将紧跟导致错误的语句的语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="14788-112">If the error occurred in the same procedure as the error handler, execution resumes with the statement immediately following the statement that caused the error.</span></span> <span data-ttu-id="14788-113">如果在调用过程中出错，请紧随上一次调用不包含错误处理例程的过程的语句处继续执行 (或`On Error Resume Next`语句)。</span><span class="sxs-lookup"><span data-stu-id="14788-113">If the error occurred in a called procedure, execution resumes with the statement immediately following the statement that last called out of the procedure containing the error-handling routine (or `On Error Resume Next` statement).</span></span>  
   
  `line`  
- 可选。  程序从必选参数 `line` 指定的代码行处继续执行。  `line` 参数是一个行标签或者行号，必须位于错误处理程序所在的同一过程中。  
+ <span data-ttu-id="14788-114">可选。</span><span class="sxs-lookup"><span data-stu-id="14788-114">Optional.</span></span> <span data-ttu-id="14788-115">指定所需的代码行处继续执行`line`自变量。</span><span class="sxs-lookup"><span data-stu-id="14788-115">Execution resumes at the line specified in the required `line` argument.</span></span> <span data-ttu-id="14788-116">`line`自变量是行标签或行号，并且必须在同一过程中的错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="14788-116">The `line` argument is a line label or line number and must be in the same procedure as the error handler.</span></span>  
   
-## 备注  
+## <a name="remarks"></a><span data-ttu-id="14788-117">备注</span><span class="sxs-lookup"><span data-stu-id="14788-117">Remarks</span></span>  
   
 > [!NOTE]
->  建议使用非结构化异常处理和 `On Error` 和 `Resume` 语句，您可以在代码使用结构化异常处理只要有可能，而不是。  有关更多信息，请参见 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
+>  <span data-ttu-id="14788-118">我们建议你使用结构化的异常处理，只要有可能，在代码中，而不是无需使用非结构化的异常处理和`On Error`和`Resume`语句。</span><span class="sxs-lookup"><span data-stu-id="14788-118">We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` and `Resume` statements.</span></span> <span data-ttu-id="14788-119">有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="14788-119">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
- 如果在错误处理例程以外的任何位置使用 `Resume` 语句，将会发生错误。  
+ <span data-ttu-id="14788-120">如果你使用`Resume`语句中任意位置以外的其他错误处理例程中，将会出错。</span><span class="sxs-lookup"><span data-stu-id="14788-120">If you use a `Resume` statement anywhere other than in an error-handling routine, an error occurs.</span></span>  
   
- `Resume` 语句不能用于包含 `Try...Catch...Finally` 语句的任何过程中。  
+ <span data-ttu-id="14788-121">`Resume`语句不能包含任何过程在`Try...Catch...Finally`语句。</span><span class="sxs-lookup"><span data-stu-id="14788-121">The `Resume` statement cannot be used in any procedure that contains a `Try...Catch...Finally` statement.</span></span>  
   
-## 示例  
- 此示例使用 `Resume` 语句来结束过程中的错误处理，然后继续执行导致错误的语句。  将生成错误号 55 以表明使用的是 `Resume` 语句。  
+## <a name="example"></a><span data-ttu-id="14788-122">示例</span><span class="sxs-lookup"><span data-stu-id="14788-122">Example</span></span>  
+ <span data-ttu-id="14788-123">此示例使用`Resume`语句来结束的错误处理过程中，然后继续执行导致错误的语句。</span><span class="sxs-lookup"><span data-stu-id="14788-123">This example uses the `Resume` statement to end error handling in a procedure and then resume execution with the statement that caused the error.</span></span> <span data-ttu-id="14788-124">错误号 55 生成来演示使用`Resume`语句。</span><span class="sxs-lookup"><span data-stu-id="14788-124">Error number 55 is generated to illustrate use of the `Resume` statement.</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
-## 要求  
- **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="14788-125">要求</span><span class="sxs-lookup"><span data-stu-id="14788-125">Requirements</span></span>  
+ <span data-ttu-id="14788-126">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="14788-126">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **程序集：**Visual Basic 运行库（位于 Microsoft.VisualBasic.dll 中）  
+ <span data-ttu-id="14788-127">**程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)</span><span class="sxs-lookup"><span data-stu-id="14788-127">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## 请参阅  
- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)   
- [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a><span data-ttu-id="14788-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="14788-128">See Also</span></span>  
+ [<span data-ttu-id="14788-129">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="14788-129">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="14788-130">Error 语句</span><span class="sxs-lookup"><span data-stu-id="14788-130">Error Statement</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)  
+ [<span data-ttu-id="14788-131">On Error 语句</span><span class="sxs-lookup"><span data-stu-id="14788-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)

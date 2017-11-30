@@ -1,1 +1,1 @@
-Microsoft Windows 资源管理器
+<span data-ttu-id="f1e12-101">Microsoft Windows 资源管理器</span><span class="sxs-lookup"><span data-stu-id="f1e12-101">Microsoft Windows Explorer</span></span>

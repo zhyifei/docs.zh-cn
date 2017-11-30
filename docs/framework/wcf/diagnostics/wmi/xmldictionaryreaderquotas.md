@@ -1,25 +1,28 @@
 ---
-title: "XmlDictionaryReaderQuotas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: XmlDictionaryReaderQuotas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 980a7eacd095dc1b601d63f5a807f2e287c09885
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# XmlDictionaryReaderQuotas
-XmlDictionaryReaderQuotas  
+# <a name="xmldictionaryreaderquotas"></a><span data-ttu-id="c8340-102">XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="c8340-102">XmlDictionaryReaderQuotas</span></span>
+<span data-ttu-id="c8340-103">XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="c8340-103">XmlDictionaryReaderQuotas</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="c8340-104">语法</span><span class="sxs-lookup"><span data-stu-id="c8340-104">Syntax</span></span>  
   
 ```  
 class XmlDictionaryReaderQuotas  
@@ -32,53 +35,53 @@ class XmlDictionaryReaderQuotas
 };  
 ```  
   
-## 方法  
- XmlDictionaryReaderQuotas 类不定义任何方法。  
+## <a name="methods"></a><span data-ttu-id="c8340-105">方法</span><span class="sxs-lookup"><span data-stu-id="c8340-105">Methods</span></span>  
+ <span data-ttu-id="c8340-106">XmlDictionaryReaderQuotas 类不定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="c8340-106">The XmlDictionaryReaderQuotas class does not define any methods.</span></span>  
   
-## 属性  
- XmlDictionaryReaderQuotas 类具有以下属性：  
+## <a name="properties"></a><span data-ttu-id="c8340-107">属性</span><span class="sxs-lookup"><span data-stu-id="c8340-107">Properties</span></span>  
+ <span data-ttu-id="c8340-108">XmlDictionaryReaderQuotas 类具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="c8340-108">The XmlDictionaryReaderQuotas class has the following properties:</span></span>  
   
-### MaxArrayLength  
- 数据类型：sint32  
+### <a name="maxarraylength"></a><span data-ttu-id="c8340-109">MaxArrayLength</span><span class="sxs-lookup"><span data-stu-id="c8340-109">MaxArrayLength</span></span>  
+ <span data-ttu-id="c8340-110">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="c8340-110">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="c8340-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="c8340-111">Access type: Read-only</span></span>  
   
- 允许的最大数组长度。  
+ <span data-ttu-id="c8340-112">允许的最大数组长度。</span><span class="sxs-lookup"><span data-stu-id="c8340-112">The maximum allowed array length.</span></span>  
   
-### MaxBytesPerRead  
- 数据类型：sint32  
+### <a name="maxbytesperread"></a><span data-ttu-id="c8340-113">MaxBytesPerRead</span><span class="sxs-lookup"><span data-stu-id="c8340-113">MaxBytesPerRead</span></span>  
+ <span data-ttu-id="c8340-114">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="c8340-114">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="c8340-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="c8340-115">Access type: Read-only</span></span>  
   
- 允许为每次读取返回的最大字节数。  
+ <span data-ttu-id="c8340-116">允许为每次读取返回的最大字节数。</span><span class="sxs-lookup"><span data-stu-id="c8340-116">The maximum allowed bytes returned for each read.</span></span>  
   
-### MaxDepth  
- 数据类型：sint32  
+### <a name="maxdepth"></a><span data-ttu-id="c8340-117">MaxDepth</span><span class="sxs-lookup"><span data-stu-id="c8340-117">MaxDepth</span></span>  
+ <span data-ttu-id="c8340-118">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="c8340-118">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="c8340-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="c8340-119">Access type: Read-only</span></span>  
   
- 每次读取的最大嵌套节点深度。  
+ <span data-ttu-id="c8340-120">每次读取的最大嵌套节点深度。</span><span class="sxs-lookup"><span data-stu-id="c8340-120">The maximum nested node depth for each read.</span></span>  
   
-### MaxNameTableCharCount  
- 数据类型：sint32  
+### <a name="maxnametablecharcount"></a><span data-ttu-id="c8340-121">MaxNameTableCharCount</span><span class="sxs-lookup"><span data-stu-id="c8340-121">MaxNameTableCharCount</span></span>  
+ <span data-ttu-id="c8340-122">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="c8340-122">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="c8340-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="c8340-123">Access type: Read-only</span></span>  
   
- 表名称中允许的最大字符数。  
+ <span data-ttu-id="c8340-124">表名称中允许的最大字符数。</span><span class="sxs-lookup"><span data-stu-id="c8340-124">The maximum characters allowed in a table name.</span></span>  
   
-### MaxStringContentLength  
- 数据类型：sint32  
+### <a name="maxstringcontentlength"></a><span data-ttu-id="c8340-125">MaxStringContentLength</span><span class="sxs-lookup"><span data-stu-id="c8340-125">MaxStringContentLength</span></span>  
+ <span data-ttu-id="c8340-126">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="c8340-126">Data type: sint32</span></span>  
   
- 访问类型：只读  
+ <span data-ttu-id="c8340-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="c8340-127">Access type: Read-only</span></span>  
   
- XML 元素内容中允许包含的最大字符数。  
+ <span data-ttu-id="c8340-128">XML 元素内容中允许包含的最大字符数。</span><span class="sxs-lookup"><span data-stu-id="c8340-128">The maximum characters allowed in XML element content.</span></span>  
   
-## 要求  
+## <a name="requirements"></a><span data-ttu-id="c8340-129">要求</span><span class="sxs-lookup"><span data-stu-id="c8340-129">Requirements</span></span>  
   
-|MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|<span data-ttu-id="c8340-130">MOF</span><span class="sxs-lookup"><span data-stu-id="c8340-130">MOF</span></span>|<span data-ttu-id="c8340-131">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="c8340-131">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="c8340-132">命名空间</span><span class="sxs-lookup"><span data-stu-id="c8340-132">Namespace</span></span>|<span data-ttu-id="c8340-133">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="c8340-133">Defined in root\ServiceModel</span></span>|  
   
-## 请参阅  
- <xref:System.Xml.XmlDictionaryReaderQuotas>   
+## <a name="see-also"></a><span data-ttu-id="c8340-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c8340-134">See Also</span></span>  
+ <xref:System.Xml.XmlDictionaryReaderQuotas>  
  <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>

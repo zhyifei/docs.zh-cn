@@ -1,280 +1,282 @@
 ---
-title: "XAML-Related CLR Attributes for Custom Types and Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR attributes for custom types [XAML Services]"
+title: "自定义类型和库的 XAML 相关 CLR 特性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# XAML-Related CLR Attributes for Custom Types and Libraries
-本主题介绍由 .NET Framework XAML 服务定义的公共语言运行时 \(CLR\) 特性。  本主题还介绍在 .NET Framework 中定义的具有 XAML 相关方案的其他 CLR 特性，以便应用于程序集或类型。  使用这些 CLR 特性将程序集、类型或成员特性化可提供与类型有关的 XAML 类型系统信息。  将信息提供给使用 .NET Framework XAML 服务的任何 XAML 使用方，以便直接处理或通过专用 XAML 读取器和 XAML 编写器处理 XAML 节点流。  
+# <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a><span data-ttu-id="6cafd-102">自定义类型和库的 XAML 相关 CLR 特性</span><span class="sxs-lookup"><span data-stu-id="6cafd-102">XAML-Related CLR Attributes for Custom Types and Libraries</span></span>
+<span data-ttu-id="6cafd-103">本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-103">This topic describes the common language runtime (CLR) attributes that are defined by .NET Framework XAML Services.</span></span> <span data-ttu-id="6cafd-104">它还介绍在.NET Framework 中定义具有对程序集或类型的应用程序的与 XAML 相关方案的其他 CLR 特性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-104">It also describes other CLR attributes that are defined in the .NET Framework that have a XAML-related scenario for application to assemblies or types.</span></span> <span data-ttu-id="6cafd-105">使用这些 CLR 特性的归程序集、 类型或成员提供与你的类型的 XAML 类型系统信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-105">Attributing assemblies, types, or members with these CLR attributes provides XAML type system information related to your types.</span></span> <span data-ttu-id="6cafd-106">使用.NET Framework XAML 服务，用于处理 XAML 节点流直接或通过专用的 XAML 读取器和 XAML 编写器任何 XAML 使用者提供信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-106">Information is provided to any XAML consumer that uses .NET Framework XAML Services for processing the XAML node stream directly or through the dedicated XAML readers and XAML writers.</span></span>  
   
-## 自定义类型和自定义成员 XAML 相关 CLR 特性  
- 使用 CLR 特性要求您使用全部 CLR 来定义类型，否则此类特性将不可用。  如果使用 CLR 来定义类型支持，则 .NET Framework XAML 服务 XAML 编写器使用的默认 XAML 架构上下文可以通过针对支持程序集的反射来读取 CLR 特性。  
+## <a name="xaml-related-clr-attributes-for-custom-types-and-custom-members"></a><span data-ttu-id="6cafd-107">自定义类型和自定义成员与 XAML 相关 CLR 特性</span><span class="sxs-lookup"><span data-stu-id="6cafd-107">XAML-Related CLR Attributes for Custom Types and Custom Members</span></span>  
+ <span data-ttu-id="6cafd-108">使用 CLR 特性要求，你正在使用的总体 CLR 来定义类型，否则此类特性将不可用。</span><span class="sxs-lookup"><span data-stu-id="6cafd-108">Using CLR attributes entails that you are using the overall CLR to define your types, otherwise such attributes are not available.</span></span> <span data-ttu-id="6cafd-109">如果你使用 CLR 定义的类型支持，.NET Framework XAML 服务 XAML 编写器使用的默认 XAML 架构上下文可以读取通过反射对支持程序集的 CLR 特性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-109">If you use the CLR to define type backing, then the default XAML schema context used by .NET  Framework XAML Services XAML writers can read CLR attribution through reflection against backing assemblies.</span></span>  
   
- 以下各节介绍可应用于自定义类型或自定义成员的 XAML 相关特性。  每个 CLR 特性都传达与 XAML 类型系统有关的信息。  在加载路径中，特性化的信息可帮助 XAML 读取器形成有效的 XAML 节点流，或帮助 XAML 编写器生成有效的对象图。  在保存路径中，特性化的信息可帮助 XAML 读取器形成重建 XAML 类型系统信息的有效 XAML 节点流，或者为 XAML 编写器或其他 XAML 使用者声明序列化提示或要求。  
+ <span data-ttu-id="6cafd-110">以下各节描述了可应用于自定义的类型或自定义成员与 XAML 相关的属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-110">The following sections describe the XAML-related attributes that you can apply to custom types or custom members.</span></span> <span data-ttu-id="6cafd-111">每个 CLR 特性进行通信的 XAML 类型系统与相关的信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-111">Each CLR attribute communicates information that is relevant to a XAML type system.</span></span> <span data-ttu-id="6cafd-112">在加载路径中，特性化的信息可帮助形成有效的 XAML 节点流，XAML 读取器或帮助生成有效的对象图形的 XAML 编写器。</span><span class="sxs-lookup"><span data-stu-id="6cafd-112">In the load path, the attributed information either helps the XAML reader form a valid XAML node stream, or it helps the XAML writer produce a valid object graph.</span></span> <span data-ttu-id="6cafd-113">在保存路径，或者可帮助窗体将重组 XAML 类型系统信息; 有效的 XAML 节点流的 XAML 读取器的特性化的信息或它声明序列化提示或 XAML 编写器或其他 XAML 使用者的要求。</span><span class="sxs-lookup"><span data-stu-id="6cafd-113">In the save path, the attributed information either helps the XAML reader form a valid XAML node stream that reconstitutes XAML type system information; or it declares serialization hints or requirements for the XAML writer or other XAML consumers.</span></span>  
   
-### AmbientAttribute  
- **参考文档：** <xref:System.Windows.Markup.AmbientAttribute>  
+### <a name="ambientattribute"></a><span data-ttu-id="6cafd-114">AmbientAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-114">AmbientAttribute</span></span>  
+ <span data-ttu-id="6cafd-115">**参考文档：**  <xref:System.Windows.Markup.AmbientAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-115">**Reference Documentation:**  <xref:System.Windows.Markup.AmbientAttribute></span></span>  
   
- **适用对象：**类、属性或支持可附加属性的 `get` 访问器成员。  
+ <span data-ttu-id="6cafd-116">**适用于：**类、 属性和或`get`支持可附加属性的访问器成员。</span><span class="sxs-lookup"><span data-stu-id="6cafd-116">**Applies to:** Class, property, or `get` accessor members that support attachable properties.</span></span>  
   
- **参数：**无  
+ <span data-ttu-id="6cafd-117">**自变量：**无</span><span class="sxs-lookup"><span data-stu-id="6cafd-117">**Arguments:** None</span></span>  
   
- <xref:System.Windows.Markup.AmbientAttribute> 指示采用该特性化类型的单个属性或所有属性在 XAML 中都应基于环境属性概念进行解释。  环境概念与 XAML 处理器确定成员的类型所有者的方式相关。  环境属性是这样一种属性，该属性的值在创建对象图时应在分析器上下文中可用，但其常用类型成员查找由于正在创建直接 XAML 节点集而挂起。  
+ <span data-ttu-id="6cafd-118"><xref:System.Windows.Markup.AmbientAttribute>指示属性或需要的特性化的类型的所有属性应解释在 XAML 中的环境属性概念。</span><span class="sxs-lookup"><span data-stu-id="6cafd-118"><xref:System.Windows.Markup.AmbientAttribute> indicates that the property, or all properties that take the attributed type, should be interpreted under the ambient property concept in XAML.</span></span> <span data-ttu-id="6cafd-119">环境概念涉及 XAML 处理器如何确定成员的类型所有者。</span><span class="sxs-lookup"><span data-stu-id="6cafd-119">The ambient concept relates to how XAML processors determine type owners of members.</span></span> <span data-ttu-id="6cafd-120">环境属性是属性值的地方时创建对象图，但其直接的 XAML 节点集正在创建已挂起，典型的类型成员查找要分析器上下文中可用。</span><span class="sxs-lookup"><span data-stu-id="6cafd-120">An ambient property is a property where the value is expected to be available in the parser context when creating an object graph, but where typical type-member lookup is suspended for the immediate XAML node set being created.</span></span>  
   
- 环境概念可以应用于可附加的成员，这些成员未按照 CLR 特性定义 <xref:System.AttributeTargets> 的方式表示为属性。  应该仅对支持 XAML 的可附加用法的 `get` 访问器应用方法特性用法。  
+ <span data-ttu-id="6cafd-121">环境概念可以应用于可附加成员，它们以在 CLR 特性定义的方式方面的属性不表示<xref:System.AttributeTargets>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-121">The ambient concept can be applied to attachable members, which are not represented as properties in terms of how CLR attribution defines <xref:System.AttributeTargets>.</span></span> <span data-ttu-id="6cafd-122">方法特性用法应仅在的情况下应用`get`针对的 XAML 支持可附加的使用情况的访问器。</span><span class="sxs-lookup"><span data-stu-id="6cafd-122">The method attribution usage should be applied only in the case of a `get` accessor that supports attachable usage for XAML.</span></span>  
   
-### ConstructorArgumentAttribute  
- **参考文档：** <xref:System.Windows.Markup.ConstructorArgumentAttribute>  
+### <a name="constructorargumentattribute"></a><span data-ttu-id="6cafd-123">ConstructorArgumentAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-123">ConstructorArgumentAttribute</span></span>  
+ <span data-ttu-id="6cafd-124">**参考文档：**  <xref:System.Windows.Markup.ConstructorArgumentAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-124">**Reference Documentation:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-125">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-125">**Applies to:** Class</span></span>  
   
- **参数：**一个字符串，该字符串指定与单个构造函数参数匹配的属性的名称。  
+ <span data-ttu-id="6cafd-126">**自变量：**一个字符串，指定与单个构造函数自变量匹配的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6cafd-126">**Arguments:** A string that specifies the name of the property that matches a single constructor argument.</span></span>  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非默认构造函数语法初始化对象，并且指定具有指定名称的属性提供构造信息。  此信息主要用于 XAML 序列化。  有关更多信息，请参见 <xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
+ <span data-ttu-id="6cafd-127"><xref:System.Windows.Markup.ConstructorArgumentAttribute>指定可以通过使用一个非默认构造函数的语法来初始化的对象和指定名称的属性提供构造信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-127"><xref:System.Windows.Markup.ConstructorArgumentAttribute> specifies that an object can be initialized by using a non-default constructor syntax, and that a property of the specified name supplies construction information.</span></span> <span data-ttu-id="6cafd-128">此信息主要用于 XAML 序列化。</span><span class="sxs-lookup"><span data-stu-id="6cafd-128">This information is primarily for XAML serialization.</span></span> <span data-ttu-id="6cafd-129">有关详细信息，请参阅<xref:System.Windows.Markup.ConstructorArgumentAttribute>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-129">For more information, see <xref:System.Windows.Markup.ConstructorArgumentAttribute>.</span></span>  
   
-### ContentPropertyAttribute  
- **参考文档：** <xref:System.Windows.Markup.ContentPropertyAttribute>  
+### <a name="contentpropertyattribute"></a><span data-ttu-id="6cafd-130">ContentPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-130">ContentPropertyAttribute</span></span>  
+ <span data-ttu-id="6cafd-131">**参考文档：**  <xref:System.Windows.Markup.ContentPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-131">**Reference Documentation:**  <xref:System.Windows.Markup.ContentPropertyAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-132">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-132">**Applies to:** Class</span></span>  
   
- **参数：**一个字符串，该字符串指定特性化类型的成员的名称。  
+ <span data-ttu-id="6cafd-133">**自变量：**一个字符串，指定的一个成员的特性化类型的名称。</span><span class="sxs-lookup"><span data-stu-id="6cafd-133">**Arguments:** A string that specifies the name of a member of the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.ContentPropertyAttribute> 指示由参数命名的属性应该作为该类型的 XAML 内容属性。  XAML 内容属性定义继承到可赋值给定义类型的所有派生类型。  可以通过对特定派生类型应用 <xref:System.Windows.Markup.ContentPropertyAttribute> 而重写特定派生类型的定义。  
+ <span data-ttu-id="6cafd-134"><xref:System.Windows.Markup.ContentPropertyAttribute>指示命名自变量的属性应作为该类型的 XAML 内容属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-134"><xref:System.Windows.Markup.ContentPropertyAttribute> indicates that the property as named by the argument should serve as the XAML content property for that type.</span></span> <span data-ttu-id="6cafd-135">XAML 内容属性定义继承到可分配给定义的类型的所有派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-135">The XAML content property definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="6cafd-136">您可以通过应用来覆盖特定的派生类型上定义<xref:System.Windows.Markup.ContentPropertyAttribute>上特定于派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-136">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.ContentPropertyAttribute> on the specific derived type.</span></span>  
   
- 对于作为 XAML 内容属性的属性，在 XAML 用法中可以忽略该属性的属性元素标记。  通常，要指定为内容和包容模型提升简化的 XAML 标记的 XAML 内容属性。  由于只能将一个成员指定为 XAML 内容属性，因此有时在设计中要选择应该将某一类型的若干容器属性中的哪个属性指定为 XAML 内容属性。  其他容器属性必须与显式属性元素一起使用。  
+ <span data-ttu-id="6cafd-137">用作 XAML 内容属性的属性，可以在 XAML 用法省略属性元素标记的属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-137">For the property that serves as the XAML content property, property element tagging for the property can be omitted in the XAML usage.</span></span> <span data-ttu-id="6cafd-138">通常情况下，你指定将提升简洁的 XAML 标记的内容和包含模型的 XAML 内容属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-138">Typically, you designate XAML content properties that promote a streamlined XAML markup for your content and containment models.</span></span> <span data-ttu-id="6cafd-139">因为只有一个成员可以指定为 XAML 内容属性，有时需要设计让的选择有关哪个多个容器的一种类型的属性应被指定为 XAML 内容属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-139">Because only one member can be designated as the XAML content property, you sometimes have design choices to make regarding which of several container properties of a type should be designated as the XAML content property.</span></span> <span data-ttu-id="6cafd-140">其他容器属性必须与显式属性元素一起使用。</span><span class="sxs-lookup"><span data-stu-id="6cafd-140">The other container properties must be used with explicit property elements.</span></span>  
   
- 在 XAML 节点流中，XAML 内容属性仍然使用 <xref:System.Xaml.XamlMember> 的属性的名称生成 `StartMember` 和 `EndMember` 节点。  为了确定某个成员是否是 XAML 内容属性，请检查 `StartObject` 位置的 <xref:System.Xaml.XamlType> 值并获取 <xref:System.Xaml.XamlType.ContentProperty%2A> 的值。  
+ <span data-ttu-id="6cafd-141">在 XAML 节点流，XAML 内容属性仍生成`StartMember`和`EndMember`使用的属性的名称的节点<xref:System.Xaml.XamlMember>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-141">In the XAML node stream, XAML content properties still produce `StartMember` and `EndMember` nodes, using the name of the property for the <xref:System.Xaml.XamlMember>.</span></span> <span data-ttu-id="6cafd-142">若要确定成员是否为 XAML 内容属性，请检查<xref:System.Xaml.XamlType>值从`StartObject`定位，并获取的值<xref:System.Xaml.XamlType.ContentProperty%2A>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-142">To determine whether a member is the XAML content property, examine the <xref:System.Xaml.XamlType> value from the `StartObject` position and obtain the value of <xref:System.Xaml.XamlType.ContentProperty%2A>.</span></span>  
   
-### ContentWrapperAttribute  
- **参考文档：** <xref:System.Windows.Markup.ContentWrapperAttribute>  
+### <a name="contentwrapperattribute"></a><span data-ttu-id="6cafd-143">ContentWrapperAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-143">ContentWrapperAttribute</span></span>  
+ <span data-ttu-id="6cafd-144">**参考文档：**  <xref:System.Windows.Markup.ContentWrapperAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-144">**Reference Documentation:**  <xref:System.Windows.Markup.ContentWrapperAttribute></span></span>  
   
- **适用对象：**类、（特别是）集合类型。  
+ <span data-ttu-id="6cafd-145">**适用于：**类，具体集合类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-145">**Applies to:** Class, specifically collection types.</span></span>  
   
- **参数：**一个 <xref:System.Type>，它指定要用作外部内容的内容包装类型的类型。  
+ <span data-ttu-id="6cafd-146">**自变量：** A <xref:System.Type> ，它指定要用作外部内容的内容包装类型的类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-146">**Arguments:** A <xref:System.Type> that specifies the type to use as the content wrapper type for foreign content.</span></span>  
   
- <xref:System.Windows.Markup.ContentWrapperAttribute> 指定在关联的集合类型上将用来包装外部内容的一种或多种类型。  外部内容是指一些情况，在这些情况下，内容属性类型上的类型系统约束不捕获所属类型的 XAML 用法将支持的所有可能的内容情况。  例如，对特定类型的内容的 XAML 支持可能支持强类型的泛型 <xref:System.Collections.ObjectModel.Collection%601> 中的字符串。  内容包装对于将预先存在的标记约定迁移到用于集合的可赋值的值的 XAML 概念中（如迁移与文本相关的内容模型）非常有用。  
+ <span data-ttu-id="6cafd-147"><xref:System.Windows.Markup.ContentWrapperAttribute>指定将用于包装外部内容的关联的集合类型上的一个或多个类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-147"><xref:System.Windows.Markup.ContentWrapperAttribute> specifies one or more types on the associated collection type that will be used to wrap foreign content.</span></span> <span data-ttu-id="6cafd-148">外部内容是指其中的内容的属性类型的类型系统约束不捕获所有可能的内容事例所属类型的 XAML 用法本来支持的情况下。</span><span class="sxs-lookup"><span data-stu-id="6cafd-148">Foreign content refers to cases where the type system constraints on the type of the content property do not capture all of the possible content cases that XAML usage for the owning type would support.</span></span> <span data-ttu-id="6cafd-149">例如，XAML 支持特定类型的内容可能支持字符串中的强类型化的泛型<xref:System.Collections.ObjectModel.Collection%601>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-149">For example, XAML support for content of a particular type might support strings in a strongly typed generic <xref:System.Collections.ObjectModel.Collection%601>.</span></span> <span data-ttu-id="6cafd-150">内容的包装器可用于将预先存在的标记约定迁移到可分配的值对于集合，如迁移与文本相关的内容模型的 XAML 的概念。</span><span class="sxs-lookup"><span data-stu-id="6cafd-150">Content wrappers are useful for migrating preexisting markup conventions into XAML's conception of assignable values for collections, such as migrating text-related content models.</span></span>  
   
- 若要指定多个内容包装类型，请多次应用该特性。  
+ <span data-ttu-id="6cafd-151">若要指定多个内容包装类型，请将该属性多次。</span><span class="sxs-lookup"><span data-stu-id="6cafd-151">To specify more than one content wrapper type, apply the attribute multiple times.</span></span>  
   
-### DependsOnAttribute  
- **参考文档：** <xref:System.Windows.Markup.DependsOnAttribute>  
+### <a name="dependsonattribute"></a><span data-ttu-id="6cafd-152">DependsOnAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-152">DependsOnAttribute</span></span>  
+ <span data-ttu-id="6cafd-153">**参考文档：**  <xref:System.Windows.Markup.DependsOnAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-153">**Reference Documentation:**  <xref:System.Windows.Markup.DependsOnAttribute></span></span>  
   
- **适用对象：**属性  
+ <span data-ttu-id="6cafd-154">**适用于：**属性</span><span class="sxs-lookup"><span data-stu-id="6cafd-154">**Applies to:** Property</span></span>  
   
- **参数：**一个字符串，该字符串指定特性化类型的另一个成员的名称。  
+ <span data-ttu-id="6cafd-155">**自变量：**一个字符串，指定的特性化类型的另一个成员的名称。</span><span class="sxs-lookup"><span data-stu-id="6cafd-155">**Arguments:** A string that specifies the name of another member of the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.DependsOnAttribute> 指示特性化属性依赖于另一个属性的值。  将此特性应用于属性定义可确保在 XAML 对象编写时首先处理依赖属性。  使用 <xref:System.Windows.Markup.DependsOnAttribute> 可指定类型的属性的例外情况，在这些情况下，必须按照特定的分析顺序才能进行有效的对象创建。  
+ <span data-ttu-id="6cafd-156"><xref:System.Windows.Markup.DependsOnAttribute>指示特性化的属性依赖于另一个属性的值。</span><span class="sxs-lookup"><span data-stu-id="6cafd-156"><xref:System.Windows.Markup.DependsOnAttribute> indicates that the attributed property depends on the value of another property.</span></span> <span data-ttu-id="6cafd-157">将此特性应用于属性定义可确保在 XAML 对象编写首先处理依赖属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-157">Applying this attribute to a property definition ensures that the dependent properties are processed first in XAML object writing.</span></span> <span data-ttu-id="6cafd-158">用法<xref:System.Windows.Markup.DependsOnAttribute>其中的分析特定的顺序必须遵循有效的对象创建的类型上指定这种例外情况的属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-158">Usages of <xref:System.Windows.Markup.DependsOnAttribute> specify the exceptional cases of properties on types where a specific order of parsing must be followed for valid object creation.</span></span>  
   
- 可以将多个 <xref:System.Windows.Markup.DependsOnAttribute> 情况应用于一个属性定义。  
+ <span data-ttu-id="6cafd-159">你可以应用多个<xref:System.Windows.Markup.DependsOnAttribute>用例链接到的属性定义。</span><span class="sxs-lookup"><span data-stu-id="6cafd-159">You can apply multiple <xref:System.Windows.Markup.DependsOnAttribute> cases to a property definition.</span></span>  
   
-### MarkupExtensionReturnTypeAttribute  
- **参考文档：** <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
+### <a name="markupextensionreturntypeattribute"></a><span data-ttu-id="6cafd-160">MarkupExtensionReturnTypeAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-160">MarkupExtensionReturnTypeAttribute</span></span>  
+ <span data-ttu-id="6cafd-161">**参考文档：**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-161">**Reference Documentation:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute></span></span>  
   
- **适用对象：**应为 <xref:System.Windows.Markup.MarkupExtension> 派生类型的类。  
+ <span data-ttu-id="6cafd-162">**适用于：**类，应为<xref:System.Windows.Markup.MarkupExtension>派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-162">**Applies to:** Class, which is expected to be a <xref:System.Windows.Markup.MarkupExtension> derived type.</span></span>  
   
- **参数：**一个 <xref:System.Type>，它指定预期作为特性化 <xref:System.Windows.Markup.MarkupExtension> 的 `ProvideValue` 结果的最精确类型。  
+ <span data-ttu-id="6cafd-163">**自变量：** A <xref:System.Type> ，它指定要作为期望的最精确类型`ProvideValue`的特性化的结果<xref:System.Windows.Markup.MarkupExtension>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-163">**Arguments:** A <xref:System.Type> that specifies the most precise type to expect as the `ProvideValue` result of the attributed <xref:System.Windows.Markup.MarkupExtension>.</span></span>  
   
- 有关更多信息，请参见 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ <span data-ttu-id="6cafd-164">有关详细信息，请参阅[的标记扩展 XAML 概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-164">For more information, see [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</span></span>  
   
-### NameScopePropertyAttribute  
- **参考文档：** <xref:System.Windows.Markup.NameScopePropertyAttribute>  
+### <a name="namescopepropertyattribute"></a><span data-ttu-id="6cafd-165">NameScopePropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-165">NameScopePropertyAttribute</span></span>  
+ <span data-ttu-id="6cafd-166">**参考文档：**  <xref:System.Windows.Markup.NameScopePropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-166">**Reference Documentation:**  <xref:System.Windows.Markup.NameScopePropertyAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-167">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-167">**Applies to:** Class</span></span>  
   
- **参数：**支持两种形式的特性：  
+ <span data-ttu-id="6cafd-168">**自变量：**支持两种形式的归属：</span><span class="sxs-lookup"><span data-stu-id="6cafd-168">**Arguments:** Supports two forms of attribution:</span></span>  
   
--   一个字符串，该字符串指定特性化类型的某个属性的名称。  
+-   <span data-ttu-id="6cafd-169">一个字符串，指定的特性化类型的属性名称。</span><span class="sxs-lookup"><span data-stu-id="6cafd-169">A string that specifies the name of a property on the attributed type.</span></span>  
   
--   一个字符串，该字符串指定某个属性的名称以及一个定义该命名属性的类型的 <xref:System.Type>。  这种形式用于将可附加成员指定为 XAML 名称范围属性。  
+-   <span data-ttu-id="6cafd-170">一个字符串，指定属性的名称和一<xref:System.Type>定义的命名的属性的类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-170">A string that specifies the name of a property, and a <xref:System.Type> for the type that defines the named property.</span></span> <span data-ttu-id="6cafd-171">此窗体是用于将 XAML 名称范围属性指定可附加成员。</span><span class="sxs-lookup"><span data-stu-id="6cafd-171">This form is for specifying an attachable member as the XAML namescope property.</span></span>  
   
- <xref:System.Windows.Markup.NameScopePropertyAttribute> 指定为特性化的类提供 XAML 名称范围值的属性。  XAML 名称范围属性应当引用实现 <xref:System.Windows.Markup.INameScope> 并保存实际 XAML 名称范围、其存储区及其行为的对象。  
+ <span data-ttu-id="6cafd-172"><xref:System.Windows.Markup.NameScopePropertyAttribute>指定为特性化类提供 XAML 名称范围值的属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-172"><xref:System.Windows.Markup.NameScopePropertyAttribute> specifies a property that provides the XAML namescope value for the attributed class.</span></span> <span data-ttu-id="6cafd-173">XAML 名称范围属性应引用实现的对象<xref:System.Windows.Markup.INameScope>并保存的实际的 XAML 名称范围、 其存储区，其行为。</span><span class="sxs-lookup"><span data-stu-id="6cafd-173">The XAML namescope property is expected to reference an object that implements <xref:System.Windows.Markup.INameScope> and holds the actual XAML namescope, its store, and its behavior.</span></span>  
   
-### RuntimeNamePropertyAttribute  
- **参考文档：** <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
+### <a name="runtimenamepropertyattribute"></a><span data-ttu-id="6cafd-174">RuntimeNamePropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-174">RuntimeNamePropertyAttribute</span></span>  
+ <span data-ttu-id="6cafd-175">**参考文档：**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-175">**Reference Documentation:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-176">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-176">**Applies to:** Class</span></span>  
   
- **参数：**一个字符串，该字符串指定特性化类型的运行时名称属性的名称。  
+ <span data-ttu-id="6cafd-177">**自变量：**一个字符串，指定的特性化类型上的运行时名称属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6cafd-177">**Arguments:** A string that specifies the name of the run-time name property on the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 报告映射到 XAML [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md) 的特性化类型的属性。  该属性的类型必须为 <xref:System.String> 并且必须是读\/写属性。  
+ <span data-ttu-id="6cafd-178"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute>报告的属性映射到 XAML 的特性化类型[X:name 指令](../../../docs/framework/xaml-services/x-name-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-178"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute> reports a property of the attributed type that maps to the XAML [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md).</span></span> <span data-ttu-id="6cafd-179">属性的类型必须为<xref:System.String>并且必须是读/写。</span><span class="sxs-lookup"><span data-stu-id="6cafd-179">The property must be of type <xref:System.String> and must be read/write.</span></span>  
   
- 该定义继承到可赋值给定义类型的所有派生类型。  可以通过对特定派生类型应用 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 而重写特定派生类型的定义。  
+ <span data-ttu-id="6cafd-180">定义继承到可分配给定义的类型的所有派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-180">The definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="6cafd-181">您可以通过应用来覆盖特定的派生类型上定义<xref:System.Windows.Markup.RuntimeNamePropertyAttribute>上特定于派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-181">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> on the specific derived type.</span></span>  
   
-### TrimSurroundingWhitespaceAttribute  
- **参考文档：** <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
+### <a name="trimsurroundingwhitespaceattribute"></a><span data-ttu-id="6cafd-182">TrimSurroundingWhitespaceAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-182">TrimSurroundingWhitespaceAttribute</span></span>  
+ <span data-ttu-id="6cafd-183">**参考文档：**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-183">**Reference Documentation:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute></span></span>  
   
- **适用对象：**类型  
+ <span data-ttu-id="6cafd-184">**适用于：**类型</span><span class="sxs-lookup"><span data-stu-id="6cafd-184">**Applies to:** Types</span></span>  
   
- **参数：**无。  
+ <span data-ttu-id="6cafd-185">**自变量：** None。</span><span class="sxs-lookup"><span data-stu-id="6cafd-185">**Arguments:** None.</span></span>  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 适用于特定类型，这些类型可能作为空白有意义的内容（由含有 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 的集合包含的内容）中的子元素出现。  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要与保存路径有关，但可以通过检查 <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=fullName> 用在加载路径的 XAML 类型系统中。  有关更多信息，请参见 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <span data-ttu-id="6cafd-186"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>将应用于可能显示为在空格重要内容中的子元素的特定类型 (由一个包含集合的内容持有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-186"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> is applied to specific types that might appear as child elements within whitespace significant content (content held by a collection that has <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>).</span></span> <span data-ttu-id="6cafd-187"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>保存与主要相关路径，但可在加载路径 XAML 类型系统中通过检查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-187"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> is mainly relevant to the save path, but is available in the XAML type system in the load path by examining <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6cafd-188">有关详细信息，请参阅[在 XAML 中的空白处理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-188">For more information, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
-### TypeConverterAttribute  
- **参考文档：** <xref:System.ComponentModel.TypeConverterAttribute>  
+### <a name="typeconverterattribute"></a><span data-ttu-id="6cafd-189">TypeConverterAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-189">TypeConverterAttribute</span></span>  
+ <span data-ttu-id="6cafd-190">**参考文档：**  <xref:System.ComponentModel.TypeConverterAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-190">**Reference Documentation:**  <xref:System.ComponentModel.TypeConverterAttribute></span></span>  
   
- **适用对象：**类、属性、方法（唯一有效的 XAML 方法是支持可附加成员的 `get` 访问器）。  
+ <span data-ttu-id="6cafd-191">**适用于：**类、 属性、 方法 (唯一 XAML 有效方法用例是`get`支持可附加成员的访问器)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-191">**Applies to:** Class, property, method (the only XAML-valid method case is a `get` accessor that supports an attachable member).</span></span>  
   
- **参数：** <xref:System.ComponentModel.TypeConverter> 的 <xref:System.Type>。  
+ <span data-ttu-id="6cafd-192">**自变量：** <xref:System.Type>的<xref:System.ComponentModel.TypeConverter>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-192">**Arguments:** The <xref:System.Type> of the <xref:System.ComponentModel.TypeConverter>.</span></span>  
   
- XAML 上下文中的 <xref:System.ComponentModel.TypeConverterAttribute> 引用一个自定义 <xref:System.ComponentModel.TypeConverter>。  此 <xref:System.ComponentModel.TypeConverter> 为自定义类型或该类型的成员提供类型转换行为。  
+ <span data-ttu-id="6cafd-193"><xref:System.ComponentModel.TypeConverterAttribute>在 XAML 中上下文引用自定义<xref:System.ComponentModel.TypeConverter>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-193"><xref:System.ComponentModel.TypeConverterAttribute> in a XAML context references a custom <xref:System.ComponentModel.TypeConverter>.</span></span> <span data-ttu-id="6cafd-194">这<xref:System.ComponentModel.TypeConverter>为自定义类型或该类型的成员提供类型转换行为。</span><span class="sxs-lookup"><span data-stu-id="6cafd-194">This <xref:System.ComponentModel.TypeConverter> provides type conversion behavior for custom types, or members of that type.</span></span>  
   
- 可将 <xref:System.ComponentModel.TypeConverterAttribute> 特性应用于您的类型，从而引用您的类型转换器实现。  可以对类、结构或接口定义 XAML 的类型转换器。  不需要为枚举提供类型转换，该转换是自然启用的。  
+ <span data-ttu-id="6cafd-195">你将应用<xref:System.ComponentModel.TypeConverterAttribute>属性设为你的类型，引用您的类型转换器实现。</span><span class="sxs-lookup"><span data-stu-id="6cafd-195">You apply the <xref:System.ComponentModel.TypeConverterAttribute> attribute to your type, referencing your type converter implementation.</span></span> <span data-ttu-id="6cafd-196">在类、 结构或接口，可以为 XAML 中定义的类型转换器。</span><span class="sxs-lookup"><span data-stu-id="6cafd-196">You can define type converters for XAML on classes, structures, or interfaces.</span></span> <span data-ttu-id="6cafd-197">不需要提供类型转换为枚举，转换启用了本机。</span><span class="sxs-lookup"><span data-stu-id="6cafd-197">You do not need to provide type conversion for enumerations, that conversion is enabled natively.</span></span>  
   
- 类型转换器应能够将用于标记中的特性或初始化文本的字符串转换为所需的目标类型。  有关更多信息，请参见 [TypeConverters 和 XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ <span data-ttu-id="6cafd-198">类型转换器应该能够从字符串转换你预期的目标类型用于特性或在标记中，初始化文本转换。</span><span class="sxs-lookup"><span data-stu-id="6cafd-198">Your type converter should be able to convert from a string that is used for attributes or initialization text in markup, into your intended destination type.</span></span> <span data-ttu-id="6cafd-199">有关详细信息，请参阅[对和 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-199">For more information, see [TypeConverters and XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).</span></span>  
   
- 可以针对特定属性确立 XAML 的类型转换器行为，而不是应用于某个类型的所有值。  在这种情况下，将 <xref:System.ComponentModel.TypeConverterAttribute> 应用于属性定义（外部定义，而不是特定的 `get` 和 `set` 定义）。  
+ <span data-ttu-id="6cafd-200">而不是将应用于类型的所有值，XAML 的类型转换器行为还可以建立上的特定属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-200">Rather than applying to all values of a type, a type converter behavior for XAML can also be established on a specific property.</span></span> <span data-ttu-id="6cafd-201">在这种情况下，应用<xref:System.ComponentModel.TypeConverterAttribute>到属性定义 (外部定义，而不是特定`get`和`set`定义)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-201">In this case, you apply <xref:System.ComponentModel.TypeConverterAttribute> to the property definition (the outer definition, not the specific `get` and `set` definitions).</span></span>  
   
- 通过将 <xref:System.ComponentModel.TypeConverterAttribute> 应用于支持 XAML 用法的 `get` 方法访问器，可以为自定义可附加成员的 XAML 用法指定类型转换器行为。  
+ <span data-ttu-id="6cafd-202">可以通过应用分配的自定义的可附加成员的 XAML 用法的类型转换器行为<xref:System.ComponentModel.TypeConverterAttribute>到`get`支持 XAML 用法的方法访问器。</span><span class="sxs-lookup"><span data-stu-id="6cafd-202">A type converter behavior for XAML usage of a custom attachable member can be assigned by applying <xref:System.ComponentModel.TypeConverterAttribute> to the `get` method accessor that supports the XAML usage.</span></span>  
   
- 与 <xref:System.ComponentModel.TypeConverter> 一样，在 XAML 存在之前，<xref:System.ComponentModel.TypeConverterAttribute> 就已经存在于 .NET Framework 中了，并且类型转换器模型还用作其他用途。  为了引用和使用 <xref:System.ComponentModel.TypeConverterAttribute>，必须对其完全限定或为 <xref:System.ComponentModel> 提供 `using` 语句。  还必须将系统程序集包含在项目中。  
+ <span data-ttu-id="6cafd-203">类似于<xref:System.ComponentModel.TypeConverter>， <xref:System.ComponentModel.TypeConverterAttribute> XAML 存在之前.NET Framework 中存在并已对类型转换器模型提供其他目的。</span><span class="sxs-lookup"><span data-stu-id="6cafd-203">Similar to <xref:System.ComponentModel.TypeConverter>, <xref:System.ComponentModel.TypeConverterAttribute> existed in the .NET Framework prior to the existence of XAML, and the type converter model served other purposes.</span></span> <span data-ttu-id="6cafd-204">为了引用并使用<xref:System.ComponentModel.TypeConverterAttribute>，你必须完全限定它，或者提供`using`语句<xref:System.ComponentModel>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-204">In order to reference and use <xref:System.ComponentModel.TypeConverterAttribute>, you must fully qualify it or provide a `using` statement for <xref:System.ComponentModel>.</span></span> <span data-ttu-id="6cafd-205">您还必须在你的项目中包含的系统程序集。</span><span class="sxs-lookup"><span data-stu-id="6cafd-205">You must also include the System assembly in your project.</span></span>  
   
-### UidPropertyAttribute  
- **参考文档：** <xref:System.Windows.Markup.UidPropertyAttribute>  
+### <a name="uidpropertyattribute"></a><span data-ttu-id="6cafd-206">UidPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-206">UidPropertyAttribute</span></span>  
+ <span data-ttu-id="6cafd-207">**参考文档：**  <xref:System.Windows.Markup.UidPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-207">**Reference Documentation:**  <xref:System.Windows.Markup.UidPropertyAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-208">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-208">**Applies to:** Class</span></span>  
   
- **参数：**一个字符串，该字符串按名称引用相关属性。  
+ <span data-ttu-id="6cafd-209">**自变量：**按名称引用相关的属性的字符串。</span><span class="sxs-lookup"><span data-stu-id="6cafd-209">**Arguments:** A string that references the relevant property by name.</span></span>  
   
- 指示用作 [x:Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md) 别名的类的 CLR 属性。  
+ <span data-ttu-id="6cafd-210">指示该别名的一个类的 CLR 属性[X:uid 指令](../../../docs/framework/xaml-services/x-uid-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-210">Indicates the CLR property of a class that aliases the [x:Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md).</span></span>  
   
-### UsableDuringInitializationAttribute  
- **参考文档：** <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
+### <a name="usableduringinitializationattribute"></a><span data-ttu-id="6cafd-211">UsableDuringInitializationAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-211">UsableDuringInitializationAttribute</span></span>  
+ <span data-ttu-id="6cafd-212">**参考文档：**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-212">**Reference Documentation:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-213">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-213">**Applies to:** Class</span></span>  
   
- **参数：**一个布尔值。  如果用于特性的预期目的，则应该始终将它指定为 `true`。  
+ <span data-ttu-id="6cafd-214">**自变量：**一个布尔值。</span><span class="sxs-lookup"><span data-stu-id="6cafd-214">**Arguments:** A Boolean.</span></span> <span data-ttu-id="6cafd-215">如果用于该特性的预期用途，这应始终指定为`true`。</span><span class="sxs-lookup"><span data-stu-id="6cafd-215">If used for the attribute's intended purpose, this should always be specified as `true`.</span></span>  
   
- 指示在 XAML 对象图创建期间是否自上而下生成此类型。  这是一个高级概念，这个概念可能与编程模型的定义紧密相关。  有关更多信息，请参见 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
+ <span data-ttu-id="6cafd-216">指示在 XAML 对象图创建期间是否自上而下生成此类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-216">Indicates whether this type is built top-down during XAML object graph creation.</span></span> <span data-ttu-id="6cafd-217">这是一种高级的概念，这与编程模型的定义可能密切相关。</span><span class="sxs-lookup"><span data-stu-id="6cafd-217">This is an advanced concept, which is probably closely related to the definition of your programming model.</span></span> <span data-ttu-id="6cafd-218">有关详细信息，请参阅<xref:System.Windows.Markup.UsableDuringInitializationAttribute>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-218">For more information, see <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.</span></span>  
   
-### ValueSerializerAttribute  
- **参考文档：** <xref:System.Windows.Markup.ValueSerializerAttribute>  
+### <a name="valueserializerattribute"></a><span data-ttu-id="6cafd-219">ValueSerializerAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-219">ValueSerializerAttribute</span></span>  
+ <span data-ttu-id="6cafd-220">**参考文档：**  <xref:System.Windows.Markup.ValueSerializerAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-220">**Reference Documentation:**  <xref:System.Windows.Markup.ValueSerializerAttribute></span></span>  
   
- **适用对象：**类、属性、方法（唯一有效的 XAML 方法是支持可附加成员的 `get` 访问器）。  
+ <span data-ttu-id="6cafd-221">**适用于：**类、 属性、 方法 (唯一 XAML 有效方法用例是`get`支持可附加成员的访问器)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-221">**Applies to:** Class, property, method (the only XAML-valid method case is a `get` accessor that supports an attachable member).</span></span>  
   
- **参数：**一个 <xref:System.Type>，它指定要在对特性化类型的所有属性或特定的特性化属性进行序列化时使用的值序列化程序支持类。  
+ <span data-ttu-id="6cafd-222">**自变量：** A <xref:System.Type> ，指定要在序列化的特性化类型的所有属性时使用的值序列化程序支持类或特定于特性化属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-222">**Arguments:** A <xref:System.Type> that specifies the value serializer support class to use when serializing all properties of the attributed type, or the specific attributed property.</span></span>  
   
- <xref:System.Windows.Markup.ValueSerializer> 指定一个值序列化类，该类比 <xref:System.ComponentModel.TypeConverter> 需要更多的状态和上下文。  通过对可附加成员的 `get` 访问器方法应用 <xref:System.Windows.Markup.ValueSerializerAttribute> 特性，可将 <xref:System.Windows.Markup.ValueSerializer> 与该可附加成员关联。  值序列化也适用于枚举、接口和结构，但不适用于委托。  
+ <span data-ttu-id="6cafd-223"><xref:System.Windows.Markup.ValueSerializer>指定一个值序列化类，需要更多状态和以外的上下文<xref:System.ComponentModel.TypeConverter>未。</span><span class="sxs-lookup"><span data-stu-id="6cafd-223"><xref:System.Windows.Markup.ValueSerializer> specifies a value serialization class that requires more state and context than a <xref:System.ComponentModel.TypeConverter> does.</span></span> <span data-ttu-id="6cafd-224"><xref:System.Windows.Markup.ValueSerializer>可以通过将应用与可附加成员相关联<xref:System.Windows.Markup.ValueSerializerAttribute>静态属性`get`可附加成员的访问器方法。</span><span class="sxs-lookup"><span data-stu-id="6cafd-224"><xref:System.Windows.Markup.ValueSerializer> can be associated with an attachable member by applying the <xref:System.Windows.Markup.ValueSerializerAttribute> attribute on the static `get` accessor method for the attachable member.</span></span> <span data-ttu-id="6cafd-225">值序列化也适用于枚举、 接口和结构，但不适用于委托。</span><span class="sxs-lookup"><span data-stu-id="6cafd-225">Value serialization is also applicable for enumerations, interfaces and structures, but not for delegates.</span></span>  
   
-### WhitespaceSignificantCollectionAttribute  
- **参考文档：** <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
+### <a name="whitespacesignificantcollectionattribute"></a><span data-ttu-id="6cafd-226">WhitespaceSignificantCollectionAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-226">WhitespaceSignificantCollectionAttribute</span></span>  
+ <span data-ttu-id="6cafd-227">**参考文档：**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-227">**Reference Documentation:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute></span></span>  
   
- **适用对象：**类、（特别是）集合类型，这些结合类型预期承载混合内容，其中对象元素周围的空白对于 UI 表示形式可能有意义。  
+ <span data-ttu-id="6cafd-228">**适用于：**类，具体而言应承载混合的内容，其中对象元素周围的空白区域可能会很明显的 UI 表示形式的集合类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-228">**Applies to:** Class, specifically collection types that are expected to host mixed content, where white space around object elements might be significant for UI representation.</span></span>  
   
- **参数：**无。  
+ <span data-ttu-id="6cafd-229">**自变量：** None。</span><span class="sxs-lookup"><span data-stu-id="6cafd-229">**Arguments:** None.</span></span>  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 指示 XAML 处理器应该将集合类型处理为空白有意义，这会影响集合中 XAML 节点流的值节点的构造。  有关更多信息，请参见 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <span data-ttu-id="6cafd-230"><xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>指示集合类型应为空格处理由 XAML 处理器，这会影响集合中的 XAML 节点流的值节点的构造。</span><span class="sxs-lookup"><span data-stu-id="6cafd-230"><xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> indicates that a collection type should be processed as whitespace significant by a XAML processor, which influences the construction of the XAML node stream's value nodes within the collection.</span></span> <span data-ttu-id="6cafd-231">有关详细信息，请参阅[在 XAML 中的空白处理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="6cafd-231">For more information, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
-### XamlDeferLoadAttribute  
- **参考文档：** <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
+### <a name="xamldeferloadattribute"></a><span data-ttu-id="6cafd-232">XamlDeferLoadAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-232">XamlDeferLoadAttribute</span></span>  
+ <span data-ttu-id="6cafd-233">**参考文档：**  <xref:System.Windows.Markup.XamlDeferLoadAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-233">**Reference Documentation:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute></span></span>  
   
- **适用对象：**类、属性。  
+ <span data-ttu-id="6cafd-234">**适用于：**类、 属性。</span><span class="sxs-lookup"><span data-stu-id="6cafd-234">**Applies to:** Class, property.</span></span>  
   
- **参数：**支持两个特性类型：作为字符串的类型或作为 <xref:System.Type> 的类型。  请参见 <xref:System.Windows.Markup.XamlDeferLoadAttribute>。  
+ <span data-ttu-id="6cafd-235">**自变量：**支持两个归属窗体以字符串形式的类型或类型用作<xref:System.Type>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-235">**Arguments:** Supports two attribution forms types as strings, or types as <xref:System.Type>.</span></span> <span data-ttu-id="6cafd-236">请参阅<xref:System.Windows.Markup.XamlDeferLoadAttribute>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-236">See <xref:System.Windows.Markup.XamlDeferLoadAttribute>.</span></span>  
   
- 指示类或属性具有 XAML 的延迟加载用途（如模板行为），并报告启用延迟行为及其目标\/内容类型的类。  
+ <span data-ttu-id="6cafd-237">指示类或属性 （如模板行为），具有 xaml 的延迟的加载使用情况和报告类，使推迟行为和其目标中的内容类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-237">Indicates that a class or property has a deferred load usage for XAML (such as a template behavior), and reports the class that enables the deferring behavior and its destination/content type.</span></span>  
   
-### XamlSetMarkupExtensionAttribute  
- **参考文档：** <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
+### <a name="xamlsetmarkupextensionattribute"></a><span data-ttu-id="6cafd-238">XamlSetMarkupExtensionAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-238">XamlSetMarkupExtensionAttribute</span></span>  
+ <span data-ttu-id="6cafd-239">**参考文档：**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-239">**Reference Documentation:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-240">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-240">**Applies to:** Class</span></span>  
   
- **参数：**为回调命名。  
+ <span data-ttu-id="6cafd-241">**自变量：**名称回调。</span><span class="sxs-lookup"><span data-stu-id="6cafd-241">**Arguments:** Names the callback.</span></span>  
   
- 指示某个类可以使用标记扩展为它的一个或多个属性提供值，并且在对该类的任何属性执行标记扩展 set 操作之前，引用 XAML 编写器应调用的处理程序。  
+ <span data-ttu-id="6cafd-242">指示类可以使用标记扩展提供的值为一个或多个属性，并引用 XAML 编写器应在执行标记扩展类的任何属性上设置操作之前调用的处理程序。</span><span class="sxs-lookup"><span data-stu-id="6cafd-242">Indicates that a class can use a markup extension to provide a value for one or more of its properties, and references a handler that a XAML writer should call before performing a markup extension set operation on any property of the class.</span></span>  
   
-### XamlSetTypeConverterAttribute  
- **参考文档：** <xref:System.Windows.Markup.XamlSetTypeConverterAttribute>  
+### <a name="xamlsettypeconverterattribute"></a><span data-ttu-id="6cafd-243">XamlSetTypeConverterAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-243">XamlSetTypeConverterAttribute</span></span>  
+ <span data-ttu-id="6cafd-244">**参考文档：**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-244">**Reference Documentation:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-245">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-245">**Applies to:** Class</span></span>  
   
- **参数：**为回调命名。  
+ <span data-ttu-id="6cafd-246">**自变量：**名称回调。</span><span class="sxs-lookup"><span data-stu-id="6cafd-246">**Arguments:** Names the callback.</span></span>  
   
- 指示某个类可以使用类型转换器为它的一个或多个属性提供值，并且在对该类的任何属性执行类型转换器 set 操作之前，引用 XAML 编写器应调用的处理程序。  
+ <span data-ttu-id="6cafd-247">指示类可以使用的类型转换器提供的值为一个或多个属性，并引用 XAML 编写器应在执行上类的任何属性类型转换器设置操作之前调用的处理程序。</span><span class="sxs-lookup"><span data-stu-id="6cafd-247">Indicates that a class can use a type converter to provide a value for one or more of its properties, and references a handler that a XAML writer should call before performing a type converter set operation on any property of the class.</span></span>  
   
-### XmlLangPropertyAttribute  
- **参考文档：** <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
+### <a name="xmllangpropertyattribute"></a><span data-ttu-id="6cafd-248">XmlLangPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-248">XmlLangPropertyAttribute</span></span>  
+ <span data-ttu-id="6cafd-249">**参考文档：**  <xref:System.Windows.Markup.XmlLangPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-249">**Reference Documentation:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute></span></span>  
   
- **适用对象：**类  
+ <span data-ttu-id="6cafd-250">**适用于：**类</span><span class="sxs-lookup"><span data-stu-id="6cafd-250">**Applies to:** Class</span></span>  
   
- **参数：**一个字符串，该字符串指定特性化类型的用作 `xml:lang` 别名的属性名称。  
+ <span data-ttu-id="6cafd-251">**自变量：**一个字符串，指定将属性设为别名的名称`xml:lang`上的特性化类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-251">**Arguments:** A string that specifies the name of the property to alias to `xml:lang` on the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.XmlLangPropertyAttribute> 报告映射到 XML `lang` 指令的特性化类型的属性。  该属性的类型可以不是 <xref:System.String>，但必须可从字符串赋值（这可以通过将类型转换器与该属性的类型或特定的属性相关联来实现）。  该属性必须是读\/写属性。  
+ <span data-ttu-id="6cafd-252"><xref:System.Windows.Markup.XmlLangPropertyAttribute>报告的属性映射到 XML 的特性化类型`lang`指令。</span><span class="sxs-lookup"><span data-stu-id="6cafd-252"><xref:System.Windows.Markup.XmlLangPropertyAttribute> reports a property of the attributed type that maps to the XML `lang` directive.</span></span> <span data-ttu-id="6cafd-253">属性一定不属于类型<xref:System.String>，但必须从字符串 （这可以通过将与该属性的类型或特定属性相关联的类型转换器来实现） 赋值。</span><span class="sxs-lookup"><span data-stu-id="6cafd-253">The property is not necessarily of type <xref:System.String>, but must be assignable from a string (this could be accomplished by associating a type converter with the property's type, or with the specific property).</span></span> <span data-ttu-id="6cafd-254">该属性必须是读/写。</span><span class="sxs-lookup"><span data-stu-id="6cafd-254">The property must be read/write.</span></span>  
   
- 这是用于映射 `xml:lang` 的方案，以便运行时对象模型可以访问 XML 指定的语言信息，而无需使用 XMLDOM 专门进行处理。  
+ <span data-ttu-id="6cafd-255">映射的方案`xml:lang`以便运行时对象模型而不会专门处理与 XMLDOM 可以访问的 XML 指定语言信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-255">The scenario for mapping `xml:lang` is so that a runtime object model has access to XML-specified language information without specifically processing with an XMLDOM.</span></span>  
   
- 该定义继承到可赋值给定义类型的所有派生类型。  可以通过对特定派生类型应用 <xref:System.Windows.Markup.XmlLangPropertyAttribute> 而重写特定派生类型的定义，但这种情况不常见。  
+ <span data-ttu-id="6cafd-256">定义继承到可分配给定义的类型的所有派生类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-256">The definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="6cafd-257">您可以通过应用来覆盖特定的派生类型上定义<xref:System.Windows.Markup.XmlLangPropertyAttribute>上特定于派生类型，但这一情况不常见。</span><span class="sxs-lookup"><span data-stu-id="6cafd-257">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.XmlLangPropertyAttribute> on the specific derived type, although that is an uncommon scenario.</span></span>  
   
-## 程序集级别的 XAML 相关 CLR 特性  
- 以下各节介绍不适用于类型或成员定义但适用于程序集的 XAML 相关特性。  这些特性都与定义包含要在 XAML 中使用的自定义类型的库的总体目标有关。  某些特性不一定会直接影响 XAML 节点流，但会在节点流中传递以供其他使用方使用。  该信息的使用方包括需要 XAML 命名空间信息以及关联的前缀信息的设计环境或序列化进程。  XAML 架构上下文（包括 .NET Framework XAML 服务默认值）也使用此信息。  
+## <a name="xaml-related-clr-attributes-at-the-assembly-level"></a><span data-ttu-id="6cafd-258">程序集级别的与 XAML 相关 CLR 特性</span><span class="sxs-lookup"><span data-stu-id="6cafd-258">XAML-Related CLR Attributes at the Assembly Level</span></span>  
+ <span data-ttu-id="6cafd-259">以下各节描述了与 XAML 相关的属性不会应用于类型或成员定义，但改为应用于程序集。</span><span class="sxs-lookup"><span data-stu-id="6cafd-259">The following sections describe the XAML-related attributes that are not applied to types or member definitions, but are instead applied to assemblies.</span></span> <span data-ttu-id="6cafd-260">这些特性是相关的定义包含要在 XAML 中使用的自定义类型的库的总体目标。</span><span class="sxs-lookup"><span data-stu-id="6cafd-260">These attributes are pertinent to the overall goal of defining a library that contains custom types to use in XAML.</span></span> <span data-ttu-id="6cafd-261">某些特性不一定影响 XAML 节点流直接，但在其他使用者可以使用节点流中上进行传递。</span><span class="sxs-lookup"><span data-stu-id="6cafd-261">Some of the attributes do not necessarily influence the XAML node stream directly, but are passed on in the node stream for other consumers to use.</span></span> <span data-ttu-id="6cafd-262">使用者的信息包括设计环境或需要 XAML 命名空间信息以及关联的前缀信息的序列化进程。</span><span class="sxs-lookup"><span data-stu-id="6cafd-262">Consumers for the information include design environments or serialization processes that need XAML namespace information and associated prefix information.</span></span> <span data-ttu-id="6cafd-263">XAML 架构上下文 （包括.NET Framework XAML 服务默认值） 也使用此信息。</span><span class="sxs-lookup"><span data-stu-id="6cafd-263">A XAML schema context (including the .NET Framework XAML Services default) also uses this information.</span></span>  
   
-### XmlnsCompatibleWithAttribute  
- **参考文档：** <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
+### <a name="xmlnscompatiblewithattribute"></a><span data-ttu-id="6cafd-264">XmlnsCompatibleWithAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-264">XmlnsCompatibleWithAttribute</span></span>  
+ <span data-ttu-id="6cafd-265">**参考文档：**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-265">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute></span></span>  
   
- **参数：**  
+ <span data-ttu-id="6cafd-266">**自变量：**</span><span class="sxs-lookup"><span data-stu-id="6cafd-266">**Arguments:**</span></span>  
   
--   一个字符串，该字符串指定要归入的 XAML 命名空间的标识符。  
+-   <span data-ttu-id="6cafd-267">一个字符串，指定要归类的 XAML 命名空间的标识符。</span><span class="sxs-lookup"><span data-stu-id="6cafd-267">A string that specifies the identifier of the XAML namespace to subsume.</span></span>  
   
--   一个字符串，该字符串指定可以将来自上一参数的 XAML 命名空间归入的 XAML 命名空间的标识符。  
+-   <span data-ttu-id="6cafd-268">一个字符串，指定可以归类从以前的自变量的 XAML 命名空间的 XAML 命名空间的标识符。</span><span class="sxs-lookup"><span data-stu-id="6cafd-268">A string that specifies the identifier of the XAML namespace that can subsume the XAML namespace from the previous argument.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定一个 XAML 命名空间可以归入另一个 XAML 命名空间。  通常，进行归入的 XAML 命名空间在以前定义的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 中指示。  此方法可用于对某个库中的 XAML 词汇进行版本控制，从而使它与之前针对以前版本的词汇定义的标记兼容。  
+ <span data-ttu-id="6cafd-269"><xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>指定 XAML 命名空间，可以归入其他 XAML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="6cafd-269"><xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> specifies that a XAML namespace can be subsumed by another XAML namespace.</span></span> <span data-ttu-id="6cafd-270">通常，表示包含 XAML 命令空间中之前定义<xref:System.Windows.Markup.XmlnsDefinitionAttribute>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-270">Typically, the subsuming XAML namespace is indicated in a previously defined <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.</span></span> <span data-ttu-id="6cafd-271">此方法可用于版本控制的 XAML 词汇库中并使其与以前版本的词汇针对以前定义的标记兼容。</span><span class="sxs-lookup"><span data-stu-id="6cafd-271">This technique can be used for versioning a XAML vocabulary in a library and to make it compatible with previously defined markup against the earlier versioned vocabulary.</span></span>  
   
-### XmlnsDefinitionAttribute  
- **参考文档：** <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
+### <a name="xmlnsdefinitionattribute"></a><span data-ttu-id="6cafd-272">XmlnsDefinitionAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-272">XmlnsDefinitionAttribute</span></span>  
+ <span data-ttu-id="6cafd-273">**参考文档：**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-273">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute></span></span>  
   
- **参数：**  
+ <span data-ttu-id="6cafd-274">**自变量：**</span><span class="sxs-lookup"><span data-stu-id="6cafd-274">**Arguments:**</span></span>  
   
--   一个字符串，该字符串指定要定义的 XAML 命名空间的标识符。  
+-   <span data-ttu-id="6cafd-275">一个字符串，指定要定义的 XAML 命名空间的标识符。</span><span class="sxs-lookup"><span data-stu-id="6cafd-275">A string that specifies the identifier of the XAML namespace to define.</span></span>  
   
--   一个字符串，该字符串命名 CLR 命名空间。  CLR 命名空间应该在您的程序集中定义公共类型，并且该 CLR 命名空间类型中的至少一个类型应该用于 XAML 用法。  
+-   <span data-ttu-id="6cafd-276">命名的 CLR 命名空间的字符串。</span><span class="sxs-lookup"><span data-stu-id="6cafd-276">A string that names a CLR namespace.</span></span> <span data-ttu-id="6cafd-277">CLR 命名空间应在程序集中定义公共类型和 CLR 命名空间类型至少应适用于 XAML 用法。</span><span class="sxs-lookup"><span data-stu-id="6cafd-277">The CLR namespace should define public types in your assembly, and at least one of the CLR namespace types should be intended for XAML usage.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 基于每个程序集指定 XAML 命名空间与 CLR 命名空间之间的映射，然后将该映射用于由 XAML 对象编写器或 XAML 架构上下文进行的类型解析。  
+ <span data-ttu-id="6cafd-278"><xref:System.Windows.Markup.XmlnsDefinitionAttribute>指定每个程序集基于 XAML 命名空间和 CLR 命名空间，然后使用以进行类型解析由 XAML 对象编写器或 XAML 架构上下文之间的映射。</span><span class="sxs-lookup"><span data-stu-id="6cafd-278"><xref:System.Windows.Markup.XmlnsDefinitionAttribute> specifies a mapping on a per-assembly basis between a XAML namespace and a CLR namespace, which is then used for type resolution by a XAML object writer or XAML schema context.</span></span>  
   
- 可以对一个程序集应用多个 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  可以出于下列原因的任意组合而这样做：  
+ <span data-ttu-id="6cafd-279">多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以应用于程序集。</span><span class="sxs-lookup"><span data-stu-id="6cafd-279">More than one <xref:System.Windows.Markup.XmlnsDefinitionAttribute> can be applied to an assembly.</span></span> <span data-ttu-id="6cafd-280">这可能会出于以下原因的任意组合：</span><span class="sxs-lookup"><span data-stu-id="6cafd-280">This might be done for any combination of the following reasons:</span></span>  
   
--   库设计包含多个 CLR 命名空间以用于运行时 API 访问的逻辑组织；但是，您需要引用相同的 XAML 命名空间来使这些命名空间中的所有类型都是 XAML 可用的。  在这种情况下，可使用相同的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 值但不同的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> 值来应用多个 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 特性。  如果为框架或应用程序要在常见用法中成为默认 XAML 命名空间的 XAML 命名空间定义映射，则此特性尤其有用。  
+-   <span data-ttu-id="6cafd-281">库设计包含用于运行时 API 访问; 的逻辑组织的多个 CLR 命名空间但是，你希望这些命名空间中的所有类型，能够通过引用相同的 XAML 命名空间 XAML 可用。</span><span class="sxs-lookup"><span data-stu-id="6cafd-281">The library design contains multiple CLR namespaces for logical organization of run-time API access; however, you want all types in those namespaces to be XAML-usable by referencing the same XAML namespace.</span></span> <span data-ttu-id="6cafd-282">在这种情况下，应用多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>属性使用相同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值但不同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>值。</span><span class="sxs-lookup"><span data-stu-id="6cafd-282">In this case, you apply several <xref:System.Windows.Markup.XmlnsDefinitionAttribute> attributes using the same <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> value but different <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> values.</span></span> <span data-ttu-id="6cafd-283">这是特别有用，如果要定义你 framework 或应用程序打算默认 XAML 命名空间处于常见用法的 XAML 命名空间的映射。</span><span class="sxs-lookup"><span data-stu-id="6cafd-283">This is especially useful if you are defining mappings for the XAML namespace that your framework or application intends to be the default XAML namespace in common usage.</span></span>  
   
--   库设计包含多个 CLR 命名空间，并且您希望在这些 CLR 命名空间中类型的使用不同时有意分离 XAML 命名空间。  
+-   <span data-ttu-id="6cafd-284">库设计包含多个 CLR 命名空间，并且你希望故意的 XAML 命名空间分隔了这些 CLR 命名空间中类型的用法。</span><span class="sxs-lookup"><span data-stu-id="6cafd-284">The library design contains multiple CLR namespaces, and you want a deliberate XAML namespace separation between the usages of types in those CLR namespaces.</span></span>  
   
--   在该程序集中定义一个 CLR 命名空间，并且希望该命名空间能够通过多个 XAML 命名空间访问。  在您支持具有相同基本代码的多个词汇表时，会出现这种情况。  
+-   <span data-ttu-id="6cafd-285">你在程序集中，定义 CLR 命名空间，而您希望其可通过多个 XAML 命名空间进行访问。</span><span class="sxs-lookup"><span data-stu-id="6cafd-285">You define a CLR namespace in the assembly, and you want it to be accessible through more than one XAML namespace.</span></span> <span data-ttu-id="6cafd-286">当你支持多个具有相同的基本代码的词汇表，将出现这种情况。</span><span class="sxs-lookup"><span data-stu-id="6cafd-286">This scenario occurs when you are supporting multiple vocabularies with the same codebase.</span></span>  
   
--   在一个或多个 CLR 命名空间中定义 XAML 语言支持。  对于这些命名空间，<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 值都应为 `http://schemas.microsoft.com/winfx/2006/xaml`。  
+-   <span data-ttu-id="6cafd-287">你可以在一个或多个 CLR 命名空间中定义 XAML 语言支持。</span><span class="sxs-lookup"><span data-stu-id="6cafd-287">You define XAML language support in one or more CLR namespaces.</span></span> <span data-ttu-id="6cafd-288">对于这些数据，<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值应为`http://schemas.microsoft.com/winfx/2006/xaml`。</span><span class="sxs-lookup"><span data-stu-id="6cafd-288">For these, the <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> value should be `http://schemas.microsoft.com/winfx/2006/xaml`.</span></span>  
   
-### XmlnsPrefixAttribute  
- **参考文档：** <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
+### <a name="xmlnsprefixattribute"></a><span data-ttu-id="6cafd-289">XmlnsPrefixAttribute</span><span class="sxs-lookup"><span data-stu-id="6cafd-289">XmlnsPrefixAttribute</span></span>  
+ <span data-ttu-id="6cafd-290">**参考文档：**  <xref:System.Windows.Markup.XmlnsPrefixAttribute></span><span class="sxs-lookup"><span data-stu-id="6cafd-290">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute></span></span>  
   
- **参数：**  
+ <span data-ttu-id="6cafd-291">**自变量：**</span><span class="sxs-lookup"><span data-stu-id="6cafd-291">**Arguments:**</span></span>  
   
--   一个字符串，该字符串指定 XAML 命名空间的标识符。  
+-   <span data-ttu-id="6cafd-292">一个字符串，指定 XAML 命名空间的标识符。</span><span class="sxs-lookup"><span data-stu-id="6cafd-292">A string that specifies the identifier of a XAML namespace.</span></span>  
   
--   一个字符串，该字符串指定建议的前缀。  
+-   <span data-ttu-id="6cafd-293">一个字符串，指定的推荐的前缀。</span><span class="sxs-lookup"><span data-stu-id="6cafd-293">A string that specifies a recommended prefix.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 指定用于 XAML 命名空间的建议前缀。  在 XAML 文件中编写元素和特性时（该文件由 .NET Framework XAML 服务 <xref:System.Xaml.XamlXmlWriter> 进行序列化），或在 XAML 实现库与具有 XAML 编辑功能的设计环境进行交互时，此前缀十分有用。  
+ <span data-ttu-id="6cafd-294"><xref:System.Windows.Markup.XmlnsDefinitionAttribute>指定要用于 XAML 命名空间的推荐的前缀。</span><span class="sxs-lookup"><span data-stu-id="6cafd-294"><xref:System.Windows.Markup.XmlnsDefinitionAttribute> specifies a recommended prefix to use for a XAML namespace.</span></span> <span data-ttu-id="6cafd-295">在序列化.NET Framework XAML 服务 XAML 文件中编写元素和属性时，该前缀是有用<xref:System.Xaml.XamlXmlWriter>，或当 XAML 实现的库交互与具有 XAML 的设计环境编辑功能。</span><span class="sxs-lookup"><span data-stu-id="6cafd-295">The prefix is useful when writing elements and attributes in a XAML file that is serialized by the .NET Framework XAML Services <xref:System.Xaml.XamlXmlWriter>, or when a XAML-implementing library interacts with a design environment that has XAML editing features.</span></span>  
   
- 可以对一个程序集应用多个 <xref:System.Windows.Markup.XmlnsPrefixAttribute>。  可以出于下列原因的任意组合而这样做：  
+ <span data-ttu-id="6cafd-296">多个<xref:System.Windows.Markup.XmlnsPrefixAttribute>可以应用于程序集。</span><span class="sxs-lookup"><span data-stu-id="6cafd-296">More than one <xref:System.Windows.Markup.XmlnsPrefixAttribute> can be applied to an assembly.</span></span> <span data-ttu-id="6cafd-297">这可能会出于以下原因的任意组合：</span><span class="sxs-lookup"><span data-stu-id="6cafd-297">This might be done for any combination of the following reasons:</span></span>  
   
--   您的程序集为多个 XAML 命名空间定义类型。  在这种情况下，应为每个 XAML 命名空间定义不同的前缀值。  
+-   <span data-ttu-id="6cafd-298">程序集定义多个 XAML 命名空间的类型。</span><span class="sxs-lookup"><span data-stu-id="6cafd-298">Your assembly defines types for more than one XAML namespace.</span></span> <span data-ttu-id="6cafd-299">在这种情况下应定义每个 XAML 命名空间不同的前缀的值。</span><span class="sxs-lookup"><span data-stu-id="6cafd-299">In this case you should define different prefix values for each XAML namespace.</span></span>  
   
--   您支持多个词汇表并且对每个词汇表和 XAML 命名空间使用不同的前缀。  
+-   <span data-ttu-id="6cafd-300">支持多个词汇，并为每个词汇和 XAML 命名空间中使用不同的前缀。</span><span class="sxs-lookup"><span data-stu-id="6cafd-300">You are supporting multiple vocabularies, and you use different prefixes for each vocabulary and XAML namespace.</span></span>  
   
--   在该程序集中定义 XAML 语言支持并且有 `http://schemas.microsoft.com/winfx/2006/xaml` 对应的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  在这种情况下，通常应该提升前缀 `x`。  
+-   <span data-ttu-id="6cafd-301">在程序集中定义 XAML 语言支持和具有<xref:System.Windows.Markup.XmlnsDefinitionAttribute>为`http://schemas.microsoft.com/winfx/2006/xaml`。</span><span class="sxs-lookup"><span data-stu-id="6cafd-301">You define XAML language support in the assembly and have a <xref:System.Windows.Markup.XmlnsDefinitionAttribute> for `http://schemas.microsoft.com/winfx/2006/xaml`.</span></span> <span data-ttu-id="6cafd-302">在这种情况下，通常应提升前缀`x`。</span><span class="sxs-lookup"><span data-stu-id="6cafd-302">In this case, you typically should promote the prefix `x`.</span></span>  
   
 > [!NOTE]
->  .NET Framework XAML 服务还定义与 XAML 相关的特性 <xref:System.Windows.Markup.RootNamespaceAttribute>。  此特性是用于项目系统支持的程序集级特性，它与 XAML 自定义类型无关。  
+>  <span data-ttu-id="6cafd-303">.NET framework XAML 服务还定义了与 XAML 相关的特性<xref:System.Windows.Markup.RootNamespaceAttribute>。</span><span class="sxs-lookup"><span data-stu-id="6cafd-303">.NET Framework XAML Services also defines the XAML-related attribute <xref:System.Windows.Markup.RootNamespaceAttribute>.</span></span> <span data-ttu-id="6cafd-304">此属性是用于项目系统支持一个程序集级别属性，但不与 XAML 自定义类型有关。</span><span class="sxs-lookup"><span data-stu-id="6cafd-304">This attribute is an assembly-level attribute for project system support, and it is not relevant for XAML custom types.</span></span>  
   
-## 请参阅  
- <xref:System.Attribute>   
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+## <a name="see-also"></a><span data-ttu-id="6cafd-305">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6cafd-305">See Also</span></span>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="6cafd-306">定义与 .NET Framework XAML 服务一起使用的自定义类型</span><span class="sxs-lookup"><span data-stu-id="6cafd-306">Defining Custom Types for Use with .NET Framework XAML Services</span></span>](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

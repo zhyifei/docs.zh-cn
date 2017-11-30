@@ -1,1 +1,1 @@
-Microsoft Visual Studio
+<span data-ttu-id="cfdbc-101">Microsoft Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cfdbc-101">Microsoft Visual Studio</span></span>

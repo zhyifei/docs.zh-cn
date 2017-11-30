@@ -1,1 +1,1 @@
-有关详细信息，请参见
+<span data-ttu-id="d4185-101">有关详细信息，请参见</span><span class="sxs-lookup"><span data-stu-id="d4185-101">For more information, see</span></span>

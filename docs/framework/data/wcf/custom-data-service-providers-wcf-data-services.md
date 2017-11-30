@@ -1,37 +1,39 @@
 ---
-title: "自定义数据服务提供程序（WCF 数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF 数据服务, 提供程序"
+title: "自定义数据服务提供程序（WCF 数据服务）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90e837739edc74ee469f42720f52789ee1c8f6fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 自定义数据服务提供程序（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括一组提供程序，用于基于后期绑定数据类型定义数据模型。  
+# <a name="custom-data-service-providers-wcf-data-services"></a><span data-ttu-id="9b098-102">自定义数据服务提供程序（WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="9b098-102">Custom Data Service Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="9b098-103"> 包括一组提供程序，用于基于后期绑定数据类型定义数据模型。</span><span class="sxs-lookup"><span data-stu-id="9b098-103"> includes a set of providers that enables you to define a data model based on late-bound data types.</span></span>  
   
-|提供程序|描述|  
-|----------|--------|  
-|元数据提供程序|这是核心的自定义数据服务提供程序，用于通过实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口在运行时定义自定义数据模型。|  
-|查询提供程序|该提供程序用于对使用 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口定义的自定义数据模型执行查询。  查询提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceQueryProvider> 接口而创建。|  
-|更新提供程序|该提供程序用于更新在自定义数据服务提供程序中公开的类型和管理并发性。  更新提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> 接口而创建。|  
-|分页提供程序|该提供程序用于与自定义数据服务提供程序一起启用服务器驱动的分页支持。  自定义数据服务的分页提供程序通过实现 <xref:System.Data.Services.Providers.IDataServicePagingProvider> 接口而创建。|  
-|流提供程序|此提供程序用于以流形式公开二进制大型对象数据类型。  流提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口而创建。  流提供程序还可与实体框架提供程序和反射数据源提供程序一起使用。  有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。|  
+|<span data-ttu-id="9b098-104">提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-104">Provider</span></span>|<span data-ttu-id="9b098-105">描述</span><span class="sxs-lookup"><span data-stu-id="9b098-105">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="9b098-106">元数据提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-106">Metadata provider</span></span>|<span data-ttu-id="9b098-107">这是核心的自定义数据服务提供程序，用于通过实现 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口在运行时定义自定义数据模型。</span><span class="sxs-lookup"><span data-stu-id="9b098-107">This is the core custom data service provider that enables you to define a custom data model at runtime by implementing the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span>|  
+|<span data-ttu-id="9b098-108">查询提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-108">Query provider</span></span>|<span data-ttu-id="9b098-109">该提供程序用于对使用 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口定义的自定义数据模型执行查询。</span><span class="sxs-lookup"><span data-stu-id="9b098-109">This provider enables you to execute queries against a custom data model that is defined by using the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span> <span data-ttu-id="9b098-110">查询提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceQueryProvider> 接口而创建。</span><span class="sxs-lookup"><span data-stu-id="9b098-110">The query provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interface.</span></span>|  
+|<span data-ttu-id="9b098-111">更新提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-111">Update provider</span></span>|<span data-ttu-id="9b098-112">该提供程序用于更新在自定义数据服务提供程序中公开的类型和管理并发性。</span><span class="sxs-lookup"><span data-stu-id="9b098-112">This provider enables you to make updates to types that are exposed in a custom data service provider and to manage concurrency.</span></span> <span data-ttu-id="9b098-113">更新提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> 接口而创建。</span><span class="sxs-lookup"><span data-stu-id="9b098-113">An update provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interface</span></span>|  
+|<span data-ttu-id="9b098-114">分页提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-114">Paging provider</span></span>|<span data-ttu-id="9b098-115">该提供程序用于与自定义数据服务提供程序一起启用服务器驱动的分页支持。</span><span class="sxs-lookup"><span data-stu-id="9b098-115">This provider is used with the custom data service provider to enable server-driven paging support.</span></span> <span data-ttu-id="9b098-116">自定义数据服务的分页提供程序通过实现 <xref:System.Data.Services.Providers.IDataServicePagingProvider> 接口而创建。</span><span class="sxs-lookup"><span data-stu-id="9b098-116">A paging provider for a custom data service is created by implementing the <xref:System.Data.Services.Providers.IDataServicePagingProvider> interface.</span></span>|  
+|<span data-ttu-id="9b098-117">流提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-117">Streaming provider</span></span>|<span data-ttu-id="9b098-118">此提供程序用于以流形式公开二进制大型对象数据类型。</span><span class="sxs-lookup"><span data-stu-id="9b098-118">This provider enables you to expose binary large object data types as a stream.</span></span> <span data-ttu-id="9b098-119">流提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口而创建。</span><span class="sxs-lookup"><span data-stu-id="9b098-119">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="9b098-120">流提供程序还可与实体框架提供程序和反射数据源提供程序一起使用。</span><span class="sxs-lookup"><span data-stu-id="9b098-120">The streaming provider can also be used with Entity Framework and reflection data source providers.</span></span> <span data-ttu-id="9b098-121">有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="9b098-121">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
   
- 有关更多信息，请参见文章[自定义数据服务提供程序](http://go.microsoft.com/fwlink/?LinkID=186850)（可能为英文网页）以及 [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069) 中的 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 提供程序工具包。  
+ <span data-ttu-id="9b098-122">有关详细信息，请参阅文章[自定义数据服务提供商](http://go.microsoft.com/fwlink/?LinkID=186850)和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]中的提供程序工具包[OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069)。</span><span class="sxs-lookup"><span data-stu-id="9b098-122">For more information, see the article [Custom Data Service Providers](http://go.microsoft.com/fwlink/?LinkID=186850) and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Provider Toolkit in the [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span></span>  
   
-## 请参阅  
- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [实体框架提供程序](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)   
- [反射提供程序](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="9b098-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9b098-123">See Also</span></span>  
+ [<span data-ttu-id="9b098-124">数据服务提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-124">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="9b098-125">实体框架提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-125">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+ [<span data-ttu-id="9b098-126">反射提供程序</span><span class="sxs-lookup"><span data-stu-id="9b098-126">Reflection Provider</span></span>](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

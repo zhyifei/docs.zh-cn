@@ -1,60 +1,42 @@
 ---
-title: "转换摘要 (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: "转换摘要 (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- data type conversion, keywords
+- data type conversion [Visual Basic], keywords
 - reference, type conversions
-- conversions, Visual Basic
-- type conversion, keywords
+- conversions [Visual Basic], Visual Basic
+- type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 05ea9ba57cc2d6f5f3d05d6e623527958b9dc1eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76c5d56276dca62af8f0dacc66618b9b941bea35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="conversion-summary-visual-basic"></a>转换摘要 (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]语言关键字和运行时库成员按目的组织和用途。  
+# <a name="conversion-summary-visual-basic"></a><span data-ttu-id="36c07-102">转换摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36c07-102">Conversion Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="36c07-103">语言关键字和运行时库成员按目的组织和用途。</span><span class="sxs-lookup"><span data-stu-id="36c07-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|操作|语言元素|  
+|<span data-ttu-id="36c07-104">操作</span><span class="sxs-lookup"><span data-stu-id="36c07-104">Action</span></span>|<span data-ttu-id="36c07-105">语言元素</span><span class="sxs-lookup"><span data-stu-id="36c07-105">Language element</span></span>|  
 |------------|----------------------|  
-|将 ANSI 值转换为字符串。|<xref:Microsoft.VisualBasic.Strings.Chr%2A>,<xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>|  
-|将转换为小写或大写的字符串。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.LCase%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|将日期转换为序列号。|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>|  
-|将十进制数字转换成其他基数。|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>,<xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A>|  
-|将数字转换为字符串。|<xref:Microsoft.VisualBasic.Strings.Format%2A>,<xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|将一种数据类型转换为另一个。|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A>|  
-|将日期转换为日、 月、 星期或年。|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A></xref:Microsoft.VisualBasic.DateAndTime.Month%2A></xref:Microsoft.VisualBasic.DateAndTime.Day%2A>|  
-|将时间转换为小时、 分钟或秒。|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Minute%2A></xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>|  
-|将字符串转换为 ASCII 值。|<xref:Microsoft.VisualBasic.Strings.Asc%2A>,<xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>|  
-|将字符串转换为数字。|<xref:Microsoft.VisualBasic.Conversion.Val%2A></xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|将时间转换为序列号。|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>|  
+|<span data-ttu-id="36c07-106">将 ANSI 值转换为字符串。</span><span class="sxs-lookup"><span data-stu-id="36c07-106">Convert ANSI value to string.</span></span>|<span data-ttu-id="36c07-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|  
+|<span data-ttu-id="36c07-108">将转换为小写或大写的字符串。</span><span class="sxs-lookup"><span data-stu-id="36c07-108">Convert string to lowercase or uppercase.</span></span>|<span data-ttu-id="36c07-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span></span>|  
+|<span data-ttu-id="36c07-110">将日期转换为序列号。</span><span class="sxs-lookup"><span data-stu-id="36c07-110">Convert date to serial number.</span></span>|<span data-ttu-id="36c07-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span></span>|  
+|<span data-ttu-id="36c07-112">将十进制数字转换成其他基数。</span><span class="sxs-lookup"><span data-stu-id="36c07-112">Convert decimal number to other bases.</span></span>|<span data-ttu-id="36c07-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span></span>|  
+|<span data-ttu-id="36c07-114">将数字转换为字符串。</span><span class="sxs-lookup"><span data-stu-id="36c07-114">Convert number to string.</span></span>|<span data-ttu-id="36c07-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span></span>|  
+|<span data-ttu-id="36c07-116">将一种数据类型转换为另一个。</span><span class="sxs-lookup"><span data-stu-id="36c07-116">Convert one data type to another.</span></span>|<span data-ttu-id="36c07-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CType](../../../visual-basic/language-reference/functions/ctype-function.md)， <xref:Microsoft.VisualBasic.Conversion.Fix%2A>，<xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="36c07-118">将日期转换为日、 月、 周日期或年。</span><span class="sxs-lookup"><span data-stu-id="36c07-118">Convert date to day, month, weekday, or year.</span></span>|<span data-ttu-id="36c07-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span></span>|  
+|<span data-ttu-id="36c07-120">将时间转换为小时、 分钟或秒。</span><span class="sxs-lookup"><span data-stu-id="36c07-120">Convert time to hour, minute, or second.</span></span>|<span data-ttu-id="36c07-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span></span>|  
+|<span data-ttu-id="36c07-122">将字符串转换为 ASCII 值。</span><span class="sxs-lookup"><span data-stu-id="36c07-122">Convert string to ASCII value.</span></span>|<span data-ttu-id="36c07-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|  
+|<span data-ttu-id="36c07-124">将字符串转换为数字。</span><span class="sxs-lookup"><span data-stu-id="36c07-124">Convert string to number.</span></span>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
+|<span data-ttu-id="36c07-125">将时间转换为序列号。</span><span class="sxs-lookup"><span data-stu-id="36c07-125">Convert time to serial number.</span></span>|<span data-ttu-id="36c07-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span><span class="sxs-lookup"><span data-stu-id="36c07-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="36c07-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="36c07-127">See Also</span></span>  
+ [<span data-ttu-id="36c07-128">关键字</span><span class="sxs-lookup"><span data-stu-id="36c07-128">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="36c07-129">Visual Basic 运行库成员</span><span class="sxs-lookup"><span data-stu-id="36c07-129">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)
