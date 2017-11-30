@@ -1,31 +1,30 @@
 ---
-title: "应用程序开发 | Microsoft Docs"
+title: "应用程序开发"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-wpf
+ms.technology: dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- WPF, about application development
+- WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a>应用程序开发
-<a name="introduction"></a>[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 是一个演示框架，可用于开发以下类型的应用程序：  
+<a name="introduction"></a>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]是一个演示文稿框架，可用于开发以下类型的应用程序：  
   
 -   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   

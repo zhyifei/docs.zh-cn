@@ -1,27 +1,33 @@
 ---
-title: "嵌套 DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "嵌套 DataRelation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 嵌套 DataRelation
-在数据的关系表示形式中，各个表都包含使用一个列或一组列来相互关联的行。  在 ADO.NET <xref:System.Data.DataSet> 中，表之间的关系使用 <xref:System.Data.DataRelation> 来实现。  当创建 **DataRelation** 时，列的父子关系仅通过关系来管理。  表和列是独立的实体。  在 XML 提供的数据的分层表示形式中，父子关系通过包含嵌套子元素的父元素来表示。  
+# <a name="nesting-datarelations"></a>嵌套 DataRelation
+在数据的关系表示形式中，各个表都包含使用一个列或一组列来相互关联的行。 在 ADO.NET <xref:System.Data.DataSet> 中，表之间的关系使用 <xref:System.Data.DataRelation> 来实现。 当你创建**DataRelation**，仅通过关系管理列的父-子关系。 表和列是独立的实体。 在 XML 提供的数据的分层表示形式中，父子关系通过包含嵌套子元素的父元素来表示。  
   
- 为了方便子对象在 **DataSet** 与 <xref:System.Xml.XmlDataDocument> 同步或使用 **WriteXml** 以 XML 数据形式来编写时进行嵌套，**DataRelation** 会公开 **Nested** 属性。  如果将 **DataRelation** 的 **Nested** 属性设置为 **true**，将使关系的子行在以 XML 数据形式编写或与 **XmlDataDocument** 同步时嵌套在父列中。  默认情况下，**DataRelation** 的 **Nested** 属性为 **false**。  
+ 为了便于子对象的嵌套时**数据集**与同步<xref:System.Xml.XmlDataDocument>或以 XML 数据写入**WriteXml**、 **DataRelation**公开**嵌套**属性。 设置**嵌套**属性**DataRelation**到**true**使的子行嵌套在父列以 XML 数据形式编写时的关系或与同步**XmlDataDocument**。 **嵌套**属性**DataRelation**是**false**，默认情况下。  
   
- 例如，考虑以下 **DataSet**。  
+ 例如，考虑以下**数据集**。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- 因为对于该 **DataSet**，**DataRelation** 的 **Nested** 属性未设置为 **true**，所以当该 **DataSet** 表示为 XML 数据时，子对象将不会嵌套在父元素中。  如果 **DataSet** 包含具有非嵌套数据关系的相关 **DataSet**，则转换其 XML 表示形式可能导致性能降低。  建议您嵌套数据关系。  为此，请将 **Nested** 属性设置为 **true**。  然后在使用上下分层 XPath 查询表达式的 XSLT 样式表中编写代码以定位和转换数据。  
+ 因为**嵌套**属性**DataRelation**对象未设置为**true**此**数据集**，不嵌套的子对象父元素中时这**数据集**表示为 XML 数据。 转换其 XML 表示形式**数据集**包含相关**数据集**具有非嵌套数据关系可能导致性能降低。 建议您嵌套数据关系。 若要执行此操作，将设置**嵌套**属性**true**。 然后在使用上下分层 XPath 查询表达式的 XSLT 样式表中编写代码以定位和转换数据。  
   
- 以下代码示例显示对 **DataSet** 调用 **WriteXml** 的结果。  
+ 下面的代码示例演示调用的结果**WriteXml**上**数据集**。  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- 请注意，**Customers** 元素和 **Orders** 元素显示为同级元素。  如果您要让 **Orders** 元素显示为它们各自父元素的子元素，则需要将 **DataRelation** 的 **Nested** 属性设置为 **true**，为此将添加以下代码：  
+ 请注意，**客户**元素和**订单**元素显示为同级元素。 如果你想**订单**元素才会显示为其各自的父元素的子级**嵌套**属性**DataRelation**需要设置为**true**并将添加以下：  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- 以下代码显示当 **Orders** 元素嵌套在它们各自的父元素中时所生成的输出的可能形式。  
+ 下面的代码演示生成的输出将如下所示，使用**订单**元素嵌套在它们各自的父元素。  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## 请参阅  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [添加 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [添加数据关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)
