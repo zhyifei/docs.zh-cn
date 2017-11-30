@@ -1,40 +1,46 @@
 ---
-title: "Find a UI Automation Element Based on a Property Condition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elements, finding by property conditions"
-  - "UI Automation, finding elements by property conditions"
+title: "基于属性条件查找 UI 自动化元素"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- elements, finding by property conditions
+- UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: cafd84ce3acea80905d686f33f23338e3581a9c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Find a UI Automation Element Based on a Property Condition
+# <a name="find-a-ui-automation-element-based-on-a-property-condition"></a><span data-ttu-id="43f34-102">基于属性条件查找 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="43f34-102">Find a UI Automation Element Based on a Property Condition</span></span>
 > [!NOTE]
->  本文档的目标读者是欲使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]类的 .NET Framework 开发人员。  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参见 [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746)（Windows 自动化 API：UI 自动化）。  
+>  <span data-ttu-id="43f34-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="43f34-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="43f34-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="43f34-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题包含演示如何基于特定的属性在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]树内查找元素的代码示例。  
+ <span data-ttu-id="43f34-105">本主题包含的代码示例演示如何查找中的某个元素[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]树基于特定属性或属性。</span><span class="sxs-lookup"><span data-stu-id="43f34-105">This topic contains example code that shows how to locate an element within the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree based on a specific property or properties.</span></span>  
   
-## 示例  
- 在下面的示例中，指定了在 <xref:System.Windows.Automation.AutomationElement> 树中标识相关特定元素的一组属性条件。  然后，使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 方法搜索所有匹配的元素，该方法合并一系列 <xref:System.Windows.Automation.AndCondition> 布尔运算以限制匹配元素的数量。  
+## <a name="example"></a><span data-ttu-id="43f34-106">示例</span><span class="sxs-lookup"><span data-stu-id="43f34-106">Example</span></span>  
+ <span data-ttu-id="43f34-107">在下面的示例中，指定一组属性条件是，它们可标识感兴趣的某些元素 （或元素） 中<xref:System.Windows.Automation.AutomationElement>树。</span><span class="sxs-lookup"><span data-stu-id="43f34-107">In the following example, a set of property conditions are specified that identify a certain element (or elements) of interest in the <xref:System.Windows.Automation.AutomationElement> tree.</span></span> <span data-ttu-id="43f34-108">然后，搜索所有匹配的元素执行与<xref:System.Windows.Automation.AutomationElement.FindAll%2A>方法包含一系列<xref:System.Windows.Automation.AndCondition>布尔运算以限制匹配元素的数目。</span><span class="sxs-lookup"><span data-stu-id="43f34-108">A search for all matching elements is then performed with the <xref:System.Windows.Automation.AutomationElement.FindAll%2A> method that incorporates a series of <xref:System.Windows.Automation.AndCondition> boolean operations to limit the number of matching elements.</span></span>  
   
 > [!NOTE]
->  在从 <xref:System.Windows.Automation.AutomationElement.RootElement%2A> 中进行搜索时，应尝试仅获取直接子级。  搜索子代可能会循环访问数百甚至数千个元素，从而可能会导致堆栈溢出。  如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
+>  <span data-ttu-id="43f34-109">从搜索时<xref:System.Windows.Automation.AutomationElement.RootElement%2A>，你应该尝试来仅获取直接子级。</span><span class="sxs-lookup"><span data-stu-id="43f34-109">When searching from the <xref:System.Windows.Automation.AutomationElement.RootElement%2A>, you should try to obtain only direct children.</span></span> <span data-ttu-id="43f34-110">对后代的搜索可能循环访问数百个甚至数千个元素，可能会导致堆栈溢出。</span><span class="sxs-lookup"><span data-stu-id="43f34-110">A search for descendants might iterate through hundreds or even thousands of elements, possibly resulting in a stack overflow.</span></span> <span data-ttu-id="43f34-111">如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。</span><span class="sxs-lookup"><span data-stu-id="43f34-111">If you are attempting to obtain a specific element at a lower level, you should start your search from the application window or from a container at a lower level.</span></span>  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
-## 请参阅  
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/zh-cn/b7fa141c-e2d1-4da2-a27f-81a7d1172210)   
- [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)   
- [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+## <a name="see-also"></a><span data-ttu-id="43f34-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43f34-112">See Also</span></span>  
+ [<span data-ttu-id="43f34-113">InvokePattern 和 ExpandCollapsePattern 菜单项示例</span><span class="sxs-lookup"><span data-stu-id="43f34-113">InvokePattern and ExpandCollapsePattern Menu Item Sample</span></span>](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)  
+ [<span data-ttu-id="43f34-114">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="43f34-114">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [<span data-ttu-id="43f34-115">使用 AutomationID 属性</span><span class="sxs-lookup"><span data-stu-id="43f34-115">Use the AutomationID Property</span></span>](../../../docs/framework/ui-automation/use-the-automationid-property.md)

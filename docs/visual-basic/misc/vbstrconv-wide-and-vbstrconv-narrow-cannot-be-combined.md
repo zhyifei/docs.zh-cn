@@ -1,45 +1,28 @@
 ---
-title: "不能组合使用 VbStrConv.Wide 和包 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "不能组合 VbStrConv.Wide 和 VbStrConv.Narrow"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrArgument_IllegalWideNarrow
+f1_keywords: vbrArgument_IllegalWideNarrow
 ms.assetid: a53b4e6a-36b1-4e36-b2c5-8196313ec599
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8d184fab3a63bc69caa67f315a9cb0f32514e2c1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: cb42ffd72a7e1f9bceabc8e8b67310b4ca2ab716
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a>不能组合 VbStrConv.Wide 和 VbStrConv.Narrow
-你的应用程序尝试组合 `VbStrConv` 枚举成员 `Wide` 和 `Narrow`，而它们是互斥的。  
+# <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a><span data-ttu-id="41267-102">不能组合 VbStrConv.Wide 和 VbStrConv.Narrow</span><span class="sxs-lookup"><span data-stu-id="41267-102">VbStrConv.Wide and VbStrConv.Narrow cannot be combined</span></span>
+<span data-ttu-id="41267-103">你的应用程序尝试组合 `VbStrConv` 枚举成员 `Wide` 和 `Narrow`，而它们是互斥的。</span><span class="sxs-lookup"><span data-stu-id="41267-103">Your application is trying to combine the `VbStrConv` enumeration members `Wide` and `Narrow`, which are mutually exclusive.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="41267-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="41267-104">To correct this error</span></span>  
   
-1.  删除 `VbStrConv.Wide` 或 `VbStrConv.Narrow`。  
+1.  <span data-ttu-id="41267-105">删除 `VbStrConv.Wide` 或 `VbStrConv.Narrow`。</span><span class="sxs-lookup"><span data-stu-id="41267-105">Remove either `VbStrConv.Wide` or `VbStrConv.Narrow`.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Globalization>   
- [NOTINBUILD VbStrConv 枚举](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)   
- [基于 .NET Framework 的国际应用程序简介](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a><span data-ttu-id="41267-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="41267-106">See Also</span></span>  
+ <xref:System.Globalization>  
+ [<span data-ttu-id="41267-107">NOTINBUILD VbStrConv 枚举</span><span class="sxs-lookup"><span data-stu-id="41267-107">NOTINBUILD VbStrConv Enumeration</span></span>](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
+ [<span data-ttu-id="41267-108">基于 .NET Framework 的国际应用程序简介</span><span class="sxs-lookup"><span data-stu-id="41267-108">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

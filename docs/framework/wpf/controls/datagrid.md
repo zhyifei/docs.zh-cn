@@ -1,72 +1,75 @@
 ---
-title: "DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件 [WPF], DataGrid"
-  - "DataGrid [WPF], 常规任务"
-  - "DataGrid [WPF], 自定义外观"
-  - "DataGrid 列类型 [WPF]"
-  - "DataGrid 列 [WPF], using"
-  - "DataGrid 控件 [WPF]"
-  - "DataGrid 方案 [WPF]"
+title: DataGrid
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGrid column types [WPF]
+- DataGrid scenarios [WPF]
+- DataGrid control [WPF]
+- controls [WPF], DataGrid
+- DataGrid [WPF], common tasks for
+- DataGrid [WPF], customizing the appearance of
+- DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# DataGrid
-使用 <xref:System.Windows.Controls.DataGrid> 控件可以显示和编辑来自多个不同源（例如，来自 SQL 数据库、LING 查询或任何其他可绑定的数据源）的数据。  有关更多信息，请参见[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+# <a name="datagrid"></a><span data-ttu-id="65cdb-102">DataGrid</span><span class="sxs-lookup"><span data-stu-id="65cdb-102">DataGrid</span></span>
+<span data-ttu-id="65cdb-103"><xref:System.Windows.Controls.DataGrid>控制，你可以显示和编辑数据来自许多不同来源，如从 SQL 数据库、 LINQ 查询或任何其他可绑定数据源。</span><span class="sxs-lookup"><span data-stu-id="65cdb-103">The <xref:System.Windows.Controls.DataGrid> control enables you to display and edit data from many different sources, such as from a SQL database, LINQ query, or any other bindable data source.</span></span> <span data-ttu-id="65cdb-104">有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="65cdb-104">For more information, see [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span>  
   
- 列可以显示文本、控件（例如 <xref:System.Windows.Controls.ComboBox>）或任何其他 WPF 内容（例如图像、按钮）或包含在模板中的任何内容。  您可以使用 <xref:System.Windows.Controls.DataGridTemplateColumn> 显示模板中已定义的数据。  下表列出了默认情况下提供的列类型。  
+ <span data-ttu-id="65cdb-105">列可以显示文本，控件，如<xref:System.Windows.Controls.ComboBox>，或任何其他 WPF 内容，例如图像、 按钮、 或模板中包含的任何内容。</span><span class="sxs-lookup"><span data-stu-id="65cdb-105">Columns can display text, controls, such as a <xref:System.Windows.Controls.ComboBox>, or any other WPF content, such as images, buttons, or any content contained in a template.</span></span> <span data-ttu-id="65cdb-106">你可以使用<xref:System.Windows.Controls.DataGridTemplateColumn>以显示模板中定义的数据。</span><span class="sxs-lookup"><span data-stu-id="65cdb-106">You can use a <xref:System.Windows.Controls.DataGridTemplateColumn> to display data defined in a template.</span></span> <span data-ttu-id="65cdb-107">下表列出默认情况下提供的列类型。</span><span class="sxs-lookup"><span data-stu-id="65cdb-107">The following table lists the column types that are provided by default.</span></span>  
   
-|生成的列类型|数据类型|  
-|------------|----------|  
+|<span data-ttu-id="65cdb-108">生成的列类型</span><span class="sxs-lookup"><span data-stu-id="65cdb-108">Generated Column Type</span></span>|<span data-ttu-id="65cdb-109">数据类型</span><span class="sxs-lookup"><span data-stu-id="65cdb-109">Data Type</span></span>|  
+|---------------------------|---------------|  
 |<xref:System.Windows.Controls.DataGridTextColumn>|<xref:System.String>|  
 |<xref:System.Windows.Controls.DataGridCheckBoxColumn>|<xref:System.Boolean>|  
 |<xref:System.Windows.Controls.DataGridComboBoxColumn>|<xref:System.Enum>|  
 |<xref:System.Windows.Controls.DataGridHyperlinkColumn>|<xref:System.Uri>|  
   
- <xref:System.Windows.Controls.DataGrid> 可对外观（例如单元格字体、颜色和大小）进行自定义。  <xref:System.Windows.Controls.DataGrid> 支持其他 WPF 控件的所有样式和模板化功能。  <xref:System.Windows.Controls.DataGrid> 还包括用于编辑、排序及验证的默认和可自定义的行为。  
+ <span data-ttu-id="65cdb-110"><xref:System.Windows.Controls.DataGrid>可以自定义的外观，例如设置单元格字体、 颜色和大小。</span><span class="sxs-lookup"><span data-stu-id="65cdb-110"><xref:System.Windows.Controls.DataGrid> can be customized in appearance, such as cell font, color, and size.</span></span> <span data-ttu-id="65cdb-111"><xref:System.Windows.Controls.DataGrid>支持其他 WPF 控件的所有样式和模板化的功能。</span><span class="sxs-lookup"><span data-stu-id="65cdb-111"><xref:System.Windows.Controls.DataGrid> supports all styling and templating functionality of other WPF controls.</span></span> <span data-ttu-id="65cdb-112"><xref:System.Windows.Controls.DataGrid>此外包括默认和自定义行为的编辑、 排序和验证。</span><span class="sxs-lookup"><span data-stu-id="65cdb-112"><xref:System.Windows.Controls.DataGrid> also includes default and customizable behaviors for editing, sorting, and validation.</span></span>  
   
- 下表列出了针对 <xref:System.Windows.Controls.DataGrid> 的一些常规任务以及完成这些任务的方法。  通过查看相关 API，您可以找到更多信息和代码示例。  
+ <span data-ttu-id="65cdb-113">下表列出了一些常见任务的<xref:System.Windows.Controls.DataGrid>和如何完成它们。</span><span class="sxs-lookup"><span data-stu-id="65cdb-113">The following table lists some of the common tasks for <xref:System.Windows.Controls.DataGrid> and how to accomplish them.</span></span> <span data-ttu-id="65cdb-114">通过查看相关的 API，你可以找到详细信息和示例代码。</span><span class="sxs-lookup"><span data-stu-id="65cdb-114">By viewing the related API, you can find more information and sample code.</span></span>  
   
-|方案|方法|  
-|--------|--------|  
-|交替的背景色|将 <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> 属性设置为 2 或更多，然后向 <xref:System.Windows.Controls.DataGrid.RowBackground%2A> 和 <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> 属性分配 <xref:System.Windows.Media.Brush>。|  
-|定义单元格和行选择行为|设置 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 和 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 属性。|  
-|自定义标题、单元格和行的可视外观|将新的 <xref:System.Windows.Style> 应用于 <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>、<xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>、<xref:System.Windows.Controls.DataGrid.CellStyle%2A> 或 <xref:System.Windows.Controls.DataGrid.RowStyle%2A> 属性。|  
-|设置调整大小选项|设置 <xref:System.Windows.FrameworkElement.Height%2A>、<xref:System.Windows.FrameworkElement.MaxHeight%2A>、<xref:System.Windows.FrameworkElement.MinHeight%2A>、<xref:System.Windows.FrameworkElement.Width%2A>、<xref:System.Windows.FrameworkElement.MaxWidth%2A> 或 <xref:System.Windows.FrameworkElement.MinWidth%2A> 属性。  有关更多信息，请参见 [DataGrid 控件中的调整大小选项](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)。|  
-|访问选定项|检查 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 属性以获取选定单元格并检查 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> 属性以获取选定行。  有关更多信息，请参见 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>。|  
-|自定义最终用户交互|设置 <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>、<xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>、<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>、<xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A> 和 <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> 属性。|  
-|取消或更改自动生成的列|处理 <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> 事件。|  
-|冻结列|将 <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> 属性设置为 1，并通过将 <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> 属性设置为 0 将列移动到最左边的位置。|  
-|使用 XML 数据作为数据源|将 <xref:System.Windows.Controls.DataGrid> 上的 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 绑定到表示项集合的 XPath 查询。  在 <xref:System.Windows.Controls.DataGrid> 中创建每个列。  通过将绑定上的 XPath 设置为获取项源上属性的查询来绑定每个列。  有关示例，请参见<xref:System.Windows.Controls.DataGridTextColumn>。|  
+|<span data-ttu-id="65cdb-115">方案</span><span class="sxs-lookup"><span data-stu-id="65cdb-115">Scenario</span></span>|<span data-ttu-id="65cdb-116">方法</span><span class="sxs-lookup"><span data-stu-id="65cdb-116">Approach</span></span>|  
+|--------------|--------------|  
+|<span data-ttu-id="65cdb-117">交替的背景色</span><span class="sxs-lookup"><span data-stu-id="65cdb-117">Alternating background colors</span></span>|<span data-ttu-id="65cdb-118">设置<xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A>属性设置为 2 或更多，然后分配<xref:System.Windows.Media.Brush>到<xref:System.Windows.Controls.DataGrid.RowBackground%2A>和<xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="65cdb-118">Set the <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> property to 2 or more, and then assign a <xref:System.Windows.Media.Brush> to the <xref:System.Windows.Controls.DataGrid.RowBackground%2A> and <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> properties.</span></span>|  
+|<span data-ttu-id="65cdb-119">定义单元格和行选择行为</span><span class="sxs-lookup"><span data-stu-id="65cdb-119">Define cell and row selection behavior</span></span>|<span data-ttu-id="65cdb-120">设置 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 和 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="65cdb-120">Set the <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> and <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> properties.</span></span>|  
+|<span data-ttu-id="65cdb-121">自定义可视外观的标头，单元格和行</span><span class="sxs-lookup"><span data-stu-id="65cdb-121">Customize the visual appearance of headers, cells, and rows</span></span>|<span data-ttu-id="65cdb-122">应用新<xref:System.Windows.Style>到<xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>， <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>， <xref:System.Windows.Controls.DataGrid.CellStyle%2A>，或<xref:System.Windows.Controls.DataGrid.RowStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="65cdb-122">Apply a new <xref:System.Windows.Style> to the <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, or <xref:System.Windows.Controls.DataGrid.RowStyle%2A> properties.</span></span>|  
+|<span data-ttu-id="65cdb-123">设置的调整大小选项</span><span class="sxs-lookup"><span data-stu-id="65cdb-123">Set sizing options</span></span>|<span data-ttu-id="65cdb-124">设置<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.MaxHeight%2A>， <xref:System.Windows.FrameworkElement.MinHeight%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.MaxWidth%2A>，或<xref:System.Windows.FrameworkElement.MinWidth%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="65cdb-124">Set the <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, or <xref:System.Windows.FrameworkElement.MinWidth%2A> properties.</span></span> <span data-ttu-id="65cdb-125">有关详细信息，请参阅[在 DataGrid 控件中调整选项](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)。</span><span class="sxs-lookup"><span data-stu-id="65cdb-125">For more information, see [Sizing Options in the DataGrid Control](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md).</span></span>|  
+|<span data-ttu-id="65cdb-126">访问选定项</span><span class="sxs-lookup"><span data-stu-id="65cdb-126">Access selected items</span></span>|<span data-ttu-id="65cdb-127">检查<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>属性可获取选定的单元格和<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>属性来获取所选的行。</span><span class="sxs-lookup"><span data-stu-id="65cdb-127">Check the <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> property to get the selected cells and the <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> property to get the selected rows.</span></span> <span data-ttu-id="65cdb-128">有关更多信息，请参见<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-128">For more information, see <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.</span></span>|  
+|<span data-ttu-id="65cdb-129">自定义最终用户交互</span><span class="sxs-lookup"><span data-stu-id="65cdb-129">Customize end-user interactions</span></span>|<span data-ttu-id="65cdb-130">设置<xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>， <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>， <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>， <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>， <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>，和<xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="65cdb-130">Set the <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, and <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> properties.</span></span>|  
+|<span data-ttu-id="65cdb-131">取消或更改自动生成的列</span><span class="sxs-lookup"><span data-stu-id="65cdb-131">Cancel or change auto-generated columns</span></span>|<span data-ttu-id="65cdb-132">处理<xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn>事件。</span><span class="sxs-lookup"><span data-stu-id="65cdb-132">Handle the <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> event.</span></span>|  
+|<span data-ttu-id="65cdb-133">冻结列</span><span class="sxs-lookup"><span data-stu-id="65cdb-133">Freeze a column</span></span>|<span data-ttu-id="65cdb-134">设置<xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A>属性设置为 1 并将列移动到的最左边的位置通过设置<xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A>属性设为 0。</span><span class="sxs-lookup"><span data-stu-id="65cdb-134">Set the <xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A> property to 1 and move the column to the left-most position by setting the <xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A> property to 0.</span></span>|  
+|<span data-ttu-id="65cdb-135">使用 XML 数据作为数据源</span><span class="sxs-lookup"><span data-stu-id="65cdb-135">Use XML data as the data source</span></span>|<span data-ttu-id="65cdb-136">将绑定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>上<xref:System.Windows.Controls.DataGrid>到表示的项的集合的 XPath 查询。</span><span class="sxs-lookup"><span data-stu-id="65cdb-136">Bind the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> on the <xref:System.Windows.Controls.DataGrid> to the XPath query that represents the collection of items.</span></span> <span data-ttu-id="65cdb-137">创建每个列中的<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-137">Create each column in the <xref:System.Windows.Controls.DataGrid>.</span></span> <span data-ttu-id="65cdb-138">将每个列绑定到项的源获取的属性的查询在绑定上设置 XPath。</span><span class="sxs-lookup"><span data-stu-id="65cdb-138">Bind each column by setting the XPath on the binding to the query that gets the property on the item source.</span></span> <span data-ttu-id="65cdb-139">有关示例，请参见 <xref:System.Windows.Controls.DataGridTextColumn>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-139">For an example, see <xref:System.Windows.Controls.DataGridTextColumn>.</span></span>|  
   
-## 相关主题  
+## <a name="related-topics"></a><span data-ttu-id="65cdb-140">相关主题</span><span class="sxs-lookup"><span data-stu-id="65cdb-140">Related Topics</span></span>  
   
-|标题|说明|  
-|--------|--------|  
-|[演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|描述如何设置新的 WPF 项目、添加实体框架元素、设置源并在 <xref:System.Windows.Controls.DataGrid> 中显示数据。|  
-|[如何：向 DataGrid 控件中添加行详细信息](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|描述如何为 <xref:System.Windows.Controls.DataGrid> 创建行详细信息。|  
-|[如何：用 DataGrid 控件实现验证](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|描述如何验证 <xref:System.Windows.Controls.DataGrid> 单元格和行中的值，并显示验证反馈。|  
-|[DataGrid 控件中的默认键盘和鼠标行为](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|描述如何使用键盘和鼠标与 <xref:System.Windows.Controls.DataGrid> 控件进行交互。|  
-|[如何：在 DataGrid 控件中对数据进行分组、排序和筛选](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何通过对数据进行分组、排序和筛选，以不同方式在 <xref:System.Windows.Controls.DataGrid> 中查看数据。|  
-|[DataGrid 控件中的调整大小选项](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|描述如何在 <xref:System.Windows.Controls.DataGrid> 中控制绝对大小调整和自动大小调整。|  
+|<span data-ttu-id="65cdb-141">标题</span><span class="sxs-lookup"><span data-stu-id="65cdb-141">Title</span></span>|<span data-ttu-id="65cdb-142">描述</span><span class="sxs-lookup"><span data-stu-id="65cdb-142">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="65cdb-143">演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据</span><span class="sxs-lookup"><span data-stu-id="65cdb-143">Walkthrough: Display Data from a SQL Server Database in a DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|<span data-ttu-id="65cdb-144">描述如何设置新的 WPF 项目，添加实体框架元素、 设置源，并显示中的数据<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-144">Describes how to set up a new WPF project, add an Entity Framework Element, set the source, and display the data in a <xref:System.Windows.Controls.DataGrid>.</span></span>|  
+|[<span data-ttu-id="65cdb-145">如何：向 DataGrid 控件添加行详细信息</span><span class="sxs-lookup"><span data-stu-id="65cdb-145">How to: Add Row Details to a DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|<span data-ttu-id="65cdb-146">描述如何创建用于行详细信息<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-146">Describes how to create row details for a <xref:System.Windows.Controls.DataGrid>.</span></span>|  
+|[<span data-ttu-id="65cdb-147">如何：使用 DataGrid 控件实现验证</span><span class="sxs-lookup"><span data-stu-id="65cdb-147">How to: Implement Validation with the DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|<span data-ttu-id="65cdb-148">描述如何验证中的值<xref:System.Windows.Controls.DataGrid>单元格和行，以及显示验证反馈。</span><span class="sxs-lookup"><span data-stu-id="65cdb-148">Describes how to validate values in <xref:System.Windows.Controls.DataGrid> cells and rows, and display validation feedback.</span></span>|  
+|[<span data-ttu-id="65cdb-149">DataGrid 控件中的默认键盘和鼠标行为</span><span class="sxs-lookup"><span data-stu-id="65cdb-149">Default Keyboard and Mouse Behavior in the DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|<span data-ttu-id="65cdb-150">描述如何进行交互与<xref:System.Windows.Controls.DataGrid>通过使用键盘和鼠标的控件。</span><span class="sxs-lookup"><span data-stu-id="65cdb-150">Describes how to interact with the <xref:System.Windows.Controls.DataGrid> control by using the keyboard and mouse.</span></span>|  
+|[<span data-ttu-id="65cdb-151">如何：在 DataGrid 控件中对数据进行分组、排序和筛选</span><span class="sxs-lookup"><span data-stu-id="65cdb-151">How to: Group, Sort, and Filter Data in the DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|<span data-ttu-id="65cdb-152">描述如何查看中的数据<xref:System.Windows.Controls.DataGrid>通过分组、 排序和筛选的数据不同的方式。</span><span class="sxs-lookup"><span data-stu-id="65cdb-152">Describes how to view data in a <xref:System.Windows.Controls.DataGrid> in different ways by grouping, sorting, and filtering the data.</span></span>|  
+|[<span data-ttu-id="65cdb-153">DataGrid 控件中的重设大小选项</span><span class="sxs-lookup"><span data-stu-id="65cdb-153">Sizing Options in the DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|<span data-ttu-id="65cdb-154">介绍如何控制中的绝对和自动大小调整<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="65cdb-154">Describes how to control absolute and automatic sizing in the <xref:System.Windows.Controls.DataGrid>.</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Controls.DataGrid>   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [控件](../../../../docs/framework/wpf/controls/index.md)   
- [WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+## <a name="see-also"></a><span data-ttu-id="65cdb-155">另请参阅</span><span class="sxs-lookup"><span data-stu-id="65cdb-155">See Also</span></span>  
+ <xref:System.Windows.Controls.DataGrid>  
+ [<span data-ttu-id="65cdb-156">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="65cdb-156">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="65cdb-157">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="65cdb-157">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="65cdb-158">数据模板化概述</span><span class="sxs-lookup"><span data-stu-id="65cdb-158">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="65cdb-159">控件</span><span class="sxs-lookup"><span data-stu-id="65cdb-159">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+ [<span data-ttu-id="65cdb-160">WPF 内容模型</span><span class="sxs-lookup"><span data-stu-id="65cdb-160">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)

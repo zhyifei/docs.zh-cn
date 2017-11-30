@@ -1,95 +1,98 @@
 ---
-title: "如何：在 TableLayoutPanel 控件中锚定和停靠子控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "子控件, 锚定和停靠"
-  - "控件 [Windows 窗体], 子控件"
-  - "布局 [Windows 窗体], 子控件"
-  - "TableLayoutPanel 控件 [Windows 窗体], 子控件"
+title: "如何：在 TableLayoutPanel 控件中锚定和停靠子控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock
+helpviewer_keywords:
+- layout [Windows Forms], child controls
+- controls [Windows Forms], child
+- child controls [Windows Forms], anchoring and docking
+- TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15a725f7a5a4b61f826756c4c3f0d2a20c8a5011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 TableLayoutPanel 控件中锚定和停靠子控件
-<xref:System.Windows.Forms.TableLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。  
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a><span data-ttu-id="13353-102">如何：在 TableLayoutPanel 控件中锚定和停靠子控件</span><span class="sxs-lookup"><span data-stu-id="13353-102">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="13353-103"><xref:System.Windows.Forms.TableLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="13353-103">The <xref:System.Windows.Forms.TableLayoutPanel> control supports the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties in its child controls.</span></span>  
   
-### 在 TableLayoutPanel 单元格中对齐子控件  
+### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="13353-104">在 TableLayoutPanel 单元格中对齐子控件</span><span class="sxs-lookup"><span data-stu-id="13353-104">To align a child control in a TableLayoutPanel cell</span></span>  
   
-1.  在窗体上创建一个 <xref:System.Windows.Forms.TableLayoutPanel> 控件。  
+1.  <span data-ttu-id="13353-105">在窗体上创建一个 <xref:System.Windows.Forms.TableLayoutPanel> 控件。</span><span class="sxs-lookup"><span data-stu-id="13353-105">Create a <xref:System.Windows.Forms.TableLayoutPanel> control on your form.</span></span>  
   
-2.  将 <xref:System.Windows.Forms.TableLayoutPanel> 控件的 <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> 和 <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> 属性的值设置为 1。  
+2.  <span data-ttu-id="13353-106">设置的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>和<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>属性设置为**1**。</span><span class="sxs-lookup"><span data-stu-id="13353-106">Set the value of the <xref:System.Windows.Forms.TableLayoutPanel> control's <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> and <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> properties to **1**.</span></span>  
   
-3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中创建一个 <xref:System.Windows.Forms.Button> 控件。  <xref:System.Windows.Forms.Button> 占据单元格的左上角。  
+3.  <span data-ttu-id="13353-107">在 <xref:System.Windows.Forms.TableLayoutPanel> 控件中创建一个 <xref:System.Windows.Forms.Button> 控件。</span><span class="sxs-lookup"><span data-stu-id="13353-107">Create a <xref:System.Windows.Forms.Button> control in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="13353-108"><xref:System.Windows.Forms.Button> 占据单元格的左上角。</span><span class="sxs-lookup"><span data-stu-id="13353-108">The <xref:System.Windows.Forms.Button> occupies the upper-left corner of the cell.</span></span>  
   
-4.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left`。  <xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。  
-  
-    > [!NOTE]
-    >  此行为与其他容器控件的行为不同。  在其他容器控件中，设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后子控件并不移动，而且锚定控件与父容器边界之间的距离在设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后是固定的。  
-  
-5.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Left`。  <xref:System.Windows.Forms.Button> 控件移动，以占据单元格的左上角。  
-  
-6.  使用 `Top, Right` 值重复步骤 5，将 <xref:System.Windows.Forms.Button> 控件移动到单元格的右上角。  使用 `Bottom, Left` 值和 `Bottom, Right` 值重复该步骤。  
-  
-### 若要对齐 TableLayoutPanel 单元格中的某个子控件  
-  
-1.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left, Right`。  调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中拉伸。  
+4.  <span data-ttu-id="13353-109">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left`。</span><span class="sxs-lookup"><span data-stu-id="13353-109">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left`.</span></span> <span data-ttu-id="13353-110"><xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。</span><span class="sxs-lookup"><span data-stu-id="13353-110">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span>  
   
     > [!NOTE]
-    >  此行为与其他容器控件的行为不同。  在其他容器控件中，将 <xref:System.Windows.Forms.Control.Anchor%2A> 属性设置为 `Left, Right` 或 `Top, Bottom` 以后，并不调整子控件的大小。  
+    >  <span data-ttu-id="13353-111">此行为与其他容器控件的行为不同。</span><span class="sxs-lookup"><span data-stu-id="13353-111">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="13353-112">在其他容器控件中，设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后子控件并不移动，而且锚定控件与父容器边界之间的距离在设置 <xref:System.Windows.Forms.Control.Anchor%2A> 属性后是固定的。</span><span class="sxs-lookup"><span data-stu-id="13353-112">In other container controls, the child control does not move when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set, and the distance between the anchored control and the parent container's boundary is fixed at the time the <xref:System.Windows.Forms.Control.Anchor%2A> property is set.</span></span>  
   
-2.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom`。  调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中自上而下进行拉伸。  
+5.  <span data-ttu-id="13353-113">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Left`。</span><span class="sxs-lookup"><span data-stu-id="13353-113">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Left`.</span></span> <span data-ttu-id="13353-114"><xref:System.Windows.Forms.Button> 控件移动，以占据单元格的左上角。</span><span class="sxs-lookup"><span data-stu-id="13353-114">The <xref:System.Windows.Forms.Button> control moves to occupy the top-left corner of the cell.</span></span>  
   
-3.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom, Left, Right`。  调整 <xref:System.Windows.Forms.Button> 控件的大小以填充单元格。  
+6.  <span data-ttu-id="13353-115">具有值的有重复步骤 5`Top, Right`移动<xref:System.Windows.Forms.Button>到右上角单元格的控件。</span><span class="sxs-lookup"><span data-stu-id="13353-115">Repeat step 5 with a value of `Top, Right` to move the <xref:System.Windows.Forms.Button> control to the top-right corner of the cell.</span></span> <span data-ttu-id="13353-116">使用 `Bottom, Left` 和 `Bottom, Right` 值重复步骤。</span><span class="sxs-lookup"><span data-stu-id="13353-116">Repeat with values of `Bottom, Left` and `Bottom, Right`.</span></span>  
   
-4.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `None`。  调整 <xref:System.Windows.Forms.Button> 控件控件的大小并在单元格中居中。  
+### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="13353-117">若要对齐 TableLayoutPanel 单元格中的某个子控件</span><span class="sxs-lookup"><span data-stu-id="13353-117">To stretch a child control in a TableLayoutPanel cell</span></span>  
   
-5.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle>。  <xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。  <xref:System.Windows.Forms.Button> 控件的宽度不变，但调整其高度以垂直填充单元格。  
+1.  <span data-ttu-id="13353-118">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Left, Right`。</span><span class="sxs-lookup"><span data-stu-id="13353-118">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left, Right`.</span></span> <span data-ttu-id="13353-119">调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中拉伸。</span><span class="sxs-lookup"><span data-stu-id="13353-119">The <xref:System.Windows.Forms.Button> control is resized to stretch across the cell.</span></span>  
   
     > [!NOTE]
-    >  这与其他容器控件中发生的行为相同。  
+    >  <span data-ttu-id="13353-120">此行为与其他容器控件的行为不同。</span><span class="sxs-lookup"><span data-stu-id="13353-120">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="13353-121">在其他容器控件中，子控件不调整<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为`Left, Right`或`Top, Bottom`。</span><span class="sxs-lookup"><span data-stu-id="13353-121">In other container controls, the child control is not resized when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set to `Left, Right` or `Top, Bottom`.</span></span>  
   
-6.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle>。  调整 <xref:System.Windows.Forms.Button> 控件的大小以填充单元格。  
+2.  <span data-ttu-id="13353-122">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom`。</span><span class="sxs-lookup"><span data-stu-id="13353-122">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom`.</span></span> <span data-ttu-id="13353-123">调整 <xref:System.Windows.Forms.Button> 控件的大小，以便在单元格中自上而下进行拉伸。</span><span class="sxs-lookup"><span data-stu-id="13353-123">The <xref:System.Windows.Forms.Button> control is resized to stretch from the top to the bottom of the cell.</span></span>  
   
-## 示例  
- 下图显示了在五个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格中锚定的五个按钮。  
+3.  <span data-ttu-id="13353-124">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `Top, Bottom, Left, Right`。</span><span class="sxs-lookup"><span data-stu-id="13353-124">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom, Left, Right`.</span></span> <span data-ttu-id="13353-125">调整 <xref:System.Windows.Forms.Button> 控件的大小以填充单元格。</span><span class="sxs-lookup"><span data-stu-id="13353-125">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.png "VS\_TLPanchor")  
+4.  <span data-ttu-id="13353-126">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值更改为 `None`。</span><span class="sxs-lookup"><span data-stu-id="13353-126">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `None`.</span></span> <span data-ttu-id="13353-127">调整 <xref:System.Windows.Forms.Button> 控件控件的大小并在单元格中居中。</span><span class="sxs-lookup"><span data-stu-id="13353-127">The <xref:System.Windows.Forms.Button> control is resized and centered in the cell.</span></span>  
   
- 下图显示了在四个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格的角落中锚定的四个按钮。  
+5.  <span data-ttu-id="13353-128">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Left>。</span><span class="sxs-lookup"><span data-stu-id="13353-128">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Left>.</span></span> <span data-ttu-id="13353-129"><xref:System.Windows.Forms.Button> 控件移动，以便与单元格的左边框对齐。</span><span class="sxs-lookup"><span data-stu-id="13353-129">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span> <span data-ttu-id="13353-130"><xref:System.Windows.Forms.Button> 控件的宽度不变，但调整其高度以垂直填充单元格。</span><span class="sxs-lookup"><span data-stu-id="13353-130">The <xref:System.Windows.Forms.Button> control retains its width, but its height is resized to fill the cell vertically.</span></span>  
   
- ![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.png "VS\_TLPanchor2")  
+    > [!NOTE]
+    >  <span data-ttu-id="13353-131">这与其他容器控件中发生的行为相同。</span><span class="sxs-lookup"><span data-stu-id="13353-131">This is the same behavior that occurs in other container controls.</span></span>  
   
- 下图显示了在三个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格中通过锚定而拉伸的三个按钮。  
+6.  <span data-ttu-id="13353-132">将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Fill>。</span><span class="sxs-lookup"><span data-stu-id="13353-132">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="13353-133">调整 <xref:System.Windows.Forms.Button> 控件的大小以填充单元格。</span><span class="sxs-lookup"><span data-stu-id="13353-133">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS\_TLPAnchor3")  
+## <a name="example"></a><span data-ttu-id="13353-134">示例</span><span class="sxs-lookup"><span data-stu-id="13353-134">Example</span></span>  
+ <span data-ttu-id="13353-135">下图显示了在五个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格中锚定的五个按钮。</span><span class="sxs-lookup"><span data-stu-id="13353-135">The following illustration shows five buttons anchored in five separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
   
- 下面的代码示例演示 <xref:System.Windows.Forms.TableLayoutPanel> 控件中 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值的所有组合。  
+ <span data-ttu-id="13353-136">![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span><span class="sxs-lookup"><span data-stu-id="13353-136">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span></span>  
+  
+ <span data-ttu-id="13353-137">下图显示了在四个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格的角落中锚定的四个按钮。</span><span class="sxs-lookup"><span data-stu-id="13353-137">The following illustration shows four buttons anchored in the corners of four separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="13353-138">![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span><span class="sxs-lookup"><span data-stu-id="13353-138">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span></span>  
+  
+ <span data-ttu-id="13353-139">下图显示了在三个单独的 <xref:System.Windows.Forms.TableLayoutPanel> 单元格中通过锚定而拉伸的三个按钮。</span><span class="sxs-lookup"><span data-stu-id="13353-139">The following illustration shows three buttons stretched by anchoring in three separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="13353-140">![TableLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span><span class="sxs-lookup"><span data-stu-id="13353-140">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span></span>  
+  
+ <span data-ttu-id="13353-141">下面的代码示例演示 <xref:System.Windows.Forms.TableLayoutPanel> 控件中 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.Anchor%2A> 属性值的所有组合。</span><span class="sxs-lookup"><span data-stu-id="13353-141">The following code example demonstrates all the combinations of <xref:System.Windows.Forms.Control.Anchor%2A> property values for a <xref:System.Windows.Forms.Button> control in a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
   
-## 编译代码  
- 此示例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="13353-142">编译代码</span><span class="sxs-lookup"><span data-stu-id="13353-142">Compiling the Code</span></span>  
+ <span data-ttu-id="13353-143">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="13353-143">This example requires:</span></span>  
   
--   对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+-   <span data-ttu-id="13353-144">对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="13353-144">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- 有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) 或[在命令行上使用 csc.exe 生成](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ <span data-ttu-id="13353-145">有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="13353-145">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="13353-146">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="13353-146">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="13353-147">另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="13353-147">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [TableLayoutPanel 控件](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="13353-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="13353-148">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="13353-149">TableLayoutPanel 控件</span><span class="sxs-lookup"><span data-stu-id="13353-149">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

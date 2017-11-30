@@ -1,252 +1,255 @@
 ---
-title: "Drawing 对象概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Drawing 对象"
-  - "DrawingGroup 对象"
-  - "绘图, 关于绘图"
-  - "GeometryDrawing 对象"
-  - "GlyphRunDrawing 对象"
-  - "ImageDrawing 对象"
+title: "Drawing 对象概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ImageDrawing objects [WPF]
+- GlyphRunDrawing objects [WPF]
+- GeometryDrawing objects [WPF]
+- drawings [WPF], about drawings
+- Drawing objects [WPF]
+- DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: acdbcac957f8dc682e0038600afa90ccdfd0fe14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Drawing 对象概述
-本主题介绍 <xref:System.Windows.Media.Drawing> 对象，并说明如何使用它们来有效地绘制形状、位图、文本和媒体。  创建剪贴画、使用 <xref:System.Windows.Media.DrawingBrush> 绘图或者使用 <xref:System.Windows.Media.Visual> 对象时，可以使用 <xref:System.Windows.Media.Drawing> 对象。  
+# <a name="drawing-objects-overview"></a><span data-ttu-id="1b63f-102">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="1b63f-102">Drawing Objects Overview</span></span>
+<span data-ttu-id="1b63f-103">本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。</span><span class="sxs-lookup"><span data-stu-id="1b63f-103">This topic introduces <xref:System.Windows.Media.Drawing> objects and describes how to use them to efficiently draw shapes, bitmaps, text, and media.</span></span> <span data-ttu-id="1b63f-104">使用<xref:System.Windows.Media.Drawing>对象时创建剪贴画，绘制与<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-104">Use <xref:System.Windows.Media.Drawing> objects when you create clip art, paint with a <xref:System.Windows.Media.DrawingBrush>, or use <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-   
+ 
   
 <a name="whatisadrawingsection"></a>   
-## 什么是 Drawing 对象？  
- <xref:System.Windows.Media.Drawing> 对象描述一些可见内容，例如形状、位图、视频或一行文本。  不同类型的 Drawing 描绘的是不同类型的内容。  下面列出了不同类型的 Drawing 对象。  
+## <a name="what-is-a-drawing-object"></a><span data-ttu-id="1b63f-105">什么是 Drawing 对象？</span><span class="sxs-lookup"><span data-stu-id="1b63f-105">What Is a Drawing Object?</span></span>  
+ <span data-ttu-id="1b63f-106">A<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。</span><span class="sxs-lookup"><span data-stu-id="1b63f-106">A <xref:System.Windows.Media.Drawing> object describes visible content, such as a shape, bitmap, video, or a line of text.</span></span> <span data-ttu-id="1b63f-107">不同类型的图形描述不同类型的内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-107">Different types of drawings describe different types of content.</span></span> <span data-ttu-id="1b63f-108">下面是不同类型图形对象的列表。</span><span class="sxs-lookup"><span data-stu-id="1b63f-108">The following is a list of the different types of drawing objects.</span></span>  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 绘制形状。  
+-   <span data-ttu-id="1b63f-109"><xref:System.Windows.Media.GeometryDrawing>– 绘制一个形状。</span><span class="sxs-lookup"><span data-stu-id="1b63f-109"><xref:System.Windows.Media.GeometryDrawing> – Draws a shape.</span></span>  
   
--   <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
+-   <span data-ttu-id="1b63f-110"><xref:System.Windows.Media.ImageDrawing>– 绘制图像。</span><span class="sxs-lookup"><span data-stu-id="1b63f-110"><xref:System.Windows.Media.ImageDrawing> – Draws an image.</span></span>  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
+-   <span data-ttu-id="1b63f-111"><xref:System.Windows.Media.GlyphRunDrawing>– 绘制文本。</span><span class="sxs-lookup"><span data-stu-id="1b63f-111"><xref:System.Windows.Media.GlyphRunDrawing> – Draws text.</span></span>  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
+-   <span data-ttu-id="1b63f-112"><xref:System.Windows.Media.VideoDrawing>– 播放音频或视频文件。</span><span class="sxs-lookup"><span data-stu-id="1b63f-112"><xref:System.Windows.Media.VideoDrawing> – Plays an audio or video file.</span></span>  
   
--   <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘图。  使用绘图组可以将其他绘图组合成一个复合绘图。  
+-   <span data-ttu-id="1b63f-113"><xref:System.Windows.Media.DrawingGroup>– 绘制其他绘制项。</span><span class="sxs-lookup"><span data-stu-id="1b63f-113"><xref:System.Windows.Media.DrawingGroup> – Draws other drawings.</span></span> <span data-ttu-id="1b63f-114">使用图形组将其他图形合并到单个复合图形。</span><span class="sxs-lookup"><span data-stu-id="1b63f-114">Use a drawing group to combine other drawings into a single composite drawing.</span></span>  
   
- <xref:System.Windows.Media.Drawing> 是一个通用对象；您可以通过多种方式使用 <xref:System.Windows.Media.Drawing> 对象。  
+ <span data-ttu-id="1b63f-115"><xref:System.Windows.Media.Drawing>对象是通用;有多种方法可以使用<xref:System.Windows.Media.Drawing>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-115"><xref:System.Windows.Media.Drawing> objects are versatile; there are many ways you can use a <xref:System.Windows.Media.Drawing> object.</span></span>  
   
--   您可以使用 <xref:System.Windows.Media.DrawingImage> 和 <xref:System.Windows.Controls.Image> 控件将其显示为图像。  
+-   <span data-ttu-id="1b63f-116">您可以通过将它显示为图像<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控件。</span><span class="sxs-lookup"><span data-stu-id="1b63f-116">You can display it as an image by using a <xref:System.Windows.Media.DrawingImage> and an <xref:System.Windows.Controls.Image> control.</span></span>  
   
--   您可以将其与 <xref:System.Windows.Media.DrawingBrush> 一起使用以绘制对象，例如 <xref:System.Windows.Controls.Page> 的 <xref:System.Windows.Controls.Page.Background%2A>。  
+-   <span data-ttu-id="1b63f-117">你可以将它与<xref:System.Windows.Media.DrawingBrush>绘制一个对象，如<xref:System.Windows.Controls.Page.Background%2A>的<xref:System.Windows.Controls.Page>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-117">You can use it with a <xref:System.Windows.Media.DrawingBrush> to paint an object, such as the <xref:System.Windows.Controls.Page.Background%2A> of a <xref:System.Windows.Controls.Page>.</span></span>  
   
--   您可以将其用于描述 <xref:System.Windows.Media.DrawingVisual> 的外观。  
+-   <span data-ttu-id="1b63f-118">你可以使用它来描述的外观<xref:System.Windows.Media.DrawingVisual>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-118">You can use it to describe the appearance of a <xref:System.Windows.Media.DrawingVisual>.</span></span>  
   
--   您可以将其用于枚举 <xref:System.Windows.Media.Visual> 的内容。  
+-   <span data-ttu-id="1b63f-119">可用来枚举的内容<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-119">You can use it to enumerate the contents of a <xref:System.Windows.Media.Visual>.</span></span>  
   
- WPF 提供了其他类型的对象，这些对象能够绘制形状、位图、文本和媒体。  例如，您也可以使用 <xref:System.Windows.Shapes.Shape> 对象绘制形状，<xref:System.Windows.Controls.MediaElement> 控件提供了将视频添加到应用程序中的另一种方式。  那么，什么时候应使用 <xref:System.Windows.Media.Drawing> 对象？  当可以牺牲框架级别功能以获取性能优势或需要 <xref:System.Windows.Freezable> 功能时。  由于 <xref:System.Windows.Media.Drawing> 对象缺少对 [布局](../../../../docs/framework/wpf/advanced/layout.md)、输入和焦点的支持，因此它们具有性能优势，是描述背景、剪贴画以及使用 <xref:System.Windows.Media.Visual> 对象进行低级绘制的理想选择。  
+ <span data-ttu-id="1b63f-120">WPF 提供能够绘制形状、位图、文本和媒体的其他对象类型。</span><span class="sxs-lookup"><span data-stu-id="1b63f-120">WPF provides other types of objects that are capable of drawing shapes, bitmaps, text, and media.</span></span> <span data-ttu-id="1b63f-121">例如，你还可以使用<xref:System.Windows.Shapes.Shape>对象绘制形状，和<xref:System.Windows.Controls.MediaElement>控件提供另一种方法将视频添加到你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="1b63f-121">For example, you can also use <xref:System.Windows.Shapes.Shape> objects to draw shapes, and the <xref:System.Windows.Controls.MediaElement> control provides another way to add video to your application.</span></span> <span data-ttu-id="1b63f-122">因此何时应使用<xref:System.Windows.Media.Drawing>对象？</span><span class="sxs-lookup"><span data-stu-id="1b63f-122">So when should you use <xref:System.Windows.Media.Drawing> objects?</span></span> <span data-ttu-id="1b63f-123">当可以牺牲 framework 级别功能，以获得性能优势或在需要时<xref:System.Windows.Freezable>功能。</span><span class="sxs-lookup"><span data-stu-id="1b63f-123">When you can sacrifice framework level features to gain performance benefits or when you need <xref:System.Windows.Freezable> features.</span></span> <span data-ttu-id="1b63f-124">因为<xref:System.Windows.Media.Drawing>对象缺少对支持[布局](../../../../docs/framework/wpf/advanced/layout.md)、 输入，并集中，它们提供使其很适合，描述背景，剪贴画，并与低级别绘图的性能优势<xref:System.Windows.Media.Visual>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-124">Because <xref:System.Windows.Media.Drawing> objects lack support for [Layout](../../../../docs/framework/wpf/advanced/layout.md), input, and focus, they provide performance benefits that make them ideal for describing backgrounds, clip art, and for low-level drawing with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
- 由于 <xref:System.Windows.Media.Drawing> 对象是一种类型为 <xref:System.Windows.Freezable> 的对象，因此它们具有若干特殊功能，其中包括可声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、可在多个对象之间共享、可设为只读以提高性能、可进行克隆以及可设为线程安全对象。  有关 <xref:System.Windows.Freezable> 对象提供的不同功能的更多信息，请参见 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="1b63f-125">因为它们是一种<xref:System.Windows.Freezable>对象，<xref:System.Windows.Media.Drawing>对象具有一些特殊功能，其中包括以下： 它们可以声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 多个对象，进行只读的以提高之间共享性能，克隆，并进行线程安全。</span><span class="sxs-lookup"><span data-stu-id="1b63f-125">Because they are a type <xref:System.Windows.Freezable> object, <xref:System.Windows.Media.Drawing> objects gain several special features, which include the following: they can be declared as [resources](../../../../docs/framework/wpf/advanced/xaml-resources.md), shared among multiple objects, made read-only to improve performance, cloned, and made thread-safe.</span></span> <span data-ttu-id="1b63f-126">有关提供的不同功能的详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-126">For more information about the different features provided by <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
 <a name="drawinggeometriessection"></a>   
-## 绘制形状  
- 您可以使用 <xref:System.Windows.Media.GeometryDrawing> 来绘制形状。  几何绘图的 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> 属性描述要绘制的形状，其 <xref:System.Windows.Media.GeometryDrawing.Brush%2A> 属性描述形状内部的绘制方式，其 <xref:System.Windows.Media.GeometryDrawing.Pen%2A> 属性描述其轮廓的绘制方式。  
+## <a name="draw-a-shape"></a><span data-ttu-id="1b63f-127">绘制形状</span><span class="sxs-lookup"><span data-stu-id="1b63f-127">Draw a Shape</span></span>  
+ <span data-ttu-id="1b63f-128">若要绘制形状，请使用<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-128">To draw a shape, you use a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="1b63f-129">几何绘图的<xref:System.Windows.Media.GeometryDrawing.Geometry%2A>属性描述该形状以绘制，其<xref:System.Windows.Media.GeometryDrawing.Brush%2A>属性描述应绘制形状的内部的方式，并将其<xref:System.Windows.Media.GeometryDrawing.Pen%2A>属性描述应如何绘制其轮廓。</span><span class="sxs-lookup"><span data-stu-id="1b63f-129">A geometry drawing's <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> property describes the shape to draw, its <xref:System.Windows.Media.GeometryDrawing.Brush%2A> property describes how the interior of the shape should be painted, and its <xref:System.Windows.Media.GeometryDrawing.Pen%2A> property describes how its outline should be drawn.</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.GeometryDrawing> 绘制形状。  该形状由 <xref:System.Windows.Media.GeometryGroup> 和两个 <xref:System.Windows.Media.EllipseGeometry> 对象进行描述。  形状内部使用 <xref:System.Windows.Media.LinearGradientBrush> 进行绘制，其轮廓则使用 <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen> 进行绘制。  
+ <span data-ttu-id="1b63f-130">下面的示例使用<xref:System.Windows.Media.GeometryDrawing>以绘制的形状。</span><span class="sxs-lookup"><span data-stu-id="1b63f-130">The following example uses a <xref:System.Windows.Media.GeometryDrawing> to draw a shape.</span></span> <span data-ttu-id="1b63f-131">描述形状<xref:System.Windows.Media.GeometryGroup>和两个<xref:System.Windows.Media.EllipseGeometry>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-131">The shape is described by a <xref:System.Windows.Media.GeometryGroup> and two <xref:System.Windows.Media.EllipseGeometry> objects.</span></span> <span data-ttu-id="1b63f-132">形状内部上色与<xref:System.Windows.Media.LinearGradientBrush>和以绘制其轮廓<xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-132">The shape's interior is painted with a <xref:System.Windows.Media.LinearGradientBrush> and its outline is drawn with a <xref:System.Windows.Media.Brushes.Black%2A> <xref:System.Windows.Media.Pen>.</span></span>  
   
- 本示例创建以下 <xref:System.Windows.Media.GeometryDrawing>。  
+ <span data-ttu-id="1b63f-133">此示例将创建以下<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-133">This example creates the following <xref:System.Windows.Media.GeometryDrawing>.</span></span>  
   
- ![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.png "graphicsmm\_geodraw")  
-GeometryDrawing  
+ <span data-ttu-id="1b63f-134">![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="1b63f-134">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
+<span data-ttu-id="1b63f-135">一个 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="1b63f-135">A GeometryDrawing</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GeometryDrawingExample.cs#geometrydrawingexampleinline)]
- [!code-xml[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexampleinline)]  
+ [!code-xaml[DrawingMiscSnippets_snip#GeometryDrawingExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GeometryDrawingExample.xaml#geometrydrawingexampleinline)]  
   
- 有关完整的示例，请参见[创建 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)。  
+ <span data-ttu-id="1b63f-136">有关完整示例，请参阅[创建 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-136">For the complete example, see [Create a GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md).</span></span>  
   
- 使用其他 <xref:System.Windows.Media.Geometry> 类（例如 <xref:System.Windows.Media.PathGeometry>），您可以通过创建曲线和弧线来创建更复杂的形状。  有关 <xref:System.Windows.Media.Geometry> 对象的更多信息，请参见 [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ <span data-ttu-id="1b63f-137">其他<xref:System.Windows.Media.Geometry>类，如<xref:System.Windows.Media.PathGeometry>使您能够通过创建曲线和弧线创建更复杂的图形。</span><span class="sxs-lookup"><span data-stu-id="1b63f-137">Other <xref:System.Windows.Media.Geometry> classes, such as <xref:System.Windows.Media.PathGeometry> enable you to create more complex shapes by creating curves and arcs.</span></span> <span data-ttu-id="1b63f-138">有关详细信息<xref:System.Windows.Media.Geometry>对象，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-138">For more information about <xref:System.Windows.Media.Geometry> objects, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
- 有关不使用 <xref:System.Windows.Media.Drawing> 对象绘制形状的其他方法的更多信息，请参见 [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。  
+ <span data-ttu-id="1b63f-139">绘制形状不使用其他方法有关的详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[形状和 WPF 概述中的基本绘图](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-139">For more information about other ways to draw shapes that don't use <xref:System.Windows.Media.Drawing> objects, see [Shapes and Basic Drawing in WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md).</span></span>  
   
 <a name="drawingimagessection"></a>   
-## 绘制图像  
- 您可以使用 <xref:System.Windows.Media.ImageDrawing> 绘制图像。  <xref:System.Windows.Media.ImageDrawing> 对象的 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> 属性描述要绘制的图像，其 <xref:System.Windows.Media.ImageDrawing.Rect%2A> 属性定义绘制图像的区域。  
+## <a name="draw-an-image"></a><span data-ttu-id="1b63f-140">绘制图像</span><span class="sxs-lookup"><span data-stu-id="1b63f-140">Draw an Image</span></span>  
+ <span data-ttu-id="1b63f-141">若要绘制图像，请使用<xref:System.Windows.Media.ImageDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-141">To draw an image, you use an <xref:System.Windows.Media.ImageDrawing>.</span></span> <span data-ttu-id="1b63f-142"><xref:System.Windows.Media.ImageDrawing>对象的<xref:System.Windows.Media.ImageDrawing.ImageSource%2A>属性描述要绘制图像，并将其<xref:System.Windows.Media.ImageDrawing.Rect%2A>属性定义绘制图像的区域。</span><span class="sxs-lookup"><span data-stu-id="1b63f-142">An <xref:System.Windows.Media.ImageDrawing> object's  <xref:System.Windows.Media.ImageDrawing.ImageSource%2A> property describes the image to draw, and its <xref:System.Windows.Media.ImageDrawing.Rect%2A> property defines the region where the image is drawn.</span></span>  
   
- 下面的示例将在一个矩形的 \(75,75\) 处绘制一个大小为 100 x 100 [像素](GTMT)的图像。  下面的插图显示在示例中创建的 <xref:System.Windows.Media.ImageDrawing>。  添加了一条灰色边框，以显示 <xref:System.Windows.Media.ImageDrawing> 的边界。  
+ <span data-ttu-id="1b63f-143">以下示例将在一个矩形的 (75,75) 处绘制一个 100 x 100 像素的图像。</span><span class="sxs-lookup"><span data-stu-id="1b63f-143">The following example draws an image into a rectangle located at (75,75) that is 100 by 100 pixel.</span></span> <span data-ttu-id="1b63f-144">下图显示<xref:System.Windows.Media.ImageDrawing>创建的示例。</span><span class="sxs-lookup"><span data-stu-id="1b63f-144">The following illustration shows the <xref:System.Windows.Media.ImageDrawing> created by the example.</span></span> <span data-ttu-id="1b63f-145">添加了一条灰色边框来显示的边界<xref:System.Windows.Media.ImageDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-145">A gray border was added to show the bounds of the <xref:System.Windows.Media.ImageDrawing>.</span></span>  
   
- ![在 &#40;75,75&#41; 处绘制的 100 x 100 ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm\_simple\_imagedrawing\_offset")  
-大小为 100 x 100 的 ImageDrawing  
+ <span data-ttu-id="1b63f-146">![100 通过 100 ImageDrawing 绘制在 &#40; 75，75 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")</span><span class="sxs-lookup"><span data-stu-id="1b63f-146">![A 100 by 100 ImageDrawing drawn at &#40;75,75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")</span></span>  
+<span data-ttu-id="1b63f-147">100 x 100 的 ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="1b63f-147">A 100 by 100 ImageDrawing</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
- [!code-xml[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawing100by100inline)]  
+ [!code-xaml[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawing100by100inline)]  
   
- 有关图像的更多信息，请参见[图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。  
+ <span data-ttu-id="1b63f-148">有关图像的详细信息，请参阅[图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-148">For more information about images, see the [Imaging Overview](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).</span></span>  
   
 <a name="playmedia"></a>   
-## 播放媒体（仅限代码）  
+## <a name="play-media-code-only"></a><span data-ttu-id="1b63f-149">播放媒体（仅代码）</span><span class="sxs-lookup"><span data-stu-id="1b63f-149">Play Media (Code Only)</span></span>  
   
 > [!NOTE]
->  虽然您可以在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中声明 <xref:System.Windows.Media.VideoDrawing>，但是只能使用代码加载并播放其媒体。  若要在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中播放视频，请改用 <xref:System.Windows.Controls.MediaElement>。  
+>  <span data-ttu-id="1b63f-150">虽然可以将声明<xref:System.Windows.Media.VideoDrawing>中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，仅可以加载并进行播放使用代码其媒体。</span><span class="sxs-lookup"><span data-stu-id="1b63f-150">Although you can declare a <xref:System.Windows.Media.VideoDrawing> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can only load and play its media using code.</span></span> <span data-ttu-id="1b63f-151">若要播放视频中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，使用<xref:System.Windows.Controls.MediaElement>相反。</span><span class="sxs-lookup"><span data-stu-id="1b63f-151">To play video in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], use a <xref:System.Windows.Controls.MediaElement> instead.</span></span>  
   
- 您可以使用 <xref:System.Windows.Media.VideoDrawing> 和 <xref:System.Windows.Media.MediaPlayer> 来播放音频或视频文件。  加载并播放媒体的方法有两种。  第一种方法是使用 <xref:System.Windows.Media.MediaPlayer> 和 <xref:System.Windows.Media.VideoDrawing> 自身，第二种方法是创建您自己的 <xref:System.Windows.Media.MediaTimeline>，并将其与 <xref:System.Windows.Media.MediaPlayer> 和 <xref:System.Windows.Media.VideoDrawing> 一起使用。  
+ <span data-ttu-id="1b63f-152">若要播放的音频或视频文件，你可以使用<xref:System.Windows.Media.VideoDrawing>和<xref:System.Windows.Media.MediaPlayer>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-152">To play an audio or video file, you use a <xref:System.Windows.Media.VideoDrawing> and a <xref:System.Windows.Media.MediaPlayer>.</span></span> <span data-ttu-id="1b63f-153">加载并播放媒体有两种方法。</span><span class="sxs-lookup"><span data-stu-id="1b63f-153">There are two ways to load and play media.</span></span> <span data-ttu-id="1b63f-154">第一种是使用<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>通过本身，，第二种方法是创建你自己<xref:System.Windows.Media.MediaTimeline>用于<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-154">The first is to use a <xref:System.Windows.Media.MediaPlayer> and a <xref:System.Windows.Media.VideoDrawing> by themselves, and the second way is to create your own <xref:System.Windows.Media.MediaTimeline> to use with the <xref:System.Windows.Media.MediaPlayer> and <xref:System.Windows.Media.VideoDrawing>.</span></span>  
   
 > [!NOTE]
->  如果媒体随应用程序一起分发，则不能像图像那样将媒体文件用作项目资源。  在项目文件中，必须将媒体类型改设为 `Content`，并将 `CopyToOutputDirectory` 设置为 `PreserveNewest` 或 `Always`。  
+>  <span data-ttu-id="1b63f-155">当媒体随应用程序一起分发时，无法像图像那样将媒体文件用作项目资源。</span><span class="sxs-lookup"><span data-stu-id="1b63f-155">When distributing media with your application, you cannot use a media file as a project resource, like you would an image.</span></span> <span data-ttu-id="1b63f-156">在项目文件中，必须改为将媒体类型设置为 `Content` 并将 `CopyToOutputDirectory` 设置为 `PreserveNewest` 或 `Always`。</span><span class="sxs-lookup"><span data-stu-id="1b63f-156">In your project file, you must instead set the media type to `Content` and set `CopyToOutputDirectory` to `PreserveNewest` or `Always`.</span></span>  
   
- 若要在不创建自己的 <xref:System.Windows.Media.MediaTimeline> 的情况下播放媒体，请执行下列步骤。  
+ <span data-ttu-id="1b63f-157">若要播放的媒体，而无需创建你自己<xref:System.Windows.Media.MediaTimeline>，执行以下步骤。</span><span class="sxs-lookup"><span data-stu-id="1b63f-157">To play media without creating your own <xref:System.Windows.Media.MediaTimeline>, you perform the following steps.</span></span>  
   
-1.  创建 <xref:System.Windows.Media.MediaPlayer> 对象。  
+1.  <span data-ttu-id="1b63f-158">创建 <xref:System.Windows.Media.MediaPlayer> 对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-158">Create a <xref:System.Windows.Media.MediaPlayer> object.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  使用 <xref:System.Windows.Media.MediaPlayer.Open%2A> 方法加载媒体文件。  
+2.  <span data-ttu-id="1b63f-159">使用<xref:System.Windows.Media.MediaPlayer.Open%2A>方法以加载媒体文件。</span><span class="sxs-lookup"><span data-stu-id="1b63f-159">Use the <xref:System.Windows.Media.MediaPlayer.Open%2A> method to load the media file.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  创建 <xref:System.Windows.Media.VideoDrawing>。  
+3.  <span data-ttu-id="1b63f-160">创建 <xref:System.Windows.Media.VideoDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-160">Create a <xref:System.Windows.Media.VideoDrawing>.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  通过设置 <xref:System.Windows.Media.VideoDrawing> 的 <xref:System.Windows.Media.VideoDrawing.Rect%2A> 属性指定要绘制媒体的大小和位置。  
+4.  <span data-ttu-id="1b63f-161">指定的大小和位置来设置绘制媒体<xref:System.Windows.Media.VideoDrawing.Rect%2A>属性<xref:System.Windows.Media.VideoDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-161">Specify the size and location to draw the media by setting the <xref:System.Windows.Media.VideoDrawing.Rect%2A> property of the <xref:System.Windows.Media.VideoDrawing>.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  使用您创建的 <xref:System.Windows.Media.MediaPlayer> 来设置 <xref:System.Windows.Media.VideoDrawing> 的 <xref:System.Windows.Media.VideoDrawing.Player%2A> 属性。  
+5.  <span data-ttu-id="1b63f-162">设置<xref:System.Windows.Media.VideoDrawing.Player%2A>属性<xref:System.Windows.Media.VideoDrawing>与<xref:System.Windows.Media.MediaPlayer>你创建。</span><span class="sxs-lookup"><span data-stu-id="1b63f-162">Set the <xref:System.Windows.Media.VideoDrawing.Player%2A> property of the <xref:System.Windows.Media.VideoDrawing> with the <xref:System.Windows.Media.MediaPlayer> you created.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  使用 <xref:System.Windows.Media.MediaPlayer> 的 <xref:System.Windows.Media.MediaPlayer.Play%2A> 方法开始播放媒体。  
+6.  <span data-ttu-id="1b63f-163">使用<xref:System.Windows.Media.MediaPlayer.Play%2A>方法<xref:System.Windows.Media.MediaPlayer>开始播放媒体。</span><span class="sxs-lookup"><span data-stu-id="1b63f-163">Use the <xref:System.Windows.Media.MediaPlayer.Play%2A> method of the <xref:System.Windows.Media.MediaPlayer> to start playing the media.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
- 下面的示例使用 <xref:System.Windows.Media.VideoDrawing> 和 <xref:System.Windows.Media.MediaPlayer> 播放视频文件一次。  
+ <span data-ttu-id="1b63f-164">下面的示例使用<xref:System.Windows.Media.VideoDrawing>和<xref:System.Windows.Media.MediaPlayer>播放视频文件一次。</span><span class="sxs-lookup"><span data-stu-id="1b63f-164">The following example uses a <xref:System.Windows.Media.VideoDrawing> and a <xref:System.Windows.Media.MediaPlayer> to play a video file once.</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- 若要对媒体进行更多的计时控制，请将 <xref:System.Windows.Media.MediaTimeline> 与 <xref:System.Windows.Media.MediaPlayer> 和 <xref:System.Windows.Media.VideoDrawing> 对象一起使用。  通过 <xref:System.Windows.Media.MediaTimeline>，您可以指定是否重复播放视频。  若要将 <xref:System.Windows.Media.MediaTimeline> 与 <xref:System.Windows.Media.VideoDrawing> 一起使用，请执行下列步骤：  
+ <span data-ttu-id="1b63f-165">若要获得其他计时控制媒体，使用<xref:System.Windows.Media.MediaTimeline>与<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-165">To gain additional timing control over the media, use a <xref:System.Windows.Media.MediaTimeline> with the <xref:System.Windows.Media.MediaPlayer> and <xref:System.Windows.Media.VideoDrawing> objects.</span></span> <span data-ttu-id="1b63f-166"><xref:System.Windows.Media.MediaTimeline>使您能够指定是否应重复视频。</span><span class="sxs-lookup"><span data-stu-id="1b63f-166">The <xref:System.Windows.Media.MediaTimeline> enables you to specify whether the video should repeat.</span></span> <span data-ttu-id="1b63f-167">若要使用<xref:System.Windows.Media.MediaTimeline>与<xref:System.Windows.Media.VideoDrawing>，执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="1b63f-167">To use a <xref:System.Windows.Media.MediaTimeline> with a <xref:System.Windows.Media.VideoDrawing>, you perform the following steps:</span></span>  
   
-1.  声明 <xref:System.Windows.Media.MediaTimeline> 并设置其计时行为。  
+1.  <span data-ttu-id="1b63f-168">声明<xref:System.Windows.Media.MediaTimeline>并设置其计时行为。</span><span class="sxs-lookup"><span data-stu-id="1b63f-168">Declare the <xref:System.Windows.Media.MediaTimeline> and set its timing behaviors.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  从 <xref:System.Windows.Media.MediaTimeline> 创建 <xref:System.Windows.Media.MediaClock>。  
+2.  <span data-ttu-id="1b63f-169">创建<xref:System.Windows.Media.MediaClock>从<xref:System.Windows.Media.MediaTimeline>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-169">Create a <xref:System.Windows.Media.MediaClock> from the <xref:System.Windows.Media.MediaTimeline>.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  创建一个 <xref:System.Windows.Media.MediaPlayer> 并使用 <xref:System.Windows.Media.MediaClock> 设置其 <xref:System.Windows.Media.MediaPlayer.Clock%2A> 属性。  
+3.  <span data-ttu-id="1b63f-170">创建<xref:System.Windows.Media.MediaPlayer>并用<xref:System.Windows.Media.MediaClock>设置其<xref:System.Windows.Media.MediaPlayer.Clock%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="1b63f-170">Create a <xref:System.Windows.Media.MediaPlayer> and use the <xref:System.Windows.Media.MediaClock> to set its <xref:System.Windows.Media.MediaPlayer.Clock%2A> property.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  创建一个 <xref:System.Windows.Media.VideoDrawing>，并将 <xref:System.Windows.Media.MediaPlayer> 分配给 <xref:System.Windows.Media.VideoDrawing> 的 <xref:System.Windows.Media.VideoDrawing.Player%2A> 属性。  
+4.  <span data-ttu-id="1b63f-171">创建<xref:System.Windows.Media.VideoDrawing>并分配<xref:System.Windows.Media.MediaPlayer>到<xref:System.Windows.Media.VideoDrawing.Player%2A>属性<xref:System.Windows.Media.VideoDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-171">Create a <xref:System.Windows.Media.VideoDrawing> and assign the <xref:System.Windows.Media.MediaPlayer> to the <xref:System.Windows.Media.VideoDrawing.Player%2A> property of the <xref:System.Windows.Media.VideoDrawing>.</span></span>  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
- 下面的示例同时使用 <xref:System.Windows.Media.MediaTimeline> 以及 <xref:System.Windows.Media.MediaPlayer> 和 <xref:System.Windows.Media.VideoDrawing> 来反复播放某视频。  
+ <span data-ttu-id="1b63f-172">下面的示例使用<xref:System.Windows.Media.MediaTimeline>与<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>重复播放视频。</span><span class="sxs-lookup"><span data-stu-id="1b63f-172">The following example uses a <xref:System.Windows.Media.MediaTimeline> with a <xref:System.Windows.Media.MediaPlayer> and a <xref:System.Windows.Media.VideoDrawing> to play a video repeatedly.</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
   
- 请注意，使用 <xref:System.Windows.Media.MediaTimeline> 时，使用从 <xref:System.Windows.Media.MediaClock> 的 <xref:System.Windows.Media.Animation.Clock.Controller%2A> 属性返回的交互式 <xref:System.Windows.Media.Animation.ClockController> 控制媒体播放，而不是使用 <xref:System.Windows.Media.MediaPlayer> 的交互式方法。  
+ <span data-ttu-id="1b63f-173">请注意，当你使用<xref:System.Windows.Media.MediaTimeline>，你使用交互式<xref:System.Windows.Media.Animation.ClockController>从返回<xref:System.Windows.Media.Animation.Clock.Controller%2A>属性<xref:System.Windows.Media.MediaClock>控制而不是交互式的方法的媒体播放<xref:System.Windows.Media.MediaPlayer>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-173">Note that, when you use a <xref:System.Windows.Media.MediaTimeline>, you use the interactive <xref:System.Windows.Media.Animation.ClockController> returned from the <xref:System.Windows.Media.Animation.Clock.Controller%2A> property of the <xref:System.Windows.Media.MediaClock> to control media playback instead of the interactive methods of <xref:System.Windows.Media.MediaPlayer>.</span></span>  
   
 <a name="drawtext"></a>   
-## 绘制文本  
- 您可以使用 <xref:System.Windows.Media.GlyphRunDrawing> 和 <xref:System.Windows.Media.GlyphRun> 来绘制文本。  下面的示例使用 <xref:System.Windows.Media.GlyphRunDrawing> 来绘制文本“Hello World”。  
+## <a name="draw-text"></a><span data-ttu-id="1b63f-174">绘制文本</span><span class="sxs-lookup"><span data-stu-id="1b63f-174">Draw Text</span></span>  
+ <span data-ttu-id="1b63f-175">若要绘制的文本，请使用<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.GlyphRun>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-175">To draw text, you use a <xref:System.Windows.Media.GlyphRunDrawing> and a <xref:System.Windows.Media.GlyphRun>.</span></span> <span data-ttu-id="1b63f-176">下面的示例使用<xref:System.Windows.Media.GlyphRunDrawing>来绘制文本"Hello World"。</span><span class="sxs-lookup"><span data-stu-id="1b63f-176">The following example uses a <xref:System.Windows.Media.GlyphRunDrawing> to draw the text "Hello World".</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/GlyphRunDrawingExample.cs#glyphrundrawingexampleinline)]
- [!code-xml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
+ [!code-xaml[DrawingMiscSnippets_snip#GlyphRunDrawingExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/GlyphRunExample.xaml#glyphrundrawingexampleinline)]  
   
- <xref:System.Windows.Media.GlyphRun> 是低级别的对象，拟用于固定格式的文档表示和打印方案。  将文本绘制到屏幕上的一种比较简单的方法是使用 <xref:System.Windows.Controls.Label> 或 <xref:System.Windows.Controls.TextBlock>。  有关 <xref:System.Windows.Media.GlyphRun> 的更多信息，请参见 [GlyphRun 对象和 Glyphs 元素简介](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)概述。  
+ <span data-ttu-id="1b63f-177">A<xref:System.Windows.Media.GlyphRun>适用于固定格式的文档演示文稿和打印的方案是低级别对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-177">A <xref:System.Windows.Media.GlyphRun> is a low-level object intended for use with fixed-format document presentation and print scenarios.</span></span> <span data-ttu-id="1b63f-178">屏幕上绘制文本的简单办法是使用<xref:System.Windows.Controls.Label>或<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-178">A simpler way to draw text to the screen is to use a <xref:System.Windows.Controls.Label> or a <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="1b63f-179">有关详细信息<xref:System.Windows.Media.GlyphRun>，请参阅[简介 GlyphRun 对象和标志符号元素](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)概述。</span><span class="sxs-lookup"><span data-stu-id="1b63f-179">For more information about <xref:System.Windows.Media.GlyphRun>, see the [Introduction to the GlyphRun Object and Glyphs Element](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md) overview.</span></span>  
   
 <a name="compositedrawingssection"></a>   
-## 复合绘图  
- 使用 <xref:System.Windows.Media.DrawingGroup>，可将多个绘图组合为一个复合绘图。  使用 <xref:System.Windows.Media.DrawingGroup>，您可将形状、图像和文本组合到一个 <xref:System.Windows.Media.Drawing> 对象中。  
+## <a name="composite-drawings"></a><span data-ttu-id="1b63f-180">复合绘图</span><span class="sxs-lookup"><span data-stu-id="1b63f-180">Composite Drawings</span></span>  
+ <span data-ttu-id="1b63f-181">A<xref:System.Windows.Media.DrawingGroup>允许用户将组合到单个复合绘图的多个绘图。</span><span class="sxs-lookup"><span data-stu-id="1b63f-181">A <xref:System.Windows.Media.DrawingGroup> enables you to combine multiple drawings into a single composite drawing.</span></span> <span data-ttu-id="1b63f-182">通过使用<xref:System.Windows.Media.DrawingGroup>，可以将形状、 图像和文本合并到单个<xref:System.Windows.Media.Drawing>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-182">By using a <xref:System.Windows.Media.DrawingGroup>, you can combine shapes, images, and text into a single <xref:System.Windows.Media.Drawing> object.</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.DrawingGroup> 将两个 <xref:System.Windows.Media.GeometryDrawing> 对象和一个 <xref:System.Windows.Media.ImageDrawing> 对象组合到一起。  该示例产生下面的输出。  
+ <span data-ttu-id="1b63f-183">下面的示例使用<xref:System.Windows.Media.DrawingGroup>以组合两个<xref:System.Windows.Media.GeometryDrawing>对象和<xref:System.Windows.Media.ImageDrawing>对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-183">The following example uses a <xref:System.Windows.Media.DrawingGroup> to combine two <xref:System.Windows.Media.GeometryDrawing> objects and an <xref:System.Windows.Media.ImageDrawing> object.</span></span> <span data-ttu-id="1b63f-184">本示例生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="1b63f-184">This example produces the following output.</span></span>  
   
- ![具有多个绘图的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.png "graphicsmm\_simple")  
-复合绘图  
+ <span data-ttu-id="1b63f-185">![具有多个绘图的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.jpg "graphicsmm_simple")</span><span class="sxs-lookup"><span data-stu-id="1b63f-185">![A DrawingGroup with multiple drawings](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.jpg "graphicsmm_simple")</span></span>  
+<span data-ttu-id="1b63f-186">复合绘图</span><span class="sxs-lookup"><span data-stu-id="1b63f-186">A composite drawing</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
- [!code-xml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- 通过 <xref:System.Windows.Media.DrawingGroup>，您还可以对其内容应用不透明度蒙版、变换、位图效果及其他操作。  <xref:System.Windows.Media.DrawingGroup> 操作按下列顺序应用：<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>、<xref:System.Windows.Media.DrawingGroup.Opacity%2A>、<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>、<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>、<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> 和 <xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
+ <span data-ttu-id="1b63f-187">A<xref:System.Windows.Media.DrawingGroup>还可用于将不透明蒙板、 转换、 位图效果和其他操作应用于其内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-187">A <xref:System.Windows.Media.DrawingGroup> also enables you to apply opacity masks, transforms, bitmap effects, and other operations to its contents.</span></span> <span data-ttu-id="1b63f-188"><xref:System.Windows.Media.DrawingGroup>按以下顺序应用操作： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，，然后<xref:System.Windows.Media.DrawingGroup.Transform%2A>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-188"><xref:System.Windows.Media.DrawingGroup> operations are applied in the following order: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, and then <xref:System.Windows.Media.DrawingGroup.Transform%2A>.</span></span>  
   
- 下图演示 <xref:System.Windows.Media.DrawingGroup> 操作的应用顺序。  
+ <span data-ttu-id="1b63f-189">下图显示在其中顺序<xref:System.Windows.Media.DrawingGroup>将操作应用。</span><span class="sxs-lookup"><span data-stu-id="1b63f-189">The following illustration shows the order in which <xref:System.Windows.Media.DrawingGroup> operations are applied.</span></span>  
   
- ![DrawingGroup 操作顺序](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm\_drawinggroup\_order")  
-DrawingGroup 操作的顺序  
+ <span data-ttu-id="1b63f-190">![DrawingGroup 操作顺序](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")</span><span class="sxs-lookup"><span data-stu-id="1b63f-190">![DrawingGroup order of operations](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")</span></span>  
+<span data-ttu-id="1b63f-191">DrawingGroup 操作的顺序</span><span class="sxs-lookup"><span data-stu-id="1b63f-191">Order of DrawingGroup operations</span></span>  
   
- 下表描述您可用于操作 <xref:System.Windows.Media.DrawingGroup> 对象内容的属性。  
+ <span data-ttu-id="1b63f-192">下表介绍可用于处理的属性<xref:System.Windows.Media.DrawingGroup>对象的内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-192">The following table describes the properties you can use to manipulate a <xref:System.Windows.Media.DrawingGroup> object's contents.</span></span>  
   
-|属性|说明|图示|  
-|--------|--------|--------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|改变 <xref:System.Windows.Media.DrawingGroup> 内容选定部分的不透明度。  有关示例，请参见[How to: Control the Opacity of a Drawing](http://msdn.microsoft.com/zh-cn/68580652-7d32-4d27-93cc-a5148cf4d5ee)。||  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|统一更改 <xref:System.Windows.Media.DrawingGroup> 内容的不透明度。  使用此属性将 <xref:System.Windows.Media.Drawing> 设置为透明或部分透明。  有关示例，请参见[How to: Apply an Opacity Mask to a Drawing](http://msdn.microsoft.com/zh-cn/d77b420b-9be2-479c-a45e-82f4da30eb9f)。||  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|将 <xref:System.Windows.Media.Effects.BitmapEffect> 应用到 <xref:System.Windows.Media.DrawingGroup> 内容。  有关示例，请参见[How to: Apply a BitmapEffect to a Drawing](http://msdn.microsoft.com/zh-cn/c5b1de83-8d09-47fb-96db-5f174471f4b5)。||  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|将 <xref:System.Windows.Media.DrawingGroup> 内容剪裁到您使用 <xref:System.Windows.Media.Geometry> 描述的区域内。  有关示例，请参见[How to: Clip a Drawing](http://msdn.microsoft.com/zh-cn/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。||  
-|<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|根据指定的准则将[与设备无关的像素](GTMT)与设备像素对齐。  此属性有助于确保清晰地在 DPI 较低的显示器上呈现图形的细节。  有关示例，请参见[向绘图应用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)。||  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|变换 <xref:System.Windows.Media.DrawingGroup> 内容。  有关示例，请参见[How to: Apply a Transform to a Drawing](http://msdn.microsoft.com/zh-cn/0d525f2b-682d-4d67-9660-cf46929fbabd)。||  
+|<span data-ttu-id="1b63f-193">属性</span><span class="sxs-lookup"><span data-stu-id="1b63f-193">Property</span></span>|<span data-ttu-id="1b63f-194">说明</span><span class="sxs-lookup"><span data-stu-id="1b63f-194">Description</span></span>|<span data-ttu-id="1b63f-195">图示</span><span class="sxs-lookup"><span data-stu-id="1b63f-195">Illustration</span></span>|  
+|--------------|-----------------|------------------|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|<span data-ttu-id="1b63f-196">更改的所选部分的不透明度<xref:System.Windows.Media.DrawingGroup>内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-196">Alters the opacity of selected portions of the <xref:System.Windows.Media.DrawingGroup> contents.</span></span> <span data-ttu-id="1b63f-197">有关示例，请参阅[如何：控制绘图的不透明度](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-197">For an example, see [How to: Control the Opacity of a Drawing](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee).</span></span>|<span data-ttu-id="1b63f-198">![具有不透明蒙版的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")</span><span class="sxs-lookup"><span data-stu-id="1b63f-198">![A DrawingGroup with an opacity mask](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")</span></span>|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|<span data-ttu-id="1b63f-199">统一更改的不透明度<xref:System.Windows.Media.DrawingGroup>内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-199">Uniformly changes the opacity of the <xref:System.Windows.Media.DrawingGroup> contents.</span></span> <span data-ttu-id="1b63f-200">使用此属性可以使<xref:System.Windows.Media.Drawing>透明或部分透明。</span><span class="sxs-lookup"><span data-stu-id="1b63f-200">Use this property to make a <xref:System.Windows.Media.Drawing> transparent or partially transparent.</span></span> <span data-ttu-id="1b63f-201">有关示例，请参阅[如何：向绘图应用不透明蒙板](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-201">For an example, see [How to: Apply an Opacity Mask to a Drawing](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f).</span></span>|<span data-ttu-id="1b63f-202">![具有不同不透明度设置的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")</span><span class="sxs-lookup"><span data-stu-id="1b63f-202">![DrawingGroups with different opacity settings](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")</span></span>|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|<span data-ttu-id="1b63f-203">适用<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Media.DrawingGroup>内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-203">Applies a <xref:System.Windows.Media.Effects.BitmapEffect> to the <xref:System.Windows.Media.DrawingGroup> contents.</span></span> <span data-ttu-id="1b63f-204">有关示例，请参阅[如何：向绘图应用 BitmapEffect](http://msdn.microsoft.com/en-us/c5b1de83-8d09-47fb-96db-5f174471f4b5)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-204">For an example, see [How to: Apply a BitmapEffect to a Drawing](http://msdn.microsoft.com/en-us/c5b1de83-8d09-47fb-96db-5f174471f4b5).</span></span>|<span data-ttu-id="1b63f-205">![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")</span><span class="sxs-lookup"><span data-stu-id="1b63f-205">![DrawingGroup with a BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")</span></span>|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|<span data-ttu-id="1b63f-206">剪辑<xref:System.Windows.Media.DrawingGroup>到区域的内容，你描述使用<xref:System.Windows.Media.Geometry>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-206">Clips the <xref:System.Windows.Media.DrawingGroup> contents to a region you describe using a <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="1b63f-207">有关示例，请参阅[如何：剪裁绘图](http://msdn.microsoft.com/en-us/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-207">For an example, see [How to: Clip a Drawing](http://msdn.microsoft.com/en-us/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .</span></span>|<span data-ttu-id="1b63f-208">![具有定义的剪裁区域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")</span><span class="sxs-lookup"><span data-stu-id="1b63f-208">![DrawingGroup with a defined clip region](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")</span></span>|  
+|<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|<span data-ttu-id="1b63f-209">根据指定的基准将与设备无关的像素与设备像素对齐。</span><span class="sxs-lookup"><span data-stu-id="1b63f-209">Snaps device independent pixels to device pixels along the specified guidelines.</span></span> <span data-ttu-id="1b63f-210">此属性对于确保细节丰富的图形在低 DPI 屏幕上清晰地呈现很有用。</span><span class="sxs-lookup"><span data-stu-id="1b63f-210">This property is useful for ensuring that finely detailed graphics render sharply on low-DPI displays.</span></span> <span data-ttu-id="1b63f-211">有关示例，请参阅[向绘图应用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-211">For an example, see [Apply a GuidelineSet to a Drawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md).</span></span>|<span data-ttu-id="1b63f-212">![具有和没有 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span><span class="sxs-lookup"><span data-stu-id="1b63f-212">![A DrawingGroup with and without a GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span></span>|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|<span data-ttu-id="1b63f-213">转换<xref:System.Windows.Media.DrawingGroup>内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-213">Transforms the <xref:System.Windows.Media.DrawingGroup> contents.</span></span> <span data-ttu-id="1b63f-214">有关示例，请参阅[如何：向绘图应用转换](http://msdn.microsoft.com/en-us/0d525f2b-682d-4d67-9660-cf46929fbabd)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-214">For an example, see [How to: Apply a Transform to a Drawing](http://msdn.microsoft.com/en-us/0d525f2b-682d-4d67-9660-cf46929fbabd).</span></span>|<span data-ttu-id="1b63f-215">![旋转后的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")</span><span class="sxs-lookup"><span data-stu-id="1b63f-215">![A rotated DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")</span></span>|  
   
 <a name="usingimagedrawing"></a>   
-## 将绘图显示为图像  
- 若要使用 <xref:System.Windows.Controls.Image> 控件来显示 <xref:System.Windows.Media.Drawing>，请将 <xref:System.Windows.Media.DrawingImage> 用作 <xref:System.Windows.Controls.Image> 控件的 <xref:System.Windows.Controls.Image.Source%2A>，并将 <xref:System.Windows.Media.DrawingImage> 对象的 <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=fullName> 属性设置为要显示的绘图。  
+## <a name="display-a-drawing-as-an-image"></a><span data-ttu-id="1b63f-216">将绘图显示为图像</span><span class="sxs-lookup"><span data-stu-id="1b63f-216">Display a Drawing as an Image</span></span>  
+ <span data-ttu-id="1b63f-217">若要显示<xref:System.Windows.Media.Drawing>与<xref:System.Windows.Controls.Image>控制，请使用<xref:System.Windows.Media.DrawingImage>作为<xref:System.Windows.Controls.Image>控件的<xref:System.Windows.Controls.Image.Source%2A>并设置<xref:System.Windows.Media.DrawingImage>对象的<xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType>到绘图想要显示的属性。</span><span class="sxs-lookup"><span data-stu-id="1b63f-217">To display a <xref:System.Windows.Media.Drawing> with an <xref:System.Windows.Controls.Image> control, use a <xref:System.Windows.Media.DrawingImage> as the <xref:System.Windows.Controls.Image> control's <xref:System.Windows.Controls.Image.Source%2A> and set the <xref:System.Windows.Media.DrawingImage> object's <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> property to the drawing you want to display.</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.DrawingImage> 和 <xref:System.Windows.Controls.Image> 控件显示 <xref:System.Windows.Media.GeometryDrawing>。  该示例产生下面的输出。  
+ <span data-ttu-id="1b63f-218">下面的示例使用<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控件来显示<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-218">The following example uses a <xref:System.Windows.Media.DrawingImage> and an <xref:System.Windows.Controls.Image> control to display a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="1b63f-219">本示例生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="1b63f-219">This example produces the following output.</span></span>  
   
- ![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.png "graphicsmm\_geodraw")  
-DrawingImage  
+ <span data-ttu-id="1b63f-220">![两个椭圆的 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="1b63f-220">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
+<span data-ttu-id="1b63f-221">一个 DrawingImage</span><span class="sxs-lookup"><span data-stu-id="1b63f-221">A DrawingImage</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingImageExample.cs#drawingimageexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
 <a name="renderingwithdrawingbrushsection"></a>   
-## 使用 Drawing 绘制对象  
- <xref:System.Windows.Media.DrawingBrush> 是一种使用 Drawing 对象绘制区域的画笔。  您可以使用它来借助 Drawing 绘制任何图形对象。  <xref:System.Windows.Media.DrawingBrush> 的 <xref:System.Windows.Media.Drawing> 属性描述其 <xref:System.Windows.Media.DrawingBrush.Drawing%2A>。  若要使用 <xref:System.Windows.Media.DrawingBrush> 呈现 <xref:System.Windows.Media.Drawing>，请使用画笔的 <xref:System.Windows.Media.Drawing> 属性将其添加到画笔中，并使用画笔绘制图形对象，例如控件或面板。  
+## <a name="paint-an-object-with-a-drawing"></a><span data-ttu-id="1b63f-222">使用 Drawing 绘制对象</span><span class="sxs-lookup"><span data-stu-id="1b63f-222">Paint an Object with a Drawing</span></span>  
+ <span data-ttu-id="1b63f-223">A<xref:System.Windows.Media.DrawingBrush>是一种使用图形对象绘制区域的画笔。</span><span class="sxs-lookup"><span data-stu-id="1b63f-223">A <xref:System.Windows.Media.DrawingBrush> is a type of brush that paints an area with a drawing object.</span></span> <span data-ttu-id="1b63f-224">几乎可以使用它绘制任何带有绘图的图形对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-224">You can use it to paint just about any graphical object with a drawing.</span></span> <span data-ttu-id="1b63f-225"><xref:System.Windows.Media.Drawing>属性<xref:System.Windows.Media.DrawingBrush>描述其<xref:System.Windows.Media.DrawingBrush.Drawing%2A>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-225">The <xref:System.Windows.Media.Drawing> property of a <xref:System.Windows.Media.DrawingBrush> describes its <xref:System.Windows.Media.DrawingBrush.Drawing%2A>.</span></span> <span data-ttu-id="1b63f-226">呈现<xref:System.Windows.Media.Drawing>与<xref:System.Windows.Media.DrawingBrush>，将其添加到使用画笔的画笔<xref:System.Windows.Media.Drawing>属性和使用画笔来绘制图形对象，如控件或面板。</span><span class="sxs-lookup"><span data-stu-id="1b63f-226">To render a <xref:System.Windows.Media.Drawing> with a <xref:System.Windows.Media.DrawingBrush>, add it to the brush using the brush's <xref:System.Windows.Media.Drawing> property and use the brush to paint a graphical object, such as a control or panel.</span></span>  
   
- 下面的示例使用从 <xref:System.Windows.Media.GeometryDrawing> 创建的图案通过 <xref:System.Windows.Media.DrawingBrush> 来绘制 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.Shapes.Shape.Fill%2A>。  该示例产生下面的输出。  
+ <span data-ttu-id="1b63f-227">下面的示例使用<xref:System.Windows.Media.DrawingBrush>来绘制<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>具有从创建模式<xref:System.Windows.Media.GeometryDrawing>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-227">The following examples uses a <xref:System.Windows.Media.DrawingBrush> to paint the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle> with a pattern created from a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="1b63f-228">本示例生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="1b63f-228">This example produces the following output.</span></span>  
   
- ![平铺的 DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm\_drawingbrush\_geometrydrawing")  
-与 DrawingBrush 一起使用的 GeometryDrawing  
+ <span data-ttu-id="1b63f-229">![一个平铺的 DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")</span><span class="sxs-lookup"><span data-stu-id="1b63f-229">![A tiled DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrush-geometrydrawing.png "graphicsmm_drawingbrush_geometrydrawing")</span></span>  
+<span data-ttu-id="1b63f-230">与 DrawingBrush 结合使用的 GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="1b63f-230">A GeometryDrawing used with a DrawingBrush</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingBrushExample.cs#drawingbrushexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingBrushExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingBrushExample.xaml#drawingbrushexamplewholepage)]  
   
- <xref:System.Windows.Media.DrawingBrush> 类提供了用于拉伸和平铺其内容的各种选项。  有关 <xref:System.Windows.Media.DrawingBrush> 的更多信息，请参见[使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概述。  
+ <span data-ttu-id="1b63f-231"><xref:System.Windows.Media.DrawingBrush>类提供了各种用于拉伸和平铺其内容的选项。</span><span class="sxs-lookup"><span data-stu-id="1b63f-231">The <xref:System.Windows.Media.DrawingBrush> class provides a variety of options for stretching and tiling its content.</span></span> <span data-ttu-id="1b63f-232">有关详细信息<xref:System.Windows.Media.DrawingBrush>，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)概述。</span><span class="sxs-lookup"><span data-stu-id="1b63f-232">For more information about <xref:System.Windows.Media.DrawingBrush>, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md) overview.</span></span>  
   
 <a name="renderingwithvisualsection"></a>   
-## 使用 Visual 呈现绘图  
- <xref:System.Windows.Media.DrawingVisual> 是一个用于呈现绘图的可视对象类型。  开发人员可以选择直接在可视化层中工作，以生成一个高度自定义的图形环境，本概述中未对此进行说明。  有关更多信息，请参见[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)概述。  
+## <a name="render-a-drawing-with-a-visual"></a><span data-ttu-id="1b63f-233">使用视觉对象呈现绘图</span><span class="sxs-lookup"><span data-stu-id="1b63f-233">Render a Drawing with a Visual</span></span>  
+ <span data-ttu-id="1b63f-234">A<xref:System.Windows.Media.DrawingVisual>是一种旨在呈现绘图的视觉对象。</span><span class="sxs-lookup"><span data-stu-id="1b63f-234">A <xref:System.Windows.Media.DrawingVisual> is a type of visual object designed to render a drawing.</span></span> <span data-ttu-id="1b63f-235">对于希望生成高度自定义的图形环境的开发者来说，可以选择直接在视觉对象层上工作，但在本概述中不作介绍。</span><span class="sxs-lookup"><span data-stu-id="1b63f-235">Working directly at the visual layer is an option for developers who want to build a highly customized graphical environment, and is not described in this overview.</span></span> <span data-ttu-id="1b63f-236">有关详细信息，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)概述。</span><span class="sxs-lookup"><span data-stu-id="1b63f-236">For more information, see the [Using DrawingVisual Objects](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md) overview.</span></span>  
   
 <a name="drawingcontextobjects"></a>   
-## DrawingContext 对象  
- 通过 <xref:System.Windows.Media.DrawingContext> 类，您可以使用可视化内容填充 <xref:System.Windows.Media.Visual> 或 <xref:System.Windows.Media.Drawing>。  许多此类的低级图形对象使用 <xref:System.Windows.Media.DrawingContext>，因为它能十分有效地描述图形内容。  
+## <a name="drawingcontext-objects"></a><span data-ttu-id="1b63f-237">DrawingContext 对象</span><span class="sxs-lookup"><span data-stu-id="1b63f-237">DrawingContext Objects</span></span>  
+ <span data-ttu-id="1b63f-238"><xref:System.Windows.Media.DrawingContext>类使你能够填充<xref:System.Windows.Media.Visual>或<xref:System.Windows.Media.Drawing>可视化内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-238">The <xref:System.Windows.Media.DrawingContext> class enables you to populate a <xref:System.Windows.Media.Visual> or a <xref:System.Windows.Media.Drawing> with visual content.</span></span> <span data-ttu-id="1b63f-239">此类的很多较低级别图形对象使用<xref:System.Windows.Media.DrawingContext>因为它非常高效地说明了图形的内容。</span><span class="sxs-lookup"><span data-stu-id="1b63f-239">Many such lower-level graphics objects use a <xref:System.Windows.Media.DrawingContext> because it describes graphical content very efficiently.</span></span>  
   
- 虽然 <xref:System.Windows.Media.DrawingContext> 绘图方法看上去与 <xref:System.Drawing.Graphics?displayProperty=fullName> 类型的绘图方法类似，但它们的功能却大相径庭。  <xref:System.Windows.Media.DrawingContext> 用于保留模式图形系统，而 <xref:System.Drawing.Graphics?displayProperty=fullName> 类型则用于即时模式图形系统。  使用 <xref:System.Windows.Media.DrawingContext> 对象的绘图命令时，实际上是在存储一系列呈现指令（但具体的存储机制则取决于提供 <xref:System.Windows.Media.DrawingContext> 的对象的类型）以供图形系统在以后使用，而不是实时绘制到屏幕上。  有关 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 图形系统工作方式的更多信息，请参见 [WPF 图形呈现疑难解答](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
+ <span data-ttu-id="1b63f-240">尽管<xref:System.Windows.Media.DrawingContext>绘图方法看上去相似的绘图方法<xref:System.Drawing.Graphics?displayProperty=nameWithType>类型，它们是却大相径庭。</span><span class="sxs-lookup"><span data-stu-id="1b63f-240">Although the <xref:System.Windows.Media.DrawingContext> draw methods appear similar to the draw methods of the <xref:System.Drawing.Graphics?displayProperty=nameWithType> type, they are actually very different.</span></span> <span data-ttu-id="1b63f-241"><xref:System.Windows.Media.DrawingContext>是与一个保留的模式图形系统一起使用，而<xref:System.Drawing.Graphics?displayProperty=nameWithType>与即时模式图形系统使用类型。</span><span class="sxs-lookup"><span data-stu-id="1b63f-241"><xref:System.Windows.Media.DrawingContext> is used with a retained mode graphics system, while the <xref:System.Drawing.Graphics?displayProperty=nameWithType> type is used with an immediate mode graphics system.</span></span> <span data-ttu-id="1b63f-242">当你使用<xref:System.Windows.Media.DrawingContext>对象的绘图命令时，实际上存储一组呈现指令 (尽管具体的存储机制取决于提供的对象的类型<xref:System.Windows.Media.DrawingContext>)，将更高版本使用图形系统; 您都不绘制到实时屏幕。</span><span class="sxs-lookup"><span data-stu-id="1b63f-242">When you use a <xref:System.Windows.Media.DrawingContext> object's draw commands, you are actually storing a set of rendering instructions (although the exact storage mechanism depends on the type of object that supplies the <xref:System.Windows.Media.DrawingContext>) that will later be used by the graphics system; you are not drawing to the screen in real-time.</span></span> <span data-ttu-id="1b63f-243">有关 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 图形系统工作原理的详细信息，请参阅 [WPF 图形绘制概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1b63f-243">For more information about how the [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] graphics system works, see the [WPF Graphics Rendering Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).</span></span>  
   
- 绝不能直接实例化 <xref:System.Windows.Media.DrawingContext>；但可以通过某些方法（例如 <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=fullName> 和 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=fullName>）获取绘图上下文。  
+ <span data-ttu-id="1b63f-244">你永远不会直接实例化<xref:System.Windows.Media.DrawingContext>; 但是，可以获取绘制上下文从某些方法，如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-244">You never directly instantiate a <xref:System.Windows.Media.DrawingContext>; you can, however, acquire a drawing context from certain methods, such as <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> and <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.</span></span>  
   
 <a name="enumeratevisualcontents"></a>   
-## 枚举可视化对象的内容  
- 此外，<xref:System.Windows.Media.Drawing> 对象还可提供用来枚举 <xref:System.Windows.Media.Visual> 内容的对象模型。  
+## <a name="enumerate-the-contents-of-a-visual"></a><span data-ttu-id="1b63f-245">枚举 Visual 的内容</span><span class="sxs-lookup"><span data-stu-id="1b63f-245">Enumerate the Contents of a Visual</span></span>  
+ <span data-ttu-id="1b63f-246">除了其其他用法，<xref:System.Windows.Media.Drawing>对象还可用于枚举的内容提供的对象模型<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="1b63f-246">In addition to their other uses, <xref:System.Windows.Media.Drawing> objects also provide an object model for enumerating the contents of a <xref:System.Windows.Media.Visual>.</span></span>  
   
- 下面的示例使用 <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> 方法来检索 <xref:System.Windows.Media.Visual> 的 <xref:System.Windows.Media.DrawingGroup> 值并枚举该值。  
+ <span data-ttu-id="1b63f-247">下面的示例使用<xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>方法来检索<xref:System.Windows.Media.DrawingGroup>值<xref:System.Windows.Media.Visual>并枚举该值。</span><span class="sxs-lookup"><span data-stu-id="1b63f-247">The following example uses the <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> method to retrieve the <xref:System.Windows.Media.DrawingGroup> value of a <xref:System.Windows.Media.Visual> and enumerate it.</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## 请参阅  
- <xref:System.Windows.Media.Drawing>   
- <xref:System.Windows.Media.DrawingGroup>   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [使用图像、绘图和 Visual 进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
- [WPF 图形呈现疑难解答](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="1b63f-248">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1b63f-248">See Also</span></span>  
+ <xref:System.Windows.Media.Drawing>  
+ <xref:System.Windows.Media.DrawingGroup>  
+ [<span data-ttu-id="1b63f-249">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="1b63f-249">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="1b63f-250">使用图像、绘图和视觉对象进行绘制</span><span class="sxs-lookup"><span data-stu-id="1b63f-250">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="1b63f-251">Geometry 概述</span><span class="sxs-lookup"><span data-stu-id="1b63f-251">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="1b63f-252">WPF 中的形状和基本绘图概述</span><span class="sxs-lookup"><span data-stu-id="1b63f-252">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="1b63f-253">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="1b63f-253">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="1b63f-254">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="1b63f-254">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="1b63f-255">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="1b63f-255">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)

@@ -1,47 +1,52 @@
 ---
-title: "如何：定义工具栏按钮的图标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "按钮 [Windows 窗体], 图标"
-  - "示例 [Windows 窗体], 工具栏"
-  - "图标 [Windows 窗体], 工具栏按钮"
-  - "图像 [Windows 窗体], 工具栏按钮"
-  - "ToolBar 控件 [Windows 窗体], 向按钮添加图标"
-  - "工具栏 [Windows 窗体], 向按钮添加图标"
+title: "如何：定义工具栏按钮的图标"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- toolbars [Windows Forms], adding icons to buttons
+- buttons [Windows Forms], icons
+- examples [Windows Forms], toolbars
+- images [Windows Forms], toolbar buttons
+- icons [Windows Forms], toolbar buttons
+- ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d9f1dc73e6a74d8d69fedf6650102b77bd4f96a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：定义工具栏按钮的图标
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a><span data-ttu-id="ac539-102">如何：定义工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="ac539-102">How to: Define an Icon for a ToolBar Button</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+>  <span data-ttu-id="ac539-103"><xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="ac539-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <xref:System.Windows.Forms.ToolBar> 按钮能自身中显示图标，以便用户识别。  具体的实现方法是，向 [ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 组件添加图像，然后将 <xref:System.Windows.Forms.ImageList> 组件与 <xref:System.Windows.Forms.ToolBar> 控件关联起来。  
+ <span data-ttu-id="ac539-104"><xref:System.Windows.Forms.ToolBar>按钮就能够自身中显示图标以便于识别用户。</span><span class="sxs-lookup"><span data-stu-id="ac539-104"><xref:System.Windows.Forms.ToolBar> buttons are able to display icons within them for easy identification by users.</span></span> <span data-ttu-id="ac539-105">这将通过添加到图像实现[ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)组件并将<xref:System.Windows.Forms.ImageList>组件<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="ac539-105">This is achieved through adding images to the [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) component and then associating the <xref:System.Windows.Forms.ImageList> component with the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-### 以编程方式设置工具栏按钮的图标  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a><span data-ttu-id="ac539-106">以编程方式设置工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="ac539-106">To set an icon for a toolbar button programmatically</span></span>  
   
-1.  在过程中，实例化 <xref:System.Windows.Forms.ImageList> 组件和 <xref:System.Windows.Forms.ToolBar> 控件。  
+1.  <span data-ttu-id="ac539-107">在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="ac539-107">In a procedure, instantiate an <xref:System.Windows.Forms.ImageList> component and a <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-2.  在同一过程中，向 <xref:System.Windows.Forms.ImageList> 组件分配一个图像。  
+2.  <span data-ttu-id="ac539-108">在相同的过程中，分配到图像<xref:System.Windows.Forms.ImageList>组件。</span><span class="sxs-lookup"><span data-stu-id="ac539-108">In the same procedure, assign an image to the <xref:System.Windows.Forms.ImageList> component.</span></span>  
   
-3.  在同一过程中，向 <xref:System.Windows.Forms.ToolBar> 控件分配 <xref:System.Windows.Forms.ImageList> 控件，然后分配各个工具栏按钮的 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 属性。  
+3.  <span data-ttu-id="ac539-109">在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制转移到<xref:System.Windows.Forms.ToolBar>可控制并指派<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>单个工具栏按钮的属性。</span><span class="sxs-lookup"><span data-stu-id="ac539-109">In the same procedure, assign the <xref:System.Windows.Forms.ImageList> control to the <xref:System.Windows.Forms.ToolBar> control and assign the <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> property of the individual toolbar buttons.</span></span>  
   
-     在下面的代码示例中，图标位置的路径设置是**“My Documents”**文件夹。  这样做是因为可假定大多数运行 Windows 操作系统的计算机都包含此目录。  这还将允许具有最低系统访问级别的用户安全地运行应用程序。  下面的示例假定一个已添加了 <xref:System.Windows.Forms.PictureBox> 控件的窗体。  
+     <span data-ttu-id="ac539-110">在下面的代码示例中，路径为设置的映像的位置为**我的文档**文件夹。</span><span class="sxs-lookup"><span data-stu-id="ac539-110">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="ac539-111">此操作后，因为你可以采用大多数计算机运行 Windows 操作系统，将包含此目录。</span><span class="sxs-lookup"><span data-stu-id="ac539-111">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="ac539-112">这还使得具有最低系统访问级别的用户能够安全运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="ac539-112">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="ac539-113">下面的示例假定的窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。</span><span class="sxs-lookup"><span data-stu-id="ac539-113">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
-     按照上述步骤，您应该已经编写出类似于下面显示的代码。  
+     <span data-ttu-id="ac539-114">按照上述步骤中，您应该已经编写类似于下面显示的代码。</span><span class="sxs-lookup"><span data-stu-id="ac539-114">Following the steps above, you should have written code similar to that displayed below.</span></span>  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -66,7 +71,6 @@ caps.handback.revision: 14
     ' Assign the ImageIndex property of the ToolBarButton.  
        ToolBarButton1.ImageIndex = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -93,7 +97,6 @@ caps.handback.revision: 14
        // Assign ImageIndex property of the ToolBarButton.  
        toolBarButton1.ImageIndex = 0;  
     }  
-  
     ```  
   
     ```cpp  
@@ -122,8 +125,8 @@ caps.handback.revision: 14
        }  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolBar>   
- [如何：触发工具栏按钮的菜单事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)   
- [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)   
- [ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ac539-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ac539-115">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolBar>  
+ [<span data-ttu-id="ac539-116">如何：触发工具栏按钮的菜单事件</span><span class="sxs-lookup"><span data-stu-id="ac539-116">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [<span data-ttu-id="ac539-117">ToolBar 控件</span><span class="sxs-lookup"><span data-stu-id="ac539-117">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ [<span data-ttu-id="ac539-118">ImageList 组件</span><span class="sxs-lookup"><span data-stu-id="ac539-118">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

@@ -1,69 +1,73 @@
 ---
-title: "向量图形概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "坐标系统"
-  - "图形, 向量图形"
-  - "两端均含的终结点"
+title: "向量图形概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- inclusive-inclusive endpoints
+- coordinate systems
+- graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 向量图形概述
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在坐标系中绘制直线、矩形和其他形状。  您可以从各种各样的坐标系统中选择，但默认坐标系统的原点是在左上角，并且 x 轴指向右边，y 轴指向下边。  默认坐标系统的度量单位是像素。  
+# <a name="vector-graphics-overview"></a><span data-ttu-id="1a1cb-102">向量图形概述</span><span class="sxs-lookup"><span data-stu-id="1a1cb-102">Vector Graphics Overview</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="1a1cb-103">坐标系统上绘制线条、 矩形和其他形状。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-103"> draws lines, rectangles, and other shapes on a coordinate system.</span></span> <span data-ttu-id="1a1cb-104">你可以选择使用不同的坐标系统，但默认坐标系统有原点左上角 x 轴指向右和向下 y 轴。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-104">You can choose from a variety of coordinate systems, but the default coordinate system has the origin in the upper-left corner with the x-axis pointing to the right and the y-axis pointing down.</span></span> <span data-ttu-id="1a1cb-105">默认坐标系统中单位是度量的像素。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-105">The unit of measure in the default coordinate system is the pixel.</span></span>  
   
-## GDI\+ 的构造块  
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.png "AboutGdip02\_Art01")  
+## <a name="the-building-blocks-of-gdi"></a><span data-ttu-id="1a1cb-106">GDI + 构建基块</span><span class="sxs-lookup"><span data-stu-id="1a1cb-106">The Building Blocks of GDI+</span></span>  
+ <span data-ttu-id="1a1cb-107">![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")</span><span class="sxs-lookup"><span data-stu-id="1a1cb-107">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")</span></span>  
   
- 计算机监视器是在一个点的矩形数组上创建其显示，这些点被称为图片元素或像素。  各台监视器屏幕上显示的像素数量都是不同的，并且用户通常在一定程度上可以配置单独一台监视器上显示的像素数量。  
+ <span data-ttu-id="1a1cb-108">计算机监视器上的点调用图片元素或像素的矩形数组创建其显示。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-108">A computer monitor creates its display on a rectangular array of dots called picture elements or pixels.</span></span> <span data-ttu-id="1a1cb-109">有所不同到下一行，一个监视器的屏幕显示的像素数并且在单个监视器显示的像素数通常可以将在某种程度上由用户。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-109">The number of pixels that appear on the screen varies from one monitor to the next, and the number of pixels that appear on an individual monitor can usually be configured to some extent by the user.</span></span>  
   
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.png "AboutGdip02\_Art02")  
+ <span data-ttu-id="1a1cb-110">![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")</span><span class="sxs-lookup"><span data-stu-id="1a1cb-110">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")</span></span>  
   
- 在使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 绘制直线、矩形或曲线时，需要提供有关要绘制的项目的某些关键信息。  例如，可以通过提供两个点来指定一条直线，还可以通过提供一个点、高度和宽度来指定一个矩形。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 与显示设备驱动程序软件协同工作，以确定必须启用哪些像素来显示直线、矩形或曲线。  下面的插图显示了已打开的用于显示从点 \(4, 2\) 到点 \(12, 8\) 的直线的像素。  
+ <span data-ttu-id="1a1cb-111">当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要绘制线条、 矩形或曲线，提供有关要绘制的项的某些关键信息。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-111">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, rectangle, or curve, you provide certain key information about the item to be drawn.</span></span> <span data-ttu-id="1a1cb-112">例如，你可以通过提供两个点，指定的行，并可以通过提供一个点、 高度和宽度指定矩形。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-112">For example, you can specify a line by providing two points, and you can specify a rectangle by providing a point, a height, and a width.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="1a1cb-113">显示驱动程序软件，以确定哪些像素必须打开以显示行、 矩形或曲线协同工作。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-113"> works in conjunction with the display driver software to determine which pixels must be turned on to show the line, rectangle, or curve.</span></span> <span data-ttu-id="1a1cb-114">下图显示已打开，可以显示一条线的 （4，2） 的点到点 （12、 8） 的像素。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-114">The following illustration shows the pixels that are turned on to display a line from the point (4, 2) to the point (12, 8).</span></span>  
   
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.png "AboutGdip02\_Art03")  
+ <span data-ttu-id="1a1cb-115">![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")</span><span class="sxs-lookup"><span data-stu-id="1a1cb-115">![Vector graphic](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")</span></span>  
   
- 在实践中，人们发现某些基本构造块对于创建二维图片尤其有用。  下表中列出了 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持的构造块：  
+ <span data-ttu-id="1a1cb-116">随着时间推移，某些基本的构建基块已被公认为最适用于创建二维图片。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-116">Over time, certain basic building blocks have proven to be the most useful for creating two-dimensional pictures.</span></span> <span data-ttu-id="1a1cb-117">这些构建基块，所有支持的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，给定以下列表中：</span><span class="sxs-lookup"><span data-stu-id="1a1cb-117">These building blocks, which are all supported by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], are given in the following list:</span></span>  
   
--   行  
+-   <span data-ttu-id="1a1cb-118">直线</span><span class="sxs-lookup"><span data-stu-id="1a1cb-118">Lines</span></span>  
   
--   矩形  
+-   <span data-ttu-id="1a1cb-119">矩形</span><span class="sxs-lookup"><span data-stu-id="1a1cb-119">Rectangles</span></span>  
   
--   椭圆  
+-   <span data-ttu-id="1a1cb-120">省略号</span><span class="sxs-lookup"><span data-stu-id="1a1cb-120">Ellipses</span></span>  
   
--   弧线  
+-   <span data-ttu-id="1a1cb-121">弧</span><span class="sxs-lookup"><span data-stu-id="1a1cb-121">Arcs</span></span>  
   
--   多边形  
+-   <span data-ttu-id="1a1cb-122">多边形</span><span class="sxs-lookup"><span data-stu-id="1a1cb-122">Polygons</span></span>  
   
--   基数样条  
+-   <span data-ttu-id="1a1cb-123">基本样条</span><span class="sxs-lookup"><span data-stu-id="1a1cb-123">Cardinal splines</span></span>  
   
--   贝塞尔样条  
+-   <span data-ttu-id="1a1cb-124">贝塞尔曲线样条</span><span class="sxs-lookup"><span data-stu-id="1a1cb-124">Bezier splines</span></span>  
   
-## 使用图形对象进行绘制的方法  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 中的 <xref:System.Drawing.Graphics> 类提供了绘制前面列表中的各项的方法：<xref:System.Drawing.Graphics.DrawLine%2A>、<xref:System.Drawing.Graphics.DrawRectangle%2A>、<xref:System.Drawing.Graphics.DrawEllipse%2A>、<xref:System.Drawing.Graphics.DrawPolygon%2A>、<xref:System.Drawing.Graphics.DrawArc%2A>、<xref:System.Drawing.Graphics.DrawCurve%2A>（针对基数样条）和 <xref:System.Drawing.Graphics.DrawBezier%2A>。  这些方法中的每一种都是重载的，即每种方法都支持几个不同的参数列表。  例如，<xref:System.Drawing.Graphics.DrawLine%2A> 方法的一个变体接收一个 <xref:System.Drawing.Pen> 对象和四个整数，而 <xref:System.Drawing.Graphics.DrawLine%2A> 方法的另一个变体接收一个 <xref:System.Drawing.Pen> 对象和两个 <xref:System.Drawing.Point> 对象。  
+## <a name="methods-for-drawing-with-a-graphics-object"></a><span data-ttu-id="1a1cb-125">进行绘制与图形对象的方法</span><span class="sxs-lookup"><span data-stu-id="1a1cb-125">Methods For Drawing with a Graphics Object</span></span>  
+ <span data-ttu-id="1a1cb-126"><xref:System.Drawing.Graphics>类[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供在前面的列表中绘制项的以下方法： <xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawRectangle%2A>， <xref:System.Drawing.Graphics.DrawEllipse%2A>， <xref:System.Drawing.Graphics.DrawPolygon%2A>， <xref:System.Drawing.Graphics.DrawArc%2A>， <xref:System.Drawing.Graphics.DrawCurve%2A> （对于基本样条），和<xref:System.Drawing.Graphics.DrawBezier%2A>.</span><span class="sxs-lookup"><span data-stu-id="1a1cb-126">The <xref:System.Drawing.Graphics> class in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the following methods for drawing the items in the previous list: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (for cardinal splines), and <xref:System.Drawing.Graphics.DrawBezier%2A>.</span></span> <span data-ttu-id="1a1cb-127">上述每种方法将重载;也就是说，每个方法都支持几个不同的参数列表。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-127">Each of these methods is overloaded; that is, each method supports several different parameter lists.</span></span> <span data-ttu-id="1a1cb-128">例如，一个变体<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象和四个整数，而另一个变体<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象和第二个<xref:System.Drawing.Point>对象。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-128">For example, one variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and four integers, while another variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and two <xref:System.Drawing.Point> objects.</span></span>  
   
- 绘制直线、矩形和贝塞尔样条的方法具有多个伴随方法，可在一个调用中绘制若干个项：<xref:System.Drawing.Graphics.DrawLines%2A>、<xref:System.Drawing.Graphics.DrawRectangles%2A> 和 <xref:System.Drawing.Graphics.DrawBeziers%2A>。  <xref:System.Drawing.Graphics.DrawCurve%2A> 方法也有一个伴随方法 <xref:System.Drawing.Graphics.DrawClosedCurve%2A>，该伴随方法能够通过连接曲线的终点和起点的方式来闭合曲线。  
+ <span data-ttu-id="1a1cb-129">绘制线条、 矩形和贝塞尔样条的方法具有复数形式伴随方法，可在单个调用中绘制多个项： <xref:System.Drawing.Graphics.DrawLines%2A>， <xref:System.Drawing.Graphics.DrawRectangles%2A>，和<xref:System.Drawing.Graphics.DrawBeziers%2A>。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-129">The methods for drawing lines, rectangles, and Bézier splines have plural companion methods that draw several items in a single call: <xref:System.Drawing.Graphics.DrawLines%2A>, <xref:System.Drawing.Graphics.DrawRectangles%2A>, and <xref:System.Drawing.Graphics.DrawBeziers%2A>.</span></span> <span data-ttu-id="1a1cb-130">此外，<xref:System.Drawing.Graphics.DrawCurve%2A>方法具有助理方法<xref:System.Drawing.Graphics.DrawClosedCurve%2A>，关闭一条曲线的曲线的结束点连接到的起始点。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-130">Also, the <xref:System.Drawing.Graphics.DrawCurve%2A> method has a companion method, <xref:System.Drawing.Graphics.DrawClosedCurve%2A>, that closes a curve by connecting the ending point of the curve to the starting point.</span></span>  
   
- <xref:System.Drawing.Graphics> 类的所有绘制方法与 <xref:System.Drawing.Pen> 对象共同工作。  若要进行绘制，必须至少创建两个对象：<xref:System.Drawing.Graphics> 对象和 <xref:System.Drawing.Pen> 对象。  <xref:System.Drawing.Pen> 对象存储要绘制项的特性，如线宽和颜色。  将 <xref:System.Drawing.Pen> 对象作为参数之一传递给绘制方法。  例如，下面的示例演示 <xref:System.Drawing.Graphics.DrawLine%2A> 方法的一个变体接收一个 <xref:System.Drawing.Pen> 对象和四个整数，并绘制一个宽 100、高 50 且左上角位于 \(20, 10\) 的矩形：  
+ <span data-ttu-id="1a1cb-131">所有的绘制方法<xref:System.Drawing.Graphics>类结合工作<xref:System.Drawing.Pen>对象。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-131">All of the drawing methods of the <xref:System.Drawing.Graphics> class work in conjunction with a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="1a1cb-132">若要绘制任何内容，必须创建至少两个对象：<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-132">To draw anything, you must create at least two objects: a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="1a1cb-133"><xref:System.Drawing.Pen>对象存储特性，如线条宽度和颜色，要绘制的项。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-133">The <xref:System.Drawing.Pen> object stores attributes, such as line width and color, of the item to be drawn.</span></span> <span data-ttu-id="1a1cb-134"><xref:System.Drawing.Pen>对象作为一个参数传递给绘制的方法。</span><span class="sxs-lookup"><span data-stu-id="1a1cb-134">The <xref:System.Drawing.Pen> object is passed as one of the arguments to the drawing method.</span></span> <span data-ttu-id="1a1cb-135">例如，一个变体<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象和四个整数中绘制的矩形宽度为 100，高度为 50 到的左上角的以下示例所示 （20，10）：</span><span class="sxs-lookup"><span data-stu-id="1a1cb-135">For example, one variation of the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object and four integers as shown in the following example, which draws a rectangle with a width of 100, a height of 50 and an upper-left corner of (20, 10):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
  [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
-## 请参阅  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [直线、曲线和图形](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [如何：创建用于绘制的 Graphics 对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+## <a name="see-also"></a><span data-ttu-id="1a1cb-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1a1cb-136">See Also</span></span>  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [<span data-ttu-id="1a1cb-137">直线、曲线和形状</span><span class="sxs-lookup"><span data-stu-id="1a1cb-137">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="1a1cb-138">如何：创建用于绘制的图形对象</span><span class="sxs-lookup"><span data-stu-id="1a1cb-138">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)

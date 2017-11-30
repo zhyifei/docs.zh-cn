@@ -1,44 +1,45 @@
 ---
-title: "如何：使用设计器用 Windows 窗体面板控件对控件进行分组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 分组"
-  - "Panel 控件 [Windows 窗体], 将控件分组"
-  - "Windows 窗体控件, 分组"
+title: "如何：使用设计器用 Windows 窗体面板控件对控件进行分组"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Panel control [Windows Forms], grouping controls
+- controls [Windows Forms], grouping
+- Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器用 Windows 窗体面板控件对控件进行分组
-Windows 窗体 <xref:System.Windows.Forms.Panel> 控件用于对其他控件进行分组。  对控件分组的原因有三个。  第一是为获得清楚的用户界面而将相关窗体元素进行可视分组；第二是编程分组，例如对单选按钮进行分组；最后一个原因是为了在设计时将多个控件作为一个单元来移动。  
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a><span data-ttu-id="dab9f-102">如何：使用设计器用 Windows 窗体面板控件对控件进行分组</span><span class="sxs-lookup"><span data-stu-id="dab9f-102">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>
+<span data-ttu-id="dab9f-103">Windows 窗体<xref:System.Windows.Forms.Panel>控制用于其他控件进行分组。</span><span class="sxs-lookup"><span data-stu-id="dab9f-103">Windows Forms <xref:System.Windows.Forms.Panel> controls are used to group other controls.</span></span> <span data-ttu-id="dab9f-104">有三个原因与组控件。</span><span class="sxs-lookup"><span data-stu-id="dab9f-104">There are three reasons to group controls.</span></span> <span data-ttu-id="dab9f-105">有 visual 清除用户接口; 相关的窗体元素的分组另一种是以编程方式分组的单选按钮例如;最后一个是用于在设计时将控件移作为一个单元。</span><span class="sxs-lookup"><span data-stu-id="dab9f-105">One is visual grouping of related form elements for a clear user interface; another is programmatic grouping, of radio buttons for example; the last is for moving the controls as a unit at design time.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="dab9f-106">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="dab9f-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="dab9f-107">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="dab9f-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="dab9f-108">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="dab9f-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 创建一组控件  
+### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="dab9f-109">若要创建一组控件</span><span class="sxs-lookup"><span data-stu-id="dab9f-109">To create a group of controls</span></span>  
   
-1.  将 <xref:System.Windows.Forms.Panel> 控件从“工具箱”的**“Windows 窗体”**选项卡中拖到窗体上。  
+1.  <span data-ttu-id="dab9f-110">拖动<xref:System.Windows.Forms.Panel>控件从**Windows 窗体**拖到窗体工具箱选项卡中的。</span><span class="sxs-lookup"><span data-stu-id="dab9f-110">Drag a <xref:System.Windows.Forms.Panel> control from the **Windows Forms** tab of the Toolbox onto a form.</span></span>  
   
-2.  向面板添加其他控件，在面板内绘制每个控件。  
+2.  <span data-ttu-id="dab9f-111">将其他控件添加到面板中，绘制面板内的每个。</span><span class="sxs-lookup"><span data-stu-id="dab9f-111">Add other controls to the panel, drawing each inside the panel.</span></span>  
   
-     如果要将现有控件放到面板中，可以选择所有这些控件，将它们剪切到剪贴板，再选择 <xref:System.Windows.Forms.Panel> 控件，然后将现有控件粘贴到面板中。  也可以将它们拖到面板中。  
+     <span data-ttu-id="dab9f-112">如果你有想要将括在一个面板中的现有控件，可以选择所有控件，将它们剪切到剪贴板，再都选择<xref:System.Windows.Forms.Panel>控制，然后将其粘贴到面板中。</span><span class="sxs-lookup"><span data-stu-id="dab9f-112">If you have existing controls that you want to enclose in a panel, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.Panel> control, and then paste them into the panel.</span></span> <span data-ttu-id="dab9f-113">你还可以将其拖到面板。</span><span class="sxs-lookup"><span data-stu-id="dab9f-113">You can also drag them into the panel.</span></span>  
   
-3.  （可选）如果要向面板添加边框，请设置其 <xref:System.Windows.Forms.BorderStyle> 属性。  有下面三个选择方案：<xref:System.Windows.Forms.BorderStyle>、<xref:System.Windows.Forms.BorderStyle> 和 <xref:System.Windows.Forms.BorderStyle>。  
+3.  <span data-ttu-id="dab9f-114">（可选）如果你想要将边框添加到面板，设置其<xref:System.Windows.Forms.BorderStyle>属性。</span><span class="sxs-lookup"><span data-stu-id="dab9f-114">(Optional) If you want to add a border to a panel, set its <xref:System.Windows.Forms.BorderStyle> property.</span></span> <span data-ttu-id="dab9f-115">有三个选择： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。</span><span class="sxs-lookup"><span data-stu-id="dab9f-115">There are three choices: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, and <xref:System.Windows.Forms.BorderStyle.None>.</span></span>  
   
-## 请参阅  
- [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)   
- [Panel 控件概述](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [如何：设置面板的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+## <a name="see-also"></a><span data-ttu-id="dab9f-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="dab9f-116">See Also</span></span>  
+ [<span data-ttu-id="dab9f-117">Panel 控件</span><span class="sxs-lookup"><span data-stu-id="dab9f-117">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [<span data-ttu-id="dab9f-118">Panel 控件概述</span><span class="sxs-lookup"><span data-stu-id="dab9f-118">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="dab9f-119">如何：设置 Panel 控件的背景</span><span class="sxs-lookup"><span data-stu-id="dab9f-119">How to: Set the Background of a Panel</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

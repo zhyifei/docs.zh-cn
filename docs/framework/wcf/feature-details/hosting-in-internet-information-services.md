@@ -1,72 +1,74 @@
 ---
-title: "在 Internet 信息服务中承载 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "承载服务 [WCF], IIS"
+title: "在 Internet 信息服务中承载"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc0a2692e105588d482156dfa870d8e587008b8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Internet 信息服务中承载
-若要承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，一种选择是在 Internet 信息服务 \(IIS\) 应用程序内部承载。  此承载模型与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET Web 服务 \(ASMX\) 使用的模型类似。  
+# <a name="hosting-in-internet-information-services"></a><span data-ttu-id="2de9b-102">在 Internet 信息服务中承载</span><span class="sxs-lookup"><span data-stu-id="2de9b-102">Hosting in Internet Information Services</span></span>
+<span data-ttu-id="2de9b-103">若要承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，一种选择是在 Internet 信息服务 (IIS) 应用程序内部承载。</span><span class="sxs-lookup"><span data-stu-id="2de9b-103">One option for hosting [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services is inside of an Internet Information Services (IIS) application.</span></span> <span data-ttu-id="2de9b-104">此承载模型与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET Web 服务 (ASMX) 使用的模型类似。</span><span class="sxs-lookup"><span data-stu-id="2de9b-104">This hosting model is similar to the model used by [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and ASP.NET Web services (ASMX) Web Services.</span></span>  
   
-## IIS 的版本  
- 可以在下列操作系统上的以下 IIS 版本上承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]：  
+## <a name="versions-of-iis"></a><span data-ttu-id="2de9b-105">IIS 的版本</span><span class="sxs-lookup"><span data-stu-id="2de9b-105">Versions of IIS</span></span>  
+ <span data-ttu-id="2de9b-106">可以在下列操作系统上的以下 IIS 版本上承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]：</span><span class="sxs-lookup"><span data-stu-id="2de9b-106">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can be hosted on the following versions of IIS on the following operating systems:</span></span>  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。  此环境对于设计和开发 IIS 承载的应用程序非常有用，这些应用程序稍后将部署在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 等服务器操作系统上。  
+-   <span data-ttu-id="2de9b-107">[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。</span><span class="sxs-lookup"><span data-stu-id="2de9b-107">IIS 5.1 on [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].</span></span> <span data-ttu-id="2de9b-108">此环境对于设计和开发 IIS 承载的应用程序非常有用，这些应用程序稍后将部署在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 等服务器操作系统上。</span><span class="sxs-lookup"><span data-stu-id="2de9b-108">This environment is useful for the design and development of IIS-hosted applications that are later deployed on a server operating system such as [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].</span></span>  
   
--   [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供了一种高级进程模型，这种模型可提供更好的可伸缩性、可靠性和应用程序隔离。  此环境适合对以独占方式使用 HTTP 通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行成品部署。  
+-   [!INCLUDE[iis601](../../../../includes/iis601-md.md)]<span data-ttu-id="2de9b-109"> 上的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2de9b-109"> on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].</span></span> [!INCLUDE[iis601](../../../../includes/iis601-md.md)]<span data-ttu-id="2de9b-110"> 提供了一种高级进程模型，这种模型可提供更好的可伸缩性、可靠性和应用程序隔离。</span><span class="sxs-lookup"><span data-stu-id="2de9b-110"> provides an advanced process model that offers improved scalability, reliability, and application isolation.</span></span> <span data-ttu-id="2de9b-111">此环境适合对以独占方式使用 HTTP 通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行成品部署。</span><span class="sxs-lookup"><span data-stu-id="2de9b-111">This environment is suitable for production deployment of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that use HTTP communication exclusively.</span></span>  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。  IIS 7.0 提供了与 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的高级进程模型，但它使用 Windows 进程激活服务 \(WAS\) 来允许通过 HTTP 之外的协议进行激活和网络通信。  此环境适合开发可通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何网络协议（包括 HTTP、net.tcp、net.pipe 和 net.msmq）进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WAS 的更多信息，请参见[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+-   <span data-ttu-id="2de9b-112">[!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。</span><span class="sxs-lookup"><span data-stu-id="2de9b-112">IIS 7.0 on [!INCLUDE[wv](../../../../includes/wv-md.md)] and [!INCLUDE[lserver](../../../../includes/lserver-md.md)].</span></span> <span data-ttu-id="2de9b-113">IIS 7.0 提供了与 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的高级进程模型，但它使用 Windows 进程激活服务 (WAS) 来允许通过 HTTP 之外的协议进行激活和网络通信。</span><span class="sxs-lookup"><span data-stu-id="2de9b-113">IIS 7.0 provides the same advanced process model as [!INCLUDE[iis601](../../../../includes/iis601-md.md)], but uses the Windows Process Activation Service (WAS) to allow activation and network communication over protocols other than HTTP.</span></span> <span data-ttu-id="2de9b-114">此环境适合开发可通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的任何网络协议（包括 HTTP、net.tcp、net.pipe 和 net.msmq）进行通信的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="2de9b-114">This environment is suitable for the development of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that communicate over any network protocol supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (including HTTP, net.tcp, net.pipe, and net.msmq).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2de9b-115">，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。</span><span class="sxs-lookup"><span data-stu-id="2de9b-115"> WAS, see [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).</span></span>  
   
--   [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)（可能为英文网页）与 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 和 Windows 进程激活服务 \(WAS\) 一起工作，为 NET4 WCF 和 WF 服务提供丰富的应用程序宿主环境。  这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。  有关详细信息，请参见 [AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)（可能为英文网页）和 [AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)（可能为英文网页）。  
+-   <span data-ttu-id="2de9b-116">[Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496)配合[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。</span><span class="sxs-lookup"><span data-stu-id="2de9b-116">[Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) works with [!INCLUDE[iisver](../../../../includes/iisver-md.md)] and Windows Process Activation Service (WAS) to provide a rich application hosting environment for NET4 WCF and WF services.</span></span> <span data-ttu-id="2de9b-117">这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。</span><span class="sxs-lookup"><span data-stu-id="2de9b-117">These benefits include process life-cycle management, process recycling, shared hosting, rapid failure protection, process orphaning, on-demand activation, and health monitoring.</span></span> <span data-ttu-id="2de9b-118">有关详细信息，请参阅[AppFabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=196494)和[AppFabric 承载概念](http://go.microsoft.com/fwlink/?LinkId=196495)。</span><span class="sxs-lookup"><span data-stu-id="2de9b-118">For detailed information, see [AppFabric Hosting Features](http://go.microsoft.com/fwlink/?LinkId=196494) and [AppFabric Hosting Concepts](http://go.microsoft.com/fwlink/?LinkId=196495).</span></span>  
   
-## IIS 承载的好处  
- 在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务具有以下几个好处：  
+## <a name="benefits-of-iis-hosting"></a><span data-ttu-id="2de9b-119">IIS 承载的好处</span><span class="sxs-lookup"><span data-stu-id="2de9b-119">Benefits of IIS Hosting</span></span>  
+ <span data-ttu-id="2de9b-120">在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务具有以下几个好处：</span><span class="sxs-lookup"><span data-stu-id="2de9b-120">Hosting [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services in IIS has several benefits:</span></span>  
   
--   可像处理其他任何类型的 IIS 应用程序（包括 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序和 ASMX）一样，部署和管理 IIS 中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+-   <span data-ttu-id="2de9b-121">可像处理其他任何类型的 IIS 应用程序（包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序和 ASMX）一样，部署和管理 IIS 中承载的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="2de9b-121">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services hosted in IIS are deployed and managed like any other type of IIS application, including [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications and ASMX.</span></span>  
   
--   IIS 提供进程激活、运行状况管理和回收功能以提高承载的应用程序的可靠性。  
+-   <span data-ttu-id="2de9b-122">IIS 提供进程激活、运行状况管理和回收功能以提高承载的应用程序的可靠性。</span><span class="sxs-lookup"><span data-stu-id="2de9b-122">IIS provides process activation, health management, and recycling capabilities to increase the reliability of hosted applications.</span></span>  
   
--   像 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 一样，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 共享宿主模型。在此模型中，多个应用程序驻留在一个公共辅助进程中以提高服务器密度和可伸缩性。  
+-   <span data-ttu-id="2de9b-123">像 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 一样，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中承载的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 服务可以利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 共享宿主模型。在此模型中，多个应用程序驻留在一个公共辅助进程中以提高服务器密度和可伸缩性。</span><span class="sxs-lookup"><span data-stu-id="2de9b-123">Like [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services hosted in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] can take advantage of the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] shared hosting model where multiple applications reside in a common worker process for improved server density and scalability.</span></span>  
   
--   IIS 中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 使用相同的动态编译模型，该模型简化了承载的服务的开发和部署。  
+-   <span data-ttu-id="2de9b-124">IIS 中承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 使用相同的动态编译模型，该模型简化了承载的服务的开发和部署。</span><span class="sxs-lookup"><span data-stu-id="2de9b-124">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services hosted in IIS use the same dynamic compilation model as [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], which simplifies development and deployment of hosted services.</span></span>  
   
- 当决定在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，一定要记住 IIS 5.1 和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 仅限于 HTTP 通信。  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]选择宿主环境的更多信息，请参见[承载服务](../../../../docs/framework/wcf/hosting-services.md)。  
+ <span data-ttu-id="2de9b-125">当决定在 IIS 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，一定要记住 IIS 5.1 和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 仅限于 HTTP 通信。</span><span class="sxs-lookup"><span data-stu-id="2de9b-125">When deciding to host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services in IIS, it is important to remember that IIS 5.1 and [!INCLUDE[iis601](../../../../includes/iis601-md.md)] are limited to HTTP communication only.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2de9b-126">选择宿主环境，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。</span><span class="sxs-lookup"><span data-stu-id="2de9b-126"> choosing a hosting environment, see [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-## 部署 IIS 承载的 WCF 服务  
- 开发和部署 IIS 承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务由以下任务组成：  
+## <a name="deploying-an-iis-hosted-wcf-service"></a><span data-ttu-id="2de9b-127">部署 IIS 承载的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="2de9b-127">Deploying an IIS-Hosted WCF Service</span></span>  
+ <span data-ttu-id="2de9b-128">开发和部署 IIS 承载的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务由以下任务组成：</span><span class="sxs-lookup"><span data-stu-id="2de9b-128">Developing and deploying an IIS-hosted [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service consists of the following tasks:</span></span>  
   
--   请确保正确安装和注册 IIS、ASP.NET、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 激活组件。  
+-   <span data-ttu-id="2de9b-129">请确保正确安装和注册 IIS、ASP.NET、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 激活组件。</span><span class="sxs-lookup"><span data-stu-id="2de9b-129">Ensure that IIS, ASP.NET, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP activation component are correctly installed and registered.</span></span>  
   
--   创建新的 IIS 应用程序，或重新使用现有的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序。  
+-   <span data-ttu-id="2de9b-130">创建新的 IIS 应用程序，或重新使用现有的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="2de9b-130">Create a new IIS application, or reuse an existing [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application.</span></span>  
   
--   为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务创建 .svc 文件。  
+-   <span data-ttu-id="2de9b-131">为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务创建 .svc 文件。</span><span class="sxs-lookup"><span data-stu-id="2de9b-131">Create a .svc file for the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
--   将服务实现部署到 IIS 应用程序。  
+-   <span data-ttu-id="2de9b-132">将服务实现部署到 IIS 应用程序。</span><span class="sxs-lookup"><span data-stu-id="2de9b-132">Deploy the service implementation to the IIS application.</span></span>  
   
--   配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
+-   <span data-ttu-id="2de9b-133">配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。</span><span class="sxs-lookup"><span data-stu-id="2de9b-133">Configure the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- 有关上述每一项任务的讨论，请参见[部署承载于 Internet 信息服务中的 WCF 服务](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
+ <span data-ttu-id="2de9b-134">有关其中每个任务的讨论，请参阅[部署 Internet Information Services-Hosted 的 WCF 服务](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。</span><span class="sxs-lookup"><span data-stu-id="2de9b-134">For a discussion of each of these tasks, see [Deploying an Internet Information Services-Hosted WCF Service](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).</span></span>  
   
-## WCF 服务和 ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务既可以与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 并行承载，也可以在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式中承载。在该模式下，服务可以充分利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序平台提供的功能。  有关这些功能的讨论，请参见 [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+## <a name="wcf-services-and-aspnet"></a><span data-ttu-id="2de9b-135">WCF 服务和 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2de9b-135">WCF Services and ASP.NET</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="2de9b-136"> 服务既可以与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 并行承载，也可以在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式中承载。在该模式下，服务可以充分利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序平台提供的功能。</span><span class="sxs-lookup"><span data-stu-id="2de9b-136"> services can be hosted either side-by-side with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] or in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Compatibility Mode in which services can take full advantage of features provided by the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web application platform.</span></span> <span data-ttu-id="2de9b-137">有关这些功能的讨论，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。</span><span class="sxs-lookup"><span data-stu-id="2de9b-137">For a discussion of these features, see [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).</span></span>  
   
-## 请参阅  
- [使用 ServiceHostFactory 扩展宿主](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)   
- [部署承载于 Internet 信息服务中的 WCF 服务](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)   
- [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)   
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [为 Windows Communication Foundation 配置 Internet Information Services 7.0](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)   
- [Windows Server App Fabric 承载功能 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="2de9b-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2de9b-138">See Also</span></span>  
+ [<span data-ttu-id="2de9b-139">使用 ServiceHostFactory 扩展宿主</span><span class="sxs-lookup"><span data-stu-id="2de9b-139">Extending Hosting Using ServiceHostFactory</span></span>](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
+ [<span data-ttu-id="2de9b-140">部署于 Internet 信息服务承载的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="2de9b-140">Deploying an Internet Information Services-Hosted WCF Service</span></span>](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [<span data-ttu-id="2de9b-141">WCF 服务和 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2de9b-141">WCF Services and ASP.NET</span></span>](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
+ [<span data-ttu-id="2de9b-142">Internet 信息服务承载最佳实践</span><span class="sxs-lookup"><span data-stu-id="2de9b-142">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="2de9b-143">为 Windows Communication Foundation 配置 Internet Information Services 7.0</span><span class="sxs-lookup"><span data-stu-id="2de9b-143">Configuring Internet Information Services 7.0 for Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
+ [<span data-ttu-id="2de9b-144">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="2de9b-144">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

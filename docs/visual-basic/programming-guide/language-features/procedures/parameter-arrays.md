@@ -1,77 +1,76 @@
 ---
-title: "参数数组 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "变量 [Visual Basic], 参数数组"
-  - "数组 [Visual Basic], 参数数组"
-  - "ParamArray 关键字, 参数数组"
-  - "参数数组, 关于参数数组"
-  - "参数, 参数数组"
-  - "过程, 不确定数量的参数值"
-  - "Visual Basic 代码, 过程"
+title: "参数数组 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- parameter arrays [Visual Basic], about parameter arrays
+- ParamArray keyword [Visual Basic], parameter arrays
+- Visual Basic code, procedures
+- parameters [Visual Basic], parameter arrays
+- arguments [Visual Basic], parameter arrays
+- procedures [Visual Basic], indefinite number of argument values
+- arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ca2b5f02ac4fb3eb613488c8a9852eb2aa4ce5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 参数数组 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-通常，不能超出过程声明指定调用带有多个参数的过程。  如果需要参数时的不确定数字，可以声明 *参数*数组，它允许过程接受参数的值。  ，在定义过程时，不必知道参数数组中的元素数。  每个单独确定数组的大小调用该过程。  
+# <a name="parameter-arrays-visual-basic"></a><span data-ttu-id="ffc2e-102">参数数组 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffc2e-102">Parameter Arrays (Visual Basic)</span></span>
+<span data-ttu-id="ffc2e-103">通常情况下，不能调用带多个参数不是过程声明指定的过程。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-103">Usually, you cannot call a procedure with more arguments than the procedure declaration specifies.</span></span> <span data-ttu-id="ffc2e-104">当你需要自变量数量不确定时，可以声明*参数数组*，这样一个过程来接受参数的值的数组。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-104">When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter.</span></span> <span data-ttu-id="ffc2e-105">不需要知道的参数数组中的元素数，当你定义的过程。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-105">You do not have to know the number of elements in the parameter array when you define the procedure.</span></span> <span data-ttu-id="ffc2e-106">数组大小由每个调用的过程单独确定。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-106">The array size is determined individually by each call to the procedure.</span></span>  
   
-## 声明 ParamArray  
- 使用 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 关键字表示中的参数数组。  适用以下规则:  
+## <a name="declaring-a-paramarray"></a><span data-ttu-id="ffc2e-107">声明一个参数数组</span><span class="sxs-lookup"><span data-stu-id="ffc2e-107">Declaring a ParamArray</span></span>  
+ <span data-ttu-id="ffc2e-108">你使用[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)关键字来表示参数列表中的参数数组。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-108">You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list.</span></span> <span data-ttu-id="ffc2e-109">适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="ffc2e-109">The following rules apply:</span></span>  
   
--   程序只能定义一个参数数组，因此，它必须是过程定义中的最后一个参数。  
+-   <span data-ttu-id="ffc2e-110">一个过程只能定义只有一个参数数组，并且它必须在过程定义中的最后一个参数。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-110">A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.</span></span>  
   
--   参数数组必须通过值传递。  好的编程做法是显式使用关键字 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 在过程定义。  
+-   <span data-ttu-id="ffc2e-111">必须通过值传递参数数组。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-111">The parameter array must be passed by value.</span></span> <span data-ttu-id="ffc2e-112">是一个很好的编程做法显式包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)过程定义中的关键字。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-112">It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.</span></span>  
   
--   参数数组是自动可选的。  其默认值为参数数组元素类型的空一维数组。  
+-   <span data-ttu-id="ffc2e-113">参数数组是自动可选的。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-113">The parameter array is automatically optional.</span></span> <span data-ttu-id="ffc2e-114">其默认值为参数数组的元素类型的空一维数组。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-114">Its default value is an empty one-dimensional array of the parameter array's element type.</span></span>  
   
--   必需的参数数组前面的所有参数。  参数数组必须是唯一的可选参数。  
+-   <span data-ttu-id="ffc2e-115">前面参数数组的所有参数都是必需的。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-115">All parameters preceding the parameter array must be required.</span></span> <span data-ttu-id="ffc2e-116">参数数组必须是唯一的可选参数。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-116">The parameter array must be the only optional parameter.</span></span>  
   
-## 调用 ParamArray  
- 当您调用定义参数数组的过程时，可以在任何一种方式提供参数以下方式所示:  
+## <a name="calling-a-paramarray"></a><span data-ttu-id="ffc2e-117">调用一个参数数组</span><span class="sxs-lookup"><span data-stu-id="ffc2e-117">Calling a ParamArray</span></span>  
+ <span data-ttu-id="ffc2e-118">时调用过程定义参数数组时，你可以用任何一种通过以下方式来提供自变量：</span><span class="sxs-lookup"><span data-stu-id="ffc2e-118">When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:</span></span>  
   
--   不提供任何参数，即可以省略 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 参数。  在这种情况下，一个空数组传递给过程。  您还可以传递 [Nothing](../../../../visual-basic/language-reference/nothing.md) 关键字，具有相同的效果。  
+-   <span data-ttu-id="ffc2e-119">执行任何操作-即，则可以省略[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)自变量。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-119">Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument.</span></span> <span data-ttu-id="ffc2e-120">在这种情况下，将为空数组传递给过程。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-120">In this case, an empty array is passed to the procedure.</span></span> <span data-ttu-id="ffc2e-121">你还可以传递[执行任何操作](../../../../visual-basic/language-reference/nothing.md)关键字，使用相同的效果。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-121">You can also pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, with the same effect.</span></span>  
   
--   任意数量的参数列表，以逗号分隔。  每个参数的数据类型必须可以隐式转换为 `ParamArray` 元素类型。  
+-   <span data-ttu-id="ffc2e-122">任意数目的自变量，用逗号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-122">A list of an arbitrary number of arguments, separated by commas.</span></span> <span data-ttu-id="ffc2e-123">每个自变量的数据类型必须是隐式转换为`ParamArray`元素类型。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-123">The data type of each argument must be implicitly convertible to the `ParamArray` element type.</span></span>  
   
--   与元素类型的数组与参数数组的元素类型相同。  
+-   <span data-ttu-id="ffc2e-124">具有相同的元素类型为参数数组的元素类型数组。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-124">An array with the same element type as the parameter array's element type.</span></span>  
   
- 在任何情况下，过程中的代码将参数数组，一维数组与数据类型的元素和 `ParamArray` 数据类型相同。  
+ <span data-ttu-id="ffc2e-125">在所有情况下，在过程中的代码将参数的数组包含与相同的数据类型的元素的一维数组视为`ParamArray`数据类型。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-125">In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.</span></span>  
   
 > [!IMPORTANT]
->  每当处理可能变得无限大的数组，有耗尽应用程序的某些内部容量的风险。  如果接受一个参数数组，则应该测试调用代码传递给它的数组的大小。  ，如果它对于应用程序来说太大，请执行适当的操作。  有关更多信息，请参见 [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+>  <span data-ttu-id="ffc2e-126">每当你处理数组可以是无限期地大型，没有无限大某种内部容量的你的应用程序的风险。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-126">Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application.</span></span> <span data-ttu-id="ffc2e-127">如果你接受一个参数数组，你应进行测试以调用代码传递给它的数组的大小。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-127">If you accept a parameter array, you should test for the size of the array that the calling code passed to it.</span></span> <span data-ttu-id="ffc2e-128">如果你的应用程序太大，请采取适当的措施。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-128">Take appropriate steps if it is too large for your application.</span></span> <span data-ttu-id="ffc2e-129">有关详细信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-129">For more information, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-## 示例  
- 下面的示例定义并调用函数 `calcSum`。  参数的 `args``ParamArray` 修饰符使该函数接受参数数目可变。  
+## <a name="example"></a><span data-ttu-id="ffc2e-130">示例</span><span class="sxs-lookup"><span data-stu-id="ffc2e-130">Example</span></span>  
+ <span data-ttu-id="ffc2e-131">下面的示例定义和调用函数`calcSum`。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-131">The following example defines and calls the function `calcSum`.</span></span> <span data-ttu-id="ffc2e-132">`ParamArray`参数修饰符`args`启用接受数目可变的参数的函数。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-132">The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.</span></span>  
   
  [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
   
- 下面的示例定义带有参数数组的一个过程所有数组元素的值传递给参数数组。  
+ <span data-ttu-id="ffc2e-133">下面的示例定义了一个带有参数数组，并将输出传递给参数数组的所有数组元素的值。</span><span class="sxs-lookup"><span data-stu-id="ffc2e-133">The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.</span></span>  
   
  [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
   
  [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.Information.UBound%2A>   
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [过程参数和自变量](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [通过值和通过引用传递参数](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [按位置和按名称传递参数](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [可选参数](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [过程重载](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a><span data-ttu-id="ffc2e-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffc2e-134">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Information.UBound%2A>  
+ [<span data-ttu-id="ffc2e-135">过程</span><span class="sxs-lookup"><span data-stu-id="ffc2e-135">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="ffc2e-136">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="ffc2e-136">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="ffc2e-137">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="ffc2e-137">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="ffc2e-138">按位置和按名称传递自变量</span><span class="sxs-lookup"><span data-stu-id="ffc2e-138">Passing Arguments by Position and by Name</span></span>](./passing-arguments-by-position-and-by-name.md)  
+ [<span data-ttu-id="ffc2e-139">可选参数</span><span class="sxs-lookup"><span data-stu-id="ffc2e-139">Optional Parameters</span></span>](./optional-parameters.md)  
+ [<span data-ttu-id="ffc2e-140">过程重载</span><span class="sxs-lookup"><span data-stu-id="ffc2e-140">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="ffc2e-141">阵列</span><span class="sxs-lookup"><span data-stu-id="ffc2e-141">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="ffc2e-142">Optional</span><span class="sxs-lookup"><span data-stu-id="ffc2e-142">Optional</span></span>](../../../../visual-basic/language-reference/modifiers/optional.md)

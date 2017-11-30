@@ -1,56 +1,48 @@
 ---
-title: "编程指南 (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "编程指南 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7e7ef63d587778d54bb4dd4d3d6cf3dc24442882
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="programming-guide-linq-to-xml-visual-basic"></a>编程指南 (LINQ to XML) (Visual Basic)
-本节提供有关使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 进行编程的概念性和指导性信息。  
+# <a name="programming-guide-linq-to-xml-visual-basic"></a><span data-ttu-id="0e357-102">编程指南 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-102">Programming Guide (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0e357-103">本节提供有关使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行编程的概念性和指导性信息。</span><span class="sxs-lookup"><span data-stu-id="0e357-103">This section provides conceptual and how-to information about programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="who-should-read-this-documentation"></a>本文档的目标读者  
- 本文档面向开发人员已经了解 Visual Basic 和一些基本知识的[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]。  
+## <a name="who-should-read-this-documentation"></a><span data-ttu-id="0e357-104">本文档的目标读者</span><span class="sxs-lookup"><span data-stu-id="0e357-104">Who Should Read This Documentation</span></span>  
+ <span data-ttu-id="0e357-105">本文档面向开发人员已了解 Visual Basic 和的某些基本方面[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0e357-105">This documentation targets developers who already understand Visual Basic and some basic aspects of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- 本文档的目的旨在简化[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]对所有类型的开发人员能够轻松使用。 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]XML 编程更加轻松。 您无需成为一名专家级开发人员就可以使用它。  
+ <span data-ttu-id="0e357-106">本文档的目的在于降低各类开发人员对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的使用难度。</span><span class="sxs-lookup"><span data-stu-id="0e357-106">The goal of this documentation is to make [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] easy to use for all kinds of developers.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="0e357-107"> 使 XML 编程变得更容易。</span><span class="sxs-lookup"><span data-stu-id="0e357-107"> makes XML programming easier.</span></span> <span data-ttu-id="0e357-108">您无需成为一名专家级开发人员就可以使用它。</span><span class="sxs-lookup"><span data-stu-id="0e357-108">You do not have to be an expert developer to use it.</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 非常依赖于泛型类。 因此，是非常重要，了解泛型类型和类的使用。 有关详细信息，请参阅[Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="0e357-109"> 非常依赖于泛型类。</span><span class="sxs-lookup"><span data-stu-id="0e357-109"> relies heavily on generic classes.</span></span> <span data-ttu-id="0e357-110">因此，是非常重要，了解使用泛型类型和类。</span><span class="sxs-lookup"><span data-stu-id="0e357-110">Therefore, is very important that you understand the use of generic types and classes.</span></span> <span data-ttu-id="0e357-111">有关详细信息，请参阅[Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。</span><span class="sxs-lookup"><span data-stu-id="0e357-111">For more information, see [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a><span data-ttu-id="0e357-112">本节内容</span><span class="sxs-lookup"><span data-stu-id="0e357-112">In This Section</span></span>  
   
-|主题|说明|  
+|<span data-ttu-id="0e357-113">主题</span><span class="sxs-lookup"><span data-stu-id="0e357-113">Topic</span></span>|<span data-ttu-id="0e357-114">描述</span><span class="sxs-lookup"><span data-stu-id="0e357-114">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|概述[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]类，以及有关三种最重要的类的详细的信息︰ <xref:System.Xml.Linq.XElement>， <xref:System.Xml.Linq.XAttribute>，和<xref:System.Xml.Linq.XDocument>。</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement>|  
-|[创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|提供有关创建 XML 树的概念性和基于任务的信息。 可以通过使用函数构造，或通过从字符串或文件解析 XML 文本来创建 XML 树。 您还可以使用<xref:System.Xml.XmlReader>来填充 XML 树。</xref:System.Xml.XmlReader>|  
-|[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|提供有关创建使用命名空间的 XML 树的详细信息。|  
-|[序列化 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|描述序列化 XML 树的多种方法，并给出选择使用方法的指导。|  
-|[LINQ to XML 轴 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|列举并介绍 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 轴方法，您必须了解轴方法才能编写 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查询。|  
-|[查询 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|提供查询 XML 树的常见示例。|  
-|[修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|如同文档对象模型 (DOM) 一样，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 也允许您就地修改 XML 树。|  
-|[高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|提供有关批注、事件、流处理和其他高级方案的信息。|  
-|[LINQ to XML 安全性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|描述与 LINQ to XML 相关的安全问题并提供减小安全隐患的一些指导。|  
-|[示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|包含本文档中许多示例使用的示例 XML 文档。|  
+|[<span data-ttu-id="0e357-115">LINQ to XML 编程概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-115">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|<span data-ttu-id="0e357-116">提供对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的概述以及有关以下三个最重要类的详细信息：<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XDocument>。</span><span class="sxs-lookup"><span data-stu-id="0e357-116">Provides an overview of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, and detailed information about three of the most important classes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, and <xref:System.Xml.Linq.XDocument>.</span></span>|  
+|[<span data-ttu-id="0e357-117">创建 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-117">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|<span data-ttu-id="0e357-118">提供有关创建 XML 树的概念性和基于任务的信息。</span><span class="sxs-lookup"><span data-stu-id="0e357-118">Provides conceptual and task-based information about creating XML trees.</span></span> <span data-ttu-id="0e357-119">可以通过使用函数构造，或通过从字符串或文件解析 XML 文本来创建 XML 树。</span><span class="sxs-lookup"><span data-stu-id="0e357-119">You can create XML trees by using functional construction, or by parsing XML text from a string or a file.</span></span> <span data-ttu-id="0e357-120">也可以使用 <xref:System.Xml.XmlReader> 来填充 XML 树。</span><span class="sxs-lookup"><span data-stu-id="0e357-120">You can also use an <xref:System.Xml.XmlReader> to populate an XML tree.</span></span>|  
+|[<span data-ttu-id="0e357-121">处理 XML 命名空间 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-121">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|<span data-ttu-id="0e357-122">提供有关创建使用命名空间的 XML 树的详细信息。</span><span class="sxs-lookup"><span data-stu-id="0e357-122">Provides detailed information about creating XML trees that use namespaces.</span></span>|  
+|[<span data-ttu-id="0e357-123">序列化 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-123">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|<span data-ttu-id="0e357-124">描述序列化 XML 树的多种方法，并给出选择使用方法的指导。</span><span class="sxs-lookup"><span data-stu-id="0e357-124">Describes multiple approaches to serializing an XML tree, and gives guidance on which approach to use.</span></span>|  
+|[<span data-ttu-id="0e357-125">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-125">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|<span data-ttu-id="0e357-126">列举并介绍 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 轴方法，您必须了解轴方法才能编写 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询。</span><span class="sxs-lookup"><span data-stu-id="0e357-126">Enumerates and describes the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis methods, which you must understand before you can write [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="0e357-127">查询 XML 树 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-127">Querying XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|<span data-ttu-id="0e357-128">提供查询 XML 树的常见示例。</span><span class="sxs-lookup"><span data-stu-id="0e357-128">Provides common examples of querying XML trees.</span></span>|  
+|[<span data-ttu-id="0e357-129">修改 XML 树 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-129">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|<span data-ttu-id="0e357-130">如同文档对象模型 (DOM) 一样，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 也允许您就地修改 XML 树。</span><span class="sxs-lookup"><span data-stu-id="0e357-130">Like the Document Object Model (DOM), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enables you to modify an XML tree in place.</span></span>|  
+|[<span data-ttu-id="0e357-131">高级的 LINQ to XML 编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|<span data-ttu-id="0e357-132">提供有关批注、事件、流处理和其他高级方案的信息。</span><span class="sxs-lookup"><span data-stu-id="0e357-132">Provides information about annotations, events, streaming, and other advanced scenarios.</span></span>|  
+|[<span data-ttu-id="0e357-133">LINQ to XML 安全性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-133">LINQ to XML Security (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|<span data-ttu-id="0e357-134">描述与 LINQ to XML 相关的安全问题并提供减小安全隐患的一些指导。</span><span class="sxs-lookup"><span data-stu-id="0e357-134">Describes security issues associated with LINQ to XML and provides some guidance for mitigating security exposure.</span></span>|  
+|[<span data-ttu-id="0e357-135">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0e357-135">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|<span data-ttu-id="0e357-136">包含本文档中许多示例使用的示例 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="0e357-136">Contains the sample XML documents that are used by many examples in this documentation.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)   
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0e357-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0e357-137">See Also</span></span>  
+ [<span data-ttu-id="0e357-138">入门 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0e357-138">Getting Started (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [<span data-ttu-id="0e357-139">LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e357-139">LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

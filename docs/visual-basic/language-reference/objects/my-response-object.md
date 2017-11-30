@@ -1,55 +1,37 @@
 ---
-title: "My.Response 对象 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "My.Response 对象"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - My.MyWebExtension.Response
 - My.Response
-dev_langs:
-- VB
-helpviewer_keywords:
-- My.Response object
+helpviewer_keywords: My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2ae9a659bb7575023dfa1847c9d405d0f7d6ac3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76d0e701107add0d5bd468ba7a829759739e0cd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="myresponse-object"></a>My.Response 对象
-获取<xref:System.Web.HttpResponse>与<xref:System.Web.UI.Page>。</xref:System.Web.UI.Page>关联的对象</xref:System.Web.HttpResponse> 此对象可用于将 HTTP 响应数据发送到客户端，并包含有关该响应的信息。  
+# <a name="myresponse-object"></a><span data-ttu-id="1fb2a-102">My.Response 对象</span><span class="sxs-lookup"><span data-stu-id="1fb2a-102">My.Response Object</span></span>
+<span data-ttu-id="1fb2a-103">获取<xref:System.Web.HttpResponse>与关联的对象<xref:System.Web.UI.Page>。</span><span class="sxs-lookup"><span data-stu-id="1fb2a-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="1fb2a-104">使用此对象，可以将 HTTP 响应数据发送到客户端，并包含此响应的相关信息。</span><span class="sxs-lookup"><span data-stu-id="1fb2a-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a>备注  
- `My.Response`对象包含当前<xref:System.Web.HttpResponse>与页关联的对象。</xref:System.Web.HttpResponse>  
+## <a name="remarks"></a><span data-ttu-id="1fb2a-105">备注</span><span class="sxs-lookup"><span data-stu-id="1fb2a-105">Remarks</span></span>  
+ <span data-ttu-id="1fb2a-106">`My.Response`对象包含当前<xref:System.Web.HttpResponse>与页关联的对象。</span><span class="sxs-lookup"><span data-stu-id="1fb2a-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- `My.Response`对象功能仅适用于[!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)]应用程序。  
+ <span data-ttu-id="1fb2a-107">`My.Response`对象功能仅适用于[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="1fb2a-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] applications.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例获取该标头集合`My.Request`对象，并使用`My.Response`要写入到 ASP.NET 页面对象。  
+## <a name="example"></a><span data-ttu-id="1fb2a-108">示例</span><span class="sxs-lookup"><span data-stu-id="1fb2a-108">Example</span></span>  
+ <span data-ttu-id="1fb2a-109">下面的示例获取该标头集合`My.Request`对象，并使用`My.Response`要写入到 ASP.NET 页对象。</span><span class="sxs-lookup"><span data-stu-id="1fb2a-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
- [!code-vb[VbVbalrMyWeb #&1;](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Web.HttpResponse></xref:System.Web.HttpResponse>   
- [My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)
+## <a name="see-also"></a><span data-ttu-id="1fb2a-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1fb2a-110">See Also</span></span>  
+ <xref:System.Web.HttpResponse>  
+ [<span data-ttu-id="1fb2a-111">My.Request 对象</span><span class="sxs-lookup"><span data-stu-id="1fb2a-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)

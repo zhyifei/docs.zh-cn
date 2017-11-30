@@ -1,94 +1,97 @@
 ---
-title: "UI Automation Support for the ScrollBar Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Scroll Bar control type"
-  - "control types, Scroll Bar"
-  - "Scroll Bar control type"
+title: "UI 自动化对 ScrollBar 控件类型的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Scroll Bar control type
+- control types, Scroll Bar
+- Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-caps.latest.revision: 24
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: a445cf23ecae6bbf6f47bf0b502ace8cb73821ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the ScrollBar Control Type
+# <a name="ui-automation-support-for-the-scrollbar-control-type"></a><span data-ttu-id="eddb2-102">UI 自动化对 ScrollBar 控件类型的支持</span><span class="sxs-lookup"><span data-stu-id="eddb2-102">UI Automation Support for the ScrollBar Control Type</span></span>
 > [!NOTE]
->  本文档适用于想要使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="eddb2-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="eddb2-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="eddb2-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="eddb2-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主题提供有关 ScrollBar 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。 这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。  
+ <span data-ttu-id="eddb2-105">本主题提供有关 ScrollBar 控件类型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支持的信息。</span><span class="sxs-lookup"><span data-stu-id="eddb2-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the ScrollBar control type.</span></span> <span data-ttu-id="eddb2-106">在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控件类型是一组条件，控件必须满足这些条件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 属性。</span><span class="sxs-lookup"><span data-stu-id="eddb2-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="eddb2-107">这些条件包括针对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性值和控件模式的特定准则。</span><span class="sxs-lookup"><span data-stu-id="eddb2-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 滚动条控件使用户能够滚动窗口或项容器中的内容。 该控件由一组按钮和一个 thumb 控件组成。  
+ <span data-ttu-id="eddb2-108">滚动条控件使用户能够滚动窗口或项容器中的内容。</span><span class="sxs-lookup"><span data-stu-id="eddb2-108">Scroll bar controls enable a user to scroll content within a window or item container.</span></span> <span data-ttu-id="eddb2-109">该控件由一组按钮和一个 thumb 控件组成。</span><span class="sxs-lookup"><span data-stu-id="eddb2-109">The control is made up of a set of buttons and a thumb control.</span></span>  
   
- 以下几节定义 ScrollBar 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。  
+ <span data-ttu-id="eddb2-110">以下几节定义 ScrollBar 控件类型必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树结构、属性、控件模式和事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-110">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the ScrollBar control type.</span></span> <span data-ttu-id="eddb2-111">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要求适用于所有列表控件，无论控件是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]还是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="eddb2-111">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all list controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 必需的 UI 自动化树结构  
- 下表描述与滚动条控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="eddb2-112">必需的 UI 自动化树结构</span><span class="sxs-lookup"><span data-stu-id="eddb2-112">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="eddb2-113">下表描述与滚动条控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。</span><span class="sxs-lookup"><span data-stu-id="eddb2-113">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to scroll bar controls and describes what can be contained in each view.</span></span> <span data-ttu-id="eddb2-114">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="eddb2-114">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|控件视图|内容视图|  
-|----------|----------|  
-|ScrollBar<br /><br /> -   Button（2 个或 4 个）<br />-   Thumb（0 个或 1 个）|不适用。 滚动条控件不包含内容。|  
+|<span data-ttu-id="eddb2-115">控件视图</span><span class="sxs-lookup"><span data-stu-id="eddb2-115">Control View</span></span>|<span data-ttu-id="eddb2-116">内容视图</span><span class="sxs-lookup"><span data-stu-id="eddb2-116">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="eddb2-117">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="eddb2-117">ScrollBar</span></span><br /><br /> <span data-ttu-id="eddb2-118">-Button （2 个或 4）</span><span class="sxs-lookup"><span data-stu-id="eddb2-118">-   Button (2 or 4)</span></span><br /><span data-ttu-id="eddb2-119">-Thumb （0 个或 1 个）</span><span class="sxs-lookup"><span data-stu-id="eddb2-119">-   Thumb (0 or1)</span></span>|<span data-ttu-id="eddb2-120">不适用。</span><span class="sxs-lookup"><span data-stu-id="eddb2-120">Not applicable.</span></span> <span data-ttu-id="eddb2-121">滚动条控件不包含内容。</span><span class="sxs-lookup"><span data-stu-id="eddb2-121">The scroll bar control does not contain content.</span></span>|  
   
- 滚动条控件始终具有三到五个子级。 由于子树具有多个按钮控件，因此你必须对每个项设置特定 <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> 值以使测试自动化工具可发现它们。  
+ <span data-ttu-id="eddb2-122">滚动条控件始终具有三到五个子级。</span><span class="sxs-lookup"><span data-stu-id="eddb2-122">The scroll bar control always has three to five children.</span></span> <span data-ttu-id="eddb2-123">由于子树具有多个按钮控件，因此你必须对每个项设置特定 <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> 值以使测试自动化工具可发现它们。</span><span class="sxs-lookup"><span data-stu-id="eddb2-123">Because the subtree has more than one button control, you must set a specific <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> value to each item to make them discoverable for test automation tools.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与滚动条控件尤其相关。 请注意滚动条控件永远不会有内容；通过 Scroll 控件模式公开其功能，该控件模式在滚动的容器上受支持。  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="eddb2-124">必需的 UI 自动化属性</span><span class="sxs-lookup"><span data-stu-id="eddb2-124">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="eddb2-125">下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与滚动条控件尤其相关。</span><span class="sxs-lookup"><span data-stu-id="eddb2-125">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to scroll bar controls.</span></span> <span data-ttu-id="eddb2-126">请注意滚动条控件永远不会有内容；通过 Scroll 控件模式公开其功能，该控件模式在滚动的容器上受支持。</span><span class="sxs-lookup"><span data-stu-id="eddb2-126">Note that a scroll bar control never has content; its functionality is exposed through the Scroll control pattern, which is supported on the container being scrolled.</span></span>  
   
- 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
+ <span data-ttu-id="eddb2-127">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="eddb2-127">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|备注|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|`Null`|滚动条控件不具有内容元素，并且不需要设置 `NameProperty`。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|不是数字。|滚动条控件没有可单击的点。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|滚动条没有标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ScrollBar|此值对于所有的框架均相同。 作为滑块的滚动条必须使用 Slider 控件类型。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“滚动条”|与 Button 控件类型相对应的本地化字符串。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|滚动条控件永远不会是内容元素。 如果滚动条是独立控件，则它必须满足 Slider 控件类型，并返回 `ControlType` 属性的 `ControlType.Slider`。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|滚动条必须始终为一个控件。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|True|滚动条控件必须始终公开其水平或垂直方向。|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="eddb2-128"> 属性</span><span class="sxs-lookup"><span data-stu-id="eddb2-128"> Property</span></span>|<span data-ttu-id="eddb2-129">值</span><span class="sxs-lookup"><span data-stu-id="eddb2-129">Value</span></span>|<span data-ttu-id="eddb2-130">备注</span><span class="sxs-lookup"><span data-stu-id="eddb2-130">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="eddb2-131">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="eddb2-131">See notes.</span></span>|<span data-ttu-id="eddb2-132">此属性的值在应用程序的所有控件中都必须保持唯一。</span><span class="sxs-lookup"><span data-stu-id="eddb2-132">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="eddb2-133">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="eddb2-133">See notes.</span></span>|<span data-ttu-id="eddb2-134">包含整个控件的最外层矩形。</span><span class="sxs-lookup"><span data-stu-id="eddb2-134">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="eddb2-135">请参阅注释。</span><span class="sxs-lookup"><span data-stu-id="eddb2-135">See notes.</span></span>|<span data-ttu-id="eddb2-136">如果该控件可以接收键盘焦点，则它必须支持此属性。</span><span class="sxs-lookup"><span data-stu-id="eddb2-136">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|`Null`|<span data-ttu-id="eddb2-137">滚动条控件不具有内容元素，并且不需要设置 `NameProperty` 。</span><span class="sxs-lookup"><span data-stu-id="eddb2-137">The scroll bar control does not have content elements and the `NameProperty` is not required to be set.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="eddb2-138">不是数字。</span><span class="sxs-lookup"><span data-stu-id="eddb2-138">Not a number.</span></span>|<span data-ttu-id="eddb2-139">滚动条控件没有可单击的点。</span><span class="sxs-lookup"><span data-stu-id="eddb2-139">The scroll bar control does not have clickable points.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="eddb2-140">滚动条没有标签。</span><span class="sxs-lookup"><span data-stu-id="eddb2-140">Scroll bars do not have labels.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="eddb2-141">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="eddb2-141">ScrollBar</span></span>|<span data-ttu-id="eddb2-142">此值对于所有的框架均相同。</span><span class="sxs-lookup"><span data-stu-id="eddb2-142">This value is the same for all frameworks.</span></span> <span data-ttu-id="eddb2-143">作为滑块的滚动条必须使用 Slider 控件类型。</span><span class="sxs-lookup"><span data-stu-id="eddb2-143">Scroll bars that function as sliders must use the Slider control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="eddb2-144">“滚动条”</span><span class="sxs-lookup"><span data-stu-id="eddb2-144">"scroll bar"</span></span>|<span data-ttu-id="eddb2-145">与 Button 控件类型相对应的本地化字符串。</span><span class="sxs-lookup"><span data-stu-id="eddb2-145">Localized string that corresponds to the Button control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="eddb2-146">False</span><span class="sxs-lookup"><span data-stu-id="eddb2-146">False</span></span>|<span data-ttu-id="eddb2-147">滚动条控件永远不会是内容元素。</span><span class="sxs-lookup"><span data-stu-id="eddb2-147">The scroll bar control is never a content element.</span></span> <span data-ttu-id="eddb2-148">如果滚动条是独立控件，则它必须满足 Slider 控件类型，并返回 `ControlType.Slider` 属性的 `ControlType` 。</span><span class="sxs-lookup"><span data-stu-id="eddb2-148">If the scroll bar is a standalone control, then it must fulfill the Slider control type and return `ControlType.Slider` for the `ControlType` property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="eddb2-149">True</span><span class="sxs-lookup"><span data-stu-id="eddb2-149">True</span></span>|<span data-ttu-id="eddb2-150">滚动条必须始终为一个控件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-150">The scroll bar must always be a control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|<span data-ttu-id="eddb2-151">True</span><span class="sxs-lookup"><span data-stu-id="eddb2-151">True</span></span>|<span data-ttu-id="eddb2-152">滚动条控件必须始终公开其水平或垂直方向。</span><span class="sxs-lookup"><span data-stu-id="eddb2-152">The scroll bar control must always expose its horizontal or vertical orientation.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 必需的 UI 自动化控件模式  
- 下表列出需要由滚动条控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。 请注意当滚动条仅用作鼠标操作的控件时，它不支持控件模式。 如果它被用作应用程序内的滑块控件，则必须为其提供 Slider 控件类型。  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="eddb2-153">必需的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="eddb2-153">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="eddb2-154">下表列出需要由滚动条控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。</span><span class="sxs-lookup"><span data-stu-id="eddb2-154">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by scroll bar controls.</span></span> <span data-ttu-id="eddb2-155">有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="eddb2-155">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span> <span data-ttu-id="eddb2-156">请注意当滚动条仅用作鼠标操作的控件时，它不支持控件模式。</span><span class="sxs-lookup"><span data-stu-id="eddb2-156">Note that when a scroll bar is used as a control for mouse manipulation only, it does not support control patterns.</span></span> <span data-ttu-id="eddb2-157">如果它被用作应用程序内的滑块控件，则必须为其提供 Slider 控件类型。</span><span class="sxs-lookup"><span data-stu-id="eddb2-157">If it is used as a slider control within an application, it must be given the Slider control type.</span></span>  
   
-|控件模式|支持|备注|  
-|----------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Never|在滚动条上从不直接支持 Scroll 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|视情况而定|仅当在具有滚动条的容器上不支持 Scroll 控件模式时，才需要支持此功能。|  
+|<span data-ttu-id="eddb2-158">控件模式</span><span class="sxs-lookup"><span data-stu-id="eddb2-158">Control Pattern</span></span>|<span data-ttu-id="eddb2-159">支持</span><span class="sxs-lookup"><span data-stu-id="eddb2-159">Support</span></span>|<span data-ttu-id="eddb2-160">备注</span><span class="sxs-lookup"><span data-stu-id="eddb2-160">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|<span data-ttu-id="eddb2-161">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-161">Never</span></span>|<span data-ttu-id="eddb2-162">在滚动条上从不直接支持 Scroll 控件模式。</span><span class="sxs-lookup"><span data-stu-id="eddb2-162">The Scroll control pattern is never directly supported on the scroll bar.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="eddb2-163">视情况而定</span><span class="sxs-lookup"><span data-stu-id="eddb2-163">Depends</span></span>|<span data-ttu-id="eddb2-164">仅当在具有滚动条的容器上不支持 Scroll 控件模式时，才需要支持此功能。</span><span class="sxs-lookup"><span data-stu-id="eddb2-164">This functionality is required to be supported only if the Scroll control pattern is not supported on the container that has the scroll bar.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 必需的 UI 自动化事件  
- 下表列出需要由所有滚动条控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="eddb2-165">必需的 UI 自动化事件</span><span class="sxs-lookup"><span data-stu-id="eddb2-165">Required UI Automation Events</span></span>  
+ <span data-ttu-id="eddb2-166">下表列出需要由所有滚动条控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-166">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all scroll bar controls.</span></span> <span data-ttu-id="eddb2-167">有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="eddb2-167">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持\/值|备注|  
-|------------------------------------------------------------------------------|-----------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 属性更改事件。|Never|无|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 属性更改事件。|视情况而定|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="eddb2-168"> 事件</span><span class="sxs-lookup"><span data-stu-id="eddb2-168"> Event</span></span>|<span data-ttu-id="eddb2-169">支持/值</span><span class="sxs-lookup"><span data-stu-id="eddb2-169">Support/Value</span></span>|<span data-ttu-id="eddb2-170">备注</span><span class="sxs-lookup"><span data-stu-id="eddb2-170">Notes</span></span>|  
+|---------------------------------------------------------------------------------|--------------------|-----------|  
+|<span data-ttu-id="eddb2-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-171"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-172">必需</span><span class="sxs-lookup"><span data-stu-id="eddb2-172">Required</span></span>|<span data-ttu-id="eddb2-173">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-173">None</span></span>|  
+|<span data-ttu-id="eddb2-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-174"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-175">必需</span><span class="sxs-lookup"><span data-stu-id="eddb2-175">Required</span></span>|<span data-ttu-id="eddb2-176">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-176">None</span></span>|  
+|<span data-ttu-id="eddb2-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-177"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-178">必需</span><span class="sxs-lookup"><span data-stu-id="eddb2-178">Required</span></span>|<span data-ttu-id="eddb2-179">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-179">None</span></span>|  
+|<span data-ttu-id="eddb2-180"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-180"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-181">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-181">Never</span></span>|<span data-ttu-id="eddb2-182">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-182">None</span></span>|  
+|<span data-ttu-id="eddb2-183"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-183"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-184">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-184">Never</span></span>|<span data-ttu-id="eddb2-185">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-185">None</span></span>|  
+|<span data-ttu-id="eddb2-186"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-186"><xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-187">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-187">Never</span></span>|<span data-ttu-id="eddb2-188">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-188">None</span></span>|  
+|<span data-ttu-id="eddb2-189"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-189"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-190">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-190">Never</span></span>|<span data-ttu-id="eddb2-191">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-191">None</span></span>|  
+|<span data-ttu-id="eddb2-192"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-192"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-193">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-193">Never</span></span>|<span data-ttu-id="eddb2-194">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-194">None</span></span>|  
+|<span data-ttu-id="eddb2-195"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-195"><xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-196">Never</span><span class="sxs-lookup"><span data-stu-id="eddb2-196">Never</span></span>|<span data-ttu-id="eddb2-197">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-197">None</span></span>|  
+|<span data-ttu-id="eddb2-198"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 属性更改事件。</span><span class="sxs-lookup"><span data-stu-id="eddb2-198"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> property-changed event.</span></span>|<span data-ttu-id="eddb2-199">视情况而定</span><span class="sxs-lookup"><span data-stu-id="eddb2-199">Depends</span></span>|<span data-ttu-id="eddb2-200">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-200">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="eddb2-201">必需</span><span class="sxs-lookup"><span data-stu-id="eddb2-201">Required</span></span>|<span data-ttu-id="eddb2-202">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-202">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="eddb2-203">必需</span><span class="sxs-lookup"><span data-stu-id="eddb2-203">Required</span></span>|<span data-ttu-id="eddb2-204">无</span><span class="sxs-lookup"><span data-stu-id="eddb2-204">None</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Automation.ControlType.ScrollBar>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="eddb2-205">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eddb2-205">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.ScrollBar>  
+ [<span data-ttu-id="eddb2-206">UI 自动化控件类型概述</span><span class="sxs-lookup"><span data-stu-id="eddb2-206">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="eddb2-207">UI 自动化概述</span><span class="sxs-lookup"><span data-stu-id="eddb2-207">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

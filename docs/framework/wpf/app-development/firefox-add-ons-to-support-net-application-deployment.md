@@ -1,46 +1,49 @@
 ---
-title: "支持 .NET 应用程序部署的 Firefox 加载项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET 应用程序部署, 使用 Firefox 加载项部署"
-  - ".NET Framework Assistant for Firefox"
-  - "用于 .NET 应用程序部署的 Firefox 加载项"
-  - "用于 Firefox 的 WPF 插件"
+title: "支持 .NET 应用程序部署的 Firefox 加载项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Firefox add-ons for .NET application deployment
+- WPF plug-in for Firefox
+- .NET application deployment [WPF], deploying with Firefox add-ons
+- .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f16fc118ccfef6cfcb9ab0dc1356cb0c732ae229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 支持 .NET 应用程序部署的 Firefox 加载项
-用于 Firefox 的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 插件和用于 Firefox 的 .NET Framework Assistant 使 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、宽松 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及 ClickOnce 应用程序可以与 Mozilla Firefox 浏览器一起使用。  
+# <a name="firefox-add-ons-to-support-net-application-deployment"></a><span data-ttu-id="bf02f-102">支持 .NET 应用程序部署的 Firefox 加载项</span><span class="sxs-lookup"><span data-stu-id="bf02f-102">Firefox Add-ons to Support .NET Application Deployment</span></span>
+<span data-ttu-id="bf02f-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]插件 Firefox 和.NET Framework 适用于助手 Firefox 启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序来处理 Mozilla Firefox 浏览器。</span><span class="sxs-lookup"><span data-stu-id="bf02f-103">The [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] plug-in for Firefox and the .NET Framework Assistant for Firefox enable [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], and ClickOnce applications to work with the Mozilla Firefox browser.</span></span>  
   
-## 用于 Firefox 的 WPF 插件  
- 用于 Firefox 的 WPF 插件使 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和宽松 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件可以在 Firefox 浏览器中的顶层或 HTML IFRAME 中进行导航和运行。  [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 是可发布到 Web 服务器并在支持的浏览器中启动的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序。  宽松 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 是可以在支持的浏览器中进行导航和显示的仅使用 XAML 的文件，与 XML 文件非常相似。  
+## <a name="wpf-plug-in-for-firefox"></a><span data-ttu-id="bf02f-104">WPF Firefox 插件</span><span class="sxs-lookup"><span data-stu-id="bf02f-104">WPF Plug-in for Firefox</span></span>  
+ <span data-ttu-id="bf02f-105">Firefox 插件 WPF 使[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]要导航到并在顶级或 Firefox 浏览器中 HTML IFRAME 运行文件。</span><span class="sxs-lookup"><span data-stu-id="bf02f-105">The WPF plug-in for Firefox enables [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] and loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files to be navigated to and run at the top-level or in an HTML IFRAME in the Firefox browser.</span></span> <span data-ttu-id="bf02f-106">[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可发布到 Web 服务器和中启动应用程序支持的浏览器。</span><span class="sxs-lookup"><span data-stu-id="bf02f-106">An [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application that can be published to a Web server and launched within supported browsers.</span></span> <span data-ttu-id="bf02f-107">松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是一个仅 XAML 文件，可以导航到并显示在支持的浏览器，类似于 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="bf02f-107">Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is a XAML-only file that can be navigated to and displayed in supported browsers, much like an XML file.</span></span>  
   
- 用于 Firefox 的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 插件随 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 一起安装。  Window 7 包含 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，但不包含用于 Firefox 的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 插件。不能在 Window 7 上安装用于 Firefox 的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 插件。  
+ <span data-ttu-id="bf02f-108">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]插件安装适用于 Firefox 的与[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bf02f-108">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox is installed with the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span></span> <span data-ttu-id="bf02f-109">窗口 7 包括[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，但不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 插件。</span><span class="sxs-lookup"><span data-stu-id="bf02f-109">Window 7 includes the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], but does not include the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox.</span></span> <span data-ttu-id="bf02f-110">无法安装[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]在 Windows 7 上 Firefox 插件。</span><span class="sxs-lookup"><span data-stu-id="bf02f-110">You cannot install the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox on Windows 7.</span></span>  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 不包含用于 Firefox 的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 插件。不过，如果安装了 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]，则用于 Firefox 的 WPF 插件会随 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 一起安装。  因此，[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 应用程序仍将运行，因为 WPF 主机将加载正确版本的 Framework。  有关更多信息，请参见 [WPF 主机 \(PresentationHost.exe\)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)。  
+ <span data-ttu-id="bf02f-111">[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 插件。</span><span class="sxs-lookup"><span data-stu-id="bf02f-111">The [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] does not include the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox.</span></span> <span data-ttu-id="bf02f-112">但是，如果这两个[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]和[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]是安装，使用安装插件 Firefox WPF [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bf02f-112">However, if both the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] and [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] are installed, the WPF plug-in for Firefox is installed with the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span></span> <span data-ttu-id="bf02f-113">因此[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]因为 WPF 主机将始终加载框架的正确版本，仍将运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="bf02f-113">Therefore [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] applications will still run because the WPF Host will load the correct version of the framework.</span></span> <span data-ttu-id="bf02f-114">有关详细信息，请参阅[WPF 主机 (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="bf02f-114">For more information, see [WPF Host (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md).</span></span>  
   
-## 用于 Firefox 的 .NET Framework Assistant  
- 用于 Firefox 的 .NET Framework Assistant 使独立 ClickOnce 应用程序可以在 Firefox 浏览器运行。  用于 Firefox 的 .NET Framework Assistant 在 Firefox 浏览器之前和之后安装时的功能是相同的。  Firefox 浏览器启动并且 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 已安装时，Firefox 会查找并安装用于 Firefox 的 .NET Framework Assistant。  用户可以配置用于 Firefox 的 .NET Framework Assistant 以执行以下任务：  
+## <a name="net-framework-assistant-for-firefox"></a><span data-ttu-id="bf02f-115">.NET Framework Assistant for Firefox</span><span class="sxs-lookup"><span data-stu-id="bf02f-115">.NET Framework Assistant for Firefox</span></span>  
+ <span data-ttu-id="bf02f-116">.NET Framework 适用于助手 Firefox 允许独立 ClickOnce 应用程序从 Firefox 浏览器运行。</span><span class="sxs-lookup"><span data-stu-id="bf02f-116">The .NET Framework Assistant for Firefox enables stand-alone ClickOnce applications to run from the Firefox browser.</span></span> <span data-ttu-id="bf02f-117">.NET Framework 助手 Firefox 函数的相同安装之前和之后 Firefox 浏览器。</span><span class="sxs-lookup"><span data-stu-id="bf02f-117">The .NET Framework Assistant for Firefox functions identically when it is installed before and after the Firefox browser.</span></span> <span data-ttu-id="bf02f-118">Firefox 浏览器启动时和[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]是 Firefox 安装，查找并安装.NET Framework 助手 Firefox。</span><span class="sxs-lookup"><span data-stu-id="bf02f-118">When the Firefox browser is launched and the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] is installed, Firefox finds and installs the .NET Framework Assistant for Firefox.</span></span> <span data-ttu-id="bf02f-119">用户可以配置.NET Framework 适用于助手 Firefox 以执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="bf02f-119">Users can configure the .NET Framework Assistant for Firefox to do the following:</span></span>  
   
--   在运行 ClickOnce 应用程序前进行提示。  
+-   <span data-ttu-id="bf02f-120">运行 ClickOnce 应用程序之前进行提示。</span><span class="sxs-lookup"><span data-stu-id="bf02f-120">Prompt before running the ClickOnce application.</span></span>  
   
--   报告所有已安装的 .NET Framework 版本或仅报告最新版本。  
+-   <span data-ttu-id="bf02f-121">报告所有已安装的版本的.NET Framework 或只需最新版本。</span><span class="sxs-lookup"><span data-stu-id="bf02f-121">Report all installed versions of the .NET Framework or just the latest version.</span></span>  
   
- 用于 Firefox 的 .NET Framework Assistant 随 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 一起提供。  有关如何移除用于 Firefox 的 .NET Framework Assistant 的信息，请参见 [How to remove the .NET Framework Assistant for Firefox](http://go.microsoft.com/fwlink/?LinkId=177944)（如何移除用于 Firefox 的 .NET Framework Assistant）。  
+ <span data-ttu-id="bf02f-122">.NET Framework 助手对于 Firefox 是附带[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="bf02f-122">The .NET Framework Assistant for Firefox is included with the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="bf02f-123">有关为 Firefox 删除.NET Framework 助手的信息，请参阅[如何删除.NET Framework 助手 Firefox](http://go.microsoft.com/fwlink/?LinkId=177944)。</span><span class="sxs-lookup"><span data-stu-id="bf02f-123">For information about removing the .NET Framework Assistant for Firefox, see [How to remove the .NET Framework Assistant for Firefox](http://go.microsoft.com/fwlink/?LinkId=177944).</span></span>  
   
-## 请参阅  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)   
- [WPF XAML 浏览器应用程序概述](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)   
- [检测是否已安装 Firefox 的 WPF 插件](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a><span data-ttu-id="bf02f-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bf02f-124">See Also</span></span>  
+ [<span data-ttu-id="bf02f-125">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bf02f-125">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ <span data-ttu-id="bf02f-126">[WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）</span><span class="sxs-lookup"><span data-stu-id="bf02f-126">[WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)</span></span>  
+ [<span data-ttu-id="bf02f-127">检测是否安装了适用于 Firefox 的 WPF 插件</span><span class="sxs-lookup"><span data-stu-id="bf02f-127">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

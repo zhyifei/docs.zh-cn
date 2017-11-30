@@ -1,70 +1,73 @@
 ---
-title: "特权提升 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "特权提升 [WCF]"
-  - "安全 [WCF], 特权提升"
+title: "特权提升"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- elevation of privilege [WCF]
+- security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce245335fecd0f8735759135989bcd49ca6bf18b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 特权提升
-“特权提升”是由于为攻击者提供的授权权限超出了最初授予的权限而导致的。例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
+# <a name="elevation-of-privilege"></a><span data-ttu-id="da981-102">特权提升</span><span class="sxs-lookup"><span data-stu-id="da981-102">Elevation of Privilege</span></span>
+<span data-ttu-id="da981-103">*特权提升*源于使攻击者授权权限超出最初授予的权限。</span><span class="sxs-lookup"><span data-stu-id="da981-103">*Elevation of privilege* results from giving an attacker authorization permissions beyond those initially granted.</span></span> <span data-ttu-id="da981-104">例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。</span><span class="sxs-lookup"><span data-stu-id="da981-104">For example, an attacker with a privilege set of "read only" permissions somehow elevates the set to include "read and write."</span></span>  
   
-## 受信任的 STS 应该为 SAML 令牌声明签名  
- 安全断言标记语言 \(SAML\) 令牌是作为已颁发令牌默认类型的通用 XML 令牌。SAML 令牌可以由最终 Web 服务在典型交换中信任的安全令牌服务 \(STS\) 构造。SAML 令牌包含语句中的声明。攻击者可能从有效令牌复制声明，创建新的 SAML 令牌，并以其他颁发者身份为其签名。其意图在于确定服务器是否将验证颁发者，如果不验证，则利用这一漏洞构造 SAML 令牌，这些令牌允许超过受信任 STS 所预期特权的特权。  
+## <a name="trusted-sts-should-sign-saml-token-claims"></a><span data-ttu-id="da981-105">受信任的 STS 应该为 SAML 令牌声明签名</span><span class="sxs-lookup"><span data-stu-id="da981-105">Trusted STS Should Sign SAML Token Claims</span></span>  
+ <span data-ttu-id="da981-106">安全断言标记语言 (SAML) 令牌是作为已颁发令牌默认类型的通用 XML 令牌。</span><span class="sxs-lookup"><span data-stu-id="da981-106">A Security Assertions Markup Language (SAML) token is a generic XML token that is the default type for issued tokens.</span></span> <span data-ttu-id="da981-107">SAML 令牌可以由最终 Web 服务在典型交换中信任的安全令牌服务 (STS) 构造。</span><span class="sxs-lookup"><span data-stu-id="da981-107">A SAML token can be constructed by a Security Token Service (STS) that the end Web service trusts in a typical exchange.</span></span> <span data-ttu-id="da981-108">SAML 令牌包含语句中的声明。</span><span class="sxs-lookup"><span data-stu-id="da981-108">SAML tokens contain claims in statements.</span></span> <span data-ttu-id="da981-109">攻击者可能从有效令牌复制声明，创建新的 SAML 令牌，并以其他颁发者身份为其签名。</span><span class="sxs-lookup"><span data-stu-id="da981-109">An attacker may copy the claims from a valid token, create a new SAML token, and sign it with a different issuer.</span></span> <span data-ttu-id="da981-110">其意图在于确定服务器是否将验证颁发者，如果不验证，则利用这一漏洞构造 SAML 令牌，这些令牌允许超过受信任 STS 所预期特权的特权。</span><span class="sxs-lookup"><span data-stu-id="da981-110">The intent is to determine whether the server is validating issuers and, if not, utilize the weakness to construct SAML tokens that allow privileges beyond those intended by a trusted STS.</span></span>  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> 类验证 SAML 令牌中包含的数字签名，默认 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 要求由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 时有效的 X.509 证书为 SAML 令牌签名。`ChainTrust` 模式本身不足以确定是否信任 SAML 令牌的颁发者。需要更为细化的信任模型的服务可以使用授权和强制策略检查由已颁发令牌身份验证生成的声明集的颁发者，或者使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 验证设置限制允许的签名证书集。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) 和 [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+ <span data-ttu-id="da981-111"><xref:System.IdentityModel.Tokens.SamlAssertion> 类验证 SAML 令牌中包含的数字签名，默认 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 要求由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 时有效的 X.509 证书为 SAML 令牌签名。</span><span class="sxs-lookup"><span data-stu-id="da981-111">The <xref:System.IdentityModel.Tokens.SamlAssertion> class verifies the digital signature contained within a SAML token, and the default <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> requires that SAML tokens be signed by an X.509 certificate that is valid when the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> of the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> class is set to <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>.</span></span> <span data-ttu-id="da981-112">`ChainTrust` 模式本身不足以确定是否信任 SAML 令牌的颁发者。</span><span class="sxs-lookup"><span data-stu-id="da981-112">`ChainTrust` mode alone is insufficient to determine whether the issuer of the SAML token is trusted.</span></span> <span data-ttu-id="da981-113">需要更为细化的信任模型的服务可以使用授权和强制策略检查由已颁发令牌身份验证生成的声明集的颁发者，或者使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 验证设置限制允许的签名证书集。</span><span class="sxs-lookup"><span data-stu-id="da981-113">Services that require a more granular trust model can either use authorization and enforcement policies to check the issuer of the claim sets produced by issued token authentication or use the X.509 validation settings on <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> to restrict the set of allowed signing certificates.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="da981-114">[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)和[联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。</span><span class="sxs-lookup"><span data-stu-id="da981-114"> [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) and [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
   
-## 在没有安全上下文的情况下切换标识  
- 以下内容仅适用于 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
+## <a name="switching-identity-without-a-security-context"></a><span data-ttu-id="da981-115">在没有安全上下文的情况下切换标识</span><span class="sxs-lookup"><span data-stu-id="da981-115">Switching Identity Without a Security Context</span></span>  
+ <span data-ttu-id="da981-116">以下内容仅适用于 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="da981-116">The following applies only to [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].</span></span>  
   
- 在客户端和服务器之间建立一个连接时，如果满足以下所有条件，则客户端的标识不发生更改（一种情况除外：打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后）：  
+ <span data-ttu-id="da981-117">在客户端和服务器之间建立一个连接时，如果满足以下所有条件，则客户端的标识不发生更改（一种情况除外：打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后）：</span><span class="sxs-lookup"><span data-stu-id="da981-117">When a connection is established between a client and server, the identity of the client does not change, except in one situation: after the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client is opened, if all of the following conditions are true:</span></span>  
   
--   停止建立安全上下文（使用传输安全会话或消息安全会话）的过程（如果在传输安全情况下使用无法建立安全会话的消息安全或传输，则将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。HTTPS 就是此类传输的一个示例）。  
+-   <span data-ttu-id="da981-118">若要建立安全上下文 （使用传输安全会话或消息安全会话） 的过程被禁用 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>属性设置为`false`在消息安全或传输不能建立安全的情况下在传输安全情况下使用会话。</span><span class="sxs-lookup"><span data-stu-id="da981-118">The procedures to establish a security context (using a transport security session or message security session) is switched off (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> property is set to `false` in case of message security or transport not capable of establishing security sessions is used in transport security case.</span></span> <span data-ttu-id="da981-119">HTTPS 就是此类传输的一个示例）。</span><span class="sxs-lookup"><span data-stu-id="da981-119">HTTPS is one example of such transport).</span></span>  
   
--   正在使用 Windows 身份验证。  
+-   <span data-ttu-id="da981-120">正在使用 Windows 身份验证。</span><span class="sxs-lookup"><span data-stu-id="da981-120">You are using Windows authentication.</span></span>  
   
--   未显式设置凭据。  
+-   <span data-ttu-id="da981-121">未显式设置凭据。</span><span class="sxs-lookup"><span data-stu-id="da981-121">You do not explicitly set the credential.</span></span>  
   
--   正在模拟安全上下文下调用服务。  
+-   <span data-ttu-id="da981-122">正在模拟安全上下文下调用服务。</span><span class="sxs-lookup"><span data-stu-id="da981-122">You are calling the service under the impersonated security context.</span></span>  
   
- 如果满足这些条件，则在打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，用于向服务验证客户端身份的标识可能更改（它可能不是模拟标识，而是进程标识）。之所以出现此情况，是因为用于向服务验证客户端身份的 Windows 凭据是随每条消息传输的，而且用于身份验证的凭据是从当前线程的 Windows 标识获取的。如果当前线程的 Windows 标识发生更改（例如，通过模拟其他调用方），则附加到消息、用于向服务验证客户端身份的凭据可能也发生更改。  
+ <span data-ttu-id="da981-123">如果满足这些条件，则在打开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，用于向服务验证客户端身份的标识可能更改（它可能不是模拟标识，而是进程标识）。</span><span class="sxs-lookup"><span data-stu-id="da981-123">If these conditions are true, the identity used to authenticate the client to the service might change (it might not be the impersonated identity but the process identity instead) after the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client is opened.</span></span> <span data-ttu-id="da981-124">之所以出现此情况，是因为用于向服务验证客户端身份的 Windows 凭据是随每条消息传输的，而且用于身份验证的凭据是从当前线程的 Windows 标识获取的。</span><span class="sxs-lookup"><span data-stu-id="da981-124">This occurs because the Windows credential used to authenticate the client to the service is transmitted with every message, and the credential used for authentication is obtained from the current thread's Windows identity.</span></span> <span data-ttu-id="da981-125">如果当前线程的 Windows 标识发生更改（例如，通过模拟其他调用方），则附加到消息、用于向服务验证客户端身份的凭据可能也发生更改。</span><span class="sxs-lookup"><span data-stu-id="da981-125">If the Windows identity of the current thread changes (for example, by impersonating a different caller), the credential that is attached to the message and used to authenticate the client to the service might also change.</span></span>  
   
- 如果要在将 Windows 身份验证与模拟一起使用时具有确定性行为，则需要显式设置 Windows 凭据或需要使用该服务建立安全上下文。为此，请使用消息安全会话或传输安全会话。例如，net.tcp 传输可以提供传输安全会话。此外，在调用服务时，必须仅使用客户端操作的同步版本。如果建立消息安全上下文，则与服务的连接的打开时间不应长于所配置的会话续订期限，因为在会话续订过程中标识也可能更改。  
+ <span data-ttu-id="da981-126">如果要在将 Windows 身份验证与模拟一起使用时具有确定性行为，则需要显式设置 Windows 凭据或需要使用该服务建立安全上下文。</span><span class="sxs-lookup"><span data-stu-id="da981-126">If you want to have deterministic behavior when using Windows authentication together with impersonation you need to explicitly set the Windows credential or you need to establish a security context with the service.</span></span> <span data-ttu-id="da981-127">为此，请使用消息安全会话或传输安全会话。</span><span class="sxs-lookup"><span data-stu-id="da981-127">To do this, use a message security session or a transport security session.</span></span> <span data-ttu-id="da981-128">例如，net.tcp 传输可以提供传输安全会话。</span><span class="sxs-lookup"><span data-stu-id="da981-128">For example, the net.tcp transport can provide a transport security session.</span></span> <span data-ttu-id="da981-129">此外，在调用服务时，必须仅使用客户端操作的同步版本。</span><span class="sxs-lookup"><span data-stu-id="da981-129">Additionally, you must use only a synchronous version of client operations when calling the service.</span></span> <span data-ttu-id="da981-130">如果建立消息安全上下文，则与服务的连接的打开时间不应长于所配置的会话续订期限，因为在会话续订过程中标识也可能更改。</span><span class="sxs-lookup"><span data-stu-id="da981-130">If you establish a message security context, you should not keep the connection to the service open longer than the configured session renewal period, because the identity can also change during the session renewal process.</span></span>  
   
-### 凭据捕获  
- 以下内容适用于 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 和后续版本。  
+### <a name="credentials-capture"></a><span data-ttu-id="da981-131">凭据捕获</span><span class="sxs-lookup"><span data-stu-id="da981-131">Credentials Capture</span></span>  
+ <span data-ttu-id="da981-132">以下内容适用于 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 和后续版本。</span><span class="sxs-lookup"><span data-stu-id="da981-132">The following applies to [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], and subsequent versions.</span></span>  
   
- 客户端或服务所用的凭据基于当前上下文线程。凭据是在调用客户端或服务的 `Open` 方法（对于异步调用，则为 `BeginOpen`）时获取的。对于 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ClientBase%601> 这两个类，`Open` 和 `BeginOpen` 方法继承自 <xref:System.ServiceModel.Channels.CommunicationObject> 类的 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 和 <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> 方法。  
+ <span data-ttu-id="da981-133">客户端或服务所用的凭据基于当前上下文线程。</span><span class="sxs-lookup"><span data-stu-id="da981-133">Credentials used by the client or the service are based on the current context thread.</span></span> <span data-ttu-id="da981-134">凭据是在调用客户端或服务的 `Open` 方法（对于异步调用，则为 `BeginOpen`）时获取的。</span><span class="sxs-lookup"><span data-stu-id="da981-134">The credentials are obtained when the `Open` method (or `BeginOpen`, for asynchronous calls) of the client or service is called.</span></span> <span data-ttu-id="da981-135">对于 <xref:System.ServiceModel.ServiceHost> 和 <xref:System.ServiceModel.ClientBase%601> 这两个类，`Open` 和 `BeginOpen` 方法继承自 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 类的 <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> 和 <xref:System.ServiceModel.Channels.CommunicationObject> 方法。</span><span class="sxs-lookup"><span data-stu-id="da981-135">For both the <xref:System.ServiceModel.ServiceHost> and <xref:System.ServiceModel.ClientBase%601> classes, the `Open` and `BeginOpen` methods inherit from the <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> and <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> methods of the <xref:System.ServiceModel.Channels.CommunicationObject> class.</span></span>  
   
 > [!NOTE]
->  在使用 `BeginOpen` 方法时，无法保证所捕获的凭据是调用该方法的进程的凭据。  
+>  <span data-ttu-id="da981-136">在使用 `BeginOpen` 方法时，无法保证所捕获的凭据是调用该方法的进程的凭据。</span><span class="sxs-lookup"><span data-stu-id="da981-136">When using the `BeginOpen` method, the credentials captured cannot be guaranteed to be the credentials of the process that calls the method.</span></span>  
   
-## 令牌缓存允许使用过时数据的重放  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用本地安全机构 \(LSA\) `LogonUser` 函数，按用户名和密码验证用户身份。由于该登录函数是开销很大的操作，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您缓存表示经过身份验证的用户的令牌，以提高性能。该缓存机制保存来自 `LogonUser` 的结果，以备将来之用。默认情况下禁用该机制；若要启用它，请将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> 属性设置为 `true`，或使用 [\<userNameAuthentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)的 `cacheLogonTokens` 属性。  
+## <a name="token-caches-allow-replay-using-obsolete-data"></a><span data-ttu-id="da981-137">令牌缓存允许使用过时数据的重放</span><span class="sxs-lookup"><span data-stu-id="da981-137">Token Caches Allow Replay Using Obsolete Data</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="da981-138"> 使用本地安全机构 (LSA) `LogonUser` 函数，按用户名和密码验证用户身份。</span><span class="sxs-lookup"><span data-stu-id="da981-138"> uses the local security authority (LSA) `LogonUser` function to authenticate users by user name and password.</span></span> <span data-ttu-id="da981-139">由于该登录函数是开销很大的操作，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许您缓存表示经过身份验证的用户的令牌，以提高性能。</span><span class="sxs-lookup"><span data-stu-id="da981-139">Because the logon function is a costly operation, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] allows you to cache tokens that represent authenticated users to increase performance.</span></span> <span data-ttu-id="da981-140">该缓存机制保存来自 `LogonUser` 的结果，以备将来之用。</span><span class="sxs-lookup"><span data-stu-id="da981-140">The caching mechanism saves the results from `LogonUser` for subsequent uses.</span></span> <span data-ttu-id="da981-141">默认情况下; 禁用此机制若要启用它，将设置<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>属性`true`，或使用`cacheLogonTokens`属性[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)。</span><span class="sxs-lookup"><span data-stu-id="da981-141">This mechanism is disabled by default; to enable it, set the <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> property to `true`, or use the `cacheLogonTokens` attribute of the [\<userNameAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).</span></span>  
   
- 可以为已缓存的令牌设置生存时间 \(TTL\)，方法是将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 属性设置为 <xref:System.TimeSpan> 或使用 `userNameAuthentication` 元素的 `cachedLogonTokenLifetime` 属性；默认值为 15 分钟。请注意，令牌缓存后，提供相同的用户名和密码的任何客户端便可以使用该令牌，即使用户帐户已从 Windows 中删除或其密码已更改，也是如此。在 TTL 过期且从缓存中删除令牌之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许（可能有恶意的）用户进行身份验证。  
+ <span data-ttu-id="da981-142">可以为已缓存的令牌设置生存时间 (TTL)，方法是将 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 属性设置为 <xref:System.TimeSpan> 或使用 `cachedLogonTokenLifetime` 元素的 `userNameAuthentication` 属性；默认值为 15 分钟。</span><span class="sxs-lookup"><span data-stu-id="da981-142">You can set a Time to Live (TTL) for the cached tokens by setting the <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> property to a <xref:System.TimeSpan>, or use the `cachedLogonTokenLifetime` attribute of the `userNameAuthentication` element; the default is 15 minutes.</span></span> <span data-ttu-id="da981-143">请注意，令牌缓存后，提供相同的用户名和密码的任何客户端便可以使用该令牌，即使用户帐户已从 Windows 中删除或其密码已更改，也是如此。</span><span class="sxs-lookup"><span data-stu-id="da981-143">Note that while a token is cached, any client that presents the same user name and password can use the token, even if the user account is deleted from Windows or if its password has been changed.</span></span> <span data-ttu-id="da981-144">在 TTL 过期且从缓存中删除令牌之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允许（可能有恶意的）用户进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="da981-144">Until the TTL expires and the token is removed from the cache, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] allows the (possibly malicious) user to authenticate.</span></span>  
   
- 缓解此问题：通过将 `cachedLogonTokenLifetime` 值设置为用户所需的最短时间间隔，减小攻击时限。  
+ <span data-ttu-id="da981-145">缓解此问题：通过将 `cachedLogonTokenLifetime` 值设置为用户所需的最短时间间隔，减小攻击时限。</span><span class="sxs-lookup"><span data-stu-id="da981-145">To mitigate this: Decrease the attack window by setting the `cachedLogonTokenLifetime` value to the shortest time span your users need.</span></span>  
   
-## 已颁发令牌的授权：将到期时间重置为较大的值  
- 在某些情况下，会将 <xref:System.IdentityModel.Policy.AuthorizationContext> 的 <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> 属性的值设置得特别大（<xref:System.DateTime.MaxValue> 字段值减去一天，或 9999 年 12 月 20 日）。  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a><span data-ttu-id="da981-146">已颁发令牌的授权：将到期时间重置为较大的值</span><span class="sxs-lookup"><span data-stu-id="da981-146">Issued Token Authorization: Expiration Reset to Large Value</span></span>  
+ <span data-ttu-id="da981-147">在某些情况下，会将 <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 属性的值设置得特别大（<xref:System.DateTime.MaxValue> 字段值减去一天，或 9999 年 12 月 20 日）。</span><span class="sxs-lookup"><span data-stu-id="da981-147">Under certain conditions, the <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> property of the <xref:System.IdentityModel.Policy.AuthorizationContext> may be set to an unexpectedly larger value (the <xref:System.DateTime.MaxValue> field value minus one day, or December 20, 9999).</span></span>  
   
- 使用将已颁发的令牌作为客户端凭据类型的 <xref:System.ServiceModel.WSFederationHttpBinding> 和系统提供的任一绑定时，会出现此情况。  
+ <span data-ttu-id="da981-148">使用将已颁发的令牌作为客户端凭据类型的 <xref:System.ServiceModel.WSFederationHttpBinding> 和系统提供的任一绑定时，会出现此情况。</span><span class="sxs-lookup"><span data-stu-id="da981-148">This occurs when using the <xref:System.ServiceModel.WSFederationHttpBinding> and any of the system-provided bindings that have an issued token as the client credential type.</span></span>  
   
- 通过使用以下方法之一创建自定义绑定时，也会出现此情况：  
+ <span data-ttu-id="da981-149">通过使用以下方法之一创建自定义绑定时，也会出现此情况：</span><span class="sxs-lookup"><span data-stu-id="da981-149">This also occurs when you create custom bindings by using one of the following methods:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
@@ -74,25 +77,25 @@ caps.handback.revision: 16
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
- 若要缓解此问题，授权策略必须检查每个授权策略的操作和过期时间。  
+ <span data-ttu-id="da981-150">若要缓解此问题，授权策略必须检查每个授权策略的操作和过期时间。</span><span class="sxs-lookup"><span data-stu-id="da981-150">To mitigate this, the authorization policy must check the action and the expiration time of each authorization policy.</span></span>  
   
-## 服务使用非客户端预期证书  
- 在某些情况下，客户端可以使用 X.509 证书对消息进行数字签名，并使服务检索与预期不同的证书。  
+## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a><span data-ttu-id="da981-151">服务使用非客户端预期证书</span><span class="sxs-lookup"><span data-stu-id="da981-151">The Service Uses a Different Certificate Than the Client Intended</span></span>  
+ <span data-ttu-id="da981-152">在某些情况下，客户端可以使用 X.509 证书对消息进行数字签名，并使服务检索与预期不同的证书。</span><span class="sxs-lookup"><span data-stu-id="da981-152">Under certain conditions, a client can digitally sign a message with an X.509 certificate and have the service retrieve a different certificate than the intended one.</span></span>  
   
- 这可能发生在以下情况下：  
+ <span data-ttu-id="da981-153">这可能发生在以下情况下：</span><span class="sxs-lookup"><span data-stu-id="da981-153">This can occur under the following circumstances:</span></span>  
   
--   客户端使用 X.509 证书对消息进行数字签名，但是不将 X.509 证书附加到消息，而是仅使用证书的主题密钥标识符来引用它。  
+-   <span data-ttu-id="da981-154">客户端使用 X.509 证书对消息进行数字签名，但是不将 X.509 证书附加到消息，而是仅使用证书的主题密钥标识符来引用它。</span><span class="sxs-lookup"><span data-stu-id="da981-154">The client digitally signs a message using an X.509 certificate and does not attach the X.509 certificate to the message, but rather just references the certificate using its subject key identifier.</span></span>  
   
--   服务的计算机包含具有相同公钥的两个或多个证书，但是这些证书包含不同的信息。  
+-   <span data-ttu-id="da981-155">服务的计算机包含具有相同公钥的两个或多个证书，但是这些证书包含不同的信息。</span><span class="sxs-lookup"><span data-stu-id="da981-155">The service's computer contains two or more certificates with the same public key, but they contain different information.</span></span>  
   
--   服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 收到消息和验证签名时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将非预期 X.509 证书中的信息映射到与客户端预期的不同且有可能从其提升的一组声明。  
+-   <span data-ttu-id="da981-156">服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。</span><span class="sxs-lookup"><span data-stu-id="da981-156">The service retrieves a certificate that matches the subject key identifier, but it is not the one the client intended to use.</span></span> <span data-ttu-id="da981-157">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 收到消息和验证签名时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将非预期 X.509 证书中的信息映射到与客户端预期的不同且有可能从其提升的一组声明。</span><span class="sxs-lookup"><span data-stu-id="da981-157">When [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] receives the message and verifies the signature, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] maps the information in the unintended X.509 certificate to a set of claims that are different and potentially elevated from what the client expected.</span></span>  
   
- 若要缓解此问题，请以其他方式引用 X.509 证书，如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType>。  
+ <span data-ttu-id="da981-158">若要缓解此问题，请以其他方式引用 X.509 证书，如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。</span><span class="sxs-lookup"><span data-stu-id="da981-158">To mitigate this, reference the X.509 certificate another way, such as using <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.</span></span>  
   
-## 请参阅  
- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)   
- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)   
- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)   
- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)   
- [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a><span data-ttu-id="da981-159">另请参阅</span><span class="sxs-lookup"><span data-stu-id="da981-159">See Also</span></span>  
+ [<span data-ttu-id="da981-160">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="da981-160">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="da981-161">信息泄露</span><span class="sxs-lookup"><span data-stu-id="da981-161">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [<span data-ttu-id="da981-162">拒绝服务</span><span class="sxs-lookup"><span data-stu-id="da981-162">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [<span data-ttu-id="da981-163">重播攻击</span><span class="sxs-lookup"><span data-stu-id="da981-163">Replay Attacks</span></span>](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [<span data-ttu-id="da981-164">被篡改</span><span class="sxs-lookup"><span data-stu-id="da981-164">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [<span data-ttu-id="da981-165">不支持的方案</span><span class="sxs-lookup"><span data-stu-id="da981-165">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

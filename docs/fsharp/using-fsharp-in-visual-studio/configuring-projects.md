@@ -1,0 +1,48 @@
+---
+title: "配置项目 （F #）"
+description: "了解如何使用项目设计器，当您使用 Visual Studio 中的 F # 项目时。"
+keywords: "visual f#, f#, 函数编程"
+author: cartermp
+ms.author: phcart
+ms.date: 05/16/2016
+ms.topic: language-reference
+ms.prod: .net
+ms.technology: devlang-fsharp
+ms.devlang: fsharp
+ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
+ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
+---
+# <a name="configuring-projects-in-visual-studio"></a><span data-ttu-id="d00ca-104">在 Visual Studio 中配置项目</span><span class="sxs-lookup"><span data-stu-id="d00ca-104">Configuring Projects in Visual Studio</span></span>
+
+> [!NOTE]
+<span data-ttu-id="d00ca-105">本文不是最新的 Visual Studio 最新的。</span><span class="sxs-lookup"><span data-stu-id="d00ca-105">This article is not up to date with the latest Visual Studio.</span></span>  <span data-ttu-id="d00ca-106">它将会更新。</span><span class="sxs-lookup"><span data-stu-id="d00ca-106">It will be updated.</span></span>
+
+<span data-ttu-id="d00ca-107">本主题包含有关如何使用信息**项目设计器**F # 项目中处理时。</span><span class="sxs-lookup"><span data-stu-id="d00ca-107">This topic includes information about how to use the **Project Designer** when you work with F# projects.</span></span> <span data-ttu-id="d00ca-108">使用 F # 项目不明显不同于使用 Visual Basic 或 C# 项目。</span><span class="sxs-lookup"><span data-stu-id="d00ca-108">Working with F# projects is not significantly different from working with Visual Basic or C# projects.</span></span> <span data-ttu-id="d00ca-109">当你使用 F # 时，通常可以作为主引用使用常规的 Visual Studio 项目文档。</span><span class="sxs-lookup"><span data-stu-id="d00ca-109">You can often use the general Visual Studio project documentation as your primary reference when you use F#.</span></span> <span data-ttu-id="d00ca-110">本主题提供有关与其他 Visual Studio 语言，共享的设置的 Visual Studio 文档中的相关信息的链接，并还描述了特定于 F # 设置。</span><span class="sxs-lookup"><span data-stu-id="d00ca-110">This topic provides links to relevant information in the Visual Studio documentation for settings that are shared with the other Visual Studio languages, and also describes the settings specific to F#.</span></span>
+
+## <a name="project-designer"></a><span data-ttu-id="d00ca-111">项目设计器</span><span class="sxs-lookup"><span data-stu-id="d00ca-111">Project Designer</span></span>
+<span data-ttu-id="d00ca-112">**项目设计器**的一般用法主题中描述了完全[项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)Visual Studio 文档中。</span><span class="sxs-lookup"><span data-stu-id="d00ca-112">The **Project Designer** and its general use are described fully in the topic [Introduction to the Project Designer](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7) in the Visual Studio documentation.</span></span> <span data-ttu-id="d00ca-113">**项目设计器**包含按相关功能分组的多个页面。</span><span class="sxs-lookup"><span data-stu-id="d00ca-113">The **Project Designer** consists of several pages grouped by related functionality.</span></span> <span data-ttu-id="d00ca-114">适用于 F # 项目的页是主要适用于其他语言的子集。</span><span class="sxs-lookup"><span data-stu-id="d00ca-114">The pages available for F# projects are mostly a subset of those available for other languages.</span></span> <span data-ttu-id="d00ca-115">以下表所述在 F # 中支持的页。</span><span class="sxs-lookup"><span data-stu-id="d00ca-115">The pages supported in F# are described in the following table.</span></span> <span data-ttu-id="d00ca-116">将不可用的页面与的功能不可用在 F # 中，或者可以仅通过更改命令行选项。</span><span class="sxs-lookup"><span data-stu-id="d00ca-116">The pages that are not available relate to features that are not available in F#, or that are available only by changing a command-line option.</span></span> <span data-ttu-id="d00ca-117">在 F # 中可用的页面与 C# 页非常相似，因此链接提供了相关的 C#**项目设计器**页。</span><span class="sxs-lookup"><span data-stu-id="d00ca-117">The pages that are available in F# resemble the C# pages most closely, so a link is provided to the relevant C# **Project Designer** page.</span></span>
+
+|<span data-ttu-id="d00ca-118">项目设计器页</span><span class="sxs-lookup"><span data-stu-id="d00ca-118">Project Designer page</span></span>|<span data-ttu-id="d00ca-119">相关的链接</span><span class="sxs-lookup"><span data-stu-id="d00ca-119">Related links</span></span>|<span data-ttu-id="d00ca-120">描述</span><span class="sxs-lookup"><span data-stu-id="d00ca-120">Description</span></span>|
+|---------------------|-------------|-----------|
+|`Application`|[<span data-ttu-id="d00ca-121">应用程序页、 项目设计器 &#40;C &#35; &#41;</span><span class="sxs-lookup"><span data-stu-id="d00ca-121">Application Page, Project Designer &#40;C&#35;&#41;</span></span>](https://msdn.microsoft.com/library/ms247046.aspx)|<span data-ttu-id="d00ca-122">使您能够指定应用程序级设置和属性，例如，你创建的库或可执行文件、 应用程序的目标.NET Framework 的版本，和有关其中资源文件的信息的应用程序使用存储。</span><span class="sxs-lookup"><span data-stu-id="d00ca-122">Enables you to specify application-level settings and properties, such as whether you are creating a library or an executable file, what version of the .NET Framework the application is targeting, and information about where the resource files that the application uses are stored.</span></span>|
+|`Build`|[<span data-ttu-id="d00ca-123">生成页，项目设计器 &#40;C &#35; &#41;</span><span class="sxs-lookup"><span data-stu-id="d00ca-123">Build Page, Project Designer &#40;C&#35;&#41;</span></span>](https://msdn.microsoft.com/library/kb4wyys2.aspx)|<span data-ttu-id="d00ca-124">使用此选项可控制如何编译的代码。</span><span class="sxs-lookup"><span data-stu-id="d00ca-124">Enables you to control how the code is compiled.</span></span>|
+|`Build Events`|[<span data-ttu-id="d00ca-125">生成事件页，项目设计器 &#40;C &#35; &#41;</span><span class="sxs-lookup"><span data-stu-id="d00ca-125">Build Events Page, Project Designer &#40;C&#35;&#41;</span></span>](https://msdn.microsoft.com/library/kb4wyys2.aspx)|<span data-ttu-id="d00ca-126">使用此选项可指定命令运行之前或之后编译。</span><span class="sxs-lookup"><span data-stu-id="d00ca-126">Enables you to specify commands to run before or after a compilation.</span></span>|
+|`Debug`|[<span data-ttu-id="d00ca-127">“项目设计器”->“调试”页</span><span class="sxs-lookup"><span data-stu-id="d00ca-127">Debug Page, Project Designer</span></span>](https://msdn.microsoft.com/library/2wcdezs5.aspx)|<span data-ttu-id="d00ca-128">使用此选项可控制应用程序在调试期间的运行方式。</span><span class="sxs-lookup"><span data-stu-id="d00ca-128">Enables you to control how the application runs during debugging.</span></span> <span data-ttu-id="d00ca-129">这包括什么使用与你的应用程序的开始目录是什么，命令行和任何特殊调试你想要启用，如本机代码和 SQL 的模式。</span><span class="sxs-lookup"><span data-stu-id="d00ca-129">This includes what command-line to use and what your application's starting directory is, and any special debugging modes you want to enable, such as native code and SQL.</span></span>|
+|`Reference Paths`|[<span data-ttu-id="d00ca-130">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="d00ca-130">Managing references in a project</span></span>](https://msdn.microsoft.com/library/ez524kew.aspx)|<span data-ttu-id="d00ca-131">使用此选项可指定要从中搜索程序集的代码，取决于。</span><span class="sxs-lookup"><span data-stu-id="d00ca-131">Enables you to specify where to search for assemblies that the code depends on.</span></span>|
+
+## <a name="f-specific-settings"></a><span data-ttu-id="d00ca-132">F # 的特定设置</span><span class="sxs-lookup"><span data-stu-id="d00ca-132">F#-Specific Settings</span></span>
+<span data-ttu-id="d00ca-133">下表总结了特定于 F # 的设置：</span><span class="sxs-lookup"><span data-stu-id="d00ca-133">The following table summarizes settings that are specific to F#:</span></span>
+
+|<span data-ttu-id="d00ca-134">项目设计器页</span><span class="sxs-lookup"><span data-stu-id="d00ca-134">Project Designer page</span></span>|<span data-ttu-id="d00ca-135">设置</span><span class="sxs-lookup"><span data-stu-id="d00ca-135">Setting</span></span>|<span data-ttu-id="d00ca-136">描述</span><span class="sxs-lookup"><span data-stu-id="d00ca-136">Description</span></span>|
+|---------------------|-------|-----------|
+|`Build`|`Generate tail calls`|<span data-ttu-id="d00ca-137">如果选择，启用对尾部 Microsoft 中间语言 (MSIL) 指令的使用。</span><span class="sxs-lookup"><span data-stu-id="d00ca-137">If selected, enables the use of the tail Microsoft intermediate language (MSIL) instruction.</span></span> <span data-ttu-id="d00ca-138">这将导致要重用为尾递归函数的堆栈帧。</span><span class="sxs-lookup"><span data-stu-id="d00ca-138">This causes the stack frame to be reused for tail recursive functions.</span></span> <span data-ttu-id="d00ca-139">等效于`--tailcalls`编译器选项。</span><span class="sxs-lookup"><span data-stu-id="d00ca-139">Equivalent to the `--tailcalls` compiler option.</span></span>|
+|`Build`|`Other flags`|<span data-ttu-id="d00ca-140">使用此选项可以指定其他编译器命令行选项。</span><span class="sxs-lookup"><span data-stu-id="d00ca-140">Allows you to specify additional compiler command-line options.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="d00ca-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d00ca-141">See Also</span></span>
+ [<span data-ttu-id="d00ca-142">要开始使用 Visual Studio 中的 F #</span><span class="sxs-lookup"><span data-stu-id="d00ca-142">Get Started with F# in Visual Studio</span></span>](../get-started/get-started-visual-studio.md)  
+ [<span data-ttu-id="d00ca-143">编译器选项</span><span class="sxs-lookup"><span data-stu-id="d00ca-143">Compiler Options</span></span>](../language-reference/compiler-options.md)  
+ <span data-ttu-id="d00ca-144">[项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d00ca-144">[Introduction to the Project Designer](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))</span></span>

@@ -1,56 +1,62 @@
 ---
-title: "用户名客户端的消息安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "用户名客户端的消息安全"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 用户名客户端的消息安全
-下面的示例演示了一个使用消息级安全进行保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和客户端。服务使用 X.509 证书进行身份验证。客户端使用用户名和密码进行身份验证。  
+# <a name="message-security-with-a-user-name-client"></a><span data-ttu-id="2d6c9-102">用户名客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="2d6c9-102">Message Security with a User Name Client</span></span>
+<span data-ttu-id="2d6c9-103">下面的示例演示了一个使用消息级安全进行保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-103">The following illustration shows an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message-level security.</span></span> <span data-ttu-id="2d6c9-104">服务使用 X.509 证书进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-104">The service is authenticated with an X.509 certificate.</span></span> <span data-ttu-id="2d6c9-105">客户端使用用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-105">The client authenticates using a user name and password.</span></span>  
   
- 有关示例应用程序，请参见[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
+ <span data-ttu-id="2d6c9-106">有关示例应用程序，请参阅[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-106">For a sample application, see [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md).</span></span>  
   
- ![使用用户名身份验证的消息安全](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61\-7e1d\-42f5\-b1af\-195bfee5b3c6")  
+ <span data-ttu-id="2d6c9-107">![使用用户名身份验证的消息安全](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span><span class="sxs-lookup"><span data-stu-id="2d6c9-107">![Message security using username authentication](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span></span>  
   
-|特征|说明|  
-|--------|--------|  
-|安全模式|消息|  
-|互操作性|仅限 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
-|身份验证（服务器）|初始协商需要服务器身份验证|  
-|身份验证（客户端）|用户名\/密码|  
-|完整性|是，使用共享安全上下文|  
-|保密性|是，使用共享安全上下文|  
-|传输|HTTP|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="2d6c9-108">特征</span><span class="sxs-lookup"><span data-stu-id="2d6c9-108">Characteristic</span></span>|<span data-ttu-id="2d6c9-109">描述</span><span class="sxs-lookup"><span data-stu-id="2d6c9-109">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="2d6c9-110">安全模式</span><span class="sxs-lookup"><span data-stu-id="2d6c9-110">Security Mode</span></span>|<span data-ttu-id="2d6c9-111">消息</span><span class="sxs-lookup"><span data-stu-id="2d6c9-111">Message</span></span>|  
+|<span data-ttu-id="2d6c9-112">互操作性</span><span class="sxs-lookup"><span data-stu-id="2d6c9-112">Interoperability</span></span>|<span data-ttu-id="2d6c9-113">仅 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d6c9-113">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only</span></span>|  
+|<span data-ttu-id="2d6c9-114">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="2d6c9-114">Authentication (Server)</span></span>|<span data-ttu-id="2d6c9-115">初始协商需要服务器身份验证</span><span class="sxs-lookup"><span data-stu-id="2d6c9-115">Initial negotiation requires server authentication</span></span>|  
+|<span data-ttu-id="2d6c9-116">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="2d6c9-116">Authentication (Client)</span></span>|<span data-ttu-id="2d6c9-117">用户名/密码</span><span class="sxs-lookup"><span data-stu-id="2d6c9-117">User name/password</span></span>|  
+|<span data-ttu-id="2d6c9-118">完整性</span><span class="sxs-lookup"><span data-stu-id="2d6c9-118">Integrity</span></span>|<span data-ttu-id="2d6c9-119">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="2d6c9-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="2d6c9-120">保密性</span><span class="sxs-lookup"><span data-stu-id="2d6c9-120">Confidentiality</span></span>|<span data-ttu-id="2d6c9-121">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="2d6c9-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="2d6c9-122">传输</span><span class="sxs-lookup"><span data-stu-id="2d6c9-122">Transport</span></span>|<span data-ttu-id="2d6c9-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="2d6c9-123">HTTP</span></span>|  
+|<span data-ttu-id="2d6c9-124">绑定</span><span class="sxs-lookup"><span data-stu-id="2d6c9-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## 服务  
- 下面的代码和配置应独立运行。执行下列操作之一：  
+## <a name="service"></a><span data-ttu-id="2d6c9-125">服务</span><span class="sxs-lookup"><span data-stu-id="2d6c9-125">Service</span></span>  
+ <span data-ttu-id="2d6c9-126">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="2d6c9-127">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="2d6c9-127">Do one of the following:</span></span>  
   
--   使用代码（而不使用配置）创建独立服务。  
+-   <span data-ttu-id="2d6c9-128">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   使用提供的配置创建服务，但不定义任何终结点。  
+-   <span data-ttu-id="2d6c9-129">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### 代码  
- 下面的代码演示如何创建使用消息安全的服务终结点。  
+### <a name="code"></a><span data-ttu-id="2d6c9-130">代码</span><span class="sxs-lookup"><span data-stu-id="2d6c9-130">Code</span></span>  
+ <span data-ttu-id="2d6c9-131">下面的代码演示如何创建使用消息安全的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-131">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### 配置  
- 以下配置可代替代码使用：  
+### <a name="configuration"></a><span data-ttu-id="2d6c9-132">配置</span><span class="sxs-lookup"><span data-stu-id="2d6c9-132">Configuration</span></span>  
+ <span data-ttu-id="2d6c9-133">以下配置可代替代码使用：</span><span class="sxs-lookup"><span data-stu-id="2d6c9-133">The following configuration can be used instead of the code:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -90,18 +96,18 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 客户端  
+## <a name="client"></a><span data-ttu-id="2d6c9-134">客户端</span><span class="sxs-lookup"><span data-stu-id="2d6c9-134">Client</span></span>  
   
-### 代码  
- 下面的代码创建客户端。绑定设置为消息模式安全，客户端凭据类型设置为 `UserName`。用户名和密码只能使用代码指定（不可配置）。返回用户名和密码的代码未在此处显示，因为这必须在应用程序级完成。例如，使用 Windows 窗体对话框查询用户以获得这些数据。  
+### <a name="code"></a><span data-ttu-id="2d6c9-135">代码</span><span class="sxs-lookup"><span data-stu-id="2d6c9-135">Code</span></span>  
+ <span data-ttu-id="2d6c9-136">下面的代码创建客户端。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-136">The following code creates the client.</span></span> <span data-ttu-id="2d6c9-137">绑定设置为消息模式安全，客户端凭据类型设置为 `UserName`。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-137">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="2d6c9-138">用户名和密码只能使用代码指定（不可配置）。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-138">The user name and password can only be specified using code (it is not configurable).</span></span> <span data-ttu-id="2d6c9-139">返回用户名和密码的代码未在此处显示，因为这必须在应用程序级完成。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-139">The code to return the user name and password is not shown here because it must be done at the application level.</span></span> <span data-ttu-id="2d6c9-140">例如，使用 Windows 窗体对话框查询用户以获得这些数据。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-140">For example, use a Windows Forms dialog box to query the user for the data.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### 配置  
- 下面的代码将配置客户端。绑定设置为消息模式安全，客户端凭据类型设置为 `UserName`。用户名和密码只能使用代码指定（不可配置）。  
+### <a name="configuration"></a><span data-ttu-id="2d6c9-141">配置</span><span class="sxs-lookup"><span data-stu-id="2d6c9-141">Configuration</span></span>  
+ <span data-ttu-id="2d6c9-142">下面的代码将配置客户端。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-142">The following code configures the client.</span></span> <span data-ttu-id="2d6c9-143">绑定设置为消息模式安全，客户端凭据类型设置为 `UserName`。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-143">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="2d6c9-144">用户名和密码只能使用代码指定（不可配置）。</span><span class="sxs-lookup"><span data-stu-id="2d6c9-144">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -129,9 +135,9 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)   
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<标识\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)   
- [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x804)
+## <a name="see-also"></a><span data-ttu-id="2d6c9-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d6c9-145">See Also</span></span>  
+ [<span data-ttu-id="2d6c9-146">安全性概述</span><span class="sxs-lookup"><span data-stu-id="2d6c9-146">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="2d6c9-147">消息安全用户名称</span><span class="sxs-lookup"><span data-stu-id="2d6c9-147">Message Security User Name</span></span>](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [<span data-ttu-id="2d6c9-148">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="2d6c9-148">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="2d6c9-149">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="2d6c9-149">\<identity></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [<span data-ttu-id="2d6c9-150">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="2d6c9-150">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,88 +1,87 @@
 ---
-title: "演练：使用 Visual C# 创作复合控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自定义控件 [C#]"
-  - "自定义控件 [Windows 窗体], 创建"
-  - "用户控件 [C#]"
-  - "用户控件 [Windows 窗体], 使用 Visual C# 创建"
-  - "UserControl 类, 演练"
+title: "演练：使用 Visual C# 创作复合控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [C#]
+- user controls [Windows Forms], creating with Visual C#
+- UserControl class [Windows Forms], walkthroughs
+- user controls [C#]
+- custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d96705ed3f18c76a64c344ddec7a1cd4315e2e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：使用 Visual C# 创作复合控件
-复合控件提供了一种创建和重用自定义图形界面的方法。  复合控件本质上是具有可视化表示形式的组件。  因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。  可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。  在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。  在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。  
+# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a><span data-ttu-id="2d131-102">演练：使用 Visual C# 创作复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-102">Walkthrough: Authoring a Composite Control with Visual C#</span></span> #
+<span data-ttu-id="2d131-103">复合控件提供了一种创建和重用自定义图形界面的方法。</span><span class="sxs-lookup"><span data-stu-id="2d131-103">Composite controls provide a means by which custom graphical interfaces can be created and reused.</span></span> <span data-ttu-id="2d131-104">复合控件本质上是具有可视化表示形式的组件。</span><span class="sxs-lookup"><span data-stu-id="2d131-104">A composite control is essentially a component with a visual representation.</span></span> <span data-ttu-id="2d131-105">因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-105">As such, it might consist of one or more Windows Forms controls, components, or blocks of code that can extend functionality by validating user input, modifying display properties, or performing other tasks required by the author.</span></span> <span data-ttu-id="2d131-106">可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。</span><span class="sxs-lookup"><span data-stu-id="2d131-106">Composite controls can be placed on Windows Forms in the same manner as other controls.</span></span> <span data-ttu-id="2d131-107">在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-107">In the first part of this walkthrough, you create a simple composite control called `ctlClock`.</span></span> <span data-ttu-id="2d131-108">在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-108">In the second part of the walkthrough, you extend the functionality of `ctlClock` through inheritance.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="2d131-109">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="2d131-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2d131-110">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="2d131-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2d131-111">有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="2d131-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 创建项目  
- 创建新的项目时应指定其名称，以设置根命名空间、程序集名称和项目名称，并确保默认组件将位于正确的命名空间中。  
+## <a name="creating-the-project"></a><span data-ttu-id="2d131-112">创建项目</span><span class="sxs-lookup"><span data-stu-id="2d131-112">Creating the Project</span></span>  
+ <span data-ttu-id="2d131-113">创建新的项目时应指定其名称，以设置根命名空间、程序集名称和项目名称，并确保默认组件将位于正确的命名空间中。</span><span class="sxs-lookup"><span data-stu-id="2d131-113">When you create a new project, you specify its name to set the root namespace, assembly name, and project name, and ensure that the default component will be in the correct namespace.</span></span>  
   
-#### 创建 ctlClockLib 控件库和 ctlClock 控件  
+#### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a><span data-ttu-id="2d131-114">创建 ctlClockLib 控件库和 ctlClock 控件</span><span class="sxs-lookup"><span data-stu-id="2d131-114">To create the ctlClockLib control library and the ctlClock control</span></span>  
   
-1.  在**“文件”**菜单上指向**“新建”**，再单击**“项目”**打开**“新建项目”**对话框。  
+1.  <span data-ttu-id="2d131-115">在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。</span><span class="sxs-lookup"><span data-stu-id="2d131-115">On the **File** menu, point to **New**, and then click **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  从 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 项目列表中选择**“Windows 窗体控件库”**项目模板，在**“名称”**框中键入 `ctlClockLib`，然后单击**“确定”**。  
+2.  <span data-ttu-id="2d131-116">从 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 项目列表中选择“Windows 窗体控件库”项目模板，在“名称”框中键入 `ctlClockLib`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="2d131-116">From the list of [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] projects, select the **Windows Forms Control Library** project template, type `ctlClockLib` in the **Name** box, and then click **OK**.</span></span>  
   
-     默认情况下，项目名称 `ctlClockLib` 也被分配到根命名空间中。  根命名空间用于限定程序集中的组件名。  例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.`  指定 `ctlClock` 组件。  
+     <span data-ttu-id="2d131-117">默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。</span><span class="sxs-lookup"><span data-stu-id="2d131-117">The project name, `ctlClockLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="2d131-118">根命名空间用于限定程序集中的组件名。</span><span class="sxs-lookup"><span data-stu-id="2d131-118">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="2d131-119">例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.` 指定 `ctlClock` 组件</span><span class="sxs-lookup"><span data-stu-id="2d131-119">For example, if two assemblies provide components named `ctlClock`, you can specify your `ctlClock` component using `ctlClockLib.ctlClock.`</span></span>  
   
-3.  在解决方案资源管理器中，右击**“UserControl1.cs”**，然后选择**“重命名”**。  将文件名更改为 `ctlClock.cs`。  当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击**“是”**按钮。  
+3.  <span data-ttu-id="2d131-120">在解决方案资源管理器中，右键单击“UserControl1.cs”，然后单击“重命名”。</span><span class="sxs-lookup"><span data-stu-id="2d131-120">In Solution Explorer, right-click **UserControl1.cs**, and then click **Rename**.</span></span> <span data-ttu-id="2d131-121">将文件名更改为 `ctlClock.cs`。</span><span class="sxs-lookup"><span data-stu-id="2d131-121">Change the file name to `ctlClock.cs`.</span></span> <span data-ttu-id="2d131-122">当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。</span><span class="sxs-lookup"><span data-stu-id="2d131-122">Click the **Yes** button when you are asked if you want to rename all references to the code element "UserControl1".</span></span>  
   
     > [!NOTE]
-    >  默认情况下，复合控件从系统提供的 <xref:System.Windows.Forms.UserControl> 类继承。  <xref:System.Windows.Forms.UserControl> 类提供了所有复合控件要求的功能，并实现了标准方法和属性。  
+    >  <span data-ttu-id="2d131-123">默认情况下，复合控件继承自<xref:System.Windows.Forms.UserControl>由系统提供的类。</span><span class="sxs-lookup"><span data-stu-id="2d131-123">By default, a composite control inherits from the <xref:System.Windows.Forms.UserControl> class provided by the system.</span></span> <span data-ttu-id="2d131-124"><xref:System.Windows.Forms.UserControl>类提供的功能需要由所有复合控件，并实现标准的方法和属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-124">The <xref:System.Windows.Forms.UserControl> class provides functionality required by all composite controls, and implements standard methods and properties.</span></span>  
   
-4.  在**“文件”**菜单上，单击**“全部保存”**保存项目。  
+4.  <span data-ttu-id="2d131-125">在“文件”菜单上，单击“全部保存”保存项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-125">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 向复合控件添加 Windows 控件和组件  
- 可视化界面是复合控件的基本部分。  这种可视化界面是通过向设计器图面添加一个或多个 Windows 控件实现的。  在下面的演示中，将向复合控件中加入 Windows 控件并编写代码实现功能。  
+## <a name="adding-windows-controls-and-components-to-the-composite-control"></a><span data-ttu-id="2d131-126">将 Windows 控件和组件添加到复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-126">Adding Windows Controls and Components to the Composite Control</span></span>  
+ <span data-ttu-id="2d131-127">可视化界面是复合控件的基本部分。</span><span class="sxs-lookup"><span data-stu-id="2d131-127">A visual interface is an essential part of your composite control.</span></span> <span data-ttu-id="2d131-128">这种可视化界面通过向设计器图面添加一个或多个 Windows 控件实现。</span><span class="sxs-lookup"><span data-stu-id="2d131-128">This visual interface is implemented by the addition of one or more Windows controls to the designer surface.</span></span> <span data-ttu-id="2d131-129">在下面的演示中，将向复合控件中加入 Windows 控件并编写代码实现功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-129">In the following demonstration, you will incorporate Windows controls into your composite control and write code to implement functionality.</span></span>  
   
-#### 向复合控件添加标签和计时器  
+#### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a><span data-ttu-id="2d131-130">将标签和计时器添加到复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-130">To add a Label and a Timer to your composite control</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlClock.cs”**，然后单击**“视图设计器”**。  
+1.  <span data-ttu-id="2d131-131">在解决方案资源管理器中，右键单击“ctlClock.cs”，然后单击“视图设计器”。</span><span class="sxs-lookup"><span data-stu-id="2d131-131">In Solution Explorer, right-click **ctlClock.cs**, and then click **View Designer**.</span></span>  
   
-2.  在**“工具箱”**中，展开**“公共控件”**节点，然后双击**“Label”**。  
+2.  <span data-ttu-id="2d131-132">在“工具箱”中，展开“公共控件”节点，然后双击“标签”。</span><span class="sxs-lookup"><span data-stu-id="2d131-132">In the **Toolbox**, expand the **Common Controls** node, and then double-click **Label**.</span></span>  
   
-     设计器图面上的控件中添加了一个名为 `label1` 的 <xref:System.Windows.Forms.Label> 控件。  
+     <span data-ttu-id="2d131-133">A<xref:System.Windows.Forms.Label>控件名为`label1`添加到设计器图面上的控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-133">A <xref:System.Windows.Forms.Label> control named `label1` is added to your control on the designer surface.</span></span>  
   
-3.  在设计器中，单击**“label1”**。  在“属性”窗口中，设置下列属性。  
+3.  <span data-ttu-id="2d131-134">在设计器中，单击“label1”。</span><span class="sxs-lookup"><span data-stu-id="2d131-134">In the designer, click **label1**.</span></span> <span data-ttu-id="2d131-135">在“属性”窗口中，设置下列属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-135">In the Properties window, set the following properties.</span></span>  
   
-    |属性|更改为|  
-    |--------|---------|  
-    |**名称**|`lblDisplay`|  
-    |**Text**|`（空白）`|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Font.Size**|`14`|  
+    |<span data-ttu-id="2d131-136">属性</span><span class="sxs-lookup"><span data-stu-id="2d131-136">Property</span></span>|<span data-ttu-id="2d131-137">更改为</span><span class="sxs-lookup"><span data-stu-id="2d131-137">Change to</span></span>|  
+    |--------------|---------------|  
+    |<span data-ttu-id="2d131-138">**Name**</span><span class="sxs-lookup"><span data-stu-id="2d131-138">**Name**</span></span>|`lblDisplay`|  
+    |<span data-ttu-id="2d131-139">**文本**</span><span class="sxs-lookup"><span data-stu-id="2d131-139">**Text**</span></span>|`(blank space)`|  
+    |<span data-ttu-id="2d131-140">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="2d131-140">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="2d131-141">**Font.Size**</span><span class="sxs-lookup"><span data-stu-id="2d131-141">**Font.Size**</span></span>|`14`|  
   
-4.  在**“工具箱”**中，展开**“组件”**节点，然后双击**“Timer”**。  
+4.  <span data-ttu-id="2d131-142">在“工具箱”中，展开“组件”节点，然后双击“计时器”。</span><span class="sxs-lookup"><span data-stu-id="2d131-142">In the **Toolbox**, expand the **Components** node, and then double-click **Timer**.</span></span>  
   
-     因为 <xref:System.Windows.Forms.Timer> 是一个组件，所以它在运行时没有可视化的表示形式。  因而它不会和控件一起出现在设计器图面，而是出现在**“组件设计器”**（设计器图面底部的一栏）中。  
+     <span data-ttu-id="2d131-143">因为<xref:System.Windows.Forms.Timer>是一个组件，它具有在运行时没有可视表示形式。</span><span class="sxs-lookup"><span data-stu-id="2d131-143">Because a <xref:System.Windows.Forms.Timer> is a component, it has no visual representation at run time.</span></span> <span data-ttu-id="2d131-144">因而它不会和控件一起出现在设计器图面上，而是出现在“组件设计器”（设计器图面底部的一栏）中。</span><span class="sxs-lookup"><span data-stu-id="2d131-144">Therefore, it does not appear with the controls on the designer surface, but rather in the **Component Designer** (a tray at the bottom of the designer surface).</span></span>  
   
-5.  在**“组件设计器”**中，单击**“Timer1”**，然后将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `1000`，将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true`。  
+5.  <span data-ttu-id="2d131-145">在**组件设计器**，单击**timer1**，然后设置<xref:System.Windows.Forms.Timer.Interval%2A>属性`1000`和<xref:System.Windows.Forms.Timer.Enabled%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="2d131-145">In the **Component Designer**, click **timer1**, and then set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `1000` and the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `true`.</span></span>  
   
-     <xref:System.Windows.Forms.Timer.Interval%2A> 属性控制 <xref:System.Windows.Forms.Timer> 组件的计时频率。  `timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。  interval 属性表示前后两次计时之间的毫秒数。  
+     <span data-ttu-id="2d131-146"><xref:System.Windows.Forms.Timer.Interval%2A>属性控制的频率<xref:System.Windows.Forms.Timer>组件刻度。</span><span class="sxs-lookup"><span data-stu-id="2d131-146">The <xref:System.Windows.Forms.Timer.Interval%2A> property controls the frequency with which the <xref:System.Windows.Forms.Timer> component ticks.</span></span> <span data-ttu-id="2d131-147">`timer1` 每走过一个刻度，它都会运行一次 `timer1_Tick` 事件中的代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-147">Each time `timer1` ticks, it runs the code in the `timer1_Tick` event.</span></span> <span data-ttu-id="2d131-148">间隔表示计时之间的毫秒数。</span><span class="sxs-lookup"><span data-stu-id="2d131-148">The interval represents the number of milliseconds between ticks.</span></span>  
   
-6.  在**“组件设计器”**中，双击**“Timer1”**转到 `ctlClock` 的 `timer1_Tick` 事件。  
+6.  <span data-ttu-id="2d131-149">在“组件设计器”中，双击“timer1”转到 `ctlClock` 的 `timer1_Tick` 事件。</span><span class="sxs-lookup"><span data-stu-id="2d131-149">In the **Component Designer**, double-click **timer1** to go to the `timer1_Tick` event for `ctlClock`.</span></span>  
   
-7.  将该代码修改为类似如下所示的代码示例。  确保将访问修饰符从 `private` 更改为 `protected`。  
+7.  <span data-ttu-id="2d131-150">将代码修改为类似如下所示的代码示例。</span><span class="sxs-lookup"><span data-stu-id="2d131-150">Modify the code so that it resembles the following code sample.</span></span> <span data-ttu-id="2d131-151">确保将访问修饰符从 `private` 更改为 `protected`。</span><span class="sxs-lookup"><span data-stu-id="2d131-151">Be sure to change the access modifier from `private` to `protected`.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     protected void timer1_Tick(object sender, System.EventArgs e)  
     {  
         // Causes the label to display the current time.  
@@ -90,41 +89,37 @@ caps.handback.revision: 21
     }  
     ```  
   
-     这些代码将使得当前时间显示在 `lblDisplay` 中。  因为 `timer1` 的间隔设置为 `1000`，所以该事件每 1000 毫秒发生一次，从而每一秒更新一次当前时间。  
+     <span data-ttu-id="2d131-152">此代码将使得当前时间显示在 `lblDisplay` 中。</span><span class="sxs-lookup"><span data-stu-id="2d131-152">This code will cause the current time to be shown in `lblDisplay`.</span></span> <span data-ttu-id="2d131-153">因为 `timer1` 的间隔设置为 `1000`，所以该事件每 1000 毫秒发生一次，从而每一秒更新一次当前时间。</span><span class="sxs-lookup"><span data-stu-id="2d131-153">Because the interval of `timer1` was set to `1000`, this event will occur every thousand milliseconds, thus updating the current time every second.</span></span>  
   
-8.  用 `virtual` 关键字修改该方法使其可重写。  有关更多信息，请参见下面的“从用户控件继承”一节。  
+8.  <span data-ttu-id="2d131-154">修改该方法使其可通过 `virtual` 关键字重写。</span><span class="sxs-lookup"><span data-stu-id="2d131-154">Modify the method to be overridable with the `virtual` keyword.</span></span> <span data-ttu-id="2d131-155">有关详细信息，请参阅下面的“从用户控件继承”一节。</span><span class="sxs-lookup"><span data-stu-id="2d131-155">For more information, see the  "Inheriting from a User Control" section below.</span></span>  
   
-    ```  
+    ```csharp  
     protected virtual void timer1_Tick(object sender, System.EventArgs e)  
     ```  
   
-9. 在**“文件”**菜单上，单击**“全部保存”**保存项目。  
+9. <span data-ttu-id="2d131-156">在“文件”菜单上，单击“全部保存”保存项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-156">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 向复合控件添加属性  
- 现在，clock 控件封装了 <xref:System.Windows.Forms.Label> 控件和 <xref:System.Windows.Forms.Timer> 组件，这两者各有一组继承属性。  尽管您的控件的后续用户无法访问这些控件的个别属性，但可以通过编写适当的代码块来创建和公开自定义属性。  在下面的过程中，将向控件添加属性，这些属性可使用户能够更改背景和文本的颜色。  
+## <a name="adding-properties-to-the-composite-control"></a><span data-ttu-id="2d131-157">将属性添加到复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-157">Adding Properties to the Composite Control</span></span>  
+ <span data-ttu-id="2d131-158">时钟控件现在封装<xref:System.Windows.Forms.Label>控件和<xref:System.Windows.Forms.Timer>组件，每个都有自己的固有的属性集。</span><span class="sxs-lookup"><span data-stu-id="2d131-158">Your clock control now encapsulates a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.Timer> component, each with its own set of inherent properties.</span></span> <span data-ttu-id="2d131-159">尽管控件的后续用户无法访问这些控件的单个属性，但可以通过编写适当的代码块来创建和公开自定义属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-159">While the individual properties of these controls will not be accessible to subsequent users of your control, you can create and expose custom properties by writing the appropriate blocks of code.</span></span> <span data-ttu-id="2d131-160">在下面的过程中，将向控件添加属性，这些属性可使用户能够更改背景和文本的颜色。</span><span class="sxs-lookup"><span data-stu-id="2d131-160">In the following procedure, you will add properties to your control that enable the user to change the color of the background and text.</span></span>  
   
-#### 向复合控件添加属性  
+#### <a name="to-add-a-property-to-your-composite-control"></a><span data-ttu-id="2d131-161">将属性添加到复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-161">To add a property to your composite control</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlClock.cs”**，然后单击**“查看代码”**。  
+1.  <span data-ttu-id="2d131-162">在解决方案资源管理器中，右键单击“ctlClock.cs”，然后单击“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="2d131-162">In Solution Explorer, right-click **ctlClock.cs**, and then click **View Code**.</span></span>  
   
-     控件的**“代码编辑器”**打开。  
+     <span data-ttu-id="2d131-163">控件的“代码编辑器”随即打开。</span><span class="sxs-lookup"><span data-stu-id="2d131-163">The **Code Editor** for your control opens.</span></span>  
   
-2.  找到 `public partial class ctlClock` 语句。  在左大括号 \(`{)` 下键入下列代码。  
+2.  <span data-ttu-id="2d131-164">找到 `public partial class ctlClock` 语句。</span><span class="sxs-lookup"><span data-stu-id="2d131-164">Locate the `public partial class ctlClock` statement.</span></span> <span data-ttu-id="2d131-165">在左大括号 (`{)` 下键入下以下代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-165">Beneath the opening brace (`{)`, type the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private Color colFColor;  
     private Color colBColor;  
     ```  
   
-     这些语句会创建私有变量，用来存储要创建的属性的值。  
+     <span data-ttu-id="2d131-166">这些语句会创建私有变量，用来存储要创建的属性的值。</span><span class="sxs-lookup"><span data-stu-id="2d131-166">These statements create the private variables that you will use to store the values for the properties you are about to create.</span></span>  
   
-3.  在步骤 2 中的变量声明下方键入以下代码。  
+3.  <span data-ttu-id="2d131-167">在步骤 2 中的变量声明下方键入以下代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-167">Type the following code beneath the variable declarations from step 2.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // Declares the name and type of the property.  
     public Color ClockBackColor  
     {  
@@ -156,63 +151,61 @@ caps.handback.revision: 21
     }  
     ```  
   
-     上述代码生成了两个自定义属性：`ClockForeColor` 和 `ClockBackColor`，该控件的后续用户可以使用这两个属性。  `get` 和 `set` 语句提供了该属性值的存储和检索，还提供了实现适合于该属性的功能的代码。  
+     <span data-ttu-id="2d131-168">上述代码使得后续用户能够使用 `ClockForeColor` 和 `ClockBackColor` 这两个自定义属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-168">The preceding code makes two custom properties, `ClockForeColor` and `ClockBackColor`, available to subsequent users of this control.</span></span> <span data-ttu-id="2d131-169">`get` 和 `set` 语句提供了该属性值的存储和检索，还提供了实现适合于该属性的功能的代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-169">The `get` and `set` statements provide for storage and retrieval of the property value, as well as code to implement functionality appropriate to the property.</span></span>  
   
-4.  在**“文件”**菜单上，单击**“全部保存”**保存项目。  
+4.  <span data-ttu-id="2d131-170">在“文件”菜单上，单击“全部保存”保存项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-170">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## 测试控件  
- 控件不是独立的应用程序，它们必须寄宿在容器中。  测试控件的运行时行为，并使用**“UserControl 测试容器”**运用其属性。  有关更多信息，请参见 [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+## <a name="testing-the-control"></a><span data-ttu-id="2d131-171">测试控件</span><span class="sxs-lookup"><span data-stu-id="2d131-171">Testing the Control</span></span>  
+ <span data-ttu-id="2d131-172">控件不是独立应用程序，它们必须托管在容器中。</span><span class="sxs-lookup"><span data-stu-id="2d131-172">Controls are not stand-alone applications; they must be hosted in a container.</span></span> <span data-ttu-id="2d131-173">测试控件的运行时行为，并使用“UserControl 测试容器”运用其属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-173">Test your control's run-time behavior and exercise its properties with the **UserControl Test Container**.</span></span> <span data-ttu-id="2d131-174">有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="2d131-174">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### 测试控件  
+#### <a name="to-test-your-control"></a><span data-ttu-id="2d131-175">测试控件</span><span class="sxs-lookup"><span data-stu-id="2d131-175">To test your control</span></span>  
   
-1.  按 F5 生成该项目，然后在**“用户控件测试容器”**中运行控件。  
+1.  <span data-ttu-id="2d131-176">按 F5 生成项目并在“UserControl 测试容器”中运行该控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-176">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  在测试容器的属性网格中，找到 `ClockBackColor` 属性，然后选中该属性以显示调色板。  
+2.  <span data-ttu-id="2d131-177">在测试容器的属性网格中，找到 `ClockBackColor` 属性，然后选择该属性以显示调色板。</span><span class="sxs-lookup"><span data-stu-id="2d131-177">In the test container's property grid, locate the `ClockBackColor` property, and then select the property to display the color palette.</span></span>  
   
-3.  通过单击某个颜色来选择它。  
+3.  <span data-ttu-id="2d131-178">通过单击选择颜色。</span><span class="sxs-lookup"><span data-stu-id="2d131-178">Choose a color by clicking it.</span></span>  
   
-     控件的背景颜色更改为您选择的颜色。  
+     <span data-ttu-id="2d131-179">控件的背景颜色更改为你选择的颜色。</span><span class="sxs-lookup"><span data-stu-id="2d131-179">The background color of your control changes to the color you selected.</span></span>  
   
-4.  使用类似的事件序列来验证 `ClockForeColor` 属性的功能是否与预期的相符。  
+4.  <span data-ttu-id="2d131-180">使用类似的事件序列来验证 `ClockForeColor` 属性的功能是否与预期的相符。</span><span class="sxs-lookup"><span data-stu-id="2d131-180">Use a similar sequence of events to verify that the `ClockForeColor` property is functioning as expected.</span></span>  
   
-     本节和前面的几节演示了如何将组件和 Windows 控件与代码和打包相结合，以复合控件的形式提供自定义功能。  您已经学习了在复合控件中公开属性，以及如何在完成后对控件进行测试。  在下一节中，您将学习如何以 `ctlClock` 为基础构造继承的复合控件。  
+     <span data-ttu-id="2d131-181">本节和前面的几节演示了如何将组件和 Windows 控件与代码和打包相结合，以复合控件的形式提供自定义功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-181">In this section and the preceding sections, you have seen how components and Windows controls can be combined with code and packaging to provide custom functionality in the form of a composite control.</span></span> <span data-ttu-id="2d131-182">你现已了解如何在复合控件中公开属性，以及如何在完成后对控件进行测试。</span><span class="sxs-lookup"><span data-stu-id="2d131-182">You have learned to expose properties in your composite control, and how to test your control after it is complete.</span></span> <span data-ttu-id="2d131-183">下一节将介绍如何以 `ctlClock` 为基础构造继承的复合控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-183">In the next section you will learn how to construct an inherited composite control using `ctlClock` as a base.</span></span>  
   
-## 从复合控件继承  
- 在前面的章节中，您学习了如何将 Windows 控件、组件和代码组合成可重用的复合控件。  现在可将复合控件用作生成其他控件的基础了。  从基类派生类的过程称为继承。  在本节中，将创建一个称为 `ctlAlarmClock` 的复合控件。  此控件将从其父控件 `ctlClock` 派生。  您将学习如何通过重写父级方法并添加新的方法和属性来扩展 `ctlClock` 的功能。  
+## <a name="inheriting-from-a-composite-control"></a><span data-ttu-id="2d131-184">从复合控件继承</span><span class="sxs-lookup"><span data-stu-id="2d131-184">Inheriting from a Composite Control</span></span>  
+ <span data-ttu-id="2d131-185">前面的章节中介绍了如何将 Windows 控件、组件和代码组合成可重用的复合控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-185">In the previous sections, you learned how to combine Windows controls, components, and code into reusable composite controls.</span></span> <span data-ttu-id="2d131-186">现在即可将复合控件用作生成其他控件的基础。</span><span class="sxs-lookup"><span data-stu-id="2d131-186">Your composite control can now be used as a base upon which other controls can be built.</span></span> <span data-ttu-id="2d131-187">从基类派生类的过程称为继承。</span><span class="sxs-lookup"><span data-stu-id="2d131-187">The process of deriving a class from a base class is called *inheritance*.</span></span> <span data-ttu-id="2d131-188">在本节中，将创建一个称为 `ctlAlarmClock` 的复合控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-188">In this section, you will create a composite control called `ctlAlarmClock`.</span></span> <span data-ttu-id="2d131-189">此控件将从其父控件 `ctlClock` 派生。</span><span class="sxs-lookup"><span data-stu-id="2d131-189">This control will be derived from its parent control, `ctlClock`.</span></span> <span data-ttu-id="2d131-190">将介绍如何通过重写父级方法并添加新的方法和属性来扩展 `ctlClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-190">You will learn to extend the functionality of `ctlClock` by overriding parent methods and adding new methods and properties.</span></span>  
   
- 创建继承控件的第一步是从它的父控件派生。  该操作创建一个新控件，它具有父控件的全部属性、方法和图形特征，但也可以用作添加新功能或修改过的功能的基础。  
+ <span data-ttu-id="2d131-191">创建继承控件的第一步是从它的父控件派生。</span><span class="sxs-lookup"><span data-stu-id="2d131-191">The first step in creating an inherited control is to derive it from its parent.</span></span> <span data-ttu-id="2d131-192">该操作创建一个新控件，它具有父控件的所有属性、方法和图形特征，但也可以用作添加新功能或修改过的功能的基础。</span><span class="sxs-lookup"><span data-stu-id="2d131-192">This action creates a new control that has all of the properties, methods, and graphical characteristics of the parent control, but can also act as a base for the addition of new or modified functionality.</span></span>  
   
-#### 创建继承的控件  
+#### <a name="to-create-the-inherited-control"></a><span data-ttu-id="2d131-193">创建继承的控件</span><span class="sxs-lookup"><span data-stu-id="2d131-193">To create the inherited control</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlClockLib”**，指向**“添加”**，然后单击**“用户控件”**。  
+1.  <span data-ttu-id="2d131-194">在解决方案资源管理器中，右键单击“ctlClockLib”，指向“添加”，然后单击“用户控件”。</span><span class="sxs-lookup"><span data-stu-id="2d131-194">In Solution Explorer, right-click **ctlClockLib**, point to **Add**, and then click **User Control**.</span></span>  
   
-     **“添加新项”**对话框打开。  
+     <span data-ttu-id="2d131-195">此时将打开“添加新项”对话框。</span><span class="sxs-lookup"><span data-stu-id="2d131-195">The **Add New Item** dialog box opens.</span></span>  
   
-2.  选择**“继承的用户控件”**模板。  
+2.  <span data-ttu-id="2d131-196">选择“继承的用户控件”模板。</span><span class="sxs-lookup"><span data-stu-id="2d131-196">Select the **Inherited User Control** template.</span></span>  
   
-3.  在**“名称”**框中键入`“ctlAlarmClock.cs”`，然后单击**“添加”**。  
+3.  <span data-ttu-id="2d131-197">在“名称”框中，键入 `ctlAlarmClock.cs`，然后单击“添加”。</span><span class="sxs-lookup"><span data-stu-id="2d131-197">In the **Name** box, type `ctlAlarmClock.cs`, and then click **Add**.</span></span>  
   
-     **“继承选择器”**对话框出现。  
+     <span data-ttu-id="2d131-198">“继承选择器”对话框将出现。</span><span class="sxs-lookup"><span data-stu-id="2d131-198">The **Inheritance Picker** dialog box appears.</span></span>  
   
-4.  在**“组件名称”**下，双击**“ctlClock”**。  
+4.  <span data-ttu-id="2d131-199">在“组件名称”下，双击“ctlClock”。</span><span class="sxs-lookup"><span data-stu-id="2d131-199">Under **Component Name**, double-click **ctlClock**.</span></span>  
   
-5.  在解决方案资源管理器中，浏览当前项目。  
+5.  <span data-ttu-id="2d131-200">在解决方案资源管理器中，浏览当前项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-200">In Solution Explorer, browse through the current projects.</span></span>  
   
     > [!NOTE]
-    >  当前项目中添加了一个名为**“ctlAlarmClock.cs”**的文件。  
+    >  <span data-ttu-id="2d131-201">当前项目中添加了一个名为“ctlAlarmClock.cs”的文件。</span><span class="sxs-lookup"><span data-stu-id="2d131-201">A file called **ctlAlarmClock.cs** has been added to the current project.</span></span>  
   
-### 添加 Alarm 属性  
- 将属性添加到继承的控件的方法与添加到复合控件的方法相同。  现在将使用属性声明语法向控件中添加两个属性：`AlarmTime` 和 `AlarmSet`，前者将存储发出警报的日期和时间值，后者指示是否设置了警报。  
+### <a name="adding-the-alarm-properties"></a><span data-ttu-id="2d131-202">添加警报属性</span><span class="sxs-lookup"><span data-stu-id="2d131-202">Adding the Alarm Properties</span></span>  
+ <span data-ttu-id="2d131-203">将属性添加到继承的控件的方法与将其添加到复合控件的方法相同。</span><span class="sxs-lookup"><span data-stu-id="2d131-203">Properties are added to an inherited control in the same way they are added to a composite control.</span></span> <span data-ttu-id="2d131-204">现在将使用属性声明语法向控件中添加两个属性：`AlarmTime` 和 `AlarmSet`，前者将存储发出警报的日期和时间值，后者指示是否设置了警报。</span><span class="sxs-lookup"><span data-stu-id="2d131-204">You will now use the property declaration syntax to add two properties to your control: `AlarmTime`, which will store the value of the date and time the alarm is to go off, and `AlarmSet`, which will indicate whether the alarm is set.</span></span>  
   
-##### 向复合控件添加属性  
+##### <a name="to-add-properties-to-your-composite-control"></a><span data-ttu-id="2d131-205">将属性添加到复合控件</span><span class="sxs-lookup"><span data-stu-id="2d131-205">To add properties to your composite control</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlAlarmClock”**，然后单击**“查看代码”**。  
+1.  <span data-ttu-id="2d131-206">在解决方案资源管理器中，右键单击“ctlAlarmClock”，然后单击“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="2d131-206">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Code**.</span></span>  
   
-2.  找到 `public class` 语句。  注意，控件继承自 `ctlClockLib.ctlClock`。  在左大括号 \(`{)` 语句下键入下列代码。  
+2.  <span data-ttu-id="2d131-207">找到 `public class` 语句。</span><span class="sxs-lookup"><span data-stu-id="2d131-207">Locate the `public class` statement.</span></span> <span data-ttu-id="2d131-208">请注意，控件继承自 `ctlClockLib.ctlClock`。</span><span class="sxs-lookup"><span data-stu-id="2d131-208">Note that your control inherits from `ctlClockLib.ctlClock`.</span></span> <span data-ttu-id="2d131-209">在左大括号 (`{)` 语句下键入下以下代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-209">Beneath the opening brace (`{)` statement, type the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private DateTime dteAlarmTime;  
     private bool blnAlarmSet;  
     // These properties will be declared as public to allow future   
@@ -241,52 +234,48 @@ caps.handback.revision: 21
     }  
     ```  
   
-### 添加到控件的图形界面  
- 继承的控件具有可视化的界面，该界面与它从中继承的控件的界面完全相同。  它与其父控件拥有相同的构成控件，但除非将构成控件的属性特别公开，否则它们将不可用。  可以向继承的复合控件的图形界面进行添加，方法与向任意复合控件进行添加相同。  若要继续向您的警报时钟的可视化界面进行添加，请您添加一个 label 控件，它将在警报响起时闪烁。  
+### <a name="adding-to-the-graphical-interface-of-the-control"></a><span data-ttu-id="2d131-210">添加到控件的图形界面</span><span class="sxs-lookup"><span data-stu-id="2d131-210">Adding to the Graphical Interface of the Control</span></span>  
+ <span data-ttu-id="2d131-211">继承的控件具有可视化界面，该界面与它从中继承的控件的界面完全相同。</span><span class="sxs-lookup"><span data-stu-id="2d131-211">Your inherited control has a visual interface that is identical to the control it inherits from.</span></span> <span data-ttu-id="2d131-212">它与其父控件拥有相同的构成控件，但除非将构成控件的属性特别公开，否则它们将不可用。</span><span class="sxs-lookup"><span data-stu-id="2d131-212">It possesses the same constituent controls as its parent control, but the properties of the constituent controls will not be available unless they were specifically exposed.</span></span> <span data-ttu-id="2d131-213">可以向继承的复合控件的图形界面进行添加，方法与向任意复合控件进行添加相同。</span><span class="sxs-lookup"><span data-stu-id="2d131-213">You may add to the graphical interface of an inherited composite control in the same manner as you would add to any composite control.</span></span> <span data-ttu-id="2d131-214">若要继续向警报时钟的可视化界面进行添加，请添加一个标签控件，它将在警报响起时闪烁。</span><span class="sxs-lookup"><span data-stu-id="2d131-214">To continue adding to your alarm clock's visual interface, you will add a label control that will flash when the alarm is sounding.</span></span>  
   
-##### 添加 label 控件  
+##### <a name="to-add-the-label-control"></a><span data-ttu-id="2d131-215">添加标签控件</span><span class="sxs-lookup"><span data-stu-id="2d131-215">To add the label control</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlAlarmClock”**，然后单击**“视图设计器”**。  
+1.  <span data-ttu-id="2d131-216">在解决方案资源管理器中，右键单击“ctlAlarmClock”，然后单击“视图设计器”。</span><span class="sxs-lookup"><span data-stu-id="2d131-216">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Designer**.</span></span>  
   
-     `ctlAlarmClock` 的设计器在主窗口中打开。  
+     <span data-ttu-id="2d131-217">`ctlAlarmClock` 的设计器将在主窗口中打开。</span><span class="sxs-lookup"><span data-stu-id="2d131-217">The designer for `ctlAlarmClock` opens in the main window.</span></span>  
   
-2.  单击该控件的显示部分，并查看“属性”窗口。  
-  
-    > [!NOTE]
-    >  当显示所有属性时，属性是浅灰色的。  这表示这些属性是 `lblDisplay` 所固有的，不能在“属性”窗口中修改或访问。  默认情况下，复合控件中所包含的控件为 `private`，通过任何途径都无法访问其属性。  
+2.  <span data-ttu-id="2d131-218">单击该控件的显示部分，然后查看“属性”窗口。</span><span class="sxs-lookup"><span data-stu-id="2d131-218">Click the display portion of the control, and view the Properties window.</span></span>  
   
     > [!NOTE]
-    >  如果希望复合控件的后续用户可以访问其内部控件，则可将其声明为 `public` 或 `protected`。  这样就可以使用适当的代码来设置和修改复合控件内所包含控件的属性了。  
+    >  <span data-ttu-id="2d131-219">当显示所有属性时，属性是浅灰色的。</span><span class="sxs-lookup"><span data-stu-id="2d131-219">While all the properties are displayed, they are dimmed.</span></span> <span data-ttu-id="2d131-220">这表示这些属性是 `lblDisplay` 所固有的，不能在“属性”窗口中修改或访问。</span><span class="sxs-lookup"><span data-stu-id="2d131-220">This indicates that these properties are native to `lblDisplay` and cannot be modified or accessed in the Properties window.</span></span> <span data-ttu-id="2d131-221">默认情况下，复合控件中所包含的控件为 `private`，通过任何途径都无法访问其属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-221">By default, controls contained in a composite control are `private`, and their properties are not accessible by any means.</span></span>  
   
-3.  向复合控件添加 <xref:System.Windows.Forms.Label> 控件。  
+    > [!NOTE]
+    >  <span data-ttu-id="2d131-222">如果希望复合控件的后续用户可以访问其内部控件，则可将其声明为 `public` 或 `protected`。</span><span class="sxs-lookup"><span data-stu-id="2d131-222">If you want subsequent users of your composite control to have access to its internal controls, declare them as `public` or `protected`.</span></span> <span data-ttu-id="2d131-223">如此即可使用适当的代码设置和修改复合控件内所包含控件的属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-223">This will allow you to set and modify properties of controls contained within your composite control by using the appropriate code.</span></span>  
   
-4.  使用鼠标将 <xref:System.Windows.Forms.Label> 控件拖到显示框的紧下方。  在“属性”窗口中，设置下列属性。  
+3.  <span data-ttu-id="2d131-224">添加<xref:System.Windows.Forms.Label>向复合控件的控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-224">Add a <xref:System.Windows.Forms.Label> control to your composite control.</span></span>  
   
-    |属性|设置|  
-    |--------|--------|  
-    |**名称**|`lblAlarm`|  
-    |**Text**|Alarm\!|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`false`|  
+4.  <span data-ttu-id="2d131-225">使用鼠标，拖动<xref:System.Windows.Forms.Label>紧跟在显示框下方的控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-225">Using the mouse, drag the <xref:System.Windows.Forms.Label> control immediately beneath the display box.</span></span> <span data-ttu-id="2d131-226">在“属性”窗口中，设置下列属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-226">In the Properties window, set the following properties.</span></span>  
   
-### 添加警报功能  
- 在前面的章节中，已经添加了一些属性和一个控件，它们将启用复合控件中的警报功能。  在本过程中，将添加代码以比较当前时间和警报时间，如果两者相同，则闪出警报。  通过重写 `ctlClock` 的 `timer1_Tick` 方法并向其中添加更多代码，`ctlAlarmClock` 的功能将得到扩展，同时会保持继承的所有 `ctlClock` 功能。  
+    |<span data-ttu-id="2d131-227">属性</span><span class="sxs-lookup"><span data-stu-id="2d131-227">Property</span></span>|<span data-ttu-id="2d131-228">设置</span><span class="sxs-lookup"><span data-stu-id="2d131-228">Setting</span></span>|  
+    |--------------|-------------|  
+    |<span data-ttu-id="2d131-229">**Name**</span><span class="sxs-lookup"><span data-stu-id="2d131-229">**Name**</span></span>|`lblAlarm`|  
+    |<span data-ttu-id="2d131-230">**文本**</span><span class="sxs-lookup"><span data-stu-id="2d131-230">**Text**</span></span>|<span data-ttu-id="2d131-231">**Alarm!**</span><span class="sxs-lookup"><span data-stu-id="2d131-231">**Alarm!**</span></span>|  
+    |<span data-ttu-id="2d131-232">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="2d131-232">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="2d131-233">**可见**</span><span class="sxs-lookup"><span data-stu-id="2d131-233">**Visible**</span></span>|`false`|  
   
-##### 重写 ctlClock 的 timer1\_Tick 方法  
+### <a name="adding-the-alarm-functionality"></a><span data-ttu-id="2d131-234">添加警报功能</span><span class="sxs-lookup"><span data-stu-id="2d131-234">Adding the Alarm Functionality</span></span>  
+ <span data-ttu-id="2d131-235">在前面的章节中，已经添加了一些属性和一个控件，它们将启用复合控件中的警报功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-235">In the previous procedures, you added properties and a control that will enable alarm functionality in your composite control.</span></span> <span data-ttu-id="2d131-236">在本过程中，将添加代码以比较当前时间和警报时间，如果两者相同，则警报闪烁。</span><span class="sxs-lookup"><span data-stu-id="2d131-236">In this procedure, you will add code to compare the current time to the alarm time and, if they are the same, to flash an alarm.</span></span> <span data-ttu-id="2d131-237">通过重写 `ctlClock` 的 `timer1_Tick` 方法并向其中添加其他代码，可扩展 `ctlAlarmClock` 的功能，同时会保留 `ctlClock` 的所有固有功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-237">By overriding the `timer1_Tick` method of `ctlClock` and adding additional code to it, you will extend the capability of `ctlAlarmClock` while retaining all of the inherent functionality of `ctlClock`.</span></span>  
   
-1.  在**“代码编辑器”**中，找到 `private bool blnAlarmSet;` 语句。  在其紧下方添加下列语句。  
+##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a><span data-ttu-id="2d131-238">重写 ctlClock 的 timer1_Tick 方法</span><span class="sxs-lookup"><span data-stu-id="2d131-238">To override the timer1_Tick method of ctlClock</span></span>  
   
-     \[C\#\]  
+1.  <span data-ttu-id="2d131-239">在“代码编辑器”中，找到 `private bool blnAlarmSet;` 语句。</span><span class="sxs-lookup"><span data-stu-id="2d131-239">In the **Code Editor**, locate the `private bool blnAlarmSet;` statement.</span></span> <span data-ttu-id="2d131-240">在其紧下方添加下列语句。</span><span class="sxs-lookup"><span data-stu-id="2d131-240">Immediately beneath it, add the following statement.</span></span>  
   
-    ```  
+    ```csharp  
     private bool blnColorTicker;  
     ```  
   
-2.  在**“代码编辑器”**中，在类的结尾找到右大括号 \(`})`。  在大括号的前面添加下列代码。  
+2.  <span data-ttu-id="2d131-241">在“代码编辑器”中，在类的结尾找到右大括号 (`})`。</span><span class="sxs-lookup"><span data-stu-id="2d131-241">In the **Code Editor**, locate the closing brace (`})` at the end of the class.</span></span> <span data-ttu-id="2d131-242">在大括号的前面添加以下代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-242">Just before the brace, add the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     protected override void timer1_Tick(object sender, System.EventArgs e)  
     {  
         // Calls the Timer1_Tick method of ctlClock.  
@@ -326,32 +315,30 @@ caps.handback.revision: 21
     }  
     ```  
   
-     添加此代码将完成几项任务。  `override` 语句指示控件使用此方法替换从基控件继承的方法。  此方法被调用时，它通过调用 `base.timer1_Tick` 语句来调用它重写的方法，从而确保在该控件中重现原始控件包含的所有功能。  然后，运行附加代码以合并警报功能。  当警报触发时，会出现闪烁的标签控件。  
+     <span data-ttu-id="2d131-243">添加此代码将完成多项任务。</span><span class="sxs-lookup"><span data-stu-id="2d131-243">The addition of this code accomplishes several tasks.</span></span> <span data-ttu-id="2d131-244">`override` 语句指示控件使用此方法替换从基控件继承的方法。</span><span class="sxs-lookup"><span data-stu-id="2d131-244">The `override` statement directs the control to use this method in place of the method that was inherited from the base control.</span></span> <span data-ttu-id="2d131-245">调用此方法时，它通过调用 `base.timer1_Tick` 语句来调用它重写的方法，从而确保在该控件中重现原始控件包含的所有功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-245">When this method is called, it calls the method it overrides by invoking the `base.timer1_Tick` statement, ensuring that all of the functionality incorporated in the original control is reproduced in this control.</span></span> <span data-ttu-id="2d131-246">然后，运行附加代码以合并警报功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-246">It then runs additional code to incorporate the alarm functionality.</span></span> <span data-ttu-id="2d131-247">警报触发时，将会出现闪烁的标签控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-247">A flashing label control will appear when the alarm occurs.</span></span>  
   
-     警报时钟控件已经基本完成。  剩下的唯一事情是实现关闭它的方法。  为此，将向 `lblAlarm_Click` 方法中添加代码。  
+     <span data-ttu-id="2d131-248">警报时钟控件已基本完成。</span><span class="sxs-lookup"><span data-stu-id="2d131-248">Your alarm clock control is almost complete.</span></span> <span data-ttu-id="2d131-249">剩下的唯一事情是实现关闭它的方法。</span><span class="sxs-lookup"><span data-stu-id="2d131-249">The only thing that remains is to implement a way to turn it off.</span></span> <span data-ttu-id="2d131-250">为此，将向 `lblAlarm_Click` 方法添加代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-250">To do this, you will add code to the `lblAlarm_Click` method.</span></span>  
   
-##### 实现关闭方法  
+##### <a name="to-implement-the-shutoff-method"></a><span data-ttu-id="2d131-251">实现关闭方法</span><span class="sxs-lookup"><span data-stu-id="2d131-251">To implement the shutoff method</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlAlarmClock.cs”**，然后单击**“视图设计器”**。  
+1.  <span data-ttu-id="2d131-252">在解决方案资源管理器中，右键单击“ctlAlarmClock.cs”，然后单击“视图设计器”。</span><span class="sxs-lookup"><span data-stu-id="2d131-252">In Solution Explorer, right-click **ctlAlarmClock.cs**, and then click **View Designer**.</span></span>  
   
-     设计器打开。  
+     <span data-ttu-id="2d131-253">设计器随即打开。</span><span class="sxs-lookup"><span data-stu-id="2d131-253">The designer opens.</span></span>  
   
-2.  将一个按钮添加到控件中。  按下面的方式设置该按钮的属性。  
+2.  <span data-ttu-id="2d131-254">将按钮添加到控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-254">Add a button to the control.</span></span> <span data-ttu-id="2d131-255">按如下方式设置该按钮的属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-255">Set the properties of the button as follows.</span></span>  
   
-    |属性|值|  
-    |--------|-------|  
-    |**名称**|`btnAlarmOff`|  
-    |**Text**|Disable Alarm|  
+    |<span data-ttu-id="2d131-256">属性</span><span class="sxs-lookup"><span data-stu-id="2d131-256">Property</span></span>|<span data-ttu-id="2d131-257">值</span><span class="sxs-lookup"><span data-stu-id="2d131-257">Value</span></span>|  
+    |--------------|-----------|  
+    |<span data-ttu-id="2d131-258">**Name**</span><span class="sxs-lookup"><span data-stu-id="2d131-258">**Name**</span></span>|`btnAlarmOff`|  
+    |<span data-ttu-id="2d131-259">**文本**</span><span class="sxs-lookup"><span data-stu-id="2d131-259">**Text**</span></span>|<span data-ttu-id="2d131-260">**禁用警报**</span><span class="sxs-lookup"><span data-stu-id="2d131-260">**Disable Alarm**</span></span>|  
   
-3.  在设计器中，双击 **btnAlarmOff**。  
+3.  <span data-ttu-id="2d131-261">在设计器中，双击“btnAlarmOff”控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-261">In the designer, double-click **btnAlarmOff**.</span></span>  
   
-     **“代码编辑器”**打开并显示 `private void btnAlarmOff_Click` 行。  
+     <span data-ttu-id="2d131-262">“代码编辑器”随即打开并显示 `private void btnAlarmOff_Click` 行。</span><span class="sxs-lookup"><span data-stu-id="2d131-262">The **Code Editor** opens to the `private void btnAlarmOff_Click` line.</span></span>  
   
-4.  像如下所示修改此方法。  
+4.  <span data-ttu-id="2d131-263">将此方法修改为类似如下所示的代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-263">Modify this method so that it resembles the following code.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void btnAlarmOff_Click(object sender, System.EventArgs e)  
     {  
         // Turns off the alarm.  
@@ -361,49 +348,47 @@ caps.handback.revision: 21
     }  
     ```  
   
-5.  在**“文件”**菜单上，单击**“全部保存”**保存项目。  
+5.  <span data-ttu-id="2d131-264">在“文件”菜单上，单击“全部保存”保存项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-264">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-### 在窗体上使用继承的控件  
- 可按测试基类控件 `ctlClock` 相同的方法测试继承的控件：按 F5 生成项目并在**“UserControl 测试容器”**中运行控件。  有关更多信息，请参见 [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+### <a name="using-the-inherited-control-on-a-form"></a><span data-ttu-id="2d131-265">在窗体上使用继承的控件</span><span class="sxs-lookup"><span data-stu-id="2d131-265">Using the Inherited Control on a Form</span></span>  
+ <span data-ttu-id="2d131-266">可按测试基类控件 `ctlClock` 相同的方法测试继承的控件：按 F5 生成项目并在“UserControl 测试容器”中运行控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-266">You can test your inherited control the same way you tested the base class control, `ctlClock`: Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="2d131-267">有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="2d131-267">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- 要使用控件，还需要将其放入窗体中。  与标准复合控件一样，继承的复合控件不能独立存在，而必须寄宿在窗体或其他容器中。  由于 `ctlAlarmClock` 的功能更加深入，因此需要附加代码以对其进行测试。  在本过程中，将编写一个简单的程序来测试 `ctlAlarmClock` 的功能。  将编写代码以设置和显示 `ctlAlarmClock` 的 `AlarmTime` 属性，并测试其继承功能。  
+ <span data-ttu-id="2d131-268">若要使用控件，还需要将其放入窗体中。</span><span class="sxs-lookup"><span data-stu-id="2d131-268">To put your control to use, you will need to host it on a form.</span></span> <span data-ttu-id="2d131-269">与标准复合控件一样，继承的复合控件不能独立存在，而必须承载在窗体或其他容器中。</span><span class="sxs-lookup"><span data-stu-id="2d131-269">As with a standard composite control, an inherited composite control cannot stand alone and must be hosted in a form or other container.</span></span> <span data-ttu-id="2d131-270">由于 `ctlAlarmClock` 的功能更加深入，因此需要附加代码以对其进行测试。</span><span class="sxs-lookup"><span data-stu-id="2d131-270">Since `ctlAlarmClock` has a greater depth of functionality, additional code is required to test it.</span></span> <span data-ttu-id="2d131-271">在本过程中，将编写一个简单的程序来测试 `ctlAlarmClock` 的功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-271">In this procedure, you will write a simple program to test the functionality of `ctlAlarmClock`.</span></span> <span data-ttu-id="2d131-272">将编写代码来设置和显示 `ctlAlarmClock` 的 `AlarmTime` 属性，并测试其固有功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-272">You will write code to set and display the `AlarmTime` property of `ctlAlarmClock`, and will test its inherent functions.</span></span>  
   
-##### 生成一个测试窗体并将您的控件添加到该窗体  
+##### <a name="to-build-and-add-your-control-to-a-test-form"></a><span data-ttu-id="2d131-273">生成测试窗体并将控件添加到该窗体</span><span class="sxs-lookup"><span data-stu-id="2d131-273">To build and add your control to a test form</span></span>  
   
-1.  在解决方案资源管理器中，右击**“ctlClockLib”**，然后单击**“生成”**。  
+1.  <span data-ttu-id="2d131-274">在解决方案资源管理器中，右键单击“ctlClockLib”，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="2d131-274">In Solution Explorer, right-click **ctlClockLib**, and then click **Build**.</span></span>  
   
-2.  向解决方案添加一个新的**“Windows 应用程序”**项目，并将其命名为`“Test”`。  
+2.  <span data-ttu-id="2d131-275">将一个新的“Windows 应用程序”项目添加到解决方案，并将其命名为 `Test`。</span><span class="sxs-lookup"><span data-stu-id="2d131-275">Add a new **Windows Application** project to the solution, and name it `Test`.</span></span>  
   
-3.  在解决方案资源管理器中，右击测试项目的**“引用”**节点。  单击**“添加引用”**，显示**“添加引用”**对话框。  单击标记为**“项目”**的选项卡。  **“项目名称”**下将列出 `ctlClockLib` 项目。  双击该项目以将引用添加到测试项目。  
+3.  <span data-ttu-id="2d131-276">在解决方案资源管理器中，右键单击测试项目的“引用”节点。</span><span class="sxs-lookup"><span data-stu-id="2d131-276">In Solution Explorer, right-click the **References** node for your test project.</span></span> <span data-ttu-id="2d131-277">单击“添加引用”，显示“添加引用”对话框。</span><span class="sxs-lookup"><span data-stu-id="2d131-277">Click **Add Reference** to display the **Add Reference** dialog box.</span></span> <span data-ttu-id="2d131-278">单击标记为“项目”的选项卡。</span><span class="sxs-lookup"><span data-stu-id="2d131-278">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="2d131-279">“项目名称”下将列出 `ctlClockLib` 项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-279">Your `ctlClockLib` project will be listed under **Project Name**.</span></span> <span data-ttu-id="2d131-280">双击该项目将引用添加到测试项目。</span><span class="sxs-lookup"><span data-stu-id="2d131-280">Double-click the project to add the reference to the test project.</span></span>  
   
-4.  在解决方案资源管理器中，右击**“测试”**，然后单击**“生成”**。  
+4.  <span data-ttu-id="2d131-281">在解决方案资源管理器中，右键单击“测试”，然后单击“生成”。</span><span class="sxs-lookup"><span data-stu-id="2d131-281">In Solution Explorer, right-click **Test**, and then click **Build**.</span></span>  
   
-5.  在**“工具箱”**中，展开**“ctlClockLib 组件”**节点。  
+5.  <span data-ttu-id="2d131-282">在“工具箱”中，展开“ctlClockLib 组件”节点。</span><span class="sxs-lookup"><span data-stu-id="2d131-282">In the **Toolbox**, expand the **ctlClockLib Components** node.</span></span>  
   
-6.  双击**“ctlAlarmClock”**向窗体添加 `ctlAlarmClock` 的副本。  
+6.  <span data-ttu-id="2d131-283">双击“ctlAlarmClock”向窗体添加 `ctlAlarmClock` 的副本。</span><span class="sxs-lookup"><span data-stu-id="2d131-283">Double-click **ctlAlarmClock** to add a copy of `ctlAlarmClock` to your form.</span></span>  
   
-7.  在**“工具箱”**中，找到并双击**“DateTimePicker”**以向窗体添加一个 <xref:System.Windows.Forms.DateTimePicker> 控件，然后通过双击**“Label”**添加一个 <xref:System.Windows.Forms.Label>。  
+7.  <span data-ttu-id="2d131-284">在**工具箱**，找到并双击**DateTimePicker**添加<xref:System.Windows.Forms.DateTimePicker>控制转移到窗体中，并将<xref:System.Windows.Forms.Label>通过双击控件**标签**.</span><span class="sxs-lookup"><span data-stu-id="2d131-284">In the **Toolbox**, locate and double-click **DateTimePicker** to add a <xref:System.Windows.Forms.DateTimePicker> control to your form, and then add a <xref:System.Windows.Forms.Label> control by double-clicking **Label**.</span></span>  
   
-8.  使用鼠标将这些控件放置在窗体上合适的位置。  
+8.  <span data-ttu-id="2d131-285">使用鼠标将这些控件放置在窗体上合适的位置。</span><span class="sxs-lookup"><span data-stu-id="2d131-285">Use the mouse to position the controls in a convenient place on the form.</span></span>  
   
-9. 按下述方法设置这些控件的属性。  
+9. <span data-ttu-id="2d131-286">按下述方法设置这些控件的属性。</span><span class="sxs-lookup"><span data-stu-id="2d131-286">Set the properties of these controls in the following manner.</span></span>  
   
-    |控件|属性|值|  
-    |--------|--------|-------|  
-    |`label1`|**Text**|`（空白）`|  
-    ||**名称**|`lblTest`|  
-    |`dateTimePicker1`|**名称**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat>|  
+    |<span data-ttu-id="2d131-287">控件</span><span class="sxs-lookup"><span data-stu-id="2d131-287">Control</span></span>|<span data-ttu-id="2d131-288">属性</span><span class="sxs-lookup"><span data-stu-id="2d131-288">Property</span></span>|<span data-ttu-id="2d131-289">值</span><span class="sxs-lookup"><span data-stu-id="2d131-289">Value</span></span>|  
+    |-------------|--------------|-----------|  
+    |`label1`|<span data-ttu-id="2d131-290">**文本**</span><span class="sxs-lookup"><span data-stu-id="2d131-290">**Text**</span></span>|`(blank space)`|  
+    ||<span data-ttu-id="2d131-291">**Name**</span><span class="sxs-lookup"><span data-stu-id="2d131-291">**Name**</span></span>|`lblTest`|  
+    |`dateTimePicker1`|<span data-ttu-id="2d131-292">**Name**</span><span class="sxs-lookup"><span data-stu-id="2d131-292">**Name**</span></span>|`dtpTest`|  
+    ||<span data-ttu-id="2d131-293">**格式**</span><span class="sxs-lookup"><span data-stu-id="2d131-293">**Format**</span></span>|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
-10. 在设计器中双击**“dtpTest”**。  
+10. <span data-ttu-id="2d131-294">在设计器中，双击“dtpTest”。</span><span class="sxs-lookup"><span data-stu-id="2d131-294">In the designer, double-click **dtpTest**.</span></span>  
   
-     **“代码编辑器”**将打开 `private void dtpTest_ValueChanged`。  
+     <span data-ttu-id="2d131-295">“代码编辑器”随即打开并显示 `private void dtpTest_ValueChanged`。</span><span class="sxs-lookup"><span data-stu-id="2d131-295">The **Code Editor** opens to `private void dtpTest_ValueChanged`.</span></span>  
   
-11. 像如下所示修改代码。  
+11. <span data-ttu-id="2d131-296">像如下所示修改代码。</span><span class="sxs-lookup"><span data-stu-id="2d131-296">Modify the code so that it resembles the following.</span></span>  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void dtpTest_ValueChanged(object sender, System.EventArgs e)  
     {  
         ctlAlarmClock1.AlarmTime = dtpTest.Value;  
@@ -413,25 +398,25 @@ caps.handback.revision: 21
     }  
     ```  
   
-12. 在解决方案资源管理器中，右击**“测试”**，然后单击**“设为启动项目”**。  
+12. <span data-ttu-id="2d131-297">在解决方案资源管理器中，右键单击“测试”，然后单击“设为启动项目”。</span><span class="sxs-lookup"><span data-stu-id="2d131-297">In Solution Explorer, right-click **Test**, and then click **Set as StartUp Project**.</span></span>  
   
-13. 在**“调试”**菜单上，单击**“启动调试”**。  
+13. <span data-ttu-id="2d131-298">在“调试”菜单上，单击“启动调试”。</span><span class="sxs-lookup"><span data-stu-id="2d131-298">On the **Debug** menu, click **Start Debugging**.</span></span>  
   
-     测试程序启动。  注意，`ctlAlarmClock` 控件中的当前时间更新了，并且 <xref:System.Windows.Forms.DateTimePicker> 控件中显示了启动时间。  
+     <span data-ttu-id="2d131-299">测试程序随即启动。</span><span class="sxs-lookup"><span data-stu-id="2d131-299">The test program starts.</span></span> <span data-ttu-id="2d131-300">请注意，在更新的当前时间`ctlAlarmClock`控制和开始时间所示<xref:System.Windows.Forms.DateTimePicker>控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-300">Note that the current time is updated in the `ctlAlarmClock` control, and that the starting time is shown in the <xref:System.Windows.Forms.DateTimePicker> control.</span></span>  
   
-14. 单击 <xref:System.Windows.Forms.DateTimePicker>，其中显示小时的分钟值。  
+14. <span data-ttu-id="2d131-301">单击<xref:System.Windows.Forms.DateTimePicker>其中显示的小时分钟数。</span><span class="sxs-lookup"><span data-stu-id="2d131-301">Click the <xref:System.Windows.Forms.DateTimePicker> where the minutes of the hour are displayed.</span></span>  
   
-15. 使用键盘设置一个分钟值，使它比 `ctlAlarmClock` 显示的当前时间快一分钟。  
+15. <span data-ttu-id="2d131-302">使用键盘设置一个分钟值，使它比 `ctlAlarmClock` 显示的当前时间快一分钟。</span><span class="sxs-lookup"><span data-stu-id="2d131-302">Using the keyboard, set a value for minutes that is one minute greater than the current time shown by `ctlAlarmClock`.</span></span>  
   
-     警报设置的时间显示在 `lblTest` 中。  等候显示的时间到达警报设置时间。  当显示的时间到达警报设置时间时，`lblAlarm` 将闪出。  
+     <span data-ttu-id="2d131-303">警报设置的时间在 `lblTest` 中显示。</span><span class="sxs-lookup"><span data-stu-id="2d131-303">The time for the alarm setting is shown in `lblTest`.</span></span> <span data-ttu-id="2d131-304">等候显示的时间到达警报设置时间。</span><span class="sxs-lookup"><span data-stu-id="2d131-304">Wait for the displayed time to reach the alarm setting time.</span></span> <span data-ttu-id="2d131-305">显示时间到达警报设置的时间时，`lblAlarm` 会闪烁。</span><span class="sxs-lookup"><span data-stu-id="2d131-305">When the displayed time reaches the time to which the alarm is set, the `lblAlarm` will flash.</span></span>  
   
-16. 单击 `btnAlarmOff` 关闭警报。  您现在可以重置警报。  
+16. <span data-ttu-id="2d131-306">单击 `btnAlarmOff` 关闭警报。</span><span class="sxs-lookup"><span data-stu-id="2d131-306">Turn off the alarm by clicking `btnAlarmOff`.</span></span> <span data-ttu-id="2d131-307">现在可以重置警报。</span><span class="sxs-lookup"><span data-stu-id="2d131-307">You may now reset the alarm.</span></span>  
   
-     本演练涉及了一些关键概念。  您学习了如何通过将控件和组件组合到复合控件容器中来创建复合控件。  您还已经学会将属性添加到控件，以及编写代码以实现自定义功能。  在最后一节中，您学习了如何通过继承来扩展给定复合控件的功能，以及如何通过重写宿主方法来改变这些方法的功能。  
+     <span data-ttu-id="2d131-308">本演练涵盖了多个关键概念。</span><span class="sxs-lookup"><span data-stu-id="2d131-308">This walkthrough has covered a number of key concepts.</span></span> <span data-ttu-id="2d131-309">现已应了解如何通过将控件和组件组合到复合控件容器中来创建复合控件。</span><span class="sxs-lookup"><span data-stu-id="2d131-309">You have learned to create a composite control by combining controls and components into a composite control container.</span></span> <span data-ttu-id="2d131-310">还应了解图和将属性添加到控件，以及如何编写代码以实现自定义功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-310">You have learned to add properties to your control, and to write code to implement custom functionality.</span></span> <span data-ttu-id="2d131-311">在最后一节中，应了解到如何通过继承来扩展给定复合控件的功能，以及如何通过重写承载方法来改变这些方法的功能。</span><span class="sxs-lookup"><span data-stu-id="2d131-311">In the last section, you learned to extend the functionality of a given composite control through inheritance, and to alter the functionality of host methods by overriding those methods.</span></span>  
   
-## 请参阅  
- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [使用组件编程](../Topic/Programming%20with%20Components.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)   
- [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [演练：使用 Visual C\# 从 Windows 窗体控件继承](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a><span data-ttu-id="2d131-312">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2d131-312">See Also</span></span>  
+ [<span data-ttu-id="2d131-313">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="2d131-313">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="2d131-314">使用组件编程</span><span class="sxs-lookup"><span data-stu-id="2d131-314">Programming with Components</span></span>](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [<span data-ttu-id="2d131-315">组件创作演练</span><span class="sxs-lookup"><span data-stu-id="2d131-315">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [<span data-ttu-id="2d131-316">如何：在“选择工具箱项”对话框中显示控件</span><span class="sxs-lookup"><span data-stu-id="2d131-316">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [<span data-ttu-id="2d131-317">演练：使用 Visual C# 从 Windows 窗体控件继承</span><span class="sxs-lookup"><span data-stu-id="2d131-317">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

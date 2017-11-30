@@ -1,96 +1,91 @@
 ---
-title: "使用 Visual Basic 运算符执行的常规任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "运算符 [Visual Basic], 算法"
-  - "运算符 [Visual Basic], 移位"
-  - "运算符 [Visual Basic], 按位"
-  - "运算符 [Visual Basic], 比较"
-  - "运算符 [Visual Basic], 串联"
-  - "运算符 [Visual Basic], 逻辑"
-  - "运算符 [Visual Basic], 短路逻辑"
-  - "运算符 [Visual Basic], 字符串比较"
-  - "运算符 [Visual Basic], 字符串串联"
-  - "Visual Basic 代码, 运算符"
+title: "使用 Visual Basic 运算符执行的常规任务"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 Visual Basic 运算符执行的常规任务
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-运算符执行的许多常规任务都涉及到一个或多个表达式（称为“操作数”）。  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="ecde7-102">使用 Visual Basic 运算符执行的常规任务</span><span class="sxs-lookup"><span data-stu-id="ecde7-102">Common Tasks Performed with Visual Basic Operators</span></span>
+<span data-ttu-id="ecde7-103">运算符执行许多常见的任务涉及一个或多个表达式调用*操作数*。</span><span class="sxs-lookup"><span data-stu-id="ecde7-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  
   
-## 算术和移位任务  
- 下表概括了可用的算术和移位运算。  
+## <a name="arithmetic-and-bit-shift-tasks"></a><span data-ttu-id="ecde7-104">算术和移位的任务</span><span class="sxs-lookup"><span data-stu-id="ecde7-104">Arithmetic and Bit-shift Tasks</span></span>  
+ <span data-ttu-id="ecde7-105">下表总结了可用的算术和移位运算。</span><span class="sxs-lookup"><span data-stu-id="ecde7-105">The following table summarizes the available arithmetic and bit-shift operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|请参见|  
-|将一个数值与另一个数值相加|[\+ 运算符](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|从一个数值中减去另一个数值|[\- 运算符](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|反转数值的符号|[\- 运算符](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|将一个数值与另一个数值相乘|[\* 运算符](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|将一个数值除以另一个数值|[\/ 运算符](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|查找一个数值被另一个数值相除所得的商（不包括余数）|[\\ 运算符](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|查找一个数值被另一个数值相除所得的余数（不包括商）|[Mod 运算符](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|将一个数值自乘另一个数值的幂|[^ 运算符](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|将某个数值的位模式向左移|[\<\< 运算符](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|将某个数值的位模式向右移|[\>\> 运算符](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|<span data-ttu-id="ecde7-106">到</span><span class="sxs-lookup"><span data-stu-id="ecde7-106">To</span></span>|<span data-ttu-id="ecde7-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecde7-107">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="ecde7-108">添加到另一个数字值</span><span class="sxs-lookup"><span data-stu-id="ecde7-108">Add one numeric value to another</span></span>|[<span data-ttu-id="ecde7-109">+ 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-109">+ Operator</span></span>](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|<span data-ttu-id="ecde7-110">从另一个数字值减去</span><span class="sxs-lookup"><span data-stu-id="ecde7-110">Subtract one numeric value from another</span></span>|[<span data-ttu-id="ecde7-111">-运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecde7-111">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="ecde7-112">反转的数字值的符号</span><span class="sxs-lookup"><span data-stu-id="ecde7-112">Reverse the sign of a numeric value</span></span>|[<span data-ttu-id="ecde7-113">-运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecde7-113">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="ecde7-114">一个数字值乘以另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-114">Multiply one numeric value by another</span></span>|[<span data-ttu-id="ecde7-115">* 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-115">* Operator</span></span>](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|<span data-ttu-id="ecde7-116">将一个数字值划分为另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-116">Divide one numeric value into another</span></span>|[<span data-ttu-id="ecde7-117">/ 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecde7-117">/ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|<span data-ttu-id="ecde7-118">找到一个数字值除以另一个 （不带余数） 的商</span><span class="sxs-lookup"><span data-stu-id="ecde7-118">Find the quotient of one numeric value divided by another (without the remainder)</span></span>|[<span data-ttu-id="ecde7-119">\ 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecde7-119">\ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|<span data-ttu-id="ecde7-120">查找一个数字值除以另一个 （没有商） 的其余部分</span><span class="sxs-lookup"><span data-stu-id="ecde7-120">Find the remainder of one numeric value divided by another (without the quotient)</span></span>|[<span data-ttu-id="ecde7-121">Mod 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-121">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|<span data-ttu-id="ecde7-122">引发一个数字值的另一次幂</span><span class="sxs-lookup"><span data-stu-id="ecde7-122">Raise one numeric value to the power of another</span></span>|[<span data-ttu-id="ecde7-123">^ 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-123">^ Operator</span></span>](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|<span data-ttu-id="ecde7-124">向左移动的数字值的位模式</span><span class="sxs-lookup"><span data-stu-id="ecde7-124">Shift the bit pattern of a numeric value to the left</span></span>|[<span data-ttu-id="ecde7-125"><\<运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-125"><\< Operator</span></span>](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|<span data-ttu-id="ecde7-126">向右移位的数字值的位模式</span><span class="sxs-lookup"><span data-stu-id="ecde7-126">Shift the bit pattern of a numeric value to the right</span></span>|[<span data-ttu-id="ecde7-127">>> 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-127">>> Operator</span></span>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## 比较任务  
- 下表概括了可用的比较运算。  
+## <a name="comparison-tasks"></a><span data-ttu-id="ecde7-128">比较任务</span><span class="sxs-lookup"><span data-stu-id="ecde7-128">Comparison Tasks</span></span>  
+ <span data-ttu-id="ecde7-129">下表总结了可用的比较运算。</span><span class="sxs-lookup"><span data-stu-id="ecde7-129">The following table summarizes the available comparison operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|请参见|  
-|确定两个值是否相等|`=` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定两个值是否不相等|`<>` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定一个值是否小于另一个值|`<` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定一个值是否大于另一个值|`>` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定一个值是否小于或等于另一个值|`<=` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定一个值是否大于或等于另一个值|`>=` 运算符 \([比较运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|确定两个对象变量是否引用同一对象实例|[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|确定两个对象变量是否引用不同对象实例|[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|确定对象是否为某个特定类型|[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|<span data-ttu-id="ecde7-130">到</span><span class="sxs-lookup"><span data-stu-id="ecde7-130">To</span></span>|<span data-ttu-id="ecde7-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecde7-131">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="ecde7-132">确定两个值是否相等</span><span class="sxs-lookup"><span data-stu-id="ecde7-132">Determine whether two values are equal</span></span>|<span data-ttu-id="ecde7-133">`=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-133">`=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-134">确定两个值是否不相等</span><span class="sxs-lookup"><span data-stu-id="ecde7-134">Determine whether two values are unequal</span></span>|<span data-ttu-id="ecde7-135">`<>`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-135">`<>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-136">确定一个值是否小于另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-136">Determine whether one value is less than another</span></span>|<span data-ttu-id="ecde7-137">`<`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-137">`<` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-138">确定一个值是否大于另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-138">Determine whether one value is greater than another</span></span>|<span data-ttu-id="ecde7-139">`>`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-139">`>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-140">确定一个值是否小于或等于另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-140">Determine whether one value is less than or equal to another</span></span>|<span data-ttu-id="ecde7-141">`<=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-141">`<=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-142">确定一个值是否大于或等于另一个</span><span class="sxs-lookup"><span data-stu-id="ecde7-142">Determine whether one value is greater than or equal to another</span></span>|<span data-ttu-id="ecde7-143">`>=`运算符 ([在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-143">`>=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-144">确定两个对象变量是否引用同一对象实例</span><span class="sxs-lookup"><span data-stu-id="ecde7-144">Determine whether two object variables refer to the same object instance</span></span>|[<span data-ttu-id="ecde7-145">Is 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-145">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|<span data-ttu-id="ecde7-146">确定两个对象变量是否引用不同对象实例</span><span class="sxs-lookup"><span data-stu-id="ecde7-146">Determine whether two object variables refer to different object instances</span></span>|[<span data-ttu-id="ecde7-147">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-147">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|<span data-ttu-id="ecde7-148">确定对象是否属于特定类型</span><span class="sxs-lookup"><span data-stu-id="ecde7-148">Determine whether an object is of a specific type</span></span>|[<span data-ttu-id="ecde7-149">TypeOf 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-149">TypeOf Operator</span></span>](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## 串联任务  
- 下表概括了可用的串联运算。  
+## <a name="concatenation-tasks"></a><span data-ttu-id="ecde7-150">串联任务</span><span class="sxs-lookup"><span data-stu-id="ecde7-150">Concatenation Tasks</span></span>  
+ <span data-ttu-id="ecde7-151">下表总结了可用的串联运算。</span><span class="sxs-lookup"><span data-stu-id="ecde7-151">The following table summarizes the available concatenation operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|请参见|  
-|将多个字符串联接为一个字符串|`&` 运算符 \([串联运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|联接数值与字符串值|`+` 运算符 \([串联运算符 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|<span data-ttu-id="ecde7-152">到</span><span class="sxs-lookup"><span data-stu-id="ecde7-152">To</span></span>|<span data-ttu-id="ecde7-153">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecde7-153">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="ecde7-154">将多个字符串联接成单个字符串</span><span class="sxs-lookup"><span data-stu-id="ecde7-154">Join multiple strings into a single string</span></span>|<span data-ttu-id="ecde7-155">`&`运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-155">`&` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
+|<span data-ttu-id="ecde7-156">联接使用字符串值的数值</span><span class="sxs-lookup"><span data-stu-id="ecde7-156">Join numeric values with string values</span></span>|<span data-ttu-id="ecde7-157">`+`运算符 ([在 Visual Basic 中的串联运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="ecde7-157">`+` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
   
-## 逻辑和按位任务  
- 下表概括了可用的逻辑和按位运算。  
+## <a name="logical-and-bitwise-tasks"></a><span data-ttu-id="ecde7-158">逻辑和按位任务</span><span class="sxs-lookup"><span data-stu-id="ecde7-158">Logical and Bitwise Tasks</span></span>  
+ <span data-ttu-id="ecde7-159">下表总结了可用的逻辑和按位运算。</span><span class="sxs-lookup"><span data-stu-id="ecde7-159">The following table summarizes the available logical and bitwise operations.</span></span>  
   
-|||  
-|-|-|  
-|若要|请参见|  
-|对 Boolean 值执行逻辑求反|[Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|对两个 Boolean 值执行逻辑合取|[And 运算符](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|对两个 Boolean 值执行包容性逻辑析取|[Or 运算符](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|对两个 Boolean 值执行排它性逻辑析取|[异或运算符](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|对两个 Boolean 值执行短路逻辑合取|[AndAlso 运算符](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|对两个 Boolean 值执行短路包容性逻辑析取|[OrElse 运算符](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|对两个整数值执行按位逻辑合取|[And 运算符](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|对两个整数值执行按位包容性逻辑析取|[Or 运算符](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|对两个整数值执行按位排它性逻辑析取|[异或运算符](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|对整数值执行按位逻辑求反|[Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="ecde7-160">到</span><span class="sxs-lookup"><span data-stu-id="ecde7-160">To</span></span>|<span data-ttu-id="ecde7-161">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecde7-161">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="ecde7-162">上一个布尔值执行逻辑求反</span><span class="sxs-lookup"><span data-stu-id="ecde7-162">Perform logical negation on a Boolean value</span></span>|[<span data-ttu-id="ecde7-163">Not 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-163">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="ecde7-164">对两个布尔值执行逻辑与</span><span class="sxs-lookup"><span data-stu-id="ecde7-164">Perform logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="ecde7-165">And 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-165">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="ecde7-166">执行包含的逻辑析取两个布尔值</span><span class="sxs-lookup"><span data-stu-id="ecde7-166">Perform inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="ecde7-167">Or 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-167">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="ecde7-168">对两个布尔值执行独占逻辑析取</span><span class="sxs-lookup"><span data-stu-id="ecde7-168">Perform exclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="ecde7-169">Xor 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-169">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="ecde7-170">对两个布尔值执行短路逻辑与</span><span class="sxs-lookup"><span data-stu-id="ecde7-170">Perform short-circuited logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="ecde7-171">AndAlso 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-171">AndAlso Operator</span></span>](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|<span data-ttu-id="ecde7-172">执行短路包含逻辑析取两个布尔值</span><span class="sxs-lookup"><span data-stu-id="ecde7-172">Perform short-circuited inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="ecde7-173">OrElse 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-173">OrElse Operator</span></span>](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|<span data-ttu-id="ecde7-174">对两个整数值执行按位逻辑与</span><span class="sxs-lookup"><span data-stu-id="ecde7-174">Perform bit-by-bit logical conjunction on two integral values</span></span>|[<span data-ttu-id="ecde7-175">And 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-175">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="ecde7-176">对两个整数值执行按位包含逻辑析取</span><span class="sxs-lookup"><span data-stu-id="ecde7-176">Perform bit-by-bit inclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="ecde7-177">Or 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-177">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="ecde7-178">对两个整数值执行按位独占逻辑析取</span><span class="sxs-lookup"><span data-stu-id="ecde7-178">Perform bit-by-bit exclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="ecde7-179">Xor 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-179">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="ecde7-180">对整数值执行按位逻辑求反</span><span class="sxs-lookup"><span data-stu-id="ecde7-180">Perform bit-by-bit logical negation on an integral value</span></span>|[<span data-ttu-id="ecde7-181">Not 运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-181">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## 请参阅  
- [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [按功能列出的运算符](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="ecde7-182">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ecde7-182">See Also</span></span>  
+ [<span data-ttu-id="ecde7-183">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="ecde7-183">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="ecde7-184">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="ecde7-184">Operators Listed by Functionality</span></span>](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

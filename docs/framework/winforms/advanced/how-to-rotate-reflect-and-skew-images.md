@@ -1,58 +1,62 @@
 ---
-title: "如何：旋转、反射和扭曲图像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "图像 [Windows 窗体], 反射"
-  - "图像 [Windows 窗体], 旋转"
-  - "图像 [Windows 窗体], 扭曲"
+title: "如何：旋转、反射和扭曲图像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], reflecting
+- images [Windows Forms], rotating
+- images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eaa6286731d196dad387e1648644ca3e8103da03
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：旋转、反射和扭曲图像
-通过指定原始图像的左上角、右上角和左下角的目标点可旋转、反射和扭曲图像。  这三个目标点确定将原始矩形图像映射为平行四边形的仿射变换。  
+# <a name="how-to-rotate-reflect-and-skew-images"></a><span data-ttu-id="f65d7-102">如何：旋转、反射和扭曲图像</span><span class="sxs-lookup"><span data-stu-id="f65d7-102">How to: Rotate, Reflect, and Skew Images</span></span>
+<span data-ttu-id="f65d7-103">你可以旋转、 反射和扭曲图像通过指定的原始图像的左上角、 右上角和左下角的目标点。</span><span class="sxs-lookup"><span data-stu-id="f65d7-103">You can rotate, reflect, and skew an image by specifying destination points for the upper-left, upper-right, and lower-left corners of the original image.</span></span> <span data-ttu-id="f65d7-104">三个目标点确定映射到一个平行四边形的原始矩形图像仿射转换。</span><span class="sxs-lookup"><span data-stu-id="f65d7-104">The three destination points determine an affine transformation that maps the original rectangular image to a parallelogram.</span></span>  
   
-## 示例  
- 例如，假设原始图像是一个矩形，其左上角、右上角和左下角分别位于 \(0, 0\)、\(100, 0\) 和 \(0, 50\)。  现在假设我们将这三个点按以下方式映射到目标点。  
+## <a name="example"></a><span data-ttu-id="f65d7-105">示例</span><span class="sxs-lookup"><span data-stu-id="f65d7-105">Example</span></span>  
+ <span data-ttu-id="f65d7-106">例如，假设原始图像是一个具有在左上角的矩形 （0，0），在右上角 （100，0），并在左下角 （0，50）。</span><span class="sxs-lookup"><span data-stu-id="f65d7-106">For example, suppose the original image is a rectangle with upper-left corner at (0, 0), upper-right corner at (100, 0), and lower-left corner at (0, 50).</span></span> <span data-ttu-id="f65d7-107">现在假设你将它们映射三个指向目标点，如下所示。</span><span class="sxs-lookup"><span data-stu-id="f65d7-107">Now suppose you map those three points to destination points as follows.</span></span>  
   
-|原始点|目标点|  
-|---------|---------|  
-|左上角 \(0, 0\)|\(200, 20\)|  
-|右上角 \(100, 0\)|\(110, 100\)|  
-|左下角 \(0, 50\)|\(250, 30\)|  
+|<span data-ttu-id="f65d7-108">原始点</span><span class="sxs-lookup"><span data-stu-id="f65d7-108">Original point</span></span>|<span data-ttu-id="f65d7-109">目标点</span><span class="sxs-lookup"><span data-stu-id="f65d7-109">Destination point</span></span>|  
+|--------------------|-----------------------|  
+|<span data-ttu-id="f65d7-110">左上角 （0，0）</span><span class="sxs-lookup"><span data-stu-id="f65d7-110">Upper-left (0, 0)</span></span>|<span data-ttu-id="f65d7-111">(200, 20)</span><span class="sxs-lookup"><span data-stu-id="f65d7-111">(200, 20)</span></span>|  
+|<span data-ttu-id="f65d7-112">右上角 （100，0）</span><span class="sxs-lookup"><span data-stu-id="f65d7-112">Upper-right (100, 0)</span></span>|<span data-ttu-id="f65d7-113">(110, 100)</span><span class="sxs-lookup"><span data-stu-id="f65d7-113">(110, 100)</span></span>|  
+|<span data-ttu-id="f65d7-114">左下方 （0，50）</span><span class="sxs-lookup"><span data-stu-id="f65d7-114">Lower-left (0, 50)</span></span>|<span data-ttu-id="f65d7-115">(250, 30)</span><span class="sxs-lookup"><span data-stu-id="f65d7-115">(250, 30)</span></span>|  
   
- 下面的插图显示原始图像以及映射为平行四边形的图像。  原始图像已被扭曲、反射、旋转和平移。  沿着原始图像上边缘的 x 轴被映射到通过 \(200, 20\) 和 \(110, 100\) 的直线。  沿着原始图像左边缘的 y 轴被映射到通过 \(200, 20\) 和 \(250, 30\) 的直线。  
+ <span data-ttu-id="f65d7-116">下图显示原始的图像和图像映射到的平行四边形。</span><span class="sxs-lookup"><span data-stu-id="f65d7-116">The following illustration shows the original image and the image mapped to the parallelogram.</span></span> <span data-ttu-id="f65d7-117">原始图像已偏差、 反映、 旋转和转换。</span><span class="sxs-lookup"><span data-stu-id="f65d7-117">The original image has been skewed, reflected, rotated, and translated.</span></span> <span data-ttu-id="f65d7-118">原始图像的上边缘沿 x 轴映射到通过运行的行 （200，20） 和 （110，100）。</span><span class="sxs-lookup"><span data-stu-id="f65d7-118">The x-axis along the top edge of the original image is mapped to the line that runs through (200, 20) and (110, 100).</span></span> <span data-ttu-id="f65d7-119">原始图像的左边缘沿 y 轴映射到通过运行的行 （200，20） 和 （250，30）。</span><span class="sxs-lookup"><span data-stu-id="f65d7-119">The y-axis along the left edge of the original image is mapped to the line that runs through (200, 20) and (250, 30).</span></span>  
   
- ![带区](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ <span data-ttu-id="f65d7-120">![条带化](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")</span><span class="sxs-lookup"><span data-stu-id="f65d7-120">![Stripes](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")</span></span>  
   
- 下面的插图显示应用到照片图像的类似变换。  
+ <span data-ttu-id="f65d7-121">下图显示应用到照片图像的类似变换。</span><span class="sxs-lookup"><span data-stu-id="f65d7-121">The following illustration shows a similar transformation applied to a photographic image.</span></span>  
   
- ![已转换的 Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ <span data-ttu-id="f65d7-122">![转换的 Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")</span><span class="sxs-lookup"><span data-stu-id="f65d7-122">![Transformed Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")</span></span>  
   
- 下面的插图显示应用到图元文件的类似变换。  
+ <span data-ttu-id="f65d7-123">下图显示类似转换应用于图元文件。</span><span class="sxs-lookup"><span data-stu-id="f65d7-123">The following illustration shows a similar transformation applied to a metafile.</span></span>  
   
- ![已转换的元文件](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ <span data-ttu-id="f65d7-124">![转换图元文件](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")</span><span class="sxs-lookup"><span data-stu-id="f65d7-124">![Transformed Metafile](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")</span></span>  
   
- 下面的示例生成第一个插图中所显示的图像。  
+ <span data-ttu-id="f65d7-125">下面的示例生成第一个图中所显示的图像。</span><span class="sxs-lookup"><span data-stu-id="f65d7-125">The following example produces the images shown in the first illustration.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  请确保用系统上有效的图像路径替换 `Stripes.bmp`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="f65d7-126">编译代码</span><span class="sxs-lookup"><span data-stu-id="f65d7-126">Compiling the Code</span></span>  
+ <span data-ttu-id="f65d7-127">前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。</span><span class="sxs-lookup"><span data-stu-id="f65d7-127">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="f65d7-128">请确保将`Stripes.bmp`替换为你系统上有效的映像的路径。</span><span class="sxs-lookup"><span data-stu-id="f65d7-128">Make sure to replace `Stripes.bmp` with the path to an image that is valid on your system.</span></span>  
   
-## 请参阅  
- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="f65d7-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f65d7-129">See Also</span></span>  
+ [<span data-ttu-id="f65d7-130">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="f65d7-130">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

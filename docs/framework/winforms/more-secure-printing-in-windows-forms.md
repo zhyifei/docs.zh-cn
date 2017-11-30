@@ -1,42 +1,43 @@
 ---
-title: "Windows 窗体中的更加安全的打印 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "打印 [Windows 窗体], 安全性"
-  - "PrintingPermission 类, Windows 窗体安全"
-  - "安全性 [Windows 窗体], 打印"
-  - "Windows 窗体, 打印"
+title: "Windows 窗体中的更加安全的打印"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, printing
+- PrintingPermission class [Windows Forms], Windows Forms security
+- printing [Windows Forms], security
+- security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b89a94fd0223d817b0dee37f7a3ed84dcbacbbec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体中的更加安全的打印
-Windows 窗体应用程序中通常包括打印功能。  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用 <xref:System.Drawing.Printing.PrintingPermission> 类控制对打印功能的访问，并使用相关联的 <xref:System.Drawing.Printing.PrintingPermissionLevel> 枚举值指示访问级别。  默认情况下，在“本地 Intranet”和“Internet”区域中将启用打印功能；但是，这两个区域中都限定了访问级别。  根据所授予的权限值，应用程序可能在打印时需要用户交互，或者根本无法打印。  默认情况下，“本地 Intranet”区域接收 <xref:System.Drawing.Printing.PrintingPermissionLevel> 访问，而“Intranet”区域接收 <xref:System.Drawing.Printing.PrintingPermissionLevel> 访问。  
+# <a name="more-secure-printing-in-windows-forms"></a><span data-ttu-id="afa3a-102">Windows 窗体中的更加安全的打印</span><span class="sxs-lookup"><span data-stu-id="afa3a-102">More Secure Printing in Windows Forms</span></span>
+<span data-ttu-id="afa3a-103">Windows 窗体应用程序经常包含打印功能。</span><span class="sxs-lookup"><span data-stu-id="afa3a-103">Windows Forms applications frequently include printing abilities.</span></span> <span data-ttu-id="afa3a-104">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]使用<xref:System.Drawing.Printing.PrintingPermission>类控制对打印功能的访问，关联<xref:System.Drawing.Printing.PrintingPermissionLevel>枚举值以指示的访问级别。</span><span class="sxs-lookup"><span data-stu-id="afa3a-104">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uses the <xref:System.Drawing.Printing.PrintingPermission> class to control access to printing capabilities and the associated <xref:System.Drawing.Printing.PrintingPermissionLevel> enumeration value to indicate the level of access.</span></span> <span data-ttu-id="afa3a-105">默认情况下，在本地 Intranet 和 Internet 区域中; 默认情况下启用打印但是，在这两个区域受到限制的访问级别。</span><span class="sxs-lookup"><span data-stu-id="afa3a-105">By default, printing is enabled by default in the Local Intranet and Internet zones; however, the level of access is restricted in both zones.</span></span> <span data-ttu-id="afa3a-106">是否可以打印你的应用程序，需要用户交互或不能打印取决于授予应用程序的权限值。</span><span class="sxs-lookup"><span data-stu-id="afa3a-106">Whether your application can print, requires user interaction, or cannot print depends upon the permission value granted to the application.</span></span> <span data-ttu-id="afa3a-107">默认情况下，本地 Intranet 区域接收<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>访问和 Intranet 区域接收<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>访问。</span><span class="sxs-lookup"><span data-stu-id="afa3a-107">By default, the Local Intranet zone receives <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> access and the Intranet zone receives <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> access.</span></span>  
   
- 下表显示了在每个打印权限级别上可用的功能。  
+ <span data-ttu-id="afa3a-108">下表显示可在每个打印的权限级别的功能。</span><span class="sxs-lookup"><span data-stu-id="afa3a-108">The following table shows the functionality available at each printing permission level.</span></span>  
   
-|PrintingPermissionLevel|说明|  
-|-----------------------------|--------|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|提供对所有已安装打印机的完全访问权限。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|启用到默认打印机的编程打印并通过限制性打印对话框启用更安全的打印。  <xref:System.Drawing.Printing.PrintingPermissionLevel> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel> 的子集。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|仅允许从受更多限制的对话框中提供打印。  <xref:System.Drawing.Printing.PrintingPermissionLevel> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel> 的子集。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|禁止对打印机的访问。  <xref:System.Drawing.Printing.PrintingPermissionLevel> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel> 的子集。|  
+|<span data-ttu-id="afa3a-109">PrintingPermissionLevel</span><span class="sxs-lookup"><span data-stu-id="afa3a-109">PrintingPermissionLevel</span></span>|<span data-ttu-id="afa3a-110">描述</span><span class="sxs-lookup"><span data-stu-id="afa3a-110">Description</span></span>|  
+|-----------------------------|-----------------|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|<span data-ttu-id="afa3a-111">提供对所有已安装的打印机的完全访问权限。</span><span class="sxs-lookup"><span data-stu-id="afa3a-111">Provides full access to all installed printers.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|<span data-ttu-id="afa3a-112">允许以编程方式打印到默认打印机和更安全的打印通过限制性打印对话框。</span><span class="sxs-lookup"><span data-stu-id="afa3a-112">Enables programmatic printing to the default printer and safer printing through a restrictive printing dialog box.</span></span> <span data-ttu-id="afa3a-113"><xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting> 的子集。</span><span class="sxs-lookup"><span data-stu-id="afa3a-113"><xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|<span data-ttu-id="afa3a-114">仅从更多限制的对话框中提供打印。</span><span class="sxs-lookup"><span data-stu-id="afa3a-114">Provides printing only from a more-restricted dialog box.</span></span> <span data-ttu-id="afa3a-115"><xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 的子集。</span><span class="sxs-lookup"><span data-stu-id="afa3a-115"><xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|<span data-ttu-id="afa3a-116">禁止对打印机的访问。</span><span class="sxs-lookup"><span data-stu-id="afa3a-116">Prevents access to printers.</span></span> <span data-ttu-id="afa3a-117"><xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。</span><span class="sxs-lookup"><span data-stu-id="afa3a-117"><xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.</span></span>|  
   
-## 请参阅  
- [Windows 窗体中更加安全的文件和数据访问](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)   
- [Windows 窗体中额外的安全注意事项](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)   
- [Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)   
- [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)
+## <a name="see-also"></a><span data-ttu-id="afa3a-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afa3a-118">See Also</span></span>  
+ [<span data-ttu-id="afa3a-119">在 Windows 窗体中提高文件和数据访问的安全性</span><span class="sxs-lookup"><span data-stu-id="afa3a-119">More Secure File and Data Access in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [<span data-ttu-id="afa3a-120">Windows 窗体中额外的安全注意事项</span><span class="sxs-lookup"><span data-stu-id="afa3a-120">Additional Security Considerations in Windows Forms</span></span>](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [<span data-ttu-id="afa3a-121">Windows 窗体中的安全性概述</span><span class="sxs-lookup"><span data-stu-id="afa3a-121">Security in Windows Forms Overview</span></span>](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [<span data-ttu-id="afa3a-122">Windows 窗体安全</span><span class="sxs-lookup"><span data-stu-id="afa3a-122">Windows Forms Security</span></span>](../../../docs/framework/winforms/windows-forms-security.md)

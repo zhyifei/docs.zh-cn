@@ -1,50 +1,51 @@
 ---
-title: "GetRawInputDevices | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetRawInputDevices 方法"
-  - "原始输入 [WPF]"
+title: GetRawInputDevices
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e936b4ef2cab65e72ca9edbc3b95281815938983
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# GetRawInputDevices
-允许 PresentationHost.exe 发现主机应用程序感兴趣的原始输入的设备（人机接口设备）。  
+# <a name="getrawinputdevices"></a><span data-ttu-id="8dbd2-102">GetRawInputDevices</span><span class="sxs-lookup"><span data-stu-id="8dbd2-102">GetRawInputDevices</span></span>
+<span data-ttu-id="8dbd2-103">允许 PresentationHost.exe 发现主机应用程序感兴趣的原始输入的设备（人机接口设备）。</span><span class="sxs-lookup"><span data-stu-id="8dbd2-103">Allows PresentationHost.exe to discover the raw input devices (Human Interface Devices) that the host application is interested in.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="8dbd2-104">语法</span><span class="sxs-lookup"><span data-stu-id="8dbd2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a><span data-ttu-id="8dbd2-105">参数</span><span class="sxs-lookup"><span data-stu-id="8dbd2-105">Parameters</span></span>  
  `ppEnum`  
   
- \[out\] 一个指向 [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) 的指针，用于枚举原始输入设备。  
+ <span data-ttu-id="8dbd2-106">[out]指向的指针[IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)枚举原始输入的设备。</span><span class="sxs-lookup"><span data-stu-id="8dbd2-106">[out] A pointer to an [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) for enumerating the raw input devices.</span></span>  
   
-## 属性值\/返回值  
- HRESULT：  
+## <a name="property-valuereturn-value"></a><span data-ttu-id="8dbd2-107">属性值/返回值</span><span class="sxs-lookup"><span data-stu-id="8dbd2-107">Property Value/Return Value</span></span>  
+ <span data-ttu-id="8dbd2-108">HRESULT：</span><span class="sxs-lookup"><span data-stu-id="8dbd2-108">HRESULT:</span></span>  
   
- S\_OK \- 如果返回了 S\_OK，则 [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) 仅由 PresentationHost.exe 使用。  
+ <span data-ttu-id="8dbd2-109">S_OK- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)将仅由 PresentationHost.exe 如果返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="8dbd2-109">S_OK - [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md) will only be used by PresentationHost.exe if S_OK is returned.</span></span>  
   
- E\_NOTIMPL  
+ <span data-ttu-id="8dbd2-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="8dbd2-110">E_NOTIMPL</span></span>  
   
-## 备注  
- 原始输入设备是一组输入设备，其中包括键盘、鼠标和非传统设备（如远程控制设备）。  
+## <a name="remarks"></a><span data-ttu-id="8dbd2-111">备注</span><span class="sxs-lookup"><span data-stu-id="8dbd2-111">Remarks</span></span>  
+ <span data-ttu-id="8dbd2-112">原始输入设备是一组输入设备，其中包括键盘、鼠标和非传统设备（如远程控制设备）。</span><span class="sxs-lookup"><span data-stu-id="8dbd2-112">Raw input devices are the set of input devices that includes keyboards, mice, and less traditional devices like remote controls.</span></span>  
   
- 一旦已检索到的原始输入设备的列表，则 PresentationHost.exe 将使用此设备进行注册，以接收 WM\_INPUT 通知消息。  
+ <span data-ttu-id="8dbd2-113">一旦已检索到的原始输入设备的列表，则 PresentationHost.exe 将使用此设备进行注册，以接收 WM_INPUT 通知消息。</span><span class="sxs-lookup"><span data-stu-id="8dbd2-113">Once the list of raw input devices has been retrieved, PresentationHost.exe registers with the devices to receive WM_INPUT notification messages.</span></span>  
   
-## 请参阅  
- [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/winui\/winui\/windowsuserinterface\/userinput\/rawinput\/rawinputreference\/rawinputfunctions\/getrawinputdevicelist.asp](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputfunctions/getrawinputdevicelist.asp)   
- [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)
+## <a name="see-also"></a><span data-ttu-id="8dbd2-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8dbd2-114">See Also</span></span>  
+ [<span data-ttu-id="8dbd2-115">http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputfunctions/getrawinputdevicelist.asp</span><span class="sxs-lookup"><span data-stu-id="8dbd2-115">http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputfunctions/getrawinputdevicelist.asp</span></span>](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputfunctions/getrawinputdevicelist.asp)  
+ [<span data-ttu-id="8dbd2-116">FilterInputMessage</span><span class="sxs-lookup"><span data-stu-id="8dbd2-116">FilterInputMessage</span></span>](../../../../docs/framework/wpf/app-development/filterinputmessage.md)

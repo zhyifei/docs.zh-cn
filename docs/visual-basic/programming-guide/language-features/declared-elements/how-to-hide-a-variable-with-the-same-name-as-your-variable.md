@@ -1,60 +1,59 @@
 ---
-title: "如何：隐藏与您的变量同名的变量 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "声明语句, 已声明的元素"
-  - "声明, 元素"
-  - "已声明的元素, 关于声明的元素"
-  - "已声明的元素, 引用"
-  - "声明元素"
-  - "元素名称, 限定"
-  - "限定, 元素名称"
-  - "引用, 已声明的元素"
-  - "引用已声明的元素"
+title: "如何：隐藏与您的变量同名的变量 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- declarations [Visual Basic], elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declaration statements [Visual Basic], declared elements
+- declaring elements [Visual Basic]
+- referencing declared elements [Visual Basic]
+- declared elements [Visual Basic], referencing
+- declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：隐藏与您的变量同名的变量 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-可通过*“隐藏”*操作来隐藏变量，即用同名的变量重新定义要隐藏的变量。  可以用两种方式隐藏希望隐藏的变量：  
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a><span data-ttu-id="e5780-102">如何：隐藏与您的变量同名的变量 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5780-102">How to: Hide a Variable with the Same Name as Your Variable (Visual Basic)</span></span>
+<span data-ttu-id="e5780-103">可以隐藏由变量*隐藏*也就是说，它通过将它重新定义具有相同名称的变量。</span><span class="sxs-lookup"><span data-stu-id="e5780-103">You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name.</span></span> <span data-ttu-id="e5780-104">你可以隐藏你想要在两种方式中隐藏的变量：</span><span class="sxs-lookup"><span data-stu-id="e5780-104">You can shadow the variable you want to hide in two ways:</span></span>  
   
--   **通过范围隐藏。**可以通过范围隐藏变量，方法是：在包含您希望隐藏的变量的区域的子区域内重新声明变量。  
+-   <span data-ttu-id="e5780-105">**通过范围进行隐藏。**</span><span class="sxs-lookup"><span data-stu-id="e5780-105">**Shadowing Through Scope.**</span></span> <span data-ttu-id="e5780-106">你可以通过范围隐藏隐藏包含你想要隐藏的变量的区域的子区域内。</span><span class="sxs-lookup"><span data-stu-id="e5780-106">You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.</span></span>  
   
--   **通过继承隐藏。**如果您希望隐藏的变量是在类级别上定义的，可以通过继承隐藏该变量，用 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 关键字在派生类中重新声明该变量。  
+-   <span data-ttu-id="e5780-107">**通过继承进行隐藏。**</span><span class="sxs-lookup"><span data-stu-id="e5780-107">**Shadowing Through Inheritance.**</span></span> <span data-ttu-id="e5780-108">如果你想要隐藏的变量在类级别定义的可以隐藏它通过继承隐藏其与[阴影](../../../../visual-basic/language-reference/modifiers/shadows.md)派生类中的关键字。</span><span class="sxs-lookup"><span data-stu-id="e5780-108">If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.</span></span>  
   
-## 隐藏变量的两种方式  
+## <a name="two-ways-to-hide-a-variable"></a><span data-ttu-id="e5780-109">两种方法来隐藏的变量</span><span class="sxs-lookup"><span data-stu-id="e5780-109">Two Ways to Hide a Variable</span></span>  
   
-#### 通过范围隐藏来隐藏变量  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a><span data-ttu-id="e5780-110">若要隐藏变量通过范围进行隐藏</span><span class="sxs-lookup"><span data-stu-id="e5780-110">To hide a variable by shadowing it through scope</span></span>  
   
-1.  确定定义您希望隐藏的变量的区域，然后确定一个子区域，在其中用您的变量重新定义该变量。  
+1.  <span data-ttu-id="e5780-111">确定定义你想要隐藏，的变量的区域，并确定要对其重新定义与你的变量在其中一个子区域。</span><span class="sxs-lookup"><span data-stu-id="e5780-111">Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.</span></span>  
   
-    |变量的区域|允许用于重新定义变量的子区域|  
-    |-----------|--------------------|  
-    |模块|模块中的类|  
-    |类|类中的子类<br /><br /> 类中的过程|  
+    |<span data-ttu-id="e5780-112">变量的区域</span><span class="sxs-lookup"><span data-stu-id="e5780-112">Variable's region</span></span>|<span data-ttu-id="e5780-113">为重新定义它的允许子区域</span><span class="sxs-lookup"><span data-stu-id="e5780-113">Allowable subregion for redefining it</span></span>|  
+    |-----------------------|-------------------------------------------|  
+    |<span data-ttu-id="e5780-114">模块</span><span class="sxs-lookup"><span data-stu-id="e5780-114">Module</span></span>|<span data-ttu-id="e5780-115">该模块中的类</span><span class="sxs-lookup"><span data-stu-id="e5780-115">A class within the module</span></span>|  
+    |<span data-ttu-id="e5780-116">类</span><span class="sxs-lookup"><span data-stu-id="e5780-116">Class</span></span>|<span data-ttu-id="e5780-117">中的类的子类</span><span class="sxs-lookup"><span data-stu-id="e5780-117">A subclass within the class</span></span><br /><br /> <span data-ttu-id="e5780-118">一个类中的过程</span><span class="sxs-lookup"><span data-stu-id="e5780-118">A procedure within the class</span></span>|  
   
-     在该过程内的块中（例如在 `If`...`End If` 构造或 `For` 循环中）不能重新定义过程变量。  
+     <span data-ttu-id="e5780-119">不能例如重新在该过程中，块中的过程变量定义在`If`...`End If`构造或`For`循环。</span><span class="sxs-lookup"><span data-stu-id="e5780-119">You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.</span></span>  
   
-2.  如果子区域尚不存在，创建子区域。  
+2.  <span data-ttu-id="e5780-120">如果不存在，请创建子区域。</span><span class="sxs-lookup"><span data-stu-id="e5780-120">Create the subregion if it does not already exist.</span></span>  
   
-3.  在子区域内，编写一个 [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md) 来声明隐藏变量。  
+3.  <span data-ttu-id="e5780-121">在子区域内，编写[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明隐藏的变量。</span><span class="sxs-lookup"><span data-stu-id="e5780-121">Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.</span></span>  
   
-     当子区域内的代码引用变量名时，编译器会将该引用解析为隐藏变量。  
+     <span data-ttu-id="e5780-122">当子区域内的代码引用的变量的名称时，编译器将解析对隐藏的变量的引用。</span><span class="sxs-lookup"><span data-stu-id="e5780-122">When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.</span></span>  
   
-     下面的示例阐释了通过范围进行的隐藏以及绕开隐藏的引用。  
+     <span data-ttu-id="e5780-123">下面的示例演示通过作用域，以及绕开隐藏的引用进行隐藏。</span><span class="sxs-lookup"><span data-stu-id="e5780-123">The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.</span></span>  
   
     ```  
     Module shadowByScope  
@@ -76,21 +75,21 @@ caps.handback.revision: 25
     End Module  
     ```  
   
-     上面的示例在模块级别和过程级别上声明变量 `num`（在过程 `show` 中）。  局部变量 `num` 在 `show` 内隐藏模块级变量 `num`，因此该局部变量设置为 2。  而在 `useModuleLevelNum` 过程中，没有局部变量隐藏 `num`。  因此，`useModuleLevelNum` 将模块级变量的值设置为 1。  
+     <span data-ttu-id="e5780-124">前面的示例声明了变量`num`在模块级别和过程级别 (在过程中`show`)。</span><span class="sxs-lookup"><span data-stu-id="e5780-124">The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`).</span></span> <span data-ttu-id="e5780-125">本地变量`num`隐藏模块级变量`num`内`show`，因此本地变量设置为 2。</span><span class="sxs-lookup"><span data-stu-id="e5780-125">The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2.</span></span> <span data-ttu-id="e5780-126">但是，没有任何局部变量为卷影`num`中`useModuleLevelNum`过程。</span><span class="sxs-lookup"><span data-stu-id="e5780-126">However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure.</span></span> <span data-ttu-id="e5780-127">因此，`useModuleLevelNum`模块级变量的值设置为 1。</span><span class="sxs-lookup"><span data-stu-id="e5780-127">Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.</span></span>  
   
-     `show` 内的 `MsgBox` 调用通过用模块名限定 `num` 绕开了隐藏机制。  因此，它显示的是模块级变量而不是局部变量。  
+     <span data-ttu-id="e5780-128">`MsgBox`内调用`show`隐藏机制将绕过通过限定`num`使用模块名称。</span><span class="sxs-lookup"><span data-stu-id="e5780-128">The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name.</span></span> <span data-ttu-id="e5780-129">因此，它显示模块级变量，而不是本地的变量。</span><span class="sxs-lookup"><span data-stu-id="e5780-129">Therefore, it displays the module-level variable instead of the local variable.</span></span>  
   
-#### 通过继承隐藏来隐藏变量  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a><span data-ttu-id="e5780-130">若要通过隐藏通过继承隐藏的变量</span><span class="sxs-lookup"><span data-stu-id="e5780-130">To hide a variable by shadowing it through inheritance</span></span>  
   
-1.  确保在类中和类级别上声明您希望隐藏的变量（在任何过程外部）。  否则就不能通过继承来隐藏变量。  
+1.  <span data-ttu-id="e5780-131">请确保你想要隐藏的变量声明在类中，并在类级别 （之外任何过程）。</span><span class="sxs-lookup"><span data-stu-id="e5780-131">Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure).</span></span> <span data-ttu-id="e5780-132">否则不能通过继承隐藏它。</span><span class="sxs-lookup"><span data-stu-id="e5780-132">Otherwise you cannot shadow it through inheritance.</span></span>  
   
-2.  定义一个从变量的类派生的类（如果不存在这样的类）。  
+2.  <span data-ttu-id="e5780-133">定义派生自变量的类，如果尚不存在的类。</span><span class="sxs-lookup"><span data-stu-id="e5780-133">Define a class derived from the variable's class if one does not already exist.</span></span>  
   
-3.  在派生类的内部，编写一个 `Dim` 语句来声明您的变量。  将 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 关键字包含在声明中。  
+3.  <span data-ttu-id="e5780-134">在派生类中，编写`Dim`语句声明您的变量。</span><span class="sxs-lookup"><span data-stu-id="e5780-134">Inside the derived class, write a `Dim` statement declaring your variable.</span></span> <span data-ttu-id="e5780-135">包括[阴影](../../../../visual-basic/language-reference/modifiers/shadows.md)声明中的关键字。</span><span class="sxs-lookup"><span data-stu-id="e5780-135">Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.</span></span>  
   
-     当派生类中的代码引用变量名时，编译器会将该引用解析为您的变量。  
+     <span data-ttu-id="e5780-136">当在派生类中的代码引用的变量的名称时，编译器将解析对你的变量的引用。</span><span class="sxs-lookup"><span data-stu-id="e5780-136">When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.</span></span>  
   
-     下面的示例阐释了如何通过继承进行隐藏。  这里有两个引用，一个访问隐藏变量，另一个绕开隐藏。  
+     <span data-ttu-id="e5780-137">下面的示例演示通过继承进行隐藏。</span><span class="sxs-lookup"><span data-stu-id="e5780-137">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="e5780-138">它使两个引用，一个访问隐藏的变量，一个绕开隐藏。</span><span class="sxs-lookup"><span data-stu-id="e5780-138">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -107,17 +106,17 @@ caps.handback.revision: 25
     End Class  
     ```  
   
-     上一个示例在基类中声明变量 `shadowString`，而在派生类中隐藏该变量。  当名称 `shadowString` 没有限定时，派生类中的过程 `showStrings` 显示字符串的隐藏版本。  当 `shadowString` 由 `MyBase` 关键字限定时，则显示被隐藏的版本。  
+     <span data-ttu-id="e5780-139">前面的示例声明了变量`shadowString`中的基类和派生类中隐藏它。</span><span class="sxs-lookup"><span data-stu-id="e5780-139">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="e5780-140">该过程`showStrings`派生类中显示隐藏版本的字符串时名称`shadowString`未限定。</span><span class="sxs-lookup"><span data-stu-id="e5780-140">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="e5780-141">然后，它显示隐藏的版本时`shadowString`是用限定`MyBase`关键字。</span><span class="sxs-lookup"><span data-stu-id="e5780-141">It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.</span></span>  
   
-## 可靠编程  
- 隐藏使用同一名称引入了变量的多个版本。  如果代码语句引用该变量名，则编译器将引用解析到的版本取决于代码语句的位置以及是否存在限定字符串等因素。  这可能会增加引用被隐藏变量的非预期版本的危险。  可以通过完全限定对被隐藏变量的所有引用来降低这种风险。  
+## <a name="robust-programming"></a><span data-ttu-id="e5780-142">可靠编程</span><span class="sxs-lookup"><span data-stu-id="e5780-142">Robust Programming</span></span>  
+ <span data-ttu-id="e5780-143">隐藏引入了多个版本具有相同名称的变量。</span><span class="sxs-lookup"><span data-stu-id="e5780-143">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="e5780-144">当代码语句引用的变量的名称时，编译器将该引用解析的版本取决于因素，如代码语句的位置和限定字符串的状态。</span><span class="sxs-lookup"><span data-stu-id="e5780-144">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="e5780-145">这会增加引用隐藏的变量的非预期版本的风险。</span><span class="sxs-lookup"><span data-stu-id="e5780-145">This can increase the risk of referring to an unintended version of a shadowed variable.</span></span> <span data-ttu-id="e5780-146">你可以通过完全限定到隐藏的变量的所有引用来降低该风险。</span><span class="sxs-lookup"><span data-stu-id="e5780-146">You can lower that risk by fully qualifying all references to a shadowed variable.</span></span>  
   
-## 请参阅  
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="e5780-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5780-147">See Also</span></span>  
+ [<span data-ttu-id="e5780-148">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="e5780-148">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="e5780-149">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="e5780-149">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="e5780-150">隐藏和重写之间的差异</span><span class="sxs-lookup"><span data-stu-id="e5780-150">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="e5780-151">如何：隐藏继承的变量</span><span class="sxs-lookup"><span data-stu-id="e5780-151">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="e5780-152">如何：访问被派生类隐藏的变量</span><span class="sxs-lookup"><span data-stu-id="e5780-152">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="e5780-153">Overrides</span><span class="sxs-lookup"><span data-stu-id="e5780-153">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="e5780-154">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="e5780-154">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="e5780-155">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="e5780-155">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

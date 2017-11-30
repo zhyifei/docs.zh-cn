@@ -1,108 +1,91 @@
 ---
-title: "在 Visual Basic 中的运算符优先级 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "Visual Basic 中的运算符优先级"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- arithmetic operators, precedence
+- arithmetic operators [Visual Basic], precedence
 - operator precedence
-- logical operators, precedence
+- logical operators [Visual Basic], precedence
 - operators [Visual Basic], associativity
 - operators [Visual Basic], resolution
-- associativity of operators
+- associativity of operators [Visual Basic]
 - operators [Visual Basic], precedence
-- precedence, of operators
-- comparison operators, precedence
-- math operators
+- precedence [Visual Basic], of operators
+- comparison operators [Visual Basic], precedence
+- math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的运算符优先级
-如果在表达式中出现多个运算，计算和解析按预定的顺序调用每个部件*运算符优先级*。  
+# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="60989-102">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="60989-102">Operator Precedence in Visual Basic</span></span>
+<span data-ttu-id="60989-103">如果在表达式中出现多个运算，计算和解析按预设的顺序调用每个部分*运算符优先级*。</span><span class="sxs-lookup"><span data-stu-id="60989-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>  
   
-## <a name="precedence-rules"></a>优先顺序规则  
- 当表达式包含多个类别中的运算符时，它们会根据以下规则进行评估︰  
+## <a name="precedence-rules"></a><span data-ttu-id="60989-104">优先规则</span><span class="sxs-lookup"><span data-stu-id="60989-104">Precedence Rules</span></span>  
+ <span data-ttu-id="60989-105">当表达式包含从多个类别的运算符时，它们会根据下列规则进行评估：</span><span class="sxs-lookup"><span data-stu-id="60989-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>  
   
--   算术运算符和串联运算符具有以下部分所述的优先顺序，并且都有优先级高于比较、 逻辑运算符和位运算符。  
+-   <span data-ttu-id="60989-106">算术运算符和串联运算符具有的下一节中所述的优先顺序，都具有优先级高于比较、 逻辑和按位运算符。</span><span class="sxs-lookup"><span data-stu-id="60989-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>  
   
--   所有比较运算符都具有相同的优先级，以及所有都具有优先级高于逻辑运算符和位运算符，但优先级低于算术运算符和串联运算符。  
+-   <span data-ttu-id="60989-107">所有比较运算符都具有相同的优先级，以及所有都具有优先级高于逻辑运算符和位运算符，但优先级低于算术和串联运算符。</span><span class="sxs-lookup"><span data-stu-id="60989-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>  
   
--   逻辑和按位运算符具有以下部分所述的优先顺序，并且都有优先级低于算术、 串联运算符和比较运算符的优先级。  
+-   <span data-ttu-id="60989-108">逻辑和按位运算符具有的下一节中所述的优先顺序，都具有较低的优先级比算术、 串联和比较运算符。</span><span class="sxs-lookup"><span data-stu-id="60989-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>  
   
--   具有相同优先级的运算符从左到右求值表达式中出现的顺序。  
+-   <span data-ttu-id="60989-109">具有相等的优先级的运算符从左向右进行计算右侧表达式中出现的顺序。</span><span class="sxs-lookup"><span data-stu-id="60989-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>  
   
-## <a name="precedence-order"></a>优先顺序  
- 按以下优先顺序计算运算符︰  
+## <a name="precedence-order"></a><span data-ttu-id="60989-110">优先顺序</span><span class="sxs-lookup"><span data-stu-id="60989-110">Precedence Order</span></span>  
+ <span data-ttu-id="60989-111">按以下优先顺序计算运算符：</span><span class="sxs-lookup"><span data-stu-id="60989-111">Operators are evaluated in the following order of precedence:</span></span>  
   
-### <a name="await-operator"></a>Await 运算符  
- Await  
+### <a name="await-operator"></a><span data-ttu-id="60989-112">Await 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-112">Await Operator</span></span>  
+ <span data-ttu-id="60989-113">await</span><span class="sxs-lookup"><span data-stu-id="60989-113">Await</span></span>  
   
-### <a name="arithmetic-and-concatenation-operators"></a>算术运算符和串联运算符  
- 求幂 (`^`)  
+### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="60989-114">算术运算符和串联运算符</span><span class="sxs-lookup"><span data-stu-id="60989-114">Arithmetic and Concatenation Operators</span></span>  
+ <span data-ttu-id="60989-115">求幂 (`^`)</span><span class="sxs-lookup"><span data-stu-id="60989-115">Exponentiation (`^`)</span></span>  
   
- 一元标识和求反 (`+`， `–`)  
+ <span data-ttu-id="60989-116">一元标识和求反 (`+`， `–`)</span><span class="sxs-lookup"><span data-stu-id="60989-116">Unary identity and negation (`+`, `–`)</span></span>  
   
- 乘法和浮点除法运算 (`*`， `/`)  
+ <span data-ttu-id="60989-117">乘法和浮点除法运算 (`*`， `/`)</span><span class="sxs-lookup"><span data-stu-id="60989-117">Multiplication and floating-point division (`*`, `/`)</span></span>  
   
- 整数除法 (`\`)  
+ <span data-ttu-id="60989-118">整数除法 (`\`)</span><span class="sxs-lookup"><span data-stu-id="60989-118">Integer division (`\`)</span></span>  
   
- 取模算术 (`Mod`)  
+ <span data-ttu-id="60989-119">取模算术 (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="60989-119">Modulus arithmetic (`Mod`)</span></span>  
   
- 加法和减法 (`+`， `–`)  
+ <span data-ttu-id="60989-120">加法和减法 (`+`， `–`)</span><span class="sxs-lookup"><span data-stu-id="60989-120">Addition and subtraction (`+`, `–`)</span></span>  
   
- 字符串串联 (`&`)  
+ <span data-ttu-id="60989-121">字符串串联 (`&`)</span><span class="sxs-lookup"><span data-stu-id="60989-121">String concatenation (`&`)</span></span>  
   
- 算术移位 (`<<`， `>>`)  
+ <span data-ttu-id="60989-122">算术移位 (`<<`， `>>`)</span><span class="sxs-lookup"><span data-stu-id="60989-122">Arithmetic bit shift (`<<`, `>>`)</span></span>  
   
-### <a name="comparison-operators"></a>比较运算符  
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)  
+### <a name="comparison-operators"></a><span data-ttu-id="60989-123">比较运算符</span><span class="sxs-lookup"><span data-stu-id="60989-123">Comparison Operators</span></span>  
+ <span data-ttu-id="60989-124">所有比较运算符 (`=`， `<>`， `<`， `<=`， `>`， `>=`， `Is`， `IsNot`， `Like`， `TypeOf`...`Is`)</span><span class="sxs-lookup"><span data-stu-id="60989-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>  
   
-### <a name="logical-and-bitwise-operators"></a>逻辑运算符和位运算符  
- 求反 (`Not`)  
+### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="60989-125">逻辑和按位运算符</span><span class="sxs-lookup"><span data-stu-id="60989-125">Logical and Bitwise Operators</span></span>  
+ <span data-ttu-id="60989-126">求反 (`Not`)</span><span class="sxs-lookup"><span data-stu-id="60989-126">Negation (`Not`)</span></span>  
   
- 结合使用 (`And`， `AndAlso`)  
+ <span data-ttu-id="60989-127">结合使用 (`And`， `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="60989-127">Conjunction (`And`, `AndAlso`)</span></span>  
   
- 包含析取 (`Or`， `OrElse`)  
+ <span data-ttu-id="60989-128">包含析取 (`Or`， `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="60989-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>  
   
- 异或结果 (`Xor`)  
+ <span data-ttu-id="60989-129">异或结果 (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="60989-129">Exclusive disjunction (`Xor`)</span></span>  
   
-### <a name="comments"></a>注释  
- `=`运算符只是相等性比较运算符，不是赋值运算符。  
+### <a name="comments"></a><span data-ttu-id="60989-130">注释</span><span class="sxs-lookup"><span data-stu-id="60989-130">Comments</span></span>  
+ <span data-ttu-id="60989-131">`=`运算符是仅相等性比较运算符，而不是赋值运算符。</span><span class="sxs-lookup"><span data-stu-id="60989-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>  
   
- 字符串串联运算符 (`&`) 不是算术运算符，但它在优先级方面与算术运算符一组。  
+ <span data-ttu-id="60989-132">字符串串联运算符 (`&`) 不是算术的运算符，但它在优先级方面与算术运算符一组。</span><span class="sxs-lookup"><span data-stu-id="60989-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>  
   
- `Is`和`IsNot`运算符是对象引用的比较运算符。 它们不比较两个对象的值这些检查仅以确定是否有两个对象变量引用同一对象实例。  
+ <span data-ttu-id="60989-133">`Is`和`IsNot`运算符是对象的引用比较运算符。</span><span class="sxs-lookup"><span data-stu-id="60989-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="60989-134">它们不比较两个对象的值它们检查仅以确定是否两个对象变量引用同一对象实例。</span><span class="sxs-lookup"><span data-stu-id="60989-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>  
   
-## <a name="associativity"></a>结合性  
- 当相同优先级的运算符一起出现在表达式中，例如乘法和除法中，编译器将评估每个操作，当它遇到它从左到右。 下面的示例阐释了这一点。  
+## <a name="associativity"></a><span data-ttu-id="60989-135">结合性</span><span class="sxs-lookup"><span data-stu-id="60989-135">Associativity</span></span>  
+ <span data-ttu-id="60989-136">当相等的优先级的运算符一起出现在表达式中，例如乘法和除法，编译器将评估每个操作，当它从左到右进行遇到。</span><span class="sxs-lookup"><span data-stu-id="60989-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="60989-137">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="60989-137">The following example illustrates this.</span></span>  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -110,12 +93,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- 第一个表达式的计算结果除法 96 / 8 （这会导致 12），然后除法 12 / 4，结果为 3。 由于编译器将计算的操作`n1`从左到右，计算的是相同的显式指示该顺序`n2`。 同时`n1`和`n2`具有三个结果。 与此相反，`n3`的结果为 48，是因为圆括号强制编译器可以计算 8 / 4 第一个。  
+ <span data-ttu-id="60989-138">第一个表达式的计算结果除法 96 / 8 （这会导致 12），然后除法 12 / 4，结果为 3。</span><span class="sxs-lookup"><span data-stu-id="60989-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="60989-139">因为编译器将评估的操作`n1`从左到右，评估时相同为显式指明该顺序`n2`。</span><span class="sxs-lookup"><span data-stu-id="60989-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="60989-140">同时`n1`和`n2`具有三个结果。</span><span class="sxs-lookup"><span data-stu-id="60989-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="60989-141">与此相反，`n3`的结果为 48，是因为圆括号强制编译器可以计算 8 / 4 第一个。</span><span class="sxs-lookup"><span data-stu-id="60989-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>  
   
- 由于此行为，运算符被认为是*左结合运算符*中[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+ <span data-ttu-id="60989-142">由于此行为，运算符被认为是*左结合运算符*中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="60989-142">Because of this behavior, operators are said to be *left associative* in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="overriding-precedence-and-associativity"></a>重写优先级和结合性  
- 可以使用括号强制先于其他计算的表达式的某些部分。 这会重写的优先顺序和左的关联性。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]始终执行括在括号之前以外的操作。 但是，在括号内，这样可保持正常的优先级和结合性，除非使用括号在括号内。 下面的示例阐释了这一点。  
+## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="60989-143">重写优先级和关联性</span><span class="sxs-lookup"><span data-stu-id="60989-143">Overriding Precedence and Associativity</span></span>  
+ <span data-ttu-id="60989-144">可以使用括号来强制先于其他计算的表达式的某些部分。</span><span class="sxs-lookup"><span data-stu-id="60989-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="60989-145">这会重写的优先顺序和左的关联性。</span><span class="sxs-lookup"><span data-stu-id="60989-145">This can override both the order of precedence and the left associativity.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="60989-146">始终执行括在括号之前以外的操作。</span><span class="sxs-lookup"><span data-stu-id="60989-146"> always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="60989-147">但是，在括号内，这样可保持普通优先级和关联性，除非你使用在括号内的括号。</span><span class="sxs-lookup"><span data-stu-id="60989-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="60989-148">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="60989-148">The following example illustrates this.</span></span>  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -135,12 +118,12 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)   
- [TypeOf 运算符](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Await 运算符](../../../visual-basic/language-reference/operators/await-operator.md)   
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="60989-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="60989-149">See Also</span></span>  
+ [<span data-ttu-id="60989-150">= 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-150">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [<span data-ttu-id="60989-151">Is 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-151">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="60989-152">IsNot 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-152">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="60989-153">Like 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-153">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [<span data-ttu-id="60989-154">TypeOf 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-154">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [<span data-ttu-id="60989-155">Await 运算符</span><span class="sxs-lookup"><span data-stu-id="60989-155">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="60989-156">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="60989-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="60989-157">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="60989-157">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -1,114 +1,115 @@
 ---
-title: "如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "颜色, 应用于 DataGrid 控件"
-  - "列 [Windows 窗体], DataGrid 控件"
-  - "DataGrid 控件 [Windows 窗体], 默认样式"
-  - "DataGrid 控件 [Windows 窗体], 格式化"
-  - "格式设置 [Windows 窗体]"
-  - "表 [Windows 窗体], DataGrid 控件中的格式设置"
+title: "如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid controls
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="7337a-102">如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式</span><span class="sxs-lookup"><span data-stu-id="7337a-102">How to: Format the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。  有关更多信息，请参见 [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <span data-ttu-id="7337a-103"><xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="7337a-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="7337a-104">有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="7337a-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- 对 <xref:System.Windows.Forms.DataGrid> 控件的不同部分应用不同颜色可使得该控件中的信息更加易于阅读和解释。  颜色可以应用于行和列。  您还可以自行决定隐藏还是显示行和列。  
+ <span data-ttu-id="7337a-105">将不同的颜色应用于各个部分的<xref:System.Windows.Forms.DataGrid>控件可以帮助将在其中的信息以易于读取和解释。</span><span class="sxs-lookup"><span data-stu-id="7337a-105">Applying different colors to various parts of a <xref:System.Windows.Forms.DataGrid> control can help to make the information in it easier to read and interpret.</span></span> <span data-ttu-id="7337a-106">颜色可以应用于行和列。</span><span class="sxs-lookup"><span data-stu-id="7337a-106">Color can be applied to rows and columns.</span></span> <span data-ttu-id="7337a-107">行和列可以还显示或隐藏根据你的判断。</span><span class="sxs-lookup"><span data-stu-id="7337a-107">Rows and columns can also be hidden or shown at your discretion.</span></span>  
   
- 设置 <xref:System.Windows.Forms.DataGrid> 控件的格式涉及三个基本方面：  
+ <span data-ttu-id="7337a-108">有三个基本方面的格式设置<xref:System.Windows.Forms.DataGrid>控件：</span><span class="sxs-lookup"><span data-stu-id="7337a-108">There are three basic aspects of formatting the <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
--   您可以设置属性来建立显示数据的默认样式。  
+-   <span data-ttu-id="7337a-109">你可以设置属性以建立数据显示为默认样式。</span><span class="sxs-lookup"><span data-stu-id="7337a-109">You can set properties to establish a default style in which data is displayed.</span></span>  
   
--   以此为基础，接着可以自定义某些表在运行时的显示方式。  
+-   <span data-ttu-id="7337a-110">以此为基础，你可以然后自定义在运行时显示某些表的方式。</span><span class="sxs-lookup"><span data-stu-id="7337a-110">From that base, you can then customize the way certain tables are displayed at run time.</span></span>  
   
--   最后，您可以修改在数据网格中显示哪些列以及显示哪些颜色和其他格式设置。  
+-   <span data-ttu-id="7337a-111">最后，您可以修改哪些列显示在数据网格以及颜色和其他格式显示。</span><span class="sxs-lookup"><span data-stu-id="7337a-111">Finally, you can modify which columns are displayed in the data grid as well as the colors and other formatting that is shown.</span></span>  
   
- 设置数据网格的格式时，首先可以设置 <xref:System.Windows.Forms.DataGrid> 本身的属性。  以这些颜色和格式选择为基础，您可以根据显示的数据表和列进行更改。  
+ <span data-ttu-id="7337a-112">在格式设置数据网格中执行初始步骤，你可以设置的属性<xref:System.Windows.Forms.DataGrid>本身。</span><span class="sxs-lookup"><span data-stu-id="7337a-112">As an initial step in formatting a data grid, you can set the properties of the <xref:System.Windows.Forms.DataGrid> itself.</span></span> <span data-ttu-id="7337a-113">这些颜色和格式选项的窗体的基从中然后可以根据的数据表和显示的列的更改。</span><span class="sxs-lookup"><span data-stu-id="7337a-113">These color and format choices form a base from which you can then make changes depending on the data tables and columns displayed.</span></span>  
   
- 下面的过程需要一个**“Windows 应用程序”**项目，该项目拥有一个包含 <xref:System.Windows.Forms.DataGrid> 控件的窗体。  有关设置此类项目的信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  在 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 中，默认情况下，<xref:System.Windows.Forms.DataGrid> 控件不在**“工具箱”**中。  有关更多信息，请参见[How to: Add Items to the Toolbox](http://msdn.microsoft.com/zh-cn/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+ <span data-ttu-id="7337a-114">下面的过程需要**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.DataGrid>控件。</span><span class="sxs-lookup"><span data-stu-id="7337a-114">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="7337a-115">有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="7337a-115">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="7337a-116">在[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**默认情况下。</span><span class="sxs-lookup"><span data-stu-id="7337a-116">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="7337a-117">有关详细信息，请参阅[如何： 将项添加到工具箱](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)。</span><span class="sxs-lookup"><span data-stu-id="7337a-117">For more information, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="7337a-118">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="7337a-118">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="7337a-119">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="7337a-119">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="7337a-120">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="7337a-120">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 为 DataGrid 控件创建默认样式  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a><span data-ttu-id="7337a-121">若要建立的 DataGrid 控件的默认样式</span><span class="sxs-lookup"><span data-stu-id="7337a-121">To establish a default style for the DataGrid control</span></span>  
   
-1.  选择 <xref:System.Windows.Forms.DataGrid> 控件。  
+1.  <span data-ttu-id="7337a-122">选择 <xref:System.Windows.Forms.DataGrid> 控件。</span><span class="sxs-lookup"><span data-stu-id="7337a-122">Select the <xref:System.Windows.Forms.DataGrid> control.</span></span>  
   
-2.  在**“属性”**窗口中，根据需要设置下列属性。  
+2.  <span data-ttu-id="7337a-123">在**属性**窗口中，根据需要设置以下属性。</span><span class="sxs-lookup"><span data-stu-id="7337a-123">In the **Properties** window, set the following properties, as appropriate.</span></span>  
   
-    |属性|说明|  
-    |--------|--------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` 属性定义网格偶数行的颜色。  在将 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 属性设置为另一种颜色时，间隔行（第 1 行、第 3 行、第 5 行，等等）将设置为此新颜色。|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|网格偶数行（第 0 行、第 2 行、第 4 行、第 6 行，等等）的背景色。|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> 和 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 属性确定网格行的颜色，<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> 属性确定非行区域（只有在网格滚动到底部或网格中只包含少数几行时，才能看到该区域）的颜色。|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|网格的边框样式，<xref:System.Windows.Forms.BorderStyle> 枚举值之一。|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|网格正上方网格窗口标题的背景色。|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|网格顶部标题的字体。|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|网格的窗口标题的背景色。|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|用于显示网格中文本的字体。|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|数据网格行中的数据所显示的字体颜色。|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|数据网格的网格线的颜色。|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|网格单元格分隔线的样式，<xref:System.Windows.Forms.DataGridLineStyle> 枚举值之一。|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|行标头和列标头的背景色。|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|用于列标头的字体。|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|网格的列标头的前景色，包括列标头文本以及加号 \(\+\) 和减号 \(\-\) 的标志符号（用于在显示多个相关的表时展开和折叠行）。|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|数据网格中所有链接的文本颜色，包括指向子表的链接、关系名称，等等。|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|在子表中，这是父行的背景色。|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|在子表中，这是父行的前景色。|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|通过 <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> 枚举确定父行中是否显示表名和列名。|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|网格中列的默认宽度（以像素为单位）。  请在重置 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 和 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 属性（单独进行设置，或者通过 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法设置）之前设置此属性，否则此属性将无效。<br /><br /> 该属性不能设置为小于 0 的值。|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|网格中行的行高（以像素为单位）。  请在重置 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 和 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 属性（单独进行设置，或者通过 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法设置）之前设置此属性，否则此属性将无效。<br /><br /> 该属性不能设置为小于 0 的值。|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|网格的行标头的宽度。|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|在选中行或单元格时，这是背景色。|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|在选中行或单元格时，这是前景色。|  
+    |<span data-ttu-id="7337a-124">属性</span><span class="sxs-lookup"><span data-stu-id="7337a-124">Property</span></span>|<span data-ttu-id="7337a-125">描述</span><span class="sxs-lookup"><span data-stu-id="7337a-125">Description</span></span>|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<span data-ttu-id="7337a-126">`BackColor`属性定义的网格中偶数行的颜色。</span><span class="sxs-lookup"><span data-stu-id="7337a-126">The `BackColor` property defines the color of the even-numbered rows of the grid.</span></span> <span data-ttu-id="7337a-127">当你将设置<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>为不同的颜色的属性，所有其他行设置为此新的颜色 （行 1、 3、 5 和等等）。</span><span class="sxs-lookup"><span data-stu-id="7337a-127">When you set the <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> property to a different color, every other row is set to this new color (rows 1, 3, 5, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|<span data-ttu-id="7337a-128">网格中偶数行的背景色 （行 0、 2、 4、 6 和等等）。</span><span class="sxs-lookup"><span data-stu-id="7337a-128">The background color of the even-numbered rows of the grid (rows 0, 2, 4, 6, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<span data-ttu-id="7337a-129">而<xref:System.Windows.Forms.DataGrid.BackColor%2A>和<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>属性确定在网格中，行的颜色<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>属性确定行区域，该网格滚动到底部，或如果只有少量的行才可见区域以外的区域的颜色包含在网格中。</span><span class="sxs-lookup"><span data-stu-id="7337a-129">Whereas the <xref:System.Windows.Forms.DataGrid.BackColor%2A> and <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> properties determines the color of rows in the grid, the <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> property determines the color of the area outside the row area, which is only visible when the grid is scrolled to the bottom, or if only a few rows are contained in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|<span data-ttu-id="7337a-130">网格的边框样式，之一<xref:System.Windows.Forms.BorderStyle>枚举值。</span><span class="sxs-lookup"><span data-stu-id="7337a-130">The grid's border style, one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|<span data-ttu-id="7337a-131">正上方网格的网格窗口标题的背景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-131">The background color of the grid's window caption which appears immediately above the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|<span data-ttu-id="7337a-132">在顶部网格标题的字体。</span><span class="sxs-lookup"><span data-stu-id="7337a-132">The font of the caption at the top of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|<span data-ttu-id="7337a-133">网格的窗口标题的背景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-133">The background color of the grid's window caption.</span></span>|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|<span data-ttu-id="7337a-134">用于在网格中显示文本的字体。</span><span class="sxs-lookup"><span data-stu-id="7337a-134">The font used to display the text in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|<span data-ttu-id="7337a-135">数据网格行中的数据显示字体的颜色。</span><span class="sxs-lookup"><span data-stu-id="7337a-135">The color of the font displayed by the data in the rows of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|<span data-ttu-id="7337a-136">数据网格的网格线的颜色。</span><span class="sxs-lookup"><span data-stu-id="7337a-136">The color of the grid lines of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<span data-ttu-id="7337a-137">网格，其中一个单元格进行分隔线的样式<xref:System.Windows.Forms.DataGridLineStyle>枚举值。</span><span class="sxs-lookup"><span data-stu-id="7337a-137">The style of the lines separating the cells of the grid, one of the <xref:System.Windows.Forms.DataGridLineStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|<span data-ttu-id="7337a-138">行和列标题的背景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-138">The background color of row and column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|<span data-ttu-id="7337a-139">用于列标题的字体。</span><span class="sxs-lookup"><span data-stu-id="7337a-139">The font used for the column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|<span data-ttu-id="7337a-140">显示网格的列标题，包括列标题文本的加号 （+） 和减号 （-） 展开和折叠行，多个相关表时的标志符号的前景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-140">The foreground color of the grid's column headers, including the column header text and the plus sign (+) and minus sign (-) glyphs that expand and collapse rows when multiple related tables are displayed.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|<span data-ttu-id="7337a-141">在数据网格中，包括指向子表、 关系名称和等等的所有链接的文本的颜色。</span><span class="sxs-lookup"><span data-stu-id="7337a-141">The color of text of all the links in the data grid, including links to child tables, the relation name, and so on.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|<span data-ttu-id="7337a-142">在子表中，这是父行的背景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-142">In a child table, this is the background color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|<span data-ttu-id="7337a-143">在子表中，这是父行的前景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-143">In a child table, this is the foreground color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|<span data-ttu-id="7337a-144">确定是否表和列名称显示在父行中，通过<xref:System.Windows.Forms.DataGridParentRowsLabelStyle>枚举。</span><span class="sxs-lookup"><span data-stu-id="7337a-144">Determines whether the table and column names are displayed in the parent row, by means of the <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumeration.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|<span data-ttu-id="7337a-145">网格中列的默认宽度（以像素为单位）。</span><span class="sxs-lookup"><span data-stu-id="7337a-145">The default width (in pixels) of columns in the grid.</span></span> <span data-ttu-id="7337a-146">重置之前设置此属性<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性 (或者单独，或通过<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法)，或者该属性将产生任何效果。</span><span class="sxs-lookup"><span data-stu-id="7337a-146">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="7337a-147">属性不能设置为小于 0 的值。</span><span class="sxs-lookup"><span data-stu-id="7337a-147">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|<span data-ttu-id="7337a-148">行的高度 （以像素为单位） 的网格中的行。</span><span class="sxs-lookup"><span data-stu-id="7337a-148">The row height (in pixels) of rows in the grid.</span></span> <span data-ttu-id="7337a-149">重置之前设置此属性<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性 (或者单独，或通过<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法)，或者该属性将产生任何效果。</span><span class="sxs-lookup"><span data-stu-id="7337a-149">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="7337a-150">属性不能设置为小于 0 的值。</span><span class="sxs-lookup"><span data-stu-id="7337a-150">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|<span data-ttu-id="7337a-151">网格的行标题的宽度。</span><span class="sxs-lookup"><span data-stu-id="7337a-151">The width of the row headers of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|<span data-ttu-id="7337a-152">选择行或单元格时，这是背景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-152">When a row or cell is selected, this is the background color.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|<span data-ttu-id="7337a-153">选择行或单元格时，这是的前景色。</span><span class="sxs-lookup"><span data-stu-id="7337a-153">When a row or cell is selected, this is the foreground color.</span></span>|  
   
     > [!NOTE]
-    >  在自定义控件颜色时，颜色选择不当（例如，红色和绿色）有可能导致无法访问控件。  要避免此问题，请使用**“系统颜色”**调色板提供的颜色。  
+    >  <span data-ttu-id="7337a-154">当您要自定义控件的颜色时，则可以使控件不佳的颜色选择 （例如，红色和绿色） 不可访问。</span><span class="sxs-lookup"><span data-stu-id="7337a-154">When you are customizing the colors of controls, it is possible to make the control inaccessible due to poor color choice (for example, red and green).</span></span> <span data-ttu-id="7337a-155">使用提供的颜色**系统颜色**调色板，若要避免此问题。</span><span class="sxs-lookup"><span data-stu-id="7337a-155">Use the colors available on the **System Colors** palette to avoid this issue.</span></span>  
   
-     下面的过程需要一个绑定到数据表的 <xref:System.Windows.Forms.DataGrid> 控件。  有关更多信息，请参见[如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+     <span data-ttu-id="7337a-156">下面的过程需要<xref:System.Windows.Forms.DataGrid>控件绑定到数据表。</span><span class="sxs-lookup"><span data-stu-id="7337a-156">The following procedure requires a <xref:System.Windows.Forms.DataGrid> control bound to a data table.</span></span> <span data-ttu-id="7337a-157">有关详细信息，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。</span><span class="sxs-lookup"><span data-stu-id="7337a-157">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
-### 在设计时设置数据表的表样式和列样式  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a><span data-ttu-id="7337a-158">若要在设计时设置的数据表的表和列样式</span><span class="sxs-lookup"><span data-stu-id="7337a-158">To set the table and column style of a data table at design time</span></span>  
   
-1.  选择窗体上的 <xref:System.Windows.Forms.DataGrid> 控件。  
+1.  <span data-ttu-id="7337a-159">选择<xref:System.Windows.Forms.DataGrid>窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="7337a-159">Select the <xref:System.Windows.Forms.DataGrid> control on your form.</span></span>  
   
-2.  在**“属性”**窗口中，选择 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性并单击**“省略号”**\(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 按钮。  
+2.  <span data-ttu-id="7337a-160">在**属性**窗口中，选择<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性，然后单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮。</span><span class="sxs-lookup"><span data-stu-id="7337a-160">In the **Properties** window, select the <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property and click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button.</span></span>  
   
-3.  在**“DataGridTableStyle 集合编辑器”**对话框中，单击**“添加”**向集合中添加一个表样式。  
+3.  <span data-ttu-id="7337a-161">在**DataGridTableStyle 集合编辑器**对话框中，单击**添加**若要将表样式添加到集合。</span><span class="sxs-lookup"><span data-stu-id="7337a-161">In the **DataGridTableStyle Collection Editor** dialog box, click **Add** to add a table style to the collection.</span></span>  
   
-     通过**“DataGridTableStyle 集合编辑器”**，您可以添加或移除表样式，设置显示和布局属性，并可以为表样式设置映射名称。  
+     <span data-ttu-id="7337a-162">与**DataGridTableStyle 集合编辑器**，可以添加和删除表样式、 设置显示和布局属性和组的表样式名称映射。</span><span class="sxs-lookup"><span data-stu-id="7337a-162">With the **DataGridTableStyle Collection Editor**, you can add and remove table styles, set display and layout properties, and set the mapping name for the table styles.</span></span>  
   
-4.  对于每个表样式，将 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为它的映射名称。  
+4.  <span data-ttu-id="7337a-163">设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>为每个表样式的映射名称的属性。</span><span class="sxs-lookup"><span data-stu-id="7337a-163">Set the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property to the mapping name for each table style.</span></span>  
   
-     映射名称用于指定哪个表应该使用哪种表样式。  
+     <span data-ttu-id="7337a-164">映射名称用于指定哪些表样式应使用哪种表。</span><span class="sxs-lookup"><span data-stu-id="7337a-164">The mapping name is used to specify which table style should be used with which table.</span></span>  
   
-5.  在**“DataGridTableStyle 集合编辑器”**中，选择 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性并单击省略号按钮 \(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)。  
+5.  <span data-ttu-id="7337a-165">在**DataGridTableStyle 集合编辑器**，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).</span><span class="sxs-lookup"><span data-stu-id="7337a-165">In the **DataGridTableStyle Collection Editor**, select the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> property and click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).</span></span>  
   
-6.  在**“DataGridColumnStyle 集合编辑器”**对话框中，向您创建的表样式添加列样式。  
+6.  <span data-ttu-id="7337a-166">在**DataGridColumnStyle 集合编辑器**对话框框中，将列样式添加到你创建的表样式。</span><span class="sxs-lookup"><span data-stu-id="7337a-166">In the **DataGridColumnStyle Collection Editor** dialog box, add column styles to the table style you created.</span></span>  
   
-     通过**“DataGridColumnStyle 集合编辑器”**，您可以添加或移除列样式，设置显示和布局属性，并可以为数据列设置映射名称和格式设置字符串。  
+     <span data-ttu-id="7337a-167">与**DataGridColumnStyle 集合编辑器**、 可以添加和删除列样式，设置显示和布局属性，以及设置映射名称和格式设置字符串的数据列。</span><span class="sxs-lookup"><span data-stu-id="7337a-167">With the **DataGridColumnStyle Collection Editor**, you can add and remove column styles, set display and layout properties, and set the mapping name and formatting strings for the data columns.</span></span>  
   
     > [!NOTE]
-    >  有关格式设置字符串的更多信息，请参见[格式化类型](../../../../docs/standard/base-types/formatting-types.md)。  
+    >  <span data-ttu-id="7337a-168">有关格式设置字符串的详细信息，请参阅[格式化类型](../../../../docs/standard/base-types/formatting-types.md)。</span><span class="sxs-lookup"><span data-stu-id="7337a-168">For more information about formatting strings, see [Formatting Types](../../../../docs/standard/base-types/formatting-types.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7337a-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7337a-169">See Also</span></span>  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [<span data-ttu-id="7337a-170">如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列</span><span class="sxs-lookup"><span data-stu-id="7337a-170">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="7337a-171">DataGrid 控件</span><span class="sxs-lookup"><span data-stu-id="7337a-171">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

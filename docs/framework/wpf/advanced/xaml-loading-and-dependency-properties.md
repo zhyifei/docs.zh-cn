@@ -1,55 +1,60 @@
 ---
-title: "XAML 加载和依赖项属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自定义依赖项属性"
-  - "依赖项属性, XAML 加载"
-  - "加载 XML 数据"
+title: "XAML 加载和依赖项属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom dependency properties [WPF]
+- dependency properties [WPF], XAML loading and
+- loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97970a8a292eee43b01b1eab235376ae9b8e6fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# XAML 加载和依赖项属性
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 当前对其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器的实现在本质上能够识别依赖项属性。  在加载二进制 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并处理作为依赖项属性的特性时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器针对依赖项属性使用属性系统方法。  这会有效地跳过属性包装。  在实现自定义依赖项属性时，必须考虑此行为，而且应当避免将任何其他代码放在除属性系统方法 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 以外的属性包装中。  
+# <a name="xaml-loading-and-dependency-properties"></a><span data-ttu-id="063bb-102">XAML 加载和依赖项属性</span><span class="sxs-lookup"><span data-stu-id="063bb-102">XAML Loading and Dependency Properties</span></span>
+<span data-ttu-id="063bb-103">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器的当前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现固有地知道依赖属性。</span><span class="sxs-lookup"><span data-stu-id="063bb-103">The current [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementation of its [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor is inherently dependency property aware.</span></span> <span data-ttu-id="063bb-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器在加载二进制 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和处理作为依赖属性的特性时对依赖属性使用属性系统方法。</span><span class="sxs-lookup"><span data-stu-id="063bb-104">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor uses property system methods for dependency properties when loading binary [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and processing attributes that are dependency properties.</span></span> <span data-ttu-id="063bb-105">这会有效地跳过属性包装器。</span><span class="sxs-lookup"><span data-stu-id="063bb-105">This effectively bypasses the property wrappers.</span></span> <span data-ttu-id="063bb-106">当实现自定义的依赖项属性时，你必须考虑此行为，并应避免置于属性包装器的属性系统方法以外的任何其他代码<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>。</span><span class="sxs-lookup"><span data-stu-id="063bb-106">When you implement custom dependency properties, you must account for this behavior and should avoid placing any other code in your property wrapper other than the property system methods <xref:System.Windows.DependencyObject.GetValue%2A> and <xref:System.Windows.DependencyObject.SetValue%2A>.</span></span>  
   
-   
   
 <a name="prerequisites"></a>   
-## 必备组件  
- 本主题假设您同时从使用者和作者的角度理解了依赖项属性，而且已经阅读了[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)和[自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  您还应当已经阅读了 [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)和 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="063bb-107">先决条件</span><span class="sxs-lookup"><span data-stu-id="063bb-107">Prerequisites</span></span>  
+ <span data-ttu-id="063bb-108">本主题假定你已从使用者和创作者角度了解依赖属性，并已阅读[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)和[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。</span><span class="sxs-lookup"><span data-stu-id="063bb-108">This topic assumes that you understand dependency properties both as consumer and author and have read [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) and [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).</span></span> <span data-ttu-id="063bb-109">你应也已阅读 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 和 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。</span><span class="sxs-lookup"><span data-stu-id="063bb-109">You should also have read [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) and [XAML Syntax In Detail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span></span>  
   
 <a name="implementation"></a>   
-## WPF XAML 加载器的实现和性能  
- 出于实现方面的原因，以下操作的计算成本较低：将某个属性标识为依赖项属性并访问属性系统的 <xref:System.Windows.DependencyObject.SetValue%2A> 方法来设置该属性（而不是使用属性包装及其 setter）。  这是由于只有当您知道由标记结构和各个字符串所指示的类型和成员关系时，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器才能推断支持代码的整个对象模型。  
+## <a name="the-wpf-xaml-loader-implementation-and-performance"></a><span data-ttu-id="063bb-110">WPF XAML 加载程序实现和性能</span><span class="sxs-lookup"><span data-stu-id="063bb-110">The WPF XAML Loader Implementation, and Performance</span></span>  
+ <span data-ttu-id="063bb-111">对于实现的原因，它是成本计算较低，来标识作为依赖项属性的属性和访问属性系统<xref:System.Windows.DependencyObject.SetValue%2A>方法来设置它，而不是使用属性包装和其 setter。</span><span class="sxs-lookup"><span data-stu-id="063bb-111">For implementation reasons, it is computationally less expensive to identify a property as a dependency property and access the property system <xref:System.Windows.DependencyObject.SetValue%2A> method to set it, rather than using the property wrapper and its setter.</span></span> <span data-ttu-id="063bb-112">这是因为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器必须仅通过了解由标记结构和多种字符串所指示的类型和成员关系来推断支持代码的整个对象模型。</span><span class="sxs-lookup"><span data-stu-id="063bb-112">This is because a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor must infer the entire object model of the backing code based only on knowing the type and member relationships that are indicated by the structure of the markup and various strings.</span></span>  
   
- 可通过 xmlns 和程序集特性的组合来查找类型，但是在标识成员、确定支持将哪个成员设置为特性，以及解析属性值支持哪些类型时，则会要求使用 <xref:System.Reflection.PropertyInfo> 进行广泛的反射。  由于给定类型的依赖项属性可作为存储表通过属性系统来进行访问，因此，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器的实现将使用该表，并推断可以通过以下方法来更高效地设置任何给定的属性 *ABC*：针对包含 <xref:System.Windows.DependencyObject> 派生类型调用 <xref:System.Windows.DependencyObject.SetValue%2A>，并使用依赖项属性标识符 *ABCProperty*。  
+ <span data-ttu-id="063bb-113">类型通过 xmlns 和程序集特性，但标识的成员，确定被设置为一个属性，因为后者无法支持的组合查找和解析的属性值支持哪些类型否则将需要大量反射使用<xref:System.Reflection.PropertyInfo>。</span><span class="sxs-lookup"><span data-stu-id="063bb-113">The type is looked up through a combination of xmlns and assembly attributes, but identifying the members, determining which could support being set as an attribute, and resolving what types the property values support would otherwise require extensive reflection using <xref:System.Reflection.PropertyInfo>.</span></span> <span data-ttu-id="063bb-114">由于给定类型的依赖项属性是通过属性系统的存储表的可访问性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现其[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将使用此表和推断对任何给定属性*ABC*可以通过调用更有效地设置<xref:System.Windows.DependencyObject.SetValue%2A>上包含<xref:System.Windows.DependencyObject>派生类型，使用依赖项属性标识符*ABCProperty*。</span><span class="sxs-lookup"><span data-stu-id="063bb-114">Because dependency properties on a given type are accessible as a storage table through the property system, the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementation of its [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor uses this table and infers that any given property *ABC* can be more efficiently set by calling <xref:System.Windows.DependencyObject.SetValue%2A> on the containing <xref:System.Windows.DependencyObject> derived type, using the dependency property identifier *ABCProperty*.</span></span>  
   
 <a name="implications"></a>   
-## 自定义依赖项属性的含义  
- 由于当前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 为属性设置实现的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器行为会完全跳过包装，因此您不应当将任何其他逻辑放在自定义依赖项属性的包装集定义中。  如果您将此类逻辑放在包装集定义中，则当在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]（而不是代码）中设置属性时，将不会执行此类逻辑。  
+## <a name="implications-for-custom-dependency-properties"></a><span data-ttu-id="063bb-115">自定义依赖属性的影响</span><span class="sxs-lookup"><span data-stu-id="063bb-115">Implications for Custom Dependency Properties</span></span>  
+ <span data-ttu-id="063bb-116">由于进行属性设置的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器行为的当前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现会完全跳过包装器，因此对于自定义依赖属性不应将任何其他逻辑放入包装器的设置定义中。</span><span class="sxs-lookup"><span data-stu-id="063bb-116">Because the current [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementation of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor behavior for property setting bypasses the wrappers entirely, you should not put any additional logic into the set definitions of the wrapper for your custom dependency property.</span></span> <span data-ttu-id="063bb-117">如果将此类逻辑放入设置定义，则在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 而不是代码中设置属性时不会执行逻辑。</span><span class="sxs-lookup"><span data-stu-id="063bb-117">If you put such logic in the set definition, then the logic will not be executed when the property is set in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] rather than in code.</span></span>  
   
- 同样，在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器中，从 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理中获取属性值的其他方面也使用 <xref:System.Windows.DependencyObject.GetValue%2A>，而不是使用包装。  因此，您还应当避免在 `get` 定义中使用除 <xref:System.Windows.DependencyObject.GetValue%2A> 调用以外的任何其他实现。  
+ <span data-ttu-id="063bb-118">同样的其他方面[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]获取的属性值的处理器[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理还使用<xref:System.Windows.DependencyObject.GetValue%2A>而不是使用包装。</span><span class="sxs-lookup"><span data-stu-id="063bb-118">Similarly, other aspects of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor that obtain property values from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processing also use <xref:System.Windows.DependencyObject.GetValue%2A> rather than using the wrapper.</span></span> <span data-ttu-id="063bb-119">因此，你还应该避免在任何其他实现`get`超出定义<xref:System.Windows.DependencyObject.GetValue%2A>调用。</span><span class="sxs-lookup"><span data-stu-id="063bb-119">Therefore, you should also avoid any additional implementation in the `get` definition beyond the <xref:System.Windows.DependencyObject.GetValue%2A> call.</span></span>  
   
- 下面的示例是所建议的具有包装的依赖项属性定义，其中的属性标识符存储为一个 `public` `static` `readonly` 字段，`get` 和 `set` 定义中仅包含定义依赖项属性支持所必需的属性系统方法，而不包含任何其他代码。  
+ <span data-ttu-id="063bb-120">如下示例是包装器的推荐依赖属性定义，其中属性标识符存储为 `public` `static` `readonly` 字段，`get` 和 `set` 定义不包含除定义依赖属性支持所需属性系统方法外的任何代码。</span><span class="sxs-lookup"><span data-stu-id="063bb-120">The following example is a recommended dependency property definition with wrappers, where the property identifier is stored as a `public` `static` `readonly` field, and the `get` and `set` definitions contain no code beyond the necessary property system methods that define the dependency property backing.</span></span>  
   
  [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
  [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
-## 请参阅  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [XAML 概述 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [集合类型依赖项属性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)   
- [依赖项属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)   
- [DependencyObject 的安全构造函数模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+## <a name="see-also"></a><span data-ttu-id="063bb-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="063bb-121">See Also</span></span>  
+ [<span data-ttu-id="063bb-122">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="063bb-122">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="063bb-123">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="063bb-123">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="063bb-124">依赖属性元数据</span><span class="sxs-lookup"><span data-stu-id="063bb-124">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="063bb-125">集合类型依赖属性</span><span class="sxs-lookup"><span data-stu-id="063bb-125">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [<span data-ttu-id="063bb-126">依赖属性的安全性</span><span class="sxs-lookup"><span data-stu-id="063bb-126">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
+ [<span data-ttu-id="063bb-127">DependencyObject 的安全构造函数模式</span><span class="sxs-lookup"><span data-stu-id="063bb-127">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

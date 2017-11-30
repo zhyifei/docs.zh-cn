@@ -1,91 +1,74 @@
 ---
-title: "如何︰ 调用运算符过程 (Visual Basic 中) |Microsoft 文档"
+title: "如何：调用运算符过程 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operator procedures, calling
-- procedures, operator
-- procedure calls, operator overloading
-- syntax, Operator procedures
+- operator procedures [Visual Basic], calling
+- procedures [Visual Basic], operator
+- procedure calls [Visual Basic], operator overloading
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- return values, Operator procedures
-- overloaded operators, calling
+- return values [Visual Basic], Operator procedures
+- overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2403e7a8270c17a8db5417cd8394fd47c373d493
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：调用运算符过程 (Visual Basic)
-通过在表达式中使用的运算符符号调用运算符过程。 对于转换运算符，则调用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)将值从一种数据类型转换到另一个。  
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a><span data-ttu-id="10427-102">如何：调用运算符过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10427-102">How to: Call an Operator Procedure (Visual Basic)</span></span>
+<span data-ttu-id="10427-103">通过在表达式中使用运算符调用运算符过程。</span><span class="sxs-lookup"><span data-stu-id="10427-103">You call an operator procedure by using the operator symbol in an expression.</span></span> <span data-ttu-id="10427-104">对于转换运算符，你调用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)将值从一种数据类型转换为另一个。</span><span class="sxs-lookup"><span data-stu-id="10427-104">In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.</span></span>  
   
- 不显式调用运算符过程。 只需使用该运算符或`CType`函数，在赋值语句或表达式，通常使用的运算符相同的方式。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]在调用运算符过程。  
+ <span data-ttu-id="10427-105">不显式调用运算符过程。</span><span class="sxs-lookup"><span data-stu-id="10427-105">You do not call operator procedures explicitly.</span></span> <span data-ttu-id="10427-106">只需使用运算符，或`CType`函数，在赋值语句或表达式，通常使用运算符相同的方式。</span><span class="sxs-lookup"><span data-stu-id="10427-106">You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="10427-107">使运算符过程调用。</span><span class="sxs-lookup"><span data-stu-id="10427-107"> makes the call to the operator procedure.</span></span>  
   
- 也称为上类或结构定义一个运算符*重载*运算符。  
+ <span data-ttu-id="10427-108">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="10427-108">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-### <a name="to-call-an-operator-procedure"></a>若要调用运算符过程  
+### <a name="to-call-an-operator-procedure"></a><span data-ttu-id="10427-109">若要调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="10427-109">To call an operator procedure</span></span>  
   
-1.  以正常方式在表达式中使用运算符符号。  
+1.  <span data-ttu-id="10427-110">运算符的表达式中使用普通的方式。</span><span class="sxs-lookup"><span data-stu-id="10427-110">Use the operator symbol in an expression in the ordinary way.</span></span>  
   
-2.  请确保操作数的数据类型是适合于该运算符，且按正确的顺序。  
+2.  <span data-ttu-id="10427-111">请确保操作数的数据类型是适合于运算符，且按正确的顺序。</span><span class="sxs-lookup"><span data-stu-id="10427-111">Be sure the data types of the operands are appropriate for the operator, and in the correct order.</span></span>  
   
-3.  运算符可按预期方式的表达式值发挥作用。  
+3.  <span data-ttu-id="10427-112">按预期方式，运算符将分配给表达式的值。</span><span class="sxs-lookup"><span data-stu-id="10427-112">The operator contributes to the value of the expression as expected.</span></span>  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>若要调用的转换运算符过程  
+### <a name="to-call-a-conversion-operator-procedure"></a><span data-ttu-id="10427-113">若要调用转换运算符过程</span><span class="sxs-lookup"><span data-stu-id="10427-113">To call a conversion operator procedure</span></span>  
   
-1.  使用`CType`在表达式内。  
+1.  <span data-ttu-id="10427-114">使用`CType`在表达式内部。</span><span class="sxs-lookup"><span data-stu-id="10427-114">Use `CType` inside an expression.</span></span>  
   
-2.  请确保操作数的数据类型进行转换，并以正确的顺序。  
+2.  <span data-ttu-id="10427-115">请确保数据类型的操作数不适合进行转换，且正确顺序。</span><span class="sxs-lookup"><span data-stu-id="10427-115">Be sure the data types of the operands are appropriate for the conversion, and in the correct order.</span></span>  
   
-3.  `CType`调用转换运算符过程并返回转换后的值。  
+3.  <span data-ttu-id="10427-116">`CType`调用转换运算符过程并返回转换后的值。</span><span class="sxs-lookup"><span data-stu-id="10427-116">`CType` calls the conversion operator procedure and returns the converted value.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的示例创建两个<xref:System.TimeSpan>结构，并将它们相加，并将结果存储在第三个<xref:System.TimeSpan>结构。</xref:System.TimeSpan> </xref:System.TimeSpan> <xref:System.TimeSpan>结构定义运算符过程来重载了几个标准运算符。</xref:System.TimeSpan>  
+## <a name="example"></a><span data-ttu-id="10427-117">示例</span><span class="sxs-lookup"><span data-stu-id="10427-117">Example</span></span>  
+ <span data-ttu-id="10427-118">下面的示例创建两个<xref:System.TimeSpan>结构，并将它们相加，并将结果存储在第三个<xref:System.TimeSpan>结构。</span><span class="sxs-lookup"><span data-stu-id="10427-118">The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure.</span></span> <span data-ttu-id="10427-119"><xref:System.TimeSpan>结构定义运算符过程重载了几个标准运算符。</span><span class="sxs-lookup"><span data-stu-id="10427-119">The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&29;](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
- 因为<xref:System.TimeSpan>重载标准`+`运算符，则在计算的值前面的示例调用运算符过程`combinedSpan`。</xref:System.TimeSpan>  
+ <span data-ttu-id="10427-120">因为<xref:System.TimeSpan>重载标准`+`运算符，则在计算的值前面的示例调用运算符过程`combinedSpan`。</span><span class="sxs-lookup"><span data-stu-id="10427-120">Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.</span></span>  
   
- 调用转换运算符过程的示例，请参阅[如何︰ 使用此类定义运算符的类](./how-to-use-a-class-that-defines-operators.md)。  
+ <span data-ttu-id="10427-121">调用会话运算符过程的示例，请参阅[如何： 使用此类定义运算符的类](./how-to-use-a-class-that-defines-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="10427-121">For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).</span></span>  
   
-## <a name="compiling-the-code"></a>编译代码  
- 请确保类或结构正在使用定义你想要使用的运算符。  
+## <a name="compiling-the-code"></a><span data-ttu-id="10427-122">编译代码</span><span class="sxs-lookup"><span data-stu-id="10427-122">Compiling the Code</span></span>  
+ <span data-ttu-id="10427-123">请确保类或结构将定义你想要使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="10427-123">Be sure the class or structure you are using defines the operator you want to use.</span></span>  
   
-## <a name="see-also"></a>请参见  
- [运算符过程](./operator-procedures.md)   
- [如何︰ 定义运算符](./how-to-define-an-operator.md)   
- [如何︰ 定义转换运算符](./how-to-define-a-conversion-operator.md)   
- [Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [扩大转换](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [收缩转换](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [如何︰ 声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [隐式和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="10427-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="10427-124">See Also</span></span>  
+ [<span data-ttu-id="10427-125">运算符过程</span><span class="sxs-lookup"><span data-stu-id="10427-125">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="10427-126">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="10427-126">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="10427-127">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="10427-127">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="10427-128">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="10427-128">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="10427-129">Widening</span><span class="sxs-lookup"><span data-stu-id="10427-129">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="10427-130">Narrowing</span><span class="sxs-lookup"><span data-stu-id="10427-130">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="10427-131">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="10427-131">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="10427-132">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="10427-132">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="10427-133">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="10427-133">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="10427-134">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="10427-134">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

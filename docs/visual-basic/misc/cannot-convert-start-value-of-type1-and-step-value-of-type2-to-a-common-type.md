@@ -1,45 +1,28 @@
 ---
-title: "无法转换类型的起始值&lt;type1&gt;和类型的步长值&lt;type2&gt;&quot; 为通用类型 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39; 和的类型 &#39; 步长值&lt;type2&gt;&#39; 为通用类型"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrForLoop_CommonType2
+f1_keywords: vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7bf5700c49f56ab9554808f068a3b3432a620e95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>无法转换类型的起始值&lt;type1&gt;和类型的步长值&lt;type2&gt;' 为公共类型
-指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="09718-102">无法将转换类型 &#39; 起始的值&lt;type1&gt;&#39; 和的类型 &#39; 步长值&lt;type2&gt;&#39; 为通用类型</span><span class="sxs-lookup"><span data-stu-id="09718-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="09718-103">指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。</span><span class="sxs-lookup"><span data-stu-id="09718-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正此错误  
+## <a name="to-correct-this-error"></a><span data-ttu-id="09718-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="09718-104">To correct this error</span></span>  
   
-1.  更改一个或多个值的类型，以便所有值都可以转换为通用类型。  
+1.  <span data-ttu-id="09718-105">更改一个或多个值的类型，以便所有值都可以转换为通用类型。</span><span class="sxs-lookup"><span data-stu-id="09718-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在使用调试器的代码中导航](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [调试在 Visual Basic.NET 中的更改](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next 语句](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="09718-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="09718-106">See Also</span></span>  
+ [<span data-ttu-id="09718-107">使用调试器浏览代码</span><span class="sxs-lookup"><span data-stu-id="09718-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)  
+ [<span data-ttu-id="09718-108">调试在 Visual Basic.NET 中的更改</span><span class="sxs-lookup"><span data-stu-id="09718-108">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [<span data-ttu-id="09718-109">For...Next 语句</span><span class="sxs-lookup"><span data-stu-id="09718-109">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)

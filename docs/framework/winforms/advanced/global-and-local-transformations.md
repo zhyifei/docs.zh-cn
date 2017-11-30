@@ -1,71 +1,75 @@
 ---
-title: "全局变换和局部变换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "矩阵, 使用转换"
-  - "转换, 全局"
-  - "转换, 本地"
+title: "全局转换和局部转换"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 全局变换和局部变换
-全局变换是应用于由给定的 <xref:System.Drawing.Graphics> 对象绘制的每个项目的变换。  与此相反，局部变换则是应用于要绘制的特定项目的变换。  
+# <a name="global-and-local-transformations"></a><span data-ttu-id="68eb0-102">全局转换和局部转换</span><span class="sxs-lookup"><span data-stu-id="68eb0-102">Global and Local Transformations</span></span>
+<span data-ttu-id="68eb0-103">全局转换是一个转换，它适用于通过绘制每一项给定<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="68eb0-103">A global transformation is a transformation that applies to every item drawn by a given <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="68eb0-104">与此相反，本地转换是适用于特定项要绘制一个转换。</span><span class="sxs-lookup"><span data-stu-id="68eb0-104">In contrast, a local transformation is a transformation that applies to a specific item to be drawn.</span></span>  
   
-## 全局变换  
- 若要创建全局变换，请构造 <xref:System.Drawing.Graphics> 对象，再操作其 <xref:System.Drawing.Graphics.Transform%2A> 属性。  <xref:System.Drawing.Graphics.Transform%2A> 属性是 <xref:System.Drawing.Drawing2D.Matrix> 对象，因此，它能够保存仿射变换的任何序列。  存储在 <xref:System.Drawing.Graphics.Transform%2A> 属性中的变换被称为世界变换。  <xref:System.Drawing.Graphics> 类提供了几个构建复合世界变换的方法：<xref:System.Drawing.Graphics.MultiplyTransform%2A>、<xref:System.Drawing.Graphics.RotateTransform%2A>、<xref:System.Drawing.Graphics.ScaleTransform%2A> 和 <xref:System.Drawing.Graphics.TranslateTransform%2A>。  下面的示例绘制了两次椭圆：一次在创建世界变换之前，一次在创建世界变换之后。  变换首先在 y 方向上缩放 0.5 倍，再在 x 方向平移 50 个单位，然后旋转 30 度。  
+## <a name="global-transformations"></a><span data-ttu-id="68eb0-105">全局转换</span><span class="sxs-lookup"><span data-stu-id="68eb0-105">Global Transformations</span></span>  
+ <span data-ttu-id="68eb0-106">若要创建的全局转换，构造<xref:System.Drawing.Graphics>对象，以及然后操作其<xref:System.Drawing.Graphics.Transform%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="68eb0-106">To create a global transformation, construct a <xref:System.Drawing.Graphics> object, and then manipulate its <xref:System.Drawing.Graphics.Transform%2A> property.</span></span> <span data-ttu-id="68eb0-107"><xref:System.Drawing.Graphics.Transform%2A>属性是<xref:System.Drawing.Drawing2D.Matrix>对象，因此它可以存放仿射转换的任何序列。</span><span class="sxs-lookup"><span data-stu-id="68eb0-107">The <xref:System.Drawing.Graphics.Transform%2A> property is a <xref:System.Drawing.Drawing2D.Matrix> object, so it can hold any sequence of affine transformations.</span></span> <span data-ttu-id="68eb0-108">转换存储在<xref:System.Drawing.Graphics.Transform%2A>称为世界转换的属性。</span><span class="sxs-lookup"><span data-stu-id="68eb0-108">The transformation stored in the <xref:System.Drawing.Graphics.Transform%2A> property is called the world transformation.</span></span> <span data-ttu-id="68eb0-109"><xref:System.Drawing.Graphics>类提供了构建复合世界转换的几种方法： <xref:System.Drawing.Graphics.MultiplyTransform%2A>， <xref:System.Drawing.Graphics.RotateTransform%2A>， <xref:System.Drawing.Graphics.ScaleTransform%2A>，和<xref:System.Drawing.Graphics.TranslateTransform%2A>。</span><span class="sxs-lookup"><span data-stu-id="68eb0-109">The <xref:System.Drawing.Graphics> class provides several methods for building up a composite world transformation: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, and <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span></span> <span data-ttu-id="68eb0-110">下面的示例绘制一个椭圆两次： 一次之前创建的世界变换和之后的一次。</span><span class="sxs-lookup"><span data-stu-id="68eb0-110">The following example draws an ellipse twice: once before creating a world transformation and once after.</span></span> <span data-ttu-id="68eb0-111">转换第一次在 y 方向，0.5 的按比例调整然后平移在 x 方向的 50 个单位并且然后将旋转 30 度。</span><span class="sxs-lookup"><span data-stu-id="68eb0-111">The transformation first scales by a factor of 0.5 in the y direction, then translates 50 units in the x direction, and then rotates 30 degrees.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- 下图显示了变换中涉及的矩阵。  
+ <span data-ttu-id="68eb0-112">下图显示了所涉及的转换矩阵。</span><span class="sxs-lookup"><span data-stu-id="68eb0-112">The following illustration shows the matrices involved in the transformation.</span></span>  
   
- ![变换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05\_art14")  
+ <span data-ttu-id="68eb0-113">![转换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span><span class="sxs-lookup"><span data-stu-id="68eb0-113">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span></span>  
   
 > [!NOTE]
->  在前面的示例中，椭圆围绕坐标系的原点旋转。原点位于工作区的左上角。  与椭圆围绕其自身中心旋转相比，这样会产生不同的结果。  
+>  <span data-ttu-id="68eb0-114">在前面的示例中，坐标系统，这是客户端区域的左上角原点顺转动椭圆。</span><span class="sxs-lookup"><span data-stu-id="68eb0-114">In the preceding example, the ellipse is rotated about the origin of the coordinate system, which is at the upper-left corner of the client area.</span></span> <span data-ttu-id="68eb0-115">这将生成不同的结果比轮换围绕其自身中心椭圆。</span><span class="sxs-lookup"><span data-stu-id="68eb0-115">This produces a different result than rotating the ellipse about its own center.</span></span>  
   
-## 局部变换  
- 局部变换应用于要绘制的特定项目。  例如，<xref:System.Drawing.Drawing2D.GraphicsPath> 对象具有 <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> 方法，可用来对该路径的数据点进行变换。  下面的示例绘制了一个没有变换的矩形以及一个有旋转变换的路径。  （假定没有世界变换）。  
+## <a name="local-transformations"></a><span data-ttu-id="68eb0-116">局部变换</span><span class="sxs-lookup"><span data-stu-id="68eb0-116">Local Transformations</span></span>  
+ <span data-ttu-id="68eb0-117">本地转换适用于要绘制的特定项。</span><span class="sxs-lookup"><span data-stu-id="68eb0-117">A local transformation applies to a specific item to be drawn.</span></span> <span data-ttu-id="68eb0-118">例如，<xref:System.Drawing.Drawing2D.GraphicsPath>对象具有<xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>，可以将转换该路径的数据点的方法。</span><span class="sxs-lookup"><span data-stu-id="68eb0-118">For example, a <xref:System.Drawing.Drawing2D.GraphicsPath> object has a <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> method that allows you to transform the data points of that path.</span></span> <span data-ttu-id="68eb0-119">下面的示例绘制一个具有任何转换的矩形和具有旋转转换的路径。</span><span class="sxs-lookup"><span data-stu-id="68eb0-119">The following example draws a rectangle with no transformation and a path with a rotation transformation.</span></span> <span data-ttu-id="68eb0-120">（假定没有任何世界转换。）</span><span class="sxs-lookup"><span data-stu-id="68eb0-120">(Assume that there is no world transformation.)</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- 世界变换可与局部变换合并，以得到多种结果。  例如，世界变换可用于修正坐标系统，而局部变换可用于旋转和缩放在新坐标系统上绘制的对象。  
+ <span data-ttu-id="68eb0-121">你可以组合与局部变换以实现各种结果的世界转换。</span><span class="sxs-lookup"><span data-stu-id="68eb0-121">You can combine the world transformation with local transformations to achieve a variety of results.</span></span> <span data-ttu-id="68eb0-122">例如，可以使用世界转换修改坐标系统，并使用局部变换旋转和缩放绘制在新的坐标系统上的对象。</span><span class="sxs-lookup"><span data-stu-id="68eb0-122">For example, you can use the world transformation to revise the coordinate system and use local transformations to rotate and scale objects drawn on the new coordinate system.</span></span>  
   
- 假定您需要原点距工作区左边缘 200 像素、距工作区顶部 150 像素的坐标系统。  此外，假定您需要的度量单位是像素，且 x 轴指向右方，y 轴指向上方。  默认的坐标系统是 y 轴指向下方，因此您需要执行绕水平坐标轴的反射。  下图显示了这样的矩阵反射。  
+ <span data-ttu-id="68eb0-123">假设您希望一个坐标系统中已从工作区左边缘的原点 200 像素以及从客户端区域的顶部 150 像素。</span><span class="sxs-lookup"><span data-stu-id="68eb0-123">Suppose you want a coordinate system that has its origin 200 pixels from the left edge of the client area and 150 pixels from the top of the client area.</span></span> <span data-ttu-id="68eb0-124">此外，假设你想要像素，且 x 轴指向右侧和朝上 y 轴的度量单位。</span><span class="sxs-lookup"><span data-stu-id="68eb0-124">Furthermore, assume that you want the unit of measure to be the pixel, with the x-axis pointing to the right and the y-axis pointing up.</span></span> <span data-ttu-id="68eb0-125">默认坐标系统有指向下，y 轴，因此你需要在水平轴执行反射。</span><span class="sxs-lookup"><span data-stu-id="68eb0-125">The default coordinate system has the y-axis pointing down, so you need to perform a reflection across the horizontal axis.</span></span> <span data-ttu-id="68eb0-126">下图显示此类反射的矩阵。</span><span class="sxs-lookup"><span data-stu-id="68eb0-126">The following illustration shows the matrix of such a reflection.</span></span>  
   
- ![变换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ <span data-ttu-id="68eb0-127">![转换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span><span class="sxs-lookup"><span data-stu-id="68eb0-127">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span></span>  
   
- 下一步，假定您需要执行一个向右 200 个单位、向下 150 个单位的平移。  
+ <span data-ttu-id="68eb0-128">接下来，假定你需要执行转换 200 个单位的向右和向下的 150 个单位。</span><span class="sxs-lookup"><span data-stu-id="68eb0-128">Next, assume you need to perform a translation 200 units to the right and 150 units down.</span></span>  
   
- 下面的示例通过设置 <xref:System.Drawing.Graphics> 对象的世界变换，建立前面刚刚描述过的坐标系统。  
+ <span data-ttu-id="68eb0-129">下面的示例建立刚刚介绍的设置的世界变换的坐标系<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="68eb0-129">The following example establishes the coordinate system just described by setting the world transformation of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- 下面的代码（置于前面示例的结尾处）创建了由一个单独矩形组成的路径，该矩形的左下角在新坐标系统的原点。  矩形经过两次填充：一次不使用局部变换，一次使用局部变换。  局部变换包括在水平方向上缩放 2 倍，然后再旋转 30 度。  
+ <span data-ttu-id="68eb0-130">下面的代码 （在前面的示例中的末尾放置） 创建包含单个矩形与新的坐标系统的原点在其左下角的路径。</span><span class="sxs-lookup"><span data-stu-id="68eb0-130">The following code (placed at the end of the preceding example) creates a path that consists of a single rectangle with its lower-left corner at the origin of the new coordinate system.</span></span> <span data-ttu-id="68eb0-131">一次不使用局部变换和局部变换，将一次填充的矩形。</span><span class="sxs-lookup"><span data-stu-id="68eb0-131">The rectangle is filled once with no local transformation and once with a local transformation.</span></span> <span data-ttu-id="68eb0-132">按 2 的 30 度旋转后跟的系数水平缩放包含的局部变换。</span><span class="sxs-lookup"><span data-stu-id="68eb0-132">The local transformation consists of a horizontal scaling by a factor of 2 followed by a 30-degree rotation.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- 下图显示了新的坐标系统和两个矩形。  
+ <span data-ttu-id="68eb0-133">下图显示新的坐标系统和两个矩形。</span><span class="sxs-lookup"><span data-stu-id="68eb0-133">The following illustration shows the new coordinate system and the two rectangles.</span></span>  
   
- ![变换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ <span data-ttu-id="68eb0-134">![转换](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span><span class="sxs-lookup"><span data-stu-id="68eb0-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span></span>  
   
-## 请参阅  
- [坐标系和坐标变换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [在托管 GDI\+ 中使用变换](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="68eb0-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="68eb0-135">See Also</span></span>  
+ [<span data-ttu-id="68eb0-136">坐标系统和转换</span><span class="sxs-lookup"><span data-stu-id="68eb0-136">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="68eb0-137">在托管 GDI+ 中使用转换</span><span class="sxs-lookup"><span data-stu-id="68eb0-137">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

@@ -1,75 +1,58 @@
 ---
-title: "/baseaddress |Microsoft 文档"
-ms.date: 2015-07-20
+title: /baseaddress
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /baseaddress
 - baseaddress
-dev_langs:
-- VB
 helpviewer_keywords:
 - -baseaddress compiler option [Visual Basic]
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 527a7c348583498f46ee094ef9b9eec9abf1bcd0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8be88bf4834ca58b1fe708eb1ef7188c583fef0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="baseaddress"></a>/baseaddress
-指定默认的基址时创建 DLL。  
+# <a name="baseaddress"></a><span data-ttu-id="d8e1b-102">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="d8e1b-102">/baseaddress</span></span>
+<span data-ttu-id="d8e1b-103">创建 DLL 时，请指定默认的基址。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-103">Specifies a default base address when creating a DLL.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="d8e1b-104">语法</span><span class="sxs-lookup"><span data-stu-id="d8e1b-104">Syntax</span></span>  
   
 ```  
 /baseaddress:address  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="d8e1b-105">参数</span><span class="sxs-lookup"><span data-stu-id="d8e1b-105">Arguments</span></span>  
   
-|术语|定义|  
+|<span data-ttu-id="d8e1b-106">术语</span><span class="sxs-lookup"><span data-stu-id="d8e1b-106">Term</span></span>|<span data-ttu-id="d8e1b-107">定义</span><span class="sxs-lookup"><span data-stu-id="d8e1b-107">Definition</span></span>|  
 |---|---|  
-|`address`|必需。 此 DLL 的的基址。 必须将此地址指定为十六进制数。|  
+|`address`|<span data-ttu-id="d8e1b-108">必需。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-108">Required.</span></span> <span data-ttu-id="d8e1b-109">DLL 的基址。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-109">The base address for the DLL.</span></span> <span data-ttu-id="d8e1b-110">此地址必须指定为十六进制数。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-110">This address must be specified as a hexadecimal number.</span></span>|  
   
-## <a name="remarks"></a>备注  
- DLL 的默认基址将由[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]。  
+## <a name="remarks"></a><span data-ttu-id="d8e1b-111">备注</span><span class="sxs-lookup"><span data-stu-id="d8e1b-111">Remarks</span></span>  
+ <span data-ttu-id="d8e1b-112">设置 DLL 的默认基址[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-112">The default base address for a DLL is set by the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- 请注意，此地址中的较低序位字被舍入。 例如，如果指定 0x11110001，它是舍入为 0x11110000。  
+ <span data-ttu-id="d8e1b-113">请注意，此地址中的较低序位字被舍入。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-113">Be aware that the lower-order word in this address is rounded.</span></span> <span data-ttu-id="d8e1b-114">例如，如果指定 0x11110001，它是舍入为 0x11110000。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-114">For example, if you specify 0x11110001, it is rounded to 0x11110000.</span></span>  
   
- 若要完成签名过程的 DLL，使用`–R`强命名工具 (Sn.exe) 的选项。  
+ <span data-ttu-id="d8e1b-115">若要完成 DLL 的签名的过程，使用`–R`的强命名工具 (Sn.exe) 的选项。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-115">To complete the signing process for a DLL, use the `–R` option of the Strong Naming tool (Sn.exe).</span></span>  
   
- 如果目标不是 DLL，则忽略此选项。  
+ <span data-ttu-id="d8e1b-116">如果目标不是 DLL，则忽略此选项。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-116">This option is ignored if the target is not a DLL.</span></span>  
   
-|在 Visual Studio IDE 中设置 /baseaddress|  
+|<span data-ttu-id="d8e1b-117">在 Visual Studio IDE 中设置 /baseaddress</span><span class="sxs-lookup"><span data-stu-id="d8e1b-117">To set /baseaddress in the Visual Studio IDE</span></span>|  
 |---|  
-|1.在 **“解决方案资源管理器”**中选择一个项目。 在**项目**菜单上，单击**属性**。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“编译”****选项卡。<br />3.单击 **“高级”**。<br />4.在修改此值**DLL 基址︰**框。 **注意︰** **DLL 基址︰**框是只读的除非目标是一个 DLL。|  
+|<span data-ttu-id="d8e1b-118">1.在 “解决方案资源管理器”中选择一个项目。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-118">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="d8e1b-119">在“项目”菜单上，单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-119">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="d8e1b-120">有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-120">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span><br /><span data-ttu-id="d8e1b-121">2.单击“编译”选项卡。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="d8e1b-122">3.单击 **“高级”**。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-122">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="d8e1b-123">4.修改中的值**DLL 的基址：**框。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-123">4.  Modify the value in the **DLL base address:** box.</span></span> <span data-ttu-id="d8e1b-124">**注意：** **DLL 的基址：**框是只读的除非目标是一个 DLL。</span><span class="sxs-lookup"><span data-stu-id="d8e1b-124">**Note:**      The **DLL base address:** box is read-only unless the target is a DLL.</span></span>|  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/k5b5tt23)
+## <a name="see-also"></a><span data-ttu-id="d8e1b-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d8e1b-125">See Also</span></span>  
+ [<span data-ttu-id="d8e1b-126">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="d8e1b-126">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="d8e1b-127">/target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d8e1b-127">/target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="d8e1b-128">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="d8e1b-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="d8e1b-129">Sn.exe（强名称工具）</span><span class="sxs-lookup"><span data-stu-id="d8e1b-129">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)

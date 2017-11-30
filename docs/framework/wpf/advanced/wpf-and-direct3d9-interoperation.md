@@ -1,159 +1,163 @@
 ---
-title: "WPF 和 Direct3D9 互操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9 [WPF 互操作性], 创建 Direct3D9 内容"
-  - "WPF, 创建 Direct3D9 内容"
+title: "WPF 和 Direct3D9 互操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- WPF [WPF], creating Direct3D9 content
+- Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1bd4d7486f546a340a4c722d140c6c7f5cee707
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 和 Direct3D9 互操作
-可以在 Windows Presentation Foundation \(WPF\) 应用程序中包含 Direct3D9 内容。  本主题介绍如何创建 Direct3D9 内容以使其有效地与 WPF 交互操作。  
+# <a name="wpf-and-direct3d9-interoperation"></a><span data-ttu-id="d8dca-102">WPF 和 Direct3D9 互操作</span><span class="sxs-lookup"><span data-stu-id="d8dca-102">WPF and Direct3D9 Interoperation</span></span>
+<span data-ttu-id="d8dca-103">你可以在 Windows Presentation Foundation (WPF) 应用程序中包含 Direct3D9 内容。</span><span class="sxs-lookup"><span data-stu-id="d8dca-103">You can include Direct3D9 content in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="d8dca-104">本主题介绍如何创建 Direct3D9 内容，以便它有效地与 WPF 互操作。</span><span class="sxs-lookup"><span data-stu-id="d8dca-104">This topic describes how to create Direct3D9 content so that it efficiently interoperates with WPF.</span></span>  
   
 > [!NOTE]
->  当在 WPF 中使用 Direct3D9 内容时，还需要考虑性能问题。  有关如何针对性能进行优化的更多信息，请参见 [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
+>  <span data-ttu-id="d8dca-105">在 WPF 中使用 Direct3D9 内容，还需要考虑性能。</span><span class="sxs-lookup"><span data-stu-id="d8dca-105">When using Direct3D9 content in WPF, you also need to think about performance.</span></span> <span data-ttu-id="d8dca-106">有关如何优化性能的详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。</span><span class="sxs-lookup"><span data-stu-id="d8dca-106">For more information about how to optimize for performance, see [Performance Considerations for Direct3D9 and WPF Interoperability](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).</span></span>  
   
-## 显示缓冲区  
- <xref:System.Windows.Interop.D3DImage> 类管理两种显示缓冲区，这两种缓冲区分别称为“后台缓冲区”和“前台缓冲区”。  后台缓冲区是 Direct3D9 图面。  当您调用 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 方法时，会将对后台缓冲区所做的更改向前复制到前台缓冲区。  
+## <a name="display-buffers"></a><span data-ttu-id="d8dca-107">显示缓冲区</span><span class="sxs-lookup"><span data-stu-id="d8dca-107">Display Buffers</span></span>  
+ <span data-ttu-id="d8dca-108"><xref:System.Windows.Interop.D3DImage>类管理两个显示缓冲区，称为*后台缓冲区*和*前台缓冲区*。</span><span class="sxs-lookup"><span data-stu-id="d8dca-108">The <xref:System.Windows.Interop.D3DImage> class manages two display buffers, which are called the *back buffer* and the *front buffer*.</span></span> <span data-ttu-id="d8dca-109">后台缓冲区是 Direct3D9 图面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-109">The back buffer is your Direct3D9 surface.</span></span> <span data-ttu-id="d8dca-110">更改对后台缓冲区复制转发到前台缓冲区在调用时<xref:System.Windows.Interop.D3DImage.Unlock%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-110">Changes to the back buffer are copied forward to the front buffer when you call the <xref:System.Windows.Interop.D3DImage.Unlock%2A> method.</span></span>  
   
- 下面的插图显示后台缓冲区与前台缓冲区之间的关系。  
+ <span data-ttu-id="d8dca-111">下图显示后台缓冲区和前端缓冲区之间的关系。</span><span class="sxs-lookup"><span data-stu-id="d8dca-111">The following illustration shows the relationship between the back buffer and the front buffer.</span></span>  
   
- ![D3DImage 显示缓冲区](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage\_buffers")  
+ <span data-ttu-id="d8dca-112">![D3DImage 显示缓冲区](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")</span><span class="sxs-lookup"><span data-stu-id="d8dca-112">![D3DImage display buffers](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")</span></span>  
   
-## Direct3D9 设备创建  
- 若要呈现 Direct3D9 内容，必须创建 Direct3D9 设备。  可用于创建设备的 Direct3D9 对象有两个：`IDirect3D9` 和 `IDirect3D9Ex`。  使用这些对象可以分别创建 `IDirect3DDevice9` 和 `IDirect3DDevice9Ex` 设备。  
+## <a name="direct3d9-device-creation"></a><span data-ttu-id="d8dca-113">创建 Direct3D9 设备</span><span class="sxs-lookup"><span data-stu-id="d8dca-113">Direct3D9 Device Creation</span></span>  
+ <span data-ttu-id="d8dca-114">若要呈现 Direct3D9 内容，必须创建 Direct3D9 设备。</span><span class="sxs-lookup"><span data-stu-id="d8dca-114">To render Direct3D9 content, you must create a Direct3D9 device.</span></span> <span data-ttu-id="d8dca-115">有两个可用于创建设备的 Direct3D9 对象`IDirect3D9`和`IDirect3D9Ex`。</span><span class="sxs-lookup"><span data-stu-id="d8dca-115">There are two Direct3D9 objects that you can use to create a device, `IDirect3D9` and `IDirect3D9Ex`.</span></span> <span data-ttu-id="d8dca-116">这些对象用于创建`IDirect3DDevice9`和`IDirect3DDevice9Ex`设备，分别。</span><span class="sxs-lookup"><span data-stu-id="d8dca-116">Use these objects to create `IDirect3DDevice9` and `IDirect3DDevice9Ex` devices, respectively.</span></span>  
   
- 通过调用下列方法之一来创建设备。  
+ <span data-ttu-id="d8dca-117">通过调用以下方法之一创建一个设备。</span><span class="sxs-lookup"><span data-stu-id="d8dca-117">Create a device by calling one of the following methods.</span></span>  
   
 -   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
 -   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
- 在Windows vista或更高版本的操作系统上，请使用配置为使用Windows显示驱动程序模型\(WDDM\)显示的 `Direct3DCreate9Ex` 方法。  在任何其他平台上使用 `Direct3DCreate9` 方法。  
+ <span data-ttu-id="d8dca-118">在 Windows Vista 或更高版本操作系统上，使用`Direct3DCreate9Ex`具有配置为使用 Windows 显示驱动程序模型 (WDDM) 显示的方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-118">On Windows Vista or later operating system, use the `Direct3DCreate9Ex` method with a display that is configured to use the Windows Display Driver Model (WDDM).</span></span> <span data-ttu-id="d8dca-119">使用`Direct3DCreate9`在任何其他平台上的方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-119">Use the `Direct3DCreate9` method on any other platform.</span></span>  
   
-### Direct3DCreate9Ex 方法的可用性  
- 该d3d9.dll具有 `Direct3DCreate9Ex` 只有方法在Windows vista或更高版本的操作系统。  如果在 Windows XP 上直接链接到该函数，将无法加载您的应用程序。  若要确定是否支持 `Direct3DCreate9Ex` 方法，请加载该 DLL，并查找进程地址。  下面的代码演示如何测试 `Direct3DCreate9Ex` 方法。  有关完整的代码示例，请参见[演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+### <a name="availability-of-the-direct3dcreate9ex-method"></a><span data-ttu-id="d8dca-120">Direct3DCreate9Ex 方法的可用性</span><span class="sxs-lookup"><span data-stu-id="d8dca-120">Availability of the Direct3DCreate9Ex method</span></span>  
+ <span data-ttu-id="d8dca-121">D3d9.dll 具有`Direct3DCreate9Ex`只会在 Windows Vista 或更高版本操作系统的方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-121">The d3d9.dll has the `Direct3DCreate9Ex` method only on Windows Vista or later operating system.</span></span> <span data-ttu-id="d8dca-122">如果直接将链接到该函数会在 Windows XP，你的应用程序将无法加载。</span><span class="sxs-lookup"><span data-stu-id="d8dca-122">If you directly link the function on Windows XP, your application fails to load.</span></span> <span data-ttu-id="d8dca-123">若要确定是否`Direct3DCreate9Ex`支持方法、 加载 DLL 和查找进程地址。</span><span class="sxs-lookup"><span data-stu-id="d8dca-123">To determine whether the `Direct3DCreate9Ex` method is supported, load the DLL and look for the proc address.</span></span> <span data-ttu-id="d8dca-124">下面的代码演示如何测试`Direct3DCreate9Ex`方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-124">The following code shows how to test for the `Direct3DCreate9Ex` method.</span></span> <span data-ttu-id="d8dca-125">有关完整的代码示例，请参阅[演练： 创建内容的 WPF 中的托管的 Direct3D9](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="d8dca-125">For a full code example, see [Walkthrough: Creating Direct3D9 Content for Hosting in WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
-### HWND 创建  
- 创建设备需要一个 HWND。  通常，可以创建虚拟 HWND 以供 Direct3D9 使用。  下面的代码示例演示如何创建虚拟 HWND。  
+### <a name="hwnd-creation"></a><span data-ttu-id="d8dca-126">HWND 创建</span><span class="sxs-lookup"><span data-stu-id="d8dca-126">HWND Creation</span></span>  
+ <span data-ttu-id="d8dca-127">创建设备需要 HWND。</span><span class="sxs-lookup"><span data-stu-id="d8dca-127">Creating a device requires an HWND.</span></span> <span data-ttu-id="d8dca-128">一般情况下，你创建 Direct3D9 使用 dummy HWND。</span><span class="sxs-lookup"><span data-stu-id="d8dca-128">In general, you create a dummy HWND for Direct3D9 to use.</span></span> <span data-ttu-id="d8dca-129">下面的代码示例演示如何创建 dummy HWND。</span><span class="sxs-lookup"><span data-stu-id="d8dca-129">The following code example shows how to create a dummy HWND.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
-### 提供参数  
- 创建设备还需要一个 `D3DPRESENT_PARAMETERS` 结构，但仅有少数几个参数较为重要。  选择这些参数可以最小化内存空间。  
+### <a name="present-parameters"></a><span data-ttu-id="d8dca-130">存在的参数</span><span class="sxs-lookup"><span data-stu-id="d8dca-130">Present Parameters</span></span>  
+ <span data-ttu-id="d8dca-131">创建设备还要求`D3DPRESENT_PARAMETERS`结构，但仅几个参数很重要。</span><span class="sxs-lookup"><span data-stu-id="d8dca-131">Creating a device also requires a `D3DPRESENT_PARAMETERS` struct, but only a few parameters are important.</span></span> <span data-ttu-id="d8dca-132">这些参数是选择最大程度减少内存占用量。</span><span class="sxs-lookup"><span data-stu-id="d8dca-132">These parameters are chosen to minimize the memory footprint.</span></span>  
   
- 将 `BackBufferHeight` 和 `BackBufferWidth` 字段都设置为 1。  如果将这两个字段设置为 0，则会使这两个字段设置为 HWND 的尺寸。  
+ <span data-ttu-id="d8dca-133">设置`BackBufferHeight`和`BackBufferWidth`字段为 1。</span><span class="sxs-lookup"><span data-stu-id="d8dca-133">Set the `BackBufferHeight` and `BackBufferWidth` fields to 1.</span></span> <span data-ttu-id="d8dca-134">将它们设置为 0 会导致它们被设置为的 HWND 的尺寸。</span><span class="sxs-lookup"><span data-stu-id="d8dca-134">Setting them to 0 causes them to be set to the dimensions of the HWND.</span></span>  
   
- 始终设置 `D3DCREATE_MULTITHREADED` 和 `D3DCREATE_FPU_PRESERVE` 标志，以防止 Direct3D9 使用损坏的内存，并防止 Direct3D9 更改 FPU 设置。  
+ <span data-ttu-id="d8dca-135">始终设置`D3DCREATE_MULTITHREADED`和`D3DCREATE_FPU_PRESERVE`标记以避免损坏 Direct3D9 和阻止 Direct3D9 更改 FPU 设置使用的内存。</span><span class="sxs-lookup"><span data-stu-id="d8dca-135">Always set the `D3DCREATE_MULTITHREADED` and `D3DCREATE_FPU_PRESERVE` flags to prevent corrupting memory used by Direct3D9 and to prevent Direct3D9 from changing FPU settings.</span></span>  
   
- 下面的代码演示如何初始化 `D3DPRESENT_PARAMETERS` 结构。  
+ <span data-ttu-id="d8dca-136">下面的代码演示如何初始化`D3DPRESENT_PARAMETERS`结构。</span><span class="sxs-lookup"><span data-stu-id="d8dca-136">The following code shows how to initialize the `D3DPRESENT_PARAMETERS` struct.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
-## 创建后台缓冲区呈现目标  
- 若要在 <xref:System.Windows.Interop.D3DImage> 中显示 Direct3D9 内容，需创建一个 Direct3D9 图面，并通过调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 方法为其赋值。  
+## <a name="creating-the-back-buffer-render-target"></a><span data-ttu-id="d8dca-137">创建后台缓冲区呈现器目标</span><span class="sxs-lookup"><span data-stu-id="d8dca-137">Creating the Back Buffer Render Target</span></span>  
+ <span data-ttu-id="d8dca-138">若要显示在 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>，创建 Direct3D9 面并将其分配通过调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-138">To display Direct3D9 content in a <xref:System.Windows.Interop.D3DImage>, you create a Direct3D9 surface and assign it by calling the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method.</span></span>  
   
-### 验证适配器支持  
- 在创建图面之前，请验证所有适配器是否都支持您所需的图面属性。  即使只将图面呈现到一个适配器，WPF 窗口也可能显示在系统的任何一个适配器上。  应始终编写处理多适配器配置的 Direct3D9 代码，并检查所有适配器的支持情况，因为 WPF 可能需要在可用的适配器间移动图面。  
+### <a name="verifying-adapter-support"></a><span data-ttu-id="d8dca-139">验证适配器支持</span><span class="sxs-lookup"><span data-stu-id="d8dca-139">Verifying Adapter Support</span></span>  
+ <span data-ttu-id="d8dca-140">在创建图面之前, 请验证所有适配器都支持图面所需的属性。</span><span class="sxs-lookup"><span data-stu-id="d8dca-140">Before creating a surface, verify that all adapters support the surface properties you require.</span></span> <span data-ttu-id="d8dca-141">即使你呈现到只有一个适配器，可能会在系统中任何适配器上显示 WPF 窗口。</span><span class="sxs-lookup"><span data-stu-id="d8dca-141">Even if you render to only one adapter, the WPF window may be displayed on any adapter in the system.</span></span> <span data-ttu-id="d8dca-142">你应始终编写 Direct3D9 代码来处理多适配器配置，因为 WPF 可能移动之间的可用适配器的图面，应检查所有适配器的支持。</span><span class="sxs-lookup"><span data-stu-id="d8dca-142">You should always write Direct3D9 code that handles multi-adapter configurations, and you should check all adapters for support, because WPF might move the surface among the available adapters.</span></span>  
   
- 下面的代码示例演示如何检查系统上所有适配器对 Direct3D9 的支持情况。  
+ <span data-ttu-id="d8dca-143">下面的代码示例演示如何检查对 Direct3D9 系统上的所有适配器都支持。</span><span class="sxs-lookup"><span data-stu-id="d8dca-143">The following code example shows how to check all adapters on the system for Direct3D9 support.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
-### 创建图面  
- 在创建图面之前，应验证设备功能在目标操作系统上是否支持良好的性能。  有关更多信息，请参见 [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
+### <a name="creating-the-surface"></a><span data-ttu-id="d8dca-144">创建面</span><span class="sxs-lookup"><span data-stu-id="d8dca-144">Creating the Surface</span></span>  
+ <span data-ttu-id="d8dca-145">在创建图面之前, 请验证的设备功能，在目标操作系统上支持良好的性能。</span><span class="sxs-lookup"><span data-stu-id="d8dca-145">Before creating a surface, verify that the device capabilities support good performance on the target operating system.</span></span> <span data-ttu-id="d8dca-146">有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。</span><span class="sxs-lookup"><span data-stu-id="d8dca-146">For more information, see [Performance Considerations for Direct3D9 and WPF Interoperability](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).</span></span>  
   
- 验证了设备功能之后，即可以创建图面。  下面的代码示例演示如何创建呈现目标。  
+ <span data-ttu-id="d8dca-147">如果你已验证设备功能，你可以创建面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-147">When you have verified device capabilities, you can create the surface.</span></span> <span data-ttu-id="d8dca-148">下面的代码示例演示如何创建呈现器目标。</span><span class="sxs-lookup"><span data-stu-id="d8dca-148">The following code example shows how to create the render target.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
-### WDDM  
- 在Windows vista和更高版本的操作系统上，配置为使用WDDM，可以创建呈现目标纹理，并将0级图面到 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 方法。  建议不要在 Windows XP 上使用此方法，因为无法创建可锁定的呈现目标纹理，因而会降低性能。  
+### <a name="wddm"></a><span data-ttu-id="d8dca-149">WDDM</span><span class="sxs-lookup"><span data-stu-id="d8dca-149">WDDM</span></span>  
+ <span data-ttu-id="d8dca-150">在 Windows Vista 和更高版本操作系统，这都配置为使用的 WDDM，你可以创建呈现器目标纹理，并将传递到的级别 0 面<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-150">On Windows Vista and later operating systems, which are configured to use the WDDM, you can create a render target texture and pass the level 0 surface to the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method.</span></span> <span data-ttu-id="d8dca-151">不建议使用此方法在 Windows XP 中，因为不能创建可锁定呈现器目标纹理，性能将会降低。</span><span class="sxs-lookup"><span data-stu-id="d8dca-151">This approach is not recommended on Windows XP, because you cannot create a lockable render target texture and performance will be reduced.</span></span>  
   
-## 处理设备状态  
- <xref:System.Windows.Interop.D3DImage> 类管理两种显示缓冲区，这两种缓冲区分别称为“后台缓冲区”和“前台缓冲区”。  后台缓冲区是 Direct3D 图面。  对后台缓冲区的更改向前复制到前台缓冲区，当您调用 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 方法时，它为硬件上显示。  有时，前台缓冲区变得不可用。  这种不可用情况可能是由屏幕锁定、全屏独占 Direct3D 应用程序、用户切换或其他系统活动导致的。  发生这种情况时，您的WPF应用程序都通过处理 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 事件通知。  您的应用程序如何响应变为之前的缓冲区可用取决于WPF是否启用回退到软件呈现。  <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 方法具有参数指定的重载WPF是否会退回到软件呈现。  
+## <a name="handling-device-state"></a><span data-ttu-id="d8dca-152">处理设备的状态更改</span><span class="sxs-lookup"><span data-stu-id="d8dca-152">Handling Device State</span></span>  
+ <span data-ttu-id="d8dca-153"><xref:System.Windows.Interop.D3DImage>类管理两个显示缓冲区，称为*后台缓冲区*和*前台缓冲区*。</span><span class="sxs-lookup"><span data-stu-id="d8dca-153">The <xref:System.Windows.Interop.D3DImage> class manages two display buffers, which are called the *back buffer* and the *front buffer*.</span></span> <span data-ttu-id="d8dca-154">后台缓冲区是你的 Direct3D 面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-154">The back buffer is your Direct3D surface.</span></span>  <span data-ttu-id="d8dca-155">更改对后台缓冲区复制转发到前台缓冲区在调用时<xref:System.Windows.Interop.D3DImage.Unlock%2A>方法，其中显示在硬件。</span><span class="sxs-lookup"><span data-stu-id="d8dca-155">Changes to the back buffer are copied forward to the front buffer when you call the <xref:System.Windows.Interop.D3DImage.Unlock%2A> method, where it is displayed on the hardware.</span></span> <span data-ttu-id="d8dca-156">有时，前台缓冲区变得不可用。</span><span class="sxs-lookup"><span data-stu-id="d8dca-156">Occasionally, the front buffer becomes unavailable.</span></span> <span data-ttu-id="d8dca-157">此缺乏可用性可能引起屏幕锁定、 全屏幕独占 Direct3D 应用程序、 用户切换或其他系统活动。</span><span class="sxs-lookup"><span data-stu-id="d8dca-157">This lack of availability can be caused by screen locking, full-screen exclusive Direct3D applications, user-switching, or other system activities.</span></span> <span data-ttu-id="d8dca-158">当发生这种情况时，通知 WPF 应用程序通过处理<xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="d8dca-158">When this occurs, your WPF application is notified by handling the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event.</span></span>  <span data-ttu-id="d8dca-159">你的应用程序响应前台缓冲区变得不可用的方式取决于是否启用 WPF 为回退到软件呈现。</span><span class="sxs-lookup"><span data-stu-id="d8dca-159">How your application responds to the front buffer becoming unavailable depends on whether WPF is enabled to fall back to software rendering.</span></span> <span data-ttu-id="d8dca-160"><xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>方法具有一个重载采用一个参数，指定是否 WPF 回退到软件呈现。</span><span class="sxs-lookup"><span data-stu-id="d8dca-160">The <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method has an overload that takes a parameter that specifies whether WPF falls back to software rendering.</span></span>  
   
- 当您调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 重载调用或时使用 `enableSoftwareFallback` 参数的 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 重载设置为 `false`时，该呈现系统将释放它对后台缓冲区，当前台缓冲区变得不可用，而未显示。  当前台缓冲区再次时可用，则呈现系统将引发 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 事件通知您的WPF应用程序。  可以创建 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 事件的事件处理程序可以重新激活再次呈现一个有效的呈现图面。  若要重新启动呈现，必须调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>。  
+ <span data-ttu-id="d8dca-161">当调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29>重载或调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29>重载`enableSoftwareFallback`参数设置为`false`，当前台缓冲区变得不可用，并且执行任何操作时，呈现系统释放其对后台缓冲区的引用显示。</span><span class="sxs-lookup"><span data-stu-id="d8dca-161">When you call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> overload or call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> overload with the `enableSoftwareFallback` parameter set to `false`, the rendering system releases its reference to the back buffer when the front buffer becomes unavailable and nothing is displayed.</span></span> <span data-ttu-id="d8dca-162">呈现系统前台缓冲区再次可用时，将引发<xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged>事件以通知你的 WPF 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d8dca-162">When the front buffer is available again, the rendering system raises the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event to notify your WPF application.</span></span>  <span data-ttu-id="d8dca-163">你可以创建的事件处理程序<xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged>事件重新启动再次与有效的 Direct3D 面呈现。</span><span class="sxs-lookup"><span data-stu-id="d8dca-163">You can create an event handler for the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event to restart rendering again with a valid Direct3D surface.</span></span> <span data-ttu-id="d8dca-164">若要重新启动呈现，必须调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>。</span><span class="sxs-lookup"><span data-stu-id="d8dca-164">To restart rendering, you must call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.</span></span>  
   
- 当您调用了 `enableSoftwareFallback` 参数的 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 重载设置为 `true`时，该呈现系统保留其对后台缓冲区，当前台缓冲区变得不可用时，因此不需要调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> ，当前台缓冲区再次时可用。  
+ <span data-ttu-id="d8dca-165">当调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29>重载`enableSoftwareFallback`参数设置为`true`，呈现系统保留它对后台缓冲区的引用时前台缓冲区变得不可用，因此无需调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>时前面缓冲区重新变为可用。</span><span class="sxs-lookup"><span data-stu-id="d8dca-165">When you call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> overload with the `enableSoftwareFallback` parameter set to `true`, the rendering system retains its reference to the back buffer when the front buffer becomes unavailable, so there is no need to call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> when the front buffer is available again.</span></span>  
   
- 当软件呈现启用时，可能有用户的计算机变得不可用的情况，但是，该呈现系统将保持对呈现图面。  若要检查Direct3D9设备是否可用，请调用 `TestCooperativeLevel` 方法。  ，因为 `TestCooperativeLevel` 方法已弃用并始终返回成功，若要检查Direct3D9Ex设备调用 `CheckDeviceState` 方法。  如果用户计算机变得不可用，请调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 释放WPF对后台缓冲区。  如果需要重置设备，调用与 `backBuffer` 参数的 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 设置为 `null`，然后调用 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 和 `backBuffer` 设置为有效的Direct3D面再次  
+ <span data-ttu-id="d8dca-166">启用软件呈现后，可能存在其中用户的设备变得不可用，但呈现系统会保留到 Direct3D 面的引用。</span><span class="sxs-lookup"><span data-stu-id="d8dca-166">When software rendering is enabled, there may be situations where the user’s device becomes unavailable, but the rendering system retains a reference to the Direct3D surface.</span></span> <span data-ttu-id="d8dca-167">若要检查 Direct3D9 设备是否不可用，请调用`TestCooperativeLevel`方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-167">To check whether a Direct3D9 device is unavailable, call the `TestCooperativeLevel` method.</span></span> <span data-ttu-id="d8dca-168">若要检查 Direct3D9Ex 设备调用`CheckDeviceState`方法，因为`TestCooperativeLevel`方法已弃用，并始终返回成功。</span><span class="sxs-lookup"><span data-stu-id="d8dca-168">To check a Direct3D9Ex devices call the `CheckDeviceState` method, because the `TestCooperativeLevel` method is deprecated and always returns success.</span></span> <span data-ttu-id="d8dca-169">如果用户设备已变为不可用，调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>来释放对后台缓冲区的 WPF 的引用。</span><span class="sxs-lookup"><span data-stu-id="d8dca-169">If the user device has become unavailable, call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> to release WPF’s reference to the back buffer.</span></span>  <span data-ttu-id="d8dca-170">如果你需要重置你的设备，调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>与`backBuffer`参数设置为`null`，然后调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>试`backBuffer`设置为有效的 Direct3D 图面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-170">If you need to reset your device, call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> with the `backBuffer` parameter set to `null`, and then call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> again with `backBuffer` set to a valid Direct3D surface.</span></span>  
   
- 仅在实现了多适配器支持时才调用 `Reset` 方法以从无效设备中恢复。  否则，将需要释放所有 Direct3D9 接口，然后再重新创建这些接口。  如果适配器布局发生了更改，则不会更新更改前创建的 Direct3D9 对象。  
+ <span data-ttu-id="d8dca-171">调用`Reset`方法，以恢复从无效的设备，仅当实现多适配器支持。</span><span class="sxs-lookup"><span data-stu-id="d8dca-171">Call the `Reset` method to recover from an invalid device only if you implement multi-adapter support.</span></span> <span data-ttu-id="d8dca-172">否则为释放所有 Direct3D9 接口，并且完全重新创建它们。</span><span class="sxs-lookup"><span data-stu-id="d8dca-172">Otherwise, release all Direct3D9 interfaces and re-create them completely.</span></span> <span data-ttu-id="d8dca-173">如果适配器布局已更改，更改之前创建的 Direct3D9 对象不会更新。</span><span class="sxs-lookup"><span data-stu-id="d8dca-173">If the adapter layout has changed, Direct3D9 objects created before the change are not updated.</span></span>  
   
-## 处理大小调整  
- 除了本机范围外，如果 <xref:System.Windows.Interop.D3DImage> 显示在解析，它基于当前 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>缩放，除此之外， <xref:System.Windows.Media.Effects.SamplingMode> 用 <xref:System.Windows.Media.BitmapScalingMode>进行替换。  
+## <a name="handling-resizing"></a><span data-ttu-id="d8dca-174">处理调整大小</span><span class="sxs-lookup"><span data-stu-id="d8dca-174">Handling Resizing</span></span>  
+ <span data-ttu-id="d8dca-175">如果<xref:System.Windows.Interop.D3DImage>显示在其原始大小以外分辨率，根据当前缩放<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>，只不过<xref:System.Windows.Media.Effects.SamplingMode.Bilinear>替换为<xref:System.Windows.Media.BitmapScalingMode.Fant>。</span><span class="sxs-lookup"><span data-stu-id="d8dca-175">If a <xref:System.Windows.Interop.D3DImage> is displayed at a resolution other than its native size, it is scaled according to the current <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>, except that <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> is substituted for <xref:System.Windows.Media.BitmapScalingMode.Fant>.</span></span>  
   
- 如果需要更高的保真度，则在 <xref:System.Windows.Interop.D3DImage> 的容器大小发生变化时，必须创建新的图面。  
+ <span data-ttu-id="d8dca-176">如果需要更高的保真度，你必须创建一个新图面时的容器<xref:System.Windows.Interop.D3DImage>大小更改。</span><span class="sxs-lookup"><span data-stu-id="d8dca-176">If you require higher fidelity, you must create a new surface when the container of the <xref:System.Windows.Interop.D3DImage> changes size.</span></span>  
   
- 用来处理大小调整的方法有三种。  
+ <span data-ttu-id="d8dca-177">有以下三种方法来处理调整大小。</span><span class="sxs-lookup"><span data-stu-id="d8dca-177">There are three possible approaches to handle resizing.</span></span>  
   
--   参与布局系统，并在大小发生变化时创建新图面。  不要创建过多的图面，否则可能会耗尽视频内存或使其分段。  
+-   <span data-ttu-id="d8dca-178">参与布局系统，并在大小发生更改时创建新的图面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-178">Participate in the layout system and create a new surface when the size changes.</span></span> <span data-ttu-id="d8dca-179">不要创建过多的图面，因为可能会耗尽或产生视频内存碎片。</span><span class="sxs-lookup"><span data-stu-id="d8dca-179">Do not create too many surfaces, because you may exhaust or fragment video memory.</span></span>  
   
--   请等待，直到在固定的时段内不会再发生大小调整事件时再创建新图面。  
+-   <span data-ttu-id="d8dca-180">等待，直到调整大小事件后未发生的一段固定的时间来创建新的图面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-180">Wait until a resize event has not occurred for a fixed period of time to create the new surface.</span></span>  
   
--   创建一个 <xref:System.Windows.Threading.DispatcherTimer>，每秒对容器维度进行多次检查。  
+-   <span data-ttu-id="d8dca-181">创建<xref:System.Windows.Threading.DispatcherTimer>，用于检查对容器维度进行多次每秒。</span><span class="sxs-lookup"><span data-stu-id="d8dca-181">Create a <xref:System.Windows.Threading.DispatcherTimer> that checks the container dimensions several times per second.</span></span>  
   
-## 多监视器优化  
- 当呈现系统将 <xref:System.Windows.Interop.D3DImage> 移动到其他监视器时，性能会急剧下降。  
+## <a name="multi-monitor-optimization"></a><span data-ttu-id="d8dca-182">多监视器优化</span><span class="sxs-lookup"><span data-stu-id="d8dca-182">Multi-monitor Optimization</span></span>  
+ <span data-ttu-id="d8dca-183">呈现系统移动时，会导致性能显著降低<xref:System.Windows.Interop.D3DImage>到另一个监视器。</span><span class="sxs-lookup"><span data-stu-id="d8dca-183">Significantly reduced performance can result when the rendering system moves a <xref:System.Windows.Interop.D3DImage> to another monitor.</span></span>  
   
- 在 WDDM 上，只要监视器在同一视频卡上，并使用 `Direct3DCreate9Ex`，性能就不会下降。  如果监视器在不同的视频卡上，则性能会下降。  在 Windows XP 上，性能始终会下降。  
+ <span data-ttu-id="d8dca-184">在上 WDDM，只要监视器位于相同的视频卡上，并使用`Direct3DCreate9Ex`，就不在性能会下降。</span><span class="sxs-lookup"><span data-stu-id="d8dca-184">On WDDM, as long as the monitors are on the same video card and you use `Direct3DCreate9Ex`, there is no reduction in performance.</span></span> <span data-ttu-id="d8dca-185">如果监视器位于不同的视频卡上，性能会下降。</span><span class="sxs-lookup"><span data-stu-id="d8dca-185">If the monitors are on separate video cards, performance is reduced.</span></span> <span data-ttu-id="d8dca-186">在 Windows XP 中，会始终会降低性能。</span><span class="sxs-lookup"><span data-stu-id="d8dca-186">On Windows XP, performance is always reduced.</span></span>  
   
- 当 <xref:System.Windows.Interop.D3DImage> 移动到其他监视器时，可以在相应的适配器上创建新图面，以恢复良好的性能。  
+ <span data-ttu-id="d8dca-187">当<xref:System.Windows.Interop.D3DImage>将移到另一个监视器，你可以创建新的图面上的相应的适配器，以还原良好的性能。</span><span class="sxs-lookup"><span data-stu-id="d8dca-187">When the <xref:System.Windows.Interop.D3DImage> moves to another monitor, you can create a new surface on the corresponding adapter to restore good performance.</span></span>  
   
- 若要避免性能降低，可以为多监视器情况专门编写代码。  下面的列表介绍了一种编写多监视器代码的方法。  
+ <span data-ttu-id="d8dca-188">若要避免对性能的影响，编写专门为多监视器情况的代码。</span><span class="sxs-lookup"><span data-stu-id="d8dca-188">To avoid the performance penalty, write code specifically for the multi-monitor case.</span></span> <span data-ttu-id="d8dca-189">以下列表显示编写多监视器代码的一种方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-189">The following list shows one way to write multi-monitor code.</span></span>  
   
-1.  用 `Visual.ProjectToScreen` 方法查找屏幕空间中 <xref:System.Windows.Interop.D3DImage> 上的一个点。  
+1.  <span data-ttu-id="d8dca-190">查找的点<xref:System.Windows.Interop.D3DImage>中使用的屏幕空间`Visual.ProjectToScreen`方法。</span><span class="sxs-lookup"><span data-stu-id="d8dca-190">Find a point of the <xref:System.Windows.Interop.D3DImage> in screen space with the `Visual.ProjectToScreen` method.</span></span>  
   
-2.  使用 `MonitorFromPoint` GDI 方法查找显示该点的监视器。  
+2.  <span data-ttu-id="d8dca-191">使用`MonitorFromPoint`GDI 方法以查找显示该点的监视器。</span><span class="sxs-lookup"><span data-stu-id="d8dca-191">Use the `MonitorFromPoint` GDI method to find the monitor that is displaying the point.</span></span>  
   
-3.  使用 `IDirect3D9::GetAdapterMonitor` 方法查找监视器所在的 Direct3D9 适配器。  
+3.  <span data-ttu-id="d8dca-192">使用`IDirect3D9::GetAdapterMonitor`方法查找监视器的哪个 Direct3D9 适配器位于。</span><span class="sxs-lookup"><span data-stu-id="d8dca-192">Use the `IDirect3D9::GetAdapterMonitor` method to find which Direct3D9 adapter the monitor is on.</span></span>  
   
-4.  如果适配器不同于具有后台缓存区的适配器，则在新监视器上创建一个新的后台缓冲区，并将其分配给 <xref:System.Windows.Interop.D3DImage> 后台缓冲区。  
+4.  <span data-ttu-id="d8dca-193">如果适配器不是后台缓冲区的适配器相同，在新的监视器上创建新的后台缓冲区，并且将其分配给<xref:System.Windows.Interop.D3DImage>后台缓冲区。</span><span class="sxs-lookup"><span data-stu-id="d8dca-193">If the adapter is not the same as the adapter with the back buffer, create a new back buffer on the new monitor and assign it to the <xref:System.Windows.Interop.D3DImage> back buffer.</span></span>  
   
 > [!NOTE]
->  如果 <xref:System.Windows.Interop.D3DImage> 跨多台监视器，则会降低性能，WDDM 和 `IDirect3D9Ex` 位于同一适配器上的情况除外。  在这种情况下，无法提高性能。  
+>  <span data-ttu-id="d8dca-194">如果<xref:System.Windows.Interop.D3DImage>跨多台监视器，性能将很慢，除对于 WDDM 和`IDirect3D9Ex`同一适配器上。</span><span class="sxs-lookup"><span data-stu-id="d8dca-194">If the <xref:System.Windows.Interop.D3DImage> straddles monitors, performance will be slow, except in the case of WDDM and `IDirect3D9Ex` on the same adapter.</span></span> <span data-ttu-id="d8dca-195">没有方法来提高性能在此情况下。</span><span class="sxs-lookup"><span data-stu-id="d8dca-195">There is no way to improve performance in this situation.</span></span>  
   
- 下面的代码示例演示如何查找当前监视器。  
+ <span data-ttu-id="d8dca-196">下面的代码示例演示如何查找当前监视器。</span><span class="sxs-lookup"><span data-stu-id="d8dca-196">The following code example shows how to find the current monitor.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
- 在 <xref:System.Windows.Interop.D3DImage> 容器的大小或位置发生变化时更新监视器，或通过使用每秒更新多次的 `DispatcherTimer` 来更新监视器。  
+ <span data-ttu-id="d8dca-197">更新监视器时<xref:System.Windows.Interop.D3DImage>容器的大小或位置发生变化或更新通过使用监视器`DispatcherTimer`每秒几次更新。</span><span class="sxs-lookup"><span data-stu-id="d8dca-197">Update the monitor when the <xref:System.Windows.Interop.D3DImage> container's size or position changes, or update the monitor by using a `DispatcherTimer` that updates a few times per second.</span></span>  
   
-## WPF 软件呈现  
- 在以下情况下，WPF 会同步呈现在软件中的 UI 线程上。  
+## <a name="wpf-software-rendering"></a><span data-ttu-id="d8dca-198">WPF 软件呈现</span><span class="sxs-lookup"><span data-stu-id="d8dca-198">WPF Software Rendering</span></span>  
+ <span data-ttu-id="d8dca-199">WPF 将以同步方式呈现在以下情况下的软件中的 UI 线程上。</span><span class="sxs-lookup"><span data-stu-id="d8dca-199">WPF renders synchronously on the UI thread in software in the following situations.</span></span>  
   
--   打印  
+-   <span data-ttu-id="d8dca-200">打印</span><span class="sxs-lookup"><span data-stu-id="d8dca-200">Printing</span></span>  
   
 -   <xref:System.Windows.Media.Effects.BitmapEffect>  
   
 -   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
- 发生其中一种情况时，呈现系统将调用 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 方法以将硬件缓冲区复制到软件。  默认实现用您的图面调用 `GetRenderTargetData` 方法。  因为此调用发生在锁定\/取消锁定模式之外，所以调用可能会失败。  在这种情况下，`CopyBackBuffer` 方法返回 `null`，并且不显示任何图像。  
+ <span data-ttu-id="d8dca-201">当发生这些情况之一时，呈现系统调用<xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A>方法将硬件缓冲区复制到的软件。</span><span class="sxs-lookup"><span data-stu-id="d8dca-201">When one of these situations occurs, the rendering system calls the <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> method to copy the hardware buffer to software.</span></span> <span data-ttu-id="d8dca-202">默认实现调用`GetRenderTargetData`方法与您的图面。</span><span class="sxs-lookup"><span data-stu-id="d8dca-202">The default implementation calls the `GetRenderTargetData` method with your surface.</span></span> <span data-ttu-id="d8dca-203">因为此调用发生在锁定/解锁模式之外，则可能会失败。</span><span class="sxs-lookup"><span data-stu-id="d8dca-203">Because this call occurs outside of the Lock/Unlock pattern, it may fail.</span></span> <span data-ttu-id="d8dca-204">在这种情况下，`CopyBackBuffer`方法返回`null`和不显示任何图像。</span><span class="sxs-lookup"><span data-stu-id="d8dca-204">In this case, the `CopyBackBuffer` method returns `null` and no image is displayed.</span></span>  
   
- 您可以重写 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 方法，调用基实现，如果它返回 `null`，您可以返回一个占位符 <xref:System.Windows.Media.Imaging.BitmapSource>。  
+ <span data-ttu-id="d8dca-205">您可以重写<xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A>方法，调用基实现，如果它返回`null`，你可以返回一个占位符<xref:System.Windows.Media.Imaging.BitmapSource>。</span><span class="sxs-lookup"><span data-stu-id="d8dca-205">You can override the <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> method, call the base implementation, and if it returns `null`, you can return a placeholder <xref:System.Windows.Media.Imaging.BitmapSource>.</span></span>  
   
- 您还可以实现自己的软件呈现（而不是调用基实现）。  
+ <span data-ttu-id="d8dca-206">你也可以实现自己的软件呈现，而不是调用基实现。</span><span class="sxs-lookup"><span data-stu-id="d8dca-206">You can also implement your own software rendering instead of calling the base implementation.</span></span>  
   
 > [!NOTE]
->  如果 WPF 完全呈现在软件中，则不会显示 <xref:System.Windows.Interop.D3DImage>，因为 WPF 没有前台缓冲区。  
+>  <span data-ttu-id="d8dca-207">如果在软件中，完全呈现 WPF<xref:System.Windows.Interop.D3DImage>未显示，因为 WPF 没有前台缓冲区。</span><span class="sxs-lookup"><span data-stu-id="d8dca-207">If WPF is rendering completely in software, <xref:System.Windows.Interop.D3DImage> is not shown because WPF does not have a front buffer.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Interop.D3DImage>   
- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)   
- [演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)   
- [演练：在 WPF 中承载 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="d8dca-208">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d8dca-208">See Also</span></span>  
+ <xref:System.Windows.Interop.D3DImage>  
+ [<span data-ttu-id="d8dca-209">Direct3D9 和 WPF 互操作性的性能注意事项</span><span class="sxs-lookup"><span data-stu-id="d8dca-209">Performance Considerations for Direct3D9 and WPF Interoperability</span></span>](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
+ [<span data-ttu-id="d8dca-210">演练：创建在 WPF 中托管的 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="d8dca-210">Walkthrough: Creating Direct3D9 Content for Hosting in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
+ [<span data-ttu-id="d8dca-211">演练：在 WPF 中托管 Direct3D9 内容</span><span class="sxs-lookup"><span data-stu-id="d8dca-211">Walkthrough: Hosting Direct3D9 Content in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

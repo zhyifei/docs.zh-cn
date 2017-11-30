@@ -1,90 +1,96 @@
 ---
-title: "依赖项属性回调和验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "回调, 验证"
-  - "强制值回调"
-  - "依赖项属性, 回调"
-  - "依赖项属性, 验证"
-  - "依赖项属性的验证"
+title: "依赖项属性回调和验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], validation
+- coerce value callbacks [WPF]
+- callbacks [WPF], validation
+- dependency properties [WPF], callbacks
+- validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 依赖项属性回调和验证
-本主题介绍如何使用与属性相关的功能（如验证确定、更改属性的有效值时调用的回调）的替代自定义实现，并重写对值确定的外部可能影响来创建依赖项属性。  本主题还讨论了使用这些技术扩展默认属性系统行为所适用的方案。  
+# <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="d3ae6-102">依赖项属性回调和验证</span><span class="sxs-lookup"><span data-stu-id="d3ae6-102">Dependency Property Callbacks and Validation</span></span>
+<span data-ttu-id="d3ae6-103">本主题介绍如何使用与属性相关的功能（如验证确定、更改属性的有效值时调用的回调）的替代自定义实现，并重写对值确定的外部可能影响来创建依赖属性。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="d3ae6-104">本主题还讨论使用这些技术扩展默认属性系统行为所适用的方案。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  
   
-   
+  
   
 <a name="prerequisites"></a>   
-## 必备组件  
- 本主题假定您了解实现依赖项属性的基本方案以及如何将元数据应用到自定义依赖项属性。  有关上下文，请参见[自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+## <a name="prerequisites"></a><span data-ttu-id="d3ae6-105">先决条件</span><span class="sxs-lookup"><span data-stu-id="d3ae6-105">Prerequisites</span></span>  
+ <span data-ttu-id="d3ae6-106">本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-106">This topic assumes that you understand the basic scenarios of implementing a dependency property, and how metadata is applied to a custom dependency property.</span></span> <span data-ttu-id="d3ae6-107">有关上下文，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-107">See [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) for context.</span></span>  
   
 <a name="Validation_Callbacks"></a>   
-## 验证回调  
- 在首次注册依赖项属性时，可以为其分配验证回调。  验证回调不属于属性元数据，而是 <xref:System.Windows.DependencyProperty.Register%2A> 方法的直接输入。  因此，在为某个依赖项属性创建验证回调后，新实现将无法重写该验证回调。  
+## <a name="validation-callbacks"></a><span data-ttu-id="d3ae6-108">验证回叫</span><span class="sxs-lookup"><span data-stu-id="d3ae6-108">Validation Callbacks</span></span>  
+ <span data-ttu-id="d3ae6-109">在首次注册依赖属性时，可以为其分配验证回叫。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-109">Validation callbacks can be assigned to a dependency property when you first register it.</span></span> <span data-ttu-id="d3ae6-110">不属于属性元数据; 将验证回调。它是直接输入的<xref:System.Windows.DependencyProperty.Register%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-110">The validation callback is not part of property metadata; it is a direct input of the <xref:System.Windows.DependencyProperty.Register%2A> method.</span></span> <span data-ttu-id="d3ae6-111">因此，在为某个依赖属性创建验证回叫后，新实现无法重写该验证回叫。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-111">Therefore, once a validation callback is created for a dependency property, it cannot be overridden by a new implementation.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- 实现回调，以便为其提供对象值。  如果提供的值对属性有效，回调将返回 `true`；否则，回调返回 `false`。  假定按照向属性系统注册的类型，属性的类型是正确的，因此通常不会在回调内执行类型检查。  属性系统可在多种不同操作中使用回调。  其中包括按照默认值进行初始类型初始化、通过调用 <xref:System.Windows.DependencyObject.SetValue%2A> 进行编程更改或尝试使用提供的新默认值重写元数据。  如果验证回调是通过其中任何一种操作调用的，并且返回 `false`，则将会引发异常。  应用程序编写器必须准备处理这些异常。  验证回调常用于验证枚举值，或在属性设置的度量必须大于或等于零时约束整数值或双精度型值。  
+ <span data-ttu-id="d3ae6-112">实现回叫，以便为其提供对象值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-112">The callbacks are implemented such that they are provided an object value.</span></span> <span data-ttu-id="d3ae6-113">如果提供的值对属性有效，回叫会返回 `true`；否则，回叫返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-113">They return `true` if the provided value is valid for the property; otherwise, they return `false`.</span></span> <span data-ttu-id="d3ae6-114">假定按照向属性系统注册的类型，属性的类型是正确的，因此通常不会在回叫内执行类型检查。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-114">It is assumed that the property is of the correct type per the type registered with the property system, so checking type within the callbacks is not ordinarily done.</span></span> <span data-ttu-id="d3ae6-115">属性系统可在多种不同操作中使用回叫。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-115">The callbacks are used by the property system in a variety of different operations.</span></span> <span data-ttu-id="d3ae6-116">这包括通过调用的默认值的初始类型初始化、 以编程方式更改<xref:System.Windows.DependencyObject.SetValue%2A>，或尝试使用提供的新默认值重写元数据。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-116">This includes the initial type initialization by default value, programmatic change by invoking <xref:System.Windows.DependencyObject.SetValue%2A>, or attempts to override metadata with new default value provided.</span></span> <span data-ttu-id="d3ae6-117">如果验证回叫是通过其中任何一种操作调用的，并且返回 `false`，则会引发异常。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-117">If the validation callback is invoked by any of these operations, and returns `false`, then an exception will be raised.</span></span> <span data-ttu-id="d3ae6-118">应用程序编写器必须准备处理这些异常。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-118">Application writers must be prepared to handle these exceptions.</span></span> <span data-ttu-id="d3ae6-119">验证回叫常用于验证枚举值，或在属性设置的度量值必须大于等于零时约束整数值或双精度型值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-119">A common use of validation callbacks is validating enumeration values, or constraining values of integers or doubles when the property sets measurements that must be zero or greater.</span></span>  
   
- 验证回调专用作类验证程序，而不用作实例验证程序。  回调参数不会与对其设置要验证的属性的特定 <xref:System.Windows.DependencyObject> 通信。  因此，验证回调不能用来强制执行可能会影响属性值的“依赖项”，其中，某个属性特定于实例的值依赖于其他属性特定于实例的值或运行时状态等因素。  
+ <span data-ttu-id="d3ae6-120">验证回叫专用作类验证程序，而不用作实例验证程序。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-120">Validation callbacks specifically are intended to be class validators, not instance validators.</span></span> <span data-ttu-id="d3ae6-121">回调的参数不会与特定通信<xref:System.Windows.DependencyObject>上设置要验证的属性。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-121">The parameters of the callback do not communicate a specific <xref:System.Windows.DependencyObject> on which the properties to validate are set.</span></span> <span data-ttu-id="d3ae6-122">因此，验证回叫不能用来强制执行可能会影响属性值的“依赖项”，其中，某个属性特定于实例的值依赖于其他属性特定于实例的值或运行时状态等因素。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-122">Therefore the validation callbacks are not useful for enforcing the possible "dependencies" that might influence a property value, where the instance-specific value of a property is dependent on factors such as instance-specific values of other properties, or run-time state.</span></span>  
   
- 下面是一个非常简单的验证回调方案的代码示例：验证类型化为 <xref:System.Double> 基元的属性是否为 <xref:System.Double.PositiveInfinity> 或 <xref:System.Double.NegativeInfinity>。  
+ <span data-ttu-id="d3ae6-123">以下是非常简单的验证回调方案的代码示例： 验证属性被类型化为<xref:System.Double>基元不<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-123">The following is example code for a very simple validation callback scenario: validating that a property that is typed as the <xref:System.Double> primitive is not <xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>.</span></span>  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## 强制值回调和属性更改事件  
- 强制值回调传递属性的特定 <xref:System.Windows.DependencyObject> 实例，在更改依赖项属性的值时属性系统调用的 <xref:System.Windows.PropertyChangedCallback> 实现也是如此。  通过将这两种回调组合使用，可以对元素创建一系列属性，其中，一个属性的更改将会对另一个属性实施强制或重新计算。  
+## <a name="coerce-value-callbacks-and-property-changed-events"></a><span data-ttu-id="d3ae6-124">强制值回叫和属性更改事件</span><span class="sxs-lookup"><span data-stu-id="d3ae6-124">Coerce Value Callbacks and Property Changed Events</span></span>  
+ <span data-ttu-id="d3ae6-125">Coerce 值回调传递特定于<xref:System.Windows.DependencyObject>实例对于属性，如同<xref:System.Windows.PropertyChangedCallback>属性系统依赖项属性的值发生更改时调用的实现。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-125">Coerce value callbacks do pass the specific <xref:System.Windows.DependencyObject> instance for properties, as do <xref:System.Windows.PropertyChangedCallback> implementations that are invoked by the property system whenever the value of a dependency property changes.</span></span> <span data-ttu-id="d3ae6-126">通过将这两种回叫组合使用，可以对元素创建一系列属性，其中，一个属性的更改会对另一个属性实施强制或重新计算。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-126">Using these two callbacks in combination, you can create a series of properties on elements where changes in one property will force a coercion or reevaluation of another property.</span></span>  
   
- 使用依赖项属性链接的典型方案是：您具有用户界面驱动属性，其中，元素为最小值和最大值分别保留了一个属性，为实际值或当前值保留了第三个属性。  此时，如果按照当前值超出新的最大值的方式调整最大值，则可能需要强制当前值不超过新的最大值，并对最小值与当前值强制类似的关系。  
+ <span data-ttu-id="d3ae6-127">使用依赖属性链接的典型方案是：具有用户界面驱动属性，其中，元素为最小值和最大值分别保留一个属性，为实际值或当前值保留第三个属性。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-127">A typical scenario for using a linkage of dependency properties is when you have a user interface driven property where the element holds one property each for the minimum and maximum value, and a third property for the actual or current value.</span></span> <span data-ttu-id="d3ae6-128">此时，如果按照当前值超出新的最大值的方式调整最大值，则可能需要强制当前值不超过新的最大值，并对最小值与当前值强制类似的关系。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-128">Here, if the maximum was adjusted in such a way that the current value exceeded the new maximum, you would want to coerce the current value to be no greater than the new maximum, and a similar relationship for minimum to current.</span></span>  
   
- 下面是一个非常简短的代码示例，仅针对阐释此关系的三个依赖项属性之一。  该示例演示如何注册相关的 \*Reading 属性的最小\/最大\/当前值集的 `CurrentReading` 属性。  它使用上一节中所示的验证。  
+ <span data-ttu-id="d3ae6-129">下面是一个非常简短的代码示例，仅针对阐释此关系的三个依赖属性之一。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-129">The following is very brief example code for just one of the three dependency properties that illustrate this relationship.</span></span> <span data-ttu-id="d3ae6-130">该示例演示如何注册相关的 *Reading 属性的最小/最大/当前值集的 `CurrentReading` 属性。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-130">The example shows how the `CurrentReading` property of a Min/Max/Current set of related *Reading properties is registered.</span></span> <span data-ttu-id="d3ae6-131">它使用上一节中所示的验证。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-131">It uses the validation as shown in the previous section.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- 当前值的属性更改回调用于将更改转发到其他依赖项属性，方法是显式调用为这些属性注册的强制值回调：  
+ <span data-ttu-id="d3ae6-132">当前值的属性更改回叫用于将更改转发到其他依赖属性，方法是显式调用为这些属性注册的强制值回叫：</span><span class="sxs-lookup"><span data-stu-id="d3ae6-132">The property changed callback for Current is used to forward the change to other dependent properties, by explicitly invoking the coerce value callbacks that are registered for those other properties:</span></span>  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- 强制值回调将检查当前属性可能依赖的属性的值，并在必要时强制当前值：  
+ <span data-ttu-id="d3ae6-133">强制值回叫会检查当前属性可能依赖的属性的值，并在必要时强制当前值：</span><span class="sxs-lookup"><span data-stu-id="d3ae6-133">The coerce value callback checks the values of properties that the current property is potentially dependent upon, and coerces the current value if necessary:</span></span>  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
->  不会强制属性的默认值。  如果属性值仍然采用其初始默认值，或通过使用 <xref:System.Windows.DependencyObject.ClearValue%2A> 清除其他值，则可能存在等于默认值的属性值。  
+>  <span data-ttu-id="d3ae6-134">不会强制属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-134">Default values of properties are not coerced.</span></span> <span data-ttu-id="d3ae6-135">如果属性值仍然具有其初始的默认值，或通过清除与其他值的属性值等于默认值可能会发生<xref:System.Windows.DependencyObject.ClearValue%2A>。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-135">A property value equal to the default value might occur if a property value still has its initial default, or through clearing other values with <xref:System.Windows.DependencyObject.ClearValue%2A>.</span></span>  
   
- 强制值回调和属性更改回调属于属性元数据的一部分。  因此，您可以通过在自己的类型上重写特定依赖项属性的元数据来更改对该属性的回调，因为其类型派生自拥有该依赖项属性的类型。  
+ <span data-ttu-id="d3ae6-136">强制值回叫和属性更改回叫属于属性元数据的一部分。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-136">The coerce value and property changed callbacks are part of property metadata.</span></span> <span data-ttu-id="d3ae6-137">因此，可以通过在类型上重写特定依赖属性的元数据来更改对该属性的回叫，因为其所在的类型派生自拥有该依赖属性的类型。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-137">Therefore, you can change the callbacks for a particular dependency property as it exists on a type that you derive from the type that owns the dependency property, by overriding the metadata for that property on your type.</span></span>  
   
 <a name="Advanced"></a>   
-## 高级强制和回调方案  
+## <a name="advanced-coercion-and-callback-scenarios"></a><span data-ttu-id="d3ae6-138">高级强制和回叫方案</span><span class="sxs-lookup"><span data-stu-id="d3ae6-138">Advanced Coercion and Callback Scenarios</span></span>  
   
-### 约束和所需的值  
- 属性系统将根据所声明的逻辑使用 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 回调来强制值，但本地设置的属性的强制值仍然会在内部保留“所需的值”。  如果约束基于可能会在应用程序生存期间动态更改的其他属性值，则强制约束也会进行动态更改，并且在给定新约束的情况下约束属性可更改其值以尽可能接近所需的值。  如果解除所有约束，该值将成为所需的值。  如果您的多个属性以循环方式相互依赖，则可能会引入某些相当复杂的依赖项方案。  例如，在最小\/最大\/当前值方案中，可以选择将最小值和最大值作为用户可设置的资源。  在这种情况下，您可能需要强制最大值始终大于最小值，反之亦然。  但是，如果该强制处于活动状态，并且最大值强制为最小值，则会将当前值保留在不可设置的状态，因为它依赖于这二者，且被约束在这些值之间的范围内，即为零。  这样，如果调整最大值或最小值，当前值可能会“遵循”这些值之一，因为仍然存储了当前值所需的值，并且当前值会在放松约束时尝试接近所需的值。  
+### <a name="constraints-and-desired-values"></a><span data-ttu-id="d3ae6-139">约束和所需的值</span><span class="sxs-lookup"><span data-stu-id="d3ae6-139">Constraints and Desired Values</span></span>  
+ <span data-ttu-id="d3ae6-140"><xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>回调将使用属性系统，来强制符合所声明的逻辑而强制转换后的本地设置值的值属性仍将保留一个"预期的值"内部。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-140">The <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> callbacks will be used by the property system to coerce a value in accordance to the logic you declare, but a coerced value of a locally set property will still retain a "desired value" internally.</span></span> <span data-ttu-id="d3ae6-141">如果约束基于可能会在应用程序生存期间动态更改的其他属性值，则强制约束也会进行动态更改，并且在给定新约束的情况下约束属性可更改其值以尽可能接近所需的值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-141">If the constraints are based on other property values that may change dynamically during the application lifetime, the coercion constraints are changed dynamically also, and the constrained property can change its value to get as close to the desired value as possible given the new constraints.</span></span> <span data-ttu-id="d3ae6-142">如果解除所有约束，该值会成为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-142">The value will become the desired value if all constraints are lifted.</span></span> <span data-ttu-id="d3ae6-143">如果多个属性以循环方式相互依赖，则可能会引入某些相当复杂的依赖项方案。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-143">You can potentially introduce some fairly complicated dependency scenarios if you have multiple properties that are dependent on one another in a circular manner.</span></span> <span data-ttu-id="d3ae6-144">例如，在最小/最大/当前值方案中，可以选择将最小值和最大值作为用户可设置的资源。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-144">For instance, in the Min/Max/Current scenario, you could choose to have Minimum and Maximum be user settable.</span></span> <span data-ttu-id="d3ae6-145">在这种情况下，可能需要强制最大值始终大于最小值，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-145">If so, you might need to coerce that Maximum is always greater than Minimum and vice versa.</span></span> <span data-ttu-id="d3ae6-146">但是，如果该强制处于活动状态，并且最大值强制为最小值，则会将当前值保留在不可设置的状态，因为它依赖于这二者，且被约束在这些值之间的范围内，即为零。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-146">But if that coercion is active, and Maximum coerces to Minimum, it leaves Current in an unsettable state, because it is dependent on both and is constrained to the range between the values, which is zero.</span></span> <span data-ttu-id="d3ae6-147">这样，如果调整最大值或最小值，当前值可能会“沿用”这些值之一，因为仍然存储了当前值所需的值，并且当前值会在放松约束时尝试接近所需的值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-147">Then, if Maximum or Minimum are adjusted, Current will seem to "follow" one of the values, because the desired value of Current is still stored and is attempting to reach the desired value as the constraints are loosened.</span></span>  
   
- 复杂依赖项没有任何技术错误，但是，如果它们需要大量重新计算，则可能会略微降低性能，而且还可能导致用户混淆（如果直接影响 UI）。  请小心使用属性更改回调和强制值回调，确保可尽可能地明确处理所尝试的强制，并且不会“过度约束”。  
+ <span data-ttu-id="d3ae6-148">复杂依赖项没有任何技术错误，但是，如果它们需要大量重新计算，则可能会略微降低性能，而且还可能导致用户混淆（如果直接影响 UI）。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-148">There is nothing technically wrong with complex dependencies, but they can be a slight performance detriment if they require large numbers of reevaluations, and can also be confusing to users if they affect the UI directly.</span></span> <span data-ttu-id="d3ae6-149">请小心使用属性更改回叫和强制值回叫，确保尽可能地明确处理所尝试的强制，并且不会“过度约束”。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-149">Be careful with property changed and coerce value callbacks and make sure that the coercion being attempted can be treated as unambiguously as possible, and does not "overconstrain".</span></span>  
   
-### 使用强制值取消值更改  
- 属性系统将返回 <xref:System.Windows.DependencyProperty.UnsetValue> 值的任何 <xref:System.Windows.CoerceValueCallback> 都视为一种特殊情况。  此特殊情况意味着，属性系统应拒绝导致调用 <xref:System.Windows.CoerceValueCallback> 的属性更改，并且还应报告该属性以前的任何值。  该机制可用于检查异步启动的属性的更改对当前对象状态是否仍然有效，如果无效，则可取消这些更改。  另一个可能的方案是：您可以根据负责所报告的值的属性值确定组件来有选择地取消该值。  为此，可以将回调中传递的 <xref:System.Windows.DependencyProperty> 和属性标识符用作 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A> 的输入，然后处理 <xref:System.Windows.ValueSource>。  
+### <a name="using-coercevalue-to-cancel-value-changes"></a><span data-ttu-id="d3ae6-150">使用 CoerceValue 取消值更改</span><span class="sxs-lookup"><span data-stu-id="d3ae6-150">Using CoerceValue to Cancel Value Changes</span></span>  
+ <span data-ttu-id="d3ae6-151">属性系统会将任何<xref:System.Windows.CoerceValueCallback>返回值<xref:System.Windows.DependencyProperty.UnsetValue>作为一种特殊情况。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-151">The property system will treat any <xref:System.Windows.CoerceValueCallback> that returns the value <xref:System.Windows.DependencyProperty.UnsetValue> as a special case.</span></span> <span data-ttu-id="d3ae6-152">此特殊情况意味着导致属性更改<xref:System.Windows.CoerceValueCallback>属性系统，应被拒绝调用和属性系统应报告属性有任何以前的值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-152">This special case means that the property change that resulted in the <xref:System.Windows.CoerceValueCallback> being called should be rejected by the property system, and that the property system should instead report whatever previous value the property had.</span></span> <span data-ttu-id="d3ae6-153">该机制可用于检查异步启动的属性更改对当前对象状态是否仍然有效，如果无效，则可取消这些更改。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-153">This mechanism can be useful to check that changes to a property that were initiated asynchronously are still valid for the current object state, and suppress the changes if not.</span></span> <span data-ttu-id="d3ae6-154">另一个可能的方案是：可以根据负责所报告的值的属性值确定组件，有选择地取消该值。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-154">Another possible scenario is that you can selectively suppress a value depending on which component of property value determination is responsible for the value being reported.</span></span> <span data-ttu-id="d3ae6-155">若要执行此操作，可以使用<xref:System.Windows.DependencyProperty>回调和属性标识符作为输入传递<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，，然后处理<xref:System.Windows.ValueSource>。</span><span class="sxs-lookup"><span data-stu-id="d3ae6-155">To do this, you can use the <xref:System.Windows.DependencyProperty> passed in the callback and the property identifier as input for <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, and then process the <xref:System.Windows.ValueSource>.</span></span>  
   
-## 请参阅  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [依赖项属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [自定义依赖项属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a><span data-ttu-id="d3ae6-156">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d3ae6-156">See Also</span></span>  
+ [<span data-ttu-id="d3ae6-157">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="d3ae6-157">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="d3ae6-158">依赖属性元数据</span><span class="sxs-lookup"><span data-stu-id="d3ae6-158">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="d3ae6-159">自定义依赖属性</span><span class="sxs-lookup"><span data-stu-id="d3ae6-159">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

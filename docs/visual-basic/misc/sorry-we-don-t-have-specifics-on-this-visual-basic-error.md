@@ -1,9 +1,8 @@
 ---
-title: "很抱歉，我们没有具体信息关于此 Visual Basic 错误 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "抱歉，我们 don &#39; t 对此 Visual Basic 错误的详细信息"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -3048,54 +3047,37 @@ f1_keywords:
 - bc31432
 - bc30233
 - bc30829
-dev_langs:
-- VB
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>很抱歉，我们没有具体信息关于此 Visual Basic 错误
-很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="c9682-102">抱歉，我们 don &#39; t 对此 Visual Basic 错误的详细信息</span><span class="sxs-lookup"><span data-stu-id="c9682-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="c9682-103">很抱歉，我们没有关于此错误的任何具体信息。</span><span class="sxs-lookup"><span data-stu-id="c9682-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="c9682-104">你可以在 Web 中搜索错误号和消息文本，以找到相关信息。</span><span class="sxs-lookup"><span data-stu-id="c9682-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="c9682-105">或者，还可使用以下论坛之一咨询其他开发人员：</span><span class="sxs-lookup"><span data-stu-id="c9682-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Visual Basic 语言](http://go.microsoft.com/fwlink/?LinkId=145963)  
- 提供针对 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
+ [<span data-ttu-id="c9682-106">Visual Basic 语言</span><span class="sxs-lookup"><span data-stu-id="c9682-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ <span data-ttu-id="c9682-107">提供针对 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。</span><span class="sxs-lookup"><span data-stu-id="c9682-107">Provides a forum for questions about and general discussions of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language syntax and compiler.</span></span>  
   
- [Visual Basic 互操作和升级](http://go.microsoft.com/fwlink/?LinkId=145966)  
- 提供论坛供大家讨论与 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 升级以及互操作性功能的使用相关的问题。  
+ [<span data-ttu-id="c9682-108">Visual Basic 互操作和升级</span><span class="sxs-lookup"><span data-stu-id="c9682-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ <span data-ttu-id="c9682-109">提供论坛供大家讨论与 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 升级以及互操作性功能的使用相关的问题。</span><span class="sxs-lookup"><span data-stu-id="c9682-109">Provides a forum for questions about and issues with upgrading to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and working with interoperability features.</span></span>  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- 提供针对如何在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 环境中工作的问题的论坛。  
+ [<span data-ttu-id="c9682-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="c9682-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ <span data-ttu-id="c9682-111">提供针对如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 环境中工作的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="c9682-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
   
- [Visual Basic 常规信息](http://go.microsoft.com/fwlink/?LinkId=145973)  
- 提供针对其他论坛中未涉及的 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 相关问题的论坛。  
+ [<span data-ttu-id="c9682-112">Visual Basic 常规信息</span><span class="sxs-lookup"><span data-stu-id="c9682-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ <span data-ttu-id="c9682-113">提供针对其他论坛中未涉及的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 相关问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="c9682-113">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] that are not discussed in other forums.</span></span>  
   
- [堆栈溢出](http://stackoverflow.com/questions/tagged/vb.net)  
- 提供一个供大家讨论有关 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 的问题的论坛。  
+ [<span data-ttu-id="c9682-114">堆栈溢出</span><span class="sxs-lookup"><span data-stu-id="c9682-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="c9682-115">提供一个供大家讨论有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="c9682-115">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- 另请参见：  
- [为 Visual Basic 程序员提供的附加资源](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="c9682-116">另请参见：</span><span class="sxs-lookup"><span data-stu-id="c9682-116">Also see:</span></span>  
+ [<span data-ttu-id="c9682-117">为 Visual Basic 程序员提供的附加资源</span><span class="sxs-lookup"><span data-stu-id="c9682-117">Additional Resources for Visual Basic Programmers</span></span>](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)   
- [Visual Basic 参考](../../visual-basic/reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="c9682-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c9682-118">See Also</span></span>  
+ [<span data-ttu-id="c9682-119">Visual Basic 编程指南</span><span class="sxs-lookup"><span data-stu-id="c9682-119">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="c9682-120">Visual Basic 参考</span><span class="sxs-lookup"><span data-stu-id="c9682-120">Visual Basic Reference</span></span>](../../visual-basic/reference/index.md)

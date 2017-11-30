@@ -1,41 +1,41 @@
 ---
-title: "ErrorProvider 组件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ErrorProvider"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "错误信息, 显示"
-  - "ErrorProvider 组件 [Windows 窗体], 关于 ErrorProvider 组件"
-  - "错误 [Windows 窗体], 向用户显示"
+title: "ErrorProvider 组件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ErrorProvider
+helpviewer_keywords:
+- errors [Windows Forms], displaying to users
+- error messages [Windows Forms], displaying
+- ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ErrorProvider 组件概述（Windows 窗体）
-使用 Windows 窗体 [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) 组件，可以对窗体或控件上的用户输入进行验证。  当验证用户在窗体中的输入或显示数据集内的错误时，一般要用到该控件。  相对于在消息框中显示错误信息，错误提供程序是更好的选择，因为一旦关闭了消息框，就再也看不见错误信息。  <xref:System.Windows.Forms.ErrorProvider> 组件在相关控件（如文本框）旁显示一个错误图标 \(![“ErrorProvider”图标](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.png "vbErrorProviderIcon")\)；当用户将鼠标指针放在该错误图标上时，将出现显示错误信息字符串的工具提示。  
+# <a name="errorprovider-component-overview-windows-forms"></a><span data-ttu-id="4874d-102">ErrorProvider 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="4874d-102">ErrorProvider Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="4874d-103">Windows 窗体[ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)组件用来验证窗体或控件上的用户输入。</span><span class="sxs-lookup"><span data-stu-id="4874d-103">The Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) component is used to validate user input on a form or control.</span></span> <span data-ttu-id="4874d-104">它通常是与验证窗体上的用户输入或显示在数据集中的错误结合使用。</span><span class="sxs-lookup"><span data-stu-id="4874d-104">It is typically used in conjunction with validating user input on a form, or displaying errors within a dataset.</span></span> <span data-ttu-id="4874d-105">错误提供程序是更好的选择，比在消息框中，显示一条错误消息，因为后关闭消息框，则错误消息不再可见。</span><span class="sxs-lookup"><span data-stu-id="4874d-105">An error provider is a better alternative than displaying an error message in a message box, because once a message box is dismissed, the error message is no longer visible.</span></span> <span data-ttu-id="4874d-106"><xref:System.Windows.Forms.ErrorProvider>组件显示错误图标 (![ErrorProvider 图标](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相关的控件，如文本框; 当用户鼠标指针悬停旁边显示错误图标，工具提示，显示错误消息字符串。</span><span class="sxs-lookup"><span data-stu-id="4874d-106">The <xref:System.Windows.Forms.ErrorProvider> component displays an error icon (![ErrorProvider icon](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) next to the relevant control, such as a text box; when the user positions the mouse pointer over the error icon, a ToolTip appears, showing the error message string.</span></span>  
   
-## 主要属性  
- <xref:System.Windows.Forms.ErrorProvider> 组件的主要属性是 <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>、<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> 和 <xref:System.Windows.Forms.ErrorProvider.Icon%2A>。  将 <xref:System.Windows.Forms.ErrorProvider> 组件与数据绑定控件结合使用时，必须将 <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> 属性设置为相应的容器（通常是 Windows 窗体），以便于该组件可以在窗体上显示错误图标。  在设计器中添加该组件时，将 <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> 属性设置为包含窗体；如果在代码中添加该控件，必须自行设置该属性。  
+## <a name="key-properties"></a><span data-ttu-id="4874d-107">键属性</span><span class="sxs-lookup"><span data-stu-id="4874d-107">Key Properties</span></span>  
+ <span data-ttu-id="4874d-108"><xref:System.Windows.Forms.ErrorProvider>组件的主要属性包括<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>， <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>，和<xref:System.Windows.Forms.ErrorProvider.Icon%2A>。</span><span class="sxs-lookup"><span data-stu-id="4874d-108">The <xref:System.Windows.Forms.ErrorProvider> component's key properties are <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, and <xref:System.Windows.Forms.ErrorProvider.Icon%2A>.</span></span> <span data-ttu-id="4874d-109">使用时<xref:System.Windows.Forms.ErrorProvider>组件与数据绑定控件<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>顺序以窗体上显示错误图标组件的情况下，属性必须设置为适当的容器 （通常是 Windows 窗体）。</span><span class="sxs-lookup"><span data-stu-id="4874d-109">When using <xref:System.Windows.Forms.ErrorProvider> component with data-bound controls, the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property must be set to the appropriate container (usually the Windows Form) in order for the component to display an error icon on the form.</span></span> <span data-ttu-id="4874d-110">当在设计器中，将该组件添加<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>属性设置为包含窗体; 如果你在代码中添加控件，必须将它自己。</span><span class="sxs-lookup"><span data-stu-id="4874d-110">When the component is added in the designer, the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property is set to the containing form; if you add the control in code, you must set it yourself.</span></span>  
   
- <xref:System.Windows.Forms.ErrorProvider.Icon%2A> 属性可以设置为自定义错误图标而不是默认图标。  设置 <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> 属性后，<xref:System.Windows.Forms.ErrorProvider> 组件便可为数据集显示错误信息。  <xref:System.Windows.Forms.ErrorProvider> 组件的主要方法是 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 方法，该方法可以指定错误信息字符串和错误图标应出现的位置。  
+ <span data-ttu-id="4874d-111"><xref:System.Windows.Forms.ErrorProvider.Icon%2A>属性可以设置为一个自定义错误图标而不是默认值。</span><span class="sxs-lookup"><span data-stu-id="4874d-111">The <xref:System.Windows.Forms.ErrorProvider.Icon%2A> property can be set to a custom error icon instead of the default.</span></span> <span data-ttu-id="4874d-112">当<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>设置属性，<xref:System.Windows.Forms.ErrorProvider>组件可以显示为数据集的错误消息。</span><span class="sxs-lookup"><span data-stu-id="4874d-112">When the <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> property is set, the <xref:System.Windows.Forms.ErrorProvider> component can display error messages for a dataset.</span></span> <span data-ttu-id="4874d-113">关键方法<xref:System.Windows.Forms.ErrorProvider>组件是<xref:System.Windows.Forms.ErrorProvider.SetError%2A>方法，它指定的错误消息字符串，并应显示错误图标的位置。</span><span class="sxs-lookup"><span data-stu-id="4874d-113">The key method of the <xref:System.Windows.Forms.ErrorProvider> component is the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method, which specifies the error message string and where the error icon should appear.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ErrorProvider> 组件不提供对具有辅助功能的客户端的内置支持。  若要在使用此组件时使应用程序可访问，必须提供一种附加的可访问反馈机制。  
+>  <span data-ttu-id="4874d-114"><xref:System.Windows.Forms.ErrorProvider>组件不提供辅助功能客户端的内置支持。</span><span class="sxs-lookup"><span data-stu-id="4874d-114">The <xref:System.Windows.Forms.ErrorProvider> component does not provide built-in support for accessibility clients.</span></span> <span data-ttu-id="4874d-115">若要使用此组件时，使你的应用程序可访问，必须提供其他可访问的反馈机制。</span><span class="sxs-lookup"><span data-stu-id="4874d-115">To make your application accessible when using this component, you must provide an additional, accessible feedback mechanism.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.ErrorProvider>   
- [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)   
- [如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+## <a name="see-also"></a><span data-ttu-id="4874d-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4874d-116">See Also</span></span>  
+ <xref:System.Windows.Forms.ErrorProvider>  
+ [<span data-ttu-id="4874d-117">如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误</span><span class="sxs-lookup"><span data-stu-id="4874d-117">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ [<span data-ttu-id="4874d-118">如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标</span><span class="sxs-lookup"><span data-stu-id="4874d-118">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

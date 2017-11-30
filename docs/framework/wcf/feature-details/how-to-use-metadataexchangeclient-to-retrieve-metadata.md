@@ -1,48 +1,51 @@
 ---
-title: "如何：使用 MetadataExchangeClient 检索元数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用 MetadataExchangeClient 检索元数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a675c42c597928c0ea2cc60be6de0cea6111499
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 MetadataExchangeClient 检索元数据
-使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类可以下载使用 WS\-MetadataExchange \(MEX\) 协议的元数据。检索到的元数据文件作为 <xref:System.ServiceModel.Description.MetadataSet> 对象返回。返回的 <xref:System.ServiceModel.Description.MetadataSet> 对象包含 <xref:System.ServiceModel.Description.MetadataSection> 对象的集合，其中每个对象包含一个特定的元数据方言和一个标识符。您可以将返回的元数据写入文件；或者，如果返回的元数据包含 Web 服务描述语言 \(WSDL\) 文档，则可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 导入元数据。  
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a><span data-ttu-id="77605-102">如何：使用 MetadataExchangeClient 检索元数据</span><span class="sxs-lookup"><span data-stu-id="77605-102">How to: Use MetadataExchangeClient to Retrieve Metadata</span></span>
+<span data-ttu-id="77605-103">使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类可以下载使用 WS-MetadataExchange (MEX) 协议的元数据。</span><span class="sxs-lookup"><span data-stu-id="77605-103">Use the <xref:System.ServiceModel.Description.MetadataExchangeClient> class to download metadata using the WS-MetadataExchange (MEX) protocol.</span></span> <span data-ttu-id="77605-104">检索到的元数据文件作为 <xref:System.ServiceModel.Description.MetadataSet> 对象返回。</span><span class="sxs-lookup"><span data-stu-id="77605-104">The retrieved metadata files are returned as a <xref:System.ServiceModel.Description.MetadataSet> object.</span></span> <span data-ttu-id="77605-105">返回的 <xref:System.ServiceModel.Description.MetadataSet> 对象包含 <xref:System.ServiceModel.Description.MetadataSection> 对象的集合，其中每个对象包含一个特定的元数据方言和一个标识符。</span><span class="sxs-lookup"><span data-stu-id="77605-105">The returned <xref:System.ServiceModel.Description.MetadataSet> object contains a collection of <xref:System.ServiceModel.Description.MetadataSection> objects, each of which contains a specific metadata dialect and an identifier.</span></span> <span data-ttu-id="77605-106">您可以将返回的元数据写入文件；或者，如果返回的元数据包含 Web 服务描述语言 (WSDL) 文档，则可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 导入元数据。</span><span class="sxs-lookup"><span data-stu-id="77605-106">You can write the returned metadata to files or, if the returned metadata contains Web Services Description Language (WSDL) documents, you can import the metadata using the <xref:System.ServiceModel.Description.WsdlImporter>.</span></span>  
   
- 接受地址的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 构造函数可对符合该地址的统一资源标识符 \(URI\) 方案的 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态类使用绑定。您也可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 构造函数显式指定要使用的绑定。指定的绑定用于解析所有元数据引用。  
+ <span data-ttu-id="77605-107">接受地址的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 构造函数可对符合该地址的统一资源标识符 (URI) 方案的 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态类使用绑定。</span><span class="sxs-lookup"><span data-stu-id="77605-107">The <xref:System.ServiceModel.Description.MetadataExchangeClient> constructors that take an address use the binding on the <xref:System.ServiceModel.Description.MetadataExchangeBindings> static class that matches the Uniform Resource Identifier (URI) scheme of the address.</span></span> <span data-ttu-id="77605-108">您也可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 构造函数显式指定要使用的绑定。</span><span class="sxs-lookup"><span data-stu-id="77605-108">You can alternatively use the <xref:System.ServiceModel.Description.MetadataExchangeClient> constructor that allows you to explicitly specify the binding to use.</span></span> <span data-ttu-id="77605-109">指定的绑定用于解析所有元数据引用。</span><span class="sxs-lookup"><span data-stu-id="77605-109">The specified binding is used to resolve all metadata references.</span></span>  
   
- 与任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端一样，<xref:System.ServiceModel.Description.MetadataExchangeClient> 类型提供一个用于使用终结点配置名称加载客户端终结点配置的构造函数。指定的终结点配置必须指定 <xref:System.ServiceModel.Description.IMetadataExchange> 约定。不会加载终结点配置中的地址，因此必须使用接受地址的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 重载之一。当使用 <xref:System.ServiceModel.EndpointAddress> 实例指定元数据地址时，<xref:System.ServiceModel.Description.MetadataExchangeClient> 假设该地址指向 MEX 终结点。如果将元数据地址指定为 URL，则您还需要指定要使用的 <xref:System.ServiceModel.Description.MetadataExchangeClientMode>（MEX 或 HTTP GET）。  
+ <span data-ttu-id="77605-110">与任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端一样，<xref:System.ServiceModel.Description.MetadataExchangeClient> 类型提供一个用于使用终结点配置名称加载客户端终结点配置的构造函数。</span><span class="sxs-lookup"><span data-stu-id="77605-110">Just like any other [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client, the <xref:System.ServiceModel.Description.MetadataExchangeClient> type provides a constructor for loading client endpoint configurations using the endpoint configuration name.</span></span> <span data-ttu-id="77605-111">指定的终结点配置必须指定 <xref:System.ServiceModel.Description.IMetadataExchange> 约定。</span><span class="sxs-lookup"><span data-stu-id="77605-111">The specified endpoint configuration must specify the <xref:System.ServiceModel.Description.IMetadataExchange> contract.</span></span> <span data-ttu-id="77605-112">不会加载终结点配置中的地址，因此必须使用接受地址的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 重载之一。</span><span class="sxs-lookup"><span data-stu-id="77605-112">The address in the endpoint configuration is not loaded, so you must use one of the <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> overloads that take an address.</span></span> <span data-ttu-id="77605-113">当使用 <xref:System.ServiceModel.EndpointAddress> 实例指定元数据地址时，<xref:System.ServiceModel.Description.MetadataExchangeClient> 假设该地址指向 MEX 终结点。</span><span class="sxs-lookup"><span data-stu-id="77605-113">When you specify the metadata address using an <xref:System.ServiceModel.EndpointAddress> instance, the <xref:System.ServiceModel.Description.MetadataExchangeClient> assumes that the address points to a MEX endpoint.</span></span> <span data-ttu-id="77605-114">如果将元数据地址指定为 URL，则您还需要指定要使用的 <xref:System.ServiceModel.Description.MetadataExchangeClientMode>（MEX 或 HTTP GET）。</span><span class="sxs-lookup"><span data-stu-id="77605-114">If you specify the metadata address as a URL, then you need to also specify which <xref:System.ServiceModel.Description.MetadataExchangeClientMode> to use, MEX or HTTP GET.</span></span>  
   
 > [!IMPORTANT]
->  默认情况下，<xref:System.ServiceModel.Description.MetadataExchangeClient> 为您解析所有引用，包括 WSDL 和 XML 架构导入和包括的内容。通过将 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 属性设置为 `false`，可以禁用此功能。使用 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 属性可以控制要解析的最大引用数。可以与 `MaxReceivedMessageSize` 属性一起对绑定使用此属性，以控制所检索的元数据的量。  
+>  <span data-ttu-id="77605-115">默认情况下，<xref:System.ServiceModel.Description.MetadataExchangeClient> 为您解析所有引用，包括 WSDL 和 XML 架构导入和包括的内容。</span><span class="sxs-lookup"><span data-stu-id="77605-115">By default, the <xref:System.ServiceModel.Description.MetadataExchangeClient> resolves all references for you, including WSDL and XML Schema imports and includes.</span></span> <span data-ttu-id="77605-116">通过将 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 属性设置为 `false`，可以禁用此功能。</span><span class="sxs-lookup"><span data-stu-id="77605-116">You can disable this functionality by setting the <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> property to `false`.</span></span> <span data-ttu-id="77605-117">使用 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 属性可以控制要解析的最大引用数。</span><span class="sxs-lookup"><span data-stu-id="77605-117">You can control the maximum number of references to resolve using the <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> property.</span></span> <span data-ttu-id="77605-118">可以与 `MaxReceivedMessageSize` 属性一起对绑定使用此属性，以控制所检索的元数据的量。</span><span class="sxs-lookup"><span data-stu-id="77605-118">You can use this property in conjunction with the `MaxReceivedMessageSize` property on the binding to control how much metadata is retrieved.</span></span>  
   
-### 使用 MetadataExchangeClient 获取元数据  
+### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a><span data-ttu-id="77605-119">使用 MetadataExchangeClient 获取元数据</span><span class="sxs-lookup"><span data-stu-id="77605-119">To use MetadataExchangeClient to obtain metadata</span></span>  
   
-1.  通过显式指定一个绑定、一个终结点配置名称或元数据的地址，创建一个新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 对象。  
+1.  <span data-ttu-id="77605-120">通过显式指定一个绑定、一个终结点配置名称或元数据的地址，创建一个新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 对象。</span><span class="sxs-lookup"><span data-stu-id="77605-120">Create a new <xref:System.ServiceModel.Description.MetadataExchangeClient> object by explicitly specifying a binding, an endpoint configuration name, or the address of the metadata.</span></span>  
   
-2.  配置 <xref:System.ServiceModel.Description.MetadataExchangeClient> 以适合您的需要。例如，您可以指定请求元数据时要使用的凭据、控制元数据引用的解析方式和设置 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 属性以控制元数据请求超时之前必须在多长时间内返回。  
+2.  <span data-ttu-id="77605-121">配置 <xref:System.ServiceModel.Description.MetadataExchangeClient> 以适合您的需要。</span><span class="sxs-lookup"><span data-stu-id="77605-121">Configure the <xref:System.ServiceModel.Description.MetadataExchangeClient> to suit your needs.</span></span> <span data-ttu-id="77605-122">例如，您可以指定请求元数据时要使用的凭据、控制元数据引用的解析方式和设置 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 属性以控制元数据请求超时之前必须在多长时间内返回。</span><span class="sxs-lookup"><span data-stu-id="77605-122">For example, you can specify credentials to use when requesting metadata, control how metadata references are resolved, and set the <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> property to control how long the metadata request has to return before it times out.</span></span>  
   
-3.  通过调用 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 方法之一获取包含检索的元数据的 <xref:System.ServiceModel.Description.MetadataSet> 对象。请注意，如果您在构造 <xref:System.ServiceModel.Description.MetadataExchangeClient> 时显式指定了地址，则只能使用不带参数的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 重载。  
+3.  <span data-ttu-id="77605-123">通过调用 <xref:System.ServiceModel.Description.MetadataSet> 方法之一获取包含检索的元数据的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 对象。</span><span class="sxs-lookup"><span data-stu-id="77605-123">Obtain the <xref:System.ServiceModel.Description.MetadataSet> object that contains the retrieved metadata by calling one of the <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> methods.</span></span> <span data-ttu-id="77605-124">请注意，如果您在构造 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 时显式指定了地址，则只能使用不带参数的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 重载。</span><span class="sxs-lookup"><span data-stu-id="77605-124">Note that you can only use the <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> overload that takes no arguments if you explicitly specified an address when constructing the <xref:System.ServiceModel.Description.MetadataExchangeClient>.</span></span>  
   
-## 示例  
- 下面的代码示例演示如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载和枚举元数据文件。  
-  
+## <a name="example"></a><span data-ttu-id="77605-125">示例</span><span class="sxs-lookup"><span data-stu-id="77605-125">Example</span></span>  
+ <span data-ttu-id="77605-126">下面的代码示例演示如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载和枚举元数据文件。</span><span class="sxs-lookup"><span data-stu-id="77605-126">The following code example shows how to use <xref:System.ServiceModel.Description.MetadataExchangeClient> to download and enumerate metadata files.</span></span>  
+
  [!code-csharp[MetadataResolver#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/metadataresolver/cs/client.cs#3)]  
+
+## <a name="compiling-the-code"></a><span data-ttu-id="77605-127">编译代码</span><span class="sxs-lookup"><span data-stu-id="77605-127">Compiling the Code</span></span>  
+ <span data-ttu-id="77605-128">若要编译此代码示例，必须引用 System.ServiceModel.dll 程序集并导入 <xref:System.ServiceModel.Description> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="77605-128">To compile this code example, you must reference the System.ServiceModel.dll assembly and import the <xref:System.ServiceModel.Description> namespace.</span></span>  
   
-## 编译代码  
- 若要编译此代码示例，必须引用 System.ServiceModel.dll 程序集并导入 <xref:System.ServiceModel.Description> 命名空间。  
-  
-## 请参阅  
- <xref:System.ServiceModel.Description.MetadataResolver>   
- <xref:System.ServiceModel.Description.MetadataExchangeClient>   
+## <a name="see-also"></a><span data-ttu-id="77605-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="77605-129">See Also</span></span>  
+ <xref:System.ServiceModel.Description.MetadataResolver>  
+ <xref:System.ServiceModel.Description.MetadataExchangeClient>  
  <xref:System.ServiceModel.Description.WsdlImporter>

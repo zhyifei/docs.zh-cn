@@ -1,103 +1,107 @@
 ---
-title: "演练：验证 Windows 窗体 DataGridView 控件中的数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "数据 [Windows 窗体], 验证"
-  - "数据网格, 验证数据"
-  - "数据验证, Windows 窗体"
-  - "DataGridView 控件 [Windows 窗体], 数据验证"
-  - "验证数据, Windows 窗体"
-  - "演练 [Windows 窗体], DataGridView 控件"
+title: "演练：验证 Windows 窗体 DataGridView 控件中的数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating data [Windows Forms], Windows Forms
+- data [Windows Forms], validation
+- DataGridView control [Windows Forms], data validation
+- data grids [Windows Forms], validating data
+- data validation [Windows Forms], Windows Forms
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：验证 Windows 窗体 DataGridView 控件中的数据
-向用户显示数据输入功能时，必须频繁验证输入窗体中的数据。  <xref:System.Windows.Forms.DataGridView> 类提供了在将数据提交到数据存储区之前执行验证的便利方式。  可以通过处理 <xref:System.Windows.Forms.DataGridView.CellValidating> 事件来验证数据，该事件是在当前单元格发生更改时由 <xref:System.Windows.Forms.DataGridView> 引发的。  
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="a5c2c-102">演练：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="a5c2c-102">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="a5c2c-103">时向用户显示数据条目功能，你经常需要验证你的窗体中输入的数据。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-103">When you display data entry functionality to users, you frequently have to validate the data entered into your form.</span></span> <span data-ttu-id="a5c2c-104"><xref:System.Windows.Forms.DataGridView>类提供了一种简便方式提交到数据存储区数据之前执行验证。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-104">The <xref:System.Windows.Forms.DataGridView> class provides a convenient way to perform validation before data is committed to the data store.</span></span> <span data-ttu-id="a5c2c-105">你可以通过处理在验证数据<xref:System.Windows.Forms.DataGridView.CellValidating>事件，由引发<xref:System.Windows.Forms.DataGridView>当前单元格的更改时。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-105">You can validate data by handling the <xref:System.Windows.Forms.DataGridView.CellValidating> event, which is raised by the <xref:System.Windows.Forms.DataGridView> when the current cell changes.</span></span>  
   
- 在本演练中，将从 Northwind 示例数据库的 `Customers` 表中检索行，并将检索到的行显示在 <xref:System.Windows.Forms.DataGridView> 控件中。  当用户编辑 `CompanyName` 列中的单元格后尝试离开该单元格时，<xref:System.Windows.Forms.DataGridView.CellValidating> 事件处理程序将检查新的公司名称字符串，以确保它不为空；如果新的值是空字符串，则 <xref:System.Windows.Forms.DataGridView> 阻止用户的光标离开该单元格，直到用户输入非空的字符串。  
+ <span data-ttu-id="a5c2c-106">在本演练中，你将检索行从`Customers`Northwind 示例数据库中表，然后将其显示在<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-106">In this walkthrough, you will retrieve rows from the `Customers` table in the Northwind sample database and display them in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="a5c2c-107">当用户编辑中的单元格`CompanyName`列，尝试将单元格，保留<xref:System.Windows.Forms.DataGridView.CellValidating>事件处理程序将检查新的公司名称字符串，以确保如果新值是空字符串，则不为空;<xref:System.Windows.Forms.DataGridView>将阻止用户的光标离开单元格，直到输入非空字符串。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-107">When a user edits a cell in the `CompanyName` column and tries to leave the cell, the <xref:System.Windows.Forms.DataGridView.CellValidating> event handler will examine new company name string to make sure it is not empty; if the new value is an empty string, the <xref:System.Windows.Forms.DataGridView> will prevent the user's cursor from leaving the cell until a non-empty string is entered.</span></span>  
   
- 若要以单个列表的形式复制本主题中的代码，请参见 [如何：验证 Windows 窗体 DataGridView 控件中的数据](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)。  
+ <span data-ttu-id="a5c2c-108">若要将代码复制本主题中的一个单独的清单，请参阅[如何： 在 Windows 窗体 DataGridView 控件中验证数据](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-108">To copy the code in this topic as a single listing, see [How to: Validate Data in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 系统必备  
- 若要完成本演练，您需要：  
+## <a name="prerequisites"></a><span data-ttu-id="a5c2c-109">先决条件</span><span class="sxs-lookup"><span data-stu-id="a5c2c-109">Prerequisites</span></span>  
+ <span data-ttu-id="a5c2c-110">若要完成本演练，你将需要：</span><span class="sxs-lookup"><span data-stu-id="a5c2c-110">In order to complete this walkthrough, you will need:</span></span>  
   
--   对 Northwind SQL Server 示例数据库所在的服务器的访问权限。  
+-   <span data-ttu-id="a5c2c-111">到 Northwind SQL Server 示例数据库的服务器的访问。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-111">Access to a server that has the Northwind SQL Server sample database.</span></span>  
   
-## 创建窗体  
+## <a name="creating-the-form"></a><span data-ttu-id="a5c2c-112">创建窗体</span><span class="sxs-lookup"><span data-stu-id="a5c2c-112">Creating the Form</span></span>  
   
-#### 验证在 DataGridView 中输入的数据  
+#### <a name="to-validate-data-entered-in-a-datagridview"></a><span data-ttu-id="a5c2c-113">在 DataGridView 中输入的数据进行验证</span><span class="sxs-lookup"><span data-stu-id="a5c2c-113">To validate data entered in a DataGridView</span></span>  
   
-1.  创建一个从 <xref:System.Windows.Forms.Form> 派生的类，该类包含一个 <xref:System.Windows.Forms.DataGridView> 控件和一个 <xref:System.Windows.Forms.BindingSource> 组件。  
+1.  <span data-ttu-id="a5c2c-114">创建一个类，派生自<xref:System.Windows.Forms.Form>和包含<xref:System.Windows.Forms.DataGridView>控件和<xref:System.Windows.Forms.BindingSource>组件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-114">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control and a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
-     下面的代码示例提供了基本的初始化功能，并包含一个 `Main` 方法。  
+     <span data-ttu-id="a5c2c-115">下面的代码示例提供了基本的初始化，并且包含`Main`方法。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-115">The following code example provides basic initialization and includes a `Main` method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  在窗体的类定义中实现一个方法，用于处理有关与数据库的连接的详细信息。  
+2.  <span data-ttu-id="a5c2c-116">实现用于处理连接到数据库的详细信息窗体的类定义中的方法。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-116">Implement a method in your form's class definition for handling the details of connecting to the database.</span></span>  
   
-     此代码示例使用 `GetData` 方法，该方法返回填充的 <xref:System.Data.DataTable> 对象。  请确保将 `connectionString` 变量设置为适用于您的数据库的值。  
+     <span data-ttu-id="a5c2c-117">此代码示例使用`GetData`返回填充的方法<xref:System.Data.DataTable>对象。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-117">This code example uses a `GetData` method that returns a populated <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="a5c2c-118">请确保你设置`connectionString`变量为适合于你的数据库的值。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-118">Be sure that you set the `connectionString` variable to a value that is appropriate for your database.</span></span>  
   
     > [!IMPORTANT]
-    >  将敏感信息（如密码）存储在连接字符串中可能会影响您的应用程序的安全性。  若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。  有关更多信息，请参见[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+    >  <span data-ttu-id="a5c2c-119">将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-119">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="a5c2c-120">使用 Windows 身份验证，也称为集成安全性，是一种更安全的方法来控制对数据库的访问。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-120">Using Windows Authentication, also known as integrated security, is a more secure way to control access to a database.</span></span> <span data-ttu-id="a5c2c-121">有关详细信息，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-121">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  为窗体的 <xref:System.Windows.Forms.Form.Load> 事件实现一个处理程序，该事件初始化 <xref:System.Windows.Forms.DataGridView> 和 <xref:System.Windows.Forms.BindingSource> 并设置数据绑定。  
+3.  <span data-ttu-id="a5c2c-122">实现你的窗体的处理<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和数据绑定设置。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-122">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.BindingSource> and sets up the data binding.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  实现 <xref:System.Windows.Forms.DataGridView> 控件的 <xref:System.Windows.Forms.DataGridView.CellValidating> 和 <xref:System.Windows.Forms.DataGridView.CellEndEdit> 事件的处理程序。  
+4.  <span data-ttu-id="a5c2c-123">实现处理程序<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.CellValidating>和<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-123">Implement handlers for the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.CellValidating> and <xref:System.Windows.Forms.DataGridView.CellEndEdit> events.</span></span>  
   
-     可以在 <xref:System.Windows.Forms.DataGridView.CellValidating> 事件处理程序中确定 `CompanyName` 列中的单元格的值是否为空。  如果单元格值验证失败，请将 <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=fullName> 类的 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 `true`。  这将导致 <xref:System.Windows.Forms.DataGridView> 控件阻止光标离开该单元格。  将该行的 <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> 属性设置为解释性字符串。  这将显示错误图标，其工具提示将包含此错误文本。  在 <xref:System.Windows.Forms.DataGridView.CellEndEdit> 事件处理程序中，将该行的 <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> 属性设置为空字符串。  只有当单元格退出编辑模式（如果验证失败，则不能退出单元格）时，才能发生 <xref:System.Windows.Forms.DataGridView.CellEndEdit> 事件。  
+     <span data-ttu-id="a5c2c-124"><xref:System.Windows.Forms.DataGridView.CellValidating>事件处理程序是其中确定是否在单元格的值`CompanyName`列为空。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-124">The <xref:System.Windows.Forms.DataGridView.CellValidating> event handler is where you determine whether the value of a cell in the `CompanyName` column is empty.</span></span> <span data-ttu-id="a5c2c-125">如果单元格的值未通过验证，则设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性<xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType>类到`true`。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-125">If the cell value fails validation, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> class to `true`.</span></span> <span data-ttu-id="a5c2c-126">这将导致<xref:System.Windows.Forms.DataGridView>以防光标离开该单元格的控件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-126">This causes the <xref:System.Windows.Forms.DataGridView> control to prevent the cursor from leaving the cell.</span></span> <span data-ttu-id="a5c2c-127">设置<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>为说明性字符串的行上的属性。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-127">Set the <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> property on the row to an explanatory string.</span></span> <span data-ttu-id="a5c2c-128">此时将显示错误图标，包含错误文本的工具提示。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-128">This displays an error icon with a ToolTip that contains the error text.</span></span> <span data-ttu-id="a5c2c-129">在<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件处理程序中，设置<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>属性为空字符串的行。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-129">In the <xref:System.Windows.Forms.DataGridView.CellEndEdit> event handler, set the <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> property on the row to the empty string.</span></span> <span data-ttu-id="a5c2c-130"><xref:System.Windows.Forms.DataGridView.CellEndEdit>仅当单元格退出编辑模式，则不能如果它未通过验证时，才发生的事件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-130">The <xref:System.Windows.Forms.DataGridView.CellEndEdit> event occurs only when the cell exits edit mode, which it cannot do if it fails validation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#20)]  
   
-## 测试应用程序  
- 现在可以测试窗体，以确保其行为与预期相同。  
+## <a name="testing-the-application"></a><span data-ttu-id="a5c2c-131">测试应用程序</span><span class="sxs-lookup"><span data-stu-id="a5c2c-131">Testing the Application</span></span>  
+ <span data-ttu-id="a5c2c-132">你现在可以测试窗体，以确保其行为与预期相同。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-132">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### 测试窗体  
+#### <a name="to-test-the-form"></a><span data-ttu-id="a5c2c-133">若要测试窗体</span><span class="sxs-lookup"><span data-stu-id="a5c2c-133">To test the form</span></span>  
   
--   编译并运行应用程序。  
+-   <span data-ttu-id="a5c2c-134">编译并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-134">Compile and run the application.</span></span>  
   
-     您将看到一个用 `Customers` 表的数据填充的 <xref:System.Windows.Forms.DataGridView>。  双击 `CompanyName` 列中的单元格时，可以编辑该值。  如果删除所有字符，并按 Tab 键退出该单元格，则 <xref:System.Windows.Forms.DataGridView> 会阻止您退出。  在该单元格中键入非空字符串后，<xref:System.Windows.Forms.DataGridView> 控件将允许您退出此单元格。  
+     <span data-ttu-id="a5c2c-135">你将看到<xref:System.Windows.Forms.DataGridView>数据填充`Customers`表。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-135">You will see a <xref:System.Windows.Forms.DataGridView> filled with data from the `Customers` table.</span></span> <span data-ttu-id="a5c2c-136">当你双击中的单元格`CompanyName`列中，你可以编辑的值。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-136">When you double-click a cell in the `CompanyName` column, you can edit the value.</span></span> <span data-ttu-id="a5c2c-137">如果您删除的所有字符并按 TAB 键退出该单元格，<xref:System.Windows.Forms.DataGridView>会阻止您退出。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-137">If you delete all the characters and hit the TAB key to exit the cell, the <xref:System.Windows.Forms.DataGridView> prevents you from exiting.</span></span> <span data-ttu-id="a5c2c-138">当你的单元格中键入非空字符串<xref:System.Windows.Forms.DataGridView>控制可用于退出单元格。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-138">When you type a non-empty string into the cell, the <xref:System.Windows.Forms.DataGridView> control lets you exit the cell.</span></span>  
   
-## 后续步骤  
- 此应用程序使您对 <xref:System.Windows.Forms.DataGridView> 控件的功能有一个基本了解。  您可以通过以下几种方法来自定义 <xref:System.Windows.Forms.DataGridView> 控件的外观和行为：  
+## <a name="next-steps"></a><span data-ttu-id="a5c2c-139">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a5c2c-139">Next Steps</span></span>  
+ <span data-ttu-id="a5c2c-140">此应用程序提供一个基本的了解<xref:System.Windows.Forms.DataGridView>控件的功能。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-140">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="a5c2c-141">你可以自定义的外观和行为<xref:System.Windows.Forms.DataGridView>控制以下几种方式：</span><span class="sxs-lookup"><span data-stu-id="a5c2c-141">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>  
   
--   更改边框和标题样式。  有关更多信息，请参见 [如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)。  
+-   <span data-ttu-id="a5c2c-142">更改边框和标头的样式。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-142">Change border and header styles.</span></span> <span data-ttu-id="a5c2c-143">有关详细信息，请参阅[如何： 更改边框和网格线在 Windows 窗体 DataGridView 控件中的样式](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-143">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>  
   
--   允许或限制用户向 <xref:System.Windows.Forms.DataGridView> 控件中输入数据。  有关更多信息，请参见[如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)和[如何：使 Windows 窗体 DataGridView 控件中的列只读](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
+-   <span data-ttu-id="a5c2c-144">允许或限制用户输入到<xref:System.Windows.Forms.DataGridView>控件。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-144">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="a5c2c-145">有关详细信息，请参阅[如何： 防止添加和删除行在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)，和[如何： 在 Windows 窗体 DataGridView 控件中使列成为只读](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-145">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>  
   
--   检查用户输入中是否有与数据库有关的错误。  有关更多信息，请参见 [演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
+-   <span data-ttu-id="a5c2c-146">检查与数据库相关的错误的用户输入。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-146">Check user input for database-related errors.</span></span> <span data-ttu-id="a5c2c-147">有关详细信息，请参阅[演练： 处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-147">For more information, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
   
--   使用虚拟模式处理特大数据集。  有关更多信息，请参见 [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+-   <span data-ttu-id="a5c2c-148">处理非常大的数据集使用的虚拟模式。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-148">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="a5c2c-149">有关详细信息，请参阅[演练： 在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-149">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
--   自定义单元格的外观。  有关更多信息，请参见 [如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) 和 [如何：设置 Windows 窗体 DataGridView 控件中的字体和颜色样式](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
+-   <span data-ttu-id="a5c2c-150">自定义单元格的外观。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-150">Customize the appearance of cells.</span></span> <span data-ttu-id="a5c2c-151">有关详细信息，请参阅[如何： 自定义 Windows 窗体 DataGridView 控件中的单元外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[如何： 设置字体和颜色样式在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a5c2c-151">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Font and Color Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
- [如何：验证 Windows 窗体 DataGridView 控件中的数据](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)   
- [演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)   
- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a><span data-ttu-id="a5c2c-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a5c2c-152">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="a5c2c-153">Windows 窗体 DataGridView 控件中的数据输入</span><span class="sxs-lookup"><span data-stu-id="a5c2c-153">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="a5c2c-154">如何：在 Windows 窗体 DataGridView 控件中验证数据</span><span class="sxs-lookup"><span data-stu-id="a5c2c-154">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="a5c2c-155">演练：处理在 Windows 窗体 DataGridView 控件有数据输入时发生的错误</span><span class="sxs-lookup"><span data-stu-id="a5c2c-155">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [<span data-ttu-id="a5c2c-156">保护连接信息</span><span class="sxs-lookup"><span data-stu-id="a5c2c-156">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)

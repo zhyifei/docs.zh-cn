@@ -1,65 +1,48 @@
 ---
-title: "/nologo (Visual Basic 中) |Microsoft 文档"
-ms.date: 2015-07-20
+title: /nologo (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
-- banners, suppressing startup
+- banners [Visual Basic], suppressing startup
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0e309a80082f19fb47ccbbb43c00f22c8addd3b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3c2c7e7a111a3763d7463f67c2d984955da33bbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nologo-visual-basic"></a>/nologo (Visual Basic)
-在编译期间取消显示版权标志和信息性消息。  
+# <a name="nologo-visual-basic"></a><span data-ttu-id="618b4-102">/nologo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="618b4-102">/nologo (Visual Basic)</span></span>
+<span data-ttu-id="618b4-103">在编译期间取消显示版权标志和信息性消息。</span><span class="sxs-lookup"><span data-stu-id="618b4-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="618b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="618b4-104">Syntax</span></span>  
   
 ```  
 /nologo  
 ```  
   
-## <a name="remarks"></a>备注  
- 如果指定`/nologo`，编译器将不显示版权标志。 默认情况，`/nologo` 是无效的。  
+## <a name="remarks"></a><span data-ttu-id="618b4-105">备注</span><span class="sxs-lookup"><span data-stu-id="618b4-105">Remarks</span></span>  
+ <span data-ttu-id="618b4-106">如果指定`/nologo`，编译器不会显示版权标志。</span><span class="sxs-lookup"><span data-stu-id="618b4-106">If you specify `/nologo`, the compiler does not display a copyright banner.</span></span> <span data-ttu-id="618b4-107">默认情况，`/nologo` 是无效的。</span><span class="sxs-lookup"><span data-stu-id="618b4-107">By default, `/nologo` is not in effect.</span></span>  
   
 > [!NOTE]
->  `/nologo`选项不是在 Visual Studio 开发环境中可用; 只有当从命令行进行编译，它才可用。  
+>  <span data-ttu-id="618b4-108">`/nologo`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。</span><span class="sxs-lookup"><span data-stu-id="618b4-108">The `/nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>示例  
- 下面的代码编译`T2.vb`并且不显示版权标志。  
+## <a name="example"></a><span data-ttu-id="618b4-109">示例</span><span class="sxs-lookup"><span data-stu-id="618b4-109">Example</span></span>  
+ <span data-ttu-id="618b4-110">下面的代码编译`T2.vb`并且不显示版权标志。</span><span class="sxs-lookup"><span data-stu-id="618b4-110">The following code compiles `T2.vb` and does not display a copyright banner.</span></span>  
   
 ```  
 vbc /nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="618b4-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="618b4-111">See Also</span></span>  
+ [<span data-ttu-id="618b4-112">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="618b4-112">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="618b4-113">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="618b4-113">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

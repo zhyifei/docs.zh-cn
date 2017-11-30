@@ -1,77 +1,78 @@
 ---
-title: "如何：使用数据保护 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "密码系统 [.NET Framework], 数据保护 API"
-  - "数据 [.NET Framework], 解密"
-  - "数据 [.NET Framework], 加密"
-  - "数据保护 API [.NET Framework]"
-  - "解密"
-  - "DPAPI"
-  - "加密 [.NET Framework], 数据保护 API"
-  - "ProtectedData 类, 关于 ProtectedData 类"
-  - "ProtectedMemory 类, 关于 ProtectedMemory 类"
+title: "如何：使用数据保护"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DPAPI
+- encryption [.NET Framework], data protection API
+- data [.NET Framework], decryption
+- ProtectedMemory class, about ProtectedMemory class
+- ProtectedData class, about ProtectedData class
+- cryptography [.NET Framework], data protection API
+- data protection API [.NET Framework]
+- decryption
+- data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 99608c991d79d204085f190c00e347aae15eb2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用数据保护
-.NET Framework 提供对数据保护 API \(DPAPI\) 的访问，这允许你使用来自当前用户帐户或计算机的信息对数据进行加密。  当使用 DPAPI 时，你会使显式生成和存储加密密钥的困难问题得到缓解。  
+# <a name="how-to-use-data-protection"></a><span data-ttu-id="30038-102">如何：使用数据保护</span><span class="sxs-lookup"><span data-stu-id="30038-102">How to: Use Data Protection</span></span>
+<span data-ttu-id="30038-103">.NET Framework 提供对数据保护 API (DPAPI) 的访问，这允许你使用来自当前用户帐户或计算机的信息对数据进行加密。</span><span class="sxs-lookup"><span data-stu-id="30038-103">The .NET Framework provides access to the data protection API (DPAPI), which allows you to encrypt data using information from the current user account or computer.</span></span>  <span data-ttu-id="30038-104">当使用 DPAPI 时，你会使显式生成和存储加密密钥的困难问题得到缓解。</span><span class="sxs-lookup"><span data-stu-id="30038-104">When you use the DPAPI, you alleviate the difficult problem of explicitly generating and storing a cryptographic key.</span></span>  
   
- 使用 <xref:System.Security.Cryptography.ProtectedMemory> 类加密内存中的字节数组。  此功能在 Microsoft Windows XP 和更高版本操作系统中可用。  你可以指定由当前进程加密的内存只能由当前进程、由所有进程、或从相同的用户上下文解密。  请参阅 <xref:System.Security.Cryptography.MemoryProtectionScope> 枚举以获取 <xref:System.Security.Cryptography.ProtectedMemory> 选项的详细说明。  
+ <span data-ttu-id="30038-105">使用 <xref:System.Security.Cryptography.ProtectedMemory> 类加密内存中的字节数组。</span><span class="sxs-lookup"><span data-stu-id="30038-105">Use the <xref:System.Security.Cryptography.ProtectedMemory> class to encrypt an array of in-memory bytes.</span></span>  <span data-ttu-id="30038-106">此功能在 Microsoft Windows XP 和更高版本操作系统中可用。</span><span class="sxs-lookup"><span data-stu-id="30038-106">This functionality is available in Microsoft Windows XP and later operating systems.</span></span>  <span data-ttu-id="30038-107">你可以指定由当前进程加密的内存只能由当前进程、由所有进程、或从相同的用户上下文解密。</span><span class="sxs-lookup"><span data-stu-id="30038-107">You can specify that memory encrypted by the current process can be decrypted by the current process only, by all processes, or from the same user context.</span></span>  <span data-ttu-id="30038-108">请参阅 <xref:System.Security.Cryptography.MemoryProtectionScope> 枚举以获取 <xref:System.Security.Cryptography.ProtectedMemory> 选项的详细说明。</span><span class="sxs-lookup"><span data-stu-id="30038-108">See the <xref:System.Security.Cryptography.MemoryProtectionScope> enumeration for a detailed description of <xref:System.Security.Cryptography.ProtectedMemory> options.</span></span>  
   
- 使用 <xref:System.Security.Cryptography.ProtectedData> 类来加密字节数组的副本。  此功能在 Microsoft Windows 2000 和更高版本操作系统中可用。  你可以指定由当前用户帐户加密的数据仅能通过相同的用户帐户解密，也可以指定由当前用户帐户加密的数据可以通过计算机上的任何帐户进行解密。  请参阅 <xref:System.Security.Cryptography.DataProtectionScope> 枚举以获取 <xref:System.Security.Cryptography.ProtectedData> 选项的详细说明。  
+ <span data-ttu-id="30038-109">使用 <xref:System.Security.Cryptography.ProtectedData> 类来加密字节数组的副本。</span><span class="sxs-lookup"><span data-stu-id="30038-109">Use the <xref:System.Security.Cryptography.ProtectedData> class to encrypt a copy of an array of bytes.</span></span> <span data-ttu-id="30038-110">此功能在 Microsoft Windows 2000 和更高版本操作系统中可用。</span><span class="sxs-lookup"><span data-stu-id="30038-110">This functionality is available in Microsoft Windows 2000 and later operating systems.</span></span>  <span data-ttu-id="30038-111">你可以指定由当前用户帐户加密的数据仅能通过相同的用户帐户解密，也可以指定由当前用户帐户加密的数据可以通过计算机上的任何帐户进行解密。</span><span class="sxs-lookup"><span data-stu-id="30038-111">You can specify that data encrypted by the current user account can be decrypted only by the same user account, or you can specify that data encrypted by the current user account can be decrypted by any account on the computer.</span></span>  <span data-ttu-id="30038-112">请参阅 <xref:System.Security.Cryptography.DataProtectionScope> 枚举以获取 <xref:System.Security.Cryptography.ProtectedData> 选项的详细说明。</span><span class="sxs-lookup"><span data-stu-id="30038-112">See the <xref:System.Security.Cryptography.DataProtectionScope> enumeration for a detailed description of <xref:System.Security.Cryptography.ProtectedData> options.</span></span>  
   
-### 若要使用数据保护对内存中数据进行加密  
+### <a name="to-encrypt-in-memory-data-using-data-protection"></a><span data-ttu-id="30038-113">若要使用数据保护对内存中数据进行加密</span><span class="sxs-lookup"><span data-stu-id="30038-113">To encrypt in-memory data using data protection</span></span>  
   
-1.  调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和内存保护范围。  
+1.  <span data-ttu-id="30038-114">调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和内存保护范围。</span><span class="sxs-lookup"><span data-stu-id="30038-114">Call the static <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> method while passing an array of bytes to encrypt, the entropy, and the memory protection scope.</span></span>  
   
-### 若要使用数据保护对内存中数据进行解密  
+### <a name="to-decrypt-in-memory-data-using-data-protection"></a><span data-ttu-id="30038-115">若要使用数据保护对内存中数据进行解密</span><span class="sxs-lookup"><span data-stu-id="30038-115">To decrypt in-memory data using data protection</span></span>  
   
-1.  调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法，同时传递要解密的字节数组和内存保护范围。  
+1.  <span data-ttu-id="30038-116">调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法，同时传递要解密的字节数组和内存保护范围。</span><span class="sxs-lookup"><span data-stu-id="30038-116">Call the static <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> method while passing an array of bytes to decrypt and the memory protection scope.</span></span>  
   
-### 若要使用数据保护将数据加密到文件或流  
+### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a><span data-ttu-id="30038-117">若要使用数据保护将数据加密到文件或流</span><span class="sxs-lookup"><span data-stu-id="30038-117">To encrypt data to a file or stream using data protection</span></span>  
   
-1.  创建随机平均信息量。  
+1.  <span data-ttu-id="30038-118">创建随机平均信息量。</span><span class="sxs-lookup"><span data-stu-id="30038-118">Create random entropy.</span></span>  
   
-2.  调用静态 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和数据保护范围。  
+2.  <span data-ttu-id="30038-119">调用静态 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和数据保护范围。</span><span class="sxs-lookup"><span data-stu-id="30038-119">Call the static <xref:System.Security.Cryptography.ProtectedData.Protect%2A> method while passing an array of bytes to encrypt, the entropy, and the data protection scope.</span></span>  
   
-3.  将加密的数据写入文件或流。  
+3.  <span data-ttu-id="30038-120">将加密的数据写入文件或流。</span><span class="sxs-lookup"><span data-stu-id="30038-120">Write the encrypted data to a file or stream.</span></span>  
   
-### 若要使用数据保护从文件或流解密数据  
+### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a><span data-ttu-id="30038-121">若要使用数据保护从文件或流解密数据</span><span class="sxs-lookup"><span data-stu-id="30038-121">To decrypt data from a file or stream using data protection</span></span>  
   
-1.  从文件或流中读取加密的数据。  
+1.  <span data-ttu-id="30038-122">从文件或流中读取加密的数据。</span><span class="sxs-lookup"><span data-stu-id="30038-122">Read the encrypted data from a file or stream.</span></span>  
   
-2.  调用静态 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法，同时传递要解密的字节数组和数据保护范围。  
+2.  <span data-ttu-id="30038-123">调用静态 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法，同时传递要解密的字节数组和数据保护范围。</span><span class="sxs-lookup"><span data-stu-id="30038-123">Call the static <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> method while passing an array of bytes to decrypt and the data protection scope.</span></span>  
   
-## 示例  
- 下面的代码示例演示加密和解密的两种形式。  首先，该代码示例对内存中的字节数组进行加密，然后将其解密。  接下来，该代码示例对字节数组的副本进行加密、将其保存到文件、从文件加载回数据，然后对数据进行解密。  此示例显示原始数据、加密的数据和已解密的数据。  
+## <a name="example"></a><span data-ttu-id="30038-124">示例</span><span class="sxs-lookup"><span data-stu-id="30038-124">Example</span></span>  
+ <span data-ttu-id="30038-125">下面的代码示例演示加密和解密的两种形式。</span><span class="sxs-lookup"><span data-stu-id="30038-125">The following code example demonstrates two forms of encryption and decryption.</span></span>  <span data-ttu-id="30038-126">首先，该代码示例对内存中的字节数组进行加密，然后将其解密。</span><span class="sxs-lookup"><span data-stu-id="30038-126">First, the code example encrypts and then decrypts an in-memory array of bytes.</span></span>  <span data-ttu-id="30038-127">接下来，该代码示例对字节数组的副本进行加密、将其保存到文件、从文件加载回数据，然后对数据进行解密。</span><span class="sxs-lookup"><span data-stu-id="30038-127">Next, the code example encrypts a copy of a byte array, saves it to a file, loads the data back from the file, and then decrypts the data.</span></span>  <span data-ttu-id="30038-128">此示例显示原始数据、加密的数据和已解密的数据。</span><span class="sxs-lookup"><span data-stu-id="30038-128">The example displays the original data, the encrypted data, and the decrypted data.</span></span>  
   
  [!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
  [!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
   
-## 编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="30038-129">编译代码</span><span class="sxs-lookup"><span data-stu-id="30038-129">Compiling the Code</span></span>  
   
--   包括对 `System.Security.dll` 的引用。  
+-   <span data-ttu-id="30038-130">包括对 `System.Security.dll` 的引用。</span><span class="sxs-lookup"><span data-stu-id="30038-130">Include a reference to `System.Security.dll`.</span></span>  
   
--   包括 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空间。  
+-   <span data-ttu-id="30038-131">包括 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="30038-131">Include the <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography>, and <xref:System.Text> namespace.</span></span>  
   
-## 请参阅  
- <xref:System.Security.Cryptography.ProtectedMemory>   
+## <a name="see-also"></a><span data-ttu-id="30038-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="30038-132">See Also</span></span>  
+ <xref:System.Security.Cryptography.ProtectedMemory>  
  <xref:System.Security.Cryptography.ProtectedData>

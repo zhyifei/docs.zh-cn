@@ -1,67 +1,67 @@
 ---
-title: "如何：在 Windows 窗体 TextBox 控件中查看多个行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "回车"
-  - "CRLF"
-  - "行尾"
-  - "换行"
-  - "TextBox 控件中的 MultiLine 属性"
-  - "换行"
-  - "ScrollBars 属性, 在 TextBox 控件中"
-  - "TextBox 控件 [Windows 窗体], 查看多行"
-  - "WordWrap 属性"
+title: "如何：在 Windows 窗体 TextBox 控件中查看多个行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- newline
+- end of line
+- ScrollBars property [Windows Forms], in TextBox control
+- CRLF
+- MultiLine property in TextBox control
+- line-feed
+- TextBox control [Windows Forms], viewing multiple lines
+- carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体 TextBox 控件中查看多个行
-默认情况下，Windows 窗体 <xref:System.Windows.Forms.TextBox> 控件显示单行文本，并且不显示滚动条。  如果文本长度超过了可用的空间，则只有一部分文本可见。  可以通过将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性、<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性和 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值来更改此默认行为。  
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a><span data-ttu-id="978de-102">如何：在 Windows 窗体 TextBox 控件中查看多个行</span><span class="sxs-lookup"><span data-stu-id="978de-102">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>
+<span data-ttu-id="978de-103">默认情况下，Windows 窗体<xref:System.Windows.Forms.TextBox>控件显示单个文本行，并不会显示滚动条。</span><span class="sxs-lookup"><span data-stu-id="978de-103">By default, the Windows Forms <xref:System.Windows.Forms.TextBox> control displays a single line of text and does not display scroll bars.</span></span> <span data-ttu-id="978de-104">文本的长度超过可用空间，部分的文本可见。</span><span class="sxs-lookup"><span data-stu-id="978de-104">If the text is longer than the available space, only part of the text is visible.</span></span> <span data-ttu-id="978de-105">你可以通过设置来更改此默认行为<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>为适当的值的属性。</span><span class="sxs-lookup"><span data-stu-id="978de-105">You can change this default behavior by setting the <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, and <xref:System.Windows.Forms.TextBox.ScrollBars%2A> properties to appropriate values.</span></span>  
   
-### 在 TextBox 控件中显示回车符  
+### <a name="to-display-a-carriage-return-in-the-textbox-control"></a><span data-ttu-id="978de-106">若要显示在文本框控件中返回一个回车符</span><span class="sxs-lookup"><span data-stu-id="978de-106">To display a carriage return in the TextBox control</span></span>  
   
--   若要在多行 <xref:System.Windows.Forms.TextBox> 中显示回车符，请使用 <xref:System.Environment.NewLine%2A> 属性。  
+-   <span data-ttu-id="978de-107">若要显示多行中返回一个回车符<xref:System.Windows.Forms.TextBox>，使用<xref:System.Environment.NewLine%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="978de-107">To display a carriage return in a multi-line <xref:System.Windows.Forms.TextBox>, use the <xref:System.Environment.NewLine%2A> property.</span></span>  
   
-     请注意，转义符“\\”的解释取决于语言。  Visual Basic 使用 `Chr$(13) & Chr$(10)` 作为回车符和换行符的组合。  
+     <span data-ttu-id="978de-108">请注意，转义字符的解释 (\\) 是特定于语言的。</span><span class="sxs-lookup"><span data-stu-id="978de-108">Be aware that the interpretation of escape characters (\\) is language-specific.</span></span> <span data-ttu-id="978de-109">Visual Basic 使用`Chr$(13) & Chr$(10)`的回车符和换行符字符组合。</span><span class="sxs-lookup"><span data-stu-id="978de-109">Visual Basic uses `Chr$(13) & Chr$(10)` for the carriage return and linefeed character combination.</span></span>  
   
-### 在 TextBox 控件中查看多行  
+### <a name="to-view-multiple-lines-in-the-textbox-control"></a><span data-ttu-id="978de-110">若要查看多行文本框控件中</span><span class="sxs-lookup"><span data-stu-id="978de-110">To view multiple lines in the TextBox control</span></span>  
   
-1.  将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。  如果 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 为 `true`（默认值），则控件中的文本将显示为一个或多个段落；否则它将显示为一个列表，其中的某些行可能在控件边缘处被剪裁。  
+1.  <span data-ttu-id="978de-111">将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="978de-111">Set the <xref:System.Windows.Forms.TextBox.Multiline%2A> property to `true`.</span></span> <span data-ttu-id="978de-112">如果<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>是`true`（默认值），然后控件中的文本将显示为一个或多个段落中; 否则它将显示为列表中，在其中某些行可能会剪裁在控件的边缘。</span><span class="sxs-lookup"><span data-stu-id="978de-112">If <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> is `true` (the default), then the text in the control will appear as one or more paragraphs; otherwise it will appear as a list, in which some lines may be clipped at the edge of the control.</span></span>  
   
-2.  将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
+2.  <span data-ttu-id="978de-113">将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="978de-113">Set the <xref:System.Windows.Forms.TextBox.ScrollBars%2A> property to an appropriate value.</span></span>  
   
-    |值|说明|  
-    |-------|--------|  
-    |<xref:System.Windows.Forms.ScrollBars>|如果文本是一个几乎总能适合控件的段落，就使用此值。  如果文本太长，不能同时显示全部内容，用户可以使用鼠标指针在控件内来回移动。|  
-    |<xref:System.Windows.Forms.ScrollBars>|如果要显示行列表，则使用此值；其中某些行的长度可能大于 <xref:System.Windows.Forms.TextBox> 控件的宽度。|  
-    |<xref:System.Windows.Forms.ScrollBars>|如果列表的长度可能大于控件的高度，则使用此值。|  
+    |<span data-ttu-id="978de-114">值</span><span class="sxs-lookup"><span data-stu-id="978de-114">Value</span></span>|<span data-ttu-id="978de-115">描述</span><span class="sxs-lookup"><span data-stu-id="978de-115">Description</span></span>|  
+    |-----------|-----------------|  
+    |<xref:System.Windows.Forms.ScrollBars.None>|<span data-ttu-id="978de-116">使用此值，如果文本将是一个段落，几乎始终适合控件。</span><span class="sxs-lookup"><span data-stu-id="978de-116">Use this value if the text will be a paragraph that almost always fits the control.</span></span> <span data-ttu-id="978de-117">用户可以使用鼠标指针在控件内移动，如果文本是很长时间才能显示在一次。</span><span class="sxs-lookup"><span data-stu-id="978de-117">The user can use the mouse pointer to move around inside the control if the text is too long to display all at once.</span></span>|  
+    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|<span data-ttu-id="978de-118">使用此值，如果你想要显示的行，其中一些可能超过的宽度列表<xref:System.Windows.Forms.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="978de-118">Use this value if you want to display a list of lines, some of which may be longer than the width of the <xref:System.Windows.Forms.TextBox> control.</span></span>|  
+    |<xref:System.Windows.Forms.ScrollBars.Both>|<span data-ttu-id="978de-119">如果该列表可能会超过控件的高度，则使用此值。</span><span class="sxs-lookup"><span data-stu-id="978de-119">Use this value if the list may be longer than the height of the control.</span></span>|  
   
-3.  将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
+3.  <span data-ttu-id="978de-120">将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="978de-120">Set the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property to an appropriate value.</span></span>  
   
-    |值|说明|  
-    |-------|--------|  
-    |`false`|控件中的文本不会自动换行，所以将一直向右延伸到换行符为止。  如果选择了上面的 <xref:System.Windows.Forms.ScrollBars> 滚动条或 <xref:System.Windows.Forms.ScrollBars>，则使用此值。|  
-    |`true`（默认值）|不会出现水平滚动条。  如果选择了上面的 <xref:System.Windows.Forms.ScrollBars> 滚动条或 <xref:System.Windows.Forms.ScrollBars>，则使用此值来显示一个或多个段落。|  
+    |<span data-ttu-id="978de-121">值</span><span class="sxs-lookup"><span data-stu-id="978de-121">Value</span></span>|<span data-ttu-id="978de-122">描述</span><span class="sxs-lookup"><span data-stu-id="978de-122">Description</span></span>|  
+    |-----------|-----------------|  
+    |`false`|<span data-ttu-id="978de-123">控件中的文本不会自动换行，所以它将向右滚动，直到到达一个分行符。</span><span class="sxs-lookup"><span data-stu-id="978de-123">Text in the control will not automatically be wrapped, so it will scroll to the right until a line break is reached.</span></span> <span data-ttu-id="978de-124">使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Horizontal>滚动条或<xref:System.Windows.Forms.ScrollBars.Both>上面。</span><span class="sxs-lookup"><span data-stu-id="978de-124">Use this value if you chose <xref:System.Windows.Forms.ScrollBars.Horizontal> scroll bars or <xref:System.Windows.Forms.ScrollBars.Both>, above.</span></span>|  
+    |<span data-ttu-id="978de-125">`true`（默认值）</span><span class="sxs-lookup"><span data-stu-id="978de-125">`true` (default)</span></span>|<span data-ttu-id="978de-126">水平滚动条将不会出现。</span><span class="sxs-lookup"><span data-stu-id="978de-126">The horizontal scrollbar will not appear.</span></span> <span data-ttu-id="978de-127">使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Vertical>滚动条或<xref:System.Windows.Forms.ScrollBars.None>、 更高版本，以显示一个或多个段落。</span><span class="sxs-lookup"><span data-stu-id="978de-127">Use this value if you chose <xref:System.Windows.Forms.ScrollBars.Vertical> scroll bars or <xref:System.Windows.Forms.ScrollBars.None>, above, to display one or more paragraphs.</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Forms.TextBox>   
- [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [如何：控制 Windows 窗体 TextBox 控件中的插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [如何：创建只读文本框](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [如何：在字符串中放置引号](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [如何：在 Windows 窗体 TextBox 控件中选择文本](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [TextBox 控件](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="978de-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="978de-128">See Also</span></span>  
+ <xref:System.Windows.Forms.TextBox>  
+ [<span data-ttu-id="978de-129">TextBox 控件概述</span><span class="sxs-lookup"><span data-stu-id="978de-129">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="978de-130">如何：在 Windows 窗体 TextBox 控件中控制插入点</span><span class="sxs-lookup"><span data-stu-id="978de-130">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="978de-131">如何：使用 Windows 窗体 TextBox 控件创建密码文本框</span><span class="sxs-lookup"><span data-stu-id="978de-131">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="978de-132">如何：创建只读文本框</span><span class="sxs-lookup"><span data-stu-id="978de-132">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="978de-133">如何：在字符串中添加引号</span><span class="sxs-lookup"><span data-stu-id="978de-133">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [<span data-ttu-id="978de-134">如何：在 Windows 窗体 TextBox 控件中选择文本</span><span class="sxs-lookup"><span data-stu-id="978de-134">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="978de-135">TextBox 控件</span><span class="sxs-lookup"><span data-stu-id="978de-135">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -1,50 +1,54 @@
 ---
-title: "如何：用 GDI 绘制文本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "绘图, 文本"
-  - "GDI, 绘制文本 [Windows 窗体]"
-  - "文本, 使用 TextRenderer 绘制"
-  - "Windows 窗体, 使用 GDI 绘制文本"
+title: "如何：用 GDI 绘制文本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI [Windows Forms], drawing text [Windows Forms]
+- text [Windows Forms], drawing with TextRenderer
+- drawing [Windows Forms], text
+- Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48644ce8449c8d8eea7306eff1e43539659370c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：用 GDI 绘制文本
-使用 <xref:System.Windows.Forms.TextRenderer> 类中的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法，可以访问用于在窗体或控件上绘制文本的 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 功能。  [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文本呈现通常提供比 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 更好的性能和更精确的文本测量。  
+# <a name="how-to-draw-text-with-gdi"></a><span data-ttu-id="68fc0-102">如何：用 GDI 绘制文本</span><span class="sxs-lookup"><span data-stu-id="68fc0-102">How to: Draw Text with GDI</span></span>
+<span data-ttu-id="68fc0-103">与<xref:System.Windows.Forms.TextRenderer.DrawText%2A>中的方法<xref:System.Windows.Forms.TextRenderer>类，可以访问[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]在窗体或控件上绘制文本的功能。</span><span class="sxs-lookup"><span data-stu-id="68fc0-103">With the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method in the <xref:System.Windows.Forms.TextRenderer> class, you can access [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] functionality for drawing text on a form or control.</span></span> [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]<span data-ttu-id="68fc0-104">文本呈现通常提供更好的性能和更准确的文本比测量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="68fc0-104"> text rendering typically offers better performance and more accurate text measuring than [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
 > [!NOTE]
->  不支持 <xref:System.Windows.Forms.TextRenderer> 类的 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法进行打印。  在打印时，总是使用 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawString%2A> 方法。  
+>  <span data-ttu-id="68fc0-105"><xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法<xref:System.Windows.Forms.TextRenderer>不支持打印的类。</span><span class="sxs-lookup"><span data-stu-id="68fc0-105">The <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods of the <xref:System.Windows.Forms.TextRenderer> class are not supported for printing.</span></span> <span data-ttu-id="68fc0-106">打印时，始终使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>类。</span><span class="sxs-lookup"><span data-stu-id="68fc0-106">When printing, always use the <xref:System.Drawing.Graphics.DrawString%2A> methods of the <xref:System.Drawing.Graphics> class.</span></span>  
   
-## 示例  
- 下面的代码示例演示如何使用 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 方法在矩形内以多行形式绘制文本。  
+## <a name="example"></a><span data-ttu-id="68fc0-107">示例</span><span class="sxs-lookup"><span data-stu-id="68fc0-107">Example</span></span>  
+ <span data-ttu-id="68fc0-108">下面的代码示例演示如何在矩形使用中的多个行上绘制文本<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="68fc0-108">The following code example demonstrates how to draw text on multiple lines within a rectangle using the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
  [!code-vb[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- 若要用 <xref:System.Windows.Forms.TextRenderer> 类呈现文本，需要 <xref:System.Drawing.IDeviceContext>（如 <xref:System.Drawing.Graphics> 和 <xref:System.Drawing.Font>）、绘制文本的位置和应该用于绘制文本的颜色。  还可以使用 <xref:System.Windows.Forms.TextFormatFlags> 枚举指定文本格式设置。  
+ <span data-ttu-id="68fc0-109">呈现与文本<xref:System.Windows.Forms.TextRenderer>类，你需要<xref:System.Drawing.IDeviceContext>，如<xref:System.Drawing.Graphics>和<xref:System.Drawing.Font>，用于绘制文本，并在其中应绘制的颜色的位置。</span><span class="sxs-lookup"><span data-stu-id="68fc0-109">To render text with the <xref:System.Windows.Forms.TextRenderer> class, you need an <xref:System.Drawing.IDeviceContext>, such as a <xref:System.Drawing.Graphics> and a <xref:System.Drawing.Font>, a location to draw the text, and the color in which it should be drawn.</span></span> <span data-ttu-id="68fc0-110">或者，可以指定文本格式使用<xref:System.Windows.Forms.TextFormatFlags>枚举。</span><span class="sxs-lookup"><span data-stu-id="68fc0-110">Optionally, you can specify the text formatting by using the <xref:System.Windows.Forms.TextFormatFlags> enumeration.</span></span>  
   
- 有关如何获取 <xref:System.Drawing.Graphics> 的更多信息，请参见 [如何：创建用于绘制的 Graphics 对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。  有关如何构造 <xref:System.Drawing.Font> 的更多信息，请参见 [如何：构造字体系列和字体](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)。  
+ <span data-ttu-id="68fc0-111">有关获取详细信息<xref:System.Drawing.Graphics>，请参阅[如何： 创建图形对象的绘图](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。</span><span class="sxs-lookup"><span data-stu-id="68fc0-111">For more information about obtaining a <xref:System.Drawing.Graphics>, see [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span> <span data-ttu-id="68fc0-112">有关构造<xref:System.Drawing.Font>，请参阅[如何： 构造字体系列和字体](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)。</span><span class="sxs-lookup"><span data-stu-id="68fc0-112">For more information about constructing a <xref:System.Drawing.Font>, see [How to: Construct Font Families and Fonts](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).</span></span>  
   
-## 编译代码  
- 前面的代码示例旨在用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventHandler> 的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a><span data-ttu-id="68fc0-113">编译代码</span><span class="sxs-lookup"><span data-stu-id="68fc0-113">Compiling the Code</span></span>  
+ <span data-ttu-id="68fc0-114">前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="68fc0-114">The preceding code example is designed for use with Windows Forms, and it requires the <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.TextRenderer>   
- <xref:System.Drawing.Font>   
- <xref:System.Drawing.Color>   
- <xref:System.Drawing.Color>   
- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="68fc0-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="68fc0-115">See Also</span></span>  
+ <xref:System.Windows.Forms.TextRenderer>  
+ <xref:System.Drawing.Font>  
+ <xref:System.Drawing.Color>  
+ <xref:System.Drawing.Color>  
+ [<span data-ttu-id="68fc0-116">使用字体和文本</span><span class="sxs-lookup"><span data-stu-id="68fc0-116">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

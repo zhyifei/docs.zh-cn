@@ -1,43 +1,45 @@
 ---
-title: "如何：确保 GridSplitter 可见 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GridSplitter 控件, 确保可见性"
+title: "如何：确保 GridSplitter 可见"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e8692d356b1b20c7405b4478cef1d16c173389ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：确保 GridSplitter 可见
-下面的示例演示如何确保 <xref:System.Windows.Controls.GridSplitter> 控件不会被 <xref:System.Windows.Controls.Grid> 中的其他控件隐藏。  
+# <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a><span data-ttu-id="1778d-102">如何：确保 GridSplitter 可见</span><span class="sxs-lookup"><span data-stu-id="1778d-102">How to: Make Sure That a GridSplitter Is Visible</span></span>
+<span data-ttu-id="1778d-103">此示例演示如何确保<xref:System.Windows.Controls.GridSplitter>通过中的其他控件未隐藏控件<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="1778d-103">This example shows how to make sure a <xref:System.Windows.Controls.GridSplitter> control is not hidden by the other controls in a <xref:System.Windows.Controls.Grid>.</span></span>  
   
-## 示例  
- <xref:System.Windows.Controls.Grid> 控件的 <xref:System.Windows.Controls.Panel.Children%2A> 按照它们在标记或代码中的定义顺序呈现。  如果没有将 <xref:System.Windows.Controls.GridSplitter> 控件定义为 <xref:System.Windows.Controls.Panel.Children%2A> 集合中最后面的元素，或者向其他控件给予了更高的 <xref:System.Windows.Controls.Panel.ZIndexProperty>，则其他控件可以隐藏该控件。  
+## <a name="example"></a><span data-ttu-id="1778d-104">示例</span><span class="sxs-lookup"><span data-stu-id="1778d-104">Example</span></span>  
+ <span data-ttu-id="1778d-105"><xref:System.Windows.Controls.Panel.Children%2A>的<xref:System.Windows.Controls.Grid>中标记或代码中定义的顺序呈现控件。</span><span class="sxs-lookup"><span data-stu-id="1778d-105">The <xref:System.Windows.Controls.Panel.Children%2A> of a <xref:System.Windows.Controls.Grid> control are rendered in the order that they are defined in markup or code.</span></span> <span data-ttu-id="1778d-106"><xref:System.Windows.Controls.GridSplitter>如果你没有定义它们中的最后一个元素，可以由其他控件隐藏控件<xref:System.Windows.Controls.Panel.Children%2A>集合或如果你为提供其他控制更高<xref:System.Windows.Controls.Panel.ZIndexProperty>。</span><span class="sxs-lookup"><span data-stu-id="1778d-106"><xref:System.Windows.Controls.GridSplitter> controls can be hidden by other controls if you do not define them as the last elements in the <xref:System.Windows.Controls.Panel.Children%2A> collection or if you give other controls a higher <xref:System.Windows.Controls.Panel.ZIndexProperty>.</span></span>  
   
- 要避免隐藏 <xref:System.Windows.Controls.GridSplitter> 控件，请执行下列操作之一。  
+ <span data-ttu-id="1778d-107">若要防止隐藏<xref:System.Windows.Controls.GridSplitter>控件，执行下列操作之一。</span><span class="sxs-lookup"><span data-stu-id="1778d-107">To prevent hidden <xref:System.Windows.Controls.GridSplitter> controls, do one of the following.</span></span>  
   
--   确保 <xref:System.Windows.Controls.GridSplitter> 控件是添加到 <xref:System.Windows.Controls.Grid> 中的最后一个 <xref:System.Windows.Controls.Panel.Children%2A>。  在下面的示例中，<xref:System.Windows.Controls.GridSplitter> 用作 <xref:System.Windows.Controls.Grid> 的 <xref:System.Windows.Controls.Panel.Children%2A> 集合中的最后一个元素。  
+-   <span data-ttu-id="1778d-108">请确保<xref:System.Windows.Controls.GridSplitter>控件是最后<xref:System.Windows.Controls.Panel.Children%2A>添加到<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="1778d-108">Make sure that <xref:System.Windows.Controls.GridSplitter> controls are the last <xref:System.Windows.Controls.Panel.Children%2A> added to the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="1778d-109">下面的示例演示<xref:System.Windows.Controls.GridSplitter>中的最后一个元素<xref:System.Windows.Controls.Panel.Children%2A>集合<xref:System.Windows.Controls.Grid>。</span><span class="sxs-lookup"><span data-stu-id="1778d-109">The following example shows the <xref:System.Windows.Controls.GridSplitter> as the last element in the <xref:System.Windows.Controls.Panel.Children%2A> collection of the <xref:System.Windows.Controls.Grid>.</span></span>  
   
- [!code-xml[GridSplitterSnips#GridSplitterLastChild](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterLastChild](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
   
--   将 <xref:System.Windows.Controls.GridSplitter> 的 <xref:System.Windows.Controls.Panel.ZIndexProperty> 值设置为高于某个控件的值，否则该控件会将其隐藏。  下面的示例赋予给 <xref:System.Windows.Controls.GridSplitter> 控件的 <xref:System.Windows.Controls.Panel.ZIndexProperty> 值大于赋予给 <xref:System.Windows.Controls.Button> 控件的值。  
+-   <span data-ttu-id="1778d-110">设置<xref:System.Windows.Controls.Panel.ZIndexProperty>上<xref:System.Windows.Controls.GridSplitter>得高于的控件，否则将其隐藏。</span><span class="sxs-lookup"><span data-stu-id="1778d-110">Set the <xref:System.Windows.Controls.Panel.ZIndexProperty> on the <xref:System.Windows.Controls.GridSplitter> to be higher than a control that would otherwise hide it.</span></span> <span data-ttu-id="1778d-111">以下示例给出了<xref:System.Windows.Controls.GridSplitter>控制更高<xref:System.Windows.Controls.Panel.ZIndexProperty>比<xref:System.Windows.Controls.Button>控件。</span><span class="sxs-lookup"><span data-stu-id="1778d-111">The following example gives the <xref:System.Windows.Controls.GridSplitter> control a higher <xref:System.Windows.Controls.Panel.ZIndexProperty> than the <xref:System.Windows.Controls.Button> control.</span></span>  
   
- [!code-xml[GridSplitterSnips#GridSplitterZIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterZIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
   
--   设置控件的边距（否则该控件将会隐藏 <xref:System.Windows.Controls.GridSplitter>），以显示 <xref:System.Windows.Controls.GridSplitter>。  下面的示例将设置控件的边距，否则该控件将会覆盖并隐藏 <xref:System.Windows.Controls.GridSplitter>。  
+-   <span data-ttu-id="1778d-112">否则将隐藏在控件上设置边距<xref:System.Windows.Controls.GridSplitter>以便<xref:System.Windows.Controls.GridSplitter>公开。</span><span class="sxs-lookup"><span data-stu-id="1778d-112">Set margins on the control that would otherwise hide the <xref:System.Windows.Controls.GridSplitter> so that the <xref:System.Windows.Controls.GridSplitter> is exposed.</span></span> <span data-ttu-id="1778d-113">下面的示例设置边距上的控件，否则将覆盖和隐藏<xref:System.Windows.Controls.GridSplitter>。</span><span class="sxs-lookup"><span data-stu-id="1778d-113">The following example sets margins on a control that would otherwise overlay and hide the <xref:System.Windows.Controls.GridSplitter>.</span></span>  
   
- [!code-xml[GridSplitterSnips#GridSplitterMargin](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
+ [!code-xaml[GridSplitterSnips#GridSplitterMargin](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.GridSplitter>   
- [帮助主题](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="1778d-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1778d-114">See Also</span></span>  
+ <xref:System.Windows.Controls.GridSplitter>  
+ [<span data-ttu-id="1778d-115">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="1778d-115">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

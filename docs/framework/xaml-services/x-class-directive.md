@@ -1,74 +1,77 @@
 ---
-title: "x:Class Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Class"
-  - "xClass"
-  - "Class"
-helpviewer_keywords: 
-  - "Class attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Class attribute"
-  - "x:Class attribute [XAML Services]"
+title: "x:Class 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Class
+- xClass
+- Class
+helpviewer_keywords:
+- Class attribute in XAML [XAML Services]
+- XAML [XAML Services], x:Class attribute
+- x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Class Directive
-配置 XAML 标记编译以便在标记与代码隐藏之间联接分部类。  代码分部类用 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 语言在单独的代码文件中定义，而标记分部类由代码生成通常在 XAML 编译期间创建。  
+# <a name="xclass-directive"></a><span data-ttu-id="69993-102">x:Class 指令</span><span class="sxs-lookup"><span data-stu-id="69993-102">x:Class Directive</span></span>
+<span data-ttu-id="69993-103">配置 XAML 标记编译标记和代码隐藏之间联接分部类。</span><span class="sxs-lookup"><span data-stu-id="69993-103">Configures XAML markup compilation to join partial classes between markup and code-behind.</span></span> <span data-ttu-id="69993-104">代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译过程的代码生成由通常创建标记分部类。</span><span class="sxs-lookup"><span data-stu-id="69993-104">The code partial class is defined in a separate code file in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, whereas the markup partial class is typically created by code generation during XAML compilation.</span></span>  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="69993-105">XAML 属性用法</span><span class="sxs-lookup"><span data-stu-id="69993-105">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Class="namespace.classname"...>  
+<object x:Class="namespace.classname"...>  
   ...  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="69993-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="69993-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`namespace`|可选。  指定一个包含由 `classname` 标识的分部类的 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 命名空间。  如果指定了 `namespace`，则用一个点 \(.\) 来分隔 `namespace` 和 `classname`。  请参见"备注"。|  
-|`classname`|必选。  指定将加载的 XAML 与该 XAML 的代码隐藏相连接的分部类的 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 名称。|  
+|`namespace`|<span data-ttu-id="69993-107">可选。</span><span class="sxs-lookup"><span data-stu-id="69993-107">Optional.</span></span> <span data-ttu-id="69993-108">指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]命名空间包含由标识的分部类`classname`。</span><span class="sxs-lookup"><span data-stu-id="69993-108">Specifies a [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] namespace that contains the partial class identified by `classname`.</span></span> <span data-ttu-id="69993-109">如果`namespace`一个点 （.） 分隔的指定`namespace`和`classname`。</span><span class="sxs-lookup"><span data-stu-id="69993-109">If `namespace` is specified, a dot (.) separates `namespace` and `classname`.</span></span> <span data-ttu-id="69993-110">请参阅“备注”。</span><span class="sxs-lookup"><span data-stu-id="69993-110">See Remarks.</span></span>|  
+|`classname`|<span data-ttu-id="69993-111">必需。</span><span class="sxs-lookup"><span data-stu-id="69993-111">Required.</span></span> <span data-ttu-id="69993-112">指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏该 xaml 的分部类的名称。</span><span class="sxs-lookup"><span data-stu-id="69993-112">Specifies the [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] name of the partial class that connects the loaded XAML and your code-behind for that XAML.</span></span>|  
   
-## 依赖项  
- `x:Class` 只能在 XAML 生产的根元素上指定。  如果对象在 XAML 生产上有父级，`x:Class` 在任何这样的对象上都无效。  有关更多信息，请参见 [\[MS\-XAML\] Section 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)（\[MS\-XAML\] 第 4.3.1.6 节）。  
+## <a name="dependencies"></a><span data-ttu-id="69993-113">依赖项</span><span class="sxs-lookup"><span data-stu-id="69993-113">Dependencies</span></span>  
+ <span data-ttu-id="69993-114">`x:Class`仅可以在 XAML 生产的根元素上指定。</span><span class="sxs-lookup"><span data-stu-id="69993-114">`x:Class` can only be specified on the root element of a XAML production.</span></span> <span data-ttu-id="69993-115">`x:Class`在任何具有在 XAML 生产环境中的父对象上无效。</span><span class="sxs-lookup"><span data-stu-id="69993-115">`x:Class` is invalid on any object that has a parent in the XAML production.</span></span> <span data-ttu-id="69993-116">有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="69993-116">For more information, see [\[MS-XAML\] Section 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
-## 备注  
- `namespace` 本身可能包含其他点以将相关命名空间组织到名称层次结构中，这是一种在 .NET 编程中常见的技术。  仅将 `x:Class` 值的字符串中的最后一个点解释为隔开 `namespace` 和 `classname.` 。用作 `x:Class` 的类不能是嵌套类。  如果允许嵌套类，则会因确定 `x:Class` 字符串的点的含义是不明确的而不允许嵌套类。  
+## <a name="remarks"></a><span data-ttu-id="69993-117">备注</span><span class="sxs-lookup"><span data-stu-id="69993-117">Remarks</span></span>  
+ <span data-ttu-id="69993-118">`namespace`值可能包含其他的点，可以将相关命名空间组织成名称层次结构，这是一种在.NET Framework 编程中的常用技术。</span><span class="sxs-lookup"><span data-stu-id="69993-118">The `namespace` value may contain additional dots to organize related namespaces into name hierarchies, which is a common technique in .NET Framework programming.</span></span> <span data-ttu-id="69993-119">仅字符串中的最后一个点`x:Class`值解释为隔开`namespace`和`classname.`用作类`x:Class`不能为嵌套的类。</span><span class="sxs-lookup"><span data-stu-id="69993-119">Only the last dot in a string of `x:Class` values is interpreted to separate `namespace` and `classname.` The class that is used as `x:Class` cannot be a nested class.</span></span> <span data-ttu-id="69993-120">不允许嵌套的类，因为确定个点构成的含义`x:Class`是允许嵌套的类的情况下不明确的字符串。</span><span class="sxs-lookup"><span data-stu-id="69993-120">Nested classes are not allowed because determining the meaning of dots for `x:Class` strings is ambiguous if nested classes are permitted.</span></span>  
   
- 在现有的使用 `x:Class` 的编程模型中，如果没有代码隐藏的 XAML 页面是完全无效的，则 `x:Class` 是可选的。  这种功能将与生成操作交互，如使用 XAML 的框架所实现。  `x:Class` 功能也受应用程序模型中、以及相应的生成操作中的 XAML 指定内容的各种类型拥有的角色的影响。  如果 XAML 声明了事件处理特性值，或者实例化了其定义类位于代码隐藏类中的自定义元素，则必须为代码隐藏提供对适当类的 `x:Class` 指令引用（或 [x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)）。  
+ <span data-ttu-id="69993-121">在存在的编程模型，可使用`x:Class`，`x:Class`意义上说，它是完全有效，能够不有任何代码隐藏的 XAML 页中是可选的。</span><span class="sxs-lookup"><span data-stu-id="69993-121">In existing programming models that use `x:Class`, `x:Class` is optional in the sense that it is entirely valid to have a XAML page that has no code-behind.</span></span> <span data-ttu-id="69993-122">但是，该功能与生成操作交互，使用 XAML 的框架的实施方式。</span><span class="sxs-lookup"><span data-stu-id="69993-122">However, that capability interacts with the build actions as implemented by frameworks that use XAML.</span></span> <span data-ttu-id="69993-123">`x:Class`功能也会影响应用程序模型中有以及生成操作中相应的 XAML 指定内容的各种类型的角色。</span><span class="sxs-lookup"><span data-stu-id="69993-123">`x:Class` capability is also influenced by the roles that various classifications of XAML-specified content have in an application model and in the corresponding build actions.</span></span> <span data-ttu-id="69993-124">如果你的 XAML 声明事件处理特性值，或者实例化自定义元素定义的类在代码隐藏类中的位置，你需要提供`x:Class`指令引用 (或[X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) 到相应的代码隐藏的类。</span><span class="sxs-lookup"><span data-stu-id="69993-124">If your XAML declares event-handling attribute values or instantiates custom elements where the defining classes are in the code-behind class, you have to provide the `x:Class` directive reference (or [x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) to the appropriate class for code-behind.</span></span>  
   
- `x:Class` 指令的值必须是一个指定某个类的完全限定名称的字符串，但不含任何程序集信息（等效于 <xref:System.Type.FullName%2A?displayProperty=fullName>）。  对于简单的应用程序，如果命名空间信息与代码隐藏的构建方式相同（代码定义从类级别开始），就可以省略 CLR 命名空间信息。  
+ <span data-ttu-id="69993-125">值`x:Class`指令必须是一个字符串，指定完全限定的名称的类，但不包含任何程序集信息 (等效于<xref:System.Type.FullName%2A?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="69993-125">The value of the `x:Class` directive must be a string that specifies the fully qualified name of a class but without any assembly information (equivalent to the <xref:System.Type.FullName%2A?displayProperty=nameWithType>).</span></span> <span data-ttu-id="69993-126">对于简单的应用程序，则可以忽略 CLR 命名空间信息，如果代码隐藏的构建这种方式 （在类级别的代码定义开始）。</span><span class="sxs-lookup"><span data-stu-id="69993-126">For simple applications, you can omit CLR namespace information if the code-behind is also structured in that manner (code definition starts at the class level).</span></span>  
   
- 页面或应用程序定义的代码隐藏文件必须在代码文件内，而该代码文件应作为产生已编译应用程序和涉及标记编译的项目的一部分包括在该项目中。  必须遵循 CLR 类的命名规则。  有关更多信息，请参见 [Framework 设计准则](../../../ml/index.xml)。  默认情况下，代码隐藏类必须是 `public`；但可以通过使用 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)在其他访问级别定义它。  
+ <span data-ttu-id="69993-127">页面或应用程序定义的代码隐藏文件必须是生成已编译的应用程序和涉及标记编译的项目的一部分包括代码文件中。</span><span class="sxs-lookup"><span data-stu-id="69993-127">The code-behind file for a page or application definition must be within a code file that is included as part of the project that produces a compiled application and involves markup compilation.</span></span> <span data-ttu-id="69993-128">你必须遵循 CLR 类的命名规则。</span><span class="sxs-lookup"><span data-stu-id="69993-128">You must follow name rules for CLR classes.</span></span> <span data-ttu-id="69993-129">有关详细信息，请参阅[Framework 设计准则](../../../docs/standard/design-guidelines/index.md)。</span><span class="sxs-lookup"><span data-stu-id="69993-129">For more information, see [Framework Design Guidelines](../../../docs/standard/design-guidelines/index.md).</span></span> <span data-ttu-id="69993-130">默认情况下，代码隐藏类必须是`public`; 但是，可以通过使用而在不同的访问级别定义[X:classmodifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="69993-130">By default, the code-behind class must be `public`; however, you can define it at a different access level by using the [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span>  
   
- `x:Class` 特性的此确切解释仅适用于基于 CLR 的 XAML 实现，特别是 .NET Framework XAML 服务。  不基于 CLR 和不使用 .NET Framework XAML 服务的其他 XAML 实现可能为连接 XAML 标记和备份运行时代码使用不同的解析公式。  有关 `x:Class` 的更多常规解释的更多信息，请参见 [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\(\[MS\-XAML\]\)。  
+ <span data-ttu-id="69993-131">此解释`x:Class`属性仅适用于基于 CLR 的 XAML 实现中，尤其是到.NET Framework XAML 服务。</span><span class="sxs-lookup"><span data-stu-id="69993-131">This interpretation of the `x:Class` attribute applies only to a CLR-based XAML implementation, in particular to .NET Framework XAML Services.</span></span> <span data-ttu-id="69993-132">其他 XAML 实现不基于 CLR 和未使用.NET Framework XAML 服务可能使用不同的分辨率公式用于连接 XAML 标记和备份运行时代码。</span><span class="sxs-lookup"><span data-stu-id="69993-132">Other XAML implementations that are not based on CLR and that do not use .NET Framework XAML Services might use a different resolution formula for connecting XAML markup and backing run-time code.</span></span> <span data-ttu-id="69993-133">有关更多常规解释的详细信息`x:Class`，请参阅[ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)。</span><span class="sxs-lookup"><span data-stu-id="69993-133">For more information about more general interpretations of `x:Class`, see [\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
- 在某种级别的结构中，`x:Class` 的性含义未在 .NET Framework XAML 服务中定义。  这是因为 .NET Framework XAML 服务不指定通过其连接 XAML 标记和备份代码的编程模型。  `x:Class` 指令的其他用法可以由使用编程模型或应用程序模型来定义如何连接 XAML 标记和基于 CLR 代码隐藏的特定框架实现。  每个框架可以都具有其自己的生成操作，该生成操作启用一些必须包含在生产环境中的行为或特定组件。  在框架中，生成操作也可由于用于代码隐藏的特定 CLR 语言的不同而不同。  
+ <span data-ttu-id="69993-134">体系结构的含义某一级别`x:Class`.NET Framework XAML 服务中未定义。</span><span class="sxs-lookup"><span data-stu-id="69993-134">At a certain level of architecture, the meaning of `x:Class` is undefined in .NET Framework XAML Services.</span></span> <span data-ttu-id="69993-135">这是因为.NET Framework XAML 服务未指定的 XAML 标记和备份代码连接所用的编程模型。</span><span class="sxs-lookup"><span data-stu-id="69993-135">This is because .NET Framework XAML Services does not specify the programming model by which XAML markup and backing code are connected.</span></span> <span data-ttu-id="69993-136">其他用法`x:Class`可能由特定框架，它们使用的编程模型或应用程序模型定义如何连接 XAML 标记和基于 CLR 的代码隐藏实现指令。</span><span class="sxs-lookup"><span data-stu-id="69993-136">Additional uses of the `x:Class` directive might be implemented by specific frameworks that use programming models or application models to define how to connect XAML markup and CLR-based code-behind.</span></span> <span data-ttu-id="69993-137">每个框架可以自己启用一些行为或必须包含在生成环境中的特定组件的生成操作。</span><span class="sxs-lookup"><span data-stu-id="69993-137">Each framework can have its own build actions that enable some of the behavior or specific components that must be included in the build environment.</span></span> <span data-ttu-id="69993-138">在框架中，生成操作也可能因具体取决于用于隐藏代码的特定 CLR 语言。</span><span class="sxs-lookup"><span data-stu-id="69993-138">Within a framework, build actions can also vary depending on the specific CLR language that is used for the code-behind.</span></span>  
   
-## x: Class 位于 WPF 编程模型中  
- 在 WPF 应用程序和 WPF 应用程序模型中，`x:Class` 可以声明为充当 XAML 文件的根并且正在编译（XAML 通过 `Page` 生成操作包括在 WPF 应用程序项目中）的任何元素的特性，也可以声明为已编译 WPF 应用程序的应用程序定义中的 <xref:System.Windows.Application> 根的特性。  在页面根元素或应用程序根元素之外的任何元素上，以及在未编译的 WPF XAML 文件的任何环境下声明  `x:Class` 都会在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 和 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]下的 WPF XAML 编译器引起编译时错误。  关于在 WPF 中处理的 `x:Class` 的其他方面的信息，请参见 [WPF 中的代码隐藏和 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
+## <a name="xclass-in-the-wpf-programming-model"></a><span data-ttu-id="69993-139">WPF 编程模型中的 x： 类</span><span class="sxs-lookup"><span data-stu-id="69993-139">x:Class in the WPF Programming Model</span></span>  
+ <span data-ttu-id="69993-140">在 WPF 应用程序和 WPF 应用程序模型，`x:Class`可以声明为属性，其中是 XAML 文件的根和正在编译的任何元素 (其中具有的 WPF 应用程序项目中包含 XAML`Page`生成操作)，或为 <c4 1> <xref:System.Windows.Application> 中编译的 WPF 应用程序的应用程序定义的根。</span><span class="sxs-lookup"><span data-stu-id="69993-140">In WPF applications and the WPF application model, `x:Class` can be declared as an attribute for any element that is the root of a XAML file and is being compiled (where the XAML is included in a WPF application project with `Page` build action), or for the <xref:System.Windows.Application> root in the application definition of a compiled WPF application.</span></span> <span data-ttu-id="69993-141">声明`x:Class`页面根或应用程序根目录以外的元素上或在未编译的 WPF XAML 文件，将导致编译时错误下的[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]和[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]WPF XAML 编译器。</span><span class="sxs-lookup"><span data-stu-id="69993-141">Declaring `x:Class` on an element other than a page root or application root, or on a WPF XAML file that is not compiled, causes a compile-time error under the [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] and [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML compiler.</span></span> <span data-ttu-id="69993-142">有关的其他方面`x:Class`处理在 WPF 中，请参阅[代码隐藏和 XAML 在 WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="69993-142">For information about other aspects of `x:Class` handling in WPF, see [Code-Behind and XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).</span></span>  
   
-## Windows Workflow Foundation 的 x:Class  
- 对于窗口基础工作流，`x:Class` 命名了完全在 XAML 中组成的自定义活动的类或通过代码隐藏为活动设计器命名 XAML 页面的部分类。  
+## <a name="xclass-for-windows-workflow-foundation"></a><span data-ttu-id="69993-143">X:class for Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="69993-143">x:Class for Windows Workflow Foundation</span></span>  
+ <span data-ttu-id="69993-144">对于 Windows Workflow Foundation，`x:Class`命名完全在 XAML 中，构成的自定义活动的类或具有隐藏代码的活动设计器命名 XAML 页面，该分部类。</span><span class="sxs-lookup"><span data-stu-id="69993-144">For Windows Workflow Foundation, `x:Class` names the class of a custom activity composed entirely in XAML, or names the partial class of the XAML page for  an activity designer with code-behind.</span></span>  
   
-## Silverlight Usage 备注。  
- 单独说明了 `x:Class` for Silverlight。  更多信息，请参见 [XAML Namespace \(x:\) Language Features \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=199081) 。  
+## <a name="silverlight-usage-notes"></a><span data-ttu-id="69993-145">Silverlight 用法说明</span><span class="sxs-lookup"><span data-stu-id="69993-145">Silverlight Usage Notes</span></span>  
+ <span data-ttu-id="69993-146">`x:Class`适用于 Silverlight 是分开记录。</span><span class="sxs-lookup"><span data-stu-id="69993-146">`x:Class` for Silverlight is documented separately.</span></span> <span data-ttu-id="69993-147">有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。</span><span class="sxs-lookup"><span data-stu-id="69993-147">For more information, see [XAML Namespace (x:) Language Features (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).</span></span>  
   
-## 请参阅  
- [x:Subclass Directive](../../../docs/framework/xaml-services/x-subclass-directive.md)   
- [XAML 及 WPF 的自定义类](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="69993-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="69993-148">See Also</span></span>  
+ [<span data-ttu-id="69993-149">x:Subclass 指令</span><span class="sxs-lookup"><span data-stu-id="69993-149">x:Subclass Directive</span></span>](../../../docs/framework/xaml-services/x-subclass-directive.md)  
+ [<span data-ttu-id="69993-150">XAML 及 WPF 的自定义类</span><span class="sxs-lookup"><span data-stu-id="69993-150">XAML and Custom Classes for WPF</span></span>](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="69993-151">x:ClassModifier 指令</span><span class="sxs-lookup"><span data-stu-id="69993-151">x:ClassModifier Directive</span></span>](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
+ [<span data-ttu-id="69993-152">从 WPF 迁移到 System.Xaml 的类型</span><span class="sxs-lookup"><span data-stu-id="69993-152">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

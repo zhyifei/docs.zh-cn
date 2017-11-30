@@ -1,63 +1,66 @@
 ---
-title: "Calendar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Calendar 控件 [WPF]"
-  - "控件 [WPF], Calendar"
+title: Calendar
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Calendar
+- Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar
-日历使用户能够使用可视日历显示来选择日期。  
+# <a name="calendar"></a><span data-ttu-id="55690-102">Calendar</span><span class="sxs-lookup"><span data-stu-id="55690-102">Calendar</span></span>
+<span data-ttu-id="55690-103">日历使用户能够通过使用可视月历显示来选择日期。</span><span class="sxs-lookup"><span data-stu-id="55690-103">A calendar enables a user to select a date by using a visual calendar display.</span></span>  
   
- <xref:System.Windows.Controls.Calendar> 控件可以独立使用，也可用作 <xref:System.Windows.Controls.DatePicker> 控件的下拉部分。  有关更多信息，请参见<xref:System.Windows.Controls.DatePicker>。  
+ <span data-ttu-id="55690-104">A<xref:System.Windows.Controls.Calendar>本身，或作为下拉列表的一部分，可以使用控件<xref:System.Windows.Controls.DatePicker>控件。</span><span class="sxs-lookup"><span data-stu-id="55690-104">A <xref:System.Windows.Controls.Calendar> control can be used on its own, or as a drop-down part of a <xref:System.Windows.Controls.DatePicker> control.</span></span> <span data-ttu-id="55690-105">有关更多信息，请参见<xref:System.Windows.Controls.DatePicker>。</span><span class="sxs-lookup"><span data-stu-id="55690-105">For more information, see <xref:System.Windows.Controls.DatePicker>.</span></span>  
   
- 下图显示了两个 <xref:System.Windows.Controls.Calendar> 控件，一个具有选择内容和无法选择的日期，一个没有。  
+ <span data-ttu-id="55690-106">下图显示了两个<xref:System.Windows.Controls.Calendar>控件，与中断日期，并选择一个，另一个没有。</span><span class="sxs-lookup"><span data-stu-id="55690-106">The following illustration shows two <xref:System.Windows.Controls.Calendar> controls, one with selections and blackout dates and one without.</span></span>  
   
- ![日历控件](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP\_CalendarControls")  
-日历控件  
+ <span data-ttu-id="55690-107">![月历控件](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")</span><span class="sxs-lookup"><span data-stu-id="55690-107">![Calendar controls](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")</span></span>  
+<span data-ttu-id="55690-108">日历控件</span><span class="sxs-lookup"><span data-stu-id="55690-108">Calendar controls</span></span>  
   
- 下表提供了有关通常与 <xref:System.Windows.Controls.Calendar> 关联的任务的信息。  
+ <span data-ttu-id="55690-109">下表提供了有关通常与相关联的任务的信息<xref:System.Windows.Controls.Calendar>。</span><span class="sxs-lookup"><span data-stu-id="55690-109">The following table provides information about tasks that are typically associated with the <xref:System.Windows.Controls.Calendar>.</span></span>  
   
-|任务|实现|  
-|--------|--------|  
-|指定不可选择的日期。|使用 <xref:System.Windows.Controls.Calendar.BlackoutDates%2A> 属性。|  
-|使 <xref:System.Windows.Controls.Calendar> 显示一个月、一整年或十年。|将 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 属性的值设置为月、年或十年。|  
-|指定用户是否可以选择一个日期、一个日期范围或多个日期范围。|使用 <xref:System.Windows.Controls.Calendar.SelectionMode%2A>。|  
-|指定 <xref:System.Windows.Controls.Calendar> 显示的日期范围。|使用 <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> 和 <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> 属性。|  
-|指定是否突出显示当前日期。|使用 <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 属性。  默认情况下，<xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 为 `true`。|  
-|更改 <xref:System.Windows.Controls.Calendar> 的大小。|使用 <xref:System.Windows.Controls.Viewbox> 或将 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 属性设置为 <xref:System.Windows.Media.ScaleTransform>。  请注意，如果设置 <xref:System.Windows.Controls.Calendar> 的 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A> 属性，则实际日历不更改其大小。|  
+|<span data-ttu-id="55690-110">任务</span><span class="sxs-lookup"><span data-stu-id="55690-110">Task</span></span>|<span data-ttu-id="55690-111">实现</span><span class="sxs-lookup"><span data-stu-id="55690-111">Implementation</span></span>|  
+|----------|--------------------|  
+|<span data-ttu-id="55690-112">指定日期，不能同时选择。</span><span class="sxs-lookup"><span data-stu-id="55690-112">Specify dates that cannot be selected.</span></span>|<span data-ttu-id="55690-113">使用 <xref:System.Windows.Controls.Calendar.BlackoutDates%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="55690-113">Use the <xref:System.Windows.Controls.Calendar.BlackoutDates%2A> property.</span></span>|  
+|<span data-ttu-id="55690-114">具有<xref:System.Windows.Controls.Calendar>显示一个月、 整个年或十年。</span><span class="sxs-lookup"><span data-stu-id="55690-114">Have the <xref:System.Windows.Controls.Calendar> display a month, an entire year, or a decade.</span></span>|<span data-ttu-id="55690-115">设置<xref:System.Windows.Controls.Calendar.DisplayMode%2A>到月、 年或十年中的属性。</span><span class="sxs-lookup"><span data-stu-id="55690-115">Set the <xref:System.Windows.Controls.Calendar.DisplayMode%2A> property to Month, Year, or Decade.</span></span>|  
+|<span data-ttu-id="55690-116">指定用户是否可以选择一个日期、 的日期，范围或多个日期范围。</span><span class="sxs-lookup"><span data-stu-id="55690-116">Specify whether the user can select a date, a range of dates, or multiple ranges of dates.</span></span>|<span data-ttu-id="55690-117">使用<xref:System.Windows.Controls.Calendar.SelectionMode%2A>。</span><span class="sxs-lookup"><span data-stu-id="55690-117">Use the <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.</span></span>|  
+|<span data-ttu-id="55690-118">指定的日期范围的<xref:System.Windows.Controls.Calendar>显示。</span><span class="sxs-lookup"><span data-stu-id="55690-118">Specify the range of dates that the <xref:System.Windows.Controls.Calendar> displays.</span></span>|<span data-ttu-id="55690-119">使用<xref:System.Windows.Controls.Calendar.DisplayDateStart%2A>和<xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="55690-119">Use the <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> and <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> properties.</span></span>|  
+|<span data-ttu-id="55690-120">指定是否突出显示当前日期。</span><span class="sxs-lookup"><span data-stu-id="55690-120">Specify whether the current date is highlighted.</span></span>|<span data-ttu-id="55690-121">使用 <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="55690-121">Use the <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> property.</span></span> <span data-ttu-id="55690-122">默认情况下，<xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>是`true`。</span><span class="sxs-lookup"><span data-stu-id="55690-122">By default, <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> is `true`.</span></span>|  
+|<span data-ttu-id="55690-123">更改的大小<xref:System.Windows.Controls.Calendar>。</span><span class="sxs-lookup"><span data-stu-id="55690-123">Change the size of the <xref:System.Windows.Controls.Calendar>.</span></span>|<span data-ttu-id="55690-124">使用<xref:System.Windows.Controls.Viewbox>或设置<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性<xref:System.Windows.Media.ScaleTransform>。</span><span class="sxs-lookup"><span data-stu-id="55690-124">Use a <xref:System.Windows.Controls.Viewbox> or set the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property to a <xref:System.Windows.Media.ScaleTransform>.</span></span> <span data-ttu-id="55690-125">请注意，如果你设置<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>属性<xref:System.Windows.Controls.Calendar>，则实际日历不会更改其大小。</span><span class="sxs-lookup"><span data-stu-id="55690-125">Note that if you set the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties of a <xref:System.Windows.Controls.Calendar>, the actual calendar does not change its size.</span></span>|  
   
- <xref:System.Windows.Controls.Calendar> 控件使用鼠标或键盘提供基本导航功能。  下表总结了键盘导航。  
+ <span data-ttu-id="55690-126"><xref:System.Windows.Controls.Calendar>控件提供使用鼠标或键盘的基本导航。</span><span class="sxs-lookup"><span data-stu-id="55690-126">The <xref:System.Windows.Controls.Calendar> control provides basic navigation using either the mouse or keyboard.</span></span> <span data-ttu-id="55690-127">下表总结了键盘导航。</span><span class="sxs-lookup"><span data-stu-id="55690-127">The following table summarizes keyboard navigation.</span></span>  
   
-|组合键|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|操作|  
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------|  
-|箭头|<xref:System.Windows.Controls.CalendarMode>|如果未将 <xref:System.Windows.Controls.Calendar.SelectionMode%2A> 属性设置为 <xref:System.Windows.Controls.CalendarSelectionMode>，则更改 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 属性。|  
-|箭头|<xref:System.Windows.Controls.CalendarMode>|更改 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 属性中的月份。  请注意，<xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不更改。|  
-|箭头|<xref:System.Windows.Controls.CalendarMode>|更改 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 中的年。  请注意，<xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不更改。|  
-|Shift\+箭头|<xref:System.Windows.Controls.CalendarMode>|如果 <xref:System.Windows.Controls.Calendar.SelectionMode%2A> 未设置为 <xref:System.Windows.Controls.CalendarSelectionMode> 或 <xref:System.Windows.Controls.CalendarSelectionMode>，则扩展所选日期的范围。|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 更改为当前月的第一天。|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 中的月份更改为年的第一个月。  <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不会更改。|  
-|Home|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 中的年更改为十年中的第一年。  <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不会更改。|  
-|End|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 更改为当前月的最后一天。|  
-|End|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 中的月份更改为年的最后一个月。  <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不会更改。|  
-|End|<xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.DisplayDate%2A> 中的年更改为十年中的最后一年。  <xref:System.Windows.Controls.Calendar.SelectedDate%2A> 不会更改。|  
-|Ctrl\+向上键|任意|切换到下一个更大的 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>。  如果 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 已经为 <xref:System.Windows.Controls.CalendarMode>，则不执行任何操作。|  
-|Ctrl\+向下键|任意|切换到下一个更小的 <xref:System.Windows.Controls.Calendar.DisplayMode%2A>。  如果 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 已经为 <xref:System.Windows.Controls.CalendarMode>，则不执行任何操作。|  
-|空格键或 Enter|<xref:System.Windows.Controls.CalendarMode> 或 <xref:System.Windows.Controls.CalendarMode>|将 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 切换到由聚焦项表示的 <xref:System.Windows.Controls.CalendarMode> 或 <xref:System.Windows.Controls.CalendarMode>。|  
+|<span data-ttu-id="55690-128">组合键</span><span class="sxs-lookup"><span data-stu-id="55690-128">Key Combination</span></span>|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|<span data-ttu-id="55690-129">操作</span><span class="sxs-lookup"><span data-stu-id="55690-129">Action</span></span>|  
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|<span data-ttu-id="55690-130">箭头</span><span class="sxs-lookup"><span data-stu-id="55690-130">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="55690-131">更改<xref:System.Windows.Controls.Calendar.SelectedDate%2A>属性如果<xref:System.Windows.Controls.Calendar.SelectionMode%2A>属性未设置为<xref:System.Windows.Controls.CalendarSelectionMode.None>。</span><span class="sxs-lookup"><span data-stu-id="55690-131">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> property if the <xref:System.Windows.Controls.Calendar.SelectionMode%2A> property is not set to <xref:System.Windows.Controls.CalendarSelectionMode.None>.</span></span>|  
+|<span data-ttu-id="55690-132">箭头</span><span class="sxs-lookup"><span data-stu-id="55690-132">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="55690-133">更改的月份<xref:System.Windows.Controls.Calendar.DisplayDate%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="55690-133">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> property.</span></span> <span data-ttu-id="55690-134">请注意，<xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-134">Note that the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-135">箭头</span><span class="sxs-lookup"><span data-stu-id="55690-135">ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="55690-136">更改的年份，该值<xref:System.Windows.Controls.Calendar.DisplayDate%2A>。</span><span class="sxs-lookup"><span data-stu-id="55690-136">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.</span></span> <span data-ttu-id="55690-137">请注意，<xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-137">Note that the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-138">SHIFT + 箭头</span><span class="sxs-lookup"><span data-stu-id="55690-138">SHIFT+ARROW</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="55690-139">如果<xref:System.Windows.Controls.Calendar.SelectionMode%2A>未设置为<xref:System.Windows.Controls.CalendarSelectionMode.SingleDate>或<xref:System.Windows.Controls.CalendarSelectionMode.None>，扩展的所选日期范围。</span><span class="sxs-lookup"><span data-stu-id="55690-139">If <xref:System.Windows.Controls.Calendar.SelectionMode%2A> is not set to <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> or <xref:System.Windows.Controls.CalendarSelectionMode.None>, extends the range of selected dates.</span></span>|  
+|<span data-ttu-id="55690-140">Home</span><span class="sxs-lookup"><span data-stu-id="55690-140">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="55690-141">更改<xref:System.Windows.Controls.Calendar.SelectedDate%2A>到当前月份的第一天。</span><span class="sxs-lookup"><span data-stu-id="55690-141">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> to the first day of the current month.</span></span>|  
+|<span data-ttu-id="55690-142">Home</span><span class="sxs-lookup"><span data-stu-id="55690-142">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="55690-143">更改的月份<xref:System.Windows.Controls.Calendar.DisplayDate%2A>年的第一个月。</span><span class="sxs-lookup"><span data-stu-id="55690-143">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the first month of the year.</span></span> <span data-ttu-id="55690-144"><xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-144">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-145">Home</span><span class="sxs-lookup"><span data-stu-id="55690-145">HOME</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="55690-146">更改的年份，该值<xref:System.Windows.Controls.Calendar.DisplayDate%2A>在十年的第一年。</span><span class="sxs-lookup"><span data-stu-id="55690-146">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the first year of the decade.</span></span> <span data-ttu-id="55690-147"><xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-147">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-148">End</span><span class="sxs-lookup"><span data-stu-id="55690-148">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Month>|<span data-ttu-id="55690-149">更改<xref:System.Windows.Controls.Calendar.SelectedDate%2A>与当前月份的最后一天。</span><span class="sxs-lookup"><span data-stu-id="55690-149">Changes the <xref:System.Windows.Controls.Calendar.SelectedDate%2A> to the last day of the current month.</span></span>|  
+|<span data-ttu-id="55690-150">End</span><span class="sxs-lookup"><span data-stu-id="55690-150">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Year>|<span data-ttu-id="55690-151">更改的月份<xref:System.Windows.Controls.Calendar.DisplayDate%2A>年份的最后一个月。</span><span class="sxs-lookup"><span data-stu-id="55690-151">Changes the month of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the last month of the year.</span></span> <span data-ttu-id="55690-152"><xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-152">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-153">End</span><span class="sxs-lookup"><span data-stu-id="55690-153">END</span></span>|<xref:System.Windows.Controls.CalendarMode.Decade>|<span data-ttu-id="55690-154">更改的年份，该值<xref:System.Windows.Controls.Calendar.DisplayDate%2A>十年中的最后一年。</span><span class="sxs-lookup"><span data-stu-id="55690-154">Changes the year of the <xref:System.Windows.Controls.Calendar.DisplayDate%2A> to the last year of the decade.</span></span> <span data-ttu-id="55690-155"><xref:System.Windows.Controls.Calendar.SelectedDate%2A>不会更改。</span><span class="sxs-lookup"><span data-stu-id="55690-155">The <xref:System.Windows.Controls.Calendar.SelectedDate%2A> does not change.</span></span>|  
+|<span data-ttu-id="55690-156">Ctrl+向上键</span><span class="sxs-lookup"><span data-stu-id="55690-156">CTRL+UP ARROW</span></span>|<span data-ttu-id="55690-157">任意</span><span class="sxs-lookup"><span data-stu-id="55690-157">Any</span></span>|<span data-ttu-id="55690-158">切换到下一个更大<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。</span><span class="sxs-lookup"><span data-stu-id="55690-158">Switches to the next larger <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.</span></span> <span data-ttu-id="55690-159">如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已<xref:System.Windows.Controls.CalendarMode.Decade>，任何操作。</span><span class="sxs-lookup"><span data-stu-id="55690-159">If <xref:System.Windows.Controls.Calendar.DisplayMode%2A> is already <xref:System.Windows.Controls.CalendarMode.Decade>, no action.</span></span>|  
+|<span data-ttu-id="55690-160">Ctrl+向下键</span><span class="sxs-lookup"><span data-stu-id="55690-160">CTRL+DOWN ARROW</span></span>|<span data-ttu-id="55690-161">任意</span><span class="sxs-lookup"><span data-stu-id="55690-161">Any</span></span>|<span data-ttu-id="55690-162">切换到下一个较小<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。</span><span class="sxs-lookup"><span data-stu-id="55690-162">Switches to the next smaller <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.</span></span> <span data-ttu-id="55690-163">如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已<xref:System.Windows.Controls.CalendarMode.Month>，任何操作。</span><span class="sxs-lookup"><span data-stu-id="55690-163">If <xref:System.Windows.Controls.Calendar.DisplayMode%2A> is already <xref:System.Windows.Controls.CalendarMode.Month>, no action.</span></span>|  
+|<span data-ttu-id="55690-164">空格键或 enter 键</span><span class="sxs-lookup"><span data-stu-id="55690-164">SPACEBAR or ENTER</span></span>|<span data-ttu-id="55690-165"><xref:System.Windows.Controls.CalendarMode.Year> 或 <xref:System.Windows.Controls.CalendarMode.Decade></span><span class="sxs-lookup"><span data-stu-id="55690-165"><xref:System.Windows.Controls.CalendarMode.Year> or <xref:System.Windows.Controls.CalendarMode.Decade></span></span>|<span data-ttu-id="55690-166">交换机<xref:System.Windows.Controls.Calendar.DisplayMode%2A>到<xref:System.Windows.Controls.CalendarMode.Month>或<xref:System.Windows.Controls.CalendarMode.Year>由已设定焦点的项表示。</span><span class="sxs-lookup"><span data-stu-id="55690-166">Switches <xref:System.Windows.Controls.Calendar.DisplayMode%2A> to the <xref:System.Windows.Controls.CalendarMode.Month> or <xref:System.Windows.Controls.CalendarMode.Year> represented by focused item.</span></span>|  
   
-## 请参阅  
- [控件](../../../../docs/framework/wpf/controls/index.md)   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="55690-167">另请参阅</span><span class="sxs-lookup"><span data-stu-id="55690-167">See Also</span></span>  
+ [<span data-ttu-id="55690-168">控件</span><span class="sxs-lookup"><span data-stu-id="55690-168">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+ [<span data-ttu-id="55690-169">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="55690-169">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

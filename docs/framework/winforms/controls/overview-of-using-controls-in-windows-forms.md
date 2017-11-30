@@ -1,38 +1,42 @@
 ---
-title: "在“Windows 窗体”中使用控件的概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体]"
-  - "自定义控件 [Windows 窗体]"
-  - "Windows 窗体, 控件"
+title: "在“Windows 窗体”中使用控件的概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在“Windows 窗体”中使用控件的概述
-本主题描述了“Windows 窗体”应用程序的基本要素，并提供了一个在“Windows 窗体”应用程序中使用控件和处理事件的简单示例。  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="132a7-102">在“Windows 窗体”中使用控件的概述</span><span class="sxs-lookup"><span data-stu-id="132a7-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="132a7-103">本主题介绍 Windows 窗体应用程序的重要元素，并提供一个简单的示例使用控件并处理在 Windows 窗体应用程序中的事件。</span><span class="sxs-lookup"><span data-stu-id="132a7-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## 简单的“Windows 窗体”应用程序  
- 一个“Windows 窗体”应用程序至少要有以下元素组成：  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="132a7-104">简单的 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="132a7-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="132a7-105">在最低限度上，Windows 窗体应用程序由以下元素组成：</span><span class="sxs-lookup"><span data-stu-id="132a7-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   从 <xref:System.Windows.Forms.Form?displayProperty=fullName> 派生的一个或多个类。  
+-   <span data-ttu-id="132a7-106">一个或多个派生自的类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="132a7-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   调用 `static`（Visual Basic 中的 `shared`）<xref:System.Windows.Forms.Application.Run%2A> 方法并将 <xref:System.Windows.Forms.Form> 实例传递给该方法的 `Main` 方法。  <xref:System.Windows.Forms.Application.Run%2A> 方法处理从操作系统发送到应用程序的消息。  
+-   <span data-ttu-id="132a7-107">A`Main`时，将调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法并传递<xref:System.Windows.Forms.Form>到它的实例。</span><span class="sxs-lookup"><span data-stu-id="132a7-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="132a7-108"><xref:System.Windows.Forms.Application.Run%2A>方法处理来自操作系统到应用程序的消息。</span><span class="sxs-lookup"><span data-stu-id="132a7-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- 下面的代码示例说明了“Windows 窗体”应用程序的基本元素。  
+ <span data-ttu-id="132a7-109">下面的代码示例演示 Windows 窗体应用程序的重要元素。</span><span class="sxs-lookup"><span data-stu-id="132a7-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## 在“Windows 窗体”应用程序中使用控件  
- 下面的代码示例说明了一个简单的应用程序，描述“Windows 窗体”应用程序如何来使用控件和处理事件。  该示例由窗体上的三个按钮组成，单击各个按钮将改变背景色。  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="132a7-110">在 Windows 窗体应用程序中使用控件</span><span class="sxs-lookup"><span data-stu-id="132a7-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="132a7-111">下面的代码示例演示的简单应用程序演示了 Windows 窗体应用程序如何使用控件和处理事件。</span><span class="sxs-lookup"><span data-stu-id="132a7-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="132a7-112">此示例由窗体; 上的三个按钮组成每个按钮更改单击时的背景色。</span><span class="sxs-lookup"><span data-stu-id="132a7-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## 请参阅  
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Windows 窗体控件开发基础知识](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="132a7-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="132a7-113">See Also</span></span>  
+ [<span data-ttu-id="132a7-114">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="132a7-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="132a7-115">Windows 窗体控件开发基础知识</span><span class="sxs-lookup"><span data-stu-id="132a7-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

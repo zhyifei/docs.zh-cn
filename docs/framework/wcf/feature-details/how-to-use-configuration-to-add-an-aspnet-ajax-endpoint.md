@@ -1,31 +1,34 @@
 ---
-title: "如何：使用配置来添加 ASP.NET AJAX 终结点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用配置来添加 ASP.NET AJAX 终结点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b08bfd30eae1b33b2bf91eb1b0bd0127c09f9632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用配置来添加 ASP.NET AJAX 终结点
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建一个服务来提供一个支持 ASP.NET AJAX 的终结点，并且可以从客户端 Web 站点上的 JavaScript 中调用该终结点。若要创建这样的终结点，可以使用配置文件（与使用所有其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点一样），或使用不要求任何配置元素的方法。本主题演示配置方法。  
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a><span data-ttu-id="40295-102">如何：使用配置来添加 ASP.NET AJAX 终结点</span><span class="sxs-lookup"><span data-stu-id="40295-102">How to: Use Configuration to Add an ASP.NET AJAX Endpoint</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="40295-103"> 允许您创建一个服务来提供一个支持 ASP.NET AJAX 的终结点，并且可以从客户端 Web 站点上的 JavaScript 中调用该终结点。</span><span class="sxs-lookup"><span data-stu-id="40295-103"> allows you to create a service that makes an ASP.NET AJAX-enabled endpoint available that can be called from JavaScript on a client Web site.</span></span> <span data-ttu-id="40295-104">若要创建这样的终结点，可以使用配置文件（与使用所有其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点一样），或使用不要求任何配置元素的方法。</span><span class="sxs-lookup"><span data-stu-id="40295-104">To create such an endpoint, you can either use a configuration file, as with all other [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] endpoints, or use a method that does not require any configuration elements.</span></span> <span data-ttu-id="40295-105">本主题演示配置方法。</span><span class="sxs-lookup"><span data-stu-id="40295-105">This topic demonstrates the configuration approach.</span></span>  
   
- 使服务终结点成为支持 ASP.NET AJAX 的终结点的部分过程包括：配置终结点以使用 <xref:System.ServiceModel.WebHttpBinding> 以及添加 [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 终结点行为。配置终结点后，实现和承载服务的步骤与任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用的步骤类似。有关可运行示例，请参见[使用 HTTP POST 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+ <span data-ttu-id="40295-106">配置要使用的终结点包含的过程，可让服务终结点才能支持 ASP.NET AJAX 的一部分<xref:System.ServiceModel.WebHttpBinding>，并将添加[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)终结点行为。</span><span class="sxs-lookup"><span data-stu-id="40295-106">The part of the procedure that enables the service endpoint to become ASP.NET AJAX-enabled consists of configuring the endpoint to use the <xref:System.ServiceModel.WebHttpBinding> and to add the [\<enableWebScript>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) endpoint behavior.</span></span> <span data-ttu-id="40295-107">配置终结点后，实现和承载服务的步骤与任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用的步骤类似。</span><span class="sxs-lookup"><span data-stu-id="40295-107">After configuring the endpoint, the steps to implement and host the service are similar to those used by any [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="40295-108">有关工作示例，请参阅[AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。</span><span class="sxs-lookup"><span data-stu-id="40295-108">For a working example, see the [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何在不使用配置的情况下配置 ASP.NET AJAX 终结点的更多信息，请参见[如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="40295-109">如何配置 ASP.NET AJAX 终结点而不使用配置，请参阅[如何： 添加 ASP.NET AJAX 终结点而不使用配置](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。</span><span class="sxs-lookup"><span data-stu-id="40295-109"> how to configure an ASP.NET AJAX endpoint without using configuration, see [How to: Add an ASP.NET AJAX Endpoint Without Using Configuration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).</span></span>  
   
-### 创建基本 WCF 服务  
+### <a name="to-create-a-basic-wcf-service"></a><span data-ttu-id="40295-110">创建基本 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="40295-110">To create a basic WCF service</span></span>  
   
-1.  通过用 <xref:System.ServiceModel.ServiceContractAttribute> 属性标记的接口定义基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务协定。用 <xref:System.ServiceModel.OperationContractAttribute> 标记每个操作。确保设置 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性。  
+1.  <span data-ttu-id="40295-111">通过用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性标记的接口定义基本 <xref:System.ServiceModel.ServiceContractAttribute> 服务协定。</span><span class="sxs-lookup"><span data-stu-id="40295-111">Define a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service contract with an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute> attribute.</span></span> <span data-ttu-id="40295-112">用 <xref:System.ServiceModel.OperationContractAttribute> 标记每个操作。</span><span class="sxs-lookup"><span data-stu-id="40295-112">Mark each operation with the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="40295-113">确保设置 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="40295-113">Be sure to set the <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> property.</span></span>  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -40,7 +43,7 @@ caps.handback.revision: 14
     }  
     ```  
   
-2.  使用 `CalculatorService` 实现 `ICalculator` 服务协定。  
+2.  <span data-ttu-id="40295-114">使用 `ICalculator` 实现 `CalculatorService` 服务协定。</span><span class="sxs-lookup"><span data-stu-id="40295-114">Implement the `ICalculator` service contract with a `CalculatorService`.</span></span>  
   
     ```  
     public class CalculatorService : ICalculator  
@@ -53,7 +56,7 @@ caps.handback.revision: 14
     //Other operations omitted…  
     ```  
   
-3.  定义 `ICalculator` 和 `CalculatorService` 实现的命名空间，方法是将它们放置在一个命名空间块中。  
+3.  <span data-ttu-id="40295-115">定义 `ICalculator` 和 `CalculatorService` 实现的命名空间，方法是将它们放置在一个命名空间块中。</span><span class="sxs-lookup"><span data-stu-id="40295-115">Define a namespace for the `ICalculator` and `CalculatorService` implementations by wrapping them in a namespace block.</span></span>  
   
     ```  
     Namespace Microsoft.Ajax.Samples  
@@ -62,11 +65,11 @@ caps.handback.revision: 14
     }  
     ```  
   
-### 创建服务的 ASP.NET AJAX 终结点  
+### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a><span data-ttu-id="40295-116">创建服务的 ASP.NET AJAX 终结点</span><span class="sxs-lookup"><span data-stu-id="40295-116">To create an ASP.NET AJAX endpoint for the service</span></span>  
   
-1.  创建一个行为配置，并指定服务的支持 ASP.NET AJAX 的终结点的 [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 行为。  
+1.  <span data-ttu-id="40295-117">创建行为配置，并指定[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)支持 ASP.NET AJAX 的终结点的服务的行为。</span><span class="sxs-lookup"><span data-stu-id="40295-117">Create a behavior configuration and specify the [\<enableWebScript>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) behavior for ASP.NET AJAX-enabled endpoints of the service.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <behaviors>  
             <endpointBehaviors>  
@@ -78,9 +81,9 @@ caps.handback.revision: 14
     </system.serviceModel>  
     ```  
   
-2.  为使用 <xref:System.ServiceModel.WebHttpBinding> 和前面的步骤中定义的 ASP.NET AJAX 行为的服务创建终结点。  
+2.  <span data-ttu-id="40295-118">为使用 <xref:System.ServiceModel.WebHttpBinding> 和前面的步骤中定义的 ASP.NET AJAX 行为的服务创建终结点。</span><span class="sxs-lookup"><span data-stu-id="40295-118">Create an endpoint for the service that uses the <xref:System.ServiceModel.WebHttpBinding> and the ASP.NET AJAX behavior defined in the previous step.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
             <service name="Microsoft.Ajax.Samples.CalculatorService">  
@@ -93,9 +96,9 @@ caps.handback.revision: 14
     </system.serviceModel>   
     ```  
   
-### 在 IIS 中承载服务  
+### <a name="to-host-the-service-in-iis"></a><span data-ttu-id="40295-119">在 IIS 中承载服务</span><span class="sxs-lookup"><span data-stu-id="40295-119">To host the service in IIS</span></span>  
   
-1.  若要在 IIS 中承载服务，请使用应用程序中的 .svc 扩展创建名为 service 的新文件。编辑此文件，在其中为服务添加适当的 [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令信息。例如，`CalculatorService` 示例的服务文件中的内容包含以下信息。  
+1.  <span data-ttu-id="40295-120">若要在 IIS 中承载服务，请使用应用程序中的 .svc 扩展创建名为 service 的新文件。</span><span class="sxs-lookup"><span data-stu-id="40295-120">To host the service in IIS, create a new file named service with a .svc extension in the application.</span></span> <span data-ttu-id="40295-121">通过添加相应编辑此文件[ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指令服务信息。</span><span class="sxs-lookup"><span data-stu-id="40295-121">Edit this file by adding the appropriate [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive information for the service.</span></span> <span data-ttu-id="40295-122">例如，`CalculatorService` 示例的服务文件中的内容包含以下信息。</span><span class="sxs-lookup"><span data-stu-id="40295-122">For example, the content in the service file for the `CalculatorService` sample contains the following information.</span></span>  
   
     ```  
     <%@ServiceHost   
@@ -105,12 +108,12 @@ caps.handback.revision: 14
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在 IIS 中承载的更多信息，请参见[如何：在 IIS 中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="40295-123">承载在 IIS 中，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。</span><span class="sxs-lookup"><span data-stu-id="40295-123"> hosting in IIS, see [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span></span>  
   
-### 调用服务  
+### <a name="to-call-the-service"></a><span data-ttu-id="40295-124">调用服务</span><span class="sxs-lookup"><span data-stu-id="40295-124">To call the service</span></span>  
   
-1.  在相对于 .svc 文件的空地址处配置终结点，这样便可以使用服务了。可通过向 service.svc\/\<操作\>（例如，表示 `Add` 操作的 service.svc\/Add）发送请求来调用服务。可以通过在 ASP.NET AJAX 脚本管理器控件的脚本集合中输入终结点 URL 来使用它。有关示例，请参见[使用 HTTP POST 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+1.  <span data-ttu-id="40295-125">相对于.svc 文件的空地址处配置终结点，这样服务现在可用，可以通过将请求发送到 service.svc/ 调用\<操作 >-例如，便`Add`操作。</span><span class="sxs-lookup"><span data-stu-id="40295-125">The endpoint is configured at an empty address relative to the .svc file, so the service is now available and can be invoked by sending requests to service.svc/\<operation> - for example, service.svc/Add for the `Add` operation.</span></span> <span data-ttu-id="40295-126">可以通过在 ASP.NET AJAX 脚本管理器控件的脚本集合中输入终结点 URL 来使用它。</span><span class="sxs-lookup"><span data-stu-id="40295-126">You can use it by entering the endpoint URL into the Scripts collection of the ASP.NET AJAX Script Manager control.</span></span> <span data-ttu-id="40295-127">有关示例，请参阅[AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。</span><span class="sxs-lookup"><span data-stu-id="40295-127">For an example, see the [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).</span></span>  
   
-## 请参阅  
- [为 ASP.NET AJAX 创建 WCF 服务](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="40295-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="40295-128">See Also</span></span>  
+ [<span data-ttu-id="40295-129">为 ASP.NET AJAX 创建 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="40295-129">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [<span data-ttu-id="40295-130">如何： 将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF</span><span class="sxs-lookup"><span data-stu-id="40295-130">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

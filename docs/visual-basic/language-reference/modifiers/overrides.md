@@ -1,78 +1,77 @@
 ---
-title: "Overrides (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overrides"
-  - "vb.Overrides"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Overrides 关键字"
-  - "重写"
-  - "重写, Overrides 关键字"
-  - "过程, 重写"
-  - "过程, 重新定义"
-  - "属性 [Visual Basic], 重写"
-  - "属性 [Visual Basic], 重新定义"
+title: Overrides (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overrides
+- vb.Overrides
+helpviewer_keywords:
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- procedures [Visual Basic], redefining
+- overriding
+- Overrides keyword [Visual Basic]
+- overriding, Overrides keyword
+- properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1bee6a6235b87a7e20f087a73bef76e0fc7bf124
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Overrides (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定某一属性或过程可重写从基类中继承的具有相同名称的属性或过程。  
+# <a name="overrides-visual-basic"></a><span data-ttu-id="6c042-102">Overrides (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c042-102">Overrides (Visual Basic)</span></span>
+<span data-ttu-id="6c042-103">指定某一属性或过程可重写从基类中继承的具有相同名称的属性或过程。</span><span class="sxs-lookup"><span data-stu-id="6c042-103">Specifies that a property or procedure overrides an identically named property or procedure inherited from a base class.</span></span>  
   
-## 备注  
+## <a name="remarks"></a><span data-ttu-id="6c042-104">备注</span><span class="sxs-lookup"><span data-stu-id="6c042-104">Remarks</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="6c042-105">规则</span><span class="sxs-lookup"><span data-stu-id="6c042-105">Rules</span></span>  
   
--   **声明上下文。** 只能在属性或过程声明语句中使用 `Overrides`。  
+-   <span data-ttu-id="6c042-106">**声明上下文。**</span><span class="sxs-lookup"><span data-stu-id="6c042-106">**Declaration Context.**</span></span> <span data-ttu-id="6c042-107">只能在属性或过程声明语句中使用 `Overrides`。</span><span class="sxs-lookup"><span data-stu-id="6c042-107">You can use `Overrides` only in a property or procedure declaration statement.</span></span>  
   
--   **组合修饰符。** 不能在同一过程声明中同时指定 `Overrides` 和 `Shadows` 或 `Shared`。  由于重写元素是隐式可重写的，因此不能将 `Overridable` 与 `Overrides` 组合到一起。  
+-   <span data-ttu-id="6c042-108">**组合的修饰符。**</span><span class="sxs-lookup"><span data-stu-id="6c042-108">**Combined Modifiers.**</span></span> <span data-ttu-id="6c042-109">不能在同一过程声明中同时指定 `Overrides` 和 `Shadows` 或 `Shared`。</span><span class="sxs-lookup"><span data-stu-id="6c042-109">You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration.</span></span> <span data-ttu-id="6c042-110">由于重写元素是隐式可重写的，因此不能将 `Overridable` 与 `Overrides` 组合到一起。</span><span class="sxs-lookup"><span data-stu-id="6c042-110">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span></span>  
   
--   **匹配签名。** 此声明的签名必须与其重写的属性或过程的*签名*完全匹配。  这意味着参数列表必须具有相同数量的参数，并且排序顺序和数据类型都必须完全相同。  
+-   <span data-ttu-id="6c042-111">**匹配的签名。**</span><span class="sxs-lookup"><span data-stu-id="6c042-111">**Matching Signatures.**</span></span> <span data-ttu-id="6c042-112">此声明的签名必须完全匹配*签名*的属性或过程，它将重写。</span><span class="sxs-lookup"><span data-stu-id="6c042-112">The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides.</span></span> <span data-ttu-id="6c042-113">这意味着参数列表必须具有相同数量的参数，并且排序顺序和数据类型都必须完全相同。</span><span class="sxs-lookup"><span data-stu-id="6c042-113">This means the parameter lists must have the same number of parameters, in the same order, with the same data types.</span></span>  
   
-     除签名外，重写的声明还必须完全匹配以下项：  
+     <span data-ttu-id="6c042-114">除签名外，重写的声明还必须完全匹配以下项：</span><span class="sxs-lookup"><span data-stu-id="6c042-114">In addition to the signature, the overriding declaration must also exactly match the following:</span></span>  
   
-    -   访问级别  
+    -   <span data-ttu-id="6c042-115">访问级别</span><span class="sxs-lookup"><span data-stu-id="6c042-115">The access level</span></span>  
   
-    -   返回类型（如有）  
+    -   <span data-ttu-id="6c042-116">返回类型（如有）</span><span class="sxs-lookup"><span data-stu-id="6c042-116">The return type, if any</span></span>  
   
--   **泛型签名。** 对于泛型过程，签名包括类型参数的数量。  因此，重写的声明必须在这方面与基类版本匹配。  
+-   <span data-ttu-id="6c042-117">**泛型签名。**</span><span class="sxs-lookup"><span data-stu-id="6c042-117">**Generic Signatures.**</span></span> <span data-ttu-id="6c042-118">对于泛型过程，签名包括类型参数的数量。</span><span class="sxs-lookup"><span data-stu-id="6c042-118">For a generic procedure, the signature includes the number of type parameters.</span></span> <span data-ttu-id="6c042-119">因此，重写的声明必须在这方面与基类版本匹配。</span><span class="sxs-lookup"><span data-stu-id="6c042-119">Therefore, the overriding declaration must match the base class version in that respect as well.</span></span>  
   
--   **附加匹配。** 除匹配基类版本的签名外，此声明还必须在以下方面与其匹配：  
+-   <span data-ttu-id="6c042-120">**附加匹配。**</span><span class="sxs-lookup"><span data-stu-id="6c042-120">**Additional Matching.**</span></span> <span data-ttu-id="6c042-121">除匹配基类版本的签名外，此声明还必须在以下方面与其匹配：</span><span class="sxs-lookup"><span data-stu-id="6c042-121">In addition to matching the signature of the base class version, this declaration must also match it in the following respects:</span></span>  
   
-    -   访问级别修饰符（例如 [Public](../../../visual-basic/language-reference/modifiers/public.md)）  
+    -   <span data-ttu-id="6c042-122">访问级别修饰符 (如[公共](../../../visual-basic/language-reference/modifiers/public.md))</span><span class="sxs-lookup"><span data-stu-id="6c042-122">Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))</span></span>  
   
-    -   传递每个参数的机制（[ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 或 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)）  
+    -   <span data-ttu-id="6c042-123">传递的每个参数的机制 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))</span><span class="sxs-lookup"><span data-stu-id="6c042-123">Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))</span></span>  
   
-    -   泛型过程的每个类型参数的约束列表  
+    -   <span data-ttu-id="6c042-124">泛型过程的每个类型参数的约束列表</span><span class="sxs-lookup"><span data-stu-id="6c042-124">Constraint lists on each type parameter of a generic procedure</span></span>  
   
--   **隐藏和重写操作。** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。  有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+-   <span data-ttu-id="6c042-125">**隐藏和重写。**</span><span class="sxs-lookup"><span data-stu-id="6c042-125">**Shadowing and Overriding.**</span></span> <span data-ttu-id="6c042-126">隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。</span><span class="sxs-lookup"><span data-stu-id="6c042-126">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="6c042-127">有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。</span><span class="sxs-lookup"><span data-stu-id="6c042-127">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
- 如果使用 `Overrides`，编译器将隐式添加 `Overloads`，以便库 API 更轻松地使用 C\#。  
+ <span data-ttu-id="6c042-128">如果使用 `Overrides`，编译器将隐式添加 `Overloads`，以便库 API 更轻松地使用 C#。</span><span class="sxs-lookup"><span data-stu-id="6c042-128">If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.</span></span>  
   
- `Overrides` 修饰符可用于下面的上下文中：  
+ <span data-ttu-id="6c042-129">`Overrides` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="6c042-129">The `Overrides` modifier can be used in these contexts:</span></span>  
   
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="6c042-130">Function 语句</span><span class="sxs-lookup"><span data-stu-id="6c042-130">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="6c042-131">Property 语句</span><span class="sxs-lookup"><span data-stu-id="6c042-131">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="6c042-132">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="6c042-132">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [类型列表](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a><span data-ttu-id="6c042-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6c042-133">See Also</span></span>  
+ [<span data-ttu-id="6c042-134">MustOverride</span><span class="sxs-lookup"><span data-stu-id="6c042-134">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="6c042-135">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="6c042-135">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="6c042-136">Overridable</span><span class="sxs-lookup"><span data-stu-id="6c042-136">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="6c042-137">关键字</span><span class="sxs-lookup"><span data-stu-id="6c042-137">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="6c042-138">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="6c042-138">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="6c042-139">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="6c042-139">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="6c042-140">类型列表</span><span class="sxs-lookup"><span data-stu-id="6c042-140">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)

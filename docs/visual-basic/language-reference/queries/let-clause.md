@@ -1,58 +1,55 @@
 ---
-title: "Let 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryLet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Let 子句"
-  - "Let 语句"
-  - "查询 [Visual Basic], Let"
+title: "Let 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryLet
+helpviewer_keywords:
+- queries [Visual Basic], Let
+- Let clause [Visual Basic]
+- Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Let 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-计算一个值并将该值赋给查询中的新变量。  
+# <a name="let-clause-visual-basic"></a><span data-ttu-id="6a514-102">Let 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a514-102">Let Clause (Visual Basic)</span></span>
+<span data-ttu-id="6a514-103">计算一个值，并将其分配给查询中的新变量。</span><span class="sxs-lookup"><span data-stu-id="6a514-103">Computes a value and assigns it to a new variable within the query.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="6a514-104">语法</span><span class="sxs-lookup"><span data-stu-id="6a514-104">Syntax</span></span>  
   
 ```  
 Let variable = expression [, ...]  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="6a514-105">部件</span><span class="sxs-lookup"><span data-stu-id="6a514-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`variable`|必选。  一个别名，可用于引用所提供的表达式的结果。|  
-|`expression`|必选。  一个将进行计算并赋值给指定变量的表达式。|  
+|<span data-ttu-id="6a514-106">术语</span><span class="sxs-lookup"><span data-stu-id="6a514-106">Term</span></span>|<span data-ttu-id="6a514-107">定义</span><span class="sxs-lookup"><span data-stu-id="6a514-107">Definition</span></span>|  
+|---|---|  
+|`variable`|<span data-ttu-id="6a514-108">必需。</span><span class="sxs-lookup"><span data-stu-id="6a514-108">Required.</span></span> <span data-ttu-id="6a514-109">可以用于引用提供表达式的结果的别名。</span><span class="sxs-lookup"><span data-stu-id="6a514-109">An alias that can be used to reference the results of the supplied expression.</span></span>|  
+|`expression`|<span data-ttu-id="6a514-110">必需。</span><span class="sxs-lookup"><span data-stu-id="6a514-110">Required.</span></span> <span data-ttu-id="6a514-111">一个表达式，将进行计算并分配到指定的变量。</span><span class="sxs-lookup"><span data-stu-id="6a514-111">An expression that will be evaluated and assigned to the specified variable.</span></span>|  
   
-## 备注  
- 在 `Let` 子句中，可以计算每个查询结果的值，可以通过别名引用这些值。  别名可以在其他子句（如 `Where` 子句）中使用。  在 `Let` 子句中，可以创建可读性更强的查询语句，这是因为可以为查询所包含的表达式子句指定别名，在每次使用该表达式子句时，都可以用该别名替代。  
+## <a name="remarks"></a><span data-ttu-id="6a514-112">备注</span><span class="sxs-lookup"><span data-stu-id="6a514-112">Remarks</span></span>  
+ <span data-ttu-id="6a514-113">`Let`子句可用于计算值为每个查询结果，通过使用别名引用它们。</span><span class="sxs-lookup"><span data-stu-id="6a514-113">The `Let` clause enables you to compute values for each query result and reference them by using an alias.</span></span> <span data-ttu-id="6a514-114">别名可在其他子句，如`Where`子句。</span><span class="sxs-lookup"><span data-stu-id="6a514-114">The alias can be used in other clauses, such as the `Where` clause.</span></span> <span data-ttu-id="6a514-115">`Let`子句可用于创建可以更轻松地读取，因为可以指定包含在查询表达式子句的别名，还可以用该别名替代每次使用该表达式子句的查询语句。</span><span class="sxs-lookup"><span data-stu-id="6a514-115">The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.</span></span>  
   
- 在 `Let` 子句中，可以对任意数量的 `variable` 和 `expression` 赋值。  用逗号 \(,\) 分隔每个赋值语句。  
+ <span data-ttu-id="6a514-116">可以包含任意数量的`variable`和`expression`中的赋值`Let`子句。</span><span class="sxs-lookup"><span data-stu-id="6a514-116">You can include any number of `variable` and `expression` assignments in the `Let` clause.</span></span> <span data-ttu-id="6a514-117">用逗号 （，） 分隔每个分配。</span><span class="sxs-lookup"><span data-stu-id="6a514-117">Separate each assignment with a comma (,).</span></span>  
   
-## 示例  
- 下面的代码示例使用 `Let` 子句计算产品 10% 的折扣。  
+## <a name="example"></a><span data-ttu-id="6a514-118">示例</span><span class="sxs-lookup"><span data-stu-id="6a514-118">Example</span></span>  
+ <span data-ttu-id="6a514-119">下面的代码示例使用`Let`子句来计算产品 10%的折扣。</span><span class="sxs-lookup"><span data-stu-id="6a514-119">The following code example uses the `Let` clause to compute a 10 percent discount on products.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="6a514-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6a514-120">See Also</span></span>  
+ [<span data-ttu-id="6a514-121">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="6a514-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="6a514-122">查询</span><span class="sxs-lookup"><span data-stu-id="6a514-122">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="6a514-123">Select 子句</span><span class="sxs-lookup"><span data-stu-id="6a514-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="6a514-124">From 子句</span><span class="sxs-lookup"><span data-stu-id="6a514-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="6a514-125">Where 子句</span><span class="sxs-lookup"><span data-stu-id="6a514-125">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -1,35 +1,27 @@
 ---
-title: "如何︰ 在字符串 (LINQ) (Visual Basic 中) 中单词出现次数进行计数 |Microsoft 文档"
+title: "如何： 在字符串 (LINQ) (Visual Basic 中) 中的单词的出现次数进行计数"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>如何︰ 在字符串 (LINQ) (Visual Basic 中) 中单词出现次数进行计数
-此示例演示如何使用 LINQ 查询字符串中指定单词的出现次数进行计数。 请注意，要先执行计数，<xref:System.String.Split%2A>调用方法来创建单词的数组。</xref:System.String.Split%2A> 没有性能开销<xref:System.String.Split%2A>方法。</xref:System.String.Split%2A> 如果执行该字符串的唯一操作是对单词进行计数，则应考虑使用<xref:System.Text.RegularExpressions.Regex.Matches%2A>或<xref:System.String.IndexOf%2A>方法相反。</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> 但是，如果性能不是严重问题时，或您已拆分句子以对其执行其他类型的查询，则其意义使用 LINQ 来计算的单词或短语同样。  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="25463-102">如何： 在字符串 (LINQ) (Visual Basic 中) 中的单词的出现次数进行计数</span><span class="sxs-lookup"><span data-stu-id="25463-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="25463-103">此示例演示如何使用 LINQ 查询对指定词在字符串中出现的次数进行计数。</span><span class="sxs-lookup"><span data-stu-id="25463-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="25463-104">请注意，若要执行计数，首先需调用 <xref:System.String.Split%2A> 方法来创建词数组。</span><span class="sxs-lookup"><span data-stu-id="25463-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="25463-105"><xref:System.String.Split%2A> 方法存在性能开销。</span><span class="sxs-lookup"><span data-stu-id="25463-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="25463-106">如果只需要统计字符串的字数，则应考虑改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="25463-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="25463-107">但是，如果性能不是关键问题，或者已拆分句子以对其执行其他类型的查询，则使用 LINQ 来计数词或短语同样有意义。</span><span class="sxs-lookup"><span data-stu-id="25463-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a>示例  
+## <a name="example"></a><span data-ttu-id="25463-108">示例</span><span class="sxs-lookup"><span data-stu-id="25463-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -74,8 +66,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a>编译代码  
- 创建一个面向.NET Framework 版本 3.5 或更高版本对 System.Core.dll 的引用与项目和一个`Imports`System.Linq 命名空间的语句。  
+## <a name="compiling-the-code"></a><span data-ttu-id="25463-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="25463-109">Compiling the Code</span></span>  
+ <span data-ttu-id="25463-110">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="25463-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="25463-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="25463-111">See Also</span></span>  
+ [<span data-ttu-id="25463-112">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25463-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

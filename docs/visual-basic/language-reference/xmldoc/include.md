@@ -1,61 +1,60 @@
 ---
-title: "&lt;include&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<include> XML 标记"
-  - "include XML 标记"
+title: "&lt;包括&gt;(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- include XML tag
+- <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 22eebaa8da8ef082e132cfdf8cb68498bfe16d73
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;include&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-引用源代码中描述和成员的其他文件。  
+# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="583fa-102">&lt;包括&gt;(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="583fa-102">&lt;include&gt; (Visual Basic)</span></span>
+<span data-ttu-id="583fa-103">是指描述的类型和成员在源代码中的另一个文件。</span><span class="sxs-lookup"><span data-stu-id="583fa-103">Refers to another file that describes the types and members in your source code.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="583fa-104">语法</span><span class="sxs-lookup"><span data-stu-id="583fa-104">Syntax</span></span>  
   
-```  
+```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a><span data-ttu-id="583fa-105">参数</span><span class="sxs-lookup"><span data-stu-id="583fa-105">Parameters</span></span>  
  `filename`  
- 必选。  包含文档的文件名。  该文件名可用路径加以限定。  将 `filename` 置于双引号 \(" "\) 内。  
+ <span data-ttu-id="583fa-106">必需。</span><span class="sxs-lookup"><span data-stu-id="583fa-106">Required.</span></span> <span data-ttu-id="583fa-107">包含文档的文件的名称。</span><span class="sxs-lookup"><span data-stu-id="583fa-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="583fa-108">可使用路径来限定文件名。</span><span class="sxs-lookup"><span data-stu-id="583fa-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="583fa-109">括起`filename`在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="583fa-109">Enclose `filename` in double quotation marks (" ").</span></span>  
   
  `tagpath`  
- 必选。  `filename` 中指向标记 `name` 的标记路径。  将此路径置于双引号中 \(" "\) 内。  
+ <span data-ttu-id="583fa-110">必需。</span><span class="sxs-lookup"><span data-stu-id="583fa-110">Required.</span></span> <span data-ttu-id="583fa-111">`filename` 中标记的路径，它指向标记 `name`。</span><span class="sxs-lookup"><span data-stu-id="583fa-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="583fa-112">将路径括在双引号 ("")。</span><span class="sxs-lookup"><span data-stu-id="583fa-112">Enclose the path in double quotation marks (" ").</span></span>  
   
  `name`  
- 必选。  注释前边的标记中的名称说明符。  `Name` 具有一个 `id`。  
+ <span data-ttu-id="583fa-113">必需。</span><span class="sxs-lookup"><span data-stu-id="583fa-113">Required.</span></span> <span data-ttu-id="583fa-114">名称的说明符之前注释的标记中。</span><span class="sxs-lookup"><span data-stu-id="583fa-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="583fa-115">`Name`将具有`id`。</span><span class="sxs-lookup"><span data-stu-id="583fa-115">`Name` will have an `id`.</span></span>  
   
  `id`  
- 必选。  位于注释之前的标记的 ID。  将此 ID 置于单引号中 \(' '\)。  
+ <span data-ttu-id="583fa-116">必需。</span><span class="sxs-lookup"><span data-stu-id="583fa-116">Required.</span></span> <span data-ttu-id="583fa-117">标记的 ID（位于注释之前）。</span><span class="sxs-lookup"><span data-stu-id="583fa-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="583fa-118">将此 ID 括在单引号 (' ')。</span><span class="sxs-lookup"><span data-stu-id="583fa-118">Enclose the ID in single quotation marks (' ').</span></span>  
   
-## 备注  
- 使用 `<include>` 引用描述源代码中类型和成员的另一文件中的注释。  这是除了将文档注释直接置于源代码文件中之外的另一种可选方法。  
+## <a name="remarks"></a><span data-ttu-id="583fa-119">备注</span><span class="sxs-lookup"><span data-stu-id="583fa-119">Remarks</span></span>  
+ <span data-ttu-id="583fa-120">使用`<include>`标记来引用另一个文件中的注释，用于描述的类型和成员在源代码中的。</span><span class="sxs-lookup"><span data-stu-id="583fa-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="583fa-121">这是对直接在源代码文件中放入文档注释的替代方法。</span><span class="sxs-lookup"><span data-stu-id="583fa-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
   
- `<include>` 标记使用 W3C XML Path Language \(XPath\) Version 1.0 Recommendation。  有关自定义 `<include>` 使用方法的更多信息，请访问 http:\/\/www.w3.org\/TR\/xpath。  
+ <span data-ttu-id="583fa-122">`<include>`标记使用 W3C XML 路径语言 (XPath) 1.0 版建议。</span><span class="sxs-lookup"><span data-stu-id="583fa-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="583fa-123">有关用于自定义的方法的详细信息你`<include>`使用位于 http://www.w3.org/TR/xpath。</span><span class="sxs-lookup"><span data-stu-id="583fa-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
   
-## 示例  
- 此示例使用 `<include>` 标记从名称为 `commentFile.xml` 的文件中导入成员文档注释。  
+## <a name="example"></a><span data-ttu-id="583fa-124">示例</span><span class="sxs-lookup"><span data-stu-id="583fa-124">Example</span></span>  
+ <span data-ttu-id="583fa-125">此示例使用`<include>`要从名为的文件导入成员文档注释标记`commentFile.xml`。</span><span class="sxs-lookup"><span data-stu-id="583fa-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- `commentFile.xml` 的格式如下。  
+ <span data-ttu-id="583fa-126">格式`commentFile.xml`如下。</span><span class="sxs-lookup"><span data-stu-id="583fa-126">The format of the `commentFile.xml` is as follows.</span></span>  
   
-```  
+```xml  
 <Docs>  
 <Members name="Open">  
 <summary>Opens a file.</summary>  
@@ -68,5 +67,5 @@ caps.handback.revision: 11
 </Docs>  
 ```  
   
-## 请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="583fa-127">另请参阅</span><span class="sxs-lookup"><span data-stu-id="583fa-127">See Also</span></span>  
+ [<span data-ttu-id="583fa-128">XML 注释标记</span><span class="sxs-lookup"><span data-stu-id="583fa-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,40 +1,39 @@
 ---
-title: "如何：使用 Windows Communication Foundation 客户端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF 客户端 [WCF], using"
+title: "如何：使用 Windows Communication Foundation 客户端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 Windows Communication Foundation 客户端
-这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的最后一项任务。  有关全部六项任务的概述，请参见[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="afc16-102">如何：使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="afc16-102">How to: Use a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="afc16-103">这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的最后一项任务。</span><span class="sxs-lookup"><span data-stu-id="afc16-103">This is the last of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="afc16-104">有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="afc16-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- 在创建并配置了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 代理后，就可以创建客户端实例，进而编译客户端应用程序并使用它与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务进行通信。  本主题描述实例化和使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的过程。  此过程执行三项操作：  
+ <span data-ttu-id="afc16-105">在创建并配置了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 代理后，就可以创建客户端实例，进而编译客户端应用程序并使用它与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="afc16-105">Once a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="afc16-106">本主题描述实例化和使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的过程。</span><span class="sxs-lookup"><span data-stu-id="afc16-106">This topic describes procedures for instantiating and using a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="afc16-107">此过程执行三项操作：</span><span class="sxs-lookup"><span data-stu-id="afc16-107">This procedure does three things:</span></span>  
   
-1.  实例化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端。  
+1.  <span data-ttu-id="afc16-108">实例化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端。</span><span class="sxs-lookup"><span data-stu-id="afc16-108">Instantiates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
-2.  从生成的代理调用服务操作。  
+2.  <span data-ttu-id="afc16-109">从生成的代理调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="afc16-109">Calls the service operations from the generated proxy.</span></span>  
   
-3.  在完成操作调用后关闭客户端。  
+3.  <span data-ttu-id="afc16-110">在完成操作调用后关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="afc16-110">Closes the client once the operation call is completed.</span></span>  
   
-### 使用 Windows Communication Foundation 客户端  
+### <a name="to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="afc16-111">使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="afc16-111">To use a Windows Communication Foundation client</span></span>  
   
-1.  打开 GettingStartedClient 项目中的 Program.cs 或 program.vb 文件，然后将现有代码替换为以下代码：  
+1.  <span data-ttu-id="afc16-112">打开 GettingStartedClient 项目中的 Program.cs 或 program.vb 文件，然后将现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="afc16-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>  
   
     ```  
     using System;  
@@ -82,7 +81,6 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
     ```  
@@ -133,44 +131,28 @@ caps.handback.revision: 38
         End Sub  
   
     End Module  
-  
     ```  
   
-     请注意用于导入 GettingStartedClient.ServiceReference1 的 using 或 imports 语句。  这会导入由 Visual Studio 中的“添加服务引用”所生成的代码。  此代码实例化 WCF 代理，然后调用由计算器服务公开的每个服务操作，关闭代理并终止。  
+     <span data-ttu-id="afc16-113">请注意用于导入 GettingStartedClient.ServiceReference1 的 using 或 imports 语句。</span><span class="sxs-lookup"><span data-stu-id="afc16-113">Notice the using or imports statement that imports the GettingStartedClient.ServiceReference1.</span></span> <span data-ttu-id="afc16-114">这会导入由 Visual Studio 中的“添加服务引用”所生成的代码。</span><span class="sxs-lookup"><span data-stu-id="afc16-114">This imports the code generated by Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="afc16-115">此代码实例化 WCF 代理，然后调用由计算器服务公开的每个服务操作，关闭代理并终止。</span><span class="sxs-lookup"><span data-stu-id="afc16-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy and terminates.</span></span>  
   
- 现在，您已经完成了教程。  您定义了服务协定、实现了服务协定、生成了 WCF 代理、配置了 WCF 客户端应用程序，然后使用代理调用了服务操作。  要测试应用程序，首先运行 GettingStartedHost 以启动服务，然后运行 GettingStartedClient。  GettingStartedHost 的输出应类似于：  
-  
-```Output  
-  
-            服务已准备就绪。  按下 <ENTER> 以终止服务。  Received Add(100,15.99)  
-Return: 115.99  
-Received Subtract(145,76.54)  
-Return: 68.46  
-Received Multiply(9,81.25)  
-Return: 731.25  
-Received Divide(22,7)  
-Return: 3.14285714285714    
-```  
-  
- GettingStartedClient 的输出应类似于：  
+ <span data-ttu-id="afc16-116">现在，您已经完成了教程。</span><span class="sxs-lookup"><span data-stu-id="afc16-116">You have now completed the tutorial.</span></span> <span data-ttu-id="afc16-117">您定义了服务协定、实现了服务协定、生成了 WCF 代理、配置了 WCF 客户端应用程序，然后使用代理调用了服务操作。</span><span class="sxs-lookup"><span data-stu-id="afc16-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="afc16-118">要测试应用程序，首先运行 GettingStartedHost 以启动服务，然后运行 GettingStartedClient。</span><span class="sxs-lookup"><span data-stu-id="afc16-118">To test out the application first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span> <span data-ttu-id="afc16-119">GettingStartedHost 的输出应类似于：</span><span class="sxs-lookup"><span data-stu-id="afc16-119">The output from GettingStartedHost should look like this:</span></span>  
   
 ```Output  
-  
-            Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-  
-按下 <ENTER> 终止客户端。  
-  
+The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
-## 请参阅  
- [生成客户端](../../../docs/framework/wcf/building-clients.md)   
- [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [如何：创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [如何：使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [自承载](../../../docs/framework/wcf/samples/self-host.md)
+ <span data-ttu-id="afc16-120">GettingStartedClient 的输出应类似于：</span><span class="sxs-lookup"><span data-stu-id="afc16-120">The output from GettingStartedClient should look like this:</span></span>  
+  
+```Output  
+Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="afc16-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afc16-121">See Also</span></span>  
+ [<span data-ttu-id="afc16-122">生成客户端</span><span class="sxs-lookup"><span data-stu-id="afc16-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ [<span data-ttu-id="afc16-123">如何：创建客户端</span><span class="sxs-lookup"><span data-stu-id="afc16-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="afc16-124">入门教程</span><span class="sxs-lookup"><span data-stu-id="afc16-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="afc16-125">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="afc16-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="afc16-126">如何： 创建双工协定</span><span class="sxs-lookup"><span data-stu-id="afc16-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="afc16-127">如何： 使用双工协定访问服务</span><span class="sxs-lookup"><span data-stu-id="afc16-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [<span data-ttu-id="afc16-128">入门</span><span class="sxs-lookup"><span data-stu-id="afc16-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="afc16-129">自承载</span><span class="sxs-lookup"><span data-stu-id="afc16-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

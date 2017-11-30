@@ -1,36 +1,39 @@
 ---
-title: "如何：将 TextBox 控件设为只读 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "只读 TextBox 控件"
-  - "TextBox 控件只读"
+title: "如何：将 TextBox 控件设为只读"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- read-only TextBox controls [WPF]
+- TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36116346b389dac7e9783e69d9bcd79573b4bf75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：将 TextBox 控件设为只读
-本主题中的示例演示如何将 <xref:System.Windows.Controls.TextBox> 控件配置为禁止用户输入或修改。  
+# <a name="how-to-make-a-textbox-control-read-only"></a><span data-ttu-id="0653f-102">如何：将 TextBox 控件设为只读</span><span class="sxs-lookup"><span data-stu-id="0653f-102">How to: Make a TextBox Control Read-Only</span></span>
+<span data-ttu-id="0653f-103">此示例演示如何配置<xref:System.Windows.Controls.TextBox>控件不允许用户输入或修改。</span><span class="sxs-lookup"><span data-stu-id="0653f-103">This example shows how to configure a <xref:System.Windows.Controls.TextBox> control to not allow user input or modification.</span></span>  
   
-## 示例  
- 为了防止用户修改 <xref:System.Windows.Controls.TextBox> 控件的内容，请将 <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> 特性设置为 **true**。  
+## <a name="example"></a><span data-ttu-id="0653f-104">示例</span><span class="sxs-lookup"><span data-stu-id="0653f-104">Example</span></span>  
+ <span data-ttu-id="0653f-105">若要防止用户修改的内容<xref:System.Windows.Controls.TextBox>控制、 设置<xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A>属性设为**true**。</span><span class="sxs-lookup"><span data-stu-id="0653f-105">To prevent users from modifying the contents of a <xref:System.Windows.Controls.TextBox> control, set the <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> attribute to **true**.</span></span>  
   
- [!code-xml[TextBox_MiscCode#_ReadOnlyTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_readonlytextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_ReadOnlyTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_readonlytextboxxaml)]  
   
- <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> 特性仅影响用户输入，而不会影响在 <xref:System.Windows.Controls.TextBox> 控件的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 说明中设置的文本或者通过 <xref:System.Windows.Controls.TextBox.Text%2A> 属性以编程方式设置的文本。  
+ <span data-ttu-id="0653f-106"><xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A>特性影响仅用户输入; 它不会影响在中设置的文本[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]说明<xref:System.Windows.Controls.TextBox>控件或设置以编程方式通过文本<xref:System.Windows.Controls.TextBox.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="0653f-106">The <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> attribute affects user input only; it does not affect text set in the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] description of a <xref:System.Windows.Controls.TextBox> control, or text set programmatically through the <xref:System.Windows.Controls.TextBox.Text%2A> property.</span></span>  
   
- <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> 的默认值为 **false**。  
+ <span data-ttu-id="0653f-107">默认值<xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A>是**false**。</span><span class="sxs-lookup"><span data-stu-id="0653f-107">The default value of <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> is **false**.</span></span>  
   
-## 请参阅  
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="0653f-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0653f-108">See Also</span></span>  
+ [<span data-ttu-id="0653f-109">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="0653f-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="0653f-110">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="0653f-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

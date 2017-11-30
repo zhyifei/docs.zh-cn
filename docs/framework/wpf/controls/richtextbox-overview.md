@@ -1,104 +1,109 @@
 ---
-title: "RichTextBox 概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件, RichTextBox"
-  - "RichTextBox 控件 [WPF], 关于 RichTextBox 控件"
+title: "RichTextBox 概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], RichTextBox
+- RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# RichTextBox 概述
-使用 <xref:System.Windows.Controls.RichTextBox> 控件，可以显示或编辑流内容（包括段落、图像、表等）。  本主题介绍 <xref:System.Windows.Controls.TextBox> 类，并提供如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] 中使用它的示例。  
+# <a name="richtextbox-overview"></a><span data-ttu-id="1e590-102">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="1e590-102">RichTextBox Overview</span></span>
+<span data-ttu-id="1e590-103"><xref:System.Windows.Controls.RichTextBox>控制，你可以显示或编辑流内容包括段落、 图像、 表和的详细信息。</span><span class="sxs-lookup"><span data-stu-id="1e590-103">The <xref:System.Windows.Controls.RichTextBox> control enables you to display or edit flow content including paragraphs, images, tables, and more.</span></span> <span data-ttu-id="1e590-104">本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="1e590-104">This topic introduces the <xref:System.Windows.Controls.TextBox> class and provides examples of how to use it in both [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] and [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].</span></span>  
   
-   
   
 <a name="textbox_or_richtextbox"></a>   
-## 使用 TextBox 还是 RichTextBox？  
- <xref:System.Windows.Controls.RichTextBox> 和 <xref:System.Windows.Controls.TextBox> 都允许用户编辑文本，但是这两个控件用于不同的情形。  当用户需要编辑带格式的文本、图像、表或其他丰富内容时，最好选择 <xref:System.Windows.Controls.RichTextBox>。  例如，编辑需要格式、图像等内容的文档、文章或博客时，最好使用 <xref:System.Windows.Controls.RichTextBox>。  <xref:System.Windows.Controls.TextBox> 要求的系统资源比 <xref:System.Windows.Controls.RichTextBox> 少，因此当只需编辑纯文本（即  用于窗体）时，它是理想选择。  有关 <xref:System.Windows.Controls.TextBox> 的更多信息，请参见 [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)。  下表汇总了 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 的主要功能。  
+## <a name="textbox-or-richtextbox"></a><span data-ttu-id="1e590-105">使用 TextBox 还是 RichTextBox？</span><span class="sxs-lookup"><span data-stu-id="1e590-105">TextBox or RichTextBox?</span></span>  
+ <span data-ttu-id="1e590-106">同时<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.TextBox>允许用户编辑文本，但是，在不同的方案中使用两个控件。</span><span class="sxs-lookup"><span data-stu-id="1e590-106">Both <xref:System.Windows.Controls.RichTextBox> and <xref:System.Windows.Controls.TextBox> allow users to edit text, however, the two controls are used in different scenarios.</span></span> <span data-ttu-id="1e590-107">A<xref:System.Windows.Controls.RichTextBox>必要要编辑格式化的文本、 图像、 表或其他丰富内容的用户时是更好的选择。</span><span class="sxs-lookup"><span data-stu-id="1e590-107">A <xref:System.Windows.Controls.RichTextBox> is a better choice when it is necessary for the user to edit formatted text, images, tables, or other rich content.</span></span> <span data-ttu-id="1e590-108">例如，编辑文档、 文章或需要格式、 博客映像，等时，最好使用<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-108">For example, editing a document, article, or blog that requires formatting, images, etc is best accomplished using a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="1e590-109">A<xref:System.Windows.Controls.TextBox>需要少的系统资源则<xref:System.Windows.Controls.RichTextBox>仅纯文本需要编辑 （即在窗体中的使用情况） 时，它是理想选择。</span><span class="sxs-lookup"><span data-stu-id="1e590-109">A <xref:System.Windows.Controls.TextBox> requires less system resources then a <xref:System.Windows.Controls.RichTextBox> and it is ideal when only plain text needs to be edited (i.e. usage in forms).</span></span> <span data-ttu-id="1e590-110">请参阅[文本框中概述](../../../../docs/framework/wpf/controls/textbox-overview.md)有关详细信息<xref:System.Windows.Controls.TextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-110">See [TextBox Overview](../../../../docs/framework/wpf/controls/textbox-overview.md) for more information on <xref:System.Windows.Controls.TextBox>.</span></span> <span data-ttu-id="1e590-111">下表总结了的主要功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-111">The table below summarizes the main features of <xref:System.Windows.Controls.TextBox> and <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
-|控件|实时拼写检查|上下文菜单|格式设置命令，例如 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(Ctr\+B\)|<xref:System.Windows.Documents.FlowDocument> 内容，例如图像、段落、表等。|  
-|--------|------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|是|是|否|不能。|  
-|<xref:System.Windows.Controls.RichTextBox>|是|是|是|是|  
+|<span data-ttu-id="1e590-112">控件</span><span class="sxs-lookup"><span data-stu-id="1e590-112">Control</span></span>|<span data-ttu-id="1e590-113">实时拼写检查</span><span class="sxs-lookup"><span data-stu-id="1e590-113">Real-time Spellchecking</span></span>|<span data-ttu-id="1e590-114">上下文菜单</span><span class="sxs-lookup"><span data-stu-id="1e590-114">Context Menu</span></span>|<span data-ttu-id="1e590-115">格式设置等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)</span><span class="sxs-lookup"><span data-stu-id="1e590-115">Formatting commands like <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr+B)</span></span>|<span data-ttu-id="1e590-116"><xref:System.Windows.Documents.FlowDocument>内容，例如图像、 段落、 表等。</span><span class="sxs-lookup"><span data-stu-id="1e590-116"><xref:System.Windows.Documents.FlowDocument> content like images, paragraphs, tables, etc.</span></span>|  
+|-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.Windows.Controls.TextBox>|<span data-ttu-id="1e590-117">是</span><span class="sxs-lookup"><span data-stu-id="1e590-117">Yes</span></span>|<span data-ttu-id="1e590-118">是</span><span class="sxs-lookup"><span data-stu-id="1e590-118">Yes</span></span>|<span data-ttu-id="1e590-119">No</span><span class="sxs-lookup"><span data-stu-id="1e590-119">No</span></span>|<span data-ttu-id="1e590-120">不是。</span><span class="sxs-lookup"><span data-stu-id="1e590-120">No.</span></span>|  
+|<xref:System.Windows.Controls.RichTextBox>|<span data-ttu-id="1e590-121">是</span><span class="sxs-lookup"><span data-stu-id="1e590-121">Yes</span></span>|<span data-ttu-id="1e590-122">是</span><span class="sxs-lookup"><span data-stu-id="1e590-122">Yes</span></span>|<span data-ttu-id="1e590-123">是</span><span class="sxs-lookup"><span data-stu-id="1e590-123">Yes</span></span>|<span data-ttu-id="1e590-124">是</span><span class="sxs-lookup"><span data-stu-id="1e590-124">Yes</span></span>|  
   
- **注意：**尽管 <xref:System.Windows.Controls.TextBox> 不支持与格式设置有关的命令，如 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(Ctr\+B\)，但是这两个控件都支持许多基本命令，如 <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>）。  
+ <span data-ttu-id="1e590-125">**注意：**尽管<xref:System.Windows.Controls.TextBox>不支持格式设置等相关的命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)，由这两个控件如支持基本的许多命令<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>。</span><span class="sxs-lookup"><span data-stu-id="1e590-125">**Note:** Although <xref:System.Windows.Controls.TextBox> does not support formatting related commands like <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr+B), many basic commands are supported by both controls such as <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.</span></span>  
   
- 后面将更详细地介绍上表中的功能。  
+ <span data-ttu-id="1e590-126">后面将更详细地介绍上表中的功能。</span><span class="sxs-lookup"><span data-stu-id="1e590-126">The features from the table above are covered in more detail later.</span></span>  
   
 <a name="creating_a_richtextbox"></a>   
-## 创建 RichTextBox  
- 下面的代码演示如何创建可供用户在其中编辑丰富内容的 <xref:System.Windows.Controls.RichTextBox>。  
+## <a name="creating-a-richtextbox"></a><span data-ttu-id="1e590-127">创建 RichTextBox</span><span class="sxs-lookup"><span data-stu-id="1e590-127">Creating a RichTextBox</span></span>  
+ <span data-ttu-id="1e590-128">下面的代码演示如何创建<xref:System.Windows.Controls.RichTextBox>用户可以编辑中的丰富内容。</span><span class="sxs-lookup"><span data-stu-id="1e590-128">The code below shows how to create a <xref:System.Windows.Controls.RichTextBox> that a user can edit rich content in.</span></span>  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#BasicRichTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/BasicRichTextBoxExample.xaml#basicrichtextboxexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#BasicRichTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/BasicRichTextBoxExample.xaml#basicrichtextboxexamplewholepage)]  
   
- 具体来说，在 <xref:System.Windows.Controls.RichTextBox> 编辑的内容是流内容。  流内容中可以包含许多类型的元素（包括带格式的文本、图像、列表和表）。  有关流文档的详细信息，请参见[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  为了包含流内容，可以让 <xref:System.Windows.Controls.RichTextBox> 承载一个 <xref:System.Windows.Documents.FlowDocument> 对象，该对象中同样包含可编辑的内容。  为了演示 <xref:System.Windows.Controls.RichTextBox> 中的流内容，下面的代码演示如何创建具有一个段落和一些加粗文本的 <xref:System.Windows.Controls.RichTextBox>。  
+ <span data-ttu-id="1e590-129">具体而言中, 编辑的内容<xref:System.Windows.Controls.RichTextBox>是流内容。</span><span class="sxs-lookup"><span data-stu-id="1e590-129">Specifically, the content edited in a <xref:System.Windows.Controls.RichTextBox> is flow content.</span></span> <span data-ttu-id="1e590-130">流内容可包含许多类型的元素，包括带格式的文本、图像、列表和表格。</span><span class="sxs-lookup"><span data-stu-id="1e590-130">Flow content can contain many types of elements including formatted text, images, lists, and tables.</span></span> <span data-ttu-id="1e590-131">有关流文档的详细信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1e590-131">See [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md) for in depth information on flow documents.</span></span> <span data-ttu-id="1e590-132">若要包含流内容<xref:System.Windows.Controls.RichTextBox>主机<xref:System.Windows.Documents.FlowDocument>对象又包含可编辑的内容。</span><span class="sxs-lookup"><span data-stu-id="1e590-132">In order to contain flow content, a <xref:System.Windows.Controls.RichTextBox> hosts a <xref:System.Windows.Documents.FlowDocument> object which in turn contains the editable content.</span></span> <span data-ttu-id="1e590-133">为了演示在流内容<xref:System.Windows.Controls.RichTextBox>，下面的代码演示如何创建<xref:System.Windows.Controls.RichTextBox>具有一个段落和一些粗体文本。</span><span class="sxs-lookup"><span data-stu-id="1e590-133">To demonstrate flow content in a <xref:System.Windows.Controls.RichTextBox>, the following code shows how to create a <xref:System.Windows.Controls.RichTextBox> with a paragraph and some bolded text.</span></span>  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#RichTextBoxWithContentExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/RichTextBoxWithContentExample.xaml#richtextboxwithcontentexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#RichTextBoxWithContentExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/RichTextBoxWithContentExample.xaml#richtextboxwithcontentexamplewholepage)]  
   
  [!code-csharp[RichTextBoxMiscSnippets_procedural_snip#BasicRichTextBoxWithContentCodeOnlyExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_procedural_snip/CSharp/BasicRichTextBoxWithContentExample.cs#basicrichtextboxwithcontentcodeonlyexample)]
  [!code-vb[RichTextBoxMiscSnippets_procedural_snip#BasicRichTextBoxWithContentCodeOnlyExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_procedural_snip/visualbasic/basicrichtextboxwithcontentexample.vb#basicrichtextboxwithcontentcodeonlyexample)]  
   
- 下图显示的是此示例的呈现效果。  
+ <span data-ttu-id="1e590-134">下图显示了此示例的呈现效果。</span><span class="sxs-lookup"><span data-stu-id="1e590-134">The following illustration shows how this sample renders.</span></span>  
   
- ![具有内容的 RichTextBox](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-content.png "Editing\_RichTextBox\_with\_Content")  
+ <span data-ttu-id="1e590-135">![RichTextBox with content](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-content.png "Editing_RichTextBox_with_Content")</span><span class="sxs-lookup"><span data-stu-id="1e590-135">![RichTextBox with content](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-content.png "Editing_RichTextBox_with_Content")</span></span>  
   
- 内容在 <xref:System.Windows.Controls.RichTextBox> 中的显示方式由 <xref:System.Windows.Documents.Paragraph> 和 <xref:System.Windows.Documents.Bold> 之类的元素确定。  当用户编辑 <xref:System.Windows.Controls.RichTextBox> 内容时，这些元素会改变此流内容。  有关流内容的功能及其工作方式的更多信息，请参见[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ <span data-ttu-id="1e590-136">元素<xref:System.Windows.Documents.Paragraph>和<xref:System.Windows.Documents.Bold>确定如何在内容<xref:System.Windows.Controls.RichTextBox>显示。</span><span class="sxs-lookup"><span data-stu-id="1e590-136">Elements like <xref:System.Windows.Documents.Paragraph> and <xref:System.Windows.Documents.Bold> determine how the content inside a <xref:System.Windows.Controls.RichTextBox> appears.</span></span> <span data-ttu-id="1e590-137">当用户编辑<xref:System.Windows.Controls.RichTextBox>内容，他们更改此流内容。</span><span class="sxs-lookup"><span data-stu-id="1e590-137">As a user edits <xref:System.Windows.Controls.RichTextBox> content, they change this flow content.</span></span> <span data-ttu-id="1e590-138">若要了解有关流内容的功能及其工作方式的详细信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="1e590-138">To learn more about the features of flow content and how to work with it, see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).</span></span>  
   
- **注意：** <xref:System.Windows.Controls.RichTextBox> 内部的流内容的行为并不与其他控件中包含的流内容完全相同。  例如，在 <xref:System.Windows.Controls.RichTextBox> 中不分栏，因此没有自动调整大小行为。  另外，在 <xref:System.Windows.Controls.RichTextBox> 中不能使用内置功能（如搜索、查看模式、页面导航和缩放）。  
+ <span data-ttu-id="1e590-139">**注意：**内部的流内容<xref:System.Windows.Controls.RichTextBox>的行为与其他控件中包含的流内容完全一样。</span><span class="sxs-lookup"><span data-stu-id="1e590-139">**Note:** Flow content inside a <xref:System.Windows.Controls.RichTextBox> does not behave exactly like flow content contained in other controls.</span></span> <span data-ttu-id="1e590-140">例如，有中的没有列<xref:System.Windows.Controls.RichTextBox>和因此没有自动调整大小行为。</span><span class="sxs-lookup"><span data-stu-id="1e590-140">For example, there are no columns in a <xref:System.Windows.Controls.RichTextBox> and hence no automatic resizing behavior.</span></span> <span data-ttu-id="1e590-141">此外，内置功能，例如搜索、 查看模式、 页面导航和缩放在不可用<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-141">Also, built in features like search, viewing mode, page navigation, and zoom are not available within a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
 <a name="realtime_spellechecking"></a>   
-## 实时拼写检查  
- 您可以在 <xref:System.Windows.Controls.TextBox> 或 <xref:System.Windows.Controls.RichTextBox> 中启用实时拼写检查。  启用拼写检查后，会在所有拼写有误的字词下面显示红线（请见下图）。  
+## <a name="real-time-spell-checking"></a><span data-ttu-id="1e590-142">实时拼写检查</span><span class="sxs-lookup"><span data-stu-id="1e590-142">Real-time Spell Checking</span></span>  
+ <span data-ttu-id="1e590-143">你可以实时中启用拼写检查<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-143">You can enable real-time spell checking in a <xref:System.Windows.Controls.TextBox> or <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="1e590-144">启用拼写检查时，任何拼写错误的字词下方都会出现红线（见下图）。</span><span class="sxs-lookup"><span data-stu-id="1e590-144">When spellchecking is turned on, a red line appears underneath any misspelled words (see picture below).</span></span>  
   
- ![具有拼写检查功能的 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing\_TextBox\_with\_Spellchecking")  
+ <span data-ttu-id="1e590-145">![具有拼写检查功能的 Textbox](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")</span><span class="sxs-lookup"><span data-stu-id="1e590-145">![Textbox with spell&#45;checking](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")</span></span>  
   
- 若要了解如何启用拼写检查，请参见[在文本编辑控件中启用拼写检查](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)。  
+ <span data-ttu-id="1e590-146">若要了解如何启用拼写检查，请参阅[在文本编辑控件中启用拼写检查](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="1e590-146">See [Enable Spell Checking in a Text Editing Control](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md) to learn how to enable spellchecking.</span></span>  
   
 <a name="context_menu"></a>   
-## 上下文菜单  
- 默认情况下，<xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox> 都会在用户在右击该控件时显示一个上下文菜单。  用户可以使用上下文菜单进行剪切、复制或粘贴（请见下图）。  
+## <a name="context-menu"></a><span data-ttu-id="1e590-147">上下文菜单</span><span class="sxs-lookup"><span data-stu-id="1e590-147">Context Menu</span></span>  
+ <span data-ttu-id="1e590-148">默认情况下，同时<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>都会用户右击该控件时，将出现一个上下文菜单。</span><span class="sxs-lookup"><span data-stu-id="1e590-148">By default, both <xref:System.Windows.Controls.TextBox> and <xref:System.Windows.Controls.RichTextBox> have a context menu that appears when a user right-clicks inside the control.</span></span> <span data-ttu-id="1e590-149">上下文菜单使用户可以剪切、复制或粘贴（见下图）。</span><span class="sxs-lookup"><span data-stu-id="1e590-149">The context menu allows the user to cut, copy, or paste (see illustration below).</span></span>  
   
- ![具有上下文菜单的 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing\_TextBox\_with\_Context\_Menu")  
+ <span data-ttu-id="1e590-150">![具有上下文菜单的 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")</span><span class="sxs-lookup"><span data-stu-id="1e590-150">![TextBox with context menu](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")</span></span>  
   
- 您可以创建自己的自定义上下文菜单来重写默认行为。  有关更多信息，请参见[在 RichTextBox 中定位自定义上下文菜单](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)。  
+ <span data-ttu-id="1e590-151">可以创建自己的自定义上下文菜单来重写默认的上下文菜单。</span><span class="sxs-lookup"><span data-stu-id="1e590-151">You can create your own custom context menu to override the default one.</span></span> <span data-ttu-id="1e590-152">有关详细信息，请参阅[在 RichTextBox 中定位自定义上下文菜单](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)。</span><span class="sxs-lookup"><span data-stu-id="1e590-152">See [Position a Custom Context Menu in a RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md) for more information.</span></span>  
   
 <a name="detect_when_content_changes"></a>   
-## 编辑命令  
- 用户可以使用编辑命令来为 <xref:System.Windows.Controls.RichTextBox> 中的可编辑内容设置格式。  除了基本编辑命令外，<xref:System.Windows.Controls.RichTextBox> 还包括 <xref:System.Windows.Controls.TextBox> 不支持的格式化命令。  例如，当在 <xref:System.Windows.Controls.RichTextBox> 中进行编辑时，用户可以按 Ctr\+B 来切换加粗文本的格式设置。  有关可用命令的完整列表，请参见 <xref:System.Windows.Documents.EditingCommands>。  除了使用键盘快捷键以外，您还可以将命令挂钩到其他控件（如按钮）。  下面的示例演示如何创建简单的工具栏，其中包含用户可用来更改文本格式的按钮。  
+## <a name="editing-commands"></a><span data-ttu-id="1e590-153">编辑命令</span><span class="sxs-lookup"><span data-stu-id="1e590-153">Editing Commands</span></span>  
+ <span data-ttu-id="1e590-154">编辑命令使用户能够格式中的可编辑内容<xref:System.Windows.Controls.RichTextBox>。</span><span class="sxs-lookup"><span data-stu-id="1e590-154">Editing commands enable users to format editable content inside a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="1e590-155">除了基本编辑命令，<xref:System.Windows.Controls.RichTextBox>包括格式设置命令的<xref:System.Windows.Controls.TextBox>不支持。</span><span class="sxs-lookup"><span data-stu-id="1e590-155">Besides basic editing commands, <xref:System.Windows.Controls.RichTextBox> includes formatting commands that <xref:System.Windows.Controls.TextBox> does not support.</span></span> <span data-ttu-id="1e590-156">例如，当在中编辑<xref:System.Windows.Controls.RichTextBox>，用户可以按 Ctr + B 来切换显示为粗体文本格式设置。</span><span class="sxs-lookup"><span data-stu-id="1e590-156">For example, when editing in a <xref:System.Windows.Controls.RichTextBox>, a user could press Ctr+B to toggle bold text formatting.</span></span> <span data-ttu-id="1e590-157">请参阅<xref:System.Windows.Documents.EditingCommands>有关可用命令的完整列表。</span><span class="sxs-lookup"><span data-stu-id="1e590-157">See <xref:System.Windows.Documents.EditingCommands> for a complete list of commands available.</span></span> <span data-ttu-id="1e590-158">除了使用键盘快捷方式，还可以将命令与按钮之类的其他控件挂钩。</span><span class="sxs-lookup"><span data-stu-id="1e590-158">In addition to using keyboard shortcuts, you can hook commands up to other controls like buttons.</span></span> <span data-ttu-id="1e590-159">以下示例演示如何创建如何创建简单的工具栏，其中包含用户可用来更改文本格式的按钮。</span><span class="sxs-lookup"><span data-stu-id="1e590-159">The following example shows how to create a simple tool bar containing buttons that the user can use to change text formatting.</span></span>  
   
- [!code-xml[RichTextBox_InputPanel_snip#RichTextBoxWithToolBarExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_InputPanel_snip/CS/Window1.xaml#richtextboxwithtoolbarexamplewholepage)]  
+ [!code-xaml[RichTextBox_InputPanel_snip#RichTextBoxWithToolBarExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_InputPanel_snip/CS/Window1.xaml#richtextboxwithtoolbarexamplewholepage)]  
   
- 下图显示的是此示例的显示效果。  
+ <span data-ttu-id="1e590-160">下图显示此示例的显示效果。</span><span class="sxs-lookup"><span data-stu-id="1e590-160">The following illustration shows how this sample displays.</span></span>  
   
- ![具有工具栏的 RichTextBox](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-toobar.png "Editing\_RichTextBox\_with\_TooBar")  
+ <span data-ttu-id="1e590-161">![RichTextBox with ToolBar](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-toobar.gif "Editing_RichTextBox_with_TooBar")</span><span class="sxs-lookup"><span data-stu-id="1e590-161">![RichTextBox with ToolBar](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-toobar.gif "Editing_RichTextBox_with_TooBar")</span></span>  
   
 <a name="editing_commands"></a>   
-## 在内容更改时进行检测  
- 通常，只要 <xref:System.Windows.Controls.TextBox> 或 <xref:System.Windows.Controls.RichTextBox> 中的文本发生更改，就应使用 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 事件进行检测，而不是像您可能预期的那样使用 <xref:System.Windows.UIElement.KeyDown>。  有关示例，请参见 [检测 TextBox 中的文本何时更改](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)。  
+## <a name="detect-when-content-changes"></a><span data-ttu-id="1e590-162">检测内容何时更改</span><span class="sxs-lookup"><span data-stu-id="1e590-162">Detect when Content Changes</span></span>  
+ <span data-ttu-id="1e590-163">通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>用于每当检测到事件中的文本<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>而不是更改<xref:System.Windows.UIElement.KeyDown>正如所料。</span><span class="sxs-lookup"><span data-stu-id="1e590-163">Usually the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event should be used to detect whenever the text in a <xref:System.Windows.Controls.TextBox> or <xref:System.Windows.Controls.RichTextBox> changes rather then <xref:System.Windows.UIElement.KeyDown> as you might expect.</span></span> <span data-ttu-id="1e590-164">有关示例，请参阅[检测 TextBox 中的文本何时更改](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)。</span><span class="sxs-lookup"><span data-stu-id="1e590-164">See [Detect When Text in a TextBox Has Changed](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md) for an example.</span></span>  
   
 <a name="save_load_and_print_richtextbox_content"></a>   
-## 保存、加载和打印 RichTextBox 内容  
- 下面的示例演示如何将 <xref:System.Windows.Controls.RichTextBox> 的内容保存到文件、如何将该内容重新加载到 <xref:System.Windows.Controls.RichTextBox> 中以及如何打印这些内容。  下面是该示例的标记。  
+## <a name="save-load-and-print-richtextbox-content"></a><span data-ttu-id="1e590-165">保存、加载和打印 RichTextBox 内容</span><span class="sxs-lookup"><span data-stu-id="1e590-165">Save, Load, and Print RichTextBox Content</span></span>  
+ <span data-ttu-id="1e590-166">下面的示例演示如何将保存的内容<xref:System.Windows.Controls.RichTextBox>到文件，该内容重新加载到<xref:System.Windows.Controls.RichTextBox>，以及如何打印内容。</span><span class="sxs-lookup"><span data-stu-id="1e590-166">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span> <span data-ttu-id="1e590-167">下面是示例的标记。</span><span class="sxs-lookup"><span data-stu-id="1e590-167">Below is the markup for the example.</span></span>  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
   
- 下面是该示例的隐藏代码。  
+ <span data-ttu-id="1e590-168">下面是该示例的隐藏代码。</span><span class="sxs-lookup"><span data-stu-id="1e590-168">Below is the code behind for the example.</span></span>  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## 请参阅  
- [帮助主题](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)   
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1e590-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1e590-169">See Also</span></span>  
+ [<span data-ttu-id="1e590-170">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="1e590-170">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [<span data-ttu-id="1e590-171">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="1e590-171">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)

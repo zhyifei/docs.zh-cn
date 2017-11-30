@@ -1,129 +1,135 @@
 ---
-title: "演练：创建自定义客户端和服务凭据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "演练：创建自定义客户端和服务凭据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6eae3a91856feff83e8e199cf552a987d99d5ba2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 演练：创建自定义客户端和服务凭据
-本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="a2f7e-102">演练：创建自定义客户端和服务凭据</span><span class="sxs-lookup"><span data-stu-id="a2f7e-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
+<span data-ttu-id="a2f7e-103">本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  
   
-## 凭据扩展性类  
- <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全扩展的主入口点。这些凭据类提供 API，应用程序代码可以使用这些 API 来设置凭据信息和将凭据类型转换为安全令牌。（安全令牌是用于在 SOAP 消息中传输凭据信息的形式。）这些凭据类的责任可以分成两部分：  
+## <a name="credentials-extensibility-classes"></a><span data-ttu-id="a2f7e-104">凭据扩展性类</span><span class="sxs-lookup"><span data-stu-id="a2f7e-104">Credentials Extensibility Classes</span></span>  
+ <span data-ttu-id="a2f7e-105"><xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全扩展的主入口点。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-105">The <xref:System.ServiceModel.Description.ClientCredentials> and <xref:System.ServiceModel.Description.ServiceCredentials> classes are the main entry points to the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security extensibility.</span></span> <span data-ttu-id="a2f7e-106">这些凭据类提供 API，应用程序代码可以使用这些 API 来设置凭据信息和将凭据类型转换为安全令牌。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-106">These credentials classes provide the APIs that enable application code to set credentials information and to convert credential types into security tokens.</span></span> <span data-ttu-id="a2f7e-107">(*安全令牌*是用于传输 SOAP 消息内的凭据信息的形式。)这些凭据类的责任可以分成两部分：</span><span class="sxs-lookup"><span data-stu-id="a2f7e-107">(*Security tokens* are the form used to transmit credential information inside SOAP messages.) The responsibilities of these credentials classes can be divided into two areas:</span></span>  
   
--   为应用程序提供 API 以设置凭据信息。  
+-   <span data-ttu-id="a2f7e-108">为应用程序提供 API 以设置凭据信息。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-108">Provide the APIs for applications to set credentials information.</span></span>  
   
--   用作 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 实现的工厂。  
+-   <span data-ttu-id="a2f7e-109">用作 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 实现的工厂。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-109">Perform as a factory for <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementations.</span></span>  
   
- <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 的协定的抽象 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 类。  
+ <span data-ttu-id="a2f7e-110"><xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 的协定的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-110">Both the <xref:System.ServiceModel.Description.ClientCredentials> and the <xref:System.ServiceModel.Description.ServiceCredentials> classes inherit from the abstract <xref:System.ServiceModel.Security.SecurityCredentialsManager> class that defines the contract for returning the <xref:System.IdentityModel.Selectors.SecurityTokenManager>.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]凭据类及其如何适合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全体系结构的更多信息，请参见[Security Architecture](http://msdn.microsoft.com/zh-cn/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-111">凭据类和它们如何融入[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全体系结构，请参阅[安全体系结构](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-111"> the credentials classes and how they fit into the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security architecture, see [Security Architecture](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供的默认实现支持系统提供的凭据类型并可以创建能够处理这些凭据类型的安全令牌管理器。  
+ <span data-ttu-id="a2f7e-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供的默认实现支持系统提供的凭据类型并可以创建能够处理这些凭据类型的安全令牌管理器。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-112">The default implementations provided in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] support the system-provided credential types and create a security token manager that is capable of handling those credentials types.</span></span>  
   
-## 自定义原因  
- 自定义客户端或服务凭据类有多种原因。最重要的原因是需要更改与处理系统提供的凭据类型有关的默认 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全行为，特别是由于以下原因：  
+## <a name="reasons-to-customize"></a><span data-ttu-id="a2f7e-113">自定义原因</span><span class="sxs-lookup"><span data-stu-id="a2f7e-113">Reasons to Customize</span></span>  
+ <span data-ttu-id="a2f7e-114">自定义客户端或服务凭据类有多种原因。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-114">There are multiple reasons for customizing either client or service credential classes.</span></span> <span data-ttu-id="a2f7e-115">最重要的原因是需要更改与处理系统提供的凭据类型有关的默认 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全行为，特别是由于以下原因：</span><span class="sxs-lookup"><span data-stu-id="a2f7e-115">Foremost is the requirement to change the default [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security behavior with regard to handling system-provided credential types, especially for the following reasons:</span></span>  
   
--   无法使用其他扩展点进行的更改。  
+-   <span data-ttu-id="a2f7e-116">无法使用其他扩展点进行的更改。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-116">Changes that are not possible using other extensibility points.</span></span>  
   
--   添加新的凭据类型。  
+-   <span data-ttu-id="a2f7e-117">添加新的凭据类型。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-117">Adding new credential types.</span></span>  
   
--   添加新的自定义安全令牌类型。  
+-   <span data-ttu-id="a2f7e-118">添加新的自定义安全令牌类型。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-118">Adding new custom security token types.</span></span>  
   
- 本主题介绍如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用它们。  
+ <span data-ttu-id="a2f7e-119">本主题说明如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用它们。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-119">This topic describes how to implement custom client and service credentials and how to use them from application code.</span></span>  
   
-## 系列主题中的第一个主题  
- 创建自定义凭据类只是第一步，因为自定义凭据的原因是更改有关凭据配置、安全令牌序列化或身份验证的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 行为。本节中的其他主题说明如何创建自定义序列化程序和身份验证器。在这一方面，创建自定义凭据类是系列主题中的第一个主题。后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。基于本主题的其他主题包括：  
+## <a name="first-in-a-series"></a><span data-ttu-id="a2f7e-120">系列主题中的第一个主题</span><span class="sxs-lookup"><span data-stu-id="a2f7e-120">First in a Series</span></span>  
+ <span data-ttu-id="a2f7e-121">创建自定义凭据类只是第一步，因为自定义凭据的原因是更改有关凭据配置、安全令牌序列化或身份验证的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 行为。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-121">Creating a custom credentials class is only the first step, because the reason for customizing credentials is to change [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] behavior regarding credentials provisioning, security token serialization, or authentication.</span></span> <span data-ttu-id="a2f7e-122">本节中的其他主题说明如何创建自定义序列化程序和身份验证器。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-122">Other topics in this section describe how to create custom serializers and authenticators.</span></span> <span data-ttu-id="a2f7e-123">在这一方面，创建自定义凭据类是系列主题中的第一个主题。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-123">In this regard, creating custom credential class is the first topic in the series.</span></span> <span data-ttu-id="a2f7e-124">后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-124">Subsequent actions (creating custom serializers and authenticators) can be done only after creating custom credentials.</span></span> <span data-ttu-id="a2f7e-125">基于本主题的其他主题包括：</span><span class="sxs-lookup"><span data-stu-id="a2f7e-125">Additional topics that build upon this topic include:</span></span>  
   
--   [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [<span data-ttu-id="a2f7e-126">如何： 创建自定义安全令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="a2f7e-126">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [<span data-ttu-id="a2f7e-127">如何： 创建自定义安全令牌身份验证器</span><span class="sxs-lookup"><span data-stu-id="a2f7e-127">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+-   <span data-ttu-id="a2f7e-128">[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-128">[How to: Create a Custom Token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).</span></span>  
   
-## 过程  
+## <a name="procedures"></a><span data-ttu-id="a2f7e-129">过程</span><span class="sxs-lookup"><span data-stu-id="a2f7e-129">Procedures</span></span>  
   
-#### 实现自定义客户端凭据  
+#### <a name="to-implement-custom-client-credentials"></a><span data-ttu-id="a2f7e-130">实现自定义客户端凭据</span><span class="sxs-lookup"><span data-stu-id="a2f7e-130">To implement custom client credentials</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Description.ClientCredentials> 类派生的新类。  
+1.  <span data-ttu-id="a2f7e-131">定义一个从 <xref:System.ServiceModel.Description.ClientCredentials> 类派生的新类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-131">Define a new class derived from the <xref:System.ServiceModel.Description.ClientCredentials> class.</span></span>  
   
-2.  可选项。为新凭据类型添加新方法或新属性。如果未添加新凭据类型，请跳过此步骤。下面的示例添加 `CreditCardNumber` 属性。  
+2.  <span data-ttu-id="a2f7e-132">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-132">Optional.</span></span> <span data-ttu-id="a2f7e-133">为新凭据类型添加新方法或新属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-133">Add new methods or properties for new credential types.</span></span> <span data-ttu-id="a2f7e-134">如果未添加新凭据类型，请跳过此步骤。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-134">If you do not add new credential types, skip this step.</span></span> <span data-ttu-id="a2f7e-135">下面的示例添加 `CreditCardNumber` 属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-135">The following example adds a `CreditCardNumber` property.</span></span>  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构将自动调用此方法。此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。  
+3.  <span data-ttu-id="a2f7e-136">重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-136">Override the <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> method.</span></span> <span data-ttu-id="a2f7e-137">在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构将自动调用此方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-137">This method is automatically called by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure when the custom client credential is used.</span></span> <span data-ttu-id="a2f7e-138">此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-138">This method is responsible for creating and returning an instance of an implementation of the <xref:System.IdentityModel.Selectors.SecurityTokenManager> class.</span></span>  
   
     > [!IMPORTANT]
-    >  需要特别注意的是，将重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法以创建自定义安全令牌管理器。派生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的安全令牌管理器必须返回派生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 的自定义安全令牌提供程序，才能创建实际的安全令牌。如果不遵循此模式创建安全令牌，则当缓存 <xref:System.ServiceModel.ChannelFactory> 对象（这是 WCF 客户端代理的默认行为）时，您的应用程序可能无法正常工作，从而可能会导致面临特权提升攻击。自定义凭据对象将作为 <xref:System.ServiceModel.ChannelFactory> 的一部分进行缓存。然而，在每次调用时都会创建自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，只要在 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 中放置了令牌创建逻辑，它就可以缓解安全威胁。  
+    >  <span data-ttu-id="a2f7e-139">需要特别注意的是，将重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法以创建自定义安全令牌管理器。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-139">It is important to note that the <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> method is overridden to create a custom security token manager.</span></span> <span data-ttu-id="a2f7e-140">派生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的安全令牌管理器必须返回派生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 的自定义安全令牌提供程序，才能创建实际的安全令牌。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-140">The security token manager, derived from <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, must return a custom security token provider, derived from <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, to create the actual security token.</span></span> <span data-ttu-id="a2f7e-141">如果不遵循此模式创建安全令牌，则当缓存 <xref:System.ServiceModel.ChannelFactory> 对象（这是 WCF 客户端代理的默认行为）时，您的应用程序可能无法正常工作，从而可能会导致面临特权提升攻击。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-141">If you do not follow this pattern for creating security tokens, your application may function incorrectly when <xref:System.ServiceModel.ChannelFactory> objects are cached (which is the default behavior for WCF client proxies), potentially resulting in an elevation of privilege attack.</span></span> <span data-ttu-id="a2f7e-142">自定义凭据对象将作为 <xref:System.ServiceModel.ChannelFactory> 的一部分进行缓存。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-142">The custom credential object is cached as part of the <xref:System.ServiceModel.ChannelFactory>.</span></span> <span data-ttu-id="a2f7e-143">然而，在每次调用时都会创建自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，只要在 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 中放置了令牌创建逻辑，它就可以缓解安全威胁。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-143">However, the custom <xref:System.IdentityModel.Selectors.SecurityTokenManager> is created on every invocation, which mitigates the security threat as long as the token creation logic is placed in the <xref:System.IdentityModel.Selectors.SecurityTokenManager>.</span></span>  
   
-4.  重写 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。  
+4.  <span data-ttu-id="a2f7e-144">重写 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-144">Override the <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> method.</span></span>  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
   
-#### 实现自定义客户端安全令牌管理器  
+#### <a name="to-implement-a-custom-client-security-token-manager"></a><span data-ttu-id="a2f7e-145">实现自定义客户端安全令牌管理器</span><span class="sxs-lookup"><span data-stu-id="a2f7e-145">To implement a custom client security token manager</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 派生的新类。  
+1.  <span data-ttu-id="a2f7e-146">定义一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 派生的新类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-146">Define a new class derived from <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.</span></span>  
   
-2.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自定义安全令牌提供程序的更多信息，请参见 [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2.  <span data-ttu-id="a2f7e-147">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-147">Optional.</span></span> <span data-ttu-id="a2f7e-148">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-148">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenProvider> implementation must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-149">自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-149"> custom security token providers, see [How to: Create a Custom Security Token Provider](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).</span></span>  
   
-3.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义安全令牌的更多信息，请参见 [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+3.  <span data-ttu-id="a2f7e-150">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-150">Optional.</span></span> <span data-ttu-id="a2f7e-151">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-151">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> implementation must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-152">自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-152"> custom security token authenticators, see [How to: Create a Custom Security Token Authenticator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).</span></span>  
   
-4.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关自定义安全令牌和自定义安全令牌序列化程序的更多信息，请参见 [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4.  <span data-ttu-id="a2f7e-153">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-153">Optional.</span></span> <span data-ttu-id="a2f7e-154">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-154">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-155">自定义安全令牌和自定义安全令牌序列化程序，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-155"> custom security tokens and custom security token serializers, see [How to: Create a Custom Token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).</span></span>  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
-#### 在应用程序代码中使用自定义客户端凭据  
+#### <a name="to-use-a-custom-client-credentials-from-application-code"></a><span data-ttu-id="a2f7e-156">在应用程序代码中使用自定义客户端凭据</span><span class="sxs-lookup"><span data-stu-id="a2f7e-156">To use a custom client credentials from application code</span></span>  
   
-1.  创建生成的表示服务接口的客户端的实例，或创建指向要与之通信的服务的 <xref:System.ServiceModel.ChannelFactory> 的实例。  
+1.  <span data-ttu-id="a2f7e-157">创建生成的表示服务接口的客户端的实例，或创建指向要与之通信的服务的 <xref:System.ServiceModel.ChannelFactory> 的实例。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-157">Either create an instance of the generated client that represents the service interface, or create an instance of the <xref:System.ServiceModel.ChannelFactory> pointing to a service you want to communicate with.</span></span>  
   
-2.  从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中删除系统提供的客户端凭据行为，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
+2.  <span data-ttu-id="a2f7e-158">从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中删除系统提供的客户端凭据行为，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-158">Remove the system-provided client credentials behavior from the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> collection, which can be accessed through the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property.</span></span>  
   
-3.  创建自定义客户端凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
+3.  <span data-ttu-id="a2f7e-159">创建自定义客户端凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-159">Create a new instance of a custom client credentials class and add it to the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> collection, which can be accessed through the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property.</span></span>  
   
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- 前面的过程演示如何使用从应用程序代码的客户端凭据。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 凭据也可以使用应用程序配置文件进行设置。使用应用程序配置通常比硬编码更可取，因为它允许更改应用程序参数而无需更改源代码、重新编译和重新部署。  
+ <span data-ttu-id="a2f7e-160">前面的过程演示如何从应用程序代码中使用客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-160">The previous procedure shows how to use client credentials from application code.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="a2f7e-161"> 凭据也可以使用应用程序配置文件进行配置。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-161"> credentials can also be configured using the application configuration file.</span></span> <span data-ttu-id="a2f7e-162">使用应用程序配置通常比硬编码更可取，因为它允许更改应用程序参数而无需更改源代码、重新编译和重新部署。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-162">Using application configuration is often preferable to hard-coding because it enables modification of application parameters without having to modify the source, recompiling, and redeployment.</span></span>  
   
- 下一个过程说明如何为配置自定义凭据提供支持。  
+ <span data-ttu-id="a2f7e-163">下一个过程说明如何为配置自定义凭据提供支持。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-163">The next procedure describes how to provide support for configuration of custom credentials.</span></span>  
   
-#### 创建自定义客户端凭据的配置处理程序  
+#### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a><span data-ttu-id="a2f7e-164">创建自定义客户端凭据的配置处理程序</span><span class="sxs-lookup"><span data-stu-id="a2f7e-164">Creating a configuration handler for custom client credentials</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 派生的新类。  
+1.  <span data-ttu-id="a2f7e-165">定义一个从 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 派生的新类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-165">Define a new class derived from <xref:System.ServiceModel.Configuration.ClientCredentialsElement>.</span></span>  
   
-2.  可选项。为所有其他要通过应用程序配置公开的配置参数添加属性。下面的示例添加一个名为 `CreditCardNumber` 的属性。  
+2.  <span data-ttu-id="a2f7e-166">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-166">Optional.</span></span> <span data-ttu-id="a2f7e-167">为所有其他要通过应用程序配置公开的配置参数添加属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-167">Add properties for all additional configuration parameters that you want to expose through application configuration.</span></span> <span data-ttu-id="a2f7e-168">下面的示例添加一个名为 `CreditCardNumber` 的属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-168">The example below adds one property named `CreditCardNumber`.</span></span>  
   
-3.  重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 属性以返回使用配置元素创建的自定义客户端凭据类的类型。  
+3.  <span data-ttu-id="a2f7e-169">重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 属性以返回使用配置元素创建的自定义客户端凭据类的类型。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-169">Override the <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> property to return the type of the custom client credentials class created with the configuration element.</span></span>  
   
-4.  重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。此方法负责根据从配置文件加载的设置创建和返回自定义凭据类的一个实例。从此方法中调用基 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法以检索加载到客户端凭据实例中的系统提供的凭据设置。  
+4.  <span data-ttu-id="a2f7e-170">重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-170">Override the <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> method.</span></span> <span data-ttu-id="a2f7e-171">此方法负责根据从配置文件加载的设置创建和返回自定义凭据类的一个实例。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-171">The method is responsible for creating and returning an instance of the custom credential class based on the settings loaded from the configuration file.</span></span> <span data-ttu-id="a2f7e-172">从此方法中调用基 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法以检索加载到客户端凭据实例中的系统提供的凭据设置。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-172">Call the base <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> method from this method to retrieve the system-provided credentials settings loaded into your custom client credentials instance.</span></span>  
   
-5.  可选项。如果您在步骤 2 中添加了其他属性，则需要重写 <xref:System.Configuration.ConfigurationElement.Properties%2A> 属性，以便注册其他配置设置，使配置框架可以识别它们。组合使用您的属性与基类属性可以通过此自定义客户端凭据配置元素来配置系统提供的设置。  
+5.  <span data-ttu-id="a2f7e-173">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-173">Optional.</span></span> <span data-ttu-id="a2f7e-174">如果您在步骤 2 中添加了其他属性，则需要重写 <xref:System.Configuration.ConfigurationElement.Properties%2A> 属性，以便注册其他配置设置，使配置框架可以识别它们。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-174">If you added additional properties in step 2, you need to override the <xref:System.Configuration.ConfigurationElement.Properties%2A> property in order to register your additional configuration settings for the configuration framework to recognize them.</span></span> <span data-ttu-id="a2f7e-175">组合使用您的属性与基类属性可以通过此自定义客户端凭据配置元素来配置系统提供的设置。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-175">Combine your properties with the base class properties to allow the system-provided settings to be configured through this custom client credentials configuration element.</span></span>  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- 一旦您具有配置处理程序类，就可以将它集成到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置框架中。这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。  
+ <span data-ttu-id="a2f7e-176">一旦您具有配置处理程序类，就可以将它集成到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置框架中。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-176">Once you have the configuration handler class, it can be integrated into the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration framework.</span></span> <span data-ttu-id="a2f7e-177">这使自定义客户端凭据能够用于客户端终结点行为元素中，如下一个过程所示。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-177">That enables the custom client credentials to be used in the client endpoint behavior elements, as shown in the next procedure.</span></span>  
   
-#### 在应用程序配置中注册和使用自定义客户端凭据配置处理程序  
+#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a><span data-ttu-id="a2f7e-178">在应用程序配置中注册和使用自定义客户端凭据配置处理程序</span><span class="sxs-lookup"><span data-stu-id="a2f7e-178">To register and use a custom client credentials configuration handler in the application configuration</span></span>  
   
-1.  将一个 \<`extensions`\> 元素和一个 \<`behaviorExtensions`\> 元素添加到配置文件中。  
+1.  <span data-ttu-id="a2f7e-179">添加 <`extensions`> 元素和 <`behaviorExtensions`> 到配置文件的元素。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-179">Add an <`extensions`> element and a <`behaviorExtensions`> element to the configuration file.</span></span>  
   
-2.  将一个 \<`add`\> 元素添加到 \<`behaviorExtensions`\> 元素中，然后将 `name` 特性设置为适当的值。  
+2.  <span data-ttu-id="a2f7e-180">添加 <`add`> 元素添加 <`behaviorExtensions`> 元素，并设置`name`属性设为适当的值。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-180">Add an <`add`> element to the <`behaviorExtensions`> element and set the `name` attribute to an appropriate value.</span></span>  
   
-3.  将 `type` 特性设置为完全限定类型名称。此外还包括程序集名称和其他程序集特性。  
+3.  <span data-ttu-id="a2f7e-181">将 `type` 特性设置为完全限定类型名称。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-181">Set the `type` attribute to the fully-qualified type name.</span></span> <span data-ttu-id="a2f7e-182">此外还包括程序集名称和其他程序集属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-182">Also include the assembly name and other assembly attributes.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <extensions>  
         <behaviorExtensions>  
@@ -133,9 +139,9 @@ caps.handback.revision: 13
     <system.serviceModel>  
     ```  
   
-4.  注册配置处理程序之后，可以在同一配置文件中使用自定义凭据元素来代替系统提供的 \<`clientCredentials`\> 元素。可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。下面的示例使用 `creditCardNumber` 特性设置自定义属性的值。  
+4.  <span data-ttu-id="a2f7e-183">注册之后配置处理程序，自定义凭据元素可在相同的配置文件，而不是系统提供 <`clientCredentials`> 元素。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-183">After registering your configuration handler, the custom credentials element can be used inside the same configuration file instead of the system-provided <`clientCredentials`> element.</span></span> <span data-ttu-id="a2f7e-184">可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-184">You can use both the system-provided properties and any new properties that you have added to your configuration handler implementation.</span></span> <span data-ttu-id="a2f7e-185">下面的示例使用 `creditCardNumber` 属性设置自定义属性的值。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-185">The following example sets the value of a custom property using the `creditCardNumber` attribute.</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
       <endpointBehaviors>  
         <behavior name="myClientCredentialsBehavior">  
@@ -145,52 +151,52 @@ caps.handback.revision: 13
     </behaviors>  
     ```  
   
-#### 实现自定义服务凭据  
+#### <a name="to-implement-custom-service-credentials"></a><span data-ttu-id="a2f7e-186">实现自定义服务凭据</span><span class="sxs-lookup"><span data-stu-id="a2f7e-186">To implement custom service credentials</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Description.ServiceCredentials> 派生的新类。  
+1.  <span data-ttu-id="a2f7e-187">定义一个从 <xref:System.ServiceModel.Description.ServiceCredentials> 派生的新类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-187">Define a new class derived from <xref:System.ServiceModel.Description.ServiceCredentials>.</span></span>  
   
-2.  可选项。添加新属性以为将要添加的新凭据值提供 API。如果未添加新凭据值，请跳过此步骤。下面的示例添加 `AdditionalCertificate` 属性。  
+2.  <span data-ttu-id="a2f7e-188">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-188">Optional.</span></span> <span data-ttu-id="a2f7e-189">添加新属性以为将要添加的新凭据值提供 API。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-189">Add new properties to provide APIs for new credential values that are being added.</span></span> <span data-ttu-id="a2f7e-190">如果未添加新凭据值，请跳过此步骤。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-190">If you do not add new credential values, skip this step.</span></span> <span data-ttu-id="a2f7e-191">下面的示例添加 `AdditionalCertificate` 属性。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-191">The following example adds an `AdditionalCertificate` property.</span></span>  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构自动调用此方法。此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。  
+3.  <span data-ttu-id="a2f7e-192">重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-192">Override the <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> method.</span></span> <span data-ttu-id="a2f7e-193">在使用自定义客户端凭据时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构自动调用此方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-193">This method is automatically called by the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure when the custom client credential is used.</span></span> <span data-ttu-id="a2f7e-194">此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-194">The method is responsible for creating and returning an instance of an implementation of the <xref:System.IdentityModel.Selectors.SecurityTokenManager> class (described in the next procedure).</span></span>  
   
-4.  可选项。重写 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。只有在将新属性或内部字段添加到自定义客户端凭据实现时，才需要此操作。  
+4.  <span data-ttu-id="a2f7e-195">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-195">Optional.</span></span> <span data-ttu-id="a2f7e-196">重写 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-196">Override the <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> method.</span></span> <span data-ttu-id="a2f7e-197">只有在将新属性或内部字段添加到自定义客户端凭据实现时，才需要此操作。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-197">This is required only if adding new properties or internal fields to the custom client credentials implementation.</span></span>  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
   
-#### 实现自定义服务安全令牌管理器  
+#### <a name="to-implement-a-custom-service-security-token-manager"></a><span data-ttu-id="a2f7e-198">实现自定义服务安全令牌管理器</span><span class="sxs-lookup"><span data-stu-id="a2f7e-198">To implement a custom service security token manager</span></span>  
   
-1.  定义一个从 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类派生的新类。  
+1.  <span data-ttu-id="a2f7e-199">定义一个从 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类派生的新类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-199">Define a new class derived from the <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> class.</span></span>  
   
-2.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自定义安全令牌提供程序的更多信息，请参见 [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2.  <span data-ttu-id="a2f7e-200">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-200">Optional.</span></span> <span data-ttu-id="a2f7e-201">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-201">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenProvider> implementation must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-202">自定义安全令牌提供程序，请参阅[如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-202"> custom security token providers, see [How to: Create a Custom Security Token Provider](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).</span></span>  
   
-3.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义安全令牌的更多信息，请参见 [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) 主题。  
+3.  <span data-ttu-id="a2f7e-203">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-203">Optional.</span></span> <span data-ttu-id="a2f7e-204">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-204">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> implementation must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-205">自定义安全令牌的身份验证器，请参阅[如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主题。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-205"> custom security token authenticators, see [How to: Create a Custom Security Token Authenticator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) topic.</span></span>  
   
-4.  可选项。如果需要创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> 方法。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关自定义安全令牌和自定义安全令牌序列化程序的更多信息，请参见 [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4.  <span data-ttu-id="a2f7e-206">可选。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-206">Optional.</span></span> <span data-ttu-id="a2f7e-207">如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-207">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> method if a custom <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> must be created.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a2f7e-208">自定义安全令牌和自定义安全令牌序列化程序，请参阅[如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-208"> custom security tokens and custom security token serializers, see [How to: Create a Custom Token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).</span></span>  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
-#### 在应用程序代码中使用自定义服务凭据  
+#### <a name="to-use-custom-service-credentials-from-application-code"></a><span data-ttu-id="a2f7e-209">在应用程序代码中使用自定义服务凭据</span><span class="sxs-lookup"><span data-stu-id="a2f7e-209">To use custom service credentials from application code</span></span>  
   
-1.  创建 <xref:System.ServiceModel.ServiceHost> 的一个实例。  
+1.  <span data-ttu-id="a2f7e-210">创建 <xref:System.ServiceModel.ServiceHost> 的一个实例。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-210">Create an instance of the <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
-2.  从 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中删除系统提供的服务凭据行为。  
+2.  <span data-ttu-id="a2f7e-211">从 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中删除系统提供的服务凭据行为。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-211">Remove the system-provided service credentials behavior from the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection.</span></span>  
   
-3.  创建自定义服务凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中。  
+3.  <span data-ttu-id="a2f7e-212">创建自定义服务凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-212">Create a new instance of the custom service credentials class and add it to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection.</span></span>  
   
      [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
      [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]  
   
- 使用上面“`To create a configuration handler for custom client credentials`”和“`To register and use a custom client credentials configuration handler in the application configuration`”过程中描述的步骤添加对配置的支持。唯一的区别是使用 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 类代替 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 类作为配置处理程序的基类。这样，使用系统提供的 `<serviceCredentials>` 元素的任何地方都可以使用自定义服务凭据元素。  
+ <span data-ttu-id="a2f7e-213">使用上面“`To create a configuration handler for custom client credentials`”和“`To register and use a custom client credentials configuration handler in the application configuration`”过程中描述的步骤添加对配置的支持。唯一的区别是使用 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 类代替 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 类作为配置处理程序的基类。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-213">Add support for configuration using the steps described previously in the procedures "`To create a configuration handler for custom client credentials`" and "`To register and use a custom client credentials configuration handler in the application configuration`." The only difference is to use the <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> class instead of the <xref:System.ServiceModel.Configuration.ClientCredentialsElement> class as a base class for the configuration handler.</span></span> <span data-ttu-id="a2f7e-214">这样，使用系统提供的 `<serviceCredentials>` 元素的任何地方都可以使用自定义服务凭据元素。</span><span class="sxs-lookup"><span data-stu-id="a2f7e-214">The custom service credential element can then be used wherever the system-provided `<serviceCredentials>` element is used.</span></span>  
   
-## 请参阅  
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ServiceCredentials>   
- <xref:System.ServiceModel.Security.SecurityCredentialsManager>   
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>   
- [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)   
- [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)   
- [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+## <a name="see-also"></a><span data-ttu-id="a2f7e-215">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a2f7e-215">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ServiceCredentials>  
+ <xref:System.ServiceModel.Security.SecurityCredentialsManager>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
+ [<span data-ttu-id="a2f7e-216">如何： 创建自定义安全令牌提供程序</span><span class="sxs-lookup"><span data-stu-id="a2f7e-216">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [<span data-ttu-id="a2f7e-217">如何： 创建自定义安全令牌身份验证器</span><span class="sxs-lookup"><span data-stu-id="a2f7e-217">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [<span data-ttu-id="a2f7e-218">如何： 创建自定义令牌</span><span class="sxs-lookup"><span data-stu-id="a2f7e-218">How to: Create a Custom Token</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

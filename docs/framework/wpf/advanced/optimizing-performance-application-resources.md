@@ -1,61 +1,64 @@
 ---
-title: "优化性能：应用程序资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "应用程序资源, 性能"
-  - "画笔, 性能"
-  - "资源, 性能"
-  - "不进行复制而共享画笔"
-  - "共享资源"
-  - "静态资源"
+title: "优化性能：应用程序资源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application resources [WPF], performance
+- resources [WPF], performance
+- static resources [WPF]
+- sharing resources [WPF]
+- brushes [WPF], performance
+- sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ac462f3b49788fd909f9d9f4fc785db74704ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 优化性能：应用程序资源
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许您共享应用程序资源，以便您可以在类型相似的元素之间保持一致的外观或行为。  本主题针对该领域提供了一些建议，以帮助您改进您的应用程序的性能。  
+# <a name="optimizing-performance-application-resources"></a><span data-ttu-id="6ff26-102">优化性能：应用程序资源</span><span class="sxs-lookup"><span data-stu-id="6ff26-102">Optimizing Performance: Application Resources</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="6ff26-103">允许你共享应用程序资源，以便你可以跨类似类型的元素支持一个一致的外观或行为。</span><span class="sxs-lookup"><span data-stu-id="6ff26-103"> allows you to share application resources so that you can support a consistent look or behavior across similar-typed elements.</span></span> <span data-ttu-id="6ff26-104">本主题提供了一些建议在此区域中，可帮助你提高你的应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="6ff26-104">This topic provides a few recommendations in this area that can help you improve the performance of your applications.</span></span>  
   
- 有关资源的更多信息，请参见[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ <span data-ttu-id="6ff26-105">有关资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="6ff26-105">For more information on resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
-## 共享资源  
- 如果您的应用程序使用自定义控件，并在 <xref:System.Windows.ResourceDictionary>（或 XAML 资源节点）中定义资源，则建议您在 <xref:System.Windows.Application> 或 <xref:System.Windows.Window> 对象级别定义它们，或在自定义控件的默认主题中定义它们。  在自定义控件的 <xref:System.Windows.ResourceDictionary> 中定义资源会影响该控件每个实例的性能。  例如，如果在某个自定义控件以及该自定义控件的许多实例的资源定义中定义了对性能要求非常高的画笔操作，则应用程序的工作集将显著增加。  
+## <a name="sharing-resources"></a><span data-ttu-id="6ff26-106">共享资源</span><span class="sxs-lookup"><span data-stu-id="6ff26-106">Sharing resources</span></span>  
+ <span data-ttu-id="6ff26-107">如果你的应用程序使用自定义控件，并定义中的资源<xref:System.Windows.ResourceDictionary>（或 XAML 资源节点），建议，你可以定义的资源在<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或定义它们中的默认主题自定义控件。</span><span class="sxs-lookup"><span data-stu-id="6ff26-107">If your application uses custom controls and defines resources in a <xref:System.Windows.ResourceDictionary> (or XAML Resources node), it is recommended that you either define the resources at the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or define them in the default theme for the custom controls.</span></span> <span data-ttu-id="6ff26-108">在一个自定义控件中定义资源<xref:System.Windows.ResourceDictionary>施加了该控件的每个实例的性能造成影响。</span><span class="sxs-lookup"><span data-stu-id="6ff26-108">Defining resources in a custom control's <xref:System.Windows.ResourceDictionary> imposes a performance impact for every instance of that control.</span></span> <span data-ttu-id="6ff26-109">例如，如果你有性能要求较高画笔操作定义为资源定义的自定义控件的一部分和自定义控件的多个实例，则应用程序的工作集将显著增加。</span><span class="sxs-lookup"><span data-stu-id="6ff26-109">For example, if you have performance-intensive brush operations defined as part of the resource definition of a custom control and many instances of the custom control, the application's working set will increase significantly.</span></span>  
   
- 以下示例说明了这一点：  假设您在使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 开发一个纸牌游戏。  对于大多数纸牌游戏，需要 52 张牌，52 种不同的外观。  您决定实现一个纸牌自定义控件，并在该控件的资源中定义 52 支画笔（每支画笔代表一种纸牌外观）。  在您的主应用程序中，最初创建该纸牌自定义控件的 52 个实例。  该纸牌自定义控件的每个实例生成 52 个 <xref:System.Windows.Media.Brush> 对象实例，在您的应用程序中提供 52 \* 52 个 <xref:System.Windows.Media.Brush> 对象。  通过将画笔从纸牌自定义控件资源移出到 <xref:System.Windows.Application> 或 <xref:System.Windows.Window> 对象级别，或者在自定义控件的默认主题中定义它们，您减少了应用程序的工作集，因为您现在在纸牌控件的 52 个实例中共享 52 支画笔。  
+ <span data-ttu-id="6ff26-110">为了说明这一点，请考虑以下。</span><span class="sxs-lookup"><span data-stu-id="6ff26-110">To illustrate this point, consider the following.</span></span> <span data-ttu-id="6ff26-111">假设你正在开发卡游戏 using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6ff26-111">Let's say you are developing a card game using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="6ff26-112">对于大多数纸牌游戏，你需要 52 卡，52 不同的外观。</span><span class="sxs-lookup"><span data-stu-id="6ff26-112">For most card games, you need 52 cards with 52 different faces.</span></span> <span data-ttu-id="6ff26-113">你决定实现卡自定义控件和中的卡自定义控件的资源定义 （每个元素表示一种纸牌外观） 的 52 画笔。</span><span class="sxs-lookup"><span data-stu-id="6ff26-113">You decide to implement a card custom control and you define 52 brushes (each representing a card face) in the resources of your card custom control.</span></span> <span data-ttu-id="6ff26-114">在主应用程序，你最初创建此卡自定义控件的 52 的实例。</span><span class="sxs-lookup"><span data-stu-id="6ff26-114">In your main application, you initially create 52 instances of this card custom control.</span></span> <span data-ttu-id="6ff26-115">卡自定义控件的每个实例生成的 52 实例<xref:System.Windows.Media.Brush>对象，使您总共有的 52 * 52<xref:System.Windows.Media.Brush>你的应用程序中的对象。</span><span class="sxs-lookup"><span data-stu-id="6ff26-115">Each instance of the card custom control generates 52 instances of <xref:System.Windows.Media.Brush> objects, which gives you a total of 52 * 52 <xref:System.Windows.Media.Brush> objects in your application.</span></span> <span data-ttu-id="6ff26-116">通过移动到的卡自定义控件资源超出画笔<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或定义它们中的自定义控件的默认主题您降低应用程序的工作集，因为现在正在共享 52 画笔之间的卡控件的 52 实例。</span><span class="sxs-lookup"><span data-stu-id="6ff26-116">By moving the brushes out of the card custom control resources to the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or defining them in the default theme for the custom control, you reduce the working set of the application, since you are now sharing the 52 brushes among 52 instances of the card control.</span></span>  
   
-## 不进行复制而共享画笔  
- 如果有多个元素使用同一个 <xref:System.Windows.Media.Brush> 对象，请将画笔定义为资源并引用它，而不要在 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中以内联方式定义它。  该方法将创建一个实例并重复使用它，而在 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中以内联方式定义画笔会为每个元素创建一个新实例。  
+## <a name="sharing-a-brush-without-copying"></a><span data-ttu-id="6ff26-117">而不复制共享画笔</span><span class="sxs-lookup"><span data-stu-id="6ff26-117">Sharing a Brush without Copying</span></span>  
+ <span data-ttu-id="6ff26-118">如果必须使用相同的多个元素<xref:System.Windows.Media.Brush>对象、 为资源定义画笔和引用它，而不定义画笔内联在[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6ff26-118">If you have multiple elements using the same <xref:System.Windows.Media.Brush> object, define the brush as a resource and reference it, rather than defining the brush inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span> <span data-ttu-id="6ff26-119">此方法将创建一个实例，并重复使用它，而定义画笔内联在[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]创建的每个元素的新实例。</span><span class="sxs-lookup"><span data-stu-id="6ff26-119">This method will create one instance and reuse it, whereas defining brushes inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] creates a new instance for each element.</span></span>  
   
- 下面的标记示例说明了这一点：  
+ <span data-ttu-id="6ff26-120">下面的标记示例说明了这一点：</span><span class="sxs-lookup"><span data-stu-id="6ff26-120">The following markup sample illustrates this point:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## 尽可能使用静态资源  
- 静态资源通过查找对已定义资源的引用，为任何 XAML 属性特性提供值。  对该资源的查找行为类似于编译时查找。  
+## <a name="use-static-resources-when-possible"></a><span data-ttu-id="6ff26-121">使用静态资源尽可能</span><span class="sxs-lookup"><span data-stu-id="6ff26-121">Use Static Resources when Possible</span></span>  
+ <span data-ttu-id="6ff26-122">静态资源通过查找对已定义的资源的引用的任何 XAML 属性提供一个值。</span><span class="sxs-lookup"><span data-stu-id="6ff26-122">A static resource provides a value for any XAML property attribute by looking up a reference to an already defined resource.</span></span> <span data-ttu-id="6ff26-123">该资源的查找行为是类似于编译时查找。</span><span class="sxs-lookup"><span data-stu-id="6ff26-123">Lookup behavior for that resource is analogous to compile-time lookup.</span></span>  
   
- 另一方面，动态资源则在初始编译过程中创建一个临时表达式，因而会延迟到实际需要所请求的资源值来构造对象时，才会查找资源。  对该资源的查找行为类似于运行时查找，这种查找会影响性能。  因此，请在应用程序中尽量使用静态资源，只在必需的情况下才使用动态资源。  
+ <span data-ttu-id="6ff26-124">动态资源，另一方面，将创建一个临时在初始编译表达式，并因此的操作延迟的资源的查找请求的资源值是构造一个对象才能实际必需的。</span><span class="sxs-lookup"><span data-stu-id="6ff26-124">A dynamic resource, on the other hand, will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="6ff26-125">该资源的查找行为是类似于运行时查找，它会影响性能。</span><span class="sxs-lookup"><span data-stu-id="6ff26-125">Lookup behavior for that resource is analogous to run-time lookup, which imposes a performance impact.</span></span> <span data-ttu-id="6ff26-126">使用尽可能使用动态资源仅在必要时对应用程序中的静态资源。</span><span class="sxs-lookup"><span data-stu-id="6ff26-126">Use static resources whenever possible in your application, using dynamic resources only when necessary.</span></span>  
   
- 下面的标记示例演示了这两种类型的资源的使用情况：  
+ <span data-ttu-id="6ff26-127">下面的标记示例演示如何使用两种类型的资源：</span><span class="sxs-lookup"><span data-stu-id="6ff26-127">The following markup sample shows the use of both types of resources:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## 请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [布局和设计](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [二维图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="6ff26-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6ff26-128">See Also</span></span>  
+ [<span data-ttu-id="6ff26-129">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="6ff26-129">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="6ff26-130">规划应用程序性能</span><span class="sxs-lookup"><span data-stu-id="6ff26-130">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="6ff26-131">利用硬件</span><span class="sxs-lookup"><span data-stu-id="6ff26-131">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="6ff26-132">布局和示例</span><span class="sxs-lookup"><span data-stu-id="6ff26-132">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="6ff26-133">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="6ff26-133">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="6ff26-134">对象行为</span><span class="sxs-lookup"><span data-stu-id="6ff26-134">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="6ff26-135">“文本”</span><span class="sxs-lookup"><span data-stu-id="6ff26-135">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="6ff26-136">数据绑定</span><span class="sxs-lookup"><span data-stu-id="6ff26-136">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="6ff26-137">其他性能建议</span><span class="sxs-lookup"><span data-stu-id="6ff26-137">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

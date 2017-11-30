@@ -1,58 +1,64 @@
 ---
-title: "表概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文档, 表"
-  - "流内容元素 [WPF], 表"
-  - "表"
+title: "表概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flow content elements [WPF], Table
+- documents [WPF], tables
+- tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 表概述
-<xref:System.Windows.Documents.Table> 是一个块级元素，支持流文档内容的基于网格的表示。  此元素的灵活性极为有用，但该元素也由此变得更加复杂，从而难以理解和正确使用。  
+# <a name="table-overview"></a><span data-ttu-id="a8339-102">表概述</span><span class="sxs-lookup"><span data-stu-id="a8339-102">Table Overview</span></span>
+<span data-ttu-id="a8339-103"><xref:System.Windows.Documents.Table>是支持的流文档内容的基于网格的演示文稿的块级别元素。</span><span class="sxs-lookup"><span data-stu-id="a8339-103"><xref:System.Windows.Documents.Table> is a block level element that supports grid-based presentation of Flow document content.</span></span> <span data-ttu-id="a8339-104">此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。</span><span class="sxs-lookup"><span data-stu-id="a8339-104">The flexibility of this element makes it very useful, but also makes it more complicated to understand and use correctly.</span></span>  
   
- 本主题包括以下部分。  
+ <span data-ttu-id="a8339-105">本主题包含以下各节：</span><span class="sxs-lookup"><span data-stu-id="a8339-105">This topic contains the following sections.</span></span>  
   
--   [表基础](#table_basics)  
+-   [<span data-ttu-id="a8339-106">表基础</span><span class="sxs-lookup"><span data-stu-id="a8339-106">Table Basics</span></span>](#table_basics)  
   
--   [表与网格有什么区别？](#table_vs_Grid)  
+-   [<span data-ttu-id="a8339-107">表与网格有什么区别？</span><span class="sxs-lookup"><span data-stu-id="a8339-107">How is Table Different then Grid?</span></span>](#table_vs_Grid)  
   
--   [基本表结构](#basic_table_structure)  
+-   [<span data-ttu-id="a8339-108">基本表结构</span><span class="sxs-lookup"><span data-stu-id="a8339-108">Basic Table Structure</span></span>](#basic_table_structure)  
   
--   [表包容](#table_containment)  
+-   [<span data-ttu-id="a8339-109">表包含</span><span class="sxs-lookup"><span data-stu-id="a8339-109">Table Containment</span></span>](#table_containment)  
   
--   [行分组](#row_groupings)  
+-   [<span data-ttu-id="a8339-110">行分组</span><span class="sxs-lookup"><span data-stu-id="a8339-110">Row Groupings</span></span>](#row_groupings)  
   
--   [背景呈现优先级](#rednering_precedence)  
+-   [<span data-ttu-id="a8339-111">背景呈现优先级</span><span class="sxs-lookup"><span data-stu-id="a8339-111">Background Rendering Precedence</span></span>](#rendering_precedence)  
   
--   [跨行或列](#spanning_rows_or_columns)  
+-   [<span data-ttu-id="a8339-112">跨行或列 </span><span class="sxs-lookup"><span data-stu-id="a8339-112">Spanning Rows or Columns</span></span>](#spanning_rows_or_columns)  
   
--   [使用代码生成表](#building_a_table_with_code)  
+-   [<span data-ttu-id="a8339-113">使用代码生成表 </span><span class="sxs-lookup"><span data-stu-id="a8339-113">Building a Table With Code</span></span>](#building_a_table_with_code)  
   
--   [相关主题](#see_also)  
+-   <span data-ttu-id="a8339-114">[相关主题]</span><span class="sxs-lookup"><span data-stu-id="a8339-114">[Related Topics]</span></span> 
   
 <a name="table_basics"></a>   
-## 表基础  
+## <a name="table-basics"></a><span data-ttu-id="a8339-115">表基础</span><span class="sxs-lookup"><span data-stu-id="a8339-115">Table Basics</span></span>  
   
 <a name="table_vs_Grid"></a>   
-### 表与网格有什么区别？  
- <xref:System.Windows.Documents.Table> 和 <xref:System.Windows.Controls.Grid> 共享某些通用功能，但二者分别最适用于不同的方案。  <xref:System.Windows.Documents.Table> 旨在在流内容内使用（有关流内容的更多信息，请参见[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)）。  网格最适合在表单中（主要在流内容以外的任意位置）使用。  在 <xref:System.Windows.Documents.FlowDocument> 内，<xref:System.Windows.Documents.Table> 支持流内容行为（例如分页、列回流和内容选择），而 <xref:System.Windows.Controls.Grid> 则不支持这样的行为。  另一方面，<xref:System.Windows.Controls.Grid> 最适合在 <xref:System.Windows.Documents.FlowDocument> 之外使用，原因有多种，包括 <xref:System.Windows.Controls.Grid> 根据行和列索引添加元素，而 <xref:System.Windows.Documents.Table> 则不适合。  使用 <xref:System.Windows.Controls.Grid> 元素可以对子内容进行分层，从而允许多个元素共存于单个“单元格”内。<xref:System.Windows.Documents.Table> 不支持分层。  <xref:System.Windows.Controls.Grid> 的子元素可相对于其“单元格”边界区域进行绝对定位。  <xref:System.Windows.Documents.Table> 不支持此功能。  最后，相对于 <xref:System.Windows.Documents.Table>，<xref:System.Windows.Controls.Grid> 所需要的资源更少，因此，若要提高性能，请考虑使用 <xref:System.Windows.Controls.Grid>。  
+### <a name="how-is-table-different-then-grid"></a><span data-ttu-id="a8339-116">表与网格有什么区别？</span><span class="sxs-lookup"><span data-stu-id="a8339-116">How is Table Different then Grid?</span></span>  
+ <span data-ttu-id="a8339-117"><xref:System.Windows.Documents.Table>和<xref:System.Windows.Controls.Grid>共享一些常见的功能，但每个最适合于不同的方案。</span><span class="sxs-lookup"><span data-stu-id="a8339-117"><xref:System.Windows.Documents.Table> and <xref:System.Windows.Controls.Grid> share some common functionality, but each is best suited for different scenarios.</span></span> <span data-ttu-id="a8339-118">A<xref:System.Windows.Documents.Table>旨在用于在流内容中 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。</span><span class="sxs-lookup"><span data-stu-id="a8339-118">A <xref:System.Windows.Documents.Table> is designed for use within flow content (see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md) for more information on flow content).</span></span> <span data-ttu-id="a8339-119">网格最适合在表单内（主要在流内容以外的任意位置）使用。</span><span class="sxs-lookup"><span data-stu-id="a8339-119">Grids are best used inside of forms (basically anywhere outside of flow content).</span></span> <span data-ttu-id="a8339-120">在<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流分页、 列回流等内容时选择的内容行为<xref:System.Windows.Controls.Grid>却没有。</span><span class="sxs-lookup"><span data-stu-id="a8339-120">Within a <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supports flow content behaviors like pagination, column reflow, and content selection while a <xref:System.Windows.Controls.Grid> does not.</span></span> <span data-ttu-id="a8339-121">A<xref:System.Windows.Controls.Grid>另一方面最佳使用外部<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>添加基于一个行和列的索引，元素<xref:System.Windows.Documents.Table>却没有。</span><span class="sxs-lookup"><span data-stu-id="a8339-121">A <xref:System.Windows.Controls.Grid> on the other hand is best used outside of a <xref:System.Windows.Documents.FlowDocument> for many reasons including <xref:System.Windows.Controls.Grid> adds elements based on a row and column index, <xref:System.Windows.Documents.Table> does not.</span></span> <span data-ttu-id="a8339-122"><xref:System.Windows.Controls.Grid>元素允许的子内容，允许多个元素中的单个"单元格。"存在分层</span><span class="sxs-lookup"><span data-stu-id="a8339-122">The <xref:System.Windows.Controls.Grid> element allows layering of child content, allowing more than one element to exist within a single "cell."</span></span> <span data-ttu-id="a8339-123"><xref:System.Windows.Documents.Table>不支持分层。</span><span class="sxs-lookup"><span data-stu-id="a8339-123"><xref:System.Windows.Documents.Table> does not support layering.</span></span> <span data-ttu-id="a8339-124">子元素的<xref:System.Windows.Controls.Grid>进行绝对定位相对于其"单元格"边界的区域。</span><span class="sxs-lookup"><span data-stu-id="a8339-124">Child elements of a <xref:System.Windows.Controls.Grid> can be absolutely positioned relative to the area of their "cell" boundaries.</span></span> <span data-ttu-id="a8339-125"><xref:System.Windows.Documents.Table>不支持此功能。</span><span class="sxs-lookup"><span data-stu-id="a8339-125"><xref:System.Windows.Documents.Table> does not support this feature.</span></span> <span data-ttu-id="a8339-126">最后，<xref:System.Windows.Controls.Grid>需要较少的资源则<xref:System.Windows.Documents.Table>因此请考虑使用<xref:System.Windows.Controls.Grid>以提高性能。</span><span class="sxs-lookup"><span data-stu-id="a8339-126">Finally, a <xref:System.Windows.Controls.Grid> requires less resources then a <xref:System.Windows.Documents.Table> so consider using a <xref:System.Windows.Controls.Grid> to improve performance.</span></span>  
   
 <a name="basic_table_structure"></a>   
-### 基本表结构  
- <xref:System.Windows.Documents.Table> 提供了一个基于网格的表示形式，包括列（由 <xref:System.Windows.Documents.TableColumn> 元素表示）和行（由 <xref:System.Windows.Documents.TableRow> 元素表示）。  <xref:System.Windows.Documents.TableColumn> 元素不承载内容，只是定义列和列的特征。  <xref:System.Windows.Documents.TableRow> 元素必须在 <xref:System.Windows.Documents.TableRowGroup> 元素中承载，该元素对表行的分组进行了定义。  <xref:System.Windows.Documents.TableCell> 元素（包含将要由表来表示的实际内容）必须在 <xref:System.Windows.Documents.TableRow> 元素中承载。  <xref:System.Windows.Documents.TableCell> 只能包含从 <xref:System.Windows.Documents.Block> 派生的元素。  <xref:System.Windows.Documents.TableCell> 有效的子元素包括：  
+### <a name="basic-table-structure"></a><span data-ttu-id="a8339-127">基本表结构</span><span class="sxs-lookup"><span data-stu-id="a8339-127">Basic Table Structure</span></span>  
+ <span data-ttu-id="a8339-128"><xref:System.Windows.Documents.Table>提供基于网格的表示形式，包括列 (由表示<xref:System.Windows.Documents.TableColumn>元素) 和行 (由表示<xref:System.Windows.Documents.TableRow>元素)。</span><span class="sxs-lookup"><span data-stu-id="a8339-128"><xref:System.Windows.Documents.Table> provides a grid-based presentation consisting of columns (represented by <xref:System.Windows.Documents.TableColumn> elements) and rows (represented by <xref:System.Windows.Documents.TableRow> elements).</span></span> <span data-ttu-id="a8339-129"><xref:System.Windows.Documents.TableColumn>元素未承载内容;它们只需定义列和列的特性。</span><span class="sxs-lookup"><span data-stu-id="a8339-129"><xref:System.Windows.Documents.TableColumn> elements do not host content; they simply define columns and characteristics of columns.</span></span> <span data-ttu-id="a8339-130"><xref:System.Windows.Documents.TableRow>元素必须承载于<xref:System.Windows.Documents.TableRowGroup>元素，它定义的表的行分组。</span><span class="sxs-lookup"><span data-stu-id="a8339-130"><xref:System.Windows.Documents.TableRow> elements must be hosted in a <xref:System.Windows.Documents.TableRowGroup> element, which defines a grouping of rows for the table.</span></span> <span data-ttu-id="a8339-131"><xref:System.Windows.Documents.TableCell>元素，其中包含由表中显示的实际内容，必须承载于<xref:System.Windows.Documents.TableRow>元素。</span><span class="sxs-lookup"><span data-stu-id="a8339-131"><xref:System.Windows.Documents.TableCell> elements, which contain the actual content to be presented by the table, must be hosted in a <xref:System.Windows.Documents.TableRow> element.</span></span> <span data-ttu-id="a8339-132"><xref:System.Windows.Documents.TableCell>只能包含派生自的元素<xref:System.Windows.Documents.Block>。</span><span class="sxs-lookup"><span data-stu-id="a8339-132"><xref:System.Windows.Documents.TableCell> may only contain elements that derive from <xref:System.Windows.Documents.Block>.</span></span>  <span data-ttu-id="a8339-133">有效的子元素<xref:System.Windows.Documents.TableCell>包括。</span><span class="sxs-lookup"><span data-stu-id="a8339-133">Valid child elements for a <xref:System.Windows.Documents.TableCell> include.</span></span>  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -65,22 +71,22 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell> 元素可能不会直接承载文本内容。  有关流内容元素（例如 <xref:System.Windows.Documents.TableCell>）的包容规则的更多信息，请参见[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+>  <span data-ttu-id="a8339-134"><xref:System.Windows.Documents.TableCell>元素可能不会直接承载文本内容。</span><span class="sxs-lookup"><span data-stu-id="a8339-134"><xref:System.Windows.Documents.TableCell> elements may not directly host text content.</span></span> <span data-ttu-id="a8339-135">有关流的包含规则详细信息之类的内容元素<xref:System.Windows.Documents.TableCell>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="a8339-135">For more information about the containment rules for flow content elements like <xref:System.Windows.Documents.TableCell>, see [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table> 与 <xref:System.Windows.Controls.Grid> 元素类似，但是它具有更多功能，因此需要更大的资源开销。  
+>  <span data-ttu-id="a8339-136"><xref:System.Windows.Documents.Table>类似于<xref:System.Windows.Controls.Grid>元素但具有更多功能，因此，需要更大的资源开销。</span><span class="sxs-lookup"><span data-stu-id="a8339-136"><xref:System.Windows.Documents.Table> is similar to the <xref:System.Windows.Controls.Grid> element but has more capabilities and, therefore, requires greater resource overhead.</span></span>  
   
- 以下示例将使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 定义一个简单的 2 行 3 列的表。  
+ <span data-ttu-id="a8339-137">下面的示例定义的简单 2x3 表[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a8339-137">The following example defines a simple 2 x 3 table with [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span>  
   
- [!code-xml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
- 下图显示了此示例的呈现效果。  
+ <span data-ttu-id="a8339-138">下图显示了此示例的呈现效果。</span><span class="sxs-lookup"><span data-stu-id="a8339-138">The following figure shows how this example renders.</span></span>  
   
- ![屏幕快照：呈现一个基本表](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ <span data-ttu-id="a8339-139">![屏幕快照：呈现一个基本表](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")</span><span class="sxs-lookup"><span data-stu-id="a8339-139">![Screenshot: Render a basic table](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")</span></span>  
   
 <a name="table_containment"></a>   
-### 表包容  
- <xref:System.Windows.Documents.Table> 派生自 <xref:System.Windows.Documents.Block> 元素，并遵循 <xref:System.Windows.Documents.Block> 级别元素的常见规则。  <xref:System.Windows.Documents.Table> 元素可以包含在以下任意元素中：  
+### <a name="table-containment"></a><span data-ttu-id="a8339-140">表包容</span><span class="sxs-lookup"><span data-stu-id="a8339-140">Table Containment</span></span>  
+ <span data-ttu-id="a8339-141"><xref:System.Windows.Documents.Table>派生自<xref:System.Windows.Documents.Block>元素，并遵循常见规则<xref:System.Windows.Documents.Block>级别元素。</span><span class="sxs-lookup"><span data-stu-id="a8339-141"><xref:System.Windows.Documents.Table> derives from the <xref:System.Windows.Documents.Block> element, and adheres to the common rules for <xref:System.Windows.Documents.Block> level elements.</span></span>  <span data-ttu-id="a8339-142">A<xref:System.Windows.Documents.Table>元素可能包含任何以下元素：</span><span class="sxs-lookup"><span data-stu-id="a8339-142">A <xref:System.Windows.Documents.Table> element may be contained by any of the following elements:</span></span>  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   
@@ -97,20 +103,20 @@ caps.handback.revision: 15
 -   <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
-### 行分组  
- <xref:System.Windows.Documents.TableRowGroup> 元素提供了一种对表中的行进行任意分组的方式；表中的每行必须属于一个行分组。  行分组中的行通常具有相同的用途，并可作为一个组来设置样式。  行分组的一项常见应用是将特定用途的行（如标题行、标头和脚注行）与表中所含的主内容分隔开来。  
+### <a name="row-groupings"></a><span data-ttu-id="a8339-143">行分组</span><span class="sxs-lookup"><span data-stu-id="a8339-143">Row Groupings</span></span>  
+ <span data-ttu-id="a8339-144"><xref:System.Windows.Documents.TableRowGroup>元素提供对任意行进行分组表中的一种方法; 表中的每行必须属于的行分组。</span><span class="sxs-lookup"><span data-stu-id="a8339-144">The <xref:System.Windows.Documents.TableRowGroup> element provides a way to arbitrarily group rows within a table; every row in a table must belong to a row grouping.</span></span>  <span data-ttu-id="a8339-145">行分组中的行通常具有相同的用途，并可作为一个组来设置样式。</span><span class="sxs-lookup"><span data-stu-id="a8339-145">Rows within a row group often share a common intent, and may be styled as a group.</span></span>  <span data-ttu-id="a8339-146">行分组的一个常见使用方式是用于将特定用途的行（如标题行、标头和页脚行）与表中所含的主内容分隔开来。</span><span class="sxs-lookup"><span data-stu-id="a8339-146">A common use for row groupings is to separate special-purpose rows, such as a title, header, and footer rows, from the primary content contained by the table.</span></span>  
   
- 以下示例使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 定义具有样式标头行和脚注行的表。  
+ <span data-ttu-id="a8339-147">下面的示例使用[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]定义具有带样式的页眉和页脚行的表。</span><span class="sxs-lookup"><span data-stu-id="a8339-147">The following example uses [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] to define a table with styled header and footer rows.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
- 下图显示了此示例的呈现效果。  
+ <span data-ttu-id="a8339-148">下图显示了此示例的呈现效果。</span><span class="sxs-lookup"><span data-stu-id="a8339-148">The following figure shows how this example renders.</span></span>  
   
- ![屏幕快照：表行组](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table\_RowGroups")  
+ <span data-ttu-id="a8339-149">![屏幕快照：表行组](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")</span><span class="sxs-lookup"><span data-stu-id="a8339-149">![Screenshot: Table row groups](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")</span></span>  
   
-<a name="renderning_precedence"></a>   
-### 背景呈现优先级  
- 表元素以下列顺序呈现（[z 顺序](GTMT)从最低到最高）。  此顺序不能更改。  例如，这些元素不包含您可用于重写此已确定顺序的“z 顺序”属性。  
+<a name="rendering_precedence"></a>   
+### <a name="background-rendering-precedence"></a><span data-ttu-id="a8339-150">背景呈现优先级</span><span class="sxs-lookup"><span data-stu-id="a8339-150">Background Rendering Precedence</span></span>  
+ <span data-ttu-id="a8339-151">表元素以下列顺序呈现（按 Z 顺序从最低到最高排列）。</span><span class="sxs-lookup"><span data-stu-id="a8339-151">Table elements render in the following order (z-order from lowest to highest).</span></span> <span data-ttu-id="a8339-152">此顺序不能更改。</span><span class="sxs-lookup"><span data-stu-id="a8339-152">This order cannot be changed.</span></span> <span data-ttu-id="a8339-153">例如，对于这些元素，没有可用于替换此已有顺序的“Z 顺序”属性。</span><span class="sxs-lookup"><span data-stu-id="a8339-153">For example, there is no "Z-order" property for these elements that you can use to override this established order.</span></span>  
   
 1.  <xref:System.Windows.Documents.Table>  
   
@@ -122,65 +128,65 @@ caps.handback.revision: 15
   
 5.  <xref:System.Windows.Documents.TableCell>  
   
- 请参考以下示例，该示例对表内每个元素的背景色进行了定义。  
+ <span data-ttu-id="a8339-154">请参考以下示例，该示例对表内每个元素的背景色进行定义。</span><span class="sxs-lookup"><span data-stu-id="a8339-154">Consider the following example, which defines background colors for each of these elements within a table.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
- 下图显示了此示例的呈现方式（仅显示背景色）。  
+ <span data-ttu-id="a8339-155">下图显示了此示例的呈现方式（仅显示背景色）。</span><span class="sxs-lookup"><span data-stu-id="a8339-155">The following figure shows how this example renders (showing background colors only).</span></span>  
   
- ![屏幕快照：表 z 顺序](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table\_ZOrder")  
+ <span data-ttu-id="a8339-156">![屏幕快照：表 Z 顺序](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")</span><span class="sxs-lookup"><span data-stu-id="a8339-156">![Screenshot: Table z&#45;order](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")</span></span>  
   
 <a name="spanning_rows_or_columns"></a>   
-### 跨行或列  
- 使用 <xref:System.Windows.Documents.TableCell.RowSpan%2A> 或 <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> 特性，表单元格可分别配置为跨多行或多列。  
+### <a name="spanning-rows-or-columns"></a><span data-ttu-id="a8339-157">跨行或列</span><span class="sxs-lookup"><span data-stu-id="a8339-157">Spanning Rows or Columns</span></span>  
+ <span data-ttu-id="a8339-158">表格单元格可能配置为通过使用跨多个行或列<xref:System.Windows.Documents.TableCell.RowSpan%2A>或<xref:System.Windows.Documents.TableCell.ColumnSpan%2A>属性，分别。</span><span class="sxs-lookup"><span data-stu-id="a8339-158">Table cells may be configured to span multiple rows or columns by using the <xref:System.Windows.Documents.TableCell.RowSpan%2A> or <xref:System.Windows.Documents.TableCell.ColumnSpan%2A> attributes, respectively.</span></span>  
   
- 请参考以下示例，该示例中有一个跨三列的单元格。  
+ <span data-ttu-id="a8339-159">请参考以下示例，该示例中有一个跨三列的单元格。</span><span class="sxs-lookup"><span data-stu-id="a8339-159">Consider the following example, in which a cell spans three columns.</span></span>  
   
- [!code-xml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
- 下图显示了此示例的呈现效果。  
+ <span data-ttu-id="a8339-160">下图显示了此示例的呈现效果。</span><span class="sxs-lookup"><span data-stu-id="a8339-160">The following figure shows how this example renders.</span></span>  
   
- ![屏幕快照：跨全部三列的单元格](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table\_ColumnSpan")  
+ <span data-ttu-id="a8339-161">![屏幕快照：跨全部三列的单元格](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")</span><span class="sxs-lookup"><span data-stu-id="a8339-161">![Screenshot: Cell spanning all three columns](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")</span></span>  
   
 <a name="building_a_table_with_code"></a>   
-## 使用代码生成表  
- 以下示例演示如何以编程方式创建 <xref:System.Windows.Documents.Table> 和填充其内容。  该表的内容分配到五个行（由 <xref:System.Windows.Documents.Table.RowGroups%2A> 对象中包含的 <xref:System.Windows.Documents.TableRow> 对象表示）和六个列（由 <xref:System.Windows.Documents.TableColumn> 对象表示）中。  各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中数据的列，而脚注行则包含摘要信息。  请注意，“标题”、“标头”和“脚注”行并非表所固有的，它们只是具有不同特征的行。  表单元格包含实际内容，可以包括文本、图像或任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 元素。  
+## <a name="building-a-table-with-code"></a><span data-ttu-id="a8339-162">使用代码生成表</span><span class="sxs-lookup"><span data-stu-id="a8339-162">Building a Table With Code</span></span>  
+ <span data-ttu-id="a8339-163">下面的示例演示如何以编程方式创建<xref:System.Windows.Documents.Table>和填充其内容。</span><span class="sxs-lookup"><span data-stu-id="a8339-163">The following examples show how to programmatically create a <xref:System.Windows.Documents.Table> and populate it with content.</span></span> <span data-ttu-id="a8339-164">表的内容分配到五个行 (由表示<xref:System.Windows.Documents.TableRow>中所含对象<xref:System.Windows.Documents.Table.RowGroups%2A>对象) 和六个列 (由表示<xref:System.Windows.Documents.TableColumn>对象)。</span><span class="sxs-lookup"><span data-stu-id="a8339-164">The contents of the table are apportioned into five rows (represented by <xref:System.Windows.Documents.TableRow> objects contained in a <xref:System.Windows.Documents.Table.RowGroups%2A> object) and six columns (represented by <xref:System.Windows.Documents.TableColumn> objects).</span></span> <span data-ttu-id="a8339-165">各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中的数据列，而页脚行则包含摘要信息。</span><span class="sxs-lookup"><span data-stu-id="a8339-165">The rows are used for different presentation purposes, including a title row intended to title the entire table, a header row to describe the columns of data in the table, and a footer row with summary information.</span></span>  <span data-ttu-id="a8339-166">请注意，“标题”行、“标头”行和“页脚”行并非表格所固有的，它们只是具有不同特征的行。</span><span class="sxs-lookup"><span data-stu-id="a8339-166">Note that the notion of "title", "header", and "footer" rows are not inherent to the table; these are simply rows with different characteristics.</span></span> <span data-ttu-id="a8339-167">表格单元格包含实际的内容，它可以包含文本、 图像或几乎任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="a8339-167">Table cells contain the actual content, which can be comprised of text, images, or nearly any other [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] element.</span></span>  
   
- 首先，创建一个 <xref:System.Windows.Documents.FlowDocument> 以承载 <xref:System.Windows.Documents.Table>，并创建一个新的 <xref:System.Windows.Documents.Table>，同时将其添加到 <xref:System.Windows.Documents.FlowDocument> 内容中。  
+ <span data-ttu-id="a8339-168">首先，<xref:System.Windows.Documents.FlowDocument>创建到主机<xref:System.Windows.Documents.Table>，和一个新<xref:System.Windows.Documents.Table>被创建并添加到的内容<xref:System.Windows.Documents.FlowDocument>。</span><span class="sxs-lookup"><span data-stu-id="a8339-168">First, a <xref:System.Windows.Documents.FlowDocument> is created to host the <xref:System.Windows.Documents.Table>, and a new <xref:System.Windows.Documents.Table> is created and added to the contents of the <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- 然后，创建六个 <xref:System.Windows.Documents.TableColumn> 对象，并将它们添加到表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合中，同时应用某些格式设置。  
+ <span data-ttu-id="a8339-169">接下来，六个<xref:System.Windows.Documents.TableColumn>对象会创建并添加到表的<xref:System.Windows.Documents.Table.Columns%2A>集合中的，同时应用一些格式设置。</span><span class="sxs-lookup"><span data-stu-id="a8339-169">Next, six <xref:System.Windows.Documents.TableColumn> objects are created and added to the table's <xref:System.Windows.Documents.Table.Columns%2A> collection, with some formatting applied.</span></span>  
   
 > [!NOTE]
->  请注意，表的 <xref:System.Windows.Documents.Table.Columns%2A> 集合使用从零开始的标准索引。  
+>  <span data-ttu-id="a8339-170">请注意，表的<xref:System.Windows.Documents.Table.Columns%2A>集合使用标准的从零开始索引。</span><span class="sxs-lookup"><span data-stu-id="a8339-170">Note that the table's <xref:System.Windows.Documents.Table.Columns%2A> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
- 然后，创建一个标题行，并将其添加到表中，同时应用一些格式设置。  标题行包含一个单元格，该单元格跨表中的全部六列。  
+ <span data-ttu-id="a8339-171">接下来，创建一个标题行，并将其添加到表中，同时应用某些格式设置。</span><span class="sxs-lookup"><span data-stu-id="a8339-171">Next, a title row is created and added to the table with some formatting applied.</span></span>  <span data-ttu-id="a8339-172">标题行包含一个单元格，该单元格跨表中的全部六列。</span><span class="sxs-lookup"><span data-stu-id="a8339-172">The title row happens to contain a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
- 然后，创建一个标头行并将其添加到表中，同时创建标头行中的单元格并填充其内容。  
+ <span data-ttu-id="a8339-173">接下来，创建一个标头行并将其添加到表中，同时创建标头行中的单元格并填充其内容。</span><span class="sxs-lookup"><span data-stu-id="a8339-173">Next, a header row is created and added to the table, and the cells in the header row are created and populated with content.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
- 然后，创建一个数据行并将其添加到表中，同时创建此行中的单元格并填充其内容。  生成此行的过程与生成标头行的过程类似，只是应用的格式设置略有不同。  
+ <span data-ttu-id="a8339-174">接下来，创建一个数据行并将其添加到表中，同时创建此行中的单元格并填充其内容。</span><span class="sxs-lookup"><span data-stu-id="a8339-174">Next, a row for data is created and added to the table, and the cells in this row are created and populated with content.</span></span>  <span data-ttu-id="a8339-175">生成此行的过程与生成标头行的过程类似，只是应用的格式设置略有不同。</span><span class="sxs-lookup"><span data-stu-id="a8339-175">Building this row is similar to building the header row, with slightly different formatting applied.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
- 最后，创建、添加脚注行并设置其格式。  与标题行类似，该脚注包含一个跨表中全部六列的单元格。  
+ <span data-ttu-id="a8339-176">最后，创建、添加脚注行并设置其格式。</span><span class="sxs-lookup"><span data-stu-id="a8339-176">Finally, a footer row is created, added, and formatted.</span></span>  <span data-ttu-id="a8339-177">与标题行类似，脚注包含的单元格的跨度为表中的全部六列。</span><span class="sxs-lookup"><span data-stu-id="a8339-177">Like the title row, the footer contains a single cell that spans all six columns in the table.</span></span>  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## 请参阅  
- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [使用 XAML 定义表](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)   
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [使用流内容元素](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+## <a name="see-also"></a><span data-ttu-id="a8339-178">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8339-178">See Also</span></span>  
+ [<span data-ttu-id="a8339-179">流文档概述</span><span class="sxs-lookup"><span data-stu-id="a8339-179">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="a8339-180">使用 XAML 定义表</span><span class="sxs-lookup"><span data-stu-id="a8339-180">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="a8339-181">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="a8339-181">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="a8339-182">使用流内容元素</span><span class="sxs-lookup"><span data-stu-id="a8339-182">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)

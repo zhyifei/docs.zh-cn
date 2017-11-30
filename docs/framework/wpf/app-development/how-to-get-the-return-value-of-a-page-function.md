@@ -1,36 +1,42 @@
 ---
-title: "如何：获取页函数的返回值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "函数, 获取返回值"
-  - "获取, 返回页函数的值"
-  - "页函数, 获取返回值"
-  - "返回页函数的值"
+title: "如何：获取页函数的返回值"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- functions [WPF], getting return values of
+- page functions [WPF], getting return values of
+- return values of page functions [WPF]
+- getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 86c767de0b05563a91ee624c24f530c61d582f47
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：获取页函数的返回值
-本示例演示如何获取页函数返回的结果。  
+# <a name="how-to-get-the-return-value-of-a-page-function"></a><span data-ttu-id="24d4a-102">如何：获取页函数的返回值</span><span class="sxs-lookup"><span data-stu-id="24d4a-102">How to: Get the Return Value of a Page Function</span></span>
+<span data-ttu-id="24d4a-103">本示例显示如何获取页函数的返回值。</span><span class="sxs-lookup"><span data-stu-id="24d4a-103">This example shows how to get the result that is returned by a page function.</span></span>  
   
-## 示例  
- 若要获取从页函数返回的结果，需要处理您正在调用的页函数的 <xref:System.Windows.Navigation.PageFunction%601.Return>。  
+## <a name="example"></a><span data-ttu-id="24d4a-104">示例</span><span class="sxs-lookup"><span data-stu-id="24d4a-104">Example</span></span>  
+ <span data-ttu-id="24d4a-105">若要获得从网页函数返回的结果，你需要处理<xref:System.Windows.Navigation.PageFunction%601.Return>的要调用的页函数。</span><span class="sxs-lookup"><span data-stu-id="24d4a-105">To get the result that is returned from a page function, you need to handle <xref:System.Windows.Navigation.PageFunction%601.Return> of the page function you are calling.</span></span>  
   
- [!code-xml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
+ [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
   
  [!code-csharp[HOWTOPageFunctionSnippets#GetPageFunctionResultCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#getpagefunctionresultcodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#GetPageFunctionResultCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#getpagefunctionresultcodebehind)]  
   
-## 请参阅  
+## <a name="see-also"></a><span data-ttu-id="24d4a-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="24d4a-106">See Also</span></span>  
  <xref:System.Windows.Navigation.PageFunction%601>

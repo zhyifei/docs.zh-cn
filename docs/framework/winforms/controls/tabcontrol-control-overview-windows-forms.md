@@ -1,41 +1,41 @@
 ---
-title: "TabControl 控件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabControl"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "属性页, Windows 窗体"
-  - "选项卡页, 关于选项卡页"
-  - "TabControl 控件 [Windows 窗体], 关于 TabControl 控件"
-  - "Windows 窗体对话框, 选项卡"
+title: "TabControl 控件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TabControl
+helpviewer_keywords:
+- TabControl control [Windows Forms], about TabControl control
+- tab pages [Windows Forms], about tab pages
+- property pages [Windows Forms], Windows Forms
+- Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# TabControl 控件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，这些选项卡类似于笔记本中的分隔卡或档案柜文件夹集中的标签。  选项卡中可包含图片和其他控件。  您可以使用该选项卡控件来生成多页对话框，这种对话框在 Windows 操作系统中的许多地方（例如控制面板的“显示”属性中）都可以找到。  此外，<xref:System.Windows.Forms.TabControl> 还可以用来创建用于设置一组相关属性的属性页。  
+# <a name="tabcontrol-control-overview-windows-forms"></a><span data-ttu-id="f4626-102">TabControl 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="f4626-102">TabControl Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="f4626-103">Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。</span><span class="sxs-lookup"><span data-stu-id="f4626-103">The Windows Forms <xref:System.Windows.Forms.TabControl> displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="f4626-104">选项卡可以包含图片和其他控件。</span><span class="sxs-lookup"><span data-stu-id="f4626-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="f4626-105">你可以使用选项卡控件生成出现 Windows 操作系统，如控件面板显示属性中的许多位置多页对话框中的类型。</span><span class="sxs-lookup"><span data-stu-id="f4626-105">You can use the tab control to produce the kind of multiple-page dialog box that appears many places in the Windows operating system, such as the Control Panel Display Properties.</span></span> <span data-ttu-id="f4626-106">此外，<xref:System.Windows.Forms.TabControl>可用来创建用于设置一组相关属性的属性页。</span><span class="sxs-lookup"><span data-stu-id="f4626-106">Additionally, the <xref:System.Windows.Forms.TabControl> can be used to create property pages, which are used to set a group of related properties.</span></span>  
   
-## 使用 TabControl  
- <xref:System.Windows.Forms.TabControl> 的最重要的属性是 <xref:System.Windows.Forms.TabControl.TabPages%2A>，该属性包含单独的选项卡。  每一个单独的选项卡都是一个 <xref:System.Windows.Forms.TabPage> 对象。  单击选项卡时，将为该 <xref:System.Windows.Forms.TabPage> 对象引发 <xref:System.Windows.Forms.Control.Click> 事件。  
+## <a name="working-with-tabcontrol"></a><span data-ttu-id="f4626-107">使用 TabControl</span><span class="sxs-lookup"><span data-stu-id="f4626-107">Working with TabControl</span></span>  
+ <span data-ttu-id="f4626-108">最重要属性<xref:System.Windows.Forms.TabControl>是<xref:System.Windows.Forms.TabControl.TabPages%2A>，其中包含的各个选项卡。</span><span class="sxs-lookup"><span data-stu-id="f4626-108">The most important property of the <xref:System.Windows.Forms.TabControl> is <xref:System.Windows.Forms.TabControl.TabPages%2A>, which contains the individual tabs.</span></span> <span data-ttu-id="f4626-109">每个单独的选项卡<xref:System.Windows.Forms.TabPage>对象。</span><span class="sxs-lookup"><span data-stu-id="f4626-109">Each individual tab is a <xref:System.Windows.Forms.TabPage> object.</span></span> <span data-ttu-id="f4626-110">单击选项卡时，它会发出<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.TabPage>对象。</span><span class="sxs-lookup"><span data-stu-id="f4626-110">When a tab is clicked, it raises the <xref:System.Windows.Forms.Control.Click> event for that <xref:System.Windows.Forms.TabPage> object.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.TabControl>   
- [TabControl 控件](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [如何：更改 Windows 窗体 TabControl 的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)   
- [如何：将控件添加到选项卡页](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [如何：使用 Windows 窗体 TabControl 添加和移除选项卡](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)   
- [如何：禁用选项卡页](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [Windows 窗体中的对话框](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f4626-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f4626-111">See Also</span></span>  
+ <xref:System.Windows.Forms.TabControl>  
+ [<span data-ttu-id="f4626-112">TabControl 控件</span><span class="sxs-lookup"><span data-stu-id="f4626-112">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [<span data-ttu-id="f4626-113">如何：更改 Windows 窗体 TabControl 控件的外观</span><span class="sxs-lookup"><span data-stu-id="f4626-113">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [<span data-ttu-id="f4626-114">如何：向选项卡页添加控件</span><span class="sxs-lookup"><span data-stu-id="f4626-114">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="f4626-115">如何：使用 Windows 窗体 TabControl 控件添加和删除选项卡</span><span class="sxs-lookup"><span data-stu-id="f4626-115">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [<span data-ttu-id="f4626-116">如何：禁用选项卡页</span><span class="sxs-lookup"><span data-stu-id="f4626-116">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="f4626-117">Windows 窗体中的对话框</span><span class="sxs-lookup"><span data-stu-id="f4626-117">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)

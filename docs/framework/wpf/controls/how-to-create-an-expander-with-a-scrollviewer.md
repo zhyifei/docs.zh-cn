@@ -1,39 +1,42 @@
 ---
-title: "如何：使用 ScrollViewer 创建 Expander | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控件 [WPF], Expander"
-  - "控件 [WPF], ScrollViewer"
-  - "Expander 控件, 创建"
-  - "ScrollViewer 控件, 使用 Expander 控件"
+title: "如何：使用 ScrollViewer 创建 Expander"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Expander
+- ScrollViewer control [WPF], with Expander control
+- Expander control [WPF], creating
+- controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 817fb8d04e680335aff726db84cdfb9630b4cdf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 ScrollViewer 创建 Expander
-下面的示例演示如何创建包含图像和文本等复杂内容的 <xref:System.Windows.Controls.Expander> 控件。  此示例还在 <xref:System.Windows.Controls.ScrollViewer> 控件中包括 <xref:System.Windows.Controls.Expander> 的内容。  
+# <a name="how-to-create-an-expander-with-a-scrollviewer"></a><span data-ttu-id="d6c27-102">如何：使用 ScrollViewer 创建 Expander</span><span class="sxs-lookup"><span data-stu-id="d6c27-102">How to: Create an Expander with a ScrollViewer</span></span>
+<span data-ttu-id="d6c27-103">此示例演示如何创建<xref:System.Windows.Controls.Expander>包含复杂内容，如图像和文本的控件。</span><span class="sxs-lookup"><span data-stu-id="d6c27-103">This example shows how to create an <xref:System.Windows.Controls.Expander> control that contains complex content, such as an image and text.</span></span> <span data-ttu-id="d6c27-104">该示例还包含的内容<xref:System.Windows.Controls.Expander>中<xref:System.Windows.Controls.ScrollViewer>控件。</span><span class="sxs-lookup"><span data-stu-id="d6c27-104">The example also encloses the content of the <xref:System.Windows.Controls.Expander> in a <xref:System.Windows.Controls.ScrollViewer> control.</span></span>  
   
-## 示例  
- 下面的示例演示如何创建 <xref:System.Windows.Controls.Expander>。  此示例使用包含图像和文本的 <xref:System.Windows.Controls.Primitives.BulletDecorator> 控件，以便对 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 进行定义。  <xref:System.Windows.Controls.ScrollViewer> 控件提供滚动已展开内容的方法。  
+## <a name="example"></a><span data-ttu-id="d6c27-105">示例</span><span class="sxs-lookup"><span data-stu-id="d6c27-105">Example</span></span>  
+ <span data-ttu-id="d6c27-106">下面的示例演示如何创建<xref:System.Windows.Controls.Expander>。</span><span class="sxs-lookup"><span data-stu-id="d6c27-106">The following example shows how to create an <xref:System.Windows.Controls.Expander>.</span></span> <span data-ttu-id="d6c27-107">该示例使用<xref:System.Windows.Controls.Primitives.BulletDecorator>控件，它包含的图像和文本，为了定义<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>。</span><span class="sxs-lookup"><span data-stu-id="d6c27-107">The example uses a <xref:System.Windows.Controls.Primitives.BulletDecorator> control, which contains an image and text, in order to define the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>.</span></span> <span data-ttu-id="d6c27-108">A<xref:System.Windows.Controls.ScrollViewer>控件提供了滚动扩展的内容的方法。</span><span class="sxs-lookup"><span data-stu-id="d6c27-108">A <xref:System.Windows.Controls.ScrollViewer> control provides a method for scrolling the expanded content.</span></span>  
   
- 请注意，此示例设置的是 <xref:System.Windows.Controls.ScrollViewer>（而不是内容）的 <xref:System.Windows.FrameworkElement.Height%2A> 属性。  如果设置的是内容的 <xref:System.Windows.FrameworkElement.Height%2A>，则 <xref:System.Windows.Controls.ScrollViewer> 不允许用户滚动内容。  <xref:System.Windows.FrameworkElement.Width%2A> 属性是针对 <xref:System.Windows.Controls.Expander> 控件设置的，并且此设置适用于 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 和已展开的内容。  
+ <span data-ttu-id="d6c27-109">请注意，该示例将<xref:System.Windows.FrameworkElement.Height%2A>属性<xref:System.Windows.Controls.ScrollViewer>而不是对内容。</span><span class="sxs-lookup"><span data-stu-id="d6c27-109">Note that the example sets the <xref:System.Windows.FrameworkElement.Height%2A> property on the <xref:System.Windows.Controls.ScrollViewer> instead of on the content.</span></span> <span data-ttu-id="d6c27-110">如果<xref:System.Windows.FrameworkElement.Height%2A>于内容而设置<xref:System.Windows.Controls.ScrollViewer>不允许用户滚动内容。</span><span class="sxs-lookup"><span data-stu-id="d6c27-110">If the <xref:System.Windows.FrameworkElement.Height%2A> is set on the content, the <xref:System.Windows.Controls.ScrollViewer> does not allow the user to scroll the content.</span></span> <span data-ttu-id="d6c27-111"><xref:System.Windows.FrameworkElement.Width%2A>上设置属性<xref:System.Windows.Controls.Expander>控件和此设置也适用于<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和扩展的内容。</span><span class="sxs-lookup"><span data-stu-id="d6c27-111">The <xref:System.Windows.FrameworkElement.Width%2A> property is set on the <xref:System.Windows.Controls.Expander> control and this setting applies to the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> and the expanded content.</span></span>  
   
- [!code-xml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
+ [!code-xaml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
   
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
-## 请参阅  
- <xref:System.Windows.Controls.Expander>   
- [Expander 概述](../../../../docs/framework/wpf/controls/expander-overview.md)   
- [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="d6c27-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d6c27-112">See Also</span></span>  
+ <xref:System.Windows.Controls.Expander>  
+ [<span data-ttu-id="d6c27-113">扩展器概述</span><span class="sxs-lookup"><span data-stu-id="d6c27-113">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [<span data-ttu-id="d6c27-114">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="d6c27-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

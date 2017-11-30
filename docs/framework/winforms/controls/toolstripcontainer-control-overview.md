@@ -1,46 +1,46 @@
 ---
-title: "ToolStripContainer 控件概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "工具栏 [Windows 窗体], 内置漂浮"
-  - "ToolStripContainer 控件 [Windows 窗体], 关于 ToolStripContainer 控件"
+title: "ToolStripContainer 控件概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripContainer
+helpviewer_keywords:
+- toolbars [Windows Forms], built-in rafting
+- ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4abc783961177a55cdb81cefd21ed2d7aefb0620
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# ToolStripContainer 控件概述
-在 <xref:System.Windows.Forms.ToolStripContainer> 的左侧、右侧、顶部和底部都有用来放置和漂浮 <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控件的面板。  如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放在 <xref:System.Windows.Forms.ToolStripContainer> 的左边或右边，这些控件会垂直重叠；  如果将这些控件放在 <xref:System.Windows.Forms.ToolStripContainer> 的顶部或底部，则会水平重叠。  使用 <xref:System.Windows.Forms.ToolStripContainer> 的中心 <xref:System.Windows.Forms.ToolStripContentPanel> 可以在窗体上放置传统控件。  
+# <a name="toolstripcontainer-control-overview"></a><span data-ttu-id="e3538-102">ToolStripContainer 控件概述</span><span class="sxs-lookup"><span data-stu-id="e3538-102">ToolStripContainer Control Overview</span></span>
+<span data-ttu-id="e3538-103">A<xref:System.Windows.Forms.ToolStripContainer>面板在其左侧、 右侧、 顶部和底部均带有用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。</span><span class="sxs-lookup"><span data-stu-id="e3538-103">A <xref:System.Windows.Forms.ToolStripContainer> has panels on its left, right, top, and bottom sides for positioning and rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, and <xref:System.Windows.Forms.StatusStrip> controls.</span></span> <span data-ttu-id="e3538-104">如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放置在 <xref:System.Windows.Forms.ToolStripContainer> 左侧或右侧，它们会垂直堆叠。</span><span class="sxs-lookup"><span data-stu-id="e3538-104">Multiple <xref:System.Windows.Forms.ToolStrip> controls stack vertically if you put them in the left or right <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="e3538-105">如果将其放置在 <xref:System.Windows.Forms.ToolStripContainer> 顶部或底部，则水平堆叠。</span><span class="sxs-lookup"><span data-stu-id="e3538-105">They stack horizontally if you put them in the top or bottom <xref:System.Windows.Forms.ToolStripContainer>.</span></span> <span data-ttu-id="e3538-106">可使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel> 将传统控件放置在窗体上。</span><span class="sxs-lookup"><span data-stu-id="e3538-106">You can use the central <xref:System.Windows.Forms.ToolStripContentPanel> of the <xref:System.Windows.Forms.ToolStripContainer> to position traditional controls on the form.</span></span>  
   
- 任意或所有 <xref:System.Windows.Forms.ToolStripContainer> 控件均可在设计时直接选择；这些控件中的任何一个或所有这些控件均可删除。  <xref:System.Windows.Forms.ToolStripContainer> 的每个面板都是可扩展和可折叠的，并且可以用它包含的控件来调整大小。  
+ <span data-ttu-id="e3538-107">任何或所有 <xref:System.Windows.Forms.ToolStripContainer> 控件都可在设计时选择且可删除。</span><span class="sxs-lookup"><span data-stu-id="e3538-107">Any or all <xref:System.Windows.Forms.ToolStripContainer> controls are directly selectable at design time and can be deleted.</span></span> <span data-ttu-id="e3538-108">每个面板<xref:System.Windows.Forms.ToolStripContainer>是可展开和折叠的并调整其大小与它所包含的控件。</span><span class="sxs-lookup"><span data-stu-id="e3538-108">Each panel of a <xref:System.Windows.Forms.ToolStripContainer> is expandable and collapsible, and resizes with the controls that it contains.</span></span>  
   
-### 重要的 ToolStripContainer 成员  
+### <a name="important-toolstripcontainer-members"></a><span data-ttu-id="e3538-109">重要 ToolStripContainer 成员</span><span class="sxs-lookup"><span data-stu-id="e3538-109">Important ToolStripContainer Members</span></span>  
   
-|名称|说明|  
-|--------|--------|  
-|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|获取 <xref:System.Windows.Forms.ToolStripContainer> 的底部面板。|  
-|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|获取或设置一个值，该值指示 <xref:System.Windows.Forms.ToolStripContainer> 的底部面板是否可见。|  
-|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel%2A>|获取 <xref:System.Windows.Forms.ToolStripContainer> 的左面板。|  
-|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A>|获取或设置一个值，该值指示 <xref:System.Windows.Forms.ToolStripContainer> 的左面板是否可见。|  
-|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanel%2A>|获取 <xref:System.Windows.Forms.ToolStripContainer> 的右面板。|  
-|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A>|获取或设置一个值，该值指示 <xref:System.Windows.Forms.ToolStripContainer> 的右面板是否可见。|  
-|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|获取 <xref:System.Windows.Forms.ToolStripContainer> 的顶部面板。|  
-|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|获取或设置一个值，该值指示 <xref:System.Windows.Forms.ToolStripContainer> 的顶部面板是否可见。|  
+|<span data-ttu-id="e3538-110">名称</span><span class="sxs-lookup"><span data-stu-id="e3538-110">Name</span></span>|<span data-ttu-id="e3538-111">描述</span><span class="sxs-lookup"><span data-stu-id="e3538-111">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|<span data-ttu-id="e3538-112">获取的底部面板<xref:System.Windows.Forms.ToolStripContainer>。</span><span class="sxs-lookup"><span data-stu-id="e3538-112">Gets the bottom panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|<span data-ttu-id="e3538-113">获取或设置一个值，该值指示是否的底部面板<xref:System.Windows.Forms.ToolStripContainer>可见。</span><span class="sxs-lookup"><span data-stu-id="e3538-113">Gets or sets a value indicating whether the bottom panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanel%2A>|<span data-ttu-id="e3538-114">获取的左的面板<xref:System.Windows.Forms.ToolStripContainer>。</span><span class="sxs-lookup"><span data-stu-id="e3538-114">Gets the left panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.LeftToolStripPanelVisible%2A>|<span data-ttu-id="e3538-115">获取或设置一个值，该值指示是否的左的面板<xref:System.Windows.Forms.ToolStripContainer>可见。</span><span class="sxs-lookup"><span data-stu-id="e3538-115">Gets or sets a value indicating whether the left panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanel%2A>|<span data-ttu-id="e3538-116">获取的右面板<xref:System.Windows.Forms.ToolStripContainer>。</span><span class="sxs-lookup"><span data-stu-id="e3538-116">Gets the right panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.RightToolStripPanelVisible%2A>|<span data-ttu-id="e3538-117">获取或设置一个值，该值指示是否的右面板<xref:System.Windows.Forms.ToolStripContainer>可见。</span><span class="sxs-lookup"><span data-stu-id="e3538-117">Gets or sets a value indicating whether the right panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|<span data-ttu-id="e3538-118">获取的顶部面板<xref:System.Windows.Forms.ToolStripContainer>。</span><span class="sxs-lookup"><span data-stu-id="e3538-118">Gets the top panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|<span data-ttu-id="e3538-119">获取或设置一个值，该值指示是否的顶部面板<xref:System.Windows.Forms.ToolStripContainer>可见。</span><span class="sxs-lookup"><span data-stu-id="e3538-119">Gets or sets a value indicating whether the top panel of the <xref:System.Windows.Forms.ToolStripContainer> is visible.</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolStripContainer>   
+## <a name="see-also"></a><span data-ttu-id="e3538-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e3538-120">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>

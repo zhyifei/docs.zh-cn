@@ -1,61 +1,60 @@
 ---
-title: "版式和代码约定 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "最佳做法, 编码约定"
-  - "编码约定, Visual Basic"
-  - "约定, 文档"
-  - "约定, Visual Basic代码"
-  - "文档约定"
-  - "版式规则"
-  - "Visual Basic 代码, 约定"
+title: "版式和代码约定 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- coding conventions [Visual Basic], Visual Basic
+- best practices [Visual Basic], coding conventions
+- conventions [Visual Basic], Visual Basic coding
+- typographic conventions [Visual Basic]
+- document conventions [Visual Basic]
+- conventions [Visual Basic], documentation
+- Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 版式和代码约定 (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic 文档使用下面的版式和代码约定。  
+# <a name="typographic-and-code-conventions-visual-basic"></a><span data-ttu-id="4fd78-102">版式和代码约定 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4fd78-102">Typographic and Code Conventions (Visual Basic)</span></span>
+<span data-ttu-id="4fd78-103">Visual Basic 文档将使用以下版式和代码约定。</span><span class="sxs-lookup"><span data-stu-id="4fd78-103">Visual Basic documentation uses the following typographic and code conventions.</span></span>  
   
-## 版式约定  
+## <a name="typographic-conventions"></a><span data-ttu-id="4fd78-104">排字约定</span><span class="sxs-lookup"><span data-stu-id="4fd78-104">Typographic Conventions</span></span>  
   
-|示例|说明|  
-|--------|--------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|语言特定的关键字和运行时成员的首字母大写，其格式如本示例所示。|  
-|SmallProject、ButtonCollection|指示您键入的单词和短语格式如本示例所示。|  
-|[Module 语句](../../visual-basic/language-reference/statements/module-statement.md)|您可以单击以进入另一个帮助页的链接格式如本示例所示。|  
-|*object*、*variableName*、`argumentList`|您提供的信息的占位符格式如本示例所示。|  
-|\[ Shadows \]、\[ *expressionList* \]|在语法中，可选项括在中括号中。|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|在语法中，必须在两项或多项中选择一个时，这些项括在大括号中，由竖线隔开。<br /><br /> 必须选择一项且只能选择一项。|  
-|\[ `Protected` &#124; `Friend` \]|在语法中，可以在两项或多项中选择一个时，这些项括在方括号中，由竖线隔开。<br /><br /> 您可以选择这些项的任意组合，也可以一项都不选。|  
-|\[{ `ByVal` &#124; `ByRef` }\]|在语法中，您至多可以选择一项，但也可以完全省略这些项时，这些项包含在由大括号括起来的方括号中，由竖线隔开。|  
-|*成员名称* 1、*成员名称*2、*成员名称*3|同一占位符的多个实例由下标区分，如本示例所示。|  
-|*成员名称1*<br /><br /> ...<br /><br /> *成员名称N*|在语法中，省略号 \(...\) 用于表示省略号前面的任意多个同类项。<br /><br /> 用在代码中，省略号表示为清楚起见省略了部分代码。|  
-|Esc、Enter|键盘上的按键名称和组合按键以全大写字母表示。|  
-|Alt\+F1|如果两个按键名称间出现加号 \(\+\)，则表示在按住一个键的同时必须按下另一个键。  例如，Alt\+F1 表示按住 Alt 键再按 F1 键。|  
+|<span data-ttu-id="4fd78-105">示例</span><span class="sxs-lookup"><span data-stu-id="4fd78-105">Example</span></span>|<span data-ttu-id="4fd78-106">描述</span><span class="sxs-lookup"><span data-stu-id="4fd78-106">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="4fd78-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span><span class="sxs-lookup"><span data-stu-id="4fd78-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span></span>|<span data-ttu-id="4fd78-108">特定于语言的关键字和运行时成员的首字母大写，其格式如在此示例中所示。</span><span class="sxs-lookup"><span data-stu-id="4fd78-108">Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="4fd78-109">**SmallProject**， **ButtonCollection**</span><span class="sxs-lookup"><span data-stu-id="4fd78-109">**SmallProject**, **ButtonCollection**</span></span>|<span data-ttu-id="4fd78-110">此示例中所示，单词和短语指示你键入的格式设置。</span><span class="sxs-lookup"><span data-stu-id="4fd78-110">Words and phrases you are instructed to type are formatted as shown in this example.</span></span>|  
+|[<span data-ttu-id="4fd78-111">Module 语句</span><span class="sxs-lookup"><span data-stu-id="4fd78-111">Module Statement</span></span>](../../visual-basic/language-reference/statements/module-statement.md)|<span data-ttu-id="4fd78-112">此示例中所示，你可以单击以转到另一个帮助页的链接进行格式化。</span><span class="sxs-lookup"><span data-stu-id="4fd78-112">Links you can click to go to another Help page are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="4fd78-113">*对象*， *variableName*，`argumentList`</span><span class="sxs-lookup"><span data-stu-id="4fd78-113">*object*, *variableName*, `argumentList`</span></span>|<span data-ttu-id="4fd78-114">此示例中所示的格式为你提供的信息的占位符。</span><span class="sxs-lookup"><span data-stu-id="4fd78-114">Placeholders for information that you supply are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="4fd78-115">[阴影] [ *expressionList* ]</span><span class="sxs-lookup"><span data-stu-id="4fd78-115">[ Shadows ], [ *expressionList* ]</span></span>|<span data-ttu-id="4fd78-116">在语法中，可选项括在方括号中。</span><span class="sxs-lookup"><span data-stu-id="4fd78-116">In syntax, optional items are enclosed in brackets.</span></span>|  
+|<span data-ttu-id="4fd78-117">{ `Public` &#124; `Friend` &#124; `Private` }</span><span class="sxs-lookup"><span data-stu-id="4fd78-117">{ `Public` &#124; `Friend` &#124; `Private` }</span></span>|<span data-ttu-id="4fd78-118">在语法中，你必须在两个或多个项之间进行选择时，物料被括在大括号中并由竖线分隔。</span><span class="sxs-lookup"><span data-stu-id="4fd78-118">In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="4fd78-119">您必须选择一个，且只有一个项。</span><span class="sxs-lookup"><span data-stu-id="4fd78-119">You must select one, and only one, of the items.</span></span>|  
+|<span data-ttu-id="4fd78-120">[ `Protected` &#124; `Friend` ]</span><span class="sxs-lookup"><span data-stu-id="4fd78-120">[ `Protected` &#124; `Friend` ]</span></span>|<span data-ttu-id="4fd78-121">在语法中，如果你具有两个或多个项之间进行选择的选项是括在方括号项并且由竖线分隔。</span><span class="sxs-lookup"><span data-stu-id="4fd78-121">In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="4fd78-122">你可以选择的项的任意组合或任何项。</span><span class="sxs-lookup"><span data-stu-id="4fd78-122">You can select any combination of the items, or no item.</span></span>|  
+|<span data-ttu-id="4fd78-123">[{ `ByVal` &#124; `ByRef` }]</span><span class="sxs-lookup"><span data-stu-id="4fd78-123">[{ `ByVal` &#124; `ByRef` }]</span></span>|<span data-ttu-id="4fd78-124">在语法中，你可以选择不超过一项，但也可以完全省略这些项时这些项包含在大括号括起来并由竖线分隔的方括号中。</span><span class="sxs-lookup"><span data-stu-id="4fd78-124">In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.</span></span>|  
+|<span data-ttu-id="4fd78-125">*memberName*1， *memberName*2， *memberName*3</span><span class="sxs-lookup"><span data-stu-id="4fd78-125">*memberName*1, *memberName*2, *memberName*3</span></span>|<span data-ttu-id="4fd78-126">相同的占位符的多个实例的区别在于下标，如示例所示。</span><span class="sxs-lookup"><span data-stu-id="4fd78-126">Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.</span></span>|  
+|<span data-ttu-id="4fd78-127">*m e 1*</span><span class="sxs-lookup"><span data-stu-id="4fd78-127">*memberName1*</span></span><br /><br /> <span data-ttu-id="4fd78-128">...</span><span class="sxs-lookup"><span data-stu-id="4fd78-128">...</span></span><br /><br /> <span data-ttu-id="4fd78-129">*memberNameN*</span><span class="sxs-lookup"><span data-stu-id="4fd78-129">*memberNameN*</span></span>|<span data-ttu-id="4fd78-130">在语法中，省略号 （...） 用于指示立即前面省略号类型的项目数量不确定。</span><span class="sxs-lookup"><span data-stu-id="4fd78-130">In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.</span></span><br /><br /> <span data-ttu-id="4fd78-131">在代码中，省略号表示为清楚起见省略的代码。</span><span class="sxs-lookup"><span data-stu-id="4fd78-131">In code, ellipses signify code omitted for the sake of clarity.</span></span>|  
+|<span data-ttu-id="4fd78-132">ESC、 输入</span><span class="sxs-lookup"><span data-stu-id="4fd78-132">ESC, ENTER</span></span>|<span data-ttu-id="4fd78-133">密钥名称和键盘上的键顺序出现在全大写字母。</span><span class="sxs-lookup"><span data-stu-id="4fd78-133">Key names and key sequences on the keyboard appear in all uppercase letters.</span></span>|  
+|<span data-ttu-id="4fd78-134">ALT + F1</span><span class="sxs-lookup"><span data-stu-id="4fd78-134">ALT+F1</span></span>|<span data-ttu-id="4fd78-135">密钥名称之间出现加号 （+），你必须按另时按住一个键。</span><span class="sxs-lookup"><span data-stu-id="4fd78-135">When plus signs (+) appear between key names, you must hold down one key while pressing the other.</span></span> <span data-ttu-id="4fd78-136">例如，ALT + F1 意味着在按 F1 键同时按住 ALT 键。</span><span class="sxs-lookup"><span data-stu-id="4fd78-136">For example, ALT+F1 means hold down the ALT key while pressing the F1 key.</span></span>|  
   
-## 代码约定  
+## <a name="code-conventions"></a><span data-ttu-id="4fd78-137">代码约定</span><span class="sxs-lookup"><span data-stu-id="4fd78-137">Code Conventions</span></span>  
   
-|示例|说明|  
-|--------|--------|  
-|`sampleString = "Hello, world!"`|代码示例以固定间距的字体显示，其格式如本示例所示。|  
-|上一语句将 `sampleString` 的值设置为“Hello, world\!”|解释性文本中的代码元素以固定间距的字体显示，如本示例所示。|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|代码注释由撇号 \('\) 或 REM 关键字引入。|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|在每行的最后，一个空格后跟一个下划线 \( \_\) 表示该语句续行。|  
+|<span data-ttu-id="4fd78-138">示例</span><span class="sxs-lookup"><span data-stu-id="4fd78-138">Example</span></span>|<span data-ttu-id="4fd78-139">描述</span><span class="sxs-lookup"><span data-stu-id="4fd78-139">Description</span></span>|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|<span data-ttu-id="4fd78-140">代码示例显示在固定间距字体，并且在此示例中所示进行格式化。</span><span class="sxs-lookup"><span data-stu-id="4fd78-140">Code samples appear in a fixed-pitch font and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="4fd78-141">上一条语句设置的值`sampleString`到"Hello，world ！"</span><span class="sxs-lookup"><span data-stu-id="4fd78-141">The previous statement sets the value of `sampleString` to "Hello, world!"</span></span>|<span data-ttu-id="4fd78-142">此示例中所示，解释性文本中的代码元素出现在固定间距字体。</span><span class="sxs-lookup"><span data-stu-id="4fd78-142">Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.</span></span>|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|<span data-ttu-id="4fd78-143">撇号 （'） 或 REM 关键字的情况下，所引入代码注释。</span><span class="sxs-lookup"><span data-stu-id="4fd78-143">Code comments are introduced by an apostrophe (') or the REM keyword.</span></span>|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|<span data-ttu-id="4fd78-144">跟下划线 (_) 行末尾的空格指示语句继续在下一行。</span><span class="sxs-lookup"><span data-stu-id="4fd78-144">A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.</span></span>|  
   
-## 请参阅  
- [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)   
- [关键字](../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 运行库成员](../../visual-basic/language-reference/runtime-library-members.md)   
- [Visual Basic 命名约定](../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [如何：在代码中拆分和合并语句](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)   
- [代码中的注释](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="4fd78-145">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4fd78-145">See Also</span></span>  
+ [<span data-ttu-id="4fd78-146">Visual Basic 语言参考</span><span class="sxs-lookup"><span data-stu-id="4fd78-146">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ [<span data-ttu-id="4fd78-147">关键字</span><span class="sxs-lookup"><span data-stu-id="4fd78-147">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="4fd78-148">Visual Basic 运行库成员</span><span class="sxs-lookup"><span data-stu-id="4fd78-148">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="4fd78-149">Visual Basic 命名约定</span><span class="sxs-lookup"><span data-stu-id="4fd78-149">Visual Basic Naming Conventions</span></span>](../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [<span data-ttu-id="4fd78-150">如何：在代码中拆分和合并语句</span><span class="sxs-lookup"><span data-stu-id="4fd78-150">How to: Break and Combine Statements in Code</span></span>](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [<span data-ttu-id="4fd78-151">代码中的注释</span><span class="sxs-lookup"><span data-stu-id="4fd78-151">Comments in Code</span></span>](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

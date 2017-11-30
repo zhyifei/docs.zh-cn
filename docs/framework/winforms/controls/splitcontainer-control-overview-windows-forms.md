@@ -1,64 +1,63 @@
 ---
-title: "SplitContainer 控件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SplitContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer 控件 [Windows 窗体], 关于 SplitContainer 控件"
+title: "SplitContainer 控件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SplitContainer
+helpviewer_keywords: SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# SplitContainer 控件概述（Windows 窗体）
-可以将 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件看作是一个复合体，它是由一个可移动的拆分条分隔的两个面板。  当鼠标指针悬停在该拆分条上时，指针将相应地改灰度校正状以显示该拆分条是可移动的。  
+# <a name="splitcontainer-control-overview-windows-forms"></a><span data-ttu-id="c2519-102">SplitContainer 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="c2519-102">SplitContainer Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="c2519-103">Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。</span><span class="sxs-lookup"><span data-stu-id="c2519-103">The Windows Forms <xref:System.Windows.Forms.SplitContainer> control can be thought of as a composite; it is two panels separated by a movable bar.</span></span> <span data-ttu-id="c2519-104">当鼠标指针位于条上方时，指针将改变形状以表示条可移动。</span><span class="sxs-lookup"><span data-stu-id="c2519-104">When the mouse pointer is over the bar, the pointer changes shape to show that the bar is movable.</span></span>  
   
 > [!IMPORTANT]
->  在**“工具箱”**中，<xref:System.Windows.Forms.SplitContainer> 控件替换了早期版本的 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中存在的 <xref:System.Windows.Forms.Splitter> 控件。  <xref:System.Windows.Forms.SplitContainer> 控件在优先级上比 <xref:System.Windows.Forms.Splitter> 控件要高得多。  为了与现有的应用程序兼容，<xref:System.Windows.Forms.Splitter> 类仍包括在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，但强烈建议您在新项目中使用 <xref:System.Windows.Forms.SplitContainer> 控件。  
+>  <span data-ttu-id="c2519-105">在**工具箱**，<xref:System.Windows.Forms.SplitContainer>控件替代<xref:System.Windows.Forms.Splitter>早期的版本中已存在的控件[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c2519-105">In the **Toolbox**, <xref:System.Windows.Forms.SplitContainer> control replaces the <xref:System.Windows.Forms.Splitter> control that was there in the previous version of [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span> <span data-ttu-id="c2519-106">相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 <xref:System.Windows.Forms.SplitContainer> 控件。</span><span class="sxs-lookup"><span data-stu-id="c2519-106">The <xref:System.Windows.Forms.SplitContainer> control is much preferred over the <xref:System.Windows.Forms.Splitter> control.</span></span> <span data-ttu-id="c2519-107"><xref:System.Windows.Forms.Splitter>类仍包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]为了兼容现有应用程序，但我们强烈建议你使用<xref:System.Windows.Forms.SplitContainer>为新项目的控件。</span><span class="sxs-lookup"><span data-stu-id="c2519-107">The <xref:System.Windows.Forms.Splitter> class is still included in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for compatibility with existing applications, but we strongly encourage you to use the <xref:System.Windows.Forms.SplitContainer> control for new projects.</span></span>  
   
- 使用 <xref:System.Windows.Forms.SplitContainer> 控件，可以创建复合的用户界面（通常，在一个面板中的选择决定了在另一个面板中显示哪些对象）。  这种排列对于显示和浏览信息非常有用。  拥有两个面板使您可以聚合不同区域中的信息，并且用户可以轻松地使用拆分条（也称为“拆分器”）调整面板的大小。  
+ <span data-ttu-id="c2519-108">与<xref:System.Windows.Forms.SplitContainer>控件，你可以创建复杂的用户界面; 通常，在一个面板中的选项决定了另一个面板中显示哪些对象。</span><span class="sxs-lookup"><span data-stu-id="c2519-108">With the <xref:System.Windows.Forms.SplitContainer> control, you can create complex user interfaces; often, a selection in one panel determines what objects are shown in the other panel.</span></span> <span data-ttu-id="c2519-109">这种安排对于显示和浏览信息非常有效。</span><span class="sxs-lookup"><span data-stu-id="c2519-109">This arrangement is very effective for displaying and browsing information.</span></span> <span data-ttu-id="c2519-110">具有两个面板使你聚合等方面的信息并栏中或"splitter，"使用户可以方便地调整面板大小。</span><span class="sxs-lookup"><span data-stu-id="c2519-110">Having two panels lets you aggregate information in areas, and the bar, or "splitter," makes it easy for users to resize the panels.</span></span>  
   
- 另外，还可以嵌套多个 <xref:System.Windows.Forms.SplitContainer> 控件，并且第二个 <xref:System.Windows.Forms.SplitContainer> 控件可以水平放置，从而产生上面板和下面板。  
+ <span data-ttu-id="c2519-111">多个<xref:System.Windows.Forms.SplitContainer>控件也可以嵌套，与第二个<xref:System.Windows.Forms.SplitContainer>控件水平，放置创建顶部和底部面板。</span><span class="sxs-lookup"><span data-stu-id="c2519-111">More than one <xref:System.Windows.Forms.SplitContainer> control can also be nested, with the second <xref:System.Windows.Forms.SplitContainer> control oriented horizontally, to create top and bottom panels.</span></span>  
   
- 请注意，<xref:System.Windows.Forms.SplitContainer> 控件默认情况下可通过键盘来访问。如果 <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性设置为 `false`，用户可以按箭头键来移动拆分器。  
+ <span data-ttu-id="c2519-112">请注意，<xref:System.Windows.Forms.SplitContainer>控件键盘访问默认情况下; 用户可以按箭头键在需要时移动拆分器<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>属性设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="c2519-112">Be aware that the <xref:System.Windows.Forms.SplitContainer> control is keyboard-accessible by default; users can press the ARROW keys to move the splitter if the <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property is set to `false`.</span></span>  
   
- <xref:System.Windows.Forms.SplitContainer> 控件的 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性确定拆分器的方向，而不是确定控件自身的方向。  因此，当该属性设置为 <xref:System.Windows.Forms.Orientation> 时，拆分器将垂直放置，从而产生左面板和右面板。  
+ <span data-ttu-id="c2519-113"><xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性<xref:System.Windows.Forms.SplitContainer>控件确定拆分器，而不是该控件本身的方向。</span><span class="sxs-lookup"><span data-stu-id="c2519-113">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span> <span data-ttu-id="c2519-114">因此，此属性设置为<xref:System.Windows.Forms.Orientation.Vertical>，从顶部运行到下，创建左侧和右侧面板的拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-114">Hence, when this property is set to <xref:System.Windows.Forms.Orientation.Vertical>, the splitter runs from top to bottom, creating left and right panels.</span></span>  
   
- 此外，还应注意 <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> 属性的值是随 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性的值变化的。  有关更多信息，请参见 <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> 属性。  
+ <span data-ttu-id="c2519-115">此外，请注意，值<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>属性而异的值<xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c2519-115">Additionally, be aware that the value of the <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> property varies depending on the value of the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property.</span></span> <span data-ttu-id="c2519-116">有关详细信息，请参阅<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c2519-116">For more information, see <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> property.</span></span>  
   
- 还可以限制 <xref:System.Windows.Forms.SplitContainer> 控件的大小和移动。  <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性决定调整 <xref:System.Windows.Forms.SplitContainer> 控件大小后，哪个面板将保持原来的大小，<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性则决定是否可以通过键盘或鼠标来移动拆分器。  
+ <span data-ttu-id="c2519-117">你也可以限制的大小和移动<xref:System.Windows.Forms.SplitContainer>控件。</span><span class="sxs-lookup"><span data-stu-id="c2519-117">You can also restrict the size and movement of the <xref:System.Windows.Forms.SplitContainer> control.</span></span> <span data-ttu-id="c2519-118"><xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>属性确定哪个面板将保持相同的大小后<xref:System.Windows.Forms.SplitContainer>调整控件的与<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>属性确定是否可由键盘或鼠标移动拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-118">The <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> property determines which panel will remain the same size after the <xref:System.Windows.Forms.SplitContainer> control is resized, and the <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property determines if the splitter is movable by the keyboard or mouse.</span></span>  
   
 > [!NOTE]
->  即使 <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性设置为 `true`，仍然可以通过编程的方式（如使用 <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性）来移动拆分器。  
+>  <span data-ttu-id="c2519-119">即使<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>属性设置为`true`，拆分器可能仍以编程方式; 例如，通过移动<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="c2519-119">Even if the <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property is set to `true`, the splitter may still be moved programmatically; for example, by using the <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property.</span></span>  
   
- 最后，<xref:System.Windows.Forms.SplitContainer> 控件的每个面板都具有用于确定其各自大小的属性。  
+ <span data-ttu-id="c2519-120">最后，每个面板<xref:System.Windows.Forms.SplitContainer>控件具有属性，以确定其各自的大小。</span><span class="sxs-lookup"><span data-stu-id="c2519-120">Finally, each panel of the <xref:System.Windows.Forms.SplitContainer> control has properties to determine its individual size.</span></span>  
   
-## 常用属性、方法和事件  
+## <a name="commonly-used-properties-methods-and-events"></a><span data-ttu-id="c2519-121">常用的属性、方法和事件</span><span class="sxs-lookup"><span data-stu-id="c2519-121">Commonly Used Properties, Methods, and Events</span></span>  
   
-|名称|说明|  
-|--------|--------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性|确定调整 <xref:System.Windows.Forms.SplitContainer> 控件大小后，哪个面板将保持原来的大小。|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否可以使用键盘或鼠标来移动拆分器。|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性|确定拆分器是垂直放置还是水平放置。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定从左边缘或上边缘到可移动拆分条的距离（以像素为单位）。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 属性|确定用户可以移动拆分器的最短距离（以像素为单位）。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 属性|确定拆分器的厚度（以像素为单位）。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|拆分器移动时发生。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|拆分器移动后发生。|  
+|<span data-ttu-id="c2519-122">名称</span><span class="sxs-lookup"><span data-stu-id="c2519-122">Name</span></span>|<span data-ttu-id="c2519-123">描述</span><span class="sxs-lookup"><span data-stu-id="c2519-123">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="c2519-124"><xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-124"><xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> property</span></span>|<span data-ttu-id="c2519-125">确定哪个面板将保持相同大小后<xref:System.Windows.Forms.SplitContainer>调整控件的。</span><span class="sxs-lookup"><span data-stu-id="c2519-125">Determines which panel will remain the same size after the <xref:System.Windows.Forms.SplitContainer> control is resized.</span></span>|  
+|<span data-ttu-id="c2519-126"><xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-126"><xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property</span></span>|<span data-ttu-id="c2519-127">确定是否可以使用键盘或鼠标移动拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-127">Determines if the splitter can be moved with the keyboard or mouse.</span></span>|  
+|<span data-ttu-id="c2519-128"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-128"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> property</span></span>|<span data-ttu-id="c2519-129">确定是否垂直或水平排列拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-129">Determines if the splitter is arranged vertically or horizontally.</span></span>|  
+|<span data-ttu-id="c2519-130"><xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-130"><xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property</span></span>|<span data-ttu-id="c2519-131">确定以到可移动拆分条从左侧或右上边缘像素为单位的距离。</span><span class="sxs-lookup"><span data-stu-id="c2519-131">Determines the distance in pixels from the left or upper edge to the movable splitter bar.</span></span>|  
+|<span data-ttu-id="c2519-132"><xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-132"><xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property</span></span>|<span data-ttu-id="c2519-133">确定的最小距离，以像素为单位，用户可以移动拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-133">Determines the minimum distance, in pixels, that the splitter can be moved by the user.</span></span>|  
+|<span data-ttu-id="c2519-134"><xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 属性</span><span class="sxs-lookup"><span data-stu-id="c2519-134"><xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> property</span></span>|<span data-ttu-id="c2519-135">确定的粗细，以像素为单位，拆分器。</span><span class="sxs-lookup"><span data-stu-id="c2519-135">Determines the thickness, in pixels, of the splitter.</span></span>|  
+|<span data-ttu-id="c2519-136"><xref:System.Windows.Forms.SplitContainer.SplitterMoving>事件</span><span class="sxs-lookup"><span data-stu-id="c2519-136"><xref:System.Windows.Forms.SplitContainer.SplitterMoving> event</span></span>|<span data-ttu-id="c2519-137">当拆分器移动时发生。</span><span class="sxs-lookup"><span data-stu-id="c2519-137">Occurs when the splitter is moving.</span></span>|  
+|<span data-ttu-id="c2519-138"><xref:System.Windows.Forms.SplitContainer.SplitterMoved>事件</span><span class="sxs-lookup"><span data-stu-id="c2519-138"><xref:System.Windows.Forms.SplitContainer.SplitterMoved> event</span></span>|<span data-ttu-id="c2519-139">当拆分器移动时发生。</span><span class="sxs-lookup"><span data-stu-id="c2519-139">Occurs when the splitter has moved.</span></span>|  
   
-## 请参阅  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [SplitContainer Control Sample](http://msdn.microsoft.com/zh-cn/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a><span data-ttu-id="c2519-140">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c2519-140">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="c2519-141">SplitContainer 控件</span><span class="sxs-lookup"><span data-stu-id="c2519-141">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [<span data-ttu-id="c2519-142">SplitContainer 控件示例</span><span class="sxs-lookup"><span data-stu-id="c2519-142">SplitContainer Control Sample</span></span>](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

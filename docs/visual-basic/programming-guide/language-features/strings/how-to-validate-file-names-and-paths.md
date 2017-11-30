@@ -1,36 +1,35 @@
 ---
-title: "如何：在 Visual Basic 中验证文件名和路径 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "布尔值"
-  - "文件名, 验证"
-  - "路径, 验证"
-  - "字符串 [Visual Basic], 验证"
+title: "如何：在 Visual Basic 中验证文件名和路径"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- file names [Visual Basic], validating
+- strings [Visual Basic], validating
+- Boolean values [Visual Basic]
+- paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9c50d09dd7160992ffd95ececeff623a8aa93d2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Visual Basic 中验证文件名和路径
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-此示例返回一个 `Boolean` 值，该值指示字符串表示文件名还是路径。  验证操作检查名称是否包含文件系统不允许的字符。  
+# <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a><span data-ttu-id="00f82-102">如何：在 Visual Basic 中验证文件名和路径</span><span class="sxs-lookup"><span data-stu-id="00f82-102">How to: Validate File Names and Paths in Visual Basic</span></span>
+<span data-ttu-id="00f82-103">此示例返回`Boolean`值，该值指示字符串是否表示文件名称或路径。</span><span class="sxs-lookup"><span data-stu-id="00f82-103">This example returns a `Boolean` value that indicates whether a string represents a file name or path.</span></span> <span data-ttu-id="00f82-104">如果名称包含不允许的文件系统的字符的验证检查。</span><span class="sxs-lookup"><span data-stu-id="00f82-104">The validation checks if the name contains characters that are not allowed by the file system.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="00f82-105">示例</span><span class="sxs-lookup"><span data-stu-id="00f82-105">Example</span></span>  
  [!code-vb[VbVbcnRegEx#4](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-file-names-and-paths_1.vb)]  
   
- 此示例不会检查下列内容：名称中冒号的位置是否不正确、目录是否没有名称，或者名称的长度是否超过了系统定义的最大长度。  也不会检查应用程序是否有访问具有指定名称的文件系统资源的权限。  
+ <span data-ttu-id="00f82-106">此示例不会检查，如果未冒号或不具有名称的目录位置名称，不正确或名称的长度超过了系统定义的最大长度。</span><span class="sxs-lookup"><span data-stu-id="00f82-106">This example does not check if the name has incorrectly placed colons, or directories with no name, or if the length of the name exceeds the system-defined maximum length.</span></span> <span data-ttu-id="00f82-107">它也不会检查应用程序是否具有指定名称的文件系统资源的访问权。</span><span class="sxs-lookup"><span data-stu-id="00f82-107">It also does not check if the application has permission to access the file-system resource with the specified name.</span></span>  
   
-## 请参阅  
- <xref:System.IO.Path.GetInvalidPathChars%2A>   
- [验证字符串 \(Visual Basic\)](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+## <a name="see-also"></a><span data-ttu-id="00f82-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00f82-108">See Also</span></span>  
+ <xref:System.IO.Path.GetInvalidPathChars%2A>  
+ [<span data-ttu-id="00f82-109">在 Visual Basic 中验证字符串</span><span class="sxs-lookup"><span data-stu-id="00f82-109">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

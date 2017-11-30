@@ -1,103 +1,102 @@
 ---
-title: "Visual Basic 中的访问级别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "访问级别"
-  - "访问级别, 已声明的元素"
-  - "访问修饰符"
-  - "已声明的元素, 访问级别"
-  - "Friend 访问修饰符"
-  - "成员, 在 Visual Basic 中访问"
-  - "私有访问修饰符"
-  - "Protected 访问修饰符"
-  - "Protected Friend 访问修饰符"
-  - "公共访问修饰符"
+title: "Visual Basic 中的访问级别"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- members [Visual Basic], accessing in Visual Basic
+- Friend access modifier
+- access levels, declared elements
+- access levels
+- access modifiers
+- Public access modifier
+- Protected access modifier
+- Protected Friend access modifier
+- Private access modifier
+- declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Visual Basic 中的访问级别
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-已声明元素的*“访问级别”*是指能够对其进行访问的程度，即什么代码对其具有读取或写入权限。  这不仅取决于元素本身的声明方式，还取决于元素容器的访问级别。  不能访问包含元素的代码也不能访问该元素中包含的任何元素，甚至那些声明为 `Public` 的元素也不例外。  例如，`Private` 结构中的 `Public` 变量可从包含该结构的类内部访问，但不能从该类的外部访问。  
+# <a name="access-levels-in-visual-basic"></a><span data-ttu-id="384ce-102">Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="384ce-102">Access Levels in Visual Basic</span></span>
+<span data-ttu-id="384ce-103">*访问级别*的已声明的元素是能够访问它的范围，哪些代码，即有权读取或写入到它。</span><span class="sxs-lookup"><span data-stu-id="384ce-103">The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it.</span></span> <span data-ttu-id="384ce-104">这确定如何声明元素本身，不仅还由元素的容器的访问级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-104">This is determined not only by how you declare the element itself, but also by the access level of the element's container.</span></span> <span data-ttu-id="384ce-105">无法访问包含元素的代码不能访问任何其包含的元素，甚至那些声明为`Public`。</span><span class="sxs-lookup"><span data-stu-id="384ce-105">Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`.</span></span> <span data-ttu-id="384ce-106">例如，`Public`变量中`Private`结构可以从访问，在类中包含表的结构，但不是能从该类的外部。</span><span class="sxs-lookup"><span data-stu-id="384ce-106">For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.</span></span>  
   
-## Public  
- 声明语句中的 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 关键字指定可从以下位置访问元素：同一项目中任意位置的代码、引用该项目的其他项目以及由该项目生成的任何程序集。  下面的代码显示一个 `Public` 声明的示例。  
+## <a name="public"></a><span data-ttu-id="384ce-107">Public</span><span class="sxs-lookup"><span data-stu-id="384ce-107">Public</span></span>  
+ <span data-ttu-id="384ce-108">[公共](../../../../visual-basic/language-reference/modifiers/public.md)关键字声明语句中的指定从任何位置中同一项目的代码、 其他引用该项目的项目和项目中生成的任何程序集可以访问的元素。</span><span class="sxs-lookup"><span data-stu-id="384ce-108">The [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the declaration statement specifies that the elements can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.</span></span> <span data-ttu-id="384ce-109">下面的代码显示了一个示例`Public`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-109">The following code shows a sample `Public` declaration.</span></span>  
   
 ```  
 Public Class classForEverybody  
 ```  
   
- 仅可以在模块、接口或命名空间级别使用 `Public`。  这意味着可以在源文件级别或命名空间级别，或者在接口、模块、类或结构内部声明 public 元素，但不能在过程内声明它。  
+ <span data-ttu-id="384ce-110">你可以使用`Public`只能在模块、 接口或命名空间级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-110">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="384ce-111">这意味着你可以声明中的源文件或命名空间，或在接口、 模块、 类或结构，但不是能在过程级别公共元素。</span><span class="sxs-lookup"><span data-stu-id="384ce-111">This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected  
- 声明语句中的 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) 关键字指定仅可以从同一个类内部或从此类派生的类中访问元素。  下面的代码显示一个 `Protected` 声明的示例。  
+## <a name="protected"></a><span data-ttu-id="384ce-112">Protected</span><span class="sxs-lookup"><span data-stu-id="384ce-112">Protected</span></span>  
+ <span data-ttu-id="384ce-113">[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)关键字声明语句中的指定在相同的类中，或从派生自此类的类可以仅从访问的元素。</span><span class="sxs-lookup"><span data-stu-id="384ce-113">The [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same class, or from a class derived from this class.</span></span> <span data-ttu-id="384ce-114">下面的代码显示了一个示例`Protected`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-114">The following code shows a sample `Protected` declaration.</span></span>  
   
 ```  
 Protected Class classForMyHeirs  
 ```  
   
- 仅可以在类级别并且仅在声明类的成员时使用 `Protected`。  这意味着可以在类中声明 protected 元素，但不能在源文件级或命名空间级，或者在接口、模块、结构或过程内部声明它。  
+ <span data-ttu-id="384ce-115">你可以使用`Protected`只能在类级别，且仅当你声明一个类的成员。</span><span class="sxs-lookup"><span data-stu-id="384ce-115">You can use `Protected` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="384ce-116">这意味着你可以声明受保护的元素在类中，但不是能在源文件或命名空间，或在接口、 模块、 结构或过程内的级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-116">This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Friend  
- 声明语句中的 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 关键字指定可以从同一程序集内部访问元素，而不能从程序集外部访问。  下面的代码显示一个 `Friend` 声明的示例。  
+## <a name="friend"></a><span data-ttu-id="384ce-117">Friend</span><span class="sxs-lookup"><span data-stu-id="384ce-117">Friend</span></span>  
+ <span data-ttu-id="384ce-118">[友元](../../../../visual-basic/language-reference/modifiers/friend.md)关键字声明语句中的指定元素，可以从同一程序集中，而不是从访问程序集外部的。</span><span class="sxs-lookup"><span data-stu-id="384ce-118">The [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the elements can be accessed from within the same assembly, but not from outside the assembly.</span></span> <span data-ttu-id="384ce-119">下面的代码显示了一个示例`Friend`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-119">The following code shows a sample `Friend` declaration.</span></span>  
   
 ```  
 Friend stringForThisProject As String  
 ```  
   
- 仅可以在模块、接口或命名空间级别使用 `Friend`。  这意味着您可以在源文件级别或命名空间级别，或者在接口、模块、类或结构内部声明 friend 元素，但不能在过程内声明它。  
+ <span data-ttu-id="384ce-120">你可以使用`Friend`只能在模块、 接口或命名空间级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-120">You can use `Friend` only at module, interface, or namespace level.</span></span> <span data-ttu-id="384ce-121">这意味着你可以声明友元元素中的源文件或命名空间，或在接口、 模块、 类或结构，但不是能在过程级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-121">This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected Friend  
- 声明语句中同时出现 `Protected` 和 `Friend` 关键字时，指定可从以下位置访问元素：派生类或同一程序集内，或两者皆可。  下面的代码显示示例 `Protected` `Friend` 声明。  
+## <a name="protected-friend"></a><span data-ttu-id="384ce-122">受保护的友元</span><span class="sxs-lookup"><span data-stu-id="384ce-122">Protected Friend</span></span>  
+ <span data-ttu-id="384ce-123">`Protected`和`Friend`关键字一起在声明语句中指定的派生类中或在可以访问的元素和 / 或同一程序集中。</span><span class="sxs-lookup"><span data-stu-id="384ce-123">The `Protected` and `Friend` keywords together in the declaration statement specify that the elements can be accessed either from derived classes or from within the same assembly, or both.</span></span> <span data-ttu-id="384ce-124">下面的代码显示了一个示例`Protected Friend`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-124">The following code shows a sample `Protected Friend` declaration.</span></span>  
   
 ```  
 Protected Friend stringForProjectAndHeirs As String  
 ```  
   
- 仅可以在类级别并且仅在声明类的成员时使用 `Protected` `Friend`。  这意味着可以在类中声明 protected friend 元素，但不能在源文件级别或命名空间级别，或者在接口、模块、结构或过程内声明它。  
+ <span data-ttu-id="384ce-125">你可以使用`Protected Friend`只能在类级别，且仅当你声明一个类的成员。</span><span class="sxs-lookup"><span data-stu-id="384ce-125">You can use `Protected Friend` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="384ce-126">这意味着你可以声明一个受保护的友元元素在类中，但不是能在源文件或命名空间，或在接口、 模块、 结构或过程内的级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-126">This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Private  
- 声明语句中的 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 关键字指定仅可以从同一模块、类或结构内访问元素。  下面的代码显示一个 `Private` 声明的示例。  
+## <a name="private"></a><span data-ttu-id="384ce-127">Private</span><span class="sxs-lookup"><span data-stu-id="384ce-127">Private</span></span>  
+ <span data-ttu-id="384ce-128">[私有](../../../../visual-basic/language-reference/modifiers/private.md)关键字声明语句中的指定只能从相同模块、 类或结构中，可以访问的元素。</span><span class="sxs-lookup"><span data-stu-id="384ce-128">The [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same module, class, or structure.</span></span> <span data-ttu-id="384ce-129">下面的代码显示了一个示例`Private`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-129">The following code shows a sample `Private` declaration.</span></span>  
   
 ```  
 Private numberForMeOnly As Integer  
 ```  
   
- 仅可以在模块级别使用 `Private`。  这意味着可以在模块、类或结构内部声明 private 元素，但不能在源文件级别或命名空间级别、接口内部或者过程内声明它。  
+ <span data-ttu-id="384ce-130">只能在模块级别使用 `Private`。</span><span class="sxs-lookup"><span data-stu-id="384ce-130">You can use `Private` only at module level.</span></span> <span data-ttu-id="384ce-131">这意味着你可以声明一个私有元素内模块、 类或结构，但不是能在源文件或命名空间，内部接口，或在过程中的级别。</span><span class="sxs-lookup"><span data-stu-id="384ce-131">This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.</span></span>  
   
- 在模块级别，不带任何访问级别关键字的 `Dim` 语句与 `Private` 声明等效。  但是，您可能希望使用 `Private` 关键字使代码更容易阅读和解释。  
+ <span data-ttu-id="384ce-132">在模块级别`Dim`不含任何访问级别关键字的语句是等效于`Private`声明。</span><span class="sxs-lookup"><span data-stu-id="384ce-132">At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration.</span></span> <span data-ttu-id="384ce-133">但是，你可能想要使用`Private`关键字，以使代码更易于读取和解释。</span><span class="sxs-lookup"><span data-stu-id="384ce-133">However, you might want to use the `Private` keyword to make your code easier to read and interpret.</span></span>  
   
-## 访问修饰符  
- 指定访问级别的关键字称为*“访问修饰符”*。  下表对访问修饰符进行了比较。  
+## <a name="access-modifiers"></a><span data-ttu-id="384ce-134">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="384ce-134">Access Modifiers</span></span>  
+ <span data-ttu-id="384ce-135">指定的访问级别的关键字称为*访问修饰符*。</span><span class="sxs-lookup"><span data-stu-id="384ce-135">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="384ce-136">下表比较的访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="384ce-136">The following table compares the access modifiers.</span></span>  
   
-|访问修饰符|授予的访问级别|可以用此访问级别声明的元素|可以在其中使用此修饰符的声明上下文|  
-|-----------|-------------|-------------------|-----------------------|  
-|`Public`|无限制：<br /><br /> 可看到 public 元素的任何代码均可以访问它|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
-|`Protected`|派生的：<br /><br /> 声明 protected 元素的类（或该类的派生类）中的代码可访问该元素|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
-|`Friend`|程序集：<br /><br /> 声明 friend 元素的程序集中的代码可以访问该元素|接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|源文件<br /><br /> 命名空间<br /><br /> 接口<br /><br /> 模块<br /><br /> 类<br /><br /> 结构|  
-|`Protected` `Friend`|`Protected` 和 `Friend` 的联合：<br /><br /> 与 protected friend 元素位于同一个类或同一个程序集中的代码，或者从该元素的类派生的任何类中的代码均可访问该元素|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|类|  
-|`Private`|声明上下文：<br /><br /> 声明 private 元素的类型（包括该类型的子类型）中的代码可访问该元素|接口<br /><br /> 类<br /><br /> 结构<br /><br /> 结构成员<br /><br /> 过程<br /><br /> 属性<br /><br /> 成员变量<br /><br /> 常量<br /><br /> 枚举<br /><br /> 事件<br /><br /> 外部声明<br /><br /> 委托|模块<br /><br /> 类<br /><br /> 结构|  
+|<span data-ttu-id="384ce-137">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="384ce-137">Access modifier</span></span>|<span data-ttu-id="384ce-138">授予的访问级别</span><span class="sxs-lookup"><span data-stu-id="384ce-138">Access level granted</span></span>|<span data-ttu-id="384ce-139">可以使用此访问级别声明的元素</span><span class="sxs-lookup"><span data-stu-id="384ce-139">Elements you can declare with this access level</span></span>|<span data-ttu-id="384ce-140">可以在其中使用此修饰符声明上下文</span><span class="sxs-lookup"><span data-stu-id="384ce-140">Declaration context within which you can use this modifier</span></span>|  
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
+|`Public`|<span data-ttu-id="384ce-141">不受限制:</span><span class="sxs-lookup"><span data-stu-id="384ce-141">Unrestricted:</span></span><br /><br /> <span data-ttu-id="384ce-142">任何可以看到公共元素的代码可以访问它</span><span class="sxs-lookup"><span data-stu-id="384ce-142">Any code that can see a public element can access it</span></span>|<span data-ttu-id="384ce-143">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-143">Interfaces</span></span><br /><br /> <span data-ttu-id="384ce-144">模块</span><span class="sxs-lookup"><span data-stu-id="384ce-144">Modules</span></span><br /><br /> <span data-ttu-id="384ce-145">类</span><span class="sxs-lookup"><span data-stu-id="384ce-145">Classes</span></span><br /><br /> <span data-ttu-id="384ce-146">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-146">Structures</span></span><br /><br /> <span data-ttu-id="384ce-147">结构成员</span><span class="sxs-lookup"><span data-stu-id="384ce-147">Structure members</span></span><br /><br /> <span data-ttu-id="384ce-148">过程</span><span class="sxs-lookup"><span data-stu-id="384ce-148">Procedures</span></span><br /><br /> <span data-ttu-id="384ce-149">属性</span><span class="sxs-lookup"><span data-stu-id="384ce-149">Properties</span></span><br /><br /> <span data-ttu-id="384ce-150">成员变量</span><span class="sxs-lookup"><span data-stu-id="384ce-150">Member variables</span></span><br /><br /> <span data-ttu-id="384ce-151">常量</span><span class="sxs-lookup"><span data-stu-id="384ce-151">Constants</span></span><br /><br /> <span data-ttu-id="384ce-152">枚举</span><span class="sxs-lookup"><span data-stu-id="384ce-152">Enumerations</span></span><br /><br /> <span data-ttu-id="384ce-153">事件</span><span class="sxs-lookup"><span data-stu-id="384ce-153">Events</span></span><br /><br /> <span data-ttu-id="384ce-154">外部声明</span><span class="sxs-lookup"><span data-stu-id="384ce-154">External declarations</span></span><br /><br /> <span data-ttu-id="384ce-155">委托</span><span class="sxs-lookup"><span data-stu-id="384ce-155">Delegates</span></span>|<span data-ttu-id="384ce-156">源文件</span><span class="sxs-lookup"><span data-stu-id="384ce-156">Source file</span></span><br /><br /> <span data-ttu-id="384ce-157">命名空间</span><span class="sxs-lookup"><span data-stu-id="384ce-157">Namespace</span></span><br /><br /> <span data-ttu-id="384ce-158">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-158">Interface</span></span><br /><br /> <span data-ttu-id="384ce-159">模块</span><span class="sxs-lookup"><span data-stu-id="384ce-159">Module</span></span><br /><br /> <span data-ttu-id="384ce-160">类</span><span class="sxs-lookup"><span data-stu-id="384ce-160">Class</span></span><br /><br /> <span data-ttu-id="384ce-161">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-161">Structure</span></span>|  
+|`Protected`|<span data-ttu-id="384ce-162">派生：</span><span class="sxs-lookup"><span data-stu-id="384ce-162">Derivational:</span></span><br /><br /> <span data-ttu-id="384ce-163">声明一个受保护的元素或从中派生的类可以访问的元素的类中的代码</span><span class="sxs-lookup"><span data-stu-id="384ce-163">Code in the class that declares a protected element, or a class derived from it, can access the element</span></span>|<span data-ttu-id="384ce-164">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-164">Interfaces</span></span><br /><br /> <span data-ttu-id="384ce-165">类</span><span class="sxs-lookup"><span data-stu-id="384ce-165">Classes</span></span><br /><br /> <span data-ttu-id="384ce-166">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-166">Structures</span></span><br /><br /> <span data-ttu-id="384ce-167">过程</span><span class="sxs-lookup"><span data-stu-id="384ce-167">Procedures</span></span><br /><br /> <span data-ttu-id="384ce-168">属性</span><span class="sxs-lookup"><span data-stu-id="384ce-168">Properties</span></span><br /><br /> <span data-ttu-id="384ce-169">成员变量</span><span class="sxs-lookup"><span data-stu-id="384ce-169">Member variables</span></span><br /><br /> <span data-ttu-id="384ce-170">常量</span><span class="sxs-lookup"><span data-stu-id="384ce-170">Constants</span></span><br /><br /> <span data-ttu-id="384ce-171">枚举</span><span class="sxs-lookup"><span data-stu-id="384ce-171">Enumerations</span></span><br /><br /> <span data-ttu-id="384ce-172">事件</span><span class="sxs-lookup"><span data-stu-id="384ce-172">Events</span></span><br /><br /> <span data-ttu-id="384ce-173">外部声明</span><span class="sxs-lookup"><span data-stu-id="384ce-173">External declarations</span></span><br /><br /> <span data-ttu-id="384ce-174">委托</span><span class="sxs-lookup"><span data-stu-id="384ce-174">Delegates</span></span>|<span data-ttu-id="384ce-175">类</span><span class="sxs-lookup"><span data-stu-id="384ce-175">Class</span></span>|  
+|`Friend`|<span data-ttu-id="384ce-176">程序集：</span><span class="sxs-lookup"><span data-stu-id="384ce-176">Assembly:</span></span><br /><br /> <span data-ttu-id="384ce-177">声明友元元素可以访问它的程序集内的代码</span><span class="sxs-lookup"><span data-stu-id="384ce-177">Code in the assembly that declares a friend element can access it</span></span>|<span data-ttu-id="384ce-178">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-178">Interfaces</span></span><br /><br /> <span data-ttu-id="384ce-179">模块</span><span class="sxs-lookup"><span data-stu-id="384ce-179">Modules</span></span><br /><br /> <span data-ttu-id="384ce-180">类</span><span class="sxs-lookup"><span data-stu-id="384ce-180">Classes</span></span><br /><br /> <span data-ttu-id="384ce-181">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-181">Structures</span></span><br /><br /> <span data-ttu-id="384ce-182">结构成员</span><span class="sxs-lookup"><span data-stu-id="384ce-182">Structure members</span></span><br /><br /> <span data-ttu-id="384ce-183">过程</span><span class="sxs-lookup"><span data-stu-id="384ce-183">Procedures</span></span><br /><br /> <span data-ttu-id="384ce-184">属性</span><span class="sxs-lookup"><span data-stu-id="384ce-184">Properties</span></span><br /><br /> <span data-ttu-id="384ce-185">成员变量</span><span class="sxs-lookup"><span data-stu-id="384ce-185">Member variables</span></span><br /><br /> <span data-ttu-id="384ce-186">常量</span><span class="sxs-lookup"><span data-stu-id="384ce-186">Constants</span></span><br /><br /> <span data-ttu-id="384ce-187">枚举</span><span class="sxs-lookup"><span data-stu-id="384ce-187">Enumerations</span></span><br /><br /> <span data-ttu-id="384ce-188">事件</span><span class="sxs-lookup"><span data-stu-id="384ce-188">Events</span></span><br /><br /> <span data-ttu-id="384ce-189">外部声明</span><span class="sxs-lookup"><span data-stu-id="384ce-189">External declarations</span></span><br /><br /> <span data-ttu-id="384ce-190">委托</span><span class="sxs-lookup"><span data-stu-id="384ce-190">Delegates</span></span>|<span data-ttu-id="384ce-191">源文件</span><span class="sxs-lookup"><span data-stu-id="384ce-191">Source file</span></span><br /><br /> <span data-ttu-id="384ce-192">命名空间</span><span class="sxs-lookup"><span data-stu-id="384ce-192">Namespace</span></span><br /><br /> <span data-ttu-id="384ce-193">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-193">Interface</span></span><br /><br /> <span data-ttu-id="384ce-194">模块</span><span class="sxs-lookup"><span data-stu-id="384ce-194">Module</span></span><br /><br /> <span data-ttu-id="384ce-195">类</span><span class="sxs-lookup"><span data-stu-id="384ce-195">Class</span></span><br /><br /> <span data-ttu-id="384ce-196">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-196">Structure</span></span>|  
+|<span data-ttu-id="384ce-197">`Protected` `Friend`</span><span class="sxs-lookup"><span data-stu-id="384ce-197">`Protected` `Friend`</span></span>|<span data-ttu-id="384ce-198">联合的`Protected`和`Friend`:</span><span class="sxs-lookup"><span data-stu-id="384ce-198">Union of `Protected` and `Friend`:</span></span><br /><br /> <span data-ttu-id="384ce-199">在同一个类或相同的程序集用作受保护的友元元素，或从元素的类派生的任何类中的代码，可以访问它</span><span class="sxs-lookup"><span data-stu-id="384ce-199">Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it</span></span>|<span data-ttu-id="384ce-200">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-200">Interfaces</span></span><br /><br /> <span data-ttu-id="384ce-201">类</span><span class="sxs-lookup"><span data-stu-id="384ce-201">Classes</span></span><br /><br /> <span data-ttu-id="384ce-202">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-202">Structures</span></span><br /><br /> <span data-ttu-id="384ce-203">过程</span><span class="sxs-lookup"><span data-stu-id="384ce-203">Procedures</span></span><br /><br /> <span data-ttu-id="384ce-204">属性</span><span class="sxs-lookup"><span data-stu-id="384ce-204">Properties</span></span><br /><br /> <span data-ttu-id="384ce-205">成员变量</span><span class="sxs-lookup"><span data-stu-id="384ce-205">Member variables</span></span><br /><br /> <span data-ttu-id="384ce-206">常量</span><span class="sxs-lookup"><span data-stu-id="384ce-206">Constants</span></span><br /><br /> <span data-ttu-id="384ce-207">枚举</span><span class="sxs-lookup"><span data-stu-id="384ce-207">Enumerations</span></span><br /><br /> <span data-ttu-id="384ce-208">事件</span><span class="sxs-lookup"><span data-stu-id="384ce-208">Events</span></span><br /><br /> <span data-ttu-id="384ce-209">外部声明</span><span class="sxs-lookup"><span data-stu-id="384ce-209">External declarations</span></span><br /><br /> <span data-ttu-id="384ce-210">委托</span><span class="sxs-lookup"><span data-stu-id="384ce-210">Delegates</span></span>|<span data-ttu-id="384ce-211">类</span><span class="sxs-lookup"><span data-stu-id="384ce-211">Class</span></span>|  
+|`Private`|<span data-ttu-id="384ce-212">声明上下文：</span><span class="sxs-lookup"><span data-stu-id="384ce-212">Declaration context:</span></span><br /><br /> <span data-ttu-id="384ce-213">声明一个私有元素，包括中包含的类型的代码可以访问的元素的类型中的代码</span><span class="sxs-lookup"><span data-stu-id="384ce-213">Code in the type that declares a private element, including code within contained types, can access the element</span></span>|<span data-ttu-id="384ce-214">接口</span><span class="sxs-lookup"><span data-stu-id="384ce-214">Interfaces</span></span><br /><br /> <span data-ttu-id="384ce-215">类</span><span class="sxs-lookup"><span data-stu-id="384ce-215">Classes</span></span><br /><br /> <span data-ttu-id="384ce-216">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-216">Structures</span></span><br /><br /> <span data-ttu-id="384ce-217">结构成员</span><span class="sxs-lookup"><span data-stu-id="384ce-217">Structure members</span></span><br /><br /> <span data-ttu-id="384ce-218">过程</span><span class="sxs-lookup"><span data-stu-id="384ce-218">Procedures</span></span><br /><br /> <span data-ttu-id="384ce-219">属性</span><span class="sxs-lookup"><span data-stu-id="384ce-219">Properties</span></span><br /><br /> <span data-ttu-id="384ce-220">成员变量</span><span class="sxs-lookup"><span data-stu-id="384ce-220">Member variables</span></span><br /><br /> <span data-ttu-id="384ce-221">常量</span><span class="sxs-lookup"><span data-stu-id="384ce-221">Constants</span></span><br /><br /> <span data-ttu-id="384ce-222">枚举</span><span class="sxs-lookup"><span data-stu-id="384ce-222">Enumerations</span></span><br /><br /> <span data-ttu-id="384ce-223">事件</span><span class="sxs-lookup"><span data-stu-id="384ce-223">Events</span></span><br /><br /> <span data-ttu-id="384ce-224">外部声明</span><span class="sxs-lookup"><span data-stu-id="384ce-224">External declarations</span></span><br /><br /> <span data-ttu-id="384ce-225">委托</span><span class="sxs-lookup"><span data-stu-id="384ce-225">Delegates</span></span>|<span data-ttu-id="384ce-226">模块</span><span class="sxs-lookup"><span data-stu-id="384ce-226">Module</span></span><br /><br /> <span data-ttu-id="384ce-227">类</span><span class="sxs-lookup"><span data-stu-id="384ce-227">Class</span></span><br /><br /> <span data-ttu-id="384ce-228">结构</span><span class="sxs-lookup"><span data-stu-id="384ce-228">Structure</span></span>|  
   
-## 请参阅  
- [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)   
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [如何：控制变量的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)   
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="384ce-229">另请参阅</span><span class="sxs-lookup"><span data-stu-id="384ce-229">See Also</span></span>  
+ [<span data-ttu-id="384ce-230">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="384ce-230">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="384ce-231">Static</span><span class="sxs-lookup"><span data-stu-id="384ce-231">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="384ce-232">已声明的元素名称</span><span class="sxs-lookup"><span data-stu-id="384ce-232">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="384ce-233">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="384ce-233">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="384ce-234">已声明元素的特性</span><span class="sxs-lookup"><span data-stu-id="384ce-234">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="384ce-235">在 Visual Basic 中的生存期</span><span class="sxs-lookup"><span data-stu-id="384ce-235">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="384ce-236">在 Visual Basic 中的作用域</span><span class="sxs-lookup"><span data-stu-id="384ce-236">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="384ce-237">如何：控制变量的可用性</span><span class="sxs-lookup"><span data-stu-id="384ce-237">How to: Control the Availability of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
+ [<span data-ttu-id="384ce-238">变量</span><span class="sxs-lookup"><span data-stu-id="384ce-238">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="384ce-239">变量声明</span><span class="sxs-lookup"><span data-stu-id="384ce-239">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

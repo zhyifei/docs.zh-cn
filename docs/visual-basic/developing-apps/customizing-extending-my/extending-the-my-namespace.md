@@ -1,131 +1,113 @@
 ---
-title: "扩展 Visual Basic 中的我 Namespace |Microsoft 文档"
-ms.date: 2015-07-20
+title: "扩展 Visual Basic 中的 My 命名空间"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.AddingMyExtensions
-dev_langs:
-- VB
+f1_keywords: vb.AddingMyExtensions
 helpviewer_keywords:
-- My namespace, customizing
+- My namespace [Visual Basic], customizing
 - My namespace
-- My namespace, extending
+- My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1d1e957536f35b81a9672994c9d4d261afb764ea
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 25fff04b19cce299a2d437e662fb7481153d29da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>扩展 Visual Basic 中的 My 命名空间
-`My`在 Visual Basic 中的命名空间公开的属性和方法，使您能够轻松地利用.NET Framework 的强大功能。 `My`命名空间简化了常见编程问题，通常为单行代码可将一个困难的任务。 此外，`My`命名空间可完全扩展，以便您可以自定义的行为`My`并将新的服务添加到其层次结构，以适应特定的应用程序需求。 本主题将讨论如何自定义的现有成员`My`命名空间以及如何将添加到您自己自定义类`My`命名空间。  
+# <a name="extending-the-my-namespace-in-visual-basic"></a><span data-ttu-id="f4c84-102">扩展 Visual Basic 中的 My 命名空间</span><span class="sxs-lookup"><span data-stu-id="f4c84-102">Extending the My Namespace in Visual Basic</span></span>
+<span data-ttu-id="f4c84-103">`My`在 Visual Basic 中的命名空间公开属性和方法，您可以轻松地利用.NET Framework 的功能。</span><span class="sxs-lookup"><span data-stu-id="f4c84-103">The `My` namespace in Visual Basic exposes properties and methods that enable you to easily take advantage of the power of the .NET Framework.</span></span> <span data-ttu-id="f4c84-104">`My`命名空间简化了常见的编程问题，通常可一行代码将一个困难的任务。</span><span class="sxs-lookup"><span data-stu-id="f4c84-104">The `My` namespace simplifies common programming problems, often reducing a difficult task to a single line of code.</span></span> <span data-ttu-id="f4c84-105">此外， `My` ，以便你可以自定义的行为，命名空间是完全可扩展`My`并将新的服务添加到其层次结构，从而满足特定应用程序需求。</span><span class="sxs-lookup"><span data-stu-id="f4c84-105">Additionally, the `My` namespace is fully extensible so that you can customize the behavior of `My` and add new services to its hierarchy to adapt to specific application needs.</span></span> <span data-ttu-id="f4c84-106">本主题将讨论如何自定义的现有成员`My`命名空间以及如何将添加到你自己自定义类`My`命名空间。</span><span class="sxs-lookup"><span data-stu-id="f4c84-106">This topic discusses both how to customize existing members of the `My` namespace and how to add your own custom classes to the `My` namespace.</span></span>  
   
- **主题内容**  
+ <span data-ttu-id="f4c84-107">**主题内容**</span><span class="sxs-lookup"><span data-stu-id="f4c84-107">**Topic Contents**</span></span>  
   
--   [自定义现有我 Namespace 成员](#customizing)  
+-   [<span data-ttu-id="f4c84-108">自定义现有我 Namespace 成员</span><span class="sxs-lookup"><span data-stu-id="f4c84-108">Customizing Existing My Namespace Members</span></span>](#customizing)  
   
--   [将成员添加到 My 对象](#addingtoobjects)  
+-   [<span data-ttu-id="f4c84-109">将成员添加到 My 对象</span><span class="sxs-lookup"><span data-stu-id="f4c84-109">Adding Members to My Objects</span></span>](#addingtoobjects)  
   
--   [自定义将对象添加到我 Namespace](#addingcustom)  
+-   [<span data-ttu-id="f4c84-110">自定义将对象添加到我 Namespace</span><span class="sxs-lookup"><span data-stu-id="f4c84-110">Adding Custom Objects to the My Namespace</span></span>](#addingcustom)  
   
--   [将成员添加到我 Namespace](#addingtonamespace)  
+-   [<span data-ttu-id="f4c84-111">将成员添加到我 Namespace</span><span class="sxs-lookup"><span data-stu-id="f4c84-111">Adding Members to the My Namespace</span></span>](#addingtonamespace)  
   
--   [将事件添加到自定义 My 对象](#addingevents)  
+-   [<span data-ttu-id="f4c84-112">将事件添加到自定义 My 对象</span><span class="sxs-lookup"><span data-stu-id="f4c84-112">Adding Events to Custom My Objects</span></span>](#addingevents)  
   
--   [设计指南](#design)  
+-   [<span data-ttu-id="f4c84-113">设计准则</span><span class="sxs-lookup"><span data-stu-id="f4c84-113">Design Guidelines</span></span>](#design)  
   
--   [设计的类库我](#designing)  
+-   [<span data-ttu-id="f4c84-114">设计的类库我</span><span class="sxs-lookup"><span data-stu-id="f4c84-114">Designing Class Libraries for My</span></span>](#designing)  
   
--   [打包和部署扩展](#packaging)  
+-   [<span data-ttu-id="f4c84-115">打包和部署扩展</span><span class="sxs-lookup"><span data-stu-id="f4c84-115">Packaging and Deploying Extensions</span></span>](#packaging)  
   
-##  <a name="customizing"></a>自定义现有我 Namespace 成员  
- `My`命名空间中 Visual Basic 公开经常使用您的应用程序、 您的计算机，和更多相关信息。 有关中的对象的完整列表`My`命名空间，请参阅[我引用](../../../visual-basic/language-reference/keywords/my-reference.md)。 你可能需要自定义的现有成员`My`命名空间，以便他们更好地匹配您的应用程序的需求。 中的某个对象的任何属性`My`命名空间不是只读的可以设置为自定义值。  
+##  <span data-ttu-id="f4c84-116"><a name="customizing"></a>自定义现有我 Namespace 成员</span><span class="sxs-lookup"><span data-stu-id="f4c84-116"><a name="customizing"></a> Customizing Existing My Namespace Members</span></span>  
+ <span data-ttu-id="f4c84-117">`My`命名空间中 Visual Basic 公开经常使用你的应用程序、 你的计算机，和的详细信息。</span><span class="sxs-lookup"><span data-stu-id="f4c84-117">The `My` namespace in Visual Basic exposes frequently used information about your application, your computer, and more.</span></span> <span data-ttu-id="f4c84-118">有关中的对象的完整列表`My`命名空间，请参阅[我引用](../../../visual-basic/language-reference/keywords/my-reference.md)。</span><span class="sxs-lookup"><span data-stu-id="f4c84-118">For a complete list of the objects in the `My` namespace, see [My Reference](../../../visual-basic/language-reference/keywords/my-reference.md).</span></span> <span data-ttu-id="f4c84-119">你可能需要自定义的现有成员`My`命名空间，以便它们更好地匹配你的应用程序的需求。</span><span class="sxs-lookup"><span data-stu-id="f4c84-119">You may have to customize existing members of the `My` namespace so that they better match the needs of your application.</span></span> <span data-ttu-id="f4c84-120">中的某个对象的任何属性`My`命名空间不是只读的可以将设置为自定义值。</span><span class="sxs-lookup"><span data-stu-id="f4c84-120">Any property of an object in the `My` namespace that is not read-only can be set to a custom value.</span></span>  
   
- 例如，假定您经常使用`My.User`对象来访问当前安全上下文运行您的应用程序的用户。 但是，您的公司使用自定义用户对象公开的其他信息和公司内部用户的功能。 在此方案中，可以将默认值为`My.User.CurrentPrincipal`与您自己自定义主体对象，如下面的示例中所示的一个实例的属性。  
+ <span data-ttu-id="f4c84-121">例如，假定您经常使用`My.User`对象来访问运行你的应用程序的用户的当前安全上下文。</span><span class="sxs-lookup"><span data-stu-id="f4c84-121">For example, assume that you frequently use the `My.User` object to access the current security context for the user running your application.</span></span> <span data-ttu-id="f4c84-122">但是，你的公司使用自定义用户对象公开的其他信息和公司中的用户的功能。</span><span class="sxs-lookup"><span data-stu-id="f4c84-122">However, your company uses a custom user object to expose additional information and capabilities for users within the company.</span></span> <span data-ttu-id="f4c84-123">在此方案中，你可以将默认值的`My.User.CurrentPrincipal`与你自己自定义的主体对象，如下面的示例中所示的实例的属性。</span><span class="sxs-lookup"><span data-stu-id="f4c84-123">In this scenario, you can replace the default value of the `My.User.CurrentPrincipal` property with an instance of your own custom principal object, as shown in the following example.</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&1;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
   
- 设置`CurrentPrincipal`属性`My.User`对象更改应用程序运行所依据的标识。 `My.User`对象，就会返回有关新指定的用户的信息。  
+ <span data-ttu-id="f4c84-124">设置`CurrentPrincipal`属性`My.User`对象更改在其下运行应用程序的标识。</span><span class="sxs-lookup"><span data-stu-id="f4c84-124">Setting the `CurrentPrincipal` property on the `My.User` object changes the identity under which the application runs.</span></span> <span data-ttu-id="f4c84-125">`My.User`对象，反过来，返回有关新指定的用户的信息。</span><span class="sxs-lookup"><span data-stu-id="f4c84-125">The `My.User` object, in turn, returns information about the newly specified user.</span></span>  
   
-##  <a name="addingtoobjects"></a>将成员添加到 My 对象  
- 从返回的类型`My.Application`和`My.Computer`被定义为`Partial`类。 因此，您可以扩展`My.Application`和`My.Computer`对象通过创建`Partial`类名为`MyApplication`或`MyComputer`。 此类不能为`Private`类。 如果您指定类的一部分`My`命名空间中，您可以添加属性和方法，将包含在`My.Application`或`My.Computer`对象。  
+##  <span data-ttu-id="f4c84-126"><a name="addingtoobjects"></a>将成员添加到 My 对象</span><span class="sxs-lookup"><span data-stu-id="f4c84-126"><a name="addingtoobjects"></a> Adding Members to My Objects</span></span>  
+ <span data-ttu-id="f4c84-127">从返回的类型`My.Application`和`My.Computer`定义为`Partial`类。</span><span class="sxs-lookup"><span data-stu-id="f4c84-127">The types returned from `My.Application` and `My.Computer` are defined as `Partial` classes.</span></span> <span data-ttu-id="f4c84-128">因此，你可以扩展`My.Application`和`My.Computer`对象通过创建`Partial`类名为`MyApplication`或`MyComputer`。</span><span class="sxs-lookup"><span data-stu-id="f4c84-128">Therefore, you can extend the `My.Application` and `My.Computer` objects by creating a `Partial` class named `MyApplication` or `MyComputer`.</span></span> <span data-ttu-id="f4c84-129">类不能为`Private`类。</span><span class="sxs-lookup"><span data-stu-id="f4c84-129">The class cannot be a `Private` class.</span></span> <span data-ttu-id="f4c84-130">如果您指定类的一部分`My`命名空间，你可以添加属性和方法将附带`My.Application`或`My.Computer`对象。</span><span class="sxs-lookup"><span data-stu-id="f4c84-130">If you specify the class as part of the `My` namespace, you can add properties and methods that will be included with the `My.Application` or `My.Computer` objects.</span></span>  
   
- 例如，下面的示例添加一个名为属性`DnsServerIPAddresses`到`My.Computer`对象。  
+ <span data-ttu-id="f4c84-131">例如，下面的示例添加名为的属性`DnsServerIPAddresses`到`My.Computer`对象。</span><span class="sxs-lookup"><span data-stu-id="f4c84-131">For example, the following example adds a property named `DnsServerIPAddresses` to the `My.Computer` object.</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&2;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
   
-##  <a name="addingcustom"></a>自定义将对象添加到我 Namespace  
- 尽管`My`命名空间提供了许多常见编程任务的解决方案，您可能会遇到的任务，`My`命名空间不能解决。 例如，您的应用程序可能会访问用户数据的自定义目录服务或应用程序可能会使用默认情况下，使用 Visual Basic 不安装的程序集。 您可以扩展`My`命名空间以包含到一些特定于您的环境的常见任务的自定义解决方案。 `My`命名空间可以轻松地扩展以添加新成员，以满足不断增长的应用程序需求。 此外，您可以将部署您`My`给其他开发人员为 Visual Basic 模板的命名空间扩展。  
+##  <span data-ttu-id="f4c84-132"><a name="addingcustom"></a>自定义将对象添加到我 Namespace</span><span class="sxs-lookup"><span data-stu-id="f4c84-132"><a name="addingcustom"></a> Adding Custom Objects to the My Namespace</span></span>  
+ <span data-ttu-id="f4c84-133">尽管`My`命名空间提供对于许多常见编程任务的解决方案，你可能会遇到任务，`My`命名空间不能解决。</span><span class="sxs-lookup"><span data-stu-id="f4c84-133">Although the `My` namespace provides solutions for many common programming tasks, you may encounter tasks that the `My` namespace does not address.</span></span> <span data-ttu-id="f4c84-134">例如，你的应用程序可能会访问用户数据的自定义目录服务或应用程序可能会使用未安装默认情况下，使用 Visual Basic 的程序集。</span><span class="sxs-lookup"><span data-stu-id="f4c84-134">For example, your application might access custom directory services for user data, or your application might use assemblies that are not installed by default with Visual Basic.</span></span> <span data-ttu-id="f4c84-135">你可以扩展`My`命名空间以包含自定义解决方案的常见任务的特定于你的环境。</span><span class="sxs-lookup"><span data-stu-id="f4c84-135">You can extend the `My` namespace to include custom solutions to common tasks that are specific to your environment.</span></span> <span data-ttu-id="f4c84-136">`My`命名空间可以轻松地进行扩展以添加新成员，以满足不断增长的应用程序需求。</span><span class="sxs-lookup"><span data-stu-id="f4c84-136">The `My` namespace can easily be extended to add new members to meet growing application needs.</span></span> <span data-ttu-id="f4c84-137">此外，你可以部署你`My`给其他开发人员为 Visual Basic 模板的命名空间扩展。</span><span class="sxs-lookup"><span data-stu-id="f4c84-137">Additionally, you can deploy your `My` namespace extensions to other developers as a Visual Basic template.</span></span>  
   
-###  <a name="addingtonamespace"></a>将成员添加到我 Namespace  
- 因为`My`是一个命名空间像任何其他命名空间，您可以添加顶级属性它只需添加一个模块，并指定`Namespace`的`My`。 批注与模块`HideModuleName`特性，如下面的示例所示。 `HideModuleName`特性可确保当智能感知显示的成员时，将不显示模块名称`My`命名空间。  
+###  <span data-ttu-id="f4c84-138"><a name="addingtonamespace"></a>将成员添加到我 Namespace</span><span class="sxs-lookup"><span data-stu-id="f4c84-138"><a name="addingtonamespace"></a> Adding Members to the My Namespace</span></span>  
+ <span data-ttu-id="f4c84-139">因为`My`是命名空间像任何其他命名空间，你可以顶级属性向其添加只需添加一个模块，并指定`Namespace`的`My`。</span><span class="sxs-lookup"><span data-stu-id="f4c84-139">Because `My` is a namespace like any other namespace, you can add top-level properties to it by just adding a module and specifying a `Namespace` of `My`.</span></span> <span data-ttu-id="f4c84-140">批注的模块`HideModuleName`特性，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="f4c84-140">Annotate the module with the `HideModuleName` attribute as shown in the following example.</span></span> <span data-ttu-id="f4c84-141">`HideModuleName`特性可确保显示的成员时，IntelliSense 将不显示模块名称`My`命名空间。</span><span class="sxs-lookup"><span data-stu-id="f4c84-141">The `HideModuleName` attribute ensures that IntelliSense will not display the module name when it displays the members of the `My` namespace.</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&3;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
   
- 若要将成员添加到`My`命名空间，请根据需要向模块添加属性。 每个属性添加到`My`命名空间中，添加类型的私有字段`ThreadSafeObjectProvider(Of T)`，其中类型是由自定义属性返回的类型。 此字段用于创建线程安全对象实例的属性通过调用返回`GetInstance`方法。 因此，每个线程都访问扩展的属性接收自己的返回类型的实例。 下面的示例添加一个名为属性`SampleExtension`类型的指针`SampleExtension`到`My`命名空间︰  
+ <span data-ttu-id="f4c84-142">将成员添加到`My`命名空间，根据需要向模块添加属性。</span><span class="sxs-lookup"><span data-stu-id="f4c84-142">To add members to the `My` namespace, add properties as needed to the module.</span></span> <span data-ttu-id="f4c84-143">每个属性添加到`My`命名空间中，添加类型的私有字段`ThreadSafeObjectProvider(Of T)`，其中的类型是返回自定义属性的类型。</span><span class="sxs-lookup"><span data-stu-id="f4c84-143">For each property added to the `My` namespace, add a private field of type `ThreadSafeObjectProvider(Of T)`, where the type is the type returned by your custom property.</span></span> <span data-ttu-id="f4c84-144">使用此字段来创建线程安全对象实例返回的属性，通过调用`GetInstance`方法。</span><span class="sxs-lookup"><span data-stu-id="f4c84-144">This field is used to create thread-safe object instances to be returned by the property by calling the `GetInstance` method.</span></span> <span data-ttu-id="f4c84-145">因此，每个线程访问扩展的属性接收自己的返回类型的实例。</span><span class="sxs-lookup"><span data-stu-id="f4c84-145">As a result, each thread that is accessing the extended property receives its own instance of the returned type.</span></span> <span data-ttu-id="f4c84-146">下面的示例添加名为的属性`SampleExtension`类型`SampleExtension`到`My`命名空间：</span><span class="sxs-lookup"><span data-stu-id="f4c84-146">The following example adds a property named `SampleExtension` that is of type `SampleExtension` to the `My` namespace:</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&4;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
   
-##  <a name="addingevents"></a>将事件添加到自定义 My 对象  
- 您可以使用`My.Application`对象公开您的自定义事件`My`对象通过扩展`MyApplication`分部类中的`My`命名空间。 对于基于 Windows 的项目，您可以双击**我的项目**中为你的项目中的节点**解决方案资源管理器**。 在 Visual Basic 中**项目设计器**，请单击`Application`选项卡，然后单击`View Application Events`按钮。 将创建名为 ApplicationEvents.vb 一个新文件。 它包含以下代码来扩展`MyApplication`类。  
+##  <span data-ttu-id="f4c84-147"><a name="addingevents"></a>将事件添加到自定义 My 对象</span><span class="sxs-lookup"><span data-stu-id="f4c84-147"><a name="addingevents"></a> Adding Events to Custom My Objects</span></span>  
+ <span data-ttu-id="f4c84-148">你可以使用`My.Application`对象来公开您的自定义事件`My`通过扩展的对象`MyApplication`中的分部类`My`命名空间。</span><span class="sxs-lookup"><span data-stu-id="f4c84-148">You can use the `My.Application` object to expose events for your custom `My` objects by extending the `MyApplication` partial class in the `My` namespace.</span></span> <span data-ttu-id="f4c84-149">对于基于 Windows 的项目，你可以双击**我的项目**中为你的项目中的节点**解决方案资源管理器**。</span><span class="sxs-lookup"><span data-stu-id="f4c84-149">For Windows-based projects, you can double-click the **My Project** node in for your project in **Solution Explorer**.</span></span> <span data-ttu-id="f4c84-150">在 Visual Basic 中**项目设计器**，单击`Application`选项卡，然后单击`View Application Events`按钮。</span><span class="sxs-lookup"><span data-stu-id="f4c84-150">In the Visual Basic **Project Designer**, click the `Application` tab and then click the `View Application Events` button.</span></span> <span data-ttu-id="f4c84-151">将创建名为 ApplicationEvents.vb 一个新文件。</span><span class="sxs-lookup"><span data-stu-id="f4c84-151">A new file that is named ApplicationEvents.vb will be created.</span></span> <span data-ttu-id="f4c84-152">它包含以下代码用于扩展`MyApplication`类。</span><span class="sxs-lookup"><span data-stu-id="f4c84-152">It contains the following code for extending the `MyApplication` class.</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&5;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
   
- 您可以为您的自定义添加事件处理程序`My`对象添加到自定义的事件处理程序`MyApplication`类。 自定义事件让您可以添加一个事件处理程序添加、 移除或引发该事件时将执行的代码。 请注意，`AddHandler`代码用于自定义事件而添加了对事件进行处理的用户代码的情况下，才会运行。 例如，考虑`SampleExtension`上一节中的对象具有`Load`您想要添加的自定义事件处理程序的事件。 下面的代码示例显示名为自定义事件处理程序`SampleExtensionLoad`将时调用`My.SampleExtension.Load`事件发生。 当添加代码来处理新`My.SampleExtensionLoad`事件，`AddHandler`执行此自定义事件代码的一部分。 `MyApplication_SampleExtensionLoad`方法包含在要展示一个示例处理一个事件处理程序的代码示例`My.SampleExtensionLoad`事件。 请注意，`SampleExtensionLoad`选择时，可以使用事件**我的应用程序事件**在左侧的下拉列表在代码编辑器上方时您正在编辑 ApplicationEvents.vb 文件的选项。  
+ <span data-ttu-id="f4c84-153">你可以为您的自定义添加事件处理程序`My`对象添加到的自定义事件处理程序`MyApplication`类。</span><span class="sxs-lookup"><span data-stu-id="f4c84-153">You can add event handlers for your custom `My` objects by adding custom event handlers to the `MyApplication` class.</span></span> <span data-ttu-id="f4c84-154">自定义事件，可以添加将在事件处理程序添加、 删除或引发该事件时执行的代码。</span><span class="sxs-lookup"><span data-stu-id="f4c84-154">Custom events enable you to add code that will execute when an event handler is added, removed, or the event is raised.</span></span> <span data-ttu-id="f4c84-155">请注意，`AddHandler`代码用于自定义事件而添加了对事件进行处理的用户代码的情况下，才会运行。</span><span class="sxs-lookup"><span data-stu-id="f4c84-155">Note that the `AddHandler` code for a custom event runs only if code is added by a user to handle the event.</span></span> <span data-ttu-id="f4c84-156">例如，考虑，`SampleExtension`前一部分中的对象具有`Load`你想要添加的自定义事件处理程序的事件。</span><span class="sxs-lookup"><span data-stu-id="f4c84-156">For example, consider that the `SampleExtension` object from the previous section has a `Load` event that you want to add a custom event handler for.</span></span> <span data-ttu-id="f4c84-157">下面的代码示例演示一个名为的自定义事件处理程序`SampleExtensionLoad`将时调用`My.SampleExtension.Load`事件发生。</span><span class="sxs-lookup"><span data-stu-id="f4c84-157">The following code example shows a custom event handler named `SampleExtensionLoad` that will be invoked when the `My.SampleExtension.Load` event occurs.</span></span> <span data-ttu-id="f4c84-158">当添加代码以处理新`My.SampleExtensionLoad`事件，`AddHandler`执行此自定义事件代码的一部分。</span><span class="sxs-lookup"><span data-stu-id="f4c84-158">When code is added to handle the new `My.SampleExtensionLoad` event, the `AddHandler` part of this custom event code is executed.</span></span> <span data-ttu-id="f4c84-159">`MyApplication_SampleExtensionLoad`方法包含在代码示例中显示的事件处理程序处理的示例`My.SampleExtensionLoad`事件。</span><span class="sxs-lookup"><span data-stu-id="f4c84-159">The `MyApplication_SampleExtensionLoad` method is included in the code example to show an example of an event handler that handles the `My.SampleExtensionLoad` event.</span></span> <span data-ttu-id="f4c84-160">请注意，`SampleExtensionLoad`选择时，将可事件**我的应用程序事件**在左侧的下拉列表在代码编辑器上方时编辑 ApplicationEvents.vb 文件的选项。</span><span class="sxs-lookup"><span data-stu-id="f4c84-160">Note that the `SampleExtensionLoad` event will be available when you select the **My Application Events** option in the left drop-down list above the Code Editor when you are editing the ApplicationEvents.vb file.</span></span>  
   
- [!code-vb[VbVbcnExtendingMy #&6;](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
   
-##  <a name="design"></a>设计指南  
- 当您开发的扩展`My`命名空间中，使用以下准则来帮助您扩展组件的维护成本降至最低。  
+##  <span data-ttu-id="f4c84-161"><a name="design"></a>设计准则</span><span class="sxs-lookup"><span data-stu-id="f4c84-161"><a name="design"></a> Design Guidelines</span></span>  
+ <span data-ttu-id="f4c84-162">当你开发扩展`My`命名空间，使用以下准则来帮助你扩展组件的维护成本降到最低。</span><span class="sxs-lookup"><span data-stu-id="f4c84-162">When you develop extensions to the `My` namespace, use the following guidelines to help minimize the maintenance costs of your extension components.</span></span>  
   
--   **包括仅扩展逻辑。** 中包含的逻辑`My`命名空间扩展应包括只公开中的所需的功能所需的代码`My`命名空间。 由于您的扩展插件将以源代码形式驻留在用户项目中，更新扩展组件所产生的高额的维护开销，并应尽可能避免使用。  
+-   <span data-ttu-id="f4c84-163">**包括仅扩展逻辑。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-163">**Include only the extension logic.**</span></span> <span data-ttu-id="f4c84-164">中包含的逻辑`My`命名空间扩展应包括仅公开中所需的功能所需的代码`My`命名空间。</span><span class="sxs-lookup"><span data-stu-id="f4c84-164">The logic included in the `My` namespace extension should include only the code that is needed to expose the required functionality in the `My` namespace.</span></span> <span data-ttu-id="f4c84-165">因为你的扩展将驻留在用户项目中以源代码的形式，更新扩展组件会产生高昂的维护成本，并且应尽可能避免。</span><span class="sxs-lookup"><span data-stu-id="f4c84-165">Because your extension will reside in user projects as source code, updating the extension component incurs a high maintenance cost and should be avoided if possible.</span></span>  
   
--   **最小化项目假设。** 当您创建您的扩展的`My`命名空间中，不会假定引用、 导入项目级别或特定的编译器设置一组 (例如，`Option Strict`关闭)。 相反，最小化依赖项，则通过使用完全限定类型的所有引用`Global`关键字。 此外，请确保编译扩展时，`Option Strict`上以最大程度减少扩展中的错误。  
+-   <span data-ttu-id="f4c84-166">**最小化项目假设。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-166">**Minimize project assumptions.**</span></span> <span data-ttu-id="f4c84-167">当你创建你的扩展的`My`命名空间，不会假定一组引用，项目级导入或特定的编译器设置 (例如，`Option Strict`关闭)。</span><span class="sxs-lookup"><span data-stu-id="f4c84-167">When you create your extensions of the `My` namespace, do not assume a set of references, project-level imports, or specific compiler settings (for example, `Option Strict` off).</span></span> <span data-ttu-id="f4c84-168">相反，最小化依赖项和完全限定使用的所有类型引用`Global`关键字。</span><span class="sxs-lookup"><span data-stu-id="f4c84-168">Instead, minimize dependencies and fully qualify all type references by using the `Global` keyword.</span></span> <span data-ttu-id="f4c84-169">此外，请确保使用编译扩展`Option Strict`在为了尽量减少在扩展中的错误。</span><span class="sxs-lookup"><span data-stu-id="f4c84-169">Also, ensure that the extension compiles with `Option Strict` on to minimize errors in the extension.</span></span>  
   
--   **隔离的扩展插件代码。** 将代码放在一个文件使您的扩展插件为 Visual Studio 项目模板可以方便地部署。 有关详细信息，请参阅本主题后面的"打包和部署扩展"。 放置所有`My`单个文件中的命名空间扩展代码或在项目中一个单独的文件夹还有助于用户查找`My`命名空间扩展。  
+-   <span data-ttu-id="f4c84-170">**隔离的扩展代码。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-170">**Isolate the extension code.**</span></span> <span data-ttu-id="f4c84-171">将代码放置在单个文件可以与 Visual Studio 项模板可以方便地部署你的扩展。</span><span class="sxs-lookup"><span data-stu-id="f4c84-171">Placing the code in a single file makes your extension easily deployable as a Visual Studio item template.</span></span> <span data-ttu-id="f4c84-172">有关详细信息，请参阅本主题后面的"打包和部署扩展"。</span><span class="sxs-lookup"><span data-stu-id="f4c84-172">For more information, see "Packaging and Deploying Extensions" later in this topic.</span></span> <span data-ttu-id="f4c84-173">放置所有`My`单个文件中的命名空间扩展代码或单独的文件夹在项目中还有助于用户查找`My`命名空间扩展。</span><span class="sxs-lookup"><span data-stu-id="f4c84-173">Placing all the `My` namespace extension code in a single file or a separate folder in a project will also help users locate the `My` namespace extension.</span></span>  
   
-##  <a name="designing"></a>设计的类库我  
- 对于多数对象模型的情况一样，一些设计模式适用于`My`命名空间和其他人不这样做。 当设计的扩展`My`命名空间，请考虑以下原则︰  
+##  <span data-ttu-id="f4c84-174"><a name="designing"></a>设计的类库我</span><span class="sxs-lookup"><span data-stu-id="f4c84-174"><a name="designing"></a> Designing Class Libraries for My</span></span>  
+ <span data-ttu-id="f4c84-175">对于大多数对象模型的情况一样，一些设计模式适用于`My`命名空间和其他不这样做。</span><span class="sxs-lookup"><span data-stu-id="f4c84-175">As is the case with most object models, some design patterns work well in the `My` namespace and others do not.</span></span> <span data-ttu-id="f4c84-176">设计的扩展时`My`命名空间，请考虑以下原则：</span><span class="sxs-lookup"><span data-stu-id="f4c84-176">When designing an extension to the `My` namespace, consider the following principles:</span></span>  
   
--   **无状态方法。** 中的方法`My`命名空间应提供某项特定任务的完整解决方案。 确保传递给方法的参数值提供了完成特定任务所需的所有输入。 应避免创建依赖于以前的状态，如对资源的打开连接的方法。  
+-   <span data-ttu-id="f4c84-177">**无状态方法。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-177">**Stateless methods.**</span></span> <span data-ttu-id="f4c84-178">中的方法`My`命名空间应提供特定任务的完整解决方案。</span><span class="sxs-lookup"><span data-stu-id="f4c84-178">Methods in the `My` namespace should provide a complete solution to a specific task.</span></span> <span data-ttu-id="f4c84-179">确保传递给方法的参数值提供完成特定任务所需的所有输入。</span><span class="sxs-lookup"><span data-stu-id="f4c84-179">Ensure that the parameter values that are passed to the method provide all the input required to complete the particular task.</span></span> <span data-ttu-id="f4c84-180">避免创建依赖于以前的状态，如对资源的打开连接的方法。</span><span class="sxs-lookup"><span data-stu-id="f4c84-180">Avoid creating methods that rely on prior state, such as open connections to resources.</span></span>  
   
--   **全局实例。** 只有在中维护的状态`My`命名空间是全局的项目。 例如，`My.Application.Info`封装整个应用程序共享的状态。  
+-   <span data-ttu-id="f4c84-181">**全局实例。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-181">**Global instances.**</span></span> <span data-ttu-id="f4c84-182">在中维护的唯一状态`My`命名空间是全局性的项目。</span><span class="sxs-lookup"><span data-stu-id="f4c84-182">The only state that is maintained in the `My` namespace is global to the project.</span></span> <span data-ttu-id="f4c84-183">例如，`My.Application.Info`封装在整个应用程序共享的状态。</span><span class="sxs-lookup"><span data-stu-id="f4c84-183">For example, `My.Application.Info` encapsulates state that is shared throughout the application.</span></span>  
   
--   **简单参数类型。** 为简单起见通过避免复杂的参数类型。 相反，创建不采用任何参数输入的方法或执行简单的输入的类型，如字符串、 基元类型等。  
+-   <span data-ttu-id="f4c84-184">**简单的参数类型。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-184">**Simple parameter types.**</span></span> <span data-ttu-id="f4c84-185">为简单起见通过避免复杂的参数类型。</span><span class="sxs-lookup"><span data-stu-id="f4c84-185">Keep things simple by avoiding complex parameter types.</span></span> <span data-ttu-id="f4c84-186">相反，创建不采用输入任何参数的方法或它们采用简单的输入的类型，如字符串、 基元类型和等等。</span><span class="sxs-lookup"><span data-stu-id="f4c84-186">Instead, create methods that either take no parameter input or that take simple input types such as strings, primitive types, and so on.</span></span>  
   
--   **工厂方法。** 某些类型具有一定困难，若要实例化。 提供工厂方法为扩展`My`命名空间能让您更轻松地发现并使用属于此类别的类型。 最适合的工厂方法的一个示例是`My.Computer.FileSystem.OpenTextFileReader`。 .NET Framework 中有几种流类型。 具体而言，指定文本文件`OpenTextFileReader`有助于用户理解要使用的流。  
+-   <span data-ttu-id="f4c84-187">**工厂方法。**</span><span class="sxs-lookup"><span data-stu-id="f4c84-187">**Factory methods.**</span></span> <span data-ttu-id="f4c84-188">某些类型会实例化一定困难。</span><span class="sxs-lookup"><span data-stu-id="f4c84-188">Some types are necessarily difficult to instantiate.</span></span> <span data-ttu-id="f4c84-189">提供工厂方法为扩展`My`命名空间，可更轻松地发现并使用属于此类别的类型。</span><span class="sxs-lookup"><span data-stu-id="f4c84-189">Providing factory methods as extensions to the `My` namespace enables you to more easily discover and consume types that fall into this category.</span></span> <span data-ttu-id="f4c84-190">可以有效地工作的工厂方法的一个示例是`My.Computer.FileSystem.OpenTextFileReader`。</span><span class="sxs-lookup"><span data-stu-id="f4c84-190">An example of a factory method that works well is `My.Computer.FileSystem.OpenTextFileReader`.</span></span> <span data-ttu-id="f4c84-191">有几种流类型在.NET Framework 中可用。</span><span class="sxs-lookup"><span data-stu-id="f4c84-191">There are several stream types available in the .NET Framework.</span></span> <span data-ttu-id="f4c84-192">通过指定文本文件，具体而言，`OpenTextFileReader`可帮助用户了解要使用的流。</span><span class="sxs-lookup"><span data-stu-id="f4c84-192">By specifying text files specifically, the `OpenTextFileReader` helps the user understand which stream to use.</span></span>  
   
- 这些准则不会阻止常规设计原则的类库。 相反，它们是针对开发人员使用的 Visual Basic 进行了优化的建议和`My`命名空间。 创建类库的常规设计原则，请参阅[Framework 设计准则](http://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b)。  
+ <span data-ttu-id="f4c84-193">这些指南不会阻止类库的常规设计原则。</span><span class="sxs-lookup"><span data-stu-id="f4c84-193">These guidelines do not preclude general design principles for class libraries.</span></span> <span data-ttu-id="f4c84-194">相反，它们是针对开发人员正在使用 Visual Basic 进行了优化的建议和`My`命名空间。</span><span class="sxs-lookup"><span data-stu-id="f4c84-194">Rather, they are recommendations that are optimized for developers who are using Visual Basic and the `My` namespace.</span></span> <span data-ttu-id="f4c84-195">有关用于创建类库的常规设计原则，请参阅[Framework 设计准则](../../../standard/design-guidelines/index.md)。</span><span class="sxs-lookup"><span data-stu-id="f4c84-195">For general design principles for creating class libraries, see [Framework Design Guidelines](../../../standard/design-guidelines/index.md).</span></span>  
   
-##  <a name="packaging"></a>打包和部署扩展  
- 您可以包括`My`命名空间扩展 Visual Studio 项目模板，或者您可以打包您的扩展，并将它们部署为 Visual Studio 项模板。 当您打包您`My`用作 Visual Studio 项模板的命名空间扩展，您可以充分利用所提供的 Visual Basic 的其他功能。 这些功能使您能够时项目引用特定的程序集，包含扩展，或使用户可以显式添加您`My`使用的命名空间扩展**My 扩展**Visual Basic 项目设计器的页面。  
+##  <span data-ttu-id="f4c84-196"><a name="packaging"></a>打包和部署扩展</span><span class="sxs-lookup"><span data-stu-id="f4c84-196"><a name="packaging"></a> Packaging and Deploying Extensions</span></span>  
+ <span data-ttu-id="f4c84-197">可以包括`My`在 Visual Studio 项目模板，或你的命名空间扩展可以打包你的扩展，并将它们部署为 Visual Studio 项模板。</span><span class="sxs-lookup"><span data-stu-id="f4c84-197">You can include `My` namespace extensions in a Visual Studio project template, or you can package your extensions and deploy them as a Visual Studio item template.</span></span> <span data-ttu-id="f4c84-198">当包你`My`与 Visual Studio 项模板的命名空间扩展，你可以充分利用所提供的 Visual Basic 的其他功能。</span><span class="sxs-lookup"><span data-stu-id="f4c84-198">When you package your `My` namespace extensions as a Visual Studio item template, you can take advantage of additional capabilities provided by Visual Basic.</span></span> <span data-ttu-id="f4c84-199">这些功能使您能够时项目引用特定程序集，包含扩展或启用用户显式添加你`My`使用的命名空间扩展**My 扩展**Visual Basic 的页项目设计器。</span><span class="sxs-lookup"><span data-stu-id="f4c84-199">These capabilities enable you to include an extension when a project references a particular assembly, or enable users to explicitly add your `My` namespace extension by using the **My Extensions** page of the Visual Basic Project Designer.</span></span>  
   
- 有关如何部署的详细信息`My`命名空间的扩展，请参阅[打包和部署自定义 My 扩展](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)。  
+ <span data-ttu-id="f4c84-200">有关如何部署的详细信息`My`命名空间的扩展，请参阅[打包和部署自定义 My 扩展](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)。</span><span class="sxs-lookup"><span data-stu-id="f4c84-200">For details about how to deploy `My` namespace extensions, see [Packaging and Deploying Custom My Extensions](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [打包和部署自定义 My 扩展](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)   
- [扩展 Visual Basic 应用程序模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)   
- [自定义的对象都将在我](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)   
- [My 扩展页项目设计器](https://docs.microsoft.com/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)   
- [应用程序页、项目设计器 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)
+## <a name="see-also"></a><span data-ttu-id="f4c84-201">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f4c84-201">See Also</span></span>  
+ [<span data-ttu-id="f4c84-202">打包和部署自定义 My 扩展</span><span class="sxs-lookup"><span data-stu-id="f4c84-202">Packaging and Deploying Custom My Extensions</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
+ [<span data-ttu-id="f4c84-203">扩展 Visual Basic 应用程序模型</span><span class="sxs-lookup"><span data-stu-id="f4c84-203">Extending the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
+ [<span data-ttu-id="f4c84-204">自定义 My 中可用的对象</span><span class="sxs-lookup"><span data-stu-id="f4c84-204">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [<span data-ttu-id="f4c84-205">My 扩展页，项目设计器</span><span class="sxs-lookup"><span data-stu-id="f4c84-205">My Extensions Page, Project Designer</span></span>](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)  
+ [<span data-ttu-id="f4c84-206">“项目设计器”->“应用程序”页 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4c84-206">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [<span data-ttu-id="f4c84-207">Partial</span><span class="sxs-lookup"><span data-stu-id="f4c84-207">Partial</span></span>](../../../visual-basic/language-reference/modifiers/partial.md)

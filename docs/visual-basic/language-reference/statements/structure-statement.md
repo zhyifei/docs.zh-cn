@@ -1,126 +1,124 @@
 ---
-title: "Structure 语句 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Structure"
-  - "Structure"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "复合数据类型"
-  - "Structure 关键字"
-  - "Structure 语句"
-  - "类型 [Visual Basic], 用户定义的"
-  - "UDT（用户定义的类型）"
-  - "用户定义的类型, Structure 语句"
+title: "Structure 语句"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Structure
+- Structure
+helpviewer_keywords:
+- user-defined types [Visual Basic], Structure statement
+- compound data types [Visual Basic]
+- Structure keyword [Visual Basic]
+- Structure statement [Visual Basic]
+- UDT (user-defined types)
+- types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Structure 语句
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-声明结构的名称，并引入结构包含的变量、属性、事件和过程的定义。  
+# <a name="structure-statement"></a><span data-ttu-id="af0b4-102">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-102">Structure Statement</span></span>
+<span data-ttu-id="af0b4-103">声明结构的名称，并引入的变量、 属性、 事件和结构包含的过程的定义。</span><span class="sxs-lookup"><span data-stu-id="af0b4-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="af0b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="af0b4-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
-Structure name [ ( Of typelist ) ]  
-    [ Implements interfacenames ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
+Structure name [ ( Of typelist ) ]  
+    [ Implements interfacenames ]  
     [ datamemberdeclarations ]  
-    [ methodmemberdeclarations ]  
+    [ methodmemberdeclarations ]  
 End Structure  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="af0b4-105">部件</span><span class="sxs-lookup"><span data-stu-id="af0b4-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`attributelist`|可选。  请参见[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|可选。  可以是如下内容之一：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|可选。  请参见 [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`Partial`|可选。  指示结构的分部定义。  请参见 [分部](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必需。  此结构的名称。  请参见 [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|可选。  指定这是一个泛型结构。|  
-|`typelist`|如果使用 [Of](../../../visual-basic/language-reference/statements/of-clause.md) 关键字，则为必选项。  此结构的类型参数列表。  请参见[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Implements`|可选。  指示此结构实现一个或多个接口成员。  请参见 [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
-|`interfacenames`|如果使用 `Implements` 语句，则为必选项。  此结构实现的接口的名称。|  
-|`datamemberdeclarations`|必需。  一个或多个 `Const`、`Dim`、`Enum` 或 `Event` 语句声明结构的数据成员。|  
-|`methodmemberdeclarations`|可选。  作为结构的方法成员的零个或多个 `Function`、`Operator`、`Property` 或 `Sub` 过程的声明。|  
-|`End Structure`|必需。  终止 `Structure` 定义。|  
+|<span data-ttu-id="af0b4-106">术语</span><span class="sxs-lookup"><span data-stu-id="af0b4-106">Term</span></span>|<span data-ttu-id="af0b4-107">定义</span><span class="sxs-lookup"><span data-stu-id="af0b4-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="af0b4-108">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-108">Optional.</span></span> <span data-ttu-id="af0b4-109">请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="af0b4-110">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-110">Optional.</span></span> <span data-ttu-id="af0b4-111">可以是以下各项之一：</span><span class="sxs-lookup"><span data-stu-id="af0b4-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="af0b4-112">-   [公共](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="af0b4-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="af0b4-113">-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="af0b4-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="af0b4-114">-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="af0b4-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="af0b4-115">-   [私有](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="af0b4-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="af0b4-116">请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="af0b4-117">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-117">Optional.</span></span> <span data-ttu-id="af0b4-118">请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`Partial`|<span data-ttu-id="af0b4-119">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-119">Optional.</span></span> <span data-ttu-id="af0b4-120">指示结构的部分定义。</span><span class="sxs-lookup"><span data-stu-id="af0b4-120">Indicates a partial definition of the structure.</span></span> <span data-ttu-id="af0b4-121">请参阅[部分](../../../visual-basic/language-reference/modifiers/partial.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-121">See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).</span></span>|  
+|`name`|<span data-ttu-id="af0b4-122">必需。</span><span class="sxs-lookup"><span data-stu-id="af0b4-122">Required.</span></span> <span data-ttu-id="af0b4-123">此结构的名称。</span><span class="sxs-lookup"><span data-stu-id="af0b4-123">Name of this structure.</span></span> <span data-ttu-id="af0b4-124">请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-124">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="af0b4-125">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-125">Optional.</span></span> <span data-ttu-id="af0b4-126">指定这是泛型的结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-126">Specifies that this is a generic structure.</span></span>|  
+|`typelist`|<span data-ttu-id="af0b4-127">如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="af0b4-127">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="af0b4-128">此结构的类型参数的列表。</span><span class="sxs-lookup"><span data-stu-id="af0b4-128">List of type parameters for this structure.</span></span> <span data-ttu-id="af0b4-129">请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-129">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Implements`|<span data-ttu-id="af0b4-130">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-130">Optional.</span></span> <span data-ttu-id="af0b4-131">指示此结构实现一个或多个接口的成员。</span><span class="sxs-lookup"><span data-stu-id="af0b4-131">Indicates that this structure implements the members of one or more interfaces.</span></span> <span data-ttu-id="af0b4-132">请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-132">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="af0b4-133">如果你使用是必需的`Implements`语句。</span><span class="sxs-lookup"><span data-stu-id="af0b4-133">Required if you use the `Implements` statement.</span></span> <span data-ttu-id="af0b4-134">此结构实现的接口的名称。</span><span class="sxs-lookup"><span data-stu-id="af0b4-134">The names of the interfaces this structure implements.</span></span>|  
+|`datamemberdeclarations`|<span data-ttu-id="af0b4-135">必需。</span><span class="sxs-lookup"><span data-stu-id="af0b4-135">Required.</span></span> <span data-ttu-id="af0b4-136">零个或多`Const`， `Dim`， `Enum`，或`Event`语句声明*数据成员*的结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-136">Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.</span></span>|  
+|`methodmemberdeclarations`|<span data-ttu-id="af0b4-137">可选。</span><span class="sxs-lookup"><span data-stu-id="af0b4-137">Optional.</span></span> <span data-ttu-id="af0b4-138">零个或多个声明的`Function`， `Operator`， `Property`，或`Sub`过程，充当*方法成员*的结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-138">Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.</span></span>|  
+|`End Structure`|<span data-ttu-id="af0b4-139">必需。</span><span class="sxs-lookup"><span data-stu-id="af0b4-139">Required.</span></span> <span data-ttu-id="af0b4-140">终止`Structure`定义。</span><span class="sxs-lookup"><span data-stu-id="af0b4-140">Terminates the `Structure` definition.</span></span>|  
   
-## 备注  
- `Structure` 语句定义一种您可以自定义的复合值类型。  “结构”是 Visual Basic 早期版本的用户定义类型 \(UDT\) 的泛化。  有关详细信息，请参阅[结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
+## <a name="remarks"></a><span data-ttu-id="af0b4-141">备注</span><span class="sxs-lookup"><span data-stu-id="af0b4-141">Remarks</span></span>  
+ <span data-ttu-id="af0b4-142">`Structure`语句定义你可以自定义的复合值类型。</span><span class="sxs-lookup"><span data-stu-id="af0b4-142">The `Structure` statement defines a composite value type that you can customize.</span></span> <span data-ttu-id="af0b4-143">A*结构*是用户定义的类型 (UDT) 的 Visual Basic 早期版本的泛化。</span><span class="sxs-lookup"><span data-stu-id="af0b4-143">A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic.</span></span> <span data-ttu-id="af0b4-144">有关详细信息，请参阅[结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-144">For more information, see [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md).</span></span>  
   
- 结构支持的许多功能与类支持的一样。  例如，结构可以拥有属性和过程，可以实现接口，也可以拥有参数化的构造函数。  但是，在某些地方（例如继承、声明和用法）结构和类之间存在着重大的差异。  而且，类是引用类型，而结构是值类型。  有关详细信息，请参阅[结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。  
+ <span data-ttu-id="af0b4-145">结构支持许多与类相同的功能。</span><span class="sxs-lookup"><span data-stu-id="af0b4-145">Structures support many of the same features as classes.</span></span> <span data-ttu-id="af0b4-146">例如，结构可以具有属性和过程，它们可以实现接口，并且也可以拥有参数化构造函数。</span><span class="sxs-lookup"><span data-stu-id="af0b4-146">For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors.</span></span> <span data-ttu-id="af0b4-147">但是，有之间结构和类诸如继承、 声明和使用情况方面的重大差异。</span><span class="sxs-lookup"><span data-stu-id="af0b4-147">However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage.</span></span> <span data-ttu-id="af0b4-148">此外，类是引用类型和结构是值类型。</span><span class="sxs-lookup"><span data-stu-id="af0b4-148">Also, classes are reference types and structures are value types.</span></span> <span data-ttu-id="af0b4-149">有关详细信息，请参阅[结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-149">For more information, see [Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).</span></span>  
   
- 您只能在命名空间或模块级别使用 `Structure`。  这意味着结构的声明上下文必须是源文件、命名空间、类、结构、模块或接口，不能是过程或块。  有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
+ <span data-ttu-id="af0b4-150">你可以使用`Structure`只能在命名空间或模块级别。</span><span class="sxs-lookup"><span data-stu-id="af0b4-150">You can use `Structure` only at namespace or module level.</span></span> <span data-ttu-id="af0b4-151">这意味着*声明上下文*结构必须为源文件、 命名空间、 类、 结构、 模块或接口，并且不能为过程或块。</span><span class="sxs-lookup"><span data-stu-id="af0b4-151">This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="af0b4-152">有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-152">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 结构默认为 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 访问级别。  可以使用访问修饰符来调整它们的访问级别。  有关详细信息，请参阅[Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+ <span data-ttu-id="af0b4-153">结构默认为[友元](../../../visual-basic/language-reference/modifiers/friend.md)访问。</span><span class="sxs-lookup"><span data-stu-id="af0b4-153">Structures default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="af0b4-154">你可以调整其访问级别有访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="af0b4-154">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="af0b4-155">有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-155">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="af0b4-156">规则</span><span class="sxs-lookup"><span data-stu-id="af0b4-156">Rules</span></span>  
   
--   **嵌套。**可以在一个结构中定义另一个结构。  外部结构称为“包含结构”，而内部结构称为“嵌套结构”。  但是，无法通过包含结构来访问嵌套结构的成员，  而是必须声明一个嵌套结构的数据类型的变量。  
+-   <span data-ttu-id="af0b4-157">**嵌套。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-157">**Nesting.**</span></span> <span data-ttu-id="af0b4-158">你可以定义在另一个结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-158">You can define one structure within another.</span></span> <span data-ttu-id="af0b4-159">外部结构称为*包含结构*，和的内部结构称为*嵌套结构*。</span><span class="sxs-lookup"><span data-stu-id="af0b4-159">The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*.</span></span> <span data-ttu-id="af0b4-160">但是，你无法访问通过包含结构的嵌套的结构的成员。</span><span class="sxs-lookup"><span data-stu-id="af0b4-160">However, you cannot access a nested structure's members through the containing structure.</span></span> <span data-ttu-id="af0b4-161">相反，您必须声明嵌套的结构的数据类型的变量。</span><span class="sxs-lookup"><span data-stu-id="af0b4-161">Instead, you must declare a variable of the nested structure's data type.</span></span>  
   
--   **成员声明。**必须声明结构的每个成员。  由于无法从结构中继承任何内容，因此结构成员不能是 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 或 `Protected Friend`。  但是，结构本身可以是 `Protected` 或 `Protected Friend`。  
+-   <span data-ttu-id="af0b4-162">**成员声明。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-162">**Member Declaration.**</span></span> <span data-ttu-id="af0b4-163">必须声明一个结构的每个成员。</span><span class="sxs-lookup"><span data-stu-id="af0b4-163">You must declare every member of a structure.</span></span> <span data-ttu-id="af0b4-164">结构成员不能为[受保护](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`因为执行任何操作可以继承一个结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-164">A structure member cannot be [Protected](../../../visual-basic/language-reference/modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure.</span></span> <span data-ttu-id="af0b4-165">结构本身，但是，可以是`Protected`或`Protected Friend`。</span><span class="sxs-lookup"><span data-stu-id="af0b4-165">The structure itself, however, can be `Protected` or `Protected Friend`.</span></span>  
   
-     可以声明零个或多个非共享变量或非共享、非自定义的结构事件。  在结构中不能只包含常数、属性和过程，即使某些成员是非共享的。  
+     <span data-ttu-id="af0b4-166">您可以在结构中声明零个以上的非共享变量或非共享、非自定义的事件。</span><span class="sxs-lookup"><span data-stu-id="af0b4-166">You can declare zero or more nonshared variables or nonshared, noncustom events in a structure.</span></span> <span data-ttu-id="af0b4-167">你不能具有仅常量、 属性和过程，即使其中一些非共享。</span><span class="sxs-lookup"><span data-stu-id="af0b4-167">You cannot have only constants, properties, and procedures, even if some of them are nonshared.</span></span>  
   
--   **初始化。**不能将结构的任何非共享数据成员的值初始化成其声明的一部分。  必须通过结构上参数化的构造函数初始化此类数据成员，或者在创建了该结构的实例后将值赋给该成员。  
+-   <span data-ttu-id="af0b4-168">**初始化。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-168">**Initialization.**</span></span> <span data-ttu-id="af0b4-169">无法初始化结构用作其声明的一部分的任何非共享的数据成员的值。</span><span class="sxs-lookup"><span data-stu-id="af0b4-169">You cannot initialize the value of any nonshared data member of a structure as part of its declaration.</span></span> <span data-ttu-id="af0b4-170">必须通过对结构中，参数化构造函数初始化此类数据成员，也可以创建结构的一个实例后，将值分配给的成员。</span><span class="sxs-lookup"><span data-stu-id="af0b4-170">You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.</span></span>  
   
--   **继承。**结构无法从除 <xref:System.ValueType>（所有结构均从它继承）外的任何类型继承。  特别地，一个结构无法从另一个结构继承。  
+-   <span data-ttu-id="af0b4-171">**继承。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-171">**Inheritance.**</span></span> <span data-ttu-id="af0b4-172">而不从任何类型继承结构，不能<xref:System.ValueType>，从所有结构都继承的。</span><span class="sxs-lookup"><span data-stu-id="af0b4-172">A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit.</span></span> <span data-ttu-id="af0b4-173">具体而言，一个结构无法从另一个继承。</span><span class="sxs-lookup"><span data-stu-id="af0b4-173">In particular, one structure cannot inherit from another.</span></span>  
   
-     无法在结构定义中使用 [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，即使是指定 <xref:System.ValueType> 亦为如此。  
+     <span data-ttu-id="af0b4-174">不能使用[继承语句](../../../visual-basic/language-reference/statements/inherits-statement.md)在结构定义中，即使指定<xref:System.ValueType>。</span><span class="sxs-lookup"><span data-stu-id="af0b4-174">You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.</span></span>  
   
--   **实现。**如果结构使用 [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现您在 `interfacenames` 中指定的每个接口所定义的每个成员。  
+-   <span data-ttu-id="af0b4-175">**实现。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-175">**Implementation.**</span></span> <span data-ttu-id="af0b4-176">如果结构使用[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现每个成员由指定在每个接口定义`interfacenames`。</span><span class="sxs-lookup"><span data-stu-id="af0b4-176">If the structure uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.</span></span>  
   
--   **默认属性。**一个结构至多可以指定一个属性作为其默认属性（通过使用 [Default](../../../visual-basic/language-reference/modifiers/default.md) 修饰符）。  有关详细信息，请参阅[Default](../../../visual-basic/language-reference/modifiers/default.md)。  
+-   <span data-ttu-id="af0b4-177">**默认属性。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-177">**Default Property.**</span></span> <span data-ttu-id="af0b4-178">结构可以指定最多一个属性作为其*默认属性*，使用[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符。</span><span class="sxs-lookup"><span data-stu-id="af0b4-178">A structure can specify at most one property as its *default property*, using the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.</span></span> <span data-ttu-id="af0b4-179">有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-179">For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-## 行为  
+## <a name="behavior"></a><span data-ttu-id="af0b4-180">行为</span><span class="sxs-lookup"><span data-stu-id="af0b4-180">Behavior</span></span>  
   
--   **访问级别。**在结构中，可以利用成员自己的访问级别来声明每个成员。  所有结构成员均默认为 [Public](../../../visual-basic/language-reference/modifiers/public.md) 访问级别。  请注意，如果结构本身具有限制性更高的访问级别，这会自动限制对其成员的访问，即使您使用访问修饰符来调整其成员的访问级别也是如此。  
+-   <span data-ttu-id="af0b4-181">**访问级别。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-181">**Access Level.**</span></span> <span data-ttu-id="af0b4-182">结构中，你可以声明每个成员使用其自己的访问级别。</span><span class="sxs-lookup"><span data-stu-id="af0b4-182">Within a structure, you can declare each member with its own access level.</span></span> <span data-ttu-id="af0b4-183">所有的结构成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。</span><span class="sxs-lookup"><span data-stu-id="af0b4-183">All structure members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span> <span data-ttu-id="af0b4-184">请注意，是否结构本身的更受限制的访问级别，这会自动限制的访问权限的成员，即使你调整其访问级别有访问修饰符。</span><span class="sxs-lookup"><span data-stu-id="af0b4-184">Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.</span></span>  
   
--   **范围。**结构的范围贯穿它的包含命名空间、类、结构或模块。  
+-   <span data-ttu-id="af0b4-185">**作用域。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-185">**Scope.**</span></span> <span data-ttu-id="af0b4-186">结构是在其包含的命名空间、 类、 结构或模块整个范围内。</span><span class="sxs-lookup"><span data-stu-id="af0b4-186">A structure is in scope throughout its containing namespace, class, structure, or module.</span></span>  
   
-     结构成员的范围是整个结构。  
+     <span data-ttu-id="af0b4-187">每个结构成员的作用域是整个结构。</span><span class="sxs-lookup"><span data-stu-id="af0b4-187">The scope of every structure member is the entire structure.</span></span>  
   
--   **生存期。**结构本身没有生存期。  相反，结构的每个实例具有独立于所有其他实例的生存期。  
+-   <span data-ttu-id="af0b4-188">**生存期。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-188">**Lifetime.**</span></span> <span data-ttu-id="af0b4-189">一个结构本身没有生存期。</span><span class="sxs-lookup"><span data-stu-id="af0b4-189">A structure does not itself have a lifetime.</span></span> <span data-ttu-id="af0b4-190">相反，该结构的每个实例都拥有独立于所有其他实例的生存期。</span><span class="sxs-lookup"><span data-stu-id="af0b4-190">Rather, each instance of that structure has a lifetime independent of all other instances.</span></span>  
   
-     实例的生存期在它由 [New 运算符](../../../visual-basic/language-reference/operators/new-operator.md) 子句创建时开始，  并在保存实例的变量的生存期结束时结束。  
+     <span data-ttu-id="af0b4-191">实例的生存期内开始通过创建时[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)子句。</span><span class="sxs-lookup"><span data-stu-id="af0b4-191">The lifetime of an instance begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause.</span></span> <span data-ttu-id="af0b4-192">包含变量的生存期结束时结束。</span><span class="sxs-lookup"><span data-stu-id="af0b4-192">It ends when the lifetime of the variable that holds it ends.</span></span>  
   
-     无法延长结构实例的生存期。  模块提供了近似的静态结构功能。  有关详细信息，请参阅[Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)。  
+     <span data-ttu-id="af0b4-193">不能扩展结构实例的生存期。</span><span class="sxs-lookup"><span data-stu-id="af0b4-193">You cannot extend the lifetime of a structure instance.</span></span> <span data-ttu-id="af0b4-194">由模块提供了近似的静态结构功能。</span><span class="sxs-lookup"><span data-stu-id="af0b4-194">An approximation to static structure functionality is provided by a module.</span></span> <span data-ttu-id="af0b4-195">有关详细信息，请参阅[模块语句](../../../visual-basic/language-reference/statements/module-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-195">For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-     结构成员具有由如何以及在哪里声明它们决定的生存期。  有关更多信息，请参见[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md) 中的“生存期”。  
+     <span data-ttu-id="af0b4-196">结构成员具有具体取决于如何以及在何处声明它们的生存期。</span><span class="sxs-lookup"><span data-stu-id="af0b4-196">Structure members have lifetimes depending on how and where they are declared.</span></span> <span data-ttu-id="af0b4-197">有关详细信息，请参阅"生存期"[类语句](../../../visual-basic/language-reference/statements/class-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-197">For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
   
--   **限定。**结构外的代码必须用结构的名称来限定成员的名称。  
+-   <span data-ttu-id="af0b4-198">**限定。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-198">**Qualification.**</span></span> <span data-ttu-id="af0b4-199">结构外的代码必须限定该结构同名的成员的名称。</span><span class="sxs-lookup"><span data-stu-id="af0b4-199">Code outside a structure must qualify a member's name with the name of that structure.</span></span>  
   
-     如果嵌套结构外的代码以非限定的方式引用某个编程元素，则 Visual Basic 会按此顺序搜索该元素：先在嵌套结构中搜索，然后在其包含结构中搜索，依此类推，一直到最外部的包含元素。  有关详细信息，请参阅[对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+     <span data-ttu-id="af0b4-200">如果嵌套的结构内的代码进行到编程元素中的非限定的引用，Visual Basic 首先搜索搜索元素在嵌套结构中，然后在其包含的结构，依次类推到最外层包含元素。</span><span class="sxs-lookup"><span data-stu-id="af0b4-200">If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element.</span></span> <span data-ttu-id="af0b4-201">有关详细信息，请参阅[对声明的元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。</span><span class="sxs-lookup"><span data-stu-id="af0b4-201">For more information, see [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
--   **内存消耗。**与所有的复合数据类型一样，您无法通过将结构成员的名义存储分配相加来得到确切的总内存消耗。  此外，不能完全假定成员在内存中的存储顺序与声明的顺序相同。  如果需要控制结构的存储布局，可以对 `Structure` 语句应用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性。  
+-   <span data-ttu-id="af0b4-202">**内存消耗。**</span><span class="sxs-lookup"><span data-stu-id="af0b4-202">**Memory Consumption.**</span></span> <span data-ttu-id="af0b4-203">与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的总内存消耗。</span><span class="sxs-lookup"><span data-stu-id="af0b4-203">As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members.</span></span> <span data-ttu-id="af0b4-204">此外，不能安全地假设存储在内存中的顺序是声明的顺序相同。</span><span class="sxs-lookup"><span data-stu-id="af0b4-204">Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="af0b4-205">如果你需要控制结构的存储布局，则可以应用<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性设为`Structure`语句。</span><span class="sxs-lookup"><span data-stu-id="af0b4-205">If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.</span></span>  
   
-## 示例  
- 下面的示例使用 `Structure` 语句定义雇员的一系列相关数据。  它演示了 `Public`、`Friend` 和 `Private` 成员的用法，从而反映数据项的敏感性。  它还将显示过程、属性和事件成员。  
+## <a name="example"></a><span data-ttu-id="af0b4-206">示例</span><span class="sxs-lookup"><span data-stu-id="af0b4-206">Example</span></span>  
+ <span data-ttu-id="af0b4-207">下面的示例使用`Structure`语句以员工的定义一组相关的数据。</span><span class="sxs-lookup"><span data-stu-id="af0b4-207">The following example uses the `Structure` statement to define a set of related data for an employee.</span></span> <span data-ttu-id="af0b4-208">它演示如何使用`Public`， `Friend`，和`Private`成员以反映数据项的敏感度。</span><span class="sxs-lookup"><span data-stu-id="af0b4-208">It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items.</span></span> <span data-ttu-id="af0b4-209">它还显示过程、 属性和事件成员。</span><span class="sxs-lookup"><span data-stu-id="af0b4-209">It also shows procedure, property, and event members.</span></span>  
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## 请参阅  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)   
- [结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a><span data-ttu-id="af0b4-210">另请参阅</span><span class="sxs-lookup"><span data-stu-id="af0b4-210">See Also</span></span>  
+ [<span data-ttu-id="af0b4-211">Class 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-211">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="af0b4-212">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-212">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="af0b4-213">Module 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-213">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="af0b4-214">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-214">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="af0b4-215">Const 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-215">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="af0b4-216">Enum 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-216">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="af0b4-217">Event 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-217">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="af0b4-218">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="af0b4-218">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="af0b4-219">Property 语句</span><span class="sxs-lookup"><span data-stu-id="af0b4-219">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="af0b4-220">结构和类</span><span class="sxs-lookup"><span data-stu-id="af0b4-220">Structures and Classes</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

@@ -1,45 +1,46 @@
 ---
-title: "Windows 窗体中的鼠标指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "光标, 设置 [Windows 窗体]"
-  - "鼠标光标"
-  - "鼠标指针"
-  - "鼠标指针, 设置 [Windows 窗体]"
-  - "鼠标, 光标"
-  - "指针, 设置 [Windows 窗体]"
+title: "Windows 窗体中的鼠标指针"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pointers [Windows Forms], setting
+- mouse pointers
+- mouse cursors
+- mouse pointers [Windows Forms], setting
+- cursors [Windows Forms], setting
+- mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体中的鼠标指针
-鼠标“指针”（有时称为光标）是一幅位图，它用于在屏幕上为通过鼠标进行的用户输入指定焦点。  本主题概述 Windows 窗体中的鼠标指针，并描述修改和控制鼠标指针的一些方法。  
+# <a name="mouse-pointers-in-windows-forms"></a><span data-ttu-id="a5160-102">Windows 窗体中的鼠标指针</span><span class="sxs-lookup"><span data-stu-id="a5160-102">Mouse Pointers in Windows Forms</span></span>
+<span data-ttu-id="a5160-103">鼠标*指针*，这有时称为光标，是在用户使用鼠标的输入屏幕指定的点，焦点的位图。</span><span class="sxs-lookup"><span data-stu-id="a5160-103">The mouse *pointer*, which is sometimes referred to as the cursor, is a bitmap that specifies a focus point on the screen for user input with the mouse.</span></span> <span data-ttu-id="a5160-104">本主题提供 Windows 窗体中鼠标指针的概述，并介绍了一些方法来修改和控制鼠标指针。</span><span class="sxs-lookup"><span data-stu-id="a5160-104">This topic provides an overview of the mouse pointer in Windows Forms and describes some of the ways to modify and control the mouse pointer.</span></span>  
   
-## 访问鼠标指针  
- 鼠标指针由 <xref:System.Windows.Forms.Cursor> 类表示，并且每个 <xref:System.Windows.Forms.Control> 都有一个为该控件指定指针的 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> 属性。  <xref:System.Windows.Forms.Cursor> 类包含用于描述鼠标指针的属性（如 <xref:System.Windows.Forms.Cursor.Position%2A> 和 <xref:System.Windows.Forms.Cursor.HotSpot%2A> 属性）和可以修改鼠标指针外观的方法（如 <xref:System.Windows.Forms.Cursor.Show%2A>、<xref:System.Windows.Forms.Cursor.Hide%2A> 和 <xref:System.Windows.Forms.Cursor.DrawStretched%2A> 方法）。  
+## <a name="accessing-the-mouse-pointer"></a><span data-ttu-id="a5160-105">访问鼠标指针</span><span class="sxs-lookup"><span data-stu-id="a5160-105">Accessing the Mouse Pointer</span></span>  
+ <span data-ttu-id="a5160-106">鼠标指针表示通过<xref:System.Windows.Forms.Cursor>类，并且每个<xref:System.Windows.Forms.Control>具有<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>属性，用于指定该控件的指针。</span><span class="sxs-lookup"><span data-stu-id="a5160-106">The mouse pointer is represented by the <xref:System.Windows.Forms.Cursor> class, and each <xref:System.Windows.Forms.Control> has a <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> property that specifies the pointer for that control.</span></span> <span data-ttu-id="a5160-107"><xref:System.Windows.Forms.Cursor>类包含描述指针，如属性<xref:System.Windows.Forms.Cursor.Position%2A>和<xref:System.Windows.Forms.Cursor.HotSpot%2A>属性和方法可以修改的指针的外观，如<xref:System.Windows.Forms.Cursor.Show%2A>， <xref:System.Windows.Forms.Cursor.Hide%2A>，和<xref:System.Windows.Forms.Cursor.DrawStretched%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a5160-107">The <xref:System.Windows.Forms.Cursor> class contains properties that describe the pointer, such as the <xref:System.Windows.Forms.Cursor.Position%2A> and <xref:System.Windows.Forms.Cursor.HotSpot%2A> properties, and methods that can modify the appearance of the pointer, such as the <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, and <xref:System.Windows.Forms.Cursor.DrawStretched%2A> methods.</span></span>  
   
-## 控制鼠标指针  
- 有时，您可能希望限制鼠标指针的使用区域或希望更改鼠标位置。  您可以使用 <xref:System.Windows.Forms.Cursor> 的 <xref:System.Windows.Forms.Cursor.Position%2A> 属性来获取或设置鼠标的当前位置。  另外，通过设置 <xref:System.Windows.Forms.Cursor.Clip%2A> 属性，可以限制鼠标指针的使用区域。  默认情况下，剪辑区域是整个屏幕。  
+## <a name="controlling-the-mouse-pointer"></a><span data-ttu-id="a5160-108">控制鼠标指针</span><span class="sxs-lookup"><span data-stu-id="a5160-108">Controlling the Mouse Pointer</span></span>  
+ <span data-ttu-id="a5160-109">有时你可能想要限制在其中鼠标指针可以使用或更改鼠标位置的区域。</span><span class="sxs-lookup"><span data-stu-id="a5160-109">Sometimes you may want to limit the area in which the mouse pointer can be used or change the position the mouse.</span></span> <span data-ttu-id="a5160-110">你可以获取或设置当前位置的鼠标使用<xref:System.Windows.Forms.Cursor.Position%2A>属性<xref:System.Windows.Forms.Cursor>。</span><span class="sxs-lookup"><span data-stu-id="a5160-110">You can get or set the current location of the mouse using the <xref:System.Windows.Forms.Cursor.Position%2A> property of the <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="a5160-111">此外，你可以限制可以使用鼠标指针的区域将其设置<xref:System.Windows.Forms.Cursor.Clip%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a5160-111">In addition, you can limit the area the mouse pointer can be used be setting the <xref:System.Windows.Forms.Cursor.Clip%2A> property.</span></span> <span data-ttu-id="a5160-112">剪辑区域中的，默认情况下，是整个屏幕。</span><span class="sxs-lookup"><span data-stu-id="a5160-112">The clip area, by default, is the entire screen.</span></span>  
   
-## 更改鼠标指针  
- 更改鼠标指针外观是一种向用户提供反馈的重要方式。  例如，在 <xref:System.Windows.Forms.Control.MouseEnter> 和 <xref:System.Windows.Forms.Control.MouseLeave> 事件的处理程序中可以修改鼠标指针，以便通知用户正在进行运算并限制控件中的用户交互操作。  有时，鼠标指针会因某些系统事件而发生更改，例如，在拖放操作中涉及到您的应用程序时。  
+## <a name="changing-the-mouse-pointer"></a><span data-ttu-id="a5160-113">更改鼠标指针</span><span class="sxs-lookup"><span data-stu-id="a5160-113">Changing the Mouse Pointer</span></span>  
+ <span data-ttu-id="a5160-114">更改鼠标指针是一种向用户提供反馈的重要方法。</span><span class="sxs-lookup"><span data-stu-id="a5160-114">Changing the mouse pointer is an important way of providing feedback to the user.</span></span> <span data-ttu-id="a5160-115">中的处理程序中，例如，可以修改鼠标指针<xref:System.Windows.Forms.Control.MouseEnter>和<xref:System.Windows.Forms.Control.MouseLeave>事件发生的计算，告知用户并限制在控件中的用户交互。</span><span class="sxs-lookup"><span data-stu-id="a5160-115">For example, the mouse pointer can be modified in the handlers of the <xref:System.Windows.Forms.Control.MouseEnter> and <xref:System.Windows.Forms.Control.MouseLeave> events to tell the user that computations are occurring and to limit user interaction in the control.</span></span> <span data-ttu-id="a5160-116">有时，鼠标指针将更改由于系统事件，比如，当你的应用程序涉及拖放操作中。</span><span class="sxs-lookup"><span data-stu-id="a5160-116">Sometimes, the mouse pointer will change because of system events, such as when your application is involved in a drag-and-drop operation.</span></span>  
   
- 更改鼠标指针的主要方式是将控件的 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> 或 <xref:System.Windows.Forms.Control.DefaultCursor%2A> 属性设为新的 <xref:System.Windows.Forms.Cursor>。  有关更改鼠标指针的示例，请参见 <xref:System.Windows.Forms.Cursor> 类中的代码示例。  另外，<xref:System.Windows.Forms.Cursors> 类为多种不同类型的指针公开一组 <xref:System.Windows.Forms.Cursor> 对象，如类似手形的指针。  若要每当鼠标指针在控件上时都显示类似沙漏的等待指针，请使用 <xref:System.Windows.Forms.Control> 类的 <xref:System.Windows.Forms.Control.UseWaitCursor%2A> 属性。  
+ <span data-ttu-id="a5160-117">若要更改鼠标指针的主要方法是通过设置<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.Control.DefaultCursor%2A>到一个新控件的属性<xref:System.Windows.Forms.Cursor>。</span><span class="sxs-lookup"><span data-stu-id="a5160-117">The primary way to change the mouse pointer is by setting the <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> or <xref:System.Windows.Forms.Control.DefaultCursor%2A> property of a control to a new <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="a5160-118">有关更改鼠标指针的示例，请参阅中的代码示例<xref:System.Windows.Forms.Cursor>类。</span><span class="sxs-lookup"><span data-stu-id="a5160-118">For examples of changing the mouse pointer, see the code example in the <xref:System.Windows.Forms.Cursor> class.</span></span> <span data-ttu-id="a5160-119">此外，<xref:System.Windows.Forms.Cursors>类公开一组<xref:System.Windows.Forms.Cursor>许多不同类型的指针，如类似于手的形状的指针的对象。</span><span class="sxs-lookup"><span data-stu-id="a5160-119">In addition, the <xref:System.Windows.Forms.Cursors> class exposes a set of <xref:System.Windows.Forms.Cursor> objects for many different types of pointers, such as a pointer that resembles a hand.</span></span> <span data-ttu-id="a5160-120">若要显示等待指针，这类似于一个沙漏，鼠标指针在控件上时，使用<xref:System.Windows.Forms.Control.UseWaitCursor%2A>属性<xref:System.Windows.Forms.Control>类。</span><span class="sxs-lookup"><span data-stu-id="a5160-120">To display the wait pointer, which resembles an hourglass, whenever the mouse pointer is on the control, use the <xref:System.Windows.Forms.Control.UseWaitCursor%2A> property of the <xref:System.Windows.Forms.Control> class.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Cursor>   
- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Windows 窗体中的拖放功能](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a5160-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a5160-121">See Also</span></span>  
+ <xref:System.Windows.Forms.Cursor>  
+ [<span data-ttu-id="a5160-122">Windows 窗体应用程序中的鼠标输入</span><span class="sxs-lookup"><span data-stu-id="a5160-122">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="a5160-123">Windows 窗体中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="a5160-123">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

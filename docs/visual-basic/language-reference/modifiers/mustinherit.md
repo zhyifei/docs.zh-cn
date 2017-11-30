@@ -1,61 +1,60 @@
 ---
-title: "MustInherit (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "MustInherit"
-  - "vb.MustInherit"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "抽象类, MustInherit 类"
-  - "类 [Visual Basic], abstract"
-  - "MustInherit 类, MustInherit 关键字"
-  - "MustInherit 关键字"
+title: MustInherit (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- MustInherit
+- vb.MustInherit
+helpviewer_keywords:
+- classes [Visual Basic], abstract
+- MustInherit classes [Visual Basic], MustInherit keyword
+- abstract classes [Visual Basic], MustInherit class
+- MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# MustInherit (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定某个类只能用作基类，您不能直接从该类创建对象。  
+# <a name="mustinherit-visual-basic"></a><span data-ttu-id="ce5b6-102">MustInherit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce5b6-102">MustInherit (Visual Basic)</span></span>
+<span data-ttu-id="ce5b6-103">指定一个类可以仅用作基类，您不能直接从它创建一个对象。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-103">Specifies that a class can be used only as a base class and that you cannot create an object directly from it.</span></span>  
   
-## 备注  
- 基类（也称为“抽象类”）的用途就是定义从此基类派生的所有类所共同拥有的功能，  这样派生类将不必重新定义这些公共元素。  某些情况下，此公共功能不够完整，无法生成一个可用的对象，因此每个派生类都需要单独定义所缺少的功能。  此时，您需要让使用代码仅从派生类创建对象。  您可以对基类使用 `MustInherit` 来强制执行此操作。  
+## <a name="remarks"></a><span data-ttu-id="ce5b6-104">备注</span><span class="sxs-lookup"><span data-stu-id="ce5b6-104">Remarks</span></span>  
+ <span data-ttu-id="ce5b6-105">用途*基类*(也称为*抽象类*) 是定义普遍适用于所有从它派生的类的功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-105">The purpose of a *base class* (also known as an *abstract class*) is to define functionality that is common to all the classes derived from it.</span></span> <span data-ttu-id="ce5b6-106">这可以节省派生的类无需重新定义的常用元素。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-106">This saves the derived classes from having to redefine the common elements.</span></span> <span data-ttu-id="ce5b6-107">在某些情况下，此常用的功能不足够完成，以使可用对象，并且每个派生的类定义所缺少的功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-107">In some cases, this common functionality is not complete enough to make a usable object, and each derived class defines the missing functionality.</span></span> <span data-ttu-id="ce5b6-108">在这种情况下，你希望使用的代码只能从派生类中创建对象。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-108">In such a case, you want the consuming code to create objects only from the derived classes.</span></span> <span data-ttu-id="ce5b6-109">你使用`MustInherit`来强制执行此基本类。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-109">You use `MustInherit` on the base class to enforce this.</span></span>  
   
- `MustInherit` 类的另一个用途是限定一个变量仅用于一组相关类。  您可以先定义一个基类，然后从此基类派生出所有这些相关的类。  此基类无需提供所有派生类所共同拥有的任何功能，但它可以作为一个筛选器，将值分配给变量。  如果您的使用代码将一个变量声明为基类，Visual Basic 将允许您仅将这些派生类中的某个类的对象分配给该变量。  
+ <span data-ttu-id="ce5b6-110">另一个用途`MustInherit`类是限制对一组相关的类的变量。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-110">Another use of a `MustInherit` class is to restrict a variable to a set of related classes.</span></span> <span data-ttu-id="ce5b6-111">你可以定义一个基类，并从其派生所有这些相关的类。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-111">You can define a base class and derive all these related classes from it.</span></span> <span data-ttu-id="ce5b6-112">基类不需要提供任何功能普遍适用于所有派生的类，但其可用作筛选器将值赋给变量。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-112">The base class does not need to provide any functionality common to all the derived classes, but it can serve as a filter for assigning values to variables.</span></span> <span data-ttu-id="ce5b6-113">如果你使用的代码声明一个变量，作为类的基类，则 Visual Basic，可从派生类之一仅对象分配给该变量。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-113">If your consuming code declares a variable as the base class, Visual Basic allows you to assign only an object from one of the derived classes to that variable.</span></span>  
   
- .NET Framework 定义多个 `MustInherit` 类，其中包括 <xref:System.Array>、<xref:System.Enum> 和 <xref:System.ValueType>。  <xref:System.ValueType> 就是限制变量的基类的一个示例。  所有值类型均从 <xref:System.ValueType> 派生。  如果将一个变量声明为 <xref:System.ValueType>，则可以仅将值类型分配给该变量。  
+ <span data-ttu-id="ce5b6-114">.NET Framework 定义了几个`MustInherit`类，它们之间<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-114">The .NET Framework defines several `MustInherit` classes, among them <xref:System.Array>, <xref:System.Enum>, and <xref:System.ValueType>.</span></span> <span data-ttu-id="ce5b6-115"><xref:System.ValueType>是一个基类，用于限制变量的示例。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-115"><xref:System.ValueType> is an example of a base class that restricts a variable.</span></span> <span data-ttu-id="ce5b6-116">所有值类型都派生自<xref:System.ValueType>。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-116">All value types derive from <xref:System.ValueType>.</span></span> <span data-ttu-id="ce5b6-117">如果你声明一个变量，作为<xref:System.ValueType>，可以将只有值类型分配给该变量。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-117">If you declare a variable as <xref:System.ValueType>, you can assign only value types to that variable.</span></span>  
   
-## 规则  
+## <a name="rules"></a><span data-ttu-id="ce5b6-118">规则</span><span class="sxs-lookup"><span data-stu-id="ce5b6-118">Rules</span></span>  
   
--   **声明上下文。**只能在 `Class` 语句中使用 `MustInherit`。  
+-   <span data-ttu-id="ce5b6-119">**声明上下文。**</span><span class="sxs-lookup"><span data-stu-id="ce5b6-119">**Declaration Context.**</span></span> <span data-ttu-id="ce5b6-120">你可以使用`MustInherit`仅在`Class`语句。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-120">You can use `MustInherit` only in a `Class` statement.</span></span>  
   
--   **组合修饰符。**不能在同一声明中同时指定 `MustInherit` 和 `NotInheritable`。  
+-   <span data-ttu-id="ce5b6-121">**组合的修饰符。**</span><span class="sxs-lookup"><span data-stu-id="ce5b6-121">**Combined Modifiers.**</span></span> <span data-ttu-id="ce5b6-122">不能指定`MustInherit`连同`NotInheritable`同一声明中。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-122">You cannot specify `MustInherit` together with `NotInheritable` in the same declaration.</span></span>  
   
-## 示例  
- 下面的示例演示强制继承和强制重写。  基类 `shape` 定义变量 `acrossLine`。  类 `circle` 和 `square` 从 `shape` 派生。  这两个类继承 `acrossLine` 的定义，但它们必须单独定义 `area` 函数，这是因为每种形状的面积计算方法不同。  
+## <a name="example"></a><span data-ttu-id="ce5b6-123">示例</span><span class="sxs-lookup"><span data-stu-id="ce5b6-123">Example</span></span>  
+ <span data-ttu-id="ce5b6-124">下面的示例演示强制的继承和强制重写。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-124">The following example illustrates both forced inheritance and forced overriding.</span></span> <span data-ttu-id="ce5b6-125">基类`shape`定义变量`acrossLine`。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-125">The base class `shape` defines a variable `acrossLine`.</span></span> <span data-ttu-id="ce5b6-126">类`circle`和`square`派生自`shape`。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-126">The classes `circle` and `square` derive from `shape`.</span></span> <span data-ttu-id="ce5b6-127">他们会继承的定义`acrossLine`，但它们必须定义函数`area`因为该计算每种类型的形状不同。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-127">They inherit the definition of `acrossLine`, but they must define the function `area` because that calculation is different for each kind of shape.</span></span>  
   
  [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
- 您可以将 `shape1` 和 `shape2` 声明为 `shape` 类型。  但是，您不能从 `shape` 创建对象，因为它缺少 `area` 函数的功能并且被标记为 `MustInherit`。  
+ <span data-ttu-id="ce5b6-128">你可以声明`shape1`和`shape2`类型`shape`。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-128">You can declare `shape1` and `shape2` to be of type `shape`.</span></span> <span data-ttu-id="ce5b6-129">但是，你无法从其创建对象`shape`因为它缺少的功能函数`area`和标记`MustInherit`。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-129">However, you cannot create an object from `shape` because it lacks the functionality of the function `area` and is marked `MustInherit`.</span></span>  
   
- 由于变量 `shape1` 和 `shape2` 被声明为 `shape` 类型，因此它们被限定为仅使用派生类 `circle` 和 `square` 中的对象。  Visual Basic 不允许您将任何其他对象分配给这些变量，这样您就可以获得很高的类型安全级别。  
+ <span data-ttu-id="ce5b6-130">因为它们被声明为`shape`，变量`shape1`和`shape2`限于对象派生的类从`circle`和`square`。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-130">Because they are declared as `shape`, the variables `shape1` and `shape2` are restricted to objects from the derived classes `circle` and `square`.</span></span> <span data-ttu-id="ce5b6-131">Visual Basic 不允许您将任何其他对象分配给这些变量，这为你提供类型安全的高级别。</span><span class="sxs-lookup"><span data-stu-id="ce5b6-131">Visual Basic does not allow you to assign any other object to these variables, which gives you a high level of type safety.</span></span>  
   
-## 用法  
- `MustInherit` 修饰符可用于下面的上下文中：  
+## <a name="usage"></a><span data-ttu-id="ce5b6-132">用法</span><span class="sxs-lookup"><span data-stu-id="ce5b6-132">Usage</span></span>  
+ <span data-ttu-id="ce5b6-133">`MustInherit`修饰符可用于在此上下文中：</span><span class="sxs-lookup"><span data-stu-id="ce5b6-133">The `MustInherit` modifier can be used in this context:</span></span>  
   
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="ce5b6-134">Class 语句</span><span class="sxs-lookup"><span data-stu-id="ce5b6-134">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## 请参阅  
- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [关键字](../../../visual-basic/language-reference/keywords/index.md)   
- [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="ce5b6-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ce5b6-135">See Also</span></span>  
+ [<span data-ttu-id="ce5b6-136">Inherits 语句</span><span class="sxs-lookup"><span data-stu-id="ce5b6-136">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [<span data-ttu-id="ce5b6-137">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="ce5b6-137">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="ce5b6-138">关键字</span><span class="sxs-lookup"><span data-stu-id="ce5b6-138">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="ce5b6-139">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="ce5b6-139">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

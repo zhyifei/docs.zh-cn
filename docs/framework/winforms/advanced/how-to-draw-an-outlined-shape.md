@@ -1,54 +1,58 @@
 ---
-title: "如何：绘制空心形状 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Graphics.DrawEllipse"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "圆形"
-  - "圆形, 绘图"
-  - "环形形状"
-  - "绘图, 环形形状"
-  - "绘图, 形状"
-  - "椭圆, 绘图"
-  - "窗体, 绘制环形形状"
-  - "空心形状, 绘图"
-  - "空心形状, 示例"
-  - "形状, 绘图"
+title: "如何：绘制空心形状"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: Graphics.DrawEllipse
+helpviewer_keywords:
+- ellipses [Windows Forms], drawing
+- circles [Windows Forms], drawing
+- drawing [Windows Forms], shapes
+- circular shapes
+- forms [Windows Forms], drawing circular shapes
+- circles
+- outlined shapes [Windows Forms], examples
+- outlined shapes [Windows Forms], drawing
+- drawing [Windows Forms], circular shapes
+- shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 05247d24f3db95d042cb4ac34ec6ed648ec1d997
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：绘制空心形状
-此示例在窗体上绘制空心椭圆和空心矩形。  
+# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="61c4c-102">如何：绘制空心形状</span><span class="sxs-lookup"><span data-stu-id="61c4c-102">How to: Draw an Outlined Shape</span></span>
+<span data-ttu-id="61c4c-103">此示例窗体上绘制空心的椭圆和矩形。</span><span class="sxs-lookup"><span data-stu-id="61c4c-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
   
-## 示例  
+## <a name="example"></a><span data-ttu-id="61c4c-104">示例</span><span class="sxs-lookup"><span data-stu-id="61c4c-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
  [!code-csharp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
  [!code-vb[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
-## 编译代码  
- 不能在 <xref:System.Windows.Forms.Form.Load> 事件处理程序中调用此方法。  如果已调整该窗体的大小或者其他窗体遮蔽了该窗体，则不会重绘所绘制的内容。  若要自动重绘内容，应该重写 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。  
+## <a name="compiling-the-code"></a><span data-ttu-id="61c4c-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="61c4c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="61c4c-106">无法调用此方法中<xref:System.Windows.Forms.Form.Load>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="61c4c-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="61c4c-107">不会重新绘制的内容的绘制，如果窗体调整大小或另一种形式被遮盖。</span><span class="sxs-lookup"><span data-stu-id="61c4c-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="61c4c-108">若要使你自动重绘的内容，则应重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="61c4c-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## 可靠编程  
- 应该始终对使用系统资源的任何对象（如 <xref:System.Drawing.Pen> 和 <xref:System.Drawing.Graphics> 对象）调用 <xref:System.IDisposable.Dispose%2A>。  
+## <a name="robust-programming"></a><span data-ttu-id="61c4c-109">可靠编程</span><span class="sxs-lookup"><span data-stu-id="61c4c-109">Robust Programming</span></span>  
+ <span data-ttu-id="61c4c-110">始终应调用<xref:System.IDisposable.Dispose%2A>对任何对象所消耗的系统资源，如<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="61c4c-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## 请参阅  
- <xref:System.Drawing.Graphics.DrawEllipse%2A>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- <xref:System.Drawing.Graphics.DrawRectangle%2A>   
- [图形编程入门](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [使用钢笔绘制线条和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="61c4c-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="61c4c-111">See Also</span></span>  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A>  
+ [<span data-ttu-id="61c4c-112">图形编程入门</span><span class="sxs-lookup"><span data-stu-id="61c4c-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="61c4c-113">使用笔绘制直线和形状</span><span class="sxs-lookup"><span data-stu-id="61c4c-113">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="61c4c-114">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="61c4c-114">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

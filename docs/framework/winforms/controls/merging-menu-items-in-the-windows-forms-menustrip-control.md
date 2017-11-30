@@ -1,70 +1,71 @@
 ---
-title: "在 Windows 窗体 MenuStrip 控件中合并菜单项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, 合并"
-  - "合并, 一般概念"
+title: "在 Windows 窗体 MenuStrip 控件中合并菜单项"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Windows 窗体 MenuStrip 控件中合并菜单项
-如果具有多文档界面 \(MDI\) 应用程序，就能将菜单项或整个菜单从子窗体合并到父窗体的菜单中。  
+# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a><span data-ttu-id="6e1d8-102">在 Windows 窗体 MenuStrip 控件中合并菜单项</span><span class="sxs-lookup"><span data-stu-id="6e1d8-102">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>
+<span data-ttu-id="6e1d8-103">如果你有多文档界面 (MDI) 应用程序，你可以将菜单项或从子窗体的整个菜单合并到父窗体的菜单中。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-103">If you have a multiple-document interface (MDI) application, you can merge menu items or whole menus from the child form into the menus of the parent form.</span></span>  
   
- 本主题描述的基本概念涉及在 MDI 应用程序中合并菜单项。  
+ <span data-ttu-id="6e1d8-104">本主题介绍与合并菜单项在 MDI 应用程序相关联的基本概念。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-104">This topic describes the basic concepts associated with merging menu items in an MDI application.</span></span>  
   
-## 一般概念  
- 合并过程涉及目标控件和源控件：  
+## <a name="general-concepts"></a><span data-ttu-id="6e1d8-105">常规概念</span><span class="sxs-lookup"><span data-stu-id="6e1d8-105">General Concepts</span></span>  
+ <span data-ttu-id="6e1d8-106">合并过程涉及的目标和源控件：</span><span class="sxs-lookup"><span data-stu-id="6e1d8-106">Merging procedures involve both a target and a source control:</span></span>  
   
--   目标控件是要在其中合并菜单项的主窗体或 MDI 父窗体上的 <xref:System.Windows.Forms.MenuStrip> 控件。  
+-   <span data-ttu-id="6e1d8-107">目标是<xref:System.Windows.Forms.MenuStrip>到正在合并菜单项 main 的一个或多个 MDI 父窗体上控件。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-107">The target is the <xref:System.Windows.Forms.MenuStrip> control on the main or MDI parent form into which you are merging menu items.</span></span>  
   
--   源控件是 MDI 子窗体上的 <xref:System.Windows.Forms.MenuStrip> 控件，该子窗体包含了要合并到目标菜单的菜单项。  
+-   <span data-ttu-id="6e1d8-108">源是<xref:System.Windows.Forms.MenuStrip>上包含你想要合并到目标菜单的菜单项的 MDI 子窗体控件。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-108">The source is the <xref:System.Windows.Forms.MenuStrip> control on the MDI child form that contains the menu items you want to merge into the target menu.</span></span>  
   
- <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 属性标识将用当前 MDI 父窗体的 MDI 子窗体标题来填充其下拉列表的菜单项。  例如，您通常会在**“窗口”**菜单上列出当前打开的 MDI 子窗体。  
+ <span data-ttu-id="6e1d8-109"><xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性标识其下拉列表框将填充的标题的当前 MDI 父窗体的 MDI 子窗体的菜单项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-109">The <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property identifies the menu item whose drop-down list you will populate with the titles of the current MDI parent form's MDI children.</span></span> <span data-ttu-id="6e1d8-110">例如，您通常列出在当前打开的 MDI 子级**窗口**菜单。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-110">For example, you typically list MDI children that are currently open on the **Window** menu.</span></span>  
   
- <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> 属性标识哪些菜单项来自 MDI 子窗体上的 <xref:System.Windows.Forms.MenuStrip>。  
+ <span data-ttu-id="6e1d8-111"><xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A>属性标识该菜单项来自<xref:System.Windows.Forms.MenuStrip>MDI 子窗体上。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-111">The <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> property identifies which menu items come from a <xref:System.Windows.Forms.MenuStrip> on an MDI child form.</span></span>  
   
- 可以手动或自动合并菜单项。  两种方法的菜单项合并方式相同，但合并的激活方式不同，本主题后面的“手动合并”和“自动合并”部分分别论述了这一点。  不论是手动合并还是自动合并，每个合并操作都会影响下一个合并操作。  
+ <span data-ttu-id="6e1d8-112">你可以手动或自动合并菜单项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-112">You can merge menu items manually or automatically.</span></span> <span data-ttu-id="6e1d8-113">菜单项合并在相同的方式针对这两种方法，但合并激活方式不同，如本主题中后面的"手动合并"和"自动合并"节中所述。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-113">The menu items merge in the same way for both methods, but the merge is activated differently, as discussed in the "Manual Merging" and "Automatic Merging" sections later in this topic.</span></span> <span data-ttu-id="6e1d8-114">在手动和自动合并时，每个合并操作会影响下一步的合并操作。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-114">In both manual and automatic merging, each merge action affects the next merge action.</span></span>  
   
- <xref:System.Windows.Forms.MenuStrip> 合并将菜单项从一个 <xref:System.Windows.Forms.ToolStrip> 移动到另一个，而不像 <xref:System.Windows.Forms.MainMenu> 的情况那样进行克隆。  
+ <span data-ttu-id="6e1d8-115"><xref:System.Windows.Forms.MenuStrip>合并菜单项移从一个<xref:System.Windows.Forms.ToolStrip>到另一个而不是克隆，因为这种情况<xref:System.Windows.Forms.MainMenu>。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-115"><xref:System.Windows.Forms.MenuStrip> merging moves menu items from one <xref:System.Windows.Forms.ToolStrip> to another rather than cloning them, as was the case with <xref:System.Windows.Forms.MainMenu>.</span></span>  
   
-## MergeAction 值  
- 使用 <xref:System.Windows.Forms.MergeAction> 属性在源 <xref:System.Windows.Forms.MenuStrip> 中对菜单项设置合并操作。  
+## <a name="mergeaction-values"></a><span data-ttu-id="6e1d8-116">MergeAction 值</span><span class="sxs-lookup"><span data-stu-id="6e1d8-116">MergeAction Values</span></span>  
+ <span data-ttu-id="6e1d8-117">在源中的菜单项上设置的合并操作<xref:System.Windows.Forms.MenuStrip>使用<xref:System.Windows.Forms.MergeAction>属性。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-117">You set the merge action on menu items in the source <xref:System.Windows.Forms.MenuStrip> using the <xref:System.Windows.Forms.MergeAction> property.</span></span>  
   
- 下表描述了可用合并操作的含义和典型用法。  
+ <span data-ttu-id="6e1d8-118">下表描述了可用合并操作的含义和典型用法。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-118">The following table describes the meaning and typical use of the available merge actions.</span></span>  
   
-|MergeAction 值|说明|典型使用|  
-|-------------------|--------|----------|  
-|<xref:System.Windows.Forms.MergeAction>|（默认）将源项添加到目标项集合的末尾。|程序的某个部分激活时，将菜单项添加到菜单末尾。|  
-|<xref:System.Windows.Forms.MergeAction>|将源项添加到目标项的集合中，添加位置由源项上设置的 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 属性指定。|当程序的某些部分激活时，将菜单项添加到菜单的中间或开头。<br /><br /> 如果两个菜单项的 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值相同，将以相反顺序添加。  适当设置 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 以保持原始顺序。|  
-|<xref:System.Windows.Forms.MergeAction>|查找文本匹配（找不到就用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值），然后用源菜单项替换匹配目标菜单项。|用执行不同操作但名称相同的源菜单项替换目标菜单项。|  
-|<xref:System.Windows.Forms.MergeAction>|查找文本匹配（找不到就用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值），然后将所有下拉项从源添加到目标。|生成将菜单项插入或添加到子菜单或者将菜单项从子菜单移除的菜单结构。  例如，可以将菜单项从 MDI 子窗体添加到主 <xref:System.Windows.Forms.MenuStrip>**“另存为”**菜单。<br /><br /> <xref:System.Windows.Forms.MergeAction> 允许在不执行任何操作的情况下在菜单结构中导航。  它提供了一种评估后续项的方式。|  
-|<xref:System.Windows.Forms.MergeAction>|查找文本匹配（找不到就用 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 值），然后将项从目标中移除。|将菜单项从目标 <xref:System.Windows.Forms.MenuStrip> 中移除。|  
+|<span data-ttu-id="6e1d8-119">MergeAction 值</span><span class="sxs-lookup"><span data-stu-id="6e1d8-119">MergeAction Value</span></span>|<span data-ttu-id="6e1d8-120">描述</span><span class="sxs-lookup"><span data-stu-id="6e1d8-120">Description</span></span>|<span data-ttu-id="6e1d8-121">典型用法</span><span class="sxs-lookup"><span data-stu-id="6e1d8-121">Typical Use</span></span>|  
+|-----------------------|-----------------|-----------------|  
+|<xref:System.Windows.Forms.MergeAction.Append>|<span data-ttu-id="6e1d8-122">（默认值）将源项添加到目标项的集合的末尾。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-122">(Default) Adds the source item to the end of the target item's collection.</span></span>|<span data-ttu-id="6e1d8-123">激活该程序的某些部分时，请将菜单项添加到菜单的末尾。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-123">Adding menu items to the end of the menu when some part of the program is activated.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Insert>|<span data-ttu-id="6e1d8-124">将源项添加到目标项的集合，通过指定的位置中<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>在源项上设置属性。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-124">Adds the source item to the target item's collection, in the location specified by the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> property set on the source item.</span></span>|<span data-ttu-id="6e1d8-125">激活该程序的某些部分时，请将菜单项添加到中间或菜单的开头。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-125">Adding menu items to the middle or the beginning of the menu when some part of the program is activated.</span></span><br /><br /> <span data-ttu-id="6e1d8-126">如果值<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>相同的两个菜单项，它们将被添加按相反的顺序。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-126">If the value of <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> is the same for both menu items, they are added in reverse order.</span></span> <span data-ttu-id="6e1d8-127">设置<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>适当地保留原始顺序。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-127">Set <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> appropriately to preserve the original order.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Replace>|<span data-ttu-id="6e1d8-128">查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>时没有文本匹配找到，，然后将匹配的目标菜单项替换为源菜单项的值。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-128">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then replaces the matching target menu item with the source menu item.</span></span>|<span data-ttu-id="6e1d8-129">将替换源菜单项执行不同操作具有相同名称的目标菜单项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-129">Replacing a target menu item with a source menu item of the same name that does something different.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|<span data-ttu-id="6e1d8-130">查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>时没有文本匹配找到，，然后将所有的下拉列表项从源添加到目标的值。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-130">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then adds all the drop-down items from the source to the target.</span></span>|<span data-ttu-id="6e1d8-131">生成的菜单结构，该插入或将菜单项添加到子菜单，或移除子菜单的菜单项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-131">Building a menu structure that inserts or adds menu items into a submenu, or removes menu items from a submenu.</span></span> <span data-ttu-id="6e1d8-132">例如，可以将菜单项从 MDI 子窗体添加到 main <xref:System.Windows.Forms.MenuStrip>**另存为**菜单。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-132">For example, you can add a menu item from an MDI child to a main <xref:System.Windows.Forms.MenuStrip>**Save As** menu.</span></span><br /><br /> <span data-ttu-id="6e1d8-133"><xref:System.Windows.Forms.MergeAction.MatchOnly>允许你导航菜单结构而不采取任何操作。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-133"><xref:System.Windows.Forms.MergeAction.MatchOnly> allows you to navigate through the menu structure without taking any action.</span></span> <span data-ttu-id="6e1d8-134">它提供了如何评估后续项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-134">It provides a way to evaluate the subsequent items.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Remove>|<span data-ttu-id="6e1d8-135">查找文本匹配项，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值没有文本匹配找到，然后从目标中移除的项。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-135">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then removes the item from the target.</span></span>|<span data-ttu-id="6e1d8-136">从目标删除菜单项<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-136">Removing a menu item from the target <xref:System.Windows.Forms.MenuStrip>.</span></span>|  
   
-## 手动合并  
- 只有 <xref:System.Windows.Forms.MenuStrip> 控件参与自动合并。  要组合其他控件（例如 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控件）的项，必须根据需要调用代码中的 <xref:System.Windows.Forms.ToolStripManager.Merge%2A> 和 <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> 方法，以对其进行手动合并。  
+## <a name="manual-merging"></a><span data-ttu-id="6e1d8-137">手动合并</span><span class="sxs-lookup"><span data-stu-id="6e1d8-137">Manual Merging</span></span>  
+ <span data-ttu-id="6e1d8-138">仅<xref:System.Windows.Forms.MenuStrip>自动合并参与控件。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-138">Only <xref:System.Windows.Forms.MenuStrip> controls participate in automatic merging.</span></span> <span data-ttu-id="6e1d8-139">要组合的项的其他控件，如<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.StatusStrip>控件，你必须手动合并它们，通过调用<xref:System.Windows.Forms.ToolStripManager.Merge%2A>和<xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A>根据需要在代码中的方法。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-139">To combine the items of other controls, such as <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.StatusStrip> controls, you must merge them manually, by calling the <xref:System.Windows.Forms.ToolStripManager.Merge%2A> and <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> methods in your code as required.</span></span>  
   
-## 自动合并  
- 可以通过激活源窗体对 MDI 应用程序使用自动合并。  要在 MDI 应用程序中使用 <xref:System.Windows.Forms.MenuStrip>，需要将 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 属性设置为目标 <xref:System.Windows.Forms.MenuStrip>，使得对源 <xref:System.Windows.Forms.MenuStrip> 执行的合并操作反映在目标 <xref:System.Windows.Forms.MenuStrip> 中。  
+## <a name="automatic-merging"></a><span data-ttu-id="6e1d8-140">自动合并</span><span class="sxs-lookup"><span data-stu-id="6e1d8-140">Automatic Merging</span></span>  
+ <span data-ttu-id="6e1d8-141">你可以使用自动合并对于 MDI 应用程序通过激活源窗体。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-141">You can use automatic merging for MDI applications by activating the source form.</span></span> <span data-ttu-id="6e1d8-142">若要使用<xref:System.Windows.Forms.MenuStrip>MDI 应用程序，在设置<xref:System.Windows.Forms.Form.MainMenuStrip%2A>到目标属性<xref:System.Windows.Forms.MenuStrip>以便合并操作的源上执行<xref:System.Windows.Forms.MenuStrip>反映在目标<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-142">To use a <xref:System.Windows.Forms.MenuStrip> in an MDI application, set the <xref:System.Windows.Forms.Form.MainMenuStrip%2A> property to the target <xref:System.Windows.Forms.MenuStrip> so that merging actions performed on the source <xref:System.Windows.Forms.MenuStrip> are reflected in the target <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
- 可以通过激活 MDI 源上的 <xref:System.Windows.Forms.MenuStrip> 来触发自动合并。  源 <xref:System.Windows.Forms.MenuStrip> 在激活时将被合并到 MDI 目标中。  当新窗体变为活动状态时，将在上一个窗体上恢复合并，并在新窗体上触发合并。  可以根据需要在每个 <xref:System.Windows.Forms.ToolStripItem> 上设置 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 属性并在每个 <xref:System.Windows.Forms.MenuStrip> 上设置 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性，从而控制此行为。  
+ <span data-ttu-id="6e1d8-143">你可以触发自动合并通过激活<xref:System.Windows.Forms.MenuStrip>MDI 源。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-143">You can trigger automatic merging by activating the <xref:System.Windows.Forms.MenuStrip> on the MDI source.</span></span> <span data-ttu-id="6e1d8-144">在激活，源<xref:System.Windows.Forms.MenuStrip>合并到 MDI 目标。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-144">Upon activation, the source <xref:System.Windows.Forms.MenuStrip> is merged into the MDI target.</span></span> <span data-ttu-id="6e1d8-145">当新的窗体变为活动状态时，合并还原最后一个窗体上，并触发新的窗体上。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-145">When a new form becomes active, the merge is reverted on the last form and triggered on the new form.</span></span> <span data-ttu-id="6e1d8-146">你可以通过设置来控制此行为<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>属性根据需要在每个上<xref:System.Windows.Forms.ToolStripItem>，并通过设置<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>上每个属性<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="6e1d8-146">You can control this behavior by setting the <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> property as needed on each <xref:System.Windows.Forms.ToolStripItem>, and by setting the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property on each <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolStripManager>   
- <xref:System.Windows.Forms.MenuStrip>   
- [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [如何：使用 MenuStrip 创建 MDI 窗口列表](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)   
- [如何：为 MDI 应用程序设置自动菜单合并](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+## <a name="see-also"></a><span data-ttu-id="6e1d8-147">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6e1d8-147">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripManager>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ [<span data-ttu-id="6e1d8-148">MenuStrip 控件</span><span class="sxs-lookup"><span data-stu-id="6e1d8-148">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [<span data-ttu-id="6e1d8-149">如何：使用 MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="6e1d8-149">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [<span data-ttu-id="6e1d8-150">如何：为 MDI 应用程序设置自动菜单合并</span><span class="sxs-lookup"><span data-stu-id="6e1d8-150">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

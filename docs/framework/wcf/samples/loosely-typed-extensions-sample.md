@@ -1,25 +1,28 @@
 ---
-title: "松散类型化扩展示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "松散类型化扩展示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 196f85c89dd64731f2992a382f8f0697310966b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 松散类型化扩展示例
-联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。此示例演示用于使用扩展数据的基本技术。  
+# <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="6e652-102">松散类型化扩展示例</span><span class="sxs-lookup"><span data-stu-id="6e652-102">Loosely-Typed Extensions Sample</span></span>
+<span data-ttu-id="6e652-103">联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。</span><span class="sxs-lookup"><span data-stu-id="6e652-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="6e652-104">此示例阐释用来处理扩展数据的基本技术。</span><span class="sxs-lookup"><span data-stu-id="6e652-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
   
- 此示例使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类作为示例。但是，此示例中演示的模式可用于支持扩展数据的所有 Syndication 类。  
+ <span data-ttu-id="6e652-105">此示例使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类作为示例。</span><span class="sxs-lookup"><span data-stu-id="6e652-105">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="6e652-106">但是，此示例中演示的模式可用于支持扩展数据的所有 Syndication 类。</span><span class="sxs-lookup"><span data-stu-id="6e652-106">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data:</span></span>  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -31,10 +34,10 @@ caps.handback.revision: 12
   
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
-## 示例 XML  
- 下面的 XML 文档将在此实例中使用，可供您参考。  
+## <a name="sample-xml"></a><span data-ttu-id="6e652-107">示例 XML</span><span class="sxs-lookup"><span data-stu-id="6e652-107">Sample XML</span></span>  
+ <span data-ttu-id="6e652-108">下面是此示例中所使用的 XML 文档，可供您参考。</span><span class="sxs-lookup"><span data-stu-id="6e652-108">For reference, the following XML document is used in this sample.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="IBM437"?>  
 <feed myAttribute="someValue" xmlns="http://www.w3.org/2005/Atom">  
   <title type="text"></title>  
@@ -57,71 +60,65 @@ w.w3.org/2001/XMLSchema" xmlns="">
     <Value attr1="someValue">15</Value>  
   </xElementExtension>  
 </feed>  
-  
 ```  
   
- 此文档包含扩展数据的以下部分：  
+ <span data-ttu-id="6e652-109">此文档包含扩展数据的以下部分：</span><span class="sxs-lookup"><span data-stu-id="6e652-109">This document contains the following pieces of extension data:</span></span>  
   
--   `<feed>` 元素的 `myAttribute` 属性。  
+-   <span data-ttu-id="6e652-110">`myAttribute` 元素的 `<feed>` 属性。</span><span class="sxs-lookup"><span data-stu-id="6e652-110">The `myAttribute` attribute of the `<feed>` element.</span></span>  
   
--   `<simpleString>` 元素。  
+-   <span data-ttu-id="6e652-111">`<simpleString>` 元素。</span><span class="sxs-lookup"><span data-stu-id="6e652-111">`<simpleString>` element.</span></span>  
   
--   `<DataContractExtension>` 元素。  
+-   <span data-ttu-id="6e652-112">`<DataContractExtension>` 元素。</span><span class="sxs-lookup"><span data-stu-id="6e652-112">`<DataContractExtension>` element.</span></span>  
   
--   `<XmlSerializerExtension>` 元素。  
+-   <span data-ttu-id="6e652-113">`<XmlSerializerExtension>` 元素。</span><span class="sxs-lookup"><span data-stu-id="6e652-113">`<XmlSerializerExtension>` element.</span></span>  
   
--   `<xElementExtension>` 元素。  
+-   <span data-ttu-id="6e652-114">`<xElementExtension>` 元素。</span><span class="sxs-lookup"><span data-stu-id="6e652-114">`<xElementExtension>` element.</span></span>  
   
-## 编写扩展数据  
- 属性扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合添加条目来创建的，如下面的示例代码所示。  
+## <a name="writing-extension-data"></a><span data-ttu-id="6e652-115">编写扩展数据</span><span class="sxs-lookup"><span data-stu-id="6e652-115">Writing Extension Data</span></span>  
+ <span data-ttu-id="6e652-116">属性扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合添加条目来创建的，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="6e652-116">Attribute extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection as shown in the following sample code.</span></span>  
   
 ```  
 //Attribute extensions are stored in a dictionary indexed by   
 // XmlQualifiedName  
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
-  
 ```  
   
- 元素扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 集合添加条目来创建的。这些扩展可以是基本值（如字符串）、.NET Framework 对象的 XML 序列化或者是手动编码的 XML 节点。  
+ <span data-ttu-id="6e652-117">元素扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 集合添加条目来创建的。</span><span class="sxs-lookup"><span data-stu-id="6e652-117">Element extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> collection.</span></span> <span data-ttu-id="6e652-118">这些扩展可以是基本值（如字符串）、.NET Framework 对象的 XML 序列化或者是手动编码的 XML 节点。</span><span class="sxs-lookup"><span data-stu-id="6e652-118">These extensions can by basic values such as strings, XML serializations of .NET Framework objects, or XML nodes coded by hand.</span></span>  
   
- 下面的示例代码创建一个名为 `simpleString` 的扩展元素。  
+ <span data-ttu-id="6e652-119">下面的示例代码创建一个名为 `simpleString` 的扩展元素。</span><span class="sxs-lookup"><span data-stu-id="6e652-119">The following sample code creates an extension element named `simpleString`.</span></span>  
   
 ```  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
-  
 ```  
   
- 此元素的 XML 命名空间是空命名空间（“”），它的值是包含字符串“hello, world\!”的文本节点。  
+ <span data-ttu-id="6e652-120">此元素的 XML 命名空间是空的命名空间 ("")，其值为一个包含字符串"你好，world ！"的文本节点。</span><span class="sxs-lookup"><span data-stu-id="6e652-120">The XML namespace for this element is the empty namespace ("") and its value is a text node that contains the string "hello, world!".</span></span>  
   
- 如果要创建包含许多嵌套元素的复杂元素扩展，一种方法是使用 .NET Framework API 进行序列化（均支持 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>），如下面的示例所示。  
+ <span data-ttu-id="6e652-121">如果要创建包含许多嵌套元素的复杂元素扩展，一种方法是使用 .NET Framework API 进行序列化（均支持 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>），如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="6e652-121">One way to create complex element extensions that consist of many nested elements is to use the .NET Framework APIs for serialization (both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported) as shown in the following examples.</span></span>  
   
 ```  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
-  
 ```  
   
- 在本示例中，`DataContractExtension` 和 `XmlSerializerExtension` 属于自定义类型，它们是为与序列化程序协同使用而编写的。  
+ <span data-ttu-id="6e652-122">在本示例中，`DataContractExtension` 和 `XmlSerializerExtension` 属于自定义类型，它们是为与序列化程序协同使用而编写的。</span><span class="sxs-lookup"><span data-stu-id="6e652-122">In this example, the `DataContractExtension` and `XmlSerializerExtension` are custom types written for use with a serializer.</span></span>  
   
- <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> 类还可以用来从 <xref:System.Xml.XmlReader> 实例创建元素扩展。这允许与 XML 处理 API（如 <xref:System.Xml.Linq.XElement>）进行简单集成，如下面的示例代码所示。  
+ <span data-ttu-id="6e652-123"><xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> 类还可以用来从 <xref:System.Xml.XmlReader> 实例创建元素扩展。</span><span class="sxs-lookup"><span data-stu-id="6e652-123">The <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> class can also be used to create element extensions from an <xref:System.Xml.XmlReader> instance.</span></span> <span data-ttu-id="6e652-124">这允许与 XML 处理 API（如 <xref:System.Xml.Linq.XElement>）进行简单集成，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="6e652-124">This allows for easy integration with XML processing APIs such as <xref:System.Xml.Linq.XElement> as shown in the following sample code.</span></span>  
   
 ```  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
         new XElement("Key", new XAttribute("attr1", "someValue"), "Z"),  
         new XElement("Value", new XAttribute("attr1", "someValue"),   
         "15")).CreateReader());  
-  
 ```  
   
-## 读取扩展数据  
- 属性扩展的值可以通过在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中按 <xref:System.Xml.XmlQualifiedName> 查找属性来获取，如下面的示例代码所示。  
+## <a name="reading-extension-data"></a><span data-ttu-id="6e652-125">读取扩展数据</span><span class="sxs-lookup"><span data-stu-id="6e652-125">Reading Extension Data</span></span>  
+ <span data-ttu-id="6e652-126">属性扩展的值可以通过在 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合中按 <xref:System.Xml.XmlQualifiedName> 查找属性来获取，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="6e652-126">The values for attribute extensions can be obtained by looking up the attribute in the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection by its <xref:System.Xml.XmlQualifiedName> as shown in the following sample code.</span></span>  
   
 ```  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
-  
 ```  
   
- 元素扩展是借助于 `ReadElementExtensions<T>` 方法来访问的。  
+ <span data-ttu-id="6e652-127">元素扩展是借助于 `ReadElementExtensions<T>` 方法来访问的。</span><span class="sxs-lookup"><span data-stu-id="6e652-127">Element extensions are accessed using the `ReadElementExtensions<T>` method.</span></span>  
   
 ```  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
@@ -139,38 +136,35 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 {  
     Console.WriteLine(xse.ToString());  
 }  
-  
 ```  
   
- 还可以通过使用 <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> 方法来在个别元素扩展上获取 `XmlReader`。  
+ <span data-ttu-id="6e652-128">还可以通过使用 `XmlReader` 方法来在个别元素扩展上获取 <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>。</span><span class="sxs-lookup"><span data-stu-id="6e652-128">It is also possible to obtain an `XmlReader` at individual element extensions by using the <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> method.</span></span>  
   
 ```  
-  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
 {  
     XNode xelement = XElement.ReadFrom(extension.GetReader());  
     Console.WriteLine(xelement.ToString());  
 }  
-  
 ```  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6e652-129">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="6e652-129">To set up, build, and run the sample</span></span>  
   
-1.  请确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  <span data-ttu-id="6e652-130">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6e652-130">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  <span data-ttu-id="6e652-131">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="6e652-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  若要用单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的说明进行操作。  
+3.  <span data-ttu-id="6e652-132">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="6e652-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。在继续操作之前，请先检查以下（默认）目录：  
+>  <span data-ttu-id="6e652-133">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="6e652-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6e652-134">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="6e652-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。此示例位于以下目录。  
+>  <span data-ttu-id="6e652-135">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="6e652-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6e652-136">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="6e652-136">This sample is located in the following directory.</span></span>  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## 请参阅  
- [强类型扩展](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)   
- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a><span data-ttu-id="6e652-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6e652-137">See Also</span></span>  
+ [<span data-ttu-id="6e652-138">强类型扩展</span><span class="sxs-lookup"><span data-stu-id="6e652-138">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
+ [<span data-ttu-id="6e652-139">WCF 联合</span><span class="sxs-lookup"><span data-stu-id="6e652-139">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

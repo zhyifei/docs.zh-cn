@@ -1,109 +1,112 @@
 ---
-title: "使用传输安全保护消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用传输安全保护消息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-caps.latest.revision: 21
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f36351c04b3849b5364e00cec55769628d89af11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用传输安全保护消息
-本节讨论消息队列 \(MSMQ\) 传输安全，您可将其用于保护发送到队列的消息。  
+# <a name="securing-messages-using-transport-security"></a><span data-ttu-id="08af7-102">使用传输安全保护消息</span><span class="sxs-lookup"><span data-stu-id="08af7-102">Securing Messages Using Transport Security</span></span>
+<span data-ttu-id="08af7-103">本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-103">This section discusses Message Queuing (MSMQ) transport security that you can use to secure messages sent to a queue.</span></span>  
   
 > [!NOTE]
->  通读本主题之前，建议您先阅读[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+>  <span data-ttu-id="08af7-104">在阅读之前通读本主题，建议你阅读[安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。</span><span class="sxs-lookup"><span data-stu-id="08af7-104">Before reading through this topic, it is recommended that you read [Security Concepts](../../../../docs/framework/wcf/feature-details/security-concepts.md).</span></span>  
   
- 以下插图提供了使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的排队通信的概念模型。此插图和术语用于说明传输安全概念。  
+ <span data-ttu-id="08af7-105">以下插图提供了使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的排队通信的概念模型。</span><span class="sxs-lookup"><span data-stu-id="08af7-105">The following illustration provides a conceptual model of queued communication using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="08af7-106">此插图和术语用于说明传输安全概念。</span><span class="sxs-lookup"><span data-stu-id="08af7-106">This illustration and terminology is used to explain transport security concepts.</span></span>  
   
- ![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed\-Queue\-Figure")  
+ <span data-ttu-id="08af7-107">![排队应用程序关系图](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分布式队列图")</span><span class="sxs-lookup"><span data-stu-id="08af7-107">![Queued Application Diagram](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")</span></span>  
   
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 与 <xref:System.ServiceModel.NetMsmqBinding> 发送排队消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息将作为 MSMQ 消息的正文附加。传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息是 MSMQ 消息的正文，因此使用传输安全还可以确保它的安全。  
+ <span data-ttu-id="08af7-108">使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 与 <xref:System.ServiceModel.NetMsmqBinding> 发送排队消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息将作为 MSMQ 消息的正文附加。</span><span class="sxs-lookup"><span data-stu-id="08af7-108">When sending queued messages using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] with <xref:System.ServiceModel.NetMsmqBinding>, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message is attached as a body of the MSMQ message.</span></span> <span data-ttu-id="08af7-109">传输安全可以保护全部 MSMQ 消息（MSMQ 消息头或属性和消息正文）的安全。</span><span class="sxs-lookup"><span data-stu-id="08af7-109">Transport security secures the entire MSMQ message (MSMQ message headers or properties and the message body).</span></span> <span data-ttu-id="08af7-110">由于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息是 MSMQ 消息的正文，因此使用传输安全还可以确保它的安全。</span><span class="sxs-lookup"><span data-stu-id="08af7-110">Because it is the body of the MSMQ message, using transport security also secures the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message.</span></span>  
   
- 传输安全的关键概念在于，客户端必须满足安全要求，才能使消息进入目标队列。这与消息安全不同。在消息安全中，针对接收消息的应用程序来保护消息。  
+ <span data-ttu-id="08af7-111">传输安全的关键概念在于，客户端必须满足安全要求，才能使消息进入目标队列。</span><span class="sxs-lookup"><span data-stu-id="08af7-111">The key concept behind transport security is that the client has to meet security requirements to get the message to the target queue.</span></span> <span data-ttu-id="08af7-112">这与消息安全不同。在消息安全中，针对接收消息的应用程序来保护消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-112">This is unlike Message security, where the message is secured for the application that receives the message.</span></span>  
   
- 使用 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的传输安全影响着在传输队列和目标队列之间进行传输时，对 MSMQ 消息进行保护的方式，其中，保护是指：  
+ <span data-ttu-id="08af7-113">使用 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的传输安全影响着在传输队列和目标队列之间进行传输时，对 MSMQ 消息进行保护的方式，其中，保护是指：</span><span class="sxs-lookup"><span data-stu-id="08af7-113">Transport security using <xref:System.ServiceModel.NetMsmqBinding> and <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> impacts how MSMQ messages are secured in-transit between the transmission queue and the target queue where secured implies:</span></span>  
   
--   对消息进行签名，以确保该消息未经篡改。  
+-   <span data-ttu-id="08af7-114">对消息进行签名，以确保该消息未经篡改。</span><span class="sxs-lookup"><span data-stu-id="08af7-114">Signing the message to ensure it is not tampered with.</span></span>  
   
--   对消息进行加密，以确保无法查看或篡改该消息。此操作是可选的，但建议执行该操作。  
+-   <span data-ttu-id="08af7-115">对消息进行加密，以确保无法查看或篡改该消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-115">Encrypting the message to ensure that it cannot be seen or tampered with.</span></span> <span data-ttu-id="08af7-116">此操作是可选的，但建议执行该操作。</span><span class="sxs-lookup"><span data-stu-id="08af7-116">This is recommended but optional.</span></span>  
   
--   目标队列管理器对消息发送方进行标识以确保不可否认性。  
+-   <span data-ttu-id="08af7-117">目标队列管理器对消息发送方进行标识以确保不可否认性。</span><span class="sxs-lookup"><span data-stu-id="08af7-117">The target queue manager that identifies the sender of the message for non-repudiation.</span></span>  
   
- 在 MSMQ 中，目标队列独立于身份验证，具有一个访问控制列表 \(ACL\)，用于检查客户端是否有权将消息发送到目标队列，同时还将检查接收应用程序是否有从目标队列接收消息的权限。  
+ <span data-ttu-id="08af7-118">在 MSMQ 中，目标队列独立于身份验证，具有一个访问控制列表 (ACL)，用于检查客户端是否有权将消息发送到目标队列，</span><span class="sxs-lookup"><span data-stu-id="08af7-118">In MSMQ, independent of authentication, the target queue has an access control list (ACL) to check whether the client has permission to send the message to the target queue.</span></span> <span data-ttu-id="08af7-119">同时还将检查接收应用程序是否有从目标队列接收消息的权限。</span><span class="sxs-lookup"><span data-stu-id="08af7-119">The receiving application is also checked for permission to receive the message from the target queue.</span></span>  
   
-## WCF MSMQ 传输安全属性  
- MSMQ 使用 Windows 安全性进行身份验证。MSMQ 使用 Windows 安全标识符 \(SID\) 来标识客户端，并将 Active Directory 目录服务用作对客户端进行身份验证时的证书颁发机构。这要求 MSMQ 与 Active Directory 集成一起安装。由于使用 Windows 域 SID 标识客户端，因此仅当客户端和服务都属于相同的 Windows 域时，此安全选项才有意义。  
+## <a name="wcf-msmq-transport-security-properties"></a><span data-ttu-id="08af7-120">WCF MSMQ 传输安全属性</span><span class="sxs-lookup"><span data-stu-id="08af7-120">WCF MSMQ Transport Security Properties</span></span>  
+ <span data-ttu-id="08af7-121">MSMQ 使用 Windows 安全性进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="08af7-121">MSMQ uses Windows security for authentication.</span></span> <span data-ttu-id="08af7-122">MSMQ 使用 Windows 安全标识符 (SID) 来标识客户端，并将 Active Directory 目录服务用作对客户端进行身份验证时的证书颁发机构。</span><span class="sxs-lookup"><span data-stu-id="08af7-122">It uses the Windows security identifier (SID) to identify the client and uses Active Directory directory service as the certificate authority when authenticating the client.</span></span> <span data-ttu-id="08af7-123">这要求 MSMQ 与 Active Directory 集成一起安装。</span><span class="sxs-lookup"><span data-stu-id="08af7-123">This requires MSMQ to be installed with Active Directory integration.</span></span> <span data-ttu-id="08af7-124">由于使用 Windows 域 SID 标识客户端，因此仅当客户端和服务都属于相同的 Windows 域时，此安全选项才有意义。</span><span class="sxs-lookup"><span data-stu-id="08af7-124">Because the Windows domain SID is used to identify the client, this security option is only meaningful when both the client and service are part of the same Windows domain.</span></span>  
   
- MSMQ 还能够将证书附加到未向 Active Directory 注册的消息中。在这种情况下，它可以确保该消息已使用附加的证书进行签名。  
+ <span data-ttu-id="08af7-125">MSMQ 还能够将证书附加到未向 Active Directory 注册的消息中。</span><span class="sxs-lookup"><span data-stu-id="08af7-125">MSMQ also provides the ability to attach a certificate with the message that is not registered with Active Directory.</span></span> <span data-ttu-id="08af7-126">在这种情况下，它可以确保该消息已使用附加的证书进行签名。</span><span class="sxs-lookup"><span data-stu-id="08af7-126">In this case, it ensures that the message was signed using the attached certificate.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将这些选项作为 MSMQ 传输安全的一部分提供，这些选项是传输安全的关键核心。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="08af7-127"> 将这些选项作为 MSMQ 传输安全的一部分提供，这些选项是传输安全的关键核心。</span><span class="sxs-lookup"><span data-stu-id="08af7-127"> provides both these options as part of MSMQ transport security and they are the key pivot for transport security.</span></span>  
   
- 默认情况下将启用传输安全。  
+ <span data-ttu-id="08af7-128">默认情况下将启用传输安全。</span><span class="sxs-lookup"><span data-stu-id="08af7-128">By default, transport security is turned on.</span></span>  
   
- 了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。  
+ <span data-ttu-id="08af7-129">了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。</span><span class="sxs-lookup"><span data-stu-id="08af7-129">Given these basics, the following sections detail transport security properties bundled with <xref:System.ServiceModel.NetMsmqBinding> and <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.</span></span>  
   
-#### MSMQ 身份验证模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。在这两种身份验证模式下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队传输通道均使用服务配置中指定的 `CertificateValidationMode`。证书验证模式指定用于检查证书有效性的机制。  
+#### <a name="msmq-authentication-mode"></a><span data-ttu-id="08af7-130">MSMQ 身份验证模式</span><span class="sxs-lookup"><span data-stu-id="08af7-130">MSMQ Authentication Mode</span></span>  
+ <span data-ttu-id="08af7-131"><xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-131">The <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dictates whether to use the Windows domain security or an external certificate-based security to secure the message.</span></span> <span data-ttu-id="08af7-132">在这两种身份验证模式下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队传输通道均使用服务配置中指定的 `CertificateValidationMode`。</span><span class="sxs-lookup"><span data-stu-id="08af7-132">In both authentication modes, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued transport channel uses the `CertificateValidationMode` specified in the service configuration.</span></span> <span data-ttu-id="08af7-133">证书验证模式指定用于检查证书有效性的机制。</span><span class="sxs-lookup"><span data-stu-id="08af7-133">The certificate validation mode specifies the mechanism used to check the validity of the certificate.</span></span>  
   
- 启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode>。  
+ <span data-ttu-id="08af7-134">启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。</span><span class="sxs-lookup"><span data-stu-id="08af7-134">When transport security is turned on, the default setting is <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.</span></span>  
   
-#### Windows 域身份验证模式  
- 如果选择使用 Windows 安全，则需要 Active Directory 集成。<xref:System.ServiceModel.MsmqAuthenticationMode> 是默认的传输安全模式。如果依此设置，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道会将 Windows SID 附加到 MSMQ 消息，并使用其从 Active Directory 获得的内部证书。MSMQ 将此内部证书用于保护消息。接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
-  
-> [!NOTE]
->  创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。这可以确保队列中不接受未经身份验证的消息。  
-  
- 附加到消息中的 SID 还用于根据目标队列的 ACL 进行检查，以确保客户端具有向队列发送消息的权限。  
-  
-#### 证书身份验证模式  
- 使用证书身份验证模式不需要 Active Directory 集成。实际上，在某些情况下，例如在工作组模式（没有 Active Directory 集成）中安装 MSMQ 时，或使用 SOAP 可靠传送消息协议 \(SRMP\) 将消息发送到队列时，只有 <xref:System.ServiceModel.MsmqAuthenticationMode> 才起作用。  
-  
- 发送具有 <xref:System.ServiceModel.MsmqAuthenticationMode> 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道不会将 Windows SID 附加到 MSMQ 消息中。同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。  
-  
- 包含声明和标识信息的证书由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队传输通道在 <xref:System.ServiceModel.ServiceSecurityContext> 中填充。服务可使用此信息来对发送方执行其自己的身份验证。  
-  
-### MSMQ 保护级别  
- 保护级别指示如何保护 MSMQ 消息以确保该消息不会被篡改。保护级别是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 属性中指定的。默认值为 <xref:System.Net.Security.ProtectionLevel>。  
-  
-#### “签名”保护级别  
- 如果使用 `WindowsDomain` 身份验证模式，则使用内部生成的证书对 MSMQ 消息进行签名；如果使用 `Certificate` 身份验证模式，则使用外部生成的证书对 MSMQ 消息进行签名。  
-  
-#### “签名和加密”保护级别  
- 如果使用 `WindowsDomain` 身份验证模式，则使用内部生成的证书对 MSMQ 消息进行签名；如果使用 `Certificate` 身份验证模式，则使用外部生成的证书对 MSMQ 消息进行签名。  
-  
- 除对消息进行签名外，MSMQ 消息将使用从属于承载目标队列的接收队列管理器的 Active Directory 处获取的证书公钥进行加密。发送队列管理器可确保在传递过程中对 MSMQ 消息进行加密。接收队列管理器可使用其内部证书的私钥来解密 MSMQ 消息，并将该消息以明文形式存储在队列中（如果该队列已经过身份验证和授权）。  
+#### <a name="windows-domain-authentication-mode"></a><span data-ttu-id="08af7-135">Windows 域身份验证模式</span><span class="sxs-lookup"><span data-stu-id="08af7-135">Windows Domain Authentication Mode</span></span>  
+ <span data-ttu-id="08af7-136">如果选择使用 Windows 安全，则需要 Active Directory 集成。</span><span class="sxs-lookup"><span data-stu-id="08af7-136">The choice of using Windows security requires Active Directory integration.</span></span> <span data-ttu-id="08af7-137"><xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。</span><span class="sxs-lookup"><span data-stu-id="08af7-137"><xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> is the default transport security mode.</span></span> <span data-ttu-id="08af7-138">如果依此设置，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道会将 Windows SID 附加到 MSMQ 消息，并使用其从 Active Directory 获得的内部证书。</span><span class="sxs-lookup"><span data-stu-id="08af7-138">When this is set, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel attaches the Windows SID to the MSMQ message and uses its internal certificate obtained from Active Directory.</span></span> <span data-ttu-id="08af7-139">MSMQ 将此内部证书用于保护消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-139">MSMQ uses this internal certificate to secure the message.</span></span> <span data-ttu-id="08af7-140">接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。</span><span class="sxs-lookup"><span data-stu-id="08af7-140">The receiving queue manager uses Active Directory to search and find a matching certificate to authenticate the client and checks that the SID also matches that of the client.</span></span> <span data-ttu-id="08af7-141">如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。</span><span class="sxs-lookup"><span data-stu-id="08af7-141">This authentication step is executed if a certificate, either internally generated in the case of `WindowsDomain` authentication mode or externally generated in the case of `Certificate` authentication mode, is attached to the message even if the target queue is not marked as requiring authentication.</span></span>  
   
 > [!NOTE]
->  若要加密消息，必须具有 Active Directory 访问权限（<xref:System.ServiceModel.NetMsmqBinding> 的 `UseActiveDirectory` 属性必须设置为 `true`），并且该权限可与 <xref:System.ServiceModel.MsmqAuthenticationMode> 和 <xref:System.ServiceModel.MsmqAuthenticationMode> 一起使用。  
+>  <span data-ttu-id="08af7-142">创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="08af7-142">When creating a queue, you can mark the queue as an authenticated queue to indicate that the queue requires authentication of the client sending messages to the queue.</span></span> <span data-ttu-id="08af7-143">这可以确保队列中不接受未经身份验证的消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-143">This ensures that no unauthenticated messages are accepted in the queue.</span></span>  
   
-#### “无”保护级别  
- 这表示 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel>。对于任何其他身份验证模式，这都不是一个有效值。  
+ <span data-ttu-id="08af7-144">附加到消息中的 SID 还用于根据目标队列的 ACL 进行检查，以确保客户端具有向队列发送消息的权限。</span><span class="sxs-lookup"><span data-stu-id="08af7-144">The SID attached with the message is also used to check against the target queue's ACL to ensure that the client has the authority to send messages to the queue.</span></span>  
+  
+#### <a name="certificate-authentication-mode"></a><span data-ttu-id="08af7-145">证书身份验证模式</span><span class="sxs-lookup"><span data-stu-id="08af7-145">Certificate Authentication Mode</span></span>  
+ <span data-ttu-id="08af7-146">使用证书身份验证模式不需要 Active Directory 集成。</span><span class="sxs-lookup"><span data-stu-id="08af7-146">The choice of using certificate authentication mode does not require Active Directory integration.</span></span> <span data-ttu-id="08af7-147">实际上，在某些情况下，例如在工作组模式（没有 Active Directory 集成）中安装 MSMQ 时，或使用 SOAP 可靠传送消息协议 (SRMP) 将消息发送到队列时，只有 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 才起作用。</span><span class="sxs-lookup"><span data-stu-id="08af7-147">In fact, in some cases, such as when MSMQ is installed in workgroup mode (without Active Directory integration) or when using the SOAP Reliable Messaging Protocol (SRMP) transfer protocol to send messages to the queue, only <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> works.</span></span>  
+  
+ <span data-ttu-id="08af7-148">发送具有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道不会将 Windows SID 附加到 MSMQ 消息中。</span><span class="sxs-lookup"><span data-stu-id="08af7-148">When sending a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message with <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel does not attach a Windows SID to the MSMQ message.</span></span> <span data-ttu-id="08af7-149">同样，目标队列 ACL 必须允许使用 `Anonymous` 用户权限向队列发送消息。</span><span class="sxs-lookup"><span data-stu-id="08af7-149">As such, the target queue ACL must allow for `Anonymous` user access to send to the queue.</span></span> <span data-ttu-id="08af7-150">接收队列管理器检查 MSMQ 消息是否已使用证书进行签名，但不执行任何身份验证。</span><span class="sxs-lookup"><span data-stu-id="08af7-150">The receiving queue manager checks whether the MSMQ message was signed with the certificate but does not perform any authentication.</span></span>  
+  
+ <span data-ttu-id="08af7-151">包含声明和标识信息的证书由 <xref:System.ServiceModel.ServiceSecurityContext> 排队传输通道在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中填充。</span><span class="sxs-lookup"><span data-stu-id="08af7-151">The certificate with its claims and identity information is populated in the <xref:System.ServiceModel.ServiceSecurityContext> by the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued transport channel.</span></span> <span data-ttu-id="08af7-152">服务可使用此信息来对发送方执行其自己的身份验证。</span><span class="sxs-lookup"><span data-stu-id="08af7-152">The service can use this information to perform its own authentication of the sender.</span></span>  
+  
+### <a name="msmq-protection-level"></a><span data-ttu-id="08af7-153">MSMQ 保护级别</span><span class="sxs-lookup"><span data-stu-id="08af7-153">MSMQ Protection Level</span></span>  
+ <span data-ttu-id="08af7-154">保护级别指示如何保护 MSMQ 消息以确保该消息不会被篡改。</span><span class="sxs-lookup"><span data-stu-id="08af7-154">The protection level dictates how to protect the MSMQ message to ensure that it is not tampered with.</span></span> <span data-ttu-id="08af7-155">保护级别是在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 属性中指定的。</span><span class="sxs-lookup"><span data-stu-id="08af7-155">It is specified in the <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> property.</span></span> <span data-ttu-id="08af7-156">默认值为 <xref:System.Net.Security.ProtectionLevel.Sign>。</span><span class="sxs-lookup"><span data-stu-id="08af7-156">The default value is <xref:System.Net.Security.ProtectionLevel.Sign>.</span></span>  
+  
+#### <a name="sign-protection-level"></a><span data-ttu-id="08af7-157">“签名”保护级别</span><span class="sxs-lookup"><span data-stu-id="08af7-157">Sign Protection Level</span></span>  
+ <span data-ttu-id="08af7-158">如果使用 `WindowsDomain` 身份验证模式，则使用内部生成的证书对 MSMQ 消息进行签名；如果使用 `Certificate` 身份验证模式，则使用外部生成的证书对 MSMQ 消息进行签名。</span><span class="sxs-lookup"><span data-stu-id="08af7-158">The MSMQ message is signed using the internally generated certificate when using `WindowsDomain` authentication mode or an externally generated certificate when using `Certificate` authentication mode.</span></span>  
+  
+#### <a name="sign-and-encrypt-protection-level"></a><span data-ttu-id="08af7-159">“签名和加密”保护级别</span><span class="sxs-lookup"><span data-stu-id="08af7-159">Sign and Encrypt Protection Level</span></span>  
+ <span data-ttu-id="08af7-160">如果使用 `WindowsDomain` 身份验证模式，则使用内部生成的证书对 MSMQ 消息进行签名；如果使用 `Certificate` 身份验证模式，则使用外部生成的证书对 MSMQ 消息进行签名。</span><span class="sxs-lookup"><span data-stu-id="08af7-160">The MSMQ message is signed using the internally generated certificate when using `WindowsDomain` authentication mode or externally generated certificate when using `Certificate` authentication mode.</span></span>  
+  
+ <span data-ttu-id="08af7-161">除对消息进行签名外，MSMQ 消息将使用从属于承载目标队列的接收队列管理器的 Active Directory 处获取的证书公钥进行加密。</span><span class="sxs-lookup"><span data-stu-id="08af7-161">In addition to signing the message, the MSMQ message is encrypted using the public key of the certificate obtained from Active Directory that belongs to the receiving queue manager that hosts the target queue.</span></span> <span data-ttu-id="08af7-162">发送队列管理器可确保在传递过程中对 MSMQ 消息进行加密。</span><span class="sxs-lookup"><span data-stu-id="08af7-162">The sending queue manager ensures that the MSMQ message is encrypted in transit.</span></span> <span data-ttu-id="08af7-163">接收队列管理器可使用其内部证书的私钥来解密 MSMQ 消息，并将该消息以明文形式存储在队列中（如果该队列已经过身份验证和授权）。</span><span class="sxs-lookup"><span data-stu-id="08af7-163">The receiving queue manager decrypts the MSMQ message using the private key of its internal certificate and stores the message in the queue (if authenticated and authorized) in clear text.</span></span>  
   
 > [!NOTE]
->  如果已对 MSMQ 消息签名，MSMQ 将检查该消息是否是使用独立于队列状态（即是否是经过身份验证的队列）的附加证书（内部或外部）进行签名的。  
+>  <span data-ttu-id="08af7-164">若要加密消息，必须具有 Active Directory 访问权限（`UseActiveDirectory` 的 <xref:System.ServiceModel.NetMsmqBinding> 属性必须设置为 `true`），并且该权限可与 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 和 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 一起使用。</span><span class="sxs-lookup"><span data-stu-id="08af7-164">To encrypt the message, Active Directory access is required (`UseActiveDirectory` property of <xref:System.ServiceModel.NetMsmqBinding> must be set to `true`) and can be used with both <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> and <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.</span></span>  
   
-### MSMQ 加密算法  
- 加密算法指定用于对网络上的 MSMQ 消息进行加密的算法。仅当 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel> 时，才使用此属性。  
+#### <a name="none-protection-level"></a><span data-ttu-id="08af7-165">“无”保护级别</span><span class="sxs-lookup"><span data-stu-id="08af7-165">None Protection Level</span></span>  
+ <span data-ttu-id="08af7-166">这表示 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.None>。</span><span class="sxs-lookup"><span data-stu-id="08af7-166">This is implied when <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> is set to <xref:System.Net.Security.ProtectionLevel.None>.</span></span> <span data-ttu-id="08af7-167">对于任何其他身份验证模式，这都不是一个有效值。</span><span class="sxs-lookup"><span data-stu-id="08af7-167">This cannot be a valid value for any other authentication modes.</span></span>  
   
- 支持的算法是 `RC4Stream` 和 `AES`，默认算法为 `RC4Stream`。  
+> [!NOTE]
+>  <span data-ttu-id="08af7-168">如果已对 MSMQ 消息签名，MSMQ 将检查该消息是否是使用独立于队列状态（即是否是经过身份验证的队列）的附加证书（内部或外部）进行签名的。</span><span class="sxs-lookup"><span data-stu-id="08af7-168">If the MSMQ message is signed, MSMQ checks whether the message is signed with the attached certificate (internal or external) independent of the state of the queue, that is, authenticated queue or not.</span></span>  
   
- 仅当发送方安装 MSMQ 4.0 后，您才可以使用 `AES` 算法。此外，目标队列还必须承载在 MSMQ 4.0 之上。  
+### <a name="msmq-encryption-algorithm"></a><span data-ttu-id="08af7-169">MSMQ 加密算法</span><span class="sxs-lookup"><span data-stu-id="08af7-169">MSMQ Encryption Algorithm</span></span>  
+ <span data-ttu-id="08af7-170">加密算法指定用于对网络上的 MSMQ 消息进行加密的算法。</span><span class="sxs-lookup"><span data-stu-id="08af7-170">The encryption algorithm specifies the algorithm to use to encrypt the MSMQ message on the wire.</span></span> <span data-ttu-id="08af7-171">仅当 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 时，才使用此属性。</span><span class="sxs-lookup"><span data-stu-id="08af7-171">This property is used only if <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> is set to <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.</span></span>  
   
-### MSMQ 哈希算法  
- 哈希算法指定用于创建 MSMQ 消息的数字签名的算法。接收队列管理器使用此算法对 MSMQ 消息进行身份验证。仅当 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel> 或 <xref:System.Net.Security.ProtectionLevel> 时，才使用此属性。  
+ <span data-ttu-id="08af7-172">支持的算法是 `RC4Stream` 和 `AES`，默认算法为 `RC4Stream`。</span><span class="sxs-lookup"><span data-stu-id="08af7-172">The supported algorithms are `RC4Stream` and `AES` and the default is `RC4Stream`.</span></span>  
   
- 支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。默认值为 `SHA1`。  
+ <span data-ttu-id="08af7-173">仅当发送方安装 MSMQ 4.0 后，您才可以使用 `AES` 算法。</span><span class="sxs-lookup"><span data-stu-id="08af7-173">You can use the `AES` algorithm only if the sender has MSMQ 4.0 installed.</span></span> <span data-ttu-id="08af7-174">此外，目标队列还必须承载在 MSMQ 4.0 之上。</span><span class="sxs-lookup"><span data-stu-id="08af7-174">In addition, the target queue must also be hosted on MSMQ 4.0.</span></span>  
   
-## 请参阅  
- [Message Queuing](http://msdn.microsoft.com/zh-cn/ff917e87-05d5-478f-9430-0f560675ece1)   
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)   
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+### <a name="msmq-hash-algorithm"></a><span data-ttu-id="08af7-175">MSMQ 哈希算法</span><span class="sxs-lookup"><span data-stu-id="08af7-175">MSMQ Hash Algorithm</span></span>  
+ <span data-ttu-id="08af7-176">哈希算法指定用于创建 MSMQ 消息的数字签名的算法。</span><span class="sxs-lookup"><span data-stu-id="08af7-176">The hash algorithm specifies the algorithm used to create a digital signature of the MSMQ message.</span></span> <span data-ttu-id="08af7-177">接收队列管理器使用此算法对 MSMQ 消息进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="08af7-177">The receiving queue manager uses this same algorithm to authenticate the MSMQ message.</span></span> <span data-ttu-id="08af7-178">只有在 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 设置为 <xref:System.Net.Security.ProtectionLevel.Sign> 或 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 时，才使用此属性。</span><span class="sxs-lookup"><span data-stu-id="08af7-178">This property is used only if <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> is set to <xref:System.Net.Security.ProtectionLevel.Sign> or <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.</span></span>  
+  
+ <span data-ttu-id="08af7-179">支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。</span><span class="sxs-lookup"><span data-stu-id="08af7-179">The supported algorithms are `MD5`, `SHA1`, `SHA256`, and `SHA512`.</span></span> <span data-ttu-id="08af7-180">默认值为 `SHA1`。</span><span class="sxs-lookup"><span data-stu-id="08af7-180">The default is `SHA1`.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="08af7-181">另请参阅</span><span class="sxs-lookup"><span data-stu-id="08af7-181">See Also</span></span>  
+ [<span data-ttu-id="08af7-182">消息队列</span><span class="sxs-lookup"><span data-stu-id="08af7-182">Message Queuing</span></span>](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [<span data-ttu-id="08af7-183">安全性的基础概念</span><span class="sxs-lookup"><span data-stu-id="08af7-183">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [<span data-ttu-id="08af7-184">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="08af7-184">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

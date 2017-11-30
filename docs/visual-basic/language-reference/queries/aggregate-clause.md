@@ -1,34 +1,33 @@
 ---
-title: "Aggregate 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryAggregateIn"
-  - "vb.QueryAggregate"
-  - "vb.QueryAggregateInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Aggregate 子句"
-  - "Aggregate 语句"
-  - "查询 [Visual Basic], 聚合"
+title: "Aggregate 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryAggregateIn
+- vb.QueryAggregate
+- vb.QueryAggregateInto
+helpviewer_keywords:
+- Aggregate clause [Visual Basic]
+- Aggregate statement [Visual Basic]
+- queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Aggregate 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-对集合应用一个或多个聚合函数。  
+# <a name="aggregate-clause-visual-basic"></a><span data-ttu-id="da08f-102">Aggregate 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da08f-102">Aggregate Clause (Visual Basic)</span></span>
+<span data-ttu-id="da08f-103">向集合应用一个或多个聚合函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-103">Applies one or more aggregate functions to a collection.</span></span>  
   
-## 语法  
+## <a name="syntax"></a><span data-ttu-id="da08f-104">语法</span><span class="sxs-lookup"><span data-stu-id="da08f-104">Syntax</span></span>  
   
 ```  
 Aggregate element [As type] In collection _  
@@ -37,60 +36,58 @@ Aggregate element [As type] In collection _
   Into expressionList  
 ```  
   
-## 部件  
+## <a name="parts"></a><span data-ttu-id="da08f-105">部件</span><span class="sxs-lookup"><span data-stu-id="da08f-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|术语|定义|  
-|`element`|必选。  用于循环访问集合的元素的变量。|  
-|`type`|可选。  `element` 的类型。  如果不指定类型，则从 `collection` 推断 `element` 的类型。|  
-|`collection`|必选。  引用要对其进行操作的集合。|  
-|`clause`|可选。  一个或多个查询子句（例如 `Where` 子句），用于优化要向其应用聚合子句的查询结果。|  
-|`expressionList`|必选。  一个或多个由逗号分隔的表达式，标识要应用到集合的聚合函数。  可以对聚合函数应用一个别名，以便为查询结果指定成员名称。  如果不提供别名，则使用聚合函数的名称。  有关示例，请参见本主题后面有关聚合函数的部分。|  
+|<span data-ttu-id="da08f-106">术语</span><span class="sxs-lookup"><span data-stu-id="da08f-106">Term</span></span>|<span data-ttu-id="da08f-107">定义</span><span class="sxs-lookup"><span data-stu-id="da08f-107">Definition</span></span>|  
+|---|---|  
+|`element`|<span data-ttu-id="da08f-108">必需。</span><span class="sxs-lookup"><span data-stu-id="da08f-108">Required.</span></span> <span data-ttu-id="da08f-109">用于循环访问集合的元素的变量。</span><span class="sxs-lookup"><span data-stu-id="da08f-109">Variable used to iterate through the elements of the collection.</span></span>|  
+|`type`|<span data-ttu-id="da08f-110">可选。</span><span class="sxs-lookup"><span data-stu-id="da08f-110">Optional.</span></span> <span data-ttu-id="da08f-111">`element` 的类型。</span><span class="sxs-lookup"><span data-stu-id="da08f-111">The type of `element`.</span></span> <span data-ttu-id="da08f-112">如果指定没有类型，则的一种`element`从推断`collection`。</span><span class="sxs-lookup"><span data-stu-id="da08f-112">If no type is specified, the type of `element` is inferred from `collection`.</span></span>|  
+|`collection`|<span data-ttu-id="da08f-113">必需。</span><span class="sxs-lookup"><span data-stu-id="da08f-113">Required.</span></span> <span data-ttu-id="da08f-114">引用集合上进行操作。</span><span class="sxs-lookup"><span data-stu-id="da08f-114">Refers to the collection to operate on.</span></span>|  
+|`clause`|<span data-ttu-id="da08f-115">可选。</span><span class="sxs-lookup"><span data-stu-id="da08f-115">Optional.</span></span> <span data-ttu-id="da08f-116">一个或多个查询子句，如`Where`子句，以优化要向其应用聚合子句的查询结果。</span><span class="sxs-lookup"><span data-stu-id="da08f-116">One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.</span></span>|  
+|`expressionList`|<span data-ttu-id="da08f-117">必需。</span><span class="sxs-lookup"><span data-stu-id="da08f-117">Required.</span></span> <span data-ttu-id="da08f-118">一个或多个以逗号分隔表达式，标识要将应用于集合的聚合函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-118">One or more comma-delimited expressions that identify an aggregate function to apply to the collection.</span></span> <span data-ttu-id="da08f-119">你可以应用到聚合函数来指定查询结果的成员名称的别名。</span><span class="sxs-lookup"><span data-stu-id="da08f-119">You can apply an alias to an aggregate function to specify a member name for the query result.</span></span> <span data-ttu-id="da08f-120">如果不提供别名，则使用聚合函数的名称。</span><span class="sxs-lookup"><span data-stu-id="da08f-120">If no alias is supplied, the name of the aggregate function is used.</span></span> <span data-ttu-id="da08f-121">有关示例，请参阅有关本主题中后面的聚合函数的部分。</span><span class="sxs-lookup"><span data-stu-id="da08f-121">For examples, see the section about aggregate functions later in this topic.</span></span>|  
   
-## 备注  
- `Aggregate` 子句可用于在查询中包含聚合函数。  聚合函数对一组值执行检查和计算，并返回单个值。  使用查询结果类型的成员可以访问计算得到的值。  可以使用的标准聚合函数包括 `All`、`Any`、`Average`、`Count`、`LongCount`、`Max`、`Min` 和 `Sum` 函数。  这些函数对于熟悉 SQL 中聚合的开发人员而言并不陌生。  本主题的下一部分将介绍这些函数。  
+## <a name="remarks"></a><span data-ttu-id="da08f-122">备注</span><span class="sxs-lookup"><span data-stu-id="da08f-122">Remarks</span></span>  
+ <span data-ttu-id="da08f-123">`Aggregate`子句可用来在你查询中包含聚合函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-123">The `Aggregate` clause can be used to include aggregate functions in your queries.</span></span> <span data-ttu-id="da08f-124">聚合函数通过一组值执行检查和计算并返回单个值。</span><span class="sxs-lookup"><span data-stu-id="da08f-124">Aggregate functions perform checks and computations over a set of values and return a single value.</span></span> <span data-ttu-id="da08f-125">你可以通过使用查询结果类型的成员访问计算的值。</span><span class="sxs-lookup"><span data-stu-id="da08f-125">You can access the computed value by using a member of the query result type.</span></span> <span data-ttu-id="da08f-126">你可以使用标准聚合函数是`All`， `Any`， `Average`， `Count`， `LongCount`， `Max`， `Min`，和`Sum`函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-126">The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions.</span></span> <span data-ttu-id="da08f-127">这些函数对于熟悉的开发人员熟悉 SQL 中的聚合。</span><span class="sxs-lookup"><span data-stu-id="da08f-127">These functions are familiar to developers who are familiar with aggregates in SQL.</span></span> <span data-ttu-id="da08f-128">它们是本主题的以下部分中所述。</span><span class="sxs-lookup"><span data-stu-id="da08f-128">They are described in the following section of this topic.</span></span>  
   
- 聚合函数的结果作为查询结果类型的字段包含在查询结果中。  可以为聚合函数结果提供别名，以指定将保存聚合值的查询结果类型成员的名称。  如果不提供别名，则使用聚合函数的名称。  
+ <span data-ttu-id="da08f-129">聚合函数的结果会附在查询结果作为查询的结果类型的字段。</span><span class="sxs-lookup"><span data-stu-id="da08f-129">The result of an aggregate function is included in the query result as a field of the query result type.</span></span> <span data-ttu-id="da08f-130">你可以提供要指定将保存的聚合值的查询结果类型的成员的名称的聚合函数结果的别名。</span><span class="sxs-lookup"><span data-stu-id="da08f-130">You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value.</span></span> <span data-ttu-id="da08f-131">如果不提供别名，则使用聚合函数的名称。</span><span class="sxs-lookup"><span data-stu-id="da08f-131">If no alias is supplied, the name of the aggregate function is used.</span></span>  
   
- `Aggregate` 子句可以开始查询，也可以作为附加子句包含在查询中。  如果 `Aggregate` 子句开始查询，则结果是单个值，该值是 `Into` 子句中指定的聚合函数的结果。  如果在 `Into` 子句中指定多个聚合函数，则查询会返回单个类型，而且，对于 `Into` 子句中的每个聚合函数，该类型都具有一个单独的属性，以引用该聚合函数的结果。  如果 `Aggregate` 子句作为附加子句包含在查询中，则对于 `Into` 子句中的每个聚合函数，查询集合中返回的类型都具有一个单独的属性，以引用该聚合函数的结果。  
+ <span data-ttu-id="da08f-132">`Aggregate`子句可以开始查询，也可以是作为查询中的其他子句包括。</span><span class="sxs-lookup"><span data-stu-id="da08f-132">The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query.</span></span> <span data-ttu-id="da08f-133">如果`Aggregate`子句开始查询，则结果为单个值的中指定的聚合函数的结果`Into`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-133">If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause.</span></span> <span data-ttu-id="da08f-134">如果在中指定多个聚合函数`Into`子句，查询会返回单个类型使用单独的属性可引用中每个聚合函数的结果`Into`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-134">If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause.</span></span> <span data-ttu-id="da08f-135">如果`Aggregate`子句是作为查询中的其他子句包含，查询集合中返回的类型都具有一个单独的属性，可引用中每个聚合函数的结果`Into`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-135">If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.</span></span>  
   
-## 聚合函数  
- 下面的列表描述了可以在 `Aggregate` 子句中使用的标准聚合函数。  
+## <a name="aggregate-functions"></a><span data-ttu-id="da08f-136">聚合函数</span><span class="sxs-lookup"><span data-stu-id="da08f-136">Aggregate Functions</span></span>  
+ <span data-ttu-id="da08f-137">以下列表介绍了可与使用标准聚合函数`Aggregate`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-137">The following list describes the standard aggregate functions that can be used with the `Aggregate` clause.</span></span>  
   
-|||  
-|-|-|  
-|功能|说明|  
-|`All`|如果集合中的所有元素均满足指定条件，则返回 `true`；否则返回 `false`。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
-|`Any`|如果集合中的任一元素满足指定条件，则返回 `true`；否则返回 `false`。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  
-|`Average`|计算集合中所有元素的平均值，或者对集合中的所有元素计算提供的表达式。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]|  
-|`Count`|统计集合中的元素数量。  可以提供一个可选 `Boolean` 表达式，以便仅统计集合中满足条件的元素数量。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]|  
-|`Group`|引用由 `Group By` 或 `Group Join` 子句进行分组的查询结果。  仅当 `Group` 函数位于 `Group By` 或 `Group Join` 子句的 `Into` 子句中时，该函数才有效。  有关更多信息和示例，请参见[Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)和[Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)。|  
-|`LongCount`|统计集合中的元素数量。  可以提供一个可选 `Boolean` 表达式，以便仅统计集合中满足条件的元素数量。  将结果作为 `Long` 类型的值返回。  有关示例，请参见 `Count` 聚合函数。|  
-|`Max`|计算集合中的最大值，或对集合中的所有元素计算提供的表达式。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]|  
-|`Min`|计算集合中的最小值，或对集合中的所有元素计算提供的表达式。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]|  
-|`Sum`|计算集合中所有元素之和，或对集合中的所有元素计算提供的表达式。  下面是一个示例：<br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]|  
+|<span data-ttu-id="da08f-138">函数</span><span class="sxs-lookup"><span data-stu-id="da08f-138">Function</span></span>|<span data-ttu-id="da08f-139">描述</span><span class="sxs-lookup"><span data-stu-id="da08f-139">Description</span></span>|  
+|---|---|  
+|`All`|<span data-ttu-id="da08f-140">返回`true`如果集合中的所有元素均都满足指定的条件; 否则返回`false`。</span><span class="sxs-lookup"><span data-stu-id="da08f-140">Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`.</span></span> <span data-ttu-id="da08f-141">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-141">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
+|`Any`|<span data-ttu-id="da08f-142">返回`true`在集合中的有元素满足指定的条件; 否则返回`false`。</span><span class="sxs-lookup"><span data-stu-id="da08f-142">Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`.</span></span> <span data-ttu-id="da08f-143">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-143">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  
+|`Average`|<span data-ttu-id="da08f-144">计算的集合或提供的计算表达式的集合中的所有元素中的所有元素的平均值。</span><span class="sxs-lookup"><span data-stu-id="da08f-144">Computes the average of all elements in the collection, or a computes supplied expression for all elements in the collection.</span></span> <span data-ttu-id="da08f-145">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-145">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]|  
+|`Count`|<span data-ttu-id="da08f-146">对集合中的元素数进行计数。</span><span class="sxs-lookup"><span data-stu-id="da08f-146">Counts the number of elements in the collection.</span></span> <span data-ttu-id="da08f-147">你可以提供一个可选`Boolean`表达式来计算仅满足条件的集合中的元素数目。</span><span class="sxs-lookup"><span data-stu-id="da08f-147">You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition.</span></span> <span data-ttu-id="da08f-148">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-148">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]|  
+|`Group`|<span data-ttu-id="da08f-149">引用的结果进行分组的查询结果`Group By`或`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-149">Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause.</span></span> <span data-ttu-id="da08f-150">`Group`函数是仅在中有效`Into`子句`Group By`或`Group Join`子句。</span><span class="sxs-lookup"><span data-stu-id="da08f-150">The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause.</span></span> <span data-ttu-id="da08f-151">有关详细信息和示例，请参阅[组 By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)和[Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="da08f-151">For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).</span></span>|  
+|`LongCount`|<span data-ttu-id="da08f-152">对集合中的元素数进行计数。</span><span class="sxs-lookup"><span data-stu-id="da08f-152">Counts the number of elements in the collection.</span></span> <span data-ttu-id="da08f-153">你可以提供一个可选`Boolean`表达式来计算仅满足条件的集合中的元素数目。</span><span class="sxs-lookup"><span data-stu-id="da08f-153">You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition.</span></span> <span data-ttu-id="da08f-154">将结果作为返回`Long`。</span><span class="sxs-lookup"><span data-stu-id="da08f-154">Returns the result as a `Long`.</span></span> <span data-ttu-id="da08f-155">有关示例，请参阅`Count`聚合函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-155">For an example, see the `Count` aggregate function.</span></span>|  
+|`Max`|<span data-ttu-id="da08f-156">集合中的属性的最大值或计算的集合中的所有元素提供的表达式。</span><span class="sxs-lookup"><span data-stu-id="da08f-156">Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection.</span></span> <span data-ttu-id="da08f-157">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-157">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]|  
+|`Min`|<span data-ttu-id="da08f-158">集合中的属性的最小值或计算的集合中的所有元素提供的表达式。</span><span class="sxs-lookup"><span data-stu-id="da08f-158">Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection.</span></span> <span data-ttu-id="da08f-159">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-159">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]|  
+|`Sum`|<span data-ttu-id="da08f-160">在集合中，所有元素的总和或计算的集合中的所有元素提供的表达式。</span><span class="sxs-lookup"><span data-stu-id="da08f-160">Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection.</span></span> <span data-ttu-id="da08f-161">下面是一个示例：</span><span class="sxs-lookup"><span data-stu-id="da08f-161">Following is an example:</span></span><br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]|  
   
-## 示例  
- 下面的代码示例演示如何使用 `Aggregate` 子句对查询结果应用聚合函数。  
+## <a name="example"></a><span data-ttu-id="da08f-162">示例</span><span class="sxs-lookup"><span data-stu-id="da08f-162">Example</span></span>  
+ <span data-ttu-id="da08f-163">下面的代码示例演示如何使用`Aggregate`子句将聚合函数应用于查询结果。</span><span class="sxs-lookup"><span data-stu-id="da08f-163">The following code example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
   
-## 创建用户定义的聚合函数  
- 可以通过将扩展方法添加到 <xref:System.Collections.Generic.IEnumerable%601> 类型，在查询表达式中包含您自己的自定义聚合函数。  然后，您的自定义方法可以对引用您的聚合函数的可枚举集合执行计算或操作。  有关扩展方法的更多信息，请参见[扩展方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
+## <a name="creating-user-defined-aggregate-functions"></a><span data-ttu-id="da08f-164">创建用户定义聚合函数</span><span class="sxs-lookup"><span data-stu-id="da08f-164">Creating User-Defined Aggregate Functions</span></span>  
+ <span data-ttu-id="da08f-165">可以通过添加到扩展方法在查询表达式中包括你自己的自定义聚合函数<xref:System.Collections.Generic.IEnumerable%601>类型。</span><span class="sxs-lookup"><span data-stu-id="da08f-165">You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type.</span></span> <span data-ttu-id="da08f-166">计算或聚合函数引用的可枚举集合的操作，然后可以执行自定义方法。</span><span class="sxs-lookup"><span data-stu-id="da08f-166">Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function.</span></span> <span data-ttu-id="da08f-167">有关扩展方法的详细信息，请参阅[扩展方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="da08f-167">For more information about extension methods, see [Extension Methods](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).</span></span>  
   
- 例如，下面的代码示例演示了一个自定义聚合函数，该函数计算一个数字集合的中值。  `Median` 扩展方法具有两个重载版本。  第一个重载接受 `IEnumerable(Of Double)` 类型集合作为输入。  如果对 `Double` 类型的查询字段调用 `Median` 聚合函数，则将调用此方法。  可以向 `Median` 方法的第二个重载传递任何泛型类型。  `Median` 方法的泛型重载接受另一个参数，该参数引用了 `Func(Of T, Double)` lambda 表达式，以便将集合中的类型的值投射为 `Double` 类型的相应值。  然后，它将中值的计算委托给 `Median` 方法的另一个重载。  有关 lambda 表达式的更多信息，请参见 [lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ <span data-ttu-id="da08f-168">例如，下面的代码示例演示计算中间值的数字集合的自定义聚合函数。</span><span class="sxs-lookup"><span data-stu-id="da08f-168">For example, the following code example shows a custom aggregate function that calculates the median value of a collection of numbers.</span></span> <span data-ttu-id="da08f-169">有两种重载的`Median`扩展方法。</span><span class="sxs-lookup"><span data-stu-id="da08f-169">There are two overloads of the `Median` extension method.</span></span> <span data-ttu-id="da08f-170">第一个重载接受，作为输入，类型的集合`IEnumerable(Of Double)`。</span><span class="sxs-lookup"><span data-stu-id="da08f-170">The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`.</span></span> <span data-ttu-id="da08f-171">如果`Median`聚合函数调用为类型的查询字段`Double`，将调用此方法。</span><span class="sxs-lookup"><span data-stu-id="da08f-171">If the `Median` aggregate function is called for a query field of type `Double`, this method will be called.</span></span> <span data-ttu-id="da08f-172">第二个重载`Median`方法可以传递任何泛型类型。</span><span class="sxs-lookup"><span data-stu-id="da08f-172">The second overload of the `Median` method can be passed any generic type.</span></span> <span data-ttu-id="da08f-173">泛型重载`Median`方法采用一个引用的第二个参数`Func(Of T, Double)`lambda 表达式，以便为相应的值类型的项目 （从集合） 类型的值`Double`。</span><span class="sxs-lookup"><span data-stu-id="da08f-173">The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`.</span></span> <span data-ttu-id="da08f-174">它然后委托到的其他重载的中值的计算`Median`方法。</span><span class="sxs-lookup"><span data-stu-id="da08f-174">It then delegates the calculation of the median value to the other overload of the `Median` method.</span></span> <span data-ttu-id="da08f-175">有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="da08f-175">For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
   
- 下面的代码示例演示了示例查询，这些查询对 `Integer` 类型集合和 `Double` 类型集合调用 `Median` 聚合函数。  对 `Double` 类型集合调用 `Median` 聚合函数的查询调用 `Median` 方法的接受 `Double` 类型集合作为输入的重载。  对 `Integer` 类型集合调用 `Median` 聚合函数的查询调用 `Median` 方法的泛型重载。  
+ <span data-ttu-id="da08f-176">下面的代码示例演示了示例查询，用于调用`Median`聚合函数的集合的类型`Integer`，和类型的集合`Double`。</span><span class="sxs-lookup"><span data-stu-id="da08f-176">The following code example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`.</span></span> <span data-ttu-id="da08f-177">调用的查询`Median`聚合函数类型的集合`Double`调用的重载`Median`接受，作为输入，类型的集合的方法`Double`。</span><span class="sxs-lookup"><span data-stu-id="da08f-177">The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`.</span></span> <span data-ttu-id="da08f-178">调用的查询`Median`聚合函数类型的集合`Integer`调用的泛型重载`Median`方法。</span><span class="sxs-lookup"><span data-stu-id="da08f-178">The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Group By 子句](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a><span data-ttu-id="da08f-179">另请参阅</span><span class="sxs-lookup"><span data-stu-id="da08f-179">See Also</span></span>  
+ [<span data-ttu-id="da08f-180">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="da08f-180">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="da08f-181">查询</span><span class="sxs-lookup"><span data-stu-id="da08f-181">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="da08f-182">Select 子句</span><span class="sxs-lookup"><span data-stu-id="da08f-182">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="da08f-183">From 子句</span><span class="sxs-lookup"><span data-stu-id="da08f-183">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="da08f-184">Where 子句</span><span class="sxs-lookup"><span data-stu-id="da08f-184">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="da08f-185">Group By 子句</span><span class="sxs-lookup"><span data-stu-id="da08f-185">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)
