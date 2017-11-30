@@ -1,25 +1,28 @@
 ---
-title: "XmlDictionaryReaderQuotas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: XmlDictionaryReaderQuotas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 980a7eacd095dc1b601d63f5a807f2e287c09885
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# XmlDictionaryReaderQuotas
+# <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class XmlDictionaryReaderQuotas  
@@ -32,53 +35,53 @@ class XmlDictionaryReaderQuotas
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  XmlDictionaryReaderQuotas 类不定义任何方法。  
   
-## 属性  
+## <a name="properties"></a>属性  
  XmlDictionaryReaderQuotas 类具有以下属性：  
   
-### MaxArrayLength  
+### <a name="maxarraylength"></a>MaxArrayLength  
  数据类型：sint32  
   
  访问类型：只读  
   
  允许的最大数组长度。  
   
-### MaxBytesPerRead  
+### <a name="maxbytesperread"></a>MaxBytesPerRead  
  数据类型：sint32  
   
  访问类型：只读  
   
  允许为每次读取返回的最大字节数。  
   
-### MaxDepth  
+### <a name="maxdepth"></a>MaxDepth  
  数据类型：sint32  
   
  访问类型：只读  
   
  每次读取的最大嵌套节点深度。  
   
-### MaxNameTableCharCount  
+### <a name="maxnametablecharcount"></a>MaxNameTableCharCount  
  数据类型：sint32  
   
  访问类型：只读  
   
  表名称中允许的最大字符数。  
   
-### MaxStringContentLength  
+### <a name="maxstringcontentlength"></a>MaxStringContentLength  
  数据类型：sint32  
   
  访问类型：只读  
   
  XML 元素内容中允许包含的最大字符数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|  
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|  
   
-## 请参阅  
- <xref:System.Xml.XmlDictionaryReaderQuotas>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Xml.XmlDictionaryReaderQuotas>  
  <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>

@@ -1,33 +1,36 @@
 ---
-title: "如何：检查或修改客户端的消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：检查或修改客户端的消息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 164e19891e576b6d310839a1221ad8ed0d315444
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：检查或修改客户端的消息
-通过实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> 并将其插入客户端运行时，可以检查或修改通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的传入或传出消息。  有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。  服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>。  有关完整的代码示例，请参见[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端的消息
+通过实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 并将其插入客户端运行时，可以检查或修改通过 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 客户端的传入或传出消息。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
   
-### 检查或修改消息  
+### <a name="to-inspect-or-modify-messages"></a>检查或修改消息  
   
-1.  实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> 接口。  
+1.  实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 接口。  
   
-2.  实现 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName>，具体取决于您希望在其中插入客户端消息检查器的作用域。  <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> 允许您在终结点级别更改行为。  <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> 允许您在协定级别更改行为。  
+2.  实现 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，具体取决于您希望在其中插入客户端消息检查器的作用域。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>可以在终结点级别更改行为。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>可以在协定级别更改行为。  
   
-3.  在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName> 上调用 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=fullName> 或 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> 方法前，插入行为。  有关详细信息，请参阅[使用行为配置和扩展运行时](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+3.  在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，插入行为。 有关详细信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的代码示例按顺序演示以下各项：  
   
 -   客户端检查器实现。  
@@ -57,7 +60,6 @@ public class SimpleMessageInspector : IClientMessageInspector
         return null;  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -102,10 +104,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
         return new SimpleEndpointBehavior();  
     }  
 }  
-  
 ```  
   
-```vb  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <system.serviceModel>  
@@ -132,10 +133,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
       </extensions>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 请参阅  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
- [使用行为配置和扩展运行时](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
+ [配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
