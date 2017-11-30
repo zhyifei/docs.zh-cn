@@ -1,236 +1,243 @@
 ---
-title: "自定义数字格式字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自定义数字格式字符串"
-  - "格式说明符, 自定义数字格式字符串"
-  - "格式说明符, 数值"
-  - "格式字符串"
-  - "格式设置 [.NET Framework], 数字"
-  - "设置数字格式 [.NET Framework]"
-  - "数字 [.NET Framework], 格式化"
-  - "数值格式字符串 [.NET Framework]"
+title: "自定义数字格式字符串"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- format strings
+- custom numeric format strings
+- numbers [.NET Framework], formatting
+- format specifiers, numeric
+- formatting numbers [.NET Framework]
+- format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 54
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 54
+caps.latest.revision: "54"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 自定义数字格式字符串
-你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。  
+# <a name="custom-numeric-format-strings"></a><span data-ttu-id="218bb-102">自定义数字格式字符串</span><span class="sxs-lookup"><span data-stu-id="218bb-102">Custom Numeric Format Strings</span></span>
+<span data-ttu-id="218bb-103">你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。</span><span class="sxs-lookup"><span data-stu-id="218bb-103">You can create a custom numeric format string, which consists of one or more custom numeric specifiers, to define how to format numeric data.</span></span> <span data-ttu-id="218bb-104">自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-104">A custom numeric format string is any format string that is not a [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  
   
- 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET Framework [复合格式化](../../../docs/standard/base-types/composite-formatting.md)功能也支持自定义数字格式字符串，该功能由 `Write` 和 `WriteLine` 类的某些 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 方法、<xref:System.String.Format%2A?displayProperty=fullName> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName> 方法所使用。  
+ <span data-ttu-id="218bb-105">所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-105">Custom numeric format strings are supported by some overloads of the `ToString` method of all numeric types.</span></span> <span data-ttu-id="218bb-106">例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。</span><span class="sxs-lookup"><span data-stu-id="218bb-106">For example, you can supply a numeric format string to the <xref:System.Int32.ToString%28System.String%29> and <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> methods of the <xref:System.Int32> type.</span></span> <span data-ttu-id="218bb-107">也支持自定义数字格式字符串由.NET[复合格式设置功能](../../../docs/standard/base-types/composite-formatting.md)，由它的一些`Write`和`WriteLine`方法<xref:System.Console>和<xref:System.IO.StreamWriter>类<xref:System.String.Format%2A?displayProperty=nameWithType>方法，与<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="218bb-107">Custom numeric format strings are also supported by the .NET [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md), which is used by some `Write` and `WriteLine` methods of the <xref:System.Console> and <xref:System.IO.StreamWriter> classes, the <xref:System.String.Format%2A?displayProperty=nameWithType> method, and the <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> method.</span></span>  
   
 > [!TIP]
->  你可以下载[格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
+>  <span data-ttu-id="218bb-108">你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-108">You can download the [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), an application that enables you to apply format strings to either numeric or date and time values and displays the result string.</span></span>  
   
-<a name="table"></a> 下表描述自定义数字格式说明符并显示由每个格式说明符产生的示例输出。 有关使用自定义数字格式字符串的其他信息，请参见[说明](#NotesCustomFormatting)一节，有关使用方法的完整演示，请参见[示例](#example)一节。  
+<span data-ttu-id="218bb-109"><a name="table"></a> 下表描述自定义数字格式说明符并显示由每个格式说明符产生的示例输出。</span><span class="sxs-lookup"><span data-stu-id="218bb-109"><a name="table"></a> The following table describes the custom numeric format specifiers and displays sample output produced by each format specifier.</span></span> <span data-ttu-id="218bb-110">有关使用自定义数字格式字符串的其他信息，请参见 [说明](#NotesCustomFormatting) 一节，有关使用方法的完整演示，请参见 [示例](#example) 一节。</span><span class="sxs-lookup"><span data-stu-id="218bb-110">See the [Notes](#NotesCustomFormatting) section for additional information about using custom numeric format strings, and the [Example](#example) section for a comprehensive illustration of their use.</span></span>  
   
-|格式说明符|名称|描述|示例|  
-|-----------|--------|--------|--------|  
-|“0”|零占位符|用对应的数字（如果存在）替换零；否则，将在结果字符串中显示零。<br /><br /> 有关详细信息，请参阅[“0”自定义说明符](#Specifier0)。|1234.5678 \("00000"\) \-\> 01235<br /><br /> 0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|"\#"|数字占位符|用对应的数字（如果存在）替换“\#”符号；否则，不会在结果字符串中显示任何数字。<br /><br /> 请注意，如果输入字符串中的相应数字是无意义的 0，则在结果字符串中不会出现任何数字。 例如，0003 \("\#\#\#\#"\) \-\> 3。<br /><br /> 有关详细信息，请参阅[“\#”自定义说明符](#SpecifierD)。|1234.5678 \("\#\#\#\#\#"\) \-\> 1235<br /><br /> 0.45678 \("\#.\#\#", en\-US\) \-\> .46<br /><br /> 0.45678 \("\#.\#\#", fr\-FR\) \-\> ,46|  
-|"."|小数点|确定小数点分隔符在结果字符串中的位置。<br /><br /> 有关详细信息，请参阅 ["."自定义说明符](#SpecifierPt)。|0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|","|组分隔符和数字比例换算|用作组分隔符和数字比例换算说明符。 作为组分隔符时，它在各个组之间插入本地化的组分隔符字符。 作为数字比例换算说明符，对于每个指定的逗号，它将数字除以 1000。<br /><br /> 有关详细信息，请参阅[“,”自定义说明符](#SpecifierTh)。|组分隔符说明符：<br /><br /> 2147483647 \("\#\#,\#", en\-US\) \-\> 2,147,483,647<br /><br /> 2147483647 \("\#\#,\#", es\-ES\) \-\> 2.147.483.647<br /><br /> 比例换算说明符：<br /><br /> 2147483647 \("\#,\#,,", en\-US\) \-\> 2,147<br /><br /> 2147483647 \("\#,\#,,", es\-ES\) \-\> 2.147|  
-|"%"|百分比占位符|将数字乘以 100，并在结果字符串中插入本地化的百分比符号。<br /><br /> 有关详细信息，请参阅[“%”自定义说明符](#SpecifierPct)。|0.3697 \("%\#0.00", en\-US\) \-\> %36.97<br /><br /> 0.3697 \("%\#0.00", el\-GR\) \-\> %36,97<br /><br /> 0.3697 \("\#\#.0 %", en\-US\) \-\> 37.0 %<br /><br /> 0.3697 \("\#\#.0 %", el\-GR\) \-\> 37,0 %|  
-|"‰"|千分比占位符|将数字乘以 1000，并在结果字符串中插入本地化的千分比符号。<br /><br /> 有关详细信息，请参阅[“‰”自定义说明符](#SpecifierPerMille)。|0.03697 \("\#0.00‰", en\-US\) \-\> 36.97‰<br /><br /> 0.03697 \("\#0.00‰", ru\-RU\) \-\> 36,97‰|  
-|“E0”<br /><br /> “E\+0”<br /><br /> “E\-0”<br /><br /> “e0”<br /><br /> “e\+0”<br /><br /> “e\-0”|指数表示法|如果后跟至少一个 0（零），则使用指数表示法设置结果格式。 “E”或“e”指示指数符号在结果字符串中是大写还是小写。 跟在“E”或“e”字符后面的零的数目确定指数中的最小位数。 加号 \(\+\) 指示符号字符总是置于指数前面。 减号 \(\-\) 指示符号字符仅置于负指数前面。<br /><br /> 有关详细信息，请参阅[“E”和“e”自定义说明符](#SpecifierExponent)。|987654 \("\#0.0e0"\) \-\> 98.8e4<br /><br /> 1503.92311 \("0.0\#\#e\+00"\) \-\> 1.504e\+03<br /><br /> 1.8901385E\-16 \("0.0e\+00"\) \-\> 1.9e\-16|  
-|\\|转义符|使下一个字符被解释为文本而不是自定义格式说明符。<br /><br /> 有关详细信息，请参阅[“\\”转义字符](#SpecifierEscape)。|987654 \("\\\#\#\#00\\\#"\) \-\> \#987654\#|  
-|'*string*'<br /><br /> "*string*"|文本字符串分隔符|指示应复制到未更改的结果字符串的封闭字符。|68 \("\# ' degrees'"\) \-\> 68  degrees<br /><br /> 68 \("\# ' degrees'"\) \-\> 68  degrees|  
-|;|部分分隔符|通过分隔格式字符串定义正数、负数和零各部分。<br /><br /> 有关详细信息，请参阅[“;”部分分隔符](#SectionSeparator)。|12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \-0\-<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \(12.35\)<br /><br /> 12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 0.0<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> \(12.35\)|  
-|其他|所有其他字符|字符将复制到未更改的结果字符串。|68 \("\# °"\) \-\> 68 °|  
+|<span data-ttu-id="218bb-111">格式说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-111">Format specifier</span></span>|<span data-ttu-id="218bb-112">名称</span><span class="sxs-lookup"><span data-stu-id="218bb-112">Name</span></span>|<span data-ttu-id="218bb-113">描述</span><span class="sxs-lookup"><span data-stu-id="218bb-113">Description</span></span>|<span data-ttu-id="218bb-114">示例</span><span class="sxs-lookup"><span data-stu-id="218bb-114">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="218bb-115">“0”</span><span class="sxs-lookup"><span data-stu-id="218bb-115">"0"</span></span>|<span data-ttu-id="218bb-116">零占位符</span><span class="sxs-lookup"><span data-stu-id="218bb-116">Zero placeholder</span></span>|<span data-ttu-id="218bb-117">用对应的数字（如果存在）替换零；否则，将在结果字符串中显示零。</span><span class="sxs-lookup"><span data-stu-id="218bb-117">Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.</span></span><br /><br /> <span data-ttu-id="218bb-118">有关详细信息，请参阅 [“0”自定义说明符](#Specifier0)。</span><span class="sxs-lookup"><span data-stu-id="218bb-118">More information: [The "0" Custom Specifier](#Specifier0).</span></span>|<span data-ttu-id="218bb-119">1234.5678 ("00000") -> 01235</span><span class="sxs-lookup"><span data-stu-id="218bb-119">1234.5678 ("00000") -> 01235</span></span><br /><br /> <span data-ttu-id="218bb-120">0.45678 ("0.00", en-US) -> 0.46</span><span class="sxs-lookup"><span data-stu-id="218bb-120">0.45678 ("0.00", en-US) -> 0.46</span></span><br /><br /> <span data-ttu-id="218bb-121">0.45678 ("0.00", fr-FR) -> 0,46</span><span class="sxs-lookup"><span data-stu-id="218bb-121">0.45678 ("0.00", fr-FR) -> 0,46</span></span>|  
+|<span data-ttu-id="218bb-122">"#"</span><span class="sxs-lookup"><span data-stu-id="218bb-122">"#"</span></span>|<span data-ttu-id="218bb-123">数字占位符</span><span class="sxs-lookup"><span data-stu-id="218bb-123">Digit placeholder</span></span>|<span data-ttu-id="218bb-124">用对应的数字（如果存在）替换“#”符号；否则，不会在结果字符串中显示任何数字。</span><span class="sxs-lookup"><span data-stu-id="218bb-124">Replaces the "#" symbol with the corresponding digit if one is present; otherwise, no digit appears in the result string.</span></span><br /><br /> <span data-ttu-id="218bb-125">请注意，如果输入字符串中的相应数字是无意义的 0，则在结果字符串中不会出现任何数字。</span><span class="sxs-lookup"><span data-stu-id="218bb-125">Note that no digit appears in the result string if the corresponding digit in the input string is a non-significant 0.</span></span> <span data-ttu-id="218bb-126">例如，0003 ("####") -> 3。</span><span class="sxs-lookup"><span data-stu-id="218bb-126">For example, 0003 ("####") -> 3.</span></span><br /><br /> <span data-ttu-id="218bb-127">有关详细信息，请参阅 [“#”自定义说明符](#SpecifierD)。</span><span class="sxs-lookup"><span data-stu-id="218bb-127">More information: [The "#" Custom Specifier](#SpecifierD).</span></span>|<span data-ttu-id="218bb-128">1234.5678 ("#####") -> 1235</span><span class="sxs-lookup"><span data-stu-id="218bb-128">1234.5678 ("#####") -> 1235</span></span><br /><br /> <span data-ttu-id="218bb-129">0.45678 ("#.##", en-US) -> .46</span><span class="sxs-lookup"><span data-stu-id="218bb-129">0.45678 ("#.##", en-US) -> .46</span></span><br /><br /> <span data-ttu-id="218bb-130">0.45678 ("#.##", fr-FR) -> ,46</span><span class="sxs-lookup"><span data-stu-id="218bb-130">0.45678 ("#.##", fr-FR) -> ,46</span></span>|  
+|<span data-ttu-id="218bb-131">"."</span><span class="sxs-lookup"><span data-stu-id="218bb-131">"."</span></span>|<span data-ttu-id="218bb-132">小数点</span><span class="sxs-lookup"><span data-stu-id="218bb-132">Decimal point</span></span>|<span data-ttu-id="218bb-133">确定小数点分隔符在结果字符串中的位置。</span><span class="sxs-lookup"><span data-stu-id="218bb-133">Determines the location of the decimal separator in the result string.</span></span><br /><br /> <span data-ttu-id="218bb-134">有关详细信息，请参阅[“.”自定义说明符](#SpecifierPt)。</span><span class="sxs-lookup"><span data-stu-id="218bb-134">More information: [The "." Custom Specifier](#SpecifierPt).</span></span>|<span data-ttu-id="218bb-135">0.45678 ("0.00", en-US) -> 0.46</span><span class="sxs-lookup"><span data-stu-id="218bb-135">0.45678 ("0.00", en-US) -> 0.46</span></span><br /><br /> <span data-ttu-id="218bb-136">0.45678 ("0.00", fr-FR) -> 0,46</span><span class="sxs-lookup"><span data-stu-id="218bb-136">0.45678 ("0.00", fr-FR) -> 0,46</span></span>|  
+|<span data-ttu-id="218bb-137">","</span><span class="sxs-lookup"><span data-stu-id="218bb-137">","</span></span>|<span data-ttu-id="218bb-138">组分隔符和数字比例换算</span><span class="sxs-lookup"><span data-stu-id="218bb-138">Group separator and number scaling</span></span>|<span data-ttu-id="218bb-139">用作组分隔符和数字比例换算说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-139">Serves as both a group separator and a number scaling specifier.</span></span> <span data-ttu-id="218bb-140">作为组分隔符时，它在各个组之间插入本地化的组分隔符字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-140">As a group separator, it inserts a localized group separator character between each group.</span></span> <span data-ttu-id="218bb-141">作为数字比例换算说明符，对于每个指定的逗号，它将数字除以 1000。</span><span class="sxs-lookup"><span data-stu-id="218bb-141">As a number scaling specifier, it divides a number by 1000 for each comma specified.</span></span><br /><br /> <span data-ttu-id="218bb-142">有关详细信息，请参阅 [“,”自定义说明符](#SpecifierTh)。</span><span class="sxs-lookup"><span data-stu-id="218bb-142">More information: [The "," Custom Specifier](#SpecifierTh).</span></span>|<span data-ttu-id="218bb-143">组分隔符说明符：</span><span class="sxs-lookup"><span data-stu-id="218bb-143">Group separator specifier:</span></span><br /><br /> <span data-ttu-id="218bb-144">2147483647 ("##,#", en-US) -> 2,147,483,647</span><span class="sxs-lookup"><span data-stu-id="218bb-144">2147483647 ("##,#", en-US) -> 2,147,483,647</span></span><br /><br /> <span data-ttu-id="218bb-145">2147483647 ("##,#", es-ES) -> 2.147.483.647</span><span class="sxs-lookup"><span data-stu-id="218bb-145">2147483647 ("##,#", es-ES) -> 2.147.483.647</span></span><br /><br /> <span data-ttu-id="218bb-146">比例换算说明符：</span><span class="sxs-lookup"><span data-stu-id="218bb-146">Scaling specifier:</span></span><br /><br /> <span data-ttu-id="218bb-147">2147483647 ("#,#,,", en-US) -> 2,147</span><span class="sxs-lookup"><span data-stu-id="218bb-147">2147483647 ("#,#,,", en-US) -> 2,147</span></span><br /><br /> <span data-ttu-id="218bb-148">2147483647 ("#,#,,", es-ES) -> 2.147</span><span class="sxs-lookup"><span data-stu-id="218bb-148">2147483647 ("#,#,,", es-ES) -> 2.147</span></span>|  
+|<span data-ttu-id="218bb-149">"%"</span><span class="sxs-lookup"><span data-stu-id="218bb-149">"%"</span></span>|<span data-ttu-id="218bb-150">百分比占位符</span><span class="sxs-lookup"><span data-stu-id="218bb-150">Percentage placeholder</span></span>|<span data-ttu-id="218bb-151">将数字乘以 100，并在结果字符串中插入本地化的百分比符号。</span><span class="sxs-lookup"><span data-stu-id="218bb-151">Multiplies a number by 100 and inserts a localized percentage symbol in the result string.</span></span><br /><br /> <span data-ttu-id="218bb-152">有关详细信息，请参阅 [“%”自定义说明符](#SpecifierPct)。</span><span class="sxs-lookup"><span data-stu-id="218bb-152">More information: [The "%" Custom Specifier](#SpecifierPct).</span></span>|<span data-ttu-id="218bb-153">0.3697 ("%#0.00", en-US) -> %36.97</span><span class="sxs-lookup"><span data-stu-id="218bb-153">0.3697 ("%#0.00", en-US) -> %36.97</span></span><br /><br /> <span data-ttu-id="218bb-154">0.3697 ("%#0.00", el-GR) -> %36,97</span><span class="sxs-lookup"><span data-stu-id="218bb-154">0.3697 ("%#0.00", el-GR) -> %36,97</span></span><br /><br /> <span data-ttu-id="218bb-155">0.3697 ("##.0 %", en-US) -> 37.0 %</span><span class="sxs-lookup"><span data-stu-id="218bb-155">0.3697 ("##.0 %", en-US) -> 37.0 %</span></span><br /><br /> <span data-ttu-id="218bb-156">0.3697 ("##.0 %", el-GR) -> 37,0 %</span><span class="sxs-lookup"><span data-stu-id="218bb-156">0.3697 ("##.0 %", el-GR) -> 37,0 %</span></span>|  
+|<span data-ttu-id="218bb-157">"‰"</span><span class="sxs-lookup"><span data-stu-id="218bb-157">"‰"</span></span>|<span data-ttu-id="218bb-158">千分比占位符</span><span class="sxs-lookup"><span data-stu-id="218bb-158">Per mille placeholder</span></span>|<span data-ttu-id="218bb-159">将数字乘以 1000，并在结果字符串中插入本地化的千分比符号。</span><span class="sxs-lookup"><span data-stu-id="218bb-159">Multiplies a number by 1000 and inserts a localized per mille symbol in the result string.</span></span><br /><br /> <span data-ttu-id="218bb-160">有关详细信息，请参阅 [“‰”自定义说明符](#SpecifierPerMille)。</span><span class="sxs-lookup"><span data-stu-id="218bb-160">More information: [The "‰" Custom Specifier](#SpecifierPerMille).</span></span>|<span data-ttu-id="218bb-161">0.03697 ("#0.00‰", en-US) -> 36.97‰</span><span class="sxs-lookup"><span data-stu-id="218bb-161">0.03697 ("#0.00‰", en-US) -> 36.97‰</span></span><br /><br /> <span data-ttu-id="218bb-162">0.03697 ("#0.00‰", ru-RU) -> 36,97‰</span><span class="sxs-lookup"><span data-stu-id="218bb-162">0.03697 ("#0.00‰", ru-RU) -> 36,97‰</span></span>|  
+|<span data-ttu-id="218bb-163">“E0”</span><span class="sxs-lookup"><span data-stu-id="218bb-163">"E0"</span></span><br /><br /> <span data-ttu-id="218bb-164">“E+0”</span><span class="sxs-lookup"><span data-stu-id="218bb-164">"E+0"</span></span><br /><br /> <span data-ttu-id="218bb-165">“E-0”</span><span class="sxs-lookup"><span data-stu-id="218bb-165">"E-0"</span></span><br /><br /> <span data-ttu-id="218bb-166">“E0”</span><span class="sxs-lookup"><span data-stu-id="218bb-166">"e0"</span></span><br /><br /> <span data-ttu-id="218bb-167">“E+0”</span><span class="sxs-lookup"><span data-stu-id="218bb-167">"e+0"</span></span><br /><br /> <span data-ttu-id="218bb-168">“E-0”</span><span class="sxs-lookup"><span data-stu-id="218bb-168">"e-0"</span></span>|<span data-ttu-id="218bb-169">指数表示法</span><span class="sxs-lookup"><span data-stu-id="218bb-169">Exponential notation</span></span>|<span data-ttu-id="218bb-170">如果后跟至少一个 0（零），则使用指数表示法设置结果格式。</span><span class="sxs-lookup"><span data-stu-id="218bb-170">If followed by at least one 0 (zero), formats the result using exponential notation.</span></span> <span data-ttu-id="218bb-171">“E”或“e”指示指数符号在结果字符串中是大写还是小写。</span><span class="sxs-lookup"><span data-stu-id="218bb-171">The case of "E" or "e" indicates the case of the exponent symbol in the result string.</span></span> <span data-ttu-id="218bb-172">跟在“E”或“e”字符后面的零的数目确定指数中的最小位数。</span><span class="sxs-lookup"><span data-stu-id="218bb-172">The number of zeros following the "E" or "e" character determines the minimum number of digits in the exponent.</span></span> <span data-ttu-id="218bb-173">加号 (+) 指示符号字符总是置于指数前面。</span><span class="sxs-lookup"><span data-stu-id="218bb-173">A plus sign (+) indicates that a sign character always precedes the exponent.</span></span> <span data-ttu-id="218bb-174">减号 (-) 指示符号字符仅置于负指数前面。</span><span class="sxs-lookup"><span data-stu-id="218bb-174">A minus sign (-) indicates that a sign character precedes only negative exponents.</span></span><br /><br /> <span data-ttu-id="218bb-175">有关详细信息，请参阅 [“E”和“e”自定义说明符](#SpecifierExponent)。</span><span class="sxs-lookup"><span data-stu-id="218bb-175">More information: [The "E" and "e" Custom Specifiers](#SpecifierExponent).</span></span>|<span data-ttu-id="218bb-176">987654 ("#0.0e0") -> 98.8e4</span><span class="sxs-lookup"><span data-stu-id="218bb-176">987654 ("#0.0e0") -> 98.8e4</span></span><br /><br /> <span data-ttu-id="218bb-177">1503.92311 ("0.0##e+00") -> 1.504e+03</span><span class="sxs-lookup"><span data-stu-id="218bb-177">1503.92311 ("0.0##e+00") -> 1.504e+03</span></span><br /><br /> <span data-ttu-id="218bb-178">1.8901385E-16 ("0.0e+00") -> 1.9e-16</span><span class="sxs-lookup"><span data-stu-id="218bb-178">1.8901385E-16 ("0.0e+00") -> 1.9e-16</span></span>|  
+|<span data-ttu-id="218bb-179">“\\”</span><span class="sxs-lookup"><span data-stu-id="218bb-179">"\\"</span></span>|<span data-ttu-id="218bb-180">转义符</span><span class="sxs-lookup"><span data-stu-id="218bb-180">Escape character</span></span>|<span data-ttu-id="218bb-181">使下一个字符被解释为文本而不是自定义格式说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-181">Causes the next character to be interpreted as a literal rather than as a custom format specifier.</span></span><br /><br /> <span data-ttu-id="218bb-182">详细信息： ["\\"转义字符](#SpecifierEscape)。</span><span class="sxs-lookup"><span data-stu-id="218bb-182">More information: [The "\\" Escape Character](#SpecifierEscape).</span></span>|<span data-ttu-id="218bb-183">987654 ("\\###00\\#") -> #987654#</span><span class="sxs-lookup"><span data-stu-id="218bb-183">987654 ("\\###00\\#") -> #987654#</span></span>|  
+|<span data-ttu-id="218bb-184">'*string*'</span><span class="sxs-lookup"><span data-stu-id="218bb-184">'*string*'</span></span><br /><br /> <span data-ttu-id="218bb-185">"*string*"</span><span class="sxs-lookup"><span data-stu-id="218bb-185">"*string*"</span></span>|<span data-ttu-id="218bb-186">文本字符串分隔符</span><span class="sxs-lookup"><span data-stu-id="218bb-186">Literal string delimiter</span></span>|<span data-ttu-id="218bb-187">指示应复制到未更改的结果字符串的封闭字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-187">Indicates that the enclosed characters should be copied to the result string unchanged.</span></span>|<span data-ttu-id="218bb-188">68 ("# ' degrees'") -> 68  degrees</span><span class="sxs-lookup"><span data-stu-id="218bb-188">68 ("# ' degrees'") -> 68  degrees</span></span><br /><br /> <span data-ttu-id="218bb-189">68 ("# ' degrees'") -> 68  degrees</span><span class="sxs-lookup"><span data-stu-id="218bb-189">68 ("#' degrees'") -> 68 degrees</span></span>|  
+|<span data-ttu-id="218bb-190">;</span><span class="sxs-lookup"><span data-stu-id="218bb-190">;</span></span>|<span data-ttu-id="218bb-191">部分分隔符</span><span class="sxs-lookup"><span data-stu-id="218bb-191">Section separator</span></span>|<span data-ttu-id="218bb-192">通过分隔格式字符串定义正数、负数和零各部分。</span><span class="sxs-lookup"><span data-stu-id="218bb-192">Defines sections with separate format strings for positive, negative, and zero numbers.</span></span><br /><br /> <span data-ttu-id="218bb-193">有关详细信息，请参阅 [“;”部分分隔符](#SectionSeparator)。</span><span class="sxs-lookup"><span data-stu-id="218bb-193">More information: [The ";" Section Separator](#SectionSeparator).</span></span>|<span data-ttu-id="218bb-194">12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35</span><span class="sxs-lookup"><span data-stu-id="218bb-194">12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35</span></span><br /><br /> <span data-ttu-id="218bb-195">0 ("#0.0#;(#0.0#);-\0-") -> -0-</span><span class="sxs-lookup"><span data-stu-id="218bb-195">0 ("#0.0#;(#0.0#);-\0-") -> -0-</span></span><br /><br /> <span data-ttu-id="218bb-196">-12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)</span><span class="sxs-lookup"><span data-stu-id="218bb-196">-12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)</span></span><br /><br /> <span data-ttu-id="218bb-197">12.345 ("#0.0#;(#0.0#)") -> 12.35</span><span class="sxs-lookup"><span data-stu-id="218bb-197">12.345 ("#0.0#;(#0.0#)") -> 12.35</span></span><br /><br /> <span data-ttu-id="218bb-198">0 ("#0.0#;(#0.0#)") -> 0.0</span><span class="sxs-lookup"><span data-stu-id="218bb-198">0 ("#0.0#;(#0.0#)") -> 0.0</span></span><br /><br /> <span data-ttu-id="218bb-199">-12.345 ("#0.0#;(#0.0#)") -> (12.35)</span><span class="sxs-lookup"><span data-stu-id="218bb-199">-12.345 ("#0.0#;(#0.0#)") -> (12.35)</span></span>|  
+|<span data-ttu-id="218bb-200">其他</span><span class="sxs-lookup"><span data-stu-id="218bb-200">Other</span></span>|<span data-ttu-id="218bb-201">所有其他字符</span><span class="sxs-lookup"><span data-stu-id="218bb-201">All other characters</span></span>|<span data-ttu-id="218bb-202">字符将复制到未更改的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-202">The character is copied to the result string unchanged.</span></span>|<span data-ttu-id="218bb-203">68 ("# °") -> 68 °</span><span class="sxs-lookup"><span data-stu-id="218bb-203">68 ("# °") -> 68 °</span></span>|  
   
- 以下各节提供有关每个自定义数字格式说明符的详细信息。  
+ <span data-ttu-id="218bb-204">以下各节提供有关每个自定义数字格式说明符的详细信息。</span><span class="sxs-lookup"><span data-stu-id="218bb-204">The following sections provide detailed information about each of the custom numeric format specifiers.</span></span>  
   
 <a name="Specifier0"></a>   
-## “0”自定义说明符  
- “0”自定义格式说明符用作零占位符符号。 如果要设置格式的值在格式字符串中出现零的位置有一个数字，则将此数字复制到结果字符串中；否则，在结果字符串中显示零。 小数点前最左边的零的位置和小数点后最右边的零的位置确定总在结果字符串中出现的数字范围。  
+## <a name="the-0-custom-specifier"></a><span data-ttu-id="218bb-205">“0”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-205">The "0" Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-206">“0”自定义格式说明符用作零占位符符号。</span><span class="sxs-lookup"><span data-stu-id="218bb-206">The "0" custom format specifier serves as a zero-placeholder symbol.</span></span> <span data-ttu-id="218bb-207">如果要设置格式的值在格式字符串中出现零的位置有一个数字，则将此数字复制到结果字符串中；否则，在结果字符串中显示零。</span><span class="sxs-lookup"><span data-stu-id="218bb-207">If the value that is being formatted has a digit in the position where the zero appears in the format string, that digit is copied to the result string; otherwise, a zero appears in the result string.</span></span> <span data-ttu-id="218bb-208">小数点前最左边的零的位置和小数点后最右边的零的位置确定总在结果字符串中出现的数字范围。</span><span class="sxs-lookup"><span data-stu-id="218bb-208">The position of the leftmost zero before the decimal point and the rightmost zero after the decimal point determines the range of digits that are always present in the result string.</span></span>  
   
- “00”说明符使得值被舍入到小数点前最近的数字，其中零位总被舍去。 例如，用“00”格式化 34.5 将得到值 35。  
+ <span data-ttu-id="218bb-209">“00”说明符使得值被舍入到小数点前最近的数字，其中零位总被舍去。</span><span class="sxs-lookup"><span data-stu-id="218bb-209">The "00" specifier causes the value to be rounded to the nearest digit preceding the decimal, where rounding away from zero is always used.</span></span> <span data-ttu-id="218bb-210">例如，用“00”格式化 34.5 将得到值 35。</span><span class="sxs-lookup"><span data-stu-id="218bb-210">For example, formatting 34.5 with "00" would result in the value 35.</span></span>  
   
- 下面的示例显示几个使用包含零占位符的自定义格式字符串设置格式的值。  
+ <span data-ttu-id="218bb-211">下面的示例显示几个使用包含零占位符的自定义格式字符串设置格式的值。</span><span class="sxs-lookup"><span data-stu-id="218bb-211">The following example displays several values that are formatted by using custom format strings that include zero placeholders.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
  [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-212">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-212">Back to table</span></span>](#table)  
   
 <a name="SpecifierD"></a>   
-## “\#”自定义说明符  
- “\#”自定义格式说明符用作数字占位符符号。 如果设置了格式的值在格式字符串中显示"\#"符号的位置有一个数字，则此数字被复制到结果字符串中。 否则，结果字符串中的此位置不存储任何值。  
+## <a name="the--custom-specifier"></a><span data-ttu-id="218bb-213">“#”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-213">The "#" Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-214">“#”自定义格式说明符用作数字占位符符号。</span><span class="sxs-lookup"><span data-stu-id="218bb-214">The "#" custom format specifier serves as a digit-placeholder symbol.</span></span> <span data-ttu-id="218bb-215">如果设置了格式的值在格式字符串中显示"#"符号的位置有一个数字，则此数字被复制到结果字符串中。</span><span class="sxs-lookup"><span data-stu-id="218bb-215">If the value that is being formatted has a digit in the position where the "#" symbol appears in the format string, that digit is copied to the result string.</span></span> <span data-ttu-id="218bb-216">否则，结果字符串中的此位置不存储任何值。</span><span class="sxs-lookup"><span data-stu-id="218bb-216">Otherwise, nothing is stored in that position in the result string.</span></span>  
   
- 请注意，如果零不是有效数字，此说明符永不显示零，即使零是字符串中的唯一数字也是如此。 仅当零是所显示的数字中的有效数字时，才会显示零。  
+ <span data-ttu-id="218bb-217">请注意，如果零不是有效数字，此说明符永不显示零，即使零是字符串中的唯一数字也是如此。</span><span class="sxs-lookup"><span data-stu-id="218bb-217">Note that this specifier never displays a zero that is not a significant digit, even if zero is the only digit in the string.</span></span> <span data-ttu-id="218bb-218">仅当零是所显示的数字中的有效数字时，才会显示零。</span><span class="sxs-lookup"><span data-stu-id="218bb-218">It will display zero only if it is a significant digit in the number that is being displayed.</span></span>  
   
- “\#\#”格式字符串使得值被舍入到小数点前最近的数字，其中零总被舍去。 例如，用“\#\#”格式化 34.5 将得到值 35。  
+ <span data-ttu-id="218bb-219">“##”格式字符串使得值被舍入到小数点前最近的数字，其中零总被舍去。</span><span class="sxs-lookup"><span data-stu-id="218bb-219">The "##" format string causes the value to be rounded to the nearest digit preceding the decimal, where rounding away from zero is always used.</span></span> <span data-ttu-id="218bb-220">例如，用“##”格式化 34.5 将得到值 35。</span><span class="sxs-lookup"><span data-stu-id="218bb-220">For example, formatting 34.5 with "##" would result in the value 35.</span></span>  
   
- 下面的示例显示几个使用包含数字占位符的自定义格式字符串设置格式的值。  
+ <span data-ttu-id="218bb-221">下面的示例显示几个使用包含数字占位符的自定义格式字符串设置格式的值。</span><span class="sxs-lookup"><span data-stu-id="218bb-221">The following example displays several values that are formatted by using custom format strings that include digit placeholders.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
  [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
- 若要返回空缺数字或前导零替换为空格的结果字符串，请使用[复合格式功能](../../../docs/standard/base-types/composite-formatting.md)并指定字段宽度，如以下示例所示。  
+ <span data-ttu-id="218bb-222">若要返回空缺数字或前导零替换为空格的结果字符串，请使用 [复合格式功能](../../../docs/standard/base-types/composite-formatting.md) 并指定字段宽度，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="218bb-222">To return a result string in which absent digits or leading zeroes are replaced by spaces, use the [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md) and specify a field width, as the following example illustrates.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
  [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-223">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-223">Back to table</span></span>](#table)  
   
 <a name="SpecifierPt"></a>   
-## “.”自定义说明符  
- "."自定义格式说明符在结果字符串中插入本地化的小数分隔符。 格式字符串中的第一个小数点确定设置了格式的值中的小数分隔符的位置；任何其他小数点会被忽略。  
+## <a name="the--custom-specifier"></a><span data-ttu-id="218bb-224">“.”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-224">The "." Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-225">"."自定义格式说明符在结果字符串中插入本地化的小数分隔符。</span><span class="sxs-lookup"><span data-stu-id="218bb-225">The "." custom format specifier inserts a localized decimal separator into the result string.</span></span> <span data-ttu-id="218bb-226">格式字符串中的第一个小数点确定设置了格式的值中的小数分隔符的位置；任何其他小数点会被忽略。</span><span class="sxs-lookup"><span data-stu-id="218bb-226">The first period in the format string determines the location of the decimal separator in the formatted value; any additional periods are ignored.</span></span>  
   
- 在结果字符串中用作小数分隔符的字符并非总是小数点；它由控制格式设置的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 对象的 <xref:System.Globalization.NumberFormatInfo> 属性确定。  
+ <span data-ttu-id="218bb-227">在结果字符串中用作小数分隔符的字符并非总是小数点；它由控制格式设置的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 对象的 <xref:System.Globalization.NumberFormatInfo> 属性确定。</span><span class="sxs-lookup"><span data-stu-id="218bb-227">The character that is used as the decimal separator in the result string is not always a period; it is determined by the <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property of the <xref:System.Globalization.NumberFormatInfo> object that controls formatting.</span></span>  
   
- 下面的示例使用"."格式说明符定义几个结果字符串中的小数点的位置。  
+ <span data-ttu-id="218bb-228">下面的示例使用"."格式说明符定义几个结果字符串中的小数点的位置。</span><span class="sxs-lookup"><span data-stu-id="218bb-228">The following example uses the "." format specifier to define the location of the decimal point in several result strings.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
  [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-229">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-229">Back to table</span></span>](#table)  
   
 <a name="SpecifierTh"></a>   
-## “,”自定义说明符  
- “,”字符用作组分隔符和数字比例换算说明符。  
+## <a name="the--custom-specifier"></a><span data-ttu-id="218bb-230">“,”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-230">The "," Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-231">“,”字符用作组分隔符和数字比例换算说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-231">The "," character serves as both a group separator and a number scaling specifier.</span></span>  
   
--   组分隔符：如果在两个设置数字的整数位格式的数字占位符（0 或 \#）之间指定一个或多个逗号，则在输出的整数部分中的每个数字组之间插入一个组分隔符字符。  
+-   <span data-ttu-id="218bb-232">组分隔符：如果在两个设置数字的整数位格式的数字占位符（0 或 #）之间指定一个或多个逗号，则在输出的整数部分中的每个数字组之间插入一个组分隔符字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-232">Group separator: If one or more commas are specified between two digit placeholders (0 or #) that format the integral digits of a number, a group separator character is inserted between each number group in the integral part of the output.</span></span>  
   
-     当前 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 对象的 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 和 <xref:System.Globalization.NumberFormatInfo> 属性将确定用作数字组分隔符的字符以及每个数字组的大小。 例如，如果使用字符串“\#,\#”和固定区域性对数字 1000 进行格式化，则输出为“1,000”。  
+     <span data-ttu-id="218bb-233">当前 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 对象的 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 和 <xref:System.Globalization.NumberFormatInfo> 属性将确定用作数字组分隔符的字符以及每个数字组的大小。</span><span class="sxs-lookup"><span data-stu-id="218bb-233">The <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> and <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> properties of the current <xref:System.Globalization.NumberFormatInfo> object determine the character used as the number group separator and the size of each number group.</span></span> <span data-ttu-id="218bb-234">例如，如果使用字符串“#,#”和固定区域性对数字 1000 进行格式化，则输出为“1,000”。</span><span class="sxs-lookup"><span data-stu-id="218bb-234">For example, if the string "#,#" and the invariant culture are used to format the number 1000, the output is "1,000".</span></span>  
   
--   数字比例换算说明符：如果在紧邻显式或隐式小数点的左侧指定一个或多个逗号，则对于每个逗号，将要设置格式的数字除以 1000。 例如，如果使用字符串“0,,”对数字 100000000 进行格式化，则输出为“100”。  
+-   <span data-ttu-id="218bb-235">数字比例换算说明符：如果在紧邻显式或隐式小数点的左侧指定一个或多个逗号，则对于每个逗号，将要设置格式的数字除以 1000。</span><span class="sxs-lookup"><span data-stu-id="218bb-235">Number scaling specifier: If one or more commas are specified immediately to the left of the explicit or implicit decimal point, the number to be formatted is divided by 1000 for each comma.</span></span> <span data-ttu-id="218bb-236">例如，如果使用字符串“0,,”对数字 100000000 进行格式化，则输出为“100”。</span><span class="sxs-lookup"><span data-stu-id="218bb-236">For example, if the string "0,," is used to format the number 100 million, the output is "100".</span></span>  
   
- 可以在同一格式字符串中使用组分隔符和数字比例换算说明符。 例如，如果使用字符串“\#,0,,”和固定区域性对数字 1000000000 进行格式化，则输出为“1,000”。  
+ <span data-ttu-id="218bb-237">可以在同一格式字符串中使用组分隔符和数字比例换算说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-237">You can use group separator and number scaling specifiers in the same format string.</span></span> <span data-ttu-id="218bb-238">例如，如果使用字符串“#,0,,”和固定区域性对数字 1000000000 进行格式化，则输出为“1,000”。</span><span class="sxs-lookup"><span data-stu-id="218bb-238">For example, if the string "#,0,," and the invariant culture are used to format the number one billion, the output is "1,000".</span></span>  
   
- 下面的示例演示如何使用逗号作为组分隔符。  
+ <span data-ttu-id="218bb-239">下面的示例演示如何使用逗号作为组分隔符。</span><span class="sxs-lookup"><span data-stu-id="218bb-239">The following example illustrates the use of the comma as a group separator.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
  [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
- 下面的示例演示如何使用逗号作为数字比例换算说明符。  
+ <span data-ttu-id="218bb-240">下面的示例演示如何使用逗号作为数字比例换算说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-240">The following example illustrates the use of the comma as a specifier for number scaling.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
  [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-241">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-241">Back to table</span></span>](#table)  
   
 <a name="SpecifierPct"></a>   
-## “%”自定义说明符  
- 格式字符串中的百分号 \(%\) 将使数字在设置格式之前乘以 100。 本地化的百分比符号插入到数字在格式字符串中出现 % 的位置。 使用的百分比字符由当前 <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> 对象的 <xref:System.Globalization.NumberFormatInfo> 属性定义。  
+## <a name="the--custom-specifier"></a><span data-ttu-id="218bb-242">“%”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-242">The "%" Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-243">格式字符串中的百分号 (%) 将使数字在设置格式之前乘以 100。</span><span class="sxs-lookup"><span data-stu-id="218bb-243">A percent sign (%) in a format string causes a number to be multiplied by 100 before it is formatted.</span></span> <span data-ttu-id="218bb-244">本地化的百分比符号插入到数字在格式字符串中出现 % 的位置。</span><span class="sxs-lookup"><span data-stu-id="218bb-244">The localized percent symbol is inserted in the number at the location where the % appears in the format string.</span></span> <span data-ttu-id="218bb-245">使用的百分比字符由当前 <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> 对象的 <xref:System.Globalization.NumberFormatInfo> 属性定义。</span><span class="sxs-lookup"><span data-stu-id="218bb-245">The percent character used is defined by the <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> property of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
- 下面的示例定义几个包含“%”自定义说明符的自定义格式字符串。  
+ <span data-ttu-id="218bb-246">下面的示例定义几个包含“%”自定义说明符的自定义格式字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-246">The following example defines several custom format strings that include the "%" custom specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
  [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-247">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-247">Back to table</span></span>](#table)  
   
 <a name="SpecifierPerMille"></a>   
-## “‰”自定义说明符  
- 格式字符串中的千分比字符（‰ 或 \\u2030）将使数字在设置格式之前乘以 1000。 在返回的字符串中，相应的千分比符号插在格式字符串中出现 ‰ 符号的位置。 所用的千分比字符由提供特定于区域性的格式设置信息的对象的 <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=fullName> 属性定义。  
+## <a name="the--custom-specifier"></a><span data-ttu-id="218bb-248">“‰”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-248">The "‰" Custom Specifier</span></span>  
+ <span data-ttu-id="218bb-249">格式字符串中的千分比字符（‰ 或 \u2030）将使数字在设置格式之前乘以 1000。</span><span class="sxs-lookup"><span data-stu-id="218bb-249">A per mille character (‰ or \u2030) in a format string causes a number to be multiplied by 1000 before it is formatted.</span></span> <span data-ttu-id="218bb-250">在返回的字符串中，相应的千分比符号插在格式字符串中出现 ‰ 符号的位置。</span><span class="sxs-lookup"><span data-stu-id="218bb-250">The appropriate per mille symbol is inserted in the returned string at the location where the ‰ symbol appears in the format string.</span></span> <span data-ttu-id="218bb-251">所用的千分比字符由提供特定于区域性的格式设置信息的对象的 <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> 属性定义。</span><span class="sxs-lookup"><span data-stu-id="218bb-251">The per mille character used is defined by the <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> property of the object that provides culture-specific formatting information.</span></span>  
   
- 下面的示例定义一个包含“‰”自定义说明符的自定义格式字符串。  
+ <span data-ttu-id="218bb-252">下面的示例定义一个包含“‰”自定义说明符的自定义格式字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-252">The following example defines a custom format string that includes the "‰" custom specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
  [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-253">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-253">Back to table</span></span>](#table)  
   
 <a name="SpecifierExponent"></a>   
-## “E”和“e”自定义说明符  
- 如果“E”、“E\+”、“E\-”、“e”、“e\+”或“e\-”中的任何一个字符串出现在格式字符串中，而且后面紧跟至少一个零，则数字用科学记数法来设置格式，在数字和指数之间插入“E”或“e”。 跟在科学记数法指示符后面的零的数目确定指数输出的最小位数。 “E\+”和“e\+”格式指示加号或减号应总是置于指数前面。 “E”、“E\-”、“e”或“e\-”格式指示符号字符应仅置于负指数前面。  
+## <a name="the-e-and-e-custom-specifiers"></a><span data-ttu-id="218bb-254">“E”和“e”自定义说明符</span><span class="sxs-lookup"><span data-stu-id="218bb-254">The "E" and "e" Custom Specifiers</span></span>  
+ <span data-ttu-id="218bb-255">如果“E”、“E+”、“E-”、“e”、“e+”或“e-”中的任何一个字符串出现在格式字符串中，而且后面紧跟至少一个零，则数字用科学记数法来设置格式，在数字和指数之间插入“E”或“e”。</span><span class="sxs-lookup"><span data-stu-id="218bb-255">If any of the strings "E", "E+", "E-", "e", "e+", or "e-" are present in the format string and are followed immediately by at least one zero, the number is formatted by using scientific notation with an "E" or "e" inserted between the number and the exponent.</span></span> <span data-ttu-id="218bb-256">跟在科学记数法指示符后面的零的数目确定指数输出的最小位数。</span><span class="sxs-lookup"><span data-stu-id="218bb-256">The number of zeros following the scientific notation indicator determines the minimum number of digits to output for the exponent.</span></span> <span data-ttu-id="218bb-257">“E+”和“e+”格式指示加号或减号应总是置于指数前面。</span><span class="sxs-lookup"><span data-stu-id="218bb-257">The "E+" and "e+" formats indicate that a plus sign or minus sign should always precede the exponent.</span></span> <span data-ttu-id="218bb-258">“E”、“E-”、“e”或“e-”格式指示符号字符应仅置于负指数前面。</span><span class="sxs-lookup"><span data-stu-id="218bb-258">The "E", "E-", "e", or "e-" formats indicate that a sign character should precede only negative exponents.</span></span>  
   
- 下面的示例使用科学记数法说明符设置几个数值的格式。  
+ <span data-ttu-id="218bb-259">下面的示例使用科学记数法说明符设置几个数值的格式。</span><span class="sxs-lookup"><span data-stu-id="218bb-259">The following example formats several numeric values using the specifiers for scientific notation.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
  [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-260">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-260">Back to table</span></span>](#table)  
   
 <a name="SpecifierEscape"></a>   
-## “\\”转义字符  
- 格式字符串中的“\#”、“0”、“.”、“,”、“%”和“‰”符号被解释为格式说明符而不是文本字符。 大写和小写“E”以及 \+ 和 \- 符号也可能被解释为格式说明符，具体取决于它们在自定义格式字符串中的位置。  
+## <a name="the--escape-character"></a><span data-ttu-id="218bb-261">"\\"转义字符</span><span class="sxs-lookup"><span data-stu-id="218bb-261">The "\\" Escape Character</span></span>  
+ <span data-ttu-id="218bb-262">格式字符串中的“#”、“0”、“.”、“,”、“%”和“‰”符号被解释为格式说明符而不是文本字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-262">The "#", "0", ".", ",", "%", and "‰" symbols in a format string are interpreted as format specifiers rather than as literal characters.</span></span> <span data-ttu-id="218bb-263">大写和小写“E”以及 + 和 - 符号也可能被解释为格式说明符，具体取决于它们在自定义格式字符串中的位置。</span><span class="sxs-lookup"><span data-stu-id="218bb-263">Depending on their position in a custom format string, the uppercase and lowercase "E" as well as the + and - symbols may also be interpreted as format specifiers.</span></span>  
   
- 若要防止某个字符被解释为格式说明符，你可以在该字符前面加上反斜杠（即转义字符）。 转义字符表示以下字符为应包含在未更改的结果字符串中的字符文本。  
+ <span data-ttu-id="218bb-264">若要防止某个字符被解释为格式说明符，你可以在该字符前面加上反斜杠（即转义字符）。</span><span class="sxs-lookup"><span data-stu-id="218bb-264">To prevent a character from being interpreted as a format specifier, you can precede it with a backslash, which is the escape character.</span></span> <span data-ttu-id="218bb-265">转义字符表示以下字符为应包含在未更改的结果字符串中的字符文本。</span><span class="sxs-lookup"><span data-stu-id="218bb-265">The escape character signifies that the following character is a character literal that should be included in the result string unchanged.</span></span>  
   
- 若在要结果字符串中包括反斜杠，必须使用另一个反斜杠 \(`\\`\) 对其转义。  
+ <span data-ttu-id="218bb-266">若在要结果字符串中包括反斜杠，必须使用另一个反斜杠 (`\\`) 对其转义。</span><span class="sxs-lookup"><span data-stu-id="218bb-266">To include a backslash in a result string, you must escape it with another backslash (`\\`).</span></span>  
   
 > [!NOTE]
->  一些编译器（如 C\+\+ 和 C\# 编译器）也可能会将单个反斜杠字符解释为转义字符。 若要确保在设置格式时正确解释字符串，在 C\# 中，可以在字符串之前使用原义字符串文本字符（@ 字符），或者在 C\# 和 C\+\+ 中，在每个反斜杠之前另外添加一个反斜杠字符。 下面的 C\# 示例阐释了这两种方法。  
+>  <span data-ttu-id="218bb-267">一些编译器（如 C++ 和 C# 编译器）也可能会将单个反斜杠字符解释为转义字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-267">Some compilers, such as the C++ and C# compilers, may also interpret a single backslash character as an escape character.</span></span> <span data-ttu-id="218bb-268">若要确保在设置格式时正确解释字符串，在 C# 中，可以在字符串之前使用原义字符串文本字符（@ 字符），或者在 C# 和 C++ 中，在每个反斜杠之前另外添加一个反斜杠字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-268">To ensure that a string is interpreted correctly when formatting, you can use the verbatim string literal character (the @ character) before the string in C#, or add another backslash character before each backslash in C# and C++.</span></span> <span data-ttu-id="218bb-269">下面的 C# 示例阐释了这两种方法。</span><span class="sxs-lookup"><span data-stu-id="218bb-269">The following C# example illustrates both approaches.</span></span>  
   
- 下面的示例使用转义字符，以防止格式设置操作将“\#”、“0”和“\\”字符解释为转义字符或格式说明符。 C\# 示例使用附加的反斜杠以确保将原反斜杠解释为文本字符。  
+ <span data-ttu-id="218bb-270">下面的示例使用转义字符以防止格式设置操作解释"#"、"0"和"\\"字符作为转义符或格式说明符。</span><span class="sxs-lookup"><span data-stu-id="218bb-270">The following example uses the escape character to prevent the formatting operation from interpreting the "#", "0", and "\\" characters as either escape characters or format specifiers.</span></span> <span data-ttu-id="218bb-271">C# 示例使用附加的反斜杠以确保将原反斜杠解释为文本字符。</span><span class="sxs-lookup"><span data-stu-id="218bb-271">The C# examples uses an additional backslash to ensure that a backslash is interpreted as a literal character.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-272">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-272">Back to table</span></span>](#table)  
   
 <a name="SectionSeparator"></a>   
-## “;”部分分隔符  
- 分号 \(;\) 是条件格式说明符，它可以对数字应用不同的格式设置，具体取决于值为正、为负还是为零。 为产生这种行为，自定义格式字符串可以包含最多三个用分号分隔的部分。 下表描述了这些部分。  
+## <a name="the--section-separator"></a><span data-ttu-id="218bb-273">“;”部分分隔符</span><span class="sxs-lookup"><span data-stu-id="218bb-273">The ";" Section Separator</span></span>  
+ <span data-ttu-id="218bb-274">分号 (;) 是条件格式说明符，它可以对数字应用不同的格式设置，具体取决于值为正、为负还是为零。</span><span class="sxs-lookup"><span data-stu-id="218bb-274">The semicolon (;) is a conditional format specifier that applies different formatting to a number depending on whether its value is positive, negative, or zero.</span></span> <span data-ttu-id="218bb-275">为产生这种行为，自定义格式字符串可以包含最多三个用分号分隔的部分。</span><span class="sxs-lookup"><span data-stu-id="218bb-275">To produce this behavior, a custom format string can contain up to three sections separated by semicolons.</span></span> <span data-ttu-id="218bb-276">下表描述了这些部分。</span><span class="sxs-lookup"><span data-stu-id="218bb-276">These sections are described in the following table.</span></span>  
   
-|部分数目|描述|  
-|----------|--------|  
-|一个部分|格式字符串应用于所有值。|  
-|两个部分|第一部分应用于正值和零，第二部分应用于负值。<br /><br /> 如果要设置格式的数字为负，但根据第二部分中的格式舍入后为零，则最终的零根据第一部分进行格式设置。|  
-|三个部分|第一部分应用于正值，第二部分应用于负值，第三部分应用于零。<br /><br /> 第二部分可以留空（分号间没有任何内容），在这种情况下，第一部分应用于所有非零值。<br /><br /> 如果要设置格式的数字为非零值，但根据第一部分或第二部分中的格式舍入后为零，则最终的零根据第三部分进行格式设置。|  
+|<span data-ttu-id="218bb-277">部分数目</span><span class="sxs-lookup"><span data-stu-id="218bb-277">Number of sections</span></span>|<span data-ttu-id="218bb-278">描述</span><span class="sxs-lookup"><span data-stu-id="218bb-278">Description</span></span>|  
+|------------------------|-----------------|  
+|<span data-ttu-id="218bb-279">一个部分</span><span class="sxs-lookup"><span data-stu-id="218bb-279">One section</span></span>|<span data-ttu-id="218bb-280">格式字符串应用于所有值。</span><span class="sxs-lookup"><span data-stu-id="218bb-280">The format string applies to all values.</span></span>|  
+|<span data-ttu-id="218bb-281">两个部分</span><span class="sxs-lookup"><span data-stu-id="218bb-281">Two sections</span></span>|<span data-ttu-id="218bb-282">第一部分应用于正值和零，第二部分应用于负值。</span><span class="sxs-lookup"><span data-stu-id="218bb-282">The first section applies to positive values and zeros, and the second section applies to negative values.</span></span><br /><br /> <span data-ttu-id="218bb-283">如果要设置格式的数字为负，但根据第二部分中的格式舍入后为零，则最终的零根据第一部分进行格式设置。</span><span class="sxs-lookup"><span data-stu-id="218bb-283">If the number to be formatted is negative, but becomes zero after rounding according to the format in the second section, the resulting zero is formatted according to the first section.</span></span>|  
+|<span data-ttu-id="218bb-284">三个部分</span><span class="sxs-lookup"><span data-stu-id="218bb-284">Three sections</span></span>|<span data-ttu-id="218bb-285">第一部分应用于正值，第二部分应用于负值，第三部分应用于零。</span><span class="sxs-lookup"><span data-stu-id="218bb-285">The first section applies to positive values, the second section applies to negative values, and the third section applies to zeros.</span></span><br /><br /> <span data-ttu-id="218bb-286">第二部分可以留空（分号间没有任何内容），在这种情况下，第一部分应用于所有非零值。</span><span class="sxs-lookup"><span data-stu-id="218bb-286">The second section can be left empty (by having nothing between the semicolons), in which case the first section applies to all nonzero values.</span></span><br /><br /> <span data-ttu-id="218bb-287">如果要设置格式的数字为非零值，但根据第一部分或第二部分中的格式舍入后为零，则最终的零根据第三部分进行格式设置。</span><span class="sxs-lookup"><span data-stu-id="218bb-287">If the number to be formatted is nonzero, but becomes zero after rounding according to the format in the first or second section, the resulting zero is formatted according to the third section.</span></span>|  
   
- 格式化最终值时，部分分隔符忽略所有先前存在的与数字关联的格式设置。 例如，使用部分分隔符时，显示的负值永远不带负号。 如果你希望格式化后的最终值带有负号，则应明确包含负号，让它作为自定义格式说明符的组成部分。  
+ <span data-ttu-id="218bb-288">格式化最终值时，部分分隔符忽略所有先前存在的与数字关联的格式设置。</span><span class="sxs-lookup"><span data-stu-id="218bb-288">Section separators ignore any preexisting formatting associated with a number when the final value is formatted.</span></span> <span data-ttu-id="218bb-289">例如，使用部分分隔符时，显示的负值永远不带负号。</span><span class="sxs-lookup"><span data-stu-id="218bb-289">For example, negative values are always displayed without a minus sign when section separators are used.</span></span> <span data-ttu-id="218bb-290">如果你希望格式化后的最终值带有负号，则应明确包含负号，让它作为自定义格式说明符的组成部分。</span><span class="sxs-lookup"><span data-stu-id="218bb-290">If you want the final formatted value to have a minus sign, you should explicitly include the minus sign as part of the custom format specifier.</span></span>  
   
- 下面的示例使用“;”格式说明符来分别设置正数、负数和零的格式。  
+ <span data-ttu-id="218bb-291">下面的示例使用“;”格式说明符来分别设置正数、负数和零的格式。</span><span class="sxs-lookup"><span data-stu-id="218bb-291">The following example uses the ";" format specifier to format positive, negative, and zero numbers differently.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
  [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-292">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-292">Back to table</span></span>](#table)  
   
 <a name="NotesCustomFormatting"></a>   
-## 备注  
+## <a name="notes"></a><span data-ttu-id="218bb-293">说明</span><span class="sxs-lookup"><span data-stu-id="218bb-293">Notes</span></span>  
   
-### 浮点型无穷大和 NaN  
- 无论格式字符串原来是什么值，只要 <xref:System.Single> 或 <xref:System.Double> 浮点类型的值为正无穷大、负无穷大或非数值 \(NaN\)，格式字符串就分别是当前适用的 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 对象指定的 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 或 <xref:System.Globalization.NumberFormatInfo> 属性的值。  
+### <a name="floating-point-infinities-and-nan"></a><span data-ttu-id="218bb-294">浮点型无穷大和 NaN</span><span class="sxs-lookup"><span data-stu-id="218bb-294">Floating-Point Infinities and NaN</span></span>  
+ <span data-ttu-id="218bb-295">无论格式字符串原来是什么值，只要 <xref:System.Single> 或 <xref:System.Double> 浮点类型的值为正无穷大、负无穷大或非数值 (NaN)，格式字符串就分别是当前适用的 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>对象指定的 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、 <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 或 <xref:System.Globalization.NumberFormatInfo> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="218bb-295">Regardless of the format string, if the value of a <xref:System.Single> or <xref:System.Double> floating-point type is positive infinity, negative infinity, or not a number (NaN), the formatted string is the value of the respective <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, or <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> property specified by the currently applicable <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
-### 控制面板设置  
- 控制面板中**“区域和语言选项”**项中的设置会影响由格式化操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，并且当前线程区域性将提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。  
+### <a name="control-panel-settings"></a><span data-ttu-id="218bb-296">控制面板设置</span><span class="sxs-lookup"><span data-stu-id="218bb-296">Control Panel Settings</span></span>  
+ <span data-ttu-id="218bb-297">控制面板中 **“区域和语言选项”** 项中的设置会影响由格式化操作产生的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-297">The settings in the **Regional and Language Options** item in Control Panel influence the result string produced by a formatting operation.</span></span> <span data-ttu-id="218bb-298">这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，并且当前线程区域性将提供用于控制格式设置的值。</span><span class="sxs-lookup"><span data-stu-id="218bb-298">Those settings are used to initialize the <xref:System.Globalization.NumberFormatInfo> object associated with the current thread culture, and the current thread culture provides values used to govern formatting.</span></span> <span data-ttu-id="218bb-299">使用不同设置的计算机将生成不同的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-299">Computers that use different settings generate different result strings.</span></span>  
   
- 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> 构造函数实例化一个新的 <xref:System.Globalization.CultureInfo> 对象以表示与当前的系统区域性相同的区域性，则通过控制面板中的**“区域和语言选项”**建立的任何自定义都将应用到新的 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
+ <span data-ttu-id="218bb-300">此外，如果你使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>构造函数实例化一个新<xref:System.Globalization.CultureInfo>对象，表示与当前系统区域性，建立的任何自定义相同的区域性**区域和语言选项**控制面板中将应用到新<xref:System.Globalization.CultureInfo>对象。</span><span class="sxs-lookup"><span data-stu-id="218bb-300">In addition, if you use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor to instantiate a new <xref:System.Globalization.CultureInfo> object that represents the same culture as the current system culture, any customizations established by the **Regional and Language Options** item in Control Panel will be applied to the new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="218bb-301">可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="218bb-301">You can use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor to create a <xref:System.Globalization.CultureInfo> object that does not reflect a system's customizations.</span></span>  
   
-### 舍入和定点格式字符串  
- 对于固定点格式字符串（即不包含科学记数法格式字符的格式字符串），数字被舍入为与小数点右边的数字占位符数目相同的小数位数。 如果格式字符串不包含小数点，数字被舍入为最接近的整数。 如果数字位数多于小数点左边数字占位符的个数，多余的数字被复制到结果字符串中紧挨着第一个数字占位符的前面。  
+### <a name="rounding-and-fixed-point-format-strings"></a><span data-ttu-id="218bb-302">舍入和定点格式字符串</span><span class="sxs-lookup"><span data-stu-id="218bb-302">Rounding and Fixed-Point Format Strings</span></span>  
+ <span data-ttu-id="218bb-303">对于固定点格式字符串（即不包含科学记数法格式字符的格式字符串），数字被舍入为与小数点右边的数字占位符数目相同的小数位数。</span><span class="sxs-lookup"><span data-stu-id="218bb-303">For fixed-point format strings (that is, format strings that do not contain scientific notation format characters), numbers are rounded to as many decimal places as there are digit placeholders to the right of the decimal point.</span></span> <span data-ttu-id="218bb-304">如果格式字符串不包含小数点，数字被舍入为最接近的整数。</span><span class="sxs-lookup"><span data-stu-id="218bb-304">If the format string does not contain a decimal point, the number is rounded to the nearest integer.</span></span> <span data-ttu-id="218bb-305">如果数字位数多于小数点左边数字占位符的个数，多余的数字被复制到结果字符串中紧挨着第一个数字占位符的前面。</span><span class="sxs-lookup"><span data-stu-id="218bb-305">If the number has more digits than there are digit placeholders to the left of the decimal point, the extra digits are copied to the result string immediately before the first digit placeholder.</span></span>  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-306">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-306">Back to table</span></span>](#table)  
   
 <a name="example"></a>   
-## 示例  
- 下面的示例演示两个自定义数字格式字符串。 在这两个示例中，数字占位符 \(`#`\) 显示数值数据，且所有其他字符被复制到结果字符串。  
+## <a name="example"></a><span data-ttu-id="218bb-307">示例</span><span class="sxs-lookup"><span data-stu-id="218bb-307">Example</span></span>  
+ <span data-ttu-id="218bb-308">下面的示例演示两个自定义数字格式字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-308">The following example demonstrates two custom numeric format strings.</span></span> <span data-ttu-id="218bb-309">在这两个示例中，数字占位符 (`#`) 显示数值数据，且所有其他字符被复制到结果字符串。</span><span class="sxs-lookup"><span data-stu-id="218bb-309">In both cases, the digit placeholder (`#`) displays the numeric data, and all other characters are copied to the result string.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
  [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="218bb-310">返回表首</span><span class="sxs-lookup"><span data-stu-id="218bb-310">Back to table</span></span>](#table)  
   
-## 请参阅  
- <xref:System.Globalization.NumberFormatInfo>   
- [格式化类型](../../../docs/standard/base-types/formatting-types.md)   
- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)   
- [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)   
- [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a><span data-ttu-id="218bb-311">另请参阅</span><span class="sxs-lookup"><span data-stu-id="218bb-311">See Also</span></span>  
+ <xref:System.Globalization.NumberFormatInfo>  
+ [<span data-ttu-id="218bb-312">格式设置类型</span><span class="sxs-lookup"><span data-stu-id="218bb-312">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="218bb-313">标准数字格式字符串</span><span class="sxs-lookup"><span data-stu-id="218bb-313">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [<span data-ttu-id="218bb-314">如何：用前导零填充数字</span><span class="sxs-lookup"><span data-stu-id="218bb-314">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [<span data-ttu-id="218bb-315">示例：.NET Framework 4 格式设置实用工具</span><span class="sxs-lookup"><span data-stu-id="218bb-315">Sample: .NET Framework 4 Formatting Utility</span></span>](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

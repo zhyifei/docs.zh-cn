@@ -1,60 +1,58 @@
 ---
-title: "关系数据和 ADO.NET 的 XML 集成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "关系数据和 ADO.NET 的 XML 集成"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5d03a0ca7518b06c08d98967d7c5ae864f1c04ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 关系数据和 ADO.NET 的 XML 集成
-**XmlDataDocument** 类是 **XmlDocument** 的派生类，包含 XML 数据。  **XmlDataDocument** 的优势是在关系数据和分层数据之间架起了桥梁。  它是一个可绑定到 **DataSet** 的 **XmlDocument**，这两个类可以同步对其中所包含的数据的更改。  绑定到 **DataSet** 的 **XmlDocument** 允许 XML 与关系数据集成，您不必将数据表示为 XML 格式或关系格式。  您可以用这两种格式表示数据，而不是限于一种数据表示形式。  
+# <a name="xml-integration-with-relational-data-and-adonet"></a><span data-ttu-id="91e7c-102">关系数据和 ADO.NET 的 XML 集成</span><span class="sxs-lookup"><span data-stu-id="91e7c-102">XML Integration with Relational Data and ADO.NET</span></span>
+<span data-ttu-id="91e7c-103">**XmlDataDocument**类是派生的类的**XmlDocument**，并且包含 XML 数据。</span><span class="sxs-lookup"><span data-stu-id="91e7c-103">The **XmlDataDocument** class is a derived class of the **XmlDocument**, and contains XML data.</span></span> <span data-ttu-id="91e7c-104">利用**XmlDataDocument**在于，它提供关系和分层数据之间的桥梁。</span><span class="sxs-lookup"><span data-stu-id="91e7c-104">The advantage of the **XmlDataDocument** is that it provides a bridge between relational and hierarchical data.</span></span> <span data-ttu-id="91e7c-105">它是**XmlDocument** ，可以绑定到**数据集**，这两个类可以同步对两个类中包含的数据所做的更改。</span><span class="sxs-lookup"><span data-stu-id="91e7c-105">It is an **XmlDocument** that can be bound to a **DataSet** and both classes can synchronize changes made to data contained in the two classes.</span></span> <span data-ttu-id="91e7c-106">**XmlDocument** ，它绑定到**数据集**允许 XML 与关系数据集成和无需具有将数据表示为 XML 格式或以关系格式。</span><span class="sxs-lookup"><span data-stu-id="91e7c-106">An **XmlDocument** that is bound to a **DataSet** allows XML to integrate with relational data, and you do not have to have your data represented as either XML or in a relational format.</span></span> <span data-ttu-id="91e7c-107">您可以用这两种格式表示数据，而不是限于一种数据表示形式。</span><span class="sxs-lookup"><span data-stu-id="91e7c-107">You can do both and not be constrained to a single representation of the data.</span></span>  
   
- 让数据可以以两种视图呈现的好处是：  
+ <span data-ttu-id="91e7c-108">让数据可以以两种视图呈现的好处是：</span><span class="sxs-lookup"><span data-stu-id="91e7c-108">The benefits of having data available in two views are:</span></span>  
   
--   XML 文档的结构化部分可以映射到一个数据集，并可以有效地存储、索引和搜索。  
+-   <span data-ttu-id="91e7c-109">XML 文档的结构化部分可以映射到一个数据集，并可以有效地存储、索引和搜索。</span><span class="sxs-lookup"><span data-stu-id="91e7c-109">The structured portion of an XML document can be mapped to a dataset, and be efficiently stored, indexed, and searched.</span></span>  
   
--   转换、验证和导航可以通过以关系形式存储的 XML 数据上的游标模型有效地进行。  有时，对关系结构进行操作比在 XML 存储在一个 **XmlDocument** 模型中时更为有效。  
+-   <span data-ttu-id="91e7c-110">转换、验证和导航可以通过以关系形式存储的 XML 数据上的游标模型有效地进行。</span><span class="sxs-lookup"><span data-stu-id="91e7c-110">Transformations, validation, and navigation can be done efficiently through a cursor model over the XML data that is stored relationally.</span></span> <span data-ttu-id="91e7c-111">有时，可以更有效地对比如果 XML 存储在关系结构**XmlDocument**模型。</span><span class="sxs-lookup"><span data-stu-id="91e7c-111">At times, it can be done more efficiently against relational structures than if the XML is stored in an **XmlDocument** model.</span></span>  
   
--   **DataSet** 可以存储 XML 的一部分。  也就是说，您可以用 **XPath** 或 **XslTransform** 只将有关的元素和属性存储到 **DataSet**。  在这里，可以对较小的、经过筛选的数据子集进行更改，而这些更改可以传播到 **XmlDataDocument** 中更大的数据中。  
+-   <span data-ttu-id="91e7c-112">**数据集**可以存储 XML 的一部分。</span><span class="sxs-lookup"><span data-stu-id="91e7c-112">The **DataSet** can store a portion of the XML.</span></span> <span data-ttu-id="91e7c-113">也就是说，你可以使用**XPath**或**XslTransform**以存储到**数据集**只元素和感兴趣的属性。</span><span class="sxs-lookup"><span data-stu-id="91e7c-113">That is, you can use **XPath** or **XslTransform** to store to a **DataSet** only those elements and attributes of interest.</span></span> <span data-ttu-id="91e7c-114">在这里，可以对进行更改的数据较小的、 经过筛选的子集传播到更大的数据中的更改**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-114">From there, changes can be made to the smaller, filtered subset of data, with the changes propagating to the larger data in the **XmlDataDocument**.</span></span>  
   
- 您也可以对从 SQL Server 加载到 **DataSet** 中的数据进行转换。  另一种选择是将 .NET Framework 类样式管理的 WinForm 和 WebForm 控件绑定到从 XML 输入流填充的 **DataSet**。  
+ <span data-ttu-id="91e7c-115">你还可以对已加载到的数据运行转换**数据集**从 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="91e7c-115">You can also run a transform over data that was loaded into the **DataSet** from SQL Server.</span></span> <span data-ttu-id="91e7c-116">另一种方法是将.NET Framework 类样式管理的 WinForm 和 WebForm 控件绑定到**数据集**从 XML 输入流填充。</span><span class="sxs-lookup"><span data-stu-id="91e7c-116">Another option is to bind .NET Framework classes-style-managed WinForm and WebForm controls to a **DataSet** that was populated from an XML input stream.</span></span>  
   
- 除支持 **XslTransform** 外，**XmlDataDocument** 还将关系数据向 **XPath** 查询和验证公开。  一般地，所有 XML 服务都可以对关系数据使用，而关系功能（如控件绑定、代码生成等）可以对 XML 的结构化映射使用，不会使 XML 失真。  
+ <span data-ttu-id="91e7c-117">除了支持**XslTransform**、 **XmlDataDocument**公开关系数据向**XPath**查询和验证。</span><span class="sxs-lookup"><span data-stu-id="91e7c-117">In addition to supporting **XslTransform**, an **XmlDataDocument** exposes relational data to **XPath** queries and validation.</span></span>  <span data-ttu-id="91e7c-118">一般地，所有 XML 服务都可以对关系数据使用，而关系功能（如控件绑定、代码生成等）可以对 XML 的结构化映射使用，不会使 XML 失真。</span><span class="sxs-lookup"><span data-stu-id="91e7c-118">Basically, all XML services are available over relational data, and relational facilities, such as control binding, codegen, and so on, are available over a structured projection of XML without compromising XML fidelity.</span></span>  
   
- 因为 **XmlDataDocument** 从 **XmlDocument** 继承，所以提供了 W3C DOM 的实现。  **XmlDataDocument** 与 **DataSet** 关联并将一个数据子集存储到其中的这一事实，并未限制或改变其用作 **XmlDocument** 的这一性质。  编写用来使用 **XmlDocument** 的代码不加更改即可对 **XmlDataDocument** 使用。  **DataSet** 通过定义表、列、关系和约束提供了相同数据的关系视图，它是一个独立的、内存中的用户数据存储区。  
+ <span data-ttu-id="91e7c-119">因为**XmlDataDocument**继承自**XmlDocument**，它提供了 W3C DOM 的实现</span><span class="sxs-lookup"><span data-stu-id="91e7c-119">Because **XmlDataDocument** is inherited from an **XmlDocument**, it provides an implementation of the W3C DOM.</span></span> <span data-ttu-id="91e7c-120">这一事实， **XmlDataDocument**相关联，并将存储内，其数据的子集**数据集**并未限制或改变其用作**XmlDocument**以任何方式。</span><span class="sxs-lookup"><span data-stu-id="91e7c-120">The fact that the **XmlDataDocument** is associated with, and stores a subset of its data within, a **DataSet** does not restrict or alter its use as an **XmlDocument** in any way.</span></span> <span data-ttu-id="91e7c-121">编写用来使用代码**XmlDocument** works 原封不动地针对**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-121">Code written to consume an **XmlDocument** works unaltered against an **XmlDataDocument**.</span></span> <span data-ttu-id="91e7c-122">**数据集**通过定义表、 列、 关系和约束，提供相同的数据的关系视图和是独立的、 内存中的用户数据存储区。</span><span class="sxs-lookup"><span data-stu-id="91e7c-122">The **DataSet** provides the relational view of the same data by defining tables, columns, relations, and constraints, and is a stand-alone, in-memory user data store.</span></span>  
   
- 下面的插图显示了 XML 数据与 **DataSet** 和 **XmlDataDocument** 的不同关联。  
+ <span data-ttu-id="91e7c-123">下图显示的不同关联了 XML 数据与**数据集**和**XmlDataDocument**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-123">The following illustration shows the different associations that XML data has with the **DataSet** and **XmlDataDocument**.</span></span>  
   
- ![XML 数据集](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ <span data-ttu-id="91e7c-124">![XML 数据集](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")</span><span class="sxs-lookup"><span data-stu-id="91e7c-124">![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")</span></span>  
   
- 插图显示了 XML 数据可以直接加载到 **DataSet** 中，从而可以以关系型的方式对 XML 进行直接处理。  或者，XML 可以加载到 DOM 的派生类 **XmlDataDocument** 中，然后就可以加载 **DataSet** 并进行同步。  因为 **DataSet** 和 **XmlDataDocument** 是通过单个数据集同步的，所以对一个存储区中的数据所做的更改会反映到另一个存储区中。  
+ <span data-ttu-id="91e7c-125">图中显示 XML 数据，可以加载直接到**数据集**，这样，以关系型的方式与 XML 的直接操作。</span><span class="sxs-lookup"><span data-stu-id="91e7c-125">The illustration shows that XML data can be loaded directly into a **DataSet**, which allows direct manipulation with XML in the relational manner.</span></span> <span data-ttu-id="91e7c-126">或者，XML 可以加载到 DOM 的派生类**XmlDataDocument**，随后加载和与同步**数据集**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-126">Or, the XML can be loaded into a derived class of the DOM, which is the **XmlDataDocument**, and subsequently loaded and synchronized with the **DataSet**.</span></span> <span data-ttu-id="91e7c-127">因为**数据集**和**XmlDataDocument**通过一组同步的数据，对一个存储中的数据所做更改会反映其他区中。</span><span class="sxs-lookup"><span data-stu-id="91e7c-127">Because the **DataSet** and **XmlDataDocument** are synchronized over a single set of data, changes made to the data in one store are reflected in the other store.</span></span>  
   
- **XmlDataDocument** 继承了 **XmlDocument** 的所有编辑和浏览功能。  有时使用 **XmlDataDocument** 及其继承的功能时，与 **DataSet** 同步比将 XML 直接加载到 **DataSet** 中更为合适。  下表显示了在选择加载 **DataSet** 要使用的方法时考虑的事项。  
+ <span data-ttu-id="91e7c-128">**XmlDataDocument**继承中的所有编辑和浏览功能**XmlDocument**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-128">The **XmlDataDocument** inherits all the editing and navigational features from the **XmlDocument**.</span></span> <span data-ttu-id="91e7c-129">有时间使用时**XmlDataDocument**其继承的功能，与同步**数据集**，为更适当的选项比 XML 直接加载到**数据集**.</span><span class="sxs-lookup"><span data-stu-id="91e7c-129">There are times when using the **XmlDataDocument** and its inherited features, synchronized with a **DataSet**, is a more appropriate option than loading XML directly into the **DataSet**.</span></span> <span data-ttu-id="91e7c-130">下表显示的项时选择要使用加载的方法要考虑**数据集**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-130">The following table shows the items to be considered when choosing which method to use to load the **DataSet**.</span></span>  
   
-|何时将 XML 直接加载到数据集中|何时将 XmlDataDocument 与 DataSet 同步|  
-|-----------------------|--------------------------------------|  
-|用 SQL 在 **DataSet** 中查询数据比用 XPath 容易。|需要对 **DataSet** 中的数据执行 XPath 查询。|  
-|保留源 XML 中的元素顺序并不重要。|保留源 XML 中的元素顺序很重要。|  
-|源 XML 中元素间的空白和格式设置不需要保留。|保留源 XML 中的空白和格式设置很重要。|  
+|<span data-ttu-id="91e7c-131">何时将 XML 直接加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="91e7c-131">When to load XML directly into a DataSet</span></span>|<span data-ttu-id="91e7c-132">何时将 XmlDataDocument 与 DataSet 同步</span><span class="sxs-lookup"><span data-stu-id="91e7c-132">When to synchronize an XmlDataDocument with a DataSet</span></span>|  
+|----------------------------------------------|-----------------------------------------------------------|  
+|<span data-ttu-id="91e7c-133">中的数据的查询**数据集**来更方便地使用 SQL 比用 XPath。</span><span class="sxs-lookup"><span data-stu-id="91e7c-133">Queries of data in the **DataSet** are easier using SQL than XPath.</span></span>|<span data-ttu-id="91e7c-134">XPath 查询中的数据所需**数据集**。</span><span class="sxs-lookup"><span data-stu-id="91e7c-134">XPath queries are needed over data in the **DataSet**.</span></span>|  
+|<span data-ttu-id="91e7c-135">保留源 XML 中的元素顺序并不重要。</span><span class="sxs-lookup"><span data-stu-id="91e7c-135">Preservation of element ordering in the source XML is not critical.</span></span>|<span data-ttu-id="91e7c-136">保留源 XML 中的元素顺序很重要。</span><span class="sxs-lookup"><span data-stu-id="91e7c-136">Preservation of element ordering in the source XML is critical.</span></span>|  
+|<span data-ttu-id="91e7c-137">源 XML 中元素间的空白和格式设置不需要保留。</span><span class="sxs-lookup"><span data-stu-id="91e7c-137">White space between elements and formatting does not need to be preserved in the source XML.</span></span>|<span data-ttu-id="91e7c-138">保留源 XML 中的空白和格式设置很重要。</span><span class="sxs-lookup"><span data-stu-id="91e7c-138">White space and formatting preservation in the source XML is critical.</span></span>|  
   
- 如果直接将 XML 加载并写入 **DataSet** 以及直接从中加载和写出 XML 可满足您的需要，请参见[从 XML 中加载 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 和[以 XML 数据形式编写 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。  
+ <span data-ttu-id="91e7c-139">如果加载和编写 XML，直接进入和退出**数据集**满足您的需要，请参阅[从 XML 加载数据集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和[编写以 XML 数据形式的数据集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)。</span><span class="sxs-lookup"><span data-stu-id="91e7c-139">If loading and writing XML directly into and out of a **DataSet** addresses your needs, see [Loading a DataSet from XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) and [Writing a DataSet as XML Data](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).</span></span>  
   
- 如果从 **XmlDataDocument** 加载 **DataSet** 可满足您的需要，请参见[将 Dataset 与 XML 文档同步](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。  
+ <span data-ttu-id="91e7c-140">如果加载**数据集**从**XmlDataDocument**满足您的需要，请参阅[同步 dataset 与 XML 文档](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。</span><span class="sxs-lookup"><span data-stu-id="91e7c-140">If loading the **DataSet** from an **XmlDataDocument** addresses your needs, see [Synchronizing a Datasetwith an XML Document](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span></span>  
   
-## 请参阅  
- [在 DataSet 中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="91e7c-141">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91e7c-141">See Also</span></span>  
+ [<span data-ttu-id="91e7c-142">在数据集中使用 XML</span><span class="sxs-lookup"><span data-stu-id="91e7c-142">Using XML in a DataSet</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

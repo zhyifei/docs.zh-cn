@@ -1,42 +1,45 @@
 ---
-title: "Foreground and Background Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], foreground"
-  - "threading [.NET Framework], background"
-  - "foreground threads"
-  - "background threads"
+title: "前台和后台线程"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], foreground
+- threading [.NET Framework], background
+- foreground threads
+- background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 42ad427fc2c1175c0d9b333aa418aea039f11a35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Foreground and Background Threads
-托管线程或者是后台线程，或者是前台线程。  后台线程不会使托管执行环境处于运行状态，除此之外，后台线程与前台线程是一样的。  一旦所有前台线程在托管进程（其中 .exe 文件是托管程序集）中被停止，系统将停止所有后台线程并关闭。  
+# <a name="foreground-and-background-threads"></a><span data-ttu-id="e0fc7-102">前台和后台线程</span><span class="sxs-lookup"><span data-stu-id="e0fc7-102">Foreground and Background Threads</span></span>
+<span data-ttu-id="e0fc7-103">托管的线程是后台线程或前台线程。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="e0fc7-104">后台线程相等前台线程有一个例外： 后台线程不会保留运行的托管的执行环境。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="e0fc7-105">一旦所有前台线程已都停止 （其中的.exe 文件是托管程序集） 的托管进程中，系统将停止所有后台线程，并关闭。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  
   
 > [!NOTE]
->  当运行时因为进程关闭而停止某个后台线程时，不会在该线程中引发异常。  但是，当线程是因为 <xref:System.AppDomain.Unload%2A?displayProperty=fullName> 方法卸载应用程序域而停止时，将同时在后台和前台线程中引发 <xref:System.Threading.ThreadAbortException>。  
+>  <span data-ttu-id="e0fc7-106">当运行时停止后台线程，因为进程正在关闭时，线程中不引发任何异常。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-106">When the runtime stops a background thread because the process is shutting down, no exception is thrown in the thread.</span></span> <span data-ttu-id="e0fc7-107">但是，当线程将停止，因为<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>方法卸载应用程序域中，<xref:System.Threading.ThreadAbortException>在前台和后台线程中引发。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-107">However, when threads are stopped because the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method unloads the application domain, a <xref:System.Threading.ThreadAbortException> is thrown in both foreground and background threads.</span></span>  
   
- 可使用 <xref:System.Threading.Thread.IsBackground%2A?displayProperty=fullName> 属性确定线程是后台线程还是前台线程，或更改其状态。  通过将其 <xref:System.Threading.Thread.IsBackground%2A> 属性设置为 `true`，可在任何时候将线程更改为后台线程。  
+ <span data-ttu-id="e0fc7-108">使用<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>属性来确定线程是背景或前景线程，或更改其状态。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-108">Use the <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> property to determine whether a thread is a background or a foreground thread, or to change its status.</span></span> <span data-ttu-id="e0fc7-109">线程可以更改为后台线程在任何时候通过设置其<xref:System.Threading.Thread.IsBackground%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-109">A thread can be changed to a background thread at any time by setting its <xref:System.Threading.Thread.IsBackground%2A> property to `true`.</span></span>  
   
 > [!IMPORTANT]
->  线程的前台或后台状态不影响线程中未经处理的异常的结果。  在 .NET Framework 2.0 版中，前台或后台线程中的未经处理的异常都将导致应用程序终止。  请参见 [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+>  <span data-ttu-id="e0fc7-110">前台或后台线程的状态的不会影响在线程中未经处理的异常的结果。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-110">The foreground or background status of a thread does not affect the outcome of an unhandled exception in the thread.</span></span> <span data-ttu-id="e0fc7-111">在.NET Framework 2.0 版中，在前台或后台线程中未经处理的异常会导致应用终止。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-111">In the .NET Framework version 2.0, an unhandled exception in either foreground or background threads results in termination of the application.</span></span> <span data-ttu-id="e0fc7-112">请参阅[托管线程中的异常](../../../docs/standard/threading/exceptions-in-managed-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-112">See [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
- 属于托管线程池的线程（即其 <xref:System.Threading.Thread.IsThreadPoolThread%2A> 属性为 `true` 的线程）是后台线程。  从非托管代码进入托管执行环境的所有线程都被标记为后台线程。  通过创建并启动新的 <xref:System.Threading.Thread> 对象而生成的所有线程都默认为前台线程。  
+ <span data-ttu-id="e0fc7-113">属于托管的线程池的线程 (即，线程其<xref:System.Threading.Thread.IsThreadPoolThread%2A>属性是`true`) 是后台线程。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-113">Threads that belong to the managed thread pool (that is, threads whose <xref:System.Threading.Thread.IsThreadPoolThread%2A> property is `true`) are background threads.</span></span> <span data-ttu-id="e0fc7-114">从非托管代码进入托管的执行环境的所有线程都标记为后台线程。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-114">All threads that enter the managed execution environment from unmanaged code are marked as background threads.</span></span> <span data-ttu-id="e0fc7-115">通过创建并启动一个新生成的所有线程<xref:System.Threading.Thread>对象是由默认前台线程。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-115">All threads generated by creating and starting a new <xref:System.Threading.Thread> object are by default foreground threads.</span></span>  
   
- 如果使用一个线程监视活动（例如套接字连接），请将其 <xref:System.Threading.Thread.IsBackground%2A> 属性设置为 `true`，以便该线程不会阻止进程终止。  
+ <span data-ttu-id="e0fc7-116">如果你使用一个线程来监视活动，例如套接字连接，设置其<xref:System.Threading.Thread.IsBackground%2A>属性`true`，以便线程不会阻止您的进程终止。</span><span class="sxs-lookup"><span data-stu-id="e0fc7-116">If you use a thread to monitor an activity, such as a socket connection, set its <xref:System.Threading.Thread.IsBackground%2A> property to `true` so that the thread does not prevent your process from terminating.</span></span>  
   
-## 请参阅  
- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=fullName>   
- <xref:System.Threading.Thread>   
+## <a name="see-also"></a><span data-ttu-id="e0fc7-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e0fc7-117">See Also</span></span>  
+ <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
+ <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadAbortException>

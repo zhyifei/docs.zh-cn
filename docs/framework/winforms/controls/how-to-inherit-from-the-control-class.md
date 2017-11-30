@@ -1,61 +1,62 @@
 ---
-title: "如何：从 Control 类继承 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Control 类, 继承来源"
-  - "自定义控件 [Windows 窗体], 创建"
-  - "自定义控件 [Windows 窗体], 继承"
-  - "继承, Windows 窗体自定义控件"
-  - "OnPaint 方法 [Windows 窗体]"
+title: "如何：从 Control 类继承"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Windows Forms], Windows Forms custom controls
+- Control class [Windows Forms], inheriting from
+- custom controls [Windows Forms], inheritance
+- OnPaint method [Windows Forms]
+- custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b9c56d2d9df80745cec2b811c39f5e438d07c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：从 Control 类继承
-如果想要创建一个用于 Windows 窗体的完全自定义的控件，则应从 <xref:System.Windows.Forms.Control> 类继承。  而从 <xref:System.Windows.Forms.Control> 类继承要求进行更多的规划和实现，同时也为您提供了最大程度的选择自由。  当从 <xref:System.Windows.Forms.Control> 继承时，将继承使控件能够运行的最基本功能。  <xref:System.Windows.Forms.Control> 类的固有功能可处理用户通过键盘和鼠标的输入，定义控件的边界和大小，提供窗口句柄，以及提供信息处理和安全。  它没有并入任何绘图功能（在此指的是控件图形界面的实际呈现），也没有并入任何特定用户的交互功能。  必须通过自定义代码提供所有这些功能。  
+# <a name="how-to-inherit-from-the-control-class"></a><span data-ttu-id="349cb-102">如何：从 Control 类继承</span><span class="sxs-lookup"><span data-stu-id="349cb-102">How to: Inherit from the Control Class</span></span>
+<span data-ttu-id="349cb-103">如果你想要创建使用 Windows 窗体上的完全自定义控件，应从继承<xref:System.Windows.Forms.Control>类。</span><span class="sxs-lookup"><span data-stu-id="349cb-103">If you want to create a completely custom control to use on a Windows Form, you should inherit from the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="349cb-104">时从继承<xref:System.Windows.Forms.Control>类要求你执行详细的规划和实现，它还提供的选项的最大范围。</span><span class="sxs-lookup"><span data-stu-id="349cb-104">While inheriting from the <xref:System.Windows.Forms.Control> class requires that you perform more planning and implementation, it also provides you with the largest range of options.</span></span> <span data-ttu-id="349cb-105">从继承时<xref:System.Windows.Forms.Control>，继承使控件能够运行的最基本功能。</span><span class="sxs-lookup"><span data-stu-id="349cb-105">When inheriting from <xref:System.Windows.Forms.Control>, you inherit the very basic functionality that makes controls work.</span></span> <span data-ttu-id="349cb-106">中的固有功能<xref:System.Windows.Forms.Control>类处理通过键盘和鼠标的用户输入，定义的边界和控件大小，提供 windows 句柄，并提供消息处理和安全性。</span><span class="sxs-lookup"><span data-stu-id="349cb-106">The functionality inherent in the <xref:System.Windows.Forms.Control> class handles user input through the keyboard and mouse, defines the bounds and size of the control, provides a windows handle, and provides message handling and security.</span></span> <span data-ttu-id="349cb-107">它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。</span><span class="sxs-lookup"><span data-stu-id="349cb-107">It does not incorporate any painting, which in this case is the actual rendering of the graphical interface of the control, nor does it incorporate any specific user interaction functionality.</span></span> <span data-ttu-id="349cb-108">必须通过自定义代码提供所有的这些功能。</span><span class="sxs-lookup"><span data-stu-id="349cb-108">You must provide all of these aspects through custom code.</span></span>  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="349cb-109">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="349cb-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="349cb-110">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="349cb-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="349cb-111">有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="349cb-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 创建自定义控件  
+### <a name="to-create-a-custom-control"></a><span data-ttu-id="349cb-112">创建自定义控件</span><span class="sxs-lookup"><span data-stu-id="349cb-112">To create a custom control</span></span>  
   
-1.  创建新的**“Windows 应用程序”**或**“Windows 控件库”**项目。  
+1.  <span data-ttu-id="349cb-113">创建一个新的 **Windows 应用程序**或 **Windows 控件库**项目。</span><span class="sxs-lookup"><span data-stu-id="349cb-113">Create a new **Windows Application** or **Windows Control Library** project.</span></span>  
   
-2.  从**“项目”**菜单中选择**“添加类”**。  
+2.  <span data-ttu-id="349cb-114">从“项目”菜单中，选择“添加类”。</span><span class="sxs-lookup"><span data-stu-id="349cb-114">From the **Project** menu, choose **Add Class**.</span></span>  
   
-3.  在**“添加新项”**对话框中单击**“自定义控件”**。  
+3.  <span data-ttu-id="349cb-115">在“添加新项”对话框中，单击“自定义控件”。</span><span class="sxs-lookup"><span data-stu-id="349cb-115">In the **Add New Item** dialog box, click **Custom Control**.</span></span>  
   
-     一个新的自定义控件被添加到项目中。  
+     <span data-ttu-id="349cb-116">一个新的自定义控件将被添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="349cb-116">A new custom control is added to your project.</span></span>  
   
-4.  按 F7 为自定义控件打开**“代码编辑器”**。  
+4.  <span data-ttu-id="349cb-117">按 F7 打开自定义控件的“代码编辑器”。</span><span class="sxs-lookup"><span data-stu-id="349cb-117">Press F7 to open the **Code Editor** for your custom control.</span></span>  
   
-5.  定位到 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，该方法除了调用基类的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法外，其他情况均为空。  
+5.  <span data-ttu-id="349cb-118">找到<xref:System.Windows.Forms.Control.OnPaint%2A>方法，将为空除外调用<xref:System.Windows.Forms.Control.OnPaint%2A>基本类的方法。</span><span class="sxs-lookup"><span data-stu-id="349cb-118">Locate the <xref:System.Windows.Forms.Control.OnPaint%2A> method, which will be empty except for a call to the <xref:System.Windows.Forms.Control.OnPaint%2A> method of the base class.</span></span>  
   
-6.  修改代码以便并入控件所需的任何自定义绘图。  
+6.  <span data-ttu-id="349cb-119">修改代码以纳入控件所需的任何自定义绘图。</span><span class="sxs-lookup"><span data-stu-id="349cb-119">Modify the code to incorporate any custom painting you want for your control.</span></span>  
   
-     有关编写代码以呈现控件图形的更多信息，请参见 [自定义控件的绘制和呈现](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)。  
+     <span data-ttu-id="349cb-120">有关编写代码来呈现控件的图形的信息，请参阅[自定义控件的绘制和呈现](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)。</span><span class="sxs-lookup"><span data-stu-id="349cb-120">For information about writing code to render graphics for controls, see [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span></span>  
   
-7.  实现控件将并入的所有自定义方法、属性或事件。  
+7.  <span data-ttu-id="349cb-121">实现控件将纳入的任何自定义方法、属性或事件。</span><span class="sxs-lookup"><span data-stu-id="349cb-121">Implement any custom methods, properties, or events that your control will incorporate.</span></span>  
   
-8.  保存并测试控件。  
+8.  <span data-ttu-id="349cb-122">保存并测试控件。</span><span class="sxs-lookup"><span data-stu-id="349cb-122">Save and test your control.</span></span>  
   
-## 请参阅  
- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [如何：从 UserControl 类继承](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)   
- [如何：从现有 Windows 窗体控件继承](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [如何：创作 Windows 窗体的控件](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [有关 Visual Basic 中继承的事件处理程序的疑难解答](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)   
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+## <a name="see-also"></a><span data-ttu-id="349cb-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="349cb-123">See Also</span></span>  
+ [<span data-ttu-id="349cb-124">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="349cb-124">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="349cb-125">如何：从 UserControl 类继承</span><span class="sxs-lookup"><span data-stu-id="349cb-125">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [<span data-ttu-id="349cb-126">如何：从现有 Windows 窗体控件继承</span><span class="sxs-lookup"><span data-stu-id="349cb-126">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [<span data-ttu-id="349cb-127">如何：创作 Windows 窗体的控件</span><span class="sxs-lookup"><span data-stu-id="349cb-127">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [<span data-ttu-id="349cb-128">Visual Basic 中继承的事件处理程序疑难解答</span><span class="sxs-lookup"><span data-stu-id="349cb-128">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ [<span data-ttu-id="349cb-129">设计时开发 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="349cb-129">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

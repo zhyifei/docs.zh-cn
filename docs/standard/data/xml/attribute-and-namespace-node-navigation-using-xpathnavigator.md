@@ -1,35 +1,33 @@
 ---
-title: "使用 XPathNavigator 的属性和命名空间节点定位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "使用 XPathNavigator 的属性和命名空间节点定位"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 XPathNavigator 的属性和命名空间节点定位
-<xref:System.Xml.XPath.XPathNavigator> 类提供两组浏览方法，第一组（在 [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) 主题中介绍）用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的*节点集*。  第二组（在本主题中介绍）用于浏览 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的*属性和命名空间节点*。  
+# <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a><span data-ttu-id="6561e-102">使用 XPathNavigator 的属性和命名空间节点定位</span><span class="sxs-lookup"><span data-stu-id="6561e-102">Attribute and Namespace Node Navigation Using XPathNavigator</span></span>
+<span data-ttu-id="6561e-103"><xref:System.Xml.XPath.XPathNavigator>类提供了两个集的导航方法，在中找到的第一组[节点设置的导航使用 XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主题中，用来浏览*节点集*中<xref:System.Xml.XPath.XPathDocument>或<xref:System.Xml.XmlDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="6561e-103">The <xref:System.Xml.XPath.XPathNavigator> class provides two sets of navigation methods, the first set, found in the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) topic, are used to navigate *node sets* in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span> <span data-ttu-id="6561e-104">第二个集，本主题中所述用于导航*属性和命名空间节点*中<xref:System.Xml.XPath.XPathDocument>或<xref:System.Xml.XmlDocument>对象。</span><span class="sxs-lookup"><span data-stu-id="6561e-104">The second set, described in this topic, are used to navigate *attribute and namespace nodes* in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  
   
-## 浏览属性节点  
- 属性是元素的属性，不是元素的子级。  这一区别很重要，因为用来浏览同级节点、父节点和子节点的 <xref:System.Xml.XPath.XPathNavigator> 类的方法不同。  
+## <a name="attribute-node-navigation"></a><span data-ttu-id="6561e-105">浏览属性节点</span><span class="sxs-lookup"><span data-stu-id="6561e-105">Attribute Node Navigation</span></span>  
+ <span data-ttu-id="6561e-106">属性是元素的属性，不是元素的子级。</span><span class="sxs-lookup"><span data-stu-id="6561e-106">Attributes are properties of an element, not children of an element.</span></span> <span data-ttu-id="6561e-107">这一区别很重要，因为用来浏览同级节点、父节点和子节点的 <xref:System.Xml.XPath.XPathNavigator> 类的方法不同。</span><span class="sxs-lookup"><span data-stu-id="6561e-107">This distinction is important, because of the methods of the <xref:System.Xml.XPath.XPathNavigator> class used to navigate sibling, parent, and child nodes.</span></span>  
   
- 例如，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法不用来从元素浏览到属性或在属性间浏览。  属性采用不同的浏览方法。  
+ <span data-ttu-id="6561e-108">例如，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法不用来从元素浏览到属性或在属性间浏览。</span><span class="sxs-lookup"><span data-stu-id="6561e-108">For example, the <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> methods are not used to navigate from an element to an attribute or between attributes.</span></span> <span data-ttu-id="6561e-109">属性采用不同的浏览方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-109">Instead, attributes have distinct methods of navigation.</span></span>  
   
- 以下是 <xref:System.Xml.XPath.XPathNavigator> 类的属性浏览方法。  
+ <span data-ttu-id="6561e-110">以下是 <xref:System.Xml.XPath.XPathNavigator> 类的属性浏览方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-110">The following are the attribute navigation methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
@@ -37,17 +35,17 @@ caps.handback.revision: 2
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
- 在当前节点是元素时，可以使用 <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> 方法查看是否存在任何与此元素关联的属性。  如果已知元素具有属性，有多种方法可以访问这些属性。  要从元素中检索单个属性，请使用 <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> 方法。  若要将 <xref:System.Xml.XPath.XPathNavigator> 移动到特定属性，请使用 <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> 方法。  还可以循环访问元素的每个属性，方法是先使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> 方法，然后多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> 方法。  
+ <span data-ttu-id="6561e-111">在当前节点是元素时，可以使用 <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> 方法查看是否存在任何与此元素关联的属性。</span><span class="sxs-lookup"><span data-stu-id="6561e-111">When the current node is an element, you can use the <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> property to see if there are any attributes associated with the element.</span></span> <span data-ttu-id="6561e-112">如果已知元素具有属性，有多种方法可以访问这些属性。</span><span class="sxs-lookup"><span data-stu-id="6561e-112">After it is known that an element has attributes, there are multiple methods for accessing attributes.</span></span> <span data-ttu-id="6561e-113">要从元素中检索单个属性，请使用 <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-113">To retrieve a single attribute from the element, use the <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> method.</span></span> <span data-ttu-id="6561e-114">若要将 <xref:System.Xml.XPath.XPathNavigator> 移动到特定属性，请使用 <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-114">To move the <xref:System.Xml.XPath.XPathNavigator> to a particular attribute, use the <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> method.</span></span> <span data-ttu-id="6561e-115">还可以循环访问元素的每个属性，方法是先使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> 方法，然后多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-115">You can also iterate over each attribute of an element by using the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> method, followed by multiple calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> method.</span></span>  
   
 > [!NOTE]
->  当 <xref:System.Xml.XPath.XPathNavigator> 对象位于某个属性或命名空间节点上时，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法始终返回 `false`，并对 <xref:System.Xml.XPath.XPathNavigator> 的位置没有影响。  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法例外。  
+>  <span data-ttu-id="6561e-116">当 <xref:System.Xml.XPath.XPathNavigator> 对象位于某个属性或命名空间节点上时，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法始终返回 `false`，并对 <xref:System.Xml.XPath.XPathNavigator> 的位置没有影响。</span><span class="sxs-lookup"><span data-stu-id="6561e-116">When the <xref:System.Xml.XPath.XPathNavigator> object is positioned on an attribute or namespace node, the <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> methods always return `false`, and have no effect on the position of the <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="6561e-117"><xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法例外。</span><span class="sxs-lookup"><span data-stu-id="6561e-117">The exceptions are the <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, and <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> methods.</span></span>  
   
-## 浏览命名空间节点  
- 每个元素都有一组关联的命名空间节点，一个命名空间节点用于元素范围内绑定到某个命名空间 URI 的每个不同的命名空间前缀（包括绑定到 `http://www.w3.org/XML/1998/namespace` 命名空间的 XML 前缀，该前缀在每个 XML 文档中隐式声明），一个命名空间节点用于默认命名空间（如果处于元素范围内）。  元素是每个命名空间节点的父级；但是，命名空间节点不是其父元素的子级。  
+## <a name="namespace-node-navigation"></a><span data-ttu-id="6561e-118">浏览命名空间节点</span><span class="sxs-lookup"><span data-stu-id="6561e-118">Namespace Node Navigation</span></span>  
+ <span data-ttu-id="6561e-119">每个元素都有一组关联的命名空间节点，一个命名空间节点用于元素范围内绑定到某个命名空间 URI 的每个不同的命名空间前缀（包括绑定到 `http://www.w3.org/XML/1998/namespace` 命名空间的 XML 前缀，该前缀在每个 XML 文档中隐式声明），一个命名空间节点用于默认命名空间（如果处于元素范围内）。</span><span class="sxs-lookup"><span data-stu-id="6561e-119">Each element has an associated set of namespace nodes, one for each distinct namespace prefix that is bound to a namespace URI in scope for the element (including the XML prefix bound to the `http://www.w3.org/XML/1998/namespace` namespace, which is implicitly declared in every XML document) and one for the default namespace if one is in scope for the element.</span></span> <span data-ttu-id="6561e-120">元素是每个命名空间节点的父级；但是，命名空间节点不是其父元素的子级。</span><span class="sxs-lookup"><span data-stu-id="6561e-120">The element is the parent of each of these namespace nodes; however, a namespace node is not a child of its parent element.</span></span>  
   
- 与属性相同，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法不用来从元素浏览到命名空间节点或在命名空间节点间浏览。  命名空间节点采用不同的浏览方法。  
+ <span data-ttu-id="6561e-121">与属性相同，<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 方法不用来从元素浏览到命名空间节点或在命名空间节点间浏览。</span><span class="sxs-lookup"><span data-stu-id="6561e-121">As with attributes, the <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> methods are not used to navigate from an element to a namespace node, or between namespace nodes.</span></span> <span data-ttu-id="6561e-122">命名空间节点采用不同的浏览方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-122">Instead, namespace nodes have distinct methods of navigation.</span></span>  
   
- 以下是 <xref:System.Xml.XPath.XPathNavigator> 类的命名空间浏览方法。  
+ <span data-ttu-id="6561e-123">以下是 <xref:System.Xml.XPath.XPathNavigator> 类的命名空间浏览方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-123">The following are the namespace navigation methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
@@ -55,17 +53,17 @@ caps.handback.revision: 2
   
 -   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
- 在 XML 文档中任何元素的范围内，始终至少存在一个命名空间节点。  此命名空间节点的前缀为 `xml`，命名空间 URI 为 `http://www.w3.org/XML/1998/namespace`。  要在给定特定前缀的情况下在范围内检索命名空间 URI，请使用 <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> 方法。  要将 <xref:System.Xml.XPath.XPathNavigator> 对象移至特定命名空间节点，请使用 <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> 方法。  还可以循环访问元素范围中的每个命名空间节点，方法是先使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法，然后多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法。  
+ <span data-ttu-id="6561e-124">在 XML 文档中任何元素的范围内，始终至少存在一个命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="6561e-124">There is always at least one namespace node in scope for any element in an XML document.</span></span> <span data-ttu-id="6561e-125">此命名空间节点的前缀为 `xml`，命名空间 URI 为 `http://www.w3.org/XML/1998/namespace`。</span><span class="sxs-lookup"><span data-stu-id="6561e-125">This is the namespace node with the prefix `xml` and namespace URI `http://www.w3.org/XML/1998/namespace`.</span></span> <span data-ttu-id="6561e-126">要在给定特定前缀的情况下在范围内检索命名空间 URI，请使用 <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-126">To retrieve a namespace URI in scope given a particular prefix, use the <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> method.</span></span> <span data-ttu-id="6561e-127">要将 <xref:System.Xml.XPath.XPathNavigator> 对象移至特定命名空间节点，请使用 <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-127">To move the <xref:System.Xml.XPath.XPathNavigator> object to a particular namespace node, use the <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> method.</span></span> <span data-ttu-id="6561e-128">还可以循环访问元素范围中的每个命名空间节点，方法是先使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法，然后多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6561e-128">You can also iterate over each namespace node in scope for an element by using the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by multiple calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method.</span></span>  
   
 > [!NOTE]
->  当 <xref:System.Xml.XPath.XPathNavigator> 对象位于某个属性或命名空间节点上时，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法始终返回 `false`，并对 <xref:System.Xml.XPath.XPathNavigator> 的位置没有影响。  <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法例外。  
+>  <span data-ttu-id="6561e-129">当 <xref:System.Xml.XPath.XPathNavigator> 对象位于某个属性或命名空间节点上时，<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 方法始终返回 `false`，并对 <xref:System.Xml.XPath.XPathNavigator> 的位置没有影响。</span><span class="sxs-lookup"><span data-stu-id="6561e-129">When the <xref:System.Xml.XPath.XPathNavigator> object is positioned on an attribute or namespace node, the <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> methods always return `false`, and have no effect on the position of the <xref:System.Xml.XPath.XPathNavigator>.</span></span> <span data-ttu-id="6561e-130"><xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>、<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> 方法例外。</span><span class="sxs-lookup"><span data-stu-id="6561e-130">The exceptions are the <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>, and <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> methods.</span></span>  
   
-### XPathNamespaceScope 枚举  
- 在浏览命名空间节点时，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法可以使用 <xref:System.Xml.XPath.XPathNamespaceScope> 参数调用。  这些方法的行为与未使用任何参数调用的对应方法不同。  <xref:System.Xml.XPath.XPathNamespaceScope> 枚举包含值 <xref:System.Xml.XPath.XPathNamespaceScope>、<xref:System.Xml.XPath.XPathNamespaceScope> 或 <xref:System.Xml.XPath.XPathNamespaceScope>。  
+### <a name="the-xpathnamespacescope-enumeration"></a><span data-ttu-id="6561e-131">XPathNamespaceScope 枚举</span><span class="sxs-lookup"><span data-stu-id="6561e-131">The XPathNamespaceScope Enumeration</span></span>  
+ <span data-ttu-id="6561e-132">在浏览命名空间节点时，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法可以使用 <xref:System.Xml.XPath.XPathNamespaceScope> 参数调用。</span><span class="sxs-lookup"><span data-stu-id="6561e-132">When navigating namespace nodes the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods can be called with an <xref:System.Xml.XPath.XPathNamespaceScope> parameter.</span></span> <span data-ttu-id="6561e-133">这些方法的行为与未使用任何参数调用的对应方法不同。</span><span class="sxs-lookup"><span data-stu-id="6561e-133">These methods behave differently than their counterparts called with no parameters.</span></span> <span data-ttu-id="6561e-134"><xref:System.Xml.XPath.XPathNamespaceScope> 枚举包含值 <xref:System.Xml.XPath.XPathNamespaceScope.All>、<xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 或 <xref:System.Xml.XPath.XPathNamespaceScope.Local>。</span><span class="sxs-lookup"><span data-stu-id="6561e-134">The <xref:System.Xml.XPath.XPathNamespaceScope> enumeration has values of <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>, or <xref:System.Xml.XPath.XPathNamespaceScope.Local>.</span></span>  
   
- 下列示例显示 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法在 XML 文档中的不同范围内返回的命名空间。  
+ <span data-ttu-id="6561e-135">下列示例显示 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法在 XML 文档中的不同范围内返回的命名空间。</span><span class="sxs-lookup"><span data-stu-id="6561e-135">The following examples show what namespaces are returned by the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods at various scopes in an XML document.</span></span>  
   
-```  
+```xml  
 <root>  
     <element1 xmlns="http://www.contoso.com" xmlns:books="http://www.contoso.com/books">  
         <element2 />  
@@ -73,20 +71,20 @@ caps.handback.revision: 2
 </root>  
 ```  
   
- 命名空间序列（先调用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法，然后再多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法后，<xref:System.Xml.XPath.XPathNavigator> 所处的命名空间）如下所示。  
+ <span data-ttu-id="6561e-136">命名空间序列（先调用 <xref:System.Xml.XPath.XPathNavigator> 方法，然后再多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法后，<xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 所处的命名空间）如下所示。</span><span class="sxs-lookup"><span data-stu-id="6561e-136">The namespace sequence (the namespace the <xref:System.Xml.XPath.XPathNavigator> is positioned upon after calling the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by a series of calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method) is as follows.</span></span>  
   
--   位于 `element2` 上时：`xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+-   <span data-ttu-id="6561e-137">位于 `element2` 上时：`xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。</span><span class="sxs-lookup"><span data-stu-id="6561e-137">When positioned on `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   位于 `element1` 上时：`xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+-   <span data-ttu-id="6561e-138">位于 `element1` 上时：`xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。</span><span class="sxs-lookup"><span data-stu-id="6561e-138">When positioned on `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   位于 `root` 上时：`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+-   <span data-ttu-id="6561e-139">位于 `root` 上时：`xmlns:xml="http://www.w3.org/XML/1998/namespace".`</span><span class="sxs-lookup"><span data-stu-id="6561e-139">When positioned on `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。  因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。  
+>  <span data-ttu-id="6561e-140"><xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="6561e-140">The <xref:System.Xml.XPath.XPathNavigator> class returns namespace nodes in reverse document order.</span></span> <span data-ttu-id="6561e-141">因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="6561e-141">Therefore, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essentially moves to the last namespace node in the current scope.</span></span>  
   
- 下列示例显示 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法使用在 XML 文档中的不同范围内指定的 <xref:System.Xml.XPath.XPathNamespaceScope> 枚举返回的命名空间。  
+ <span data-ttu-id="6561e-142">下列示例显示 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 和 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法使用在 XML 文档中的不同范围内指定的 <xref:System.Xml.XPath.XPathNamespaceScope> 枚举返回的命名空间。</span><span class="sxs-lookup"><span data-stu-id="6561e-142">The following examples show what namespaces are returned by the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> and <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> methods with the <xref:System.Xml.XPath.XPathNamespaceScope> enumeration specified at various scopes in an XML document.</span></span>  
   
-```  
+```xml  
 <root xmlns="http://www.contoso.com" xmlns:a="http://www.contoso.com/a" xmlns:b="http://www.contoso.com/b">  
     <child1 xmlns="" xmlns:a="urn:a">  
         <child2 xmlns:c="urn:c" />  
@@ -94,22 +92,22 @@ caps.handback.revision: 2
 </root>  
 ```  
   
- 位于 `child2` 上时，命名空间序列（先调用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法，然后再多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法后，<xref:System.Xml.XPath.XPathNavigator> 所处的命名空间）如下所示。  
+ <span data-ttu-id="6561e-143">位于 `child2` 上时，命名空间序列（先调用 <xref:System.Xml.XPath.XPathNavigator> 方法，然后再多次调用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法后，<xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 所处的命名空间）如下所示。</span><span class="sxs-lookup"><span data-stu-id="6561e-143">When positioned on `child2`, the namespace sequence (the namespace the <xref:System.Xml.XPath.XPathNavigator> is positioned upon after calling the <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> method followed by a series of calls to the <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> method) is as follows.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+-   <span data-ttu-id="6561e-144"><xref:System.Xml.XPath.XPathNamespaceScope.All>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。</span><span class="sxs-lookup"><span data-stu-id="6561e-144"><xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"`, and `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"` 和 `xmlns="http://www.contoso.com"`。  
+-   <span data-ttu-id="6561e-145"><xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"` 和 `xmlns="http://www.contoso.com"`。</span><span class="sxs-lookup"><span data-stu-id="6561e-145"><xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, and `xmlns="http://www.contoso.com"`.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope>: `xmlns:c="urn:c"`.  
+-   <span data-ttu-id="6561e-146"><xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.</span><span class="sxs-lookup"><span data-stu-id="6561e-146"><xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.</span></span>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。  因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。  
+>  <span data-ttu-id="6561e-147"><xref:System.Xml.XPath.XPathNavigator> 类以相反的文档顺序返回命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="6561e-147">The <xref:System.Xml.XPath.XPathNavigator> class returns namespace nodes in reverse document order.</span></span> <span data-ttu-id="6561e-148">因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 实质上移到当前在范围内的最后一个命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="6561e-148">Therefore, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> essentially moves to the last namespace node in the current scope.</span></span>  
   
-## 请参阅  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [使用 XPathNavigator 提取 XML 数据](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)   
- [使用 XPathNavigator 访问强类型 XML 数据](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="6561e-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6561e-149">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="6561e-150">使用 XPath 数据模型处理 XML 数据</span><span class="sxs-lookup"><span data-stu-id="6561e-150">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="6561e-151">使用 XPathNavigator 的节点集定位</span><span class="sxs-lookup"><span data-stu-id="6561e-151">Node Set Navigation Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [<span data-ttu-id="6561e-152">使用 XPathNavigator 提取 XML 数据</span><span class="sxs-lookup"><span data-stu-id="6561e-152">Extract XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="6561e-153">访问强类型 XML 数据使用 XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="6561e-153">Accessing Strongly Typed XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

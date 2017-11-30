@@ -1,476 +1,482 @@
 ---
-title: "正则表达式中的分组构造 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 正则表达式, 分组构造"
-  - "构造, 分组"
-  - "分组构造"
-  - "预测先行"
-  - "预测后行"
-  - "正则表达式, 分组构造"
+title: "正则表达式中的分组构造"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lookbehinds
+- regular expressions, grouping constructs
+- lookaheads
+- .NET Framework regular expressions, grouping constructs
+- constructs, grouping
+- grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: 33
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 37428cf96bbe36a55e88edeb5ec56e09895be994
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 正则表达式中的分组构造
-分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
+# <a name="grouping-constructs-in-regular-expressions"></a><span data-ttu-id="57035-102">正则表达式中的分组构造</span><span class="sxs-lookup"><span data-stu-id="57035-102">Grouping Constructs in Regular Expressions</span></span>
+<span data-ttu-id="57035-103">分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。</span><span class="sxs-lookup"><span data-stu-id="57035-103">Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string.</span></span> <span data-ttu-id="57035-104">你可以使用分组构造来完成下列任务：</span><span class="sxs-lookup"><span data-stu-id="57035-104">You can use grouping constructs to do the following:</span></span>  
   
--   匹配输入字符串中重复的子表达式。  
+-   <span data-ttu-id="57035-105">匹配输入字符串中重复的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-105">Match a subexpression that is repeated in the input string.</span></span>  
   
--   将限定符应用于拥有多个正则表达式语言元素的子表达式。 有关限定符的更多信息，请参见[数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+-   <span data-ttu-id="57035-106">将限定符应用于拥有多个正则表达式语言元素的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-106">Apply a quantifier to a subexpression that has multiple regular expression language elements.</span></span> <span data-ttu-id="57035-107">有关限定符的更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="57035-107">For more information about quantifiers, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
--   包括由 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> 方法返回的字符串的子表达式。  
+-   <span data-ttu-id="57035-108">包括由 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法返回的字符串的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-108">Include a subexpression in the string that is returned by the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> and <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> methods.</span></span>  
   
--   从 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName> 属性中检索各个子表达式，并分别从匹配的文本作为一个整体处理它们。  
+-   <span data-ttu-id="57035-109">从 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性中检索各个子表达式，并分别从匹配的文本作为一个整体处理它们。</span><span class="sxs-lookup"><span data-stu-id="57035-109">Retrieve individual subexpressions from the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property and process them separately from the matched text as a whole.</span></span>  
   
- 下表列出了受 .NET Framework 正则表达式引擎支持的分组构造，并指示它们是捕获还是非捕获。  
+ <span data-ttu-id="57035-110">下表列出了.NET 正则表达式引擎支持的分组构造，并指示它们是捕获还是非捕获。</span><span class="sxs-lookup"><span data-stu-id="57035-110">The following table lists the grouping constructs supported by the .NET regular expression engine and indicates whether they are capturing or non-capturing.</span></span>  
   
-|分组构造|捕获或非捕获|  
-|----------|------------|  
-|[匹配的子表达式](#matched_subexpression)|捕获|  
-|[命名匹配的子表达式](#named_matched_subexpression)|捕获|  
-|[平衡组定义](#balancing_group_definition)|捕获|  
-|[非捕获组](#noncapturing_group)|非捕获|  
-|[组选项](#group_options)|非捕获|  
-|[零宽度正预测先行断言](#zerowidth_positive_lookahead_assertion)|非捕获|  
-|[零宽度负预测先行断言](#zerowidth_negative_lookahead_assertion)|非捕获|  
-|[零宽度正回顾后发断言](#zerowidth_positive_lookbehind_assertion)|非捕获|  
-|[零宽度负回顾后发断言](#zerowidth_negative_lookbehind_assertion)|非捕获|  
-|[非回溯子表达式](#nonbacktracking_subexpression)|非捕获|  
+|<span data-ttu-id="57035-111">分组构造</span><span class="sxs-lookup"><span data-stu-id="57035-111">Grouping construct</span></span>|<span data-ttu-id="57035-112">捕获或非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-112">Capturing or noncapturing</span></span>|  
+|------------------------|-------------------------------|  
+|[<span data-ttu-id="57035-113">匹配的子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-113">Matched subexpressions</span></span>](#matched_subexpression)|<span data-ttu-id="57035-114">捕获</span><span class="sxs-lookup"><span data-stu-id="57035-114">Capturing</span></span>|  
+|[<span data-ttu-id="57035-115">命名匹配的子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-115">Named matched subexpressions</span></span>](#named_matched_subexpression)|<span data-ttu-id="57035-116">捕获</span><span class="sxs-lookup"><span data-stu-id="57035-116">Capturing</span></span>|  
+|[<span data-ttu-id="57035-117">平衡组定义</span><span class="sxs-lookup"><span data-stu-id="57035-117">Balancing group definitions</span></span>](#balancing_group_definition)|<span data-ttu-id="57035-118">捕获</span><span class="sxs-lookup"><span data-stu-id="57035-118">Capturing</span></span>|  
+|[<span data-ttu-id="57035-119">非捕获组</span><span class="sxs-lookup"><span data-stu-id="57035-119">Noncapturing groups</span></span>](#noncapturing_group)|<span data-ttu-id="57035-120">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-120">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-121">组选项</span><span class="sxs-lookup"><span data-stu-id="57035-121">Group options</span></span>](#group_options)|<span data-ttu-id="57035-122">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-122">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-123">零宽度正预测先行断言</span><span class="sxs-lookup"><span data-stu-id="57035-123">Zero-width positive lookahead assertions</span></span>](#zerowidth_positive_lookahead_assertion)|<span data-ttu-id="57035-124">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-124">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-125">零宽度负预测先行断言</span><span class="sxs-lookup"><span data-stu-id="57035-125">Zero-width negative lookahead assertions</span></span>](#zerowidth_negative_lookahead_assertion)|<span data-ttu-id="57035-126">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-126">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-127">零宽度正回顾后发断言</span><span class="sxs-lookup"><span data-stu-id="57035-127">Zero-width positive lookbehind assertions</span></span>](#zerowidth_positive_lookbehind_assertion)|<span data-ttu-id="57035-128">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-128">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-129">零宽度负回顾后发断言</span><span class="sxs-lookup"><span data-stu-id="57035-129">Zero-width negative lookbehind assertions</span></span>](#zerowidth_negative_lookbehind_assertion)|<span data-ttu-id="57035-130">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-130">Noncapturing</span></span>|  
+|[<span data-ttu-id="57035-131">非回溯子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-131">Nonbacktracking subexpressions</span></span>](#nonbacktracking_subexpression)|<span data-ttu-id="57035-132">非捕获</span><span class="sxs-lookup"><span data-stu-id="57035-132">Noncapturing</span></span>|  
   
- 有关组和正则表达式对象模型的信息，请参见[分组构造和正则表达式对象](#Objects)。  
+ <span data-ttu-id="57035-133">有关组和正则表达式对象模型的信息，请参见 [分组构造和正则表达式对象](#Objects)。</span><span class="sxs-lookup"><span data-stu-id="57035-133">For information on groups and the regular expression object model, see [Grouping constructs and regular expression objects](#Objects).</span></span>  
   
 <a name="matched_subexpression"></a>   
-## 匹配的子表达式  
- 以下分组构造捕获匹配的子表达式：  
+## <a name="matched-subexpressions"></a><span data-ttu-id="57035-134">匹配的子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-134">Matched Subexpressions</span></span>  
+ <span data-ttu-id="57035-135">以下分组构造捕获匹配的子表达式：</span><span class="sxs-lookup"><span data-stu-id="57035-135">The following grouping construct captures a matched subexpression:</span></span>  
   
- `(` *子表达式* `)`  
+ <span data-ttu-id="57035-136">`(` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-136">`(` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何有效正则表达式模式。 使用括号的捕获按正则表达式中左括号的顺序从一开始从左到右自动编号。 捕获元素编号为零的捕获是由整个正则表达式模式匹配的文本。  
+ <span data-ttu-id="57035-137">其中 *子表达式* 为任何有效正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-137">where *subexpression* is any valid regular expression pattern.</span></span> <span data-ttu-id="57035-138">使用括号的捕获按正则表达式中左括号的顺序从一开始从左到右自动编号。</span><span class="sxs-lookup"><span data-stu-id="57035-138">Captures that use parentheses are numbered automatically from left to right based on the order of the opening parentheses in the regular expression, starting from one.</span></span> <span data-ttu-id="57035-139">捕获元素编号为零的捕获是由整个正则表达式模式匹配的文本。</span><span class="sxs-lookup"><span data-stu-id="57035-139">The capture that is numbered zero is the text matched by the entire regular expression pattern.</span></span>  
   
 > [!NOTE]
->  默认情况下，`(`*subexpression*`)` 语言元素捕获匹配的子表达式。 但是，如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options)），则不会捕获匹配的子表达式。  
+>  <span data-ttu-id="57035-140">默认情况下， `(`*子表达式*`)` 语言元素捕获匹配的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-140">By default, the `(`*subexpression*`)` language element captures the matched subexpression.</span></span> <span data-ttu-id="57035-141">但是，如果<xref:System.Text.RegularExpressions.RegexOptions>正则表达式模式匹配方法的参数包括<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>标志，或者如果`n`选项应用于此子表达式 (请参阅[组选项](#group_options)本主题中更高版本)，则不捕获匹配的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-141">But if the <xref:System.Text.RegularExpressions.RegexOptions> parameter of a regular expression pattern matching method includes the <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> flag, or if the `n` option is applied to this subexpression (see [Group options](#group_options) later in this topic), the matched subexpression is not captured.</span></span>  
   
- 可以四种方法访问捕获的组：  
+ <span data-ttu-id="57035-142">可以四种方法访问捕获的组：</span><span class="sxs-lookup"><span data-stu-id="57035-142">You can access captured groups in four ways:</span></span>  
   
--   通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中*数字*是捕获的表达式的初始数字。  
+-   <span data-ttu-id="57035-143">通过使用正则表达式中的反向引用构造。</span><span class="sxs-lookup"><span data-stu-id="57035-143">By using the backreference construct within the regular expression.</span></span> <span data-ttu-id="57035-144">使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。</span><span class="sxs-lookup"><span data-stu-id="57035-144">The matched subexpression is referenced in the same regular expression by using the syntax `\`*number*, where *number* is the ordinal number of the captured subexpression.</span></span>  
   
--   通过使用正则表达式中的命名的反向引用构造。 匹配的子表达式在相同的正则表达式中引用，方法是使用语法 `\k<`*name*`>`，其中 *name* 是捕获组的名称，或使用 `\k<`*number*`>`，其中 *number* 是捕获组的初始数字。 捕获组具有与其原始编号相同的默认名称。 有关更多信息，请参见本主题后面的[命名匹配的子表达式](#named_matched_subexpression)。  
+-   <span data-ttu-id="57035-145">通过使用正则表达式中的命名的反向引用构造。</span><span class="sxs-lookup"><span data-stu-id="57035-145">By using the named backreference construct within the regular expression.</span></span> <span data-ttu-id="57035-146">使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获组的名称，或使用 `\k<`*数字*`>`在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获组的初始数字。</span><span class="sxs-lookup"><span data-stu-id="57035-146">The matched subexpression is referenced in the same regular expression by using the syntax `\k<`*name*`>`, where *name* is the name of a capturing group, or `\k<`*number*`>`, where *number* is the ordinal number of a capturing group.</span></span> <span data-ttu-id="57035-147">捕获组具有与其原始编号相同的默认名称。</span><span class="sxs-lookup"><span data-stu-id="57035-147">A capturing group has a default name that is identical to its ordinal number.</span></span> <span data-ttu-id="57035-148">有关更多信息，请参见本主题后面的 [命名匹配的子表达式](#named_matched_subexpression) 。</span><span class="sxs-lookup"><span data-stu-id="57035-148">For more information, see [Named matched subexpressions](#named_matched_subexpression) later in this topic.</span></span>  
   
--   通过使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> 方法调用中的 `$`*number* 替换序列，其中 *number* 为捕获的子表达式的序号。  
+-   <span data-ttu-id="57035-149">通过使用`$`*数*中的替换序列<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>或<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>方法调用，其中*数*为捕获的表达式的序号。</span><span class="sxs-lookup"><span data-stu-id="57035-149">By using the `$`*number* replacement sequence in a <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> method call, where *number* is the ordinal number of the captured subexpression.</span></span>  
   
--   以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见[分组构造和正则表达式对象](#Objects)一节。  
+-   <span data-ttu-id="57035-150">以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-150">Programmatically, by using the <xref:System.Text.RegularExpressions.GroupCollection> object returned by the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="57035-151">集合中位置零上的成员表示正则表达式匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-151">The member at position zero in the collection represents the entire regular expression match.</span></span> <span data-ttu-id="57035-152">每个后续成员表示匹配的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-152">Each subsequent member represents a matched subexpression.</span></span> <span data-ttu-id="57035-153">有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。</span><span class="sxs-lookup"><span data-stu-id="57035-153">For more information, see the [Grouping Constructs and Regular Expression Objects](#Objects) section.</span></span>  
   
- 以下示例阐释表示文本中重复单词的正则表达式。 正则表达式模式的两个捕获组表示重复的单词的两个实例。 捕获第二个实例，以报告它在输入字符串的起始位置。  
+ <span data-ttu-id="57035-154">以下示例阐释表示文本中重复单词的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-154">The following example illustrates a regular expression that identifies duplicated words in text.</span></span> <span data-ttu-id="57035-155">正则表达式模式的两个捕获组表示重复的单词的两个实例。</span><span class="sxs-lookup"><span data-stu-id="57035-155">The regular expression pattern's two capturing groups represent the two instances of the duplicated word.</span></span> <span data-ttu-id="57035-156">捕获第二个实例，以报告它在输入字符串的起始位置。</span><span class="sxs-lookup"><span data-stu-id="57035-156">The second instance is captured to report its starting position in the input string.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping1.cs#1)]
  [!code-vb[RegularExpressions.Language.Grouping#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping1.vb#1)]  
   
- 正则表达式模式为：  
+ <span data-ttu-id="57035-157">正则表达式模式为：</span><span class="sxs-lookup"><span data-stu-id="57035-157">The regular expression pattern is the following:</span></span>  
   
 ```  
 (\w+)\s(\1)\W  
 ```  
   
- 下表演示了如何解释正则表达式模式。  
+ <span data-ttu-id="57035-158">下表演示了如何解释正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-158">The following table shows how the regular expression pattern is interpreted.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
-|`\s`|与空白字符匹配。|  
-|`(\1)`|与第一个捕获组捕获中的字符串匹配。 这是第二个捕获组。 该示例将其指定到捕获组上，以便可从 `Match.Index` 属性检测重复单词的开始位置。|  
-|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。|  
+|<span data-ttu-id="57035-159">模式</span><span class="sxs-lookup"><span data-stu-id="57035-159">Pattern</span></span>|<span data-ttu-id="57035-160">描述</span><span class="sxs-lookup"><span data-stu-id="57035-160">Description</span></span>|  
+|-------------|-----------------|  
+|`(\w+)`|<span data-ttu-id="57035-161">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-161">Match one or more word characters.</span></span> <span data-ttu-id="57035-162">这是第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-162">This is the first capturing group.</span></span>|  
+|`\s`|<span data-ttu-id="57035-163">与空白字符匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-163">Match a white-space character.</span></span>|  
+|`(\1)`|<span data-ttu-id="57035-164">与第一个捕获组捕获中的字符串匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-164">Match the string in the first captured group.</span></span> <span data-ttu-id="57035-165">这是第二个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-165">This is the second capturing group.</span></span> <span data-ttu-id="57035-166">该示例将其指定到捕获组上，以便可从 `Match.Index` 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-166">The example assigns it to a captured group so that the starting position of the duplicate word can be retrieved from the `Match.Index` property.</span></span>|  
+|`\W`|<span data-ttu-id="57035-167">匹配包括空格和标点符号的一个非单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-167">Match a non-word character, including white space and punctuation.</span></span> <span data-ttu-id="57035-168">这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-168">This prevents the regular expression pattern from matching a word that starts with the word from the first captured group.</span></span>|  
   
 <a name="named_matched_subexpression"></a>   
-## 命名匹配的子表达式  
- 以下分组构造捕获匹配的子表达式，并允许你按名称或编号访问它：  
+## <a name="named-matched-subexpressions"></a><span data-ttu-id="57035-169">命名匹配的子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-169">Named Matched Subexpressions</span></span>  
+ <span data-ttu-id="57035-170">以下分组构造捕获匹配的子表达式，并允许你按名称或编号访问它：</span><span class="sxs-lookup"><span data-stu-id="57035-170">The following grouping construct captures a matched subexpression and lets you access it by name or by number:</span></span>  
   
 ```  
 (?<name>subexpression)  
 ```  
   
- 或：  
+ <span data-ttu-id="57035-171">或：</span><span class="sxs-lookup"><span data-stu-id="57035-171">or:</span></span>  
   
 ```  
 (?'name'subexpression)  
 ```  
   
- 其中*名称*是有效的组名称，而*子表达式*是任何有效的正则表达式模式。*名称*不得包含任何标点符号字符，并且不能以数字开头。  
+ <span data-ttu-id="57035-172">其中 *名称* 是有效的组名称，而 *子表达式* 是任何有效的正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-172">where *name* is a valid group name, and *subexpression* is any valid regular expression pattern.</span></span> <span data-ttu-id="57035-173">*名称* 不得包含任何标点符号字符，并且不能以数字开头。</span><span class="sxs-lookup"><span data-stu-id="57035-173">*name* must not contain any punctuation characters and cannot begin with a number.</span></span>  
   
 > [!NOTE]
->  如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的[组选项](#group_options)），则捕获子表达式的唯一方法就是显式命名捕获组。  
+>  <span data-ttu-id="57035-174">如果<xref:System.Text.RegularExpressions.RegexOptions>正则表达式模式匹配方法的参数包括<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>标志，或者如果`n`选项应用于此子表达式 (请参阅[组选项](#group_options)本主题中更高版本)，唯一若要捕获子表达式的方法是显式命名捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-174">If the <xref:System.Text.RegularExpressions.RegexOptions> parameter of a regular expression pattern matching method includes the <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> flag, or if the `n` option is applied to this subexpression (see [Group options](#group_options) later in this topic), the only way to capture a subexpression is to explicitly name capturing groups.</span></span>  
   
- 可用以下方式访问已命名的捕获组：  
+ <span data-ttu-id="57035-175">可用以下方式访问已命名的捕获组：</span><span class="sxs-lookup"><span data-stu-id="57035-175">You can access named captured groups in the following ways:</span></span>  
   
--   通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>` 在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获子表达式的名称。  
+-   <span data-ttu-id="57035-176">通过使用正则表达式中的命名的反向引用构造。</span><span class="sxs-lookup"><span data-stu-id="57035-176">By using the named backreference construct within the regular expression.</span></span> <span data-ttu-id="57035-177">使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获子表达式的名称。</span><span class="sxs-lookup"><span data-stu-id="57035-177">The matched subexpression is referenced in the same regular expression by using the syntax `\k<`*name*`>`, where *name* is the name of the captured subexpression.</span></span>  
   
--   通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中*数字*是捕获的表达式的初始数字。 已命名的匹配子表达式在匹配子表达式后从左到右连续编号。  
+-   <span data-ttu-id="57035-178">通过使用正则表达式中的反向引用构造。</span><span class="sxs-lookup"><span data-stu-id="57035-178">By using the backreference construct within the regular expression.</span></span> <span data-ttu-id="57035-179">使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。</span><span class="sxs-lookup"><span data-stu-id="57035-179">The matched subexpression is referenced in the same regular expression by using the syntax `\`*number*, where *number* is the ordinal number of the captured subexpression.</span></span> <span data-ttu-id="57035-180">已命名的匹配子表达式在匹配子表达式后从左到右连续编号。</span><span class="sxs-lookup"><span data-stu-id="57035-180">Named matched subexpressions are numbered consecutively from left to right after matched subexpressions.</span></span>  
   
--   通过使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> 方法调用中的 `${`*name*`}` 替换序列，其中 *name* 为捕获的子表达式的名称。  
+-   <span data-ttu-id="57035-181">通过使用`${`*名称*`}`中的替换序列<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>或<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>方法调用，其中*名称*是捕获的表达式的名称。</span><span class="sxs-lookup"><span data-stu-id="57035-181">By using the `${`*name*`}` replacement sequence in a <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> method call, where *name* is the name of the captured subexpression.</span></span>  
   
--   通过使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> 方法调用中的 `$`*number* 替换序列，其中 *number* 为捕获的子表达式的序号。  
+-   <span data-ttu-id="57035-182">通过使用`$`*数*中的替换序列<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>或<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>方法调用，其中*数*为捕获的表达式的序号。</span><span class="sxs-lookup"><span data-stu-id="57035-182">By using the `$`*number* replacement sequence in a <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> method call, where *number* is the ordinal number of the captured subexpression.</span></span>  
   
--   以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
+-   <span data-ttu-id="57035-183">以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-183">Programmatically, by using the <xref:System.Text.RegularExpressions.GroupCollection> object returned by the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="57035-184">集合中位置零上的成员表示正则表达式匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-184">The member at position zero in the collection represents the entire regular expression match.</span></span> <span data-ttu-id="57035-185">每个后续成员表示匹配的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-185">Each subsequent member represents a matched subexpression.</span></span> <span data-ttu-id="57035-186">已命名的捕获组在集合中存储在已编号的捕获组后面。</span><span class="sxs-lookup"><span data-stu-id="57035-186">Named captured groups are stored in the collection after numbered captured groups.</span></span>  
   
--   以编程方式，通过将子表达式名称提供至 <xref:System.Text.RegularExpressions.GroupCollection> 对象的索引器（在 C\# 中），或者提供至其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性（在 Visual Basic 中）。  
+-   <span data-ttu-id="57035-187">以编程方式，通过将子表达式名称提供至 <xref:System.Text.RegularExpressions.GroupCollection> 对象的索引器（在 C# 中），或者提供至其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性（在 Visual Basic 中）。</span><span class="sxs-lookup"><span data-stu-id="57035-187">Programmatically, by providing the subexpression name to the <xref:System.Text.RegularExpressions.GroupCollection> object's indexer (in C#) or to its <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> property (in Visual Basic).</span></span>  
   
- 简单的正则表达式模式会阐释如何编号（未命名），并且可以以编程方式或通过正则表达式语言语法引用已命名的组。 正则表达式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)`  按编号和名称产生下列捕获组。 编号为 0 的第一个捕获组总是指整个模式。  
+ <span data-ttu-id="57035-188">简单的正则表达式模式会阐释如何编号（未命名），并且可以以编程方式或通过正则表达式语言语法引用已命名的组。</span><span class="sxs-lookup"><span data-stu-id="57035-188">A simple regular expression pattern illustrates how numbered (unnamed) and named groups can be referenced either programmatically or by using regular expression language syntax.</span></span> <span data-ttu-id="57035-189">正则表达式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 按编号和名称产生下列捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-189">The regular expression `((?<One>abc)\d+)?(?<Two>xyz)(.*)` produces the following capturing groups by number and by name.</span></span> <span data-ttu-id="57035-190">编号为 0 的第一个捕获组总是指整个模式。</span><span class="sxs-lookup"><span data-stu-id="57035-190">The first capturing group (number 0) always refers to the entire pattern.</span></span>  
   
-|数字|名称|模式|  
-|--------|--------|--------|  
-|0|0（默认名称）|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
-|1|1（默认名称）|`((?<One>abc)\d+)`|  
-|2|2（默认名称）|`(.*)`|  
-|3|一|`(?<One>abc)`|  
-|4|二|`(?<Two>xyz)`|  
+|<span data-ttu-id="57035-191">数字</span><span class="sxs-lookup"><span data-stu-id="57035-191">Number</span></span>|<span data-ttu-id="57035-192">name</span><span class="sxs-lookup"><span data-stu-id="57035-192">Name</span></span>|<span data-ttu-id="57035-193">模式</span><span class="sxs-lookup"><span data-stu-id="57035-193">Pattern</span></span>|  
+|------------|----------|-------------|  
+|<span data-ttu-id="57035-194">0</span><span class="sxs-lookup"><span data-stu-id="57035-194">0</span></span>|<span data-ttu-id="57035-195">0（默认名称）</span><span class="sxs-lookup"><span data-stu-id="57035-195">0 (default name)</span></span>|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
+|<span data-ttu-id="57035-196">1</span><span class="sxs-lookup"><span data-stu-id="57035-196">1</span></span>|<span data-ttu-id="57035-197">1（默认名称）</span><span class="sxs-lookup"><span data-stu-id="57035-197">1 (default name)</span></span>|`((?<One>abc)\d+)`|  
+|<span data-ttu-id="57035-198">2</span><span class="sxs-lookup"><span data-stu-id="57035-198">2</span></span>|<span data-ttu-id="57035-199">2（默认名称）</span><span class="sxs-lookup"><span data-stu-id="57035-199">2 (default name)</span></span>|`(.*)`|  
+|<span data-ttu-id="57035-200">3</span><span class="sxs-lookup"><span data-stu-id="57035-200">3</span></span>|<span data-ttu-id="57035-201">一</span><span class="sxs-lookup"><span data-stu-id="57035-201">One</span></span>|`(?<One>abc)`|  
+|<span data-ttu-id="57035-202">4</span><span class="sxs-lookup"><span data-stu-id="57035-202">4</span></span>|<span data-ttu-id="57035-203">二</span><span class="sxs-lookup"><span data-stu-id="57035-203">Two</span></span>|`(?<Two>xyz)`|  
   
- 下面的示例阐释了一个正则表达式，标识出重复的单词和紧随每个重复的单词的单词。 正则表达式模式定义了两个命名的子表达式：`duplicateWord`，它表示重复的单词；和 `nextWord`，它表示后面跟随重复单词的单词。  
+ <span data-ttu-id="57035-204">下面的示例阐释了一个正则表达式，标识出重复的单词和紧随每个重复的单词的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-204">The following example illustrates a regular expression that identifies duplicated words and the word that immediately follows each duplicated word.</span></span> <span data-ttu-id="57035-205">正则表达式模式定义了两个命名的子表达式： `duplicateWord`，它表示重复的单词；和 `nextWord`，它表示后面跟随重复单词的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-205">The regular expression pattern defines two named subexpressions: `duplicateWord`, which represents the duplicated word; and `nextWord`, which represents the word that follows the duplicated word.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping2.cs#2)]
  [!code-vb[RegularExpressions.Language.Grouping#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping2.vb#2)]  
   
- 正则表达式模式按如下方式定义：  
+ <span data-ttu-id="57035-206">正则表达式模式按如下方式定义：</span><span class="sxs-lookup"><span data-stu-id="57035-206">The regular expression pattern is as follows:</span></span>  
   
 ```  
 (?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
 ```  
   
- 下表演示了正则表达式的含义。  
+ <span data-ttu-id="57035-207">下表演示了正则表达式的含义。</span><span class="sxs-lookup"><span data-stu-id="57035-207">The following table shows how the regular expression is interpreted.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`(?<duplicateWord>\w+)`|匹配一个或多个单词字符。 命名此捕获组 `duplicateWord`。|  
-|`\s`|与空白字符匹配。|  
-|`\k<duplicateWord>`|匹配名为 `duplicateWord` 的捕获的组。|  
-|`\W`|匹配包括空格和标点符号的一个非单词字符。 这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。|  
-|`(?<nextWord>\w+)`|匹配一个或多个单词字符。 命名此捕获组 `nextWord`。|  
+|<span data-ttu-id="57035-208">模式</span><span class="sxs-lookup"><span data-stu-id="57035-208">Pattern</span></span>|<span data-ttu-id="57035-209">描述</span><span class="sxs-lookup"><span data-stu-id="57035-209">Description</span></span>|  
+|-------------|-----------------|  
+|`(?<duplicateWord>\w+)`|<span data-ttu-id="57035-210">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-210">Match one or more word characters.</span></span> <span data-ttu-id="57035-211">命名此捕获组 `duplicateWord`。</span><span class="sxs-lookup"><span data-stu-id="57035-211">Name this capturing group `duplicateWord`.</span></span>|  
+|`\s`|<span data-ttu-id="57035-212">与空白字符匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-212">Match a white-space character.</span></span>|  
+|`\k<duplicateWord>`|<span data-ttu-id="57035-213">匹配名为 `duplicateWord`的捕获的组。</span><span class="sxs-lookup"><span data-stu-id="57035-213">Match the string from the captured group that is named `duplicateWord`.</span></span>|  
+|`\W`|<span data-ttu-id="57035-214">匹配包括空格和标点符号的一个非单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-214">Match a non-word character, including white space and punctuation.</span></span> <span data-ttu-id="57035-215">这样可以防止正则表达式模式匹配从第一个捕获组的单词开头的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-215">This prevents the regular expression pattern from matching a word that starts with the word from the first captured group.</span></span>|  
+|`(?<nextWord>\w+)`|<span data-ttu-id="57035-216">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-216">Match one or more word characters.</span></span> <span data-ttu-id="57035-217">命名此捕获组 `nextWord`。</span><span class="sxs-lookup"><span data-stu-id="57035-217">Name this capturing group `nextWord`.</span></span>|  
   
- 请注意可在正则表达式中重复组名。 例如，可将多个组命名为 `digit`，如下面的示例所示。 在名称重复的情况下，<xref:System.Text.RegularExpressions.Group> 对象的值由输入字符串中最后一个成功的捕获确定。 此外，如果组名不重复，则使用有关每个捕获的信息填充 <xref:System.Text.RegularExpressions.CaptureCollection>。  
+ <span data-ttu-id="57035-218">请注意可在正则表达式中重复组名。</span><span class="sxs-lookup"><span data-stu-id="57035-218">Note that a group name can be repeated in a regular expression.</span></span> <span data-ttu-id="57035-219">例如，可将多个组命名为 `digit`，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="57035-219">For example, it is possible for more than one group to be named `digit`, as the following example illustrates.</span></span> <span data-ttu-id="57035-220">在名称重复的情况下， <xref:System.Text.RegularExpressions.Group> 对象的值由输入字符串中最后一个成功的捕获确定。</span><span class="sxs-lookup"><span data-stu-id="57035-220">In the case of duplicate names, the value of the <xref:System.Text.RegularExpressions.Group> object is determined by the last successful capture in the input string.</span></span> <span data-ttu-id="57035-221">此外，如果组名不重复，则使用有关每个捕获的信息填充 <xref:System.Text.RegularExpressions.CaptureCollection> 。</span><span class="sxs-lookup"><span data-stu-id="57035-221">In addition, the <xref:System.Text.RegularExpressions.CaptureCollection> is populated with information about each capture just as it would be if the group name was not duplicated.</span></span>  
   
- 在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit` 的组。 第一个名为 `digit` 的组捕获一个或多个数字字符。 第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。 如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。 如果第二个捕获组无法不匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。  
+ <span data-ttu-id="57035-222">在下面的示例中，正则表达式 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 中两次出现了名为 `digit`的组。</span><span class="sxs-lookup"><span data-stu-id="57035-222">In the following example, the regular expression `\D+(?<digit>\d+)\D+(?<digit>\d+)?` includes two occurrences of a group named `digit`.</span></span> <span data-ttu-id="57035-223">第一个名为 `digit` 的组捕获一个或多个数字字符。</span><span class="sxs-lookup"><span data-stu-id="57035-223">The first `digit` named group captures one or more digit characters.</span></span> <span data-ttu-id="57035-224">第二个名为 `digit` 的组捕获一个或多个数字字符的零个或一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-224">The second `digit` named group captures either zero or one occurrence of one or more digit characters.</span></span> <span data-ttu-id="57035-225">如示例的输出所示，如果第二个捕获组成功匹配文本，则文本的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。</span><span class="sxs-lookup"><span data-stu-id="57035-225">As the output from the example shows, if the second capturing group successfully matches text, the value of that text defines the value of the <xref:System.Text.RegularExpressions.Group> object.</span></span> <span data-ttu-id="57035-226">如果第二个捕获组无法不匹配输入字符串，则最后一个成功匹配的值定义 <xref:System.Text.RegularExpressions.Group> 对象的值。</span><span class="sxs-lookup"><span data-stu-id="57035-226">If the second capturing group cannot does not match the input string, the value of the last successful match defines the value of the <xref:System.Text.RegularExpressions.Group> object.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
   
- 下表演示了正则表达式的含义。  
+ <span data-ttu-id="57035-227">下表演示了正则表达式的含义。</span><span class="sxs-lookup"><span data-stu-id="57035-227">The following table shows how the regular expression is interpreted.</span></span>  
   
-|模式|说明|  
-|--------|--------|  
-|`\D+`|匹配一个或多个非十进制数字字符。|  
-|`(?<digit>\d+)`|匹配一个或多个十进制数字字符。 将匹配分配到 `digit` 命名组。|  
-|\\D\+|匹配一个或多个非十进制数字字符。|  
-|`(?<digit>\d+)?`|匹配一个或多个十进制数字字符的零个或一个匹配项。 将匹配分配到 `digit` 命名组。|  
+|<span data-ttu-id="57035-228">模式</span><span class="sxs-lookup"><span data-stu-id="57035-228">Pattern</span></span>|<span data-ttu-id="57035-229">描述</span><span class="sxs-lookup"><span data-stu-id="57035-229">Description</span></span>|  
+|-------------|-----------------|  
+|`\D+`|<span data-ttu-id="57035-230">匹配一个或多个非十进制数字字符。</span><span class="sxs-lookup"><span data-stu-id="57035-230">Match one or more non-decimal digit characters.</span></span>|  
+|`(?<digit>\d+)`|<span data-ttu-id="57035-231">匹配一个或多个十进制数字字符。</span><span class="sxs-lookup"><span data-stu-id="57035-231">Match one or more decimal digit characters.</span></span> <span data-ttu-id="57035-232">将匹配分配到 `digit` 命名组。</span><span class="sxs-lookup"><span data-stu-id="57035-232">Assign the match to the `digit` named group.</span></span>|  
+|<span data-ttu-id="57035-233">\D+</span><span class="sxs-lookup"><span data-stu-id="57035-233">\D+</span></span>|<span data-ttu-id="57035-234">匹配一个或多个非十进制数字字符。</span><span class="sxs-lookup"><span data-stu-id="57035-234">Match one or more non-decimal digit characters.</span></span>|  
+|`(?<digit>\d+)?`|<span data-ttu-id="57035-235">匹配一个或多个十进制数字字符的零个或一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-235">Match zero or one occurrence of one or more decimal digit characters.</span></span> <span data-ttu-id="57035-236">将匹配分配到 `digit` 命名组。</span><span class="sxs-lookup"><span data-stu-id="57035-236">Assign the match to the `digit` named group.</span></span>|  
   
 <a name="balancing_group_definition"></a>   
-## 平衡组定义  
- 平衡组定义将删除以前定义的组和存储的定义，并在当前组中存储以前定义的组和当前组之间的间隔。 此分组构造具有以下格式：  
+## <a name="balancing-group-definitions"></a><span data-ttu-id="57035-237">平衡组定义</span><span class="sxs-lookup"><span data-stu-id="57035-237">Balancing Group Definitions</span></span>  
+ <span data-ttu-id="57035-238">平衡组定义将删除以前定义的组和存储的定义，并在当前组中存储以前定义的组和当前组之间的间隔。</span><span class="sxs-lookup"><span data-stu-id="57035-238">A balancing group definition deletes the definition of a previously defined group and stores, in the current group, the interval between the previously defined group and the current group.</span></span> <span data-ttu-id="57035-239">此分组构造具有以下格式：</span><span class="sxs-lookup"><span data-stu-id="57035-239">This grouping construct has the following format:</span></span>  
   
 ```  
 (?<name1-name2>subexpression)  
 ```  
   
- 或：  
+ <span data-ttu-id="57035-240">或：</span><span class="sxs-lookup"><span data-stu-id="57035-240">or:</span></span>  
   
 ```  
 (?'name1-name2' subexpression)  
 ```  
   
- *name1* 位置是当前的组（可选），*name2* 是一个以前定义的组，而*子表达式*是任何有效的正则表达式模式。 平衡组定义删除 *name2* 的定义并在 *name1* 中保存 *name2* 和 *name1* 之间的间隔。 如果未定义 *name2* 组，则匹配将回溯。 由于删除 *name2* 的最后一个定义会显示 *name2* 以前的定义，因此该构造允许将 *name2* 组的捕获堆栈用作计数器，用于跟踪嵌套构造（如括号或者左括号和右括号）。  
+ <span data-ttu-id="57035-241">*name1* 位置是当前的组（可选）， *name2* 是一个以前定义的组，而 *子表达式* 是任何有效的正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-241">where *name1* is the current group (optional), *name2* is a previously defined group, and *subexpression* is any valid regular expression pattern.</span></span> <span data-ttu-id="57035-242">平衡组定义删除 *name2* 的定义并在 *name1* 中保存 *name2* 和 *name1*之间的间隔。</span><span class="sxs-lookup"><span data-stu-id="57035-242">The balancing group definition deletes the definition of *name2* and stores the interval between *name2* and *name1* in *name1*.</span></span> <span data-ttu-id="57035-243">如果未定义 *name2* 组，则匹配将回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-243">If no *name2* group is defined, the match backtracks.</span></span> <span data-ttu-id="57035-244">由于删除 *name2* 的最后一个定义会显示 *name2*以前的定义，因此该构造允许将 *name2* 组的捕获堆栈用作计数器，用于跟踪嵌套构造（如括号或者左括号和右括号）。</span><span class="sxs-lookup"><span data-stu-id="57035-244">Because deleting the last definition of *name2* reveals the previous definition of *name2*, this construct lets you use the stack of captures for group *name2* as a counter for keeping track of nested constructs such as parentheses or opening and closing brackets.</span></span>  
   
- 平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后，*name1* 为空。  
+ <span data-ttu-id="57035-245">平衡组定义将 *name2* 作为堆栈使用。</span><span class="sxs-lookup"><span data-stu-id="57035-245">The balancing group definition uses *name2* as a stack.</span></span> <span data-ttu-id="57035-246">将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。</span><span class="sxs-lookup"><span data-stu-id="57035-246">The beginning character of each nested construct is placed in the group and in its <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> collection.</span></span> <span data-ttu-id="57035-247">当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。</span><span class="sxs-lookup"><span data-stu-id="57035-247">When the closing character is matched, its corresponding opening character is removed from the group, and the <xref:System.Text.RegularExpressions.Group.Captures%2A> collection is decreased by one.</span></span> <span data-ttu-id="57035-248">所有嵌套构造的开始和结束字符匹配完后， *name1* 为空。</span><span class="sxs-lookup"><span data-stu-id="57035-248">After the opening and closing characters of all nested constructs have been matched, *name1* is empty.</span></span>  
   
 > [!NOTE]
->  通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。  
+>  <span data-ttu-id="57035-249">通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。</span><span class="sxs-lookup"><span data-stu-id="57035-249">After you modify the regular expression in the following example to use the appropriate opening and closing character of a nested construct, you can use it to handle most nested constructs, such as mathematical expressions or lines of program code that include multiple nested method calls.</span></span>  
   
- 下面的示例使用平衡组定义匹配输入字符串中的左右尖括号 \(\<\>\)。 该示例定义两个已命名的组，`Open` 和 `Close`，用作堆栈来跟踪配对的尖括号。 将每个已捕获的左尖括号推入到 `Open` 组的捕获集合，而将每个已捕获的右尖括号推入到 `Close` 组的捕获集合。 平衡组定义确保每个左尖括号都有一个匹配的右尖角括号。 如果没有，则仅会在 `(?(Open)(?!))` 组不为空的情况下计算最终子模式 `Open` 的值（因此，如果所有嵌套构造尚未关闭）。 如果计算了最终子模式的值，则匹配将失败，因为 `(?!)` 子模式是始终失败的零宽度负预测先行断言。  
+ <span data-ttu-id="57035-250">下面的示例使用平衡组定义匹配输入字符串中的左右尖括号 (<>)。</span><span class="sxs-lookup"><span data-stu-id="57035-250">The following example uses a balancing group definition to match left and right angle brackets (<>) in an input string.</span></span> <span data-ttu-id="57035-251">该示例定义两个已命名的组， `Open` 和 `Close`，用作堆栈来跟踪配对的尖括号。</span><span class="sxs-lookup"><span data-stu-id="57035-251">The example defines two named groups, `Open` and `Close`, that are used like a stack to track matching pairs of angle brackets.</span></span> <span data-ttu-id="57035-252">将每个已捕获的左尖括号推入到 `Open` 组的捕获集合，而将每个已捕获的右尖括号推入到 `Close` 组的捕获集合。</span><span class="sxs-lookup"><span data-stu-id="57035-252">Each captured left angle bracket is pushed into the capture collection of the `Open` group, and each captured right angle bracket is pushed into the capture collection of the `Close` group.</span></span> <span data-ttu-id="57035-253">平衡组定义确保每个左尖括号都有一个匹配的右尖角括号。</span><span class="sxs-lookup"><span data-stu-id="57035-253">The balancing group definition ensures that there is a matching right angle bracket for each left angle bracket.</span></span> <span data-ttu-id="57035-254">如果没有，则仅会在 `(?(Open)(?!))`组不为空的情况下计算最终子模式 `Open` 的值（因此，如果所有嵌套构造尚未关闭）。</span><span class="sxs-lookup"><span data-stu-id="57035-254">If there is not, the final subpattern, `(?(Open)(?!))`, is evaluated only if the `Open` group is not empty (and, therefore, if all nested constructs have not been closed).</span></span> <span data-ttu-id="57035-255">如果计算了最终子模式的值，则匹配将失败，因为 `(?!)` 子模式是始终失败的零宽度负预测先行断言。</span><span class="sxs-lookup"><span data-stu-id="57035-255">If the final subpattern is evaluated, the match fails, because the `(?!)` subpattern is a zero-width negative lookahead assertion that always fails.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping3.cs#3)]
  [!code-vb[RegularExpressions.Language.Grouping#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping3.vb#3)]  
   
- 正则表达式模式为：  
+ <span data-ttu-id="57035-256">正则表达式模式为：</span><span class="sxs-lookup"><span data-stu-id="57035-256">The regular expression pattern is:</span></span>  
   
 ```  
 ^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
 ```  
   
- 正则表达式按如下方式解释：  
+ <span data-ttu-id="57035-257">正则表达式按如下方式解释：</span><span class="sxs-lookup"><span data-stu-id="57035-257">The regular expression is interpreted as follows:</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`^`|从字符串的开头部分开始。|  
-|`[^<>]*`|匹配零个或多个不是左侧或右侧角度方括号的字符。|  
-|`(?'Open'<)`|匹配左尖括号并分配给名为 `Open` 的组。|  
-|`[^<>]*`|匹配零个或多个不是左侧或右侧角度方括号的字符。|  
-|`((?'Open'<)[^<>]*) +`|匹配跟在非左尖括号或非右尖括号的零个或多个字符后面的一个或多个左尖括号匹配项。 这是第二个捕获组。|  
-|`(?'Close-Open'>)`|匹配右尖括号，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。|  
-|`[^<>]*`|匹配非左尖括号或非右尖括号的任何字符的零个或多个匹配项。|  
-|`((?'Close-Open'>)[^<>]*)+`|匹配跟在零后面或跟在非左尖括号或非右尖括号的多个字符后面的一个或多个右尖括号匹配项。 在匹配右尖括号时，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。 这是第三个捕获组。|  
-|`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|匹配零个或多个下列模式的匹配项：一个或多个左尖括号匹配项，后跟零个或多个非尖括号字符，后跟一个或多个右尖括号的匹配项，后跟零个或多个非尖括号的匹配项。 在匹配右尖括号时，删除 `Open` 组的定义，并将 `Open` 组和当前组之间的子字符串分配给 `Close` 组。 这是第一个捕获组。|  
-|`(?(Open)(?!))`|如果 `Open` 组存在，并可以匹配空字符串，则放弃匹配，但不前移字符串中的正则表达式引擎的位置。 这是零宽度负预测先行断言。 因为空字符串总是隐式地存在于输入字符串中，所以此匹配始终失败。 此匹配的失败表示尖括号不平衡。|  
-|`$`|匹配输入字符串的末尾部分。|  
+|<span data-ttu-id="57035-258">模式</span><span class="sxs-lookup"><span data-stu-id="57035-258">Pattern</span></span>|<span data-ttu-id="57035-259">描述</span><span class="sxs-lookup"><span data-stu-id="57035-259">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="57035-260">从字符串的开头部分开始。</span><span class="sxs-lookup"><span data-stu-id="57035-260">Begin at the start of the string.</span></span>|  
+|`[^<>]*`|<span data-ttu-id="57035-261">匹配零个或多个不是左侧或右侧角度方括号的字符。</span><span class="sxs-lookup"><span data-stu-id="57035-261">Match zero or more characters that are not left or right angle brackets.</span></span>|  
+|`(?'Open'<)`|<span data-ttu-id="57035-262">匹配左尖括号并分配给名为 `Open`的组。</span><span class="sxs-lookup"><span data-stu-id="57035-262">Match a left angle bracket and assign it to a group named `Open`.</span></span>|  
+|`[^<>]*`|<span data-ttu-id="57035-263">匹配零个或多个不是左侧或右侧角度方括号的字符。</span><span class="sxs-lookup"><span data-stu-id="57035-263">Match zero or more characters that are not left or right angle brackets.</span></span>|  
+|`((?'Open'<)[^<>]*) +`|<span data-ttu-id="57035-264">匹配跟在非左尖括号或非右尖括号的零个或多个字符后面的一个或多个左尖括号匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-264">Match one or more occurrences of a left angle bracket followed by zero or more characters that are not left or right angle brackets.</span></span> <span data-ttu-id="57035-265">这是第二个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-265">This is the second capturing group.</span></span>|  
+|`(?'Close-Open'>)`|<span data-ttu-id="57035-266">匹配右尖括号，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。</span><span class="sxs-lookup"><span data-stu-id="57035-266">Match a right angle bracket, assign the substring between the `Open` group and the current group to the `Close` group, and delete the definition of the `Open` group.</span></span>|  
+|`[^<>]*`|<span data-ttu-id="57035-267">匹配非左尖括号或非右尖括号的任何字符的零个或多个匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-267">Match zero or more occurrences of any character that is neither a left  nor a right angle bracket.</span></span>|  
+|`((?'Close-Open'>)[^<>]*)+`|<span data-ttu-id="57035-268">匹配跟在零后面或跟在非左尖括号或非右尖括号的多个字符后面的一个或多个右尖括号匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-268">Match one or more occurrences of a right angle bracket, followed by zero or more occurrences of any character that is neither a left nor a right angle bracket.</span></span> <span data-ttu-id="57035-269">在匹配右尖括号时，将 `Open` 组和当前组分配给 `Close` 组并删除 `Open` 组的定义。</span><span class="sxs-lookup"><span data-stu-id="57035-269">When matching the right angle bracket, assign the substring between the `Open` group and the current group to the `Close` group, and delete the definition of the `Open` group.</span></span> <span data-ttu-id="57035-270">这是第三个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-270">This is the third capturing group.</span></span>|  
+|`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|<span data-ttu-id="57035-271">匹配零个或多个下列模式的匹配项：一个或多个左尖括号匹配项，后跟零个或多个非尖括号字符，后跟一个或多个右尖括号的匹配项，后跟零个或多个非尖括号的匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-271">Match zero or more occurrences of the following pattern: one or more occurrences of a left angle bracket, followed by zero or more non-angle bracket characters, followed by one or more occurrences of a right angle bracket, followed by zero or more occurrences of non-angle brackets.</span></span> <span data-ttu-id="57035-272">在匹配右尖括号时，删除 `Open` 组的定义，并将 `Open` 组和当前组之间的子字符串分配给 `Close` 组。</span><span class="sxs-lookup"><span data-stu-id="57035-272">When matching the right angle bracket, delete the definition of the `Open` group, and assign the substring between the `Open` group and the current group to the `Close` group.</span></span> <span data-ttu-id="57035-273">这是第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-273">This is the first capturing group.</span></span>|  
+|`(?(Open)(?!))`|<span data-ttu-id="57035-274">如果 `Open` 组存在，并可以匹配空字符串，则放弃匹配，但不前移字符串中的正则表达式引擎的位置。</span><span class="sxs-lookup"><span data-stu-id="57035-274">If the `Open` group exists, abandon the match if an empty string can be matched, but do not advance the position of the regular expression engine in the string.</span></span> <span data-ttu-id="57035-275">这是零宽度负预测先行断言。</span><span class="sxs-lookup"><span data-stu-id="57035-275">This is a zero-width negative lookahead assertion.</span></span> <span data-ttu-id="57035-276">因为空字符串总是隐式地存在于输入字符串中，所以此匹配始终失败。</span><span class="sxs-lookup"><span data-stu-id="57035-276">Because an empty string is always implicitly present in an input string, this match always fails.</span></span> <span data-ttu-id="57035-277">此匹配的失败表示尖括号不平衡。</span><span class="sxs-lookup"><span data-stu-id="57035-277">Failure of this match indicates that the angle brackets are not balanced.</span></span>|  
+|`$`|<span data-ttu-id="57035-278">匹配输入字符串的末尾部分。</span><span class="sxs-lookup"><span data-stu-id="57035-278">Match the end of the input string.</span></span>|  
   
- 最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。 它使用基于有效的捕获组的条件匹配，有关详细信息请参阅[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。 如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)`。 仅当嵌套构造不均衡时，才应该定义 `Open` 组。 因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。 在此情况下，`(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。  
+ <span data-ttu-id="57035-279">最终子表达式 `(?(Open)(?!))`，指示是否正确平衡输入字符串中的嵌套构造（例如，是否每个左尖括号由右键括号匹配）。</span><span class="sxs-lookup"><span data-stu-id="57035-279">The final subexpression, `(?(Open)(?!))`, indicates whether the nesting constructs in the input string are properly balanced (for example, whether each left angle bracket is matched by a right angle bracket).</span></span> <span data-ttu-id="57035-280">它使用基于有效的捕获组的条件匹配，有关详细信息请参阅 [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="57035-280">It uses conditional matching based on a valid captured group; for more information, see [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).</span></span> <span data-ttu-id="57035-281">如果定义了 `Open` 组，则正则表达式引擎会尝试匹配输入字符串中的子表达式 `(?!)` 。</span><span class="sxs-lookup"><span data-stu-id="57035-281">If the `Open` group is defined, the regular expression engine attempts to match the subexpression `(?!)` in the input string.</span></span> <span data-ttu-id="57035-282">仅当嵌套构造不均衡时，才应该定义 `Open` 组。</span><span class="sxs-lookup"><span data-stu-id="57035-282">The `Open` group should be defined only if nesting constructs are unbalanced.</span></span> <span data-ttu-id="57035-283">因此，要在输入字符串中匹配的模式应该是一个始终导致匹配失败的模式。</span><span class="sxs-lookup"><span data-stu-id="57035-283">Therefore, the pattern to be matched in the input string should be one that always causes the match to fail.</span></span> <span data-ttu-id="57035-284">在此情况下， `(?!)` 是始终失败的零宽度负预测先行断言，因为空字符串总是隐式地存在于输入字符串中的下一个位置。</span><span class="sxs-lookup"><span data-stu-id="57035-284">In this case, `(?!)` is a zero-width negative lookahead assertion that always fails, because an empty string is always implicitly present at the next position in the input string.</span></span>  
   
- 在此示例中，正则表达式引擎评估输入字符串“\<abc\>\<mno\<xyz\>\>”，如下表所示。  
+ <span data-ttu-id="57035-285">在示例中，正则表达式引擎评估输入的字符串"\<abc >< mno\<xyz >>"下表中所示。</span><span class="sxs-lookup"><span data-stu-id="57035-285">In the example, the regular expression engine evaluates the input string "\<abc><mno\<xyz>>" as shown in the following table.</span></span>  
   
-|步骤|模式|结果|  
-|--------|--------|--------|  
-|1|`^`|从输入字符串的开头部分开始匹配。|  
-|2|`[^<>]*`|查找左尖括号之前的非尖括号字符；未找到匹配项。|  
-|3|`(((?'Open'<)`|匹配“\<abc\>”中的左尖括号并将它分配给 `Open` 组。|  
-|4|`[^<>]*`|与“abc”匹配。|  
-|5|`)+`|“\<abc”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|6|`((?'Close-Open'>)`|匹配“\<abc\>”中的右尖括号，将“abc”（`Open` 组和右尖括号之间的子字符串）分配给 `Close` 组并删除 `Open` 组的当前值（“\<”）。|  
-|7|`[^<>]*`|查找右尖括号之后的非尖括号字符；未找到匹配项。|  
-|8|`)+`|第三个捕获组的值是“\>”。<br /><br /> 输入字符串中的下一个字符不是右尖括号，因此正则表达式引擎不会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
-|9|`)*`|第一个捕获组的值是“\<abc\>”。<br /><br /> 输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(((?'Open'<)` 子模式。|  
-|10|`(((?'Open'<)`|匹配“\<mno\>”中的左尖括号并将它分配给 `Open` 组。 其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> 集合现在具有单个值“\<”。|  
-|11|`[^<>]*`|与“mno”匹配。|  
-|12|`)+`|“\<mno”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|13|`(((?'Open'<)`|匹配“\<xyz\>”中的左尖括号并将它分配给 `Open` 组。<xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> 组的 `Open` 集合现在包括两个捕获：“\<mno\>”中的左尖括号和“\<xyz\>”中的左尖括号。|  
-|14|`[^<>]*`|与“xyz”匹配。|  
-|15|`)+`|“\<xyz”是第二个捕获组的值。<br /><br /> 输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。|  
-|16|`((?'Close-Open'>)`|匹配“\<xyz\>”中的右尖括号。 “xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。 前一个捕获的值（“\<mno\>”中的左尖括号）成为 `Open` 组的当前值。<xref:System.Text.RegularExpressions.Group.Captures%2A> 组的 `Open` 集合现在包括单个捕获，即“\<xyz\>”中的左尖括号。|  
-|17|`[^<>]*`|查找非尖括号字符；未找到匹配项。|  
-|18|`)+`|第三个捕获组的值是“\>”。<br /><br /> 输入字符串中的下一个字符是右尖括号，因此正则表达式引擎会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
-|19|`((?'Close-Open'>)`|匹配“xyz\>\>”中的最后右尖括号，将“mno\<xyz\>”（`Open` 组和右尖括号之间的子字符串）分配给 `Close` 组并删除 `Open` 组的当前值。`Open` 组现在为空。|  
-|20|`[^<>]*`|查找非尖括号字符；未找到匹配项。|  
-|21|`)+`|第三个捕获组的值是“\>”。<br /><br /> 输入字符串中的下一个字符不是右尖括号，因此正则表达式引擎不会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。|  
-|22|`)*`|第一个捕获组的值是“\<mno\<xyz\>\>”。<br /><br /> 输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(((?'Open'<)` 子模式。|  
-|23|`(?(Open)(?!))`|`Open` 组是未定义的，因此没有尝试匹配。|  
-|24|`$`|匹配输入字符串的末尾部分。|  
+|<span data-ttu-id="57035-286">步骤</span><span class="sxs-lookup"><span data-stu-id="57035-286">Step</span></span>|<span data-ttu-id="57035-287">模式</span><span class="sxs-lookup"><span data-stu-id="57035-287">Pattern</span></span>|<span data-ttu-id="57035-288">结果</span><span class="sxs-lookup"><span data-stu-id="57035-288">Result</span></span>|  
+|----------|-------------|------------|  
+|<span data-ttu-id="57035-289">1</span><span class="sxs-lookup"><span data-stu-id="57035-289">1</span></span>|`^`|<span data-ttu-id="57035-290">从输入字符串的开头部分开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-290">Starts the match at the beginning of the input string</span></span>|  
+|<span data-ttu-id="57035-291">2</span><span class="sxs-lookup"><span data-stu-id="57035-291">2</span></span>|`[^<>]*`|<span data-ttu-id="57035-292">查找左尖括号之前的非尖括号字符；未找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-292">Looks for non-angle bracket characters before the left angle bracket;finds no matches.</span></span>|  
+|<span data-ttu-id="57035-293">3</span><span class="sxs-lookup"><span data-stu-id="57035-293">3</span></span>|`(((?'Open'<)`|<span data-ttu-id="57035-294">匹配中的左的尖括号"\<abc >"并将它分配给`Open`组。</span><span class="sxs-lookup"><span data-stu-id="57035-294">Matches the left angle bracket in "\<abc>" and assigns it to the `Open` group.</span></span>|  
+|<span data-ttu-id="57035-295">4</span><span class="sxs-lookup"><span data-stu-id="57035-295">4</span></span>|`[^<>]*`|<span data-ttu-id="57035-296">与“abc”匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-296">Matches "abc".</span></span>|  
+|<span data-ttu-id="57035-297">5</span><span class="sxs-lookup"><span data-stu-id="57035-297">5</span></span>|`)+`|<span data-ttu-id="57035-298">“<abc”是第二个捕获组的值。</span><span class="sxs-lookup"><span data-stu-id="57035-298">"<abc" is the value of the second captured group.</span></span><br /><br /> <span data-ttu-id="57035-299">输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-299">The next character in the input string is not a left angle bracket, so the regular expression engine does not loop back to the `(?'Open'<)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-300">6</span><span class="sxs-lookup"><span data-stu-id="57035-300">6</span></span>|`((?'Close-Open'>)`|<span data-ttu-id="57035-301">匹配右尖括号中的"\<abc >"，将分配"abc"，是的子字符串之间`Open`组和右尖括号，为`Close`组并删除当前值 ("<") 的`Open`组，将保留为空。</span><span class="sxs-lookup"><span data-stu-id="57035-301">Matches the right angle bracket in "\<abc>", assigns "abc", which is the substring between the `Open` group and the right angle bracket, to the `Close` group, and deletes the current value ("<") of the `Open` group, leaving it empty.</span></span>|  
+|<span data-ttu-id="57035-302">7</span><span class="sxs-lookup"><span data-stu-id="57035-302">7</span></span>|`[^<>]*`|<span data-ttu-id="57035-303">查找右尖括号之后的非尖括号字符；未找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-303">Looks for non-angle bracket characters after the right angle bracket; finds no matches.</span></span>|  
+|<span data-ttu-id="57035-304">8</span><span class="sxs-lookup"><span data-stu-id="57035-304">8</span></span>|`)+`|<span data-ttu-id="57035-305">第三个捕获组的值是“>”。</span><span class="sxs-lookup"><span data-stu-id="57035-305">The value of the third captured group is ">".</span></span><br /><br /> <span data-ttu-id="57035-306">输入字符串中的下一个字符不是右尖括号，因此正则表达式引擎不会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-306">The next character in the input string is not a right angle bracket, so the regular expression engine does not loop back to the `((?'Close-Open'>)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-307">9</span><span class="sxs-lookup"><span data-stu-id="57035-307">9</span></span>|`)*`|<span data-ttu-id="57035-308">第一个捕获组的值是"\<abc >"。</span><span class="sxs-lookup"><span data-stu-id="57035-308">The value of the first captured group is "\<abc>".</span></span><br /><br /> <span data-ttu-id="57035-309">输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(((?'Open'<)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-309">The next character in the input string is a left  angle bracket, so the regular expression engine loops back to the `(((?'Open'<)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-310">10</span><span class="sxs-lookup"><span data-stu-id="57035-310">10</span></span>|`(((?'Open'<)`|<span data-ttu-id="57035-311">匹配中的左的尖括号"\<mno >"并将它分配给`Open`组。</span><span class="sxs-lookup"><span data-stu-id="57035-311">Matches the left angle bracket in "\<mno>" and assigns it to the `Open` group.</span></span> <span data-ttu-id="57035-312">其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合现在具有单个值“<”。</span><span class="sxs-lookup"><span data-stu-id="57035-312">Its <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> collection now has a single value, "<".</span></span>|  
+|<span data-ttu-id="57035-313">11</span><span class="sxs-lookup"><span data-stu-id="57035-313">11</span></span>|`[^<>]*`|<span data-ttu-id="57035-314">与“mno”匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-314">Matches "mno".</span></span>|  
+|<span data-ttu-id="57035-315">12</span><span class="sxs-lookup"><span data-stu-id="57035-315">12</span></span>|`)+`|<span data-ttu-id="57035-316">“<mno”是第二个捕获组的值。</span><span class="sxs-lookup"><span data-stu-id="57035-316">"<mno" is the value of the second captured group.</span></span><br /><br /> <span data-ttu-id="57035-317">输入字符串中的下一个字符是左尖括号，因此正则表达式引擎会循环回到 `(?'Open'<)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-317">The next character in the input string is an left angle bracket, so the regular expression engine loops back to the `(?'Open'<)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-318">13</span><span class="sxs-lookup"><span data-stu-id="57035-318">13</span></span>|`(((?'Open'<)`|<span data-ttu-id="57035-319">匹配中的左的尖括号"\<x y z >"并将它分配给`Open`组。</span><span class="sxs-lookup"><span data-stu-id="57035-319">Matches the left angle bracket in "\<xyz>" and assigns it to the `Open` group.</span></span> <span data-ttu-id="57035-320"><xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>集合`Open`组现在包括两个捕获： 左的尖括号"\<mno >"，从左的尖括号和"\<x y z >"。</span><span class="sxs-lookup"><span data-stu-id="57035-320">The <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> collection of the `Open` group now includes two captures: the left angle bracket from "\<mno>", and the left angle bracket from "\<xyz>".</span></span>|  
+|<span data-ttu-id="57035-321">14</span><span class="sxs-lookup"><span data-stu-id="57035-321">14</span></span>|`[^<>]*`|<span data-ttu-id="57035-322">与“xyz”匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-322">Matches "xyz".</span></span>|  
+|<span data-ttu-id="57035-323">15</span><span class="sxs-lookup"><span data-stu-id="57035-323">15</span></span>|`)+`|<span data-ttu-id="57035-324">“<xyz”是第二个捕获组的值。</span><span class="sxs-lookup"><span data-stu-id="57035-324">"<xyz" is the value of the second captured group.</span></span><br /><br /> <span data-ttu-id="57035-325">输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(?'Open'<)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-325">The next character in the input string is not a left angle bracket, so the regular expression engine does not loop back to the `(?'Open'<)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-326">16</span><span class="sxs-lookup"><span data-stu-id="57035-326">16</span></span>|`((?'Close-Open'>)`|<span data-ttu-id="57035-327">匹配右尖括号中的"\<x y z >"。</span><span class="sxs-lookup"><span data-stu-id="57035-327">Matches the right angle bracket in "\<xyz>".</span></span> <span data-ttu-id="57035-328">“xyz”将 `Open` 组合右尖括号之间的子字符串分配给 `Close` 组，并删除 `Open` 组的当前值。</span><span class="sxs-lookup"><span data-stu-id="57035-328">"xyz", assigns the substring between the `Open` group and the right angle bracket to the `Close` group, and deletes the current value of the `Open` group.</span></span> <span data-ttu-id="57035-329">前一个捕获的值 (中的左的尖括号"\<mno >") 将成为的当前值`Open`组。</span><span class="sxs-lookup"><span data-stu-id="57035-329">The value of the previous capture (the left angle bracket in "\<mno>") becomes the current value of the `Open` group.</span></span> <span data-ttu-id="57035-330"><xref:System.Text.RegularExpressions.Group.Captures%2A>集合`Open`组现在包括单个捕获，即中的左尖括号"\<x y z >"。</span><span class="sxs-lookup"><span data-stu-id="57035-330">The <xref:System.Text.RegularExpressions.Group.Captures%2A> collection of the `Open` group now includes a single capture, the left angle bracket from "\<xyz>".</span></span>|  
+|<span data-ttu-id="57035-331">17</span><span class="sxs-lookup"><span data-stu-id="57035-331">17</span></span>|`[^<>]*`|<span data-ttu-id="57035-332">查找非尖括号字符；未找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-332">Looks for non-angle bracket characters; finds no matches.</span></span>|  
+|<span data-ttu-id="57035-333">18</span><span class="sxs-lookup"><span data-stu-id="57035-333">18</span></span>|`)+`|<span data-ttu-id="57035-334">第三个捕获组的值是“>”。</span><span class="sxs-lookup"><span data-stu-id="57035-334">The value of the third captured group is ">".</span></span><br /><br /> <span data-ttu-id="57035-335">输入字符串中的下一个字符是右尖括号，因此正则表达式引擎会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-335">The next character in the input string is a right angle bracket, so the regular expression engine loops back to the `((?'Close-Open'>)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-336">19</span><span class="sxs-lookup"><span data-stu-id="57035-336">19</span></span>|`((?'Close-Open'>)`|<span data-ttu-id="57035-337">匹配的最后右尖括号中"xyz >>"，将分配"mno\<x y z >"(之间的子字符串`Open`组和右尖括号) 到`Close`组并删除的当前值`Open`组。</span><span class="sxs-lookup"><span data-stu-id="57035-337">Matches the final right angle bracket in "xyz>>", assigns "mno\<xyz>" (the substring between the `Open` group and the right angle bracket) to the `Close` group, and deletes the current value of the `Open` group.</span></span> <span data-ttu-id="57035-338">`Open` 组现在为空。</span><span class="sxs-lookup"><span data-stu-id="57035-338">The `Open` group is now empty.</span></span>|  
+|<span data-ttu-id="57035-339">20</span><span class="sxs-lookup"><span data-stu-id="57035-339">20</span></span>|`[^<>]*`|<span data-ttu-id="57035-340">查找非尖括号字符；未找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-340">Looks for non-angle bracket characters; finds no matches.</span></span>|  
+|<span data-ttu-id="57035-341">21</span><span class="sxs-lookup"><span data-stu-id="57035-341">21</span></span>|`)+`|<span data-ttu-id="57035-342">第三个捕获组的值是“>”。</span><span class="sxs-lookup"><span data-stu-id="57035-342">The value of the third captured group is ">".</span></span><br /><br /> <span data-ttu-id="57035-343">输入字符串中的下一个字符不是右尖括号，因此正则表达式引擎不会循环回到 `((?'Close-Open'>)[^<>]*)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-343">The next character in the input string is not a right angle bracket, so the regular expression engine does not loop back to the `((?'Close-Open'>)[^<>]*)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-344">22</span><span class="sxs-lookup"><span data-stu-id="57035-344">22</span></span>|`)*`|<span data-ttu-id="57035-345">第一个捕获组的值是"< mno\<xyz >>"。</span><span class="sxs-lookup"><span data-stu-id="57035-345">The value of the first captured group is "<mno\<xyz>>".</span></span><br /><br /> <span data-ttu-id="57035-346">输入字符串中的下一个字符不是左尖括号，因此正则表达式引擎不会循环回到 `(((?'Open'<)` 子模式。</span><span class="sxs-lookup"><span data-stu-id="57035-346">The next character in the input string is not a left angle bracket, so the regular expression engine does not loop back to the `(((?'Open'<)` subpattern.</span></span>|  
+|<span data-ttu-id="57035-347">23</span><span class="sxs-lookup"><span data-stu-id="57035-347">23</span></span>|`(?(Open)(?!))`|<span data-ttu-id="57035-348">`Open` 组是未定义的，因此没有尝试匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-348">The `Open` group is not defined, so no match is attempted.</span></span>|  
+|<span data-ttu-id="57035-349">24</span><span class="sxs-lookup"><span data-stu-id="57035-349">24</span></span>|`$`|<span data-ttu-id="57035-350">匹配输入字符串的末尾部分。</span><span class="sxs-lookup"><span data-stu-id="57035-350">Matches the end of the input string.</span></span>|  
   
 <a name="noncapturing_group"></a>   
-## 非捕获组  
- 以下分组构造不会捕获由子表达式匹配的子字符串：  
+## <a name="noncapturing-groups"></a><span data-ttu-id="57035-351">非捕获组</span><span class="sxs-lookup"><span data-stu-id="57035-351">Noncapturing Groups</span></span>  
+ <span data-ttu-id="57035-352">以下分组构造不会捕获由子表达式匹配的子字符串：</span><span class="sxs-lookup"><span data-stu-id="57035-352">The following grouping construct does not capture the substring that is matched by a subexpression:</span></span>  
   
 ```  
 (?:subexpression)  
 ```  
   
- 其中*子表达式*为任何有效正则表达式模式。 当一个限定符应用到一个组，但组捕获的子字符串并非所需时，通常会使用非捕获组构造。  
+ <span data-ttu-id="57035-353">其中 *子表达式* 为任何有效正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-353">where *subexpression* is any valid regular expression pattern.</span></span> <span data-ttu-id="57035-354">当一个限定符应用到一个组，但组捕获的子字符串并非所需时，通常会使用非捕获组构造。</span><span class="sxs-lookup"><span data-stu-id="57035-354">The noncapturing group construct is typically used when a quantifier is applied to a group, but the substrings captured by the group are of no interest.</span></span>  
   
 > [!NOTE]
->  如果正则表达式包含嵌套的分组构造，则外部非捕获组构造不适用于内部嵌套组构造。  
+>  <span data-ttu-id="57035-355">如果正则表达式包含嵌套的分组构造，则外部非捕获组构造不适用于内部嵌套组构造。</span><span class="sxs-lookup"><span data-stu-id="57035-355">If a regular expression includes nested grouping constructs, an outer noncapturing group construct does not apply to the inner nested group constructs.</span></span>  
   
- 下面的示例阐释包括非捕获组的正则表达式。 请注意输出不包含任何已捕获的组。  
+ <span data-ttu-id="57035-356">下面的示例阐释包括非捕获组的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-356">The following example illustrates a regular expression that includes noncapturing groups.</span></span> <span data-ttu-id="57035-357">请注意输出不包含任何已捕获的组。</span><span class="sxs-lookup"><span data-stu-id="57035-357">Note that the output does not include any captured groups.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/noncapture1.cs#5)]
  [!code-vb[RegularExpressions.Language.Grouping#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/noncapture1.vb#5)]  
   
- 正则表达式 `(?:\b(?:\w+)\W*)+\.` 匹配由句号终止的语句。 因为正则表达式重点介绍句子，而不是个别单词，所以分组构造以独占方式用作限定符。 正则表达式模式可以解释为下表中所示内容。  
+ <span data-ttu-id="57035-358">正则表达式 `(?:\b(?:\w+)\W*)+\.` 匹配由句号终止的语句。</span><span class="sxs-lookup"><span data-stu-id="57035-358">The regular expression `(?:\b(?:\w+)\W*)+\.` matches a sentence that is terminated by a period.</span></span> <span data-ttu-id="57035-359">因为正则表达式重点介绍句子，而不是个别单词，所以分组构造以独占方式用作限定符。</span><span class="sxs-lookup"><span data-stu-id="57035-359">Because the regular expression focuses on sentences and not on individual words, grouping constructs are used exclusively as quantifiers.</span></span> <span data-ttu-id="57035-360">正则表达式模式可以解释为下表中所示内容。</span><span class="sxs-lookup"><span data-stu-id="57035-360">The regular expression pattern is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`(?:\w+)`|匹配一个或多个单词字符。 不将匹配的文本分配给捕获的组。|  
-|`\W*`|匹配零个或多个非单词字符。|  
-|`(?:\b(?:\w+)\W*)+`|一次或多次匹配跟在零个或多个非单词字符后面以单词边界开头的一个或多个单词字符的模式。 不将匹配的文本分配给捕获的组。|  
-|`\.`|匹配句点。|  
+|<span data-ttu-id="57035-361">模式</span><span class="sxs-lookup"><span data-stu-id="57035-361">Pattern</span></span>|<span data-ttu-id="57035-362">描述</span><span class="sxs-lookup"><span data-stu-id="57035-362">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-363">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-363">Begin the match at a word boundary.</span></span>|  
+|`(?:\w+)`|<span data-ttu-id="57035-364">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-364">Match one or more word characters.</span></span> <span data-ttu-id="57035-365">不将匹配的文本分配给捕获的组。</span><span class="sxs-lookup"><span data-stu-id="57035-365">Do not assign the matched text to a captured group.</span></span>|  
+|`\W*`|<span data-ttu-id="57035-366">匹配零个或多个非单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-366">Match zero or more non-word characters.</span></span>|  
+|`(?:\b(?:\w+)\W*)+`|<span data-ttu-id="57035-367">一次或多次匹配跟在零个或多个非单词字符后面以单词边界开头的一个或多个单词字符的模式。</span><span class="sxs-lookup"><span data-stu-id="57035-367">Match the pattern of one or more word characters starting at a word boundary, followed by zero or more non-word characters, one or more times.</span></span> <span data-ttu-id="57035-368">不将匹配的文本分配给捕获的组。</span><span class="sxs-lookup"><span data-stu-id="57035-368">Do not assign the matched text to a captured group.</span></span>|  
+|`\.`|<span data-ttu-id="57035-369">匹配句点。</span><span class="sxs-lookup"><span data-stu-id="57035-369">Match a period.</span></span>|  
   
 <a name="group_options"></a>   
-## 组选项  
- 以下分组构造应用或禁用子表达式中指定的选项：  
+## <a name="group-options"></a><span data-ttu-id="57035-370">组选项</span><span class="sxs-lookup"><span data-stu-id="57035-370">Group Options</span></span>  
+ <span data-ttu-id="57035-371">以下分组构造应用或禁用子表达式中指定的选项：</span><span class="sxs-lookup"><span data-stu-id="57035-371">The following grouping construct applies or disables the specified options within a subexpression:</span></span>  
   
- `(?imnsx-imnsx:` *子表达式* `)`  
+ <span data-ttu-id="57035-372">`(?imnsx-imnsx:` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-372">`(?imnsx-imnsx:` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何有效正则表达式模式。 例如，`(?i-s:)` 将打开不区分大小写并禁用单行模式。 有关可以指定的内联选项的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
+ <span data-ttu-id="57035-373">其中 *子表达式* 为任何有效正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-373">where *subexpression* is any valid regular expression pattern.</span></span> <span data-ttu-id="57035-374">例如， `(?i-s:)` 将打开不区分大小写并禁用单行模式。</span><span class="sxs-lookup"><span data-stu-id="57035-374">For example, `(?i-s:)` turns on case insensitivity and disables single-line mode.</span></span> <span data-ttu-id="57035-375">有关可以指定的内联选项的更多信息，请参见 [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="57035-375">For more information about the inline options you can specify, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
 > [!NOTE]
->  可以指定将应用于整个正则表达式，而不是子表达式的选项，方法是使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName> 类构造函数或静态方法。 也可指定在正则表达式特定点后使用的内联选项，方法是使用 `(?imnsx-imnsx)` 语言构造。  
+>  <span data-ttu-id="57035-376">可以指定将应用于整个正则表达式，而不是子表达式的选项，方法是使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类构造函数或静态方法。</span><span class="sxs-lookup"><span data-stu-id="57035-376">You can specify options that apply to an entire regular expression rather than a subexpression by using a <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> class constructor or a static method.</span></span> <span data-ttu-id="57035-377">也可指定在正则表达式特定点后使用的内联选项，方法是使用 `(?imnsx-imnsx)` 语言构造。</span><span class="sxs-lookup"><span data-stu-id="57035-377">You can also specify inline options that apply after a specific point in a regular expression by using the `(?imnsx-imnsx)` language construct.</span></span>  
   
- 组的选项构造并非捕获组。 即尽管*子表达式*捕获的字符串的任意部分包含在匹配中，但不会包含在捕获的组中也不会用于填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象。  
+ <span data-ttu-id="57035-378">组的选项构造并非捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-378">The group options construct is not a capturing group.</span></span> <span data-ttu-id="57035-379">即尽管 *子表达式* 捕获的字符串的任意部分包含在匹配中，但不会包含在捕获的组中也不会用于填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象。</span><span class="sxs-lookup"><span data-stu-id="57035-379">That is, although any portion of a string that is captured by *subexpression* is included in the match, it is not included in a captured group nor used to populate the <xref:System.Text.RegularExpressions.GroupCollection> object.</span></span>  
   
- 例如，以下示例中的正则表达式 `\b(?ix: d \w+)\s` 使用分组构造中的内联选项，以启用不区分大小写的匹配和在识别所有以字母“d”开头的单词时忽略模式空白。 该正则表达式的定义如下表所示。  
+ <span data-ttu-id="57035-380">例如，以下示例中的正则表达式 `\b(?ix: d \w+)\s` 使用分组构造中的内联选项，以启用不区分大小写的匹配和在识别所有以字母“d”开头的单词时忽略模式空白。</span><span class="sxs-lookup"><span data-stu-id="57035-380">For example, the regular expression `\b(?ix: d \w+)\s` in the following example uses inline options in a grouping construct to enable case-insensitive matching and ignore pattern whitespace in identifying all words that begin with the letter "d".</span></span> <span data-ttu-id="57035-381">该正则表达式的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="57035-381">The regular expression is defined as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。|  
-|`\s`|与空白字符匹配。|  
+|<span data-ttu-id="57035-382">模式</span><span class="sxs-lookup"><span data-stu-id="57035-382">Pattern</span></span>|<span data-ttu-id="57035-383">描述</span><span class="sxs-lookup"><span data-stu-id="57035-383">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-384">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-384">Begin the match at a word boundary.</span></span>|  
+|`(?ix: d \w+)`|<span data-ttu-id="57035-385">使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。</span><span class="sxs-lookup"><span data-stu-id="57035-385">Using case-insensitive matching and ignoring white space in this pattern, match a "d" followed by one or more word characters.</span></span>|  
+|`\s`|<span data-ttu-id="57035-386">与空白字符匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-386">Match a white-space character.</span></span>|  
   
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
 <a name="zerowidth_positive_lookahead_assertion"></a>   
-## 零宽度正预测先行断言  
- 以下分组构造定义零宽度正预测先行断言：  
+## <a name="zero-width-positive-lookahead-assertions"></a><span data-ttu-id="57035-387">零宽度正预测先行断言</span><span class="sxs-lookup"><span data-stu-id="57035-387">Zero-Width Positive Lookahead Assertions</span></span>  
+ <span data-ttu-id="57035-388">以下分组构造定义零宽度正预测先行断言：</span><span class="sxs-lookup"><span data-stu-id="57035-388">The following grouping construct defines a zero-width positive lookahead assertion:</span></span>  
   
- `(?=` *子表达式* `)`  
+ <span data-ttu-id="57035-389">`(?=` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-389">`(?=` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何正则表达式模式。 若要成功匹配，则输入字符串必须匹配*子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。 零宽度正预测先行断言不会回溯。  
+ <span data-ttu-id="57035-390">其中 *子表达式* 为任何正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-390">where *subexpression* is any regular expression pattern.</span></span> <span data-ttu-id="57035-391">若要成功匹配，则输入字符串必须匹配 *子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。</span><span class="sxs-lookup"><span data-stu-id="57035-391">For a match to be successful, the input string must match the regular expression pattern in *subexpression*, although the matched substring is not included in the match result.</span></span> <span data-ttu-id="57035-392">零宽度正预测先行断言不会回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-392">A zero-width positive lookahead assertion does not backtrack.</span></span>  
   
- 通常，零宽度正预测先行断言是在正则表达式模式的末尾找到的。 它定义了一个子字符串，该子字符串必须出现在匹配字符串的末尾但又不能包含在匹配结果中。 还有助于防止过度回溯。 可使用零宽度正预测先行断言来确保特定捕获组以与专为该捕获组定义的模式的子集相匹配的文本开始。 例如，如果捕获组与连续单词字符相匹配，可以使用零宽度正预测先行断言要求第一个字符是按字母顺序排列的大写字符。  
+ <span data-ttu-id="57035-393">通常，零宽度正预测先行断言是在正则表达式模式的末尾找到的。</span><span class="sxs-lookup"><span data-stu-id="57035-393">Typically, a zero-width positive lookahead assertion is found at the end of a regular expression pattern.</span></span> <span data-ttu-id="57035-394">它定义了一个子字符串，该子字符串必须出现在匹配字符串的末尾但又不能包含在匹配结果中。</span><span class="sxs-lookup"><span data-stu-id="57035-394">It defines a substring that must be found at the end of a string for a match to occur but that should not be included in the match.</span></span> <span data-ttu-id="57035-395">还有助于防止过度回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-395">It is also useful for preventing excessive backtracking.</span></span> <span data-ttu-id="57035-396">可使用零宽度正预测先行断言来确保特定捕获组以与专为该捕获组定义的模式的子集相匹配的文本开始。</span><span class="sxs-lookup"><span data-stu-id="57035-396">You can use a zero-width positive lookahead assertion to ensure that a particular captured group begins with text that matches a subset of the pattern defined for that captured group.</span></span> <span data-ttu-id="57035-397">例如，如果捕获组与连续单词字符相匹配，可以使用零宽度正预测先行断言要求第一个字符是按字母顺序排列的大写字符。</span><span class="sxs-lookup"><span data-stu-id="57035-397">For example, if a capturing group matches consecutive word characters, you can use a zero-width positive lookahead assertion to require that the first character be an alphabetical uppercase character.</span></span>  
   
- 下面的示例使用零宽度正预测先行断言，以匹配输入字符串中谓词“is”前的单词。  
+ <span data-ttu-id="57035-398">下面的示例使用零宽度正预测先行断言，以匹配输入字符串中谓词“is”前的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-398">The following example uses a zero-width positive lookahead assertion to match the word that precedes the verb "is" in the input string.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#6](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookahead1.cs#6)]
  [!code-vb[RegularExpressions.Language.Grouping#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookahead1.vb#6)]  
   
- 正则表达式 `\b\w+(?=\sis\b)` 可以解释为下表中所示内容。  
+ <span data-ttu-id="57035-399">正则表达式 `\b\w+(?=\sis\b)` 可以解释为下表中所示内容。</span><span class="sxs-lookup"><span data-stu-id="57035-399">The regular expression `\b\w+(?=\sis\b)` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`\w+`|匹配一个或多个单词字符。|  
-|`(?=\sis\b)`|确定单词字符是否后接空白字符和字符串“is”，其在单词边界处结束。 如果如此，则匹配成功。|  
+|<span data-ttu-id="57035-400">模式</span><span class="sxs-lookup"><span data-stu-id="57035-400">Pattern</span></span>|<span data-ttu-id="57035-401">描述</span><span class="sxs-lookup"><span data-stu-id="57035-401">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-402">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-402">Begin the match at a word boundary.</span></span>|  
+|`\w+`|<span data-ttu-id="57035-403">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-403">Match one or more word characters.</span></span>|  
+|`(?=\sis\b)`|<span data-ttu-id="57035-404">确定单词字符是否后接空白字符和字符串“is”，其在单词边界处结束。</span><span class="sxs-lookup"><span data-stu-id="57035-404">Determine whether the word characters are followed by a white-space character and the string "is", which ends on a word boundary.</span></span> <span data-ttu-id="57035-405">如果如此，则匹配成功。</span><span class="sxs-lookup"><span data-stu-id="57035-405">If so, the match is successful.</span></span>|  
   
 <a name="zerowidth_negative_lookahead_assertion"></a>   
-## 零宽度负预测先行断言  
- 以下分组构造定义零宽度负预测先行断言：  
+## <a name="zero-width-negative-lookahead-assertions"></a><span data-ttu-id="57035-406">零宽度负预测先行断言</span><span class="sxs-lookup"><span data-stu-id="57035-406">Zero-Width Negative Lookahead Assertions</span></span>  
+ <span data-ttu-id="57035-407">以下分组构造定义零宽度负预测先行断言：</span><span class="sxs-lookup"><span data-stu-id="57035-407">The following grouping construct defines a zero-width negative lookahead assertion:</span></span>  
   
- `(?!` *子表达式* `)`  
+ <span data-ttu-id="57035-408">`(?!` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-408">`(?!` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何正则表达式模式。 若要成功匹配，则输入字符串不得匹配*子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。  
+ <span data-ttu-id="57035-409">其中 *子表达式* 为任何正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-409">where *subexpression* is any regular expression pattern.</span></span> <span data-ttu-id="57035-410">若要成功匹配，则输入字符串不得匹配 *子表达式*中的正则表达式模式，尽管匹配的子字符串未包含在匹配结果中。</span><span class="sxs-lookup"><span data-stu-id="57035-410">For the match to be successful, the input string must not match the regular expression pattern in *subexpression*, although the matched string is not included in the match result.</span></span>  
   
- 零宽度负预测先行断言通常用在正则表达式的开头或结尾。 正则表达式的开头可以定义当其定义了要被匹配的相似但更常规的模式时，不应被匹配的特定模式。 在这种情况下，它通常用于限制回溯。 正则表达式的末尾可以定义不能出现在匹配项末尾处的子表达式。  
+ <span data-ttu-id="57035-411">零宽度负预测先行断言通常用在正则表达式的开头或结尾。</span><span class="sxs-lookup"><span data-stu-id="57035-411">A zero-width negative lookahead assertion is typically used either at the beginning or at the end of a regular expression.</span></span> <span data-ttu-id="57035-412">正则表达式的开头可以定义当其定义了要被匹配的相似但更常规的模式时，不应被匹配的特定模式。</span><span class="sxs-lookup"><span data-stu-id="57035-412">At the beginning of a regular expression, it can define a specific pattern that should not be matched when the beginning of the regular expression defines a similar but more general pattern to be matched.</span></span> <span data-ttu-id="57035-413">在这种情况下，它通常用于限制回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-413">In this case, it is often used to limit backtracking.</span></span> <span data-ttu-id="57035-414">正则表达式的末尾可以定义不能出现在匹配项末尾处的子表达式。</span><span class="sxs-lookup"><span data-stu-id="57035-414">At the end of a regular expression, it can define a subexpression that cannot occur at the end of a match.</span></span>  
   
- 下面的示例定义了正则表达式匹配，其在正则表达式的开头使用零宽度预测先行断言，以匹配未以“un”开头的单词。  
+ <span data-ttu-id="57035-415">下面的示例定义了正则表达式匹配，其在正则表达式的开头使用零宽度预测先行断言，以匹配未以“un”开头的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-415">The following example defines a regular expression that uses a zero-width lookahead assertion at the beginning of the regular expression to match words that do not begin with "un".</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#7](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead1.cs#7)]
  [!code-vb[RegularExpressions.Language.Grouping#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead1.vb#7)]  
   
- 正则表达式 `\b(?!un)\w+\b` 可以解释为下表中所示内容。  
+ <span data-ttu-id="57035-416">正则表达式 `\b(?!un)\w+\b` 可以解释为下表中所示内容。</span><span class="sxs-lookup"><span data-stu-id="57035-416">The regular expression `\b(?!un)\w+\b` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`(?!un)`|确定接下来的两个的字符是否为“un”。 如果没有，则可能匹配。|  
-|`\w+`|匹配一个或多个单词字符。|  
-|`\b`|在单词边界处结束匹配。|  
+|<span data-ttu-id="57035-417">模式</span><span class="sxs-lookup"><span data-stu-id="57035-417">Pattern</span></span>|<span data-ttu-id="57035-418">描述</span><span class="sxs-lookup"><span data-stu-id="57035-418">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-419">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-419">Begin the match at a word boundary.</span></span>|  
+|`(?!un)`|<span data-ttu-id="57035-420">确定接下来的两个的字符是否为“un”。</span><span class="sxs-lookup"><span data-stu-id="57035-420">Determine whether the next two characters are "un".</span></span> <span data-ttu-id="57035-421">如果没有，则可能匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-421">If they are not, a match is possible.</span></span>|  
+|`\w+`|<span data-ttu-id="57035-422">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-422">Match one or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="57035-423">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-423">End the match at a word boundary.</span></span>|  
   
- 下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度预测先行断言，以匹配未以标点字符结束的单词。  
+ <span data-ttu-id="57035-424">下面的示例定义了正则表达式匹配，其在正则表达式的末尾使用零宽度预测先行断言，以匹配未以标点字符结束的单词。</span><span class="sxs-lookup"><span data-stu-id="57035-424">The following example defines a regular expression that uses a zero-width lookahead assertion at the end of the regular expression to match words that do not end with a punctuation character.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#8](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead2.cs#8)]
  [!code-vb[RegularExpressions.Language.Grouping#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead2.vb#8)]  
   
- 正则表达式 `\b\w+\b(?!\p{P})` 可以解释为下表中所示内容。  
+ <span data-ttu-id="57035-425">正则表达式 `\b\w+\b(?!\p{P})` 可以解释为下表中所示内容。</span><span class="sxs-lookup"><span data-stu-id="57035-425">The regular expression `\b\w+\b(?!\p{P})` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`\w+`|匹配一个或多个单词字符。|  
-|`\b`|在单词边界处结束匹配。|  
-|`\p{P})`|如果下个字符不是一个标点符号（如句点或逗号），则匹配成功。|  
+|<span data-ttu-id="57035-426">模式</span><span class="sxs-lookup"><span data-stu-id="57035-426">Pattern</span></span>|<span data-ttu-id="57035-427">描述</span><span class="sxs-lookup"><span data-stu-id="57035-427">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-428">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-428">Begin the match at a word boundary.</span></span>|  
+|`\w+`|<span data-ttu-id="57035-429">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-429">Match one or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="57035-430">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-430">End the match at a word boundary.</span></span>|  
+|`\p{P})`|<span data-ttu-id="57035-431">如果下个字符不是一个标点符号（如句点或逗号），则匹配成功。</span><span class="sxs-lookup"><span data-stu-id="57035-431">If the next character is not a punctuation symbol (such as a period or a comma), the match succeeds.</span></span>|  
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>   
-## 零宽度正回顾后发断言  
- 以下分组构造定义零宽度正回顾后发断言：  
+## <a name="zero-width-positive-lookbehind-assertions"></a><span data-ttu-id="57035-432">零宽度正回顾后发断言</span><span class="sxs-lookup"><span data-stu-id="57035-432">Zero-Width Positive Lookbehind Assertions</span></span>  
+ <span data-ttu-id="57035-433">以下分组构造定义零宽度正回顾后发断言：</span><span class="sxs-lookup"><span data-stu-id="57035-433">The following grouping construct defines a zero-width positive lookbehind assertion:</span></span>  
   
- `(?<=` *子表达式* `)`  
+ <span data-ttu-id="57035-434">`(?<=` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-434">`(?<=` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何正则表达式模式。 若要成功匹配，则*子表达式*不得在输入字符串当前位置左侧出现，尽管 `subexpression` 未包含在匹配结果中。 零宽度正回顾后发断言不会回溯。  
+ <span data-ttu-id="57035-435">其中 *子表达式* 为任何正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-435">where *subexpression* is any regular expression pattern.</span></span> <span data-ttu-id="57035-436">若要成功匹配，则 *子表达式* 不得在输入字符串当前位置左侧出现，尽管 `subexpression` 未包含在匹配结果中。</span><span class="sxs-lookup"><span data-stu-id="57035-436">For a match to be successful, *subexpression* must occur at the input string to the left of the current position, although `subexpression` is not included in the match result.</span></span> <span data-ttu-id="57035-437">零宽度正回顾后发断言不会回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-437">A zero-width positive lookbehind assertion does not backtrack.</span></span>  
   
- 零宽度正预测后发断言通常在正则表达式的开头使用。 它们定义的模式是一个匹配的前提条件，但它不是匹配结果的一部分。  
+ <span data-ttu-id="57035-438">零宽度正预测后发断言通常在正则表达式的开头使用。</span><span class="sxs-lookup"><span data-stu-id="57035-438">Zero-width positive lookbehind assertions are typically used at the beginning of regular expressions.</span></span> <span data-ttu-id="57035-439">它们定义的模式是一个匹配的前提条件，但它不是匹配结果的一部分。</span><span class="sxs-lookup"><span data-stu-id="57035-439">The pattern that they define is a precondition for a match, although it is not a part of the match result.</span></span>  
   
- 例如，下面的示例匹配二十一世纪年份的最后两个数字（也就是说，数字“20”要在匹配的字符串之前）。  
+ <span data-ttu-id="57035-440">例如，下面的示例匹配二十一世纪年份的最后两个数字（也就是说，数字“20”要在匹配的字符串之前）。</span><span class="sxs-lookup"><span data-stu-id="57035-440">For example, the following example matches the last two digits of the year for the twenty first century (that is, it requires that the digits "20" precede the matched string).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#9](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookbehind1.cs#9)]
  [!code-vb[RegularExpressions.Language.Grouping#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookbehind1.vb#9)]  
   
- 正则表达式模式 `(?<=\b20)\d{2}\b` 的含义如下表所示。  
+ <span data-ttu-id="57035-441">正则表达式模式 `(?<=\b20)\d{2}\b` 的含义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="57035-441">The regular expression pattern `(?<=\b20)\d{2}\b` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\d{2}`|匹配两个十进制数字。|  
-|`{?<=\b20)`|如果两个十进制数字的字边界以小数位数“20”开头，则继续匹配。|  
-|`\b`|在单词边界处结束匹配。|  
+|<span data-ttu-id="57035-442">模式</span><span class="sxs-lookup"><span data-stu-id="57035-442">Pattern</span></span>|<span data-ttu-id="57035-443">描述</span><span class="sxs-lookup"><span data-stu-id="57035-443">Description</span></span>|  
+|-------------|-----------------|  
+|`\d{2}`|<span data-ttu-id="57035-444">匹配两个十进制数字。</span><span class="sxs-lookup"><span data-stu-id="57035-444">Match two decimal digits.</span></span>|  
+|`{?<=\b20)`|<span data-ttu-id="57035-445">如果两个十进制数字的字边界以小数位数“20”开头，则继续匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-445">Continue the match if the two decimal digits are preceded by the decimal digits "20" on a word boundary.</span></span>|  
+|`\b`|<span data-ttu-id="57035-446">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-446">End the match at a word boundary.</span></span>|  
   
- 零宽度正回顾后发断言还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的字符的子集时限制回溯。 例如，如果组捕获所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符时按字母顺序的。  
+ <span data-ttu-id="57035-447">零宽度正回顾后发断言还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的字符的子集时限制回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-447">Zero-width positive lookbehind assertions are also used to limit backtracking when the last character or characters in a captured group must be a subset of the characters that match that group's regular expression pattern.</span></span> <span data-ttu-id="57035-448">例如，如果组捕获所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符时按字母顺序的。</span><span class="sxs-lookup"><span data-stu-id="57035-448">For example, if a group captures all consecutive word characters, you can use a zero-width positive lookbehind assertion to require that the last character be alphabetical.</span></span>  
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>   
-## 零宽度负回顾后发断言  
- 以下组构造定义零宽度负回顾后发断言：  
+## <a name="zero-width-negative-lookbehind-assertions"></a><span data-ttu-id="57035-449">零宽度负回顾后发断言</span><span class="sxs-lookup"><span data-stu-id="57035-449">Zero-Width Negative Lookbehind Assertions</span></span>  
+ <span data-ttu-id="57035-450">以下组构造定义零宽度负回顾后发断言：</span><span class="sxs-lookup"><span data-stu-id="57035-450">The following grouping construct defines a zero-width negative lookbehind assertion:</span></span>  
   
- `(?<!` *子表达式* `)`  
+ <span data-ttu-id="57035-451">`(?<!` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-451">`(?<!` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何正则表达式模式。 若要成功匹配，则*子表达式*不得在输入字符串当前位置的左侧出现。 但是，任何不匹配 `subexpression` 的子字符串不包含在匹配结果中。  
+ <span data-ttu-id="57035-452">其中 *子表达式* 为任何正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-452">where *subexpression* is any regular expression pattern.</span></span> <span data-ttu-id="57035-453">若要成功匹配，则 *子表达式* 不得在输入字符串当前位置的左侧出现。</span><span class="sxs-lookup"><span data-stu-id="57035-453">For a match to be successful, *subexpression* must not occur at the input string to the left of the current position.</span></span> <span data-ttu-id="57035-454">但是，任何不匹配 `subexpression` 的子字符串不包含在匹配结果中。</span><span class="sxs-lookup"><span data-stu-id="57035-454">However, any substring that does not match `subexpression` is not included in the match result.</span></span>  
   
- 零宽度负回顾后发断言通常在正则表达式的开头使用。 它们定义的模式预先排除在后面的字符串中的匹配项。 它们还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的其中一个或多个字符时限制回溯。 例如，如果如果组捕获了所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符不是下划线 \(\_\)。  
+ <span data-ttu-id="57035-455">零宽度负回顾后发断言通常在正则表达式的开头使用。</span><span class="sxs-lookup"><span data-stu-id="57035-455">Zero-width negative lookbehind assertions are typically used at the beginning of regular expressions.</span></span> <span data-ttu-id="57035-456">它们定义的模式预先排除在后面的字符串中的匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-456">The pattern that they define precludes a match in the string that follows.</span></span> <span data-ttu-id="57035-457">它们还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的其中一个或多个字符时限制回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-457">They are also used to limit backtracking when the last character or characters in a captured group must not be one or more of the characters that match that group's regular expression pattern.</span></span> <span data-ttu-id="57035-458">例如，如果如果组捕获了所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符不是下划线 (_)。</span><span class="sxs-lookup"><span data-stu-id="57035-458">For example, if a group captures all consecutive word characters, you can use a zero-width positive lookbehind assertion to require that the last character not be an underscore (_).</span></span>  
   
- 下面的示例匹配除周末之外的一周的任何一天（也就是星期六和星期日都没有）。  
+ <span data-ttu-id="57035-459">下面的示例匹配除周末之外的一周的任何一天（也就是星期六和星期日都没有）。</span><span class="sxs-lookup"><span data-stu-id="57035-459">The following example matches the date for any day of the week that is not a weekend (that is, that is neither Saturday nor Sunday).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#10](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookbehind1.cs#10)]
  [!code-vb[RegularExpressions.Language.Grouping#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookbehind1.vb#10)]  
   
- 正则表达式模式 `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` 的含义如下表所示。  
+ <span data-ttu-id="57035-460">正则表达式模式 `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` 的含义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="57035-460">The regular expression pattern `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` is interpreted as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`\w+`|匹配一个或多个后跟空白字符的单词字符。|  
-|`\d{1,2},`|匹配空白字符和逗号后面的一个或两个十进制数字。|  
-|`\d{4}\b`|匹配四个十进制数字并在单词边界处结束匹配。|  
-|`(?<!(Saturday&#124;Sunday) )`|如果匹配以字符串“星期六”或者“星期日”开头，后跟一个空格，则匹配成功。|  
+|<span data-ttu-id="57035-461">模式</span><span class="sxs-lookup"><span data-stu-id="57035-461">Pattern</span></span>|<span data-ttu-id="57035-462">描述</span><span class="sxs-lookup"><span data-stu-id="57035-462">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-463">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-463">Begin the match at a word boundary.</span></span>|  
+|`\w+`|<span data-ttu-id="57035-464">匹配一个或多个后跟空白字符的单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-464">Match one or more word characters followed by a white-space character.</span></span>|  
+|`\d{1,2},`|<span data-ttu-id="57035-465">匹配空白字符和逗号后面的一个或两个十进制数字。</span><span class="sxs-lookup"><span data-stu-id="57035-465">Match either one or two decimal digits followed by a white-space character and a comma.</span></span>|  
+|`\d{4}\b`|<span data-ttu-id="57035-466">匹配四个十进制数字并在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-466">Match four decimal digits, and end the match at a word boundary.</span></span>|  
+|`(?<!(Saturday&#124;Sunday) )`|<span data-ttu-id="57035-467">如果匹配以字符串“星期六”或者“星期日”开头，后跟一个空格，则匹配成功。</span><span class="sxs-lookup"><span data-stu-id="57035-467">If the match is preceded by something other than the strings "Saturday" or "Sunday" followed by a space, the match is successful.</span></span>|  
   
 <a name="nonbacktracking_subexpression"></a>   
-## 非回溯子表达式  
- 以下分组构造表示非回溯子表达式（也称为一个“贪婪”子表达式）：  
+## <a name="nonbacktracking-subexpressions"></a><span data-ttu-id="57035-468">非回溯子表达式</span><span class="sxs-lookup"><span data-stu-id="57035-468">Nonbacktracking Subexpressions</span></span>  
+ <span data-ttu-id="57035-469">以下分组构造表示非回溯子表达式（也称为一个“贪婪”子表达式）：</span><span class="sxs-lookup"><span data-stu-id="57035-469">The following grouping construct represents a nonbacktracking subexpression (also known as a "greedy" subexpression):</span></span>  
   
- `(?>` *子表达式* `)`  
+ <span data-ttu-id="57035-470">`(?>` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="57035-470">`(?>` *subexpression* `)`</span></span>  
   
- 其中*子表达式*为任何正则表达式模式。  
+ <span data-ttu-id="57035-471">其中 *子表达式* 为任何正则表达式模式。</span><span class="sxs-lookup"><span data-stu-id="57035-471">where *subexpression* is any regular expression pattern.</span></span>  
   
- 通常，如果正则表达式包含一个可选或可替代匹配模式并且备选不成功的话，正则表达式引擎可以在多个方向上分支以将输入的字符串与某种模式进行匹配。 如果未找到使用第一个分支的匹配项，则正则表达式引擎可以备份或回溯到使用第一个匹配项的点并尝试使用第二个分支的匹配项。 此过程可继续进行，直到尝试所有分支。  
+ <span data-ttu-id="57035-472">通常，如果正则表达式包含一个可选或可替代匹配模式并且备选不成功的话，正则表达式引擎可以在多个方向上分支以将输入的字符串与某种模式进行匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-472">Ordinarily, if a regular expression includes an optional or alternative matching pattern and a match does not succeed, the regular expression engine can branch in multiple directions to match an input string with a pattern.</span></span> <span data-ttu-id="57035-473">如果未找到使用第一个分支的匹配项，则正则表达式引擎可以备份或回溯到使用第一个匹配项的点并尝试使用第二个分支的匹配项。</span><span class="sxs-lookup"><span data-stu-id="57035-473">If a match is not found when it takes the first branch, the regular expression engine can back up or backtrack to the point where it took the first match and attempt the match using the second branch.</span></span> <span data-ttu-id="57035-474">此过程可继续进行，直到尝试所有分支。</span><span class="sxs-lookup"><span data-stu-id="57035-474">This process can continue until all branches have been tried.</span></span>  
   
- `(?>` *subexpression* `)` 语言构造禁用回溯。 正则表达式引擎将在输入字符串中匹配尽可能多的字符。 在没有任何进一步匹配可用时，它将不回溯以尝试备用模式匹配。 （也就是说，该子表达式仅与可由该子表达式单独匹配的字符串匹配；子表达式不会尝试与基于该子表达式的字符串和任何该子表达式之后的子表达式匹配。）  
+ <span data-ttu-id="57035-475">仅当嵌套构造不均衡时，才应该定义 `(?>`*子表达式*`)` 语言构造禁用回溯。</span><span class="sxs-lookup"><span data-stu-id="57035-475">The `(?>`*subexpression*`)` language construct disables backtracking.</span></span> <span data-ttu-id="57035-476">正则表达式引擎将在输入字符串中匹配尽可能多的字符。</span><span class="sxs-lookup"><span data-stu-id="57035-476">The regular expression engine will match as many characters in the input string as it can.</span></span> <span data-ttu-id="57035-477">在没有任何进一步匹配可用时，它将不回溯以尝试备用模式匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-477">When no further match is possible, it will not backtrack to attempt alternate pattern matches.</span></span> <span data-ttu-id="57035-478">（也就是说，该子表达式仅与可由该子表达式单独匹配的字符串匹配；子表达式不会尝试与基于该子表达式的字符串和任何该子表达式之后的子表达式匹配。）</span><span class="sxs-lookup"><span data-stu-id="57035-478">(That is, the subexpression matches only strings that would be matched by the subexpression alone; it does not attempt to match a string based on the subexpression and any subexpressions that follow it.)</span></span>  
   
- 如果你知道回溯不会成功，则建议使用此选项。 防止正则表达式引擎执行不需要的搜索可以提高性能。  
+ <span data-ttu-id="57035-479">如果你知道回溯不会成功，则建议使用此选项。</span><span class="sxs-lookup"><span data-stu-id="57035-479">This option is recommended if you know that backtracking will not succeed.</span></span> <span data-ttu-id="57035-480">防止正则表达式引擎执行不需要的搜索可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="57035-480">Preventing the regular expression engine from performing unnecessary searching improves performance.</span></span>  
   
- 下面的示例阐释非回溯子表达式如何修改模式匹配的结果。 回溯正则表达式成功匹配一系列重复字符，在字边界上其后为相同字符，但非回溯正则表达式不会匹配。  
+ <span data-ttu-id="57035-481">下面的示例阐释非回溯子表达式如何修改模式匹配的结果。</span><span class="sxs-lookup"><span data-stu-id="57035-481">The following example illustrates how a nonbacktracking subexpression modifies the results of a pattern match.</span></span> <span data-ttu-id="57035-482">回溯正则表达式成功匹配一系列重复字符，在字边界上其后为相同字符，但非回溯正则表达式不会匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-482">The backtracking regular expression successfully matches a series of repeated characters followed by one more occurrence of the same character on a word boundary, but the nonbacktracking regular expression does not.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
- 非回溯正则表达式 `(?>(\w)\1+).\b` 的定义如下表所示。  
+ <span data-ttu-id="57035-483">非回溯正则表达式 `(?>(\w)\1+).\b` 的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="57035-483">The nonbacktracking regular expression `(?>(\w)\1+).\b` is defined as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`(\w)`|匹配单个单词字符，并将其分配给第一捕获组。|  
-|`\1+`|一次或多次匹配的第一个捕获子字符串的值。|  
-|`.`|匹配任意字符。|  
-|`\b`|在单词边界处结束匹配。|  
-|`(?>(\w)\1+)`|匹配一个重复的单词字符的一个或多个匹配项，但不执行回溯以匹配在单词边界上的最后一个字符。|  
+|<span data-ttu-id="57035-484">模式</span><span class="sxs-lookup"><span data-stu-id="57035-484">Pattern</span></span>|<span data-ttu-id="57035-485">描述</span><span class="sxs-lookup"><span data-stu-id="57035-485">Description</span></span>|  
+|-------------|-----------------|  
+|`(\w)`|<span data-ttu-id="57035-486">匹配单个单词字符，并将其分配给第一捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-486">Match a single word character and assign it to the first capturing group.</span></span>|  
+|`\1+`|<span data-ttu-id="57035-487">一次或多次匹配的第一个捕获子字符串的值。</span><span class="sxs-lookup"><span data-stu-id="57035-487">Match the value of the first captured substring one or more times.</span></span>|  
+|`.`|<span data-ttu-id="57035-488">匹配任意字符。</span><span class="sxs-lookup"><span data-stu-id="57035-488">Match any character.</span></span>|  
+|`\b`|<span data-ttu-id="57035-489">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-489">End the match on a word boundary.</span></span>|  
+|`(?>(\w)\1+)`|<span data-ttu-id="57035-490">匹配一个重复的单词字符的一个或多个匹配项，但不执行回溯以匹配在单词边界上的最后一个字符。</span><span class="sxs-lookup"><span data-stu-id="57035-490">Match one or more occurrences of a duplicated word character, but do not backtrack to match the last character on a word boundary.</span></span>|  
   
 <a name="Objects"></a>   
-## 分组构造和正则表达式对象  
- 由正则表达式捕获组匹配的子字符串由 <xref:System.Text.RegularExpressions.Group?displayProperty=fullName> 对象表示，其从 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=fullName> 对象检索，其由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName> 属性返回。 填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象，如下所示：  
+## <a name="grouping-constructs-and-regular-expression-objects"></a><span data-ttu-id="57035-491">分组构造和正则表达式对象</span><span class="sxs-lookup"><span data-stu-id="57035-491">Grouping Constructs and Regular Expression Objects</span></span>  
+ <span data-ttu-id="57035-492">由正则表达式捕获组匹配的子字符串由 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 对象表示，其从 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 对象检索，其由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-492">Substrings that are matched by a regular expression capturing group are represented by <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> objects, which can be retrieved from the <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> object that is returned by the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="57035-493">填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象，如下所示：</span><span class="sxs-lookup"><span data-stu-id="57035-493">The <xref:System.Text.RegularExpressions.GroupCollection> object is populated as follows:</span></span>  
   
--   集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。  
+-   <span data-ttu-id="57035-494">集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-494">The first <xref:System.Text.RegularExpressions.Group> object in the collection (the object at index zero) represents the entire match.</span></span>  
   
--   下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见[反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
+-   <span data-ttu-id="57035-495">下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-495">The next set of <xref:System.Text.RegularExpressions.Group> objects represent unnamed (numbered) capturing groups.</span></span> <span data-ttu-id="57035-496">它们以在正则表达式中定义的顺序出现，从左至右。</span><span class="sxs-lookup"><span data-stu-id="57035-496">They appear in the order in which they are defined in the regular expression, from left to right.</span></span> <span data-ttu-id="57035-497">这些组的索引值范围从 1 到集合中未命名捕获组的数目。</span><span class="sxs-lookup"><span data-stu-id="57035-497">The index values of these groups range from 1 to the number of unnamed capturing groups in the collection.</span></span> <span data-ttu-id="57035-498">（特定组索引等效于其带编号的反向引用。</span><span class="sxs-lookup"><span data-stu-id="57035-498">(The index of a particular group is equivalent to its numbered backreference.</span></span> <span data-ttu-id="57035-499">有关向后引用的更多信息，请参见 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）</span><span class="sxs-lookup"><span data-stu-id="57035-499">For more information about backreferences, see [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)</span></span>  
   
--   最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
+-   <span data-ttu-id="57035-500">最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-500">The final set of <xref:System.Text.RegularExpressions.Group> objects represent named capturing groups.</span></span> <span data-ttu-id="57035-501">它们以在正则表达式中定义的顺序出现，从左至右。</span><span class="sxs-lookup"><span data-stu-id="57035-501">They appear in the order in which they are defined in the regular expression, from left to right.</span></span> <span data-ttu-id="57035-502">第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。</span><span class="sxs-lookup"><span data-stu-id="57035-502">The index value of the first named capturing group is one greater than the index of the last unnamed capturing group.</span></span> <span data-ttu-id="57035-503">如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。</span><span class="sxs-lookup"><span data-stu-id="57035-503">If there are no unnamed capturing groups in the regular expression, the index value of the first named capturing group is one.</span></span>  
   
- 如果将限定符应用于捕获组，则对应的 <xref:System.Text.RegularExpressions.Group> 对象的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=fullName>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=fullName> 和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=fullName> 属性反映捕获组捕获的最后一个子字符串。 可以检索一整组子字符串，其是按组捕获的并具有来自 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的限定符，其由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> 属性返回。  
+ <span data-ttu-id="57035-504">如果将限定符应用于捕获组，则对应的 <xref:System.Text.RegularExpressions.Group> 对象的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 属性反映捕获组捕获的最后一个子字符串。</span><span class="sxs-lookup"><span data-stu-id="57035-504">If you apply a quantifier to a capturing group, the corresponding <xref:System.Text.RegularExpressions.Group> object's <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>, and <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> properties reflect the last substring that is captured by a capturing group.</span></span> <span data-ttu-id="57035-505">可以检索一整组子字符串，其是按组捕获的并具有来自 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的限定符，其由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-505">You can retrieve a complete set of substrings that are captured by groups that have quantifiers from the <xref:System.Text.RegularExpressions.CaptureCollection> object that is returned by the <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> property.</span></span>  
   
- 下面的示例阐释 <xref:System.Text.RegularExpressions.Group> 和 <xref:System.Text.RegularExpressions.Capture> 对象之间的关系。  
+ <span data-ttu-id="57035-506">下面的示例阐释 <xref:System.Text.RegularExpressions.Group> 和 <xref:System.Text.RegularExpressions.Capture> 对象之间的关系。</span><span class="sxs-lookup"><span data-stu-id="57035-506">The following example clarifies the relationship between the <xref:System.Text.RegularExpressions.Group> and <xref:System.Text.RegularExpressions.Capture> objects.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- 正则表达式模式 `\b(\w+)\W+)+` 从字符串提取各个单词。 其定义如下表所示。  
+ <span data-ttu-id="57035-507">正则表达式模式 `\b(\w+)\W+)+` 从字符串提取各个单词。</span><span class="sxs-lookup"><span data-stu-id="57035-507">The regular expression pattern `\b(\w+)\W+)+` extracts individual words from a string.</span></span> <span data-ttu-id="57035-508">其定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="57035-508">It is defined as shown in the following table.</span></span>  
   
-|模式|描述|  
-|--------|--------|  
-|`\b`|在单词边界处开始匹配。|  
-|`(\w+)`|匹配一个或多个单词字符。 这些字符一起构成一个单词。 这是第二个捕获组。|  
-|`\W+`|匹配一个或多个非单词字符。|  
-|`(\w+)\W+)+`|一次或多次匹配跟在一个或多个非单词字符后面的一个或多个单词字符的模式。 这是第一个捕获组。|  
+|<span data-ttu-id="57035-509">模式</span><span class="sxs-lookup"><span data-stu-id="57035-509">Pattern</span></span>|<span data-ttu-id="57035-510">描述</span><span class="sxs-lookup"><span data-stu-id="57035-510">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="57035-511">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="57035-511">Begin the match at a word boundary.</span></span>|  
+|`(\w+)`|<span data-ttu-id="57035-512">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-512">Match one or more word characters.</span></span> <span data-ttu-id="57035-513">这些字符一起构成一个单词。</span><span class="sxs-lookup"><span data-stu-id="57035-513">Together, these characters form a word.</span></span> <span data-ttu-id="57035-514">这是第二个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-514">This is the second capturing group.</span></span>|  
+|`\W+`|<span data-ttu-id="57035-515">匹配一个或多个非单词字符。</span><span class="sxs-lookup"><span data-stu-id="57035-515">Match one or more non-word characters.</span></span>|  
+|`(\w+)\W+)+`|<span data-ttu-id="57035-516">一次或多次匹配跟在一个或多个非单词字符后面的一个或多个单词字符的模式。</span><span class="sxs-lookup"><span data-stu-id="57035-516">Match the pattern of one or more word characters followed by one or more non-word characters one or more times.</span></span> <span data-ttu-id="57035-517">这是第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="57035-517">This is the first capturing group.</span></span>|  
   
- 第一个捕获组匹配句子的每个单词。 第二个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。<xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。 可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> 属性返回。  
+ <span data-ttu-id="57035-518">第一个捕获组匹配句子的每个单词。</span><span class="sxs-lookup"><span data-stu-id="57035-518">The first capturing group matches each word of the sentence.</span></span> <span data-ttu-id="57035-519">第二个捕获组匹配每个单词，连同标点符号和该单词后的空白区域。</span><span class="sxs-lookup"><span data-stu-id="57035-519">The second capturing group matches each word along with the punctuation and white space that follow the word.</span></span> <span data-ttu-id="57035-520"><xref:System.Text.RegularExpressions.Group> 对象的索引是 2，提供了有关由第二个捕获组匹配的文本的信息。</span><span class="sxs-lookup"><span data-stu-id="57035-520">The <xref:System.Text.RegularExpressions.Group> object whose index is 2 provides information about the text matched by the second capturing group.</span></span> <span data-ttu-id="57035-521">可从 <xref:System.Text.RegularExpressions.CaptureCollection> 对象获取捕获组捕获的整组单词，该对象由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="57035-521">The complete set of words captured by the capturing group are available from the <xref:System.Text.RegularExpressions.CaptureCollection> object returned by the <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> property.</span></span>  
   
-## 请参阅  
- [正则表达式语言 \- 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="57035-522">另请参阅</span><span class="sxs-lookup"><span data-stu-id="57035-522">See Also</span></span>  
+ [<span data-ttu-id="57035-523">正则表达式语言 - 快速参考</span><span class="sxs-lookup"><span data-stu-id="57035-523">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="57035-524">回溯</span><span class="sxs-lookup"><span data-stu-id="57035-524">Backtracking</span></span>](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

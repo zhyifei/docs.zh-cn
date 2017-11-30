@@ -1,106 +1,86 @@
 ---
 title: "创建和使用组件 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- components [Visual Basic]
+helpviewer_keywords: components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
-组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
+# <a name="creating-and-using-components-in-visual-basic"></a><span data-ttu-id="5d8de-102">创建和使用组件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d8de-102">Creating and Using Components in Visual Basic</span></span>
+<span data-ttu-id="5d8de-103">组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-103">A *component* is a class that implements the <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interface or that derives directly or indirectly from a class that implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="5d8de-104">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。</span><span class="sxs-lookup"><span data-stu-id="5d8de-104">A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.</span></span>  
   
- 组件的一个重要特性在于它们是可设计的，这意味着可以在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，对组件的基本设计时支持已内置于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。  
+ <span data-ttu-id="5d8de-105">组件的一个重要特性在于它们是可设计的，这意味着可以在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境中使用作为组件的类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-105">An important feature of components is that they are designable, which means that a class that is a component can be used in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Integrated Development Environment.</span></span> <span data-ttu-id="5d8de-106">可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。</span><span class="sxs-lookup"><span data-stu-id="5d8de-106">A component can be added to the Toolbox, dragged and dropped onto a form, and manipulated on a design surface.</span></span> <span data-ttu-id="5d8de-107">请注意，对组件的基本设计时支持已内置于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。</span><span class="sxs-lookup"><span data-stu-id="5d8de-107">Notice that base design-time support for components is built into the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; a component developer does not have to do any additional work to take advantage of the base design-time functionality.</span></span>  
   
- 控件与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
+ <span data-ttu-id="5d8de-108">控件与组件类似，二者都是可设计的。</span><span class="sxs-lookup"><span data-stu-id="5d8de-108">A *control* is similar to a component, as both are designable.</span></span> <span data-ttu-id="5d8de-109">不过，控件提供用户界面，而组件不提供。</span><span class="sxs-lookup"><span data-stu-id="5d8de-109">However, a control provides a user interface, while a component does not.</span></span> <span data-ttu-id="5d8de-110">控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-110">A control must derive from one of the base control classes: <xref:System.Windows.Forms.Control> or <xref:System.Web.UI.Control>.</span></span>  
   
-## <a name="when-to-create-a-component"></a>创建组件的时间  
- 如果类将在设计图面（如 Windows 窗体设计器或 Web 窗体设计器）上使用，但没有用户界面，此类应该是一个组件并实现 <xref:System.ComponentModel.IComponent>，或者是从直接或间接实现 <xref:System.ComponentModel.IComponent> 的类派生的。  
+## <a name="when-to-create-a-component"></a><span data-ttu-id="5d8de-111">创建组件的时间</span><span class="sxs-lookup"><span data-stu-id="5d8de-111">When to Create a Component</span></span>  
+ <span data-ttu-id="5d8de-112">如果类将在设计图面（如 Windows 窗体设计器或 Web 窗体设计器）上使用，但没有用户界面，此类应该是一个组件并实现 <xref:System.ComponentModel.IComponent>，或者是从直接或间接实现 <xref:System.ComponentModel.IComponent> 的类派生的。</span><span class="sxs-lookup"><span data-stu-id="5d8de-112">If your class will be used on a design surface (such as the Windows Forms or Web Forms Designer) but has no user interface, it should be a component and implement <xref:System.ComponentModel.IComponent>, or derive from a class that directly or indirectly implements <xref:System.ComponentModel.IComponent>.</span></span>  
   
- <xref:System.ComponentModel.Component> 和 <xref:System.ComponentModel.MarshalByValueComponent> 类是 <xref:System.ComponentModel.IComponent> 接口的基实现。 这些类之间的主要区别在于 <xref:System.ComponentModel.Component> 类由引用封送，而 <xref:System.ComponentModel.IComponent> 由值封送。 以下列表为实施者提供了全面的指南。  
+ <span data-ttu-id="5d8de-113"><xref:System.ComponentModel.Component> 和 <xref:System.ComponentModel.MarshalByValueComponent> 类是 <xref:System.ComponentModel.IComponent> 接口的基实现。</span><span class="sxs-lookup"><span data-stu-id="5d8de-113">The <xref:System.ComponentModel.Component> and <xref:System.ComponentModel.MarshalByValueComponent> classes are base implementations of the <xref:System.ComponentModel.IComponent> interface.</span></span> <span data-ttu-id="5d8de-114">这些类之间的主要区别在于 <xref:System.ComponentModel.Component> 类由引用封送，而 <xref:System.ComponentModel.IComponent> 由值封送。</span><span class="sxs-lookup"><span data-stu-id="5d8de-114">The main difference between these classes is that the <xref:System.ComponentModel.Component> class is marshaled by reference, while <xref:System.ComponentModel.IComponent> is marshaled by value.</span></span> <span data-ttu-id="5d8de-115">以下列表为实施者提供了全面的指南。</span><span class="sxs-lookup"><span data-stu-id="5d8de-115">The following list provides broad guidelines for implementers.</span></span>  
   
--   如果组件需要由引用封送，请从 <xref:System.ComponentModel.Component> 派生。  
+-   <span data-ttu-id="5d8de-116">如果组件需要由引用封送，请从 <xref:System.ComponentModel.Component> 派生。</span><span class="sxs-lookup"><span data-stu-id="5d8de-116">If your component needs to be marshaled by reference, derive from <xref:System.ComponentModel.Component>.</span></span>  
   
--   如果组件需要由值封送，请从 <xref:System.ComponentModel.MarshalByValueComponent> 派生。  
+-   <span data-ttu-id="5d8de-117">如果组件需要由值封送，请从 <xref:System.ComponentModel.MarshalByValueComponent> 派生。</span><span class="sxs-lookup"><span data-stu-id="5d8de-117">If your component needs to be marshaled by value, derive from <xref:System.ComponentModel.MarshalByValueComponent>.</span></span>  
   
--   如果因单一继承导致无法从其中一个基实现派生组件，则请实现 <xref:System.ComponentModel.IComponent>。  
+-   <span data-ttu-id="5d8de-118">如果因单一继承导致无法从其中一个基实现派生组件，则请实现 <xref:System.ComponentModel.IComponent>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-118">If your component cannot derive from one of the base implementations due to single inheritance, implement <xref:System.ComponentModel.IComponent>.</span></span>  
   
- 有关设计时支持的详细信息，请参阅[组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)和[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)。  
+ <span data-ttu-id="5d8de-119">有关设计时支持的详细信息，请参阅[组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)和[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)。</span><span class="sxs-lookup"><span data-stu-id="5d8de-119">For more information about design-time support, see [Design-Time Attributes for Components](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) and [Extending Design-Time Support](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).</span></span>  
   
-## <a name="component-classes"></a>组件类  
- <xref:System.ComponentModel> 命名空间提供用于实现组件和控件的运行时和设计时行为的类。 此命名空间包括用于特性和类型转换器的实现、数据源绑定和组件授权的基类和接口。  
+## <a name="component-classes"></a><span data-ttu-id="5d8de-120">组件类</span><span class="sxs-lookup"><span data-stu-id="5d8de-120">Component Classes</span></span>  
+ <span data-ttu-id="5d8de-121"><xref:System.ComponentModel> 命名空间提供用于实现组件和控件的运行时和设计时行为的类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-121">The <xref:System.ComponentModel> namespace provides classes that are used to implement the run-time and design-time behavior of components and controls.</span></span> <span data-ttu-id="5d8de-122">此命名空间包括用于特性和类型转换器的实现、数据源绑定和组件授权的基类和接口。</span><span class="sxs-lookup"><span data-stu-id="5d8de-122">This namespace includes the base classes and interfaces for implementing attributes and type converters, binding to data sources, and licensing components.</span></span>  
   
- 核心组件类包括：  
+ <span data-ttu-id="5d8de-123">核心组件类包括：</span><span class="sxs-lookup"><span data-stu-id="5d8de-123">The core component classes are:</span></span>  
   
--   <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
+-   <span data-ttu-id="5d8de-124"><xref:System.ComponentModel.Component>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-124"><xref:System.ComponentModel.Component>.</span></span> <span data-ttu-id="5d8de-125"><xref:System.ComponentModel.IComponent> 接口的基实现。</span><span class="sxs-lookup"><span data-stu-id="5d8de-125">A base implementation for the <xref:System.ComponentModel.IComponent> interface.</span></span> <span data-ttu-id="5d8de-126">此类可以实现在应用程序之间共享对象。</span><span class="sxs-lookup"><span data-stu-id="5d8de-126">This class enables object sharing between applications.</span></span>  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的基实现。  
+-   <span data-ttu-id="5d8de-127"><xref:System.ComponentModel.MarshalByValueComponent>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-127"><xref:System.ComponentModel.MarshalByValueComponent>.</span></span> <span data-ttu-id="5d8de-128"><xref:System.ComponentModel.IComponent> 接口的基实现。</span><span class="sxs-lookup"><span data-stu-id="5d8de-128">A base implementation for the <xref:System.ComponentModel.IComponent> interface.</span></span>  
   
--   <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
+-   <span data-ttu-id="5d8de-129"><xref:System.ComponentModel.Container>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-129"><xref:System.ComponentModel.Container>.</span></span> <span data-ttu-id="5d8de-130"><xref:System.ComponentModel.IContainer> 接口的基实现。</span><span class="sxs-lookup"><span data-stu-id="5d8de-130">The base implementation for the <xref:System.ComponentModel.IContainer> interface.</span></span> <span data-ttu-id="5d8de-131">此类封装零个或多个组件。</span><span class="sxs-lookup"><span data-stu-id="5d8de-131">This class encapsulates zero or more components.</span></span>  
   
- 部分用于组件授权的类包括：  
+ <span data-ttu-id="5d8de-132">部分用于组件授权的类包括：</span><span class="sxs-lookup"><span data-stu-id="5d8de-132">Some of the classes used for component licensing are:</span></span>  
   
--   <xref:System.ComponentModel.License>。 所有许可证的抽象基类。 对组件的特定实例授予许可证。  
+-   <span data-ttu-id="5d8de-133"><xref:System.ComponentModel.License>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-133"><xref:System.ComponentModel.License>.</span></span> <span data-ttu-id="5d8de-134">所有许可证的抽象基类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-134">The abstract base class for all licenses.</span></span> <span data-ttu-id="5d8de-135">对组件的特定实例授予许可证。</span><span class="sxs-lookup"><span data-stu-id="5d8de-135">A license is granted to a specific instance of a component.</span></span>  
   
--   <xref:System.ComponentModel.LicenseManager>。 提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。  
+-   <span data-ttu-id="5d8de-136"><xref:System.ComponentModel.LicenseManager>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-136"><xref:System.ComponentModel.LicenseManager>.</span></span> <span data-ttu-id="5d8de-137">提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-137">Provides properties and methods to add a license to a component and to manage a <xref:System.ComponentModel.LicenseProvider>.</span></span>  
   
--   <xref:System.ComponentModel.LicenseProvider>。 实现许可证提供程序的抽象基类。  
+-   <span data-ttu-id="5d8de-138"><xref:System.ComponentModel.LicenseProvider>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-138"><xref:System.ComponentModel.LicenseProvider>.</span></span> <span data-ttu-id="5d8de-139">实现许可证提供程序的抽象基类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-139">The abstract base class for implementing a license provider.</span></span>  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>。 指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。  
+-   <span data-ttu-id="5d8de-140"><xref:System.ComponentModel.LicenseProviderAttribute>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-140"><xref:System.ComponentModel.LicenseProviderAttribute>.</span></span> <span data-ttu-id="5d8de-141">指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-141">Specifies the <xref:System.ComponentModel.LicenseProvider> class to use with a class.</span></span>  
   
- 常用于描述和保存组件的类。  
+ <span data-ttu-id="5d8de-142">常用于描述和保存组件的类。</span><span class="sxs-lookup"><span data-stu-id="5d8de-142">Classes commonly used for describing and persisting components.</span></span>  
   
--   <xref:System.ComponentModel.TypeDescriptor>。 提供有关组件特征的信息，如组件的特性、属性和事件。  
+-   <span data-ttu-id="5d8de-143"><xref:System.ComponentModel.TypeDescriptor>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-143"><xref:System.ComponentModel.TypeDescriptor>.</span></span> <span data-ttu-id="5d8de-144">提供有关组件特征的信息，如组件的特性、属性和事件。</span><span class="sxs-lookup"><span data-stu-id="5d8de-144">Provides information about the characteristics for a component, such as its attributes, properties, and events.</span></span>  
   
--   <xref:System.ComponentModel.EventDescriptor>。 提供有关事件的信息。  
+-   <span data-ttu-id="5d8de-145"><xref:System.ComponentModel.EventDescriptor>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-145"><xref:System.ComponentModel.EventDescriptor>.</span></span> <span data-ttu-id="5d8de-146">提供有关事件的信息。</span><span class="sxs-lookup"><span data-stu-id="5d8de-146">Provides information about an event.</span></span>  
   
--   <xref:System.ComponentModel.PropertyDescriptor>。 提供有关属性的信息。  
+-   <span data-ttu-id="5d8de-147"><xref:System.ComponentModel.PropertyDescriptor>。</span><span class="sxs-lookup"><span data-stu-id="5d8de-147"><xref:System.ComponentModel.PropertyDescriptor>.</span></span> <span data-ttu-id="5d8de-148">提供有关属性的信息。</span><span class="sxs-lookup"><span data-stu-id="5d8de-148">Provides information about a property.</span></span>  
   
-## <a name="related-sections"></a>相关章节  
- [类、组件和控件](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- 定义组件和控件，并讨论二者与类之间的区别。  
+## <a name="related-sections"></a><span data-ttu-id="5d8de-149">相关章节</span><span class="sxs-lookup"><span data-stu-id="5d8de-149">Related Sections</span></span>  
+ [<span data-ttu-id="5d8de-150">类、组件和控件</span><span class="sxs-lookup"><span data-stu-id="5d8de-150">Class vs. Component vs. Control</span></span>](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
+ <span data-ttu-id="5d8de-151">定义组件和控件，并讨论二者与类之间的区别。</span><span class="sxs-lookup"><span data-stu-id="5d8de-151">Defines *component* and *control*, and discusses the differences between them and classes.</span></span>  
   
- [组件创作](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- 组件入门路线图。  
+ [<span data-ttu-id="5d8de-152">组件创作</span><span class="sxs-lookup"><span data-stu-id="5d8de-152">Component Authoring</span></span>](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ <span data-ttu-id="5d8de-153">组件入门路线图。</span><span class="sxs-lookup"><span data-stu-id="5d8de-153">Roadmap for getting started with components.</span></span>  
   
- [组件创作演练](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- 链接到提供组件编程的分步说明的主题。  
+ [<span data-ttu-id="5d8de-154">组件创作演练</span><span class="sxs-lookup"><span data-stu-id="5d8de-154">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ <span data-ttu-id="5d8de-155">链接到提供组件编程的分步说明的主题。</span><span class="sxs-lookup"><span data-stu-id="5d8de-155">Links to topics that provide step-by-step instruction for component programming.</span></span>  
   
- [组件类](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- 描述什么使类成为组件、公开组件功能的方法、控制对组件的访问以及控制如何创建组件实例。  
+ [<span data-ttu-id="5d8de-156">组件类</span><span class="sxs-lookup"><span data-stu-id="5d8de-156">Component Classes</span></span>](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
+ <span data-ttu-id="5d8de-157">描述什么使类成为组件、公开组件功能的方法、控制对组件的访问以及控制如何创建组件实例。</span><span class="sxs-lookup"><span data-stu-id="5d8de-157">Describes what makes a class a component, ways to expose component functionality, controlling access to components, and controlling how component instances are created.</span></span>  
   
- [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- 解释如何解决常见问题。  
+ [<span data-ttu-id="5d8de-158">控件和组件创作疑难解答</span><span class="sxs-lookup"><span data-stu-id="5d8de-158">Troubleshooting Control and Component Authoring</span></span>](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ <span data-ttu-id="5d8de-159">解释如何解决常见问题。</span><span class="sxs-lookup"><span data-stu-id="5d8de-159">Explains how to fix common problems.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [如何：在 Windows 窗体中访问设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
- [如何：在设计模式下扩展控件的外观和行为](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
- [如何：在设计模式下执行控件的自定义初始化](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
-
+## <a name="see-also"></a><span data-ttu-id="5d8de-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5d8de-160">See Also</span></span>  
+ [<span data-ttu-id="5d8de-161">如何： 访问 Windows 窗体中的设计时支持</span><span class="sxs-lookup"><span data-stu-id="5d8de-161">How to: Access Design-Time Support in Windows Forms</span></span>](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
+ [<span data-ttu-id="5d8de-162">如何： 扩展的外观和行为的控件在设计模式下</span><span class="sxs-lookup"><span data-stu-id="5d8de-162">How to: Extend the Appearance and Behavior of Controls in Design Mode</span></span>](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
+ [<span data-ttu-id="5d8de-163">如何：在设计模式下执行控件的自定义初始化</span><span class="sxs-lookup"><span data-stu-id="5d8de-163">How to: Perform Custom Initialization for Controls in Design Mode</span></span>](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)

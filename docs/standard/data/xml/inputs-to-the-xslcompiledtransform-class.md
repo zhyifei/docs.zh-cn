@@ -1,64 +1,65 @@
 ---
-title: "XslCompiledTransform 类的输入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XslCompiledTransform 类的输入"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 97d636583393ab856a9c17af4c974c53fbde5767
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# XslCompiledTransform 类的输入
-<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。  
+# <a name="inputs-to-the-xslcompiledtransform-class"></a><span data-ttu-id="15349-102">XslCompiledTransform 类的输入</span><span class="sxs-lookup"><span data-stu-id="15349-102">Inputs to the XslCompiledTransform Class</span></span>
+<span data-ttu-id="15349-103"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。</span><span class="sxs-lookup"><span data-stu-id="15349-103">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method accepts three input types for the source document: an object that implements the <xref:System.Xml.XPath.IXPathNavigable> interface, an <xref:System.Xml.XmlReader> object that reads the source document, or a string URI.</span></span>  
   
 > [!NOTE]
->  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。  这符合 W3C XSLT 1.0 建议的第 3.4 节（第 3.4 节，http:\/\/www.w3.org\/TR\/xslt.html\#strip）。  
+>  <span data-ttu-id="15349-104">默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类保留空白。</span><span class="sxs-lookup"><span data-stu-id="15349-104">The <xref:System.Xml.Xsl.XslCompiledTransform> class preserves white space by default.</span></span> <span data-ttu-id="15349-105">这符合 W3C XSLT 1.0 建议的第 3.4 节（第 3.4 节，http://www.w3.org/TR/xslt.html#strip）。</span><span class="sxs-lookup"><span data-stu-id="15349-105">This is in accordance with section 3.4 of the W3C XSLT 1.0 recommendation (section 3.4, http://www.w3.org/TR/xslt.html#strip).</span></span>  
   
-## IXPathNavigable 接口  
- <xref:System.Xml.XPath.IXPathNavigable> 接口在 <xref:System.Xml.XmlNode> 和 <xref:System.Xml.XPath.XPathDocument> 类中实现。  这两个类表示 XML 数据的内存中缓存。  
+## <a name="ixpathnavigable-interface"></a><span data-ttu-id="15349-106">IXPathNavigable 接口</span><span class="sxs-lookup"><span data-stu-id="15349-106">IXPathNavigable Interface</span></span>  
+ <span data-ttu-id="15349-107"><xref:System.Xml.XPath.IXPathNavigable> 接口在 <xref:System.Xml.XmlNode> 和 <xref:System.Xml.XPath.XPathDocument> 类中实现。</span><span class="sxs-lookup"><span data-stu-id="15349-107">The <xref:System.Xml.XPath.IXPathNavigable> interface is implemented in the <xref:System.Xml.XmlNode> and <xref:System.Xml.XPath.XPathDocument> classes.</span></span> <span data-ttu-id="15349-108">这两个类表示 XML 数据的内存中缓存。</span><span class="sxs-lookup"><span data-stu-id="15349-108">These classes represent an in-memory cache of XML data.</span></span>  
   
--   <xref:System.Xml.XmlNode> 类基于 W3C 文档对象模型 \(DOM\) 并具有编辑功能。  
+-   <span data-ttu-id="15349-109"><xref:System.Xml.XmlNode> 类基于 W3C 文档对象模型 (DOM) 并具有编辑功能。</span><span class="sxs-lookup"><span data-stu-id="15349-109">The <xref:System.Xml.XmlNode> class is based on the W3C Document Object Model (DOM) and includes editing capabilities.</span></span>  
   
--   <xref:System.Xml.XPath.XPathDocument> 类是基于 XPath 数据模型的只读数据存储。  <xref:System.Xml.XPath.XPathDocument> 是 XSLT 处理建议使用的类。  与 <xref:System.Xml.XmlNode> 类相比，此类的性能更强。  
+-   <span data-ttu-id="15349-110"><xref:System.Xml.XPath.XPathDocument> 类是基于 XPath 数据模型的只读数据存储。</span><span class="sxs-lookup"><span data-stu-id="15349-110">The <xref:System.Xml.XPath.XPathDocument> class is a read-only data store based on the XPath data model.</span></span> <span data-ttu-id="15349-111"><xref:System.Xml.XPath.XPathDocument> 是 XSLT 处理建议使用的类。</span><span class="sxs-lookup"><span data-stu-id="15349-111"><xref:System.Xml.XPath.XPathDocument> is the recommended class for XSLT processing.</span></span> <span data-ttu-id="15349-112">与 <xref:System.Xml.XmlNode> 类相比，此类的性能更强。</span><span class="sxs-lookup"><span data-stu-id="15349-112">It provides faster performance when compared to the <xref:System.Xml.XmlNode> class.</span></span>  
   
 > [!NOTE]
->  转换将应用于整个文档。  换句话说，如果您传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。  若要转换节点片段，必须创建一个仅包含节点片段的对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  有关详细信息，请参阅[如何：转换节点片断](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)。  
+>  <span data-ttu-id="15349-113">转换将应用于整个文档。</span><span class="sxs-lookup"><span data-stu-id="15349-113">Transformations apply to the document as a whole.</span></span> <span data-ttu-id="15349-114">换句话说，如果您传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。</span><span class="sxs-lookup"><span data-stu-id="15349-114">In other words, if you pass in a node other than the document root node, this does not prevent the transformation process from accessing all nodes in the loaded document.</span></span> <span data-ttu-id="15349-115">若要转换节点片段，必须创建一个仅包含节点片段的对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="15349-115">To transform a node fragment, you must create an object containing just the node fragment, and pass that object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="15349-116">有关详细信息，请参阅[如何： 转换节点片断](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)。</span><span class="sxs-lookup"><span data-stu-id="15349-116">For more information, see [How to: Transform a Node Fragment](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).</span></span>  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。  books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ <span data-ttu-id="15349-117">下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。</span><span class="sxs-lookup"><span data-stu-id="15349-117">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="15349-118">本主题中找不到的 books.xml 和 transform.xsl 文件：[如何： 通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="15349-118">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
-## XmlReader 对象  
- <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法从 <xref:System.Xml.XmlReader> 的当前节点及其所有子节点加载。  这样，可以使用文档的一部分作为上下文文档使用。  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法返回后，<xref:System.Xml.XmlReader> 将位于上下文文档结尾之后的下一个节点上。  如果已到达文档结尾，<xref:System.Xml.XmlReader> 将位于文件结尾 \(EOF\)。  
+## <a name="xmlreader-object"></a><span data-ttu-id="15349-119">XmlReader 对象</span><span class="sxs-lookup"><span data-stu-id="15349-119">XmlReader Object</span></span>  
+ <span data-ttu-id="15349-120"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法从 <xref:System.Xml.XmlReader> 的当前节点及其所有子节点加载。</span><span class="sxs-lookup"><span data-stu-id="15349-120">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method loads from the current node of the <xref:System.Xml.XmlReader> through all its children.</span></span> <span data-ttu-id="15349-121">这样，可以使用文档的一部分作为上下文文档使用。</span><span class="sxs-lookup"><span data-stu-id="15349-121">This enables you to use a portion of a document as the context document.</span></span> <span data-ttu-id="15349-122"><xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法返回后，<xref:System.Xml.XmlReader> 将位于上下文文档结尾之后的下一个节点上。</span><span class="sxs-lookup"><span data-stu-id="15349-122">After the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method returns, the <xref:System.Xml.XmlReader> is positioned on the next node after the end of the context document.</span></span> <span data-ttu-id="15349-123">如果已到达文档结尾，<xref:System.Xml.XmlReader> 将位于文件结尾 (EOF)。</span><span class="sxs-lookup"><span data-stu-id="15349-123">If the end of the document is reached, the <xref:System.Xml.XmlReader> is positioned at the end of file (EOF).</span></span>  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。  books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ <span data-ttu-id="15349-124">下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。</span><span class="sxs-lookup"><span data-stu-id="15349-124">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="15349-125">本主题中找不到的 books.xml 和 transform.xsl 文件：[如何： 通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="15349-125">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
-## 字符串 URI  
- 还可以将源文档 URI 指定为 XSLT 输入。  <xref:System.Xml.XmlResolver> 用于解析 URI。  可以指定要使用的 <xref:System.Xml.XmlResolver>，方法是将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  如果未指定 <xref:System.Xml.XmlResolver>，<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法将使用没有凭据的默认 <xref:System.Xml.XmlUrlResolver>。  
+## <a name="string-uri"></a><span data-ttu-id="15349-126">字符串 URI</span><span class="sxs-lookup"><span data-stu-id="15349-126">String URI</span></span>  
+ <span data-ttu-id="15349-127">还可以将源文档 URI 指定为 XSLT 输入。</span><span class="sxs-lookup"><span data-stu-id="15349-127">You can also specify the source document URI as your XSLT input.</span></span> <span data-ttu-id="15349-128"><xref:System.Xml.XmlResolver> 用于解析 URI。</span><span class="sxs-lookup"><span data-stu-id="15349-128">An <xref:System.Xml.XmlResolver> is used to resolve the URI.</span></span> <span data-ttu-id="15349-129">可以指定要使用的 <xref:System.Xml.XmlResolver>，方法是将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="15349-129">You can specify the <xref:System.Xml.XmlResolver> to use by passing it to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="15349-130">如果未指定 <xref:System.Xml.XmlResolver>，<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法将使用没有凭据的默认 <xref:System.Xml.XmlUrlResolver>。</span><span class="sxs-lookup"><span data-stu-id="15349-130">If an <xref:System.Xml.XmlResolver> is not specified, the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method uses a default <xref:System.Xml.XmlUrlResolver> with no credentials.</span></span>  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。  books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ <span data-ttu-id="15349-131">下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。</span><span class="sxs-lookup"><span data-stu-id="15349-131">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="15349-132">本主题中找不到的 books.xml 和 transform.xsl 文件：[如何： 通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="15349-132">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  
   
- 有关详细信息，请参阅[在 XSLT 处理期间解析外部资源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)。  
+ <span data-ttu-id="15349-133">有关详细信息，请参阅[解析外部资源在 XSLT 处理](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)。</span><span class="sxs-lookup"><span data-stu-id="15349-133">For more information, see [Resolving External Resources During XSLT Processing](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).</span></span>  
   
-## 请参阅  
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="15349-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="15349-134">See Also</span></span>  
+ [<span data-ttu-id="15349-135">XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="15349-135">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

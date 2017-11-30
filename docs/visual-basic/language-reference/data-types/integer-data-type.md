@@ -1,62 +1,82 @@
 ---
-title: "Integer 数据类型 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Integer"
-  - "Integer"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "% 标识符类型字符"
-  - "数据类型 [Visual Basic], 分配"
-  - "数据类型 [Visual Basic], 整数"
-  - "枚举值"
-  - "I 文本类型字符"
-  - "标识符类型字符串, %"
-  - "Integer 数据类型"
-  - "整数数字"
-  - "整数, 数据类型"
-  - "整数, 类型"
-  - "整数数据类型"
-  - "文本类型的字符, I"
-  - "数字, integer"
-  - "数字, 整个"
-  - "整数"
+title: "Integer 数据类型 (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Integer
+- Integer
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- enumerated values [Visual Basic]
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- literal type characters [Visual Basic], I
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- '% identifier type character'
+- data types [Visual Basic], assigning
+- identifier type characters [Visual Basic], %
+- I literal type character [Visual Basic]
+- Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 69c7fb6caf5d9a10c7d033d1ba0a05c9230d472c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Integer 数据类型 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="integer-data-type-visual-basic"></a><span data-ttu-id="768ae-102">整数数据类型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="768ae-102">Integer data type (Visual Basic)</span></span>
+<span data-ttu-id="768ae-103">保存 32 位（4 字节）带符号整数，值的范围为 -2,147,483,648 到 2,147,483,647。</span><span class="sxs-lookup"><span data-stu-id="768ae-103">Holds signed 32-bit (4-byte) integers that range in value from -2,147,483,648 through 2,147,483,647.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="768ae-104">备注</span><span class="sxs-lookup"><span data-stu-id="768ae-104">Remarks</span></span>
+ <span data-ttu-id="768ae-105">`Integer` 数据类型为 32 位处理器提供了优化性能。</span><span class="sxs-lookup"><span data-stu-id="768ae-105">The `Integer` data type provides optimal performance on a 32-bit processor.</span></span> <span data-ttu-id="768ae-106">其他整数类型在内存中的加载和存储的速度都要稍慢一些。</span><span class="sxs-lookup"><span data-stu-id="768ae-106">The other integral types are slower to load and store from and to memory.</span></span>  
+  
+ <span data-ttu-id="768ae-107">`Integer` 的默认值为 0。</span><span class="sxs-lookup"><span data-stu-id="768ae-107">The default value of `Integer` is 0.</span></span>  
 
-保存 32 位（4 字节）带符号整数，值的范围为 \-2,147,483,648 到 2,147,483,647。  
+## <a name="literal-assignments"></a><span data-ttu-id="768ae-108">文本分配</span><span class="sxs-lookup"><span data-stu-id="768ae-108">Literal assignments</span></span>
+
+<span data-ttu-id="768ae-109">你可以声明并初始化`Integer`变量中将其分配为十进制文本、 八进制文本中，为十六进制文本、 （开始或利用 Visual Basic 自 2017 年 1） 二进制文本。</span><span class="sxs-lookup"><span data-stu-id="768ae-109">You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span> <span data-ttu-id="768ae-110">如果整数文本在 `Integer` 范围之外（即，如果它小于 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>），会发生编译错误。</span><span class="sxs-lookup"><span data-stu-id="768ae-110">If the integer literal is outside the range of `Integer` (that is, if it is less than <xref:System.Int32.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int32.MaxValue?displayProperty=nameWithType>, a compilation error occurs.</span></span>
+
+<span data-ttu-id="768ae-111">在下例中，等于 16,342（表示为十进制、十六进制和二进制文本）的整数被分配给 `Integer` 值。</span><span class="sxs-lookup"><span data-stu-id="768ae-111">In the following example, integers equal to 16,342 that are represented as decimal, hexadecimal, and binary literals are assigned to `Integer` values.</span></span>
+
+[!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
+
+> [!NOTE]
+> <span data-ttu-id="768ae-112">使用前缀`&h`或`&H`来表示为十六进制文本、 前缀`&b`或`&B`来表示二进制文字和前缀`&o`或`&O`来表示八进制文本。</span><span class="sxs-lookup"><span data-stu-id="768ae-112">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="768ae-113">十进制文本没有前缀。</span><span class="sxs-lookup"><span data-stu-id="768ae-113">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="768ae-114">从 Visual Basic 自 2017 年开始，你还可以使用下划线字符， `_`，作为数字分隔符以增强可读性，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="768ae-114">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
+
+<span data-ttu-id="768ae-115">此外可以包括数值`I`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`Integer`数据类型，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="768ae-115">Numeric literals can also include the `I` [type character](../../programming-guide\language-features\data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.</span></span>
+
+```vb
+Dim number = &H035826I
+```
+
+## <a name="programming-tips"></a><span data-ttu-id="768ae-116">编程提示</span><span class="sxs-lookup"><span data-stu-id="768ae-116">Programming tips</span></span>
+
+-   <span data-ttu-id="768ae-117">**互操作注意事项。**</span><span class="sxs-lookup"><span data-stu-id="768ae-117">**Interop Considerations.**</span></span> <span data-ttu-id="768ae-118">如果你与不是为.NET Framework 中，如自动化或 COM 对象编写的组件交互请记住，`Integer`在其他环境中具有不同的数据宽度 （16 位）。</span><span class="sxs-lookup"><span data-stu-id="768ae-118">If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments.</span></span> <span data-ttu-id="768ae-119">如果将一个 16 位参数传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。</span><span class="sxs-lookup"><span data-stu-id="768ae-119">If you are passing a 16-bit argument to such a component, declare it as `Short` instead of `Integer` in your new Visual Basic code.</span></span>  
   
-## 备注  
- `Integer` 数据类型为 32 位处理器提供了优化性能。  其他整数类型在内存中的加载和存储的速度都要稍慢一些。  
+-   <span data-ttu-id="768ae-120">**扩大转换。**</span><span class="sxs-lookup"><span data-stu-id="768ae-120">**Widening.**</span></span> <span data-ttu-id="768ae-121">`Integer` 数据类型加宽到 `Long`、`Decimal`、`Single` 或 `Double`。</span><span class="sxs-lookup"><span data-stu-id="768ae-121">The `Integer` data type widens to `Long`, `Decimal`, `Single`, or `Double`.</span></span> <span data-ttu-id="768ae-122">这意味着，你可以将 `Integer` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。</span><span class="sxs-lookup"><span data-stu-id="768ae-122">This means you can convert `Integer` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
- `Integer` 的默认值为 0。  
+-   <span data-ttu-id="768ae-123">**类型字符。**</span><span class="sxs-lookup"><span data-stu-id="768ae-123">**Type Characters.**</span></span> <span data-ttu-id="768ae-124">将文本类型字符 `I` 追加到文本会将其强制转换为 `Integer` 数据类型。</span><span class="sxs-lookup"><span data-stu-id="768ae-124">Appending the literal type character `I` to a literal forces it to the `Integer` data type.</span></span> <span data-ttu-id="768ae-125">将标识符类型字符 `%` 追加到任何标识符会将其强制转换为 `Integer`。</span><span class="sxs-lookup"><span data-stu-id="768ae-125">Appending the identifier type character `%` to any identifier forces it to `Integer`.</span></span>  
   
-## 编程提示  
+-   <span data-ttu-id="768ae-126">**Framework 类型。**</span><span class="sxs-lookup"><span data-stu-id="768ae-126">**Framework Type.**</span></span> <span data-ttu-id="768ae-127">.NET Framework 中的对应类型是 <xref:System.Int32?displayProperty=nameWithType> 结构。</span><span class="sxs-lookup"><span data-stu-id="768ae-127">The corresponding type in the .NET Framework is the <xref:System.Int32?displayProperty=nameWithType> structure.</span></span>  
   
--   **互操作注意事项。**如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，`Integer` 在其他环境中具有不同的数据宽度（16 位）。  如果将一个 16 位参数传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。  
-  
--   **Widening。** `Integer` 数据类型加宽到 `Long`、`Decimal`、`Single` 或 `Double`。  这意味着，你可以将 `Integer` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=fullName> 错误。  
-  
--   **类型字符。**将文本类型字符 `I` 追加到文本会将其强制转换为 `Integer` 数据类型。  将标识符类型字符 `%` 追加到任何标识符会将其强制转换为 `Integer`。  
-  
--   **Framework 类型。**.NET Framework 中的对应类型是 <xref:System.Int32?displayProperty=fullName> 结构。  
-  
-## 范围  
- 如果尝试将整型变量设置为其类型范围以外的数字，则将出错。  如果尝试将其设置为小数，则数字将向上或向下舍入为最接近的整数值。  如果数字同样接近两个整数值，则值将舍入为最接近的偶数整数。  这种做法可将因单方向持续舍入中点值而导致的舍入误差降到最低。  下面的代码演示了舍入的示例。  
-  
-```  
+## <a name="range"></a><span data-ttu-id="768ae-128">范围</span><span class="sxs-lookup"><span data-stu-id="768ae-128">Range</span></span>
+
+<span data-ttu-id="768ae-129">如果尝试将整型变量设置为其类型范围以外的数字，则将出错。</span><span class="sxs-lookup"><span data-stu-id="768ae-129">If you try to set a variable of an integral type to a number outside the range for that type, an error occurs.</span></span> <span data-ttu-id="768ae-130">如果尝试将其设置为小数，则数字将向上或向下舍入为最接近的整数值。</span><span class="sxs-lookup"><span data-stu-id="768ae-130">If you try to set it to a fraction, the number is rounded up or down to the nearest integer value.</span></span> <span data-ttu-id="768ae-131">如果数字同样接近两个整数值，则值将舍入为最接近的偶数整数。</span><span class="sxs-lookup"><span data-stu-id="768ae-131">If the number is equally close to two integer values, the value is rounded to the nearest even integer.</span></span> <span data-ttu-id="768ae-132">这种做法可将因单方向持续舍入中点值而导致的舍入误差降到最低。</span><span class="sxs-lookup"><span data-stu-id="768ae-132">This behavior minimizes rounding errors that result from consistently rounding a midpoint value in a single direction.</span></span> <span data-ttu-id="768ae-133">下面的代码演示了舍入的示例。</span><span class="sxs-lookup"><span data-stu-id="768ae-133">The following code shows examples of rounding.</span></span>  
+
+```vb  
 ' The valid range of an Integer variable is -2147483648 through +2147483647.  
 Dim k As Integer  
 ' The following statement causes an error because the value is too large.  
@@ -68,13 +88,14 @@ k = 4.5
 ' The following statement sets k to 6  
 ' Note, Visual Basic uses banker’s rounding (toward nearest even number)  
 k = 5.5  
-```  
-  
-## 请参阅  
- <xref:System.Int32?displayProperty=fullName>   
- [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)   
- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+```
+
+## <a name="see-also"></a><span data-ttu-id="768ae-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="768ae-134">See also</span></span>
+
+<span data-ttu-id="768ae-135"><xref:System.Int32?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="768ae-135"><xref:System.Int32?displayProperty=nameWithType></span></span>   
+ [<span data-ttu-id="768ae-136">数据类型</span><span class="sxs-lookup"><span data-stu-id="768ae-136">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="768ae-137">Long 数据类型</span><span class="sxs-lookup"><span data-stu-id="768ae-137">Long Data Type</span></span>](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [<span data-ttu-id="768ae-138">Short 数据类型</span><span class="sxs-lookup"><span data-stu-id="768ae-138">Short Data Type</span></span>](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [<span data-ttu-id="768ae-139">类型转换函数</span><span class="sxs-lookup"><span data-stu-id="768ae-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="768ae-140">转换摘要</span><span class="sxs-lookup"><span data-stu-id="768ae-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="768ae-141">有效使用数据类型</span><span class="sxs-lookup"><span data-stu-id="768ae-141">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

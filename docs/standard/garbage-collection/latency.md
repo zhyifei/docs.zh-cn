@@ -1,64 +1,67 @@
 ---
-title: "Latency Modes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, intrusiveness"
-  - "garbage collection, latency modes"
+title: "滞后时间模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, intrusiveness
+- garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: 41
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Latency Modes
-若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。  在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。  可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=fullName> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> 值来调节垃圾回收的干扰。  
+# <a name="latency-modes"></a><span data-ttu-id="b41ee-102">滞后时间模式</span><span class="sxs-lookup"><span data-stu-id="b41ee-102">Latency Modes</span></span>
+<span data-ttu-id="b41ee-103">若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。</span><span class="sxs-lookup"><span data-stu-id="b41ee-103">To reclaim objects, the garbage collector must stop all the executing threads in an application.</span></span> <span data-ttu-id="b41ee-104">在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。</span><span class="sxs-lookup"><span data-stu-id="b41ee-104">In some situations, such as when an application retrieves data or displays content, a full garbage collection can occur at a critical time and impede performance.</span></span> <span data-ttu-id="b41ee-105">可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值来调节垃圾回收的干扰。</span><span class="sxs-lookup"><span data-stu-id="b41ee-105">You can adjust the intrusiveness of the garbage collector by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property to one of the <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> values.</span></span>  
   
- 延迟指垃圾回收干扰应用程序的时间。  在低延迟期间，垃圾回收对正在回收的对象保守性更强、干扰性更弱。  <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> 枚举提供两种低延迟设置：  
+ <span data-ttu-id="b41ee-106">延迟指垃圾回收干扰应用程序的时间。</span><span class="sxs-lookup"><span data-stu-id="b41ee-106">Latency refers to the time that the garbage collector intrudes in your application.</span></span> <span data-ttu-id="b41ee-107">在低延迟期间，垃圾回收对正在回收的对象保守性更强、干扰性更弱。</span><span class="sxs-lookup"><span data-stu-id="b41ee-107">During low latency periods, the garbage collector is more conservative and less intrusive in reclaiming objects.</span></span> <span data-ttu-id="b41ee-108"><xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 枚举提供两种低延迟设置：</span><span class="sxs-lookup"><span data-stu-id="b41ee-108">The <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> enumeration provides two low latency settings:</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。  只能在短时间内使用。  在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。  此设置仅对工作站垃圾回收可用。  
+-   <span data-ttu-id="b41ee-109"><xref:System.Runtime.GCLatencyMode.LowLatency> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。</span><span class="sxs-lookup"><span data-stu-id="b41ee-109"><xref:System.Runtime.GCLatencyMode.LowLatency> suppresses generation 2 collections and performs only generation 0 and 1 collections.</span></span> <span data-ttu-id="b41ee-110">只能在短时间内使用。</span><span class="sxs-lookup"><span data-stu-id="b41ee-110">It can be used only for short periods of time.</span></span> <span data-ttu-id="b41ee-111">在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。</span><span class="sxs-lookup"><span data-stu-id="b41ee-111">Over longer periods, if the system is under memory pressure, the garbage collector will trigger a collection, which can briefly pause the application and disrupt a time-critical operation.</span></span> <span data-ttu-id="b41ee-112">此设置仅对工作站垃圾回收可用。</span><span class="sxs-lookup"><span data-stu-id="b41ee-112">This setting is available only for workstation garbage collection.</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode> 禁止前景第 2 代回收，仅执行第 0 代、第 1 代和背景第 2 代回收。  它可以长时间使用，并对工作站和服务器垃圾回收都可用。  如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
+-   <span data-ttu-id="b41ee-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前景第 2 代回收，仅执行第 0 代、第 1 代和背景第 2 代回收。</span><span class="sxs-lookup"><span data-stu-id="b41ee-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suppresses foreground generation 2 collections and performs only generation 0, 1, and background generation 2 collections.</span></span> <span data-ttu-id="b41ee-114">它可以长时间使用，并对工作站和服务器垃圾回收都可用。</span><span class="sxs-lookup"><span data-stu-id="b41ee-114">It can be used for longer periods of time, and is available for both workstation and server garbage collection.</span></span> <span data-ttu-id="b41ee-115">如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。</span><span class="sxs-lookup"><span data-stu-id="b41ee-115">This setting cannot be used if [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>  
   
- 在低延迟期间，除非发生以下情况，否则禁止第 2 代回收：  
+ <span data-ttu-id="b41ee-116">在低延迟期间，除非发生以下情况，否则禁止第 2 代回收：</span><span class="sxs-lookup"><span data-stu-id="b41ee-116">During low latency periods, generation 2 collections are suppressed unless the following occurs:</span></span>  
   
--   系统收到操作系统的低内存通知。  
+-   <span data-ttu-id="b41ee-117">系统收到操作系统的低内存通知。</span><span class="sxs-lookup"><span data-stu-id="b41ee-117">The system receives a low memory notification from the operating system.</span></span>  
   
--   应用程序代码通过调用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法并将 `generation` 参数指定为 2 来包含回收。  
+-   <span data-ttu-id="b41ee-118">应用程序代码通过调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法并将 `generation` 参数指定为 2 来包含回收。</span><span class="sxs-lookup"><span data-stu-id="b41ee-118">Your application code induces a collection by calling the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method and specifying 2 for the `generation` parameter.</span></span>  
   
- 下表列出了使用 <xref:System.Runtime.GCLatencyMode> 值的应用程序方案。  
+ <span data-ttu-id="b41ee-119">下表列出了使用 <xref:System.Runtime.GCLatencyMode> 值的应用程序方案。</span><span class="sxs-lookup"><span data-stu-id="b41ee-119">The following table lists the application scenarios for using the <xref:System.Runtime.GCLatencyMode> values.</span></span>  
   
-|延迟模式|应用程序方案|  
-|----------|------------|  
-|<xref:System.Runtime.GCLatencyMode>|对于不具有 UI 或服务器端操作的应用程序。<br /><br /> 当[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)禁用时，这是默认模式。|  
-|<xref:System.Runtime.GCLatencyMode>|对于具有 UI 的大多数应用程序。<br /><br /> 当[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)启用时，这是默认模式。|  
-|<xref:System.Runtime.GCLatencyMode>|对于具有短期时效性操作（操作期间垃圾回收器的干扰可能会引起中断）的应用程序。  例如执行动画呈现或数据采集函数的应用程序。|  
-|<xref:System.Runtime.GCLatencyMode>|适用于在有限但有可能更长的时间内具有时效性操作并且在此期间垃圾回收器中断具有破环性的应用程序。  例如，需要随着交易时间内的市场数据变化做出快速响应的应用程序。<br /><br /> 此模式会比其他模式产生更大的托管堆大小。  由于它不压缩托管堆，因此可能产生更多碎片。  确保有足够的可用内存。|  
+|<span data-ttu-id="b41ee-120">延迟模式</span><span class="sxs-lookup"><span data-stu-id="b41ee-120">Latency mode</span></span>|<span data-ttu-id="b41ee-121">应用程序方案</span><span class="sxs-lookup"><span data-stu-id="b41ee-121">Application scenarios</span></span>|  
+|------------------|---------------------------|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|<span data-ttu-id="b41ee-122">对于不具有 UI 或服务器端操作的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-122">For applications that have no UI or server-side operations.</span></span><br /><br /> <span data-ttu-id="b41ee-123">这是[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)被禁用时的默认模式。</span><span class="sxs-lookup"><span data-stu-id="b41ee-123">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|<span data-ttu-id="b41ee-124">对于具有 UI 的大多数应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-124">For most applications that have a UI.</span></span><br /><br /> <span data-ttu-id="b41ee-125">当[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)启用时，这是默认模式。</span><span class="sxs-lookup"><span data-stu-id="b41ee-125">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is enabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|<span data-ttu-id="b41ee-126">对于具有短期时效性操作（操作期间垃圾回收器的干扰可能会引起中断）的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-126">For applications that have short-term, time-sensitive operations during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="b41ee-127">例如执行动画呈现或数据采集函数的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-127">For example, applications that do animation rendering or data acquisition functions.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|<span data-ttu-id="b41ee-128">适用于在有限但有可能更长的时间内具有时效性操作并且在此期间垃圾回收器中断具有破环性的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-128">For applications that have time-sensitive operations for a contained but potentially longer duration of time during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="b41ee-129">例如，需要随着交易时间内的市场数据变化做出快速响应的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b41ee-129">For example, applications that need quick response times as market data changes during trading hours.</span></span><br /><br /> <span data-ttu-id="b41ee-130">此模式会比其他模式产生更大的托管堆大小。</span><span class="sxs-lookup"><span data-stu-id="b41ee-130">This mode results in a larger managed heap size than other modes.</span></span> <span data-ttu-id="b41ee-131">由于它不压缩托管堆，因此可能产生更多碎片。</span><span class="sxs-lookup"><span data-stu-id="b41ee-131">Because it does not compact the managed heap, higher fragmentation is possible.</span></span> <span data-ttu-id="b41ee-132">确保有足够的可用内存。</span><span class="sxs-lookup"><span data-stu-id="b41ee-132">Ensure that sufficient memory is available.</span></span>|  
   
-## 低延迟使用指南  
- 使用 <xref:System.Runtime.GCLatencyMode> 模式时，请参考以下指南：  
+## <a name="guidelines-for-using-low-latency"></a><span data-ttu-id="b41ee-133">低延迟使用指南</span><span class="sxs-lookup"><span data-stu-id="b41ee-133">Guidelines for Using Low Latency</span></span>  
+ <span data-ttu-id="b41ee-134">使用 <xref:System.Runtime.GCLatencyMode.LowLatency> 模式时，请参考以下指南：</span><span class="sxs-lookup"><span data-stu-id="b41ee-134">When you use <xref:System.Runtime.GCLatencyMode.LowLatency> mode, consider the following guidelines:</span></span>  
   
--   尽可能地缩短低延迟时段。  
+-   <span data-ttu-id="b41ee-135">尽可能地缩短低延迟时段。</span><span class="sxs-lookup"><span data-stu-id="b41ee-135">Keep the period of time in low latency as short as possible.</span></span>  
   
--   避免在低延迟时段分配大量内存。  由于垃圾回收回收的对象较少可能出现低内存通知。  
+-   <span data-ttu-id="b41ee-136">避免在低延迟时段分配大量内存。</span><span class="sxs-lookup"><span data-stu-id="b41ee-136">Avoid allocating high amounts of memory during low latency periods.</span></span> <span data-ttu-id="b41ee-137">由于垃圾回收回收的对象较少可能出现低内存通知。</span><span class="sxs-lookup"><span data-stu-id="b41ee-137">Low memory notifications can occur because garbage collection reclaims fewer objects.</span></span>  
   
--   在低延迟模式下，最大限度减少分配次数，尤其是大型对象堆和固定对象上的分配。  
+-   <span data-ttu-id="b41ee-138">在低延迟模式下，最大限度减少分配次数，尤其是大型对象堆和固定对象上的分配。</span><span class="sxs-lookup"><span data-stu-id="b41ee-138">While in the low latency mode, minimize the number of allocations you make, in particular allocations onto the Large Object Heap and pinned objects.</span></span>  
   
--   知道可以分配的线程。  由于 <xref:System.Runtime.GCSettings.LatencyMode%2A> 属性设置属于进程范围的设置，因此可以在可分配的任何线程上生成 <xref:System.OutOfMemoryException>。  
+-   <span data-ttu-id="b41ee-139">知道可以分配的线程。</span><span class="sxs-lookup"><span data-stu-id="b41ee-139">Be aware of threads that could be allocating.</span></span> <span data-ttu-id="b41ee-140">由于 <xref:System.Runtime.GCSettings.LatencyMode%2A> 属性设置属于进程范围的设置，因此可以在可分配的任何线程上生成 <xref:System.OutOfMemoryException>。</span><span class="sxs-lookup"><span data-stu-id="b41ee-140">Because the <xref:System.Runtime.GCSettings.LatencyMode%2A> property setting is process-wide, you could generate an <xref:System.OutOfMemoryException> on any thread that may be allocating.</span></span>  
   
--   使低延迟代码在受约束的执行区域中换行（有关详细信息，请参阅[受约束的执行区域](../../../docs/framework/performance/constrained-execution-regions.md)）。  
+-   <span data-ttu-id="b41ee-141">在受约束的执行区域中换行的低延迟代码 (有关详细信息，请参阅[受约束的执行区域](../../../docs/framework/performance/constrained-execution-regions.md))。</span><span class="sxs-lookup"><span data-stu-id="b41ee-141">Wrap the low latency code in constrained execution regions (for more information, see [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)).</span></span>  
   
--   在低延迟期间，可以通过调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=fullName> 方法强制进行第 2 代回收。  
+-   <span data-ttu-id="b41ee-142">在低延迟期间，可以通过调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法强制进行第 2 代回收。</span><span class="sxs-lookup"><span data-stu-id="b41ee-142">You can force generation 2 collections during a low latency period by calling the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> method.</span></span>  
   
-## 请参阅  
- <xref:System.GC?displayProperty=fullName>   
- [被动回收](../../../docs/standard/garbage-collection/induced.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="b41ee-143">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b41ee-143">See Also</span></span>  
+ <xref:System.GC?displayProperty=nameWithType>  
+ [<span data-ttu-id="b41ee-144">已引发回收</span><span class="sxs-lookup"><span data-stu-id="b41ee-144">Induced Collections</span></span>](../../../docs/standard/garbage-collection/induced.md)  
+ [<span data-ttu-id="b41ee-145">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="b41ee-145">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

@@ -1,52 +1,50 @@
 ---
-title: "移除 DOM 中元素节点的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "移除 DOM 中元素节点的属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 移除 DOM 中元素节点的属性
-有多种方法可以移除属性。  一种方法是从属性集合中移除它们。  为此，请执行下列步骤：  
+# <a name="removing-attributes-from-an-element-node-in-the-dom"></a><span data-ttu-id="1e899-102">移除 DOM 中元素节点的属性</span><span class="sxs-lookup"><span data-stu-id="1e899-102">Removing Attributes from an Element Node in the DOM</span></span>
+<span data-ttu-id="1e899-103">有多种方法可以移除属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-103">There are many ways to remove attributes.</span></span> <span data-ttu-id="1e899-104">一种方法是从属性集合中移除它们。</span><span class="sxs-lookup"><span data-stu-id="1e899-104">One technique is to remove them from the attribute collection.</span></span> <span data-ttu-id="1e899-105">为此，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="1e899-105">To do this, the following steps are performed:</span></span>  
   
-1.  使用 `XmlAttributeCollection attrs = elem.Attributes;` 获取元素的属性集合。  
+1.  <span data-ttu-id="1e899-106">使用 `XmlAttributeCollection attrs = elem.Attributes;` 获取元素的属性集合。</span><span class="sxs-lookup"><span data-stu-id="1e899-106">Get the attribute collection from the element using `XmlAttributeCollection attrs = elem.Attributes;`.</span></span>  
   
-2.  使用以下三种方法之一移除属性集合中的属性：  
+2.  <span data-ttu-id="1e899-107">使用以下三种方法之一移除属性集合中的属性：</span><span class="sxs-lookup"><span data-stu-id="1e899-107">Remove the attribute from the attribute collection using one of three methods:</span></span>  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定的属性。  
+    -   <span data-ttu-id="1e899-108">使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定的属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-108">Use <xref:System.Xml.XmlAttributeCollection.Remove%2A> to remove a specific attribute.</span></span>  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 移除集合中的所有属性并保留没有属性的元素。  
+    -   <span data-ttu-id="1e899-109">使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 移除集合中的所有属性并保留没有属性的元素。</span><span class="sxs-lookup"><span data-stu-id="1e899-109">Use <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> to remove all attributes from the collection and leave the element with no attributes.</span></span>  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> 通过索引号从属性集合中移除属性。  
+    -   <span data-ttu-id="1e899-110">使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> 通过索引号从属性集合中移除属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-110">Use <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> to remove an attribute from the attribute collection by using its index number.</span></span>  
   
- 下列方法移除元素节点中的属性。  
+ <span data-ttu-id="1e899-111">下列方法移除元素节点中的属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-111">The following methods remove attributes from the element node.</span></span>  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除属性集合。  
+-   <span data-ttu-id="1e899-112">使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除属性集合。</span><span class="sxs-lookup"><span data-stu-id="1e899-112">Use <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> to remove the attribute collection.</span></span>  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A> 可按名称从集合中移除单个属性。  
+-   <span data-ttu-id="1e899-113">使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A> 可按名称从集合中移除单个属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-113">Use <xref:System.Xml.XmlElement.RemoveAttribute%2A> to remove a single attribute by name from the collection.</span></span>  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> 按索引号从集合中移除单个属性。  
+-   <span data-ttu-id="1e899-114">使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> 按索引号从集合中移除单个属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-114">Use <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> to remove a single attribute by index number from the collection.</span></span>  
   
- 另一个替换方法是获取元素，获取属性集合中的属性并直接移除属性节点。  若要获取属性集合中的属性，可使用名称 `XmlAttribute attr = attrs["attr_name"];`、索引 `XmlAttribute attr = attrs[0];` 或用命名空间 `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]` 完全限定该名称。  
+ <span data-ttu-id="1e899-115">另一个替换方法是获取元素，获取属性集合中的属性并直接移除属性节点。</span><span class="sxs-lookup"><span data-stu-id="1e899-115">One more alternative is to get the element, get the attribute from the attribute collection, and remove the attribute node directly.</span></span> <span data-ttu-id="1e899-116">若要获取属性集合中的属性，可使用名称 `XmlAttribute attr = attrs["attr_name"];`、索引 `XmlAttribute attr = attrs[0];` 或用命名空间 `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]` 完全限定该名称。</span><span class="sxs-lookup"><span data-stu-id="1e899-116">To get the attribute from the attribute collection, you can use a name, `XmlAttribute attr = attrs["attr_name"];`, an index `XmlAttribute attr = attrs[0];`, or by fully qualifying the name with the namespace `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.</span></span>  
   
- 无论用于移除属性的方法是什么，当移除在文档类型定义 \(DTD\) 中定义为默认属性的属性时有特殊限制。  除非移除了默认属性所属的元素，否则不能移除默认属性。  已声明了默认属性的元素总是存在默认属性。  如果从 <xref:System.Xml.XmlAttributeCollection> 或 <xref:System.Xml.XmlElement> 中移除默认属性，将使替换属性插入元素的 <xref:System.Xml.XmlAttributeCollection>，并初始化为所声明的默认值。  如果将某个元素定义为 `<book att1="1" att2="2" att3="3"></book>`，则将得到一个具有三个已声明的默认属性的 `book` 元素。  XML 文档对象模型 \(DOM\) 实现保证只要此 `book`  元素存在，则具有三个默认属性 `att1`、`att2` 和 `att3`。  
+ <span data-ttu-id="1e899-117">无论用于移除属性的方法是什么，当移除在文档类型定义 (DTD) 中定义为默认属性的属性时有特殊限制。</span><span class="sxs-lookup"><span data-stu-id="1e899-117">Regardless of the method used to remove attributes, there are special limitations on removing attributes that are defined as default attributes in the document type definition (DTD).</span></span> <span data-ttu-id="1e899-118">除非移除了默认属性所属的元素，否则不能移除默认属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-118">Default attributes cannot be removed unless the element they belong to is removed.</span></span> <span data-ttu-id="1e899-119">已声明了默认属性的元素总是存在默认属性。</span><span class="sxs-lookup"><span data-stu-id="1e899-119">Default attributes are always present for elements that have default attributes declared.</span></span> <span data-ttu-id="1e899-120">如果从 <xref:System.Xml.XmlAttributeCollection> 或 <xref:System.Xml.XmlElement> 中移除默认属性，将使替换属性插入元素的 <xref:System.Xml.XmlAttributeCollection>，并初始化为所声明的默认值。</span><span class="sxs-lookup"><span data-stu-id="1e899-120">Removing a default attribute from an <xref:System.Xml.XmlAttributeCollection> or from the <xref:System.Xml.XmlElement> results in a replacement attribute inserted into the <xref:System.Xml.XmlAttributeCollection> of the element, initialized to the default value that was declared.</span></span> <span data-ttu-id="1e899-121">如果将某个元素定义为 `<book att1="1" att2="2" att3="3"></book>`，则将得到一个具有三个已声明的默认属性的 `book` 元素。</span><span class="sxs-lookup"><span data-stu-id="1e899-121">If you have an element defined as `<book att1="1" att2="2" att3="3"></book>`, then you have a `book` element with three default attributes declared.</span></span> <span data-ttu-id="1e899-122">XML 文档对象模型 (DOM) 实现保证只要此`book`元素存在，它具有三个默认属性的`att1`， `att2`，和`att3`。</span><span class="sxs-lookup"><span data-stu-id="1e899-122">The XML Document Object Model (DOM) implementation guarantees that as long as this `book` element exists, it has these three default attributes of `att1`, `att2`, and `att3`.</span></span>  
   
- 在使用 <xref:System.Xml.XmlAttribute> 调用时，<xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 方法会将属性值设置为 String.Empty，因为属性不能没有值。  
+ <span data-ttu-id="1e899-123">在使用 <xref:System.Xml.XmlAttribute> 调用时，<xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 方法会将属性值设置为 String.Empty，因为属性不能没有值。</span><span class="sxs-lookup"><span data-stu-id="1e899-123">When called with an <xref:System.Xml.XmlAttribute>, the <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> method sets the value of the attribute to String.Empty, as an attribute cannot exist without a value.</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="1e899-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1e899-124">See Also</span></span>  
+ [<span data-ttu-id="1e899-125">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="1e899-125">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

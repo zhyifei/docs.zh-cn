@@ -1,342 +1,360 @@
 ---
-title: "标准数字格式字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "格式说明符, 数值"
-  - "格式说明符, 标准数字格式字符串"
-  - "格式字符串"
-  - "格式设置 [.NET Framework], 数字"
-  - "设置数字格式 [.NET Framework]"
-  - "数字 [.NET Framework], 格式化"
-  - "数值格式字符串 [.NET Framework]"
-  - "标准格式字符串, 数值"
-  - "标准数字格式字符串"
-ms.assetid: 580e57eb-ac47-4ffd-bccd-3a1637c2f467
-caps.latest.revision: 99
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 95
+title: "标准数字格式字符串"
+ms.date: 09/10/2017
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- standard format strings, numeric
+- format strings
+- numbers [.NET Framework], formatting
+- format specifiers, numeric
+- standard numeric format strings
+- formatting numbers [.NET Framework]
+- format specifiers, standard numeric format strings
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 标准数字格式字符串
-标准数字格式字符串用于格式化通用数值类型。 标准数字格式字符串采用 `Axx` 的形式，其中：  
+# <a name="standard-numeric-format-strings"></a><span data-ttu-id="2c0d8-102">标准数字格式字符串</span><span class="sxs-lookup"><span data-stu-id="2c0d8-102">Standard Numeric Format Strings</span></span>
+<span data-ttu-id="2c0d8-103">标准数字格式字符串用于格式化通用数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-103">Standard numeric format strings are used to format common numeric types.</span></span> <span data-ttu-id="2c0d8-104">标准数字格式字符串采用 `Axx` 的形式，其中：</span><span class="sxs-lookup"><span data-stu-id="2c0d8-104">A standard numeric format string takes the form `Axx`, where:</span></span>  
   
--   `A` 是称为*格式说明符*的单个字母字符。 任何包含一个以上字母字符（包括空白）的数字格式字符串都被解释为自定义数字格式字符串。 有关详细信息，请参阅[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+-   <span data-ttu-id="2c0d8-105">`A` 是称为“格式说明符”的单个字母字符。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-105">`A` is a single alphabetic character called the *format specifier*.</span></span> <span data-ttu-id="2c0d8-106">任何包含一个以上字母字符（包括空白）的数字格式字符串都被解释为自定义数字格式字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-106">Any numeric format string that contains more than one alphabetic character, including white space, is interpreted as a custom numeric format string.</span></span> <span data-ttu-id="2c0d8-107">有关更多信息，请参见[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-107">For more information, see [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span>  
   
--   `xx` 是称为*精度说明符*的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=fullName>、<xref:System.Math.Floor%2A?displayProperty=fullName> 或 <xref:System.Math.Round%2A?displayProperty=fullName> 方法。  
+-   <span data-ttu-id="2c0d8-108">`xx` 是称为“精度说明符”的可选整数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-108">`xx` is an optional integer called the *precision specifier*.</span></span> <span data-ttu-id="2c0d8-109">精度说明符的范围从 0 到 99，并且影响结果中的位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-109">The precision specifier ranges from 0 to 99 and affects the number of digits in the result.</span></span> <span data-ttu-id="2c0d8-110">请注意，精度说明符控制数字的字符串表示形式中的数字个数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-110">Note that the precision specifier controls the number of digits in the string representation of a number.</span></span> <span data-ttu-id="2c0d8-111">它不舍入该数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-111">It does not round the number itself.</span></span> <span data-ttu-id="2c0d8-112">若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-112">To perform a rounding operation, use the <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, or <xref:System.Math.Round%2A?displayProperty=nameWithType> method.</span></span>  
   
-     当*精度说明符*控制结果字符串中的小数位数时，结果字符串反映远离零的一侧舍入的数字（即，使用 <xref:System.MidpointRounding?displayProperty=fullName>）。  
+     <span data-ttu-id="2c0d8-113">当*精度说明符*控制数的结果字符串中的小数位数，结果字符串反映远离零舍入的数字 (即，使用<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-113">When *precision specifier* controls the number of fractional digits in the result string, the result strings reflect numbers that are rounded away from zero (that is, using <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).</span></span>  
   
- 所有数字类型的 `ToString` 方法的某些重载支持标准数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET Framework [复合格式化](../../../docs/standard/base-types/composite-formatting.md)功能也支持标准数字格式字符串，该功能由 `Write` 和 `WriteLine` 类的某些 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 方法、<xref:System.String.Format%2A?displayProperty=fullName> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName> 方法使用。 复合格式功能允许你将多个数据项的字符串表示形式包含在单个字符串中，以指定字段宽度，并在字段中对齐数字。 有关详细信息，请参阅[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。  
+    > [!NOTE]
+    >  <span data-ttu-id="2c0d8-114">精度说明符确定结果字符串中的位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-114">The precision specifier determines the number of digits in the result string.</span></span> <span data-ttu-id="2c0d8-115">若要使用前导或尾随空格填充结果字符串，请使用[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，并在格式项中定义*对齐组件*。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-115">To pad a result string with leading or trailing spaces, use the [composite formatting](../../../docs/standard/base-types/composite-formatting.md) feature and define an *alignment component* in the format item.</span></span>  
   
+<span data-ttu-id="2c0d8-116">支持标准数字格式字符串：</span><span class="sxs-lookup"><span data-stu-id="2c0d8-116">Standard numeric format strings are supported by:</span></span>
+
+- <span data-ttu-id="2c0d8-117">某些重载`ToString`的所有数值类型的方法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-117">Some overloads of the `ToString` method of all numeric types.</span></span> <span data-ttu-id="2c0d8-118">例如，可以提供一个数值格式字符串到<xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType>和<xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-118">For example, you can supply a numeric format string to the <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> and <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> methods.</span></span> 
+ 
+- <span data-ttu-id="2c0d8-119">.NET[复合格式设置功能](../../../docs/standard/base-types/composite-formatting.md)，由它的一些`Write`和`WriteLine`方法<xref:System.Console>和<xref:System.IO.StreamWriter>类，<xref:System.String.Format%2A?displayProperty=nameWithType>方法，与<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-119">The .NET [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md), which is used by some `Write` and `WriteLine` methods of the <xref:System.Console> and <xref:System.IO.StreamWriter> classes, the <xref:System.String.Format%2A?displayProperty=nameWithType> method, and the <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2c0d8-120">复合格式功能允许你将多个数据项的字符串表示形式包含在单个字符串中，以指定字段宽度，并在字段中对齐数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-120">The composite format feature allows you to include the string representation of multiple data items in a single string, to specify field width, and to align numbers in a field.</span></span> <span data-ttu-id="2c0d8-121">有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-121">For more information, see [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span>  
+
+- <span data-ttu-id="2c0d8-122">[内插字符串](../../csharp/language-reference/keywords/interpolated-strings.md)在 C# 和 Visual Basic 中，提供简化的语法为复合格式字符串进行比较时。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-122">[Interpolated strings](../../csharp/language-reference/keywords/interpolated-strings.md) in C# and Visual Basic, which provide a simplified syntax when compared to composite format strings.</span></span>
+ 
 > [!TIP]
->  你可以下载[格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
+>  <span data-ttu-id="2c0d8-123">你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-123">You can download the [Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), an application that enables you to apply format strings to either numeric or date and time values and displays the result string.</span></span>  
   
-<a name="table"></a> 下表描述标准的数字格式说明符并显示由每个格式说明符产生的示例输出。 有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。  
+<span data-ttu-id="2c0d8-124"><a name="table"></a>下表介绍标准数字格式说明符并显示每个格式说明符产生的示例输出。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-124"><a name="table"></a> The following table describes the standard numeric format specifiers and displays sample output produced by each format specifier.</span></span> <span data-ttu-id="2c0d8-125">有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-125">See the [Notes](#NotesStandardFormatting) section for additional information about using standard numeric format strings, and the [Example](#example) section for a comprehensive illustration of their use.</span></span>  
   
-|格式说明符|名称|描述|示例|  
-|-----------|--------|--------|--------|  
-|“C”或“c”|货币|结果：货币值。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=fullName> 定义。<br /><br /> 更多信息：[货币（“C”）格式说明符](#CFormatString)。|123.456 \("C", en\-US\) \-\> $123.46<br /><br /> 123.456 \("C", fr\-FR\) \-\> 123,46 €<br /><br /> 123.456 \("C", ja\-JP\) \-\> ¥123<br /><br /> \-123.456 \("C3", en\-US\) \-\> \($123.456\)<br /><br /> \-123.456 \("C3", fr\-FR\) \-\> \-123,456 €<br /><br /> \-123.456 \("C3", ja\-JP\) \-\> \-¥123.456|  
-|“D”或“d”|Decimal|结果：整型数字，负号可选。<br /><br /> 受以下类型支持：仅整型。<br /><br /> 精度说明符：最小位数。<br /><br /> 默认值精度说明符：所需的最小位数。<br /><br /> 更多信息：[十进制（“D”）格式说明符](#DFormatString)。|1234 \("D"\) \-\> 1234<br /><br /> \-1234 \("D6"\) \-\> \-001234|  
-|“E”或“e”|指数（科学型）|结果：指数记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：6。<br /><br /> 更多信息：[指数（“E”）格式说明符](#EFormatString)。|1052.0329112756 \("E", en\-US\) \-\> 1.052033E\+003<br /><br /> 1052.0329112756 \("e", fr\-FR\) \-\> 1,052033e\+003<br /><br /> \-1052.0329112756 \("e2", en\-US\) \-\> \-1.05e\+003<br /><br /> \-1052.0329112756 \("E2", fr\_FR\) \-\> \-1,05E\+003|  
-|“F”或“f”|定点|结果：整数和小数，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=fullName> 定义。<br /><br /> 更多信息：[定点（“F”）格式说明符](#FFormatString)。|1234.567 \("F", en\-US\) \-\> 1234.57<br /><br /> 1234.567 \("F", de\-DE\) \-\> 1234,57<br /><br /> 1234 \("F1", en\-US\) \-\> 1234.0<br /><br /> 1234 \("F1", de\-DE\) \-\> 1234,0<br /><br /> \-1234.56 \("F4", en\-US\) \-\> \-1234.5600<br /><br /> \-1234.56 \("F4", de\-DE\) \-\> \-1234,5600|  
-|“G”或“g”|常规|结果：最紧凑的定点表示法或科学记数法。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：有效位数。<br /><br /> 默认值精度说明符：取决于数值类型。<br /><br /> 更多信息：[常规（“G”）格式说明符](#GFormatString)。|\-123.456 \("G", en\-US\) \-\> \-123.456<br /><br /> \-123.456 \("G", sv\-SE\) \-\> \-123,456<br /><br /> 123.4546 \("G4", en\-US\) \-\> 123.5<br /><br /> 123.4546 \("G4", sv\-SE\) \-\> 123,5<br /><br /> \-1.234567890e\-25 \("G", en\-US\) \-\> \-1.23456789E\-25<br /><br /> \-1.234567890e\-25 \("G", sv\-SE\) \-\> \-1,23456789E\-25|  
-|“N”或“n”|数字|结果：整数和小数、组分隔符和小数分隔符，负号可选。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：所需的小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=fullName> 定义。<br /><br /> 更多信息：[数字（“N”）格式说明符](#NFormatString)。|1234.567 \("N", en\-US\) \-\> 1,234.57<br /><br /> 1234.567 \("N", ru\-RU\) \-\> 1 234,57<br /><br /> 1234 \("N1", en\-US\) \-\> 1,234.0<br /><br /> 1234 \("N1", ru\-RU\) \-\> 1 234,0<br /><br /> \-1234.56 \("N3", en\-US\) \-\> \-1,234.560<br /><br /> \-1234.56 \("N3", ru\-RU\) \-\> \-1 234,560|  
-|“P”或“p”|百分比|结果：乘以 100 并显示百分比符号的数字。<br /><br /> 受以下类型支持：所有数值类型。<br /><br /> 精度说明符：所需的小数位数。<br /><br /> 默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=fullName> 定义。<br /><br /> 更多信息：[百分比（“P”）格式说明符](#PFormatString)。|1 \("P", en\-US\) \-\> 100.00 %<br /><br /> 1 \("P", fr\-FR\) \-\> 100,00 %<br /><br /> \-0.39678 \("P1", en\-US\) \-\> \-39.7 %<br /><br /> \-0.39678 \("P1", fr\-FR\) \-\> \-39,7 %|  
-|“R”或“r”|往返过程|结果：可以往返至相同数字的字符串。<br /><br /> 受以下类型支持：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 精度说明符：忽略。<br /><br /> 更多信息：[往返过程（“R”）格式说明符](#RFormatString)。|123456789.12345678 \("R"\) \-\> 123456789.12345678<br /><br /> \-1234567890.12345678 \("R"\) \-\> \-1234567890.1234567|  
-|“X”或“x”|十六进制|结果：十六进制字符串。<br /><br /> 受以下类型支持：仅整型。<br /><br /> 精度说明符：结果字符串中的位数。<br /><br /> 更多信息：[十六进制（“X”）格式说明符](#XFormatString)。|255 \("X"\) \-\> FF<br /><br /> \-1 \("x"\) \-\> ff<br /><br /> 255 \("x4"\) \-\> 00ff<br /><br /> \-1 \("X4"\) \-\> 00FF|  
-|任何其他单个字符|未知说明符|结果：在运行时引发 <xref:System.FormatException>。||  
+|<span data-ttu-id="2c0d8-126">格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-126">Format specifier</span></span>|<span data-ttu-id="2c0d8-127">名称</span><span class="sxs-lookup"><span data-stu-id="2c0d8-127">Name</span></span>|<span data-ttu-id="2c0d8-128">描述</span><span class="sxs-lookup"><span data-stu-id="2c0d8-128">Description</span></span>|<span data-ttu-id="2c0d8-129">示例</span><span class="sxs-lookup"><span data-stu-id="2c0d8-129">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="2c0d8-130">“C”或“c”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-130">"C" or "c"</span></span>|<span data-ttu-id="2c0d8-131">货币</span><span class="sxs-lookup"><span data-stu-id="2c0d8-131">Currency</span></span>|<span data-ttu-id="2c0d8-132">结果：货币值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-132">Result: A currency value.</span></span><br /><br /> <span data-ttu-id="2c0d8-133">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-133">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-134">精度说明符：小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-134">Precision specifier: Number of decimal digits.</span></span><br /><br /> <span data-ttu-id="2c0d8-135">默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定义。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-135">Default precision specifier: Defined by <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.</span></span><br /><br /> <span data-ttu-id="2c0d8-136">有关详细信息，请参阅[货币（“C”）格式说明符](#CFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-136">More information: [The Currency ("C") Format Specifier](#CFormatString).</span></span>|<span data-ttu-id="2c0d8-137">123.456 ("C", en-US) -> $123.46</span><span class="sxs-lookup"><span data-stu-id="2c0d8-137">123.456 ("C", en-US) -> $123.46</span></span><br /><br /> <span data-ttu-id="2c0d8-138">123.456 ("C", fr-FR) -> 123,46 €</span><span class="sxs-lookup"><span data-stu-id="2c0d8-138">123.456 ("C", fr-FR) -> 123,46 €</span></span><br /><br /> <span data-ttu-id="2c0d8-139">123.456 ("C", ja-JP) -> ¥123</span><span class="sxs-lookup"><span data-stu-id="2c0d8-139">123.456 ("C", ja-JP) -> ¥123</span></span><br /><br /> <span data-ttu-id="2c0d8-140">-123.456 ("C3", en-US) -> ($123.456)</span><span class="sxs-lookup"><span data-stu-id="2c0d8-140">-123.456 ("C3", en-US) -> ($123.456)</span></span><br /><br /> <span data-ttu-id="2c0d8-141">-123.456 ("C3", fr-FR) -> -123,456 €</span><span class="sxs-lookup"><span data-stu-id="2c0d8-141">-123.456 ("C3", fr-FR) -> -123,456 €</span></span><br /><br /> <span data-ttu-id="2c0d8-142">-123.456 ("C3", ja-JP) -> -¥123.456</span><span class="sxs-lookup"><span data-stu-id="2c0d8-142">-123.456 ("C3", ja-JP) -> -¥123.456</span></span>|  
+|<span data-ttu-id="2c0d8-143">“D”或“d”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-143">"D" or "d"</span></span>|<span data-ttu-id="2c0d8-144">Decimal</span><span class="sxs-lookup"><span data-stu-id="2c0d8-144">Decimal</span></span>|<span data-ttu-id="2c0d8-145">结果：整型数字，负号可选。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-145">Result: Integer digits with optional negative sign.</span></span><br /><br /> <span data-ttu-id="2c0d8-146">受以下类型支持：仅整型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-146">Supported by: Integral types only.</span></span><br /><br /> <span data-ttu-id="2c0d8-147">精度说明符：最小位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-147">Precision specifier: Minimum number of digits.</span></span><br /><br /> <span data-ttu-id="2c0d8-148">默认值精度说明符：所需的最小位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-148">Default precision specifier: Minimum number of digits required.</span></span><br /><br /> <span data-ttu-id="2c0d8-149">有关详细信息，请参阅[十进制（“D”）格式说明符](#DFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-149">More information: [The Decimal("D") Format Specifier](#DFormatString).</span></span>|<span data-ttu-id="2c0d8-150">1234 ("D") -> 1234</span><span class="sxs-lookup"><span data-stu-id="2c0d8-150">1234 ("D") -> 1234</span></span><br /><br /> <span data-ttu-id="2c0d8-151">-1234 ("D6") -> -001234</span><span class="sxs-lookup"><span data-stu-id="2c0d8-151">-1234 ("D6") -> -001234</span></span>|  
+|<span data-ttu-id="2c0d8-152">“E”或“e”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-152">"E" or "e"</span></span>|<span data-ttu-id="2c0d8-153">指数（科学型）</span><span class="sxs-lookup"><span data-stu-id="2c0d8-153">Exponential (scientific)</span></span>|<span data-ttu-id="2c0d8-154">结果：指数记数法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-154">Result: Exponential notation.</span></span><br /><br /> <span data-ttu-id="2c0d8-155">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-155">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-156">精度说明符：小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-156">Precision specifier: Number of decimal digits.</span></span><br /><br /> <span data-ttu-id="2c0d8-157">默认值精度说明符：6。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-157">Default precision specifier: 6.</span></span><br /><br /> <span data-ttu-id="2c0d8-158">有关详细信息，请参阅[指数（“E”）格式说明符](#EFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-158">More information: [The Exponential ("E") Format Specifier](#EFormatString).</span></span>|<span data-ttu-id="2c0d8-159">1052.0329112756 ("E", en-US) -> 1.052033E+003</span><span class="sxs-lookup"><span data-stu-id="2c0d8-159">1052.0329112756 ("E", en-US) -> 1.052033E+003</span></span><br /><br /> <span data-ttu-id="2c0d8-160">1052.0329112756 ("e", fr-FR) -> 1,052033e+003</span><span class="sxs-lookup"><span data-stu-id="2c0d8-160">1052.0329112756 ("e", fr-FR) -> 1,052033e+003</span></span><br /><br /> <span data-ttu-id="2c0d8-161">-1052.0329112756 ("e2", en-US) -> -1.05e+003</span><span class="sxs-lookup"><span data-stu-id="2c0d8-161">-1052.0329112756 ("e2", en-US) -> -1.05e+003</span></span><br /><br /> <span data-ttu-id="2c0d8-162">-1052.0329112756 ("E2", fr_FR) -> -1,05E+003</span><span class="sxs-lookup"><span data-stu-id="2c0d8-162">-1052.0329112756 ("E2", fr_FR) -> -1,05E+003</span></span>|  
+|<span data-ttu-id="2c0d8-163">“F”或“f”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-163">"F" or "f"</span></span>|<span data-ttu-id="2c0d8-164">定点</span><span class="sxs-lookup"><span data-stu-id="2c0d8-164">Fixed-point</span></span>|<span data-ttu-id="2c0d8-165">结果：整数和小数，负号可选。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-165">Result: Integral and decimal digits with optional negative sign.</span></span><br /><br /> <span data-ttu-id="2c0d8-166">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-166">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-167">精度说明符：小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-167">Precision specifier: Number of decimal digits.</span></span><br /><br /> <span data-ttu-id="2c0d8-168">默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-168">Default precision specifier: Defined by <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.</span></span><br /><br /> <span data-ttu-id="2c0d8-169">有关详细信息，请参阅[定点（“F”）格式说明符](#FFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-169">More information: [The Fixed-Point ("F") Format Specifier](#FFormatString).</span></span>|<span data-ttu-id="2c0d8-170">1234.567 ("F", en-US) -> 1234.57</span><span class="sxs-lookup"><span data-stu-id="2c0d8-170">1234.567 ("F", en-US) -> 1234.57</span></span><br /><br /> <span data-ttu-id="2c0d8-171">1234.567 ("F", de-DE) -> 1234,57</span><span class="sxs-lookup"><span data-stu-id="2c0d8-171">1234.567 ("F", de-DE) -> 1234,57</span></span><br /><br /> <span data-ttu-id="2c0d8-172">1234 ("F1", en-US) -> 1234.0</span><span class="sxs-lookup"><span data-stu-id="2c0d8-172">1234 ("F1", en-US) -> 1234.0</span></span><br /><br /> <span data-ttu-id="2c0d8-173">1234 ("F1", de-DE) -> 1234,0</span><span class="sxs-lookup"><span data-stu-id="2c0d8-173">1234 ("F1", de-DE) -> 1234,0</span></span><br /><br /> <span data-ttu-id="2c0d8-174">-1234.56 ("F4", en-US) -> -1234.5600</span><span class="sxs-lookup"><span data-stu-id="2c0d8-174">-1234.56 ("F4", en-US) -> -1234.5600</span></span><br /><br /> <span data-ttu-id="2c0d8-175">-1234.56 ("F4", de-DE) -> -1234,5600</span><span class="sxs-lookup"><span data-stu-id="2c0d8-175">-1234.56 ("F4", de-DE) -> -1234,5600</span></span>|  
+|<span data-ttu-id="2c0d8-176">“G”或“g”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-176">"G" or "g"</span></span>|<span data-ttu-id="2c0d8-177">常规</span><span class="sxs-lookup"><span data-stu-id="2c0d8-177">General</span></span>|<span data-ttu-id="2c0d8-178">结果：更紧凑的定点表示法或科学记数法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-178">Result: The more compact of either fixed-point or scientific notation.</span></span><br /><br /> <span data-ttu-id="2c0d8-179">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-179">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-180">精度说明符：有效位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-180">Precision specifier: Number of significant digits.</span></span><br /><br /> <span data-ttu-id="2c0d8-181">默认值精度说明符：取决于数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-181">Default precision specifier: Depends on numeric type.</span></span><br /><br /> <span data-ttu-id="2c0d8-182">有关详细信息，请参阅[常规（“G”）格式说明符](#GFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-182">More information: [The General ("G") Format Specifier](#GFormatString).</span></span>|<span data-ttu-id="2c0d8-183">-123.456 ("G", en-US) -> -123.456</span><span class="sxs-lookup"><span data-stu-id="2c0d8-183">-123.456 ("G", en-US) -> -123.456</span></span><br /><br /> <span data-ttu-id="2c0d8-184">-123.456 ("G", sv-SE) -> -123,456</span><span class="sxs-lookup"><span data-stu-id="2c0d8-184">-123.456 ("G", sv-SE) -> -123,456</span></span><br /><br /> <span data-ttu-id="2c0d8-185">123.4546 ("G4", en-US) -> 123.5</span><span class="sxs-lookup"><span data-stu-id="2c0d8-185">123.4546 ("G4", en-US) -> 123.5</span></span><br /><br /> <span data-ttu-id="2c0d8-186">123.4546 ("G4", sv-SE) -> 123,5</span><span class="sxs-lookup"><span data-stu-id="2c0d8-186">123.4546 ("G4", sv-SE) -> 123,5</span></span><br /><br /> <span data-ttu-id="2c0d8-187">-1.234567890e-25 ("G", en-US) -> -1.23456789E-25</span><span class="sxs-lookup"><span data-stu-id="2c0d8-187">-1.234567890e-25 ("G", en-US) -> -1.23456789E-25</span></span><br /><br /> <span data-ttu-id="2c0d8-188">-1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25</span><span class="sxs-lookup"><span data-stu-id="2c0d8-188">-1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25</span></span>|  
+|<span data-ttu-id="2c0d8-189">“N”或“n”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-189">"N" or "n"</span></span>|<span data-ttu-id="2c0d8-190">数字</span><span class="sxs-lookup"><span data-stu-id="2c0d8-190">Number</span></span>|<span data-ttu-id="2c0d8-191">结果：整数和小数、组分隔符和小数分隔符，负号可选。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-191">Result: Integral and decimal digits, group separators, and a decimal separator with optional negative sign.</span></span><br /><br /> <span data-ttu-id="2c0d8-192">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-192">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-193">精度说明符：所需的小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-193">Precision specifier: Desired number of decimal places.</span></span><br /><br /> <span data-ttu-id="2c0d8-194">默认值精度说明符：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定义。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-194">Default precision specifier: Defined by <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.</span></span><br /><br /> <span data-ttu-id="2c0d8-195">有关详细信息，请参阅[数字（“N”）格式说明符](#NFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-195">More information: [The Numeric ("N") Format Specifier](#NFormatString).</span></span>|<span data-ttu-id="2c0d8-196">1234.567 ("N", en-US) -> 1,234.57</span><span class="sxs-lookup"><span data-stu-id="2c0d8-196">1234.567 ("N", en-US) -> 1,234.57</span></span><br /><br /> <span data-ttu-id="2c0d8-197">1234.567 ("N", ru-RU) -> 1 234,57</span><span class="sxs-lookup"><span data-stu-id="2c0d8-197">1234.567 ("N", ru-RU) -> 1 234,57</span></span><br /><br /> <span data-ttu-id="2c0d8-198">1234 ("N1", en-US) -> 1,234.0</span><span class="sxs-lookup"><span data-stu-id="2c0d8-198">1234 ("N1", en-US) -> 1,234.0</span></span><br /><br /> <span data-ttu-id="2c0d8-199">1234 ("N1", ru-RU) -> 1 234,0</span><span class="sxs-lookup"><span data-stu-id="2c0d8-199">1234 ("N1", ru-RU) -> 1 234,0</span></span><br /><br /> <span data-ttu-id="2c0d8-200">-1234.56 ("N3", en-US) -> -1,234.560</span><span class="sxs-lookup"><span data-stu-id="2c0d8-200">-1234.56 ("N3", en-US) -> -1,234.560</span></span><br /><br /> <span data-ttu-id="2c0d8-201">-1234.56 ("N3", ru-RU) -> -1 234,560</span><span class="sxs-lookup"><span data-stu-id="2c0d8-201">-1234.56 ("N3", ru-RU) -> -1 234,560</span></span>|  
+|<span data-ttu-id="2c0d8-202">“P”或“p”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-202">"P" or "p"</span></span>|<span data-ttu-id="2c0d8-203">百分比</span><span class="sxs-lookup"><span data-stu-id="2c0d8-203">Percent</span></span>|<span data-ttu-id="2c0d8-204">结果：乘以 100 并显示百分比符号的数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-204">Result: Number multiplied by 100 and displayed with a percent symbol.</span></span><br /><br /> <span data-ttu-id="2c0d8-205">受以下类型支持：所有数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-205">Supported by: All numeric types.</span></span><br /><br /> <span data-ttu-id="2c0d8-206">精度说明符：所需的小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-206">Precision specifier: Desired number of decimal places.</span></span><br /><br /> <span data-ttu-id="2c0d8-207">默认值精度说明符： 由定义<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-207">Default precision specifier: Defined by  <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.</span></span><br /><br /> <span data-ttu-id="2c0d8-208">有关详细信息，请参阅[百分比（“P”）格式说明符](#PFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-208">More information: [The Percent ("P") Format Specifier](#PFormatString).</span></span>|<span data-ttu-id="2c0d8-209">1 ("P", en-US) -> 100.00 %</span><span class="sxs-lookup"><span data-stu-id="2c0d8-209">1 ("P", en-US) -> 100.00 %</span></span><br /><br /> <span data-ttu-id="2c0d8-210">1 ("P", fr-FR) -> 100,00 %</span><span class="sxs-lookup"><span data-stu-id="2c0d8-210">1 ("P", fr-FR) -> 100,00 %</span></span><br /><br /> <span data-ttu-id="2c0d8-211">-0.39678 ("P1", en-US) -> -39.7 %</span><span class="sxs-lookup"><span data-stu-id="2c0d8-211">-0.39678 ("P1", en-US) -> -39.7 %</span></span><br /><br /> <span data-ttu-id="2c0d8-212">-0.39678 ("P1", fr-FR) -> -39,7 %</span><span class="sxs-lookup"><span data-stu-id="2c0d8-212">-0.39678 ("P1", fr-FR) -> -39,7 %</span></span>|  
+|<span data-ttu-id="2c0d8-213">“R”或“r”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-213">"R" or "r"</span></span>|<span data-ttu-id="2c0d8-214">往返过程</span><span class="sxs-lookup"><span data-stu-id="2c0d8-214">Round-trip</span></span>|<span data-ttu-id="2c0d8-215">结果：可以往返至相同数字的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-215">Result: A string that can round-trip to an identical number.</span></span><br /><br /> <span data-ttu-id="2c0d8-216">受以下类型支持：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-216">Supported by: <xref:System.Single>, <xref:System.Double>, and <xref:System.Numerics.BigInteger>.</span></span><br /><br /> <span data-ttu-id="2c0d8-217">注意： 建议<xref:System.Numerics.BigInteger>仅键入。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-217">Note: Recommended for the <xref:System.Numerics.BigInteger> type only.</span></span> <span data-ttu-id="2c0d8-218">有关<xref:System.Double>类型，使用"G17"; 对于<xref:System.Single>类型，使用"G9"。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-218">For <xref:System.Double> types, use "G17"; for <xref:System.Single> types, use "G9".</span></span> </br> <span data-ttu-id="2c0d8-219">精度说明符：忽略。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-219">Precision specifier: Ignored.</span></span><br /><br /> <span data-ttu-id="2c0d8-220">有关详细信息，请参阅[往返（“R”）格式说明符](#RFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-220">More information: [The Round-trip ("R") Format Specifier](#RFormatString).</span></span>|<span data-ttu-id="2c0d8-221">123456789.12345678 ("R") -> 123456789.12345678</span><span class="sxs-lookup"><span data-stu-id="2c0d8-221">123456789.12345678 ("R") -> 123456789.12345678</span></span><br /><br /> <span data-ttu-id="2c0d8-222">-1234567890.12345678 ("R") -> -1234567890.1234567</span><span class="sxs-lookup"><span data-stu-id="2c0d8-222">-1234567890.12345678 ("R") -> -1234567890.1234567</span></span>|  
+|<span data-ttu-id="2c0d8-223">“X”或“x”</span><span class="sxs-lookup"><span data-stu-id="2c0d8-223">"X" or "x"</span></span>|<span data-ttu-id="2c0d8-224">十六进制</span><span class="sxs-lookup"><span data-stu-id="2c0d8-224">Hexadecimal</span></span>|<span data-ttu-id="2c0d8-225">结果：十六进制字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-225">Result: A hexadecimal string.</span></span><br /><br /> <span data-ttu-id="2c0d8-226">受以下类型支持：仅整型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-226">Supported by: Integral types only.</span></span><br /><br /> <span data-ttu-id="2c0d8-227">精度说明符：结果字符串中的位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-227">Precision specifier: Number of digits in the result string.</span></span><br /><br /> <span data-ttu-id="2c0d8-228">有关详细信息，请参阅[十六进制（“X”）格式说明符](#XFormatString)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-228">More information: [The HexaDecimal ("X") Format Specifier](#XFormatString).</span></span>|<span data-ttu-id="2c0d8-229">255 ("X") -> FF</span><span class="sxs-lookup"><span data-stu-id="2c0d8-229">255 ("X") -> FF</span></span><br /><br /> <span data-ttu-id="2c0d8-230">-1 ("x") -> ff</span><span class="sxs-lookup"><span data-stu-id="2c0d8-230">-1 ("x") -> ff</span></span><br /><br /> <span data-ttu-id="2c0d8-231">255 ("x4") -> 00ff</span><span class="sxs-lookup"><span data-stu-id="2c0d8-231">255 ("x4") -> 00ff</span></span><br /><br /> <span data-ttu-id="2c0d8-232">-1 ("X4") -> 00FF</span><span class="sxs-lookup"><span data-stu-id="2c0d8-232">-1 ("X4") -> 00FF</span></span>|  
+|<span data-ttu-id="2c0d8-233">任何其他单个字符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-233">Any other single character</span></span>|<span data-ttu-id="2c0d8-234">未知说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-234">Unknown specifier</span></span>|<span data-ttu-id="2c0d8-235">结果：在运行时引发 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-235">Result: Throws a <xref:System.FormatException> at run time.</span></span>||  
   
 <a name="Using"></a>   
-## 使用标准数字格式字符串  
- 可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
+## <a name="using-standard-numeric-format-strings"></a><span data-ttu-id="2c0d8-236">使用标准数字格式字符串</span><span class="sxs-lookup"><span data-stu-id="2c0d8-236">Using Standard Numeric Format Strings</span></span>  
+ <span data-ttu-id="2c0d8-237">可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：</span><span class="sxs-lookup"><span data-stu-id="2c0d8-237">A standard numeric format string can be used to define the formatting of a numeric value in one of two ways:</span></span>  
   
--   可以传递给拥有 `ToString` 参数的 `format` 方法的重载。 以下示例在当前（在本例中，为 en\-US）区域性中将数值的格式设置为货币字符串。  
+-   <span data-ttu-id="2c0d8-238">可以传递给拥有 `ToString` 参数的 `format` 方法的重载。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-238">It can be passed to an overload of the `ToString` method that has a `format` parameter.</span></span> <span data-ttu-id="2c0d8-239">下面的示例设置为货币字符串中 （在此情况下，EN-US 区域性） 的当前区域性的格式的数字值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-239">The following example formats a numeric value as a currency string in the current culture (in this case, the en-US culture).</span></span>  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   它可作为与 <xref:System.String.Format%2A?displayProperty=fullName>、<xref:System.Console.WriteLine%2A?displayProperty=fullName> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName> 等方法一起使用的格式项中的 `formatString` 参数提供。 有关详细信息，请参阅[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。  
+-   <span data-ttu-id="2c0d8-240">它可作为提供`formatString`等方法一起使用的格式项中的自变量<xref:System.String.Format%2A?displayProperty=nameWithType>， <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>，和<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-240">It can be supplied as the `formatString` argument in a format item used with such methods as <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, and <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="2c0d8-241">有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-241">For more information, see [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span> <span data-ttu-id="2c0d8-242">下面的示例使用格式项在字符串中插入货币值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-242">The following example uses a format item to insert a currency value in a string.</span></span>  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
-     你也可以选择提供 `alignment` 参数，以指定数字字段的宽度以及是右对齐还是左对齐其值。 下面的示例在 28 位字符的字段中左对齐货币值，在 14 位字符的字段中右对齐货币值。  
+     <span data-ttu-id="2c0d8-243">此外，你可以提供`alignment`自变量以指定的数字字段以及是右对齐还是左对齐其值的宽度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-243">Optionally, you can supply an `alignment` argument to specify the width of the numeric field and whether its value is right- or left-aligned.</span></span> <span data-ttu-id="2c0d8-244">下面的示例在 28 位字符的字段中左对齐货币值，在 14 位字符的字段中右对齐货币值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-244">The following example left-aligns a currency value in a 28-character field, and it right-aligns a currency value in a 14-character field.</span></span>  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
- 以下各节提供有关每个标准数字格式字符串的详细信息。  
+ <span data-ttu-id="2c0d8-245">以下各节提供有关每个标准数字格式字符串的详细信息。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-245">The following sections provide detailed information about each of the standard numeric format strings.</span></span>  
   
 <a name="CFormatString"></a>   
-## 货币（“C”）格式说明符  
- “C”（或货币）格式说明符将数字转换为表示货币金额的字符串。 精度说明符指示结果字符串中的所需小数位数。 如果省略精度说明符，则默认精度由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=fullName> 属性定义。  
+## <a name="the-currency-c-format-specifier"></a><span data-ttu-id="2c0d8-246">货币（“C”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-246">The Currency ("C") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-247">“C”（或货币）格式说明符将数字转换为表示货币金额的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-247">The "C" (or currency) format specifier converts a number to a string that represents a currency amount.</span></span> <span data-ttu-id="2c0d8-248">精度说明符指示结果字符串中的所需小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-248">The precision specifier indicates the desired number of decimal places in the result string.</span></span> <span data-ttu-id="2c0d8-249">如果省略精度说明符，则默认精度由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 属性定义。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-249">If the precision specifier is omitted, the default precision is defined by the <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> property.</span></span>  
   
- 如果要设置格式的值的小数位数多于指定或默认数量，将在结果字符串中舍入小数值。 如果指定的小数位数右侧的值大于或等于 5，则结果字符串中的最后一位数将向远离零的一侧舍入。  
+ <span data-ttu-id="2c0d8-250">如果要设置格式的值的小数位数多于指定或默认数量，将在结果字符串中舍入小数值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-250">If the value to be formatted has more than the specified or default number of decimal places, the fractional value is rounded in the result string.</span></span> <span data-ttu-id="2c0d8-251">如果指定的小数位数右侧的值大于或等于 5，则结果字符串中的最后一位数将向远离零的一侧舍入。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-251">If the value to the right of the number of specified decimal places is 5 or greater, the last digit in the result string is rounded away from zero.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。  
+ <span data-ttu-id="2c0d8-252">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-252">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-253">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-253">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the returned string.</span></span>  
   
-|NumberFormatInfo 属性|描述|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|定义正值的货币符号的位置。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|定义负值的货币符号的位置，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|如果 <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> 指示不使用括号，则定义使用负号。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>|定义货币符号。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>|定义货币值中的默认小数位数。 可使用精度说明符重写此值。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>|定义分隔整数位和小数位的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|定义分隔整数的组的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|指定在组中显示的整数位数。|  
+|<span data-ttu-id="2c0d8-254">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-254">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-255">描述</span><span class="sxs-lookup"><span data-stu-id="2c0d8-255">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|<span data-ttu-id="2c0d8-256">定义正值的货币符号的位置。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-256">Defines the placement of the currency symbol for positive values.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|<span data-ttu-id="2c0d8-257">定义负值的货币符号的位置，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-257">Defines the placement of the currency symbol for negative values, and specifies whether the negative sign is represented by parentheses or the <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> property.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-258">定义时使用的负号<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>指示不使用括号。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-258">Defines the negative sign used if <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> indicates that parentheses are not used.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>|<span data-ttu-id="2c0d8-259">定义货币符号。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-259">Defines the currency symbol.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>|<span data-ttu-id="2c0d8-260">定义货币值中的默认小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-260">Defines the default number of decimal digits in a currency value.</span></span> <span data-ttu-id="2c0d8-261">可使用精度说明符重写此值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-261">This value can be overridden by using the precision specifier.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>|<span data-ttu-id="2c0d8-262">定义分隔整数位和小数位的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-262">Defines the string that separates integral and decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|<span data-ttu-id="2c0d8-263">定义分隔整数的组的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-263">Defines the string that separates groups of integral numbers.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|<span data-ttu-id="2c0d8-264">指定在组中显示的整数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-264">Defines the number of integer digits that appear in a group.</span></span>|  
   
- 下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式。  
+ <span data-ttu-id="2c0d8-265">下面的示例使用货币格式说明符设置 <xref:System.Double> 值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-265">The following example formats a <xref:System.Double> value with the currency format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
  [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-266">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-266">Back to table</span></span>](#table)  
   
 <a name="DFormatString"></a>   
-## 十进制（“D”）格式说明符  
- “D”（或十进制）格式说明符将数字转换为十进制数字 \(0\-9\) 的字符串，如果数字为负，则前面加负号。 只有整型才支持此格式。  
+## <a name="the-decimal-d-format-specifier"></a><span data-ttu-id="2c0d8-267">十进制（“D”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-267">The Decimal ("D") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-268">“D”（或十进制）格式说明符将数字转换为十进制数字 (0-9) 的字符串，如果数字为负，则前面加负号。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-268">The "D" (or decimal) format specifier converts a number to a string of decimal digits (0-9), prefixed by a minus sign if the number is negative.</span></span> <span data-ttu-id="2c0d8-269">只有整型才支持此格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-269">This format is supported only for integral types.</span></span>  
   
- 精度说明符指示结果字符串中所需的最少数字个数。 如果需要的话，则用零填充该数字的左侧，以产生精度说明符给定的数字个数。 如果未指定精度说明符，则默认值为表示不带前导零的整数所需的最小值。  
+ <span data-ttu-id="2c0d8-270">精度说明符指示结果字符串中所需的最少数字个数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-270">The precision specifier indicates the minimum number of digits desired in the resulting string.</span></span> <span data-ttu-id="2c0d8-271">如果需要的话，则用零填充该数字的左侧，以产生精度说明符给定的数字个数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-271">If required, the number is padded with zeros to its left to produce the number of digits given by the precision specifier.</span></span> <span data-ttu-id="2c0d8-272">如果未指定精度说明符，则默认值为表示不带前导零的整数所需的最小值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-272">If no precision specifier is specified, the default is the minimum value required to represent the integer without leading zeros.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 如下表所示，一个属性会影响结果字符串的格式。  
+ <span data-ttu-id="2c0d8-273">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-273">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-274">如下表所示，一个属性会影响结果字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-274">As the following table shows, a single property affects the formatting of the result string.</span></span>  
   
-|NumberFormatInfo 属性|说明|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
+|<span data-ttu-id="2c0d8-275">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-275">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-276">说明</span><span class="sxs-lookup"><span data-stu-id="2c0d8-276">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-277">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-277">Defines the string that indicates that a number is negative.</span></span>|  
   
- 下面的示例使用十进制格式说明符设置 <xref:System.Int32> 值的格式。  
+ <span data-ttu-id="2c0d8-278">下面的示例使用十进制格式说明符设置 <xref:System.Int32> 值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-278">The following example formats an <xref:System.Int32> value with the decimal format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
  [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-279">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-279">Back to table</span></span>](#table)  
   
 <a name="EFormatString"></a>   
-## 指数（“E”）格式说明符  
- 指数（“E”）格式说明符将数字转换为“\-d.ddd…E\+ddd”或“\-d.ddd…e\+ddd”形式的字符串，其中每个“d”表示一个数字 \(0\-9\)。 如果该数字为负，则该字符串以减号开头。 小数点前总是恰好有一个数字。  
+## <a name="the-exponential-e-format-specifier"></a><span data-ttu-id="2c0d8-280">指数（“E”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-280">The Exponential ("E") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-281">指数（“E”）格式说明符将数字转换为“-d.ddd…E+ddd”或“-d.ddd…e+ddd”形式的字符串，其中每个“d”表示一个数字 (0-9)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-281">The exponential ("E") format specifier converts a number to a string of the form "-d.ddd…E+ddd" or "-d.ddd…e+ddd", where each "d" indicates a digit (0-9).</span></span> <span data-ttu-id="2c0d8-282">如果该数字为负，则该字符串以减号开头。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-282">The string starts with a minus sign if the number is negative.</span></span> <span data-ttu-id="2c0d8-283">小数点前总是恰好有一个数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-283">Exactly one digit always precedes the decimal point.</span></span>  
   
- 精度说明符指示小数点后所需的位数。 如果省略精度说明符，则使用默认值，即小数点后六位数字。  
+ <span data-ttu-id="2c0d8-284">精度说明符指示小数点后所需的位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-284">The precision specifier indicates the desired number of digits after the decimal point.</span></span> <span data-ttu-id="2c0d8-285">如果省略精度说明符，则使用默认值，即小数点后六位数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-285">If the precision specifier is omitted, a default of six digits after the decimal point is used.</span></span>  
   
- 格式说明符的大小写指示为指数加前缀“E”还是“e”。 指数总是由正号或负号以及最少三位数字组成。 如果需要，用零填充指数以满足最少三位数字的要求。  
+ <span data-ttu-id="2c0d8-286">格式说明符的大小写指示为指数加前缀“E”还是“e”。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-286">The case of the format specifier indicates whether to prefix the exponent with an "E" or an "e".</span></span> <span data-ttu-id="2c0d8-287">指数总是由正号或负号以及最少三位数字组成。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-287">The exponent always consists of a plus or minus sign and a minimum of three digits.</span></span> <span data-ttu-id="2c0d8-288">如果需要，用零填充指数以满足最少三位数字的要求。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-288">The exponent is padded with zeros to meet this minimum, if required.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。  
+ <span data-ttu-id="2c0d8-289">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-289">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-290">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-290">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the returned string.</span></span>  
   
-|NumberFormatInfo 属性|描述|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义表示数字对于系数和指数都为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义在系数中将整数位与小数位分隔的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定义指示指数为正值的字符串。|  
+|<span data-ttu-id="2c0d8-291">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-291">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-292">描述</span><span class="sxs-lookup"><span data-stu-id="2c0d8-292">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-293">定义表示数字对于系数和指数都为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-293">Defines the string that indicates that a number is negative for both the coefficient and exponent.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|<span data-ttu-id="2c0d8-294">定义在系数中将整数位与小数位分隔的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-294">Defines the string that separates the integral digit from decimal digits in the coefficient.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|<span data-ttu-id="2c0d8-295">定义指示指数为正值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-295">Defines the string that indicates that an exponent is positive.</span></span>|  
   
- 下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式。  
+ <span data-ttu-id="2c0d8-296">下面的示例使用指数格式说明符设置 <xref:System.Double> 值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-296">The following example formats a <xref:System.Double> value with the exponential format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
  [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-297">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-297">Back to table</span></span>](#table)  
   
 <a name="FFormatString"></a>   
-## 定点（“F”）格式说明符  
- 定点（“F”）格式说明符将数字转换为“\-ddd.ddd…”形式的字符串， 其中每个“d”表示一个数字 \(0\-9\)。 如果该数字为负，则该字符串以减号开头。  
+## <a name="the-fixed-point-f-format-specifier"></a><span data-ttu-id="2c0d8-298">定点（“F”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-298">The Fixed-Point ("F") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-299">定点 ("F") 格式说明符将数字转换为格式的字符串"-ddd.ddd …"</span><span class="sxs-lookup"><span data-stu-id="2c0d8-299">The fixed-point ("F") format specifier converts a number to a string of the form "-ddd.ddd…"</span></span> <span data-ttu-id="2c0d8-300">其中每个“d”表示一个数字 (0-9)。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-300">where each "d" indicates a digit (0-9).</span></span> <span data-ttu-id="2c0d8-301">如果该数字为负，则该字符串以减号开头。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-301">The string starts with a minus sign if the number is negative.</span></span>  
   
- 精度说明符指示所需的小数位数。 如果省略精度说明符，则当前 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=fullName> 属性提供数值精度。  
+ <span data-ttu-id="2c0d8-302">精度说明符指示所需的小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-302">The precision specifier indicates the desired number of decimal places.</span></span> <span data-ttu-id="2c0d8-303">如果省略精度说明符，则当前 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 属性提供数值精度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-303">If the precision specifier is omitted, the current <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> property supplies the numeric precision.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 对象的属性，这些属性控制结果字符串的格式。  
+ <span data-ttu-id="2c0d8-304">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-304">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-305">下表列出了 <xref:System.Globalization.NumberFormatInfo> 对象的属性，这些属性控制结果字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-305">The following table lists the properties of the <xref:System.Globalization.NumberFormatInfo> object that control the formatting of the result string.</span></span>  
   
-|NumberFormatInfo 属性|说明|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定义默认小数位数。 可使用精度说明符重写此值。|  
+|<span data-ttu-id="2c0d8-306">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-306">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-307">说明</span><span class="sxs-lookup"><span data-stu-id="2c0d8-307">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-308">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-308">Defines the string that indicates that a number is negative.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|<span data-ttu-id="2c0d8-309">定义将整数位与小数位分隔的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-309">Defines the string that separates integral digits from decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|<span data-ttu-id="2c0d8-310">定义默认小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-310">Defines the default number of decimal digits.</span></span> <span data-ttu-id="2c0d8-311">可使用精度说明符重写此值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-311">This value can be overridden by using the precision specifier.</span></span>|  
   
- 下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式。  
+ <span data-ttu-id="2c0d8-312">下面的示例使用定点格式说明符设置 <xref:System.Double> 和 <xref:System.Int32> 值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-312">The following example formats a <xref:System.Double> and an <xref:System.Int32> value with the fixed-point format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
  [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-313">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-313">Back to table</span></span>](#table)  
   
 <a name="GFormatString"></a>   
-## 常规（“G”）格式说明符  
- 根据数字类型以及是否存在精度说明符，常规（“G”）格式说明符将数字转换为最紧凑的定点表示法或科学记数法。 精度说明符定义可以出现在结果字符串中的最大有效位数。 如果精度说明符被省略或为零，则数字的类型决定默认精度，如下表所示。  
+## <a name="the-general-g-format-specifier"></a><span data-ttu-id="2c0d8-314">常规（“G”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-314">The General ("G") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-315">根据数字类型以及是否存在精度说明符，常规（“G”）格式说明符将数字转换为更紧凑的定点表示法或科学记数法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-315">The general ("G") format specifier converts a number to the more compact of either fixed-point or scientific notation, depending on the type of the number and whether a precision specifier is present.</span></span> <span data-ttu-id="2c0d8-316">精度说明符定义可以出现在结果字符串中的最大有效位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-316">The precision specifier defines the maximum number of significant digits that can appear in the result string.</span></span> <span data-ttu-id="2c0d8-317">如果精度说明符被省略或为零，则数字的类型决定默认精度，如下表所示。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-317">If the precision specifier is omitted or zero, the type of the number determines the default precision, as indicated in the following table.</span></span>  
   
-|数值类型|默认值精度|  
-|----------|-----------|  
-|<xref:System.Byte> 或 <xref:System.SByte>|3 位|  
-|<xref:System.Int16> 或 <xref:System.UInt16>|5 位|  
-|<xref:System.Int32> 或 <xref:System.UInt32>|10 位|  
-|<xref:System.Int64>|19 位|  
-|<xref:System.UInt64>|20 位|  
-|<xref:System.Numerics.BigInteger>|50 位|  
-|<xref:System.Single>|7 位|  
-|<xref:System.Double>|15 位|  
-|<xref:System.Decimal>|29 位|  
+|<span data-ttu-id="2c0d8-318">数值类型</span><span class="sxs-lookup"><span data-stu-id="2c0d8-318">Numeric type</span></span>|<span data-ttu-id="2c0d8-319">默认值精度</span><span class="sxs-lookup"><span data-stu-id="2c0d8-319">Default precision</span></span>|  
+|------------------|-----------------------|  
+|<span data-ttu-id="2c0d8-320"><xref:System.Byte> 或 <xref:System.SByte></span><span class="sxs-lookup"><span data-stu-id="2c0d8-320"><xref:System.Byte> or <xref:System.SByte></span></span>|<span data-ttu-id="2c0d8-321">3 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-321">3 digits</span></span>|  
+|<span data-ttu-id="2c0d8-322"><xref:System.Int16> 或 <xref:System.UInt16></span><span class="sxs-lookup"><span data-stu-id="2c0d8-322"><xref:System.Int16> or <xref:System.UInt16></span></span>|<span data-ttu-id="2c0d8-323">5 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-323">5 digits</span></span>|  
+|<span data-ttu-id="2c0d8-324"><xref:System.Int32> 或 <xref:System.UInt32></span><span class="sxs-lookup"><span data-stu-id="2c0d8-324"><xref:System.Int32> or <xref:System.UInt32></span></span>|<span data-ttu-id="2c0d8-325">10 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-325">10 digits</span></span>|  
+|<xref:System.Int64>|<span data-ttu-id="2c0d8-326">19 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-326">19 digits</span></span>|  
+|<xref:System.UInt64>|<span data-ttu-id="2c0d8-327">20 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-327">20 digits</span></span>|  
+|<xref:System.Numerics.BigInteger>|<span data-ttu-id="2c0d8-328">无限制（与[“R”](#RFormatString)相同）</span><span class="sxs-lookup"><span data-stu-id="2c0d8-328">Unlimited (same as ["R"](#RFormatString))</span></span>|  
+|<xref:System.Single>|<span data-ttu-id="2c0d8-329">7 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-329">7 digits</span></span>|  
+|<xref:System.Double>|<span data-ttu-id="2c0d8-330">15 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-330">15 digits</span></span>|  
+|<xref:System.Decimal>|<span data-ttu-id="2c0d8-331">29 位</span><span class="sxs-lookup"><span data-stu-id="2c0d8-331">29 digits</span></span>|  
   
- 如果用科学记数法表示数字时指数大于 \-5 而且小于精度说明符，则使用定点表示法；否则使用科学记数法。 结果包含小数点（如果需要），并且忽略小数点后面的尾部零。 如果精度说明符存在，并且结果的有效位数超过指定精度，则通过舍入移除多余的尾部数字。  
+ <span data-ttu-id="2c0d8-332">如果用科学记数法表示数字时指数大于 -5 而且小于精度说明符，则使用定点表示法；否则使用科学记数法。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-332">Fixed-point notation is used if the exponent that would result from expressing the number in scientific notation is greater than -5 and less than the precision specifier; otherwise, scientific notation is used.</span></span> <span data-ttu-id="2c0d8-333">结果包含小数点（如果需要），并且忽略小数点后面的尾部零。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-333">The result contains a decimal point if required, and trailing zeros after the decimal point are omitted.</span></span> <span data-ttu-id="2c0d8-334">如果精度说明符存在，并且结果的有效位数超过指定精度，则通过舍入移除多余的尾部数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-334">If the precision specifier is present and the number of significant digits in the result exceeds the specified precision, the excess trailing digits are removed by rounding.</span></span>  
   
- 但是，如果数字是 <xref:System.Decimal> 并且省略精度说明符，将总是使用定点表示法并保留尾部零。  
+ <span data-ttu-id="2c0d8-335">但是，如果数字是 <xref:System.Decimal> 并且省略精度说明符，将总是使用定点表示法并保留尾部零。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-335">However, if the number is a <xref:System.Decimal> and the precision specifier is omitted, fixed-point notation is always used and trailing zeros are preserved.</span></span>  
   
- 使用科学记数法时，如果格式说明符是“G”，则结果的指数带前缀“E”；如果格式说明符是“g”，则结果的指数带前缀“e”。 指数最少包含两个数字。 这与由指数格式说明符生成的科学记数法的格式不同，后者在指数中最少包括三个数字。  
+ <span data-ttu-id="2c0d8-336">使用科学记数法时，如果格式说明符是“G”，则结果的指数带前缀“E”；如果格式说明符是“g”，则结果的指数带前缀“e”。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-336">If scientific notation is used, the exponent in the result is prefixed with "E" if the format specifier is "G", or "e" if the format specifier is "g".</span></span> <span data-ttu-id="2c0d8-337">指数最少包含两个数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-337">The exponent contains a minimum of two digits.</span></span> <span data-ttu-id="2c0d8-338">这与由指数格式说明符生成的科学记数法的格式不同，后者在指数中最少包括三个数字。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-338">This differs from the format for scientific notation that is produced by the exponential format specifier, which includes a minimum of three digits in the exponent.</span></span>  
+ 
+<span data-ttu-id="2c0d8-339">请注意，如果用于<xref:System.Double>值，使用"G17"格式说明符，可确保原始<xref:System.Double>值成功往返。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-339">Note that, when used with a <xref:System.Double> value, the "G17" format specifier ensures that the original <xref:System.Double> value successfully round-trips.</span></span> <span data-ttu-id="2c0d8-340">这是因为<xref:System.Double>是 IEEE 754 2008年符合双精度 (`binary64`) 浮点数，提供多达 17 有效位数的精度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-340">This is because <xref:System.Double> is an IEEE 754-2008-compliant double-precision (`binary64`) floating point number that gives up to 17 significant digits of precision.</span></span> <span data-ttu-id="2c0d8-341">建议使用它而不是["R"格式说明符](#RFormatString)，因为在某些情况下"R"无法成功往返双精度浮点值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-341">We recommend its use instead of the ["R" format specifier](#RFormatString), since in some cases "R" fails to successfully round-trip double-precision floating point values.</span></span> <span data-ttu-id="2c0d8-342">下面的示例阐释了这样一种情况。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-342">The following example illustrates one such case.</span></span>
+
+[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
+
+<span data-ttu-id="2c0d8-343">如果用于<xref:System.Single>值，"G9"格式说明符，可确保原始<xref:System.Single>值成功往返。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-343">When used with a <xref:System.Single> value, the "G9" format specifier ensures that the original <xref:System.Single> value successfully round-trips.</span></span> <span data-ttu-id="2c0d8-344">这是因为<xref:System.Single>是 IEEE 754 2008年符合单精度 (`binary32`) 浮点数，最多 9 个有效位精度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-344">This is because <xref:System.Single> is an IEEE 754-2008-compliant single-precision (`binary32`) floating point number that gives up to nine significant digits of precision.</span></span> <span data-ttu-id="2c0d8-345">建议使用它而不是["R"格式说明符](#RFormatString)，因为在某些情况下"R"无法成功往返单精度浮点值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-345">We recommend its use instead of the ["R" format specifier](#RFormatString), since in some cases "R" fails to successfully round-trip single-precision floating point values.</span></span>
+
+ <span data-ttu-id="2c0d8-346">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-346">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-347">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-347">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the result string.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。  
+|<span data-ttu-id="2c0d8-348">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-348">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-349">说明</span><span class="sxs-lookup"><span data-stu-id="2c0d8-349">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-350">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-350">Defines the string that indicates that a number is negative.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|<span data-ttu-id="2c0d8-351">定义将整数位与小数位分隔的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-351">Defines the string that separates integral digits from decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|<span data-ttu-id="2c0d8-352">定义指示指数为正值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-352">Defines the string that indicates that an exponent is positive.</span></span>|  
   
-|NumberFormatInfo 属性|说明|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定义指示指数为正值的字符串。|  
-  
- 下面的示例使用常规格式说明符设置各种浮点值的格式。  
+ <span data-ttu-id="2c0d8-353">下面的示例使用常规格式说明符设置各种浮点值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-353">The following example formats assorted floating-point values with the general format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
  [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-354">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-354">Back to table</span></span>](#table)  
   
 <a name="NFormatString"></a>   
-## 数字（“N”）格式说明符  
- 数字（"N"）格式说明符将数字转换为"\-d,ddd,ddd.ddd…"形式的字符串，其中"\-"表示负数符号（如果需要），"d"表示数字 \(0\-9\)，","表示组分隔符，"."表示小数点符号。 精度说明符指示小数点后所需的位数。 如果省略精度限定符，则小数位数由当前的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=fullName> 属性来定义。  
+## <a name="the-numeric-n-format-specifier"></a><span data-ttu-id="2c0d8-355">数字（“N”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-355">The Numeric ("N") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-356">数字（"N"）格式说明符将数字转换为"-d,ddd,ddd.ddd…"形式的字符串，其中"-"表示负数符号（如果需要），"d"表示数字 (0-9)，","表示组分隔符，"."表示小数点符号。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-356">The numeric ("N") format specifier converts a number to a string of the form "-d,ddd,ddd.ddd…", where "-" indicates a negative number symbol if required, "d" indicates a digit (0-9), "," indicates a group separator, and "." indicates a decimal point symbol.</span></span> <span data-ttu-id="2c0d8-357">精度说明符指示小数点后所需的位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-357">The precision specifier indicates the desired number of digits after the decimal point.</span></span> <span data-ttu-id="2c0d8-358">如果省略精度限定符，则小数位数由当前的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 属性来定义。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-358">If the precision specifier is omitted, the number of decimal places is defined by the current <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> property.</span></span>  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。  
+ <span data-ttu-id="2c0d8-359">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-359">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-360">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-360">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the result string.</span></span>  
   
-|NumberFormatInfo 属性|说明|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|定义负值的格式，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A>|指定在组分隔符之间显示的整数位数。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A>|定义分隔整数的组的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义分隔整数位和小数位的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定义默认小数位数。 可使用精度说明符重写此值。|  
+|<span data-ttu-id="2c0d8-361">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-361">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-362">说明</span><span class="sxs-lookup"><span data-stu-id="2c0d8-362">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-363">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-363">Defines the string that indicates that a number is negative.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|<span data-ttu-id="2c0d8-364">定义负值的格式，并指定负号由括号表示还是由 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 属性表示。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-364">Defines the format of negative values, and specifies whether the negative sign is represented by parentheses or the <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> property.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A>|<span data-ttu-id="2c0d8-365">指定在组分隔符之间显示的整数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-365">Defines the number of integral digits that appear between group separators.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A>|<span data-ttu-id="2c0d8-366">定义分隔整数的组的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-366">Defines the string that separates groups of integral numbers.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|<span data-ttu-id="2c0d8-367">定义分隔整数位和小数位的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-367">Defines the string that separates integral and decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|<span data-ttu-id="2c0d8-368">定义默认小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-368">Defines the default number of decimal digits.</span></span> <span data-ttu-id="2c0d8-369">可使用精度说明符重写此值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-369">This value can be overridden by using a precision specifier.</span></span>|  
   
- 下面的示例使用数字格式说明符设置各种浮点值的格式。  
+ <span data-ttu-id="2c0d8-370">下面的示例使用数字格式说明符设置各种浮点值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-370">The following example formats assorted floating-point values with the number format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
  [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-371">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-371">Back to table</span></span>](#table)  
   
 <a name="PFormatString"></a>   
-## 百分比（“P”）格式说明符  
- 百分比（“P”）格式说明符将数字乘以 100 并将其转换为表示百分比的字符串。 精度说明符指示所需的小数位数。 如果省略精度说明符，则使用当前 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> 属性提供的默认数值精度。  
+## <a name="the-percent-p-format-specifier"></a><span data-ttu-id="2c0d8-372">百分比（“P”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-372">The Percent ("P") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-373">百分比（“P”）格式说明符将数字乘以 100 并将其转换为表示百分比的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-373">The percent ("P") format specifier multiplies a number by 100 and converts it to a string that represents a percentage.</span></span> <span data-ttu-id="2c0d8-374">精度说明符指示所需的小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-374">The precision specifier indicates the desired number of decimal places.</span></span> <span data-ttu-id="2c0d8-375">如果省略精度说明符，则使用当前 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> 属性提供的默认数值精度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-375">If the precision specifier is omitted, the default numeric precision supplied by the current <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A> property is used.</span></span>  
   
- 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。  
+ <span data-ttu-id="2c0d8-376">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制返回字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-376">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the returned string.</span></span>  
   
-|NumberFormatInfo 属性|描述|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|定义正值的百分比符号的位置。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|定义负值的百分比符号和负号的位置。|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A>|定义百分比符号。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A>|定义百分比值中的默认小数位数。 可使用精度说明符重写此值。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentDecimalSeparator%2A>|定义分隔整数位和小数位的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|定义分隔整数的组的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|指定在组中显示的整数位数。|  
+|<span data-ttu-id="2c0d8-377">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-377">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-378">描述</span><span class="sxs-lookup"><span data-stu-id="2c0d8-378">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|<span data-ttu-id="2c0d8-379">定义正值的百分比符号的位置。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-379">Defines the placement of the percent symbol for positive values.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|<span data-ttu-id="2c0d8-380">定义负值的百分比符号和负号的位置。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-380">Defines the placement of the percent symbol and the negative symbol for negative values.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-381">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-381">Defines the string that indicates that a number is negative.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A>|<span data-ttu-id="2c0d8-382">定义百分比符号。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-382">Defines the percent symbol.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A>|<span data-ttu-id="2c0d8-383">定义百分比值中的默认小数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-383">Defines the default number of decimal digits in a percentage value.</span></span> <span data-ttu-id="2c0d8-384">可使用精度说明符重写此值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-384">This value can be overridden by using the precision specifier.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentDecimalSeparator%2A>|<span data-ttu-id="2c0d8-385">定义分隔整数位和小数位的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-385">Defines the string that separates integral and decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|<span data-ttu-id="2c0d8-386">定义分隔整数的组的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-386">Defines the string that separates groups of integral numbers.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|<span data-ttu-id="2c0d8-387">指定在组中显示的整数位数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-387">Defines the number of integer digits that appear in a group.</span></span>|  
   
- 下面的示例使用百分比格式说明符设置浮点值的格式。  
+ <span data-ttu-id="2c0d8-388">下面的示例使用百分比格式说明符设置浮点值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-388">The following example formats floating-point values with the percent format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
  [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-389">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-389">Back to table</span></span>](#table)  
   
 <a name="RFormatString"></a>   
-## 往返过程（“R”）格式说明符  
- 往返（“R”）格式说明符用于确保转换为字符串的数值将再次分析为相同的数值。 只有 <xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger> 类型支持此格式。  
+## <a name="the-round-trip-r-format-specifier"></a><span data-ttu-id="2c0d8-390">往返过程（“R”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-390">The Round-trip ("R") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-391">往返 ("R") 格式说明符尝试确保转换为字符串的数值分析回相同的数值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-391">The round-trip ("R") format specifier attempts to ensure that a numeric value that is converted to a string is parsed back into the same numeric value.</span></span> <span data-ttu-id="2c0d8-392">只有 <xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger> 类型支持此格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-392">This format is supported only for the <xref:System.Single>, <xref:System.Double>, and <xref:System.Numerics.BigInteger> types.</span></span>  
+
+<span data-ttu-id="2c0d8-393">有关<xref:System.Double>和<xref:System.Single>值，"R"格式说明符在某些情况下失败以成功往返原始值，并且还提供相对较差的性能。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-393">For <xref:System.Double> and <xref:System.Single> values, the "R" format specifier in some cases fails to successfully round-trip the original value and also offers relatively poor performance.</span></span> <span data-ttu-id="2c0d8-394">相反，我们建议你使用["G17"](#GFormatString)格式说明符的<xref:System.Double>值和["G9"](#GFormatString)格式说明符以成功往返<xref:System.Single>值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-394">Instead, we recommend that you use the ["G17"](#GFormatString) format specifier for <xref:System.Double> values and the ["G9"](#GFormatString) format specifier to successfully round-trip <xref:System.Single> values.</span></span>
+
+ <span data-ttu-id="2c0d8-395">如果使用此说明符设置 <xref:System.Numerics.BigInteger> 值的格式，其字符串表示形式将包含 <xref:System.Numerics.BigInteger> 值中的所有有效位。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-395">When a <xref:System.Numerics.BigInteger> value is formatted using this specifier, its string representation contains all the significant digits in the <xref:System.Numerics.BigInteger> value.</span></span>  
   
- 如果使用此说明符设置 <xref:System.Numerics.BigInteger> 值的格式，其字符串表示形式将包含 <xref:System.Numerics.BigInteger> 值中的所有有效位。 使用此说明符设置 <xref:System.Single> 或 <xref:System.Double> 值的格式时，将首先使用常规格式对其进行测试，如果是 <xref:System.Double>，则采用 15 位精度，如果是 <xref:System.Single>，则采用 7 位精度。 如果此值被成功地分析回相同的数值，则使用常规格式说明符来设置其格式。 如果未能将此值成功分析回相同的数值，则通过以下方式设置其格式：对 <xref:System.Double> 使用 17 位精度，对 <xref:System.Single> 使用 9 位精度。  
+ <span data-ttu-id="2c0d8-396">尽管可以包括精度说明符，但会忽略它。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-396">Although you can include a precision specifier, it is ignored.</span></span> <span data-ttu-id="2c0d8-397">使用此说明符时，往返过程优先于精度。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-397">Round trips are given precedence over precision when using this specifier.</span></span>    
+ <span data-ttu-id="2c0d8-398">结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-398">The result string is affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="2c0d8-399">下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-399">The following table lists the <xref:System.Globalization.NumberFormatInfo> properties that control the formatting of the result string.</span></span>  
   
- 尽管可以包括精度说明符，但会忽略它。 使用此说明符时，往返过程优先于精度。  
+|<span data-ttu-id="2c0d8-400">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-400">NumberFormatInfo property</span></span>|<span data-ttu-id="2c0d8-401">说明</span><span class="sxs-lookup"><span data-stu-id="2c0d8-401">Description</span></span>|  
+|-------------------------------|-----------------|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|<span data-ttu-id="2c0d8-402">定义指示数字为负值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-402">Defines the string that indicates that a number is negative.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|<span data-ttu-id="2c0d8-403">定义将整数位与小数位分隔的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-403">Defines the string that separates integral digits from decimal digits.</span></span>|  
+|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|<span data-ttu-id="2c0d8-404">定义指示指数为正值的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-404">Defines the string that indicates that an exponent is positive.</span></span>|  
   
- 结果字符串受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.NumberFormatInfo> 属性，这些属性控制结果字符串的格式。  
+ <span data-ttu-id="2c0d8-405">下面的示例格式<xref:System.Numerics.BigInteger>使用往返过程格式说明符的值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-405">The following example formats a <xref:System.Numerics.BigInteger> value with the round-trip format specifier.</span></span>  
   
-|NumberFormatInfo 属性|说明|  
-|-------------------------|--------|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定义指示数字为负值的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定义将整数位与小数位分隔的字符串。|  
-|<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定义指示指数为正值的字符串。|  
-  
- 下面的示例使用往返过程格式说明符设置 <xref:System.Double> 值的格式。  
-  
- [!code-cpp[Formatting.Numeric.Standard#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#8)]
- [!code-csharp[Formatting.Numeric.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#8)]
- [!code-vb[Formatting.Numeric.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#8)]  
+ [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
+ [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
->  在某些情况下，如果使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值使用 `/platform:x64` 或 `/platform:anycpu` 交换机编译并在 64 位系统上运行，则该值将无法成功往返。 有关详细信息，请参阅以下段落。  
+>  <span data-ttu-id="2c0d8-406">在某些情况下，如果使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值使用 `/platform:x64` 或 `/platform:anycpu` 交换机编译并在 64 位系统上运行，则该值将无法成功往返。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-406">In some cases, <xref:System.Double> values formatted with the "R" standard numeric format string do not successfully round-trip if compiled using the `/platform:x64` or `/platform:anycpu` switches and run on 64-bit systems.</span></span> <span data-ttu-id="2c0d8-407">有关详细信息，请参阅以下段落。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-407">See the following paragraph for more information.</span></span>  
   
- 若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。 以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。  
+ <span data-ttu-id="2c0d8-408">若要解决使用“R”标准数字格式字符串格式化的 <xref:System.Double> 值在使用 `/platform:x64` 或 `/platform:anycpu` 交换机进行编译并在 64 位系统上运行时所出现的往返不成功的问题，可以使用“G17”标准数字格式字符格式化 <xref:System.Double> 值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-408">To work around the problem of <xref:System.Double> values formatted with the "R" standard numeric format string not successfully round-tripping if compiled using the `/platform:x64` or `/platform:anycpu` switches and run on 64-bit systems., you can format <xref:System.Double> values by using the "G17" standard numeric format string.</span></span> <span data-ttu-id="2c0d8-409">以下示例将“R”格式字符串与无法成功往返的 <xref:System.Double> 值配合使用，并使用“G17”格式字符串以成功往返原始值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-409">The following example uses the "R" format string with a <xref:System.Double> value that does not round-trip successfully, and also uses the "G17" format string to successfully round-trip the original value.</span></span>  
   
  [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-410">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-410">Back to table</span></span>](#table)  
   
 <a name="XFormatString"></a>   
-## 十六进制（“X”）格式说明符  
- 十六进制（“X”）格式说明符将数字转换为十六进制数的字符串。 格式说明符的大小写指示对大于 9 的十六进制数使用大写字符还是小写字符。 例如，使用“X”产生“ABCDEF”，使用“x”产生“abcdef”。 只有整型才支持此格式。  
+## <a name="the-hexadecimal-x-format-specifier"></a><span data-ttu-id="2c0d8-411">十六进制（“X”）格式说明符</span><span class="sxs-lookup"><span data-stu-id="2c0d8-411">The Hexadecimal ("X") Format Specifier</span></span>  
+ <span data-ttu-id="2c0d8-412">十六进制（“X”）格式说明符将数字转换为十六进制数的字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-412">The hexadecimal ("X") format specifier converts a number to a string of hexadecimal digits.</span></span> <span data-ttu-id="2c0d8-413">格式说明符的大小写指示对大于 9 的十六进制数使用大写字符还是小写字符。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-413">The case of the format specifier indicates whether to use uppercase or lowercase characters for hexadecimal digits that are greater than 9.</span></span> <span data-ttu-id="2c0d8-414">例如，使用“X”产生“ABCDEF”，使用“x”产生“abcdef”。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-414">For example, use "X" to produce "ABCDEF", and "x" to produce "abcdef".</span></span> <span data-ttu-id="2c0d8-415">只有整型才支持此格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-415">This format is supported only for integral types.</span></span>  
   
- 精度说明符指示结果字符串中所需的最少数字个数。 如果需要的话，则用零填充该数字的左侧，以产生精度说明符给定的数字个数。  
+ <span data-ttu-id="2c0d8-416">精度说明符指示结果字符串中所需的最少数字个数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-416">The precision specifier indicates the minimum number of digits desired in the resulting string.</span></span> <span data-ttu-id="2c0d8-417">如果需要的话，则用零填充该数字的左侧，以产生精度说明符给定的数字个数。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-417">If required, the number is padded with zeros to its left to produce the number of digits given by the precision specifier.</span></span>  
   
- 结果字符串不受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。  
+ <span data-ttu-id="2c0d8-418">结果字符串不受当前 <xref:System.Globalization.NumberFormatInfo> 对象的格式信息的影响。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-418">The result string is not affected by the formatting information of the current <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
- 下面的示例使用十六进制数法格式说明符设置 <xref:System.Int32> 值的格式。  
+ <span data-ttu-id="2c0d8-419">下面的示例使用十六进制数法格式说明符设置 <xref:System.Int32> 值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-419">The following example formats <xref:System.Int32> values with the hexadecimal format specifier.</span></span>  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
  [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
- [返回表首](#table)  
+ [<span data-ttu-id="2c0d8-420">返回表首</span><span class="sxs-lookup"><span data-stu-id="2c0d8-420">Back to table</span></span>](#table)  
   
 <a name="NotesStandardFormatting"></a>   
-## 备注  
+## <a name="notes"></a><span data-ttu-id="2c0d8-421">备注</span><span class="sxs-lookup"><span data-stu-id="2c0d8-421">Notes</span></span>  
   
-### 控制面板设置  
- 控制面板中**“区域和语言选项”**项中的设置会影响由格式化操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。  
+### <a name="control-panel-settings"></a><span data-ttu-id="2c0d8-422">控制面板设置</span><span class="sxs-lookup"><span data-stu-id="2c0d8-422">Control Panel Settings</span></span>  
+ <span data-ttu-id="2c0d8-423">控制面板中 **“区域和语言选项”** 项中的设置会影响由格式化操作产生的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-423">The settings in the **Regional and Language Options** item in Control Panel influence the result string produced by a formatting operation.</span></span> <span data-ttu-id="2c0d8-424">这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-424">Those settings are used to initialize the <xref:System.Globalization.NumberFormatInfo> object associated with the current thread culture, which provides values used to govern formatting.</span></span> <span data-ttu-id="2c0d8-425">使用不同设置的计算机将生成不同的结果字符串。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-425">Computers that use different settings generate different result strings.</span></span>  
   
- 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> 构造函数实例化一个新的 <xref:System.Globalization.CultureInfo> 对象以表示与当前的系统区域性相同的区域性，则通过控制面板中的**“区域和语言选项”**建立的任何自定义都将应用到新的 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
+ <span data-ttu-id="2c0d8-426">此外，如果<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>构造函数用于实例化一个新<xref:System.Globalization.CultureInfo>对象，表示与当前系统区域性，建立的任何自定义相同的区域性**区域和语言选项**控制面板中将应用到新<xref:System.Globalization.CultureInfo>对象。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-426">In addition, if the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor is used to instantiate a new <xref:System.Globalization.CultureInfo> object that represents the same culture as the current system culture, any customizations established by the **Regional and Language Options** item in Control Panel will be applied to the new <xref:System.Globalization.CultureInfo> object.</span></span> <span data-ttu-id="2c0d8-427">可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-427">You can use the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor to create a <xref:System.Globalization.CultureInfo> object that does not reflect a system's customizations.</span></span>  
   
-### NumberFormatInfo 属性  
- 格式设置受当前 <xref:System.Globalization.NumberFormatInfo> 对象的属性影响，它由当前线程区域性隐式提供或由调用格式设置的方法的 <xref:System.IFormatProvider> 参数显式提供。 为该参数指定 <xref:System.Globalization.NumberFormatInfo> 或 <xref:System.Globalization.CultureInfo> 对象。  
+### <a name="numberformatinfo-properties"></a><span data-ttu-id="2c0d8-428">NumberFormatInfo 属性</span><span class="sxs-lookup"><span data-stu-id="2c0d8-428">NumberFormatInfo Properties</span></span>  
+ <span data-ttu-id="2c0d8-429">格式设置受当前 <xref:System.Globalization.NumberFormatInfo> 对象的属性影响，它由当前线程区域性隐式提供或由调用格式设置的方法的 <xref:System.IFormatProvider> 参数显式提供。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-429">Formatting is influenced by the properties of the current <xref:System.Globalization.NumberFormatInfo> object, which is provided implicitly by the current thread culture or explicitly by the <xref:System.IFormatProvider> parameter of the method that invokes formatting.</span></span> <span data-ttu-id="2c0d8-430">为该参数指定 <xref:System.Globalization.NumberFormatInfo> 或 <xref:System.Globalization.CultureInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-430">Specify a <xref:System.Globalization.NumberFormatInfo> or <xref:System.Globalization.CultureInfo> object for that parameter.</span></span>  
   
 > [!NOTE]
->  有关自定义用于格式化数值的模式或字符串的信息，请参见 <xref:System.Globalization.NumberFormatInfo> 类主题。  
+>  <span data-ttu-id="2c0d8-431">有关自定义用于格式化数值的模式或字符串的信息，请参见 <xref:System.Globalization.NumberFormatInfo> 类主题。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-431">For information about customizing the patterns or strings used in formatting numeric values, see the <xref:System.Globalization.NumberFormatInfo> class topic.</span></span>  
   
-### 整型和浮点型数值类型  
- 对标准数字格式说明符的一些说明涉及到整型或浮点型数值类型。 整型数值类型包括 <xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64> 和 <xref:System.Numerics.BigInteger>。 浮点型数值类型有 <xref:System.Decimal>、<xref:System.Single> 和 <xref:System.Double>。  
+### <a name="integral-and-floating-point-numeric-types"></a><span data-ttu-id="2c0d8-432">整型和浮点型数值类型</span><span class="sxs-lookup"><span data-stu-id="2c0d8-432">Integral and Floating-Point Numeric Types</span></span>  
+ <span data-ttu-id="2c0d8-433">对标准数字格式说明符的一些说明涉及到整型或浮点型数值类型。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-433">Some descriptions of standard numeric format specifiers refer to integral or floating-point numeric types.</span></span> <span data-ttu-id="2c0d8-434">整型数值类型包括 <xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64> 和 <xref:System.Numerics.BigInteger>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-434">The integral numeric types are <xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, and <xref:System.Numerics.BigInteger>.</span></span> <span data-ttu-id="2c0d8-435">浮点型数值类型有 <xref:System.Decimal>、<xref:System.Single> 和 <xref:System.Double>。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-435">The floating-point numeric types are <xref:System.Decimal>, <xref:System.Single>, and <xref:System.Double>.</span></span>  
   
-### 浮点型无穷大和 NaN  
- 无论格式字符串原来是什么值，只要 <xref:System.Single> 或 <xref:System.Double> 浮点类型的值为正无穷大、负无穷大或非数值 \(NaN\)，格式字符串就分别是当前适用的 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 对象指定的 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 或 <xref:System.Globalization.NumberFormatInfo> 属性的值。  
+### <a name="floating-point-infinities-and-nan"></a><span data-ttu-id="2c0d8-436">浮点型无穷大和 NaN</span><span class="sxs-lookup"><span data-stu-id="2c0d8-436">Floating-Point Infinities and NaN</span></span>  
+ <span data-ttu-id="2c0d8-437">无论格式字符串原来是什么值，只要 <xref:System.Single> 或 <xref:System.Double> 浮点类型的值为正无穷大、负无穷大或非数值 (NaN)，格式字符串就分别是当前适用的 <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> 对象指定的 <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> 或 <xref:System.Globalization.NumberFormatInfo> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-437">Regardless of the format string, if the value of a <xref:System.Single> or <xref:System.Double> floating-point type is positive infinity, negative infinity, or not a number (NaN), the formatted string is the value of the respective <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, or <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> property that is specified by the currently applicable <xref:System.Globalization.NumberFormatInfo> object.</span></span>  
   
 <a name="example"></a>   
-## 示例  
- 下面的示例使用 en\-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。 此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。  
+## <a name="example"></a><span data-ttu-id="2c0d8-438">示例</span><span class="sxs-lookup"><span data-stu-id="2c0d8-438">Example</span></span>  
+ <span data-ttu-id="2c0d8-439">下面的示例使用 en-US 区域性和所有标准数字格式说明符设置一个整型数值和一个浮点型数值的格式。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-439">The following example formats an integral and a floating-point numeric value using the en-US culture and all the standard numeric format specifiers.</span></span> <span data-ttu-id="2c0d8-440">此示例使用两个特定的数值类型（<xref:System.Double> 和 <xref:System.Int32>），但对于任何一个其他数值基类型（<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、<xref:System.Numerics.BigInteger>、<xref:System.Decimal> 和 <xref:System.Single>）都将产生类似的结果。</span><span class="sxs-lookup"><span data-stu-id="2c0d8-440">This example uses two particular numeric types (<xref:System.Double> and <xref:System.Int32>), but would yield similar results for any of the other numeric base types (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>, and <xref:System.Single>).</span></span>  
   
  [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## 请参阅  
- <xref:System.Globalization.NumberFormatInfo>   
- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)   
- [格式化类型](../../../docs/standard/base-types/formatting-types.md)   
- [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)   
- [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)   
- [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a><span data-ttu-id="2c0d8-441">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2c0d8-441">See Also</span></span>  
+ <xref:System.Globalization.NumberFormatInfo>  
+ [<span data-ttu-id="2c0d8-442">Custom Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="2c0d8-442">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [<span data-ttu-id="2c0d8-443">格式设置类型</span><span class="sxs-lookup"><span data-stu-id="2c0d8-443">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="2c0d8-444">如何：用前导零填充数字</span><span class="sxs-lookup"><span data-stu-id="2c0d8-444">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [<span data-ttu-id="2c0d8-445">示例：.NET Framework 4 格式设置实用工具</span><span class="sxs-lookup"><span data-stu-id="2c0d8-445">Sample: .NET Framework 4 Formatting Utility</span></span>](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [<span data-ttu-id="2c0d8-446">复合格式设置</span><span class="sxs-lookup"><span data-stu-id="2c0d8-446">Composite Formatting</span></span>](../../../docs/standard/base-types/composite-formatting.md)

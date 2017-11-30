@@ -1,65 +1,63 @@
 ---
-title: "解析外部资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "解析外部资源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 824a35ee5d4ecafc45167ff3f4bc89802af4ed96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 解析外部资源
-**XmlDocument** 的 **XmlResolver** 属性由 **XmlDocument** 类用来定位没有内联的 XML 数据中的资源，如外部文档类型定义 \(DTD\)、实体和架构。  这些项可以位于网络或本地驱动器上，并通过统一资源标识符 \(URI\) 进行标识。  这使得 **XmlDocument** 可以解析文档中存在的 **EntityReference** 节点并根据外部 DTD 或架构验证文档的有效性。  
+# <a name="resolving-external-resources"></a><span data-ttu-id="4c34b-102">解析外部资源</span><span class="sxs-lookup"><span data-stu-id="4c34b-102">Resolving External Resources</span></span>
+<span data-ttu-id="4c34b-103">**XmlResolver**属性**XmlDocument**由**XmlDocument**类用来定位没有内联 XML 数据，如外部文档类型的资源定义 (Dtd)、 实体和架构。</span><span class="sxs-lookup"><span data-stu-id="4c34b-103">The **XmlResolver** property of the **XmlDocument** is used by the **XmlDocument** class to locate resources that are not inline in the XML data, such as external document type definitions (DTDs), entities, and schemas.</span></span> <span data-ttu-id="4c34b-104">这些项可以位于网络或本地驱动器上，并通过统一资源标识符 (URI) 进行标识。</span><span class="sxs-lookup"><span data-stu-id="4c34b-104">These items can be located on a network or on a local drive, and are identifiable by a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="4c34b-105">这允许**XmlDocument**若要解决**EntityReference** ，会在文档中存在验证根据外部 DTD 或架构文档的节点。</span><span class="sxs-lookup"><span data-stu-id="4c34b-105">This allows the **XmlDocument** to resolve **EntityReference** nodes that are present in the document and validate the document according to the external DTD or schema.</span></span>  
   
-## 完全受信任的 XmlDocument  
- **XmlResolver** 属性影响 **XmlDocument.Load** 方法的功能。  下表显示了当 **XmlDocument** 完全受信任时 **XmlDocument.XmlResolver** 属性的作用。  之后的表显示了当 Load 的输入是 **TextReader**、**String**、**Stream** 或 **URI** 时的 **XmlDocument.Load** 方法。  如果从 **XmlReader** 中加载 **XmlDocument**，则此表不适用于 **Load** 方法。  
+## <a name="fully-trusted-xmldocument"></a><span data-ttu-id="4c34b-106">完全受信任的 XmlDocument</span><span class="sxs-lookup"><span data-stu-id="4c34b-106">Fully-Trusted XmlDocument</span></span>  
+ <span data-ttu-id="4c34b-107">**XmlResolver**属性会影响的功能**XmlDocument.Load**方法。</span><span class="sxs-lookup"><span data-stu-id="4c34b-107">The **XmlResolver** property affects the functionality of the **XmlDocument.Load** method.</span></span> <span data-ttu-id="4c34b-108">下的表显示如何**XmlDocument.XmlResolver**时起作用属性**XmlDocument**对象是完全受信任。</span><span class="sxs-lookup"><span data-stu-id="4c34b-108">The table below shows how the **XmlDocument.XmlResolver** property works when the **XmlDocument** object is fully trusted.</span></span> <span data-ttu-id="4c34b-109">下表显示**XmlDocument.Load**方法负载的输入时**TextReader**，**字符串**，**流**，或**URI**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-109">The following table shows the **XmlDocument.Load** methods when the input to the Load is a **TextReader**, **String**, **Stream**, or **URI**.</span></span> <span data-ttu-id="4c34b-110">此表不适用于**负载**方法如果**XmlDocument**从加载**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-110">This table does not apply to the **Load** method if the **XmlDocument** is loaded from an **XmlReader**.</span></span>  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|该属性设置为一个以前创建的而且用户已设置属性的 **XmlResolver** 类。|**XmlDocument** 使用给定的 **XmlResolver** 来解析文件名、解析对外部资源（如 DTD、实体和架构）的引用。<br /><br /> **XmlResolver** 还用来解析在 **XmlDocument** 中添加或编辑节点时需要的外部资源。|指定给 **XmlDocument** 的 **XmlResolver** 是每当需要定位和解析外部资源时使用的解析器。|  
-|此属性设置为 **null**（在 Microsoft Visual Basic .NET 中为 **Nothing**）。|不支持需要外部资源的功能，如定位外部架构或 DTD。  也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|**XmlDocument** 匿名加载文件，而且不尝试解析任何其他资源。|  
-|不设置此属性，而是将其保留为默认状态。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 NULL 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。||  
+|<span data-ttu-id="4c34b-111">XmlResolver 属性</span><span class="sxs-lookup"><span data-stu-id="4c34b-111">XmlResolver property</span></span>|<span data-ttu-id="4c34b-112">函数</span><span class="sxs-lookup"><span data-stu-id="4c34b-112">Function</span></span>|<span data-ttu-id="4c34b-113">说明</span><span class="sxs-lookup"><span data-stu-id="4c34b-113">Notes</span></span>|  
+|--------------------------|--------------|-----------|  
+|<span data-ttu-id="4c34b-114">属性设置为**XmlResolver**以前已创建并具有已由用户对其进行设置的属性的类。</span><span class="sxs-lookup"><span data-stu-id="4c34b-114">The property is set to an **XmlResolver** class that has been previously created and has properties already set on it by the user.</span></span>|<span data-ttu-id="4c34b-115">**XmlDocument**使用**XmlResolver**给定来解析文件名称，以解析对外部资源，如 Dtd、 实体和架构引用。</span><span class="sxs-lookup"><span data-stu-id="4c34b-115">The **XmlDocument** uses the **XmlResolver** that is given to resolve file names, to resolve references to external resources such as DTDs, entities, and schemas.</span></span><br /><br /> <span data-ttu-id="4c34b-116">**XmlResolver**还在解析外部添加或编辑中的节点时所需的资源时使用**XmlDocument**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-116">The **XmlResolver** is also used when resolving external resources that are needed when adding or editing nodes in the **XmlDocument**.</span></span>|<span data-ttu-id="4c34b-117">**XmlResolver**赋予**XmlDocument**是需要定位和解析外部资源时，需要使用冲突解决程序。</span><span class="sxs-lookup"><span data-stu-id="4c34b-117">The **XmlResolver** given to the **XmlDocument** is the resolver that is used whenever external resources need to be located and resolved.</span></span>|  
+|<span data-ttu-id="4c34b-118">属性设置为**null** (**执行任何操作**在 Microsoft Visual Basic.NET)。</span><span class="sxs-lookup"><span data-stu-id="4c34b-118">The property is set to **null** (**Nothing** in Microsoft Visual Basic .NET).</span></span>|<span data-ttu-id="4c34b-119">不支持需要外部资源的功能，如定位外部架构或 DTD。</span><span class="sxs-lookup"><span data-stu-id="4c34b-119">Features that require an external resource are not supported, such as locating an external schema, or DTD.</span></span> <span data-ttu-id="4c34b-120">也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。</span><span class="sxs-lookup"><span data-stu-id="4c34b-120">Nor will external entities be resolved, and performing editing functions, such as inserting entity nodes that require resolution, are not supported.</span></span>|<span data-ttu-id="4c34b-121">**XmlDocument**匿名加载文件，而且不会尝试解析任何其他资源。</span><span class="sxs-lookup"><span data-stu-id="4c34b-121">The **XmlDocument** loads files as anonymous and does not attempt to resolve any other resources.</span></span>|  
+|<span data-ttu-id="4c34b-122">不设置此属性，而是将其保留为默认状态。</span><span class="sxs-lookup"><span data-stu-id="4c34b-122">The property is not set, but left in its default state.</span></span>|<span data-ttu-id="4c34b-123">**XmlUrlResolver**替换为 NULL 实例化并通过使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="4c34b-123">An **XmlUrlResolver** with NULL credentials will be instantiated and used by the **XmlDocument** when resolving file names, locating external DTDs, entities, and schemas, and **null** credentials are used when editing nodes.</span></span>||  
   
- 下表显示当 **Load** 的输入是一个 **XmlReader** 而且 **XmlDocument** 完全受信任时的 **XmlDocument.Load** 方法。  
+ <span data-ttu-id="4c34b-124">下表显示**XmlDocument.Load**方法时的输入**负载**是**XmlReader**和**XmlDocument**是完全受信任。</span><span class="sxs-lookup"><span data-stu-id="4c34b-124">The following table shows the **XmlDocument.Load** method when the input to the **Load** is an **XmlReader** and the **XmlDocument** is fully trusted.</span></span>  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|**XmlDocument** 使用的 **XmlResolver** 类与 **XmlReader** 使用的是同一个类。|**XmlDocument** 使用分配给 **XmlReader** 的 **XmlResolver**。<br /><br /> 无论 **XmlDocument** 的信任级别如何，都无法设置 **XmlDocument.Resolver** 属性，因为它是从 **XmlReader** 获取 **XmlResolver**。  不能试图通过设置 **XmlDocument** 的 **XmlResolver** 属性来重写 **XmlReader** 的 **XmlResolver** 设置。|**XmlReader** 可以是 **XmlTextReader**、**XmlValidatingReader** 或自己编写的读取器。  如果使用的读取器支持实体解析，则解析外部实体。  如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
+|<span data-ttu-id="4c34b-125">XmlResolver 属性</span><span class="sxs-lookup"><span data-stu-id="4c34b-125">XmlResolver property</span></span>|<span data-ttu-id="4c34b-126">函数</span><span class="sxs-lookup"><span data-stu-id="4c34b-126">Function</span></span>|<span data-ttu-id="4c34b-127">说明</span><span class="sxs-lookup"><span data-stu-id="4c34b-127">Notes</span></span>|  
+|--------------------------|--------------|-----------|  
+|<span data-ttu-id="4c34b-128">**XmlResolver**使用类**XmlDocument**是正在使用的相同类**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-128">The **XmlResolver** class used by the **XmlDocument** is the same class being used by the **XmlReader**.</span></span>|<span data-ttu-id="4c34b-129">**XmlDocument**使用**XmlResolver** ，已分配给**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-129">The **XmlDocument** uses the **XmlResolver** that was assigned to the **XmlReader**.</span></span><br /><br /> <span data-ttu-id="4c34b-130">**XmlDocument.Resolver**属性不能为设置，而不考虑**XmlDocument**信任级别，因为它获取**XmlResolver**从**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-130">The **XmlDocument.Resolver** property cannot be set, regardless of the **XmlDocument** trust level, because it is getting an **XmlResolver** from the **XmlReader**.</span></span> <span data-ttu-id="4c34b-131">不能尝试替代的设置**XmlReaders** **XmlResolver**通过设置**XmlResolver**属性**XmlDocument**.</span><span class="sxs-lookup"><span data-stu-id="4c34b-131">You cannot attempt to override the settings of the **XmlReaders**' **XmlResolver** by setting the **XmlResolver** property of the **XmlDocument**.</span></span>|<span data-ttu-id="4c34b-132">**XmlReader**可以是**XmlTextReader**， **XmlValidatingReader**，或自己编写的读取器。</span><span class="sxs-lookup"><span data-stu-id="4c34b-132">The **XmlReader** can be the **XmlTextReader**, **XmlValidatingReader**, or a custom-written reader.</span></span> <span data-ttu-id="4c34b-133">如果使用的读取器支持实体解析，则解析外部实体。</span><span class="sxs-lookup"><span data-stu-id="4c34b-133">If the reader used supports entity resolution, external entities are resolved.</span></span> <span data-ttu-id="4c34b-134">如果传递的读取器不支持实体引用，那么就不解析实体引用。</span><span class="sxs-lookup"><span data-stu-id="4c34b-134">If the reader passed does not support entity references, then entity references are not resolved.</span></span>|  
   
-## 不完全受信任的 XmlDocument  
- 下表显示了当对象不完全受信任时 **XmlDocument.XmlResolver** 属性的作用。  当 Load 的输入是 **TextReader**、**String**、**Stream** 或 **URI** 时，此表适用于 **XmlDocument.Load** 方法。  如果从 **XmlReader** 中加载 **XmlDocument**，则此表不适用于 **Load** 方法。  
+## <a name="semi-trusted-xmldocument"></a><span data-ttu-id="4c34b-135">不完全受信任的 XmlDocument</span><span class="sxs-lookup"><span data-stu-id="4c34b-135">Semi-Trusted XmlDocument</span></span>  
+ <span data-ttu-id="4c34b-136">下表显示如何**XmlDocument.XmlResolver**属性在该对象不完全受信任时才有效。</span><span class="sxs-lookup"><span data-stu-id="4c34b-136">The following table shows how the **XmlDocument.XmlResolver** property works when the object is semi-trusted.</span></span> <span data-ttu-id="4c34b-137">此表适用于**XmlDocument.Load**方法负载的输入时**TextReader**，**字符串**，**流**，或**URI**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-137">This table applies to the **XmlDocument.Load** methods when the input to the Load is a **TextReader**, **String**, **Stream**, or **URI**.</span></span> <span data-ttu-id="4c34b-138">此表不适用于**负载**方法如果**XmlDocument**从加载**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-138">This table does not apply to the **Load** method if the **XmlDocument** is loaded from an **XmlReader**.</span></span>  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|在不完全受信任的方案中，**XmlResolver** 属性只能设置为 null。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 **null** 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。|此行为与不设置 **XmlResolver** 而是保持为默认状态时的行为完全相同。<br /><br /> **XmlDocument** 对所有操作使用匿名权限。|  
-|此属性设置为 **null**（在 Microsoft Visual Basic .NET 中为 **Nothing**）。|不支持需要外部资源的功能，如定位外部架构或 DTD。  也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|当属性为 **null** 时，行为是相同的，不管 **XmlDocument** 是完全受信任的还是不完全受信任的。|  
-|不设置此属性，而是将其保留为默认状态。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 **null** 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。|**XmlDocument** 对所有操作使用匿名权限。|  
+|<span data-ttu-id="4c34b-139">XmlResolver 属性</span><span class="sxs-lookup"><span data-stu-id="4c34b-139">XmlResolver property</span></span>|<span data-ttu-id="4c34b-140">函数</span><span class="sxs-lookup"><span data-stu-id="4c34b-140">Function</span></span>|<span data-ttu-id="4c34b-141">说明</span><span class="sxs-lookup"><span data-stu-id="4c34b-141">Notes</span></span>|  
+|--------------------------|--------------|-----------|  
+|<span data-ttu-id="4c34b-142">在不完全受信任的方案中， **XmlResolver**属性不能设置为除 null 之外的任何内容。</span><span class="sxs-lookup"><span data-stu-id="4c34b-142">In the semi-trusted scenario, the **XmlResolver** property cannot be set to anything other than null.</span></span>|<span data-ttu-id="4c34b-143">**XmlUrlResolver**与**null**将实例化并使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="4c34b-143">An **XmlUrlResolver** with **null** credentials will be instantiated and used by the **XmlDocument** when resolving file names, locating external DTDs, entities, and schemas, and **null** credentials are used when editing nodes.</span></span>|<span data-ttu-id="4c34b-144">此行为是相同的行为时**XmlResolver**属性不是设置，但保留其默认状态。</span><span class="sxs-lookup"><span data-stu-id="4c34b-144">This behavior is identical to the behavior when the **XmlResolver** property is not set, but left in its default state.</span></span><br /><br /> <span data-ttu-id="4c34b-145">**XmlDocument**对所有操作使用匿名权限。</span><span class="sxs-lookup"><span data-stu-id="4c34b-145">The **XmlDocument** uses anonymous permissions for all actions.</span></span>|  
+|<span data-ttu-id="4c34b-146">属性设置为**null** (**执行任何操作**在 Microsoft Visual Basic.NET)。</span><span class="sxs-lookup"><span data-stu-id="4c34b-146">The property is set to **null** (**Nothing** in Microsoft Visual Basic .NET).</span></span>|<span data-ttu-id="4c34b-147">不支持需要外部资源的功能，如定位外部架构或 DTD。</span><span class="sxs-lookup"><span data-stu-id="4c34b-147">No features that require an external resource are supported, such as locating an external schema or DTD.</span></span> <span data-ttu-id="4c34b-148">也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。</span><span class="sxs-lookup"><span data-stu-id="4c34b-148">Nor will external entities be resolved, and performing editing functions such as inserting entity nodes that require resolution, are not supported.</span></span>|<span data-ttu-id="4c34b-149">当该属性是**null**，行为是相同的不管**XmlDocument**是完全受信任或不完全受信任。</span><span class="sxs-lookup"><span data-stu-id="4c34b-149">When the property is **null**, the behavior is the same regardless if the **XmlDocument** is fully trusted or semi-trusted.</span></span>|  
+|<span data-ttu-id="4c34b-150">不设置此属性，而是将其保留为默认状态。</span><span class="sxs-lookup"><span data-stu-id="4c34b-150">The property is not set, but left in its default state.</span></span>|<span data-ttu-id="4c34b-151">**XmlUrlResolver**与**null**将实例化并使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="4c34b-151">An **XmlUrlResolver** with **null** credentials will be instantiated and used by the **XmlDocument** when resolving file names, locating external DTDs, entities, and schemas, and **null** credentials are used when editing nodes.</span></span>|<span data-ttu-id="4c34b-152">**XmlDocument**对所有操作使用匿名权限。</span><span class="sxs-lookup"><span data-stu-id="4c34b-152">The **XmlDocument** uses anonymous permissions for all actions.</span></span>|  
   
- 当 **Load** 的输入是 **TextReader** 而且 **XmlDocument** 不完全受信任时，此表适用于 **XmlDocument.Load** 方法。  
+ <span data-ttu-id="4c34b-153">此表适用于**XmlDocument.Load**方法时的输入**负载**是**XmlReader**，和**XmlDocument**是不完全受信任。</span><span class="sxs-lookup"><span data-stu-id="4c34b-153">This table applies to the **XmlDocument.Load** method when the input to the **Load** is an **XmlReader**, and the **XmlDocument** is semi-trusted.</span></span>  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|**XmlDocument** 使用的 **XmlResolver** 类与 **XmlReader** 使用的是同一个类。|**XmlDocument** 使用分配给 **XmlReader** 的 **XmlResolver**。<br /><br /> 无论 **XmlDocument** 的信任级别如何，都无法设置 **XmlDocument.Resolver** 属性，因为它是从 **XmlReader** 获取 **XmlResolver**。  不能试图通过设置 **XmlDocument** 的 **XmlResolver** 属性来重写 **XmlReader** 的 **XmlResolver** 设置。|**XmlReader** 可以是 **XmlTextReader**、验证 <xref:System.Xml.XmlReader> 或自己编写的读取器。  如果使用的读取器支持实体解析，则解析外部实体。  如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
+|<span data-ttu-id="4c34b-154">XmlResolver 属性</span><span class="sxs-lookup"><span data-stu-id="4c34b-154">XmlResolver property</span></span>|<span data-ttu-id="4c34b-155">函数</span><span class="sxs-lookup"><span data-stu-id="4c34b-155">Function</span></span>|<span data-ttu-id="4c34b-156">说明</span><span class="sxs-lookup"><span data-stu-id="4c34b-156">Notes</span></span>|  
+|--------------------------|--------------|-----------|  
+|<span data-ttu-id="4c34b-157">**XmlResolver**使用类**XmlDocument**为正在使用的同一**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-157">The **XmlResolver** class used by the **XmlDocument** is the same one being used by the **XmlReader**.</span></span>|<span data-ttu-id="4c34b-158">**XmlDocument**使用**XmlResolver** ，已分配给**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-158">The **XmlDocument** uses the **XmlResolver** that was assigned to the **XmlReader**.</span></span><br /><br /> <span data-ttu-id="4c34b-159">**XmlDocument.Resolver**属性不能为设置，而不考虑**XmlDocument**信任级别，因为它获取**XmlResolver**从**XmlReader**。</span><span class="sxs-lookup"><span data-stu-id="4c34b-159">The **XmlDocument.Resolver** property cannot be set, regardless of the **XmlDocument** trust level, because it is getting an **XmlResolver** from the **XmlReader**.</span></span> <span data-ttu-id="4c34b-160">不能尝试替代的设置**XmlReaders** **XmlResolver**通过设置**XmlResolver**属性**XmlDocument**.</span><span class="sxs-lookup"><span data-stu-id="4c34b-160">You cannot attempt to override the settings of the **XmlReaders** **XmlResolver** by setting the **XmlResolver** property of the **XmlDocument**.</span></span>|<span data-ttu-id="4c34b-161">**XmlReader**可以是**XmlTextReader**、 验证<xref:System.Xml.XmlReader>，或自己编写的读取器。</span><span class="sxs-lookup"><span data-stu-id="4c34b-161">The **XmlReader** can be the **XmlTextReader**, validating <xref:System.Xml.XmlReader>, or a custom-written reader.</span></span> <span data-ttu-id="4c34b-162">如果使用的读取器支持实体解析，则解析外部实体。</span><span class="sxs-lookup"><span data-stu-id="4c34b-162">If the reader used supports entity resolution, external entities are resolved.</span></span> <span data-ttu-id="4c34b-163">如果传递的读取器不支持实体引用，那么就不解析实体引用。</span><span class="sxs-lookup"><span data-stu-id="4c34b-163">If the reader passed in does not support entity references, then entity references are not resolved.</span></span>|  
   
- 将 XmlResolver 设置为包含正确的凭据后，将可以访问外部资源。  
+ <span data-ttu-id="4c34b-164">将 XmlResolver 设置为包含正确的凭据后，将可以访问外部资源。</span><span class="sxs-lookup"><span data-stu-id="4c34b-164">Setting the XmlResolver to contain the correct credentials allows access to external resources.</span></span>  
   
 > [!NOTE]
->  无法检索 **XmlResolver** 属性。  这有助于防止用户重用已设置了凭据的 **XmlResolver**。  此外，如果使用 **XmlTextReader** 或验证 <xref:System.Xml.XmlReader> 加载 **XmlDocument**，而 **XmlDocument** 具有已设置的解析器，则 **XmlDocument** 在 **Load** 阶段后不缓存这些读取器中的解析器，因为这也会带来安全风险。  
+>  <span data-ttu-id="4c34b-165">没有方法来检索**XmlResolver**属性。</span><span class="sxs-lookup"><span data-stu-id="4c34b-165">There is no way to retrieve the **XmlResolver** property.</span></span> <span data-ttu-id="4c34b-166">这有助于防止用户重用**XmlResolver**了凭据已设置。</span><span class="sxs-lookup"><span data-stu-id="4c34b-166">This helps to prevent a user from reusing an **XmlResolver** on which credentials have been set.</span></span> <span data-ttu-id="4c34b-167">此外，如果**XmlTextReader**或验证<xref:System.Xml.XmlReader>用于加载**XmlDocument**和**XmlDocument**具有已设置，从解析程序解析程序不会缓存这些读取器**XmlDocument**后**负载**阶段，因为这也会带来安全风险。</span><span class="sxs-lookup"><span data-stu-id="4c34b-167">Also, if an **XmlTextReader** or validating <xref:System.Xml.XmlReader> is used to load the **XmlDocument** and the **XmlDocument** has a resolver that has been set, the resolvers from these readers are not cached by the **XmlDocument** after the **Load** phase, since this also presents a security risk.</span></span>  
   
- 有关详细信息，请参阅 <xref:System.Xml.XmlResolver> 引用页的“备注”部分。  
+ <span data-ttu-id="4c34b-168">有关详细信息，请参阅 <xref:System.Xml.XmlResolver> 引用页的“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="4c34b-168">For more information, see the Remarks section of the <xref:System.Xml.XmlResolver> reference page.</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="4c34b-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4c34b-169">See Also</span></span>  
+ [<span data-ttu-id="4c34b-170">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="4c34b-170">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

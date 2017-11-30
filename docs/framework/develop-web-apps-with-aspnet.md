@@ -1,41 +1,29 @@
 ---
 title: "用 ASP.NET 开发 Web 应用程序"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 10/10/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-webforms
-ms.tgt_pltfrm: 
+ms.technology: dotnet-webforms
 ms.topic: article
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-caps.latest.revision: 14
-author: tdykstra
-ms.author: tdykstra
 manager: wpickett
+ms.openlocfilehash: c53620bd76fdb0b2e921687e538e99301c2da8e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 509590f6986fe7c2cd9e834ccea60193fe8da977
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="developing-web-applications-with-aspnet"></a>用 ASP.NET 开发 Web 应用程序
-ASP.NET 是用于创建 Web 应用程序的 .NET Framework 技术。 与 ASP.NET 有关的文档位于 MSDN 库的 [Web 开发](http://go.microsoft.com/fwlink/p/?LinkID=235794)部分以及 [www.asp.net 网站](http://go.microsoft.com/fwlink/p/?LinkId=251042)上。 为了方便起见，提供了下列链接：  
-  
--   [ASP.NET 和 Visual Studio for Web](http://msdn.microsoft.com/library/c3e0fd2f-7a94-47c4-afc0-ecfb7233e15a)  
-  
--   [ASP.NET MVC](http://go.microsoft.com/fwlink/p/?LinkID=227227)  
-  
--   [ASP.NET 网页](http://go.microsoft.com/fwlink/p/?LinkId=251040)  
-  
--   [ASP.NET Web API](http://go.microsoft.com/fwlink/p/?LinkId=251041)  
-  
-## <a name="see-also"></a>另请参阅  
- [开发指南](../../docs/framework/development-guide.md)
+# <a name="developing-web-applications-with-aspnet"></a><span data-ttu-id="a7a42-102">用 ASP.NET 开发 Web 应用程序</span><span class="sxs-lookup"><span data-stu-id="a7a42-102">Developing Web Applications with ASP.NET</span></span>
+<span data-ttu-id="a7a42-103">ASP.NET 是用于创建 Web 应用程序的 .NET Framework 技术。</span><span class="sxs-lookup"><span data-stu-id="a7a42-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="a7a42-104">为了方便起见，提供了下列链接：</span><span class="sxs-lookup"><span data-stu-id="a7a42-104">The following links are provided for your convenience:</span></span>  
 
+- [<span data-ttu-id="a7a42-105">ASP.NET 核心文档</span><span class="sxs-lookup"><span data-stu-id="a7a42-105">ASP.NET Core Documentation</span></span>](/aspnet/core/)   
+- [<span data-ttu-id="a7a42-106">ASP.NET 文档</span><span class="sxs-lookup"><span data-stu-id="a7a42-106">ASP.NET documentation</span></span>](/aspnet/overview)   
+- [<span data-ttu-id="a7a42-107">ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="a7a42-107">ASP.NET MVC</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=227227)   
+- [<span data-ttu-id="a7a42-108">ASP.NET 网页</span><span class="sxs-lookup"><span data-stu-id="a7a42-108">ASP.NET Web Pages</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251040)   
+- [<span data-ttu-id="a7a42-109">ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="a7a42-109">ASP.NET Web API</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251041)  
+  
+## <a name="see-also"></a><span data-ttu-id="a7a42-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="a7a42-110">See also</span></span>
+ [<span data-ttu-id="a7a42-111">开发指南</span><span class="sxs-lookup"><span data-stu-id="a7a42-111">Development Guide</span></span>](../../docs/framework/development-guide.md)

@@ -1,96 +1,102 @@
 ---
-title: "如何：定义和使用自定义数值格式提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自定义格式字符串"
-  - "自定义数字格式字符串"
-  - "显示日期和时间数据"
-  - "格式提供程序 [.NET Framework]"
-  - "格式设置 [.NET Framework], 数字"
-  - "数字格式设置 [.NET Framework]"
-  - "数字 [.NET Framework], 自定义数字格式字符串"
-  - "数值格式字符串 [.NET Framework]"
+title: "如何：定义和使用自定义数值格式提供程序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- custom numeric format strings
+- numbers [.NET Framework], custom numeric format strings
+- displaying date and time data
+- format providers [.NET Framework]
+- custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e44a909eb92f0d9dfa21980a918a2d370dcf427
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：定义和使用自定义数值格式提供程序
-在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，您可以对数值的字符串表示形式施加广泛的控制。  它支持用于自定义数值格式的下列功能：  
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="a88e8-102">如何：定义和使用自定义数值格式提供程序</span><span class="sxs-lookup"><span data-stu-id="a88e8-102">How to: Define and Use Custom Numeric Format Providers</span></span>
+<span data-ttu-id="a88e8-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]可让你全面控制的字符串表示形式的数字值。</span><span class="sxs-lookup"><span data-stu-id="a88e8-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="a88e8-104">它支持用于自定义数值格式的以下功能：</span><span class="sxs-lookup"><span data-stu-id="a88e8-104">It supports the following features for customizing the format of numeric values:</span></span>  
   
--   标准数值格式字符串，提供用于将数字转换为其字符串表示形式的预定义格式集。  可以将这些字符串与带有 `format` 参数的任何数值格式化方法（例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName>）一起使用。  有关详细信息，请参见[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
+-   <span data-ttu-id="a88e8-105">标准数字格式字符串，提供一组预定义格式以用于将数字转换为其字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="a88e8-105">Standard numeric format strings, which provide a predefined set of formats for converting numbers to their string representation.</span></span> <span data-ttu-id="a88e8-106">可以使用任何数字格式设置方法，如<xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>，具有`format`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-106">You can use them with any numeric formatting method, such as <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, that has a `format` parameter.</span></span> <span data-ttu-id="a88e8-107">有关详细信息，请参阅[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="a88e8-107">For details, see [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).</span></span>  
   
--   自定义数值格式字符串，提供可通过组合来定义自定义数值格式说明符的符号集。  它们也可以与带 `format` 参数的任何数值格式化方法（例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName>）一起使用。  有关详细信息，请参见[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+-   <span data-ttu-id="a88e8-108">自定义数字格式字符串，提供一组可以进行组合以定义自定义数字格式说明符的符号。</span><span class="sxs-lookup"><span data-stu-id="a88e8-108">Custom numeric format strings, which provide a set of symbols that can be combined to define custom numeric format specifiers.</span></span> <span data-ttu-id="a88e8-109">它们还可与任何数字格式设置方法，如<xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>，具有`format`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-109">They can also be used with any numeric formatting method, such as <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, that has a `format` parameter.</span></span> <span data-ttu-id="a88e8-110">有关详细信息，请参阅[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="a88e8-110">For details, see [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span>  
   
--   自定义 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 对象，用于定义显示数值的字符串表示形式时使用的符号和格式模式。  可以将这些字符串与带有 `provider` 参数的任何数值格式化方法（例如 <xref:System.Int32.ToString%2A>）一起使用。  通常情况下，`provider` 参数用于指定区域性特定的格式。  
+-   <span data-ttu-id="a88e8-111">自定义<xref:System.Globalization.CultureInfo>或<xref:System.Globalization.NumberFormatInfo>对象，用于定义符号和格式显示数字值的字符串表示形式之间实现中使用的模式。</span><span class="sxs-lookup"><span data-stu-id="a88e8-111">Custom <xref:System.Globalization.CultureInfo> or <xref:System.Globalization.NumberFormatInfo> objects, which define the symbols and format patterns used in displaying the string representations of numeric values.</span></span> <span data-ttu-id="a88e8-112">可以使用任何数字格式设置方法，如<xref:System.Int32.ToString%2A>，具有`provider`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-112">You can use them with any numeric formatting method, such as <xref:System.Int32.ToString%2A>, that has a `provider` parameter.</span></span> <span data-ttu-id="a88e8-113">通常情况下，`provider`参数用于指定区域性特定格式设置。</span><span class="sxs-lookup"><span data-stu-id="a88e8-113">Typically, the `provider` parameter is used to specify culture-specific formatting.</span></span>  
   
- 在某些情况下（例如当应用程序必须显示已格式化的帐号、标识号或邮政编码时），这三种方法都不适用。  在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，还可以定义既非 <xref:System.Globalization.CultureInfo> 又非 <xref:System.Globalization.NumberFormatInfo> 对象的格式化对象，以确定数值如何格式化。  本主题将分步说明如何实现此类对象，并提供格式化电话号码的示例。  
+ <span data-ttu-id="a88e8-114">在某些情况下（例如当应用程序必须显示格式化帐号、标识号或邮政编码），这三种方法都不合适。</span><span class="sxs-lookup"><span data-stu-id="a88e8-114">In some cases (such as when an application must display a formatted account number, an identification number, or a postal code) these three techniques are inappropriate.</span></span> <span data-ttu-id="a88e8-115">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]还允许你定义的格式化对象，既不是<xref:System.Globalization.CultureInfo>也不是<xref:System.Globalization.NumberFormatInfo>对象确定如何设置格式的数字值。</span><span class="sxs-lookup"><span data-stu-id="a88e8-115">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also enables you to define a formatting object that is neither a <xref:System.Globalization.CultureInfo> nor a <xref:System.Globalization.NumberFormatInfo> object to determine how a numeric value is formatted.</span></span> <span data-ttu-id="a88e8-116">本主题提供用于实现这类对象的分步说明，并提供对电话号码设置格式的示例。</span><span class="sxs-lookup"><span data-stu-id="a88e8-116">This topic provides the step-by-step instructions for implementing such an object, and provides an example that formats telephone numbers.</span></span>  
   
-### 定义自定义格式提供程序  
+### <a name="to-define-a-custom-format-provider"></a><span data-ttu-id="a88e8-117">定义自定义格式提供程序</span><span class="sxs-lookup"><span data-stu-id="a88e8-117">To define a custom format provider</span></span>  
   
-1.  定义一个实现 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 接口的类。  
+1.  <span data-ttu-id="a88e8-118">定义一个类以实现<xref:System.IFormatProvider>和<xref:System.ICustomFormatter>接口。</span><span class="sxs-lookup"><span data-stu-id="a88e8-118">Define a class that implements the <xref:System.IFormatProvider> and <xref:System.ICustomFormatter> interfaces.</span></span>  
   
-2.  实现 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 方法。  <xref:System.IFormatProvider.GetFormat%2A> 是一个回调方法，格式化方法（例如 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 方法）会调用该方法来检索真正负责执行自定义格式化的对象。  典型的 <xref:System.IFormatProvider.GetFormat%2A> 实现可执行下列任务：  
+2.  <span data-ttu-id="a88e8-119">实现 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="a88e8-119">Implement the <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="a88e8-120"><xref:System.IFormatProvider.GetFormat%2A>是一个回调方法的格式设置方法 (如<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法) 调用以检索实际负责执行自定义格式设置的对象。</span><span class="sxs-lookup"><span data-stu-id="a88e8-120"><xref:System.IFormatProvider.GetFormat%2A> is a callback method that the formatting method (such as the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method) invokes to retrieve the object that is actually responsible for performing custom formatting.</span></span> <span data-ttu-id="a88e8-121">典型实现<xref:System.IFormatProvider.GetFormat%2A>执行下列任务：</span><span class="sxs-lookup"><span data-stu-id="a88e8-121">A typical implementation of <xref:System.IFormatProvider.GetFormat%2A> does the following:</span></span>  
   
-    1.  确定以方法参数的形式传递的 <xref:System.Type> 对象是否表示 <xref:System.ICustomFormatter> 接口。  
+    1.  <span data-ttu-id="a88e8-122">确定是否<xref:System.Type>对象作为一种方法传递参数表示<xref:System.ICustomFormatter>接口。</span><span class="sxs-lookup"><span data-stu-id="a88e8-122">Determines whether the <xref:System.Type> object passed as a method parameter represents an <xref:System.ICustomFormatter> interface.</span></span>  
   
-    2.  如果该参数的确表示 <xref:System.ICustomFormatter> 接口，<xref:System.IFormatProvider.GetFormat%2A> 将返回一个实现负责提供自定义格式化的 <xref:System.ICustomFormatter> 接口的对象。  通常情况下，自定义格式化对象会返回自身。  
+    2.  <span data-ttu-id="a88e8-123">如果该参数的确表示<xref:System.ICustomFormatter>接口，<xref:System.IFormatProvider.GetFormat%2A>返回实现的对象<xref:System.ICustomFormatter>负责提供自定义格式设置的接口。</span><span class="sxs-lookup"><span data-stu-id="a88e8-123">If the parameter does represent the <xref:System.ICustomFormatter> interface, <xref:System.IFormatProvider.GetFormat%2A> returns an object that implements the <xref:System.ICustomFormatter> interface that is responsible for providing custom formatting.</span></span> <span data-ttu-id="a88e8-124">通常，自定义格式设置对象返回其自身。</span><span class="sxs-lookup"><span data-stu-id="a88e8-124">Typically, the custom formatting object returns itself.</span></span>  
   
-    3.  如果该参数不表示 <xref:System.ICustomFormatter> 接口，<xref:System.IFormatProvider.GetFormat%2A> 将返回 `null`。  
+    3.  <span data-ttu-id="a88e8-125">如果参数不表示<xref:System.ICustomFormatter>接口，<xref:System.IFormatProvider.GetFormat%2A>返回`null`。</span><span class="sxs-lookup"><span data-stu-id="a88e8-125">If the parameter does not represent the <xref:System.ICustomFormatter> interface, <xref:System.IFormatProvider.GetFormat%2A> returns `null`.</span></span>  
   
-3.  实现 <xref:System.ICustomFormatter.Format%2A> 方法。  此方法由 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 方法调用，它负责返回数字的字符串表示形式。  实现该方法通常涉及以下过程：  
+3.  <span data-ttu-id="a88e8-126">实现 <xref:System.ICustomFormatter.Format%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a88e8-126">Implement the <xref:System.ICustomFormatter.Format%2A> method.</span></span> <span data-ttu-id="a88e8-127">调用此方法<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法和负责返回数字的字符串表示。</span><span class="sxs-lookup"><span data-stu-id="a88e8-127">This method is called by the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method and is responsible for returning the string representation of a number.</span></span> <span data-ttu-id="a88e8-128">实现方法通常涉及以下步骤：</span><span class="sxs-lookup"><span data-stu-id="a88e8-128">Implementing the method typically involves the following:</span></span>  
   
-    1.  （可选）通过检查 `provider` 参数确保该方法要以合法的方式提供格式化服务。  对于同时实现 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 的格式化对象，这涉及到测试 `provider` 参数与当前的格式化对象是否相等。  
+    1.  <span data-ttu-id="a88e8-129">（可选），请确保该方法以合法方式用于提供格式设置服务通过检查`provider`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-129">Optionally, make sure that the method is legitimately intended to provide formatting services by examining the `provider` parameter.</span></span> <span data-ttu-id="a88e8-130">有关实现的对象设置格式<xref:System.IFormatProvider>和<xref:System.ICustomFormatter>，这涉及到测试`provider`与当前的格式设置对象的相等性的参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-130">For formatting objects that implement both <xref:System.IFormatProvider> and <xref:System.ICustomFormatter>, this involves testing the `provider` parameter for equality with the current formatting object.</span></span>  
   
-    2.  确定格式化对象是否应支持自定义格式说明符。\(例如，格式说明符“N”可能指示应以 NANP 格式输出美国电话号码，而“I”可能指示以 ITU\-T 建议 E.123 格式。\)如果使用了格式说明符，该方法就应处理特定的格式说明符。  格式说明符将以 `format` 参数的形式传递给该方法。  如果不存在说明符，`format` 参数的值将为 <xref:System.String.Empty?displayProperty=fullName>。  
+    2.  <span data-ttu-id="a88e8-131">确定格式设置对象是否应支持自定义格式说明符。</span><span class="sxs-lookup"><span data-stu-id="a88e8-131">Determine whether the formatting object should support custom format specifiers.</span></span> <span data-ttu-id="a88e8-132">（例如，格式说明符“N”可能指示应以 NANP 格式输出美国电话号码，而“I”可能指示以 ITU-T 建议 E.123 格式进行输出。）如果使用格式说明符，则方法应处理特定格式说明符。</span><span class="sxs-lookup"><span data-stu-id="a88e8-132">(For example, an "N" format specifier might indicate that a U.S. telephone number should be output in NANP format, and an "I" might indicate output in ITU-T Recommendation E.123 format.) If format specifiers are used, the method should handle the specific format specifier.</span></span> <span data-ttu-id="a88e8-133">传递到方法中`format`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-133">It is passed to the method in the `format` parameter.</span></span> <span data-ttu-id="a88e8-134">如果没有说明符存在的值`format`参数是<xref:System.String.Empty?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="a88e8-134">If no specifier is present, the value of the `format` parameter is <xref:System.String.Empty?displayProperty=nameWithType>.</span></span>  
   
-    3.  检索以 `arg` 参数的形式传递给该方法的数值。  执行将该参数转换为字符串表示形式所需的任何操作。  
+    3.  <span data-ttu-id="a88e8-135">检索的数字值传递给该方法为`arg`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-135">Retrieve the numeric value passed to the method as the `arg` parameter.</span></span> <span data-ttu-id="a88e8-136">执行将它转换为其字符串表示形式所需的任何操作。</span><span class="sxs-lookup"><span data-stu-id="a88e8-136">Perform whatever manipulations are required to convert it to its string representation.</span></span>  
   
-    4.  返回 `arg` 参数的字符串表示形式。  
+    4.  <span data-ttu-id="a88e8-137">返回的字符串表示形式`arg`参数。</span><span class="sxs-lookup"><span data-stu-id="a88e8-137">Return the string representation of the `arg` parameter.</span></span>  
   
-### 使用自定义数值格式化对象  
+### <a name="to-use-a-custom-numeric-formatting-object"></a><span data-ttu-id="a88e8-138">使用自定义数字格式设置对象</span><span class="sxs-lookup"><span data-stu-id="a88e8-138">To use a custom numeric formatting object</span></span>  
   
-1.  创建自定义格式化类的一个新实例。  
+1.  <span data-ttu-id="a88e8-139">创建自定义格式设置类的新实例。</span><span class="sxs-lookup"><span data-stu-id="a88e8-139">Create a new instance of the custom formatting class.</span></span>  
   
-2.  调用 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 格式化方法，并向其传递自定义格式化对象、格式化说明符（如果未使用说明符，则为 <xref:System.String.Empty?displayProperty=fullName>）以及要格式化的数值。  
+2.  <span data-ttu-id="a88e8-140">调用<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>格式设置方法，将其传递的自定义格式设置的对象的格式设置说明符 (或<xref:System.String.Empty?displayProperty=nameWithType>，如果未使用的一种)，和要设置格式的数字值。</span><span class="sxs-lookup"><span data-stu-id="a88e8-140">Call the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> formatting method, passing it the custom formatting object, the formatting specifier (or <xref:System.String.Empty?displayProperty=nameWithType>, if one is not used), and the numeric value to be formatted.</span></span>  
   
-## 示例  
- 下面的示例定义一个名为 `TelephoneFormatter` 的自定义数值格式提供程序，该提供程序把代表一个U.S电话号码的数字转化为它的NANP或E.123格式。  该方法要处理两个格式说明符：“N”（输出 NANP 格式）和“I”（输出国际 E.123 格式）。  
+## <a name="example"></a><span data-ttu-id="a88e8-141">示例</span><span class="sxs-lookup"><span data-stu-id="a88e8-141">Example</span></span>  
+ <span data-ttu-id="a88e8-142">下面的示例定义了一个名为 `TelephoneFormatter` 的自定义数值格式提供程序，该提供程序将代表美国电话号码的数字转化为它的 NANP 或 E.123 格式。</span><span class="sxs-lookup"><span data-stu-id="a88e8-142">The following example defines a custom numeric format provider named `TelephoneFormatter` that converts a number that represents a U.S. telephone number to its NANP or E.123 format.</span></span> <span data-ttu-id="a88e8-143">该方法处理两个格式说明符“N”（输出 NANP 格式）和“I”（输出国际 E.123 格式）。</span><span class="sxs-lookup"><span data-stu-id="a88e8-143">The method handles two format specifiers, "N" (which outputs the NANP format) and "I" (which outputs the international E.123 format).</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
  [!code-vb[Formatting.HowTo.NumericValue#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#1)]  
   
- 自定义数值格式提供程序只能结合 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 方法使用。  带有 <xref:System.IFormatProvider> 类型参数的数值格式化方法（例如 `ToString`）的其他重载都会向 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> 实现传递一个表示 <xref:System.Globalization.NumberFormatInfo> 类型的 <xref:System.Type> 对象。  反过来，它们期望该方法返回 <xref:System.Globalization.NumberFormatInfo> 对象。  如果未返回该对象，将忽略自定义数值格式提供程序，并改用当前区域性的 <xref:System.Globalization.NumberFormatInfo> 对象。  在该示例中，`TelephoneFormatter.GetFormat` 方法会处理被不当传递给数值格式化方法的可能性，其方式是检查方法参数，如果方法参数表示的是 <xref:System.ICustomFormatter> 以外的类型，它将返回 `null`。  
+ <span data-ttu-id="a88e8-144">自定义数字格式提供程序可仅与<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="a88e8-144">The custom numeric format provider can be used only with the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="a88e8-145">数字格式设置方法的其他重载 (如`ToString`) 具有类型的参数<xref:System.IFormatProvider>通过了所有<xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>实现<xref:System.Type>对象，表示<xref:System.Globalization.NumberFormatInfo>类型。</span><span class="sxs-lookup"><span data-stu-id="a88e8-145">The other overloads of numeric formatting methods (such as `ToString`) that have a parameter of type <xref:System.IFormatProvider> all pass the <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementation a <xref:System.Type> object that represents the <xref:System.Globalization.NumberFormatInfo> type.</span></span> <span data-ttu-id="a88e8-146">反过来，他们期望方法以返回<xref:System.Globalization.NumberFormatInfo>对象。</span><span class="sxs-lookup"><span data-stu-id="a88e8-146">In return, they expect the method to return a <xref:System.Globalization.NumberFormatInfo> object.</span></span> <span data-ttu-id="a88e8-147">如果没有，则忽略自定义数字格式提供程序，与<xref:System.Globalization.NumberFormatInfo>对象在该处使用当前区域性的。</span><span class="sxs-lookup"><span data-stu-id="a88e8-147">If it does not, the custom numeric format provider is ignored, and the <xref:System.Globalization.NumberFormatInfo> object for the current culture is used in its place.</span></span> <span data-ttu-id="a88e8-148">在示例中，`TelephoneFormatter.GetFormat`方法处理它可能不当而导致传递给格式设置方法，通过检查方法参数并返回数值的可能性`null`如果它不表示类型<xref:System.ICustomFormatter>。</span><span class="sxs-lookup"><span data-stu-id="a88e8-148">In the example, the `TelephoneFormatter.GetFormat` method handles the possibility that it may be inappropriately passed to a numeric formatting method by examining the method parameter and returning `null` if it represents a type other than <xref:System.ICustomFormatter>.</span></span>  
   
- 如果自定义数值格式提供程序支持一组格式说明符，则应确保提供当 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 方法调用中使用的格式项中未提供格式说明符时的默认行为。  在该示例中，“N”是默认的格式说明符。  这样，通过提供显式的格式说明符，即可将数字转换为格式化的电话号码。  下面的示例阐释了这样一个方法调用。  
+ <span data-ttu-id="a88e8-149">如果自定义数字格式提供程序支持的格式说明符的一组，请确保你提供一个默认行为，如果在中使用的格式项中不提供任何格式说明符，则<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法调用。</span><span class="sxs-lookup"><span data-stu-id="a88e8-149">If a custom numeric format provider supports a set of format specifiers, make sure you provide a default behavior if no format specifier is supplied in the format item used in the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="a88e8-150">在示例中，“N”是默认格式说明符。</span><span class="sxs-lookup"><span data-stu-id="a88e8-150">In the example, "N" is the default format specifier.</span></span> <span data-ttu-id="a88e8-151">这使数字可以通过提供显式格式说明符来转换为格式化电话号码。</span><span class="sxs-lookup"><span data-stu-id="a88e8-151">This allows for a number to be converted to a formatted telephone number by providing an explicit format specifier.</span></span> <span data-ttu-id="a88e8-152">下面的示例演示了此类方法调用。</span><span class="sxs-lookup"><span data-stu-id="a88e8-152">The following example illustrates such a method call.</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- 但是，即使未提供格式说明符，它也允许进行转换。  下面的示例阐释了这样一个方法调用。  
+ <span data-ttu-id="a88e8-153">但是它还允许在不存在格式说明符时进行转换。</span><span class="sxs-lookup"><span data-stu-id="a88e8-153">But it also allows the conversion to occur if no format specifier is present.</span></span> <span data-ttu-id="a88e8-154">下面的示例演示了此类方法调用。</span><span class="sxs-lookup"><span data-stu-id="a88e8-154">The following example illustrates such a method call.</span></span>  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
   
- 如果未定义默认的格式说明符，<xref:System.ICustomFormatter.Format%2A?displayProperty=fullName> 方法的实现就应包括诸如以下内容的代码，以便 .NET Framework 可以提供您的代码所不支持的格式化。  
+ <span data-ttu-id="a88e8-155">如果定义没有默认的格式说明符，则你实现<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>方法应包括如下所示的代码，因此该.NET 可以提供格式设置代码不支持。</span><span class="sxs-lookup"><span data-stu-id="a88e8-155">If no default format specifier is defined, your implementation of the <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> method should include code such as the following so that .NET can provide formatting that your code does not support.</span></span>  
   
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- 在此示例中，实现 <xref:System.ICustomFormatter.Format%2A?displayProperty=fullName> 的方法将用作 [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> 方法的回调方法。  因此，它将检查 `formatProvider` 参数，以确定其是否包含对当前 `TelephoneFormatter` 对象的引用。  但是，您也可以在代码中直接调用该方法。  在这种情况下，可以使用 `formatProvider` 参数来提供 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 对象，以提供区域性特定的格式化信息。  
+ <span data-ttu-id="a88e8-156">在此示例中，该方法用于实现<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>旨在作为回调方法以<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="a88e8-156">In the case of this example, the method that implements <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> is intended to serve as a callback method for the <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="a88e8-157">因此，它会检查`formatProvider`参数，以确定其是否包含对当前的引用`TelephoneFormatter`对象。</span><span class="sxs-lookup"><span data-stu-id="a88e8-157">Therefore, it examines the `formatProvider` parameter to determine whether it contains a reference to the current `TelephoneFormatter` object.</span></span> <span data-ttu-id="a88e8-158">但是，也可以直接从代码调用该方法。</span><span class="sxs-lookup"><span data-stu-id="a88e8-158">However, the method can also be called directly from code.</span></span> <span data-ttu-id="a88e8-159">在这种情况下，你可以使用`formatProvider`参数来提供<xref:System.Globalization.CultureInfo>或<xref:System.Globalization.NumberFormatInfo>提供区域性特定格式设置信息的对象。</span><span class="sxs-lookup"><span data-stu-id="a88e8-159">In that case, you can use the `formatProvider` parameter to provide a <xref:System.Globalization.CultureInfo> or <xref:System.Globalization.NumberFormatInfo> object that supplies culture-specific formatting information.</span></span>  
   
-## 编译代码  
- 在命令行处使用 csc.exe 或 vb.exe 编译代码。  若要在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中编译代码，请将代码置于控制台应用程序项目模板中。  
+## <a name="compiling-the-code"></a><span data-ttu-id="a88e8-160">编译代码</span><span class="sxs-lookup"><span data-stu-id="a88e8-160">Compiling the Code</span></span>  
+ <span data-ttu-id="a88e8-161">在命令行上使用 csc.exe 或 vb.exe 代码编译。</span><span class="sxs-lookup"><span data-stu-id="a88e8-161">Compile the code at the command line using csc.exe or vb.exe.</span></span> <span data-ttu-id="a88e8-162">若要编译中的代码[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，将其放入控制台应用程序项目模板。</span><span class="sxs-lookup"><span data-stu-id="a88e8-162">To compile the code in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], put it in a console application project template.</span></span>  
   
-## 请参阅  
- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a><span data-ttu-id="a88e8-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a88e8-163">See Also</span></span>  
+ [<span data-ttu-id="a88e8-164">执行格式设置操作</span><span class="sxs-lookup"><span data-stu-id="a88e8-164">Performing Formatting Operations</span></span>](../../../docs/standard/base-types/performing-formatting-operations.md)

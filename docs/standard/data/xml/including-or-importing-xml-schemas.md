@@ -1,53 +1,55 @@
 ---
-title: "包含或导入 XML 架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "包含或导入 XML 架构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 包含或导入 XML 架构
-XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。  这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。  <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 \(SOM\) API 中的这些元素。  
+# <a name="including-or-importing-xml-schemas"></a><span data-ttu-id="88684-102">包含或导入 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-102">Including or Importing XML Schemas</span></span>
+<span data-ttu-id="88684-103">XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。</span><span class="sxs-lookup"><span data-stu-id="88684-103">An XML schema may contain `<xs:import />`, `<xs:include />`, and `<xs:redefine />` elements.</span></span> <span data-ttu-id="88684-104">这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。</span><span class="sxs-lookup"><span data-stu-id="88684-104">These schema elements refer to other XML schemas that can be used to supplement the structure of the schema that includes or imports them.</span></span> <span data-ttu-id="88684-105"><xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。</span><span class="sxs-lookup"><span data-stu-id="88684-105">The <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> and <xref:System.Xml.Schema.XmlSchemaRedefine> classes, map to these elements in the Schema Object Model (SOM) API.</span></span>  
   
-## 包括或导入 XML 架构  
- 以下代码示例为 [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md) 主题中创建的客户架构补充地址架构。  为客户架构补充地址架构后，可以在客户架构中使用地址类型。  
+## <a name="including-or-importing-an-xml-schema"></a><span data-ttu-id="88684-106">包括或导入 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-106">Including or Importing an XML Schema</span></span>  
+ <span data-ttu-id="88684-107">下面的代码示例中创建的客户架构补充[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)地址架构的主题。</span><span class="sxs-lookup"><span data-stu-id="88684-107">The following code example supplements the customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic with the address schema.</span></span> <span data-ttu-id="88684-108">为客户架构补充地址架构后，可以在客户架构中使用地址类型。</span><span class="sxs-lookup"><span data-stu-id="88684-108">Supplementing the customer schema with the address schema makes address types available in the customer schema.</span></span>  
   
- 地址架构可以使用 `<xs:include />` 或 `<xs:import />` 元素加入，以原样使用地址架构的组件，也可以使用 `<xs:redefine />` 元素修改其任意组件，以适合客户架构的需要。  因为地址架构的 `targetNamespace` 与客户架构的不同，所以，将使用 `<xs:import />` 元素以及导入语义。  
+ <span data-ttu-id="88684-109">地址架构可以使用 `<xs:include />` 或 `<xs:import />` 元素加入，以原样使用地址架构的组件，也可以使用 `<xs:redefine />` 元素修改其任意组件，以适合客户架构的需要。</span><span class="sxs-lookup"><span data-stu-id="88684-109">The address schema can be incorporated using either `<xs:include />` or `<xs:import />` elements to use the components of the address schema as-is, or using an `<xs:redefine />` element to modify any of its components to suit the need of the customer schema.</span></span> <span data-ttu-id="88684-110">因为地址架构的 `targetNamespace` 与客户架构的不同，所以，将使用 `<xs:import />` 元素以及导入语义。</span><span class="sxs-lookup"><span data-stu-id="88684-110">Because the address schema has a `targetNamespace` that is different from that of the customer schema, the `<xs:import />` element and therefore import semantics is used.</span></span>  
   
- 代码示例通过下列步骤包括客户架构。  
+ <span data-ttu-id="88684-111">代码示例通过下列步骤包括客户架构。</span><span class="sxs-lookup"><span data-stu-id="88684-111">The code example includes the address schema in the following steps.</span></span>  
   
-1.  将客户架构和地址架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。  \_在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
+1.  <span data-ttu-id="88684-112">将客户架构和地址架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。</span><span class="sxs-lookup"><span data-stu-id="88684-112">Adds the customer schema and the address schema to a new <xref:System.Xml.Schema.XmlSchemaSet> object and then compiles them.</span></span> <span data-ttu-id="88684-113">_在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。</span><span class="sxs-lookup"><span data-stu-id="88684-113">Any schema validation warnings and errors encountered reading or compiling the schemas are handled by the <xref:System.Xml.Schema.ValidationEventHandler> delegate.</span></span>  
   
-2.  通过循环访问 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中为客户架构和地址架构检索已编译的 <xref:System.Xml.Schema.XmlSchema> 对象。  因为架构已编译，所以，可以访问后架构编译信息集 \(PSCI\) 属性。  
+2.  <span data-ttu-id="88684-114">通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中为客户架构和地址架构检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。</span><span class="sxs-lookup"><span data-stu-id="88684-114">Retrieves the compiled <xref:System.Xml.Schema.XmlSchema> objects for both the customer and address schemas from the <xref:System.Xml.Schema.XmlSchemaSet> by iterating over the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property.</span></span> <span data-ttu-id="88684-115">因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。</span><span class="sxs-lookup"><span data-stu-id="88684-115">Because the schemas are compiled, Post-Schema-Compilation-Infoset (PSCI) properties are accessible.</span></span>  
   
-3.  创建一个 <xref:System.Xml.Schema.XmlSchemaImport> 对象，将导入的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 属性设置为地址架构的命名空间，将导入的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 属性设置为地址架构的 <xref:System.Xml.Schema.XmlSchema> 对象，并将导入添加到客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性中。  
+3.  <span data-ttu-id="88684-116">创建一个 <xref:System.Xml.Schema.XmlSchemaImport> 对象，将导入的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 属性设置为地址架构的命名空间，将导入的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 属性设置为地址架构的 <xref:System.Xml.Schema.XmlSchema> 对象，并将导入添加到客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性中。</span><span class="sxs-lookup"><span data-stu-id="88684-116">Creates an <xref:System.Xml.Schema.XmlSchemaImport> object, sets the <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> property of the import to the namespace of the address schema, sets the <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> property of the import to the <xref:System.Xml.Schema.XmlSchema> object of the address schema, and adds the import to the <xref:System.Xml.Schema.XmlSchema.Includes%2A> property of the customer schema.</span></span>  
   
-4.  使用 <xref:System.Xml.Schema.XmlSchemaSet> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的客户架构的 <xref:System.Xml.Schema.XmlSchema> 对象并将其写入控制台。  
+4.  <span data-ttu-id="88684-117">使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的客户架构的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。</span><span class="sxs-lookup"><span data-stu-id="88684-117">Reprocesses and compiles the modified <xref:System.Xml.Schema.XmlSchema> object of the customer schema using the <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> and <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> methods of the <xref:System.Xml.Schema.XmlSchemaSet> class and writes it to the console.</span></span>  
   
-5.  最后，使用客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 方法递归式将导入到客户架构的所有架构写入控制台。  <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性提供对所有添加到架构中的包括、导入或重新定义的访问。  
+5.  <span data-ttu-id="88684-118">最后，使用客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 方法递归式将导入到客户架构的所有架构写入控制台。</span><span class="sxs-lookup"><span data-stu-id="88684-118">Finally, recursively writes all of the schemas imported into the customer schema to the console using the <xref:System.Xml.Schema.XmlSchema.Includes%2A> property of the customer schema.</span></span> <span data-ttu-id="88684-119"><xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性提供对所有添加到架构中的包括、导入或重新定义的访问。</span><span class="sxs-lookup"><span data-stu-id="88684-119">The <xref:System.Xml.Schema.XmlSchema.Includes%2A> property provides access to all the includes, imports, or redefines added to a schema.</span></span>  
   
- 以下是完整的代码示例以及写入控制台的客户架构和地址架构。  
+ <span data-ttu-id="88684-120">以下是完整的代码示例以及写入控制台的客户架构和地址架构。</span><span class="sxs-lookup"><span data-stu-id="88684-120">The following is the complete code example and the customer and address schemas written to the console.</span></span>  
   
  [!code-cpp[XmlSchemaImportExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaImportExample/CPP/XmlSchemaImportExample.cpp#1)]
  [!code-csharp[XmlSchemaImportExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaImportExample/CS/XmlSchemaImportExample.cs#1)]
  [!code-vb[XmlSchemaImportExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaImportExample/VB/XmlSchemaImportExample.vb#1)]  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema xmlns:tns="http://www.tempuri.org" targetNamespace="http://www.tempuri.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:import namespace="http://www.example.com/IPO" />  
@@ -103,12 +105,12 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
 </schema>  
 ```  
   
- 有关 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素以及 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类的更多信息，请参见 [W3C XML 架构](http://go.microsoft.com/fwlink/?LinkId=45242)（可能为英文网页）和 <xref:System.Xml.Schema?displayProperty=fullName> 命名空间类参考文档。  
+ <span data-ttu-id="88684-121">有关详细信息`<xs:import />`， `<xs:include />`，和`<xs:redefine />`元素和<xref:System.Xml.Schema.XmlSchemaImport>，<xref:System.Xml.Schema.XmlSchemaInclude>和<xref:System.Xml.Schema.XmlSchemaRedefine>类，请参阅[W3C XML 架构](http://go.microsoft.com/fwlink/?LinkId=45242)和<xref:System.Xml.Schema?displayProperty=nameWithType>命名空间类参考文档。</span><span class="sxs-lookup"><span data-stu-id="88684-121">For more information about the `<xs:import />`, `<xs:include />`, and `<xs:redefine />` elements and the <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> and <xref:System.Xml.Schema.XmlSchemaRedefine> classes, see the [W3C XML Schema](http://go.microsoft.com/fwlink/?LinkId=45242) and the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace class reference documentation.</span></span>  
   
-## 请参阅  
- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)   
- [读取和写入 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)   
- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="88684-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="88684-122">See Also</span></span>  
+ [<span data-ttu-id="88684-123">XML 架构对象模型概述</span><span class="sxs-lookup"><span data-stu-id="88684-123">XML Schema Object Model Overview</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [<span data-ttu-id="88684-124">读取和写入 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-124">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="88684-125">生成 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-125">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="88684-126">遍历 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-126">Traversing XML Schemas</span></span>](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [<span data-ttu-id="88684-127">编辑 XML 架构</span><span class="sxs-lookup"><span data-stu-id="88684-127">Editing XML Schemas</span></span>](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [<span data-ttu-id="88684-128">编译架构的 XmlSchemaSet</span><span class="sxs-lookup"><span data-stu-id="88684-128">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

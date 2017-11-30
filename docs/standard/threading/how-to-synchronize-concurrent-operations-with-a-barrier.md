@@ -1,33 +1,38 @@
 ---
-title: "How to: Synchronize Concurrent Operations with a Barrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Barrier, how to use"
+title: "如何：使用屏障来使并发操作保持同步"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0b2e32fe3cec30a4da7467447aee625dfe7e379b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Synchronize Concurrent Operations with a Barrier
-下面的示例演示如何使用 <xref:System.Threading.Barrier> 同步并发任务。  
+# <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a><span data-ttu-id="93e57-102">如何：使用屏障来使并发操作保持同步</span><span class="sxs-lookup"><span data-stu-id="93e57-102">How to: Synchronize Concurrent Operations with a Barrier</span></span>
+<span data-ttu-id="93e57-103">下面的示例演示如何同步使用的并发任务<xref:System.Threading.Barrier>。</span><span class="sxs-lookup"><span data-stu-id="93e57-103">The following example shows how to synchronize concurrent tasks with a <xref:System.Threading.Barrier>.</span></span>  
   
-## 示例  
- 以下程序旨在通过使用一种随机化算法将一个短语的单词打乱排列，从而计算两个线程需要多少迭代（或阶段）才能各自找出自己的解答。  在每个线程排列好单词之后，关卡后期阶段操作将比较两个结果，查看完整句子是否以正确的单词顺序呈现。  
+## <a name="example"></a><span data-ttu-id="93e57-104">示例</span><span class="sxs-lookup"><span data-stu-id="93e57-104">Example</span></span>  
+ <span data-ttu-id="93e57-105">下面的目的是解决方案的程序的以计算多少迭代 （或阶段） 所需的两个线程与每个查找出自己在同一个阶段上通过使用随机化算法的单词。</span><span class="sxs-lookup"><span data-stu-id="93e57-105">The purpose of the following program is to count how many iterations (or phases) are required for two threads to each find their half of the solution on the same phase by using a randomizing algorithm to reshuffle the words.</span></span> <span data-ttu-id="93e57-106">每个线程具有随机排布其单词后，请 barrier 阶段后操作，它以查看完整的句子是否已呈现在正确的单词顺序的两个结果进行比较。</span><span class="sxs-lookup"><span data-stu-id="93e57-106">After each thread has shuffled its words, the barrier post-phase operation compares the two results to see if the complete sentence has been rendered in correct word order.</span></span>  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]
  [!code-vb[CDS_Barrier#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#01)]  
   
- <xref:System.Threading.Barrier> 是一个对象，它可以在并行操作中的所有任务都达到相应的关卡之前，阻止各个任务继续执行。  如果并行操作是分阶段执行的，并且每一阶段要求各任务之间进行同步，则可以使用该对象。  在本示例中，操作共分为两个阶段。  在第一阶段，每一项任务将使用数据填充其缓冲区部分。  每项任务在填写完各自的部分之后，均会向关卡发出自己已准备好继续的信号，然后进行等待。  在所有任务都已向关卡发出信号之后，将取消阻塞这些任务，并开始第二阶段。  由于第二阶段要求每项任务都必须具有对此时已生成的所有数据的访问权，因此关卡是必需的。  如果没有关卡，那么，先期完成的任务可能会尝试从尚未由其他任务填充的缓冲区中进行读取。  通过这种方式，可以对任意数量的阶段进行同步。  
+ <span data-ttu-id="93e57-107">A<xref:System.Threading.Barrier>是阻止继续，直到所有任务都到达屏障并行操作中的各个任务的对象。</span><span class="sxs-lookup"><span data-stu-id="93e57-107">A <xref:System.Threading.Barrier> is an object that prevents individual tasks in a parallel operation from continuing until all tasks reach the barrier.</span></span> <span data-ttu-id="93e57-108">当一种并行操作分阶段，并且每个阶段要求任务之间的同步时，它是很有用。</span><span class="sxs-lookup"><span data-stu-id="93e57-108">It is useful when a parallel operation occurs in phases, and each phase requires synchronization between tasks.</span></span> <span data-ttu-id="93e57-109">在此示例中，有两个阶段对操作。</span><span class="sxs-lookup"><span data-stu-id="93e57-109">In this example, there are two phases to the operation.</span></span> <span data-ttu-id="93e57-110">在第一个阶段中，每个任务填充其部分具有数据的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="93e57-110">In the first phase, each task fills its section of the buffer with data.</span></span> <span data-ttu-id="93e57-111">每个任务完成时填充其部分，任务发出信号屏障已经准备就绪，若要继续，然后等待。</span><span class="sxs-lookup"><span data-stu-id="93e57-111">When each task finishes filling its section, the task signals the barrier that it is ready to continue, and then waits.</span></span> <span data-ttu-id="93e57-112">时所有的任务已收到信号屏障，它们会阻止，然后在第二个阶段开始。</span><span class="sxs-lookup"><span data-stu-id="93e57-112">When all tasks have signaled the barrier, they are unblocked and the second phase starts.</span></span> <span data-ttu-id="93e57-113">屏障是必需的因为第二个阶段需要每个任务具有已生成到目前为止的所有数据的访问。</span><span class="sxs-lookup"><span data-stu-id="93e57-113">The barrier is necessary because the second phase requires that each task have access to all the data that has been generated to this point.</span></span> <span data-ttu-id="93e57-114">而无需屏障，可能会尝试从已不填充尚未由其他任务的缓冲区中读取第一个任务完成。</span><span class="sxs-lookup"><span data-stu-id="93e57-114">Without the barrier, the first tasks to complete might try to read from buffers that have not been filled in yet by other tasks.</span></span> <span data-ttu-id="93e57-115">你可以同步任意数量的这种方式的阶段。</span><span class="sxs-lookup"><span data-stu-id="93e57-115">You can synchronize any number of phases in this manner.</span></span>  
   
-## 请参阅  
- [Data Structures for Parallel Programming](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a><span data-ttu-id="93e57-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="93e57-116">See Also</span></span>  
+ [<span data-ttu-id="93e57-117">用于并行编程的数据结构</span><span class="sxs-lookup"><span data-stu-id="93e57-117">Data Structures for Parallel Programming</span></span>](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

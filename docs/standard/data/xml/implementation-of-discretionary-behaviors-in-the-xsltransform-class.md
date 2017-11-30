@@ -1,95 +1,94 @@
 ---
-title: "XslTransform 类中任意行为的实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XslTransform 类中任意行为的实现"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# XslTransform 类中任意行为的实现
+# <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a><span data-ttu-id="08623-102">XslTransform 类中任意行为的实现</span><span class="sxs-lookup"><span data-stu-id="08623-102">Implementation of Discretionary Behaviors in the XslTransform Class</span></span>
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 \(XSLT\) 转换。 有关更多信息，请参见[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <span data-ttu-id="08623-103">
+          <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。</span><span class="sxs-lookup"><span data-stu-id="08623-103">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="08623-104">可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。</span><span class="sxs-lookup"><span data-stu-id="08623-104">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="08623-105">请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="08623-105">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- 下面将介绍在万维网联合会 \(W3C\) XSL 转换 \(XSLT\) 1.0 版建议 \(www.w3.org\/TR\/xslt\) 中列出的一些任意行为，在这些行为中，实现提供者选择几个可能的选项中的一个作为处理某种情况的方法。 例如，在第 7.3 节“Creating Processing Instructions”中，W3C 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，W3C 说明了在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  
+ <span data-ttu-id="08623-106">下面将介绍在万维网联合会 (W3C) XSL 转换 (XSLT) 1.0 版建议 (www.w3.org/TR/xslt) 中列出的一些任意行为，在这些行为中，实现提供者选择几个可能的选项中的一个作为处理某种情况的方法。</span><span class="sxs-lookup"><span data-stu-id="08623-106">Discretionary behaviors are described as behaviors listed in the World Wide Web Consortium (W3C) XSL Transformations (XSLT) Version 1.0 Recommendation (www.w3.org/TR/xslt), in which the implementation provider chooses one of several possible options as a way to handle a situation.</span></span> <span data-ttu-id="08623-107">例如，在第 7.3 节“Creating Processing Instructions”中，W3C 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。</span><span class="sxs-lookup"><span data-stu-id="08623-107">For example, in section 7.3 Creating Processing Instructions, the W3C Recommendation says that it is an error if instantiating the content of `xsl:processing-instruction` creates nodes other than text nodes.</span></span> <span data-ttu-id="08623-108">对于某些问题，W3C 说明了在处理器决定从错误中恢复时应做的决策。</span><span class="sxs-lookup"><span data-stu-id="08623-108">For some problems, the W3C tells what decision should be made if the processor decides to recover from the error.</span></span> <span data-ttu-id="08623-109">对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。</span><span class="sxs-lookup"><span data-stu-id="08623-109">For the problem given in section 7.3, the W3C says that the implementation can recover from this error by ignoring the nodes and their content.</span></span>  
   
- 因此，对 W3C 允许的每一种任意行为，下表列出了为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类的 <xref:System.Xml.Xsl.XslTransform> 实现而实现的任意行为，并说明了此问题在 W3C XSLT 1.0 建议中的哪一节讨论。  
+ <span data-ttu-id="08623-110">因此，对 W3C 允许的每一种任意行为，下表列出了为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类的 <xref:System.Xml.Xsl.XslTransform> 实现而实现的任意行为，并说明了此问题在 W3C XSLT 1.0 建议中的哪一节讨论。</span><span class="sxs-lookup"><span data-stu-id="08623-110">Therefore, for each of the discretionary behaviors allowed by the W3C, the table below lists the discretionary behaviors implemented for the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementation of the <xref:System.Xml.Xsl.XslTransform> class, and what section in the W3C XSLT 1.0 Recommendation that this problem is discussed.</span></span>  
   
-|问题|行为|节|  
-|--------|--------|-------|  
-|文本节点同时与 `xsl:strip-space` 和 `xsl:preserve-space` 匹配。|恢复|3.4|  
-|源节点与多个模板规则匹配。|恢复|5.5|  
-|某个命名空间统一资源标识符 \(URI\) 声明为多个命名空间 URI 的别名，所有这些 URI 都具有相同的导入优先级。|恢复|7.1.1|  
-|从属性值模板生成的 `xsl:attribute` 和 `xsl:element` 中的名称属性不是有效的限定名 \(QName\)。|引发异常|7.1.2 和 7.1.3|  
-|在一个元素节点已添加了子节点后向此元素添加属性。|恢复|7.1.3|  
-|将属性添加到元素节点以外的任何内容中。|恢复|7.1.3|  
-|`xsl:attribute` 元素的内容实例化不是文本节点。|恢复|7.1.3|  
-|两个属性集具有相同的导入优先级和扩展名称。 两个属性集具有相同的属性，并且没有其他属性集包含导入优先级更高的同名公共属性。|恢复|7.1.4|  
-|`xsl:processing-instruction` 名称属性不同时产生无冒号名称 \(NCName\) 和处理指令目标。|恢复|7.3|  
-|实例化 `xsl:processing-instruction` 的内容创建了文本节点以外的节点。|恢复|7.3|  
-|`xsl:processing-instruction` 内容的实例化结果中包含字符串“`?>`”。|恢复|7.3|  
-|`xsl:comment` 内容的实例化结果中包含字符串“\-\-”，或以“\-”结尾。|恢复|7.4|  
-|`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。|恢复|7.4|  
-|变量绑定元素内部的模板返回属性节点或命名空间节点。|恢复|11.2|  
-|从传入文档函数的 URI 中检索资源时出错。|引发异常|12.1|  
-|文档函数中的 URI 引用包含片断标识符，在处理段落标识符时出错。|引发异常|12.1|  
-|`cdata-section-elements` 中有多个未命名为 `xls:output` 的同名属性，且这些属性具有相同的导入优先级。|恢复|16|  
-|处理器不支持 `encoding` 元素的 `xsl:output` 属性中给出的字符编码值。|恢复|16.1|  
-|`disable-output-escaping` 用于一个文本节点，而该文本节点用于在结果树中创建文本节点以外的内容。|`disable-output-escaping` 属性被忽略|16.4|  
-|如果结果树片段包含启用了输出转义的文本节点，则将该结果树片断转换为数字或字符串。|忽略|16.4|  
-|对不能以 XSLT 处理器用于输出的编码表示的字符禁用输出转义。|忽略|16.4|  
-|向元素添加子级或添加属性后，向元素添加命名空间节点。|恢复|勘误表 e25|  
-|`xsl:number` 为 NaN、无限大或小于 0.5。|恢复|勘误表 e24|  
-|文档函数的第二个参数 node\-set 为空，且 URI 引用是相对的。|恢复|勘误表 e14|  
+|<span data-ttu-id="08623-111">问题</span><span class="sxs-lookup"><span data-stu-id="08623-111">Problem</span></span>|<span data-ttu-id="08623-112">行为</span><span class="sxs-lookup"><span data-stu-id="08623-112">Behavior</span></span>|<span data-ttu-id="08623-113">节</span><span class="sxs-lookup"><span data-stu-id="08623-113">Section</span></span>|  
+|-------------|--------------|-------------|  
+|<span data-ttu-id="08623-114">文本节点同时与 `xsl:strip-space` 和 `xsl:preserve-space` 匹配。</span><span class="sxs-lookup"><span data-stu-id="08623-114">A text node matches both `xsl:strip-space` and `xsl:preserve-space`.</span></span>|<span data-ttu-id="08623-115">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-115">Recover</span></span>|<span data-ttu-id="08623-116">3.4</span><span class="sxs-lookup"><span data-stu-id="08623-116">3.4</span></span>|  
+|<span data-ttu-id="08623-117">源节点与多个模板规则匹配。</span><span class="sxs-lookup"><span data-stu-id="08623-117">A source node matches more than one template rule.</span></span>|<span data-ttu-id="08623-118">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-118">Recover</span></span>|<span data-ttu-id="08623-119">5.5</span><span class="sxs-lookup"><span data-stu-id="08623-119">5.5</span></span>|  
+|<span data-ttu-id="08623-120">某个命名空间统一资源标识符 (URI) 声明为多个命名空间 URI 的别名，所有这些 URI 都具有相同的导入优先级。</span><span class="sxs-lookup"><span data-stu-id="08623-120">A namespace Uniform Resource Identifier (URI) is declared to be an alias for multiple namespace URIs, all having the same import precedence.</span></span>|<span data-ttu-id="08623-121">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-121">Recover</span></span>|<span data-ttu-id="08623-122">7.1.1</span><span class="sxs-lookup"><span data-stu-id="08623-122">7.1.1</span></span>|  
+|<span data-ttu-id="08623-123">从属性值模板生成的 `xsl:attribute` 和 `xsl:element` 中的名称属性不是有效的限定名 (QName)。</span><span class="sxs-lookup"><span data-stu-id="08623-123">The name attribute in `xsl:attribute` and `xsl:element` generated from an attribute value template is not a valid qualified name (QName).</span></span>|<span data-ttu-id="08623-124">引发异常</span><span class="sxs-lookup"><span data-stu-id="08623-124">Exception thrown</span></span>|<span data-ttu-id="08623-125">7.1.2 和 7.1.3</span><span class="sxs-lookup"><span data-stu-id="08623-125">7.1.2 and 7.1.3</span></span>|  
+|<span data-ttu-id="08623-126">在一个元素节点已添加了子节点后向此元素添加属性。</span><span class="sxs-lookup"><span data-stu-id="08623-126">Adding an attribute to an element after child nodes have already been added to the element node.</span></span>|<span data-ttu-id="08623-127">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-127">Recover</span></span>|<span data-ttu-id="08623-128">7.1.3</span><span class="sxs-lookup"><span data-stu-id="08623-128">7.1.3</span></span>|  
+|<span data-ttu-id="08623-129">将属性添加到元素节点以外的任何内容中。</span><span class="sxs-lookup"><span data-stu-id="08623-129">Adding an attribute to anything other than an element node.</span></span>|<span data-ttu-id="08623-130">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-130">Recover</span></span>|<span data-ttu-id="08623-131">7.1.3</span><span class="sxs-lookup"><span data-stu-id="08623-131">7.1.3</span></span>|  
+|<span data-ttu-id="08623-132">`xsl:attribute` 元素的内容实例化不是文本节点。</span><span class="sxs-lookup"><span data-stu-id="08623-132">Instantiation of the content of the `xsl:attribute` element is not a text node.</span></span>|<span data-ttu-id="08623-133">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-133">Recover</span></span>|<span data-ttu-id="08623-134">7.1.3</span><span class="sxs-lookup"><span data-stu-id="08623-134">7.1.3</span></span>|  
+|<span data-ttu-id="08623-135">两个属性集具有相同的导入优先级和扩展名称。</span><span class="sxs-lookup"><span data-stu-id="08623-135">Two attribute sets have the same import precedence and expanded name.</span></span> <span data-ttu-id="08623-136">两个属性集具有相同的属性，并且没有其他属性集包含导入优先级更高的同名公共属性。</span><span class="sxs-lookup"><span data-stu-id="08623-136">Both have the same attribute, and there is no other attribute set containing the common attribute with the same name with higher importance.</span></span>|<span data-ttu-id="08623-137">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-137">Recover</span></span>|<span data-ttu-id="08623-138">7.1.4</span><span class="sxs-lookup"><span data-stu-id="08623-138">7.1.4</span></span>|  
+|<span data-ttu-id="08623-139">`xsl:processing-instruction` 名称属性不同时产生无冒号名称 (NCName) 和处理指令目标。</span><span class="sxs-lookup"><span data-stu-id="08623-139">`xsl:processing-instruction` name attribute does not yield both a no-colon name (NCName) and a Processing Instruction target.</span></span>|<span data-ttu-id="08623-140">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-140">Recover</span></span>|<span data-ttu-id="08623-141">7.3</span><span class="sxs-lookup"><span data-stu-id="08623-141">7.3</span></span>|  
+|<span data-ttu-id="08623-142">实例化 `xsl:processing-instruction` 的内容创建了文本节点以外的节点。</span><span class="sxs-lookup"><span data-stu-id="08623-142">Instantiating the content of `xsl:processing-instruction` creates nodes other than text nodes.</span></span>|<span data-ttu-id="08623-143">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-143">Recover</span></span>|<span data-ttu-id="08623-144">7.3</span><span class="sxs-lookup"><span data-stu-id="08623-144">7.3</span></span>|  
+|<span data-ttu-id="08623-145">`xsl:processing-instruction` 内容的实例化结果中包含字符串“`?>`”。</span><span class="sxs-lookup"><span data-stu-id="08623-145">Results of instantiating the content of the `xsl:processing-instruction` contains the string "`?>`".</span></span>|<span data-ttu-id="08623-146">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-146">Recover</span></span>|<span data-ttu-id="08623-147">7.3</span><span class="sxs-lookup"><span data-stu-id="08623-147">7.3</span></span>|  
+|<span data-ttu-id="08623-148">内容的实例的结果`xsl:comment`包含字符串"-"，或结尾"-"。</span><span class="sxs-lookup"><span data-stu-id="08623-148">Results of instantiating the content of the `xsl:comment` contains the string "--", or ends with "-".</span></span>|<span data-ttu-id="08623-149">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-149">Recover</span></span>|<span data-ttu-id="08623-150">7.4</span><span class="sxs-lookup"><span data-stu-id="08623-150">7.4</span></span>|  
+|<span data-ttu-id="08623-151">`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。</span><span class="sxs-lookup"><span data-stu-id="08623-151">Results of instantiating the content of the `xsl:comment` creates nodes other than text nodes.</span></span>|<span data-ttu-id="08623-152">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-152">Recover</span></span>|<span data-ttu-id="08623-153">7.4</span><span class="sxs-lookup"><span data-stu-id="08623-153">7.4</span></span>|  
+|<span data-ttu-id="08623-154">变量绑定元素内部的模板返回属性节点或命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="08623-154">The template within a variable-binding element returns an attribute node or a namespace node.</span></span>|<span data-ttu-id="08623-155">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-155">Recover</span></span>|<span data-ttu-id="08623-156">11.2</span><span class="sxs-lookup"><span data-stu-id="08623-156">11.2</span></span>|  
+|<span data-ttu-id="08623-157">从传入文档函数的 URI 中检索资源时出错。</span><span class="sxs-lookup"><span data-stu-id="08623-157">There is an error retrieving the resource from the URI passed into the document function.</span></span>|<span data-ttu-id="08623-158">引发异常</span><span class="sxs-lookup"><span data-stu-id="08623-158">Exception thrown</span></span>|<span data-ttu-id="08623-159">12.1</span><span class="sxs-lookup"><span data-stu-id="08623-159">12.1</span></span>|  
+|<span data-ttu-id="08623-160">文档函数中的 URI 引用包含片断标识符，在处理段落标识符时出错。</span><span class="sxs-lookup"><span data-stu-id="08623-160">The URI reference in the document function contains a fragment identifier, and there is an error processing the fragment identifier.</span></span>|<span data-ttu-id="08623-161">引发异常</span><span class="sxs-lookup"><span data-stu-id="08623-161">Exception thrown</span></span>|<span data-ttu-id="08623-162">12.1</span><span class="sxs-lookup"><span data-stu-id="08623-162">12.1</span></span>|  
+|<span data-ttu-id="08623-163">`cdata-section-elements` 中有多个未命名为 `xls:output` 的同名属性，且这些属性具有相同的导入优先级。</span><span class="sxs-lookup"><span data-stu-id="08623-163">There are multiple attributes with the same name that are not named `cdata-section-elements` in `xls:output`, and these attributes have the same import precedence.</span></span>|<span data-ttu-id="08623-164">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-164">Recover</span></span>|<span data-ttu-id="08623-165">16</span><span class="sxs-lookup"><span data-stu-id="08623-165">16</span></span>|  
+|<span data-ttu-id="08623-166">处理器不支持 `encoding` 元素的 `xsl:output` 属性中给出的字符编码值。</span><span class="sxs-lookup"><span data-stu-id="08623-166">The processor does not support the character encoding value given in the `encoding` attribute of the `xsl:output` element.</span></span>|<span data-ttu-id="08623-167">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-167">Recover</span></span>|<span data-ttu-id="08623-168">16.1</span><span class="sxs-lookup"><span data-stu-id="08623-168">16.1</span></span>|  
+|<span data-ttu-id="08623-169">`disable-output-escaping` 用于一个文本节点，而该文本节点用于在结果树中创建文本节点以外的内容。</span><span class="sxs-lookup"><span data-stu-id="08623-169">`disable-output-escaping` is used for a text node, and that text node is used to create something other than a text node in the result tree.</span></span>|<span data-ttu-id="08623-170">`disable-output-escaping` 属性被忽略</span><span class="sxs-lookup"><span data-stu-id="08623-170">`disable-output-escaping` attribute is ignored</span></span>|<span data-ttu-id="08623-171">16.4</span><span class="sxs-lookup"><span data-stu-id="08623-171">16.4</span></span>|  
+|<span data-ttu-id="08623-172">如果结果树片段包含启用了输出转义的文本节点，则将该结果树片断转换为数字或字符串。</span><span class="sxs-lookup"><span data-stu-id="08623-172">Converting a result tree fragment to a number or string if the result tree fragment contains a text node with output escaping enabled.</span></span>|<span data-ttu-id="08623-173">忽略</span><span class="sxs-lookup"><span data-stu-id="08623-173">Ignored</span></span>|<span data-ttu-id="08623-174">16.4</span><span class="sxs-lookup"><span data-stu-id="08623-174">16.4</span></span>|  
+|<span data-ttu-id="08623-175">对不能以 XSLT 处理器用于输出的编码表示的字符禁用输出转义。</span><span class="sxs-lookup"><span data-stu-id="08623-175">Output escaping is disabled for characters that cannot be represented in the encoding that the XSLT processor is using for output.</span></span>|<span data-ttu-id="08623-176">忽略</span><span class="sxs-lookup"><span data-stu-id="08623-176">Ignored</span></span>|<span data-ttu-id="08623-177">16.4</span><span class="sxs-lookup"><span data-stu-id="08623-177">16.4</span></span>|  
+|<span data-ttu-id="08623-178">向元素添加子级或添加属性后，向元素添加命名空间节点。</span><span class="sxs-lookup"><span data-stu-id="08623-178">Adding a namespace node to an element after children have been added to it or after attributes have been added to it</span></span>|<span data-ttu-id="08623-179">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-179">Recover</span></span>|<span data-ttu-id="08623-180">勘误表 e25</span><span class="sxs-lookup"><span data-stu-id="08623-180">Errata e25</span></span>|  
+|<span data-ttu-id="08623-181">`xsl:number` 为 NaN、无限大或小于 0.5。</span><span class="sxs-lookup"><span data-stu-id="08623-181">`xsl:number` is NaN, infinite, or less than 0.5.</span></span>|<span data-ttu-id="08623-182">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-182">Recover</span></span>|<span data-ttu-id="08623-183">勘误表 e24</span><span class="sxs-lookup"><span data-stu-id="08623-183">Errata e24</span></span>|  
+|<span data-ttu-id="08623-184">文档函数的第二个参数 node-set 为空，且 URI 引用是相对的。</span><span class="sxs-lookup"><span data-stu-id="08623-184">The second argument node-set to the document function is empty and the URI reference is relative</span></span>|<span data-ttu-id="08623-185">恢复</span><span class="sxs-lookup"><span data-stu-id="08623-185">Recover</span></span>|<span data-ttu-id="08623-186">勘误表 e14</span><span class="sxs-lookup"><span data-stu-id="08623-186">Errata e14</span></span>|  
   
- 此勘误表中的节可以在万维网联合会 \(W3C\) XSL 转换 \(XSLT\) 1.0 版规范勘误表 \(www.w3.org\/1999\/11\/REC\-xslt\-19991116\-errata\) 中找到。  
+ <span data-ttu-id="08623-187">此勘误表中的节可以在万维网联合会 (W3C) XSL 转换 (XSLT) 1.0 版规范勘误表 (www.w3.org/1999/11/REC-xslt-19991116-errata) 中找到。</span><span class="sxs-lookup"><span data-stu-id="08623-187">Sections from the errata can be found in the World Wide Web Consortium (W3C) XSL Transformations (XSLT) Version 1.0 Specification Errata, located at www.w3.org/1999/11/REC-xslt-19991116-errata.</span></span>  
   
-## 自定义实现行为  
- <xref:System.Xml.Xsl.XslTransform> 类实现具有独特的行为。 本节讨论提供程序特定的 `xsl:sort` 实现和 <xref:System.Xml.Xsl.XslTransform> 类支持的可选功能。  
+## <a name="custom-defined-implementation-behaviors"></a><span data-ttu-id="08623-188">自定义实现行为</span><span class="sxs-lookup"><span data-stu-id="08623-188">Custom-Defined Implementation Behaviors</span></span>  
+ <span data-ttu-id="08623-189"><xref:System.Xml.Xsl.XslTransform> 类实现具有独特的行为。</span><span class="sxs-lookup"><span data-stu-id="08623-189">There are behaviors unique to the <xref:System.Xml.Xsl.XslTransform> class implementation.</span></span> <span data-ttu-id="08623-190">本节讨论提供程序特定的 `xsl:sort` 实现和 <xref:System.Xml.Xsl.XslTransform> 类支持的可选功能。</span><span class="sxs-lookup"><span data-stu-id="08623-190">This section discusses the provider-specific implementation of the `xsl:sort` and optional features that are supported by the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
   
-## xsl:sort  
- 使用转换进行排序时，W3C XSLT 1.0 建议提供几点说明。 它们是：  
+## <a name="xslsort"></a><span data-ttu-id="08623-191">xsl:sort</span><span class="sxs-lookup"><span data-stu-id="08623-191">xsl:sort</span></span>  
+ <span data-ttu-id="08623-192">使用转换进行排序时，W3C XSLT 1.0 建议提供几点说明。</span><span class="sxs-lookup"><span data-stu-id="08623-192">When using a transformation to sort, the W3C XSLT 1.0 Recommendation makes some observations.</span></span> <span data-ttu-id="08623-193">它们是：</span><span class="sxs-lookup"><span data-stu-id="08623-193">They are:</span></span>  
   
--   两个 XSLT 处理器可能是一致的处理器，但仍可能以不同的方式排序。  
+-   <span data-ttu-id="08623-194">两个 XSLT 处理器可能是一致的处理器，但仍可能以不同的方式排序。</span><span class="sxs-lookup"><span data-stu-id="08623-194">Two XSLT processors may be conforming processors, but still may sort differently.</span></span>  
   
--   并非所有 XSLT 处理器都支持相同的语言。  
+-   <span data-ttu-id="08623-195">并非所有 XSLT 处理器都支持相同的语言。</span><span class="sxs-lookup"><span data-stu-id="08623-195">Not all XSLT processors support the same languages.</span></span>  
   
--   对于语言，不同处理器的排序方式可能因特定的语言而异，而不是按照 `xsl:sort.` 指定的方式。  
+-   <span data-ttu-id="08623-196">对于语言，不同处理器的排序方式可能因特定的语言而异，而不是按照 `xsl:sort.` 指定的方式。</span><span class="sxs-lookup"><span data-stu-id="08623-196">With regard to languages, different processors may vary on their sorting on a particular language not specified on the `xsl:sort.`</span></span>  
   
- 下表显示了 .NET Framework 用 <xref:System.Xml.Xsl.XslTransform> 实现的转换中为每种数据类型实现的排序行为。  
+ <span data-ttu-id="08623-197">下表显示为每个数据类型转换使用的.NET Framework 实现中实现的排序行为<xref:System.Xml.Xsl.XslTransform>。</span><span class="sxs-lookup"><span data-stu-id="08623-197">The following table shows the sorting behavior implemented for each data type in the .NET Framework implementation of a transformation using <xref:System.Xml.Xsl.XslTransform>.</span></span>  
   
-|数据类型|排序行为|  
-|----------|----------|  
-|Text|数据通过公共语言运行库 \(CLR\) String.Compare 方法和区域设置进行排序。 当数据类型为“text”时，<xref:System.Xml.Xsl.XslTransform> 类的排序行为与 CLR 的字符串比较行为相同。|  
-|数字|数值被视为 XML 路径语言 \(XPath\) 数字，并根据 W3C XML 路径语言 \(XPath\) 1.0 版建议的 3.5 节 \(www.w3.org\/TR\/xpath.html\#numbers\) 列出的详细信息进行排序。|  
+|<span data-ttu-id="08623-198">数据类型</span><span class="sxs-lookup"><span data-stu-id="08623-198">Data type</span></span>|<span data-ttu-id="08623-199">排序行为</span><span class="sxs-lookup"><span data-stu-id="08623-199">Sorting behavior</span></span>|  
+|---------------|----------------------|  
+|<span data-ttu-id="08623-200">Text</span><span class="sxs-lookup"><span data-stu-id="08623-200">Text</span></span>|<span data-ttu-id="08623-201">数据通过公共语言运行库 (CLR) String.Compare 方法和区域设置进行排序。</span><span class="sxs-lookup"><span data-stu-id="08623-201">Data is sorted using the common language runtime (CLR) String.Compare method, and the cultural locale.</span></span> <span data-ttu-id="08623-202">当数据类型为“text”时，<xref:System.Xml.Xsl.XslTransform> 类的排序行为与 CLR 的字符串比较行为相同。</span><span class="sxs-lookup"><span data-stu-id="08623-202">When the data type equals "text", sorting in the <xref:System.Xml.Xsl.XslTransform> class behaves identically to the string comparison behaviors of the CLR.</span></span>|  
+|<span data-ttu-id="08623-203">数字</span><span class="sxs-lookup"><span data-stu-id="08623-203">Number</span></span>|<span data-ttu-id="08623-204">数值被视为 XML 路径语言 (XPath) 数字，并根据 W3C XML 路径语言 (XPath) 1.0 版建议的 3.5 节 (www.w3.org/TR/xpath.html#numbers) 列出的详细信息进行排序。</span><span class="sxs-lookup"><span data-stu-id="08623-204">Numeric values are treated as XML Path Language (XPath) numbers and are sorted according to the details outlined in the W3C XML Path Language (XPath) Version 1.0 Recommendation, Section 3.5 (www.w3.org/TR/xpath.html#numbers).</span></span>|  
   
-## 支持的可选功能  
- 下表显示 XSLT 处理器实现的可选功能，这些功能在 <xref:System.Xml.Xsl.XslTransform> 类中实现。  
+## <a name="optional-features-supported"></a><span data-ttu-id="08623-205">支持的可选功能</span><span class="sxs-lookup"><span data-stu-id="08623-205">Optional Features Supported</span></span>  
+ <span data-ttu-id="08623-206">下表显示 XSLT 处理器实现的可选功能，这些功能在 <xref:System.Xml.Xsl.XslTransform> 类中实现。</span><span class="sxs-lookup"><span data-stu-id="08623-206">The following table shows the features that are optional for an XSLT processor to implement and are implemented in the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
   
-|功能|引用位置|备注|  
-|--------|----------|--------|  
-|`disable-output-escaping` 和 `<xsl:text...>` 标记上的 `<xsl:value-of...>` 属性。|W3C XSLT 1.0 建议，<br /><br /> 16.4 节|当在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 元素中使用 `xsl:comment` 或 `xsl:processing-instruction` 元素时，忽略 `xsl:attribute` 属性。<br /><br /> 不支持包含文本的结果树片段和已转义的文本输出。<br /><br /> disable\-output\-escaping 属性在转换到 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 对象时被忽略。|  
+|<span data-ttu-id="08623-207">功能</span><span class="sxs-lookup"><span data-stu-id="08623-207">Feature</span></span>|<span data-ttu-id="08623-208">引用位置</span><span class="sxs-lookup"><span data-stu-id="08623-208">Reference location</span></span>|<span data-ttu-id="08623-209">备注</span><span class="sxs-lookup"><span data-stu-id="08623-209">Notes</span></span>|  
+|-------------|------------------------|-----------|  
+|<span data-ttu-id="08623-210">`disable-output-escaping` 和 `<xsl:text...>` 标记上的 `<xsl:value-of...>` 属性。</span><span class="sxs-lookup"><span data-stu-id="08623-210">`disable-output-escaping` attribute on `<xsl:text...>` and `<xsl:value-of...>` tags.</span></span>|<span data-ttu-id="08623-211">W3C XSLT 1.0 建议，</span><span class="sxs-lookup"><span data-stu-id="08623-211">W3C XSLT 1.0 Recommendation,</span></span><br /><br /> <span data-ttu-id="08623-212">16.4 节</span><span class="sxs-lookup"><span data-stu-id="08623-212">Section 16.4</span></span>|<span data-ttu-id="08623-213">当在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 元素中使用 `xsl:comment` 或 `xsl:processing-instruction` 元素时，忽略 `xsl:attribute` 属性。</span><span class="sxs-lookup"><span data-stu-id="08623-213">The `disable-output-escaping` attribute is ignored when the `xsl:text` or `xsl:value-of` elements are used in an `xsl:comment`, `xsl:processing-instruction`, or `xsl:attribute` element.</span></span><br /><br /> <span data-ttu-id="08623-214">不支持包含文本的结果树片段和已转义的文本输出。</span><span class="sxs-lookup"><span data-stu-id="08623-214">Result tree fragments that contain text and the text output that has been escaped are not supported.</span></span><br /><br /> <span data-ttu-id="08623-215">disable-output-escaping 属性在转换到 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 对象时被忽略。</span><span class="sxs-lookup"><span data-stu-id="08623-215">The disable-output-escaping attribute is ignored when transforming to an <xref:System.Xml.XmlReader> or <xref:System.Xml.XmlWriter> object.</span></span>|  
   
-## 请参阅  
- <xref:System.Xml.Xsl.XslTransform>   
- [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)   
- [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)   
- [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)   
- [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)   
- [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)   
- [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)   
- [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a><span data-ttu-id="08623-216">另请参阅</span><span class="sxs-lookup"><span data-stu-id="08623-216">See Also</span></span>  
+ <xref:System.Xml.Xsl.XslTransform>  
+ [<span data-ttu-id="08623-217">XslTransform 类实现 XSLT 处理器</span><span class="sxs-lookup"><span data-stu-id="08623-217">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [<span data-ttu-id="08623-218">XslTransform 类的 XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="08623-218">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+ [<span data-ttu-id="08623-219">转换中的 XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="08623-219">XPathNavigator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [<span data-ttu-id="08623-220">转换中的 XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="08623-220">XPathNodeIterator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [<span data-ttu-id="08623-221">Xsltransform 的 XPathDocument 输入</span><span class="sxs-lookup"><span data-stu-id="08623-221">XPathDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="08623-222">Xsltransform 的 XmlDataDocument 输入</span><span class="sxs-lookup"><span data-stu-id="08623-222">XmlDataDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="08623-223">Xsltransform 的 XmlDocument 输入</span><span class="sxs-lookup"><span data-stu-id="08623-223">XmlDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

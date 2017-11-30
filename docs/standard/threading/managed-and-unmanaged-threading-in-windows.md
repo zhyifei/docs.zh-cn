@@ -1,75 +1,78 @@
 ---
-title: "Managed and Unmanaged Threading in Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], unmanaged"
-  - "threading [.NET Framework], managed"
-  - "managed threading"
+title: "Windows 中的托管和非托管线程处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], unmanaged
+- threading [.NET Framework], managed
+- managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3c55caaff3fd96b2791e75a392a9522abfceb22e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Managed and Unmanaged Threading in Windows
-所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) 函数和平台调用进入托管执行环境。  
+# <a name="managed-and-unmanaged-threading-in-windows"></a><span data-ttu-id="5f48c-102">Windows 中的托管和非托管线程处理</span><span class="sxs-lookup"><span data-stu-id="5f48c-102">Managed and Unmanaged Threading in Windows</span></span>
+<span data-ttu-id="5f48c-103">所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-103">Management of all threads is done through the <xref:System.Threading.Thread> class, including threads created by the common language runtime and those created outside the runtime that enter the managed environment to execute code.</span></span> <span data-ttu-id="5f48c-104">运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-104">The runtime monitors all the threads in its process that have ever executed code within the managed execution environment.</span></span> <span data-ttu-id="5f48c-105">它不跟踪任何其他线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-105">It does not track any other threads.</span></span> <span data-ttu-id="5f48c-106">线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) 函数和平台调用进入托管执行环境。</span><span class="sxs-lookup"><span data-stu-id="5f48c-106">Threads can enter the managed execution environment through COM interop (because the runtime exposes managed objects as COM objects to the unmanaged world), the COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) function, and platform invoke.</span></span>  
   
- 当非托管线程进入运行时（如通过 COM 可调用包装）时，系统将检查该线程的线程本地存储区以查找内部托管 <xref:System.Threading.Thread> 对象。 若找到一个对象，运行时就会注意到该线程。 但如果一个也找不到，则运行时将生成新的 <xref:System.Threading.Thread> 对象并将其安装在该线程的线程本地存储区中。  
+ <span data-ttu-id="5f48c-107">当非托管线程进入运行时（如通过 COM 可调用包装）时，系统将检查该线程的线程本地存储区以查找内部托管 <xref:System.Threading.Thread> 对象。</span><span class="sxs-lookup"><span data-stu-id="5f48c-107">When an unmanaged thread enters the runtime through, for example, a COM callable wrapper, the system checks the thread-local store of that thread to look for an internal managed <xref:System.Threading.Thread> object.</span></span> <span data-ttu-id="5f48c-108">若找到一个对象，运行时就会注意到该线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-108">If one is found, the runtime is already aware of this thread.</span></span> <span data-ttu-id="5f48c-109">但如果一个也找不到，则运行时将生成新的 <xref:System.Threading.Thread> 对象并将其安装在该线程的线程本地存储区中。</span><span class="sxs-lookup"><span data-stu-id="5f48c-109">If it cannot find one, however, the runtime builds a new <xref:System.Threading.Thread> object and installs it in the thread-local store of that thread.</span></span>  
   
- 在托管线程处理中，<xref:System.Threading.Thread.GetHashCode%2A?displayProperty=fullName> 是稳定的托管线程标识。 在线程的生存期内，它不会与来自其他任何线程的值相冲突，不管你是从哪个应用程序域获取该值。  
+ <span data-ttu-id="5f48c-110">在托管线程处理中，<xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是稳定的托管线程标识。</span><span class="sxs-lookup"><span data-stu-id="5f48c-110">In managed threading, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> is the stable managed thread identification.</span></span> <span data-ttu-id="5f48c-111">在线程的生存期内，它不会与来自其他任何线程的值相冲突，不管你是从哪个应用程序域获取该值。</span><span class="sxs-lookup"><span data-stu-id="5f48c-111">For the lifetime of your thread, it will not collide with the value from any other thread, regardless of the application domain from which you obtain this value.</span></span>  
   
 > [!NOTE]
->  因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。 具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。  
+>  <span data-ttu-id="5f48c-112">因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。</span><span class="sxs-lookup"><span data-stu-id="5f48c-112">An operating-system **ThreadId** has no fixed relationship to a managed thread, because an unmanaged host can control the relationship between managed and unmanaged threads.</span></span> <span data-ttu-id="5f48c-113">具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-113">Specifically, a sophisticated host can use the Fiber API to schedule many managed threads against the same operating system thread, or to move a managed thread among different operating system threads.</span></span>  
   
-## 从 Win32 线程处理到托管线程处理的映射  
- 下表将 Win32 线程处理元素映射为其近似的运行时等效元素。 注意，此映射不表示具有相同的功能。 例如，**TerminateThread** 不执行 **finally** 子句或释放资源，并且不能被禁止。 但 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 可以执行所有回滚代码，回收所有资源，并可以使用 <xref:System.Threading.Thread.ResetAbort%2A> 来拒绝。 请确保在对功能进行假设之前仔细阅读该文档。  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a><span data-ttu-id="5f48c-114">从 Win32 线程处理到托管线程处理的映射</span><span class="sxs-lookup"><span data-stu-id="5f48c-114">Mapping from Win32 Threading to Managed Threading</span></span>  
+ <span data-ttu-id="5f48c-115">下表将 Win32 线程处理元素映射为其近似的运行时等效元素。</span><span class="sxs-lookup"><span data-stu-id="5f48c-115">The following table maps Win32 threading elements to their approximate runtime equivalent.</span></span> <span data-ttu-id="5f48c-116">注意，此映射不表示具有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="5f48c-116">Note that this mapping does not represent identical functionality.</span></span> <span data-ttu-id="5f48c-117">例如， **TerminateThread** 不执行 **finally** 子句或释放资源，并且不能被禁止。</span><span class="sxs-lookup"><span data-stu-id="5f48c-117">For example, **TerminateThread** does not execute **finally** clauses or free up resources, and cannot be prevented.</span></span> <span data-ttu-id="5f48c-118">但 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 可以执行所有回滚代码，回收所有资源，并可以使用 <xref:System.Threading.Thread.ResetAbort%2A> 来拒绝。</span><span class="sxs-lookup"><span data-stu-id="5f48c-118">However, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> executes all your rollback code, reclaims all the resources, and can be denied using <xref:System.Threading.Thread.ResetAbort%2A>.</span></span> <span data-ttu-id="5f48c-119">请确保在对功能进行假设之前仔细阅读该文档。</span><span class="sxs-lookup"><span data-stu-id="5f48c-119">Be sure to read the documentation closely before making assumptions about functionality.</span></span>  
   
-|在 Win32 中|在公共语言运行时中|  
-|---------------|---------------|  
-|**CreateThread**|**Thread** 和 <xref:System.Threading.ThreadStart> 的组合。|  
-|**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>|  
-|**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|  
-|**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName>|  
-|**休眠**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>|  
-|线程句柄上的 **WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=fullName>|  
-|**ExitThread**|无等效项|  
-|**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=fullName>|  
-|**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=fullName>|  
-|无等效项|<xref:System.Threading.Thread.Name%2A?displayProperty=fullName>|  
-|无等效项|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=fullName>|  
-|接近 **CoInitializeEx** \(OLE32.DLL\)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName>|  
+|<span data-ttu-id="5f48c-120">在 Win32 中</span><span class="sxs-lookup"><span data-stu-id="5f48c-120">In Win32</span></span>|<span data-ttu-id="5f48c-121">在公共语言运行时中</span><span class="sxs-lookup"><span data-stu-id="5f48c-121">In the common language runtime</span></span>|  
+|--------------|------------------------------------|  
+|<span data-ttu-id="5f48c-122">**CreateThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-122">**CreateThread**</span></span>|<span data-ttu-id="5f48c-123">**Thread** 和 <xref:System.Threading.ThreadStart>的组合。</span><span class="sxs-lookup"><span data-stu-id="5f48c-123">Combination of **Thread** and <xref:System.Threading.ThreadStart></span></span>|  
+|<span data-ttu-id="5f48c-124">**TerminateThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-124">**TerminateThread**</span></span>|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-125">**SuspendThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-125">**SuspendThread**</span></span>|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-126">**ResumeThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-126">**ResumeThread**</span></span>|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-127">**休眠**</span><span class="sxs-lookup"><span data-stu-id="5f48c-127">**Sleep**</span></span>|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-128">线程句柄上的**WaitForSingleObject** </span><span class="sxs-lookup"><span data-stu-id="5f48c-128">**WaitForSingleObject** on the thread handle</span></span>|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-129">**ExitThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-129">**ExitThread**</span></span>|<span data-ttu-id="5f48c-130">无等效项</span><span class="sxs-lookup"><span data-stu-id="5f48c-130">No equivalent</span></span>|  
+|<span data-ttu-id="5f48c-131">**GetCurrentThread**</span><span class="sxs-lookup"><span data-stu-id="5f48c-131">**GetCurrentThread**</span></span>|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-132">**SetThreadPriority**</span><span class="sxs-lookup"><span data-stu-id="5f48c-132">**SetThreadPriority**</span></span>|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-133">无等效项</span><span class="sxs-lookup"><span data-stu-id="5f48c-133">No equivalent</span></span>|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-134">无等效项</span><span class="sxs-lookup"><span data-stu-id="5f48c-134">No equivalent</span></span>|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="5f48c-135">接近 **CoInitializeEx** (OLE32.DLL)</span><span class="sxs-lookup"><span data-stu-id="5f48c-135">Close to **CoInitializeEx** (OLE32.DLL)</span></span>|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## 托管线程和 COM 单元  
- 可以标记一个托管线程以指示它将承载一个[单线程](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多线程](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx)单元。 （有关 COM 线程处理体系结构的详细信息，请参阅[进程、线程和单元](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。 如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState?displayProperty=fullName>。  
+## <a name="managed-threads-and-com-apartments"></a><span data-ttu-id="5f48c-136">托管线程和 COM 单元</span><span class="sxs-lookup"><span data-stu-id="5f48c-136">Managed Threads and COM Apartments</span></span>  
+ <span data-ttu-id="5f48c-137">可标记一个托管线程以指示其将托管一个[单线程](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多线程](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx)单元。</span><span class="sxs-lookup"><span data-stu-id="5f48c-137">A managed thread can be marked to indicate that it will host a [single-threaded](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) or [multithreaded](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) apartment.</span></span> <span data-ttu-id="5f48c-138">（有关 COM 线程处理体系结构的详细信息，请参阅 [Processes, threads, and Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)（进程、线程和单元）。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。</span><span class="sxs-lookup"><span data-stu-id="5f48c-138">(For more information on the COM threading architecture, see [Processes, threads, and Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) The <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>, and <xref:System.Threading.Thread.TrySetApartmentState%2A> methods of the <xref:System.Threading.Thread> class return and assign the apartment state of a thread.</span></span> <span data-ttu-id="5f48c-139">如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5f48c-139">If the state has not been set, <xref:System.Threading.Thread.GetApartmentState%2A> returns <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.</span></span>  
   
- 只有当线程处于 <xref:System.Threading.ThreadState?displayProperty=fullName> 状态时才可以设置该属性；但一个线程只能设置一次。  
+ <span data-ttu-id="5f48c-140">只有当线程处于 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 状态时才可以设置该属性；但一个线程只能设置一次。</span><span class="sxs-lookup"><span data-stu-id="5f48c-140">The property can be set only when the thread is in the <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> state; it can be set only once for a thread.</span></span>  
   
- 如果在启动线程之前未设置单元状态，则该线程被初始化为多线程单元 \(MTA\)。 终结器线程和由 <xref:System.Threading.ThreadPool> 控制的所有线程都是 MTA。  
+ <span data-ttu-id="5f48c-141">如果在启动线程之前未设置单元状态，则该线程被初始化为多线程单元 (MTA)。</span><span class="sxs-lookup"><span data-stu-id="5f48c-141">If the apartment state is not set before the thread is started, the thread is initialized as a multithreaded apartment (MTA).</span></span> <span data-ttu-id="5f48c-142">终结器线程和由 <xref:System.Threading.ThreadPool> 控制的所有线程都是 MTA。</span><span class="sxs-lookup"><span data-stu-id="5f48c-142">The finalizer thread and all threads controlled by <xref:System.Threading.ThreadPool> are MTA.</span></span>  
   
 > [!IMPORTANT]
->  对于应用程序启动代码，控制单元状态的唯一方式是将 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 应用于入口点过程。 在 .NET Framework 1.0 和 1.1 中，<xref:System.Threading.Thread.ApartmentState%2A> 属性可以设置为代码的第一行。 此属性在 .NET Framework 2.0 中是不允许的。  
+>  <span data-ttu-id="5f48c-143">对于应用程序启动代码，控制单元状态的唯一方式是将 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 应用于入口点过程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-143">For application startup code, the only way to control apartment state is to apply the <xref:System.MTAThreadAttribute> or the <xref:System.STAThreadAttribute> to the entry point procedure.</span></span> <span data-ttu-id="5f48c-144">在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 属性可以设置为代码的第一行。</span><span class="sxs-lookup"><span data-stu-id="5f48c-144">In the .NET Framework 1.0 and 1.1, the <xref:System.Threading.Thread.ApartmentState%2A> property can be set as the first line of code.</span></span> <span data-ttu-id="5f48c-145">此属性在 .NET Framework 2.0 中是不允许的。</span><span class="sxs-lookup"><span data-stu-id="5f48c-145">This is not permitted in the .NET Framework 2.0.</span></span>  
   
- 向 COM 公开的托管对象的行为就如同它们聚合了自由线程封送拆收器一样。 换言之，它们可以通过自由线程的方式从任何 COM 单元中调用。 唯一不显示这种自由线程行为的托管对象是那些从 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 派生的对象。  
+ <span data-ttu-id="5f48c-146">向 COM 公开的托管对象的行为就如同它们聚合了自由线程封送拆收器一样。</span><span class="sxs-lookup"><span data-stu-id="5f48c-146">Managed objects that are exposed to COM behave as if they had aggregated the free-threaded marshaler.</span></span> <span data-ttu-id="5f48c-147">换言之，它们可以通过自由线程的方式从任何 COM 单元中调用。</span><span class="sxs-lookup"><span data-stu-id="5f48c-147">In other words, they can be called from any COM apartment in a free-threaded manner.</span></span> <span data-ttu-id="5f48c-148">唯一不显示这种自由线程行为的托管对象是那些从 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 派生的对象。</span><span class="sxs-lookup"><span data-stu-id="5f48c-148">The only managed objects that do not exhibit this free-threaded behavior are those objects that derive from <xref:System.EnterpriseServices.ServicedComponent> or <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.</span></span>  
   
- 在托管领域中，不支持 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>，除非使用上下文和上下文绑定的托管实例。 如果使用的是[企业服务](../Topic/System.EnterpriseServices.md)，则对象必须从 <xref:System.EnterpriseServices>（它本身是从 <xref:System.ContextBoundObject> 派生的）派生。  
+ <span data-ttu-id="5f48c-149">在托管领域中，不支持 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> ，除非使用上下文和上下文绑定的托管实例。</span><span class="sxs-lookup"><span data-stu-id="5f48c-149">In the managed world, there is no support for the <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> unless you use contexts and context-bound managed instances.</span></span> <span data-ttu-id="5f48c-150">如果你使用企业服务，则你的对象必须派生自<xref:System.EnterpriseServices.ServicedComponent>(本身派生自<xref:System.ContextBoundObject>)。</span><span class="sxs-lookup"><span data-stu-id="5f48c-150">If you are using Enterprise Services, then your object must derive from <xref:System.EnterpriseServices.ServicedComponent> (which is itself derived from <xref:System.ContextBoundObject>).</span></span>  
   
- 当托管代码调用至 COM 对象时，它始终遵循 COM 规则。 换言之，它遵循 OLE32 的规定，通过 COM 单元代理和 COM\+ 1.0 上下文包装来调用。  
+ <span data-ttu-id="5f48c-151">当托管代码调用至 COM 对象时，它始终遵循 COM 规则。</span><span class="sxs-lookup"><span data-stu-id="5f48c-151">When managed code calls out to COM objects, it always follows COM rules.</span></span> <span data-ttu-id="5f48c-152">换言之，它遵循 OLE32 的规定，通过 COM 单元代理和 COM+ 1.0 上下文包装来调用。</span><span class="sxs-lookup"><span data-stu-id="5f48c-152">In other words, it calls through COM apartment proxies and COM+ 1.0 context wrappers as dictated by OLE32.</span></span>  
   
-## 阻止问题  
- 在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 控制该线程。 对于 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>，运行时将该线程标记为 **Abort**，并在重新进入托管代码时控制该线程。 使用托管阻止而不使用非托管阻止更为可取。<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=fullName>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=fullName>、<xref:System.Threading.Thread.Join%2A?displayProperty=fullName>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=fullName> 等都对 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=fullName> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 做出响应。 而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。  
+## <a name="blocking-issues"></a><span data-ttu-id="5f48c-153">阻止问题</span><span class="sxs-lookup"><span data-stu-id="5f48c-153">Blocking Issues</span></span>  
+ <span data-ttu-id="5f48c-154">在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 控制该线程。</span><span class="sxs-lookup"><span data-stu-id="5f48c-154">If a thread makes an unmanaged call into the operating system that has blocked the thread in unmanaged code, the runtime will not take control of it for <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> or <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5f48c-155">情况下<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，运行时将标记的线程**中止**并在重新进入托管的代码时控制它。</span><span class="sxs-lookup"><span data-stu-id="5f48c-155">In the case of <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, the runtime marks the thread for **Abort** and takes control of it when it re-enters managed code.</span></span> <span data-ttu-id="5f48c-156">使用托管阻止而不使用非托管阻止更为可取。</span><span class="sxs-lookup"><span data-stu-id="5f48c-156">It is preferable for you to use managed blocking rather than unmanaged blocking.</span></span> <span data-ttu-id="5f48c-157"><xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType><xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>， <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>， <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>， <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>， <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>， <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>，依次类推所有响应<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>并对其<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="5f48c-157"><xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, and so on are all responsive to <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> and to <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5f48c-158">而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。</span><span class="sxs-lookup"><span data-stu-id="5f48c-158">Also, if your thread is in a single-threaded apartment, all these managed blocking operations will correctly pump messages in your apartment while your thread is blocked.</span></span>  
   
-## 请参阅  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName>   
- <xref:System.Threading.ThreadState>   
- <xref:System.EnterpriseServices.ServicedComponent>   
- <xref:System.Threading.Thread>   
+## <a name="see-also"></a><span data-ttu-id="5f48c-159">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5f48c-159">See Also</span></span>  
+ <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+ <xref:System.Threading.ThreadState>  
+ <xref:System.EnterpriseServices.ServicedComponent>  
+ <xref:System.Threading.Thread>  
  <xref:System.Threading.Monitor>

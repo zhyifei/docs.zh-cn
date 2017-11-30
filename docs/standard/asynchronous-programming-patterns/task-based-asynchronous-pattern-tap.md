@@ -1,139 +1,139 @@
 ---
-title: "Task-based Asynchronous Pattern (TAP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework, and TAP"
-  - "asynchronous design patterns, .NET Framework"
-  - "TAP, .NET Framework support for"
-  - "Task-based Asynchronous Pattern, .NET Framework support for"
-  - ".NET Framework, asynchronous design patterns"
+title: "基于任务的异步模式 (TAP)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- .NET Framework, and TAP
+- asynchronous design patterns, .NET Framework
+- TAP, .NET Framework support for
+- Task-based Asynchronous Pattern, .NET Framework support for
+- .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d195cc046ad7ea50cd3695ef32bf53be75c387da
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Task-based Asynchronous Pattern (TAP)
-基于任务的异步模式 \(TAP\) 是基于 <xref:System.Threading.Tasks?displayProperty=fullName> 命名空间中的 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=fullName> 类型，这些类型用于表示任意异步操作。  TAP 是用于新开发的建议的异步设计模式。  
+# <a name="task-based-asynchronous-pattern-tap"></a><span data-ttu-id="dec79-102">基于任务的异步模式 (TAP)</span><span class="sxs-lookup"><span data-stu-id="dec79-102">Task-based Asynchronous Pattern (TAP)</span></span>
+<span data-ttu-id="dec79-103">基于任务的异步模式 (TAP) 是基于 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空间中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 类型，这些类型用于表示任意异步操作。</span><span class="sxs-lookup"><span data-stu-id="dec79-103">The Task-based Asynchronous Pattern (TAP) is based on the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> types in the <xref:System.Threading.Tasks?displayProperty=nameWithType> namespace, which are used to represent arbitrary asynchronous operations.</span></span> <span data-ttu-id="dec79-104">TAP 是用于新开发的建议的异步设计模式。</span><span class="sxs-lookup"><span data-stu-id="dec79-104">TAP is the recommended asynchronous design pattern for new development.</span></span>  
   
-## 命名、参数和返回类型  
- TAP 使用单个方法表示异步操作的开始和完成。  这与异步编程模型（APM 或 `IAsyncResult`）模式相反（该模式要求 `Begin` 和 `End` 方法），并与基于事件的异步模式 \(EAP\) 相反（该模式要求具有 `Async` 后缀的方法，还要求一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型）。  TAP 中的异步方法在操作名称后包含 `Async` 后缀；例如，get 操作的 `GetAsync`。  如果你正在将 TAP 方法添加到已包含具有 `Async` 后缀的方法名称的类中，请改用后缀 `TaskAsync`。  例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。  
+## <a name="naming-parameters-and-return-types"></a><span data-ttu-id="dec79-105">命名、参数和返回类型</span><span class="sxs-lookup"><span data-stu-id="dec79-105">Naming, Parameters, and Return Types</span></span>  
+ <span data-ttu-id="dec79-106">TAP 使用单个方法表示异步操作的开始和完成。</span><span class="sxs-lookup"><span data-stu-id="dec79-106">TAP uses a single method to represent the initiation and completion of an asynchronous operation.</span></span> <span data-ttu-id="dec79-107">这与异步编程模型（APM 或 `IAsyncResult`）模式相反（该模式要求 `Begin` 和 `End` 方法），并与基于事件的异步模式 (EAP) 相反（该模式要求具有 `Async` 后缀的方法，还要求一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型）。</span><span class="sxs-lookup"><span data-stu-id="dec79-107">This is in contrast to the Asynchronous Programming Model (APM or `IAsyncResult`) pattern, which requires `Begin` and `End` methods, and in contrast to the Event-based Asynchronous Pattern (EAP), which requires a method that has the `Async` suffix and also requires one or more events, event handler delegate types, and `EventArg`-derived types.</span></span> <span data-ttu-id="dec79-108">在 TAP 中的异步方法包括`Async`后缀之后的操作名称; 例如，`GetAsync`为`Get`操作。</span><span class="sxs-lookup"><span data-stu-id="dec79-108">Asynchronous methods in TAP include the `Async` suffix after the operation name; for example, `GetAsync` for a `Get` operation.</span></span> <span data-ttu-id="dec79-109">如果你正在将 TAP 方法添加到已包含具有 `Async` 后缀的方法名称的类中，请改用后缀 `TaskAsync`。</span><span class="sxs-lookup"><span data-stu-id="dec79-109">If you're adding a TAP method to a class that already contains that method name with the `Async` suffix, use the suffix `TaskAsync` instead.</span></span> <span data-ttu-id="dec79-110">例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。</span><span class="sxs-lookup"><span data-stu-id="dec79-110">For example, if the class already has a `GetAsync` method, use the name `GetTaskAsync`.</span></span>  
   
- TAP 方法返回 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=fullName>，取决于相应的同步方法是返回 void 还是类型 `TResult`。  
+ <span data-ttu-id="dec79-111">TAP 方法返回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，取决于相应的同步方法是返回 void 还是类型 `TResult`。</span><span class="sxs-lookup"><span data-stu-id="dec79-111">The TAP method returns either a <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> or a <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, based on whether the corresponding synchronous method returns void or a type `TResult`.</span></span>  
   
- TAP 方法的参数应与其同步副本的参数匹配，并应以相同顺序提供。  但是，`out` 和 `ref` 参数不受此规则的限制，并应完全避免。  应该将通过 `out` 或 `ref` 参数返回的所有数据改为作为由 <xref:System.Threading.Tasks.Task%601> 返回的 `TResult` 的一部分返回，且应使用元组或自定义数据结构来容纳多个值。  专用于创建、操作或组合任务的方法（其中，方法的名称或该方法所属的类型的名称已明确指示方法的异步用途）不需要遵循此命名模式；此类方法通常称为*组合器*。  组合器的示例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，并在[Consuming the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)一文的[“使用内置的基于任务的组合器”](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)部分进行了论述。  
+ <span data-ttu-id="dec79-112">TAP 方法的参数应与其同步副本的参数匹配，并应以相同顺序提供。</span><span class="sxs-lookup"><span data-stu-id="dec79-112">The parameters of a TAP method should match the parameters of its synchronous counterpart, and should be provided in the same order.</span></span>  <span data-ttu-id="dec79-113">但是，`out` 和 `ref` 参数不受此规则的限制，并应完全避免。</span><span class="sxs-lookup"><span data-stu-id="dec79-113">However, `out` and `ref` parameters are exempt from this rule and should be avoided entirely.</span></span> <span data-ttu-id="dec79-114">应该将通过 `out` 或 `ref` 参数返回的所有数据改为作为由 `TResult` 返回的 <xref:System.Threading.Tasks.Task%601> 的一部分返回，且应使用元组或自定义数据结构来容纳多个值。</span><span class="sxs-lookup"><span data-stu-id="dec79-114">Any data that would have been returned through an `out` or `ref` parameter should instead be returned as part of the `TResult` returned by <xref:System.Threading.Tasks.Task%601>, and should use a tuple or a custom data structure to accommodate multiple values.</span></span> <span data-ttu-id="dec79-115">专用于创建、 操作或组合 （其中的方法的异步用途是清除方法名称或该方法所属的类型） 的任务的方法不需要遵循此命名模式;此类方法通常称为*组合器*。</span><span class="sxs-lookup"><span data-stu-id="dec79-115">Methods that are devoted exclusively to the creation, manipulation, or combination of tasks (where the asynchronous intent of the method is clear in the method name or in the name of the type to which the method belongs) need not follow this naming pattern; such methods are often referred to as *combinators*.</span></span> <span data-ttu-id="dec79-116">组合器的示例包括<xref:System.Threading.Tasks.Task.WhenAll%2A>和<xref:System.Threading.Tasks.Task.WhenAny%2A>，并分别加以讨论[使用内置任务基于组合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)文章的部分[使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="dec79-116">Examples of combinators include <xref:System.Threading.Tasks.Task.WhenAll%2A> and <xref:System.Threading.Tasks.Task.WhenAny%2A>, and are discussed in the [Using the Built-in Task-based Combinators](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) section of the article [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).</span></span>  
   
- 有关 TAP 语法与旧式异步编程模式（如异步编程模型 \(APM\) 和基于事件的异步模式 \(EAP\)）中使用的语法之间的区别的示例，请参阅[Asynchronous Programming Patterns](../../../docs/standard/asynchronous-programming-patterns/index.md)。  
+ <span data-ttu-id="dec79-117">有关如何 TAP 语法不同于旧的异步编程模式如异步编程模型 (APM) 和基于事件的异步模式 (EAP) 中使用的语法的示例，请参阅[异步编程模式](../../../docs/standard/asynchronous-programming-patterns/index.md).</span><span class="sxs-lookup"><span data-stu-id="dec79-117">For examples of how the TAP syntax differs from the syntax used in legacy asynchronous programming patterns such as the Asynchronous Programming Model (APM) and the Event-based Asynchronous Pattern (EAP), see [Asynchronous Programming Patterns](../../../docs/standard/asynchronous-programming-patterns/index.md).</span></span>  
   
-## 初始化异步操作  
- 基于 TAP 的异步方法可以同步完成少量工作，如在返回结果任务之前，验证参数和启动异步操作。  应将同步工作保持最小，以便异步方法可以快速返回。  快速返回的原因包括以下几种：  
+## <a name="initiating-an-asynchronous-operation"></a><span data-ttu-id="dec79-118">初始化异步操作</span><span class="sxs-lookup"><span data-stu-id="dec79-118">Initiating an Asynchronous Operation</span></span>  
+ <span data-ttu-id="dec79-119">基于 TAP 的异步方法可以同步完成少量工作，如在返回结果任务之前，验证参数和启动异步操作。</span><span class="sxs-lookup"><span data-stu-id="dec79-119">An asynchronous method that is based on TAP can do a small amount of work synchronously, such as validating arguments and initiating the asynchronous operation, before it returns the resulting task.</span></span> <span data-ttu-id="dec79-120">应将同步工作保持最小，以便异步方法可以快速返回。</span><span class="sxs-lookup"><span data-stu-id="dec79-120">Synchronous work should be kept to the minimum so the asynchronous method can return quickly.</span></span> <span data-ttu-id="dec79-121">快速返回的原因包括以下几种：</span><span class="sxs-lookup"><span data-stu-id="dec79-121">Reasons for a quick return include the following:</span></span>  
   
--   可以从用户界面 \(UI\) 线程调用异步方法，因此，所有长期运行的同步工作可能会降低应用程序的响应能力。  
+-   <span data-ttu-id="dec79-122">可以从用户界面 (UI) 线程调用异步方法，因此，所有长期运行的同步工作可能会降低应用程序的响应能力。</span><span class="sxs-lookup"><span data-stu-id="dec79-122">Asynchronous methods may be invoked from user interface (UI) threads, and any long-running synchronous work could harm the responsiveness of the application.</span></span>  
   
--   可以同时启动多个异步方法。  因此，在异步方法的同步部分中的任何长时间运行的工作都可以延迟其他异步操作的启动，从而减少并发的优点。  
+-   <span data-ttu-id="dec79-123">可以同时启动多个异步方法。</span><span class="sxs-lookup"><span data-stu-id="dec79-123">Multiple asynchronous methods may be launched concurrently.</span></span> <span data-ttu-id="dec79-124">因此，在异步方法的同步部分中的任何长时间运行的工作都可以延迟其他异步操作的启动，从而减少并发的优点。</span><span class="sxs-lookup"><span data-stu-id="dec79-124">Therefore, any long-running work in the synchronous portion of an asynchronous method could delay the initiation of other asynchronous operations, thereby decreasing the benefits of concurrency.</span></span>  
   
- 在某些情况下，完成操作所需的工作量要比异步启动操作所需的工作量少。  读取流时，按照在内存中已缓冲好的数据来满足该读取，这就是此类情形的一个示例。  在这样的情况下，操作可能会同步完成，同时返回已完成的任务。  
+ <span data-ttu-id="dec79-125">在某些情况下，完成操作所需的工作量要比异步启动操作所需的工作量少。</span><span class="sxs-lookup"><span data-stu-id="dec79-125">In some cases, the amount of work required to complete the operation is less than the amount of work required to launch the operation asynchronously.</span></span> <span data-ttu-id="dec79-126">读取流时，按照在内存中已缓冲好的数据来满足该读取，这就是此类情形的一个示例。</span><span class="sxs-lookup"><span data-stu-id="dec79-126">Reading from a stream where the read operation can be satisfied by data that is already buffered in memory is an example of such a scenario.</span></span> <span data-ttu-id="dec79-127">在这样的情况下，操作可能会同步完成，同时返回已完成的任务。</span><span class="sxs-lookup"><span data-stu-id="dec79-127">In such cases, the operation may complete synchronously, and may return a task that has already been completed.</span></span>  
   
-## 异常  
- 异步方法应引发仅将引发异步方法调用的异常，以响应用法错误。  用法错误决不应该出现在成品代码中。  例如，如果将 null 引用（在 Visual Basic 中为 `Nothing`）作为某个方法的参数传递导致了错误状态（通常由 <xref:System.ArgumentNullException> 异常表示），则可以修改调用代码以确保绝对不传递 null 引用。  对于所有其他错误，在运行异步方法时发生的异常应分配给返回的任务，即使该异步方法碰巧在任务返回前同步完成。  通常，任务最多包含一个异常。  但是，如果任务表示多个操作（例如，<xref:System.Threading.Tasks.Task.WhenAll%2A>），则多个异常可能与单个任务关联。  
+## <a name="exceptions"></a><span data-ttu-id="dec79-128">异常</span><span class="sxs-lookup"><span data-stu-id="dec79-128">Exceptions</span></span>  
+ <span data-ttu-id="dec79-129">异步方法应引发仅将引发异步方法调用的异常，以响应用法错误。</span><span class="sxs-lookup"><span data-stu-id="dec79-129">An asynchronous method should raise an exception to be thrown out of the asynchronous method call only in response to a usage error.</span></span> <span data-ttu-id="dec79-130">用法错误决不应该出现在成品代码中。</span><span class="sxs-lookup"><span data-stu-id="dec79-130">Usage errors should never occur in production code.</span></span> <span data-ttu-id="dec79-131">例如，如果将 null 引用（在 Visual Basic 中为 `Nothing`）作为某个方法的参数传递导致了错误状态（通常由 <xref:System.ArgumentNullException> 异常表示），则可以修改调用代码以确保绝对不传递 null 引用。</span><span class="sxs-lookup"><span data-stu-id="dec79-131">For example, if passing a null reference (`Nothing` in Visual Basic) as one of the method’s arguments causes an error state (usually represented by an <xref:System.ArgumentNullException> exception), you can modify the calling code to ensure that a null reference is never passed.</span></span> <span data-ttu-id="dec79-132">对于所有其他错误，在运行异步方法时发生的异常应分配给返回的任务，即使该异步方法碰巧在任务返回前同步完成。</span><span class="sxs-lookup"><span data-stu-id="dec79-132">For all other errors, exceptions that occur when an asynchronous method is running should be assigned to the returned task, even if the asynchronous method happens to complete synchronously before the task is returned.</span></span> <span data-ttu-id="dec79-133">通常，任务最多包含一个异常。</span><span class="sxs-lookup"><span data-stu-id="dec79-133">Typically, a task contains at most one exception.</span></span> <span data-ttu-id="dec79-134">但是，如果任务表示多个操作（例如，<xref:System.Threading.Tasks.Task.WhenAll%2A>），则多个异常可能与单个任务关联。</span><span class="sxs-lookup"><span data-stu-id="dec79-134">However, if the task represents multiple operations (for example, <xref:System.Threading.Tasks.Task.WhenAll%2A>), multiple exceptions may be associated with a single task.</span></span>  
   
-## 目标环境  
- 在实现 TAP 方法时，你可以确定异步执行发生的位置。  你可选择在线程池上执行工作负荷，可选择使用异步 I\/O 实现它（不必绑定到大部分操作执行的线程）或可选择在特定线程（如 UI 线程）上运行它或使用任何数目的潜在上下文。  TAP 方法甚至可能没有要执行的操作，可能仅返回表示系统中其他位置的匹配项的 <xref:System.Threading.Tasks.Task>（例如，表示到达某种排队数据结构的数据的任务）。TAP 方法的调用方可能会通过异步等待生成结果来阻止等待 TAP 方法完成，也可能在异步操作完成时运行其他（延续）节点。  延续代码的创建者可以控制该代码的执行位置。  你可以通过 <xref:System.Threading.Tasks.Task> 类上的方法（例如，<xref:System.Threading.Tasks.Task.ContinueWith%2A>）显式创建延续代码，也可以使用基于延续（例如，C\# 中的 `await`、Visual Basic 中的 `Await` 和 F\# 中的 `AwaitValue`）构建的语言支持隐式创建延续代码。  
+## <a name="target-environment"></a><span data-ttu-id="dec79-135">目标环境</span><span class="sxs-lookup"><span data-stu-id="dec79-135">Target Environment</span></span>  
+ <span data-ttu-id="dec79-136">在实现 TAP 方法时，你可以确定异步执行发生的位置。</span><span class="sxs-lookup"><span data-stu-id="dec79-136">When you implement a TAP method, you can determine where asynchronous execution occurs.</span></span> <span data-ttu-id="dec79-137">你可选择在线程池上执行工作负荷，可选择使用异步 I/O 实现它（不必绑定到大部分操作执行的线程）或可选择在特定线程（如 UI 线程）上运行它或使用任何数目的潜在上下文。</span><span class="sxs-lookup"><span data-stu-id="dec79-137">You may choose to execute the workload on the thread pool, implement it by using asynchronous I/O (without being bound to a thread for the majority of the operation’s execution), run it on a specific thread (such as the UI thread), or use any number of potential contexts.</span></span> <span data-ttu-id="dec79-138">TAP 方法甚至可能没有要执行的操作，可能仅返回表示系统中其他位置的匹配项的 <xref:System.Threading.Tasks.Task>（例如，表示到达某种排队数据结构的数据的任务）。TAP 方法的调用方可能会通过异步等待生成结果来阻止等待 TAP 方法完成，也可能在异步操作完成时运行其他（延续）节点。</span><span class="sxs-lookup"><span data-stu-id="dec79-138">A TAP method may even have nothing to execute, and may just return a <xref:System.Threading.Tasks.Task> that represents the occurrence of a condition elsewhere in the system (for example, a task that represents data arriving at a queued data structure).The caller of the TAP method may block waiting for the TAP method to complete by synchronously waiting on the resulting task, or may run additional (continuation) code when the asynchronous operation completes.</span></span> <span data-ttu-id="dec79-139">延续代码的创建者可以控制该代码的执行位置。</span><span class="sxs-lookup"><span data-stu-id="dec79-139">The creator of the continuation code has control over where that code executes.</span></span> <span data-ttu-id="dec79-140">你可以通过 <xref:System.Threading.Tasks.Task> 类上的方法（例如，<xref:System.Threading.Tasks.Task.ContinueWith%2A>）显式创建延续代码，也可以使用基于延续（例如，C# 中的 `await`、Visual Basic 中的 `Await` 和 F# 中的 `AwaitValue`）构建的语言支持隐式创建延续代码。</span><span class="sxs-lookup"><span data-stu-id="dec79-140">You may create the continuation code either explicitly, through methods on the <xref:System.Threading.Tasks.Task> class (for example, <xref:System.Threading.Tasks.Task.ContinueWith%2A>) or implicitly, by using language support built on top of continuations (for example, `await` in C#, `Await` in Visual Basic, `AwaitValue` in F#).</span></span>  
   
-## 任务状态  
- <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。  为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。  公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为*冷任务*，因为它们在非安排的 <xref:System.Threading.Tasks.TaskStatus> 状态下开始其生命周期，并且仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才进行安排。  所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> 以外的枚举值。  必须激活从 TAP 方法返回的所有任务。  如果 TAP 方法在内部使用任务的构造函数来实例化要返回的任务，则该 TAP 方法必须在返回之前对 <xref:System.Threading.Tasks.Task.Start%2A> 对象调用 <xref:System.Threading.Tasks.Task>。  TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。  对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。  
+## <a name="task-status"></a><span data-ttu-id="dec79-141">任务状态</span><span class="sxs-lookup"><span data-stu-id="dec79-141">Task Status</span></span>  
+ <span data-ttu-id="dec79-142"><xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。</span><span class="sxs-lookup"><span data-stu-id="dec79-142">The <xref:System.Threading.Tasks.Task> class provides a life cycle for asynchronous operations, and that cycle is represented by the <xref:System.Threading.Tasks.TaskStatus> enumeration.</span></span> <span data-ttu-id="dec79-143">为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="dec79-143">To support corner cases of types that derive from <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601>,  and to support the separation of construction from scheduling, the <xref:System.Threading.Tasks.Task> class exposes a <xref:System.Threading.Tasks.Task.Start%2A> method.</span></span> <span data-ttu-id="dec79-144">由公共创建的任务<xref:System.Threading.Tasks.Task>构造函数被称为*冷任务*，因为他们开始其生命周期在非安排<xref:System.Threading.Tasks.TaskStatus.Created>状态，并计划时，才<xref:System.Threading.Tasks.Task.Start%2A>上调用这些实例。</span><span class="sxs-lookup"><span data-stu-id="dec79-144">Tasks that are created by the public <xref:System.Threading.Tasks.Task> constructors are referred to as *cold tasks*, because they begin their life cycle in the non-scheduled <xref:System.Threading.Tasks.TaskStatus.Created> state and are scheduled only when <xref:System.Threading.Tasks.Task.Start%2A> is called on these instances.</span></span> 
+ 
+ <span data-ttu-id="dec79-145">所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的枚举值。</span><span class="sxs-lookup"><span data-stu-id="dec79-145">All other tasks begin their life cycle in a hot state, which means that the asynchronous operations they represent have already been initiated and their task status is an enumeration value other than <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType>.</span></span> <span data-ttu-id="dec79-146">必须激活从 TAP 方法返回的所有任务。</span><span class="sxs-lookup"><span data-stu-id="dec79-146">All tasks that are returned from TAP methods must be activated.</span></span> <span data-ttu-id="dec79-147">**如果 TAP 方法内部使用任务的构造函数来实例化的任务才能返回，TAP 方法必须调用<xref:System.Threading.Tasks.Task.Start%2A>上<xref:System.Threading.Tasks.Task>在返回之前的对象。**</span><span class="sxs-lookup"><span data-stu-id="dec79-147">**If a TAP method internally uses a task’s constructor to instantiate the task to be returned, the TAP method must call <xref:System.Threading.Tasks.Task.Start%2A> on the <xref:System.Threading.Tasks.Task> object before returning it.**</span></span> <span data-ttu-id="dec79-148">TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="dec79-148">Consumers of a TAP method may safely assume that the returned task is active and should not try to call <xref:System.Threading.Tasks.Task.Start%2A> on any <xref:System.Threading.Tasks.Task> that is returned from a TAP method.</span></span> <span data-ttu-id="dec79-149">对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。</span><span class="sxs-lookup"><span data-stu-id="dec79-149">Calling <xref:System.Threading.Tasks.Task.Start%2A> on an active task results in an <xref:System.InvalidOperationException> exception.</span></span>  
   
-## 取消（可选）  
- 在 TAP 中，取消是异步方法实现者和异步方法使用者的选项。  如果操作允许取消，则会公开接受取消标记（<xref:System.Threading.CancellationToken> 实例）的异步方法的重载。  按照约定，该参数命名为 `cancellationToken`。  
+## <a name="cancellation-optional"></a><span data-ttu-id="dec79-150">取消（可选）</span><span class="sxs-lookup"><span data-stu-id="dec79-150">Cancellation (Optional)</span></span>  
+ <span data-ttu-id="dec79-151">在 TAP 中，取消是异步方法实现者和异步方法使用者的选项。</span><span class="sxs-lookup"><span data-stu-id="dec79-151">In TAP, cancellation is optional for both asynchronous method implementers and asynchronous method consumers.</span></span> <span data-ttu-id="dec79-152">如果操作允许取消，则会公开接受取消标记（<xref:System.Threading.CancellationToken> 实例）的异步方法的重载。</span><span class="sxs-lookup"><span data-stu-id="dec79-152">If an operation allows cancellation, it exposes an overload of the asynchronous method that accepts a cancellation token (<xref:System.Threading.CancellationToken> instance).</span></span> <span data-ttu-id="dec79-153">按照约定，该参数命名为 `cancellationToken`。</span><span class="sxs-lookup"><span data-stu-id="dec79-153">By convention, the parameter is named `cancellationToken`.</span></span>  
   
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
  [!code-vb[Conceptual.TAP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#1)]  
   
- 该异步操作监视取消请求的此标记。  如果它收到取消请求，则可以选择接受该请求并取消操作。  如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus> 状态下结束的任务；没有可用结果且不引发异常。  <xref:System.Threading.Tasks.TaskStatus> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus> 和 <xref:System.Threading.Tasks.TaskStatus> 状态。  因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。  在 <xref:System.Threading.Tasks.TaskStatus> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions>）特定于取消延续。  任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。  通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。  
+ <span data-ttu-id="dec79-154">该异步操作监视取消请求的此标记。</span><span class="sxs-lookup"><span data-stu-id="dec79-154">The asynchronous operation monitors this token for cancellation requests.</span></span> <span data-ttu-id="dec79-155">如果它收到取消请求，则可以选择接受该请求并取消操作。</span><span class="sxs-lookup"><span data-stu-id="dec79-155">If it receives a cancellation request, it may choose to honor that request and cancel the operation.</span></span> <span data-ttu-id="dec79-156">如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下结束的任务；没有可用结果且不引发异常。</span><span class="sxs-lookup"><span data-stu-id="dec79-156">If the cancellation request results in work being ended prematurely, the TAP method returns a task that ends in the <xref:System.Threading.Tasks.TaskStatus.Canceled> state; there is no available result and no exception is thrown.</span></span>  <span data-ttu-id="dec79-157"><xref:System.Threading.Tasks.TaskStatus.Canceled> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 状态。</span><span class="sxs-lookup"><span data-stu-id="dec79-157">The <xref:System.Threading.Tasks.TaskStatus.Canceled> state is considered to be a final (completed) state for a task, along with the <xref:System.Threading.Tasks.TaskStatus.Faulted> and <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> states.</span></span> <span data-ttu-id="dec79-158">因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。</span><span class="sxs-lookup"><span data-stu-id="dec79-158">Therefore, if a task is in the <xref:System.Threading.Tasks.TaskStatus.Canceled> state, its <xref:System.Threading.Tasks.Task.IsCompleted%2A> property returns `true`.</span></span> <span data-ttu-id="dec79-159">在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled>）特定于取消延续。</span><span class="sxs-lookup"><span data-stu-id="dec79-159">When a task completes in the <xref:System.Threading.Tasks.TaskStatus.Canceled> state, any continuations registered with the task are scheduled or executed, unless a continuation option such as <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled> was specified to opt out of continuation.</span></span> <span data-ttu-id="dec79-160">任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。</span><span class="sxs-lookup"><span data-stu-id="dec79-160">Any code that is asynchronously waiting for a canceled task through use of language features continues to run but receives an <xref:System.OperationCanceledException> or an exception derived from it.</span></span> <span data-ttu-id="dec79-161">通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。</span><span class="sxs-lookup"><span data-stu-id="dec79-161">Code that is blocked synchronously waiting on the task through methods such as <xref:System.Threading.Tasks.Task.Wait%2A> and <xref:System.Threading.Tasks.Task.WaitAll%2A> also continue to run with an exception.</span></span>  
   
- 如果取消标记请求在接受调用标记的 TAP 方法之前取消，TAP 方法应返回 <xref:System.Threading.Tasks.TaskStatus> 任务。  但是，如果在运行异步操作时请求取消，则异步操作不需要接受该取消请求。  仅当该操作如取消请求的结果那样结束时，返回的任务才应以 <xref:System.Threading.Tasks.TaskStatus> 状态结束。  如果已请求取消，但仍然生成了结果或异常，则任务应在 <xref:System.Threading.Tasks.TaskStatus> 或 <xref:System.Threading.Tasks.TaskStatus> 状态下结束。  对于希望首先进行取消的开发人员使用的异步方法，你不需要提供不接受取消标记的重载。  对于无法取消的方法，不提供接受取消标记的重载；这有助于向调用方指示目标方法是否真正可取消。  不要求取消的使用者代码可以调用接受 <xref:System.Threading.CancellationToken> 的方法，并提供 <xref:System.Threading.CancellationToken.None%2A> 作为参数值。  <xref:System.Threading.CancellationToken.None%2A> 在功能上等效于默认 <xref:System.Threading.CancellationToken>。  
+ <span data-ttu-id="dec79-162">如果取消标记请求在接受调用标记的 TAP 方法之前取消，TAP 方法应返回 <xref:System.Threading.Tasks.TaskStatus.Canceled> 任务。</span><span class="sxs-lookup"><span data-stu-id="dec79-162">If a cancellation token has requested cancellation before the TAP method that accepts that token is called, the TAP method should return a <xref:System.Threading.Tasks.TaskStatus.Canceled> task.</span></span>  <span data-ttu-id="dec79-163">但是，如果在运行异步操作时请求取消，则异步操作不需要接受该取消请求。</span><span class="sxs-lookup"><span data-stu-id="dec79-163">However, if cancellation is requested while the asynchronous operation is running, the asynchronous operation need not accept the cancellation request.</span></span>  <span data-ttu-id="dec79-164">仅当该操作如取消请求的结果那样结束时，返回的任务才应以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束。</span><span class="sxs-lookup"><span data-stu-id="dec79-164">The returned task should end in the <xref:System.Threading.Tasks.TaskStatus.Canceled> state only if the operation ends as a result of the cancellation request.</span></span> <span data-ttu-id="dec79-165">如果已请求取消，但仍然生成了结果或异常，则任务应在 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 或 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态下结束。</span><span class="sxs-lookup"><span data-stu-id="dec79-165">If cancellation is requested but a result or an exception is still produced, the task should end in the <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> or <xref:System.Threading.Tasks.TaskStatus.Faulted> state.</span></span> <span data-ttu-id="dec79-166">对于希望首先进行取消的开发人员使用的异步方法，你不需要提供不接受取消标记的重载。</span><span class="sxs-lookup"><span data-stu-id="dec79-166">For asynchronous methods used by a developer who wants cancellation first and foremost, you don't have to provide an overload that doesn’t accept a cancellation token.</span></span>  <span data-ttu-id="dec79-167">对于无法取消的方法，不提供接受取消标记的重载；这有助于向调用方指示目标方法是否真正可取消。</span><span class="sxs-lookup"><span data-stu-id="dec79-167">For methods that cannot be canceled, do not provide overloads that accept a cancellation token; this helps indicate to the caller whether the target method is actually cancelable.</span></span>  <span data-ttu-id="dec79-168">不要求取消的使用者代码可以调用接受 <xref:System.Threading.CancellationToken> 的方法，并提供 <xref:System.Threading.CancellationToken.None%2A> 作为参数值。</span><span class="sxs-lookup"><span data-stu-id="dec79-168">Consumer code that does not desire cancellation may call a method that accepts a <xref:System.Threading.CancellationToken> and provide <xref:System.Threading.CancellationToken.None%2A> as the argument value.</span></span> <span data-ttu-id="dec79-169"><xref:System.Threading.CancellationToken.None%2A> 在功能上等效于默认 <xref:System.Threading.CancellationToken>。</span><span class="sxs-lookup"><span data-stu-id="dec79-169"><xref:System.Threading.CancellationToken.None%2A> is functionally equivalent to the default <xref:System.Threading.CancellationToken>.</span></span>  
   
-## 进度报告（可选）  
- 某些异步操作受益于提供进度通知；这些通常用于使用有关该异步操作的进度的信息更新用户界面。  在 TAP 中，通过 <xref:System.IProgress%601> 接口处理进度，此接口作为通常名为 `progress` 的参数传递给异步方法。  调用异步方法时提供进度接口有助于消除不正确使用导致的争用情况（也就是说，操作启动后未正确注册的事件处理程序可能缺少更新）。  更重要的是，根据所使用的代码，进度接口将支持不同的进度实现。  例如，使用代码可能只关心最新的进度更新，可能需要缓冲所有更新，可能需要为各个更新调用操作，也可能需要控制是否需将该调用封送到特定线程。  通过使用接口的不同实现，所有这些选项都可以满足特定的使用者的需要。  与取消一样，仅在 API 支持进度通知时，TAP 实现才应提供 <xref:System.IProgress%601> 参数。  例如，如果本文前面所述的 `ReadAsync` 方法可以以到目前为止读取的字节数的形式报告中间进度，则进度回调可能为 <xref:System.IProgress%601> 接口：  
+## <a name="progress-reporting-optional"></a><span data-ttu-id="dec79-170">进度报告（可选）</span><span class="sxs-lookup"><span data-stu-id="dec79-170">Progress Reporting (Optional)</span></span>  
+ <span data-ttu-id="dec79-171">某些异步操作受益于提供进度通知；这些通常用于使用有关该异步操作的进度的信息更新用户界面。</span><span class="sxs-lookup"><span data-stu-id="dec79-171">Some asynchronous operations benefit from providing progress notifications; these are typically used to update a user interface with information about the progress of the asynchronous operation.</span></span> <span data-ttu-id="dec79-172">在 TAP 中，通过 <xref:System.IProgress%601> 接口处理进度，此接口作为通常名为 `progress` 的参数传递给异步方法。</span><span class="sxs-lookup"><span data-stu-id="dec79-172">In TAP, progress is handled through an <xref:System.IProgress%601> interface, which is passed to the asynchronous method as a parameter that is usually named `progress`.</span></span>  <span data-ttu-id="dec79-173">调用异步方法时提供进度接口有助于消除不正确使用导致的争用情况（也就是说，操作启动后未正确注册的事件处理程序可能缺少更新）。</span><span class="sxs-lookup"><span data-stu-id="dec79-173">Providing the progress interface when the asynchronous method is called helps eliminate race conditions that result from incorrect usage (that is, when event handlers that are incorrectly registered after the operation starts may miss updates).</span></span>  <span data-ttu-id="dec79-174">更重要的是，根据所使用的代码，进度接口将支持不同的进度实现。</span><span class="sxs-lookup"><span data-stu-id="dec79-174">More importantly, the progress interface supports varying implementations of progress, as determined by the consuming code.</span></span>  <span data-ttu-id="dec79-175">例如，使用代码可能只关心最新的进度更新，可能需要缓冲所有更新，可能需要为各个更新调用操作，也可能需要控制是否需将该调用封送到特定线程。</span><span class="sxs-lookup"><span data-stu-id="dec79-175">For example, the consuming code may only care about the latest progress update, or may want to buffer all updates, or may want to invoke an action for each update, or may want to control whether the invocation is marshaled to a particular thread.</span></span> <span data-ttu-id="dec79-176">通过使用接口的不同实现，所有这些选项都可以满足特定的使用者的需要。</span><span class="sxs-lookup"><span data-stu-id="dec79-176">All these options may be achieved by using a different implementation of the interface, customized to the particular consumer’s needs.</span></span>  <span data-ttu-id="dec79-177">与取消一样，仅在 API 支持进度通知时，TAP 实现才应提供 <xref:System.IProgress%601> 参数。</span><span class="sxs-lookup"><span data-stu-id="dec79-177">As with cancellation, TAP implementations should provide an <xref:System.IProgress%601> parameter only if the API supports progress notifications.</span></span> <span data-ttu-id="dec79-178">例如，如果本文前面所述的 `ReadAsync` 方法可以以到目前为止读取的字节数的形式报告中间进度，则进度回调可能为 <xref:System.IProgress%601> 接口：</span><span class="sxs-lookup"><span data-stu-id="dec79-178">For example, if the `ReadAsync` method discussed earlier in this article is able to report intermediate progress in the form of the number of bytes read thus far, the progress callback could be an <xref:System.IProgress%601> interface:</span></span>  
   
  [!code-csharp[Conceptual.TAP#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#2)]
  [!code-vb[Conceptual.TAP#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#2)]  
   
- 如果 `FindFilesAsync` 方法返回满足特定搜索模式的所有文件的列表，则进度回调可以对已完成工作的百分比和当前部分结果集进行估计。  可使用元组执行此操作：  
+ <span data-ttu-id="dec79-179">如果 `FindFilesAsync` 方法返回满足特定搜索模式的所有文件的列表，则进度回调可以对已完成工作的百分比和当前部分结果集进行估计。</span><span class="sxs-lookup"><span data-stu-id="dec79-179">If a `FindFilesAsync` method returns a list of all files that meet a particular search pattern, the progress callback could provide an estimate of the percentage of work completed as well as the current set of partial results.</span></span>  <span data-ttu-id="dec79-180">可使用元组执行此操作：</span><span class="sxs-lookup"><span data-stu-id="dec79-180">It could do this either with a tuple:</span></span>  
   
  [!code-csharp[Conceptual.TAP#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#3)]
  [!code-vb[Conceptual.TAP#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#3)]  
   
- 也可以使用特定于 API 的数据类型执行此操作：  
+ <span data-ttu-id="dec79-181">也可以使用特定于 API 的数据类型执行此操作：</span><span class="sxs-lookup"><span data-stu-id="dec79-181">or with a data type that is specific to the API:</span></span>  
   
  [!code-csharp[Conceptual.TAP#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#4)]
  [!code-vb[Conceptual.TAP#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#4)]  
   
- 在后一种情况下，特殊数据类型应加上后缀 `ProgressInfo`。  
+ <span data-ttu-id="dec79-182">在后一种情况下，特殊数据类型应加上后缀 `ProgressInfo`。</span><span class="sxs-lookup"><span data-stu-id="dec79-182">In the latter case, the special data type is usually suffixed with `ProgressInfo`.</span></span>  
   
- 如果 TAP 实现提供接受 `progress` 参数的重载，则必须允许该参数成为 `null`，在这种情况下，不会报告任何进度。  TAP 实现应该同步将进度报告到 <xref:System.Progress%601> 对象，使异步方法能够快速提供进度，并允许进度的使用者确定处理信息的最佳方式和位置。  例如，进度实例可以选择将回调封送，并引发有关捕获到的同步上下文的事件。  
+ <span data-ttu-id="dec79-183">如果 TAP 实现提供接受 `progress` 参数的重载，则必须允许该参数成为 `null`，在这种情况下，不会报告任何进度。</span><span class="sxs-lookup"><span data-stu-id="dec79-183">If TAP implementations provide overloads that accept a `progress` parameter, they must allow the argument to be `null`, in which case no progress will be reported.</span></span> <span data-ttu-id="dec79-184">TAP 实现应该同步将进度报告到 <xref:System.Progress%601> 对象，使异步方法能够快速提供进度，并允许进度的使用者确定处理信息的最佳方式和位置。</span><span class="sxs-lookup"><span data-stu-id="dec79-184">TAP implementations should report the progress to the <xref:System.Progress%601> object synchronously, which enables the asynchronous method to quickly provide progress, and allow the consumer of the progress to determine how and where best to handle the information.</span></span> <span data-ttu-id="dec79-185">例如，进度实例可以选择将回调封送，并引发有关捕获到的同步上下文的事件。</span><span class="sxs-lookup"><span data-stu-id="dec79-185">For example, the progress instance could choose to marshal callbacks and raise events on a captured synchronization context.</span></span>  
   
-## IProgress\<T\> 实现  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。  <xref:System.Progress%601> 类的声明方式如下：  
+## <a name="iprogresst-implementations"></a><span data-ttu-id="dec79-186">IProgress\<T > 实现</span><span class="sxs-lookup"><span data-stu-id="dec79-186">IProgress\<T> Implementations</span></span>  
+ <span data-ttu-id="dec79-187">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。</span><span class="sxs-lookup"><span data-stu-id="dec79-187">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provides a single <xref:System.IProgress%601> implementation: <xref:System.Progress%601>.</span></span> <span data-ttu-id="dec79-188"><xref:System.Progress%601> 类的声明方式如下：</span><span class="sxs-lookup"><span data-stu-id="dec79-188">The <xref:System.Progress%601> class is declared as follows:</span></span>  
   
 ```csharp  
-  
-public class Progress<T> : IProgress<T>  
+public class Progress<T> : IProgress<T>  
 {  
     public Progress();  
     public Progress(Action<T> handler);  
     protected virtual void OnReport(T value);  
     public event EventHandler<T> ProgressChanged;  
 }  
-  
 ```  
   
 ```vb  
-  
-Public Class Progress(Of T) : Inherits IProgress(Of T)  
+Public Class Progress(Of T) : Inherits IProgress(Of T)  
     Public Sub New()  
     Public Sub New(handler As Action(Of T))  
     Protected Overridable Sub OnReport(value As T)  
     Public Event ProgressChanged As EventHandler(Of T>  
 End Class  
-  
 ```  
   
- <xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。  实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。  如果没有可用的同步上下文，则使用针对线程池的默认上下文。  可以向此事件注册处理程序。  为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。  异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。  另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。  
+ <span data-ttu-id="dec79-189"><xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。</span><span class="sxs-lookup"><span data-stu-id="dec79-189">An instance of <xref:System.Progress%601> exposes a <xref:System.Progress%601.ProgressChanged> event, which is raised every time the asynchronous operation reports a progress update.</span></span> <span data-ttu-id="dec79-190">实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。</span><span class="sxs-lookup"><span data-stu-id="dec79-190">The <xref:System.Progress%601.ProgressChanged> event is raised on the <xref:System.Threading.SynchronizationContext> object that was captured when the <xref:System.Progress%601> instance was instantiated.</span></span> <span data-ttu-id="dec79-191">如果没有可用的同步上下文，则使用针对线程池的默认上下文。</span><span class="sxs-lookup"><span data-stu-id="dec79-191">If no synchronization context was available, a default context that targets the thread pool is used.</span></span> <span data-ttu-id="dec79-192">可以向此事件注册处理程序。</span><span class="sxs-lookup"><span data-stu-id="dec79-192">Handlers may be registered with this event.</span></span> <span data-ttu-id="dec79-193">为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。</span><span class="sxs-lookup"><span data-stu-id="dec79-193">A single handler may also be provided to the <xref:System.Progress%601> constructor for convenience, and behaves just like an event handler for the <xref:System.Progress%601.ProgressChanged> event.</span></span> <span data-ttu-id="dec79-194">异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="dec79-194">Progress updates are raised asynchronously to avoid delaying the asynchronous operation while event handlers are executing.</span></span> <span data-ttu-id="dec79-195">另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。</span><span class="sxs-lookup"><span data-stu-id="dec79-195">Another <xref:System.IProgress%601> implementation could choose to apply different semantics.</span></span>  
   
-## 选择要提供的重载  
- 如果 TAP 实现使用可选的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和可选的 <xref:System.IProgress%601> 参数，则可能需要多达四次的重载：  
+## <a name="choosing-the-overloads-to-provide"></a><span data-ttu-id="dec79-196">选择要提供的重载</span><span class="sxs-lookup"><span data-stu-id="dec79-196">Choosing the Overloads to Provide</span></span>  
+ <span data-ttu-id="dec79-197">如果 TAP 实现使用可选的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和可选的 <xref:System.IProgress%601> 参数，则可能需要多达四次的重载：</span><span class="sxs-lookup"><span data-stu-id="dec79-197">If a TAP implementation uses both the optional <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> and optional <xref:System.IProgress%601> parameters, it could potentially require up to four overloads:</span></span>  
   
 ```csharp  
-  
 public Task MethodNameAsync(…);  
 public Task MethodNameAsync(…, CancellationToken cancellationToken);  
 public Task MethodNameAsync(…, IProgress<T> progress);   
 public Task MethodNameAsync(…,   
     CancellationToken cancellationToken, IProgress<T> progress);  
-  
 ```  
   
 ```vb  
-  
 Public MethodNameAsync(…) As Task  
 Public MethodNameAsync(…, cancellationToken As CancellationToken cancellationToken) As Task  
 Public MethodNameAsync(…, progress As IProgress(Of T)) As Task   
 Public MethodNameAsync(…, cancellationToken As CancellationToken,   
                        progress As IProgress(Of T)) As Task  
-  
 ```  
   
- 但是，许多 TAP 实现没有提供取消或进度功能，因此它们需要一个方法：  
+ <span data-ttu-id="dec79-198">但是，许多 TAP 实现没有提供取消或进度功能，因此它们需要一个方法：</span><span class="sxs-lookup"><span data-stu-id="dec79-198">However, many TAP implementations provide neither cancellation or progress capabilities, so they require a single method:</span></span>  
   
 ```csharp  
 public Task MethodNameAsync(…);  
@@ -143,10 +143,9 @@ public Task MethodNameAsync(…);
 Public MethodNameAsync(…) As Task  
 ```  
   
- 如果 TAP 实现支持取消或进度但不同时支持二者，则 TAP 实现可能提供以下两种重载：  
+ <span data-ttu-id="dec79-199">如果 TAP 实现支持取消或进度但不同时支持二者，则 TAP 实现可能提供以下两种重载：</span><span class="sxs-lookup"><span data-stu-id="dec79-199">If a TAP implementation supports either cancellation or progress but not both, it may provide two overloads:</span></span>  
   
 ```csharp  
-  
 public Task MethodNameAsync(…);  
 public Task MethodNameAsync(…, CancellationToken cancellationToken);  
   
@@ -154,11 +153,9 @@ public Task MethodNameAsync(…, CancellationToken cancellationToken);
   
 public Task MethodNameAsync(…);  
 public Task MethodNameAsync(…, IProgress<T> progress);  
-  
 ```  
   
 ```vb  
-  
 Public MethodNameAsync(…) As Task  
 Public MethodNameAsync(…, cancellationToken As CancellationToken) As Task  
   
@@ -166,38 +163,33 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken) As Task
   
 Public MethodNameAsync(…) As Task  
 Public MethodNameAsync(…, progress As IProgress(Of T)) As Task  
-  
 ```  
   
- 如果 TAP 实现同时支持取消和进度，则会公开所有四个重载。  但是，它只提供以下两个:  
+ <span data-ttu-id="dec79-200">如果 TAP 实现同时支持取消和进度，则会公开所有四个重载。</span><span class="sxs-lookup"><span data-stu-id="dec79-200">If a TAP implementation supports both cancellation and progress, it may expose all four overloads.</span></span> <span data-ttu-id="dec79-201">但是，它只提供以下两个:</span><span class="sxs-lookup"><span data-stu-id="dec79-201">However, it may provide only the following two:</span></span>  
   
 ```csharp  
-  
 public Task MethodNameAsync(…);  
 public Task MethodNameAsync(…,   
     CancellationToken cancellationToken, IProgress<T> progress);  
-  
 ```  
   
 ```vb  
-  
 Public MethodNameAsync(…) As Task  
 Public MethodNameAsync(…, cancellationToken As CancellationToken,   
                        progress As IProgress(Of T)) As Task  
-  
 ```  
   
- 若要弥补缺少的两个中间组合，开发人员可以传递 `cancellationToken` 参数的 <xref:System.Threading.CancellationToken.None%2A> 或默认的 <xref:System.Threading.CancellationToken> 和 `progress` 参数的 `null`。  
+ <span data-ttu-id="dec79-202">若要弥补缺少的两个中间组合，开发人员可以传递 <xref:System.Threading.CancellationToken.None%2A> 参数的 <xref:System.Threading.CancellationToken> 或默认的 `cancellationToken` 和 `null` 参数的 `progress`。</span><span class="sxs-lookup"><span data-stu-id="dec79-202">To compensate for the two missing intermediate combinations, developers may pass <xref:System.Threading.CancellationToken.None%2A> or a default <xref:System.Threading.CancellationToken> for the `cancellationToken` parameter and `null` for the `progress` parameter.</span></span>  
   
- 如果需要 TAP 方法的每种用法支持取消或进度，则可以忽略不接受相关参数的重载。  
+ <span data-ttu-id="dec79-203">如果需要 TAP 方法的每种用法支持取消或进度，则可以忽略不接受相关参数的重载。</span><span class="sxs-lookup"><span data-stu-id="dec79-203">If you expect every usage of the TAP method to support cancellation or progress, you may omit the overloads that don’t accept the relevant parameter.</span></span>  
   
- 如果决定公开多个重载以使取消或进度可选，则不支持取消或进度的重载的行为方式就像其已将取消的 <xref:System.Threading.CancellationToken.None%2A> 或进度的 `null` 传递给确实支持它们的重载。  
+ <span data-ttu-id="dec79-204">如果决定公开多个重载以使取消或进度可选，则不支持取消或进度的重载的行为方式就像其已将取消的 <xref:System.Threading.CancellationToken.None%2A> 或进度的 `null` 传递给确实支持它们的重载。</span><span class="sxs-lookup"><span data-stu-id="dec79-204">If you decide to expose multiple overloads to make cancellation or progress optional, the overloads that don’t support cancellation or progress should behave as if they passed <xref:System.Threading.CancellationToken.None%2A> for cancellation or `null` for progress to the overload that does support these.</span></span>  
   
-## 相关主题  
+## <a name="related-topics"></a><span data-ttu-id="dec79-205">相关主题</span><span class="sxs-lookup"><span data-stu-id="dec79-205">Related Topics</span></span>  
   
-|标题|描述|  
-|--------|--------|  
-|[Asynchronous Programming Patterns](../../../docs/standard/asynchronous-programming-patterns/index.md)|介绍执行异步操作的三种模式：基于任务的异步模式 \(TAP\)、异步编程模型 \(APM\) 和基于事件的异步模式 \(EAP\)。|  
-|[Implementing the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|描述如何使用以下三种方式实现基于任务的异步模式 \(TAP\)：手动使用 Visual Studio 中的 C\# 和 Visual Basic 编译器，或通过编译器和手动方法的组合。|  
-|[Consuming the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|描述你可以如何使用任务和回调实现等待，而无需阻止。|  
-|[Interop with Other Asynchronous Patterns and Types](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|描述如何使用基于任务的异步模式 \(TAP\) 实现异步编程模型 \(APM\) 和基于事件的异步模式 \(EAP\)。|
+|<span data-ttu-id="dec79-206">标题</span><span class="sxs-lookup"><span data-stu-id="dec79-206">Title</span></span>|<span data-ttu-id="dec79-207">描述</span><span class="sxs-lookup"><span data-stu-id="dec79-207">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="dec79-208">异步编程模式</span><span class="sxs-lookup"><span data-stu-id="dec79-208">Asynchronous Programming Patterns</span></span>](../../../docs/standard/asynchronous-programming-patterns/index.md)|<span data-ttu-id="dec79-209">介绍执行异步操作的三种模式：基于任务的异步模式 (TAP)、异步编程模型 (APM) 和基于事件的异步模式 (EAP)。</span><span class="sxs-lookup"><span data-stu-id="dec79-209">Introduces the three patterns for performing asynchronous operations: the Task-based Asynchronous Pattern (TAP), the Asynchronous Programming Model (APM), and the Event-based Asynchronous Pattern (EAP).</span></span>|  
+|[<span data-ttu-id="dec79-210">实现基于任务的异步模式</span><span class="sxs-lookup"><span data-stu-id="dec79-210">Implementing the Task-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|<span data-ttu-id="dec79-211">描述如何使用以下三种方式实现基于任务的异步模式 (TAP)：手动使用 Visual Studio 中的 C# 和 Visual Basic 编译器，或通过编译器和手动方法的组合。</span><span class="sxs-lookup"><span data-stu-id="dec79-211">Describes how to implement the Task-based Asynchronous Pattern (TAP) in three ways: by using the C# and Visual Basic compilers in Visual Studio, manually, or through a combination of the compiler and manual methods.</span></span>|  
+|[<span data-ttu-id="dec79-212">使用基于任务的异步模式</span><span class="sxs-lookup"><span data-stu-id="dec79-212">Consuming the Task-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|<span data-ttu-id="dec79-213">描述你可以如何使用任务和回调实现等待，而无需阻止。</span><span class="sxs-lookup"><span data-stu-id="dec79-213">Describes how you can use tasks and callbacks to achieve waiting without blocking.</span></span>|  
+|[<span data-ttu-id="dec79-214">与其他异步模式和类型互操作</span><span class="sxs-lookup"><span data-stu-id="dec79-214">Interop with Other Asynchronous Patterns and Types</span></span>](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|<span data-ttu-id="dec79-215">描述如何使用基于任务的异步模式 (TAP) 实现异步编程模型 (APM) 和基于事件的异步模式 (EAP)。</span><span class="sxs-lookup"><span data-stu-id="dec79-215">Describes how to use the Task-based Asynchronous Pattern (TAP) to implement the Asynchronous Programming Model (APM) and Event-based Asynchronous Pattern (EAP).</span></span>|

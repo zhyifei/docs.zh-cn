@@ -1,32 +1,34 @@
 ---
-title: "Using TPL with Other Asynchronous Patterns | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasks and APM"
+title: "将 TPL 用于其他异步模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: tasks and APM
 ms.assetid: 7add905b-ff60-4353-af79-5089038d9a08
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 05883a89511574c43bf27d9781e862f7f52a6471
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Using TPL with Other Asynchronous Patterns
-可采用多种方式将任务并行库用于传统的 .NET Framework异步编程模式。  
+# <a name="using-tpl-with-other-asynchronous-patterns"></a><span data-ttu-id="ffabb-102">将 TPL 用于其他异步模式</span><span class="sxs-lookup"><span data-stu-id="ffabb-102">Using TPL with Other Asynchronous Patterns</span></span>
+<span data-ttu-id="ffabb-103">可采用多种方式将任务并行库用于传统的 .NET Framework 异步编程模式。</span><span class="sxs-lookup"><span data-stu-id="ffabb-103">The Task Parallel Library can be used with traditional .NET Framework asynchronous programming patterns in various ways.</span></span>  
   
-## 本节内容  
- [TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
- 描述如何能够将 <xref:System.Threading.Tasks.Task> 对象与异步编程模型 \(APM\) 和基于事件的异步模式 \(EAP\)结合使用。  
+## <a name="in-this-section"></a><span data-ttu-id="ffabb-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="ffabb-104">In This Section</span></span>  
+ [<span data-ttu-id="ffabb-105">TPL 和传统 .NET Framework 异步编程</span><span class="sxs-lookup"><span data-stu-id="ffabb-105">TPL and Traditional .NET Framework Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
+ <span data-ttu-id="ffabb-106">描述如何能够将 <xref:System.Threading.Tasks.Task> 对象与异步编程模型 (APM) 和基于事件的异步模式 (EAP) 结合使用。</span><span class="sxs-lookup"><span data-stu-id="ffabb-106">Describes how <xref:System.Threading.Tasks.Task> objects may be used in conjunction with the Asynchronous Programming Model (APM) and the Event-based Asynchronous Pattern (EAP).</span></span>  
   
- [How to: Wrap EAP Patterns in a Task](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
- 演示如何使用 <xref:System.Threading.Tasks.Task> 对象来封装 EAP 模式。  
+ [<span data-ttu-id="ffabb-107">如何：在任务中包装 EAP 模式</span><span class="sxs-lookup"><span data-stu-id="ffabb-107">How to: Wrap EAP Patterns in a Task</span></span>](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
+ <span data-ttu-id="ffabb-108">演示如何使用<xref:System.Threading.Tasks.Task>来包装 EAP 模式的对象。</span><span class="sxs-lookup"><span data-stu-id="ffabb-108">Shows how to use <xref:System.Threading.Tasks.Task> objects to encapsulate EAP patterns.</span></span>  
   
-## 请参阅  
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a><span data-ttu-id="ffabb-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffabb-109">See Also</span></span>  
+ [<span data-ttu-id="ffabb-110">任务并行库 (TPL)</span><span class="sxs-lookup"><span data-stu-id="ffabb-110">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

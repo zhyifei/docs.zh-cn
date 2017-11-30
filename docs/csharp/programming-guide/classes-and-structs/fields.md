@@ -1,79 +1,59 @@
 ---
 title: "字段（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="fields-c-programming-guide"></a>字段（C# 编程指南）
-字段是在[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)中直接声明的任意类型的变量。 字段是其包含类型的成员。  
+# <a name="fields-c-programming-guide"></a><span data-ttu-id="14c78-102">字段（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="14c78-102">Fields (C# Programming Guide)</span></span>
+<span data-ttu-id="14c78-103">字段是在[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)中直接声明的任意类型的变量。</span><span class="sxs-lookup"><span data-stu-id="14c78-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="14c78-104">字段是其包含类型的成员。</span><span class="sxs-lookup"><span data-stu-id="14c78-104">Fields are *members* of their containing type.</span></span>  
   
- 类或结构可能具有实例字段和/或静态字段。 实例字段特定于类型的实例。 如果你有包含实例字段 F 的类 T，则可以创建两个类型为 T 的对象并修改每个对象中 F 的值，而不会影响另一个对象中的值。 与此相比，静态字段属于类本身，并在该类的所有实例之间共享。 从实例 A 进行的更改将立刻呈现给实例 B 和 C（如果它们访问该字段）。  
+ <span data-ttu-id="14c78-105">类或结构可能具有实例字段和/或静态字段。</span><span class="sxs-lookup"><span data-stu-id="14c78-105">A class or struct may have instance fields or static fields or both.</span></span> <span data-ttu-id="14c78-106">实例字段特定于类型的实例。</span><span class="sxs-lookup"><span data-stu-id="14c78-106">Instance fields are specific to an instance of a type.</span></span> <span data-ttu-id="14c78-107">如果你有包含实例字段 F 的类 T，则可以创建两个类型为 T 的对象并修改每个对象中 F 的值，而不会影响另一个对象中的值。</span><span class="sxs-lookup"><span data-stu-id="14c78-107">If you have a class T, with an instance field F, you can create two objects of type T, and modify the value of F in each object without affecting the value in the other object.</span></span> <span data-ttu-id="14c78-108">与此相比，静态字段属于类本身，并在该类的所有实例之间共享。</span><span class="sxs-lookup"><span data-stu-id="14c78-108">By contrast, a static field belongs to the class itself, and is shared among all instances of that class.</span></span> <span data-ttu-id="14c78-109">从实例 A 进行的更改将立刻呈现给实例 B 和 C（如果它们访问该字段）。</span><span class="sxs-lookup"><span data-stu-id="14c78-109">Changes made from instance A will be visibly immediately to instances B and C if they access the field.</span></span>  
   
- 通常情况下，应仅对具有 private 或 protected 可访问性的变量使用字段。 类向客户端代码公开的数据应通过[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)提供。 通过使用这些构造间接访问内部字段，可以防止出现无效的输入值。 存储由公共属性公开的数据的私有字段称为后备存储或支持字段。  
+ <span data-ttu-id="14c78-110">通常情况下，应仅对具有 private 或 protected 可访问性的变量使用字段。</span><span class="sxs-lookup"><span data-stu-id="14c78-110">Generally, you should use fields only for variables that have private or protected accessibility.</span></span> <span data-ttu-id="14c78-111">类向客户端代码公开的数据应通过[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[属性](../../../csharp/programming-guide/classes-and-structs/properties.md)和[索引器](../../../csharp/programming-guide/indexers/index.md)提供。</span><span class="sxs-lookup"><span data-stu-id="14c78-111">Data that your class exposes to client code should be provided through [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) and [indexers](../../../csharp/programming-guide/indexers/index.md).</span></span> <span data-ttu-id="14c78-112">通过使用这些构造间接访问内部字段，可以防止出现无效的输入值。</span><span class="sxs-lookup"><span data-stu-id="14c78-112">By using these constructs for indirect access to internal fields, you can guard against invalid input values.</span></span> <span data-ttu-id="14c78-113">存储由公共属性公开的数据的私有字段称为后备存储或支持字段。</span><span class="sxs-lookup"><span data-stu-id="14c78-113">A private field that stores the data exposed by a public property is called a *backing store* or *backing field*.</span></span>  
   
- 字段通常存储必须对多个类方法可访问且存储时间必须长于任何单个方法的生存期的数据。 例如，表示日历日期的类可能具有三个整数字段：一个用于月、一个用于日、一个用于年。 不在单个方法作用域外使用的变量应声明为方法主体本身中的局部变量。  
+ <span data-ttu-id="14c78-114">字段通常存储必须对多个类方法可访问且存储时间必须长于任何单个方法的生存期的数据。</span><span class="sxs-lookup"><span data-stu-id="14c78-114">Fields typically store the data that must be accessible to more than one class method and must be stored for longer than the lifetime of any single method.</span></span> <span data-ttu-id="14c78-115">例如，表示日历日期的类可能具有三个整数字段：一个用于月、一个用于日、一个用于年。</span><span class="sxs-lookup"><span data-stu-id="14c78-115">For example, a class that represents a calendar date might have three integer fields: one for the month, one for the day, and one for the year.</span></span> <span data-ttu-id="14c78-116">不在单个方法作用域外使用的变量应声明为方法主体本身中的局部变量。</span><span class="sxs-lookup"><span data-stu-id="14c78-116">Variables that are not used outside the scope of a single method should be declared as *local variables* within the method body itself.</span></span>  
   
- 字段是通过指定该字段的访问级别在类块中声明的，其后跟字段的类型，再跟字段的名称。 例如:   
+ <span data-ttu-id="14c78-117">字段是通过指定该字段的访问级别在类块中声明的，其后跟字段的类型，再跟字段的名称。</span><span class="sxs-lookup"><span data-stu-id="14c78-117">Fields are declared in the class block by specifying the access level of the field, followed by the type of the field, followed by the name of the field.</span></span> <span data-ttu-id="14c78-118">例如: </span><span class="sxs-lookup"><span data-stu-id="14c78-118">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- 若要访问对象中的字段，请在对象名称后添加一个句点，后跟字段的名称，如 `objectname.fieldname` 中所示。 例如：  
+ <span data-ttu-id="14c78-119">若要访问对象中的字段，请在对象名称后添加一个句点，后跟字段的名称，如 `objectname.fieldname` 中所示。</span><span class="sxs-lookup"><span data-stu-id="14c78-119">To access a field in an object, add a period after the object name, followed by the name of the field, as in `objectname.fieldname`.</span></span> <span data-ttu-id="14c78-120">例如: </span><span class="sxs-lookup"><span data-stu-id="14c78-120">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
- 声明字段时，可以使用赋值运算符为字段指定一个初始值。 例如，若要为 `day` 字段自动赋值 `"Monday"`，则需要声明 `day`，如以下示例所示：  
+ <span data-ttu-id="14c78-121">声明字段时，可以使用赋值运算符为字段指定一个初始值。</span><span class="sxs-lookup"><span data-stu-id="14c78-121">A field can be given an initial value by using the assignment operator when the field is declared.</span></span> <span data-ttu-id="14c78-122">例如，若要为 `day` 字段自动赋值 `"Monday"`，则需要声明 `day`，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="14c78-122">To automatically assign the `day` field to `"Monday"`, for example, you would declare `day` as in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
- 字段会在对象实例的构造函数被调用之前即刻初始化。 如果构造函数分配了字段的值，则它将覆盖在字段声明期间给定的任何值。 有关详细信息，请参阅[使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)。  
+ <span data-ttu-id="14c78-123">字段会在对象实例的构造函数被调用之前即刻初始化。</span><span class="sxs-lookup"><span data-stu-id="14c78-123">Fields are initialized immediately before the constructor for the object instance is called.</span></span> <span data-ttu-id="14c78-124">如果构造函数分配了字段的值，则它将覆盖在字段声明期间给定的任何值。</span><span class="sxs-lookup"><span data-stu-id="14c78-124">If the constructor assigns the value of a field, it will overwrite any value given during field declaration.</span></span> <span data-ttu-id="14c78-125">有关详细信息，请参阅[使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-125">For more information, see [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).</span></span>  
   
 > [!NOTE]
->  字段初始化表达式不能引用其他实例字段。  
+>  <span data-ttu-id="14c78-126">字段初始化表达式不能引用其他实例字段。</span><span class="sxs-lookup"><span data-stu-id="14c78-126">A field initializer cannot refer to other instance fields.</span></span>  
   
- 可以将字段标记为 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 这些访问修饰符定义该类的用户访问该字段的方式。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ <span data-ttu-id="14c78-127">可以将字段标记为[公共](../../../csharp/language-reference/keywords/public.md)，[私有](../../../csharp/language-reference/keywords/private.md)，[保护](../../../csharp/language-reference/keywords/protected.md)，[内部](../../../csharp/language-reference/keywords/internal.md)，[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)或[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-127">Fields can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="14c78-128">这些访问修饰符定义该类的用户访问该字段的方式。</span><span class="sxs-lookup"><span data-stu-id="14c78-128">These access modifiers define how users of the class can access the fields.</span></span> <span data-ttu-id="14c78-129">有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-129">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- 可以选择性地将字段声明为[静态](../../../csharp/language-reference/keywords/static.md)。 这可使字段可供调用方在任何时候进行调用，即使不存在任何类的实例。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+ <span data-ttu-id="14c78-130">可以选择性地将字段声明为[静态](../../../csharp/language-reference/keywords/static.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-130">A field can optionally be declared [static](../../../csharp/language-reference/keywords/static.md).</span></span> <span data-ttu-id="14c78-131">这可使字段可供调用方在任何时候进行调用，即使不存在任何类的实例。</span><span class="sxs-lookup"><span data-stu-id="14c78-131">This makes the field available to callers at any time, even if no instance of the class exists.</span></span> <span data-ttu-id="14c78-132">有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-132">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- 可以将字段声明为[只读](../../../csharp/language-reference/keywords/readonly.md)。 只能在初始化期间或在构造函数中为只读字段赋值。 `static``readonly` 字段非常类似于常量，只不过 C# 编译器在编译时不具有对静态只读字段的值的访问权限，而只有在运行时才具有访问权限。 有关详细信息，请参阅[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)。  
+ <span data-ttu-id="14c78-133">可以将字段声明为[只读](../../../csharp/language-reference/keywords/readonly.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-133">A field can be declared [readonly](../../../csharp/language-reference/keywords/readonly.md).</span></span> <span data-ttu-id="14c78-134">只能在初始化期间或在构造函数中为只读字段赋值。</span><span class="sxs-lookup"><span data-stu-id="14c78-134">A read-only field can only be assigned a value during initialization or in a constructor.</span></span> <span data-ttu-id="14c78-135">`static``readonly` 字段非常类似于常量，只不过 C# 编译器在编译时不具有对静态只读字段的值的访问权限，而只有在运行时才具有访问权限。</span><span class="sxs-lookup"><span data-stu-id="14c78-135">A `static``readonly` field is very similar to a constant, except that the C# compiler does not have access to the value of a static read-only field at compile time, only at run time.</span></span> <span data-ttu-id="14c78-136">有关详细信息，请参阅[常量](../../../csharp/programming-guide/classes-and-structs/constants.md)。</span><span class="sxs-lookup"><span data-stu-id="14c78-136">For more information, see [Constants](../../../csharp/programming-guide/classes-and-structs/constants.md).</span></span>  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a><span data-ttu-id="14c78-137">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="14c78-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="14c78-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="14c78-138">See Also</span></span>  
+ [<span data-ttu-id="14c78-139">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="14c78-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="14c78-140">类和结构</span><span class="sxs-lookup"><span data-stu-id="14c78-140">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="14c78-141">使用构造函数</span><span class="sxs-lookup"><span data-stu-id="14c78-141">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="14c78-142">继承</span><span class="sxs-lookup"><span data-stu-id="14c78-142">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="14c78-143">访问修饰符</span><span class="sxs-lookup"><span data-stu-id="14c78-143">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="14c78-144">抽象类、密封类及类成员</span><span class="sxs-lookup"><span data-stu-id="14c78-144">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

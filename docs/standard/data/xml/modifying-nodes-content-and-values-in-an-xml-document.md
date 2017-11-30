@@ -1,59 +1,57 @@
 ---
-title: "修改 XML 文档中的节点、内容和值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "修改 XML 文档中的节点、内容和值"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 修改 XML 文档中的节点、内容和值
-有多种方法可以修改文档中的节点和内容。  你可以：  
+# <a name="modifying-nodes-content-and-values-in-an-xml-document"></a><span data-ttu-id="6bc3a-102">修改 XML 文档中的节点、内容和值</span><span class="sxs-lookup"><span data-stu-id="6bc3a-102">Modifying Nodes, Content, and Values in an XML Document</span></span>
+<span data-ttu-id="6bc3a-103">有多种方法可以修改文档中的节点和内容。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-103">There are many ways you can modify the nodes and content in a document.</span></span> <span data-ttu-id="6bc3a-104">你可以：</span><span class="sxs-lookup"><span data-stu-id="6bc3a-104">You can:</span></span>  
   
--   使用 <xref:System.Xml.XmlNode.Value%2A> 属性更改节点的值。  
+-   <span data-ttu-id="6bc3a-105">使用 <xref:System.Xml.XmlNode.Value%2A> 属性更改节点的值。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-105">Change the value of nodes using the <xref:System.Xml.XmlNode.Value%2A> property.</span></span>  
   
--   通过用新节点替换节点来修改全部节点集。  此操作使用 <xref:System.Xml.XmlNode.InnerXml%2A> 属性完成。  
+-   <span data-ttu-id="6bc3a-106">通过用新节点替换节点来修改全部节点集。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-106">Modify an entire set of nodes by replacing the nodes with new nodes.</span></span> <span data-ttu-id="6bc3a-107">此操作使用 <xref:System.Xml.XmlNode.InnerXml%2A> 属性完成。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-107">This is done using the <xref:System.Xml.XmlNode.InnerXml%2A> property.</span></span>  
   
--   使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法用新节点替换现有节点。  
+-   <span data-ttu-id="6bc3a-108">使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法用新节点替换现有节点。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-108">Replace existing nodes with new nodes using the <xref:System.Xml.XmlNode.RemoveChild%2A> method.</span></span>  
   
--   使用 <xref:System.Xml.XmlCharacterData.AppendData%2A>、<xref:System.Xml.XmlCharacterData.InsertData%2A> 或 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 方法向从 <xref:System.Xml.XmlCharacterData> 类继承的节点添加附加字符。  
+-   <span data-ttu-id="6bc3a-109">使用 <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A> 或 <xref:System.Xml.XmlCharacterData.InsertData%2A> 方法向从 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 类继承的节点添加附加字符。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-109">Add additional characters to nodes that inherit from the <xref:System.Xml.XmlCharacterData> class using the <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A>, or <xref:System.Xml.XmlCharacterData.ReplaceData%2A> methods.</span></span>  
   
--   通过在从 <xref:System.Xml.XmlCharacterData> 继承的节点类型上使用 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 方法移除某个范围的字符，以修改内容。  
+-   <span data-ttu-id="6bc3a-110">通过在从 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 继承的节点类型上使用 <xref:System.Xml.XmlCharacterData> 方法移除某个范围的字符，以修改内容。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-110">Modify the content by removing a range of characters using the <xref:System.Xml.XmlCharacterData.DeleteData%2A> method on node types that inherit from <xref:System.Xml.XmlCharacterData>.</span></span>  
   
- 更改节点值的一个简单方法是使用 `node.Value = "new value";`。  下表列出了此单个代码行作用于的节点类型，以及对于该节点类型将更改的确切数据。  
+ <span data-ttu-id="6bc3a-111">更改节点值的一个简单方法是使用 `node.Value = "new value";`。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-111">A simple technique for changing the value of a node is to use `node.Value = "new value";`.</span></span> <span data-ttu-id="6bc3a-112">下表列出了此单个代码行作用于的节点类型，以及对于该节点类型将更改的确切数据。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-112">The following table lists the node types that this single line of code works on and exactly what data for that node type is changed.</span></span>  
   
-|节点类型|更改的数据|  
-|----------|-----------|  
-|特性|属性的值。|  
-|CDATASection|CDATA 节的内容。|  
-|注释|注释的内容。|  
-|ProcessingInstruction|内容（不包括目标）。|  
-|Text|文本的内容。|  
-|XmlDeclaration|声明的内容，不包括 `<?xml` 和 `?>` 标记。|  
-|Whitespace|空白的值。  可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。|  
-|SignificantWhitespace|有效空白的值。  可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。|  
+|<span data-ttu-id="6bc3a-113">节点类型</span><span class="sxs-lookup"><span data-stu-id="6bc3a-113">Node type</span></span>|<span data-ttu-id="6bc3a-114">更改的数据</span><span class="sxs-lookup"><span data-stu-id="6bc3a-114">Data changed</span></span>|  
+|---------------|------------------|  
+|<span data-ttu-id="6bc3a-115">特性</span><span class="sxs-lookup"><span data-stu-id="6bc3a-115">Attribute</span></span>|<span data-ttu-id="6bc3a-116">属性的值。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-116">The value of the attribute.</span></span>|  
+|<span data-ttu-id="6bc3a-117">CDATASection</span><span class="sxs-lookup"><span data-stu-id="6bc3a-117">CDATASection</span></span>|<span data-ttu-id="6bc3a-118">CDATA 节的内容。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-118">The content of the CDATASection.</span></span>|  
+|<span data-ttu-id="6bc3a-119">注释</span><span class="sxs-lookup"><span data-stu-id="6bc3a-119">Comment</span></span>|<span data-ttu-id="6bc3a-120">注释的内容。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-120">The content of the comment.</span></span>|  
+|<span data-ttu-id="6bc3a-121">ProcessingInstruction</span><span class="sxs-lookup"><span data-stu-id="6bc3a-121">ProcessingInstruction</span></span>|<span data-ttu-id="6bc3a-122">内容（不包括目标）。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-122">The content, excluding the target.</span></span>|  
+|<span data-ttu-id="6bc3a-123">Text</span><span class="sxs-lookup"><span data-stu-id="6bc3a-123">Text</span></span>|<span data-ttu-id="6bc3a-124">文本的内容。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-124">The content of the text.</span></span>|  
+|<span data-ttu-id="6bc3a-125">XmlDeclaration</span><span class="sxs-lookup"><span data-stu-id="6bc3a-125">XmlDeclaration</span></span>|<span data-ttu-id="6bc3a-126">声明的内容，不包括 `<?xml` 和 `?>` 标记。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-126">The content of the declaration, excluding the `<?xml` and `?>` markup.</span></span>|  
+|<span data-ttu-id="6bc3a-127">Whitespace</span><span class="sxs-lookup"><span data-stu-id="6bc3a-127">Whitespace</span></span>|<span data-ttu-id="6bc3a-128">空白的值。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-128">The value of the white space.</span></span> <span data-ttu-id="6bc3a-129">可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-129">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
+|<span data-ttu-id="6bc3a-130">SignificantWhitespace</span><span class="sxs-lookup"><span data-stu-id="6bc3a-130">SignificantWhitespace</span></span>|<span data-ttu-id="6bc3a-131">有效空白的值。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-131">The value of the significant white space.</span></span> <span data-ttu-id="6bc3a-132">可以将该值设置为四个可识别的 XML 空白字符之一：空格、制表符、CR 或 LF。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-132">You can set the value to be one of the four recognized XML white space characters: space, tab, CR, or LF.</span></span>|  
   
- 该表中未列出的任何节点类型都不是设置了值的有效节点类型。  设置任何其他节点类型的值都将引发 <xref:System.InvalidOperationException>。  
+ <span data-ttu-id="6bc3a-133">该表中未列出的任何节点类型都不是设置了值的有效节点类型。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-133">Any node type not listed in the table is not a valid node type to set a value on.</span></span> <span data-ttu-id="6bc3a-134">设置任何其他节点类型的值都将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-134">Setting a value on any other node type throws an <xref:System.InvalidOperationException>.</span></span>  
   
- <xref:System.Xml.XmlNode.InnerXml%2A> 属性更改当前节点的子节点标记。  设置此属性将用给定字符串的分析内容替换子节点。  分析在当前命名空间上下文中完成。  此外，<xref:System.Xml.XmlNode.InnerXml%2A> 移除多余的命名空间声明。  因此，大量的剪切和粘贴操作并不会使文档的大小因多余的命名空间声明而增加。  有关显示命名空间对 <xref:System.Xml.XmlNode.InnerXml%2A> 操作的影响的代码示例，请参见 <xref:System.Xml.XmlDocument.InnerXml%2A> 属性。  
+ <span data-ttu-id="6bc3a-135"><xref:System.Xml.XmlNode.InnerXml%2A> 属性更改当前节点的子节点标记。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-135">The <xref:System.Xml.XmlNode.InnerXml%2A> property changes the markup of the child nodes for the current node.</span></span> <span data-ttu-id="6bc3a-136">设置此属性将用给定字符串的分析内容替换子节点。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-136">Setting this property replaces the child nodes with the parsed contents of the given string.</span></span> <span data-ttu-id="6bc3a-137">分析在当前命名空间上下文中完成。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-137">The parsing is done in the current namespace context.</span></span> <span data-ttu-id="6bc3a-138">此外，<xref:System.Xml.XmlNode.InnerXml%2A> 移除多余的命名空间声明。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-138">In addition, <xref:System.Xml.XmlNode.InnerXml%2A> removes redundant namespace declarations.</span></span> <span data-ttu-id="6bc3a-139">因此，大量的剪切和粘贴操作并不会使文档的大小因多余的命名空间声明而增加。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-139">As a result, numerous cut and paste operations do not increase the size of your document with redundant namespace declarations.</span></span> <span data-ttu-id="6bc3a-140">有关显示命名空间对 <xref:System.Xml.XmlNode.InnerXml%2A> 操作的影响的代码示例，请参见 <xref:System.Xml.XmlDocument.InnerXml%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-140">For a code example showing the effect of namespaces on the <xref:System.Xml.XmlNode.InnerXml%2A> operation, see the <xref:System.Xml.XmlDocument.InnerXml%2A> property.</span></span>  
   
- 当使用 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 和 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法时，这两个方法返回已替换或移除的节点。  此节点可以重新插入 XML 文档对象模型 \(DOM\) 中的任何其他位置。  <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 方法对插入到文档中的节点执行两个验证检查。  第一个检查确保该节点成为某个节点的子级，这个节点可具有其类型的子节点。  第二个检查确保插入的节点不是它成为其子级的节点的上级。  违犯这两个条件中的任何一个都将引发 <xref:System.InvalidOperationException>。  
+ <span data-ttu-id="6bc3a-141">当使用 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 和 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法时，这两个方法返回已替换或移除的节点。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-141">When using the <xref:System.Xml.XmlCharacterData.ReplaceData%2A> and <xref:System.Xml.XmlNode.RemoveChild%2A> methods, the methods return the replaced or removed node.</span></span> <span data-ttu-id="6bc3a-142">此节点可以重新插入 XML 文档对象模型 (DOM) 中的任何其他位置。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-142">This node can then be reinserted somewhere else in the XML Document Object Model (DOM).</span></span> <span data-ttu-id="6bc3a-143"><xref:System.Xml.XmlCharacterData.ReplaceData%2A> 方法对插入到文档中的节点执行两个验证检查。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-143">The <xref:System.Xml.XmlCharacterData.ReplaceData%2A> method does two validation checks on the node being inserted into the document.</span></span> <span data-ttu-id="6bc3a-144">第一个检查确保该节点成为某个节点的子级，这个节点可具有其类型的子节点。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-144">The first check ensures that the node is becoming a child of a node that can have child nodes of its type.</span></span> <span data-ttu-id="6bc3a-145">第二个检查确保插入的节点不是它成为其子级的节点的上级。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-145">The second check ensures that the node being inserted is not an ancestor of the node it is becoming a child of.</span></span> <span data-ttu-id="6bc3a-146">违犯这两个条件中的任何一个都将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-146">Violating either of these conditions throws an <xref:System.InvalidOperationException>.</span></span>  
   
- 向可编辑的节点中添加或从中移除只读子级是有效的。  然而，试图修改只读节点本身将引发 <xref:System.InvalidOperationException> 异常。  修改 <xref:System.Xml.XmlEntityReference> 节点的子级便属于这种情况。  该子级是只读的，因此无法修改。  任何修改它们的尝试都将引发 <xref:System.InvalidOperationException>。  
+ <span data-ttu-id="6bc3a-147">向可编辑的节点中添加或从中移除只读子级是有效的。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-147">It is valid to add or remove a read-only child from a node that can be edited.</span></span> <span data-ttu-id="6bc3a-148">然而，试图修改只读节点本身将引发 <xref:System.InvalidOperationException> 异常。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-148">However, attempts to modify the read-only node itself throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="6bc3a-149">修改 <xref:System.Xml.XmlEntityReference> 节点的子级便属于这种情况。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-149">An example of this is modifying the children of an <xref:System.Xml.XmlEntityReference> node.</span></span> <span data-ttu-id="6bc3a-150">该子级是只读的，因此无法修改。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-150">The children are read-only and cannot be modified.</span></span> <span data-ttu-id="6bc3a-151">任何修改它们的尝试都将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="6bc3a-151">Any attempt to modify them throws an <xref:System.InvalidOperationException>.</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="6bc3a-152">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6bc3a-152">See Also</span></span>  
+ [<span data-ttu-id="6bc3a-153">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="6bc3a-153">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

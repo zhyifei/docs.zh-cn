@@ -1,64 +1,70 @@
 ---
-title: "Event-based Asynchronous Pattern Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "Asynchronous Pattern"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: "基于事件的异步模式概述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61efa26db0f416c56691399779d15310457ce483
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Event-based Asynchronous Pattern Overview
-那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。  <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。  对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。  对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
+# <a name="event-based-asynchronous-pattern-overview"></a><span data-ttu-id="6a5be-102">基于事件的异步模式概述</span><span class="sxs-lookup"><span data-stu-id="6a5be-102">Event-based Asynchronous Pattern Overview</span></span>
+<span data-ttu-id="6a5be-103">那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。</span><span class="sxs-lookup"><span data-stu-id="6a5be-103">Applications that perform many tasks simultaneously, yet remain responsive to user interaction, often require a design that uses multiple threads.</span></span> <span data-ttu-id="6a5be-104"><xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。</span><span class="sxs-lookup"><span data-stu-id="6a5be-104">The <xref:System.Threading> namespace provides all the tools necessary to create high-performance multithreaded applications, but using these tools effectively requires significant experience with multithreaded software engineering.</span></span> <span data-ttu-id="6a5be-105">对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。</span><span class="sxs-lookup"><span data-stu-id="6a5be-105">For relatively simple multithreaded applications, the <xref:System.ComponentModel.BackgroundWorker> component provides a straightforward solution.</span></span> <span data-ttu-id="6a5be-106">对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。</span><span class="sxs-lookup"><span data-stu-id="6a5be-106">For more sophisticated asynchronous applications, consider implementing a class that adheres to the Event-based Asynchronous Pattern.</span></span>  
   
- 基于事件的异步模式具有多线程应用程序的优点，同时隐藏了多线程设计中固有的许多复杂问题。  使用支持此模式的类，你将能够：  
+ <span data-ttu-id="6a5be-107">基于事件的异步模式具有多线程应用程序的优点，同时隐藏了多线程设计中固有的许多复杂问题。</span><span class="sxs-lookup"><span data-stu-id="6a5be-107">The Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span> <span data-ttu-id="6a5be-108">使用支持此模式的类，你将能够：</span><span class="sxs-lookup"><span data-stu-id="6a5be-108">Using a class that supports this pattern can allow you to:</span></span>  
   
--   “在后台”执行耗时任务（例如下载和数据库操作），但不会中断你的应用程序。  
+-   <span data-ttu-id="6a5be-109">“在后台”执行耗时任务（例如下载和数据库操作），但不会中断你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6a5be-109">Perform time-consuming tasks, such as downloads and database operations, "in the background," without interrupting your application.</span></span>  
   
--   同时执行多个操作，每个操作完成时都会接到通知。  
+-   <span data-ttu-id="6a5be-110">同时执行多个操作，每个操作完成时都会接到通知。</span><span class="sxs-lookup"><span data-stu-id="6a5be-110">Execute multiple operations simultaneously, receiving notifications when each completes.</span></span>  
   
--   等待资源变得可用，但不会停止（“挂起”）你的应用程序。  
+-   <span data-ttu-id="6a5be-111">等待资源变得可用，但不会停止（“挂起”）你的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6a5be-111">Wait for resources to become available without stopping ("hanging") your application.</span></span>  
   
--   使用熟悉的事件和委托模型与挂起的异步操作通信。  有关使用事件处理程序和委托的更多信息，请参见[事件](../../../docs/standard/events/index.md)。  
+-   <span data-ttu-id="6a5be-112">使用熟悉的事件和委托模型与挂起的异步操作通信。</span><span class="sxs-lookup"><span data-stu-id="6a5be-112">Communicate with pending asynchronous operations using the familiar events-and-delegates model.</span></span> <span data-ttu-id="6a5be-113">有关使用事件处理程序和委托的详细信息，请参阅[事件](../../../docs/standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6a5be-113">For more information on using event handlers and delegates, see [Events](../../../docs/standard/events/index.md).</span></span>  
   
- 支持基于事件的异步模式的类将具有一个或多个命名为 *MethodName*`Async` 的方法。  这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。  该类可能还具有一个 *MethodName*`Completed` 事件并且它可能具有一个 *MethodName*`AsyncCancel`（或只是 `CancelAsync`）方法。  
+ <span data-ttu-id="6a5be-114">支持基于事件的异步模式的类将具有名为的一个或多个方法*MethodName*`Async`。</span><span class="sxs-lookup"><span data-stu-id="6a5be-114">A class that supports the Event-based Asynchronous Pattern will have one or more methods named *MethodName*`Async`.</span></span> <span data-ttu-id="6a5be-115">这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。</span><span class="sxs-lookup"><span data-stu-id="6a5be-115">These methods may mirror synchronous versions, which perform the same operation on the current thread.</span></span> <span data-ttu-id="6a5be-116">该类还可能有*MethodName* `Completed`事件并且它可能具有*MethodName* `AsyncCancel` (或只需`CancelAsync`) 方法。</span><span class="sxs-lookup"><span data-stu-id="6a5be-116">The class may also have a *MethodName*`Completed` event and it may have a *MethodName*`AsyncCancel` (or simply `CancelAsync`) method.</span></span>  
   
- <xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。  你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止（“挂起”），直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。  
+ <span data-ttu-id="6a5be-117"><xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。</span><span class="sxs-lookup"><span data-stu-id="6a5be-117"><xref:System.Windows.Forms.PictureBox> is a typical component that supports the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="6a5be-118">你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止（“挂起”），直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。</span><span class="sxs-lookup"><span data-stu-id="6a5be-118">You can download an image synchronously by calling its <xref:System.Windows.Forms.PictureBox.Load%2A> method, but if the image is large, or if the network connection is slow, your application will stop ("hang") until the download operation is completed and the call to <xref:System.Windows.Forms.PictureBox.Load%2A> returns.</span></span>  
   
- 如果你想要应用程序在加载图像时保持运行，你可以调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法，处理 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件，这与你处理任何其他事件一样。  调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法时，你的应用程序将继续运行，而下载操作将在另一个线程上（“在后台”）继续。  图像加载操作完成时，将调用你的事件处理程序，并且你的事件处理程序可以检查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 参数以确定该下载是否已成功完成。  
+ <span data-ttu-id="6a5be-119">如果你想要应用程序在加载图像时保持运行，你可以调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法，处理 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件，这与你处理任何其他事件一样。</span><span class="sxs-lookup"><span data-stu-id="6a5be-119">If you want your application to keep running while the image is loading, you can call the <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> method and handle the <xref:System.Windows.Forms.PictureBox.LoadCompleted> event, just as you would handle any other event.</span></span> <span data-ttu-id="6a5be-120">调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法时，你的应用程序将继续运行，而下载操作将在另一个线程上（“在后台”）继续。</span><span class="sxs-lookup"><span data-stu-id="6a5be-120">When you call the <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> method, your application will continue to run while the download proceeds on a separate thread ("in the background").</span></span> <span data-ttu-id="6a5be-121">图像加载操作完成时，将调用你的事件处理程序，并且你的事件处理程序可以检查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 参数以确定该下载是否已成功完成。</span><span class="sxs-lookup"><span data-stu-id="6a5be-121">Your event handler will be called when the image-loading operation is complete, and your event handler can examine the <xref:System.ComponentModel.AsyncCompletedEventArgs> parameter to determine if the download completed successfully.</span></span>  
   
- 基于事件的异步模式要求异步操作可以取消，并且 <xref:System.Windows.Forms.PictureBox> 控件使用其 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支持此要求。  调用 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 会提交一个停止挂起的下载的请求，任务取消时会引发 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
+ <span data-ttu-id="6a5be-122">基于事件的异步模式要求异步操作可以取消，并且 <xref:System.Windows.Forms.PictureBox> 控件使用其 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支持此要求。</span><span class="sxs-lookup"><span data-stu-id="6a5be-122">The Event-based Asynchronous Pattern requires that an asynchronous operation can be canceled, and the <xref:System.Windows.Forms.PictureBox> control supports this requirement with its <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> method.</span></span> <span data-ttu-id="6a5be-123">调用 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 会提交一个停止挂起的下载的请求，任务取消时会引发 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。</span><span class="sxs-lookup"><span data-stu-id="6a5be-123">Calling <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> submits a request to stop the pending download, and when the task is canceled, the <xref:System.Windows.Forms.PictureBox.LoadCompleted> event is raised.</span></span>  
   
 > [!CAUTION]
->  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。  这称为*争用条件*，是多线程编程中常见的一个问题。  有关多线程编程中的问题的更多信息，请参见[Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+>  <span data-ttu-id="6a5be-124">下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。</span><span class="sxs-lookup"><span data-stu-id="6a5be-124">It is possible that the download will finish just as the <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> request is made, so <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> may not reflect the request to cancel.</span></span> <span data-ttu-id="6a5be-125">这称为*争用条件*，是多线程编程中常见的问题。</span><span class="sxs-lookup"><span data-stu-id="6a5be-125">This is called a *race condition* and is a common issue in multithreaded programming.</span></span> <span data-ttu-id="6a5be-126">有关多线程编程中的问题的详细信息，请参阅[托管线程处理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。</span><span class="sxs-lookup"><span data-stu-id="6a5be-126">For more information on issues in multithreaded programming, see [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md).</span></span>  
   
-## 基于事件的异步模式的特征  
- 基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。  最简单的类可能具有一个 *MethodName*`Async` 方法以及一个对应的 *MethodName*`Completed` 事件。  更复杂的类可能具有多个 *MethodName*`Async` 方法（每个方法对应一个 *MethodName*`Completed` 事件），以及这些方法的同步版本。  这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  
+## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a><span data-ttu-id="6a5be-127">基于事件的异步模式的特征</span><span class="sxs-lookup"><span data-stu-id="6a5be-127">Characteristics of the Event-based Asynchronous Pattern</span></span>  
+ <span data-ttu-id="6a5be-128">基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。</span><span class="sxs-lookup"><span data-stu-id="6a5be-128">The Event-based Asynchronous Pattern may take several forms, depending on the complexity of the operations supported by a particular class.</span></span> <span data-ttu-id="6a5be-129">最简单的类可能具有一个*MethodName* `Async`方法和相应*MethodName* `Completed`事件。</span><span class="sxs-lookup"><span data-stu-id="6a5be-129">The simplest classes may have a single *MethodName*`Async` method and a corresponding *MethodName*`Completed` event.</span></span> <span data-ttu-id="6a5be-130">更复杂的类可能具有多个*MethodName* `Async`方法，与相应的每个方法*MethodName* `Completed`事件，以及这些方法的同步版本。</span><span class="sxs-lookup"><span data-stu-id="6a5be-130">More complex classes may have several *MethodName*`Async` methods, each with a corresponding *MethodName*`Completed` event, as well as synchronous versions of these methods.</span></span> <span data-ttu-id="6a5be-131">这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。</span><span class="sxs-lookup"><span data-stu-id="6a5be-131">Classes can optionally support cancellation, progress reporting, and incremental results for each asynchronous method.</span></span>  
   
- 异步方法可能还支持多个挂起的调用（多个并发调用），允许你的代码在此方法完成其他挂起的操作之前调用此方法任意多次。  若要正确处理此种情况，需要让你的应用程序能够跟踪各个操作的完成。  
+ <span data-ttu-id="6a5be-132">异步方法可能还支持多个挂起的调用（多个并发调用），允许你的代码在此方法完成其他挂起的操作之前调用此方法任意多次。</span><span class="sxs-lookup"><span data-stu-id="6a5be-132">An asynchronous method may also support multiple pending calls (multiple concurrent invocations), allowing your code to call it any number of times before it completes other pending operations.</span></span> <span data-ttu-id="6a5be-133">若要正确处理此种情况，需要让你的应用程序能够跟踪各个操作的完成。</span><span class="sxs-lookup"><span data-stu-id="6a5be-133">Correctly handling this situation may require your application to track the completion of each operation.</span></span>  
   
-### 基于事件的异步模式示例  
- <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件表示基于事件的异步模式的简单实现。  <xref:System.Net.WebClient> 和 <xref:System.ComponentModel.BackgroundWorker> 组件表示基于事件的异步模式的更复杂实现。  
+### <a name="examples-of-the-event-based-asynchronous-pattern"></a><span data-ttu-id="6a5be-134">基于事件的异步模式示例</span><span class="sxs-lookup"><span data-stu-id="6a5be-134">Examples of the Event-based Asynchronous Pattern</span></span>  
+ <span data-ttu-id="6a5be-135"><xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件表示基于事件的异步模式的简单实现。</span><span class="sxs-lookup"><span data-stu-id="6a5be-135">The <xref:System.Media.SoundPlayer> and <xref:System.Windows.Forms.PictureBox> components represent simple implementations of the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="6a5be-136"><xref:System.Net.WebClient> 和 <xref:System.ComponentModel.BackgroundWorker> 组件表示基于事件的异步模式的更复杂实现。</span><span class="sxs-lookup"><span data-stu-id="6a5be-136">The <xref:System.Net.WebClient> and <xref:System.ComponentModel.BackgroundWorker> components represent more complex implementations of the Event-based Asynchronous Pattern.</span></span>  
   
- 下面是一个符合此模式的类声明示例：  
+ <span data-ttu-id="6a5be-137">下面是一个符合此模式的类声明示例：</span><span class="sxs-lookup"><span data-stu-id="6a5be-137">Below is an example class declaration that conforms to the pattern:</span></span>  
   
 ```vb  
 Public Class AsyncExample  
@@ -107,40 +113,40 @@ public class AsyncExample
 }  
 ```  
   
- 这里虚构的 `AsyncExample` 类有两个方法，都支持同步和异步调用。  同步重载的行为类似于方法调用，它们对调用线程执行操作；如果操作很耗时，则调用的返回可能会有明显的延迟。  异步重载将在另一个线程上启动操作，然后立即返回，允许在调用线程继续执行的同时让操作“在后台”执行。  
+ <span data-ttu-id="6a5be-138">这里虚构的 `AsyncExample` 类有两个方法，都支持同步和异步调用。</span><span class="sxs-lookup"><span data-stu-id="6a5be-138">The fictitious `AsyncExample` class has two methods, both of which support synchronous and asynchronous invocations.</span></span> <span data-ttu-id="6a5be-139">同步重载的行为类似于方法调用，它们对调用线程执行操作；如果操作很耗时，则调用的返回可能会有明显的延迟。</span><span class="sxs-lookup"><span data-stu-id="6a5be-139">The synchronous overloads behave like any method call and execute the operation on the calling thread; if the operation is time-consuming, there may be a noticeable delay before the call returns.</span></span> <span data-ttu-id="6a5be-140">异步重载将在另一个线程上启动操作，然后立即返回，允许在调用线程继续执行的同时让操作“在后台”执行。</span><span class="sxs-lookup"><span data-stu-id="6a5be-140">The asynchronous overloads will start the operation on another thread and then return immediately, allowing the calling thread to continue while the operation executes "in the background."</span></span>  
   
-### 异步方法重载  
- 异步操作可以有两个重载：单调用和多调用。  你可以通过方法签名来区分这两种形式：多调用形式有一个额外的参数，即 `userState`。  使用这种形式，你的代码可以多次调用 `Method1Async(string param, object userState)`，而不必等待任何挂起的异步操作的完成。  另一方面，如果你尝试在前一个调用尚未完成时调用 `Method1Async(string param)`，该方法将引发 <xref:System.InvalidOperationException>。  
+### <a name="asynchronous-method-overloads"></a><span data-ttu-id="6a5be-141">异步方法重载</span><span class="sxs-lookup"><span data-stu-id="6a5be-141">Asynchronous Method Overloads</span></span>  
+ <span data-ttu-id="6a5be-142">异步操作可以有两个重载：单调用和多调用。</span><span class="sxs-lookup"><span data-stu-id="6a5be-142">There are potentially two overloads for the asynchronous operations: single-invocation and multiple-invocation.</span></span> <span data-ttu-id="6a5be-143">你可以通过方法签名来区分这两种形式：多调用形式有一个额外的参数，即 `userState`。</span><span class="sxs-lookup"><span data-stu-id="6a5be-143">You can distinguish these two forms by their method signatures: the multiple-invocation form has an extra parameter called `userState`.</span></span> <span data-ttu-id="6a5be-144">使用这种形式，你的代码可以多次调用 `Method1Async(string param, object userState)`，而不必等待任何挂起的异步操作的完成。</span><span class="sxs-lookup"><span data-stu-id="6a5be-144">This form makes it possible for your code to call `Method1Async(string param, object userState)` multiple times without waiting for any pending asynchronous operations to finish.</span></span> <span data-ttu-id="6a5be-145">另一方面，如果你尝试在前一个调用尚未完成时调用 `Method1Async(string param)`，该方法将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="6a5be-145">If, on the other hand, you try to call `Method1Async(string param)` before a previous invocation has completed, the method raises an <xref:System.InvalidOperationException>.</span></span>  
   
- 多调用重载的 `userState` 参数可帮助你区分各个异步操作。  你应分别为各个  `Method1Async(string param, object userState)` 调用提供一个唯一值（例如 GUID 或哈希代码）；这样，当各个操作完成时，你的事件处理程序便可以确定哪个操作的实例引发了完成事件。  
+ <span data-ttu-id="6a5be-146">多调用重载的 `userState` 参数可帮助你区分各个异步操作。</span><span class="sxs-lookup"><span data-stu-id="6a5be-146">The `userState` parameter for the multiple-invocation overloads allows you to distinguish among asynchronous operations.</span></span> <span data-ttu-id="6a5be-147">每次调用提供一个唯一的值 （例如，GUID 或哈希代码） `Method1Async(string param, object userState)`，，当各个操作完成时，事件处理程序可以确定哪些操作的实例引发了完成事件。</span><span class="sxs-lookup"><span data-stu-id="6a5be-147">You provide a unique value (for example, a GUID or hash code) for each call to `Method1Async(string param, object userState)`, and when each operation is completed, your event handler can determine which instance of the operation raised the completion event.</span></span>  
   
-### 跟踪挂起的操作  
- 如果你使用多调用重载，你的代码将需要跟踪挂起任务的 `userState` 对象（任务 ID）。  对于每个  `Method1Async(string param, object userState)` 调用，你通常应生成一个新的、唯一的 `userState` 对象并将此对象添加到集合中。  当对应于此 `userState` 对象的任务引发完成事件时，你的完成方法实现将检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=fullName> 并将此对象从集合中删除。  在以这种方式使用时，`userState` 参数充当任务 ID 的角色。  
+### <a name="tracking-pending-operations"></a><span data-ttu-id="6a5be-148">跟踪挂起的操作</span><span class="sxs-lookup"><span data-stu-id="6a5be-148">Tracking Pending Operations</span></span>  
+ <span data-ttu-id="6a5be-149">如果你使用多调用重载，你的代码将需要跟踪挂起任务的 `userState` 对象（任务 ID）。</span><span class="sxs-lookup"><span data-stu-id="6a5be-149">If you use the multiple-invocation overloads, your code will need to keep track of the `userState` objects (task IDs) for pending tasks.</span></span> <span data-ttu-id="6a5be-150">每次调用`Method1Async(string param, object userState)`，你通常将生成一个新的、 唯一`userState`对象并将其添加到集合。</span><span class="sxs-lookup"><span data-stu-id="6a5be-150">For each call to `Method1Async(string param, object userState)`, you will typically generate a new, unique `userState` object and add it to a collection.</span></span> <span data-ttu-id="6a5be-151">当对应于此 `userState` 对象的任务引发完成事件时，你的完成方法实现将检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> 并将此对象从集合中删除。</span><span class="sxs-lookup"><span data-stu-id="6a5be-151">When the task corresponding to this `userState` object raises the completion event, your completion method implementation will examine <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> and remove it from your collection.</span></span> <span data-ttu-id="6a5be-152">在以这种方式使用时，`userState` 参数充当任务 ID 的角色。</span><span class="sxs-lookup"><span data-stu-id="6a5be-152">Used this way, the `userState` parameter takes the role of a task ID.</span></span>  
   
 > [!NOTE]
->  在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。  如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。  
+>  <span data-ttu-id="6a5be-153">在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。</span><span class="sxs-lookup"><span data-stu-id="6a5be-153">You must be careful to provide a unique value for `userState` in your calls to multiple-invocation overloads.</span></span> <span data-ttu-id="6a5be-154">如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="6a5be-154">Non-unique task IDs will cause the asynchronous class throw an <xref:System.ArgumentException>.</span></span>  
   
-### 取消挂起的操作  
- 我们必须能够在异步操作完成之前随时取消它们，这一点很重要。  实现基于事件的异步模式的类将具有一个 `CancelAsync` 方法（如果只有一个异步方法）或者一个 *MethodName*`AsyncCancel` 方法（如果有多个异步方法）。  
+### <a name="canceling-pending-operations"></a><span data-ttu-id="6a5be-155">取消挂起的操作</span><span class="sxs-lookup"><span data-stu-id="6a5be-155">Canceling Pending Operations</span></span>  
+ <span data-ttu-id="6a5be-156">我们必须能够在异步操作完成之前随时取消它们，这一点很重要。</span><span class="sxs-lookup"><span data-stu-id="6a5be-156">It is important to be able to cancel asynchronous operations at any time before their completion.</span></span> <span data-ttu-id="6a5be-157">实现基于事件的异步模式的类将具有`CancelAsync`方法 （如果只有一个异步方法） 或*MethodName* `AsyncCancel`方法 （如果有多个异步方法）。</span><span class="sxs-lookup"><span data-stu-id="6a5be-157">Classes that implement the Event-based Asynchronous Pattern will have a `CancelAsync` method (if there is only one asynchronous method) or a *MethodName*`AsyncCancel` method (if there are multiple asynchronous methods).</span></span>  
   
- 允许多个调用采用 `userState` 参数的方法，此类方法可用于跟踪每个任务的生存期。  `CancelAsync` 采用 `userState` 参数，该参数可用于取消特定挂起任务。  
+ <span data-ttu-id="6a5be-158">允许多个调用采用 `userState` 参数的方法，此类方法可用于跟踪每个任务的生存期。</span><span class="sxs-lookup"><span data-stu-id="6a5be-158">Methods that allow multiple invocations take a `userState` parameter, which can be used to track the lifetime of each task.</span></span> <span data-ttu-id="6a5be-159">`CancelAsync` 采用 `userState` 参数，该参数可用于取消特定挂起任务。</span><span class="sxs-lookup"><span data-stu-id="6a5be-159">`CancelAsync` takes a `userState` parameter, which allows you to cancel particular pending tasks.</span></span>  
   
- 一次只支持一个挂起操作的方法（如 `Method1Async(string param)`）是不可取消的。  
+ <span data-ttu-id="6a5be-160">一次只支持一个挂起操作的方法（如 `Method1Async(string param)`）是不可取消的。</span><span class="sxs-lookup"><span data-stu-id="6a5be-160">Methods that support only a single pending operation at a time, like `Method1Async(string param)`, are not cancelable.</span></span>  
   
-### 接收进度更新和增量结果  
- 符合基于事件的异步模式的类可以为跟踪进度和增量结果提供事件。  此事件通常命名为 `ProgressChanged` 或 *MethodName*`ProgressChanged`，它对应的事件处理程序会带有一个 <xref:System.ComponentModel.ProgressChangedEventArgs> 参数。  
+### <a name="receiving-progress-updates-and-incremental-results"></a><span data-ttu-id="6a5be-161">接收进度更新和增量结果</span><span class="sxs-lookup"><span data-stu-id="6a5be-161">Receiving Progress Updates and Incremental Results</span></span>  
+ <span data-ttu-id="6a5be-162">符合基于事件的异步模式的类可以为跟踪进度和增量结果提供事件。</span><span class="sxs-lookup"><span data-stu-id="6a5be-162">A class that adheres to the Event-based Asynchronous Pattern may optionally provide an event for tracking progress and incremental results.</span></span> <span data-ttu-id="6a5be-163">这将通常被命名为`ProgressChanged`或*MethodName*`ProgressChanged`，且其相应的事件处理程序将会<xref:System.ComponentModel.ProgressChangedEventArgs>参数。</span><span class="sxs-lookup"><span data-stu-id="6a5be-163">This will typically be named `ProgressChanged` or *MethodName*`ProgressChanged`, and its corresponding event handler will take a <xref:System.ComponentModel.ProgressChangedEventArgs> parameter.</span></span>  
   
- `ProgressChanged` 事件的事件处理程序可以检查 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=fullName> 属性来确定异步任务完成的百分比。  此属性的范围是 0 到 100，可用来更新 <xref:System.Windows.Forms.ProgressBar> 的 <xref:System.Windows.Forms.ProgressBar.Value%2A> 属性。  如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=fullName> 属性来分辨出哪个操作在报告进度。  
+ <span data-ttu-id="6a5be-164">事件处理程序`ProgressChanged`事件可以检查<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType>属性来确定在完成一个异步任务的百分比。</span><span class="sxs-lookup"><span data-stu-id="6a5be-164">The event handler for the `ProgressChanged` event can examine the <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> property to determine what percentage of an asynchronous task has been completed.</span></span> <span data-ttu-id="6a5be-165">此属性的范围是 0 到 100，可用来更新 <xref:System.Windows.Forms.ProgressBar.Value%2A> 的 <xref:System.Windows.Forms.ProgressBar> 属性。</span><span class="sxs-lookup"><span data-stu-id="6a5be-165">This property will range from 0 to 100, and it can be used to update the <xref:System.Windows.Forms.ProgressBar.Value%2A> property of a <xref:System.Windows.Forms.ProgressBar>.</span></span> <span data-ttu-id="6a5be-166">如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> 属性来分辨出哪个操作在报告进度。</span><span class="sxs-lookup"><span data-stu-id="6a5be-166">If multiple asynchronous operations are pending, you can use the <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> property to distinguish which operation is reporting progress.</span></span>  
   
- 一些类可能会在异步操作继续时报告增量结果。  这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。  你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。  如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。  
+ <span data-ttu-id="6a5be-167">一些类可能会在异步操作继续时报告增量结果。</span><span class="sxs-lookup"><span data-stu-id="6a5be-167">Some classes may report incremental results as asynchronous operations proceed.</span></span> <span data-ttu-id="6a5be-168">这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。</span><span class="sxs-lookup"><span data-stu-id="6a5be-168">These results will be stored in a class that derives from <xref:System.ComponentModel.ProgressChangedEventArgs> and they will appear as properties in the derived class.</span></span> <span data-ttu-id="6a5be-169">你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。</span><span class="sxs-lookup"><span data-stu-id="6a5be-169">You can access these results in the event handler for the `ProgressChanged` event, just as you would access the <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> property.</span></span> <span data-ttu-id="6a5be-170">如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。</span><span class="sxs-lookup"><span data-stu-id="6a5be-170">If multiple asynchronous operations are pending, you can use the <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> property to distinguish which operation is reporting incremental results.</span></span>  
   
-## 请参阅  
- <xref:System.ComponentModel.ProgressChangedEventArgs>   
- <xref:System.ComponentModel.BackgroundWorker>   
- <xref:System.ComponentModel.AsyncCompletedEventArgs>   
- [How to: Use Components That Support the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)   
- [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [如何：实现使用后台操作的窗体](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)   
- [Deciding When to Implement the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="6a5be-171">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6a5be-171">See Also</span></span>  
+ <xref:System.ComponentModel.ProgressChangedEventArgs>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ <xref:System.ComponentModel.AsyncCompletedEventArgs>  
+ [<span data-ttu-id="6a5be-172">如何：使用支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="6a5be-172">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="6a5be-173">如何：在后台运行操作</span><span class="sxs-lookup"><span data-stu-id="6a5be-173">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="6a5be-174">如何：实现使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="6a5be-174">How to: Implement a Form That Uses a Background Operation</span></span>](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [<span data-ttu-id="6a5be-175">使用基于事件的异步模式进行多线程编程</span><span class="sxs-lookup"><span data-stu-id="6a5be-175">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="6a5be-176">实现基于事件的异步模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="6a5be-176">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="6a5be-177">确定何时实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="6a5be-177">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

@@ -1,230 +1,232 @@
 ---
-title: "正则表达式语言 - 快速参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.RegularExpressionBuilder"
-helpviewer_keywords: 
-  - ".NET Framework 正则表达式, 语言元素"
-  - "速查表"
-  - "分析带有正则表达式的文本, 语言元素"
-  - "正则表达式的模式匹配, 语言元素"
-  - "正则表达式速查表"
-  - "正则表达式 [.NET Framework]"
-  - "正则表达式, 语言元素"
-  - "用正则表达式搜索, 语言元素"
+title: "正则表达式语言 - 快速参考"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VS.RegularExpressionBuilder
+helpviewer_keywords:
+- regex cheat sheet
+- parsing text with regular expressions, language elements
+- searching with regular expressions, language elements
+- pattern-matching with regular expressions, language elements
+- regular expressions, language elements
+- regular expressions [.NET Framework]
+- cheat sheet
+- .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 56
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 56
+caps.latest.revision: "56"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 正则表达式语言 - 快速参考
-<a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简单介绍，请参阅 [.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
+# <a name="regular-expression-language---quick-reference"></a><span data-ttu-id="e5174-102">正则表达式语言 - 快速参考</span><span class="sxs-lookup"><span data-stu-id="e5174-102">Regular Expression Language - Quick Reference</span></span>
+<span data-ttu-id="e5174-103"><a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。</span><span class="sxs-lookup"><span data-stu-id="e5174-103"><a name="top"></a> A regular expression is a pattern that the regular expression engine attempts to match in input text.</span></span> <span data-ttu-id="e5174-104">模式由一个或多个字符文本、运算符或构造组成。</span><span class="sxs-lookup"><span data-stu-id="e5174-104">A pattern consists of one or more character literals, operators, or constructs.</span></span>  <span data-ttu-id="e5174-105">有关简要介绍，请参阅[.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-105">For a brief introduction, see [.NET Regular Expressions](../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
- 此快速参考中的每一节都列出了可用于定义正则表达式的字符、运算符和构造的一种特定类别：  
+ <span data-ttu-id="e5174-106">此快速参考中的每一节都列出了可用于定义正则表达式的字符、运算符和构造的一种特定类别：</span><span class="sxs-lookup"><span data-stu-id="e5174-106">Each section in this quick reference lists a particular category of characters, operators, and constructs that you can use to define regular expressions:</span></span>  
   
- [字符转义](#character_escapes)  
- [字符类](#character_classes)  
- [定位点](#atomic_zerowidth_assertions)  
- [分组构造](#grouping_constructs)  
- [数量词](#quantifiers)  
- [反向引用构造](#backreference_constructs)  
- [替换构造](#alternation_constructs)  
- [替代](#substitutions)  
- [正则表达式选项](#options)  
- [其他构造](#miscellaneous_constructs)  
+ [<span data-ttu-id="e5174-107">字符转义</span><span class="sxs-lookup"><span data-stu-id="e5174-107">Character escapes</span></span>](#character_escapes)  
+ [<span data-ttu-id="e5174-108">字符类</span><span class="sxs-lookup"><span data-stu-id="e5174-108">Character classes</span></span>](#character_classes)  
+ [<span data-ttu-id="e5174-109">定位点</span><span class="sxs-lookup"><span data-stu-id="e5174-109">Anchors</span></span>](#atomic_zerowidth_assertions)  
+ [<span data-ttu-id="e5174-110">分组构造</span><span class="sxs-lookup"><span data-stu-id="e5174-110">Grouping constructs</span></span>](#grouping_constructs)  
+ [<span data-ttu-id="e5174-111">限定符</span><span class="sxs-lookup"><span data-stu-id="e5174-111">Quantifiers</span></span>](#quantifiers)  
+ [<span data-ttu-id="e5174-112">反向引用构造</span><span class="sxs-lookup"><span data-stu-id="e5174-112">Backreference constructs</span></span>](#backreference_constructs)  
+ [<span data-ttu-id="e5174-113">替换构造</span><span class="sxs-lookup"><span data-stu-id="e5174-113">Alternation constructs</span></span>](#alternation_constructs)  
+ [<span data-ttu-id="e5174-114">替代</span><span class="sxs-lookup"><span data-stu-id="e5174-114">Substitutions</span></span>](#substitutions)  
+ [<span data-ttu-id="e5174-115">正则表达式选项</span><span class="sxs-lookup"><span data-stu-id="e5174-115">Regular expression options</span></span>](#options)  
+ [<span data-ttu-id="e5174-116">其他构造</span><span class="sxs-lookup"><span data-stu-id="e5174-116">Miscellaneous constructs</span></span>](#miscellaneous_constructs)  
   
- 我们还提供此信息的两种格式，你可以下载和打印，以便参考：  
+ <span data-ttu-id="e5174-117">我们还提供此信息的两种格式，你可以下载和打印，以便参考：</span><span class="sxs-lookup"><span data-stu-id="e5174-117">We’ve also provided this information in two formats that you can download and print for easy reference:</span></span>  
   
- [以 Word \(.docx\) 格式下载](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
-[以 PDF \(.pdf\) 格式下载](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [<span data-ttu-id="e5174-118">以 Word (.docx) 格式下载</span><span class="sxs-lookup"><span data-stu-id="e5174-118">Download in Word (.docx) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="e5174-119">以 PDF (.pdf) 格式下载</span><span class="sxs-lookup"><span data-stu-id="e5174-119">Download in PDF (.pdf) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
-## 字符转义  
- 正则表达式中的反斜杠字符 \(\\\) 指示其后跟的字符是特殊字符（如下表所示），或应按原义解释该字符。 有关详细信息，请参阅[字符转义](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。  
+## <a name="character-escapes"></a><span data-ttu-id="e5174-120">字符转义</span><span class="sxs-lookup"><span data-stu-id="e5174-120">Character Escapes</span></span>  
+ <span data-ttu-id="e5174-121">正则表达式中的反斜杠字符 (\\) 指示其后跟的字符是特殊字符（如下表所示），或应按原义解释该字符。</span><span class="sxs-lookup"><span data-stu-id="e5174-121">The backslash character (\\) in a regular expression indicates that the character that follows it either is a special character (as shown in the following table), or should be interpreted literally.</span></span> <span data-ttu-id="e5174-122">有关详细信息，请参阅[字符转义](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-122">For more information, see [Character Escapes](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).</span></span>  
   
-|转义字符|描述|模式|匹配|  
-|----------|--------|--------|--------|  
-|`\a`|与报警 \(bell\) 符 \\u0007 匹配。|`\a`|“Error\!”\+“\\u0007”中的 “\\u0007”|  
-|`\b`|在字符类中，与退格键 \\u0008 匹配。|`[\b]{3,}`|“\\b\\b\\b\\b”中的“\\b\\b\\b\\b”|  
-|`\t`|与制表符 \\u0009 匹配。|`(\w+)\t`|“item1\\titem2\\t”中的“item1\\t”和“item2\\t”|  
-|`\r`|与回车符 \\u000D 匹配。 （`\r` 与换行符 `\n` 不是等效的。）|`\r\n(\w+)`|“\\r\\nThese are\\ntwo lines.”中的“\\r\\nThese”|  
-|`\v`|与垂直制表符 \\u000B 匹配。|`[\v]{2,}`|“\\v\\v\\v”中的“\\v\\v\\v”|  
-|`\f`|与换页符 \\u000C 匹配。|`[\f]{2,}`|“\\f\\f\\f”中的“\\f\\f\\f”|  
-|`\n`|与换行符 \\u000A 匹配。|`\r\n(\w+)`|“\\r\\nThese are\\ntwo lines.”中的“\\r\\nThese”|  
-|`\e`|与转义符 \\u001B 匹配。|`\e`|“\\x001B”中的“\\x001B”|  
-|`\` *nnn*|使用八进制表示形式指定字符（*nnn* 由二位或三位数字组成）。|`\w\040\w`|“a bc d”中的<br /><br /> “a b”和“c d”|  
-|`\x` *nn*|使用十六进制表示形式指定字符（*nn* 恰好由两位数字组成）。|`\w\x20\w`|“a bc d”中的<br /><br /> “a b”和“c d”|  
-|`\c` *X*<br /><br /> `\c` *x*|匹配 *X* 或 *x* 指定的 ASCII 控件字符，其中 *X* 或 *x* 是控件字符的字母。|`\cC`|“\\x0003”中的“\\x0003”\(Ctrl\-C\)|  
-|`\u` *nnnn*|使用十六进制表示形式匹配 Unicode 字符（由 *nnnn* 正确表示的四位数）。|`\w\u0020\w`|“a bc d”中的<br /><br /> “a b”和“c d”|  
-|`\`|在后面带有不识别为本主题的此表和其他表中的转义符的字符时，与该字符匹配。 例如，`\*` 与 `\x2A` 相同，而 `\.` 与 `\x2E` 相同。 这允许正则表达式引擎区分语言元素（如 \* 或 ?） 和字符文本（用 `\*` 或 `\?` 表示）。|`\d+[\+-x\*]\d+`|“\(2\+2\) \* 3\*9”中的“2\+2”和“3\*9”|  
+|<span data-ttu-id="e5174-123">转义字符</span><span class="sxs-lookup"><span data-stu-id="e5174-123">Escaped character</span></span>|<span data-ttu-id="e5174-124">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-124">Description</span></span>|<span data-ttu-id="e5174-125">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-125">Pattern</span></span>|<span data-ttu-id="e5174-126">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-126">Matches</span></span>|  
+|-----------------------|-----------------|-------------|-------------|  
+|`\a`|<span data-ttu-id="e5174-127">与报警 (bell) 符 \u0007 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-127">Matches a bell character, \u0007.</span></span>|`\a`|<span data-ttu-id="e5174-128">“Error!”+“\u0007”中的</span><span class="sxs-lookup"><span data-stu-id="e5174-128">"\u0007" in "Error!"</span></span> <span data-ttu-id="e5174-129">“\u0007”</span><span class="sxs-lookup"><span data-stu-id="e5174-129">+ '\u0007'</span></span>|  
+|`\b`|<span data-ttu-id="e5174-130">在字符类中，与退格键 \u0008 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-130">In a character class, matches a backspace, \u0008.</span></span>|`[\b]{3,}`|<span data-ttu-id="e5174-131">“\b\b\b\b”中的“\b\b\b\b”</span><span class="sxs-lookup"><span data-stu-id="e5174-131">"\b\b\b\b" in "\b\b\b\b"</span></span>|  
+|`\t`|<span data-ttu-id="e5174-132">与制表符 \u0009 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-132">Matches a tab, \u0009.</span></span>|`(\w+)\t`|<span data-ttu-id="e5174-133">“item1\titem2\t”中的“item1\t”和“item2\t”</span><span class="sxs-lookup"><span data-stu-id="e5174-133">"item1\t", "item2\t" in "item1\titem2\t"</span></span>|  
+|`\r`|<span data-ttu-id="e5174-134">与回车符 \u000D 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-134">Matches a carriage return, \u000D.</span></span> <span data-ttu-id="e5174-135">（`\r` 与换行符 `\n`不是等效的。）</span><span class="sxs-lookup"><span data-stu-id="e5174-135">(`\r` is not equivalent to the newline character, `\n`.)</span></span>|`\r\n(\w+)`|<span data-ttu-id="e5174-136">“\r\nThese are\ntwo lines.”中的“\r\nThese”</span><span class="sxs-lookup"><span data-stu-id="e5174-136">"\r\nThese" in "\r\nThese are\ntwo lines."</span></span>|  
+|`\v`|<span data-ttu-id="e5174-137">与垂直制表符 \u000B 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-137">Matches a vertical tab, \u000B.</span></span>|`[\v]{2,}`|<span data-ttu-id="e5174-138">“\v\v\v”中的“\v\v\v”</span><span class="sxs-lookup"><span data-stu-id="e5174-138">"\v\v\v" in "\v\v\v"</span></span>|  
+|`\f`|<span data-ttu-id="e5174-139">与换页符 \u000C 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-139">Matches a form feed, \u000C.</span></span>|`[\f]{2,}`|<span data-ttu-id="e5174-140">“\f\f\f”中的“\f\f\f”</span><span class="sxs-lookup"><span data-stu-id="e5174-140">"\f\f\f" in "\f\f\f"</span></span>|  
+|`\n`|<span data-ttu-id="e5174-141">与换行符 \u000A 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-141">Matches a new line, \u000A.</span></span>|`\r\n(\w+)`|<span data-ttu-id="e5174-142">“\r\nThese are\ntwo lines.”中的“\r\nThese”</span><span class="sxs-lookup"><span data-stu-id="e5174-142">"\r\nThese" in "\r\nThese are\ntwo lines."</span></span>|  
+|`\e`|<span data-ttu-id="e5174-143">与转义符 \u001B 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-143">Matches an escape, \u001B.</span></span>|`\e`|<span data-ttu-id="e5174-144">“\x001B”中的“\x001B”</span><span class="sxs-lookup"><span data-stu-id="e5174-144">"\x001B" in "\x001B"</span></span>|  
+|<span data-ttu-id="e5174-145">`\` *nnn*</span><span class="sxs-lookup"><span data-stu-id="e5174-145">`\` *nnn*</span></span>|<span data-ttu-id="e5174-146">使用八进制表示形式指定字符（*nnn* 由二位或三位数字组成）。</span><span class="sxs-lookup"><span data-stu-id="e5174-146">Uses octal representation to specify a character (*nnn* consists of two or three digits).</span></span>|`\w\040\w`|<span data-ttu-id="e5174-147">“a bc d”中的</span><span class="sxs-lookup"><span data-stu-id="e5174-147">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="e5174-148">“a b”和“c d”</span><span class="sxs-lookup"><span data-stu-id="e5174-148">"a bc d"</span></span>|  
+|<span data-ttu-id="e5174-149">`\x` *nn*</span><span class="sxs-lookup"><span data-stu-id="e5174-149">`\x` *nn*</span></span>|<span data-ttu-id="e5174-150">使用十六进制表示形式指定字符（*nn* 恰好由两位数字组成）。</span><span class="sxs-lookup"><span data-stu-id="e5174-150">Uses hexadecimal representation to specify a character (*nn* consists of exactly two digits).</span></span>|`\w\x20\w`|<span data-ttu-id="e5174-151">“a bc d”中的</span><span class="sxs-lookup"><span data-stu-id="e5174-151">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="e5174-152">“a b”和“c d”</span><span class="sxs-lookup"><span data-stu-id="e5174-152">"a bc d"</span></span>|  
+|<span data-ttu-id="e5174-153">`\c` *X*</span><span class="sxs-lookup"><span data-stu-id="e5174-153">`\c` *X*</span></span><br /><br /> <span data-ttu-id="e5174-154">`\c` *x*</span><span class="sxs-lookup"><span data-stu-id="e5174-154">`\c` *x*</span></span>|<span data-ttu-id="e5174-155">匹配 *X* 或 *x*指定的 ASCII 控件字符，其中 *X* 或 *x* 是控件字符的字母。</span><span class="sxs-lookup"><span data-stu-id="e5174-155">Matches the ASCII control character that is specified by *X* or *x*, where *X* or *x* is the letter of the control character.</span></span>|`\cC`|<span data-ttu-id="e5174-156">“\x0003”中的“\x0003”(Ctrl-C)</span><span class="sxs-lookup"><span data-stu-id="e5174-156">"\x0003" in "\x0003" (Ctrl-C)</span></span>|  
+|<span data-ttu-id="e5174-157">`\u` *nnnn*</span><span class="sxs-lookup"><span data-stu-id="e5174-157">`\u` *nnnn*</span></span>|<span data-ttu-id="e5174-158">使用十六进制表示形式匹配 Unicode 字符（由 *nnnn*正确表示的四位数）。</span><span class="sxs-lookup"><span data-stu-id="e5174-158">Matches a Unicode character by using hexadecimal representation (exactly four digits, as represented by *nnnn*).</span></span>|`\w\u0020\w`|<span data-ttu-id="e5174-159">“a bc d”中的</span><span class="sxs-lookup"><span data-stu-id="e5174-159">"a b", "c d" in</span></span><br /><br /> <span data-ttu-id="e5174-160">“a b”和“c d”</span><span class="sxs-lookup"><span data-stu-id="e5174-160">"a bc d"</span></span>|  
+|`\`|<span data-ttu-id="e5174-161">在后面带有不识别为本主题的此表和其他表中的转义符的字符时，与该字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-161">When followed by a character that is not recognized as an escaped character in this and other tables in this topic, matches that character.</span></span> <span data-ttu-id="e5174-162">例如， `\*` 与 `\x2A`相同，而 `\.` 与 `\x2E`相同。</span><span class="sxs-lookup"><span data-stu-id="e5174-162">For example, `\*` is the same as `\x2A`, and `\.` is the same as `\x2E`.</span></span> <span data-ttu-id="e5174-163">这允许正则表达式引擎区分语言元素 (如\*或？) 和字符文本 (由表示`\*`或`\?`)。</span><span class="sxs-lookup"><span data-stu-id="e5174-163">This allows the regular expression engine to disambiguate language elements (such as \* or ?) and character literals (represented by `\*` or `\?`).</span></span>|`\d+[\+-x\*]\d+`|<span data-ttu-id="e5174-164">"2 + 2"和"3\*9" 中"(2+2) \* 3\*9"</span><span class="sxs-lookup"><span data-stu-id="e5174-164">"2+2" and "3\*9" in "(2+2) \* 3\*9"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-165">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-165">Back to top</span></span>](#top)  
   
 <a name="character_classes"></a>   
-## 字符类  
- 字符类与一组字符中的任何一个字符匹配。 字符类包括下表中列出的语言元素。 有关更多信息，请参见[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
+## <a name="character-classes"></a><span data-ttu-id="e5174-166">字符类</span><span class="sxs-lookup"><span data-stu-id="e5174-166">Character Classes</span></span>  
+ <span data-ttu-id="e5174-167">字符类与一组字符中的任何一个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-167">A character class matches any one of a set of characters.</span></span> <span data-ttu-id="e5174-168">字符类包括下表中列出的语言元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-168">Character classes include the language elements listed in the following table.</span></span> <span data-ttu-id="e5174-169">有关更多信息，请参见 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-169">For more information, see [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span>  
   
-|字符类|描述|模式|匹配|  
-|---------|--------|--------|--------|  
-|`[` *character\_group* `]`|匹配 *character\_group* 中的任何单个字符。 默认情况下，匹配区分大小写。|`[ae]`|“gray”中的“a”<br /><br /> “lane”中的“a”和“e”|  
-|`[^` *character\_group* `]`|求反：与不在 *character\_group* 中的任何单个字符匹配。 默认情况下，*character\_group* 中的字符区分大小写。|`[^aei]`|“reign”中的“r”、“g”和“n”|  
-|`[` *第一个* `-` *last* `]`|字符范围：与从*第一个*到*最后一个*的范围中的任何单个字符匹配。|`[A-Z]`|“AB123”中的“A”和“B”|  
-|`.`|通配符：与除 \\n 之外的任何单个字符匹配。<br /><br /> 若要匹配文本句点字符（. 或 `\u002E`），你必须在该字符前面加上转义符 \(`\.`\)。|`a.e`|“nave”中的“ave”<br /><br /> “water”中的“ate”|  
-|`\p{` *name* `}`|与 *name* 指定的 Unicode 通用类别或命名块中的任何单个字符匹配。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|“City Lights”中的“C”和“L”<br /><br /> “ДЖem”中的“Д”和“Ж”|  
-|`\P{` *name* `}`|与不在 *name* 指定的 Unicode 通用类别或命名块中的任何单个字符匹配。|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|“City”中的“i”、“t”和“y”<br /><br /> “ДЖem”中的“e”和“m”|  
-|`\w`|与任何单词字符匹配。|`\w`|“ID A1.3”中的“I”、“D”、“A”、“1”和“3”|  
-|`\W`|与任何非单词字符匹配。|`\W`|“ID A1.3”中的“ ”、“.”|  
-|`\s`|与任何空白字符匹配。|`\w\s`|“ID A1.3”中的“D”|  
-|`\S`|与任何非空白字符匹配。|`\s\S`|" \_" in "int \_\_ctr"|  
-|`\d`|与任何十进制数字匹配。|`\d`|“4 \= IV”中的“4”|  
-|`\D`|匹配不是十进制数的任意字符。|`\D`|“4 \= IV”中的“ ”、“\=”、“ ”、“I”和“V”|  
+|<span data-ttu-id="e5174-170">字符类</span><span class="sxs-lookup"><span data-stu-id="e5174-170">Character class</span></span>|<span data-ttu-id="e5174-171">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-171">Description</span></span>|<span data-ttu-id="e5174-172">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-172">Pattern</span></span>|<span data-ttu-id="e5174-173">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-173">Matches</span></span>|  
+|---------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="e5174-174">`[` *character_group* `]`</span><span class="sxs-lookup"><span data-stu-id="e5174-174">`[` *character_group* `]`</span></span>|<span data-ttu-id="e5174-175">匹配 *character_group*中的任何单个字符。</span><span class="sxs-lookup"><span data-stu-id="e5174-175">Matches any single character in *character_group*.</span></span> <span data-ttu-id="e5174-176">默认情况下，匹配区分大小写。</span><span class="sxs-lookup"><span data-stu-id="e5174-176">By default, the match is case-sensitive.</span></span>|`[ae]`|<span data-ttu-id="e5174-177">“gray”中的“a”</span><span class="sxs-lookup"><span data-stu-id="e5174-177">"a" in "gray"</span></span><br /><br /> <span data-ttu-id="e5174-178">“lane”中的“a”和“e”</span><span class="sxs-lookup"><span data-stu-id="e5174-178">"a", "e" in "lane"</span></span>|  
+|<span data-ttu-id="e5174-179">`[^` *character_group* `]`</span><span class="sxs-lookup"><span data-stu-id="e5174-179">`[^` *character_group* `]`</span></span>|<span data-ttu-id="e5174-180">求反：与不在 *character_group*中的任何单个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-180">Negation: Matches any single character that is not in *character_group*.</span></span> <span data-ttu-id="e5174-181">默认情况下， *character_group* 中的字符区分大小写。</span><span class="sxs-lookup"><span data-stu-id="e5174-181">By default, characters in *character_group* are case-sensitive.</span></span>|`[^aei]`|<span data-ttu-id="e5174-182">“reign”中的“r”、“g”和“n”</span><span class="sxs-lookup"><span data-stu-id="e5174-182">"r", "g", "n" in "reign"</span></span>|  
+|<span data-ttu-id="e5174-183">`[` *第一个* `-` *last* `]`</span><span class="sxs-lookup"><span data-stu-id="e5174-183">`[` *first* `-` *last* `]`</span></span>|<span data-ttu-id="e5174-184">字符范围：与从 *第一个* 到 *最后一个*的范围中的任何单个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-184">Character range: Matches any single character in the range from *first* to *last*.</span></span>|`[A-Z]`|<span data-ttu-id="e5174-185">“AB123”中的“A”和“B”</span><span class="sxs-lookup"><span data-stu-id="e5174-185">"A", "B" in "AB123"</span></span>|  
+|`.`|<span data-ttu-id="e5174-186">通配符：与除 \n 之外的任何单个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-186">Wildcard: Matches any single character except \n.</span></span><br /><br /> <span data-ttu-id="e5174-187">若要匹配文本句点字符（.</span><span class="sxs-lookup"><span data-stu-id="e5174-187">To match a literal period character (.</span></span> <span data-ttu-id="e5174-188">或 `\u002E`），你必须在该字符前面加上转义符 (`\.`)。</span><span class="sxs-lookup"><span data-stu-id="e5174-188">or `\u002E`), you must precede it with the escape character (`\.`).</span></span>|`a.e`|<span data-ttu-id="e5174-189">“nave”中的“ave”</span><span class="sxs-lookup"><span data-stu-id="e5174-189">"ave" in "nave"</span></span><br /><br /> <span data-ttu-id="e5174-190">“water”中的“ate”</span><span class="sxs-lookup"><span data-stu-id="e5174-190">"ate" in "water"</span></span>|  
+|<span data-ttu-id="e5174-191">`\p{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="e5174-191">`\p{` *name* `}`</span></span>|<span data-ttu-id="e5174-192">与 *name*指定的 Unicode 通用类别或命名块中的任何单个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-192">Matches any single character in the Unicode general category or named block specified by *name*.</span></span>|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|<span data-ttu-id="e5174-193">“City Lights”中的“C”和“L”</span><span class="sxs-lookup"><span data-stu-id="e5174-193">"C", "L" in "City Lights"</span></span><br /><br /> <span data-ttu-id="e5174-194">“ДЖem”中的“Д”和“Ж”</span><span class="sxs-lookup"><span data-stu-id="e5174-194">"Д", "Ж" in "ДЖem"</span></span>|  
+|<span data-ttu-id="e5174-195">`\P{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="e5174-195">`\P{` *name* `}`</span></span>|<span data-ttu-id="e5174-196">与不在 *name*指定的 Unicode 通用类别或命名块中的任何单个字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-196">Matches any single character that is not in the Unicode general category or named block specified by *name*.</span></span>|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|<span data-ttu-id="e5174-197">“City”中的“i”、“t”和“y”</span><span class="sxs-lookup"><span data-stu-id="e5174-197">"i", "t", "y" in "City"</span></span><br /><br /> <span data-ttu-id="e5174-198">“ДЖem”中的“e”和“m”</span><span class="sxs-lookup"><span data-stu-id="e5174-198">"e", "m" in "ДЖem"</span></span>|  
+|`\w`|<span data-ttu-id="e5174-199">与任何单词字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-199">Matches any word character.</span></span>|`\w`|<span data-ttu-id="e5174-200">“ID A1.3”中的“I”、“D”、“A”、“1”和“3”</span><span class="sxs-lookup"><span data-stu-id="e5174-200">"I", "D", "A", "1", "3" in "ID A1.3"</span></span>|  
+|`\W`|<span data-ttu-id="e5174-201">与任何非单词字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-201">Matches any non-word character.</span></span>|`\W`|<span data-ttu-id="e5174-202">“ID A1.3”中的“ ”、“.”</span><span class="sxs-lookup"><span data-stu-id="e5174-202">" ", "." in "ID A1.3"</span></span>|  
+|`\s`|<span data-ttu-id="e5174-203">与任何空白字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-203">Matches any white-space character.</span></span>|`\w\s`|<span data-ttu-id="e5174-204">“ID A1.3”中的“D”</span><span class="sxs-lookup"><span data-stu-id="e5174-204">"D " in "ID A1.3"</span></span>|  
+|`\S`|<span data-ttu-id="e5174-205">与任何非空白字符匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-205">Matches any non-white-space character.</span></span>|`\s\S`|<span data-ttu-id="e5174-206">" _" in "int \__ctr"</span><span class="sxs-lookup"><span data-stu-id="e5174-206">" _" in "int \__ctr"</span></span>|  
+|`\d`|<span data-ttu-id="e5174-207">与任何十进制数字匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-207">Matches any decimal digit.</span></span>|`\d`|<span data-ttu-id="e5174-208">“4 = IV”中的“4”</span><span class="sxs-lookup"><span data-stu-id="e5174-208">"4" in "4 = IV"</span></span>|  
+|`\D`|<span data-ttu-id="e5174-209">匹配不是十进制数的任意字符。</span><span class="sxs-lookup"><span data-stu-id="e5174-209">Matches any character other than a decimal digit.</span></span>|`\D`|<span data-ttu-id="e5174-210">“4 = IV”中的“ ”、“=”、“ ”、“I”和“V”</span><span class="sxs-lookup"><span data-stu-id="e5174-210">" ", "=", " ", "I", "V" in "4 = IV"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-211">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-211">Back to top</span></span>](#top)  
   
 <a name="atomic_zerowidth_assertions"></a>   
-## 定位点  
- 定位点或原子零宽度断言会使匹配成功或失败，具体取决于字符串中的当前位置，但它们不会使引擎在字符串中前进或使用字符。 下表中列出的元字符是定位点。 有关更多信息，请参见[定位点](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。  
+## <a name="anchors"></a><span data-ttu-id="e5174-212">定位点</span><span class="sxs-lookup"><span data-stu-id="e5174-212">Anchors</span></span>  
+ <span data-ttu-id="e5174-213">定位点或原子零宽度断言会使匹配成功或失败，具体取决于字符串中的当前位置，但它们不会使引擎在字符串中前进或使用字符。</span><span class="sxs-lookup"><span data-stu-id="e5174-213">Anchors, or atomic zero-width assertions, cause a match to succeed or fail depending on the current position in the string, but they do not cause the engine to advance through the string or consume characters.</span></span> <span data-ttu-id="e5174-214">下表中列出的元字符是定位点。</span><span class="sxs-lookup"><span data-stu-id="e5174-214">The metacharacters listed in the following table are anchors.</span></span> <span data-ttu-id="e5174-215">有关详细信息，请参阅 [定位点](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-215">For more information, see [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md).</span></span>  
   
-|断言|描述|模式|匹配|  
-|--------|--------|--------|--------|  
-|`^`|匹配必须从字符串或一行的开头开始。|`^\d{3}`|“901”<br /><br /> “901\-”|  
-|`$`|匹配必须出现在字符串的末尾或出现在行或字符串末尾的 `\n` 之前。|`-\d{3}$`|“\-333”<br /><br /> “\-333”|  
-|`\A`|匹配必须出现在字符串的开头。|`\A\d{3}`|“901”<br /><br /> “901\-”|  
-|`\Z`|匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。|`-\d{3}\Z`|“\-333”<br /><br /> “\-333”|  
-|`\z`|匹配必须出现在字符串的末尾。|`-\d{3}\z`|“\-333”<br /><br /> “\-333”|  
-|`\G`|匹配必须出现在上一个匹配结束的地方。|`\G\(\d\)`|“\(1\)\(3\)\(5\)\[7\]\(9\)”中的“\(1\)”、“\(3\)”、“\(5\)”|  
-|`\b`|匹配必须出现在 `\w`（字母数字）和 `\W`（非字母数字）字符之间的边界上。|`\b\w+\s\w+\b`|“them theme them them”中的“them theme”、“them them”|  
-|`\B`|匹配不得出现在 `\b` 边界上。|`\Bend\w*\b`|“end sends endure lender”中的“ends”和“ender”|  
+|<span data-ttu-id="e5174-216">断言</span><span class="sxs-lookup"><span data-stu-id="e5174-216">Assertion</span></span>|<span data-ttu-id="e5174-217">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-217">Description</span></span>|<span data-ttu-id="e5174-218">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-218">Pattern</span></span>|<span data-ttu-id="e5174-219">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-219">Matches</span></span>|  
+|---------------|-----------------|-------------|-------------|  
+|`^`|<span data-ttu-id="e5174-220">匹配必须从字符串或一行的开头开始。</span><span class="sxs-lookup"><span data-stu-id="e5174-220">The match must start at the beginning of the string or line.</span></span>|`^\d{3}`|<span data-ttu-id="e5174-221">“901”</span><span class="sxs-lookup"><span data-stu-id="e5174-221">"901" in</span></span><br /><br /> <span data-ttu-id="e5174-222">“901-”</span><span class="sxs-lookup"><span data-stu-id="e5174-222">"901-333-"</span></span>|  
+|`$`|<span data-ttu-id="e5174-223">匹配必须出现在字符串的末尾或出现在行或字符串末尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="e5174-223">The match must occur at the end of the string or before `\n` at the end of the line or string.</span></span>|`-\d{3}$`|<span data-ttu-id="e5174-224">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-224">"-333" in</span></span><br /><br /> <span data-ttu-id="e5174-225">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-225">"-901-333"</span></span>|  
+|`\A`|<span data-ttu-id="e5174-226">匹配必须出现在字符串的开头。</span><span class="sxs-lookup"><span data-stu-id="e5174-226">The match must occur at the start of the string.</span></span>|`\A\d{3}`|<span data-ttu-id="e5174-227">“901”</span><span class="sxs-lookup"><span data-stu-id="e5174-227">"901" in</span></span><br /><br /> <span data-ttu-id="e5174-228">“901-”</span><span class="sxs-lookup"><span data-stu-id="e5174-228">"901-333-"</span></span>|  
+|`\Z`|<span data-ttu-id="e5174-229">匹配必须出现在字符串的末尾或出现在字符串末尾的 `\n` 之前。</span><span class="sxs-lookup"><span data-stu-id="e5174-229">The match must occur at the end of the string or before `\n` at the end of the string.</span></span>|`-\d{3}\Z`|<span data-ttu-id="e5174-230">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-230">"-333" in</span></span><br /><br /> <span data-ttu-id="e5174-231">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-231">"-901-333"</span></span>|  
+|`\z`|<span data-ttu-id="e5174-232">匹配必须出现在字符串的末尾。</span><span class="sxs-lookup"><span data-stu-id="e5174-232">The match must occur at the end of the string.</span></span>|`-\d{3}\z`|<span data-ttu-id="e5174-233">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-233">"-333" in</span></span><br /><br /> <span data-ttu-id="e5174-234">“-333”</span><span class="sxs-lookup"><span data-stu-id="e5174-234">"-901-333"</span></span>|  
+|`\G`|<span data-ttu-id="e5174-235">匹配必须出现在上一个匹配结束的地方。</span><span class="sxs-lookup"><span data-stu-id="e5174-235">The match must occur at the point where the previous match ended.</span></span>|`\G\(\d\)`|<span data-ttu-id="e5174-236">“(1)(3)(5)[7](9\)”中的“(1)”、“(3)”、“(5)”</span><span class="sxs-lookup"><span data-stu-id="e5174-236">"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"</span></span>|  
+|`\b`|<span data-ttu-id="e5174-237">匹配必须出现在 `\w`（字母数字）和 `\W`（非字母数字）字符之间的边界上。</span><span class="sxs-lookup"><span data-stu-id="e5174-237">The match must occur on a boundary between a `\w` (alphanumeric) and a `\W` (nonalphanumeric) character.</span></span>|`\b\w+\s\w+\b`|<span data-ttu-id="e5174-238">“them theme them them”中的“them theme”、“them them”</span><span class="sxs-lookup"><span data-stu-id="e5174-238">"them theme", "them them" in "them theme them them"</span></span>|  
+|`\B`|<span data-ttu-id="e5174-239">匹配不得出现在 `\b` 边界上。</span><span class="sxs-lookup"><span data-stu-id="e5174-239">The match must not occur on a `\b` boundary.</span></span>|`\Bend\w*\b`|<span data-ttu-id="e5174-240">“end sends endure lender”中的“ends”和“ender”</span><span class="sxs-lookup"><span data-stu-id="e5174-240">"ends", "ender" in "end sends endure lender"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-241">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-241">Back to top</span></span>](#top)  
   
 <a name="grouping_constructs"></a>   
-## 分组构造  
- 分组构造描述了正则表达式的子表达式，通常用于捕获输入字符串的子字符串。 分组构造包括下表中列出的语言元素。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+## <a name="grouping-constructs"></a><span data-ttu-id="e5174-242">分组构造</span><span class="sxs-lookup"><span data-stu-id="e5174-242">Grouping Constructs</span></span>  
+ <span data-ttu-id="e5174-243">分组构造描述了正则表达式的子表达式，通常用于捕获输入字符串的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e5174-243">Grouping constructs delineate subexpressions of a regular expression and typically capture substrings of an input string.</span></span> <span data-ttu-id="e5174-244">分组构造包括下表中列出的语言元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-244">Grouping constructs include the language elements listed in the following table.</span></span> <span data-ttu-id="e5174-245">有关详细信息，请参阅 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-245">For more information, see [Grouping Constructs](grouping-constructs-in-regular-expressions.md).</span></span>  
   
-|分组构造|描述|模式|匹配|  
-|----------|--------|--------|--------|  
-|`(` *子表达式* `)`|捕获匹配的子表达式并将其分配到一个从 1 开始的序号中。|`(\w)\1`|“deep”中的“ee”|  
-|`(?<` *名称* `>` *子表达式*`)`|将匹配的子表达式捕获到一个命名组中。|`(?<double>\w)\k<double>`|“deep”中的“ee”|  
-|`(?<` *名称 1* `-` *名称 2* `>` *子表达式*`)`|定义平衡组定义。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)中的“平衡组定义”部分。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|“3\+2^\(\(1\-3\)\*\(3\-1\)\)”中的“\(\(1\-3\)\*\(3\-1\)\)”|  
-|`(?:` *子表达式*`)`|定义非捕获组。|`Write(?:Line)?`|“Console.WriteLine\(\)”中的“WriteLine”<br /><br /> “Console.Write\(value\)”中的“Write”|  
-|`(?imnsx-imnsx:` *子表达式*`)`|应用或禁用*子表达式*中指定的选项。 有关详细信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|“A12xl A12XL a12xl”中的“A12xl”和“A12XL”|  
-|`(?=` *子表达式*`)`|零宽度正预测先行断言。|`\w+(?=\.)`|“He is. The dog ran. The sun is out.”中的“is”、“ran”和“out”|  
-|`(?!` *子表达式*`)`|零宽度负预测先行断言。|`\b(?!un)\w+\b`|“unsure sure unity used”中的“sure”和“used”|  
-|`(?<=` *子表达式*`)`|零宽度正回顾后发断言。|`(?<=19)\d{2}\b`|“1851 1999 1950 1905 2003”中的“99”、“50”和“05”|  
-|`(?<!` *子表达式*`)`|零宽度负回顾后发断言。|`(?<!19)\d{2}\b`|“1851 1999 1950 1905 2003”中的“51”和“03”|  
-|`(?>` *子表达式*`)`|非回溯（也称为“贪婪”）子表达式。|`[13579](?>A+B+)`|“1ABB 3ABBC 5AB 5AC”中的“1ABB”、“3ABB”和“5AB”|  
+|<span data-ttu-id="e5174-246">分组构造</span><span class="sxs-lookup"><span data-stu-id="e5174-246">Grouping construct</span></span>|<span data-ttu-id="e5174-247">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-247">Description</span></span>|<span data-ttu-id="e5174-248">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-248">Pattern</span></span>|<span data-ttu-id="e5174-249">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-249">Matches</span></span>|  
+|------------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="e5174-250">`(` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-250">`(` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-251">捕获匹配的子表达式并将其分配到一个从 1 开始的序号中。</span><span class="sxs-lookup"><span data-stu-id="e5174-251">Captures the matched subexpression and assigns it a one-based ordinal number.</span></span>|`(\w)\1`|<span data-ttu-id="e5174-252">“deep”中的“ee”</span><span class="sxs-lookup"><span data-stu-id="e5174-252">"ee" in "deep"</span></span>|  
+|<span data-ttu-id="e5174-253">`(?<` *name* `>` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-253">`(?<` *name* `>` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-254">将匹配的子表达式捕获到一个命名组中。</span><span class="sxs-lookup"><span data-stu-id="e5174-254">Captures the matched subexpression into a named group.</span></span>|`(?<double>\w)\k<double>`|<span data-ttu-id="e5174-255">“deep”中的“ee”</span><span class="sxs-lookup"><span data-stu-id="e5174-255">"ee" in "deep"</span></span>|  
+|<span data-ttu-id="e5174-256">`(?<` *名称 1* `-` *名称 2* `>` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-256">`(?<` *name1* `-` *name2* `>` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-257">定义平衡组定义。</span><span class="sxs-lookup"><span data-stu-id="e5174-257">Defines a balancing group definition.</span></span> <span data-ttu-id="e5174-258">有关详细信息，请参阅 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)中的“平衡组定义”部分。</span><span class="sxs-lookup"><span data-stu-id="e5174-258">For more information, see the "Balancing Group Definition" section in [Grouping Constructs](grouping-constructs-in-regular-expressions.md).</span></span>|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|<span data-ttu-id="e5174-259">“3+2^((1-3)\*(3-1))”中的“((1-3)\*(3-1))”</span><span class="sxs-lookup"><span data-stu-id="e5174-259">"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"</span></span>|  
+|<span data-ttu-id="e5174-260">`(?:` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-260">`(?:` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-261">定义非捕获组。</span><span class="sxs-lookup"><span data-stu-id="e5174-261">Defines a noncapturing group.</span></span>|`Write(?:Line)?`|<span data-ttu-id="e5174-262">“Console.WriteLine()”中的“WriteLine”</span><span class="sxs-lookup"><span data-stu-id="e5174-262">"WriteLine" in "Console.WriteLine()"</span></span><br /><br /> <span data-ttu-id="e5174-263">“Console.Write(value)”中的“Write”</span><span class="sxs-lookup"><span data-stu-id="e5174-263">"Write" in "Console.Write(value)"</span></span>|  
+|<span data-ttu-id="e5174-264">`(?imnsx-imnsx:` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-264">`(?imnsx-imnsx:` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-265">应用或禁用 *子表达式*中指定的选项。</span><span class="sxs-lookup"><span data-stu-id="e5174-265">Applies or disables the specified options within *subexpression*.</span></span> <span data-ttu-id="e5174-266">有关详细信息，请参阅 [Regular Expression Options](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-266">For more information, see [Regular Expression Options](regular-expression-options.md).</span></span>|`A\d{2}(?i:\w+)\b`|<span data-ttu-id="e5174-267">“A12xl A12XL a12xl”中的“A12xl”和“A12XL”</span><span class="sxs-lookup"><span data-stu-id="e5174-267">"A12xl", "A12XL" in "A12xl A12XL a12xl"</span></span>|  
+|<span data-ttu-id="e5174-268">`(?=` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-268">`(?=` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-269">零宽度正预测先行断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-269">Zero-width positive lookahead assertion.</span></span>|`\w+(?=\.)`|<span data-ttu-id="e5174-270">“He is.</span><span class="sxs-lookup"><span data-stu-id="e5174-270">"is", "ran", and "out" in "He is.</span></span> <span data-ttu-id="e5174-271">The dog ran.</span><span class="sxs-lookup"><span data-stu-id="e5174-271">The dog ran.</span></span> <span data-ttu-id="e5174-272">The sun is out.”中的“is”、“ran”和“out”</span><span class="sxs-lookup"><span data-stu-id="e5174-272">The sun is out."</span></span>|  
+|<span data-ttu-id="e5174-273">`(?!` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-273">`(?!` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-274">零宽度负预测先行断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-274">Zero-width negative lookahead assertion.</span></span>|`\b(?!un)\w+\b`|<span data-ttu-id="e5174-275">“unsure sure unity used”中的“sure”和“used”</span><span class="sxs-lookup"><span data-stu-id="e5174-275">"sure", "used" in "unsure sure unity used"</span></span>|  
+|<span data-ttu-id="e5174-276">`(?<=` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-276">`(?<=` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-277">零宽度正回顾后发断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-277">Zero-width positive lookbehind assertion.</span></span>|`(?<=19)\d{2}\b`|<span data-ttu-id="e5174-278">“1851 1999 1950 1905 2003”中的“99”、“50”和“05”</span><span class="sxs-lookup"><span data-stu-id="e5174-278">"99", "50", "05" in "1851 1999 1950 1905 2003"</span></span>|  
+|<span data-ttu-id="e5174-279">`(?<!` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-279">`(?<!` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-280">零宽度负回顾后发断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-280">Zero-width negative lookbehind assertion.</span></span>|`(?<!19)\d{2}\b`|<span data-ttu-id="e5174-281">“1851 1999 1950 1905 2003”中的“51”和“03”</span><span class="sxs-lookup"><span data-stu-id="e5174-281">"51", "03" in "1851 1999 1950 1905 2003"</span></span>|  
+|<span data-ttu-id="e5174-282">`(?>` *子表达式* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-282">`(?>` *subexpression* `)`</span></span>|<span data-ttu-id="e5174-283">非回溯（也称为“贪婪”）子表达式。</span><span class="sxs-lookup"><span data-stu-id="e5174-283">Nonbacktracking (or "greedy") subexpression.</span></span>|`[13579](?>A+B+)`|<span data-ttu-id="e5174-284">“1ABB 3ABBC 5AB 5AC”中的“1ABB”、“3ABB”和“5AB”</span><span class="sxs-lookup"><span data-stu-id="e5174-284">"1ABB", "3ABB", and "5AB" in "1ABB 3ABBC 5AB 5AC"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-285">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-285">Back to top</span></span>](#top)  
   
 <a name="quantifiers"></a>   
-## 数量词  
- 限定符指定在输入字符串中必须存在上一个元素（可以是字符、组或字符类）的多少个实例才能出现匹配项。 限定符包括下表中列出的语言元素。 有关更多信息，请参见[数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+## <a name="quantifiers"></a><span data-ttu-id="e5174-286">数量词</span><span class="sxs-lookup"><span data-stu-id="e5174-286">Quantifiers</span></span>  
+ <span data-ttu-id="e5174-287">限定符指定在输入字符串中必须存在上一个元素（可以是字符、组或字符类）的多少个实例才能出现匹配项。</span><span class="sxs-lookup"><span data-stu-id="e5174-287">A quantifier specifies how many instances of the previous element (which can be a character, a group, or a character class) must be present in the input string for a match to occur.</span></span> <span data-ttu-id="e5174-288">限定符包括下表中列出的语言元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-288">Quantifiers include the language elements listed in the following table.</span></span> <span data-ttu-id="e5174-289">有关更多信息，请参见 [Quantifiers](quantifiers-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-289">For more information, see [Quantifiers](quantifiers-in-regular-expressions.md).</span></span>  
   
-|限定符|描述|模式|匹配|  
-|---------|--------|--------|--------|  
-|`*`|匹配上一个元素零次或多次。|`\d*\.\d`|“.0”，“19.9”和“219.9”|  
-|`+`|匹配上一个元素一次或多次。|`"be+"`|“been”中的“bee”，“bent”中的“be”|  
-|`?`|匹配上一个元素零次或一次。|`"rai?n"`|“ran”和“rain”|  
-|`{` *n* `}`|匹配上一个元素恰好 *n* 次。|`",\d{3}"`|“1,043.6”中的“,043”，“9,876,543,210”中的“,876”、“,543”和“,210”|  
-|`{` *n* `,}`|匹配上一个元素至少 *n* 次。|`"\d{2,}"`|“166”，“29”和“1930”|  
-|`{` *n* `,` *m* `}`|匹配上一个元素至少 *n* 次，但不多于 *m* 次。|`"\d{3,5}"`|“166”、“17668”<br /><br /> “193024”中的“19302”|  
-|`*?`|匹配上一个元素零次或多次，但次数尽可能少。|`\d*?\.\d`|“.0”，“19.9”和“219.9”|  
-|`+?`|匹配上一个元素一次或多次，但次数尽可能少。|`"be+?"`|“been”中的“be”，“bent”中的“be”|  
-|`??`|匹配上一个元素零次或一次，但次数尽可能少。|`"rai??n"`|“ran”和“rain”|  
-|`{` *n* `}?`|匹配前面的元素恰好 *n* 次。|`",\d{3}?"`|“1,043.6”中的“,043”，“9,876,543,210”中的“,876”、“,543”和“,210”|  
-|`{` *n* `,}?`|匹配上一个元素至少 *n* 次，但次数尽可能少。|`"\d{2,}?"`|“166”，“29”和“1930”|  
-|`{` *n* `,` *m* `}?`|匹配上一个元素的次数介于 *n* 和 *m* 之间，但次数尽可能少。|`"\d{3,5}?"`|“166”、“17668”<br /><br /> “193024”中的“193”、“024”|  
+|<span data-ttu-id="e5174-290">限定符</span><span class="sxs-lookup"><span data-stu-id="e5174-290">Quantifier</span></span>|<span data-ttu-id="e5174-291">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-291">Description</span></span>|<span data-ttu-id="e5174-292">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-292">Pattern</span></span>|<span data-ttu-id="e5174-293">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-293">Matches</span></span>|  
+|----------------|-----------------|-------------|-------------|  
+|`*`|<span data-ttu-id="e5174-294">匹配上一个元素零次或多次。</span><span class="sxs-lookup"><span data-stu-id="e5174-294">Matches the previous element zero or more times.</span></span>|`\d*\.\d`|<span data-ttu-id="e5174-295">“.0”，“19.9”和“219.9”</span><span class="sxs-lookup"><span data-stu-id="e5174-295">".0", "19.9", "219.9"</span></span>|  
+|`+`|<span data-ttu-id="e5174-296">匹配上一个元素一次或多次。</span><span class="sxs-lookup"><span data-stu-id="e5174-296">Matches the previous element one or more times.</span></span>|`"be+"`|<span data-ttu-id="e5174-297">“been”中的“bee”，“bent”中的“be”</span><span class="sxs-lookup"><span data-stu-id="e5174-297">"bee" in "been", "be" in "bent"</span></span>|  
+|`?`|<span data-ttu-id="e5174-298">匹配上一个元素零次或一次。</span><span class="sxs-lookup"><span data-stu-id="e5174-298">Matches the previous element zero or one time.</span></span>|`"rai?n"`|<span data-ttu-id="e5174-299">“ran”和“rain”</span><span class="sxs-lookup"><span data-stu-id="e5174-299">"ran", "rain"</span></span>|  
+|<span data-ttu-id="e5174-300">`{` *n* `}`</span><span class="sxs-lookup"><span data-stu-id="e5174-300">`{` *n* `}`</span></span>|<span data-ttu-id="e5174-301">匹配上一个元素恰好 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="e5174-301">Matches the previous element exactly *n* times.</span></span>|`",\d{3}"`|<span data-ttu-id="e5174-302">“1,043.6”中的“,043”，“9,876,543,210”中的“,876”、“,543”和“,210”</span><span class="sxs-lookup"><span data-stu-id="e5174-302">",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"</span></span>|  
+|<span data-ttu-id="e5174-303">`{` *n* `,}`</span><span class="sxs-lookup"><span data-stu-id="e5174-303">`{` *n* `,}`</span></span>|<span data-ttu-id="e5174-304">匹配上一个元素至少 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="e5174-304">Matches the previous element at least *n* times.</span></span>|`"\d{2,}"`|<span data-ttu-id="e5174-305">“166”，“29”和“1930”</span><span class="sxs-lookup"><span data-stu-id="e5174-305">"166", "29", "1930"</span></span>|  
+|<span data-ttu-id="e5174-306">`{` *n* `,` *m* `}`</span><span class="sxs-lookup"><span data-stu-id="e5174-306">`{` *n* `,` *m* `}`</span></span>|<span data-ttu-id="e5174-307">匹配上一个元素至少 *n* 次，但不多于 *m* 次。</span><span class="sxs-lookup"><span data-stu-id="e5174-307">Matches the previous element at least *n* times, but no more than *m* times.</span></span>|`"\d{3,5}"`|<span data-ttu-id="e5174-308">“166”、“17668”</span><span class="sxs-lookup"><span data-stu-id="e5174-308">"166", "17668"</span></span><br /><br /> <span data-ttu-id="e5174-309">“193024”中的“19302”</span><span class="sxs-lookup"><span data-stu-id="e5174-309">"19302" in "193024"</span></span>|  
+|`*?`|<span data-ttu-id="e5174-310">匹配上一个元素零次或多次，但次数尽可能少。</span><span class="sxs-lookup"><span data-stu-id="e5174-310">Matches the previous element zero or more times, but as few times as possible.</span></span>|`\d*?\.\d`|<span data-ttu-id="e5174-311">“.0”，“19.9”和“219.9”</span><span class="sxs-lookup"><span data-stu-id="e5174-311">".0", "19.9", "219.9"</span></span>|  
+|`+?`|<span data-ttu-id="e5174-312">匹配上一个元素一次或多次，但次数尽可能少。</span><span class="sxs-lookup"><span data-stu-id="e5174-312">Matches the previous element one or more times, but as few times as possible.</span></span>|`"be+?"`|<span data-ttu-id="e5174-313">“been”中的“be”，“bent”中的“be”</span><span class="sxs-lookup"><span data-stu-id="e5174-313">"be" in "been", "be" in "bent"</span></span>|  
+|`??`|<span data-ttu-id="e5174-314">匹配上一个元素零次或一次，但次数尽可能少。</span><span class="sxs-lookup"><span data-stu-id="e5174-314">Matches the previous element zero or one time, but as few times as possible.</span></span>|`"rai??n"`|<span data-ttu-id="e5174-315">“ran”和“rain”</span><span class="sxs-lookup"><span data-stu-id="e5174-315">"ran", "rain"</span></span>|  
+|<span data-ttu-id="e5174-316">`{` *n* `}?`</span><span class="sxs-lookup"><span data-stu-id="e5174-316">`{` *n* `}?`</span></span>|<span data-ttu-id="e5174-317">匹配前面的元素恰好 *n* 次。</span><span class="sxs-lookup"><span data-stu-id="e5174-317">Matches the preceding element exactly *n* times.</span></span>|`",\d{3}?"`|<span data-ttu-id="e5174-318">“1,043.6”中的“,043”，“9,876,543,210”中的“,876”、“,543”和“,210”</span><span class="sxs-lookup"><span data-stu-id="e5174-318">",043" in "1,043.6", ",876", ",543", and ",210" in "9,876,543,210"</span></span>|  
+|<span data-ttu-id="e5174-319">`{` *n* `,}?`</span><span class="sxs-lookup"><span data-stu-id="e5174-319">`{` *n* `,}?`</span></span>|<span data-ttu-id="e5174-320">匹配上一个元素至少 *n* 次，但次数尽可能少。</span><span class="sxs-lookup"><span data-stu-id="e5174-320">Matches the previous element at least *n* times, but as few times as possible.</span></span>|`"\d{2,}?"`|<span data-ttu-id="e5174-321">“166”，“29”和“1930”</span><span class="sxs-lookup"><span data-stu-id="e5174-321">"166", "29", "1930"</span></span>|  
+|<span data-ttu-id="e5174-322">`{` *n* `,` *m* `}?`</span><span class="sxs-lookup"><span data-stu-id="e5174-322">`{` *n* `,` *m* `}?`</span></span>|<span data-ttu-id="e5174-323">匹配上一个元素的次数介于 *n* 和 *m* 次，但次数尽可能少。</span><span class="sxs-lookup"><span data-stu-id="e5174-323">Matches the previous element between *n* and *m* times, but as few times as possible.</span></span>|`"\d{3,5}?"`|<span data-ttu-id="e5174-324">“166”、“17668”</span><span class="sxs-lookup"><span data-stu-id="e5174-324">"166", "17668"</span></span><br /><br /> <span data-ttu-id="e5174-325">“193024”中的“193”、“024”</span><span class="sxs-lookup"><span data-stu-id="e5174-325">"193", "024" in "193024"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-326">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-326">Back to top</span></span>](#top)  
   
 <a name="backreference_constructs"></a>   
-## 反向引用构造  
- 反向引用允许在同一正则表达式中随后标识以前匹配的子表达式。 下表列出了 .NET Framework 的正则表达式支持的反向引用构造。 有关详细信息，请参阅[反向引用构造](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。  
+## <a name="backreference-constructs"></a><span data-ttu-id="e5174-327">反向引用构造</span><span class="sxs-lookup"><span data-stu-id="e5174-327">Backreference Constructs</span></span>  
+ <span data-ttu-id="e5174-328">反向引用允许在同一正则表达式中随后标识以前匹配的子表达式。</span><span class="sxs-lookup"><span data-stu-id="e5174-328">A backreference allows a previously matched subexpression to be identified subsequently in the same regular expression.</span></span> <span data-ttu-id="e5174-329">下表列出.NET 中的正则表达式支持的反向引用构造。</span><span class="sxs-lookup"><span data-stu-id="e5174-329">The following table lists the backreference constructs supported by regular expressions in .NET.</span></span> <span data-ttu-id="e5174-330">有关详细信息，请参阅 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-330">For more information, see [Backreference Constructs](backreference-constructs-in-regular-expressions.md).</span></span>  
   
-|反向引用构造|描述|模式|匹配|  
-|------------|--------|--------|--------|  
-|`\` *数值*|后向引用。 匹配编号子表达式的值。|`(\w)\1`|“seek”中的“ee”|  
-|`\k<` *name* `>`|命名后向引用。 匹配命名表达式的值。|`(?<char>\w)\k<char>`|“seek”中的“ee”|  
+|<span data-ttu-id="e5174-331">反向引用构造</span><span class="sxs-lookup"><span data-stu-id="e5174-331">Backreference construct</span></span>|<span data-ttu-id="e5174-332">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-332">Description</span></span>|<span data-ttu-id="e5174-333">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-333">Pattern</span></span>|<span data-ttu-id="e5174-334">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-334">Matches</span></span>|  
+|-----------------------------|-----------------|-------------|-------------|  
+|<span data-ttu-id="e5174-335">`\` *数值*</span><span class="sxs-lookup"><span data-stu-id="e5174-335">`\` *number*</span></span>|<span data-ttu-id="e5174-336">后向引用。</span><span class="sxs-lookup"><span data-stu-id="e5174-336">Backreference.</span></span> <span data-ttu-id="e5174-337">匹配编号子表达式的值。</span><span class="sxs-lookup"><span data-stu-id="e5174-337">Matches the value of a numbered subexpression.</span></span>|`(\w)\1`|<span data-ttu-id="e5174-338">“seek”中的“ee”</span><span class="sxs-lookup"><span data-stu-id="e5174-338">"ee" in "seek"</span></span>|  
+|<span data-ttu-id="e5174-339">`\k<` *name* `>`</span><span class="sxs-lookup"><span data-stu-id="e5174-339">`\k<` *name* `>`</span></span>|<span data-ttu-id="e5174-340">命名后向引用。</span><span class="sxs-lookup"><span data-stu-id="e5174-340">Named backreference.</span></span> <span data-ttu-id="e5174-341">匹配命名表达式的值。</span><span class="sxs-lookup"><span data-stu-id="e5174-341">Matches the value of a named expression.</span></span>|`(?<char>\w)\k<char>`|<span data-ttu-id="e5174-342">“seek”中的“ee”</span><span class="sxs-lookup"><span data-stu-id="e5174-342">"ee" in "seek"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-343">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-343">Back to top</span></span>](#top)  
   
 <a name="alternation_constructs"></a>   
-## 替换构造  
- 替换构造用于修改正则表达式以启用 either\/or 匹配。 这些构造包括下表中列出的语言元素。 有关详细信息，请参阅[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
+## <a name="alternation-constructs"></a><span data-ttu-id="e5174-344">替换构造</span><span class="sxs-lookup"><span data-stu-id="e5174-344">Alternation Constructs</span></span>  
+ <span data-ttu-id="e5174-345">替换构造用于修改正则表达式以启用 either/or 匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-345">Alternation constructs modify a regular expression to enable either/or matching.</span></span> <span data-ttu-id="e5174-346">这些构造包括下表中列出的语言元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-346">These constructs include the language elements listed in the following table.</span></span> <span data-ttu-id="e5174-347">有关详细信息，请参阅 [Alternation Constructs](alternation-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-347">For more information, see [Alternation Constructs](alternation-constructs-in-regular-expressions.md).</span></span>  
   
-|替换构造|描述|模式|匹配|  
-|----------|--------|--------|--------|  
-|`&#124;`|匹配以竖线 \(&#124;\) 字符分隔的任何一个元素。|`th(e&#124;is&#124;at)`|“this is the day.”中的“the”和“this” "|  
-|`(?(` *表达式* `)` *是* `&#124;` *no* `)`|如果正则表达式模式由 *expression* 匹配指定，则匹配 *yes*；否则，匹配可选 *no* 部分。*expression* 被解释为零宽度断言。|`(?(A)A\d{2}\b&#124;\b\d{3}\b)`|“A10 C103 910”中的“A10”和“910”|  
-|`(?(` *name* `)` *是* `&#124;` *no* `)`|如果 *name*（已命名或已编号的捕获组）具有匹配，则匹配 *yes*；否则，匹配可选 *no*。|`(?<quoted>")?(?(quoted).+?"&#124;\S+\s)`|“Dogs.jpg "Yiska playing.jpg"”中的 Dogs.jpg 和 "Yiska playing.jpg"|  
+|<span data-ttu-id="e5174-348">替换构造</span><span class="sxs-lookup"><span data-stu-id="e5174-348">Alternation construct</span></span>|<span data-ttu-id="e5174-349">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-349">Description</span></span>|<span data-ttu-id="e5174-350">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-350">Pattern</span></span>|<span data-ttu-id="e5174-351">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-351">Matches</span></span>|  
+|---------------------------|-----------------|-------------|-------------|  
+|<code>&#124;</code>|<span data-ttu-id="e5174-352">匹配以竖线 (&#124;) 字符分隔的任何一个元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-352">Matches any one element separated by the vertical bar (&#124;) character.</span></span>|<code>th(e&#124;is&#124;at)</code>|<span data-ttu-id="e5174-353">“this is the day.”中的“the”和“this”</span><span class="sxs-lookup"><span data-stu-id="e5174-353">"the", "this" in "this is the day.</span></span> <span data-ttu-id="e5174-354">"</span><span class="sxs-lookup"><span data-stu-id="e5174-354">"</span></span>|  
+|<span data-ttu-id="e5174-355">`(?(`expression`)`yes<code>&#124;</code>no`)`</span><span class="sxs-lookup"><span data-stu-id="e5174-355">`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`</span></span>|<span data-ttu-id="e5174-356">如果正则表达式模式由 *expression* 匹配指定，则匹配 *yes* ；否则，匹配可选 *no* 部分。</span><span class="sxs-lookup"><span data-stu-id="e5174-356">Matches *yes* if the regular expression pattern designated by *expression* matches; otherwise, matches the optional *no* part.</span></span> <span data-ttu-id="e5174-357">*expression* 被解释为零宽度断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-357">*expression* is interpreted as a zero-width assertion.</span></span>|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|<span data-ttu-id="e5174-358">“A10 C103 910”中的“A10”和“910”</span><span class="sxs-lookup"><span data-stu-id="e5174-358">"A10", "910" in "A10 C103 910"</span></span>|  
+|<span data-ttu-id="e5174-359">`(?(`name`)`yes<code>&#124;</code>no`)`</span><span class="sxs-lookup"><span data-stu-id="e5174-359">`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`</span></span>|<span data-ttu-id="e5174-360">如果 *name* （已命名或已编号的捕获组）具有匹配，则匹配 *yes*；否则，匹配可选 *no*。</span><span class="sxs-lookup"><span data-stu-id="e5174-360">Matches *yes* if *name*, a named or numbered capturing group, has a match; otherwise, matches the optional *no*.</span></span>|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|<span data-ttu-id="e5174-361">“Dogs.jpg "Yiska playing.jpg"”中的 Dogs.jpg 和 "Yiska playing.jpg"</span><span class="sxs-lookup"><span data-stu-id="e5174-361">Dogs.jpg, "Yiska playing.jpg" in "Dogs.jpg "Yiska playing.jpg""</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-362">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-362">Back to top</span></span>](#top)  
   
 <a name="substitutions"></a>   
-## 替代  
- 替换是替换模式中支持的正则表达式语言元素。 有关更多信息，请参见[替代](../../../docs/standard/base-types/substitutions-in-regular-expressions.md)。 下表中列出的元字符是原子零宽度断言。  
+## <a name="substitutions"></a><span data-ttu-id="e5174-363">替代</span><span class="sxs-lookup"><span data-stu-id="e5174-363">Substitutions</span></span>  
+ <span data-ttu-id="e5174-364">替换是替换模式中支持的正则表达式语言元素。</span><span class="sxs-lookup"><span data-stu-id="e5174-364">Substitutions are regular expression language elements that are supported in replacement patterns.</span></span> <span data-ttu-id="e5174-365">有关更多信息，请参见 [Substitutions](substitutions-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-365">For more information, see [Substitutions](substitutions-in-regular-expressions.md).</span></span> <span data-ttu-id="e5174-366">下表中列出的元字符是原子零宽度断言。</span><span class="sxs-lookup"><span data-stu-id="e5174-366">The metacharacters listed in the following table are atomic zero-width assertions.</span></span>  
   
-|字符|描述|模式|替换模式|输入字符串|结果字符串|  
-|--------|--------|--------|----------|-----------|-----------|  
-|`$` *数值*|替换按组 *number* 匹配的子字符串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
-|`${` *name* `}`|替换按命名组 *name* 匹配的子字符串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
-|`$$`|替换字符“$”。|`\b(\d+)\s?USD`|`$$$1`|“103 USD”|“$103”|  
-|`$&`|替换整个匹配项的一个副本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|“\*\*$1.30\*\*”|  
-|`$``|替换匹配前的输入字符串的所有文本。|`B+`|`$``|“AABBCC”|“AAAACC”|  
-|`$'`|替换匹配后的输入字符串的所有文本。|`B+`|`$'`|“AABBCC”|“AACCCC”|  
-|`$+`|替换最后捕获的组。|`B+(C+)`|`$+`|“AABBCCDD”|AACCDD|  
-|`$_`|替换整个输入字符串。|`B+`|`$_`|“AABBCC”|“AAAABBCCCC”|  
+|<span data-ttu-id="e5174-367">字符</span><span class="sxs-lookup"><span data-stu-id="e5174-367">Character</span></span>|<span data-ttu-id="e5174-368">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-368">Description</span></span>|<span data-ttu-id="e5174-369">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-369">Pattern</span></span>|<span data-ttu-id="e5174-370">替换模式</span><span class="sxs-lookup"><span data-stu-id="e5174-370">Replacement pattern</span></span>|<span data-ttu-id="e5174-371">输入字符串</span><span class="sxs-lookup"><span data-stu-id="e5174-371">Input string</span></span>|<span data-ttu-id="e5174-372">结果字符串</span><span class="sxs-lookup"><span data-stu-id="e5174-372">Result string</span></span>|  
+|---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
+|<span data-ttu-id="e5174-373">`$` *数值*</span><span class="sxs-lookup"><span data-stu-id="e5174-373">`$` *number*</span></span>|<span data-ttu-id="e5174-374">替换按组 *number*匹配的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e5174-374">Substitutes the substring matched by group *number*.</span></span>|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|<span data-ttu-id="e5174-375">"one two"</span><span class="sxs-lookup"><span data-stu-id="e5174-375">"one two"</span></span>|<span data-ttu-id="e5174-376">"two one"</span><span class="sxs-lookup"><span data-stu-id="e5174-376">"two one"</span></span>|  
+|<span data-ttu-id="e5174-377">`${` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="e5174-377">`${` *name* `}`</span></span>|<span data-ttu-id="e5174-378">替换按命名组 *name*匹配的子字符串。</span><span class="sxs-lookup"><span data-stu-id="e5174-378">Substitutes the substring matched by the named group *name*.</span></span>|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|<span data-ttu-id="e5174-379">"one two"</span><span class="sxs-lookup"><span data-stu-id="e5174-379">"one two"</span></span>|<span data-ttu-id="e5174-380">"two one"</span><span class="sxs-lookup"><span data-stu-id="e5174-380">"two one"</span></span>|  
+|`$$`|<span data-ttu-id="e5174-381">替换字符“$”。</span><span class="sxs-lookup"><span data-stu-id="e5174-381">Substitutes a literal "$".</span></span>|`\b(\d+)\s?USD`|`$$$1`|<span data-ttu-id="e5174-382">“103 USD”</span><span class="sxs-lookup"><span data-stu-id="e5174-382">"103 USD"</span></span>|<span data-ttu-id="e5174-383">“$103”</span><span class="sxs-lookup"><span data-stu-id="e5174-383">"$103"</span></span>|  
+|`$&`|<span data-ttu-id="e5174-384">替换整个匹配项的一个副本。</span><span class="sxs-lookup"><span data-stu-id="e5174-384">Substitutes a copy of the whole match.</span></span>|`\$?\d*\.?\d+`|`**$&**`|<span data-ttu-id="e5174-385">"$1.30"</span><span class="sxs-lookup"><span data-stu-id="e5174-385">"$1.30"</span></span>|<span data-ttu-id="e5174-386">"\*\*$1.30\*\*"</span><span class="sxs-lookup"><span data-stu-id="e5174-386">"\*\*$1.30\*\*"</span></span>|  
+|<code>$`</code>|<span data-ttu-id="e5174-387">替换匹配前的输入字符串的所有文本。</span><span class="sxs-lookup"><span data-stu-id="e5174-387">Substitutes all the text of the input string before the match.</span></span>|`B+`|<code>$`</code>|<span data-ttu-id="e5174-388">“AABBCC”</span><span class="sxs-lookup"><span data-stu-id="e5174-388">"AABBCC"</span></span>|<span data-ttu-id="e5174-389">“AAAACC”</span><span class="sxs-lookup"><span data-stu-id="e5174-389">"AAAACC"</span></span>|  
+|`$'`|<span data-ttu-id="e5174-390">替换匹配后的输入字符串的所有文本。</span><span class="sxs-lookup"><span data-stu-id="e5174-390">Substitutes all the text of the input string after the match.</span></span>|`B+`|`$'`|<span data-ttu-id="e5174-391">“AABBCC”</span><span class="sxs-lookup"><span data-stu-id="e5174-391">"AABBCC"</span></span>|<span data-ttu-id="e5174-392">“AACCCC”</span><span class="sxs-lookup"><span data-stu-id="e5174-392">"AACCCC"</span></span>|  
+|`$+`|<span data-ttu-id="e5174-393">替换最后捕获的组。</span><span class="sxs-lookup"><span data-stu-id="e5174-393">Substitutes the last group that was captured.</span></span>|`B+(C+)`|`$+`|<span data-ttu-id="e5174-394">“AABBCCDD”</span><span class="sxs-lookup"><span data-stu-id="e5174-394">"AABBCCDD"</span></span>|<span data-ttu-id="e5174-395">AACCDD</span><span class="sxs-lookup"><span data-stu-id="e5174-395">AACCDD</span></span>|  
+|`$_`|<span data-ttu-id="e5174-396">替换整个输入字符串。</span><span class="sxs-lookup"><span data-stu-id="e5174-396">Substitutes the entire input string.</span></span>|`B+`|`$_`|<span data-ttu-id="e5174-397">“AABBCC”</span><span class="sxs-lookup"><span data-stu-id="e5174-397">"AABBCC"</span></span>|<span data-ttu-id="e5174-398">“AAAABBCCCC”</span><span class="sxs-lookup"><span data-stu-id="e5174-398">"AAAABBCCCC"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-399">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-399">Back to top</span></span>](#top)  
   
 <a name="options"></a>   
-## 正则表达式选项  
- 可以指定控制正则表达式引擎如何解释正则表达式模式的选项。 其中的许多选项可以指定为内联（在正则表达式模式中）或指定为一个或多个 <xref:System.Text.RegularExpressions.RegexOptions> 常量。 本快速参考仅列出内联选项。 有关内联和 <xref:System.Text.RegularExpressions.RegexOptions> 选项的详细信息，请参阅文章[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
+## <a name="regular-expression-options"></a><span data-ttu-id="e5174-400">正则表达式选项</span><span class="sxs-lookup"><span data-stu-id="e5174-400">Regular Expression Options</span></span>  
+ <span data-ttu-id="e5174-401">可以指定控制正则表达式引擎如何解释正则表达式模式的选项。</span><span class="sxs-lookup"><span data-stu-id="e5174-401">You can specify options that control how the regular expression engine interprets a regular expression pattern.</span></span> <span data-ttu-id="e5174-402">其中的许多选项可以指定为内联（在正则表达式模式中）或指定为一个或多个 <xref:System.Text.RegularExpressions.RegexOptions> 常量。</span><span class="sxs-lookup"><span data-stu-id="e5174-402">Many of these options can be specified either inline (in the regular expression pattern) or as one or more <xref:System.Text.RegularExpressions.RegexOptions> constants.</span></span> <span data-ttu-id="e5174-403">本快速参考仅列出内联选项。</span><span class="sxs-lookup"><span data-stu-id="e5174-403">This quick reference lists only inline options.</span></span> <span data-ttu-id="e5174-404">有关内联和 <xref:System.Text.RegularExpressions.RegexOptions> 选项的详细信息，请参阅文章 [Regular Expression Options](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-404">For more information about inline and <xref:System.Text.RegularExpressions.RegexOptions> options, see the article [Regular Expression Options](regular-expression-options.md).</span></span>  
   
- 可通过两种方式指定内联选项：  
+ <span data-ttu-id="e5174-405">可通过两种方式指定内联选项：</span><span class="sxs-lookup"><span data-stu-id="e5174-405">You can specify an inline option in two ways:</span></span>  
   
--   通过使用[杂项构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)`(?imnsx-imnsx)`，可以用选项或选项组前的减号 \(\-\) 关闭这些选项。 例如，`(?i-mn)` 启用不区分大小写的匹配 \(`i`\)，关闭多行模式 \(`m`\) 并关闭未命名的组捕获 \(`n`\)。 该选项自定义选项的点开始应用于此正则表达式，且持续有效直到模式结束或者到另一构造反转此选项的点。  
+-   <span data-ttu-id="e5174-406">通过使用 [杂项构造](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，可以用选项或选项组前的减号 (-) 关闭这些选项。</span><span class="sxs-lookup"><span data-stu-id="e5174-406">By using the [miscellaneous construct](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, where a minus sign (-) before an option or set of options turns those options off.</span></span> <span data-ttu-id="e5174-407">例如， `(?i-mn)` 启用不区分大小写的匹配 (`i`)，关闭多行模式 (`m`) 并关闭未命名的组捕获 (`n`)。</span><span class="sxs-lookup"><span data-stu-id="e5174-407">For example, `(?i-mn)` turns case-insensitive matching (`i`) on, turns multiline mode (`m`) off, and turns unnamed group captures (`n`) off.</span></span> <span data-ttu-id="e5174-408">该选项自定义选项的点开始应用于此正则表达式，且持续有效直到模式结束或者到另一构造反转此选项的点。</span><span class="sxs-lookup"><span data-stu-id="e5174-408">The option applies to the regular expression pattern from the point at which the option is defined, and is effective either to the end of the pattern or to the point where another construct reverses the option.</span></span>  
   
--   通过使用[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子表达式*`)`（只定义指定组的选项）。  
+-   <span data-ttu-id="e5174-409">通过使用 [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子表达式*`)`（只定义指定组的选项）。</span><span class="sxs-lookup"><span data-stu-id="e5174-409">By using the [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`, which defines options for the specified group only.</span></span>  
   
- .NET Framework 正则表达式引擎支持以下内联选项。  
+ <span data-ttu-id="e5174-410">.NET 正则表达式引擎支持以下内联选项。</span><span class="sxs-lookup"><span data-stu-id="e5174-410">The .NET regular expression engine supports the following inline options.</span></span>  
   
-|选项|描述|模式|匹配|  
-|--------|--------|--------|--------|  
-|`i`|使用不区分大小写的匹配。|`\b(?i)a(?-i)a\w+\b`|“aardvark AAAuto aaaAuto Adam breakfast”中的“aardvark”、“aaaAuto”|  
-|`m`|使用多行模式。`^` 和 `$` 匹配行的开头和结尾，但不匹配字符串的开头和结尾。|有关示例，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“多行模式”部分。||  
-|`n`|不捕获未命名的组。|有关示例，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“仅显式捕获”部分。||  
-|`s`|使用单行模式。|有关示例，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“单行模式”部分。||  
-|`x`|忽略正则表达式模式中的非转义空白。|`\b(?x) \d+ \s \w+`|“1 aardvark 2 cats IV centurions”中的“1 aardvark”、“2 cats”|  
+|<span data-ttu-id="e5174-411">选项</span><span class="sxs-lookup"><span data-stu-id="e5174-411">Option</span></span>|<span data-ttu-id="e5174-412">描述</span><span class="sxs-lookup"><span data-stu-id="e5174-412">Description</span></span>|<span data-ttu-id="e5174-413">模式</span><span class="sxs-lookup"><span data-stu-id="e5174-413">Pattern</span></span>|<span data-ttu-id="e5174-414">匹配</span><span class="sxs-lookup"><span data-stu-id="e5174-414">Matches</span></span>|  
+|------------|-----------------|-------------|-------------|  
+|`i`|<span data-ttu-id="e5174-415">使用不区分大小写的匹配。</span><span class="sxs-lookup"><span data-stu-id="e5174-415">Use case-insensitive matching.</span></span>|`\b(?i)a(?-i)a\w+\b`|<span data-ttu-id="e5174-416">“aardvark AAAuto aaaAuto Adam breakfast”中的“aardvark”、“aaaAuto”</span><span class="sxs-lookup"><span data-stu-id="e5174-416">"aardvark", "aaaAuto" in "aardvark AAAuto aaaAuto Adam breakfast"</span></span>|  
+|`m`|<span data-ttu-id="e5174-417">使用多行模式。</span><span class="sxs-lookup"><span data-stu-id="e5174-417">Use multiline mode.</span></span> <span data-ttu-id="e5174-418">`^` 和 `$` 匹配行的开头和结尾，但不匹配字符串的开头和结尾。</span><span class="sxs-lookup"><span data-stu-id="e5174-418">`^` and `$` match the beginning and end of a line, instead of the beginning and end of a string.</span></span>|<span data-ttu-id="e5174-419">有关示例，请参阅 [Regular Expression Options](regular-expression-options.md)中的“多行模式”部分。</span><span class="sxs-lookup"><span data-stu-id="e5174-419">For an example, see the "Multiline Mode" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`n`|<span data-ttu-id="e5174-420">不捕获未命名的组。</span><span class="sxs-lookup"><span data-stu-id="e5174-420">Do not capture unnamed groups.</span></span>|<span data-ttu-id="e5174-421">有关示例，请参阅 [Regular Expression Options](regular-expression-options.md)中的“仅显式捕获”部分。</span><span class="sxs-lookup"><span data-stu-id="e5174-421">For an example, see the "Explicit Captures Only" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`s`|<span data-ttu-id="e5174-422">使用单行模式。</span><span class="sxs-lookup"><span data-stu-id="e5174-422">Use single-line mode.</span></span>|<span data-ttu-id="e5174-423">有关示例，请参阅 [Regular Expression Options](regular-expression-options.md)中的“单行模式”部分。</span><span class="sxs-lookup"><span data-stu-id="e5174-423">For an example, see the "Single-line Mode" section in [Regular Expression Options](regular-expression-options.md).</span></span>||  
+|`x`|<span data-ttu-id="e5174-424">忽略正则表达式模式中的非转义空白。</span><span class="sxs-lookup"><span data-stu-id="e5174-424">Ignore unescaped white space in the regular expression pattern.</span></span>|`\b(?x) \d+ \s \w+`|<span data-ttu-id="e5174-425">“1 aardvark 2 cats IV centurions”中的“1 aardvark”、“2 cats”</span><span class="sxs-lookup"><span data-stu-id="e5174-425">"1 aardvark", "2 cats" in "1 aardvark 2 cats IV centurions"</span></span>|  
   
- [返回页首](#top)  
+ [<span data-ttu-id="e5174-426">返回页首</span><span class="sxs-lookup"><span data-stu-id="e5174-426">Back to top</span></span>](#top)  
   
 <a name="miscellaneous_constructs"></a>   
-## 其他构造  
- 其他构造可修改某个正则表达式模式或提供有关该模式的信息。 下表列出了 .NET Framework 支持的其他构造。 有关详细信息，请参阅[其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+## <a name="miscellaneous-constructs"></a><span data-ttu-id="e5174-427">其他构造</span><span class="sxs-lookup"><span data-stu-id="e5174-427">Miscellaneous Constructs</span></span>  
+ <span data-ttu-id="e5174-428">其他构造可修改某个正则表达式模式或提供有关该模式的信息。</span><span class="sxs-lookup"><span data-stu-id="e5174-428">Miscellaneous constructs either modify a regular expression pattern or provide information about it.</span></span> <span data-ttu-id="e5174-429">下表列出.NET 支持的其他构造。</span><span class="sxs-lookup"><span data-stu-id="e5174-429">The following table lists the miscellaneous constructs supported by .NET.</span></span> <span data-ttu-id="e5174-430">有关详细信息，请参阅 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-430">For more information, see [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).</span></span>  
   
-|构造|定义|示例|  
-|--------|--------|--------|  
-|`(?imnsx-imnsx)`|在模式中间对诸如不区分大小写这样的选项进行设置或禁用。 有关详细信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。|`\bA(?i)b\w+\b` 匹配“ABA Able Act”中的“ABA”和“Able”|  
-|`(?#` *注释*`)`|内联注释。 该注释在第一个右括号处终止。|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#` \[至行尾\]|X 模式注释。 该注释以非转义的 `#` 开头，并继续到行的结尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
+|<span data-ttu-id="e5174-431">构造</span><span class="sxs-lookup"><span data-stu-id="e5174-431">Construct</span></span>|<span data-ttu-id="e5174-432">定义</span><span class="sxs-lookup"><span data-stu-id="e5174-432">Definition</span></span>|<span data-ttu-id="e5174-433">示例</span><span class="sxs-lookup"><span data-stu-id="e5174-433">Example</span></span>|  
+|---------------|----------------|-------------|  
+|`(?imnsx-imnsx)`|<span data-ttu-id="e5174-434">在模式中间对诸如不区分大小写这样的选项进行设置或禁用。有关详细信息，请参阅[正则表达式选项](regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="e5174-434">Sets or disables options such as case insensitivity in the middle of a pattern.For more information, see [Regular Expression Options](regular-expression-options.md).</span></span>|<span data-ttu-id="e5174-435">`\bA(?i)b\w+\b` 匹配“ABA Able Act”中的“ABA”和“Able”</span><span class="sxs-lookup"><span data-stu-id="e5174-435">`\bA(?i)b\w+\b` matches "ABA", "Able" in "ABA Able Act"</span></span>|  
+|<span data-ttu-id="e5174-436">`(?#` *注释* `)`</span><span class="sxs-lookup"><span data-stu-id="e5174-436">`(?#` *comment* `)`</span></span>|<span data-ttu-id="e5174-437">内联注释。</span><span class="sxs-lookup"><span data-stu-id="e5174-437">Inline comment.</span></span> <span data-ttu-id="e5174-438">该注释在第一个右括号处终止。</span><span class="sxs-lookup"><span data-stu-id="e5174-438">The comment ends at the first closing parenthesis.</span></span>|`\bA(?#Matches words starting with A)\w+\b`|  
+|<span data-ttu-id="e5174-439">`#` [至行尾]</span><span class="sxs-lookup"><span data-stu-id="e5174-439">`#` [to end of line]</span></span>|<span data-ttu-id="e5174-440">X 模式注释。</span><span class="sxs-lookup"><span data-stu-id="e5174-440">X-mode comment.</span></span> <span data-ttu-id="e5174-441">该注释以非转义的 `#` 开头，并继续到行的结尾。</span><span class="sxs-lookup"><span data-stu-id="e5174-441">The comment starts at an unescaped `#` and continues to the end of the line.</span></span>|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## 请参阅  
- <xref:System.Text.RegularExpressions?displayProperty=fullName>   
- <xref:System.Text.RegularExpressions.Regex>   
- [.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)   
- [正则表达式类](../../../docs/standard/base-types/the-regular-expression-object-model.md)   
- [正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)   
- [正则表达式 — 快速参考（以 Word 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)   
- [正则表达式 — 快速参考（以 PDF 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a><span data-ttu-id="e5174-442">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5174-442">See Also</span></span>  
+ <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+ <xref:System.Text.RegularExpressions.Regex>  
+ [<span data-ttu-id="e5174-443">正则表达式</span><span class="sxs-lookup"><span data-stu-id="e5174-443">Regular Expressions</span></span>](regular-expressions.md)  
+ [<span data-ttu-id="e5174-444">正则表达式类</span><span class="sxs-lookup"><span data-stu-id="e5174-444">Regular Expression Classes</span></span>](the-regular-expression-object-model.md)  
+ [<span data-ttu-id="e5174-445">正则表达式示例</span><span class="sxs-lookup"><span data-stu-id="e5174-445">Regular Expression Examples</span></span>](regular-expression-examples.md)  
+ [<span data-ttu-id="e5174-446">正则表达式-快速参考 （以 Word 格式下载）</span><span class="sxs-lookup"><span data-stu-id="e5174-446">Regular Expressions - Quick Reference (download in Word format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="e5174-447">正则表达式 — 快速参考（以 PDF 格式下载）</span><span class="sxs-lookup"><span data-stu-id="e5174-447">Regular Expressions - Quick Reference (download in PDF format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

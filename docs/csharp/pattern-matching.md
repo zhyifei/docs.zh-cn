@@ -9,116 +9,135 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
+ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
+# <a name="pattern-matching"></a><span data-ttu-id="d3f12-104">模式匹配</span><span class="sxs-lookup"><span data-stu-id="d3f12-104">Pattern Matching</span></span> #
 
-# <a name="pattern-matching"></a>模式匹配 #
+<span data-ttu-id="d3f12-105">模式可测试值是否具有特定形状，并且可以在值具有匹配形状时从值提取信息。</span><span class="sxs-lookup"><span data-stu-id="d3f12-105">Patterns test that a value has a certain *shape*, and can *extract* information from the value when it has the matching shape.</span></span> <span data-ttu-id="d3f12-106">模式匹配为当前已使用的算法提供了更简洁的语法。</span><span class="sxs-lookup"><span data-stu-id="d3f12-106">Pattern matching provides more concise syntax for algorithms you already use today.</span></span> <span data-ttu-id="d3f12-107">你已使用现有语法创建了模式匹配算法。</span><span class="sxs-lookup"><span data-stu-id="d3f12-107">You already create pattern matching algorithms using existing syntax.</span></span> <span data-ttu-id="d3f12-108">编写了测试值的 `if` 或 `switch` 语句。</span><span class="sxs-lookup"><span data-stu-id="d3f12-108">You write `if` or `switch` statements that test values.</span></span> <span data-ttu-id="d3f12-109">随后，在这些语句匹配时，可从该值提取并使用信息。</span><span class="sxs-lookup"><span data-stu-id="d3f12-109">Then, when those statements match, you extract and use information from that value.</span></span> <span data-ttu-id="d3f12-110">新的语法元素是你已熟悉的语句的扩展：`is` 和 `switch`。</span><span class="sxs-lookup"><span data-stu-id="d3f12-110">The new syntax elements are extensions to statements you are already familiar with: `is` and `switch`.</span></span> <span data-ttu-id="d3f12-111">这些新扩展将测试值与提取该信息合并在一起。</span><span class="sxs-lookup"><span data-stu-id="d3f12-111">These new extensions combine testing a value and extracting that information.</span></span>
 
-模式可测试值是否具有特定形状，并且可以在值具有匹配形状时从值提取信息。 模式匹配为当前已使用的算法提供了更简洁的语法。 你已使用现有语法创建了模式匹配算法。 编写了测试值的 `if` 或 `switch` 语句。 随后，在这些语句匹配时，可从该值提取并使用信息。 新的语法元素是你已熟悉的语句的扩展：`is` 和 `switch`。 这些新扩展将测试值与提取该信息合并在一起。
+<span data-ttu-id="d3f12-112">在本主题中，我们会了解新语法，以便演示它如何实现可读的简洁代码。</span><span class="sxs-lookup"><span data-stu-id="d3f12-112">In this topic, we'll look at the new syntax to show you how it enables readable, concise code.</span></span> <span data-ttu-id="d3f12-113">模式匹配可实现数据与代码分开的惯例，这与面向对象的设计不同（其中数据与对它们进行操作的方法紧密耦合）。</span><span class="sxs-lookup"><span data-stu-id="d3f12-113">Pattern matching enables idioms where data and the code are separated, unlike object oriented designs where data and the methods that manipulate them are tightly coupled.</span></span>
 
-在本主题中，我们会了解新语法，以便演示它如何实现可读的简洁代码。 模式匹配可实现数据与代码分开的惯例，这与面向对象的设计不同（其中数据与对它们进行操作的方法紧密耦合）。
+<span data-ttu-id="d3f12-114">为了说明这些新的惯例，我们使用通过模式匹配语句表示几何形状的结构。</span><span class="sxs-lookup"><span data-stu-id="d3f12-114">To illustrate these new idioms, let's work with structures that represent geometric shapes using pattern matching statements.</span></span> <span data-ttu-id="d3f12-115">你可能熟悉如何构建类层次结构和创建[虚方法和重写方法](methods.md#inherited)以便基于对象的运行时类型来自定义对象行为。</span><span class="sxs-lookup"><span data-stu-id="d3f12-115">You are probably familiar with building class hierarchies and creating [virtual methods and overridden methods](methods.md#inherited) to customize object behavior based on the runtime type of the object.</span></span>
 
-为了说明这些新的惯例，我们使用通过模式匹配语句表示几何形状的结构。 你可能熟悉如何构建类层次结构和创建[虚方法和重写方法](methods.md#inherited)以便基于对象的运行时类型来自定义对象行为。
+<span data-ttu-id="d3f12-116">对于未在类层次结构中进行结构化的数据，无法使用这些技术。</span><span class="sxs-lookup"><span data-stu-id="d3f12-116">Those techniques aren't possible for data that isn't structured in a class hierarchy.</span></span> <span data-ttu-id="d3f12-117">当数据和方法分开时，需要其他工具。</span><span class="sxs-lookup"><span data-stu-id="d3f12-117">When data and methods are separate, you need other tools.</span></span> <span data-ttu-id="d3f12-118">新的模式匹配构造可实现更简洁的语法，以基于这些数据的任何条件来检查数据和操作控制流。</span><span class="sxs-lookup"><span data-stu-id="d3f12-118">The new *pattern matching* constructs enable cleaner syntax to examine data and manipulate control flow based on any condition of that data.</span></span> <span data-ttu-id="d3f12-119">你已编写了测试变量值的 `if` 语句和 `switch`。</span><span class="sxs-lookup"><span data-stu-id="d3f12-119">You already write `if` statements and `switch` that test a variable's value.</span></span> <span data-ttu-id="d3f12-120">你编写了测试变量类型的 `is` 语句。</span><span class="sxs-lookup"><span data-stu-id="d3f12-120">You write `is` statements that test a variable's type.</span></span> <span data-ttu-id="d3f12-121">模式匹配为这些语句添加了新功能。</span><span class="sxs-lookup"><span data-stu-id="d3f12-121">*Pattern matching* adds new capabilities to those statements.</span></span>
 
-对于未在类层次结构中进行结构化的数据，无法使用这些技术。 当数据和方法分开时，需要其他工具。 新的模式匹配构造可实现更简洁的语法，以基于这些数据的任何条件来检查数据和操作控制流。 你已编写了测试变量值的 `if` 语句和 `switch`。 你编写了测试变量类型的 `is` 语句。 模式匹配为这些语句添加了新功能。
+<span data-ttu-id="d3f12-122">在本主题中，你会构建计算不同几何形状的面积的方法。</span><span class="sxs-lookup"><span data-stu-id="d3f12-122">In this topic, you'll build a method  that computes the area of different geometric shapes.</span></span> <span data-ttu-id="d3f12-123">但是，你会在不求助于面向对象的技术以及为不同形状构建类层次结构的情况下实现它。</span><span class="sxs-lookup"><span data-stu-id="d3f12-123">But, you'll do it without resorting to object oriented techniques and building a class hierarchy for the different shapes.</span></span>
+<span data-ttu-id="d3f12-124">你会改用模式匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-124">You'll use *pattern matching* instead.</span></span> <span data-ttu-id="d3f12-125">为了进一步强调我们未使用继承，你会将每个形状设为 `struct` 而不是类。</span><span class="sxs-lookup"><span data-stu-id="d3f12-125">To further emphasize that we're not using inheritance, you'll make each shape a `struct` instead of a class.</span></span> <span data-ttu-id="d3f12-126">请注意，不同 `struct` 类型不能指定用户定义的通用基类型，因此继承不是可行的设计。</span><span class="sxs-lookup"><span data-stu-id="d3f12-126">Note that different `struct` types cannot specify a common user defined base type, so inheritance is not a possible design.</span></span>
+<span data-ttu-id="d3f12-127">执行此示例时，将此代码与它作为对象层次结构来构造的方式进行对比。</span><span class="sxs-lookup"><span data-stu-id="d3f12-127">As you go through this sample, contrast this code with how it would be structured as an object hierarchy.</span></span> <span data-ttu-id="d3f12-128">当必须查询和操作的数据不是类层次结构时，模式匹配可实现非常完善的设计。</span><span class="sxs-lookup"><span data-stu-id="d3f12-128">When the data you must query and manipulate is not a class hierarchy, pattern matching enables very elegant designs.</span></span>
 
-在本主题中，你会构建计算不同几何形状的面积的方法。 但是，你会在不求助于面向对象的技术以及为不同形状构建类层次结构的情况下实现它。
-你会改用模式匹配。 为了进一步强调我们未使用继承，你会将每个形状设为 `struct` 而不是类。 请注意，不同 `struct` 类型不能指定用户定义的通用基类型，因此继承不是可行的设计。
-执行此示例时，将此代码与它作为对象层次结构来构造的方式进行对比。 当必须查询和操作的数据不是类层次结构时，模式匹配可实现非常完善的设计。
+<span data-ttu-id="d3f12-129">我们不会从抽象形状定义以及添加不同的特定形状类开始，而是从每个几何形状的简单纯数据定义开始：</span><span class="sxs-lookup"><span data-stu-id="d3f12-129">Rather than starting with an abstract shape definition and adding different specific shape classes, let's start instead with simple data only definitions for each of the geometric shapes:</span></span>
 
-我们不会从抽象形状定义以及添加不同的特定形状类开始，而是从每个几何形状的简单纯数据定义开始：
+[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "形状定义")]
+<span data-ttu-id="d3f12-130">在这些结构中，我们编写一个方法来计算某种形状的面积。</span><span class="sxs-lookup"><span data-stu-id="d3f12-130">From these structures, let's write a method that computes the area of some shape.</span></span>
 
-在这些结构中，我们编写一个方法来计算某种形状的面积。
+## <a name="the-is-type-pattern-expression"></a><span data-ttu-id="d3f12-131">`is` 类型模式表达式</span><span class="sxs-lookup"><span data-stu-id="d3f12-131">The `is` type pattern expression</span></span>
 
-## <a name="the-is-type-pattern-expression"></a>`is` 类型模式表达式
+<span data-ttu-id="d3f12-132">在 C# 7 之前，需要在一系列 `if` 和 `is` 语句中测试每种类型：</span><span class="sxs-lookup"><span data-stu-id="d3f12-132">Before C# 7, you'd need to test each type in a series of `if` and `is` statements:</span></span>
 
-在 C# 7 之前，需要在一系列 `if` 和 `is` 语句中测试每种类型：
+[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "使用 is 的经典类型模式")]
+<span data-ttu-id="d3f12-133">上面的代码是类型模式的经典表达式：测试变量以确定其类型并基于该类型执行不同操作。</span><span class="sxs-lookup"><span data-stu-id="d3f12-133">That code above is a classic expression of the *type pattern*: You're testing a variable to determine its type and taking a different action based on that type.</span></span>
 
-上面的代码是类型模式的经典表达式：测试变量以确定其类型并基于该类型执行不同操作。
+<span data-ttu-id="d3f12-134">通过使用 `is` 表达式的扩展在测试成功时对变量赋值，此代码变得更加简单：</span><span class="sxs-lookup"><span data-stu-id="d3f12-134">This code becomes simpler using extensions to the `is` expression to assign a variable if the test succeeds:</span></span>
 
-通过使用 `is` 表达式的扩展在测试成功时对变量赋值，此代码变得更加简单：
+[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is 模式表达式")]
+<span data-ttu-id="d3f12-135">在此更新的版本中，`is` 表达式会测试变量并将它分配给具有正确类型的新变量。</span><span class="sxs-lookup"><span data-stu-id="d3f12-135">In this updated version, the `is` expression both tests the variable and assigns it to a new variable of the proper type.</span></span> <span data-ttu-id="d3f12-136">另请注意，此版本包含 `Rectangle` 类型（即 `struct`）。</span><span class="sxs-lookup"><span data-stu-id="d3f12-136">Also, notice that this version includes the `Rectangle` type, which is a `struct`.</span></span> <span data-ttu-id="d3f12-137">新的 `is` 表达式使用值类型以及引用类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-137">The new `is` expression works with value types as well as reference types.</span></span>
 
-在此更新的版本中，`is` 表达式会测试变量并将它分配给具有正确类型的新变量。 另请注意，此版本包含 `Rectangle` 类型（即 `struct`）。 新的 `is` 表达式使用值类型以及引用类型。
+<span data-ttu-id="d3f12-138">模式匹配表达式的语言规则可帮助避免误用匹配表达式的结果。</span><span class="sxs-lookup"><span data-stu-id="d3f12-138">Language rules for pattern matching expressions help you avoid misusing the results of a match expression.</span></span> <span data-ttu-id="d3f12-139">在上面的示例中，仅当相应的模式匹配表达式具有 `true` 结果时，变量 `s`、`c` 和 `r` 才处于范围内并进行明确赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-139">In the example above, the variables `s`, `c`, and `r` are only in scope and definitely assigned when the respective pattern match expressions have `true` results.</span></span> <span data-ttu-id="d3f12-140">如果尝试在另一个位置中使用任一变量，则代码会生成编译器错误。</span><span class="sxs-lookup"><span data-stu-id="d3f12-140">If you try to use either variable in another location, your code generates compiler errors.</span></span>
 
-模式匹配表达式的语言规则可帮助避免误用匹配表达式的结果。 在上面的示例中，仅当相应的模式匹配表达式具有 `true` 结果时，变量 `s`、`c` 和 `r` 才处于范围内并进行明确赋值。 如果尝试在另一个位置中使用任一变量，则代码会生成编译器错误。
+<span data-ttu-id="d3f12-141">让我们从范围开始，来详细了解一下这两个规则。</span><span class="sxs-lookup"><span data-stu-id="d3f12-141">Let's examine both of those rules in detail, beginning with scope.</span></span> <span data-ttu-id="d3f12-142">变量 `c` 只处于第一个 `if` 语句的 `else` 分支的范围内。</span><span class="sxs-lookup"><span data-stu-id="d3f12-142">The variable `c` is in scope only in the `else` branch of the first `if` statement.</span></span> <span data-ttu-id="d3f12-143">变量 `s` 处于方法 `ComputeArea` 的范围内。</span><span class="sxs-lookup"><span data-stu-id="d3f12-143">The variable `s` is in scope in the method `ComputeArea`.</span></span> <span data-ttu-id="d3f12-144">这是因为 `if` 语句的每个分支都为变量建立单独的范围。</span><span class="sxs-lookup"><span data-stu-id="d3f12-144">That's because each branch of an `if` statement establishes a separate scope for variables.</span></span> <span data-ttu-id="d3f12-145">但是，`if` 语句本身不会建立范围。</span><span class="sxs-lookup"><span data-stu-id="d3f12-145">However, the `if` statement itself does not.</span></span> <span data-ttu-id="d3f12-146">这意味着在 `if` 语句中声明的变量会处于与 `if` 语句相同的范围中（本例中的方法。）此行为并不特定于模式匹配，但却是变量范围以及 `if` 和 `else` 语句的已定义行为。</span><span class="sxs-lookup"><span data-stu-id="d3f12-146">That means variables declared in the `if` statement are in the same scope as the `if` statement (the method in this case.) This behavior is not specific to pattern matching, but is the defined behavior for variable scopes and `if` and `else` statements.</span></span>
 
-让我们从范围开始，来详细了解一下这两个规则。 变量 `c` 只处于第一个 `if` 语句的 `else` 分支的范围内。 变量 `s` 处于方法 `ComputeArea` 的范围内。 这是因为 `if` 语句的每个分支都为变量建立单独的范围。 但是，`if` 语句本身不会建立范围。 这意味着在 `if` 语句中声明的变量会处于与 `if` 语句相同的范围中（本例中的方法。）此行为并不特定于模式匹配，但却是变量范围以及 `if` 和 `else` 语句的已定义行为。
-
-由于在 true 时进行明确赋值这一机制，当相应 `if` 语句为 true 时，会对变量 `c` 和 `s` 赋值。
+<span data-ttu-id="d3f12-147">由于在 true 时进行明确赋值这一机制，当相应 `if` 语句为 true 时，会对变量 `c` 和 `s` 赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-147">The variables `c` and `s` are assigned when the respective `if` statements are true because of the definitely assigned when true mechanism.</span></span>
 
 > [!TIP]
-> 本主题中的示例使用建议构造，其中的模式匹配 `is` 表达式在 `if` 语句的 `true` 分支中对匹配变量明确赋值。
-> 可以通过编写 `if (!(shape is Square s))` 来反转逻辑，变量 `s` 会只在 `false` 分支中进行明确赋值。 虽然这是有效的 C#，不过不建议使用它，因为遵循该逻辑更令人困惑。
+> <span data-ttu-id="d3f12-148">本主题中的示例使用建议构造，其中的模式匹配 `is` 表达式在 `if` 语句的 `true` 分支中对匹配变量明确赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-148">The samples in this topic use the recommended construct where a pattern match `is` expression definitely assigns the match variable in the `true` branch of the `if` statement.</span></span>
+> <span data-ttu-id="d3f12-149">可以通过编写 `if (!(shape is Square s))` 来反转逻辑，变量 `s` 会只在 `false` 分支中进行明确赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-149">You could reverse the logic by saying `if (!(shape is Square s))` and the variable `s` would be definitely assigned only in the `false` branch.</span></span> <span data-ttu-id="d3f12-150">虽然这是有效的 C#，不过不建议使用它，因为遵循该逻辑更令人困惑。</span><span class="sxs-lookup"><span data-stu-id="d3f12-150">While this is valid C#, it is not recommended because it is more confusing to follow the logic.</span></span>
 
-这些规则意味着在未满足模式时，不可能意外地访问模式匹配表达式的结果。
+<span data-ttu-id="d3f12-151">这些规则意味着在未满足模式时，不可能意外地访问模式匹配表达式的结果。</span><span class="sxs-lookup"><span data-stu-id="d3f12-151">These rules mean that you are unlikely to accidentally access the result of a pattern match expression when that pattern was not met.</span></span>
 
-## <a name="using-pattern-matching-switch-statements"></a>使用模式匹配 `switch` 语句
+## <a name="using-pattern-matching-switch-statements"></a><span data-ttu-id="d3f12-152">使用模式匹配 `switch` 语句</span><span class="sxs-lookup"><span data-stu-id="d3f12-152">Using pattern matching `switch` statements</span></span>
 
-随着时间推移，可能需要支持其他形状类型。 随着所测试的条件数量增加，你会发现使用 `is` 模式匹配表达式可能会变得十分繁琐。 除了需要对要检查的每种类型使用 `if` 语句，`is` 表达式仅限为测试输入是否与单个类型匹配。 在这种情况下，会发现 `switch` 模式匹配表达式会是更好的选择。 
+<span data-ttu-id="d3f12-153">随着时间推移，可能需要支持其他形状类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-153">As time goes on, you may need to support other shape types.</span></span> <span data-ttu-id="d3f12-154">随着所测试的条件数量增加，你会发现使用 `is` 模式匹配表达式可能会变得十分繁琐。</span><span class="sxs-lookup"><span data-stu-id="d3f12-154">As the number of conditions you are testing grows, you'll find that using the `is` pattern matching expressions can become cumbersome.</span></span> <span data-ttu-id="d3f12-155">除了需要对要检查的每种类型使用 `if` 语句，`is` 表达式仅限为测试输入是否与单个类型匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-155">In addition to requiring `if` statements on each type you want to check, the `is` expressions are limited to testing if the input matches a single type.</span></span> <span data-ttu-id="d3f12-156">在这种情况下，会发现 `switch` 模式匹配表达式会是更好的选择。</span><span class="sxs-lookup"><span data-stu-id="d3f12-156">In this case, you'll find that the `switch` pattern matching expressions becomes a better choice.</span></span> 
 
-传统 `switch` 语句是模式表达式：支持常量模式。
-可以将变量与 `case` 语句中使用的任何常量进行比较：
+<span data-ttu-id="d3f12-157">传统 `switch` 语句是模式表达式：支持常量模式。</span><span class="sxs-lookup"><span data-stu-id="d3f12-157">The traditional `switch` statement was a pattern expression: it supported the constant pattern.</span></span>
+<span data-ttu-id="d3f12-158">可以将变量与 `case` 语句中使用的任何常量进行比较：</span><span class="sxs-lookup"><span data-stu-id="d3f12-158">You could compare a variable to any constant used in a `case` statement:</span></span>
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "经典 switch 语句")]
+[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
-`switch` 语句支持的唯一模式是常量模式。 它进一步限制为数字类型和 `string` 类型。
-这些限制已移除，现在可以使用类型模式编写 `switch` 语句：
+<span data-ttu-id="d3f12-159">`switch` 语句支持的唯一模式是常量模式。</span><span class="sxs-lookup"><span data-stu-id="d3f12-159">The only pattern supported by the `switch` statement was the constant pattern.</span></span> <span data-ttu-id="d3f12-160">它进一步限制为数字类型和 `string` 类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-160">It was further limited to numeric types and the `string` type.</span></span>
+<span data-ttu-id="d3f12-161">这些限制已移除，现在可以使用类型模式编写 `switch` 语句：</span><span class="sxs-lookup"><span data-stu-id="d3f12-161">Those restrictions have been removed, and you can now write a `switch` statement using the type pattern:</span></span>
 
-[!code-csharp[开关类型模式](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "使用 `switch` 表达式进行计算")]
+[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
-模式匹配 `switch` 语句使用的语法对于使用过传统 C 样式 `switch` 语句的开发人员会比较熟悉。 会计算每个 `case`，并执行与输入变量匹配的条件下的代码。 执行代码不能从一个 case 表达式“贯穿”到下一个表达式；`case` 语句的语法要求每个 `case` 都以 `break`、`return` 或 `goto` 结尾。
+<span data-ttu-id="d3f12-162">模式匹配 `switch` 语句使用的语法对于使用过传统 C 样式 `switch` 语句的开发人员会比较熟悉。</span><span class="sxs-lookup"><span data-stu-id="d3f12-162">The pattern matching `switch` statement uses familiar syntax to developers who have used the traditional C-style `switch` statement.</span></span> <span data-ttu-id="d3f12-163">会计算每个 `case`，并执行与输入变量匹配的条件下的代码。</span><span class="sxs-lookup"><span data-stu-id="d3f12-163">Each `case` is evaluated and the code beneath the condition that matches the input variable is executed.</span></span> <span data-ttu-id="d3f12-164">执行代码不能从一个 case 表达式“贯穿”到下一个表达式；`case` 语句的语法要求每个 `case` 都以 `break`、`return` 或 `goto` 结尾。</span><span class="sxs-lookup"><span data-stu-id="d3f12-164">Code execution cannot "fall through" from one case expression to the next; the syntax of the `case` statement requires that each `case` end with a `break`, `return`, or `goto`.</span></span>
 
 > [!NOTE]
-> 用于跳转到其他标签的 `goto` 语句仅对常量模式（即经典 switch 语句）有效。
+> <span data-ttu-id="d3f12-165">用于跳转到其他标签的 `goto` 语句仅对常量模式（即经典 switch 语句）有效。</span><span class="sxs-lookup"><span data-stu-id="d3f12-165">The `goto` statements to jump to another label are valid only for the constant pattern, the classic switch statement.</span></span>
 
-有一些用于控制 `switch` 语句的重要新规则。 针对 `switch` 表达式中的变量类型的限制已移除。
-任何类型（如此示例中的 `object`）都可以使用。 Case 表达式不再限制为常量值。 移除该限制意味着对 `switch` 部分重新排序可能会更改程序的行为。
+<span data-ttu-id="d3f12-166">有一些用于控制 `switch` 语句的重要新规则。</span><span class="sxs-lookup"><span data-stu-id="d3f12-166">There are important new rules governing the `switch` statement.</span></span> <span data-ttu-id="d3f12-167">针对 `switch` 表达式中的变量类型的限制已移除。</span><span class="sxs-lookup"><span data-stu-id="d3f12-167">The restrictions on the type of the variable in the `switch` expression have been removed.</span></span>
+<span data-ttu-id="d3f12-168">任何类型（如此示例中的 `object`）都可以使用。</span><span class="sxs-lookup"><span data-stu-id="d3f12-168">Any type, such as `object` in this example, may be used.</span></span> <span data-ttu-id="d3f12-169">Case 表达式不再限制为常量值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-169">The case expressions are no longer limited to constant values.</span></span> <span data-ttu-id="d3f12-170">移除该限制意味着对 `switch` 部分重新排序可能会更改程序的行为。</span><span class="sxs-lookup"><span data-stu-id="d3f12-170">Removing that limitation means that reordering `switch` sections may change a program's behavior.</span></span>
 
-限制为常量值时，最多只有一个 `case` 标签可以与 `switch` 表达式的值匹配。 将该规则与每个 `switch` 部分不得贯穿到下一个部分的规则相结合，这样 `switch` 部分便可以按任何顺序重新排列而不会影响行为。
-现在，使用更加通用的 `switch` 表达式时，每个部分的顺序都非常重要。 `switch` 表达式按文本顺序进行计算。 执行会转移到与 `switch` 表达式匹配的第一个 `switch` 匹配。  
-请注意，仅当其他任何 case 标签都不匹配时，才会执行 `default` case。 `default` case 最后一个进行计算（无论文本顺序如何）。 如果不存在任何 `default` case，并且没有其他 `case` 语句匹配，则会在 `switch` 语句后的语句处继续执行。 不会执行任何 `case` 标签代码。
+<span data-ttu-id="d3f12-171">限制为常量值时，最多只有一个 `case` 标签可以与 `switch` 表达式的值匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-171">When limited to constant values, no more than one `case` label could match the value of the `switch` expression.</span></span> <span data-ttu-id="d3f12-172">将该规则与每个 `switch` 部分不得贯穿到下一个部分的规则相结合，这样 `switch` 部分便可以按任何顺序重新排列而不会影响行为。</span><span class="sxs-lookup"><span data-stu-id="d3f12-172">Combine that with the rule that every `switch` section must not fall through to the next section, and it followed that the `switch` sections could be rearranged in any order without affecting behavior.</span></span>
+<span data-ttu-id="d3f12-173">现在，使用更加通用的 `switch` 表达式时，每个部分的顺序都非常重要。</span><span class="sxs-lookup"><span data-stu-id="d3f12-173">Now, with more generalized `switch` expressions, the order of each section matters.</span></span> <span data-ttu-id="d3f12-174">`switch` 表达式按文本顺序进行计算。</span><span class="sxs-lookup"><span data-stu-id="d3f12-174">The `switch` expressions are evaluated in textual order.</span></span> <span data-ttu-id="d3f12-175">执行会转移到与 `switch` 表达式匹配的第一个 `switch` 匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-175">Execution transfers to the first `switch` label that matches the `switch` expression.</span></span>  
+<span data-ttu-id="d3f12-176">请注意，仅当其他任何 case 标签都不匹配时，才会执行 `default` case。</span><span class="sxs-lookup"><span data-stu-id="d3f12-176">Note that the `default` case will only be executed if no other case labels match.</span></span> <span data-ttu-id="d3f12-177">`default` case 最后一个进行计算（无论文本顺序如何）。</span><span class="sxs-lookup"><span data-stu-id="d3f12-177">The `default` case is evaluated last, regardless of its textual order.</span></span> <span data-ttu-id="d3f12-178">如果不存在任何 `default` case，并且没有其他 `case` 语句匹配，则会在 `switch` 语句后的语句处继续执行。</span><span class="sxs-lookup"><span data-stu-id="d3f12-178">If there is no `default` case, and none of the other `case` statements match, execution continues at the statement following the `switch` statement.</span></span> <span data-ttu-id="d3f12-179">不会执行任何 `case` 标签代码。</span><span class="sxs-lookup"><span data-stu-id="d3f12-179">None of the `case` labels code is executed.</span></span>
 
-## <a name="when-clauses-in-case-expressions"></a>`case` 表达式中的 `when` 语句
+## <a name="when-clauses-in-case-expressions"></a><span data-ttu-id="d3f12-180">`case` 表达式中的 `when` 语句</span><span class="sxs-lookup"><span data-stu-id="d3f12-180">`when` clauses in `case` expressions</span></span>
 
-可以通过对 `case` 标签使用 `when` 子句，为面积为 0 的那些形状创建特殊 case。 边长为 0 的正方形，或半径为 0 的圆形的面积为 0。 可通过对 `case` 标签使用 `when` 语句来指定该条件：  
+<span data-ttu-id="d3f12-181">可以通过对 `case` 标签使用 `when` 子句，为面积为 0 的那些形状创建特殊 case。</span><span class="sxs-lookup"><span data-stu-id="d3f12-181">You can make special cases for those shapes that have 0 area by using a `when` clause on the `case` label.</span></span> <span data-ttu-id="d3f12-182">边长为 0 的正方形，或半径为 0 的圆形的面积为 0。</span><span class="sxs-lookup"><span data-stu-id="d3f12-182">A square with a side length of 0, or a circle with a radius of 0 has a 0 area.</span></span> <span data-ttu-id="d3f12-183">可通过对 `case` 标签使用 `when` 语句来指定该条件：</span><span class="sxs-lookup"><span data-stu-id="d3f12-183">You specify that condition using a `when` clause on the `case` label:</span></span>  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "计算面积为 0 的形状")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
-此更改演示了有关新语法的几个要点。 首先，多个 `case` 标签可以应用于一个 `switch` 部分。 在其中任何标签为 `true` 时执行语句块。 在此例中，如果 `switch` 表达式是面积为 0 的圆形或正方形，则方法返回常量 0。
+<span data-ttu-id="d3f12-184">此更改演示了有关新语法的几个要点。</span><span class="sxs-lookup"><span data-stu-id="d3f12-184">This change demonstrates a few important points about the new syntax.</span></span> <span data-ttu-id="d3f12-185">首先，多个 `case` 标签可以应用于一个 `switch` 部分。</span><span class="sxs-lookup"><span data-stu-id="d3f12-185">First, multiple `case` labels can be applied to one `switch` section.</span></span> <span data-ttu-id="d3f12-186">在其中任何标签为 `true` 时执行语句块。</span><span class="sxs-lookup"><span data-stu-id="d3f12-186">The statement block is executed when any of those labels is `true`.</span></span> <span data-ttu-id="d3f12-187">在此例中，如果 `switch` 表达式是面积为 0 的圆形或正方形，则方法返回常量 0。</span><span class="sxs-lookup"><span data-stu-id="d3f12-187">In this instance, if the `switch` expression is either a circle or a square with 0 area, the method returns the constant 0.</span></span>
 
-此示例为第一个 `switch` 块在两个 `case` 标签中引入了两个不同的变量。 请注意，此 `switch` 块中的语句未使用变量 `c`（用于圆形） 或 `s`（用于正方形）。
-这两个变量在此 `switch` 块中都未明确赋值。
-如果有任一 case 匹配，则对其中一个变量明确赋值。
-但是，无法在编译时判断对哪个变量进行赋值，因为任一 case 在运行时都可能会匹配。 因此，在将多个 `case` 标签用于同一个块的大多数时候，不会在 `case` 语句中引入新变量，或者只在 `when` 子句中使用变量。
+<span data-ttu-id="d3f12-188">此示例为第一个 `switch` 块在两个 `case` 标签中引入了两个不同的变量。</span><span class="sxs-lookup"><span data-stu-id="d3f12-188">This example introduces two different variables in the two `case` labels for the first `switch` block.</span></span> <span data-ttu-id="d3f12-189">请注意，此 `switch` 块中的语句未使用变量 `c`（用于圆形） 或 `s`（用于正方形）。</span><span class="sxs-lookup"><span data-stu-id="d3f12-189">Notice that the statements in this `switch` block do not use either the variables `c` (for the circle) or `s` (for the square).</span></span>
+<span data-ttu-id="d3f12-190">这两个变量在此 `switch` 块中都未明确赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-190">Neither of those variables is definitely assigned in this `switch` block.</span></span>
+<span data-ttu-id="d3f12-191">如果有任一 case 匹配，则对其中一个变量明确赋值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-191">If either of these cases match, clearly one of the variables has been assigned.</span></span>
+<span data-ttu-id="d3f12-192">但是，无法在编译时判断对哪个变量进行赋值，因为任一 case 在运行时都可能会匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-192">However, it is impossible to tell *which* has been assigned at compile-time, because either case could match at runtime.</span></span> <span data-ttu-id="d3f12-193">因此，在将多个 `case` 标签用于同一个块的大多数时候，不会在 `case` 语句中引入新变量，或者只在 `when` 子句中使用变量。</span><span class="sxs-lookup"><span data-stu-id="d3f12-193">For that reason, most times when you use multiple `case` labels for the same block, you won't introduce a new variable in the `case` statement, or you will only use the variable in the `when` clause.</span></span>
 
-添加了这些面积为 0 的形状之后，我们再添加一些形状类型：一个矩形和一个三角形：
+<span data-ttu-id="d3f12-194">添加了这些面积为 0 的形状之后，我们再添加一些形状类型：一个矩形和一个三角形：</span><span class="sxs-lookup"><span data-stu-id="d3f12-194">Having added those shapes with 0 area, let's add a couple more shape types: a rectangle and a triangle:</span></span>
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "添加矩形和三角形")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- 这组更改为每个新形状的退化情况、标签和块添加 `case` 标签。 
+ <span data-ttu-id="d3f12-195">这组更改为每个新形状的退化情况、标签和块添加 `case` 标签。</span><span class="sxs-lookup"><span data-stu-id="d3f12-195">This set of changes adds `case` labels for the degenerate case, and labels and blocks for each of the new shapes.</span></span> 
 
-最后，可以添加 `null` case 以确保参数不是 `null`：
+<span data-ttu-id="d3f12-196">最后，可以添加 `null` case 以确保参数不是 `null`：</span><span class="sxs-lookup"><span data-stu-id="d3f12-196">Finally, you can add a `null` case to ensure the argument is not `null`:</span></span>
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "添加 null case")]
+[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的类型。 没有将 `null` 转换为任何类型，语言定义 `null` 值不会匹配任何类型模式（无论该变量的编译时类型是什么，都是如此）。 此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。 而且更简单：一旦检查类型，便不需要其他的 null 检查。 对于此，可以从上面的示例中的任何块中均不存在 null 检查得知：它们不是必需的，因为与类型模式匹配即可保证非 null 值。
+<span data-ttu-id="d3f12-197">`null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-197">The special behavior for the `null` pattern is interesting because the constant `null` in the pattern does not have a type but can be converted to any reference type or nullable type.</span></span> <span data-ttu-id="d3f12-198">没有将 `null` 转换为任何类型，语言定义 `null` 值不会匹配任何类型模式（无论该变量的编译时类型是什么，都是如此）。</span><span class="sxs-lookup"><span data-stu-id="d3f12-198">Rather than convert a `null` to any type, the language defines that a `null` value will not match any type pattern, regardless of the compile-time type of the variable.</span></span> <span data-ttu-id="d3f12-199">此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。</span><span class="sxs-lookup"><span data-stu-id="d3f12-199">This behavior makes the new `switch` based type pattern consistent with the `is` statement: `is` statements always return `false` when the value being checked is `null`.</span></span> <span data-ttu-id="d3f12-200">而且更简单：一旦检查类型，便不需要其他的 null 检查。</span><span class="sxs-lookup"><span data-stu-id="d3f12-200">It's also simpler: once you have checked the type, you don't need an additional null check.</span></span> <span data-ttu-id="d3f12-201">对于此，可以从上面的示例中的任何块中均不存在 null 检查得知：它们不是必需的，因为与类型模式匹配即可保证非 null 值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-201">You can see that from the fact that there are no null checks in any of the case blocks of the samples above: they are not necessary, since matching the type pattern guarantees a non-null value.</span></span>
 
-## <a name="conclusions"></a>结论
+## <a name="var-declarations-in-case-expressions"></a><span data-ttu-id="d3f12-202">`var`中的声明`case`表达式</span><span class="sxs-lookup"><span data-stu-id="d3f12-202">`var` declarations in `case` expressions</span></span>
 
-模式匹配构造使你可以在未通过继承层次结构相关的不同变量和类型间轻松地管理控制流。 还可以控制逻辑以使用对变量进行测试的任何条件。 这可实现在生成分布程度更高的应用程序（其中的数据和操作这些数据的方法是分开的）时更常需要的模式和惯例。 你会注意到，此示例中使用的形状结构不包含任何方法，只包含只读属性。
-模式匹配适用于任何数据类型。 你编写了检查对象并基于这些条件进行控制流决策的表达式。
+<span data-ttu-id="d3f12-203">引入`var`匹配表达式之一引进到模式匹配项的新规则。</span><span class="sxs-lookup"><span data-stu-id="d3f12-203">The introduction of `var` as one of the match expressions introduces new rules to the pattern match.</span></span>
 
-将此示例中的代码与通过为抽象 `Shape` 和特定派生类（各自具有自己的用于计算面积的虚方法实现）创建类层次结构而产生的设计进行比较。 你通常会发现，在处理数据并希望将数据存储问题与行为问题分开时，模式匹配表达式可能是非常有用的工具。
+<span data-ttu-id="d3f12-204">第一个规则是`var`声明后面的正常类型推断规则： 类型推断为 switch 表达式的静态类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-204">The first rule is that the `var` declaration follows the normal type inference rules: The type is inferred to be the static type of the switch expression.</span></span> <span data-ttu-id="d3f12-205">该规则中，从类型始终匹配。</span><span class="sxs-lookup"><span data-stu-id="d3f12-205">From that rule, the type always matches.</span></span>
 
+<span data-ttu-id="d3f12-206">第二条规则是`var`声明没有其他类型的模式表达式包含 null 检查。</span><span class="sxs-lookup"><span data-stu-id="d3f12-206">The second rule is that a `var` declaration does not have the null check that other type pattern expressions include.</span></span> <span data-ttu-id="d3f12-207">这意味着变量可能为 null，并且在这种情况下是必需的 null 检查。</span><span class="sxs-lookup"><span data-stu-id="d3f12-207">That means the variable may be null, and a null check is necessary in that case.</span></span>
+
+<span data-ttu-id="d3f12-208">这些两个规则意味着在许多情况下，`var`中的声明`case`作为的相同条件相匹配的表达式`default`表达式。</span><span class="sxs-lookup"><span data-stu-id="d3f12-208">Those two rules mean that in many instances, a `var` declaration in a `case` expression matches the same conditions as a `default` expression.</span></span>
+<span data-ttu-id="d3f12-209">因为任何非默认情况下是优先于`default`情况下，`default`用例将永远不会执行。</span><span class="sxs-lookup"><span data-stu-id="d3f12-209">Because any non-default case is preferred to the `default` case, the `default` case will never execute.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="d3f12-210">编译器不会发出警告在这些情况下其中`default`用例已写入，但将永远不会执行。</span><span class="sxs-lookup"><span data-stu-id="d3f12-210">The compiler does not emit a warning in those cases where a `default` case has been written but will never execute.</span></span> <span data-ttu-id="d3f12-211">这是一致与当前`switch`列出所有可能的情况下了语句行为。</span><span class="sxs-lookup"><span data-stu-id="d3f12-211">This is consistent with current `switch` statement behavior where all possible cases have been listed.</span></span>
+
+<span data-ttu-id="d3f12-212">第三个规则引入了使用其中`var`用例可能会很有用。</span><span class="sxs-lookup"><span data-stu-id="d3f12-212">The third rule introduces uses where a `var` case may be useful.</span></span> <span data-ttu-id="d3f12-213">假设你正在模式匹配的输入是一个字符串，其中你搜索所知的命令的值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-213">Imagine that you are doing a pattern match where the input is a string and you are searching for known command values.</span></span> <span data-ttu-id="d3f12-214">你可以编写类似于：</span><span class="sxs-lookup"><span data-stu-id="d3f12-214">You might write something like:</span></span>
+
+[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+
+<span data-ttu-id="d3f12-215">`var`种情况下，匹配`null`，空字符串或任何字符串，其中包含仅由空白。</span><span class="sxs-lookup"><span data-stu-id="d3f12-215">The `var` case matches `null`, the empty string, or any string that contains only whitespace.</span></span> <span data-ttu-id="d3f12-216">请注意，上面的代码中使用`?.`运算符，以确保，它不会意外引发<xref:System.NullReferenceException>。</span><span class="sxs-lookup"><span data-stu-id="d3f12-216">Notice that the preceding code uses the `?.` operator to ensure that it does not accidentally throw a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="d3f12-217">`default`情况下处理此命令解析程序不理解的其他任何字符串值。</span><span class="sxs-lookup"><span data-stu-id="d3f12-217">The `default` case handles any other string values that are not understood by this command parser.</span></span>
+
+<span data-ttu-id="d3f12-218">这是一个示例可能需要考虑`var`case 表达式不同于`default`表达式。</span><span class="sxs-lookup"><span data-stu-id="d3f12-218">This is one example where you may want to consider a `var` case expression that is distinct from a `default` expression.</span></span>
+
+## <a name="conclusions"></a><span data-ttu-id="d3f12-219">结论</span><span class="sxs-lookup"><span data-stu-id="d3f12-219">Conclusions</span></span>
+
+<span data-ttu-id="d3f12-220">模式匹配构造使你可以在未通过继承层次结构相关的不同变量和类型间轻松地管理控制流。</span><span class="sxs-lookup"><span data-stu-id="d3f12-220">*Pattern Matching constructs* enable you to easily manage control flow among different variables and types that are not related by an inheritance hierarchy.</span></span> <span data-ttu-id="d3f12-221">还可以控制逻辑以使用对变量进行测试的任何条件。</span><span class="sxs-lookup"><span data-stu-id="d3f12-221">You can also control logic to use any condition you test on the variable.</span></span> <span data-ttu-id="d3f12-222">这可实现在生成分布程度更高的应用程序（其中的数据和操作这些数据的方法是分开的）时更常需要的模式和惯例。</span><span class="sxs-lookup"><span data-stu-id="d3f12-222">It enables patterns and idioms that you'll need more often as you build more distributed applications, where data and the methods that manipulate that data are separate.</span></span> <span data-ttu-id="d3f12-223">你会注意到，此示例中使用的形状结构不包含任何方法，只包含只读属性。</span><span class="sxs-lookup"><span data-stu-id="d3f12-223">You'll notice that the shape structs used in this sample do not contain any methods, just read-only properties.</span></span>
+<span data-ttu-id="d3f12-224">模式匹配适用于任何数据类型。</span><span class="sxs-lookup"><span data-stu-id="d3f12-224">Pattern Matching works with any data type.</span></span> <span data-ttu-id="d3f12-225">你编写了检查对象并基于这些条件进行控制流决策的表达式。</span><span class="sxs-lookup"><span data-stu-id="d3f12-225">You write expressions that examine the object, and make control flow decisions based on those conditions.</span></span>
+
+<span data-ttu-id="d3f12-226">将此示例中的代码与通过为抽象 `Shape` 和特定派生类（各自具有自己的用于计算面积的虚方法实现）创建类层次结构而产生的设计进行比较。</span><span class="sxs-lookup"><span data-stu-id="d3f12-226">Compare the code from this sample with the design that would follow from creating a class hierarchy for an abstract `Shape` and specific derived shapes each with their own implementation of a virtual method to calculate the area.</span></span> <span data-ttu-id="d3f12-227">你通常会发现，在处理数据并希望将数据存储问题与行为问题分开时，模式匹配表达式可能是非常有用的工具。</span><span class="sxs-lookup"><span data-stu-id="d3f12-227">You'll often find that pattern matching expressions can be a very useful tool when you are working with data and want to separate the data storage concerns from the behavior concerns.</span></span>
 

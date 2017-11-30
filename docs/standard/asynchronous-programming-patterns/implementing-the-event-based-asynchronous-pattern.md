@@ -1,84 +1,90 @@
 ---
-title: "实现基于事件的异步模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于事件的异步模式"
-  - "ProgressChangedEventArgs 类"
-  - "BackgroundWorker 组件"
-  - "事件 [.NET Framework], 异步"
-  - "异步模式"
-  - "AsyncOperationManager 类"
-  - "线程处理 [.NET Framework], 异步功能"
-  - "组件 [.NET Framework] 异步"
-  - "AsyncOperation 类"
-  - "AsyncCompletedEventArgs 类"
+title: "实现基于事件的异步模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b4df5e4df914d932c7413e9330e8663753456c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 实现基于事件的异步模式
-如果您正在编写具有某些操作可能会带来明显的延迟的类，请考虑通过实现提供异步功能[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
+# <a name="implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="105e3-102">实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="105e3-102">Implementing the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="105e3-103">如果你正在编写的类具有一些可能会带来明显延迟的操作，请考虑实施[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的操作，为该类提供异步功能。</span><span class="sxs-lookup"><span data-stu-id="105e3-103">If you are writing a class with some operations that may incur noticeable delays, consider giving it asynchronous functionality by implementing [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span></span>  
   
- 基于事件的异步模式提供了标准化的方式打包具有异步功能的类。 如果使用的帮助器类实现如下所示<xref:System.ComponentModel.AsyncOperationManager>，您的类将正常工作在任何应用程序模型，包括[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，控制台应用程序和 Windows 窗体应用程序。  
+ <span data-ttu-id="105e3-104">基于事件的异步模式提供了打包具有异步功能的类的标准化方式。</span><span class="sxs-lookup"><span data-stu-id="105e3-104">The Event-based Asynchronous Pattern provides a standardized way to package a class that has asynchronous features.</span></span> <span data-ttu-id="105e3-105">如果使用的帮助器类实施的例如<xref:System.ComponentModel.AsyncOperationManager>，你的类将任何应用程序在模式下，会正常工作包括[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，控制台应用程序和 Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="105e3-105">If implemented with helper classes like <xref:System.ComponentModel.AsyncOperationManager>, your class will work correctly under any application model, including [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], Console applications, and Windows Forms applications.</span></span>  
   
- 实现基于事件的异步模式示例，请参阅[如何︰ 实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-106">有关实现基于事件的异步模式的示例，请参阅[如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。</span><span class="sxs-lookup"><span data-stu-id="105e3-106">For an example that implements the Event-based Asynchronous Pattern, see [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span></span>  
   
- 对于简单的异步操作，您可能会发现<xref:System.ComponentModel.BackgroundWorker>合适的组件。 有关详细信息<xref:System.ComponentModel.BackgroundWorker>，请参阅[如何︰ 在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
+ <span data-ttu-id="105e3-107">对于简单的异步操作，你可能会发现<xref:System.ComponentModel.BackgroundWorker>合适的组件。</span><span class="sxs-lookup"><span data-stu-id="105e3-107">For simple asynchronous operations, you may find the <xref:System.ComponentModel.BackgroundWorker> component suitable.</span></span> <span data-ttu-id="105e3-108">有关详细信息<xref:System.ComponentModel.BackgroundWorker>，请参阅[如何： 在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。</span><span class="sxs-lookup"><span data-stu-id="105e3-108">For more information about <xref:System.ComponentModel.BackgroundWorker>, see [How to: Run an Operation in the Background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).</span></span>  
   
- 以下列表介绍本主题中讨论的基于事件的异步模式的功能。  
+ <span data-ttu-id="105e3-109">以下列表介绍本主题中讨论的基于事件的异步模式的功能。</span><span class="sxs-lookup"><span data-stu-id="105e3-109">The following list describes the features of the Event-based Asynchronous Pattern discussed in this topic.</span></span>  
   
--   为实现基于事件的异步模式的机会  
+-   <span data-ttu-id="105e3-110">实现基于事件的异步模式的时机</span><span class="sxs-lookup"><span data-stu-id="105e3-110">Opportunities for Implementing the Event-based Asynchronous Pattern</span></span>  
   
--   指定异步方法  
+-   <span data-ttu-id="105e3-111">命名异步方法</span><span class="sxs-lookup"><span data-stu-id="105e3-111">Naming Asynchronous Methods</span></span>  
   
--   可以选择支持取消  
+-   <span data-ttu-id="105e3-112">选择性地支持取消</span><span class="sxs-lookup"><span data-stu-id="105e3-112">Optionally Support Cancellation</span></span>  
   
--   选择性地分别支持 IsBusy 属性  
+-   <span data-ttu-id="105e3-113">选择性地支持 IsBusy 属性</span><span class="sxs-lookup"><span data-stu-id="105e3-113">Optionally Support the IsBusy Property</span></span>  
   
--   （可选） 为进度报告提供支持  
+-   <span data-ttu-id="105e3-114">选择性地为进度报告提供支持</span><span class="sxs-lookup"><span data-stu-id="105e3-114">Optionally Provide Support for Progress Reporting</span></span>  
   
--   可以选择对返回增量结果提供支持  
+-   <span data-ttu-id="105e3-115">选择性地为返回增量结果提供支持</span><span class="sxs-lookup"><span data-stu-id="105e3-115">Optionally Provide Support for Returning Incremental Results</span></span>  
   
--   处理 Out 和 Ref 参数在方法中  
+-   <span data-ttu-id="105e3-116">处理方法中的 Out 和 Ref 参数</span><span class="sxs-lookup"><span data-stu-id="105e3-116">Handling Out and Ref Parameters in Methods</span></span>  
   
-## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>为实现基于事件的异步模式的机会  
- 请考虑实现基于事件的异步模式时︰  
+## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="105e3-117">实现基于事件的异步模式的时机</span><span class="sxs-lookup"><span data-stu-id="105e3-117">Opportunities for Implementing the Event-based Asynchronous Pattern</span></span>  
+ <span data-ttu-id="105e3-118">请在以下情况下，考虑实现基于事件的异步模式：</span><span class="sxs-lookup"><span data-stu-id="105e3-118">Consider implementing the Event-based Asynchronous Pattern when:</span></span>  
   
--   类的客户端不需要<xref:System.Threading.WaitHandle>和<xref:System.IAsyncResult>对象可用于异步操作，意味着轮询和<xref:System.Threading.WaitHandle.WaitAll%2A>或<xref:System.Threading.WaitHandle.WaitAny%2A>需要构建由客户端。  
+-   <span data-ttu-id="105e3-119">类的客户端不需要<xref:System.Threading.WaitHandle>和<xref:System.IAsyncResult>对象可用于异步操作，这意味着该轮询和<xref:System.Threading.WaitHandle.WaitAll%2A>或<xref:System.Threading.WaitHandle.WaitAny%2A>需要构建客户端。</span><span class="sxs-lookup"><span data-stu-id="105e3-119">Clients of your class do not need <xref:System.Threading.WaitHandle> and <xref:System.IAsyncResult> objects available for asynchronous operations, meaning that polling and <xref:System.Threading.WaitHandle.WaitAll%2A> or <xref:System.Threading.WaitHandle.WaitAny%2A> will need to be built up by the client.</span></span>  
   
--   您希望能够通过熟悉的事件/委托模型为客户端管理的异步操作。  
+-   <span data-ttu-id="105e3-120">你希望异步操作由客户端使用常见的事件/委托模型进行托管。</span><span class="sxs-lookup"><span data-stu-id="105e3-120">You want asynchronous operations to be managed by the client with the familiar event/delegate model.</span></span>  
   
- 任何操作的异步实现的候选项，但是应考虑那些希望会产生较长的延迟。 尤其是合适的操作的客户端调用方法，并向您发送通知完成时，无需进一步的干预。 也是合适的连续运行、 定期通知进度、 增量结果和状态更改的客户端的操作。  
+ <span data-ttu-id="105e3-121">对于异步实现，任何操作都是候选项，但应优先考虑预计会产生较长延迟的操作。</span><span class="sxs-lookup"><span data-stu-id="105e3-121">Any operation is a candidate for an asynchronous implementation, but those you expect to incur long latencies should be considered.</span></span> <span data-ttu-id="105e3-122">最适合的操作是客户端在其中调用方法，并在完成时收到通知，无需进一步的干预。</span><span class="sxs-lookup"><span data-stu-id="105e3-122">Especially appropriate are operations in which clients call a method and are notified on completion, with no further intervention required.</span></span> <span data-ttu-id="105e3-123">其次是连续运行、定期向客户端通知进度、增量结果和状态更改的操作。</span><span class="sxs-lookup"><span data-stu-id="105e3-123">Also appropriate are operations which run continuously, periodically notifying clients of progress, incremental results, or state changes.</span></span>  
   
- 决定何时支持基于事件的异步模式的详细信息，请参阅[决定何时实现基于事件的异步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-124">若要深入了解决定何时支持基于事件的异步模式，请参阅[决定何时实现基于事件的异步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)。</span><span class="sxs-lookup"><span data-stu-id="105e3-124">For more information on deciding when to support the Event-based Asynchronous Pattern, see [Deciding When to Implement the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="naming-asynchronous-methods"></a>指定异步方法  
- 对于每个同步方法*MethodName*要为其提供了异步对应项︰  
+## <a name="naming-asynchronous-methods"></a><span data-ttu-id="105e3-125">命名异步方法</span><span class="sxs-lookup"><span data-stu-id="105e3-125">Naming Asynchronous Methods</span></span>  
+ <span data-ttu-id="105e3-126">对于要向其提供异步等效方法的每个同步方法 *MethodName*：</span><span class="sxs-lookup"><span data-stu-id="105e3-126">For each synchronous method *MethodName* for which you want to provide an asynchronous counterpart:</span></span>  
   
- 定义*MethodName* `Async`方法的︰  
+ <span data-ttu-id="105e3-127">定义满足以下条件的 *MethodName*`Async` 方法：</span><span class="sxs-lookup"><span data-stu-id="105e3-127">Define a *MethodName*`Async` method that:</span></span>  
   
--   返回 `void`。  
+-   <span data-ttu-id="105e3-128">返回 `void`。</span><span class="sxs-lookup"><span data-stu-id="105e3-128">Returns `void`.</span></span>  
   
--   采用相同参数作为*MethodName*方法。  
+-   <span data-ttu-id="105e3-129">采用与 *MethodName* 方法相同的参数。</span><span class="sxs-lookup"><span data-stu-id="105e3-129">Takes the same parameters as the *MethodName* method.</span></span>  
   
--   接受多个调用。  
+-   <span data-ttu-id="105e3-130">接受多个调用。</span><span class="sxs-lookup"><span data-stu-id="105e3-130">Accepts multiple invocations.</span></span>  
   
- 还可以定义*MethodName* `Async`重载时，等于*MethodName*`Async`，但具有附加的对象值的参数调用`userState`。 如果已准备好开始管理多个并发调用的方法中，在这种情况下执行此操作`userState`值将传递回所有事件处理程序来区分在方法的调用。 您还可以选择这样做只是作为一个位置来存储用户状态，以便于以后检索。  
+ <span data-ttu-id="105e3-131">选择性地定义一个与 *MethodName*`Async` 相同的 *MethodName*`Async`重载，但是让它带有一个附加的对象赋值的参数（即 `userState`）。</span><span class="sxs-lookup"><span data-stu-id="105e3-131">Optionally define a *MethodName*`Async` overload, identical to *MethodName*`Async`, but with an additional object-valued parameter called `userState`.</span></span> <span data-ttu-id="105e3-132">如果已准备好管理方法的多个并发调用（在这种情况下，`userState` 值将传递回所有事件处理程序以区分方法的调用），可使用此方法。</span><span class="sxs-lookup"><span data-stu-id="105e3-132">Do this if you're prepared to manage multiple concurrent invocations of your method, in which case the `userState` value will be delivered back to all event handlers to distinguish invocations of the method.</span></span> <span data-ttu-id="105e3-133">也可以选择将其简单地作为存储用户状态以供以后检索的位置。</span><span class="sxs-lookup"><span data-stu-id="105e3-133">You may also choose to do this simply as a place to store user state for later retrieval.</span></span>  
   
- 对于每个单独*MethodName* `Async`方法签名︰  
+ <span data-ttu-id="105e3-134">对于每个单独的 *MethodName*`Async` 方法签名：</span><span class="sxs-lookup"><span data-stu-id="105e3-134">For each separate *MethodName*`Async` method signature:</span></span>  
   
-1.  在该方法相同的类中定义了以下事件︰  
+1.  <span data-ttu-id="105e3-135">在与方法相同的类中定义以下事件：</span><span class="sxs-lookup"><span data-stu-id="105e3-135">Define the following event in the same class as the method:</span></span>  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -88,7 +94,7 @@ caps.handback.revision: 20
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  定义以下委托和<xref:System.ComponentModel.AsyncCompletedEventArgs>。 这些值可能会超出类本身，但同一命名空间中定义。  
+2.  <span data-ttu-id="105e3-136">定义以下委托和<xref:System.ComponentModel.AsyncCompletedEventArgs>。</span><span class="sxs-lookup"><span data-stu-id="105e3-136">Define the following delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs>.</span></span> <span data-ttu-id="105e3-137">这些可能会在类本身之外、但在相同命名空间中定义。</span><span class="sxs-lookup"><span data-stu-id="105e3-137">These will likely be defined outside of the class itself, but in the same namespace.</span></span>  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -111,108 +117,108 @@ caps.handback.revision: 20
     }  
     ```  
   
-    -   确保*MethodName* `CompletedEventArgs`类将其成员公开为只读属性，而不是字段，因为字段会阻止数据绑定。  
+    -   <span data-ttu-id="105e3-138">确保 *MethodName*`CompletedEventArgs` 类将其成员公开为只读属性而不是字段，因为字段会阻止数据绑定。</span><span class="sxs-lookup"><span data-stu-id="105e3-138">Ensure that the *MethodName*`CompletedEventArgs` class exposes its members as read-only properties, and not fields, as fields prevent data binding.</span></span>  
   
-    -   未定义任何<xref:System.ComponentModel.AsyncCompletedEventArgs>的派生类不会产生结果的方法。 只需使用的一个实例<xref:System.ComponentModel.AsyncCompletedEventArgs>本身。  
+    -   <span data-ttu-id="105e3-139">未定义任何<xref:System.ComponentModel.AsyncCompletedEventArgs>-派生不会产生结果的方法的类。</span><span class="sxs-lookup"><span data-stu-id="105e3-139">Do not define any <xref:System.ComponentModel.AsyncCompletedEventArgs>-derived classes for methods that do not produce results.</span></span> <span data-ttu-id="105e3-140">只需使用的实例<xref:System.ComponentModel.AsyncCompletedEventArgs>本身。</span><span class="sxs-lookup"><span data-stu-id="105e3-140">Simply use an instance of <xref:System.ComponentModel.AsyncCompletedEventArgs> itself.</span></span>  
   
         > [!NOTE]
-        >  在可行且适当，从而重新使用委托时，它是完全可以接受，和<xref:System.ComponentModel.AsyncCompletedEventArgs>类型。 在这种情况下，命名将不一致和方法名，因为给定的委托和<xref:System.ComponentModel.AsyncCompletedEventArgs>不会与单独某个方法。  
+        >  <span data-ttu-id="105e3-141">在可行且适当，若要重复使用委托时，它是完全可以接受，和<xref:System.ComponentModel.AsyncCompletedEventArgs>类型。</span><span class="sxs-lookup"><span data-stu-id="105e3-141">It is perfectly acceptable, when feasible and appropriate, to reuse delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs> types.</span></span> <span data-ttu-id="105e3-142">在这种情况下，命名将不为一致替换的方法名称，因为给定的委托和<xref:System.ComponentModel.AsyncCompletedEventArgs>不依赖于单个方法。</span><span class="sxs-lookup"><span data-stu-id="105e3-142">In this case, the naming will not be as consistent with the method name, since a given delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs> won't be tied to a single method.</span></span>  
   
-## <a name="optionally-support-cancellation"></a>可以选择支持取消  
- 如果您的类将支持取消异步操作，则按如下所述，向客户端应公开取消。 请注意，有两个需取消支持在定义之前做出的决策点︰  
+## <a name="optionally-support-cancellation"></a><span data-ttu-id="105e3-143">选择性地支持取消</span><span class="sxs-lookup"><span data-stu-id="105e3-143">Optionally Support Cancellation</span></span>  
+ <span data-ttu-id="105e3-144">如果你的类将支持取消异步操作，则应向客户端公开取消（如下所述）。</span><span class="sxs-lookup"><span data-stu-id="105e3-144">If your class will support canceling asynchronous operations, cancellation should be exposed to the client as described below.</span></span> <span data-ttu-id="105e3-145">请注意，定义取消支持之前，需要确定两点：</span><span class="sxs-lookup"><span data-stu-id="105e3-145">Note that there are two decision points that need to be reached before defining your cancellation support:</span></span>  
   
--   您的类，包括将来预计的添加到其中，有只需要一个支持取消操作的异步操作呢？  
+-   <span data-ttu-id="105e3-146">你的类（包括将来预计要添加的内容），是否只具有一个支持取消操作的异步操作？</span><span class="sxs-lookup"><span data-stu-id="105e3-146">Does your class, including future anticipated additions to it, have only one asynchronous operation that supports cancellation?</span></span>  
   
--   是否可以支持多个挂起操作的取消支持的异步操作？ 也就是说，未*MethodName* `Async`方法是否采用`userState`参数，以及它是否允许多个调用在等待任何操作完成之前？  
+-   <span data-ttu-id="105e3-147">支持取消的异步操作是否能支持多个挂起操作？</span><span class="sxs-lookup"><span data-stu-id="105e3-147">Can the asynchronous operations that support cancellation support multiple pending operations?</span></span> <span data-ttu-id="105e3-148">即 *MethodName*`Async` 方法是否采用 `userState` 参数？它是否允许在等待任何操作完成之前进行多个调用？</span><span class="sxs-lookup"><span data-stu-id="105e3-148">That is, does the *MethodName*`Async` method take a `userState` parameter, and does it allow multiple invocations before waiting for any to finish?</span></span>  
   
- 下表中使用这两个问题的答案确定取消方法的签名应该是什么。  
+ <span data-ttu-id="105e3-149">使用下表中的两个问题的答案来确定取消方法的签名。</span><span class="sxs-lookup"><span data-stu-id="105e3-149">Use the answers to these two questions in the table below to determine what the signature for your cancellation method should be.</span></span>  
   
-### <a name="visual-basic"></a>Visual Basic  
+### <a name="visual-basic"></a><span data-ttu-id="105e3-150">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="105e3-150">Visual Basic</span></span>  
   
-||支持的多个并行操作|一次只有一个操作|  
+||<span data-ttu-id="105e3-151">支持多个并行操作</span><span class="sxs-lookup"><span data-stu-id="105e3-151">Multiple Simultaneous Operations Supported</span></span>|<span data-ttu-id="105e3-152">每次一个操作</span><span class="sxs-lookup"><span data-stu-id="105e3-152">Only One Operation at a Time</span></span>|  
 |------|------------------------------------------------|----------------------------------|  
-|在整个类中的一个异步操作|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
-|在类中的多个异步操作|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
+|<span data-ttu-id="105e3-153">整个类中具有一个异步操作</span><span class="sxs-lookup"><span data-stu-id="105e3-153">One Async Operation in entire class</span></span>|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
+|<span data-ttu-id="105e3-154">类中具有多个异步操作</span><span class="sxs-lookup"><span data-stu-id="105e3-154">Multiple Async Operations in class</span></span>|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>C#  
+### <a name="c"></a><span data-ttu-id="105e3-155">C#</span><span class="sxs-lookup"><span data-stu-id="105e3-155">C#</span></span>  
   
-||支持的多个并行操作|一次只有一个操作|  
+||<span data-ttu-id="105e3-156">支持多个并行操作</span><span class="sxs-lookup"><span data-stu-id="105e3-156">Multiple Simultaneous Operations Supported</span></span>|<span data-ttu-id="105e3-157">每次一个操作</span><span class="sxs-lookup"><span data-stu-id="105e3-157">Only One Operation at a Time</span></span>|  
 |------|------------------------------------------------|----------------------------------|  
-|在整个类中的一个异步操作|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
-|在类中的多个异步操作|`void CancelAsync(object userState);`|`void CancelAsync();`|  
+|<span data-ttu-id="105e3-158">整个类中具有一个异步操作</span><span class="sxs-lookup"><span data-stu-id="105e3-158">One Async Operation in entire class</span></span>|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
+|<span data-ttu-id="105e3-159">类中具有多个异步操作</span><span class="sxs-lookup"><span data-stu-id="105e3-159">Multiple Async Operations in class</span></span>|`void CancelAsync(object userState);`|`void CancelAsync();`|  
   
- 如果您定义`CancelAsync(object userState)`方法中，客户端必须仔细选择它们以使其能够区分该对象上调用的所有异步方法的状态值时并不只是一个异步方法的所有调用之间。  
+ <span data-ttu-id="105e3-160">如果定义了 `CancelAsync(object userState)` 方法，客户端在选择状态值时必须小心，以使其能够区分对象上调用的所有异步方法，而不仅仅是在单个异步方法的所有调用之间进行区分。</span><span class="sxs-lookup"><span data-stu-id="105e3-160">If you define the `CancelAsync(object userState)` method, clients must be careful when choosing their state values to make them capable of distinguishing among all asynchronous methods invoked on the object, and not just between all invocations of a single asynchronous method.</span></span>  
   
- 命名单个异步操作版本决定*MethodName* `AsyncCancel`基于能够更轻松地发现类似 Visual Studio IntelliSense 的设计环境中的方法。 这组相关的成员，并将它们与具有与异步功能无关的其他成员区分开来。 如果需要，你可能需要其他异步操作添加在后续版本中，则最好定义`CancelAsync`。  
+ <span data-ttu-id="105e3-161">命名单个异步操作版本 *MethodName*`AsyncCancel` 的决定取决于能否在类似于 Visual Studio 的 IntelliSense 设计环境中更轻松地发现方法。</span><span class="sxs-lookup"><span data-stu-id="105e3-161">The decision to name the single-async-operation version *MethodName*`AsyncCancel` is based on being able to more easily discover the method in a design environment like Visual Studio's IntelliSense.</span></span> <span data-ttu-id="105e3-162">这会对相关的成员进行分组，将与异步功能无关的其他成员区分开来。</span><span class="sxs-lookup"><span data-stu-id="105e3-162">This groups the related members and distinguishes them from other members that have nothing to do with asynchronous functionality.</span></span> <span data-ttu-id="105e3-163">如果预计可能在后续版本中添加其他异步操作，最好定义 `CancelAsync`。</span><span class="sxs-lookup"><span data-stu-id="105e3-163">If you expect that there may be additional asynchronous operations added in subsequent versions, it is better to define `CancelAsync`.</span></span>  
   
- 同一个类中未定义从上表中的多个方法。 程序将毫无意义，或者它将变得混乱增生方法的类接口。  
+ <span data-ttu-id="105e3-164">请勿在同一类中定义上表中的多个方法。</span><span class="sxs-lookup"><span data-stu-id="105e3-164">Do not define multiple methods from the table above in the same class.</span></span> <span data-ttu-id="105e3-165">这将毫无意义，或者会由于方法的泛滥而使类接口变得混乱。</span><span class="sxs-lookup"><span data-stu-id="105e3-165">That will not make sense, or it will clutter the class interface with a proliferation of methods.</span></span>  
   
- 这些方法通常会立即返回，并可能会或可能无法实际取消该操作。 事件处理程序中*MethodName* `Completed`事件， *MethodName* `CompletedEventArgs`对象包含`Cancelled`字段中，客户端可以用来确定是否取消了操作。  
+ <span data-ttu-id="105e3-166">通常，这些方法会立即返回，并且操作实际上可能会/无法取消。</span><span class="sxs-lookup"><span data-stu-id="105e3-166">These methods typically will return immediately, and the operation may or may not actually cancel.</span></span> <span data-ttu-id="105e3-167">在 *MethodName*`Completed` 事件的事件处理程序中，*MethodName*`CompletedEventArgs` 对象包含 `Cancelled` 字段，客户端可使用该字段来确定是否取消了操作。</span><span class="sxs-lookup"><span data-stu-id="105e3-167">In the event handler for the *MethodName*`Completed` event, the *MethodName*`CompletedEventArgs` object contains a `Cancelled` field, which clients can use to determine whether the cancellation occurred.</span></span>  
   
- 遵守中所述的取消语义[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-168">请遵守[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的取消语义。</span><span class="sxs-lookup"><span data-stu-id="105e3-168">Abide by the cancellation semantics described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-support-the-isbusy-property"></a>选择性地分别支持 IsBusy 属性  
- 如果您的类不支持多个并发调用，请考虑公开`IsBusy`属性。 这允许开发人员确定是否*MethodName* `Async`方法是否正在运行，而无需捕获的异常从*MethodName* `Async`方法。  
+## <a name="optionally-support-the-isbusy-property"></a><span data-ttu-id="105e3-169">选择性地支持 IsBusy 属性</span><span class="sxs-lookup"><span data-stu-id="105e3-169">Optionally Support the IsBusy Property</span></span>  
+ <span data-ttu-id="105e3-170">如果你的类不支持多个并发调用，请考虑公开 `IsBusy` 属性。</span><span class="sxs-lookup"><span data-stu-id="105e3-170">If your class does not support multiple concurrent invocations, consider exposing an `IsBusy` property.</span></span> <span data-ttu-id="105e3-171">这可以使开发人员确定 *MethodName*`Async` 方法是否不用捕捉 *MethodName*`Async` 方法中的异常就能运行。</span><span class="sxs-lookup"><span data-stu-id="105e3-171">This allows developers to determine whether a *MethodName*`Async` method is running without catching an exception from the *MethodName*`Async` method.</span></span>  
   
- 遵守`IsBusy`中所述的语义[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-172">请遵守[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的 `IsBusy` 语义。</span><span class="sxs-lookup"><span data-stu-id="105e3-172">Abide by the `IsBusy` semantics described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-provide-support-for-progress-reporting"></a>（可选） 为进度报告提供支持  
- 它是经常希望在其操作期间用于报告进度的异步操作。 基于事件的异步模式提供了有关执行此操作的准则。  
+## <a name="optionally-provide-support-for-progress-reporting"></a><span data-ttu-id="105e3-173">选择性地为进度报告提供支持</span><span class="sxs-lookup"><span data-stu-id="105e3-173">Optionally Provide Support for Progress Reporting</span></span>  
+ <span data-ttu-id="105e3-174">通常期望异步操作在其操作期间报告进度。</span><span class="sxs-lookup"><span data-stu-id="105e3-174">It is frequently desirable for an asynchronous operation to report progress during its operation.</span></span> <span data-ttu-id="105e3-175">基于事件的异步模式提供了执行此操作的准则。</span><span class="sxs-lookup"><span data-stu-id="105e3-175">The Event-based Asynchronous Pattern provides a guideline for doing so.</span></span>  
   
--   还可以定义一个事件，它由异步操作引发并在相应线程上调用。 <xref:System.ComponentModel.ProgressChangedEventArgs>对象携带应为介于 0 和 100 之间的整数值的进度指示器。  
+-   <span data-ttu-id="105e3-176">还可以选择性地定义由异步操作引发并在相应线程上调用的事件。</span><span class="sxs-lookup"><span data-stu-id="105e3-176">Optionally define an event to be raised by the asynchronous operation and invoked on the appropriate thread.</span></span> <span data-ttu-id="105e3-177"><xref:System.ComponentModel.ProgressChangedEventArgs>对象携带应为介于 0 和 100 之间的整数值的进度指示器。</span><span class="sxs-lookup"><span data-stu-id="105e3-177">The <xref:System.ComponentModel.ProgressChangedEventArgs> object carries an integer-valued progress indicator that is expected to be between 0 and 100.</span></span>  
   
--   此事件的名称，如下所示︰  
+-   <span data-ttu-id="105e3-178">按照以下规则命名此事件：</span><span class="sxs-lookup"><span data-stu-id="105e3-178">Name this event as follows:</span></span>  
   
-    -   `ProgressChanged`如果类具有多个异步操作 （或预期增长，以在将来版本中包括多个异步操作）;  
+    -   <span data-ttu-id="105e3-179">如果类具有多个异步操作（或预期将来版本中会包括多个异步操作），则命名为 `ProgressChanged`；</span><span class="sxs-lookup"><span data-stu-id="105e3-179">`ProgressChanged` if the class has multiple asynchronous operations (or is expected to grow to include multiple asynchronous operations in future versions);</span></span>  
   
-    -   *MethodName* `ProgressChanged`如果类具有一个异步操作。  
+    -   <span data-ttu-id="105e3-180">如果类具有单一异步操作，则命名为 *MethodName* `ProgressChanged`。</span><span class="sxs-lookup"><span data-stu-id="105e3-180">*MethodName* `ProgressChanged` if the class has a single asynchronous operation.</span></span>  
   
-     此命名选择类似对取消方法中，进行可以选择支持取消部分中所述。  
+     <span data-ttu-id="105e3-181">该命名方法与命名取消方法（如“选择性地支持取消”部分所述）相同。</span><span class="sxs-lookup"><span data-stu-id="105e3-181">This naming choice parallels that made for the cancellation method, as described in the Optionally Support Cancellation section.</span></span>  
   
- 此事件应使用<xref:System.ComponentModel.ProgressChangedEventHandler>委托签名和<xref:System.ComponentModel.ProgressChangedEventArgs>类。 或者，如果可以 （对于实例、 读取的字节和下载操作的总字节数） 提供更多特定于域的进度指示器，则您应定义的派生的类<xref:System.ComponentModel.ProgressChangedEventArgs>。  
+ <span data-ttu-id="105e3-182">应使用此事件<xref:System.ComponentModel.ProgressChangedEventHandler>委托签名和<xref:System.ComponentModel.ProgressChangedEventArgs>类。</span><span class="sxs-lookup"><span data-stu-id="105e3-182">This event should use the <xref:System.ComponentModel.ProgressChangedEventHandler> delegate signature and the <xref:System.ComponentModel.ProgressChangedEventArgs> class.</span></span> <span data-ttu-id="105e3-183">或者，如果 （对于实例、 读取的字节和下载操作的总字节数），可以提供更特定于域进度指示器，则您应定义的派生的类<xref:System.ComponentModel.ProgressChangedEventArgs>。</span><span class="sxs-lookup"><span data-stu-id="105e3-183">Alternatively, if a more domain-specific progress indicator can be provided (for instance, bytes read and total bytes for a download operation), then you should define a derived class of <xref:System.ComponentModel.ProgressChangedEventArgs>.</span></span>  
   
- 请注意，只有一个`ProgressChanged`或*MethodName* `ProgressChanged`事件的类，而不管它支持的异步方法的数目。 客户端应使用`userState`对象传递给*MethodName* `Async`方法来区分上多个并发操作的进度更新。  
+ <span data-ttu-id="105e3-184">请注意，无论该类支持多少个异步方法，都只有一个 `ProgressChanged` 或 *MethodName*`ProgressChanged` 事件。</span><span class="sxs-lookup"><span data-stu-id="105e3-184">Note that there is only one `ProgressChanged` or *MethodName*`ProgressChanged` event for the class, regardless of the number of asynchronous methods it supports.</span></span> <span data-ttu-id="105e3-185">客户端需要使用传递给 *MethodName*`Async` 方法的 `userState` 对象以区分多个并发操作上的进度更新。</span><span class="sxs-lookup"><span data-stu-id="105e3-185">Clients are expected to use the `userState` object that is passed to the *MethodName*`Async` methods to distinguish among progress updates on multiple concurrent operations.</span></span>  
   
- 可以在其中多个操作支持进度，且每个返回一个不同的进度指示器的情况。 在这种情况下，单个`ProgressChanged`事件不适当情况下，因此您可能要考虑支持多个`ProgressChanged`的事件。 在这种情况下使用的命名模式*MethodName* `ProgressChanged`为每个*MethodName* `Async`方法。  
+ <span data-ttu-id="105e3-186">可能出现多个操作支持进度，并且每个操作返回不同的进度指示器的情况。</span><span class="sxs-lookup"><span data-stu-id="105e3-186">There may be situations in which multiple operations support progress and each returns a different indicator for progress.</span></span> <span data-ttu-id="105e3-187">在这种情况下，不合适支持单个 `ProgressChanged` 事件，你可能需要考虑支持多个 `ProgressChanged` 事件。</span><span class="sxs-lookup"><span data-stu-id="105e3-187">In this case, a single `ProgressChanged` event is not appropriate, and you may consider supporting multiple `ProgressChanged` events.</span></span> <span data-ttu-id="105e3-188">在这种情况下，为每个 *MethodName*`Async` 方法使用 *MethodName*`ProgressChanged` 的命名模式。</span><span class="sxs-lookup"><span data-stu-id="105e3-188">In this case use a naming pattern of *MethodName*`ProgressChanged` for each *MethodName*`Async` method.</span></span>  
   
- 遵守所述的进度报告语义[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-189">请遵守[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的进度报告语义。</span><span class="sxs-lookup"><span data-stu-id="105e3-189">Abide by the progress-reporting semantics described [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-provide-support-for-returning-incremental-results"></a>可以选择对返回增量结果提供支持  
- 有时一个异步操作可以返回之前完成的增量结果。 有大量可用来支持此方案的选项。 下面是一些示例。  
+## <a name="optionally-provide-support-for-returning-incremental-results"></a><span data-ttu-id="105e3-190">选择性地为返回增量结果提供支持</span><span class="sxs-lookup"><span data-stu-id="105e3-190">Optionally Provide Support for Returning Incremental Results</span></span>  
+ <span data-ttu-id="105e3-191">有时异步操作可以在完成之前返回增量结果。</span><span class="sxs-lookup"><span data-stu-id="105e3-191">Sometimes an asynchronous operation can return incremental results prior to completion.</span></span> <span data-ttu-id="105e3-192">可以通过多种方式支持此方案。</span><span class="sxs-lookup"><span data-stu-id="105e3-192">There are a number of options that can be used to support this scenario.</span></span> <span data-ttu-id="105e3-193">下面是一些示例。</span><span class="sxs-lookup"><span data-stu-id="105e3-193">Some examples follow.</span></span>  
   
-### <a name="single-operation-class"></a>单操作类  
- 如果您的类仅支持单个异步操作，并且能够返回增量结果，则该操作︰  
+### <a name="single-operation-class"></a><span data-ttu-id="105e3-194">单一操作类</span><span class="sxs-lookup"><span data-stu-id="105e3-194">Single-operation Class</span></span>  
+ <span data-ttu-id="105e3-195">如果你的类仅支持单一异步操作，并且能够返回增量结果，则可以：</span><span class="sxs-lookup"><span data-stu-id="105e3-195">If your class only supports a single asynchronous operation, and that operation is able to return incremental results, then:</span></span>  
   
--   扩展<xref:System.ComponentModel.ProgressChangedEventArgs>类型以承载增量结果数据，并定义*MethodName* `ProgressChanged`使用此扩展数据的事件。  
+-   <span data-ttu-id="105e3-196">扩展<xref:System.ComponentModel.ProgressChangedEventArgs>类型以承载增量结果数据，并定义*MethodName* `ProgressChanged`与此扩展数据的事件。</span><span class="sxs-lookup"><span data-stu-id="105e3-196">Extend the <xref:System.ComponentModel.ProgressChangedEventArgs> type to carry the incremental result data, and define a *MethodName*`ProgressChanged` event with this extended data.</span></span>  
   
--   引发此*MethodName* `ProgressChanged`事件报告的增量结果时。  
+-   <span data-ttu-id="105e3-197">存在要报告的增量结果时，会引发此 *MethodName*`ProgressChanged` 事件。</span><span class="sxs-lookup"><span data-stu-id="105e3-197">Raise this *MethodName*`ProgressChanged` event when there is an incremental result to report.</span></span>  
   
- 此解决方案特别适用于单异步操作类因为存在与同一事件发生在"所有操作"上的增量结果返回为任何问题*MethodName* `ProgressChanged`事件的作用。  
+ <span data-ttu-id="105e3-198">此解决方案特别适用于单一异步操作类，因为发生的同一事件可以返回“所有操作”上的增量结果，与 *MethodName*`ProgressChanged` 事件的作用相同。</span><span class="sxs-lookup"><span data-stu-id="105e3-198">This solution applies specifically to a single-async-operation class because there is no problem with the same event occurring to return incremental results on "all operations", as the *MethodName*`ProgressChanged` event does.</span></span>  
   
-### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>使用同构的增量结果的多个操作类  
- 在这种情况下，您的类支持多个异步方法，每个能够返回增量结果和这些增量结果都具有相同类型的数据。  
+### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a><span data-ttu-id="105e3-199">使用同类增量结果的多操作类</span><span class="sxs-lookup"><span data-stu-id="105e3-199">Multiple-operation Class with Homogeneous Incremental Results</span></span>  
+ <span data-ttu-id="105e3-200">在这种情况下，你的类支持多个异步方法，每个方法都能够返回增量结果，并且这些增量结果具有相同的数据类型。</span><span class="sxs-lookup"><span data-stu-id="105e3-200">In this case, your class supports multiple asynchronous methods, each capable of returning incremental results, and these incremental results all have the same type of data.</span></span>  
   
- 请按照上面描述的单一操作类，因为同一模型<xref:System.EventArgs>结构将用于所有的增量结果。 定义`ProgressChanged`而不是事件*MethodName* `ProgressChanged`事件，因为它适用于多个异步方法。  
+ <span data-ttu-id="105e3-201">遵循上文所述的单个操作类，作为相同模型<xref:System.EventArgs>结构将适用于所有增量结果。</span><span class="sxs-lookup"><span data-stu-id="105e3-201">Follow the model described above for single-operation classes, as the same <xref:System.EventArgs> structure will work for all incremental results.</span></span> <span data-ttu-id="105e3-202">定义一个 `ProgressChanged` 事件，而不是 *MethodName*`ProgressChanged` 事件，因为它适用于多个异步方法。</span><span class="sxs-lookup"><span data-stu-id="105e3-202">Define a `ProgressChanged` event instead of a *MethodName*`ProgressChanged` event, since it applies to multiple asynchronous methods.</span></span>  
   
-### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>使用异类增量结果的多个操作类  
- 如果您的类支持多个异步方法，每个返回不同类型的数据，您应该︰  
+### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a><span data-ttu-id="105e3-203">使用不同类增量结果的多操作类</span><span class="sxs-lookup"><span data-stu-id="105e3-203">Multiple-operation Class with Heterogeneous Incremental Results</span></span>  
+ <span data-ttu-id="105e3-204">如果你的类支持多个异步方法，每个方法返回不同类型的数据，则应该：</span><span class="sxs-lookup"><span data-stu-id="105e3-204">If your class supports multiple asynchronous methods, each returning a different type of data, you should:</span></span>  
   
--   分隔您增量结果报告与您的进度报告。  
+-   <span data-ttu-id="105e3-205">将增量结果报告与进度报告分开。</span><span class="sxs-lookup"><span data-stu-id="105e3-205">Separate your incremental result reporting from your progress reporting.</span></span>  
   
--   定义单独的*MethodName* `ProgressChanged`具有合适的事件<xref:System.EventArgs>为每个异步方法来处理该方法的增量结果数据。  
+-   <span data-ttu-id="105e3-206">定义单独*MethodName* `ProgressChanged`与相应的事件<xref:System.EventArgs>为每个异步方法以处理该方法的增量结果数据。</span><span class="sxs-lookup"><span data-stu-id="105e3-206">Define a separate *MethodName*`ProgressChanged` event with appropriate <xref:System.EventArgs> for each asynchronous method to handle that method's incremental result data.</span></span>  
   
- 调用适当的线程上该事件处理程序中所述[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)。  
+ <span data-ttu-id="105e3-207">按照[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)所述，在适当线程上调用事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="105e3-207">Invoke that event handler on the appropriate thread as described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="handling-out-and-ref-parameters-in-methods"></a>处理 Out 和 Ref 参数在方法中  
- 尽管使用`out`和`ref`，一般情况下，建议你不要在.NET Framework，以下是在存在时要遵循的规则︰  
+## <a name="handling-out-and-ref-parameters-in-methods"></a><span data-ttu-id="105e3-208">处理方法中的 Out 和 Ref 参数</span><span class="sxs-lookup"><span data-stu-id="105e3-208">Handling Out and Ref Parameters in Methods</span></span>  
+ <span data-ttu-id="105e3-209">虽然一般情况下，建议不要在 .NET Framework 中使用 `out` 和 `ref`但以下是使用它们时要遵循的规则：</span><span class="sxs-lookup"><span data-stu-id="105e3-209">Although the use of `out` and `ref` is, in general, discouraged in the .NET Framework, here are the rules to follow when they are present:</span></span>  
   
- 给定同步方法*MethodName*:  
+ <span data-ttu-id="105e3-210">给定同步方法 *MethodName*：</span><span class="sxs-lookup"><span data-stu-id="105e3-210">Given a synchronous method *MethodName*:</span></span>  
   
--   `out`参数为*MethodName*不应属于*MethodName*`Async`。 相反，它们应属于*MethodName* `CompletedEventArgs`与中的等效参数同名*MethodName* （除非有更合适的名称）。  
+-   <span data-ttu-id="105e3-211">*MethodName* 的 `out` 参数不应为 *MethodName*`Async` 的一部分。</span><span class="sxs-lookup"><span data-stu-id="105e3-211">`out` parameters to *MethodName* should not be part of *MethodName*`Async`.</span></span> <span data-ttu-id="105e3-212">它们应是与 *MethodName* 中的等效参数使用相同名称的 *MethodName*`CompletedEventArgs` 的一部分（除非有更合适的名称）。</span><span class="sxs-lookup"><span data-stu-id="105e3-212">Instead, they should be part of *MethodName*`CompletedEventArgs` with the same name as its parameter equivalent in *MethodName* (unless there is a more appropriate name).</span></span>  
   
--   `ref`参数为*MethodName*应显示为属于*MethodName*`Async`，以及作为的一部分*MethodName* `CompletedEventArgs`与中的等效参数同名*MethodName* （除非有更合适的名称）。  
+-   <span data-ttu-id="105e3-213">*MethodName*的 `ref` 参数应显示为 *MethodName*`Async` 的一部分，并且是与 *MethodName* 中的等效参数使用相同名称的 *MethodName*`CompletedEventArgs` 的一部分（除非有更合适的名称）。</span><span class="sxs-lookup"><span data-stu-id="105e3-213">`ref` parameters to *MethodName* should appear as part of *MethodName*`Async`, and as part of *MethodName*`CompletedEventArgs` with the same name as its parameter equivalent in *MethodName* (unless there is a more appropriate name).</span></span>  
   
- 例如，给定︰  
+ <span data-ttu-id="105e3-214">例如，给定：</span><span class="sxs-lookup"><span data-stu-id="105e3-214">For example, given:</span></span>  
   
 ```vb  
 Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg3 As String) As Integer  
@@ -222,7 +228,7 @@ Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg
 public int MethodName(string arg1, ref string arg2, out string arg3);  
 ```  
   
- 异步方法并将其<xref:System.ComponentModel.AsyncCompletedEventArgs>类将如下所示︰  
+ <span data-ttu-id="105e3-215">异步方法并将其<xref:System.ComponentModel.AsyncCompletedEventArgs>类将如下所示：</span><span class="sxs-lookup"><span data-stu-id="105e3-215">Your asynchronous method and its <xref:System.ComponentModel.AsyncCompletedEventArgs> class would look like this:</span></span>  
   
 ```vb  
 Public Sub MethodNameAsync(ByVal arg1 As String, ByVal arg2 As String)  
@@ -249,12 +255,12 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.ComponentModel.ProgressChangedEventArgs>   
- <xref:System.ComponentModel.AsyncCompletedEventArgs>   
- [如何︰ 实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [如何︰ 在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [如何︰ 实现使用后台操作的窗体](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [确定何时实现基于事件的异步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)   
- [使用基于事件的异步模式的多线程的编程](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="105e3-216">另请参阅</span><span class="sxs-lookup"><span data-stu-id="105e3-216">See Also</span></span>  
+ <xref:System.ComponentModel.ProgressChangedEventArgs>  
+ <xref:System.ComponentModel.AsyncCompletedEventArgs>  
+ [<span data-ttu-id="105e3-217">如何：实现支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="105e3-217">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="105e3-218">如何：在后台运行操作</span><span class="sxs-lookup"><span data-stu-id="105e3-218">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="105e3-219">如何：实现使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="105e3-219">How to: Implement a Form That Uses a Background Operation</span></span>](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [<span data-ttu-id="105e3-220">确定何时实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="105e3-220">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="105e3-221">使用基于事件的异步模式进行多线程编程</span><span class="sxs-lookup"><span data-stu-id="105e3-221">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="105e3-222">实现基于事件的异步模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="105e3-222">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)

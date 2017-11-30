@@ -1,14 +1,10 @@
 ---
 title: "如何：为 Visual Studio 命令行设置环境变量"
-ms.date: 2015-07-20
+ms.date: 09-29-2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.build.commandline
-dev_langs:
-- CSharp
+f1_keywords: cs.build.commandline
 helpviewer_keywords:
 - csc.exe, command-line builds
 - Visual C#, command-line builds
@@ -21,46 +17,34 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8012e310bb04ec3acef0790f9cd50ed42dd9286a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 569683169c6d7ae50c33ed06d3b365a663f16715
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：为 Visual Studio 命令行设置环境变量
-vsvars32.bat 文件设置适当的环境变量以启用命令行生成。 有关 vsvars32.bat 的详细信息，请参阅[知识库文章 Q248802](http://go.microsoft.com/fwlink/?LinkId=225042)。  
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="ac125-102">如何：为 Visual Studio 命令行设置环境变量</span><span class="sxs-lookup"><span data-stu-id="ac125-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
+
+<span data-ttu-id="ac125-103">VsDevCmd.bat 文件设置适当的环境变量，以便命令行生成。</span><span class="sxs-lookup"><span data-stu-id="ac125-103">The VsDevCmd.bat file sets the appropriate environment variables to enable command-line builds.</span></span> <span data-ttu-id="ac125-104">有关 VsDevCmd.bat 的详细信息，请参阅[知识库文章 Q248802](http://go.microsoft.com/fwlink/?LinkId=225042)。</span><span class="sxs-lookup"><span data-stu-id="ac125-104">For more information about VsDevCmd.bat, see [Knowledge Base article Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).</span></span>  
+
+> [!NOTE]
+> <span data-ttu-id="ac125-105">VsDevCmd.bat 文件是随 Visual Studio 2017 提供一个新文件。</span><span class="sxs-lookup"><span data-stu-id="ac125-105">The VsDevCmd.bat file is a new file delivered with Visual Studio 2017.</span></span> <span data-ttu-id="ac125-106">Visual Studio 2015 及更早版本将 VSVARS32.bat 用于相同目的。</span><span class="sxs-lookup"><span data-stu-id="ac125-106">Visual Studio 2015 and earlier versions used VSVARS32.bat for the same purpose.</span></span> <span data-ttu-id="ac125-107">此文件已存储在 files\microsoft Visual Studio\\*版本*\Common7\Tools 或 Program Files (x86) \Microsoft Visual Studio\\*版本*\Common7\Tools。</span><span class="sxs-lookup"><span data-stu-id="ac125-107">This file was stored in \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools.</span></span>
   
- 如果安装了当前版本 Visual Studio 的计算机上也安装了 Visual Studio 的早期版本，则你不应该在同一命令提示符窗口中运行不同版本的 vsvars32.bat 或 vcvars32.bat。  
+<span data-ttu-id="ac125-108">如果还具有 Visual Studio 的早期版本的计算机上安装 Visual Studio 的当前版本，你不应运行 VsDevCmd.bat 和 VSVARS32。BAT 不同版本在同一命令提示符窗口中。</span><span class="sxs-lookup"><span data-stu-id="ac125-108">If the current version of Visual Studio is installed on a computer that also has an earlier version of Visual Studio, you should not run VsDevCmd.bat and VSVARS32.BAT from different versions in the same Command Prompt window.</span></span> <span data-ttu-id="ac125-109">相反，你应在自己的窗口中运行适用于每个版本的命令。</span><span class="sxs-lookup"><span data-stu-id="ac125-109">Instead, you should run the command for each version in its own window.</span></span>
   
-### <a name="to-run-vsvars32bat"></a>若要运行 VSVARS32.BAT  
+### <a name="to-run-vsdevcmdbat"></a><span data-ttu-id="ac125-110">若要运行 VsDevCmd.BAT</span><span class="sxs-lookup"><span data-stu-id="ac125-110">To run VsDevCmd.BAT</span></span>  
   
-1.  从“开始”菜单，打开“VS2012 开发者命令提示”。  
+1.  <span data-ttu-id="ac125-111">从**启动**菜单上，打开**VS 2017 的开发人员命令提示符**。</span><span class="sxs-lookup"><span data-stu-id="ac125-111">From the **Start** menu, open the **Developer Command Prompt for VS 2017**.</span></span>  <span data-ttu-id="ac125-112">在**Visual Studio 2017**文件夹。</span><span class="sxs-lookup"><span data-stu-id="ac125-112">It's in the **Visual Studio 2017** folder.</span></span>
   
-2.  更改为安装目录的 Program Files\Microsoft Visual Studio *Version*\Common7\Tools 或 Program Files (x86)\Microsoft Visual Studio *Version*\Common7\Tools 子目录。  
+2.  <span data-ttu-id="ac125-113">将更改为 files\microsoft Visual Studio\\*版本*\\*产品*\Common7\Tools 或 \Program 文件 (x86) \Microsoft Visual Studio\\*版本*\\*产品*安装 \Common7\Tools 子目录。</span><span class="sxs-lookup"><span data-stu-id="ac125-113">Change to the \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools or \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools subdirectory of your installation.</span></span>  <span data-ttu-id="ac125-114">(*版本*是*2017年*有关最新版本。</span><span class="sxs-lookup"><span data-stu-id="ac125-114">(*Version* is *2017* for the current version.</span></span> <span data-ttu-id="ac125-115">*产品*是之一*企业*， *Professional*或*社区*。)</span><span class="sxs-lookup"><span data-stu-id="ac125-115">*Offering* is one of *Enterprise*, *Professional* or *Community*.)</span></span>
   
-3.  通过键入 VSVARS32 运行 **VSVARS32.bat**。  
+3.  <span data-ttu-id="ac125-116">通过键入运行 VsDevCmd.bat **VsDevCmd**。</span><span class="sxs-lookup"><span data-stu-id="ac125-116">Run VsDevCmd.bat by typing **VsDevCmd**.</span></span>  
   
     > [!CAUTION]
-    >  VSVARS32.bat 在各个计算机间可能大不相同。 不要使用另一台计算机中的 VSVARS32.bat 替换丢失或损坏的 VSVARS32.bat 文件。 而是应重新运行安装程序以替换丢失的文件。  
+    >  <span data-ttu-id="ac125-117">VsDevCmd.bat 异计算机到计算机。</span><span class="sxs-lookup"><span data-stu-id="ac125-117">VsDevCmd.bat can vary from computer to computer.</span></span> <span data-ttu-id="ac125-118">不要使用另一台计算机从 VsDevCmd.bat 替换 VsDevCmd.bat 文件丢失或损坏。</span><span class="sxs-lookup"><span data-stu-id="ac125-118">Do not replace a missing or damaged VsDevCmd.bat file with a VsDevCmd.bat from another computer.</span></span> <span data-ttu-id="ac125-119">而是应重新运行安装程序以替换丢失的文件。</span><span class="sxs-lookup"><span data-stu-id="ac125-119">Instead, rerun setup to replace the missing file.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-
+## <a name="see-also"></a><span data-ttu-id="ac125-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ac125-120">See Also</span></span>  
+ [<span data-ttu-id="ac125-121">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="ac125-121">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

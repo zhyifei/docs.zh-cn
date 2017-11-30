@@ -1,158 +1,164 @@
 ---
-title: "正则表达式行为的详细信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "正则表达式，行为"
-  - ".NET Framework 正则表达式，行为"
+title: "正则表达式行为的详细信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- regular expressions, behavior
+- .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 27
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ac5ddfb0ac7ae83537717e9bd0cd46eb629641fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 正则表达式行为的详细信息
-.NET Framework 正则表达式引擎是回溯的正则表达式匹配器，它并入了传统的非确定性有限自动机 \(NFA\) 引擎（例如 Perl、Python、Emacs 和 Tcl 使用的引擎）。  这使其有别于更快的、但功能更有限的纯正则表达式确定性有限自动机 \(DFA\) 引擎，例如在 awk、egrep 或 lex 中提供的那些引擎。  这也使其有别于标准化的、但较慢的 POSIX NFA。  下面的章节介绍正则表达式引擎的三种类型，并说明为什么要在 .NET Framework 中使用传统的 NFA 引擎来实现正则表达式。  
+# <a name="details-of-regular-expression-behavior"></a><span data-ttu-id="c5a72-102">正则表达式行为的详细信息</span><span class="sxs-lookup"><span data-stu-id="c5a72-102">Details of Regular Expression Behavior</span></span>
+<span data-ttu-id="c5a72-103">.NET Framework 正则表达式引擎是包含如 Perl、 Python、 Emacs 和 Tcl 使用传统的非确定性有限自动机 (NFA) 引擎回溯正则表达式 matcher。</span><span class="sxs-lookup"><span data-stu-id="c5a72-103">The .NET Framework regular expression engine is a backtracking regular expression matcher that incorporates a traditional Nondeterministic Finite Automaton (NFA) engine such as that used by Perl, Python, Emacs, and Tcl.</span></span> <span data-ttu-id="c5a72-104">这使它有别于速度更快、但是限制更多的纯正则表达式确定性有限自动机 (DFA) 引擎（如 awk、egrep 或 lex 中的引擎）。</span><span class="sxs-lookup"><span data-stu-id="c5a72-104">This distinguishes it from faster, but more limited, pure regular expression Deterministic Finite Automaton (DFA) engines such as those found in awk, egrep, or lex.</span></span> <span data-ttu-id="c5a72-105">这也使它有别于标准化、但速度较慢的 POSIX NFA。</span><span class="sxs-lookup"><span data-stu-id="c5a72-105">This also distinguishes it from standardized, but slower, POSIX NFAs.</span></span> <span data-ttu-id="c5a72-106">以下部分介绍三种类型的正则表达式引擎，并说明.NET Framework 中的正则表达式通过使用传统的 NFA 引擎的实现原因。</span><span class="sxs-lookup"><span data-stu-id="c5a72-106">The following section describes the three types of regular expression engines, and explains why regular expressions in the .NET Framework are implemented by using a traditional NFA engine.</span></span>  
   
-## NFA 引擎的优点  
- 当 DFA 引擎执行模式匹配时，其处理顺序由输入字符串驱动。  此引擎从输入字符串的开头开始，依次按顺序逐个字符进行比对，以确定下一个字符是否与正则表达式模式相匹配。  DFA 引擎可以确保匹配可能的最长的字符串。  由于 DFA 引擎永远不测试相同的字符两次，因此它们不支持回溯。  但是，因为 DFA 引擎只包含有限的状态，所以它不能匹配具有反向引用的模式；并且因为它不构造显式扩展，所以它不可以捕获子表达式。  
+## <a name="benefits-of-the-nfa-engine"></a><span data-ttu-id="c5a72-107">NFA 引擎的优势</span><span class="sxs-lookup"><span data-stu-id="c5a72-107">Benefits of the NFA Engine</span></span>  
+ <span data-ttu-id="c5a72-108">DFA 引擎执行模式匹配时，其处理顺序由输入字符串驱动。</span><span class="sxs-lookup"><span data-stu-id="c5a72-108">When DFA engines perform pattern matching, their processing order is driven by the input string.</span></span> <span data-ttu-id="c5a72-109">该引擎从输入字符串的开头处开始，按顺序继续进行以确定下一个字符是否与正则表达式模式匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-109">The engine begins at the beginning of the input string and proceeds sequentially to determine whether the next character matches the regular expression pattern.</span></span> <span data-ttu-id="c5a72-110">它们可以保证匹配可能最长的字符串。</span><span class="sxs-lookup"><span data-stu-id="c5a72-110">They can guarantee to match the longest string possible.</span></span> <span data-ttu-id="c5a72-111">因为它们绝不会对相同字符测试两次，所以 DFA 引擎不支持回溯。</span><span class="sxs-lookup"><span data-stu-id="c5a72-111">Because they never test the same character twice, DFA engines do not support backtracking.</span></span> <span data-ttu-id="c5a72-112">但是，由于 DFA 引擎只包含有限状态，因此它无法匹配具有反向引用的模式，并且因为它不构造显式扩展，所以无法捕获子表达式。</span><span class="sxs-lookup"><span data-stu-id="c5a72-112">However, because a DFA engine contains only finite state, it cannot match a pattern with backreferences, and because it does not construct an explicit expansion, it cannot capture subexpressions.</span></span>  
   
- 与 DFA 引擎不同，当传统的 NFA 引擎执行模式匹配时，其处理顺序由正则表达式模式驱动。  此引擎在处理特定的语言元素时将使用贪婪匹配；也就是说，它将尽可能多地匹配输入字符串。  不过，它也会在成功匹配子表达式后保存其状态。  如果匹配最终失败，则此引擎可返回到保存的状态以便能尝试其他匹配。  放弃成功的子表达式匹配以便正则表达式中后面的语言元素也能匹配的处理过程称作“回溯”。  NFA 引擎使用回溯来按特定顺序测试正则表达式的所有可能的扩展，并接受第一个匹配项。  因为传统的 NFA 引擎会为成功的匹配构造正则表达式的特定扩展，所以它可以捕获子表达式匹配和匹配的反向引用。  但是，由于传统的 NFA 回溯，它可以多次访问相同的状态（如果它通过不同的路径到达该状态）。  因此，在最坏情况下，它的执行速度可能非常慢。  因为传统的 NFA 引擎接受它找到的第一个匹配项，所以它还可能会导致其他（可能更长）匹配项未被发现。  
+ <span data-ttu-id="c5a72-113">与 DFA 引擎不同，传统 NFA 引擎执行模式匹配时，其处理顺序由正则表达式模式驱动。</span><span class="sxs-lookup"><span data-stu-id="c5a72-113">Unlike DFA engines, when traditional NFA engines perform pattern matching, their processing order is driven by the regular expression pattern.</span></span> <span data-ttu-id="c5a72-114">处理特定语言元素时，该引擎使用贪婪匹配；也就是说，它尽可能多地匹配输入字符串。</span><span class="sxs-lookup"><span data-stu-id="c5a72-114">As it processes a particular language element, the engine uses greedy matching; that is, it matches as much of the input string as it possibly can.</span></span> <span data-ttu-id="c5a72-115">但是，它还会在成功匹配子表达式之后保存其状态。</span><span class="sxs-lookup"><span data-stu-id="c5a72-115">But it also saves its state after successfully matching a subexpression.</span></span> <span data-ttu-id="c5a72-116">如果匹配最终失败，则该引擎可以返回到已保存状态，以便可以尝试其他匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-116">If a match eventually fails, the engine can return to a saved state so it can try additional matches.</span></span> <span data-ttu-id="c5a72-117">放弃成功子表达式匹配项，以便更高版本的语言元素，正则表达式中可以同时匹配这一过程称为*回溯*。</span><span class="sxs-lookup"><span data-stu-id="c5a72-117">This process of abandoning a successful subexpression match so that later language elements in the regular expression can also match is known as *backtracking*.</span></span> <span data-ttu-id="c5a72-118">NFA 引擎使用回溯按特定顺序测试正则表达式的所有可能扩展，并接受第一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-118">NFA engines use backtracking to test all possible expansions of a regular expression in a specific order and accept the first match.</span></span> <span data-ttu-id="c5a72-119">因为传统 NFA 引擎针对成功匹配构造正则表达式的特定扩展，所以它可以捕获子表达式匹配项以及匹配反向引用。</span><span class="sxs-lookup"><span data-stu-id="c5a72-119">Because a traditional NFA engine constructs a specific expansion of the regular expression for a successful match, it can capture subexpression matches and matching backreferences.</span></span> <span data-ttu-id="c5a72-120">但是，由于传统 NFA 会进行回溯，因此如果它通过不同路径到达相同状态，则可能会多次访问该状态。</span><span class="sxs-lookup"><span data-stu-id="c5a72-120">However, because a traditional NFA backtracks, it can visit the same state multiple times if it arrives at the state over different paths.</span></span> <span data-ttu-id="c5a72-121">因此，其运行速度在最糟糕的情况下可能会极端缓慢。</span><span class="sxs-lookup"><span data-stu-id="c5a72-121">As a result, it can run exponentially slowly in the worst case.</span></span> <span data-ttu-id="c5a72-122">因为传统 NFA 引擎接受它找到的第一个匹配项，所以它还可能会使其他（可能更长）的匹配项保持未发现状态。</span><span class="sxs-lookup"><span data-stu-id="c5a72-122">Because a traditional NFA engine accepts the first match it finds, it can also leave other (possibly longer) matches undiscovered.</span></span>  
   
- POSIX NFA 引擎与传统的 NFA 引擎类似，不同的一点在于：在它们可以确保已找到了可能的最长的匹配之前，它们将继续回溯。  因此，POSIX NFA 引擎的速度慢于传统的 NFA 引擎；并且在使用 POSIX NFA 引擎时，您恐怕不会愿意在更改回溯搜索的顺序的情况下来支持较短的匹配搜索，而非较长的匹配搜索。  
+ <span data-ttu-id="c5a72-123">POSIX NFA 引擎类似于传统 NFA 引擎，只不过它们会继续回溯，直到可以保证已找到最长的可能匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-123">POSIX NFA engines are like traditional NFA engines, except that they continue to backtrack until they can guarantee that they have found the longest match possible.</span></span> <span data-ttu-id="c5a72-124">因此，POSIX NFA 引擎速度低于传统 NFA 引擎，而且使用 POSIX NFA 引擎时，无法通过更改回溯搜索的顺序，使较短匹配项优先于较长匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-124">As a result, a POSIX NFA engine is slower than a traditional NFA engine, and when you use a POSIX NFA engine, you cannot favor a shorter match over a longer one by changing the order of the backtracking search.</span></span>  
   
- 程序员更为喜欢传统的 NFA 引擎的原因在于，它们可以比 DFA 引擎或 POSIX NFA 引擎提供对字符串匹配的更多控制。  尽管在最坏情况下 NFA 引擎的运行速度稍慢，但您可以通过使用降低多义性和限制回溯的模式，控制这些引擎以在线性时或多项式时状态下查找匹配项。  换句话说，虽然 NFA 引擎是以牺牲性能的代价来换取功能和灵活性的，但大多数情况下，只要正则表达式编写合理，避免出现因回溯导致性能呈指数级降低的情况，它们提供的性能还是比较好，至少是可接受的。  
+ <span data-ttu-id="c5a72-125">程序员更喜欢传统 NFA 引擎，因为与 DFA 或 POSIX NFA 引擎相比，通过它们可更好地控制字符串匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-125">Traditional NFA engines are favored by programmers because they offer greater control over string matching than either DFA or POSIX NFA engines.</span></span> <span data-ttu-id="c5a72-126">不过在最糟糕的情况下，它们可能会运行缓慢，你可以使用减少歧义和限制回溯的模式，控制它们以线性方式或在多项式时间内找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-126">Although, in the worst case, they can run slowly, you can steer them to find matches in linear or polynomial time by using patterns that reduce ambiguities and limit backtracking.</span></span> <span data-ttu-id="c5a72-127">换句话说，虽然 NFA 引擎以牺牲性能为代价来实现强大功能和灵活性，不过在大多数情况下，如果正则表达式编写良好并避免回溯呈指数级降低性能的情况，它们可提供可接受的良好性能。</span><span class="sxs-lookup"><span data-stu-id="c5a72-127">In other words, although NFA engines trade performance for power and flexibility, in most cases they offer good to acceptable performance if a regular expression is well-written and avoids cases in which backtracking degrades performance exponentially.</span></span>  
   
 > [!NOTE]
->  有关过多使用回溯对性能造成的负面影响以及通过编写正则表达式来解决这些问题的方法的信息，请参见[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。  
+>  <span data-ttu-id="c5a72-128">有关性能造成的过度回溯的约束以及制作正则表达式的方法来解决这些的信息，请参阅[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-128">For information about the performance penalty caused by excessive backtracking and ways to craft a regular expression to work around them, see [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).</span></span>  
   
-## .NET Framework 引擎功能  
- 为了利用传统 NFA 引擎的优点，.NET Framework 正则表达式引擎包括了一组完整的构造，使程序员能够操纵回溯引擎。  这些构造可被用于更快地找到匹配，或支持特定扩展，而非其他扩展。  
+## <a name="net-framework-engine-capabilities"></a><span data-ttu-id="c5a72-129">.NET Framework 引擎功能</span><span class="sxs-lookup"><span data-stu-id="c5a72-129">.NET Framework Engine Capabilities</span></span>  
+ <span data-ttu-id="c5a72-130">若要利用传统的 NFA 引擎的好处，.NET Framework 正则表达式引擎包括一组完整的构造以，程序员可以掌控回溯引擎。</span><span class="sxs-lookup"><span data-stu-id="c5a72-130">To take advantage of the benefits of a traditional NFA engine, the .NET Framework regular expression engine includes a complete set of constructs to enable programmers to steer the backtracking engine.</span></span> <span data-ttu-id="c5a72-131">这些构造可以用于更快地找到匹配项或使特定扩展优先于其他扩展。</span><span class="sxs-lookup"><span data-stu-id="c5a72-131">These constructs can be used to find matches faster or to favor specific expansions over others.</span></span>  
   
- .NET Framework 正则表达式引擎的其他功能包括：  
+ <span data-ttu-id="c5a72-132">.NET Framework 正则表达式引擎的其他功能包括：</span><span class="sxs-lookup"><span data-stu-id="c5a72-132">Other features of the .NET Framework regular expression engine include the following:</span></span>  
   
--   懒惰的数量词: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`。  这些构造指示回溯引擎首先搜索最少数目的重复。  与之相反，普通的“贪婪的”限定符首先尝试匹配最大数目的重复。  下面的示例对二者之间的差异进行说明。  正则表达式匹配以某个数字结束的句子，而捕获组用于提取该数字。  正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获该数字的最后一位数。  相比之下，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
+-   <span data-ttu-id="c5a72-133">惰性限定符： `??`， `*?`， `+?`， `{`  *n*  `,` *m*`}?`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-133">Lazy quantifiers: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`.</span></span> <span data-ttu-id="c5a72-134">这些构造会指示回溯引擎首先搜索最小数量的重复项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-134">These constructs tell the backtracking engine to search the minimum number of repetitions first.</span></span> <span data-ttu-id="c5a72-135">相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-135">In contrast, ordinary greedy quantifiers try to match the maximum number of repetitions first.</span></span> <span data-ttu-id="c5a72-136">以下示例演示了两者之间的差异。</span><span class="sxs-lookup"><span data-stu-id="c5a72-136">The following example illustrates the difference between the two.</span></span> <span data-ttu-id="c5a72-137">正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。</span><span class="sxs-lookup"><span data-stu-id="c5a72-137">A regular expression matches a sentence that ends in a number, and a capturing group is intended to extract that number.</span></span> <span data-ttu-id="c5a72-138">正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。</span><span class="sxs-lookup"><span data-stu-id="c5a72-138">The regular expression `.+(\d+)\.` includes the greedy quantifier `.+`, which causes the regular expression engine to capture only the last digit of the number.</span></span> <span data-ttu-id="c5a72-139">相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。</span><span class="sxs-lookup"><span data-stu-id="c5a72-139">In contrast, the regular expression `.+?(\d+)\.` includes the lazy quantifier `.+?`, which causes the regular expression engine to capture the entire number.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     此正则表达式的贪婪版本和惰性版本的定义如下表所示。  
+     <span data-ttu-id="c5a72-140">下表中所示定义此正则表达式的贪婪和延迟版本。</span><span class="sxs-lookup"><span data-stu-id="c5a72-140">The greedy and lazy versions of this regular expression are defined as shown in the following table.\`</span></span>  
   
-    |模式|说明|  
-    |--------|--------|  
-    |`.+`（贪婪限定符）|匹配任意字符的至少一个匹配项。  这会使正则表达式引擎先匹配整个字符串，然后根据需要进行回溯以匹配模式的其余部分。|  
-    |`.+?`（惰性限定符）|匹配任意字符的至少一个匹配项（但尽可能少地匹配）。|  
-    |`(\d+)`|匹配至少一个数字字符，并将其分配给第一个捕获组。|  
-    |`\.`|匹配句点。|  
+    |<span data-ttu-id="c5a72-141">模式</span><span class="sxs-lookup"><span data-stu-id="c5a72-141">Pattern</span></span>|<span data-ttu-id="c5a72-142">描述</span><span class="sxs-lookup"><span data-stu-id="c5a72-142">Description</span></span>|  
+    |-------------|-----------------|  
+    |<span data-ttu-id="c5a72-143">`.+`（贪婪限定符）</span><span class="sxs-lookup"><span data-stu-id="c5a72-143">`.+` (greedy quantifier)</span></span>|<span data-ttu-id="c5a72-144">匹配任何字符的至少一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-144">Match at least one occurrence of any character.</span></span> <span data-ttu-id="c5a72-145">这会导致正则表达式引擎匹配整个字符串，然后根据需要进行回溯以匹配模式的其余部分。</span><span class="sxs-lookup"><span data-stu-id="c5a72-145">This causes the regular expression engine to match the entire string, and then to backtrack as needed to match the remainder of the pattern.</span></span>|  
+    |<span data-ttu-id="c5a72-146">`.+?`（惰性限定符）</span><span class="sxs-lookup"><span data-stu-id="c5a72-146">`.+?` (lazy quantifier)</span></span>|<span data-ttu-id="c5a72-147">匹配任何字符的至少一个匹配项，但匹配尽可能少。</span><span class="sxs-lookup"><span data-stu-id="c5a72-147">Match at least one occurrence of any character, but match as few as possible.</span></span>|  
+    |`(\d+)`|<span data-ttu-id="c5a72-148">匹配至少一个数字字符，并将其分配给第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="c5a72-148">Match at least one numeric character, and assign it to the first capturing group.</span></span>|  
+    |`\.`|<span data-ttu-id="c5a72-149">匹配句点。</span><span class="sxs-lookup"><span data-stu-id="c5a72-149">Match a period.</span></span>|  
   
-     有关惰性限定符的更多信息，请参见[数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-150">惰性限定符有关的详细信息，请参阅[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-150">For more information about lazy quantifiers, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
--   正预测先行： `(?=`*subexpression*`)`。  此功能允许回溯引擎在匹配子表达式后返回到文本中相同的作用点。  这对于通过验证起始于相同位置的多个模式来搜索整个文本是很有用的。  它还允许引擎验证匹配的结尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。  下面的示例使用正预测先行从句子中提取未后跟标点符号的单词。  
+-   <span data-ttu-id="c5a72-151">正预测先行： `(?=`*子表达式*`)`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-151">Positive lookahead: `(?=`*subexpression*`)`.</span></span> <span data-ttu-id="c5a72-152">此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。</span><span class="sxs-lookup"><span data-stu-id="c5a72-152">This feature allows the backtracking engine to return to the same spot in the text after matching a subexpression.</span></span> <span data-ttu-id="c5a72-153">它可用于通过验证从相同位置开始的多个模式来搜索整个文本。</span><span class="sxs-lookup"><span data-stu-id="c5a72-153">It is useful for searching throughout the text by verifying multiple patterns that start from the same position.</span></span> <span data-ttu-id="c5a72-154">它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。</span><span class="sxs-lookup"><span data-stu-id="c5a72-154">It also allows the engine to verify that a substring exists at the end of the match without including the substring in the matched text.</span></span> <span data-ttu-id="c5a72-155">下面的示例使用正预测先行提取句子中后面不是标点符号的单词。</span><span class="sxs-lookup"><span data-stu-id="c5a72-155">The following example uses positive lookahead to extract the words in a sentence that are not followed by punctuation symbols.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
   
-     正则表达式 `\b[A-Z]+\b(?=\P{P})` 的定义如下表所示。  
+     <span data-ttu-id="c5a72-156">正则表达式 `\b[A-Z]+\b(?=\P{P})` 的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="c5a72-156">The regular expression `\b[A-Z]+\b(?=\P{P})` is defined as shown in the following table.</span></span>  
   
-    |模式|说明|  
-    |--------|--------|  
-    |`\b`|在单词边界处开始匹配。|  
-    |`[A-Z]+`|与任意字母字符匹配一次或多次。  由于 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> 方法是利用 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 选项来调用的，因此比较不区分大小写。|  
-    |`\b`|在单词边界处结束匹配。|  
-    |`(?=\P{P})`|查看前一个字符来确定下一个字符是否为标点符号。  如果不是，则表明匹配成功。|  
+    |<span data-ttu-id="c5a72-157">模式</span><span class="sxs-lookup"><span data-stu-id="c5a72-157">Pattern</span></span>|<span data-ttu-id="c5a72-158">描述</span><span class="sxs-lookup"><span data-stu-id="c5a72-158">Description</span></span>|  
+    |-------------|-----------------|  
+    |`\b`|<span data-ttu-id="c5a72-159">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-159">Begin the match at a word boundary.</span></span>|  
+    |`[A-Z]+`|<span data-ttu-id="c5a72-160">匹配任何字母字符一次或多次。</span><span class="sxs-lookup"><span data-stu-id="c5a72-160">Match any alphabetic character one or more times.</span></span> <span data-ttu-id="c5a72-161">因为<xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>方法调用与<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>选项，比较不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="c5a72-161">Because the <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method is called with the <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> option, the comparison is case-insensitive.</span></span>|  
+    |`\b`|<span data-ttu-id="c5a72-162">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-162">End the match at a word boundary.</span></span>|  
+    |`(?=\P{P})`|<span data-ttu-id="c5a72-163">预测先行以确定下一个字符是否为标点符号。</span><span class="sxs-lookup"><span data-stu-id="c5a72-163">Look ahead to determine whether the next character is a punctuation symbol.</span></span> <span data-ttu-id="c5a72-164">如果不是，则匹配成功。</span><span class="sxs-lookup"><span data-stu-id="c5a72-164">If it is not, the match succeeds.</span></span>|  
   
-     有关正预测先行断言的更多信息，请参见[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-165">有关正预测先行断言的详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-165">For more information about positive lookahead assertions, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
--   负预测先行： `(?!`*subexpression*`)`。  此功能增加了只在子表达式匹配失败的情况下才匹配表达式的能力。  这对于删改一个搜索特别有用，因为提供应被排除的情况的表达式通常比提供必须被包括在内的情况的表达式要简单一些。  例如，编写搜索不以“non”起始的单词的表达式就很困难。  下面的示例使用负预测先行来排除它们。  
+-   <span data-ttu-id="c5a72-166">负预测先行： `(?!`*子表达式*`)`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-166">Negative lookahead: `(?!`*subexpression*`)`.</span></span> <span data-ttu-id="c5a72-167">通过此功能可以仅当子表达式未能匹配时才匹配表达式。</span><span class="sxs-lookup"><span data-stu-id="c5a72-167">This feature adds the ability to match an expression only if a subexpression fails to match.</span></span> <span data-ttu-id="c5a72-168">这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。</span><span class="sxs-lookup"><span data-stu-id="c5a72-168">This is particularly powerful for pruning a search, because it is often simpler to provide an expression for a case that should be eliminated than an expression for cases that must be included.</span></span> <span data-ttu-id="c5a72-169">例如，难以为不以“non”开头的单词编写表达式。</span><span class="sxs-lookup"><span data-stu-id="c5a72-169">For example, it is difficult to write an expression for words that do not begin with "non".</span></span> <span data-ttu-id="c5a72-170">下面的示例使用负预测先行排除它们。</span><span class="sxs-lookup"><span data-stu-id="c5a72-170">The following example uses negative lookahead to exclude them.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
   
-     正则表达式模式 `\b(?!non)\w+\b` 的定义如下表所示。  
+     <span data-ttu-id="c5a72-171">正则表达式模式 `\b(?!non)\w+\b` 的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="c5a72-171">The regular expression pattern `\b(?!non)\w+\b` is defined as shown in the following table.</span></span>  
   
-    |模式|说明|  
-    |--------|--------|  
-    |`\b`|在单词边界处开始匹配。|  
-    |`(?!non)`|查看前一个字符以确保当前字符串不以“non”开始。  如果当前字符串以“non”开始，则表明匹配失败。|  
-    |`(\w+)`|匹配一个或多个单词字符。|  
-    |`\b`|在单词边界处结束匹配。|  
+    |<span data-ttu-id="c5a72-172">模式</span><span class="sxs-lookup"><span data-stu-id="c5a72-172">Pattern</span></span>|<span data-ttu-id="c5a72-173">描述</span><span class="sxs-lookup"><span data-stu-id="c5a72-173">Description</span></span>|  
+    |-------------|-----------------|  
+    |`\b`|<span data-ttu-id="c5a72-174">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-174">Begin the match at a word boundary.</span></span>|  
+    |`(?!non)`|<span data-ttu-id="c5a72-175">预测先行以确保当前字符串不以“non”开头。</span><span class="sxs-lookup"><span data-stu-id="c5a72-175">Look ahead to ensure that the current string does not begin with "non".</span></span> <span data-ttu-id="c5a72-176">如果以“non”开头，则匹配失败。</span><span class="sxs-lookup"><span data-stu-id="c5a72-176">If it does, the match fails.</span></span>|  
+    |`(\w+)`|<span data-ttu-id="c5a72-177">匹配一个或多个单词字符。</span><span class="sxs-lookup"><span data-stu-id="c5a72-177">Match one or more word characters.</span></span>|  
+    |`\b`|<span data-ttu-id="c5a72-178">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-178">End the match at a word boundary.</span></span>|  
   
-     有关负预测先行断言的更多信息，请参见[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-179">有关负预测先行断言的详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-179">For more information about negative lookahead assertions, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
--   条件计算：`(?(`*expression*`)`*yes* `|` *no* `)` 和 `(?(`*name*`)`*yes* `|` *no* `)`，其中*expression*是要匹配的子表达式，*name* 是捕获组的名称；*yes* 是当找到 *expression*的匹配项或*name*是有效的非空捕获组时要匹配的字符串；而 *no*是当未找到*expression* 的匹配项或*name* 是无效时的子表达式，非空捕获组。  此功能允许引擎根据前面的子表达式匹配的结果或零宽度断言的结果，使用多个替换模式进行搜索。  这提供了超越反向引用所允许的、更为强大的功能，例如，基于是否已匹配上一个子表达式来匹配子表达式。  下面的示例中的正则表达式匹配供公用和内部使用的段落。  仅供内部使用的段落以 `<PRIVATE>` 标记开始。  正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件计算向单独的捕获组分配公用和内部使用的段落内容。  然后可以按不同方式处理这些段落。  
+-   <span data-ttu-id="c5a72-180">条件评估： `(?(`*表达式*`)`*是*`|`*没有*`)`和`(?(` *名称*`)`*是*`|`*没有*`)`，其中*表达式*是子表达式匹配，*名称*是捕获组的名称*是*是要匹配的字符串*表达式*匹配或*名称*是一个有效非空捕获的组，和*没有*是当要匹配的子表达式*表达式*不匹配或*名称*不是有效的、 非空的捕获的组。</span><span class="sxs-lookup"><span data-stu-id="c5a72-180">Conditional evaluation: `(?(`*expression*`)`*yes*`|`*no*`)` and `(?(`*name*`)`*yes*`|`*no*`)`, where *expression* is a subexpression to match, *name* is the name of a capturing group, *yes* is the string to match if *expression* is matched or *name* is a valid, non-empty captured group, and *no* is the subexpression to match if *expression* is not matched or *name* is not a valid, non-empty captured group.</span></span> <span data-ttu-id="c5a72-181">此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。</span><span class="sxs-lookup"><span data-stu-id="c5a72-181">This feature allows the engine to search by using more than one alternate pattern, depending on the result of a previous subexpression match or the result of a zero-width assertion.</span></span> <span data-ttu-id="c5a72-182">这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。</span><span class="sxs-lookup"><span data-stu-id="c5a72-182">This allows a more powerful form of backreference that permits, for example, matching a subexpression based on whether a previous subexpression was matched.</span></span> <span data-ttu-id="c5a72-183">下面示例中的正则表达式匹配旨在供公共和内部使用的段落。</span><span class="sxs-lookup"><span data-stu-id="c5a72-183">The regular expression in the following example matches paragraphs that are intended for both public and internal use.</span></span> <span data-ttu-id="c5a72-184">仅供内部使用的段落以 `<PRIVATE>` 标记开头。</span><span class="sxs-lookup"><span data-stu-id="c5a72-184">Paragraphs intended only for internal use begin with a `<PRIVATE>` tag.</span></span> <span data-ttu-id="c5a72-185">正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。</span><span class="sxs-lookup"><span data-stu-id="c5a72-185">The regular expression pattern `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` uses conditional evaluation to assign the contents of paragraphs intended for public and for internal use to separate capturing groups.</span></span> <span data-ttu-id="c5a72-186">这些段落随后可以按不同方式进行处理。</span><span class="sxs-lookup"><span data-stu-id="c5a72-186">These paragraphs can then be handled differently.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
   
-     正则表达式模式的定义如下表所示。  
+     <span data-ttu-id="c5a72-187">正则表达式模式的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="c5a72-187">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-    |模式|说明|  
-    |--------|--------|  
-    |`^`|从行的开头开始匹配。|  
-    |`(?<Pvt>\<PRIVATE\>\s)?`|匹配后跟空格字符的字符串 `<PRIVATE>` 的零个或一个匹配项。  将匹配项分配给名为 `Pvt` 的捕获组。|  
-    |`(?(Pvt)((\w+\p{P}?\s)+)`|如果 `Pvt` 捕获组存在，则匹配一个或多个以下模式：一个或多个单词字符，后跟零个或一个标点分隔符，再后跟一个空格字符。  将子字符串分配给第一个捕获组。|  
-    |`&#124;((\w+\p{P}?\s)+))`|如果 `Pvt` 捕获组不存在，则匹配一个或多个以下模式：一个或多个单词字符，后跟零个或一个标点分隔符，再后跟一个空格字符。  将子字符串分配给第三个捕获组。|  
-    |`\r?$`|匹配行尾或字符串的结尾。|  
+    |<span data-ttu-id="c5a72-188">模式</span><span class="sxs-lookup"><span data-stu-id="c5a72-188">Pattern</span></span>|<span data-ttu-id="c5a72-189">描述</span><span class="sxs-lookup"><span data-stu-id="c5a72-189">Description</span></span>|  
+    |-------------|-----------------|  
+    |`^`|<span data-ttu-id="c5a72-190">从行的开头开始匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-190">Begin the match at the beginning of a line.</span></span>|  
+    |`(?<Pvt>\<PRIVATE\>\s)?`|<span data-ttu-id="c5a72-191">匹配后跟一个空白字符的字符串 `<PRIVATE>` 的零个或一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-191">Match zero or one occurrence of the string `<PRIVATE>` followed by a white-space character.</span></span> <span data-ttu-id="c5a72-192">将匹配分配到一个名为的捕获组`Pvt`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-192">Assign the match to a capturing group named `Pvt`.</span></span>|  
+    |`(?(Pvt)((\w+\p{P}?\s)+)`|<span data-ttu-id="c5a72-193">如果 `Pvt` 捕获组存在，则匹配后跟零个或一个标点分隔符、再后跟一个空白字符的一个或多个单词字符的一个或多个匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-193">If the `Pvt` capturing group exists, match one or more occurrences of one or more word characters followed by zero or one punctuation separator followed by a white-space character.</span></span> <span data-ttu-id="c5a72-194">将子字符串分配给第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="c5a72-194">Assign the substring to the first capturing group.</span></span>|  
+    |`&#124;((\w+\p{P}?\s)+))`|<span data-ttu-id="c5a72-195">如果 `Pvt` 捕获组不存在，则匹配后跟零个或一个标点分隔符、再后跟一个空白字符的一个或多个单词字符的一个或多个匹配项。</span><span class="sxs-lookup"><span data-stu-id="c5a72-195">If the `Pvt` capturing group does not exist, match one or more occurrences of one or more word characters followed by zero or one punctuation separator followed by a white-space character.</span></span> <span data-ttu-id="c5a72-196">将子字符串分配给第三个捕获组。</span><span class="sxs-lookup"><span data-stu-id="c5a72-196">Assign the substring to the third capturing group.</span></span>|  
+    |`\r?$`|<span data-ttu-id="c5a72-197">匹配行尾或字符串末尾。</span><span class="sxs-lookup"><span data-stu-id="c5a72-197">Match the end of a line or the end of the string.</span></span>|  
   
-     有关条件计算的更多信息，请参见[备用构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-198">有关条件计算的详细信息，请参阅[替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-198">For more information about conditional evaluation, see [Alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).</span></span>  
   
--   平衡组定义: `(?<`*name1*`-`*name2*`>` *subexpression*`)`。  此功能允许正则表达式引擎跟踪嵌套构造，如圆括号或左括号和右括号。  有关示例，请参见[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+-   <span data-ttu-id="c5a72-199">平衡组定义： `(?<` *name1*`-`*name2* `>` *子表达式*`)`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-199">Balancing group definitions: `(?<`*name1*`-`*name2*`>` *subexpression*`)`.</span></span> <span data-ttu-id="c5a72-200">此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。</span><span class="sxs-lookup"><span data-stu-id="c5a72-200">This feature allows the regular expression engine to keep track of nested constructs such as parentheses or opening and closing brackets.</span></span> <span data-ttu-id="c5a72-201">有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-201">For an example, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
--   非回溯子表达式（也称作贪婪子表达式）：`(?>`*subexpression*`)`。  此功能允许回溯引擎确保子表达式只匹配为该子表达式找到的第一个匹配项，就好像该表达式独立于其包含的表达式运行。  如果不使用此构造，则来自更大的表达式的回溯搜索可能会更改子表达式的行为。  例如，正则表达式 `(a+)\w` 将匹配一个或多个“a”字符，以及跟在“a”字符序列后的一个单词字符，并将“a”字符序列分配给第一个捕获组，但如果输入字符串的最后一个字符也是“a”，则由 `\w` 语言元素匹配“a”字符序列且该序列不会包含在捕获组中。  
+-   <span data-ttu-id="c5a72-202">非回溯子表达式 （也称为贪婪子表达式）： `(?>`*子表达式*`)`。</span><span class="sxs-lookup"><span data-stu-id="c5a72-202">Nonbacktracking subexpressions (also known as greedy subexpressions): `(?>`*subexpression*`)`.</span></span> <span data-ttu-id="c5a72-203">此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。</span><span class="sxs-lookup"><span data-stu-id="c5a72-203">This feature allows the backtracking engine to guarantee that a subexpression matches only the first match found for that subexpression, as if the expression were running independent of its containing expression.</span></span> <span data-ttu-id="c5a72-204">如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。</span><span class="sxs-lookup"><span data-stu-id="c5a72-204">If you do not use this construct, backtracking searches from the larger expression can change the behavior of a subexpression.</span></span> <span data-ttu-id="c5a72-205">例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。</span><span class="sxs-lookup"><span data-stu-id="c5a72-205">For example, the regular expression `(a+)\w` matches one or more "a" characters, along with a word character that follows the sequence of "a" characters, and assigns the sequence of "a" characters to the first capturing group, However, if the final character of the input string is also an "a", it is matched by the `\w` language element and is not included in the captured group.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
   
-     正则表达式 `((?>a+))\w` 将阻止此行为。  由于匹配所有连续的“a”字符时未使用回溯，因此第一个捕获组将包含所有连续的“a”字符。  如果“a”字符后面未跟有至少一个“a”字符之外的其他字符，则表明匹配失败。  
+     <span data-ttu-id="c5a72-206">正则表达式 `((?>a+))\w` 会阻止此行为。</span><span class="sxs-lookup"><span data-stu-id="c5a72-206">The regular expression `((?>a+))\w` prevents this behavior.</span></span> <span data-ttu-id="c5a72-207">因为所有连续“a”字符会在不进行回溯的情况下匹配，所以第一个捕获组包含所有连续“a”字符。</span><span class="sxs-lookup"><span data-stu-id="c5a72-207">Because all consecutive "a" characters are matched without backtracking, the first capturing group includes all consecutive "a" characters.</span></span> <span data-ttu-id="c5a72-208">如果“a”字符后面不是至少一个“a”之外的字符，则匹配会失败。</span><span class="sxs-lookup"><span data-stu-id="c5a72-208">If the "a" characters are not followed by at least one more character other than "a", the match fails.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]  
   
-     有关非回溯子表达式的更多信息，请参见[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-209">有关非回溯子表达式的详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-209">For more information about nonbacktracking subexpressions, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
--   从右到左匹配，此功能是通过将 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> 选项提供给 <xref:System.Text.RegularExpressions.Regex> 类构造函数或静态实例匹配方法来指定的。  此功能在从右到左而非从左到右搜索的情况下十分有用，或者在从模式的右侧部分（而非左侧部分）开始匹配更为有效的情况下十分有用。  如下面的示例所示，使用从右到左匹配可以更改贪婪限定符的行为。  该示例对以数字结束的句子执行两次搜索。  使用贪婪限定符 `+` 的从左到右搜索将匹配句子中的六位数字之一，而从右到左搜索将匹配所有六位数字。  有关正则表达式模式的说明，请参见本节中先前阐释惰性限定符的示例。  
+-   <span data-ttu-id="c5a72-210">右到左匹配，由提供指定<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType>选项设为<xref:System.Text.RegularExpressions.Regex>类构造函数或静态实例匹配方法。</span><span class="sxs-lookup"><span data-stu-id="c5a72-210">Right-to-left matching, which is specified by supplying the <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> option to a <xref:System.Text.RegularExpressions.Regex> class constructor or static instance matching method.</span></span> <span data-ttu-id="c5a72-211">当从右到左（而不是从左到右）进行搜索时，或是在从模式右侧部分（而不是左侧部分）开始匹配效率更高的情况下，此功能非常有用。</span><span class="sxs-lookup"><span data-stu-id="c5a72-211">This feature is useful when searching from right to left instead of from left to right, or in cases where it is more efficient to begin a match at the right part of the pattern instead of the left.</span></span> <span data-ttu-id="c5a72-212">如下面的示例所示，使用从右到左匹配可以更改贪婪限定符的行为。</span><span class="sxs-lookup"><span data-stu-id="c5a72-212">As the following example illustrates, using right-to-left matching can change the behavior of greedy quantifiers.</span></span> <span data-ttu-id="c5a72-213">该示例对以数字结尾的句子执行两个搜索。</span><span class="sxs-lookup"><span data-stu-id="c5a72-213">The example conducts two searches for a sentence that ends in a number.</span></span> <span data-ttu-id="c5a72-214">使用贪婪限定符 `+` 的从左到右搜索匹配句子中六个数字之一，而从右到左搜索匹配所有六个数字。</span><span class="sxs-lookup"><span data-stu-id="c5a72-214">The left-to-right search that uses the greedy quantifier `+` matches one of the six digits in the sentence, whereas the right-to-left search matches all six digits.</span></span> <span data-ttu-id="c5a72-215">有关正则表达式模式的介绍，请参见此部分前面说明惰性限定符的示例。</span><span class="sxs-lookup"><span data-stu-id="c5a72-215">For an description of the regular expression pattern, see the example that illustrates lazy quantifiers earlier in this section.</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
   
-     有关从右到左匹配的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
+     <span data-ttu-id="c5a72-216">有关从右到左匹配的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-216">For more information about right-to-left matching, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
--   正回顾和负回顾：正回顾的 `(?<=`*subexpression*`)` 和负回顾的 `(?<!`*subexpression*`)`。  此功能与本主题中之前讨论的预测先行类似。  因为正则表达式引擎允许完全的从右到左匹配，所以正则表达式允许无限制的回顾。  此外，还可以使用正回顾和负回顾在嵌套子表达式为外部表达式的超集时避免嵌套限定符。  具有此类嵌套限定符的正则表达式通常性能较差。  例如，下面的示例验证一个字符串是否以字母数字字符开头和结尾，并验证该字符串中的任何其他字符是否为某个更大的子集之一。  它构成了用于验证电子邮件地址的正则表达式的一部分；有关更多信息，请参见[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+-   <span data-ttu-id="c5a72-217">正和负回顾： `(?<=`*子表达式*`)`为正回顾和`(?<!`*子表达式*`)`为负回顾后发。</span><span class="sxs-lookup"><span data-stu-id="c5a72-217">Positive and negative lookbehind: `(?<=`*subexpression*`)` for positive lookbehind, and `(?<!`*subexpression*`)` for negative lookbehind.</span></span> <span data-ttu-id="c5a72-218">此功能非常类似于本主题前面讨论的预测先行。</span><span class="sxs-lookup"><span data-stu-id="c5a72-218">This feature is similar to lookahead, which is discussed earlier in this topic.</span></span> <span data-ttu-id="c5a72-219">由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。</span><span class="sxs-lookup"><span data-stu-id="c5a72-219">Because the regular expression engine allows complete right-to-left matching, regular expressions allow unrestricted lookbehinds.</span></span> <span data-ttu-id="c5a72-220">当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。</span><span class="sxs-lookup"><span data-stu-id="c5a72-220">Positive and negative lookbehind can also be used to avoid nesting quantifiers when the nested subexpression is a superset of an outer expression.</span></span> <span data-ttu-id="c5a72-221">具有此类嵌套限定符的正则表达式通常性能不佳。</span><span class="sxs-lookup"><span data-stu-id="c5a72-221">Regular expressions with such nested quantifiers often offer poor performance.</span></span> <span data-ttu-id="c5a72-222">例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。</span><span class="sxs-lookup"><span data-stu-id="c5a72-222">For example, the following example verifies that a string begins and ends with an alphanumeric character, and that any other character in the string is one of a larger subset.</span></span> <span data-ttu-id="c5a72-223">它形成用于验证电子邮件地址的正则表达式的一部分；有关更多信息，请参见[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-223">It forms a portion of the regular expression used to validate e-mail addresses; for more information, see [How to: Verify that Strings Are in Valid Email Format](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).</span></span>  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     正则表达式 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` 的定义如下表所示。  
+     <span data-ttu-id="c5a72-224">正则表达式 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$\` 的定义如下表所示。</span><span class="sxs-lookup"><span data-stu-id="c5a72-224">The regular expression `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$\` is defined as shown in the following table.</span></span>  
   
-    |模式|说明|  
-    |--------|--------|  
-    |`^`|从字符串的开头开始匹配。|  
-    |`[A-Z0-9]`|匹配任意数字或字母数字字符。（比较不区分大小写。）|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|匹配零个或多个任意单词字符或下列任意字符： \-, \!, \#, $, %, &, ', ., \*, \+, \/, \=, ?, ^, \`, {, }, &#124;, 或 ~。|  
-    |`(?<=[A-Z0-9])`|后向查看前一个字符，该字符必须是数字或字母数字字符。（比较不区分大小写。）|  
-    |`$`|在字符串的结尾结束匹配。|  
+    |<span data-ttu-id="c5a72-225">模式</span><span class="sxs-lookup"><span data-stu-id="c5a72-225">Pattern</span></span>|<span data-ttu-id="c5a72-226">说明</span><span class="sxs-lookup"><span data-stu-id="c5a72-226">Description</span></span>|  
+    |-------------|-----------------|  
+    |`^`|<span data-ttu-id="c5a72-227">从字符串开头开始匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-227">Begin the match at the beginning of the string.</span></span>|  
+    |`[A-Z0-9]`|<span data-ttu-id="c5a72-228">匹配任意数字或字母数字字符。</span><span class="sxs-lookup"><span data-stu-id="c5a72-228">Match any numeric or alphanumeric character.</span></span> <span data-ttu-id="c5a72-229">（比较不区分大小写。）</span><span class="sxs-lookup"><span data-stu-id="c5a72-229">(The comparison is case-insensitive.)</span></span>|  
+    |<span data-ttu-id="c5a72-230">`([-!#$%&'.*+/=?^`{}&#124;~\w])*\`</span><span class="sxs-lookup"><span data-stu-id="c5a72-230">`([-!#$%&'.*+/=?^`{}&#124;~\w])*\`</span></span>|<span data-ttu-id="c5a72-231">匹配零个或多个任意单词字符或以下任何字符:-，！，#、 $、 %、 &、 '，。，*，+，/，=，？，^，，{、}、 &#124;，或 ~。</span><span class="sxs-lookup"><span data-stu-id="c5a72-231">Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.</span></span>|  
+    |`(?<=[A-Z0-9])`|<span data-ttu-id="c5a72-232">回顾上一个字符（必须是数字或字母数字）。</span><span class="sxs-lookup"><span data-stu-id="c5a72-232">Look behind to the previous character, which must be numeric or alphanumeric.</span></span> <span data-ttu-id="c5a72-233">（比较不区分大小写。）</span><span class="sxs-lookup"><span data-stu-id="c5a72-233">(The comparison is case-insensitive.)</span></span>|  
+    |`$`|<span data-ttu-id="c5a72-234">在字符串的结尾结束匹配。</span><span class="sxs-lookup"><span data-stu-id="c5a72-234">End the match at the end of the string.</span></span>|  
   
-     有关正回顾和负回顾的更多信息，请参见[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+     <span data-ttu-id="c5a72-235">有关正和负回顾后发的详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c5a72-235">For more information about positive and negative lookbehind, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
-## 相关主题  
+## <a name="related-topics"></a><span data-ttu-id="c5a72-236">相关主题</span><span class="sxs-lookup"><span data-stu-id="c5a72-236">Related Topics</span></span>  
   
-|标题|说明|  
-|--------|--------|  
-|[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|提供关于正则表达式回溯如何分支以查找替换的匹配方面的信息。|  
-|[编译和重复使用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供关于如何编译和重复使用正则表达式以提高性能方面的信息。|  
-|[线程安全](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|提供有关正则表达式线程安全的信息，并说明应在何时同步对正则表达式对象的访问。|  
-|[.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)|提供正则表达式的编程语言方面的概述。|  
-|[正则表达式对象模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供阐释如何使用正则表达式类的信息和代码示例。|  
-|[正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)|包含阐释如何在常见的应用程序中使用正则表达式的代码示例。|  
-|[正则表达式语言 \- 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供有关可用来定义正则表达式的字符集、运算符和构造的信息。|  
+|<span data-ttu-id="c5a72-237">标题</span><span class="sxs-lookup"><span data-stu-id="c5a72-237">Title</span></span>|<span data-ttu-id="c5a72-238">描述</span><span class="sxs-lookup"><span data-stu-id="c5a72-238">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="c5a72-239">回溯</span><span class="sxs-lookup"><span data-stu-id="c5a72-239">Backtracking</span></span>](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|<span data-ttu-id="c5a72-240">提供有关正则表达式回溯如何进行分支以查找替代匹配的信息。</span><span class="sxs-lookup"><span data-stu-id="c5a72-240">Provides information about how regular expression backtracking branches to find alternative matches.</span></span>|  
+|[<span data-ttu-id="c5a72-241">编译和重用</span><span class="sxs-lookup"><span data-stu-id="c5a72-241">Compilation and Reuse</span></span>](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|<span data-ttu-id="c5a72-242">提供有关编译和重复使用正则表达式以提高性能的信息。</span><span class="sxs-lookup"><span data-stu-id="c5a72-242">Provides information about compiling and reusing regular expressions to increase performance.</span></span>|  
+|[<span data-ttu-id="c5a72-243">线程安全性</span><span class="sxs-lookup"><span data-stu-id="c5a72-243">Thread Safety</span></span>](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|<span data-ttu-id="c5a72-244">提供有关正则表达式线程安全的信息，并说明何时应同步对正则表达式对象进行的访问。</span><span class="sxs-lookup"><span data-stu-id="c5a72-244">Provides information about regular expression thread safety and explains when you should synchronize access to regular expression objects.</span></span>|  
+|[<span data-ttu-id="c5a72-245">.NET Framework 正则表达式</span><span class="sxs-lookup"><span data-stu-id="c5a72-245">.NET Framework Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)|<span data-ttu-id="c5a72-246">提供正则表达式的编程语言方面的概述。</span><span class="sxs-lookup"><span data-stu-id="c5a72-246">Provides an overview of the programming language aspect of regular expressions.</span></span>|  
+|[<span data-ttu-id="c5a72-247">正则表达式对象模型</span><span class="sxs-lookup"><span data-stu-id="c5a72-247">The Regular Expression Object Model</span></span>](../../../docs/standard/base-types/the-regular-expression-object-model.md)|<span data-ttu-id="c5a72-248">提供演示如何使用正则表达式类的信息和代码示例。</span><span class="sxs-lookup"><span data-stu-id="c5a72-248">Provides information and code examples illustrating how to use the regular expression classes.</span></span>|  
+|[<span data-ttu-id="c5a72-249">正则表达式示例</span><span class="sxs-lookup"><span data-stu-id="c5a72-249">Regular Expression Examples</span></span>](../../../docs/standard/base-types/regular-expression-examples.md)|<span data-ttu-id="c5a72-250">包含说明如何在常见应用程序中使用正则表达式的代码示例。</span><span class="sxs-lookup"><span data-stu-id="c5a72-250">Contains code examples that illustrate the use of regular expressions in common applications.</span></span>|  
+|[<span data-ttu-id="c5a72-251">正则表达式语言 - 快速参考</span><span class="sxs-lookup"><span data-stu-id="c5a72-251">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|<span data-ttu-id="c5a72-252">提供有关可用来定义正则表达式的字符集、运算符和构造的信息。</span><span class="sxs-lookup"><span data-stu-id="c5a72-252">Provides information about the set of characters, operators, and constructs that you can use to define regular expressions.</span></span>|  
   
-## 引用  
- <xref:System.Text.RegularExpressions?displayProperty=fullName>
+## <a name="reference"></a><span data-ttu-id="c5a72-253">参考</span><span class="sxs-lookup"><span data-stu-id="c5a72-253">Reference</span></span>  
+ <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

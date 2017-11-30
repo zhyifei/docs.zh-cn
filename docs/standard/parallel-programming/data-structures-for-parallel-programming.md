@@ -1,78 +1,80 @@
 ---
-title: "Data Structures for Parallel Programming | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data structures, multi-threading"
+title: "用于并行编程的数据结构"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f35c5382455021f0a001604367e59204ce4ad93c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Data Structures for Parallel Programming
-.NET Framework 版本 4 引入了若干在并行编程中非常有用的新类型，其中包括一组并发集合类、轻量同步基元以及用于迟缓初始化的类型。  您可以将这些类型用于任何多线程应用程序代码，包括任务并行库和 PLINQ。  
+# <a name="data-structures-for-parallel-programming"></a><span data-ttu-id="6870c-102">用于并行编程的数据结构</span><span class="sxs-lookup"><span data-stu-id="6870c-102">Data Structures for Parallel Programming</span></span>
+<span data-ttu-id="6870c-103">.NET Framework 版本 4 引入了几种新类型，可在并行编程中，包括一套并发集合类、 轻量同步基元，以及对延迟初始化的类型。</span><span class="sxs-lookup"><span data-stu-id="6870c-103">The .NET Framework version 4 introduces several new types that are useful in parallel programming, including a set of concurrent collection classes, lightweight synchronization primitives, and types for lazy initialization.</span></span> <span data-ttu-id="6870c-104">你可以使用任何多线程应用程序代码，包括任务并行库和 PLINQ 中使用这些类型。</span><span class="sxs-lookup"><span data-stu-id="6870c-104">You can use these types with any multithreaded application code, including the Task Parallel Library and PLINQ.</span></span>  
   
-## 并发集合类  
- <xref:System.Collections.Concurrent?displayProperty=fullName> 命名空间中的集合类提供了线程安全的添加和移除操作，这些操作能够在可能时随时避免锁，并且锁为必需时使用细粒度锁定。  与 .NET Framework 版本 1.0 和 2.0 中引入的集合不同，并发集合类不需要用户代码在访问项时采用任何锁。  在多个线程从集合中添加和移除项的情况下，并发集合类可以显著改善诸如 <xref:System.Collections.ArrayList?displayProperty=fullName> 和 <xref:System.Collections.Generic.List%601?displayProperty=fullName>（包含用户实现的锁定）等类型的性能。  
+## <a name="concurrent-collection-classes"></a><span data-ttu-id="6870c-105">并发集合类</span><span class="sxs-lookup"><span data-stu-id="6870c-105">Concurrent Collection Classes</span></span>  
+ <span data-ttu-id="6870c-106">中的集合类<xref:System.Collections.Concurrent?displayProperty=nameWithType>命名空间提供线程安全添加和删除尽可能避免锁的操作以及使用锁必需的细粒度锁定。</span><span class="sxs-lookup"><span data-stu-id="6870c-106">The collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace provide thread-safe add and remove operations that avoid locks wherever possible and use fine-grained locking where locks are necessary.</span></span> <span data-ttu-id="6870c-107">与不同的在.NET framework 1.0 和 2.0 版中引入的集合，并发集合类不需要用户代码时要执行的任何锁它访问项。</span><span class="sxs-lookup"><span data-stu-id="6870c-107">Unlike collections that were introduced in the .NET Framework versions 1.0 and 2.0, a concurrent collection class does not require user code to take any locks when it accesses items.</span></span> <span data-ttu-id="6870c-108">并发集合类可以显著提高性能类型如<xref:System.Collections.ArrayList?displayProperty=nameWithType>和<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>（与用户实现锁定） 方案，其中多个线程中添加和删除项集合中。</span><span class="sxs-lookup"><span data-stu-id="6870c-108">The concurrent collection classes can significantly improve performance over types such as <xref:System.Collections.ArrayList?displayProperty=nameWithType> and <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (with user-implemented locking) in scenarios where multiple threads add and remove items from a collection.</span></span>  
   
- 下表列出了新的并发集合类：  
+ <span data-ttu-id="6870c-109">下表列出了新的并发集合类：</span><span class="sxs-lookup"><span data-stu-id="6870c-109">The following table lists the new concurrent collection classes:</span></span>  
   
-|类型|说明|  
-|--------|--------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>|为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName> 的线程安全集合提供阻塞和限制功能。  如果没有可用的槽或集合已满，则制造者线程将阻塞。  如果集合为空，则使用者线程将阻塞。  此类型还支持使用者和制造者的非阻塞访问。  <xref:System.Collections.Concurrent.BlockingCollection%601> 可用作基类或后备存储，为任何支持 <xref:System.Collections.Generic.IEnumerable%601> 的集合类提供阻塞和限制。|  
-|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>|一个提供可伸缩添加和获取操作的线程安全包实现。|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>|一个并发且可伸缩的字典类型。|  
-|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>|一个并发且可伸缩的 FIFO 队列。|  
-|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName>|一个并发且可伸缩的 LIFO 堆栈。|  
+|<span data-ttu-id="6870c-110">类型</span><span class="sxs-lookup"><span data-stu-id="6870c-110">Type</span></span>|<span data-ttu-id="6870c-111">描述</span><span class="sxs-lookup"><span data-stu-id="6870c-111">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-112">为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 的线程安全集合提供阻塞和限制功能。</span><span class="sxs-lookup"><span data-stu-id="6870c-112">Provides blocking and bounding capabilities for thread-safe collections that implement <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6870c-113">制造者线程阻止如果没有槽可用，或如果集合已满。</span><span class="sxs-lookup"><span data-stu-id="6870c-113">Producer threads block if no slots are available or if the collection is full.</span></span> <span data-ttu-id="6870c-114">如果该集合为空，将阻止使用者线程。</span><span class="sxs-lookup"><span data-stu-id="6870c-114">Consumer threads block if the collection is empty.</span></span> <span data-ttu-id="6870c-115">此类型还支持通过使用者和制造非阻止访问。</span><span class="sxs-lookup"><span data-stu-id="6870c-115">This type also supports non-blocking access by consumers and producers.</span></span> <span data-ttu-id="6870c-116"><xref:System.Collections.Concurrent.BlockingCollection%601>可以使用作为基类或后备存储，以提供阻塞和限制为支持任何集合类<xref:System.Collections.Generic.IEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="6870c-116"><xref:System.Collections.Concurrent.BlockingCollection%601> can be used as a base class or backing store to provide blocking and bounding for any collection class that supports <xref:System.Collections.Generic.IEnumerable%601>.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-117">提供可缩放的线程安全包实现添加和获取操作。</span><span class="sxs-lookup"><span data-stu-id="6870c-117">A thread-safe bag implementation that provides scalable add and get operations.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|<span data-ttu-id="6870c-118">一种并发且可伸缩的字典类型。</span><span class="sxs-lookup"><span data-stu-id="6870c-118">A concurrent and scalable dictionary type.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-119">并发和可缩放的先进先出队列。</span><span class="sxs-lookup"><span data-stu-id="6870c-119">A concurrent and scalable FIFO queue.</span></span>|  
+|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-120">并发和可缩放的后进先出堆栈。</span><span class="sxs-lookup"><span data-stu-id="6870c-120">A concurrent and scalable LIFO stack.</span></span>|  
   
- 有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。  
+ <span data-ttu-id="6870c-121">有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-121">For more information, see [Thread-Safe Collections](../../../docs/standard/collections/thread-safe/index.md).</span></span>  
   
-## 同步基元  
- <xref:System.Threading?displayProperty=fullName> 命名空间中新的同步基元通过避免使用旧版多线程处理代码中高开销的锁定机制，实现细化的并发和更快的性能。  某些新类型（例如 <xref:System.Threading.Barrier?displayProperty=fullName> 和 <xref:System.Threading.CountdownEvent?displayProperty=fullName>）在 .NET Framework 的早期版本中没有对应项。  
+## <a name="synchronization-primitives"></a><span data-ttu-id="6870c-122">同步基元</span><span class="sxs-lookup"><span data-stu-id="6870c-122">Synchronization Primitives</span></span>  
+ <span data-ttu-id="6870c-123">中的新同步基元<xref:System.Threading?displayProperty=nameWithType>命名空间通过避免开销在旧的多线程处理代码中找到的锁定机制启用细化的并发性和更快的性能。</span><span class="sxs-lookup"><span data-stu-id="6870c-123">The new synchronization primitives in the <xref:System.Threading?displayProperty=nameWithType> namespace enable fine-grained concurrency and faster performance by avoiding expensive locking mechanisms found in legacy multithreading code.</span></span> <span data-ttu-id="6870c-124">某些新类型，如<xref:System.Threading.Barrier?displayProperty=nameWithType>和<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>早期版本的.NET Framework 中具有不对应。</span><span class="sxs-lookup"><span data-stu-id="6870c-124">Some of the new types, such as <xref:System.Threading.Barrier?displayProperty=nameWithType> and <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> have no counterparts in earlier releases of the .NET Framework.</span></span>  
   
- 下表列出了这些新的同步类型：  
+ <span data-ttu-id="6870c-125">下表列出的新同步类型：</span><span class="sxs-lookup"><span data-stu-id="6870c-125">The following table lists the new synchronization types:</span></span>  
   
-|类型|说明|  
-|--------|--------|  
-|<xref:System.Threading.Barrier?displayProperty=fullName>|使多个线程能够依据某种算法并行工作，方法是提供一个点，每个任务都能在该点发出其到达的信号，然后阻塞，直至部分或全部任务到达为止。  有关详细信息，请参阅[Barrier](../../../docs/standard/threading/barrier.md)。|  
-|<xref:System.Threading.CountdownEvent?displayProperty=fullName>|通过提供简便的集结机制，简化了分叉和联接方案。  有关详细信息，请参阅[CountdownEvent](../../../docs/standard/threading/countdownevent.md)。|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>|一种类似于 <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 的同步基元。  <xref:System.Threading.ManualResetEventSlim> 较为轻量，但只能用于进程内通信。  有关详细信息，请参阅[ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)。|  
-|<xref:System.Threading.SemaphoreSlim?displayProperty=fullName>|一种对可同时访问资源或资源池的线程数加以限制的同步基元。  有关详细信息，请参阅[Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。|  
-|<xref:System.Threading.SpinLock?displayProperty=fullName>|一种互斥锁基元，该基元会导致尝试获取锁的线程在生成其量程之前在循环中等待（或“旋转”）一段时间。  在等待锁的时间预期较短的情况下，<xref:System.Threading.SpinLock> 可提供比其他形式的锁定更出色的性能。  有关详细信息，请参阅[SpinLock](../../../docs/standard/threading/spinlock.md)。|  
-|<xref:System.Threading.SpinWait?displayProperty=fullName>|一个小型轻量类型，该类型将旋转一段指定的时间，并在超出旋转计数的情况下最终将线程置于等待状态。有关详细信息，请参阅[SpinWait](../../../docs/standard/threading/spinwait.md)。|  
+|<span data-ttu-id="6870c-126">类型</span><span class="sxs-lookup"><span data-stu-id="6870c-126">Type</span></span>|<span data-ttu-id="6870c-127">描述</span><span class="sxs-lookup"><span data-stu-id="6870c-127">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Threading.Barrier?displayProperty=nameWithType>|<span data-ttu-id="6870c-128">使多个线程能够通过提供每个任务可以指示其到达并且某些或所有任务均已到达，然后等到点处理并行算法。</span><span class="sxs-lookup"><span data-stu-id="6870c-128">Enables multiple threads to work on an algorithm in parallel by providing a point at which each task can signal its arrival and then block until some or all tasks have arrived.</span></span> <span data-ttu-id="6870c-129">有关详细信息，请参阅 [Barrier](../../../docs/standard/threading/barrier.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-129">For more information, see [Barrier](../../../docs/standard/threading/barrier.md).</span></span>|  
+|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|<span data-ttu-id="6870c-130">通过提供简单会合机制简化分叉和联接的方案。</span><span class="sxs-lookup"><span data-stu-id="6870c-130">Simplifies fork and join scenarios by providing an easy rendezvous mechanism.</span></span> <span data-ttu-id="6870c-131">有关详细信息，请参阅[CountdownEvent](../../../docs/standard/threading/countdownevent.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-131">For more information, see [CountdownEvent](../../../docs/standard/threading/countdownevent.md).</span></span>|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<span data-ttu-id="6870c-132">类似于一个同步基元<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="6870c-132">A synchronization primitive similar to <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6870c-133"><xref:System.Threading.ManualResetEventSlim>轻量但仅用于内部进程通信。</span><span class="sxs-lookup"><span data-stu-id="6870c-133"><xref:System.Threading.ManualResetEventSlim> is lighter-weight but can only be used for intra-process communication.</span></span> <span data-ttu-id="6870c-134">有关详细信息，请参阅[ManualResetEvent 和 ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-134">For more information, see [ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).</span></span>|  
+|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|<span data-ttu-id="6870c-135">一个同步基元，限制可以同时访问资源的线程数或资源池。</span><span class="sxs-lookup"><span data-stu-id="6870c-135">A synchronization primitive that limits the number of threads that can concurrently access a resource or a pool of resources.</span></span> <span data-ttu-id="6870c-136">有关详细信息，请参阅[Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-136">For more information, see [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).</span></span>|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|<span data-ttu-id="6870c-137">一个相互排斥锁基元，导致线程尝试获取锁后，在循环中等待或*数值调节钮*，生成其量程之前的时间段内。</span><span class="sxs-lookup"><span data-stu-id="6870c-137">A mutual exclusion lock primitive that causes the thread that is trying to acquire the lock to wait in a loop, or *spin*, for a period of time before yielding its quantum.</span></span> <span data-ttu-id="6870c-138">在方案中等待的锁的地方短，<xref:System.Threading.SpinLock>提供更好的性能比其他形式的锁定。</span><span class="sxs-lookup"><span data-stu-id="6870c-138">In scenarios where the wait for the lock is expected to be short, <xref:System.Threading.SpinLock> offers better performance than other forms of locking.</span></span> <span data-ttu-id="6870c-139">有关详细信息，请参阅[旋转锁](../../../docs/standard/threading/spinlock.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-139">For more information, see [SpinLock](../../../docs/standard/threading/spinlock.md).</span></span>|  
+|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|<span data-ttu-id="6870c-140">指定的时间，并最终将旋转的小的轻型类型将线程置于等待状态，如果超过重试次数。</span><span class="sxs-lookup"><span data-stu-id="6870c-140">A small, lightweight type that will spin for a specified time and eventually put the thread into a wait state if the spin count is exceeded.</span></span>  <span data-ttu-id="6870c-141">有关详细信息，请参阅[SpinWait](../../../docs/standard/threading/spinwait.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-141">For more information, see [SpinWait](../../../docs/standard/threading/spinwait.md).</span></span>|  
   
- 有关详细信息，请参阅：  
+ <span data-ttu-id="6870c-142">有关详细信息，请参见:</span><span class="sxs-lookup"><span data-stu-id="6870c-142">For more information, see:</span></span>  
   
--   [How to: Use SpinLock for Low\-Level Synchronization](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [<span data-ttu-id="6870c-143">如何：使用 SpinLock 进行低级别同步</span><span class="sxs-lookup"><span data-stu-id="6870c-143">How to: Use SpinLock for Low-Level Synchronization</span></span>](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [How to: Synchronize Concurrent Operations with a Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+-   <span data-ttu-id="6870c-144">[如何： 使并发操作保持同步使用屏障](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-144">[How to: Synchronize Concurrent Operations with a Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).</span></span>  
   
-## 迟缓初始化类  
- 对于迟缓初始化，直到在需要时才会分配对象的内存。  迟缓初始化可以在程序的生存期中平均分布对象分配，从而改善性能。  可以通过包装类型 <xref:System.Lazy%601>，为任何自定义类型启用迟缓初始化。  
+## <a name="lazy-initialization-classes"></a><span data-ttu-id="6870c-145">延迟初始化类</span><span class="sxs-lookup"><span data-stu-id="6870c-145">Lazy Initialization Classes</span></span>  
+ <span data-ttu-id="6870c-146">对于迟缓初始化，直到需要它时不分配对象的内存。</span><span class="sxs-lookup"><span data-stu-id="6870c-146">With lazy initialization, the memory for an object is not allocated until it is needed.</span></span> <span data-ttu-id="6870c-147">通过在程序的生存期之间均匀分配对象分配，延迟初始化可以提高性能。</span><span class="sxs-lookup"><span data-stu-id="6870c-147">Lazy initialization can improve performance by spreading object allocations evenly across the lifetime of a program.</span></span> <span data-ttu-id="6870c-148">你可以通过包装类型启用任何自定义类型的延迟初始化<xref:System.Lazy%601>。</span><span class="sxs-lookup"><span data-stu-id="6870c-148">You can enable lazy initialization for any custom type by wrapping the type <xref:System.Lazy%601>.</span></span>  
   
- 下表列出了迟缓初始化类型：  
+ <span data-ttu-id="6870c-149">下表列出的延迟初始化类型：</span><span class="sxs-lookup"><span data-stu-id="6870c-149">The following table lists the lazy initialization types:</span></span>  
   
-|类型|说明|  
-|--------|--------|  
-|<xref:System.Lazy%601?displayProperty=fullName>|提供轻量、线程安全的迟缓初始化。|  
-|<xref:System.Threading.ThreadLocal%601?displayProperty=fullName>|逐线程提供迟缓初始化的值，其中每个线程都会迟缓调用初始化函数。|  
-|<xref:System.Threading.LazyInitializer?displayProperty=fullName>|提供一些静态方法，这些方法无需分配专用迟缓初始化实例，  而是使用引用来确保在访问目标时目标已初始化。|  
+|<span data-ttu-id="6870c-150">类型</span><span class="sxs-lookup"><span data-stu-id="6870c-150">Type</span></span>|<span data-ttu-id="6870c-151">描述</span><span class="sxs-lookup"><span data-stu-id="6870c-151">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Lazy%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-152">提供轻量、 线程安全迟缓初始化。</span><span class="sxs-lookup"><span data-stu-id="6870c-152">Provides lightweight, thread-safe lazy-initialization.</span></span>|  
+|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|<span data-ttu-id="6870c-153">与延迟调用的初始化函数的每个线程上为每个线程运行，提供延迟初始化值。</span><span class="sxs-lookup"><span data-stu-id="6870c-153">Provides a lazily-initialized value on a per-thread basis, with each thread lazily-invoking the initialization function.</span></span>|  
+|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|<span data-ttu-id="6870c-154">提供无需分配的专用、 延迟初始化的实例的静态方法。</span><span class="sxs-lookup"><span data-stu-id="6870c-154">Provides static methods that avoid the need to allocate a dedicated, lazy-initialization instance.</span></span> <span data-ttu-id="6870c-155">相反，它们使用引用以确保目标已初始化为这些表进行访问。</span><span class="sxs-lookup"><span data-stu-id="6870c-155">Instead, they use references to ensure targets have been initialized as they are accessed.</span></span>|  
   
- 有关详细信息，请参阅[延迟初始化](../../../docs/framework/performance/lazy-initialization.md)。  
+ <span data-ttu-id="6870c-156">若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)</span><span class="sxs-lookup"><span data-stu-id="6870c-156">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## 聚合异常  
- <xref:System.AggregateException?displayProperty=fullName> 类型可用于捕获在不同线程上同时引发的多个异常，并将它们作为单个异常返回到联接线程。  <xref:System.Threading.Tasks.Task?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 类型以及 PLINQ 出于此目的广泛使用 <xref:System.AggregateException>。  有关更多信息，请参见[NIB: How to: Handle Exceptions Thrown by Tasks](http://msdn.microsoft.com/zh-cn/d6c47ec8-9de9-4880-beb3-ff19ae51565d)和[How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
+## <a name="aggregate-exceptions"></a><span data-ttu-id="6870c-157">聚合异常</span><span class="sxs-lookup"><span data-stu-id="6870c-157">Aggregate Exceptions</span></span>  
+ <span data-ttu-id="6870c-158"><xref:System.AggregateException?displayProperty=nameWithType>类型可以用于捕获多个异常单独线程上同时引发，并且将它们返回到为单个异常的联接线程。</span><span class="sxs-lookup"><span data-stu-id="6870c-158">The <xref:System.AggregateException?displayProperty=nameWithType> type can be used to capture multiple exceptions that are thrown concurrently on separate threads, and return them to the joining thread as a single exception.</span></span> <span data-ttu-id="6870c-159"><xref:System.Threading.Tasks.Task?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>类型和 PLINQ 使用<xref:System.AggregateException>广泛用于此目的。</span><span class="sxs-lookup"><span data-stu-id="6870c-159">The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> types and PLINQ use <xref:System.AggregateException> extensively for this purpose.</span></span> <span data-ttu-id="6870c-160">有关详细信息，请参阅[NIB： 如何： 处理由任务引发异常](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d)和[如何： 处理 PLINQ 查询中的异常](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。</span><span class="sxs-lookup"><span data-stu-id="6870c-160">For more information, see [NIB: How to: Handle Exceptions Thrown by Tasks](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) and [How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).</span></span>  
   
-## 请参阅  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- <xref:System.Threading?displayProperty=fullName>   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="6870c-161">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6870c-161">See Also</span></span>  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ <xref:System.Threading?displayProperty=nameWithType>  
+ [<span data-ttu-id="6870c-162">并行编程</span><span class="sxs-lookup"><span data-stu-id="6870c-162">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

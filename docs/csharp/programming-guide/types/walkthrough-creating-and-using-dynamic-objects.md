@@ -1,125 +1,111 @@
 ---
 title: "演练：创建和使用动态对象（C# 和 Visual Basic）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 dev_langs:
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
-ms.openlocfilehash: 19701ede37845249cf4d50a34eb4ab487cdeb76b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
-动态对象会在运行时（而非编译时）公开属性和方法等成员。 这使你能够创建对象以处理与静态类型或格式不匹配的结构。 例如，可以使用动态对象来引用 HTML 文档对象模型 (DOM)，该模型包含有效 HTML 标记元素和特性的任意组合。 由于每个 HTML 文档都是唯一的，因此在运行时将确定特定 HTML 文档的成员。 引用 HTML 元素的特性的常用方法是，将该特性的名称传递给该元素的 `GetProperty` 方法。 若要引用 HTML 元素 `<div id="Div1">` 的 `id` 特性，首先获取对 `<div>` 元素的引用，然后使用 `divElement.GetProperty("id")`。 如果使用动态对象，则可以将 `id` 特性引用为 `divElement.id`。  
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a><span data-ttu-id="a489a-102">演练：创建和使用动态对象（C# 和 Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="a489a-102">Walkthrough: Creating and Using Dynamic Objects (C# and Visual Basic)</span></span>
+
+<span data-ttu-id="a489a-103">动态对象会在运行时（而非编译时）公开属性和方法等成员。</span><span class="sxs-lookup"><span data-stu-id="a489a-103">Dynamic objects expose members such as properties and methods at run time, instead of in at compile time.</span></span> <span data-ttu-id="a489a-104">这使你能够创建对象以处理与静态类型或格式不匹配的结构。</span><span class="sxs-lookup"><span data-stu-id="a489a-104">This enables you to create objects to work with structures that do not match a static type or format.</span></span> <span data-ttu-id="a489a-105">例如，可以使用动态对象来引用 HTML 文档对象模型 (DOM)，该模型包含有效 HTML 标记元素和特性的任意组合。</span><span class="sxs-lookup"><span data-stu-id="a489a-105">For example, you can use a dynamic object to reference the HTML Document Object Model (DOM), which can contain any combination of valid HTML markup elements and attributes.</span></span> <span data-ttu-id="a489a-106">由于每个 HTML 文档都是唯一的，因此在运行时将确定特定 HTML 文档的成员。</span><span class="sxs-lookup"><span data-stu-id="a489a-106">Because each HTML document is unique, the members for a particular HTML document are determined at run time.</span></span> <span data-ttu-id="a489a-107">引用 HTML 元素的特性的常用方法是，将该特性的名称传递给该元素的 `GetProperty` 方法。</span><span class="sxs-lookup"><span data-stu-id="a489a-107">A common method to reference an attribute of an HTML element is to pass the name of the attribute to the `GetProperty` method of the element.</span></span> <span data-ttu-id="a489a-108">若要引用 HTML 元素 `<div id="Div1">` 的 `id` 特性，首先获取对 `<div>` 元素的引用，然后使用 `divElement.GetProperty("id")`。</span><span class="sxs-lookup"><span data-stu-id="a489a-108">To reference the `id` attribute of the HTML element `<div id="Div1">`, you first obtain a reference to the `<div>` element, and then use `divElement.GetProperty("id")`.</span></span> <span data-ttu-id="a489a-109">如果使用动态对象，则可以将 `id` 特性引用为 `divElement.id`。</span><span class="sxs-lookup"><span data-stu-id="a489a-109">If you use a dynamic object, you can reference the `id` attribute as `divElement.id`.</span></span>  
   
- 动态对象还提供对 IronPython 和 IronRuby 等动态语言的便捷访问。 可以使用动态对象来引用在运行时解释的动态脚本。  
+ <span data-ttu-id="a489a-110">动态对象还提供对 IronPython 和 IronRuby 等动态语言的便捷访问。</span><span class="sxs-lookup"><span data-stu-id="a489a-110">Dynamic objects also provide convenient access to dynamic languages such as IronPython and IronRuby.</span></span> <span data-ttu-id="a489a-111">可以使用动态对象来引用在运行时解释的动态脚本。</span><span class="sxs-lookup"><span data-stu-id="a489a-111">You can use a dynamic object to refer to a dynamic script that is interpreted at run time.</span></span>  
   
- 使用晚期绑定引用动态对象。 在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，将晚期绑定对象的类型指定为 `Object`。 有关详细信息，请参阅[动态](../../../csharp/language-reference/keywords/dynamic.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ <span data-ttu-id="a489a-112">使用晚期绑定引用动态对象。</span><span class="sxs-lookup"><span data-stu-id="a489a-112">You reference a dynamic object by using late binding.</span></span> <span data-ttu-id="a489a-113">在 C# 中，将晚期绑定对象的类型指定为 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="a489a-113">In C#, you specify the type of a late-bound object as `dynamic`.</span></span> <span data-ttu-id="a489a-114">在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，将晚期绑定对象的类型指定为 `Object`。</span><span class="sxs-lookup"><span data-stu-id="a489a-114">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], you specify the type of a late-bound object as `Object`.</span></span> <span data-ttu-id="a489a-115">有关详细信息，请参阅[动态](../../../csharp/language-reference/keywords/dynamic.md)和[早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a489a-115">For more information, see [dynamic](../../../csharp/language-reference/keywords/dynamic.md) and [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).</span></span>  
   
- 可以使用 <xref:System.Dynamic?displayProperty=fullName> 命名空间中的类来创建自定义动态对象。 例如，可以创建 <xref:System.Dynamic.ExpandoObject> 并在运行时指定该对象的成员。 还可以创建继承 <xref:System.Dynamic.DynamicObject> 类的自己的类型。 然后，可以替代 <xref:System.Dynamic.DynamicObject> 类的成员以提供运行时动态功能。  
+ <span data-ttu-id="a489a-116">可以使用 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间中的类来创建自定义动态对象。</span><span class="sxs-lookup"><span data-stu-id="a489a-116">You can create custom dynamic objects by using the classes in the <xref:System.Dynamic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="a489a-117">例如，可以创建 <xref:System.Dynamic.ExpandoObject> 并在运行时指定该对象的成员。</span><span class="sxs-lookup"><span data-stu-id="a489a-117">For example, you can create an <xref:System.Dynamic.ExpandoObject> and specify the members of that object at run time.</span></span> <span data-ttu-id="a489a-118">还可以创建继承 <xref:System.Dynamic.DynamicObject> 类的自己的类型。</span><span class="sxs-lookup"><span data-stu-id="a489a-118">You can also create your own type that inherits the <xref:System.Dynamic.DynamicObject> class.</span></span> <span data-ttu-id="a489a-119">然后，可以替代 <xref:System.Dynamic.DynamicObject> 类的成员以提供运行时动态功能。</span><span class="sxs-lookup"><span data-stu-id="a489a-119">You can then override the members of the <xref:System.Dynamic.DynamicObject> class to provide run-time dynamic functionality.</span></span>  
   
- 在本演练中，将要执行以下任务：  
+ <span data-ttu-id="a489a-120">在本演练中，将要执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="a489a-120">In this walkthrough you will perform the following tasks:</span></span>  
   
--   创建一个自定义对象，该对象会将文本文件的内容作为对象的属性动态公开。  
+-   <span data-ttu-id="a489a-121">创建一个自定义对象，该对象会将文本文件的内容作为对象的属性动态公开。</span><span class="sxs-lookup"><span data-stu-id="a489a-121">Create a custom object that dynamically exposes the contents of a text file as properties of an object.</span></span>  
   
--   创建使用 `IronPython` 库的项目。  
+-   <span data-ttu-id="a489a-122">创建使用 `IronPython` 库的项目。</span><span class="sxs-lookup"><span data-stu-id="a489a-122">Create a project that uses an `IronPython` library.</span></span>  
   
-## <a name="prerequisites"></a>先决条件  
- 需要 IronPython 2.6.1 for .NET 4.0 才能完成此演练。 可以从 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=187223) 下载 IronPython 2.6.1 for .NET 4.0。  
+## <a name="prerequisites"></a><span data-ttu-id="a489a-123">先决条件</span><span class="sxs-lookup"><span data-stu-id="a489a-123">Prerequisites</span></span>  
+<span data-ttu-id="a489a-124">你需要[IronPython](http://ironpython.net/) for.NET 来完成本演练。</span><span class="sxs-lookup"><span data-stu-id="a489a-124">You need [IronPython](http://ironpython.net/) for .NET to complete this walkthrough.</span></span> <span data-ttu-id="a489a-125">转到其[下载页](http://ironpython.net/download/)以获取最新版本。</span><span class="sxs-lookup"><span data-stu-id="a489a-125">Go to their [Download page](http://ironpython.net/download/) to obtain the latest version.</span></span>
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-a-custom-dynamic-object"></a>创建自定义动态对象  
- 在本演练中创建的第一个项目将定义一个搜索文本文件内容的自定义动态对象。 要搜索的文本由动态属性的名称指定。 例如，如果调用代码指定 `dynamicFile.Sample`，则动态类将返回一个字符串泛型列表，其中包含该文件中以“Sample”开头的所有行。 搜索不区分大小写。 动态类还支持两个可选参数。 第一个参数是一个搜索选项枚举值，它指定动态类应在行的开头、行的结尾或行中任意位置搜索匹配项。 第二个参数指定动态类应在搜索之前去除每行中的前导空格和尾部空格。 例如，如果调用代码指定 `dynamicFile.Sample(StringSearchOption.Contains)`，则动态类将在行中的任意位置搜索“Sample”。 如果调用代码指定 `dynamicFile.Sample(StringSearchOption.StartsWith, false)`，则动态类将在每行的开头搜索“Sample”，但不会删除前导空格和尾部空格。 动态类的默认行为是在每行的开头搜索匹配项，并删除前导空格和尾部空格。  
+## <a name="creating-a-custom-dynamic-object"></a><span data-ttu-id="a489a-126">创建自定义动态对象</span><span class="sxs-lookup"><span data-stu-id="a489a-126">Creating a Custom Dynamic Object</span></span>  
+ <span data-ttu-id="a489a-127">在本演练中创建的第一个项目将定义一个搜索文本文件内容的自定义动态对象。</span><span class="sxs-lookup"><span data-stu-id="a489a-127">The first project that you create in this walkthrough defines a custom dynamic object that searches the contents of a text file.</span></span> <span data-ttu-id="a489a-128">要搜索的文本由动态属性的名称指定。</span><span class="sxs-lookup"><span data-stu-id="a489a-128">Text to search for is specified by the name of a dynamic property.</span></span> <span data-ttu-id="a489a-129">例如，如果调用代码指定 `dynamicFile.Sample`，则动态类将返回一个字符串泛型列表，其中包含该文件中以“Sample”开头的所有行。</span><span class="sxs-lookup"><span data-stu-id="a489a-129">For example, if calling code specifies `dynamicFile.Sample`, the dynamic class returns a generic list of strings that contains all of the lines from the file that begin with "Sample".</span></span> <span data-ttu-id="a489a-130">搜索不区分大小写。</span><span class="sxs-lookup"><span data-stu-id="a489a-130">The search is case-insensitive.</span></span> <span data-ttu-id="a489a-131">动态类还支持两个可选参数。</span><span class="sxs-lookup"><span data-stu-id="a489a-131">The dynamic class also supports two optional arguments.</span></span> <span data-ttu-id="a489a-132">第一个参数是一个搜索选项枚举值，它指定动态类应在行的开头、行的结尾或行中任意位置搜索匹配项。</span><span class="sxs-lookup"><span data-stu-id="a489a-132">The first argument is a search option enum value that specifies that the dynamic class should search for matches at the start of the line, the end of the line, or anywhere in the line.</span></span> <span data-ttu-id="a489a-133">第二个参数指定动态类应在搜索之前去除每行中的前导空格和尾部空格。</span><span class="sxs-lookup"><span data-stu-id="a489a-133">The second argument specifies that the dynamic class should trim leading and trailing spaces from each line before searching.</span></span> <span data-ttu-id="a489a-134">例如，如果调用代码指定 `dynamicFile.Sample(StringSearchOption.Contains)`，则动态类将在行中的任意位置搜索“Sample”。</span><span class="sxs-lookup"><span data-stu-id="a489a-134">For example, if calling code specifies `dynamicFile.Sample(StringSearchOption.Contains)`, the dynamic class searches for "Sample" anywhere in a line.</span></span> <span data-ttu-id="a489a-135">如果调用代码指定 `dynamicFile.Sample(StringSearchOption.StartsWith, false)`，则动态类将在每行的开头搜索“Sample”，但不会删除前导空格和尾部空格。</span><span class="sxs-lookup"><span data-stu-id="a489a-135">If calling code specifies `dynamicFile.Sample(StringSearchOption.StartsWith, false)`, the dynamic class searches for "Sample" at the start of each line, and does not remove leading and trailing spaces.</span></span> <span data-ttu-id="a489a-136">动态类的默认行为是在每行的开头搜索匹配项，并删除前导空格和尾部空格。</span><span class="sxs-lookup"><span data-stu-id="a489a-136">The default behavior of the dynamic class is to search for a match at the start of each line and to remove leading and trailing spaces.</span></span>  
   
-#### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类  
+#### <a name="to-create-a-custom-dynamic-class"></a><span data-ttu-id="a489a-137">创建自定义动态类</span><span class="sxs-lookup"><span data-stu-id="a489a-137">To create a custom dynamic class</span></span>  
   
-1.  启动 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+1.  <span data-ttu-id="a489a-138">启动 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a489a-138">Start [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-2.  在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。  
+2.  <span data-ttu-id="a489a-139">在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。</span><span class="sxs-lookup"><span data-stu-id="a489a-139">On the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-3.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicSample`，然后单击“确定”。 新项目创建完成。  
+3.  <span data-ttu-id="a489a-140">在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。</span><span class="sxs-lookup"><span data-stu-id="a489a-140">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="a489a-141">在“模板”窗格中，选择“控制台应用程序”。</span><span class="sxs-lookup"><span data-stu-id="a489a-141">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="a489a-142">在“名称”框中，键入 `DynamicSample`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="a489a-142">In the **Name** box, type `DynamicSample`, and then click **OK**.</span></span> <span data-ttu-id="a489a-143">新项目创建完成。</span><span class="sxs-lookup"><span data-stu-id="a489a-143">The new project is created.</span></span>  
   
-4.  右键单击 DynamicSample 项目，指向“添加”，然后单击“类”。 在“名称”框中，键入 `ReadOnlyFile`，然后单击“确定”。 这将添加一个包含 ReadOnlyFile 类的新文件。  
+4.  <span data-ttu-id="a489a-144">右键单击 DynamicSample 项目，指向“添加”，然后单击“类”。</span><span class="sxs-lookup"><span data-stu-id="a489a-144">Right-click the DynamicSample project and point to **Add**, and then click **Class**.</span></span> <span data-ttu-id="a489a-145">在“名称”框中，键入 `ReadOnlyFile`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="a489a-145">In the **Name** box, type `ReadOnlyFile`, and then click **OK**.</span></span> <span data-ttu-id="a489a-146">这将添加一个包含 ReadOnlyFile 类的新文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-146">A new file is added that contains the ReadOnlyFile class.</span></span>  
   
-5.  在 ReadOnlyFile.cs 或 ReadOnlyFile.vb 文件的顶部，添加以下代码以导入 <xref:System.IO?displayProperty=fullName> 和 <xref:System.Dynamic?displayProperty=fullName> 命名空间。  
+5.  <span data-ttu-id="a489a-147">在 ReadOnlyFile.cs 或 ReadOnlyFile.vb 文件的顶部，添加以下代码以导入 <xref:System.IO?displayProperty=nameWithType> 和 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="a489a-147">At the top of the ReadOnlyFile.cs or ReadOnlyFile.vb file, add the following code to import the <xref:System.IO?displayProperty=nameWithType> and <xref:System.Dynamic?displayProperty=nameWithType> namespaces.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]
+     [!code-csharp[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]
 
      [!code-vb[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_1.vb)]  
   
-6.  自定义动态对象使用一个枚举来确定搜索条件。 在类语句的前面，添加以下枚举定义。  
+6.  <span data-ttu-id="a489a-148">自定义动态对象使用一个枚举来确定搜索条件。</span><span class="sxs-lookup"><span data-stu-id="a489a-148">The custom dynamic object uses an enum to determine the search criteria.</span></span> <span data-ttu-id="a489a-149">在类语句的前面，添加以下枚举定义。</span><span class="sxs-lookup"><span data-stu-id="a489a-149">Before the class statement, add the following enum definition.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]
+     [!code-csharp[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]
 
      [!code-vb[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_2.vb)]  
   
-7.  更新类语句以继承 `DynamicObject` 类，如以下代码示例所示。  
+7.  <span data-ttu-id="a489a-150">更新类语句以继承 `DynamicObject` 类，如以下代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="a489a-150">Update the class statement to inherit the `DynamicObject` class, as shown in the following code example.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]
+     [!code-csharp[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]
 
      [!code-vb[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_3.vb)]  
   
-8.  将以下代码添加到 `ReadOnlyFile` 类，定义一个用于文件路径的私有字段，并定义 `ReadOnlyFile` 类的构造函数。  
+8.  <span data-ttu-id="a489a-151">将以下代码添加到 `ReadOnlyFile` 类，定义一个用于文件路径的私有字段，并定义 `ReadOnlyFile` 类的构造函数。</span><span class="sxs-lookup"><span data-stu-id="a489a-151">Add the following code to the `ReadOnlyFile` class to define a private field for the file path and a constructor for the `ReadOnlyFile` class.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]
+     [!code-csharp[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]
      
      [!code-vb[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_4.vb)]  
   
-9. 将下面的 `GetPropertyValue` 方法添加到 `ReadOnlyFile` 类。 `GetPropertyValue` 方法接收搜索条件作为输入，并返回文本文件中符合该搜索条件的行。 由 `ReadOnlyFile` 类提供的动态方法将调用 `GetPropertyValue` 方法以检索其各自的结果。  
+9. <span data-ttu-id="a489a-152">将下面的 `GetPropertyValue` 方法添加到 `ReadOnlyFile` 类。</span><span class="sxs-lookup"><span data-stu-id="a489a-152">Add the following `GetPropertyValue` method to the `ReadOnlyFile` class.</span></span> <span data-ttu-id="a489a-153">`GetPropertyValue` 方法接收搜索条件作为输入，并返回文本文件中符合该搜索条件的行。</span><span class="sxs-lookup"><span data-stu-id="a489a-153">The `GetPropertyValue` method takes, as input, search criteria and returns the lines from a text file that match that search criteria.</span></span> <span data-ttu-id="a489a-154">由 `ReadOnlyFile` 类提供的动态方法将调用 `GetPropertyValue` 方法以检索其各自的结果。</span><span class="sxs-lookup"><span data-stu-id="a489a-154">The dynamic methods provided by the `ReadOnlyFile` class call the `GetPropertyValue` method to retrieve their respective results.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]
+     [!code-csharp[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]
      
      [!code-vb[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_5.vb)]  
   
-10. 在 `GetPropertyValue` 方法后，添加以下代码以替代 <xref:System.Dynamic.DynamicObject> 类的 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。 请求动态类的成员且未指定任何参数时，将调用 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。 `binder` 参数包含有关被引用成员的信息，而 `result` 参数则引用为指定的成员返回的结果。 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法会返回一个布尔值，如果请求的成员存在，则返回的布尔值为 `true`，否则返回的布尔值为 `false`。  
+10. <span data-ttu-id="a489a-155">在 `GetPropertyValue` 方法后，添加以下代码以替代 <xref:System.Dynamic.DynamicObject> 类的 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a489a-155">After the `GetPropertyValue` method, add the following code to override the <xref:System.Dynamic.DynamicObject.TryGetMember%2A> method of the <xref:System.Dynamic.DynamicObject> class.</span></span> <span data-ttu-id="a489a-156">请求动态类的成员且未指定任何参数时，将调用 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a489a-156">The <xref:System.Dynamic.DynamicObject.TryGetMember%2A> method is called when a member of a dynamic class is requested and no arguments are specified.</span></span> <span data-ttu-id="a489a-157">`binder` 参数包含有关被引用成员的信息，而 `result` 参数则引用为指定的成员返回的结果。</span><span class="sxs-lookup"><span data-stu-id="a489a-157">The `binder` argument contains information about the referenced member, and the `result` argument references the result returned for the specified member.</span></span> <span data-ttu-id="a489a-158"><xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法会返回一个布尔值，如果请求的成员存在，则返回的布尔值为 `true`，否则返回的布尔值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a489a-158">The <xref:System.Dynamic.DynamicObject.TryGetMember%2A> method returns a Boolean value that returns `true` if the requested member exists; otherwise it returns `false`.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]
+     [!code-csharp[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]
      
      [!code-vb[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_6.vb)]  
   
-11. 在 `TryGetMember` 方法后，添加以下代码以替代 <xref:System.Dynamic.DynamicObject> 类的 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。 使用参数请求动态类的成员时，将调用 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。 `binder` 参数包含有关被引用成员的信息，而 `result` 参数则引用为指定的成员返回的结果。 `args` 参数包含一个传递给成员的参数的数组。 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法会返回一个布尔值，如果请求的成员存在，则返回的布尔值为 `true`，否则返回的布尔值为 `false`。  
+11. <span data-ttu-id="a489a-159">在 `TryGetMember` 方法后，添加以下代码以替代 <xref:System.Dynamic.DynamicObject> 类的 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a489a-159">After the `TryGetMember` method, add the following code to override the <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> method of the <xref:System.Dynamic.DynamicObject> class.</span></span> <span data-ttu-id="a489a-160">使用参数请求动态类的成员时，将调用 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="a489a-160">The <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> method is called when a member of a dynamic class is requested with arguments.</span></span> <span data-ttu-id="a489a-161">`binder` 参数包含有关被引用成员的信息，而 `result` 参数则引用为指定的成员返回的结果。</span><span class="sxs-lookup"><span data-stu-id="a489a-161">The `binder` argument contains information about the referenced member, and the `result` argument references the result returned for the specified member.</span></span> <span data-ttu-id="a489a-162">`args` 参数包含一个传递给成员的参数的数组。</span><span class="sxs-lookup"><span data-stu-id="a489a-162">The `args` argument contains an array of the arguments that are passed to the member.</span></span> <span data-ttu-id="a489a-163"><xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法会返回一个布尔值，如果请求的成员存在，则返回的布尔值为 `true`，否则返回的布尔值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a489a-163">The <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> method returns a Boolean value that returns `true` if the requested member exists; otherwise it returns `false`.</span></span>  
   
-     `TryInvokeMember` 方法的自定义版本期望第一个参数为上一步骤中定义的 `StringSearchOption` 枚举中的值。 `TryInvokeMember` 方法期望第二个参数为一个布尔值。 如果这两个参数有一个或全部为有效值，则将它们传递给 `GetPropertyValue` 方法以检索结果。  
+     <span data-ttu-id="a489a-164">`TryInvokeMember` 方法的自定义版本期望第一个参数为上一步骤中定义的 `StringSearchOption` 枚举中的值。</span><span class="sxs-lookup"><span data-stu-id="a489a-164">The custom version of the `TryInvokeMember` method expects the first argument to be a value from the `StringSearchOption` enum that you defined in a previous step.</span></span> <span data-ttu-id="a489a-165">`TryInvokeMember` 方法期望第二个参数为一个布尔值。</span><span class="sxs-lookup"><span data-stu-id="a489a-165">The `TryInvokeMember` method expects the second argument to be a Boolean value.</span></span> <span data-ttu-id="a489a-166">如果这两个参数有一个或全部为有效值，则将它们传递给 `GetPropertyValue` 方法以检索结果。</span><span class="sxs-lookup"><span data-stu-id="a489a-166">If one or both arguments are valid values, they are passed to the `GetPropertyValue` method to retrieve the results.</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]
+     [!code-csharp[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]
      
      [!code-vb[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_7.vb)]  
   
-12. 保存并关闭文件。  
+12. <span data-ttu-id="a489a-167">保存并关闭文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-167">Save and close the file.</span></span>  
   
-#### <a name="to-create-a-sample-text-file"></a>创建示例文本文件  
+#### <a name="to-create-a-sample-text-file"></a><span data-ttu-id="a489a-168">创建示例文本文件</span><span class="sxs-lookup"><span data-stu-id="a489a-168">To create a sample text file</span></span>  
   
-1.  右键单击 DynamicSample 项目，指向“添加”，然后单击“新建项”。 在“已安装的模板”窗格中，选择“常规”，然后选择“文本文件”模板。 在“名称”框中保留默认名称 TextFile1.txt，然后单击“添加”。 这会将一个新的文本文件添加到项目中。  
+1.  <span data-ttu-id="a489a-169">右键单击 DynamicSample 项目，指向“添加”，然后单击“新建项”。</span><span class="sxs-lookup"><span data-stu-id="a489a-169">Right-click the DynamicSample project and point to **Add**, and then click **New Item**.</span></span> <span data-ttu-id="a489a-170">在“已安装的模板”窗格中，选择“常规”，然后选择“文本文件”模板。</span><span class="sxs-lookup"><span data-stu-id="a489a-170">In the **Installed Templates** pane, select **General**, and then select the **Text File** template.</span></span> <span data-ttu-id="a489a-171">在“名称”框中保留默认名称 TextFile1.txt，然后单击“添加”。</span><span class="sxs-lookup"><span data-stu-id="a489a-171">Leave the default name of TextFile1.txt in the **Name** box, and then click **Add**.</span></span> <span data-ttu-id="a489a-172">这会将一个新的文本文件添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="a489a-172">A new text file is added to the project.</span></span>  
   
-2.  将以下文本复制到 TextFile1.txt 文件。  
+2.  <span data-ttu-id="a489a-173">将以下文本复制到 TextFile1.txt 文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-173">Copy the following text to the TextFile1.txt file.</span></span>  
   
     ```  
     List of customers and suppliers  
@@ -136,60 +122,60 @@ ms.lasthandoff: 09/05/2017
     Customer: Koch, Paul  
     ```  
   
-3.  保存并关闭文件。  
+3.  <span data-ttu-id="a489a-174">保存并关闭文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-174">Save and close the file.</span></span>  
   
-#### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>创建一个使用自定义动态对象的示例应用程序  
+#### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a><span data-ttu-id="a489a-175">创建一个使用自定义动态对象的示例应用程序</span><span class="sxs-lookup"><span data-stu-id="a489a-175">To create a sample application that uses the custom dynamic object</span></span>  
   
-1.  在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]）或 Program.cs 文件（如果使用的是 Visual C#）。  
+1.  <span data-ttu-id="a489a-176">在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]）或 Program.cs 文件（如果使用的是 Visual C#）。</span><span class="sxs-lookup"><span data-stu-id="a489a-176">In **Solution Explorer**, double-click the Module1.vb file if you are using [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] or the Program.cs file if you are using Visual C#.</span></span>  
   
-2.  将以下代码添加到 Main 过程，为 TextFile1.txt 文件创建一个 `ReadOnlyFile` 类的实例。 代码将使用晚期绑定来调用动态成员，并检索包含字符串“Customer”的文本行。  
+2.  <span data-ttu-id="a489a-177">将以下代码添加到 Main 过程，为 TextFile1.txt 文件创建一个 `ReadOnlyFile` 类的实例。</span><span class="sxs-lookup"><span data-stu-id="a489a-177">Add the following code to the Main procedure to create an instance of the `ReadOnlyFile` class for the TextFile1.txt file.</span></span> <span data-ttu-id="a489a-178">代码将使用晚期绑定来调用动态成员，并检索包含字符串“Customer”的文本行。</span><span class="sxs-lookup"><span data-stu-id="a489a-178">The code uses late binding to call dynamic members and retrieve lines of text that contain the string "Customer".</span></span>  
   
-     [!code-cs[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]
+     [!code-csharp[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]
      
      [!code-vb[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_8.vb)]  
   
-3.  保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
+3.  <span data-ttu-id="a489a-179">保存文件，然后按 Ctrl+F5 生成并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="a489a-179">Save the file and press CTRL+F5 to build and run the application.</span></span>  
   
-## <a name="calling-a-dynamic-language-library"></a>调用动态语言库  
- 在此演练中创建的下一项目将访问以动态语言 IronPython 编写的库。 创建此项目之前，必须安装 IronPython 2.6.1 for .NET 4.0。 可以从 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=187223) 下载 IronPython 2.6.1 for .NET 4.0。  
+## <a name="calling-a-dynamic-language-library"></a><span data-ttu-id="a489a-180">调用动态语言库</span><span class="sxs-lookup"><span data-stu-id="a489a-180">Calling a Dynamic Language Library</span></span>  
+
+<span data-ttu-id="a489a-181">在此演练中创建的下一项目将访问以动态语言 IronPython 编写的库。</span><span class="sxs-lookup"><span data-stu-id="a489a-181">The next project that you create in this walkthrough accesses a library that is written in the dynamic language IronPython.</span></span>
   
-#### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类  
+#### <a name="to-create-a-custom-dynamic-class"></a><span data-ttu-id="a489a-182">创建自定义动态类</span><span class="sxs-lookup"><span data-stu-id="a489a-182">To create a custom dynamic class</span></span>  
   
-1.  在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
+1.  <span data-ttu-id="a489a-183">在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中的“文件”菜单上，指向“新建”，然后单击“项目”。</span><span class="sxs-lookup"><span data-stu-id="a489a-183">In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。 新项目创建完成。  
+2.  <span data-ttu-id="a489a-184">在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。</span><span class="sxs-lookup"><span data-stu-id="a489a-184">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="a489a-185">在“模板”窗格中，选择“控制台应用程序”。</span><span class="sxs-lookup"><span data-stu-id="a489a-185">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="a489a-186">在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="a489a-186">In the **Name** box, type `DynamicIronPythonSample`, and then click **OK**.</span></span> <span data-ttu-id="a489a-187">新项目创建完成。</span><span class="sxs-lookup"><span data-stu-id="a489a-187">The new project is created.</span></span>  
   
-3.  如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请右击 DynamicIronPythonSample 项目，然后单击“属性”。 单击“引用”选项卡。单击“添加”按钮。 如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。  
+3.  <span data-ttu-id="a489a-188">如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请右击 DynamicIronPythonSample 项目，然后单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="a489a-188">If you are using [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], right-click the DynamicIronPythonSample project and then click **Properties**.</span></span> <span data-ttu-id="a489a-189">单击“引用”选项卡。单击“添加”按钮。</span><span class="sxs-lookup"><span data-stu-id="a489a-189">Click the **References** tab. Click the **Add** button.</span></span> <span data-ttu-id="a489a-190">如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="a489a-190">If you are using Visual C#, in **Solution Explorer**, right-click the **References** folder and then click **Add Reference**.</span></span>  
   
-4.  在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。 例如，C:\Program Files\IronPython 2.6 for .NET 4.0。 选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。 单击“确定”。  
+4.  <span data-ttu-id="a489a-191">在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。</span><span class="sxs-lookup"><span data-stu-id="a489a-191">On the **Browse** tab, browse to the folder where the IronPython libraries are installed.</span></span> <span data-ttu-id="a489a-192">例如，C:\Program Files\IronPython 2.6 for .NET 4.0。</span><span class="sxs-lookup"><span data-stu-id="a489a-192">For example, C:\Program Files\IronPython 2.6 for .NET 4.0.</span></span> <span data-ttu-id="a489a-193">选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。</span><span class="sxs-lookup"><span data-stu-id="a489a-193">Select the **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, and **Microsoft.Dynamic.dll** libraries.</span></span> <span data-ttu-id="a489a-194">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="a489a-194">Click **OK**.</span></span>  
   
-5.  如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请编辑 Module1.vb 文件。 如果使用的是 Visual C#，请编辑 Program.cs 文件。  
+5.  <span data-ttu-id="a489a-195">如果使用的是 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请编辑 Module1.vb 文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-195">If you are using [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], edit the Module1.vb file.</span></span> <span data-ttu-id="a489a-196">如果使用的是 Visual C#，请编辑 Program.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="a489a-196">If you are using Visual C#, edit the Program.cs file.</span></span>  
   
-6.  在文件的顶部，添加以下代码以从 IronPython 库导入 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空间。  
+6.  <span data-ttu-id="a489a-197">在文件的顶部，添加以下代码以从 IronPython 库导入 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空间。</span><span class="sxs-lookup"><span data-stu-id="a489a-197">At the top of the file, add the following code to import the `Microsoft.Scripting.Hosting` and `IronPython.Hosting` namespaces from the IronPython libraries.</span></span>  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]
+     [!code-csharp[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]
      
      [!code-vb[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_9.vb)]  
   
-7.  在 Main 方法中，添加以下代码以创建用于托管 IronPython 库的新 `Microsoft.Scripting.Hosting.ScriptRuntime` 对象。 `ScriptRuntime` 对象加载 IronPython 库模块 random.py。  
+7.  <span data-ttu-id="a489a-198">在 Main 方法中，添加以下代码以创建用于托管 IronPython 库的新 `Microsoft.Scripting.Hosting.ScriptRuntime` 对象。</span><span class="sxs-lookup"><span data-stu-id="a489a-198">In the Main method, add the following code to create a new `Microsoft.Scripting.Hosting.ScriptRuntime` object to host the IronPython libraries.</span></span> <span data-ttu-id="a489a-199">`ScriptRuntime` 对象加载 IronPython 库模块 random.py。</span><span class="sxs-lookup"><span data-stu-id="a489a-199">The `ScriptRuntime` object loads the IronPython library module random.py.</span></span>  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]
+     [!code-csharp[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]
      
      [!code-vb[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_10.vb)]  
   
-8.  在用于加载 random.py 模块的代码之后，添加以下代码以创建一个整数数组。 数组传递给 random.py 模块的 `shuffle` 方法，该方法对数组中的值进行随机排序。  
+8.  <span data-ttu-id="a489a-200">在用于加载 random.py 模块的代码之后，添加以下代码以创建一个整数数组。</span><span class="sxs-lookup"><span data-stu-id="a489a-200">After the code to load the random.py module, add the following code to create an array of integers.</span></span> <span data-ttu-id="a489a-201">数组传递给 random.py 模块的 `shuffle` 方法，该方法对数组中的值进行随机排序。</span><span class="sxs-lookup"><span data-stu-id="a489a-201">The array is passed to the `shuffle` method of the random.py module, which randomly sorts the values in the array.</span></span>  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]
+     [!code-csharp[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]
      
      [!code-vb[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_11.vb)]  
   
-9. 保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
+9. <span data-ttu-id="a489a-202">保存文件，然后按 Ctrl+F5 生成并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="a489a-202">Save the file and press CTRL+F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a>另请参阅  
- <xref:System.Dynamic?displayProperty=fullName>   
- <xref:System.Dynamic.DynamicObject?displayProperty=fullName>   
- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [早期绑定和晚期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [实现动态接口（外部博客）](http://go.microsoft.com/fwlink/?LinkId=230895)
-
+## <a name="see-also"></a><span data-ttu-id="a489a-203">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a489a-203">See Also</span></span>  
+ <xref:System.Dynamic?displayProperty=nameWithType>  
+ <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+ [<span data-ttu-id="a489a-204">使用类型 dynamic</span><span class="sxs-lookup"><span data-stu-id="a489a-204">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="a489a-205">早期绑定和后期绑定</span><span class="sxs-lookup"><span data-stu-id="a489a-205">Early and Late Binding</span></span>](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [<span data-ttu-id="a489a-206">动态</span><span class="sxs-lookup"><span data-stu-id="a489a-206">dynamic</span></span>](../../../csharp/language-reference/keywords/dynamic.md)  
+ [<span data-ttu-id="a489a-207">实现动态接口（外部博客）</span><span class="sxs-lookup"><span data-stu-id="a489a-207">Implementing Dynamic Interfaces (external blog)</span></span>](http://go.microsoft.com/fwlink/?LinkId=230895)

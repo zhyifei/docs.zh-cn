@@ -1,74 +1,77 @@
 ---
-title: "EventWaitHandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], EventWaitHandle class"
-  - "EventWaitHandle class"
-  - "event wait handles [.NET Framework]"
-  - "threading [.NET Framework], cross-process synchronization"
+title: EventWaitHandle
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], EventWaitHandle class
+- EventWaitHandle class
+- event wait handles [.NET Framework]
+- threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bd248133bd95ff05246eb36a8e250247fd7ed61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# EventWaitHandle
-<xref:System.Threading.EventWaitHandle> 类允许线程通过发出信号和等待信号来互相通信。  事件等待句柄（简称事件）就是可以通过发出相应的信号来释放一个或多个等待线程的等待句柄。  信号发出后，可以用手动或自动方式重置事件等待句柄。  <xref:System.Threading.EventWaitHandle> 类既可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（命名事件或系统事件，对所有进程可见）。  
+# <a name="eventwaithandle"></a><span data-ttu-id="7d983-102">EventWaitHandle</span><span class="sxs-lookup"><span data-stu-id="7d983-102">EventWaitHandle</span></span>
+<span data-ttu-id="7d983-103"><xref:System.Threading.EventWaitHandle>类允许通过发送信号和等待信号相互通信的线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-103">The <xref:System.Threading.EventWaitHandle> class allows threads to communicate with each other by signaling and by waiting for signals.</span></span> <span data-ttu-id="7d983-104">事件等待句柄 （也简称为事件） 是可以指示实时编码器以释放一个或多个正在等待的线程的等待句柄。</span><span class="sxs-lookup"><span data-stu-id="7d983-104">Event wait handles (also referred to simply as events) are wait handles that can be signaled in order to release one or more waiting threads.</span></span> <span data-ttu-id="7d983-105">处于有信号状态后，手动或自动将重置事件等待句柄。</span><span class="sxs-lookup"><span data-stu-id="7d983-105">After it is signaled, an event wait handle is reset either manually or automatically.</span></span> <span data-ttu-id="7d983-106"><xref:System.Threading.EventWaitHandle>类可以表示任一本地事件等待句柄 （本地事件） 或已命名的系统事件等待句柄 （名为事件或系统事件，对所有进程可见）。</span><span class="sxs-lookup"><span data-stu-id="7d983-106">The <xref:System.Threading.EventWaitHandle> class can represent either a local event wait handle (local event) or a named system event wait handle (named event or system event, visible to all processes).</span></span>  
   
 > [!NOTE]
->  事件等待句柄不是 .NET Framework 中通常所指的事件。  它不涉及任何委托或事件处理程序。  之所以用“事件”一词来描述它们，一是因为人们习惯上将它们称为操作系统事件，二是因为发出等待句柄信号的行为提示等待线程发生了一个事件。  
+>  <span data-ttu-id="7d983-107">事件等待句柄不是在通常是由.NET Framework 中的该单词的意义上的事件。</span><span class="sxs-lookup"><span data-stu-id="7d983-107">Event wait handles are not events in the sense usually meant by that word in the .NET Framework.</span></span> <span data-ttu-id="7d983-108">没有任何委托或事件处理程序所涉及。</span><span class="sxs-lookup"><span data-stu-id="7d983-108">There are no delegates or event handlers involved.</span></span> <span data-ttu-id="7d983-109">Word"事件"用于描述它们，因为具有传统上已称其为操作系统事件，并且正在等待的线程的信号等待句柄 act 指示已发生事件。</span><span class="sxs-lookup"><span data-stu-id="7d983-109">The word "event" is used to describe them because they have traditionally been referred to as operating-system events, and because the act of signaling the wait handle indicates to waiting threads that an event has occurred.</span></span>  
   
- 本地和命名事件等待句柄都使用系统同步对象，<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包装保护着这些对象以确保资源的释放。  使用完对象后，您可以使用 <xref:System.Threading.WaitHandle.System%23IDisposable%23Dispose%2A> 方法立即释放资源。  
+ <span data-ttu-id="7d983-110">这两个本地和命名事件等待句柄使用系统同步对象，因为它们受<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>包装器来确保释放资源。</span><span class="sxs-lookup"><span data-stu-id="7d983-110">Both local and named event wait handles use system synchronization objects, which are protected by <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> wrappers to ensure that the resources are released.</span></span> <span data-ttu-id="7d983-111">你可以使用<xref:System.Threading.WaitHandle.Dispose%2A>方法以立即你完成使用对象时释放资源。</span><span class="sxs-lookup"><span data-stu-id="7d983-111">You can use the <xref:System.Threading.WaitHandle.Dispose%2A> method to free the resources immediately when you have finished using the object.</span></span>  
   
-## 自动重置的事件等待句柄  
- 您可以通过在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode?displayProperty=fullName> 来创建自动重置事件。  顾名思义，在释放一个等待线程后，此同步事件会在发出相应的信号时自动重置。  应通过调用事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法来发出事件信号。  
+## <a name="event-wait-handles-that-reset-automatically"></a><span data-ttu-id="7d983-112">自动重置的事件等待句柄</span><span class="sxs-lookup"><span data-stu-id="7d983-112">Event Wait Handles That Reset Automatically</span></span>  
+ <span data-ttu-id="7d983-113">通过指定创建的自动重置事件<xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>创建时<xref:System.Threading.EventWaitHandle>对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-113">You create an automatic reset event by specifying <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> when you create the <xref:System.Threading.EventWaitHandle> object.</span></span> <span data-ttu-id="7d983-114">顾名思义，此同步事件会自动重置时收到信号后释放单个正在等待的线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-114">As its name implies, this synchronization event resets automatically when signaled, after releasing a single waiting thread.</span></span> <span data-ttu-id="7d983-115">发出事件信号通过调用其<xref:System.Threading.EventWaitHandle.Set%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7d983-115">Signal the event by calling its <xref:System.Threading.EventWaitHandle.Set%2A> method.</span></span>  
   
- 自动重置事件通常用来一次为一个线程提供对资源的独占访问。  线程通过调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法来请求资源。  如果没有其他线程持有等待句柄，该方法会返回 `true`，同时调用线程会掌握对资源的控制。  
+ <span data-ttu-id="7d983-116">自动重置事件通常用于一次提供单个线程对资源的独占访问权。</span><span class="sxs-lookup"><span data-stu-id="7d983-116">Automatic reset events are usually used to provide exclusive access to a resource for a single thread at a time.</span></span> <span data-ttu-id="7d983-117">线程通过调用请求资源<xref:System.Threading.WaitHandle.WaitOne%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7d983-117">A thread requests the resource by calling the <xref:System.Threading.WaitHandle.WaitOne%2A> method.</span></span> <span data-ttu-id="7d983-118">如果没有其他线程持有等待句柄，该方法返回`true`和调用线程已对资源的控制。</span><span class="sxs-lookup"><span data-stu-id="7d983-118">If no other thread is holding the wait handle, the method returns `true` and the calling thread has control of the resource.</span></span>  
   
 > [!IMPORTANT]
->  与所有同步机制一样，您必须确保在访问受保护的资源之前所有代码路径都在正确的等待句柄上等待。  线程同步具有互操作性。  
+>  <span data-ttu-id="7d983-119">与所有的同步机制，必须确保，所有代码路径上的正确的都等待句柄之前都等待访问受保护的资源。</span><span class="sxs-lookup"><span data-stu-id="7d983-119">As with all synchronization mechanisms, you must ensure that all code paths wait on the appropriate wait handle before accessing a protected resource.</span></span> <span data-ttu-id="7d983-120">线程同步是协作性。</span><span class="sxs-lookup"><span data-stu-id="7d983-120">Thread synchronization is cooperative.</span></span>  
   
- 如果在没有线程等待时发出自动重置事件信号，则该信号将一直保留到有一个线程尝试在其上等待为止。  然后，该事件释放线程并立即重置，这会阻止后面的线程。  
+ <span data-ttu-id="7d983-121">如果任何线程在不等待时收到信号的自动重置事件，它将一直终止线程尝试在其上等待。</span><span class="sxs-lookup"><span data-stu-id="7d983-121">If an automatic reset event is signaled when no threads are waiting, it remains signaled until a thread attempts to wait on it.</span></span> <span data-ttu-id="7d983-122">该事件释放线程，并立即重置，阻止后面的线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-122">The event releases the thread and immediately resets, blocking subsequent threads.</span></span>  
   
-## 手动重置的事件等待句柄  
- 通过在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode?displayProperty=fullName> 可以创建手动重置事件。  顾名思义，此同步事件必须在发出其事件信号后手动重置。  在它重置之前，通过调用其 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法便可以重置它，从而使在该事件句柄上等待的线程立即继续而不受阻止。  
+## <a name="event-wait-handles-that-reset-manually"></a><span data-ttu-id="7d983-123">手动重置的事件等待句柄</span><span class="sxs-lookup"><span data-stu-id="7d983-123">Event Wait Handles That Reset Manually</span></span>  
+ <span data-ttu-id="7d983-124">通过指定创建手动重置事件<xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>创建时<xref:System.Threading.EventWaitHandle>对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-124">You create a manual reset event by specifying <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> when you create the <xref:System.Threading.EventWaitHandle> object.</span></span> <span data-ttu-id="7d983-125">顾名思义，此同步事件必须是后手动重置已终止。</span><span class="sxs-lookup"><span data-stu-id="7d983-125">As its name implies, this synchronization event must be reset manually after it has been signaled.</span></span> <span data-ttu-id="7d983-126">它被重置之前，通过调用其<xref:System.Threading.EventWaitHandle.Reset%2A>方法，等待的事件句柄的线程会立即继续而不阻止。</span><span class="sxs-lookup"><span data-stu-id="7d983-126">Until it is reset, by calling its <xref:System.Threading.EventWaitHandle.Reset%2A> method, threads that wait on the event handle proceed immediately without blocking.</span></span>  
   
- 手动重置事件就像马棚的门。  当未发出事件信号时，会阻止在其上等待的线程，就像阻拦马棚中的马。  通过调用事件的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法发出事件信号时，所有等待的线程都可以继续了。  在调用事件的 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法前，一直会发出事件信号。  这使得手动重置事件成了阻止在某一线程完成任务之前需等待的线程的理想方式。  
+ <span data-ttu-id="7d983-127">手动重置事件就像入口马棚。</span><span class="sxs-lookup"><span data-stu-id="7d983-127">A manual reset event acts like the gate of a corral.</span></span> <span data-ttu-id="7d983-128">当事件不处于终止状态时，阻止在其等待的线程，如同在马棚让马。</span><span class="sxs-lookup"><span data-stu-id="7d983-128">When the event is not signaled, threads that wait on it block, like horses in a corral.</span></span> <span data-ttu-id="7d983-129">该事件已终止时，通过调用其<xref:System.Threading.EventWaitHandle.Set%2A>方法中，所有正在等待的线程都可以继续。</span><span class="sxs-lookup"><span data-stu-id="7d983-129">When the event is signaled, by calling its <xref:System.Threading.EventWaitHandle.Set%2A> method, all waiting threads are free to proceed.</span></span> <span data-ttu-id="7d983-130">在事件未终止状态，直到其<xref:System.Threading.EventWaitHandle.Reset%2A>调用方法。</span><span class="sxs-lookup"><span data-stu-id="7d983-130">The event remains signaled until its <xref:System.Threading.EventWaitHandle.Reset%2A> method is called.</span></span> <span data-ttu-id="7d983-131">这使得手动重置事件理想的方式，可以保存最多需要等待，直到一个线程完成任务的线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-131">This makes the manual reset event an ideal way to hold up threads that need to wait until one thread finishes a task.</span></span>  
   
- 如同让马离开马棚一样，操作系统需要时间来安排释放的线程并让它们恢复执行。  如果在所有线程恢复执行之前调用了 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法，则剩余的线程会再次阻止。  哪些线程恢复执行？哪些线程阻止？这取决于一些随机因素，例如系统上的负载、等待计划程序的线程数等等。  如果发出事件信号的线程在发出信号之后结束（这是最常见使用模式），这就不是问题了。  如果您要发出事件信号的线程在所有等待线程恢复执行之后开始新任务，则您必须阻止它，直到所有等待线程恢复执行为止。  否则，将出现争用条件，而且您的代码的行为将不可预测。  
+ <span data-ttu-id="7d983-132">如同让马离开马棚一样，则需要花时间的已发布的线程，以计划由操作系统并继续执行。</span><span class="sxs-lookup"><span data-stu-id="7d983-132">Like horses leaving a corral, it takes time for the released threads to be scheduled by the operating system and to resume execution.</span></span> <span data-ttu-id="7d983-133">如果<xref:System.Threading.EventWaitHandle.Reset%2A>所有线程具有都继续执行之前调用方法，则其余的线程再次进行阻止。</span><span class="sxs-lookup"><span data-stu-id="7d983-133">If the <xref:System.Threading.EventWaitHandle.Reset%2A> method is called before all the threads have resumed execution, the remaining threads once again block.</span></span> <span data-ttu-id="7d983-134">哪些线程恢复和线程阻止取决于随机因素，如在系统上，线程数负载正在等待计划程序，等等。</span><span class="sxs-lookup"><span data-stu-id="7d983-134">Which threads resume and which threads block depends on random factors like the load on the system, the number of threads waiting for the scheduler, and so on.</span></span> <span data-ttu-id="7d983-135">如果发出事件信号的线程结束信号之后, 它是最常见的使用情况模式，则不出现问题。</span><span class="sxs-lookup"><span data-stu-id="7d983-135">This is not a problem if the thread that signals the event ends after signaling, which is the most common usage pattern.</span></span> <span data-ttu-id="7d983-136">如果你想终止的事件，别忘了开始新任务正在等待线程已恢复的线程，您必须具有在恢复所有正在等待的线程之前阻止它。</span><span class="sxs-lookup"><span data-stu-id="7d983-136">If you want the thread that signaled the event to begin a new task after all the waiting threads have resumed, you must block it until all the waiting threads have resumed.</span></span> <span data-ttu-id="7d983-137">否则为有争用条件，并且你的代码的行为是不可预知。</span><span class="sxs-lookup"><span data-stu-id="7d983-137">Otherwise, you have a race condition, and the behavior of your code is unpredictable.</span></span>  
   
-## 自动和手动事件的通用功能  
- 通常，<xref:System.Threading.EventWaitHandle> 上会有一个或多个线程被阻止到未阻止的线程调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法时，此方法然后会释放其中的一个等待线程（如果是自动重置事件）或所有的等待线程（如果是手动重置事件）。  线程可以发出 <xref:System.Threading.EventWaitHandle> 信号，然后通过调用静态 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=fullName> 方法阻止该事件等待句柄，这就像原子操作一样。  
+## <a name="features-common-to-automatic-and-manual-events"></a><span data-ttu-id="7d983-138">对自动和手动事件都通用的功能</span><span class="sxs-lookup"><span data-stu-id="7d983-138">Features Common to Automatic and Manual Events</span></span>  
+ <span data-ttu-id="7d983-139">通常情况下，一个或多个线程阻止<xref:System.Threading.EventWaitHandle>直到取消阻止的线程调用<xref:System.Threading.EventWaitHandle.Set%2A>方法，该释放一个 （如果为自动重置事件） 正在等待的线程或所有这些方法 （如果是手动重置事件）。</span><span class="sxs-lookup"><span data-stu-id="7d983-139">Typically, one or more threads block on an <xref:System.Threading.EventWaitHandle> until an unblocked thread calls the <xref:System.Threading.EventWaitHandle.Set%2A> method, which releases one of the waiting threads (in the case of automatic reset events) or all of them (in the case of manual reset events).</span></span> <span data-ttu-id="7d983-140">线程都可以发送<xref:System.Threading.EventWaitHandle>，然后阻止它，以原子操作，通过调用静态<xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="7d983-140">A thread can signal an <xref:System.Threading.EventWaitHandle> and then block on it, as an atomic operation, by calling the static <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> method.</span></span>  
   
- <xref:System.Threading.EventWaitHandle> 对象可与静态 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> 和 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> 方法一起使用。  因为 <xref:System.Threading.EventWaitHandle> 和 <xref:System.Threading.Mutex> 类都派生自 <xref:System.Threading.WaitHandle>，您可以将这两个类与这些方法一起使用。  
+ <span data-ttu-id="7d983-141"><xref:System.Threading.EventWaitHandle>对象可以用于静态<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>和<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="7d983-141"><xref:System.Threading.EventWaitHandle> objects can be used with the static <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> and <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="7d983-142">因为<xref:System.Threading.EventWaitHandle>和<xref:System.Threading.Mutex>类都派生自<xref:System.Threading.WaitHandle>，你可以使用这些方法使用这两个类。</span><span class="sxs-lookup"><span data-stu-id="7d983-142">Because the <xref:System.Threading.EventWaitHandle> and <xref:System.Threading.Mutex> classes both derive from <xref:System.Threading.WaitHandle>, you can use both classes with these methods.</span></span>  
   
-### 命名事件  
- Windows 操作系统允许事件等待句柄具有名称。  命名事件是系统级的事件。  即，创建命名事件后，它对所有进程中的所有线程都是可见的。  因此，命名事件可用于同步进程的活动以及线程的活动。  
+### <a name="named-events"></a><span data-ttu-id="7d983-143">命名的事件</span><span class="sxs-lookup"><span data-stu-id="7d983-143">Named Events</span></span>  
+ <span data-ttu-id="7d983-144">Windows 操作系统允许事件等待句柄可以具有的名称。</span><span class="sxs-lookup"><span data-stu-id="7d983-144">The Windows operating system allows event wait handles to have names.</span></span> <span data-ttu-id="7d983-145">命名的事件是系统范围。</span><span class="sxs-lookup"><span data-stu-id="7d983-145">A named event is system wide.</span></span> <span data-ttu-id="7d983-146">即，已命名的事件创建后，是可见的所有进程中的所有线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-146">That is, once the named event is created, it is visible to all threads in all processes.</span></span> <span data-ttu-id="7d983-147">因此，命名的事件可用于同步进程以及线程的活动。</span><span class="sxs-lookup"><span data-stu-id="7d983-147">Thus, named events can be used to synchronize the activities of processes as well as threads.</span></span>  
   
- 您可以使用一个能够指定事件名称的构造函数来创建表示命名系统事件的 <xref:System.Threading.EventWaitHandle> 对象。  
-  
-> [!NOTE]
->  因为命名事件是系统级的事件，所以可以有多个表示相同命名事件的 <xref:System.Threading.EventWaitHandle> 对象。  每当调用构造函数或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 方法时，都会创建一个新的 <xref:System.Threading.EventWaitHandle> 对象。  重复指定相同名称会创建多个表示相同命名事件的对象。  
-  
- 使用命名事件时要小心。  因为它们是系统级的事件，所以使用同一名称的其他进程可能会意外地阻止您的线程。  在同一计算机上执行的恶意代码可能以此作为一个切入点来发动拒绝服务攻击。  
-  
- 应使用访问控制安全机制来保护表示命名事件的 <xref:System.Threading.EventWaitHandle> 对象，最好通过使用可用于指定 <xref:System.Security.AccessControl.EventWaitHandleSecurity> 对象的构造函数来实施保护。  您还可以使用 <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> 方法来应用访问控制安全，但这一做法会在事件等待句柄的创建时间和受保护时间之间留出一段漏洞时间。  使用访问控制安全机制来保护事件可帮助阻止恶意攻击，但无法解决意外发生的名称冲突问题。  
+ <span data-ttu-id="7d983-148">你可以创建<xref:System.Threading.EventWaitHandle>通过使用指定的事件名称的构造函数之一表示已命名的系统事件的对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-148">You can create an <xref:System.Threading.EventWaitHandle> object that represents a named system event by using one of the constructors that specifies an event name.</span></span>  
   
 > [!NOTE]
->  与 <xref:System.Threading.EventWaitHandle> 类不同，派生类 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 只能表示本地等待句柄。  它们不能表示命名系统事件。  
+>  <span data-ttu-id="7d983-149">因为命名的事件是系统范围，就可以有多个<xref:System.Threading.EventWaitHandle>表示相同的对象名为事件。</span><span class="sxs-lookup"><span data-stu-id="7d983-149">Because named events are system wide, it is possible to have multiple <xref:System.Threading.EventWaitHandle> objects that represent the same named event.</span></span> <span data-ttu-id="7d983-150">每次调用构造函数，或<xref:System.Threading.EventWaitHandle.OpenExisting%2A>方法时，新<xref:System.Threading.EventWaitHandle>创建对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-150">Each time you call a constructor, or the <xref:System.Threading.EventWaitHandle.OpenExisting%2A> method, a new <xref:System.Threading.EventWaitHandle> object is created.</span></span> <span data-ttu-id="7d983-151">反复指定相同的名称创建多个表示同一命名的事件的对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-151">Specifying the same name repeatedly creates multiple objects that represent the same named event.</span></span>  
   
-## 请参阅  
- <xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading.WaitHandle>   
- <xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent>   
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+ <span data-ttu-id="7d983-152">警告： 建议在使用名为事件。</span><span class="sxs-lookup"><span data-stu-id="7d983-152">Caution is advised in using named events.</span></span> <span data-ttu-id="7d983-153">因为它们是系统范围，则使用相同的名称的另一个进程可以意外阻止您的线程。</span><span class="sxs-lookup"><span data-stu-id="7d983-153">Because they are system wide, another process that uses the same name can block your threads unexpectedly.</span></span> <span data-ttu-id="7d983-154">同一台计算机上的恶意代码执行可将此作为拒绝服务攻击的基础。</span><span class="sxs-lookup"><span data-stu-id="7d983-154">Malicious code executing on the same computer could use this as the basis of a denial-of-service attack.</span></span>  
+  
+ <span data-ttu-id="7d983-155">使用访问控制安全性来保护<xref:System.Threading.EventWaitHandle>表示命名的事件，最好是通过使用指定的构造函数的对象<xref:System.Security.AccessControl.EventWaitHandleSecurity>对象。</span><span class="sxs-lookup"><span data-stu-id="7d983-155">Use access control security to protect an <xref:System.Threading.EventWaitHandle> object that represents a named event, preferably by using a constructor that specifies an <xref:System.Security.AccessControl.EventWaitHandleSecurity> object.</span></span> <span data-ttu-id="7d983-156">你还可以应用访问控件安全性使用<xref:System.Threading.EventWaitHandle.SetAccessControl%2A>方法，但这留出创建事件等待句柄的时间和受保护的时间之间的安全漏洞的一段。</span><span class="sxs-lookup"><span data-stu-id="7d983-156">You can also apply access control security using the <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> method, but this leaves a window of vulnerability between the time the event wait handle is created and the time it is protected.</span></span> <span data-ttu-id="7d983-157">保护事件使用访问控制安全性帮助阻止恶意攻击，但它不能解决的意外的名称冲突问题。</span><span class="sxs-lookup"><span data-stu-id="7d983-157">Protecting events with access control security helps prevent malicious attacks, but it does not solve the problem of unintentional name collisions.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="7d983-158">与不同<xref:System.Threading.EventWaitHandle>类，派生的类<xref:System.Threading.AutoResetEvent>和<xref:System.Threading.ManualResetEvent>可以表示仅为本地等待句柄。</span><span class="sxs-lookup"><span data-stu-id="7d983-158">Unlike the <xref:System.Threading.EventWaitHandle> class, the derived classes <xref:System.Threading.AutoResetEvent> and <xref:System.Threading.ManualResetEvent> can represent only local wait handles.</span></span> <span data-ttu-id="7d983-159">它们不能表示已命名的系统事件。</span><span class="sxs-lookup"><span data-stu-id="7d983-159">They cannot represent named system events.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7d983-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7d983-160">See Also</span></span>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ [<span data-ttu-id="7d983-161">EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="7d983-161">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

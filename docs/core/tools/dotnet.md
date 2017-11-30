@@ -7,205 +7,205 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="dotnet-command"></a>dotnet 命令
+# <a name="dotnet-command"></a><span data-ttu-id="d2195-103">dotnet 命令</span><span class="sxs-lookup"><span data-stu-id="d2195-103">dotnet command</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a><span data-ttu-id="d2195-104">名称</span><span class="sxs-lookup"><span data-stu-id="d2195-104">Name</span></span>
 
-`dotnet` - 运行命令行命令的通用驱动程序。
+<span data-ttu-id="d2195-105">`dotnet` - 运行命令行命令的通用驱动程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-105">`dotnet` - General driver for running the command-line commands.</span></span>
 
-## <a name="synopsis"></a>摘要
+## <a name="synopsis"></a><span data-ttu-id="d2195-106">摘要</span><span class="sxs-lookup"><span data-stu-id="d2195-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="d2195-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="d2195-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d2195-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d2195-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a><span data-ttu-id="d2195-109">描述</span><span class="sxs-lookup"><span data-stu-id="d2195-109">Description</span></span>
 
-`dotnet` 是用于命令行接口 (CLI) 工具链的通用驱动程序。 它可自行调用，并提供简短的使用说明。
+<span data-ttu-id="d2195-110">`dotnet` 是用于命令行接口 (CLI) 工具链的通用驱动程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-110">`dotnet` is a generic driver for the Command Line Interface (CLI) toolchain.</span></span> <span data-ttu-id="d2195-111">它可自行调用，并提供简短的使用说明。</span><span class="sxs-lookup"><span data-stu-id="d2195-111">Invoked on its own, it provides brief usage instructions.</span></span>
 
-每种特定功能均实现为命令。 若要使用此功能，请在 `dotnet` 后指定该命令，例如 [`dotnet build`](dotnet-build.md)。 该命令后的所有参数均为其自有参数。
+<span data-ttu-id="d2195-112">每种特定功能均实现为命令。</span><span class="sxs-lookup"><span data-stu-id="d2195-112">Each specific feature is implemented as a command.</span></span> <span data-ttu-id="d2195-113">若要使用此功能，请在 `dotnet` 后指定该命令，例如 [`dotnet build`](dotnet-build.md)。</span><span class="sxs-lookup"><span data-stu-id="d2195-113">In order to use the feature, the command is specified after `dotnet`, such as [`dotnet build`](dotnet-build.md).</span></span> <span data-ttu-id="d2195-114">该命令后的所有参数均为其自有参数。</span><span class="sxs-lookup"><span data-stu-id="d2195-114">All of the arguments following the command are its own arguments.</span></span>
 
-`dotnet` 自行作为命令使用的唯一情况是运行[依赖于框架的应用](../deploying/index.md)。 在 `dotnet` 谓词后指定应用程序 DLL 便可执行该应用程序（例如，`dotnet myapp.dll`）。
+<span data-ttu-id="d2195-115">`dotnet` 自行作为命令使用的唯一情况是运行[依赖于框架的应用](../deploying/index.md)。</span><span class="sxs-lookup"><span data-stu-id="d2195-115">The only time `dotnet` is used as a command on its own is to run [framework-dependent apps](../deploying/index.md).</span></span> <span data-ttu-id="d2195-116">在 `dotnet` 谓词后指定应用程序 DLL 便可执行该应用程序（例如，`dotnet myapp.dll`）。</span><span class="sxs-lookup"><span data-stu-id="d2195-116">Specify an application DLL after the `dotnet` verb to execute the application (for example, `dotnet myapp.dll`).</span></span>
 
-## <a name="options"></a>选项
+## <a name="options"></a><span data-ttu-id="d2195-117">选项</span><span class="sxs-lookup"><span data-stu-id="d2195-117">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="d2195-118">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="d2195-118">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `--additionaldeps <PATH>`
 
-其他 deps.json 文件的路径。
+<span data-ttu-id="d2195-119">其他路径*deps.json*文件。</span><span class="sxs-lookup"><span data-stu-id="d2195-119">Path to additional *deps.json* file.</span></span>
 
 `--additionalprobingpath <PATH>`
 
-包含要进行探测的探测策略和程序集的路径。
+<span data-ttu-id="d2195-120">包含要进行探测的探测策略和程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="d2195-120">Path containing probing policy and assemblies to probe.</span></span>
 
 `-d|--diagnostics`
 
-启用诊断输出。
+<span data-ttu-id="d2195-121">启用诊断输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-121">Enables diagnostic output.</span></span>
 
 `--fx-version <VERSION>`
 
-运行应用程序所使用的已安装 .NET Core 运行时的版本。
+<span data-ttu-id="d2195-122">运行应用程序所使用的已安装 .NET Core 运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="d2195-122">Version of the installed .NET Core runtime to use to run the application.</span></span>
 
 `-h|--help`
 
-打印出有关命令的简短帮助。 如果使用 `dotnet`，还会打印可用命令的列表。
+<span data-ttu-id="d2195-123">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="d2195-123">Prints out a short help for the command.</span></span> <span data-ttu-id="d2195-124">如果使用 `dotnet`，还会打印可用命令的列表。</span><span class="sxs-lookup"><span data-stu-id="d2195-124">If using with `dotnet`, it also prints a list of the available commands.</span></span>
 
 `--info`
 
-打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。
+<span data-ttu-id="d2195-125">打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。</span><span class="sxs-lookup"><span data-stu-id="d2195-125">Prints out detailed information about the CLI tooling and the environment, such as the current operating system, commit SHA for the version, and other information.</span></span>
 
 `--roll-forward-on-no-candidate-fx`
 
- 在没有候选共享框架的情况下前滚。
+ <span data-ttu-id="d2195-126">在没有候选共享框架的情况下前滚。</span><span class="sxs-lookup"><span data-stu-id="d2195-126">Rolls forward on no candidate shared framework.</span></span>
 
 `-v|--verbose`
 
-启用详细输出。
+<span data-ttu-id="d2195-127">启用详细输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-127">Enables verbose output.</span></span>
 
 `--version`
 
-打印使用中的 .NET Core SDK 版本。
+<span data-ttu-id="d2195-128">打印使用中的 .NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="d2195-128">Prints out the version of the .NET Core SDK in use.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d2195-129">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d2195-129">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
-包含要进行探测的探测策略和程序集的路径。
+<span data-ttu-id="d2195-130">包含要进行探测的探测策略和程序集的路径。</span><span class="sxs-lookup"><span data-stu-id="d2195-130">Path containing probing policy and assemblies to probe.</span></span>
 
 `-d|--diagnostics`
 
-启用诊断输出。
+<span data-ttu-id="d2195-131">启用诊断输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-131">Enables diagnostic output.</span></span>
 
 `--fx-version <VERSION>`
 
-运行应用程序所使用的已安装 .NET Core 运行时的版本。
+<span data-ttu-id="d2195-132">运行应用程序所使用的已安装 .NET Core 运行时的版本。</span><span class="sxs-lookup"><span data-stu-id="d2195-132">Version of the installed .NET Core runtime to use to run the application.</span></span>
 
 `-h|--help`
 
-打印出有关命令的简短帮助。 如果使用 `dotnet`，还会打印可用命令的列表。
+<span data-ttu-id="d2195-133">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="d2195-133">Prints out a short help for the command.</span></span> <span data-ttu-id="d2195-134">如果使用 `dotnet`，还会打印可用命令的列表。</span><span class="sxs-lookup"><span data-stu-id="d2195-134">If using with `dotnet`, it also prints a list of the available commands.</span></span>
 
 `--info`
 
-打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。
+<span data-ttu-id="d2195-135">打印出有关 CLI 工具和环境的详细信息，例如当前操作系统、提交该版本的 SHA 和其他信息。</span><span class="sxs-lookup"><span data-stu-id="d2195-135">Prints out detailed information about the CLI tooling and the environment, such as the current operating system, commit SHA for the version, and other information.</span></span>
 
 `-v|--verbose`
 
-启用详细输出。
+<span data-ttu-id="d2195-136">启用详细输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-136">Enables verbose output.</span></span>
 
 `--version`
 
-打印使用中的 .NET Core SDK 版本。
+<span data-ttu-id="d2195-137">打印使用中的 .NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="d2195-137">Prints out the version of the .NET Core SDK in use.</span></span>
 
 ---
 
-## <a name="dotnet-commands"></a>dotnet 命令
+## <a name="dotnet-commands"></a><span data-ttu-id="d2195-138">dotnet 命令</span><span class="sxs-lookup"><span data-stu-id="d2195-138">dotnet commands</span></span>
 
-### <a name="general"></a>常规
+### <a name="general"></a><span data-ttu-id="d2195-139">常规</span><span class="sxs-lookup"><span data-stu-id="d2195-139">General</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="d2195-140">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="d2195-140">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-| 命令                             | 函数                                                            |
+| <span data-ttu-id="d2195-141">命令</span><span class="sxs-lookup"><span data-stu-id="d2195-141">Command</span></span>                             | <span data-ttu-id="d2195-142">函数</span><span class="sxs-lookup"><span data-stu-id="d2195-142">Function</span></span>                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | 生成 .NET Core 应用程序。                                     |
-| [dotnet clean](dotnet-clean.md)     | 清除生成输出。                                              |
-| [dotnet help](dotnet-help.md)       | 显示命令更详细的在线文档。           |
-| [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
-| [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F # 项目。                |
-| [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
-| [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
-| [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |
-| [dotnet run](dotnet-run.md)         | 从源运行应用程序。                                   |
-| [dotnet sln](dotnet-sln.md)         | 用于添加、删除和列出解决方案文件中项目的选项。       |
-| [dotnet store](dotnet-store.md)     | 将程序集存储到运行时包存储区。                     |
-| [dotnet test](dotnet-test.md)       | 使用测试运行程序运行测试。                                     |
+| [<span data-ttu-id="d2195-143">dotnet build</span><span class="sxs-lookup"><span data-stu-id="d2195-143">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="d2195-144">生成 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-144">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="d2195-145">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="d2195-145">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="d2195-146">清除生成输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-146">Clean build outputs.</span></span>                                              |
+| [<span data-ttu-id="d2195-147">dotnet help</span><span class="sxs-lookup"><span data-stu-id="d2195-147">dotnet help</span></span>](dotnet-help.md)       | <span data-ttu-id="d2195-148">显示命令更详细的在线文档。</span><span class="sxs-lookup"><span data-stu-id="d2195-148">Shows more detailed documentation online for the command.</span></span>           |
+| [<span data-ttu-id="d2195-149">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="d2195-149">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="d2195-150">将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。</span><span class="sxs-lookup"><span data-stu-id="d2195-150">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="d2195-151">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="d2195-151">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="d2195-152">提供对 MSBuild 命令行的访问权限。</span><span class="sxs-lookup"><span data-stu-id="d2195-152">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="d2195-153">dotnet new</span><span class="sxs-lookup"><span data-stu-id="d2195-153">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="d2195-154">为给定的模板初始化 C# 或 F # 项目。</span><span class="sxs-lookup"><span data-stu-id="d2195-154">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="d2195-155">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="d2195-155">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="d2195-156">创建代码的 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="d2195-156">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="d2195-157">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="d2195-157">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="d2195-158">发布 .NET 依赖于框架或独立应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-158">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="d2195-159">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="d2195-159">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="d2195-160">还原给定应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="d2195-160">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="d2195-161">dotnet run</span><span class="sxs-lookup"><span data-stu-id="d2195-161">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="d2195-162">从源运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-162">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="d2195-163">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="d2195-163">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="d2195-164">用于添加、删除和列出解决方案文件中项目的选项。</span><span class="sxs-lookup"><span data-stu-id="d2195-164">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="d2195-165">dotnet store</span><span class="sxs-lookup"><span data-stu-id="d2195-165">dotnet store</span></span>](dotnet-store.md)     | <span data-ttu-id="d2195-166">将程序集存储到运行时包存储区。</span><span class="sxs-lookup"><span data-stu-id="d2195-166">Stores assemblies in the runtime package store.</span></span>                     |
+| [<span data-ttu-id="d2195-167">dotnet test</span><span class="sxs-lookup"><span data-stu-id="d2195-167">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="d2195-168">使用测试运行程序运行测试。</span><span class="sxs-lookup"><span data-stu-id="d2195-168">Runs tests using a test runner.</span></span>                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="d2195-169">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="d2195-169">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-| 命令                             | 函数                                                            |
+| <span data-ttu-id="d2195-170">命令</span><span class="sxs-lookup"><span data-stu-id="d2195-170">Command</span></span>                             | <span data-ttu-id="d2195-171">函数</span><span class="sxs-lookup"><span data-stu-id="d2195-171">Function</span></span>                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | 生成 .NET Core 应用程序。                                     |
-| [dotnet clean](dotnet-clean.md)     | 清除生成输出。                                              |
-| [dotnet migrate](dotnet-migrate.md) | 将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。  |
-| [dotnet msbuild](dotnet-msbuild.md) | 提供对 MSBuild 命令行的访问权限。                        |
-| [dotnet new](dotnet-new.md)         | 为给定的模板初始化 C# 或 F # 项目。                |
-| [dotnet pack](dotnet-pack.md)       | 创建代码的 NuGet 包。                               |
-| [dotnet publish](dotnet-publish.md) | 发布 .NET 依赖于框架或独立应用程序。 |
-| [dotnet restore](dotnet-restore.md) | 还原给定应用程序的依赖项。                  |
-| [dotnet run](dotnet-run.md)         | 从源运行应用程序。                                   |
-| [dotnet sln](dotnet-sln.md)         | 用于添加、删除和列出解决方案文件中项目的选项。       |
-| [dotnet test](dotnet-test.md)       | 使用测试运行程序运行测试。                                     |
+| [<span data-ttu-id="d2195-172">dotnet build</span><span class="sxs-lookup"><span data-stu-id="d2195-172">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="d2195-173">生成 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-173">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="d2195-174">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="d2195-174">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="d2195-175">清除生成输出。</span><span class="sxs-lookup"><span data-stu-id="d2195-175">Clean build outputs.</span></span>                                              |
+| [<span data-ttu-id="d2195-176">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="d2195-176">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="d2195-177">将有效的预览版 2 项目迁移到 .NET Core SDK 1.0 项目。</span><span class="sxs-lookup"><span data-stu-id="d2195-177">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="d2195-178">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="d2195-178">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="d2195-179">提供对 MSBuild 命令行的访问权限。</span><span class="sxs-lookup"><span data-stu-id="d2195-179">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="d2195-180">dotnet new</span><span class="sxs-lookup"><span data-stu-id="d2195-180">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="d2195-181">为给定的模板初始化 C# 或 F # 项目。</span><span class="sxs-lookup"><span data-stu-id="d2195-181">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="d2195-182">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="d2195-182">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="d2195-183">创建代码的 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="d2195-183">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="d2195-184">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="d2195-184">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="d2195-185">发布 .NET 依赖于框架或独立应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-185">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="d2195-186">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="d2195-186">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="d2195-187">还原给定应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="d2195-187">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="d2195-188">dotnet run</span><span class="sxs-lookup"><span data-stu-id="d2195-188">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="d2195-189">从源运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2195-189">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="d2195-190">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="d2195-190">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="d2195-191">用于添加、删除和列出解决方案文件中项目的选项。</span><span class="sxs-lookup"><span data-stu-id="d2195-191">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="d2195-192">dotnet test</span><span class="sxs-lookup"><span data-stu-id="d2195-192">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="d2195-193">使用测试运行程序运行测试。</span><span class="sxs-lookup"><span data-stu-id="d2195-193">Runs tests using a test runner.</span></span>                                     |
 
 ---
 
-### <a name="project-references"></a>项目引用
+### <a name="project-references"></a><span data-ttu-id="d2195-194">项目引用</span><span class="sxs-lookup"><span data-stu-id="d2195-194">Project references</span></span>
 
-命令 | 函数
+<span data-ttu-id="d2195-195">命令</span><span class="sxs-lookup"><span data-stu-id="d2195-195">Command</span></span> | <span data-ttu-id="d2195-196">函数</span><span class="sxs-lookup"><span data-stu-id="d2195-196">Function</span></span>
 --- | ---
-[dotnet add reference](dotnet-add-reference.md) | 添加项目引用。
-[dotnet list reference](dotnet-list-reference.md) | 列出项目引用。
-[dotnet remove reference](dotnet-remove-reference.md) | 删除项目引用。
+[<span data-ttu-id="d2195-197">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="d2195-197">dotnet add reference</span></span>](dotnet-add-reference.md) | <span data-ttu-id="d2195-198">添加项目引用。</span><span class="sxs-lookup"><span data-stu-id="d2195-198">Add a project reference.</span></span>
+[<span data-ttu-id="d2195-199">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="d2195-199">dotnet list reference</span></span>](dotnet-list-reference.md) | <span data-ttu-id="d2195-200">列出项目引用。</span><span class="sxs-lookup"><span data-stu-id="d2195-200">List project references.</span></span>
+[<span data-ttu-id="d2195-201">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="d2195-201">dotnet remove reference</span></span>](dotnet-remove-reference.md) | <span data-ttu-id="d2195-202">删除项目引用。</span><span class="sxs-lookup"><span data-stu-id="d2195-202">Remove a project reference.</span></span>
 
-### <a name="nuget-packages"></a>NuGet 包
+### <a name="nuget-packages"></a><span data-ttu-id="d2195-203">NuGet 包</span><span class="sxs-lookup"><span data-stu-id="d2195-203">NuGet packages</span></span>
 
-命令 | 函数
+<span data-ttu-id="d2195-204">命令</span><span class="sxs-lookup"><span data-stu-id="d2195-204">Command</span></span> | <span data-ttu-id="d2195-205">函数</span><span class="sxs-lookup"><span data-stu-id="d2195-205">Function</span></span>
 --- | ---
-[dotnet add package](dotnet-add-package.md) | 添加 NuGet 包。
-[dotnet remove package](dotnet-remove-package.md) | 删除 NuGet 包。
+[<span data-ttu-id="d2195-206">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="d2195-206">dotnet add package</span></span>](dotnet-add-package.md) | <span data-ttu-id="d2195-207">添加 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="d2195-207">Add a NuGet package.</span></span>
+[<span data-ttu-id="d2195-208">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="d2195-208">dotnet remove package</span></span>](dotnet-remove-package.md) | <span data-ttu-id="d2195-209">删除 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="d2195-209">Remove a NuGet package.</span></span>
 
-### <a name="nuget-commands"></a>NuGet 命令
+### <a name="nuget-commands"></a><span data-ttu-id="d2195-210">NuGet 命令</span><span class="sxs-lookup"><span data-stu-id="d2195-210">NuGet commands</span></span>
 
-命令 | 函数
+<span data-ttu-id="d2195-211">命令</span><span class="sxs-lookup"><span data-stu-id="d2195-211">Command</span></span> | <span data-ttu-id="d2195-212">函数</span><span class="sxs-lookup"><span data-stu-id="d2195-212">Function</span></span>
 --- | ---
-[dotnet nuget delete](dotnet-nuget-delete.md) | 从服务器删除或取消列出包。
-[dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。
-[dotnet nuget push](dotnet-nuget-push.md) | 将包推送到服务器，并将其发布。
+[<span data-ttu-id="d2195-213">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="d2195-213">dotnet nuget delete</span></span>](dotnet-nuget-delete.md) | <span data-ttu-id="d2195-214">从服务器删除或取消列出包。</span><span class="sxs-lookup"><span data-stu-id="d2195-214">Deletes or unlists a package from the server.</span></span>
+[<span data-ttu-id="d2195-215">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="d2195-215">dotnet nuget locals</span></span>](dotnet-nuget-locals.md) | <span data-ttu-id="d2195-216">清除或列出本地 NuGet 资源，例如 http 请求缓存、临时缓存或计算机范围的全局包文件夹。</span><span class="sxs-lookup"><span data-stu-id="d2195-216">Clears or lists local NuGet resources such as http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
+[<span data-ttu-id="d2195-217">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="d2195-217">dotnet nuget push</span></span>](dotnet-nuget-push.md) | <span data-ttu-id="d2195-218">将包推送到服务器，并将其发布。</span><span class="sxs-lookup"><span data-stu-id="d2195-218">Pushes a package to the server and publishes it.</span></span>
 
-## <a name="examples"></a>示例
+## <a name="examples"></a><span data-ttu-id="d2195-219">示例</span><span class="sxs-lookup"><span data-stu-id="d2195-219">Examples</span></span>
 
-初始化可以编译和运行的示例 .NET Core 控制台应用程序：
+<span data-ttu-id="d2195-220">初始化可以编译和运行的示例 .NET Core 控制台应用程序：</span><span class="sxs-lookup"><span data-stu-id="d2195-220">Initialize a sample .NET Core console application that can be compiled and run:</span></span>
 
 `dotnet new console`
 
-还原给定应用程序的依赖项：
+<span data-ttu-id="d2195-221">还原给定应用程序的依赖项：</span><span class="sxs-lookup"><span data-stu-id="d2195-221">Restore dependencies for a given application:</span></span>
 
 `dotnet restore`
 
-生成给定目录中的项目及其依赖项：
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+<span data-ttu-id="d2195-222">生成给定目录中的项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="d2195-222">Build a project and its dependencies in a given directory:</span></span>
 
 `dotnet build`
 
-运行名为 `myapp.dll` 的依赖于框架的应用：
+<span data-ttu-id="d2195-223">运行名为 `myapp.dll` 的依赖于框架的应用：</span><span class="sxs-lookup"><span data-stu-id="d2195-223">Run a framework-dependent app named `myapp.dll`:</span></span>
 
 `dotnet myapp.dll`
 
-## <a name="environment-variables"></a>环境变量
+## <a name="environment-variables"></a><span data-ttu-id="d2195-224">环境变量</span><span class="sxs-lookup"><span data-stu-id="d2195-224">Environment variables</span></span>
 
 `DOTNET_PACKAGES`
 
-主包缓存。 如果未设置，则默认为 Unix 上的 `$HOME/.nuget/packages` 或 Windows 上的 `%HOME%\NuGet\Packages`。
+<span data-ttu-id="d2195-225">主包缓存。</span><span class="sxs-lookup"><span data-stu-id="d2195-225">The primary package cache.</span></span> <span data-ttu-id="d2195-226">如果未设置，则默认为 Unix 上的 `$HOME/.nuget/packages` 或 Windows 上的 `%HOME%\NuGet\Packages`。</span><span class="sxs-lookup"><span data-stu-id="d2195-226">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%HOME%\NuGet\Packages` on Windows.</span></span>
 
 `DOTNET_SERVICING`
 
-指定加载运行时期间共享主机要使用的服务索引的位置。
+<span data-ttu-id="d2195-227">指定加载运行时期间共享主机要使用的服务索引的位置。</span><span class="sxs-lookup"><span data-stu-id="d2195-227">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受值 `true`、`1` 或 `yes`）；否则，设置为 `false` 以选择加入遥测功能（接受值 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
-
+<span data-ttu-id="d2195-228">指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。</span><span class="sxs-lookup"><span data-stu-id="d2195-228">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="d2195-229">设置为 `true` 以选择退出遥测功能（接受值 `true`、`1` 或 `yes`）；否则，设置为 `false` 以选择加入遥测功能（接受值 `false`、`0` 或 `no`）。</span><span class="sxs-lookup"><span data-stu-id="d2195-229">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted); otherwise, set to `false` to opt-in to the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="d2195-230">如果未设置，则默认为 `false` 且遥测功能为活动状态。</span><span class="sxs-lookup"><span data-stu-id="d2195-230">If not set, the defaults is `false`, and the telemetry feature is active.</span></span>

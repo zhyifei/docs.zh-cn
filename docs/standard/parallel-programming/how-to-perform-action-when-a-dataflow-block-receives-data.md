@@ -1,61 +1,67 @@
 ---
-title: "How to: Perform Action When a Dataflow Block Receives Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, receiving data"
+title: "如何：在数据流块收到数据时执行操作"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Perform Action When a Dataflow Block Receives Data
-在接收数据时，*数据流执行块* 类型调用用户提供的委托。  <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=fullName>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=fullName>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=fullName> 类是数据流执行块类型。  您可以使用 `delegate` 关键字 \(在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中的`Sub` \)，<xref:System.Action%601>、<xref:System.Func%602>或 lambda 表达式，则可以向数据流执行块提供工作函数。  文档描述如何使用 <xref:System.Func%602> 和 lambda 表达式在执行块中操作。  
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a><span data-ttu-id="c97a3-102">如何：在数据流块收到数据时执行操作</span><span class="sxs-lookup"><span data-stu-id="c97a3-102">How to: Perform Action When a Dataflow Block Receives Data</span></span>
+<span data-ttu-id="c97a3-103">在接收数据时，执行数据流块类型会调用用户提供的委托。</span><span class="sxs-lookup"><span data-stu-id="c97a3-103">*Execution dataflow block* types call a user-provided delegate when they receive data.</span></span> <span data-ttu-id="c97a3-104"><xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 类是执行数据流块类型。</span><span class="sxs-lookup"><span data-stu-id="c97a3-104">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, and <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> classes are execution dataflow block types.</span></span> <span data-ttu-id="c97a3-105">当为执行数据流块提供工作函数时，可以使用 `delegate` 关键字（`Sub` 中为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）、<xref:System.Action%601>、<xref:System.Func%602> 或 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="c97a3-105">You can use the `delegate` keyword (`Sub` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, or a lambda expression when you provide a work function to an execution dataflow block.</span></span> <span data-ttu-id="c97a3-106">本文档描述如何使用 <xref:System.Func%602> 和 lambda 表达式在执行块中执行操作。</span><span class="sxs-lookup"><span data-stu-id="c97a3-106">This document describes how to use <xref:System.Func%602> and lambda expressions to perform action in execution blocks.</span></span>  
   
 > [!TIP]
->  TPL 数据流库 \(<xref:System.Threading.Tasks.Dataflow?displayProperty=fullName> 命名空间\) 不是由 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]分布的。  若要安装<xref:System.Threading.Tasks.Dataflow>命名空间，打开 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]中的项目，从项目菜单中选择“Manage NuGet Packages”，并在线搜索`Microsoft.Tpl.Dataflow`包。  
+>  <span data-ttu-id="c97a3-107">TPL 数据流库（<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空间）不是随 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 一起分发的。</span><span class="sxs-lookup"><span data-stu-id="c97a3-107">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="c97a3-108">若要安装<xref:System.Threading.Tasks.Dataflow>命名空间中，打开你的项目中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，选择**管理 NuGet 包**从项目菜单，然后联机搜索`Microsoft.Tpl.Dataflow`包。</span><span class="sxs-lookup"><span data-stu-id="c97a3-108">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## 示例  
- 以下示例使用数据流从磁盘读取文件并计算该文件中等于零的字节数。  它使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 读取文件并计算字零的节数，并<xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 打印零的字节数到控制台。  块在接收数据时，<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象指定 <xref:System.Func%602> 对象执行工作。  <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象使用了 lambda 表达式打印读取到零的字节数到控制台。  
+## <a name="example"></a><span data-ttu-id="c97a3-109">示例</span><span class="sxs-lookup"><span data-stu-id="c97a3-109">Example</span></span>  
+ <span data-ttu-id="c97a3-110">下面的示例使用数据流从磁盘读取一个文件并计算该文件中等于零的字节的数量。</span><span class="sxs-lookup"><span data-stu-id="c97a3-110">The following example uses dataflow to read a file from disk and computes the number of bytes in that file that are equal to zero.</span></span> <span data-ttu-id="c97a3-111">它使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 读取文件并计算零字节的数量，并使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 将零字节的数量输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="c97a3-111">It uses <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> to read the file and compute the number of zero bytes, and <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> to print the number of zero bytes to the console.</span></span> <span data-ttu-id="c97a3-112">当块收到数据时，<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象会指定一个 <xref:System.Func%602> 对象来执行工作。</span><span class="sxs-lookup"><span data-stu-id="c97a3-112">The <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object specifies a <xref:System.Func%602> object to perform work when the blocks receive data.</span></span> <span data-ttu-id="c97a3-113"><xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象使用 lambda 表达式将读取到的零字节的数量输出到控制台。</span><span class="sxs-lookup"><span data-stu-id="c97a3-113">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object uses a lambda expression to print to the console the number of zero bytes that are read.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
  [!code-vb[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#1)]  
   
- 虽然可以给<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象提供 lambda 表达式，该示例使用 <xref:System.Func%602> 允许其他代码使用 `CountBytes` 方法。  因为工作时执行特此任务是指定的，不一定比其他代码更有用，<xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象使用 lambda 表达式。  有关表达式 lambda 方式如何在任务并行库中工作的更多信息，请参见 [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+ <span data-ttu-id="c97a3-114">虽然可以为 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象提供 lambda 表达式，但是本示例使用 <xref:System.Func%602> 来允许其他代码使用 `CountBytes` 方法。</span><span class="sxs-lookup"><span data-stu-id="c97a3-114">Although you can provide a lambda expression to a <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object, this example uses <xref:System.Func%602> to enable other code to use the `CountBytes` method.</span></span> <span data-ttu-id="c97a3-115">因为要执行的工作是此任务特有的，使用其他代码不可能有用，所以 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象使用 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="c97a3-115">The <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object uses a lambda expression because the work to be performed is specific to this task and is not likely to be useful from other code.</span></span> <span data-ttu-id="c97a3-116">有关 lambda 表达式如何在任务并行库中工作的详细信息，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="c97a3-116">For more information about how lambda expressions work in the Task Parallel Library, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) 文档中委托类型摘要的章节汇总了可提供给 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象的委托类型。  此表还指出委托类型同步执行还是异步执行。  
+ <span data-ttu-id="c97a3-117">委托类型摘要一节中[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文档汇总了你可以向提供的委托类型<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>， <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>，和<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>对象。</span><span class="sxs-lookup"><span data-stu-id="c97a3-117">The section Summary of Delegate Types in the [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) document summarizes the delegate types that you can provide to <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, and <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> objects.</span></span> <span data-ttu-id="c97a3-118">该表还指出委托类型是同步执行还是异步执行。</span><span class="sxs-lookup"><span data-stu-id="c97a3-118">The table also specifies whether the delegate type operates synchronously or asynchronously.</span></span>  
   
-## 编译代码  
- 复制该代码示例，并将其粘贴到 Visual Studio项目中或名为  `DataflowExecutionBlocks.cs` \(`DataflowExecutionBlocks.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) 的文件中，然后在Visual Studio命令提示符窗口中运行以下命令。  
+## <a name="compiling-the-code"></a><span data-ttu-id="c97a3-119">编译代码</span><span class="sxs-lookup"><span data-stu-id="c97a3-119">Compiling the Code</span></span>  
+ <span data-ttu-id="c97a3-120">复制示例代码并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `DataflowExecutionBlocks.cs`（对于 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，则为 `DataflowExecutionBlocks.vb`）的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。</span><span class="sxs-lookup"><span data-stu-id="c97a3-120">Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), and then run the following command in a Visual Studio Command Prompt window.</span></span>  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
+ <span data-ttu-id="c97a3-121">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**</span><span class="sxs-lookup"><span data-stu-id="c97a3-121">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**</span></span>  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
+ <span data-ttu-id="c97a3-122">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**</span><span class="sxs-lookup"><span data-stu-id="c97a3-122">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**</span></span>  
   
-## 可靠编程  
- 此示例提供 <xref:System.Func%602> 类型的委托给 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象使数据流执行块的任务同步。  为了使数据流块异步执行操作，请向数据流块提供 <xref:System.Func%601> 类型的委托。  当数据流块异步执行时，数据流块的任务只有在返回的<xref:System.Threading.Tasks.Task%601> 对象完成时才完成。  下面的示例修改   `CountBytes` 方法并使用 [async](../Topic/async%20\(C%23%20Reference\).md) 和 [await](../Topic/await%20\(C%23%20Reference\).md) 操作 \(在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]为[Async](../Topic/Async%20\(Visual%20Basic\).md) 和 [Await](../Topic/Await%20Operator%20\(Visual%20Basic\).md)\) 异步计算提供的文件的零的总字节数。  <xref:System.IO.FileStream.ReadAsync%2A> 方法执行文件读取操作。  
+## <a name="robust-programming"></a><span data-ttu-id="c97a3-123">可靠编程</span><span class="sxs-lookup"><span data-stu-id="c97a3-123">Robust Programming</span></span>  
+ <span data-ttu-id="c97a3-124">此示例为 <xref:System.Func%602> 对象提供类型 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 的委托，以同步执行数据流块的任务。</span><span class="sxs-lookup"><span data-stu-id="c97a3-124">This example provides a delegate of type <xref:System.Func%602> to the <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object to perform the task of the dataflow block synchronously.</span></span> <span data-ttu-id="c97a3-125">为了使数据流块异步执行操作，请为数据流块提供类型 <xref:System.Func%601> 的委托。</span><span class="sxs-lookup"><span data-stu-id="c97a3-125">To enable the dataflow block to behave asynchronously, provide a delegate of type <xref:System.Func%601> to the dataflow block.</span></span> <span data-ttu-id="c97a3-126">当数据流块异步执行操作时，数据流块的任务只有在返回的 <xref:System.Threading.Tasks.Task%601> 对象完成时才会完成。</span><span class="sxs-lookup"><span data-stu-id="c97a3-126">When a dataflow block behaves asynchronously, the task of the dataflow block is complete only when the returned <xref:System.Threading.Tasks.Task%601> object finishes.</span></span> <span data-ttu-id="c97a3-127">下面的示例修改了 `CountBytes` 方法，并使用 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 运算符（[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md)）异步计算所提供文件中为零的字节的总数。</span><span class="sxs-lookup"><span data-stu-id="c97a3-127">The following example modifies the `CountBytes` method and uses the [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) operators ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) to asynchronously compute the total number of bytes that are zero in the provided file.</span></span> <span data-ttu-id="c97a3-128"><xref:System.IO.FileStream.ReadAsync%2A> 方法异步执行文件读取操作。</span><span class="sxs-lookup"><span data-stu-id="c97a3-128">The <xref:System.IO.FileStream.ReadAsync%2A> method performs file read operations asynchronously.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
   
- 在数据流执行块中可也以使用异步的 lambda 表达式作为执行操作。  以下示例修改了前面示例用到的 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象，以便使用 lambda 表达式执行异步工作。  
+ <span data-ttu-id="c97a3-129">还可以使用异步的 lambda 表达式在执行数据流块中执行操作。</span><span class="sxs-lookup"><span data-stu-id="c97a3-129">You can also use asynchronous lambda expressions to perform action in an execution dataflow block.</span></span> <span data-ttu-id="c97a3-130">下面的示例修改了上一示例中使用的 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象，以便使用 lambda 表达式异步执行工作。</span><span class="sxs-lookup"><span data-stu-id="c97a3-130">The following example modifies the <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> object that is used in the previous example so that it uses a lambda expression to perform the work asynchronously.</span></span>  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## 请参阅  
- [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="c97a3-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c97a3-131">See Also</span></span>  
+ [<span data-ttu-id="c97a3-132">数据流</span><span class="sxs-lookup"><span data-stu-id="c97a3-132">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

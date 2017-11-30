@@ -1,58 +1,63 @@
 ---
-title: "Data Parallelism (Task Parallel Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parallelism, data"
+title: "数据并行（任务并行库）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: 25
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 13788542fa368bd5bcf1c2f277c9d83f84b35cdb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Data Parallelism (Task Parallel Library)
-*数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。  在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
+# <a name="data-parallelism-task-parallel-library"></a><span data-ttu-id="11869-102">数据并行（任务并行库）</span><span class="sxs-lookup"><span data-stu-id="11869-102">Data Parallelism (Task Parallel Library)</span></span>
+<span data-ttu-id="11869-103">*数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。</span><span class="sxs-lookup"><span data-stu-id="11869-103">*Data parallelism* refers to scenarios in which the same operation is performed concurrently (that is, in parallel) on elements in a source collection or array.</span></span> <span data-ttu-id="11869-104">在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。</span><span class="sxs-lookup"><span data-stu-id="11869-104">In data parallel operations, the source collection is partitioned so that multiple threads can operate on different segments concurrently.</span></span>  
   
- 任务并行库 \(TPL\) 支持通过 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 类实现的数据并行。  此类对 [for](../Topic/for%20\(C%23%20Reference\).md) 循环和 [foreach](../Topic/foreach,%20in%20\(C%23%20Reference\).md) 循环（Visual Basic 中的 `For` 和 `For Each`）提供了基于方法的并行执行。  你为 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> 循环编写的循环逻辑与编写连续循环的相似。  无需创建线程或列工作项。  在基本循环中，不需要加锁。  TPL 为你处理所有低级别的工作。  有关使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> 的详细信息，请下载文档[并行编程模式：了解并使用 .NET Framework 4 应用并行模式](http://www.microsoft.com/download/details.aspx?id=19222)。  下面的代码示例演示了一个简单的 `foreach` 循环及其并行等效项。  
+ <span data-ttu-id="11869-105">任务并行库 (TPL) 支持通过 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类实现的数据并行。</span><span class="sxs-lookup"><span data-stu-id="11869-105">The Task Parallel Library (TPL) supports data parallelism through the <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="11869-106">此类对 [for](~/docs/csharp/language-reference/keywords/for.md) 循环和 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) 循环（Visual Basic 中的 `For` 和 `For Each`）提供了基于方法的并行执行。</span><span class="sxs-lookup"><span data-stu-id="11869-106">This class provides method-based parallel implementations of [for](~/docs/csharp/language-reference/keywords/for.md) and [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) loops (`For` and `For Each` in Visual Basic).</span></span> <span data-ttu-id="11869-107">你为 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环编写的循环逻辑与编写连续循环的相似。</span><span class="sxs-lookup"><span data-stu-id="11869-107">You write the loop logic for a <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> or <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> loop much as you would write a sequential loop.</span></span> <span data-ttu-id="11869-108">无需创建线程或列工作项。</span><span class="sxs-lookup"><span data-stu-id="11869-108">You do not have to create threads or queue work items.</span></span> <span data-ttu-id="11869-109">在基本循环中，不需要加锁。</span><span class="sxs-lookup"><span data-stu-id="11869-109">In basic loops, you do not have to take locks.</span></span> <span data-ttu-id="11869-110">TPL 为你处理所有低级别的工作。</span><span class="sxs-lookup"><span data-stu-id="11869-110">The TPL handles all the low-level work for you.</span></span> <span data-ttu-id="11869-111">使用有关的详细信息<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>，下载文档[并行编程模式： 了解和使用.NET Framework 4 应用并行模式](http://www.microsoft.com/download/details.aspx?id=19222)。</span><span class="sxs-lookup"><span data-stu-id="11869-111">For in-depth information about the use of <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, download the document [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222).</span></span> <span data-ttu-id="11869-112">下面的代码示例演示了一个简单的 `foreach` 循环及其并行等效项。</span><span class="sxs-lookup"><span data-stu-id="11869-112">The following code example shows a simple `foreach` loop and its parallel equivalent.</span></span>  
   
 > [!NOTE]
->  本文档使用 lambda 表达式在 TPL 中定义委托。  如果不熟悉 C\# 或 Visual Basic 中的 lambda 表达式，请参阅 [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+>  <span data-ttu-id="11869-113">本文档使用 lambda 表达式在 TPL 中定义委托。</span><span class="sxs-lookup"><span data-stu-id="11869-113">This documentation uses lambda expressions to define delegates in TPL.</span></span> <span data-ttu-id="11869-114">如果不熟悉 C# 或 Visual Basic 中的 lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="11869-114">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
  [!code-csharp[TPL#20](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#20)]
  [!code-vb[TPL#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/tpl_vb.vb#20)]  
   
- 并行循环运行时，TPL 将数据源进行分区，以便该循环可以同时对多个部分进行作用。  在后台，任务计划程序基于系统资源和工作负荷来划分任务。  如有可能，如果工作负荷变得不平衡了，计划程序将重新分配多个线程与处理器之间的工作。  
+ <span data-ttu-id="11869-115">并行循环运行时，TPL 将数据源进行分区，以便该循环可以同时对多个部分进行作用。</span><span class="sxs-lookup"><span data-stu-id="11869-115">When a parallel loop runs, the TPL partitions the data source so that the loop can operate on multiple parts concurrently.</span></span> <span data-ttu-id="11869-116">在后台，任务计划程序基于系统资源和工作负荷来划分任务。</span><span class="sxs-lookup"><span data-stu-id="11869-116">Behind the scenes, the Task Scheduler partitions the task based on system resources and workload.</span></span> <span data-ttu-id="11869-117">如有可能，如果工作负荷变得不平衡了，计划程序将重新分配多个线程与处理器之间的工作。</span><span class="sxs-lookup"><span data-stu-id="11869-117">When possible, the scheduler redistributes work among multiple threads and processors if the workload becomes unbalanced.</span></span>  
   
 > [!NOTE]
->  你也可以提供你自己的自定义分区程序或计划程序。  有关详细信息，请参阅 [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)和[Task Schedulers](../Topic/Task%20Schedulers.md)。  
+>  <span data-ttu-id="11869-118">你也可以提供你自己的自定义分区程序或计划程序。</span><span class="sxs-lookup"><span data-stu-id="11869-118">You can also supply your own custom partitioner or scheduler.</span></span> <span data-ttu-id="11869-119">有关详细信息，请参阅 [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)和[任务计划程序](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)。</span><span class="sxs-lookup"><span data-stu-id="11869-119">For more information, see [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) and [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).</span></span>  
   
- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> 方法都有多个过载，可让你停止或中断循环执行，监视其它线程上循环的状态，保持本地线程状态，完成本地线程对象，控制并发程度等等。  启用此功能的帮助器类型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
+ <span data-ttu-id="11869-120"><xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有多个过载，可让你停止或中断循环执行，监视其它线程上循环的状态，保持本地线程状态，完成本地线程对象，控制并发程度等等。</span><span class="sxs-lookup"><span data-stu-id="11869-120">Both the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> methods have several overloads that let you stop or break loop execution, monitor the state of the loop on other threads, maintain thread-local state, finalize thread-local objects, control the degree of concurrency, and so on.</span></span> <span data-ttu-id="11869-121">启用此功能的帮助器类型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。</span><span class="sxs-lookup"><span data-stu-id="11869-121">The helper types that enable this functionality include <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, and <xref:System.Threading.CancellationTokenSource>.</span></span>  
   
- 有关详细信息，请参阅[并行编程模式](http://go.microsoft.com/fwlink/p/?LinkId=265491)。  
+ <span data-ttu-id="11869-122">有关详细信息，请参阅[并行编程模式](http://go.microsoft.com/fwlink/p/?LinkId=265491)。</span><span class="sxs-lookup"><span data-stu-id="11869-122">For more information, see [Patterns of Parallel Programming](http://go.microsoft.com/fwlink/p/?LinkId=265491).</span></span>  
   
- PLINQ 支持使用声明性或查询类语法的数据并行。  有关详细信息，请参阅[Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ <span data-ttu-id="11869-123">PLINQ 支持使用声明性或查询类语法的数据并行。</span><span class="sxs-lookup"><span data-stu-id="11869-123">Data parallelism with declarative, or query-like, syntax is supported by PLINQ.</span></span> <span data-ttu-id="11869-124">有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="11869-124">For more information, see [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).</span></span>  
   
-## 相关主题  
+## <a name="related-topics"></a><span data-ttu-id="11869-125">相关主题</span><span class="sxs-lookup"><span data-stu-id="11869-125">Related Topics</span></span>  
   
-|标题|描述|  
-|--------|--------|  
-|[How to: Write a Simple Parallel.For Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|描述如何编写遍历任何数组或可变址 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.For%2A> 循环。|  
-|[How to: Write a Simple Parallel.ForEach Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|描述如何编写遍历任何 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环。|  
-|[How to: Stop or Break from a Parallel.For Loop](http://msdn.microsoft.com/zh-cn/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
-|[How to: Write a Parallel.For Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.For%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
-|[How to: Write a Parallel.ForEach Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
-|[How to: Cancel a Parallel.For or ForEach Loop](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|描述如何通过使用 <xref:System.Threading.CancellationToken?displayProperty=fullName> 取消并行循环|  
-|[How to: Speed Up Small Loop Bodies](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|描述在循环主体极小时加快执行速度的方法。|  
-|[Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供任务并行库的概述。|  
-|[Parallel Programming](../../../docs/standard/parallel-programming/index.md)|介绍.NET Framework 中的并行编程。|  
+|<span data-ttu-id="11869-126">标题</span><span class="sxs-lookup"><span data-stu-id="11869-126">Title</span></span>|<span data-ttu-id="11869-127">描述</span><span class="sxs-lookup"><span data-stu-id="11869-127">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="11869-128">如何：编写简单的 Parallel.For 循环</span><span class="sxs-lookup"><span data-stu-id="11869-128">How to: Write a Simple Parallel.For Loop</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|<span data-ttu-id="11869-129">描述如何编写遍历任何数组或可变址 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.For%2A> 循环。</span><span class="sxs-lookup"><span data-stu-id="11869-129">Describes how to write a <xref:System.Threading.Tasks.Parallel.For%2A> loop over any array or indexable <xref:System.Collections.Generic.IEnumerable%601> source collection.</span></span>|  
+|[<span data-ttu-id="11869-130">如何：编写简单的 Parallel.ForEach 循环</span><span class="sxs-lookup"><span data-stu-id="11869-130">How to: Write a Simple Parallel.ForEach Loop</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|<span data-ttu-id="11869-131">描述如何编写遍历任何 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环。</span><span class="sxs-lookup"><span data-stu-id="11869-131">Describes how to write a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop over any <xref:System.Collections.Generic.IEnumerable%601> source collection.</span></span>|  
+|[<span data-ttu-id="11869-132">如何：停止或中断 Parallel.For 循环</span><span class="sxs-lookup"><span data-stu-id="11869-132">How to: Stop or Break from a Parallel.For Loop</span></span>](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|<span data-ttu-id="11869-133">描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。</span><span class="sxs-lookup"><span data-stu-id="11869-133">Describes how to stop or break from a parallel loop so that all threads are informed of the action.</span></span>|  
+|[<span data-ttu-id="11869-134">如何：编写具有线程局部变量的 Parallel.For 循环</span><span class="sxs-lookup"><span data-stu-id="11869-134">How to: Write a Parallel.For Loop with Thread-Local Variables</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|<span data-ttu-id="11869-135">描述如何编写 <xref:System.Threading.Tasks.Parallel.For%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。</span><span class="sxs-lookup"><span data-stu-id="11869-135">Describes how to write a <xref:System.Threading.Tasks.Parallel.For%2A> loop in which each thread maintains a private variable that is not visible to any other threads, and how to synchronize the results from all threads when the loop completes.</span></span>|  
+|[<span data-ttu-id="11869-136">如何：编写具有线程局部变量的 Parallel.ForEach 循环</span><span class="sxs-lookup"><span data-stu-id="11869-136">How to: Write a Parallel.ForEach Loop with Thread-Local Variables</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|<span data-ttu-id="11869-137">描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。</span><span class="sxs-lookup"><span data-stu-id="11869-137">Describes how to write a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop in which each thread maintains a private variable that is not visible to any other threads, and how to synchronize the results from all threads when the loop completes.</span></span>|  
+|[<span data-ttu-id="11869-138">如何：取消 Parallel.For 或 ForEach Loop</span><span class="sxs-lookup"><span data-stu-id="11869-138">How to: Cancel a Parallel.For or ForEach Loop</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|<span data-ttu-id="11869-139">描述如何通过使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 取消并行循环</span><span class="sxs-lookup"><span data-stu-id="11869-139">Describes how to cancel a parallel loop by using a <xref:System.Threading.CancellationToken?displayProperty=nameWithType></span></span>|  
+|[<span data-ttu-id="11869-140">如何：加快小型循环体的速度</span><span class="sxs-lookup"><span data-stu-id="11869-140">How to: Speed Up Small Loop Bodies</span></span>](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|<span data-ttu-id="11869-141">描述在循环主体极小时加快执行速度的方法。</span><span class="sxs-lookup"><span data-stu-id="11869-141">Describes one way to speed up execution when a loop body is very small.</span></span>|  
+|[<span data-ttu-id="11869-142">任务并行库 (TPL)</span><span class="sxs-lookup"><span data-stu-id="11869-142">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|<span data-ttu-id="11869-143">提供任务并行库的概述。</span><span class="sxs-lookup"><span data-stu-id="11869-143">Provides an overview of the Task Parallel Library.</span></span>|  
+|[<span data-ttu-id="11869-144">并行编程</span><span class="sxs-lookup"><span data-stu-id="11869-144">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)|<span data-ttu-id="11869-145">介绍.NET Framework 中的并行编程。</span><span class="sxs-lookup"><span data-stu-id="11869-145">Introduces Parallel Programming in the .NET Framework.</span></span>|  
   
-## 请参阅  
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="11869-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="11869-146">See Also</span></span>  
+ [<span data-ttu-id="11869-147">并行编程</span><span class="sxs-lookup"><span data-stu-id="11869-147">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

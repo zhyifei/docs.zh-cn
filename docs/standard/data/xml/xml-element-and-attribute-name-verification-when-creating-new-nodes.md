@@ -1,28 +1,26 @@
 ---
-title: "创建新节点时的 XML 元素和属性名验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "创建新节点时的 XML 元素和属性名验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b489f647-a175-4659-ada4-170058bb41d0
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c041d5d2830222f3fae09a39f1ea10eb08772388
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 创建新节点时的 XML 元素和属性名验证
-XML 文档对象模型 \(DOM\) 在创建新元素节点或属性节点时检查名称的有效性。  如果名称包含非法字符，则将引发异常。  若要确保名称有效且编码正确，需要使用 **XmlConvert** 类在应用程序级别对该名称进行编码和解码。  **XmlWriter** 具有执行附加操作以确保生成格式正确的 XML 的方法。  
+# <a name="xml-element-and-attribute-name-verification-when-creating-new-nodes"></a><span data-ttu-id="458f6-102">创建新节点时的 XML 元素和属性名验证</span><span class="sxs-lookup"><span data-stu-id="458f6-102">XML Element and Attribute Name Verification when Creating New Nodes</span></span>
+<span data-ttu-id="458f6-103">XML 文档对象模型 (DOM) 在创建新元素节点或属性节点时检查名称的有效性。</span><span class="sxs-lookup"><span data-stu-id="458f6-103">The XML Document Object Model (DOM) checks the validity of the names when creating new element nodes or attribute nodes.</span></span> <span data-ttu-id="458f6-104">如果名称包含非法字符，则将引发异常。</span><span class="sxs-lookup"><span data-stu-id="458f6-104">If the names contain illegal characters, an exception is thrown.</span></span> <span data-ttu-id="458f6-105">若要确保名称有效且编码正确，你需要使用**XmlConvert**类进行编码名称，并在应用程序级别对其进行解码。</span><span class="sxs-lookup"><span data-stu-id="458f6-105">To ensure that names are valid and encoded correctly, you need to use the **XmlConvert** class to encode the name and decode it back at an application level.</span></span> <span data-ttu-id="458f6-106">**XmlWriter**具有执行附加工作以确保生成格式正确的 XML 的方法。</span><span class="sxs-lookup"><span data-stu-id="458f6-106">The **XmlWriter** has methods that do additional work to ensure well-formed XML is generated.</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="458f6-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="458f6-107">See Also</span></span>  
+ [<span data-ttu-id="458f6-108">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="458f6-108">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

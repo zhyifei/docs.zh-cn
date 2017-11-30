@@ -1,39 +1,39 @@
 ---
-title: "Panel 控件概述（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Panel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "将控件分组, Panel 控件"
-  - "Panel 控件 [Windows 窗体], 关于 Panel 控件"
+title: "Panel 控件概述（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Panel
+helpviewer_keywords:
+- grouping controls [Windows Forms], Panel control
+- Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 62adba598f59b4662bfb4c51b868bad1aa2e53b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Panel 控件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.Panel> 控件用于为其他控件提供可识别的分组。  通常，使用面板按功能细分窗体。  例如，可能有一个订单窗体，它指定邮寄选项（如使用哪一类通宵承运商）。  将所有选项分组在一个面板中可向用户提供逻辑可视提示。  在设计时所有控件都可以轻松移动 \-\- 当移动 <xref:System.Windows.Forms.Panel> 控件时，它包含的所有控件也将移动。  分组在一个面板中的控件可以通过面板的 <xref:System.Windows.Forms.Control.Controls%2A> 属性进行访问。  此属性返回一批 <xref:System.Windows.Forms.Control> 实例，因此，通常需要将该方式检索得到的控件强制转换为它的特定类型。  
+# <a name="panel-control-overview-windows-forms"></a><span data-ttu-id="aee70-102">Panel 控件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="aee70-102">Panel Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="aee70-103">Windows 窗体<xref:System.Windows.Forms.Panel>控件用于提供其他控件可识别分组。</span><span class="sxs-lookup"><span data-stu-id="aee70-103">Windows Forms <xref:System.Windows.Forms.Panel> controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="aee70-104">通常，你可以使用面板函数细分窗体。</span><span class="sxs-lookup"><span data-stu-id="aee70-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="aee70-105">例如，你可以指定邮件的选项，如使用哪夜间运输工具订购窗体。</span><span class="sxs-lookup"><span data-stu-id="aee70-105">For example, you may have an order form that specifies mailing options such as which overnight carrier to use.</span></span> <span data-ttu-id="aee70-106">分组在面板中的所有选项为用户提供一个逻辑的视觉提示。</span><span class="sxs-lookup"><span data-stu-id="aee70-106">Grouping all options in a panel gives the user a logical visual cue.</span></span> <span data-ttu-id="aee70-107">在设计时所有可以轻松地移动控件 — 当您移动<xref:System.Windows.Forms.Panel>控制，所有其所含的控件移动，太。</span><span class="sxs-lookup"><span data-stu-id="aee70-107">At design time all the controls can be moved easily — when you move the <xref:System.Windows.Forms.Panel> control, all its contained controls move, too.</span></span> <span data-ttu-id="aee70-108">在一个面板中分组控件可以通过其<xref:System.Windows.Forms.Control.Controls%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="aee70-108">The controls grouped in a panel can be accessed through its <xref:System.Windows.Forms.Control.Controls%2A> property.</span></span> <span data-ttu-id="aee70-109">此属性返回的集合<xref:System.Windows.Forms.Control>实例，因此你通常需要强制转换控件检索到它的特定类型的这种方式。</span><span class="sxs-lookup"><span data-stu-id="aee70-109">This property returns a collection of <xref:System.Windows.Forms.Control> instances, so you will typically need to cast a control retrieved this way to its specific type.</span></span>  
   
-## Panel 与 GroupBox  
- <xref:System.Windows.Forms.Panel> 控件类似于 <xref:System.Windows.Forms.GroupBox> 控件；但只有 <xref:System.Windows.Forms.Panel> 控件可以有滚动条，只有 <xref:System.Windows.Forms.GroupBox> 控件可显示标题。  
+## <a name="panel-versus-groupbox"></a><span data-ttu-id="aee70-110">与组合框的面板</span><span class="sxs-lookup"><span data-stu-id="aee70-110">Panel Versus GroupBox</span></span>  
+ <span data-ttu-id="aee70-111"><xref:System.Windows.Forms.Panel>控件是类似于<xref:System.Windows.Forms.GroupBox>控制; 但是，仅<xref:System.Windows.Forms.Panel>控件可以具有滚动条仅和<xref:System.Windows.Forms.GroupBox>控件显示的标题。</span><span class="sxs-lookup"><span data-stu-id="aee70-111">The <xref:System.Windows.Forms.Panel> control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the <xref:System.Windows.Forms.Panel> control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  
   
-## 主要属性  
- 若要显示滚动条，请将 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> 属性设置为 `true`。  也可以通过设置 <xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.BackgroundImage%2A> 和 <xref:System.Windows.Forms.Panel.BorderStyle%2A> 属性自定义面板的外观。  有关 <xref:System.Windows.Forms.Control.BackColor%2A> 和 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 属性的更多信息，请参见 [如何：设置面板的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)。  <xref:System.Windows.Forms.Panel.BorderStyle%2A> 属性确定面板轮廓为无可视边框 \(<xref:System.Windows.Forms.BorderStyle>\)、简单线条 \(<xref:System.Windows.Forms.BorderStyle>\) 还是阴影线条 \(<xref:System.Windows.Forms.BorderStyle>\)。  
+## <a name="key-properties"></a><span data-ttu-id="aee70-112">键属性</span><span class="sxs-lookup"><span data-stu-id="aee70-112">Key Properties</span></span>  
+ <span data-ttu-id="aee70-113">若要显示滚动条，设置<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="aee70-113">To display scroll bars, set the <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> property to `true`.</span></span> <span data-ttu-id="aee70-114">此外可以自面板的外观定义通过设置<xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.BackgroundImage%2A>，和<xref:System.Windows.Forms.Panel.BorderStyle%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="aee70-114">You can also customize the appearance of the panel by setting the <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, and <xref:System.Windows.Forms.Panel.BorderStyle%2A> properties.</span></span> <span data-ttu-id="aee70-115">有关详细信息<xref:System.Windows.Forms.Control.BackColor%2A>和<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性，请参阅[如何： 设置面板的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)。</span><span class="sxs-lookup"><span data-stu-id="aee70-115">For more information on the <xref:System.Windows.Forms.Control.BackColor%2A> and <xref:System.Windows.Forms.Control.BackgroundImage%2A> properties, see [How to: Set the Background of a Panel](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md).</span></span> <span data-ttu-id="aee70-116"><xref:System.Windows.Forms.Panel.BorderStyle%2A>属性确定是否为无可视边框概述面板 (<xref:System.Windows.Forms.BorderStyle.None>)，纯行 (<xref:System.Windows.Forms.BorderStyle.FixedSingle>)，或隐藏的行 (<xref:System.Windows.Forms.BorderStyle.Fixed3D>)。</span><span class="sxs-lookup"><span data-stu-id="aee70-116">The <xref:System.Windows.Forms.Panel.BorderStyle%2A> property determines if the panel is outlined with no visible border (<xref:System.Windows.Forms.BorderStyle.None>), a plain line (<xref:System.Windows.Forms.BorderStyle.FixedSingle>), or a shadowed line (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).</span></span>  
   
-## 请参阅  
- <xref:System.Windows.Forms.Panel>   
- [GroupBox 控件](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)   
- [如何：使用设计器用 Windows 窗体面板控件对控件进行分组](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)   
- [如何：使用设计器设置 Windows 窗体面板的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+## <a name="see-also"></a><span data-ttu-id="aee70-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="aee70-117">See Also</span></span>  
+ <xref:System.Windows.Forms.Panel>  
+ [<span data-ttu-id="aee70-118">GroupBox 控件</span><span class="sxs-lookup"><span data-stu-id="aee70-118">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
+ [<span data-ttu-id="aee70-119">如何：使用设计器用 Windows 窗体 Panel 控件对控件进行分组</span><span class="sxs-lookup"><span data-stu-id="aee70-119">How to: Group Controls with the Windows Forms Panel Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
+ [<span data-ttu-id="aee70-120">如何：使用设计器设置 Windows 窗体 Panel 控件的背景</span><span class="sxs-lookup"><span data-stu-id="aee70-120">How to: Set the Background of a Windows Forms Panel Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

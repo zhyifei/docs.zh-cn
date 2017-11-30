@@ -1,68 +1,48 @@
 ---
 title: "-appconfig（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /appconfig
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- /appconfig compiler option [C#]
+f1_keywords: /appconfig
+helpviewer_keywords: /appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ca752c6264d0ee886aa4c248738097e0caf1d756
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2aede966f92af3c94f4591b68732dbdbf5a4c5c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="appconfig-c-compiler-options"></a>/appconfig（C# 编译器选项）
-/appconfig 编译器选项让 C# 应用程序能够在程序集绑定时将程序集的应用程序配置 (app.config) 文件的位置指定为公共语言运行时 (CLR)。  
+# <a name="appconfig-c-compiler-options"></a><span data-ttu-id="0958e-102">/appconfig（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="0958e-102">/appconfig (C# Compiler Options)</span></span>
+<span data-ttu-id="0958e-103">/appconfig 编译器选项让 C# 应用程序能够在程序集绑定时将程序集的应用程序配置 (app.config) 文件的位置指定为公共语言运行时 (CLR)。</span><span class="sxs-lookup"><span data-stu-id="0958e-103">The **/appconfig** compiler option enables a C# application to specify the location of an assembly's application configuration (app.config) file to the common language runtime (CLR) at assembly binding time.</span></span>  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a><span data-ttu-id="0958e-104">语法</span><span class="sxs-lookup"><span data-stu-id="0958e-104">Syntax</span></span>  
   
 ```console  
 /appconfig:file  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a><span data-ttu-id="0958e-105">参数</span><span class="sxs-lookup"><span data-stu-id="0958e-105">Arguments</span></span>  
  `file`  
- 必需。 包含程序集绑定设置的应用程序配置文件。  
+ <span data-ttu-id="0958e-106">必需。</span><span class="sxs-lookup"><span data-stu-id="0958e-106">Required.</span></span> <span data-ttu-id="0958e-107">包含程序集绑定设置的应用程序配置文件。</span><span class="sxs-lookup"><span data-stu-id="0958e-107">The application configuration file that contains assembly binding settings.</span></span>  
   
-## <a name="remarks"></a>备注  
- /appconfig 的一种用途是处理高级情形；在该情形中，程序集必须同时引用特定引用程序集的 .NET Framework 版本和 .NET Framework for Silverlight 版本。 例如，在 Windows Presentation Foundation (WPF) 中编写的 XAML 设计器可能需要为设计器用户界面引用 WPF 桌面以及随附于 Silverlight 的 WPF 子集。 同一设计器程序集必须访问这两个程序集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。  
+## <a name="remarks"></a><span data-ttu-id="0958e-108">备注</span><span class="sxs-lookup"><span data-stu-id="0958e-108">Remarks</span></span>  
+ <span data-ttu-id="0958e-109">/appconfig 的一种用途是处理高级情形；在该情形中，程序集必须同时引用特定引用程序集的 .NET Framework 版本和 .NET Framework for Silverlight 版本。</span><span class="sxs-lookup"><span data-stu-id="0958e-109">One use of **/appconfig** is advanced scenarios in which an assembly has to reference both the .NET Framework version and the .NET Framework for Silverlight version of a particular reference assembly at the same time.</span></span> <span data-ttu-id="0958e-110">例如，在 Windows Presentation Foundation (WPF) 中编写的 XAML 设计器可能需要为设计器用户界面引用 WPF 桌面以及随附于 Silverlight 的 WPF 子集。</span><span class="sxs-lookup"><span data-stu-id="0958e-110">For example, a XAML designer written in Windows Presentation Foundation (WPF) might have to reference both the WPF Desktop, for the designer's user interface, and the subset of WPF that is included with Silverlight.</span></span> <span data-ttu-id="0958e-111">同一设计器程序集必须访问这两个程序集。</span><span class="sxs-lookup"><span data-stu-id="0958e-111">The same designer assembly has to access both assemblies.</span></span> <span data-ttu-id="0958e-112">默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。</span><span class="sxs-lookup"><span data-stu-id="0958e-112">By default, the separate references cause a compiler error, because assembly binding sees the two assemblies as equivalent.</span></span>  
   
- 通过使用 /appconfig 编译器选项，可通过使用 `<supportPortability>` 标记指定某个 app.config 文件的位置，该文件会禁用默认行为，如以下示例所示。  
+ <span data-ttu-id="0958e-113">通过使用 /appconfig 编译器选项，可通过使用 `<supportPortability>` 标记指定某个 app.config 文件的位置，该文件会禁用默认行为，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="0958e-113">The **/appconfig** compiler option enables you to specify the location of an app.config file that disables the default behavior by using a `<supportPortability>` tag, as shown in the following example.</span></span>  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
- 编译器将文件的位置传递给 CLR 的程序集绑定逻辑。  
+ <span data-ttu-id="0958e-114">编译器将文件的位置传递给 CLR 的程序集绑定逻辑。</span><span class="sxs-lookup"><span data-stu-id="0958e-114">The compiler passes the location of the file to the CLR's assembly-binding logic.</span></span>  
   
 > [!NOTE]
->  如果使用 Microsoft 生成引擎 (MSBuild) 生成应用程序，则可以通过将属性标记添加到 .csproj 文件来设置 /appconfig 编译器选项。 若要使用已在项目中设置的 app.config 文件，请将属性标记 `<UseAppConfigForCompiler>` 添加到 .csproj 文件，并将其值设置为 `true`。 若要指定不同的 app.config 文件，请添加属性标记 `<AppConfigForCompiler>` 并将其值设置为该文件的位置。  
+>  <span data-ttu-id="0958e-115">如果使用 Microsoft 生成引擎 (MSBuild) 生成应用程序，则可以通过将属性标记添加到 .csproj 文件来设置 /appconfig 编译器选项。</span><span class="sxs-lookup"><span data-stu-id="0958e-115">If you are using the Microsoft Build Engine (MSBuild) to build your application, you can set the **/appconfig** compiler option by adding a property tag to the .csproj file.</span></span> <span data-ttu-id="0958e-116">若要使用已在项目中设置的 app.config 文件，请将属性标记 `<UseAppConfigForCompiler>` 添加到 .csproj 文件，并将其值设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="0958e-116">To use the app.config file that is already set in the project, add property tag `<UseAppConfigForCompiler>` to the .csproj file and set its value to `true`.</span></span> <span data-ttu-id="0958e-117">若要指定不同的 app.config 文件，请添加属性标记 `<AppConfigForCompiler>` 并将其值设置为该文件的位置。</span><span class="sxs-lookup"><span data-stu-id="0958e-117">To specify a different app.config file, add property tag `<AppConfigForCompiler>` and set its value to the location of the file.</span></span>  
   
-## <a name="example"></a>示例  
- 以下示例展示一个 app.config 文件，通过使用该文件，应用程序能够同时引用任何 .NET Framework 程序集（同时存在于后述两个实现中）的 .NET Framework 实现和 .NET Framework for Silverlight 实现。 /appconfig 编译器选项指定此 app.config 文件的位置。  
+## <a name="example"></a><span data-ttu-id="0958e-118">示例</span><span class="sxs-lookup"><span data-stu-id="0958e-118">Example</span></span>  
+ <span data-ttu-id="0958e-119">以下示例展示一个 app.config 文件，通过使用该文件，应用程序能够同时引用任何 .NET Framework 程序集（同时存在于后述两个实现中）的 .NET Framework 实现和 .NET Framework for Silverlight 实现。</span><span class="sxs-lookup"><span data-stu-id="0958e-119">The following example shows an app.config file that enables an application to have references to both the .NET Framework implementation and the .NET Framework for Silverlight implementation of any .NET Framework assembly that exists in both implementations.</span></span> <span data-ttu-id="0958e-120">/appconfig 编译器选项指定此 app.config 文件的位置。</span><span class="sxs-lookup"><span data-stu-id="0958e-120">The **/appconfig** compiler option specifies the location of this app.config file.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +55,6 @@ ms.lasthandoff: 09/19/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [.NET Framework 程序集统一概述](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-
+## <a name="see-also"></a><span data-ttu-id="0958e-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0958e-121">See Also</span></span>  
+ [<span data-ttu-id="0958e-122">\<supportPortability > 元素</span><span class="sxs-lookup"><span data-stu-id="0958e-122">\<supportPortability> Element</span></span>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+ [<span data-ttu-id="0958e-123">按字母顺序列出的 C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="0958e-123">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

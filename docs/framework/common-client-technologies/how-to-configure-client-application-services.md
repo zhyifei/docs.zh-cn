@@ -5,112 +5,109 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client application services, configuring
+helpviewer_keywords: client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
-本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+# <a name="how-to-configure-client-application-services"></a><span data-ttu-id="7ca23-102">如何：配置客户端应用程序服务</span><span class="sxs-lookup"><span data-stu-id="7ca23-102">How to: Configure Client Application Services</span></span>
+<span data-ttu-id="7ca23-103">本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。</span><span class="sxs-lookup"><span data-stu-id="7ca23-103">This topic describes how to use the [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Project Designer** to enable and configure client application services.</span></span> <span data-ttu-id="7ca23-104">你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。</span><span class="sxs-lookup"><span data-stu-id="7ca23-104">You can use client application services to validate users and retrieve user roles and settings from an existing [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] application service.</span></span> <span data-ttu-id="7ca23-105">完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。</span><span class="sxs-lookup"><span data-stu-id="7ca23-105">After configuration, you can access the enabled services in your application code as described in [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md).</span></span> <span data-ttu-id="7ca23-106">有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-106">For more information about the [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] application services, see [ASP.NET Application Services Overview](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).</span></span>  
   
- 可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。 “服务”页会更新项目的 App.config 文件中的值。 若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。 有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)。  
+ <span data-ttu-id="7ca23-107">可以在“项目设计器”的“服务”页上启用并配置客户端应用程序服务。</span><span class="sxs-lookup"><span data-stu-id="7ca23-107">You can enable and configure client application services on the **Services** page of the **Project Designer**.</span></span> <span data-ttu-id="7ca23-108">“服务”页会更新项目的 App.config 文件中的值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-108">The **Services** page updates values in your project's App.config file.</span></span> <span data-ttu-id="7ca23-109">若要访问“项目设计器”，请使用“项目”菜单上的“属性”命令。</span><span class="sxs-lookup"><span data-stu-id="7ca23-109">To access the **Project Designer**, use the **Properties** command on the **Project** menu.</span></span> <span data-ttu-id="7ca23-110">有关“服务”页的详细信息，请参阅[“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-110">For more information about the **Services** page, see [Services Page, Project Designer](https://msdn.microsoft.com/library/bb398109).</span></span>  
   
- 下面的过程介绍如何为客户端应用程序服务执行基本配置。 后面的部分中将介绍高级配置选项。  
+ <span data-ttu-id="7ca23-111">下面的过程介绍如何为客户端应用程序服务执行基本配置。</span><span class="sxs-lookup"><span data-stu-id="7ca23-111">The following procedure describes how to perform basic configuration for client application services.</span></span> <span data-ttu-id="7ca23-112">后面的部分中将介绍高级配置选项。</span><span class="sxs-lookup"><span data-stu-id="7ca23-112">Advanced configuration options are described in later sections.</span></span>  
   
-### <a name="to-configure-client-application-services"></a>配置客户端应用程序服务  
+### <a name="to-configure-client-application-services"></a><span data-ttu-id="7ca23-113">配置客户端应用程序服务</span><span class="sxs-lookup"><span data-stu-id="7ca23-113">To configure client application services</span></span>  
   
-1.  在“解决方案资源管理器”中，选择项目节点，然后在“项目”菜单中单击“属性”。  
+1.  <span data-ttu-id="7ca23-114">在“解决方案资源管理器”中，选择项目节点，然后在“项目”菜单中单击“属性”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-114">In **Solution Explorer**, select a project node and then on the **Project** menu, click **Properties**.</span></span>  
   
-     随即显示“项目设计器”。  
+     <span data-ttu-id="7ca23-115">随即显示“项目设计器”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-115">The **Project Designer** appears.</span></span>  
   
-2.  单击“服务”选项卡。 随即显示“服务”页，如下图所示。  
+2.  <span data-ttu-id="7ca23-116">单击“服务”选项卡。随即显示“服务”页，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="7ca23-116">Click the **Services** tab. The **Services** page appears, as shown in the following illustration.</span></span>  
   
-     ![项目设计器中的“服务”选项卡](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")  
+     <span data-ttu-id="7ca23-117">![项目设计器中的“服务”选项卡](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")</span><span class="sxs-lookup"><span data-stu-id="7ca23-117">![The Services tab in the project designer](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")</span></span>  
   
-3.  在“服务”页上，选择“启用客户端应用程序服务”。  
-  
-    > [!NOTE]
-    >  客户端应用程序服务要求完整版的 .NET Framework，在 .NET Framework Client Profile 中不受支持。 如果“启用客户端应用程序服务”复选框处于禁用状态，请验证“目标框架”是否设置为 .NET Framework 3.5 或更高版本。 若要查看 C# 中的“目标框架”设置，请打开项目设计器，然后单击“应用程序”页面。 若要查看 Visual Basic 中的“目标框架”设置，请打开项目设计器，单击“编译”页面，然后单击“高级编译选项”。  
-  
-4.  如果计划提供自己的登录控件或对话框，请选择“使用 Forms 身份验证”；如果使用操作系统提供的标识，请选择“使用 Windows 身份验证”。 有关详细信息，请参阅[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)。  
+3.  <span data-ttu-id="7ca23-118">在“服务”页上，选择“启用客户端应用程序服务”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-118">On the **Services** page, select **Enable client application services**.</span></span>  
   
     > [!NOTE]
-    >  如果选择“使用 Windows 身份验证”，客户端应用程序服务会自动配置为使用 SQL Server Compact 数据库。 “服务的高级设置”对话框中对此进行了说明，下一节将介绍相关内容。 如果接下来选择“使用 Forms 身份验证”，则不会自动清除“使用自定义连接字符串”设置。 如果已经生成了 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库供 Windows 身份验证使用，则这可能导致错误。 若要修复这些错误，请清除“服务的高级设置”对话框中的“使用自定义连接字符串”设置。  
+    >  <span data-ttu-id="7ca23-119">客户端应用程序服务要求完整版的 .NET Framework，在 .NET Framework Client Profile 中不受支持。</span><span class="sxs-lookup"><span data-stu-id="7ca23-119">Client application services require the full version of the .NET Framework, and are not supported in the .NET Framework Client Profile.</span></span> <span data-ttu-id="7ca23-120">如果“启用客户端应用程序服务”复选框处于禁用状态，请验证“目标框架”是否设置为 .NET Framework 3.5 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="7ca23-120">If the **Enable client application services** check box is disabled, verify that the **Target framework** is set to the .NET Framework 3.5 or later.</span></span> <span data-ttu-id="7ca23-121">若要查看 C# 中的“目标框架”设置，请打开项目设计器，然后单击“应用程序”页面。</span><span class="sxs-lookup"><span data-stu-id="7ca23-121">To view the **Target framework** setting in C#, open the Project Designer and then click the **Application** page.</span></span> <span data-ttu-id="7ca23-122">若要查看 Visual Basic 中的“目标框架”设置，请打开项目设计器，单击“编译”页面，然后单击“高级编译选项”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-122">To view the **Target framework** setting in Visual Basic, open the Project Designer, click the **Compile** page, and then click **Advanced Compile Options**.</span></span>  
   
-5.  如果选择了“使用 Forms 身份验证”，则在“身份验证服务位置”框中指定服务主机的 URL，不包括文件名。 设计器在向配置文件中写入值时会自动追加标准文件名 (Authentication_JSON_AppService.axd)。  
+4.  <span data-ttu-id="7ca23-123">如果计划提供自己的登录控件或对话框，请选择“使用 Forms 身份验证”；如果使用操作系统提供的标识，请选择“使用 Windows 身份验证”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-123">Select **Use Forms authentication** if you plan to provide your own login controls or dialog box, or select **Use Windows authentication** to use the identity supplied by the operating system.</span></span> <span data-ttu-id="7ca23-124">有关详细信息，请参阅[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-124">For more information, see [Client Application Services Overview](../../../docs/framework/common-client-technologies/client-application-services-overview.md).</span></span>  
   
-6.  或者，如果选择了“使用 Forms 身份验证”，则可以在“凭据提供程序”框中指定一个值。 凭据提供程序必须实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口。 通过使用凭据提供程序，你可以将你的登录用户界面与其他应用程序代码分开。 这使你能够创建在多个应用程序中使用的单点登录对话框。 有关详细信息，请参阅[如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)。  
+    > [!NOTE]
+    >  <span data-ttu-id="7ca23-125">如果选择“使用 Windows 身份验证”，客户端应用程序服务会自动配置为使用 SQL Server Compact 数据库。</span><span class="sxs-lookup"><span data-stu-id="7ca23-125">If you select **Use Windows authentication**, client application services will automatically be configured to use a SQL Server Compact database.</span></span> <span data-ttu-id="7ca23-126">“服务的高级设置”对话框中对此进行了说明，下一节将介绍相关内容。</span><span class="sxs-lookup"><span data-stu-id="7ca23-126">This is indicated in the **Advanced Settings for Services** dialog box as described in the next section.</span></span> <span data-ttu-id="7ca23-127">如果接下来选择“使用 Forms 身份验证”，则不会自动清除“使用自定义连接字符串”设置。</span><span class="sxs-lookup"><span data-stu-id="7ca23-127">If you then select **Use Forms authentication**, the **Use custom connection string** setting will not be cleared automatically.</span></span> <span data-ttu-id="7ca23-128">如果已经生成了 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库供 Windows 身份验证使用，则这可能导致错误。</span><span class="sxs-lookup"><span data-stu-id="7ca23-128">This could result in errors if the [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database has already been generated for use with Windows authentication.</span></span> <span data-ttu-id="7ca23-129">若要修复这些错误，请清除“服务的高级设置”对话框中的“使用自定义连接字符串”设置。</span><span class="sxs-lookup"><span data-stu-id="7ca23-129">To fix these errors, clear the **Use custom connection string** setting in the **Advanced Settings for Services** dialog box.</span></span>  
   
-     如果指定凭据提供程序，则必须将它指定为程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。 程序集限定类型名称最简单的形式类似于下面的示例：  
+5.  <span data-ttu-id="7ca23-130">如果选择了“使用 Forms 身份验证”，则在“身份验证服务位置”框中指定服务主机的 URL，不包括文件名。</span><span class="sxs-lookup"><span data-stu-id="7ca23-130">If you selected **Use Forms authentication**, in the **Authentication service location** box, specify the URL of the service host, not including the file name.</span></span> <span data-ttu-id="7ca23-131">设计器在向配置文件中写入值时会自动追加标准文件名 (Authentication_JSON_AppService.axd)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-131">The designer will automatically append the standard file name (Authentication_JSON_AppService.axd) when it writes the value to the configuration file.</span></span>  
+  
+6.  <span data-ttu-id="7ca23-132">或者，如果选择了“使用 Forms 身份验证”，则可以在“凭据提供程序”框中指定一个值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-132">Optionally, if you selected **Use Forms authentication**, you can specify a value in the **Credentials provider** box.</span></span> <span data-ttu-id="7ca23-133">凭据提供程序必须实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口。</span><span class="sxs-lookup"><span data-stu-id="7ca23-133">The credentials provider must implement the <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> interface.</span></span> <span data-ttu-id="7ca23-134">通过使用凭据提供程序，你可以将你的登录用户界面与其他应用程序代码分开。</span><span class="sxs-lookup"><span data-stu-id="7ca23-134">By using a credentials provider, you can separate your login user interface from your other application code.</span></span> <span data-ttu-id="7ca23-135">这使你能够创建在多个应用程序中使用的单点登录对话框。</span><span class="sxs-lookup"><span data-stu-id="7ca23-135">This enables you to create a single login dialog box for use in multiple applications.</span></span> <span data-ttu-id="7ca23-136">有关详细信息，请参阅[如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-136">For more information, see [How to: Implement User Login with Client Application Services](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).</span></span>  
+  
+     <span data-ttu-id="7ca23-137">如果指定凭据提供程序，则必须将它指定为程序集限定类型名称。</span><span class="sxs-lookup"><span data-stu-id="7ca23-137">If you specify a credentials provider, you must specify it as an assembly-qualified type name.</span></span> <span data-ttu-id="7ca23-138">有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-138">For more information, see <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> and [Assembly Names](../../../docs/framework/app-domains/assembly-names.md).</span></span> <span data-ttu-id="7ca23-139">程序集限定类型名称最简单的形式类似于下面的示例：</span><span class="sxs-lookup"><span data-stu-id="7ca23-139">In its simplest form, an assembly-qualified type name looks similar to the following example:</span></span>  
   
     ```  
     MyNamespace.MyLoginClass, MyAssembly  
     ```  
   
-7.  在“角色服务位置”和“Web 设置服务位置”文本框中，指定每一项服务的服务位置，不包括文件名。 设计器在向配置文件中写入值时会自动追加标准文件名（Role_JSON_AppService.axd 和 Profile_JSON_AppService.axd）。  
+7.  <span data-ttu-id="7ca23-140">在“角色服务位置”和“Web 设置服务位置”文本框中，指定每一项服务的服务位置，不包括文件名。</span><span class="sxs-lookup"><span data-stu-id="7ca23-140">In the **Roles service location** and **Web settings service location** text boxes, specify the service location for each service, not including the file name.</span></span> <span data-ttu-id="7ca23-141">设计器在向配置文件中写入值时会自动追加标准文件名（Role_JSON_AppService.axd 和 Profile_JSON_AppService.axd）。</span><span class="sxs-lookup"><span data-stu-id="7ca23-141">The designer will automatically append the standard file names (Role_JSON_AppService.axd and Profile_JSON_AppService.axd) when it writes the value to the configuration file.</span></span>  
   
-8.  （可选）单击“高级”修改高级设置，例如本地缓存行为。 有关详细信息，请参阅下一个过程。  
+8.  <span data-ttu-id="7ca23-142">（可选）单击“高级”修改高级设置，例如本地缓存行为。</span><span class="sxs-lookup"><span data-stu-id="7ca23-142">Optionally, click **Advanced** to modify advanced settings, such as the local caching behavior.</span></span> <span data-ttu-id="7ca23-143">有关详细信息，请参阅下一个过程。</span><span class="sxs-lookup"><span data-stu-id="7ca23-143">For more information, see the next procedure.</span></span>  
   
-## <a name="advanced-configuration"></a>高级配置  
- 下面的过程介绍如何为较少见的方案配置客户端应用程序服务。 例如，你可以使用这些针对在公共位置部署的应用程序的配置选项，或使用加密的 SQL Server Compact 数据库作为本地数据缓存。  
+## <a name="advanced-configuration"></a><span data-ttu-id="7ca23-144">高级配置</span><span class="sxs-lookup"><span data-stu-id="7ca23-144">Advanced Configuration</span></span>  
+ <span data-ttu-id="7ca23-145">下面的过程介绍如何为较少见的方案配置客户端应用程序服务。</span><span class="sxs-lookup"><span data-stu-id="7ca23-145">The following procedures describe how to configure client application services for less common scenarios.</span></span> <span data-ttu-id="7ca23-146">例如，你可以使用这些针对在公共位置部署的应用程序的配置选项，或使用加密的 SQL Server Compact 数据库作为本地数据缓存。</span><span class="sxs-lookup"><span data-stu-id="7ca23-146">For example, you can use these configuration options for applications deployed in public locations, or to use an encrypted SQL Server Compact database as the local data cache.</span></span>  
   
-#### <a name="to-configure-advanced-settings-for-client-application-services"></a>为客户端应用程序服务配置高级设置  
+#### <a name="to-configure-advanced-settings-for-client-application-services"></a><span data-ttu-id="7ca23-147">为客户端应用程序服务配置高级设置</span><span class="sxs-lookup"><span data-stu-id="7ca23-147">To configure advanced settings for client application services</span></span>  
   
-1.  在“项目设计器”的“服务”页上，单击“高级”。  
+1.  <span data-ttu-id="7ca23-148">在“项目设计器”的“服务”页上，单击“高级”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-148">On the **Services** page of the **Project Designer**, click **Advanced**.</span></span>  
   
-     随即显示“服务的高级设置”对话框，如下图所示。 有关此对话框的详细信息，请参阅[“服务的高级设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)。  
+     <span data-ttu-id="7ca23-149">随即显示“服务的高级设置”对话框，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="7ca23-149">The **Advanced Settings for Services** dialog box appears, as shown in the following illustration.</span></span> <span data-ttu-id="7ca23-150">有关此对话框的详细信息，请参阅[“服务的高级设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-150">For more information about this dialog box, see [Advanced Settings for Services Dialog Box](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box).</span></span>  
   
-     ![“服务的高级设置”对话框](../../../docs/framework/common-client-technologies/media/casdialog.png "casdialog")  
+     <span data-ttu-id="7ca23-151">![“服务的高级设置”对话框](../../../docs/framework/common-client-technologies/media/casdialog.png "casdialog")</span><span class="sxs-lookup"><span data-stu-id="7ca23-151">![Advanced Settings for Services dialog box](../../../docs/framework/common-client-technologies/media/casdialog.png "casdialog")</span></span>  
   
-2.  选中或清除“将密码哈希保存在本地以实现脱机登录”。 选择此选项时，将以加密形式在本地缓存用户的密码。 这对实现应用程序的脱机模式非常有用。 选择此选项时，即使是在<xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A>属性设置为 `true` 时也可以对用户进行验证。  
+2.  <span data-ttu-id="7ca23-152">选中或清除“将密码哈希保存在本地以实现脱机登录”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-152">Select or clear **Save password hash locally to enable offline login**.</span></span> <span data-ttu-id="7ca23-153">选择此选项时，将以加密形式在本地缓存用户的密码。</span><span class="sxs-lookup"><span data-stu-id="7ca23-153">When you select this option, an encrypted form of the user's password will be cached locally.</span></span> <span data-ttu-id="7ca23-154">这对实现应用程序的脱机模式非常有用。</span><span class="sxs-lookup"><span data-stu-id="7ca23-154">This is useful if you implement offline mode for your application.</span></span> <span data-ttu-id="7ca23-155">选择此选项时，即使是在<xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A>属性设置为 `true` 时也可以对用户进行验证。</span><span class="sxs-lookup"><span data-stu-id="7ca23-155">With this option selected, you can validate users even when the <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> property has been set to `true`.</span></span>  
   
-3.  选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。 已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。 有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。  
+3.  <span data-ttu-id="7ca23-156">选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-156">Select or clear **Require users to log on again whenever the server cookie expires**.</span></span> <span data-ttu-id="7ca23-157">已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。</span><span class="sxs-lookup"><span data-stu-id="7ca23-157">The authentication cookie is configured on the remote service, and indicates how long a user's login will remain active.</span></span> <span data-ttu-id="7ca23-158">有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。</span><span class="sxs-lookup"><span data-stu-id="7ca23-158">For more information about how to configure the cookie, see the `timeout` attribute in [forms Element for authentication (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).</span></span>  
   
-     如果选择此选项，则在身份验证 Cookie 过期后尝试访问远程角色或 Web 设置服务将引发 <xref:System.Net.WebException>。 你可以处理此异常，并显示登录对话框来重新验证用户。 有关此行为的示例，请参阅[演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。 此选项可用于公共位置中部署的应用程序，可确保让应用程序在使用后保持运行状态的用户不会无限期地保持通过身份验证的状态。  
+     <span data-ttu-id="7ca23-159">如果选择此选项，则在身份验证 Cookie 过期后尝试访问远程角色或 Web 设置服务将引发 <xref:System.Net.WebException>。</span><span class="sxs-lookup"><span data-stu-id="7ca23-159">If you select this option, attempting to access the remote roles or Web settings services after the authentication cookie has expired will throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="7ca23-160">你可以处理此异常，并显示登录对话框来重新验证用户。</span><span class="sxs-lookup"><span data-stu-id="7ca23-160">You can handle this exception and display a login dialog box to revalidate users.</span></span> <span data-ttu-id="7ca23-161">有关此行为的示例，请参阅[演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-161">For an example of this behavior, see [Walkthrough: Using Client Application Services](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).</span></span> <span data-ttu-id="7ca23-162">此选项可用于公共位置中部署的应用程序，可确保让应用程序在使用后保持运行状态的用户不会无限期地保持通过身份验证的状态。</span><span class="sxs-lookup"><span data-stu-id="7ca23-162">This option is useful for applications deployed in public locations to make sure that users who leave the application running after use will not remain authenticated indefinitely.</span></span>  
   
-     如果清除此选项并在身份验证 Cookie 过期后尝试访问远程服务，则将自动重新验证用户。  
+     <span data-ttu-id="7ca23-163">如果清除此选项并在身份验证 Cookie 过期后尝试访问远程服务，则将自动重新验证用户。</span><span class="sxs-lookup"><span data-stu-id="7ca23-163">If you clear this option and attempt to access the remote services after the authentication cookie has expired, users will be revalidated automatically.</span></span>  
   
-4.  指定“角色服务缓存超时”的值。 频繁更新角色时，将此时间间隔设置为较小的值，而在不常更新角色时，将此时间间隔设置为较大的值。 如果实现脱机模式，则将该时间间隔设置为较大的值，以防止角色信息在应用程序处于脱机状态时过期。  
+4.  <span data-ttu-id="7ca23-164">指定“角色服务缓存超时”的值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-164">Specify a value for **Role service cache timeout**.</span></span> <span data-ttu-id="7ca23-165">频繁更新角色时，将此时间间隔设置为较小的值，而在不常更新角色时，将此时间间隔设置为较大的值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-165">Set this time interval to a small value when roles are updated frequently or to a larger value when roles are updated infrequently.</span></span> <span data-ttu-id="7ca23-166">如果实现脱机模式，则将该时间间隔设置为较大的值，以防止角色信息在应用程序处于脱机状态时过期。</span><span class="sxs-lookup"><span data-stu-id="7ca23-166">If you implement offline mode, set the time interval to a large value to prevent the role information from expiring while the application is offline.</span></span>  
   
-     调用 <xref:System.Web.Security.RolePrincipal.IsInRole%2A> 方法时，角色提供程序将访问缓存的角色值或角色服务。 若要以编程方式重置缓存并强制此方法访问远程服务，请调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。  
+     <span data-ttu-id="7ca23-167">调用 <xref:System.Web.Security.RolePrincipal.IsInRole%2A> 方法时，角色提供程序将访问缓存的角色值或角色服务。</span><span class="sxs-lookup"><span data-stu-id="7ca23-167">The role provider accesses the cached role values or the roles service when you call the <xref:System.Web.Security.RolePrincipal.IsInRole%2A> method.</span></span> <span data-ttu-id="7ca23-168">若要以编程方式重置缓存并强制此方法访问远程服务，请调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="7ca23-168">To programmatically reset the cache and force this method to access the remote service, call the <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> method.</span></span>  
   
-5.  选中或清除“使用自定义连接字符串”。 有关详细信息，请参阅下一个过程。  
+5.  <span data-ttu-id="7ca23-169">选中或清除“使用自定义连接字符串”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-169">Select or clear **Use custom connection string**.</span></span> <span data-ttu-id="7ca23-170">有关详细信息，请参阅下一个过程。</span><span class="sxs-lookup"><span data-stu-id="7ca23-170">For more information, see the next procedure.</span></span>  
   
-#### <a name="to-configure-client-application-services-to-use-a-database-for-the-local-cache"></a>将客户端应用程序服务配置为使用本地缓存的数据库  
+#### <a name="to-configure-client-application-services-to-use-a-database-for-the-local-cache"></a><span data-ttu-id="7ca23-171">将客户端应用程序服务配置为使用本地缓存的数据库</span><span class="sxs-lookup"><span data-stu-id="7ca23-171">To configure client application services to use a database for the local cache</span></span>  
   
-1.  在“项目设计器”的“服务”页上，单击“高级”。  
+1.  <span data-ttu-id="7ca23-172">在“项目设计器”的“服务”页上，单击“高级”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-172">On the **Services** page of the **Project Designer**, click **Advanced**.</span></span>  
   
-     随即显示“服务的高级设置”对话框。  
+     <span data-ttu-id="7ca23-173">随即显示“服务的高级设置”对话框。</span><span class="sxs-lookup"><span data-stu-id="7ca23-173">The **Advanced Settings for Services** dialog box appears.</span></span>  
   
-2.  选择“使用自定义连接字符串”。  
+2.  <span data-ttu-id="7ca23-174">选择“使用自定义连接字符串”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-174">Select **Use custom connection string**.</span></span>  
   
-     文本框中将显示 `Data Source = |SQL/CE|` 的默认值。  
+     <span data-ttu-id="7ca23-175">文本框中将显示 `Data Source = |SQL/CE|` 的默认值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-175">The default value of `Data Source = |SQL/CE|` appears in the text box.</span></span>  
   
-3.  若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 将生成一个数据库文件，并将其放在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 属性指示的目录中。  
+3.  <span data-ttu-id="7ca23-176">若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-176">To generate and use a SQL Server Compact database, keep the default connection string value.</span></span> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]<span data-ttu-id="7ca23-177"> 将生成一个数据库文件，并将其放在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 属性指示的目录中。</span><span class="sxs-lookup"><span data-stu-id="7ca23-177"> will generate a database file and put it in the directory indicated by the <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> property.</span></span>  
   
-4.  若要生成并使用加密的 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库，请将 `password` 和 `encrypt database` 值添加到连接字符串中，如下面的示例所示。  
+4.  <span data-ttu-id="7ca23-178">若要生成并使用加密的 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库，请将 `password` 和 `encrypt database` 值添加到连接字符串中，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="7ca23-178">To generate and use an encrypted [!INCLUDE[ssEW](../../../includes/ssew-md.md)] database, add `password` and `encrypt database` values to the connection string as shown in the following example.</span></span>  
   
     > [!NOTE]
-    >  请确保指定一个强密码。 生成数据库后，不能更改密码。  
+    >  <span data-ttu-id="7ca23-179">请确保指定一个强密码。</span><span class="sxs-lookup"><span data-stu-id="7ca23-179">Be sure to specify a strong password.</span></span> <span data-ttu-id="7ca23-180">生成数据库后，不能更改密码。</span><span class="sxs-lookup"><span data-stu-id="7ca23-180">You cannot change the password after the database is generated.</span></span>  
   
     ```  
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  若要使用你自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库，请使用你自己的连接字符串。 有关有效的连接字符串格式的信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 文档。 此数据库不是自动生成的。 连接字符串必须引用现有的数据库，你可以使用以下 SQL 语句创建该数据库。  
+5.  <span data-ttu-id="7ca23-181">若要使用你自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库，请使用你自己的连接字符串。</span><span class="sxs-lookup"><span data-stu-id="7ca23-181">To use your own [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, specify your own connection string.</span></span> <span data-ttu-id="7ca23-182">有关有效的连接字符串格式的信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 文档。</span><span class="sxs-lookup"><span data-stu-id="7ca23-182">For information about valid connection string formats, see the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] documentation.</span></span> <span data-ttu-id="7ca23-183">此数据库不是自动生成的。</span><span class="sxs-lookup"><span data-stu-id="7ca23-183">This database is not generated automatically.</span></span> <span data-ttu-id="7ca23-184">连接字符串必须引用现有的数据库，你可以使用以下 SQL 语句创建该数据库。</span><span class="sxs-lookup"><span data-stu-id="7ca23-184">The connection string must refer to an existing database that you can create using the following SQL statements.</span></span>  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -123,44 +120,43 @@ ms.lasthandoff: 07/28/2017
         PropertyStoredAs nvarchar(1), PropertyValue nvarchar(2048))  
     ```  
   
-## <a name="using-custom-providers"></a>使用自定义提供程序  
- 默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=fullName> 命名空间中的提供程序。 使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。 这些默认的提供程序访问服务器上相应的提供程序。 Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。  
+## <a name="using-custom-providers"></a><span data-ttu-id="7ca23-185">使用自定义提供程序</span><span class="sxs-lookup"><span data-stu-id="7ca23-185">Using Custom Providers</span></span>  
+ <span data-ttu-id="7ca23-186">默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 命名空间中的提供程序。</span><span class="sxs-lookup"><span data-stu-id="7ca23-186">By default, the client application services feature uses the providers in the <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="7ca23-187">使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。</span><span class="sxs-lookup"><span data-stu-id="7ca23-187">When you configure your application by using the **Services** page of the **Project Designer**, references to these providers are added to your App.config file.</span></span> <span data-ttu-id="7ca23-188">这些默认的提供程序访问服务器上相应的提供程序。</span><span class="sxs-lookup"><span data-stu-id="7ca23-188">These default providers access corresponding providers on the server.</span></span> <span data-ttu-id="7ca23-189">Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。</span><span class="sxs-lookup"><span data-stu-id="7ca23-189">Web services are often configured to access user data through providers such as <xref:System.Web.Security.SqlMembershipProvider> and <xref:System.Web.Security.SqlRoleProvider>.</span></span>  
   
- 如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ <span data-ttu-id="7ca23-190">如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。</span><span class="sxs-lookup"><span data-stu-id="7ca23-190">If you want to use custom service providers, you will typically change the providers on the server side so that they affect all client applications that access the server.</span></span> <span data-ttu-id="7ca23-191">但是，你可以选择在客户端使用非默认提供程序。</span><span class="sxs-lookup"><span data-stu-id="7ca23-191">However, you do have the option of using non-default providers on the client side.</span></span> <span data-ttu-id="7ca23-192">你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。</span><span class="sxs-lookup"><span data-stu-id="7ca23-192">You can specify custom authentication or roles providers in your project's App.config file, as shown in the following procedure.</span></span> <span data-ttu-id="7ca23-193">有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-193">For information about how to create custom authentication and role providers, see [Implementing a Membership Provider](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) and [Implementing a Role Provider](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d).</span></span> <span data-ttu-id="7ca23-194">你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 访问）来使用自定义设置提供程序。</span><span class="sxs-lookup"><span data-stu-id="7ca23-194">You can also use a custom settings provider by modifying your project's `Settings` class (accessed as `Properties.Settings.Default` in C# and `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).</span></span> <span data-ttu-id="7ca23-195">有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-195">For more information, see [Application Settings Architecture](../../../docs/framework/winforms/advanced/application-settings-architecture.md).</span></span>  
   
-#### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>将客户端应用程序服务配置为使用非默认提供程序  
+#### <a name="to-configure-client-application-services-to-use-non-default-providers"></a><span data-ttu-id="7ca23-196">将客户端应用程序服务配置为使用非默认提供程序</span><span class="sxs-lookup"><span data-stu-id="7ca23-196">To configure client application services to use non-default providers</span></span>  
   
-1.  若要使用非默认身份验证或角色服务提供程序，请首先通过使用“服务”页完成所有其他配置设置。  
+1.  <span data-ttu-id="7ca23-197">若要使用非默认身份验证或角色服务提供程序，请首先通过使用“服务”页完成所有其他配置设置。</span><span class="sxs-lookup"><span data-stu-id="7ca23-197">To use a non-default authentication or roles service provider, first complete all other configuration settings by using the **Services** page.</span></span>  
   
-2.  关闭“项目设计器”。 即使不修改任何设置，“服务”页也会自动更新 App.config 文件，因此这项操作是必需的。 如果按照此过程中所述手动修改 App.config 文件，然后返回到“服务”页，则会重置所做修改。  
+2.  <span data-ttu-id="7ca23-198">关闭“项目设计器”。</span><span class="sxs-lookup"><span data-stu-id="7ca23-198">Close the **Project Designer**.</span></span> <span data-ttu-id="7ca23-199">即使不修改任何设置，“服务”页也会自动更新 App.config 文件，因此这项操作是必需的。</span><span class="sxs-lookup"><span data-stu-id="7ca23-199">This is necessary because the **Services** page will automatically update your App.config file even if you do not modify any settings.</span></span> <span data-ttu-id="7ca23-200">如果按照此过程中所述手动修改 App.config 文件，然后返回到“服务”页，则会重置所做修改。</span><span class="sxs-lookup"><span data-stu-id="7ca23-200">If you manually modify your App.config file as described in this procedure and then return to the **Services** page, your modifications will be reset.</span></span>  
   
-3.  在“解决方案资源管理器”中，双击 App.config。  
+3.  <span data-ttu-id="7ca23-201">在“解决方案资源管理器”中，双击 App.config。</span><span class="sxs-lookup"><span data-stu-id="7ca23-201">In **Solution Explorer**, double-click App.config.</span></span>  
   
-     应用程序配置文件将在文本编辑器中打开。  
+     <span data-ttu-id="7ca23-202">应用程序配置文件将在文本编辑器中打开。</span><span class="sxs-lookup"><span data-stu-id="7ca23-202">The application configuration file opens in the text editor.</span></span>  
   
-4.  找到 `<providers>` 或 `<membership>` 元素中的 `<roleManager>` 元素。 这些元素是 `<system.web>` 元素的子元素。 `<membership>` 元素用于指定身份验证提供程序，`<roleManager>` 元素用于指定角色提供程序。  
+4.  <span data-ttu-id="7ca23-203">找到 `<providers>` 或 `<membership>` 元素中的 `<roleManager>` 元素。</span><span class="sxs-lookup"><span data-stu-id="7ca23-203">Find the `<providers>` element within the `<membership>` or `<roleManager>` element.</span></span> <span data-ttu-id="7ca23-204">这些元素是 `<system.web>` 元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="7ca23-204">These elements are children of the `<system.web>` element.</span></span> <span data-ttu-id="7ca23-205">`<membership>` 元素用于指定身份验证提供程序，`<roleManager>` 元素用于指定角色提供程序。</span><span class="sxs-lookup"><span data-stu-id="7ca23-205">The `<membership>` element is used to specify authentication providers, and the `<roleManager>` element is used to specify role providers.</span></span>  
   
-5.  将 `<add>` 元素添加为 `<providers>` 元素的子元素。 你必须指定 `name` 和 `type` 特性，如下面的示例所示。 `type` 特性的值必须是程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。  
+5.  <span data-ttu-id="7ca23-206">将 `<add>` 元素添加为 `<providers>` 元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="7ca23-206">Add an `<add>` element as a child of the `<providers>` element.</span></span> <span data-ttu-id="7ca23-207">你必须指定 `name` 和 `type` 特性，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="7ca23-207">You must specify `name` and `type` attributes as shown in the following example.</span></span> <span data-ttu-id="7ca23-208">`type` 特性的值必须是程序集限定类型名称。</span><span class="sxs-lookup"><span data-stu-id="7ca23-208">The `type` attribute value must be an assembly-qualified type name.</span></span> <span data-ttu-id="7ca23-209">有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。</span><span class="sxs-lookup"><span data-stu-id="7ca23-209">For more information, see <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> and [Assembly Names](../../../docs/framework/app-domains/assembly-names.md).</span></span>  
   
     ```xml  
     <add name="MyCustomRoleProvider" type="MyNamespace.MyRoleProvider, MyAssembly" />  
     ```  
   
-6.  修改 `defaultProvider` 或 `<membership>` 元素的 `<roleManager>` 特性，以指定来自上一步添加的 `<add>` 元素的名称值。  
+6.  <span data-ttu-id="7ca23-210">修改 `defaultProvider` 或 `<membership>` 元素的 `<roleManager>` 特性，以指定来自上一步添加的 `<add>` 元素的名称值。</span><span class="sxs-lookup"><span data-stu-id="7ca23-210">Modify the `defaultProvider` attribute of the `<membership>` or `<roleManager>` element to specify the name value from the `<add>` element that you added in the previous step.</span></span>  
   
     ```xml  
     <roleManager enabled="true" defaultProvider="MyCustomRoleProvider">  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)   
- [“高级服务设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)   
- [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)   
- [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
- [实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)   
- [实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)   
- [应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
-
+## <a name="see-also"></a><span data-ttu-id="7ca23-211">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ca23-211">See Also</span></span>  
+ [<span data-ttu-id="7ca23-212">客户端应用程序服务</span><span class="sxs-lookup"><span data-stu-id="7ca23-212">Client Application Services</span></span>](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [<span data-ttu-id="7ca23-213">客户端应用程序服务概述</span><span class="sxs-lookup"><span data-stu-id="7ca23-213">Client Application Services Overview</span></span>](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [<span data-ttu-id="7ca23-214">“项目设计器”->“服务”页</span><span class="sxs-lookup"><span data-stu-id="7ca23-214">Services Page, Project Designer</span></span>](https://msdn.microsoft.com/library/bb398109)  
+ [<span data-ttu-id="7ca23-215">“高级服务设置”对话框</span><span class="sxs-lookup"><span data-stu-id="7ca23-215">Advanced Settings for Services Dialog Box</span></span>](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [<span data-ttu-id="7ca23-216">如何：使用客户端应用程序服务来实现用户登录</span><span class="sxs-lookup"><span data-stu-id="7ca23-216">How to: Implement User Login with Client Application Services</span></span>](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [<span data-ttu-id="7ca23-217">演练：使用客户端应用程序服务</span><span class="sxs-lookup"><span data-stu-id="7ca23-217">Walkthrough: Using Client Application Services</span></span>](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [<span data-ttu-id="7ca23-218">实现成员资格提供程序</span><span class="sxs-lookup"><span data-stu-id="7ca23-218">Implementing a Membership Provider</span></span>](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [<span data-ttu-id="7ca23-219">实现角色提供程序</span><span class="sxs-lookup"><span data-stu-id="7ca23-219">Implementing a Role Provider</span></span>](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [<span data-ttu-id="7ca23-220">应用程序设置体系结构</span><span class="sxs-lookup"><span data-stu-id="7ca23-220">Application Settings Architecture</span></span>](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="7ca23-221">为 SQL Server 创建和配置应用程序服务数据库</span><span class="sxs-lookup"><span data-stu-id="7ca23-221">Creating and Configuring the Application Services Database for SQL Server</span></span>](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

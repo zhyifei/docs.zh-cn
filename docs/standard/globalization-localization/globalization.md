@@ -1,381 +1,381 @@
 ---
-title: "全球化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全球化 [.NET Framework], 关于全球化"
-  - "全局应用程序, 全球化"
-  - "国际应用程序 [.NET Framework], 全球化"
-  - "世界通用的应用程序, 全球化"
-  - "应用程序部署 [.NET Framework], 全球化"
-  - "区域性, 全球化"
+title: "全球化"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- globalization [.NET Framework], about globalization
+- global applications, globalization
+- international applications [.NET Framework], globalization
+- world-ready applications, globalization
+- application development [.NET Framework], globalization
+- culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 全球化
-全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。 在设计阶段开始之前，应确定应用将支持哪些区域性。 虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。  
+# <a name="globalization"></a><span data-ttu-id="9ef63-102">全球化</span><span class="sxs-lookup"><span data-stu-id="9ef63-102">Globalization</span></span>
+<span data-ttu-id="9ef63-103">全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。</span><span class="sxs-lookup"><span data-stu-id="9ef63-103">Globalization involves designing and developing a world-ready app that supports localized interfaces and regional data for users in multiple cultures.</span></span> <span data-ttu-id="9ef63-104">在设计阶段开始之前，应确定应用将支持哪些区域性。</span><span class="sxs-lookup"><span data-stu-id="9ef63-104">Before beginning the design phase, you should determine which cultures your app will support.</span></span> <span data-ttu-id="9ef63-105">虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。</span><span class="sxs-lookup"><span data-stu-id="9ef63-105">Although an app targets a single culture or region as its default, you can design and write it so that it can easily be extended to users in other cultures or regions.</span></span>  
   
- 作为开发人员，我们对由区域性组成的用户界面和数据都做出过假设。 例如，对于说英语的美国开发人员来说，将日期和时间数据序列化为采用 `MM/dd/yyyy hh:mm:ss` 格式的字符串似乎是相当合理的。 但是，如果在处于不同区域性的系统上将该字符串进行反序列化，则可能会引发 <xref:System.FormatException> 异常或生成不准确的数据。 全球化使我们能够识别这些特定于区域性的假设，并确保它们不会影响到应用的设计和编码。  
+ <span data-ttu-id="9ef63-106">作为开发人员，我们对由区域性组成的用户界面和数据都做出过假设。</span><span class="sxs-lookup"><span data-stu-id="9ef63-106">As developers, we all have assumptions about user interfaces and data that are formed by our cultures.</span></span> <span data-ttu-id="9ef63-107">例如，对于说英语的美国开发人员来说，将日期和时间数据序列化为采用 `MM/dd/yyyy hh:mm:ss` 格式的字符串似乎是相当合理的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-107">For example, for an English-speaking developer in the United States, serializing date and time data as a string in the format `MM/dd/yyyy hh:mm:ss` seems perfectly reasonable.</span></span> <span data-ttu-id="9ef63-108">但是，如果在处于不同区域性的系统上将该字符串进行反序列化，则可能会引发 <xref:System.FormatException> 异常或生成不准确的数据。</span><span class="sxs-lookup"><span data-stu-id="9ef63-108">However, deserializing that string on a system in a different culture is likely to throw a <xref:System.FormatException> exception or produce inaccurate data.</span></span> <span data-ttu-id="9ef63-109">全球化使我们能够识别这些特定于区域性的假设，并确保它们不会影响到应用的设计和编码。</span><span class="sxs-lookup"><span data-stu-id="9ef63-109">Globalization enables us to identify such culture-specific assumptions and ensure that they do not affect our app's design or code.</span></span>  
   
- 以下部分将讨论在全球化应用中处理字符串、日期和时间值以及数值时，应考虑的一些主要问题和遵从的最佳做法。  
+ <span data-ttu-id="9ef63-110">以下部分将讨论在全球化应用中处理字符串、日期和时间值以及数值时，应考虑的一些主要问题和遵从的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-110">The following sections discuss some of the major issues you should consider and the best practices you can follow when handling strings, date and time values, and numeric values in a globalized app.</span></span>  
   
--   [处理字符串](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
+-   [<span data-ttu-id="9ef63-111">处理字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-111">Handling Strings</span></span>](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
   
-    -   [在内部使用 Unicode](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
+    -   [<span data-ttu-id="9ef63-112">在内部使用 Unicode</span><span class="sxs-lookup"><span data-stu-id="9ef63-112">Use Unicode Internally</span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
   
-    -   [使用资源文件](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
+    -   [<span data-ttu-id="9ef63-113">使用资源文件</span><span class="sxs-lookup"><span data-stu-id="9ef63-113">Use Resource Files</span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [搜索和比较字符串](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [<span data-ttu-id="9ef63-114">搜索和比较字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-114">Searching and Comparing Strings </span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [测试字符串的相等性](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [<span data-ttu-id="9ef63-115">字符串相等性测试</span><span class="sxs-lookup"><span data-stu-id="9ef63-115">Testing Strings for Equality</span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [排列和排序字符串](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [<span data-ttu-id="9ef63-116">排列和排序字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-116">Ordering and Sorting Strings </span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
-    -   [避免字符串串联](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
+    -   [<span data-ttu-id="9ef63-117">避免字符串串联</span><span class="sxs-lookup"><span data-stu-id="9ef63-117">Avoid String Concatenation</span></span>](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
--   [处理日期和时间](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
+-   [<span data-ttu-id="9ef63-118">处理日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-118">Handling Dates and Times</span></span>](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
-    -   [保留日期和时间](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
+    -   [<span data-ttu-id="9ef63-119">保留日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-119">Persisting Dates and Times</span></span>](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [显示日期和时间](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [<span data-ttu-id="9ef63-120">显示日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-120">Displaying Dates and Times</span></span>](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [序列化和时区识别能力](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [<span data-ttu-id="9ef63-121">序列化和时区识别能力</span><span class="sxs-lookup"><span data-stu-id="9ef63-121">Serialization and Time Zone Awareness</span></span>](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [执行日期和时间算法](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [<span data-ttu-id="9ef63-122">执行日期和时间算法</span><span class="sxs-lookup"><span data-stu-id="9ef63-122">Performing Date and Time Arithmetic</span></span>](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
--   [处理数值](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
+-   [<span data-ttu-id="9ef63-123">处理数字值</span><span class="sxs-lookup"><span data-stu-id="9ef63-123">Handling Numeric Values</span></span>](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
-    -   [显示数值](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
+    -   [<span data-ttu-id="9ef63-124">显示数字值</span><span class="sxs-lookup"><span data-stu-id="9ef63-124">Displaying Numeric Values</span></span>](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
   
-    -   [保留数值](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
+    -   [<span data-ttu-id="9ef63-125">保留数值</span><span class="sxs-lookup"><span data-stu-id="9ef63-125">Persisting Numeric Values</span></span>](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [使用特定于区域性的设置](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [<span data-ttu-id="9ef63-126">使用特定于区域性的设置</span><span class="sxs-lookup"><span data-stu-id="9ef63-126">Working with Culture-Specific Settings</span></span>](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
-## 处理字符串  
- 处理字符和字符串的是全球化的重点，因为每个区域性或区域可能使用不同的字符和字符集，且排序方式也不同。 本节提供在全球化应用中使用字符串的一些建议。  
+## <a name="handling-strings"></a><span data-ttu-id="9ef63-127">处理字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-127">Handling Strings</span></span>  
+ <span data-ttu-id="9ef63-128">处理字符和字符串的是全球化的重点，因为每个区域性或区域可能使用不同的字符和字符集，且排序方式也不同。</span><span class="sxs-lookup"><span data-stu-id="9ef63-128">The handling of characters and strings is a central focus of globalization, because each culture or region may use different characters and character sets and sort them differently.</span></span> <span data-ttu-id="9ef63-129">本节提供在全球化应用中使用字符串的一些建议。</span><span class="sxs-lookup"><span data-stu-id="9ef63-129">This section provides recommendations for using strings in globalized apps.</span></span>  
   
 <a name="Strings_Unicode"></a>   
-### 在内部使用 Unicode  
- 默认情况下，.NET Framework 使用 Unicode 字符串。 一个 Unicode 字符串由零个、一个或多个 <xref:System.Char> 对象组成，其中每个对象表示一个 UTF\-16 代码单元。 对于每个字符集中的几乎每个字符来说，都有一个在全球范围内使用的 Unicode 表达式。  
+### <a name="use-unicode-internally"></a><span data-ttu-id="9ef63-130">在内部使用 Unicode</span><span class="sxs-lookup"><span data-stu-id="9ef63-130">Use Unicode Internally</span></span>  
+ <span data-ttu-id="9ef63-131">默认情况下，.NET Framework 使用 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-131">By default, the .NET Framework uses Unicode strings.</span></span> <span data-ttu-id="9ef63-132">一个 Unicode 字符串由零个、一个或多个 <xref:System.Char> 对象组成，其中每个对象表示一个 UTF-16 代码单元。</span><span class="sxs-lookup"><span data-stu-id="9ef63-132">A Unicode string consists of zero, one, or more <xref:System.Char> objects, each of which represents a UTF-16 code unit.</span></span> <span data-ttu-id="9ef63-133">对于每个字符集中的几乎每个字符来说，都有一个在全球范围内使用的 Unicode 表达式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-133">There is a Unicode representation for almost every character in every character set in use throughout the world.</span></span>  
   
- 许多应用程序和操作系统（包括 Windows 操作系统）也可以使用代码页来表示字符集。 代码页通常包含从 0x00 到 0x7F 的标准 ASCII 值，并将其他字符映射到从 0x80 到 0xFF 的剩余值。 从 0x80 到 0xFF 的值的解释取决于具体的代码页。 因此，如有可能，应避免在全球化应用中使用代码页。  
+ <span data-ttu-id="9ef63-134">许多应用程序和操作系统（包括 Windows 操作系统）也可以使用代码页来表示字符集。</span><span class="sxs-lookup"><span data-stu-id="9ef63-134">Many applications and operating systems, including the Windows operating system, can use also use code pages to represent character sets.</span></span> <span data-ttu-id="9ef63-135">代码页通常包含从 0x00 到 0x7F 的标准 ASCII 值，并将其他字符映射到从 0x80 到 0xFF 的剩余值。</span><span class="sxs-lookup"><span data-stu-id="9ef63-135">Code pages typically contain the standard ASCII values from 0x00 through 0x7F and map other characters to the remaining values from 0x80 through 0xFF.</span></span> <span data-ttu-id="9ef63-136">从 0x80 到 0xFF 的值的解释取决于具体的代码页。</span><span class="sxs-lookup"><span data-stu-id="9ef63-136">The interpretation of values from 0x80 through 0xFF depends on the specific code page.</span></span> <span data-ttu-id="9ef63-137">因此，如有可能，应避免在全球化应用中使用代码页。</span><span class="sxs-lookup"><span data-stu-id="9ef63-137">Because of this, you should avoid using code pages in a globalized app if possible.</span></span>  
   
- 以下示例阐释了当系统上的默认代码页与保存数据的代码页不同时，解释代码页数据的危险。 （若要模拟此场景，示例应明确指定不同的代码页。） 首先，该示例定义了一个由希腊字母表的大写字符组成的数组。 然后使用代码页 737（也称为 MS\-DOS 希腊语）将其编码成一个字节数组，并保存到文件。 如果检索该文件并使用代码页 737 对其字节数组进行解码，则会还原原始字符。 但是，如果检索该文件并使用代码页 1252（或按拉丁字母表来表示字符的 Windows\-1252）对其字节数组进行解码，原始数据则会丢失。  
+ <span data-ttu-id="9ef63-138">以下示例阐释了当系统上的默认代码页与保存数据的代码页不同时，解释代码页数据的危险。</span><span class="sxs-lookup"><span data-stu-id="9ef63-138">The following example illustrates the dangers of interpreting code page data when the default code page on a system is different from the code page on which the data was saved.</span></span> <span data-ttu-id="9ef63-139">（若要模拟此场景，示例应明确指定不同的代码页。）首先，该示例定义了一个由希腊字母表的大写字符组成的数组。</span><span class="sxs-lookup"><span data-stu-id="9ef63-139">(To simulate this scenario, the example explicitly specifies different code pages.) First, the example defines an array that consists of the uppercase characters of the Greek alphabet.</span></span> <span data-ttu-id="9ef63-140">然后使用代码页 737（也称为 MS-DOS 希腊语）将其编码成一个字节数组，并保存到文件。</span><span class="sxs-lookup"><span data-stu-id="9ef63-140">It encodes them into a byte array by using code page 737 (also known as MS-DOS Greek) and saves the byte array to a file.</span></span> <span data-ttu-id="9ef63-141">如果检索该文件并使用代码页 737 对其字节数组进行解码，则会还原原始字符。</span><span class="sxs-lookup"><span data-stu-id="9ef63-141">If the file is retrieved and its byte array is decoded by using code page 737, the original characters are restored.</span></span> <span data-ttu-id="9ef63-142">但是，如果检索该文件并使用代码页 1252（或按拉丁字母表来表示字符的 Windows-1252）对其字节数组进行解码，原始数据则会丢失。</span><span class="sxs-lookup"><span data-stu-id="9ef63-142">However, if the file is retrieved and its byte array is decoded by using code page 1252 (or Windows-1252, which represents characters in the Latin alphabet), the original characters are lost.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
  [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]  
   
- 使用 Unicode 可确保相同的代码单元始终能映射到相同的字符，并且相同的字符始终能映射到相同的字节数组。  
+ <span data-ttu-id="9ef63-143">使用 Unicode 可确保相同的代码单元始终能映射到相同的字符，并且相同的字符始终能映射到相同的字节数组。</span><span class="sxs-lookup"><span data-stu-id="9ef63-143">The use of Unicode ensures that the same code units always map to the same characters, and that the same characters always map to the same byte arrays.</span></span>  
   
 <a name="Strings_Resources"></a>   
-### 使用资源文件  
- 即使在开发以单一区域性或区域为目标的应用时，也应使用资源文件存储显示在用户界面中的字符串和其他资源。 切勿将它们直接添加到代码中。 使用资源文件有许多优点：  
+### <a name="use-resource-files"></a><span data-ttu-id="9ef63-144">使用资源文件</span><span class="sxs-lookup"><span data-stu-id="9ef63-144">Use Resource Files</span></span>  
+ <span data-ttu-id="9ef63-145">即使在开发以单一区域性或区域为目标的应用时，也应使用资源文件存储显示在用户界面中的字符串和其他资源。</span><span class="sxs-lookup"><span data-stu-id="9ef63-145">Even if you are developing an app that targets a single culture or region, you should use resource files to store strings and other resources that are displayed in the user interface.</span></span> <span data-ttu-id="9ef63-146">切勿将它们直接添加到代码中。</span><span class="sxs-lookup"><span data-stu-id="9ef63-146">You should never add them directly to your code.</span></span> <span data-ttu-id="9ef63-147">使用资源文件有许多优点：</span><span class="sxs-lookup"><span data-stu-id="9ef63-147">Using resource files has a number of advantages:</span></span>  
   
--   所有字符串都在一个位置。 不必搜索整个源代码即可识别要为特定的语言或区域性修改的字符串。  
+-   <span data-ttu-id="9ef63-148">所有字符串都在一个位置。</span><span class="sxs-lookup"><span data-stu-id="9ef63-148">All the strings are in a single location.</span></span> <span data-ttu-id="9ef63-149">不必搜索整个源代码即可识别要为特定的语言或区域性修改的字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-149">You don't have to search throughout your source code to identify strings to modify for a specific language or culture.</span></span>  
   
--   不需要重复字符串。 不使用资源文件的开发人员常常在多个源代码文件中定义同一字符串。 此类重复增加了在修改字符串时忽略一个或多个实例的可能性。  
+-   <span data-ttu-id="9ef63-150">不需要重复字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-150">There is no need to duplicate strings.</span></span> <span data-ttu-id="9ef63-151">不使用资源文件的开发人员常常在多个源代码文件中定义同一字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-151">Developers who don't use resource files often define the same string in multiple source code files.</span></span> <span data-ttu-id="9ef63-152">此类重复增加了在修改字符串时忽略一个或多个实例的可能性。</span><span class="sxs-lookup"><span data-stu-id="9ef63-152">This duplication increases the probability that one or more instances will be overlooked when a string is modified.</span></span>  
   
--   可以将非字符串资源（如图像或二进制数据）包含在资源文件中以便于检索，而不将它们存储在单独的独立文件中。  
+-   <span data-ttu-id="9ef63-153">可以将非字符串资源（如图像或二进制数据）包含在资源文件中以便于检索，而不将它们存储在单独的独立文件中。</span><span class="sxs-lookup"><span data-stu-id="9ef63-153">You can include non-string resources, such as images or binary data, in the resource file instead of storing them in a separate standalone file, so they can be retrieved easily.</span></span>  
   
- 对于创建本地化应用来说，使用资源文件具有独特优势。 在附属程序集中部署资源时，公共语言运行时会基于由 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 属性定义的用户当前 UI 区域性来自动选择适合区域性的资源。 只要提供了相应的区域性特定资源并正确示例化了 <xref:System.Resources.ResourceManager> 对象或使用了强类型的资源类，运行时就会负责检索适合的资源。  
+ <span data-ttu-id="9ef63-154">对于创建本地化应用来说，使用资源文件具有独特优势。</span><span class="sxs-lookup"><span data-stu-id="9ef63-154">Using resource files has particular advantages if you are creating a localized app.</span></span> <span data-ttu-id="9ef63-155">在附属程序集中部署资源时，公共语言运行时会基于由 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性定义的用户当前 UI 区域性来自动选择适合区域性的资源。</span><span class="sxs-lookup"><span data-stu-id="9ef63-155">When you deploy resources in satellite assemblies, the common language runtime automatically selects a culture-appropriate resource based on the user's current UI culture as defined by the <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="9ef63-156">只要提供了相应的区域性特定资源并正确示例化了 <xref:System.Resources.ResourceManager> 对象或使用了强类型的资源类，运行时就会负责检索适合的资源。</span><span class="sxs-lookup"><span data-stu-id="9ef63-156">As long as you provide an appropriate culture-specific resource and correctly instantiate a <xref:System.Resources.ResourceManager> object or use a strongly typed resource class, the runtime handles the details of retrieving the appropriate resources.</span></span>  
   
- 有关创建资源文件的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。 有关创建和部署附属程序集的信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
+ <span data-ttu-id="9ef63-157">有关创建资源文件的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-157">For more information about creating resource files, see [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).</span></span> <span data-ttu-id="9ef63-158">有关创建和部署附属程序集的信息，请参阅[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-158">For information about creating and deploying satellite assemblies, see [Creating Satellite Assemblies](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) and [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).</span></span>  
   
 <a name="Strings_Searching"></a>   
-### 搜索和比较字符串  
- 应尽可能地将字符串按整个字符串处理，而不是按一系列单个字符进行处理。 尤其重要的一点是在排序或搜索子字符串时，要防止出现与分析组合字符相关的问题。  
+### <a name="searching-and-comparing-strings"></a><span data-ttu-id="9ef63-159">搜索和比较字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-159">Searching and Comparing Strings</span></span>  
+ <span data-ttu-id="9ef63-160">应尽可能地将字符串按整个字符串处理，而不是按一系列单个字符进行处理。</span><span class="sxs-lookup"><span data-stu-id="9ef63-160">Whenever possible, you should handle strings as entire strings instead of handling them as a series of individual characters.</span></span> <span data-ttu-id="9ef63-161">尤其重要的一点是在排序或搜索子字符串时，要防止出现与分析组合字符相关的问题。</span><span class="sxs-lookup"><span data-stu-id="9ef63-161">This is especially important when you sort or search for substrings, to prevent problems associated with parsing combined characters.</span></span>  
   
 > [!TIP]
->  可使用 <xref:System.Globalization.StringInfo> 类与文本元素配合使用，而不使用字符串中的单个字符。  
+>  <span data-ttu-id="9ef63-162">可使用 <xref:System.Globalization.StringInfo> 类与文本元素配合使用，而不使用字符串中的单个字符。</span><span class="sxs-lookup"><span data-stu-id="9ef63-162">You can use the <xref:System.Globalization.StringInfo> class to work with the text elements rather than the individual characters in a string.</span></span>  
   
- 在字符串搜索和比较中，常见的错误是将字符串作为字符的集合，其中每个字符由 <xref:System.Char> 对象表示。 实际上，单个字符串可能由一个、两个或多个 <xref:System.Char> 对象组成。 此类字符在一些字符串中出现得最频繁，这些字符串位于其字母表是由 Unicode 基本拉丁字符范围（从 U\+0021 到 U\+007E）以外的字符所组成的区域性中。 以下示例尝试在字符串中查找 LATIN CAPITAL LETTER A WITH GRAVE 字符 \(U\+00C0\) 的索引。 但是，此字符有两种表示方法：单个代码单元 \(U\+00C0\) 或复合字符（两个代码单元：U\+0021 和 U\+007E）。 在这种情况下，字符在字符串示例中用两个 <xref:System.Char> 对象（U\+0021 和 U\+007E）表示。 示例代码调用 <xref:System.String.IndexOf%28System.Char%29?displayProperty=fullName> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=fullName> 重载以查找此字符在字符串实例中的位置，但返回了不同的结果 。 第一个方法调用拥有 <xref:System.Char> 参数，它执行的是序号比较，因此无法找到匹配项。 第二个调用拥有 <xref:System.String> 参数，它执行的是区分区域性的比较，因此找到了匹配项。  
+ <span data-ttu-id="9ef63-163">在字符串搜索和比较中，常见的错误是将字符串作为字符的集合，其中每个字符由 <xref:System.Char> 对象表示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-163">In string searches and comparisons, a common mistake is to treat the string as a collection of characters, each of which is represented by a <xref:System.Char> object.</span></span> <span data-ttu-id="9ef63-164">实际上，单个字符串可能由一个、两个或多个 <xref:System.Char> 对象组成。</span><span class="sxs-lookup"><span data-stu-id="9ef63-164">In fact, a single character may be formed by one, two, or more <xref:System.Char> objects.</span></span> <span data-ttu-id="9ef63-165">此类字符在一些字符串中出现得最频繁，这些字符串位于其字母表是由 Unicode 基本拉丁字符范围（从 U+0021 到 U+007E）以外的字符所组成的区域性中。</span><span class="sxs-lookup"><span data-stu-id="9ef63-165">Such characters are found most frequently in strings from cultures whose alphabets consist of characters outside the Unicode Basic Latin character range (U+0021 through U+007E).</span></span> <span data-ttu-id="9ef63-166">以下示例尝试在字符串中查找 LATIN CAPITAL LETTER A WITH GRAVE 字符 (U+00C0) 的索引。</span><span class="sxs-lookup"><span data-stu-id="9ef63-166">The following example tries to find the index of the LATIN CAPITAL LETTER A WITH GRAVE character (U+00C0) in a string.</span></span> <span data-ttu-id="9ef63-167">但是，此字符有两种表示方法：单个代码单元 (U+00C0) 或复合字符（两个代码单元：U+0021 和 U+007E）。</span><span class="sxs-lookup"><span data-stu-id="9ef63-167">However, this character can be represented in two different ways: as a single code unit (U+00C0) or as a composite character (two code units: U+0021 and U+007E).</span></span> <span data-ttu-id="9ef63-168">在这种情况下，字符在字符串示例中用两个 <xref:System.Char> 对象（U+0021 和 U+007E）表示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-168">In this case, the character is represented in the string instance by two <xref:System.Char> objects, U+0021 and U+007E.</span></span> <span data-ttu-id="9ef63-169">示例代码调用 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 重载以查找此字符在字符串实例中的位置，但返回了不同的结果 。</span><span class="sxs-lookup"><span data-stu-id="9ef63-169">The example code calls the <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> and <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> overloads to find the position of this character in the string instance, but these return different results.</span></span> <span data-ttu-id="9ef63-170">第一个方法调用拥有 <xref:System.Char> 参数，它执行的是序号比较，因此无法找到匹配项。</span><span class="sxs-lookup"><span data-stu-id="9ef63-170">The first method call has a <xref:System.Char> argument; it performs an ordinal comparison and therefore cannot find a match.</span></span> <span data-ttu-id="9ef63-171">第二个调用拥有 <xref:System.String> 参数，它执行的是区分区域性的比较，因此找到了匹配项。</span><span class="sxs-lookup"><span data-stu-id="9ef63-171">The second call has a <xref:System.String> argument; it performs a culture-sensitive comparison and therefore finds a match.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
   
- 可以通过调用包含 <xref:System.StringComparison> 参数（如 <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=fullName> 或 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法）的重载来避免此示例中出现的一些多义性（对方法的两个相似重载的调用返回了不同的结果）。  
+ <span data-ttu-id="9ef63-172">可以通过调用包含 <xref:System.StringComparison> 参数（如 <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 或 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法）的重载来避免此示例中出现的一些多义性（对方法的两个相似重载的调用返回了不同的结果）。</span><span class="sxs-lookup"><span data-stu-id="9ef63-172">You can avoid some of the ambiguity of this example (calls to two similar overloads of a method returning different results) by calling an overload that includes a <xref:System.StringComparison> parameter, such as the <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> or <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method.</span></span>  
   
- 但是，搜索并不总是区分区域性的。 如果搜索的目的在于做出安全性决策或是允许或禁止访问某些资源，应进行序号比较，此主题将在下一节中讨论。  
+ <span data-ttu-id="9ef63-173">但是，搜索并不总是区分区域性的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-173">However, searches are not always culture-sensitive.</span></span> <span data-ttu-id="9ef63-174">如果搜索的目的在于做出安全性决策或是允许或禁止访问某些资源，应进行序号比较，此主题将在下一节中讨论。</span><span class="sxs-lookup"><span data-stu-id="9ef63-174">If the purpose of the search is to make a security decision or to allow or disallow access to some resource, the comparison should be ordinal, as discussed in the next section.</span></span>  
   
 <a name="Strings_Equality"></a>   
-### 测试字符串的相等性  
- 如果要测试两个字符串是否相等，而不是确定如何按排序顺序进行比较，则使用 <xref:System.String.Equals%2A?displayProperty=fullName> 方法，而不是字符串比较方法，如 <xref:System.String.Compare%2A?displayProperty=fullName> 或 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=fullName>。  
+### <a name="testing-strings-for-equality"></a><span data-ttu-id="9ef63-175">测试字符串的相等性</span><span class="sxs-lookup"><span data-stu-id="9ef63-175">Testing Strings for Equality</span></span>  
+ <span data-ttu-id="9ef63-176">如果要测试两个字符串是否相等，而不是确定如何按排序顺序进行比较，则使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法，而不是字符串比较方法，如 <xref:System.String.Compare%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="9ef63-176">If you want to test two strings for equality rather than determining how they compare in the sort order, use the <xref:System.String.Equals%2A?displayProperty=nameWithType> method instead of a string comparison method such as <xref:System.String.Compare%2A?displayProperty=nameWithType> or <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.</span></span>  
   
- 通常比较相等性用于条件性地访问某些资源。 例如，可能需要比较相等性以验证密码或确认文件是否存在。 此类非语义比较应始终为序号比较，而不是区分区域性的比较。 一般情况下，应使用值为 <xref:System.StringComparison?displayProperty=fullName> 的字符串（如密码）和值为 <xref:System.StringComparison?displayProperty=fullName> 的字符串（如文件名或 URI）来调用实例 <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法或静态的 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=fullName> 方法。  
+ <span data-ttu-id="9ef63-177">通常比较相等性用于条件性地访问某些资源。</span><span class="sxs-lookup"><span data-stu-id="9ef63-177">Comparisons for equality are typically performed to access some resource conditionally.</span></span> <span data-ttu-id="9ef63-178">例如，可能需要比较相等性以验证密码或确认文件是否存在。</span><span class="sxs-lookup"><span data-stu-id="9ef63-178">For example, you might perform a comparison for equality to verify a password or to confirm that a file exists.</span></span> <span data-ttu-id="9ef63-179">此类非语义比较应始终为序号比较，而不是区分区域性的比较。</span><span class="sxs-lookup"><span data-stu-id="9ef63-179">Such non-linguistic comparisons should always be ordinal rather than culture-sensitive.</span></span> <span data-ttu-id="9ef63-180">一般情况下，应使用值为 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 的字符串（如密码）和值为 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的字符串（如文件名或 URI）来调用实例 <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法或静态的 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-180">In general, you should call the instance <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method or the static <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method with a value of <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> for strings such as passwords, and a value of <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> for strings such as file names or URIs.</span></span>  
   
- 相等性的比较有时会涉及到搜索或子字符串比较，而不是对 <xref:System.String.Equals%2A?displayProperty=fullName> 方法的调用。 在某些情况下，可以使用子字符串搜索以确定子字符串是否与另一字符串相等。 如果比较的目的是非语义的，那么搜索也应该为序号搜索，而不区分区域性。  
+ <span data-ttu-id="9ef63-181">相等性的比较有时会涉及到搜索或子字符串比较，而不是对 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的调用。</span><span class="sxs-lookup"><span data-stu-id="9ef63-181">Comparisons for equality sometimes involve searches or substring comparisons rather than calls to the <xref:System.String.Equals%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9ef63-182">在某些情况下，可以使用子字符串搜索以确定子字符串是否与另一字符串相等。</span><span class="sxs-lookup"><span data-stu-id="9ef63-182">In some cases, you may use a substring search to determine whether that substring equals another string.</span></span> <span data-ttu-id="9ef63-183">如果比较的目的是非语义的，那么搜索也应该为序号搜索，而不区分区域性。</span><span class="sxs-lookup"><span data-stu-id="9ef63-183">If the purpose of this comparison is non-linguistic, the search should also be ordinal rather than culture-sensitive.</span></span>  
   
- 以下示例阐释了对非语义数据进行区分区域性搜索的危险。`AccessesFileSystem` 方法旨在禁止文件系统访问以子字符串“FILE”开头的 URI。 为此，它对以字符串“FILE”开头的 URI 执行区分区域性、不区分大小写的比较。 由于访问文件系统的 URI 可以“FILE:”或“file:”开头，因此隐式假设“i”\(U\+0069\) 始终为小写且等效于“I”\(U\+0049\)。 但是，在土耳其语和阿塞拜疆语中，“i”的大写为“İ”\(U\+0130\)。 由于存在此差异，因此区分区域性的比较在应禁止的情况下仍允许进行文件系统访问。  
+ <span data-ttu-id="9ef63-184">以下示例阐释了对非语义数据进行区分区域性搜索的危险。</span><span class="sxs-lookup"><span data-stu-id="9ef63-184">The following example illustrates the danger of a culture-sensitive search on non-linguistic data.</span></span> <span data-ttu-id="9ef63-185">`AccessesFileSystem` 方法旨在禁止文件系统访问以子字符串“FILE”开头的 URI。</span><span class="sxs-lookup"><span data-stu-id="9ef63-185">The `AccessesFileSystem` method is designed to prohibit file system access for URIs that begin with the substring "FILE".</span></span> <span data-ttu-id="9ef63-186">为此，它对以字符串“FILE”开头的 URI 执行区分区域性、不区分大小写的比较。</span><span class="sxs-lookup"><span data-stu-id="9ef63-186">To do this, it performs a culture-sensitive, case-insensitive comparison of the beginning of the URI with the string "FILE".</span></span> <span data-ttu-id="9ef63-187">由于访问文件系统的 URI 可以“FILE:”或“file:”开头，因此隐式假设“i”(U+0069) 始终为小写且等效于“I”(U+0049)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-187">Because a URI that accesses the file system can begin with either "FILE:" or "file:", the implicit assumption is that that "i" (U+0069) is always the lowercase equivalent of "I" (U+0049).</span></span> <span data-ttu-id="9ef63-188">但是，在土耳其语和阿塞拜疆语中，“i”的大写为“İ”(U+0130)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-188">However, in Turkish and Azerbaijani, the uppercase version of "i" is "İ" (U+0130).</span></span> <span data-ttu-id="9ef63-189">由于存在此差异，因此区分区域性的比较在应禁止的情况下仍允许进行文件系统访问。</span><span class="sxs-lookup"><span data-stu-id="9ef63-189">Because of this discrepancy, the culture-sensitive comparison allows file system access when it should be prohibited.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
   
- 因此，可执行忽视大小写的序号比较来避免出现此问题，如下例所示。  
+ <span data-ttu-id="9ef63-190">因此，可执行忽视大小写的序号比较来避免出现此问题，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-190">You can avoid this problem by performing an ordinal comparison that ignores case, as the following example shows.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals2.cs#13)]
  [!code-vb[Conceptual.Globalization#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals2.vb#13)]  
   
 <a name="Strings_Ordering"></a>   
-### 排列和排序字符串  
- 通常，要在用户界面中显示的已排列字符串应根据区域性进行排序。 大多数情况下，在调用排序字符串的方法（如 <xref:System.Array.Sort%2A?displayProperty=fullName> 和 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName>）时，此类字符串比较是由 .NET Framework 隐式处理的。 默认情况下，使用当前区域性的排序约定对字符串进行排序。 以下示例阐释了使用英语\(美国\)区域性和瑞典语\(瑞典\)区域性的约定对一组字符串进行排序时的差异。  
+### <a name="ordering-and-sorting-strings"></a><span data-ttu-id="9ef63-191">排列和排序字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-191">Ordering and Sorting Strings</span></span>  
+ <span data-ttu-id="9ef63-192">通常，要在用户界面中显示的已排列字符串应根据区域性进行排序。</span><span class="sxs-lookup"><span data-stu-id="9ef63-192">Typically, ordered strings that are to be displayed in the user interface should be sorted based on culture.</span></span> <span data-ttu-id="9ef63-193">大多数情况下，在调用排序字符串的方法（如 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>）时，此类字符串比较是由 .NET Framework 隐式处理的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-193">For the most part, such string comparisons are handled implicitly by the .NET Framework when you call a method that sorts strings, such as <xref:System.Array.Sort%2A?displayProperty=nameWithType> or <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="9ef63-194">默认情况下，使用当前区域性的排序约定对字符串进行排序。</span><span class="sxs-lookup"><span data-stu-id="9ef63-194">By default, strings are sorted by using the sorting conventions of the current culture.</span></span> <span data-ttu-id="9ef63-195">以下示例阐释了使用英语(美国)区域性和瑞典语(瑞典)区域性的约定对一组字符串进行排序时的差异。</span><span class="sxs-lookup"><span data-stu-id="9ef63-195">The following example illustrates the difference when an array of strings is sorted by using the conventions of the English (United States) culture and the Swedish (Sweden) culture.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sort1.cs#14)]
  [!code-vb[Conceptual.Globalization#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sort1.vb#14)]  
   
- 区分区域性的字符串比较是由 <xref:System.Globalization.CompareInfo> 对象定义的，该对象由每个区域性的 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=fullName> 属性返回。 使用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法重载的区分区域性的字符串比较也使用 <xref:System.Globalization.CompareInfo> 对象。  
+ <span data-ttu-id="9ef63-196">区分区域性的字符串比较是由 <xref:System.Globalization.CompareInfo> 对象定义的，该对象由每个区域性的 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 属性返回。</span><span class="sxs-lookup"><span data-stu-id="9ef63-196">Culture-sensitive string comparison is defined by the <xref:System.Globalization.CompareInfo> object, which is returned by each culture's <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="9ef63-197">使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法重载的区分区域性的字符串比较也使用 <xref:System.Globalization.CompareInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="9ef63-197">Culture-sensitive string comparisons that use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method overloads also use the <xref:System.Globalization.CompareInfo> object.</span></span>  
   
- .NET Framework 使用表格对字符串数据进行区分区域性的排序。 这些表格的内容包含了数据的排序权重和字符串标准化，而这些内容是通过 .NET Framework 的特定版本实现的 Unicode 标准版确定的。 下表列出了通过 .NET Framework 的指定版本所实现的 Unicode 版本。 请注意，受支持的 Unicode 版本的列表仅适用于字符比较和排序；不适用于 Unicode 字符串按类别分类。 有关详细信息，请参阅 <xref:System.String> 文章中“字符串和 Unicode 标准”部分。  
+ <span data-ttu-id="9ef63-198">.NET Framework 使用表格对字符串数据进行区分区域性的排序。</span><span class="sxs-lookup"><span data-stu-id="9ef63-198">The .NET Framework uses tables to perform culture-sensitive sorts on string data.</span></span> <span data-ttu-id="9ef63-199">这些表格的内容包含了数据的排序权重和字符串标准化，而这些内容是通过 .NET Framework 的特定版本实现的 Unicode 标准版确定的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-199">The content of these tables, which contain data on sort weights and string normalization, is determined by the version of the Unicode standard implemented by a particular version of the .NET Framework.</span></span> <span data-ttu-id="9ef63-200">下表列出了通过 .NET Framework 的指定版本所实现的 Unicode 版本。</span><span class="sxs-lookup"><span data-stu-id="9ef63-200">The following table lists the versions of Unicode implemented by the specified versions of the .NET Framework.</span></span> <span data-ttu-id="9ef63-201">请注意，受支持的 Unicode 版本的列表仅适用于字符比较和排序；不适用于 Unicode 字符串按类别分类。</span><span class="sxs-lookup"><span data-stu-id="9ef63-201">Note that this list of supported Unicode versions applies to character comparison and sorting only; it does not apply to classification of Unicode characters by category.</span></span> <span data-ttu-id="9ef63-202">有关详细信息，请参阅 <xref:System.String> 文章中“字符串和 Unicode 标准”部分。</span><span class="sxs-lookup"><span data-stu-id="9ef63-202">For more information, see the "Strings and The Unicode Standard" section in the <xref:System.String> article.</span></span>  
   
-|.NET Framework 版本|操作系统|Unicode 版本|  
-|-----------------------|----------|----------------|  
-|.NET Framework 2.0|所有操作系统|Unicode 4.1|  
-|.NET Framework 3.0|所有操作系统|Unicode 4.1|  
-|.NET Framework 3.5|所有操作系统|Unicode 4.1|  
-|.NET Framework 4|所有操作系统|Unicode 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
+|<span data-ttu-id="9ef63-203">.NET Framework 版本</span><span class="sxs-lookup"><span data-stu-id="9ef63-203">.NET Framework version</span></span>|<span data-ttu-id="9ef63-204">操作系统</span><span class="sxs-lookup"><span data-stu-id="9ef63-204">Operating system</span></span>|<span data-ttu-id="9ef63-205">Unicode 版本</span><span class="sxs-lookup"><span data-stu-id="9ef63-205">Unicode version</span></span>|  
+|----------------------------|----------------------|---------------------|  
+|<span data-ttu-id="9ef63-206">.NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="9ef63-206">.NET Framework 2.0</span></span>|<span data-ttu-id="9ef63-207">所有操作系统</span><span class="sxs-lookup"><span data-stu-id="9ef63-207">All operating systems</span></span>|<span data-ttu-id="9ef63-208">Unicode 4.1</span><span class="sxs-lookup"><span data-stu-id="9ef63-208">Unicode 4.1</span></span>|  
+|<span data-ttu-id="9ef63-209">.NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="9ef63-209">.NET Framework 3.0</span></span>|<span data-ttu-id="9ef63-210">所有操作系统</span><span class="sxs-lookup"><span data-stu-id="9ef63-210">All operating systems</span></span>|<span data-ttu-id="9ef63-211">Unicode 4.1</span><span class="sxs-lookup"><span data-stu-id="9ef63-211">Unicode 4.1</span></span>|  
+|<span data-ttu-id="9ef63-212">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="9ef63-212">.NET Framework 3.5</span></span>|<span data-ttu-id="9ef63-213">所有操作系统</span><span class="sxs-lookup"><span data-stu-id="9ef63-213">All operating systems</span></span>|<span data-ttu-id="9ef63-214">Unicode 4.1</span><span class="sxs-lookup"><span data-stu-id="9ef63-214">Unicode 4.1</span></span>|  
+|<span data-ttu-id="9ef63-215">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="9ef63-215">.NET Framework 4</span></span>|<span data-ttu-id="9ef63-216">所有操作系统</span><span class="sxs-lookup"><span data-stu-id="9ef63-216">All operating systems</span></span>|<span data-ttu-id="9ef63-217">Unicode 5.0</span><span class="sxs-lookup"><span data-stu-id="9ef63-217">Unicode 5.0</span></span>|  
+|<span data-ttu-id="9ef63-218">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="9ef63-218">.NET Framework 4.5</span></span>|[!INCLUDE[win7](../../../includes/win7-md.md)]|<span data-ttu-id="9ef63-219">Unicode 5.0</span><span class="sxs-lookup"><span data-stu-id="9ef63-219">Unicode 5.0</span></span>|  
+|<span data-ttu-id="9ef63-220">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="9ef63-220">.NET Framework 4.5</span></span>|[!INCLUDE[win8](../../../includes/win8-md.md)]|<span data-ttu-id="9ef63-221">Unicode 6.0</span><span class="sxs-lookup"><span data-stu-id="9ef63-221">Unicode 6.0</span></span>|  
   
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，字符串比较和排序取决于操作系统。 在 [!INCLUDE[win7](../../../includes/win7-md.md)] 上运行的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 从其自身实现 Unicode 5.0 的表中检索数据。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上运行的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 从实现 Unicode 6.0 的操作系统表中检索数据。 如果对区分区域性的已排序数据进行序列化，可使用 <xref:System.Globalization.SortVersion> 类来确定何时需要对序列化数据进行排序，使其与 .NET Framework 和操作系统的排序顺序保持一致。 有关示例，请参阅 <xref:System.Globalization.SortVersion> 类主题。  
+ <span data-ttu-id="9ef63-222">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，字符串比较和排序取决于操作系统。</span><span class="sxs-lookup"><span data-stu-id="9ef63-222">In the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], string comparison and sorting depends on the operating system.</span></span> <span data-ttu-id="9ef63-223">在 [!INCLUDE[win7](../../../includes/win7-md.md)] 上运行的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 从其自身实现 Unicode 5.0 的表中检索数据。</span><span class="sxs-lookup"><span data-stu-id="9ef63-223">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] running on [!INCLUDE[win7](../../../includes/win7-md.md)] retrieves data from its own tables that implement Unicode 5.0.</span></span> <span data-ttu-id="9ef63-224">在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上运行的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 从实现 Unicode 6.0 的操作系统表中检索数据。</span><span class="sxs-lookup"><span data-stu-id="9ef63-224">The [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] running on [!INCLUDE[win8](../../../includes/win8-md.md)] retrieves data from operating system tables that implement Unicode 6.0.</span></span> <span data-ttu-id="9ef63-225">如果对区分区域性的已排序数据进行序列化，可使用 <xref:System.Globalization.SortVersion> 类来确定何时需要对序列化数据进行排序，使其与 .NET Framework 和操作系统的排序顺序保持一致。</span><span class="sxs-lookup"><span data-stu-id="9ef63-225">If you serialize culture-sensitive sorted data, you can use the <xref:System.Globalization.SortVersion> class to determine when your serialized data needs to be sorted so that it is consistent with the .NET Framework and the operating system's sort order.</span></span> <span data-ttu-id="9ef63-226">有关示例，请参阅 <xref:System.Globalization.SortVersion> 类主题。</span><span class="sxs-lookup"><span data-stu-id="9ef63-226">For an example, see the <xref:System.Globalization.SortVersion> class topic.</span></span>  
   
- 如果应用对字符串数据执行大量特定于区域性的排序，则可使用 <xref:System.Globalization.SortKey> 类来比较字符串。 排序关键字反映了特定字符串的特定于区域性的排序权重，包括字母顺序、大小写和音调符号权重。 由于使用排序关键字的比较为二进制，因此与显示或隐式使用 <xref:System.Globalization.CompareInfo> 对象的比较相比，这类比较速度更快。 可通过将字符串传递给 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=fullName> 方法为特定字符串创建区分区域性的排序关键字。  
+ <span data-ttu-id="9ef63-227">如果应用对字符串数据执行大量特定于区域性的排序，则可使用 <xref:System.Globalization.SortKey> 类来比较字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-227">If your app performs extensive culture-specific sorts of string data, you can work with the <xref:System.Globalization.SortKey> class to compare strings.</span></span> <span data-ttu-id="9ef63-228">排序关键字反映了特定字符串的特定于区域性的排序权重，包括字母顺序、大小写和音调符号权重。</span><span class="sxs-lookup"><span data-stu-id="9ef63-228">A sort key reflects the culture-specific sort weights, including the alphabetic, case, and diacritic weights of a particular string.</span></span> <span data-ttu-id="9ef63-229">由于使用排序关键字的比较为二进制，因此与显示或隐式使用 <xref:System.Globalization.CompareInfo> 对象的比较相比，这类比较速度更快。</span><span class="sxs-lookup"><span data-stu-id="9ef63-229">Because comparisons using sort keys are binary, they are faster than comparisons that use a <xref:System.Globalization.CompareInfo> object either implicitly or explicitly.</span></span> <span data-ttu-id="9ef63-230">可通过将字符串传递给 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> 方法为特定字符串创建区分区域性的排序关键字。</span><span class="sxs-lookup"><span data-stu-id="9ef63-230">You create a culture-specific sort key for a particular string by passing the string to the <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> method.</span></span>  
   
- 以下示例与前一个示例类似。 但是此示例没有调用 <xref:System.Array.Sort%28System.Array%29?displayProperty=fullName> 方法（其隐式调用了 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=fullName> 方法），而是定义了对排序关键字进行比较的 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 实现，它会进行实例化并传递到 [Array.Sort\<T\>\(T\<xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=fullName> 方法。  
+ <span data-ttu-id="9ef63-231">以下示例与前一个示例类似。</span><span class="sxs-lookup"><span data-stu-id="9ef63-231">The following example is similar to the previous example.</span></span> <span data-ttu-id="9ef63-232">但是此示例没有调用 <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> 方法（其隐式调用了 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> 方法），而是定义了对排序关键字进行比较的 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现，它会进行实例化并传递到 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-232">However, instead of calling the <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> method, which implicitly calls the <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> method, it defines an <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementation that compares sort keys, which it instantiates and passes to the <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> method.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sortkey1.cs#15)]
  [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]  
   
 <a name="Strings_Concat"></a>   
-### 避免字符串串联  
- 如有可能，请避免使用在运行时从串联词组中生成的复合字符串。 复合字符串难以本地化，因为它们往往以应用的原始语言假设语法顺序，而此顺序并不适用于其他本地化语言。  
+### <a name="avoid-string-concatenation"></a><span data-ttu-id="9ef63-233">避免字符串串联</span><span class="sxs-lookup"><span data-stu-id="9ef63-233">Avoid String Concatenation</span></span>  
+ <span data-ttu-id="9ef63-234">如有可能，请避免使用在运行时从串联词组中生成的复合字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-234">If at all possible, avoid using composite strings that are built at run time from concatenated phrases.</span></span> <span data-ttu-id="9ef63-235">复合字符串难以本地化，因为它们往往以应用的原始语言假设语法顺序，而此顺序并不适用于其他本地化语言。</span><span class="sxs-lookup"><span data-stu-id="9ef63-235">Composite strings are difficult to localize, because they often assume a grammatical order in the app's original language that does not apply to other localized languages.</span></span>  
   
 <a name="DatesAndTimes"></a>   
-## 处理日期和时间  
- 如何处理日期和时间值取决于它们是要显示在用户界面中还是保留。 本节将讨论这两种用法。 同时也将讨论在处理日期和时间时应如何处理时区差异和算术运算。  
+## <a name="handling-dates-and-times"></a><span data-ttu-id="9ef63-236">处理日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-236">Handling Dates and Times</span></span>  
+ <span data-ttu-id="9ef63-237">如何处理日期和时间值取决于它们是要显示在用户界面中还是保留。</span><span class="sxs-lookup"><span data-stu-id="9ef63-237">How you handle date and time values depends on whether they are displayed in the user interface or persisted.</span></span> <span data-ttu-id="9ef63-238">本节将讨论这两种用法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-238">This section examines both usages.</span></span> <span data-ttu-id="9ef63-239">同时也将讨论在处理日期和时间时应如何处理时区差异和算术运算。</span><span class="sxs-lookup"><span data-stu-id="9ef63-239">It also discusses how you can handle time zone differences and arithmetic operations when working with dates and times.</span></span>  
   
 <a name="DatesAndTimes_Display"></a>   
-### 显示日期和时间  
- 通常，如果日期和时间要显示在用户界面中，应使用用户区域性的格式约定，此约定是由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性以及 `CultureInfo.CurrentCulture.DateTimeFormat` 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象定义的。 在使用以下 3 种方法之一设置日期的格式时会自动使用当前区域性的格式约定：  
+### <a name="displaying-dates-and-times"></a><span data-ttu-id="9ef63-240">显示日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-240">Displaying Dates and Times</span></span>  
+ <span data-ttu-id="9ef63-241">通常，如果日期和时间要显示在用户界面中，应使用用户区域性的格式约定，此约定是由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性以及 `CultureInfo.CurrentCulture.DateTimeFormat` 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象定义的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-241">Typically, when dates and times are displayed in the user interface, you should use the formatting conventions of the user's culture, which is defined by the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> property and by the <xref:System.Globalization.DateTimeFormatInfo> object returned by the `CultureInfo.CurrentCulture.DateTimeFormat` property.</span></span> <span data-ttu-id="9ef63-242">在使用以下 3 种方法之一设置日期的格式时会自动使用当前区域性的格式约定：</span><span class="sxs-lookup"><span data-stu-id="9ef63-242">The formatting conventions of the current culture are automatically used when you format a date by using any of these methods:</span></span>  
   
--   无参数的 <xref:System.DateTime.ToString?displayProperty=fullName> 方法  
+-   <span data-ttu-id="9ef63-243">无参数的 <xref:System.DateTime.ToString?displayProperty=nameWithType> 方法</span><span class="sxs-lookup"><span data-stu-id="9ef63-243">The parameterless <xref:System.DateTime.ToString?displayProperty=nameWithType> method</span></span>  
   
--   <xref:System.DateTime.ToString%28System.String%29?displayProperty=fullName> 方法，其中包含一个格式字符串  
+-   <span data-ttu-id="9ef63-244"><xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，其中包含一个格式字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-244">The <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> method, which includes a format string</span></span>  
   
--   无参数的 <xref:System.DateTimeOffset.ToString?displayProperty=fullName> 方法  
+-   <span data-ttu-id="9ef63-245">无参数的 <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> 方法</span><span class="sxs-lookup"><span data-stu-id="9ef63-245">The parameterless <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> method</span></span>  
   
--   <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=fullName>，其中包含一个格式字符串  
+-   <span data-ttu-id="9ef63-246"><xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含一个格式字符串</span><span class="sxs-lookup"><span data-stu-id="9ef63-246">The <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, which includes a format string</span></span>  
   
--   与日期一起使用的[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能  
+-   <span data-ttu-id="9ef63-247">[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，当将它用于日期</span><span class="sxs-lookup"><span data-stu-id="9ef63-247">The [composite formatting](../../../docs/standard/base-types/composite-formatting.md) feature, when it is used with dates</span></span>  
   
- 以下示例显示了两次 2012 年 10 月 11 日的日出和日落数据。 它首先将当前区域性设置为克罗地亚语\(克罗地亚\)，然后是英语\(英国\)。 在每个用例中，日期和时间以适合当地区域性的格式显示。  
+ <span data-ttu-id="9ef63-248">以下示例显示了两次 2012 年 10 月 11 日的日出和日落数据。</span><span class="sxs-lookup"><span data-stu-id="9ef63-248">The following example displays sunrise and sunset data twice for October 11, 2012.</span></span> <span data-ttu-id="9ef63-249">它首先将当前区域性设置为克罗地亚语(克罗地亚)，然后是英语(英国)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-249">It first sets the current culture to Croatian (Croatia), and then to English (Great Britain).</span></span> <span data-ttu-id="9ef63-250">在每个用例中，日期和时间以适合当地区域性的格式显示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-250">In each case, the dates and times are displayed in the format that is appropriate for that culture.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates1.cs#2)]
  [!code-vb[Conceptual.Globalization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates1.vb#2)]  
   
 <a name="DatesAndTimes_Persist"></a>   
-### 保留日期和时间  
- 切勿将日期和时间数据保留为随区域性而异的格式。 这是常见的编程错误，会导致数据损坏或运行时异常。 以下示例使用英语\(美国\)区域性的格式约定将两个日期（2013 年 1 月 9 日和 2013 年 8 月 18 日）序列化为字符串。 在使用英语\(美国\)区域性的约定检索和分析该数据时，它会成功还原。 但在使用英语\(英国\)区域性的约定进行检索和分析时，第一个日期被错误地解释为 9 月 1 日，并且无法分析第二个日期，因为公历中没有第 18 个月。  
+### <a name="persisting-dates-and-times"></a><span data-ttu-id="9ef63-251">保留日期和时间</span><span class="sxs-lookup"><span data-stu-id="9ef63-251">Persisting Dates and Times</span></span>  
+ <span data-ttu-id="9ef63-252">切勿将日期和时间数据保留为随区域性而异的格式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-252">You should never persist date and time data in a format that can vary by culture.</span></span> <span data-ttu-id="9ef63-253">这是常见的编程错误，会导致数据损坏或运行时异常。</span><span class="sxs-lookup"><span data-stu-id="9ef63-253">This is a common programming error that results in either corrupted data or a run-time exception.</span></span> <span data-ttu-id="9ef63-254">以下示例使用英语(美国)区域性的格式约定将两个日期（2013 年 1 月 9 日和 2013 年 8 月 18 日）序列化为字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-254">The following example serializes two dates, January 9, 2013 and August 18, 2013, as strings by using the formatting conventions of the English (United States) culture.</span></span> <span data-ttu-id="9ef63-255">在使用英语(美国)区域性的约定检索和分析该数据时，它会成功还原。</span><span class="sxs-lookup"><span data-stu-id="9ef63-255">When the data is retrieved and parsed by using the conventions of the English (United States) culture, it is successfully restored.</span></span> <span data-ttu-id="9ef63-256">但在使用英语(英国)区域性的约定进行检索和分析时，第一个日期被错误地解释为 9 月 1 日，并且无法分析第二个日期，因为公历中没有第 18 个月。</span><span class="sxs-lookup"><span data-stu-id="9ef63-256">However, when it is retrieved and parsed by using the conventions of the English (United Kingdom) culture, the first date is wrongly interpreted as September 1, and the second fails to parse because the Gregorian calendar does not have an eighteenth month.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates2.cs#3)]
  [!code-vb[Conceptual.Globalization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates2.vb#3)]  
   
- 可通过以下 3 种方法之一来避免此问题：  
+ <span data-ttu-id="9ef63-257">可通过以下 3 种方法之一来避免此问题：</span><span class="sxs-lookup"><span data-stu-id="9ef63-257">You can avoid this problem in any of three ways:</span></span>  
   
--   以二进制格式对日期和时间进行序列化，而不是序列化为字符串。  
+-   <span data-ttu-id="9ef63-258">以二进制格式对日期和时间进行序列化，而不是序列化为字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-258">Serialize the date and time in binary format rather than as a string.</span></span>  
   
--   不考虑用户的区域性，使用同一自定义格式字符串保存和分析日期和时间的字符串表示形式。  
+-   <span data-ttu-id="9ef63-259">不考虑用户的区域性，使用同一自定义格式字符串保存和分析日期和时间的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-259">Save and parse the string representation of the date and time by using a custom format string that is the same regardless of the user's culture.</span></span>  
   
--   使用固定区域性的格式约定保存字符串。  
+-   <span data-ttu-id="9ef63-260">使用固定区域性的格式约定保存字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-260">Save the string by using the formatting conventions of the invariant culture.</span></span>  
   
- 以下示例演示了第 3 种方法。 它使用静态 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 属性返回的固定区域性的格式约定。  
+ <span data-ttu-id="9ef63-261">以下示例演示了第 3 种方法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-261">The following example illustrates the last approach.</span></span> <span data-ttu-id="9ef63-262">它使用静态 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性的格式约定。</span><span class="sxs-lookup"><span data-stu-id="9ef63-262">It uses the formatting conventions of the invariant culture returned by the static <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
  [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]  
   
 <a name="DatesAndTimes_TimeZones"></a>   
-### 序列化和时区识别能力  
- 一个日期和时间值可能有多个解释，从常规时间（“商店于 2013 年 1 月 2 日上午 9 点开门。”）到某个特定时刻（“出生日期：2013 年 1 月 2 日上午 6 点 32 分。”）。 当时间值表示某个特定时刻并且将它从序列化的值中还原时，无论用户处于哪个地理位置或时区，都应确保它表示的是同一时刻。  
+### <a name="serialization-and-time-zone-awareness"></a><span data-ttu-id="9ef63-263">序列化和时区识别能力</span><span class="sxs-lookup"><span data-stu-id="9ef63-263">Serialization and Time Zone Awareness</span></span>  
+ <span data-ttu-id="9ef63-264">一个日期和时间值可能有多个解释，从常规时间（“商店于 2013 年 1 月 2 日上午 9 点开门。”）到某个特定时刻（“出生日期：2013 年 1 月 2 日上午 6 点 32 分。”）。</span><span class="sxs-lookup"><span data-stu-id="9ef63-264">A date and time value can have multiple interpretations, ranging from a general time ("The stores open on January 2, 2013, at 9:00 A.M.") to a specific moment in time ("Date of birth: January 2, 2013 6:32:00 A.M.").</span></span> <span data-ttu-id="9ef63-265">当时间值表示某个特定时刻并且将它从序列化的值中还原时，无论用户处于哪个地理位置或时区，都应确保它表示的是同一时刻。</span><span class="sxs-lookup"><span data-stu-id="9ef63-265">When a time value represents a specific moment in time and you restore it from a serialized value, you should ensure that it represents the same moment in time regardless of the user's geographical location or time zone.</span></span>  
   
- 以下示例阐释了此问题。 它将单个本地日期和时间值作为字符串保存为 3 个[标准格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)（“G”表示常规日期长时间，“s”表示可排序日期\/时间，而“o”表示往返日期\/时间）以及二进制格式。  
+ <span data-ttu-id="9ef63-266">以下示例阐释了此问题。</span><span class="sxs-lookup"><span data-stu-id="9ef63-266">The following example illustrates this problem.</span></span> <span data-ttu-id="9ef63-267">它将单个本地日期和时间值保存在三个字符串形式[标准格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)(针对常规日期长时间，"s"的可排序日期/时间，"G"和"o"的往返日期/时间) 以及在如下所示的二进制格式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-267">It saves a single local date and time value as a string in three [standard formats](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" for general date long time, "s" for sortable date/time, and "o" for round-trip date/time) as well as in binary format.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
   
- 当还原数据的系统与对其进行序列化的系统位于同一时区时，反序列化的日期和时间值能准确地反映原始值，输出如下：  
+ <span data-ttu-id="9ef63-268">当还原数据的系统与对其进行序列化的系统位于同一时区时，反序列化的日期和时间值能准确地反映原始值，输出如下：</span><span class="sxs-lookup"><span data-stu-id="9ef63-268">When the data is restored on a system in the same time zone as the system on which it was serialized, the deserialized date and time values accurately reflect the original value, as the output shows:</span></span>  
   
 ```  
-  
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified  
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified  
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local  
   
 3/30/2013 6:00:00 PM Local  
-  
 ```  
   
- 但是，如果在处于其他时区的系统上还原数据，仅格式为“o”（往返）标准格式字符串的日期和时间值会保留时区信息，因此它会表示同一时刻。 当在处于罗马标准时区的系统上还原日期和时间数据时，输出如下：  
+ <span data-ttu-id="9ef63-269">但是，如果在处于其他时区的系统上还原数据，仅格式为“o”（往返）标准格式字符串的日期和时间值会保留时区信息，因此它会表示同一时刻。</span><span class="sxs-lookup"><span data-stu-id="9ef63-269">However, if you restore the data on a system in a different time zone, only the date and time value that was formatted with the "o" (round-trip) standard format string preserves time zone information and therefore represents the same instant in time.</span></span> <span data-ttu-id="9ef63-270">当在处于罗马标准时区的系统上还原日期和时间数据时，输出如下：</span><span class="sxs-lookup"><span data-stu-id="9ef63-270">Here's the output when the date and time data is restored on a system in the Romance Standard Time zone:</span></span>  
   
 ```  
-  
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified  
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified  
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local  
   
 3/30/2013 6:00:00 PM Local  
-  
 ```  
   
- 若要准确反映表示单个时刻的日期和时间值，而无需考虑对数据进行反序列化的系统所在时区，则可以执行以下任一操作：  
+ <span data-ttu-id="9ef63-271">若要准确反映表示单个时刻的日期和时间值，而无需考虑对数据进行反序列化的系统所在时区，则可以执行以下任一操作：</span><span class="sxs-lookup"><span data-stu-id="9ef63-271">To accurately reflect a date and time value that represents a single moment of time regardless of the time zone of the system on which the data is deserialized, you can do any of the following:</span></span>  
   
--   使用“o”（往返）标准格式字符串将值保存为字符串。 然后在目标系统上进行反序列化。  
+-   <span data-ttu-id="9ef63-272">使用“o”（往返）标准格式字符串将值保存为字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-272">Save the value as a string by using the "o" (round-trip) standard format string.</span></span> <span data-ttu-id="9ef63-273">然后在目标系统上进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="9ef63-273">Then deserialize it on the target system.</span></span>  
   
--   将其转换为 UTC，并使用“r”\(RFC1123\) 标准格式字符串将其保存为一个字符串。 然后在目标系统上进行反序列化，并将其转换为本地时间。  
+-   <span data-ttu-id="9ef63-274">将其转换为 UTC，并使用“r”(RFC1123) 标准格式字符串将其保存为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-274">Convert it to UTC and save it as a string by using the "r" (RFC1123) standard format string.</span></span> <span data-ttu-id="9ef63-275">然后在目标系统上进行反序列化，并将其转换为本地时间。</span><span class="sxs-lookup"><span data-stu-id="9ef63-275">Then deserialize it on the target system and convert it to local time.</span></span>  
   
--   将其转换为 UTC，并使用“u”（通用可排序）标准格式字符串将其保存为一个字符串。 然后在目标系统上进行反序列化，并将其转换为本地时间。  
+-   <span data-ttu-id="9ef63-276">将其转换为 UTC，并使用“u”（通用可排序）标准格式字符串将其保存为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-276">Convert it to UTC and save it as a string by using the "u" (universal sortable) standard format string.</span></span> <span data-ttu-id="9ef63-277">然后在目标系统上进行反序列化，并将其转换为本地时间。</span><span class="sxs-lookup"><span data-stu-id="9ef63-277">Then deserialize it on the target system and convert it to local time.</span></span>  
   
--   将其转换为 UTC，并保存为二进制格式。 然后在目标系统上进行反序列化，并将其转换为本地时间。  
+-   <span data-ttu-id="9ef63-278">将其转换为 UTC，并保存为二进制格式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-278">Convert it to UTC and save it in binary format.</span></span> <span data-ttu-id="9ef63-279">然后在目标系统上进行反序列化，并将其转换为本地时间。</span><span class="sxs-lookup"><span data-stu-id="9ef63-279">Then deserialize it on the target system and convert it to local time.</span></span>  
   
- 以下示例演示了每种方法。  
+ <span data-ttu-id="9ef63-280">以下示例演示了每种方法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-280">The following example illustrates each technique.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates8.cs#11)]
  [!code-vb[Conceptual.Globalization#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates8.vb#11)]  
   
- 当在位于太平洋标准时区的系统上和在位于罗马标准时区的系统上对数据进行序列化时，该示例将显示以下输出：  
+ <span data-ttu-id="9ef63-281">当在位于太平洋标准时区的系统上和在位于罗马标准时区的系统上对数据进行序列化时，该示例将显示以下输出：</span><span class="sxs-lookup"><span data-stu-id="9ef63-281">When the data is serialized on a system in the Pacific Standard Time zone and deserialized on a system in the Romance Standard Time zone, the example displays the following output:</span></span>  
   
 ```  
-  
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local  
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local  
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local  
   
 3/31/2013 3:00:00 AM Local  
-  
 ```  
   
- 有关详细信息，请参阅[在不同时区之间转换时间](../../../docs/standard/datetime/converting-between-time-zones.md)。  
+ <span data-ttu-id="9ef63-282">有关详细信息，请参阅[转换时间之间的时区](../../../docs/standard/datetime/converting-between-time-zones.md)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-282">For more information, see [Converting Times Between Time Zones](../../../docs/standard/datetime/converting-between-time-zones.md).</span></span>  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
-### 执行日期和时间算法  
- <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型都支持算术运算。 可以计算两个日期值之差，或者将日期值与特定的时间间隔相加或相减。 但是，对日期和时间值进行的算术运算时不考虑时区和时区调整规则。 因此，计算表示时刻的日期和时间值可能会返回错误结果。  
+### <a name="performing-date-and-time-arithmetic"></a><span data-ttu-id="9ef63-283">执行日期和时间算法</span><span class="sxs-lookup"><span data-stu-id="9ef63-283">Performing Date and Time Arithmetic</span></span>  
+ <span data-ttu-id="9ef63-284"><xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型都支持算术运算。</span><span class="sxs-lookup"><span data-stu-id="9ef63-284">Both the <xref:System.DateTime> and <xref:System.DateTimeOffset> types support arithmetic operations.</span></span> <span data-ttu-id="9ef63-285">可以计算两个日期值之差，或者将日期值与特定的时间间隔相加或相减。</span><span class="sxs-lookup"><span data-stu-id="9ef63-285">You can calculate the difference between two date values, or you can add or subtract particular time intervals to or from a date value.</span></span> <span data-ttu-id="9ef63-286">但是，对日期和时间值进行的算术运算时不考虑时区和时区调整规则。</span><span class="sxs-lookup"><span data-stu-id="9ef63-286">However, arithmetic operations on date and time values do not take time zones and time zone adjustment rules into account.</span></span> <span data-ttu-id="9ef63-287">因此，计算表示时刻的日期和时间值可能会返回错误结果。</span><span class="sxs-lookup"><span data-stu-id="9ef63-287">Because of this, date and time arithmetic on values that represent moments in time can return inaccurate results.</span></span>  
   
- 例如，从太平洋标准时到太平洋夏令时的转换发生在 3 月的第二个星期日，即 2013 年 3 月 10 日。 如下例所示，如果在位于太平洋时区的系统上计算 2013 年 3 月 9 日上午 10 点 30 分之后 48 小时的日期和时间，则不会考虑时间间隔调整，因此结果为 2013 年 3 月 11 日上午 10 点 30 分。  
+ <span data-ttu-id="9ef63-288">例如，从太平洋标准时到太平洋夏令时的转换发生在 3 月的第二个星期日，即 2013 年 3 月 10 日。</span><span class="sxs-lookup"><span data-stu-id="9ef63-288">For example, the transition from Pacific Standard Time to Pacific Daylight Time occurs on the second Sunday of March, which is March 10 for the year 2013.</span></span> <span data-ttu-id="9ef63-289">如下面的示例所示，如果计算日期和时间为 48 小时后 2013 年 3 月 9 日上午 10:30</span><span class="sxs-lookup"><span data-stu-id="9ef63-289">As the following example shows, if you calculate the date and time that is 48 hours after March 9, 2013 at 10:30 A.M.</span></span> <span data-ttu-id="9ef63-290">在太平洋标准时间时区中的系统，在结果中，2013 年 3 月 11 日上午 10:30，不会考虑干预的时间调整。</span><span class="sxs-lookup"><span data-stu-id="9ef63-290">on a system in the Pacific Standard Time zone, the result, March 11, 2013 at 10:30 A.M., does not take the intervening time adjustment into account.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
   
- 若要确保日期和时间值的算术运算生成精准的结果，请执行以下步骤：  
+ <span data-ttu-id="9ef63-291">若要确保日期和时间值的算术运算生成精准的结果，请执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="9ef63-291">To ensure that an arithmetic operation on date and time values produces accurate results, follow these steps:</span></span>  
   
-1.  将源时区中的时间转换为 UTC。  
+1.  <span data-ttu-id="9ef63-292">将源时区中的时间转换为 UTC。</span><span class="sxs-lookup"><span data-stu-id="9ef63-292">Convert the time in the source time zone to UTC.</span></span>  
   
-2.  执行算术运算。  
+2.  <span data-ttu-id="9ef63-293">执行算术运算。</span><span class="sxs-lookup"><span data-stu-id="9ef63-293">Perform the arithmetic operation.</span></span>  
   
-3.  如果结果为日期和时间值，则将它从 UTC 转换成源时区中的时间。  
+3.  <span data-ttu-id="9ef63-294">如果结果为日期和时间值，则将它从 UTC 转换成源时区中的时间。</span><span class="sxs-lookup"><span data-stu-id="9ef63-294">If the result is a date and time value, convert it from UTC to the time in the source time zone.</span></span>  
   
- 以下示例与前一个示例类似，不同的是，它按照这 3 个步骤在 2013 年 3 月 9 日上午 10 点 30 分的基础上恰当添加了 48 个小时。  
+ <span data-ttu-id="9ef63-295">以下示例与前一个示例类似，不同的是，它按照这 3 个步骤在 2013 年 3 月 9 日上午 10 点 30 分的基础上恰当添加了 48 个小时。</span><span class="sxs-lookup"><span data-stu-id="9ef63-295">The following example is similar to the previous example, except that it follows these three steps to correctly add 48 hours to March 9, 2013 at 10:30 A.M.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- 有关更多信息，请参见[使用日期和时间执行算术运算](../../../docs/standard/datetime/performing-arithmetic-operations.md)。  
+ <span data-ttu-id="9ef63-296">有关详细信息，请参阅[使用日期和时间执行算术操作](../../../docs/standard/datetime/performing-arithmetic-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-296">For more information, see [Performing Arithmetic Operations with Dates and Times](../../../docs/standard/datetime/performing-arithmetic-operations.md).</span></span>  
   
-### 对日期元素使用区分区域性的名称  
- 应用可能需要显示月份的名称或星期几。 为此，常使用以下代码。  
+### <a name="using-culture-sensitive-names-for-date-elements"></a><span data-ttu-id="9ef63-297">对日期元素使用区分区域性的名称</span><span class="sxs-lookup"><span data-stu-id="9ef63-297">Using Culture-Sensitive Names for Date Elements</span></span>  
+ <span data-ttu-id="9ef63-298">应用可能需要显示月份的名称或星期几。</span><span class="sxs-lookup"><span data-stu-id="9ef63-298">Your app may need to display the name of the month or the day of the week.</span></span> <span data-ttu-id="9ef63-299">为此，常使用以下代码。</span><span class="sxs-lookup"><span data-stu-id="9ef63-299">To do this, code such as the following is common.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname1.cs#19)]
  [!code-vb[Conceptual.Globalization#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname1.vb#19)]  
   
- 但是，此代码始终以英语返回一周中某天的名称。 提取月份名称的代码通常更加固定。 它常常采用特定语言的月份名称来假设十二月历。  
+ <span data-ttu-id="9ef63-300">但是，此代码始终以英语返回一周中某天的名称。</span><span class="sxs-lookup"><span data-stu-id="9ef63-300">However, this code always returns the names of the days of the week in English.</span></span> <span data-ttu-id="9ef63-301">提取月份名称的代码通常更加固定。</span><span class="sxs-lookup"><span data-stu-id="9ef63-301">Code that extracts the name of the month is often even more inflexible.</span></span> <span data-ttu-id="9ef63-302">它常常采用特定语言的月份名称来假设十二月历。</span><span class="sxs-lookup"><span data-stu-id="9ef63-302">It frequently assumes a twelve-month calendar with names of months in a specific language.</span></span>  
   
- 通过使用[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)或 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性，可轻松提取用户区域性中一周的某天或月份的名称。 它将当前区域性更改为法语\(法国\)，并为 2013 年 7 月 1 日显示一周中某天的名称和月份的名称。  
+ <span data-ttu-id="9ef63-303">通过使用[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)或的属性<xref:System.Globalization.DateTimeFormatInfo>对象，很容易地提取反映天的每周或月中用户的区域性名称的字符串，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-303">By using [custom date and time format strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) or the properties of the <xref:System.Globalization.DateTimeFormatInfo> object, it is easy to extract strings that reflect the names of days of the week or months in the user's culture, as the following example illustrates.</span></span> <span data-ttu-id="9ef63-304">它将当前区域性更改为法语(法国)，并为 2013 年 7 月 1 日显示一周中某天的名称和月份的名称。</span><span class="sxs-lookup"><span data-stu-id="9ef63-304">It changes the current culture to French (France) and displays the name of the day of the week and the name of the month for July 1, 2013.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
   
 <a name="Numbers"></a>   
-## 处理数值  
- 数字的处理方式取决于它们是显示在用户界面中还是保留。 本节将讨论这两种用法。  
+## <a name="handling-numeric-values"></a><span data-ttu-id="9ef63-305">处理数值</span><span class="sxs-lookup"><span data-stu-id="9ef63-305">Handling Numeric Values</span></span>  
+ <span data-ttu-id="9ef63-306">数字的处理方式取决于它们是显示在用户界面中还是保留。</span><span class="sxs-lookup"><span data-stu-id="9ef63-306">The handling of numbers depends on whether they are displayed in the user interface or persisted.</span></span> <span data-ttu-id="9ef63-307">本节将讨论这两种用法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-307">This section examines both usages.</span></span>  
   
 > [!NOTE]
->  在分析和设置格式时，.NET Framework 仅将 0 到 9（U\+0030 到 U\+0039）的基本拉丁字符识别为数字。  
+>  <span data-ttu-id="9ef63-308">在分析和设置格式时，.NET Framework 仅将 0 到 9（U+0030 到 U+0039）的基本拉丁字符识别为数字。</span><span class="sxs-lookup"><span data-stu-id="9ef63-308">In parsing and formatting operations, the .NET Framework recognizes only the Basic Latin characters 0 through 9 (U+0030 through U+0039) as numeric digits.</span></span>  
   
 <a name="Numbers_Display"></a>   
-### 显示数值  
- 通常，如果数字显示在用户界面中，应使用用户区域性的格式约定，此约定由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 属性以及 `CultureInfo.CurrentCulture.NumberFormat` 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象定义。 在使用以下任意方法设置日期的格式时会自动使用当前区域性的格式约定：  
+### <a name="displaying-numeric-values"></a><span data-ttu-id="9ef63-309">显示数值</span><span class="sxs-lookup"><span data-stu-id="9ef63-309">Displaying Numeric Values</span></span>  
+ <span data-ttu-id="9ef63-310">通常，如果数字显示在用户界面中，应使用用户区域性的格式约定，此约定由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性以及 `CultureInfo.CurrentCulture.NumberFormat` 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象定义。</span><span class="sxs-lookup"><span data-stu-id="9ef63-310">Typically, when numbers are displayed in the user interface, you should use the formatting conventions of the user's culture, which is defined by the <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> property and by the <xref:System.Globalization.NumberFormatInfo> object returned by the `CultureInfo.CurrentCulture.NumberFormat` property.</span></span> <span data-ttu-id="9ef63-311">在使用以下任意方法设置日期的格式时会自动使用当前区域性的格式约定：</span><span class="sxs-lookup"><span data-stu-id="9ef63-311">The formatting conventions of the current culture are automatically used when you format a date by using any of the following methods:</span></span>  
   
--   任何数值类型无参数的 `ToString` 方法  
+-   <span data-ttu-id="9ef63-312">任何数值类型无参数的 `ToString` 方法</span><span class="sxs-lookup"><span data-stu-id="9ef63-312">The parameterless `ToString` method of any numeric type</span></span>  
   
--   任何数值类型的 `ToString(String)` 方法，其中将格式字符串作为参数  
+-   <span data-ttu-id="9ef63-313">任何数值类型的 `ToString(String)` 方法，其中将格式字符串作为参数</span><span class="sxs-lookup"><span data-stu-id="9ef63-313">The `ToString(String)` method of any numeric type, which includes a format string as an argument</span></span>  
   
--   与数值一起使用的[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能  
+-   <span data-ttu-id="9ef63-314">[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)功能，如果它用于数字值</span><span class="sxs-lookup"><span data-stu-id="9ef63-314">The [composite formatting](../../../docs/standard/base-types/composite-formatting.md) feature, when it is used with numeric values</span></span>  
   
- 以下示例显示法国巴黎每月的平均气温。 在显示数据之前，它首先将当前区域性设置为法语\(法国\)，然后再设置为英语\(美国\)。 在每个用例中，月份名称和气温以适合当地区域性的格式显示。 请注意，两个区域性使用不同的小数分隔符以分隔气温值。 另请注意，该示例使用“MMMM”自定义日期和时间格式字符串以显示完整的月份名称，并且它通过确定 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=fullName> 数组中最长月份名称的长度为结果字符串中的月份名称分配了足够的空间。  
+ <span data-ttu-id="9ef63-315">以下示例显示法国巴黎每月的平均气温。</span><span class="sxs-lookup"><span data-stu-id="9ef63-315">The following example displays the average temperature per month in Paris, France.</span></span> <span data-ttu-id="9ef63-316">在显示数据之前，它首先将当前区域性设置为法语(法国)，然后再设置为英语(美国)。</span><span class="sxs-lookup"><span data-stu-id="9ef63-316">It first sets the current culture to French (France) before displaying the data, and then sets it to English (United States).</span></span> <span data-ttu-id="9ef63-317">在每个用例中，月份名称和气温以适合当地区域性的格式显示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-317">In each case, the month names and temperatures are displayed in the format that is appropriate for that culture.</span></span> <span data-ttu-id="9ef63-318">请注意，两个区域性使用不同的小数分隔符以分隔气温值。</span><span class="sxs-lookup"><span data-stu-id="9ef63-318">Note that the two cultures use different decimal separators in the temperature value.</span></span> <span data-ttu-id="9ef63-319">另请注意，该示例使用“MMMM”自定义日期和时间格式字符串以显示完整的月份名称，并且它通过确定 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 数组中最长月份名称的长度为结果字符串中的月份名称分配了足够的空间。</span><span class="sxs-lookup"><span data-stu-id="9ef63-319">Also note that the example uses the "MMMM" custom date and time format string to display the full month name, and that it allocates the appropriate amount of space for the month name in the result string by determining the length of the longest month name in the <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> array.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
  [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]  
   
 <a name="Numbers_Persist"></a>   
-### 保留数值  
- 切勿将数值数据保留为特定于区域性的格式。 这是常见的编程错误，会导致数据损坏或运行时异常。 以下示例随机生成了十个浮点数，然后使用英语\(美国\)区域性的格式约定将它们序列化为字符串。 在使用英语\(美国\)区域性的约定检索和分析该数据时，它会成功还原。 但是，当使用法语\(法国\)区域性的约定进行检索和分析时，无法分析任何数字，因为区域性使用了不同的小数分隔符。  
+### <a name="persisting-numeric-values"></a><span data-ttu-id="9ef63-320">保留数值</span><span class="sxs-lookup"><span data-stu-id="9ef63-320">Persisting Numeric Values</span></span>  
+ <span data-ttu-id="9ef63-321">切勿将数值数据保留为特定于区域性的格式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-321">You should never persist numeric data in a culture-specific format.</span></span> <span data-ttu-id="9ef63-322">这是常见的编程错误，会导致数据损坏或运行时异常。</span><span class="sxs-lookup"><span data-stu-id="9ef63-322">This is a common programming error that results in either corrupted data or a run-time exception.</span></span> <span data-ttu-id="9ef63-323">以下示例随机生成了十个浮点数，然后使用英语(美国)区域性的格式约定将它们序列化为字符串。</span><span class="sxs-lookup"><span data-stu-id="9ef63-323">The following example generates ten random floating-point numbers, and then serializes them as strings by using the formatting conventions of the English (United States) culture.</span></span> <span data-ttu-id="9ef63-324">在使用英语(美国)区域性的约定检索和分析该数据时，它会成功还原。</span><span class="sxs-lookup"><span data-stu-id="9ef63-324">When the data is retrieved and parsed by using the conventions of the English (United States) culture, it is successfully restored.</span></span> <span data-ttu-id="9ef63-325">但是，当使用法语(法国)区域性的约定进行检索和分析时，无法分析任何数字，因为区域性使用了不同的小数分隔符。</span><span class="sxs-lookup"><span data-stu-id="9ef63-325">However, when it is retrieved and parsed by using the conventions of the French (France) culture, none of the numbers can be parsed because the cultures use different decimal separators.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers2.cs#6)]
  [!code-vb[Conceptual.Globalization#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers2.vb#6)]  
   
- 若要避免此问题，可使用以下方法之一：  
+ <span data-ttu-id="9ef63-326">若要避免此问题，可使用以下方法之一：</span><span class="sxs-lookup"><span data-stu-id="9ef63-326">To avoid this problem, you can use one of these techniques:</span></span>  
   
--   不考虑用户的区域性，使用同一自定义格式字符串保存和分析数字的字符串表示形式。  
+-   <span data-ttu-id="9ef63-327">不考虑用户的区域性，使用同一自定义格式字符串保存和分析数字的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-327">Save and parse the string representation of the number by using a custom format string that is the same regardless of the user's culture.</span></span>  
   
--   使用固定区域性的格式约定将数字保存为字符串，此约定是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 属性返回的。  
+-   <span data-ttu-id="9ef63-328">使用固定区域性的格式约定将数字保存为字符串，此约定是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的。</span><span class="sxs-lookup"><span data-stu-id="9ef63-328">Save the number as a string by using the formatting conventions of the invariant culture, which is returned by the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property.</span></span>  
   
--   以二进制格式序列化数字，而不采用字符串格式。  
+-   <span data-ttu-id="9ef63-329">以二进制格式序列化数字，而不采用字符串格式。</span><span class="sxs-lookup"><span data-stu-id="9ef63-329">Serialize the number in binary instead of string format.</span></span>  
   
- 以下示例演示了第 3 种方法。 它对 <xref:System.Double> 值的数组进行序列化，然后使用英语\(美国\)和法语\(法国\)区域性的格式约定进行反序列化并显示。  
+ <span data-ttu-id="9ef63-330">以下示例演示了第 3 种方法。</span><span class="sxs-lookup"><span data-stu-id="9ef63-330">The following example illustrates the last approach.</span></span> <span data-ttu-id="9ef63-331">它对 <xref:System.Double> 值的数组进行序列化，然后使用英语(美国)和法语(法国)区域性的格式约定进行反序列化并显示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-331">It serializes the array of <xref:System.Double> values, and then deserializes and displays them by using the formatting conventions of the English (United States) and French (France) cultures.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
  [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]  
   
- 货币值的序列化是一种特殊情况。 由于货币值取决于表示它的货币单位，因此将它视为独立的数值没有什么意义。 但是如果将货币值保存为包含货币符号的格式化字符串，则无法在其默认区域性使用不同货币符号的系统上对其进行反序列化，如下例所示。  
+ <span data-ttu-id="9ef63-332">货币值的序列化是一种特殊情况。</span><span class="sxs-lookup"><span data-stu-id="9ef63-332">Serializing currency values is a special case.</span></span> <span data-ttu-id="9ef63-333">由于货币值取决于表示它的货币单位，因此将它视为独立的数值没有什么意义。</span><span class="sxs-lookup"><span data-stu-id="9ef63-333">Because a currency value depends on the unit of currency in which it is expressed; it makes little sense to treat it as an independent numeric value.</span></span> <span data-ttu-id="9ef63-334">但是如果将货币值保存为包含货币符号的格式化字符串，则无法在其默认区域性使用不同货币符号的系统上对其进行反序列化，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="9ef63-334">However, if you save a currency value as a formatted string that includes a currency symbol, it cannot be deserialized on a system whose default culture uses a different currency symbol, as the following example shows.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
  [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]  
   
- 相反，应将数值和一些区域性信息一起序列化，如区域性的名称，这样数值和其货币符号才可在当前区域性中独立地进行反序列化。 以下示例通过定义带有两个参数（<xref:System.Decimal> 值和值所属的区域性的名称）的 `CurrencyValue` 结构来实现这一点。  
+ <span data-ttu-id="9ef63-335">相反，应将数值和一些区域性信息一起序列化，如区域性的名称，这样数值和其货币符号才可在当前区域性中独立地进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="9ef63-335">Instead, you should serialize the numeric value along with some cultural information, such as the name of the culture, so that the value and its currency symbol can be deserialized independently of the current culture.</span></span> <span data-ttu-id="9ef63-336">以下示例通过定义带有两个参数（<xref:System.Decimal> 值和值所属的区域性的名称）的 `CurrencyValue` 结构来实现这一点。</span><span class="sxs-lookup"><span data-stu-id="9ef63-336">The following example does that by defining a `CurrencyValue` structure with two members: the <xref:System.Decimal> value and the name of the culture to which the value belongs.</span></span>  
   
  [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
  [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]  
   
 <a name="Cultures"></a>   
-## 使用特定于区域性的设置  
- 在 .NET Framework 中，<xref:System.Globalization.CultureInfo> 类表示特定的区域性或区域。 其中一些属性返回提供有关某些区域性方面的特定信息的对象：  
+## <a name="working-with-culture-specific-settings"></a><span data-ttu-id="9ef63-337">使用特定于区域性的设置</span><span class="sxs-lookup"><span data-stu-id="9ef63-337">Working with Culture-Specific Settings</span></span>  
+ <span data-ttu-id="9ef63-338">在 .NET Framework 中，<xref:System.Globalization.CultureInfo> 类表示特定的区域性或区域。</span><span class="sxs-lookup"><span data-stu-id="9ef63-338">In the .NET Framework, the <xref:System.Globalization.CultureInfo> class represents a particular culture or region.</span></span> <span data-ttu-id="9ef63-339">其中一些属性返回提供有关某些区域性方面的特定信息的对象：</span><span class="sxs-lookup"><span data-stu-id="9ef63-339">Some of its properties return objects that provide specific information about some aspect of a culture:</span></span>  
   
--   <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=fullName> 属性返回 <xref:System.Globalization.CompareInfo> 对象，该对象包含有关如何比较区域性和排列字符串的信息。  
+-   <span data-ttu-id="9ef63-340"><xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.CompareInfo> 对象，该对象包含有关如何比较区域性和排列字符串的信息。</span><span class="sxs-lookup"><span data-stu-id="9ef63-340">The <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> property returns a <xref:System.Globalization.CompareInfo> object that contains information about how the culture compares and orders strings.</span></span>  
   
--   <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=fullName> 属性返回 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象提供用于设置日期和时间数据格式的区域性特定信息。  
+-   <span data-ttu-id="9ef63-341"><xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象提供用于设置日期和时间数据格式的区域性特定信息。</span><span class="sxs-lookup"><span data-stu-id="9ef63-341">The <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property returns a <xref:System.Globalization.DateTimeFormatInfo> object that provides culture-specific information used in formatting date and time data.</span></span>  
   
--   <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=fullName> 属性返回 <xref:System.Globalization.NumberFormatInfo> 对象，该对象提供用于设置数值数据格式的区域性特定信息。  
+-   <span data-ttu-id="9ef63-342"><xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.NumberFormatInfo> 对象，该对象提供用于设置数值数据格式的区域性特定信息。</span><span class="sxs-lookup"><span data-stu-id="9ef63-342">The <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> property returns a <xref:System.Globalization.NumberFormatInfo> object that provides culture-specific information used in formatting numeric data.</span></span>  
   
--   <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=fullName> 属性返回 <xref:System.Globalization.TextInfo> 对象，该对象提供有关区域性写入系统的信息。  
+-   <span data-ttu-id="9ef63-343"><xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 属性返回 <xref:System.Globalization.TextInfo> 对象，该对象提供有关区域性写入系统的信息。</span><span class="sxs-lookup"><span data-stu-id="9ef63-343">The <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> property returns a <xref:System.Globalization.TextInfo> object that provides information about the culture's writing system.</span></span>  
   
- 一般情况下，不要对特定的 <xref:System.Globalization.CultureInfo> 属性及其相关对象的值作出任何假设。 相反，应将区域性特定的数据视为可更改的，原因如下：  
+ <span data-ttu-id="9ef63-344">一般情况下，不要对特定的 <xref:System.Globalization.CultureInfo> 属性及其相关对象的值作出任何假设。</span><span class="sxs-lookup"><span data-stu-id="9ef63-344">In general, do not make any assumptions about the values of specific <xref:System.Globalization.CultureInfo> properties and their related objects.</span></span> <span data-ttu-id="9ef63-345">相反，应将区域性特定的数据视为可更改的，原因如下：</span><span class="sxs-lookup"><span data-stu-id="9ef63-345">Instead, you should view culture-specific data as subject to change, for these reasons:</span></span>  
   
--   当数据损坏、有更好的数据可用或区域性特定的约定更改时，各个属性值是可更改且可修订。  
+-   <span data-ttu-id="9ef63-346">当数据损坏、有更好的数据可用或区域性特定的约定更改时，各个属性值是可更改且可修订。</span><span class="sxs-lookup"><span data-stu-id="9ef63-346">Individual property values are subject to change and revision over time, as data is corrected, better data becomes available, or culture-specific conventions change.</span></span>  
   
--   各个属性值在各个 .NET Framework 版本或操作系统版本中可能会有所不同。  
+-   <span data-ttu-id="9ef63-347">各个属性值在各个 .NET Framework 版本或操作系统版本中可能会有所不同。</span><span class="sxs-lookup"><span data-stu-id="9ef63-347">Individual property values may vary across versions of the .NET Framework or operating system versions.</span></span>  
   
--   .NET Framework 支持替换区域性。 由此可定义补充现有标准区域性或完全替换现有标准区域性的新的自定义区域性。  
+-   <span data-ttu-id="9ef63-348">.NET Framework 支持替换区域性。</span><span class="sxs-lookup"><span data-stu-id="9ef63-348">The .NET Framework supports replacement cultures.</span></span> <span data-ttu-id="9ef63-349">由此可定义补充现有标准区域性或完全替换现有标准区域性的新的自定义区域性。</span><span class="sxs-lookup"><span data-stu-id="9ef63-349">This makes it possible to define a new custom culture that either supplements existing standard cultures or completely replaces an existing standard culture.</span></span>  
   
--   用户可使用“控制面板”中的“区域和语言”来自定义区域性特定的设置。 在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> 构造函数来确定它是否反射这些用户自定义。 通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。  
+-   <span data-ttu-id="9ef63-350">用户可以使用自定义特定于区域性的设置**地区和语言**控制面板中的应用程序。</span><span class="sxs-lookup"><span data-stu-id="9ef63-350">The user can customize culture-specific settings by using the **Region and Language** app in Control Panel.</span></span> <span data-ttu-id="9ef63-351">在实例化 <xref:System.Globalization.CultureInfo> 对象时，可调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来确定它是否反射这些用户自定义。</span><span class="sxs-lookup"><span data-stu-id="9ef63-351">When you instantiate a <xref:System.Globalization.CultureInfo> object, you can determine whether it reflects these user customizations by calling the <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructor.</span></span> <span data-ttu-id="9ef63-352">通常，对最终用户应用而言，应考虑用户首选项，以用户期望的格式呈现数据。</span><span class="sxs-lookup"><span data-stu-id="9ef63-352">Typically, for end-user apps, you should respect user preferences so that the user is presented with data in a format that he or she expects.</span></span>  
   
-## 请参阅  
- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)   
- [针对使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a><span data-ttu-id="9ef63-353">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9ef63-353">See Also</span></span>  
+ [<span data-ttu-id="9ef63-354">全球化和本地化</span><span class="sxs-lookup"><span data-stu-id="9ef63-354">Globalization and Localization</span></span>](../../../docs/standard/globalization-localization/index.md)  
+ [<span data-ttu-id="9ef63-355">有关使用字符串的最佳做法</span><span class="sxs-lookup"><span data-stu-id="9ef63-355">Best Practices for Using Strings</span></span>](../../../docs/standard/base-types/best-practices-strings.md)

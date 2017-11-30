@@ -1,94 +1,97 @@
 ---
-title: "Application Domain Resource Monitoring | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "monitoring managed memory use by application domain"
-  - "application domains, memory use"
-  - "memory use, monitoring"
-  - "application domains, resource monitoring"
+title: "应用程序域资源监控"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring managed memory use by application domain
+- application domains, memory use
+- memory use, monitoring
+- application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 62a514f94857044af5020d36a1cfd6ce06741ac7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Application Domain Resource Monitoring
-应用程序域资源监控 \(ARM\) 使宿主可以监控应用程序域对 CPU 和内存的使用情况。  这对于在长期运行的进程中使用很多应用程序域的宿主（例如 ASP.NET）很有用。  宿主可以卸载对整个进程的性能有不利影响的应用程序的应用程序域，但前提是它可以标识有问题的应用程序。  ARM 提供可用于协助做出此类决定的信息。  
+# <a name="application-domain-resource-monitoring"></a><span data-ttu-id="ff526-102">应用程序域资源监控</span><span class="sxs-lookup"><span data-stu-id="ff526-102">Application Domain Resource Monitoring</span></span>
+<span data-ttu-id="ff526-103">应用程序域资源监视 (ARM) 使主机可以监视由应用程序域的 CPU 和内存使用情况。</span><span class="sxs-lookup"><span data-stu-id="ff526-103">Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="ff526-104">这很有用，例如，ASP.NET 使用在长时间运行的进程中的许多应用程序域的主机。</span><span class="sxs-lookup"><span data-stu-id="ff526-104">This is useful for hosts such as ASP.NET that use many application domains in a long-running process.</span></span> <span data-ttu-id="ff526-105">宿主可以卸载的应用程序有不利影响的整个过程，但仅的性能，如果它可以确定有问题的应用程序的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="ff526-105">The host can unload the application domain of an application that is adversely affecting the performance of the entire process, but only if it can identify the problematic application.</span></span> <span data-ttu-id="ff526-106">ARM 提供可用于协助进行此类决策的信息。</span><span class="sxs-lookup"><span data-stu-id="ff526-106">ARM provides information that can be used to assist in making such decisions.</span></span>  
   
- 例如，承载服务可能具有很多在 ASP.NET 服务器上运行的应用程序。  如果进程中的一个应用程序开始消耗太多的内存或太多的处理器时间，则承载服务可使用 ARM 标识引起问题的应用程序域。  
+ <span data-ttu-id="ff526-107">例如，托管服务可能有许多 ASP.NET 服务器上运行的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ff526-107">For example, a hosting service might have many applications running on an ASP.NET server.</span></span> <span data-ttu-id="ff526-108">如果在进程中的一个应用程序开始消耗太多内存或处理器时间太长，托管服务可以使用 ARM 来标识问题的原因的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="ff526-108">If one application in the process begins consuming too much memory or too much processor time, the hosting service can use ARM to identify the application domain that is causing the problem.</span></span>  
   
- ARM 是一个轻量服务，可以在实时应用程序中使用。  可以通过使用 Windows 事件跟踪 \(ETW\) 访问此信息，也可以通过托管 API 或本机 API 直接访问此信息。  
+ <span data-ttu-id="ff526-109">ARM 是一个轻量实时应用程序中使用。</span><span class="sxs-lookup"><span data-stu-id="ff526-109">ARM is sufficiently lightweight to use in live applications.</span></span> <span data-ttu-id="ff526-110">可以通过使用事件跟踪 Windows (ETW) 或直接通过托管或本机 Api 来访问信息。</span><span class="sxs-lookup"><span data-stu-id="ff526-110">You can access the information by using event tracing for Windows (ETW) or directly through managed or native APIs.</span></span>  
   
-## 启用资源监控  
- 可以通过以下四种方式启用 ARM：在启动公共语言运行时 \(CLR\) 时提供一个配置文件，使用非托管承载 API，使用托管代码或侦听 ARM ETW 事件。  
+## <a name="enabling-resource-monitoring"></a><span data-ttu-id="ff526-111">启用监视功能资源</span><span class="sxs-lookup"><span data-stu-id="ff526-111">Enabling Resource Monitoring</span></span>  
+ <span data-ttu-id="ff526-112">ARM 可以启用通过四种方法： 通过公共语言运行时 (CLR) 启动时，请提供配置文件，通过使用非托管承载 API，通过使用托管的代码中，或通过侦听 ARM ETW 事件。</span><span class="sxs-lookup"><span data-stu-id="ff526-112">ARM can be enabled in four ways: by supplying a configuration file when the common language runtime (CLR) is started, by using an unmanaged hosting API, by using managed code, or by listening to ARM ETW events.</span></span>  
   
- 一旦启用 ARM，它就会开始收集有关进程中的所有应用程序域的数据。  如果某个应用程序域是在启用 ARM 之前创建的，则累计数据将从启用 ARM 时（而不是创建该应用程序域时）开始。一旦启用 ARM，则无法将其禁用。  
+ <span data-ttu-id="ff526-113">一旦启用了 ARM，它将开始收集进程中的所有应用程序域上的数据。如果启用 ARM 之前，已创建应用程序域，累计数据启动时创建的应用程序域时不启用 ARM。一旦启用，则不能禁用 ARM。</span><span class="sxs-lookup"><span data-stu-id="ff526-113">As soon as ARM is enabled, it begins collecting data on all application domains in the process.If an application domain was created before ARM is enabled, cumulative data starts when ARM is enabled, not when the application domain was created.Once it is enabled, ARM cannot be disabled.</span></span>  
   
--   通过向配置文件中添加[\<appDomainResourceMonitoring\>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)元素并将`enabled` 特性设置为`true`，可在 CLR 启动时启用 ARM。  `false` 值（默认值）只意味着在启动时没有启用 ARM；稍后可以通过使用其他激活机制之一来激活它。  
+-   <span data-ttu-id="ff526-114">你也可以通过添加在 CLR 启动启用 ARM [ \<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)元素的配置文件和设置到`enabled`属性设为`true`。</span><span class="sxs-lookup"><span data-stu-id="ff526-114">You can enable ARM at CLR startup by adding the [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) element to the configuration file, and setting the `enabled` attribute to `true`.</span></span> <span data-ttu-id="ff526-115">值为`false`（默认值） 只表示在启动时不启用 ARM; 你可以将其激活更高版本使用其他激活机制之一。</span><span class="sxs-lookup"><span data-stu-id="ff526-115">A value of `false` (the default) means only that ARM is not enabled at startup; you can activate it later by using one of the other activation mechanisms.</span></span>  
   
--   通过请求 [ICLRAppDomainResourceMonitor](../../../ocs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 承载接口，宿主可启用 ARM。  一旦成功获取此接口，即会启用 ARM。  
+-   <span data-ttu-id="ff526-116">主机可以通过请求启用 ARM [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)承载接口。</span><span class="sxs-lookup"><span data-stu-id="ff526-116">The host can enable ARM by requesting the [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) hosting interface.</span></span> <span data-ttu-id="ff526-117">一旦成功获得此接口，会启用 ARM。</span><span class="sxs-lookup"><span data-stu-id="ff526-117">Once this interface is successfully obtained, ARM is enabled.</span></span>  
   
--   通过将静态（Visual Basic 中为 `Shared`）<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=fullName> 属性设置为 `true`，托管代码可以启用 ARM。  一旦设置该属性，即会启用 ARM。  
+-   <span data-ttu-id="ff526-118">托管的代码可以通过设置静态启用 ARM (`Shared`在 Visual Basic 中)<xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>属性`true`。</span><span class="sxs-lookup"><span data-stu-id="ff526-118">Managed code can enable ARM by setting the static (`Shared` in Visual Basic) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="ff526-119">一旦设置该属性，则会启用 ARM。</span><span class="sxs-lookup"><span data-stu-id="ff526-119">As soon as the property is set, ARM is enabled.</span></span>  
   
--   通过侦听 ETW 事件，可在启动后启用 ARM。  当通过使用 `AppDomainResourceManagementKeyword` 关键字来启用公共提供程序 `Microsoft-Windows-DotNETRuntime` 时，启用 ARM 并开始对所有应用程序域引发事件。  若要将数据与应用程序域和线程关联起来，还必须使用 `ThreadingKeyword` 关键字来启用 `Microsoft-Windows-DotNETRuntimeRundown` 提供程序。  
+-   <span data-ttu-id="ff526-120">在启动之后，你可以侦听 ETW 事件启用 ARM。</span><span class="sxs-lookup"><span data-stu-id="ff526-120">You can enable ARM after startup by listening to ETW events.</span></span> <span data-ttu-id="ff526-121">ARM 启用和开始时启用公共提供程序引发的所有应用程序域的事件`Microsoft-Windows-DotNETRuntime`使用`AppDomainResourceManagementKeyword`关键字。</span><span class="sxs-lookup"><span data-stu-id="ff526-121">ARM is enabled and begins raising events for all application domains when you enable the public provider `Microsoft-Windows-DotNETRuntime` by using the `AppDomainResourceManagementKeyword` keyword.</span></span> <span data-ttu-id="ff526-122">若要将数据与应用程序域和线程相关联，你必须启用`Microsoft-Windows-DotNETRuntimeRundown`具有提供程序`ThreadingKeyword`关键字。</span><span class="sxs-lookup"><span data-stu-id="ff526-122">To correlate data with application domains and threads, you must also enable the `Microsoft-Windows-DotNETRuntimeRundown` provider with the `ThreadingKeyword` keyword.</span></span>  
   
-## 使用 ARM  
- ARM 可提供由应用程序域使用的总处理器时间和有关内存使用的三类信息。  
+## <a name="using-arm"></a><span data-ttu-id="ff526-123">使用 ARM</span><span class="sxs-lookup"><span data-stu-id="ff526-123">Using ARM</span></span>  
+ <span data-ttu-id="ff526-124">ARM 提供一个应用程序域和三种类型的有关内存使用情况信息使用的总处理器时间。</span><span class="sxs-lookup"><span data-stu-id="ff526-124">ARM provides the total processor time that is used by an application domain and three kinds of information about memory use.</span></span>  
   
--   **应用程序域的总处理器时间（以秒为单位）**：这是通过将操作系统为所有线程报告的线程时间加起来计算得到的，这些线程在其生存期内均在应用程序域中执行了一定时间的操作。  被阻塞的线程或休眠线程不使用处理器时间。  当一个线程调入本机代码时，线程在本机代码中花费的时间将计入到执行调用的应用程序域的计数中。  
+-   <span data-ttu-id="ff526-125">**应用程序域中，以秒为单位的处理器时间总计**： 这通过将报告由操作系统在其生存期内应用程序域中执行时所用的所有线程的线程时间相加计算得出。</span><span class="sxs-lookup"><span data-stu-id="ff526-125">**Total processor time for an application domain, in seconds**: This is calculated by adding up the thread times reported by the operating system for all threads that spent time executing in the application domain during its lifetime.</span></span> <span data-ttu-id="ff526-126">阻止或处于睡眠状态的线程不使用处理器时间。</span><span class="sxs-lookup"><span data-stu-id="ff526-126">Blocked or sleeping threads do not use processor time.</span></span> <span data-ttu-id="ff526-127">当一个线程调用到本机代码时，线程在本机代码中所花的时间包含在其中调用应用程序域计数。</span><span class="sxs-lookup"><span data-stu-id="ff526-127">When a thread calls into native code, the time that the thread spends in native code is included in the count for the application domain where the call was made.</span></span>  
   
-    -   托管 API：<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=fullName> 属性。  
+    -   <span data-ttu-id="ff526-128">托管 API:<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="ff526-128">Managed API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> property.</span></span>  
   
-    -   承载 API：[ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../Topic/ICLRAppDomainResourceMonitor::GetCurrentCpuTime%20Method.md) 方法。  
+    -   <span data-ttu-id="ff526-129">托管 API: [iclrappdomainresourcemonitor:: Getcurrentcputime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ff526-129">Hosting API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) method.</span></span>  
   
-    -   ETW 事件：`ThreadCreated`、`ThreadAppDomainEnter` 和 `ThreadTerminated` 事件。  有关提供程序和关键字的信息，请参见 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)中的“AppDomain 资源监控事件”。  
+    -   <span data-ttu-id="ff526-130">ETW 事件： `ThreadCreated`， `ThreadAppDomainEnter`，和`ThreadTerminated`事件。</span><span class="sxs-lookup"><span data-stu-id="ff526-130">ETW events: `ThreadCreated`, `ThreadAppDomainEnter`, and `ThreadTerminated` events.</span></span> <span data-ttu-id="ff526-131">有关提供程序和关键字的信息，请参阅"应用程序域资源监视事件"中[CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="ff526-131">For information about providers and keywords, see "AppDomain Resource Monitoring Events" in [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md).</span></span>  
   
--   **在生存期中由应用程序域执行的总托管分配空间量（以字节为单位）**：总的分配空间量并不总是反映应用程序域的内存使用情况，这是因为分配的对象的生存期可能很短。  但是，如果应用程序分配并释放大量的对象，则分配的开销可能是有意义的。  
+-   <span data-ttu-id="ff526-132">**在其生存期内，以字节为单位由应用程序域进行的托管的分配的总**： 总分配并不总是反映内存使用情况应用程序域中，这是因为分配的对象可能生存期较短。</span><span class="sxs-lookup"><span data-stu-id="ff526-132">**Total managed allocations made by an application domain during its lifetime, in bytes**: Total allocations do not always reflect memory use by an application domain, because the allocated objects might be short-lived.</span></span> <span data-ttu-id="ff526-133">但是，如果应用程序分配和释放大量对象，则分配的开销可能是重要的。</span><span class="sxs-lookup"><span data-stu-id="ff526-133">However, if an application allocates and frees huge numbers of objects, the cost of the allocations could be significant.</span></span>  
   
-    -   托管 API：<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=fullName> 属性。  
+    -   <span data-ttu-id="ff526-134">托管 API:<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="ff526-134">Managed API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-    -   承载 API：[ICLRAppDomainResourceMonitor::GetCurrentAllocated](../Topic/ICLRAppDomainResourceMonitor::GetCurrentAllocated%20Method.md) 方法。  
+    -   <span data-ttu-id="ff526-135">托管 API: [iclrappdomainresourcemonitor:: Getcurrentallocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ff526-135">Hosting API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) method.</span></span>  
   
-    -   ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 字段。  
+    -   <span data-ttu-id="ff526-136">ETW 事件：`AppDomainMemAllocated`事件，`Allocated`字段。</span><span class="sxs-lookup"><span data-stu-id="ff526-136">ETW events: `AppDomainMemAllocated` event, `Allocated` field.</span></span>  
   
--   **由应用程序域引用的并且未由最近的完整的阻塞式回收释放的托管内存（以字节为单位）**：此数字只有在完整的阻塞式回收之后才是准确的。（这与在后台执行的不阻塞应用程序的并发回收正好相反。）例如，<xref:System.GC.Collect?displayProperty=fullName> 方法重载将导致完整的阻塞式回收。  
+-   <span data-ttu-id="ff526-137">**托管的内存，以字节为单位，所引用的应用程序域和最新的完整、 阻碍性回收后保留下来**： 此数字在是准确仅完整、 阻碍性回收。</span><span class="sxs-lookup"><span data-stu-id="ff526-137">**Managed memory, in bytes, that is referenced by an application domain and that survived the most recent full, blocking collection**: This number is accurate only after a full, blocking collection.</span></span> <span data-ttu-id="ff526-138">（这是与并发集合，在后台进行，不会阻止应用程序相反值。）例如，<xref:System.GC.Collect?displayProperty=nameWithType>方法重载将导致的完整、 阻碍性回收。</span><span class="sxs-lookup"><span data-stu-id="ff526-138">(This is in contrast to concurrent collections, which occur in the background and do not block the application.) For example, the <xref:System.GC.Collect?displayProperty=nameWithType> method overload causes a full, blocking collection.</span></span>  
   
-    -   托管 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=fullName> 属性。  
+    -   <span data-ttu-id="ff526-139">托管 API:<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="ff526-139">Managed API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-    -   承载 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../Topic/ICLRAppDomainResourceMonitor::GetCurrentSurvived%20Method.md) 方法，`pAppDomainBytesSurvived` 参数。  
+    -   <span data-ttu-id="ff526-140">托管 API: [iclrappdomainresourcemonitor:: Getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)方法，`pAppDomainBytesSurvived`参数。</span><span class="sxs-lookup"><span data-stu-id="ff526-140">Hosting API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) method, `pAppDomainBytesSurvived` parameter.</span></span>  
   
-    -   ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 字段。  
+    -   <span data-ttu-id="ff526-141">ETW 事件：`AppDomainMemSurvived`事件，`Survived`字段。</span><span class="sxs-lookup"><span data-stu-id="ff526-141">ETW events: `AppDomainMemSurvived` event, `Survived` field.</span></span>  
   
--   **由进程引用的并且未由最近的完整的阻塞式回收释放的总托管内存（以字节为单位）**：各个应用程序域的未释放的内存与此数字一致。  
+-   <span data-ttu-id="ff526-142">**托管的内存总量，以字节为单位，所引用的过程和最新的完整、 阻碍性回收后保留下来**： 单个应用程序域保留的内存可以与此数字进行比较。</span><span class="sxs-lookup"><span data-stu-id="ff526-142">**Total managed memory, in bytes, that is referenced by the process and that survived the most recent full, blocking collection**: The survived memory for individual application domains can be compared to this number.</span></span>  
   
-    -   托管 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=fullName> 属性。  
+    -   <span data-ttu-id="ff526-143">托管 API:<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>属性。</span><span class="sxs-lookup"><span data-stu-id="ff526-143">Managed API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-    -   承载 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../Topic/ICLRAppDomainResourceMonitor::GetCurrentSurvived%20Method.md) 方法、`pTotalBytesSurvived` 参数。  
+    -   <span data-ttu-id="ff526-144">托管 API: [iclrappdomainresourcemonitor:: Getcurrentsurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)方法，`pTotalBytesSurvived`参数。</span><span class="sxs-lookup"><span data-stu-id="ff526-144">Hosting API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) method, `pTotalBytesSurvived` parameter.</span></span>  
   
-    -   ETW 事件：`AppDomainMemSurvived` 事件、`ProcessSurvived` 字段。  
+    -   <span data-ttu-id="ff526-145">ETW 事件：`AppDomainMemSurvived`事件，`ProcessSurvived`字段。</span><span class="sxs-lookup"><span data-stu-id="ff526-145">ETW events: `AppDomainMemSurvived` event, `ProcessSurvived` field.</span></span>  
   
-### 确定完整的阻塞式回收发生的时间  
- 若要确定未释放的内存计数何时是准确的，需要知道何时执行了完整的阻塞式回收。  执行此操作的方法取决于用于检查 ARM 统计信息的 API。  
+### <a name="determining-when-a-full-blocking-collection-occurs"></a><span data-ttu-id="ff526-146">确定完整、 阻碍性回收发生</span><span class="sxs-lookup"><span data-stu-id="ff526-146">Determining When a Full, Blocking Collection Occurs</span></span>  
+ <span data-ttu-id="ff526-147">若要确定当保留的内存的计数为准确，你需要知道只发生在完整的阻塞集合。</span><span class="sxs-lookup"><span data-stu-id="ff526-147">To determine when counts of survived memory are accurate, you need to know when a full, blocking collection has just occurred.</span></span> <span data-ttu-id="ff526-148">执行此操作的方法取决于你用来检查 ARM 统计信息的 API。</span><span class="sxs-lookup"><span data-stu-id="ff526-148">The method for doing this depends on the API you use to examine ARM statistics.</span></span>  
   
-#### 托管 API  
- 如果使用 <xref:System.AppDomain> 类的属性，则可以使用 <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=fullName> 方法来注册完整回收的通知。  使用的阈值并不重要，因为您等待的是回收的完成而不是回收的方法。  然后可以调用 <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=fullName> 方法，该方法将进行阻塞，直至完成完整的回收。  可以创建一个线程，用于以循环方式调用方法并在方法返回时执行任何必需的分析。  
+#### <a name="managed-api"></a><span data-ttu-id="ff526-149">托管的 API</span><span class="sxs-lookup"><span data-stu-id="ff526-149">Managed API</span></span>  
+ <span data-ttu-id="ff526-150">如果你使用的属性<xref:System.AppDomain>类，可以使用<xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType>方法来注册通知的完整集合。</span><span class="sxs-lookup"><span data-stu-id="ff526-150">If you use the properties of the <xref:System.AppDomain> class, you can use the <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType> method to register for notification of full collections.</span></span> <span data-ttu-id="ff526-151">你使用的阈值并不重要，因为正在等待完成的集合，而不是集合的方法。</span><span class="sxs-lookup"><span data-stu-id="ff526-151">The threshold you use is not important, because you are waiting for the completion of a collection rather than the approach of a collection.</span></span> <span data-ttu-id="ff526-152">然后，你可以调用<xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType>方法，阻塞，直到已完成完整的集合。</span><span class="sxs-lookup"><span data-stu-id="ff526-152">You can then call the <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType> method, which blocks until a full collection has completed.</span></span> <span data-ttu-id="ff526-153">你可以创建在循环中调用的方法，并执行任何必需的分析，只要该方法返回的线程。</span><span class="sxs-lookup"><span data-stu-id="ff526-153">You can create a thread that calls the method in a loop and does any necessary analysis whenever the method returns.</span></span>  
   
- 或者，可以定期调用 <xref:System.GC.CollectionCount%2A?displayProperty=fullName> 方法以查看第 2 代回收的计数是否已增加。  根据轮询频率，此方法可能无法提供有关发生完整回收的准确指示。  
+ <span data-ttu-id="ff526-154">或者，可以调用<xref:System.GC.CollectionCount%2A?displayProperty=nameWithType>方法定期以查看已增加了第 2 代回收的计数。</span><span class="sxs-lookup"><span data-stu-id="ff526-154">Alternatively, you can call the <xref:System.GC.CollectionCount%2A?displayProperty=nameWithType> method periodically to see if the count of generation 2 collections has increased.</span></span> <span data-ttu-id="ff526-155">具体取决于轮询频率，此方法可能无法提供一样准确相对值的完整集合中的匹配项。</span><span class="sxs-lookup"><span data-stu-id="ff526-155">Depending on the polling frequency, this technique might not provide as accurate an indication of the occurrence of a full collection.</span></span>  
   
-#### 承载 API  
- 如果使用未托管的承载 API，则宿主必须为 CLR 传递 [IHostGCManager](../../../ocs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 接口的实现。  当 CLR 继续执行在回收发生时已挂起的线程时，它将调用 [IHostGCManager::SuspensionEnding](../Topic/IHostGCManager::SuspensionEnding%20Method.md) 方法。  CLR 将传递已完成的回收的代数作为该方法的参数，因此，宿主可以确定回收是完整的或还是部分的。  您的 [IHostGCManager::SuspensionEnding](../Topic/IHostGCManager::SuspensionEnding%20Method.md) 方法实现可查询未释放的内存，以确保在更新计数后立即对其进行检索。  
+#### <a name="hosting-api"></a><span data-ttu-id="ff526-156">托管 API</span><span class="sxs-lookup"><span data-stu-id="ff526-156">Hosting API</span></span>  
+ <span data-ttu-id="ff526-157">如果你使用非托管的托管 API，则你的主机必须传递 CLR 的实现[IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="ff526-157">If you use the unmanaged hosting API, your host must pass the CLR an implementation of the [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) interface.</span></span> <span data-ttu-id="ff526-158">CLR 调用[ihostgcmanager:: Suspensionending](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)方法时才会继续执行的回收发生时已挂起的线程。</span><span class="sxs-lookup"><span data-stu-id="ff526-158">The CLR calls the [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) method when it resumes execution of threads that have been suspended while a collection occurs.</span></span> <span data-ttu-id="ff526-159">使主机可以确定集合是否已完整或部分，CLR 将作为该方法的参数传递已完成的回收的代。</span><span class="sxs-lookup"><span data-stu-id="ff526-159">The CLR passes the generation of the completed collection as a parameter of the method, so the host can determine whether the collection was full or partial.</span></span> <span data-ttu-id="ff526-160">实现[ihostgcmanager:: Suspensionending](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)方法可以查询有关保留的内存，以确保在更新时，就会立即检索的计数。</span><span class="sxs-lookup"><span data-stu-id="ff526-160">Your implementation of the [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) method can query for survived memory, to ensure that the counts are retrieved as soon as they are updated.</span></span>  
   
-## 请参阅  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=fullName>   
- [ICLRAppDomainResourceMonitor 接口](../../../ocs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)   
- [\<appDomainResourceMonitoring\>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)   
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a><span data-ttu-id="ff526-161">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ff526-161">See Also</span></span>  
+ <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ff526-162">ICLRAppDomainResourceMonitor 接口</span><span class="sxs-lookup"><span data-stu-id="ff526-162">ICLRAppDomainResourceMonitor Interface</span></span>](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+ [<span data-ttu-id="ff526-163">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="ff526-163">\<appDomainResourceMonitoring></span></span>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+ [<span data-ttu-id="ff526-164">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ff526-164">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

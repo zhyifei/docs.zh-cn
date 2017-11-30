@@ -1,45 +1,47 @@
 ---
-title: "被动回收 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "垃圾回收，强制"
+title: "被动回收"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 92918e347b10dfcf3a0d6e2c08cec8c7a6963f5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 被动回收
-在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。  在某些不常发生的情况下，强制回收可以提高应用程序的性能。  在这些情况下，可使用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法强制垃圾回收，以引发垃圾回收。  
+# <a name="induced-collections"></a><span data-ttu-id="31fd0-102">被动回收</span><span class="sxs-lookup"><span data-stu-id="31fd0-102">Induced Collections</span></span>
+<span data-ttu-id="31fd0-103">在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。</span><span class="sxs-lookup"><span data-stu-id="31fd0-103">In most cases, the garbage collector can determine the best time to perform a collection, and you should let it run independently.</span></span> <span data-ttu-id="31fd0-104">在某些不常见的情况下，强制回收可以提高应用程序的性能。</span><span class="sxs-lookup"><span data-stu-id="31fd0-104">There are rare situations when a forced collection might improve your application's performance.</span></span> <span data-ttu-id="31fd0-105">在这些情况下，你可以通过使用引发垃圾回收<xref:System.GC.Collect%2A?displayProperty=nameWithType>方法来强制进行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-105">In these cases, you can induce garbage collection by using the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method to force a garbage collection.</span></span>  
   
- 当应用程序代码中某个特定的点上使用的内存量大量减少时，请使用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法。  例如，如果应用程序使用包含若干个控件的复杂对话框，则在对话框关闭时调用 <xref:System.GC.Collect%2A> 可能会通过立即回收该对话框使用的内存来提高性能。  务必确保应用程序不会过于频繁地引发垃圾回收，否则当垃圾回收器在非最佳时候尝试回收对象时，可能会使性能降低。  您可提供 <xref:System.GCCollectionMode?displayProperty=fullName> 枚举值到 <xref:System.GC.Collect%2A> 方法以仅当集合有效的情况下进行收集，如下一节所述。  
+ <span data-ttu-id="31fd0-106">使用<xref:System.GC.Collect%2A?displayProperty=nameWithType>方法是在应用程序代码中的特定点正在使用的内存量，大大减少时。</span><span class="sxs-lookup"><span data-stu-id="31fd0-106">Use the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method when there is a significant reduction in the amount of memory being used at a specific point in your application's code.</span></span> <span data-ttu-id="31fd0-107">例如，如果你的应用程序使用具有几个控件的复杂对话框框，则调用<xref:System.GC.Collect%2A>关闭该对话框时可以通过立即回收对话框中使用的内存来提高性能。</span><span class="sxs-lookup"><span data-stu-id="31fd0-107">For example, if your application uses a complex dialog box that has several controls, calling <xref:System.GC.Collect%2A> when the dialog box is closed could improve performance by immediately reclaiming the memory used by the dialog box.</span></span> <span data-ttu-id="31fd0-108">请确保应用程序不会过于频繁地引发垃圾回收，否则当垃圾回收器无效率地尝试回收对象时，可能会使性能降低。</span><span class="sxs-lookup"><span data-stu-id="31fd0-108">Be sure that your application is not inducing garbage collection too frequently, because that can decrease performance if the garbage collector is trying to reclaim objects at non-optimal times.</span></span> <span data-ttu-id="31fd0-109">你可以提供<xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType>枚举值到<xref:System.GC.Collect%2A>方法，以收集仅在下一节中所述，将工作效率，集合时。</span><span class="sxs-lookup"><span data-stu-id="31fd0-109">You can supply a <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> enumeration value to the <xref:System.GC.Collect%2A> method to collect only when collection would be productive, as discussed in the next section.</span></span>  
   
-## GC 回收模式  
- 您可以使用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法之一重载，它包括 <xref:System.GCCollectionMode> 值用来指定如下所述的强制回收行为。  
+## <a name="gc-collection-mode"></a><span data-ttu-id="31fd0-110">GC 回收模式</span><span class="sxs-lookup"><span data-stu-id="31fd0-110">GC collection mode</span></span>  
+ <span data-ttu-id="31fd0-111">你可以使用之一<xref:System.GC.Collect%2A?displayProperty=nameWithType>包括的方法重载<xref:System.GCCollectionMode>要指定强制回收的行为，如下所示的值。</span><span class="sxs-lookup"><span data-stu-id="31fd0-111">You can use one of the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method overloads that includes a <xref:System.GCCollectionMode> value to specify the behavior for a forced collection as follows.</span></span>  
   
-|`GCCollectionMode` 值|描述|  
-|--------------------------|--------|  
-|<xref:System.GCCollectionMode>|对 .NET Framework 运行的版本使用默认垃圾回收设置。|  
-|<xref:System.GCCollectionMode>|强制立即执行垃圾回收。  这与调用 <xref:System.GC.Collect?displayProperty=fullName> 重载等效。  它导致所有分代的全部阻塞集合。<br /><br /> 通过在强制即时全阻塞垃圾回收之前，将 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 属性设置为 <xref:System.Runtime.GCLargeObjectHeapCompactionMode?displayProperty=fullName> 压缩大对象堆。|  
-|<xref:System.GCCollectionMode>|使垃圾回收器可以确定当前时间是否是回收对象的最佳时间。<br /><br /> 垃圾回收器可能判定收集效率不够高，因此收集不合理，在这种情况下将返回而不回收对象。|  
+|<span data-ttu-id="31fd0-112">`GCCollectionMode` 值</span><span class="sxs-lookup"><span data-stu-id="31fd0-112">`GCCollectionMode` value</span></span>|<span data-ttu-id="31fd0-113">描述</span><span class="sxs-lookup"><span data-stu-id="31fd0-113">Description</span></span>|  
+|------------------------------|-----------------|  
+|<xref:System.GCCollectionMode.Default>|<span data-ttu-id="31fd0-114">正在运行版本的.NET 中使用默认垃圾集合设置。</span><span class="sxs-lookup"><span data-stu-id="31fd0-114">Uses the default garbage collection setting for the running version of .NET.</span></span>|  
+|<xref:System.GCCollectionMode.Forced>|<span data-ttu-id="31fd0-115">强制立即执行垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-115">Forces garbage collection to occur immediately.</span></span> <span data-ttu-id="31fd0-116">这是等效于调用<xref:System.GC.Collect?displayProperty=nameWithType>重载。</span><span class="sxs-lookup"><span data-stu-id="31fd0-116">This is equivalent to calling the <xref:System.GC.Collect?displayProperty=nameWithType> overload.</span></span> <span data-ttu-id="31fd0-117">它会导致对所有分代进行完全阻塞回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-117">It results in a full blocking collection of all generations.</span></span><br /><br /> <span data-ttu-id="31fd0-118">你还可以通过设置压缩大型对象堆<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>属性<xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType>之前强制立即的完全阻止垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-118">You can also compact the large object heap by setting the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> before forcing an immediate full blocking garbage collection.</span></span>|  
+|<xref:System.GCCollectionMode.Optimized>|<span data-ttu-id="31fd0-119">使垃圾回收器可以确定当前时间是否是回收对象的最佳时间。</span><span class="sxs-lookup"><span data-stu-id="31fd0-119">Enables the garbage collector to determine whether the current time is optimal to reclaim objects.</span></span><br /><br /> <span data-ttu-id="31fd0-120">垃圾回收器可能判定回收效率不够高，因此回收不合理，在这种情况下将返回而不回收对象。</span><span class="sxs-lookup"><span data-stu-id="31fd0-120">The garbage collector could determine that a collection would not be productive enough to be justified, in which case it will return without reclaiming objects.</span></span>|  
   
-## 背景或块集合  
- 可调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=fullName> 方法重载以指定是否阻止生成的集合。  执行的集合类型取决于该方法的 `mode` 和 `blocking` 参数的结合。  `mode` 是 <xref:System.GCCollectionMode> 枚举的成员，`blocking` 是 <xref:System.Boolean> 值。  下表总结了 `mode` 和 `blocking` 参数的交互。  
+## <a name="background-or-blocking-collections"></a><span data-ttu-id="31fd0-121">后台回收或阻塞回收</span><span class="sxs-lookup"><span data-stu-id="31fd0-121">Background or blocking collections</span></span>  
+ <span data-ttu-id="31fd0-122">你可以调用<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType>方法重载来指定或不是否阻止被动的集合。</span><span class="sxs-lookup"><span data-stu-id="31fd0-122">You can call the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> method overload to specify whether an induced collection is blocking or not.</span></span> <span data-ttu-id="31fd0-123">执行回收的类型取决于的方法的组合`mode`和`blocking`参数。</span><span class="sxs-lookup"><span data-stu-id="31fd0-123">The type of collection performed depends on a combination of the method's `mode` and `blocking` parameters.</span></span> <span data-ttu-id="31fd0-124">`mode`为属于<xref:System.GCCollectionMode>枚举，和`blocking`是<xref:System.Boolean>值。</span><span class="sxs-lookup"><span data-stu-id="31fd0-124">`mode` is a member of the <xref:System.GCCollectionMode> enumeration, and `blocking` is a <xref:System.Boolean> value.</span></span> <span data-ttu-id="31fd0-125">下表总结了`mode`和`blocking`自变量。</span><span class="sxs-lookup"><span data-stu-id="31fd0-125">The following table summarizes the interaction of the `mode` and `blocking` arguments.</span></span>  
   
-|`mode`|`blocking` \= `true`|`blocking` \= `false`|  
+|`mode`|`blocking` = `true`|`blocking` = `false`|  
 |------------|--------------------------|---------------------------|  
-|<xref:System.GCCollectionMode> 或 <xref:System.GCCollectionMode>|尽快执行阻塞集合。  如果后台回收正在进行并生成 0 或 1，<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法将立即触发阻止回收，并在则回收完成后返回。  如果后台回收正在进行，并且 `generation` 参数为 2，该方法将等待后台回收结束后触发阻止生成 2 次回收，并返回。|尽快执行集合。  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法请求后台回收，但并不确定；根据环境，阻塞式回收仍可执行。  如果后台回收正在进行，则此方法将立即返回。|  
-|<xref:System.GCCollectionMode>|可根据垃圾回收器和 `generation` 参数的状态执行阻塞集合。  垃圾回收器尝试提供最佳性能。|可根据垃圾回收器的状态执行集合。  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> 方法请求后台回收，但并不确定；根据环境，阻塞式回收仍可执行。  垃圾回收器尝试提供最佳性能。  如果后台回收正在进行，则此方法将立即返回。|  
+|<span data-ttu-id="31fd0-126"><xref:System.GCCollectionMode.Forced> 或 <xref:System.GCCollectionMode.Default></span><span class="sxs-lookup"><span data-stu-id="31fd0-126"><xref:System.GCCollectionMode.Forced> or <xref:System.GCCollectionMode.Default></span></span>|<span data-ttu-id="31fd0-127">尽快执行阻塞回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-127">A blocking collection is performed as soon as possible.</span></span> <span data-ttu-id="31fd0-128">如果正在进行后台回收，生成是 0 或 1，<xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法立即触发阻碍性回收，并在回收完成时返回。</span><span class="sxs-lookup"><span data-stu-id="31fd0-128">If a background collection is in progress and generation is 0 or 1, the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method immediately triggers a blocking collection and returns when the collection is finished.</span></span> <span data-ttu-id="31fd0-129">如果后台回收正在进行和`generation`参数为 2，方法等待后台回收完成，触发阻止第 2 代回收，然后返回。</span><span class="sxs-lookup"><span data-stu-id="31fd0-129">If a background collection is in progress and the `generation` parameter is 2, the method waits until the background collection is finished, triggers a blocking generation 2 collection, and then returns.</span></span>|<span data-ttu-id="31fd0-130">尽快执行回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-130">A collection is performed as soon as possible.</span></span> <span data-ttu-id="31fd0-131"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法请求一个后台回收，但这不能保证; 取决于具体情况，可能仍执行阻碍性回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-131">The <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method requests a background collection, but this is not guaranteed; depending on the circumstances, a blocking collection may still be performed.</span></span> <span data-ttu-id="31fd0-132">如果后台回收正在进行，该方法将立即返回。</span><span class="sxs-lookup"><span data-stu-id="31fd0-132">If a background collection is already in progress, the method returns immediately.</span></span>|  
+|<xref:System.GCCollectionMode.Optimized>|<span data-ttu-id="31fd0-133">可能执行阻碍性回收，具体取决于垃圾回收器的状态和`generation`参数。</span><span class="sxs-lookup"><span data-stu-id="31fd0-133">A blocking collection may be performed, depending on the state of the garbage collector and the `generation` parameter.</span></span> <span data-ttu-id="31fd0-134">垃圾回收器会尽量提供最佳性能。</span><span class="sxs-lookup"><span data-stu-id="31fd0-134">The garbage collector tries to provide optimal performance.</span></span>|<span data-ttu-id="31fd0-135">根据垃圾回收器的状态，有时可执行回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-135">A collection may be performed, depending on the state of the garbage collector.</span></span> <span data-ttu-id="31fd0-136"><xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29>方法请求一个后台回收，但这不能保证; 取决于具体情况，可能仍执行阻碍性回收。</span><span class="sxs-lookup"><span data-stu-id="31fd0-136">The <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> method requests a background collection, but this is not guaranteed; depending on the circumstances, a blocking collection may still be performed.</span></span> <span data-ttu-id="31fd0-137">垃圾回收器会尽量提供最佳性能。</span><span class="sxs-lookup"><span data-stu-id="31fd0-137">The garbage collector tries to provide optimal performance.</span></span> <span data-ttu-id="31fd0-138">如果后台回收正在进行，该方法将立即返回。</span><span class="sxs-lookup"><span data-stu-id="31fd0-138">If a background collection is already in progress, the method returns immediately.</span></span>|  
   
-## 请参阅  
- [Latency Modes](../../../docs/standard/garbage-collection/latency.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="31fd0-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="31fd0-139">See Also</span></span>  
+ [<span data-ttu-id="31fd0-140">延迟模式</span><span class="sxs-lookup"><span data-stu-id="31fd0-140">Latency Modes</span></span>](../../../docs/standard/garbage-collection/latency.md)  
+ [<span data-ttu-id="31fd0-141">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="31fd0-141">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

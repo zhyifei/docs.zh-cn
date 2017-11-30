@@ -1,71 +1,77 @@
 ---
-title: "How to: Write a Simple Parallel.For Loop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Parallel.For, How to Write"
-  - "for loop, parallel construction in .NET"
-  - "parallel for loops, how to use"
+title: "如何：编写简单的 Parallel.For 循环"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Parallel.For, How to Write
+- for loop, parallel construction in .NET
+- parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write a Simple Parallel.For Loop
-本主题包含两个示例，这两个示例阐释了 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 方法。  第一个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=fullName> 方法重载，而第二个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=fullName> 重载，它们是 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 方法最简单的两个重载。  如果不需要取消循环、中断循环迭代或保持任何线程本地状态，则可以使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 方法的这两个重载。  
+# <a name="how-to-write-a-simple-parallelfor-loop"></a><span data-ttu-id="7e935-102">如何：编写简单的 Parallel.For 循环</span><span class="sxs-lookup"><span data-stu-id="7e935-102">How to: Write a Simple Parallel.For Loop</span></span>
+<span data-ttu-id="7e935-103">本主题包含两个示例，这两个示例阐释了 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="7e935-103">This topic contains two examples that illustrate the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="7e935-104">第一个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> 方法重载，而第二个示例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> 重载，它们是 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法最简单的两个重载。</span><span class="sxs-lookup"><span data-stu-id="7e935-104">The first uses the <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> method overload, and the second uses the <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> overload, the two simplest overloads of the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="7e935-105">如果不需要取消循环、中断循环迭代或保持任何线程本地状态，则可以使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法的这两个重载。</span><span class="sxs-lookup"><span data-stu-id="7e935-105">You can use these two overloads of the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method when you do not need to cancel the loop, break out of the loop iterations, or maintain any thread-local state.</span></span>  
   
 > [!NOTE]
->  本文档使用 lambda 表达式在 TPL 中定义委托。  如果不熟悉 C\# 或 Visual Basic 中的 lambda 表达式，请参阅 [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+>  <span data-ttu-id="7e935-106">本文档使用 lambda 表达式在 TPL 中定义委托。</span><span class="sxs-lookup"><span data-stu-id="7e935-106">This documentation uses lambda expressions to define delegates in TPL.</span></span> <span data-ttu-id="7e935-107">如果不熟悉 C# 或 Visual Basic 中的 lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="7e935-107">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
- 第一个示例计算单个目录中文件的大小。  第二个示例计算两个矩阵的乘积。  
+ <span data-ttu-id="7e935-108">第一个示例计算单个目录中文件的大小。</span><span class="sxs-lookup"><span data-stu-id="7e935-108">The first example calculates the size of files in a single directory.</span></span> <span data-ttu-id="7e935-109">第二个示例计算两个矩阵的乘积。</span><span class="sxs-lookup"><span data-stu-id="7e935-109">The second computes the product of two matrices.</span></span>  
   
-## 示例  
- 本示例是一个简单的命令行实用工具，用于计算一个目录中的文件总大小。  它需要将单个目录路径作为参数，并报告该目录中文件的数量和总大小。  在验证目录存在后，它会使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 方法来枚举目录中的文件并确定其文件大小。  然后，将每个文件大小添加到 `totalSize` 变量。  请注意，此加法操作是通过调用 <xref:System.Threading.Interlocked.Add%2A?displayProperty=fullName> 来执行的，因此它是作为原子操作来执行的。  否则，多个任务可能会同时尝试更新 `totalSize` 变量。  
+## <a name="example"></a><span data-ttu-id="7e935-110">示例</span><span class="sxs-lookup"><span data-stu-id="7e935-110">Example</span></span>  
+ <span data-ttu-id="7e935-111">本示例是一个简单的命令行实用工具，用于计算一个目录中的文件总大小。</span><span class="sxs-lookup"><span data-stu-id="7e935-111">This example is a simple command-line utility that calculates the total size of files in a directory.</span></span> <span data-ttu-id="7e935-112">它需要将单个目录路径作为参数，并报告该目录中文件的数量和总大小。</span><span class="sxs-lookup"><span data-stu-id="7e935-112">It expects a single directory path as an argument, and reports the number and total size of the files in that directory.</span></span> <span data-ttu-id="7e935-113">在验证目录存在后，它会使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法来枚举目录中的文件并确定其文件大小。</span><span class="sxs-lookup"><span data-stu-id="7e935-113">After verifying that the directory exists, it uses the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method to enumerate the files in the directory and determine their file sizes.</span></span> <span data-ttu-id="7e935-114">然后，将每个文件大小添加到 `totalSize` 变量。</span><span class="sxs-lookup"><span data-stu-id="7e935-114">Each file size is then added to the `totalSize` variable.</span></span> <span data-ttu-id="7e935-115">请注意，此加法操作是通过调用 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 来执行的，因此它是作为原子操作来执行的。</span><span class="sxs-lookup"><span data-stu-id="7e935-115">Note that the addition is performed by calling the <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> so that the addition is performed as an atomic operation.</span></span> <span data-ttu-id="7e935-116">否则，多个任务可能会同时尝试更新 `totalSize` 变量。</span><span class="sxs-lookup"><span data-stu-id="7e935-116">Otherwise, multiple tasks could try to update the `totalSize` variable simultaneously.</span></span>  
   
  [!code-csharp[Conceptual.Parallel.For#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.parallel.for/cs/for1.cs#1)]
  [!code-vb[Conceptual.Parallel.For#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.parallel.for/vb/for1.vb#1)]  
   
-## 示例  
- 本示例使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=fullName> 方法来计算两个矩阵的乘积。  它还演示如何使用 <xref:System.Diagnostics.Stopwatch?displayProperty=fullName> 类来比较并行循环和非并行循环的性能。  请注意，由于本示例可能会生成大量输出，因此它允许将输出重定向到一个文件。  
+## <a name="example"></a><span data-ttu-id="7e935-117">示例</span><span class="sxs-lookup"><span data-stu-id="7e935-117">Example</span></span>  
+ <span data-ttu-id="7e935-118">本示例使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法来计算两个矩阵的乘积。</span><span class="sxs-lookup"><span data-stu-id="7e935-118">This example uses the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method to compute the product of two matrices.</span></span> <span data-ttu-id="7e935-119">它还演示如何使用 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 类来比较并行循环和非并行循环的性能。</span><span class="sxs-lookup"><span data-stu-id="7e935-119">It also shows how to use the <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> class to compare the performance of a parallel loop with a non-parallel loop.</span></span> <span data-ttu-id="7e935-120">请注意，由于本示例可能会生成大量输出，因此它允许将输出重定向到一个文件。</span><span class="sxs-lookup"><span data-stu-id="7e935-120">Note that, because it can generate a large volume of output, the example allows output to be redirected to a file.</span></span>  
   
  [!code-csharp[TPL_Parallel#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleparallelfor.cs#01)]
  [!code-vb[TPL_Parallel#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleparallelfor.vb#01)]  
   
- 在对任何代码（包括循环）进行并行化时，一个重要的目标是利用尽可能多的处理器，而不会过度并行化到并行处理的开销使任何性能优势消耗殆尽的程度。  在本特定示例中，只会对外部循环进行并行化，原因是不会在内部循环中执行太多工作。  少量工作和不良缓存影响的组合可能会导致嵌套并行循环的性能降低。  因此，仅并行化外部循环是在大多数系统上最大程度地发挥并发优势的最佳方式。  
+ <span data-ttu-id="7e935-121">在对任何代码（包括循环）进行并行化时，一个重要的目标是利用尽可能多的处理器，而不会过度并行化到并行处理的开销使任何性能优势消耗殆尽的程度。</span><span class="sxs-lookup"><span data-stu-id="7e935-121">When parallelizing any code, including loops, one important goal is to utilize the processors as much as possible without over parallelizing to the point where the overhead for parallel processing negates any performance benefits.</span></span> <span data-ttu-id="7e935-122">在本特定示例中，只会对外部循环进行并行化，原因是不会在内部循环中执行太多工作。</span><span class="sxs-lookup"><span data-stu-id="7e935-122">In this particular example, only the outer loop is parallelized because there is not very much work performed in the inner loop.</span></span> <span data-ttu-id="7e935-123">少量工作和不良缓存影响的组合可能会导致嵌套并行循环的性能降低。</span><span class="sxs-lookup"><span data-stu-id="7e935-123">The combination of a small amount of work and undesirable cache effects can result in performance degradation in nested parallel loops.</span></span> <span data-ttu-id="7e935-124">因此，仅并行化外部循环是在大多数系统上最大程度地发挥并发优势的最佳方式。</span><span class="sxs-lookup"><span data-stu-id="7e935-124">Therefore, parallelizing the outer loop only is the best way to maximize the benefits of concurrency on most systems.</span></span>  
   
-## 委托  
- <xref:System.Threading.Tasks.Parallel.For%2A> 的此重载的第三个参数是类型为 `Action<int>`（C\# 中）或 `Action(Of Integer)`（Visual Basic 中）的委托。  不管 `Action` 委托具有零个、一个或十六个类型参数，它都始终返回 void。  在 Visual Basic 中，`Action` 的行为是用 `Sub` 定义的。  示例使用 lambda 表达式来创建委托，但也可以用其他方式创建委托。  有关详细信息，请参阅[Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+## <a name="the-delegate"></a><span data-ttu-id="7e935-125">委托</span><span class="sxs-lookup"><span data-stu-id="7e935-125">The Delegate</span></span>  
+ <span data-ttu-id="7e935-126"><xref:System.Threading.Tasks.Parallel.For%2A> 的此重载的第三个参数是类型为 `Action<int>`（C# 中）或 `Action(Of Integer)`（Visual Basic 中）的委托。</span><span class="sxs-lookup"><span data-stu-id="7e935-126">The third parameter of this overload of <xref:System.Threading.Tasks.Parallel.For%2A> is a delegate of type `Action<int>` in C# or `Action(Of Integer)` in Visual Basic.</span></span> <span data-ttu-id="7e935-127">不管 `Action` 委托具有零个、一个或十六个类型参数，它都始终返回 void。</span><span class="sxs-lookup"><span data-stu-id="7e935-127">An `Action` delegate, whether it has zero, one or sixteen type parameters, always returns void.</span></span> <span data-ttu-id="7e935-128">在 Visual Basic 中，`Action` 的行为是用 `Sub` 定义的。</span><span class="sxs-lookup"><span data-stu-id="7e935-128">In Visual Basic, the behavior of an `Action` is defined with a `Sub`.</span></span> <span data-ttu-id="7e935-129">示例使用 lambda 表达式来创建委托，但也可以用其他方式创建委托。</span><span class="sxs-lookup"><span data-stu-id="7e935-129">The example uses a lambda expression to create the delegate, but you can create the delegate in other ways as well.</span></span> <span data-ttu-id="7e935-130">有关详细信息，请参阅[PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="7e935-130">For more information, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
-## 迭代值  
- 委托采用其值为当前迭代的单一输入参数。  此迭代值由运行时提供，并且其起始值为正在当前线程上处理的源的片段（分区）上第一个元素的索引。  
+## <a name="the-iteration-value"></a><span data-ttu-id="7e935-131">迭代值</span><span class="sxs-lookup"><span data-stu-id="7e935-131">The Iteration Value</span></span>  
+ <span data-ttu-id="7e935-132">委托采用其值为当前迭代的单一输入参数。</span><span class="sxs-lookup"><span data-stu-id="7e935-132">The delegate takes a single input parameter whose value is the current iteration.</span></span> <span data-ttu-id="7e935-133">此迭代值由运行时提供，并且其起始值为正在当前线程上处理的源的片段（分区）上第一个元素的索引。</span><span class="sxs-lookup"><span data-stu-id="7e935-133">This iteration value is supplied by the runtime and its starting value is the index of the first element on the segment (partition) of the source that is being processed on the current thread.</span></span>  
   
- 如果需要更好地控制并发级别，请使用采用 <xref:System.Threading.Tasks.ParallelOptions?displayProperty=fullName> 输入参数的重载之一，例如：<xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=fullName>。  
+ <span data-ttu-id="7e935-134">如果需要更好地控制并发级别，请使用采用 <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> 输入参数的重载之一，例如：<xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="7e935-134">If you require more control over the concurrency level, use one of the overloads that takes a <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> input parameter, such as: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>.</span></span>  
   
-## 返回值和异常处理  
- 当所有线程均已完成时，<xref:System.Threading.Tasks.Parallel.For%2A> 会返回一个 <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=fullName> 对象。  当手动停止或中断循环迭代时，此返回值特别有用，因为 <xref:System.Threading.Tasks.ParallelLoopResult> 存储诸如完成运行的最后一个迭代等信息。  如果某个线程上出现一个或多个异常，则将会引发 <xref:System.AggregateException?displayProperty=fullName>。  
+## <a name="return-value-and-exception-handling"></a><span data-ttu-id="7e935-135">返回值和异常处理</span><span class="sxs-lookup"><span data-stu-id="7e935-135">Return Value and Exception Handling</span></span>  
+ <span data-ttu-id="7e935-136">当所有线程均已完成时，<xref:System.Threading.Tasks.Parallel.For%2A> 会返回一个 <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> 对象。</span><span class="sxs-lookup"><span data-stu-id="7e935-136"><xref:System.Threading.Tasks.Parallel.For%2A> returns a <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> object when all threads have completed.</span></span> <span data-ttu-id="7e935-137">当手动停止或中断循环迭代时，此返回值特别有用，因为 <xref:System.Threading.Tasks.ParallelLoopResult> 存储诸如完成运行的最后一个迭代等信息。</span><span class="sxs-lookup"><span data-stu-id="7e935-137">This return value is useful when you are stopping or breaking loop iteration manually, because the <xref:System.Threading.Tasks.ParallelLoopResult> stores information such as the last iteration that ran to completion.</span></span> <span data-ttu-id="7e935-138">如果某个线程上出现一个或多个异常，则将会引发 <xref:System.AggregateException?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="7e935-138">If one or more exceptions occur on one of the threads, a <xref:System.AggregateException?displayProperty=nameWithType> will be thrown.</span></span>  
   
- 在本示例的代码中，未使用 <xref:System.Threading.Tasks.Parallel.For%2A> 的返回值。  
+ <span data-ttu-id="7e935-139">在本示例的代码中，未使用 <xref:System.Threading.Tasks.Parallel.For%2A> 的返回值。</span><span class="sxs-lookup"><span data-stu-id="7e935-139">In the code in this example, the return value of <xref:System.Threading.Tasks.Parallel.For%2A> is not used.</span></span>  
   
-## 分析和性能  
- 可以使用性能向导来查看计算机上的 CPU 使用情况。  进行试验，增加矩阵中的列数和行数。  矩阵越大，并行计算和顺序计算之间的性能差异就越大。  当矩阵很小时，由于设置并行循环时会产生开销，因此顺序计算将运行更快。  
+## <a name="analysis-and-performance"></a><span data-ttu-id="7e935-140">分析和性能</span><span class="sxs-lookup"><span data-stu-id="7e935-140">Analysis and Performance</span></span>  
+ <span data-ttu-id="7e935-141">可以使用性能向导来查看计算机上的 CPU 使用情况。</span><span class="sxs-lookup"><span data-stu-id="7e935-141">You can use the Performance Wizard to view CPU usage on your computer.</span></span> <span data-ttu-id="7e935-142">进行试验，增加矩阵中的列数和行数。</span><span class="sxs-lookup"><span data-stu-id="7e935-142">As an experiment, increase the number of columns and rows in the matrices.</span></span> <span data-ttu-id="7e935-143">矩阵越大，并行计算和顺序计算之间的性能差异就越大。</span><span class="sxs-lookup"><span data-stu-id="7e935-143">The larger the matrices, the greater the performance difference between the parallel and sequential versions of the computation.</span></span> <span data-ttu-id="7e935-144">当矩阵很小时，由于设置并行循环时会产生开销，因此顺序计算将运行更快。</span><span class="sxs-lookup"><span data-stu-id="7e935-144">When the matrix is small, the sequential version will run faster because of the overhead in setting up the parallel loop.</span></span>  
   
- 同步调用共享资源（如控制台或文件系统）将大幅降低并行循环的性能。  在衡量性能时，请尝试避免在循环内进行诸如 <xref:System.Console.WriteLine%2A?displayProperty=fullName> 等调用。  
+ <span data-ttu-id="7e935-145">同步调用共享资源（如控制台或文件系统）将大幅降低并行循环的性能。</span><span class="sxs-lookup"><span data-stu-id="7e935-145">Synchronous calls to shared resources, like the Console or the File System, will significantly degrade the performance of a parallel loop.</span></span> <span data-ttu-id="7e935-146">在衡量性能时，请尝试避免在循环内进行诸如 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 等调用。</span><span class="sxs-lookup"><span data-stu-id="7e935-146">When measuring performance, try to avoid calls such as <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> within the loop.</span></span>  
   
-## 编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="7e935-147">编译代码</span><span class="sxs-lookup"><span data-stu-id="7e935-147">Compiling the Code</span></span>  
   
--   将此代码剪切并粘贴到 Visual Studio 2010 项目中。  
+-   <span data-ttu-id="7e935-148">复制并将此代码粘贴到 Visual Studio 2010 项目。</span><span class="sxs-lookup"><span data-stu-id="7e935-148">Copy and paste this code into a Visual Studio 2010 project.</span></span>  
   
-## 请参阅  
- <xref:System.Threading.Tasks.Parallel.For%2A>   
- <xref:System.Threading.Tasks.Parallel.ForEach%2A>   
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e935-149">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7e935-149">See Also</span></span>  
+ <xref:System.Threading.Tasks.Parallel.For%2A>  
+ <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+ [<span data-ttu-id="7e935-150">数据并行</span><span class="sxs-lookup"><span data-stu-id="7e935-150">Data Parallelism</span></span>](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+ [<span data-ttu-id="7e935-151">并行编程</span><span class="sxs-lookup"><span data-stu-id="7e935-151">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

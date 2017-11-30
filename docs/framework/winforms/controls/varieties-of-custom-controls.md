@@ -1,123 +1,124 @@
 ---
-title: "各种自定义控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "复合控件"
-  - "控件 [Windows 窗体], 复合"
-  - "控件 [Windows 窗体], 扩展的"
-  - "控件 [Windows 窗体], 类型"
-  - "控件 [Windows 窗体], 用户控件"
-  - "自定义控件 [Windows 窗体]"
-  - "扩展控件"
-  - "用户控件 [Windows 窗体]"
+title: "各种自定义控件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], user controls
+- controls [Windows Forms], types of
+- composite controls [Windows Forms]
+- extended controls [Windows Forms]
+- controls [Windows Forms], extended
+- user controls [Windows Forms]
+- custom controls [Windows Forms]
+- controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 各种自定义控件
-使用 .NET Framework 可以开发和实现新的控件。  可以通过继承来扩展熟悉的用户控件和现有控件的功能。  还可以编写自定义控件，这些控件执行自己的绘制功能。  
+# <a name="varieties-of-custom-controls"></a><span data-ttu-id="ef1a9-102">各种自定义控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-102">Varieties of Custom Controls</span></span>
+<span data-ttu-id="ef1a9-103">使用 .NET Framework 可以开发和实现新的控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-103">With the .NET Framework, you can develop and implement new controls.</span></span> <span data-ttu-id="ef1a9-104">可以通过继承来扩展熟悉的用户控件和现有控件的功能。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-104">You can extend the functionality of the familiar user control as well as existing controls through inheritance.</span></span> <span data-ttu-id="ef1a9-105">还可以编写自定义控件，这些控件执行自己的绘制。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-105">You can also write custom controls that perform their own painting.</span></span>  
   
- 确定创建何种类型的控件可能会费一番功夫。  本主题重点介绍各种可继承控件之间的差异，并提供有关如何为项目选择某种特定控件的信息。  
+ <span data-ttu-id="ef1a9-106">确定创建何种类型的控件可能令人困惑。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-106">Deciding which kind of control to create can be confusing.</span></span> <span data-ttu-id="ef1a9-107">本主题重点介绍各种可继承控件之间的差异，并提供有关如何为项目选择某种特定控件的信息。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-107">This topic highlights the differences among the various kinds of controls from which you can inherit, and provides you with information about how to choose a particular kind of control for your project.</span></span>  
   
 > [!NOTE]
->  有关创作用于 Web 窗体的控件的信息，请参见 [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md)。  
+>  <span data-ttu-id="ef1a9-108">有关如何创作用于 Web 窗体的控件的信息，请参阅[开发自定义 ASP.NET 服务器控件](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-108">For information about authoring a control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
   
-## 基控件类  
- <xref:System.Windows.Forms.Control> 类是 Windows 窗体控件的基类。  它提供了在 Windows 窗体应用程序中进行可视显示所需的基础结构。  
+## <a name="base-control-class"></a><span data-ttu-id="ef1a9-109">基控件类</span><span class="sxs-lookup"><span data-stu-id="ef1a9-109">Base Control Class</span></span>  
+ <span data-ttu-id="ef1a9-110"><xref:System.Windows.Forms.Control>类是 Windows 窗体控件的基类。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-110">The <xref:System.Windows.Forms.Control> class is the base class for Windows Forms controls.</span></span> <span data-ttu-id="ef1a9-111">它提供了在 Windows 窗体应用程序中进行可视显示所需的基础结构。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-111">It provides the infrastructure required for visual display in Windows Forms applications.</span></span>  
   
- <xref:System.Windows.Forms.Control> 类执行下列任务，以便在 Windows 窗体应用程序中提供可视显示：  
+ <span data-ttu-id="ef1a9-112"><xref:System.Windows.Forms.Control>类执行以下任务以提供 Windows 窗体应用程序中的可视显示：</span><span class="sxs-lookup"><span data-stu-id="ef1a9-112">The <xref:System.Windows.Forms.Control> class performs the following tasks to provide visual display in Windows Forms applications:</span></span>  
   
--   公开窗口句柄。  
+-   <span data-ttu-id="ef1a9-113">公开窗口句柄。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-113">Exposes a window handle.</span></span>  
   
--   管理消息路由。  
+-   <span data-ttu-id="ef1a9-114">管理消息路由。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-114">Manages message routing.</span></span>  
   
--   提供鼠标和键盘事件，以及许多其他用户界面事件。  
+-   <span data-ttu-id="ef1a9-115">提供鼠标和键盘事件，以及许多其他用户界面事件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-115">Provides mouse and keyboard events, and many other user interface events.</span></span>  
   
--   提供高级布局功能。  
+-   <span data-ttu-id="ef1a9-116">提供高级布局功能。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-116">Provides advanced layout features.</span></span>  
   
--   包含特定于可视显示的许多属性，如 <xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Height%2A> 和 <xref:System.Windows.Forms.Control.Width%2A>。  
+-   <span data-ttu-id="ef1a9-117">包含特定于可视显示许多属性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-117">Contains many properties specific to visual display, such as <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, and <xref:System.Windows.Forms.Control.Width%2A>.</span></span>  
   
--   为 Windows 窗体控件充当 Microsoft® ActiveX® 控件提供必需的安全和线程支持。  
+-   <span data-ttu-id="ef1a9-118">为 Windows 窗体控件充当 Microsoft® ActiveX® 控件提供必需的安全性和线程支持。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-118">Provides the security and threading support necessary for a Windows Forms control to act as a Microsoft® ActiveX® control.</span></span>  
   
- 由于基类提供了很多基础结构，使得开发自己的 Windows 窗体控件变得相对简单。  
+ <span data-ttu-id="ef1a9-119">由于基类提供了大量基础结构，因此使开发自己的 Windows 窗体控件变得相对简单。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-119">Because so much of the infrastructure is provided by the base class, it is relatively easy to develop your own Windows Forms controls.</span></span>  
   
-## 控件的种类  
- Windows 窗体支持三种用户定义的控件：复合、扩展和自定义。  以下各节分别描述各种控件，并就如何选择项目中使用的控件种类提供建议。  
+## <a name="kinds-of-controls"></a><span data-ttu-id="ef1a9-120">控件种类</span><span class="sxs-lookup"><span data-stu-id="ef1a9-120">Kinds of Controls</span></span>  
+ <span data-ttu-id="ef1a9-121">Windows 窗体支持三种用户定义的控件：复合、扩展和自定义。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-121">Windows Forms supports three kinds of user-defined controls: *composite*, *extended*, and *custom*.</span></span> <span data-ttu-id="ef1a9-122">以下各节分别介绍各种控件，并就如何选择项目中使用的控件种类提供建议。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-122">The following sections describe each kind of control and give recommendations for choosing the kind to use in your projects.</span></span>  
   
-### 复合控件  
- 复合控件是封装在公共容器内的 Windows 窗体控件的集合。  这种控件有时称为“用户控件”。  包含的控件称为“构成控件”。  
+### <a name="composite-controls"></a><span data-ttu-id="ef1a9-123">复合控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-123">Composite Controls</span></span>  
+ <span data-ttu-id="ef1a9-124">复合控件是封装在公共容器内的 Windows 窗体控件的集合。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-124">A composite control is a collection of Windows Forms controls encapsulated in a common container.</span></span> <span data-ttu-id="ef1a9-125">这种控件有时称为用户控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-125">This kind of control is sometimes called a *user control*.</span></span> <span data-ttu-id="ef1a9-126">其包含的控件称为构成控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-126">The contained controls are called *constituent controls*.</span></span>  
   
- 复合控件包含与每个包含的 Windows 窗体控件相关联的所有固有功能，允许您有选择地公开和绑定它们的属性。  复合控件还提供了大量的默认键盘处理功能，您不需要任何额外的开发。  
+ <span data-ttu-id="ef1a9-127">复合控件包含与每个包含的 Windows 窗体控件相关联的所有固有功能，允许选择性地公开和绑定它们的属性。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-127">A composite control holds all of the inherent functionality associated with each of the contained Windows Forms controls and enables you to selectively expose and bind their properties.</span></span> <span data-ttu-id="ef1a9-128">复合控件还提供了大量的默认键盘处理功能，用户不需要进行任何额外的开发。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-128">A composite control also provides a great deal of default keyboard handling functionality with no extra development effort on your part.</span></span>  
   
- 例如，可以生成复合控件以显示来自数据库的客户地址数据。  此控件可以包括一个用来显示数据库字段的 <xref:System.Windows.Forms.DataGridView> 控件、一个用来处理到数据源的绑定的 <xref:System.Windows.Forms.BindingSource> 和一个用来在记录之间移动的 <xref:System.Windows.Forms.BindingNavigator> 控件。  可以有选择地公开数据绑定属性，还可以将整个控件打包并在不同应用程序之间重复使用。  有关这种复合控件的示例，请参见[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
+ <span data-ttu-id="ef1a9-129">例如，可以生成复合控件，以显示来自数据库的客户地址数据。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-129">For example, a composite control could be built to display customer address data from a database.</span></span> <span data-ttu-id="ef1a9-130">此控件可以包括<xref:System.Windows.Forms.DataGridView>控件来显示的数据库字段中，<xref:System.Windows.Forms.BindingSource>来处理到数据源的绑定和一个<xref:System.Windows.Forms.BindingNavigator>记录之间移动控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-130">This control could include a <xref:System.Windows.Forms.DataGridView> control to display the database fields, a <xref:System.Windows.Forms.BindingSource> to handle binding to a data source, and a <xref:System.Windows.Forms.BindingNavigator> control to move through the records.</span></span> <span data-ttu-id="ef1a9-131">可以选择性地公开数据绑定属性，还可以将整个控件打包并在不同应用程序之间重复使用。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-131">You could selectively expose data binding properties, and you could package and reuse the entire control from application to application.</span></span> <span data-ttu-id="ef1a9-132">有关这种复合控件的示例，请参阅[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-132">For an example of this kind of composite control, see [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span></span>  
   
- 若要创作复合控件，请从 <xref:System.Windows.Forms.UserControl> 类派生。  基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由并使子控件可以作为一个组进行工作。  有关更多信息，请参见 [开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。  
+ <span data-ttu-id="ef1a9-133">若要创作复合控件，派生自<xref:System.Windows.Forms.UserControl>类。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-133">To author a composite control, derive from the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="ef1a9-134"><xref:System.Windows.Forms.UserControl>基类提供了键盘路由子控件，并使子控件作为组进行工作。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-134">The <xref:System.Windows.Forms.UserControl> base class provides keyboard routing for child controls and enables child controls to work as a group.</span></span> <span data-ttu-id="ef1a9-135">有关详细信息，请参阅[开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-135">For more information, see [Developing a Composite Windows Forms Control](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span></span>  
   
- **建议**  
+ <span data-ttu-id="ef1a9-136">**建议**</span><span class="sxs-lookup"><span data-stu-id="ef1a9-136">**Recommendation**</span></span>  
   
- 在下列情况下，从 <xref:System.Windows.Forms.UserControl> 类继承：  
+ <span data-ttu-id="ef1a9-137">如果为以下情况，则从 <xref:System.Windows.Forms.UserControl> 类继承：</span><span class="sxs-lookup"><span data-stu-id="ef1a9-137">Inherit from the <xref:System.Windows.Forms.UserControl> class if:</span></span>  
   
--   要将若干个 Windows 窗体控件的功能合成一个可重新使用的单元。  
+-   <span data-ttu-id="ef1a9-138">你想要将多个 Windows 窗体控件的功能组合到单个可重用单元。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-138">You want to combine the functionality of several Windows Forms controls into a single reusable unit.</span></span>  
   
-### 扩展控件  
- 可以从任何现有的 Windows 窗体控件导出继承控件。  此方法使您得以保留 Windows 窗体控件的所有固有功能，然后通过添加自定义属性、方法或其他功能扩展此固有功能。  可以使用此选项重写基控件的绘制逻辑，然后更改该控件的外观以扩展其用户界面。  
+### <a name="extended-controls"></a><span data-ttu-id="ef1a9-139">扩展控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-139">Extended Controls</span></span>  
+ <span data-ttu-id="ef1a9-140">你可以从任何现有的 Windows 窗体控件派生继承的控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-140">You can derive an inherited control from any existing Windows Forms control.</span></span> <span data-ttu-id="ef1a9-141">使用此方法，你可以保留 Windows 窗体控件的所有固有功能，然后通过添加自定义属性、方法或其他功能来扩展该功能。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-141">With this approach, you can retain all of the inherent functionality of a Windows Forms control, and then extend that functionality by adding custom properties, methods, or other features.</span></span> <span data-ttu-id="ef1a9-142">可以使用此选项重写基控件的绘制逻辑，然后通过更改该控件的外观来扩展其用户界面。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-142">With this option, you can override the base control's paint logic, and then extend its user interface by changing its appearance.</span></span>  
   
- 例如，可以创建一个由 <xref:System.Windows.Forms.Button> 控件派生的控件，用于跟踪用户的单击次数。  
+ <span data-ttu-id="ef1a9-143">例如，你可以创建派生自的控件<xref:System.Windows.Forms.Button>跟踪用户的次数的控件已单击它。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-143">For example, you can create a control derived from the <xref:System.Windows.Forms.Button> control that tracks how many times a user has clicked it.</span></span>  
   
- 在某些控件中，也可以通过重写基类的 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法为图形用户界面添加自定义外观。  对于跟踪单击次数的扩展按钮，可以重写 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法来调用 <xref:System.Windows.Forms.Control.OnPaint%2A> 的基实现，然后在 <xref:System.Windows.Forms.Button> 控件的工作区的一角绘制单击计数。  
+ <span data-ttu-id="ef1a9-144">在某些控件中，你还可以添加自定义外观的控件的图形用户界面通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>基本类的方法。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-144">In some controls, you can also add a custom appearance to the graphical user interface of your control by overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method of the base class.</span></span> <span data-ttu-id="ef1a9-145">对于跟踪下鼠标扩展按钮，您可以重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法来调用基实现的<xref:System.Windows.Forms.Control.OnPaint%2A>，然后在一个角绘制单击计数<xref:System.Windows.Forms.Button>控件的工作区。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-145">For an extended button that tracks clicks, you can override the <xref:System.Windows.Forms.Control.OnPaint%2A> method to call the base implementation of <xref:System.Windows.Forms.Control.OnPaint%2A>, and then draw the click count in one corner of the <xref:System.Windows.Forms.Button> control's client area.</span></span>  
   
- **建议**  
+ <span data-ttu-id="ef1a9-146">**建议**</span><span class="sxs-lookup"><span data-stu-id="ef1a9-146">**Recommendation**</span></span>  
   
- 处于下列情况时继承 Windows 窗体控件：  
+ <span data-ttu-id="ef1a9-147">如果为以下情况，则从 Windows 窗体控件继承：</span><span class="sxs-lookup"><span data-stu-id="ef1a9-147">Inherit from a Windows Forms control if:</span></span>  
   
--   大多数所需的功能已经与现有的 Windows 窗体控件相同。  
+-   <span data-ttu-id="ef1a9-148">大部分所需功能与现有的 Windows 窗体控件相同。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-148">Most of the functionality you need is already identical to an existing Windows Forms control.</span></span>  
   
--   不需要自定义图形用户界面，或者想为现有控件设计一个新的图形用户界面。  
+-   <span data-ttu-id="ef1a9-149">不需要自定义图形用户界面，或者想为现有控件设计一个新的图形用户界面。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-149">You do not need a custom graphical user interface, or you want to design a new graphical user interface for an existing control.</span></span>  
   
-### 自定义控件  
- 创建控件的另一种方法是通过从 <xref:System.Windows.Forms.Control> 继承从头开始创建一个控件。  <xref:System.Windows.Forms.Control> 类提供控件所需的所有基本功能（包括鼠标和键盘处理事件），但不提供控件特定的功能或图形界面。  
+### <a name="custom-controls"></a><span data-ttu-id="ef1a9-150">自定义控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-150">Custom Controls</span></span>  
+ <span data-ttu-id="ef1a9-151">若要创建的控件的另一种方法是通过继承创建一个从头<xref:System.Windows.Forms.Control>。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-151">Another way to create a control is to create one substantially from the beginning by inheriting from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="ef1a9-152"><xref:System.Windows.Forms.Control>类提供的所有控件，包括鼠标和键盘处理事件，所需的基本功能，但没有特定于控件的功能或图形界面。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-152">The <xref:System.Windows.Forms.Control> class provides all of the basic functionality required by controls, including mouse and keyboard handling events, but no control-specific functionality or graphical interface.</span></span>  
   
- 与通过从 <xref:System.Windows.Forms.UserControl> 或现有 Windows 窗体控件继承创建控件相比，通过从 <xref:System.Windows.Forms.Control> 类继承创建控件需要耗费更多的心思和精力。  由于大量的实现将留给您进行，因此，您的控件可以具有比复合控件或扩展控件更大的灵活性，而且您可以使控件完全满足自己的需要。  
+ <span data-ttu-id="ef1a9-153">通过继承创建控件<xref:System.Windows.Forms.Control>类需要更多的心思和精力相比从<xref:System.Windows.Forms.UserControl>或现有的 Windows 窗体控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-153">Creating a control by inheriting from the <xref:System.Windows.Forms.Control> class requires much more thought and effort than inheriting from <xref:System.Windows.Forms.UserControl> or an existing Windows Forms control.</span></span> <span data-ttu-id="ef1a9-154">由于用户还需执行大量的实现，因此，控件可以具有比复合控件或扩展控件更好的灵活性，而且可以使控件完全满足自己的需要。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-154">Because a great deal of implementation is left for you, your control can have greater flexibility than a composite or extended control, and you can tailor your control to suit your exact needs.</span></span>  
   
- 若要实现自定义控件，必须编写该控件的 <xref:System.Windows.Forms.Control.OnPaint%2A> 事件的代码，以及所需的任何功能特定的代码。  还可以重写 <xref:System.Windows.Forms.Control.WndProc%2A> 方法并直接处理窗口消息。  这是创建控件的最强大的方法，但是要有效地使用此技术，需要熟悉 Microsoft Win32® API。  
+ <span data-ttu-id="ef1a9-155">若要实现自定义控件，你必须编写代码的<xref:System.Windows.Forms.Control.OnPaint%2A>事件的控件，以及任何所需的特定于功能的代码。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-155">To implement a custom control, you must write code for the <xref:System.Windows.Forms.Control.OnPaint%2A> event of the control, as well as any feature-specific code you need.</span></span> <span data-ttu-id="ef1a9-156">你也可以替代<xref:System.Windows.Forms.Control.WndProc%2A>直接方法，处理 windows 消息。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-156">You can also override the <xref:System.Windows.Forms.Control.WndProc%2A> method and handle windows messages directly.</span></span> <span data-ttu-id="ef1a9-157">这是创建控件的最强大的方法，但若要有效地使用此技术，需熟悉 Microsoft Win32® API。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-157">This is the most powerful way to create a control, but to use this technique effectively, you need to be familiar with the Microsoft Win32® API.</span></span>  
   
- 时钟控件即是一个自定义控件，它复制模拟时钟的外观和行为。  自定义绘制将被调用来促使时钟指针走动，以响应内部 <xref:System.Windows.Forms.Timer> 组件的 <xref:System.Windows.Forms.Timer.Tick> 事件。  有关更多信息，请参见[如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。  
+ <span data-ttu-id="ef1a9-158">时钟控件即是一个自定义控件，它复制模拟时钟的外观和行为。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-158">An example of a custom control is a clock control that duplicates the appearance and behavior of an analog clock.</span></span> <span data-ttu-id="ef1a9-159">自定义绘制调用来使指针移动，以响应<xref:System.Windows.Forms.Timer.Tick>从内部事件<xref:System.Windows.Forms.Timer>组件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-159">Custom painting is invoked to cause the hands of the clock to move in response to <xref:System.Windows.Forms.Timer.Tick> events from an internal <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="ef1a9-160">有关详细信息，请参阅[如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-160">For more information, see [How to: Develop a Simple Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span></span>  
   
- **建议**  
+ <span data-ttu-id="ef1a9-161">**建议**</span><span class="sxs-lookup"><span data-stu-id="ef1a9-161">**Recommendation**</span></span>  
   
- 在下列情况下，从 <xref:System.Windows.Forms.Control> 类继承：  
+ <span data-ttu-id="ef1a9-162">如果为以下情况，则从 <xref:System.Windows.Forms.Control> 类继承：</span><span class="sxs-lookup"><span data-stu-id="ef1a9-162">Inherit from the <xref:System.Windows.Forms.Control> class if:</span></span>  
   
--   想要提供控件的自定义图形化表示形式。  
+-   <span data-ttu-id="ef1a9-163">你想要提供控件的自定义图形表示形式。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-163">You want to provide a custom graphical representation of your control.</span></span>  
   
--   需要实现无法从标准控件获得的自定义功能。  
+-   <span data-ttu-id="ef1a9-164">你需要实现不能通过标准控件实现的自定义功能。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-164">You need to implement custom functionality that is not available through standard controls.</span></span>  
   
-### ActiveX 控件  
- 尽管 Windows 窗体基础结构已经为承载 Windows 窗体控件进行了优化，您仍可以使用 ActiveX 控件。  Visual Studio 中对此任务提供了支持。  有关更多信息，请参见[如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。  
+### <a name="activex-controls"></a><span data-ttu-id="ef1a9-165">ActiveX 控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-165">ActiveX Controls</span></span>  
+ <span data-ttu-id="ef1a9-166">尽管 Windows 窗体基础结构已为承载 Windows 窗体控件进行了优化，但仍可以使用 ActiveX 控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-166">Although the Windows Forms infrastructure has been optimized to host Windows Forms controls, you can still use ActiveX controls.</span></span> <span data-ttu-id="ef1a9-167">Visual Studio 中对此任务提供支持。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-167">There is support for this task in Visual Studio.</span></span> <span data-ttu-id="ef1a9-168">有关详细信息，请参阅[如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-168">For more information, see [How to: Add ActiveX Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).</span></span>  
   
-### 无窗口控件  
- Microsoft Visual Basic® 6.0 和 ActiveX 技术支持无窗口控件。  在 Windows 窗体中不支持无窗口控件。  
+### <a name="windowless-controls"></a><span data-ttu-id="ef1a9-169">无窗口控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-169">Windowless Controls</span></span>  
+ <span data-ttu-id="ef1a9-170">Microsoft Visual Basic® 6.0 和 ActiveX 技术支持无窗口控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-170">The Microsoft Visual Basic® 6.0and ActiveX technologies support *windowless* controls.</span></span> <span data-ttu-id="ef1a9-171">Windows 窗体中不支持无窗口控件。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-171">Windowless controls are not supported in Windows Forms.</span></span>  
   
-## 自定义设计体验  
- 如果您需要实现自定义设计时体验，可以创作自己的设计器。  对于复合控件，从 <xref:System.Windows.Forms.Design.ParentControlDesigner> 或 <xref:System.Windows.Forms.Design.DocumentDesigner> 类派生自定义的设计器类。  对于扩展控件和自定义控件，从 <xref:System.Windows.Forms.Design.ControlDesigner> 类派生自定义的设计器类。  
+## <a name="custom-design-experience"></a><span data-ttu-id="ef1a9-172">自定义设计体验</span><span class="sxs-lookup"><span data-stu-id="ef1a9-172">Custom Design Experience</span></span>  
+ <span data-ttu-id="ef1a9-173">如果需要实现自定义设计时体验，可以创作自己的设计器。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-173">If you need to implement a custom design-time experience, you can author your own designer.</span></span> <span data-ttu-id="ef1a9-174">复合控件派生自定义设计器类从<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>类。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-174">For composite controls, derive your custom designer class from the <xref:System.Windows.Forms.Design.ParentControlDesigner> or the <xref:System.Windows.Forms.Design.DocumentDesigner> classes.</span></span> <span data-ttu-id="ef1a9-175">对于扩展和自定义控件，派生自定义设计器类从<xref:System.Windows.Forms.Design.ControlDesigner>类。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-175">For extended and custom controls, derive your custom designer class from the <xref:System.Windows.Forms.Design.ControlDesigner> class.</span></span>  
   
- 使用 <xref:System.ComponentModel.DesignerAttribute> 将控件与设计器关联。  有关更多信息，请参见[Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)和[How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)。  
+ <span data-ttu-id="ef1a9-176">使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-176">Use the <xref:System.ComponentModel.DesignerAttribute> to associate your control with your designer.</span></span> <span data-ttu-id="ef1a9-177">有关详细信息，请参阅[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。</span><span class="sxs-lookup"><span data-stu-id="ef1a9-177">For more information, see [Extending Design-Time Support](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) and [How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).</span></span>  
   
-## 请参阅  
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
- [开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)
+## <a name="see-also"></a><span data-ttu-id="ef1a9-178">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ef1a9-178">See Also</span></span>  
+ [<span data-ttu-id="ef1a9-179">使用 .NET Framework 开发自定义 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-179">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="ef1a9-180">如何：开发简单的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-180">How to: Develop a Simple Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [<span data-ttu-id="ef1a9-181">开发复合 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-181">Developing a Composite Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [<span data-ttu-id="ef1a9-182">扩展设计时支持</span><span class="sxs-lookup"><span data-stu-id="ef1a9-182">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="ef1a9-183">如何：创建利用设计时功能的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="ef1a9-183">How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features</span></span>](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

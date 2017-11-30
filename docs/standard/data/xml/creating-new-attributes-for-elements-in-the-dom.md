@@ -1,34 +1,35 @@
 ---
-title: "为 DOM 中的元素创建新属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "为 DOM 中的元素创建新属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 为 DOM 中的元素创建新属性
-创建新属性不同于创建其他节点类型，因为属性不是节点，而是元素节点的属性并包含在与元素关联的 **XmlAttributeCollection** 中。  有多种方法可创建属性并将其附加到元素：  
+# <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="d1f93-102">为 DOM 中的元素创建新属性</span><span class="sxs-lookup"><span data-stu-id="d1f93-102">Creating New Attributes for Elements in the DOM</span></span>
+<span data-ttu-id="d1f93-103">创建新属性是不同于创建其他节点类型，因为属性不是节点，但是元素节点的属性和中包含**XmlAttributeCollection**与元素关联。</span><span class="sxs-lookup"><span data-stu-id="d1f93-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="d1f93-104">有多种方法可创建属性并将其附加到元素：</span><span class="sxs-lookup"><span data-stu-id="d1f93-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  
   
--   获取元素节点并使用 **SetAttribute** 将属性添加到该元素的属性集合。  
+-   <span data-ttu-id="d1f93-105">获取元素节点并使用**SetAttribute**将属性添加到该元素的属性集合。</span><span class="sxs-lookup"><span data-stu-id="d1f93-105">Get the element node and use **SetAttribute** to add an attribute to the attribute collection of that element.</span></span>  
   
--   使用 **CreateAttribute** 方法创建 **XmlAttribute** 节点，获取元素节点，然后使用 **SetAttributeNode** 将节点添加到该元素的属性集合。  
+-   <span data-ttu-id="d1f93-106">创建**XmlAttribute**节点使用**CreateAttribute**方法，获取元素节点，然后使用**SetAttributeNode**将节点添加到属性集合的元素。</span><span class="sxs-lookup"><span data-stu-id="d1f93-106">Create an **XmlAttribute** node using the **CreateAttribute** method, get the element node, then use **SetAttributeNode** to add the node to the attribute collection of that element.</span></span>  
   
- 下面的示例显示如何使用 **SetAttribute** 方法将属性添加到元素。  
+ <span data-ttu-id="d1f93-107">下面的示例演示如何将属性添加到元素使用**SetAttribute**方法。</span><span class="sxs-lookup"><span data-stu-id="d1f93-107">The following example shows how to add an attribute to an element using the **SetAttribute** method.</span></span>  
   
 ```vb  
 Imports System  
@@ -78,17 +79,17 @@ public class Sample
   }  
 ```  
   
- 下面的示例显示一个用 **CreateAttribute** 方法创建的新属性。  然后显示使用 **SetAttributeNode** 方法添加到 **book** 元素的属性集合的属性。  
+ <span data-ttu-id="d1f93-108">下面的示例演示一个新属性正在创建使用**CreateAttribute**方法。</span><span class="sxs-lookup"><span data-stu-id="d1f93-108">The following example shows a new attribute being created using the **CreateAttribute** method.</span></span> <span data-ttu-id="d1f93-109">然后，它演示添加到的属性集合的属性**簿**元素使用**SetAttributeNode**方法。</span><span class="sxs-lookup"><span data-stu-id="d1f93-109">It then shows the attribute added to the attribute collection of the **book** element using the **SetAttributeNode** method.</span></span>  
   
- 已知下列 XML：  
+ <span data-ttu-id="d1f93-110">已知下列 XML：</span><span class="sxs-lookup"><span data-stu-id="d1f93-110">Given the following XML:</span></span>  
   
-```  
+```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
 <title>Pride And Prejudice</title>  
 </book>  
 ```  
   
- 创建一个新属性并为其提供值：  
+ <span data-ttu-id="d1f93-111">创建一个新属性并为其提供值：</span><span class="sxs-lookup"><span data-stu-id="d1f93-111">create a new attribute and give it a value:</span></span>  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -100,7 +101,7 @@ XmlAttribute attr = doc.CreateAttribute("publisher");
 attr.Value = "WorldWide Publishing";  
 ```  
   
- 将其附加到此元素：  
+ <span data-ttu-id="d1f93-112">将其附加到此元素：</span><span class="sxs-lookup"><span data-stu-id="d1f93-112">and attach it to the element:</span></span>  
   
 ```vb  
 doc.DocumentElement.SetAttributeNode(attr)  
@@ -110,25 +111,25 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);  
 ```  
   
- **输出**  
+ <span data-ttu-id="d1f93-113">**输出**</span><span class="sxs-lookup"><span data-stu-id="d1f93-113">**Output**</span></span>  
   
-```  
+```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
 <title>Pride And Prejudice</title>  
 </book>  
 ```  
   
- 完整代码示例位于 [XmlDocument.CreateAttribute 方法](frlrfSystemXmlXmlDocumentClassCreateAttributeTopic)。  
+ <span data-ttu-id="d1f93-114">完整代码示例，请参阅<xref:System.Xml.XmlDocument.CreateAttribute%2A>。</span><span class="sxs-lookup"><span data-stu-id="d1f93-114">The full code sample can be found at <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span></span>  
   
- 还可以创建一个 **XmlAttribute** 节点并使用 **InsertBefore** 或 **InsertAfter** 方法将其放在集合中的适当位置。  如果该属性集合中已存在一个同名属性，则从该集合中移除现有的 **XmlAttribute** 节点并插入新的 **XmlAttribute** 节点。  这与 **SetAttribute** 方法执行的方式相同。  这些方法（作为参数）将现有节点作为执行 **InsertBefore** 和 **InsertAfter** 的参考点。  如果不提供指示插入新节点位置的参考节点，则 **InsertAfter** 方法的默认设置是在集合的开头插入新节点。  如果未提供任何参考节点，则 **InsertBefore** 的默认位置是集合的末尾。  
+ <span data-ttu-id="d1f93-115">你还可以创建**XmlAttribute**节点并使用**InsertBefore**或**InsertAfter**方法将其放在集合中的适当位置。</span><span class="sxs-lookup"><span data-stu-id="d1f93-115">You can also create an **XmlAttribute** node and use the **InsertBefore** or **InsertAfter** methods to place it in the appropriate position in the collection.</span></span> <span data-ttu-id="d1f93-116">如果具有相同名称的属性已在现有的属性集合中存在**XmlAttribute**节点删除从集合中的新**XmlAttribute**插入节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-116">If an attribute with the same name is already present in the attribute collection, the existing **XmlAttribute** node is removed from the collection and the new **XmlAttribute** node is inserted.</span></span> <span data-ttu-id="d1f93-117">这将进行相同的方式**SetAttribute**方法。</span><span class="sxs-lookup"><span data-stu-id="d1f93-117">This performs the same way as the **SetAttribute** method.</span></span> <span data-ttu-id="d1f93-118">这些方法作为参数，将现有节点作为执行操作的参考点执行**InsertBefore**和**InsertAfter**。</span><span class="sxs-lookup"><span data-stu-id="d1f93-118">These methods take, as a parameter, an existing node as a reference point to do the **InsertBefore** and **InsertAfter**.</span></span> <span data-ttu-id="d1f93-119">如果未提供指示插入新节点的默认位置的参考节点**InsertAfter**方法是在集合开头插入新节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-119">If you do not provide a reference node indicating where to insert the new node, the default for the **InsertAfter** method is to insert the new node at the beginning of the collection.</span></span> <span data-ttu-id="d1f93-120">默认位置**InsertBefore**，如果未不提供任何参考节点，是在集合末尾。</span><span class="sxs-lookup"><span data-stu-id="d1f93-120">The default position for the **InsertBefore**, if no reference node is provided, is at the end of the collection.</span></span>  
   
- 如果创建了属性的 **XmlNamedNodeMap**，则可以使用 [SetNamedItem 方法](frlrfSystemXmlXmlNamedNodeMapClassSetNamedItemTopic)按名称添加属性。  有关更多信息，请参见 [NamedNodeMap 和 NodeList 中的节点集合](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)。  
+ <span data-ttu-id="d1f93-121">如果你创建**XmlNamedNodeMap**属性，您可以添加的属性名称使用<xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>。</span><span class="sxs-lookup"><span data-stu-id="d1f93-121">If you created an **XmlNamedNodeMap** of attributes, you can add an attribute by name using the <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span></span> <span data-ttu-id="d1f93-122">有关详细信息，请参阅[Namednodemap 和 Nodelist 中的节点集合](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)。</span><span class="sxs-lookup"><span data-stu-id="d1f93-122">For more information, see [Node Collections in NamedNodeMaps and NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span></span>  
   
-## 默认属性  
- 如果创建一个声明为具有默认属性的元素，则 XML 文档对象模型 \(DOM\) 创建一个带默认值的新默认属性并将其附加到该元素。  此时还创建默认属性的子节点。  
+## <a name="default-attributes"></a><span data-ttu-id="d1f93-123">默认属性</span><span class="sxs-lookup"><span data-stu-id="d1f93-123">Default Attributes</span></span>  
+ <span data-ttu-id="d1f93-124">如果创建一个声明为具有默认属性的元素，则 XML 文档对象模型 (DOM) 创建一个带默认值的新默认属性并将其附加到该元素。</span><span class="sxs-lookup"><span data-stu-id="d1f93-124">If you create an element that is declared to have a default attribute, then a new default attribute with its default value is created by the XML Document Object Model (DOM) and attached to the element.</span></span> <span data-ttu-id="d1f93-125">此时还创建默认属性的子节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-125">The child nodes of the default attribute are also created at this time.</span></span>  
   
-## 属性子节点  
- 属性节点的值成为它的子节点。  有效子节点只有两种类型：**XmlText** 节点和 **XmlEntityReference** 节点。  从 **FirstChild** 和 **LastChild** 等方法将这些节点按子节点来处理这一点上说，它们是子节点。  当试图移除属性或属性子节点时，属性这种具有子节点的特性很重要。  有关更多信息，请参见[移除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
+## <a name="attribute-child-nodes"></a><span data-ttu-id="d1f93-126">属性子节点</span><span class="sxs-lookup"><span data-stu-id="d1f93-126">Attribute Child Nodes</span></span>  
+ <span data-ttu-id="d1f93-127">属性节点的值成为它的子节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-127">The value of an attribute node becomes its child nodes.</span></span> <span data-ttu-id="d1f93-128">有只有两种类型的有效子节点： **XmlText**节点，和**XmlEntityReference**节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-128">There are only two types of valid child nodes: **XmlText** nodes, and **XmlEntityReference** nodes.</span></span> <span data-ttu-id="d1f93-129">这些是子节点，也就是说，该方法**FirstChild**和**LastChild**处理它们作为子节点。</span><span class="sxs-lookup"><span data-stu-id="d1f93-129">These are child nodes in the sense that methods such as **FirstChild** and **LastChild** process them as child nodes.</span></span> <span data-ttu-id="d1f93-130">当试图移除属性或属性子节点时，属性这种具有子节点的特性很重要。</span><span class="sxs-lookup"><span data-stu-id="d1f93-130">This distinction of an attribute having child nodes is important when trying to remove attributes or attribute child nodes.</span></span> <span data-ttu-id="d1f93-131">有关详细信息，请参阅[移除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。</span><span class="sxs-lookup"><span data-stu-id="d1f93-131">For more information, see [Removing Attributes from an Element Node in the DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="d1f93-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d1f93-132">See Also</span></span>  
+ [<span data-ttu-id="d1f93-133">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="d1f93-133">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

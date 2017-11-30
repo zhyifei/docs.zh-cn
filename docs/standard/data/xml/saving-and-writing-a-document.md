@@ -1,49 +1,50 @@
 ---
-title: "保存和编写文档 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "保存和写出文档"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 保存和编写文档
-加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：  
+# <a name="saving-and-writing-a-document"></a><span data-ttu-id="8c6d7-102">保存和写出文档</span><span class="sxs-lookup"><span data-stu-id="8c6d7-102">Saving and Writing a Document</span></span>
+<span data-ttu-id="8c6d7-103">加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：</span><span class="sxs-lookup"><span data-stu-id="8c6d7-103">When you load and save an <xref:System.Xml.XmlDocument>, the saved document may differ from the original in the following ways:</span></span>  
   
--   如果在调用 <xref:System.Xml.XmlDocument.Save%2A> 方法之间将 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 属性设置为 `true`，文档中的空白在输出中将保留；如果此属性为 `false`，<xref:System.Xml.XmlDocument> 将使输出自动缩进。  
+-   <span data-ttu-id="8c6d7-104">如果在调用 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 方法之间将 `true` 属性设置为 <xref:System.Xml.XmlDocument.Save%2A>，文档中的空白在输出中将保留；如果此属性为 `false`，<xref:System.Xml.XmlDocument> 将使输出自动缩进。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-104">If the <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> property is set to `true` before the <xref:System.Xml.XmlDocument.Save%2A> method is called, white space in the document is preserved in the output; if this property is `false`, <xref:System.Xml.XmlDocument> auto-indents the output.</span></span>  
   
--   各个属性之间的所有空白都缩减为一个空白字符。  
+-   <span data-ttu-id="8c6d7-105">各个属性之间的所有空白都缩减为一个空白字符。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-105">All the white space between attributes is reduced to a single space character.</span></span>  
   
--   更改元素间的空白。  保留有效空白，但不保留无效空白。  但是在文档保存后，默认情况下将使用 <xref:System.Xml.XmlTextWriter> **Indenting** 模式实现整洁的输出，使文档更加易读。  
+-   <span data-ttu-id="8c6d7-106">更改元素间的空白。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-106">The white space between elements is changed.</span></span> <span data-ttu-id="8c6d7-107">保留有效空白，但不保留无效空白。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-107">Significant white space is preserved and insignificant white space is not.</span></span> <span data-ttu-id="8c6d7-108">但当保存文档后，它将使用<xref:System.Xml.XmlTextWriter>**缩进**默认整齐打印的输出，以使其更具可读性的模式。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-108">But when the document is saved, it will use the <xref:System.Xml.XmlTextWriter> **Indenting** mode by default to neatly print the output to make it more readable.</span></span>  
   
--   属性值两边所用的引号字符在默认情况下更改为双引号。  可以使用 <xref:System.Xml.XmlTextWriter> 的 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 属性将引号字符设置为双引号或单引号。  
+-   <span data-ttu-id="8c6d7-109">属性值两边所用的引号字符在默认情况下更改为双引号。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-109">The quote character used around attribute values is changed to double quote by default.</span></span> <span data-ttu-id="8c6d7-110">可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 的 <xref:System.Xml.XmlTextWriter> 属性将引号字符设置为双引号或单引号。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-110">You can use the <xref:System.Xml.XmlTextReader.QuoteChar%2A> property on <xref:System.Xml.XmlTextWriter> to set the quote character to either double quote or single quote.</span></span>  
   
--   默认情况下，扩展像 `{` 这样的数字字符实体。  
+-   <span data-ttu-id="8c6d7-111">默认情况下，扩展像 `{` 这样的数字字符实体。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-111">By default, numeric character entities like `{` are expanded.</span></span>  
   
--   不保留输入文档中的字节顺序标记。  除非显式创建指定不同编码的 XML 声明，否则 UCS\-2 保存为 UTF\-8。  
+-   <span data-ttu-id="8c6d7-112">不保留输入文档中的字节顺序标记。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-112">The byte-order mark found in the input document is not preserved.</span></span> <span data-ttu-id="8c6d7-113">除非显式创建指定不同编码的 XML 声明，否则 UCS-2 保存为 UTF-8。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-113">UCS-2 is saved as UTF-8 unless you explicitly create an XML declaration that specifies a different encoding.</span></span>  
   
--   如果要将 <xref:System.Xml.XmlDocument> 写出到文件或流中，则写出的输出与文档内容相同。  也就是说，仅当文档中包含 <xref:System.Xml.XmlDeclaration> 时才写出 <xref:System.Xml.XmlDeclaration>，并且写出文档时所使用的编码与声明节点中给定的编码相同。  
+-   <span data-ttu-id="8c6d7-114">如果要将 <xref:System.Xml.XmlDocument> 写出到文件或流中，则写出的输出与文档内容相同。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-114">If you want to write out the <xref:System.Xml.XmlDocument> into a file or stream, the output written out is the same as the content of the document.</span></span> <span data-ttu-id="8c6d7-115">也就是说，仅当文档中包含 <xref:System.Xml.XmlDeclaration> 时才写出 ，并且写出文档时所使用的编码与声明节点中给定的编码相同。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-115">That is, the <xref:System.Xml.XmlDeclaration> is written out only if there is one contained in the document, and the encoding used when writing out the document is the same encoding given in the declaration node.</span></span>  
   
-## 写出 XmlDeclaration  
- <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlNode.InnerXml%2A> 和 <xref:System.Xml.XmlNode.WriteTo%2A> 的 <xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDeclaration> 成员与 <xref:System.Xml.XmlDocument.Save%2A> 和 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 的 <xref:System.Xml.XmlDocument> 方法共同创建 XML 声明。  
+## <a name="writing-an-xmldeclaration"></a><span data-ttu-id="8c6d7-116">写出 XmlDeclaration</span><span class="sxs-lookup"><span data-stu-id="8c6d7-116">Writing an XmlDeclaration</span></span>  
+ <span data-ttu-id="8c6d7-117"><xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDeclaration> 和 <xref:System.Xml.XmlNode.OuterXml%2A> 的 <xref:System.Xml.XmlNode.InnerXml%2A> 和 <xref:System.Xml.XmlNode.WriteTo%2A> 成员与 <xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDocument.Save%2A> 的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法共同创建 XML 声明。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-117">The <xref:System.Xml.XmlDocument> and <xref:System.Xml.XmlDeclaration> members of <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A>, and <xref:System.Xml.XmlNode.WriteTo%2A>, in addition to the <xref:System.Xml.XmlDocument> methods of <xref:System.Xml.XmlDocument.Save%2A> and <xref:System.Xml.XmlDocument.WriteContentTo%2A>, create an XML declaration.</span></span>  
   
- 对于 <xref:System.Xml.XmlNode.OuterXml%2A> 的 <xref:System.Xml.XmlDocument> 属性、<xref:System.Xml.XmlDocument.InnerXml%2A> 以及 <xref:System.Xml.XmlDocument.Save%2A>、<xref:System.Xml.XmlDocument.WriteTo%2A> 和 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法，在 XML 声明中写出的编码从 <xref:System.Xml.XmlDeclaration> 节点获取。  如果没有 <xref:System.Xml.XmlDeclaration> 节点，则不会写出 <xref:System.Xml.XmlDeclaration>。  如果 <xref:System.Xml.XmlDeclaration> 节点中没有编码，则不会在 XML 声明中写出编码。  
+ <span data-ttu-id="8c6d7-118">对于 <xref:System.Xml.XmlDocument> 的 <xref:System.Xml.XmlNode.OuterXml%2A> 属性、<xref:System.Xml.XmlDocument.InnerXml%2A> 以及 <xref:System.Xml.XmlDocument.Save%2A>、<xref:System.Xml.XmlDocument.WriteTo%2A> 和 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法，在 XML 声明中写出的编码从 <xref:System.Xml.XmlDeclaration> 节点获取。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-118">For the <xref:System.Xml.XmlDocument> properties of <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, and the <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A>, and <xref:System.Xml.XmlDocument.WriteContentTo%2A> methods, the encoding written out in the XML declaration is taken from the <xref:System.Xml.XmlDeclaration> node.</span></span> <span data-ttu-id="8c6d7-119">如果没有 <xref:System.Xml.XmlDeclaration> 节点，则不会写出 <xref:System.Xml.XmlDeclaration>。如果 <xref:System.Xml.XmlDeclaration> 节点中没有编码，则不会在 XML 声明中写出编码。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-119">If there is no <xref:System.Xml.XmlDeclaration> node, <xref:System.Xml.XmlDeclaration> is not written out. If there is no encoding in the <xref:System.Xml.XmlDeclaration> node, encoding is not written out in the XML declaration.</span></span>  
   
- <xref:System.Xml.XmlDocument.Save%2A?displayProperty=fullName> 和 <xref:System.Xml.XmlDocument.Save%2A?displayProperty=fullName> 方法始终写出 <xref:System.Xml.XmlDeclaration>。  这些方法从其写入的编写器中获取编码。  也就是说，编写器的编码值重写文档和 <xref:System.Xml.XmlDeclaration> 对象的编码。  例如，下列代码不在输出文件 `out.xml` 中的 XML 声明中写出编码。  
+ <span data-ttu-id="8c6d7-120"><xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> 和 <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> 方法始终写出 <xref:System.Xml.XmlDeclaration>。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-120">The <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> and <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> methods always write out an <xref:System.Xml.XmlDeclaration>.</span></span> <span data-ttu-id="8c6d7-121">这些方法从其写入的编写器中获取编码。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-121">These methods take the encoding from the writer that it is writing to.</span></span> <span data-ttu-id="8c6d7-122">也就是说，编写器的编码值重写文档和 <xref:System.Xml.XmlDeclaration> 对象的编码。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-122">That is, the encoding value on the writer overrides the encoding on the document and in the <xref:System.Xml.XmlDeclaration>.</span></span> <span data-ttu-id="8c6d7-123">例如，下列代码不在输出文件 `out.xml` 中的 XML 声明中写出编码。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-123">For example, the following code does not write an encoding in the XML declaration found in the output file `out.xml`.</span></span>  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -59,14 +60,14 @@ doc.Load("text.xml");
 doc.Save(tw);  
 ```  
   
- 对于 <xref:System.Xml.XmlDocument.Save%2A> 方法，XML 声明使用 <xref:System.Xml.XmlWriter> 类中的 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 方法写出。  因此，重写 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 方法将更改如何编写文档的开头。  
+ <span data-ttu-id="8c6d7-124">对于 <xref:System.Xml.XmlDocument.Save%2A> 方法，XML 声明使用 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 类中的 <xref:System.Xml.XmlWriter> 方法写出。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-124">For the <xref:System.Xml.XmlDocument.Save%2A> method, the XML declaration is written out using the <xref:System.Xml.XmlWriter.WriteStartDocument%2A> method in the <xref:System.Xml.XmlWriter> class.</span></span> <span data-ttu-id="8c6d7-125">因此，重写 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 方法将更改如何编写文档的开头。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-125">Therefore, overwriting the <xref:System.Xml.XmlWriter.WriteStartDocument%2A> method changes how the start of the document is written.</span></span>  
   
- 对于 <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlDeclaration.WriteTo%2A> 和 <xref:System.Xml.XmlNode.InnerXml%2A> 的 <xref:System.Xml.XmlDeclaration> 成员，如果 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性未设置，将不会写出任何编码。  否则，在 XML 声明中写出的编码与 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性中的编码相同。  
+ <span data-ttu-id="8c6d7-126">对于 <xref:System.Xml.XmlDeclaration>、<xref:System.Xml.XmlNode.OuterXml%2A> 和 <xref:System.Xml.XmlDeclaration.WriteTo%2A> 的 <xref:System.Xml.XmlNode.InnerXml%2A> 成员，如果 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性未设置，将不会写出任何编码。否则，在 XML 声明中写出的编码与 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性中的编码相同。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-126">For the <xref:System.Xml.XmlDeclaration> members of <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>, and <xref:System.Xml.XmlNode.InnerXml%2A>, if the <xref:System.Xml.XmlDeclaration.Encoding%2A> property is not set, no encoding is written out. Otherwise, the encoding written out in the XML declaration is the same as the encoding found in the <xref:System.Xml.XmlDeclaration.Encoding%2A> property.</span></span>  
   
-## 用 OuterXml 属性写出文档内容  
- <xref:System.Xml.XmlNode.OuterXml%2A> 属性是 Microsoft 对万维网联合会 \(W3C\) XML 文档对象模型 \(DOM\) 标准的扩展。  <xref:System.Xml.XmlNode.OuterXml%2A> 属性用于获取整个 XML 文档的标记，或者只获取单个节点及其子节点的标记。  <xref:System.Xml.XmlNode.OuterXml%2A> 返回表示给定节点及其所有子节点的标记。  
+## <a name="writing-document-content-using-the-outerxml-property"></a><span data-ttu-id="8c6d7-127">用 OuterXml 属性写出文档内容</span><span class="sxs-lookup"><span data-stu-id="8c6d7-127">Writing Document Content Using the OuterXml Property</span></span>  
+ <span data-ttu-id="8c6d7-128"><xref:System.Xml.XmlNode.OuterXml%2A> 属性是 Microsoft 对万维网联合会 (W3C) XML 文档对象模型 (DOM) 标准的扩展。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-128">The <xref:System.Xml.XmlNode.OuterXml%2A> property is a Microsoft extension to the World Wide Web Consortium (W3C) XML Document Object Model (DOM) standards.</span></span> <span data-ttu-id="8c6d7-129"><xref:System.Xml.XmlNode.OuterXml%2A> 属性用于获取整个 XML 文档的标记，或者只获取单个节点及其子节点的标记。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-129">The <xref:System.Xml.XmlNode.OuterXml%2A> property is used to get the markup of the whole XML document, or just the markup of a single node and its child nodes.</span></span> <span data-ttu-id="8c6d7-130"><xref:System.Xml.XmlNode.OuterXml%2A> 返回表示给定节点及其所有子节点的标记。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-130"><xref:System.Xml.XmlNode.OuterXml%2A> returns the markup representing the given node and all its child nodes.</span></span>  
   
- 下面的代码示例显示了如何将整个文档保存为一个字符串。  
+ <span data-ttu-id="8c6d7-131">下面的代码示例显示了如何将整个文档保存为一个字符串。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-131">The following code sample shows how to save a document in its entirety as a string.</span></span>  
   
 ```vb  
 Dim mydoc As New XmlDocument()  
@@ -82,7 +83,7 @@ XmlDocument mydoc = new XmlDocument();
 string xml = mydoc.OuterXml;  
 ```  
   
- 下面的代码示例显示了如何只保存文档元素。  
+ <span data-ttu-id="8c6d7-132">下面的代码示例显示了如何只保存文档元素。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-132">The following code sample shows how to save only the document element.</span></span>  
   
 ```vb  
 ' For the content of the Document Element only.  
@@ -94,7 +95,7 @@ Dim xml As String = mydoc.DocumentElement.OuterXml
 string xml = mydoc.DocumentElement.OuterXml;  
 ```  
   
- 与此相反，如果您需要子节点的内容，可以使用 <xref:System.Xml.XmlNode.InnerText%2A> 属性。  
+ <span data-ttu-id="8c6d7-133">与此相反，如果您需要子节点的内容，可以使用 <xref:System.Xml.XmlNode.InnerText%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="8c6d7-133">In contrast, you can use the <xref:System.Xml.XmlNode.InnerText%2A> property if you want the content of child nodes.</span></span>  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="8c6d7-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8c6d7-134">See Also</span></span>  
+ [<span data-ttu-id="8c6d7-135">XML 文档对象模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="8c6d7-135">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

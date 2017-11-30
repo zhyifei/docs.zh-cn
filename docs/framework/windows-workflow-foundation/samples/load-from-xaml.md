@@ -12,30 +12,28 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca5f830e666ad65ca2162ffd1abb03ce9beca387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19fd22f2756399cc768332cbaa653717611e5e54
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="load-from-xaml"></a><span data-ttu-id="d01ac-102">从 XAML 加载</span><span class="sxs-lookup"><span data-stu-id="d01ac-102">Load From XAML</span></span>
-<span data-ttu-id="d01ac-103">此示例演示如何在不运行 XamlBuildTask 工具的情况下动态加载 XAML 工作流。</span><span class="sxs-lookup"><span data-stu-id="d01ac-103">This sample demonstrates how to dynamically load a XAML workflow without having to run the XamlBuildTask tool.</span></span> <span data-ttu-id="d01ac-104">此示例改为调用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d01ac-104">Instead, the sample calls the <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> method.</span></span> <span data-ttu-id="d01ac-105">此示例是一个 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 客户端应用程序，它使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载 XAML 工作流，然后执行这些工作流。</span><span class="sxs-lookup"><span data-stu-id="d01ac-105">The sample is a [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] client application that loads XAML workflows using the <xref:System.Activities.XamlIntegration.ActivityXamlServices> class and executes them.</span></span> <span data-ttu-id="d01ac-106">在使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载完这些工作流后，将返回一个可执行的 <xref:System.Activities.DynamicActivity%601>。</span><span class="sxs-lookup"><span data-stu-id="d01ac-106">After they have been loaded using the <xref:System.Activities.XamlIntegration.ActivityXamlServices> class, a <xref:System.Activities.DynamicActivity%601> is returned that can be executed.</span></span>  
+# <a name="load-from-xaml"></a><span data-ttu-id="b49d0-102">从 XAML 加载</span><span class="sxs-lookup"><span data-stu-id="b49d0-102">Load From XAML</span></span>
+<span data-ttu-id="b49d0-103">此示例演示如何在不运行 XamlBuildTask 工具的情况下动态加载 XAML 工作流。</span><span class="sxs-lookup"><span data-stu-id="b49d0-103">This sample demonstrates how to dynamically load a XAML workflow without having to run the XamlBuildTask tool.</span></span> <span data-ttu-id="b49d0-104">此示例改为调用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="b49d0-104">Instead, the sample calls the <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> method.</span></span> <span data-ttu-id="b49d0-105">此示例是一个 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 客户端应用程序，它使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载 XAML 工作流，然后执行这些工作流。</span><span class="sxs-lookup"><span data-stu-id="b49d0-105">The sample is a [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] client application that loads XAML workflows using the <xref:System.Activities.XamlIntegration.ActivityXamlServices> class and executes them.</span></span> <span data-ttu-id="b49d0-106">在使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载完这些工作流后，将返回一个可执行的 <xref:System.Activities.DynamicActivity%601>。</span><span class="sxs-lookup"><span data-stu-id="b49d0-106">After they have been loaded using the <xref:System.Activities.XamlIntegration.ActivityXamlServices> class, a <xref:System.Activities.DynamicActivity%601> is returned that can be executed.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="d01ac-107">使用此示例</span><span class="sxs-lookup"><span data-stu-id="d01ac-107">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="b49d0-107">使用此示例</span><span class="sxs-lookup"><span data-stu-id="b49d0-107">To use this sample</span></span>  
   
-1.  <span data-ttu-id="d01ac-108">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 LoadFromXAML.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="d01ac-108">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LoadFromXAML.sln solution file.</span></span>  
+1.  <span data-ttu-id="b49d0-108">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 LoadFromXAML.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="b49d0-108">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LoadFromXAML.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="d01ac-109">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="d01ac-109">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="b49d0-109">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="b49d0-109">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="d01ac-110">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="d01ac-110">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="b49d0-110">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="b49d0-110">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="d01ac-111">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="d01ac-111">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d01ac-112">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="d01ac-112">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b49d0-111">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="b49d0-111">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b49d0-112">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="b49d0-112">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="d01ac-113">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="d01ac-113">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d01ac-114">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="d01ac-114">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b49d0-113">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="b49d0-113">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b49d0-114">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="b49d0-114">This sample is located in the following directory.</span></span>  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\LoadFromXAML`  
-  
-## <a name="see-also"></a><span data-ttu-id="d01ac-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d01ac-115">See Also</span></span>
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\LoadFromXAML`

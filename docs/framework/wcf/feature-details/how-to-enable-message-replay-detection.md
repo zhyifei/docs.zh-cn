@@ -1,64 +1,70 @@
 ---
-title: "如何：启用消息重播检测 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "重播检测 [WCF]"
-  - "WCF 安全性"
-  - "WCF, 自定义绑定"
-  - "WCF, 安全性"
+title: "如何：启用消息重播检测"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF security
+- replay detection [WCF]
+- WCF, custom bindings
+- WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ed0bca649e7e94ff94a7dab6191c59e48c0bec3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：启用消息重播检测
-当攻击者复制双方之间的消息流并将该消息流向一方或多方重播时，将发生重播攻击。除非攻击程度降低，否则受到攻击的计算机会将该流处理为合法消息，从而导致产生大量不良结果，例如某项的冗余排序。  
+# <a name="how-to-enable-message-replay-detection"></a><span data-ttu-id="b71fd-102">如何：启用消息重播检测</span><span class="sxs-lookup"><span data-stu-id="b71fd-102">How to: Enable Message Replay Detection</span></span>
+<span data-ttu-id="b71fd-103">当攻击者复制双方之间的消息流并将该消息流向一方或多方重播时，将发生重播攻击。</span><span class="sxs-lookup"><span data-stu-id="b71fd-103">A replay attack occurs when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties.</span></span> <span data-ttu-id="b71fd-104">除非攻击程度降低，否则受到攻击的计算机会将该流处理为合法消息，从而导致产生大量不良结果，例如某项的冗余排序。</span><span class="sxs-lookup"><span data-stu-id="b71fd-104">Unless mitigated, the computers subject to the attack will process the stream as legitimate messages, resulting in a range of bad consequences, such as redundant orders of an item.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]消息重播检测的更多信息，请参见[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)（可能为英文网页）。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b71fd-105">消息重播检测，请参阅[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)。</span><span class="sxs-lookup"><span data-stu-id="b71fd-105"> message replay detection, see [Message Replay Detection](http://go.microsoft.com/fwlink/?LinkId=88536).</span></span>  
   
- 下面的过程演示在用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重播检测时所使用的各种属性。  
+ <span data-ttu-id="b71fd-106">下面的过程演示在用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重播检测时所使用的各种属性。</span><span class="sxs-lookup"><span data-stu-id="b71fd-106">The following procedure demonstrates various properties that you can use to control replay detection using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-### 使用代码在客户端上控制重播检测  
+### <a name="to-control-replay-detection-on-the-client-using-code"></a><span data-ttu-id="b71fd-107">使用代码在客户端上控制重播检测</span><span class="sxs-lookup"><span data-stu-id="b71fd-107">To control replay detection on the client using code</span></span>  
   
-1.  创建要在 <xref:System.ServiceModel.Channels.CustomBinding> 中使用的 <xref:System.ServiceModel.Channels.SecurityBindingElement>。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).下面的示例使用通过 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建的 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
+1.  <span data-ttu-id="b71fd-108">创建要在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中使用的 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="b71fd-108">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> to use in a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b71fd-109">[如何： 创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。</span><span class="sxs-lookup"><span data-stu-id="b71fd-109"> [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).</span></span> <span data-ttu-id="b71fd-110">下面的示例使用通过 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建的 <xref:System.ServiceModel.Channels.SecurityBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="b71fd-110">The following example uses a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> created with the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> of the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span>  
   
-2.  使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 类的引用，并根据需要设置任何下列属性：  
+2.  <span data-ttu-id="b71fd-111">使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 类的引用，并根据需要设置任何下列属性：</span><span class="sxs-lookup"><span data-stu-id="b71fd-111">Use the <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> property to return a reference to the <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> class and set any of the following properties, as appropriate:</span></span>  
   
-    1.  `DetectReplay`.一个布尔值。该值控制客户端是否应当检测来自服务器的重播。默认值为 `true`。  
+    1.  <span data-ttu-id="b71fd-112">`DetectReplay`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-112">`DetectReplay`.</span></span> <span data-ttu-id="b71fd-113">一个布尔值。</span><span class="sxs-lookup"><span data-stu-id="b71fd-113">A Boolean value.</span></span> <span data-ttu-id="b71fd-114">该值控制客户端是否应当检测来自服务器的重播。</span><span class="sxs-lookup"><span data-stu-id="b71fd-114">This governs whether the client should detect replays from the server.</span></span> <span data-ttu-id="b71fd-115">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-115">The default is `true`.</span></span>  
   
-    2.  `MaxClockSkew`.<xref:System.TimeSpan> 值。控制重播机制在客户端和服务器之间可以容忍多大程度的时间偏差。该安全机制检查发送的时间戳，并确定在过去它是否返回过快。默认值为 5 分钟。  
+    2.  <span data-ttu-id="b71fd-116">`MaxClockSkew`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-116">`MaxClockSkew`.</span></span> <span data-ttu-id="b71fd-117">一个 <xref:System.TimeSpan> 值。</span><span class="sxs-lookup"><span data-stu-id="b71fd-117">A <xref:System.TimeSpan> value.</span></span> <span data-ttu-id="b71fd-118">控制重播机制在客户端和服务器之间可以容忍多大程度的时间偏差。</span><span class="sxs-lookup"><span data-stu-id="b71fd-118">Governs how much time skew the replay mechanism can tolerate between the client and the server.</span></span> <span data-ttu-id="b71fd-119">该安全机制检查发送的时间戳，并确定在过去它是否返回过快。</span><span class="sxs-lookup"><span data-stu-id="b71fd-119">The security mechanism examines the time stamp sent and determines whether it was sent too far back in the past.</span></span> <span data-ttu-id="b71fd-120">默认值为 5 分钟。</span><span class="sxs-lookup"><span data-stu-id="b71fd-120">The default is 5 minutes.</span></span>  
   
-    3.  `ReplayWindow`.`TimeSpan` 值。该值控制某消息在由服务器（通过中间方）发送之后、到达客户端之前在网络中存留的时间。客户端跟踪在最后一个 `ReplayWindow` 中发送的消息的签名，以进行重播检测。  
+    3.  <span data-ttu-id="b71fd-121">`ReplayWindow`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-121">`ReplayWindow`.</span></span> <span data-ttu-id="b71fd-122">一个 `TimeSpan` 值。</span><span class="sxs-lookup"><span data-stu-id="b71fd-122">A `TimeSpan` value.</span></span> <span data-ttu-id="b71fd-123">该值控制某消息在由服务器（通过中间方）发送之后、到达客户端之前在网络中存留的时间。</span><span class="sxs-lookup"><span data-stu-id="b71fd-123">This governs how long a message can live in the network after the server sends it (through intermediaries) before reaching the client.</span></span> <span data-ttu-id="b71fd-124">客户端跟踪在最后一个 `ReplayWindow` 中发送的消息的签名，以进行重播检测。</span><span class="sxs-lookup"><span data-stu-id="b71fd-124">The client tracks the signatures of the messages sent within the latest `ReplayWindow` for the purposes of replay detection.</span></span>  
   
-    4.  `ReplayCacheSize`.一个整数值。客户端在缓存中存储消息的签名。此设置指定缓存中可以存储的签名数目。如果最后一个重播窗口中发送的消息数达到缓存限制，则拒绝新消息，直到最旧的缓存签名达到时间限制为止。默认值为 500000。  
+    4.  <span data-ttu-id="b71fd-125">`ReplayCacheSize`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-125">`ReplayCacheSize`.</span></span> <span data-ttu-id="b71fd-126">一个整数值。</span><span class="sxs-lookup"><span data-stu-id="b71fd-126">An integer value.</span></span> <span data-ttu-id="b71fd-127">客户端在缓存中存储消息的签名。</span><span class="sxs-lookup"><span data-stu-id="b71fd-127">The client stores the signatures of the message in a cache.</span></span> <span data-ttu-id="b71fd-128">此设置指定缓存中可以存储的签名数目。</span><span class="sxs-lookup"><span data-stu-id="b71fd-128">This setting specifies how many signatures the cache can store.</span></span> <span data-ttu-id="b71fd-129">如果最后一个重播窗口中发送的消息数达到缓存限制，则拒绝新消息，直到最旧的缓存签名达到时间限制为止。</span><span class="sxs-lookup"><span data-stu-id="b71fd-129">If the number of messages sent within the last replay window reaches the cache limit, new messages are rejected until the oldest cached signatures reach the time limit.</span></span> <span data-ttu-id="b71fd-130">默认值为 500000。</span><span class="sxs-lookup"><span data-stu-id="b71fd-130">The default is 500000.</span></span>  
   
-### 使用代码在服务上控制重播检测  
+### <a name="to-control-replay-detection-on-the-service-using-code"></a><span data-ttu-id="b71fd-131">使用代码在服务上控制重播检测</span><span class="sxs-lookup"><span data-stu-id="b71fd-131">To control replay detection on the service using code</span></span>  
   
-1.  创建要在 <xref:System.ServiceModel.Channels.CustomBinding> 中使用的 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+1.  <span data-ttu-id="b71fd-132">创建要在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中使用的 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="b71fd-132">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> to use in a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>  
   
-2.  使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 类的引用，并按照上面所述设置这些属性。  
+2.  <span data-ttu-id="b71fd-133">使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 类的引用，并按照上面所述设置这些属性。</span><span class="sxs-lookup"><span data-stu-id="b71fd-133">Use the <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> property to return a reference to the <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> class, and set the properties as described previously.</span></span>  
   
-### 在客户端或服务的配置中控制重播检测  
+### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a><span data-ttu-id="b71fd-134">在客户端或服务的配置中控制重播检测</span><span class="sxs-lookup"><span data-stu-id="b71fd-134">To control replay detection in configuration for the client or service</span></span>  
   
-1.  创建 [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1.  <span data-ttu-id="b71fd-135">创建[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。</span><span class="sxs-lookup"><span data-stu-id="b71fd-135">Create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span>  
   
-2.  创建 `<security>` 元素。  
+2.  <span data-ttu-id="b71fd-136">创建 `<security>` 元素。</span><span class="sxs-lookup"><span data-stu-id="b71fd-136">Create a `<security>` element.</span></span>  
   
-3.  创建 [\<localClientSettings\>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)或 [\<localServiceSettings\>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)。  
+3.  <span data-ttu-id="b71fd-137">创建[ \<g s >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)或[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)。</span><span class="sxs-lookup"><span data-stu-id="b71fd-137">Create a [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) or [\<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).</span></span>  
   
-4.  根据需要，设置下列属性值：`detectReplays`、`maxClockSkew`、`replayWindow` 和 `replayCacheSize`。下面的示例设置 `<localServiceSettings>``<localClientSettings> 和`  元素的属性：  
+4.  <span data-ttu-id="b71fd-138">根据需要，设置下列属性值：`detectReplays`、`maxClockSkew`、`replayWindow` 和 `replayCacheSize`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-138">Set the following attribute values, as appropriate: `detectReplays`, `maxClockSkew`, `replayWindow`, and `replayCacheSize`.</span></span> <span data-ttu-id="b71fd-139">下面的示例设置 `<localServiceSettings>` 和 `<localClientSettings>` 元素的属性：</span><span class="sxs-lookup"><span data-stu-id="b71fd-139">The following example sets the attributes of both a `<localServiceSettings>` and a `<localClientSettings>` element:</span></span>  
   
-    ```  
+    ```xml  
     <customBinding>  
       <binding name="NewBinding0">  
        <textMessageEncoding />  
@@ -78,27 +84,27 @@ caps.handback.revision: 10
     </customBinding>  
     ```  
   
-## 示例  
- 下面的示例使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 方法创建 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>，并设置绑定的重播属性。  
+## <a name="example"></a><span data-ttu-id="b71fd-140">示例</span><span class="sxs-lookup"><span data-stu-id="b71fd-140">Example</span></span>  
+ <span data-ttu-id="b71fd-141">下面的示例使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法创建 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>，并设置绑定的重播属性。</span><span class="sxs-lookup"><span data-stu-id="b71fd-141">The following example creates a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> using the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> method, and sets the replay properties of the binding.</span></span>  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## 重播范围：仅限消息安全  
- 请注意，下面的过程仅适用于“消息安全”模式。对于“传输”和“使用消息凭据传输”模式，传输机制将检测重播。  
+## <a name="scope-of-replay-message-security-only"></a><span data-ttu-id="b71fd-142">重播范围：仅限消息安全</span><span class="sxs-lookup"><span data-stu-id="b71fd-142">Scope of Replay: Message Security Only</span></span>  
+ <span data-ttu-id="b71fd-143">请注意，下面的过程仅适用于“消息安全”模式。</span><span class="sxs-lookup"><span data-stu-id="b71fd-143">Note that the following procedures apply only to Message security mode.</span></span> <span data-ttu-id="b71fd-144">对于“传输”和“使用消息凭据传输”模式，传输机制将检测重播。</span><span class="sxs-lookup"><span data-stu-id="b71fd-144">For Transport and Transport with Message Credential modes, the transport mechanisms detect replays.</span></span>  
   
-## 安全对话说明  
- 对于启用安全对话的绑定，可以针对应用程序通道和安全对话引导绑定来调整这些设置。例如，可以对应用程序通道关闭重播，但是对建立安全对话的引导通道启用重播。  
+## <a name="secure-conversation-notes"></a><span data-ttu-id="b71fd-145">安全对话说明</span><span class="sxs-lookup"><span data-stu-id="b71fd-145">Secure Conversation Notes</span></span>  
+ <span data-ttu-id="b71fd-146">对于启用安全对话的绑定，可以针对应用程序通道和安全对话引导绑定来调整这些设置。</span><span class="sxs-lookup"><span data-stu-id="b71fd-146">For bindings that enable secure conversations, you can adjust these settings both for the application channel as well as for the secure conversation bootstrap binding.</span></span> <span data-ttu-id="b71fd-147">例如，可以对应用程序通道关闭重播，但是对建立安全对话的引导通道启用重播。</span><span class="sxs-lookup"><span data-stu-id="b71fd-147">For example, you can turn off replays for the application channel but enable them for the bootstrap channel that establishes the secure conversation.</span></span>  
   
- 如果不使用安全对话会话，则重播检测不保证在服务器场方案中和回收进程时检测重播。这适用于系统提供的下列绑定：  
+ <span data-ttu-id="b71fd-148">如果不使用安全对话会话，则重播检测不保证在服务器场方案中和回收进程时检测重播。</span><span class="sxs-lookup"><span data-stu-id="b71fd-148">If you do not use secure conversation sessions, replay detection does not guarantee detecting replays in server farm scenarios and when the process is recycled.</span></span> <span data-ttu-id="b71fd-149">这适用于系统提供的下列绑定：</span><span class="sxs-lookup"><span data-stu-id="b71fd-149">This applies to the following system-provided bindings:</span></span>  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+-   <span data-ttu-id="b71fd-150"><xref:System.ServiceModel.BasicHttpBinding>。</span><span class="sxs-lookup"><span data-stu-id="b71fd-150"><xref:System.ServiceModel.BasicHttpBinding>.</span></span>  
   
--   与 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性关联的 <xref:System.ServiceModel.WSHttpBinding> 设置为 `false`。  
+-   <span data-ttu-id="b71fd-151"><xref:System.ServiceModel.WSHttpBinding>，其 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="b71fd-151"><xref:System.ServiceModel.WSHttpBinding> with the <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> property set to `false`.</span></span>  
   
-## 编译代码  
+## <a name="compiling-the-code"></a><span data-ttu-id="b71fd-152">编译代码</span><span class="sxs-lookup"><span data-stu-id="b71fd-152">Compiling the Code</span></span>  
   
--   编译该代码需要以下命名空间：  
+-   <span data-ttu-id="b71fd-153">编译该代码需要以下命名空间：</span><span class="sxs-lookup"><span data-stu-id="b71fd-153">The following namespaces are required to compile the code:</span></span>  
   
 -   <xref:System>  
   
@@ -106,9 +112,9 @@ caps.handback.revision: 10
   
 -   <xref:System.ServiceModel.Channels>  
   
-## 请参阅  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>   
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>   
- [安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)   
- [\<localClientSettings\>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)   
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="b71fd-154">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b71fd-154">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
+ <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
+ [<span data-ttu-id="b71fd-155">安全对话和安全会话</span><span class="sxs-lookup"><span data-stu-id="b71fd-155">Secure Conversations and Secure Sessions</span></span>](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
+ [<span data-ttu-id="b71fd-156">\<g s ></span><span class="sxs-lookup"><span data-stu-id="b71fd-156">\<localClientSettings></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
+ [<span data-ttu-id="b71fd-157">如何： 创建自定义绑定使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="b71fd-157">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
