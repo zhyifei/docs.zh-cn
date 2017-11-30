@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4006b18e91b79d5f31649a0a15a18b9f7f28c38e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6b93335d0d5d1524c9a0b955d1ea279be8c0f243
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 元素 (.NET Native)
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/21/2017
   
 |值|描述|  
 |-----------|-----------------|  
-|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=fullName> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。 参阅“备注”部分，了解支持对来自程序集的元数据有条件包含的 assembly_name 的一种特殊形式。|  
+|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。 参阅“备注”部分，了解支持对来自程序集的元数据有条件包含的 assembly_name 的一种特殊形式。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -79,8 +77,7 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [\<Application> 元素](../../../docs/framework/net-native/application-element-net-native.md)   
- [\<Directives> 元素](../../../docs/framework/net-native/directives-element-net-native.md)   
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [\<应用程序 > 元素](../../../docs/framework/net-native/application-element-net-native.md)  
+ [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-

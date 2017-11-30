@@ -1,25 +1,28 @@
 ---
-title: "终结点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "终结点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef4e27f6e7a45fe705aa09827702a64c960b6a16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 终结点
+# <a name="endpoint"></a>终结点
 终结点  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class Endpoint  
@@ -39,102 +42,102 @@ class Endpoint
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  该终结点类定义以下方法。  
   
 |方法|描述|  
-|--------|--------|  
+|------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|检索操作性能计数器实例名称|  
   
-## 属性  
+## <a name="properties"></a>属性  
  该终结点类具有以下属性：  
   
-### Address  
+### <a name="address"></a>Address  
  数据类型：String  
   
  访问类型：只读  
   
  一个包含终结点地址的 URI。  
   
-### AddressHeaders  
+### <a name="addressheaders"></a>AddressHeaders  
  数据类型：String array  
   
  访问类型：只读  
   
  附加到此终结点的地址头的集合。  
   
-### AddressIdentity  
+### <a name="addressidentity"></a>AddressIdentity  
  数据类型：String  
   
  访问类型：只读  
   
  终结点的标识。  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  数据类型：sint32  
   
  访问类型：只读  
   
  承载终结点的 AppDomain 的 AppDomain ID。  
   
-### 行为  
+### <a name="behaviors"></a>行为  
  数据类型：Behavior array  
   
  访问类型：只读  
   
  此终结点所实现的行为的集合。  
   
-### 绑定  
+### <a name="binding"></a>绑定  
  数据类型：绑定  
   
  访问类型：只读  
   
  此终结点所使用的绑定。  
   
-### ContractName  
+### <a name="contractname"></a>ContractName  
  数据类型：String  
   
  访问类型：只读  
   
  一个字符串，指定此终结点公开了哪个协定。  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  数据类型：String  
   
  访问类型：只读  
   
  该终结点的性能计数器的实例名称。  
   
-### ListenUri  
+### <a name="listenuri"></a>ListenUri  
  数据类型：String  
   
  访问类型：只读  
   
  终结点在其上侦听的 Uri。  
   
-### 名称  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
   
  此终结点的唯一名称。  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  数据类型：sint32  
   
  访问类型：只读  
   
  承载该终结点的进程的进程 ID。  
   
-### ref  
+### <a name="ref"></a>ref  
  数据类型：Contract  
   
  访问类型：只读  
   
  此终结点公开的协定。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
-|---------|------------------------------|  
-|命名空间|已在 root\\ServiceModel 中定义|
+|---------|-----------------------------------|  
+|命名空间|已在 root\ServiceModel 中定义|

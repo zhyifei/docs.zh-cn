@@ -1,22 +1,25 @@
 ---
-title: "受信任的外观服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "受信任的外观服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f70e5d7b36b2795dd00c59de6e569623c2bbe180
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 受信任的外观服务
+# <a name="trusted-facade-service"></a>受信任的外观服务
 本方案示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全基础结构使调用方标识信息从一个服务流到另一个服务。  
   
  使用外观服务向公共网络公开由服务提供的功能是一种常见设计模式。 外观服务通常驻留在周边网络（也称为 DMZ、外围安全区域和被筛选的子网）中，可与实现业务逻辑的后端服务通信和访问内部数据。 外观服务和后端服务之间的通信通道通过防火墙并通常仅限用于单一目的。  
@@ -34,13 +37,13 @@ caps.handback.revision: 14
 > [!IMPORTANT]
 >  后端服务委托外观服务对调用方进行身份验证。 因此，后端服务不再对调用方进行身份验证；它使用外观服务在转发的请求中提供的标识信息。 由于此信任关系，后端服务必须对外观服务进行身份验证，以确保转发的消息来自受信任的源（在本例中为外观服务）。  
   
-## 实现  
+## <a name="implementation"></a>实现  
  本示例中有两个通信路径： 第一个路径是在客户端和外观服务之间，第二个路径是在外观服务和后端服务之间。  
   
-### 客户端和外观服务之间的通信路径  
- 客户端到外观服务这一通信路径使用具有 `wsHttpBinding` 客户端凭据类型的 `UserName`。 这意味着客户端使用用户名和密码对外观服务进行身份验证，而外观服务使用 X.509 证书对客户端进行身份验证。 绑定配置如下例所示：  
+### <a name="communication-path-between-client-and-faade-service"></a>客户端和外观服务之间的通信路径  
+ 客户端到外观服务这一通信路径使用具有 `wsHttpBinding` 客户端凭据类型的 `UserName` 。 这意味着客户端使用用户名和密码对外观服务进行身份验证，而外观服务使用 X.509 证书对客户端进行身份验证。 绑定配置如下例所示：  
   
-```  
+```xml  
 <bindings>  
   <wsHttpBinding>  
     <binding name="Binding1">  
@@ -72,7 +75,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  自定义验证程序配置为在外观服务配置文件的 `serviceCredentials` 行为内部使用。 此行为还可用于配置服务的 X.509 证书。  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="FacadeServiceBehavior">  
@@ -99,12 +102,12 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
-### 外观服务和后端服务之间的通信路径  
- 外观服务到后端服务这一通信路径使用包含多个绑定元素的 `customBinding`。 此绑定可实现两个目的。 它对外观服务和后端服务进行身份验证，以确保通信的安全并确保通信来自受信任的源。 另外，它还可在 `Username` 安全令牌中传输初始调用方的标识。 在这种情况下，只将初始调用方的用户名传输到后端服务，密码不包括在消息中。 这是因为在将请求转发给调用方之前，后端服务会委托外观服务对调用方进行身份验证。 由于外观服务会向后端服务对其自身进行身份验证，因此后端服务可以信任所转发请求中包含的信息。  
+### <a name="communication-path-between-faade-service-and-backend-service"></a>外观服务和后端服务之间的通信路径  
+ 外观服务到后端服务这一通信路径使用包含多个绑定元素的 `customBinding` 。 此绑定可实现两个目的。 它对外观服务和后端服务进行身份验证，以确保通信的安全并确保通信来自受信任的源。 另外，它还可在 `Username` 安全令牌中传输初始调用方的标识。 在这种情况下，只将初始调用方的用户名传输到后端服务，密码不包括在消息中。 这是因为在将请求转发给调用方之前，后端服务会委托外观服务对调用方进行身份验证。 由于外观服务会向后端服务对其自身进行身份验证，因此后端服务可以信任所转发请求中包含的信息。  
   
  下面是此通信路径的绑定配置。  
   
-```  
+```xml  
 <bindings>  
   <customBinding>  
     <binding name="ClientBinding">  
@@ -116,7 +119,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [\<安全性\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 绑定元素负责传输和提取初始调用方的用户名。[\<windowsStreamSecurity\>](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) 和 [\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 负责对外观服务和后端服务进行身份验证并保护消息。  
+ [\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)绑定元素负责初始调用方的用户名传输和提取。 [ \<Windowsstreamsecurity 正在 >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)和[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)负责对外观和后端服务进行身份验证和消息保护。  
   
  为了转发请求，外观服务实现必须提供初始调用方的用户名，以便 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构将该用户名放在转发的消息中。 初始调用方的用户名是在外观服务实现中提供的，具体方式为在外观服务用于与后端服务进行通信的客户端代理实例的 `ClientCredentials` 属性中设置该用户名。  
   
@@ -135,7 +138,7 @@ public string GetCallerIdentity()
   
  如前面的代码中所示，未针对 `ClientCredentials` 属性设置密码，只设置用户名。 在此例子中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构创建不含密码的用户名安全令牌，这正是在情况下所要求的。  
   
- 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全机制会尝试使用所提供的密码将用户映射到 Windows 帐户。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 为了在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中实现此功能，提供了一个自定义 `UserNamePasswordValidator`，它只强制在令牌中指定用户名，不执行任何其他身份验证。  
+ 在后端服务上，必须对用户名安全令牌中包含的信息进行身份验证。 默认情况下， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全机制会尝试使用所提供的密码将用户映射到 Windows 帐户。 在这种情况下，不提供密码且不需要后端服务对用户名进行身份验证，因为外观服务已经执行了身份验证。 为了在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中实现此功能，提供了一个自定义 `UserNamePasswordValidator` ，它只强制在令牌中指定用户名，不执行任何其他身份验证。  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -158,7 +161,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  自定义验证程序配置为在外观服务配置文件的 `serviceCredentials` 行为内部使用。  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="BackendServiceBehavior">  
@@ -216,9 +219,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name` 声明。 此声明是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构根据 `Username` 安全令牌中包含的信息自动生成的。  
+ 使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构根据 `Username` 安全令牌中包含的信息自动生成的。  
   
-## 运行示例  
+## <a name="running-the-sample"></a>运行示例  
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。 在外观服务和后端服务控制台窗口中按 Enter 可以关闭服务。  
   
 ```  
@@ -235,7 +238,6 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
  使用“受信任外观”方案示例中包括的 Setup.bat 批处理文件可以用相关证书配置服务器，以便运行需要基于证书的安全向客户端对其自身进行身份验证的外观服务。 有关详细信息，请参见本主题末尾的设置过程。  
@@ -266,37 +268,37 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保已经执行了[Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-#### 在同一计算机上运行示例  
+#### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
 1.  确保路径包含 Makecert.exe 所在的文件夹。  
   
 2.  运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
   
-3.  在单独的控制台窗口中启动 \\BackendService\\bin 目录中的 BackendService.exe  
+3.  在单独的控制台窗口中启动 \BackendService\bin 目录中的 BackendService.exe  
   
-4.  在单独的控制台窗口中启动 \\FacadeService\\bin 目录中的 FacadeService.exe  
+4.  在单独的控制台窗口中启动 \FacadeService\bin 目录中的 FacadeService.exe  
   
-5.  启动 \\client\\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+5.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-6.  如果客户端与服务无法进行通信，请参见[Troubleshooting Tips](http://msdn.microsoft.com/zh-cn/8787c877-5e96-42da-8214-fa737a38f10b)。  
+6.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-#### 运行示例后进行清理  
+#### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   
-## 请参阅
+## <a name="see-also"></a>另请参阅

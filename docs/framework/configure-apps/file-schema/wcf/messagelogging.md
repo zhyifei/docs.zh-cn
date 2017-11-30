@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageLogging&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 该元素定义 Windows Communication Foundation (WCF) 的消息日志记录功能的设置。  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<系统。ServiceModel >  
+\<诊断 >  
+\<messageLogging >  
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -74,9 +76,9 @@ caps.handback.revision: 16
   
  可添加 XPath 筛选器以记录传输和服务级别的特定消息。 如果未定义任何筛选器，则记录所有消息。 筛选器仅应用于消息的标头。 正文会被忽略。 WCF 将忽略消息正文，以便提高性能。 如果要根据正文内容进行筛选，可以创建一个自定义侦听器，并采用具有相应功能的筛选器。  
   
- 您需要创建一个跟踪侦听器以激活消息跟踪。 侦听器本身可以是适用于任何侦听器<xref:System.Diagnostics>跟踪体系结构。 下面的示例演示如何创建此类侦听器。  
+ 您需要创建一个跟踪侦听器以激活消息跟踪。 侦听器本身可以是使用 <xref:System.Diagnostics> 跟踪体系结构的任何侦听器。 下面的示例演示如何创建此类侦听器。  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ caps.handback.revision: 16
   
 ## <a name="example"></a>示例  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ caps.handback.revision: 16
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
  [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

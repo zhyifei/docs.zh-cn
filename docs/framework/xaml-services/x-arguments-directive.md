@@ -1,75 +1,78 @@
 ---
-title: "x:Arguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Arguments directive [XAML Services]"
-  - "Arguments directive in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Arguments directive"
+title: "x:Arguments 指令"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Arguments directive [XAML Services]
+- Arguments directive in XAML [XAML Services]
+- XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# x:Arguments Directive
-在 XAML 中为非默认构造函数的对象元素声明或工厂方法对象声明打包构造参数。  
+# <a name="xarguments-directive"></a>x:Arguments 指令
+打包构造参数为非默认构造函数的对象元素声明在 XAML 中，或为工厂方法的对象声明。  
   
-## XAML 元素用法（非默认构造函数）  
+## <a name="xaml-element-usage-nondefault-constructor"></a>XAML 元素用法 （非默认构造函数）  
   
 ```  
-<object ...>  
+<object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## XAML 元素用法（工厂方法）  
+## <a name="xaml-element-usage-factory-method"></a>XAML 元素用法 （工厂方法）  
   
 ```  
-<object x:FactoryMethod="methodName"...>  
+<object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|一个以上对象元素，指定参数要传递到的后备非默认构造函数或工厂方法。<br /><br /> 典型用途是用于初始化对象元素中的文本，以指定实际的参数值。  请参见示例部分。<br /><br /> 元素的顺序有意义。  顺序中的 XAML 类型必须与后备构造函数或工厂方法重载的类型和类型顺序相匹配。|  
-|`methodName`|应能处理任何 `x:Arguments` 自变量的工厂方法的名称。|  
+|`oneOrMoreObjectElements`|指定要传递到的备份非默认构造函数或工厂方法自变量的一个或多个对象元素。<br /><br /> 典型用法就是使用对象元素中的初始化文本指定的实际自变量值。 请参阅示例部分。<br /><br /> 元素的顺序非常重要。 顺序中的 XAML 类型必须与类型匹配，并键入后备构造函数或工厂方法重载的顺序。|  
+|`methodName`|应能处理任何工厂方法的名称`x:Arguments`自变量。|  
   
-## 依赖项  
- `x:FactoryMethod` 可以修改范围和行为，其中 `x:Arguments` 适用。  
+## <a name="dependencies"></a>依赖项  
+ `x:FactoryMethod`可以修改的作用域和行为其中`x:Arguments`适用。  
   
- 如果没有指定 `x:FactoryMethod`，则 `x:Arguments` 适用于后备构造函数的备用（非默认）签名。  
+ 如果没有`x:FactoryMethod`指定，则`x:Arguments`适用于支持的构造函数的备用 （非默认值） 签名。  
   
- 如果指定 `x:FactoryMethod`，则 `x:Arguments` 将适用于命名方法的重载。  
+ 如果`x:FactoryMethod`指定，则`x:Arguments`适用于命名的方法的重载。  
   
-## 备注  
- XAML 2006 可支持通过初化文本进行非默认初始化。  但是，初始化文本构造种技术的实际应用是有限的。  初始化文本被视为一个单独的文本字符串；因此，它只会添加初始化单个参数的功能，除非对类型转换器定义了可分析自定义信息项并可自定义字符串中的分隔符的构造行为。  此外，文本字符串到对象逻辑可能是给定的 XAML 分析器的本机默认基元类型转换器，而不是真字符串。  
+## <a name="remarks"></a>备注  
+ XAML 2006 可以支持通过初始化文本的非默认初始化。 但是，实际的应用程序的初始化文本构造技术是有限的。 初始化文本视为单个文本字符串;因此，除非为自定义信息项和从字符串的自定义分隔符可以分析的构造行为定义的类型转换器它仅添加的单个参数初始化的功能。 此外，对象逻辑的文本字符串可能是给定的 XAML 分析器默认本机类型转换器处理 true 字符串以外的其他基元。  
   
- `x:Arguments` XAML 元素用法不是属性元素用法，因为指令标记未引用包含的对象元素类型。  它更类似于诸如 `x:Code` 这样的其他指令。在这些指令中元素区分出一个范围，在这个范围中标记并非子内容的默认值。  在这种情况下，每个对象元素的 XAML 类型与有关参数类型的信息进行通信，XAML 分析器会使用此信息确定 `x:Arguments` 使用率试图引用的特定构造函数工厂方法签名。  
+ `x:Arguments` XAML 用法不是属性元素用法在典型的意义上，因为指令标记不引用包含对象元素的类型。 这种风格更像其他指令是如`x:Code`其中元素 demarks 标记应解释为不子内容的默认值的范围。 在这种情况下，每个对象元素的 XAML 类型通信自变量类型中，XAML 分析器用于确定哪个特定构造函数的工厂方法签名的信息`x:Arguments`用法正尝试进行引用。  
   
- 要构造的对象元素的 `x:Arguments` 必须在其他所有属性元素之前，并且必须在对象元素的内容、内部文本、初始化字符串之前。  `x:Arguments` 内的对象元素，如同 XAML 类型及其后备构造函数或工厂方法允许的那样，可以包括特性和初始化字符串。  对于对象或参数，您可以指定自定义 XAML 类型或通过引用既定前缀映射在默认 XAML 命名空间外的 XAML 类型。  
+ `x:Arguments`对象元素正在构造必须先完成任何其他属性元素、 内容、 内部文本或对象元素的初始化字符串。 中的对象元素`x:Arguments`可以包括属性和初始化字符串许可的该 XAML 类型和其后备构造函数或工厂方法。 对于对象或自变量中，你可以指定自定义 XAML 类型或 XAML 类型，否则外部默认 XAML 命名空间是通过引用建立的前缀映射。  
   
- XAML 处理器使用以下准则来确定 `x:Arguments` 中指定的参数应如何用于构造对象。  如果指定了 `x:FactoryMethod`，则会将信息比作指定的 `x:FactoryMethod`（请注意，`x:FactoryMethod` 值为方法名称，命名的方法可以包含重载。  如果未指定 `x:FactoryMethod`，则将信息比作对象的所有公共构造函数重载集。  然后，XAML 处理逻辑将比较参数的数目，并根据匹配的参数数量选择过载。  如果存在多个匹配项，则 XAML 处理器应基于提供的对象元素的 XAML 类型，比较参数的类型。  如果仍存在多个匹配项，则 XAML 处理器行为未定义。  如果指定 `x:FactoryMethod` 但未能解析方法，则 XAML 处理器应引发异常。  
+ XAML 处理器使用以下准则来确定自变量中的指定`x:Arguments`应该用于构造一个对象。 如果`x:FactoryMethod`信息与进行比较的指定为指定`x:FactoryMethod`(请注意，值`x:FactoryMethod`是方法名称和命名的方法可以重载。 如果`x:FactoryMethod`未指定，则信息进行比较的对象的所有公共构造函数重载的集。 然后，XAML 处理逻辑比较参数的数目，并选择匹配的参数数量的重载。 如果没有匹配项不止一个，则 XAML 处理器应比较基于提供的对象元素的 XAML 类型的参数的类型。 如果没有仍多个匹配项，则 XAML 处理器行为不确定。 如果`x:FactoryMethod`指定，但该方法无法解决，XAML 处理器应引发异常。  
   
- 从技术上来说，XAML 特性用法 `<x:Arguments>string</x:Arguments>` 是可行的。  但是，这不提供功能之外的功能，否则初始化文本和类型装换器，本语法使用等功能都不是 XAML 2009 工厂方法功能的设计目标。  
+ XAML 属性用法`<x:Arguments>string</x:Arguments>`技术上可行。 但是，这提供了功能无法通过初始化文本和类型转换器，否则完成什么之外的功能，并且使用此语法不是 XAML 2009 工厂方法功能的设计意图。  
   
-## 示例  
- 以下示例显示了一个非默认的构造函数的签名，然后显示了访问该签名的 `x:Arguments` 的 XAML 用法。  
+## <a name="examples"></a>示例  
+ 下面的示例演示一个非默认构造函数签名，然后的 XAML 用法`x:Arguments`访问该签名。  
   
 ```csharp  
 public class Food {  
@@ -82,7 +85,7 @@ public class Food {
 }  
 ```  
   
-```  
+```xaml  
 <my:Food>  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -91,7 +94,7 @@ public class Food {
 </my:Food>  
 ```  
   
- 以下示例显示了一个目标工厂方法的签名，然后显示了访问该签名的 `x:Arguments` 的 XAML 用法。  
+ 下面的示例演示目标工厂方法签名，然后的 XAML 用法`x:Arguments`访问该签名。  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -105,7 +108,7 @@ public Food TryLookupFood(string name)
 }  
 ```  
   
-```  
+```xaml  
 <my:Food x:FactoryMethod="TryLookupFood">  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -113,6 +116,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## 请参阅  
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)   
- [XAML 概述 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>另请参阅  
+ [定义与 .NET Framework XAML 服务一起使用的自定义类型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
+ [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

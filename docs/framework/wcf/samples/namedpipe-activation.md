@@ -1,40 +1,43 @@
 ---
-title: "NamedPipe 激活 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NamedPipe 激活"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55594e1505e60ede8d7c6abcbd8a9cf9a1f739bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# NamedPipe 激活
-本示例演示如何承载使用 Windows 进程激活服务 \(WAS\) 的服务以激活通过命名管道进行通信的服务。  本示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并需要运行 [!INCLUDE[wv](../../../../includes/wv-md.md)]。  
+# <a name="namedpipe-activation"></a>NamedPipe 激活
+本示例演示如何承载使用 Windows 进程激活服务 (WAS) 的服务以激活通过命名管道进行通信的服务。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和需要[!INCLUDE[wv](../../../../includes/wv-md.md)]运行。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
 > [!IMPORTANT]
->  您的计算机上可能已安装这些示例。  在继续操作之前，请先检查以下（默认）目录：  
+>  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目录不存在，请访问[针对 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 和 Windows Workflow Foundation \(WF\) 示例](http://go.microsoft.com/fwlink/?LinkId=150780)（可能为英文网页），下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。  此示例位于以下目录：  
+>  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<安装驱动器>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
-## 示例详细信息  
- 本示例由客户端控制台程序 \(.exe\) 和由 Windows 进程激活服务 \(WAS\) 激活的辅助进程中承载的服务库 \(.dll\) 组成。  客户端活动显示在控制台窗口中。  
+## <a name="sample-details"></a>示例详细信息  
+ 本示例由客户端控制台程序 (.exe) 和由 Windows 进程激活服务 (WAS) 激活的辅助进程中承载的服务库 (.dll) 组成。 客户端活动显示在控制台窗口中。  
   
- 该服务实现定义“请求\-答复”通信模式的协定。  该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：  
+ 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，该接口公开数学运算（加、减、乘和除），如下面的示例代码所示：  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -74,14 +77,13 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- 示例使用经过修改的无安全性的 `netNamedPipeBinding` 绑定。  绑定是在客户端和服务的配置文件中指定的。  服务的绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置所示。  
+ 示例使用经过修改的无安全性的 `netNamedPipeBinding` 绑定。 绑定是在客户端和服务的配置文件中指定的。 服务的绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置所示。  
   
  如果您想使用安全的命名管道绑定，请将服务器的安全模式更改为所需的安全设置，并在客户端上重新运行 svcutil.exe 以获取更新的客户端配置文件。  
   
-```  
+```xml  
 <system.serviceModel>  
         <services>  
             <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -122,7 +124,7 @@ public class CalculatorService : ICalculator
   
  客户端的终结点信息按下面的示例代码所示进行配置。  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -152,7 +154,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- 运行示例时，操作请求和响应将显示在客户端控制台窗口中。  在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -163,27 +165,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### 设置、生成和运行示例  
+#### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
+1.  确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。  
   
-2.  确保已经执行了 [Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2.  确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
      此外，必须安装 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 激活组件：  
   
-    1.  从**“开始”**菜单中，选择**“控制面板”**。  
+    1.  从**启动**菜单上，选择**控制面板**。  
   
-    2.  选择**“程序和功能”**。  
+    2.  选择**程序和功能**。  
   
-    3.  单击**“打开或关闭 Windows 组件”**。  
+    3.  单击**打开或关闭 Windows 组件**。  
   
-    4.  展开**“Microsoft .NET Framework 3.0”**节点并选中**“Windows Communication Foundation 非 HTTP 激活”**功能。  
+    4.  展开**Microsoft.NET Framework 3.0**节点并选中**Windows Communication Foundation 非 HTTP 激活**功能。  
   
-3.  将 Windows 进程激活服务 \(WAS\) 配置为支持命名管道激活。  
+3.  将 Windows 进程激活服务 (WAS) 配置为支持命名管道激活。  
   
      为方便起见，在位于示例目录中名为 AddNetPipeSiteBinding.cmd 的批处理文件中实现以下两个步骤。  
   
-    1.  若要支持 net.pipe 激活，必须首先将默认的网站绑定到 net.pipe 协议。  可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。  在具有提升权限的（管理员）命令提示符处，运行下列命令。  
+    1.  若要支持 net.pipe 激活，必须首先将默认的网站绑定到 net.pipe 协议。 可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -195,7 +197,7 @@ Press <ENTER> to terminate client.
   
          此命令可将 net.pipe 网站绑定添加到默认网站。  
   
-    2.  尽管网站内的所有应用程序共享一个公共 net.pipe 绑定，但是每个应用程序可以单独启用 net.pipe 支持。  若要启用 \/servicemodelsamples 应用程序的 net.pipe，请在具有提升权限的命令提示符处运行以下命令。  
+    2.  尽管网站内的所有应用程序共享一个公共 net.pipe 绑定，但是每个应用程序可以单独启用 net.pipe 支持。 若要启用 /servicemodelsamples 应用程序的 net.pipe，请在具有提升权限的命令提示符处运行以下命令。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe  
@@ -204,9 +206,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  此命令是单行文本。  
   
-         执行此命令可以使用 http:\/\/localhost\/servicemodelsamples 和 net.tcp:\/\/localhost\/servicemodelsamples 来访问 \/servicemodelsamples 应用程序。  
+         执行此命令可以使用 http://localhost/servicemodelsamples 和 net.tcp://localhost/servicemodelsamples 来访问 /servicemodelsamples 应用程序。  
   
-4.  若要生成 C\# 或 Visual Basic .NET 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+4.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 5.  移除为此示例添加的 net.pipe 网站绑定。  
   
@@ -230,5 +232,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  必须以单行文本的形式键入此命令。  
   
-## 请参阅  
- [AppFabric 承载和持久性示例 （可能为英文网页）](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>另请参阅  
+ [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

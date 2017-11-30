@@ -1,48 +1,51 @@
 ---
-title: "如何：联接线条 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "斜角线段联接样式"
-  - "绘图, 联接线条"
-  - "图形, 联接线条"
-  - "GraphicsPath 对象"
-  - "线条联接"
-  - "文本行, 联接"
-  - "斜角线段联接样式"
-  - "Pen 类"
-  - "圆角线段联接样式"
+title: "如何：联接线条"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- miter line join style
+- bevel line join style
+- line join
+- drawing [Windows Forms], joining lines
+- GraphicsPath object
+- round line join style
+- lines [Windows Forms], joining
+- graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f02da181d66f7bb26a8414782e42eff2570e6918
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：联接线条
-线条联接点是由两条端点相交或重叠的线条构成的共同区域。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了三种线条联接样式：斜接、斜切和圆。  线条联接样式是 <xref:System.Drawing.Pen> 类的一个属性。  当为 <xref:System.Drawing.Pen> 对象指定线条联接样式时，联接样式将应用到任何使用该笔绘制的 <xref:System.Drawing.Drawing2D.GraphicsPath> 对象中的所有连接线条。  
+# <a name="how-to-join-lines"></a>如何：联接线条
+线条联接是由其端点相交或重叠的两个行构成的常见区域。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供三种线条联接样式： 斜接、 凹凸效果，和舍入。 线段联接样式是的一个属性<xref:System.Drawing.Pen>类。 当指定的行联接样式<xref:System.Drawing.Pen>对象，联接样式，将应用于任何中所有连接的直线<xref:System.Drawing.Drawing2D.GraphicsPath>使用该笔绘制的对象。  
   
- 下面的插图演示产生的斜切线条联接的结果。  
+ 下图显示凹凸效果的线条联接的结果。  
   
- ![钢笔](../../../../docs/framework/winforms/advanced/media/pens5.png "pens5")  
+ ![钢笔](../../../../docs/framework/winforms/advanced/media/pens5.gif "pens5")  
   
-## 示例  
- 可通过使用 <xref:System.Drawing.Pen> 类的 <xref:System.Drawing.Pen.LineJoin%2A> 属性指定线条联接样式。  下面的示例演示水平线条和垂直线条之间的斜切线条联接。  在下面的代码中，赋给 <xref:System.Drawing.Pen.LineJoin%2A> 属性的值 <xref:System.Drawing.Drawing2D.LineJoin> 为 <xref:System.Drawing.Drawing2D.LineJoin> 枚举的一个成员。  <xref:System.Drawing.Drawing2D.LineJoin> 枚举的其它成员是：<xref:System.Drawing.Drawing2D.LineJoin> 和 <xref:System.Drawing.Drawing2D.LineJoin>。  
+## <a name="example"></a>示例  
+ 可以通过使用指定的行联接样式<xref:System.Drawing.Pen.LineJoin%2A>属性<xref:System.Drawing.Pen>类。 示例演示了一条水平线和垂直线之间的凹凸效果的行联接。 在下面的代码中，值<xref:System.Drawing.Drawing2D.LineJoin.Bevel>分配给<xref:System.Drawing.Pen.LineJoin%2A>属性是成员的<xref:System.Drawing.Drawing2D.LineJoin>枚举。 其他成员<xref:System.Drawing.Drawing2D.LineJoin>枚举是<xref:System.Drawing.Drawing2D.LineJoin.Miter>和<xref:System.Drawing.Drawing2D.LineJoin.Round>。  
   
  [!code-csharp[System.Drawing.UsingAPen#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingAPen#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#31)]  
   
-## 编译代码  
- 前面的示例是为使用 Windows 窗体而设计的，它需要 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数 <xref:System.Windows.Forms.PaintEventArgs> `e`。  
+## <a name="compiling-the-code"></a>编译代码  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## 请参阅  
- [使用钢笔绘制线条和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>另请参阅  
+ [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

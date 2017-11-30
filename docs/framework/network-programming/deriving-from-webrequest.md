@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>从 WebRequest 派生
 <xref:System.Net.WebRequest> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的请求处理程序提供基本方法和属性。 使用 WebRequest 类的应用程序可使用任何支持的协议请求数据，而无需指定所使用的协议。  
   
- 必须满足两个条件才能将协议特定的类用作可插入协议：该类必须实现 <xref:System.Net.IWebRequestCreate> 接口，并且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法注册。 该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口。  
+ 必须满足两个条件才能将协议特定的类用作可插入协议：该类必须实现 <xref:System.Net.IWebRequestCreate> 接口，并且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法注册。 该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口。  
   
  WebRequest 实例是一次性的，如果想再发出请求，请创建一个新的 WebRequest。 WebRequest 支持 <xref:System.Runtime.Serialization.ISerializable> 接口，使开发人员能够序列化模板 WebRequest，然后针对其他请求重新构建模板。  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest Create 方法  
- <xref:System.Net.IWebRequestCreate.Create%2A> 方法负责初始化协议特定的类的新实例。 创建新 WebRequest 后，<xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法会将请求的 URI 与使用 RegisterPrefix 方法注册的 URI 前缀进行匹配。 正确的协议特定后代的 Create 方法必须返回该后代的初始化实例，该实例能够为协议执行标准请求/响应事务，且不需要修改任何协议特定的字段。  
+ <xref:System.Net.IWebRequestCreate.Create%2A> 方法负责初始化协议特定的类的新实例。 创建新 WebRequest 后，<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法会将请求的 URI 与使用 RegisterPrefix 方法注册的 URI 前缀进行匹配。 正确的协议特定后代的 Create 方法必须返回该后代的初始化实例，该实例能够为协议执行标准请求/响应事务，且不需要修改任何协议特定的字段。  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName 属性  
  <xref:System.Net.WebRequest.ConnectionGroupName%2A> 属性用于命名一组资源连接，以便可通过单个连接发出多个请求。 若要实现连接共享，必须使用协议特定的方法来集中和分配连接。 例如，提供的 <xref:System.Net.ServicePointManager> 类实现 <xref:System.Net.HttpWebRequest> 类的连接共享。 ServicePointManager 类创建可为每个连接组提供特定服务器连接的 <xref:System.Net.ServicePoint>。  
@@ -59,7 +53,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="headers-property"></a>Headers 属性  
  <xref:System.Net.WebRequest.Headers%2A> 属性包含与请求相关联的元数据的名称/值对的任意集合。 协议所需的任何可表示为名称/值对的元数据都可以包含在 Headers 属性中。 通常，在调用 <xref:System.Net.WebRequest.GetRequestStream%2A> 或 <xref:System.Net.WebRequest.GetResponse%2A> 方法之前必须先设置此信息；一旦发出请求，元数据就会被视为只读。  
   
- 用户无需使用 Headers 属性即可使用标头元数据。 协议特定的元数据可作为属性公开，例如，<xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> 属性公开了 User-Agent HTTP 标头。 将标头元数据作为属性公开时，应禁止使用 Headers 属性设置相同的属性。  
+ 用户无需使用 Headers 属性即可使用标头元数据。 协议特定的元数据可作为属性公开，例如，<xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> 属性公开了 User-Agent HTTP 标头。 将标头元数据作为属性公开时，应禁止使用 Headers 属性设置相同的属性。  
   
 ## <a name="method-property"></a>Method 属性  
  <xref:System.Net.WebRequest.Method%2A> 属性包含请求要求服务器执行的动作或操作。 Method 属性的默认值必须启用标准请求/响应操作，无需设置任何协议特定的属性。 例如，<xref:System.Net.HttpWebResponse.Method%2A> 方法默认为 GET，该方法从 Web 服务器请求资源并返回响应。  
@@ -104,9 +98,8 @@ ms.lasthandoff: 08/21/2017
  GetResponse 方法负责创建适当的 WebResponse 后代来包含传入的响应。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [从 WebResponse 派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

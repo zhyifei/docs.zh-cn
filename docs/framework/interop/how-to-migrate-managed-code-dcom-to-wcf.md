@@ -5,26 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d6077b9d5be8866aa22b884f61ad49f48ee9b0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: af401cafe0740dcd9a313ae9143f9772605137d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  
@@ -437,8 +430,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)   
- [生成客户端](../../../docs/framework/wcf/building-clients.md)   
+ [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [生成客户端](../../../docs/framework/wcf/building-clients.md)  
  [双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)
-

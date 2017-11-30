@@ -1,70 +1,71 @@
 ---
-title: "如何：设置 Windows 窗体上的 Tab 键顺序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabStop"
-  - "TabIndex"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 设置 Tab 键顺序"
-  - "Tab 键次序, Windows 窗体上的控件"
-  - "Windows 窗体控件, 设置 Tab 键顺序"
-  - "Windows 窗体, 设置 Tab 键顺序"
+title: "如何：设置 Windows 窗体上的 Tab 键顺序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TabStop
+- TabIndex
+helpviewer_keywords:
+- tab order [Windows Forms], controls on Windows forms
+- Windows Forms controls, setting tab order
+- controls [Windows Forms], setting tab order
+- Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：设置 Windows 窗体上的 Tab 键顺序
-Tab 键顺序就是用户按 TAB 键将焦点从一个控件移动到另一个控件的顺序。  每个窗体都有其自己的 Tab 键顺序。  默认情况下，Tab 键顺序与创建控件的顺序相同。  Tab 键顺序的编号从 0 开始。  
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：设置 Windows 窗体上的 Tab 键顺序
+Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB 键顺序。 每个窗体具有其自己的 tab 键顺序。 默认情况下，tab 键顺序是创建控件的顺序相同。 Tab 键顺序编号从 0 开始。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 设置控件的 Tab 键顺序  
+### <a name="to-set-the-tab-order-of-a-control"></a>若要设置控件的 tab 键次序  
   
-1.  在**“视图”**菜单上，单击**“Tab 键顺序”**。  
+1.  上**视图**菜单上，单击**tab 键顺序**。  
   
-     它激活窗体上的 Tab 键顺序选择模式。  在每个控件的左上角出现一个数字（表示 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性）。  
+     这将激活窗体上的 tab 键顺序选择模式。 一个数字 (表示<xref:System.Windows.Forms.Control.TabIndex%2A>属性) 显示在每个控件的左上角。  
   
-2.  依次单击控件以建立所需的 Tab 键顺序。  
-  
-    > [!NOTE]
-    >  控件在 Tab 键顺序内的位置可设为任何大于或等于 0 的值。  当出现重复时，将对两个控件的 Z\-顺序进行计算，位于上面的控件将拥有优先的 Tab 键顺序。  （Z\-顺序是窗体上的控件沿窗体的 Z 轴 \[深度\] 的可视化分层。  Z 顺序确定哪些控件位于其他控件的前面。）有关 Z\-顺序的更多信息，请参见[将 Windows 窗体上的对象分层](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
-  
-3.  完成后，再次单击**“视图”**菜单中的**“Tab 键顺序”**，离开 Tab 键顺序模式。  
+2.  单击的控件按顺序建立所需的选项卡顺序。  
   
     > [!NOTE]
-    >  无法获得焦点的控件以及禁用的和不可见的控件，都没有 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性，也不包括在 Tab 键顺序中。  当用户按 Tab 键时，将跳过这些控件。  
+    >  大于或等于 0，在选项卡顺序内的控件的位置可以设置为任何值。 当出现重复时，计算的两个控件的 z 顺序，并位于上面的控件为第一个选项卡式。 （z 顺序是沿窗体的 z 轴 [深度] 窗体上控件的可视化分层。 Z 顺序确定哪些控件位于其他控件的前面。）Z 顺序的详细信息，请参阅[Windows 窗体上的分层对象](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
   
- 另外，可以在“属性”窗口中使用 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性设置 Tab 键顺序。  控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 属性确定控件在 Tab 键顺序中的位置。  默认情况下，描述的第一个控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值为 0，第二个控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 为 1，依此类推。  
-  
- 另外，默认情况下，<xref:System.Windows.Forms.GroupBox> 控件有自己的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值，该值是一个整数。  <xref:System.Windows.Forms.GroupBox> 控件本身无法在运行时具有焦点。  因此，<xref:System.Windows.Forms.GroupBox> 内的每个控件都有其自己的十进制 <xref:System.Windows.Forms.Control.TabIndex%2A> 值（从 .0 开始）。  当 <xref:System.Windows.Forms.GroupBox> 控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 递增时，其中的控件自然也相应递增。  如果将 <xref:System.Windows.Forms.Control.TabIndex%2A> 值从 5 更改为 6，则该组中第一个控件的 <xref:System.Windows.Forms.Control.TabIndex%2A> 值自动更改为 6.0，依此类推。  
-  
- 最后，可在 Tab 键顺序中跳过窗体上众多控件中的任何控件。  通常，运行时连续按 TAB 键可选择 Tab 键顺序中的每个控件。  通过关闭 <xref:System.Windows.Forms.Control.TabStop%2A> 属性，可在窗体的 Tab 键顺序中忽略某控件。  
-  
-#### 从 Tab 键顺序中移除控件  
-  
-1.  在“属性”窗口中将控件的 <xref:System.Windows.Forms.Control.TabStop%2A> 属性设置为 `false`。  
-  
-     在用 TAB 键循环控件时，<xref:System.Windows.Forms.Control.TabStop%2A> 属性被设置为 `false` 的控件即使被跳过，它仍将保持其在 Tab 键顺序中的位置。  
+3.  完成后，单击**tab 键顺序**上**视图**菜单再次离开 tab 键顺序模式。  
   
     > [!NOTE]
-    >  单选按钮组在运行时只有一个制表位。  选定按钮（即，其 <xref:System.Windows.Forms.RadioButton.Checked%2A> 属性设置为 `true` 的按钮）的 <xref:System.Windows.Forms.Control.TabStop%2A> 属性自动设置为 `true`，而其他按钮的 <xref:System.Windows.Forms.Control.TabStop%2A> 属性则设置为 `false`。  有关对 <xref:System.Windows.Forms.RadioButton> 控件进行分组的更多信息，请参见[将 Windows 窗体 RadioButton 控件分组独立工作](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
+    >  无法获得焦点的控件，以及禁用，并且不可见控件没有<xref:System.Windows.Forms.Control.TabIndex%2A>属性，也不包括的 tab 键顺序。 当用户按 TAB 键，则跳过这些控件。  
   
-## 请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)   
- [排列 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [根据功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ 或者，可以在属性窗口中使用设置 tab 键顺序<xref:System.Windows.Forms.Control.TabIndex%2A>属性。 <xref:System.Windows.Forms.Control.TabIndex%2A>控件的属性确定的 tab 键顺序的放置位置。 默认情况下，第一个控件绘制具有<xref:System.Windows.Forms.Control.TabIndex%2A>值为 0，第二个具有<xref:System.Windows.Forms.Control.TabIndex%2A>为 1，依次类推。  
+  
+ 此外，默认情况下，<xref:System.Windows.Forms.GroupBox>控件具有其自己<xref:System.Windows.Forms.Control.TabIndex%2A>值，该值是一个整数。 A<xref:System.Windows.Forms.GroupBox>控件本身不能在运行时具有焦点。 因此，在每个控件<xref:System.Windows.Forms.GroupBox>具有其自己的十进制<xref:System.Windows.Forms.Control.TabIndex%2A>值，开头.0。 当然，作为<xref:System.Windows.Forms.Control.TabIndex%2A>的<xref:System.Windows.Forms.GroupBox>控件即会递增，其中的控件将相应递增。 如果你更改<xref:System.Windows.Forms.Control.TabIndex%2A>介于 5 和 6，值<xref:System.Windows.Forms.Control.TabIndex%2A>在其组的第一个控件的值自动更改为 6.0 中，依次类推。  
+  
+ 最后，任何控件的窗体上多可以跳过的 tab 键顺序。 通常情况下，连续按 tab 键在运行的时选择每个控件的 tab 键顺序。 通过关闭<xref:System.Windows.Forms.Control.TabStop%2A>属性，可以使控件通过传递窗体的 tab 键顺序。  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a>若要从 tab 键顺序中移除控件  
+  
+1.  设置控件的<xref:System.Windows.Forms.Control.TabStop%2A>属性`false`属性窗口中。  
+  
+     一个控件<xref:System.Windows.Forms.Control.TabStop%2A>属性已设置为`false`仍保持 tab 键顺序中，其位置，即使控件循环使用 TAB 键时，控件将跳过。  
+  
+    > [!NOTE]
+    >  单选按钮组具有一个制表位运行时。 所选的按钮 (即，具有的按钮其<xref:System.Windows.Forms.RadioButton.Checked%2A>属性设置为`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>属性自动设置为`true`，而其他按钮拥有其<xref:System.Windows.Forms.Control.TabStop%2A>属性设置为`false`。 有关更多信息分组<xref:System.Windows.Forms.RadioButton>控件，请参阅[分组用作一组 Windows 窗体 RadioButton 控件](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
+ [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

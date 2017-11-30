@@ -1,49 +1,50 @@
 ---
-title: "LinkLabel 控件（Windows 窗体） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Label 控件 [Windows 窗体]"
-  - "LinkLabel 控件 [Windows 窗体]"
-  - "链接, 添加到 Windows 窗体"
-  - "网页链接控件"
-  - "Windows 窗体, 添加链接"
+title: "LinkLabel 控件（Windows 窗体）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Label control [Windows Forms]
+- links [Windows Forms], adding to Windows Forms
+- Windows Forms, adding links
+- Web page link control
+- LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9627634f30ebdabe75ccfc7ff0ffa8fdd50655b9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# LinkLabel 控件（Windows 窗体）
-Windows 窗体 `LinkLabel` 控件使您能够向 Windows 窗体应用程序添加 Web 样式的链接。  一切可以使用 <xref:System.Windows.Forms.Label> 控件的地方都可以使用 `LinkLabel` 控件；还可以将文本的一部分设置为指向某个对象或网页的链接。  
+# <a name="linklabel-control-windows-forms"></a>LinkLabel 控件（Windows 窗体）
+Windows 窗体`LinkLabel`控制，你可以将 Web 样式的链接添加到 Windows 窗体应用程序。 你可以使用`LinkLabel`控件可以使用的所有操作都<xref:System.Windows.Forms.Label>控制; 也可以设置为链接到对象或网页的文本的一部分。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [LinkLabel 控件概述](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- 解释该控件是什么及其主要功能和属性。  
+ 说明此控件的本质及其主要功能和属性。  
   
  [如何：更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- 对于链接标签中 Web 样式的链接，列出指定其颜色和下划线的方法。  
+ 列出链接标签中指定的颜色和下划线 Web 样式的链接的方法。  
   
  [如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- 提供有关在单击链接时如何打开窗体或网页的说明。  
+ 提供有关如何打开窗体或网页时单击的链接说明。  
   
- [如何：通过 Windows 窗体 LinkLabel 控件显示网页 \(Visual Basic\)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
- 本示例在用户单击 Windows 窗体 `LinkLabel` 控件时在默认浏览器中显示网页。  
+ [如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
+ 演示如何在默认浏览器中显示网页，用户单击 Windows 窗体时`LinkLabel`控件。  
   
-## 参考  
+## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.LinkLabel> 类  
- 描述该类并提供指向其所有成员的链接。  
+ 对此类进行描述，并提供指向其所有成员的链接。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows 窗体控件的完整列表，其中包含指向这些控件用法信息的链接。
+ 提供指向有关其使用 Windows 窗体控件的完整列表。

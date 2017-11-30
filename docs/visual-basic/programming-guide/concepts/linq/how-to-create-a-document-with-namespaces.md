@@ -1,30 +1,22 @@
 ---
-title: "如何︰ 创建包含命名空间 (LINQ to XML) 的文档 (Visual Basic 中) |Microsoft 文档"
+title: "如何：使用命名空间创建文档 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 761967351cfc6292eb60a5941e213bfd90036f65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：使用命名空间创建文档 (LINQ to XML) (Visual Basic)
 本主题演示如何在 Visual Basic 中创建包含命名空间的文档。  
@@ -96,7 +88,7 @@ End Module
 ## <a name="example"></a>示例  
  下面的示例创建一个包含多个命名空间的文档，每个命名空间都具有命名空间前缀。  
   
- 序列化 XML 树时，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 发出所需的命名空间声明，这样每个元素都位于所指定的命名空间中。  
+ 序列化 XML 树时，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 发出所需的命名空间声明，这样每个元素都位于所指定的命名空间中。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -132,4 +124,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+ [处理 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

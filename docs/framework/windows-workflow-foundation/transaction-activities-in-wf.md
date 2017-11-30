@@ -1,29 +1,33 @@
 ---
-title: "WF 中的事务活动 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WF 中的事务活动"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb33378e-82c6-4ea0-870f-76dc77e7f0fe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6132f1d9cbeef3ed7af5d2b711d04e8bd5755bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# WF 中的事务活动
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 有几个系统提供的活动，为建模事务、赔偿和取消。这些编程模型允许继续向前发展变化中的业务逻辑和错误处理的事件中的工作流。[!INCLUDE[crabout](../../../includes/crabout-md.md)] 事务、补偿和取消，请参见 [事务](../../../docs/framework/windows-workflow-foundation//workflow-transactions.md)、[补偿](../../../docs/framework/windows-workflow-foundation//compensation.md) 和 [取消](../../../docs/framework/windows-workflow-foundation//modeling-cancellation-behavior-in-workflows.md)。  
+# <a name="transaction-activities-in-wf"></a>WF 中的事务活动
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含几个系统提供的活动，它们用于对事务、补偿和取消进行建模。 通过这些编程模型，工作流可以在业务逻辑和错误处理中发生更改时继续向前推进。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]事务、 补偿和取消，请参阅[事务](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)，[补偿](../../../docs/framework/windows-workflow-foundation/compensation.md)，和[取消](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)。  
   
-## 事务活动  
+## <a name="transaction-activities"></a>事务活动  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.CancellationScope>|以活动形式将取消逻辑与执行的主路径相关联（也表示为活动）。|  
+|<xref:System.Activities.Statements.CancellationScope>|将活动形式的取消逻辑与执行的主要路径（也表示为活动）相关联。|  
 |<xref:System.Activities.Statements.CompensableActivity>|支持对其子活动的补偿。|  
 |<xref:System.Activities.Statements.Compensate>|显式调用 <xref:System.Activities.Statements.CompensableActivity> 的补偿处理程序。|  
 |<xref:System.Activities.Statements.Confirm>|显式调用 <xref:System.Activities.Statements.CompensableActivity> 的确认处理程序。|  
 |<xref:System.Activities.Statements.TransactionScope>|划分事务边界。|  
-|<xref:System.ServiceModel.Activities.TransactedReceiveScope>|用于限定由收到的消息发起的事务的生存期范围。事务可以流入发起消息的工作流中，也可以在收到消息时由调度程序创建。 **Note:**  设置的其余部分位于 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 中**”消息传递“”工具箱“**部分下。|
+|<xref:System.ServiceModel.Activities.TransactedReceiveScope>|确定接收的消息启动的事务的生存期范围。 事务可以流入发起消息的工作流中，也可以在收到消息时由调度程序创建。 **注意：** <xref:System.ServiceModel.Activities.TransactedReceiveScope>位于**消息**部分**工具箱**。|

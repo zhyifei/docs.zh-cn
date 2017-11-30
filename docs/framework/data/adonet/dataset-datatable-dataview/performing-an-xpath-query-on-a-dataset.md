@@ -1,25 +1,31 @@
 ---
-title: "对 DataSet 执行 XPath 查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "对数据集执行 XPath 查询"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 对 DataSet 执行 XPath 查询
-通过同步的 <xref:System.Data.DataSet> 与 <xref:System.Xml.XmlDataDocument> 之间的关系，使您可以使用 XML 服务（例如 XML 路径语言 \(XPath\) 查询）访问 **XmlDataDocument**，并且可以比直接访问 **DataSet** 更方便地执行某些功能。  例如，不必使用 <xref:System.Data.DataTable> 的 **Select** 方法将关系导航到 **DataSet** 中的其他表，而可以对与 **DataSet** 同步的 **XmlDataDocument** 执行 XPath 查询，从而以 <xref:System.Xml.XmlNodeList> 形式获取 XML 元素的列表。  **XmlNodeList** 中的节点将强制转换为 <xref:System.Xml.XmlElement> 节点，然后可以传递到 **XmlDataDocument** 的 **GetRowFromElement** 方法，以返回对同步 **DataSet** 中表行的匹配 <xref:System.Data.DataRow> 引用。  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>对数据集执行 XPath 查询
+同步之间的关系<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>让你可以使用 XML 访问的服务，例如 XML 路径语言 (XPath) 查询， **XmlDataDocument**和可以执行某些功能比访问更方便地**数据集**直接。 例如，而不是使用**选择**方法<xref:System.Data.DataTable>来导航到其他表中的关系**数据集**，你可以对执行 XPath 查询**XmlDataDocument**与同步**数据集**，若要获取的窗体中的 XML 元素的列表<xref:System.Xml.XmlNodeList>。 中的节点**XmlNodeList**、 强制转换为<xref:System.Xml.XmlElement>节点，则传递给**GetRowFromElement**方法**XmlDataDocument**，则返回匹配<xref:System.Data.DataRow>对中同步的表的行的引用**数据集**。  
   
- 例如，以下代码示例执行“孙级”XPath 查询。  **DataSet** 由三个表进行填充：**Customers**、**Orders** 和 **OrderDetails**。  在该示例中，将首先在 **Customers** 表和 **Orders** 表之间以及 **Orders** 表和 **OrderDetails** 表之间创建父子关系。  然后，执行 XPath 查询来返回特定 **Customers** 节点的 **XmlNodeList**，在这些节点中，孙级 **OrderDetails** 节点的 **ProductID** 节点值为 43。  实质上，该示例是使用 XPath 查询来确定哪些客户订购了 **ProductID** 为 43 的产品。  
+ 例如，以下代码示例执行“孙级”XPath 查询。 **数据集**将填充这三个表：**客户**，**订单**，和**OrderDetails**。 在示例中，父-子关系首次创建之间**客户**和**订单**表，和介于**订单**和**OrderDetails**表。 然后，执行 XPath 查询来返回**XmlNodeList**的**客户**节点，孙级**OrderDetails**节点具有**ProductID**节点值为 43。 从根本上而言，该示例使用 XPath 查询来确定哪些客户订购的产品**ProductID**为 43。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## 请参阅  
- [数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

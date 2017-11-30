@@ -1,26 +1,29 @@
 ---
-title: "对 WCF 使用多个身份验证方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "对 WCF 使用多个身份验证方案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: db2545470c416fe066226124fb7833ef5d9e5d13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 对 WCF 使用多个身份验证方案
-WCF 现在允许您对单个终结点上指定多个身份验证方案。  此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。  自承载服务可以指定可使用的身份验证方案。  有关在 IIS 中设置身份验证设置的更多信息，请参见 [IIS 身份验证](http://go.microsoft.com/fwlink/?LinkId=232458)（可能为英文网页）。  
+# <a name="using-multiple-authentication-schemes-with-wcf"></a>对 WCF 使用多个身份验证方案
+WCF 现在允许您对单个终结点上指定多个身份验证方案。 此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。 自承载服务可以指定可使用的身份验证方案。 有关在 IIS 中设置身份验证设置的详细信息，请参阅[IIS 身份验证](http://go.microsoft.com/fwlink/?LinkId=232458)  
   
-## 承载于 IIS 中的服务  
- 对于承载于 IIS 中的服务，设置您希望在 IIS 中使用的身份验证方案。  然后，在您的服务的 web.config 文件中，在绑定配置中将 clientCredential 类型指定为“InheritedFromHost”，如下面的 XML 代码段中所示：  
+## <a name="iis-hosted-services"></a>承载于 IIS 中的服务  
+ 对于承载于 IIS 中的服务，设置您希望在 IIS 中使用的身份验证方案。 然后在服务的 web.config 文件中，在绑定配置 clientCredential 类型指定为"InheritedFromHost"以下 XML 代码段中所示：  
   
 ```xml  
 <bindings>  
@@ -34,7 +37,7 @@ WCF 现在允许您对单个终结点上指定多个身份验证方案。  此�
     </bindings>  
 ```  
   
- 可以使用 ServiceAuthenticationBehavior 或 \<serviceAuthenticationManager\> 元素指定仅希望将一部分的身份验证方案用于您的服务。  在代码中对此进行配置时，使用 ServiceAuthenticationBehavior，如下面的 XML 代码段中所示。  
+ 你可以指定您只想要用于使用 ServiceAuthenticationBehavior 对服务的身份验证方案的子集或\<serviceAuthenticationManager > 元素。 在代码中对此进行配置时，使用 ServiceAuthenticationBehavior，如下面的 XML 代码段中所示。  
   
 ```csharp  
 // ...  
@@ -52,10 +55,9 @@ else
      sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
 }  
 // ...  
-  
 ```  
   
- 在配置文件中对此进行配置时，使用 \<serviceAuthenticationManager\> 元素，如下面的 XML 代码段中所示。  
+ 在配置这在配置文件中时，使用\<serviceAuthenticationManager > 元素，如以下 XML 代码段中所示。  
   
 ```xml  
 <behaviors>  
@@ -68,10 +70,10 @@ else
     </behaviors>  
 ```  
   
- 这将确保只有一部分此处列出的身份验证方案将被考虑应用于服务终结点，具体是哪些身份验证方案取决于 IIS 中所选的内容。  这意味着，开发人员可以通过从 serviceAuthenticationManager 列表中省略基本身份验证而从列表中排除它，甚至即使在 IIS 中启用基本身份验证，它也将不会在服务终结点上应用  
+ 这将确保只有一部分此处列出的身份验证方案将被考虑应用于服务终结点，具体是哪些身份验证方案取决于 IIS 中所选的内容。 这意味着，开发人员可以通过从 serviceAuthenticationManager 列表中省略基本身份验证而从列表中排除它，甚至即使在 IIS 中启用基本身份验证，它也将不会在服务终结点上应用  
   
-## 自承载服务  
- 自承载服务在配置上稍有不同，因为没有要从其继承设置的 IIS。  从这里，使用 \<serviceAuthenticationManager\> 元素或 ServiceAuthenticationBehavior 指定将继承的身份验证设置。  在代码中如下所示：  
+## <a name="self-hosted-services"></a>自承载服务  
+ 自承载服务在配置上稍有不同，因为没有要从其继承设置的 IIS。 在本例中使用\<serviceAuthenticationManager > 元素或 ServiceAuthenticationBehavior 指定将继承的身份验证设置。 在代码中如下所示：  
   
 ```csharp  
 // ...  
@@ -89,7 +91,6 @@ else
      sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
 }  
 // ...  
-  
 ```  
   
  在配置中如下所示：  
@@ -119,21 +120,20 @@ else
     </bindings>  
 ```  
   
- 或者，您可以通过在 HTTP 传输绑定元素上设置身份验证架构，在自定义绑定中指定身份验证架构，如下面的配置代码段所示。  
+ 或者，你可以通过在 HTTP 传输绑定元素上设置身份验证架构，在自定义绑定中指定身份验证架构，如下面的配置代码段所示。  
   
 ```xml  
 <binding name="multipleBinding">  
-      <textMessageEncoding/>  
-      <httpTransport authenticationScheme="Negotiate, Ntlm, Digest, Basic" />  
-    </binding>  
-  
+      <textMessageEncoding/>  
+      <httpTransport authenticationScheme="Negotiate, Ntlm, Digest, Basic" />  
+    </binding>  
 ```  
   
-## 请参阅  
- [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)   
- [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)   
- [配置系统提供的绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)   
- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)   
+## <a name="see-also"></a>另请参阅  
+ [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [配置系统提供的绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  
  [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)

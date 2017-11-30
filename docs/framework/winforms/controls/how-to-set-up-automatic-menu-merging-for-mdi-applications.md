@@ -1,46 +1,47 @@
 ---
-title: "如何：为 MDI 应用程序设置自动菜单合并 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, 合并"
-  - "合并, 自动菜单"
+title: "如何：为 MDI 应用程序设置自动菜单合并"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e99aed38ed6c3af3424c264631f0eaf27e46af7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：为 MDI 应用程序设置自动菜单合并
-下面的过程描述了使用 <xref:System.Windows.Forms.MenuStrip> 在多文档界面 \(MDI\) 应用程序中设置自动合并的基本步骤。  
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>如何：为 MDI 应用程序设置自动菜单合并
+以下过程提供的基本步骤用于设置中包含的多文档界面 (MDI) 应用程序的自动合并<xref:System.Windows.Forms.MenuStrip>。  
   
-### 设置自动菜单合并  
+### <a name="to-set-up-automatic-menu-merging"></a>若要设置自动菜单合并  
   
-1.  通过将 MDI 父窗体的 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true` 来创建 MDI 父窗体。  
+1.  创建 MDI 父窗体通过设置其<xref:System.Windows.Forms.Form.IsMdiContainer%2A>属性`true`。  
   
-2.  向 MDI 父窗体添加 <xref:System.Windows.Forms.MenuStrip>，将其 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 属性设置为 <xref:System.Windows.Forms.MenuStrip>。  
+2.  添加<xref:System.Windows.Forms.MenuStrip>到 MDI 父，设置其<xref:System.Windows.Forms.Form.MainMenuStrip%2A>属性， <xref:System.Windows.Forms.MenuStrip>。  
   
-3.  创建一个 MDI 子窗体，并将其 <xref:System.Windows.Forms.Form.MdiParent%2A> 属性设置为父窗体的名称。  
+3.  创建 MDI 子窗体，并设置其<xref:System.Windows.Forms.Form.MdiParent%2A>到父窗体的名称的属性。  
   
-4.  向 MDI 子窗体添加一个 <xref:System.Windows.Forms.MenuStrip>。  
+4.  添加<xref:System.Windows.Forms.MenuStrip>到 MDI 子窗体。  
   
-5.  在子窗体中，将 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 属性设置为 `false`。  
+5.  在子窗体中，将设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性<xref:System.Windows.Forms.MenuStrip>到`false`。  
   
-6.  在要合并到父窗体的 <xref:System.Windows.Forms.MenuStrip> 中的子窗体处于活动状态时，将菜单项添加到该子窗体的 <xref:System.Windows.Forms.MenuStrip> 中。  
+6.  将菜单项添加到子窗体的<xref:System.Windows.Forms.MenuStrip>你想要合并到父窗体的<xref:System.Windows.Forms.MenuStrip>时激活子窗体。  
   
-7.  在子窗体 <xref:System.Windows.Forms.MenuStrip> 中使用菜单项上的 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 属性，以控制其合并到目标窗体的方式。  
+7.  使用<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>菜单上的属性中的子窗体的项<xref:System.Windows.Forms.MenuStrip>来控制如何将它们合并到父窗体。  
   
-## 请参阅  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

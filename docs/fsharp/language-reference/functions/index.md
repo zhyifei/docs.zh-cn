@@ -1,6 +1,6 @@
 ---
 title: "函数 (F#)"
-description: "函数 (F#)"
+description: "了解有关在 F # 和 F # 如何支持常见的函数编程构造函数。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 7a5fff4746157b430c6f1a492c23e9ea3d7b82c3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="functions"></a>函数
 
 函数是任何编程语言中程序执行的基本单元。 和其他语言一样，F# 函数有一个名称，可以有形参并采用实参，且具有一个主体。 F# 还支持函数编程构造，例如将函数视为值、在表达式中使用未命名的函数、组合函数以形成新的函数、扩充函数以及通过部分应用函数参数来隐式定义函数。
@@ -116,7 +115,7 @@ let vol = cylinderVolume 2.0 3.0
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>递归函数
-递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算第 n 个斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
+递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 下面的递归函数计算 *n*第斐波那契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -188,11 +187,11 @@ let result2 = Compose2 2
 
 // Pipelining
 // Pipeline operator
-// ( <| ) : ('T -> 'U) -> 'T -> 'U
+// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
 let Pipeline1 x = addOne <| timesTwo x
 
 // Backward pipeline operator
-// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
+// ( <| ) : ('T -> 'U) -> 'T -> 'U
 let Pipeline2 x = addOne x |> timesTwo
 
 // Result is 5
@@ -210,4 +209,3 @@ let result4 = Pipeline2 2
 [值](../values/index.md)
 
 [F# 语言参考](../index.md)
-

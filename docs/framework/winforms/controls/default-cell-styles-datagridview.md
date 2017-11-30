@@ -1,81 +1,82 @@
 ---
-title: "如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "单元格, 设置样式"
-  - "数据 [Windows 窗体], 设置格式"
-  - "数据格式"
-  - "DataGridView 控件 [Windows 窗体], 单元格样式"
+title: "如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], setting styles
+- data formats
+- data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
-通过 <xref:System.Windows.Forms.DataGridView> 控件可指定整个控件、某些特定列、行和列标头以及交替行的默认单元格样式和单元格数据格式，从而产生帐目型效果。  为列和交替行设置的默认样式会取代为整个控件设置的默认样式。  此外，在代码中为个别行和单元格设置的样式会取代默认样式。  
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
+<xref:System.Windows.Forms.DataGridView>控制可用于指定默认单元格样式和单元格为整个控件、 特定列的、 行和列标题和为交替行创建帐目型效果的数据格式。 设置整个控件的默认样式中被重写默认列和交替行样式设置中。 此外，在单独的行和单元格的代码中设置的样式重写默认样式。  
   
- 有关单元格样式的更多信息，请参见 [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  若要设置交替行的样式，请参见 [如何：使用设计器设置 Windows 窗体 DataGridView 控件的交替行样式](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)。  
+ 单元格样式有关的详细信息，请参阅[在 Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。 若要设置交替行样式，请参阅[如何： 设置 Windows 窗体 DataGridView 控件使用设计器交替行样式](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)。  
   
- 也可使用 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 属性设置样式，这样做会对所有将要添加到控件中的行产生影响。  有关行模板的更多信息，请参见 [如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)。  
+ 你还可以设置使用的样式<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性以影响将添加到控件的所有行。 有关行模板的详细信息，请参阅[如何： 在 Windows 窗体 DataGridView 控件中使用行模板自定义行](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)。  
   
- 下面的过程要求有一个带窗体的**“Windows 应用程序”**项目，且窗体中要包括一个 <xref:System.Windows.Forms.DataGridView> 控件。  有关设置此类项目的信息，请参见[How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
-  
-> [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
-  
-### 设置控件中所有单元格的默认样式  
-  
-1.  在设计器中选择 <xref:System.Windows.Forms.DataGridView> 控件。  
-  
-2.  在**“属性”**窗口中，单击 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>、<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 或 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 属性旁的省略号按钮 \(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)。  **“CellStyle 生成器”**对话框出现。  
-  
-3.  通过设置这些属性定义样式，并使用**“预览”**窗格确认所做选择。  
+ 下面的过程要求**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  如果启用了可视化样式，行和列标头（除 <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A> 外）会按当前主题自动调整样式，取代 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 和 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 属性值。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+  
+### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>若要设置控件中的所有单元格的默认样式  
+  
+1.  选择<xref:System.Windows.Forms.DataGridView>设计器中的控件。  
+  
+2.  在**属性**窗口中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
+  
+3.  通过设置属性，请使用定义样式**预览**窗格中，以确认你的选择。  
+  
+> [!NOTE]
+>  如果启用了可视样式，行和列标题 (除<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) 样式将自动由当前的主题中，重写<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性值。  
 >   
->  可使用设计器为多个选定的 <xref:System.Windows.Forms.DataGridView> 控件设置单元格样式，但仅在这些控件中您要修改的单元格样式属性值完全相同时才可这样做。  对于该属性，如果任一单元格样式有所不同，**“CellStyle 生成器”**对话框的**“属性”**窗口将变为空白。  
+>  你可以设置为多个选定的单元格样式<xref:System.Windows.Forms.DataGridView>控制使用设计器中的，但仅，如果它们具有你想要修改的单元格样式属性的相同值。 如果任何单元格样式不同于该属性，**属性**的 windows **CellStyle 生成器**对话框中将为空。  
   
-### 设置个别列中的单元格的默认样式  
+### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>在单个列中设置单元格的默认样式  
   
-1.  在设计器中右击 <xref:System.Windows.Forms.DataGridView> 控件并选择**“编辑列”**。  
+1.  右键单击<xref:System.Windows.Forms.DataGridView>控制在设计器并选择**编辑列**。  
   
-2.  从**“选定的列”**列表中选择一列。  
+2.  选择从列**选定的列**列表。  
   
-3.  在**“列属性”**网格中，单击 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 属性旁的省略号按钮 \(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)。  **“CellStyle 生成器”**对话框出现。  
+3.  在**列属性**网格中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
   
-4.  通过设置这些属性定义样式，并使用**“预览”**窗格确认所做选择。  
+4.  通过设置属性，请使用定义样式**预览**窗格中，以确认你的选择。  
   
-### 设定单元格中的数据的格式  
+### <a name="to-format-data-in-cells"></a>若要设置单元格中的数据的格式  
   
-1.  使用前面的过程之一显示与默认单元格样式属性关联的**“CellStyle 生成器”**对话框。  
+1.  使用前面的过程之一来显示**CellStyle 生成器**对话框相关的默认单元格样式属性。  
   
-2.  在**“CellStyle 生成器”**对话框中，单击 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 属性旁的省略号按钮 \(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)。  **“格式字符串”**对话框出现。  
+2.  在**CellStyle 生成器**对话框框中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>属性。 **格式字符串**对话框随即出现。  
   
-3.  选择一个格式类型，然后修改该类型的细节（如要显示的小数位数），并使用**“示例”**框确认所做选择。  
+3.  选择一个格式类型，然后修改的类型 （例如要显示的小数位数） 的详细信息使用**示例**框以确认你的选择。  
   
-4.  如果要将 <xref:System.Windows.Forms.DataGridView> 绑定到可能含 null 值的数据源，请填写**“Null”**文本框。  当单元格值等于 null 引用（Visual Basic 中为 `Nothing`）或 <xref:System.DBNull.Value?displayProperty=fullName> 时，将显示所填写的值。  
+4.  如果你正在绑定<xref:System.Windows.Forms.DataGridView>控件添加到数据源都可能包含 null 值、 填写**Null 值**文本框。 此值将显示当单元格的值等于空引用 (`Nothing`在 Visual Basic 中) 或<xref:System.DBNull.Value?displayProperty=nameWithType>。  
   
-## 请参阅  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=fullName>   
- [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [如何：使用设计器设置 Windows 窗体 DataGridView 控件的交替行样式](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-cn/b2f93fed-c635-4705-8d0e-cf079a264efa)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>  
+ [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [如何：使用设计器设置 Windows 窗体 DataGridView 控件的交替行样式](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ [如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
  [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

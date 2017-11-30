@@ -1,50 +1,48 @@
 ---
-title: "程序集和 Dll 的名称 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Dll 的名称 [.NET Framework]"
-  - "程序集的名称 [.NET Framework]"
-  - "程序集 [.NET Framework] 名称"
-  - "Dll 名称"
+title: "程序集和 DLL 的名称"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], DLLs
+- names [.NET Framework], assemblies
+- assemblies [.NET Framework], names
+- DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 程序集和 Dll 的名称
-程序集是部署和托管的代码程序标识的单元。 尽管程序集可以跨一个或多个文件，通常程序集一对一映射的 DLL。 因此，本部分介绍唯一 DLL 命名约定，然后可以映射到程序集的命名约定。  
+# <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
+程序集是部署和托管的代码程序的标识的单元。 程序集可以跨一个或多个文件，尽管通常程序集进行一对一映射 DLL。 因此，本部分介绍了唯一 DLL 命名约定，然后可以映射到程序集命名约定。  
   
- **✓ 执行** 选择建议的功能，例如 System.Data 大块的 Dll 程序集的名称。  
+ **✓ 执行**选择您的程序集建议的功能，例如 System.Data 大量的 Dll 的名称。  
   
- 程序集和 DLL 的名称不一定非得对应于命名空间名称，但可以合理地命名程序集时，请遵循命名空间名称。 好的经验法则是名称的公共前缀的程序集中包含的程序集所基于的 DLL。 例如，具有两个命名空间中的程序集 `MyCompany.MyTechnology.FirstFeature` 和 `MyCompany.MyTechnology.SecondFeature`, ，可以调用 `MyCompany.MyTechnology.dll`。  
+ 程序集和 DLL 名称无需对应于命名空间名称，但它是合理命名程序集时应遵循的命名空间名称。 好的经验法则是名称的公共前缀的程序集中包含的程序集所基于的 DLL。 例如，包含两个命名空间中的程序集`MyCompany.MyTechnology.FirstFeature`和`MyCompany.MyTechnology.SecondFeature`，无法调用`MyCompany.MyTechnology.dll`。  
   
- **✓ 请考虑** 按照下面的模式命名 Dll:  
+ **请考虑 ✓**按照下面的模式命名 Dll:  
   
  `<Company>.<Component>.dll`  
   
- 其中 `<Component>` 包含一个或多个圆点分隔的子句。 例如：  
+ 其中`<Component>`包含一个或多个以点分隔的子句。 例如:   
   
  `Litware.Controls.dll`。  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)   
- [命名准则](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>另请参阅  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+ [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

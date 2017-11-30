@@ -1,50 +1,48 @@
 ---
-title: "Visual Basic 中的 Main 过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Main"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "主函数"
-  - "Main 方法 [Visual Basic]"
-  - "Main 过程"
+title: "Visual Basic 中的 Main 过程"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Main
+helpviewer_keywords:
+- Main procedure
+- Main method [Visual Basic]
+- main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Visual Basic 中的 Main 过程
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-每个 Visual Basic 应用程序均必须包含一个称为 `Main` 的过程。  该过程为应用程序的起始点并为应用程序提供总体控制。  .NET Framework 在已加载应用程序并准备将控制传递给它时，将调用 `Main` 过程。  除非您要创建 Windows 窗体应用程序，否则就必须为自运行的应用程序编写 `Main` 过程。  
+# <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
+每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并对你的应用程序总体控制。 .NET Framework 调用你`Main`过程时它已加载你的应用程序，并已准备好将控件传递给它。 除非你要创建 Windows 窗体应用程序，你必须编写`Main`运行的应用程序在其自己的过程。  
   
- `Main` 中包含首先运行的代码。  在 `Main` 中，可以确定在程序启动时首先加载的窗体，确定系统上是否已在运行您的应用程序副本，为应用程序建立一组变量，或者打开应用程序需要的数据库。  
+ `Main`包含首先运行的代码。 在`Main`，可以确定在程序启动时首先加载的窗体，找出系统上是否已在运行你的应用程序的副本，为你的应用程序，建立一组变量或打开对于应用程序要求的数据库。  
   
-## Main 过程的要求  
- 独立运行的文件（扩展名通常为 .exe）必须包含 `Main` 过程。  库（例如，扩展名为 .dll）不独立运行，因而不需要 `Main` 过程。  可以创建的不同类型的项目的要求如下：  
+## <a name="requirements-for-the-main-procedure"></a>主要过程要求  
+ 在运行其自身 （通常使用扩展名为.exe) 文件必须包含`Main`过程。 （例如具有扩展名为.dll) 的库不运行其自身，并且不需要`Main`过程。 你可以创建不同类型的项目的要求如下所示：  
   
--   控制台应用程序可以独立运行，而且您必须提供至少一个 `Main` 过程。  .  
+-   控制台应用程序可以独立运行，并且你必须提供至少一个`Main`过程。 。  
   
--   Windows 窗体应用程序可以独立运行。  但是，Visual Basic 编译器会在此类应用程序中自动生成一个 `Main` 过程，因而您不需要编写此过程。  
+-   在上运行其自己的 Windows 窗体应用程序。 但是，Visual Basic 编译器自动生成`Main`过程中此类应用程序，并且你不需要编写一个此类型。  
   
--   类库不需要 `Main` 过程。  这些类库包括 Windows 控件库和 Web 控件库。  作为类库部署 Web 应用程序。  
+-   类库不需要`Main`过程。 其中包括 Windows 控件库和 Web 控件库。 作为类库部署 web 应用程序。  
   
-## 声明 Main 过程  
- 有四种方法可以声明 `Main` 过程。  它可以使用参数或不使用参数，可以返回值或不返回值。  
+## <a name="declaring-the-main-procedure"></a>声明的主要过程  
+ 有四种方式来声明`Main`过程。 它可以采用自变量，或不是，和它可以或不返回值。  
   
 > [!NOTE]
->  如果在类中声明 `Main` 过程，则必须使用 `Shared` 关键字。  在模块中，`Main` 不必是 `Shared`。  
+>  如果你声明`Main`在类中，你必须使用`Shared`关键字。 在模块中，`Main`不需要为`Shared`。  
   
--   最简单的方法是声明一个不使用参数或不返回值的 `Sub` 过程。  
+-   最简单方法是声明`Sub`不采用自变量或返回值的过程。  
   
     ```  
     Module mainModule  
@@ -56,7 +54,7 @@ caps.handback.revision: 16
     End Module  
     ```  
   
--   `Main` 还可以返回一个 `Integer` 值，操作系统将其作为程序的退出代码。  其他程序可以通过检查 Windows ERRORLEVEL 值来测试该代码。  若要返回退出代码，必须将 `Main` 过程声明为 `Function` 过程而不是 `Sub` 过程。  
+-   `Main`此外可以返回`Integer`值，该值为你的程序，操作系统使用与退出代码。 其他程序可以通过检查 Windows ERRORLEVEL 值来测试此代码。 若要返回退出代码，您必须声明`Main`作为`Function`过程而不是`Sub`过程。  
   
     ```  
     Module mainModule  
@@ -73,7 +71,7 @@ caps.handback.revision: 16
     End Module  
     ```  
   
--   `Main` 还可以采用一个 `String` 数组作为参数。  数组中的每个字符串均包含一个用于调用程序的命令行参数。  您可以根据它们的值采取不同的操作。  
+-   `Main`也可以采用`String`作为自变量的数组。 数组中的每个字符串包含用于调用程序的命令行自变量之一。 你可以采取不同的操作，具体取决于它们的值。  
   
     ```  
     Module mainModule  
@@ -97,7 +95,7 @@ caps.handback.revision: 16
     End Module  
     ```  
   
--   可以声明 `Main` 来检查命令行参数而不返回退出代码，如下所示。  
+-   你可以声明`Main`来检查命令行自变量而不是返回退出代码，，如下所示。  
   
     ```  
     Module mainModule  
@@ -117,15 +115,15 @@ caps.handback.revision: 16
     End Module  
     ```  
   
-## 请参阅  
- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>   
- <xref:System.Array.Length%2A>   
- <xref:Microsoft.VisualBasic.Information.UBound%2A>   
- [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)   
- [“Hello, World”的 Visual Basic 版本](http://msdn.microsoft.com/zh-cn/9d030b60-e148-4366-a462-69532f02294c)   
- [\/main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+ <xref:System.Array.Length%2A>  
+ <xref:Microsoft.VisualBasic.Information.UBound%2A>  
+ [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ [Hello，World NIB: Visual Basic 版本](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
+ [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)

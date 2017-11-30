@@ -1,27 +1,29 @@
 ---
-title: "元数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "元数据 [WCF]"
+title: "元数据"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 元数据
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为导出、发布、检索和导入元数据服务提供基础设施。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务终结点进行交互，以便工具例如，Svcutil.exe，可以自动生成用于访问服务的客户端代码。  
+# <a name="metadata"></a>元数据
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一个基础结构，用于导出、发布、检索和导入服务元数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务的终结点进行交互，以便工具（如 Svcutil.exe）可以自动生成客户端代码来访问服务。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  元数据体系结构的高级概述。  
   
@@ -40,8 +42,8 @@ caps.handback.revision: 10
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  描述使用服务元数据的不同方式。  
   
- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  描述在处理服务元数据时的一些重要安全注意事项。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

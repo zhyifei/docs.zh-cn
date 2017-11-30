@@ -1,47 +1,50 @@
 ---
-title: "如何：在 IIS 中承载非服务工作流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：在 IIS 中承载非服务工作流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 IIS 中承载非服务工作流
-可在 IIS\/WAS 下承载不属于工作流服务的工作流。  这在您需要承载他人编写的工作流时非常有用。  例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。  通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。  承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。  非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。  您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。  本主题将指导您创建简单工作流，定义客户端可用来激活工作流的服务协定，并从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，此类将使用服务协定侦听工作流创建请求。  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a>如何：在 IIS 中承载非服务工作流
+可在 IIS/WAS 下承载不属于工作流服务的工作流。 这在您需要承载他人编写的工作流时非常有用。 例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。  通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。 承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。 非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。  您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。 本主题将指导你完成创建简单工作流、 定义客户端可用来激活工作流服务协定和派生类从<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>它使用服务协定侦听工作流创建请求。  
   
-### 创建简单工作流  
+### <a name="create-a-simple-workflow"></a>创建简单工作流  
   
-1.  新建一个名为 `CreationEndpointTest` 的新的空 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 解决方案。  
+1.  新建一个名为 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 的新的空 `CreationEndpointTest` 解决方案。  
   
-2.  向该解决方案添加一个名为 `SimpleWorkflow` 的新 WCF 工作流服务应用程序项目。  工作流设计器将打开。  
+2.  向该解决方案添加一个名为 `SimpleWorkflow` 的新 WCF 工作流服务应用程序项目。 工作流设计器将打开。  
   
-3.  删除 ReceiveRequest 和 SendResponse 活动。  这些是使工作流成为工作流服务的活动。  由于我们没有使用工作流服务，因此不再需要它们。  
+3.  删除 ReceiveRequest 和 SendResponse 活动。 这些是使工作流成为工作流服务的活动。 由于我们没有使用工作流服务，因此不再需要它们。  
   
-4.  将顺序活动的 DisplayName 设置为“顺序工作流”。  
+4.  设置为"顺序工作流"的序列活动的 DisplayName。  
   
 5.  将 Service1.xamlx 重命名为 Workflow1.xamlx。  
   
-6.  单击顺序活动外部的设计器，并将 Name 和 ConfigurationName 属性设置为“Workflow1”。  
+6.  单击顺序活动外部的设计器并将设置为"Workflow1"的 Name 和 ConfigurationName 属性  
   
-7.  将 <xref:System.Activities.Statements.WriteLine> 活动拖到 <xref:System.Activities.Statements.Sequence> 中。  <xref:System.Activities.Statements.WriteLine> 活动可以在工具箱的**“基元”**部分找到。  将 <xref:System.Activities.Statements.WriteLine> 活动的 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性设置为“Hello, world”。  
+7.  将 <xref:System.Activities.Statements.WriteLine> 活动拖到 <xref:System.Activities.Statements.Sequence> 中。 <xref:System.Activities.Statements.WriteLine>在找不到活动**基元**工具箱的部分。 设置<xref:System.Activities.Statements.WriteLine.Text%2A>属性<xref:System.Activities.Statements.WriteLine>活动"Hello，world"。  
   
      现在，此工作流应该如下图所示。  
   
-     ![简单工作流](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
+     ![一个简单工作流](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
-### 创建工作流创建服务协定  
+### <a name="create-the-workflow-creation-service-contract"></a>创建工作流创建服务协定  
   
-1.  向 `CreationEndpointTest` 解决方案中添加一个名为 `Shared` 的新类库项目。  
+1.  向 `Shared` 解决方案中添加一个名为 `CreationEndpointTest` 的新类库项目。  
   
 2.  向 `Shared` 项目中添加对 System.ServiceModel.dll、System.Configuration 和 System.ServiceModel.Activities 的引用。  
   
@@ -69,11 +72,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-     此协定定义两个操作，用于创建您刚刚创建的非服务工作流的新实例。  一个操作创建具有生成的实例 ID 的新实例，另一个操作允许您为新工作流实例指定实例 ID。  两种方法都允许您向新工作流实例传入参数。  此协定将由 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 公开，以允许客户端创建非服务工作流的新实例。  
+     此协定定义两个操作，用于创建您刚刚创建的非服务工作流的新实例。 一个操作创建具有生成的实例 ID 的新实例，另一个操作允许您为新工作流实例指定实例 ID。  两种方法都允许您向新工作流实例传入参数。 此协定将由公开<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>以允许客户端创建非服务工作流的新实例。  
   
-### 从 WorkflowHostingEndpoint 派生类  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a>从 WorkflowHostingEndpoint 派生类  
   
-1.  向 `Shared` 项目中添加一个派生自 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 的名为 `CreationEndpoint` 的新类。  
+1.  添加新的类调用`CreationEndpoint`派生自<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>到`Shared`项目。  
   
     ```  
     using System;  
@@ -92,7 +95,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-2.  将名为 `defaultBaseUri` 的本地静态 <xref:System.Uri> 变量添加到 `CreationEndpoint` 类。  
+2.  将名为 <xref:System.Uri> 的本地静态 `defaultBaseUri` 变量添加到 `CreationEndpoint` 类。  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -101,7 +104,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-3.  将下面的构造函数添加到 `CreationEndpoint` 类。  请注意，在对基构造函数的调用中指定 `IWorkflowCreation` 服务协定。  
+3.  将下面的构造函数添加到 `CreationEndpoint` 类。 请注意，在对基构造函数的调用中指定 `IWorkflowCreation` 服务协定。  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -120,7 +123,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-5.  将静态 `DefaultBaseUri` 属性添加到 `CreationEndpoint` 类。  此属性将用于保留默认的基 URL（如未提供）。  
+5.  将静态 `DefaultBaseUri` 属性添加到 `CreationEndpoint` 类。 此属性将用于保留默认的基 URL（如未提供）。  
   
     ```  
     static Uri DefaultBaseUri  
@@ -148,7 +151,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-7.  重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 方法以返回工作流实例 ID。  如果 `Action` 标头以“Create”结尾，则返回空 GUID，如果 `Action` 标头以“CreateWithInstanceId”结尾，则返回传入方法的 GUID。  否则，将引发 <xref:System.InvalidOperationException>。  这些 `Action` 标头与 `IWorkflowCreation` 服务协定中定义的两个操作相对应。  
+7.  重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 方法以返回工作流实例 ID。 如果`Action`标头"创建"以返回一个空 GUID，如果`Action`标头以"CreateWithInstanceId"返回 GUID 传递到方法。 否则，将引发 <xref:System.InvalidOperationException>。 这些 `Action` 标头与 `IWorkflowCreation` 服务协定中定义的两个操作相对应。  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -198,11 +201,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-### 创建标准终结点元素以允许您配置 WorkflowCreationEndpoint  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a>创建标准终结点元素以允许您配置 WorkflowCreationEndpoint  
   
 1.  添加对 `CreationEndpoint` 项目中的 Shared 的引用。  
   
-2.  向 `CreationEndpoint` 项目中添加一个派生自 <xref:System.ServiceModel.Configuration.StandardEndpointElement> 的名为 `CreationEndpointElement` 的新类。  此类将表示 web.config 文件中的 `CreationEndpoint`。  
+2.  向 `CreationEndpointElement` 项目中添加一个派生自 <xref:System.ServiceModel.Configuration.StandardEndpointElement> 的名为 `CreationEndpoint` 的新类。 此类将表示 web.config 文件中的 `CreationEndpoint`。  
   
     ```  
     using System;  
@@ -236,10 +239,9 @@ caps.handback.revision: 7
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  重载 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 和 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 方法。  只需定义这些方法，无需向其中添加任何代码。  
+5.  重载 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 和 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 方法。 只需定义这些方法，无需向其中添加任何代码。  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-6.  将 `CreationEndpoint` 的集合类添加到 `CreationEndpoint` 项目的 CreationEndpointElement.cs 文件中。  配置使用此类来保留 web.config 文件中的大量 `CreationEndpoint` 实例。  
+6.  将 `CreationEndpoint` 的集合类添加到 `CreationEndpoint` 项目的 CreationEndpointElement.cs 文件中。 配置使用此类来保留 web.config 文件中的大量 `CreationEndpoint` 实例。  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,7 +271,7 @@ caps.handback.revision: 7
   
 7.  生成解决方案。  
   
-### 在 IIS 中承载工作流  
+### <a name="host-the-workflow-in-iis"></a>在 IIS 中承载工作流  
   
 1.  在 IIS 中新建一个名为 `MyCreationEndpoint` 的应用程序。  
   
@@ -290,7 +292,7 @@ caps.handback.revision: 7
   
 5.  在 `<system.web>` 元素后，通过添加下面的配置代码来注册 `CreationEndpoint`。  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ caps.handback.revision: 7
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
      这将注册 `CreationEndpointCollection` 类，以便您可以在 web.config 文件中配置 `CreationEndpoint`。  
   
-6.  添加带有 `CreationEndpoint` 的 `<service>` 元素（在 \<\/extensions\> 标记后面），终结点将用来侦听传入消息。  
+6.  添加`<service>`元素 (后\</extensions > 标记) 与`CreationEndpoint`终结点将侦听传入消息。  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  添加 \<behaviors\> 元素（在 \<\/services\> 标记后面）以启用服务元数据。  
+7.  添加\<行为 > 元素 (后 \< /> 标记) 以启用服务元数据。  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ caps.handback.revision: 7
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
-8.  将 web.config 复制到您的 IIS 应用程序目录。  
+8.  将 web.config 复制到你的 IIS 应用程序目录。  
   
-9. 通过启动 Internet Explorer 并浏览到 http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx，测试创建终结点是否在工作。  Internet Explorer 应显示下面的屏幕：  
+9. 通过启动 Internet Explorer 并浏览到 http://localhost/MyCreationEndpoint/Workflow1.xamlx，测试创建终结点是否在工作。 Internet Explorer 应显示下面的屏幕：  
   
-     ![测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
+     ![正在测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
-### 创建将调用 CreationEndpoint 的客户端。  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a>创建将调用 CreationEndpoint 的客户端。  
   
 1.  将新控制台应用程序添加到 `CreationEndpointTest` 解决方案。  
   
 2.  添加对 System.ServiceModel.dll、System.ServiceModel.Activities 和 `Shared` 项目的引用。  
   
-3.  在 `Main` 方法中，创建 `IWorkflowCreation` 类型的 <xref:System.ServiceModel.ChannelFactory%601> 并调用 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>。  这将返回一个代理。  然后，您可以对此代理调用 `Create` 以创建在 IIS 下承载的工作流实例：  
+3.  在`Main`方法创建<xref:System.ServiceModel.ChannelFactory%601>类型的`IWorkflowCreation`并调用<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>。 这将返回一个代理。 然后，您可以对此代理调用 `Create` 以创建在 IIS 下承载的工作流实例：  
   
     ```  
     using System.Text;  
@@ -374,18 +373,16 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  运行 CreationEndpointClient。  输出应如下所示：  
+4.  运行 CreationEndpointClient。 输出应如下所示：  
   
     ```Output  
-  
-                Workflow Instance created using CreationEndpoint added in config.  Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    Press return to exit ...    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
     >  您将看不到工作流的输出，因为它正在 IIS 下运行，而 IIS 没有控制台输出。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下是此示例的完整代码。  
   
 ```xaml  
@@ -430,7 +427,6 @@ caps.handback.revision: 7
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- 此示例可能看起来使人迷惑，因为您从未实现能实现 `IWorkflowCreation` 的服务。  这是因为 `CreationEndpoint` 为您这么做了。  
+ 此示例可能看起来使人迷惑，因为您从未实现能实现 `IWorkflowCreation` 的服务。 这是因为 `CreationEndpoint` 为您这么做了。  
   
-## 请参阅  
- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Windows 工作流体系结构](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [WorkflowHostingEndpoint 恢复书签](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [重新承载工作流设计器](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Windows 工作流概述](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a>另请参阅  
+ [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Windows Workflow 体系结构](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [WorkflowHostingEndpoint 恢复书签](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [重新托管工作流设计器](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Windows Workflow 概述](../../../../docs/framework/windows-workflow-foundation/overview.md)

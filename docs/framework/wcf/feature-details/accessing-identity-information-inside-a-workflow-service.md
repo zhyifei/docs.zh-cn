@@ -1,25 +1,28 @@
 ---
-title: "访问工作流服务内的标识信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "访问工作流服务内的标识信息"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 访问工作流服务内的标识信息
-若要访问工作流服务内的标识信息，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。在 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True 方法中，您可以访问 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> 来访问标识信息。本主题将指导您实现此执行属性，以及一个在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive> 活动的自定义活动。自定义活动将实现与 <xref:System.ServiceModel.Activities.Sequence> 活动相同的行为，但将 <xref:System.ServiceModel.Activities.Receive> 置于自定义活动内时除外，在此情况下，将调用 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 并检索标识信息。  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a>访问工作流服务内的标识信息
+若要访问工作流服务内的标识信息，您必须实现自定义执行属性中的 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 接口。 在<xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A>System.Activities.ExecutionProperties)?qualifyHint=False （&) 自动升级 = True 方法可以访问<xref:System.ServiceModel.OperationContext.ServiceSecurityContext>来访问标识信息。 本主题将指导您实现此执行属性，以及一个在运行时会将此属性呈现给 <xref:System.ServiceModel.Activities.Receive> 活动的自定义活动。  自定义活动将实现相同的行为<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活动时除外，<xref:System.ServiceModel.Activities.Receive>置于内，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>将调用，且将检索的标识信息。  
   
-### 实现 IReceiveMessageCallback  
+### <a name="implement-ireceivemessagecallback"></a>实现 IReceiveMessageCallback  
   
 1.  创建一个空的 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 解决方案。  
   
@@ -53,12 +56,11 @@ caps.handback.revision: 9
           }  
         }  
     }  
-  
     ```  
   
      此代码使用传入方法的 <xref:System.ServiceModel.OperationContext> 来访问标识信息。  
   
-### 实现本机活动可将 IReceiveMessageCallback 实现添加到 NativeActivityContext  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>实现本机活动可将 IReceiveMessageCallback 实现添加到 NativeActivityContext  
   
 1.  添加一个派生自 <xref:System.Activities.NativeActivity> 的名为 `AccessIdentityScope` 的新类。  
   
@@ -72,7 +74,6 @@ caps.handback.revision: 9
         Variable<int> currentIndex;  
         CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  实现构造函数  
@@ -84,7 +85,6 @@ caps.handback.revision: 9
         this.variables = new Collection<Variable>();  
         this.currentIndex = new Variable<int>();  
     }  
-  
     ```  
   
 4.  实现 `Activities` 和 `Variables` 属性。  
@@ -99,7 +99,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  重写 <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
@@ -112,7 +111,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  重写 <xref:System.Activities.NativeActivity.Execute%2A>  
@@ -149,12 +147,11 @@ caps.handback.revision: 9
        //increment the currentIndex  
        this.currentIndex.Set(context, ++currentActivityIndex);  
     }  
-  
     ```  
   
-### 实现工作流服务  
+### <a name="implement-the-workflow-service"></a>实现工作流服务  
   
-1.  打开现有的 `Program` 类。  
+1.  打开现有`Program`类。  
   
 2.  定义下面的常量：  
   
@@ -164,7 +161,6 @@ caps.handback.revision: 9
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  添加一个用于创建工作流服务的名为 `GetWorkflowService` 的静态方法。  
@@ -204,7 +200,6 @@ caps.handback.revision: 9
           }  
        };  
      }  
-  
     ```  
   
 4.  在现有的 `Main` 方法中，承载工作流服务。  
@@ -226,10 +221,9 @@ caps.handback.revision: 9
           host.Close();  
        }  
     }  
-  
     ```  
   
-### 实现工作流客户端  
+### <a name="implement-a-workflow-client"></a>实现工作流客户端  
   
 1.  创建一个名为 `Client` 的新控制台应用程序项目。  
   
@@ -293,7 +287,6 @@ caps.handback.revision: 9
           };  
        }  
     }  
-  
     ```  
   
 4.  将下列宿主代码添加到 `Main()` 方法。  
@@ -307,14 +300,12 @@ caps.handback.revision: 9
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面是本主题中使用的源代码的完整列表。  
   
 ```  
-  
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -352,11 +343,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -439,11 +428,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -516,11 +503,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // client.cs   
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -596,10 +581,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
-## 请参阅  
- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [访问 OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [使用命令性代码创作工作流、活动和表达式](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>另请参阅  
+ [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [访问 OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [使用强制性代码创建工作流、活动和表达式](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

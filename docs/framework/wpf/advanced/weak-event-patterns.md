@@ -1,144 +1,146 @@
 ---
-title: "弱事件模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件处理程序, 弱事件模式"
-  - "IWeakEventListener 接口"
-  - "弱事件模式实现"
-  - "WeakEventManager 类"
+title: "弱事件模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- weak event pattern implementation [WPF]
+- event handlers [WPF], weak event pattern
+- IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 弱事件模式
-在应用程序中，为了与将处理程序附加到事件源的侦听器对象配合，附加到该事件源的处理程序可能不会被破坏。  这种情况可能会导致内存泄漏。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了可用于解决此问题的设计模式，该模式为特定事件提供专用管理器类并为该事件的侦听器实现接口。  此设计模式称为“弱事件模式”。  
+# <a name="weak-event-patterns"></a>弱事件模式
+在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  
   
-## 为什么实现弱事件模式？  
- 侦听事件可能会导致内存泄漏。  侦听事件的一般方法是使用语言特定的语法，该语法将处理程序附加到源上的事件。  例如，在 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 中，该语法是：`source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
+## <a name="why-implement-the-weak-event-pattern"></a>为什么实现弱事件模式？  
+ 侦听事件可能导致内存泄漏。 为侦听事件的典型方法是使用将处理程序附加到源上的事件的特定于语言的语法。 例如，在[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]，语法是： `source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
   
- 此方法创建从事件源到事件侦听器的强引用。  通常，为侦听器附加事件处理程序会导致侦听器具有对象生存期，该生存期受源的对象生存期影响（除非显式移除了事件处理程序）。  但在某些情况下，您可能希望侦听器的对象生存期受其他因素（例如对象生存期当前是否属于应用程序的可视化树）控制，而不受源的生存期控制。  如果源对象生存期超出了侦听器的对象生存期，则常规事件模式会导致内存泄漏：侦听器保持活动状态的时间比预期要长。  
+ 此方法创建的强引用从事件源移到的事件侦听器。 通常，为侦听器附加事件处理程序会导致侦听器具有上 （除非显式删除事件处理程序） 受源的对象生存期对象生存期。 但在某些情况下，你可能想，侦听器可以由其他因素控制的对象生存期，如是否它当前所属的应用程序，而不是源的生存期的可视化树。 只要源对象生存期扩展的侦听器对象生存期结束后，正常事件模式会导致内存泄漏： 侦听器保持活动状态时间超过预期。  
   
- 弱事件模式旨在解决此内存泄漏问题。  每当侦听器需要注册事件，而该侦听器并不明确了解什么时候注销时，就可以使用弱事件模式。  当源的对象生存期超出侦听器的有用对象生存期时，也可以使用弱事件模式。  （在这种情况下，*有用*由您确定。）使用弱事件模式，侦听器可以注册和接收事件，同时不会对侦听器的对象生存期特征产生任何影响。  实际上，来自源的隐含引用无法确定侦听器是否适合进行垃圾回收。  该引用为弱引用，仅是弱事件模式和相关 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 的命名。  可以对侦听器进行垃圾回收或销毁，在不保留对现在销毁的对象的非可收集处理程序引用的情况下，源可以继续。  
+ 弱事件模式设计用于解决此内存泄漏问题。 只要侦听器需要注册一个事件，但该侦听器不明确了解何时注销时，会使用弱事件模式。 只要源的对象生存期超过了侦听器的有用的对象生存期，还会使用弱事件模式。 (在这种情况下，*有用*由你决定。)弱事件模式，侦听器可以注册和而不会影响以任何方式侦听器的对象生存期特征对事件进行接收。 实际上，从源隐式的引用不能决定侦听器是否是符合垃圾回收的条件。 引用为弱引用，因此的命名弱事件模式和相关[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 侦听器可以进行垃圾回收或销毁，且源可以继续而不保留对现在销毁对象的非可收集处理程序引用。  
   
-## 谁应实现弱事件模式？  
- 实现弱事件模式主要是对于控件作者而言是很有趣味的。  这是因为控件作者主要负责控件的行为和包容以及控件对其所插入到的应用程序的影响。  这包括控件对象生存期行为，特别是对所描述的内存泄漏问题的处理。  
+## <a name="who-should-implement-the-weak-event-pattern"></a>人员应实现弱事件模式？  
+ 主要用于控制作者有趣的是实现弱事件模式。 控件的作者，你有很大程度上责任的行为和包含的控件和对其插入到的应用程序的影响。 这包括控件对象生存期行为，特别是描述的内存泄漏问题的处理。  
   
- 某些方案本质上适合应用弱事件模式。  数据绑定就是这样一个方案。  在数据绑定中，通常源对象完全独立于侦听器对象，而该侦听器对象是绑定的目标。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定的许多方面在实现事件的方式上已应用了弱事件模式。  
+ 某些情况下本质上是有助于使自身弱事件模式的应用程序。 其中一种方案是数据绑定。 在数据绑定中，很常见的源对象，可以完全独立于的侦听器对象，它是绑定的目标。 许多方面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]数据绑定已具有应用于事件的实现方式弱事件模式。  
   
-## 如何实现弱事件模式  
- 可通过三种方式实现弱事件模式。  ，当您应使用每一时，下表列出了三种方法并提供某些指南。  
+## <a name="how-to-implement-the-weak-event-pattern"></a>如何实现弱事件模式  
+ 有三种方法实现弱事件模式。 下表列出的三种方法，并提供一些指导应何时使用每个。  
   
-|方法|在实现|  
-|--------|---------|  
-|使用现有弱事件管理器类|如果希望订阅的事件具有相应的 <xref:System.Windows.WeakEventManager>，使用现有的弱事件管理器。  有关所附带的 WPF 弱事件管理器的列表，请参见。 <xref:System.Windows.WeakEventManager> 类的继承层次结构。  但是，请注意，具有相对包含 WPF 的较弱事件管理器，因此，您可能需要选择其他方法之一。|  
-|使用泛型弱事件管理器类|使用泛型 <xref:System.Windows.WeakEventManager%602> ，当现有 <xref:System.Windows.WeakEventManager> 不可用时，您需要一种简单的方法实现，因此，您不考虑性能。  泛型 <xref:System.Windows.WeakEventManager%602> 比现有或自定义弱事件管理器效率低。  例如，泛型类执行更多反射发现命名该事件的名称。  此外，注册的代码使用常规 <xref:System.Windows.WeakEventManager%602> 事件使用现有或自定义 <xref:System.Windows.WeakEventManager>详细的速度。|  
-|创建自定义弱事件管理器类|创建自定义 <xref:System.Windows.WeakEventManager> ，在现有 <xref:System.Windows.WeakEventManager> 不可用时，并且您希望在最好的性能。  使用自定义 <xref:System.Windows.WeakEventManager> 订阅事件将更为有效的，但是，则会先编写更多代码的成本。|  
+|方法|何时实现|  
+|--------------|-----------------------|  
+|使用现有弱事件 manager 类|如果你想要订阅的事件具有对应<xref:System.Windows.WeakEventManager>，使用现有弱事件管理器。 弱事件管理器所包含的 WPF 的列表，请参阅中的继承层次结构<xref:System.Windows.WeakEventManager>类。 但是，请注意，有相对较少弱事件管理器将包含在 WPF 中，这样你将可能需要选择其他方法之一。|  
+|使用泛型弱事件管理器类|使用通用<xref:System.Windows.WeakEventManager%602>如果现有<xref:System.Windows.WeakEventManager>不可用，你想轻松实现，并且你不关心效率。 泛型<xref:System.Windows.WeakEventManager%602>效率低于现有或自定义的弱事件管理器。 例如，泛型类执行详细的反射来发现给定名称的事件的事件。 此外，通过使用泛型注册事件的代码<xref:System.Windows.WeakEventManager%602>为更详细比使用的现有或自定义<xref:System.Windows.WeakEventManager>。|  
+|创建自定义弱事件管理器类|创建自定义<xref:System.Windows.WeakEventManager>时你的现有<xref:System.Windows.WeakEventManager>不可用，并且你希望最高的效率。 使用自定义<xref:System.Windows.WeakEventManager>璹綷事件将会更高效，但你执行会产生编写更多代码开头的成本。|  
   
- 以下各节描述如何实现弱事件模式。  在本讨论中的目的，订阅的事件具有下列特征。  
+ 下列各节描述如何实现弱事件模式。  出于本文的讨论，订阅的事件具有以下特征。  
   
--   操作名称为 `SomeEvent`。  
+-   事件名称不`SomeEvent`。  
   
--   事件由 `EventSource` 类引发。  
+-   事件由引发`EventSource`类。  
   
--   事件处理程序具有类型: `SomeEventEventHandler` \(或 `EventHandler<SomeEventEventArgs>`\)。  
+-   事件处理程序类型： `SomeEventEventHandler` (或`EventHandler<SomeEventEventArgs>`)。  
   
--   事件通过类型 `SomeEventEventArgs` 的参数为事件处理程序。  
+-   该事件传递的参数类型`SomeEventEventArgs`到事件处理程序。  
   
-### 使用现有弱事件管理器类  
+### <a name="using-an-existing-weak-event-manager-class"></a>使用现有弱事件管理器类  
   
-1.  查找现有弱事件管理器。  
+1.  管理器中找到的现有弱事件。  
   
-     有关所附带的 WPF 弱事件管理器的列表，请参见。 <xref:System.Windows.WeakEventManager> 类的继承层次结构。  
+     弱事件管理器所包含的 WPF 的列表，请参阅中的继承层次结构<xref:System.Windows.WeakEventManager>类。  
   
-2.  使用新的弱事件管理器而不是常规事件挂接。  
+2.  使用新的弱事件管理器，而不是正常事件挂钩。  
   
-     例如，因此，如果代码使用以下模式订阅事件:  
+     例如，如果你的代码使用以下模式来订阅事件：  
   
     ```  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     将其更改为以下模式:  
+     将其更改为以下模式：  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     同样，因此，如果代码使用以下模式取消订阅事件:  
+     同样，如果你的代码使用以下模式来取消订阅事件：  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     将其更改为以下模式:  
+     将其更改为以下模式：  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-### 使用泛型弱事件管理器类  
+### <a name="using-the-generic-weak-event-manager-class"></a>使用泛型的弱事件管理器类  
   
-1.  使用泛型 <xref:System.Windows.WeakEventManager%602> 类而不是常规事件挂接。  
+1.  使用泛型<xref:System.Windows.WeakEventManager%602>类而不是正常事件挂钩。  
   
-     当您使用 <xref:System.Windows.WeakEventManager%602> 注册事件侦听器时，如下面的代码所示，可以提供事件源和 <xref:System.EventArgs> 类型为类型参数提供类并调用 <xref:System.Windows.WeakEventManager%602.AddHandler%2A> :  
+     当你使用<xref:System.Windows.WeakEventManager%602>要注册事件侦听器，必须提供事件源和<xref:System.EventArgs>用作类和调用类型参数的类型<xref:System.Windows.WeakEventManager%602.AddHandler%2A>中下面的代码所示：  
   
     ```  
     WeakEventManager<EventSource, SomeEventEventArgs>.AddHandler(source, "SomeEvent", source_SomeEvent);  
     ```  
   
-### 创建自定义弱事件管理器类  
+### <a name="creating-a-custom-weak-event-manager-class"></a>创建自定义的弱事件管理器类  
   
-1.  复制下面的类模板添加到项目。  
+1.  将以下类模板复制到你的项目。  
   
-     此类从 <xref:System.Windows.WeakEventManager> 类继承。  
+     此类继承自<xref:System.Windows.WeakEventManager>类。  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  将替换 `SomeEventWeakEventManager` 名称拥有名称。  
+2.  替换`SomeEventWeakEventManager`名称与你自己的名称。  
   
-3.  用相应的名称替换前面所述的三个名称事件。  \(`SomeEvent`、 `EventSource`和 `SomeEventEventArgs`\)  
+3.  将与你的事件的相应名称的前面所述的三个名称。 (`SomeEvent`， `EventSource`，和`SomeEventEventArgs`)  
   
-4.  设置可见性 \(公共\/内部\/私有\) 弱事件管理器类将与事件它管理的可见性。  
+4.  设置为与它所管理的事件相同的可见性弱事件管理器类的可见性 （公共 / 内部 / 私有）。  
   
-5.  使用新的弱事件管理器而不是常规事件挂接。  
+5.  使用新的弱事件管理器，而不是正常事件挂钩。  
   
-     例如，因此，如果代码使用以下模式订阅事件:  
+     例如，如果你的代码使用以下模式来订阅事件：  
   
     ```  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     将其更改为以下模式:  
+     将其更改为以下模式：  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     同样，因此，如果代码使用以下模式取消订阅事件:  
+     同样，如果你的代码使用以下模式来取消订阅事件：  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     将其更改为以下模式:  
+     将其更改为以下模式：  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## 请参阅  
- <xref:System.Windows.WeakEventManager>   
- <xref:System.Windows.IWeakEventListener>   
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.WeakEventManager>  
+ <xref:System.Windows.IWeakEventListener>  
+ [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)

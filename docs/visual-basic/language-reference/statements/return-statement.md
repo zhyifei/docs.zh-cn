@@ -1,33 +1,31 @@
 ---
-title: "Return 语句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Return"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "控制流, 将控件返回到表达式"
-  - "表达式 [Visual Basic], 将控件返回到"
-  - "Return 语句"
-  - "Return 语句, 语法"
+title: "Return 语句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Return
+helpviewer_keywords:
+- Return statement [Visual Basic], syntax
+- control flow [Visual Basic], returning control to expressions
+- Return statement [Visual Basic]
+- expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b66d16a249164b8989f05f10c785b97055bfde9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Return 语句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-将控制返回给调用 `Function`、`Sub`、`Get`、`Set` 或 `Operator` 过程的代码。  
+# <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
+将控制权返回给调用的代码`Function`， `Sub`， `Get`， `Set`，或`Operator`过程。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 Return  
@@ -35,31 +33,31 @@ Return
 Return expression  
 ```  
   
-## 组成部分  
+## <a name="part"></a>部件  
  `expression`  
- 在 `Function`、`Get` 或 `Operator` 过程中为必选项。  表达式，表示要返回给调用代码的值。  
+ 中所需`Function`， `Get`，或`Operator`过程。 表示要返回到调用代码的值的表达式。  
   
-## 备注  
- 在 `Sub` 或 `Set` 过程中，`Return` 语句等效于 `Exit Sub` 或 `Exit Property` 语句，并且不得提供 `expression`。  
+## <a name="remarks"></a>备注  
+ 在`Sub`或`Set`过程中，`Return`语句是等效于`Exit Sub`或`Exit Property`语句，和`expression`必须未提供。  
   
- 在 `Function`、`Get` 或 `Operator` 过程中，`Return` 语句必须包括 `expression`，并且 `expression` 的计算结果必须是可转换为过程返回类型的数据类型。  在 `Function` 或 `Get` 过程中，您还可以使用另一种方法：将表达式赋给过程名称以充当返回值，然后执行 `Exit Function` 或 `Exit Property` 语句。  在 `Operator` 过程中，必须使用 `Return` `expression`。  
+ 在`Function`， `Get`，或`Operator`过程中，`Return`语句必须包含`expression`，和`expression`计算结果必须为可以转换为的过程的返回类型的数据类型。 在`Function`或`Get`过程中，你还可以选择表达式分配到过程名称以作为返回值，然后执行`Exit Function`或`Exit Property`语句。 在`Operator`过程中，你必须使用`Return``expression`。  
   
- 可以根据需要在同一过程中包括任意多个 `Return` 语句。  
+ 可以包括任意多个`Return`应在相同的过程中适当的语句。  
   
 > [!NOTE]
->  `Finally` 块中的代码运行的条件是：在 `Try` 或 `Catch` 块中遇到了 `Return` 语句之后，但在该 `Return` 语句尚未执行之前。  `Return` 语句在 `Finally` 不能包含块。  
+>  中的代码`Finally`块之后运行`Return`中的语句`Try`或`Catch`块是遇到，但在此之前`Return`执行语句。 A`Return`语句不能包含在`Finally`块。  
   
-## 示例  
- 下面的示例多次使用 `Return` 语句，以在过程无需执行任何其他操作时返回到调用代码。  
+## <a name="example"></a>示例  
+ 下面的示例使用`Return`语句数次以返回到调用代码时不需要执行任何其他操作过程。  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## 请参阅  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)   
+## <a name="see-also"></a>另请参阅  
+ [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

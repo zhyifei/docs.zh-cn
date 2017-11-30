@@ -1,111 +1,109 @@
 ---
-title: "枚举设计 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "类型设计准则枚举"
-  - "简单枚举"
-  - "枚举 [.NET Framework] 设计准则"
-  - "类库设计准则 [.NET Framework] 枚举"
-  - "标志枚举"
+title: "枚举设计"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines, enumerations
+- simple enumerations
+- enumerations [.NET Framework], design guidelines
+- class library design guidelines [.NET Framework], enumerations
+- flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b7e1686dca2b96e339917b6dd4861f0f43d20d66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 枚举设计
-枚举是一种特殊的值类型。 有两种枚举︰ 简单的枚举和标志枚举。  
+# <a name="enum-design"></a>枚举设计
+枚举是特殊类型的值类型。 有两种枚举： 简单枚举和标志枚举。  
   
- 简单枚举表示小闭的集的选项。 简单枚举的一个常见示例是一组颜色。  
+ 简单枚举表示小闭的集的选择。 简单枚举的一个常见示例是一组的颜色。  
   
- 标志枚举都设计为支持的枚举值的按位运算。 标志枚举的一个常见示例是选项的列表。  
+ 标志枚举旨在支持的枚举值的按位运算。 标志枚举的一个常见示例是选项的列表。  
   
- **✓ 执行** 使用 enum 强类型化参数、 属性和返回值表示的值集。  
+ **✓ 执行**枚举用于强类型参数、 属性，并返回表示的值的集的值。  
   
- **✓ 执行** 倾向于使用而不静态常量的枚举。  
+ **✓ 执行**倾向于使用而不静态常量的枚举。  
   
- **X 不** 对开放集 （如操作系统版本、 朋友、 等的名称。），才使用。  
+ **X 不**枚举用于打开集 （如操作系统版本、 名称的友元，等等。）。  
   
- **X 不** 供将来使用提供的旨在保留的枚举值。  
+ **X 不**提供应保留的枚举值供将来使用。  
   
- 始终只可以在以后的阶段到的现有枚举添加值。 请参阅 [将值添加到枚举](#add_value) 有关将值添加到枚举的更多详细信息。 保留的值只需污染的实际值集，并往往会导致用户错误。  
+ 你在以后的阶段始终只需向现有的枚举添加值。 请参阅[将值添加到枚举](#add_value)有关将值添加到枚举的详细信息。 只需保留的值会污染的实际值集，并往往会导致用户错误。  
   
- **X 避免** 公开枚举只有一个值。  
+ **请避免 x**公开使用只有一个值的枚举。  
   
- 确保将来扩展的 C Api 的常见做法是将保留的参数添加到方法签名。 此类保留的参数可以表示为具有一个默认值的枚举。 这不应进行托管 Api 中。 方法重载允许添加参数在将来的版本。  
+ 确保将来扩展的 C Api 的常见做法是将保留的参数添加到方法签名。 此类保留的参数可以表示为具有一个默认值的枚举。 这不应该在托管 Api 来完成。 方法重载允许添加参数以后的版本。  
   
- **X 不** 在枚举中包括 sentinel 值。  
+ **X 不**在枚举中包括 sentinel 值。  
   
- 尽管它们有时会对 framework 开发人员有所帮助，sentinel 值是给框架的用户造成混淆。 它们用于从表示枚举集来跟踪枚举而不是值之一的状态。  
+ 尽管它们有时 framework 开发人员很有帮助，sentinel 值是给的 framework 的用户造成混淆。 它们用于从枚举所表示的集中跟踪枚举而不是正在值之一的状态。  
   
- **✓ 执行** 提供的值为零简单枚举。  
+ **✓ 执行**提供简单枚举零的值。  
   
- 请考虑调用值类似于"None。 如果这样的值不适合于此特定枚举，则应的基础值零的分配的最常见的默认值为枚举。  
+ 请考虑调用值类似于"None。 如果这样的值不适合于此特定枚举，则应基础值零的分配的最常见的默认值为枚举。  
   
- **✓ 请考虑** 使用 <xref:System.Int32> （在大多数编程语言默认值） 作为枚举的基础类型除非以下任一条件成立︰  
+ **请考虑 ✓**使用<xref:System.Int32>（默认值在大多数编程语言） 作为枚举的基础类型除非以下任一条件成立：  
   
--   枚举是一个标志枚举，且 32 个以上的标志，或者还期望能够在将来的详细信息。  
+-   枚举是标志枚举，您有 32 个以上的标志，或者希望有在将来的详细信息。  
   
--   基础类型必须是不同于 <xref:System.Int32> 更容易与预期不同大小的枚举的非托管代码的互操作性。  
+-   基础类型必须是不同于<xref:System.Int32>更容易与预期不同大小的枚举的非托管代码的互操作性。  
   
--   小的基础类型将导致节省大量空间。 如果您希望将枚举主要用作有关控制流的参数，其大小就只有细微的变化。 节省的大小可能会很明显如果︰  
+-   小的基础类型将导致节省大量空间。 如果您希望主要用作有关控制流的参数将枚举，大小就不太重要。 节省的大小可能会很明显如果：  
   
-    -   您将发现要用作非常频繁地实例化的结构或类中的字段的枚举。  
+    -   你预计将枚举用作非常频繁地实例化的结构或类中的字段。  
   
     -   指望用户能创建大型数组或集合的枚举实例。  
   
-    -   您预计大量枚举要序列化的实例。  
+    -   你预计大量枚举要序列化的实例。  
   
- 对于内存中使用情况，请注意托管的对象始终是 `DWORD`\-对齐，因此，您实际上需要多个枚举中的或其他小结构一个实例，以便为了发挥影响力，包具有较小枚举，因为总实例的大小始终要将向上舍入到 `DWORD`。  
+ 对于内存中的用法，请注意的托管的对象始终是`DWORD`-对齐，因此你有效地需要多个枚举中的或其他小结构一个实例，以便因为总实例大小始终会起作用，以便包较小枚举将会向上舍入到`DWORD`。  
   
- **✓ 执行** 命名用归类的复数名词或名词短语标志枚举，与采用单数形式的名词或名词短语的简单枚举。  
+ **✓ 执行**命名为复数名词或名词短语的标志枚举和简单枚举用单数形式的名词或名词短语。  
   
- **X 不** 扩展 <xref:System.Enum?displayProperty=fullName> 直接。  
+ **X 不**扩展<xref:System.Enum?displayProperty=nameWithType>直接。  
   
- <xref:System.Enum?displayProperty=fullName> 是一种特殊类型用于由 CLR 创建用户定义的枚举。 大多数编程语言提供了与此功能使您可以访问的编程元素。 例如，在 C\# `enum` 关键字用于定义枚举。  
+ <xref:System.Enum?displayProperty=nameWithType>是一种特殊类型使用由 CLR 创建用户定义的枚举。 大多数编程语言提供与此功能使你可以访问的编程元素。 例如，在 C#`enum`关键字用于定义枚举。  
   
 <a name="design"></a>   
-### 设计标志枚举  
- **✓ 执行** 应用 <xref:System.FlagsAttribute?displayProperty=fullName> 到标志枚举。 不将此特性应用于简单枚举。  
+### <a name="designing-flag-enums"></a>设计标志枚举  
+ **✓ 执行**应用<xref:System.FlagsAttribute?displayProperty=nameWithType>到标志枚举。 不将此特性应用于简单枚举。  
   
- **✓ 执行** 使用的两个用于标志的枚举值的幂，所以它们可以自由地组合使用按位或运算。  
+ **✓ 执行**使用幂的两个用于标志枚举值，因此它们可以自由地组合使用按位或运算。  
   
- **✓ 请考虑** 通常提供特殊的枚举值使用标志的组合。  
+ **请考虑 ✓**通常提供特殊的枚举值使用标志的组合。  
   
- 按位运算是一个高级的概念并不是必需的简单任务。<xref:System.IO.FileAccess> 为举例说明这样的特殊值。  
+ 按位运算是一个高级的概念，应该不需要用于简单任务。 <xref:System.IO.FileAccess.ReadWrite>是一个示例这样的特殊值。  
   
- **X 避免** 创建标志的值的某些组合是无效的枚举。  
+ **请避免 x**创建标志枚举值的某些组合将无效。  
   
- **X 避免** 使用标志枚举值为零，除非值表示"清除所有标志"，并且适当地下, 一项准则中规定命名。  
+ **请避免 x**使用标志为零的枚举值，除非值表示"清除所有标志"，并且相应地下, 一项准则中规定名为。  
   
- **✓ 执行** 命名的零值的标志枚举 `None`。 对于标志枚举值必须始终是指"清除所有标志。"  
+ **✓ 执行**命名的零值的标志枚举`None`。 对于标志枚举，该值必须并始终表示"清除所有标志。"  
   
 <a name="add_value"></a>   
-### 将值添加到枚举  
- 它是很常见，来发现您需要将值添加到枚举后对已发布它。 没有潜在的应用程序兼容性问题从现有的 API，返回新添加的值时因为编写得非常糟糕的应用程序可能不正确地处理的新值。  
+### <a name="adding-value-to-enums"></a>将值添加到枚举  
+ 它是很常见，来发现你需要将值添加到枚举中，已发送了它后。 时出现的潜在应用程序兼容性问题新添加的值返回从现有的 API，因为编写不佳的应用程序可能不会正确处理的新值。  
   
- **✓ 请考虑** 将值添加到枚举，尽管有小型兼容性风险。  
+ **请考虑 ✓**将值添加到枚举，尽管小兼容性风险。  
   
- 如果您有关于应用程序不兼容引起的枚举的新增功能的实际数据，请考虑添加，则返回新的和旧值的新 API 并弃用旧的 API，应继续返回只是旧值。 这将确保现有的应用程序保持兼容。  
+ 如果你具有有关应用程序不兼容问题引起向枚举添加内容的真实数据，请考虑将添加一个新 API，返回新值和旧值，并且否决旧 API，这应继续返回只是这些旧值。 这将确保你现有的应用程序仍保持兼容。  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 保留所有权利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *转载已获得的权限从 Pearson Education，Inc. [Framework 设计准则︰ 约定、 惯例和可重用的.NET 库，第二版模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 通过 Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison\-wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## 请参阅  
- [类型设计准则](../../../docs/standard/design-guidelines/type.md)   
- [Framework 设计准则](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>另请参阅  
+ [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+ [框架设计指南](../../../docs/standard/design-guidelines/index.md)

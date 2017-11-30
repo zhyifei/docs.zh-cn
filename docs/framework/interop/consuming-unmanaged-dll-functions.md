@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc0e2e7af861fd6ee233cad5069fef862bb29717
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Win32 API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。 有关此服务的详细信息，请参阅[平台调用详解](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)。  
@@ -88,8 +81,7 @@ ms.lasthandoff: 08/21/2017
  平台调用将向托管调用方引发非托管函数生成的异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [与非托管代码交互操作](../../../docs/framework/interop/index.md)   
- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)   
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)   
+ [与非托管代码交互操作](../../../docs/framework/interop/index.md)  
+ [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)  
  [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-

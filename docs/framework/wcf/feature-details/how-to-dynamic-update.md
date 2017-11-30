@@ -1,23 +1,26 @@
 ---
-title: "如何：动态更新 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：动态更新"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-caps.latest.revision: 4
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：动态更新
-本主题概述了创建和动态更新路由配置所需的基本步骤。在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
+# <a name="how-to-dynamic-update"></a>如何：动态更新
+本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
   
 > [!NOTE]
 >  在许多实现中，配置完全是动态配置，而不依赖于默认配置；但在某些情况下（如本主题中的情况），启动服务时需要处于默认配置状态。  
@@ -25,11 +28,11 @@ caps.handback.revision: 4
 > [!NOTE]
 >  动态更新仅在内存中进行，并且不会导致修改配置文件。  
   
- regularCalc 和 roundingCalc 均支持相同的加减乘除运算，区别是 roundingCalc 在返回所有计算结果前，会将计算结果舍入到最接近的整数值。配置文件用于配置服务，以便将所有消息路由至 regularCalc 服务。启动路由服务之后，将使用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 重新配置此服务，以便将消息路由至 roundingCalc 服务。  
+ regularCalc 和 roundingCalc 均支持相同的加减乘除运算，区别是 roundingCalc 在返回所有计算结果前，会将计算结果舍入到最接近的整数值。 配置文件用于配置服务，以便将所有消息路由至 regularCalc 服务。 启动路由服务之后，将使用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 重新配置此服务，以便将消息路由至 roundingCalc 服务。  
   
-### 实现初始配置  
+### <a name="implement-initial-configuration"></a>实现初始配置  
   
-1.  指定由服务公开的服务终结点，创建基本路由服务配置。下面的示例定义了一个用于接收消息的服务终结点，还定义了一个用于将消息发送到 regularCalc 的客户端终结点。  
+1.  指定由服务公开的服务终结点，创建基本路由服务配置。 下面的示例定义了一个用于接收消息的服务终结点， 还定义了一个用于将消息发送到 regularCalc 的客户端终结点。  
   
     ```xml  
     <services>  
@@ -56,7 +59,7 @@ caps.handback.revision: 4
     </client>  
     ```  
   
-2.  定义用于将消息路由到目标终结点的筛选器。在本示例中，使用 MatchAll 筛选器将所有消息路由至先前定义的 regularCalcEndpoint。下面的示例定义了此筛选器和筛选器表。  
+2.  定义用于将消息路由到目标终结点的筛选器。 在本示例中，使用 MatchAll 筛选器将所有消息路由至先前定义的 regularCalcEndpoint。 下面的示例定义了此筛选器和筛选器表。  
   
     ```xml  
     <filters>  
@@ -69,10 +72,9 @@ caps.handback.revision: 4
           <add filterName="MatchAllFilter" endpointName="regularCalcEndpoint"/>  
       </filterTable>  
     </filterTables>  
-  
     ```  
   
-3.  若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。下面的示例演示如何将“filterTable1”与服务终结点关联。  
+3.  若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示将"filterTable1"与服务终结点。  
   
     ```xml  
     <behaviors>  
@@ -85,8 +87,8 @@ caps.handback.revision: 4
     </behaviors>  
     ```  
   
-## 实现动态配置  
- 只能使用代码动态配置路由服务，方法是：新建 <xref:System.ServiceModel.Routing.RoutingConfiguration>，并用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 替换当前配置。在本示例中，路由服务自承载在控制台应用程序中。启动应用程序之后，您可以在控制台窗口中输入“regular”或“rounding”来修改路由配置，以便配置消息将路由到的目标终结点；如果输入“regular”，则路由到 regularCalc；否则，如果输入“rounding”，则路由到 roundingCalc。  
+## <a name="implement-dynamic-configuration"></a>实现动态配置  
+ 只能使用代码动态配置路由服务，方法是：新建 <xref:System.ServiceModel.Routing.RoutingConfiguration>，并用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 替换当前配置。  在本示例中，路由服务自承载在控制台应用程序中。 启动应用程序之后，您可以在控制台窗口中输入“regular”或“rounding”来修改路由配置，以便配置消息将路由到的目标终结点；如果输入“regular”，则路由到 regularCalc；否则，如果输入“rounding”，则路由到 roundingCalc。  
   
 1.  必须添加以下 using 语句才能支持路由服务。  
   
@@ -98,10 +100,9 @@ caps.handback.revision: 4
     using System.ServiceModel.Description;  
     using System.ServiceModel.Dispatcher;  
     using System.ServiceModel.Routing;  
-  
     ```  
   
-2.  下面的代码用作控制台应用程序来自承载路由服务。此代码将使用上一步所述的配置来初始化路由服务，该配置包含在应用程序配置文件中。while 循环包含用于更改路由配置的代码。  
+2.  下面的代码用作控制台应用程序来自承载路由服务。 此代码将使用上一步所述的配置来初始化路由服务，该配置包含在应用程序配置文件中。 while 循环包含用于更改路由配置的代码。  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -124,10 +125,9 @@ caps.handback.revision: 4
             }  
         }  
     }  
-  
     ```  
   
-3.  若要动态更新路由配置，必须创建新的路由配置。新路由配置必须包含它需要的所有终结点、筛选器和筛选器表，因为它将完全替换现有路由配置。为了使用新路由配置，必须调用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 并传递新配置。  
+3.  若要动态更新路由配置，必须创建新的路由配置。 新路由配置必须包含它需要的所有终结点、筛选器和筛选器表，因为它将完全替换现有路由配置。 为了使用新路由配置，必须调用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 并传递新配置。  
   
      向以前定义的 while 循环添加以下代码，这样就允许根据用户输入重新配置此服务。  
   
@@ -170,9 +170,9 @@ caps.handback.revision: 4
     ```  
   
     > [!NOTE]
-    >  由于提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服务扩展中，因此，在具有或可获取对 ServiceHost 或 ServiceExtensions 的引用的 WCF 扩展性模型中，可以在任意位置（例如，在另一 ServiceExtension 中）提供新的 RoutingConfiguration 对象。有关以此方式动态更新 RoutingConfiguration 的示例，请参见[动态重新配置](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)。  
+    >  由于提供新 RoutingConfiguration 的方法包含在 RoutingExtension 服务扩展中，因此，在具有或可获取对 ServiceHost 或 ServiceExtensions 的引用的 WCF 扩展性模型中，可以在任意位置（例如，在另一 ServiceExtension 中）提供新的 RoutingConfiguration 对象。 动态更新以这种方式 RoutingConfiguration 的示例，请参阅[动态重新配置](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面列出了本示例中使用的控制台应用程序的完整代码清单。  
   
 ```  
@@ -248,10 +248,9 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面列出了本示例中使用的配置文件的完整代码清单。  
   
 ```xml  
@@ -305,8 +304,7 @@ namespace Microsoft.Samples.AdvancedFilters
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,39 +1,30 @@
 ---
-title: "混合声明性代码强制性代码 Bug (LINQ to XML) (Visual Basic 中) |Microsoft 文档"
+title: "混合声明性代码的命令性代码的问题 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>混合声明性代码/强制性代码 Bug (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 包含各种不同的方法，使您能够直接修改 XML 树。 您可以添加元素、删除元素、更改元素的内容、添加属性等等。 中详细介绍了此编程接口[修改 XML 树 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)。 如果您循环访问一个轴，如<xref:System.Xml.Linq.XContainer.Elements%2A>，并循环访问该轴时正在修改 XML 树，因此您可以最终一些异常问题。</xref:System.Xml.Linq.XContainer.Elements%2A>  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>混合声明性代码/命令性代码的问题 (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各种不同的方法，使您能够直接修改 XML 树。 您可以添加元素、删除元素、更改元素的内容、添加属性等等。 中详细介绍了此编程接口[修改 XML 树 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)。 如果循环访问一个轴，例如 <xref:System.Xml.Linq.XContainer.Elements%2A>，而在循环访问该轴时正在修改 XML 树，那么可能会发生一些异常问题。  
   
  此问题有时称为“万圣节问题”。  
   
 ## <a name="definition-of-the-problem"></a>问题的定义  
- 如果你使用 LINQ 编写循环访问集合的代码，那么你是以声明性风格在编写代码。 这种风格更像是描述描述*什么*所需，而是，*如何*你想要获取其完成。 如果你编写的代码要执行以下操作：1) 获取第一个元素；2) 测试该元素是否符合某种条件；3) 修改该元素；4) 将该元素放回列表中。那么，此代码就是命令性代码。 您在告诉计算机*如何*以执行所需的完成操作。  
+ 如果你使用 LINQ 编写循环访问集合的代码，那么你是以声明性风格在编写代码。 这种风格更像是描述要实现的内容，而不是描述所需要的实现方式。 如果你编写的代码要执行以下操作：1) 获取第一个元素；2) 测试该元素是否符合某种条件；3) 修改该元素；4) 将该元素放回列表中。那么，此代码就是命令性代码。 你是在告诉计算机希望以何种方式完成任务。  
   
  在同一操作中混合这些代码风格正是导致问题的原因。 考虑以下情况：  
   
@@ -66,7 +57,7 @@ Next
   
  此代码将进入一个无限循环。 `foreach` 语句循环访问 `Elements()` 轴，将新元素添加到 `doc` 元素。 结果它也循环访问刚添加的元素。 由于它在每次循环访问中都分配新对象，最终将会耗尽所有可用内存。  
   
- 可以通过将集合放入使用的内存来修复此问题<xref:System.Linq.Enumerable.ToList%2A>标准查询运算符，按如下所示︰</xref:System.Linq.Enumerable.ToList%2A>  
+ 可以通过使用 <xref:System.Linq.Enumerable.ToList%2A> 标准查询运算符将集合放入内存来修复此问题，如下所示：  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- 该解决方案仍是调用<xref:System.Linq.Enumerable.ToList%2A>来具体化集合，如下︰</xref:System.Linq.Enumerable.ToList%2A>  
+ 解决方法仍是调用 <xref:System.Linq.Enumerable.ToList%2A> 来具体化集合，如下所示：  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- 或者，您可以完全消除循环通过调用<xref:System.Xml.Linq.XElement.RemoveAll%2A>对父元素︰</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ 或者，可以通过对父元素调用 <xref:System.Xml.Linq.XElement.RemoveAll%2A> 来完全消除循环：  
   
 ```vb  
 Dim root As XElement = _  
@@ -196,4 +187,3 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>另请参阅  
  [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

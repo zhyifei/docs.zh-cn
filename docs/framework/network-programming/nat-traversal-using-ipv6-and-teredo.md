@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d1730e5af0ee3f837f46071992c80e81b118af1e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 466e3faed9b2877671ca265afdb613607b12f0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 遍历
 增强了功能：为网络地址转换 (NAT) 遍历提供支持。 这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。 这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。  
@@ -47,25 +41,24 @@ ms.lasthandoff: 08/21/2017
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>支持 NAT 遍历和 Teredo 的增强功能  
  向 <xref:System.Net>、<xref:System.Net.NetworkInformation>和 <xref:System.Net.Sockets> 命名空间添加了增强功能，这些增强功能支持使用 IPv6 和 Teredo 进行 NAT 遍历。  
   
- 向 <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> 类添加了几种方法，用于获取主机上的单播 IP 地址列表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法发起一个异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法结束挂起的异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是一来检索本地计算机上稳定的单播 IP 地址的异步请求，它根据需要等待，直到地址表稳定。  
+ 向 <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> 类添加了几种方法，用于获取主机上的单播 IP 地址列表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法发起一个异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法结束挂起的异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是一来检索本地计算机上稳定的单播 IP 地址的异步请求，它根据需要等待，直到地址表稳定。  
   
- <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> 属性可以用于确定 <xref:System.Net.IPAddress> 是否为 IPv6 Teredo 地址。  
+ <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> 属性可以用于确定 <xref:System.Net.IPAddress> 是否为 IPv6 Teredo 地址。  
   
  联合使用这些新 <xref:System.Net.NetworkInformation.IPGlobalProperties> 类方法和 <xref:System.Net.IPAddress.IsIPv6Teredo%2A> 属性可让应用程序轻松查找 Teredo 地址。 如果应用程序将本地 Teredo 地址传达给远程应用程序，则它只需知道该信息即可。 例如，一个对等应用程序可能会将其所有 IPv6 地址发送给匹配服务器，该服务器再将这些地址转发给其他对等机，从而实现直接通信。  
   
- 应用程序通常应将其侦听服务设置为在 <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> 上侦听，而不是在本地 Teredo 地址上侦听。 因此，如果远程客户端或对等机具有侦听服务主机的直接 IPv6 路由，该客户端或对等机可以使用 IPv6（而无需使用 Teredo）直接连接到隧道数据包。  
+ 应用程序通常应将其侦听服务设置为在 <xref:System.Net.IPAddress.IPv6Any?displayProperty=nameWithType> 上侦听，而不是在本地 Teredo 地址上侦听。 因此，如果远程客户端或对等机具有侦听服务主机的直接 IPv6 路由，该客户端或对等机可以使用 IPv6（而无需使用 Teredo）直接连接到隧道数据包。  
   
- 对于 TCP 应用程序，<xref:System.Net.Sockets.TcpListener?displayProperty=fullName> 类具有 <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。 对于 UDP 应用程序，<xref:System.Net.Sockets.UdpClient?displayProperty=fullName> 类具有 <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。  
+ 对于 TCP 应用程序，<xref:System.Net.Sockets.TcpListener?displayProperty=nameWithType> 类具有 <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。 对于 UDP 应用程序，<xref:System.Net.Sockets.UdpClient?displayProperty=nameWithType> 类具有 <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> 方法，该方法可启用 NAT 遍历。  
   
- 对于使用 <xref:System.Net.Sockets.Socket?displayProperty=fullName> 和相关类的应用程序，可将 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法与 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=fullName> 套接字选项一起使用，用于查询、启用或禁用 NAT 遍历。  
+ 对于使用 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 和相关类的应用程序，可将 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法与 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> 套接字选项一起使用，用于查询、启用或禁用 NAT 遍历。  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>   
- <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=fullName>   
- <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=fullName>
-
+ <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=nameWithType>

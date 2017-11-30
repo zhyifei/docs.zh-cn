@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - asynchronous client sockets
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1a159f2a761acd85e963f34d3d9622b43b3a3aeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="asynchronous-client-socket-example"></a>异步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 该客户端是使用异步套接字构建的，因此当服务器返回响应时，不会挂起客户端应用程序的执行。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
@@ -66,12 +63,12 @@ Public Class AsynchronousClient
     Public Shared Sub Main()  
         ' Establish the remote endpoint for the socket.  
         ' For this example use local machine.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim remoteEP As New IPEndPoint(ipAddress, port)  
   
         ' Create a TCP/IP socket.  
-        Dim client As New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)  
+        Dim client As New Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp)  
   
         ' Connect to the remote endpoint.  
         client.BeginConnect(remoteEP, New AsyncCallback(AddressOf ConnectCallback), client)  
@@ -206,12 +203,12 @@ public class AsynchronousClient {
             // Establish the remote endpoint for the socket.  
             // The name of the   
             // remote device is "host.contoso.com".  
-            IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");  
+            IPHostEntry ipHostInfo = Dns.GetHostEntry("host.contoso.com");  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);  
   
             // Create a TCP/IP socket.  
-            Socket client = new Socket(AddressFamily.InterNetwork,  
+            Socket client = new Socket(ipAddress.AddressFamily,  
                 SocketType.Stream, ProtocolType.Tcp);  
   
             // Connect to the remote endpoint.  
@@ -334,7 +331,6 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
+ [异步服务器套接字示例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)
-

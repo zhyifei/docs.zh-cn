@@ -1,46 +1,44 @@
 ---
-title: "Public (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Public"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "公共访问修饰符"
-  - "Public 关键字"
-  - "Public 关键字, 语法"
+title: Public (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Public
+helpviewer_keywords:
+- Public keyword [Visual Basic]
+- Public keyword [Visual Basic], syntax
+- Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e6cd70adf6ec31c56f39d0443d320dd1b00b00d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Public (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一个或多个声明的编程元素没有访问限制。  
+# <a name="public-visual-basic"></a>Public (Visual Basic)
+指定一个或多个已声明的编程元素具有任何访问限制。  
   
-## 备注  
- 如果正在发布一个组件或一组组件（例如类库），通常会想要编程元素可以被与程序集互操作的任何代码访问。  若要授予这种对元素的无限制访问，可以用 `Public` 声明该元素。  
+## <a name="remarks"></a>备注  
+ 如果您要发布的组件或组组件，如类库，你通常想要可由程序集与互操作的任何代码的编程元素。 若要授予此类不限的访问权限，在元素上，可以将其与声明`Public`。  
   
- 公共访问是在不需要限制对编程元素的访问时的正常级别。  请注意，如果不另行声明，在接口、模块、类或结构内声明的元素的访问级别默认为 `Public`。  
+ 公共访问时不需要限制对其的访问，将编程元素的正常级别。 请注意，接口、 模块、 类或结构中声明的元素的访问级别将默认为`Public`如果未另行声明。  
   
-## 规则  
+## <a name="rules"></a>规则  
   
--   **声明上下文。**仅可以在模块、接口或命名空间级别使用 `Public`。  这意味着 `Public` 元素的声明上下文必须是源文件、命名空间、接口、模块、类或结构，而不能是过程。  
+-   **声明上下文。** 你可以使用`Public`只能在模块、 接口或命名空间级别。 这意味着的声明上下文`Public`元素必须是源文件、 命名空间、 接口、 模块、 类或结构，并且不能为一个过程。  
   
-## 行为  
+## <a name="behavior"></a>行为  
   
--   **访问级别。**可以访问模块、类或结构的所有代码都可以访问其 `Public` 元素。  
+-   **访问级别。** 所有代码都可以都访问模块、 类或结构可以都访问其`Public`元素。  
   
--   **默认访问。**过程内的局部变量默认为公共访问，您不能对它们使用任何访问修饰符。  
+-   **默认访问权限。** 内部过程默认为公共访问，并且你的本地变量不能在其上使用任何访问修饰符。  
   
--   **访问修饰符。**指定访问级别的关键字称为*“访问修饰符”*。  有关访问修饰符的比较，请参见 [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+-   **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Public` 修饰符可用于下面的上下文中：  
   
@@ -64,19 +62,19 @@ caps.handback.revision: 13
   
  [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Operator 语句](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 请参阅  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+## <a name="see-also"></a>另请参阅  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [在 Visual Basic 中的访问级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

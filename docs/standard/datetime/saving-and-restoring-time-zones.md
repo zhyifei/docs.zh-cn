@@ -1,73 +1,86 @@
 ---
-title: "保存和还原时区 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "反序列化 [.NET Framework], 时区"
-  - "还原时区"
-  - "保存时区"
-  - "序列化 [.NET Framework], 时区"
-  - "时区对象 [.NET Framework], 反序列化"
-  - "时区对象 [.NET Framework], 还原"
-  - "时区对象 [.NET Framework], 保存"
-  - "时区对象 [.NET Framework], 序列化"
-  - "时区 [.NET Framework], 还原"
-  - "时区 [.NET Framework], 保存"
+title: "保存和还原时区"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- restoring time zones
+- deserialization [.NET Framework], time zones
+- serialization [.NET Framework], time zones
+- time zone objects [.NET Framework], restoring
+- saving time zones
+- time zone objects [.NET Framework], deserializing
+- time zones [.NET Framework], saving
+- time zones [.NET Framework], restoring
+- time zone objects [.NET Framework], serializing
+- time zone objects [.NET Framework], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d4e04de61ed5636d0102af694220dce06c256751
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 保存和还原时区
-<xref:System.TimeZoneInfo> 类依赖注册表检索预定义的时区数据。  但是，注册表是一个动态结构。  此外，注册表包含的时区信息主要供操作系统在处理当前年份的时间调整和转换时使用。  对于依赖准确时区数据的应用程序来说，这有两个主要的影响：  
-  
--   注册表中可能未定义应用程序需要的时区，或者该时区可能已被重命名或从注册表中移除。  
-  
--   注册表中定义的时区可能缺少执行历史时区转换所需的特定调整规则的相关信息。  
-  
- <xref:System.TimeZoneInfo> 类支持对时区数据进行序列化（保存）和反序列化（还原），并以此解决了上述限制。  
-  
-## 时区序列化和反序列化  
- 在通过序列化和反序列化时区数据来保存和还原时区时，只需执行两次方法调用：  
-  
--   通过调用 <xref:System.TimeZoneInfo> 对象的 <xref:System.TimeZoneInfo.ToSerializedString%2A> 方法可以序列化该对象。  该方法不带任何参数，并会返回一个包含时区信息的字符串。  
-  
--   通过向`static` \(`Shared` in Visual Basic\) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=fullName>方法传递一个序列化字符串，可以从该字符串反序列化 <xref:System.TimeZoneInfo>对象。  
-  
-## 序列化和反序列化方案  
- 这种可将 <xref:System.TimeZoneInfo> 对象保存（或序列化）到一个字符串中以及还原（或反序列化）该对象以供以后使用的能力提高了 <xref:System.TimeZoneInfo> 类的实用性和灵活性。  本节讨论序列化和反序列化最为有用的一些情况。  
-  
-### 序列化和反序列化应用程序中的时区数据  
- 应用程序可以根据需要从字符串还原序列化的时区。  如果从注册表中检索到的时区无法正确转换特定日期范围内的日期和时间，应用程序便可能执行还原操作。  例如，Windows XP 注册表中的时区数据只支持一个调整规则，而 Windows Vista 注册表中定义的时区通常会提供有关两个调整规则的信息。  这意味着，历史时间转换可能是不准确的。  对时区数据执行序列化和反序列化可以应对这种限制。  
-  
- 在下面的示例中，在引入夏时制之前，不带调整规则的自定义<xref:System.TimeZoneInfo>类定义为表示从1883到 1917的美国东部标准时区。  自定义时区在具有全局范围的变量中序列化。  同时将协调世界时 \(UTC\) 时间传递给时区转换方法 `ConvertUtcTime` 来进行转换。  如果该日期和时间发生在 1917 年或之前，则从一个序列化字符串还原自定义东部标准时区，并由该时区来替换从注册表中检索到的时区。  
-  
- [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
- [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]  
-  
-### 处理时区异常  
- 由于注册表是一个动态结构，因此其内容可能会被无意或有意修改。  这意味着，本应在注册表中定义且应用程序成功执行所必需的时区可能不存在。  如果不支持时区序列化和反序列化，则只能选择处理因结束应用程序而导致的 <xref:System.TimeZoneNotFoundException>。  但是，使用时区序列化和反序列化，可以通过从序列化字符串还原所需的时区来处理意外的 <xref:System.TimeZoneNotFoundException>，从而使应用程序可继续运行。  
-  
- 下面的示例创建并序列化一个自定义中部标准时区，  然后尝试从注册表中检索该中部标准时区。  如果检索操作引发 <xref:System.TimeZoneNotFoundException> 或 <xref:System.InvalidTimeZoneException>，则异常处理程序将反序列化该时区。  
-  
- [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
- [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]  
-  
-### 根据需要存储和还原序列化字符串  
- 上面的示例先将时区信息存储在一个字符串变量中，然后根据需要还原该字符串。  但是，包含序列化时区信息的字符串自身也可以存储在某些存储介质中，例如外部文件、嵌入在应用程序中的资源文件或注册表（请注意，有关自定义时区的信息应与系统的时区注册表项分开存储）。  
-  
- 按照此方式存储序列化时区字符串还可以将时区创建例程与应用程序本身分开。  例如，时区创建例程可以创建数据文件并在其中包含可供应用程序使用的历史时区信息，然后执行该文件。  这样，该数据文件便可随应用程序一起安装，应用程序在需要时可以打开该数据文件并序列化其中的一个或多个时区。  
-  
- 有关使用嵌入的资源存储序列化时区数据的示例，请参见[如何：将时区保存到嵌入的资源中](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。  
-  
-## 请参阅  
- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+# <a name="saving-and-restoring-time-zones"></a>保存和还原时区
+
+<xref:System.TimeZoneInfo>类依赖于注册表以检索预定义的时区数据。 但是，注册表是动态的结构。 此外，操作系统使用注册表包含时区信息主要是为了当前年度的处理时间调整和转换。 这样做有两个主要的影响的应用程序依赖于准确时区数据：
+
+* 应用程序所需的时间区域可能未定义在注册表中，或它可能已重命名或从注册表中删除。
+
+* 在注册表中定义的时区可能缺少所需的历史时区转换的特定的调整规则有关的信息。
+
+<xref:System.TimeZoneInfo>类地址通过它进行序列化 （保存） 和反序列化 （还原） 的时区数据的支持这些限制。
+
+## <a name="time-zone-serialization-and-deserialization"></a>时区序列化和反序列化
+
+保存和还原时区通过序列化和反序列化时区数据涉及到仅使用两个方法调用：
+
+* 您可以序列化<xref:System.TimeZoneInfo>通过调用该对象的对象<xref:System.TimeZoneInfo.ToSerializedString%2A>方法。 该方法不采用任何参数，并返回一个字符串，包含时区信息。
+
+* 可以反序列化<xref:System.TimeZoneInfo>中通过将传递到该字符串的序列化字符串对象`static`(`Shared`在 Visual Basic 中)<xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType>方法。
+
+## <a name="serialization-and-deserialization-scenarios"></a>序列化和反序列化方案
+
+能够保存 （或序列化）<xref:System.TimeZoneInfo>对象，为字符串以及还原 （或反序列化） 它以供将来使用会增加该实用程序和灵活性<xref:System.TimeZoneInfo>类。 本部分介绍一些序列化和反序列化是最有用的情况。
+
+### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>序列化和反序列化应用程序中的时区数据
+
+需要时，可以从字符串还原序列化的时区。 如果从注册表检索时区不能正确转换的日期和时间在特定日期范围内的，应用程序可以这样做。 例如，Windows XP 注册表中的时区数据支持一个调整规则，通常在 Windows Vista 注册表中定义的时区提供信息讨论了两次调整规则。 这意味着历史时间转换可能不准确。 序列化和反序列化的时区数据可以处理此限制。
+
+在下面的示例中，自定义<xref:System.TimeZoneInfo>没有调整规则的类定义来表示美国美国东部标准时间区域从 1883年到 1917 之前在美国国内夏时制的简介。 自定义时区的序列化具有全局作用域的变量中。 时区转换方法， `ConvertUtcTime`，将传递协调通用时 (UTC) 时间，它将转换。 如果日期和时间发生在 1917 年或更早版本，自定义的东部标准时区还原从序列化的字符串，并替换从注册表检索的时区。
+
+[!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
+[!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
+
+### <a name="handling-time-zone-exceptions"></a>处理时区异常
+
+由于注册表是动态的结构，其内容可能会发生意外或有意修改。 这意味着同一时区，应在注册表中定义和所需应用程序，才能成功执行可能不存在。 若不支持时区序列化和反序列化，则只能选择但若要处理生成<xref:System.TimeZoneNotFoundException>通过结束应用程序。 但是，通过使用时区序列化和反序列化，你可以处理意外<xref:System.TimeZoneNotFoundException>通过还原所需的时间区域，从序列化的字符串和应用程序将继续运行。
+
+下面的示例创建和序列化自定义的中部标准时区。 它会尝试从注册表检索中部标准时区。 如果检索操作引发或者<xref:System.TimeZoneNotFoundException>或<xref:System.InvalidTimeZoneException>，异常处理程序反序列化时区。
+
+[!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
+[!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
+
+### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>将序列化的字符串存储和还原在需要时
+
+前面的示例包含存储为一个字符串变量的时区信息，且已在需要时还原。 但是，包含区域信息可以本身存储在某些存储介质，例如外部文件，资源文件的序列化的时间的字符串嵌入在应用程序或注册表。 （请注意，应除了注册表中的系统的时区密钥存储有关自定义时区信息。）
+
+从应用程序本身，在这种方式中存储的序列化的时区字符串还分隔时区创建例程。 例如，时区创建例程可以执行并创建数据文件，其中包含应用程序可以使用的历史时区信息。 数据文件便可安装应用程序后，可以打开和一个或多个其时区可以反序列化应用程序需要它们时。
+
+使用嵌入的资源来存储序列化的时区数据示例，请参阅[如何： 将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+
+## <a name="see-also"></a>请参阅
+
+[日期、时间和时区](../../../docs/standard/datetime/index.md)

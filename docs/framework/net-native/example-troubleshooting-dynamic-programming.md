@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>示例：故障诊断动态编程
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  引起失败的可能原因是 `App.Core.ViewModels.Layout.LayoutApplicationVM` 是丢失的元数据，原因在于它位于一个不同的命名空间。  
   
- 在这种情况下，添加一个运行时指令让 `App.Core.ViewModels` 解决这一问题。 根本原因在于 API 调用了返回 null 的 <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> 方法，且该应用默认忽略这一问题直到发生故障。  
+ 在这种情况下，添加一个运行时指令让 `App.Core.ViewModels` 解决这一问题。 根本原因在于 API 调用了返回 null 的 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法，且该应用默认忽略这一问题直到发生故障。  
   
- 在动态编程中，在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中使用反射 API 时一个好的做法是使用在发生故障时抛出异常的 <xref:System.Type.GetType%2A?displayProperty=fullName> 重载。  
+ 在动态编程中，在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中使用反射 API 时一个好的做法是使用在发生故障时抛出异常的 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 重载。  
   
 ## <a name="is-this-an-isolated-case"></a>这是一个孤立情形吗？  
  当使用 `App.Core.ViewModels` 时，可能也会出现其他问题。  你必须决定是否值得确定并修复每个丢失的元数据异常，或节省时间并为类型的一个更大类添加指令。  此处，为 `dynamic` 添加 `App.Core.ViewModels` 元数据可能最好的方法，前提是输出的二进制代码变大不会产生问题。  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  如果该应用过去使用的是 `typeof(LayoutApplicationVM)` 而不是 `Type.GetType("LayoutApplicationVM")`，工具链可能已经保存了 `browse` 元数据。  然而，它也可能没有创建 `invoke` 元数据，这在实例化该类型时可能会导致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。 要阻止这一异常，你仍然必须为命名空间添加一个运行时指令或指定 `dynamic` 策略的类型。 有关运行时指令的信息，请参阅 [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [示例：处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

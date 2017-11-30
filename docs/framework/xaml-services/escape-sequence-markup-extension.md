@@ -1,69 +1,72 @@
 ---
-title: "{} Escape Sequence / Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "{}"
-helpviewer_keywords: 
-  - "XAML [XAML Services], quotation mark (")"
-  - "{} escape sequence [XAML Services]"
-  - "XAML [XAML Services], {} escape sequence"
-  - "XAML [XAML Services], escape sequence"
-  - "quotation mark (") [XAML Services]"
-  - "escape sequence [XAML Services]"
+title: "{} 转义序列的标记扩展"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '{}'
+helpviewer_keywords:
+- XAML [XAML Services], quotation mark (")
+- '{} escape sequence [XAML Services]'
+- XAML [XAML Services], {} escape sequence
+- XAML [XAML Services], escape sequence
+- quotation mark (") [XAML Services]
+- escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-caps.latest.revision: 21
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
+caps.latest.revision: "21"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: befbf9960afffcd30bc96863dcc00b4acad2c21a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# {} Escape Sequence / Markup Extension
-提供属性值的 XAML 转义序列。  转义序列允许将属性中的序列值解释为文本。  
+# <a name="-escape-sequence--markup-extension"></a>{} 转义序列/标记扩展
+为属性值提供 XAML 转义序列。 转义序列被解释为文本的属性中允许的后续值。  
   
-## XAML 属性用法  
+## <a name="xaml-attribute-usage"></a>XAML 属性用法  
   
+```xml  
+<object property="{} literalValue" .../>  
 ```  
-<object property="{} literalValue" .../>  
-```  
   
-## XAML 属性元素用法  
+## <a name="xaml-property-element-usage"></a>XAML 属性元素用法  
   
 ```  
 <object>  
-  <object.property>  
-    {} literalValue  
-  </object.property>  
+  <object.property>  
+    {} literalValue  
+  </object.property>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a>XAML 值  
   
 |||  
 |-|-|  
-|*literalValue*|遵循转义序列的字符串。  通常，此字符串包含一个打开或关闭大括号 \({ 或 }\)。|  
+|*literalValue*|后面的转义序列的文本字符串。 此字符串通常包含一个打开或关闭的大括号 （{或}）。|  
   
-## 备注  
- 使用转义序列 \({}\) ，以使左大括号“{”可以被用作 XAML 中的原义字符。  
+## <a name="remarks"></a>备注  
+ 使用转义序列 （{}），以便左大括号 （{}） 可用作在 XAML 中的原义字符。  
   
- XAML 读者通常使用大括号 \({}\) 表示的入口点的标记扩展 ； 但是，他们首先检查以确定它是否是一个右大括号 \(}\) 的下一个字符。  只有在两个大括号 \({}\) 相邻时，它们被视为转义序列。  
+ XAML 读取器通常使用左大括号 （{}） 来表示标记扩展的入口点; 但是，他们首先检查以确定它是否是右大括号 （}） 的下一个字符。 仅当两个大括号 （{}） 相邻时，它们被视为的转义序列。  
   
- 如果遇到转义序列，XAML 读取器应以字符串形式处理其余字符串。  但是，如果对具有类型转换器的成员使用转义序列，则仍有可能在由 XAML 编写器进行解释时，该字符串会被类型转换器转换。  
+ 如果遇到此转义序列，XAML 读取器应处理以字符串形式的字符串的其余部分。 但是，如果转义序列应用于类型转换器的成员，该字符串会被类型转换，以解释 XAML 编写器。  
   
- 转义序列不是标记扩展，不受类的支持。  但是，XAML 读取器（包括自定义 XAML 读取器）应遵守该约定。  
+ 转义序列不是一个标记扩展，并不由类。 但是，它是 XAML 读取器 （包括自定义 XAML 读取器） 应遵循的约定。  
   
- 不能按此方式将引号 \("\) 用作转义序列。  如果需要将引号设置为非内容属性的属性值，请使用属性元素语法，并将引号作为一个字符串放在属性元素内，或者使用 XML 字符实体。  对于内容属性，引号可以是全部内容。  
+ 引号 （"） 不能用作这种方式的转义序列。 如果你需要设置为非内容属性的属性值的引号，使用属性元素语法和将引号内的属性元素中，字符串形式或使用 XML 字符实体。 对于内容的属性，在引号可以是整个内容。  
   
- 在可能会出现 XAML 标记扩展的位置指定必须包含命名空间限定符的 XML 类型时，经常需要使用 \({}\) 转义序列。  这包括 XAML 特性值的开头、标记扩展的内部以及紧跟着等号 \(\=\) 的位置。  下面的示例显示了出现在 XAML 特性值开头的 XML 命名空间的转义序列。  
+ 指定必须在 XAML 标记扩展可能出现的位置包括命名空间限定符的 XML 类型时，可以经常需要转义序列 （{}）。 这包括启动的 XAML 特性值，并在标记扩展中，紧跟着等号 （=）。 下面的示例演示了 XAML 特性值的开头处显示的 XML 命名空间的转义序列。  
   
- [!code-xml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
-## 请参阅  
- [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+## <a name="see-also"></a>另请参阅  
+ [XAML 的类型转换器和标记扩展](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
+ [XML 字符实体和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)

@@ -1,9 +1,8 @@
 ---
-title: "很抱歉，我们没有具体信息关于此 C# 错误 |Microsoft 文档"
-ms.date: 2015-07-20
+title: "抱歉，我们 don &#39; t 对此 C# 错误的详细信息"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -178,7 +177,6 @@ f1_keywords:
 - CS1912
 - CS0743
 - CS2016
-- CS4009
 - CS0315
 - CS1609
 - CS1102
@@ -875,54 +873,46 @@ f1_keywords:
 - CS0057
 - CS0589
 - CS0656
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- errors [C#], additional information
+- CS8038
+- CS8132
+- CS8136
+- CS8137
+- CS8139
+- CS8156
+- CS8168
+- CS8172
+- CS8179
+helpviewer_keywords: errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>很抱歉，我们没有具体信息关于此 C# 错误
-很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>抱歉，我们 don &#39; t 对此 C# 错误的详细信息
+很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可以咨询其他开发人员，使用以下论坛之一：  
   
  [Visual C# 语言](http://go.microsoft.com/fwlink/?LinkId=146921)  
- 提供针对 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
+ 提供针对 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
   
  [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- 提供针对如何在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 环境中工作的问题的论坛。  
+ 提供针对如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 环境中工作的问题的论坛。  
   
- [Visual C# 常规](http://go.microsoft.com/fwlink/?LinkId=146920)  
- 提供针对其他论坛中未涉及的 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 相关问题的论坛。  
+ [Visual C# 常见问题解答](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ 提供针对其他论坛中未涉及的 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 相关问题的论坛。  
   
  [堆栈溢出](http://stackoverflow.com/questions/tagged/c%23)  
- 提供一个供大家讨论有关 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 的问题的论坛。  
+ 提供一个供大家讨论有关 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 的问题的论坛。  
   
  另请参见：  
- [有关 Visual C# 程序员提供的其他资源](../../csharp/getting-started/additional-resources.md)  
+ [为 Visual C# 程序员提供的附加资源](../../csharp/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../csharp/programming-guide/index.md)   
- [C# 参考](../../csharp/language-reference/index.md)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [与我们交流](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [C# 编程指南](../../csharp/programming-guide/index.md)  
+ [C# 参考](../../csharp/language-reference/index.md)  
+ [与我们交流](/visualstudio/ide/talk-to-us)  
+ [与我们交流](/visualstudio/ide/talk-to-us)

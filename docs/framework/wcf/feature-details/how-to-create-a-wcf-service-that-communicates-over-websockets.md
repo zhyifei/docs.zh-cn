@@ -1,25 +1,28 @@
 ---
-title: "如何创建通过 WebSocket 进行通信的 WCF 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何创建通过 WebSocket 进行通信的 WCF 服务"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何创建通过 WebSocket 进行通信的 WCF 服务
-WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。  本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何创建通过 WebSocket 进行通信的 WCF 服务
+WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
   
-### 定义服务  
+### <a name="define-the-service"></a>定义服务  
   
 1.  定义回调协定  
   
@@ -66,7 +69,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
         }  
     ```  
   
-     服务操作 `StartSendingQuotes` 将实现为异步调用。  我们使用 `OperationContext` 检索回调通道；如果通道是打开的，则对回调通道进行异步调用。  
+     服务操作 `StartSendingQuotes` 将实现为异步调用。 我们使用 `OperationContext` 检索回调通道；如果通道是打开的，则对回调通道进行异步调用。  
   
 4.  配置服务  
   
@@ -97,9 +100,9 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
     </configuration>  
     ```  
   
-     服务的配置文件依赖于 WCF 的默认终结点。  使用 `<protocolMapping>` 部分来指定应将 `NetHttpBinding` 用于所创建的默认终结点。  
+     服务的配置文件依赖于 WCF 的默认终结点。 使用 `<protocolMapping>` 部分来指定应将 `NetHttpBinding` 用于所创建的默认终结点。  
   
-### 定义客户端  
+### <a name="define-the-client"></a>定义客户端  
   
 1.  实现回调协定。  
   
@@ -138,7 +141,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
         }  
         ```  
   
-         为清楚起见，此处重复使用了 CallbackHandler。  客户端应用程序创建新的 InstanceContext，并指定回调接口的实现。  下一步，它创建将引用发送到新创建的 InstanceContext 的代理类实例。  当客户端调用服务时，该服务将使用指定的回调协定调用客户端。  
+         为清楚起见，此处重复使用了 CallbackHandler。 客户端应用程序创建新的 InstanceContext，并指定回调接口的实现。 下一步，它创建将引用发送到新创建的 InstanceContext 的代理类实例。 当客户端调用服务时，该服务将使用指定的回调协定调用客户端。  
   
     2.  配置客户端  
   
@@ -167,7 +170,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
          在客户端配置中无需执行任何特殊内容，只需通过 `NetHttpBinding` 指定客户端终结点。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面是本主题中使用的完整代码。  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## 请参阅  
- [同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>另请参阅  
+ [同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [使用 NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

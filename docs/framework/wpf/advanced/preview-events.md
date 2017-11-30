@@ -1,41 +1,44 @@
 ---
-title: "预览事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件, 预览"
-  - "事件, 取消显示"
-  - "预览事件"
-  - "取消显示事件"
+title: "预览事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Preview events [WPF]
+- suppressing events [WPF]
+- events [WPF], Preview
+- events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 预览事件
-预览事件（也称为隧道事件）是路由事件，路由的方向是从应用程序根元素到引发该事件并在事件数据中报告为源的元素。  并非所有的事件方案都支持或需要预览事件；本主题介绍存在预览事件的情形，说明应用程序或组件应如何处理预览事件，并指出可能适宜在自定义组件或类中创建预览事件的情形。  
+# <a name="preview-events"></a>预览事件
+预览事件，也称为隧道事件，是路由的事件的路由的方向从应用程序根的元素，引发事件并报告为事件数据中的源的传输其中。 并非所有事件方案支持或要求预览事件;本主题介绍其中预览事件存在时，应用程序或组件应如何处理它们，情况和采用的情况下可能适合在自定义组件或类中创建预览事件。  
   
-## 预览事件和输入  
- 当您通常处理预览事件时，应谨慎地在事件数据中将事件标记为已处理。  在引发预览事件的元素（在事件数据中报告为源的元素）之外的任何元素上处理该事件都有这样的后果：使得元素没有机会处理源自于它的事件。  有时这是希望的结果，尤其当该元素存在于控件的复合关系内时。  
+## <a name="preview-events-and-input"></a>预览事件和输入  
+ 在处理事件时一般情况下，应该格外谨慎的预览时将标记事件在事件中处理数据。 引发它 （报告为中的事件数据的源的元素） 的元素而不处理任何元素上的预览事件具有使得元素没有机会处理产生的事件的效果。 有时这是所需的结果，尤其是所涉及的元素存在于在该控件的组合中的关系。  
   
- 特别是对于输入事件而言，预览事件还与对等的冒泡事件共享事件数据实例。  如果您使用预览事件类处理程序将输入事件标记为已处理，将不会调用冒泡输入事件类处理程序。  或者，如果您使用预览事件实例处理程序将事件标记为已处理，则通常不会调用冒泡事件的处理程序。  可以使用即使事件已标记为已处理也将调用的选项来注册或附加类处理程序或实例处理程序，但此技术不常用。  
+ 输入事件具体而言，预览事件还具有事件数据实例等效冒泡事件。 如果使用预览版事件类处理程序将处理该输入的事件标记，将不会调用冒泡输入的事件类处理程序。 或者，如果使用预览版事件实例处理程序将处理该事件标记，冒泡事件的处理将不通常会调用。 可以注册或附加的选项要调用即使事件被标记为已处理，但该方法不常用于处理程序类或实例处理程序。  
   
- 有关类处理以及它与预览事件的关系的更多信息，请参见[将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 有关类处理和它如何与预览事件相关的详细信息请参阅[标记作为 Handled，和类处理的路由事件](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
   
-### 通过控件解决事件禁止问题  
- 通常使用预览事件的一种情形是复合控件的输入事件处理。  有时，控件创作者禁止从其控件引发某一事件，这样做可能是为了替换上携带更多信息或者暗指更具体的行为的组件定义事件。  例如，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> 禁止 <xref:System.Windows.Controls.Button> 或它的组成元素所引发的 <xref:System.Windows.UIElement.MouseLeftButtonDown> 和 <xref:System.Windows.UIElement.MouseLeftButtonDown> 冒泡事件，以便于捕获鼠标并引发始终由 <xref:System.Windows.Controls.Button> 本身引发的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。  事件及其数据仍然沿着路由继续，但是因为 <xref:System.Windows.Controls.Button> 将事件数据标记为 <xref:System.Windows.RoutedEventArgs.Handled%2A>，所以只会调用明确指出它们应当在 `handledEventsToo` 情况下起作用的事件处理程序。  如果在应用程序根元素之前的其他元素仍然希望有机会处理被控件禁止的事件，那么一个替代方法是在代码中附加 `handledEventsToo` 指定为 `true` 的处理程序。  但是，一种更简单的方法通常是将您处理的路由方向改为输入事件的等效预览事件。  例如，如果控件禁止 <xref:System.Windows.UIElement.MouseLeftButtonDown>，则应尝试为 <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> 附加处理程序。  此方法仅适应于基元素输入事件，如 <xref:System.Windows.UIElement.MouseLeftButtonDown>。  这些输入事件使用隧道\/冒泡对，引发两个事件，并共享事件数据。  
+### <a name="working-around-event-suppression-by-controls"></a>通过控件解决事件禁止问题  
+ 通常用于预览事件的一个方案适用于复合控件处理输入事件。 有时，该控件的作者禁止显示中的某些事件可能是为了替换具备更多信息或意味着更具体的行为的组件定义事件源自其控件。 例如， [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>取消<xref:System.Windows.UIElement.MouseLeftButtonDown>和<xref:System.Windows.UIElement.MouseLeftButtonDown>引发事件，冒泡<xref:System.Windows.Controls.Button>或复合元素捕获鼠标并引发为支持<xref:System.Windows.Controls.Primitives.ButtonBase.Click>始终由引发的事件<xref:System.Windows.Controls.Button>本身。 事件和其数据仍继续沿路由，但是，由于<xref:System.Windows.Controls.Button>标记形式的事件数据<xref:System.Windows.RoutedEventArgs.Handled%2A>，仅专门指示它们应中处理事件的处理`handledEventsToo`调用用例。  如果向你的应用程序的根目录的其他元素仍想要处理控件抑制的事件的机会，一个替代方法是将在代码中使用的处理程序附加`handledEventsToo`指定为`true`。 但通常更简单的技术是更改处理输入事件的预览等效的路由方向。 例如，如果控件禁止<xref:System.Windows.UIElement.MouseLeftButtonDown>，请尝试附加的处理程序<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>相反。 此方法仅适用于基元素输入事件例如<xref:System.Windows.UIElement.MouseLeftButtonDown>。 这些输入的事件使用隧道/气泡对、 引发两个事件和共享的事件数据。  
   
- 上述每种方法都有副作用或局限性。  处理预览事件的副作用是在该点处理此事件可能会禁用计划处理冒泡事件的处理程序，因此局限性在于：将仍在路由的预览部分的事件标记为已处理通常是不明智的。  `handledEventsToo` 方法的局限性在于：您不能将 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 `handledEventsToo` 处理程序指定为特性，而必须在获得对将附加事件处理程序的元素的对象引用后，在代码中注册该处理程序。  
+ 上述每种方法具有负面影响或限制。 处理预览事件的副作用是在该点处理事件可能会禁用希望处理该冒泡事件的处理程序，并因此的限制是，它通常是不标记为已处理仍在 Previ 上时一个好办法新的路由的部分。 限制`handledEventsToo`种方法是，不能指定`handledEventsToo`中的处理程序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]作为属性，你必须注册事件处理程序代码中获取对元素的对象引用该处理程序是其中要附加后。  
   
-## 请参阅  
- [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
+## <a name="see-also"></a>另请参阅  
+ [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

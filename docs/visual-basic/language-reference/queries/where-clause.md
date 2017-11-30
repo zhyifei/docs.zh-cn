@@ -1,61 +1,59 @@
 ---
-title: "Where 子句 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryWhere"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "查询 [Visual Basic], Where"
-  - "Where 子句"
-  - "Where 语句"
+title: "Where 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryWhere
+helpviewer_keywords:
+- Where statement [Visual Basic]
+- queries [Visual Basic], Where
+- Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Where 子句 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查询的筛选条件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 Where condition  
 ```  
   
-## 部件  
+## <a name="parts"></a>部件  
  `condition`  
- 必选。  一个表达式，确定是否在输出集合中包含集合中当前项的值。  该表达式的计算结果必须为 `Boolean` 值或 `Boolean` 值的等效值。  如果条件的计算结果为 `True`，则在查询结果中包含该元素；否则从查询结果中排除该元素。  
+ 必需。 一个表达式，确定输出集合中是否包含集合中的当前项的值。 表达式的计算结果必须为`Boolean`值或等效于`Boolean`值。 如果条件计算结果为`True`，该元素是包含在查询结果; 否则为查询结果中排除该元素。  
   
-## 备注  
- 使用 `Where` 子句，可以通过仅选择满足特定条件的元素来筛选查询数据。  其值使 `Where` 子句的计算结果为 `True` 的元素将包含在查询结果中；其他元素将被排除。  `Where` 子句中使用的表达式的计算结果必须为 `Boolean` 值或 `Boolean` 值的等效值（例如 Integer 值 — 当其值为 0 时，计算结果为 `False`）。  使用逻辑运算符（如 `And`、`Or`、`AndAlso`、`OrElse`、`Is` 和 `IsNot`）可以将多个表达式组合在一个 `Where` 子句中。  
+## <a name="remarks"></a>备注  
+ `Where`子句，可以通过选择满足特定条件的元素来筛选查询数据。 其值会导致的元素`Where`子句计算结果为`True`包含在查询结果; 排除其他元素。 使用中的表达式`Where`子句的计算结果必须为`Boolean`或等效于`Boolean`，如计算结果为一个整数`False`时其值为零。 你可以组合多个表达式中的`Where`子句通过使用逻辑运算符，如`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  
   
- 默认情况下，查询表达式直到被访问时（例如，当它们进行数据绑定或在 `For` 循环中进行循环访问时）才计算结果。  因此，在访问查询前，不会计算 `Where` 子句。  如果值位于 `Where` 子句中使用的查询外部，请确保查询执行时在 `Where` 子句中使用适当的值。  有关查询执行的更多信息，请参见[编写第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 默认情况下，查询无法计算的表达式直到被访问-例如，当它们进行数据绑定或中进行循环访问时`For`循环。 因此，`Where`访问查询之前，则不会评估子句。 如果你具有值中使用的查询外部`Where`子句中，确保适当的值在中使用`Where`子句在执行查询的时间。 有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
- 您可以在 `Where` 子句中调用函数，以便对集合中当前元素的值执行计算或运算。  在 `Where` 子句中调用函数可使查询在定义后立即执行，而不是在访问时执行。  有关查询执行的更多信息，请参见[编写第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
+ 你可以调用中的函数`Where`子句，从集合中的当前元素执行计算或上一个值的操作。 调用函数`Where`子句可能会导致立即时它定义而不是它访问时执行的查询。 有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
-## 示例  
- 下面的查询表达式使用 `From` 子句为 `customers` 集合中的每个 `Customer` 对象声明范围变量 `cust`。  `Where` 子句使用范围变量将输出限制为指定地区的客户。  `For Each` 循环在查询结果中显示每个客户的公司名称。  
+## <a name="example"></a>示例  
+ 下面的查询表达式使用`From`子句来声明范围变量`cust`每个`Customer`对象在`customers`集合。 `Where`子句使用的范围变量以将输出限制为客户，从指定的区域。 `For Each`循环显示查询结果中的每个客户的公司名称。  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
-## 示例  
- 下面的示例在 `Where` 子句使用 `And` 和 `Or` 逻辑运算符。  
+## <a name="example"></a>示例  
+ 下面的示例使用`And`和`Or`中的逻辑运算符`Where`子句。  
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## 请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [查询](../../../visual-basic/language-reference/queries/queries.md)   
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [查询](../../../visual-basic/language-reference/queries/queries.md)  
+ [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
  [For Each...Next 语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

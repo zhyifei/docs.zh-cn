@@ -1,31 +1,37 @@
 ---
-title: "如何：在单击标题时对 GridView 列进行排序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GridView 控件"
-  - "ListView 控件"
-  - "ListView 控件，对 GridView 列进行排序"
-  - "GridView 控件和 ListView 控件"
+title: "如何：在单击标题时对 GridView 列进行排序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], GridView
+- controls [WPF], ListView
+- ListView controls [WPF], sorting GridView columns
+- GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在单击标题时对 GridView 列进行排序
-此示例演示如何创建<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView>查看模式和数据内容时用户单击列标题排序。  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>如何：在单击标题时对 GridView 列进行排序
+此示例演示如何创建<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView>查看模式和排序数据内容当用户单击列标题。  
   
 ## <a name="example"></a>示例  
- 下面的示例定义<xref:System.Windows.Controls.GridView>具有三个列绑定到<xref:System.DateTime.Year%2A>，<xref:System.DateTime.Month%2A>，和<xref:System.DateTime.Day%2A>，属性<xref:System.DateTime>结构。  
+ 下面的示例定义<xref:System.Windows.Controls.GridView>具有三列绑定到<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，和<xref:System.DateTime.Day%2A>，属性<xref:System.DateTime>结构。  
   
 ```xaml  
 <GridView>  
@@ -41,7 +47,7 @@ caps.handback.revision: 18
 </GridView>  
 ```  
   
- 下面的示例演示定义为数据项<xref:System.Collections.ArrayList>的<xref:System.DateTime>对象。 <xref:System.Collections.ArrayList>被定义为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.ListView>控件。  
+ 下面的示例演示定义为数据项<xref:System.Collections.ArrayList>的<xref:System.DateTime>对象。 <xref:System.Collections.ArrayList>定义为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.ListView>控件。  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -62,7 +68,7 @@ caps.handback.revision: 18
 </ListView.ItemsSource>  
 ```  
   
- `s`和`p`中的标识符[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记引用的元数据中定义的命名空间映射[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页。 下面的示例演示元数据定义。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记中的 `s` 和 `p` 标识符引用在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面元数据中定义的命名空间映射。 下面的示例显示了元数据定义。  
   
 ```xaml  
 <Window        
@@ -73,7 +79,7 @@ caps.handback.revision: 18
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- 若要根据列的内容数据进行排序，该示例定义一个事件处理程序，以处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按列标题按钮时发生的事件。 下面的示例演示如何以指定的事件处理程序<xref:System.Windows.Controls.GridViewColumnHeader>控件。  
+ 若要根据列的内容对数据进行排序，该示例定义一个事件处理程序来处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按列标头按钮时发生的事件。 下面的示例演示如何指定的事件处理程序<xref:System.Windows.Controls.GridViewColumnHeader>控件。  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -82,7 +88,7 @@ caps.handback.revision: 18
  >  
 ```  
   
- 该示例定义了事件处理程序，因此升序和降序每次按列标题按钮之间更改排序方向。 下面的示例显示了事件处理程序。  
+ 该示例定义了事件处理程序，以便每次按下列标题按钮时，排序方向会在升序和降序之间发生变化。 下面的示例显示了事件处理程序。  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -196,7 +202,7 @@ Partial Public Class Window1
         End Sub  
 ```  
   
- 下面的示例演示调用事件处理程序对数据进行排序的排序算法。 通过创建新执行排序<xref:System.ComponentModel.SortDescription>结构。  
+ 下面的示例演示由事件处理程序调用以供对数据进行排序的排序算法。 通过创建新执行排序<xref:System.ComponentModel.SortDescription>结构。  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -209,7 +215,6 @@ private void Sort(string sortBy, ListSortDirection direction)
     dataView.SortDescriptions.Add(sd);  
     dataView.Refresh();  
 }  
-  
 ```  
   
 ```vb  
@@ -224,8 +229,8 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [操作指南主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

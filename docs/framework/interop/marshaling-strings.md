@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, samples
 - platform invoke, marshaling data
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8455d4f1b4dbb463176c06d680b2bd0b1ff9d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 750f4e6852cd5aa52d03f884edcbfbf80ed5fab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="marshaling-strings"></a>封送处理字符串
 平台调用复制字符串参数，根据需要将其从 .NET Framework 格式 (Unicode) 转换为非托管格式 (ANSI)。 由于托管的字符串不可变，在函数返回时，平台调用并不将它们从非托管内存复制回托管内存。  
@@ -54,9 +47,8 @@ ms.lasthandoff: 08/21/2017
 |作为包含字符串的结构数组按值。|创建包含字符串的结构数组，且该数组是按值传递的。|[阵列](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [使用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)   
- [平台调用数据类型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [封送类、结构和联合](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)   
- [封送类型数组](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
+ [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ [平台调用数据类型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [封送类、结构和联合](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)  
+ [封送类型数组](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
  [其他封送处理示例](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)
-

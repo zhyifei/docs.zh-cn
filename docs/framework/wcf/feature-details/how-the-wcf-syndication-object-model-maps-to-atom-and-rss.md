@@ -1,22 +1,28 @@
 ---
-title: "WCF 联合对象模型如何映射到 Atom 和 RSS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 联合对象模型如何映射到 Atom 和 RSS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e6af3dc911cdf67e7290d339122821c00fe6bc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 联合对象模型如何映射到 Atom 和 RSS
+# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 联合对象模型如何映射到 Atom 和 RSS
 开发 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 联合服务时，使用以下类创建源和项：  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
@@ -35,9 +41,9 @@ caps.handback.revision: 18
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- 可以按照为其定义格式化程序的任何联合格式序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 附带有两个格式化程序：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
+ 可以按照为其定义格式化程序的任何联合格式序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 附带有两个格式化程序：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
   
- 与 RSS 2.0 规范相比，围绕 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 的对象模型具有与 Atom 1.0 规范更密切的关系。这是因为 Atom 1.0 是更为充分的规范，它定义了在 RSS 2.0 规范中不明确的或被忽略的元素。因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合对象模型中的许多项在 RSS 2.0 规范中没有直接表示形式。按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象时，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以将 Atom 特定的数据元素序列化为符合 Atom 规范的命名空间限定扩展元素。可以通过传递到 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 构造函数的参数对此进行控制。  
+ 与 RSS 2.0 规范相比，围绕 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 的对象模型具有与 Atom 1.0 规范更密切的关系。 这是因为 Atom 1.0 是更为充分的规范，它定义了在 RSS 2.0 规范中不明确的或被忽略的元素。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合对象模型中的许多项在 RSS 2.0 规范中没有直接表示形式。 按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象时，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以将 Atom 特定的数据元素序列化为符合 Atom 规范的命名空间限定扩展元素。 可以通过传递到 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 构造函数的参数对此进行控制。  
   
  本主题中的代码示例使用此处定义的两种方法之一进行实际的序列化。  
   
@@ -51,15 +57,15 @@ caps.handback.revision: 18
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
-## SyndicationFeed  
+## <a name="syndicationfeed"></a>SyndicationFeed  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类。  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
  [!code-vb[SyndicationMapping#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#0)]  
   
- 下面的 XML 演示如何按照 Atom 1.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。  
+ 下面的 XML 演示如何将 <xref:System.ServiceModel.Syndication.SyndicationFeed> 序列化为 Atom 1.0。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <feed xml:lang="EN-US" xmlns="http://www.w3.org/2005/Atom">  
   <title type="text">My Feed Title</title>  
@@ -108,7 +114,7 @@ caps.handback.revision: 18
   
  下面的 XML 演示如何按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed>。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">  
   <channel>  
@@ -148,15 +154,15 @@ caps.handback.revision: 18
 </rss>  
 ```  
   
-## SyndicationItem  
+## <a name="syndicationitem"></a>SyndicationItem  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationItem> 类。  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
  [!code-vb[SyndicationMapping#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#1)]  
   
- 下面的 XML 演示如何按照 Atom 1.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationItem>。  
+ 下面的 XML 演示如何将 <xref:System.ServiceModel.Syndication.SyndicationItem> 序列化为 Atom 1.0。  
   
-```  
+```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
   <id>ItemID</id>  
   <title type="text">Item Title</title>  
@@ -198,7 +204,7 @@ caps.handback.revision: 18
   
  下面的 XML 演示如何按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationItem>。  
   
-```  
+```xml  
 <item>  
   <guid isPermaLink="false">ItemID</guid>  
   <link>http://myitemuri/</link>  
@@ -234,15 +240,15 @@ caps.handback.revision: 18
 </item>  
 ```  
   
-## SyndicationPerson  
+## <a name="syndicationperson"></a>SyndicationPerson  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationPerson> 类。  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
  [!code-vb[SyndicationMapping#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#2)]  
   
- 下面的 XML 演示如何按照 Atom 1.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationPerson>。  
+ 下面的 XML 演示如何将 <xref:System.ServiceModel.Syndication.SyndicationPerson> 序列化为 Atom 1.0。  
   
-```  
+```xml  
   <author>  
     <name>Jesper Aaberg</name>  
     <uri>http://Contoso/Aaberg</uri>  
@@ -255,9 +261,9 @@ caps.handback.revision: 18
   </contributor>  
 ```  
   
- 下面的 XML 演示在 `Authors` 或 `Contributors` 集合中分别仅存在一个 <xref:System.ServiceModel.Syndication.SyndicationPerson> 时，如何按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationPerson> 类。  
+ 下面的 XML 演示在 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 <xref:System.ServiceModel.Syndication.SyndicationPerson> 集合中分别仅存在一个 `Authors` 时，如何按照 RSS 2.0 序列化 `Contributors` 类。  
   
-```  
+```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
 <a10:contributor>  
     <a10:name>Lene Aaling</a10:name>  
@@ -266,9 +272,9 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
- 下面的 XML 演示在 `Authors` 或 `Contributors` 集合中分别存在多个 <xref:System.ServiceModel.Syndication.SyndicationPerson> 时，如何按照 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationPerson> 类。  
+ 下面的 XML 演示在 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 <xref:System.ServiceModel.Syndication.SyndicationPerson> 集合中分别存在多个 `Authors` 时，如何按照 RSS 2.0 序列化 `Contributors` 类。  
   
-```  
+```xml  
 <a10:author>  
     <a10:name>Jesper Aaberg</a10:name>  
     <a10:uri>http://Contoso/Aaberg</a10:uri>  
@@ -291,13 +297,13 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
-## SyndicationLink  
+## <a name="syndicationlink"></a>SyndicationLink  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationLink> 类。  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
  [!code-vb[SyndicationMapping#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#3)]  
   
- 下面的 XML 演示如何按照 Atom 1.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationLink>。  
+ 下面的 XML 演示如何将 <xref:System.ServiceModel.Syndication.SyndicationLink> 序列化为 Atom 1.0。  
   
  `<link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
@@ -305,13 +311,13 @@ caps.handback.revision: 18
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
-## SyndicationCategory  
+## <a name="syndicationcategory"></a>SyndicationCategory  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationCategory> 类。  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
  [!code-vb[SyndicationMapping#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#4)]  
   
- 下面的 XML 演示如何按照 Atom 1.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationCategory>。  
+ 下面的 XML 演示如何将 <xref:System.ServiceModel.Syndication.SyndicationCategory> 序列化为 Atom 1.0。  
   
  `<category term="categoryName" label="categoryLabel" scheme="categoryScheme" />`  
   
@@ -319,7 +325,7 @@ caps.handback.revision: 18
   
  `<category domain="categoryScheme">categoryName</category>`  
   
-## TextSyndicationContent  
+## <a name="textsyndicationcontent"></a>TextSyndicationContent  
  下面的代码示例演示使用 HTML 内容创建 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 时，如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -363,7 +369,7 @@ caps.handback.revision: 18
   
  `<description><html> some xhtml </html></description>`  
   
-## UrlSyndicationContent  
+## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -379,7 +385,7 @@ caps.handback.revision: 18
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
-## XmlSyndicationContent  
+## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
@@ -401,9 +407,9 @@ caps.handback.revision: 18
   
  `</content>`  
   
-## 请参阅  
- [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)   
- [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)   
- [如何：创建基本 RSS 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)   
- [如何：创建基本 Atom 配送](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)   
- [如何：作为 Atom 和 RSS 公开源](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>另请参阅  
+ [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [如何： 创建基本 RSS 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [如何： 创建基本 Atom 馈送](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [如何： 公开源作为 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

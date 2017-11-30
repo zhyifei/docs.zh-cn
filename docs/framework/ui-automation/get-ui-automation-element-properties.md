@@ -1,49 +1,55 @@
 ---
-title: "Get UI Automation Element Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "properties, retrieving"
-  - "UI Automation, retrieving properties of elements"
+title: "获取 UI 自动化元素的属性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties, retrieving
+- UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-caps.latest.revision: 5
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 2b9e1f24a6384cd052dd7b15c7afb3facac05c57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Get UI Automation Element Properties
+# <a name="get-ui-automation-element-properties"></a>获取 UI 自动化元素的属性
 > [!NOTE]
->  本文档的目标读者是欲使用 <xref:System.Windows.Automation> 命名空间中定义的托管 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]类的 .NET Framework 开发人员。  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参见 [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746)（Windows 自动化 API：UI 自动化）。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- 本主题演示如何检索 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素的属性。  
+ 本主题演示如何检索的属性[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]元素。  
   
-### 获取当前的属性值  
+### <a name="get-a-current-property-value"></a>获取当前的属性值  
   
-1.  获取希望得到其属性的 <xref:System.Windows.Automation.AutomationElement>。  
+1.  获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。  
   
-2.  调用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或者检索 <xref:System.Windows.Automation.AutomationElement.Current%2A> 属性结构并从它的某个成员获取值。  
+2.  调用<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Current%2A>属性结构并获取其成员之一的值。  
   
-### 获取缓存的属性值  
+### <a name="get-a-cached-property-value"></a>获取缓存的属性值  
   
-1.  获取希望得到其属性的 <xref:System.Windows.Automation.AutomationElement>。  该属性必须已经在 <xref:System.Windows.Automation.CacheRequest> 中指定。  
+1.  获取<xref:System.Windows.Automation.AutomationElement>你想要获取其属性。 属性必须在指定<xref:System.Windows.Automation.CacheRequest>。  
   
-2.  调用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或者检索 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性结构并从它的某个成员获取值。  
+2.  调用<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或检索<xref:System.Windows.Automation.AutomationElement.Cached%2A>属性结构并获取其成员之一的值。  
   
-## 示例  
- 下面的示例演示各种用来检索 <xref:System.Windows.Automation.AutomationElement> 的当前属性的方法。  
+## <a name="example"></a>示例  
+ 下面的示例演示各种方法来检索当前属性<xref:System.Windows.Automation.AutomationElement>。  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## 请参阅  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)   
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+## <a name="see-also"></a>另请参阅  
+ [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

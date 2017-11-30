@@ -1,43 +1,35 @@
 ---
-title: "如何︰ 执行表达式树 (Visual Basic 中) |Microsoft 文档"
+title: "如何： 执行表达式树 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e12c45b417310f097d597561b2652ee793a4b2c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45a13f13659472b7620b6df070815ace1d6fb0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>如何︰ 执行表达式树 (Visual Basic)
-本主题演示如何执行表达式树。 执行表达式树可能会返回一个值，或者它可能只需执行的操作，例如调用方法。  
+# <a name="how-to-execute-expression-trees-visual-basic"></a>如何： 执行表达式树 (Visual Basic)
+本主题演示如何执行表达式树。 执行表达式树可能返回一个值，或者它可能只是执行操作，例如调用方法。  
   
- 可以执行仅表示 lambda 表达式的表达式树。 表示 lambda 表达式的表达式目录树是类型<xref:System.Linq.Expressions.LambdaExpression>或<xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression> 若要执行这些表达式树，调用<xref:System.Linq.Expressions.LambdaExpression.Compile%2A>方法来创建一个可执行的委托，然后调用该委托。</xref:System.Linq.Expressions.LambdaExpression.Compile%2A>  
+ 仅可以执行表示 lambda 表达式的表达式树。 表示 Lambda 表达式的表达式树的类型为 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601>。 若要执行这些表达式树，请调用 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法来创建一个可执行的委托，然后调用该委托。  
   
 > [!NOTE]
->  如果不知道该委托的类型，即 lambda 表达式是类型<xref:System.Linq.Expressions.LambdaExpression>和 not <xref:System.Linq.Expressions.Expression%601>，必须调用<xref:System.Delegate.DynamicInvoke%2A>上而不是直接调用委托方法。</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression>  
+>  如果委托的类型未知，也就是说 Lambda 表达式的类型为 <xref:System.Linq.Expressions.LambdaExpression>，而不是 <xref:System.Linq.Expressions.Expression%601>，则必须对委托调用 <xref:System.Delegate.DynamicInvoke%2A> 方法，而不是直接调用委托。  
   
- 如果表达式目录树不表示 lambda 表达式，可以创建一个新的 lambda 表达式作为其主体具有原始表达式目录树，通过调用<xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>方法。</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 然后，可以执行 lambda 表达式，如本节前面所述。  
+ 如果表达式树不表示 Lambda 表达式，可以通过调用 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 方法创建一个新的 Lambda 表达式，此表达式的主体为原始表达式树。 然后，按本节前面所述执行此 lambda 表达式。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何执行表达式树表示数字的幂︰ 创建 lambda 表达式，然后执行它。 结果，它表示为数字幂的次幂，将显示。  
+ 下面的代码示例演示如何通过创建 lambda 表达式并执行它来执行代表幂运算的表达式树。 示例最后显示幂运算的结果。  
   
 ```vb  
 ' The expression tree to execute.  
@@ -61,10 +53,10 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   如果未引用将添加对 System.Core.dll 的项目引用。  
+-   添加对 System.Core.dll 的项目引用（如果尚未引用）。  
   
 -   包括 System.Linq.Expressions 命名空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [如何︰ 修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+ [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [如何： 修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

@@ -1,38 +1,39 @@
 ---
-title: "Windows 窗体和控件中的国际字体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows 窗体中的字体代用"
-  - "字体, 全球化注意事项"
-  - "字体, 国际化"
-  - "全球化 [Windows 窗体], 字符集"
-  - "国际应用程序 [Windows 窗体], 字符显示"
-  - "本地化 [Windows 窗体], 字体"
-  - "Windows 窗体控件, 标签"
+title: "Windows 窗体和控件中的国际字体"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fonts [Windows Forms], international
+- international applications [Windows Forms], character display
+- fonts [Windows Forms], globalization considerations
+- localization [Windows Forms], fonts
+- Windows Forms controls, labels
+- font fallback in Windows Forms
+- globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 窗体和控件中的国际字体
-在国际化应用程序中，选择字体的推荐方法是尽可能使用字体后备。  字体后备意味着系统确定字符属于哪一脚本。  
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Windows 窗体和控件中的国际字体
+国际应用程序中选择字体的推荐的方法是使用字体回退，只要有可能。 在系统确定哪一脚本字符的字体后备意味着属于。  
   
-## 使用字体后备  
- 若要利用此功能，则不要为窗体或其他任何元素设置 <xref:System.Drawing.Font> 属性。  应用程序将自动使用默认系统字体，而操作系统的本地化语言不同，则默认系统字体也将不同。  当应用程序运行时，系统将自动为操作系统中选择的区域性提供正确的字体。  
+## <a name="using-font-fallback"></a>使用字体回退  
+ 若要利用此功能，不设置<xref:System.Drawing.Font>为你的窗体或任何其他元素的属性。 应用程序将自动使用不同的操作系统的一种本地化语言到另一个使用默认系统字体。 应用程序运行时，系统将自动为在操作系统中选定的区域性提供正确的字体。  
   
- 对于此不设置字体规则有一点例外，即对于更改字体样式的情况。  对于某一应用程序，如果用户要在其中单击一个按钮以使文本框中的文本以粗体显示，这一点可能十分重要。  若要执行此操作，应该基于该窗体的任何字体，编写一个函数来将文本框的字体样式更改为粗体。  必须在两个地方调用此函数：在按钮的 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，以及在 <xref:System.Windows.Forms.Control.FontChanged> 事件处理程序中。  如果只在 <xref:System.Windows.Forms.Control.Click> 事件处理程序中调用该函数，并且代码的某些其他部分更改了整个窗体的字体系列，则该文本框将不随窗体的其余部分的更改而更改。  
+ 没有不设置字体，即对于更改字体样式规则的例外。 这可能会在其中用户单击按钮以粗体使文字在文本框中显示的应用程序很重要。 为此，请将编写一个函数来更改文本框中的字体样式为加粗，基于任何窗体的字体。 务必要在两个位置中调用此函数： 中按钮的<xref:System.Windows.Forms.Control.Click>事件处理程序并在<xref:System.Windows.Forms.Control.FontChanged>事件处理程序。 如果仅在调用该函数<xref:System.Windows.Forms.Control.Click>事件处理程序和其他一些代码更改整个窗体的字体系列、 文本框中将不会更改与窗体的其余部分。  
   
 ```  
 ' Visual Basic  
@@ -78,7 +79,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }  
 ```  
   
- 但是，在本地化应用程序时，对于某些语言粗体可能不能正确显示。  如果此问题较为重要，您想让本地化人员来选择将字体从粗体切换为常规文本。  因为本地化人员通常不是开发人员并且没有对源代码的访问权限，而只能访问资源文件，所以需要在资源文件中设置该选项。  为此，需要将 <xref:System.Drawing.Font.Bold%2A> 属性设置为 `true`。  这导致字体设置被写出到资源文件，而本地化人员可以在资源文件中对其进行编辑。  然后可以基于该窗体的任何字体（但使用在资源文件中指定的字体样式），在 `InitializeComponent`  方法之后编写代码来重置该字体。  
+ 但是，当你在本地化你的应用程序时, 加粗字体可能不佳对于某些语言显示。 如果这是一个问题，你想让本地化人员来切换从粗体到常规文本的字体的选项。 由于本地化人员通常不是开发人员，但没有访问源代码，仅对资源的文件，此选项需要在资源文件中设置。 若要执行此操作，将设置<xref:System.Drawing.Font.Bold%2A>属性`true`。 这会导致正在写出到资源文件，本地化人员可以在其中编辑字体设置。 然后，你编写代码之后`InitializeComponent`方法来重置字体基于任何窗体的字体，但使用的字体样式资源文件中指定。  
   
 ```  
 ' Visual Basic  
@@ -88,6 +89,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## 请参阅  
- [全球化 Windows 窗体](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)   
+## <a name="see-also"></a>另请参阅  
+ [全球化 Windows 窗体](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

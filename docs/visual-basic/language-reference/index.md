@@ -1,12 +1,9 @@
 ---
 title: "Visual Basic 语言参考"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic language reference
 - run-time libraries, Visual Basic
@@ -16,29 +13,14 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 语言参考
 此部分提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言各方面的参考信息。  
@@ -48,7 +30,7 @@ ms.lasthandoff: 07/28/2017
  概述了关键字、占位符和其他语言元素在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文档中的格式设置方式。  
   
  [Visual Basic 运行库成员](../../visual-basic/language-reference/runtime-library-members.md)  
- 列出了 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空间的类和模块，同时收录了它们的成员函数、方法、属性、常量和枚举链接。  
+ 列出了 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空间的类和模块，同时收录了它们的成员函数、方法、属性、常量和枚举链接。  
   
  [关键字](../../visual-basic/language-reference/keywords/index.md)  
  列出了所有 Visual Basic 关键字，并收录了详细信息链接。  
@@ -110,4 +92,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
  介绍了如何将命令行编译器用作一种替代方法，从而在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中编译程序。
-

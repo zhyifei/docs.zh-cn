@@ -1,44 +1,45 @@
 ---
-title: "如何：使用设计器用 Windows 窗体面板控件对控件进行分组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控件 [Windows 窗体], 分组"
-  - "Panel 控件 [Windows 窗体], 将控件分组"
-  - "Windows 窗体控件, 分组"
+title: "如何：使用设计器用 Windows 窗体面板控件对控件进行分组"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Panel control [Windows Forms], grouping controls
+- controls [Windows Forms], grouping
+- Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用设计器用 Windows 窗体面板控件对控件进行分组
-Windows 窗体 <xref:System.Windows.Forms.Panel> 控件用于对其他控件进行分组。  对控件分组的原因有三个。  第一是为获得清楚的用户界面而将相关窗体元素进行可视分组；第二是编程分组，例如对单选按钮进行分组；最后一个原因是为了在设计时将多个控件作为一个单元来移动。  
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体面板控件对控件进行分组
+Windows 窗体<xref:System.Windows.Forms.Panel>控制用于其他控件进行分组。 有三个原因与组控件。 有 visual 清除用户接口; 相关的窗体元素的分组另一种是以编程方式分组的单选按钮例如;最后一个是用于在设计时将控件移作为一个单元。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于您现用的设置或版本。  若要更改设置，请在**“工具”**菜单上选择**“导入和导出设置”**。  有关更多信息，请参见 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-cn/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 创建一组控件  
+### <a name="to-create-a-group-of-controls"></a>若要创建一组控件  
   
-1.  将 <xref:System.Windows.Forms.Panel> 控件从“工具箱”的**“Windows 窗体”**选项卡中拖到窗体上。  
+1.  拖动<xref:System.Windows.Forms.Panel>控件从**Windows 窗体**拖到窗体工具箱选项卡中的。  
   
-2.  向面板添加其他控件，在面板内绘制每个控件。  
+2.  将其他控件添加到面板中，绘制面板内的每个。  
   
-     如果要将现有控件放到面板中，可以选择所有这些控件，将它们剪切到剪贴板，再选择 <xref:System.Windows.Forms.Panel> 控件，然后将现有控件粘贴到面板中。  也可以将它们拖到面板中。  
+     如果你有想要将括在一个面板中的现有控件，可以选择所有控件，将它们剪切到剪贴板，再都选择<xref:System.Windows.Forms.Panel>控制，然后将其粘贴到面板中。 你还可以将其拖到面板。  
   
-3.  （可选）如果要向面板添加边框，请设置其 <xref:System.Windows.Forms.BorderStyle> 属性。  有下面三个选择方案：<xref:System.Windows.Forms.BorderStyle>、<xref:System.Windows.Forms.BorderStyle> 和 <xref:System.Windows.Forms.BorderStyle>。  
+3.  （可选）如果你想要将边框添加到面板，设置其<xref:System.Windows.Forms.BorderStyle>属性。 有三个选择： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
-## 请参阅  
- [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)   
- [Panel 控件概述](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [如何：设置面板的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+## <a name="see-also"></a>另请参阅  
+ [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Panel 控件概述](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [如何：设置 Panel 控件的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

@@ -1,22 +1,25 @@
 ---
-title: "必须指定位于当前文件夹或其某个子文件夹下的路径 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "必须指定位于当前文件夹或其某个子文件夹下的路径"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 8717dabd-a9a7-4d4d-8b21-004b5ce7e652
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8fc235f099fcfd4bf65bad164edbc0b09d8bf0c1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 必须指定位于当前文件夹或其某个子文件夹下的路径
+# <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>必须指定位于当前文件夹或其某个子文件夹下的路径
 指定的路径不在当前目录下。 这可能导致在提供相对路径时不当分析文件路径。  
   
-### 更正此错误  
+## <a name="to-correct-this-error"></a>更正此错误  
   
 -   请确保提供正确的路径。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：分析文件路径](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

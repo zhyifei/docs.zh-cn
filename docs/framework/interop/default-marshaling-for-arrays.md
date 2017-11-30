@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/21/2017
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>托管数组  
- 可以有各种托管数组类型；但是，<xref:System.Array?displayProperty=fullName> 类是所有数组类型的基类。 System.Array 类的属性可确定数组的秩、长度、下限和上限，其方法可用于访问、搜索、复制、创建数组以及对数组排序。  
+ 可以有各种托管数组类型；但是，<xref:System.Array?displayProperty=nameWithType> 类是所有数组类型的基类。 System.Array 类的属性可确定数组的秩、长度、下限和上限，其方法可用于访问、搜索、复制、创建数组以及对数组排序。  
   
  这些数组类型是动态类型，在基类库中未定义相应的静态类型。 将元素类型和秩的每一种组合视作不同类型的数组非常方便。 因此，一维整数数组与一维 double 类型数组是不同的类型。 同样，二维整数数组与一维整数数组也不同。 比较类型时，不考虑数组界限。  
   
@@ -103,7 +99,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=fullName> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)。  
+ 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=nameWithType> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)。  
   
 ### <a name="c-style-arrays"></a>C 样式数组  
  将 C 样式数组从类型库导入 .NET 程序集中时，数组被转换为 ELEMENT_TYPE_SZARRAY。  
@@ -210,7 +206,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |ELEMENT_TYPE_SZARRAY \< type >|<xref:System.Runtime.InteropServices.UnmanagedType> .SafeArray( *type* **)**<br /><br /> UnmanagedType.LPArray<br /><br /> 签名中提供了类型。 秩始终为 1，下限始终为 0。 在运行时大小始终为已知。|  
 |ELEMENT_TYPE_ARRAY \< type > \< rank >[ \<bounds> ]|UnmanagedType.SafeArray( type )<br /><br /> UnmanagedType.LPArray<br /><br /> 签名中提供了类型、秩和界限。 在运行时大小始终为已知。|  
-|ELEMENT_TYPE_CLASS \<<xref:System.Array?displayProperty=fullName>>|UT_Interface<br /><br /> UnmanagedType.SafeArray( type )<br /><br /> 在运行时类型、秩、界限和大小始终为已知。|  
+|ELEMENT_TYPE_CLASS \<<xref:System.Array?displayProperty=nameWithType>>|UT_Interface<br /><br /> UnmanagedType.SafeArray( type )<br /><br /> 在运行时类型、秩、界限和大小始终为已知。|  
   
  在与含有 LPSTR 或 LPWSTR 的结构数组相关的 OLE 自动化中，存在一项限制。  因此，必须将 String 字段作为 UnmanagedType.BSTR 封送。 否则，将引发异常。  
   
@@ -336,7 +332,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 将包含 <xref:System.Array?displayProperty=fullName> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如：  
+ 将包含 <xref:System.Array?displayProperty=nameWithType> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -385,8 +381,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [默认的封送行为](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable 和非 Blittable 类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)
-

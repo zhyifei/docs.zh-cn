@@ -1,28 +1,35 @@
 ---
-title: "&lt;Host — 宿主&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;主机&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bded8d718259bf4fc84bfe790db069a77fc2a703
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Host — 宿主&gt;
+# <a name="lthostgt"></a>&lt;主机&gt;
 指定服务主机的设置。  
   
-## 语法  
+ \<系统。ServiceModel >  
+\<服务 >  
+\<服务 >  
+\<主机 >  
   
-```  
+## <a name="syntax"></a>语法  
   
+```xml  
 <host>  
       <baseAddresses>  
          <baseAddress baseAddress="string" />  
@@ -32,29 +39,29 @@ caps.handback.revision: 7
 </host>  
 ```  
   
-## 类型  
+## <a name="type"></a>类型  
  `Type`  
   
-## 特性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### 特性  
+### <a name="attributes"></a>特性  
  无。  
   
-### 子元素  
+### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<baseAddresses\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|`baseAddress` 元素的集合，指定服务主机所使用的基址。|  
-|[\<timeOuts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|一个配置元素，指定为打开或关闭服务主机预留的时间间隔。|  
+|-------------|-----------------|  
+|[\<基址 >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|`baseAddress` 元素的集合，指定服务主机所使用的基址。|  
+|[\<超时 >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|一个配置元素，指定为打开或关闭服务主机预留的时间间隔。|  
   
-### 父元素  
+### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
-|--------|--------|  
-|[\<service\>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的设置。|  
+|-------------|-----------------|  
+|[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的设置。|  
   
-## 请参阅  
- <xref:System.ServiceModel.Configuration.HostElement>   
- <xref:System.ServiceModel.ServiceHost>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.ServiceModel.Configuration.HostElement>  
+ <xref:System.ServiceModel.ServiceHost>  
  [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)

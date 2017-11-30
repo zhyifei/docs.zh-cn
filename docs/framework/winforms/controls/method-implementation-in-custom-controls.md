@@ -1,30 +1,34 @@
 ---
-title: "自定义控件中的方法实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "方法实现的用户控件 [Windows 窗体]"
-  - "重载方法的自定义控件 [Windows 窗体]"
-  - "方法实现的自定义控件 [Windows 窗体]"
-  - "方法 [Windows 窗体]"
-  - "自定义控件的方法 [Windows 窗体]"
+title: "自定义控件中的方法实现"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user controls [Windows Forms], method implementation
+- custom controls [Windows Forms], overloading methods
+- custom controls [Windows Forms], method implementation
+- methods [Windows Forms]
+- methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c992197b653fb3999870247a3a4cdb4015612ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 自定义控件中的方法实现
+# <a name="method-implementation-in-custom-controls"></a>自定义控件中的方法实现
 控件中方法的实现与任何其他组件中方法的实现方式相同。  
   
  在 Visual Basic 中，如果要求方法返回一个值，则方法以 `Public Function` 形式实现。 如果不返回值，则方法以 `Public Sub` 形式实现。 使用以下语法声明方法：  
@@ -82,5 +86,5 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [事件](../../../../docs/standard/events/index.md)   
+ [事件](../../../../docs/standard/events/index.md)  
  [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

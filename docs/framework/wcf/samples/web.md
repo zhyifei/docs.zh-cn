@@ -1,33 +1,36 @@
 ---
-title: "Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Web
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3e7ddb3d56c707d1e7a6a9804e730c317ec4bf08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Web
+# <a name="web"></a>Web
 本节包含 Web 承载的示例。  
   
-## 本节内容  
- [高级格式选择](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+## <a name="in-this-section"></a>本节内容  
+ [高级的格式选择](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  演示如何扩展 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型以支持新的传出响应格式。  
   
  [自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  演示如何通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型启用自动格式选择（XML 或 JSON），以及如何在操作代码中显式设置格式。  
   
  [基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- 演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型实现基于 HTTP 且基于 RPC 的服务（一般称为“POX”\(Plain Old XML\) 服务）。  
+ 演示如何实现基于 HTTP 的、 基于 RPC 的服务 （一般称为"POX"(Plain Old XML) 服务） 使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web HTTP 编程模型。  
   
  [基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型实现基于 HTTP 的服务，该服务公开支持检索、添加、删除和替换操作的客户集合。  
@@ -39,7 +42,7 @@ caps.handback.revision: 4
  演示如何将新的条件检索和更新 API 用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型。  
   
  [SOAP 和 HTTP 终结点](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- 演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型实现基于 RPC 的服务并以 SOAP 格式和“Plain Old XML”\(POX\) 格式进行公开。  
+ 演示如何实现基于 RPC 的服务，并以 SOAP 格式和"Plain Old XML"(POX) 格式使用公开它[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web HTTP 编程模型。  
   
  [ASP.NET 缓存集成](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
  演示如何通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 编程模型使用 ASP.NET 输出缓存。  

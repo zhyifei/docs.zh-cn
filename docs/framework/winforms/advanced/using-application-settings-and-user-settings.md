@@ -1,35 +1,36 @@
 ---
-title: "使用应用程序设置和用户设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "应用程序设置 [Windows 窗体], 帮助主题"
-  - "用户设置 [Windows 窗体]"
+title: "使用应用程序设置和用户设置"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user settings [Windows Forms]
+- application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用应用程序设置和用户设置
-从 .NET Framework 2.0 开始，您可以创建和访问在应用程序执行会话之间保留的值。  这些值称为“设置”。  设置可表示用户首选项或应用程序需要使用的有价值的信息。  例如，可以创建用于存储用户对应用程序的配色方案的首选项的一系列设置。  也可以存储用于指定应用程序使用的数据库的连接字符串。  设置不仅允许您在代码外部保留对于应用程序很重要的信息，还允许您创建用于存储各个用户的首选项的配置文件。  
+# <a name="using-application-settings-and-user-settings"></a>使用应用程序设置和用户设置
+从.NET Framework 2.0 开始，可以创建和访问应用程序执行会话之间保留的值。 这些值称为*设置*。 设置可以表示用户首选项，或者有价值信息的应用程序需要使用。 例如，你可能会创建一系列存储应用程序的配色方案的用户首选项的设置。 或者，你可能会存储指定你的应用程序使用的数据库的连接字符串。 设置允许你同时保留对外部代码，并创建存储的单个用户的首选项的配置文件的应用程序至关重要的信息。  
   
- 本节中的主题描述如何在设计时和运行时使用设置。  
+ 本部分中的主题介绍如何在设计时使用的设置，运行时间。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [如何：在设计时创建新设置](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
- 解释如何使用 Visual Studio 为应用程序创建新设置。  
+ 说明如何使用 Visual Studio 创建新的设置应用程序。  
   
  [如何：在设计时更改现有设置的值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
@@ -37,19 +38,19 @@ caps.handback.revision: 8
   
  [如何：在应用程序会话之间更改设置值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- 详细说明如何在已编译的应用程序中更改应用程序会话之间的设置的值。  
+ 详细介绍如何更改应用程序会话之间编译的应用程序中的设置的值。  
   
- [如何：在运行时读取设置 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [如何：在运行时使用 C# 读取设置](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
   
- 描述如何使用 C\# 代码来读取设置。  
+ 描述如何使用代码来读取使用 C# 的设置。  
   
- [如何：在运行时编写用户设置 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [如何：在运行时使用 C# 编写用户设置](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- 解释如何使用 C\# 代码来编写和保存用户设置的值。  
+ 说明如何使用代码来编写和使用 C# 保存用户设置的值。  
   
- [如何：向应用程序添加多个设置组 \(C\#\)](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [如何：使用 C# 向应用程序添加多组设置](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- 详细说明如何使用 C\# 向应用程序添加多个设置组。  
+ 详细介绍如何使用 C# 应用程序中添加多组设置。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows 窗体的应用程序设置](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)
