@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
+ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
 
 本文介绍了将库代码移植到 .NET Core 以使其跨平台运行的信息。
@@ -25,7 +23,8 @@ ms.lasthandoff: 08/04/2017
 
 本文假定你：
 
-- 正在使用 Visual Studio 2017 或更高版本。 Visual Studio 的早期版本不支持 .NET Core。
+- 正在使用 Visual Studio 2017 或更高版本。
+  - .NET core 不支持在早期版本的 Visual Studio
 - 了解[推荐的移植过程](index.md)。
 - 已解决与[第三方依赖项](third-party-deps.md)有关的任何问题。
 
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/04/2017
 
 AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通常价格昂贵。 .NET Core 中未实现它们。 我们不计划在将来添加此功能。 对于代码隔离，建议将流程分隔开来或将容器用作一种替代方法。 对于动态加载的程序集，我们建议使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
 
-我们已在 .NET Core 中公开了一些 <xref:System.AppDomain> API 图面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=fullName>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/corefx GitHub 存储库](https://github.com/dotnet/corefx)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)检查所使用的类型，确保选择与已实现的版本相匹配的分支。
+我们已在 .NET Core 中公开了一些 <xref:System.AppDomain> API 图面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/corefx GitHub 存储库](https://github.com/dotnet/corefx)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)检查所使用的类型，确保选择与已实现的版本相匹配的分支。
 
 ### <a name="remoting"></a>远程处理
 
@@ -197,4 +196,3 @@ global.json 文件是可选文件，可以通过它设置项目的 .NET Core 工
 1. 选择下一层代码进行移植，并重复前面的步骤。
 
 如果从库的基项开始并从基项向外移动并根据需要测试每一层，移植将是一个系统化的过程，在这种情况下，问题可以一次隔离到一层代码中。
-

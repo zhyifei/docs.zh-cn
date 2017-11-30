@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>外部 RuleSet 工具包
 通常在工作流应用程序中使用规则时，这些规则就是程序集的一部分。 在某些情况下，您可能希望将 RuleSet 和程序集分开维护，这样就可以在不重新生成和部署工作流程序集的情况下更新 RuleSet。 此示例使您可以在数据库中管理和编辑 RuleSet，并在运行时从工作流访问这些 RuleSet。 这样正在运行的工作流实例就能够自动合并 RuleSet 更改。  
@@ -143,6 +143,4 @@ ms.lasthandoff: 10/18/2017
 10. 您现在可以像运行任何其他工作流控制台应用程序一样运行 `RuleSetToolkitUsageSample` 项目。 在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中按 F5 或 Ctrl+F5，或直接运行 RuleSetToolkitUsageSample.exe 文件。  
   
     > [!NOTE]
-    >  因为 RuleSet 工具会加载用法示例程序集，所以您必须关闭该工具才能重新编译用法示例。  
-  
-## <a name="see-also"></a>另请参阅
+    >  因为 RuleSet 工具会加载用法示例程序集，所以您必须关闭该工具才能重新编译用法示例。

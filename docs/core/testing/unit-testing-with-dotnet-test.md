@@ -6,12 +6,11 @@ ms.author: wiwagn
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -157,5 +156,6 @@ if (candidate < 2)
 
 通过在主库中添加更多测试、理论和代码继续循环访问。 你将拥有[已完成的测试版本](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs)和[库的完整实现](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)。
 
-你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，因此添加新包和新测试将遵循当前的工作流。 你已将多数的时间和精力集中在解决应用程序的目标上。
+### <a name="additional-resources"></a>其他资源
 
+[在 ASP.NET 核心的测试控制器逻辑](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)

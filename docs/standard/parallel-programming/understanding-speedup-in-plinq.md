@@ -1,34 +1,39 @@
 ---
-title: "Understanding Speedup in PLINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, performance tuning"
+title: "了解 PLINQ 中的加速"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c3373cb6a2c535bd7d42eb062e1f9727952f7cfb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Understanding Speedup in PLINQ
-PLINQ 的主要用途是通过在多核计算机上以并行方式执行查询委托来加快 LINQ to Objects 查询的执行速度。  当源集合中的每个元素的处理独立进行，各个委托之间未涉及到共享状态时，PLINQ 的性能最佳。  此类操作在 LINQ to Objects 和 PLINQ 中很常见，并且，由于这些操作有助于轻松地针对多个线程进行计划，因此通常称为“适合并行”。  但是，并非所有查询都完全由适合并行操作组成；大多数情况下，查询包含某些无法进行并行化或会减慢并行执行速度的运算符。  并且，即使对于完全适合并行的查询，PLINQ 也仍然必须对数据源进行分区并针对线程安排工作，并通常在查询完成时合并结果。  所有这些操作都会增加并行化的计算成本；这些增加并行化的成本称为“开销”。  若要在 PLINQ 查询中实现最佳性能，目标是最大程度地增加适合并行的部件，并最大程度地减少需要开销的部件。  本文提供的信息可帮助您编写尽可能高效而同时仍然能产生正确结果的 PLINQ 查询。  
+# <a name="understanding-speedup-in-plinq"></a>了解 PLINQ 中的加速
+PLINQ 的主要目的是为了加快执行 LINQ 对对象查询通过在多核计算机上的并行执行查询委托。 PLINQ 的性能最佳时源集合中每个元素的处理是独立的不涉及各个委托之间的共享状态。 此类操作在 LINQ to Objects 与 PLINQ 中, 很常见和通常称为"*适合并行*"因为它们有助于使自身轻松地在多个线程上执行计划。 但是，并非所有查询都包含完全适合并行操作;在大多数情况下，查询涉及到或者无法并行化，或的速度变慢并行执行某些运算符。 和完全适合并行的查询，即使使用 PLINQ 必须仍分区的数据源，并在上计划工作线程，并通常合并结果，查询完成时。 所有这些操作将添加到并行化; 的计算成本添加并行化的这些成本称为*开销*。 若要实现最佳性能 PLINQ 查询中的，目标是最大化适合并行的部分并最大程度减少需要开销的部分。 本文提供了将帮助你编写时仍然能产生正确的结果会尽可能高效的 PLINQ 查询的信息。  
   
-## 影响 PLINQ 查询性能的因素  
- 以下各节列出了会对并行查询性能产生影响的一些最重要的因素。  这些信息是概括性叙述，仅凭这些信息无法预测所有情况下的查询性能。  一直以来，衡量具有各种代表性配置和负载的计算机上特定查询的实际性能都十分重要。  
+## <a name="factors-that-impact-plinq-query-performance"></a>影响 PLINQ 查询性能的因素  
+ 下列各节列出了一些最重要的因素影响并行查询性能。 这些是常规的语句，仅凭不足以预测在所有情况下的查询性能。 与往常一样，它进行测量非常重要的计算机上的特定查询的代表性配置和负载的一系列的实际性能。  
   
-1.  总体工作的计算开销。  
+1.  整体工作的计算成本。  
   
-     为了实现加速，PLINQ 查询必须具有足够的适合并行工作来弥补开销。  工作可表示为每个委托的计算开销与源集合中元素数量的乘积。  假定某个操作可并行化，则它的计算开销越高，加速的可能性就越大。  例如，如果某个函数执行花费的时间为 1 毫秒，则针对 1000 个元素进行的顺序查询将花费 1 秒来执行该操作，而在四核计算机上进行的并行查询可能只花费 250 毫秒。  这样就产生了 750 毫秒的加速。  如果该函数对于每个元素需要花费 1 秒来执行，则加速将为 750 秒。  如果委托的开销很大，则对于源集合中的很少几个项，PLINQ 可能会提供明显的加速。  相反，包含无关紧要委托的小型源集合通常不适合于 PLINQ。  
+     若要实现加速，PLINQ 查询必须具有足够的适合并行工作来弥补开销。 工作可以表示为每个委托的源集合中的元素数的乘积的计算成本。 假设操作可以并行化，更占用计算开销很，较大的一个加速的可能性。 例如，如果函数采用一个毫秒执行，超过 1000 个元素将只采用一个秒的时间来执行该操作，而四个核心的计算机上进行的并行查询的顺序查询可能需要仅 250 毫秒。 这会生成 750 毫秒的加速。 如果该函数需要一个秒的时间来执行的每个元素，则加速将为 750 秒。 如果委托代价很高，PLINQ 可能会提供与只有几项源集合中的明显加快。 相反，使用普通的委托的小源集合通常不是最适合 PLINQ。  
   
-     在下面的示例中，queryA是 PLINQ 的理想候选项，假设其 Select 函数涉及大量工作。queryB 可能不是个理想的候选项，原因是 Select 语句中没有足够的工作，并且并行化开销将抵销大部分或全部加速。  
+     在下面的示例中，queryA 可能是很适合 PLINQ 中，假定其选择的功能，包括大量工作。 queryB 可能并不是很好的候选项，因为没有足够的 Select 语句中的工作和并行化的开销将偏移量的速度提高大部分或全部。  
   
     ```vb  
     Dim queryA = From num In numberList.AsParallel()  
@@ -46,45 +51,44 @@ PLINQ 的主要用途是通过在多核计算机上以并行方式执行查询�
     var queryB = from num in numberList.AsParallel()  
                  where num % 2 > 0  
                  select num; //not as good for PLINQ  
-  
     ```  
   
-2.  系统上的逻辑内核数（并行度）。  
+2.  系统 （并行度） 上的逻辑内核数。  
   
-     这一点是前一节显而易见的必然结果，适合并行的查询在具有更多内核的计算机上运行更快，原因是可以在更多并行线程之间分担工作。  加速的总量取决于查询的总体工作中可并行化的百分比。  但是，请不要假定所有查询在八核计算机上的运行速度都比在四核计算机的运行速度快两倍。  在调整查询以实现最佳性能时，衡量具有多个内核的计算机上的实际结果十分重要。  这一点与第一点相关：更大的数据集需要消耗更多的计算资源。  
+     此点是上一节显而易见的必然结果，适合并行的查询更快地在计算机上运行具有更多内核因为更多的并发线程间设置可划分工作。 加速整体量取决于查询的整体工作的百分比是可并行化。 但是，不会假定两次作为将运行所有查询快速上四核计算机八核计算机。 当优化查询以获得最佳性能，务必衡量具有多个内核的计算机上的实际结果。 此点与相关点 #1： 大型数据集所需利用更多的计算资源。  
   
-3.  操作的数量和种类。  
+3.  数量和类型的操作。  
   
-     对于必须要保持元素在源序列中的顺序的情况，PLINQ 提供了 AsOrdered 运算符。  排序会产生开销，但此开销通常是适度的。  GroupBy 和 Join 操作同样也会产生开销。  如果允许按任意顺序处理源集合中的元素，并在这些元素就绪时立即将它们传递到下一个运算符，则 PLINQ 的性能最佳。  有关详细信息，请参阅[Order Preservation in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)。  
+     PLINQ 提供 AsOrdered 运算符的情况下它有必要保留源序列中的元素的顺序。 排序，会带来开销，但此开销通常是适度。 GroupBy 和联接操作同样会产生开销。 它允许处理按任意顺序，对源集合中的元素并将它们传递到下一步的运算符，只要准备好时，PLINQ 的性能最佳。 有关详细信息，请参阅 [PLINQ 中的顺序保留](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)。  
   
-4.  查询的执行形式。  
+4.  查询执行的窗体。  
   
-     如果要通过调用 ToArray 或 ToList 存储查询的结果，则必须将来自所有并行线程的结果合并为单个数据结构。  这会涉及到不可避免的计算开销。  同样，如果您使用 foreach（Visual Basic 中为 For Each）循环对结果进行迭代，则需要将来自工作线程的结果序列化到枚举器线程上。  但是，如果只需要基于来自每个线程的结果执行某个操作，您可以使用 ForAll 方法在多个线程上执行此工作。  
+     如果你要通过调用 ToArray 或 ToList 存储查询的结果，所有并行线程的结果必须合并到单个数据结构。 这涉及到不可避免的计算成本。 同样，如果通过使用 （用于在 Visual Basic 中的每个） 的 foreach 循环中循环结果，则需要从工作线程的结果在枚举器线程序列化。 但如果你只是想要执行一些操作基于每个线程的结果，你可以使用 ForAll 方法以在多个线程上执行此工作。  
   
 5.  合并选项的类型。  
   
-     可将 PLINQ 配置为将其输出放入缓冲区，并以区块方式或在整个结果集完成后同时生成输出，或者在个别结果生成时流式传送这些结果。  前者可缩短总体执行时间，而后者可缩短生成的元素之间的延迟。尽管合并选项并不总是对总体查询性能有很大影响，但是，由于它们控制用户必须等待多长时间才能看到结果，因此可能会对感觉到的性能产生影响。  有关详细信息，请参阅[Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
+     PLINQ 可以配置为缓冲其输出，并生成它小区块中或在一次后整个结果集生成，或者到流单个结果产生。 以前的结果是降低总执行时间，而后者生成元素之间的降低延迟。  虽然的合并选项并不总是有重大影响总体查询性能，它们可以影响感知的性能，因为它们控制多长时间的用户必须等待以查看结果。 有关详细信息，请参阅 [PLINQ 中的合并选项](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
   
 6.  分区的种类。  
   
-     在某些情况下，针对可建立索引的源集合进行的 PLINQ 查询可能会产生不平衡的工作负载。  如果发生这种情况，您也许能够通过创建自定义分区程序来提高查询性能。  有关详细信息，请参阅[Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)。  
+     在某些情况下，可建立索引的源集合的 PLINQ 查询可能会导致不平衡的工作负载。 当发生这种情况时，你可以通过创建自定义分区程序来提高查询性能。 有关详细信息，请参阅 [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)。  
   
-## PLINQ 何时选择顺序模式  
- PLINQ 将始终尝试至少按与查询以顺序方式运行同样的速度来执行查询。  尽管 PLINQ 不会查看用户委托的计算开销有多高或输入源有多大，但它却会查找某些查询“形状”。具体而言，它将查找通常会导致查询在并行模式下运行更慢的查询运算符或运算符组合。  如果找到此类形状，PLINQ 默认情况下会转而使用顺序模式。  
+## <a name="when-plinq-chooses-sequential-mode"></a>当 PLINQ 选择顺序模式  
+ PLINQ 将始终尝试执行至少速度一样快查询将按顺序运行查询。 尽管 PLINQ 不会计算查找如何昂贵的用户委托，或者如何大输入的源，它看起来一查询"形状"。 具体而言，它查找查询运算符或通常会导致要在并行模式下执行速度更慢的查询运算符的组合。 当它找到此类形状时，默认情况下的 PLINQ 回退到顺序模式。  
   
- 但是，在衡量特定查询的性能后，您可能会确定该查询在并行模式下实际运行更快。  在这些情况下，您可以通过 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A?displayProperty=fullName> 方法使用 <xref:System.Linq.ParallelExecutionMode> 标志，以指示 PLINQ 对查询进行并行化。  有关详细信息，请参阅[How to: Specify the Execution Mode in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
+ 但是，在衡量特定查询的性能，可能会确定，它实际上更快地在并行模式下运行。 在这种情况下可以使用<xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>标志通过<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>方法以指示 PLINQ 并行执行查询。 有关详细信息，请参阅[如何：在 PLINQ 中指定执行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
   
- 下面的列表介绍了 PLINQ 默认情况下将按顺序模式执行的查询形状：  
+ 以下列表描述 PLINQ 默认情况下的会在顺序模式中执行的查询形状：  
   
--   包含 Select 子句、已建立索引的 Where 子句、已建立索引的 SelectMany 子句或 ElementAt 子句的查询（在排序或筛选运算符移除或重新排列了索引后）。  
+-   包含 Select、 查询，其中，索引索引的 SelectMany，或已删除或重新排列原始索引的排序或筛选运算符后的 ElementAt 子句。  
   
--   包含 Take、TakeWhile、Skip、SkipWhile 运算符并且源序列中的索引未采用原始顺序的查询。  
+-   查询包含的 Take、 TakeWhile，跳过，SkipWhile 运算符和源序列中的索引不按原始顺序。  
   
--   包含 Zip 或 SequenceEquals 的查询，除非其中一个数据源具有按原始顺序排列的索引，并且另一个数据源可建立索引 \(例如：数组 或 IList\(T\)\).  
+-   包含 Zip 或 SequenceEquals 的查询，除非其中一个数据源具有按原始顺序排列的索引，并且另一个数据源是可索引的（即，数组或 IList(T)）。  
   
--   包含 Concat 的查询，除非将其应用到可建立索引的数据源。  
+-   包含 Concat，除非将其应用到可索引数据源的查询。  
   
--   包含 Reverse 的查询，除非应用到可建立索引的数据源。  
+-   包含反向，除非应用到可索引数据源的查询。  
   
-## 请参阅  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另请参阅  
+ [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

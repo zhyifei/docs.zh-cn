@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 30aa268fbfa8a6f59491de30dbde6508ccdd7a68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: affc9d1638148971dd9c57969c75166facfd545c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="auto-confirm-pattern"></a>自动确认模式
 此示例包含三个用来说明自定义 `AutoConfirmScope` 活动的方案。 第一个示例演示一个由四个可补偿活动组成的序列的成功执行，其中的第二个和第三个可补偿活动嵌套到 `AutoConfirmScope` 中。 第二个示例演示相同的序列，但在执行第四个 <xref:System.Activities.Statements.CompensableActivity> 之后会发生异常。 第三个方案演示相同的序列，但在第二个 `AutoConfirmScope` 完成后 <xref:System.Activities.Statements.CompensableActivity> 中会发生异常。  
@@ -46,6 +46,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
-  
-## <a name="see-also"></a>另请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

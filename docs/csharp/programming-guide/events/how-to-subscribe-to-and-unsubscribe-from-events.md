@@ -1,40 +1,22 @@
 ---
 title: "如何：订阅和取消订阅事件（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
@@ -49,7 +31,7 @@ ms.lasthandoff: 09/19/2017
   
      [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 会创建一个空事件处理程序方法，并将其添加到你的代码中。 或者，也可以在“代码”视图中手动添加代码。 例如，下面的代码行声明了一个在 `Form` 类引发 `Load` 事件时调用的事件处理程序方法。  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      还会在项目的 Form1.Designer.cs 文件的 `InitializeComponent` 方法中自动生成订阅该事件所需的代码行。 该代码行类似于：  
   
@@ -121,10 +103,9 @@ ms.lasthandoff: 09/19/2017
   
      所有订户都取消订阅事件后，发行者类中的事件实例将设置为 `null`。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)   
- [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
- [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)   
+## <a name="see-also"></a>另请参阅  
+ [事件](../../../csharp/programming-guide/events/index.md)  
+ [事件](../../../csharp/language-reference/keywords/event.md)  
+ [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+ [-= 运算符 （C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)  
  [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)
-

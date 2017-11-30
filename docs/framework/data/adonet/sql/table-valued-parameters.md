@@ -16,11 +16,11 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 47009516d4118fec1a075a2dbccfa747f9a63131
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的简单方式，而不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  
@@ -96,7 +96,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 -   无法使用 ALTER TABLE 语句来修改表值参数的设计。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
- <xref:System.Data.SqlClient>支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或如\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>？ qualifyHint = False 自动升级 = True) 对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
+ <xref:System.Data.SqlClient>支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
   
 ```csharp  
 // Configure the command and parameter.  

@@ -1,42 +1,23 @@
 ---
 title: "-target:exe（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /exe
-dev_langs:
-- CSharp
+f1_keywords: /exe
 helpviewer_keywords:
 - target compiler options [C#], /target:exe
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b66ab51b30e17ab2f34f88158c3f6095e185468d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd035bffb697e895da8765f9e5d230fa84e98f04
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="targetexe-c-compiler-options"></a>/target:exe（C# 编译器选项）
 **/Target: exe** 选项将使编译器创建可执行文件 (EXE) 和控制台应用程序。  
@@ -76,7 +57,6 @@ csc /target:exe in.cs
 csc in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [/target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
+## <a name="see-also"></a>另请参阅  
+ [/target （C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
-

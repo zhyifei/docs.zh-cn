@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 83da65d17d927e6afa8c669d5a3123d458246b31
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 79d7aef2cf374acc4380fac6009615f75eaf1e81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -65,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableDataBinding**|在所有生成的类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。 缩写形式为 `/edb`。|  
 |**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅 [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
 |**/f**[**ields**]|生成字段，而不是生成属性。 默认情况下生成属性。|  
-|**/l**[**anguage**]**:***language*|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 的类的完全限定名|  
+|**/l**[**anguage**]**:***language*|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|  
 |**/n**[**amespace**]**:***namespace*|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|  
 |**/nologo**|取消显示版权标志。|  
 |**/order**|在所有粒子成员上生成显式顺序标识符。|  
@@ -91,7 +90,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  使用 XSD 架构文件生成公共语言运行时 <xref:System.Data.DataSet> 类。 生成的类为规则 XML 数据提供复杂对象模型。  
   
  XSD 到类  
- 使用 XSD 架构文件生成运行时类。 生成的类可以与 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 一起使用，来读写遵循该架构的 XML 代码。  
+ 使用 XSD 架构文件生成运行时类。 生成的类可以与 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 一起使用，来读写遵循该架构的 XML 代码。  
   
  类到 XSD  
  使用运行时程序集文件中的一个或多个类型生成 XML 架构。 生成的架构定义了 `System.Xml.Serialization.XmlSerializer` 使用的 XML 格式。  
@@ -233,10 +232,9 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>   
+ <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      
- [命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)   
- [查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)   
+ [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
-

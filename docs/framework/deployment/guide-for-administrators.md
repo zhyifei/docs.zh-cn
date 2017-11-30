@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -39,8 +32,8 @@ ms.lasthandoff: 07/28/2017
   
  本主题包含以下各节：  
   
- [部署过程](#the_deployment_process)   
- [部署 .NET Framework](#deploying_in_a_test_environment)   
+ [在部署过程](#the_deployment_process)  
+ [部署.NET Framework](#deploying_in_a_test_environment)  
  [创建集合](#creating_a_collection)  
  [创建包和程序](#creating_a_package)  
  [选择分发点](#select_dist_point)  
@@ -145,8 +138,8 @@ ms.lasthandoff: 07/28/2017
 |**/norestart**|防止安装程序自动重新启动。 如果你使用此选项，则 Configuration Manager 必须处理计算机重新启动。|  
 |/chainingpackage PackageName|指定执行链接的包的名称。 该信息与注册了 [Microsoft 客户体验改善计划 (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244) 的用户的其他安装会话信息一起报告。 如果包名称包含空格，则可以用双引号作为分隔符；例如：/chainingpackage "Chaining Product"。|  
   
- 这些步骤创建了一个名为“.NET Framework 4.5”的包。 程序将部署 .NET Framework 4.5 的无提示安装。 在无提示安装中，用户不与安装过程进行交互，并且链接应用程序必须捕获返回代码并处理重新启动操作；请参阅 MSDN 库中的[从安装软件包获取进度信息](http://go.microsoft.com/fwlink/?LinkId=179606)。  
-  
+ 这些步骤创建了一个名为“.NET Framework 4.5”的包。 程序将部署 .NET Framework 4.5 的无提示安装。 在无提示安装中，用户不与安装过程中，进行交互和链接的应用程序必须捕获返回代码并处理重新启动操作;请参阅[从安装包获取进度信息](http://go.microsoft.com/fwlink/?LinkId=179606)。  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>选择分发点  
  若要通过服务器将包和程序分发到客户端计算机，你必须先指定一个站点系统为分发点，然后将包分发到该分发点。  
@@ -236,7 +229,7 @@ ms.lasthandoff: 07/28/2017
 ### <a name="log-file-locations"></a>日志文件位置  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装过程中，会生成下列日志文件：  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  可使用[日志收集工具](http://www.microsoft.com/download/details.aspx?id=12493)收集 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 日志文件，并创建可减小这些文件的大小的压缩 cabinet (.cab) 文件。  
@@ -272,6 +265,5 @@ ms.lasthandoff: 07/28/2017
 -   [Windows 更新代理结果代码](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [系统要求](../../../docs/framework/get-started/system-requirements.md)
-

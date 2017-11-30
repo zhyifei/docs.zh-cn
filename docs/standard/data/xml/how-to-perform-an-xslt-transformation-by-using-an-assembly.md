@@ -1,34 +1,35 @@
 ---
-title: "如何：通过使用程序集执行 XSLT 转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "如何：通过使用程序集执行 XSLT 转换"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：通过使用程序集执行 XSLT 转换
-XSLT 编译器 \(xsltc.exe\) 编译 XSLT 样式表并生成一个程序集。  可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=fullName> 方法中。  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
+XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
-### 将 XML 和 XSLT 文件复制到本地计算机  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>将 XML 和 XSLT 文件复制到本地计算机  
   
 -   将 XSLT 文件复制到本地计算机并将其命名为 Transform.xsl。  
   
-    ```  
+    ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
       xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
       xmlns:user="urn:my-scripts">  
@@ -95,7 +96,7 @@ XSLT 编译器 \(xsltc.exe\) 编译 XSLT 样式表并生成一个程序集。  �
   
 -   将 XML 文件复制到本地计算机并将其命名为 `books.xml`。  
   
-    ```  
+    ```xml  
     <?xml version="1.0"?>  
     <catalog>  
        <book id="bk101">  
@@ -136,9 +137,9 @@ XSLT 编译器 \(xsltc.exe\) 编译 XSLT 样式表并生成一个程序集。  �
     </catalog>  
     ```  
   
-### 编译启用脚本的样式表。  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>编译启用脚本的样式表。  
   
-1.  从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。  除非另行指定，否则类和程序集的名称默认为主样式表的名称）：  
+1.  从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。 除非另行指定，否则类和程序集的名称默认为主样式表的名称）：  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -150,11 +151,11 @@ XSLT 编译器 \(xsltc.exe\) 编译 XSLT 样式表并生成一个程序集。  �
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### 编译代码时以引用形式包含已编译的程序集。  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>编译代码时以引用形式包含已编译的程序集。  
   
 1.  通过在解决方案资源管理器中或从命令行添加引用，可以在 Visual Studio 中包括程序集。  
   
-2.  对于 C\# 的命令行，使用下面的命令：  
+2.  对于 C# 的命令行，使用下面的命令：  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -166,7 +167,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### 在代码中使用已编译的程序集。  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a>在代码中使用已编译的程序集。  
   
 1.  下面的示例演示如何通过使用已编译的样式表执行 XSLT 转换。  
   
@@ -185,10 +186,10 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- 。  有关 Assembly.Load 方法的更多信息，请参见 <xref:System.Reflection.Assembly.Load%2A>  
+ 。 有关 Assembly.Load 方法的更多信息，请参见 <xref:System.Reflection.Assembly.Load%2A>  
   
-## 请参阅  
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [XSLT 编译器 \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)   
- [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [在命令行上使用 csc.exe 生成](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [XSLT 编译器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

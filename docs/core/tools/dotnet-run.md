@@ -3,16 +3,15 @@ title: "dotnet run 命令 - .NET Core CLI"
 description: "dotnet run 命令可便于使用源代码运行应用程序。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet 运行
 
@@ -74,6 +73,10 @@ dotnet myapp.dll
 
 使用指定[框架](../../standard/frameworks.md)生成并运行应用。 框架必须在项目文件中进行指定。
 
+`--force`
+
+强制解析所有依赖项，即使上次还原已成功，也不例外。 这相当于删除*project.assets.json*。
+
 `-h|--help`
 
 打印出有关命令的简短帮助。
@@ -85,6 +88,10 @@ dotnet myapp.dll
 `--no-build`
 
 运行前不生成项目。
+
+`--no-dependencies`
+
+当使用项目到项目 (P2P) 引用还原项目时，还原根项目，不还原引用。
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ dotnet myapp.dll
 运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了 `--` 参数）：
 
 `dotnet run --configuration Release -- --help`
-

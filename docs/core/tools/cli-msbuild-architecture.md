@@ -9,14 +9,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
+ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6830cc46994aa44d46a9c862efff525142578003
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述
 
 此文档介绍了与从 project.json 移动到 MSBuild 和 csproj 项目系统有关的更改，其中包含关于 .NET Core 工具的分层和 CLI 命令的实现的更改的信息。 这些更改与 2017 年 3 月 7 日 .NET Core SDK 1.0 和 Visual Studio 2017 的发布同时发生（请参阅[通知](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)），但是最初是在 .NET Core SDK 预览 3 版本中实现的。
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 
 ![预览版 2 工具高级体系结构](media/cli-msbuild-architecture/p2-arch.png)
 
-这些工具的分层非常简单。 在底部，我们将 .NET Core 命令行工具作为基础。 其他所有高级工具（如 Visual Studio 或 Visual Studio Code）依靠 CLI 来生成项目、还原依赖项以及完成其他操作。 这意味着，例如，如果 Visual Studio 要执行还原操作，它会在 CLI 中调入 `dotnet restore` 命令。 
+这些工具的分层非常简单。 在底部，我们将 .NET Core 命令行工具作为基础。 其他所有高级工具（如 Visual Studio 或 Visual Studio Code）依靠 CLI 来生成项目、还原依赖项以及完成其他操作。 这意味着，例如，如果 Visual Studio 想要执行还原操作，它会调入`dotnet restore`([请参阅备注](#dotnet-restore-note)) 在 CLI 命令。 
 
 随着迁移到新的项目系统，之前的图表会更改： 
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 > “目标”是一个表示 MSBuild 可调用的已命名操作的 MSBuild 术语。 其通常伴随着执行此目标应执行的某个逻辑的一个或多个任务。 MSBuild 支持多个现成的目标，如 `Copy` 或 `Execute`；它还允许用户使用托管代码编写自己的任务，并定义要执行这些任务的目标。 有关详细信息，请参阅 [MSBuild 任务](/visualstudio/msbuild/msbuild-tasks)。 
 
-现在所有工具集使用共享 SDK 组件及其目标，包括 CLI。 例如，下个版本的 Visual Studio 不会调用到 `dotnet restore` 命令来还原 .NET Core 项目的依赖关系，它会直接使用“还原”目标。 由于这些皆是 MSBuild 目标，因此你也可通过 [dotnet msbuild](dotnet-msbuild.md) 命令使用原始 MSBuild 来执行。 
+现在所有工具集使用共享 SDK 组件及其目标，包括 CLI。 例如下, 一版本的 Visual Studio 将不得调入`dotnet restore`([请参阅备注](#dotnet-restore-note)) 命令还原.NET 核心项目的依赖关系，则它将直接使用"还原"目标。 由于这些皆是 MSBuild 目标，因此你也可通过 [dotnet msbuild](dotnet-msbuild.md) 命令使用原始 MSBuild 来执行。 
 
 ### <a name="cli-commands"></a>CLI 命令
 共享 SDK 组件意味着大部分现有 CLI 命令已重新实现为 MSBuild 任务和目标。 这对 CLI 命令和工具集的使用意味着什么？ 
@@ -74,3 +72,4 @@ ms.lasthandoff: 07/28/2017
 
 此规则值得注意的例外是 `new` 和 `run` 命令，因为它们未实现为 MSBuild 目标。
 
+<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

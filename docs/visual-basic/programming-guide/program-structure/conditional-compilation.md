@@ -1,83 +1,77 @@
 ---
-title: "Visual Basic 中的条件编译 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "编译, 条件"
-  - "条件编译, 关于条件编译"
+title: "Visual Basic 中的条件编译"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- conditional compilation [Visual Basic], about conditional compilation
+- compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# Visual Basic 中的条件编译
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-在“*条件编译”*中，有选择地编译程序中的特定代码块而忽略其他代码块。  
+# <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的条件编译
+在*条件编译*，而其他人将被忽略，将有选择地编译特定程序中的代码块。  
   
- 例如，可能需要编写调试语句来比较同一编程任务的不同方法的速度，或者可能需要本地化用于多种语言的应用程序。  条件编译语句被设计为在编译时（而不是在运行时）运行。  
+ 例如，你可能想要编写调试语句来比较不同的方法的速度到相同的编程任务，或者让你可能想要本地化为多种语言应用程序。 条件编译语句旨在在编译期间，不在运行时运行。  
   
- 那些要满足一定条件才编译的代码块使用 `#If...Then...#Else` 指令来表示。  例如，若要从相同的源代码创建同一应用程序的法语和德语版本，使用预定义常数 `FrenchVersion` 和 `GermanVersion` 将特定于平台的代码段嵌入 `#If...Then` 语句。  下面的示例说明嵌入的方法：  
+ 表示要使用有条件地编译的代码块`#If...Then...#Else`指令。 例如，若要创建法语和德语版本从相同的相同应用程序源代码，嵌入特定于平台的代码段中`#If...Then`使用预定义的常量的语句`FrenchVersion`和`GermanVersion`。 下面的示例演示如何：  
   
  [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
- 如果在编译时将 `FrenchVersion` 条件编译常量的值设置为 `True`，则将编译法语版本的条件代码。  如果将 `GermanVersion` 常数的值设置为 `True`，则编译器将使用德语版本。  如果二者均未设置为 `True`，则运行最后的 `Else` 块中的代码。  
+ 如果你设置的值`FrenchVersion`条件编译常量为`True`在编译时，法语版本的条件的代码会编译。 如果你设置的值`GermanVersion`常量到`True`，编译器使用德语版本。 如果两者均未设置`True`，在最后一个代码`Else`块将运行。  
   
 > [!NOTE]
->  如果代码不是当前分支的一部分，编辑代码和使用条件编译指令时，自动完成功能将不起作用。  
+>  自动完成功能将不函数时编辑代码，并使用条件编译指令，如果代码不是当前分支的一部分。  
   
-## 声明条件编译常量  
- 可用如下三种方式之一设置条件编译常数：  
+## <a name="declaring-conditional-compilation-constants"></a>声明条件编译常量  
+ 在以下三种方式中，可以设置条件编译常量：  
   
--   在**“项目设计器”**中  
+-   在**项目设计器**  
   
--   使用命令行编译器时在命令行上  
+-   在命令行使用命令行编译器时  
   
 -   在代码中  
   
- 条件编译常数具有特殊的范围并且不能从标准代码访问。  条件编译常数的范围取决于它的设置方式。  下表列出了分别使用上述三种方式声明的常数范围。  
+ 条件编译常量具有特殊的作用域，并且不能从标准的代码访问。 条件编译常量的作用域是依赖于它的设置方式。 下表列出了使用每个上面提到的三种方式声明的常量的作用域。  
   
-|||  
-|-|-|  
-|常数的设置方式|常数范围|  
-|**项目设计器**|对于项目中的所有文件是公共的|  
-|命令行|对于传递到命令行编译器的所有文件是公共的|  
-|代码中的 `#Const` 语句|对于声明它的文件是私有的|  
+|如何设置常量|常量的作用域|  
+|---|---|  
+|**项目设计器**|在项目中的所有文件是公共的|  
+|命令行|传递给命令行编译器的所有文件是公共的|  
+|`#Const`在代码中的语句|专用于在其中声明的文件|  
   
-||  
-|-|  
-|在“项目设计器”中设置常数|  
-|-   在创建可执行文件之前，请按照[如何：修改项目属性和配置设置](http://msdn.microsoft.com/zh-cn/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)中提供的步骤在**“项目设计器”**中设置常数。|  
+|在项目设计器中设置常量|  
+|---|  
+|-在创建可执行文件之前, 在中设置常量**项目设计器**中提供的步骤[管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)。|  
   
-||  
-|-|  
-|在命令行上设置常数|  
-|-   使用 **\/d** 开关输入条件编译常数，如下例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **\/d** 开关与第一个常数之间不需要空格。  有关更多信息，请参见 [\/define](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令行声明重写在**“项目设计器”**中输入的声明，但不清除它们。  在**“项目设计器”**中设置的参数对后面的编译仍然有效。<br />     在代码本身中编写常数时，对其位置没有严格规定，这是由于它们的范围是声明它们的整个模块。|  
+|要在命令行处设置常量|  
+|---|  
+|-使用**/d**交换机输入条件编译常数，如以下示例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     则需要之间没有空间**/d**开关与第一个常数。 有关详细信息，请参阅[/define (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令行声明重写声明进入**项目设计器**，但不是清除它们。 设置参数**项目设计器**后续编译就保持有效。<br />     编写时常量中以及代码本身，没有严格的规则对其位置中，由于其作用域声明它们的整个模块。|  
   
-||  
-|-|  
-|在代码中设置常数|  
-|-   将常数放在使用它们的模块的声明块中。  这有助于组织代码和使之易于读取。|  
+|若要在代码中设置常量|  
+|---|  
+|-将常数放在声明块在其中使用它们的模块。 这有助于使代码保持有组织且更易读。|  
   
-## 相关主题  
+## <a name="related-topics"></a>相关主题  
   
-|||  
-|-|-|  
-|标题|说明|  
-|[程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供使代码易于阅读和维护的建议。|  
+|标题|描述|  
+|---|---|  
+|[程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供使你的代码轻松地读取和维护的建议。|  
   
-## 引用  
- [\#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
+## <a name="reference"></a>参考  
+ [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
   
- [\#If...Then...\#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [\/define](../../../visual-basic/reference/command-line-compiler/define.md)
+ [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

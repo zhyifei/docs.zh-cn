@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
 -   将 `IntPtr` 转换到 `Int32` 的代码。  
   
- 有关如何移植 32 位应用程序以使其在 64 位 CLR 上运行的详细信息，请参阅 MSDN 库中的[将 32 位托管代码迁移至 64 位](http://go.microsoft.com/fwlink/?LinkId=150542)。  
+ 有关如何移植 32 位应用程序在 64 位 CLR 上运行的详细信息，请参阅[迁移 32 位托管代码迁移至 64 位](https://msdn.microsoft.com/library/ms973190.aspx)。  
   
 ## <a name="general-64-bit-programming-information"></a>常规 64 位编程信息  
  有关 64 位编程的常规信息，请参阅以下文档：  
@@ -73,5 +71,4 @@ ms.lasthandoff: 07/28/2017
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>确定 .exe 文件或 .dll 文件的状态  
  若要确定 .exe 文件或 .dll 文件是只能在特定平台上运行还是可在 WOW64 下运行，请使用不带任何选项的 [CorFlags.exe（CorFlags 转换工具）](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 更改 .exe 文件或 .dll 文件的平台状态。 Visual Studio 程序集的 CLR 头的主运行时版本号设置为 2，次运行时版本号设置为 5。 将次运行时版本设置为 0 的应用程序会被视为旧版应用程序，且始终在 WOW64 下执行。  
   
- 若要以编程方式查询 .exe 或 .dll，以查看其是只能在特定平台上运行还是在 WOW64 下运行，请使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 方法。
-
+ 若要以编程方式查询 .exe 或 .dll，以查看其是只能在特定平台上运行还是在 WOW64 下运行，请使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> 方法。

@@ -1,60 +1,62 @@
 ---
-title: "Parallel LINQ (PLINQ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ, overview"
+title: "并行 LINQ (PLINQ)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c0028d3d8c30bbc7f0592a4462ca1eeb80c8b1f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Parallel LINQ (PLINQ)
-并行 LINQ \(PLINQ\) 是 LINQ to Objects 的并行实现。  PLINQ 实现完整的 LINQ 标准查询运算符集作为 T:System.Linq 命名空间的扩展方法，并具有用于并行运算的其他运算符。  PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。  就像面向任务并行库的代码一样，PLINQ 查询会根据主计算机的能力按比例调整并发程度。  
+# <a name="parallel-linq-plinq"></a>并行 LINQ (PLINQ)
+并行 LINQ (PLINQ) 是 LINQ to Objects 的并行实现。 PLINQ 作为扩展方法实现完整的 LINQ 标准查询运算符集<xref:System.Linq>命名空间和已并行操作的其他运算符。 PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。 就像面向任务并行库的代码一样，PLINQ 查询会根据主计算机的能力按比例调整并发程度。  
   
- 在许多情况下，PLINQ 可通过更有效地使用主计算机上的所有可用内核来显著提高 LINQ to Objects 查询的速度。  这一性能提升将使桌面具备高性能计算能力。  
+ 在许多情况下，PLINQ 可通过更有效地使用主计算机上的所有可用内核来显著提高 LINQ to Objects 查询的速度。 这一性能提升使桌面具备高性能计算能力。  
   
-## 本节内容  
- [Introduction to PLINQ](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
+## <a name="in-this-section"></a>本节内容  
+ [PLINQ 介绍](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
   
- [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
+ [了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
   
- [Order Preservation in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)  
+ [PLINQ 中的顺序保留](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)  
   
- [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)  
+ [PLINQ 中的合并选项](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)  
   
- [How to: Create and Execute a Simple PLINQ Query](../../../docs/standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md)  
+ [如何：创建并执行简单的 PLINQ 查询](../../../docs/standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md)  
   
- [How to: Control Ordering in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)  
+ [如何：在 PLINQ 查询中控制排序](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)  
   
- [How to: Combine Parallel and Sequential LINQ Queries](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)  
+ [如何：合并并行和顺序 LINQ 查询](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)  
   
- [How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
+ [如何：处理 PLINQ 查询中的异常](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
   
- [How to: Cancel a PLINQ Query](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)  
+ [如何：取消 PLINQ 查询](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)  
   
- [How to: Write a Custom PLINQ Aggregate Function](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
+ [如何：编写自定义 PLINQ 聚合函数](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
   
- [How to: Specify the Execution Mode in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
+ [如何：在 PLINQ 中指定执行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
   
- [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
+ [如何：在 PLINQ 中指定合并选项](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
   
- [How to: Iterate File Directories with PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
+ [如何：使用 PLINQ 循环访问文件目录](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
   
- [How to: Measure PLINQ Query Performance](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
+ [如何：衡量 PLINQ 查询性能](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
   
- [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
+ [PLINQ 数据示例](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## 请参阅  
- <xref:System.Linq.ParallelEnumerable>   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Linq.ParallelEnumerable>  
+ [并行编程](../../../docs/standard/parallel-programming/index.md)  
+ [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

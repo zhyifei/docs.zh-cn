@@ -13,11 +13,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1c84483b2ca18d63f20e64a62bb757e244db9b24
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 1493728809721c125b371e0d2ade2050b4909e5d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-contracts-in-workflow"></a>在工作流中使用协定
 当实现服务时，您可以定义一些协定来描述此服务及其收发的数据。 这些数据表示为数据协定和消息协定；[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和工作流服务均在服务说明中使用数据协定和消息协定定义。 服务自身以 WSDL 形式公开元数据，以便描述服务的操作。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，服务协定和操作协定将定义该框架支持的服务和操作。 但在工作流服务中，这些协定属于业务流程自身，它们由称为协定推理的过程在元数据中公开。  
@@ -29,17 +29,13 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <!--zz <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  --> `System.ServiceModel.Activities.Receive.OperationContractName`
+-   <xref:System.ServiceModel.Activities.Receive.OperationName%2A>
   
--   <xref:System.ServiceModel.Activities.Receive.Action%2A>  
-  
--   <!--zz <xref:System.ServiceModel.Activities.Receive.ValueType%2A> --> `System.ServiceModel.Activities.Receive.ValueType`
-  
+-   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
+ 
  <xref:System.ServiceModel.Activities.SendReply> 活动  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
-  
--   <!--zz <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>-->  `System.ServiceModel.Activities.SendReply.ValueType`
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动  
   

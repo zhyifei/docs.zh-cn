@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
+ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
-ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
 本文介绍了在 Linux 上开发 .NET Core 应用程序所需的依赖项。 支持的 Linux 发行版本/版本和依赖项适用于在 Linux 上开发 .NET Core 应用程序的两种方法：
@@ -64,33 +62,35 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 发行版本依赖项
 
+以下打算用作示例。 确切的版本和名称可能选择的 Linux 分发上略有不同。
+
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 发行版本需要安装以下库：
 
 * libunwind8
-* libunwind8-dev
-* gettext
-* libicu-dev
-* liblttng-ust-dev
-* libcurl4-openssl-dev
-* libssl-dev
-* uuid-dev
-* unzip
+* liblttng ust0
+* libcurl3
+* libssl1.0.0
+* libuuid1
+* libkrb5
+* zlib1g
+* （对于 14.X) libicu52
+* （对于 16.X) libicu55
+* （对于 17.X) libicu57
 
 ### <a name="centos"></a>CentOS
 
 CentOS 发行版本需要安装以下库：
 
-* deltarpm
-* epel-release
-* unzip
 * libunwind
-* gettext
-* libcurl-devel
-* openssl-devel
+* lttng 必须
+* libcurl
+* openssl 库
+* libuuid
+* krb5 libs
+* libicu
 * zlib
-* libicu-devel
 
 有关依赖项的详细信息，请参阅[独立式 Linux 应用程序](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
 
@@ -105,7 +105,7 @@ CentOS 发行版本需要安装以下库：
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安装程序脚本编写安装脚本
 
-`dotnet-install` 脚本用于执行 CLI 工具链和共享运行时的非管理员安装。 可以从 [CLI GitHub 存储库](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain)下载脚本。
+`dotnet-install` 脚本用于执行 CLI 工具链和共享运行时的非管理员安装。 你可以下载中的脚本： https://dot.net/v1/dotnet-install.sh
 
 安装程序 bash 脚本用于自动化方案和非管理员安装。 此脚本也读取 PowerShell 开关，因此可以与 Linux/OS X 系统上的脚本结合使用。
 
@@ -633,4 +633,3 @@ CentOS 发行版本需要安装以下库：
 > 若对在支持的 Linux 发行版本/版本上安装 .NET Core 2.x 有疑问，请参阅每个已安装的发行版本/版本对应的 [2.0 已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.0)主题。 
 >
 > 若对在支持的 Linux 发行版本/版本上安装 .NET Core 1.x 有疑问，请参阅每个已安装的发行版本/版本对应的 [1.0.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主题。
-

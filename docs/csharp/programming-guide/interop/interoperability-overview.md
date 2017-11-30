@@ -1,12 +1,9 @@
 ---
 title: "互操作性概述（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - C# language, interoperability
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -80,11 +62,10 @@ ms.lasthandoff: 07/28/2017
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Improving Interop Performance](http://go.microsoft.com/fwlink/?LinkId=99564) （提高互操作性能）  
- [COM 互操作介绍](http://go.microsoft.com/fwlink/?LinkId=112406)   
- [托管代码与非托管代码之间的封送处理](http://go.microsoft.com/fwlink/?LinkId=112398)   
- [与非托管代码交互操作](https://msdn.microsoft.com/library/sd10k43k)   
- [高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+## <a name="see-also"></a>另请参阅  
+ [提高互操作的性能](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [COM 互操作介绍](http://go.microsoft.com/fwlink/?LinkId=112406)  
+ [托管和非托管代码之间封送处理](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [与非托管代码交互操作](https://msdn.microsoft.com/library/sd10k43k)  
+ [高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)
-

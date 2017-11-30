@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3fbf8a719647199439e2333ba5e26cbe51be3add
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 004a37682b855135998ef4620e673421f769326d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-xaml-only-service"></a>基本的只包含 XAML 的服务
 此示例演示如何创建只包含 XAML 服务。 此方案是一个用于解决车辆相关故障的诊断服务。 此服务作为一个工作流实现，它会向客户端询问一系列问题来诊断故障。 此服务可诊断两种类型的故障（车辆无法启动或空调无法工作）。 工作流使用设计器中的请求/答复模板来公开三个简单的服务操作。 通过在 IIS 中创建虚拟目录以及将 service1.xamlx 和 Web.config 文件复制到虚拟目录中，在 IIS 中承载服务，而无需编译的代码。 默认情况下此示例将自动将所需的文件复制到当你按照的 WCF 和 WF 示例的设置说明创建的虚拟目录：[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)生成 Visual Studio 2010 中时。  
@@ -38,6 +38,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`  
-  
-## <a name="see-also"></a>另请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

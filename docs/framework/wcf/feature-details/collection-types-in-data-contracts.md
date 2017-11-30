@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -165,7 +165,7 @@ ms.lasthandoff: 10/18/2017
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |引用类型|引用类型所实现的接口|示例|类型被视为|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封闭式泛型（任意多个参数）|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封闭式泛型 `IDictionary<object,object>`|  
-|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary\<string, bool>` 其中 T=`int`|封闭式泛型（例如 `IDIctionary\<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType\<T,U,V> : IDictionary\<string,V>` ，其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary\<Z,bool>` ，其中 Z=`string`|封闭式泛型（例如 `IDictionary\<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType\<T,U,V> : IDictionary\<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封闭式泛型（例如 `IDictionary\<string,bool>`）|  
-|开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType\<K,V> : IDictionary\<K,V>`，K 和 V 均是开放式的|开放式泛型（例如 `IDictionary\<K,V>`）|  
+|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>`其中 T =`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>`其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>`其中 Z =`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType<K,V> : IDictionary<K,V>`，K 和 V 均是开放式的|开放式泛型（例如 `IDictionary<K,V>`）|  
   
  如果类型同时实现 <xref:System.Collections.IDictionary> 和泛型 <xref:System.Collections.Generic.IDictionary%602>，则只将考虑泛型 <xref:System.Collections.Generic.IDictionary%602> 。  
   

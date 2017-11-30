@@ -1,65 +1,63 @@
 ---
-title: "解析外部资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "解析外部资源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 824a35ee5d4ecafc45167ff3f4bc89802af4ed96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 解析外部资源
-**XmlDocument** 的 **XmlResolver** 属性由 **XmlDocument** 类用来定位没有内联的 XML 数据中的资源，如外部文档类型定义 \(DTD\)、实体和架构。  这些项可以位于网络或本地驱动器上，并通过统一资源标识符 \(URI\) 进行标识。  这使得 **XmlDocument** 可以解析文档中存在的 **EntityReference** 节点并根据外部 DTD 或架构验证文档的有效性。  
+# <a name="resolving-external-resources"></a>解析外部资源
+**XmlResolver**属性**XmlDocument**由**XmlDocument**类用来定位没有内联 XML 数据，如外部文档类型的资源定义 (Dtd)、 实体和架构。 这些项可以位于网络或本地驱动器上，并通过统一资源标识符 (URI) 进行标识。 这允许**XmlDocument**若要解决**EntityReference** ，会在文档中存在验证根据外部 DTD 或架构文档的节点。  
   
-## 完全受信任的 XmlDocument  
- **XmlResolver** 属性影响 **XmlDocument.Load** 方法的功能。  下表显示了当 **XmlDocument** 完全受信任时 **XmlDocument.XmlResolver** 属性的作用。  之后的表显示了当 Load 的输入是 **TextReader**、**String**、**Stream** 或 **URI** 时的 **XmlDocument.Load** 方法。  如果从 **XmlReader** 中加载 **XmlDocument**，则此表不适用于 **Load** 方法。  
+## <a name="fully-trusted-xmldocument"></a>完全受信任的 XmlDocument  
+ **XmlResolver**属性会影响的功能**XmlDocument.Load**方法。 下的表显示如何**XmlDocument.XmlResolver**时起作用属性**XmlDocument**对象是完全受信任。 下表显示**XmlDocument.Load**方法负载的输入时**TextReader**，**字符串**，**流**，或**URI**。 此表不适用于**负载**方法如果**XmlDocument**从加载**XmlReader**。  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|该属性设置为一个以前创建的而且用户已设置属性的 **XmlResolver** 类。|**XmlDocument** 使用给定的 **XmlResolver** 来解析文件名、解析对外部资源（如 DTD、实体和架构）的引用。<br /><br /> **XmlResolver** 还用来解析在 **XmlDocument** 中添加或编辑节点时需要的外部资源。|指定给 **XmlDocument** 的 **XmlResolver** 是每当需要定位和解析外部资源时使用的解析器。|  
-|此属性设置为 **null**（在 Microsoft Visual Basic .NET 中为 **Nothing**）。|不支持需要外部资源的功能，如定位外部架构或 DTD。  也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|**XmlDocument** 匿名加载文件，而且不尝试解析任何其他资源。|  
-|不设置此属性，而是将其保留为默认状态。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 NULL 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。||  
+|XmlResolver 属性|函数|说明|  
+|--------------------------|--------------|-----------|  
+|属性设置为**XmlResolver**以前已创建并具有已由用户对其进行设置的属性的类。|**XmlDocument**使用**XmlResolver**给定来解析文件名称，以解析对外部资源，如 Dtd、 实体和架构引用。<br /><br /> **XmlResolver**还在解析外部添加或编辑中的节点时所需的资源时使用**XmlDocument**。|**XmlResolver**赋予**XmlDocument**是需要定位和解析外部资源时，需要使用冲突解决程序。|  
+|属性设置为**null** (**执行任何操作**在 Microsoft Visual Basic.NET)。|不支持需要外部资源的功能，如定位外部架构或 DTD。 也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|**XmlDocument**匿名加载文件，而且不会尝试解析任何其他资源。|  
+|不设置此属性，而是将其保留为默认状态。|**XmlUrlResolver**替换为 NULL 实例化并通过使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。||  
   
- 下表显示当 **Load** 的输入是一个 **XmlReader** 而且 **XmlDocument** 完全受信任时的 **XmlDocument.Load** 方法。  
+ 下表显示**XmlDocument.Load**方法时的输入**负载**是**XmlReader**和**XmlDocument**是完全受信任。  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|**XmlDocument** 使用的 **XmlResolver** 类与 **XmlReader** 使用的是同一个类。|**XmlDocument** 使用分配给 **XmlReader** 的 **XmlResolver**。<br /><br /> 无论 **XmlDocument** 的信任级别如何，都无法设置 **XmlDocument.Resolver** 属性，因为它是从 **XmlReader** 获取 **XmlResolver**。  不能试图通过设置 **XmlDocument** 的 **XmlResolver** 属性来重写 **XmlReader** 的 **XmlResolver** 设置。|**XmlReader** 可以是 **XmlTextReader**、**XmlValidatingReader** 或自己编写的读取器。  如果使用的读取器支持实体解析，则解析外部实体。  如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
+|XmlResolver 属性|函数|说明|  
+|--------------------------|--------------|-----------|  
+|**XmlResolver**使用类**XmlDocument**是正在使用的相同类**XmlReader**。|**XmlDocument**使用**XmlResolver** ，已分配给**XmlReader**。<br /><br /> **XmlDocument.Resolver**属性不能为设置，而不考虑**XmlDocument**信任级别，因为它获取**XmlResolver**从**XmlReader**。 不能尝试替代的设置**XmlReaders** **XmlResolver**通过设置**XmlResolver**属性**XmlDocument**.|**XmlReader**可以是**XmlTextReader**， **XmlValidatingReader**，或自己编写的读取器。 如果使用的读取器支持实体解析，则解析外部实体。 如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
   
-## 不完全受信任的 XmlDocument  
- 下表显示了当对象不完全受信任时 **XmlDocument.XmlResolver** 属性的作用。  当 Load 的输入是 **TextReader**、**String**、**Stream** 或 **URI** 时，此表适用于 **XmlDocument.Load** 方法。  如果从 **XmlReader** 中加载 **XmlDocument**，则此表不适用于 **Load** 方法。  
+## <a name="semi-trusted-xmldocument"></a>不完全受信任的 XmlDocument  
+ 下表显示如何**XmlDocument.XmlResolver**属性在该对象不完全受信任时才有效。 此表适用于**XmlDocument.Load**方法负载的输入时**TextReader**，**字符串**，**流**，或**URI**。 此表不适用于**负载**方法如果**XmlDocument**从加载**XmlReader**。  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|在不完全受信任的方案中，**XmlResolver** 属性只能设置为 null。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 **null** 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。|此行为与不设置 **XmlResolver** 而是保持为默认状态时的行为完全相同。<br /><br /> **XmlDocument** 对所有操作使用匿名权限。|  
-|此属性设置为 **null**（在 Microsoft Visual Basic .NET 中为 **Nothing**）。|不支持需要外部资源的功能，如定位外部架构或 DTD。  也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|当属性为 **null** 时，行为是相同的，不管 **XmlDocument** 是完全受信任的还是不完全受信任的。|  
-|不设置此属性，而是将其保留为默认状态。|**XmlDocument** 解析文件名称和定位外部 DTD、实体和架构时，将实例化并使用带有 **null** 凭据的 **XmlUrlResolver**，**null** 凭据在编辑节点时使用。|**XmlDocument** 对所有操作使用匿名权限。|  
+|XmlResolver 属性|函数|说明|  
+|--------------------------|--------------|-----------|  
+|在不完全受信任的方案中， **XmlResolver**属性不能设置为除 null 之外的任何内容。|**XmlUrlResolver**与**null**将实例化并使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。|此行为是相同的行为时**XmlResolver**属性不是设置，但保留其默认状态。<br /><br /> **XmlDocument**对所有操作使用匿名权限。|  
+|属性设置为**null** (**执行任何操作**在 Microsoft Visual Basic.NET)。|不支持需要外部资源的功能，如定位外部架构或 DTD。 也不能解析外部实体，而且也不支持执行编辑功能（如插入需要解析的实体节点）。|当该属性是**null**，行为是相同的不管**XmlDocument**是完全受信任或不完全受信任。|  
+|不设置此属性，而是将其保留为默认状态。|**XmlUrlResolver**与**null**将实例化并使用凭据**XmlDocument**时解析文件名称和定位外部 Dtd、 实体和架构，和**null**编辑节点时使用的凭据。|**XmlDocument**对所有操作使用匿名权限。|  
   
- 当 **Load** 的输入是 **TextReader** 而且 **XmlDocument** 不完全受信任时，此表适用于 **XmlDocument.Load** 方法。  
+ 此表适用于**XmlDocument.Load**方法时的输入**负载**是**XmlReader**，和**XmlDocument**是不完全受信任。  
   
-|XmlResolver 属性|函数|备注|  
-|--------------------|--------|--------|  
-|**XmlDocument** 使用的 **XmlResolver** 类与 **XmlReader** 使用的是同一个类。|**XmlDocument** 使用分配给 **XmlReader** 的 **XmlResolver**。<br /><br /> 无论 **XmlDocument** 的信任级别如何，都无法设置 **XmlDocument.Resolver** 属性，因为它是从 **XmlReader** 获取 **XmlResolver**。  不能试图通过设置 **XmlDocument** 的 **XmlResolver** 属性来重写 **XmlReader** 的 **XmlResolver** 设置。|**XmlReader** 可以是 **XmlTextReader**、验证 <xref:System.Xml.XmlReader> 或自己编写的读取器。  如果使用的读取器支持实体解析，则解析外部实体。  如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
+|XmlResolver 属性|函数|说明|  
+|--------------------------|--------------|-----------|  
+|**XmlResolver**使用类**XmlDocument**为正在使用的同一**XmlReader**。|**XmlDocument**使用**XmlResolver** ，已分配给**XmlReader**。<br /><br /> **XmlDocument.Resolver**属性不能为设置，而不考虑**XmlDocument**信任级别，因为它获取**XmlResolver**从**XmlReader**。 不能尝试替代的设置**XmlReaders** **XmlResolver**通过设置**XmlResolver**属性**XmlDocument**.|**XmlReader**可以是**XmlTextReader**、 验证<xref:System.Xml.XmlReader>，或自己编写的读取器。 如果使用的读取器支持实体解析，则解析外部实体。 如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
   
  将 XmlResolver 设置为包含正确的凭据后，将可以访问外部资源。  
   
 > [!NOTE]
->  无法检索 **XmlResolver** 属性。  这有助于防止用户重用已设置了凭据的 **XmlResolver**。  此外，如果使用 **XmlTextReader** 或验证 <xref:System.Xml.XmlReader> 加载 **XmlDocument**，而 **XmlDocument** 具有已设置的解析器，则 **XmlDocument** 在 **Load** 阶段后不缓存这些读取器中的解析器，因为这也会带来安全风险。  
+>  没有方法来检索**XmlResolver**属性。 这有助于防止用户重用**XmlResolver**了凭据已设置。 此外，如果**XmlTextReader**或验证<xref:System.Xml.XmlReader>用于加载**XmlDocument**和**XmlDocument**具有已设置，从解析程序解析程序不会缓存这些读取器**XmlDocument**后**负载**阶段，因为这也会带来安全风险。  
   
  有关详细信息，请参阅 <xref:System.Xml.XmlResolver> 引用页的“备注”部分。  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另请参阅  
+ [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

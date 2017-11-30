@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
+ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
-ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-glossary"></a>.NET 术语表
 
 此术语表的主要目的是阐明所选术语和缩写词的含义，这些词频繁出现在 .NET 文档中但没有定义。
@@ -31,15 +29,15 @@ ms.lasthandoff: 08/31/2017
 
 随 .NET Framework 一起提供的原始 ASP.NET 实现。
 
-有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 
+有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 请参阅到 ASP.NET 4.x 在你想要使它清除你不使用的 ASP.NET 表示这两个实现。 
 
-请参阅 [ASP.NET](/aspnet/#pivot=aspnet)。
+请参阅[ASP.NET 文档](/aspnet/#pivot=aspnet)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 .NET Core 上生成的跨平台、高性能、 开放源 ASP.NET 实现。
 
-请参阅 [ASP.NET Core](/aspnet/#pivot=core)。
+请参阅[ASP.NET 核心文档](/aspnet/#pivot=core)。
 
 ## <a name="assembly"></a>程序集
 
@@ -278,5 +276,4 @@ OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行�
 [.NET Core](../core/index.md)  
 [ASP.NET 概述](/aspnet/index#pivot=aspnet)  
 [ 概述](/aspnet/index#pivot=core)  
-
 

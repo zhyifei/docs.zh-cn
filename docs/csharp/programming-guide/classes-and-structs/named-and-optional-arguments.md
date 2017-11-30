@@ -1,15 +1,12 @@
 ---
 title: "命名实参和可选实参（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - parameters [C#], named
 - named arguments [C#]
@@ -19,29 +16,14 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -51,30 +33,39 @@ ms.lasthandoff: 08/29/2017
  命名形参和可选形参一起使用时，你可以只为可选形参列表中的少数形参提供实参。 此功能极大地方便了对 COM 接口（例如 Microsoft Office 自动化 API）的调用。  
   
 ## <a name="named-arguments"></a>命名实参  
- 有了命名实参，你将不再需要记住或查找形参在所调用方法的形参列表中的顺序。 每个实参的形参都可按形参名称进行指定。 例如，可以采用标准方式调用计算体重指数 (BMI) 的函数，方法是按照该函数定义的顺序按位置发送体重和身高的实参。  
+ 有了命名实参，你将不再需要记住或查找形参在所调用方法的形参列表中的顺序。 每个实参的形参都可按形参名称进行指定。 例如，打印的函数的订单详细信息 (如，seller 名称、 订单数和产品名称) 可以通过按中定义的函数的顺序位置发送自变量调用以标准方式。
   
- `CalculateBMI(123, 64);`  
+ `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 如果不记得形参的顺序，但却知道其名称，则可以按任意顺序（体重优先或身高优先）发送实参。  
+ 如果你不记得参数的顺序，但知道其名称，你可以按任何顺序发送自变量。  
   
- `CalculateBMI(weight: 123, height: 64);`  
+ `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
- `CalculateBMI(height: 64, weight: 123);`  
+ `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。  
+ 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在下面的示例方法`sellerName`不能为 null 或空白。 为这两者`sellerName`和`productName`是字符串类型，而不是按位置发送自变量，因此最好使用命名自变量来区分这两个并降低阅读代码的任何人混淆。
   
- 命名实参可以放在位置实参后面，如此处所示。  
+ 命名自变量，使用具有位置自变量时，是否有效，只要 
+
+- 它们在后面不接任何位置的自变量，或
+
+ `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
+
+- _从 C# 7.2_，它们使用在正确的位置。 在下例中，参数`orderNum`处于正确的位置，但未显式命名。
+
+ `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- `CalculateBMI(123, height: 64);`  
-  
- 但是，位置自变量不能位于命名的自变量之后。 下面的语句会导致编译器错误。  
-  
- `//CalculateBMI(weight: 123, 64);`  
+ 但是，无序命名自变量是如果它们跟位置自变量无效。
+
+ ```csharp
+ // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
+ PrintOrderDetails(productName: "Red Mug", 31, "Gift Shop");
+ ```
   
 ## <a name="example"></a>示例  
- 以下代码执行本节中的示例。  
+ 下面的代码实现以及一些其他的本部分中的示例。  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## <a name="optional-arguments"></a>可选实参  
  方法、构造函数、索引器或委托的定义可以指定其形参为必需还是可选。 任何调用都必须为所有必需的形参提供实参，但可以为可选的形参省略实参。  
@@ -89,7 +80,7 @@ ms.lasthandoff: 08/29/2017
   
  可选参数定义于参数列表的末尾和必需参数之后。 如果调用方为一系列可选形参中的任意一个形参提供了实参，则它必须为前面的所有可选形参提供实参。 实参列表中不支持使用逗号分隔的间隔。 例如，在以下代码中，使用一个必选形参和两个可选形参定义实例方法 `ExampleMethod`。  
   
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
  下面对 `ExampleMethod` 的调用会导致编译器错误，原因是为第三个形参而不是为第二个形参提供了实参。  
   
@@ -110,7 +101,7 @@ ExampleMethod 中的可选形参
 ## <a name="example"></a>示例  
  在以下示例中，`ExampleClass` 的构造函数具有一个可选形参。 实例方法 `ExampleMethod` 具有一个必选形参（`required`）和两个可选形参（`optionalstr` 和 `optionalint`）。 `Main` 中的代码演示了可用于调用构造函数和方法的不同方式。  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## <a name="com-interfaces"></a>COM 接口  
  命名实参和可选实参，以及对动态对象的支持和其他增强功能大大提高了与 COM API（例如 Office Automation API）的互操作性。  
@@ -122,11 +113,11 @@ AutoFormat 形参
   
  在 C# 3.0 以及早期版本中，每个形参都需要一个实参，如下例所示。  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
  但是，可以通过使用 C# 4.0 中引入的命名实参和可选实参来大大简化对 `AutoFormat` 的调用。 如果不希望更改形参的默认值，则可以通过使用命名实参和可选实参来为可选形参省略实参。 在下面的调用中，仅为 7 个形参中的其中一个指定了值。  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
  有关详细信息和示例，请参阅[如何：在 Office 编程中使用命名实参和可选实参](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能访问 Office 互操作性对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
   
@@ -142,9 +133,8 @@ AutoFormat 形参
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：在 Office 编程中使用命名实参和可选实参](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
  [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)
-

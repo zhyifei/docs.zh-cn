@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
+ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/19/2017
 ---
-
 # <a name="console-application"></a>控制台应用程序
 
 ## <a name="introduction"></a>介绍
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="create-the-application"></a>创建应用程序
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
-在开始进行修改之前，我们先来逐步了解一下如何运行简单的 Hello World 应用程序。 创建应用程序之后，在命令提示符处键入 `dotnet restore`。 此命令将运行 NuGet 包还原进程。 NuGet 是 .NET 程序包管理器。 此命令会下载项目缺少的所有依赖项。 由于这是一个新项目，尚无任何依赖项，因此首次运行只会下载 .NET Core 框架。 执行这一初始步骤后，只需运行 `dotnet restore`，即可添加新的依赖项包，或更新任意依赖项的版本。 此进程还会在项目目录中创建项目锁定文件 (project.lock.json)。 此文件有助于管理项目依赖项。 其中包含所有项目依赖项的本地位置。 无需将文件置于源控件中；它将在 `dotnet restore` 运行时生成。 
+在开始进行修改之前，我们先来逐步了解一下如何运行简单的 Hello World 应用程序。 创建应用程序之后, 键入`dotnet restore`([请参阅备注](#dotnet-restore-note)) 在命令提示符。 此命令将运行 NuGet 包还原进程。 NuGet 是 .NET 程序包管理器。 此命令会下载项目缺少的所有依赖项。 由于这是一个新项目，尚无任何依赖项，因此首次运行只会下载 .NET Core 框架。 此初始步骤后，你将只需运行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 添加新的从属包或更新的任何依赖项的版本时。 此进程还会在项目目录中创建项目锁定文件 (project.lock.json)。 此文件有助于管理项目依赖项。 其中包含所有项目依赖项的本地位置。 不需要将文件放入源控件，则它将在运行时生成`dotnet restore`([请参阅备注](#dotnet-restore-note))。 
 
 还原包后，运行 `dotnet build`。 这将运行生成引擎，并创建应用程序可执行文件。 最后，执行 `dotnet run` 来运行应用程序。  
 
@@ -79,13 +77,13 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-`IEnumerable<T>` 接口是在 `System.Collections.Generic` 命名空间中进行定义。 @System.IO.File 类是在 `System.IO` 命名空间中进行定义。
+`IEnumerable<T>` 接口是在 `System.Collections.Generic` 命名空间中进行定义。 <xref:System.IO.File> 类是在 `System.IO` 命名空间中进行定义。
 
 这是一种称为*枚举器方法*的特殊类型 C# 方法。 枚举器方法返回延迟计算的序列。 也就是说，序列中的每一项是在使用序列的代码提出请求时生成。 枚举器方法包含一个或多个 `yield return` 语句。 `ReadFrom` 方法返回的对象包含用于生成序列中所有项的代码。 在此示例中，这涉及读取源文件中的下一行文本，然后返回相应的字符串。 每当调用代码请求生成序列中的下一项时，代码就会读取并返回文件中的下一行文本。 读取完整个文件时，序列会指示没有其他项了。
 
-还有两个 C# 语法元素你可能是刚开始接触。 此方法中的 `using` 语句用于管理资源清除。 `using` 语句中初始化的变量（在此示例中，为 `reader`）必须实现 `IDisposable` 接口。 @System.IDisposable 接口定义了一个方法 `Dispose`，应在释放资源时调用此方法。 当快执行到 `using` 语句的右大括号时，编译器会生成此调用。 编译器生成的代码可确保资源得到释放，即使代码块中用 using 语句定义的代码抛出异常，也不例外。
+还有两个 C# 语法元素你可能是刚开始接触。 此方法中的 `using` 语句用于管理资源清除。 `using` 语句中初始化的变量（在此示例中，为 `reader`）必须实现 `IDisposable` 接口。 <xref:System.IDisposable> 接口定义了一个方法 `Dispose`，应在释放资源时调用此方法。 当快执行到 `using` 语句的右大括号时，编译器会生成此调用。 编译器生成的代码可确保资源得到释放，即使代码块中用 using 语句定义的代码抛出异常，也不例外。
 
-`reader` 变量是使用 `var` 关键字进行定义。 `var` 定义的是*隐式类型局部变量*。 也就是说，变量的类型是由分配给变量的对象的编译时类型决定的。 此处，即为 @System.IO.StreamReader 对象 @System.IO.File.OpenText 的返回值。
+`reader` 变量是使用 `var` 关键字进行定义。 `var` 定义的是*隐式类型局部变量*。 也就是说，变量的类型是由分配给变量的对象的编译时类型决定的。 此处，即从返回的值<xref:System.IO.File.OpenText(System.String)>方法，即<xref:System.IO.StreamReader>对象。
  
 现在，让我们在 `Main` 方法中填充用于读取文件的代码： 
 
@@ -154,7 +152,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>异步任务
 最后一步将是添加代码，以便在一个任务中异步编写输出，同时运行另一任务来读取用户输入（如果用户想要加速或减速文本显示的话）。 此过程分为几步操作，最后将完成所需的全部更新。
-第一步是创建异步 @System.Threading.Tasks.Task 返回方法，用于表示已创建的用于读取和显示文件的代码。
+第一步是创建异步 <xref:System.Threading.Tasks.Task> 返回方法，用于表示已创建的用于读取和显示文件的代码。
 
 将以下方法（截取自 `Main` 方法主体）添加到 `Program` 类中：
 
@@ -173,7 +171,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 @System.Threading.Tasks.Task.Wait 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。
+你会注意到两处更改。 首先，此版本在方法主体中使用 `await` 关键字，而不是调用 <xref:System.Threading.Tasks.Task.Wait> 同步等待任务完成。 为此，需要将 `async` 修饰符添加到方法签名中。 此方法返回 `Task`。 请注意，没有用于返回 `Task` 对象的返回语句。 相反，`Task` 对象由编译器在你使用 `await` 运算符时生成的代码进行创建。 可以想象，此方法在到达 `await` 时返回。 返回的 `Task` 指示工作未完成。
 在等待的任务完成时，此方法继续执行。 执行完后，返回的 `Task` 会指示已完成。
 调用代码可以通过监视返回的 `Task` 来确定完成时间。
 
@@ -209,7 +207,7 @@ private static async Task GetInput()
 }
 ```
 
-这创建了一个表示 @System.Action 委托的 lambda 表达式，用于在用户按“<”或“>”键时，从控制台读取键，并修改表示延迟的局部变量。 此方法使用 @System.Console.ReadKey 来阻止并等待用户按键。
+这创建了一个表示 <xref:System.Action> 委托的 lambda 表达式，用于在用户按“<”或“>”键时，从控制台读取键，并修改表示延迟的局部变量。 此方法使用 <xref:System.Console.ReadKey> 来阻止并等待用户按键。
 
 若要完成这项功能，需要新建 `async Task` 返回方法，用于启动这两项任务（`GetInput` 和 `ShowTeleprompter`），并管理这两项任务之间共享的数据。
  
@@ -257,7 +255,7 @@ private static async Task RunTeleprompter()
 }
 ```
 
-上面引入的一种新方法是 @System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[]) 调用。 这会创建 `Task`，只要自变量列表中的任意一项任务完成，它就会完成。
+一种新方法此处是<xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])>调用。 这会创建 `Task`，只要自变量列表中的任意一项任务完成，它就会完成。
 
 接下来，需要同时将 `ShowTeleprompter` 和 `GetInput` 方法更新为对延迟使用 `config` 对象：
 
@@ -316,4 +314,5 @@ public void SetDone()
 此教程介绍了与处理控制台应用程序相关的许多 C# 语言和 .NET Core 库功能。
 可以在此教程的基础上进一步探索语言和本文介绍的类。 你已了解文件和控制台 I/O 的基础知识、基于任务的异步编程模型的阻止性和非阻止性用途、C# 语言介绍、C# 程序的组织结构，以及 .NET Core 命令行接口和工具。
  
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

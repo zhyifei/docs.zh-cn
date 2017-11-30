@@ -1,27 +1,18 @@
 ---
 title: "集合 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26a90b57350837bd51f222ff716364cb3bb902d5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collections-c"></a>集合 (C#)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -32,7 +23,7 @@ ms.lasthandoff: 07/28/2017
   
  集合是一个类，因此必须在向该集合添加元素之前，声明类的实例。  
   
- 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
+ 如果集合中只包含一种数据类型的元素，则可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。  
   
 > [!NOTE]
 >  在本主题的示例中，针对 `System.Collections.Generic` 和 `System.Linq` 命名空间包括 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令。  
@@ -195,17 +186,17 @@ public class Galaxy
   
  本部分介绍了一些通用集合类：  
   
--   @System.Collections.Generic 类  
+-   <xref:System.Collections.Generic> 类  
   
--   @System.Collections.Concurrent 类  
+-   <xref:System.Collections.Concurrent> 类  
   
--   @System.Collections 类  
+-   <xref:System.Collections> 类  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic 类  
  可以使用 <xref:System.Collections.Generic> 命名空间中的某个类来创建泛型集合。 当集合中的所有项都具有相同的数据类型时，泛型集合会非常有用。 泛型集合通过仅允许添加所需的数据类型，强制实施强类型化。  
   
- 下表列出了 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间中的一些常用类：  
+ 下表列出了 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一些常用类：  
 
 |类|说明| 
 |---|---|  
@@ -215,21 +206,21 @@ public class Galaxy
 |<xref:System.Collections.Generic.SortedList%602>|表示基于相关的 <xref:System.Collections.Generic.IComparer%601> 实现按键进行排序的键/值对的集合。|  
 |<xref:System.Collections.Generic.Stack%601>|表示对象的后进先出 (LIFO) 集合。|  
   
- 有关其他信息，请参阅[常用集合类型](../../../standard/collections/commonly-used-collection-types.md)、[选择集合类](../../../standard/collections/selecting-a-collection-class.md)和 @System.Collections.Generic。  
+ 有关其他信息，请参阅[常用集合类型](../../../standard/collections/commonly-used-collection-types.md)、[选择集合类](../../../standard/collections/selecting-a-collection-class.md)和 <xref:System.Collections.Generic>。  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 类  
  在 .NET Framework 4 或更新的版本中，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。  
   
- 只要多个线程同时访问集合，就应使用 <xref:System.Collections.Concurrent> 命名空间中的类，而不是 <xref:System.Collections.Generic?displayProperty=fullName> 和 <xref:System.Collections?displayProperty=fullName> 命名空间中的相应类型。 有关详细信息，请参阅[线程安全集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。  
+ 只要多个线程同时访问集合，就应使用 <xref:System.Collections.Concurrent> 命名空间中的类，而不是 <xref:System.Collections.Generic?displayProperty=nameWithType> 和 <xref:System.Collections?displayProperty=nameWithType> 命名空间中的相应类型。 有关详细信息，请参阅[线程安全集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。  
   
  包含在 <xref:System.Collections.Concurrent> 命名空间中的一些类为 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections 类  
- <xref:System.Collections?displayProperty=fullName> 命名空间中的类不会将元素作为特别类型化的对象存储，而是作为 `Object` 类型的对象存储。  
+ <xref:System.Collections?displayProperty=nameWithType> 命名空间中的类不会将元素作为特别类型化的对象存储，而是作为 `Object` 类型的对象存储。  
   
- 只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合，而不是 `System.Collections` 命名空间中的旧类型。  
+ 只要可能，则应使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间或 <xref:System.Collections.Concurrent> 命名空间中的泛型集合，而不是 `System.Collections` 命名空间中的旧类型。  
   
  下表列出了 `System.Collections` 命名空间中的一些常用类：  
   
@@ -590,15 +581,14 @@ private static IEnumerable<int> EvenSequence(
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)   
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
- [集合和数据结构](../../../standard/collections/index.md)   
- [创建和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [选择集合类](../../../standard/collections/selecting-a-collection-class.md)   
- [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)   
+ [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)  
+ [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [集合和数据结构](../../../standard/collections/index.md)  
+ [创建和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
+ [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
  [如何：使用 foreach 访问集合类](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
-

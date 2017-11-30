@@ -1,21 +1,17 @@
 ---
 title: "dotnet publish 命令 - .NET Core CLI"
 description: "dotnet publish 命令可将 .NET Core 项目发布到目录。"
-keywords: "dotnet-publish, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
+ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
 
@@ -95,10 +91,11 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
+如果提供的相对路径，则生成的输出目录是相对于项目文件位置，不适用于当前工作目录。
 
 `--self-contained`
 
-与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，默认值为 `true`。 若要详细了解不同的部署类型，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，默认值为 `true`。 有关不同的部署类型的详细信息，请参阅[.NET 核心应用程序部署](../deploying/index.md)。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -133,6 +130,7 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
+如果提供的相对路径，则生成的输出目录是相对于项目文件位置，不适用于当前工作目录。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -170,4 +168,3 @@ dotnet publish [-h|--help]
 
 * [目标框架](../../standard/frameworks.md)
 * [运行时标识符 (RID) 目录](../rid-catalog.md)
-

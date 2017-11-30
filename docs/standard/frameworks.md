@@ -1,23 +1,19 @@
 ---
 title: "目标框架"
 description: "了解用于 .NET Core 应用和库的目标框架。"
-keywords: ".NET, .NET Core, 框架, TFM"
 author: richlander
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 09/22/2017
 ms.topic: article
+ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
+ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
-ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="target-frameworks"></a>目标框架
 
 以应用或库中的框架为目标时，需要指定想要向应用或库提供的 API 集。 使用目标框架名字对象 (TFM) 在项目文件中指定目标框架。
@@ -34,11 +30,11 @@ ms.lasthandoff: 08/25/2017
 
 下表定义了最常见的目标框架、如何引用这些框架，以及它们实现的 [.NET Standard](~/docs/standard/net-standard.md) 版本。 这些目标框架版本是最新的稳定版本。 预览版不会显示。 目标框架名字对象 (TFM) 是一个标准化令牌格式，用于指定 .NET 应用或库的目标框架。 
 
-| 目标 Framework      | 最新版本 | 目标框架名字对象 (TFM) | .NET Standard 版本 | 元包 |
-| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 2.0.0          | netstandard2.0                 | 不可用                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core 应用程序 | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.7            | net47                          | 1.5                   | 不可用 |
+| 目标 Framework      | 最新版本 | 目标框架名字对象 (TFM) | 实现 <br/> .NET Standard 版本 |
+| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
+| .NET Standard         | 2.0            | netstandard2.0                 | 不可用                                     |
+| .NET Core 应用程序 | 2.0            | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支持的目标框架版本
 
@@ -48,7 +44,7 @@ ms.lasthandoff: 08/25/2017
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Windows 应用商店              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -143,4 +139,3 @@ public class MyClass
 [dotnet/standard GitHub 存储库](https://github.com/dotnet/standard)  
 [NuGet 工具 GitHub 存储库](https://github.com/joelverhagen/NuGetTools)  
 [.NET 中的框架配置文件](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
-

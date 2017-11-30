@@ -1,45 +1,27 @@
 ---
 title: "如何：使用 XML 文档功能（C# 编程指南）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文档功能（C# 编程指南）
 下面的示例提供对某个已存档类型的基本概述。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// This .xml file was generated with the previous code sample.**  
 **\<?xml version="1.0"?>**  
@@ -52,7 +34,7 @@ ms.lasthandoff: 07/28/2017
  **\<summary>**  
  **Class level summary documentation goes here.\</summary>**  
  **\<remarks>**  
- **Longer comments can be associated with a type or member**   
+ **较长的注释可以与类型或成员相关联**  
  **through the remarks tag\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -60,14 +42,14 @@ ms.lasthandoff: 07/28/2017
  **Store for the name property\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<summary>The class constructor.\</summary>**   
+ **\<摘要 > 类构造函数。 \< /摘要 >**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Description for SomeMethod.\</summary>**  
  **\<param name="s"> Parameter description for s goes here\</param>**  
  **\<seealso cref="T:System.String">**  
- **You can use the cref attribute on any tag to reference a type or member**   
+ **可以使用任何标记上的 cref 特性来引用类型或成员**  
  **and the compiler will check that the reference exists. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -115,8 +97,7 @@ ms.lasthandoff: 07/28/2017
         > [!NOTE]
         >  XML 文件不提供有关该类型和成员的完整信息（例如，它不包含任何类型信息）。 若要获取有关类型或成员的完整信息，必须将文档文件与对实际类型或成员的反射一起使用。  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [/doc （C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -250,11 +251,12 @@ ms.lasthandoff: 07/28/2017
   
 3.  在代码编辑器中，将以下语句添加到 Form1 文件顶部：  
   
-     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]  [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
+     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]
+     [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
   
 4.  在 **“解决方案资源管理器”**中，双击 Form1 以显示设计器。  
   
-5.  在设计器中，双击窗体图面，以生成名为 <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> 的 `Form1_Load`事件处理程序。  
+5.  在设计器中，双击窗体图面，以生成名为 <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType> 的 `Form1_Load`事件处理程序。  
   
      代码编辑器随即出现，光标位于 `Form1_Load` 方法中。  
   
@@ -262,9 +264,10 @@ ms.lasthandoff: 07/28/2017
   
      此代码通过退出应用程序，对未通过身份验证的用户拒绝访问。 或者，可以允许未通过身份验证的用户访问窗体，但拒绝对特定功能的访问。 通常不会像这样对用户名和密码进行硬编码，但对于测试十分有用。 在下一部分中，你会将此代码替换为显示登录对话框并包含异常处理的更可靠代码。  
   
-     请注意， `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法处于 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]中。 此方法将其工作委托给配置的身份验证提供程序，并在身份验证成功时返回 `true` 。 应用程序不需要直接引用客户端身份验证提供程序。  
+     请注意， `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法处于 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]中。 此方法将其工作委托给配置的身份验证提供程序，并在身份验证成功时返回 `true` 。 应用程序不需要直接引用客户端身份验证提供程序。  
   
-     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]  [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
+     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]
+     [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
   
  现在可以按 F5 以运行应用程序，因为提供了正确的用户名和密码，所以会看到窗体。  
   
@@ -294,15 +297,17 @@ ms.lasthandoff: 07/28/2017
   
      此代码会显示一条欢迎消息，然后调用会在下一步中添加的 `ValidateUsingCredentialsProvider` 方法。 如果用户未通过身份验证，则 `ValidateUsingCredentialsProvider` 方法会返回 `false` ，并且 `Form1_Load` 方法会返回。 这会在应用程序退出之前阻止任何其他代码运行。 欢迎消息可用于清楚地表明应用程序重新启动。 你会在本演练后面实现注销时添加用于重新启动应用程序的代码。  
   
-     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]  [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
+     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]
+     [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
   
 4.  在 `Form1_Load` 方法之后添加以下方法。  
   
-     此方法将空字符串传递给 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法，这会使登录对话框出现。 如果身份验证服务不可用，则 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法会引发 <xref:System.Net.WebException>。 在这种情况下， `ValidateUsingCredentialsProvider` 方法会显示一条警告消息，并询问用户是否要在脱机模式下重试。 此功能需要 **How to: Configure Client Application Services** 中介绍的 [“将密码哈希保存在本地以实现脱机登录”](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)功能。 此功能会在默认情况下为新项目启用。  
+     此方法将空字符串传递给 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法，这会使登录对话框出现。 如果身份验证服务不可用，则 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法会引发 <xref:System.Net.WebException>。 在这种情况下， `ValidateUsingCredentialsProvider` 方法会显示一条警告消息，并询问用户是否要在脱机模式下重试。 此功能需要 **How to: Configure Client Application Services** 中介绍的 [“将密码哈希保存在本地以实现脱机登录”](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)功能。 此功能会在默认情况下为新项目启用。  
   
      如果用户未通过验证，则 `ValidateUsingCredentialsProvider` 方法会显示一条错误消息并退出应用程序。 最后，此方法会返回身份验证尝试的结果。  
   
-     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
+     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]
+     [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>创建一个登录窗体  
  凭据提供程序是实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口的类。 此接口具有名为 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的单一方法，它返回 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 对象。 以下过程介绍如何创建一个登录对话框，它实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 以显示本身并返回用户指定的凭据。  
@@ -379,20 +384,22 @@ ms.lasthandoff: 07/28/2017
   
      此代码会调用将在下一步中添加的 `DisplayButtonForManagerRole` 方法。  
   
-     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]  [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
+     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]
+     [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
   
 5.  将以下方法添加到 Form1 类的末尾。  
   
-     此方法会调用 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 属性返回的 <xref:System.Security.Principal.IPrincipal> 的 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法。 对于配置为使用客户端应用程序服务的应用程序，此属性会返回 <xref:System.Web.ClientServices.ClientRolePrincipal>。 因为此类实现 <xref:System.Security.Principal.IPrincipal> 接口，所以无需显式引用它。  
+     此方法会调用 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Security.Principal.IPrincipal> 的 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法。 对于配置为使用客户端应用程序服务的应用程序，此属性会返回 <xref:System.Web.ClientServices.ClientRolePrincipal>。 因为此类实现 <xref:System.Security.Principal.IPrincipal> 接口，所以无需显式引用它。  
   
      如果用户采用“manager”角色，则 `DisplayButtonForManagerRole` 方法会将 <xref:System.Windows.Forms.Control.Visible%2A> 的 `managerOnlyButton` 属性设置为 `true`。 如果引发了 <xref:System.Net.WebException> （它表示角色服务不可用），则此方法还会显示一条错误消息。  
   
     > [!NOTE]
-    >  如果用户登录名已过期，则 <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法会始终返回 `false` 。 如果应用程序在身份验证之后很快调用 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法一次（在本演练的代码示例中所示），则不会发生这种情况。 如果应用程序必须在其他时间检索用户角色，则可能要添加代码以重新验证登录名已过期的用户。 如果所有有效用户都分配给角色，则可以通过调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> 方法来确定登录名是否已过期。 如果不返回任何角色，则登录名已过期。 有关此功能的示例，请参阅 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，此功能才是必需的。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+    >  如果用户登录名已过期，则 <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法会始终返回 `false` 。 如果应用程序在身份验证之后很快调用 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法一次（在本演练的代码示例中所示），则不会发生这种情况。 如果应用程序必须在其他时间检索用户角色，则可能要添加代码以重新验证登录名已过期的用户。 如果所有有效用户都分配给角色，则可以通过调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法来确定登录名是否已过期。 如果不返回任何角色，则登录名已过期。 有关此功能的示例，请参阅 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，此功能才是必需的。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
-     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
+     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
+     [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- 如果身份验证成功，则客户端身份验证提供程序会将 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 属性设置为 <xref:System.Web.ClientServices.ClientRolePrincipal> 类的实例。 此类实现 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法，以便将工作委托给配置的角色提供程序。 如前面一样，应用程序无需直接引用服务提供程序。  
+ 如果身份验证成功，则客户端身份验证提供程序会将 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Web.ClientServices.ClientRolePrincipal> 类的实例。 此类实现 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法，以便将工作委托给配置的角色提供程序。 如前面一样，应用程序无需直接引用服务提供程序。  
   
  现在可以运行应用程序，并以 employee 身份登录以看到按钮不会出现，然后以 manager 身份登录以看到按钮。  
   
@@ -425,18 +432,21 @@ ms.lasthandoff: 07/28/2017
   
      此代码会调用将在下一步中添加的 `BindWebSettingsTestTextBox` 方法。  
   
-     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]  [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
+     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]
+     [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
   
 9. 将以下方法添加到 Form1 类的末尾。  
   
-     此方法将 <xref:System.Windows.Forms.TextBox.Text%2A> 的 `webSettingsTestTextBox` 属性绑定到此过程前面生成的 `WebSettingsTestText` 类的 `Settings` 属性。 如果引发了 <xref:System.Net.WebException>（它表示 Web 设置服务不可用），则此方法还会显示一条错误消息。  
+     此方法将 <xref:System.Windows.Forms.TextBox.Text%2A> 的 `webSettingsTestTextBox` 属性绑定到此过程前面生成的 `WebSettingsTestText` 类的 `Settings` 属性。 如果引发了 <xref:System.Net.WebException> （它表示 Web 设置服务不可用），则此方法还会显示一条错误消息。  
   
-     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]   [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
+     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]
+     [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
     > [!NOTE]
     >  通常会使用数据绑定在控件与 Web 设置之间实现自动双向通信。 但是，还可以直接访问 Web 设置，如下面的示例所示：  
   
-     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]   [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
+     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]
+     [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
   
 10. 在设计器中，选择窗体，然后在 **“属性”** 窗口中，单击 **“事件”** 按钮。  
   
@@ -444,19 +454,21 @@ ms.lasthandoff: 07/28/2017
   
 12. 将生成的方法替换为以下代码。  
   
-     <xref:System.Windows.Forms.Form.FormClosing> 事件处理程序会调用 `SaveSettings` 方法，将在下一部分中添加的注销功能也使用该方法。 `SaveSettings` 方法首先确认用户尚未注销。 可通过当前主体返回的 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 的 <xref:System.Security.Principal.IIdentity> 属性来实现此目的。 可通过 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性检索当前主体。 如果用户针对客户端应用程序服务进行了身份验证，则身份验证类型将是“ClientForms”。 `SaveSettings` 方法不能只检查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> 属性，因为用户在注销之后可能具有有效的 Windows 标识。  
+     <xref:System.Windows.Forms.Form.FormClosing> 事件处理程序会调用 `SaveSettings` 方法，将在下一部分中添加的注销功能也使用该方法。 `SaveSettings` 方法首先确认用户尚未注销。可通过当前主体返回的 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 的 <xref:System.Security.Principal.IIdentity> 属性来实现此目的。 可通过 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性检索当前主体。 如果用户针对客户端应用程序服务进行了身份验证，则身份验证类型将是“ClientForms”。 `SaveSettings` 方法不能只检查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> 属性，因为用户在注销之后可能具有有效的 Windows 标识。  
   
      如果用户尚未注销，则 `SaveSettings` 方法调用在此过程前面生成的 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 类的 `Settings` 方法。 如果身份验证 Cookie 已过期，则此方法可能会引发 <xref:System.Net.WebException> 。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，才会发生这种情况。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法通过调用 <xref:System.Web.Security.Membership.ValidateUser%2A> 以显示登录对话框，来处理 Cookie 过期。 如果用户成功登录，则 `SaveSettings` 方法尝试通过调用自身来再次保存设置。  
   
      与前面的代码一样，如果远程服务不可用，则 `SaveSettings` 方法会显示一条错误消息。 如果设置提供程序无法访问远程服务，则设置仍会保存到本地缓存，并在应用程序重新启动时重载。  
   
-     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]  [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
+     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]
+     [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
   
 13. 将以下方法添加到 Form1 类的末尾。  
   
-     此代码处理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> 事件，并在任何设置无法保存时显示警告。 如果设置服务不可用，或者如果身份验证 Cookie 已过期，则 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件不会发生。 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件会发生的一个示例是如果用户已注销。 可以通过直接在 `SaveSettings` 方法调用之前向 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 方法添加注销代码，来测试此事件处理程序。 可以使用的注销代码在下一部分中进行介绍。  
+     此代码处理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> 事件，并在任何设置无法保存时显示警告。 如果设置服务不可用，或者如果身份验证 Cookie 已过期，则 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件不会发生。 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件会发生的一个示例是如果用户已注销。可以通过直接在 `SaveSettings` 方法调用之前向 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 方法添加注销代码，来测试此事件处理程序。 可以使用的注销代码在下一部分中进行介绍。  
   
-     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]  [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
+     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]
+     [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
 14. 对于 C#，在 `Form1_Load` 方法的末尾添加以下代码。 此代码将上一步中添加的方法与 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件相关联。  
   
@@ -479,16 +491,17 @@ ms.lasthandoff: 07/28/2017
   
 4.  将生成的 `logoutButton_Click` 方法替换为以下代码。  
   
-     此事件处理程序首先调用在上一部分中添加的 `SaveSettings` 方法。 随后，事件处理程序会调用 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> 方法。 如果身份验证服务不可用，则 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 方法会引发 <xref:System.Net.WebException>。 在这种情况下， `logoutButton_Click` 方法会显示一条警告消息，并暂时切换为脱机模式以使用户注销。 下一部分中介绍了脱机模式。  
+     此事件处理程序首先调用在上一部分中添加的 `SaveSettings` 方法。 随后，事件处理程序会调用 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=nameWithType> 方法。 如果身份验证服务不可用，则 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 方法会引发 <xref:System.Net.WebException>。 在这种情况下， `logoutButton_Click` 方法会显示一条警告消息，并暂时切换为脱机模式以使用户注销。下一部分中介绍了脱机模式。  
   
      注销会删除本地身份验证 Cookie，以便在应用程序重新启动时要求提供登录名。 注销之后，事件处理程序会重新启动应用程序。 应用程序重新启动时，它会显示一条欢迎消息，后跟登录对话框。 欢迎消息可清楚地表明应用程序已重新启动。 如果用户必须登录才能保存设置，并且随后因为应用程序重新启用而必须再次登录序，这样可防止可能的混淆。  
   
-     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]  [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
+     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]
+     [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
   
  若要测试注销功能，请运行应用程序，然后在登录对话框中选择 **“记住我”** 。 接下来，关闭并重新启动应用程序，以确认不必再登录。 最后，通过单击“注销”来重新启动应用程序。  
   
 ## <a name="enabling-offline-mode"></a>启用脱机模式  
- 在下面的过程中，会向窗体添加一个复选框，以使用户可以进入脱机模式。 应用程序通过将 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 属性设置为 `true`来指示脱机模式。 脱机状态存储在本地硬盘上由 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 属性指示的位置处。 这意味着会针对每个用户、每个应用程序来存储脱机状态。  
+ 在下面的过程中，会向窗体添加一个复选框，以使用户可以进入脱机模式。 应用程序通过将 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=nameWithType> 属性设置为 `true`来指示脱机模式。 脱机状态存储在本地硬盘上由 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 属性指示的位置处。 这意味着会针对每个用户、每个应用程序来存储脱机状态。  
   
  在脱机模式下，所有客户端应用程序服务请求都从本地缓存检索数据而不是尝试访问服务。 在默认配置中，本地数据包括用户密码的加密形式。 这使用户可以应用程序处于脱机模式时登录。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
@@ -506,18 +519,20 @@ ms.lasthandoff: 07/28/2017
   
 6.  将生成的方法替换为以下代码。  
   
-     此代码会更新 <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> 值，并在他们返回联机模式时以静默方式重新验证用户。 <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=fullName> 方法使用缓存的凭据，以便用户不必显式登录。 如果身份验证服务不可用，则会出现警告消息，应用程序会保持脱机状态。  
+     此代码会更新 <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> 值，并在他们返回联机模式时以静默方式重新验证用户。 <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=nameWithType> 方法使用缓存的凭据，以便用户不必显式登录。 如果身份验证服务不可用，则会出现警告消息，应用程序会保持脱机状态。  
   
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> 方法只是为了方便。 因为它没有返回值，所以无法指示重新验证是否失败。 例如，如果在服务器上更改了用户凭据，则重新验证可能会失败。 在这种情况下，你可能要包含在服务调用失败之后显式验证用户的代码。 有关详细信息，请参阅本演练前面的“访问 Web 设置”部分。  
   
-     重新验证之后，此代码会将任何更改都保存到本地 Web 设置，具体方法是调用以前添加的 `SaveSettings` 方法。 它随后通过调用项目的 `Settings` 类的 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 方法（在 C# 中作为 `Properties.Settings.Default` 并且在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中作为 `My.Settings` 来访问），来检索服务器上的任何新值。  
+     重新验证之后，此代码会将任何更改都保存到本地 Web 设置，具体方法是调用以前添加的 `SaveSettings` 方法。 它随后通过调用项目的 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 类的 `Settings` 方法（在 C# 中作为 `Properties.Settings.Default` 并且在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]来访问），来检索服务器上的任何新值。  
   
-     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]  [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
+     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
+     [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
   
 7.  将以下代码添加到 `Form1_Load` 方法的末尾，以确保复选框显示当前连接状态。  
   
-     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]  [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
+     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]
+     [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
   
  这样便完成了示例应用程序。 若要测试脱机功能，请运行应用程序，以 employee 或 manager 身份登录，然后选择 **“脱机工作”**。 修改文本框中的值，然后关闭应用程序。 重新启动应用程序。 登录之前，请在任务栏的通知区域中右键单击“ASP.NET 开发服务器”图标，然后单击 **“停止”**。 随后照常登录。 即使服务器未运行时，仍可以登录。 修改文本框值，退出，然后重新启动以查看修改后的值。  
   
@@ -530,10 +545,9 @@ ms.lasthandoff: 07/28/2017
  若要提高应用程序的安全性，请确保在部署之前全面测试应用程序和服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
- [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)   
+ [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [ASP.NET 网站管理工具](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [演练：使用 ASP.NET 应用程序服务](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
-

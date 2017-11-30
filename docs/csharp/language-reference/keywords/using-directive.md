@@ -1,38 +1,19 @@
 ---
 title: "using 指令（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using directive [C#]
+helpviewer_keywords: using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1129efd8a1c4058a9648eab61f98cdcef7e9f2f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
 `using` 指令有三种用途：  
@@ -81,15 +62,15 @@ class Program
   
  创建 `using` 指令，以便在命名空间中使用类型而不必指定命名空间。 `using` 指令不为你提供对嵌套在指定命名空间中的任何命名空间的访问权限。  
   
- 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 有关系统定义的命名空间的列表，请参阅 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)。  
+ 命名空间分为两类：用户定义的命名空间和系统定义的命名空间。 用户定义的命名空间是在代码中定义的命名空间。 系统定义的命名空间的列表，请参阅[.NET Framework 类库概述](../../../standard/class-library-overview.md)。  
   
- 有关引用其他程序集中的方法的示例，请参阅[创建和使用 C# DLL](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
+ 有关引用其他程序集中的方法的示例，请参阅[创建和使用程序集使用命令行](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="example-1"></a>示例 1  
   
  下面的示例显示如何为命名空间定义和使用 `using` 别名：  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
  using 别名指令的右侧不能有开放式泛型类型。 例如，不能为 List\<T> 创建 using 别名，但可以为 List\<int> 创建。  
   
@@ -97,17 +78,16 @@ class Program
   
  下面的示例显示如何为类定义 `using` 指令和 `using` 别名：  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Using 命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [命名空间](../../../csharp/programming-guide/namespaces/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
  [using 语句](../../../csharp/language-reference/keywords/using-statement.md)
-

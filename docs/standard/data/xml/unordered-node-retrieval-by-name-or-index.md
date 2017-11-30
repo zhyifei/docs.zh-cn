@@ -1,28 +1,29 @@
 ---
-title: "按名称或索引检索未排序节点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "按名称或索引检索未排序节点"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 按名称或索引检索未排序节点
-**XmlNamedNodeMap** 在万维网联合会 \(W3C\) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点的名称或索引引用节点是必需的。  访问 **XmlNamedNodeMap** 的唯一方式是通过方法或属性返回 **XmlNamedNodeMap**。  有三个方法或属性返回 **XmlNamedNodeMap**：  
+# <a name="unordered-node-retrieval-by-name-or-index"></a>按名称或索引检索未排序节点
+**XmlNamedNodeMap**被描述为 NamedNodeMap World Wide Web Consortium (W3C) 规范中，需要按其名称或索引并引用节点能够处理节点的无序的集。 您有权访问的唯一方法**XmlNamedNodeMap**时**XmlNamedNodeMap**通过方法或属性返回。 有三个方法或属性返回**XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes  
   
@@ -30,9 +31,9 @@ caps.handback.revision: 3
   
 -   XmlDocumentType.Notations  
   
- 例如，**XmlDocumentType.Entities** 属性获取在文档类型声明中声明的 **XmlEntity** 节点集合。  此集合作为 **XmlNamedNodeMap** 返回，可以使用 **Count** 属性循环访问此集合并显示实体信息。  有关循环访问 **XmlNamedNodeMap** 的示例，请参见 [XmlDocumentType.Entities 属性](frlrfSystemXmlXmlDocumentTypeClassEntitiesTopic)。  
+ 例如， **XmlDocumentType.Entities**属性获取的集合**XmlEntity**在文档类型声明中声明的节点。 此集合返回作为**XmlNamedNodeMap**，并且你可以循环访问与使用集合**计数**属性并显示实体信息。 有关循环访问的示例**XmlNamedNodeMap**，请参阅<xref:System.Xml.XmlDocumentType.Entities%2A>。  
   
- **XmlAttributeCollection** 从 **XmlNamedNodeMap** 派生，且只有属性是可以修改的，而表示法和实体则是只读的。  通过将 **XmlNamedNodeMap** 用于属性，可以基于属性的 XML 名称获取这些属性的节点。  这样，提供了一个处理元素节点的属性集合的简单方法。  该方法可与 **XmlNodeList** 直接进行比较，后者也实现 **IEnumerable** 接口但使用的是索引访问器而不是字符串。  **RemoveNamedItem** 和 **SetNamedItem** 方法只针对 **XmlAttributeCollection** 使用。  属性集合中的添加或移除操作（无论是使用 **AttributeCollection** 还是 **XmlNamedNodeMap** 实现）将修改元素的属性集合。  下面的代码示例显示如何移动属性并创建新属性。  
+ **XmlAttributeCollection**派生自**XmlNamedNodeMap**且只有属性是可修改，而表示法和实体是只读的。 使用**XmlNamedNodeMap**用于属性，可以获取这些基于其 XML 名称的属性的节点。 这样，提供了一个处理元素节点的属性集合的简单方法。 这可以直接与对照**XmlNodeList**，后者也实现**IEnumerable**接口，但使用索引访问器，而不是一个字符串。 **RemoveNamedItem**和**SetNamedItem**方法仅在针对**XmlAttributeCollection**。 添加或移除属性集合，无论使用**AttributeCollection**或**XmlNamedNodeMap**实现，将修改元素的属性集合。 下面的代码示例显示如何移动属性并创建新属性。  
   
 ```vb  
 Imports System  
@@ -123,7 +124,7 @@ class test {
 }  
 ```  
   
- 若要查看另一个显示从 **AttributeCollection** 中移除属性的代码示例，请参见 [XmlNamedNodeMap.RemoveNamedItem 方法](frlrfSystemXmlXmlNamedNodeMapClassRemoveNamedItemTopic)。  有关方法和属性的更多信息，请参见 [XmlNamedNodeMap 成员](frlrfSystemXmlXmlNamedNodeMapMembersTopic)。  
+ 若要查看额外的代码示例，其中显示了从移除属性**AttributeCollection**，请参阅[XmlNamedNodeMap.RemoveNamedItem 方法](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)。 有关方法和属性的详细信息，请参阅[XmlNamedNodeMap 成员](AllMembers.T:System.Xml.XmlNamedNodeMap)。  
   
-## 请参阅  
- [XML 文档对象模型 \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>另请参阅  
+ [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

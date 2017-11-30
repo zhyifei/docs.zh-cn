@@ -1,22 +1,21 @@
 ---
 title: "自动内存管理和垃圾回收"
-description: "自动内存管理和垃圾回收"
-keywords: ".NET、.NET Core"
-author: stevehoag
-ms.author: shoag
+description: "了解如何自动内存管理是公共语言运行时提供托管执行过程的服务之一。"
+keywords: .NET, .NET Core
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>自动内存管理和垃圾回收
 
 自动内存管理是公共语言运行时在托管执行过程中提供的服务之一。 公共语言运行时的垃圾回收器为应用程序管理内存的分配和释放。 对开发人员而言，这就意味着在开发托管应用程序时不必编写执行内存管理任务的代码。 自动内存管理可解决常见问题，例如，忘记释放对象并导致内存泄漏，或尝试访问已释放对象的内存。 本节描述垃圾回收器如何分配和释放内存。
@@ -56,5 +55,4 @@ ms.lasthandoff: 03/02/2017
 [System.GC](xref:System.GC)
 
 [.NET 中的垃圾回收](index.md)
-
 

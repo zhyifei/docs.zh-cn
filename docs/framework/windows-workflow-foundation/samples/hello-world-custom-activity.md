@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b05608ca0704483f4318342a733ce363c0a66fc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 75f4a75a38b79e7b7ab18ac2ce3eff2a13aab15f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自定义活动
 此示例演示几个 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的主要功能，包括如何创建一个简单的自定义活动。 此示例中演示的一些功能使用 C# 创建自定义活动并使用 `in` 和 `out` 参数（<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>）。  
@@ -59,6 +59,4 @@ ms.lasthandoff: 10/18/2017
   
 2.  要生成解决方案，按 Ctrl+Shift+B。  
   
-3.  若要运行解决方案，请按 F5。  
-  
-## <a name="see-also"></a>另请参阅
+3.  若要运行解决方案，请按 F5。

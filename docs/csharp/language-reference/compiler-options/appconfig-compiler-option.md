@@ -1,40 +1,20 @@
 ---
 title: "-appconfig（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /appconfig
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- /appconfig compiler option [C#]
+f1_keywords: /appconfig
+helpviewer_keywords: /appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ca752c6264d0ee886aa4c248738097e0caf1d756
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2aede966f92af3c94f4591b68732dbdbf5a4c5c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="appconfig-c-compiler-options"></a>/appconfig（C# 编译器选项）
 /appconfig 编译器选项让 C# 应用程序能够在程序集绑定时将程序集的应用程序配置 (app.config) 文件的位置指定为公共语言运行时 (CLR)。  
@@ -76,7 +56,5 @@ ms.lasthandoff: 09/19/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [.NET Framework 程序集统一概述](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
+ [\<supportPortability > 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
  [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-

@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9c3b6f189f1a2564662af89961c9363f025ae8c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: a45e04c4368406255736312503e19de95ed12150
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>SendParameters 和 ReceiveParameters 活动的基本用法
 此示例演示如何使用 <xref:System.ServiceModel.Activities.SendParametersContent> 和 <xref:System.ServiceModel.Activities.ReceiveParametersContent> 活动。 此服务公开了一个操作，该操作获取一个字符串参数并将输入回显到客户端。 此示例演示如何设置这些消息传递活动的参数。  
@@ -38,6 +38,4 @@ ms.lasthandoff: 10/18/2017
   
 3.  然后运行 [解决方案基目录]\EchoWorkflowClient\bin\debug 中生成的 EchoWorkflowClient 应用程序。  
   
-4.  客户端对服务调用 Echo 操作，并输出结果。 完成后，请按 Enter 退出客户端，然后退出服务。  
-  
-## <a name="see-also"></a>另请参阅
+4.  客户端对服务调用 Echo 操作，并输出结果。 完成后，请按 Enter 退出客户端，然后退出服务。

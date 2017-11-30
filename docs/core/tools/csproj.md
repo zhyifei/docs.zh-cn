@@ -4,19 +4,17 @@ description: "了解现有文件和 .NET Core csproj 文件之间的区别"
 keywords: "引用, csproj, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 05/24/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
+ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
 本文档概述了作为从 *project.json* 移动到 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 的一部分，添加到项目文件的更改。 有关常规项目文件的语法和引用的详细信息，请参阅 [MSBuild 项目文件](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档。  
@@ -39,10 +37,11 @@ ms.lasthandoff: 07/28/2017
 ### <a name="recommendations"></a>建议
 由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：
 
-* 绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显式引用。
-* 如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
+* 如果目标.NET 核心或标准.NET，绝对不会有对的显式引用`Microsoft.NETCore.App`或`NetStandard.Library`通过 metapackages`<PackageReference>`项目文件中的项。
+* 如果面向.NET 核心时，你需要运行时的特定版本，则应使用`<RuntimeFrameworkVersion>`项目中的属性 (例如， `1.0.4`) 而不是引用 metapackage。
     * 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
-* 如果需要特定版本的 `NetStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。 
+* 如果你需要的特定版本`NetStandard.Library`metapackage 面向.NET 标准时，你可以使用`<NetStandardImplicitPackageVersion>`属性并设置版本需要。
+* 不要显式添加或更新为引用`Microsoft.NETCore.App`或`NetStandard.Library`metapackage 在.NET Framework 项目。 如果任何版本的`NetStandard.Library`时自动使用基于.NET 标准的 NuGet 包，NuGet 安装该版本需要。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 项目中默认包含的编译项
 已通过移动到最新 SDK 版本中的 *csproj* 格式，将默认的编译项和嵌入资源的包含项和排除项移至 SDK 属性文件。 这意味着不需要再在项目文件中指定这些项。 
@@ -71,6 +70,15 @@ ms.lasthandoff: 07/28/2017
 将此属性设置为 `false` 将替代隐式包含，且该行为将恢复到以前的 SDK，在这种情况下，必须在项目中指定默认 glob。 
 
 此更改不会修改其他包含项的主要机制。 但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。
+
+`<EnableDefaultCompileItems>`仅禁用`Compile`globs 但不会影响其他 globs，如的隐式`None`glob，也适用于\*.cs 项。 正因如此，**解决方案资源管理器**将继续显示\*.cs 项作为项目的一部分，作为包括`None`项。 在类似的方式，你可以使用`<EnableDefaultNoneItems>`若要禁用的隐式`None`glob。
+
+若要禁用**所有隐式 globs**，你可以设置`<EnableDefaultItems>`属性`false`如以下示例所示：
+```xml
+<PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
 
 ### <a name="recommendation"></a>建议
 使用 csproj 时，建议从项目中删除默认 glob，且仅为应用/库需要用于各种方案（例如，运行时和 NuGet 封装）的项目添加 glob 文件路径。
@@ -188,7 +196,7 @@ ms.lasthandoff: 07/28/2017
 明了易用的包标题，通常用在 UI 显示中，如 nuget.org 上和 Visual Studio 中包管理器上的那样。 如果未指定，则改为使用包 ID。
 
 ### <a name="authors"></a>作者
-其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。 这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。
+其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。
 
 ### <a name="description"></a>描述
 用于 UI 显示的包的详细说明。
@@ -261,4 +269,3 @@ ms.lasthandoff: 07/28/2017
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 键=值对的分号分隔列表。
-

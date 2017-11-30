@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
-ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -48,7 +47,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additionaldeps <PATH>`
 
-其他 deps.json 文件的路径。
+其他路径*deps.json*文件。
 
 `--additionalprobingpath <PATH>`
 
@@ -187,6 +186,8 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet restore`
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 生成给定目录中的项目及其依赖项：
 
 `dotnet build`
@@ -208,4 +209,3 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受值 `true`、`1` 或 `yes`）；否则，设置为 `false` 以选择加入遥测功能（接受值 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
-

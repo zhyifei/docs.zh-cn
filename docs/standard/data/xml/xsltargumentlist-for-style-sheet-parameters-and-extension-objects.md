@@ -1,33 +1,34 @@
 ---
-title: "样式表参数和扩展对象的 XsltArgumentList | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "样式表参数和扩展对象的 XsltArgumentList"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 样式表参数和扩展对象的 XsltArgumentList
-<xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 \(XSLT\) 参数和 XSLT 扩展对象。  传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
+<xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 和 <xref:System.Xml.Xsl.XsltArgumentList> 类在是 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。  可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行 XSLT 转换。  有关更多信息，请参见[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <xref:System.Xml.Xsl.XslTransform> 和 <xref:System.Xml.Xsl.XsltArgumentList> 类在是 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行 XSLT 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
   
- <xref:System.Xml.Xsl.XsltArgumentList> 类包含 XSLT 参数和 XSLT 扩展对象。  传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
+ <xref:System.Xml.Xsl.XsltArgumentList> 类包含 XSLT 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
   
  与使用嵌入脚本相比，传递对象具有以下优点：  
   
@@ -39,22 +40,22 @@ caps.handback.revision: 3
   
 -   支持使用 <xref:System.Xml.XPath.XPathNodeIterator> 将结果树片段传递到样式表。  
   
-## XSLT 样式表参数  
- 使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList>。  此时，限定名和命名空间统一资源标识符 \(URI\) 与参数对象关联。  
+## <a name="xslt-style-sheet-parameters"></a>XSLT 样式表参数  
+ 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间统一资源标识符 (URI) 与参数对象关联。  
   
- 参数对象应对应于某个万维网联合会 \(W3C\) 类型。  下表显示了相应的 W3C 类型、等效的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类（类型），以及 W3C 类型是 XML 路径语言 \(XPath\) 类型还是 XSLT 类型。  
+ 参数对象应对应于某个万维网联合会 (W3C) 类型。 下表显示了相应的 W3C 类型、等效的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类（类型），以及 W3C 类型是 XML 路径语言 (XPath) 类型还是 XSLT 类型。  
   
-|W3C 类型|等效的 .NET Framework 类（类型）|XPath 类型还是 XSLT 类型|  
-|------------|------------------------------|------------------------|  
+|W3C 类型|等效的.NET Framework 类 （类型）|XPath 类型还是 XSLT 类型|  
+|--------------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |数字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 如果参数对象不属于上述类，将根据需要被强制指定为 Double 或 String（以适用的为准）。  Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 和 Decimal 类型被强制指定为 Double。  所有其他类型均被用 `ToString` 方法强制指定为 String。  
+ 如果参数对象不属于上述类，将根据需要被强制指定为 Double 或 String（以适用的为准）。 Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 和 Decimal 类型被强制指定为 Double。 所有其他类型均被用 `ToString` 方法强制指定为 String。  
   
-#### 要使用 XSLT 参数，用户需要执行以下操作：  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>要使用 XSLT 参数，用户需要执行以下操作：  
   
 1.  创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 添加对象。  
   
@@ -62,8 +63,8 @@ caps.handback.revision: 3
   
 3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
-### 示例  
- 下面的示例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法创建一个参数来保存计算的折扣日期。  折扣日期计算为从订单日期算起的 20 天时间。  
+### <a name="example"></a>示例  
+ 下面的示例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法创建一个参数来保存计算的折扣日期。 折扣日期计算为从订单日期算起的 20 天时间。  
   
 ```vb  
 Imports System  
@@ -104,7 +105,6 @@ Public class Sample
   
   End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -146,10 +146,10 @@ public class Sample
 }  
 ```  
   
-### 输入  
+### <a name="input"></a>输入  
  order.xml  
   
-```  
+```xml  
 <!--Represents a customer order-->  
 <order>  
   <book ISBN='10-861003-324'>  
@@ -165,7 +165,7 @@ public class Sample
   
  discount.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
   <xsl:param name="discount"/>  
   <xsl:template match="/">  
@@ -178,25 +178,25 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 输出  
+### <a name="output"></a>输出  
   
-```  
+```xml  
 <order>  
    <total>36.9</total>   
    15% discount if paid by: 5/6/2001 5:01:15 PM   
 </order>  
 ```  
   
-## XSLT 扩展对象  
- 使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList>。  此时，限定名和命名空间 URI 与扩展对象关联。  
+## <a name="xslt-extension-objects"></a>XSLT 扩展对象  
+ 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>。 此时，限定名和命名空间 URI 与扩展对象关联。  
   
- 添加对象时，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的调用方在安全策略中必须是完全受信任的。  如果调用方不是完全受信任的，则添加操作将失败。  
+ 添加对象时，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的调用方在安全策略中必须是完全受信任的。 如果调用方不是完全受信任的，则添加操作将失败。  
   
- 尽管对象已成功添加，但不能保证执行将成功。  调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 时提供的证据来计算权限，并将权限集分配给整个转换过程。  如果一个扩展对象尝试启动一个操作，而该操作需要权限集中所没有的权限，就会引发异常。  
+ 尽管对象已成功添加，但不能保证执行将成功。 调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 时提供的证据来计算权限，并将权限集分配给整个转换过程。 如果一个扩展对象尝试启动一个操作，而该操作需要权限集中所没有的权限，就会引发异常。  
   
  从扩展对象返回的数据类型是四种 XPath 基本数据类型之一：数字、字符串、布尔值或节点集。  
   
-#### 要使用 XSLT 扩展对象，用户需要执行以下操作：  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>要使用 XSLT 扩展对象，用户需要执行以下操作：  
   
 1.  创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 添加扩展对象。  
   
@@ -204,7 +204,7 @@ public class Sample
   
 3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
-### 示例  
+### <a name="example"></a>示例  
  已知圆的半径，下面的示例计算圆的周长。  
   
 ```vb  
@@ -257,7 +257,6 @@ Public Class Sample
     End Function  
   End Class  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -315,10 +314,10 @@ public class Sample
 }  
 ```  
   
-### 输入  
+### <a name="input"></a>输入  
  number.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <data>  
   <circle>  
@@ -332,7 +331,7 @@ public class Sample
   
  circle.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
     xmlns:myObj="urn:myObj">  
   
@@ -351,7 +350,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### 输出  
+### <a name="output"></a>输出  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -372,5 +371,5 @@ public class Sample
   
  `</circles>`  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

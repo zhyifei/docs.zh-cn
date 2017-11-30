@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client application services, configuring
+helpviewer_keywords: client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
 本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 07/28/2017
   
      随即显示“项目设计器”。  
   
-2.  单击“服务”选项卡。 随即显示“服务”页，如下图所示。  
+2.  单击“服务”选项卡。随即显示“服务”页，如下图所示。  
   
      ![项目设计器中的“服务”选项卡](../../../docs/framework/common-client-technologies/media/casdesigner.png "casdesigner")  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 07/28/2017
   
 6.  或者，如果选择了“使用 Forms 身份验证”，则可以在“凭据提供程序”框中指定一个值。 凭据提供程序必须实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口。 通过使用凭据提供程序，你可以将你的登录用户界面与其他应用程序代码分开。 这使你能够创建在多个应用程序中使用的单点登录对话框。 有关详细信息，请参阅[如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)。  
   
-     如果指定凭据提供程序，则必须将它指定为程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。 程序集限定类型名称最简单的形式类似于下面的示例：  
+     如果指定凭据提供程序，则必须将它指定为程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。 程序集限定类型名称最简单的形式类似于下面的示例：  
   
     ```  
     MyNamespace.MyLoginClass, MyAssembly  
@@ -99,7 +96,7 @@ ms.lasthandoff: 07/28/2017
   
      文本框中将显示 `Data Source = |SQL/CE|` 的默认值。  
   
-3.  若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 将生成一个数据库文件，并将其放在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 属性指示的目录中。  
+3.  若要生成并使用 SQL Server Compact 数据库，请保留默认连接字符串值。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 将生成一个数据库文件，并将其放在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 属性指示的目录中。  
   
 4.  若要生成并使用加密的 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库，请将 `password` 和 `encrypt database` 值添加到连接字符串中，如下面的示例所示。  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ## <a name="using-custom-providers"></a>使用自定义提供程序  
- 默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=fullName> 命名空间中的提供程序。 使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。 这些默认的提供程序访问服务器上相应的提供程序。 Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。  
+ 默认情况下，客户端应用程序服务功能使用 <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> 命名空间中的提供程序。 使用“项目设计器”的“服务”页配置应用程序时，对这些提供程序的引用会添加到 App.config 文件中。 这些默认的提供程序访问服务器上相应的提供程序。 Web 服务通常配置为通过提供程序（如 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider>）访问用户数据。  
   
  如果想要使用自定义服务提供程序，则通常将在服务器端更改提供程序，以便这些提供程序对访问服务器的所有客户端应用程序产生影响。 但是，你可以选择在客户端使用非默认提供程序。 你可以在项目的 App.config 文件中指定自定义身份验证或角色提供程序，如下面的步骤所示。 有关如何创建自定义身份验证和角色提供程序的信息，请参阅[实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 你还可通过修改项目的`Settings`类（在 C# 中作为 `Properties.Settings.Default` 访问，在 `My.Settings` 中作为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 访问）来使用自定义设置提供程序。 有关详细信息，请参阅[应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
@@ -140,7 +137,7 @@ ms.lasthandoff: 07/28/2017
   
 4.  找到 `<providers>` 或 `<membership>` 元素中的 `<roleManager>` 元素。 这些元素是 `<system.web>` 元素的子元素。 `<membership>` 元素用于指定身份验证提供程序，`<roleManager>` 元素用于指定角色提供程序。  
   
-5.  将 `<add>` 元素添加为 `<providers>` 元素的子元素。 你必须指定 `name` 和 `type` 特性，如下面的示例所示。 `type` 特性的值必须是程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。  
+5.  将 `<add>` 元素添加为 `<providers>` 元素的子元素。 你必须指定 `name` 和 `type` 特性，如下面的示例所示。 `type` 特性的值必须是程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> 和[程序集名称](../../../docs/framework/app-domains/assembly-names.md)。  
   
     ```xml  
     <add name="MyCustomRoleProvider" type="MyNamespace.MyRoleProvider, MyAssembly" />  
@@ -153,14 +150,13 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)   
- [“高级服务设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)   
- [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)   
- [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
- [实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)   
- [实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)   
- [应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
+ [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)  
+ [“高级服务设置”对话框](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [实现成员资格提供程序](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [实现角色提供程序](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [应用程序设置体系结构](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
-

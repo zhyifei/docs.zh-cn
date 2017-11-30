@@ -1,40 +1,38 @@
 ---
-title: "对 msxsl:node-set() 函数的支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "对 msxsl:node-set() 函数的支持"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a3dcb45e6aeecb9e54ad48db4130689ac0fdd358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 对 msxsl:node-set() 函数的支持
-`msxsl:node-set` 函数使您能够将结果树片段转换成节点集。  生成的节点集总是包含单个节点并且是树的根节点。  
+# <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
+`msxsl:node-set` 函数使您能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。  可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 \(XSLT\) 转换。  有关更多信息，请参见[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
   
- `msxsl:node-set` 函数使您能够将结果树片段转换成节点集。  生成的节点集总是包含单个节点并且是树的根节点。  
+ `msxsl:node-set` 函数使您能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
-## 示例  
- 在下面的示例中，`$var` 是一个变量，是样式表中的一个节点树。  for\-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。  
+## <a name="example"></a>示例  
+ 在下面的示例中，`$var` 是一个变量，是样式表中的一个节点树。 for-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。  
   
-## nodeset.xsl  
+## <a name="nodesetxsl"></a>nodeset.xsl  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
                 xmlns:user="http://www.contoso.com"  
@@ -54,13 +52,13 @@ caps.handback.revision: 3
 </xsl:stylesheet>  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
  转换的输出为  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

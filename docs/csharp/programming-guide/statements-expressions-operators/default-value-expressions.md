@@ -1,24 +1,22 @@
 ---
 title: "默认值表达式（C# 编程指南）"
 description: "默认值表达式生成任何引用类型或值类型的默认值"
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
 ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 7b5b53d7ed92c6f6377a3e494daf1d02a4cf0934
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>默认值表达式（C# 编程指南）
 
@@ -27,15 +25,15 @@ ms.lasthandoff: 08/29/2017
 - `T` 是引用类型还是值类型。
 - 如果 `T` 是值类型，它是数值还是用户定义的结构。
 
- 已知参数化类型 `T` 的变量 `t`，仅当 `T` 为引用类型时，语句 `t = null` 才有效。 赋值 `t = 0` 仅对数值类型有效，对结构无效。 解决方案是使用默认值表达式，该表达式对引用类型（类类型和接口类型）返回 `null`，对数值类型返回零。 对于用户定义的结构，返回初始化为零位模式的结构，该结构根据成员是值还是引用类型，为每个成员生成 0 或 `null`。 对于可为 NULL 的值类型，`default` 返回像任何结构一样初始化的 <xref:System.Nullable%601?displayProperty=fullName>。
+ 已知参数化类型 `T` 的变量 `t`，仅当 `T` 为引用类型时，语句 `t = null` 才有效。 赋值 `t = 0` 仅对数值类型有效，对结构无效。 解决方案是使用默认值表达式，该表达式对引用类型（类类型和接口类型）返回 `null`，对数值类型返回零。 对于用户定义的结构，返回初始化为零位模式的结构，该结构根据成员是值还是引用类型，为每个成员生成 0 或 `null`。 对于可为 NULL 的值类型，`default` 返回像任何结构一样初始化的 <xref:System.Nullable%601?displayProperty=nameWithType>。
 
 `default(T)` 表达式不限于泛型类和泛型方法。 默认值表达式可用于任何托管类型。 以下任一表达式都是有效的：
 
- [!code-cs[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
+ [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
  `GenericList<T>` 类的以下示例演示如何在泛型类中使用 `default(T)` 运算符。 有关详细信息，请参阅[泛型概述](../generics/introduction-to-generics.md)。
 
- [!code-cs[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
+ [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
 ## <a name="default-literal-and-type-inference"></a>默认文本和类型推理
 
@@ -49,12 +47,11 @@ ms.lasthandoff: 08/29/2017
 
 以下示例展示了文本 `default` 在默认值表达式中的多种用法：
 
-[!code-cs[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
+[!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Collections.Generic> [C# 编程指南](../index.md)   
- [泛型](../generics/index.md)   
- [泛型方法](../generics/generic-methods.md)   
- [泛型](~/docs/standard/generics/index.md)   
-
+ <xref:System.Collections.Generic>[C# 编程指南](../index.md)  
+ [泛型](../generics/index.md)  
+ [泛型方法](../generics/generic-methods.md)  
+ [泛型](~/docs/standard/generics/index.md)  

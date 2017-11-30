@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
 [上一部分](delegates-overview.md)
@@ -26,7 +24,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="defining-delegate-types"></a>定义委托类型
 
-我们从“delegate”关键字开始，因为这是你在使用委托时会使用的主要方法。 编译器在你使用 `delegate` 关键字时生成的代码会映射到调用 @System.Delegate 和 @System.MulticastDelegate 类的成员的方法调用。 
+我们从“delegate”关键字开始，因为这是你在使用委托时会使用的主要方法。 编译器在你使用 `delegate` 关键字时生成的代码会映射到调用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 类的成员的方法调用。 
 
 可使用类似于定义方法签名的语法来定义委托类型。 只需向定义添加 `delegate` 关键字即可。
 
@@ -122,7 +120,7 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>委托和 MulticastDelegate 类
 
-上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能采用 .NET Core Framework 中的两个类进行构建：@System.Delegate 和 @"System.MulticastDelegate"。
+上面介绍的语言支持可提供在使用委托时通常需要的功能和支持。 这些功能基于.NET 核心 framework 中的两个类：<xref:System.Delegate>和<xref:System.MulticastDelegate>。
 
 `System.Delegate` 类及其单个直接其子类 `System.MulticastDelegate` 可提供框架支持，以便创建委托、将方法注册为委托目标以及调用注册为委托目标的所有方法。 
 
@@ -143,4 +141,3 @@ Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象
 现在你已了解支持委托的语言语法和类，我们来看一下如何使用、创建和调用强类型委托。
 
 [下一部分](delegates-strongly-typed.md)
-

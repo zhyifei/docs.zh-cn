@@ -1,12 +1,9 @@
 ---
 title: "为 Visual Basic 程序员提供的附加资源"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, additional resources
 - Help
@@ -19,29 +16,14 @@ helpviewer_keywords:
 - support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>为 Visual Basic 程序员提供的附加资源
 以下网站提供指南，并且可以帮助你找到常见问题的答案。  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/28/2017
 |术语|定义|  
 |----------|----------------|  
 |[代码库](http://code.msdn.microsoft.com/)|下载并与开发人员社区共享示例应用程序和其他资源。|  
-|[CodePlex](http://www.codeplex.com/)|承载开放源代码软件项目。 可以使用 CodePlex 查找开放源代码软件或创建新项目以与全世界的用户共享。|  
+|[GitHub](http://www.github.com/)|承载开放源代码软件项目。 可以使用 GitHub 查找开放源代码软件或创建新项目以便与世界分享。|  
 |[Visual Basic 代码示例](http://msdn.microsoft.com/vbasic/ms789074)|在 Visual Basic 中提供应用程序、Web 和数据示例。|  
   
 ### <a name="forums"></a>论坛  
@@ -106,6 +88,5 @@ ms.lasthandoff: 07/28/2017
 |[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|提供了一个论坛，供大家在 DevX 论坛中讨论 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的新功能。|  
   
 ## <a name="see-also"></a>另请参阅  
- [入门](../../visual-basic/getting-started/index.md)   
+ [入门](../../visual-basic/getting-started/index.md)  
  [与我们交流](/visualstudio/ide/talk-to-us)
-

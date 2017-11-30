@@ -1,38 +1,41 @@
 ---
-title: ".NET Framework 中的类型转换表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "扩大转换"
-  - "收缩转换"
-  - "类型转换，表"
-  - "转换类型，收缩转换"
-  - "转换类型，扩大转换"
-  - "基类型，转换"
-  - "表 [.NET Framework]，类型转换"
-  - "数据类型 [.NET Framework]，转换"
+title: ".NET 中的类型转换表"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- widening conversions
+- narrowing conversions
+- type conversion, table
+- converting types, narrowing conversions
+- converting types, widening conversions
+- base types, converting
+- tables [.NET Framework], type conversions
+- data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# .NET Framework 中的类型转换表
-发生扩大转换。，当一个类型的值转换为相等或更大范围的另一种类型时。  收缩转换时，会发生一个类型的值转换为较小的另一种类型的值时。  本主题中的表阐释了两种转换类型显示的行为。  
+# <a name="type-conversion-tables-in-net"></a>.NET 中的类型转换表
+当一种类型的值转换为大小相等或更大的另一类型时，将发生扩大转换。 当一种类型的值转换为较小的另一种类型时，将发生收缩转换。 本主题中的表格解释了这两种转换类型的行为。  
   
-## 扩大转换  
- 下表描述了可以执行，不会丢失信息的扩大转换。  
+## <a name="widening-conversions"></a>扩大转换  
+ 下表描述了可以执行不会丢失信息的扩大转换。  
   
-|类型|可以转换，而不会丢失数据|  
-|--------|------------------|  
+|类型|可在不丢失数据的情况下转换为|  
+|----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
@@ -44,25 +47,25 @@ caps.handback.revision: 11
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- 为 <xref:System.Single> 或 <xref:System.Double> 的那些扩大转换可能会导致丢失精度。  下表描述了有时会导致信息丢失的扩大转换。  
+ 某些扩大转换到<xref:System.Single>或<xref:System.Double>可能会导致精度损失。 下面的表格描述了有时会导致信息丢失的扩大转换。  
   
-|类型|可以转换|  
-|--------|----------|  
+|类型|可转换为|  
+|----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
 |<xref:System.Int64>|<xref:System.Single>, <xref:System.Double>|  
 |<xref:System.UInt64>|<xref:System.Single>, <xref:System.Double>|  
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
-## 收缩转换  
- 为 <xref:System.Single> 或 <xref:System.Double> 的收缩转换可能导致信息丢失。  如果目标类型无法正确表达源的大小，则结果类型设置为常数 `PositiveInfinity` 或 `NegativeInfinity`。  ，当 <xref:System.Single> 或 <xref:System.Double> 的值超过 `MaxValue` 字段的值时，`PositiveInfinity` 由部件的正数由零和也会返回。  ，当 <xref:System.Single> 或 <xref:System.Double> 的值。 `MinValue` 字段中的值时，会`NegativeInfinity` 产生负数除以零时和也会返回。  从 <xref:System.Double> 的转换到 <xref:System.Single> 可能导致 `PositiveInfinity` 或 `NegativeInfinity`。  
+## <a name="narrowing-conversions"></a>收缩转换  
+ 收缩转换为<xref:System.Single>或<xref:System.Double>可能会导致信息丢失。 如果目标类型无法正确表达源类型的大小，则结果类型将设置为常数 `PositiveInfinity` 或 `NegativeInfinity`。 `PositiveInfinity`除以零的正数值结果，并且也将返回的值<xref:System.Single>或<xref:System.Double>超过的值`MaxValue`字段。 `NegativeInfinity`被零除负数的结果，并且也将返回的值<xref:System.Single>或<xref:System.Double>低于的值`MinValue`字段。 从转换<xref:System.Double>到<xref:System.Single>可能会导致`PositiveInfinity`或`NegativeInfinity`。  
   
- 收缩转换可能会导致其他数据类型的信息丢失。  但是， <xref:System.OverflowException> 引发，如果将类型的值不在目标类型的 `MaxValue` 和 `MinValue` 字段指定的范围内，因此，转换在运行时检查确保目标类型的值不超过其 `MaxValue` 或 `MinValue`。  对 <xref:System.Convert?displayProperty=fullName> 类的转换始终以这种方式检查。  
+ 收缩转换还可能导致其他数据类型的信息丢失。 但是，<xref:System.OverflowException>如果正在转换的类型的值超出了指定的目标类型的范围，将引发`MaxValue`和`MinValue`字段和转换已由运行时以确保目标的值类型不超过其`MaxValue`或`MinValue`。 使用执行的转换<xref:System.Convert?displayProperty=nameWithType>类始终签入这种方式。  
   
- 下表列出了 <xref:System.OverflowException> 使用 <xref:System.Convert?displayProperty=fullName> 或所有签出的转换的转换，如果转换的类型的值不在结果类型的定义的大小。  
+ 下表列出了引发的转换<xref:System.OverflowException>使用<xref:System.Convert?displayProperty=nameWithType>或任何选中转换，如果要转换的类型的值是生成的类型的定义范围之内。  
   
-|类型|可以转换|  
-|--------|----------|  
+|类型|可转换为|  
+|----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
 |<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
 |<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
@@ -75,6 +78,6 @@ caps.handback.revision: 11
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## 请参阅  
- <xref:System.Convert?displayProperty=fullName>   
- [.NET Framework 中的类型转换](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Convert?displayProperty=nameWithType>  
+ [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

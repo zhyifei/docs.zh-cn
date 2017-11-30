@@ -1,12 +1,11 @@
 ---
 title: "发出动态方法和程序集"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 08/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,14 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>发出动态方法和程序集
 本节介绍 <xref:System.Reflection.Emit> 命名空间中的一组托管类型，它们允许编译器或工具在运行时发出元数据和 Microsoft 中间语言 (MSIL)，并在磁盘上生成可移植可执行 (PE) 文件（可选）。 脚本引擎和编译器是此命名空间的主要使用者。 在本节中，<xref:System.Reflection.Emit> 命名空间提供的功能被称为反射发出。  
@@ -48,9 +44,22 @@ ms.lasthandoff: 07/28/2017
   
  元数据和 MSIL 的另一个有用资源是《公共语言基础结构 (CLI)》文档，尤其是“第二部分：元数据定义和语义”和“第三部分: CIL 指令集”。 该文档可在 [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) 和 [Ecma 网站](http://go.microsoft.com/fwlink/?LinkId=116487)上联机获取。  
   
-## <a name="in-this-section"></a>本节内容  
- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- 介绍与使用反射发出创建动态程序集相关的安全问题。  
+## <a name="in-this-section"></a>本节内容
+  
+[反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+介绍与使用反射发出创建动态程序集相关的安全问题。  
+
+[如何： 定义和执行动态方法](how-to-define-and-execute-dynamic-methods.md)   
+演示如何执行简单的动态方法和动态方法绑定到类的实例。
+
+[如何： 定义泛型类型使用反射发出](how-to-define-a-generic-type-with-reflection-emit.md)   
+演示如何创建简单的泛型类型具有两个类型参数、 如何将类、 接口和特殊约束应用于类型参数，以及如何创建 memers 的类的类型参数用作参数类型和返回类型。
+
+[如何： 定义一个泛型方法，使用反射发出](how-to-define-a-generic-method-with-reflection-emit.md)   
+演示如何创建、 发出，并调用简单的泛型方法。
+
+[动态类型生成可回收程序集](collectible-assemblies.md)   
+引入了可回收程序集，它们是可以无需卸载在其中创建它们的应用程序域中卸载的动态程序集。
   
 ## <a name="reference"></a>参考  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -70,5 +79,4 @@ ms.lasthandoff: 07/28/2017
  说明如何浏览元数据和托管代码。  
   
  [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- 概述 .NET Framework 中的程序集。
-
+ 概述.NET 实现中的程序集。
