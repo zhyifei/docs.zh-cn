@@ -1,25 +1,21 @@
 ---
 title: "功能转换的适用性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c7196e128a6d61b2b28e955a79561db2b9a5e51b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b008bdef820b979e2aabd480e08a3bfa5ee5afa2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="applicability-of-functional-transformation-c"></a>功能转换的适用性 (C#)
 纯函数转换适用于多种情况。  
@@ -45,7 +41,6 @@ ms.lasthandoff: 07/28/2017
  此外请记住，C# 同时支持命令性方法和函数方法，因此应用程序的最佳设计可能需要合并使用这两个元素。  
   
 ## <a name="see-also"></a>另请参阅  
- [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XML 的功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)   
+ [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [XML (C#) 的功能转换](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
  [重构为纯函数 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
-

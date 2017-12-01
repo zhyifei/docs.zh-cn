@@ -1,30 +1,33 @@
 ---
-title: "Fundamentals of Garbage Collection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, generations"
-  - "garbage collection, background garbage collection"
-  - "garbage collection, concurrent garbage collection"
-  - "garbage collection, server garbage collection"
-  - "garbage collection, workstation garbage collection"
-  - "garbage collection, managed heap"
+title: "垃圾回收的基础"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, generations
+- garbage collection, background garbage collection
+- garbage collection, concurrent garbage collection
+- garbage collection, server garbage collection
+- garbage collection, workstation garbage collection
+- garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: 51
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# Fundamentals of Garbage Collection
-<a name="top"></a> 在公共语言运行时 \(CLR\) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
+# <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
+<a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
   
 -   使你可以在开发应用程序时不必释放内存。  
   
@@ -57,7 +60,7 @@ caps.handback.revision: 51
 -   [后台服务器垃圾回收](#background_server_garbage_collection)  
   
 <a name="fundamentals_of_memory"></a>   
-## 内存基础知识  
+## <a name="fundamentals-of-memory"></a>内存基础知识  
  下面的列表总结了重要的 CLR 内存概念。  
   
 -   每个进程都有其自己单独的虚拟地址空间。 同一台计算机上的所有进程共享相同的物理内存，如果有页文件，则也共享页文件。  
@@ -76,28 +79,28 @@ caps.handback.revision: 51
   
     -   提交。 内存块已指派给物理存储。  
   
--   可能会存在虚拟地址空间碎片。 就是说地址空间中存在一些被称为孔的可用块。 当请求虚拟内存分配时，虚拟内存管理器必须找到满足该分配请求的足够大的单个可用块。 即使你具有 2 GB 的可用空间，2 GB 的分配请求也有可能会不成功，除非所有这些空间必须位于单个的地址块中。  
+-   可能会存在虚拟地址空间碎片。 就是说地址空间中存在一些被称为孔的可用块。 当请求虚拟内存分配时，虚拟内存管理器必须找到满足该分配请求的足够大的单个可用块。 即使你具有 2 GB 的可用空间，需要 2 GB 的分配将失败，除非该可用空间的所有单个地址块。  
   
 -   如果用完保留的虚拟地址空间或提交的物理空间，则可能会用尽内存。  
   
- 即使在物理内存压力（即物理内存的需求）较低的情况下也会使用页文件。 首次出现物理内存压力较高的情况时，操作系统必须在物理内存中腾出空间来存储数据，并将物理内存中的部分数据备份到页文件中。 该数据只会在需要时进行分页，所以在物理内存压力非常低的情况下也可能会进行分页。  
-  
+ 即使在物理内存压力（即物理内存的需求）较低的情况下也会使用页文件。 首次出现物理内存压力较高的情况时，操作系统必须在物理内存中腾出空间来存储数据，并将物理内存中的部分数据备份到页文件中。 该数据只会在需要时进行分页，所以在物理内存压力非常低的情况下也可能会进行分页。 
+ 
  [返回页首](#top)  
   
 <a name="conditions_for_a_garbage_collection"></a>   
-## 垃圾回收的条件  
+## <a name="conditions-for-a-garbage-collection"></a>垃圾回收的条件  
  当满足以下条件之一时将发生垃圾回收：  
   
--   系统具有低的物理内存。  
+-   系统具有低的物理内存。 这是检测到的操作系统中的低内存通知或由主机的内存不足。
   
 -   由托管堆上已分配的对象使用的内存超出了可接受的阈值。 随着进程的运行，此阈值会不断地进行调整。  
   
--   调用 <xref:System.GC.Collect%2A?displayProperty=fullName> 方法。 几乎在所有情况下，你都不必调用此方法，因为垃圾回收器会持续运行。 此方法主要用于特殊情况和测试。  
+-   调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 几乎在所有情况下，你都不必调用此方法，因为垃圾回收器会持续运行。 此方法主要用于特殊情况和测试。  
   
  [返回页首](#top)  
   
 <a name="the_managed_heap"></a>   
-## 托管堆  
+## <a name="the-managed-heap"></a>托管堆  
  在垃圾回收器由 CLR 初始化之后，它会分配一段内存用于存储和管理对象。 此内存称为托管堆（与操作系统中的本机堆相对）。  
   
  每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上分配对象记忆。  
@@ -120,7 +123,7 @@ caps.handback.revision: 51
  [返回页首](#top)  
   
 <a name="generations"></a>   
-## 代数  
+## <a name="generations"></a>代数  
  堆按代进行组织，因此它可以处理长生存期的对象和短生存期的对象。 垃圾回收主要在回收通常只占用一小部分堆的短生存期对象时发生。 堆上的对象有三代：  
   
 -   **第 0 代**。 这是最年轻的代，其中包含短生存期对象。 短生存期对象的一个示例是临时变量。 垃圾回收最常发生在此代中。  
@@ -135,12 +138,12 @@ caps.handback.revision: 51
   
  当条件得到满足时，垃圾回收将在特定代上发生。 回收某个代意味着回收此代中的对象及其所有更年轻的代。 第 2 代垃圾回收也称为完整垃圾回收，因为它回收所有代上的所有对象（即，托管堆中的所有对象）。  
   
-### 幸存和提升  
+### <a name="survival-and-promotions"></a>幸存和提升  
  垃圾回收中未回收的对象也称为幸存者，并会被提升到下一代。 在第 0 代垃圾回收中幸存的对象将被提升到第 1 代；在第 1 代垃圾回收中幸存的对象将被提升到第 2 代；而在第 2 代垃圾回收中幸存的对象将仍为第 2 代。  
   
  当垃圾回收器检测到某个代中的幸存率很高时，它会增加该代的分配阈值，因此下一次回收将会获取一个非常大的回收内存。 CLR 会在以下两个优先级别之前进行平衡：不允许应用程序的工作集获取太大内存以及不允许垃圾回收花费太多时间。  
   
-### 暂时代和暂时段  
+### <a name="ephemeral-generations-and-segments"></a>暂时代和暂时段  
  因为第 0 代和第 1 代中的对象的生存期较短，因此，这些代被称为暂时代。  
   
  暂时代必须在称为暂时段的内存段中进行分配。 垃圾回收器获取的每个新段将成为新的暂时段，并包含在第 0 代垃圾回收中幸存的对象。 旧的暂时段将成为新的第 2 代段。  
@@ -148,7 +151,7 @@ caps.handback.revision: 51
  根据系统为 32 位还是 64 位以及它正在哪种类型的垃圾回收器上运行，暂时段的大小发生相应变化。 下表列出了默认值。  
   
 ||32 位|64 位|  
-|-|----------|----------|  
+|-|-------------|-------------|  
 |工作站 GC|16 MB|256 MB|  
 |服务器 GC|64 MB|4 GB|  
 |服务器 GC（具有 4 个以上的逻辑 CPU）|32 MB|2 GB|  
@@ -161,7 +164,7 @@ caps.handback.revision: 51
  [返回页首](#top)  
   
 <a name="what_happens_during_a_garbage_collection"></a>   
-## 垃圾回收过程中发生的情况  
+## <a name="what-happens-during-a-garbage-collection"></a>垃圾回收过程中发生的情况  
  垃圾回收分为以下几个阶段：  
   
 -   标记阶段，找到并创建所有活动对象的列表。  
@@ -172,11 +175,11 @@ caps.handback.revision: 51
   
      因为第 2 代回收可以占用多个段，所以可以将已提升到第 2 代中的对象移动到时间较早的段中。 可以将第 1 代幸存者和第 2 代幸存者都移动到不同的段，因为它们已被提升到第 2 代。  
   
-     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 属性按需压缩大对象堆。  
+     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性按需压缩大对象堆。  
   
  垃圾回收器使用以下信息来确定对象是否为活动对象：  
   
--   **堆栈根**。 由实时 \(JIT\) 编译器和堆栈查看器提供的堆栈变量。  
+-   **堆栈根**。 由实时 (JIT) 编译器和堆栈查看器提供的堆栈变量。  
   
 -   **垃圾回收句柄**。 指向托管对象且可由用户代码或公共语言运行时分配的句柄。  
   
@@ -186,13 +189,13 @@ caps.handback.revision: 51
   
  下图演示了触发垃圾回收并导致其他线程挂起的线程。  
   
- ![当线程触发垃圾回收时](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC\_Triggered")  
+ ![当线程触发垃圾回收](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 触发垃圾回收的线程  
   
  [返回页首](#top)  
   
 <a name="manipulating_unmanaged_resources"></a>   
-## 操作非托管资源  
+## <a name="manipulating-unmanaged-resources"></a>操作非托管资源  
  如果你的托管对象使用非托管对象的本机文件句柄来引用非托管对象，则必须显式释放非托管对象，因为垃圾回收器仅跟踪托管堆上的内存。  
   
  托管对象的用户可能不会释放由该对象使用的本机资源。 为了执行清理，可以使托管对象成为可终结的。 终结由不再使用对象时执行的清理操作组成。 当托管对象不活动时，它将执行在其终结器方法中指定的清理操作。  
@@ -202,37 +205,37 @@ caps.handback.revision: 51
  [返回页首](#top)  
   
 <a name="workstation_and_server_garbage_collection"></a>   
-## 工作站和服务器垃圾回收  
+## <a name="workstation-and-server-garbage-collection"></a>工作站和服务器垃圾回收  
  垃圾回收器可自行优化并且适用于多种方案。 你可使用配置文件设置来基于工作负荷的特征设置垃圾回收的类型。 CLR 提供了以下类型的垃圾回收：  
   
--   工作站垃圾回收，用于所有客户端工作站和独立 PC。 这是运行时配置架构中的 [\<gcServer\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的默认设置。  
+-   工作站垃圾回收，用于所有客户端工作站和独立 PC。 这是默认设置[ \<gcServer > 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)在运行时配置架构。  
   
      工作站垃圾回收既可以是并发的，也可以是非并发的。 并发垃圾回收使托管线程能够在垃圾回收期间继续操作。  
   
-     从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，后台垃圾回收取代了并发垃圾回收。  
+     从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，后台垃圾回收取代了并发垃圾回收。  
   
 -   服务器垃圾回收，用于需要高吞吐量和可伸缩性的服务器应用程序。 服务器垃圾回收既可以是非并发也可以是背景。  
   
  下图演示了服务器上执行垃圾回收的专用线程。  
   
- ![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "GC\_Server")  
+ ![服务器垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 服务器垃圾回收  
   
-### 配置垃圾回收  
- 可以使用运行时配置架构的 [\<gcServer\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)指定你想要 CLR 执行的垃圾回收的类型。 在将此元素的 `enabled` 特性设置为 `false`（默认值）时，CLR 将执行工作站垃圾回收。 在将 `enabled` 特性设置为 `true` 时，CLR 将执行服务器垃圾回收。  
+### <a name="configuring-garbage-collection"></a>配置垃圾回收  
+ 你可以使用[ \<gcServer > 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)想要 CLR 执行的运行时配置架构指定垃圾回收的类型。 在将此元素的 `enabled` 特性设置为 `false` （默认值）时，CLR 将执行工作站垃圾回收。 在将 `enabled` 特性设置为 `true`时，CLR 将执行服务器垃圾回收。  
   
- 可使用运行时配置架构的 [\<gcConcurrent\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)指定并发垃圾回收。 默认设置为 `enabled`。 此设置可控制并发和后台垃圾回收。  
+ 指定并发垃圾回收[ \<gcConcurrent > 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)的运行时配置架构。 默认设置为 `enabled`。 此设置可控制并发和后台垃圾回收。  
   
  还可以使用非托管承载接口来指定服务器垃圾回收。 请注意，如果你的应用程序承载在这些环境之一中，则 ASP.NET 和 SQL Server 将自动启用服务器垃圾回收。  
   
-### 工作站和服务器垃圾回收比较  
+### <a name="comparing-workstation-and-server-garbage-collection"></a>工作站和服务器垃圾回收比较  
  以下是工作站垃圾回收的线程处理和性能注意事项：  
   
 -   回收发生在触发垃圾回收的用户线程上，并保留相同优先级。 因为用户线程通常以普通优先级运行，所以垃圾回收器（在普通优先级线程上运行）必须与其他线程竞争 CPU 时间。  
   
      不会挂起运行本机代码的线程。  
   
--   工作站垃圾回收始终用在只有一个处理器的计算机上，而不管 [\<gcServer\>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 设置如何。 如果你指定服务器垃圾回收，则 CLR 会使用工作站垃圾回收，并禁用并发。  
+-   工作站垃圾回收始终用在只有一个处理器，而不考虑的计算机上[ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)设置。 如果你指定服务器垃圾回收，则 CLR 会使用工作站垃圾回收，并禁用并发。  
   
  以下是服务器垃圾回收的线程处理和性能注意事项：  
   
@@ -251,12 +254,12 @@ caps.handback.revision: 51
  [返回页首](#top)  
   
 <a name="concurrent_garbage_collection"></a>   
-## 并行垃圾回收  
+## <a name="concurrent-garbage-collection"></a>并行垃圾回收  
  在工作站或服务器垃圾回收中，你可以启用并发垃圾回收，以便在大多数回收期间，让各线程与执行垃圾回收的专用线程并发运行。 此选项只影响第 2 代中的垃圾回收；第 0 代和第 1 代中的垃圾回收始终是非并发的，因为它们完成的速度非常快。  
   
  并发垃圾回收通过最大程度地减少因回收引起的暂停，使交互应用程序能够更快地响应。 在运行并发垃圾回收线程的大多数时间，托管线程可以继续运行。 这可以使得在发生垃圾回收时的暂停时间更短。  
   
- 若要在运行多个进程时提高性能，请禁用并发垃圾回收。 你可以通过将 [\<gcConcurrent\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)添加到应用的配置文件和将其 `enabled` 属性的值设置为 `"false"` 来执行此操作。  
+ 若要在运行多个进程时提高性能，请禁用并发垃圾回收。 你可以执行此操作通过添加[ \<gcConcurrent > 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)到应用程序的配置文件和的值设置其`enabled`属性设为`"false"`。  
   
  并发垃圾回收在一个专用线程上执行。 默认情况下，CLR 将运行工作站垃圾回收并启用并发垃圾回收。 对于单处理器计算机和多处理器计算机都是如此。  
   
@@ -266,17 +269,17 @@ caps.handback.revision: 51
   
  下图演示了在单独的专用线程上执行的并发垃圾回收。  
   
- ![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC\_Concurrent")  
+ ![并发垃圾回收线程](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 并行垃圾回收  
   
  [返回页首](#top)  
   
 <a name="background_garbage_collection"></a>   
-## 后台工作站垃圾回收  
+## <a name="background-workstation-garbage-collection"></a>后台工作站垃圾回收  
  在后台垃圾回收中，在进行第 2 代回收的过程中，将会根据需要收集暂时代（第 0 代和第 1 代）。 后台垃圾回收无法设置；它会自动运行并启用并发垃圾回收。 后台垃圾回收是对并发垃圾回收的替代。 与并发垃圾回收一样，后台垃圾回收是在一个专用线程上执行的并且只适用于第 2 代回收。  
   
 > [!NOTE]
->  后台垃圾回收只在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 及更高版本中可用。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中，仅支持工作站垃圾回收。 从 .NET Framework 4.5 开始，后台垃圾回收可用于工作站和服务器垃圾回收。  
+>  后台垃圾回收只在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 及更高版本中可用。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，仅支持工作站垃圾回收。 从 .NET Framework 4.5 开始，后台垃圾回收可用于工作站和服务器垃圾回收。  
   
  后台垃圾回收期间对暂时代的回收称为前台垃圾回收。 发生前台垃圾回收时，所有托管线程都将被挂起。  
   
@@ -292,13 +295,13 @@ caps.handback.revision: 51
  [返回页首](#top)  
   
 <a name="background_server_garbage_collection"></a>   
-## 后台服务器垃圾回收  
- 从 .NET Framework 4.5 开始，后台服务器垃圾回收是服务器垃圾回收的默认模式。 若要选择此模式，请在运行时配置架构中将 [\<gcServer\> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的 `enabled` 特性设置为 `true`。 此模式与后台工作站垃圾回收（如上一章节所描述）具有类似功能，但有一些不同之处。 后台工作区域垃圾回收使用一个专用的后台垃圾回收线程，而后台服务器垃圾回收使用多个线程，通常一个专用的线程用于一台逻辑处理器。 不同于工作站后台垃圾回收线程，这些线程不会超时。  
+## <a name="background-server-garbage-collection"></a>后台服务器垃圾回收  
+ 从 .NET Framework 4.5 开始，后台服务器垃圾回收是服务器垃圾回收的默认模式。 若要选择此模式下，设置`enabled`属性[ \<gcServer > 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)到`true`在运行时配置架构。 此模式与后台工作站垃圾回收（如上一章节所描述）具有类似功能，但有一些不同之处。 后台工作区域垃圾回收使用一个专用的后台垃圾回收线程，而后台服务器垃圾回收使用多个线程，通常一个专用的线程用于一台逻辑处理器。 不同于工作站后台垃圾回收线程，这些线程不会超时。  
   
  下图显示对服务器上的独立专用线程执行的后台垃圾回收。  
   
  ![后台服务器垃圾回收](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 后台服务器垃圾回收  
   
-## 请参阅  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>另请参阅  
+ [垃圾回收](../../../docs/standard/garbage-collection/index.md)

@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/21/2017
 
 如果应用程序（Web/服务）需要在多个平台（Windows、Linux 和 macOS）上运行，请使用 .NET Core。
 
-.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 提供用于 Windows 和 Mac 的集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](http://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI 工具](../core/tools/index.md)。
+.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 为 Windows 和 macOS 提供集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](http://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI 工具](../core/tools/index.md)。
 
 ### <a name="microservices-architecture"></a>微服务体系结构
 
@@ -107,10 +106,9 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 某些 Microsoft 或第三方平台不支持 .NET Core。 例如，某些 Azure 服务（如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors）需要 .NET Framework。 某些其他服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可用始终使用等效的 REST API 取代客户端 SDK。
 
 ## <a name="see-also"></a>请参阅
- [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)   
- [.NET Core 指南](../core/index.md)   
- [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)   
- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)   
- [.NET 组件概述](components.md)   
+ [ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)  
+ [.NET Core 指南](../core/index.md)  
+ [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
+ [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
+ [.NET 组件概述](components.md)  
  [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)
-

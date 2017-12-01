@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -31,16 +33,15 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5de456ff1a371a43241dba3b47be7dcd80bf8f70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>打包和部署桌面应用程序中的资源
 应用程序依靠 .NET Framework Resource Manager（由 <xref:System.Resources.ResourceManager> 类表示）来检索已本地化的资源。 Resource Manager 假定使用中枢轮辐式模型来打包和部署资源。 中枢即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；如果找不到已本地化的资源，则使用默认区域性的资源。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个区域性的资源，但不包含任何代码。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 07/28/2017
  在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 有关区域性名称的完整列表，请参阅全球开发人员中心的[国际支持 (NLS) API 参考](http://go.microsoft.com/fwlink/?LinkId=200048)。  
   
 > [!NOTE]
->  有关创建资源文件的信息，请参阅 MSDN 库中的[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
+>  有关创建资源文件的信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
 ## <a name="the-resource-fallback-process"></a>资源回退进程  
@@ -84,7 +85,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  接下来，运行时将查询 Windows Installer，以确定是否要按需安装附属程序集。 如果是，它将处理安装，加载程序集，以及搜索它或搜索请求的资源。 如果在程序集中找到该资源，则使用它。 如果找不到该资源，将继续搜索。  
   
-4.  运行时引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以返回对其资源将用于查找的附属程序集的引用。 否则，事件处理程序将返回 `null`，搜索继续。  
+4.  运行时引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件以指示找不到附属程序集。 如果选择对事件进行处理，事件处理程序可以返回对其资源将用于查找的附属程序集的引用。 否则，事件处理程序将返回 `null`，搜索继续。  
   
 5.  接下来，运行时将再次搜索全局程序集缓存，这次是为了请求的区域性的父程序集。 如果全局程序集缓存中存在父程序集，运行时将搜索程序集，寻找请求的资源。  
   
@@ -94,9 +95,9 @@ ms.lasthandoff: 07/28/2017
   
 7.  接下来，运行时将查询 Windows Installer，以确定是否要按需安装父级附属程序集。 如果是，它将处理安装，加载程序集，以及搜索它或搜索请求的资源。 如果在程序集中找到该资源，则使用它。 如果找不到该资源，将继续搜索。  
   
-8.  运行时引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件以指示找不到合适的回退资源。 如果选择对事件进行处理，事件处理程序可以返回对其资源将用于查找的附属程序集的引用。 否则，事件处理程序将返回 `null`，搜索继续。  
+8.  运行时引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件以指示找不到合适的回退资源。 如果选择对事件进行处理，事件处理程序可以返回对其资源将用于查找的附属程序集的引用。 否则，事件处理程序将返回 `null`，搜索继续。  
   
-9. 接下来，如前前面三个步骤所述，运行时将通过许多可能的级别搜索父程序集。 每个区域性只有一个父区域性（由 <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=fullName> 属性定义），但一个父区域性可能还有其自己的父区域性。 如果区域性的 <xref:System.Globalization.CultureInfo.Parent%2A> 属性返回 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>，父区域性搜索将停止；对于资源回退，固定区域性不被视为父区域性，也不被视为具有资源的区域性。  
+9. 接下来，如前前面三个步骤所述，运行时将通过许多可能的级别搜索父程序集。 每个区域性只有一个父区域性（由 <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> 属性定义），但一个父区域性可能还有其自己的父区域性。 如果区域性的 <xref:System.Globalization.CultureInfo.Parent%2A> 属性返回 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>，父区域性搜索将停止；对于资源回退，固定区域性不被视为父区域性，也不被视为具有资源的区域性。  
   
 10. 如果区域性是最初指定的，且已搜索所有父级，但仍未找到资源，则使用默认（回退）区域性的资源。 通常，默认区域性的资源包含在主应用程序集中。 但是，可指定 <xref:System.Resources.NeutralResourcesLanguageAttribute> 特性的 <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> 属性的值为 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite>，以指定资源的最终回退位置是附属程序集，而不是主程序集。  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 07/28/2017
   
 -   附属程序集不会按需进行安装。  
   
--   应用程序代码不会处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  
+-   应用程序代码不会处理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。  
   
  可通过在应用程序配置文件中包含 [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素并将其 `enabled` 属性设为 `true`，优化附属程序集探测，如下例所示。  
   
@@ -133,10 +134,10 @@ ms.lasthandoff: 07/28/2017
   
 -   运行时不会查询 Windows Installer，寻找附属程序集的按需安装。  
   
--   如果特定资源程序集探测失败，运行时将不会引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  
+-   如果特定资源程序集探测失败，运行时将不会引发 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。  
   
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>最终回退到附属程序集  
- 可选择从主程序集中删除资源，并指定运行时应加载对应于特定区域性的附属程序集中的最终回退资源。 若要控制回退进程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName> 构造函数并提供 <xref:System.Resources.UltimateResourceFallbackLocation> 参数的值，用于指定 Resource Manager 是应从主程序集还是应从附属程序集中提取回退资源。  
+ 可选择从主程序集中删除资源，并指定运行时应加载对应于特定区域性的附属程序集中的最终回退资源。 若要控制回退进程，请使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> 构造函数并提供 <xref:System.Resources.UltimateResourceFallbackLocation> 参数的值，用于指定 Resource Manager 是应从主程序集还是应从附属程序集中提取回退资源。  
   
  下面的示例使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性将应用程序回退资源存储在法语 (fr) 语言的附属程序集中。  本示例介绍了两个基于文本的资源文件，这两个文件用于定义名为 `Greeting` 的单个字符串资源。 第一个文件 resources.fr.txt 包含法语资源。  
   
@@ -168,7 +169,8 @@ Greeting=Добрый день
   
  应用程序源代码位于名为 Example1.cs 或 Example1.vb 的文件中。 它包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性，以指示默认应用程序资源位于 fr 子目录中。 它可实例化 Resource Manager，检索 `Greeting` 资源的值，并将其显示到控制台。  
   
- [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)] [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+ [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
   
  然后，可以从命令行编译 C# 源代码，如下所示：  
   
@@ -190,8 +192,7 @@ Bon jour!
  由于时间或预算约束，可能无法为应用程序支持的每个子区域性均创建一组资源。 但可以为所有相关子区域性可用的父区域性创建单个附属程序集。 例如，可以提供单个英语附属程序集 (en)，请求特定于区域的英语资源的用户将检索该程序集，并且为请求特定于区域的德语资源的用户创建单个德语附属程序集 (de)。 例如，对德国德语 (de-DE)、奥地利德语 (de-AT) 和瑞士德语 (de-CH) 的请求均会回退到德语附属程序集 (de)。 默认资源是最终回退资源，因而应是大多数应用程序用户将请求的资源，因此应仔细选择这些资源。 此方法可部署区域性特定性较低，但可显著减少应用程序本地化成本的资源。  
   
 ## <a name="see-also"></a>另请参阅  
- [桌面应用中的资源](../../../docs/framework/resources/index.md)   
- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)   
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
+ [桌面应用中的资源](../../../docs/framework/resources/index.md)  
+ [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
+ [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
  [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-

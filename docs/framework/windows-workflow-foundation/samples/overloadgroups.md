@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 2a5ab416dc484dddc0b6aa0ec25757921815c723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1c866d337b6e02fa18241b6fafd9d4e5a397ef69
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 此示例包含 `CreateLocation` 活动，它具有两个有趣的特征：  
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/18/2017
   
 -   `[OverloadGroup]` 汇集了一组参数，以便活动用户可在两个参数集中选择使用哪一个。 用户不能使用同一实例中不同重载组中的参数。  
   
- 在设置不同的工作流之后, 调用<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>它将返回<xref:System.Activities.Validation.ValidationResults>集合<!--zz <xref:System.Activities.Validation.ConstraintViolation>--> `System.Activities.Validation.ConstraintViolation`。 打印<!--zz <xref:System.Activities.Validation.ConstraintViolation>-->`System.Activities.Validation.ConstraintViolation`到控制台的对象。  
+ 在设置不同的工作流之后，调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，它将返回<xref:System.Activities.Validation.ValidationResults> 的 <xref:System.Activities.Validation.Constraint> 集合。 将 <xref:System.Activities.Validation.Constraint> 对象输出到控制台。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -46,6 +46,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`  
-  
-## <a name="see-also"></a>另请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

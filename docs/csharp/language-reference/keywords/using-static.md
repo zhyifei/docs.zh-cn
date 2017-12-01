@@ -1,37 +1,18 @@
 ---
 title: "using static 指令（C# 参考）"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using static directive [C#]
+helpviewer_keywords: using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7d69d0262ba6f450e2cc0d5b30692bba181f9d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指令（C# 参考）
 
@@ -49,13 +30,13 @@ using static <fully-qualified-type-name>
 
 ## <a name="remarks"></a>备注
  
-通常，调用某个静态成员时，即会提供类型名称以及成员名称。 重复输入相同的类型名称来调用该类型的成员将生成详细的晦涩代码。 例如，`Circle` 类的以下定义引用 @System.Math 类的成员数。
+通常，调用某个静态成员时，即会提供类型名称以及成员名称。 重复输入相同的类型名称来调用该类型的成员将生成详细的晦涩代码。 例如，`Circle` 类的以下定义引用 <xref:System.Math> 类的成员数。
   
-[!code-cs[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
-通过消除每次引用成员时，显式引用 @System.Math 类的需求，`using static` 指令将生成更简洁的代码：
+通过消除每次引用成员时，显式引用 <xref:System.Math> 类的需求，`using static` 指令将生成更简洁的代码：
 
-[!code-cs[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
 `using static` 仅导入可访问的静态成员和指定类型中声明的嵌套类型。  不导入继承的成员。  可以从任何带 using static 指令的已命名类型导入，包括 Visual Basic 模块。  如果 F# 顶级函数在元数据中显示为一个已命名类型（其名称是有效的 C# 标识符）的静态成员，则可以导入该 F# 函数。  
   
@@ -65,11 +46,11 @@ using static <fully-qualified-type-name>
   
 ## <a name="example"></a>示例
 
-以下示例使用 `using static` 指令来提供 @System.Console、@System.Math 和 @System.String 类的静态成员，而无需指定其类型名称。
+以下示例使用 `using static` 指令来提供 <xref:System.Console>、<xref:System.Math> 和 <xref:System.String> 类的静态成员，而无需指定其类型名称。
 
-[!code-cs[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-在此示例中，`using static` 指令也已经应用于 @System.Double 类型。 这使得在未指定类型名称情况下调用 @System.Double.TryParse(System.String,System.Double@) 方法成为可能。 但是，如此创建的代码可读性较差，因为这样有必要检查 `using static` 语句，以确定所调用的数值类型的 `TryParse` 方法。
+在此示例中，`using static` 指令也已经应用于 <xref:System.Double> 类型。 这可能使其可以调用<xref:System.Double.TryParse(System.String,System.Double@)>方法，而指定的类型名称。 但是，如此创建的代码可读性较差，因为这样有必要检查 `using static` 语句，以确定所调用的数值类型的 `TryParse` 方法。
 
 ## <a name="see-also"></a>请参阅
 
@@ -79,4 +60,3 @@ using static <fully-qualified-type-name>
 [Using 命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
 [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
 [命名空间](../../../csharp/programming-guide/namespaces/index.md)   
-

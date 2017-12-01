@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - Native Image Generator
 - images [.NET Framework], native
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -89,7 +86,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：**从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，不再支持操作 `uninstall` *。|  
 |`update` [`/queue`]|更新已无效的本机映像。<br /><br /> 如果指定了 `/queue`，则更新将排队等待本机映像服务。 更新的优先级总是设定为 3，因此它们在计算机空闲时运行。|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|显示程序集及其依赖项的本机映像的状态。<br /><br /> 如果未提供自变量，则显示本机映像缓存中的所有内容。|  
-|`executeQueuedItems` [`1``&#124;``2``&#124;``3`]<br /><br /> - 或 -<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - 或 -<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|暂停本机映像服务，允许暂停的服务继续，或查询服务状态。|  
   
 <a name="ArgumentTable"></a>   
@@ -144,20 +141,20 @@ ngen /? | /help
   
  从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，使用 Ngen.exe 生成的本机映像不再载入到按照部分信任的状态运行的应用程序中。 而是，调用了实时 (JIT) 编译器。  
   
- Ngen.exe 为 `assemblyname` 参数对 `install` 操作指定的程序集及其所有依赖项生成本机映像。 依赖项是根据程序集清单中的引用来确定的。 仅在应用程序使用反射（例如，通过调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法）来加载依赖项的情况下，你才需要单独安装依赖项。  
+ Ngen.exe 为 `assemblyname` 参数对 `install` 操作指定的程序集及其所有依赖项生成本机映像。 依赖项是根据程序集清单中的引用来确定的。 仅在应用程序使用反射（例如，通过调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法）来加载依赖项的情况下，你才需要单独安装依赖项。  
   
 > [!IMPORTANT]
->  不要将 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法用于本机映像。 使用此方法加载的映像不能由执行上下文中的其他程序集使用。  
+>  不要将 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法用于本机映像。 使用此方法加载的映像不能由执行上下文中的其他程序集使用。  
   
  Ngen.exe 维护一个与依赖项有关的计数。 例如，假设本机映像缓存中同时安装了 `MyAssembly.exe` 和 `YourAssembly.exe`，而且它们都具有对 `OurDependency.dll` 的引用。 如果卸载了 `MyAssembly.exe`，则不会卸载 `OurDependency.dll`。 只有当 `YourAssembly.exe` 也被卸载时才会将其移除。  
   
- 如果为全局程序集缓存中的程序集生成本机映像，请指定其显示名称。 请参阅<xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>。  
+ 如果为全局程序集缓存中的程序集生成本机映像，请指定其显示名称。 请参阅<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>。  
   
  Ngen.exe 生成的本机映像可以在应用程序域之间共享。 这意味着，在要求在应用程序域之间共享程序集的应用程序方案中，可以使用 Ngen.exe。 若要指定域非特定性，请执行以下操作：  
   
 -   将 <xref:System.LoaderOptimizationAttribute> 特性应用于应用程序。  
   
--   为新的应用程序域创建安装信息时，请设置 <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=fullName> 属性。  
+-   为新的应用程序域创建安装信息时，请设置 <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType> 属性。  
   
  将同一个程序集加载到多个应用程序域中时，总是使用非特定于域的代码。 如果本机映像在已加载到共享域之后又被加载到非共享的应用程序域中，则该映像将无法使用。  
   
@@ -289,7 +286,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>为依赖项指定绑定提示  
- 将 <xref:System.Runtime.CompilerServices.DependencyAttribute> 应用于程序集可指示加载指定依赖项的可能性。 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> 指示适合进行硬绑定，<xref:System.Runtime.CompilerServices.LoadHint.Default> 指示应使用依赖项的默认提示，而 <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> 则指示不适合使用硬绑定。  
+ 将 <xref:System.Runtime.CompilerServices.DependencyAttribute> 应用于程序集可指示加载指定依赖项的可能性。 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> 指示适合进行硬绑定，<xref:System.Runtime.CompilerServices.LoadHint.Default> 指示应使用依赖项的默认提示，而 <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> 则指示不适合使用硬绑定。  
   
  下面的代码显示有两个依赖项的程序集的特性。 第一个依赖项 (Assembly1) 适合于进行硬绑定，而第二个 (Assembly2) 不适合进行硬绑定。  
   
@@ -315,10 +312,10 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="AssemblyHint"></a>   
 ### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>为程序集指定默认绑定提示  
- 只有某些程序集需要默认绑定提示：这些程序集将由依赖于它们的任何应用程序直接并经常使用。 将 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 以及 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> 应用于这样的程序集可指定应使用硬绑定。  
+ 只有某些程序集需要默认绑定提示：这些程序集将由依赖于它们的任何应用程序直接并经常使用。 将 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 以及 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> 应用于这样的程序集可指定应使用硬绑定。  
   
 > [!NOTE]
->  不应将 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 应用于不属于此类别的 .dll 程序集，因为对除 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> 之外的其他值应用该特性的效果与根本不应用该特性的效果相同。  
+>  不应将 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 应用于不属于此类别的 .dll 程序集，因为对除 <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> 之外的其他值应用该特性的效果与根本不应用该特性的效果相同。  
   
  Microsoft 使用 <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> 指定硬绑定为 .NET Framework 中极少数程序集（如 mscorlib.dll）的默认绑定。  
   
@@ -388,11 +385,13 @@ using namespace System::Runtime::CompilerServices;
   
  但请注意，`BypassNGenAttribute` 不定义为 .NET Framework 类库中的类型。 为在代码中使用该特性，必须先按以下所示对其进行定义：  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)] [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
   
  然后就可对每个方法应用该特性。 以下示例指示本机映像生成器不应为 `ExampleClass.ToJITCompile` 方法生成本机映像。  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)] [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
   
 ## <a name="examples"></a>示例  
  下面的命令为当前目录中的 `ClientApp.exe` 生成本机映像，并在本机映像缓存中安装该映像。 如果该程序集存在配置文件，Ngen.exe 将使用它。 此外，还会为 `ClientApp.exe` 引用的所有 .dll 文件生成本机映像。  
@@ -414,7 +413,7 @@ ngen install c:\myfiles\MyAssembly.exe
 > [!NOTE]
 >  这是对 .NET Framework 1.0 和 1.1 版中的 Ngen.exe 行为的更改，在这些版本中，应用程序基目录设置为当前目录。  
   
- 程序集可以具有不带引用的依赖项（例如，它使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法加载 .dll 文件）。 你可以借助 `/ExeConfig` 使用应用程序程序集的配置信息来为这样的 .dll 文件创建本机映像。 下面的命令使用 `MyLib.dll,` 中的配置信息为 `MyApp.exe` 生成一个本机映像。  
+ 程序集可以具有不带引用的依赖项（例如，它使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法加载 .dll 文件）。 你可以借助 `/ExeConfig` 使用应用程序程序集的配置信息来为这样的 .dll 文件创建本机映像。 下面的命令使用 `MyLib.dll,` 中的配置信息为 `MyApp.exe` 生成一个本机映像。  
   
 ```  
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
@@ -594,10 +593,9 @@ ngen executeQueuedItems
  在.NET Framework 2.0 版中，与本机映像服务的唯一交互是通过命令行工具 Ngen.exe 进行的。 使用安装脚本中的命令行工具对本机映像服务的操作进行排队，并与服务交互。  
   
 ## <a name="see-also"></a>另请参阅  
- [本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)   
- [本机映像任务](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)   
- [工具](../../../docs/framework/tools/index.md)   
- [托管执行过程](../../../docs/standard/managed-execution-process.md)   
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
+ [本机映像任务](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
+ [工具](../../../docs/framework/tools/index.md)  
+ [托管执行过程](../../../docs/standard/managed-execution-process.md)  
+ [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

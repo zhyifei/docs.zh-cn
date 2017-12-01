@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -47,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   应用程序开发人员。 并行承载对应用程序开发人员几乎没有影响。 默认情况下，应用程序总是在生成它们所用的 .NET Framework 版本上运行；这一点没有变化。 但是，开发人员可替代此行为，并指示应用程序在新版 .NET Framework 上运行（请参阅[方案 2](#scenarios)）。  
   
--   库开发人员和使用者。 并行承载不能解决库开发人员面临的兼容性问题。 应用程序直接加载的库（通过直接引用或通过 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 调用）会继续使用其加载到的 <xref:System.AppDomain> 运行时。 应针对要支持的 .NET Framework 所有版本对库进行测试。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时编译应用程序，但包括一个使用较早运行时生成的库，则该库也将使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时。 但是，如果有一个使用较早运行时生成的应用程序和一个使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 生成的库，则必须强制应用程序也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]（请参阅[方案 3](#scenarios)）。  
+-   库开发人员和使用者。 并行承载不能解决库开发人员面临的兼容性问题。 应用程序直接加载的库（通过直接引用或通过 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 调用）会继续使用其加载到的 <xref:System.AppDomain> 运行时。 应针对要支持的 .NET Framework 所有版本对库进行测试。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时编译应用程序，但包括一个使用较早运行时生成的库，则该库也将使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时。 但是，如果有一个使用较早运行时生成的应用程序和一个使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 生成的库，则必须强制应用程序也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]（请参阅[方案 3](#scenarios)）。  
   
 -   托管 COM 组件开发人员。 过去，托管 COM 组件会自动使用计算机上安装的运行时最新版本运行。 现在，可在生成 COM 组件所用的运行时版本上执行这些组件。  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<启动 > 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

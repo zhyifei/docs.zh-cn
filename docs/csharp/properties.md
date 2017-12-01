@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="properties"></a>属性
 
 属性是 C# 中的一等公民。 借助该语言所定义的语法，开发人员能够编写出准确表达其设计意图的代码。
@@ -151,7 +149,7 @@ public class Person
 
 现在，可以从任意代码访问 `FirstName` 属性，但只能从 `Person` 类中的其他代码对其赋值。
 
-可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `public` 访问器的 `private` 属性。 属性声明还可以声明为 `protected`、`internal`、`protected internal` 甚至 `private`。   
+可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `public` 访问器的 `private` 属性。 也可以声明属性声明`protected`， `internal`， `protected internal`，`private protected`甚至`private`。   
 
 在 `get` 访问器上放置限制性更强的修饰符也是合法的。 例如，可以有一个 `public` 属性，但将 `get` 访问器限制为 `private`。 不过实际情况下很少这么做。
 
@@ -317,4 +315,3 @@ public class Person : INotifyPropertyChanged
 
 属性是类或对象中的一种智能字段形式。 从对象外部，它们看起来像对象中的字段。 但是，属性可以通过丰富的 C# 功能来实现。
 你可以提供验证、不同的可访问性、迟缓计算或方案所需的任何要求。
-

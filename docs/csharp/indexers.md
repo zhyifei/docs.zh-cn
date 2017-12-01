@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>索引器
 
 *索引器*类似于属性。 很多时候，创建索引器与创建[属性](properties.md)所使用的编程语言特性是一样的。 索引器使属性可以被索引：使用一个或多个参数引用的属性。 这些参数为某些值集合提供索引。
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-从最初的示例中，可以看到属性语法和索引器语法之间的关系。 此类比在索引器的大部分语法规则中进行。 索引器可以使用任何有效的访问修饰符（public、protected internal、protected、internal 或 private）。 它们可能是密封、虚拟或抽象的。 与属性一样，可以在索引器中为 get 和 set 访问器指定不同访问修饰符。
+从最初的示例中，可以看到属性语法和索引器语法之间的关系。 此类比在索引器的大部分语法规则中进行。 索引器可以有任何有效的访问修饰符 （公共、 受保护内部、 受保护、 内部、 私有或私有受保护）。 它们可能是密封、虚拟或抽象的。 与属性一样，可以在索引器中为 get 和 set 访问器指定不同访问修饰符。
 你还可以指定只读索引器（忽略 set 访问器）或只写索引器（忽略 get 访问器）。
 
 属性的各种用法同样适用于索引器。 此规则的唯一例外是“自动实现属性”。 编译器无法始终为索引器生成正确的存储。
@@ -335,4 +333,3 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 只要类中有类似于属性的元素就应创建索引器，此属性代表的不是一个值，而是值的集合，其中每一个项由一组参数标识。 这些参数可以唯一标识应引用的集合中的项。
 索引器延伸了[属性](properties.md)的概念，索引器中的一个成员被视为类外部的一个数据项，但另一方面又类似于一个方法。 索引器允许参数在代表项的集合的属性中查找单个项。
-

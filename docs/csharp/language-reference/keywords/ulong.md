@@ -1,41 +1,22 @@
 ---
 title: "ulong（C# 参考）"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ulong_CSharpKeyword
 - ulong
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- ulong keyword [C#]
+helpviewer_keywords: ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ulong-c-reference"></a>ulong（C# 参考）
 
@@ -43,26 +24,30 @@ ms.lasthandoff: 07/28/2017
   
 |类型|范围|大小|.NET Framework 类型|  
 |----------|-----------|----------|-------------------------|  
-|`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|<xref:System.UInt64?displayProperty=fullName>|  
+|`ulong`|0 到 18,446,744,073,709,551,615|无符号 64 位整数|<xref:System.UInt64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>文本  
 
-可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `ulong` 变量。  如果整数文本在 `ulong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大于 <xref:System.UInt64.MaxValue?displayProperty=fullName>），会发生编译错误。 
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `ulong` 变量。  如果整数文本在 `ulong` 范围之外（即，如果它小于 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
 
 在以下示例中，表示为十进制、十六进制和二进制文本且等于 7,934,076,125 的整数被分配给 `ulong` 值。  
   
-[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+[!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
 > 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
 
-从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+C# 从 7 开始，已添加几个功能以增强可读性。 
+ - C# 7.0 允许使用下划线字符， `_`，作为数字分隔符。
+ - C# 7.2 允许`_`前缀后要使用作为二进制或十六进制文本中，数字分隔符。 十进制文本不允许具有前导下划线。
 
-[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+下面显示了一些示例。
+
+[!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- 整数文本还可包含表示类型的后缀。 后缀 `UL` 或 `ul` 将数字文本明确标识为 `ulong` 值。 如果文本值超过 <xref:System.Int64.MaxValue?displayProperty=fullName>，则 `L` 后缀表示 `ulong`。 如果文本值超过 <xref:System.UInt32.MaxValue?displayProperty=fullName>，则 `U` 或 `u` 后缀表示 `ulong`。 以下示例使用 `ul` 后缀来表示长整型：
+ 整数文本还可包含表示类型的后缀。 后缀 `UL` 或 `ul` 将数字文本明确标识为 `ulong` 值。 如果文本值超过 <xref:System.Int64.MaxValue?displayProperty=nameWithType>，则 `L` 后缀表示 `ulong`。 如果文本值超过 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>，则 `U` 或 `u` 后缀表示 `ulong`。 以下示例使用 `ul` 后缀来表示长整型：
  
-[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+[!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型： 
 
@@ -115,12 +100,11 @@ ulong y = (ulong)3.0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.UInt64>   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.UInt64>  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

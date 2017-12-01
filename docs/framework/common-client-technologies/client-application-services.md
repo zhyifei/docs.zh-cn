@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c776040786a51089c9aa988e9229805c06b28bae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="client-application-services"></a>客户端应用程序服务
 借助客户端应用程序服务，可以轻松使用 Microsoft ASP.NET 2.0 AJAX Extensions 中包含的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录名、角色和配置文件应用程序服务，创建基于 Windows 的应用程序。 这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。 例如，你可以使用这些服务来执行下列任务：  
@@ -76,11 +74,10 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>另请参阅  
- [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
- [将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
- [将角色信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   
- [将配置文件信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)   
- [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
+ [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [使用 Microsoft Ajax 角色信息](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [使用 Microsoft Ajax 的配置文件信息](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [使用角色管理授权](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)
-

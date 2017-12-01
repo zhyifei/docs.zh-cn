@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>类和对象
 
@@ -74,6 +73,8 @@ ms.lasthandoff: 07/28/2017
     - 访问限于包含类或派生自包含类的类
 * `private`
     - 只能访问此类
+* `private protected`
+    - 访问仅限于包含的类或类派生自包含的类型在同一程序集
 
 ## <a name="type-parameters"></a>类型参数
 
@@ -140,7 +141,7 @@ ms.lasthandoff: 07/28/2017
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-*参数数组*允许向方法传递数量不定的自变量。 参数数组使用 `params` 修饰符进行声明。 参数数组只能是方法的最后一个参数，且参数数组的类型必须是一维数组类型。 `@System.Console` 类的 Write 和 WriteLine 方法是参数数组用法的典型示例。 它们的声明方式如下。
+*参数数组*允许向方法传递数量不定的自变量。 参数数组使用 `params` 修饰符进行声明。 参数数组只能是方法的最后一个参数，且参数数组的类型必须是一维数组类型。 <xref:System.Console?displayProperty=nameWithType> 类的 Write 和 WriteLine 方法是参数数组用法的典型示例。 它们的声明方式如下。
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -260,7 +261,7 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 借助*索引器*成员，可以将对象编入索引（像处理数组一样）。 索引器的声明方式与属性类似，不同之处在于，索引器成员名称格式为后跟分隔符 `[` 和 `]`，其中写入参数列表。 这些参数在索引器的访问器中可用。 类似于属性，索引器分为读写、只读和只写索引器，且索引器的访问器可以是虚的。
 
-`List` 类声明一个需要使用 `int` 参数的读写索引器。 借助索引器，可以使用 `int` 值将 `List` 实例编入索引。 例如：
+`List` 类声明一个需要使用 `int` 参数的读写索引器。 借助索引器，可以使用 `int` 值将 `List` 实例编入索引。 例如: 
 
 [!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
@@ -301,4 +302,3 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 >[!div class="step-by-step"]
 [上一页](statements.md)
 [下一页](structs.md)
-

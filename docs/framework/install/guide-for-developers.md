@@ -1,13 +1,9 @@
 ---
 title: "安装面向开发人员的 .NET Framework"
-ms.custom: 
-ms.date: 05/26/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: get-started-article
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -15,23 +11,20 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-caps.latest.revision: 165
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: db8d543b07ede81c8b07e607bedd4ee2a01b0022
+ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/19/2017
 ---
-
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
 .NET 是在 Windows 上运行的多个应用不可缺少的一部分，并且对这些应用运行发挥着同样的功能。 对开发人员而言，.NET Framework 为生成具有视觉冲击力的用户体验和无缝安全通信的应用提供了一个全面且一致的编程模型。  
 
-本文所附链接指向如何在计算机上安装 .NET Framework 4.5 及其次要版本（4.5.1、4.5.2）、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其次要版本（4.6.1、4.6.2）和 .NET Framework 4.7。 如果你是开发人员，你也可以使用这些链接来下载 .NET Framework 并将其与你的应用程序一起重新分发。
+这篇文章提供有关安装.NET Framework 4.5、 其单点版本 （4.5.1、 4.5.2） 链接[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、 其单点版本 （4.6.1、 4.6.2） 和.NET Framework 4.7 和其点版本 (4.7.1) 在计算机上。 如果你是开发人员，你也可以使用这些链接来下载 .NET Framework 并将其与你的应用程序一起重新分发。
 
 请注意，安装 .NET Framework 的新版本并非总会替换之前的版本。 有关 .NET Framework 版本以及如何确定计算机上安装了哪些版本的详细信息，请参阅[版本和依赖关系](~/docs/framework/migration-guide/versions-and-dependencies.md)以及[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 下表中列出的所有 .NET Framework 版本都是对 .NET Framework 4 的就地更新。 也就是说，如果你要安装一个更高的版本，如 .NET Framework 4.6，则你无需首先安装之前的版本，如 .NET Framework 4.5、4.5.1 或 4.5.2。 同样，如果你要安装一个更高的版本，如 .NET Framework 4.6，则你无需首先安装之前的版本，如 .NET Framework 4.5、4.5.1 或 4.5.2。 
 
@@ -44,6 +37,7 @@ ms.lasthandoff: 08/05/2017
   
 |.NET Framework 版本|开发人员安装|可再发行组件安装|平台支持|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
+|**4.7.1**|[NET Framework 4.7.1 开发人员包](http://go.microsoft.com/fwlink/?LinkId=852105)|[下载页 4.7.1 web 安装程序](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [下载页 4.7.1 脱机安装程序](http://go.microsoft.com/fwlink/?LinkId=852107)|包含于： <br/>Windows 10 秋季创建者更新<br/>Windows Server，版本 1709<br /><br /> 可以安装于：<br/> Windows 10 创意者更新 <br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.7**|[NET Framework 4.7 开发者工具包](http://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=825303)|包含于： <br/>Windows 10 创意者更新<br /><br /> 可以安装于：<br /> Windows 10 周年更新<br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）||
 |**4.6.2**|[NET Framework 4.6.2 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=780601)|包含于： <br /> Windows 10 周年纪念版<br /><br /> 可以安装于：<br /> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 |**4.6.1**|[NET Framework 4.6.1 开发人员工具包](http://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 脱机安装程序下载页](http://go.microsoft.com/fwlink/?LinkId=671744)|可以安装于：<br /> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
@@ -71,7 +65,9 @@ ms.lasthandoff: 08/05/2017
   
 ## <a name="to-install-the-net-framework-developer-or-targeting-pack"></a>安装 .NET Framework 开发人员包或目标包
 
-.NET Framework 4.5.1 或 4.5.2 开发人员工具包、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 目标包以及 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]、4.6.2 或 4.7 开发人员工具包提供 .NET Framework 4.5.1、4.5.2、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 或 .NET Framework 4.7 引用程序集、语言包和 IntelliSense 文件，以供在集成开发环境（如 Visual Studio）中使用。  如果你使用的是 Visual Studio，则在你创建新项目时，开发人员包或目标包也将向目标选择添加 .NET Framework 的已安装版本。  在这些开发人员包或目标包中选择其中之一：  
+适用于的.NET Framework 4.5.1 或 4.5.2 的目标包的开发人员包[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]，和的开发人员包[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]，4.6.2、 4.7 或 4.7.1 提供.NET Framework 4.5.1 或 4.5.2 或[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]，4.6.1 或 4.6.2 或.NETFramework 4.7 或 4.7.1 引用程序集、 语言包和 IntelliSense 文件，以在如 Visual Studio 集成的开发环境中使用。  如果你使用的是 Visual Studio，则在你创建新项目时，开发人员包或目标包也将向目标选择添加 .NET Framework 的已安装版本。  在这些开发人员包或目标包中选择其中之一：  
+
+- [Microsoft.NET Framework 4.7.1 开发人员包](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Microsoft .NET Framework 4.7 开发者工具包](http://go.microsoft.com/fwlink/?LinkId=825319)
 
@@ -105,7 +101,9 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 1.  打开要安装的 .NET Framework 版本的下载页：  
 
-    - .NET Framework 4.7（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=825299)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=825303)）
+   - .NET framework 4.7.1 ([web 安装程序](http://go.microsoft.com/fwlink/?LinkId=852095)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+
+   - .NET Framework 4.7（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=825299)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=825303)）
 
     - .NET Framework 4.6.2（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=780601)）  
     
@@ -138,13 +136,13 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
  **安装说明：**  
   
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 和 4.5.2 以及 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 和 4.7 是对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的就地更新。  
+- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和 4.5.2，以及[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]，4.6.1、 4.6.2、 4.7 和 4.7.1 是就地更新版[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。  
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其次要版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其次要版本和 .NET Framework 4.7 替换 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]。 在安装了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上安装这些版本时，将会替换这些程序集。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 其单点版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]及其点版本和.NET Framework 4.7 和其点版本替换[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]。 在安装了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上安装这些版本时，将会替换这些程序集。
   
-- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其次要版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其次要版本或 .NET Framework 4.7 也会删除既有的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅[安装 .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665)。）  
+- 卸载[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 其单点版本、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]及其点版本或.NET Framework 4.7 和其点版本还会删除预先存在[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665)。）  
   
-- 必须拥有管理员凭据，才能安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其次要版本、.NET Framework 4.6 及其次要版本和 .NET Framework 4.7。
+- 你必须具有管理凭据才能安装[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 其单点版本、.NET Framework 4.6 和及其点版本和.NET Framework 4.7 和其点版本。
   
 - .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET Framework 4.5 可再发行组件包，建议使用 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=245484)内的最新可再发行组件来更新副本。 有关此问题的详细信息，请参阅 [Microsoft 安全公告 2749655](http://technet.microsoft.com/security/advisory/2749655) 和[知识库文章 2770445](http://support.microsoft.com/kb/2770445)。  
   
@@ -158,6 +156,8 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 1.  打开已安装的 .NET Framework 版本的语言包下载页：  
   
+    - [.NET framework 4.7.1 语言包](http://go.microsoft.com/fwlink/?LinkID=852090) 
+
     - [.NET Framework 4.7 语言包](http://go.microsoft.com/fwlink/?LinkID=825306) 
 
     - [.NET Framework 4.6.2 语言包](http://go.microsoft.com/fwlink/?LinkID=780604)  
@@ -209,7 +209,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 - 如果不熟悉 .NET Framework，请参阅[概述](~/docs/framework/get-started/overview.md)以大致了解关键概念和组件。  
   
-- 有关 .NET Framework 4.7、[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]、[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.5.2、4.5.1 和 4.5 中的新功能和改进，请参阅[新增功能](../../../docs/framework/whats-new/index.md)。  
+- 新功能和.NET Framework 4.5 和所有更高版本中的改进，请参阅[新增](../../../docs/framework/whats-new/index.md)。  
   
 - 有关使用应用部署 .NET Framework 的详细信息，请参阅[面向开发人员的部署指南](~/docs/framework/deployment/deployment-guide-for-developers.md)。  
   
@@ -217,7 +217,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 - 有关将应用从 .NET Framework 4 迁移到 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一的信息，请参阅[迁移指南](~/docs/framework/migration-guide/index.md)。 
 
-- 请参阅 [.NET Framework 引用源](http://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 还可以在 [Github](https://github.com/Microsoft/referencesource) 上获取引用源。 可[下载引用源](http://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。  
+- 请参阅 [.NET Framework 引用源](http://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 引用源，还可以在[GitHub](https://github.com/Microsoft/referencesource)。 可[下载引用源](http://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。  
   
 ## <a name="see-also"></a>另请参阅
 
@@ -225,4 +225,3 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 [面向管理员的部署指南](~/docs/framework/deployment/guide-for-administrators.md)   
 [在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](~/docs/framework/install/dotnet-35-windows-10.md)   
 [安装和卸载 .NET Framework 受阻疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-

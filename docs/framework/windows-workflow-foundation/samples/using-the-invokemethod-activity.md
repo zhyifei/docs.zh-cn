@@ -12,16 +12,16 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5dd488a01e00af0661ee7ee110c79d2c56a0b777
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: aacc20bf483877ac501fd8b35c04f6e3f9311afb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>使用 InvokeMethod 活动
 此示例演示如何使用<!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx)活动调用公共类中的公共方法。 <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx)活动允许工作流针对对象调用方法、 传入参数、 获取返回值、 指定泛型方法的类型和指定的方法是同步或异步。 
   
- 没有一个非泛型版本<xref:System.Activities.Statements.InvokeMethod>其中的返回值设置为活动<xref:System.Activities.Statements.InvokeMethod.Result%2A>属性和一个泛型版本<!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx)其中返回的返回值的活动通过<!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx)类型的属性`TResult`。  
+没有一个非泛型版本<xref:System.Activities.Statements.InvokeMethod>其中的返回值设置为活动<xref:System.Activities.Statements.InvokeMethod.Result%2A>属性和一个泛型版本<!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx)其中返回的返回值的活动通过<!--zz <xref:System.Activities.Statements.InvokeMethod.Result%601.Result%2A> --> [ <code>System.Activities.Statements.InvokeMethod\`1.Result</code> ](https://msdn.microsoft.com/library/dd987724.aspx)类型的属性`TResult`。 
   
  此示例演示如何调用各种不同的方法类型。 下面的列表详细介绍了此示例中演示的方法类型：  
   
@@ -62,6 +62,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
-  
-## <a name="see-also"></a>另请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

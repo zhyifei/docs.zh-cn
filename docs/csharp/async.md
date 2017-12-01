@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
+ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/22/2017
 ---
-
 # <a name="asynchronous-programming"></a>异步编程
 
 如果需要 I/O 绑定（例如从网络请求数据或访问数据库），则需要利用异步编程。  还可以使用 CPU 绑定代码（例如执行成本高昂的计算），对编写异步代码而言，这是一个不错的方案。
@@ -141,7 +139,7 @@ public async Task<int> GetDotNetCountAsync()
     // to accept another request, rather than blocking on this one.
     var html = await _httpClient.DownloadStringAsync("http://dotnetfoundation.org");
 
-    return Regex.Matches(html, ".NET").Count;
+    return Regex.Matches(html, @"\.NET").Count;
 }
 ```
 
@@ -164,7 +162,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
     // This is what allows the app to be responsive and not hang on the UI thread.
     var html = await getDotNetFoundationHtmlTask;
-    int count = Regex.Matches(html, ".NET").Count;
+    int count = Regex.Matches(html, @"\.NET").Count;
 
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
@@ -175,12 +173,12 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>等待多个任务完成
 
-你可能发现自己处于需要并行检索多个数据部分的情况。  `Task` API 包含两种方法（即 `Task.WhenAll` 和 `Task.WhenAny`），这些方法允许你编写在多个后台作业中执行非阻止等待的异步代码。
+你可能发现自己处于需要并行检索多个数据部分的情况。  `Task` API 包含两个方法，`Task.WhenAll`和`Task.WhenAny`这使您可以编写异步代码用于执行非阻止等待多个后台作业。
 
 此示例演示如何为一组 `User` 捕捉 `userId` 数据。
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -188,13 +186,13 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
+public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
     
     foreach (int userId in userIds)
     {
-        getUserTasks.Add(GetUser(id));
+        getUserTasks.Add(GetUserAsync(userId));
     }
     
     return await Task.WhenAll(getUserTasks);
@@ -204,7 +202,7 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 以下是使用 LINQ 进行更简洁编写的另一种方法：
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -212,9 +210,9 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
+public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 {
-    var getUserTasks = userIds.Select(id => GetUser(id));
+    var getUserTasks = userIds.Select(id => GetUserAsync(id));
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -272,4 +270,3 @@ LINQ 中的 Lambda 表达式使用延迟执行，这意味着代码可能在你�
 
 * [深入了解异步](../standard/async-in-depth.md)提供了关于任务如何工作的详细信息。
 * 由 Lucian Wischik 所著的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)（关于异步的六个要点）是有关异步编程的绝佳资源
-

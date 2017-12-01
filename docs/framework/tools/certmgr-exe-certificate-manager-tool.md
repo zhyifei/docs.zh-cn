@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - certificates, managing
 - CRLs
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 9612603642a38083aba30c1c6dc931031d1d04e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd5d1011a8f8aeadfc7729c3a4f6f56a033110a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -66,10 +62,10 @@ ms.lasthandoff: 07/28/2017
 |选项|描述|  
 |------------|-----------------|  
 |**/add**|将证书、CTL 和 CRL 添加到证书存储中。|  
-|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。 当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
-|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。 当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
-|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。 当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
-|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。 当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
+|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
+|**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
+|**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
+|**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
 |**/del**|从证书存储中删除证书、CTL 和 CRL。|  
 |**/e** *encodingType*|指定证书编码类型。 默认值为 `X509_ASN_ENCODING`。|  
 |**/f** *dwFlags*|指定存储打开标志。 这是传递到 **CertOpenStore** 的 *dwFlags* 参数。 默认值为 CERT_SYSTEM_STORE_CURRENT_USER。 仅当使用 **/y** 选项时才考虑此选项。|  
@@ -101,7 +97,8 @@ ms.lasthandoff: 07/28/2017
   
  可以通过编译并运行以下代码来找到 `sourceStorename` 和 `destinationStorename` 参数的 X509 证书存储的名称。  
   
- [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)][!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
+ [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
+ [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
  有关证书的详细信息，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
@@ -149,7 +146,6 @@ certmgr /put /c /s my newFile
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [工具](../../../docs/framework/tools/index.md)   
- [Makecert.exe（证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)   
+ [工具](../../../docs/framework/tools/index.md)  
+ [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

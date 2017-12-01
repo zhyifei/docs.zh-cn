@@ -1,14 +1,10 @@
 ---
 title: "-linkresource (C# 编译器选项)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /linkresource
-dev_langs:
-- CSharp
+f1_keywords: /linkresource
 helpviewer_keywords:
 - /linkresource compiler option [C#]
 - linkres compiler option [C#]
@@ -17,29 +13,14 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d478c42141288cc3a1478ecf43f50c961a9d2246
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 022d6c1a53eab98fc033c902f903e7bc66e6da3f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linkresource-c-compiler-options"></a>/linkresource (C# 编译器选项)
 在输出文件中创建指向 .NET Framework 资源的链接。 不会在输出文件中添加资源文件。 这不同于会在输出文件中嵌入资源文件的 [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 选项。  
@@ -65,9 +46,9 @@ ms.lasthandoff: 07/28/2017
   
  /linkresource 需要某个 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 选项（/target:module 除外）。  
   
- 例如，如果 `filename` 是由 [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关更多信息，请参见<xref:System.Resources.ResourceManager?displayProperty=fullName>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource`* 方法在运行时访问资源。  
+ 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关更多信息，请参见<xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 对于所有其他资源，请使用`GetManifestResource`中的方法<xref:System.Reflection.Assembly>类在运行时访问资源。  
   
- `filename` 中指定的文件可为任何格式。 例如，你可能希望生成程序集的本机 DLL 部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 以下示例中的第二个示例演示了如何执行此操作。 可在程序集链接器中执行相同的操作。 以下示例中的第三个示例演示了如何执行此操作。 有关详细信息，请参阅 [Al.exe（程序集链接器）](https://msdn.microsoft.com/library/c405shex)和[使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)。  
+ `filename` 中指定的文件可为任何格式。 例如，你可能希望生成程序集的本机 DLL 部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 以下示例中的第二个示例演示了如何执行此操作。 可在程序集链接器中执行相同的操作。 以下示例中的第三个示例演示了如何执行此操作。 有关详细信息，请参阅 [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)和[使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)。  
   
  /linkres 是 /linkresource 的缩写形式。  
   
@@ -98,8 +79,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [Al.exe（程序集链接器）](https://msdn.microsoft.com/library/c405shex)   
- [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)   
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)  
+ [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

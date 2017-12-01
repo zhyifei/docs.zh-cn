@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -28,22 +30,21 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 资源文件在本地化的应用程序中具有核心作用。 通过资源文件，应用程序可以使用用户自己的语言和区域性显示字符串、图像及其他数据，并且在用户自己的语言或区域性资源不可用时，提供备用数据。 .NET Framework 使用中心辐射型模型来查找和检索已本地化的资源。 中心即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；没有任何已本地化的资源可用时，则使用默认区域性。 使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性来指定应用程序默认区域性的区域性。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个本地化区域性的资源，但不包含任何代码。 因为附属程序集不是主程序集的一部分，所以不必替换该应用程序的主程序集即可轻松更新或替换与特定区域性相对应的资源。  
   
 > [!NOTE]
->  应用程序默认区域性的资源也可以存储在附属程序集中。 为此，可为 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性分配一个 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=fullName> 值。  
+>  应用程序默认区域性的资源也可以存储在附属程序集中。 为此，可为 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性分配一个 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> 值。  
   
 ## <a name="satellite-assembly-name-and-location"></a>附属程序集名称和位置  
  中心辐射型模型要求将资源放在特定位置，以便轻松查找和使用资源。 如果未按预期编译和命名资源，或未将其放在正确的位置，则公共语言运行时将无法定位它们，并改为使用默认区域性的资源。 .NET Framework 资源管理器由 <xref:System.Resources.ResourceManager> 对象表示，用于自动访问本地化的资源。 该资源管理器的相关要求如下：  
@@ -96,9 +97,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 1.  创建一个名为 Greeting.resx 或 Greeting.txt 的资源文件，使其包含默认区域性的资源。 在此文件中存储一个名为 `HelloString`，并且值为“Hello world!”的 单个字符串。  
   
-2.  为指示英语 (en) 是该应用程序的默认区域性，请将以下 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> 属性添加到应用程序的 AssemblyInfo 文件或主源代码文件中，该文件之后会编译到应用程序的主程序集中。  
+2.  为指示英语 (en) 是该应用程序的默认区域性，请将以下 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性添加到应用程序的 AssemblyInfo 文件或主源代码文件中，该文件之后会编译到应用程序的主程序集中。  
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)][!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3.  向应用程序添加对其他区域性的支持（en-US、fr-FR 和 ru-RU），如下所示：  
   
@@ -122,9 +124,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
 5.  将以下源代码和默认区域性的资源编译到应用程序的主程序集中：  
   
     > [!IMPORTANT]
-    >  如果使用的是命令行而不是 Visual Studio 来创建此示例，则应将对 <xref:System.Resources.ResourceManager> 类构造函数的调用修改为后列内容：`ResourceManager rm = new ResourceManager("Greetings",``typeof(Example).Assembly);`  
+    >  如果使用的是命令行而不是 Visual Studio 来创建此示例，则应将对 <xref:System.Resources.ResourceManager> 类构造函数的调用修改为后列内容：`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
-     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)][!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
+     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
      如果应用程序名为 Example，并从命令行进行编译，则适用于 C# 编译器的命令为：  
   
@@ -223,9 +226,10 @@ gacutil /i:StringLibrary.resources.dll
   
 3.  创建一个名为 Strings.resx 的资源文件，使其包含默认区域性的资源。 在此文件中存储一个名为 `Greeting`，并且值为“How do you do?”的 单个字符串。  
   
-4.  为指示 "en" 是该应用程序的默认区域性，请将以下 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> 属性添加到应用程序的 AssemblyInfo 文件或主源代码文件中，该文件之后会编译到应用程序的主程序集中：  
+4.  为指示 "en" 是该应用程序的默认区域性，请将以下 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性添加到应用程序的 AssemblyInfo 文件或主源代码文件中，该文件之后会编译到应用程序的主程序集中：  
   
-     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)][!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
+     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
 5.  向应用程序添加对其他区域性的支持（en-US、fr-FR 和 ru-RU 区域性），如下所示：  
   
@@ -246,9 +250,10 @@ gacutil /i:StringLibrary.resources.dll
 7.  将以下 StringLibrary.vb 或 StringLibrary.cs 的源代码连同默认区域性的资源编译到名为 StringLibrary.dll 的延迟签名库程序集中：  
   
     > [!IMPORTANT]
-    >  如果使用的是命令行而不是 Visual Studio 来创建此示例，则将对 <xref:System.Resources.ResourceManager> 类构造函数的调用修改为 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。  
+    >  如果你使用命令行而不是 Visual Studio 来创建该示例，则应修改调用<xref:System.Resources.ResourceManager>类构造函数`ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。  
   
-     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)][!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
+     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
   
      适用于 C# 编译器的命令：  
   
@@ -294,7 +299,8 @@ gacutil /i:StringLibrary.resources.dll
   
 13. 如果使用的是 Visual Studio，则新建一个名为 `Example` 的控制台应用程序项目，向其添加对 StringLibrary.dll 的引用和以下源代码，然后进行编译。  
   
-     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)][!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
+     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
+     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
   
      若要通过命令行进行编译，请在 C# 编译器中使用以下命令：  
   
@@ -311,10 +317,9 @@ gacutil /i:StringLibrary.resources.dll
 14. 运行 Example.exe。  
   
 ## <a name="see-also"></a>另请参阅  
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
+ [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [桌面应用中的资源](../../../docs/framework/resources/index.md)
-

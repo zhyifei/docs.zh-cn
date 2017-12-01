@@ -1,40 +1,45 @@
 ---
-title: "PLINQ Data Sample | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, sample data"
+title: "PLINQ 数据示例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# PLINQ Data Sample
-此示例包含 .csv 格式的示例数据，以及用于将该数据转换为内存中“Customers”、“Products”、“Orders”和“Order Details”集合的方法。  为了进一步体验 PLINQ，您可以将代码示例从某些其他主题粘贴到本主题的代码中，并从 `Main` 方法中调用它。  也可以将此数据用于您自己的 PLINQ 查询。  
+# <a name="plinq-data-sample"></a>PLINQ 数据示例
+此示例包含.csv 格式，以及将其转换为内存中集合的客户、 产品、 订单和订单详细信息的方法的示例数据。 为了使用 PLINQ 的进一步试验，你可以将从某些其他主题的代码示例粘贴到此主题中的代码和调用它从`Main`方法。 此外可以使用你自己 PLINQ 查询中使用此数据。  
   
- 该数据表示 Northwind 数据库的子集。  包括了五十 \(50\) 条客户记录，但未包括所有字段。  包括了每个“Customer”的“Orders”和对应“Order\_Detail”数据中行的子集。  包括了所有“Products”。  
+ 这些数据表示 Northwind 数据库的子集。 五十 （50） 客户记录是包括在内，但并非所有字段。 包含从订单和每个客户的相应 Order_Detail 数据行的子集。 所有产品都都包括在内。  
   
 > [!NOTE]
->  数据集不够大，对于仅包含基本 `where` 和 `select` 子句的查询而言，无法演示出 PLINQ 比 LINQ to Objects 快。  对于像这样的小型数据集，若要观察到速度加快，请对该数据集中的每个元素使用一些查询，这些查询包含消耗大量计算资源的操作。  
+>  数据集不足够大，为了演示，PLINQ 快于 LINQ to Objects 的包含的查询只是基本`where`和`select`子句。 若要观察对小型数据集，这样，增加速度，请使用包含在数据集中的每个元素的计算密集型操作的查询。  
   
-### 设置此示例  
+### <a name="to-set-up-this-sample"></a>设置此示例  
   
-1.  创建一个 Visual Basic 或 Visual C\# 控制台应用程序项目。  
+1.  创建 Visual Basic 或 Visual C# 控制台应用程序项目。  
   
-2.  使用这些步骤后面的代码替换 Module1.vb 或 Program.cs 的内容。  
+2.  通过遵循这些步骤的代码替换 Module1.vb 或 Program.cs 的内容。  
   
-3.  在**“项目”**菜单上，单击**“添加新项”**。  选择**“文本文件”**，然后单击**“确定”**。  复制本主题中的数据，然后将其粘贴到新的文本文件中。  在**“文件”**菜单上单击**“保存”**，将文件命名为 Plinqdata.csv，然后将其保存在包含源代码文件的文件夹中。  
+3.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**文本文件**，然后单击**确定**。 本主题中复制数据，然后将其粘贴在新的文本文件中。 上**文件**菜单上，单击**保存**，命名该文件命名为 Plinqdata.csv，，然后将其保存在包含源代码文件的文件夹。  
   
-4.  按 F5 验证项目是否能正确生成和运行。  以下输出应显示在控制台窗口中。  
+4.  按 F5 以验证生成并正确运行项目。 下面的输出应显示在控制台窗口。  
   
     ```  
     Customer count: 50  
@@ -47,7 +52,7 @@ caps.handback.revision: 9
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## 数据  
+## <a name="data"></a>数据  
   
 ```  
 CUSTOMERS  
@@ -861,8 +866,7 @@ PRODUCTS
 76,Lakkalikööri,18.0000  
 77,Original Frankfurter grüne Soße,13.0000  
 END PRODUCTS  
-  
 ```  
   
-## 请参阅  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>另请参阅  
+ [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

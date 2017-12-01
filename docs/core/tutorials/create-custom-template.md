@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
+ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
-ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="create-a-custom-template-for-dotnet-new"></a>创建 dotnet new 自定义模板
 
 本教程介绍了如何：
@@ -41,7 +39,7 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="create-a-template-from-a-project"></a>通过项目创建模板
 
-使用已确认可以编译或运行的现有项目，或在硬盘上的文件夹中新建一个控制台应用程序项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents/Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
+使用已确认的现有项目编译和运行时，或在您的硬盘上的文件夹中创建一个新的控制台应用程序项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents/Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
 
 1. 向 .template.config 项目根添加文件夹。
 1. 在 .template.config 文件夹中，创建 template.json 文件来配置模板。 有关 template.json 文件的详细信息和成员定义，请参阅 [dotnet new 自定义模板](../tools/custom-templates.md#templatejson)主题和 [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)。
@@ -219,4 +217,3 @@ dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate
 [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
 [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  
-

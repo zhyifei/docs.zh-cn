@@ -1,30 +1,31 @@
 ---
-title: "转换中的 XPathNodeIterator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "转换中的 XPathNodeIterator"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 转换中的 XPathNodeIterator
-<xref:System.Xml.XPath.XPathNodeIterator> 提供的方法可以循环访问执行 XML 路径语言 \(XPath\) 查询所创建的节点集或者使用 node\-set 方法转换成节点集的结果树片段。  <xref:System.Xml.XPath.XPathNodeIterator> 使您能够循环访问该节点集内的节点。  检索到节点集后，<xref:System.Xml.XPath.XPathNodeIterator> 类提供对选定节点集的只读、只进游标。  该节点集以文档顺序创建，因此调用此方法会移到文档顺序中的下一个节点。  <xref:System.Xml.XPath.XPathNodeIterator> 不生成节点集内所有节点的节点树，  而是提供数据的单节点窗口，当您在树中浏览时，会公开所指向的基础节点。  <xref:System.Xml.XPath.XPathNodeIterator> 类中可用的方法和属性使您能够获取当前节点中的信息。  有关可用方法和属性的列表，请参见 [XPathNodeIterator 成员](frlrfsystemxmlxpathxpathnodeiteratormemberstopic)。  
+# <a name="xpathnodeiterator-in-transformations"></a>转换中的 XPathNodeIterator
+<xref:System.Xml.XPath.XPathNodeIterator> 提供的方法可以循环访问执行 XML 路径语言 (XPath) 查询所创建的节点集或者使用 node-set 方法转换成节点集的结果树片段。 <xref:System.Xml.XPath.XPathNodeIterator> 使您能够循环访问该节点集内的节点。 检索到节点集后，<xref:System.Xml.XPath.XPathNodeIterator> 类提供对选定节点集的只读、只进游标。 该节点集以文档顺序创建，因此调用此方法会移到文档顺序中的下一个节点。 <xref:System.Xml.XPath.XPathNodeIterator> 不生成节点集内所有节点的节点树， 而是提供数据的单节点窗口，当您在树中浏览时，会公开所指向的基础节点。 <xref:System.Xml.XPath.XPathNodeIterator> 类中可用的方法和属性使您能够获取当前节点中的信息。 有关可用方法和属性的列表，请参阅<xref:System.Windows.Forms.ToolBar>。  
   
- 由于 <xref:System.Xml.XPath.XPathNodeIterator> 在 XPath 查询创建的节点集中移动，并且只向前移动，因此，移动方法是使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法。  此方法的返回类型是 `Boolean`，如果移到下一选定节点，则返回 `true`，如果再也没有其他选定节点，则返回 `false`。  如果返回 `true`，下表显示了可用的属性：  
+ 由于 <xref:System.Xml.XPath.XPathNodeIterator> 在 XPath 查询创建的节点集中移动，并且只向前移动，因此，移动方法是使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法。 此方法的返回类型是 `Boolean`，如果移到下一选定节点，则返回 `true`，如果再也没有其他选定节点，则返回 `false`。 如果返回 `true`，下表显示了可用的属性：  
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -32,9 +33,9 @@ caps.handback.revision: 3
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- 第一次查看一个节点集时，必须调用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 以将 <xref:System.Xml.XPath.XPathNodeIterator> 定位在选定节点集的第一个节点上。  这样可以编写 while 循环。  
+ 第一次查看一个节点集时，必须调用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 以将 <xref:System.Xml.XPath.XPathNodeIterator> 定位在选定节点集的第一个节点上。 这样可以编写 while 循环。  
   
- 以下代码示例显示如何将 <xref:System.Xml.XPath.XPathNodeIterator> 作为 <xref:System.Xml.Xsl.XsltArgumentList> 中的参数传递给 <xref:System.Xml.Xsl.XslTransform>。  代码输入是 **books.xml**，样式表是 **text.xsl**。  文件 **test.xml** 是 <xref:System.Xml.XPath.XPathDocument>。  
+ 以下代码示例显示如何将 <xref:System.Xml.XPath.XPathNodeIterator> 作为 <xref:System.Xml.Xsl.XslTransform> 中的参数传递给 <xref:System.Xml.Xsl.XsltArgumentList>。 代码输入是**books.xml**，样式表是**text.xsl**。 文件**test.xml**是<xref:System.Xml.XPath.XPathDocument>。  
   
 ```vb  
 Imports System  
@@ -63,7 +64,6 @@ Public Class sample
       xslt.Transform(xd, arg, strmTemp, Nothing)  
    End Sub 'Main  
 End Class 'sample  
-  
 ```  
   
 ```csharp  
@@ -96,9 +96,9 @@ public class sample
 }  
 ```  
   
-## books.xml  
+## <a name="booksxml"></a>books.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <!-- This file represents a fragment of a book store inventory database. -->  
 <bookstore specialty="novel">  
@@ -129,9 +129,9 @@ public class sample
 </bookstore>  
 ```  
   
-## test.xsl  
+## <a name="testxsl"></a>test.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
 xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">  
   
@@ -149,15 +149,15 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## test.xml  
+## <a name="testxml"></a>test.xml  
   
-```  
+```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## 输出 \(out.xml\)  
+## <a name="output-outxml"></a>输出 (out.xml)  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <out>  
   <title>Seven Years in Trenton</title>  
@@ -165,5 +165,5 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

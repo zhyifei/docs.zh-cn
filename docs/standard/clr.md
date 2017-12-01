@@ -1,12 +1,9 @@
 ---
 title: "公共语言运行时 (CLR)"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -21,16 +18,14 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98c9e59342c1a336fc6889464fce529feebc2414
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="common-language-runtime-clr"></a>公共语言运行时 (CLR)
 .NET Framework 提供了一个称为公共语言运行时的运行时环境，它运行代码并提供使开发过程更轻松的服务。  
@@ -81,7 +76,7 @@ ms.lasthandoff: 08/21/2017
 |4|4|  
 |4.5（包括 4.5.1 和 4.5.2）|4|  
 |4.6（包括 4.6.1 和 4.6.2）|4|
-|4.7|4|  
+|4.7 （包括 4.7.1）|4|  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -94,4 +89,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [版本和依赖关系](../../docs/framework/migration-guide/versions-and-dependencies.md)
-

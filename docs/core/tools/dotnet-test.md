@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -46,7 +45,7 @@ dotnet test [-h|--help]
 
 测试项目还必须指定测试运行程序。 使用普通 `<PackageReference>` 元素指定，如下方示例项目文件所示：
 
-[!code-xml[XUnit 基本模板](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="arguments"></a>参数
 
@@ -212,12 +211,11 @@ dotnet test [-h|--help]
 | <code>&#124;</code>      | 或       |
 | `&`      | AND      |
 
-使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
+可以将表达式括在括号中，使用条件运算符时 (例如， `(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>请参阅
 
- [框架和目标](../../standard/frameworks.md)   
+ [框架和目标](../../standard/frameworks.md)  
  [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
-

@@ -1,22 +1,28 @@
 ---
-title: "如何：启用流处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：启用流处理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：启用流处理
+# <a name="how-to-enable-streaming"></a>如何：启用流处理
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用缓冲传输或流传输来发送消息。 在默认的缓冲传输模式中，只有在一条消息全部传递完之后，接收方才能读取该消息。 在流传输模式中，不必等到消息全部传递完，接收方便可以开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
   
  若要启用流处理，请适当地定义 `OperationContract` 并在传输级别上启用流处理。  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  保留要进行流处理的数据的参数必须是方法中的唯一参数。 例如，如果要对输入消息进行流处理，则该操作必须正好具有一个输入参数。 同样，如果要对输出消息进行流处理，则该操作必须正好具有一个输出参数或一个返回值。  
   
-    2.  至少一个参数和返回值的类型必须是<xref:System.IO.Stream>，<xref:System.ServiceModel.Channels.Message>，或<xref:System.Xml.Serialization.IXmlSerializable>。  
+    2.  参数和返回值的类型中至少有一个必须是 <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> 或 <xref:System.Xml.Serialization.IXmlSerializable>。  
   
      下面是流处理数据的协定的示例。  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  下面示例中的配置段演示如何将 `TransferMode` 和自定义 HTTP 绑定上的 `basicHttpBinding` 属性设置为流处理。  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  下面的代码段演示如何将 `TransferMode` 和自定义 HTTP 绑定上的 `basicHttpBinding` 属性设置为流处理。  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>编写自定义流  
   
-1.  若要执行对数据流的每个区块的特殊处理，如正在发送或接收到，派生自定义流类从<xref:System.IO.Stream>。 与自定义流的示例一样，下面的代码包含 `GetReversedStream` 方法和 `ReverseStream` 类。  
+1.  若要在发送或接收数据流的每个块区时对其进行特殊处理，可从 <xref:System.IO.Stream> 派生一个自定义流类。 与自定义流的示例一样，下面的代码包含 `GetReversedStream` 方法和 `ReverseStream` 类。  
   
      `GetReversedStream` 创建并返回 `ReverseStream` 的新实例。 当系统从 `ReverseStream` 对象中读取时，发生实际处理。 `ReverseStream.Read` 方法从基础文件中读取字节块区，反转字节，然后返回反转的字节。 此方法不会反转整个文件内容；一次只能反转一个字节块区。 本示例演示在从流中读取内容或将内容写入到流中时如何执行流处理。  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>另请参阅  
- [较大的数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
+ [大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [流](../../../../docs/framework/wcf/samples/stream.md)

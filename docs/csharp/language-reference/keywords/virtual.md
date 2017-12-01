@@ -1,41 +1,22 @@
 ---
 title: "virtual（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- virtual keyword [C#]
+helpviewer_keywords: virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24ca77a0a645a17c0223437e73539bc04ba80f23
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="virtual-c-reference"></a>virtual（C# 参考）
 `virtual` 关键字用于修改方法、属性、索引器或事件声明，并使它们可以在派生类中被重写。 例如，此方法可被任何继承它的类替代：  
@@ -54,9 +35,9 @@ public virtual double Area()
   
  默认情况下，方法是非虚拟的。 不能替代非虚方法。  
   
- `virtual` 修饰符不能与 `static`、`abstract, private` 或 `override` 修饰符一起使用。 以下示例显示了虚拟属性：  
+ 不能使用`virtual`修饰符与`static`， `abstract`， `private`，或`override`修饰符。 以下示例显示了虚拟属性：  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
  除声明和调用语法不同外，虚拟属性的行为与抽象方法相似。  
   
@@ -75,18 +56,17 @@ public Cylinder(double r, double h): base(r, h) {}
   
  根据与方法关联的对象，下面的程序通过调用 `Area()` 方法的相应实现来计算并显示每个对象的相应区域。  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [多形性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [多态性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [替代](../../../csharp/language-reference/keywords/override.md)  
  [new](../../../csharp/language-reference/keywords/new.md)
-

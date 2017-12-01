@@ -18,11 +18,11 @@ ms.assetid: 4af2c1df-9e3a-48c1-83ac-b192986fc5bc
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f692ee1242af88dc6bd3938f7a00f3d11ed8ca7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d034c1daf495c50e299fec4c5bf399652dad08ce
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="default-values-table-c-reference"></a>默认值表（C# 参考）
 下表显示默认构造函数返回的值类型的默认值。 默认构造函数使用 `new` 运算符进行调用，如下所示：
@@ -44,7 +44,7 @@ int myInt = 0;
 |[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|
 |[byte](../../../csharp/language-reference/keywords/byte.md)|0|
 |[char](../../../csharp/language-reference/keywords/char.md)|'\0'|
-|[小数](../../../csharp/language-reference/keywords/decimal.md)|0.0M|
+|[小数](../../../csharp/language-reference/keywords/decimal.md)|0 M|
 |[double](../../../csharp/language-reference/keywords/double.md)|0.0D|
 |[enum](../../../csharp/language-reference/keywords/enum.md)|表达式 (E)0 生成的值，其中 E 是枚举标识符。|
 |[float](../../../csharp/language-reference/keywords/float.md)|0.0F|

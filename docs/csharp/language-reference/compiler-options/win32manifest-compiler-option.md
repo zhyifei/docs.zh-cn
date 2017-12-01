@@ -1,42 +1,23 @@
 ---
 title: "-win32manifest（C# 编译器选项）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest（C# 编译器选项）
 使用 **/win32manifest** 选项可以指定要嵌入到项目的可迁移可执行 (PE) 文件中的用户定义的 Win32 应用程序清单文件。  
@@ -57,7 +38,7 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  此选项和 [/win32res（C# 编译器选项）](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)选项是互斥的。 如果尝试在同一命令行中同时使用这两个选项，将收到一个生成错误。  
   
- 如果应用程序没有用于指定请求执行级别的应用程序清单，将受到 Windows Vista 的用户帐户控制功能下的文件/注册表虚拟化的影响。 有关虚拟化的详细信息，请参阅 [Windows Vista Developer Story：针对用户帐户控制的 Windows Vista 应用程序开发要求](http://go.microsoft.com/fwlink/?LinkId=95452)。  
+ 没有应用程序清单，应用程序指定的请求的执行级别都将遵循在 Windows 中的用户帐户控制功能的文件/注册表虚拟化。 有关详细信息，请参阅[用户帐户控制](/windows/access-protection/user-account-control/user-account-control-overview)。  
   
  如果满足下列任一条件，则应用程序会受到虚拟化的影响：  
   
@@ -89,8 +70,7 @@ ms.lasthandoff: 07/28/2017
 </assembly>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [（C# 编译器选项）](../../../csharp/language-reference/compiler-options/index.md)   
- [/nowin32manifest（C# 编译器选项）](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+## <a name="see-also"></a>另请参阅  
+ [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+ [/nowin32manifest （C# 编译器选项）](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-

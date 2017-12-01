@@ -1,44 +1,25 @@
 ---
 title: "?: 运算符（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
 - :_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9abfe4ca6be29b54edd591b503069c15e02c3532
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 794ff53fe471ef23163503f59599b528df127e2e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>?: 运算符（C# 参考）
 条件运算符 (`?:`) 根据 Boolean 表达式的值返回两个值之一。 下面是条件运算符的语法。  
@@ -54,7 +35,7 @@ condition ? first_expression : second_expression;
   
  你可通过使用条件运算符表达可能更确切地要求 `if-else` 构造的计算。 例如，以下代码首先使用 `if` 语句，然后使用条件运算符将整数分类为正整数或负整数。  
   
-```  
+```csharp
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -73,13 +54,12 @@ classify = (input > 0) ? "positive" : "negative";
  无法重载条件运算符。  
   
 ## <a name="example"></a>示例  
- [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
+ [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 运算符](../../../csharp/language-reference/operators/index.md)   
- [if-else](../../../csharp/language-reference/keywords/if-else.md)   
- [?. 和 ? 运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 运算符](../../../csharp/language-reference/operators/index.md)  
+ [if-else](../../../csharp/language-reference/keywords/if-else.md)  
+ [?.和？运算符](../../../csharp/language-reference/operators/null-conditional-operators.md)  
  [??运算符](../../../csharp/language-reference/operators/null-conditional-operator.md)
-

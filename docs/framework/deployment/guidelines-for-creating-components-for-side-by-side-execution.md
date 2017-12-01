@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>并行执行的组件的创建指南
 创建适用于并行执行的托管应用程序或组件时，请遵循下列一般性准则：  
@@ -78,6 +71,5 @@ ms.lasthandoff: 07/28/2017
  仅当文件版本号更新时，[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 才允许用户替换程序集。 安装程序在安装时通常不会覆盖程序集，除非该程序集版本号较大。  
   
 ## <a name="see-also"></a>另请参阅  
- [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)   
+ [通过并行执行](../../../docs/framework/deployment/side-by-side-execution.md)  
  [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-

@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6d1e2738e8cdb546a1dcbb00689e5b4c360ddd04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b90ab7e38f40cb515166d4d08e0316ffb9061be3
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="operationscope"></a>OperationScope
 此示例演示如何使用消息传送活动（<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>），将现有的自定义活动作为工作流服务中的操作公开。 此示例包含一个名为 `OperationScope` 的新的自定义活动。 这样做的目的是，通过允许用户将其操作的主体作为自定义活动单独创作，然后使用 `OperationScope` 活动轻松地将这些活动作为服务操作公开，从而方便工作流服务的开发。 例如，对于一个采用两个 `Add` 参数并返回一个 `in` 参数的自定义 `out` 活动，可以通过将其拖放到 `Add` 中来将其作为工作流服务上的 `OperationScope` 操作公开。  
@@ -47,6 +47,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\OperationScope`  
-  
-## <a name="see-also"></a>另请参阅
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\OperationScope`

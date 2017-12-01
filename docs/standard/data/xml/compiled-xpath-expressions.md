@@ -1,39 +1,40 @@
 ---
-title: "已编译的 XPath 表达式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "已编译的 XPath 表达式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 已编译的 XPath 表达式
-<xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression> 类的静态 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 方法或 <xref:System.Xml.XPath.XPathNavigator> 类的 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 方法返回的已编译 XPath 查询。  
+# <a name="compiled-xpath-expressions"></a>已编译的 XPath 表达式
+<xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的静态 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法返回的已编译 XPath 查询。  
   
-## XPathExpression 类  
+## <a name="the-xpathexpression-class"></a>XPathExpression 类  
  如果多次使用相同的 XPath 查询，通过 <xref:System.Xml.XPath.XPathExpression> 对象表示的已编译 XPath 查询非常有用。  
   
- 例如，如果多次调用 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法，而不是每次使用表示 XPath 查询的字符串，请使用 <xref:System.Xml.XPath.XPathExpression> 类的 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 方法或 <xref:System.Xml.XPath.XPathNavigator> 类的 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 方法来编译并缓存 <xref:System.Xml.XPath.XPathExpression> 对象中的 XPath 查询，以便重复使用并提高性能。  
+ 例如，如果多次调用 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法，而不是每次使用表示 XPath 查询的字符串，请使用 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法来编译并缓存 <xref:System.Xml.XPath.XPathExpression> 对象中的 XPath 查询，以便重复使用并提高性能。  
   
  编译后，根据从 XPath 查询返回的类型，<xref:System.Xml.XPath.XPathExpression> 对象也许可以作为下列 <xref:System.Xml.XPath.XPathNavigator> 类方法的输入。  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=fullName>  
+-   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=fullName>  
+-   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
@@ -44,35 +45,35 @@ caps.handback.revision: 2
  下表介绍每种 W3C XPath 返回类型、其等效的 Microsoft .NET Framework 类型以及 <xref:System.Xml.XPath.XPathExpression> 对象基于其返回类型也许可以用于的方法。  
   
 |W3C XPath 返回类型|等效的 .NET Framework 类型|描述|方法|  
-|--------------------|---------------------------|--------|--------|  
-|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|未排序的节点集合，按照文档顺序创建，没有重复。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
+|---------------------------|------------------------------------|-----------------|-------------|  
+|`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|未排序的节点集合，按照文档顺序创建，没有重复。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|`true` 或 `false` 值。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 或<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|一个浮点数字。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|UCS 字符序列。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法允许将 XPath 表达式作为其参数。  <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法返回 <xref:System.Xml.XPath.XPathNavigator> 对象，而不是一种 W3C XPath 返回类型。  
+>  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法允许将 XPath 表达式作为其参数。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法返回 <xref:System.Xml.XPath.XPathNavigator> 对象，而不是一种 W3C XPath 返回类型。  
   
-### ReturnType 属性  
- 在 XPath 查询编译为 <xref:System.Xml.XPath.XPathExpression> 对象之后，可以使用 <xref:System.Xml.XPath.XPathExpression> 对象的 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 属性来确定 XPath 查询返回的内容。  
+### <a name="the-returntype-property"></a>ReturnType 属性  
+ 在 XPath 查询编译为 <xref:System.Xml.XPath.XPathExpression> 对象之后，可以使用 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 对象的 <xref:System.Xml.XPath.XPathExpression> 属性来确定 XPath 查询返回的内容。  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 属性返回表示 W3C XPath 返回类型的下列 <xref:System.Xml.XPath.XPathResultType> 枚举值之一。  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType>  
+-   <xref:System.Xml.XPath.XPathResultType.String>  
   
- 以下示例使用 <xref:System.Xml.XPath.XPathExpression> 对象从 `books.xml` 文件中返回一个数字和一个节点集。  每个 <xref:System.Xml.XPath.XPathExpression> 对象的 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 属性以及 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法的返回结果将写入控制台。  
+ 以下示例使用 <xref:System.Xml.XPath.XPathExpression> 对象从 `books.xml` 文件中返回一个数字和一个节点集。 每个 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 对象的 <xref:System.Xml.XPath.XPathExpression> 属性以及 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法的返回结果将写入控制台。  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -118,20 +119,20 @@ Console.WriteLine(nodes.Current.Value);
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-### 性能更强的 XPath 表达式  
- 为了获得更好的性能，请尽可能在查询中使用最具体的 XPath 表达式。  例如，如果 `book` 节点是 `bookstore` 节点的子节点，并且 `bookstore` 节点是 XML 文档的顶级元素，使用 XPath 表达式 `/bookstore/book` 比使用 `//book` 速度更快。  `//book` XPath 表达式将扫描 XML 树中的每个节点来标识匹配的节点。  
+### <a name="higher-performance-xpath-expressions"></a>性能更强的 XPath 表达式  
+ 为了获得更好的性能，请尽可能在查询中使用最具体的 XPath 表达式。 例如，如果 `book` 节点是 `bookstore` 节点的子节点，并且 `bookstore` 节点是 XML 文档的顶级元素，使用 XPath 表达式 `/bookstore/book` 比使用 `//book` 速度更快。 `//book` XPath 表达式将扫描 XML 树中的每个节点来标识匹配的节点。  
   
- 此外，如果选择条件很简单，使用 <xref:System.Xml.XPath.XPathNavigator> 类提供的节点集浏览方法的性能可能会强于 <xref:System.Xml.XPath.XPathNavigator> 类提供的选择方法。  例如，如果需要选择当前节点的第一个子级，使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 方法比使用 `child::*[1]` XPath 表达式和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法速度更快。  
+ 此外，如果选择条件很简单，使用 <xref:System.Xml.XPath.XPathNavigator> 类提供的节点集浏览方法的性能可能会强于 <xref:System.Xml.XPath.XPathNavigator> 类提供的选择方法。 例如，如果需要选择当前节点的第一个子级，使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 方法比使用 `child::*[1]` XPath 表达式和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法速度更快。  
   
- 有关 <xref:System.Xml.XPath.XPathNavigator> 类的节点集导航方法的更多信息，请参见[使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)。  
+ 有关节点集浏览方法<xref:System.Xml.XPath.XPathNavigator>类，请参阅[节点设置的导航使用 XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)。  
   
-## 请参阅  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [使用 XPathNavigator 选择 XML 数据](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)   
- [使用 XPathNavigator 计算 XPath 表达式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)   
- [使用 XPathNavigator 匹配节点](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)   
- [XPath 查询识别的节点类型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [使用 XPathNavigator 选择 XML 数据](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [使用 XPathNavigator 计算 XPath 表达式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [使用 XPathNavigator 匹配节点](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [XPath 查询识别的节点类型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  [XPath 查询和命名空间](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

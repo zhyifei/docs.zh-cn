@@ -20,11 +20,11 @@ caps.latest.revision: "5"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 4072574d1451655ba303af257c87c309c79dfc82
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: c7998ebe8c136c8ca8056510954edba7aa291b61
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编写和执行针对查询[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
@@ -216,7 +216,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.Math.Round%28System.Decimal%29>|`decimal round(decimal p0)`|  
 |<xref:System.Math.Round%28System.Double%29>|`double round(double p0)`|  
   
-|<xref:System.Linq.Expressions.Expression?qualifyHint=False&autoUpgrade=True> 成员|支持的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函数|  
+|<xref:System.Linq.Expressions.Expression> 成员|支持的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函数|  
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Linq.Expressions.Expression.TypeIs%28System.Linq.Expressions.Expression%2CSystem.Type%29>|`bool isof(type p0)`|  
   

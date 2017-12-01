@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型 #
 
@@ -34,7 +34,7 @@ C# 提供内置的元组析构支持，可在单个操作中解包一个元组�
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-有两种方法可用于析构元组：
+有三种方法可以解构元组：
 
 - 可以在括号内显式声明每个字段的类型。 以下示例使用此方法来析构由 `QueryCityData` 方法返回的 3 元组。
 
@@ -50,9 +50,15 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     这很麻烦，不建议这样做。
 
+- 最后，你可能会为已声明的变量解构元组。
+
+    [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
+
 请注意，即使元组中的每个字段都具有相同的类型，也不能在括号外指定特定类型。 这会生成编译器错误 CS8136：“析构 var (...) 形式不允许对 var 使用特定类型。”
 
 请注意，还必须将元组的每个元素分配给一个变量。 如果省略任何元素，编译器将生成错误 CS8132，“无法将 ‘x’ 元素的元组析构为 ‘y’ 变量”。
+
+请注意不能混合使用声明和赋值给左侧的现有变量的析构。 编译器将生成错误 CS8184，"析构能混合使用声明和左左表达式。" 当成员包括新声明和现有变量。
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用放弃析构元组元素
 

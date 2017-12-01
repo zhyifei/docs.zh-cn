@@ -1,41 +1,22 @@
 ---
 title: "int（C# 参考）"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - int_CSharpKeyword
 - int
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- int keyword [C#]
+helpviewer_keywords: int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7acb8bb482ebf8f5c2b508e7cfd45b5b64aae3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
-ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="int-c-reference"></a>int（C# 参考）
 
@@ -43,22 +24,26 @@ ms.lasthandoff: 08/22/2017
   
 |类型|范围|大小|.NET Framework 类型|默认值|  
 |----------|-----------|----------|-------------------------|-------------------|  
-|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=fullName>|0|  
+|`int`|-2,147,483,648 到 2,147,483,647|带符号的 32 位整数|<xref:System.Int32?displayProperty=nameWithType>|0|  
   
 ## <a name="literals"></a>文本  
  
-可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `int` 变量。  如果整数文本在 `int` 范围之外（即，如果它小于 <xref:System.Int32.MinValue?displayProperty=fullName> 或大于 <xref:System.Int32.MaxValue?displayProperty=fullName>），会发生编译错误。 
+可以通过为其分配十进制文本、十六进制文本或（从 C# 7 开始）二进制文本来声明和初始化 `int` 变量。  如果整数文本在 `int` 范围之外（即，如果它小于 <xref:System.Int32.MinValue?displayProperty=nameWithType> 或大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>），会发生编译错误。 
 
 在以下示例中，表示为十进制、十六进制和二进制文本且等于 90,946 的整数被分配给 `int` 值。  
   
-[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
+[!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 
 > [!NOTE] 
 > 使用前缀 `0x` 或 `0X` 表示十六进制文本，使用前缀 `0b` 或 `0B` 表示二进制文本。 十进制文本没有前缀。 
 
-从 C# 7 开始，还可以使用下划线字符 `_` 作为数字分隔符，以增强可读性，如下例所示。
+C# 从 7 开始，已添加几个功能以增强可读性。 
+ - C# 7.0 允许使用下划线字符， `_`，作为数字分隔符。
+ - C# 7.2 允许`_`前缀后要使用作为二进制或十六进制文本中，数字分隔符。 十进制文本不允许具有前导下划线。
 
-[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
+下面显示了一些示例。
+
+[!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
  
  整数文本还可以包括一个表示类型的后缀，尽管没有表示 `int` 类型的后缀。 如果整数文本没有后缀，则其类型为以下类型中可表示其值的第一个类型： 
 
@@ -98,12 +83,11 @@ int y = (int)3.0;    // OK: explicit conversion.
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Int32>   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 关键字](../../../csharp/language-reference/keywords/index.md)   
- [整型类型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.Int32>  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+ [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

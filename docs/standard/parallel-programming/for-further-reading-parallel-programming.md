@@ -1,36 +1,38 @@
 ---
-title: "For Further Reading (Parallel Programming) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasks, further reading"
+title: "其他阅读材料（并行编程）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 5a2477458273e5beef6b67069dce7e818906b8b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# For Further Reading (Parallel Programming)
-以下资源包含有关 .NET Framework 中的并行编程的附加信息：  
+# <a name="for-further-reading-parallel-programming"></a>其他阅读材料（并行编程）
+以下资源包含有关.NET Framework 中的并行编程的其他信息：  
   
--   MSDN 网站上的 [Parallel Computing Developer Center](http://go.microsoft.com/fwlink/?LinkID=160570)（并行计算开发人员中心）包含一些链接，这些链接指向有关在本机 C\+\+ 和 .NET Framework 和本地C\+\+中进行并行编程的最新内容和论坛帖子。  
+-   [并行计算开发人员中心](http://go.microsoft.com/fwlink/?LinkID=160570)在 MSDN Web 上找到站点具有最新内容的链接和论坛帖子有关在.NET Framework 中，并在本机 c + + 中的并行编程。  
   
--   MSDN 博客网站上的 [Parallel Programming with .NET blog](http://go.microsoft.com/fwlink/?LinkID=169627)（.NET 并行编程博客）包含许多有关 .NET Framework 中的并行编程的深入文章。  
+-   [使用.NET 博客进行并行编程](http://go.microsoft.com/fwlink/?LinkID=169627)MSDN 上的博客站点包含有关.NET Framework 中的并行编程的许多深入文章。  
   
--   MSDN 博客网站上的 [Concurrency Visualizer blog](http://go.microsoft.com/fwlink/?LinkID=169630)（并发可视化工具博客）论述新的性能分析工具，[!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]的某些版本中附带了该工具。  
+-   [并发可视化工具博客](http://go.microsoft.com/fwlink/?LinkID=169630)MSDN 博客上站点介绍新的性能分析工具中的某些版本包含[!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]。  
   
--   可在 MSDN 论坛网站上的 [Parallel Extensions forum](http://go.microsoft.com/fwlink/?LinkID=169628)（并行扩展论坛）中提出和回答有关并行编程的问题。  
+-   [并行扩展论坛](http://go.microsoft.com/fwlink/?LinkID=169628)上 MSDN 论坛站点是从中提出有关的并行编程的问题和回答。  
   
--   MSDN 代码库网站上的 [Parallel Extensions Samples](http://go.microsoft.com/fwlink/?LinkID=165717) （并行扩展示例）页包含许多演示中级和高级并行编程技术的示例。  
+-   [并行扩展示例](http://go.microsoft.com/fwlink/?LinkID=165717)MSDN 代码库网站上的页包含许多演示中间和高级的并行编程技术的示例。  
   
-## 请参阅  
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [并行编程](../../../docs/standard/parallel-programming/index.md)  
  [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](http://go.microsoft.com/fwlink/?LinkID=185142)

@@ -8,30 +8,26 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
+ms.openlocfilehash: f79ae387b123527b3795a2e12a68bd153b308f81
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/27/2017
 ---
-
-# <a name="install-the-net-framework-on-windows-xp"></a>在 Windows XP 上安装 .NET Framework
+# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>在 Windows XP 和 Windows Server 2003 上安装.NET Framework
 
 > [!NOTE]
-> Microsoft 不再支持 Windows XP。 建议升级到受支持的 Windows 10，其支持最新版 .NET Framework。 本文档仅作为疑难解答实用指南提供。
+> Microsoft 不再支持 Windows XP。 我们建议你升级到 Windows 10，也不能支持包括.NET Framework 的最新版本。 本文档仅作为疑难解答实用指南提供。
 
-可能需要安装 .NET Framework，才能在 Windows XP 上运行应用。 可以按照以下说明操作，这些说明可能会对你有所帮助。 这些说明因需要安装的 .NET Framework 版本而异。
+在 Windows 上运行许多应用程序需要.NET Framework。 可以使用以下说明安装它。 你可能已到达此页上后尝试运行应用程序和您的计算机上看到以下对话框。
 
-## <a name="net-framework-45-and-later"></a>.NET Framework 4.5 及更高版本
+![无法启动此应用程序](./media/this-application-could-not-be-started.png)
 
-无法在 Windows XP 上安装 .NET Framework 4.5 或更高版本。 相反，必须升级到更高版本的 Windows，才能使用更高版本的 .NET Framework。
-
-.NET Framework 4.7 包含在 [Windows 10 创意者更新](https://www.microsoft.com/software-download/windows10)中。
+这些说明将帮助你安装需要的.NET Framework 版本。 [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47)是最新版本。 它不支持在 Windows XP 和 Windows Server 2003。 包含与它是[Windows 10 秋季创建者 Update](https://www.microsoft.com/software-download/windows10)和[Windows Server 2016 版本 1709年](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)。
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-可以在 Windows XP 上安装 [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834)。 .NET Framework 4.0.3 要求先安装 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)。 Microsoft 不再支持这两个版本的 .NET Framework。
+[.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834)是最新支持.NET Framework 版本在 Windows XP 和 Windows Server 2003。 .NET Framework 4.0.3 要求先安装 [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834)。 Microsoft 不再支持这两个版本的 .NET Framework。
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
@@ -43,7 +39,8 @@ ms.lasthandoff: 08/05/2017
 
 .NET Framework 3.5 可用于运行针对 .NET Framework 1.0-3.5 生成的应用程序。
 
-## <a name="help"></a>帮助
+## <a name="see-also"></a>请参阅
 
-如果无法确定已安装 .NET Framework 的正确版本，可以[联系 Microsoft 获取帮助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。
-
+[下载.NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
+[安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)   
+[安装.NET Framework 为开发人员](guide-for-developers.md)

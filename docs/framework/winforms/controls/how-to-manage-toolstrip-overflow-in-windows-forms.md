@@ -1,61 +1,62 @@
 ---
-title: "如何：在 Windows 窗体中管理 ToolStrip 溢出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CanOverflow 属性"
-  - "示例 [Windows 窗体], 工具栏"
-  - "Overflow 属性"
-  - "工具栏 [Windows 窗体], 管理溢出"
-  - "ToolStrip 控件 [Windows 窗体], 管理溢出"
+title: "如何：在 Windows 窗体中管理 ToolStrip 溢出"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], managing overflow
+- toolbars [Windows Forms], managing overflow
+- examples [Windows Forms], toolbars
+- CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在 Windows 窗体中管理 ToolStrip 溢出
-当 <xref:System.Windows.Forms.ToolStrip> 控件上的所有项超出已分配的空间时，可以对 <xref:System.Windows.Forms.ToolStrip> 启用溢出功能，并确定特定 <xref:System.Windows.Forms.ToolStripItem> 的溢出行为。  
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>如何：在 Windows 窗体中管理 ToolStrip 溢出
+当上的所有项<xref:System.Windows.Forms.ToolStrip>控件不适合在分配的空间，则可以在启用溢出功能<xref:System.Windows.Forms.ToolStrip>并确定特定的溢出行为<xref:System.Windows.Forms.ToolStripItem>s。  
   
- 当您将 <xref:System.Windows.Forms.ToolStripItem>（比已分配的空间需要更多的空间）添加到已给定窗体当前大小的 <xref:System.Windows.Forms.ToolStrip> 时，<xref:System.Windows.Forms.ToolStripOverflowButton> 会自动显示在 <xref:System.Windows.Forms.ToolStrip> 上。  <xref:System.Windows.Forms.ToolStripOverflowButton> 将显示，并且启用溢出的项将会移到下拉溢出菜单中。  这使您可以自定义和按照优先顺序排列 <xref:System.Windows.Forms.ToolStrip> 项适合不同窗体大小的方式。  当这些项发生溢出时，也可以通过使用 <xref:System.Windows.Forms.ToolStripItem.Placement%2A> 和 <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=fullName> 属性以及 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> 事件来更改这些项的外观。  如果在设计时或运行时扩大窗体，则在主 <xref:System.Windows.Forms.ToolStrip> 上可以显示更多的 <xref:System.Windows.Forms.ToolStripItem>，<xref:System.Windows.Forms.ToolStripOverflowButton> 甚至可能不会出现，直到您减小窗体的大小。  
+ 当你将添加<xref:System.Windows.Forms.ToolStripItem>需要更多的空间比已分配到的 s<xref:System.Windows.Forms.ToolStrip>给定窗体的当前大小，<xref:System.Windows.Forms.ToolStripOverflowButton>会自动出现在<xref:System.Windows.Forms.ToolStrip>。 <xref:System.Windows.Forms.ToolStripOverflowButton>出现，并启用了溢出的项移到下拉列表溢出菜单。 这使您可以自定义并划分其优先级如何你<xref:System.Windows.Forms.ToolStrip>项未能正确地调整到不同的窗体大小。 你还可以更改你的项的外观，当它们发生溢出时，通过使用<xref:System.Windows.Forms.ToolStripItem.Placement%2A>和<xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType>属性和<xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件。 如果你扩大窗体在设计时或运行的时，更<xref:System.Windows.Forms.ToolStripItem>s 可以显示在主<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripOverflowButton>甚至可能会消失，直到减小窗体的大小。  
   
-### 对 ToolStrip 控件启用溢出  
+### <a name="to-enable-overflow-on-a-toolstrip-control"></a>若要启用溢出的 ToolStrip 控件  
   
--   请确保，<xref:System.Windows.Forms.ToolStrip> 的 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 属性没有设置为 `false`。  默认值为 `True`。  
+-   确保<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>属性未设置为`false`为<xref:System.Windows.Forms.ToolStrip>。 默认值为 `True`。  
   
-     当 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 为 `True`（默认情况下）时，如果 <xref:System.Windows.Forms.ToolStripItem> 的内容超出 <xref:System.Windows.Forms.ToolStrip> 的水平宽度或 <xref:System.Windows.Forms.ToolStrip> 的垂直高度，<xref:System.Windows.Forms.ToolStripItem> 将被送入下拉溢出菜单。  
+     当<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>是`True`（默认值）、<xref:System.Windows.Forms.ToolStripItem>发送到下拉列表溢出菜单时的内容<xref:System.Windows.Forms.ToolStripItem>超过的水平宽度<xref:System.Windows.Forms.ToolStrip>或高度的垂直<xref:System.Windows.Forms.ToolStrip>。  
   
-### 指定特定 ToolStripItem 的溢出行为  
+### <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>若要指定特定 ToolStripItem 溢出行为  
   
--   将 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 属性设置为所需的值。  可能值有：`Always`、`Never` 和 `AsNeeded`。  默认值是 `AsNeeded`。  
+-   设置<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>属性<xref:System.Windows.Forms.ToolStripItem>到所需的值。 可能的匹配项是`Always`， `Never`，和`AsNeeded`。 Defaultis `AsNeeded`。  
   
     ```vb  
     toolStripTextBox1.Overflow = _  
     System.Windows.Forms.ToolStripItemOverflow.Never  
-  
     ```  
   
     ```csharp  
     toolStripTextBox1.Overflow = _  
     System.Windows.Forms.ToolStripItemOverflow.Never;  
-  
     ```  
   
-## 请参阅  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStripOverflowButton>   
- <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>   
- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>   
- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [ToolStrip 控件体系结构](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStripOverflowButton>  
+ <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  
+ <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
+ [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip 控件体系结构](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [ToolStrip 技术摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -242,6 +242,4 @@ ms.lasthandoff: 10/18/2017
   
 1.  通过运行 Cleanup.bat 删除位于 DbSetup 文件夹的 SQL Server 实例存储。  
   
-2.  从硬盘上删除源代码。  
-  
-## <a name="see-also"></a>另请参阅
+2.  从硬盘上删除源代码。

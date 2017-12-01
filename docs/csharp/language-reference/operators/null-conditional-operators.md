@@ -1,36 +1,18 @@
 ---
 title: "NULL 条件运算符（C# 和 Visual Basic）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c95b4079cf4e71c0ef9cd436ec230337f512229a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
-ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>NULL 条件运算符（C# 和 Visual Basic）
 用于在执行成员访问 (`?.`) 或索引 (`?[`) 操作之前，测试是否存在 NULL。  这些运算符可帮助编写更少的代码来处理 null 检查，尤其是对于下降到数据结构。  
@@ -92,10 +74,9 @@ PropertyChanged?.Invoke(e)
   
  有关详细信息，请参阅 [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [??（null 合并运算符）](null-conditional-operator.md)   
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)   
+## <a name="see-also"></a>另请参阅  
+ [??（null 合并运算符）](null-conditional-operator.md)  
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
  [Visual Basic 编程指南](../../../visual-basic/programming-guide/index.md)
-

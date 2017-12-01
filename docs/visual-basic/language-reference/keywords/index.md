@@ -1,46 +1,27 @@
 ---
 title: "关键字 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - reserved keywords, Visual Basic
 - keywords [Visual Basic]
-- Members, Visual Basic run-time
+- Members [Visual Basic], Visual Basic run-time
 - Visual Basic code, keywords
 - Visual Basic, language reference
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 7ee4d12659dd6da8c5290134c48d280692a496f4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
 下表列出了所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言关键字。  
@@ -66,7 +47,7 @@ ms.lasthandoff: 07/28/2017
 |[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
 |[Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[End 语句](../../../visual-basic/language-reference/statements/end-statement.md)|  
 |[End \<keyword>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|  
-|[错误](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
+|[错误](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[Exit](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[For (in For…Next)](../../../visual-basic/language-reference/statements/for-next-statement.md)|[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|  
 |[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|[GetXMLNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)|  
@@ -145,4 +126,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
-

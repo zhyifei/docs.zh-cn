@@ -4,20 +4,18 @@ description: "发布应用程序会创建运行应用程序所需的一组文件
 keywords: ".NET, .NET Core, 控制台应用程序, 发布, 部署"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
+ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 025e132cd5b6a44e98a1270e24ba6b2f9f12812c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 发布 Hello World 应用程序
 
 在[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序](vb-with-visual-studio.md)中，生成了 Hello World 控制台应用程序。 在[使用 Visual Studio 2017 调试 C# Hello World 应用程序](debugging-with-visual-studio.md)中，使用 Visual Studio 调试程序测试了应用程序。 至此，你已确定应用程序能够按预期运行，可以发布它以供其他用户运行了。 发布应用程序会创建运行应用程序所需的一组文件；可以通过将这些文件复制到目标计算机来进行部署。
@@ -40,15 +38,23 @@ ms.lasthandoff: 08/14/2017
 1. 导航到已发布的应用程序，它位于应用程序项目目录的 `bin\release\PublishOutput` 子目录中。 如下图所示，已发布的输出包括以下四个文件：
 
       * HelloWorld.deps.json
+
+         应用程序的运行时依赖项文件。 它定义.NET 核心组件和运行你的应用程序所需的库 （包括包含你的应用程序的动态链接库）。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+ 
       * HelloWorld.dll
+
+         包含你的应用程序的文件。 它是一个动态链接库，可以通过输入执行`dotnet HelloWorld.dll`命令在控制台窗口中。 
+
       * HelloWorld.pdb（对于部署是可选的）
+
+         包含调试符号文件。 尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。
+
       * HelloWorld.runtimeconfig.json
 
-   HelloWorld.pdb 文件包含调试符号。 尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。
+         应用程序的运行时配置文件。 它标识你的应用程序生成上运行的.NET 核心的版本。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
 
    ![显示已发布文件的控制台窗口](media/publishing-with-visual-studio/publishedfiles.png)
 
 发布过程中会生成依赖于框架的部署，在此类部署中，若系统上安装了 .NET Core，已发布的应用程序可在 .NET Core 支持的任何平台上运行。 用户可以通过在控制台窗口中发出 `dotnet HelloWorld.dll` 命令来运行应用程序。
 
 若要详细了解如何发布和部署 .NET Core 应用程序，请参阅 [.NET Core 应用程序部署](../../core/deploying/index.md)。
-

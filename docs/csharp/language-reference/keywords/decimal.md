@@ -12,11 +12,11 @@ ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 114c2c68f50704595b71f22386625091b5b05e8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 `decimal` 关键字指示 128 位数据类型。 与其他浮点型相比，`decimal` 类型具有更高的精度和更小的范围，这使它适合于财务和货币计算。 `decimal` 类型的大致范围和精度如下表所示。  
@@ -24,6 +24,8 @@ ms.lasthandoff: 11/21/2017
 |类型|大致范围|精度|.NET Framework 类型|  
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7.9 x 10<sup>28</sup> - 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> - 10<sup>28</sup>)|28-29 个有效位|<xref:System.Decimal?displayProperty=nameWithType>|  
+
+默认值`decimal`是 0 m。
   
 ## <a name="literals"></a>文本  
  如果希望实数被视为 `decimal` 类型，请使用后缀 m 或 M，例如：  

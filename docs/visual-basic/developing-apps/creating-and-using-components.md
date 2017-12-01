@@ -1,41 +1,22 @@
 ---
 title: "创建和使用组件 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- components [Visual Basic]
+helpviewer_keywords: components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
-组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
+组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
   
  组件的一个重要特性在于它们是可设计的，这意味着可以在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，对组件的基本设计时支持已内置于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。  
   
@@ -100,7 +81,6 @@ ms.lasthandoff: 07/28/2017
  解释如何解决常见问题。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：在 Windows 窗体中访问设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
- [如何：在设计模式下扩展控件的外观和行为](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
+ [如何： 访问 Windows 窗体中的设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
+ [如何： 扩展的外观和行为的控件在设计模式下](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
  [如何：在设计模式下执行控件的自定义初始化](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
-

@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 快速入门：集合 #
 
-本教程介绍了 C# 语言和 <xref:System.Collections.Generic.List%601> 类的基础知识。
+本快速入门介绍 C# 语言和的基础知识<xref:System.Collections.Generic.List%601>类。
 
-## <a name="a-simple-list-example"></a>简单的列表示例。
+本快速入门希望有一台计算机可用于开发。 .NET 主题[开始在 10 分钟后](https://www.microsoft.com/net/core)已设置你在 Mac、 PC 或 Linux 上的本地开发环境的说明。
 
-> [!NOTE]
-> 如果一开始就有使用 [dot.net](https://dot.net/) 编写的代码，表明已拥有此部分中编写的代码。 请跳转到[修改列表内容](#modify-list-contents)。
-
-若要更好地学习本课程，需要已完成联机快速入门课程，并已安装 [.NET Core SDK](http://dot.net/core) 和 [Visual Studio Code](https://code.visualstudio.com/)。 
+## <a name="a-basic-list-example"></a>一个基本的列表的示例。
 
 创建名为 list-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
 
+> [!NOTE]
+> 如果你刚刚完成[在 10 分钟内开始使用.NET](https://www.microsoft.com/net)，你可以继续使用你刚刚创建的 myApp 应用程序。
+ 
 在常用编辑器中，打开 Program.cs，并将现有代码替换为以下代码：
 
 ```csharp
@@ -54,7 +55,7 @@ namespace list_quickstart
 
 刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的快速入门课程中学到的概念。
 
-用于显示名称的代码使用内插字符串。 如果字符串前面有 `$` 符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
+用于显示名称的代码使用内插字符串。  如果 `$` 字符前面有 `string`，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换相应 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
 
 接下来将进一步探索。
     
@@ -213,10 +214,10 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑战
 
-可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs)，了解示例解决方案
+可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23)，了解示例解决方案
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 
-恭喜！已完成“列表集合”教程。
+祝贺你，你已完成列表快速入门。 您可以使用继续[简介类](introduction-to-classes.md)开发环境中的快速入门。
 
 若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。 还可以了解其他许多集合类型。

@@ -10,25 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
+ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="lambda-expressions"></a>Lambda 表达式 #
 
 Lambda 表达式是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
 
-- 将要执行的代码传递给异步方法，例如 @System.Threading.Tasks.Task.Run (System.Action)。
+- 传递代码是要执行到异步方法，如<xref:System.Threading.Tasks.Task.Run(System.Action)>。
 
 - 编写 [LINQ 查询表达式](linq/index.md)。
 
 - 创建[表达式树](expression-trees-building.md)。
 
-Lambda 表达式是可以表示为委托的代码，或者表示为表达式树的代码，它所表示的表达式树可以编译为委托。 Lambda 表达式的特定委托类型取决于其参数和返回值。 不返回值的 Lambda 表达式对应于 `Action` 委托，具体取决于其参数数量。 返回值的 Lambda 表达式对应于 `Func` 委托，具体取决于其参数数量。 例如，有 2 个参数但不返回值的 Lambda 表达式对应于 @System.Action%602 委托。 有 1 个参数并返回值的 Lambda 表达式对应于 @System.Func%602 委托。
+Lambda 表达式是可以表示为委托的代码，或者表示为表达式树的代码，它所表示的表达式树可以编译为委托。 Lambda 表达式的特定委托类型取决于其参数和返回值。 不返回值的 Lambda 表达式对应于 `Action` 委托，具体取决于其参数数量。 返回值的 Lambda 表达式对应于 `Func` 委托，具体取决于其参数数量。 例如，具有两个参数，但不返回值的 lambda 表达式对应于<xref:System.Action%602>委托。 Lambda 表达式，它具有一个参数并返回一个值对应于<xref:System.Func%602>委托。
 
 Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lambda-operator.md) `=>` 从其可执行代码中分离 lambda 参数列表。 若要创建 Lambda 表达式，需要在 lambda 运算符左侧指定输入参数（如果有），然后在另一侧输入表达式或语句块。 例如，单行 Lambda 表达式 `x => x * x` 指定名为 `x` 的参数并返回 `x` 的平方值。 如下面的示例所示，你可以将此表达式分配给委托类型：
 
@@ -84,13 +82,13 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 表达式和元祖 ##
 
-从 C# 7.0 开始，C# 语言为元祖提供内置支持。 可以提供一个元祖作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元祖。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。 
+从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。 
 
-可通过用括号括住用逗号分隔的组件列表来定义元祖。 以下示例使用包含 5 个组件的元祖将一系列数字传递给 Lambda 表达式，此 Lambda 表达式将每个值加倍，然后返回包含乘法运算结果的 5 个组件的元祖。
+可通过用括号括住用逗号分隔的组件列表来定义元组。 以下示例使用包含 5 个组件的元组将一系列数字传递给 Lambda 表达式，此 Lambda 表达式将每个值加倍，然后返回包含乘法运算结果的 5 个组件的元组。
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples1.cs#1)]
 
-通常，元组字段命名为 `Item1`、`Item2` 等等。但是，可以使用命名组件定义元祖，如以下示例所示。
+通常，元组字段命名为 `Item1`、`Item2` 等等。但是，可以使用命名组件定义元组，如以下示例所示。
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
 
@@ -98,7 +96,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda ##
 
-在其他实现中，LINQ to Objects 有一个输入参数，其类型是泛型委托 @System.Func%601 系列中的一种。 这些委托使用类型参数来定义输入参数的数量和类型，以及委托的返回类型。 `Func` 委托对于封装用户定义的表达式非常有用，这些表达式将应用于一组源数据中的每个元素。 例如 @System.Func%601 委托，其语法为：
+LINQ 到对象以及其他实现中，都具有其类型是一个输入的参数的<xref:System.Func%601>泛型委托系列。 这些委托使用类型参数来定义输入参数的数量和类型，以及委托的返回类型。 `Func` 委托对于封装用户定义的表达式非常有用，这些表达式将应用于一组源数据中的每个元素。 例如，考虑<xref:System.Func%601>委托，其语法是：
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -110,7 +108,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-参数类型为 @System.Linq.Expressions.Expression%601 时，也可以提供 Lambda 表达式，例如在 @System.Linq.Queryable 类型内定义的标准查询运算符中提供。 指定 @System.Linq.Expressions.Expression%601 参数时，lambda 编译为表达式树。 以下示例使用 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 标准查询运算符。
+你也可以提供 lambda 表达式，当自变量类型为<xref:System.Linq.Expressions.Expression%601>，例如在中定义的标准查询运算符<xref:System.Linq.Queryable>类型。 当指定<xref:System.Linq.Expressions.Expression%601>自变量，lambda 将编译为表达式树。 以下示例使用 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 标准查询运算符。
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -138,7 +136,7 @@ Lambda 类型推理的一般规则如下：
 
 - Lambda 的返回值（如果有）必须能够隐式转换为委托的返回类型。
 
-请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 @System.Linq.Expressions.Expression 类型。
+请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 <xref:System.Linq.Expressions.Expression> 类型。
 
 ## <a name="variable-scope-in-lambda-expressions"></a>Lambda 表达式中的变量范围 ##
 
@@ -163,4 +161,3 @@ Lambda 类型推理的一般规则如下：
 [LINQ（语言集成查询）](../standard/using-linq.md)   
 [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [表达式树](expression-trees.md)
-

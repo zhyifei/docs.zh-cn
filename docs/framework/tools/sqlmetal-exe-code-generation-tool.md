@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
 - code generation tool
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Erikre
 ms.author: erikre
 manager: erikre
+ms.openlocfilehash: fa4cf7baa3ca3ba19a733438920357034e8de193
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -64,7 +57,7 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |/server: \<name>|指定数据库服务器名称。|  
 |/database: \<name>|指定服务器上的数据库目录。|  
-|/user: \<name>|指定登录用户 ID。 默认值：使用 Windows 身份验证。|  
+|/user: \<name>|指定登录用户 ID。默认值：使用 Windows 身份验证。|  
 |/password: \<password>|指定登录密码。 默认值：使用 Windows 身份验证。|  
 |/conn: \<connection string>|指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
 |/timeout: \<seconds>|指定 SqlMetal 访问数据库时的超时值。 默认值：0（即没有时间限制）。|  
@@ -150,7 +143,6 @@ sqlmetal [options] [<input file>]
 >  如果对 Northwind 示例数据库应用 **/pluralize** 选项，请注意以下行为。 如果 SqlMetal 为表创建了行类型的名称，表名将采用单数形式。 如果它为表创建了 <xref:System.Data.Linq.DataContext> 属性，则表名将采用复数形式。 巧合的是，Northwind 示例数据库中的表名已采用复数形式。 因此，你将看不到这种效果。 尽管数据库表普遍命名为单数形式，但在 .NET 中，将集合命名为复数形式也是一种常见的做法。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
- [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
+ [如何： 在 Visual Basic 或 C# 中生成的对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-

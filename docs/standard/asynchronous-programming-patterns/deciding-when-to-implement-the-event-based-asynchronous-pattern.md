@@ -1,95 +1,98 @@
 ---
-title: "Deciding When to Implement the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: "确定何时实现基于事件的异步模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# Deciding When to Implement the Event-based Asynchronous Pattern
-基于事件的异步模式提供了一种公开类的异步行为的模式。  引入此模式后，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定义了两种公开异步行为的模式：基于 <xref:System.IAsyncResult?displayProperty=fullName> 接口的异步模式和基于事件的模式。  本主题介绍何时适合实现上述两种模式。  
+# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>确定何时实现基于事件的异步模式
+基于事件的异步模式公开异步行为的类提供的模式。 通过此模式中，引入[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]定义公开异步行为的两种模式： 基于异步模式<xref:System.IAsyncResult?displayProperty=nameWithType>接口，并且基于事件的模式。 本主题介绍当它适合于你要实现这两种模式。  
   
- 有关使用 <xref:System.IAsyncResult> 接口进行异步编程的更多信息，请参见 [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
+ 有关使用异步编程的详细信息<xref:System.IAsyncResult>接口，请参阅[基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
   
-## 一般原则  
- 一般而言，您应该在所有可能的情况下使用基于事件的异步模式公开异步功能。  但是，有些要求是基于事件的模式无法满足的。  在这些情况下，除实现基于事件的模式外，可能还需要实现 <xref:System.IAsyncResult> 模式。  
+## <a name="general-principles"></a>一般原则  
+ 一般情况下，应公开使用基于事件的异步模式尽可能的异步功能。 但是，没有基于事件的模式不能满足某些要求。 在这些情况下，你可能需要实现<xref:System.IAsyncResult>除了基于事件的模式的模式。  
   
 > [!NOTE]
->  不实现基于事件的模式而只实现 <xref:System.IAsyncResult> 模式的情况非常少见。  
+>  很少<xref:System.IAsyncResult>模式，以实现没有还实现基于事件的模式。  
   
-## 准则  
- 下面的列表介绍有关应在何时实现基于事件的异步模式的准则：  
+## <a name="guidelines"></a>准则  
+ 以下列表介绍应在何时实现基于事件的异步模式的准则：  
   
--   将基于事件的模式用作默认 API 以公开类的异步行为。  
+-   使用作为默认 API 基于事件的模式公开异步行为为您的类。  
   
--   当类主要用在客户端应用程序（例如 Windows 窗体）中时，不要公开 <xref:System.IAsyncResult> 模式。  
+-   不会公开<xref:System.IAsyncResult>模式时你类主要用于在客户端应用程序，例如 Windows 窗体。  
   
--   仅在必须公开 <xref:System.IAsyncResult> 模式才能满足要求时公开该模式。  例如，需要与现有 API 兼容时可能需要公开 <xref:System.IAsyncResult> 模式。  
+-   仅公开<xref:System.IAsyncResult>模式时才能满足你的要求。 例如，与现有 API 兼容性可能需要公开<xref:System.IAsyncResult>模式。  
   
--   不要在不公开基于事件的模式时公开 <xref:System.IAsyncResult> 模式。  
+-   不会公开<xref:System.IAsyncResult>模式而不会还公开基于事件的模式。  
   
--   如果必须公开 <xref:System.IAsyncResult> 模式，应将其作为高级选项公开。  例如，如果生成一个代理对象，则应默认生成基于事件的模式，其中具有一个生成 <xref:System.IAsyncResult> 模式的选项。  
+-   如果必须公开<xref:System.IAsyncResult>模式，应将其作为一个高级选项。 例如，如果你生成一个代理对象，生成默认情况下，用于生成的选项的基于事件的模式<xref:System.IAsyncResult>模式。  
   
--   在 <xref:System.IAsyncResult> 模式实现上生成基于事件的模式实现。  
+-   在上生成基于事件的模式实现你<xref:System.IAsyncResult>模式实现。  
   
--   避免在同一个类上同时公开基于事件的模式和 <xref:System.IAsyncResult> 模式。  在“较高级别”的类上公开基于事件的模式，在“较低级别”的类上公开 <xref:System.IAsyncResult> 模式。  例如，比较 <xref:System.Net.WebClient> 组件上的基于事件的模式与 <xref:System.Web.HttpRequest> 类上的 <xref:System.IAsyncResult> 模式。  
+-   避免将公开这两个基于事件的模式和<xref:System.IAsyncResult>同一类上的模式。 公开"更高级别的"类上的基于事件的模式和<xref:System.IAsyncResult>模式上的"降低级别"的类。 例如，将基于事件的模式上进行比较<xref:System.Net.WebClient>组件<xref:System.IAsyncResult>模式上<xref:System.Web.HttpRequest>类。  
   
-    -   当为了提供兼容性需要在同一个类上公开基于事件的模式和 <xref:System.IAsyncResult> 模式时，同时公开这两种模式。  例如，如果已经释放了一个使用 <xref:System.IAsyncResult> 模式的 API，则需要保留 <xref:System.IAsyncResult> 模式以提供向后兼容性。  
+    -   公开基于事件的模式和<xref:System.IAsyncResult>兼容性需要它时位于同一类上的模式。 例如，如果你已释放使用的 API<xref:System.IAsyncResult>模式中，你将需要保留<xref:System.IAsyncResult>向后兼容性模式。  
   
-    -   如果得到的对象模型复杂性方面的优点大于分开实现的优点，则在同一个类上实现基于事件的模式和 <xref:System.IAsyncResult> 模式。  在一个类上同时公开两种模式比避免公开基于事件的模式效果更好。  
+    -   公开基于事件的模式和<xref:System.IAsyncResult>模式同一类上，如果生成的对象模型复杂性超过带来的好处的分隔实现。 它是更好的做法公开比避免公开基于事件的模式单个类上的这两种模式。  
   
-    -   如果必须在同一个类上同时公开基于事件的模式和 <xref:System.IAsyncResult> 模式，可使用设置为 <xref:System.ComponentModel.EditorBrowsableState> 的 <xref:System.ComponentModel.EditorBrowsableAttribute> 将 <xref:System.IAsyncResult> 模式实现标记为高级功能。  这指示设计环境（如 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense）不显示 <xref:System.IAsyncResult> 属性和方法。  这些属性和方法仍然是完全可用的，但使用 IntelliSense 的开发人员能够更清楚地查看 API。  
+    -   如果你必须公开这两个基于事件的模式和<xref:System.IAsyncResult>上单个类，使用模式<xref:System.ComponentModel.EditorBrowsableAttribute>设置为<xref:System.ComponentModel.EditorBrowsableState.Advanced>标记<xref:System.IAsyncResult>模式实现作为一项高级功能。 这将指示设计环境中，如[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]IntelliSense，不希望显示<xref:System.IAsyncResult>属性和方法。 这些属性和方法仍将完全不可用，但通过 IntelliSense 工作的开发人员可以更加清晰的视图的 api。  
   
-## 在公开基于事件的模式的同时公开 IAsyncResult 模式的条件  
- 在前面介绍的许多情形中，基于事件的异步模式具有诸多优点，但是，如果性能是最重要的考虑因素，则需要了解这种模式同时也具有一些缺点。  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>用于公开 IAsyncResult 模式除了基于事件的模式的条件  
+ 虽然基于事件的异步模式有许多好处，前面所述的情况下，它具有某些缺点，你应注意如果性能是您最重要的要求。  
   
- 基于事件的模式不如 <xref:System.IAsyncResult> 模式的情形有三种：  
+ 有三种基于事件的模式不能解决的方案以及<xref:System.IAsyncResult>模式：  
   
--   被阻止，正在等待一个 <xref:System.IAsyncResult>  
+-   阻止，正在等待上一个<xref:System.IAsyncResult>  
   
--   被阻止，正在等待多个 <xref:System.IAsyncResult> 对象  
+-   阻止正在等待多个<xref:System.IAsyncResult>对象  
   
--   轮询 <xref:System.IAsyncResult> 上的完成情形  
+-   轮询上完成<xref:System.IAsyncResult>  
   
- 您可以将基于事件的模式用于这些情形，但这种方式比使用 <xref:System.IAsyncResult> 模式较为麻烦。  
+ 你可以通过使用基于事件的模式，来满足这些方案，但这种比较麻烦比使用<xref:System.IAsyncResult>模式。  
   
- 开发人员经常将 <xref:System.IAsyncResult> 模式用于通常具有很高的性能要求的服务。  例如，对完成情形的轮询就是一种高性能服务器技术。  
+ 开发人员通常使用<xref:System.IAsyncResult>对于通常具有非常高的性能要求的服务的模式。 例如，对完成情形轮询是高性能服务器技术。  
   
- 此外，基于事件的模式不如 <xref:System.IAsyncResult> 模式有效，因为它创建更多的对象（尤其是 <xref:System.EventArgs>），而且它会在线程之间进行同步。  
+ 此外，基于事件的模式是效率低于<xref:System.IAsyncResult>模式，因为它会创建更多的对象，尤其是<xref:System.EventArgs>，而是因为它将同步的线程。  
   
- 下表列出了决定使用 <xref:System.IAsyncResult> 模式时应遵循的一些建议：  
+ 以下列表显示了一些建议，如果你决定使用，请按照<xref:System.IAsyncResult>模式：  
   
--   仅在明确要求支持 <xref:System.Threading.WaitHandle> 和 <xref:System.IAsyncResult> 对象时公开 <xref:System.IAsyncResult> 模式。  
+-   仅公开<xref:System.IAsyncResult>模式时特别需要支持<xref:System.Threading.WaitHandle>或<xref:System.IAsyncResult>对象。  
   
--   仅当已经具有使用 <xref:System.IAsyncResult> 模式的现有 API 时公开 <xref:System.IAsyncResult> 模式。  
+-   仅公开<xref:System.IAsyncResult>模式时必须使用的现有 API<xref:System.IAsyncResult>模式。  
   
--   如果已经具有基于 <xref:System.IAsyncResult> 模式的现有 API，则应考虑在下一个版本中也公开基于事件的模式。  
+-   如果你有现有 API 基于<xref:System.IAsyncResult>模式，请考虑也公开在下一个版本中的基于事件的模式。  
   
--   仅当具有高性能要求，而且经过验证发现基于事件的模式无法满足此要求而 <xref:System.IAsyncResult> 模式能够满足时，才公开 <xref:System.IAsyncResult> 模式。  
+-   仅公开<xref:System.IAsyncResult>如果你有高性能要求的已验证的模式不满足由基于事件的模式，但它可以通过满足<xref:System.IAsyncResult>模式。  
   
-## 请参阅  
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)   
- [实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>另请参阅  
+ [演练：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [使用基于事件的异步模式进行多线程编程](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [实现基于事件的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

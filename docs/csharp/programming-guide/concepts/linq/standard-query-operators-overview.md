@@ -1,30 +1,21 @@
 ---
 title: "标准查询运算符概述 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bcf64b87eb7fa1cba863f809dc11ab0ccb68ea9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ffb68dd9c1a488e1367117bae639805ba9167551
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="standard-query-operators-overview-c"></a>标准查询运算符概述 (C#)
 *标准查询运算符*是组成 LINQ 模式的方法。 这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。 标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。  
@@ -121,10 +112,9 @@ foreach (var obj in query)
  [聚合运算 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable>   
- [LINQ 查询简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)   
- [标准查询运算符的查询表达式语法 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [LINQ 查询简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [标准查询运算符 (C#) 的查询表达式语法](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [标准查询运算符按执行方式的分类 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
  [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-

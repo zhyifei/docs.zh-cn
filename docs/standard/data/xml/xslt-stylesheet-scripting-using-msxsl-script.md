@@ -1,90 +1,91 @@
 ---
-title: "使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XSLT 样式表脚本使用&lt;msxsl: script&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 35f24c0a033748917b465510d4f70b75946a0a74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT 样式表脚本使用&lt;msxsl: script&gt;
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。  可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 \(XSLT\) 转换。  有关更多信息，请参见[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
   
- <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  加载样式表时，任何已定义的函数都会通过包装在类定义中来编译为 Microsoft 中间语言 \(MSIL\)，因此不会有任何性能损失。  
+ <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。 加载样式表时，任何已定义的函数都会通过包装在类定义中来编译为 Microsoft 中间语言 (MSIL)，因此不会有任何性能损失。  
   
  `<msxsl:script>` 元素定义如下：  
   
-```  
+```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
 ```  
   
  其中 `msxsl` 是绑定到命名空间 `urn:schemas-microsoft-com:xslt` 的前缀。  
   
- `language` 属性不是强制属性，但如果指定该属性，其值必须是下列值之一：C\#、VB、JScript、JavaScript、VisualBasic 或 CSharp。  如果未指定，则默认语言为 JScript。  `language-name` 不区分大小写，所以“JavaScript”和“javascript”等效。  
+ `language` 属性不是强制属性，但如果指定该属性，其值必须是下列值之一：C#、VB、JScript、JavaScript、VisualBasic 或 CSharp。 如果未指定，则默认语言为 JScript。 `language-name` 不区分大小写，所以“JavaScript”和“javascript”等效。  
   
- `implements-prefix` 属性是必选项。  此属性用于声明命名空间并将其与脚本块关联。  此属性的值是表示命名空间的前缀。  此命名空间可以在样式表中的某一位置定义。  
+ `implements-prefix` 属性是必选项。 此属性用于声明命名空间并将其与脚本块关联。 此属性的值是表示命名空间的前缀。 此命名空间可以在样式表中的某一位置定义。  
   
  因为 `msxsl:script` 元素属于命名空间 `urn:schemas-microsoft-com:xslt`，因此样式表必须包含命名空间声明 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`。  
   
- 如果脚本的调用方没有 [UnmanagedCode](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 访问权限，则样式表中的脚本将永不编译并且对 <xref:System.Xml.Xsl.XslTransform.Load%2A> 的调用将失败。  
+ 如果该脚本的调用方不具有<xref:System.Security.Permissions.SecurityPermissionFlag>访问权限，则将永不编译样式表中的脚本和对<xref:System.Xml.Xsl.XslTransform.Load%2A>将失败。  
   
  如果调用方有 `UnmanagedCode` 权限，则脚本将编译，但允许的操作取决于加载时提供的证据。  
   
- 如果使用一个接受 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XPath.XPathNavigator> 的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法加载样式表，则需要使用接受 <xref:System.Security.Policy.Evidence> 实参作为其形参的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 重载。  为提供证据，调用方必须有为脚本程序集提供 `Evidence` 的 [ControlEvidence](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 权限。  如果调用方没有此权限，则可以将 `Evidence` 参数设置为 `null`。  这会导致 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函数在发现脚本时失败。  `ControlEvidence` 权限是一种权力很大的权限，只应授予高度可信任的代码。  
+ 如果使用一个接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法加载样式表，则需要使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 实参作为其形参的 <xref:System.Security.Policy.Evidence> 重载。 若要提供证据，调用方必须具有<xref:System.Security.Permissions.SecurityPermissionFlag>权提供`Evidence`脚本程序集。 如果调用方没有此权限，则可以将 `Evidence` 参数设置为 `null`。 这会导致 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函数在发现脚本时失败。 `ControlEvidence` 权限是一种权力很大的权限，只应授予高度可信任的代码。  
   
- 若要从您的程序集中得到证据，请使用 `this.GetType().Assembly.Evidence`。  若要从统一资源标识符 \(URI\) 得到证据，请使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
+ 若要从您的程序集中得到证据，请使用 `this.GetType().Assembly.Evidence`。 若要从统一资源标识符 (URI) 得到证据，请使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用接受 <xref:System.Xml.XmlResolver> 但没有 `Evidence` 的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法，则程序集的安全区域默认为“完全信任”。  有关更多信息，请参见 <xref:System.Security.SecurityZone> 和 [命名权限集](http://msdn.microsoft.com/zh-cn/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅<xref:System.Security.SecurityZone>和[命名权限集](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
- 函数可以在 `msxsl:script` 元素内声明。  下表显示了默认情况下支持的命名空间。  可以在列出的命名空间的外部使用类。  然而，这些类必须是完全限定的。  
+ 函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   
 |默认命名空间|描述|  
-|------------|--------|  
+|------------------------|-----------------|  
 |系统|系统类。|  
 |System.Collection|集合类。|  
 |System.Text|文本类。|  
 |System.Text.RegularExpressions|正则表达式类。|  
 |System.Xml|核心 XML 类。|  
 |System.Xml.Xsl|XSLT 类。|  
-|System.Xml.XPath|XML 路径语言 \(XPath\) 类。|  
+|System.Xml.XPath|XML 路径语言 (XPath) 类。|  
 |Microsoft.VisualBasic|用于 Microsoft Visual Basic 脚本的类。|  
   
- 声明函数时，该函数包含在脚本块中。  样式表可以包含多个脚本块，每个脚本块彼此独立运行。  也就是说，如果在脚本块的内部执行，则无法调用在其他脚本块中定义的函数，除非该脚本块声明为具有同一命名空间和同一脚本语言。  由于每个脚本块都可以使用自己的语言，因此脚本块的分析将遵照语言分析器的语法规则进行，必须使用适合所使用语言的语法。  例如，如果使用的是 C\# 脚本块，则在该块中使用 XML 注释节点 `<!-- an XML comment -->` 是错误的。  
+ 声明函数时，该函数包含在脚本块中。 样式表可以包含多个脚本块，每个脚本块彼此独立运行。 也就是说，如果在脚本块的内部执行，则无法调用在其他脚本块中定义的函数，除非该脚本块声明为具有同一命名空间和同一脚本语言。 由于每个脚本块都可以使用自己的语言，因此脚本块的分析将遵照语言分析器的语法规则进行，必须使用适合所使用语言的语法。 例如，如果使用的是 C# 脚本块，则在该块中使用 XML 注释节点 `<!-- an XML comment -->` 是错误的。  
   
- 由脚本函数定义的所提供的参数以及返回值必须是万维网联合会 \(W3C\) XPath 或 XSLT 类型之一。  下表显示了相应的 W3C 类型、等效的 .NET Framework 类（类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
+ 由脚本函数定义的所提供的自变量以及返回值必须是万维网联合会 (W3C) XPath 或 XSLT 类型之一。 下表显示了相应的 W3C 类型、 等效的.NET Framework 类 （类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
   
-|类型|等效的 .NET Framework 类（类型）|XPath 类型还是 XSLT 类型|  
-|--------|------------------------------|------------------------|  
+|类型|等效的.NET Framework 类 （类型）|XPath 类型还是 XSLT 类型|  
+|----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |数字|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 或 Decimal，则会将其强制转换为 Double，映射为 W3C XPath 类型的数字。  所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
+ 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 或 Decimal，则会将其强制转换为 Double，映射为 W3C XPath 类型的数字。 所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
   
  如果脚本函数使用上述类型以外的类型，或者如果函数在样式表加载到 <xref:System.Xml.Xsl.XslTransform> 对象中时不进行编译，则会引发异常。  
   
- 当使用  `msxsl:script` 元素时，强烈建议无论使用何种语言，都应将脚本放置在 CDATA 节内。  例如，下面的 XML 显示放置代码的 CDATA 节的模板。  
+ 使用时`msxsl:script`元素，强烈建议确保该脚本，而不考虑语言，将放置在 CDATA 节内。 例如，下面的 XML 显示放置代码的 CDATA 节的模板。  
   
-```  
+```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     <![CDATA[  
     ... your code here ...  
@@ -92,9 +93,9 @@ caps.handback.revision: 3
 </msxsl:script>  
 ```  
   
- 强烈建议将所有脚本内容都放置在 CDATA 节内，因为给定语言的运算符、标识符或分隔符有可能被错误地解释为 XML。  下面的示例显示如何在脚本中使用逻辑 AND 运算符。  
+ 强烈建议将所有脚本内容都放置在 CDATA 节内，因为给定语言的运算符、标识符或分隔符有可能被错误地解释为 XML。 下面的示例显示如何在脚本中使用逻辑 AND 运算符。  
   
-```  
+```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp>  
     public string book(string abc, string xyz)  
     {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
@@ -103,9 +104,9 @@ caps.handback.revision: 3
 </msxsl:script>  
 ```  
   
- 由于“&amp;”符没有转义，因此将引发异常。  将文档作为 XML 加载，并且不对  `msxsl:script` 元素标记之间的文本应用任何特殊处理。  
+ 由于“&”符没有转义，因此将引发异常。 文档加载为 XML，并且之间的文本应用任何特殊处理`msxsl:script`元素标记。  
   
-## 示例  
+## <a name="example"></a>示例  
  已知圆的半径，下面的示例使用嵌入脚本计算圆的周长。  
   
 ```vb  
@@ -138,7 +139,6 @@ Public Class Sample
     writer.Close()  
   End Sub   
 End Class  
-  
 ```  
   
 ```csharp  
@@ -173,10 +173,10 @@ public class Sample
 }  
 ```  
   
-## 输入  
+## <a name="input"></a>输入  
  number.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <data>  
   <circle>  
@@ -190,7 +190,7 @@ public class Sample
   
  calc.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
     xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
     xmlns:user="urn:my-scripts">  
@@ -221,9 +221,9 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
-```  
+```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
   <circle>  
     <radius>12</radius>  
@@ -236,5 +236,5 @@ public class Sample
 </circles>    
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -1,35 +1,36 @@
 ---
-title: "使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-# 使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证
-可以使用 <xref:System.Xml.Schema.XmlSchemaCollection> 根据 XML 架构定义语言 \(XSD\) 架构对 XML 文档进行验证。  <xref:System.Xml.Schema.XmlSchemaCollection> 在集合中存储架构，因此每当验证发生时不必将该架构加载到内存中，从而提高了性能。  如果架构存在于架构集合中，则将使用 `schemaLocation` 属性在集合中查找该架构。  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证
+可以使用 <xref:System.Xml.Schema.XmlSchemaCollection> 根据 XML 架构定义语言 (XSD) 架构对 XML 文档进行验证。 <xref:System.Xml.Schema.XmlSchemaCollection> 在集合中存储架构，因此每当验证发生时不必将该架构加载到内存中，从而提高了性能。 如果架构存在于架构集合中，则将使用 `schemaLocation` 属性在集合中查找该架构。  
   
 > [!IMPORTANT]
->  现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。  有关 <xref:System.Xml.Schema.XmlSchemaSet> 类的更多信息，请参见 [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+>  现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。 有关详细信息<xref:System.Xml.Schema.XmlSchemaSet>类，请参阅[编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
   
  下面的示例显示了数据文件的根元素。  
   
-```  
+```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns="urn:bookstore-schema"  
     elementFormDefault="qualified"  
@@ -58,7 +59,7 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- 在 <xref:System.Xml.Schema.XmlSchemaCollection> 的 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 方法中添加 `namespaceURI` 属性时，通常使用 `targetNamespace` 属性。  将架构添加到 <xref:System.Xml.Schema.XmlSchemaCollection> 之前，可以指定空引用。  对于没有命名空间的架构，应该使用空字符串 \(""\)。  <xref:System.Xml.Schema.XmlSchemaCollection> 只能有一个没有命名空间的架构。  
+ 在 `targetNamespace` 的 `namespaceURI` 方法中添加 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 属性时，通常使用 <xref:System.Xml.Schema.XmlSchemaCollection> 属性。 将架构添加到 <xref:System.Xml.Schema.XmlSchemaCollection> 之前，可以指定空引用。 对于没有命名空间的架构，应该使用空字符串 ("")。 <xref:System.Xml.Schema.XmlSchemaCollection> 只能有一个没有命名空间的架构。  
   
  下面的代码示例将一个 XML 架构 HeadCount.xsd 添加到 <xref:System.Xml.Schema.XmlSchemaCollection> 中并对 HeadCount.xml 进行验证。  
   
@@ -133,7 +134,7 @@ namespace ValidationSample
   
  下面概括了要验证的输入文件 HeadCount.xml 的内容。  
   
-```  
+```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
 <hc:HeadCount xmlns:hc='xsdHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -143,7 +144,7 @@ namespace ValidationSample
   
  下面概括了要作为验证依据的 XML 架构文件 HeadCount.xsd 的内容。  
   
-```  
+```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
    <xs:element name='HeadCount' type="HEADCOUNT"/>  
    <xs:complexType name="HEADCOUNT">  
@@ -155,7 +156,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- 下面的代码示例创建一个接受 <xref:System.Xml.XmlTextReader> 的 <xref:System.Xml.XmlValidatingReader>。  根据 XML 架构 sample4.xsd 对输入文件 sample4.xml 进行验证。  
+ 下面的代码示例创建一个接受 <xref:System.Xml.XmlValidatingReader> 的 <xref:System.Xml.XmlTextReader>。 根据 XML 架构 sample4.xsd 对输入文件 sample4.xml 进行验证。  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -181,7 +182,7 @@ while(vr.Read()) {
   
  下面概括了要验证的输入文件 sample4.xml 的内容。  
   
-```  
+```xml  
 <datatypes xmlns="datatypesTest">  
     <number>  
         <number_1>123</number_1>  
@@ -191,7 +192,7 @@ while(vr.Read()) {
   
  下面概括了作为验证依据的 XML 架构文件 sample4.xsd 的内容。  
   
-```  
+```xml  
 <xs:schema   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     xmlns:tns="datatypesTest"   
@@ -214,8 +215,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## 请参阅  
- <xref:System.Xml.XmlParserContext>   
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=fullName>   
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=fullName>   
+## <a name="see-also"></a>另请参阅  
+ <xref:System.Xml.XmlParserContext>  
+ <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+ <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
  [XmlSchemaCollection 架构编译](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

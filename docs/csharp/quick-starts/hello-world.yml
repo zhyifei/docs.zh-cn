@@ -1,178 +1,39 @@
-### YamlMime:YamlDocument
 documentType: Tutorial
-title: 'C# 初探'
+title: "C# 初探"
 metadata:
-  title: 'C# 初探。 读者最先查看的 C# 语言简介。'
-  description: '在本教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。'
+  title: "C# 初探。 读者最先查看的 C# 语言简介。"
+  description: "在此快速入门中，你将使用你的浏览器若要了解 C# 以交互方式。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。"
   audience: Developer
   level: Beginner
   nextTutorialHref: numbers-in-csharp
-  nextTutorialTitle: 'Numbers in C#'
+  nextTutorialTitle: "C# 中的数字"
   displayType: two-column
   interactive: csharp
+  ms.custom: mvc
 items:
-  - durationInMinutes: 1
-    content: |
-      本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。
-  - title: '运行首个 C# 程序'
-    durationInMinutes: 2
-    content: |
-      在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：
-
-      ```csharp
-      Console.WriteLine("Hello World!");
-      ```
-
-      祝贺你！ 已运行首个 C# 程序。 这是一个简单程序，可输出消息“Hello World!”。 它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。 `Console` 是表示控制台窗口的类型。 `WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。
-
-      接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。 
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - title: 声明和使用变量
-    durationInMinutes: 3
-    content: |
-      首个程序在屏幕上打印出了 `string`“Hello World!” 。 
-
-      > [!TIP]
-      > 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。
-      > 这样做有助于了解 C# 代码结构。 
-
-      首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：
-
-      ```csharp
-      string aFriend = "Bill";
-      Console.WriteLine(aFriend);
-      ```
-
-      第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。
-
-      可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：
-
-      ```csharp
-      aFriend = "Maria";
-      Console.WriteLine(aFriend);
-      ```
-
-      可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。
-
-      可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：
-
-      ```csharp
-      Console.WriteLine("Hello " + aFriend);
-      ```
-
-      再次单击“运行”，看看结果如何。
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - title: 使用字符串
-    durationInMinutes: 5
-    content: |
-      上次编辑是对字符串用途的初探。 接下来，将进一步探索。
-
-      `+` 是 C# 运算符。 如果应用于字符串（如 `firstString + secondString`），则会新建一个字符串，内含第一个字符串的文本，后跟第二个字符串的文本。 这称为“字符串串联”。 可以组合任意数量的字符串，包括字符串变量。  试运行以下代码：
-
-      ```csharp
-      string firstFriend = "Maria";
-      string secondFriend = "Sage";
-      Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
-      ```
-
-      在进一步探索字符串的过程中，发现可以使用 `Length` 确定字符串长度。 `Length` 是字符串属性，可返回字符串中的字符数。 在交互式窗口的底部，添加以下代码：
-
-      ```csharp
-      Console.WriteLine("The name " + firstFriend + " has " + firstFriend.Length + " letters.");
-      Console.WriteLine("The name " + secondFriend + " has " + secondFriend.Length + " letters.");
-      ```
-
-      > [!TIP]
-      > 这是自行探索的良好时机。 已了解到，`Console.WriteLine()` 将文本写入屏幕。 也已学习了如何声明变量，以及如何串联字符串。 在交互式窗口中试一试吧。 试着自已编写其他一些消息。 使用 `+` 运算符生成字符串。
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - title: 发掘字符串的更多精彩用途
-    durationInMinutes: 5
-    content: |
-      一直在使用方法 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 打印消息。 方法是用于实现某操作的代码块。 它有名称，这样就可以访问方法了。 
-
-      `string` 类型包含许多实用方法。 接下来，将探索 <xref:System.String.Trim%2A> 方法及相关方法 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A>。 这些方法用于删除前导空格和尾随空格：
-
-      ```csharp
-      string message = "      Hello World!       ";
-      Console.WriteLine("[" + message + "]");
-
-      string trimmedMessage = message.TrimStart();
-      Console.WriteLine("[" + trimmedMessage + "]");
-
-      trimmedMessage = message.TrimEnd();
-      Console.WriteLine("[" + trimmedMessage + "]");
-
-      trimmedMessage = message.Trim();
-      Console.WriteLine("[" + trimmedMessage + "]");
-      ```
-
-      此示例强调了使用字符串时需要注意的几个重要概念。 控制字符串的方法返回的是新字符串对象，而不是就地进行修改。 可以看到，对任何 `Trim` 方法的所有调用都是返回新字符串，而不是更改原始消息。
-
-      还可以通过其他方法使用字符串。 例如，可能已在编辑器或字处理器中使用了搜索和替换命令。 <xref:System.String.Replace%2A> 方法在 `string` 中执行类似操作。 此方法搜索子字符串，并将它替换为其他文本。 <xref:System.String.Replace%2A> 方法需要使用两个参数。 这两个字符串用括号括住。 第一个字符串是要搜索的文本。 第二个字符串是替换后的文本。 亲自试一试吧。 添加以下代码：
-
-      ```csharp
-      string message = "Hello World!";
-      Console.WriteLine(message);
-      message = message.Replace("Hello", "Greetings");
-      Console.WriteLine(message);
-      ```
-
-      还有两个实用方法，可以将字符串设为全部大写或小写。 试运行以下代码：
-
-      ```csharp
-      string message = "Hello World!";
-      Console.WriteLine(message);
-      Console.WriteLine(message.ToUpper());
-      Console.WriteLine(message.ToLower());
-      ```
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - title: 搜索字符串
-    durationInMinutes: 10
-    content: |
-      搜索和替换操作的另一方面是，查找字符串中的文本。 可以使用 <xref:System.String.Contains%2A> 方法进行搜索。 此方法可确定字符串是否包含子字符串。 若要探索 <xref:System.String.Contains%2A>，请试运行以下代码：
-
-      ```csharp
-      string message = "You say goodbye, and I say hello";
-      Console.WriteLine(message.Contains("goodbye"));
-      Console.WriteLine(message.Contains("greetings"));
-      ```
-
-      <xref:System.String.Contains%2A> 方法返回布尔值，指明是否找到了要搜索的字符串。 布尔变量存储 `true` 或 `false` 值。 今后推出的课程将详细介绍布尔值。
-
-      ***挑战***
-
-      有两个类似方法 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，也可以在字符串中搜索子字符串。 这些方法搜索字符串开头或结尾的子字符串。 试着将上一示例修改为使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是使用 <xref:System.String.Contains%2A>。 搜索字符串开头是否有“You”或“goodbye”。 搜索字符串末尾是否有“hello”或“goodbye”。
-
-      > [!Note]
-      > 针对字符串结尾文本测试时，请注意标点符号。 如果字符串以句点结尾，必须检查是否有以句点结尾的字符串。
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - title: 完成挑战
-    durationInMinutes: 3
-    content: |
-      最后是否生成如下代码？
-
-      ```csharp
-      string message = "You say goodbye, and I say hello";
-      Console.WriteLine(message.StartsWith("You"));
-      Console.WriteLine(message.StartsWith("goodbye"));
-
-      Console.WriteLine(message.EndsWith("hello"));
-      Console.WriteLine(message.EndsWith("goodbye"));
-      ```
-
-      > [!NOTE]
-      > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
-  - content: |
-      已完成“C# 初探”教程。
-
-      若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。
+- durationInMinutes: 1
+  content: "本快速入门演示 C# 以交互方式，使用你的浏览器可以编写 C# 和查看结果编译并运行你的代码。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。\n"
+  ms.openlocfilehash: 2089af6dbf418c87dfd28e1a2a8cf2814b40df6c
+  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 11/22/2017
+- title: "运行首个 C# 程序"
+  durationInMinutes: 2
+  content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n祝贺你！ 已运行首个 C# 程序。 这是一个简单程序，可输出消息“Hello World!”。 它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。 `Console` 是表示控制台窗口的类型。 `WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。\n\n接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。 \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- title: "声明和使用变量"
+  durationInMinutes: 3
+  content: "首个程序在屏幕上打印出了 `string`“Hello World!” 。 \n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。 \n\n首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。\n\n可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。\n\n可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次单击“运行”，看看结果如何。\n\n随着进度，创建字符串以使用打印`+`变得很麻烦。 字符串内插可让你更简洁、 更具可读性的方式拼合字符串。\n\n如果你添加`$`之前左引号的字符串，然后可以包括字符串表达式，如`aFriend`变量，在大括号中的字符串。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次单击“运行”，看看结果如何。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- title: "使用字符串"
+  durationInMinutes: 5
+  content: "上次编辑是对字符串用途的初探。 接下来，将进一步探索。\n\n`+` 是 C# 运算符。 如果应用于字符串（如 `firstString + secondString`），则会新建一个字符串，内含第一个字符串的文本，后跟第二个字符串的文本。 这称为“字符串串联”。 可以组合任意数量的字符串，包括字符串变量。  试运行以下代码：\n\n```csharp\nstring firstFriend = \"Maria\";\nstring secondFriend = \"Sage\";\nConsole.WriteLine($\"My friends are {firstFriend} and {secondFriend}\");\n```\n\n在进一步探索字符串的过程中，发现可以使用 `Length` 确定字符串长度。 `Length` 是字符串属性，可返回字符串中的字符数。 在交互式窗口的底部，添加以下代码：\n\n```csharp\nConsole.WriteLine($\"The name {firstFriend} has {firstFriend.Length} letters.\");\nConsole.WriteLine($\"The name {secondFriend} has {secondFriend.Length} letters.\");\n```\n\n> [!TIP]\n> 这是自行探索的良好时机。 已了解到，`Console.WriteLine()` 将文本写入屏幕。 也已学习了如何声明变量，以及如何串联字符串。 在交互式窗口中试一试吧。 试着自已编写其他一些消息。 使用 `+` 运算符生成字符串。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- title: "发掘字符串的更多精彩用途"
+  durationInMinutes: 5
+  content: "一直在使用方法 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 打印消息。 方法是用于实现某操作的代码块。 它有名称，这样就可以访问方法了。 \n\n`string` 类型包含许多实用方法。 接下来，将探索 <xref:System.String.Trim%2A> 方法及相关方法 <xref:System.String.TrimStart%2A> 和 <xref:System.String.TrimEnd%2A>。 这些方法用于删除前导空格和尾随空格：\n\n```csharp\nstring message = \"      Hello World!       \";\nConsole.WriteLine($\"[{message}]\");\n\nstring trimmedMessage = message.TrimStart();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.TrimEnd();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.Trim();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n```\n\n此示例强调了使用字符串时需要注意的几个重要概念。 控制字符串的方法返回的是新字符串对象，而不是就地进行修改。 可以看到，对任何 `Trim` 方法的所有调用都是返回新字符串，而不是更改原始消息。\n\n还可以通过其他方法使用字符串。 例如，可能已在编辑器或字处理器中使用了搜索和替换命令。 <xref:System.String.Replace%2A> 方法在 `string` 中执行类似操作。 此方法搜索子字符串，并将它替换为其他文本。 <xref:System.String.Replace%2A> 方法需要使用两个参数。 这两个字符串用括号括住。 第一个字符串是要搜索的文本。 第二个字符串是替换后的文本。 亲自试一试吧。 添加以下代码：\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nmessage = message.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(message);\n```\n\n还有两个实用方法，可以将字符串设为全部大写或小写。 试运行以下代码：\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nConsole.WriteLine(message.ToUpper());\nConsole.WriteLine(message.ToLower());\n```\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- title: "搜索字符串"
+  durationInMinutes: 10
+  content: "搜索和替换操作的另一方面是，查找字符串中的文本。 可以使用 <xref:System.String.Contains%2A> 方法进行搜索。 此方法可确定字符串是否包含子字符串。 若要探索 <xref:System.String.Contains%2A>，请试运行以下代码：\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.Contains(\"goodbye\"));\nConsole.WriteLine(message.Contains(\"greetings\"));\n```\n\n<xref:System.String.Contains%2A> 方法返回布尔值，指明是否找到了要搜索的字符串。 布尔变量存储 `true` 或 `false` 值。 今后推出的课程将详细介绍布尔值。\n\n***挑战***\n\n有两个类似方法 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，也可以在字符串中搜索子字符串。 这些方法搜索字符串开头或结尾的子字符串。 试着将上一示例修改为使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是使用 <xref:System.String.Contains%2A>。 搜索字符串开头是否有“You”或“goodbye”。 搜索字符串末尾是否有“hello”或“goodbye”。\n\n> [!Note]\n> 针对字符串结尾文本测试时，请注意标点符号。 如果字符串以句点结尾，必须检查是否有以句点结尾的字符串。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- title: "完成挑战"
+  durationInMinutes: 3
+  content: "最后是否生成如下代码？\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+- content: "您已完成\"Hello C#\"快速入门。\n\n你可以继续在开发环境这些快速入门。 .NET 主题[开始在 10 分钟后](https://www.microsoft.com/net/core)已设置你的本地开发环境的说明。 完成后，继续[C# 中的数字](numbers-in-chsarp-local.md)本地环境中。\n\n若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。\0"

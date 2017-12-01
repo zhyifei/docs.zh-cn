@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
+ms.openlocfilehash: b0d4082d020da782b334a5b3999905f7de744e64
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/28/2017
 ---
-
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>如何管理 .NET Core 1.0 的包依赖项版本
 
 本文介绍需要了解的 .NET Core 库和应用的包版本信息。
@@ -51,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 
 ### <a name="why-does-this-matter"></a>为什么这很重要？
 
-如果将依赖项修复为随 .NET Core 1.0 一起提供的版本，我们保证这些包都可协同运作。  如果使用未通过此方式修复的包，则无法做出这种保证。
+我们保证，如果您修复对与.NET Core 1.0 一起哪些附带你依赖关系，这些包将全都协同工作。 如果使用未通过此方式修复的包，则无法做出这种保证。
 
 ### <a name="scenarios"></a>方案
 
@@ -59,11 +57,11 @@ ms.lasthandoff: 07/28/2017
 
 **是否仅依赖** `NETStandard.Library`**？**
 
-如果是，应将 `NETStandard.Library` 包修复为版本 `1.6`。  由于这是策划元包，也会将其闭包修复为 1.0。
+如果这样，您应修复你`NETStandard.Library`到版本包`1.6`。  由于这是策划元包，也会将其闭包修复为 1.0。
 
 **是否仅依赖** `Microsoft.NETCore.App`**？**
 
-如果是，应将 `Microsoft.NETCore.App` 包修复为版本 `1.0.0`。  由于这是策划元包，也会将其闭包修复为 1.0。
+如果这样，您应修复你`Microsoft.NETCore.App`到版本包`1.0.0`。  由于这是策划元包，也会将其闭包修复为 1.0。
 
 **是否[修整](../deploying/reducing-dependencies.md)** `NETStandard.Library` **或** `Microsoft.NETCore.App` **元包依赖项？**
 
@@ -86,4 +84,3 @@ ms.lasthandoff: 07/28/2017
 [所有运行时包及其针对 1.0 的版本列表](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt)。
 
 [所有 .NET Core 应用包及其针对 1.0 的版本列表](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt)。
-

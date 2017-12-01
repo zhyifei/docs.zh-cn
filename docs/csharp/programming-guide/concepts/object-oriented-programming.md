@@ -1,27 +1,18 @@
 ---
 title: "面向对象的编程 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de06921840f06f36d8600b9567986644f58c6ad5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
@@ -242,7 +233,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[专用](../../../csharp/language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|  
 |[受保护](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|  
 |[内部](../../../csharp/language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|  
-|`protected internal`|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|  
+|[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|  
+|[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)|同一个类或基类程序集中的派生类中的代码，可以访问该类型或成员。|  
   
  有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
@@ -449,4 +441,3 @@ class SampleClass
   
 ## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)
-

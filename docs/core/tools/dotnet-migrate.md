@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: d2c99df730d90e0a6b69197cf036c62073cf8749
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/14/2017
 * 一个 *solution.sln* 文件，它迁移在解决方案中引用的项目。
 * 以递归方式迁移给定目录的所有子目录。
 
-`dotnet migrate` 命令将迁移的 *project.json* 文件保存在 `backup` 目录中，如果该目录不存在，将创建一个。 使用 `--skip-backup` 选项重写此行为。
+`dotnet migrate` 命令将迁移的 *project.json* 文件保存在 `backup` 目录中，如果该目录不存在，将创建一个。 此行为使用重写`--skip-backup`选项。
 
 默认情况下，迁移操作会将迁移过程的状态输出到标准输出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 选项，输出将保存到指定的文件中。 
 

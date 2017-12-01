@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81c68f718b0395b70f604ed9157daeaa84e9eefc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 开始，你还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。  
@@ -141,8 +134,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)   
- [命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [Improving Launch Performance for your Desktop Applications](http://go.microsoft.com/fwlink/p/?LinkId=248943) （提高桌面应用程序的启动性能）  
+ [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [提高你的桌面应用程序的启动性能](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [.NET 4.5 中的性能改进概述](http://go.microsoft.com/fwlink/p/?LinkId=249131)
-

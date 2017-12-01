@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4571d7576bc81432c87e0371ae0b6df3261f5f08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf7698a068408b909174e69bde95bec4fdef8cd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -48,7 +41,7 @@ winmdexp [options] winmdmodule
   
 |自变量或选项|描述|  
 |------------------------|-----------------|  
-|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 MSDN 库中的 [/target:winmdobj（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md) 。|  
+|`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅[/target: winmdobj （C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或[/target (Visual Basic 中)](~/docs/visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，输出文件实质上与输入 XML 文档文件相同。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|指定编译器使用 `winmdmodule` 生成的 XML 文档文件的名称。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|指定包含 `winmdmodule` 的符号的程序数据库 (PDB) 文件的名称。|  
@@ -66,8 +59,7 @@ winmdexp [options] winmdmodule
  当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件时，.NET Framework 将提供支持，使得利用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](http://go.microsoft.com/fwlink/p/?LinkId=251132)接口构造的类型。  
   
 ## <a name="see-also"></a>另请参阅  
- [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)   
- [用 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkID=238313)   
- [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)   
+ [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [在 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
  [生成、部署和配置工具 (.NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)
-

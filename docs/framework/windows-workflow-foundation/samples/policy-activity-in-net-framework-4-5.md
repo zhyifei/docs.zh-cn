@@ -12,11 +12,11 @@ caps.latest.revision: "15"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 1374bc086923b9ffef288a7fa90427710bdd91b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d12a3d5a74fa8b0d266fb2ba9494e1a5775f0411
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的策略活动
 Policy4 活动通过使用 WF 3.5 中附带的规则引擎，允许直接在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中使用 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) 中的 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 对象。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎的更多信息（此信息已作为 Windows Workflow Foundation 的一部分包含），请参见 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -87,6 +87,4 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 3.  若要编译项目，请按 Ctrl+Shift+B。  
   
-4.  若要运行项目，请按 Ctrl+F5。  
-  
-## <a name="see-also"></a>另请参阅
+4.  若要运行项目，请按 Ctrl+F5。

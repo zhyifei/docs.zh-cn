@@ -1,45 +1,27 @@
 ---
 title: "#<a name=\"define-c-reference\"></a>define（C# 参考）"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#define'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#define directive [C#]'
+f1_keywords: '#define'
+helpviewer_keywords: '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ae72a1b6c19421c51348a0d93691ba3fe29a191c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ace15f79480c9aeb0fcb4c7d46c207d4904cef0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="define-c-reference"></a>#define（C# 参考）
 使用 `#define` 来定义符号。 将符号用作传递给 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指令的表达式时，该表达式的计算结果为 `true`，如以下示例所示：  
-  
- `#`  `define`   `DEBUG`  
+ 
+ ```csharp
+ #define DEBUG
+ ```
   
 ## <a name="remarks"></a>备注  
   
@@ -85,11 +67,10 @@ public class TestDefine
  有关如何取消对符号进行定义的示例，请参阅 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 参考](../../../csharp/language-reference/index.md)   
- [C# 编程指南](../../../csharp/programming-guide/index.md)   
- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [const](../../../csharp/language-reference/keywords/const.md)   
- [如何：使用跟踪和调试进行条件编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)   
+ [C# 参考](../../../csharp/language-reference/index.md)  
+ [C# 编程指南](../../../csharp/programming-guide/index.md)  
+ [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
+ [const](../../../csharp/language-reference/keywords/const.md)  
+ [如何： 使用跟踪和调试进行条件编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
  [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
-

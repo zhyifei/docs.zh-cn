@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="document-approval-process"></a>文档审批过程
 此示例演示如何将很多 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能一起使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。  
@@ -155,6 +155,4 @@ ms.lasthandoff: 10/18/2017
   
 ##### <a name="to-clean-up"></a>清理  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符下，导航到 DocumentApprovalProcess 文件夹并运行 Cleanup.cmd。  
-  
-## <a name="see-also"></a>另请参阅
+1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 命令提示符下，导航到 DocumentApprovalProcess 文件夹并运行 Cleanup.cmd。

@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
@@ -180,6 +180,4 @@ ms.lasthandoff: 10/18/2017
   
 -   **查看 RFP**： 显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   **Connect As**： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**查看作为**中活动的 Rfp 网格的组合框。  
-  
-## <a name="see-also"></a>另请参阅
+-   **Connect As**： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**查看作为**中活动的 Rfp 网格的组合框。
