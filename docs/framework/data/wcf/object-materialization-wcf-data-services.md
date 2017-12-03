@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f671d3b41e0812916d1db342c211f2db6456ede3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>对象具体化（WCF 数据服务）
 当你使用**添加服务引用**对话框来使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在基于.NET Framework 的客户端应用程序中的源，等效的数据类生成每个实体类型中公开源的数据模型。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 合并选项和标识解析的被跟踪的对象有关的信息，请参阅[管理数据服务上下文](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  

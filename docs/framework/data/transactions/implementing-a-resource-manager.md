@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b72b1bf68fa445a188c327098295d76815a80b16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-a-resource-manager"></a>实现资源管理器
 事务中使用的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。 资源管理器与事务管理器协调工作，为应用程序提供了原子性和隔离性的保证。 例如，Microsoft SQL Server、持久消息队列、内存中的哈希表都是资源管理器。  

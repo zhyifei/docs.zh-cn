@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c6030b1ad1dc3953137d3b068be1bceb99975a5f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="monitoring-service-operation-failures"></a>对服务操作失败进行监视
 如果为应用程序启用了分析跟踪，则可以在事件查看器中轻松地监视服务失败。  本主题演示如何确定服务操作失败的时间，以及如何确定失败的原因。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b56fecef5ace38f728d8cc68df4dcfeb71bfedf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：使用项目数据源绑定数据（WCF 数据服务）
 可以创建基于 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端应用程序中生成的数据对象的数据源。 当使用添加到数据服务的引用**添加服务引用**对话框中，以及生成的客户端数据类创建项目数据源。 将为数据服务公开的每个实体集各创建一个数据源。 你可以创建显示通过将这些数据源项从服务中的数据的窗体**数据源**窗口拖到设计器。 这些项将成为绑定到该数据源的控件。 在执行期间，此数据源绑定到的某个实例<xref:System.Data.Services.Client.DataServiceCollection%601>类，该类以向数据服务由查询返回的对象进行填充。 有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  

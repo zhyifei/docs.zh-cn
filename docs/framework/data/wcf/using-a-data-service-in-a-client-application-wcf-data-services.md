@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a9a043cf92589c54abf8846cfea938b6a98a1e0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 79c4f7e066f4961caa66d3fd19dee9eb0f21ada4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在客户端应用程序中使用数据服务（WCF 数据服务）
 你可以访问公开的服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源向 Web 浏览器提供 URI。 URI 提供某个资源的地址，系统将向这些地址发送请求消息以访问或更改该资源表示的基础数据。 浏览器发出 HTTP GET 命令，并以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源的形式返回请求的资源。 有关详细信息，请参阅[从 Web 浏览器访问服务](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  

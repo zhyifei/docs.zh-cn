@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ec8537c4fdf80ffe448bba1376eacf519d67bcbe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="writing-a-transactional-application"></a>编写事务应用程序
 作为事务应用程序程序员，您可以利用 <xref:System.Transactions> 命名空间所提供的两种编程模型来创建事务。 则可以通过使用利用的显式编程模型<xref:System.Transactions.Transaction>类或在其中事务自动由管理基础结构中，通过使用隐式编程模型<xref:System.Transactions.TransactionScope>类。 我们建议你使用用于开发的隐式事务模型。 你可以找到有关如何使用事务范围中的详细信息[实现使用事务范围的隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)主题。  

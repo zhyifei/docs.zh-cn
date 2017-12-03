@@ -18,14 +18,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e31f14d59bb2ac7caa233ff60c60eb944ee5bbbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 12820b6b2b864bfd00474abc118fe9b346b51bc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]来公开作为源的数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]支持 Atom 和 JavaScript 对象表示法 (JSON) 格式的数据馈送。 当你使用 Atom 馈送时，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供标准的方法来序列化数据，如实体和关系，为 XML 格式，可以包含在 HTTP 消息的正文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)。  

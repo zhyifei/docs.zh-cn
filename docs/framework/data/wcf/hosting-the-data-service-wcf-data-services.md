@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a11e7e499f705f4aace791320057e04205db58c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7fa76c5672b4117c446aca145b7cf98dae7801d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>承载数据服务（WCF 数据服务）
 通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，你可以创建服务将数据公开为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供的功能需要以处理请求消息，执行对数据源中，更新并生成响应消息，根据需要通过[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 但是，数据服务无法绑定到，并且网络套接字上侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: afeb1a0c60e1a27be8359824f764eddeea0a408e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d8378cbf6f874e777ce03255962ea4c873449d7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>如何：确定由查询返回的实体数（WCF 数据服务）
 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以确定由查询 URI 指定的实体集中的实体数量。 此计数可以与查询结果包含在一起，也可为一个整数值。 有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  

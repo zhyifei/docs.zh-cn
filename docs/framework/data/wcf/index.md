@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1ef95ac84872b2cc39ec3a93abab10c39cd7738
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]（以前称为“ADO.NET Data Services”）是 .NET Framework 的一个组件。可以使用此组件创建一些服务，利用 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 借助 [representational state transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)（表述性状态转移 (REST)）语义通过 Web 或 Intranet 公开和使用数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 将数据公开为可通过 URI 进行寻址的资源。 通过使用标准 HTTP 谓词 GET、PUT、POST 和 DELETE 访问和更改数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 使用[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)的实体关系约定将资源公开为通过关联相关的实体集。  

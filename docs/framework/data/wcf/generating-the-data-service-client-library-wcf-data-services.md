@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5fbf45a3447a1dc5fb449628bdd7f741fb3e8324
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 46ddf167a6cbc0ba6c73cfc53020ad33dbf10a2e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>生成数据服务客户端库（WCF 数据服务）
 数据服务实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以返回描述公开的数据模型的服务元数据文档[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 有关详细信息，请参阅[OData： 服务元数据文档](http://go.microsoft.com/fwlink/?LinkId=186070)。 你可以使用**添加服务引用**对话框在 Visual Studio 中添加对引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 当你使用此工具以添加对返回的元数据的引用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]送入在客户端项目，请执行下列操作：  

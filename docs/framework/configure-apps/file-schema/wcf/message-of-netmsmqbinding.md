@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3b03fcce02c51563ed006e62a3f77f76bede777
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d91d97a27c06e8e6e3ab624c45c6853b1cc23e8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;message&gt;
 在此 `netMsmqBinding` 绑定上定义 SOAP 消息安全设置。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |特性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|设置消息加密和密钥包装算法，这些算法用于针对通过 MSMQ 传输发送的消息实现基于消息的安全性。<br /><br /> 默认值为 `Aes256`。 此属性的类型为 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
-|clientCredentialType|指定针对通过 MSMQ 传输发送的消息执行客户端身份验证时要使用的凭据类型。 包括以下有效值：<br /><br /> -None： 允许服务与匿名客户端交互。 服务和客户端都不需要凭据。<br />-Windows： 使 SOAP 交换在已通过身份验证的 Windows 凭据上下文。 此设置总是执行基于 Kerberos 的身份验证。<br />-UserName： 使服务可以要求客户端进行身份验证使用 UserName 凭据。 在这种情况下，凭据需要指定使用`clientCredentials`行为**警告：** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥来提供消息安全性。   因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保交换的安全性。 此模式要求使用 `clientCredential` 行为和 `serviceCertificate` 在客户端指定服务证书。 <br /><br /> -Certificate： 使服务可以要求客户端进行身份验证使用的证书。 在此情况下，需要使用 `clientCredentials` 行为指定客户端凭据。 在此情况下，需要使用 `clientCredentials` 行为，通过指定 `serviceCertificate` 来指定服务凭据。<br />-CardSpace： 允许服务要求客户端进行身份验证使用 CardSpace。 必须在 `serviceCertiifcate` 行为中设置 `clientCredential`。<br /><br /> 默认值为 `Windows`。 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
+|clientCredentialType|指定针对通过 MSMQ 传输发送的消息执行客户端身份验证时要使用的凭据类型。 包括以下有效值：<br /><br /> -None： 允许服务与匿名客户端交互。 服务和客户端都不需要凭据。<br />-Windows： 使 SOAP 交换在已通过身份验证的 Windows 凭据上下文。 此设置总是执行基于 Kerberos 的身份验证。<br />-UserName： 使服务可以要求客户端进行身份验证使用 UserName 凭据。 在这种情况下，凭据需要指定使用`clientCredentials`行为**警告：** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]不支持发送密码摘要或派生密钥使用的密码，并使用这样的密钥来提供消息安全性。 因此，在使用 UserName 凭据时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将确保交换的安全性。 此模式要求使用 `clientCredential` 行为和 `serviceCertificate` 在客户端指定服务证书。 <br /><br /> -Certificate： 使服务可以要求客户端进行身份验证使用的证书。 在此情况下，需要使用 `clientCredentials` 行为指定客户端凭据。 在此情况下，需要使用 `clientCredentials` 行为，通过指定 `serviceCertificate` 来指定服务凭据。<br />-CardSpace： 允许服务要求客户端进行身份验证使用 CardSpace。 必须在 `serviceCertiifcate` 行为中设置 `clientCredential`。<br /><br /> 默认值为 `Windows`。 此属性的类型为 <xref:System.ServiceModel.MessageCredentialType>。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

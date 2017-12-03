@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e929e9771ba1d47016919f017f3476b17581d8a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>批处理操作（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支持对请求的批处理[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 有关详细信息，请参阅[OData： 批处理](http://go.microsoft.com/fwlink/?LinkId=186075)。 在[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，使用每个操作<xref:System.Data.Services.Client.DataServiceContext>，如执行查询或保存更改，在单独的请求发送到数据服务中的结果。 为保持操作集的合理范围，可以显式定义操作批。 这将确保批处理中的所有操作发送到单个 HTTP 请求中的数据服务，使服务器能够处理这些操作以原子方式，并减少到数据服务的往返次数。  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
 caps.latest.revision: "36"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f17b37b77c157f1ce3d5ee40fd6464ab378039d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 78ad1159232ecfb75745dd72b7da1e3153a79574
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可让应用程序通报它们是在同一台计算机上、分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  

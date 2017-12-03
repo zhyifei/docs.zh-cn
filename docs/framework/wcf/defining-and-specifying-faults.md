@@ -16,14 +16,14 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71df440ee9234071d0ab21cc3c18c5b080279bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-and-specifying-faults"></a>定义和指定错误
 SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何将服务或双工客户端，可以发送这些错误和客户端或服务应用程序如何处理这些错误，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 有关概述中的错误处理[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]应用程序，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  

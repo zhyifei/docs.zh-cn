@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9c86e755d35a57090941551de43aedd07c8f1f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
 当你使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源，库将转换源客户端数据服务类的实例中的条目。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  

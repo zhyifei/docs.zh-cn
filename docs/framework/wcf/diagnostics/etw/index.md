@@ -14,14 +14,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3c9486427660de792091297d2426c970cfe47bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42683acdfe2e63d59a13496b210f83fb97c02de7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="analytic-tracing-with-etw"></a>使用 ETW 进行分析跟踪
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 分析跟踪提供了一种方式来捕获 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务执行过程中的诊断信息。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 分析跟踪事件是在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆栈中的关键点处发出的，用于在生产环境中排除 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务的故障。 分析跟踪对[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务最小对性能有影响的产品服务器承载[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)][!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务因为这些事件可以非常高效地发送到 Windows 事件跟踪 (ETW) 会话。  

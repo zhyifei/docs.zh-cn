@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0e043f15adb510f2c5d563dc5d7e8c23978c89b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60c2fc812bc00fcbc27335cf3b9539aacb32c91c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>如何：定义实体关系（WCF 数据服务）
 在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中添加新实体时，不会自动定义新实体和相关实体之间的任何关系。 可创建和更改实体实例之间的关系，以及让客户端库在数据服务中反映这些更改。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

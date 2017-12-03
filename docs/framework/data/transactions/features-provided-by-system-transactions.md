@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: be3e2fec5d6859b38ae149e50fd1fe82838d8e08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d615d4e1da86ef2a23563f25f6976099daedf10e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="features-provided-by-systemtransactions"></a>由 System.Transactions 提供的功能
 本节描述如何使用 <xref:System.Transactions> 命名空间所提供的功能编写您自己的事务应用程序和资源管理器。 具体来说，本节介绍如何创建事务（本地或分布式事务）并与一个或多个参与者一起参与该事务。  

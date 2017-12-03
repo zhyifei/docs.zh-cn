@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 569830c5fbb9ecb837482202a4eb5a096ce21962
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以将数据公开为与通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
