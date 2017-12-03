@@ -10,64 +10,64 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3bd2cf4cf96fd2b80fc08523b42bd8aa2379c2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b3fbb3ef0fddd287fa3feb30732b26c651ac0067
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="269b3-102">&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="269b3-102">&lt;serviceCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
-<span data-ttu-id="269b3-103">指定客户端对服务进行身份验证时使用的证书。</span><span class="sxs-lookup"><span data-stu-id="269b3-103">Specifies a certificate to use when authenticating a service to the client.</span></span>  
+# <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="c3c5e-102">&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-102">&lt;serviceCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="c3c5e-103">指定客户端对服务进行身份验证时使用的证书。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-103">Specifies a certificate to use when authenticating a service to the client.</span></span>  
   
- <span data-ttu-id="269b3-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="269b3-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="269b3-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="269b3-105">\<behaviors></span></span>  
-<span data-ttu-id="269b3-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="269b3-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="269b3-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="269b3-107">\<behavior></span></span>  
-<span data-ttu-id="269b3-108">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="269b3-108">\<clientCredentials></span></span>  
-<span data-ttu-id="269b3-109">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="269b3-109">\<serviceCertificate></span></span>  
+ <span data-ttu-id="c3c5e-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c3c5e-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-105">\<behaviors></span></span>  
+<span data-ttu-id="c3c5e-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="c3c5e-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-107">\<behavior></span></span>  
+<span data-ttu-id="c3c5e-108">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-108">\<clientCredentials></span></span>  
+<span data-ttu-id="c3c5e-109">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-109">\<serviceCertificate></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="269b3-110">语法</span><span class="sxs-lookup"><span data-stu-id="269b3-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3c5e-110">语法</span><span class="sxs-lookup"><span data-stu-id="c3c5e-110">Syntax</span></span>  
   
 ```xml  
 <serviceCertificate />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="269b3-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="269b3-111">Attributes and Elements</span></span>  
- <span data-ttu-id="269b3-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="269b3-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c3c5e-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="c3c5e-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="269b3-113">特性</span><span class="sxs-lookup"><span data-stu-id="269b3-113">Attributes</span></span>  
- <span data-ttu-id="269b3-114">无。</span><span class="sxs-lookup"><span data-stu-id="269b3-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c3c5e-113">特性</span><span class="sxs-lookup"><span data-stu-id="c3c5e-113">Attributes</span></span>  
+ <span data-ttu-id="c3c5e-114">无。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="269b3-115">子元素</span><span class="sxs-lookup"><span data-stu-id="269b3-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c3c5e-115">子元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-115">Child Elements</span></span>  
   
-|<span data-ttu-id="269b3-116">元素</span><span class="sxs-lookup"><span data-stu-id="269b3-116">Element</span></span>|<span data-ttu-id="269b3-117">描述</span><span class="sxs-lookup"><span data-stu-id="269b3-117">Description</span></span>|  
+|<span data-ttu-id="c3c5e-116">元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-116">Element</span></span>|<span data-ttu-id="c3c5e-117">描述</span><span class="sxs-lookup"><span data-stu-id="c3c5e-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="269b3-118">\<defaultCertificate ></span><span class="sxs-lookup"><span data-stu-id="269b3-118">\<defaultCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|<span data-ttu-id="269b3-119">指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="269b3-119">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>|  
-|[<span data-ttu-id="269b3-120">\<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="269b3-120">\<scopedCertificates></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|<span data-ttu-id="269b3-121">表示特定服务为身份验证提供的 X.509（作用域）证书的集合。</span><span class="sxs-lookup"><span data-stu-id="269b3-121">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="269b3-122">此集合通常用于指定联合方案中安全令牌服务的服务证书。</span><span class="sxs-lookup"><span data-stu-id="269b3-122">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>|  
-|[<span data-ttu-id="269b3-123">\<身份验证 ></span><span class="sxs-lookup"><span data-stu-id="269b3-123">\<authentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|<span data-ttu-id="269b3-124">指定客户端使用的服务证书的身份验证行为。</span><span class="sxs-lookup"><span data-stu-id="269b3-124">Specifies authentication behaviors for service certificates used by a client.</span></span>|  
+|[<span data-ttu-id="c3c5e-118">\<defaultCertificate ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-118">\<defaultCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|<span data-ttu-id="c3c5e-119">指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-119">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>|  
+|[<span data-ttu-id="c3c5e-120">\<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-120">\<scopedCertificates></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|<span data-ttu-id="c3c5e-121">表示特定服务为身份验证提供的 X.509（作用域）证书的集合。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-121">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="c3c5e-122">此集合通常用于指定联合方案中安全令牌服务的服务证书。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-122">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>|  
+|[<span data-ttu-id="c3c5e-123">\<身份验证 ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-123">\<authentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|<span data-ttu-id="c3c5e-124">指定客户端使用的服务证书的身份验证行为。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-124">Specifies authentication behaviors for service certificates used by a client.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="269b3-125">父元素</span><span class="sxs-lookup"><span data-stu-id="269b3-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c3c5e-125">父元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="269b3-126">元素</span><span class="sxs-lookup"><span data-stu-id="269b3-126">Element</span></span>|<span data-ttu-id="269b3-127">描述</span><span class="sxs-lookup"><span data-stu-id="269b3-127">Description</span></span>|  
+|<span data-ttu-id="c3c5e-126">元素</span><span class="sxs-lookup"><span data-stu-id="c3c5e-126">Element</span></span>|<span data-ttu-id="c3c5e-127">描述</span><span class="sxs-lookup"><span data-stu-id="c3c5e-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="269b3-128">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="269b3-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="269b3-129">指定客户端用于向服务证明自己的身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="269b3-129">Specifies the credentials used by the client to authenticate itself to a service.</span></span>|  
+|[<span data-ttu-id="c3c5e-128">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="c3c5e-129">指定客户端用于向服务证明自己的身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-129">Specifies the credentials used by the client to authenticate itself to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="269b3-130">备注</span><span class="sxs-lookup"><span data-stu-id="269b3-130">Remarks</span></span>  
- <span data-ttu-id="269b3-131">此配置元素指定客户端在验证使用 SSL 身份验证的服务所出示的证书时使用的设置。</span><span class="sxs-lookup"><span data-stu-id="269b3-131">This configuration element specifies the settings used by the client to validate the certificate presented by the service using SSL authentication.</span></span> <span data-ttu-id="269b3-132">它还包含在客户端上显式配置为对发送给使用消息安全的服务的消息进行加密的服务的所有证书。</span><span class="sxs-lookup"><span data-stu-id="269b3-132">It also contains any certificate for the service that is explicitly configured on the client to use for encrypting messages to the service using message security.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3c5e-130">备注</span><span class="sxs-lookup"><span data-stu-id="c3c5e-130">Remarks</span></span>  
+ <span data-ttu-id="c3c5e-131">此配置元素指定客户端在验证使用 SSL 身份验证的服务所出示的证书时使用的设置。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-131">This configuration element specifies the settings used by the client to validate the certificate presented by the service using SSL authentication.</span></span> <span data-ttu-id="c3c5e-132">它还包含在客户端上显式配置为对发送给使用消息安全的服务的消息进行加密的服务的所有证书。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-132">It also contains any certificate for the service that is explicitly configured on the client to use for encrypting messages to the service using message security.</span></span>  
   
- <span data-ttu-id="269b3-133">属性`serviceCertificate`元素的属性相等[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="269b3-133">The attributes of the `serviceCertificate` element are identical to the attributes of the [\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span>  
+ <span data-ttu-id="c3c5e-133">属性`serviceCertificate`元素的属性相等[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="c3c5e-133">The attributes of the `serviceCertificate` element are identical to the attributes of the [\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="269b3-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="269b3-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c3c5e-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c3c5e-134">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- [<span data-ttu-id="269b3-135">安全行为</span><span class="sxs-lookup"><span data-stu-id="269b3-135">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="269b3-136">保护客户端</span><span class="sxs-lookup"><span data-stu-id="269b3-136">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="269b3-137">使用证书</span><span class="sxs-lookup"><span data-stu-id="269b3-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [<span data-ttu-id="269b3-138">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="269b3-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [<span data-ttu-id="c3c5e-135">安全行为</span><span class="sxs-lookup"><span data-stu-id="c3c5e-135">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="c3c5e-136">保护客户端</span><span class="sxs-lookup"><span data-stu-id="c3c5e-136">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="c3c5e-137">使用证书</span><span class="sxs-lookup"><span data-stu-id="c3c5e-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="c3c5e-138">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="c3c5e-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
