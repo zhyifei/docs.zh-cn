@@ -11,24 +11,24 @@ ms.topic: article
 helpviewer_keywords: Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 caps.latest.revision: "35"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 765e531530342af5cf0fccfb759626341103114a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="default-message-contract"></a><span data-ttu-id="4e340-102">默认消息协定</span><span class="sxs-lookup"><span data-stu-id="4e340-102">Default Message Contract</span></span>
-<span data-ttu-id="4e340-103">默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。</span><span class="sxs-lookup"><span data-stu-id="4e340-103">The Default Message Contract sample demonstrates a service where a custom user-defined message is passed to and from service operations.</span></span> <span data-ttu-id="4e340-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器接口作为类型化的服务。</span><span class="sxs-lookup"><span data-stu-id="4e340-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator interface as a typed service.</span></span> <span data-ttu-id="4e340-105">而不是对各个服务操作的加法、 减法、 乘法和除法中使用[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此示例将包含操作数和运算符，并返回自定义消息传递算术计算的结果。</span><span class="sxs-lookup"><span data-stu-id="4e340-105">Instead of the individual service operations for addition, subtraction, multiplication, and division used in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), this sample passes a custom message that contains both the operands and the operator, and returns the result of the arithmetic calculation.</span></span>  
+# <a name="default-message-contract"></a><span data-ttu-id="afbec-102">默认消息协定</span><span class="sxs-lookup"><span data-stu-id="afbec-102">Default Message Contract</span></span>
+<span data-ttu-id="afbec-103">默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。</span><span class="sxs-lookup"><span data-stu-id="afbec-103">The Default Message Contract sample demonstrates a service where a custom user-defined message is passed to and from service operations.</span></span> <span data-ttu-id="afbec-104">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器接口作为类型化的服务。</span><span class="sxs-lookup"><span data-stu-id="afbec-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator interface as a typed service.</span></span> <span data-ttu-id="afbec-105">而不是对各个服务操作的加法、 减法、 乘法和除法中使用[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此示例将包含操作数和运算符，并返回自定义消息传递算术计算的结果。</span><span class="sxs-lookup"><span data-stu-id="afbec-105">Instead of the individual service operations for addition, subtraction, multiplication, and division used in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), this sample passes a custom message that contains both the operands and the operator, and returns the result of the arithmetic calculation.</span></span>  
   
- <span data-ttu-id="4e340-106">客户端是一种控制台程序 (.exe)，服务库 (.dll) 是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="4e340-106">The client is a console program (.exe) and the service library (.dll) is hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="4e340-107">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="4e340-107">Client activity is visible in the console window.</span></span>  
+ <span data-ttu-id="afbec-106">客户端是一种控制台程序 (.exe)，服务库 (.dll) 是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="afbec-106">The client is a console program (.exe) and the service library (.dll) is hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="afbec-107">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="afbec-107">Client activity is visible in the console window.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4e340-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="4e340-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="afbec-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="afbec-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="4e340-109">在服务中，定义了单个服务操作，该操作接受和返回 `MyMessage` 类型的自定义消息。</span><span class="sxs-lookup"><span data-stu-id="4e340-109">In the service, a single service operation is defined that accepts and returns custom messages of type `MyMessage`.</span></span> <span data-ttu-id="4e340-110">在该示例中，尽管请求消息和响应消息属于同一种类型，但必要时当然也可以属于不同的消息协定。</span><span class="sxs-lookup"><span data-stu-id="4e340-110">Although in this sample the request and response messages are of the same type, they could of course be different message contracts if necessary.</span></span>  
+ <span data-ttu-id="afbec-109">在服务中，定义了单个服务操作，该操作接受和返回 `MyMessage` 类型的自定义消息。</span><span class="sxs-lookup"><span data-stu-id="afbec-109">In the service, a single service operation is defined that accepts and returns custom messages of type `MyMessage`.</span></span> <span data-ttu-id="afbec-110">在该示例中，尽管请求消息和响应消息属于同一种类型，但必要时当然也可以属于不同的消息协定。</span><span class="sxs-lookup"><span data-stu-id="afbec-110">Although in this sample the request and response messages are of the same type, they could of course be different message contracts if necessary.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -40,7 +40,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="4e340-111">自定义消息 `MyMessage` 是在用 <xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute> 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性进行批注的类中定义的。</span><span class="sxs-lookup"><span data-stu-id="4e340-111">The custom message `MyMessage` is defined in a class annotated with <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> and <xref:System.ServiceModel.MessageBodyMemberAttribute> attributes.</span></span> <span data-ttu-id="4e340-112">本示例中只使用第三个构造函数。</span><span class="sxs-lookup"><span data-stu-id="4e340-112">Only the third constructor is used in this sample.</span></span> <span data-ttu-id="4e340-113">使用消息协定，您可以对 SOAP 消息进行完全控制。</span><span class="sxs-lookup"><span data-stu-id="4e340-113">Using message contracts allows you to exercise full control over the SOAP message.</span></span> <span data-ttu-id="4e340-114">在本示例中，<xref:System.ServiceModel.MessageHeaderAttribute> 属性用来将 `Operation` 放在 SOAP 头中。</span><span class="sxs-lookup"><span data-stu-id="4e340-114">In this sample, the <xref:System.ServiceModel.MessageHeaderAttribute> attribute is used to put `Operation` in a SOAP header.</span></span> <span data-ttu-id="4e340-115">操作数 `N1` 和 `N2` 以及 `Result` 出现在 SOAP 正文中，因为它们应用了 <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="4e340-115">The operands `N1`, `N2` and the `Result` appear within the SOAP body because they have the <xref:System.ServiceModel.MessageBodyMemberAttribute> attribute applied.</span></span>  
+ <span data-ttu-id="afbec-111">自定义消息 `MyMessage` 是在用 <xref:System.ServiceModel.MessageContractAttribute>、<xref:System.ServiceModel.MessageHeaderAttribute> 和 <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性进行批注的类中定义的。</span><span class="sxs-lookup"><span data-stu-id="afbec-111">The custom message `MyMessage` is defined in a class annotated with <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> and <xref:System.ServiceModel.MessageBodyMemberAttribute> attributes.</span></span> <span data-ttu-id="afbec-112">本示例中只使用第三个构造函数。</span><span class="sxs-lookup"><span data-stu-id="afbec-112">Only the third constructor is used in this sample.</span></span> <span data-ttu-id="afbec-113">使用消息协定，您可以对 SOAP 消息进行完全控制。</span><span class="sxs-lookup"><span data-stu-id="afbec-113">Using message contracts allows you to exercise full control over the SOAP message.</span></span> <span data-ttu-id="afbec-114">在本示例中，<xref:System.ServiceModel.MessageHeaderAttribute> 属性用来将 `Operation` 放在 SOAP 头中。</span><span class="sxs-lookup"><span data-stu-id="afbec-114">In this sample, the <xref:System.ServiceModel.MessageHeaderAttribute> attribute is used to put `Operation` in a SOAP header.</span></span> <span data-ttu-id="afbec-115">操作数 `N1` 和 `N2` 以及 `Result` 出现在 SOAP 正文中，因为它们应用了 <xref:System.ServiceModel.MessageBodyMemberAttribute> 属性。</span><span class="sxs-lookup"><span data-stu-id="afbec-115">The operands `N1`, `N2` and the `Result` appear within the SOAP body because they have the <xref:System.ServiceModel.MessageBodyMemberAttribute> attribute applied.</span></span>  
   
 ```  
 [MessageContract]  
@@ -106,7 +106,7 @@ public class MyMessage
 }  
 ```  
   
- <span data-ttu-id="4e340-116">实现类包含 `Calculate` 服务操作的代码。</span><span class="sxs-lookup"><span data-stu-id="4e340-116">The implementation class contains the code for the `Calculate` service operation.</span></span> <span data-ttu-id="4e340-117">`CalculateService` 类从请求消息获取操作数和运算符，并创建一条包含所请求的计算的结果的响应消息，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="4e340-117">The `CalculateService` class obtains the operands and operator from the request message and creates a response message that contains the result of the requested calculation, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="afbec-116">实现类包含 `Calculate` 服务操作的代码。</span><span class="sxs-lookup"><span data-stu-id="afbec-116">The implementation class contains the code for the `Calculate` service operation.</span></span> <span data-ttu-id="afbec-117">`CalculateService` 类从请求消息获取操作数和运算符，并创建一条包含所请求的计算的结果的响应消息，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="afbec-117">The `CalculateService` class obtains the operands and operator from the request message and creates a response message that contains the result of the requested calculation, as shown in the following sample code.</span></span>  
   
 ```  
 // Service class which implements the service contract.  
@@ -140,13 +140,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- <span data-ttu-id="4e340-118">客户端生成的客户端代码创建使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。</span><span class="sxs-lookup"><span data-stu-id="4e340-118">The generated client code for the client was created with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool.</span></span> <span data-ttu-id="4e340-119">在必要时，该工具会自动在所生成的客户端代码中创建消息协定类型。</span><span class="sxs-lookup"><span data-stu-id="4e340-119">The tool automatically creates message contract types in the generated client code if necessary.</span></span> <span data-ttu-id="4e340-120">可以指定 `/messageContract` 命令选项来强制生成消息协定。</span><span class="sxs-lookup"><span data-stu-id="4e340-120">The `/messageContract` command option may be specified to force the generation of message contracts.</span></span>  
+ <span data-ttu-id="afbec-118">客户端生成的客户端代码创建使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具。</span><span class="sxs-lookup"><span data-stu-id="afbec-118">The generated client code for the client was created with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool.</span></span> <span data-ttu-id="afbec-119">在必要时，该工具会自动在所生成的客户端代码中创建消息协定类型。</span><span class="sxs-lookup"><span data-stu-id="afbec-119">The tool automatically creates message contract types in the generated client code if necessary.</span></span> <span data-ttu-id="afbec-120">可以指定 `/messageContract` 命令选项来强制生成消息协定。</span><span class="sxs-lookup"><span data-stu-id="afbec-120">The `/messageContract` command option may be specified to force the generation of message contracts.</span></span>  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- <span data-ttu-id="4e340-121">下面的示例代码演示使用 `MyMessage` 消息的客户端。</span><span class="sxs-lookup"><span data-stu-id="4e340-121">The following sample code demonstrates the client using the `MyMessage` message.</span></span>  
+ <span data-ttu-id="afbec-121">下面的示例代码演示使用 `MyMessage` 消息的客户端。</span><span class="sxs-lookup"><span data-stu-id="afbec-121">The following sample code demonstrates the client using the `MyMessage` message.</span></span>  
   
 ```  
 // Create a client with given client endpoint configuration  
@@ -162,7 +162,7 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- <span data-ttu-id="4e340-122">运行示例时，计算结果将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="4e340-122">When you run the sample, the calculations are displayed in the client console window.</span></span> <span data-ttu-id="4e340-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="4e340-123">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="afbec-122">运行示例时，计算结果将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="afbec-122">When you run the sample, the calculations are displayed in the client console window.</span></span> <span data-ttu-id="afbec-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="afbec-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -173,23 +173,23 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="4e340-124">此时，用户定义的自定义消息已经在客户端和服务操作之间传递。</span><span class="sxs-lookup"><span data-stu-id="4e340-124">At this point, custom user-defined messages have passed between the client and the service operation.</span></span> <span data-ttu-id="4e340-125">消息协定进行了如下定义：操作数和结果位于消息正文中，运算符位于消息头中。</span><span class="sxs-lookup"><span data-stu-id="4e340-125">The message contract defined that the operands and results were in the message body and that the operator was in a message header.</span></span> <span data-ttu-id="4e340-126">消息日志记录可以配置为遵守这个消息结构。</span><span class="sxs-lookup"><span data-stu-id="4e340-126">Message logging can be configured to observe this message structure.</span></span>  
+ <span data-ttu-id="afbec-124">此时，用户定义的自定义消息已经在客户端和服务操作之间传递。</span><span class="sxs-lookup"><span data-stu-id="afbec-124">At this point, custom user-defined messages have passed between the client and the service operation.</span></span> <span data-ttu-id="afbec-125">消息协定进行了如下定义：操作数和结果位于消息正文中，运算符位于消息头中。</span><span class="sxs-lookup"><span data-stu-id="afbec-125">The message contract defined that the operands and results were in the message body and that the operator was in a message header.</span></span> <span data-ttu-id="afbec-126">消息日志记录可以配置为遵守这个消息结构。</span><span class="sxs-lookup"><span data-stu-id="afbec-126">Message logging can be configured to observe this message structure.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4e340-127">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="4e340-127">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="afbec-127">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="afbec-127">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="4e340-128">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="4e340-128">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="afbec-128">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="afbec-128">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="4e340-129">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="4e340-129">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="afbec-129">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="afbec-129">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="4e340-130">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="4e340-130">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="afbec-130">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="afbec-130">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4e340-131">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="4e340-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4e340-132">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="4e340-132">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="afbec-131">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="afbec-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="afbec-132">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="afbec-132">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="4e340-133">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="4e340-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4e340-134">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="4e340-134">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="afbec-133">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="afbec-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="afbec-134">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="afbec-134">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## <a name="see-also"></a><span data-ttu-id="4e340-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4e340-135">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afbec-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afbec-135">See Also</span></span>

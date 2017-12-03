@@ -9,24 +9,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66966668bb91a857503a82449633f8dd1ae621b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9f153d212e1180e5de92a6299d2fbb2d6864c42
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a><span data-ttu-id="0f9ca-102">移除设计器添加到 XAML 文件的视图状态</span><span class="sxs-lookup"><span data-stu-id="0f9ca-102">Removing the View State the Designer Adds to an XAML File</span></span>
-<span data-ttu-id="0f9ca-103">此示例演示如何创建派生自 <xref:System.Windows.Markup.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-103">This sample demonstrates how to create a class that derives from <xref:System.Windows.Markup.XamlWriter> and removes view state from a XAML file.</span></span> [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]<span data-ttu-id="0f9ca-104"> 会将信息写入称作视图状态的 XAML 文档中。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-104"> writes information into the XAML document, which is known as view state.</span></span> <span data-ttu-id="0f9ca-105">视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-105">View state refers to the information that is required at design time, such as layout positioning, that is not required at runtime.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="0f9ca-106"> 将此信息插入正在编辑的 XAML 文档中。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-106"> inserts this information into the XAML document as it is edited.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="0f9ca-107"> 使用 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-107"> writes the view state into the XAML file with the `mc:Ignorable` attribute, so this information is not loaded when the runtime loads the XAML file.</span></span> <span data-ttu-id="0f9ca-108">此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-108">This sample demonstrates how to create a class that removes that view state information while processing XAML nodes.</span></span>  
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a><span data-ttu-id="2aefa-102">移除设计器添加到 XAML 文件的视图状态</span><span class="sxs-lookup"><span data-stu-id="2aefa-102">Removing the View State the Designer Adds to an XAML File</span></span>
+<span data-ttu-id="2aefa-103">此示例演示如何创建派生自 <xref:System.Windows.Markup.XamlWriter> 的类以及如何从 XAML 文件中移除视图状态。</span><span class="sxs-lookup"><span data-stu-id="2aefa-103">This sample demonstrates how to create a class that derives from <xref:System.Windows.Markup.XamlWriter> and removes view state from a XAML file.</span></span> [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]<span data-ttu-id="2aefa-104"> 会将信息写入称作视图状态的 XAML 文档中。</span><span class="sxs-lookup"><span data-stu-id="2aefa-104"> writes information into the XAML document, which is known as view state.</span></span> <span data-ttu-id="2aefa-105">视图状态是指设计时所需的信息（如布局定位），运行时不需要此信息。</span><span class="sxs-lookup"><span data-stu-id="2aefa-105">View state refers to the information that is required at design time, such as layout positioning, that is not required at runtime.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="2aefa-106"> 将此信息插入正在编辑的 XAML 文档中。</span><span class="sxs-lookup"><span data-stu-id="2aefa-106"> inserts this information into the XAML document as it is edited.</span></span> [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]<span data-ttu-id="2aefa-107"> 使用 `mc:Ignorable` 特性将视图状态写入 XAML 文件中，因此在运行时加载 XAML 文件时不会加载此信息。</span><span class="sxs-lookup"><span data-stu-id="2aefa-107"> writes the view state into the XAML file with the `mc:Ignorable` attribute, so this information is not loaded when the runtime loads the XAML file.</span></span> <span data-ttu-id="2aefa-108">此示例演示如何创建一个类，此类将在处理 XAML 节点时移除视图状态信息。</span><span class="sxs-lookup"><span data-stu-id="2aefa-108">This sample demonstrates how to create a class that removes that view state information while processing XAML nodes.</span></span>  
   
-## <a name="discussion"></a><span data-ttu-id="0f9ca-109">讨论</span><span class="sxs-lookup"><span data-stu-id="0f9ca-109">Discussion</span></span>  
- <span data-ttu-id="0f9ca-110">此示例演示如何创建自定义编写器。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-110">This sample demonstrates how to create a custom writer.</span></span>  
+## <a name="discussion"></a><span data-ttu-id="2aefa-109">讨论</span><span class="sxs-lookup"><span data-stu-id="2aefa-109">Discussion</span></span>  
+ <span data-ttu-id="2aefa-110">此示例演示如何创建自定义编写器。</span><span class="sxs-lookup"><span data-stu-id="2aefa-110">This sample demonstrates how to create a custom writer.</span></span>  
   
- <span data-ttu-id="0f9ca-111">若要生成自定义 XAML 编写器，请创建一个从 <xref:System.Windows.Markup.XamlWriter> 继承的类。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-111">To build a custom XAML writer, create a class that inherits from <xref:System.Windows.Markup.XamlWriter>.</span></span> <span data-ttu-id="0f9ca-112">如 XAML 编写器经常嵌套的它是典型能够跟踪的"内部"XAML 编写器。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-112">As XAML writers are often nested, it is typical to keep track of an "inner" XAML writer.</span></span> <span data-ttu-id="0f9ca-113">这些"内部可以将编写器视为对 XAML 编写器，从而可以具有多个入口点执行工作，然后将处理委托给堆栈的其余部分的剩余堆栈的引用。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-113">These "inner’ writers can be thought of as the reference to the remaining stack of XAML writers, allowing you to have multiple entry points to do work and then delegate processing to the remainder of the stack.</span></span>  
+ <span data-ttu-id="2aefa-111">若要生成自定义 XAML 编写器，请创建一个从 <xref:System.Windows.Markup.XamlWriter> 继承的类。</span><span class="sxs-lookup"><span data-stu-id="2aefa-111">To build a custom XAML writer, create a class that inherits from <xref:System.Windows.Markup.XamlWriter>.</span></span> <span data-ttu-id="2aefa-112">如 XAML 编写器经常嵌套的它是典型能够跟踪的"内部"XAML 编写器。</span><span class="sxs-lookup"><span data-stu-id="2aefa-112">As XAML writers are often nested, it is typical to keep track of an "inner" XAML writer.</span></span> <span data-ttu-id="2aefa-113">这些"内部可以将编写器视为对 XAML 编写器，从而可以具有多个入口点执行工作，然后将处理委托给堆栈的其余部分的剩余堆栈的引用。</span><span class="sxs-lookup"><span data-stu-id="2aefa-113">These "inner’ writers can be thought of as the reference to the remaining stack of XAML writers, allowing you to have multiple entry points to do work and then delegate processing to the remainder of the stack.</span></span>  
   
- <span data-ttu-id="0f9ca-114">在此示例中，有几个需要注意的地方。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-114">In this sample, there are a few items of interest.</span></span> <span data-ttu-id="0f9ca-115">其中一个需要注意的是，检查要编写的项是否来自某个设计器命名空间。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-115">One is the check to see whether the item being written is from a designer namespace.</span></span> <span data-ttu-id="0f9ca-116">请注意，此操作还将消除工作流中对该设计器命名空间的其他类型的使用。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-116">Note that this also strips out the use of other types from the designer namespace in a workflow.</span></span>  
+ <span data-ttu-id="2aefa-114">在此示例中，有几个需要注意的地方。</span><span class="sxs-lookup"><span data-stu-id="2aefa-114">In this sample, there are a few items of interest.</span></span> <span data-ttu-id="2aefa-115">其中一个需要注意的是，检查要编写的项是否来自某个设计器命名空间。</span><span class="sxs-lookup"><span data-stu-id="2aefa-115">One is the check to see whether the item being written is from a designer namespace.</span></span> <span data-ttu-id="2aefa-116">请注意，此操作还将消除工作流中对该设计器命名空间的其他类型的使用。</span><span class="sxs-lookup"><span data-stu-id="2aefa-116">Note that this also strips out the use of other types from the designer namespace in a workflow.</span></span>  
   
 ```csharp
 static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)  
@@ -48,7 +48,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }  
 ```  
   
- <span data-ttu-id="0f9ca-117">另外，此操作还将创建在遍历节点流时使用的 XAML 成员的堆栈。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-117">This also creates a stack of XAML members that are used while traversing the node stream.</span></span> <span data-ttu-id="0f9ca-118">此示例的剩余工作主要包含在<!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>-->`System.Windows.Markup.XamlWriter.WriteStartMember`方法。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-118">The remaining work of this sample is largely contained in the <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` method.</span></span>  
+ <span data-ttu-id="2aefa-117">另外，此操作还将创建在遍历节点流时使用的 XAML 成员的堆栈。</span><span class="sxs-lookup"><span data-stu-id="2aefa-117">This also creates a stack of XAML members that are used while traversing the node stream.</span></span> <span data-ttu-id="2aefa-118">此示例的剩余工作主要包含在<!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>-->`System.Windows.Markup.XamlWriter.WriteStartMember`方法。</span><span class="sxs-lookup"><span data-stu-id="2aefa-118">The remaining work of this sample is largely contained in the <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` method.</span></span>  
   
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)  
@@ -69,7 +69,7 @@ public override void WriteStartMember(XamlMember xamlMember)
 }  
 ```  
   
- <span data-ttu-id="0f9ca-119">然后，后续方法将检查它们是否仍包含在视图状态容器中，如果是这样，则返回且不在编写器堆栈中向下传递节点。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-119">Subsequent methods then check to see whether they are still contained in a view state container, and if so, return, and do not pass the node down the writer stack.</span></span>  
+ <span data-ttu-id="2aefa-119">然后，后续方法将检查它们是否仍包含在视图状态容器中，如果是这样，则返回且不在编写器堆栈中向下传递节点。</span><span class="sxs-lookup"><span data-stu-id="2aefa-119">Subsequent methods then check to see whether they are still contained in a view state container, and if so, return, and do not pass the node down the writer stack.</span></span>  
   
 ```csharp
 public override void WriteValue(Object value)  
@@ -83,7 +83,7 @@ public override void WriteValue(Object value)
 }  
 ```  
   
- <span data-ttu-id="0f9ca-120">若要使用自定义 XAML 编写器，则必须在 XAML 编写器堆栈中将其链接起来。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-120">To use a custom XAML writer, you must chain it together in a stack of XAML writers.</span></span> <span data-ttu-id="0f9ca-121">下面的代码演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-121">The following code shows how this can be used.</span></span>  
+ <span data-ttu-id="2aefa-120">若要使用自定义 XAML 编写器，则必须在 XAML 编写器堆栈中将其链接起来。</span><span class="sxs-lookup"><span data-stu-id="2aefa-120">To use a custom XAML writer, you must chain it together in a stack of XAML writers.</span></span> <span data-ttu-id="2aefa-121">下面的代码演示如何执行此操作。</span><span class="sxs-lookup"><span data-stu-id="2aefa-121">The following code shows how this can be used.</span></span>  
   
 ```csharp 
 XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };  
@@ -92,42 +92,42 @@ XamlXmlWriter xamlWriter = new XamlXmlWriter(xmlWriter, new XamlSchemaContext())
 XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilderWriter(xamlWriter)), ab);  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="0f9ca-122">使用此示例</span><span class="sxs-lookup"><span data-stu-id="0f9ca-122">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="2aefa-122">使用此示例</span><span class="sxs-lookup"><span data-stu-id="2aefa-122">To use this sample</span></span>  
   
-1. <span data-ttu-id="0f9ca-123">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 ViewStateCleaningWriter.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-123">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ViewStateCleaningWriter.sln solution file.</span></span>  
+1. <span data-ttu-id="2aefa-123">使用 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 打开 ViewStateCleaningWriter.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="2aefa-123">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ViewStateCleaningWriter.sln solution file.</span></span>  
   
-2. <span data-ttu-id="0f9ca-124">打开命令提示符，导航到生成 ViewStageCleaningWriter.exe 的目录。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-124">Open a command prompt and navigate to the directory where the ViewStageCleaningWriter.exe is built.</span></span>  
+2. <span data-ttu-id="2aefa-124">打开命令提示符，导航到生成 ViewStageCleaningWriter.exe 的目录。</span><span class="sxs-lookup"><span data-stu-id="2aefa-124">Open a command prompt and navigate to the directory where the ViewStageCleaningWriter.exe is built.</span></span>  
   
-3. <span data-ttu-id="0f9ca-125">在 Workflow1.xaml 文件上运行 ViewStateCleaningWriter.exe。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-125">Run ViewStateCleaningWriter.exe on the Workflow1.xaml file.</span></span>  
+3. <span data-ttu-id="2aefa-125">在 Workflow1.xaml 文件上运行 ViewStateCleaningWriter.exe。</span><span class="sxs-lookup"><span data-stu-id="2aefa-125">Run ViewStateCleaningWriter.exe on the Workflow1.xaml file.</span></span>  
 
-   <span data-ttu-id="0f9ca-126">下面的示例演示了可执行文件的语法。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-126">The syntax for the executable is shown in the following example.</span></span>  
+   <span data-ttu-id="2aefa-126">下面的示例演示了可执行文件的语法。</span><span class="sxs-lookup"><span data-stu-id="2aefa-126">The syntax for the executable is shown in the following example.</span></span>  
   
    ```console
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
    
-   <span data-ttu-id="0f9ca-127">这将输出的 XAML 文件，以便\[outfile]，删除的所有其视图状态信息。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-127">This outputs a XAML file to \[outfile], which has all its view state information removed.</span></span>  
+   <span data-ttu-id="2aefa-127">这将输出的 XAML 文件，以便\[outfile]，删除的所有其视图状态信息。</span><span class="sxs-lookup"><span data-stu-id="2aefa-127">This outputs a XAML file to \[outfile], which has all its view state information removed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="0f9ca-128">已为 <xref:System.Activities.Statements.Sequence> 工作流移除大量虚拟化提示。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-128">For a <xref:System.Activities.Statements.Sequence> workflow, a number of virtualization hints are removed.</span></span> <span data-ttu-id="0f9ca-129">这将导致设计器在下次加载时重新计算布局。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-129">This causes the designer to recalculate layout the next time it is loaded.</span></span> <span data-ttu-id="0f9ca-130">在对 <xref:System.Activities.Statements.Flowchart> 使用此示例时，将移除所有定位和行路由信息，并且在后续加载到设计器中时，所有活动将在屏幕左侧堆叠。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-130">When you use this sample for a <xref:System.Activities.Statements.Flowchart>, all positioning and line routing information are removed and on subsequent loading into the designer, all activities are stacked on the left side of the screen.</span></span>  
+> <span data-ttu-id="2aefa-128">已为 <xref:System.Activities.Statements.Sequence> 工作流移除大量虚拟化提示。</span><span class="sxs-lookup"><span data-stu-id="2aefa-128">For a <xref:System.Activities.Statements.Sequence> workflow, a number of virtualization hints are removed.</span></span> <span data-ttu-id="2aefa-129">这将导致设计器在下次加载时重新计算布局。</span><span class="sxs-lookup"><span data-stu-id="2aefa-129">This causes the designer to recalculate layout the next time it is loaded.</span></span> <span data-ttu-id="2aefa-130">在对 <xref:System.Activities.Statements.Flowchart> 使用此示例时，将移除所有定位和行路由信息，并且在后续加载到设计器中时，所有活动将在屏幕左侧堆叠。</span><span class="sxs-lookup"><span data-stu-id="2aefa-130">When you use this sample for a <xref:System.Activities.Statements.Flowchart>, all positioning and line routing information are removed and on subsequent loading into the designer, all activities are stacked on the left side of the screen.</span></span>  
   
-#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a><span data-ttu-id="0f9ca-131">创建与此示例一起使用的示例 XAML 文件</span><span class="sxs-lookup"><span data-stu-id="0f9ca-131">To create a sample XAML file for use with this sample</span></span>  
+#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a><span data-ttu-id="2aefa-131">创建与此示例一起使用的示例 XAML 文件</span><span class="sxs-lookup"><span data-stu-id="2aefa-131">To create a sample XAML file for use with this sample</span></span>  
   
-1. <span data-ttu-id="0f9ca-132">打开 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-132">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1. <span data-ttu-id="2aefa-132">打开 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2aefa-132">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2. <span data-ttu-id="0f9ca-133">创建新的工作流控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-133">Create a new Workflow Console Application.</span></span>  
+2. <span data-ttu-id="2aefa-133">创建新的工作流控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="2aefa-133">Create a new Workflow Console Application.</span></span>  
   
-3. <span data-ttu-id="0f9ca-134">将几个活动拖放到画布上。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-134">Drag and drop a few activities onto the canvas</span></span>  
+3. <span data-ttu-id="2aefa-134">将几个活动拖放到画布上。</span><span class="sxs-lookup"><span data-stu-id="2aefa-134">Drag and drop a few activities onto the canvas</span></span>  
   
-4. <span data-ttu-id="0f9ca-135">保存工作流 XAML 文件。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-135">Save the workflow XAML file.</span></span>  
+4. <span data-ttu-id="2aefa-135">保存工作流 XAML 文件。</span><span class="sxs-lookup"><span data-stu-id="2aefa-135">Save the workflow XAML file.</span></span>  
   
-5. <span data-ttu-id="0f9ca-136">检测 XAML 文件以查看视图状态附加属性。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-136">Inspect the XAML file to see the view state attached properties.</span></span>  
+5. <span data-ttu-id="2aefa-136">检测 XAML 文件以查看视图状态附加属性。</span><span class="sxs-lookup"><span data-stu-id="2aefa-136">Inspect the XAML file to see the view state attached properties.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="0f9ca-137">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0f9ca-138">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="0f9ca-138">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="2aefa-137">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2aefa-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2aefa-138">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2aefa-138">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="0f9ca-139">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="0f9ca-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0f9ca-140">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="0f9ca-140">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="2aefa-139">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="2aefa-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2aefa-140">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2aefa-140">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

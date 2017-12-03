@@ -13,53 +13,53 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3d4979513df5eb6908974480a19374a5c6a2233
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="trusted-subsystem"></a><span data-ttu-id="17f85-102">受信任的子系统</span><span class="sxs-lookup"><span data-stu-id="17f85-102">Trusted Subsystem</span></span>
-<span data-ttu-id="17f85-103">客户端访问分布在网络上的一个或多个 Web 服务。</span><span class="sxs-lookup"><span data-stu-id="17f85-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="17f85-104">Web 服务的设计使对其他资源（比如数据库或其他 Web 服务）的访问包装在 Web 服务的企业逻辑中。</span><span class="sxs-lookup"><span data-stu-id="17f85-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="17f85-105">必须保护这些资源不受到未经授权的访问。</span><span class="sxs-lookup"><span data-stu-id="17f85-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="17f85-106">下图描述了一个受信任的子系统过程。</span><span class="sxs-lookup"><span data-stu-id="17f85-106">The following illustration depicts a trusted subsystem process.</span></span>  
+# <a name="trusted-subsystem"></a><span data-ttu-id="24dc0-102">受信任的子系统</span><span class="sxs-lookup"><span data-stu-id="24dc0-102">Trusted Subsystem</span></span>
+<span data-ttu-id="24dc0-103">客户端访问分布在网络上的一个或多个 Web 服务。</span><span class="sxs-lookup"><span data-stu-id="24dc0-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="24dc0-104">Web 服务的设计使对其他资源（比如数据库或其他 Web 服务）的访问包装在 Web 服务的企业逻辑中。</span><span class="sxs-lookup"><span data-stu-id="24dc0-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="24dc0-105">必须保护这些资源不受到未经授权的访问。</span><span class="sxs-lookup"><span data-stu-id="24dc0-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="24dc0-106">下图描述了一个受信任的子系统过程。</span><span class="sxs-lookup"><span data-stu-id="24dc0-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- <span data-ttu-id="17f85-107">![受信任子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="17f85-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
+ <span data-ttu-id="24dc0-107">![受信任子系统](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="24dc0-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- <span data-ttu-id="17f85-108">以下步骤说明如图所示的受信任子系统过程：</span><span class="sxs-lookup"><span data-stu-id="17f85-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
+ <span data-ttu-id="24dc0-108">以下步骤说明如图所示的受信任子系统过程：</span><span class="sxs-lookup"><span data-stu-id="24dc0-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1.  <span data-ttu-id="17f85-109">客户端向受信任的子系统随凭据一起提交请求。</span><span class="sxs-lookup"><span data-stu-id="17f85-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
+1.  <span data-ttu-id="24dc0-109">客户端向受信任的子系统随凭据一起提交请求。</span><span class="sxs-lookup"><span data-stu-id="24dc0-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2.  <span data-ttu-id="17f85-110">受信任的子系统对用户进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="17f85-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
+2.  <span data-ttu-id="24dc0-110">受信任的子系统对用户进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="24dc0-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3.  <span data-ttu-id="17f85-111">受信任的子系统向远程资源发送请求消息。</span><span class="sxs-lookup"><span data-stu-id="17f85-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="17f85-112">此请求伴随受信任子系统（或在其下执行受信任子系统过程的服务帐户）的凭据。</span><span class="sxs-lookup"><span data-stu-id="17f85-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
+3.  <span data-ttu-id="24dc0-111">受信任的子系统向远程资源发送请求消息。</span><span class="sxs-lookup"><span data-stu-id="24dc0-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="24dc0-112">此请求伴随受信任子系统（或在其下执行受信任子系统过程的服务帐户）的凭据。</span><span class="sxs-lookup"><span data-stu-id="24dc0-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4.  <span data-ttu-id="17f85-113">后端资源对受信任子系统进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="17f85-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="17f85-114">然后处理请求并对受信任子系统发出响应。</span><span class="sxs-lookup"><span data-stu-id="17f85-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
+4.  <span data-ttu-id="24dc0-113">后端资源对受信任子系统进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="24dc0-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="24dc0-114">然后处理请求并对受信任子系统发出响应。</span><span class="sxs-lookup"><span data-stu-id="24dc0-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5.  <span data-ttu-id="17f85-115">受信任子系统处理响应并对客户端发出其自己的响应。</span><span class="sxs-lookup"><span data-stu-id="17f85-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
+5.  <span data-ttu-id="24dc0-115">受信任子系统处理响应并对客户端发出其自己的响应。</span><span class="sxs-lookup"><span data-stu-id="24dc0-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|<span data-ttu-id="17f85-116">特征</span><span class="sxs-lookup"><span data-stu-id="17f85-116">Characteristic</span></span>|<span data-ttu-id="17f85-117">描述</span><span class="sxs-lookup"><span data-stu-id="17f85-117">Description</span></span>|  
+|<span data-ttu-id="24dc0-116">特征</span><span class="sxs-lookup"><span data-stu-id="24dc0-116">Characteristic</span></span>|<span data-ttu-id="24dc0-117">描述</span><span class="sxs-lookup"><span data-stu-id="24dc0-117">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="17f85-118">安全模式</span><span class="sxs-lookup"><span data-stu-id="17f85-118">Security Mode</span></span>|<span data-ttu-id="17f85-119">消息</span><span class="sxs-lookup"><span data-stu-id="17f85-119">Message</span></span>|  
-|<span data-ttu-id="17f85-120">互操作性</span><span class="sxs-lookup"><span data-stu-id="17f85-120">Interoperability</span></span>|<span data-ttu-id="17f85-121">仅 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="17f85-121">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only.</span></span>|  
-|<span data-ttu-id="17f85-122">身份验证（服务）</span><span class="sxs-lookup"><span data-stu-id="17f85-122">Authentication (service)</span></span>|<span data-ttu-id="17f85-123">安全令牌服务对客户端进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="17f85-123">Security token service authenticates and authorizes clients.</span></span>|  
-|<span data-ttu-id="17f85-124">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="17f85-124">Authentication (client)</span></span>|<span data-ttu-id="17f85-125">受信任子系统对客户端进行身份验证，资源对受信任子系统服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="17f85-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
-|<span data-ttu-id="17f85-126">完整性</span><span class="sxs-lookup"><span data-stu-id="17f85-126">Integrity</span></span>|<span data-ttu-id="17f85-127">是</span><span class="sxs-lookup"><span data-stu-id="17f85-127">Yes</span></span>|  
-|<span data-ttu-id="17f85-128">保密性</span><span class="sxs-lookup"><span data-stu-id="17f85-128">Confidentiality</span></span>|<span data-ttu-id="17f85-129">是</span><span class="sxs-lookup"><span data-stu-id="17f85-129">Yes</span></span>|  
-|<span data-ttu-id="17f85-130">传输</span><span class="sxs-lookup"><span data-stu-id="17f85-130">Transport</span></span>|<span data-ttu-id="17f85-131">客户端和受信任子系统服务之间采用 HTTP。</span><span class="sxs-lookup"><span data-stu-id="17f85-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="17f85-132">受信任子系统服务和资源（后端服务）之间采用 NET.TCP。</span><span class="sxs-lookup"><span data-stu-id="17f85-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
-|<span data-ttu-id="17f85-133">绑定</span><span class="sxs-lookup"><span data-stu-id="17f85-133">Binding</span></span>|<span data-ttu-id="17f85-134"><xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="17f85-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
+|<span data-ttu-id="24dc0-118">安全模式</span><span class="sxs-lookup"><span data-stu-id="24dc0-118">Security Mode</span></span>|<span data-ttu-id="24dc0-119">消息</span><span class="sxs-lookup"><span data-stu-id="24dc0-119">Message</span></span>|  
+|<span data-ttu-id="24dc0-120">互操作性</span><span class="sxs-lookup"><span data-stu-id="24dc0-120">Interoperability</span></span>|<span data-ttu-id="24dc0-121">仅 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="24dc0-121">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only.</span></span>|  
+|<span data-ttu-id="24dc0-122">身份验证（服务）</span><span class="sxs-lookup"><span data-stu-id="24dc0-122">Authentication (service)</span></span>|<span data-ttu-id="24dc0-123">安全令牌服务对客户端进行身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="24dc0-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="24dc0-124">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="24dc0-124">Authentication (client)</span></span>|<span data-ttu-id="24dc0-125">受信任子系统对客户端进行身份验证，资源对受信任子系统服务进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="24dc0-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="24dc0-126">完整性</span><span class="sxs-lookup"><span data-stu-id="24dc0-126">Integrity</span></span>|<span data-ttu-id="24dc0-127">是</span><span class="sxs-lookup"><span data-stu-id="24dc0-127">Yes</span></span>|  
+|<span data-ttu-id="24dc0-128">保密性</span><span class="sxs-lookup"><span data-stu-id="24dc0-128">Confidentiality</span></span>|<span data-ttu-id="24dc0-129">是</span><span class="sxs-lookup"><span data-stu-id="24dc0-129">Yes</span></span>|  
+|<span data-ttu-id="24dc0-130">传输</span><span class="sxs-lookup"><span data-stu-id="24dc0-130">Transport</span></span>|<span data-ttu-id="24dc0-131">客户端和受信任子系统服务之间采用 HTTP。</span><span class="sxs-lookup"><span data-stu-id="24dc0-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="24dc0-132">受信任子系统服务和资源（后端服务）之间采用 NET.TCP。</span><span class="sxs-lookup"><span data-stu-id="24dc0-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="24dc0-133">绑定</span><span class="sxs-lookup"><span data-stu-id="24dc0-133">Binding</span></span>|<span data-ttu-id="24dc0-134"><xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="24dc0-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## <a name="resource-back-end-service"></a><span data-ttu-id="17f85-135">资源（后端服务）</span><span class="sxs-lookup"><span data-stu-id="17f85-135">Resource (Back-End Service)</span></span>  
+## <a name="resource-back-end-service"></a><span data-ttu-id="24dc0-135">资源（后端服务）</span><span class="sxs-lookup"><span data-stu-id="24dc0-135">Resource (Back-End Service)</span></span>  
   
-### <a name="code"></a><span data-ttu-id="17f85-136">代码</span><span class="sxs-lookup"><span data-stu-id="17f85-136">Code</span></span>  
- <span data-ttu-id="17f85-137">下面的代码演示如何创建资源的服务终结点，该服务终结点使用 TCP 上的传输安全传输协议。</span><span class="sxs-lookup"><span data-stu-id="17f85-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="24dc0-136">代码</span><span class="sxs-lookup"><span data-stu-id="24dc0-136">Code</span></span>  
+ <span data-ttu-id="24dc0-137">下面的代码演示如何创建资源的服务终结点，该服务终结点使用 TCP 上的传输安全传输协议。</span><span class="sxs-lookup"><span data-stu-id="24dc0-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="17f85-138">配置</span><span class="sxs-lookup"><span data-stu-id="17f85-138">Configuration</span></span>  
- <span data-ttu-id="17f85-139">下面的配置使用配置设置相同的终结点。</span><span class="sxs-lookup"><span data-stu-id="17f85-139">The following configuration sets up the same endpoint using configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="24dc0-138">配置</span><span class="sxs-lookup"><span data-stu-id="24dc0-138">Configuration</span></span>  
+ <span data-ttu-id="24dc0-139">下面的配置使用配置设置相同的终结点。</span><span class="sxs-lookup"><span data-stu-id="24dc0-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -97,21 +97,21 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="trusted-subsystem"></a><span data-ttu-id="17f85-140">受信任的子系统</span><span class="sxs-lookup"><span data-stu-id="17f85-140">Trusted Subsystem</span></span>  
+## <a name="trusted-subsystem"></a><span data-ttu-id="24dc0-140">受信任的子系统</span><span class="sxs-lookup"><span data-stu-id="24dc0-140">Trusted Subsystem</span></span>  
   
-### <a name="code"></a><span data-ttu-id="17f85-141">代码</span><span class="sxs-lookup"><span data-stu-id="17f85-141">Code</span></span>  
- <span data-ttu-id="17f85-142">下面的代码演示如何创建受信任子系统的服务终结点，该服务终结点使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="17f85-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="24dc0-141">代码</span><span class="sxs-lookup"><span data-stu-id="24dc0-141">Code</span></span>  
+ <span data-ttu-id="24dc0-142">下面的代码演示如何创建受信任子系统的服务终结点，该服务终结点使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="24dc0-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- <span data-ttu-id="17f85-143">下面的代码演示受信任子系统中使用 TCP 上的传输安全传输协议与后端服务进行通信的服务。</span><span class="sxs-lookup"><span data-stu-id="17f85-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
+ <span data-ttu-id="24dc0-143">下面的代码演示受信任子系统中使用 TCP 上的传输安全传输协议与后端服务进行通信的服务。</span><span class="sxs-lookup"><span data-stu-id="24dc0-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="17f85-144">配置</span><span class="sxs-lookup"><span data-stu-id="17f85-144">Configuration</span></span>  
- <span data-ttu-id="17f85-145">下面的配置使用配置设置相同的终结点。</span><span class="sxs-lookup"><span data-stu-id="17f85-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="17f85-146">注意有两个绑定：一个用于保证承载于受信任子系统中的服务的安全，另一个用于在受信任子系统和后端服务之间进行通信。</span><span class="sxs-lookup"><span data-stu-id="17f85-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="24dc0-144">配置</span><span class="sxs-lookup"><span data-stu-id="24dc0-144">Configuration</span></span>  
+ <span data-ttu-id="24dc0-145">下面的配置使用配置设置相同的终结点。</span><span class="sxs-lookup"><span data-stu-id="24dc0-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="24dc0-146">注意有两个绑定：一个用于保证承载于受信任子系统中的服务的安全，另一个用于在受信任子系统和后端服务之间进行通信。</span><span class="sxs-lookup"><span data-stu-id="24dc0-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -173,16 +173,16 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="17f85-147">客户端</span><span class="sxs-lookup"><span data-stu-id="17f85-147">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="24dc0-147">客户端</span><span class="sxs-lookup"><span data-stu-id="24dc0-147">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="17f85-148">代码</span><span class="sxs-lookup"><span data-stu-id="17f85-148">Code</span></span>  
- <span data-ttu-id="17f85-149">下面的代码演示如何创建与受信任子系统进行通信的客户端，该客户端使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="17f85-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="24dc0-148">代码</span><span class="sxs-lookup"><span data-stu-id="24dc0-148">Code</span></span>  
+ <span data-ttu-id="24dc0-149">下面的代码演示如何创建与受信任子系统进行通信的客户端，该客户端使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="24dc0-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="17f85-150">配置</span><span class="sxs-lookup"><span data-stu-id="17f85-150">Configuration</span></span>  
- <span data-ttu-id="17f85-151">下面的代码将客户端配置成使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="17f85-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="17f85-152">用户名和密码只能使用代码指定（不可配置）。</span><span class="sxs-lookup"><span data-stu-id="17f85-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="24dc0-150">配置</span><span class="sxs-lookup"><span data-stu-id="24dc0-150">Configuration</span></span>  
+ <span data-ttu-id="24dc0-151">下面的代码将客户端配置成使用 HTTP 上的消息安全协议以及用户名和密码进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="24dc0-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="24dc0-152">用户名和密码只能使用代码指定（不可配置）。</span><span class="sxs-lookup"><span data-stu-id="24dc0-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -220,6 +220,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="17f85-153">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17f85-153">See Also</span></span>  
- [<span data-ttu-id="17f85-154">安全性概述</span><span class="sxs-lookup"><span data-stu-id="17f85-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="17f85-155">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="17f85-155">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="24dc0-153">另请参阅</span><span class="sxs-lookup"><span data-stu-id="24dc0-153">See Also</span></span>  
+ [<span data-ttu-id="24dc0-154">安全性概述</span><span class="sxs-lookup"><span data-stu-id="24dc0-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="24dc0-155">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="24dc0-155">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

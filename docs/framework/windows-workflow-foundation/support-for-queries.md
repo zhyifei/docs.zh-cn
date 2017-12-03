@@ -9,103 +9,103 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d4f338f9ae5cc6967885d0518eb573d9f9535fc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bed850baca2d06dc0de173ab798da29fb3ec7cc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="support-for-queries"></a><span data-ttu-id="cf25d-102">查询支持</span><span class="sxs-lookup"><span data-stu-id="cf25d-102">Support for Queries</span></span>
-<span data-ttu-id="cf25d-103">SQL 工作流实例存储中记录了存储区中的一组已知属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="cf25d-104">用户可以根据这些属性查询实例。</span><span class="sxs-lookup"><span data-stu-id="cf25d-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="cf25d-105">下面的列表包含这些已知属性的一部分：</span><span class="sxs-lookup"><span data-stu-id="cf25d-105">The following list contains some of these well-known properties:</span></span>  
+# <a name="support-for-queries"></a><span data-ttu-id="02fb3-102">查询支持</span><span class="sxs-lookup"><span data-stu-id="02fb3-102">Support for Queries</span></span>
+<span data-ttu-id="02fb3-103">SQL 工作流实例存储中记录了存储区中的一组已知属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-103">The SQL Workflow Instance Store records a set of well-known properties in the store.</span></span> <span data-ttu-id="02fb3-104">用户可以根据这些属性查询实例。</span><span class="sxs-lookup"><span data-stu-id="02fb3-104">Users can query for instances based on these properties.</span></span> <span data-ttu-id="02fb3-105">下面的列表包含这些已知属性的一部分：</span><span class="sxs-lookup"><span data-stu-id="02fb3-105">The following list contains some of these well-known properties:</span></span>  
   
--   <span data-ttu-id="cf25d-106">**站点名称。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-106">**Site Name.**</span></span> <span data-ttu-id="cf25d-107">包含服务的网站的名称。</span><span class="sxs-lookup"><span data-stu-id="cf25d-107">Name of the Web site that contains the service.</span></span>  
+-   <span data-ttu-id="02fb3-106">**站点名称。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-106">**Site Name.**</span></span> <span data-ttu-id="02fb3-107">包含服务的网站的名称。</span><span class="sxs-lookup"><span data-stu-id="02fb3-107">Name of the Web site that contains the service.</span></span>  
   
--   <span data-ttu-id="cf25d-108">**相对的应用程序路径。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-108">**Relative Application Path.**</span></span> <span data-ttu-id="cf25d-109">应用程序相对于网站的路径。</span><span class="sxs-lookup"><span data-stu-id="cf25d-109">Path of the application relative to the Web site.</span></span>  
+-   <span data-ttu-id="02fb3-108">**相对的应用程序路径。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-108">**Relative Application Path.**</span></span> <span data-ttu-id="02fb3-109">应用程序相对于网站的路径。</span><span class="sxs-lookup"><span data-stu-id="02fb3-109">Path of the application relative to the Web site.</span></span>  
   
--   <span data-ttu-id="cf25d-110">**相对服务路径。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-110">**Relative Service Path.**</span></span> <span data-ttu-id="cf25d-111">服务相对于应用程序的路径。</span><span class="sxs-lookup"><span data-stu-id="cf25d-111">Path of the service relative to the application.</span></span>  
+-   <span data-ttu-id="02fb3-110">**相对服务路径。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-110">**Relative Service Path.**</span></span> <span data-ttu-id="02fb3-111">服务相对于应用程序的路径。</span><span class="sxs-lookup"><span data-stu-id="02fb3-111">Path of the service relative to the application.</span></span>  
   
--   <span data-ttu-id="cf25d-112">**服务名称。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-112">**Service Name.**</span></span> <span data-ttu-id="cf25d-113">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="cf25d-113">Name of the service.</span></span>  
+-   <span data-ttu-id="02fb3-112">**服务名称。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-112">**Service Name.**</span></span> <span data-ttu-id="02fb3-113">服务的名称。</span><span class="sxs-lookup"><span data-stu-id="02fb3-113">Name of the service.</span></span>  
   
--   <span data-ttu-id="cf25d-114">**服务 Namespace。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-114">**Service Namespace.**</span></span> <span data-ttu-id="cf25d-115">服务使用的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="cf25d-115">Name of the namespace that the service uses.</span></span>  
+-   <span data-ttu-id="02fb3-114">**服务 Namespace。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-114">**Service Namespace.**</span></span> <span data-ttu-id="02fb3-115">服务使用的命名空间的名称。</span><span class="sxs-lookup"><span data-stu-id="02fb3-115">Name of the namespace that the service uses.</span></span>  
   
--   <span data-ttu-id="cf25d-116">**当前计算机。**</span><span class="sxs-lookup"><span data-stu-id="cf25d-116">**Current Machine.**</span></span>  
+-   <span data-ttu-id="02fb3-116">**当前计算机。**</span><span class="sxs-lookup"><span data-stu-id="02fb3-116">**Current Machine.**</span></span>  
   
--   <span data-ttu-id="cf25d-117">**上一计算机**。</span><span class="sxs-lookup"><span data-stu-id="cf25d-117">**Last Machine**.</span></span> <span data-ttu-id="cf25d-118">上次运行工作流服务实例的计算机。</span><span class="sxs-lookup"><span data-stu-id="cf25d-118">The computer on which the workflow service instance ran the last time.</span></span>  
+-   <span data-ttu-id="02fb3-117">**上一计算机**。</span><span class="sxs-lookup"><span data-stu-id="02fb3-117">**Last Machine**.</span></span> <span data-ttu-id="02fb3-118">上次运行工作流服务实例的计算机。</span><span class="sxs-lookup"><span data-stu-id="02fb3-118">The computer on which the workflow service instance ran the last time.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cf25d-119">对于使用工作流服务主机的自承载方案，仅填充最后四个属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-119">For self-hosted scenarios using Workflow Service Host, only the last four properties are populated.</span></span> <span data-ttu-id="cf25d-120">对于工作流应用程序方案，仅填充最后一个属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-120">For Workflow Application scenarios, only the last property is populated.</span></span>  
+>  <span data-ttu-id="02fb3-119">对于使用工作流服务主机的自承载方案，仅填充最后四个属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-119">For self-hosted scenarios using Workflow Service Host, only the last four properties are populated.</span></span> <span data-ttu-id="02fb3-120">对于工作流应用程序方案，仅填充最后一个属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-120">For Workflow Application scenarios, only the last property is populated.</span></span>  
   
- <span data-ttu-id="cf25d-121">工作流运行时为前三个属性提供值。</span><span class="sxs-lookup"><span data-stu-id="cf25d-121">The workflow runtime supplies values for the first three properties.</span></span> <span data-ttu-id="cf25d-122">工作流服务主机提供的值**挂起原因**属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-122">The workflow service host supplies the value for the **Suspend Reason** property.</span></span> <span data-ttu-id="cf25d-123">SQL 工作流实例存储自身为提供值**上次更新的计算机**属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-123">The SQL Workflow Instance Store itself supplies values for the **Last Updated Machine** property.</span></span>  
+ <span data-ttu-id="02fb3-121">工作流运行时为前三个属性提供值。</span><span class="sxs-lookup"><span data-stu-id="02fb3-121">The workflow runtime supplies values for the first three properties.</span></span> <span data-ttu-id="02fb3-122">工作流服务主机提供的值**挂起原因**属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-122">The workflow service host supplies the value for the **Suspend Reason** property.</span></span> <span data-ttu-id="02fb3-123">SQL 工作流实例存储自身为提供值**上次更新的计算机**属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-123">The SQL Workflow Instance Store itself supplies values for the **Last Updated Machine** property.</span></span>  
   
- <span data-ttu-id="cf25d-124">使用 SQL 工作流实例存储的功能还可以指定自定义属性，您可以在持久性数据库中存储这些属性的值并且在查询中使用这些属性。</span><span class="sxs-lookup"><span data-stu-id="cf25d-124">The SQL Workflow Instance Store feature also lets you specify the custom properties for which you want to store the values in the persistence database and that you want to use in queries.</span></span> <span data-ttu-id="cf25d-125">有关自定义的提升的详细信息，请参阅[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)。</span><span class="sxs-lookup"><span data-stu-id="cf25d-125">For more information about custom promotions, see [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span></span>  
+ <span data-ttu-id="02fb3-124">使用 SQL 工作流实例存储的功能还可以指定自定义属性，您可以在持久性数据库中存储这些属性的值并且在查询中使用这些属性。</span><span class="sxs-lookup"><span data-stu-id="02fb3-124">The SQL Workflow Instance Store feature also lets you specify the custom properties for which you want to store the values in the persistence database and that you want to use in queries.</span></span> <span data-ttu-id="02fb3-125">有关自定义的提升的详细信息，请参阅[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)。</span><span class="sxs-lookup"><span data-stu-id="02fb3-125">For more information about custom promotions, see [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).</span></span>  
   
-## <a name="views"></a><span data-ttu-id="cf25d-126">视图</span><span class="sxs-lookup"><span data-stu-id="cf25d-126">Views</span></span>  
- <span data-ttu-id="cf25d-127">实例存储区包含下列视图。</span><span class="sxs-lookup"><span data-stu-id="cf25d-127">The instance store contains the following views.</span></span> <span data-ttu-id="cf25d-128">请参阅[持久性数据库架构](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)有关进一步的详细信息。</span><span class="sxs-lookup"><span data-stu-id="cf25d-128">See [Persistence Database Schema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) for further details.</span></span>  
+## <a name="views"></a><span data-ttu-id="02fb3-126">视图</span><span class="sxs-lookup"><span data-stu-id="02fb3-126">Views</span></span>  
+ <span data-ttu-id="02fb3-127">实例存储区包含下列视图。</span><span class="sxs-lookup"><span data-stu-id="02fb3-127">The instance store contains the following views.</span></span> <span data-ttu-id="02fb3-128">请参阅[持久性数据库架构](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)有关进一步的详细信息。</span><span class="sxs-lookup"><span data-stu-id="02fb3-128">See [Persistence Database Schema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) for further details.</span></span>  
   
-### <a name="the-instances-view"></a><span data-ttu-id="cf25d-129">Instances 视图</span><span class="sxs-lookup"><span data-stu-id="cf25d-129">The Instances View</span></span>  
- <span data-ttu-id="cf25d-130">Instances 视图包含下列字段：</span><span class="sxs-lookup"><span data-stu-id="cf25d-130">The Instances view contains the following fields:</span></span>  
+### <a name="the-instances-view"></a><span data-ttu-id="02fb3-129">Instances 视图</span><span class="sxs-lookup"><span data-stu-id="02fb3-129">The Instances View</span></span>  
+ <span data-ttu-id="02fb3-130">Instances 视图包含下列字段：</span><span class="sxs-lookup"><span data-stu-id="02fb3-130">The Instances view contains the following fields:</span></span>  
   
-1.  <span data-ttu-id="cf25d-131">**Id**</span><span class="sxs-lookup"><span data-stu-id="cf25d-131">**Id**</span></span>  
+1.  <span data-ttu-id="02fb3-131">**Id**</span><span class="sxs-lookup"><span data-stu-id="02fb3-131">**Id**</span></span>  
   
-2.  <span data-ttu-id="cf25d-132">**PendingTimer**</span><span class="sxs-lookup"><span data-stu-id="cf25d-132">**PendingTimer**</span></span>  
+2.  <span data-ttu-id="02fb3-132">**PendingTimer**</span><span class="sxs-lookup"><span data-stu-id="02fb3-132">**PendingTimer**</span></span>  
   
-3.  <span data-ttu-id="cf25d-133">**CreationTime**</span><span class="sxs-lookup"><span data-stu-id="cf25d-133">**CreationTime**</span></span>  
+3.  <span data-ttu-id="02fb3-133">**CreationTime**</span><span class="sxs-lookup"><span data-stu-id="02fb3-133">**CreationTime**</span></span>  
   
-4.  <span data-ttu-id="cf25d-134">**LastUpdatedTime**</span><span class="sxs-lookup"><span data-stu-id="cf25d-134">**LastUpdatedTime**</span></span>  
+4.  <span data-ttu-id="02fb3-134">**LastUpdatedTime**</span><span class="sxs-lookup"><span data-stu-id="02fb3-134">**LastUpdatedTime**</span></span>  
   
-5.  <span data-ttu-id="cf25d-135">**ServiceDeploymentId**</span><span class="sxs-lookup"><span data-stu-id="cf25d-135">**ServiceDeploymentId**</span></span>  
+5.  <span data-ttu-id="02fb3-135">**ServiceDeploymentId**</span><span class="sxs-lookup"><span data-stu-id="02fb3-135">**ServiceDeploymentId**</span></span>  
   
-6.  <span data-ttu-id="cf25d-136">**SuspensionExceptionName**</span><span class="sxs-lookup"><span data-stu-id="cf25d-136">**SuspensionExceptionName**</span></span>  
+6.  <span data-ttu-id="02fb3-136">**SuspensionExceptionName**</span><span class="sxs-lookup"><span data-stu-id="02fb3-136">**SuspensionExceptionName**</span></span>  
   
-7.  <span data-ttu-id="cf25d-137">**SuspensionReason**</span><span class="sxs-lookup"><span data-stu-id="cf25d-137">**SuspensionReason**</span></span>  
+7.  <span data-ttu-id="02fb3-137">**SuspensionReason**</span><span class="sxs-lookup"><span data-stu-id="02fb3-137">**SuspensionReason**</span></span>  
   
-8.  <span data-ttu-id="cf25d-138">**ActiveBookmarks**</span><span class="sxs-lookup"><span data-stu-id="cf25d-138">**ActiveBookmarks**</span></span>  
+8.  <span data-ttu-id="02fb3-138">**ActiveBookmarks**</span><span class="sxs-lookup"><span data-stu-id="02fb3-138">**ActiveBookmarks**</span></span>  
   
-9. <span data-ttu-id="cf25d-139">**CurrentMachine**</span><span class="sxs-lookup"><span data-stu-id="cf25d-139">**CurrentMachine**</span></span>  
+9. <span data-ttu-id="02fb3-139">**CurrentMachine**</span><span class="sxs-lookup"><span data-stu-id="02fb3-139">**CurrentMachine**</span></span>  
   
-10. <span data-ttu-id="cf25d-140">**LastMachine**</span><span class="sxs-lookup"><span data-stu-id="cf25d-140">**LastMachine**</span></span>  
+10. <span data-ttu-id="02fb3-140">**LastMachine**</span><span class="sxs-lookup"><span data-stu-id="02fb3-140">**LastMachine**</span></span>  
   
-11. <span data-ttu-id="cf25d-141">**ExecutionStatus**</span><span class="sxs-lookup"><span data-stu-id="cf25d-141">**ExecutionStatus**</span></span>  
+11. <span data-ttu-id="02fb3-141">**ExecutionStatus**</span><span class="sxs-lookup"><span data-stu-id="02fb3-141">**ExecutionStatus**</span></span>  
   
-12. <span data-ttu-id="cf25d-142">**IsInitialized**</span><span class="sxs-lookup"><span data-stu-id="cf25d-142">**IsInitialized**</span></span>  
+12. <span data-ttu-id="02fb3-142">**IsInitialized**</span><span class="sxs-lookup"><span data-stu-id="02fb3-142">**IsInitialized**</span></span>  
   
-13. <span data-ttu-id="cf25d-143">**IsSuspended**</span><span class="sxs-lookup"><span data-stu-id="cf25d-143">**IsSuspended**</span></span>  
+13. <span data-ttu-id="02fb3-143">**IsSuspended**</span><span class="sxs-lookup"><span data-stu-id="02fb3-143">**IsSuspended**</span></span>  
   
-14. <span data-ttu-id="cf25d-144">**IsCompleted**</span><span class="sxs-lookup"><span data-stu-id="cf25d-144">**IsCompleted**</span></span>  
+14. <span data-ttu-id="02fb3-144">**IsCompleted**</span><span class="sxs-lookup"><span data-stu-id="02fb3-144">**IsCompleted**</span></span>  
   
-15. <span data-ttu-id="cf25d-145">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="cf25d-145">**EncodingOption**</span></span>  
+15. <span data-ttu-id="02fb3-145">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="02fb3-145">**EncodingOption**</span></span>  
   
-16. <span data-ttu-id="cf25d-146">**ReadWritePrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="cf25d-146">**ReadWritePrimitiveDataProperties**</span></span>  
+16. <span data-ttu-id="02fb3-146">**ReadWritePrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="02fb3-146">**ReadWritePrimitiveDataProperties**</span></span>  
   
-17. <span data-ttu-id="cf25d-147">**WriteOnlyPrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="cf25d-147">**WriteOnlyPrimitiveDataProperties**</span></span>  
+17. <span data-ttu-id="02fb3-147">**WriteOnlyPrimitiveDataProperties**</span><span class="sxs-lookup"><span data-stu-id="02fb3-147">**WriteOnlyPrimitiveDataProperties**</span></span>  
   
-18. <span data-ttu-id="cf25d-148">**ReadWriteComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="cf25d-148">**ReadWriteComplexDataProperties**</span></span>  
+18. <span data-ttu-id="02fb3-148">**ReadWriteComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="02fb3-148">**ReadWriteComplexDataProperties**</span></span>  
   
-19. <span data-ttu-id="cf25d-149">**WriteOnlyComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="cf25d-149">**WriteOnlyComplexDataProperties**</span></span>  
+19. <span data-ttu-id="02fb3-149">**WriteOnlyComplexDataProperties**</span><span class="sxs-lookup"><span data-stu-id="02fb3-149">**WriteOnlyComplexDataProperties**</span></span>  
   
-### <a name="the-servicedeployments-view"></a><span data-ttu-id="cf25d-150">ServiceDeployments 视图</span><span class="sxs-lookup"><span data-stu-id="cf25d-150">The ServiceDeployments view</span></span>  
- <span data-ttu-id="cf25d-151">ServiceDeployments 视图包含下列字段：</span><span class="sxs-lookup"><span data-stu-id="cf25d-151">The ServiceDeployments view contains the following fields:</span></span>  
+### <a name="the-servicedeployments-view"></a><span data-ttu-id="02fb3-150">ServiceDeployments 视图</span><span class="sxs-lookup"><span data-stu-id="02fb3-150">The ServiceDeployments view</span></span>  
+ <span data-ttu-id="02fb3-151">ServiceDeployments 视图包含下列字段：</span><span class="sxs-lookup"><span data-stu-id="02fb3-151">The ServiceDeployments view contains the following fields:</span></span>  
   
-1.  <span data-ttu-id="cf25d-152">**SiteName**</span><span class="sxs-lookup"><span data-stu-id="cf25d-152">**SiteName**</span></span>  
+1.  <span data-ttu-id="02fb3-152">**SiteName**</span><span class="sxs-lookup"><span data-stu-id="02fb3-152">**SiteName**</span></span>  
   
-2.  <span data-ttu-id="cf25d-153">**RelativeServicePath**</span><span class="sxs-lookup"><span data-stu-id="cf25d-153">**RelativeServicePath**</span></span>  
+2.  <span data-ttu-id="02fb3-153">**RelativeServicePath**</span><span class="sxs-lookup"><span data-stu-id="02fb3-153">**RelativeServicePath**</span></span>  
   
-3.  <span data-ttu-id="cf25d-154">**RelativeApplicationPath**</span><span class="sxs-lookup"><span data-stu-id="cf25d-154">**RelativeApplicationPath**</span></span>  
+3.  <span data-ttu-id="02fb3-154">**RelativeApplicationPath**</span><span class="sxs-lookup"><span data-stu-id="02fb3-154">**RelativeApplicationPath**</span></span>  
   
-4.  <span data-ttu-id="cf25d-155">**ServiceName**</span><span class="sxs-lookup"><span data-stu-id="cf25d-155">**ServiceName**</span></span>  
+4.  <span data-ttu-id="02fb3-155">**ServiceName**</span><span class="sxs-lookup"><span data-stu-id="02fb3-155">**ServiceName**</span></span>  
   
-5.  <span data-ttu-id="cf25d-156">**服务命名空间**</span><span class="sxs-lookup"><span data-stu-id="cf25d-156">**ServiceNamespace**</span></span>  
+5.  <span data-ttu-id="02fb3-156">**服务命名空间**</span><span class="sxs-lookup"><span data-stu-id="02fb3-156">**ServiceNamespace**</span></span>  
   
-### <a name="the-instancepromotedproperties-view"></a><span data-ttu-id="cf25d-157">InstancePromotedProperties 视图</span><span class="sxs-lookup"><span data-stu-id="cf25d-157">The InstancePromotedProperties view</span></span>  
- <span data-ttu-id="cf25d-158">InstancePromotedProperties 视图包含下列字段。</span><span class="sxs-lookup"><span data-stu-id="cf25d-158">The InstancePromotedProperties view contains the following fields.</span></span> <span data-ttu-id="cf25d-159">有关提升的属性的详细信息，请参阅[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)主题。</span><span class="sxs-lookup"><span data-stu-id="cf25d-159">For details on promoted properties, see the [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) topic.</span></span>  
+### <a name="the-instancepromotedproperties-view"></a><span data-ttu-id="02fb3-157">InstancePromotedProperties 视图</span><span class="sxs-lookup"><span data-stu-id="02fb3-157">The InstancePromotedProperties view</span></span>  
+ <span data-ttu-id="02fb3-158">InstancePromotedProperties 视图包含下列字段。</span><span class="sxs-lookup"><span data-stu-id="02fb3-158">The InstancePromotedProperties view contains the following fields.</span></span> <span data-ttu-id="02fb3-159">有关提升的属性的详细信息，请参阅[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)主题。</span><span class="sxs-lookup"><span data-stu-id="02fb3-159">For details on promoted properties, see the [Store Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) topic.</span></span>  
   
-1.  <span data-ttu-id="cf25d-160">**InstanceId**</span><span class="sxs-lookup"><span data-stu-id="cf25d-160">**InstanceId**</span></span>  
+1.  <span data-ttu-id="02fb3-160">**InstanceId**</span><span class="sxs-lookup"><span data-stu-id="02fb3-160">**InstanceId**</span></span>  
   
-2.  <span data-ttu-id="cf25d-161">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="cf25d-161">**EncodingOption**</span></span>  
+2.  <span data-ttu-id="02fb3-161">**EncodingOption**</span><span class="sxs-lookup"><span data-stu-id="02fb3-161">**EncodingOption**</span></span>  
   
-3.  <span data-ttu-id="cf25d-162">**PromotionName**</span><span class="sxs-lookup"><span data-stu-id="cf25d-162">**PromotionName**</span></span>  
+3.  <span data-ttu-id="02fb3-162">**PromotionName**</span><span class="sxs-lookup"><span data-stu-id="02fb3-162">**PromotionName**</span></span>  
   
-4.  <span data-ttu-id="cf25d-163">**Value #** (的一系列字段从**Value1**到**Value64**)。</span><span class="sxs-lookup"><span data-stu-id="cf25d-163">**Value#** (a range of fields from **Value1** to **Value64**).</span></span>
+4.  <span data-ttu-id="02fb3-163">**Value #** (的一系列字段从**Value1**到**Value64**)。</span><span class="sxs-lookup"><span data-stu-id="02fb3-163">**Value#** (a range of fields from **Value1** to **Value64**).</span></span>

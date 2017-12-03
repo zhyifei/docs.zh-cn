@@ -10,51 +10,51 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 102b605b0b985d433092482cf55b0994c33d58ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6868bbecd83305c07e0b547d0102d7bca48d41f8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a><span data-ttu-id="5745e-102">如何：使用 Svcutil.exe 下载元数据文档</span><span class="sxs-lookup"><span data-stu-id="5745e-102">How to: Use Svcutil.exe to Download Metadata Documents</span></span>
-<span data-ttu-id="5745e-103">您可以使用 Svcutil.exe 从正在运行的服务中下载元数据并将元数据保存到本地文件。</span><span class="sxs-lookup"><span data-stu-id="5745e-103">You can use Svcutil.exe to download metadata from running services and to save the metadata to local files.</span></span> <span data-ttu-id="5745e-104">对于 HTTP 和 HTTPS URL 方案，Svcutil.exe 会尝试使用 Ws-metadataexchange 检索元数据和[XML Web 服务发现](http://go.microsoft.com/fwlink/?LinkId=94950)。</span><span class="sxs-lookup"><span data-stu-id="5745e-104">For HTTP and HTTPS URL schemes, Svcutil.exe attempts to retrieve metadata using WS-MetadataExchange and [XML Web Service Discovery](http://go.microsoft.com/fwlink/?LinkId=94950).</span></span> <span data-ttu-id="5745e-105">对于所有其他 URL 架构，Svcutil.exe 仅使用 WS-MetadataExchange。</span><span class="sxs-lookup"><span data-stu-id="5745e-105">For all other URL schemes, Svcutil.exe uses only WS-MetadataExchange.</span></span>  
+# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a><span data-ttu-id="bc261-102">如何：使用 Svcutil.exe 下载元数据文档</span><span class="sxs-lookup"><span data-stu-id="bc261-102">How to: Use Svcutil.exe to Download Metadata Documents</span></span>
+<span data-ttu-id="bc261-103">您可以使用 Svcutil.exe 从正在运行的服务中下载元数据并将元数据保存到本地文件。</span><span class="sxs-lookup"><span data-stu-id="bc261-103">You can use Svcutil.exe to download metadata from running services and to save the metadata to local files.</span></span> <span data-ttu-id="bc261-104">对于 HTTP 和 HTTPS URL 方案，Svcutil.exe 会尝试使用 Ws-metadataexchange 检索元数据和[XML Web 服务发现](http://go.microsoft.com/fwlink/?LinkId=94950)。</span><span class="sxs-lookup"><span data-stu-id="bc261-104">For HTTP and HTTPS URL schemes, Svcutil.exe attempts to retrieve metadata using WS-MetadataExchange and [XML Web Service Discovery](http://go.microsoft.com/fwlink/?LinkId=94950).</span></span> <span data-ttu-id="bc261-105">对于所有其他 URL 架构，Svcutil.exe 仅使用 WS-MetadataExchange。</span><span class="sxs-lookup"><span data-stu-id="bc261-105">For all other URL schemes, Svcutil.exe uses only WS-MetadataExchange.</span></span>  
   
- <span data-ttu-id="5745e-106">默认情况下，Svcutil.exe 使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类中定义的绑定。</span><span class="sxs-lookup"><span data-stu-id="5745e-106">By default, Svcutil.exe uses the bindings defined in the <xref:System.ServiceModel.Description.MetadataExchangeBindings> class.</span></span> <span data-ttu-id="5745e-107">若要配置用于 WS-MetadataExchange 的绑定，必须在 Svcutil.exe 的配置文件 (svcutil.exe.config) 中定义一个客户端终结点，使该终结点使用 `IMetadataExchange` 约定，并具有与元数据终结点地址的统一资源标识符 (URI) 架构相同的名称。</span><span class="sxs-lookup"><span data-stu-id="5745e-107">To configure the binding used for WS-MetadataExchange, you must define a client endpoint in the configuration file for Svcutil.exe (svcutil.exe.config) that uses the `IMetadataExchange` contract and that has the same name as the Uniform Resource Identifier (URI) scheme of the metadata endpoint address.</span></span>  
+ <span data-ttu-id="bc261-106">默认情况下，Svcutil.exe 使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类中定义的绑定。</span><span class="sxs-lookup"><span data-stu-id="bc261-106">By default, Svcutil.exe uses the bindings defined in the <xref:System.ServiceModel.Description.MetadataExchangeBindings> class.</span></span> <span data-ttu-id="bc261-107">若要配置用于 WS-MetadataExchange 的绑定，必须在 Svcutil.exe 的配置文件 (svcutil.exe.config) 中定义一个客户端终结点，使该终结点使用 `IMetadataExchange` 约定，并具有与元数据终结点地址的统一资源标识符 (URI) 架构相同的名称。</span><span class="sxs-lookup"><span data-stu-id="bc261-107">To configure the binding used for WS-MetadataExchange, you must define a client endpoint in the configuration file for Svcutil.exe (svcutil.exe.config) that uses the `IMetadataExchange` contract and that has the same name as the Uniform Resource Identifier (URI) scheme of the metadata endpoint address.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="5745e-108">当运行 Svcutil.exe 以公开两个不同的服务的服务中获取元数据协定，每个包含相同名称的操作时，Svcutil.exe 将显示"无法获取从元数据..."的错误消息，例如，如果你有一个服务来公开调用的服务协定具有一个操作的 ICarService Get (Car c) 和同一服务还公开名为 IBookService 的具有一个 Get (Book b) 操作的服务协定。</span><span class="sxs-lookup"><span data-stu-id="5745e-108">When running Svcutil.exe to get metadata for a service that exposes two different service contracts that each contain an operation of the same name, Svcutil.exe displays an error saying, "Cannot obtain Metadata from ...." For example, if you have a service that exposes a service contract called ICarService that has an operation Get(Car c) and the same service exposes a service contract called IBookService that has an operation Get(Book b).</span></span> <span data-ttu-id="5745e-109">若要解决此问题，请执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="5745e-109">To work around this issue, do one of the following:</span></span>  
+>  <span data-ttu-id="bc261-108">当运行 Svcutil.exe 以公开两个不同的服务的服务中获取元数据协定，每个包含相同名称的操作时，Svcutil.exe 将显示"无法获取从元数据..."的错误消息，例如，如果你有一个服务来公开调用的服务协定具有一个操作的 ICarService Get (Car c) 和同一服务还公开名为 IBookService 的具有一个 Get (Book b) 操作的服务协定。</span><span class="sxs-lookup"><span data-stu-id="bc261-108">When running Svcutil.exe to get metadata for a service that exposes two different service contracts that each contain an operation of the same name, Svcutil.exe displays an error saying, "Cannot obtain Metadata from ...." For example, if you have a service that exposes a service contract called ICarService that has an operation Get(Car c) and the same service exposes a service contract called IBookService that has an operation Get(Book b).</span></span> <span data-ttu-id="bc261-109">若要解决此问题，请执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="bc261-109">To work around this issue, do one of the following:</span></span>  
 >   
->  -   <span data-ttu-id="5745e-110">重命名其中的一项操作</span><span class="sxs-lookup"><span data-stu-id="5745e-110">Rename one of the operations</span></span>  
-> -   <span data-ttu-id="5745e-111">将 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 设置为其他名称。</span><span class="sxs-lookup"><span data-stu-id="5745e-111">Set the <xref:System.ServiceModel.OperationContractAttribute.Name%2A> to a different name.</span></span>  
-> -   <span data-ttu-id="5745e-112">使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性将其中一项操作的命名空间设置为其他命名空间。</span><span class="sxs-lookup"><span data-stu-id="5745e-112">Set one of the operations' namespaces to a different namespace using the <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> property.</span></span>  
+>  -   <span data-ttu-id="bc261-110">重命名其中的一项操作</span><span class="sxs-lookup"><span data-stu-id="bc261-110">Rename one of the operations</span></span>  
+> -   <span data-ttu-id="bc261-111">将 <xref:System.ServiceModel.OperationContractAttribute.Name%2A> 设置为其他名称。</span><span class="sxs-lookup"><span data-stu-id="bc261-111">Set the <xref:System.ServiceModel.OperationContractAttribute.Name%2A> to a different name.</span></span>  
+> -   <span data-ttu-id="bc261-112">使用 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 属性将其中一项操作的命名空间设置为其他命名空间。</span><span class="sxs-lookup"><span data-stu-id="bc261-112">Set one of the operations' namespaces to a different namespace using the <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> property.</span></span>  
   
-### <a name="to-download-metadata-using-svcutilexe"></a><span data-ttu-id="5745e-113">使用 Svcutil.exe 下载元数据</span><span class="sxs-lookup"><span data-stu-id="5745e-113">To download metadata using Svcutil.exe</span></span>  
+### <a name="to-download-metadata-using-svcutilexe"></a><span data-ttu-id="bc261-113">使用 Svcutil.exe 下载元数据</span><span class="sxs-lookup"><span data-stu-id="bc261-113">To download metadata using Svcutil.exe</span></span>  
   
-1.  <span data-ttu-id="5745e-114">在以下位置找到 Svcutil.exe 工具：</span><span class="sxs-lookup"><span data-stu-id="5745e-114">Locate the Svcutil.exe tool at the following location:</span></span>  
+1.  <span data-ttu-id="bc261-114">在以下位置找到 Svcutil.exe 工具：</span><span class="sxs-lookup"><span data-stu-id="bc261-114">Locate the Svcutil.exe tool at the following location:</span></span>  
   
-     <span data-ttu-id="5745e-115">C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin</span><span class="sxs-lookup"><span data-stu-id="5745e-115">C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin</span></span>  
+     <span data-ttu-id="bc261-115">C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin</span><span class="sxs-lookup"><span data-stu-id="bc261-115">C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin</span></span>  
   
-2.  <span data-ttu-id="5745e-116">在命令提示符处，使用下面的格式启动该工具。</span><span class="sxs-lookup"><span data-stu-id="5745e-116">At the command prompt, launch the tool using the following format.</span></span>  
+2.  <span data-ttu-id="bc261-116">在命令提示符处，使用下面的格式启动该工具。</span><span class="sxs-lookup"><span data-stu-id="bc261-116">At the command prompt, launch the tool using the following format.</span></span>  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
     ```  
   
-     <span data-ttu-id="5745e-117">您必须指定 `/t:metadata` 选项才能下载元数据。</span><span class="sxs-lookup"><span data-stu-id="5745e-117">You must specify the `/t:metadata` option to download metadata.</span></span> <span data-ttu-id="5745e-118">否则，会生成客户端代码和配置。</span><span class="sxs-lookup"><span data-stu-id="5745e-118">Otherwise, client code and configuration are generated.</span></span>  
+     <span data-ttu-id="bc261-117">您必须指定 `/t:metadata` 选项才能下载元数据。</span><span class="sxs-lookup"><span data-stu-id="bc261-117">You must specify the `/t:metadata` option to download metadata.</span></span> <span data-ttu-id="bc261-118">否则，会生成客户端代码和配置。</span><span class="sxs-lookup"><span data-stu-id="bc261-118">Otherwise, client code and configuration are generated.</span></span>  
   
-3.  <span data-ttu-id="5745e-119"><`url`> 参数指定可提供元数据的服务终结点或是联机承载的元数据文档的 URL。</span><span class="sxs-lookup"><span data-stu-id="5745e-119">The <`url`>argument specifies the URL to a service endpoint that provides metadata or to a metadata document hosted online.</span></span> <span data-ttu-id="5745e-120"><`epr`> 参数指定一个包含的 Ws-addressing 的 XML 文件的路径`EndpointAddress`支持 Ws-metadataexchange 的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="5745e-120">The <`epr`> argument specifies the path to an XML file that contains a WS-Addressing `EndpointAddress` for a service endpoint that supports WS-MetadataExchange.</span></span>  
+3.  <span data-ttu-id="bc261-119"><`url`> 参数指定可提供元数据的服务终结点或是联机承载的元数据文档的 URL。</span><span class="sxs-lookup"><span data-stu-id="bc261-119">The <`url`>argument specifies the URL to a service endpoint that provides metadata or to a metadata document hosted online.</span></span> <span data-ttu-id="bc261-120"><`epr`> 参数指定一个包含的 Ws-addressing 的 XML 文件的路径`EndpointAddress`支持 Ws-metadataexchange 的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="bc261-120">The <`epr`> argument specifies the path to an XML file that contains a WS-Addressing `EndpointAddress` for a service endpoint that supports WS-MetadataExchange.</span></span>  
   
- <span data-ttu-id="5745e-121">有关使用元数据下载此工具的更多选项，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="5745e-121">For more options about using this tool for metadata download, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
+ <span data-ttu-id="bc261-121">有关使用元数据下载此工具的更多选项，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="bc261-121">For more options about using this tool for metadata download, see [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5745e-122">示例</span><span class="sxs-lookup"><span data-stu-id="5745e-122">Example</span></span>  
- <span data-ttu-id="5745e-123">下面的命令从正在运行的服务中下载元数据文档。</span><span class="sxs-lookup"><span data-stu-id="5745e-123">The following command downloads metadata documents from a running service.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc261-122">示例</span><span class="sxs-lookup"><span data-stu-id="bc261-122">Example</span></span>  
+ <span data-ttu-id="bc261-123">下面的命令从正在运行的服务中下载元数据文档。</span><span class="sxs-lookup"><span data-stu-id="bc261-123">The following command downloads metadata documents from a running service.</span></span>  
   
 ```  
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5745e-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5745e-124">See Also</span></span>  
- [<span data-ttu-id="5745e-125">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="5745e-125">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="bc261-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc261-124">See Also</span></span>  
+ [<span data-ttu-id="bc261-125">ServiceModel 元数据实用工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="bc261-125">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

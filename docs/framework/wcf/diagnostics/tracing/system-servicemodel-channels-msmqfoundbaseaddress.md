@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5431889d-c296-44f3-a54d-a356e9f1eb5e
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4b946c96de93dd524c157dd5e347149a63b06c4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2258a32f5eb3a0d4b01845fcba6d82c826367f04
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a><span data-ttu-id="f75bd-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="f75bd-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>
-<span data-ttu-id="f75bd-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="f75bd-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>  
+# <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a><span data-ttu-id="bd93d-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="bd93d-102">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>
+<span data-ttu-id="bd93d-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span><span class="sxs-lookup"><span data-stu-id="bd93d-103">System.ServiceModel.Channels.MsmqFoundBaseAddress</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f75bd-104">描述</span><span class="sxs-lookup"><span data-stu-id="f75bd-104">Description</span></span>  
- <span data-ttu-id="f75bd-105">宿主环境已发现服务的基本地址。</span><span class="sxs-lookup"><span data-stu-id="f75bd-105">The hosting environment found the base address for the service.</span></span>  
+## <a name="description"></a><span data-ttu-id="bd93d-104">描述</span><span class="sxs-lookup"><span data-stu-id="bd93d-104">Description</span></span>  
+ <span data-ttu-id="bd93d-105">宿主环境已发现服务的基本地址。</span><span class="sxs-lookup"><span data-stu-id="bd93d-105">The hosting environment found the base address for the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f75bd-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f75bd-106">See Also</span></span>  
- [<span data-ttu-id="f75bd-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="f75bd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f75bd-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="f75bd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f75bd-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f75bd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="bd93d-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bd93d-106">See Also</span></span>  
+ [<span data-ttu-id="bd93d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="bd93d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="bd93d-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="bd93d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="bd93d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="bd93d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 623d66f1-389f-43c7-a6ea-afe7f80651a5
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab59904a8de7f0bb1158fb6a6d4e78814d5f748c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c5c8f2a34286c754c36038a2bfe6b407ecf9719
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodeldiagnosticstracetruncatedquotaexceeded"></a><span data-ttu-id="330d4-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="330d4-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>
-<span data-ttu-id="330d4-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="330d4-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>  
+# <a name="systemservicemodeldiagnosticstracetruncatedquotaexceeded"></a><span data-ttu-id="8068f-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="8068f-102">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>
+<span data-ttu-id="8068f-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="8068f-103">System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="330d4-104">描述</span><span class="sxs-lookup"><span data-stu-id="330d4-104">Description</span></span>  
- <span data-ttu-id="330d4-105">超出了跟踪的大小配额。</span><span class="sxs-lookup"><span data-stu-id="330d4-105">A trace size quota was exceeded.</span></span> <span data-ttu-id="330d4-106">已截断跟踪。</span><span class="sxs-lookup"><span data-stu-id="330d4-106">The trace was truncated.</span></span>  
+## <a name="description"></a><span data-ttu-id="8068f-104">描述</span><span class="sxs-lookup"><span data-stu-id="8068f-104">Description</span></span>  
+ <span data-ttu-id="8068f-105">超出了跟踪的大小配额。</span><span class="sxs-lookup"><span data-stu-id="8068f-105">A trace size quota was exceeded.</span></span> <span data-ttu-id="8068f-106">已截断跟踪。</span><span class="sxs-lookup"><span data-stu-id="8068f-106">The trace was truncated.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="330d4-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="330d4-107">See Also</span></span>  
- [<span data-ttu-id="330d4-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="330d4-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="330d4-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="330d4-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="330d4-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="330d4-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8068f-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8068f-107">See Also</span></span>  
+ [<span data-ttu-id="8068f-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="8068f-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8068f-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="8068f-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8068f-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8068f-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

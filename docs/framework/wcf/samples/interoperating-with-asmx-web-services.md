@@ -10,24 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 635502ea186e188bf9906d45e7753eba72fbd5d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b852e579918dfd43589d31b607b19713e54e8be
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="527ba-102">与 ASMX Web 服务互操作</span><span class="sxs-lookup"><span data-stu-id="527ba-102">Interoperating with ASMX Web Services</span></span>
-<span data-ttu-id="527ba-103">本示例演示如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端应用程序与现有 ASMX Web 服务集成。</span><span class="sxs-lookup"><span data-stu-id="527ba-103">This sample demonstrates how to integrate a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application with an existing ASMX Web service.</span></span>  
+# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="0085f-102">与 ASMX Web 服务互操作</span><span class="sxs-lookup"><span data-stu-id="0085f-102">Interoperating with ASMX Web Services</span></span>
+<span data-ttu-id="0085f-103">本示例演示如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端应用程序与现有 ASMX Web 服务集成。</span><span class="sxs-lookup"><span data-stu-id="0085f-103">This sample demonstrates how to integrate a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application with an existing ASMX Web service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="527ba-104">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="527ba-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="0085f-104">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="0085f-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="527ba-105">此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。</span><span class="sxs-lookup"><span data-stu-id="527ba-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="527ba-106">该服务是一个 ASMX Web 服务，用于实现定义请求-答复通信模式的协定。</span><span class="sxs-lookup"><span data-stu-id="527ba-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="527ba-107">该服务公开数学运算（`Add`、`Subtract`、`Multiply` 和 `Divide`）。</span><span class="sxs-lookup"><span data-stu-id="527ba-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="527ba-108">客户端向某个数学运算发出同步请求，服务使用结果进行回复。</span><span class="sxs-lookup"><span data-stu-id="527ba-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="527ba-109">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="527ba-109">Client activity is visible in the console window.</span></span>  
+ <span data-ttu-id="0085f-105">此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。</span><span class="sxs-lookup"><span data-stu-id="0085f-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="0085f-106">该服务是一个 ASMX Web 服务，用于实现定义请求-答复通信模式的协定。</span><span class="sxs-lookup"><span data-stu-id="0085f-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="0085f-107">该服务公开数学运算（`Add`、`Subtract`、`Multiply` 和 `Divide`）。</span><span class="sxs-lookup"><span data-stu-id="0085f-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="0085f-108">客户端向某个数学运算发出同步请求，服务使用结果进行回复。</span><span class="sxs-lookup"><span data-stu-id="0085f-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="0085f-109">客户端活动显示在控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="0085f-109">Client activity is visible in the console window.</span></span>  
   
- <span data-ttu-id="527ba-110">下面示例代码中显示的 ASMX Web 服务实现计算并返回相应结果。</span><span class="sxs-lookup"><span data-stu-id="527ba-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
+ <span data-ttu-id="0085f-110">下面示例代码中显示的 ASMX Web 服务实现计算并返回相应结果。</span><span class="sxs-lookup"><span data-stu-id="0085f-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
   
 ```  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -56,15 +56,15 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- <span data-ttu-id="527ba-111">经过配置后，同一计算机上的客户端可以在 http://localhost/servicemodelsamples/service.asmx 上访问该服务。</span><span class="sxs-lookup"><span data-stu-id="527ba-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.asmx by a client on the same machine.</span></span> <span data-ttu-id="527ba-112">若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。</span><span class="sxs-lookup"><span data-stu-id="527ba-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
+ <span data-ttu-id="0085f-111">经过配置后，同一计算机上的客户端可以在 http://localhost/servicemodelsamples/service.asmx 上访问该服务。</span><span class="sxs-lookup"><span data-stu-id="0085f-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.asmx by a client on the same machine.</span></span> <span data-ttu-id="0085f-112">若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。</span><span class="sxs-lookup"><span data-stu-id="0085f-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
   
- <span data-ttu-id="527ba-113">通信通过生成的客户端[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="527ba-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="527ba-114">该客户端包含在 generatedClient.cs 文件中。</span><span class="sxs-lookup"><span data-stu-id="527ba-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="527ba-115">若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。</span><span class="sxs-lookup"><span data-stu-id="527ba-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="527ba-116">在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。</span><span class="sxs-lookup"><span data-stu-id="527ba-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
+ <span data-ttu-id="0085f-113">通信通过生成的客户端[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="0085f-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="0085f-114">该客户端包含在 generatedClient.cs 文件中。</span><span class="sxs-lookup"><span data-stu-id="0085f-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="0085f-115">若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。</span><span class="sxs-lookup"><span data-stu-id="0085f-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="0085f-116">在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。</span><span class="sxs-lookup"><span data-stu-id="0085f-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- <span data-ttu-id="527ba-117">通过使用生成的客户端，您可以通过配置相应的地址和绑定来访问服务终结点。</span><span class="sxs-lookup"><span data-stu-id="527ba-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="527ba-118">和服务一样，客户端使用配置文件 (App.config) 来指定要与其通信的终结点。</span><span class="sxs-lookup"><span data-stu-id="527ba-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="527ba-119">客户端终结点配置由服务终结点的绝对地址、绑定和协定组成，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="527ba-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="0085f-117">通过使用生成的客户端，您可以通过配置相应的地址和绑定来访问服务终结点。</span><span class="sxs-lookup"><span data-stu-id="0085f-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="0085f-118">和服务一样，客户端使用配置文件 (App.config) 来指定要与其通信的终结点。</span><span class="sxs-lookup"><span data-stu-id="0085f-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="0085f-119">客户端终结点配置由服务终结点的绝对地址、绑定和协定组成，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="0085f-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <client>  
@@ -75,7 +75,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
 </client>  
 ```  
   
- <span data-ttu-id="527ba-120">客户端实现将构造生成的客户端的实例。</span><span class="sxs-lookup"><span data-stu-id="527ba-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="527ba-121">然后可以使用生成的客户端与服务通信。</span><span class="sxs-lookup"><span data-stu-id="527ba-121">The generated client can then be used to communicate with the service.</span></span>  
+ <span data-ttu-id="0085f-120">客户端实现将构造生成的客户端的实例。</span><span class="sxs-lookup"><span data-stu-id="0085f-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="0085f-121">然后可以使用生成的客户端与服务通信。</span><span class="sxs-lookup"><span data-stu-id="0085f-121">The generated client can then be used to communicate with the service.</span></span>  
   
 ```  
 // Create a client.  
@@ -113,7 +113,7 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```  
   
- <span data-ttu-id="527ba-122">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="527ba-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="527ba-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="527ba-123">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="0085f-122">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="0085f-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="0085f-123">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="0085f-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -124,21 +124,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="527ba-124">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="527ba-124">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="0085f-124">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="0085f-124">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="527ba-125">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="527ba-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="0085f-125">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="0085f-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="527ba-126">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="527ba-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="0085f-126">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="0085f-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="527ba-127">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="527ba-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="0085f-127">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="0085f-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="527ba-128">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="527ba-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="527ba-129">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="527ba-129">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="0085f-128">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="0085f-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0085f-129">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="0085f-129">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="527ba-130">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="527ba-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="527ba-131">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="527ba-131">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="0085f-130">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="0085f-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0085f-131">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="0085f-131">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## <a name="see-also"></a><span data-ttu-id="527ba-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="527ba-132">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0085f-132">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0085f-132">See Also</span></span>

@@ -11,22 +11,22 @@ ms.topic: article
 helpviewer_keywords: XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6b967bdffe6957fd7c8bdc3904233e07020bac1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b8fe20b1a5d65a011ec0315773eafd6b4dd6ade
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="xmlreader-sample"></a><span data-ttu-id="67330-102">XmlReader 示例</span><span class="sxs-lookup"><span data-stu-id="67330-102">XmlReader Sample</span></span>
-<span data-ttu-id="67330-103">XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。</span><span class="sxs-lookup"><span data-stu-id="67330-103">The XmlReader sample demonstrates the processing of a message body using an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="67330-104">示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，该类可实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="67330-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="67330-105">示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。</span><span class="sxs-lookup"><span data-stu-id="67330-105">An additional service operation, `Sum`, has been added that accepts a message that contains an array of values to add together.</span></span> <span data-ttu-id="67330-106">该服务使用 <xref:System.Xml.XmlReader> 读取消息。</span><span class="sxs-lookup"><span data-stu-id="67330-106">The service reads the message using an <xref:System.Xml.XmlReader>.</span></span>  
+# <a name="xmlreader-sample"></a><span data-ttu-id="2bf38-102">XmlReader 示例</span><span class="sxs-lookup"><span data-stu-id="2bf38-102">XmlReader Sample</span></span>
+<span data-ttu-id="2bf38-103">XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。</span><span class="sxs-lookup"><span data-stu-id="2bf38-103">The XmlReader sample demonstrates the processing of a message body using an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="2bf38-104">示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，该类可实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="2bf38-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="2bf38-105">示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。</span><span class="sxs-lookup"><span data-stu-id="2bf38-105">An additional service operation, `Sum`, has been added that accepts a message that contains an array of values to add together.</span></span> <span data-ttu-id="2bf38-106">该服务使用 <xref:System.Xml.XmlReader> 读取消息。</span><span class="sxs-lookup"><span data-stu-id="2bf38-106">The service reads the message using an <xref:System.Xml.XmlReader>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="67330-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="67330-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="2bf38-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="2bf38-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="67330-108">计算器接口包括名为 `Sum` 的服务操作，它接受 <xref:System.ServiceModel.Channels.Message> 参数，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="67330-108">The calculator interface includes a service operation named `Sum` that accepts a <xref:System.ServiceModel.Channels.Message> parameter, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="2bf38-108">计算器接口包括名为 `Sum` 的服务操作，它接受 <xref:System.ServiceModel.Channels.Message> 参数，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="2bf38-108">The calculator interface includes a service operation named `Sum` that accepts a <xref:System.ServiceModel.Channels.Message> parameter, as shown in the following sample code.</span></span>  
   
 ```  
 public interface ICalculator  
@@ -44,7 +44,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="67330-109">客户端按如下方式访问 `Sum`，首先创建整数值数组，再创建来自该数组的消息，接着使用创建的消息调用 `Sum` 方法，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="67330-109">The client accesses `Sum` by first creating an array of integer values, then creating a message from the array, and then calling the `Sum` method using the created message, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="2bf38-109">客户端按如下方式访问 `Sum`，首先创建整数值数组，再创建来自该数组的消息，接着使用创建的消息调用 `Sum` 方法，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="2bf38-109">The client accesses `Sum` by first creating an array of integer values, then creating a message from the array, and then calling the `Sum` method using the created message, as shown in the following sample code.</span></span>  
   
 ```  
 CalculatorClient client = new CalculatorClient();  
@@ -61,7 +61,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="67330-110">在服务中，服务操作 `Sum` 的实现使用 <xref:System.Xml.XmlReader> 对象访问消息正文，以便循环访问要求和的值。</span><span class="sxs-lookup"><span data-stu-id="67330-110">In the service, the implementation of the service operation `Sum` accesses the message body using an <xref:System.Xml.XmlReader> object to iterate through the values to sum.</span></span> <span data-ttu-id="67330-111">调用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 方法可以访问消息正文，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="67330-111">The <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> method is called to access the message body, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="2bf38-110">在服务中，服务操作 `Sum` 的实现使用 <xref:System.Xml.XmlReader> 对象访问消息正文，以便循环访问要求和的值。</span><span class="sxs-lookup"><span data-stu-id="2bf38-110">In the service, the implementation of the service operation `Sum` accesses the message body using an <xref:System.Xml.XmlReader> object to iterate through the values to sum.</span></span> <span data-ttu-id="2bf38-111">调用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 方法可以访问消息正文，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="2bf38-111">The <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> method is called to access the message body, as shown in the following sample code.</span></span>  
   
 ```  
 public int Sum(Message message)  
@@ -88,7 +88,7 @@ public int Sum(Message message)
 }  
 ```  
   
- <span data-ttu-id="67330-112">运行示例时，操作的请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="67330-112">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="67330-113">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="67330-113">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="2bf38-112">运行示例时，操作的请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="2bf38-112">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="2bf38-113">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="2bf38-113">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -100,21 +100,21 @@ Sum(1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="67330-114">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="67330-114">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2bf38-114">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="2bf38-114">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="67330-115">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="67330-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="2bf38-115">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2bf38-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="67330-116">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="67330-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="2bf38-116">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="2bf38-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="67330-117">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="67330-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="2bf38-117">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2bf38-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="67330-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="67330-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="67330-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="67330-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2bf38-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="2bf38-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2bf38-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="2bf38-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="67330-120">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="67330-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="67330-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="67330-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2bf38-120">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="2bf38-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2bf38-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="2bf38-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  
   
-## <a name="see-also"></a><span data-ttu-id="67330-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="67330-122">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bf38-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2bf38-122">See Also</span></span>

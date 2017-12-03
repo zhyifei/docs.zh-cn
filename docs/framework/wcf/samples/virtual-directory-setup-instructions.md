@@ -10,195 +10,195 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 caps.latest.revision: "36"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b727f391abfeb1112de1b6cde3ceb564d3860974
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72487c4a6720f80119beb837fbb3b5ea25ac3b93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="virtual-directory-setup-instructions"></a><span data-ttu-id="7ac95-102">虚拟目录设置说明</span><span class="sxs-lookup"><span data-stu-id="7ac95-102">Virtual Directory Setup Instructions</span></span>
-<span data-ttu-id="7ac95-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例用于共享名为 servicemodelsamples 的公共虚拟目录，该目录映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹。</span><span class="sxs-lookup"><span data-stu-id="7ac95-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.</span></span>  
+# <a name="virtual-directory-setup-instructions"></a><span data-ttu-id="9dc14-102">虚拟目录设置说明</span><span class="sxs-lookup"><span data-stu-id="9dc14-102">Virtual Directory Setup Instructions</span></span>
+<span data-ttu-id="9dc14-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例用于共享名为 servicemodelsamples 的公共虚拟目录，该目录映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹。</span><span class="sxs-lookup"><span data-stu-id="9dc14-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are intended to share a common virtual directory named servicemodelsamples that is mapped to the %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7ac95-104">%SystemDrive% 通常为 C: 或 D:，具体取决于安装 Internet 信息服务 (IIS) 的驱动器位置。</span><span class="sxs-lookup"><span data-stu-id="7ac95-104">%SystemDrive% is usually C: or D:, depending on the drive location where Internet Information Services (IIS) is installed.</span></span>  
+>  <span data-ttu-id="9dc14-104">%SystemDrive% 通常为 C: 或 D:，具体取决于安装 Internet 信息服务 (IIS) 的驱动器位置。</span><span class="sxs-lookup"><span data-stu-id="9dc14-104">%SystemDrive% is usually C: or D:, depending on the drive location where Internet Information Services (IIS) is installed.</span></span>  
   
- <span data-ttu-id="7ac95-105">你可以运行的 Setupvroot.bat 和 Cleanupvroot.bat 文件[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可以创建虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="7ac95-105">You can run the Setupvroot.bat and Cleanupvroot.bat files from the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) to create the virtual directory.</span></span> <span data-ttu-id="7ac95-106">如果宁愿手动创建虚拟目录，请使用下面的过程。</span><span class="sxs-lookup"><span data-stu-id="7ac95-106">If you prefer to create the virtual directory manually, use the following procedures.</span></span>  
+ <span data-ttu-id="9dc14-105">你可以运行的 Setupvroot.bat 和 Cleanupvroot.bat 文件[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可以创建虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="9dc14-105">You can run the Setupvroot.bat and Cleanupvroot.bat files from the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) to create the virtual directory.</span></span> <span data-ttu-id="9dc14-106">如果宁愿手动创建虚拟目录，请使用下面的过程。</span><span class="sxs-lookup"><span data-stu-id="9dc14-106">If you prefer to create the virtual directory manually, use the following procedures.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="7ac95-107">过程</span><span class="sxs-lookup"><span data-stu-id="7ac95-107">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="9dc14-107">过程</span><span class="sxs-lookup"><span data-stu-id="9dc14-107">Procedures</span></span>  
   
-#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a><span data-ttu-id="7ac95-108">在 IIS 7.0 或 7.5 中创建虚拟目录</span><span class="sxs-lookup"><span data-stu-id="7ac95-108">To create a virtual directory in IIS 7.0 or 7.5</span></span>  
+#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a><span data-ttu-id="9dc14-108">在 IIS 7.0 或 7.5 中创建虚拟目录</span><span class="sxs-lookup"><span data-stu-id="9dc14-108">To create a virtual directory in IIS 7.0 or 7.5</span></span>  
   
-1.  <span data-ttu-id="7ac95-109">从**启动**菜单上，单击**运行**，然后键入**inetmgr**若要打开 Internet 信息服务 (IIS) MMC 管理单元。</span><span class="sxs-lookup"><span data-stu-id="7ac95-109">From the **Start** menu, click **Run**, then type **inetmgr** to open the Internet Information Services (IIS) MMC snap-in.</span></span>  
+1.  <span data-ttu-id="9dc14-109">从**启动**菜单上，单击**运行**，然后键入**inetmgr**若要打开 Internet 信息服务 (IIS) MMC 管理单元。</span><span class="sxs-lookup"><span data-stu-id="9dc14-109">From the **Start** menu, click **Run**, then type **inetmgr** to open the Internet Information Services (IIS) MMC snap-in.</span></span>  
   
-2.  <span data-ttu-id="7ac95-110">在左窗格中，展开包含计算机的名称的节点，然后展开**站点**节点。</span><span class="sxs-lookup"><span data-stu-id="7ac95-110">In the left pane, expand the node with the computer's name, and then expand the **Sites** node.</span></span>  
+2.  <span data-ttu-id="9dc14-110">在左窗格中，展开包含计算机的名称的节点，然后展开**站点**节点。</span><span class="sxs-lookup"><span data-stu-id="9dc14-110">In the left pane, expand the node with the computer's name, and then expand the **Sites** node.</span></span>  
   
-3.  <span data-ttu-id="7ac95-111">右键单击**Default Web Site**，然后选择**添加应用程序**以打开**添加应用程序窗口**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-111">Right-click **Default Web Site**, and then select **Add Application** to open the **Add Application window**.</span></span>  
+3.  <span data-ttu-id="9dc14-111">右键单击**Default Web Site**，然后选择**添加应用程序**以打开**添加应用程序窗口**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-111">Right-click **Default Web Site**, and then select **Add Application** to open the **Add Application window**.</span></span>  
   
-4.  <span data-ttu-id="7ac95-112">在窗口中，键入`servicemodelsamples`作为您创建的虚拟目录别名。</span><span class="sxs-lookup"><span data-stu-id="7ac95-112">In the window, type `servicemodelsamples` as the alias for the virtual directory that you are creating.</span></span>  
+4.  <span data-ttu-id="9dc14-112">在窗口中，键入`servicemodelsamples`作为您创建的虚拟目录别名。</span><span class="sxs-lookup"><span data-stu-id="9dc14-112">In the window, type `servicemodelsamples` as the alias for the virtual directory that you are creating.</span></span>  
   
-5.  <span data-ttu-id="7ac95-113">创建以下目录：%SystemDrive%\inetpub\wwwroot\servicemodelsamples</span><span class="sxs-lookup"><span data-stu-id="7ac95-113">Create the following directory: %SystemDrive%\inetpub\wwwroot\servicemodelsamples</span></span>  
+5.  <span data-ttu-id="9dc14-113">创建以下目录：%SystemDrive%\inetpub\wwwroot\servicemodelsamples</span><span class="sxs-lookup"><span data-stu-id="9dc14-113">Create the following directory: %SystemDrive%\inetpub\wwwroot\servicemodelsamples</span></span>  
   
-6.  <span data-ttu-id="7ac95-114">将物理路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="7ac95-114">Set the physical path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  <span data-ttu-id="7ac95-115">大多数 WCF 示例在生成后都将服务可执行文件复制到此位置。</span><span class="sxs-lookup"><span data-stu-id="7ac95-115">Most of the WCF samples copy service executable files to this location when built.</span></span>  
+6.  <span data-ttu-id="9dc14-114">将物理路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="9dc14-114">Set the physical path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  <span data-ttu-id="9dc14-115">大多数 WCF 示例在生成后都将服务可执行文件复制到此位置。</span><span class="sxs-lookup"><span data-stu-id="9dc14-115">Most of the WCF samples copy service executable files to this location when built.</span></span>  
   
-7.  <span data-ttu-id="7ac95-116">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="7ac95-116">Click **OK**.</span></span> <span data-ttu-id="7ac95-117">现在已为 WCF 示例创建 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ac95-117">The Web application is now created for the WCF samples.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="7ac95-118">必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="7ac95-118">This task must be performed only once, because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples Web application.</span></span>  
+7.  <span data-ttu-id="9dc14-116">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="9dc14-116">Click **OK**.</span></span> <span data-ttu-id="9dc14-117">现在已为 WCF 示例创建 Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="9dc14-117">The Web application is now created for the WCF samples.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="7ac95-119">在本文档中，术语`virtual directory`和 `Web application`是同义词。</span><span class="sxs-lookup"><span data-stu-id="7ac95-119">For the purpose of this documentation, the term `virtual directory` is synonymous with `Web application`.</span></span>  
-  
-     <span data-ttu-id="7ac95-120">除了创建虚拟目录外，您还必须设置虚拟目录的属性，以使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务能够运行。</span><span class="sxs-lookup"><span data-stu-id="7ac95-120">In addition to creating the virtual directory, you must also set its properties to enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to run.</span></span> <span data-ttu-id="7ac95-121">有关详细信息，请参见以下内容。</span><span class="sxs-lookup"><span data-stu-id="7ac95-121">See below for details.</span></span>  
-  
-#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a><span data-ttu-id="7ac95-122">在 IIS 5.1 或 6.0 中创建虚拟目录</span><span class="sxs-lookup"><span data-stu-id="7ac95-122">To create a virtual directory in IIS 5.1 or 6.0</span></span>  
-  
-1.  <span data-ttu-id="7ac95-123">打开命令提示符窗口并键入`start inetmgr`若要打开 Internet 信息服务 (IIS) MMC 管理单元。</span><span class="sxs-lookup"><span data-stu-id="7ac95-123">Open a command prompt window and type `start inetmgr` to open the Internet Information Services (IIS) MMC snap-in.</span></span>  
-  
-2.  <span data-ttu-id="7ac95-124">在左窗格中，展开包含计算机的名称的节点，然后展开**网站**节点。</span><span class="sxs-lookup"><span data-stu-id="7ac95-124">In the left pane, expand the node with the computer's name, and then expand the **Web Sites** node.</span></span>  
-  
-3.  <span data-ttu-id="7ac95-125">右键单击**Default Web Site**和选择**新的、 虚拟目录**以打开虚拟目录创建向导。</span><span class="sxs-lookup"><span data-stu-id="7ac95-125">Right-click **Default Web Site** and select **New, Virtual Directory** to open the Virtual Directory Creation wizard.</span></span>  
-  
-4.  <span data-ttu-id="7ac95-126">在向导中，键入`servicemodelsamples`作为您创建的虚拟目录别名。</span><span class="sxs-lookup"><span data-stu-id="7ac95-126">In the wizard, type `servicemodelsamples` as the alias for the virtual directory that you are creating.</span></span>  
-  
-5.  <span data-ttu-id="7ac95-127">将路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="7ac95-127">Set the path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span> <span data-ttu-id="7ac95-128">大多数的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例在生成时都将服务可执行文件复制到此位置。</span><span class="sxs-lookup"><span data-stu-id="7ac95-128">Most of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples copy service executable files to this location when built.</span></span>  
-  
-6.  <span data-ttu-id="7ac95-129">单击 **“下一步”**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-129">Click **Next**.</span></span>  
-  
-7.  <span data-ttu-id="7ac95-130">默认情况下，已选中以下复选框：</span><span class="sxs-lookup"><span data-stu-id="7ac95-130">By default, the following check boxes are selected:</span></span>  
-  
-    -   <span data-ttu-id="7ac95-131">**读取**</span><span class="sxs-lookup"><span data-stu-id="7ac95-131">**Read**</span></span>  
-  
-    -   <span data-ttu-id="7ac95-132">**运行脚本 （如 ASP)**</span><span class="sxs-lookup"><span data-stu-id="7ac95-132">**Run scripts (such as ASP)**</span></span>  
-  
-8.  <span data-ttu-id="7ac95-133">单击**下一步**，然后单击**完成**以完成向导。</span><span class="sxs-lookup"><span data-stu-id="7ac95-133">Click **Next**, and then click **Finish** to complete the wizard.</span></span>  
+    >  <span data-ttu-id="9dc14-118">必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples Web 应用程序。</span><span class="sxs-lookup"><span data-stu-id="9dc14-118">This task must be performed only once, because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples Web application.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="7ac95-134">必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples 虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="7ac95-134">This task must be performed only once because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples virtual directory.</span></span>  
+    >  <span data-ttu-id="9dc14-119">在本文档中，术语`virtual directory`和 `Web application`是同义词。</span><span class="sxs-lookup"><span data-stu-id="9dc14-119">For the purpose of this documentation, the term `virtual directory` is synonymous with `Web application`.</span></span>  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a><span data-ttu-id="7ac95-135">若要设置在 IIS 7.0 中的其他虚拟目录属性或 7.5</span><span class="sxs-lookup"><span data-stu-id="7ac95-135">To set additional virtual directory properties in IIS 7.0 or 7.5</span></span>  
+     <span data-ttu-id="9dc14-120">除了创建虚拟目录外，您还必须设置虚拟目录的属性，以使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务能够运行。</span><span class="sxs-lookup"><span data-stu-id="9dc14-120">In addition to creating the virtual directory, you must also set its properties to enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to run.</span></span> <span data-ttu-id="9dc14-121">有关详细信息，请参见以下内容。</span><span class="sxs-lookup"><span data-stu-id="9dc14-121">See below for details.</span></span>  
   
-1.  <span data-ttu-id="7ac95-136">单击 servicemodelsamples 节点。</span><span class="sxs-lookup"><span data-stu-id="7ac95-136">Click the servicemodelsamples node.</span></span> <span data-ttu-id="7ac95-137">窗口的底部列有两个视图。</span><span class="sxs-lookup"><span data-stu-id="7ac95-137">Along the bottom of the window, two views are listed.</span></span> <span data-ttu-id="7ac95-138">选择**功能视图**如果尚未选择它。</span><span class="sxs-lookup"><span data-stu-id="7ac95-138">Select **Features View** if it isn’t already selected.</span></span>  
+#### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a><span data-ttu-id="9dc14-122">在 IIS 5.1 或 6.0 中创建虚拟目录</span><span class="sxs-lookup"><span data-stu-id="9dc14-122">To create a virtual directory in IIS 5.1 or 6.0</span></span>  
   
-2.  <span data-ttu-id="7ac95-139">双击项**目录浏览**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-139">Double-click the entry for **Directory Browsing**.</span></span>  
+1.  <span data-ttu-id="9dc14-123">打开命令提示符窗口并键入`start inetmgr`若要打开 Internet 信息服务 (IIS) MMC 管理单元。</span><span class="sxs-lookup"><span data-stu-id="9dc14-123">Open a command prompt window and type `start inetmgr` to open the Internet Information Services (IIS) MMC snap-in.</span></span>  
   
-3.  <span data-ttu-id="7ac95-140">在操作窗格中，选择**启用**选项。</span><span class="sxs-lookup"><span data-stu-id="7ac95-140">In the Actions pane, select the **Enable** option.</span></span> <span data-ttu-id="7ac95-141">这样，您将能够使用 Internet Explorer 访问目录的目录，这在调试服务时将很有帮助。</span><span class="sxs-lookup"><span data-stu-id="7ac95-141">This enables you to access the directory of the directory by using Internet Explorer, which helps when debugging a service.</span></span>  
+2.  <span data-ttu-id="9dc14-124">在左窗格中，展开包含计算机的名称的节点，然后展开**网站**节点。</span><span class="sxs-lookup"><span data-stu-id="9dc14-124">In the left pane, expand the node with the computer's name, and then expand the **Web Sites** node.</span></span>  
   
- <span data-ttu-id="7ac95-142">最后，您必须设置 servicemodelsamples 文件夹的安全属性，以允许其他人访问该文件夹。</span><span class="sxs-lookup"><span data-stu-id="7ac95-142">Finally, you must set the security properties of the servicemodelsamples folder to allow it to be accessed by others.</span></span> <span data-ttu-id="7ac95-143">有关详细信息，请参见以下内容。</span><span class="sxs-lookup"><span data-stu-id="7ac95-143">See below for details.</span></span>  
+3.  <span data-ttu-id="9dc14-125">右键单击**Default Web Site**和选择**新的、 虚拟目录**以打开虚拟目录创建向导。</span><span class="sxs-lookup"><span data-stu-id="9dc14-125">Right-click **Default Web Site** and select **New, Virtual Directory** to open the Virtual Directory Creation wizard.</span></span>  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a><span data-ttu-id="7ac95-144">在 IIS 5.1 或 6.0 中设置附加虚拟目录属性</span><span class="sxs-lookup"><span data-stu-id="7ac95-144">To set additional virtual directory properties in IIS 5.1 or 6.0</span></span>  
+4.  <span data-ttu-id="9dc14-126">在向导中，键入`servicemodelsamples`作为您创建的虚拟目录别名。</span><span class="sxs-lookup"><span data-stu-id="9dc14-126">In the wizard, type `servicemodelsamples` as the alias for the virtual directory that you are creating.</span></span>  
   
-1.  <span data-ttu-id="7ac95-145">右击 servicemodelsamples 节点，然后单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-145">Right-click the servicemodelsamples node and then click **Properties**.</span></span>  
+5.  <span data-ttu-id="9dc14-127">将路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="9dc14-127">Set the path to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span> <span data-ttu-id="9dc14-128">大多数的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例在生成时都将服务可执行文件复制到此位置。</span><span class="sxs-lookup"><span data-stu-id="9dc14-128">Most of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples copy service executable files to this location when built.</span></span>  
   
-2.  <span data-ttu-id="7ac95-146">默认情况下，已选中以下复选框：</span><span class="sxs-lookup"><span data-stu-id="7ac95-146">By default, the following check boxes are selected:</span></span>  
+6.  <span data-ttu-id="9dc14-129">单击 **“下一步”**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-129">Click **Next**.</span></span>  
   
-    -   <span data-ttu-id="7ac95-147">**读取**</span><span class="sxs-lookup"><span data-stu-id="7ac95-147">**Read**</span></span>  
+7.  <span data-ttu-id="9dc14-130">默认情况下，已选中以下复选框：</span><span class="sxs-lookup"><span data-stu-id="9dc14-130">By default, the following check boxes are selected:</span></span>  
   
-    -   <span data-ttu-id="7ac95-148">**日志访问**</span><span class="sxs-lookup"><span data-stu-id="7ac95-148">**Log visits**</span></span>  
+    -   <span data-ttu-id="9dc14-131">**读取**</span><span class="sxs-lookup"><span data-stu-id="9dc14-131">**Read**</span></span>  
   
-    -   <span data-ttu-id="7ac95-149">**编制此资源的索引**</span><span class="sxs-lookup"><span data-stu-id="7ac95-149">**Index this resource**</span></span>  
+    -   <span data-ttu-id="9dc14-132">**运行脚本 （如 ASP)**</span><span class="sxs-lookup"><span data-stu-id="9dc14-132">**Run scripts (such as ASP)**</span></span>  
   
-3.  <span data-ttu-id="7ac95-150">选择**目录浏览**复选框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-150">Select the **Directory browsing** check box.</span></span> <span data-ttu-id="7ac95-151">这样，您将能够使用 Internet Explorer 访问目录的目录，这在调试服务时将很有帮助。</span><span class="sxs-lookup"><span data-stu-id="7ac95-151">This enables you to access the directory of the directory by using Internet Explorer, which helps when debugging a service.</span></span>  
+8.  <span data-ttu-id="9dc14-133">单击**下一步**，然后单击**完成**以完成向导。</span><span class="sxs-lookup"><span data-stu-id="9dc14-133">Click **Next**, and then click **Finish** to complete the wizard.</span></span>  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a><span data-ttu-id="7ac95-152">在 IIS 7.0 或 7.5 中设置文件夹的安全属性</span><span class="sxs-lookup"><span data-stu-id="7ac95-152">To set security properties of the folder in IIS 7.0 or 7.5</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="9dc14-134">必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples 虚拟目录。</span><span class="sxs-lookup"><span data-stu-id="9dc14-134">This task must be performed only once because all of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples use the same servicemodelsamples virtual directory.</span></span>  
   
-1.  <span data-ttu-id="7ac95-153">定位到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="7ac95-153">Navigate to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a><span data-ttu-id="9dc14-135">若要设置在 IIS 7.0 中的其他虚拟目录属性或 7.5</span><span class="sxs-lookup"><span data-stu-id="9dc14-135">To set additional virtual directory properties in IIS 7.0 or 7.5</span></span>  
   
-2.  <span data-ttu-id="7ac95-154">右击 servicemodelsamples 文件夹，单击**共享**或**共享**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-154">Right-click the servicemodelsamples folder and click **Share** or **Share With**.</span></span>  
+1.  <span data-ttu-id="9dc14-136">单击 servicemodelsamples 节点。</span><span class="sxs-lookup"><span data-stu-id="9dc14-136">Click the servicemodelsamples node.</span></span> <span data-ttu-id="9dc14-137">窗口的底部列有两个视图。</span><span class="sxs-lookup"><span data-stu-id="9dc14-137">Along the bottom of the window, two views are listed.</span></span> <span data-ttu-id="9dc14-138">选择**功能视图**如果尚未选择它。</span><span class="sxs-lookup"><span data-stu-id="9dc14-138">Select **Features View** if it isn’t already selected.</span></span>  
   
-3.  <span data-ttu-id="7ac95-155">单击左侧的向下箭头**添加**按钮。</span><span class="sxs-lookup"><span data-stu-id="7ac95-155">Click the down arrow to the left of the **Add** button.</span></span>  
+2.  <span data-ttu-id="9dc14-139">双击项**目录浏览**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-139">Double-click the entry for **Directory Browsing**.</span></span>  
   
-4.  <span data-ttu-id="7ac95-156">选择**查找**条目。</span><span class="sxs-lookup"><span data-stu-id="7ac95-156">Select the **Find** entry.</span></span> <span data-ttu-id="7ac95-157">**选择用户或组**窗口随即打开。</span><span class="sxs-lookup"><span data-stu-id="7ac95-157">The **Select Users or Groups** window opens.</span></span>  
+3.  <span data-ttu-id="9dc14-140">在操作窗格中，选择**启用**选项。</span><span class="sxs-lookup"><span data-stu-id="9dc14-140">In the Actions pane, select the **Enable** option.</span></span> <span data-ttu-id="9dc14-141">这样，您将能够使用 Internet Explorer 访问目录的目录，这在调试服务时将很有帮助。</span><span class="sxs-lookup"><span data-stu-id="9dc14-141">This enables you to access the directory of the directory by using Internet Explorer, which helps when debugging a service.</span></span>  
   
-5.  <span data-ttu-id="7ac95-158">单击 **“高级”**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-158">Click **Advanced**.</span></span>  
+ <span data-ttu-id="9dc14-142">最后，您必须设置 servicemodelsamples 文件夹的安全属性，以允许其他人访问该文件夹。</span><span class="sxs-lookup"><span data-stu-id="9dc14-142">Finally, you must set the security properties of the servicemodelsamples folder to allow it to be accessed by others.</span></span> <span data-ttu-id="9dc14-143">有关详细信息，请参见以下内容。</span><span class="sxs-lookup"><span data-stu-id="9dc14-143">See below for details.</span></span>  
   
-6.  <span data-ttu-id="7ac95-159">单击**位置**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-159">Click **Locations**.</span></span> <span data-ttu-id="7ac95-160">**位置**窗口随即打开。</span><span class="sxs-lookup"><span data-stu-id="7ac95-160">The **Locations** window is now open.</span></span>  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a><span data-ttu-id="9dc14-144">在 IIS 5.1 或 6.0 中设置附加虚拟目录属性</span><span class="sxs-lookup"><span data-stu-id="9dc14-144">To set additional virtual directory properties in IIS 5.1 or 6.0</span></span>  
   
-7.  <span data-ttu-id="7ac95-161">选择对应于所使用计算机的项。</span><span class="sxs-lookup"><span data-stu-id="7ac95-161">Select the entry for the computer being used.</span></span> <span data-ttu-id="7ac95-162">请务必选择本地计算机，而不是对应于所列出的任何域或网络的项。</span><span class="sxs-lookup"><span data-stu-id="7ac95-162">It is important to select the local computer and not an entry for any domains or networks that are listed.</span></span> <span data-ttu-id="7ac95-163">选择计算机之后，单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-163">After you have selected the computer, click **OK**.</span></span>  
+1.  <span data-ttu-id="9dc14-145">右击 servicemodelsamples 节点，然后单击**属性**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-145">Right-click the servicemodelsamples node and then click **Properties**.</span></span>  
   
-8.  <span data-ttu-id="7ac95-164">单击**立即查找**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-164">Click **Find Now**.</span></span> <span data-ttu-id="7ac95-165">此操作将用与本地计算机关联的对象填充搜索结果。</span><span class="sxs-lookup"><span data-stu-id="7ac95-165">This populates the search results with objects associated with the local computer.</span></span>  
+2.  <span data-ttu-id="9dc14-146">默认情况下，已选中以下复选框：</span><span class="sxs-lookup"><span data-stu-id="9dc14-146">By default, the following check boxes are selected:</span></span>  
   
-9. <span data-ttu-id="7ac95-166">查找**IIS_IUSRS**中的条目**名称 （相对可分辨名称）**列。</span><span class="sxs-lookup"><span data-stu-id="7ac95-166">Find the **IIS_IUSRS** entry in the **Name (Relative Distinguished Name)** column.</span></span> <span data-ttu-id="7ac95-167">选择该条目并单击**确定**关闭搜索结果窗口。</span><span class="sxs-lookup"><span data-stu-id="7ac95-167">Select that entry and click **OK** to close the search results window.</span></span>  
+    -   <span data-ttu-id="9dc14-147">**读取**</span><span class="sxs-lookup"><span data-stu-id="9dc14-147">**Read**</span></span>  
   
-10. <span data-ttu-id="7ac95-168">单击**确定**关闭**选择用户或组**窗口。</span><span class="sxs-lookup"><span data-stu-id="7ac95-168">Click **OK** to close the **Select Users or Groups** window.</span></span>  
+    -   <span data-ttu-id="9dc14-148">**日志访问**</span><span class="sxs-lookup"><span data-stu-id="9dc14-148">**Log visits**</span></span>  
   
-11. <span data-ttu-id="7ac95-169">单击**共享**以保留更改。</span><span class="sxs-lookup"><span data-stu-id="7ac95-169">Click **Share** to persist the changes.</span></span>  
+    -   <span data-ttu-id="9dc14-149">**编制此资源的索引**</span><span class="sxs-lookup"><span data-stu-id="9dc14-149">**Index this resource**</span></span>  
   
-12. <span data-ttu-id="7ac95-170">若要启用共享的更改都已完成后，单击**完成**关闭**文件共享**窗口。</span><span class="sxs-lookup"><span data-stu-id="7ac95-170">After the changes to enable sharing are complete, click **Done** to close the **File Sharing** window.</span></span>  
+3.  <span data-ttu-id="9dc14-150">选择**目录浏览**复选框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-150">Select the **Directory browsing** check box.</span></span> <span data-ttu-id="9dc14-151">这样，您将能够使用 Internet Explorer 访问目录的目录，这在调试服务时将很有帮助。</span><span class="sxs-lookup"><span data-stu-id="9dc14-151">This enables you to access the directory of the directory by using Internet Explorer, which helps when debugging a service.</span></span>  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a><span data-ttu-id="7ac95-171">在 IIS 5.1 或 6.0 中设置文件夹的安全属性</span><span class="sxs-lookup"><span data-stu-id="7ac95-171">To set security properties of the folder in IIS 5.1 or 6.0</span></span>  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a><span data-ttu-id="9dc14-152">在 IIS 7.0 或 7.5 中设置文件夹的安全属性</span><span class="sxs-lookup"><span data-stu-id="9dc14-152">To set security properties of the folder in IIS 7.0 or 7.5</span></span>  
   
-1.  <span data-ttu-id="7ac95-172">定位到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="7ac95-172">Navigate to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  
+1.  <span data-ttu-id="9dc14-153">定位到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="9dc14-153">Navigate to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  
   
-2.  <span data-ttu-id="7ac95-173">右键单击**servicemodelsamples**文件夹，然后单击**共享和安全。**</span><span class="sxs-lookup"><span data-stu-id="7ac95-173">Right-click the **servicemodelsamples** folder and then click **Sharing and Security.**</span></span>  
+2.  <span data-ttu-id="9dc14-154">右击 servicemodelsamples 文件夹，单击**共享**或**共享**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-154">Right-click the servicemodelsamples folder and click **Share** or **Share With**.</span></span>  
   
-3.  <span data-ttu-id="7ac95-174">单击 **“安全”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="7ac95-174">Click the **Security** tab.</span></span>  
+3.  <span data-ttu-id="9dc14-155">单击左侧的向下箭头**添加**按钮。</span><span class="sxs-lookup"><span data-stu-id="9dc14-155">Click the down arrow to the left of the **Add** button.</span></span>  
   
-4.  <span data-ttu-id="7ac95-175">如果你使用的 IIS 6.0 中，在**组或用户名**框中，检查是否**Internet 来宾帐户**列出。</span><span class="sxs-lookup"><span data-stu-id="7ac95-175">If you are using IIS 6.0, in the **Group or user names** box, check whether **Internet Guest Account** is listed.</span></span>  
+4.  <span data-ttu-id="9dc14-156">选择**查找**条目。</span><span class="sxs-lookup"><span data-stu-id="9dc14-156">Select the **Find** entry.</span></span> <span data-ttu-id="9dc14-157">**选择用户或组**窗口随即打开。</span><span class="sxs-lookup"><span data-stu-id="9dc14-157">The **Select Users or Groups** window opens.</span></span>  
   
-     <span data-ttu-id="7ac95-176">如果该帐户未列出：</span><span class="sxs-lookup"><span data-stu-id="7ac95-176">If it is not listed:</span></span>  
+5.  <span data-ttu-id="9dc14-158">单击 **“高级”**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-158">Click **Advanced**.</span></span>  
   
-    1.  <span data-ttu-id="7ac95-177">单击**启动**，然后单击**控制面板**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-177">Click **Start** and then click **Control Panel**.</span></span>  
+6.  <span data-ttu-id="9dc14-159">单击**位置**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-159">Click **Locations**.</span></span> <span data-ttu-id="9dc14-160">**位置**窗口随即打开。</span><span class="sxs-lookup"><span data-stu-id="9dc14-160">The **Locations** window is now open.</span></span>  
   
-    2.  <span data-ttu-id="7ac95-178">如果看不到**用户帐户**图标，单击**切换到分类视图**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-178">If you do not see the **User Accounts** icon, click **Switch to Category View**.</span></span>  
+7.  <span data-ttu-id="9dc14-161">选择对应于所使用计算机的项。</span><span class="sxs-lookup"><span data-stu-id="9dc14-161">Select the entry for the computer being used.</span></span> <span data-ttu-id="9dc14-162">请务必选择本地计算机，而不是对应于所列出的任何域或网络的项。</span><span class="sxs-lookup"><span data-stu-id="9dc14-162">It is important to select the local computer and not an entry for any domains or networks that are listed.</span></span> <span data-ttu-id="9dc14-163">选择计算机之后，单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-163">After you have selected the computer, click **OK**.</span></span>  
   
-    3.  <span data-ttu-id="7ac95-179">单击**用户帐户**图标。</span><span class="sxs-lookup"><span data-stu-id="7ac95-179">Click the **User Accounts** icon.</span></span>  
+8.  <span data-ttu-id="9dc14-164">单击**立即查找**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-164">Click **Find Now**.</span></span> <span data-ttu-id="9dc14-165">此操作将用与本地计算机关联的对象填充搜索结果。</span><span class="sxs-lookup"><span data-stu-id="9dc14-165">This populates the search results with objects associated with the local computer.</span></span>  
   
-    4.  <span data-ttu-id="7ac95-180">在"或选择一个控制面板图标，"单击**用户帐户**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-180">Under "or pick a Control Panel icon," click **User Accounts**.</span></span>  
+9. <span data-ttu-id="9dc14-166">查找**IIS_IUSRS**中的条目**名称 （相对可分辨名称）**列。</span><span class="sxs-lookup"><span data-stu-id="9dc14-166">Find the **IIS_IUSRS** entry in the **Name (Relative Distinguished Name)** column.</span></span> <span data-ttu-id="9dc14-167">选择该条目并单击**确定**关闭搜索结果窗口。</span><span class="sxs-lookup"><span data-stu-id="9dc14-167">Select that entry and click **OK** to close the search results window.</span></span>  
   
-    5.  <span data-ttu-id="7ac95-181">在**用户帐户**对话框中，单击**高级**选项卡。</span><span class="sxs-lookup"><span data-stu-id="7ac95-181">In the **User Accounts** dialog box, click the **Advanced** tab.</span></span>  
+10. <span data-ttu-id="9dc14-168">单击**确定**关闭**选择用户或组**窗口。</span><span class="sxs-lookup"><span data-stu-id="9dc14-168">Click **OK** to close the **Select Users or Groups** window.</span></span>  
   
-    6.  <span data-ttu-id="7ac95-182">单击 **“高级”**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-182">Click **Advanced**.</span></span>  
+11. <span data-ttu-id="9dc14-169">单击**共享**以保留更改。</span><span class="sxs-lookup"><span data-stu-id="9dc14-169">Click **Share** to persist the changes.</span></span>  
   
-    7.  <span data-ttu-id="7ac95-183">在**本地用户和组**对话框中，单击以展开**用户**文件夹。</span><span class="sxs-lookup"><span data-stu-id="7ac95-183">In the **Local Users and Groups** dialog box, click to expand the **Users** folder.</span></span>  
+12. <span data-ttu-id="9dc14-170">若要启用共享的更改都已完成后，单击**完成**关闭**文件共享**窗口。</span><span class="sxs-lookup"><span data-stu-id="9dc14-170">After the changes to enable sharing are complete, click **Done** to close the **File Sharing** window.</span></span>  
   
-    8.  <span data-ttu-id="7ac95-184">在右窗格中，双击**Internet 来宾帐户**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-184">In the right pane, double-click **Internet Guest Account**.</span></span>  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a><span data-ttu-id="9dc14-171">在 IIS 5.1 或 6.0 中设置文件夹的安全属性</span><span class="sxs-lookup"><span data-stu-id="9dc14-171">To set security properties of the folder in IIS 5.1 or 6.0</span></span>  
   
-    9. <span data-ttu-id="7ac95-185">在**属性**名称对话框中，复制用作 Internet 来宾帐户。</span><span class="sxs-lookup"><span data-stu-id="7ac95-185">In the **Properties** dialog box, copy the name used as the Internet guest account.</span></span> <span data-ttu-id="7ac95-186">默认情况下，该名称以“USR_”开头，后跟计算机的名称。</span><span class="sxs-lookup"><span data-stu-id="7ac95-186">By default, the name begins with "USR_" followed by the name of the computer.</span></span>  
+1.  <span data-ttu-id="9dc14-172">定位到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="9dc14-172">Navigate to %SystemDrive%\inetpub\wwwroot\servicemodelsamples.</span></span>  
   
-    10. <span data-ttu-id="7ac95-187">关闭“属性”  对话框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-187">Close the **Properties** dialog box.</span></span>  
+2.  <span data-ttu-id="9dc14-173">右键单击**servicemodelsamples**文件夹，然后单击**共享和安全。**</span><span class="sxs-lookup"><span data-stu-id="9dc14-173">Right-click the **servicemodelsamples** folder and then click **Sharing and Security.**</span></span>  
   
-    11. <span data-ttu-id="7ac95-188">关闭**本地用户和组**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-188">Close the **Local Users and Groups** dialog box.</span></span>  
+3.  <span data-ttu-id="9dc14-174">单击 **“安全”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="9dc14-174">Click the **Security** tab.</span></span>  
   
-    12. <span data-ttu-id="7ac95-189">关闭**用户帐户**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-189">Close the **User Accounts** dialog box.</span></span>  
+4.  <span data-ttu-id="9dc14-175">如果你使用的 IIS 6.0 中，在**组或用户名**框中，检查是否**Internet 来宾帐户**列出。</span><span class="sxs-lookup"><span data-stu-id="9dc14-175">If you are using IIS 6.0, in the **Group or user names** box, check whether **Internet Guest Account** is listed.</span></span>  
   
-    13. <span data-ttu-id="7ac95-190">关闭另**用户帐户**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-190">Close the other **User Accounts** dialog box.</span></span>  
+     <span data-ttu-id="9dc14-176">如果该帐户未列出：</span><span class="sxs-lookup"><span data-stu-id="9dc14-176">If it is not listed:</span></span>  
   
-    14. <span data-ttu-id="7ac95-191">在**servicemodelsamples 属性**对话框中，在**安全**选项卡上，单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-191">In the **servicemodelsamples Properties** dialog box, on the **Security** tab, click **Add**.</span></span>  
+    1.  <span data-ttu-id="9dc14-177">单击**启动**，然后单击**控制面板**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-177">Click **Start** and then click **Control Panel**.</span></span>  
   
-    15. <span data-ttu-id="7ac95-192">键入反斜杠后, 跟的计算机的名称，然后粘贴 Internet 用户帐户，例如，myMachineName\\%internetguestaccountname%</span><span class="sxs-lookup"><span data-stu-id="7ac95-192">Type the name of the computer followed by a backslash, then paste the name of the Internet user account, for example, myMachineName\\%InternetGuestAccountName%</span></span>  
+    2.  <span data-ttu-id="9dc14-178">如果看不到**用户帐户**图标，单击**切换到分类视图**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-178">If you do not see the **User Accounts** icon, click **Switch to Category View**.</span></span>  
   
-    16. <span data-ttu-id="7ac95-193">单击**检查名称**验证所添加。</span><span class="sxs-lookup"><span data-stu-id="7ac95-193">Click **Check Names** to verify the addition.</span></span> <span data-ttu-id="7ac95-194">如果名称有效，名称将变为全大写并带下划线的形式。</span><span class="sxs-lookup"><span data-stu-id="7ac95-194">If it is valid, the name is in all capital letters and is underlined.</span></span>  
+    3.  <span data-ttu-id="9dc14-179">单击**用户帐户**图标。</span><span class="sxs-lookup"><span data-stu-id="9dc14-179">Click the **User Accounts** icon.</span></span>  
   
-5.  <span data-ttu-id="7ac95-195">对于 IIS 6.0，还检查网络服务被列入**组或用户名**框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-195">For IIS 6.0, also check that NETWORK SERVICE is listed in the **Group or user names** box.</span></span>  
+    4.  <span data-ttu-id="9dc14-180">在"或选择一个控制面板图标，"单击**用户帐户**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-180">Under "or pick a Control Panel icon," click **User Accounts**.</span></span>  
   
-     <span data-ttu-id="7ac95-196">如果“NETWORK SERVICE”未列出：</span><span class="sxs-lookup"><span data-stu-id="7ac95-196">If NETWORK SERVICE is not listed:</span></span>  
+    5.  <span data-ttu-id="9dc14-181">在**用户帐户**对话框中，单击**高级**选项卡。</span><span class="sxs-lookup"><span data-stu-id="9dc14-181">In the **User Accounts** dialog box, click the **Advanced** tab.</span></span>  
   
-    1.  <span data-ttu-id="7ac95-197">单击 **“添加”**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-197">Click **Add**.</span></span>  
+    6.  <span data-ttu-id="9dc14-182">单击 **“高级”**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-182">Click **Advanced**.</span></span>  
   
-    2.  <span data-ttu-id="7ac95-198">在**选择用户或组**对话框中，键入计算机的名称后跟反斜杠。</span><span class="sxs-lookup"><span data-stu-id="7ac95-198">In the **Select Users or Groups** dialog box, type the name of the computer followed by a backslash.</span></span>  
+    7.  <span data-ttu-id="9dc14-183">在**本地用户和组**对话框中，单击以展开**用户**文件夹。</span><span class="sxs-lookup"><span data-stu-id="9dc14-183">In the **Local Users and Groups** dialog box, click to expand the **Users** folder.</span></span>  
   
-    3.  <span data-ttu-id="7ac95-199">类型**服务**反斜杠 （不带空格） 后。</span><span class="sxs-lookup"><span data-stu-id="7ac95-199">Type **service** after the backslash (no space).</span></span>  
+    8.  <span data-ttu-id="9dc14-184">在右窗格中，双击**Internet 来宾帐户**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-184">In the right pane, double-click **Internet Guest Account**.</span></span>  
   
-    4.  <span data-ttu-id="7ac95-200">单击**检查名称**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-200">Click **Check names**.</span></span>  
+    9. <span data-ttu-id="9dc14-185">在**属性**名称对话框中，复制用作 Internet 来宾帐户。</span><span class="sxs-lookup"><span data-stu-id="9dc14-185">In the **Properties** dialog box, copy the name used as the Internet guest account.</span></span> <span data-ttu-id="9dc14-186">默认情况下，该名称以“USR_”开头，后跟计算机的名称。</span><span class="sxs-lookup"><span data-stu-id="9dc14-186">By default, the name begins with "USR_" followed by the name of the computer.</span></span>  
   
-    5.  <span data-ttu-id="7ac95-201">如果找到多个名称，选择**网络服务**单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-201">If multiple names are found, select **NETWORK SERVICE** and click **OK**.</span></span>  
+    10. <span data-ttu-id="9dc14-187">关闭“属性”  对话框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-187">Close the **Properties** dialog box.</span></span>  
   
-    6.  <span data-ttu-id="7ac95-202">单击**确定**关闭**选择用户或组**对话框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-202">Click **OK** to close the **Select Users or Groups** dialog box.</span></span>  
+    11. <span data-ttu-id="9dc14-188">关闭**本地用户和组**对话框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-188">Close the **Local Users and Groups** dialog box.</span></span>  
   
-6.  <span data-ttu-id="7ac95-203">如果使用的带 IIS 5.1 的 Windows XP SP2，检查 Internet 来宾帐户和 ASPNET 是否列在**组或用户名**框。</span><span class="sxs-lookup"><span data-stu-id="7ac95-203">If you are using Windows XP SP2 with IIS 5.1, check that both Internet Guest Account and ASPNET are listed in the **Group or user names** box.</span></span>  
+    12. <span data-ttu-id="9dc14-189">关闭**用户帐户**对话框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-189">Close the **User Accounts** dialog box.</span></span>  
   
-     <span data-ttu-id="7ac95-204">请注意，ASPNET 用户可能的内置成员**用户**安全组。</span><span class="sxs-lookup"><span data-stu-id="7ac95-204">Note that the ASPNET user may be a member of the built-in **Users** security group.</span></span> <span data-ttu-id="7ac95-205">如果是这样，那么，如果**用户**组列在对话框中，不需要将其作为一个单独的项添加到允许的用户的列表。</span><span class="sxs-lookup"><span data-stu-id="7ac95-205">If so, then if the **Users** group is listed in the dialog box, you do not need to add it as a separate item to the list of permitted users.</span></span>  
+    13. <span data-ttu-id="9dc14-190">关闭另**用户帐户**对话框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-190">Close the other **User Accounts** dialog box.</span></span>  
   
-     <span data-ttu-id="7ac95-206">若要检查 ASPNET 是否属于**用户**安全组：</span><span class="sxs-lookup"><span data-stu-id="7ac95-206">To check if ASPNET is part of the **Users** security group:</span></span>  
+    14. <span data-ttu-id="9dc14-191">在**servicemodelsamples 属性**对话框中，在**安全**选项卡上，单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-191">In the **servicemodelsamples Properties** dialog box, on the **Security** tab, click **Add**.</span></span>  
   
-    1.  <span data-ttu-id="7ac95-207">上**启动**菜单上，单击**控制面板**。</span><span class="sxs-lookup"><span data-stu-id="7ac95-207">On the **Start** menu, click **Control Panel**.</span></span>  
+    15. <span data-ttu-id="9dc14-192">键入反斜杠后, 跟的计算机的名称，然后粘贴 Internet 用户帐户，例如，myMachineName\\%internetguestaccountname%</span><span class="sxs-lookup"><span data-stu-id="9dc14-192">Type the name of the computer followed by a backslash, then paste the name of the Internet user account, for example, myMachineName\\%InternetGuestAccountName%</span></span>  
   
-    2.  <span data-ttu-id="7ac95-208">单击**用户帐户**图标。</span><span class="sxs-lookup"><span data-stu-id="7ac95-208">Click the **User Accounts** icon.</span></span>  
+    16. <span data-ttu-id="9dc14-193">单击**检查名称**验证所添加。</span><span class="sxs-lookup"><span data-stu-id="9dc14-193">Click **Check Names** to verify the addition.</span></span> <span data-ttu-id="9dc14-194">如果名称有效，名称将变为全大写并带下划线的形式。</span><span class="sxs-lookup"><span data-stu-id="9dc14-194">If it is valid, the name is in all capital letters and is underlined.</span></span>  
   
-    3.  <span data-ttu-id="7ac95-209">在**组**列中，检查的值**ASPNET**是"用户。</span><span class="sxs-lookup"><span data-stu-id="7ac95-209">In the **Group** column, check that the value for **ASPNET** is "Users."</span></span>  
+5.  <span data-ttu-id="9dc14-195">对于 IIS 6.0，还检查网络服务被列入**组或用户名**框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-195">For IIS 6.0, also check that NETWORK SERVICE is listed in the **Group or user names** box.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ac95-210">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7ac95-210">See Also</span></span>  
- [<span data-ttu-id="7ac95-211">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="7ac95-211">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+     <span data-ttu-id="9dc14-196">如果“NETWORK SERVICE”未列出：</span><span class="sxs-lookup"><span data-stu-id="9dc14-196">If NETWORK SERVICE is not listed:</span></span>  
+  
+    1.  <span data-ttu-id="9dc14-197">单击 **“添加”**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-197">Click **Add**.</span></span>  
+  
+    2.  <span data-ttu-id="9dc14-198">在**选择用户或组**对话框中，键入计算机的名称后跟反斜杠。</span><span class="sxs-lookup"><span data-stu-id="9dc14-198">In the **Select Users or Groups** dialog box, type the name of the computer followed by a backslash.</span></span>  
+  
+    3.  <span data-ttu-id="9dc14-199">类型**服务**反斜杠 （不带空格） 后。</span><span class="sxs-lookup"><span data-stu-id="9dc14-199">Type **service** after the backslash (no space).</span></span>  
+  
+    4.  <span data-ttu-id="9dc14-200">单击**检查名称**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-200">Click **Check names**.</span></span>  
+  
+    5.  <span data-ttu-id="9dc14-201">如果找到多个名称，选择**网络服务**单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-201">If multiple names are found, select **NETWORK SERVICE** and click **OK**.</span></span>  
+  
+    6.  <span data-ttu-id="9dc14-202">单击**确定**关闭**选择用户或组**对话框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-202">Click **OK** to close the **Select Users or Groups** dialog box.</span></span>  
+  
+6.  <span data-ttu-id="9dc14-203">如果使用的带 IIS 5.1 的 Windows XP SP2，检查 Internet 来宾帐户和 ASPNET 是否列在**组或用户名**框。</span><span class="sxs-lookup"><span data-stu-id="9dc14-203">If you are using Windows XP SP2 with IIS 5.1, check that both Internet Guest Account and ASPNET are listed in the **Group or user names** box.</span></span>  
+  
+     <span data-ttu-id="9dc14-204">请注意，ASPNET 用户可能的内置成员**用户**安全组。</span><span class="sxs-lookup"><span data-stu-id="9dc14-204">Note that the ASPNET user may be a member of the built-in **Users** security group.</span></span> <span data-ttu-id="9dc14-205">如果是这样，那么，如果**用户**组列在对话框中，不需要将其作为一个单独的项添加到允许的用户的列表。</span><span class="sxs-lookup"><span data-stu-id="9dc14-205">If so, then if the **Users** group is listed in the dialog box, you do not need to add it as a separate item to the list of permitted users.</span></span>  
+  
+     <span data-ttu-id="9dc14-206">若要检查 ASPNET 是否属于**用户**安全组：</span><span class="sxs-lookup"><span data-stu-id="9dc14-206">To check if ASPNET is part of the **Users** security group:</span></span>  
+  
+    1.  <span data-ttu-id="9dc14-207">上**启动**菜单上，单击**控制面板**。</span><span class="sxs-lookup"><span data-stu-id="9dc14-207">On the **Start** menu, click **Control Panel**.</span></span>  
+  
+    2.  <span data-ttu-id="9dc14-208">单击**用户帐户**图标。</span><span class="sxs-lookup"><span data-stu-id="9dc14-208">Click the **User Accounts** icon.</span></span>  
+  
+    3.  <span data-ttu-id="9dc14-209">在**组**列中，检查的值**ASPNET**是"用户。</span><span class="sxs-lookup"><span data-stu-id="9dc14-209">In the **Group** column, check that the value for **ASPNET** is "Users."</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9dc14-210">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9dc14-210">See Also</span></span>  
+ [<span data-ttu-id="9dc14-211">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="9dc14-211">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

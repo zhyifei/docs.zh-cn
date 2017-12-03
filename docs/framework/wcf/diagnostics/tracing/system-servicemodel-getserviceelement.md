@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 80535b67-f196-467b-93aa-ea9de902a2e5
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36370b11217c3746c0e85608f5a8027527ccbab5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53b6579051df663123d608f544c8d278aeb6d4c0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelgetserviceelement"></a><span data-ttu-id="f4272-102">System.ServiceModel.GetServiceElement</span><span class="sxs-lookup"><span data-stu-id="f4272-102">System.ServiceModel.GetServiceElement</span></span>
-<span data-ttu-id="f4272-103">System.ServiceModel.GetServiceElement</span><span class="sxs-lookup"><span data-stu-id="f4272-103">System.ServiceModel.GetServiceElement</span></span>  
+# <a name="systemservicemodelgetserviceelement"></a><span data-ttu-id="e4a0f-102">System.ServiceModel.GetServiceElement</span><span class="sxs-lookup"><span data-stu-id="e4a0f-102">System.ServiceModel.GetServiceElement</span></span>
+<span data-ttu-id="e4a0f-103">System.ServiceModel.GetServiceElement</span><span class="sxs-lookup"><span data-stu-id="e4a0f-103">System.ServiceModel.GetServiceElement</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f4272-104">描述</span><span class="sxs-lookup"><span data-stu-id="f4272-104">Description</span></span>  
- <span data-ttu-id="f4272-105">在信息级别构建服务主机时发出此跟踪。</span><span class="sxs-lookup"><span data-stu-id="f4272-105">This trace is emitted when constructing a service host, at Information level.</span></span> <span data-ttu-id="f4272-106">此跟踪提供对服务协定和绑定的说明。</span><span class="sxs-lookup"><span data-stu-id="f4272-106">It provides a description of the service contract and binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="e4a0f-104">描述</span><span class="sxs-lookup"><span data-stu-id="e4a0f-104">Description</span></span>  
+ <span data-ttu-id="e4a0f-105">在信息级别构建服务主机时发出此跟踪。</span><span class="sxs-lookup"><span data-stu-id="e4a0f-105">This trace is emitted when constructing a service host, at Information level.</span></span> <span data-ttu-id="e4a0f-106">此跟踪提供对服务协定和绑定的说明。</span><span class="sxs-lookup"><span data-stu-id="e4a0f-106">It provides a description of the service contract and binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4272-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f4272-107">See Also</span></span>  
- [<span data-ttu-id="f4272-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="f4272-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f4272-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="f4272-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f4272-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f4272-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e4a0f-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e4a0f-107">See Also</span></span>  
+ [<span data-ttu-id="e4a0f-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="e4a0f-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e4a0f-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="e4a0f-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e4a0f-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="e4a0f-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

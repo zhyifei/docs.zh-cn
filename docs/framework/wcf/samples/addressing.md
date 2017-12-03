@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3ac0cb2b9df130820a4b12efd4b845b50ad7c79a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 05fe983832eb3931549bbda5ee7db7c70766cd3c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="addressing"></a><span data-ttu-id="a3702-102">寻址</span><span class="sxs-lookup"><span data-stu-id="a3702-102">Addressing</span></span>
-<span data-ttu-id="a3702-103">“寻址”示例演示终结点地址的各个方面和功能。</span><span class="sxs-lookup"><span data-stu-id="a3702-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="a3702-104">示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="a3702-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="a3702-105">在本示例中，服务是自承载的。</span><span class="sxs-lookup"><span data-stu-id="a3702-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="a3702-106">服务和客户端都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="a3702-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="a3702-107">服务使用相对和绝对终结点地址的组合来定义多个终结点。</span><span class="sxs-lookup"><span data-stu-id="a3702-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
+# <a name="addressing"></a><span data-ttu-id="84b65-102">寻址</span><span class="sxs-lookup"><span data-stu-id="84b65-102">Addressing</span></span>
+<span data-ttu-id="84b65-103">“寻址”示例演示终结点地址的各个方面和功能。</span><span class="sxs-lookup"><span data-stu-id="84b65-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="84b65-104">示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="84b65-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="84b65-105">在本示例中，服务是自承载的。</span><span class="sxs-lookup"><span data-stu-id="84b65-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="84b65-106">服务和客户端都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="84b65-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="84b65-107">服务使用相对和绝对终结点地址的组合来定义多个终结点。</span><span class="sxs-lookup"><span data-stu-id="84b65-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a3702-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="a3702-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="84b65-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="84b65-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="a3702-109">服务配置文件指定一个基址和四个终结点。</span><span class="sxs-lookup"><span data-stu-id="a3702-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="a3702-110">基址是在 service/host/baseAddresses 下使用 add 元素来指定的，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="a3702-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
+ <span data-ttu-id="84b65-109">服务配置文件指定一个基址和四个终结点。</span><span class="sxs-lookup"><span data-stu-id="84b65-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="84b65-110">基址是在 service/host/baseAddresses 下使用 add 元素来指定的，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="84b65-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 </service>  
 ```  
   
- <span data-ttu-id="a3702-111">在以下示例配置中显示的第一个终结点定义指定一个相对地址，这意味着终结点地址是遵循 URI 构成规则的基址和相对地址的结合。</span><span class="sxs-lookup"><span data-stu-id="a3702-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
+ <span data-ttu-id="84b65-111">在以下示例配置中显示的第一个终结点定义指定一个相对地址，这意味着终结点地址是遵循 URI 构成规则的基址和相对地址的结合。</span><span class="sxs-lookup"><span data-stu-id="84b65-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -50,9 +50,9 @@ ms.lasthandoff: 10/18/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="a3702-112">在本例中，相对地址为空（“”），因此终结点地址与基址相同。</span><span class="sxs-lookup"><span data-stu-id="a3702-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="a3702-113">实际终结点地址为 http://localhost:8000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="a3702-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
+ <span data-ttu-id="84b65-112">在本例中，相对地址为空（“”），因此终结点地址与基址相同。</span><span class="sxs-lookup"><span data-stu-id="84b65-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="84b65-113">实际终结点地址为 http://localhost:8000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="84b65-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
   
- <span data-ttu-id="a3702-114">第二个终结点定义也指定一个相对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="a3702-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="84b65-114">第二个终结点定义也指定一个相对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="84b65-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -63,9 +63,9 @@ ms.lasthandoff: 10/18/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="a3702-115">将相对地址“test”追加到基址。</span><span class="sxs-lookup"><span data-stu-id="a3702-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="a3702-116">实际终结点地址为 http://localhost:8000/servicemodelsamples/service/test。</span><span class="sxs-lookup"><span data-stu-id="a3702-116">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
+ <span data-ttu-id="84b65-115">将相对地址“test”追加到基址。</span><span class="sxs-lookup"><span data-stu-id="84b65-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="84b65-116">实际终结点地址为 http://localhost:8000/servicemodelsamples/service/test。</span><span class="sxs-lookup"><span data-stu-id="84b65-116">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
   
- <span data-ttu-id="a3702-117">第三个终结点定义指定一个绝对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="a3702-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="84b65-117">第三个终结点定义指定一个绝对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="84b65-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -73,9 +73,9 @@ ms.lasthandoff: 10/18/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="a3702-118">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="a3702-118">The base address plays no role in the address.</span></span> <span data-ttu-id="a3702-119">实际终结点地址为 http://localhost:8001/hello/servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="a3702-119">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
+ <span data-ttu-id="84b65-118">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="84b65-118">The base address plays no role in the address.</span></span> <span data-ttu-id="84b65-119">实际终结点地址为 http://localhost:8001/hello/servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="84b65-119">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
   
- <span data-ttu-id="a3702-120">第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。</span><span class="sxs-lookup"><span data-stu-id="a3702-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="a3702-121">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="a3702-121">The base address plays no role in the address.</span></span> <span data-ttu-id="a3702-122">实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="a3702-122">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+ <span data-ttu-id="84b65-120">第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。</span><span class="sxs-lookup"><span data-stu-id="84b65-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="84b65-121">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="84b65-121">The base address plays no role in the address.</span></span> <span data-ttu-id="84b65-122">实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="84b65-122">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -89,9 +89,9 @@ ms.lasthandoff: 10/18/2017
 </service>  
 ```  
   
- <span data-ttu-id="a3702-123">客户端只访问四个服务终结点之一，但是在客户端的配置文件中对所有四个终结点都进行了定义。</span><span class="sxs-lookup"><span data-stu-id="a3702-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="a3702-124">客户端创建 `CalculatorProxy` 对象时将选择一个终结点。</span><span class="sxs-lookup"><span data-stu-id="a3702-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="a3702-125">通过更改从 `CalculatorEndpoint1` 到 `CalculatorEndpoint4` 中的配置名称，您可以使用每个终结点。</span><span class="sxs-lookup"><span data-stu-id="a3702-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
+ <span data-ttu-id="84b65-123">客户端只访问四个服务终结点之一，但是在客户端的配置文件中对所有四个终结点都进行了定义。</span><span class="sxs-lookup"><span data-stu-id="84b65-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="84b65-124">客户端创建 `CalculatorProxy` 对象时将选择一个终结点。</span><span class="sxs-lookup"><span data-stu-id="84b65-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="84b65-125">通过更改从 `CalculatorEndpoint1` 到 `CalculatorEndpoint4` 中的配置名称，您可以使用每个终结点。</span><span class="sxs-lookup"><span data-stu-id="84b65-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
   
- <span data-ttu-id="a3702-126">运行示例时，服务会枚举其每个终结点的地址、绑定名称和协定名称。</span><span class="sxs-lookup"><span data-stu-id="a3702-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="a3702-127">从 ServiceHost 的角度来看，元数据交换 (MEX) 终结点只是另一个终结点，因此在列表中出现。</span><span class="sxs-lookup"><span data-stu-id="a3702-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
+ <span data-ttu-id="84b65-126">运行示例时，服务会枚举其每个终结点的地址、绑定名称和协定名称。</span><span class="sxs-lookup"><span data-stu-id="84b65-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="84b65-127">从 ServiceHost 的角度来看，元数据交换 (MEX) 终结点只是另一个终结点，因此在列表中出现。</span><span class="sxs-lookup"><span data-stu-id="84b65-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
   
 ```  
 Service endpoints:  
@@ -115,7 +115,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- <span data-ttu-id="a3702-128">运行客户端时，操作请求和响应将显示在服务和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="a3702-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="a3702-129">在每个控制台窗口中按 Enter 可以关闭服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="a3702-129">Press ENTER in each console window to shut down the service and client.</span></span>  
+ <span data-ttu-id="84b65-128">运行客户端时，操作请求和响应将显示在服务和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="84b65-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="84b65-129">在每个控制台窗口中按 Enter 可以关闭服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="84b65-129">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -126,24 +126,24 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a3702-130">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="a3702-130">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="84b65-130">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="84b65-130">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="a3702-131">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="a3702-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="84b65-131">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="84b65-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="a3702-132">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="a3702-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="84b65-132">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="84b65-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="a3702-133">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="a3702-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="84b65-133">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="84b65-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a3702-134">如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。</span><span class="sxs-lookup"><span data-stu-id="a3702-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
+    >  <span data-ttu-id="84b65-134">如果使用 Svcutil.exe 为此示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。</span><span class="sxs-lookup"><span data-stu-id="84b65-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a3702-135">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="a3702-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a3702-136">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="a3702-136">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="84b65-135">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="84b65-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="84b65-136">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="84b65-136">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="a3702-137">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="a3702-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a3702-138">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="a3702-138">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="84b65-137">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="84b65-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="84b65-138">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="84b65-138">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a><span data-ttu-id="a3702-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a3702-139">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84b65-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="84b65-139">See Also</span></span>

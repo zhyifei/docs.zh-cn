@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cb95e569-cc5e-4d70-81b5-7374d3a2f8be
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4e156578ecb5a2bedafb2cbba977f999e000e2b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c86950be7fbe583a7b53e2174591923a3b898f49
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqcannotpeekonqueue"></a><span data-ttu-id="bfda5-102">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span><span class="sxs-lookup"><span data-stu-id="bfda5-102">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span></span>
-<span data-ttu-id="bfda5-103">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span><span class="sxs-lookup"><span data-stu-id="bfda5-103">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span></span>  
+# <a name="systemservicemodelchannelsmsmqcannotpeekonqueue"></a><span data-ttu-id="fb1be-102">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span><span class="sxs-lookup"><span data-stu-id="fb1be-102">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span></span>
+<span data-ttu-id="fb1be-103">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span><span class="sxs-lookup"><span data-stu-id="fb1be-103">System.ServiceModel.Channels.MsmqCannotPeekOnQueue</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bfda5-104">描述</span><span class="sxs-lookup"><span data-stu-id="bfda5-104">Description</span></span>  
- <span data-ttu-id="bfda5-105">MSMQ 激活服务无法查看队列。</span><span class="sxs-lookup"><span data-stu-id="bfda5-105">MSMQ activation service cannot peek on the queue.</span></span>  
+## <a name="description"></a><span data-ttu-id="fb1be-104">描述</span><span class="sxs-lookup"><span data-stu-id="fb1be-104">Description</span></span>  
+ <span data-ttu-id="fb1be-105">MSMQ 激活服务无法查看队列。</span><span class="sxs-lookup"><span data-stu-id="fb1be-105">MSMQ activation service cannot peek on the queue.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfda5-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bfda5-106">See Also</span></span>  
- [<span data-ttu-id="bfda5-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="bfda5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bfda5-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="bfda5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bfda5-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="bfda5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fb1be-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fb1be-106">See Also</span></span>  
+ [<span data-ttu-id="fb1be-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="fb1be-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fb1be-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="fb1be-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fb1be-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="fb1be-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

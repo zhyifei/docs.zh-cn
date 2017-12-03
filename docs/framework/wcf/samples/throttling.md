@@ -13,24 +13,24 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 33d7d3be7c28f5fb22bd50f7b57b041abd642c32
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 251bc4d5e2955a7304a9a7b08f367081a95507cb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="throttling"></a><span data-ttu-id="3fcbd-102">遏制</span><span class="sxs-lookup"><span data-stu-id="3fcbd-102">Throttling</span></span>
-<span data-ttu-id="3fcbd-103">遏制示例演示如何使用遏制控制。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-103">The Throttling sample demonstrates the use of throttling controls.</span></span> <span data-ttu-id="3fcbd-104">限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-104">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span> <span data-ttu-id="3fcbd-105">您可以在服务配置文件设置中指定遏制行为。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-105">Throttling behavior is specified in service configuration file settings.</span></span> <span data-ttu-id="3fcbd-106">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-106">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="throttling"></a><span data-ttu-id="222fb-102">遏制</span><span class="sxs-lookup"><span data-stu-id="222fb-102">Throttling</span></span>
+<span data-ttu-id="222fb-103">遏制示例演示如何使用遏制控制。</span><span class="sxs-lookup"><span data-stu-id="222fb-103">The Throttling sample demonstrates the use of throttling controls.</span></span> <span data-ttu-id="222fb-104">限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。</span><span class="sxs-lookup"><span data-stu-id="222fb-104">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span> <span data-ttu-id="222fb-105">您可以在服务配置文件设置中指定遏制行为。</span><span class="sxs-lookup"><span data-stu-id="222fb-105">Throttling behavior is specified in service configuration file settings.</span></span> <span data-ttu-id="222fb-106">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。</span><span class="sxs-lookup"><span data-stu-id="222fb-106">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
- <span data-ttu-id="3fcbd-107">在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
+ <span data-ttu-id="222fb-107">在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。</span><span class="sxs-lookup"><span data-stu-id="222fb-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3fcbd-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="222fb-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="222fb-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="3fcbd-109">服务配置文件指定限制控件会在[ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)，下面的示例配置中所示。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-109">The service configuration file specifies throttling controls in a [\<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="222fb-109">服务配置文件指定限制控件会在[ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)，下面的示例配置中所示。</span><span class="sxs-lookup"><span data-stu-id="222fb-109">The service configuration file specifies throttling controls in a [\<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -46,9 +46,9 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
- <span data-ttu-id="3fcbd-110">按照配置要求，服务将最大并发调用数限制为 2，最大并发实例数限制为 10。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-110">As configured, the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span>  
+ <span data-ttu-id="222fb-110">按照配置要求，服务将最大并发调用数限制为 2，最大并发实例数限制为 10。</span><span class="sxs-lookup"><span data-stu-id="222fb-110">As configured, the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span>  
   
- <span data-ttu-id="3fcbd-111">为了演示遏制，我们对服务方法定义了休眠时间，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3fcbd-111">In order to demonstrate throttling we define a sleep time on the service methods as follows:</span></span>  
+ <span data-ttu-id="222fb-111">为了演示遏制，我们对服务方法定义了休眠时间，如下所示：</span><span class="sxs-lookup"><span data-stu-id="222fb-111">In order to demonstrate throttling we define a sleep time on the service methods as follows:</span></span>  
   
 ```  
 public double Add(double n1, double n2)  
@@ -58,7 +58,7 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- <span data-ttu-id="3fcbd-112">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-112">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="3fcbd-113">并发执行 Add 和 Subtract 方法以及 Multiply 和 Divide 方法，条件是并发执行的方法不超过 2 个，并由此而表现出遏制。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-113">The Add and Subtract methods are executed concurrently and the Multiply and Divide methods are executed concurrently proving that not more than 2 methods can be executed concurrently thus demonstrating throttling.</span></span>  
+ <span data-ttu-id="222fb-112">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="222fb-112">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="222fb-113">并发执行 Add 和 Subtract 方法以及 Multiply 和 Divide 方法，条件是并发执行的方法不超过 2 个，并由此而表现出遏制。</span><span class="sxs-lookup"><span data-stu-id="222fb-113">The Add and Subtract methods are executed concurrently and the Multiply and Divide methods are executed concurrently proving that not more than 2 methods can be executed concurrently thus demonstrating throttling.</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
@@ -75,21 +75,21 @@ Divide Result: 3.14285714285714
 Press any key to continue . . .  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3fcbd-114">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="3fcbd-114">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="222fb-114">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="222fb-114">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="3fcbd-115">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="222fb-115">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="222fb-115">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="3fcbd-116">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="222fb-116">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="222fb-116">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="3fcbd-117">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="222fb-117">若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="222fb-117">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3fcbd-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3fcbd-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="3fcbd-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="222fb-118">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="222fb-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="222fb-119">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="222fb-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="3fcbd-120">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="3fcbd-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3fcbd-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="3fcbd-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="222fb-120">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="222fb-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="222fb-121">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="222fb-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  
   
-## <a name="see-also"></a><span data-ttu-id="3fcbd-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3fcbd-122">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="222fb-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="222fb-122">See Also</span></span>

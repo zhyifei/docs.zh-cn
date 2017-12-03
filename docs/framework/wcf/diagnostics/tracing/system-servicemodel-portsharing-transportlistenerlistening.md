@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89c9a692-4a42-4704-b0dd-c4c5f78498b1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cfec0e08f1e13fc40ec0648e6f2e1804e89a36db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7312b27af88977489af3620e93609c662b7ff12
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelportsharingtransportlistenerlistening"></a><span data-ttu-id="5a132-102">System.ServiceModel.PortSharing.TransportListenerListening</span><span class="sxs-lookup"><span data-stu-id="5a132-102">System.ServiceModel.PortSharing.TransportListenerListening</span></span>
-<span data-ttu-id="5a132-103">System.ServiceModel.PortSharing.TransportListenerListening</span><span class="sxs-lookup"><span data-stu-id="5a132-103">System.ServiceModel.PortSharing.TransportListenerListening</span></span>  
+# <a name="systemservicemodelportsharingtransportlistenerlistening"></a><span data-ttu-id="f54b5-102">System.ServiceModel.PortSharing.TransportListenerListening</span><span class="sxs-lookup"><span data-stu-id="f54b5-102">System.ServiceModel.PortSharing.TransportListenerListening</span></span>
+<span data-ttu-id="f54b5-103">System.ServiceModel.PortSharing.TransportListenerListening</span><span class="sxs-lookup"><span data-stu-id="f54b5-103">System.ServiceModel.PortSharing.TransportListenerListening</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5a132-104">描述</span><span class="sxs-lookup"><span data-stu-id="5a132-104">Description</span></span>  
- <span data-ttu-id="5a132-105">TransportListener 正在侦听。</span><span class="sxs-lookup"><span data-stu-id="5a132-105">The TransportListener is now listening.</span></span>  
+## <a name="description"></a><span data-ttu-id="f54b5-104">描述</span><span class="sxs-lookup"><span data-stu-id="f54b5-104">Description</span></span>  
+ <span data-ttu-id="f54b5-105">TransportListener 正在侦听。</span><span class="sxs-lookup"><span data-stu-id="f54b5-105">The TransportListener is now listening.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a132-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5a132-106">See Also</span></span>  
- [<span data-ttu-id="5a132-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5a132-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5a132-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="5a132-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5a132-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5a132-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f54b5-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f54b5-106">See Also</span></span>  
+ [<span data-ttu-id="f54b5-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="f54b5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f54b5-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="f54b5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f54b5-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f54b5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

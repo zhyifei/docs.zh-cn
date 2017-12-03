@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 28b5a2f0-fbfc-477e-97d9-bea2c1bfbbbe
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 96ef32e9415fa314831073e032ff5da207ef37a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b76f34ebadf8a81947eb7798cebec36651c7ecca
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqleftbatch"></a><span data-ttu-id="7a433-102">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="7a433-102">System.ServiceModel.Channels.MsmqLeftBatch</span></span>
-<span data-ttu-id="7a433-103">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="7a433-103">System.ServiceModel.Channels.MsmqLeftBatch</span></span>  
+# <a name="systemservicemodelchannelsmsmqleftbatch"></a><span data-ttu-id="63c0b-102">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="63c0b-102">System.ServiceModel.Channels.MsmqLeftBatch</span></span>
+<span data-ttu-id="63c0b-103">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="63c0b-103">System.ServiceModel.Channels.MsmqLeftBatch</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7a433-104">描述</span><span class="sxs-lookup"><span data-stu-id="7a433-104">Description</span></span>  
- <span data-ttu-id="7a433-105">MSMQ 已离开批处理模式。</span><span class="sxs-lookup"><span data-stu-id="7a433-105">MSMQ left batching mode.</span></span>  
+## <a name="description"></a><span data-ttu-id="63c0b-104">描述</span><span class="sxs-lookup"><span data-stu-id="63c0b-104">Description</span></span>  
+ <span data-ttu-id="63c0b-105">MSMQ 已离开批处理模式。</span><span class="sxs-lookup"><span data-stu-id="63c0b-105">MSMQ left batching mode.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a433-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7a433-106">See Also</span></span>  
- [<span data-ttu-id="7a433-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="7a433-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7a433-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="7a433-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7a433-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="7a433-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="63c0b-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63c0b-106">See Also</span></span>  
+ [<span data-ttu-id="63c0b-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="63c0b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="63c0b-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="63c0b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="63c0b-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="63c0b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

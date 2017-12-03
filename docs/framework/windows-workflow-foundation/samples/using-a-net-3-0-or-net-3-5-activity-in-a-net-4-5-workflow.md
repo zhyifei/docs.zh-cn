@@ -9,33 +9,33 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6c53fd4c-5dd0-4fb4-ab6b-111302629548
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19638043a5070451c331e0dccfff9641aa31174e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 227c4e6ee566cd88982456d0045ab59221b26664
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="using-a-net-framework-30-or-net-framework-35-activity-in-a-net-framework-45-workflow"></a><span data-ttu-id="fbcd2-102">在.NET Framework 4.5 工作流中使用.NET Framework 3.0 或.NET Framework 3.5 活动</span><span class="sxs-lookup"><span data-stu-id="fbcd2-102">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>
-<span data-ttu-id="fbcd2-103"><xref:System.Activities.Statements.Interop> 活动允许您在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流中运行 .NET Framework 3.0 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 活动。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-103">The <xref:System.Activities.Statements.Interop> activity allows you to run a .NET Framework 3.0 [!INCLUDE[wf](../../../../includes/wf-md.md)] activity within a [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="fbcd2-104">此示例演示如何使用 <xref:System.Activities.Statements.Interop> 活动来将字符串作为参数传递到自定义 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 活动。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-104">This sample demonstrates how to use the <xref:System.Activities.Statements.Interop> activity to pass a string as an argument to a custom [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] activity.</span></span>  
+# <a name="using-a-net-framework-30-or-net-framework-35-activity-in-a-net-framework-45-workflow"></a><span data-ttu-id="ae83b-102">在.NET Framework 4.5 工作流中使用.NET Framework 3.0 或.NET Framework 3.5 活动</span><span class="sxs-lookup"><span data-stu-id="ae83b-102">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>
+<span data-ttu-id="ae83b-103"><xref:System.Activities.Statements.Interop> 活动允许您在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流中运行 .NET Framework 3.0 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 活动。</span><span class="sxs-lookup"><span data-stu-id="ae83b-103">The <xref:System.Activities.Statements.Interop> activity allows you to run a .NET Framework 3.0 [!INCLUDE[wf](../../../../includes/wf-md.md)] activity within a [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="ae83b-104">此示例演示如何使用 <xref:System.Activities.Statements.Interop> 活动来将字符串作为参数传递到自定义 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 活动。</span><span class="sxs-lookup"><span data-stu-id="ae83b-104">This sample demonstrates how to use the <xref:System.Activities.Statements.Interop> activity to pass a string as an argument to a custom [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] activity.</span></span>  
   
-## <a name="to-use-this-sample"></a><span data-ttu-id="fbcd2-105">使用此示例</span><span class="sxs-lookup"><span data-stu-id="fbcd2-105">To use this sample</span></span>  
+## <a name="to-use-this-sample"></a><span data-ttu-id="ae83b-105">使用此示例</span><span class="sxs-lookup"><span data-stu-id="ae83b-105">To use this sample</span></span>  
   
-1.  <span data-ttu-id="fbcd2-106">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 SimpleInterop.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-106">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the SimpleInterop.sln solution file.</span></span>  
+1.  <span data-ttu-id="ae83b-106">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 SimpleInterop.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="ae83b-106">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the SimpleInterop.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="fbcd2-107">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-107">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="ae83b-107">要生成解决方案，按 Ctrl+Shift+B。</span><span class="sxs-lookup"><span data-stu-id="ae83b-107">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="fbcd2-108">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-108">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="ae83b-108">若要运行解决方案，请按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="ae83b-108">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="fbcd2-109">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fbcd2-110">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="fbcd2-110">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="ae83b-109">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="ae83b-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ae83b-110">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="ae83b-110">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="fbcd2-111">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="fbcd2-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fbcd2-112">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="fbcd2-112">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="ae83b-111">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="ae83b-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ae83b-112">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="ae83b-112">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Migration\SimpleInterop`  
   
-## <a name="see-also"></a><span data-ttu-id="fbcd2-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fbcd2-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae83b-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ae83b-113">See Also</span></span>
