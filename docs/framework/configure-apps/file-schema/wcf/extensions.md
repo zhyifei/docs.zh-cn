@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 34acc21230650fe5b8da2f81fd176c253c57f69d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltextensionsgt"></a>&lt;扩展&gt;
 此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。 下面是使用此配置元素的示例。  

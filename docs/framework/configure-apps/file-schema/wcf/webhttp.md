@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1c51c8ac43549994752999db08dbb92d43bc7a86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b5388a680816bca6051525f5130308a3c7c2dc5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
 此元素通过配置指定终结点上的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 此行为与结合使用时， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)标准绑定，启用 Web 编程模型的[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服务。  

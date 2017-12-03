@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d49ea0b2dbabd5e747d912b76e493559b2a96ee7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5458149a68273a62b1636dec0da4d9494fb63a99
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 A[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]服务指定公告终结点中的[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。 客户端希望侦听从其他服务公告实际充当[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务; 因此，你需要将公告终结点配置为在该客户端[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed7c75fb7070b43b850a8f5b812abf0a52c3c16f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c520a8a06a593d8937ca840602ba5bcc7b2d44b4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 用户可以使用行为扩展来创建用户定义的行为元素。 这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。 `behaviorExtensions` 节定义了元素，使其可用于配置中。 下面是一个典型的行为扩展示例。  

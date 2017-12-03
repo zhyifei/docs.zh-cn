@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed672ee918ad969feb8be6d20c9206e6b5d12278
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b729141055f67f1d37cadfa4422417fe2d73139e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltbindingsgt"></a>&lt;绑定&gt;
 此节包含标准绑定和自定义绑定的集合。 每一项都是一个可由其唯一 `binding` 进行标识的 `name` 元素。 服务通过用 `name` 与绑定进行链接来使用绑定。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  

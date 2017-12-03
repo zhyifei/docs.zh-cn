@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3d4932f86f686b1c3054f6b53c84c27d492800c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a92a30ca5e2b95e7622bc145d837ac876955a8cb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltheadersgt-element"></a>&lt;headers&gt; 元素
 它包含地址头的集合，要正确书写本地颁发者的地址必须使用这些地址头。 可以使用 `add` 关键字向此集合添加标头。  

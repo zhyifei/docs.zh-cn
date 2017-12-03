@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 219a05b1-f573-45c9-849b-e86bc373b62f
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5a2535eb12d6c962de6a031c4637559b0cdb02d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd0b201e77d88bfea1202fe4bfd576a61ce9bdf3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltservicesgt-of-ltworkflowruntimegt"></a>&lt;workflowRuntime&gt; 的 &lt;services&gt;
 表示要添加到 <xref:System.Workflow.Runtime.WorkflowRuntime> 引擎的服务集合。 这些元素的类型为 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>。  在集合中指定的服务将由工作流运行时引擎初始化，并在调用适当的 <xref:System.Workflow.Runtime.WorkflowRuntime> 构造函数时添加到工作流运行时引擎服务中。 因此，在集合中指定的服务必须遵循关于其构造函数的签名的某些规则。 有关更多信息，请参见<xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>。  

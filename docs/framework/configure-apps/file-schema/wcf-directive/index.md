@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b86f690848795b3e7880de42cc0860ec19b9cb9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指令语法
 指定由 .svc 文件中的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 指令用来指挥编译器的设置。 每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 仅具有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令。  

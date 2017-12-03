@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bebea15e6d1f24c95905355dbced33aa9c5150f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2d7cfcb8217bbf157af4ba2893773b180f0a9f28
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt; 的 &lt;add&gt;
 一个配置元素，指定要搜索的服务的协定名称以及搜索服务时通常使用的条件。 如果指定多个协定名称，则只有与全部协定都匹配的服务终结点才会进行答复。 请注意，在 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 中，一个终结点只能支持一个协定。  

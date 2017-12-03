@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8fb075bdb17f0d562d752bc4125141bb0bb2ab9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 702eda2d4641dc2efdac40f9d730228063e306a8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>如何：添加数据服务引用（WCF 数据服务）
 你可以使用**添加服务引用**对话框在 Visual Studio 中添加对引用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]。 这使您可以更轻松地在使用 Visual Studio 开发的客户端应用程序中访问数据服务。 完成此过程后，会基于从数据服务获取的元数据生成数据类。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。  

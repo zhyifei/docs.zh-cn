@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f63dbad93fb36eab1b44c3f4135be3530ebdf340
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 437cb1320147d5d76a4df9c3a00b4ee27bf650b0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltbackuplistsgt"></a>&lt;backupLists&gt;
 表示一个配置节，用于定义一组用来处理错误的备份服务。 每个子元素是枚举一组你想要用于在的情况下无法访问主终结点的路由服务的终结点的备份列表。 如果列表中的第一个终结点关闭，则路由服务会自动故障转移到列表中的下一个终结点。  这样，可以方便地提高应用程序的可靠性，而不必告诉客户端应用程序应如何处理复杂模式或所有服务的部署位置。  

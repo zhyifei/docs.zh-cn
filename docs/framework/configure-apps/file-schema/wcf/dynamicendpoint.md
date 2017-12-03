@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e24d340364f126d9cf33295d6d36d1b686065a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e780e1975aecc80ea458ec6a86fca61e4ad22448
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltdynamicendpointgt"></a>&lt;dynamicEndpoint&gt;
 此配置元素定义一个标准终结点，应用程序通过利用该终结点包含的信息，能够充当可在运行时动态查找终结点地址的客户端程序。  

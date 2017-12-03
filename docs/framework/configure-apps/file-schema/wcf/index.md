@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 05aeeea7d10c012804fe083890bcc8516aa8c8bc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84e211a0ecd68634a08965a1a4cc1494e0df0713
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-configuration-schema"></a>WCF 配置架构
 使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素，您可以配置 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服务和客户端应用程序。 可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 创建和修改客户端和服务的配置文件。 由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
