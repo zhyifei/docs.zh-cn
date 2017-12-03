@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2c2400347dabc5136b83cc087aa5ed735a8d4ce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7853aabe8efc4536473b3430508cdbf0ad7985fe
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-workflowservicehost"></a>配置 WorkflowServiceHost
 本部分包含一组简短"如何"主题，简要介绍如何配置的不同功能<xref:System.ServiceModel.Activities.WorkflowServiceHost>配置中的类。 这些主题涵盖特定于工作流服务的配置，所有其他配置的实现方式与常规 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务相同。  

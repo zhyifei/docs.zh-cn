@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c00368f466e151466bdf30a89dffe6baa9b57a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>导入 WCF 扩展的自定义元数据
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，元数据导入是从服务的元数据生成服务或其组成部分的抽象表示的过程。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以从服务的 WSDL 文档导入 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例、<xref:System.ServiceModel.Channels.Binding> 实例或 <xref:System.ServiceModel.Description.ContractDescription> 实例。 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中导入服务元数据，请使用 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 抽象类的实现。 派生自 <xref:System.ServiceModel.Description.MetadataImporter> 类的类型实现对导入元数据格式的支持，这些元数据格式利用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 导入逻辑。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a1acf4c3edb51500c2ead2e4ba33c6d3cc9c953f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c677ed869c0e5dd0df1288de48668ba403df5aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>单并发模式中的有序消息处理
 WCF 可使消息的处理顺序无法保证，除非基础通道是会话。  例如，使用 MsmqInputChannel，不是会话通道，WCF 服务将无法按顺序处理信息。 有某些情况下，其中开发人员可能想在订单处理行为，但不是想使用会话。 本主题介绍在单一并发模式中运行服务时，如何配置这种行为。  

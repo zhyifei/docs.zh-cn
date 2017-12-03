@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4cdbc12f57c733d8e8ba3753ce5a2f29ab28ffd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="end-to-end-tracing"></a>端到端跟踪
 端到端 (e2e) 跟踪可使开发人员跟踪 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基础结构中的代码执行，从而调查代码路径失败的原因，或者提供详细的跟踪以进行容量规划和性能分析。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供三种关联机制帮助诊断发生错误的原因：活动、传输和传播。  

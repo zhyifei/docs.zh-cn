@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e2c9dbf92ddaf1c23cb09184f046cb536717015
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 88d9b6b8b4aa1d551e292057e0fecf746b17cecd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>如何：在 .NET Framework 4 环境下运行的 IIS 中承载使用 .NET Framework 3.5 编写的 WCF 服务
 当在运行 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]的计算机上承载使用 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]编写的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 服务时，可能会得到 <xref:System.ServiceModel.ProtocolException> 以及下面的文本。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>如何：将服务标记与元数据交换协定一起使用
 在开发了一些新的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务后，您也许会决定希望能够从脚本或 Visual Basic 6.0 应用程序中调用这些服务。 为此，您可以先生成一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端程序集，然后使用 COM 注册该程序集，再将该程序集安装在 GAC 中，然后从您的 Visual Basic 代码中引用 COM 类型。 在您分发应用程序时，您必须同时分发 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端程序集。 然后，用户必须使用 COM 注册 WCF 客户端程序集，并且将该程序集放置在 GAC 中。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] COM 互操作使您在不依赖 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端程序集的情况下，也能够完成相同的服务调用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 标记使您能够从任何与 COM 兼容的语言（Visual Basic、VBScript、Visual Basic for Applications (VBA) 等）中调用任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，方法是通过指定服务标记用于提取有关该服务的类型信息的元数据交换 (Mex) 终结点 URI。 本主题描述如何使用指定 Mex 终结点的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 标记调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 入门示例。  

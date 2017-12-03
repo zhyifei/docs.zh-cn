@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8f60b2566895acfd7d2b749729fab9c3f5deb20c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>预期采用 Windows Communication Foundation：便于以后集成
 如果您现在使用 ASP.NET，并预期在以后使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则本主题所提供的指导可确保新的 ASP.NET Web 服务可与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序一起正常工作。  

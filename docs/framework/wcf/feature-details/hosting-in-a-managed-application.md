@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 30d531d436937bf5183ac0c28d59425ea71762e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务可以承载于任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序中。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，此服务也是最不可靠的宿主选项，因为托管应用程序未提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中其他宿主选项（如 Internet 信息服务 (IIS) 和 Windows 服务）的高级宿主和管理功能。  

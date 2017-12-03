@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8901530061837556bcb26f7b55539f5a2a791391
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02e0fbf7c8b6ddfe0d722575042b4cbc82ba9bb3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications"></a>与 COM+ 应用程序集成
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。 如果您对 COM+ 中承载的基于组件的应用程序逻辑有大量的投入，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有的逻辑，而不必重新编写逻辑。 本节中的主题描述如何将 COM+ 与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一起使用。  

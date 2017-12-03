@@ -13,14 +13,14 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce846d5637c6d49b4a3b1c6f28ae533e4900f696
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>如何：指定用于验证签名的证书颁发机构证书链 (WCF)
 当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 收到使用 X.509 证书签名的 SOAP 消息时，默认情况下它将验证 X.509 证书是否由受信任的证书颁发机构颁发。 通过搜索证书存储区并确定是否已将该证书颁发机构的证书指定为受信任的证书，可以做到这一点。 为了使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 能够做出此判断，必须将证书颁发机构证书链安装在正确的证书存储区中。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 809b48a27e5923db585d6125df0d2f55c96a4765
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ed3b7b370ed6b1d9a900579ff0e6f1b0a22290c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>针对 Windows 的 WCF 服务和事件跟踪
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的分析跟踪在 Windows 事件跟踪 (ETW) 中发出事件。 分析跟踪是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆栈中的关键点处发出的事件，用于在生产环境中排除 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的故障。  

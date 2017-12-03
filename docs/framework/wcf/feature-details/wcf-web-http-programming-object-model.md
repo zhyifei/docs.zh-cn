@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 caps.latest.revision: "40"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81a905205666f50f65192c015ea018b05482e0ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
 WCF WEB HTTP 编程模型使开发人员无需 SOAP，通过基本 HTTP 请求即可公开 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web 服务。 WCF WEB HTTP 编程模型是基于现有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展性模型生成的。 它定义以下各类：  

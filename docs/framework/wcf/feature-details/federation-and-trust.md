@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: db5ac2f0f85355e0163805bd0bb348bb54913c0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="federation-and-trust"></a>联合与信任
 本主题介绍与联合应用程序、信任边界和配置，以及颁发的令牌在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的用法相关的各个方面。  

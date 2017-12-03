@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation 绑定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将应用程序软件的编写方式与该软件和其他软件的通信方式分离开来。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用绑定来生成终结点的基础网络表示，因此，进行通信的各方必须对大多数绑定详细信息达成一致。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何执行此操作，请参阅[到配置 Windows Communication Foundation 服务和客户端使用的绑定](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  

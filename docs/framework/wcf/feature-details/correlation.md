@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d15609db250e4743ae2a7a1b6c3c355600704f02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="correlation"></a>相关性
 当工作流服务应用程序与其他服务通信时，将这些服务之间的消息调度到适当的工作流实例非常重要。 相关性提供了此调度机制。 本节中的主题概述了相关性以及如何在不同工作流服务方案中使用相关性。  

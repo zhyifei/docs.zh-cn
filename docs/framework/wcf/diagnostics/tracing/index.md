@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tracing"></a>跟踪
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 可为错误监视和分析提供应用程序检测和诊断数据。 您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。 您还可以在组件之间关联错误和处理，以提供端对端体验。  

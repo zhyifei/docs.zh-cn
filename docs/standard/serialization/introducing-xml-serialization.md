@@ -19,14 +19,14 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 13afeecc979cab9719ffa063f78ff91c866262d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e5bd9abd37c7c70d03965698828e0adf64a8b1e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 序列化是将对象转换成易于传输的形式的过程。 例如，可以序列化对象，并使用 HTTP 通过 Internet 在客户端和服务器之间进行传输。 另一方面，反序列化在流中重新构建对象。  

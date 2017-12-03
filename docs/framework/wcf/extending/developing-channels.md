@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dd33f987ab28b42c16aa4798c59675225dcaf520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 231948af1a0bfe7840ffbde2ab162ceea33698ca
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="developing-channels"></a>开发通道
 开发可以与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序层一起使用的协议或传输通道需要多个步骤。 本主题介绍这些步骤并为您指出特定主题以了解更多信息。 若要了解通道模型和本主题中提到的各种类型，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 有关完整的传输通道示例，请参阅[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  

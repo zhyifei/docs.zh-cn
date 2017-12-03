@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a675c42c597928c0ea2cc60be6de0cea6111499
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cccbf343acc74b3e0da0f55e497f19ca15e27892
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>如何：使用 MetadataExchangeClient 检索元数据
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类可以下载使用 WS-MetadataExchange (MEX) 协议的元数据。 检索到的元数据文件作为 <xref:System.ServiceModel.Description.MetadataSet> 对象返回。 返回的 <xref:System.ServiceModel.Description.MetadataSet> 对象包含 <xref:System.ServiceModel.Description.MetadataSection> 对象的集合，其中每个对象包含一个特定的元数据方言和一个标识符。 您可以将返回的元数据写入文件；或者，如果返回的元数据包含 Web 服务描述语言 (WSDL) 文档，则可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 导入元数据。  

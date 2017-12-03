@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8ba436cba284201f14635162ed394abfa9a14db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-resource-service"></a>基本资源服务
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 编程模型实现基于 HTTP 的服务，该模型公开支持检索、添加、删除和替换操作的客户集合。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (program.cs)。  

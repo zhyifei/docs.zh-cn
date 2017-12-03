@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 06127af9c373987c02b2e53ff57e6f50a7f5baa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>如何：向 SOAP 和 Web 客户端公开协定
 默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使终结点只可用于 SOAP 客户端。 在[如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，终结点可用于非 SOAP 客户端。 有时可能需要使相同的协定可以同时作为 Web 终结点和 SOAP 终结点使用。 本主题演示了如何实现此目的的示例。  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 caps.latest.revision: "46"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 521393aabb9d5674b00194926cb67071cc4566bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [指定在服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  

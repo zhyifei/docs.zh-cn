@@ -14,14 +14,14 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b53ec29f973760237133003c2f582e1a33a9f83
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 852d689ff3159818fb25ecfd9b6e5df6df84470c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序模型设计用于解决任何分布式应用程序的大部分通信要求。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 扩展性模型旨在支持自定义方案，方法是通过修改各个级别的系统行为，甚至替换整个应用程序模型。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  

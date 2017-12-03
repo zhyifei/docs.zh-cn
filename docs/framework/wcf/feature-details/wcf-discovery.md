@@ -14,14 +14,14 @@ helpviewer_keywords:
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fda50f14d9003b81f93840571b8b27f874f7730b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery"></a>WCF Discovery
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了相关支持，使您能够通过使用 WS-Discovery 协议以互操作方式在运行时发现服务。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以使用多播消息将自己的可用性公告到网络，也可以公告到发现代理服务器。 客户端应用程序可以搜索网络或发现代理服务器来查找满足一组条件的服务。 本节中的主题分别概述和详细介绍了此功能的编程模型。  

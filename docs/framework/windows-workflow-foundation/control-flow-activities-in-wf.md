@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 825f2487a89805365d3376986af0b0d098c20bca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5312012a74f5e11b02c0191dc00fa23fb25a73a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 其中一些活动（如 `Switch` 和 `If`）实现与编程环境（如 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]）类似的流控制结构，而其他活动（如 `Pick`）建立新编程结构的模型。  

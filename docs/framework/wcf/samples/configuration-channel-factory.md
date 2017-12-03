@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a79a5c4997403f018ba34aea65e4c9fadab29443
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa0f4aec0a673a07c6b6d752d8609caedbcfa4b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuration-channel-factory"></a>配置通道工厂
 此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。 通过 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>，可以集中管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端配置。 这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。  

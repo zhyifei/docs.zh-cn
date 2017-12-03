@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36ecde17986425436e17e6b7a4043fc74a6e583e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 29e4fb590733392ebae10fe1ad18781653c0d202
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-service-host-extensibility"></a>工作流服务主机可扩展性
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供用于承载工作流服务的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类。 当在托管应用程序或 Windows 服务中自承载工作流服务时，将使用该类。 同样，当使用 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载工作流服务时，也将使用该类。 通过 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类提供的扩展点，您可以添加自定义扩展、更改空闲行为以及承载非服务工作流（即不使用消息传递活动的工作流）。  

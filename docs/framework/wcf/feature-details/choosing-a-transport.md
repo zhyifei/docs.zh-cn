@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 612ca77c46288df2c78c25b3af241ee4cce333b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三种主要传输的标准：HTTP、TCP 和命名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括消息队列（也称为 MSMQ）传输，但本文档并不讨论消息队列。  

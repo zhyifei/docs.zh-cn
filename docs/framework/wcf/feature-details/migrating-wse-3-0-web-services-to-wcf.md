@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>将 WSE 3.0 Web 服务迁移到 WCF
 将 WSE 3.0 Web 服务迁移到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的好处包括：提高性能，支持其他传输协议、其他安全方案和 WS-* 规范。 在从 WSE 3.0 迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之后，Web 服务的性能最多可以提高 200% 到 400%。 有关支持的传输的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关支持的方案的列表[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 有关支持的规范的列表[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  

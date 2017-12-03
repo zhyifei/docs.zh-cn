@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01d5d6f35ed9eaa64786d18c2477862594c546be
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e610d11afe0b6b4016478a5c8c1ea9ef747b5a55
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-transactionscope"></a>基本 TransactionScope
 此示例包含四个演示如何嵌套 <xref:System.Activities.Statements.TransactionScope> 实例的方案。 第一个方案演示如何嵌套作者不了解其构造的第三方活动。 第二个和第三个方案演示如何遵循超时限制，最后一个方案演示 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 设置。  

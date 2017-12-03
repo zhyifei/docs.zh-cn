@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c95a2e1e1790633df77e7c4ecd6603e68321e478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89de6bcbb44ca70592697ccf891099446b230ce6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>独立诊断源示例
 此示例演示如何创建一个 RSS/Atom 源，以便与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 整合。 它是一个基本的“Hello World”程序，演示了对象模型的基础知识以及如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务上设置对象模型。  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ebe433d1c18d46e0868f9566a273124e6bd63f1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bf2dbccd81b9c2e7b4ec78863d3de0227baedf92
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支持多个 IIS 站点绑定
 在 Internet Information Services (IIS) 7.0 下承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，可能需要在同一站点上提供使用相同协议的多个基址。 这使得同一服务可以响应多个不同的 URI。 在需要承载侦听 http://www.contoso.com 和 http://contoso.com 的服务时，此功能非常有用。在创建对于内部用户和外部用户使用不同基址的服务时，此功能也非常有用。 例如：http://internal.contoso.com 和 http://www.contoso.com。  

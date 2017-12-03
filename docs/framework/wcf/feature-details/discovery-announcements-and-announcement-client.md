@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36003933a9fb49fe4fe4f0b677ee584066d415ac
-ms.sourcegitcommit: ea1fd4ff4c36169fc722ef263e24884c5cd431a2
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6da9c2e251a6592bb0af039d552d02e7e4fd3fd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>发现公告和公告客户端
 借助 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发现功能，组件可以公告其可用性。 如果对某个服务进行了此配置，则该服务将发送 Hello 和 Bye 公告。 客户端或其他组件可以侦听此类公告消息并据此采取操作。 这就向客户端提供了另一种感知服务的方法。 公告功能具有多种用途，例如，如果服务频繁进入和退出网络，则相比搜索服务，公告是较好的替代方法。 通过此方法可以减少网络流量，并且客户端在收到公告时可立即了解到服务是进入还是退出状态。  

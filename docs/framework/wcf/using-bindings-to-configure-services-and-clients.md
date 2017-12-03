@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 49c5a778bf44fa4e997b3c93ced4b51452a46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
 绑定是指定连接到终结点所需的通信详细信息的对象。 更具体地说，绑定包含用于创建客户端或服务运行时的配置信息，创建方法是定义用于各个终结点或客户端通道的传输、连网格式（消息编码）和协议的具体内容。 若要创建运行的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，服务中的每个终结点都需要一个绑定。 本主题解释什么是绑定、如何定义绑定以及如何为终结点指定特定的绑定。  

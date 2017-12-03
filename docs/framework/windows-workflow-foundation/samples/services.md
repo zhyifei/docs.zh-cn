@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9334739ccf917979e69eea426ea3c901120837c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2cee42de74609cbfc793822471655d88b32d9ce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="services"></a>服务
 本节包含演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 服务功能的示例的链接。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  演示如何使用 <xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 消息传递活动来发送和接收预期的和意外的错误。  
   
  [SendParameters 和 ReceiveParameters 活动的基本用法](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
- 演示如何使用<!--zz <xref:System.ServiceModel.Activities.SendParameters> -->`System.ServiceModel.Activities.SendParameters`和<!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> -->`System.ServiceModel.Activities.ReceiveParameters`活动。  
+ 演示如何使用<!--zz <xref:System.ServiceModel.Activities.SendParameters> -->`System.ServiceModel.Activities.SendParameters`和<!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> -->`System.ServiceModel.Activities.ReceiveParameters`活动。
   
  [只基本 XAML 的服务](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
  演示如何创建只包含 XAML 的服务。  

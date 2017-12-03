@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d743ae68955bba844f84fed71047d9331fd349af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="emitting-user-code-traces"></a>发出用户代码跟踪
 除了在配置中启用跟踪以收集 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 生成的检测数据之外，您还可以采用编程方式以用户代码的形式发出跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  

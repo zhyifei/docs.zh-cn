@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0aac3a161b0482bad1a32f5223d2031402a632cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="firewall-instructions"></a>防火墙说明
 必须在防火墙中启用若干端口或程序，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例才能运行。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的要求和安全环境：  

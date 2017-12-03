@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 82fb1848fc329db2921b626a894b9f91e766cd30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有一个 ASP.NET 兼容模式选项，用户使用此选项可以对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序进行编程和配置，使其像 ASP.NET Web 服务一样，并且还可以模仿这些服务的行为。 以下各部分基于使用这两种技术开发应用程序的要求来比较 ASP.NET Web 服务和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  

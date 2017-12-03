@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 02bad6b5c7460655f4d3a5851e4e74d7de12111f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 377c2425ff1647c43687aa0a5d9584930cb6b1c2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="securing-peer-channel-applications"></a>保护对等通道应用程序
 像 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他绑定一样，`NetPeerTcpBinding` 默认情况下启用了安全，并提供基于传输的安全或基于消息的安全（或二者皆提供）。 本主题讨论这两种类型的安全。 安全类型由绑定规范中的安全模式标记指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
