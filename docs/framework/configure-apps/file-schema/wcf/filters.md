@@ -10,26 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 21f2115f83772312e1b9f42a66c53ba8ee2834f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb8588f9699f44c584fa075e2d1e994c27f0c527
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltfiltersgt"></a><span data-ttu-id="f29f4-102">&lt;筛选器&gt;</span><span class="sxs-lookup"><span data-stu-id="f29f4-102">&lt;filters&gt;</span></span>
+# <a name="ltfiltersgt"></a><span data-ttu-id="9700e-102">&lt;筛选器&gt;</span><span class="sxs-lookup"><span data-stu-id="9700e-102">&lt;filters&gt;</span></span>
 
-<span data-ttu-id="f29f4-103">`filters` 元素包含用于控制所记录的消息类型的 XPath 筛选器集合。</span><span class="sxs-lookup"><span data-stu-id="f29f4-103">The `filters` element holds a collection of XPath filters used to control what kind of message is logged.</span></span>
+<span data-ttu-id="9700e-103">`filters` 元素包含用于控制所记录的消息类型的 XPath 筛选器集合。</span><span class="sxs-lookup"><span data-stu-id="9700e-103">The `filters` element holds a collection of XPath filters used to control what kind of message is logged.</span></span>
 
-<span data-ttu-id="f29f4-104">如果将 `logMessagesAtTransportLevel` 指定为 `true`，筛选器将只应用于传输层。</span><span class="sxs-lookup"><span data-stu-id="f29f4-104">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="f29f4-105">筛选器不影响服务级别和格式不正确的消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="f29f4-105">Service level and malformed message logging are not affected by filters.</span></span>
+<span data-ttu-id="9700e-104">如果将 `logMessagesAtTransportLevel` 指定为 `true`，筛选器将只应用于传输层。</span><span class="sxs-lookup"><span data-stu-id="9700e-104">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="9700e-105">筛选器不影响服务级别和格式不正确的消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="9700e-105">Service level and malformed message logging are not affected by filters.</span></span>
 
-<span data-ttu-id="f29f4-106">若要向集合添加筛选器，请使用 `add` 关键字。</span><span class="sxs-lookup"><span data-stu-id="f29f4-106">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="f29f4-107">如果定义一个或多个筛选器，则仅记录与其中至少一个筛选器相匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="f29f4-107">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="f29f4-108">如果未定义任何筛选器，则所有消息都可通过。</span><span class="sxs-lookup"><span data-stu-id="f29f4-108">If no filter is defined, all messages pass through.</span></span>
+<span data-ttu-id="9700e-106">若要向集合添加筛选器，请使用 `add` 关键字。</span><span class="sxs-lookup"><span data-stu-id="9700e-106">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="9700e-107">如果定义一个或多个筛选器，则仅记录与其中至少一个筛选器相匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="9700e-107">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="9700e-108">如果未定义任何筛选器，则所有消息都可通过。</span><span class="sxs-lookup"><span data-stu-id="9700e-108">If no filter is defined, all messages pass through.</span></span>
 
-<span data-ttu-id="f29f4-109">筛选器支持完整的 XPath 语法，并按照其在配置文件中出现的顺序进行应用。</span><span class="sxs-lookup"><span data-stu-id="f29f4-109">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="f29f4-110">存在语法错误的筛选器会导致配置异常。</span><span class="sxs-lookup"><span data-stu-id="f29f4-110">A syntactically incorrect filter results in a configuration exception.</span></span>
+<span data-ttu-id="9700e-109">筛选器支持完整的 XPath 语法，并按照其在配置文件中出现的顺序进行应用。</span><span class="sxs-lookup"><span data-stu-id="9700e-109">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="9700e-110">存在语法错误的筛选器会导致配置异常。</span><span class="sxs-lookup"><span data-stu-id="9700e-110">A syntactically incorrect filter results in a configuration exception.</span></span>
 
-<span data-ttu-id="f29f4-111">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="f29f4-111">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>
+<span data-ttu-id="9700e-111">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="9700e-111">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>
 
 ```xml
 <messageLogging logEntireMessage="true"
@@ -45,6 +45,6 @@ ms.lasthandoff: 10/18/2017
 </messageLogging>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f29f4-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="f29f4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9700e-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="9700e-112">See also</span></span>
 
- <span data-ttu-id="f29f4-113"><xref:System.ServiceModel.Configuration.DiagnosticSection><xref:System.ServiceModel.Diagnostics> <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> <xref:System.ServiceModel.Configuration.MessageLoggingElement> <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A> <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection> <xref:System.ServiceModel.Configuration.XPathMessageFilterElement> <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [ \<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)</span><span class="sxs-lookup"><span data-stu-id="f29f4-113"><xref:System.ServiceModel.Configuration.DiagnosticSection> <xref:System.ServiceModel.Diagnostics> <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> <xref:System.ServiceModel.Configuration.MessageLoggingElement> <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A> <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection> <xref:System.ServiceModel.Configuration.XPathMessageFilterElement> <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> [Configuring Message Logging](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)</span></span>
+ <span data-ttu-id="9700e-113"><xref:System.ServiceModel.Configuration.DiagnosticSection><xref:System.ServiceModel.Diagnostics> <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> <xref:System.ServiceModel.Configuration.MessageLoggingElement> <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A> <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection> <xref:System.ServiceModel.Configuration.XPathMessageFilterElement> <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [ \<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)</span><span class="sxs-lookup"><span data-stu-id="9700e-113"><xref:System.ServiceModel.Configuration.DiagnosticSection> <xref:System.ServiceModel.Diagnostics> <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> <xref:System.ServiceModel.Configuration.MessageLoggingElement> <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A> <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection> <xref:System.ServiceModel.Configuration.XPathMessageFilterElement> <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> [Configuring Message Logging](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)</span></span>

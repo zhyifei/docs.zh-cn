@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 45470cf9-b84c-4e5e-86e2-2eb7722cbc1a
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6899f09bbed50e22a5b693c0ccb075129a0f26c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84435fa3248fb700ffff641cab460576e4bcf125
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="1405---opentimeout"></a><span data-ttu-id="8763a-102">1405 - OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="8763a-102">1405 - OpenTimeout</span></span>
-## <a name="properties"></a><span data-ttu-id="8763a-103">属性</span><span class="sxs-lookup"><span data-stu-id="8763a-103">Properties</span></span>  
+# <a name="1405---opentimeout"></a><span data-ttu-id="06421-102">1405 - OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="06421-102">1405 - OpenTimeout</span></span>
+## <a name="properties"></a><span data-ttu-id="06421-103">属性</span><span class="sxs-lookup"><span data-stu-id="06421-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8763a-104">ID</span><span class="sxs-lookup"><span data-stu-id="8763a-104">ID</span></span>|<span data-ttu-id="8763a-105">1405</span><span class="sxs-lookup"><span data-stu-id="8763a-105">1405</span></span>|  
-|<span data-ttu-id="8763a-106">关键字</span><span class="sxs-lookup"><span data-stu-id="8763a-106">Keywords</span></span>|<span data-ttu-id="8763a-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8763a-107">ServiceModel</span></span>|  
-|<span data-ttu-id="8763a-108">级别</span><span class="sxs-lookup"><span data-stu-id="8763a-108">Level</span></span>|<span data-ttu-id="8763a-109">错误</span><span class="sxs-lookup"><span data-stu-id="8763a-109">Error</span></span>|  
-|<span data-ttu-id="8763a-110">通道</span><span class="sxs-lookup"><span data-stu-id="8763a-110">Channel</span></span>|<span data-ttu-id="8763a-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="8763a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="06421-104">ID</span><span class="sxs-lookup"><span data-stu-id="06421-104">ID</span></span>|<span data-ttu-id="06421-105">1405</span><span class="sxs-lookup"><span data-stu-id="06421-105">1405</span></span>|  
+|<span data-ttu-id="06421-106">关键字</span><span class="sxs-lookup"><span data-stu-id="06421-106">Keywords</span></span>|<span data-ttu-id="06421-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="06421-107">ServiceModel</span></span>|  
+|<span data-ttu-id="06421-108">级别</span><span class="sxs-lookup"><span data-stu-id="06421-108">Level</span></span>|<span data-ttu-id="06421-109">错误</span><span class="sxs-lookup"><span data-stu-id="06421-109">Error</span></span>|  
+|<span data-ttu-id="06421-110">通道</span><span class="sxs-lookup"><span data-stu-id="06421-110">Channel</span></span>|<span data-ttu-id="06421-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="06421-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8763a-112">描述</span><span class="sxs-lookup"><span data-stu-id="8763a-112">Description</span></span>  
- <span data-ttu-id="8763a-113">出现打开超时时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="8763a-113">This event is emitted on open timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="06421-112">描述</span><span class="sxs-lookup"><span data-stu-id="06421-112">Description</span></span>  
+ <span data-ttu-id="06421-113">出现打开超时时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="06421-113">This event is emitted on open timeout.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8763a-114">消息</span><span class="sxs-lookup"><span data-stu-id="8763a-114">Message</span></span>  
- <span data-ttu-id="8763a-115">1%</span><span class="sxs-lookup"><span data-stu-id="8763a-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="06421-114">消息</span><span class="sxs-lookup"><span data-stu-id="06421-114">Message</span></span>  
+ <span data-ttu-id="06421-115">1%</span><span class="sxs-lookup"><span data-stu-id="06421-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8763a-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="8763a-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="06421-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="06421-116">Details</span></span>

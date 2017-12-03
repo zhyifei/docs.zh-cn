@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d255097-45f0-4a04-945e-41d9bcfe8c54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f0b816e43ec211738a47c6141e7544cb6588f82d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eea4b8352f2e7166890ef28112877b04e5ed8e18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltpersistabletypesgt"></a><span data-ttu-id="f5d5c-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="f5d5c-102">&lt;persistableTypes&gt;</span></span>
-<span data-ttu-id="f5d5c-103">本节包含 `persistableType` 元素的集合。</span><span class="sxs-lookup"><span data-stu-id="f5d5c-103">This section contains a collection of `persistableType` elements.</span></span>  
+# <a name="ltpersistabletypesgt"></a><span data-ttu-id="1bf28-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="1bf28-102">&lt;persistableTypes&gt;</span></span>
+<span data-ttu-id="1bf28-103">本节包含 `persistableType` 元素的集合。</span><span class="sxs-lookup"><span data-stu-id="1bf28-103">This section contains a collection of `persistableType` elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5d5c-104">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f5d5c-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1bf28-104">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1bf28-104">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [<span data-ttu-id="f5d5c-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="f5d5c-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="f5d5c-106">与 COM + 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="f5d5c-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="f5d5c-107">如何： 配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="f5d5c-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="1bf28-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="1bf28-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="1bf28-106">与 COM + 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="1bf28-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="1bf28-107">如何： 配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="1bf28-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

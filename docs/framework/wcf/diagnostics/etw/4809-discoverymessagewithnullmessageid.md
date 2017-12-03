@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d8947028-ae7e-45a2-a438-43162894519e
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: abf8195f84a53a59c8c5405e299c710b64326e3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6a0c90ce2e220f0a11e8f60b369766b376e53f1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="4809---discoverymessagewithnullmessageid"></a><span data-ttu-id="9c1ad-102">4809 - DiscoveryMessageWithNullMessageId</span><span class="sxs-lookup"><span data-stu-id="9c1ad-102">4809 - DiscoveryMessageWithNullMessageId</span></span>
-## <a name="properties"></a><span data-ttu-id="9c1ad-103">属性</span><span class="sxs-lookup"><span data-stu-id="9c1ad-103">Properties</span></span>  
+# <a name="4809---discoverymessagewithnullmessageid"></a><span data-ttu-id="b7958-102">4809 - DiscoveryMessageWithNullMessageId</span><span class="sxs-lookup"><span data-stu-id="b7958-102">4809 - DiscoveryMessageWithNullMessageId</span></span>
+## <a name="properties"></a><span data-ttu-id="b7958-103">属性</span><span class="sxs-lookup"><span data-stu-id="b7958-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9c1ad-104">ID</span><span class="sxs-lookup"><span data-stu-id="9c1ad-104">ID</span></span>|<span data-ttu-id="9c1ad-105">4809</span><span class="sxs-lookup"><span data-stu-id="9c1ad-105">4809</span></span>|  
-|<span data-ttu-id="9c1ad-106">关键字</span><span class="sxs-lookup"><span data-stu-id="9c1ad-106">Keywords</span></span>|<span data-ttu-id="9c1ad-107">发现</span><span class="sxs-lookup"><span data-stu-id="9c1ad-107">Discovery</span></span>|  
-|<span data-ttu-id="9c1ad-108">级别</span><span class="sxs-lookup"><span data-stu-id="9c1ad-108">Level</span></span>|<span data-ttu-id="9c1ad-109">警告</span><span class="sxs-lookup"><span data-stu-id="9c1ad-109">Warning</span></span>|  
-|<span data-ttu-id="9c1ad-110">通道</span><span class="sxs-lookup"><span data-stu-id="9c1ad-110">Channel</span></span>|<span data-ttu-id="9c1ad-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="9c1ad-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b7958-104">ID</span><span class="sxs-lookup"><span data-stu-id="b7958-104">ID</span></span>|<span data-ttu-id="b7958-105">4809</span><span class="sxs-lookup"><span data-stu-id="b7958-105">4809</span></span>|  
+|<span data-ttu-id="b7958-106">关键字</span><span class="sxs-lookup"><span data-stu-id="b7958-106">Keywords</span></span>|<span data-ttu-id="b7958-107">发现</span><span class="sxs-lookup"><span data-stu-id="b7958-107">Discovery</span></span>|  
+|<span data-ttu-id="b7958-108">级别</span><span class="sxs-lookup"><span data-stu-id="b7958-108">Level</span></span>|<span data-ttu-id="b7958-109">警告</span><span class="sxs-lookup"><span data-stu-id="b7958-109">Warning</span></span>|  
+|<span data-ttu-id="b7958-110">通道</span><span class="sxs-lookup"><span data-stu-id="b7958-110">Channel</span></span>|<span data-ttu-id="b7958-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="b7958-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9c1ad-112">描述</span><span class="sxs-lookup"><span data-stu-id="9c1ad-112">Description</span></span>  
- <span data-ttu-id="9c1ad-113">在发现消息由于消息标头不包含所需的 MessageId 属性而被丢弃时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="9c1ad-113">This event is emitted when the discovery message was dropped because the message header did not contain the required MessageId property.</span></span>  
+## <a name="description"></a><span data-ttu-id="b7958-112">描述</span><span class="sxs-lookup"><span data-stu-id="b7958-112">Description</span></span>  
+ <span data-ttu-id="b7958-113">在发现消息由于消息标头不包含所需的 MessageId 属性而被丢弃时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="b7958-113">This event is emitted when the discovery message was dropped because the message header did not contain the required MessageId property.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9c1ad-114">消息</span><span class="sxs-lookup"><span data-stu-id="9c1ad-114">Message</span></span>  
- <span data-ttu-id="9c1ad-115">%1 消息由于消息标头不包含所需的 MessageId 属性而被丢弃。</span><span class="sxs-lookup"><span data-stu-id="9c1ad-115">A %1 message was dropped because the message header did not contain the required MessageId property.</span></span>  
+## <a name="message"></a><span data-ttu-id="b7958-114">消息</span><span class="sxs-lookup"><span data-stu-id="b7958-114">Message</span></span>  
+ <span data-ttu-id="b7958-115">%1 消息由于消息标头不包含所需的 MessageId 属性而被丢弃。</span><span class="sxs-lookup"><span data-stu-id="b7958-115">A %1 message was dropped because the message header did not contain the required MessageId property.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9c1ad-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="9c1ad-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b7958-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="b7958-116">Details</span></span>

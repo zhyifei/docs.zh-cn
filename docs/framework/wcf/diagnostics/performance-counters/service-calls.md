@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e6b161a-3a12-4106-a092-3eeb219fc9bb
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e3a8d3bb74234563c0cfa68de74d3409b5aac9b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6ed6f7975ba16aa90dd892f06b9b0c73b8ead37
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="service-calls"></a><span data-ttu-id="4ae1f-102">服务：Calls（调用次数）</span><span class="sxs-lookup"><span data-stu-id="4ae1f-102">Service: Calls</span></span>
-<span data-ttu-id="4ae1f-103">计数器名称：Calls（调用次数）。</span><span class="sxs-lookup"><span data-stu-id="4ae1f-103">Counter Name: Calls.</span></span>  
+# <a name="service-calls"></a><span data-ttu-id="5e76a-102">服务：Calls（调用次数）</span><span class="sxs-lookup"><span data-stu-id="5e76a-102">Service: Calls</span></span>
+<span data-ttu-id="5e76a-103">计数器名称：Calls（调用次数）。</span><span class="sxs-lookup"><span data-stu-id="5e76a-103">Counter Name: Calls.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4ae1f-104">描述</span><span class="sxs-lookup"><span data-stu-id="4ae1f-104">Description</span></span>  
- <span data-ttu-id="4ae1f-105">对此服务的调用次数。</span><span class="sxs-lookup"><span data-stu-id="4ae1f-105">Number of calls to this service.</span></span>
+## <a name="description"></a><span data-ttu-id="5e76a-104">描述</span><span class="sxs-lookup"><span data-stu-id="5e76a-104">Description</span></span>  
+ <span data-ttu-id="5e76a-105">对此服务的调用次数。</span><span class="sxs-lookup"><span data-stu-id="5e76a-105">Number of calls to this service.</span></span>

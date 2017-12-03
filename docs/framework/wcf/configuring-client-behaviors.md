@@ -13,22 +13,22 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f16f32128c7223fa600802ae593d36286847dc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c63a91683817311b8d644eb4285101e32eaea7f1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="configuring-client-behaviors"></a><span data-ttu-id="489cf-102">配置客户端行为</span><span class="sxs-lookup"><span data-stu-id="489cf-102">Configuring Client Behaviors</span></span>
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="489cf-103"> 通过两种方式配置行为：一是通过引用在客户端应用程序配置文件的 `<behavior>` 节中定义的行为配置，二是在调用应用程序中采用编程方式进行配置。</span><span class="sxs-lookup"><span data-stu-id="489cf-103"> configures behaviors in two ways: either by referring to behavior configurations -- which are defined in the `<behavior>` section of a client application configuration file – or programmatically in the calling application.</span></span> <span data-ttu-id="489cf-104">本主题将介绍这两种方式。</span><span class="sxs-lookup"><span data-stu-id="489cf-104">This topic describes both approaches.</span></span>  
+# <a name="configuring-client-behaviors"></a><span data-ttu-id="b7a08-102">配置客户端行为</span><span class="sxs-lookup"><span data-stu-id="b7a08-102">Configuring Client Behaviors</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="b7a08-103"> 通过两种方式配置行为：一是通过引用在客户端应用程序配置文件的 `<behavior>` 节中定义的行为配置，二是在调用应用程序中采用编程方式进行配置。</span><span class="sxs-lookup"><span data-stu-id="b7a08-103"> configures behaviors in two ways: either by referring to behavior configurations -- which are defined in the `<behavior>` section of a client application configuration file – or programmatically in the calling application.</span></span> <span data-ttu-id="b7a08-104">本主题将介绍这两种方式。</span><span class="sxs-lookup"><span data-stu-id="b7a08-104">This topic describes both approaches.</span></span>  
   
- <span data-ttu-id="489cf-105">在使用配置文件时，行为配置为配置设置的命名集合。</span><span class="sxs-lookup"><span data-stu-id="489cf-105">When using a configuration file, behavior configuration is a named collection of configuration settings.</span></span> <span data-ttu-id="489cf-106">每个行为配置的名称都必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="489cf-106">The name of each behavior configuration must be unique.</span></span> <span data-ttu-id="489cf-107">在终结点配置的 `behaviorConfiguration` 属性中，此字符串用来将终结点链接到该行为。</span><span class="sxs-lookup"><span data-stu-id="489cf-107">This string is used in the `behaviorConfiguration` attribute of an endpoint configuration to link the endpoint to the behavior.</span></span>  
+ <span data-ttu-id="b7a08-105">在使用配置文件时，行为配置为配置设置的命名集合。</span><span class="sxs-lookup"><span data-stu-id="b7a08-105">When using a configuration file, behavior configuration is a named collection of configuration settings.</span></span> <span data-ttu-id="b7a08-106">每个行为配置的名称都必须是唯一的。</span><span class="sxs-lookup"><span data-stu-id="b7a08-106">The name of each behavior configuration must be unique.</span></span> <span data-ttu-id="b7a08-107">在终结点配置的 `behaviorConfiguration` 属性中，此字符串用来将终结点链接到该行为。</span><span class="sxs-lookup"><span data-stu-id="b7a08-107">This string is used in the `behaviorConfiguration` attribute of an endpoint configuration to link the endpoint to the behavior.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="489cf-108">示例</span><span class="sxs-lookup"><span data-stu-id="489cf-108">Example</span></span>  
- <span data-ttu-id="489cf-109">下面的配置代码定义了一个称为 `myBehavior` 的行为。</span><span class="sxs-lookup"><span data-stu-id="489cf-109">The following configuration code defines a behavior called `myBehavior`.</span></span> <span data-ttu-id="489cf-110">客户端终结点在 `behaviorConfiguration` 属性中引用该行为。</span><span class="sxs-lookup"><span data-stu-id="489cf-110">The client endpoint references this behavior in the `behaviorConfiguration` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7a08-108">示例</span><span class="sxs-lookup"><span data-stu-id="b7a08-108">Example</span></span>  
+ <span data-ttu-id="b7a08-109">下面的配置代码定义了一个称为 `myBehavior` 的行为。</span><span class="sxs-lookup"><span data-stu-id="b7a08-109">The following configuration code defines a behavior called `myBehavior`.</span></span> <span data-ttu-id="b7a08-110">客户端终结点在 `behaviorConfiguration` 属性中引用该行为。</span><span class="sxs-lookup"><span data-stu-id="b7a08-110">The client endpoint references this behavior in the `behaviorConfiguration` attribute.</span></span>  
   
 ```xml  
 <configuration>  
@@ -52,14 +52,14 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="using-behaviors-programmatically"></a><span data-ttu-id="489cf-111">以编程方式使用行为</span><span class="sxs-lookup"><span data-stu-id="489cf-111">Using Behaviors Programmatically</span></span>  
- <span data-ttu-id="489cf-112">也可以通过编程方式配置或插入行为，方法是在打开客户端之前查找 `Behaviors` 客户端对象或客户端通道工厂对象上的相应 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 属性。</span><span class="sxs-lookup"><span data-stu-id="489cf-112">You can also configure or insert behaviors programmatically by locating the appropriate `Behaviors` property on the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client object or on the client channel factory object prior to opening the client.</span></span>  
+## <a name="using-behaviors-programmatically"></a><span data-ttu-id="b7a08-111">以编程方式使用行为</span><span class="sxs-lookup"><span data-stu-id="b7a08-111">Using Behaviors Programmatically</span></span>  
+ <span data-ttu-id="b7a08-112">也可以通过编程方式配置或插入行为，方法是在打开客户端之前查找 `Behaviors` 客户端对象或客户端通道工厂对象上的相应 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 属性。</span><span class="sxs-lookup"><span data-stu-id="b7a08-112">You can also configure or insert behaviors programmatically by locating the appropriate `Behaviors` property on the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client object or on the client channel factory object prior to opening the client.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="489cf-113">示例</span><span class="sxs-lookup"><span data-stu-id="489cf-113">Example</span></span>  
- <span data-ttu-id="489cf-114">下面的代码示例演示如何在创建通道对象之前访问从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 属性返回的 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性，从而以编程方式插入行为。</span><span class="sxs-lookup"><span data-stu-id="489cf-114">The following code example shows how to programmatically insert a behavior by accessing the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> property on the <xref:System.ServiceModel.Description.ServiceEndpoint> returned from the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property prior to the creation of the channel object.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7a08-113">示例</span><span class="sxs-lookup"><span data-stu-id="b7a08-113">Example</span></span>  
+ <span data-ttu-id="b7a08-114">下面的代码示例演示如何在创建通道对象之前访问从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 属性返回的 <xref:System.ServiceModel.Description.ServiceEndpoint> 上的 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性，从而以编程方式插入行为。</span><span class="sxs-lookup"><span data-stu-id="b7a08-114">The following code example shows how to programmatically insert a behavior by accessing the <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> property on the <xref:System.ServiceModel.Description.ServiceEndpoint> returned from the <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> property prior to the creation of the channel object.</span></span>  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a><span data-ttu-id="489cf-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="489cf-115">See Also</span></span>  
- [<span data-ttu-id="489cf-116">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="489cf-116">\<behaviors></span></span>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="b7a08-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b7a08-115">See Also</span></span>  
+ [<span data-ttu-id="b7a08-116">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="b7a08-116">\<behaviors></span></span>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

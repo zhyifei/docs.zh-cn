@@ -10,49 +10,49 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f2e3dbd0781485336a441c8eacb536ad008ff7a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6994069ca57a078e3d8236739ecf091d9e179455
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltdnsgt"></a><span data-ttu-id="e69c7-102">&lt;dns&gt;</span><span class="sxs-lookup"><span data-stu-id="e69c7-102">&lt;dns&gt;</span></span>
-<span data-ttu-id="e69c7-103">指定服务器的所需标识。</span><span class="sxs-lookup"><span data-stu-id="e69c7-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="e69c7-104">如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。</span><span class="sxs-lookup"><span data-stu-id="e69c7-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="e69c7-105">如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。</span><span class="sxs-lookup"><span data-stu-id="e69c7-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  
+# <a name="ltdnsgt"></a><span data-ttu-id="c7dbe-102">&lt;dns&gt;</span><span class="sxs-lookup"><span data-stu-id="c7dbe-102">&lt;dns&gt;</span></span>
+<span data-ttu-id="c7dbe-103">指定服务器的所需标识。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="c7dbe-104">如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="c7dbe-105">如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  
   
- <span data-ttu-id="e69c7-106">有关设置此元素的值的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="e69c7-106">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
+ <span data-ttu-id="c7dbe-106">有关设置此元素的值的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-106">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
- <span data-ttu-id="e69c7-107">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="e69c7-107">\<identity></span></span>  
-<span data-ttu-id="e69c7-108">\<dns ></span><span class="sxs-lookup"><span data-stu-id="e69c7-108">\<dns></span></span>  
+ <span data-ttu-id="c7dbe-107">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="c7dbe-107">\<identity></span></span>  
+<span data-ttu-id="c7dbe-108">\<dns ></span><span class="sxs-lookup"><span data-stu-id="c7dbe-108">\<dns></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e69c7-109">语法</span><span class="sxs-lookup"><span data-stu-id="e69c7-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7dbe-109">语法</span><span class="sxs-lookup"><span data-stu-id="c7dbe-109">Syntax</span></span>  
   
 ```xml  
 <dns value = "String" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e69c7-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e69c7-110">Attributes and Elements</span></span>  
- <span data-ttu-id="e69c7-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e69c7-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c7dbe-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c7dbe-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c7dbe-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e69c7-112">特性</span><span class="sxs-lookup"><span data-stu-id="e69c7-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c7dbe-112">特性</span><span class="sxs-lookup"><span data-stu-id="c7dbe-112">Attributes</span></span>  
   
-|<span data-ttu-id="e69c7-113">特性</span><span class="sxs-lookup"><span data-stu-id="e69c7-113">Attribute</span></span>|<span data-ttu-id="e69c7-114">描述</span><span class="sxs-lookup"><span data-stu-id="e69c7-114">Description</span></span>|  
+|<span data-ttu-id="c7dbe-113">特性</span><span class="sxs-lookup"><span data-stu-id="c7dbe-113">Attribute</span></span>|<span data-ttu-id="c7dbe-114">描述</span><span class="sxs-lookup"><span data-stu-id="c7dbe-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="e69c7-115">值</span><span class="sxs-lookup"><span data-stu-id="e69c7-115">value</span></span>|<span data-ttu-id="e69c7-116">证书的 DNS。</span><span class="sxs-lookup"><span data-stu-id="e69c7-116">The DNS of the certificate.</span></span> <span data-ttu-id="e69c7-117">DNS 是一个用于在基于 IP 网络上定位计算机的行业标准协议。</span><span class="sxs-lookup"><span data-stu-id="e69c7-117">DNS is an industry-standard protocol used to locate computers on an IP-based network.</span></span> <span data-ttu-id="e69c7-118">用户可以记住显示名称，如[http://go.microsoft.com/fwlink/?prd=10929](http://go.microsoft.com/fwlink/?prd=10929)或[http://go.microsoft.com/fwlink/?LinkID=96165](http://go.microsoft.com/fwlink/?LinkID=96165)、 比基于数字的地址，如 207.46.131.137 更容易。</span><span class="sxs-lookup"><span data-stu-id="e69c7-118">Users can remember display names, such as [http://go.microsoft.com/fwlink/?prd=10929](http://go.microsoft.com/fwlink/?prd=10929) or [http://go.microsoft.com/fwlink/?LinkID=96165](http://go.microsoft.com/fwlink/?LinkID=96165), easier than number-based addresses, such as 207.46.131.137.</span></span>|  
+|<span data-ttu-id="c7dbe-115">值</span><span class="sxs-lookup"><span data-stu-id="c7dbe-115">value</span></span>|<span data-ttu-id="c7dbe-116">证书的 DNS。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-116">The DNS of the certificate.</span></span> <span data-ttu-id="c7dbe-117">DNS 是一个用于在基于 IP 网络上定位计算机的行业标准协议。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-117">DNS is an industry-standard protocol used to locate computers on an IP-based network.</span></span> <span data-ttu-id="c7dbe-118">用户可以记住显示名称，如[http://go.microsoft.com/fwlink/?prd=10929](http://go.microsoft.com/fwlink/?prd=10929)或[http://go.microsoft.com/fwlink/?LinkID=96165](http://go.microsoft.com/fwlink/?LinkID=96165)、 比基于数字的地址，如 207.46.131.137 更容易。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-118">Users can remember display names, such as [http://go.microsoft.com/fwlink/?prd=10929](http://go.microsoft.com/fwlink/?prd=10929) or [http://go.microsoft.com/fwlink/?LinkID=96165](http://go.microsoft.com/fwlink/?LinkID=96165), easier than number-based addresses, such as 207.46.131.137.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="e69c7-119">子元素</span><span class="sxs-lookup"><span data-stu-id="e69c7-119">Child Elements</span></span>  
- <span data-ttu-id="e69c7-120">无。</span><span class="sxs-lookup"><span data-stu-id="e69c7-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c7dbe-119">子元素</span><span class="sxs-lookup"><span data-stu-id="c7dbe-119">Child Elements</span></span>  
+ <span data-ttu-id="c7dbe-120">无。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="e69c7-121">父元素</span><span class="sxs-lookup"><span data-stu-id="e69c7-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c7dbe-121">父元素</span><span class="sxs-lookup"><span data-stu-id="c7dbe-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="e69c7-122">元素</span><span class="sxs-lookup"><span data-stu-id="e69c7-122">Element</span></span>|<span data-ttu-id="e69c7-123">描述</span><span class="sxs-lookup"><span data-stu-id="e69c7-123">Description</span></span>|  
+|<span data-ttu-id="c7dbe-122">元素</span><span class="sxs-lookup"><span data-stu-id="c7dbe-122">Element</span></span>|<span data-ttu-id="c7dbe-123">描述</span><span class="sxs-lookup"><span data-stu-id="c7dbe-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e69c7-124">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="e69c7-124">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="e69c7-125">指定要由客户端进行身份验证的服务的标识。</span><span class="sxs-lookup"><span data-stu-id="e69c7-125">Specifies the identity of the service to be authenticated by the client.</span></span>|  
+|[<span data-ttu-id="c7dbe-124">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="c7dbe-124">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="c7dbe-125">指定要由客户端进行身份验证的服务的标识。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-125">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="e69c7-126">示例</span><span class="sxs-lookup"><span data-stu-id="e69c7-126">Example</span></span>  
- <span data-ttu-id="e69c7-127">下面的配置代码指定用于对服务器进行身份验证的 X.509 证书的 DNS。</span><span class="sxs-lookup"><span data-stu-id="e69c7-127">The following configuration code specifies the DNS of an X.509 certificate that is used to authenticate a server.</span></span>  
+## <a name="example"></a><span data-ttu-id="c7dbe-126">示例</span><span class="sxs-lookup"><span data-stu-id="c7dbe-126">Example</span></span>  
+ <span data-ttu-id="c7dbe-127">下面的配置代码指定用于对服务器进行身份验证的 X.509 证书的 DNS。</span><span class="sxs-lookup"><span data-stu-id="c7dbe-127">The following configuration code specifies the DNS of an X.509 certificate that is used to authenticate a server.</span></span>  
   
 ```xml  
 <identity>  
@@ -60,10 +60,10 @@ ms.lasthandoff: 11/21/2017
 </identity>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e69c7-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e69c7-128">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c7dbe-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c7dbe-128">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.DnsEndpointIdentity>  
- [<span data-ttu-id="e69c7-129">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="e69c7-129">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="e69c7-130">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="e69c7-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [<span data-ttu-id="c7dbe-129">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="c7dbe-129">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="c7dbe-130">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="c7dbe-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

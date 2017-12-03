@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 11d819d5d6302da309dd3e4ce674110c8419978f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4e1314347dfb83fb0631ebaa98b4d35bb0ac402f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltbinarymessageencodinggt"></a><span data-ttu-id="2a9d0-102">&lt;binaryMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="2a9d0-102">&lt;binaryMessageEncoding&gt;</span></span>
-<span data-ttu-id="2a9d0-103">定义一个在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码的二进制消息编码器。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-103">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
+# <a name="ltbinarymessageencodinggt"></a><span data-ttu-id="3d58c-102">&lt;binaryMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="3d58c-102">&lt;binaryMessageEncoding&gt;</span></span>
+<span data-ttu-id="3d58c-103">定义一个在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码的二进制消息编码器。</span><span class="sxs-lookup"><span data-stu-id="3d58c-103">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
   
- <span data-ttu-id="2a9d0-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="2a9d0-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-105">\<bindings></span></span>  
-<span data-ttu-id="2a9d0-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-106">\<customBinding></span></span>  
-<span data-ttu-id="2a9d0-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-107">\<binding></span></span>  
-<span data-ttu-id="2a9d0-108">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-108">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="3d58c-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="3d58c-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="3d58c-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3d58c-105">\<bindings></span></span>  
+<span data-ttu-id="3d58c-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="3d58c-106">\<customBinding></span></span>  
+<span data-ttu-id="3d58c-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3d58c-107">\<binding></span></span>  
+<span data-ttu-id="3d58c-108">\<binaryMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="3d58c-108">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2a9d0-109">语法</span><span class="sxs-lookup"><span data-stu-id="2a9d0-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d58c-109">语法</span><span class="sxs-lookup"><span data-stu-id="3d58c-109">Syntax</span></span>  
   
 ```xml  
 <binaryMessageEncoding   
@@ -37,36 +37,36 @@ ms.lasthandoff: 11/21/2017
    maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2a9d0-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="2a9d0-110">Attributes and Elements</span></span>  
- <span data-ttu-id="2a9d0-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3d58c-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="3d58c-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="3d58c-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="3d58c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2a9d0-112">特性</span><span class="sxs-lookup"><span data-stu-id="2a9d0-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3d58c-112">特性</span><span class="sxs-lookup"><span data-stu-id="3d58c-112">Attributes</span></span>  
   
-|<span data-ttu-id="2a9d0-113">特性</span><span class="sxs-lookup"><span data-stu-id="2a9d0-113">Attribute</span></span>|<span data-ttu-id="2a9d0-114">描述</span><span class="sxs-lookup"><span data-stu-id="2a9d0-114">Description</span></span>|  
+|<span data-ttu-id="3d58c-113">特性</span><span class="sxs-lookup"><span data-stu-id="3d58c-113">Attribute</span></span>|<span data-ttu-id="3d58c-114">描述</span><span class="sxs-lookup"><span data-stu-id="3d58c-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2a9d0-115">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="2a9d0-115">maxReadPoolSize</span></span>|<span data-ttu-id="2a9d0-116">一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="2a9d0-117">池越大，系统允许的活动峰值就越大，但工作集也会随之增大。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-117">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="2a9d0-118">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-118">The default is 64.</span></span>|  
-|<span data-ttu-id="2a9d0-119">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="2a9d0-119">maxSessionSize</span></span>|<span data-ttu-id="2a9d0-120">一个正整数，设置用于编码的缓冲区的大小（字节）。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-120">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="2a9d0-121">较大的缓冲区能够提高编码速度，代价是增加了工作集的大小。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-121">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="2a9d0-122">默认值为 2048。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-122">The default is 2048.</span></span>|  
-|<span data-ttu-id="2a9d0-123">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="2a9d0-123">maxWritePoolSize</span></span>|<span data-ttu-id="2a9d0-124">一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-124">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="2a9d0-125">池越大，系统允许的活动峰值就越大，但工作集也会随之增大。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-125">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="2a9d0-126">默认值为 16。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-126">The default is 16.</span></span>|  
-|<span data-ttu-id="2a9d0-127">messageVersion</span><span class="sxs-lookup"><span data-stu-id="2a9d0-127">messageVersion</span></span>|<span data-ttu-id="2a9d0-128">指定使用的或预期的 SOAP 消息和 WS-Addressing 版本。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-128">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
+|<span data-ttu-id="3d58c-115">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="3d58c-115">maxReadPoolSize</span></span>|<span data-ttu-id="3d58c-116">一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。</span><span class="sxs-lookup"><span data-stu-id="3d58c-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="3d58c-117">池越大，系统允许的活动峰值就越大，但工作集也会随之增大。</span><span class="sxs-lookup"><span data-stu-id="3d58c-117">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="3d58c-118">默认值为 64。</span><span class="sxs-lookup"><span data-stu-id="3d58c-118">The default is 64.</span></span>|  
+|<span data-ttu-id="3d58c-119">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="3d58c-119">maxSessionSize</span></span>|<span data-ttu-id="3d58c-120">一个正整数，设置用于编码的缓冲区的大小（字节）。</span><span class="sxs-lookup"><span data-stu-id="3d58c-120">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="3d58c-121">较大的缓冲区能够提高编码速度，代价是增加了工作集的大小。</span><span class="sxs-lookup"><span data-stu-id="3d58c-121">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="3d58c-122">默认值为 2048。</span><span class="sxs-lookup"><span data-stu-id="3d58c-122">The default is 2048.</span></span>|  
+|<span data-ttu-id="3d58c-123">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="3d58c-123">maxWritePoolSize</span></span>|<span data-ttu-id="3d58c-124">一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。</span><span class="sxs-lookup"><span data-stu-id="3d58c-124">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="3d58c-125">池越大，系统允许的活动峰值就越大，但工作集也会随之增大。</span><span class="sxs-lookup"><span data-stu-id="3d58c-125">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="3d58c-126">默认值为 16。</span><span class="sxs-lookup"><span data-stu-id="3d58c-126">The default is 16.</span></span>|  
+|<span data-ttu-id="3d58c-127">messageVersion</span><span class="sxs-lookup"><span data-stu-id="3d58c-127">messageVersion</span></span>|<span data-ttu-id="3d58c-128">指定使用的或预期的 SOAP 消息和 WS-Addressing 版本。</span><span class="sxs-lookup"><span data-stu-id="3d58c-128">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2a9d0-129">子元素</span><span class="sxs-lookup"><span data-stu-id="2a9d0-129">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3d58c-129">子元素</span><span class="sxs-lookup"><span data-stu-id="3d58c-129">Child Elements</span></span>  
   
-|<span data-ttu-id="2a9d0-130">元素</span><span class="sxs-lookup"><span data-stu-id="2a9d0-130">Element</span></span>|<span data-ttu-id="2a9d0-131">描述</span><span class="sxs-lookup"><span data-stu-id="2a9d0-131">Description</span></span>|  
+|<span data-ttu-id="3d58c-130">元素</span><span class="sxs-lookup"><span data-stu-id="3d58c-130">Element</span></span>|<span data-ttu-id="3d58c-131">描述</span><span class="sxs-lookup"><span data-stu-id="3d58c-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2a9d0-132">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-132">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="2a9d0-133">定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-133">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="2a9d0-134">此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-134">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="3d58c-132">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="3d58c-132">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="3d58c-133">定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。</span><span class="sxs-lookup"><span data-stu-id="3d58c-133">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="3d58c-134">此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。</span><span class="sxs-lookup"><span data-stu-id="3d58c-134">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2a9d0-135">父元素</span><span class="sxs-lookup"><span data-stu-id="2a9d0-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3d58c-135">父元素</span><span class="sxs-lookup"><span data-stu-id="3d58c-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="2a9d0-136">元素</span><span class="sxs-lookup"><span data-stu-id="2a9d0-136">Element</span></span>|<span data-ttu-id="2a9d0-137">描述</span><span class="sxs-lookup"><span data-stu-id="2a9d0-137">Description</span></span>|  
+|<span data-ttu-id="3d58c-136">元素</span><span class="sxs-lookup"><span data-stu-id="3d58c-136">Element</span></span>|<span data-ttu-id="3d58c-137">描述</span><span class="sxs-lookup"><span data-stu-id="3d58c-137">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2a9d0-138">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-138">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="2a9d0-139">定义自定义绑定的所有绑定功能。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-139">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="3d58c-138">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="3d58c-138">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="3d58c-139">定义自定义绑定的所有绑定功能。</span><span class="sxs-lookup"><span data-stu-id="3d58c-139">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2a9d0-140">备注</span><span class="sxs-lookup"><span data-stu-id="2a9d0-140">Remarks</span></span>  
- <span data-ttu-id="2a9d0-141">编码是将消息转换为一个字节序列的过程。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-141">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="2a9d0-142">解码是反向过程。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-142">Decoding is the reverse process.</span></span> <span data-ttu-id="2a9d0-143">Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制 (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-143">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d58c-140">备注</span><span class="sxs-lookup"><span data-stu-id="3d58c-140">Remarks</span></span>  
+ <span data-ttu-id="3d58c-141">编码是将消息转换为一个字节序列的过程。</span><span class="sxs-lookup"><span data-stu-id="3d58c-141">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="3d58c-142">解码是反向过程。</span><span class="sxs-lookup"><span data-stu-id="3d58c-142">Decoding is the reverse process.</span></span> <span data-ttu-id="3d58c-143">Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制 (MTOM)。</span><span class="sxs-lookup"><span data-stu-id="3d58c-143">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- <span data-ttu-id="2a9d0-144">`binaryMessageEncoding` 元素为 XML 指定 .NET 二进制格式，且包含可用于指定要使用的字符编码以及 SOAP 和 WS-Addressing 版本的选项。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-144">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="2a9d0-145">二进制消息编码器在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-145">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="2a9d0-146">虽然这种编码有助于非常快速地传输消息，但是丢失了基于 WS-* 标准的互操作性。</span><span class="sxs-lookup"><span data-stu-id="2a9d0-146">While this encoding results in very fast transmission of messages, interoperability based on the WS-* standards is lost.</span></span>  
+ <span data-ttu-id="3d58c-144">`binaryMessageEncoding` 元素为 XML 指定 .NET 二进制格式，且包含可用于指定要使用的字符编码以及 SOAP 和 WS-Addressing 版本的选项。</span><span class="sxs-lookup"><span data-stu-id="3d58c-144">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="3d58c-145">二进制消息编码器在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码。</span><span class="sxs-lookup"><span data-stu-id="3d58c-145">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="3d58c-146">虽然这种编码有助于非常快速地传输消息，但是丢失了基于 WS-* 标准的互操作性。</span><span class="sxs-lookup"><span data-stu-id="3d58c-146">While this encoding results in very fast transmission of messages, interoperability based on the WS-* standards is lost.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2a9d0-147">示例</span><span class="sxs-lookup"><span data-stu-id="2a9d0-147">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3d58c-147">示例</span><span class="sxs-lookup"><span data-stu-id="3d58c-147">Example</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="211"  
@@ -74,14 +74,14 @@ ms.lasthandoff: 11/21/2017
    maxSessionSize="3141" />  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2a9d0-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2a9d0-148">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3d58c-148">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d58c-148">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
- [<span data-ttu-id="2a9d0-149">消息编码</span><span class="sxs-lookup"><span data-stu-id="2a9d0-149">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [<span data-ttu-id="2a9d0-150">选择消息编码器</span><span class="sxs-lookup"><span data-stu-id="2a9d0-150">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [<span data-ttu-id="2a9d0-151">绑定</span><span class="sxs-lookup"><span data-stu-id="2a9d0-151">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="2a9d0-152">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="2a9d0-152">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="2a9d0-153">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="2a9d0-153">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="2a9d0-154">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="2a9d0-154">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [<span data-ttu-id="3d58c-149">消息编码</span><span class="sxs-lookup"><span data-stu-id="3d58c-149">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [<span data-ttu-id="3d58c-150">选择消息编码器</span><span class="sxs-lookup"><span data-stu-id="3d58c-150">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [<span data-ttu-id="3d58c-151">绑定</span><span class="sxs-lookup"><span data-stu-id="3d58c-151">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="3d58c-152">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="3d58c-152">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="3d58c-153">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="3d58c-153">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="3d58c-154">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="3d58c-154">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

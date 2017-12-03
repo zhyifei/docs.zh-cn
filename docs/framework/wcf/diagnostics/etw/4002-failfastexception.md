@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b84fe87-916c-4923-bf49-9b6bf391fa34
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 18e190eebaf3d033b04fe88229be0ecd8f80ccae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81ca9cfadce91ea2007382ad9f51caea0bc7c032
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="4002---failfastexception"></a><span data-ttu-id="a3237-102">4002 - FailFastException</span><span class="sxs-lookup"><span data-stu-id="a3237-102">4002 - FailFastException</span></span>
-## <a name="properties"></a><span data-ttu-id="a3237-103">属性</span><span class="sxs-lookup"><span data-stu-id="a3237-103">Properties</span></span>  
+# <a name="4002---failfastexception"></a><span data-ttu-id="988c6-102">4002 - FailFastException</span><span class="sxs-lookup"><span data-stu-id="988c6-102">4002 - FailFastException</span></span>
+## <a name="properties"></a><span data-ttu-id="988c6-103">属性</span><span class="sxs-lookup"><span data-stu-id="988c6-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a3237-104">ID</span><span class="sxs-lookup"><span data-stu-id="a3237-104">ID</span></span>|<span data-ttu-id="a3237-105">4002</span><span class="sxs-lookup"><span data-stu-id="a3237-105">4002</span></span>|  
-|<span data-ttu-id="a3237-106">关键字</span><span class="sxs-lookup"><span data-stu-id="a3237-106">Keywords</span></span>|<span data-ttu-id="a3237-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="a3237-107">ActivationServices</span></span>|  
-|<span data-ttu-id="a3237-108">级别</span><span class="sxs-lookup"><span data-stu-id="a3237-108">Level</span></span>|<span data-ttu-id="a3237-109">严重</span><span class="sxs-lookup"><span data-stu-id="a3237-109">Critical</span></span>|  
-|<span data-ttu-id="a3237-110">通道</span><span class="sxs-lookup"><span data-stu-id="a3237-110">Channel</span></span>|<span data-ttu-id="a3237-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="a3237-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="988c6-104">ID</span><span class="sxs-lookup"><span data-stu-id="988c6-104">ID</span></span>|<span data-ttu-id="988c6-105">4002</span><span class="sxs-lookup"><span data-stu-id="988c6-105">4002</span></span>|  
+|<span data-ttu-id="988c6-106">关键字</span><span class="sxs-lookup"><span data-stu-id="988c6-106">Keywords</span></span>|<span data-ttu-id="988c6-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="988c6-107">ActivationServices</span></span>|  
+|<span data-ttu-id="988c6-108">级别</span><span class="sxs-lookup"><span data-stu-id="988c6-108">Level</span></span>|<span data-ttu-id="988c6-109">严重</span><span class="sxs-lookup"><span data-stu-id="988c6-109">Critical</span></span>|  
+|<span data-ttu-id="988c6-110">通道</span><span class="sxs-lookup"><span data-stu-id="988c6-110">Channel</span></span>|<span data-ttu-id="988c6-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="988c6-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a3237-112">描述</span><span class="sxs-lookup"><span data-stu-id="a3237-112">Description</span></span>  
- <span data-ttu-id="a3237-113">对于 FailFastException 发出此事件。</span><span class="sxs-lookup"><span data-stu-id="a3237-113">This event is emitted on the FailFastException.</span></span>  
+## <a name="description"></a><span data-ttu-id="988c6-112">描述</span><span class="sxs-lookup"><span data-stu-id="988c6-112">Description</span></span>  
+ <span data-ttu-id="988c6-113">对于 FailFastException 发出此事件。</span><span class="sxs-lookup"><span data-stu-id="988c6-113">This event is emitted on the FailFastException.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a3237-114">消息</span><span class="sxs-lookup"><span data-stu-id="a3237-114">Message</span></span>  
- <span data-ttu-id="a3237-115">FailFastException。</span><span class="sxs-lookup"><span data-stu-id="a3237-115">FailFastException.</span></span>  
+## <a name="message"></a><span data-ttu-id="988c6-114">消息</span><span class="sxs-lookup"><span data-stu-id="988c6-114">Message</span></span>  
+ <span data-ttu-id="988c6-115">FailFastException。</span><span class="sxs-lookup"><span data-stu-id="988c6-115">FailFastException.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a3237-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="a3237-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="988c6-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="988c6-116">Details</span></span>
