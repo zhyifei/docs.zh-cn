@@ -17,17 +17,17 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ee4d12659dd6da8c5290134c48d280692a496f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
 下表列出了所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言关键字。  
   
 ## <a name="reserved-keywords"></a>保留的关键字  
- 已保留下面的关键字。也就是说，无法将这些关键字用作编程元素（如变量或过程）的名称。 可以用括号 (`[``]`) 括住名称，从而忽略此限制。 有关详细信息，请参阅[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的“转义后名称”。  
+ 已保留下面的关键字。也就是说，无法将这些关键字用作编程元素（如变量或过程）的名称。 可以用括号 (`[]`) 括住名称，从而忽略此限制。 有关详细信息，请参阅[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的“转义后名称”。  
   
 > [!NOTE]
 >  不建议使用转义后名称，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  
