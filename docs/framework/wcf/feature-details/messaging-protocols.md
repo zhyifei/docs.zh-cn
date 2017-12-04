@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4052971746086061cb2ed091bd13c962318b2d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="messaging-protocols"></a>消息协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆栈采用编码和传输通道将内部消息表示形式转换成其网络传输格式，并使用特定传输进行发送。 用于 Web 服务互操作性的最常见传输是 HTTP，Web 服务使用的最常见编码是基于 XML 的 SOAP 1.1、SOAP 1.2 和消息传输优化机制 (MTOM)。  
@@ -323,11 +323,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>在 WSDL 端口内使用终结点引用  
  WS-ADDR10-WSDL 4.1 节扩展了 `wsdl:port` 元素以包含 `<wsa10:EndpointReference…/>` 子元素，从而以 WS-Addressing 方式描述终结点。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展了 WS-Addressing 2004/08 中的这一实用工具，使  `<wsa:EndpointReference…/>` 作为 `wsdl:port` 的子元素出现。  
   
--   R3531：如果终结点有一个带有 `<wsaw10:UsingAddressing/>` wsdl:port 策略断言的附加策略备选项，则对应的 `wsdl:port` 元素可包含子元素 `<wsa10:EndpointReference …/>`。  
+-   R3531：如果终结点有一个带有 `<wsaw10:UsingAddressing/>`wsdl:port 策略断言的附加策略备选项，则对应的`wsdl:port`元素可包含子元素`<wsa10:EndpointReference …/>`。  
   
 -   R3532： 如果`wsdl:port`包含子元素`<wsa10:EndpointReference …/>`、`wsa10:EndpointReference/wsa10:Address`子元素值必须与匹配的值`@address`的同级的特性`wsdl:port` / `wsdl:location`元素。  
   
--   R3533：如果终结点有一个带有 `<wsap:UsingAddressing/>` wsdl:port 策略断言的附加策略备选项，则对应的 `wsdl:port` 元素可包含子元素 `<wsa:EndpointReference …/>`。  
+-   R3533：如果终结点有一个带有 `<wsap:UsingAddressing/>`wsdl:port 策略断言的附加策略备选项，则对应的`wsdl:port` 元素可包含子元素`<wsa:EndpointReference …/>`。  
   
 -   R3534： 如果`wsdl:port`包含子元素`<wsa:EndpointReference …/>`、`wsa:EndpointReference/wsa:Address`子元素值必须与匹配的值`@address`的同级的特性`wsdl:port` / `wsdl:location`元素。  
   
