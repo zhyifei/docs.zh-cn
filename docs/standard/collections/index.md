@@ -16,11 +16,11 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  
@@ -63,17 +63,16 @@ ms.lasthandoff: 10/18/2017
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>选择集合  
  一般情况下，应使用泛型集合。 下表介绍了一些常用的集合方案和可用于这些方案的集合类。 如果你是使用泛型集合的新手，此表将帮助你选择最适合你的任务的泛型集合。  
-<!-- todo: All code-formatted API refs in the table need to be changed into links -->  
 |我要……|泛型集合选项|非泛型集合选项|线程安全或不可变集合选项|  
 |-|-|-|-|  
-|将项存储为键/值对以通过键进行快速查找|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> （根据键的哈希代码组织的键/值对的集合。）|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|按索引访问项|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|使用项先进先出 (FIFO)|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
-|使用数据后进先出 (LIFO)|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
-|按顺序访问项|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|无建议|无建议|  
-|删除集合中的项或向集合添加项时接收通知。 （实现 <xref:System.ComponentModel.INotifyPropertyChanged> 和 <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>）|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|无建议|无建议|  
-|已排序的集合|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|数学函数的一个集|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|无建议|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|将项存储为键/值对以通过键进行快速查找|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> （根据键的哈希代码组织的键/值对的集合。）|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|按索引访问项|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
+|使用项先进先出 (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
+|使用数据后进先出 (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
+|按顺序访问项|<xref:System.Collections.Generic.LinkedList%601>|无建议|无建议|  
+|删除集合中的项或向集合添加项时接收通知。 （实现 <xref:System.ComponentModel.INotifyPropertyChanged> 和 <xref:System.Collections.Specialized.INotifyCollectionChanged>）|<xref:System.Collections.ObjectModel.ObservableCollection%601>|无建议|无建议|  
+|已排序的集合|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
+|数学函数的一个集|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|无建议|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>相关主题  
