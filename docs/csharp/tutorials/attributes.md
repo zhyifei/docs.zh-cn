@@ -1,5 +1,5 @@
 ---
-title: "属性 - C#"
+title: "特性 - C#"
 description: "了解特性在 C# 中的工作方式。"
 keywords: ".NET, .NET Core, C#, 特性"
 author: mgroves
@@ -16,7 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
-# <a name="using-attributes-in-c"></a>在 C# 中使用属性 #
+# <a name="using-attributes-in-c"></a>在 C# 中使用特性 #
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
 
