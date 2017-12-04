@@ -70,6 +70,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Array>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [阵列](../../../csharp/programming-guide/arrays/index.md)  
+ [数组](../../../csharp/programming-guide/arrays/index.md)  
  [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
  [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
