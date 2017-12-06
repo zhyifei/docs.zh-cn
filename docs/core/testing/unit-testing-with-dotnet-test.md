@@ -3,14 +3,14 @@ title: "使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 代码单元测�
 description: "通过使用 dotnet test 和 xUnit 分步生成示例解决方案的交互体验，了解 C# 和 .NET Core 中的单元测试概念。"
 author: ardalis
 ms.author: wiwagn
-ms.date: 09/08/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a9e64fe37f05b7bbe05b1c5878e4b31084a1c8b6
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -19,8 +19,8 @@ ms.lasthandoff: 10/18/2017
 ## <a name="creating-the-source-project"></a>创建源项目
 
 打开 shell 窗口。 创建一个名为 *unit-testing-using-dotnet-test* 的目录，以保留该解决方案。
-在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 创建新的解决方案。 这样便于管理类库和单元测试项目。
-在解决方案目录中，创建 PrimeService 目录。 目录和文件结构目前如下所示：
+在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 创建新的解决方案。 通过解决方案，可轻松管理类库和单元测试项目。
+在解决方案目录中，创建 PrimeService 目录。 现在，目录和文件结构应如下所示：
 
 ```
 /unit-testing-using-dotnet-test
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/18/2017
     /PrimeService
 ```
 
-将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需对 `PrimeService` 类创建故障实现：
+将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需首先对 `PrimeService` 类创建故障实现：
 
 ```csharp
 using System;
@@ -37,15 +37,21 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first");
-        } 
+        }
     }
 }
 ```
 
-将目录更改回 unit-testing-using-dotnet-test 目录。 运行 [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
+将目录更改回 unit-testing-using-dotnet-test 目录。
+
+运行 [dotnet sln](../tools/dotnet-sln.md) 命令，向解决方案添加类库项目：
+
+```
+dotnet sln add .\PrimeService\PrimeService.csproj
+```
 
 ## <a name="creating-the-test-project"></a>创建测试项目
 
@@ -60,11 +66,11 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 这会创建将 xUnit 用作测试库的测试项目。 生成的模板在 *PrimeServiceTests.csproj* 中配置了测试运行程序：
+将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 xUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.csproj 文件中配置测试运行程序，类似以下代码：
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
   <PackageReference Include="xunit" Version="2.2.0" />
   <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
 </ItemGroup>
@@ -91,7 +97,11 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-在 unit-testing-using-dotnet-test 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)。 
+若要向解决方案添加测试项目，请在 unit-testing-using-dotnet-test 目录下运行 [dotnet sln](../tools/dotnet-sln.md) 命令：
+
+```
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+```
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -123,9 +133,9 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-`[Fact]` 属性指示由测试运行程序运行的测试方法。 在 unit-testing-using-dotnet-test 中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[Fact]` 属性指示由测试运行程序运行的测试方法。 在 PrimeService.Tests 文件夹中，执行 [`dotnet test`](../tools/dotnet-test.md)，以生成测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
-测试失败。 尚未创建实现。 在起作用的 `PrimeService` 类中编写最简单的代码，以生成此测试：
+测试失败。 尚未创建实现。 在起作用的 `PrimeService` 类中编写最简单的代码，以生成此测试。 将现有的 `IsPrime` 方法实现替换为以下代码：
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -138,17 +148,21 @@ public bool IsPrime(int candidate)
 }
 ```
 
-在 unit-testing-using-dotnet-test 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 *PrimeService.Tests* 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `[Fact]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `[Theory]` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `[InlineData]` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `[Fact]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件：
 
-可以不使用这两个属性创建新测试，而用来创建单个索引。 此索引是测试多个小于 2（即最小的质数）的值的方法：
+- `[Theory]` 表示执行相同代码，但具有不同输入参数的测试套件。
+
+- `[InlineData]` 属性指定这些输入的值。
+
+可应用这两个属性（`[Theory]` 和 `[InlineData]`）在 PrimeService_IsPrimeShould.cs 文件中创建单一理论，而不是创建新测试。 此索引是测试多个小于 2（即最小的质数）的值的方法：
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-运行 `dotnet test`，两项测试均失败。 若要使所有测试通过，可以更改方法开头的 `if` 子句：
+再次运行 `dotnet test`，其中两个测试应失败。 若要使所有测试通过，可以在 PrimeService.cs 文件中更改 `IsPrime` 方法开头的 `if` 子句：
 
 ```csharp
 if (candidate < 2)
@@ -158,4 +172,4 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>其他资源
 
-[在 ASP.NET 核心的测试控制器逻辑](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+[ASP.NET Core 中的测试控制器逻辑](/aspnet/core/mvc/controllers/testing)

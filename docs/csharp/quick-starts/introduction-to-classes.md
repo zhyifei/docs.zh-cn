@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0ddb7508841087571c0cd095b1d1518e4aad50ff
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="introduction-to-classes"></a>类简介
 
@@ -150,7 +150,7 @@ using System.Collections.Generic;
 
 [!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-[`throw`](../language-reference/keywords/throw.md) 语句抛出异常。 当前方法执行结束，并将在找到匹配的 `catch` 块时继续执行。 添加 `catch` 块可以稍后再测试一下此代码。
+[`throw`](../language-reference/keywords/throw.md) 语句将引发异常。 当前方法执行结束，并将在找到匹配的 `catch` 块时继续执行。 添加 `catch` 块可以稍后再测试一下此代码。
 
 构造函数应进行一处更改，更改为添加初始交易，而不是直接更新余额。 由于已编写 `MakeDeposit` 方法，因此通过构造函数调用它。 完成的构造函数应如下所示：
 

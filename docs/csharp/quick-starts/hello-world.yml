@@ -2,7 +2,7 @@ documentType: Tutorial
 title: "C# 初探"
 metadata:
   title: "C# 初探。 读者最先查看的 C# 语言简介。"
-  description: "在此快速入门中，你将使用你的浏览器若要了解 C# 以交互方式。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。"
+  description: "在本快速入门教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。"
   audience: Developer
   level: Beginner
   nextTutorialHref: numbers-in-csharp
@@ -12,18 +12,18 @@ metadata:
   ms.custom: mvc
 items:
 - durationInMinutes: 1
-  content: "本快速入门演示 C# 以交互方式，使用你的浏览器可以编写 C# 和查看结果编译并运行你的代码。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。\n"
-  ms.openlocfilehash: 2089af6dbf418c87dfd28e1a2a8cf2814b40df6c
-  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  content: "本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。\n"
+  ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
+  ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/22/2017
+  ms.lasthandoff: 12/01/2017
 - title: "运行首个 C# 程序"
   durationInMinutes: 2
   content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n祝贺你！ 已运行首个 C# 程序。 这是一个简单程序，可输出消息“Hello World!”。 它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。 `Console` 是表示控制台窗口的类型。 `WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。\n\n接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。 \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: "声明和使用变量"
   durationInMinutes: 3
-  content: "首个程序在屏幕上打印出了 `string`“Hello World!” 。 \n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。 \n\n首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。\n\n可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。\n\n可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次单击“运行”，看看结果如何。\n\n随着进度，创建字符串以使用打印`+`变得很麻烦。 字符串内插可让你更简洁、 更具可读性的方式拼合字符串。\n\n如果你添加`$`之前左引号的字符串，然后可以包括字符串表达式，如`aFriend`变量，在大括号中的字符串。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次单击“运行”，看看结果如何。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+  content: "首个程序在屏幕上打印出了 `string`“Hello World!” 。 \n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。 \n\n首个程序只能打印一条消息。 可以使用变量编写更实用的程序。 借助变量符号，可以使用不同的值运行同一代码。 试一试吧！ 将在交互式窗口中已编写的代码替换为以下代码：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行代码声明变量 `aFriend`，并为它分配值“Bill”。 第二行代码打印出姓名。\n\n可以向声明的任何变量分配不同的值。 可以将姓名更改为自己一个好友的姓名。 在交互式窗口中已添加的代码后面，添加以下两行代码：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n可以看到，同一行代码根据 `aFriend` 变量中存储的值，打印两条不同的消息。\n\n可能还会注意到，最后两条消息中没有“Hello”一词。 现在就来解决一下这个问题。  将负责打印消息的代码行修改为以下代码：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次单击“运行”，看看结果如何。\n\n在此过程中，使用 `+` 创建用于打印的字符串变得非常麻烦。 借助字符串内插，可以通过更简洁、更具可读性的方式组合字符串。\n\n如果在字符串的左引号前添加 `$`，则可在大括号的字符串内，添加字符串表达式，如 `aFriend` 变量。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次单击“运行”，看看结果如何。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: "使用字符串"
   durationInMinutes: 5
   content: "上次编辑是对字符串用途的初探。 接下来，将进一步探索。\n\n`+` 是 C# 运算符。 如果应用于字符串（如 `firstString + secondString`），则会新建一个字符串，内含第一个字符串的文本，后跟第二个字符串的文本。 这称为“字符串串联”。 可以组合任意数量的字符串，包括字符串变量。  试运行以下代码：\n\n```csharp\nstring firstFriend = \"Maria\";\nstring secondFriend = \"Sage\";\nConsole.WriteLine($\"My friends are {firstFriend} and {secondFriend}\");\n```\n\n在进一步探索字符串的过程中，发现可以使用 `Length` 确定字符串长度。 `Length` 是字符串属性，可返回字符串中的字符数。 在交互式窗口的底部，添加以下代码：\n\n```csharp\nConsole.WriteLine($\"The name {firstFriend} has {firstFriend.Length} letters.\");\nConsole.WriteLine($\"The name {secondFriend} has {secondFriend.Length} letters.\");\n```\n\n> [!TIP]\n> 这是自行探索的良好时机。 已了解到，`Console.WriteLine()` 将文本写入屏幕。 也已学习了如何声明变量，以及如何串联字符串。 在交互式窗口中试一试吧。 试着自已编写其他一些消息。 使用 `+` 运算符生成字符串。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
@@ -36,4 +36,4 @@ items:
 - title: "完成挑战"
   durationInMinutes: 3
   content: "最后是否生成如下代码？\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
-- content: "您已完成\"Hello C#\"快速入门。\n\n你可以继续在开发环境这些快速入门。 .NET 主题[开始在 10 分钟后](https://www.microsoft.com/net/core)已设置你的本地开发环境的说明。 完成后，继续[C# 中的数字](numbers-in-chsarp-local.md)本地环境中。\n\n若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。\0"
+- content: "已完成“C# 初探”快速入门教程。\n\n可以在自己的开发环境中继续这些快速入门教程。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何设置本地开发环境。 完成之后，请在本地环境中继续完成 [C# 中的数字](numbers-in-csharp-local.md)。\n\n若要详细了解如何使用 `string` 类型，可以参阅有关[字符串](../programming-guide/strings/index.md)的 [C# 编程指南](../programming-guide/index.md)主题。\0"
