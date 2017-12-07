@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b311dc5b328a09bd301cc1d012ca4d13cfb70f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
+ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web API
 WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。 [ASP.NET Web API](http://www.asp.net/web-api)是一个框架，可以轻松地生成覆盖广泛的客户端，包括浏览器和移动设备的 HTTP 服务。 ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。 本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  
@@ -29,7 +29,7 @@ WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程�
 |---------|---------------------|  
 |启用支持多种传输协议（HTTP、TCP、UDP 和自定义传输）的生成服务，并允许在这些服务之间切换。|仅限 HTTP。 第一类的编程模型，用于 HTTP。 更适合用于从各种浏览器，etc 启用宽访问的移动设备进行访问。|  
 |启用支持同一消息类型的多种编码（文本、MTOM 和二进制）的生成服务，并允许在这些服务之间切换。|启用支持广泛的媒体类型（包括 XML、JSON 等）的生成 Web API。|  
-|支持采用 WS-* 标准的生成服务，如可靠消息传递、事务、消息安全性。|使用基本协议和格式，如 HTTP、WebSocket、SSL、JQuery、JSON 和 XML。 不支持较高级别的协议，如消息传递或事务。|  
+|支持采用 WS-* 标准的生成服务，如可靠消息传递、事务、消息安全性。|使用基本协议和格式，如 HTTP、 Websocket、 SSL、 JSON 和 XML。 不支持较高级别的协议，如消息传递或事务。|  
 |支持请求-答复、单向和双工消息交换模式。|HTTP 请求/响应，但可以通过支持其他模式[SignalR](https://github.com/SignalR/SignalR)和 Websocket 的集成。|  
 |可以在 WSDL 中描述 WCF SOAP 服务，从而可通过自动工具，针对具有复杂架构的服务来生成客户端代理。|可通过各种方法来描述 Web API：从用于描述代码片段的自动生成的 HTML 帮助页，直至用于 OData 集成 API 的结构化元数据。|  
 |随 .NET Framework 一起提供。|随 .NET Framework 一起提供，但它是一个开放源代码程序，也可通过独立下载以带外方式获得。|  
