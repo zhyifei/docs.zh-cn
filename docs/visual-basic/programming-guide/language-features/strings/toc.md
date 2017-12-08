@@ -4,6 +4,7 @@
 ### [字符串操作方法的类型](types-of-string-manipulation-methods.md)
 ### [Nothing 和字符串](nothing-and-strings.md)
 ### [区域性对字符串的影响](how-culture-affects-strings.md)
+### [内插字符串](interpolated-strings.md)
 ### [以零起始的字符串访问与以一起始的字符串访问](zero-based-vs-one-based-string-access.md)
 ## [如何：使用 StringBuilder 创建字符串](how-to-create-strings-using-a-stringbuilder.md)
 ## [如何：在字符串内搜索](how-to-search-within-a-string.md)

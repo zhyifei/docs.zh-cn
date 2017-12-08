@@ -5,7 +5,7 @@
 ## [GetHashFromFile 函数](gethashfromfile-function.md)
 ## [GetHashFromFileW 函数](gethashfromfilew-function.md)
 ## [GetHashFromHandle 函数](gethashfromhandle-function.md)
-## [PublicKeyBlob 结构](publickeyblob-structure.md)
+## [PublicKeyBlob Strong Naming](publickeyblob-structure.md)
 ## [StrongNameCompareAssemblies 函数](strongnamecompareassemblies-function.md)
 ## [StrongNameErrorInfo 函数](strongnameerrorinfo-function.md)
 ## [StrongNameFreeBuffer 函数](strongnamefreebuffer-function.md)

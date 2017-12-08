@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
+ms.openlocfilehash: 54540b8a1fc0ceaf68dfb3fcbb04fefae2296695
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
-ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/07/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-guide"></a>.NET Core 指南
 
 > 请查看[“入门”教程](get-started.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。
@@ -43,9 +41,9 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="languages"></a>语言
 
-可以使用 C# 和 F# 语言（即将推出 Visual Basic）编写 .NET Core 的应用程序和库。 在 .NET Core 上运行的编译器可以在其运行的任何地方进行 .NET Core 开发。 一般情况下，不会直接使用编译器，但会间接使用 SDK 工具。
+可以使用 C#、Visual Basic 和 F# 语言编写适用于 .NET Core 的应用程序和库。 在 .NET Core 上运行的编译器可以在其运行的任何地方进行 .NET Core 开发。 一般情况下，不会直接使用编译器，但会间接使用 SDK 工具。
 
-C# 和 F# 编译器以及 .NET Core 工具已集成到或可以集成到多个文本编辑器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) 和 Sublime Text 以及 Vim，使 .NET Core 开发可以在你钟爱的环境和 OS 中进行。 这种集成部分由 [OmniSharp 项目](http://www.omnisharp.net/)的高手提供。
+C#、Visual Basic 和 F# 编译器以及 .NET Core 工具已集成到或可以集成到多个文本编辑器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)Sublime Text 和 Vim，使 .NET Core 开发可以在钟爱的编码环境和 OS 中进行。 这种集成部分由 [OmniSharp 项目](http://www.omnisharp.net/)的高手提供。
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 和兼容性
 
@@ -153,4 +151,3 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 - **平台** -- Mono 支持很多平台和 CPU。
 - **开放源** -- Mono 和 .NET Core 两者都使用 MIT 许可证，且都属于 .NET Foundation 项目。
 - **焦点** --最近几年，Mono 的主要焦点是移动平台，而 .NET Core 的焦点是云工作负荷。
-

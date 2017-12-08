@@ -9,6 +9,7 @@
 ### [版本容错序列化](version-tolerant-serialization.md)
 ### [序列化准则](serialization-guidelines.md)
 ### [如何：对序列化数据进行分块](how-to-chunk-serialized-data.md)
+### [如何：确定 .NET 标准对象是否可序列化](how-to-determine-if-netstandard-object-is-serializable.md)
 ## [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 ### [如何：控制派生类的序列化](how-to-control-serialization-of-derived-classes.md)
 ### [XML 序列化简介](introducing-xml-serialization.md)

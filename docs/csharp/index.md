@@ -15,20 +15,18 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.author: wiwagn
+ms.openlocfilehash: 5ecc77970dbd32ca743bcd09fc63d49299a164a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="c-guide"></a>C# 指南
 
 C# 指南收录了 C# 语言的大量信息。 此网站面向许多不同的受众群体。 你可能希望探索本指南的不同部分，具体视你的编程经验或 C# 语言和 .NET 使用经验而定。
 
 * 对于从未接触过编程的开发者：
-    - 请先阅读[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 你将了解语言概念，以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读我们的 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
+    - 从[快速入门](quick-starts/index.md)部分开始。 这样就可以在浏览器中交互式浏览 C# 语言。 可以从这里转到[教程](tutorials/index.md)部分。 这些教程介绍了如何从头开始创建 C# 程序。 其中分步介绍了如何创建程序。 你将了解语言概念，以及如何自行生成 C# 程序。 如果希望先阅读概述内容，请尝试阅读我们的 [C# 语言介绍](tour-of-csharp/index.md)。 其中介绍了 C# 语言的概念。 阅读完这一部分后，你将会对 C# 语言有一个基本的了解，可以尝试阅读各个教程或自行生成一些程序。
 
 * 对于刚开始接触 C# 的开发者： 
     - 如果以前从事过开发工作，但是刚开始接触 C#，请阅读 [C# 语言介绍](tour-of-csharp/index.md)。 你将了解 C# 语言的基本语法和结构，并参考语言介绍将 C# 与你用过的其他语言进行比较。 还可以浏览[教程](tutorials/index.md)，尝试生成基本的 C# 程序。
@@ -76,7 +74,6 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
 * [C# 语言规范](../csharp/language-reference/language-specification/index.md)  
     - 指向 C# 规范的最新版本（Microsoft Word 格式）的链接。  
   
-## <a name="see-also"></a>请参阅  
- [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+## <a name="see-also"></a>另请参阅  
+ [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
  [.NET 开发](https://msdn.microsoft.com/library/ff361664)
-

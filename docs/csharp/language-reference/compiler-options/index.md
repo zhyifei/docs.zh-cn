@@ -1,14 +1,10 @@
 ---
 title: "C# 编译器选项"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.build.options
-dev_langs:
-- CSharp
+f1_keywords: cs.build.options
 helpviewer_keywords:
 - compiler options [C#]
 - csc.exe
@@ -16,36 +12,21 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 28878fca5bccf23f906395298c8b2b5b7499fd40
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
-ms.openlocfilehash: 7c5f5274a5685e50fb7f1d06771b0340200d1c3f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 或者代码模块 (.netmodule)。  
   
  每个编译器选项均有两种形式：**-option** 和 **/option**。 此文档仅介绍 **/option** 形式。  
   
- 在 Visual Web Developer 2008 中，可在 web.config 文件中设置编译器选项。 有关详细信息，请参阅 [\<compiler> 元素](https://msdn.microsoft.com/library/y9x69bzw)。  
+ 在 Visual Studio 中，可在 Web.config 文件中设置编译器选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
@@ -69,4 +50,3 @@ ms.lasthandoff: 08/28/2017
   
  [准备和管理生成](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
  介绍了 Visual Studio 开发环境中的生成过程。
-

@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/05/2017
 
 异常是执行程序遇到的所有错误条件或意外行为。 异常可能由你的代码或调用的代码（如共享库）中的错误、不可用的操作系统资源、运行时遇到的意外情况（如无法验证的代码）等引发。 应用程序可从这些情况中的一些中恢复，但无法从其他情况中恢复。 尽管可以从大多数应用程序异常中恢复，但不能从大多数运行时异常中恢复。
 
-在 .NET 中，异常是从 [System.Exception](xref:System.Exception) 类继承的对象。 异常引发自发生问题的代码区域。 异常在堆栈中向上传递，直到应用程序对其进行处理或者程序终止。
+在 .NET中，异常是从 <xref:System.Exception?displayProperty=nameWithType> 类继承的对象。 异常引发自发生问题的代码区域。 异常在堆栈中向上传递，直到应用程序对其进行处理或者程序终止。
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>异常与传统的错误处理方法
 
@@ -58,13 +57,13 @@ ms.lasthandoff: 09/05/2017
 
 | 异常类型 | 基类型 | 描述 | 示例 |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | 所有异常的基类。 | 无（使用此异常的派生类）。 |
-| @System.IndexOutOfRangeException | @System.Exception | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引：`arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | 仅当引用 null 对象时，才由运行时引发。 | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | 当处于无效状态时，由方法引发。 | 从基础集合删除项后调用 `Enumerator.GetNext()`。 |
-| @System.ArgumentException | @System.Exception | 所有自变量异常的基类。 | 无（使用此异常的派生类）。 |
-| @System.ArgumentNullException | @System.Exception | 由不允许参数为 null 的方法引发。 | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引：`arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | 仅当引用 null 对象时，才由运行时引发。 | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | 当处于无效状态时，由方法引发。 | 从基础集合删除项后调用 `Enumerator.GetNext()`。 |
+| <xref:System.ArgumentException> | <xref:System.Exception> | 所有自变量异常的基类。 | 无（使用此异常的派生类）。 |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允许参数为 null 的方法引发。 | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>另请参阅
 
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/05/2017
 * [与异常有关的最佳做法](best-practices-for-exceptions.md)
 
 若要了解有关 .NET 中异常的工作方式的详细信息，请参阅[运行时中每个开发人员都需要了解的有关异常的事项](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
-

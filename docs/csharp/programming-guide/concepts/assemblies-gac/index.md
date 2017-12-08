@@ -1,30 +1,21 @@
 ---
 title: "程序集和全局程序集缓存 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>程序集和全局程序集缓存 (C#)
 程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。  
@@ -68,13 +59,12 @@ ms.lasthandoff: 07/28/2017
 >  若要在 Visual Studio 中生成程序集，请选择“生成”菜单上的“生成”。  
   
 ## <a name="see-also"></a>另请参阅  
- [C# 编程指南](../../../../csharp/programming-guide/index.md)   
- [公共语言运行时中的程序集](https://msdn.microsoft.com/library/k3677y81)   
- [友元程序集 (C#)](friend-assemblies.md)   
- [如何：与其他应用程序共享程序集 (C#)](how-to-share-an-assembly-with-other-applications.md)   
- [如何：加载和卸载程序集 (C#)](how-to-load-and-unload-assemblies.md)   
- [如何：确定文件是否为程序集 (C#)](how-to-determine-if-a-file-is-an-assembly.md)   
- [如何：使用命令行创建和使用程序集 (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
+ [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+ [Assemblies in the Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)（公共语言运行时中的程序集）  
+ [友元程序集 (C#)](friend-assemblies.md)  
+ [如何：与其他应用程序共享程序集 (C#)](how-to-share-an-assembly-with-other-applications.md)  
+ [如何：加载和卸载程序集 (C#)](how-to-load-and-unload-assemblies.md)  
+ [如何：确定文件是否为程序集 (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [如何：使用命令行创建和使用程序集 (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-

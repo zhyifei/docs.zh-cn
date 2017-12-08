@@ -8,21 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET Framework], events
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
@@ -38,7 +40,8 @@ ms.lasthandoff: 09/05/2017
   
  下面的示例显示如何声明名为 `ThresholdReached` 事件。 该事件与 <xref:System.EventHandler> 委托相关联并且由 `OnThresholdReached` 方法引发。  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)][!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
+ [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>委托  
  委托是一种保存对方法的引用的类型。 委托是通过显示所引用方法的返回类型和参数的签名来声明的，并可以仅保存与其签名匹配的方法的引用。 因此，委托等同于类型安全函数指针或回叫。 委托声明足以定义委托类。  
@@ -51,25 +54,28 @@ ms.lasthandoff: 09/05/2017
   
  在 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委托不可用的场景下，您可以定义一个委托。 要求您定义委托的场景非常少见的，例如，当您必须处理无法识别泛型的代码时。 您在声明中使用 `delegate` (C#) 和 `Delegate` (Visual Basic) 关键字标记委托。 下面的示例说明如何声明 `ThresholdReachedEventHandler` 委托。  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)][!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
+ [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>事件数据  
- 与事件相关的数据可以通过事件数据类提供。 .NET Framework 提供了许多事件数据类，您可以在您的应用程序中使用它们。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 类是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName> 事件的事件数据类。 .NET Framework 遵循所有事件数据类以 `EventArgs` 结束的命名模式。 您通过查看事件的委托来确定哪个事件数据类与事件相关联。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委托包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 类作为它的一个参数。  
+ 与事件相关的数据可以通过事件数据类提供。 .NET Framework 提供了许多事件数据类，您可以在您的应用程序中使用它们。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 类是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 事件的事件数据类。 .NET Framework 遵循所有事件数据类以 `EventArgs` 结束的命名模式。 您通过查看事件的委托来确定哪个事件数据类与事件相关联。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委托包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 类作为它的一个参数。  
   
- <xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=fullName> 值。 <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
+ <xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
   
  当您想创建一个自定义的事件数据类时，请创建一个派生自 <xref:System.EventArgs> 的类，然后提供所需的所有成员，来传递与该事件相关的数据。 通常，您应使用 .NET Framework 的命名模式并且您的事件数据类名称应以 `EventArgs` 结束。  
   
  下面的示例演示了一个名为 `ThresholdReachedEventArgs` 的事件数据类。 它包含特定于引发事件的属性。  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)][!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
+ [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>事件处理程序  
  若要响应事件，您需要在事件接收器中定义一个事件处理程序方法。 此方法必须与您正处理的事件的委托签名匹配。 在事件处理程序中，当事件引发时会执行所需操作，例如在用户单击按钮之后收集用户输入。 若当事件发生时收到通知，您的事件处理程序方法必须订阅该事件。  
   
  下面的示例演示与 `c_ThresholdReached` 委托的签名匹配的 <xref:System.EventHandler> 事件处理程序方法。 该方法订阅 `ThresholdReached` 事件。  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)][!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
+ [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>静态和动态事件处理程序  
  .NET Framework 允许订户为获得事件通知而进行静态或动态注册。 对于其事件由静态事件处理程序进行处理的类，静态事件处理程序对其整个生命周期有效。 通常为响应某些条件程序逻辑，会在程序执行期间显式激活和停用动态事件处理程序。 例如，如果仅在特定条件下需要事件通知，或如果应用程序提供多个事件处理程序且由运行时条件定义要使用的适当事件处理程序，则可以使用动态事件处理程序。 上一节中的示例演示如何动态添加事件处理程序。 有关详细信息，请参阅[事件](../../visual-basic/programming-guide/language-features/events/index.md)和[事件](../../csharp/programming-guide/events/index.md)。  
@@ -89,11 +95,10 @@ ms.lasthandoff: 09/05/2017
 |[如何：在 Web 窗体应用程序中使用事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|演示如何处理 Web 窗体控件引发的事件。|  
   
 ## <a name="see-also"></a>另请参阅  
- <xref:System.EventHandler>   
- <xref:System.EventHandler%601>   
- <xref:System.EventArgs>   
- <xref:System.Delegate>   
- [事件和路由事件概要（Windows 应用商店应用）](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ <xref:System.EventHandler>  
+ <xref:System.EventHandler%601>  
+ <xref:System.EventArgs>  
+ <xref:System.Delegate>  
+ [事件和路由事件概述（Windows 应用商店应用）](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [事件（C# 编程指南）](../../csharp/programming-guide/events/index.md)
-
