@@ -217,7 +217,7 @@ return result;
 
 <span data-ttu-id="b4ea8-251">若要将这种类型的骰子添加到集合，首先定义一个类型来表示百分比骰子：</span><span class="sxs-lookup"><span data-stu-id="b4ea8-251">To add this kind of die to your collection, first define a type to represent the percentile die:</span></span>
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 <span data-ttu-id="b4ea8-252">然后，为新类型添加一个 `case` 匹配表达式：</span><span class="sxs-lookup"><span data-stu-id="b4ea8-252">Then, add a `case` match expression for the new type:</span></span>
 
