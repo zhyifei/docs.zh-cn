@@ -52,7 +52,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="5efc2-102">正则表达式对象模型</span><span class="sxs-lookup"><span data-stu-id="5efc2-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="5efc2-103"><a name="introduction"></a>本主题介绍在使用.NET 正则表达式中使用的对象模型。</span><span class="sxs-lookup"><span data-stu-id="5efc2-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="5efc2-104">它包含下列部分：</span><span class="sxs-lookup"><span data-stu-id="5efc2-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="5efc2-103">本主题介绍在使用.NET 正则表达式中使用的对象模型。</span><span class="sxs-lookup"><span data-stu-id="5efc2-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="5efc2-104">它包含下列部分：</span><span class="sxs-lookup"><span data-stu-id="5efc2-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="5efc2-105">正则表达式引擎</span><span class="sxs-lookup"><span data-stu-id="5efc2-105">The Regular Expression Engine</span></span>](#Engine)  
   

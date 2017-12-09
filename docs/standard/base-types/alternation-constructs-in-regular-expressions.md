@@ -31,7 +31,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="c2bd3-102">正则表达式中的备用构造</span><span class="sxs-lookup"><span data-stu-id="c2bd3-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="c2bd3-103"><a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。</span><span class="sxs-lookup"><span data-stu-id="c2bd3-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="c2bd3-104">.NET 支持三种备用构造：</span><span class="sxs-lookup"><span data-stu-id="c2bd3-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a> <span data-ttu-id="c2bd3-103">替换构造可修改正则表达式以启用 either/or 或条件匹配。</span><span class="sxs-lookup"><span data-stu-id="c2bd3-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="c2bd3-104">.NET 支持三种备用构造：</span><span class="sxs-lookup"><span data-stu-id="c2bd3-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="c2bd3-105">利用 &#124; 的模式匹配</span><span class="sxs-lookup"><span data-stu-id="c2bd3-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

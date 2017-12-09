@@ -8,32 +8,30 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 246605b301f6bcea4cced2cb7d1c494e9f66aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 360b4745e768a751154f3f1445ffb0bf5b62c825
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/22/2017
 ---
-# <a name="architecting-container--and-microservice-based-applications"></a>构建基于容器和微服务的应用程序
+# <a name="architecting-container--and-microservice-based-applications"></a><span data-ttu-id="ffb05-104">构建基于容器和微服务的应用程序</span><span class="sxs-lookup"><span data-stu-id="ffb05-104">Architecting Container- and Microservice-Based Applications</span></span>
 
-微服务提供很多优点，但也会引起新的巨大挑战。创建基于微服务的应用程序时，微服务体系结构模式是基础支柱。
+<span data-ttu-id="ffb05-105">微服务提供很多优点，但也会引起新的巨大挑战。创建基于微服务的应用程序时，微服务体系结构模式是基础支柱。</span><span class="sxs-lookup"><span data-stu-id="ffb05-105">*Microservices offer great benefits but also raise huge new challenges. Microservice architecture patterns are fundamental pillars when creating a microservice-based application.*</span></span>
 
-本指南前面部分介绍了有关容器和 Docker 的基本概念。 要开始使用容器，至少要了解这些基本信息。 虽然容器为实现微服务提供可能，并且非常适用于微服务，但微服务体系结构并不强制使用容器。本节介绍体系结构，但即使不使用容器，其中许多体系结构概念仍然适用。 然而，由于已介绍容器的重要性，本指南将重点介绍两者交叉部分。
+<span data-ttu-id="ffb05-106">本指南前面部分介绍了有关容器和 Docker 的基本概念。</span><span class="sxs-lookup"><span data-stu-id="ffb05-106">Earlier in this guide, you learned basic concepts about containers and Docker.</span></span> <span data-ttu-id="ffb05-107">要开始使用容器，至少要了解这些基本信息。</span><span class="sxs-lookup"><span data-stu-id="ffb05-107">That was the minimum information you need in order to get started with containers.</span></span> <span data-ttu-id="ffb05-108">虽然容器为实现微服务提供可能，并且非常适用于微服务，但微服务体系结构并不强制使用容器。本节介绍体系结构，但即使不使用容器，其中许多体系结构概念仍然适用。</span><span class="sxs-lookup"><span data-stu-id="ffb05-108">Although, even when containers are enablers and a great fit for microservices, they are not mandatory for a microservice architecture and many architectural concepts in this architecture section could be applied without containers, too.</span></span> <span data-ttu-id="ffb05-109">然而，由于已介绍容器的重要性，本指南将重点介绍两者交叉部分。</span><span class="sxs-lookup"><span data-stu-id="ffb05-109">However, this guidance focuses on the intersection of both due to the already introduced importance of containers.</span></span>
 
-企业应用程序可能会很复杂，它们通常由多个服务组成，而不是基于单个服务的应用程序。 对于这些情况，需要了解其他体系结构方法，如微服务和某些域驱动设计 (DDD) 模式以及容器业务流程的概念。 请注意，本章节不仅介绍容器上的微服务，还介绍任何容器化应用程序。
+<span data-ttu-id="ffb05-110">企业应用程序可能会很复杂，它们通常由多个服务组成，而不是基于单个服务的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ffb05-110">Enterprise applications can be complex and are often composed of multiple services instead of a single service-based application.</span></span> <span data-ttu-id="ffb05-111">对于这些情况，需要了解其他体系结构方法，如微服务和某些域驱动设计 (DDD) 模式以及容器业务流程的概念。</span><span class="sxs-lookup"><span data-stu-id="ffb05-111">For those cases, you need to understand additional architectural approaches, such as the microservices and certain Domain-Driven Design (DDD) patterns plus container orchestration concepts.</span></span> <span data-ttu-id="ffb05-112">请注意，本章节不仅介绍容器上的微服务，还介绍任何容器化应用程序。</span><span class="sxs-lookup"><span data-stu-id="ffb05-112">Note that this chapter describes not just microservices on containers, but any containerized application, as well.</span></span>
 
-## <a name="container-design-principles"></a>容器设计原则
+## <a name="container-design-principles"></a><span data-ttu-id="ffb05-113">容器设计原则</span><span class="sxs-lookup"><span data-stu-id="ffb05-113">Container design principles</span></span>
 
-在容器模型中，容器映像实例表示单个进程。 将容器映像定义为进程边界，可以创建可用于对进程进行缩放或批处理的基元。
+<span data-ttu-id="ffb05-114">在容器模型中，容器映像实例表示单个进程。</span><span class="sxs-lookup"><span data-stu-id="ffb05-114">In the container model, a container image instance represents a single process.</span></span> <span data-ttu-id="ffb05-115">将容器映像定义为进程边界，可以创建可用于对进程进行缩放或批处理的基元。</span><span class="sxs-lookup"><span data-stu-id="ffb05-115">By defining a container image as a process boundary, you can create primitives that can be used to scale the process or to batch it.</span></span>
 
-设计容器映像时，可在 Dockerfile 中看到 [](https://docs.docker.com/engine/reference/builder/) 定义。 这定义了一个进程，其生命周期控制容器的生命周期。 该进程完成，则容器的生命周期结束。 容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。
+<span data-ttu-id="ffb05-116">当你设计的容器映像时，你将看到[入口点](https://docs.docker.com/engine/reference/builder/)Dockerfile 中的定义。</span><span class="sxs-lookup"><span data-stu-id="ffb05-116">When you design a container image, you will see an [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/) definition in the Dockerfile.</span></span> <span data-ttu-id="ffb05-117">这定义了一个进程，其生命周期控制容器的生命周期。</span><span class="sxs-lookup"><span data-stu-id="ffb05-117">This defines the process whose lifetime controls the lifetime of the container.</span></span> <span data-ttu-id="ffb05-118">该进程完成，则容器的生命周期结束。</span><span class="sxs-lookup"><span data-stu-id="ffb05-118">When the process completes, the container lifecycle ends.</span></span> <span data-ttu-id="ffb05-119">容器可以表示 Web 服务器等长时间运行的进程，但也可表示批处理作业等生存期较短的进程，这些进程以前可能已实现为 Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources)。</span><span class="sxs-lookup"><span data-stu-id="ffb05-119">Containers might represent long-running processes like web servers, but can also represent short-lived processes like batch jobs, which formerly might have been implemented as Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources).</span></span>
 
-如果进程失败，则容器结束，Orchestrator 接管。 如果 Orchestrator 已配置为使五个实例保持运行，而其中一个实例失败，则 Orchestrator 会创建另一个容器实例，来替换失败的进程。 在批处理作业中，使用参数启动该进程。 进程完成，则工作完成。
+<span data-ttu-id="ffb05-120">如果进程失败，则容器结束，Orchestrator 接管。</span><span class="sxs-lookup"><span data-stu-id="ffb05-120">If the process fails, the container ends, and the orchestrator takes over.</span></span> <span data-ttu-id="ffb05-121">如果 Orchestrator 已配置为使五个实例保持运行，而其中一个实例失败，则 Orchestrator 会创建另一个容器实例，来替换失败的进程。</span><span class="sxs-lookup"><span data-stu-id="ffb05-121">If the orchestrator was configured to keep five instances running and one fails, the orchestrator will create another container instance to replace the failed process.</span></span> <span data-ttu-id="ffb05-122">在批处理作业中，使用参数启动该进程。</span><span class="sxs-lookup"><span data-stu-id="ffb05-122">In a batch job, the process is started with parameters.</span></span> <span data-ttu-id="ffb05-123">进程完成，则工作完成。</span><span class="sxs-lookup"><span data-stu-id="ffb05-123">When the process completes, the work is complete.</span></span> <span data-ttu-id="ffb05-124">本指南接下来将深入介绍业务流程协调程序。</span><span class="sxs-lookup"><span data-stu-id="ffb05-124">This guidance drills-down on orchestrators, later on.</span></span>
 
-某些情况下，可能需要在单个容器中运行多个进程。 对于这种情况，因为每个容器只有一个入口点，所以在可根据需要启动任意数目的程序的容器中运行脚本。 例如，可以使用 [Supervisor](http://supervisord.org/) 或类似的工具处理在单个容器内启动多个进程的情况。 但是，尽管可以找到用于在每个容器中承载多个进程的体系结构，但这种方法并不常见。
+<span data-ttu-id="ffb05-125">某些情况下，可能需要在单个容器中运行多个进程。</span><span class="sxs-lookup"><span data-stu-id="ffb05-125">You might find a scenario where you want multiple processes running in a single container.</span></span> <span data-ttu-id="ffb05-126">对于这种情况，因为每个容器只有一个入口点，所以在可根据需要启动任意数目的程序的容器中运行脚本。</span><span class="sxs-lookup"><span data-stu-id="ffb05-126">For that scenario, since there can be only one entry point per container, you could run a script within the container that launches as many programs as needed.</span></span> <span data-ttu-id="ffb05-127">例如，可以使用 [Supervisor](http://supervisord.org/) 或类似的工具处理在单个容器内启动多个进程的情况。</span><span class="sxs-lookup"><span data-stu-id="ffb05-127">For example, you can use [Supervisor](http://supervisord.org/) or a similar tool to take care of launching multiple processes inside a single container.</span></span> <span data-ttu-id="ffb05-128">但是，尽管可以找到用于在每个容器中承载多个进程的体系结构，但这种方法并不常见。</span><span class="sxs-lookup"><span data-stu-id="ffb05-128">However, even though you can find architectures that hold multiple processes per container, that approach it is not very common.</span></span>
 
 
 >[!div class="step-by-step"]
-[上一页] (../net-core-net-framework-containers/official-net-docker-images.md) [下一页] (containerize-monolithic-applications.md)
-
+<span data-ttu-id="ffb05-129">[上一页] (../net-core-net-framework-containers/official-net-docker-images.md) [下一页] (containerize-monolithic-applications.md)</span><span class="sxs-lookup"><span data-stu-id="ffb05-129">[Previous] (../net-core-net-framework-containers/official-net-docker-images.md) [Next] (containerize-monolithic-applications.md)</span></span>

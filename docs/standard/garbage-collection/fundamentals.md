@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="2a249-102">垃圾回收的基础</span><span class="sxs-lookup"><span data-stu-id="2a249-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="2a249-103"><a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。</span><span class="sxs-lookup"><span data-stu-id="2a249-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="2a249-104">它提供如下优点：</span><span class="sxs-lookup"><span data-stu-id="2a249-104">It provides the following benefits:</span></span>  
+<a name="top"></a> <span data-ttu-id="2a249-103">在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。</span><span class="sxs-lookup"><span data-stu-id="2a249-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="2a249-104">它提供如下优点：</span><span class="sxs-lookup"><span data-stu-id="2a249-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="2a249-105">使你可以在开发应用程序时不必释放内存。</span><span class="sxs-lookup"><span data-stu-id="2a249-105">Enables you to develop your application without having to free memory.</span></span>  
   

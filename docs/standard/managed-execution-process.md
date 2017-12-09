@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="4fcac-102">托管执行过程</span><span class="sxs-lookup"><span data-stu-id="4fcac-102">Managed Execution Process</span></span>
-<span data-ttu-id="4fcac-103"><a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：</span><span class="sxs-lookup"><span data-stu-id="4fcac-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a> <span data-ttu-id="4fcac-103">托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：</span><span class="sxs-lookup"><span data-stu-id="4fcac-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="4fcac-104">[选择编译器](#choosing_a_compiler)。</span><span class="sxs-lookup"><span data-stu-id="4fcac-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   
