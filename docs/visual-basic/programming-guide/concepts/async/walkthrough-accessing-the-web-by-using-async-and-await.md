@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="prerequisites"></a><span data-ttu-id="bb5cb-122">先决条件</span><span class="sxs-lookup"><span data-stu-id="bb5cb-122">Prerequisites</span></span>  
  <span data-ttu-id="bb5cb-123">计算机上必须安装 Visual Studio 2012 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="bb5cb-124">有关详细信息，请访问 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=235233)。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <span data-ttu-id="bb5cb-125"><a name="CreateWPFApp"></a> 创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bb5cb-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
+###  <a name="CreateWPFApp"></a> <span data-ttu-id="bb5cb-125">创建 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bb5cb-125">To create a WPF application</span></span>  
   
 1.  <span data-ttu-id="bb5cb-126">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-126">Start Visual Studio.</span></span>  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-131">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <span data-ttu-id="bb5cb-132"><a name="MainWindow"></a> 设计简单的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="bb5cb-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
+###  <a name="MainWindow"></a> <span data-ttu-id="bb5cb-132">设计简单的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="bb5cb-132">To design a simple WPF MainWindow</span></span>  
   
 1.  <span data-ttu-id="bb5cb-133">在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-145">有关 WPF XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <span data-ttu-id="bb5cb-146"><a name="AddRef"></a>添加引用</span><span class="sxs-lookup"><span data-stu-id="bb5cb-146"><a name="AddRef"></a> To add a reference</span></span>  
+###  <a name="AddRef"></a><span data-ttu-id="bb5cb-146">添加引用</span><span class="sxs-lookup"><span data-stu-id="bb5cb-146">To add a reference</span></span>  
   
 1.  <span data-ttu-id="bb5cb-147">在“解决方案资源管理器”中，突出显示项目的名称。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/21/2017
 6.  <span data-ttu-id="bb5cb-153">选择“确定”按钮关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <span data-ttu-id="bb5cb-154"><a name="ImportsState"></a>若要添加必要的 Imports 语句</span><span class="sxs-lookup"><span data-stu-id="bb5cb-154"><a name="ImportsState"></a> To add necessary Imports statements</span></span>  
+###  <a name="ImportsState"></a><span data-ttu-id="bb5cb-154">若要添加必要的 Imports 语句</span><span class="sxs-lookup"><span data-stu-id="bb5cb-154">To add necessary Imports statements</span></span>  
   
 1.  <span data-ttu-id="bb5cb-155">在**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <span data-ttu-id="bb5cb-157"><a name="synchronous"></a> 创建同步应用程序</span><span class="sxs-lookup"><span data-stu-id="bb5cb-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
+###  <a name="synchronous"></a> <span data-ttu-id="bb5cb-157">创建同步应用程序</span><span class="sxs-lookup"><span data-stu-id="bb5cb-157">To create a synchronous application</span></span>  
   
 1.  <span data-ttu-id="bb5cb-158">在设计窗口 MainWindow.xaml 中，双击**启动**按钮以创建`startButton_Click`将 MainWindow.xaml.vb 中的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
@@ -231,7 +231,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <span data-ttu-id="bb5cb-167"><a name="testSynch"></a> 测试同步解决方案</span><span class="sxs-lookup"><span data-stu-id="bb5cb-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
+###  <a name="testSynch"></a> <span data-ttu-id="bb5cb-167">测试同步解决方案</span><span class="sxs-lookup"><span data-stu-id="bb5cb-167">To test the synchronous solution</span></span>  
   
 1.  <span data-ttu-id="bb5cb-168">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -257,7 +257,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-170">请注意，显示计数需要几秒钟时间。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="bb5cb-171">与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="bb5cb-172">因此，选择“启动”按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="bb5cb-173">在字节计数开始显示之前，这些操作都会失败。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="bb5cb-174">如果网站没有响应，将不会指示哪个网站失败。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="bb5cb-175">甚至停止等待和关闭程序也会很困难。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <span data-ttu-id="bb5cb-176"><a name="GetURLContents"></a> 将 GetURLContents 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
+###  <a name="GetURLContents"></a> <span data-ttu-id="bb5cb-176">将 GetURLContents 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-176">To convert GetURLContents to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="bb5cb-177">要将同步解决方案转换为异步解决方案，最佳着手点在 `GetURLContents` 中，因为对 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 的调用以及对 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的调用是应用程序访问 Web 的位置。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="bb5cb-178">.NET Framework 提供两种方法的异步版本，这让转换变得轻松。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
@@ -339,7 +339,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-220">进行这几处更改后，`GetURLContents` 到异步方法的转换完成。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <span data-ttu-id="bb5cb-221"><a name="SumPageSizes"></a> 将 SumPageSizes 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
+###  <a name="SumPageSizes"></a> <span data-ttu-id="bb5cb-221">将 SumPageSizes 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-221">To convert SumPageSizes to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="bb5cb-222">为 `SumPageSizes` 重复之前过程中的步骤。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="bb5cb-223">首先，将对 `GetURLContents` 的调用更改为异步调用。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
@@ -379,7 +379,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-235">从 `SumPageSizes` 到 `SumPageSizesAsync` 的转换完成。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-235">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <span data-ttu-id="bb5cb-236"><a name="startButton"></a> 将 startButton_Click 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-236"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
+###  <a name="startButton"></a> <span data-ttu-id="bb5cb-236">将 startButton_Click 转换为异步方法</span><span class="sxs-lookup"><span data-stu-id="bb5cb-236">To convert startButton_Click to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="bb5cb-237">在事件处理程序中，将调用的方法的名称从 `SumPageSizes` 更改为 `SumPageSizesAsync`（如果尚未执行此操作）。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-237">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
@@ -425,7 +425,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="bb5cb-249">项目从同步处理到异步处理的转换完成。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-249">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <span data-ttu-id="bb5cb-250"><a name="testAsynch"></a> 测试异步解决方案</span><span class="sxs-lookup"><span data-stu-id="bb5cb-250"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
+###  <a name="testAsynch"></a> <span data-ttu-id="bb5cb-250">测试异步解决方案</span><span class="sxs-lookup"><span data-stu-id="bb5cb-250">To test the asynchronous solution</span></span>  
   
 1.  <span data-ttu-id="bb5cb-251">按 F5 键以运行程序，然后选择 **“启动”** 按钮。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-251">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -436,7 +436,7 @@ ms.lasthandoff: 11/21/2017
     -   <span data-ttu-id="bb5cb-259">最重要的是，UI 线程在下载过程中未被阻止。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-259">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="bb5cb-260">在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-260">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="bb5cb-261">如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-261">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <span data-ttu-id="bb5cb-262"><a name="GetURLContentsAsync"></a> 使用 .NET Framework 方法替换方法 GetURLContentsAsync</span><span class="sxs-lookup"><span data-stu-id="bb5cb-262"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
+###  <a name="GetURLContentsAsync"></a> <span data-ttu-id="bb5cb-262">使用 .NET Framework 方法替换方法 GetURLContentsAsync</span><span class="sxs-lookup"><span data-stu-id="bb5cb-262">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
 1.  <span data-ttu-id="bb5cb-263">.NET Framework 4.5 提供可供你使用的许多异步方法。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-263">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="bb5cb-264">其中一个是 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>，它可以执行本演练所需的操作。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-264">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="bb5cb-265">你可以使用它来替代你在早前过程中创建的 `GetURLContentsAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-265">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
@@ -461,7 +461,7 @@ ms.lasthandoff: 11/21/2017
   
      <span data-ttu-id="bb5cb-271">此版本的项目的行为应与“测试异步解决方案”过程描述的行为匹配，且你的工作量应该更少。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-271">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <span data-ttu-id="bb5cb-272"><a name="BKMK_CompleteCodeExamples"></a> 示例</span><span class="sxs-lookup"><span data-stu-id="bb5cb-272"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+##  <a name="BKMK_CompleteCodeExamples"></a> <span data-ttu-id="bb5cb-272">示例</span><span class="sxs-lookup"><span data-stu-id="bb5cb-272">Example</span></span>  
  <span data-ttu-id="bb5cb-273">下列代码包含使用你编写的异步 `GetURLContentsAsync` 方法从同步解决方案转换为异步解决方案的完整示例。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-273">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="bb5cb-274">请注意，它与原始同步解决方案十分类似。</span><span class="sxs-lookup"><span data-stu-id="bb5cb-274">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```vb  

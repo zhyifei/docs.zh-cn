@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [<span data-ttu-id="da0b4-108">Visual Basic 属性</span><span class="sxs-lookup"><span data-stu-id="da0b4-108">Visual Basic Attributes</span></span>](#VB)  
   
-##  <span data-ttu-id="da0b4-109"><a name="Global"></a> 全局特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-109"><a name="Global"></a> Global Attributes</span></span>  
+##  <a name="Global"></a> <span data-ttu-id="da0b4-109">全局特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-109">Global Attributes</span></span>  
  <span data-ttu-id="da0b4-110">大多数特性应用于特定语言元素，如类或方法；但是，一些特性是全局特性 - 它们应用于整个程序集或模块。</span><span class="sxs-lookup"><span data-stu-id="da0b4-110">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="da0b4-111">例如，<xref:System.Reflection.AssemblyVersionAttribute> 属性可用于将版本信息嵌入程序集，如下所示：</span><span class="sxs-lookup"><span data-stu-id="da0b4-111">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```vb  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="da0b4-153">定义为程序集清单指定程序集配置（如零售或调试）的自定义属性。</span><span class="sxs-lookup"><span data-stu-id="da0b4-153">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="da0b4-154">定义程序集清单的友好默认别名</span><span class="sxs-lookup"><span data-stu-id="da0b4-154">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <span data-ttu-id="da0b4-155"><a name="Obsolete"></a> Obsolete 特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-155"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+##  <a name="Obsolete"></a> <span data-ttu-id="da0b4-155">Obsolete 特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-155">Obsolete Attribute</span></span>  
  <span data-ttu-id="da0b4-156">`Obsolete` 特性将程序实体标记为不再推荐使用。</span><span class="sxs-lookup"><span data-stu-id="da0b4-156">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="da0b4-157">每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。</span><span class="sxs-lookup"><span data-stu-id="da0b4-157">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="da0b4-158">例如：</span><span class="sxs-lookup"><span data-stu-id="da0b4-158">For example:</span></span>  
   
 ```vb  
@@ -125,7 +125,7 @@ b.NewMethod()
   
  <span data-ttu-id="da0b4-166">`Obsolete` 特性是一次性特性，可以应用于任何允许特性的实体。</span><span class="sxs-lookup"><span data-stu-id="da0b4-166">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="da0b4-167">`Obsolete` 是 <xref:System.ObsoleteAttribute> 的别名。</span><span class="sxs-lookup"><span data-stu-id="da0b4-167">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <span data-ttu-id="da0b4-168"><a name="Conditional"></a> Conditional 特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-168"><a name="Conditional"></a> Conditional Attribute</span></span>  
+##  <a name="Conditional"></a> <span data-ttu-id="da0b4-168">Conditional 特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-168">Conditional Attribute</span></span>  
  <span data-ttu-id="da0b4-169">`Conditional` 特性使得方法执行依赖于预处理标识符。</span><span class="sxs-lookup"><span data-stu-id="da0b4-169">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="da0b4-170">`Conditional` 属性是 <xref:System.Diagnostics.ConditionalAttribute> 的别名，可以应用于方法或特性类。</span><span class="sxs-lookup"><span data-stu-id="da0b4-170">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
  <span data-ttu-id="da0b4-171">在此示例中，`Conditional` 应用于启用或禁用显示特定于程序的诊断信息的方法：</span><span class="sxs-lookup"><span data-stu-id="da0b4-171">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
@@ -218,7 +218,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <span data-ttu-id="da0b4-186"><a name="CallerInfo"></a>调用方信息特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-186"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+##  <a name="CallerInfo"></a><span data-ttu-id="da0b4-186">调用方信息特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-186">Caller Info Attributes</span></span>  
  <span data-ttu-id="da0b4-187">通过使用调用方信息特性，可获取有关方法的调用方的信息。</span><span class="sxs-lookup"><span data-stu-id="da0b4-187">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="da0b4-188">可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。</span><span class="sxs-lookup"><span data-stu-id="da0b4-188">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
  <span data-ttu-id="da0b4-189">若要获取成员调用方信息，可以使用应用于可选参数的特性。</span><span class="sxs-lookup"><span data-stu-id="da0b4-189">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="da0b4-190">每个可选参数指定一个默认值。</span><span class="sxs-lookup"><span data-stu-id="da0b4-190">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="da0b4-191">下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：</span><span class="sxs-lookup"><span data-stu-id="da0b4-191">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
@@ -231,7 +231,7 @@ End Class
   
  <span data-ttu-id="da0b4-200">有关调用方信息特性的详细信息，请参阅[调用方信息 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。</span><span class="sxs-lookup"><span data-stu-id="da0b4-200">For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span></span>  
   
-##  <span data-ttu-id="da0b4-201"><a name="VB"></a>Visual Basic 属性</span><span class="sxs-lookup"><span data-stu-id="da0b4-201"><a name="VB"></a> Visual Basic Attributes</span></span>  
+##  <a name="VB"></a><span data-ttu-id="da0b4-201">Visual Basic 属性</span><span class="sxs-lookup"><span data-stu-id="da0b4-201">Visual Basic Attributes</span></span>  
  <span data-ttu-id="da0b4-202">下表列出了特定于 Visual Basic 的特性。</span><span class="sxs-lookup"><span data-stu-id="da0b4-202">The following table lists the attributes that are specific to Visual Basic.</span></span>  
   
 |<span data-ttu-id="da0b4-203">特性</span><span class="sxs-lookup"><span data-stu-id="da0b4-203">Attribute</span></span>|<span data-ttu-id="da0b4-204">用途</span><span class="sxs-lookup"><span data-stu-id="da0b4-204">Purpose</span></span>|  

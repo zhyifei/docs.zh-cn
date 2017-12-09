@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="596e6-215">对象初始值设定项：命名类型和匿名类型</span><span class="sxs-lookup"><span data-stu-id="596e6-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="596e6-216"><a name="Static"></a>共享的类和成员</span><span class="sxs-lookup"><span data-stu-id="596e6-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="596e6-216">共享的类和成员</span><span class="sxs-lookup"><span data-stu-id="596e6-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="596e6-217">共享的类成员是属性、 过程或共享的类的所有实例的字段。</span><span class="sxs-lookup"><span data-stu-id="596e6-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="596e6-218">若要定义的共享的成员：</span><span class="sxs-lookup"><span data-stu-id="596e6-218">To define a shared member:</span></span>  
