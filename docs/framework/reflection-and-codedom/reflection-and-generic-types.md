@@ -33,7 +33,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-and-generic-types"></a><span data-ttu-id="278dd-102">反射类型和泛型类型</span><span class="sxs-lookup"><span data-stu-id="278dd-102">Reflection and Generic Types</span></span>
-<span data-ttu-id="278dd-103"><a name="top"></a> 从反射的角度来说，泛型类型和普通类型之间的区别在于泛型类型具有与之关联的一组类型形参（若是泛型类型定义）或类型实参（若是构造类型）。</span><span class="sxs-lookup"><span data-stu-id="278dd-103"><a name="top"></a> From the point of view of reflection, the difference between a generic type and an ordinary type is that a generic type has associated with it a set of type parameters (if it is a generic type definition) or type arguments (if it is a constructed type).</span></span> <span data-ttu-id="278dd-104">泛型方法和普通方法以相同方式互不相同。</span><span class="sxs-lookup"><span data-stu-id="278dd-104">A generic method differs from an ordinary method in the same way.</span></span>  
+<a name="top"></a> <span data-ttu-id="278dd-103">从反射的角度来说，泛型类型和普通类型之间的区别在于泛型类型具有与之关联的一组类型形参（若是泛型类型定义）或类型实参（若是构造类型）。</span><span class="sxs-lookup"><span data-stu-id="278dd-103">From the point of view of reflection, the difference between a generic type and an ordinary type is that a generic type has associated with it a set of type parameters (if it is a generic type definition) or type arguments (if it is a constructed type).</span></span> <span data-ttu-id="278dd-104">泛型方法和普通方法以相同方式互不相同。</span><span class="sxs-lookup"><span data-stu-id="278dd-104">A generic method differs from an ordinary method in the same way.</span></span>  
   
  <span data-ttu-id="278dd-105">有两个关键点可了解反射如何处理泛型类型和方法：</span><span class="sxs-lookup"><span data-stu-id="278dd-105">There are two keys to understanding how reflection handles generic types and methods:</span></span>  
   

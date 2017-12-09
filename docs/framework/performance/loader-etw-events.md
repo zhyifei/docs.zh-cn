@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="loader-etw-events"></a><span data-ttu-id="ffb1d-102">加载程序 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ffb1d-102">Loader ETW Events</span></span>
-<span data-ttu-id="ffb1d-103"><a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
+<a name="top"></a> <span data-ttu-id="ffb1d-103">这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-103">These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
  <span data-ttu-id="ffb1d-104">所有加载程序事件均在 `LoaderKeyword` (0x8) 关键字下引发。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="ffb1d-105">`DCStart` 和 `DCEnd` 事件在 `LoaderRundownKeyword` (0x8) 下引发（启用了 `StartRundown`/`EndRundown`）。</span><span class="sxs-lookup"><span data-stu-id="ffb1d-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="ffb1d-106">（有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）</span><span class="sxs-lookup"><span data-stu-id="ffb1d-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   

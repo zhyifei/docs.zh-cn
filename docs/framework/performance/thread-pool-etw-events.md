@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="66da8-102">线程池 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="66da8-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="66da8-103"><a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。</span><span class="sxs-lookup"><span data-stu-id="66da8-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="66da8-103">这些事件收集有关工作线程和 I/O 线程的信息。</span><span class="sxs-lookup"><span data-stu-id="66da8-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="66da8-104">存在两组线程池事件：</span><span class="sxs-lookup"><span data-stu-id="66da8-104">There are two groups of thread pool events:</span></span>  
   

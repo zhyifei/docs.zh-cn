@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="garbage-collection-etw-events"></a><span data-ttu-id="e88fb-102">垃圾回收 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="e88fb-102">Garbage Collection ETW Events</span></span>
-<span data-ttu-id="e88fb-103"><a name="top"></a> 这些事件可收集有关垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="e88fb-103"><a name="top"></a> These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="e88fb-104">它们可帮助进行诊断和调试，包括确定垃圾回收执行的次数、垃圾回收期间释放的内存量等。</span><span class="sxs-lookup"><span data-stu-id="e88fb-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
+<a name="top"></a> <span data-ttu-id="e88fb-103">这些事件可收集有关垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="e88fb-103">These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="e88fb-104">它们可帮助进行诊断和调试，包括确定垃圾回收执行的次数、垃圾回收期间释放的内存量等。</span><span class="sxs-lookup"><span data-stu-id="e88fb-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
   
  <span data-ttu-id="e88fb-105">此类别包含以下事件：</span><span class="sxs-lookup"><span data-stu-id="e88fb-105">This category consists of the following events:</span></span>  
   

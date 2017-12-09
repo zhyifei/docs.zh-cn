@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a><span data-ttu-id="5d5c6-102">应用程序域资源监视 (ARM) ETW 事件</span><span class="sxs-lookup"><span data-stu-id="5d5c6-102">Application Domain Resource Monitoring (ARM) ETW Events</span></span>
-<span data-ttu-id="5d5c6-103"><a name="top"></a> 这些事件提供有关应用程序域的状态的详细诊断信息。</span><span class="sxs-lookup"><span data-stu-id="5d5c6-103"><a name="top"></a> These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="5d5c6-104">你可以使用这些事件，或使用应用程序域资源监视 (ARM) 功能来获取相同的信息。</span><span class="sxs-lookup"><span data-stu-id="5d5c6-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  
+<a name="top"></a> <span data-ttu-id="5d5c6-103">这些事件提供有关应用程序域的状态的详细诊断信息。</span><span class="sxs-lookup"><span data-stu-id="5d5c6-103">These events provide detailed diagnostic information about the state of an application domain.</span></span> <span data-ttu-id="5d5c6-104">你可以使用这些事件，或使用应用程序域资源监视 (ARM) 功能来获取相同的信息。</span><span class="sxs-lookup"><span data-stu-id="5d5c6-104">You can use these events or use the application domain resource monitoring (ARM) feature to obtain the same information.</span></span>  
   
  <span data-ttu-id="5d5c6-105">此类别包含以下事件：</span><span class="sxs-lookup"><span data-stu-id="5d5c6-105">This category consists of the following events:</span></span>  
   
