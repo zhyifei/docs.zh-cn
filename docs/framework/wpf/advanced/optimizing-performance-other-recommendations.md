@@ -29,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="124cc-102">优化性能：其他建议</span><span class="sxs-lookup"><span data-stu-id="124cc-102">Optimizing Performance: Other Recommendations</span></span>
-<span data-ttu-id="124cc-103"><a name="introduction"></a>本主题提供[优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。</span><span class="sxs-lookup"><span data-stu-id="124cc-103"><a name="introduction"></a> This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
+<a name="introduction"></a><span data-ttu-id="124cc-103">本主题提供[优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。</span><span class="sxs-lookup"><span data-stu-id="124cc-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
   
  <span data-ttu-id="124cc-104">本主题包含以下各节：</span><span class="sxs-lookup"><span data-stu-id="124cc-104">This topic contains the following sections:</span></span>  
   

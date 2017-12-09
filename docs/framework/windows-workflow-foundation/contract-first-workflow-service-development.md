@@ -41,7 +41,7 @@ ms.lasthandoff: 12/02/2017
   
     -   [<span data-ttu-id="08157-117">生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="08157-117">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <span data-ttu-id="08157-118"><a name="MappingAttributes"></a>将服务协定特性映射到的工作流属性</span><span class="sxs-lookup"><span data-stu-id="08157-118"><a name="MappingAttributes"></a> Mapping service contract attributes to workflow attributes</span></span>  
+##  <a name="MappingAttributes"></a><span data-ttu-id="08157-118">将服务协定特性映射到的工作流属性</span><span class="sxs-lookup"><span data-stu-id="08157-118">Mapping service contract attributes to workflow attributes</span></span>  
  <span data-ttu-id="08157-119">下面几节中的表指定不同 WCF 特性和属性，以及它们如何映射到协定优先工作流中的消息活动和属性。</span><span class="sxs-lookup"><span data-stu-id="08157-119">The tables in the following sections specify the different WCF attributes and properties and how they are mapped to the messaging activities and properties in a contract-first workflow.</span></span>  
   
 -   [<span data-ttu-id="08157-120">服务协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-120">Service Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="08157-124">错误协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-124">Fault Contract Attributes</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <span data-ttu-id="08157-125"><a name="ServiceContract"></a>服务协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-125"><a name="ServiceContract"></a> Service Contract Attributes</span></span>  
+###  <a name="ServiceContract"></a><span data-ttu-id="08157-125">服务协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-125">Service Contract Attributes</span></span>  
   
 |<span data-ttu-id="08157-126">属性名</span><span class="sxs-lookup"><span data-stu-id="08157-126">Property Name</span></span>|<span data-ttu-id="08157-127">支持</span><span class="sxs-lookup"><span data-stu-id="08157-127">Supported</span></span>|<span data-ttu-id="08157-128">描述</span><span class="sxs-lookup"><span data-stu-id="08157-128">Description</span></span>|<span data-ttu-id="08157-129">WF 验证</span><span class="sxs-lookup"><span data-stu-id="08157-129">WF Validation</span></span>|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/02/2017
   
  <span data-ttu-id="08157-163">在此处插入小节正文。</span><span class="sxs-lookup"><span data-stu-id="08157-163">Insert subsection body here.</span></span>  
   
-###  <span data-ttu-id="08157-164"><a name="OperationContract"></a>操作协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-164"><a name="OperationContract"></a> Operation Contract Attributes</span></span>  
+###  <a name="OperationContract"></a><span data-ttu-id="08157-164">操作协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-164">Operation Contract Attributes</span></span>  
   
 |<span data-ttu-id="08157-165">属性名</span><span class="sxs-lookup"><span data-stu-id="08157-165">Property Name</span></span>|<span data-ttu-id="08157-166">支持</span><span class="sxs-lookup"><span data-stu-id="08157-166">Supported</span></span>|<span data-ttu-id="08157-167">描述</span><span class="sxs-lookup"><span data-stu-id="08157-167">Description</span></span>|<span data-ttu-id="08157-168">WF 验证</span><span class="sxs-lookup"><span data-stu-id="08157-168">WF Validation</span></span>|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/02/2017
 |<span data-ttu-id="08157-201">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="08157-201">ReplyAction</span></span>|<span data-ttu-id="08157-202">是</span><span class="sxs-lookup"><span data-stu-id="08157-202">Yes</span></span>|<span data-ttu-id="08157-203">获取或设置用于该操作答复消息的 SOAP 操作的值。</span><span class="sxs-lookup"><span data-stu-id="08157-203">Gets or sets the value of the SOAP action for the reply message of the operation.</span></span>|<span data-ttu-id="08157-204">SendReply.Action 应当匹配。</span><span class="sxs-lookup"><span data-stu-id="08157-204">SendReply.Action should match.</span></span>|  
 |<span data-ttu-id="08157-205">TypeId</span><span class="sxs-lookup"><span data-stu-id="08157-205">TypeId</span></span>|<span data-ttu-id="08157-206">No</span><span class="sxs-lookup"><span data-stu-id="08157-206">No</span></span>|<span data-ttu-id="08157-207">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="08157-207">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="08157-208">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="08157-208">(Inherited from Attribute.)</span></span>|<span data-ttu-id="08157-209">(N/A)</span><span class="sxs-lookup"><span data-stu-id="08157-209">(N/A)</span></span>|  
   
-###  <span data-ttu-id="08157-210"><a name="MessageContract"></a>消息协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-210"><a name="MessageContract"></a> Message Contract Attributes</span></span>  
+###  <a name="MessageContract"></a><span data-ttu-id="08157-210">消息协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-210">Message Contract Attributes</span></span>  
   
 |<span data-ttu-id="08157-211">属性名</span><span class="sxs-lookup"><span data-stu-id="08157-211">Property Name</span></span>|<span data-ttu-id="08157-212">支持</span><span class="sxs-lookup"><span data-stu-id="08157-212">Supported</span></span>|<span data-ttu-id="08157-213">描述</span><span class="sxs-lookup"><span data-stu-id="08157-213">Description</span></span>|<span data-ttu-id="08157-214">WF 验证</span><span class="sxs-lookup"><span data-stu-id="08157-214">WF Validation</span></span>|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/02/2017
 |<span data-ttu-id="08157-232">WrapperName</span><span class="sxs-lookup"><span data-stu-id="08157-232">WrapperName</span></span>|<span data-ttu-id="08157-233">是</span><span class="sxs-lookup"><span data-stu-id="08157-233">Yes</span></span>|<span data-ttu-id="08157-234">获取或设置消息正文的包装元素名称。</span><span class="sxs-lookup"><span data-stu-id="08157-234">Gets or sets the name of the wrapper element of the message body.</span></span>|<span data-ttu-id="08157-235">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="08157-235">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
 |<span data-ttu-id="08157-236">WrapperNamespace</span><span class="sxs-lookup"><span data-stu-id="08157-236">WrapperNamespace</span></span>|<span data-ttu-id="08157-237">No</span><span class="sxs-lookup"><span data-stu-id="08157-237">No</span></span>|<span data-ttu-id="08157-238">获取或设置消息正文包装元素的命名空间。</span><span class="sxs-lookup"><span data-stu-id="08157-238">Gets or sets the namespace of the message body wrapper element.</span></span>|<span data-ttu-id="08157-239">(N/A)</span><span class="sxs-lookup"><span data-stu-id="08157-239">(N/A)</span></span>|  
   
-###  <span data-ttu-id="08157-240"><a name="DataContract"></a>数据协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-240"><a name="DataContract"></a> Data Contract Attributes</span></span>  
+###  <a name="DataContract"></a><span data-ttu-id="08157-240">数据协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-240">Data Contract Attributes</span></span>  
   
 |<span data-ttu-id="08157-241">属性名</span><span class="sxs-lookup"><span data-stu-id="08157-241">Property Name</span></span>|<span data-ttu-id="08157-242">支持</span><span class="sxs-lookup"><span data-stu-id="08157-242">Supported</span></span>|<span data-ttu-id="08157-243">描述</span><span class="sxs-lookup"><span data-stu-id="08157-243">Description</span></span>|<span data-ttu-id="08157-244">WF 验证</span><span class="sxs-lookup"><span data-stu-id="08157-244">WF Validation</span></span>|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/02/2017
 |<span data-ttu-id="08157-253">命名空间</span><span class="sxs-lookup"><span data-stu-id="08157-253">Namespace</span></span>|<span data-ttu-id="08157-254">是</span><span class="sxs-lookup"><span data-stu-id="08157-254">Yes</span></span>|<span data-ttu-id="08157-255">获取或设置类型的数据协定的命名空间。</span><span class="sxs-lookup"><span data-stu-id="08157-255">Gets or sets the namespace for the data contract for the type.</span></span>|<span data-ttu-id="08157-256">无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。</span><span class="sxs-lookup"><span data-stu-id="08157-256">No validation (Receive.Content and SendReply.Content must match the message contract type).</span></span>|  
 |<span data-ttu-id="08157-257">TypeId</span><span class="sxs-lookup"><span data-stu-id="08157-257">TypeId</span></span>|<span data-ttu-id="08157-258">No</span><span class="sxs-lookup"><span data-stu-id="08157-258">No</span></span>|<span data-ttu-id="08157-259">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="08157-259">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="08157-260">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="08157-260">(Inherited from Attribute.)</span></span>|<span data-ttu-id="08157-261">(N/A)</span><span class="sxs-lookup"><span data-stu-id="08157-261">(N/A)</span></span>|  
   
-###  <span data-ttu-id="08157-262"><a name="FaultContract"></a>错误协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-262"><a name="FaultContract"></a> Fault Contract Attributes</span></span>  
+###  <a name="FaultContract"></a><span data-ttu-id="08157-262">错误协定特性</span><span class="sxs-lookup"><span data-stu-id="08157-262">Fault Contract Attributes</span></span>  
   
 |<span data-ttu-id="08157-263">属性名</span><span class="sxs-lookup"><span data-stu-id="08157-263">Property Name</span></span>|<span data-ttu-id="08157-264">支持</span><span class="sxs-lookup"><span data-stu-id="08157-264">Supported</span></span>|<span data-ttu-id="08157-265">描述</span><span class="sxs-lookup"><span data-stu-id="08157-265">Description</span></span>|<span data-ttu-id="08157-266">WF 验证</span><span class="sxs-lookup"><span data-stu-id="08157-266">WF Validation</span></span>|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -116,19 +116,19 @@ ms.lasthandoff: 12/02/2017
 |<span data-ttu-id="08157-287">ProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="08157-287">ProtectionLevel</span></span>|<span data-ttu-id="08157-288">No</span><span class="sxs-lookup"><span data-stu-id="08157-288">No</span></span>|<span data-ttu-id="08157-289">指定 SOAP 错误要求的绑定的保护级别。</span><span class="sxs-lookup"><span data-stu-id="08157-289">Specifies the level of protection the SOAP fault requires from the binding.</span></span>|<span data-ttu-id="08157-290">(N/A)</span><span class="sxs-lookup"><span data-stu-id="08157-290">(N/A)</span></span>|  
 |<span data-ttu-id="08157-291">TypeId</span><span class="sxs-lookup"><span data-stu-id="08157-291">TypeId</span></span>|<span data-ttu-id="08157-292">No</span><span class="sxs-lookup"><span data-stu-id="08157-292">No</span></span>|<span data-ttu-id="08157-293">在派生类中实现时，获取此特性的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="08157-293">When implemented in a derived class, gets a unique identifier for this Attribute.</span></span> <span data-ttu-id="08157-294">（从特性继承。）</span><span class="sxs-lookup"><span data-stu-id="08157-294">(Inherited from Attribute.)</span></span>|<span data-ttu-id="08157-295">(N/A)</span><span class="sxs-lookup"><span data-stu-id="08157-295">(N/A)</span></span>|  
   
-##  <span data-ttu-id="08157-296"><a name="AdditionalSupport"></a>其他支持和实现信息</span><span class="sxs-lookup"><span data-stu-id="08157-296"><a name="AdditionalSupport"></a> Additional Support and Implementation Information</span></span>  
+##  <a name="AdditionalSupport"></a><span data-ttu-id="08157-296">其他支持和实现信息</span><span class="sxs-lookup"><span data-stu-id="08157-296">Additional Support and Implementation Information</span></span>  
   
 -   [<span data-ttu-id="08157-297">不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="08157-297">Unsupported service contract features</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [<span data-ttu-id="08157-298">生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="08157-298">Generation of configured messaging activities</span></span>](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <span data-ttu-id="08157-299"><a name="UnsupportedFeatures"></a>不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="08157-299"><a name="UnsupportedFeatures"></a> Unsupported service contract features</span></span>  
+###  <a name="UnsupportedFeatures"></a><span data-ttu-id="08157-299">不支持的服务协定功能</span><span class="sxs-lookup"><span data-stu-id="08157-299">Unsupported service contract features</span></span>  
   
 -   <span data-ttu-id="08157-300">不支持在协定中用 TPL（任务并行库）任务。</span><span class="sxs-lookup"><span data-stu-id="08157-300">Use of TPL (Task Parallel Library) Tasks in contracts is not supported.</span></span>  
   
 -   <span data-ttu-id="08157-301">不支持服务协定的继承。</span><span class="sxs-lookup"><span data-stu-id="08157-301">Inheritance in Service Contracts is not supported.</span></span>  
   
-###  <span data-ttu-id="08157-302"><a name="ActivityGeneration"></a>生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="08157-302"><a name="ActivityGeneration"></a> Generation of configured messaging activities</span></span>  
+###  <a name="ActivityGeneration"></a><span data-ttu-id="08157-302">生成的配置的消息传递活动</span><span class="sxs-lookup"><span data-stu-id="08157-302">Generation of configured messaging activities</span></span>  
  <span data-ttu-id="08157-303">向 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动加入两个公共静态方法，以支持在使用协定优先工作流服务时生成预配置消息活动。</span><span class="sxs-lookup"><span data-stu-id="08157-303">Two public static methods are added to the <xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.SendReply> activities to support the generation of pre-configured message activities when using contract-first workflow services.</span></span>  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

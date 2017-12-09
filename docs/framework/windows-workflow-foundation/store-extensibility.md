@@ -117,7 +117,7 @@ ms.lasthandoff: 12/02/2017
     go  
     ```  
   
-##  <span data-ttu-id="c4dad-119"><a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] 视图</span><span class="sxs-lookup"><span data-stu-id="c4dad-119"><a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
+##  <a name="InstancePromotedProperties"></a><span data-ttu-id="c4dad-119">[System.Activities.DurableInstancing.InstancePromotedProperties] 视图</span><span class="sxs-lookup"><span data-stu-id="c4dad-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
 |<span data-ttu-id="c4dad-120">列名</span><span class="sxs-lookup"><span data-stu-id="c4dad-120">Column Name</span></span>|<span data-ttu-id="c4dad-121">列名称</span><span class="sxs-lookup"><span data-stu-id="c4dad-121">Column Type</span></span>|<span data-ttu-id="c4dad-122">描述</span><span class="sxs-lookup"><span data-stu-id="c4dad-122">Description</span></span>|  
 |-----------------|-----------------|-----------------|  

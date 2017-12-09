@@ -37,7 +37,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="f0bab-116">若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f0bab-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <span data-ttu-id="f0bab-117"><a name="BKMK_CustomTrackingParticipant"></a>若要创建自定义跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="f0bab-117"><a name="BKMK_CustomTrackingParticipant"></a> To create the custom tracking participant</span></span>  
+###  <a name="BKMK_CustomTrackingParticipant"></a><span data-ttu-id="f0bab-117">若要创建自定义跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="f0bab-117">To create the custom tracking participant</span></span>  
   
 1.  <span data-ttu-id="f0bab-118">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**添加**，**类**。</span><span class="sxs-lookup"><span data-stu-id="f0bab-118">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="f0bab-119">类型`StatusTrackingParticipant`到**名称**框中，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="f0bab-119">Type `StatusTrackingParticipant` into the **Name** box, and click **Add**.</span></span>  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="f0bab-127">未指定跟踪配置文件时，使用默认跟踪配置文件。</span><span class="sxs-lookup"><span data-stu-id="f0bab-127">When no tracking profile is specified, the default tracking profile is used.</span></span> <span data-ttu-id="f0bab-128">使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f0bab-128">When the default tracking profile is used, tracking records are emitted for all `ActivityStates`.</span></span> <span data-ttu-id="f0bab-129">因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。</span><span class="sxs-lookup"><span data-stu-id="f0bab-129">Because we only need to capture the text one time during the lifecycle of the `WriteLine` activity, we only extract the text from the `ActivityStates.Executing` state.</span></span> <span data-ttu-id="f0bab-130">在[创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，跟踪配置文件会创建一个仅指定`WriteLine``ActivityStates.Executing`发出跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="f0bab-130">In [To create the tracking profile and register the tracking participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), a tracking profile is created that specifies that only `WriteLine` `ActivityStates.Executing` tracking records are emitted.</span></span>  
   
-###  <span data-ttu-id="f0bab-131"><a name="BKMK_TrackingProfile"></a>创建跟踪配置文件并注册跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="f0bab-131"><a name="BKMK_TrackingProfile"></a> To create the tracking profile and register the tracking participant</span></span>  
+###  <a name="BKMK_TrackingProfile"></a><span data-ttu-id="f0bab-131">创建跟踪配置文件并注册跟踪参与者</span><span class="sxs-lookup"><span data-stu-id="f0bab-131">To create the tracking profile and register the tracking participant</span></span>  
   
 1.  <span data-ttu-id="f0bab-132">右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="f0bab-132">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 12/02/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <span data-ttu-id="f0bab-137"><a name="BKMK_DisplayTracking"></a>若要显示的跟踪信息</span><span class="sxs-lookup"><span data-stu-id="f0bab-137"><a name="BKMK_DisplayTracking"></a> To display the tracking information</span></span>  
+###  <a name="BKMK_DisplayTracking"></a><span data-ttu-id="f0bab-137">若要显示的跟踪信息</span><span class="sxs-lookup"><span data-stu-id="f0bab-137">To display the tracking information</span></span>  
   
 1.  <span data-ttu-id="f0bab-138">右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="f0bab-138">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="f0bab-142"><a name="BKMK_BuildAndRun"></a>若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f0bab-142"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="f0bab-142">若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f0bab-142">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="f0bab-143">按 Ctrl+Shift+B 生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="f0bab-143">Press Ctrl+Shift+B to build the application.</span></span>  
   

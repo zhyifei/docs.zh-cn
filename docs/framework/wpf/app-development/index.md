@@ -23,9 +23,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a><span data-ttu-id="296c2-102">应用程序开发</span><span class="sxs-lookup"><span data-stu-id="296c2-102">Application Development</span></span>
-<span data-ttu-id="296c2-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]是一个演示文稿框架，可用于开发以下类型的应用程序：</span><span class="sxs-lookup"><span data-stu-id="296c2-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
+<a name="introduction"></a>
+<span data-ttu-id="296c2-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]是一个演示文稿框架，可用于开发以下类型的应用程序：</span><span class="sxs-lookup"><span data-stu-id="296c2-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
   
 -   <span data-ttu-id="296c2-104">独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。</span><span class="sxs-lookup"><span data-stu-id="296c2-104">Standalone Applications (traditional style [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications built as executable assemblies that are installed to and run from the client computer).</span></span>  
   

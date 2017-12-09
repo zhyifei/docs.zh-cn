@@ -50,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  <span data-ttu-id="28d2d-119">入门教程中的每个步骤都依赖于前面的步骤。</span><span class="sxs-lookup"><span data-stu-id="28d2d-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="28d2d-120">如果未完成前面的步骤可以下载从本教程的完整的版本[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="28d2d-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-###  <span data-ttu-id="28d2d-121"><a name="BKMK_BackupCopy"></a>要制作 NumberGuessWorkflowActivities 项目的副本</span><span class="sxs-lookup"><span data-stu-id="28d2d-121"><a name="BKMK_BackupCopy"></a> To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+###  <a name="BKMK_BackupCopy"></a><span data-ttu-id="28d2d-121">要制作 NumberGuessWorkflowActivities 项目的副本</span><span class="sxs-lookup"><span data-stu-id="28d2d-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
 1.  <span data-ttu-id="28d2d-122">打开**WF45GettingStartedTutorial**中的解决方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]如果未打开。</span><span class="sxs-lookup"><span data-stu-id="28d2d-122">Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.</span></span>  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
 9. <span data-ttu-id="28d2d-135">重新打开**WF45GettingStartedTutorial**中的解决方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="28d2d-135">Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
-###  <span data-ttu-id="28d2d-136"><a name="BKMK_UpdateWorkflows"></a>更新工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-136"><a name="BKMK_UpdateWorkflows"></a> To update the workflows</span></span>  
+###  <a name="BKMK_UpdateWorkflows"></a><span data-ttu-id="28d2d-136">更新工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-136">To update the workflows</span></span>  
  <span data-ttu-id="28d2d-137">在本节中，将会更新工作流定义。</span><span class="sxs-lookup"><span data-stu-id="28d2d-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="28d2d-138">将会更新针对用户猜测提供反馈的两个 `WriteLine` 活动，并添加一个新的 `WriteLine` 活动，此活动提供猜测了数字之后有关该游戏的其他信息。</span><span class="sxs-lookup"><span data-stu-id="28d2d-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>  
   
-####  <span data-ttu-id="28d2d-139"><a name="BKMK_UpdateStateMachine"></a>更新 StateMachine 工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-139"><a name="BKMK_UpdateStateMachine"></a> To update the StateMachine workflow</span></span>  
+####  <a name="BKMK_UpdateStateMachine"></a><span data-ttu-id="28d2d-139">更新 StateMachine 工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-139">To update the StateMachine workflow</span></span>  
   
 1.  <span data-ttu-id="28d2d-140">在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**StateMachineNumberGuessWorkflow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="28d2d-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="28d2d-148"><a name="BKMK_UpdateFlowchart"></a>若要更新的流程图工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-148"><a name="BKMK_UpdateFlowchart"></a> To update the Flowchart workflow</span></span>  
+####  <a name="BKMK_UpdateFlowchart"></a><span data-ttu-id="28d2d-148">若要更新的流程图工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-148">To update the Flowchart workflow</span></span>  
   
 1.  <span data-ttu-id="28d2d-149">在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**FlowchartNumberGuessWorkflow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="28d2d-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="28d2d-155"><a name="BKMK_UpdateSequential"></a>若要更新的顺序工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-155"><a name="BKMK_UpdateSequential"></a> To update the Sequential workflow</span></span>  
+####  <a name="BKMK_UpdateSequential"></a><span data-ttu-id="28d2d-155">若要更新的顺序工作流</span><span class="sxs-lookup"><span data-stu-id="28d2d-155">To update the Sequential workflow</span></span>  
   
 1.  <span data-ttu-id="28d2d-156">在**解决方案资源管理器**下**NumberGuessWorkflowActivities**项目中，双击**SequentialNumberGuessWorkflow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="28d2d-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <span data-ttu-id="28d2d-161"><a name="BKMK_UpdateWorkflowVersionMap"></a>若要更新 WorkflowVersionMap 以包括以前的工作流版本</span><span class="sxs-lookup"><span data-stu-id="28d2d-161"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap to include the previous workflow versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="28d2d-161">若要更新 WorkflowVersionMap 以包括以前的工作流版本</span><span class="sxs-lookup"><span data-stu-id="28d2d-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>  
   
 1.  <span data-ttu-id="28d2d-162">双击**WorkflowVersionMap.cs** (或**WorkflowVersionMap.vb**) 下**NumberGuessWorkflowHost**项目以打开它。</span><span class="sxs-lookup"><span data-stu-id="28d2d-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
   
@@ -558,7 +558,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="28d2d-172"><a name="BKMK_BuildAndRun"></a>若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="28d2d-172"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="28d2d-172">若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="28d2d-172">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="28d2d-173">按 Ctrl+Shift+B 以生成应用程序，然后按 Ctrl+F5 启动该应用程序。</span><span class="sxs-lookup"><span data-stu-id="28d2d-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>  
   

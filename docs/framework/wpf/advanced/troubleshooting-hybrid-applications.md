@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="troubleshooting-hybrid-applications"></a><span data-ttu-id="de360-102">混合应用程序疑难解答</span><span class="sxs-lookup"><span data-stu-id="de360-102">Troubleshooting Hybrid Applications</span></span>
-<span data-ttu-id="de360-103"><a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="de360-103"><a name="introduction"></a> This topic lists some common problems that can occur when authoring hybrid applications, which use both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologies.</span></span>  
+<a name="introduction"></a><span data-ttu-id="de360-103">本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。</span><span class="sxs-lookup"><span data-stu-id="de360-103">This topic lists some common problems that can occur when authoring hybrid applications, which use both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologies.</span></span>  
   
 
   

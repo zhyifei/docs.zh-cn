@@ -25,7 +25,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="dependency-property-value-precedence"></a><span data-ttu-id="ca05b-102">依赖项属性值优先级</span><span class="sxs-lookup"><span data-stu-id="ca05b-102">Dependency Property Value Precedence</span></span>
-<span data-ttu-id="ca05b-103"><a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。</span><span class="sxs-lookup"><span data-stu-id="ca05b-103"><a name="introduction"></a> This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
+<a name="introduction"></a> <span data-ttu-id="ca05b-103">本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。</span><span class="sxs-lookup"><span data-stu-id="ca05b-103">This topic explains how the workings of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] property system can affect the value of a dependency property, and describes the precedence by which aspects of the property system apply to the effective value of a property.</span></span>  
     
   
 <a name="prerequisites"></a>   
