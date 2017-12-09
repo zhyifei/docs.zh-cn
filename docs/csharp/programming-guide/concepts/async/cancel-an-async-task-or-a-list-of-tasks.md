@@ -25,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <span data-ttu-id="93009-106">若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="93009-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <span data-ttu-id="93009-107"><a name="BKMK_CancelaTask"></a>取消任务</span><span class="sxs-lookup"><span data-stu-id="93009-107"><a name="BKMK_CancelaTask"></a> Cancel a Task</span></span>  
+##  <a name="BKMK_CancelaTask"></a><span data-ttu-id="93009-107">取消任务</span><span class="sxs-lookup"><span data-stu-id="93009-107">Cancel a Task</span></span>  
  <span data-ttu-id="93009-108">第一个示例将“取消”按钮与单个下载任务关联。</span><span class="sxs-lookup"><span data-stu-id="93009-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="93009-109">如果在应用程序下载内容时选择按钮，下载将取消。</span><span class="sxs-lookup"><span data-stu-id="93009-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="93009-110">下载示例</span><span class="sxs-lookup"><span data-stu-id="93009-110">Downloading the Example</span></span>  
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/21/2017
     Download canceled.  
     ```  
   
-##  <span data-ttu-id="93009-140"><a name="BKMK_CancelaListofTasks"></a>取消任务列表</span><span class="sxs-lookup"><span data-stu-id="93009-140"><a name="BKMK_CancelaListofTasks"></a> Cancel a List of Tasks</span></span>  
+##  <a name="BKMK_CancelaListofTasks"></a><span data-ttu-id="93009-140">取消任务列表</span><span class="sxs-lookup"><span data-stu-id="93009-140">Cancel a List of Tasks</span></span>  
  <span data-ttu-id="93009-141">通过将相同的 `CancellationTokenSource` 示例与每个任务关联，可以扩展先前的示例，从而取消多个任务。</span><span class="sxs-lookup"><span data-stu-id="93009-141">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="93009-142">如果选择“取消”按钮，则将取消所有尚未完成的任务。</span><span class="sxs-lookup"><span data-stu-id="93009-142">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="93009-143">下载示例</span><span class="sxs-lookup"><span data-stu-id="93009-143">Downloading the Example</span></span>  
@@ -259,7 +259,7 @@ ms.lasthandoff: 11/21/2017
     Downloads canceled.  
     ```  
   
-##  <span data-ttu-id="93009-164"><a name="BKMK_CompleteExamples"></a>完成示例</span><span class="sxs-lookup"><span data-stu-id="93009-164"><a name="BKMK_CompleteExamples"></a> Complete Examples</span></span>  
+##  <a name="BKMK_CompleteExamples"></a><span data-ttu-id="93009-164">完成示例</span><span class="sxs-lookup"><span data-stu-id="93009-164">Complete Examples</span></span>  
  <span data-ttu-id="93009-165">以下各部分包含每个前面示例的代码。</span><span class="sxs-lookup"><span data-stu-id="93009-165">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="93009-166">请注意，必须为 <xref:System.Net.Http> 添加引用。</span><span class="sxs-lookup"><span data-stu-id="93009-166">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
  <span data-ttu-id="93009-167">可以从 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)（异步示例：微调应用程序）下载这些项目。</span><span class="sxs-lookup"><span data-stu-id="93009-167">You can download the projects from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  

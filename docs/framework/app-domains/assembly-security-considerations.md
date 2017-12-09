@@ -33,7 +33,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="70bfa-102">程序集安全注意事项</span><span class="sxs-lookup"><span data-stu-id="70bfa-102">Assembly Security Considerations</span></span>
-<span data-ttu-id="70bfa-103"><a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。</span><span class="sxs-lookup"><span data-stu-id="70bfa-103"><a name="top"></a> When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="70bfa-104">是否将特定的权限授予程序集是基于证据的。</span><span class="sxs-lookup"><span data-stu-id="70bfa-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
+<a name="top"></a><span data-ttu-id="70bfa-103">在生成程序集时，可指定该程序集运行所需的一组权限。</span><span class="sxs-lookup"><span data-stu-id="70bfa-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="70bfa-104">是否将特定的权限授予程序集是基于证据的。</span><span class="sxs-lookup"><span data-stu-id="70bfa-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
   
  <span data-ttu-id="70bfa-105">使用证据有两种截然不同的方式：</span><span class="sxs-lookup"><span data-stu-id="70bfa-105">There are two distinct ways evidence is used:</span></span>  
   

@@ -72,4 +72,4 @@ ms.lasthandoff: 10/18/2017
 
 <span data-ttu-id="a3697-148">此规则值得注意的例外是 `new` 和 `run` 命令，因为它们未实现为 MSBuild 目标。</span><span class="sxs-lookup"><span data-stu-id="a3697-148">The notable exception to this rule are `new` and `run` commands, as they have not been implemented as MSBuild targets.</span></span>
 
-<span data-ttu-id="a3697-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="a3697-149"><a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>
+<a name="dotnet-restore-note"></a> <span data-ttu-id="a3697-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span><span class="sxs-lookup"><span data-stu-id="a3697-149">[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]</span></span>

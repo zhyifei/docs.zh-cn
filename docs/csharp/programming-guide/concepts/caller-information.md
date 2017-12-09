@@ -61,7 +61,7 @@ public void TraceMessage(string message,
   
  <span data-ttu-id="fed86-126">你可显式提供可选参数来控制调用方信息或隐藏调用方信息。</span><span class="sxs-lookup"><span data-stu-id="fed86-126">You can explicitly supply the optional arguments to control the caller information or to hide caller information.</span></span>  
   
-###  <span data-ttu-id="fed86-127"><a name="MEMBERNAMES"></a>成员名称</span><span class="sxs-lookup"><span data-stu-id="fed86-127"><a name="MEMBERNAMES"></a> Member Names</span></span>  
+###  <a name="MEMBERNAMES"></a><span data-ttu-id="fed86-127">成员名称</span><span class="sxs-lookup"><span data-stu-id="fed86-127">Member Names</span></span>  
  <span data-ttu-id="fed86-128">可以使用 `CallerMemberName` 特性来避免将成员名称指定为所调用的方法的 `String` 参数。</span><span class="sxs-lookup"><span data-stu-id="fed86-128">You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method.</span></span> <span data-ttu-id="fed86-129">通过使用这种技术，可以避免“重命名重构”不更改 `String` 值的问题。</span><span class="sxs-lookup"><span data-stu-id="fed86-129">By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values.</span></span> <span data-ttu-id="fed86-130">此好处对于以下任务特别有用：</span><span class="sxs-lookup"><span data-stu-id="fed86-130">This benefit is especially useful for the following tasks:</span></span>  
   
 -   <span data-ttu-id="fed86-131">使用跟踪和诊断例程。</span><span class="sxs-lookup"><span data-stu-id="fed86-131">Using tracing and diagnostic routines.</span></span>  

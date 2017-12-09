@@ -59,7 +59,7 @@ ms.lasthandoff: 11/08/2017
   
 -   [<span data-ttu-id="1f355-124">委托</span><span class="sxs-lookup"><span data-stu-id="1f355-124">Delegates</span></span>](#Delegates)  
   
-##  <span data-ttu-id="1f355-125"><a name="Classes"></a> 类和对象</span><span class="sxs-lookup"><span data-stu-id="1f355-125"><a name="Classes"></a> Classes and Objects</span></span>  
+##  <a name="Classes"></a> <span data-ttu-id="1f355-125">类和对象</span><span class="sxs-lookup"><span data-stu-id="1f355-125">Classes and Objects</span></span>  
  <span data-ttu-id="1f355-126">“类”和“对象”这两个术语有时互换使用，但实际上，类描述对象的“类型”，而对象是类的可用“实例”。</span><span class="sxs-lookup"><span data-stu-id="1f355-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="1f355-127">因此，创建对象的操作称为“实例化”。</span><span class="sxs-lookup"><span data-stu-id="1f355-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="1f355-128">如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。</span><span class="sxs-lookup"><span data-stu-id="1f355-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>  
   
  <span data-ttu-id="1f355-129">定义类：</span><span class="sxs-lookup"><span data-stu-id="1f355-129">To define a class:</span></span>  
@@ -86,10 +86,10 @@ struct SampleStruct
   
 -   [<span data-ttu-id="1f355-134">struct</span><span class="sxs-lookup"><span data-stu-id="1f355-134">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <span data-ttu-id="1f355-135"><a name="Members"></a> 类成员</span><span class="sxs-lookup"><span data-stu-id="1f355-135"><a name="Members"></a> Class Members</span></span>  
+###  <a name="Members"></a> <span data-ttu-id="1f355-135">类成员</span><span class="sxs-lookup"><span data-stu-id="1f355-135">Class Members</span></span>  
  <span data-ttu-id="1f355-136">每个类都可以具有不同的“类成员”。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。</span><span class="sxs-lookup"><span data-stu-id="1f355-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>  
   
-####  <span data-ttu-id="1f355-137"><a name="Properties"></a> 属性和字段</span><span class="sxs-lookup"><span data-stu-id="1f355-137"><a name="Properties"></a> Properties and Fields</span></span>  
+####  <a name="Properties"></a> <span data-ttu-id="1f355-137">属性和字段</span><span class="sxs-lookup"><span data-stu-id="1f355-137">Properties and Fields</span></span>  
  <span data-ttu-id="1f355-138">字段和属性表示对象包含的信息。</span><span class="sxs-lookup"><span data-stu-id="1f355-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="1f355-139">字段类似于变量，因为可以直接读取或设置它们。</span><span class="sxs-lookup"><span data-stu-id="1f355-139">Fields are like variables because they can be read or set directly.</span></span>  
   
  <span data-ttu-id="1f355-140">定义字段：</span><span class="sxs-lookup"><span data-stu-id="1f355-140">To define a field:</span></span>  
@@ -138,7 +138,7 @@ class SampleClass
   
 -   [<span data-ttu-id="1f355-151">set</span><span class="sxs-lookup"><span data-stu-id="1f355-151">set</span></span>](../../../csharp/language-reference/keywords/set.md)  
   
-####  <span data-ttu-id="1f355-152"><a name="Methods"></a> 方法</span><span class="sxs-lookup"><span data-stu-id="1f355-152"><a name="Methods"></a> Methods</span></span>  
+####  <a name="Methods"></a> <span data-ttu-id="1f355-152">方法</span><span class="sxs-lookup"><span data-stu-id="1f355-152">Methods</span></span>  
  <span data-ttu-id="1f355-153">“方法”是对象可以执行的操作。</span><span class="sxs-lookup"><span data-stu-id="1f355-153">A *method* is an action that an object can perform.</span></span>  
   
  <span data-ttu-id="1f355-154">定义类的方法：</span><span class="sxs-lookup"><span data-stu-id="1f355-154">To define a method of a class:</span></span>  
@@ -170,7 +170,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [<span data-ttu-id="1f355-161">扩展方法</span><span class="sxs-lookup"><span data-stu-id="1f355-161">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <span data-ttu-id="1f355-162"><a name="Constructors"></a> 构造函数</span><span class="sxs-lookup"><span data-stu-id="1f355-162"><a name="Constructors"></a> Constructors</span></span>  
+####  <a name="Constructors"></a> <span data-ttu-id="1f355-162">构造函数</span><span class="sxs-lookup"><span data-stu-id="1f355-162">Constructors</span></span>  
  <span data-ttu-id="1f355-163">构造函数一种类方法，它们在创建给定类型的对象时自动执行。</span><span class="sxs-lookup"><span data-stu-id="1f355-163">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="1f355-164">构造函数通常用于初始化新对象的数据成员。</span><span class="sxs-lookup"><span data-stu-id="1f355-164">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="1f355-165">构造函数只能在创建类时运行一次。</span><span class="sxs-lookup"><span data-stu-id="1f355-165">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="1f355-166">此外，构造函数中的代码始终在类中所有其他代码之前运行。</span><span class="sxs-lookup"><span data-stu-id="1f355-166">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="1f355-167">但是，你可以按照为任何其他方法创建重载的方式，创建多个构造函数重载。</span><span class="sxs-lookup"><span data-stu-id="1f355-167">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>  
   
  <span data-ttu-id="1f355-168">定义类的构造函数：</span><span class="sxs-lookup"><span data-stu-id="1f355-168">To define a constructor for a class:</span></span>  
@@ -189,12 +189,12 @@ public class SampleClass
   
  <span data-ttu-id="1f355-170">[构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-170">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span>  
   
-####  <span data-ttu-id="1f355-171"><a name="Finalizers"></a>终结器</span><span class="sxs-lookup"><span data-stu-id="1f355-171"><a name="Finalizers"></a> Finalizers</span></span>  
+####  <a name="Finalizers"></a><span data-ttu-id="1f355-171">终结器</span><span class="sxs-lookup"><span data-stu-id="1f355-171">Finalizers</span></span>  
  <span data-ttu-id="1f355-172">终结器用于析构类的实例。</span><span class="sxs-lookup"><span data-stu-id="1f355-172">Finalizers are used to destruct instances of classes.</span></span> <span data-ttu-id="1f355-173">在 .NET Framework 中，垃圾回收器自动管理应用程序中托管对象的内存分配和释放。</span><span class="sxs-lookup"><span data-stu-id="1f355-173">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="1f355-174">但是，你可能仍会需要终结器来清理应用程序创建的所有非托管资源。</span><span class="sxs-lookup"><span data-stu-id="1f355-174">However, you may still need finalizers to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="1f355-175">一个类只能有一个终结器。</span><span class="sxs-lookup"><span data-stu-id="1f355-175">There can be only one finalizers for a class.</span></span>  
   
  <span data-ttu-id="1f355-176">有关终结器和 .NET Framework 垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-176">For more information about finalizers and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
-####  <span data-ttu-id="1f355-177"><a name="Events"></a> 事件</span><span class="sxs-lookup"><span data-stu-id="1f355-177"><a name="Events"></a> Events</span></span>  
+####  <a name="Events"></a> <span data-ttu-id="1f355-177">事件</span><span class="sxs-lookup"><span data-stu-id="1f355-177">Events</span></span>  
  <span data-ttu-id="1f355-178">类或对象可以通过事件向其他类或对象通知发生的相关事情。</span><span class="sxs-lookup"><span data-stu-id="1f355-178">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="1f355-179">发送（或引发）事件的类称为“发行者”，接收（或处理）事件的类称为“订户”。</span><span class="sxs-lookup"><span data-stu-id="1f355-179">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="1f355-180">有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-180">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>  
   
 -   <span data-ttu-id="1f355-181">若要在类中声明事件，请使用 [event](../../../csharp/language-reference/keywords/event.md) 关键字。</span><span class="sxs-lookup"><span data-stu-id="1f355-181">To declare an event in a class, use the [event](../../../csharp/language-reference/keywords/event.md) keyword.</span></span>  
@@ -203,7 +203,7 @@ public class SampleClass
   
 -   <span data-ttu-id="1f355-183">若要订阅事件，请使用 `+=` 运算符；若要取消订阅事件，请使用 `-=` 运算符。</span><span class="sxs-lookup"><span data-stu-id="1f355-183">To subscribe to an event, use the `+=` operator; to unsubscribe from an event, use the `-=` operator.</span></span>  
   
-####  <span data-ttu-id="1f355-184"><a name="NestedClasses"></a> 嵌套类</span><span class="sxs-lookup"><span data-stu-id="1f355-184"><a name="NestedClasses"></a> Nested Classes</span></span>  
+####  <a name="NestedClasses"></a> <span data-ttu-id="1f355-184">嵌套类</span><span class="sxs-lookup"><span data-stu-id="1f355-184">Nested Classes</span></span>  
  <span data-ttu-id="1f355-185">在另一个类中定义的类称为“嵌套”。</span><span class="sxs-lookup"><span data-stu-id="1f355-185">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="1f355-186">默认情况下，嵌套类是私有类。</span><span class="sxs-lookup"><span data-stu-id="1f355-186">By default, the nested class is private.</span></span>  
   
 ```csharp  
@@ -222,7 +222,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <span data-ttu-id="1f355-188"><a name="AccessModifiers"></a> 访问修饰符和访问级别</span><span class="sxs-lookup"><span data-stu-id="1f355-188"><a name="AccessModifiers"></a> Access Modifiers and Access Levels</span></span>  
+###  <a name="AccessModifiers"></a> <span data-ttu-id="1f355-188">访问修饰符和访问级别</span><span class="sxs-lookup"><span data-stu-id="1f355-188">Access Modifiers and Access Levels</span></span>  
  <span data-ttu-id="1f355-189">所有类和类方法都可以使用“访问修饰符”指定自己为其他类提供的访问级别。</span><span class="sxs-lookup"><span data-stu-id="1f355-189">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>  
   
  <span data-ttu-id="1f355-190">可用的访问修饰符有以下这些：</span><span class="sxs-lookup"><span data-stu-id="1f355-190">The following access modifiers are available:</span></span>  
@@ -238,7 +238,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  <span data-ttu-id="1f355-205">有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-205">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-###  <span data-ttu-id="1f355-206"><a name="InstantiatingClasses"></a> 实例化类</span><span class="sxs-lookup"><span data-stu-id="1f355-206"><a name="InstantiatingClasses"></a> Instantiating Classes</span></span>  
+###  <a name="InstantiatingClasses"></a> <span data-ttu-id="1f355-206">实例化类</span><span class="sxs-lookup"><span data-stu-id="1f355-206">Instantiating Classes</span></span>  
  <span data-ttu-id="1f355-207">若要创建对象，你需要实例化类，即创建类实例。</span><span class="sxs-lookup"><span data-stu-id="1f355-207">To create an object, you need to instantiate a class, or create a class instance.</span></span>  
   
 ```csharp  
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [<span data-ttu-id="1f355-212">对象和集合初始值设定项</span><span class="sxs-lookup"><span data-stu-id="1f355-212">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <span data-ttu-id="1f355-213"><a name="Static"></a> 静态类和成员</span><span class="sxs-lookup"><span data-stu-id="1f355-213"><a name="Static"></a> Static Classes and Members</span></span>  
+###  <a name="Static"></a> <span data-ttu-id="1f355-213">静态类和成员</span><span class="sxs-lookup"><span data-stu-id="1f355-213">Static Classes and Members</span></span>  
  <span data-ttu-id="1f355-214">类的静态成员是指由该类的所有实例共享的属性、过程或字段。</span><span class="sxs-lookup"><span data-stu-id="1f355-214">A static member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="1f355-215">定义静态成员：</span><span class="sxs-lookup"><span data-stu-id="1f355-215">To define a static member:</span></span>  
@@ -290,7 +290,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  <span data-ttu-id="1f355-219">有关详细信息，请参阅：[static](../../../csharp/language-reference/keywords/static.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-219">For more information, see: [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
-###  <span data-ttu-id="1f355-220"><a name="AnonymousTypes"></a> 匿名类型</span><span class="sxs-lookup"><span data-stu-id="1f355-220"><a name="AnonymousTypes"></a> Anonymous Types</span></span>  
+###  <a name="AnonymousTypes"></a> <span data-ttu-id="1f355-220">匿名类型</span><span class="sxs-lookup"><span data-stu-id="1f355-220">Anonymous Types</span></span>  
  <span data-ttu-id="1f355-221">匿名类型使你无需为数据类型编写类定义即可创建对象。</span><span class="sxs-lookup"><span data-stu-id="1f355-221">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="1f355-222">此时，编译器将为你生成类。</span><span class="sxs-lookup"><span data-stu-id="1f355-222">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="1f355-223">该类没有可使用的名称，且包含在声明对象时指定的属性。</span><span class="sxs-lookup"><span data-stu-id="1f355-223">The class has no usable name and contains the properties you specify in declaring the object.</span></span>  
   
  <span data-ttu-id="1f355-224">创建匿名类型的实例：</span><span class="sxs-lookup"><span data-stu-id="1f355-224">To create an instance of an anonymous type:</span></span>  
@@ -303,7 +303,7 @@ var sampleObject =
   
  <span data-ttu-id="1f355-225">有关详细信息，请参阅：[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="1f355-225">For more information, see: [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-##  <span data-ttu-id="1f355-226"><a name="Inheritance"></a> 继承</span><span class="sxs-lookup"><span data-stu-id="1f355-226"><a name="Inheritance"></a> Inheritance</span></span>  
+##  <a name="Inheritance"></a> <span data-ttu-id="1f355-226">继承</span><span class="sxs-lookup"><span data-stu-id="1f355-226">Inheritance</span></span>  
  <span data-ttu-id="1f355-227">通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。</span><span class="sxs-lookup"><span data-stu-id="1f355-227">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="1f355-228">其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。</span><span class="sxs-lookup"><span data-stu-id="1f355-228">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="1f355-229">但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。</span><span class="sxs-lookup"><span data-stu-id="1f355-229">However, all classes in C# implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>  
   
 > [!NOTE]
@@ -335,7 +335,7 @@ public abstract class B { }
   
 -   [<span data-ttu-id="1f355-239">abstract</span><span class="sxs-lookup"><span data-stu-id="1f355-239">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <span data-ttu-id="1f355-240"><a name="Overriding"></a> 重写成员</span><span class="sxs-lookup"><span data-stu-id="1f355-240"><a name="Overriding"></a> Overriding Members</span></span>  
+###  <a name="Overriding"></a> <span data-ttu-id="1f355-240">重写成员</span><span class="sxs-lookup"><span data-stu-id="1f355-240">Overriding Members</span></span>  
  <span data-ttu-id="1f355-241">默认情况下，派生类继承其基类的所有成员。</span><span class="sxs-lookup"><span data-stu-id="1f355-241">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="1f355-242">若希望更改继承成员的行为，则需要重写该成员。</span><span class="sxs-lookup"><span data-stu-id="1f355-242">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="1f355-243">即，可以在派生类中定义方法、属性或事件的新实现。</span><span class="sxs-lookup"><span data-stu-id="1f355-243">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>  
   
  <span data-ttu-id="1f355-244">下列修饰符用于控制如何重写属性和方法：</span><span class="sxs-lookup"><span data-stu-id="1f355-244">The following modifiers are used to control how properties and methods are overridden:</span></span>  
@@ -347,7 +347,7 @@ public abstract class B { }
 |[<span data-ttu-id="1f355-251">abstract</span><span class="sxs-lookup"><span data-stu-id="1f355-251">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="1f355-252">要求在派生类中重写类成员。</span><span class="sxs-lookup"><span data-stu-id="1f355-252">Requires that a class member to be overridden in the derived class.</span></span>|  
 |[<span data-ttu-id="1f355-253">new 修饰符</span><span class="sxs-lookup"><span data-stu-id="1f355-253">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)|<span data-ttu-id="1f355-254">隐藏继承自基类的成员</span><span class="sxs-lookup"><span data-stu-id="1f355-254">Hides a member inherited from a base class</span></span>|  
   
-##  <span data-ttu-id="1f355-255"><a name="Interfaces"></a> 接口</span><span class="sxs-lookup"><span data-stu-id="1f355-255"><a name="Interfaces"></a> Interfaces</span></span>  
+##  <a name="Interfaces"></a> <span data-ttu-id="1f355-255">接口</span><span class="sxs-lookup"><span data-stu-id="1f355-255">Interfaces</span></span>  
  <span data-ttu-id="1f355-256">和类一样，接口也定义了一系列属性、方法和事件。</span><span class="sxs-lookup"><span data-stu-id="1f355-256">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="1f355-257">但与类不同的是，接口并不提供实现。</span><span class="sxs-lookup"><span data-stu-id="1f355-257">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="1f355-258">它们由类来实现，并从类中被定义为单独的实体。</span><span class="sxs-lookup"><span data-stu-id="1f355-258">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="1f355-259">接口表示一种约定，实现接口的类必须严格按其定义来实现接口的每个方面。</span><span class="sxs-lookup"><span data-stu-id="1f355-259">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>  
   
  <span data-ttu-id="1f355-260">定义接口：</span><span class="sxs-lookup"><span data-stu-id="1f355-260">To define an interface:</span></span>  
@@ -377,7 +377,7 @@ class SampleClass : ISampleInterface
   
  [<span data-ttu-id="1f355-264">接口</span><span class="sxs-lookup"><span data-stu-id="1f355-264">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <span data-ttu-id="1f355-265"><a name="Generics"></a> 泛型</span><span class="sxs-lookup"><span data-stu-id="1f355-265"><a name="Generics"></a> Generics</span></span>  
+##  <a name="Generics"></a> <span data-ttu-id="1f355-265">泛型</span><span class="sxs-lookup"><span data-stu-id="1f355-265">Generics</span></span>  
  <span data-ttu-id="1f355-266">.NET Framework 中的类、结构、接口和方法可以包括“类型参数”，类型参数定义它们可以存储或使用的对象的类型。</span><span class="sxs-lookup"><span data-stu-id="1f355-266">Classes, structures, interfaces and methods in the .NET Framework can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="1f355-267">最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。</span><span class="sxs-lookup"><span data-stu-id="1f355-267">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>  
   
  <span data-ttu-id="1f355-268">定义泛型类：</span><span class="sxs-lookup"><span data-stu-id="1f355-268">To define a generic class:</span></span>  
@@ -402,7 +402,7 @@ sampleObject.Field = "Sample string";
   
 -   [<span data-ttu-id="1f355-272">泛型</span><span class="sxs-lookup"><span data-stu-id="1f355-272">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
   
-##  <span data-ttu-id="1f355-273"><a name="Delegates"></a> 委托</span><span class="sxs-lookup"><span data-stu-id="1f355-273"><a name="Delegates"></a> Delegates</span></span>  
+##  <a name="Delegates"></a> <span data-ttu-id="1f355-273">委托</span><span class="sxs-lookup"><span data-stu-id="1f355-273">Delegates</span></span>  
  <span data-ttu-id="1f355-274">“委托”是一种类型，它定义方法签名，可以提供对具有兼容签名的任何方法的引用。</span><span class="sxs-lookup"><span data-stu-id="1f355-274">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="1f355-275">你可以通过委托调用方法。</span><span class="sxs-lookup"><span data-stu-id="1f355-275">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="1f355-276">委托用于将方法作为参数传递给其他方法。</span><span class="sxs-lookup"><span data-stu-id="1f355-276">Delegates are used to pass methods as arguments to other methods.</span></span>  
   
 > [!NOTE]

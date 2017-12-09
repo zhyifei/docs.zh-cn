@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="7e78a-125">索引器可以有多个形参，例如当访问二维数组时。</span><span class="sxs-lookup"><span data-stu-id="7e78a-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="7e78a-126"><a name="BKMK_RelatedSections"></a>相关部分</span><span class="sxs-lookup"><span data-stu-id="7e78a-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="7e78a-126">相关部分</span><span class="sxs-lookup"><span data-stu-id="7e78a-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="7e78a-127">使用索引器</span><span class="sxs-lookup"><span data-stu-id="7e78a-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

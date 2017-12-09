@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  [<span data-ttu-id="8624d-155">如何：显式实现两个接口的成员</span><span class="sxs-lookup"><span data-stu-id="8624d-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  <span data-ttu-id="8624d-156">提供有关如何使用继承显式实现接口的成员的示例。</span><span class="sxs-lookup"><span data-stu-id="8624d-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <span data-ttu-id="8624d-157"><a name="BKMK_RelatedSections"></a>相关部分</span><span class="sxs-lookup"><span data-stu-id="8624d-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="8624d-157">相关部分</span><span class="sxs-lookup"><span data-stu-id="8624d-157">Related Sections</span></span>  
   
 -   [<span data-ttu-id="8624d-158">接口属性</span><span class="sxs-lookup"><span data-stu-id="8624d-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
