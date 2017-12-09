@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# 初探"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
+  ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
+  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 12/07/2017
 items:
 - durationInMinutes: 1
   content: "本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。 具体包含一系列课程，最先介绍的就是“Hello World”程序。 这些课程介绍了 C# 语言的基础知识。\n"
-  ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
-  ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
-  ms.translationtype: HT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/01/2017
 - title: "运行首个 C# 程序"
   durationInMinutes: 2
   content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n祝贺你！ 已运行首个 C# 程序。 这是一个简单程序，可输出消息“Hello World!”。 它使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法打印此消息。 `Console` 是表示控制台窗口的类型。 `WriteLine` 是 `Console` 类型的方法，负责将文本行打印到文本控制台。\n\n接下来，将继续进一步探索。 本课程的其余部分探索了如何使用在 C# 中表示文本的 `string` 类型。 与 `Console` 类型一样，`string` 类型也包含方法。 `string` 方法处理的是文本。 \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
