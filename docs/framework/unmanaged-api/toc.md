@@ -10,6 +10,6 @@
 ## [元数据](metadata/)
 ## [分析](profiling/)
 ## [强命名](strong-naming/)
+## [WMI 和性能计数器](wmi/)
 ## [Tlbexp Helper 函数](tlbexp/)
-## [COR_PRF_ALLOWABLE_AFTER_ATTACH 位掩码](cor-prf-allowable-after-attach-bitmask.md)
 ## [GUID_ManagedName 特性](guid-managedname-attribute.md)
