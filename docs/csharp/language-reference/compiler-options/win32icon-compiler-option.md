@@ -13,11 +13,11 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (C# 编译器选项)
 /win32icon 选项在输出文件中插入 .ico 文件，为输出文件赋予其在文件资源管理器中所需的外观。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  想向输出文件添加的 .ico 文件。  
   
 ## <a name="remarks"></a>备注  
- 可以使用[资源编译器](http://go.microsoft.com/fwlink/?LinkId=148370)创建的 .ico 文件。 在编译 Visual C++ 程序时会调用资源编译器；.ico 文件是从 .rc 文件创建的。  
+ 可以使用[资源编译器](https://msdn.microsoft.com/library/aa381042.aspx)创建的 .ico 文件。 在编译 Visual C++ 程序时会调用资源编译器；.ico 文件是从 .rc 文件创建的。  
   
  请参阅 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)（引用）或 [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)（附加） .NET Framework 资源文件。 请参阅 [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 导入 .res 文件。  
   

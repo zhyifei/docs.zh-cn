@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# 中的数字"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: "分支和 C# 中的循环"
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "本快速入门介绍了有关在 C# 中的数字类型以交互方式，使用你的浏览器写入 C# 和查看结果编译并运行你的代码。 具体包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: "本快速入门介绍了有关在 C# 中的数字类型以交互方式，使用你的浏览器写入 C# 和查看结果编译并运行你的代码。 具体包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。\n"
 - title: "探索整数数学运算"
   durationInMinutes: 4
   content: "在交互式窗口中，运行以下代码。 为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\n刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数（正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：\n\n- `-`：减法运算\n- `*`：乘法运算\n- `/`：除法运算\n\n> [!TIP]\n> 在此快速入门全篇你可以浏览自己通过修改已在交互式窗口中编写的代码。 本快速入门提供了示例，你可以尝试在每个步骤。\n\n首先，探索这些不同类型的运算。 修改第三行代码，尝试执行所有这些运算。 每次编辑后，单击“运行”按钮。\n\n减法：\n\n```csharp\nint c = a - b;\n```\n\n乘法：\n\n```csharp\nint c = a * b;\n```\n\n除法： \n\n```csharp\nint c = a / b;\n```\n\n如果愿意，也可以尝试在同一行中执行多个数学运算。\n\n> [!TIP]\n> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。\n> 这样做有助于了解 C# 代码结构。     \n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"

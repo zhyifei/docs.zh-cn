@@ -13,11 +13,11 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage（C# 编译器选项）
 如果所需页不是系统的当前默认代码页，则此选项指定编译期间要使用的代码页。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  如果源代码文件是使用计算机上采用的相同代码页创建的，或者如果是通过 UNICODE 或 UTF-8 创建的，则无需使用 /codepage。  
   
- 有关如何查找系统上支持哪些代码页的信息，请参阅 [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371)。  
+ 有关如何查找系统上支持哪些代码页的信息，请参阅 [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx)。  
   
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   

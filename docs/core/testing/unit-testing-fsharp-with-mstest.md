@@ -7,11 +7,11 @@ ms.date: 08/30/2017
 ms.topic: article
 dev_langs: fsharp
 ms.prod: .net-core
-ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ad869d6b66ad5d966037a3ef38154fadcfa5978b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MSTest 在 .NET Core 中进行 F# 库单元测试
 
@@ -106,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-`[<TestClass>]` 属性表示包含测试的类。 `[<TestMethod>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp 目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`[<TestClass>]` 属性表示包含测试的类。 `[<TestMethod>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp 目录中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 MSTest 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `sumOfSquares` 方法的测试。 `sumOfSquares` 方法返回输入序列中的所有奇整数值的平方和。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
@@ -114,13 +114,13 @@ type TestClass () =
 
 ```fsharp
 [<TestMethod>]
-member this.TestEvenSequence() = 
+member this.TestEvenSequence() =
     let expected = Seq.empty<int> |> Seq.toList
     let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
     Assert.AreEqual(expected, actual)
 ```
 
-请注意已将 `expected` 序列转换为列表。 MSTest 库依赖于许多标准 .NET 类型。 此依赖关系表示公共接口和预期结果支持 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。 
+请注意已将 `expected` 序列转换为列表。 MSTest 库依赖于许多标准 .NET 类型。 此依赖关系表示公共接口和预期结果支持 <xref:System.Collections.ICollection>，而非 <xref:System.Collections.IEnumerable>。
 
 运行此测试时，会看到测试失败。 尚未创建实现。 在起作用的 `Mathservice` 类中编写最简单的代码，以生成此测试：
 
@@ -171,9 +171,9 @@ member public this.TestSquaresOfOdds() =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
-    xs 
-    |> Seq.filter isOdd 
+let sumOfSquares xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
     |> Seq.toList
 ```
