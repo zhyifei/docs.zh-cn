@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33c9bdf3cf055ea005542f8b2471963b16c16122
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keyfile"></a>/keyfile
 指定包含密钥或密钥对的文件从而为程序集赋予强名称。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  请注意，密钥文件可能仅包含公钥。  
   
- 请参阅[创建和使用具有强名称程序集](https://msdn.microsoft.com/library/xwb8f617)有关程序集进行签名的详细信息。  
+ 请参阅[创建和使用具有强名称程序集](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
   
 > [!NOTE]
 >  `/keyfile`选项不是可从[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]开发环境中; 仅当从命令行进行编译时，它才可用。  

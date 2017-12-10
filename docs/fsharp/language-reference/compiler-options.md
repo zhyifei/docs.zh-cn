@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
-ms.openlocfilehash: 0857418141a2383795d736fd507fcab5dbeaba24
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4bc9861f489eb068ca58656ab4ee9d43e8d212d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="compiler-options"></a>编译器选项
 
@@ -81,4 +81,4 @@ ms.lasthandoff: 10/18/2017
 |标题|描述|
 |-----|-----------|
 |[F# Interactive 选项](../tutorials/fsharp-interactive/fsharp-interactive-options.md)|描述 F # 解释器，支持的命令行选项 fsi.exe。|
-|[项目属性引用](https://msdn.microsoft.com/library/16satcwx.aspx)|描述项目，包括提供生成选项的项目属性页的 UI。|
+|[项目属性引用](/visualstudio/ide/reference/project-properties-reference)|描述项目，包括提供生成选项的项目属性页的 UI。|

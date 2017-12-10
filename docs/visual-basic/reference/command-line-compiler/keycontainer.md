@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 指定密钥对的密钥容器名称从而为程序集赋予强名称。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  此外，可使用 [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 将加密信息传递给编译器。 如果需要部分签名的程序集，请使用 [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。  
   
- 请参阅[创建和使用具有强名称程序集](https://msdn.microsoft.com/library/xwb8f617)有关程序集进行签名的详细信息。  
+ 请参阅[创建和使用具有强名称程序集](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
   
 > [!NOTE]
 >  `/keycontainer`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。  

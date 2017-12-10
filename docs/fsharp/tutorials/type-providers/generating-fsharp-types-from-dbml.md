@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>演练：根据 DBML 文件生成 F# 类型 
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-此针对 F # 3.0 的演练介绍如何从数据库中创建数据的类型，如果必须在.dbml 文件中编码的架构信息。 LINQ to SQL 使用这种文件格式来表示数据库架构。 在 Visual Studio 中，你可以使用对象关系 (O/R) 的设计器生成 LINQ to SQL 架构文件。 有关详细信息，请参阅[O/R 设计器概述](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的代码生成](https://msdn.microsoft.com/library/bb386976)。
+此针对 F # 3.0 的演练介绍如何从数据库中创建数据的类型，如果必须在.dbml 文件中编码的架构信息。 LINQ to SQL 使用这种文件格式来表示数据库架构。 在 Visual Studio 中，你可以使用对象关系 (O/R) 的设计器生成 LINQ to SQL 架构文件。 有关详细信息，请参阅[O/R 设计器概述](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的代码生成](../../../../docs/framework/data/adonet/sql/linq/index.md)。
 
 数据库标记语言 (DBML) 类型提供程序允许你编写使用基于数据库架构，而无需在编译时指定静态连接字符串的类型的代码。 这可能是需要考虑到最终应用程序将使用不同的数据库、 不同的凭据或与用于开发应用程序的不同的连接字符串的可能性的情况下很有用。 如果你具有可以在编译时使用的直接数据库连接，这是同一个数据库和你最终将在你生成的应用程序中使用的凭据，你还可以使用 SQLDataConnection 类型提供程序。 有关详细信息，请参阅[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。
 

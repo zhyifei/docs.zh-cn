@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c5355f10fba2d1d18bc514c93f31051781bed14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2082d8169dc325b86957e7a54c6e49304660aa94
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 一个重要部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。  
@@ -24,11 +24,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="designing-windows-forms-applications"></a>设计 Windows 窗体应用程序  
  你可以创建 Windows 窗体和 Windows 服务应用程序与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。 有关详细信息，请参阅下列主题：  
   
--   [Windows 窗体入门](https://msdn.microsoft.com/library/ms229601.aspx)。 提供有关如何创建和程序 Windows 窗体的信息。  
+-   [Windows 窗体入门](../../../../docs/framework/winforms/getting-started-with-windows-forms.md)。 提供有关如何创建和程序 Windows 窗体的信息。  
    
--   [Windows 窗体控件](https://msdn.microsoft.com/library/ettb6e2a.aspx)。 主题详细说明使用 Windows 窗体控件的集合。  
+-   [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。 主题详细说明使用 Windows 窗体控件的集合。  
   
--   [Windows 服务应用程序](https://msdn.microsoft.com/library/y817hyb6.aspx)。 说明如何创建 Windows 服务的主题列表。  
+-   [Windows 服务应用程序](../../../../docs/framework/windows-services/index.md)。 说明如何创建 Windows 服务的主题列表。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
  Windows 窗体是的智能客户端组件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一组的托管库，使读取和写入文件系统等常见应用程序任务。 使用类似的开发环境[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，你可以通过网络与远程计算机创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和沟通。  
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
  在 Windows 窗体，窗体是向用户的信息显示在其一个可视化图面。 通常情况下，通过将窗体上的控件和开发对用户操作，如点击鼠标或按键响应需要构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
   
 ### <a name="events"></a>事件  
- 当用户执行某些内容到你的窗体或其某个控件时，它会生成一个事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)。  
+ 当用户执行某些内容到你的窗体或其某个控件时，它会生成一个事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)。  
   
 ### <a name="controls"></a>控件  
- Windows 窗体包含各种可以将它们放置在窗体的控件： 显示文本框、 按钮、 下拉框、 单选按钮和甚至网页的控件。 有关可在窗体上使用的所有控件的列表，请参阅[在 Windows 窗体上使用的控件](https://msdn.microsoft.com/library/3xdhey7w.aspx)。 如果某个现有控件不满足你的需要，Windows 窗体还支持使用 <xref:System.Windows.Forms.UserControl> 类创建自己的自定义控件。  
+ Windows 窗体包含各种可以将它们放置在窗体的控件： 显示文本框、 按钮、 下拉框、 单选按钮和甚至网页的控件。 有关可在窗体上使用的所有控件的列表，请参阅[在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)。 如果某个现有控件不满足你的需要，Windows 窗体还支持使用 <xref:System.Windows.Forms.UserControl> 类创建自己的自定义控件。  
   
  Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控件，可以创建包含文本和图像、 显示子菜单和托管其他控件，如文本框和组合框的工具栏和菜单。  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 11/21/2017
 |到|请参阅|  
 |--------|---------|  
 |创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|使用窗体上控件|[如何：向 Windows 窗体添加控件](https://msdn.microsoft.com/library/0h5y8567.aspx)|   
-|创建与图形<xref:System.Drawing>|[图形编程入门](https://msdn.microsoft.com/library/da0f23z7.aspx)|  
-|创建自定义控件|[如何：从 UserControl 类继承](https://msdn.microsoft.com/library/00ctb4z0.aspx)|  
+|使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|创建与图形<xref:System.Drawing>|[图形编程入门](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|创建自定义控件|[如何：从 UserControl 类继承](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
  许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件，调用<xref:System.Windows.Forms.DataGridView>呈现在传统的行和列的格式，此类表格数据，以便每个数据块占据其自己的单元格的控件。 使用<xref:System.Windows.Forms.DataGridView>你可以自定义各个单元格的外观、 锁定的位置，在任意行和列和其他功能单元格内部显示复杂控件。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 |到|请参阅|  
 |--------|---------|  
-|使用<xref:System.Windows.Forms.BindingSource>组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](https://msdn.microsoft.com/library/801dxw2t.aspx)|  
+|使用<xref:System.Windows.Forms.BindingSource>组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
 |使用数据源窗口|[演练：在 Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
@@ -98,10 +98,10 @@ ms.lasthandoff: 11/21/2017
   
 |到|请参阅|  
 |--------|---------|  
-|打印窗体的内容|[如何：在 Windows 窗体中打印图形](https://msdn.microsoft.com/library/741a0ktc.aspx)<br /><br /> [如何：打印 Windows 窗体中的多页文本文件](https://msdn.microsoft.com/library/cwbe712d.aspx)|   
-|了解有关 Windows 窗体安全的详细信息|[Windows 窗体中的安全性概述](https://msdn.microsoft.com/library/90k49ccb.aspx)|  
+|打印窗体的内容|[如何：在 Windows 窗体中打印图形](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：打印 Windows 窗体中的多页文本文件](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
+|了解有关 Windows 窗体安全的详细信息|[Windows 窗体中的安全性概述](../../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Windows 窗体概述](https://msdn.microsoft.com/library/8bxxy49h.aspx)  
+ [Windows 窗体概述](../../../../docs/framework/winforms/windows-forms-overview.md)  
  [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)

@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 64e01fdfc4951dc23cd7ce92941a367882b3b6bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 向 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 添加了查询功能，能够为处理各种数据提供简单而强大的功能。 LINQ 不将查询发送到数据库来处理，也不对搜索的每种类型的数据使用不同的查询语法，而是将查询作为 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的一部分引入。 它使用统一语法，而不考虑数据的类型。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 |提供程序|描述|  
 |---|---|  
 |LINQ to Objects|通过 LINQ to Objects 提供程序，可以查询内存中集合和数组。 如果对象支持 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 接口，则可以通过 LINQ to Objects 提供程序对其进行查询。<br /><br /> 可以通过导入 <xref:System.Linq> 命名空间来启用 LINQ to Objects 提供程序，默认情况下，将为所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 项目导入此命名空间。<br /><br /> 有关 LINQ to Objects 提供程序的详细信息，请参阅[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。|  
-|LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 通过包括对象关系设计器（O/R 设计器）使其能更轻松地使用 LINQ to SQL。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供功能来映射存储的过程和函数<xref:System.Data.Linq.DataContext>对象，该管理与数据库的通信和存储进行开放式并发检查的状态对象。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)。 有关对象关系设计器的详细信息，请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
+|LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 通过包括对象关系设计器（O/R 设计器）使其能更轻松地使用 LINQ to SQL。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供功能来映射存储的过程和函数<xref:System.Data.Linq.DataContext>对象，该管理与数据库的通信和存储进行开放式并发检查的状态对象。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)。 有关对象关系设计器的详细信息，请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
 |LINQ to XML|通过 LINQ to XML 提供程序，可以查询和修改 XML。 可以修改内存中 XML，也可以从文件加载 XML 以及将 XML 保存到文件。<br /><br /> 此外，LINQ to XML 提供程序还包括 XML 文本和 XML 轴属性，通过它们，你可以在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码中直接编写 XML。 有关详细信息，请参阅[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。|  
 |LINQ to DataSet|LINQ to DataSet 提供程序可以对中的查询和更新数据[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据集。 可以将 LINQ 的强大功能添加到使用数据集的应用程序，以便简化和扩展查询、聚合和更新数据集中数据的功能。<br /><br /> 有关详细信息，请参阅 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。|  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- 此示例本身是一个有效查询；但是，如果添加更多查询子句以优化结果，查询将变得更加强大。 例如，可以添加 `Where` 子句，以便按一个或多个值筛选结果。 查询表达式都是单行代码；只能将其他查询子句附加到查询的末尾。 可以使用下划线 (_) 续行符将查询拆散为多行文本，以提高可读性。 下面的代码示例演示了包含 `Where` 子句的查询示例。  
+ 此示例本身是一个有效查询；但是，如果添加更多查询子句以优化结果，查询将变得更加强大。 例如，可以添加 `Where` 子句，以便按一个或多个值筛选结果。 查询表达式都是单行代码；只能将其他查询子句附加到查询的末尾。 你可以分解查询跨多行文本，以提高可读性使用下划线 (\_) 行继续符。 下面的代码示例演示了包含 `Where` 子句的查询示例。  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/21/2017
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|描述 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中可查询和可将 XML 包括为 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码中的第一类数据对象的 XML 功能。|  
 |[查询](../../../../visual-basic/language-reference/queries/queries.md)|提供有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中可用查询子句的参考信息。|  
 |[LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|包括常规信息、编程指南和 LINQ 示例。|  
-|[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)|包括常规信息、编程指南和 LINQ to SQL 示例。|  
+|[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|包括常规信息、编程指南和 LINQ to SQL 示例。|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|包括常规信息、编程指南和 LINQ to Objects 示例。|  
 |[LINQ to ADO.NET（门户网站页）](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|包括常规信息、编程指南和 LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 示例。|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|包括常规信息、编程指南和 LINQ to XML 示例。|  
@@ -204,6 +204,6 @@ ms.lasthandoff: 11/21/2017
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  [LINQ to DataSet 概述](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

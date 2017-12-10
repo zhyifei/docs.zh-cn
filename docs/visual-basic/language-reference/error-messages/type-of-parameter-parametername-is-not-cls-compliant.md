@@ -14,16 +14,16 @@ ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c495a21603f1977bd0f0630104f75ab02728928
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5fc981f5de5c4baa9a47e04af16966ea06fa10ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>类型的参数 &#39;&lt;parametername&gt;&#39; 不是符合 CLS
 一个过程标记为`<CLSCompliant(True)>`但具有标记为的类型声明参数`<CLSCompliant(False)>`、 未标记，或不合格，因为它是不符合要求的类型。  
   
- 一个过程要符合[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/12a7a7h3) (CLS)，必须只使用符合 CLS 的类型。 这适用于参数的类型、返回类型及其所有本地变量的类型。  
+ 一个过程要符合[语言独立性和与语言无关的组件](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS)，必须只使用符合 CLS 的类型。 这适用于参数的类型、返回类型及其所有本地变量的类型。  
   
  以下 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 数据类型不符合 CLS：  
   

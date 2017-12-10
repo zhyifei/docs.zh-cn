@@ -15,11 +15,11 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d9347f7771e0e86f9a19cbec94ef59dcf1bdb250
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 28ec54dc062d4fdea4836b0ecc8699982dace623
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 应用程序中的 COM 互操作性 (Visual Basic)
 如果你想要在同一个应用程序中使用 COM 对象和.NET Framework 对象，你需要处理中的对象在内存中的存在的差异。 .NET Framework 对象位于托管内存-由公共语言运行时控制的内存 — 和根据需要可由运行时移动。 COM 对象位于非托管内存中，不应将移至另一个内存位置。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]与[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供工具以控制这些交互托管和非托管组件。 有关托管代码的详细信息，请参阅[公共语言运行时](../../../standard/clr.md)。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 10/22/2017
  [COM 互操作包装错误](/cpp/misc/com-interop-wrapper-error)  
  如果项目系统无法创建特定组件的 COM 互操作性包装，描述的结果和选项。  
   
- [与非托管代码交互操作](https://msdn.microsoft.com/library/sd10k43k)  
+ [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
  简要介绍了一些托管和非托管代码之间的交互问题并提供进一步学习的链接。  
   
  [COM 包装](../../../framework/interop/com-wrappers.md)  

@@ -12,11 +12,11 @@ ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: efdfa297099fb5538e7b92514c8440c2722f3fe1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>特性概述 (Visual Basic)
 使用特性，可以有效地将元数据或声明性信息与代码（程序集、类型、方法、属性等）相关联。 将特性与程序实体相关联后，可以在运行时使用*反射*这项技术查询特性。 有关详细信息，请参阅[反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
@@ -154,4 +154,4 @@ Module: CLSCompliant(True)>
 ## <a name="see-also"></a>另请参阅  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
  [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [特性](https://msdn.microsoft.com/library/5x6cd29c)
+ [特性](../../../../../docs/standard/attributes/index.md)

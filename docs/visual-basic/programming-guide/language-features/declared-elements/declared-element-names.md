@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 691b65280b958edcf8e856ee6df793e0b7b05184
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>已声明的元素名称 (Visual Basic)
 每个声明的元素有一个名称，也称为*标识符*，即来引用它的代码使用。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  `xyz$wv`  
   
 > [!CAUTION]
->  元素名称以下划线开头 (`_`) 不属于[语言独立性和独立于语言的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，因此符合 cls 的代码不能使用定义此类名称的组件。 但是，在元素名中的任何其他位置中以下划线是符合 CLS。  
+>  元素名称以下划线开头 (`_`) 不属于[语言独立性和独立于语言的组件](../../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用定义此类名称的组件。 但是，在元素名中的任何其他位置中以下划线是符合 CLS。  
   
 ### <a name="name-length-guidelines"></a>名称长度准则  
  在实践中，你的名称应尽可能短同时在仍然能够清楚地标识的元素的性质。 这可以提高代码的可读性，并减少行长度和源文件大小。  

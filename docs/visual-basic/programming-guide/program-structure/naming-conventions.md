@@ -19,14 +19,14 @@ ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a59139b57568810de80de764388eeffa5f8d7ac9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dfdb403519d7e29602fc87445ce32aeb0e55250e
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名约定
-在 Visual Basic 应用程序中命名某个元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，名称以下划线开头不符合[语言独立性和独立于语言的组件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)。  
+在 Visual Basic 应用程序中命名某个元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，名称以下划线开头不符合[语言独立性和独立于语言的组件](../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)。  
   
  以下建议适用于命名。  
   

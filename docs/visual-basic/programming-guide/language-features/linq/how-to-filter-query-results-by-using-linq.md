@@ -20,18 +20,18 @@ ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 09f2eb65858853fd759ae033f749151b348c124d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d2e93d9b4518482b22c78d10d31c4035bdf587e
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 筛选查询结果 (Visual Basic)
 语言集成查询 (LINQ)，可以轻松地访问数据库信息和执行查询。  
   
  下面的示例演示如何创建的新应用程序对 SQL Server 数据库执行查询并使用特定值来筛选结果`Where`子句。 有关详细信息，请参阅[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
   
- 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](https://msdn.microsoft.com/library/bb399411)。  
+ 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,5 +88,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>另请参阅  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [查询](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

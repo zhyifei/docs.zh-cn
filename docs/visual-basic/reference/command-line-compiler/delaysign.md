@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>/delaysign
 指定程序集是完全签名的还是部分签名的。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  例如，通过使用`/delaysign+`，组织中的开发人员可以分发的程序集的测试人员可以全局程序集缓存中注册和使用的无符号的测试版本。 程序集上的工作完成后，负责组织的私钥的人员可以完全签名的程序集。 这种划分可防止组织的私钥泄露，同时允许所有开发人员能够对程序集。  
   
- 请参阅[创建和使用具有强名称程序集](https://msdn.microsoft.com/library/xwb8f617)有关程序集进行签名的详细信息。  
+ 请参阅[创建和使用具有强名称程序集](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>在 Visual Studio 中设置 /delaysign 集成开发环境  
   

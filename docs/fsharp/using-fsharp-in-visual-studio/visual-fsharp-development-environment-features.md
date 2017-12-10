@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F# 开发环境功能
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |安全 （更改信任级别）|No||
 
 ## <a name="code-and-text-editor-features"></a>代码和文本编辑器功能
-F # 中支持以下功能的 Visual Studiocode 和文本编辑器。 有关在 Visual Studio 中和功能的文本编辑器中编辑代码的常规信息，请参阅[在代码和文本编辑器中编写代码](https://msdn.microsoft.com/library/efc4xwkb.aspx)。
+F # 中支持以下功能的 Visual Studiocode 和文本编辑器。 有关在 Visual Studio 中和功能的文本编辑器中编辑代码的常规信息，请参阅[在代码和文本编辑器中编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。
 
 |功能|描述|F # 中支持？|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ F # 中支持以下功能的 Visual Studiocode 和文本编辑器。 有关在 V
 |自动设置格式|重新格式化使用标准的缩进和样式的代码。|No|
 |书签|使用此选项可在编辑器中保存位置。|是|
 |更改缩进|缩进或取消对选定的行。|是|
-|[查找和替换文本](https://msdn.microsoft.com/library/139eef4h.aspx)|可以在文件、 项目或解决方案中，搜索并可能将更改文本。|是|
+|[查找和替换文本](/visualstudio/ide/finding-and-replacing-text)|可以在文件、 项目或解决方案中，搜索并可能将更改文本。|是|
 |转到.NET Framework API 的定义|当将光标置于.NET Framework API 时，将显示从.NET Framework 元数据生成的代码。|No|
 |转到用户定义的 API 的定义|当光标位于你定义，将光标移到代码中的位置，其中定义实体的程序实体上。|是|
 |转到行|使用此选项可转到在文件中，按行号的特定行。|是|
 |在文件顶部导航栏|可以通过跳到代码中的位置，例如，函数名称。|是|
-|大纲显示。 请参阅[大纲显示](https://msdn.microsoft.com/library/td6a5x4s.aspx)。|使用此选项可折叠的代码来创建更紧凑视图的部分。|是|
+|大纲显示。 请参阅[大纲显示](/visualstudio/ide/outlining)。|使用此选项可折叠的代码来创建更紧凑视图的部分。|是|
 |为制表符|将空间转换为选项卡。|是|
 |类型着色|显示定义特殊的颜色的颜色的类型名称。|是|
 |快速查找。 请参阅快速查找，查找和替换窗口。|可用于搜索文件或项目中。|是|
 
 ## <a name="intellisense-features"></a>IntelliSense 功能
-下表总结了支持的和不支持 F # 中的 IntelliSense 功能。 Intellisense 的常规信息，请参阅[使用 IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx)。
+下表总结了支持的和不支持 F # 中的 IntelliSense 功能。 Intellisense 的常规信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。
 
 |功能|描述|F # 中支持？|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ F # 中支持以下功能的 Visual Studiocode 和文本编辑器。 有关在 V
 |调用层次结构|显示在代码中调用函数的嵌套的结构。|No|
 |代码度量|收集有关你的代码，如行计数信息。|No|
 |类视图|提供基于类型的项目中的代码视图。|No|
-|[“错误列表”窗口](https://msdn.microsoft.com/library/33df3b7a.aspx)|在代码中显示错误的列表。|是|
+|[“错误列表”窗口](/visualstudio/ide/reference/error-list-window)|在代码中显示错误的列表。|是|
 |[F# Interactive](../tutorials/fsharp-interactive/index.md)|使你能够键入 （或复制和粘贴） F # 代码并独立于你的项目的生成立即运行它。 F # Interactive 窗口是读取、 计算、 打印循环 (REPL)。|是|
 |对象浏览器|使用此选项可查看的程序集中的类型。|F # 类型在编译的程序集中显示不显示您创作的样子。 你可以浏览的已编译的表示形式 F # 类型，但无法查看的类型，因为它们从 F # 显示。|
-|[输出窗口](https://msdn.microsoft.com/library/3hk6fby3.aspx)|显示生成输出。|是|
+|[输出窗口](/visualstudio/ide/reference/output-window)|显示生成输出。|是|
 |性能分析|提供用于测量你的代码的性能工具。|是|
 |“属性”窗口|显示并允许在具有焦点的开发环境中对象的属性的编辑。|是|
 |[服务器资源管理器](https://msdn.microsoft.com/library/x603htbk.aspx)|提供了与各种服务器资源进行交互的方式。|是|

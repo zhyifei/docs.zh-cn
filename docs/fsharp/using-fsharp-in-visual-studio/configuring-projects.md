@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>在 Visual Studio 中配置项目
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Build`|[生成页，项目设计器 &#40;C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可控制如何编译的代码。|
 |`Build Events`|[生成事件页，项目设计器 &#40;C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可指定命令运行之前或之后编译。|
 |`Debug`|[“项目设计器”->“调试”页](https://msdn.microsoft.com/library/2wcdezs5.aspx)|使用此选项可控制应用程序在调试期间的运行方式。 这包括什么使用与你的应用程序的开始目录是什么，命令行和任何特殊调试你想要启用，如本机代码和 SQL 的模式。|
-|`Reference Paths`|[管理项目中的引用](https://msdn.microsoft.com/library/ez524kew.aspx)|使用此选项可指定要从中搜索程序集的代码，取决于。|
+|`Reference Paths`|[管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)|使用此选项可指定要从中搜索程序集的代码，取决于。|
 
 ## <a name="f-specific-settings"></a>F # 的特定设置
 下表总结了特定于 F # 的设置：

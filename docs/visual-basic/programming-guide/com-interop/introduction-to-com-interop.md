@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 81a9d0fc7036ff1b821c46687541311f26113212
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和承载应用程序公开其功能的对象。 COM 对象进行了 Windows 编程多年的基础，而应用程序面向公共语言运行时 (CLR) 提供了许多优点。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>另请参阅  
  [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [与非托管代码交互操作](https://msdn.microsoft.com/library/sd10k43k)  
+ [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
  [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe（类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  

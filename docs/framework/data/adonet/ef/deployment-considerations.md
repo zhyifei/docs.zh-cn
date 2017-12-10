@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署注意事项（实体框架）
 本主题提供有关部署使用 ADO.NET 实体框架进行数据访问的应用程序的信息。 有关实体框架的详细信息，请参阅[入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  
   
  实体框架提供了一组与 Visual Studio 集成的工具，使得在 Visual Studio 中进行开发更加容易。 有关详细信息，请参阅[ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)。 本主题未介绍如何使用特定技术部署基于实体框架的应用程序。  
   
- Visual Studio 提供用于分发和部署应用程序的工具（例如 ClickOnce 部署）。 有关详细信息，请参阅[部署应用程序和组件](https://msdn.microsoft.com/library/wtzawcsz)Visual Studio 文档中。  
+ Visual Studio 提供用于分发和部署应用程序的工具（例如 ClickOnce 部署）。 有关详细信息，请参阅[部署应用程序和组件](/visualstudio/deployment/deploying-applications-services-and-components)Visual Studio 文档中。  
   
  部署使用实体框架的应用程序时需要考虑以下注意事项：  
   

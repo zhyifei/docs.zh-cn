@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教程： 创建类型提供程序
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 或者，打开 Visual Studio，打开调试菜单，选择`Debug/Attach to process…`，并附加到另一个`devenv`您要在其中编辑你的脚本的过程。 通过使用此方法，可以更轻松地通过第二个实例 （使用完整的 IntelliSense 和其他功能） 中以交互方式键入表达式面向类型提供程序中的特定逻辑。
 
-你可以禁用调试以更好地确定生成的代码中的错误仅我的代码。 有关如何启用或禁用此功能的信息，请参阅[使用调试器浏览代码](https://msdn.microsoft.com/library/y740d9d3.aspx)。 此外，还可以设置首次异常捕获通过打开`Debug`菜单，然后选择`Exceptions`或通过选择 Ctrl + Alt + E 键以打开`Exceptions`对话框。 在该对话框中，在`Common Language Runtime Exceptions`，选择`Thrown`复选框。
+你可以禁用调试以更好地确定生成的代码中的错误仅我的代码。 有关如何启用或禁用此功能的信息，请参阅[使用调试器浏览代码](/visualstudio/debugger/navigating-through-code-with-the-debugger)。 此外，还可以设置首次异常捕获通过打开`Debug`菜单，然后选择`Exceptions`或通过选择 Ctrl + Alt + E 键以打开`Exceptions`对话框。 在该对话框中，在`Common Language Runtime Exceptions`，选择`Thrown`复选框。
 
 
 ### <a name="implementation-of-the-type-provider"></a>类型提供程序的实现
