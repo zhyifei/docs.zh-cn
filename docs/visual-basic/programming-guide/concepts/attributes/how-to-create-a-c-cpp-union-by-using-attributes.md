@@ -12,17 +12,17 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="b4bf1-102">如何： 创建 C/c + + 联合使用属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4bf1-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
-<span data-ttu-id="b4bf1-103">通过使用特性，可自定义结构在内存中的布局方式。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="b4bf1-104">例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="b943d-102">如何： 创建 C/c + + 联合使用属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b943d-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
+<span data-ttu-id="b943d-103">通过使用特性，可自定义结构在内存中的布局方式。</span><span class="sxs-lookup"><span data-stu-id="b943d-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="b943d-104">例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。</span><span class="sxs-lookup"><span data-stu-id="b943d-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b4bf1-105">示例</span><span class="sxs-lookup"><span data-stu-id="b4bf1-105">Example</span></span>  
- <span data-ttu-id="b4bf1-106">在此代码段中，`TestUnion` 的所有字段均从内存中的同一位置开始。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="b943d-105">示例</span><span class="sxs-lookup"><span data-stu-id="b943d-105">Example</span></span>  
+ <span data-ttu-id="b943d-106">在此代码段中，`TestUnion` 的所有字段均从内存中的同一位置开始。</span><span class="sxs-lookup"><span data-stu-id="b943d-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -44,8 +44,8 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b4bf1-107">示例</span><span class="sxs-lookup"><span data-stu-id="b4bf1-107">Example</span></span>  
- <span data-ttu-id="b4bf1-108">下面是另一个示例，其中的字段从不同的显式设置位置开始。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="b943d-107">示例</span><span class="sxs-lookup"><span data-stu-id="b943d-107">Example</span></span>  
+ <span data-ttu-id="b943d-108">下面是另一个示例，其中的字段从不同的显式设置位置开始。</span><span class="sxs-lookup"><span data-stu-id="b943d-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -73,14 +73,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- <span data-ttu-id="b4bf1-109">两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="b4bf1-110">使用平台调用时，这种对结构布局的控制很有用。</span><span class="sxs-lookup"><span data-stu-id="b4bf1-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="b943d-109">两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。</span><span class="sxs-lookup"><span data-stu-id="b943d-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="b943d-110">使用平台调用时，这种对结构布局的控制很有用。</span><span class="sxs-lookup"><span data-stu-id="b943d-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4bf1-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b4bf1-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b943d-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b943d-111">See Also</span></span>  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
- [<span data-ttu-id="b4bf1-112">Visual Basic 编程指南</span><span class="sxs-lookup"><span data-stu-id="b4bf1-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="b4bf1-113">特性</span><span class="sxs-lookup"><span data-stu-id="b4bf1-113">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)  
- [<span data-ttu-id="b4bf1-114">反射 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4bf1-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="b4bf1-115">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4bf1-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="b4bf1-116">创建自定义特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4bf1-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [<span data-ttu-id="b4bf1-117">使用反射访问特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4bf1-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [<span data-ttu-id="b943d-112">Visual Basic 编程指南</span><span class="sxs-lookup"><span data-stu-id="b943d-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="b943d-113">特性</span><span class="sxs-lookup"><span data-stu-id="b943d-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
+ [<span data-ttu-id="b943d-114">反射 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b943d-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="b943d-115">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b943d-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="b943d-116">创建自定义特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b943d-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="b943d-117">使用反射访问特性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b943d-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

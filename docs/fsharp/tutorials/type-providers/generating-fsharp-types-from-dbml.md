@@ -10,57 +10,57 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
-# <a name="walkthrough-generating-f-types-from-a-dbml-file"></a><span data-ttu-id="04cdf-104">演练：根据 DBML 文件生成 F# 类型 </span><span class="sxs-lookup"><span data-stu-id="04cdf-104">Walkthrough: Generating F# Types from a DBML File</span></span>
+# <a name="walkthrough-generating-f-types-from-a-dbml-file"></a><span data-ttu-id="0d82d-104">演练：根据 DBML 文件生成 F# 类型 </span><span class="sxs-lookup"><span data-stu-id="0d82d-104">Walkthrough: Generating F# Types from a DBML File</span></span>
 
 > [!NOTE]
-<span data-ttu-id="04cdf-105">此指南专门针对 F # 3.0 编写，并将更新。</span><span class="sxs-lookup"><span data-stu-id="04cdf-105">This guide was written for F# 3.0 and will be updated.</span></span>  <span data-ttu-id="04cdf-106">请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="04cdf-106">See [FSharp.Data](http://fsharp.github.io/FSharp.Data/) for up-to-date, cross-platform type providers.</span></span>
+<span data-ttu-id="0d82d-105">此指南专门针对 F # 3.0 编写，并将更新。</span><span class="sxs-lookup"><span data-stu-id="0d82d-105">This guide was written for F# 3.0 and will be updated.</span></span>  <span data-ttu-id="0d82d-106">请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-106">See [FSharp.Data](http://fsharp.github.io/FSharp.Data/) for up-to-date, cross-platform type providers.</span></span>
 
 > [!NOTE]
-<span data-ttu-id="04cdf-107">API 参考链接将转到 MSDN。</span><span class="sxs-lookup"><span data-stu-id="04cdf-107">The API reference links will take you to MSDN.</span></span>  <span data-ttu-id="04cdf-108">Docs.microsoft.com API 参考尚未完成。</span><span class="sxs-lookup"><span data-stu-id="04cdf-108">The docs.microsoft.com API reference is not complete.</span></span>
+<span data-ttu-id="0d82d-107">API 参考链接将转到 MSDN。</span><span class="sxs-lookup"><span data-stu-id="0d82d-107">The API reference links will take you to MSDN.</span></span>  <span data-ttu-id="0d82d-108">Docs.microsoft.com API 参考尚未完成。</span><span class="sxs-lookup"><span data-stu-id="0d82d-108">The docs.microsoft.com API reference is not complete.</span></span>
 
-<span data-ttu-id="04cdf-109">此针对 F # 3.0 的演练介绍如何从数据库中创建数据的类型，如果必须在.dbml 文件中编码的架构信息。</span><span class="sxs-lookup"><span data-stu-id="04cdf-109">This walkthrough for F# 3.0 describes how to create types for data from a database when you have schema information encoded in a .dbml file.</span></span> <span data-ttu-id="04cdf-110">LINQ to SQL 使用这种文件格式来表示数据库架构。</span><span class="sxs-lookup"><span data-stu-id="04cdf-110">LINQ to SQL uses this file format to represent database schema.</span></span> <span data-ttu-id="04cdf-111">在 Visual Studio 中，你可以使用对象关系 (O/R) 的设计器生成 LINQ to SQL 架构文件。</span><span class="sxs-lookup"><span data-stu-id="04cdf-111">You can generate a LINQ to SQL schema file in Visual Studio by using the Object Relational (O/R) Designer.</span></span> <span data-ttu-id="04cdf-112">有关详细信息，请参阅[O/R 设计器概述](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的代码生成](https://msdn.microsoft.com/library/bb386976)。</span><span class="sxs-lookup"><span data-stu-id="04cdf-112">For more information, see [O/R Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) and [Code Generation in LINQ to SQL](https://msdn.microsoft.com/library/bb386976).</span></span>
+<span data-ttu-id="0d82d-109">此针对 F # 3.0 的演练介绍如何从数据库中创建数据的类型，如果必须在.dbml 文件中编码的架构信息。</span><span class="sxs-lookup"><span data-stu-id="0d82d-109">This walkthrough for F# 3.0 describes how to create types for data from a database when you have schema information encoded in a .dbml file.</span></span> <span data-ttu-id="0d82d-110">LINQ to SQL 使用这种文件格式来表示数据库架构。</span><span class="sxs-lookup"><span data-stu-id="0d82d-110">LINQ to SQL uses this file format to represent database schema.</span></span> <span data-ttu-id="0d82d-111">在 Visual Studio 中，你可以使用对象关系 (O/R) 的设计器生成 LINQ to SQL 架构文件。</span><span class="sxs-lookup"><span data-stu-id="0d82d-111">You can generate a LINQ to SQL schema file in Visual Studio by using the Object Relational (O/R) Designer.</span></span> <span data-ttu-id="0d82d-112">有关详细信息，请参阅[O/R 设计器概述](https://msdn.microsoft.com/library/bb384511.aspx)和[LINQ to SQL 中的代码生成](../../../../docs/framework/data/adonet/sql/linq/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0d82d-112">For more information, see [O/R Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) and [Code Generation in LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).</span></span>
 
-<span data-ttu-id="04cdf-113">数据库标记语言 (DBML) 类型提供程序允许你编写使用基于数据库架构，而无需在编译时指定静态连接字符串的类型的代码。</span><span class="sxs-lookup"><span data-stu-id="04cdf-113">The Database Markup Language (DBML) type provider allows you to write code that uses types based on a database schema without requiring you to specify a static connection string at compile time.</span></span> <span data-ttu-id="04cdf-114">这可能是需要考虑到最终应用程序将使用不同的数据库、 不同的凭据或与用于开发应用程序的不同的连接字符串的可能性的情况下很有用。</span><span class="sxs-lookup"><span data-stu-id="04cdf-114">That can be useful if you need to allow for the possibility that the final application will use a different database, different credentials, or a different connection string than the one you use to develop the application.</span></span> <span data-ttu-id="04cdf-115">如果你具有可以在编译时使用的直接数据库连接，这是同一个数据库和你最终将在你生成的应用程序中使用的凭据，你还可以使用 SQLDataConnection 类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="04cdf-115">If you have a direct database connection that you can use at compile time and this is the same database and credentials that you will eventually use in your built application, you can also use the SQLDataConnection type provider.</span></span> <span data-ttu-id="04cdf-116">有关详细信息，请参阅[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="04cdf-116">For more information, see [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span>
+<span data-ttu-id="0d82d-113">数据库标记语言 (DBML) 类型提供程序允许你编写使用基于数据库架构，而无需在编译时指定静态连接字符串的类型的代码。</span><span class="sxs-lookup"><span data-stu-id="0d82d-113">The Database Markup Language (DBML) type provider allows you to write code that uses types based on a database schema without requiring you to specify a static connection string at compile time.</span></span> <span data-ttu-id="0d82d-114">这可能是需要考虑到最终应用程序将使用不同的数据库、 不同的凭据或与用于开发应用程序的不同的连接字符串的可能性的情况下很有用。</span><span class="sxs-lookup"><span data-stu-id="0d82d-114">That can be useful if you need to allow for the possibility that the final application will use a different database, different credentials, or a different connection string than the one you use to develop the application.</span></span> <span data-ttu-id="0d82d-115">如果你具有可以在编译时使用的直接数据库连接，这是同一个数据库和你最终将在你生成的应用程序中使用的凭据，你还可以使用 SQLDataConnection 类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-115">If you have a direct database connection that you can use at compile time and this is the same database and credentials that you will eventually use in your built application, you can also use the SQLDataConnection type provider.</span></span> <span data-ttu-id="0d82d-116">有关详细信息，请参阅[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="0d82d-116">For more information, see [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span>
 
-<span data-ttu-id="04cdf-117">本演练阐释了以下任务。</span><span class="sxs-lookup"><span data-stu-id="04cdf-117">This walkthrough illustrates the following tasks.</span></span> <span data-ttu-id="04cdf-118">它们应按才能成功完成演练以下顺序完成：</span><span class="sxs-lookup"><span data-stu-id="04cdf-118">They should be completed in this order for the walkthrough to succeed:</span></span>
+<span data-ttu-id="0d82d-117">本演练阐释了以下任务。</span><span class="sxs-lookup"><span data-stu-id="0d82d-117">This walkthrough illustrates the following tasks.</span></span> <span data-ttu-id="0d82d-118">它们应按才能成功完成演练以下顺序完成：</span><span class="sxs-lookup"><span data-stu-id="0d82d-118">They should be completed in this order for the walkthrough to succeed:</span></span>
 
 
-- <span data-ttu-id="04cdf-119">创建一个.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="04cdf-119">Creating a .dbml file</span></span>
+- <span data-ttu-id="0d82d-119">创建一个.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="0d82d-119">Creating a .dbml file</span></span>
 <br />
 
-- <span data-ttu-id="04cdf-120">创建和设置 F # 项目</span><span class="sxs-lookup"><span data-stu-id="04cdf-120">Creating and setting up an F# project</span></span>
+- <span data-ttu-id="0d82d-120">创建和设置 F # 项目</span><span class="sxs-lookup"><span data-stu-id="0d82d-120">Creating and setting up an F# project</span></span>
 <br />
 
-- <span data-ttu-id="04cdf-121">配置类型提供程序和生成类型</span><span class="sxs-lookup"><span data-stu-id="04cdf-121">Configuring the type provider and generating the types</span></span>
+- <span data-ttu-id="0d82d-121">配置类型提供程序和生成类型</span><span class="sxs-lookup"><span data-stu-id="0d82d-121">Configuring the type provider and generating the types</span></span>
 <br />
 
-- <span data-ttu-id="04cdf-122">查询数据库</span><span class="sxs-lookup"><span data-stu-id="04cdf-122">Querying the database</span></span>
+- <span data-ttu-id="0d82d-122">查询数据库</span><span class="sxs-lookup"><span data-stu-id="0d82d-122">Querying the database</span></span>
 <br />
 
 
-## <a name="prerequisites"></a><span data-ttu-id="04cdf-123">先决条件</span><span class="sxs-lookup"><span data-stu-id="04cdf-123">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="0d82d-123">先决条件</span><span class="sxs-lookup"><span data-stu-id="0d82d-123">Prerequisites</span></span>
 
-## <a name="creating-a-dbml-file"></a><span data-ttu-id="04cdf-124">创建一个.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="04cdf-124">Creating a .dbml file</span></span>
-<span data-ttu-id="04cdf-125">如果你不具有数据库上测试，创建一个在底部的说明[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="04cdf-125">If you do not have a database to test on, create one by following the instructions at the bottom of [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span> <span data-ttu-id="04cdf-126">如果你按照这些说明操作，将创建名为 MyDatabase 包含几个简单的表和 SQL Server 上的存储的过程的数据库。</span><span class="sxs-lookup"><span data-stu-id="04cdf-126">If you follow these instructions, you will create a database called MyDatabase that contains a few simple tables and stored procedures on your SQL Server.</span></span>
+## <a name="creating-a-dbml-file"></a><span data-ttu-id="0d82d-124">创建一个.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="0d82d-124">Creating a .dbml file</span></span>
+<span data-ttu-id="0d82d-125">如果你不具有数据库上测试，创建一个在底部的说明[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="0d82d-125">If you do not have a database to test on, create one by following the instructions at the bottom of [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span> <span data-ttu-id="0d82d-126">如果你按照这些说明操作，将创建名为 MyDatabase 包含几个简单的表和 SQL Server 上的存储的过程的数据库。</span><span class="sxs-lookup"><span data-stu-id="0d82d-126">If you follow these instructions, you will create a database called MyDatabase that contains a few simple tables and stored procedures on your SQL Server.</span></span>
 
-<span data-ttu-id="04cdf-127">如果你已有一个.dbml 文件，则可以跳到部分，**创建并设置 F # 项目**。</span><span class="sxs-lookup"><span data-stu-id="04cdf-127">If you already have a .dbml file, you can skip to the section, **Create and Set Up an F# Project**.</span></span> <span data-ttu-id="04cdf-128">否则为你可以创建给出的现有 SQL 数据库的.dbml 文件，并通过使用命令行工具 SqlMetal.exe。</span><span class="sxs-lookup"><span data-stu-id="04cdf-128">Otherwise, you can create a .dbml file given an existing SQL database and by using the command-line tool SqlMetal.exe.</span></span>
+<span data-ttu-id="0d82d-127">如果你已有一个.dbml 文件，则可以跳到部分，**创建并设置 F # 项目**。</span><span class="sxs-lookup"><span data-stu-id="0d82d-127">If you already have a .dbml file, you can skip to the section, **Create and Set Up an F# Project**.</span></span> <span data-ttu-id="0d82d-128">否则为你可以创建给出的现有 SQL 数据库的.dbml 文件，并通过使用命令行工具 SqlMetal.exe。</span><span class="sxs-lookup"><span data-stu-id="0d82d-128">Otherwise, you can create a .dbml file given an existing SQL database and by using the command-line tool SqlMetal.exe.</span></span>
 
 
-#### <a name="to-create-a-dbml-file-by-using-sqlmetalexe"></a><span data-ttu-id="04cdf-129">若要使用 SqlMetal.exe 创建.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="04cdf-129">To create a .dbml file by using SqlMetal.exe</span></span>
+#### <a name="to-create-a-dbml-file-by-using-sqlmetalexe"></a><span data-ttu-id="0d82d-129">若要使用 SqlMetal.exe 创建.dbml 文件</span><span class="sxs-lookup"><span data-stu-id="0d82d-129">To create a .dbml file by using SqlMetal.exe</span></span>
 
-1. <span data-ttu-id="04cdf-130">打开**开发人员命令提示**。</span><span class="sxs-lookup"><span data-stu-id="04cdf-130">Open a **Developer Command Prompt**.</span></span>
+1. <span data-ttu-id="0d82d-130">打开**开发人员命令提示**。</span><span class="sxs-lookup"><span data-stu-id="0d82d-130">Open a **Developer Command Prompt**.</span></span>
 <br />
 
-2. <span data-ttu-id="04cdf-131">确保通过输入有权访问 SqlMetal.exe`SqlMetal.exe /?`在命令提示符。</span><span class="sxs-lookup"><span data-stu-id="04cdf-131">Ensure that you have access to SqlMetal.exe by entering `SqlMetal.exe /?` at the command prompt.</span></span> <span data-ttu-id="04cdf-132">SqlMetal.exe 通常安装在**Microsoft Sdk**文件夹中的**Program Files**或**Program Files (x86)**。</span><span class="sxs-lookup"><span data-stu-id="04cdf-132">SqlMetal.exe is typically installed under the **Microsoft SDKs** folder in **Program Files** or **Program Files (x86)**.</span></span>
+2. <span data-ttu-id="0d82d-131">确保通过输入有权访问 SqlMetal.exe`SqlMetal.exe /?`在命令提示符。</span><span class="sxs-lookup"><span data-stu-id="0d82d-131">Ensure that you have access to SqlMetal.exe by entering `SqlMetal.exe /?` at the command prompt.</span></span> <span data-ttu-id="0d82d-132">SqlMetal.exe 通常安装在**Microsoft Sdk**文件夹中的**Program Files**或**Program Files (x86)**。</span><span class="sxs-lookup"><span data-stu-id="0d82d-132">SqlMetal.exe is typically installed under the **Microsoft SDKs** folder in **Program Files** or **Program Files (x86)**.</span></span>
 <br />
 
-3. <span data-ttu-id="04cdf-133">使用以下命令行选项运行 SqlMetal.exe。</span><span class="sxs-lookup"><span data-stu-id="04cdf-133">Run SqlMetal.exe with the following command-line options.</span></span> <span data-ttu-id="04cdf-134">替换代替了正确的路径`c:\destpath`若要创建.dbml 文件中，并将数据库服务器的相应值插入，实例名称和数据库名称。</span><span class="sxs-lookup"><span data-stu-id="04cdf-134">Substitute an appropriate path in place of `c:\destpath` to create the .dbml file, and insert appropriate values for the database server, instance name, and database name.</span></span>
+3. <span data-ttu-id="0d82d-133">使用以下命令行选项运行 SqlMetal.exe。</span><span class="sxs-lookup"><span data-stu-id="0d82d-133">Run SqlMetal.exe with the following command-line options.</span></span> <span data-ttu-id="0d82d-134">替换代替了正确的路径`c:\destpath`若要创建.dbml 文件中，并将数据库服务器的相应值插入，实例名称和数据库名称。</span><span class="sxs-lookup"><span data-stu-id="0d82d-134">Substitute an appropriate path in place of `c:\destpath` to create the .dbml file, and insert appropriate values for the database server, instance name, and database name.</span></span>
 <br />
 
 ```
@@ -68,44 +68,44 @@ ms.lasthandoff: 10/18/2017
 ```
 
 >[!NOTE]
-<span data-ttu-id="04cdf-135">如果 SqlMetal.exe 具有创建文件由于权限问题造成的问题，将当前目录更改为具有写访问权限的文件夹中。</span><span class="sxs-lookup"><span data-stu-id="04cdf-135">If SqlMetal.exe has trouble creating the file due to permissions issues, change the current directory to a folder that you have write access to.</span></span>
+<span data-ttu-id="0d82d-135">如果 SqlMetal.exe 具有创建文件由于权限问题造成的问题，将当前目录更改为具有写访问权限的文件夹中。</span><span class="sxs-lookup"><span data-stu-id="0d82d-135">If SqlMetal.exe has trouble creating the file due to permissions issues, change the current directory to a folder that you have write access to.</span></span>
 
 
-4. <span data-ttu-id="04cdf-136">你还可以查看其他可用命令行选项。</span><span class="sxs-lookup"><span data-stu-id="04cdf-136">You can also look at the other available command-line options.</span></span> <span data-ttu-id="04cdf-137">例如，有如果你想视图和包含在生成的类型中的 SQL 函数可以使用的选项。</span><span class="sxs-lookup"><span data-stu-id="04cdf-137">For example, there are options you can use if you want views and SQL functions included in the generated types.</span></span> <span data-ttu-id="04cdf-138">有关详细信息，请参阅[SqlMetal.exe &#40;代码生成工具 &#41;](https://msdn.microsoft.com/library/bb386987).</span><span class="sxs-lookup"><span data-stu-id="04cdf-138">For more information, see [SqlMetal.exe &#40;Code Generation Tool&#41;](https://msdn.microsoft.com/library/bb386987).</span></span>
+4. <span data-ttu-id="0d82d-136">你还可以查看其他可用命令行选项。</span><span class="sxs-lookup"><span data-stu-id="0d82d-136">You can also look at the other available command-line options.</span></span> <span data-ttu-id="0d82d-137">例如，有如果你想视图和包含在生成的类型中的 SQL 函数可以使用的选项。</span><span class="sxs-lookup"><span data-stu-id="0d82d-137">For example, there are options you can use if you want views and SQL functions included in the generated types.</span></span> <span data-ttu-id="0d82d-138">有关详细信息，请参阅[SqlMetal.exe &#40;代码生成工具 &#41;](https://msdn.microsoft.com/library/bb386987).</span><span class="sxs-lookup"><span data-stu-id="0d82d-138">For more information, see [SqlMetal.exe &#40;Code Generation Tool&#41;](https://msdn.microsoft.com/library/bb386987).</span></span>
 <br />
 
 
-## <a name="creating-and-setting-up-an-f-project"></a><span data-ttu-id="04cdf-139">创建和设置 F # 项目</span><span class="sxs-lookup"><span data-stu-id="04cdf-139">Creating and setting up an F# project</span></span>
-<span data-ttu-id="04cdf-140">在此步骤中，你可以创建项目并添加相应的引用以使用 DBML 类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="04cdf-140">In this step, you create a project and add appropriate references to use the DBML type provider.</span></span>
+## <a name="creating-and-setting-up-an-f-project"></a><span data-ttu-id="0d82d-139">创建和设置 F # 项目</span><span class="sxs-lookup"><span data-stu-id="0d82d-139">Creating and setting up an F# project</span></span>
+<span data-ttu-id="0d82d-140">在此步骤中，你可以创建项目并添加相应的引用以使用 DBML 类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-140">In this step, you create a project and add appropriate references to use the DBML type provider.</span></span>
 
 
-#### <a name="to-create-and-set-up-an-f-project"></a><span data-ttu-id="04cdf-141">创建并设置 F# 项目</span><span class="sxs-lookup"><span data-stu-id="04cdf-141">To create and set up an F# project</span></span>
+#### <a name="to-create-and-set-up-an-f-project"></a><span data-ttu-id="0d82d-141">创建并设置 F# 项目</span><span class="sxs-lookup"><span data-stu-id="0d82d-141">To create and set up an F# project</span></span>
 
-1. <span data-ttu-id="04cdf-142">将新的 F # 控制台应用程序项目添加到你的解决方案。</span><span class="sxs-lookup"><span data-stu-id="04cdf-142">Add a new F# Console Application project to your solution.</span></span>
+1. <span data-ttu-id="0d82d-142">将新的 F # 控制台应用程序项目添加到你的解决方案。</span><span class="sxs-lookup"><span data-stu-id="0d82d-142">Add a new F# Console Application project to your solution.</span></span>
 <br />
 
-2. <span data-ttu-id="04cdf-143">在**解决方案资源管理器**，打开快捷菜单**引用**，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="04cdf-143">In **Solution Explorer**, open the shortcut menu for **References**, and then choose **Add Reference**.</span></span>
+2. <span data-ttu-id="0d82d-143">在**解决方案资源管理器**，打开快捷菜单**引用**，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="0d82d-143">In **Solution Explorer**, open the shortcut menu for **References**, and then choose **Add Reference**.</span></span>
 <br />
 
-3. <span data-ttu-id="04cdf-144">在**程序集**区域中，选择**Framework**节点，然后在可用的程序集列表中，选择**System.Data**和**System.Data.Linq**程序集。</span><span class="sxs-lookup"><span data-stu-id="04cdf-144">In the **Assemblies** area, choose the **Framework** node, and then, in the list of available assemblies, choose the **System.Data** and **System.Data.Linq** assemblies.</span></span>
+3. <span data-ttu-id="0d82d-144">在**程序集**区域中，选择**Framework**节点，然后在可用的程序集列表中，选择**System.Data**和**System.Data.Linq**程序集。</span><span class="sxs-lookup"><span data-stu-id="0d82d-144">In the **Assemblies** area, choose the **Framework** node, and then, in the list of available assemblies, choose the **System.Data** and **System.Data.Linq** assemblies.</span></span>
 <br />
 
-4. <span data-ttu-id="04cdf-145">在**程序集**区域中，选择**扩展**，然后在可用的程序集列表中，选择**FSharp.Data.TypeProviders**。</span><span class="sxs-lookup"><span data-stu-id="04cdf-145">In the **Assemblies** area, choose **Extensions**, and then, in the list of available assemblies, choose **FSharp.Data.TypeProviders**.</span></span>
+4. <span data-ttu-id="0d82d-145">在**程序集**区域中，选择**扩展**，然后在可用的程序集列表中，选择**FSharp.Data.TypeProviders**。</span><span class="sxs-lookup"><span data-stu-id="0d82d-145">In the **Assemblies** area, choose **Extensions**, and then, in the list of available assemblies, choose **FSharp.Data.TypeProviders**.</span></span>
 <br />
 
-5. <span data-ttu-id="04cdf-146">选择**确定**按钮将对这些程序集的引用添加到你的项目。</span><span class="sxs-lookup"><span data-stu-id="04cdf-146">Choose the **OK** button to add references to these assemblies to your project.</span></span>
+5. <span data-ttu-id="0d82d-146">选择**确定**按钮将对这些程序集的引用添加到你的项目。</span><span class="sxs-lookup"><span data-stu-id="0d82d-146">Choose the **OK** button to add references to these assemblies to your project.</span></span>
 <br />
 
-6. <span data-ttu-id="04cdf-147">（可选）。</span><span class="sxs-lookup"><span data-stu-id="04cdf-147">(Optional).</span></span> <span data-ttu-id="04cdf-148">复制你在前一步骤中创建的.dbml 文件并在为你的项目的主文件夹中粘贴文件。</span><span class="sxs-lookup"><span data-stu-id="04cdf-148">Copy the .dbml file that you created in the previous step, and paste the file in the main folder for your project.</span></span> <span data-ttu-id="04cdf-149">此文件夹包含的项目文件 (.fsproj) 和代码文件。</span><span class="sxs-lookup"><span data-stu-id="04cdf-149">This folder contains the project file (.fsproj) and code files.</span></span> <span data-ttu-id="04cdf-150">在菜单栏上，选择**项目**，**添加现有项**，然后指定要将其添加到你的项目的.dbml 文件。</span><span class="sxs-lookup"><span data-stu-id="04cdf-150">On the menu bar, choose **Project**, **Add Existing Item**, and then specify the .dbml file to add it to your project.</span></span> <span data-ttu-id="04cdf-151">如果你完成这些步骤，你可以忽略下一步 ResolutionFolder 静态参数。</span><span class="sxs-lookup"><span data-stu-id="04cdf-151">If you complete these steps, you can omit the ResolutionFolder static parameter in the next step.</span></span>
+6. <span data-ttu-id="0d82d-147">（可选）。</span><span class="sxs-lookup"><span data-stu-id="0d82d-147">(Optional).</span></span> <span data-ttu-id="0d82d-148">复制你在前一步骤中创建的.dbml 文件并在为你的项目的主文件夹中粘贴文件。</span><span class="sxs-lookup"><span data-stu-id="0d82d-148">Copy the .dbml file that you created in the previous step, and paste the file in the main folder for your project.</span></span> <span data-ttu-id="0d82d-149">此文件夹包含的项目文件 (.fsproj) 和代码文件。</span><span class="sxs-lookup"><span data-stu-id="0d82d-149">This folder contains the project file (.fsproj) and code files.</span></span> <span data-ttu-id="0d82d-150">在菜单栏上，选择**项目**，**添加现有项**，然后指定要将其添加到你的项目的.dbml 文件。</span><span class="sxs-lookup"><span data-stu-id="0d82d-150">On the menu bar, choose **Project**, **Add Existing Item**, and then specify the .dbml file to add it to your project.</span></span> <span data-ttu-id="0d82d-151">如果你完成这些步骤，你可以忽略下一步 ResolutionFolder 静态参数。</span><span class="sxs-lookup"><span data-stu-id="0d82d-151">If you complete these steps, you can omit the ResolutionFolder static parameter in the next step.</span></span>
 <br />
 
-## <a name="configuring-the-type-provider"></a><span data-ttu-id="04cdf-152">配置类型提供程序</span><span class="sxs-lookup"><span data-stu-id="04cdf-152">Configuring the type provider</span></span>
-<span data-ttu-id="04cdf-153">在本部分中，你将创建类型提供程序，并从.dbml 文件中描述的架构生成类型。</span><span class="sxs-lookup"><span data-stu-id="04cdf-153">In this section, you create a type provider and generate types from the schema that’s described in the .dbml file.</span></span>
+## <a name="configuring-the-type-provider"></a><span data-ttu-id="0d82d-152">配置类型提供程序</span><span class="sxs-lookup"><span data-stu-id="0d82d-152">Configuring the type provider</span></span>
+<span data-ttu-id="0d82d-153">在本部分中，你将创建类型提供程序，并从.dbml 文件中描述的架构生成类型。</span><span class="sxs-lookup"><span data-stu-id="0d82d-153">In this section, you create a type provider and generate types from the schema that’s described in the .dbml file.</span></span>
 
 
-#### <a name="to-configure-the-type-provider-and-generate-the-types"></a><span data-ttu-id="04cdf-154">若要配置类型提供程序和生成类型</span><span class="sxs-lookup"><span data-stu-id="04cdf-154">To configure the type provider and generate the types</span></span>
+#### <a name="to-configure-the-type-provider-and-generate-the-types"></a><span data-ttu-id="0d82d-154">若要配置类型提供程序和生成类型</span><span class="sxs-lookup"><span data-stu-id="0d82d-154">To configure the type provider and generate the types</span></span>
 
-- <span data-ttu-id="04cdf-155">添加代码，打开该**TypeProviders**命名空间和实例化的.dbml 文件，你想要使用的类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="04cdf-155">Add code that opens the **TypeProviders** namespace and instantiates the type provider for the .dbml file that you want to use.</span></span> <span data-ttu-id="04cdf-156">如果将.dbml 文件添加到你的项目中时，可以省略 ResolutionFolder 静态参数。</span><span class="sxs-lookup"><span data-stu-id="04cdf-156">If you added the .dbml file to your project, you can omit the ResolutionFolder static parameter.</span></span>
+- <span data-ttu-id="0d82d-155">添加代码，打开该**TypeProviders**命名空间和实例化的.dbml 文件，你想要使用的类型提供程序。</span><span class="sxs-lookup"><span data-stu-id="0d82d-155">Add code that opens the **TypeProviders** namespace and instantiates the type provider for the .dbml file that you want to use.</span></span> <span data-ttu-id="0d82d-156">如果将.dbml 文件添加到你的项目中时，可以省略 ResolutionFolder 静态参数。</span><span class="sxs-lookup"><span data-stu-id="0d82d-156">If you added the .dbml file to your project, you can omit the ResolutionFolder static parameter.</span></span>
 <br />
 
 ```fsharp
@@ -119,7 +119,7 @@ let connectionString = "Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase
 let dataContext = new dbml.Mydatabase(connectionString)
 ```
 
-<span data-ttu-id="04cdf-157">DataContext 类型提供对所有生成的类型的访问，并继承自`System.Data.Linq.DataContext`。</span><span class="sxs-lookup"><span data-stu-id="04cdf-157">The DataContext type provides access to all the generated types and inherits from `System.Data.Linq.DataContext`.</span></span> <span data-ttu-id="04cdf-158">DbmlFile 类型提供程序具有各种可以设置的静态参数。</span><span class="sxs-lookup"><span data-stu-id="04cdf-158">The DbmlFile type provider has various static parameters that you can set.</span></span> <span data-ttu-id="04cdf-159">例如，可以通过指定使用 DataContext 类型的不同名称`DataContext=MyDataContext`。</span><span class="sxs-lookup"><span data-stu-id="04cdf-159">For example, you can use a different name for the DataContext type by specifying `DataContext=MyDataContext`.</span></span> <span data-ttu-id="04cdf-160">在这种情况下，你的代码类似于下面的示例：</span><span class="sxs-lookup"><span data-stu-id="04cdf-160">In that case, your code resembles the following example:</span></span>
+<span data-ttu-id="0d82d-157">DataContext 类型提供对所有生成的类型的访问，并继承自`System.Data.Linq.DataContext`。</span><span class="sxs-lookup"><span data-stu-id="0d82d-157">The DataContext type provides access to all the generated types and inherits from `System.Data.Linq.DataContext`.</span></span> <span data-ttu-id="0d82d-158">DbmlFile 类型提供程序具有各种可以设置的静态参数。</span><span class="sxs-lookup"><span data-stu-id="0d82d-158">The DbmlFile type provider has various static parameters that you can set.</span></span> <span data-ttu-id="0d82d-159">例如，可以通过指定使用 DataContext 类型的不同名称`DataContext=MyDataContext`。</span><span class="sxs-lookup"><span data-stu-id="0d82d-159">For example, you can use a different name for the DataContext type by specifying `DataContext=MyDataContext`.</span></span> <span data-ttu-id="0d82d-160">在这种情况下，你的代码类似于下面的示例：</span><span class="sxs-lookup"><span data-stu-id="0d82d-160">In that case, your code resembles the following example:</span></span>
 <br />
 
 ```fsharp
@@ -133,13 +133,13 @@ let connectionString = "Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase
 let db = new dbml.MyDataContext(connectionString)
 ```
 
-## <a name="querying-the-database"></a><span data-ttu-id="04cdf-161">查询数据库</span><span class="sxs-lookup"><span data-stu-id="04cdf-161">Querying the database</span></span>
-<span data-ttu-id="04cdf-162">在本部分中，使用 F # 查询表达式查询数据库。</span><span class="sxs-lookup"><span data-stu-id="04cdf-162">In this section, you use F# query expressions to query the database.</span></span>
+## <a name="querying-the-database"></a><span data-ttu-id="0d82d-161">查询数据库</span><span class="sxs-lookup"><span data-stu-id="0d82d-161">Querying the database</span></span>
+<span data-ttu-id="0d82d-162">在本部分中，使用 F # 查询表达式查询数据库。</span><span class="sxs-lookup"><span data-stu-id="0d82d-162">In this section, you use F# query expressions to query the database.</span></span>
 
 
-#### <a name="to-query-the-data"></a><span data-ttu-id="04cdf-163">查询数据</span><span class="sxs-lookup"><span data-stu-id="04cdf-163">To query the data</span></span>
+#### <a name="to-query-the-data"></a><span data-ttu-id="0d82d-163">查询数据</span><span class="sxs-lookup"><span data-stu-id="0d82d-163">To query the data</span></span>
 
-- <span data-ttu-id="04cdf-164">添加代码以查询数据库。</span><span class="sxs-lookup"><span data-stu-id="04cdf-164">Add code to query the database.</span></span>
+- <span data-ttu-id="0d82d-164">添加代码以查询数据库。</span><span class="sxs-lookup"><span data-stu-id="0d82d-164">Add code to query the database.</span></span>
 <br />
 
 ```fsharp
@@ -150,17 +150,17 @@ let db = new dbml.MyDataContext(connectionString)
   } |> Seq.iter (fun row -> printfn "%d %s" row.TestData1 row.Name)
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="04cdf-165">后续步骤</span><span class="sxs-lookup"><span data-stu-id="04cdf-165">Next Steps</span></span>
-<span data-ttu-id="04cdf-166">你可以继续使用其他查询表达式，或从数据上下文获取数据库连接并执行正常的 ADO.NET 数据操作。</span><span class="sxs-lookup"><span data-stu-id="04cdf-166">You can proceed to use other query expressions, or get a database connection from the data context and perform normal ADO.NET data operations.</span></span> <span data-ttu-id="04cdf-167">有关其他步骤，请参阅部分后"查询数据"中[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="04cdf-167">For additional steps, see the sections after "Query the Data" in [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="0d82d-165">后续步骤</span><span class="sxs-lookup"><span data-stu-id="0d82d-165">Next Steps</span></span>
+<span data-ttu-id="0d82d-166">你可以继续使用其他查询表达式，或从数据上下文获取数据库连接并执行正常的 ADO.NET 数据操作。</span><span class="sxs-lookup"><span data-stu-id="0d82d-166">You can proceed to use other query expressions, or get a database connection from the data context and perform normal ADO.NET data operations.</span></span> <span data-ttu-id="0d82d-167">有关其他步骤，请参阅部分后"查询数据"中[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。</span><span class="sxs-lookup"><span data-stu-id="0d82d-167">For additional steps, see the sections after "Query the Data" in [Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md).</span></span>
 
 
-## <a name="see-also"></a><span data-ttu-id="04cdf-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="04cdf-168">See Also</span></span>
-[<span data-ttu-id="04cdf-169">DbmlFile 类型提供程序</span><span class="sxs-lookup"><span data-stu-id="04cdf-169">DbmlFile Type Provider</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/dbmlfile-type-provider-%5bfsharp%5d)
+## <a name="see-also"></a><span data-ttu-id="0d82d-168">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0d82d-168">See Also</span></span>
+[<span data-ttu-id="0d82d-169">DbmlFile 类型提供程序</span><span class="sxs-lookup"><span data-stu-id="0d82d-169">DbmlFile Type Provider</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/dbmlfile-type-provider-%5bfsharp%5d)
 
-[<span data-ttu-id="04cdf-170">类型提供程序</span><span class="sxs-lookup"><span data-stu-id="04cdf-170">Type Providers</span></span>](index.md)
+[<span data-ttu-id="0d82d-170">类型提供程序</span><span class="sxs-lookup"><span data-stu-id="0d82d-170">Type Providers</span></span>](index.md)
 
-[<span data-ttu-id="04cdf-171">演练：使用类型提供程序访问 SQL 数据库</span><span class="sxs-lookup"><span data-stu-id="04cdf-171">Walkthrough: Accessing a SQL Database by Using Type Providers</span></span>](accessing-a-sql-database.md)
+[<span data-ttu-id="0d82d-171">演练：使用类型提供程序访问 SQL 数据库</span><span class="sxs-lookup"><span data-stu-id="0d82d-171">Walkthrough: Accessing a SQL Database by Using Type Providers</span></span>](accessing-a-sql-database.md)
 
-[<span data-ttu-id="04cdf-172">SqlMetal.exe &#40;代码生成工具 &#41;</span><span class="sxs-lookup"><span data-stu-id="04cdf-172">SqlMetal.exe &#40;Code Generation Tool&#41;</span></span>](https://msdn.microsoft.com/library/bb386987)
+[<span data-ttu-id="0d82d-172">SqlMetal.exe &#40;代码生成工具 &#41;</span><span class="sxs-lookup"><span data-stu-id="0d82d-172">SqlMetal.exe &#40;Code Generation Tool&#41;</span></span>](https://msdn.microsoft.com/library/bb386987)
 
-[<span data-ttu-id="04cdf-173">查询表达式</span><span class="sxs-lookup"><span data-stu-id="04cdf-173">Query Expressions</span></span>](../../language-reference/query-expressions.md)
+[<span data-ttu-id="0d82d-173">查询表达式</span><span class="sxs-lookup"><span data-stu-id="0d82d-173">Query Expressions</span></span>](../../language-reference/query-expressions.md)
