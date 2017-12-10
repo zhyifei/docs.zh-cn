@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 <a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
@@ -777,7 +777,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ### <a name="native-image-generator-ngen-pdbs"></a>本机映像生成器 (NGEN) PDB
  跨计算机事件跟踪允许客户在计算机 A 上分析一个程序，并在计算机 B 上查看具有源行映射的分析数据。通过使用以前版本的 .NET Framework，用户会将所有模块和本机映像从分析计算机复制到包含 IL PDB 的分析计算机来创建源到本机映射。 虽然此过程在文件相对较小（如用于手机应用程序）时可能工作良好，但是文件在桌面系统上可能非常大，需要很长时间来进行复制。
 
- 借助 Ngen PDB，NGen 可以创建包含 IL 到本机映射的 PDB，而无需依赖于 IL PDB。 在我们的跨计算机事件跟踪方案中，只需将计算机 A 生成的本机映像 PDB 复制到计算机 B，并使用[调试接口访问 API](https://msdn.microsoft.com/library/ee8x173s.aspx) 读取 IL PDB 的源到 IL 映射和本机映像 PDB 的 IL 到本机映射。 组合这两个映射可提供源到本机映射。 由于本机映像 PDB 远小于所有模块和本机映像，因此从计算机 A 复制到计算机 B 的过程要快得多。
+ 借助 Ngen PDB，NGen 可以创建包含 IL 到本机映射的 PDB，而无需依赖于 IL PDB。 在我们的跨计算机事件跟踪方案中，只需将计算机 A 生成的本机映像 PDB 复制到计算机 B，并使用[调试接口访问 API](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) 读取 IL PDB 的源到 IL 映射和本机映像 PDB 的 IL 到本机映射。 组合这两个映射可提供源到本机映射。 由于本机映像 PDB 远小于所有模块和本机映像，因此从计算机 A 复制到计算机 B 的过程要快得多。
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新增功能

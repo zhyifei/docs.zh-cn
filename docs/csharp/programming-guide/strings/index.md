@@ -11,11 +11,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6be0f4dcf3aa9c66335ab466d1c50a5714314b42
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -130,9 +130,9 @@ string s = String.Empty;
 |[如何：使用正则表达式搜索字符串](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|介绍如何使用正则表达式来搜索字符串。|  
 |[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
 |[如何：将字符串转换为 DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|展示了如何将字符串（如“01/24/2008”）转换为 <xref:System.DateTime?displayProperty=nameWithType> 对象。|  
-|[基本字符串操作](https://msdn.microsoft.com/library/a292he7t)|收录了介绍如何使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法执行基本字符串操作的主题链接。|  
-|[分析字符串](https://msdn.microsoft.com/library/b4w53z0y)|介绍如何将字符或空格插入到字符串中。|  
-|[比较字符串](https://msdn.microsoft.com/library/fbh501kz)|包括有关如何比较字符串的信息，并提供 C# 和 Visual Basic 中的示例。|  
+|[基本字符串操作](../../../../docs/standard/base-types/basic-string-operations.md)|收录了介绍如何使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法执行基本字符串操作的主题链接。|  
+|[分析字符串](../../../../docs/standard/base-types/parsing-strings.md)|介绍如何将字符或空格插入到字符串中。|  
+|[比较字符串](../../../../docs/standard/base-types/comparing.md)|包括有关如何比较字符串的信息，并提供 C# 和 Visual Basic 中的示例。|  
 |[使用 StringBuilder 类](../../../standard/base-types/stringbuilder.md)|介绍了如何使用 <xref:System.Text.StringBuilder> 类创建和修改动态字符串对象。|  
 |[LINQ 和字符串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|提供有关如何使用 LINQ 查询来执行各种字符串操作的信息。|  
 |[C# 编程指南](../../../csharp/programming-guide/index.md)|提供介绍在 C# 中编程构造的主题的链接。|  

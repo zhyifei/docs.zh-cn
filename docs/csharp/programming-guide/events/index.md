@@ -12,11 +12,11 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f714bded446e62ac6165d691d2404249275178e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 -   事件通常用于表示用户操作，例如单击按钮或图形用户界面中的菜单选项。  
   
--   当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 [Calling Synchronous Methods Asynchronously](https://msdn.microsoft.com/library/2e08f6yc)。  
+-   当事件具有多个订户时，引发该事件时会同步调用事件处理程序。 若要异步调用事件，请参阅 [Calling Synchronous Methods Asynchronously](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
   
 -   在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中，事件基于 <xref:System.EventHandler> 委托和 <xref:System.EventArgs> 基类。  
   
@@ -67,5 +67,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.EventHandler>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [委托](../../../csharp/programming-guide/delegates/index.md)  
- [在 Windows 窗体中创建事件处理程序](https://msdn.microsoft.com/library/dacysss4.aspx)  
- [使用基于事件的异步模式进行多线程编程](https://msdn.microsoft.com/library/hkasytyf)
+ [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [使用基于事件的异步模式进行多线程编程](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)

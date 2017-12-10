@@ -11,22 +11,22 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 923a64e98fde3ab11f4e3feb6c91507ae8886151
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>程序集和全局程序集缓存 (C#)
 程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。  
   
- 程序集可以包含一个或多个模块。 例如，可以将大型项目规划为，由多个开发者单独开发各个模块，最后将所有这些模块整合成一个程序集。 有关模块的详细信息，请参阅主题[如何：生成多文件程序集](https://msdn.microsoft.com/library/226t7yxe)。  
+ 程序集可以包含一个或多个模块。 例如，可以将大型项目规划为，由多个开发者单独开发各个模块，最后将所有这些模块整合成一个程序集。 有关模块的详细信息，请参阅主题[如何：生成多文件程序集](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)。  
   
  程序集具有以下属性：  
   
 -   程序集以 .exe 或 .dll 文件的形式实现。  
   
--   可以将程序集放入全局程序集缓存，以便在应用程序之间共用程序集。 必须先为程序集命名强名称，然后才能将其添加到全局程序集缓存中。 有关详细信息，请参阅[具有强名称的程序集](https://msdn.microsoft.com/library/wd40t7ad)。  
+-   可以将程序集放入全局程序集缓存，以便在应用程序之间共用程序集。 必须先为程序集命名强名称，然后才能将其添加到全局程序集缓存中。 有关详细信息，请参阅[具有强名称的程序集](../../../../../docs/framework/app-domains/strong-named-assemblies.md)。  
   
 -   只有在需要使用时才会将程序集加载到内存中。 如果不使用，就不会加载程序集。 也就是说，使用程序集，可以在大型项目中高效管理资源。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  由于程序集包含内容、版本控制和依赖项的相关信息，因此使用 C# 创建的应用程序不依赖 Windows 注册表值也能正常运行。 程序集减少了 .dll 冲突，让应用程序变得更可靠、更易于部署。 在许多情况下，只需将 .NET 应用程序的文件复制到目标计算机，即可进行安装。  
   
- 有关详细信息，请参阅[程序集清单](https://msdn.microsoft.com/library/1w45z383)。  
+ 有关详细信息，请参阅[程序集清单](../../../../../docs/framework/app-domains/assembly-manifest.md)。  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>添加对程序集的引用  
  必须添加对程序集的引用，才能使用程序集。 接下来，使用 [using 指令](../../../../csharp/language-reference/keywords/using-directive.md)选择要使用的项的命名空间。 引用并导入程序集后，所有可访问的类、属性、方法和命名空间的其他成员都可供应用程序使用，就像其代码属于源文件一样。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [Assemblies in the Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)（公共语言运行时中的程序集）  
+ [Assemblies in the Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
  [友元程序集 (C#)](friend-assemblies.md)  
  [如何：与其他应用程序共享程序集 (C#)](how-to-share-an-assembly-with-other-applications.md)  
  [如何：加载和卸载程序集 (C#)](how-to-load-and-unload-assemblies.md)  
