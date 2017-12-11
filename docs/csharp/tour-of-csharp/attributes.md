@@ -1,6 +1,6 @@
 ---
-title: "C# 属性 - C# 语言介绍"
-description: "了解在 C# 中使用属性的声明性编程"
+title: "C# 特性 - C#语言介绍"
+description: "了解在 C# 中使用特性的声明性编程"
 keywords: .NET, C#
 author: BillWagner
 ms.author: wiwagn
