@@ -12,11 +12,11 @@ ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="c-walkthroughs"></a>C# 演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -37,19 +37,19 @@ ms.lasthandoff: 11/21/2017
  [创建并使用动态对象（C# 和 Visual Basic）](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  演示如何创建动态公开文本文件内容的自定义对象、如何创建使用 `IronPython` 库的项目。  
    
- [使用 Visual C# 创作复合控件](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ [使用 Visual C# 创作复合控件](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  演示如何创建简单复合控件以及通过继承扩展其功能。  
   
- [创建利用 Visual Studio 设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ [创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  演示如何为自定义控件创建自定义设计器。  
   
- [使用 Visual C# 从 Windows 窗体控件继承](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ [使用 Visual C# 从 Windows 窗体控件继承](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  演示如何创建简单的集成按钮控件。 此按钮从标准 Windows 窗体按钮集成功能并公开自定义成员。  
   
- [在设计时调试自定义 Windows 窗体控件](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ [在设计时调试自定义 Windows 窗体控件](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  描述如何调试自定义控件的设计时行为。
 
- [使用 Windows 窗体控件上的智能标记执行常规任务](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ [使用 Windows 窗体控件上的智能标记执行常规任务](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  演示通常执行的部分任务，如在 `TabControl` 上添加或删除选项卡、将控件停靠在其父级，以及更改 `SplitContainer` 控件的方向。  
   
  [用 C# 编写查询 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  

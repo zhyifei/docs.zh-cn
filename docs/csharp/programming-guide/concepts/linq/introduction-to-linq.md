@@ -11,11 +11,11 @@ ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6fd14840cfffb1a59949251b26c168aada336de9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc654dd020d3a20b028cd6545b00de84193174ac
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 简介 (C#)
 语言集成查询 (LINQ) 是 .NET Framework 3.5 版中引入的一项创新功能，它在对象领域和数据领域之间架起了一座桥梁。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="next-steps"></a>后续步骤  
  若要了解有关 LINQ 的详细信息，请先熟悉入门部分 [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)中的一些基本概念，然后阅读你感兴趣的 LINQ 技术的文档：  
   
--   SQL Server 数据库：[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+-   SQL Server 数据库：[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
 -   XML 文档：[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

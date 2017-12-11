@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **查找**。 可以查询和修改流中的位置。  
   
- 有关详细信息，请参阅 [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9)。  
+ 有关详细信息，请参阅 [Composing Streams](../../../../../docs/standard/io/composing-streams.md)。  
   
 ## <a name="types-of-streams"></a>流的类型  
  在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中，流由 <xref:System.IO.Stream> 类表示，这形成了所有其他流的抽象类。 不能直接创建 <xref:System.IO.Stream> 类的实例，但必须使用它执行的一个类。  
@@ -65,13 +65,13 @@ ms.lasthandoff: 11/21/2017
   
 |到|请参阅|
 |---|---|   
-|读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|从文件中读取文本|[如何：从文件读取文本](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|将文本写入文件|[如何：向文件写入文本](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|从字符串中读取字符|[如何：从字符串中读取字符](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|向字符串写入字符|[如何：向字符串写入字符](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|加密数据|[加密数据](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|解密数据|[解密数据](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|从文件中读取文本|[如何：从文件读取文本](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|将文本写入文件|[如何：向文件写入文本](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|从字符串中读取字符|[如何：从字符串中读取字符](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|向字符串写入字符|[如何：向字符串写入字符](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|加密数据|[加密数据](../../../../../docs/standard/security/encrypting-data.md)|  
+|解密数据|[解密数据](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>文件访问权限和属性  
  可以控制文件创建、打开，以及与 <xref:System.IO.FileAccess>、<xref:System.IO.FileMode>和 <xref:System.IO.FileShare> 枚举分享的方式，枚举中包含 <xref:System.IO.FileStream> 类的构造函数使用的标志。 例如，打开或新建 <xref:System.IO.FileStream> 时，<xref:System.IO.FileMode> 枚举允许指定是否打开文件供追加用、如果指定的文件不存在是否创建新文件、是否覆盖文件等。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 |到|请参阅|  
 |---|---|
-|打开并追加文本到日志文件|[如何：打开并追加到日志文件](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|打开并追加文本到日志文件|[如何：打开并追加到日志文件](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |确定文件特性|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>文件权限  
@@ -95,19 +95,19 @@ ms.lasthandoff: 11/21/2017
   
 |到|请参阅|
 |---|---|  
-|创建独立存储区|[如何：获取独立存储的存储区](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|枚举独立存储区|[如何：枚举独立存储的存储区](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|删除独立存储区|[如何：删除独立存储中的存储区](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|在独立存储中创建文件或目录|[如何：在独立存储中创建文件和目录](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|在独立存储中查找文件|[如何：在独立存储中查找现有文件和目录](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|在独立存储中从文件读取或写入文件|[如何：在独立存储中读取和写入文件](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|在独立存储中删除文件或目录|[如何：在独立存储中删除文件和目录](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|创建独立存储区|[如何：获取独立存储的存储区](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|枚举独立存储区|[如何：枚举独立存储的存储区](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|删除独立存储区|[如何：删除独立存储中的存储区](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|在独立存储中创建文件或目录|[如何：在独立存储中创建文件和目录](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|在独立存储中查找文件|[如何：在独立存储中查找现有文件和目录](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|在独立存储中从文件读取或写入文件|[如何：在独立存储中读取和写入文件](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|在独立存储中删除文件或目录|[如何：在独立存储中删除文件和目录](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>文件事件  
  <xref:System.IO.FileSystemWatcher> 组件允许监视系统上或任何你对其具有网络访问权限的计算机上的文件和目录所作的更改。 例如，如果修改了文件，可能想要向用户发送更改警报。 发生更改时，会引发一个或多个事件并将其存储在缓冲区中，然后移交给 <xref:System.IO.FileSystemWatcher> 组件进行处理。  
   
 ## <a name="see-also"></a>另请参阅  
- [撰写流](https://msdn.microsoft.com/library/e4y2dch9)  
+ [撰写流](../../../../../docs/standard/io/composing-streams.md)  
  [文件和流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
  [异步文件 I/O](https://msdn.microsoft.com/library/kztecsys)  
  [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

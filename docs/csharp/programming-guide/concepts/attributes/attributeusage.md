@@ -11,11 +11,11 @@ ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：  
@@ -148,7 +148,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)  
- [特性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [特性](../../../../../docs/standard/attributes/index.md)  
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [特性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [创建自定义特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
