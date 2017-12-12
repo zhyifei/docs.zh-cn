@@ -105,7 +105,7 @@ public class Student
 
 `Grades` 成员在声明它的位置处被初始化。 这样，就能更容易地仅执行一次初始化。 初始化是属性声明的一部分，可更轻松地将存储分配等同于 `Student` 对象的公用接口。
 
-属性初始值设定项此处只能使用与读/写属性，以及只读属性，如图所示。
+属性初始值设定项此处只能使用于读/写属性，以及只读属性，如图所示。
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
